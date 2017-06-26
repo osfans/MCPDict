@@ -1,8 +1,10 @@
-bin/*
-!bin/MCPDict.apk
 gen
 prepare
 publish
-jarlist.cache
-lint.xml
 pretty.py
+.idea/
+.gradle/
+gradle.properties
+local.properties
+build/
+*.iml
