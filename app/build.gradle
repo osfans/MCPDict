@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "maigosoft.mcpdict"
+        minSdkVersion 14
+        targetSdkVersion 30
+        versionCode 9
+        versionName "4.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:support-v4:19.1.0'
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
+}
