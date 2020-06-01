@@ -1,4 +1,4 @@
-package maigosoft.mcpdict;
+package com.osfans.mcpdict;
 
 import android.annotation.SuppressLint;
 import android.database.Cursor;

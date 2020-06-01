@@ -1,4 +1,4 @@
-package maigosoft.mcpdict;
+package com.osfans.mcpdict;
 
 import android.app.AlertDialog.Builder;
 import android.content.Context;

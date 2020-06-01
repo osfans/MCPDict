@@ -1,4 +1,4 @@
-package maigosoft.mcpdict;
+package com.osfans.mcpdict;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;

@@ -1,4 +1,4 @@
-package maigosoft.mcpdict;
+package com.osfans.mcpdict;
 
 import java.io.BufferedReader;
 import java.io.IOException;
