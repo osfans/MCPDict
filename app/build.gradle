@@ -4,7 +4,7 @@ android {
     compileSdkVersion 30
 
     defaultConfig {
-        applicationId "maigosoft.mcpdict"
+        applicationId "com.osfans.mcpdict"
         minSdkVersion 14
         targetSdkVersion 30
         versionCode 9

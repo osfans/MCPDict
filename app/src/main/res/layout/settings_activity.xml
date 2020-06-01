@@ -3,6 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".SettingsActivity"
     android:id="@+id/fragment_settings"
-    android:name="maigosoft.mcpdict.SettingsFragment"
+    android:name="com.osfans.mcpdict.SettingsFragment"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />

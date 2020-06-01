@@ -1,4 +1,4 @@
-package maigosoft.mcpdict;
+package com.osfans.mcpdict;
 
 import java.util.HashSet;
 import java.util.Set;

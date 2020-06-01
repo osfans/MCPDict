@@ -18,7 +18,7 @@
                 style="@style/FontLabel"
                 android:text="@string/search_for"
                 android:paddingRight="-4dp" />
-            <maigosoft.mcpdict.CustomSearchView
+            <com.osfans.mcpdict.CustomSearchView
                 android:id="@+id/search_view" />
         </TableRow>
 
@@ -75,7 +75,7 @@
         android:background="?android:attr/listDivider" />
 
     <fragment
-        android:name="maigosoft.mcpdict.SearchResultFragment"
+        android:name="com.osfans.mcpdict.SearchResultFragment"
         android:id="@+id/fragment_search_result"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
