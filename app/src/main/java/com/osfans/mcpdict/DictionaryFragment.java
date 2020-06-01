@@ -1,4 +1,4 @@
-package maigosoft.mcpdict;
+package com.osfans.mcpdict;
 
 import android.content.SharedPreferences;
 import android.content.res.Resources;

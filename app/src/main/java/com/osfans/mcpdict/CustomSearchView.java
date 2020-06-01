@@ -1,4 +1,4 @@
-package maigosoft.mcpdict;
+package com.osfans.mcpdict;
 
 import android.content.Context;
 import android.text.Editable;
@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import maigosoft.mcpdict.R;
+import com.osfans.mcpdict.R;
 
 public class CustomSearchView extends RelativeLayout {
 

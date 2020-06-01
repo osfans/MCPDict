@@ -1,4 +1,4 @@
-package maigosoft.mcpdict;
+package com.osfans.mcpdict;
 
 public interface Masks {
     public static final int MASK_HZ             = 0x1;
