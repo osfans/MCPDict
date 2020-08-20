@@ -27,6 +27,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
     private CheckBox checkBoxAllowVariants;
     private CheckBox checkBoxToneInsensitive;
     private SearchResultFragment fragmentResult;
+    ArrayAdapter<CharSequence> adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,20 +43,17 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         selfView = inflater.inflate(R.layout.dictionary_fragment, container, false);
 
         // Set up the search view
-        searchView = (CustomSearchView) selfView.findViewById(R.id.search_view);
+        searchView = selfView.findViewById(R.id.search_view);
         searchView.setHint(getResources().getString(R.string.search_hint));
-        searchView.setSearchButtonOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                refresh();
-                fragmentResult.scrollToTop();
-            }
+        searchView.setSearchButtonOnClickListener(view -> {
+            refresh();
+            fragmentResult.scrollToTop();
         });
 
         // Set up the spinner
-        spinnerSearchAs = (Spinner) selfView.findViewById(R.id.spinner_search_as);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-            getActivity(), R.array.search_as, android.R.layout.simple_spinner_item
-        );
+        spinnerSearchAs = selfView.findViewById(R.id.spinner_search_as);
+        adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item);
+        refreshAdapter();
         adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         spinnerSearchAs.setAdapter(adapter);
         spinnerSearchAs.setOnItemSelectedListener(new OnItemSelectedListener() {
@@ -69,17 +67,14 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         });
 
         // Set up the checkboxes
-        checkBoxKuangxYonhOnly = (CheckBox) selfView.findViewById(R.id.check_box_kuangx_yonh_only);
-        checkBoxAllowVariants = (CheckBox) selfView.findViewById(R.id.check_box_allow_variants);
-        checkBoxToneInsensitive = (CheckBox) selfView.findViewById(R.id.check_box_tone_insensitive);
+        checkBoxKuangxYonhOnly = selfView.findViewById(R.id.check_box_kuangx_yonh_only);
+        checkBoxAllowVariants = selfView.findViewById(R.id.check_box_allow_variants);
+        checkBoxToneInsensitive = selfView.findViewById(R.id.check_box_tone_insensitive);
         loadCheckBoxes();
         updateCheckBoxesEnabled();
-        CompoundButton.OnCheckedChangeListener checkBoxListener = new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton view, boolean isChecked) {
-                saveCheckBoxes();
-                searchView.clickSearchButton();
-            }
+        CompoundButton.OnCheckedChangeListener checkBoxListener = (view, isChecked) -> {
+            saveCheckBoxes();
+            searchView.clickSearchButton();
         };
         checkBoxKuangxYonhOnly.setOnCheckedChangeListener(checkBoxListener);
         checkBoxAllowVariants.setOnCheckedChangeListener(checkBoxListener);
@@ -110,14 +105,9 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
 
     private void updateCheckBoxesEnabled() {
         int mode = spinnerSearchAs.getSelectedItemPosition();
-        checkBoxKuangxYonhOnly.setEnabled(mode != MCPDatabase.SEARCH_AS_MC);
-        checkBoxAllowVariants.setEnabled(mode == MCPDatabase.SEARCH_AS_HZ);
-        checkBoxToneInsensitive.setEnabled(mode == MCPDatabase.SEARCH_AS_MC ||
-                                           mode == MCPDatabase.SEARCH_AS_PU ||
-                                           mode == MCPDatabase.SEARCH_AS_CT ||
-                                           mode == MCPDatabase.SEARCH_AS_SH ||
-                                           mode == MCPDatabase.SEARCH_AS_MN ||
-                                           mode == MCPDatabase.SEARCH_AS_VN);
+        checkBoxKuangxYonhOnly.setEnabled(!MCPDatabase.isMC(mode));
+        checkBoxAllowVariants.setEnabled(MCPDatabase.isHZ(mode));
+        checkBoxToneInsensitive.setEnabled(MCPDatabase.isToneInsensitive(mode));
     }
 
     @Override
@@ -135,7 +125,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
             @Override
             protected void onPostExecute(Cursor data) {
                 fragmentResult.setData(data);
-                TextView textEmpty = (TextView) fragmentResult.getView().findViewById(android.R.id.empty);
+                TextView textEmpty = fragmentResult.getView().findViewById(android.R.id.empty);
                 if (query.trim().equals("")) {
                     textEmpty.setText("");
                 }
@@ -144,5 +134,13 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
                 }
             }
         }.execute();
+    }
+
+    public void refreshAdapter() {
+        if (adapter != null) {
+            adapter.clear();
+            for (int i = 0; i < MCPDatabase.COL_JP_ANY; i++) adapter.add(MCPDatabase.getSearchAsNames().get(i));
+            adapter.add(getString(R.string.search_as_jp_any));
+        }
     }
 }

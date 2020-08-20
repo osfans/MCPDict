@@ -37,7 +37,7 @@ public class ActivityWithOptionsMenu extends FragmentActivity {
                                 .setMessage(getString(R.string.about_message, BuildConfig.VERSION_NAME))
                                 .setPositiveButton(R.string.ok, null)
                                 .show();
-            TextView messageText = (TextView) dialog.findViewById(android.R.id.message);
+            TextView messageText = dialog.findViewById(android.R.id.message);
             messageText.setGravity(Gravity.CENTER);
             return true;
         default:

@@ -64,8 +64,8 @@ public class Boast
      * @param text
      *        The text to show. Can be formatted text.
      * @param duration
-     *        How long to display the message. Either {@link #LENGTH_SHORT} or
-     *        {@link #LENGTH_LONG}
+     *        How long to display the message. Either  or
+     *
      */
     @SuppressLint("ShowToast")
     public static Boast makeText(Context context, CharSequence text,
@@ -85,8 +85,8 @@ public class Boast
      *        The resource id of the string resource to use. Can be formatted
      *        text.
      * @param duration
-     *        How long to display the message. Either {@link #LENGTH_SHORT} or
-     *        {@link #LENGTH_LONG}
+     *        How long to display the message. Either  or
+     *
      *
      * @throws Resources.NotFoundException
      *         if the resource can't be found.
@@ -100,7 +100,7 @@ public class Boast
 
     /**
      * Make a standard {@link Boast} that just contains a text view. Duration
-     * defaults to {@link #LENGTH_SHORT}.
+     * defaults to .
      *
      * @param context
      *        The context to use. Usually your {@link android.app.Application}
@@ -116,7 +116,7 @@ public class Boast
 
     /**
      * Make a standard {@link Boast} that just contains a text view with the
-     * text from a resource. Duration defaults to {@link #LENGTH_SHORT}.
+     * text from a resource. Duration defaults to .
      *
      * @param context
      *        The context to use. Usually your {@link android.app.Application}
@@ -146,8 +146,8 @@ public class Boast
      * @param text
      *        The text to show. Can be formatted text.
      * @param duration
-     *        How long to display the message. Either {@link #LENGTH_SHORT} or
-     *        {@link #LENGTH_LONG}
+     *        How long to display the message. Either  or
+     *
      */
     public static void showText(Context context, CharSequence text, int duration)
     {
@@ -165,8 +165,8 @@ public class Boast
      *        The resource id of the string resource to use. Can be formatted
      *        text.
      * @param duration
-     *        How long to display the message. Either {@link #LENGTH_SHORT} or
-     *        {@link #LENGTH_LONG}
+     *        How long to display the message. Either  or
+     *
      *
      * @throws Resources.NotFoundException
      *         if the resource can't be found.
@@ -179,7 +179,7 @@ public class Boast
 
     /**
      * Show a standard {@link Boast} that just contains a text view. Duration
-     * defaults to {@link #LENGTH_SHORT}.
+     * defaults to .
      *
      * @param context
      *        The context to use. Usually your {@link android.app.Application}
@@ -194,7 +194,7 @@ public class Boast
 
     /**
      * Show a standard {@link Boast} that just contains a text view with the
-     * text from a resource. Duration defaults to {@link #LENGTH_SHORT}.
+     * text from a resource. Duration defaults to .
      *
      * @param context
      *        The context to use. Usually your {@link android.app.Application}
