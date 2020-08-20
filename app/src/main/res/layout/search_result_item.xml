@@ -15,6 +15,7 @@
     Reference: http://stackoverflow.com/a/12528960
 -->
 
+    <tag android:id="@+id/tag_favorite" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,9 +53,9 @@
 
         <TableRow
             android:gravity="top" >
-            <ImageView
-                style="@style/ImageDetail"
-                android:src="@drawable/lang_mc" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_mc" />
             <LinearLayout
                 android:layout_span="3"
                 android:orientation="horizontal"
@@ -80,102 +81,145 @@
 
         <TableRow
             android:gravity="top" >
-            <ImageView
-                style="@style/ImageDetail"
-                android:src="@drawable/lang_pu" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c3" />
             <TextView
                 style="@style/FontDetail"
-                android:id="@+id/text_pu"
+                android:id="@+id/text_c3"
                 android:layout_width="0dp" />
-            <ImageView
-                style="@style/ImageDetail"
-                android:src="@drawable/lang_ct" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c4" />
             <TextView
                 style="@style/FontDetail"
-                android:id="@+id/text_ct"
-                android:layout_width="0dp" />
-        </TableRow>
-
-        <TableRow
-            android:gravity="top" >
-            <ImageView
-                style="@style/ImageDetail"
-                android:src="@drawable/lang_sh" />
-            <TextView
-                style="@style/FontDetail"
-                android:id="@+id/text_sh"
-                android:layout_width="0dp" />
-            <ImageView
-                style="@style/ImageDetail"
-                android:src="@drawable/lang_mn" />
-            <TextView
-                style="@style/FontDetail"
-                android:id="@+id/text_mn"
+                android:id="@+id/text_c4"
                 android:layout_width="0dp" />
         </TableRow>
 
         <TableRow
             android:gravity="top" >
-            <ImageView
-                style="@style/ImageDetail"
-                android:src="@drawable/lang_kr" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c5" />
             <TextView
                 style="@style/FontDetail"
-                android:id="@+id/text_kr"
+                android:id="@+id/text_c5"
                 android:layout_width="0dp" />
-            <ImageView
-                style="@style/ImageDetail"
-                android:src="@drawable/lang_vn" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c6" />
             <TextView
                 style="@style/FontDetail"
-                android:id="@+id/text_vn"
-                android:layout_width="0dp" />
-        </TableRow>
-
-        <TableRow
-            android:gravity="top" >
-            <ImageView
-                style="@style/ImageDetail"
-                android:src="@drawable/lang_jp_go" />
-            <TextView
-                style="@style/FontDetail"
-                android:id="@+id/text_jp_go"
-                android:layout_width="0dp" />
-            <ImageView
-                style="@style/ImageDetail"
-                android:src="@drawable/lang_jp_kan" />
-            <TextView
-                style="@style/FontDetail"
-                android:id="@+id/text_jp_kan"
+                android:id="@+id/text_c6"
                 android:layout_width="0dp" />
         </TableRow>
 
         <TableRow
             android:gravity="top" >
-            <ImageView
-                style="@style/ImageDetail"
-                android:id="@+id/image_jp_extra_1" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c7" />
             <TextView
                 style="@style/FontDetail"
-                android:id="@+id/text_jp_extra_1"
+                android:id="@+id/text_c7"
                 android:layout_width="0dp" />
-            <ImageView
-                style="@style/ImageDetail"
-                android:id="@+id/image_jp_extra_2" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c8" />
             <TextView
                 style="@style/FontDetail"
-                android:id="@+id/text_jp_extra_2"
+                android:id="@+id/text_c8"
                 android:layout_width="0dp" />
         </TableRow>
 
         <TableRow
             android:gravity="top" >
-            <ImageView
-                style="@style/ImageDetail"
-                android:id="@+id/image_jp_extra_3" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c9" />
             <TextView
                 style="@style/FontDetail"
-                android:id="@+id/text_jp_extra_3"
+                android:id="@+id/text_c9"
+                android:layout_width="0dp" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c10" />
+            <TextView
+                style="@style/FontDetail"
+                android:id="@+id/text_c10"
+                android:layout_width="0dp" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="top" >
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c11" />
+            <TextView
+                style="@style/FontDetail"
+                android:id="@+id/text_c11"
+                android:layout_width="0dp" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c12" />
+            <TextView
+                style="@style/FontDetail"
+                android:id="@+id/text_c12"
+                android:layout_width="0dp" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="top" >
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c13" />
+            <TextView
+                style="@style/FontDetail"
+                android:id="@+id/text_c13"
+                android:layout_width="0dp" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c14" />
+            <TextView
+                style="@style/FontDetail"
+                android:id="@+id/text_c14"
+                android:layout_width="0dp" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="top" >
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c15" />
+            <TextView
+                style="@style/FontDetail"
+                android:id="@+id/text_c15"
+                android:layout_width="0dp" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c16" />
+            <TextView
+                style="@style/FontDetail"
+                android:id="@+id/text_c16"
+                android:layout_width="0dp" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="top" >
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c17" />
+            <TextView
+                style="@style/FontDetail"
+                android:id="@+id/text_c17"
+                android:layout_width="0dp" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c18" />
+            <TextView
+                style="@style/FontDetail"
+                android:id="@+id/text_c18"
                 android:layout_width="0dp" />
         </TableRow>
 

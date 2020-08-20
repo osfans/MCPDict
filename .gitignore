@@ -1,5 +1,8 @@
 gen
-prepare
+prepare/*.db
+prepare/*.csv
+prepare/*.yaml
+prepare/*.txt
 publish
 pretty.py
 .idea/
@@ -8,3 +11,4 @@ gradle.properties
 local.properties
 build/
 *.iml
+*.keystore

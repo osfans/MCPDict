@@ -1,15 +1,14 @@
 package com.osfans.mcpdict;
 
-import java.lang.reflect.Field;
-
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTabHost;
 import android.view.View;
 import android.view.ViewConfiguration;
-import android.widget.TabHost;
 import android.widget.TextView;
+
+import java.lang.reflect.Field;
 
 public class MainActivity extends ActivityWithOptionsMenu {
 
@@ -34,6 +33,10 @@ public class MainActivity extends ActivityWithOptionsMenu {
                 MCPDatabase.initialize(MainActivity.this);
                 return null;
             }
+            protected void onPostExecute(Void result) {
+                if (getDictionaryFragment()!=null)
+                    getDictionaryFragment().refreshAdapter();
+            }
         }.execute();
 
         new AsyncTask<Void, Void, Void>() {
@@ -50,10 +53,8 @@ public class MainActivity extends ActivityWithOptionsMenu {
         try {
             ViewConfiguration config = ViewConfiguration.get(this);
             Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
-            if (menuKeyField != null) {
-                menuKeyField.setAccessible(true);
-                menuKeyField.setBoolean(config, false);
-            }
+            menuKeyField.setAccessible(true);
+            menuKeyField.setBoolean(config, false);
         }
         catch (Exception e) {
             // Ignore
@@ -64,7 +65,7 @@ public class MainActivity extends ActivityWithOptionsMenu {
         setContentView(R.layout.main_activity);
 
         // Set up the tabs
-        tabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
+        tabHost = findViewById(android.R.id.tabhost);
         fm = getSupportFragmentManager();
         tabHost.setup(this, fm, android.R.id.tabcontent);
         @SuppressWarnings("rawtypes")
@@ -79,18 +80,15 @@ public class MainActivity extends ActivityWithOptionsMenu {
                 null
             );
         }
-        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
-            @Override
-            public void onTabChanged(String tabId) {
-                fm.executePendingTransactions();
-                getCurrentFragment().refresh();
-            }
+        tabHost.setOnTabChangedListener(tabId -> {
+            fm.executePendingTransactions();
+            getCurrentFragment().refresh();
         });
 
         // Styling of the tabs has to go here; XML doesn't work
         for (int i = 0; i < nTabs; i++) {
             View tab = tabHost.getTabWidget().getChildAt(i);
-            TextView textView = (TextView) tab.findViewById(android.R.id.title);
+            TextView textView = tab.findViewById(android.R.id.title);
             textView.setTextSize(17);
         }
     }

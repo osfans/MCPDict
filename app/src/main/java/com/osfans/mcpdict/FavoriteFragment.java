@@ -10,7 +10,6 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -25,9 +24,7 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
     private View selfView;
     private View header;
     private TextView textTotal;
-    private Button buttonManage;
     private ListView listView;
-    private TextView textEmpty;
     private FavoriteCursorAdapter adapter;
     private boolean hasNewItem;
 
@@ -46,34 +43,35 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
 
         // Get references to some child views
         header = selfView.findViewById(R.id.favorite_header);
-        textTotal = (TextView) selfView.findViewById(R.id.text_total);
-        listView = (ListView) selfView.findViewById(android.R.id.list);
+        textTotal = selfView.findViewById(R.id.text_total);
+        listView = selfView.findViewById(android.R.id.list);
 
         // Set up the "management" button
-        buttonManage = (Button) selfView.findViewById(R.id.button_favorite_manage);
-        buttonManage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopupMenu popup = new PopupMenu(getActivity(), v);
-                popup.inflate(R.menu.favorite_manage_popup_menu);
-                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        int id = item.getItemId();
-                        switch (id) {
-                            case R.id.menu_item_export: FavoriteDialogs.export(false); return true;
-                            case R.id.menu_item_import: FavoriteDialogs.import_(0); return true;
-                            case R.id.menu_item_clear: FavoriteDialogs.deleteAll(); return true;
-                            default: return false;
-                        }
-                    }
-                });
-                popup.show();
-            }
+        Button buttonManage = selfView.findViewById(R.id.button_favorite_manage);
+        buttonManage.setOnClickListener(v -> {
+            PopupMenu popup = new PopupMenu(getActivity(), v);
+            popup.inflate(R.menu.favorite_manage_popup_menu);
+            popup.setOnMenuItemClickListener(item -> {
+                int id = item.getItemId();
+                switch (id) {
+                    case R.id.menu_item_export:
+                        FavoriteDialogs.export(false);
+                        return true;
+                    case R.id.menu_item_import:
+                        FavoriteDialogs.import_(0);
+                        return true;
+                    case R.id.menu_item_clear:
+                        FavoriteDialogs.deleteAll();
+                        return true;
+                    default:
+                        return false;
+                }
+            });
+            popup.show();
         });
 
         // Set up the "import" link in the empty view
-        textEmpty = (TextView) selfView.findViewById(android.R.id.empty);
+        TextView textEmpty = selfView.findViewById(android.R.id.empty);
         textEmpty.setText(textEmpty.getText(), BufferType.SPANNABLE);
         Spannable spannable = (Spannable) textEmpty.getText();
         int p = spannable.toString().length() - 5;
@@ -110,9 +108,9 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
         //   SearchResultFragment if it is already displayed
 
         // Find the Chinese character in the view being clicked
-        TextView text = (TextView) view.findViewById(R.id.text_hz);
+        TextView text = view.findViewById(R.id.text_hz);
         String hanzi = text.getText().toString();
-        final char unicode = hanzi.charAt(0);
+        final int unicode = hanzi.codePointAt(0);
 
         if (adapter.isItemExpanded(unicode)) {
             adapter.collapseItem(unicode, view, list);

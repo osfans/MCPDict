@@ -19,19 +19,19 @@ import android.widget.TextView;
 @SuppressLint("UseSparseArrays")
 public class FavoriteCursorAdapter extends CursorAdapter {
 
-    private int layout;
-    private LayoutInflater inflater;
-    private FavoriteFragment fragment;
-    private AtomicInteger nextId = new AtomicInteger(42);
+    private final int layout;
+    private final LayoutInflater inflater;
+    private final FavoriteFragment fragment;
+    private final AtomicInteger nextId = new AtomicInteger(42);
         // Answer to life, the universe and everything
-    private Set<Character> expandedItems;
+    private final Set<Integer> expandedItems;
 
     public FavoriteCursorAdapter(Context context, int layout, Cursor cursor, FavoriteFragment fragment) {
         super(context, cursor, FLAG_REGISTER_CONTENT_OBSERVER);
         this.layout = layout;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.fragment = fragment;
-        this.expandedItems = new HashSet<Character>();
+        this.expandedItems = new HashSet<>();
     }
 
     @Override
@@ -54,47 +54,37 @@ public class FavoriteCursorAdapter extends CursorAdapter {
 
     @Override
     public void bindView(final View view, final Context context, Cursor cursor) {
-        final char unicode;
+        final int unicode;
         String string;
         TextView textView;
 
         // Get the Chinese character from the cursor,
         //   and make sure we're binding it to the view recorded in itemStatus
         string = cursor.getString(cursor.getColumnIndex("unicode"));
-        unicode = (char) Integer.parseInt(string, 16);
+        unicode = Integer.parseInt(string, 16);
 
         // Chinese character
-        string = String.valueOf(unicode);
-        textView = (TextView) view.findViewById(R.id.text_hz);
+        string = Orthography.Hanzi.toString(unicode);
+        textView = view.findViewById(R.id.text_hz);
         textView.setText(string);
 
         // Timestamp
         string = cursor.getString(cursor.getColumnIndex("local_timestamp"));
-        textView = (TextView) view.findViewById(R.id.text_timestamp);
+        textView = view.findViewById(R.id.text_timestamp);
         textView.setText(string);
 
         // Comment
         string = cursor.getString(cursor.getColumnIndex("comment"));
-        textView = (TextView) view.findViewById(R.id.text_comment);
+        textView = view.findViewById(R.id.text_comment);
         textView.setText(string);
 
         // "Edit" button
-        final Button buttonEdit = (Button) view.findViewById(R.id.button_edit);
-        buttonEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FavoriteDialogs.view(unicode, view);
-            }
-        });
+        final Button buttonEdit = view.findViewById(R.id.button_edit);
+        buttonEdit.setOnClickListener(v -> FavoriteDialogs.view(unicode, view));
 
         // "Delete" button
-        final Button buttonDelete = (Button) view.findViewById(R.id.button_delete);
-        buttonDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FavoriteDialogs.delete(unicode, false);
-            }
-        });
+        final Button buttonDelete = view.findViewById(R.id.button_delete);
+        buttonDelete.setOnClickListener(v -> FavoriteDialogs.delete(unicode, false));
 
         // Restore expanded status
         if (expandedItems.contains(unicode)) {
@@ -105,18 +95,18 @@ public class FavoriteCursorAdapter extends CursorAdapter {
         }
     }
 
-    public boolean isItemExpanded(char unicode) {
+    public boolean isItemExpanded(int unicode) {
         return expandedItems.contains(unicode);
     }
 
-    public void expandItem(char unicode, View view) {
+    public void expandItem(int unicode, View view) {
         expandItem(unicode, view, null);
     }
 
     // Mark a Chinese character as expanded
     // If a view is provided, expand that view, too
     // If a list is provided, scroll the list so that the view is entirely visible
-    public void expandItem(final char unicode, final View view, final ListView list) {
+    public void expandItem(final int unicode, final View view, final ListView list) {
         expandedItems.add(unicode);
         if (view == null) return;
         final View container = view.findViewWithTag("container");
@@ -136,18 +126,18 @@ public class FavoriteCursorAdapter extends CursorAdapter {
         }.execute();
     }
 
-    public void collapseItem(char unicode) {
+    public void collapseItem(int unicode) {
         collapseItem(unicode, null, null);
     }
 
-    public void collapseItem(char unicode, View view) {
+    public void collapseItem(int unicode, View view) {
         collapseItem(unicode, view, null);
     }
 
     // Mark a Chinese character as collapsed
     // If a view is provided, collapsed that view, too
     // If a list is provided, scroll the list so that the view is entirely visible
-    public void collapseItem(char unicode, View view, ListView list) {
+    public void collapseItem(int unicode, View view, ListView list) {
         expandedItems.remove(unicode);
         if (view == null) return;
         View container = view.findViewWithTag("container");
@@ -166,20 +156,17 @@ public class FavoriteCursorAdapter extends CursorAdapter {
     // If the view is taller than the list, make sure the view's bottom is visible
     // This method had better reside in a utility class
     public static void scrollListToShowItem(final ListView list, final View view) {
-        list.post(new Runnable() {
-            @Override
-            public void run() {
-                int top = view.getTop();
-                int bottom = view.getBottom();
-                int height = bottom - top;
-                int listTop = list.getPaddingTop();
-                int listBottom = list.getHeight() - list.getPaddingBottom();
-                int listHeight = listBottom - listTop;
-                int y = (height > listHeight || bottom > listBottom) ? (listBottom - height) :
-                        (top < listTop) ? listTop : top;
-                int position = list.getPositionForView(view);
-                list.setSelectionFromTop(position, y);
-            }
+        list.post(() -> {
+            int top = view.getTop();
+            int bottom = view.getBottom();
+            int height = bottom - top;
+            int listTop = list.getPaddingTop();
+            int listBottom = list.getHeight() - list.getPaddingBottom();
+            int listHeight = listBottom - listTop;
+            int y = (height > listHeight || bottom > listBottom) ? (listBottom - height) :
+                    Math.max(top, listTop);
+            int position = list.getPositionForView(view);
+            list.setSelectionFromTop(position, y);
         });
     }
 }

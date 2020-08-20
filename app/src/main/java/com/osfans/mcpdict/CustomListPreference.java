@@ -8,7 +8,6 @@ import android.content.res.TypedArray;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.preference.DialogPreference;
-import android.preference.Preference;
 import android.util.AttributeSet;
 
 public class CustomListPreference extends DialogPreference {
@@ -23,7 +22,7 @@ public class CustomListPreference extends DialogPreference {
         // This is specified by the xmlns:android attribute of the PreferenceScreen tag
         //   in res/xml/preferences.xml
 
-    private Context context;
+    private final Context context;
     private CharSequence[] mEntries;
     private int mValue;
     private transient int mTempValue;
@@ -44,12 +43,9 @@ public class CustomListPreference extends DialogPreference {
             mValue = res.getInteger(defaultValueResId);
         }
 
-        setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference pref, Object value) {
-                pref.setSummary(getEntry());
-                return true;
-            }
+        setOnPreferenceChangeListener((pref, value) -> {
+            pref.setSummary(getEntry());
+            return true;
         });
     }
 
@@ -95,17 +91,14 @@ public class CustomListPreference extends DialogPreference {
             throw new IllegalStateException("CustomListPreference requires an entries array.");
         }
 
-        builder.setSingleChoiceItems(mEntries, mValue, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                mTempValue = which;
-                /*
-                 * Clicking on an item simulates the positive button
-                 * click, and dismisses the dialog.
-                 */
-                CustomListPreference.this.onClick(dialog, DialogInterface.BUTTON_POSITIVE);
-                dialog.dismiss();
-            }
+        builder.setSingleChoiceItems(mEntries, mValue, (dialog, which) -> {
+            mTempValue = which;
+            /*
+             * Clicking on an item simulates the positive button
+             * click, and dismisses the dialog.
+             */
+            CustomListPreference.this.onClick(dialog, DialogInterface.BUTTON_POSITIVE);
+            dialog.dismiss();
         });
 
         /*
