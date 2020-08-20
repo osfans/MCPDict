@@ -34,7 +34,7 @@ public class ActivityWithOptionsMenu extends FragmentActivity {
             Dialog dialog = new AlertDialog.Builder(this)
                                 .setIcon(R.drawable.ic_info)
                                 .setTitle(R.string.about)
-                                .setMessage(R.string.about_message)
+                                .setMessage(getString(R.string.about_message, BuildConfig.VERSION_NAME))
                                 .setPositiveButton(R.string.ok, null)
                                 .show();
             TextView messageText = (TextView) dialog.findViewById(android.R.id.message);
