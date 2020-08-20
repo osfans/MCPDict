@@ -8,7 +8,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 30
         versionCode 9
-        versionName "4.0"
+        versionName "4.0_2020.08.20"
     }
 
     buildTypes {
