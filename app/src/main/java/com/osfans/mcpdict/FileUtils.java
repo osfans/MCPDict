@@ -22,8 +22,9 @@ public class FileUtils {
         dstStream.close();
     }
 
-    public static void makeParentDirs(String path) throws IOException {
+    public static void makeParentDirs(String path) {
         File parent = new File(path).getParentFile();
+        assert parent != null;
         if (!parent.exists()) {
             parent.mkdirs();
         }

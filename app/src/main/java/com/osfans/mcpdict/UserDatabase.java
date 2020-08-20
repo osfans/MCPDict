@@ -38,28 +38,27 @@ class UserDatabase extends SQLiteOpenHelper {
         String query = "SELECT rowid AS _id, unicode, comment, " +
                        "STRFTIME('%Y/%m/%d', timestamp, 'localtime') AS local_timestamp " +
                        "FROM favorite ORDER BY timestamp DESC";
-        Cursor data = db.rawQuery(query, null);
-        return data;
+        return db.rawQuery(query, null);
     }
 
     // "WRITE" OPERATIONS
 
-    public static void insertFavorite(char unicode, String comment) {
+    public static void insertFavorite(int unicode, String comment) {
         ContentValues values = new ContentValues();
-        values.put("unicode", String.format("%04X", (int) unicode));
+        values.put("unicode", Orthography.Hanzi.getHex(unicode));
         values.put("comment", comment);
         db.insert("favorite", null, values);
     }
 
-    public static void updateFavorite(char unicode, String comment) {
+    public static void updateFavorite(int unicode, String comment) {
         ContentValues values = new ContentValues();
         values.put("comment", comment);
-        String[] args = {String.format("%04X", (int) unicode)};
+        String[] args = {Orthography.Hanzi.getHex(unicode)};
         db.update("favorite", values, "unicode = ?", args);
     }
 
-    public static void deleteFavorite(char unicode) {
-        String[] args = {String.format("%04X", (int) unicode)};
+    public static void deleteFavorite(int unicode) {
+        String[] args = {Orthography.Hanzi.getHex(unicode)};
         db.delete("favorite", "unicode = ?", args);
     }
 
@@ -109,7 +108,7 @@ class UserDatabase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE favorite (" +
                    "    unicode TEXT UNIQUE NOT NULL," +
-                   "    comment STRING," +
+                   "    comment TEXT," +
                    "    timestamp REAL DEFAULT (JULIANDAY('now')) NOT NULL" +
                    ")");
     }

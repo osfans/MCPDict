@@ -4,21 +4,18 @@ import android.content.Context;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-import com.osfans.mcpdict.R;
 
 public class CustomSearchView extends RelativeLayout {
 
-    private EditText editText;
-    private Button clearButton;
-    private Button searchButton;
+    private final EditText editText;
+    private final Button clearButton;
+    private final Button searchButton;
 
     public CustomSearchView(Context context) {
         this(context, null);
@@ -31,9 +28,9 @@ public class CustomSearchView extends RelativeLayout {
             context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.custom_search_view, this, true);
 
-        editText = (EditText) findViewById(R.id.text_query);
-        clearButton = (Button) findViewById(R.id.button_clear);
-        searchButton = (Button) findViewById(R.id.button_search);
+        editText = findViewById(R.id.text_query);
+        clearButton = findViewById(R.id.button_clear);
+        searchButton = findViewById(R.id.button_search);
 
         // Toggle the clear button when user edits text
         editText.addTextChangedListener(new TextWatcher() {
@@ -45,19 +42,13 @@ public class CustomSearchView extends RelativeLayout {
         });
 
         // Invoke the search button when user hits Enter
-        editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                searchButton.performClick();
-                return true;
-            }
+        editText.setOnEditorActionListener((v, actionId, event) -> {
+            searchButton.performClick();
+            return true;
         });
 
         clearButton.setVisibility(View.GONE);
-        clearButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                editText.setText("");
-            }
-        });
+        clearButton.setOnClickListener(v -> editText.setText(""));
     }
 
     public void setHint(String hint) {
@@ -65,14 +56,12 @@ public class CustomSearchView extends RelativeLayout {
     }
 
     public void setSearchButtonOnClickListener(final View.OnClickListener listener) {
-        searchButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Hide the keyboard before performing the search
-                editText.clearFocus();
-                InputMethodManager imm = (InputMethodManager)v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
-                listener.onClick(v);
-            }
+        searchButton.setOnClickListener(v -> {
+            // Hide the keyboard before performing the search
+            editText.clearFocus();
+            InputMethodManager imm = (InputMethodManager)v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+            listener.onClick(v);
         });
     }
 
