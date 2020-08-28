@@ -10,7 +10,6 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.os.Build;
 import android.preference.PreferenceManager;
-import android.text.TextUtils;
 import android.widget.CursorAdapter;
 import android.text.Spannable;
 import android.text.style.ForegroundColorSpan;

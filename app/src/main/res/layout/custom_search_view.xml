@@ -8,24 +8,27 @@
         android:background="@drawable/ic_search"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentEnd="true" />
 
     <EditText
         style="?android:attr/editTextStyle"
         android:id="@+id/text_query"
         android:inputType="text"
+        android:hint="@string/search_hint"
         android:imeOptions="actionSearch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/button_search"
-        android:layout_alignParentLeft="true"
-        android:paddingRight="32dp" />
+        android:layout_toStartOf="@id/button_search"
+        android:layout_alignParentStart="true"
+        android:paddingStart="8dp"
+        android:paddingEnd="32dp"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/button_clear"
         android:background="@drawable/ic_cancel"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_alignRight="@id/text_query" />
+        android:layout_alignEnd="@id/text_query" />
 
 </RelativeLayout>
