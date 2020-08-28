@@ -6,14 +6,14 @@
     android:gravity="top" >
 
     <ListView
-        android:id="@id/android:list"
+        android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fadingEdgeLength="0dp" />
 
     <TextView
         style="@style/FontLabel"
-        android:id="@id/android:empty"
+        android:id="@android:id/empty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="6dp" />

@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,11 +36,12 @@ public class ActivityWithOptionsMenu extends FragmentActivity {
             Dialog dialog = new AlertDialog.Builder(this)
                                 .setIcon(R.drawable.ic_info)
                                 .setTitle(R.string.about)
-                                .setMessage(getString(R.string.about_message, BuildConfig.VERSION_NAME))
+                                .setMessage(Html.fromHtml(getString(R.string.about_message, BuildConfig.VERSION_NAME)))
                                 .setPositiveButton(R.string.ok, null)
                                 .show();
             TextView messageText = dialog.findViewById(android.R.id.message);
             messageText.setGravity(Gravity.CENTER);
+            messageText.setMovementMethod(LinkMovementMethod.getInstance());
             return true;
         default:
             return super.onOptionsItemSelected(item);

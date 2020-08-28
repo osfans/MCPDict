@@ -37,7 +37,7 @@ public class SearchResultFragment extends ListFragment {
     private View selfView;
     private ListView listView;
     private SearchResultCursorAdapter adapter;
-    private boolean showFavoriteButton;
+    private final boolean showFavoriteButton;
     private View selectedEntry;
 
     private static SearchResultFragment selectedFragment;
@@ -120,12 +120,12 @@ public class SearchResultFragment extends ListFragment {
         SubMenu menuDictLinks = menu.getItem(1).getSubMenu();
         MenuItem item;
 
+        if ((tag & MASK_ALL_READINGS) > 0) menuCopy.add(MASK_ALL_READINGS, 0, 0, getString(R.string.copy_all));
         for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
             int mask = 1 << i;
-            if ((tag & mask) > 0) menuCopy.add(0, 0, mask, MCPDatabase.getSearchAsName(i));
+            if ((tag & mask) > 0) menuCopy.add(mask, 0, 0, MCPDatabase.getSearchAsName(i));
         }
-        if ((tag & MASK_JP_ALL) > 0) menuCopy.add(0, 0, MASK_JP_ALL, getString(R.string.copy_jp_all));
-        if ((tag & MASK_ALL_READINGS) > 0) menuCopy.add(0, 0, MASK_ALL_READINGS, getString(R.string.copy_all));
+        if ((tag & MASK_JP_ALL) > 0) menuCopy.add(MASK_JP_ALL, 0, 0, getString(R.string.copy_jp_all));
 
 
         // Determine whether to enable each item in the sub-menu of external dictionaries,
@@ -169,7 +169,7 @@ public class SearchResultFragment extends ListFragment {
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         if (selectedFragment != this) return false;
-        int mask = item.getOrder();
+        int mask = item.getGroupId();
         if (mask > 0) {
             // Generate the text to copy to the clipboard
             String text = getCopyText(selectedEntry, mask);
