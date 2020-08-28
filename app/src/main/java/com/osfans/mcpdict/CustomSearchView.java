@@ -51,10 +51,6 @@ public class CustomSearchView extends RelativeLayout {
         clearButton.setOnClickListener(v -> editText.setText(""));
     }
 
-    public void setHint(String hint) {
-        editText.setHint(hint);
-    }
-
     public void setSearchButtonOnClickListener(final View.OnClickListener listener) {
         searchButton.setOnClickListener(v -> {
             // Hide the keyboard before performing the search

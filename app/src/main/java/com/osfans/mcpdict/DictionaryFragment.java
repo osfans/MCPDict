@@ -44,7 +44,6 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
 
         // Set up the search view
         searchView = selfView.findViewById(R.id.search_view);
-        searchView.setHint(getResources().getString(R.string.search_hint));
         searchView.setSearchButtonOnClickListener(view -> {
             refresh();
             fragmentResult.scrollToTop();
