@@ -1,20 +1,18 @@
 package com.osfans.mcpdict;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
-import android.graphics.Color;
 import android.preference.PreferenceManager;
-import android.text.TextUtils;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 public class MCPDatabase extends SQLiteAssetHelper {
 
@@ -47,19 +45,16 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static int COL_FIRST_READING;
     public static int COL_LAST_READING;
 
-    public static int MASK_HZ;
-    public static int MASK_UNICODE;
-    public static int MASK_MC;
     public static int MASK_JP_ALL;
     public static int MASK_ALL_READINGS;
 
     private static final String TABLE_NAME = "mcpdict";
 
-    public static String[] COLUMNS;
+    private static String[] COLUMNS;
     private static final String[] JP_COLUMNS = new String[] {SEARCH_AS_JP_GO, SEARCH_AS_JP_KAN, SEARCH_AS_JP_TOU, SEARCH_AS_JP_KWAN, SEARCH_AS_JP_OTHER};
     private static ArrayList<String> SEARCH_AS_NAMES;
     private static ArrayList<String> NAMES;
-    private static ArrayList<Integer> COLORS;
+    private static ArrayList<String> COLORS;
     private static ArrayList<String> DICT_NAMES;
     private static ArrayList<String> DICT_LINKS;
 
@@ -262,11 +257,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COL_JP_FIRST = COL_JP_GO;
         COL_JP_ANY = COL_JP_FIRST + 2;
 
-        MASK_HZ = 1 << COL_HZ;
-        MASK_UNICODE = 1 << COL_UNICODE;
-        MASK_MC = 1 << COL_MC;
         MASK_JP_ALL = 0b11111 << COL_JP_FIRST;
-        MASK_ALL_READINGS   = ((1 << n) - 1) ^ MASK_HZ ^ MASK_UNICODE;
+        MASK_ALL_READINGS   = ((1 << n) - 1) ^ 0b11;
 
         SEARCH_AS_NAMES = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -351,12 +343,12 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COLORS = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             String c = cursor.getString(i);
-            COLORS.add(TextUtils.isEmpty(c) ? null : Color.parseColor(c));
+            COLORS.add(c);
         }
         cursor.close();
     }
 
-    public static int getColor(int index) {
+    public static String getColor(int index) {
         if (COLORS == null) getColors();
         return COLORS.get(index);
     }
@@ -409,5 +401,9 @@ public class MCPDatabase extends SQLiteAssetHelper {
 
     public static String getColumnName(int index) {
         return COLUMNS[index];
+    }
+
+    public static int getColumnCount() {
+        return COLUMNS.length;
     }
 }

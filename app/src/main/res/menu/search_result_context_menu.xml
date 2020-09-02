@@ -6,11 +6,6 @@
         <menu />
     </item>
     <item
-        android:id="@+id/menu_item_dict_links"
-        android:title="@string/dict_links" >
-        <menu />
-    </item>
-    <item
         android:id="@+id/menu_item_favorite"
         android:title="@string/favorite_add" />
 </menu>
