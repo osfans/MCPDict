@@ -207,7 +207,9 @@ public class SearchResultFragment extends ListFragment {
                 entry.findViewById(R.id.text_c15),
                 entry.findViewById(R.id.text_c16),
                 entry.findViewById(R.id.text_c17),
-                entry.findViewById(R.id.text_c18)
+                entry.findViewById(R.id.text_c18),
+                entry.findViewById(R.id.text_c19),
+                entry.findViewById(R.id.text_c20)
         };
         StringBuilder sb;
         if (mask == MASK_MC) {
