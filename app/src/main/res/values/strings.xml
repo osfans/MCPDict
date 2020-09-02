@@ -43,9 +43,7 @@
     <string name="copy_jp_all">所有日語讀音</string>
     <string name="copy_done">已將“%s”複製到剪貼板</string>
     <string name="search_as_jp_any">日語（任意讀音）</string>
-
-    <string name="dict_link">去 %s 查詢“%s”字</string>
-
+    
     <string name="favorite_total">當前生字本中共有 %d 個生字</string>
     <string name="favorite_empty">當前生字本中沒有生字。\n\n在“字典”頁面，點擊查詢結果右上角的五角星，可以把相應的漢字加入生字本中。\n\n若您備份過生字本，可以按此導入。</string>
 
