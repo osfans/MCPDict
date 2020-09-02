@@ -235,7 +235,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
                    "v.unicode AS unicode", "NULL AS variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
         String selection = "v.unicode = ?";
-        String query = qb.buildQuery(projection, selection, null, null, null, null, null);
+        String query = qb.buildQuery(projection, selection, null, null, null, null);
         String[] args = {Orthography.Hanzi.getHex(unicode)};
         return db.rawQuery(query, args);
     }
@@ -246,7 +246,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         String[] projection = {"*"};
-        String query = qb.buildQuery(projection, "rowid = 1", null, null, null, null, null);
+        String query = qb.buildQuery(projection, "rowid = 1",  null, null, null, null);
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
         COLUMNS = cursor.getColumnNames();
@@ -322,7 +322,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         String[] projection = {"*"};
-        String query = qb.buildQuery(projection, "rowid = 2", null, null, null, null, null);
+        String query = qb.buildQuery(projection, "rowid = 2", null, null, null, null);
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
         int n = cursor.getColumnCount();
@@ -344,7 +344,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         String[] projection = {"*"};
-        String query = qb.buildQuery(projection, "rowid = 3", null, null, null, null, null);
+        String query = qb.buildQuery(projection, "rowid = 3",  null, null, null, null);
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
         int n = cursor.getColumnCount();
@@ -367,7 +367,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         String[] projection = {"*"};
-        String query = qb.buildQuery(projection, "rowid = 4", null, null, null, null, null);
+        String query = qb.buildQuery(projection, "rowid = 4",  null, null, null, null);
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
         int n = cursor.getColumnCount();
@@ -390,7 +390,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         String[] projection = {"*"};
-        String query = qb.buildQuery(projection, "rowid = 5", null, null, null, null, null);
+        String query = qb.buildQuery(projection, "rowid = 5",  null, null, null, null);
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
         int n = cursor.getColumnCount();

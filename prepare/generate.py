@@ -5,14 +5,14 @@ from collections import defaultdict
 
 HEADS = [
   ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s'),
-  ('unicode', '編碼', '編碼', '#808080', 'Unihan', 'https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%s'),
+  ('unicode', '統一碼', '統一碼', '#808080', 'Unihan', 'https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%s'),
   ('mc', '中古拼音', '中古', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s"),
   ('sg', '上古', '上古', '#9A339F', '韻典網（上古音系）', 'https://ytenx.org/dciangx/dzih/%s'),
   ('pu', '普通話', '普', '#FF00FF', '漢典網', "http://www.zdic.net/hans/%s"),
   ('tr', '泰如拼音', '泰如', '#0000FF', '泰如小字典', "http://taerv.nguyoeh.com/"),
   ('nt', '南通話', '南通', '#0000FF', '南通方言網', "http://nantonghua.net/search/index.php?hanzi=%s"),
   ('ic', '鹽城話', '鹽城', '#0000FF', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s"),
-  ('lj', '南京話', '南京', '#0000FF', None, None),
+  ('lj', '南京話', '南京', '#0000FF', '南京官話拼音方案', "https://uliloewi.github.io/LangJinPinIn/PinInFangAng"),
   ('sh', '上海話', '上海', '#00ADAD', '吳音小字典（上海）', "http://www.wu-chinese.com/minidict/search.php?searchlang=zaonhe&searchkey=%s"),
   ('sz', '蘇州話', '蘇州', '#00ADAD', '吳音小字典（蘇州）', "http://www.wu-chinese.com/minidict/search.php?searchlang=suceu&searchkey=%s"),
   ('ct', '粵語', '粵', '#269A26', '粵語審音配詞字庫', "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s"),
@@ -51,6 +51,7 @@ def update(k, d):
 d=defaultdict(list)
 
 #mc
+#https://github.com/biopolyhedron/rime-middle-chinese/blob/master/zyenpheng.dict.yaml
 d.clear()
 for line in open("zyenpheng.dict.yaml"):
   line = line.strip()
@@ -63,6 +64,7 @@ for line in open("zyenpheng.dict.yaml"):
 update("mc", d)
 
 #sg
+#https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/dciangx/DrienghTriang.txt
 d.clear()
 for line in open("DrienghTriang.txt"):
   line = line.strip()
@@ -76,6 +78,7 @@ for line in open("DrienghTriang.txt"):
 update("sg", d)
 
 #tr
+#http://taerv.nguyoeh.com/
 d.clear()
 for line in open("cz6din3.csv"):
   fs = line.strip().split(',')
@@ -90,6 +93,7 @@ for line in open("cz6din3.csv"):
 update("tr", d)
 
 #nt
+#http://nantonghua.net
 d.clear()
 for line in open("nt.txt"):
   fs = line.strip().split(',')
@@ -101,6 +105,7 @@ for line in open("nt.txt"):
 update("nt", d)
 
 #ic
+#https://github.com/osfans/xu/blob/master/docs/xu.csv
 d.clear()
 for line in open("xu.csv"):
   line = line.strip()
@@ -114,6 +119,7 @@ for line in open("xu.csv"):
 update("ic", d)
 
 #lj
+#https://github.com/uliloewi/lang2jin1/blob/master/langjin.dict.yaml
 d.clear()
 for line in open("langjin.dict.yaml"):
   line = line.strip()
@@ -126,6 +132,7 @@ for line in open("langjin.dict.yaml"):
 update("lj", d)
 
 #sz
+#https://github.com/NGLI/rime-wugniu_soutseu/blob/master/wugniu_soutseu.dict.yaml
 d.clear()
 for line in open("wugniu_soutseu.dict.yaml"):
   line = line.strip()
@@ -165,6 +172,7 @@ for line in open("/usr/share/unicode/Unihan_Readings.txt"):
 update("pu", d)
 
 #ct
+#https://github.com/rime/rime-cantonese/blob/master/jyut6ping3.dict.yaml
 d.clear()
 for line in open("jyut6ping3.dict.yaml"):
   line = line.strip()
@@ -185,6 +193,9 @@ for line in open("/usr/share/unicode/Unihan_Readings.txt"):
       if y not in d[han]:
         d[han].append(y)
 update("ct", d)
+
+#hk
+#https://github.com/g0v/moedict-webkit/blob/master/h.txt
 
 conn = sqlite3.connect('../app/src/main/assets/databases/mcpdict.db')
 c = conn.cursor()
