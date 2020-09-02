@@ -1,25 +1,27 @@
 package com.osfans.mcpdict;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.database.Cursor;
-import android.os.Build;
+import android.graphics.Color;
 import android.preference.PreferenceManager;
-import android.widget.CursorAdapter;
+import android.text.Html;
 import android.text.Spannable;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.StyleSpan;
+import android.text.SpannableString;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.URLSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CursorAdapter;
 import android.widget.TextView;
-import android.widget.TextView.BufferType;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.Objects;
 
 public class SearchResultCursorAdapter extends CursorAdapter {
 
@@ -36,150 +38,141 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         this.showFavoriteButton = showFavoriteButton;
     }
 
+    private class URLSpanNoUnderline extends URLSpan {
+        public URLSpanNoUnderline(String url) {
+            super(url);
+        }
+        @Override public void updateDrawState(TextPaint ds) {
+            super.updateDrawState(ds);
+            String url = getURL();
+            int color = Color.BLACK;
+            if (url.startsWith("http://yedict.com")) color = Color.parseColor(MCPDatabase.getColor(MCPDatabase.COL_HZ));
+            else if (url.startsWith("https://www.unicode.org")) color = Color.parseColor(MCPDatabase.getColor(MCPDatabase.COL_UNICODE));
+            ds.setColor(color);
+            ds.setUnderlineText(false);
+        }
+    }
+
+    private void stripUnderlines(TextView textView) {
+        Spannable s = new SpannableString(textView.getText());
+        URLSpan[] spans = s.getSpans(0, s.length(), URLSpan.class);
+        for (URLSpan span: spans) {
+            int start = s.getSpanStart(span);
+            int end = s.getSpanEnd(span);
+            s.removeSpan(span);
+            span = new URLSpanNoUnderline(span.getURL());
+            s.setSpan(span, start, end, 0);
+        }
+        textView.setText(s);
+    }
+
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         return inflater.inflate(layout, parent, false);
     }
 
+    private String getLink(int i, String hanzi) {
+        String link = MCPDatabase.getDictLink(i);
+        if (link != null) {
+            String utf8 = null;
+            String big5 = null;
+            int unicode = hanzi.codePointAt(0);
+            String hex = Orthography.Hanzi.getHex(unicode);
+            try {
+                utf8 = URLEncoder.encode(hanzi, "utf-8");
+            } catch (UnsupportedEncodingException ignored) {
+            }
+            try {
+                big5 = URLEncoder.encode(hanzi, "big5");
+            } catch (UnsupportedEncodingException ignored) {
+            }
+            if (Objects.requireNonNull(big5).equals("%3F")) big5 = null;    // Unsupported character
+            link = String.format(link, utf8, hex, big5);
+        }
+        return link;
+    }
     @Override
     public void bindView(final View view, final Context context, Cursor cursor) {
         final int unicode;
-        String string;
-        StringBuilder sb;
-        TextView textView;
-        int tag = 0;
+        String hz, string;
+        StringBuilder sb = new StringBuilder();
+        TextView textView = view.findViewById(R.id.text_hz);
+        String[] readings = new String[MCPDatabase.getColumnCount()];
+        int tag = 0b11;
 
-        TextView[] textViewNames = {
-                null,
-                null,
-                view.findViewById(R.id.name_mc),
-                view.findViewById(R.id.name_c3),
-                view.findViewById(R.id.name_c4),
-                view.findViewById(R.id.name_c5),
-                view.findViewById(R.id.name_c6),
-                view.findViewById(R.id.name_c7),
-                view.findViewById(R.id.name_c8),
-                view.findViewById(R.id.name_c9),
-                view.findViewById(R.id.name_c10),
-                view.findViewById(R.id.name_c11),
-                view.findViewById(R.id.name_c12),
-                view.findViewById(R.id.name_c13),
-                view.findViewById(R.id.name_c14),
-                view.findViewById(R.id.name_c15),
-                view.findViewById(R.id.name_c16),
-                view.findViewById(R.id.name_c17),
-                view.findViewById(R.id.name_c18),
-                view.findViewById(R.id.name_c19),
-                view.findViewById(R.id.name_c20),
-        };
+        // HZ
+        hz = cursor.getString(MCPDatabase.COL_HZ);
+        unicode = hz.codePointAt(0);
+        sb.append(String.format("<span style='color:%s;'><big><a href='%s'>%s</a></big></span>",
+                MCPDatabase.getColor(MCPDatabase.COL_HZ),
+                getLink(MCPDatabase.COL_HZ, hz),
+                hz));
+        readings[MCPDatabase.COL_HZ] = hz;
 
-        TextView[] textViewDetails = {
-                view.findViewById(R.id.text_hz),
-                view.findViewById(R.id.text_unicode),
-                view.findViewById(R.id.text_mc),
-                view.findViewById(R.id.text_c3),
-                view.findViewById(R.id.text_c4),
-                view.findViewById(R.id.text_c5),
-                view.findViewById(R.id.text_c6),
-                view.findViewById(R.id.text_c7),
-                view.findViewById(R.id.text_c8),
-                view.findViewById(R.id.text_c9),
-                view.findViewById(R.id.text_c10),
-                view.findViewById(R.id.text_c11),
-                view.findViewById(R.id.text_c12),
-                view.findViewById(R.id.text_c13),
-                view.findViewById(R.id.text_c14),
-                view.findViewById(R.id.text_c15),
-                view.findViewById(R.id.text_c16),
-                view.findViewById(R.id.text_c17),
-                view.findViewById(R.id.text_c18),
-                view.findViewById(R.id.text_c19),
-                view.findViewById(R.id.text_c20)
-        };
-
-        for (int i = 0; i < textViewNames.length ; i++) {
-            if (i > MCPDatabase.COL_LAST_READING) {
-                textViewNames[i].setVisibility(View.GONE);
-                textViewDetails[i].setVisibility(View.GONE);
-                continue;
+        // Variants
+        string = cursor.getString(cursor.getColumnIndex("variants"));
+        if (string != null) {
+            for (String s : string.split(" ")) {
+                sb.append(String.format("<span style='color: %s;'><small>(%s)</small></span>",
+                        MCPDatabase.getColor(MCPDatabase.COL_UNICODE),
+                        Orthography.Hanzi.toString(s)));
             }
-            string = cursor.getString(i);
-            textView = textViewDetails[i];
+        }
+
+        // Unicode
+        string = String.format("U+%04X", unicode);
+        sb.append(String.format("&nbsp;<span style='color:%s'><small><a href='%s'>%s</a></small></span>&nbsp;",
+                MCPDatabase.getColor(MCPDatabase.COL_UNICODE),
+                getLink(MCPDatabase.COL_UNICODE, hz),
+                string));
+        readings[MCPDatabase.COL_UNICODE] = string;
+        sb.append("<br/>");
+
+        for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
+            if ((string = cursor.getString(i)) == null) continue;
+            String name = MCPDatabase.getName(i);
             switch (MCPDatabase.getColumnName(i)) {
-                case MCPDatabase.SEARCH_AS_UNICODE:
-                    textView.setText("U+" + string);
-                    break;
                 case MCPDatabase.SEARCH_AS_MC:
-                    textView.setText(middleChineseDisplayer.display(string));
-                    textView = view.findViewById(R.id.text_mc_detail);
-                    if (string != null) {
-                        textView.setText(middleChineseDetailDisplayer.display(string));
-                    }
-                    else {
-                        textView.setText("");
-                    }
+                    string = middleChineseDisplayer.display(string);
                     break;
                 case MCPDatabase.SEARCH_AS_PU:
-                    textView.setText(mandarinDisplayer.display(string));
+                    string = mandarinDisplayer.display(string);
                     break;
                 case MCPDatabase.SEARCH_AS_CT:
-                    textView.setText(cantoneseDisplayer.display(string));
+                    string = cantoneseDisplayer.display(string);
                     break;
                 case MCPDatabase.SEARCH_AS_KR:
-                    textView.setText(koreanDisplayer.display(string));
+                    string = koreanDisplayer.display(string);
                     break;
                 case MCPDatabase.SEARCH_AS_VN:
-                    textView.setText(vietnameseDisplayer.display(string));
+                    string = vietnameseDisplayer.display(string);
                     break;
                 case MCPDatabase.SEARCH_AS_JP_GO:
                 case MCPDatabase.SEARCH_AS_JP_KAN:
                 case MCPDatabase.SEARCH_AS_JP_TOU:
                 case MCPDatabase.SEARCH_AS_JP_KWAN:
                 case MCPDatabase.SEARCH_AS_JP_OTHER:
-                    setRichText(textView, japaneseDisplayer.display(string));
+                    string = getRichText(japaneseDisplayer.display(string));
                     break;
                 default:
-                    setRichText(textView, tone8Displayer.display(string));
+                    string = getRichText(tone8Displayer.display(string));
                     break;
             }
-            if (i >= MCPDatabase.COL_FIRST_READING) {
-                textView = textViewNames[i];
-                String name = MCPDatabase.getName(i);
-                textView.setText(name);
-                int color = MCPDatabase.getColor(i);
-                textView.setTextColor(color);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    textView.setBackgroundTintList(ColorStateList.valueOf(color));
-                }
-                if (name.length() == 2) textView.setScaleX(0.6f);
-                if (name.length() == 3) textView.setScaleX(0.5f);
+            sb.append(String.format("<small><span style='color: %s;'>〔%s〕</span></small>", MCPDatabase.getColor(i), name));
+            String link = getLink(i, hz);
+            if (link != null) {
+                sb.append(String.format("<a href='%s'>%s  </a>&nbsp;", link, string));
+            } else {
+                sb.append(String.format("%s", string));
             }
-            if (i >= MCPDatabase.COL_JP_ANY && string == null) {
-                textViewNames[i].setVisibility(View.GONE);
-                textViewDetails[i].setVisibility(View.GONE);
-                continue;
-            }
-            if (string != null) tag |= 1 << i;
+            sb.append("<br/>");
+            tag |= 1 << i;
+            readings[i] = Html.fromHtml(string).toString();
         }
 
-        // Unicode
-        string = cursor.getString(MCPDatabase.COL_UNICODE);
-        unicode = Integer.parseInt(string, 16);
-
-        // Variants
-        string = cursor.getString(cursor.getColumnIndex("variants"));
-        textView = view.findViewById(R.id.text_variants);
-        if (string == null) {
-            textView.setVisibility(View.GONE);
-        }
-        else {
-            sb = new StringBuilder();
-            for (String s : string.split(" ")) {
-                sb.append(Orthography.Hanzi.toString(s));
-            }
-            textView.setText("(" + sb.toString() + ")");
-            textView.setVisibility(View.VISIBLE);
-        }
+        textView.setText(Html.fromHtml(sb.toString()));
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+        stripUnderlines(textView);
 
          // "Favorite" button
         boolean favorite = cursor.getInt(cursor.getColumnIndex("is_favorite")) == 1;
@@ -207,30 +200,28 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
         // Set the view's tag to indicate which readings exist
         view.setTag(tag);
+        view.setTag(R.id.tag_readings, readings);
     }
 
-    public void setRichText(TextView view, String richTextString) {
+    private String getRichText(String richTextString) {
         StringBuilder sb = new StringBuilder();
-        List<Integer> bolds = new ArrayList<>();
-        List<Integer> dims = new ArrayList<>();
+        boolean start = true;
 
         for (int i = 0; i < richTextString.length(); i++) {
             char c = richTextString.charAt(i);
             switch (c) {
-                case '*': bolds.add(sb.length()); break;
-                case '|': dims.add(sb.length()); break;
+                case '*':
+                    sb.append(start ? "<b>" : "</b>");
+                    start = !start;
+                    break;
+                case '|':
+                    sb.append(start ? "<span style='color: #808080'>" : "</span>");
+                    start = !start;
+                    break;
                 default : sb.append(c); break;
             }
         }
-
-        view.setText(sb.toString(), BufferType.SPANNABLE);
-        Spannable spannable = (Spannable) view.getText();
-        for (int i = 1; i < bolds.size(); i += 2) {
-            spannable.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), bolds.get(i-1), bolds.get(i), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
-        }
-        for (int i = 1; i < dims.size(); i += 2) {
-            spannable.setSpan(new ForegroundColorSpan(0xFF808080), dims.get(i-1), dims.get(i), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
-        }
+        return sb.toString();
     }
 
     private abstract static class Displayer {
@@ -270,7 +261,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
     private final Displayer middleChineseDisplayer = new Displayer() {
         public String lineBreak(String s) {return s.replace(",", "\n");}
-        public String displayOne(String s) {return Orthography.MiddleChinese.display(s);}
+        public String displayOne(String s) {return Orthography.MiddleChinese.display(s) + middleChineseDetailDisplayer.display(s);}
     };
 
     private final Displayer middleChineseDetailDisplayer = new Displayer() {
