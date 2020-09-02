@@ -69,6 +69,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 view.findViewById(R.id.name_c16),
                 view.findViewById(R.id.name_c17),
                 view.findViewById(R.id.name_c18),
+                view.findViewById(R.id.name_c19),
+                view.findViewById(R.id.name_c20),
         };
 
         TextView[] textViewDetails = {
@@ -90,7 +92,9 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 view.findViewById(R.id.text_c15),
                 view.findViewById(R.id.text_c16),
                 view.findViewById(R.id.text_c17),
-                view.findViewById(R.id.text_c18)
+                view.findViewById(R.id.text_c18),
+                view.findViewById(R.id.text_c19),
+                view.findViewById(R.id.text_c20)
         };
 
         for (int i = 0; i < textViewNames.length ; i++) {

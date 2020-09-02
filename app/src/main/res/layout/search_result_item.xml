@@ -223,6 +223,23 @@
                 android:layout_width="0dp" />
         </TableRow>
 
+        <TableRow
+            android:gravity="top" >
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c19" />
+            <TextView
+                style="@style/FontDetail"
+                android:id="@+id/text_c19"
+                android:layout_width="0dp" />
+            <TextView
+                style="@style/DialectName"
+                android:id="@+id/name_c20" />
+            <TextView
+                style="@style/FontDetail"
+                android:id="@+id/text_c20"
+                android:layout_width="0dp" />
+        </TableRow>
     </TableLayout>
 
     <TextView
