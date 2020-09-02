@@ -37,7 +37,6 @@
     <string name="pref_key_tone_insensitive">TONE_INSENSITIVE</string>
 
     <string name="copy_readings">複製“%s”字或其讀音</string>
-    <string name="dict_links">去在線詞典查詢“%s”字</string>
 
     <string name="copy_all">所有讀音</string>
     <string name="copy_jp_all">所有日語讀音</string>

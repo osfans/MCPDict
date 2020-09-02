@@ -8,11 +8,12 @@ HEADS = [
   ('unicode', '統一碼', '統一碼', '#808080', 'Unihan', 'https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%s'),
   ('mc', '中古拼音', '中古', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s"),
   ('sg', '上古', '上古', '#9A339F', '韻典網（上古音系）', 'https://ytenx.org/dciangx/dzih/%s'),
+  ('zy', '中原音韻', '中原', '#9A339F', '韻典網（中原音韻）', 'https://ytenx.org/trngyan/dzih/%s'),
   ('pu', '普通話', '普', '#FF00FF', '漢典網', "http://www.zdic.net/hans/%s"),
   ('tr', '泰如拼音', '泰如', '#0000FF', '泰如小字典', "http://taerv.nguyoeh.com/"),
   ('nt', '南通話', '南通', '#0000FF', '南通方言網', "http://nantonghua.net/search/index.php?hanzi=%s"),
   ('ic', '鹽城話', '鹽城', '#0000FF', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s"),
-  ('lj', '南京話', '南京', '#0000FF', '南京官話拼音方案', "https://uliloewi.github.io/LangJinPinIn/PinInFangAng"),
+  #('lj', '南京話', '南京', '#0000FF', '南京官話拼音方案', "https://uliloewi.github.io/LangJinPinIn/PinInFangAng"),
   ('sh', '上海話', '上海', '#00ADAD', '吳音小字典（上海）', "http://www.wu-chinese.com/minidict/search.php?searchlang=zaonhe&searchkey=%s"),
   ('sz', '蘇州話', '蘇州', '#00ADAD', '吳音小字典（蘇州）', "http://www.wu-chinese.com/minidict/search.php?searchlang=suceu&searchkey=%s"),
   ('ct', '粵語', '粵', '#269A26', '粵語審音配詞字庫', "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s"),
@@ -66,7 +67,7 @@ update("mc", d)
 #sg
 #https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/dciangx/DrienghTriang.txt
 d.clear()
-for line in open("DrienghTriang.txt"):
+for line in open("../../ytenx/ytenx/sync/dciangx/DrienghTriang.txt"):
   line = line.strip()
   if line.startswith('#'): continue
   fs = line.split(' ')
@@ -76,6 +77,34 @@ for line in open("DrienghTriang.txt"):
     if py not in d[hz]:
       d[hz].append(py)
 update("sg", d)
+
+#zy
+#https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/trngyan
+d.clear()
+
+def getIPA(name):
+  yms = dict()
+  for line in open(name):
+    line = line.strip('\n')
+    if line.startswith('#'): continue
+    fs = line.split(' ')
+    ym, ipa = fs
+    yms[ym] = ipa
+  return yms
+sms = getIPA("../../ytenx/ytenx/sync/trngyan/CjengMuxNgixQim.txt")
+yms = getIPA("../../ytenx/ytenx/sync/trngyan/YonhMuxNgixQim.txt")
+sds = {'去': '4', '入平': '2', '入去': '4', '入上': '3', '上': '3','陽平': '2', '陰平': '1'}
+
+for line in open("../../ytenx/ytenx/sync/trngyan/TriungNgyanQimYonh.txt"):
+  line = line.strip()
+  if line.startswith('#'): continue
+  fs = line.split(' ')
+  hzs = fs[1]
+  py = sms[fs[4]]+yms[fs[5]]+sds[fs[2]]
+  for hz in hzs:
+    if py not in d[hz]:
+      d[hz].append(py)
+update("zy", d)
 
 #tr
 #http://taerv.nguyoeh.com/
@@ -99,7 +128,7 @@ for line in open("nt.txt"):
   fs = line.strip().split(',')
   if fs[1]=='"hanzi"': continue
   hz = fs[1].strip('"')[0]
-  py = fs[3].strip('"')
+  py = fs[3].strip('"') + fs[5]
   if py not in d[hz]:
     d[hz].append(py)
 update("nt", d)
@@ -120,16 +149,16 @@ update("ic", d)
 
 #lj
 #https://github.com/uliloewi/lang2jin1/blob/master/langjin.dict.yaml
-d.clear()
-for line in open("langjin.dict.yaml"):
-  line = line.strip()
-  fs = line.split('\t')
-  if len(fs) != 2: continue
-  hz, py = fs
-  if len(hz) == 1:
-    if py not in d[hz]:
-      d[hz].append(py)
-update("lj", d)
+# ~ d.clear()
+# ~ for line in open("langjin.dict.yaml"):
+  # ~ line = line.strip()
+  # ~ fs = line.split('\t')
+  # ~ if len(fs) != 2: continue
+  # ~ hz, py = fs
+  # ~ if len(hz) == 1:
+    # ~ if py not in d[hz]:
+      # ~ d[hz].append(py)
+# ~ update("lj", d)
 
 #sz
 #https://github.com/NGLI/rime-wugniu_soutseu/blob/master/wugniu_soutseu.dict.yaml
