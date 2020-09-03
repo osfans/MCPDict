@@ -19,6 +19,8 @@ import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Objects;
@@ -45,10 +47,15 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         @Override public void updateDrawState(TextPaint ds) {
             super.updateDrawState(ds);
             String url = getURL();
-            int color = Color.BLACK;
-            if (url.startsWith("http://yedict.com")) color = Color.parseColor(MCPDatabase.getColor(MCPDatabase.COL_HZ));
-            else if (url.startsWith("https://www.unicode.org")) color = Color.parseColor(MCPDatabase.getColor(MCPDatabase.COL_UNICODE));
-            ds.setColor(color);
+            int color;
+            if (url.startsWith("http://yedict.com")) {
+                color = ContextCompat.getColor(context, R.color.hz);
+                ds.setColor(color);
+            }
+            else if (url.startsWith("https://www.unicode.org")) {
+                color = Color.parseColor(MCPDatabase.getColor(MCPDatabase.COL_UNICODE));
+                ds.setColor(color);
+            }
             ds.setUnderlineText(false);
         }
     }
@@ -270,21 +277,21 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         public String display(String s) {return " " + super.display(s);}
     };
 
+    private int getStyle(int id) {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        Resources r = context.getResources();
+        return Integer.parseInt(sp.getString(r.getString(id), "0"));
+    }
+
     private final Displayer mandarinDisplayer = new Displayer() {
         public String displayOne(String s) {
-            SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-            Resources r = context.getResources();
-            int style = sp.getInt(r.getString(R.string.pref_key_mandarin_display), 0);
-            return Orthography.Mandarin.display(s, style);
+            return Orthography.Mandarin.display(s, getStyle(R.string.pref_key_mandarin_display));
         }
     };
 
     private final Displayer cantoneseDisplayer = new Displayer() {
         public String displayOne(String s) {
-            SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-            Resources r = context.getResources();
-            int system = sp.getInt(r.getString(R.string.pref_key_cantonese_romanization), 0);
-            return Orthography.Cantonese.display(s, system);
+            return Orthography.Cantonese.display(s, getStyle(R.string.pref_key_cantonese_romanization));
         }
     };
 
@@ -296,19 +303,13 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
     private final Displayer koreanDisplayer = new Displayer() {
         public String displayOne(String s) {
-            SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-            Resources r = context.getResources();
-            int style = sp.getInt(r.getString(R.string.pref_key_korean_display), 0);
-            return Orthography.Korean.display(s, style);
+            return Orthography.Korean.display(s, getStyle(R.string.pref_key_korean_display));
         }
     };
 
     private final Displayer vietnameseDisplayer = new Displayer() {
         public String displayOne(String s) {
-            SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-            Resources r = context.getResources();
-            int style = sp.getInt(r.getString(R.string.pref_key_vietnamese_tone_position), 0);
-            return Orthography.Vietnamese.display(s, style);
+            return Orthography.Vietnamese.display(s, getStyle(R.string.pref_key_vietnamese_tone_position));
         }
     };
 
@@ -321,10 +322,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         }
 
         public String displayOne(String s) {
-            SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-            Resources r = context.getResources();
-            int style = sp.getInt(r.getString(R.string.pref_key_japanese_display), 0);
-            return Orthography.Japanese.display(s, style);
+            return Orthography.Japanese.display(s, getStyle(R.string.pref_key_japanese_display));
         }
     };
 }

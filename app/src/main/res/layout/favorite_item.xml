@@ -22,6 +22,7 @@
         <Button
             android:id="@+id/button_delete"
             android:background="@drawable/ic_cancel"
+            android:backgroundTint="?android:attr/colorForeground"
             android:layout_width="32dp"
             android:layout_height="32dp" />
 
@@ -53,6 +54,7 @@
         <Button
             android:id="@+id/button_edit"
             android:background="@drawable/ic_edit"
+            android:backgroundTint="?android:attr/colorForeground"
             android:layout_width="32dp"
             android:layout_height="32dp" />
 

@@ -15,7 +15,6 @@
         <TableRow
             android:gravity="center_vertical" >
             <TextView
-                style="@style/FontLabel"
                 android:text="@string/search_for"
                 android:paddingRight="-4dp" />
             <com.osfans.mcpdict.CustomSearchView
@@ -25,7 +24,6 @@
         <TableRow
             android:gravity="center_vertical" >
             <TextView
-                style="@style/FontLabel"
                 android:text="@string/search_as"
                 android:paddingRight="-4dp" />
             <Spinner
@@ -36,11 +34,9 @@
             android:gravity="center_vertical"
             android:paddingTop="6dp" >
             <TextView
-                style="@style/FontLabel"
                 android:text="@string/search_options"
                 android:paddingRight="-4dp" />
             <CheckBox
-                style="@style/CheckBoxOption"
                 android:id="@+id/check_box_kuangx_yonh_only"
                 android:text="@string/option_kuangx_yonh_only"
                 android:paddingRight="8dp" />
@@ -49,7 +45,6 @@
         <TableRow
             android:gravity="center_vertical" >
             <CheckBox
-                style="@style/CheckBoxOption"
                 android:id="@+id/check_box_allow_variants"
                 android:layout_column="1"
                 android:text="@string/option_allow_variants" />
@@ -59,7 +54,6 @@
             android:gravity="center_vertical"
             android:paddingBottom="8dp" >
             <CheckBox
-                style="@style/CheckBoxOption"
                 android:id="@+id/check_box_tone_insensitive"
                 android:layout_column="1"
                 android:text="@string/option_tone_insensitive" />
@@ -74,7 +68,7 @@
         android:layout_marginRight="12dp"
         android:background="?android:attr/listDivider" />
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:name="com.osfans.mcpdict.SearchResultFragment"
         android:id="@+id/fragment_search_result"
         android:layout_width="0dp"

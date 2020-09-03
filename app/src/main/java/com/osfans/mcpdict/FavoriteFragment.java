@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
+import androidx.fragment.app.ListFragment;
 import android.text.Spannable;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
@@ -121,6 +121,12 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        refresh();
+    }
+
+    @Override
     public void refresh() {
         if (adapter == null) return;
         new AsyncTask<Void, Void, Cursor>() {
@@ -128,13 +134,13 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
             protected Cursor doInBackground(Void... params) {
                 return UserDatabase.selectAllFavorites();
             }
+
             @Override
             protected void onPostExecute(Cursor data) {
                 adapter.changeCursor(data);
                 if (data.getCount() == 0) {
                     header.setVisibility(View.GONE);
-                }
-                else {
+                } else {
                     header.setVisibility(View.VISIBLE);
                     textTotal.setText(String.format(getString(R.string.favorite_total), data.getCount()));
                 }

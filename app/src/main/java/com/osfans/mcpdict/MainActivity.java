@@ -2,18 +2,15 @@ package com.osfans.mcpdict;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTabHost;
-import android.view.View;
-import android.view.ViewConfiguration;
-import android.widget.TextView;
 
-import java.lang.reflect.Field;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
+
 
 public class MainActivity extends ActivityWithOptionsMenu {
 
-    private FragmentManager fm;
-    private FragmentTabHost tabHost;
+    private ViewPager2 mPager;
+    private PagerAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,71 +44,47 @@ public class MainActivity extends ActivityWithOptionsMenu {
             }
         }.execute();
 
-        // Force displaying the overflow menu in the action bar
-        // Reference: http://stackoverflow.com/a/11438245
-        // Only works for Android 4.x
-        try {
-            ViewConfiguration config = ViewConfiguration.get(this);
-            Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
-            menuKeyField.setAccessible(true);
-            menuKeyField.setBoolean(config, false);
-        }
-        catch (Exception e) {
-            // Ignore
-        }
-
         // Set up activity layout
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+        mPager = findViewById(R.id.pager);
+        initAdapter();
+    }
 
-        // Set up the tabs
-        tabHost = findViewById(android.R.id.tabhost);
-        fm = getSupportFragmentManager();
-        tabHost.setup(this, fm, android.R.id.tabcontent);
-        @SuppressWarnings("rawtypes")
-        Class[] fragmentClasses = {DictionaryFragment.class, FavoriteFragment.class};
-        int[] titleIds = {R.string.tab_dictionary, R.string.tab_favorite};
-        int nTabs = fragmentClasses.length;
-        for (int i = 0; i < nTabs; i++) {
-            String title = getString(titleIds[i]);
-            tabHost.addTab(
-                tabHost.newTabSpec(title).setIndicator(title),
-                fragmentClasses[i],
-                null
-            );
-        }
-        tabHost.setOnTabChangedListener(tabId -> {
-            fm.executePendingTransactions();
-            getCurrentFragment().refresh();
-        });
+    private void initAdapter() {
+        mAdapter = new PagerAdapter(this);
+        mAdapter.createFragment(PagerAdapter.PAGE_DICTIONARY);
+        mAdapter.createFragment(PagerAdapter.PAGE_FAVORITE);
+        mPager.setAdapter(mAdapter);
+    }
 
-        // Styling of the tabs has to go here; XML doesn't work
-        for (int i = 0; i < nTabs; i++) {
-            View tab = tabHost.getTabWidget().getChildAt(i);
-            TextView textView = tab.findViewById(android.R.id.title);
-            textView.setTextSize(17);
-        }
+    private RefreshableFragment getFragment(int index) {
+        return (RefreshableFragment) getSupportFragmentManager().findFragmentByTag("f" + index);
     }
 
     @Override
     public void onRestart() {
         super.onRestart();
         // Make settings take effect immediately as the user navigates back to the dictionary
-        DictionaryFragment fragment = getDictionaryFragment();
-        if (fragment != null) {
-            fragment.refresh();
-        }
+        refresh();
     }
 
     public RefreshableFragment getCurrentFragment() {
-        return (RefreshableFragment) fm.findFragmentByTag(tabHost.getCurrentTabTag());
+        return getFragment(mPager.getCurrentItem());
     }
 
-    public DictionaryFragment getDictionaryFragment() {
-        return (DictionaryFragment) fm.findFragmentByTag(getString(R.string.tab_dictionary));
+    private DictionaryFragment getDictionaryFragment() {
+        return (DictionaryFragment) getFragment(PagerAdapter.PAGE_DICTIONARY);
     }
 
     public FavoriteFragment getFavoriteFragment() {
-        return (FavoriteFragment) fm.findFragmentByTag(getString(R.string.tab_favorite));
+        return (FavoriteFragment) getFragment(PagerAdapter.PAGE_FAVORITE);
+    }
+
+    public void refresh() {
+        RefreshableFragment fragment = getCurrentFragment();
+        if (fragment != null) {
+            fragment.refresh();
+        }
     }
 }
