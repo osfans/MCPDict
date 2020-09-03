@@ -16,7 +16,6 @@
         <TableRow
             android:gravity="center_vertical" >
             <TextView
-                style="@style/FontLabel"
                 android:text="@string/search_for" />
             <com.osfans.mcpdict.CustomSearchView
                 android:id="@+id/search_view" />
@@ -25,7 +24,6 @@
         <TableRow
             android:gravity="center_vertical" >
             <TextView
-                style="@style/FontLabel"
                 android:text="@string/search_as" />
             <Spinner
                 android:id="@+id/spinner_search_as" />
@@ -35,10 +33,8 @@
             android:gravity="center_vertical"
             android:paddingTop="6dp" >
             <TextView
-                style="@style/FontLabel"
                 android:text="@string/search_options" />
             <CheckBox
-                style="@style/CheckBoxOption"
                 android:id="@+id/check_box_kuangx_yonh_only"
                 android:text="@string/option_kuangx_yonh_only" />
         </TableRow>
@@ -46,7 +42,6 @@
         <TableRow
             android:gravity="center_vertical" >
             <CheckBox
-                style="@style/CheckBoxOption"
                 android:id="@+id/check_box_allow_variants"
                 android:layout_column="1"
                 android:text="@string/option_allow_variants" />
@@ -56,7 +51,6 @@
             android:gravity="center_vertical"
             android:paddingBottom="8dp" >
             <CheckBox
-                style="@style/CheckBoxOption"
                 android:id="@+id/check_box_tone_insensitive"
                 android:layout_column="1"
                 android:text="@string/option_tone_insensitive" />
@@ -69,7 +63,7 @@
         android:layout_height="1dp"
         android:background="?android:attr/listDivider" />
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:name="com.osfans.mcpdict.SearchResultFragment"
         android:id="@+id/fragment_search_result"
         android:layout_width="match_parent"

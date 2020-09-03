@@ -2,7 +2,9 @@ package com.osfans.mcpdict;
 
 import android.os.Bundle;
 
-public class SettingsActivity extends ActivityWithOptionsMenu {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

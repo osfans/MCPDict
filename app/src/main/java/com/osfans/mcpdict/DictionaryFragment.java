@@ -6,7 +6,8 @@ import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,7 +81,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         checkBoxToneInsensitive.setOnCheckedChangeListener(checkBoxListener);
 
         // Get a reference to the SearchResultFragment
-        fragmentResult = (SearchResultFragment) getFragmentManager().findFragmentById(R.id.fragment_search_result);
+        fragmentResult = (SearchResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);
 
         return selfView;
     }
@@ -107,6 +108,12 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         checkBoxKuangxYonhOnly.setEnabled(!MCPDatabase.isMC(mode));
         checkBoxAllowVariants.setEnabled(MCPDatabase.isHZ(mode));
         checkBoxToneInsensitive.setEnabled(MCPDatabase.isToneInsensitive(mode));
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        refresh();
     }
 
     @Override

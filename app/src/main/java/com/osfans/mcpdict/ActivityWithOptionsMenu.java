@@ -1,9 +1,7 @@
 package com.osfans.mcpdict;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
-import android.support.v4.app.FragmentActivity;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.Gravity;
@@ -11,7 +9,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class ActivityWithOptionsMenu extends FragmentActivity {
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ActivityWithOptionsMenu extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

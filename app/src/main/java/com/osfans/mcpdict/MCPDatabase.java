@@ -89,7 +89,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         boolean kuangxYonhOnly = sp.getBoolean(r.getString(R.string.pref_key_kuangx_yonh_only), false);
         boolean allowVariants = sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true);
         boolean toneInsensitive = sp.getBoolean(r.getString(R.string.pref_key_tone_insensitive), false);
-        int cantoneseSystem = sp.getInt(r.getString(R.string.pref_key_cantonese_romanization), 0);
+        int cantoneseSystem = Integer.parseInt(sp.getString(r.getString(R.string.pref_key_cantonese_romanization), "0"));
 
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();

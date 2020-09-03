@@ -1,7 +1,6 @@
 package com.osfans.mcpdict;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteException;
 import android.preference.PreferenceManager;
@@ -10,6 +9,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.mobiRic.ui.widget.Boast;
 
@@ -45,8 +46,9 @@ public class FavoriteDialogs {
                 FavoriteFragment fragment = activity.getFavoriteFragment();
                 if (fragment != null) {
                     fragment.notifyAddItem();
+                    fragment.refresh();
                 }
-                activity.getCurrentFragment().refresh();
+                activity.refresh();
             })
             .setNegativeButton(R.string.cancel, null)
             .show();
@@ -93,8 +95,9 @@ public class FavoriteDialogs {
             if (fragment != null) {
                 FavoriteCursorAdapter adapter = (FavoriteCursorAdapter) fragment.getListAdapter();
                 adapter.collapseItem(unicode);
+                fragment.refresh();
             }
-            activity.getCurrentFragment().refresh();
+            activity.refresh();
             return;
         }
 
@@ -139,8 +142,9 @@ public class FavoriteDialogs {
                 if (fragment != null) {
                     FavoriteCursorAdapter adapter = (FavoriteCursorAdapter) fragment.getListAdapter();
                     adapter.collapseAll();
+                    fragment.refresh();
                 }
-                activity.getCurrentFragment().refresh();
+                activity.refresh();
             })
             .setNegativeButton(R.string.cancel, null)
             .show();
@@ -282,8 +286,9 @@ public class FavoriteDialogs {
                 fragment.notifyAddItem();
                 FavoriteCursorAdapter adapter = (FavoriteCursorAdapter) fragment.getListAdapter();
                 adapter.collapseAll();
+                fragment.refresh();
             }
-            activity.getCurrentFragment().refresh();
+            activity.refresh();
 
             new AlertDialog.Builder(activity)
                 .setIcon(R.drawable.ic_info)
