@@ -22,7 +22,6 @@
             android:gravity="center_vertical" >
 
             <TextView
-                style="@style/FontLabel"
                 android:id="@+id/text_total"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -51,7 +50,6 @@
         android:fadingEdgeLength="0dp" />
 
     <TextView
-        style="@style/FontLabel"
         android:id="@android:id/empty"
         android:text="@string/favorite_empty"
         android:layout_width="match_parent"

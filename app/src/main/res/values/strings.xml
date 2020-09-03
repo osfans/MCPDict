@@ -98,6 +98,10 @@
         <item>漢語拼音</item>
         <item>注音符號</item>
     </string-array>
+    <string-array name="pref_values_mandarin_display">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
 
     <string name="pref_key_cantonese_romanization">CANTONESE_ROMANIZATION</string>
     <string name="pref_title_cantonese_romanization">粵語拼音系統（用於輸入和顯示）</string>
@@ -107,6 +111,12 @@
         <item>耶魯式</item>
         <item>劉錫祥式</item>
     </string-array>
+    <string-array name="pref_values_cantonese_romanization">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
 
     <string name="pref_key_korean_display">KOREAN_DISPLAY</string>
     <string name="pref_title_korean_display">朝鮮語顯示方式</string>
@@ -114,12 +124,20 @@
         <item>諺文</item>
         <item>文觀部2000年式羅馬字</item>
     </string-array>
+    <string-array name="pref_values_korean_display">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
 
     <string name="pref_key_vietnamese_tone_position">VIETNAMESE_TONE_POSITION</string>
     <string name="pref_title_vietnamese_tone_position">越南語聲調標記方式</string>
     <string-array name="pref_entries_vietnamese_tone_position">
         <item>舊式（hòa, thủy）</item>
         <item>新式（hoà, thuỷ）</item>
+    </string-array>
+    <string-array name="pref_values_vietnamese_tone_position">
+        <item>0</item>
+        <item>1</item>
     </string-array>
 
     <string name="pref_key_japanese_display">JAPANESE_DISPLAY</string>
@@ -129,6 +147,12 @@
         <item>片假名</item>
         <item>日本式羅馬字</item>
         <item>黑本式羅馬字</item>
+    </string-array>
+    <string-array name="pref_values_japanese_display">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </string-array>
 
 </resources>

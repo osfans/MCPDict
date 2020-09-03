@@ -8,6 +8,8 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 /**
  * {@link Toast} decorator allowing for easy cancellation of notifications. Use
  * this class if you want subsequent Toast notifications to overwrite current
@@ -60,7 +62,7 @@ public class Boast
      *
      * @param context
      *        The context to use. Usually your {@link android.app.Application}
-     *        or {@link android.app.Activity} object.
+     *        or {@link AppCompatActivity} object.
      * @param text
      *        The text to show. Can be formatted text.
      * @param duration
@@ -80,7 +82,7 @@ public class Boast
      *
      * @param context
      *        The context to use. Usually your {@link android.app.Application}
-     *        or {@link android.app.Activity} object.
+     *        or {@link AppCompatActivity} object.
      * @param resId
      *        The resource id of the string resource to use. Can be formatted
      *        text.
@@ -104,7 +106,7 @@ public class Boast
      *
      * @param context
      *        The context to use. Usually your {@link android.app.Application}
-     *        or {@link android.app.Activity} object.
+     *        or {@link AppCompatActivity} object.
      * @param text
      *        The text to show. Can be formatted text.
      */
@@ -120,7 +122,7 @@ public class Boast
      *
      * @param context
      *        The context to use. Usually your {@link android.app.Application}
-     *        or {@link android.app.Activity} object.
+     *        or {@link AppCompatActivity} object.
      * @param resId
      *        The resource id of the string resource to use. Can be formatted
      *        text.
@@ -142,7 +144,7 @@ public class Boast
      *
      * @param context
      *        The context to use. Usually your {@link android.app.Application}
-     *        or {@link android.app.Activity} object.
+     *        or {@link AppCompatActivity} object.
      * @param text
      *        The text to show. Can be formatted text.
      * @param duration
@@ -160,7 +162,7 @@ public class Boast
      *
      * @param context
      *        The context to use. Usually your {@link android.app.Application}
-     *        or {@link android.app.Activity} object.
+     *        or {@link AppCompatActivity} object.
      * @param resId
      *        The resource id of the string resource to use. Can be formatted
      *        text.
@@ -183,7 +185,7 @@ public class Boast
      *
      * @param context
      *        The context to use. Usually your {@link android.app.Application}
-     *        or {@link android.app.Activity} object.
+     *        or {@link AppCompatActivity} object.
      * @param text
      *        The text to show. Can be formatted text.
      */
@@ -198,7 +200,7 @@ public class Boast
      *
      * @param context
      *        The context to use. Usually your {@link android.app.Application}
-     *        or {@link android.app.Activity} object.
+     *        or {@link AppCompatActivity} object.
      * @param resId
      *        The resource id of the string resource to use. Can be formatted
      *        text.
