@@ -20,13 +20,31 @@
 
     <TextView
         android:id="@+id/text_hz"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorLink="@color/hz"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_readings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorLink="?android:textColorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_hz" />
+
+    <TextView
+        android:id="@+id/text_jp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColorLink="?android:textColorPrimary"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/text_readings" />
 
     <Button
         android:id="@+id/button_favorite"

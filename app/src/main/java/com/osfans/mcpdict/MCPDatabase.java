@@ -37,8 +37,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
 
     public static int COL_HZ;
     public static int COL_UNICODE;
-    public static int COL_MC;
-    public static int COL_JP_GO;
+    private static int COL_MC;
 
     public static int COL_JP_ANY;
     public static int COL_JP_FIRST;
@@ -46,6 +45,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static int COL_LAST_READING;
 
     public static int MASK_JP_ALL;
+    public static int MASK_NO_READINGS;
     public static int MASK_ALL_READINGS;
 
     private static final String TABLE_NAME = "mcpdict";
@@ -250,15 +250,15 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COL_HZ = cursor.getColumnIndex(SEARCH_AS_HZ);
         COL_UNICODE = cursor.getColumnIndex(SEARCH_AS_UNICODE);
         COL_MC = cursor.getColumnIndex(SEARCH_AS_MC);
-        COL_JP_GO = cursor.getColumnIndex(SEARCH_AS_JP_GO);
 
-        COL_FIRST_READING = COL_MC;
+        COL_FIRST_READING = COL_UNICODE + 1;
         COL_LAST_READING = n - 1;
-        COL_JP_FIRST = COL_JP_GO;
+        COL_JP_FIRST = cursor.getColumnIndex(SEARCH_AS_JP_GO);
         COL_JP_ANY = COL_JP_FIRST + 2;
 
         MASK_JP_ALL = 0b11111 << COL_JP_FIRST;
-        MASK_ALL_READINGS   = ((1 << n) - 1) ^ 0b11;
+        MASK_NO_READINGS = (1<<COL_FIRST_READING) - 1;
+        MASK_ALL_READINGS   = ((1 << n) - 1) ^ MASK_NO_READINGS;
 
         SEARCH_AS_NAMES = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -400,10 +400,12 @@ public class MCPDatabase extends SQLiteAssetHelper {
     }
 
     public static String getColumnName(int index) {
+        if (COLUMNS == null) getSearchAsColumns();
         return COLUMNS[index];
     }
 
     public static int getColumnCount() {
+        if (COLUMNS == null) getSearchAsColumns();
         return COLUMNS.length;
     }
 }
