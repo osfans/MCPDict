@@ -163,13 +163,12 @@ public class SearchResultFragment extends ListFragment {
 
         StringBuilder sb;
         if (mask == MASK_JP_ALL) {
-            sb = new StringBuilder();
-            for (int i = MCPDatabase.COL_JP_FIRST; i <= MCPDatabase.COL_LAST_READING; i++) {
-                if ((tag & (1 << i)) > 0) sb.append(formatReading(entry, i));
-            }
-            return sb.toString();
+            return ((TextView) entry.findViewById(R.id.text_hz)).getText().toString()
+                    + ((TextView) entry.findViewById(R.id.text_jp)).getText().toString();
         } else if (mask == MASK_ALL_READINGS) {
-            return ((TextView) entry.findViewById(R.id.text_hz)).getText().toString();
+            return ((TextView) entry.findViewById(R.id.text_hz)).getText().toString()
+                    + ((TextView) entry.findViewById(R.id.text_readings)).getText().toString()
+                    + ((TextView) entry.findViewById(R.id.text_jp)).getText().toString();
         }
         String[] allReadings = (String[]) entry.getTag(R.id.tag_readings);
         int index = Integer.toBinaryString(mask).length() - 1;
