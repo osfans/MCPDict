@@ -48,11 +48,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             super.updateDrawState(ds);
             String url = getURL();
             int color;
-            if (url.startsWith("http://yedict.com")) {
-                color = ContextCompat.getColor(context, R.color.hz);
-                ds.setColor(color);
-            }
-            else if (url.startsWith("https://www.unicode.org")) {
+            if (url.startsWith("https://www.unicode.org")) {
                 color = Color.parseColor(MCPDatabase.getColor(MCPDatabase.COL_UNICODE));
                 ds.setColor(color);
             }
@@ -71,6 +67,14 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             s.setSpan(span, start, end, 0);
         }
         textView.setText(s);
+    }
+
+    private void setText(TextView textView, StringBuilder sb) {
+        String string = sb.toString();
+        string = string.replaceFirst("<br/>$", "");
+        textView.setText(Html.fromHtml(string));
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+        stripUnderlines(textView);
     }
 
     @Override
@@ -98,14 +102,15 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         }
         return link;
     }
+
     @Override
     public void bindView(final View view, final Context context, Cursor cursor) {
         final int unicode;
         String hz, string;
         StringBuilder sb = new StringBuilder();
-        TextView textView = view.findViewById(R.id.text_hz);
+        TextView textView;
         String[] readings = new String[MCPDatabase.getColumnCount()];
-        int tag = 0b11;
+        int tag = MCPDatabase.MASK_NO_READINGS;
 
         // HZ
         hz = cursor.getString(MCPDatabase.COL_HZ);
@@ -133,9 +138,17 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 getLink(MCPDatabase.COL_UNICODE, hz),
                 string));
         readings[MCPDatabase.COL_UNICODE] = string;
-        sb.append("<br/>");
+
+        textView = view.findViewById(R.id.text_hz);
+        setText(textView, sb);
+        sb.setLength(0);
 
         for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
+            if (i == MCPDatabase.COL_JP_FIRST) {
+                textView = view.findViewById(R.id.text_readings);
+                setText(textView, sb);
+                sb.setLength(0);
+            }
             if ((string = cursor.getString(i)) == null) continue;
             String name = MCPDatabase.getName(i);
             switch (MCPDatabase.getColumnName(i)) {
@@ -177,9 +190,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             readings[i] = Html.fromHtml(string).toString();
         }
 
-        textView.setText(Html.fromHtml(sb.toString()));
-        textView.setMovementMethod(LinkMovementMethod.getInstance());
-        stripUnderlines(textView);
+        textView = view.findViewById(R.id.text_jp);
+        setText(textView, sb);
 
          // "Favorite" button
         boolean favorite = cursor.getInt(cursor.getColumnIndex("is_favorite")) == 1;
@@ -210,25 +222,15 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         view.setTag(R.id.tag_readings, readings);
     }
 
-    private String getRichText(String richTextString) {
-        StringBuilder sb = new StringBuilder();
-        boolean start = true;
+    private String getHexColor() {
+        int color = ContextCompat.getColor(context, R.color.dim);
+        return String.format("#%06X", color & 0xFFFFFF);
+    }
 
-        for (int i = 0; i < richTextString.length(); i++) {
-            char c = richTextString.charAt(i);
-            switch (c) {
-                case '*':
-                    sb.append(start ? "<b>" : "</b>");
-                    start = !start;
-                    break;
-                case '|':
-                    sb.append(start ? "<span style='color: #808080'>" : "</span>");
-                    start = !start;
-                    break;
-                default : sb.append(c); break;
-            }
-        }
-        return sb.toString();
+    private String getRichText(String richTextString) {
+        return richTextString
+                .replaceAll("\\*(.+?)\\*", "<b>$1</b>")
+                .replaceAll("\\|(.+?)\\|", String.format("<span style='color: %s;'>$1</span>", getHexColor()));
     }
 
     private abstract static class Displayer {
