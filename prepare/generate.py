@@ -10,7 +10,7 @@ HEADS = [
   ('mc', '中古', '中古', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s"),
   ('zy', '中原音韻', '近古', '#9A339F', '韻典網（中原音韻）', 'https://ytenx.org/trngyan/dzih/%s'),
   ('pu', '普通話', '普語', '#FF00FF', '漢典網', "http://www.zdic.net/hans/%s"),
-  ('tr', '泰如拼音', '泰如', '#6161FF', '泰如小字典', "http://taerv.nguyoeh.com/"),
+  ('tr', '泰如方言', '泰如', '#6161FF', '泰如小字典', "http://taerv.nguyoeh.com/"),
   ('nt', '南通話', '南通', '#6161FF', '南通方言網', "http://nantonghua.net/search/index.php?hanzi=%s"),
   ('ic', '鹽城話', '鹽城', '#6161FF', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s"),
   #('lj', '南京話', '南京', '#6161FF', '南京官話拼音方案', "https://uliloewi.github.io/LangJinPinIn/PinInFangAng"),
@@ -93,7 +93,7 @@ def getIPA(name):
   return yms
 sms = getIPA("../../ytenx/ytenx/sync/trngyan/CjengMuxNgixQim.txt")
 yms = getIPA("../../ytenx/ytenx/sync/trngyan/YonhMuxNgixQim.txt")
-sds = {'去': '4', '入平': '2', '入去': '4', '入上': '3', '上': '3','陽平': '2', '陰平': '1'}
+sds = {'去': '5', '入平': '<u>2</u>', '入去': '<u>5</u>', '入上': '<u>3</u>', '上': '3','陽平': '2', '陰平': '1'}
 
 for line in open("../../ytenx/ytenx/sync/trngyan/TriungNgyanQimYonh.txt"):
   line = line.strip()
@@ -101,6 +101,8 @@ for line in open("../../ytenx/ytenx/sync/trngyan/TriungNgyanQimYonh.txt"):
   fs = line.split(' ')
   hzs = fs[1]
   py = sms[fs[4]]+yms[fs[5]]+sds[fs[2]]
+  if "ɿ" in py:
+    py = re.sub("([ʂɽ].*?)ɿ", "\\1ʅ", py)
   for hz in hzs:
     if py not in d[hz]:
       d[hz].append(py)
@@ -109,11 +111,17 @@ update("zy", d)
 #tr
 #http://taerv.nguyoeh.com/
 d.clear()
+trsm = {'g': 'k', 'd': 't', '': '', 'sh': 'ʂ', 'c': 'tsʰ', 'b': 'p', 'l': 'l', 'h': 'x', 'r': 'ʐ', 'zh': 'tʂ', 't': 'tʰ', 'v': 'v', 'ng': 'ŋ', 'q': 'tɕʰ', 'z': 'ts', 'j': 'tɕ', 'f': 'f', 'ch': 'tʂʰ', 'k': 'kʰ', 'n': 'n', 'x': 'ɕ', 'm': 'm', 's': 's', 'p': 'pʰ'}
+trym = {'ae': 'ɛ', 'ieh': 'iəʔ', 'ii': 'i', 'r': 'ʅ', 'eh': 'əʔ', 'io': 'iɔ', 'ieu': 'iəu', 'u': 'u', 'v': 'v', 'en': 'əŋ', 'a': 'a', 'on': 'ɔŋ', 'ei': 'əi', 'an': 'aŋ', 'oh': 'ɔʔ', 'i': 'j', 'ien': 'iəŋ', 'ion': 'iɔŋ', 'ah': 'aʔ', 'ih': 'iʔ', 'y': 'y', 'uei': 'uəi', 'uae': 'uɛ', 'aeh': 'ɛʔ', 'in': 'ĩ', 'ia': 'ia', 'z': 'ɿ', 'uh': 'uʔ', 'aen': 'ɛ̃', 'er': 'ɚ', 'eu': 'əu', 'iah': 'iaʔ', 'ueh': 'uəʔ', 'iae': 'iɛ', 'iuh': 'iuʔ', 'yen': 'yəŋ', 'ian': 'iaŋ', 'iun': 'iũ', 'un': 'ũ', 'o': 'ɔ', 'uan': 'uaŋ', 'ua': 'ua', 'uen': 'uəŋ', 'ioh': 'iɔʔ', 'iaen': 'iɛ̃', 'uaen': 'uɛ̃', 'uaeh': 'uɛʔ', 'iaeh': 'iɛʔ', 'uah': 'uaʔ', 'yeh': 'yəʔ', 'ya': 'ya'}
 for line in open("cz6din3.csv"):
   fs = line.strip().split(',')
   if fs[0]=='"id"': continue
   hz = fs[1].replace('"','')
-  py = (fs[3]+fs[4]+fs[5]).replace('"','').replace('vv','v')
+  fs[3] = fs[3].strip('"')
+  fs[4] = fs[4].strip('"')
+  fs[5] = fs[5].strip('"')
+  if fs[3] == fs[4] == 'v': fs[3] = ''
+  py = trsm[fs[3]]+trym[fs[4]]+fs[5]
   if py not in d[hz]:
     d[hz].append(py)
   jt = fs[2].replace('"','')
@@ -136,11 +144,17 @@ update("nt", d)
 #ic
 #https://github.com/osfans/xu/blob/master/docs/xu.csv
 d.clear()
+icsm = {'g': 'k', 'd': 't', '': '', 'c': 'tsʰ', 'b': 'p', 'l': 'l', 'h': 'x', 't': 'tʰ', 'q': 'tɕʰ', 'z': 'ts', 'j': 'tɕ', 'f': 'f', 'k': 'kʰ', 'n': 'n', 'x': 'ɕ', 'm': 'm', 's': 's', 'p': 'pʰ', 'ng': 'ŋ'}
+icym = {'ae': 'ɛ', 'ieh': 'iəʔ', 'ii': 'i', 'eh': 'əʔ', 'io': 'iɔ', 'ieu': 'iəu', 'u': 'u', 'v': 'w', 'en': 'ən', 'a': 'a', 'on': 'ɔŋ', 'an': 'ã', 'oh': 'ɔʔ', 'i': 'j', 'ien': 'in', 'ion': 'iɔŋ', 'ah': 'aʔ', 'ih': 'iʔ', 'y': 'y', 'ui': 'ui', 'uae': 'uɛ', 'aeh': 'ɛʔ', 'in': 'ĩ', 'ia': 'ia', 'z': 'ɿ', 'uh': 'uʔ', 'aen': 'ɛ̃', 'er': 'ɚ', 'eu': 'əu', 'iah': 'iaʔ', 'ueh': 'uəʔ', 'iae': 'iɛ', 'iuh': 'iuʔ', 'yen': 'yn', 'ian': 'iã', 'iun': 'iũ', 'un': 'ũ', 'o': 'ɔ', 'uan': 'uã', 'ua': 'ua', 'uen': 'uən', 'ioh': 'iɔʔ', 'iaen': 'iɛ̃', 'uaen': 'uɛ̃', 'uaeh': 'uɛʔ', 'iaeh': 'iɛʔ', 'uah': 'uaʔ', 'yeh': 'yəʔ', 'ya': 'ya'}
 for line in open("xu.csv"):
   line = line.strip()
   fs = line.split(',')
   hzs = fs[1].replace('"','')
   py = fs[2].replace('"','')
+  sm = re.findall("^[^aeiouvy]?", py)[0]
+  sd = py[-1]
+  ym = py[len(sm):-1]
+  py = icsm[sm]+icym[ym]+sd
   for hz in hzs.split(" "):
     if len(hz) == 1:
       if py not in d[hz]:

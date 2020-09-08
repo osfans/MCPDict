@@ -1,20 +1,20 @@
-#Jyutping, CantonesePinyin, Yale, SidneyLau
-b	b	b	b
-c	ts	ch	ch
-d	d	d	d
-f	f	f	f
-g	g	g	g
-gw	gw	gw	gw
-h	h	h	h
-j	j	y	y
-k	k	k	k
-kw	kw	kw	kw
-l	l	l	l
-m	m	m	m
-n	n	n	n
-ng	ng	ng	ng
-p	p	p	p
-s	s	s	s
-t	t	t	t
-w	w	w	w
-z	dz	j	j
+#Jyutping, CantonesePinyin, Yale, SidneyLau, IPA
+b	b	b	b	p
+c	ts	ch	ch	tsʰ
+d	d	d	d	t
+f	f	f	f	f
+g	g	g	g	k
+gw	gw	gw	gw	kʷ
+h	h	h	h	h
+j	j	y	y	j
+k	k	k	k	kʰ
+kw	kw	kw	kw	kʷʰ
+l	l	l	l	l
+m	m	m	m	m
+n	n	n	n	n
+ng	ng	ng	ng	ŋ
+p	p	p	p	pʰ
+s	s	s	s	s
+t	t	t	t	tʰ
+w	w	w	w	w
+z	dz	j	j	ts
