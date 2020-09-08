@@ -92,15 +92,18 @@
 
     <string name="pref_key_favorite_delete_no_confirm_expiry">FAVORITE_DELETE_NO_CONFIRM_EXPIRY</string>
 
+    <string name="ipa">音標</string>
     <string name="pref_key_mandarin_display">MANDARIN_DISPLAY</string>
     <string name="pref_title_mandarin_display">普通話顯示方式</string>
     <string-array name="pref_entries_mandarin_display">
         <item>漢語拼音</item>
         <item>注音符號</item>
+        <item>@string/ipa</item>
     </string-array>
     <string-array name="pref_values_mandarin_display">
         <item>0</item>
         <item>1</item>
+        <item>2</item>
     </string-array>
 
     <string name="pref_key_cantonese_romanization">CANTONESE_ROMANIZATION</string>
@@ -110,12 +113,14 @@
         <item>教院式</item>
         <item>耶魯式</item>
         <item>劉錫祥式</item>
+        <item>@string/ipa</item>
     </string-array>
     <string-array name="pref_values_cantonese_romanization">
         <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
+        <item>4</item>
     </string-array>
 
     <string name="pref_key_korean_display">KOREAN_DISPLAY</string>

@@ -205,6 +205,7 @@ public class Orthography {
     public static class Mandarin {
         public static final int PINYIN = 0;
         public static final int BOPOMOFO = 1;
+        public static final int IPA = 2;
 
         private static final Map<String, String> mapPinyin = new HashMap<>();
         private static final char[] vowels = {'a', 'o', 'e', 'i', 'u', 'v', 'n', 'm'};
@@ -280,6 +281,8 @@ public class Orthography {
             }
 
             switch (system) {
+            case IPA:
+                return getIPA(s, tone);
             case PINYIN:
                 // Find letter to carry the tone
                 int pos = -1;
@@ -338,6 +341,27 @@ public class Orthography {
             }
         }
 
+        public static String getIPA(String s, char tone) {
+            StringBuilder sb = new StringBuilder();
+            s = s.replace("yu","v").replace("y","i").replace("ii","i")
+                    .replace("v","y").replaceFirst("^([jqx])u", "$1y")
+                    .replaceFirst("([zcs])i", "$1ɿ").replaceFirst("([zcs]h|r)i", "$1ʅ")
+                    .replace("w","u").replace("uu","u")
+                    .replace("un", "uen").replace("ui", "uei").replace("iu", "iou")
+                    .replaceFirst("([iy])e$","$1ɛ").replaceFirst("e$", "ɤ").replace("er", "ɚ").replace("e", "ə")
+                    .replace("ao", "au")
+                    .replace("iong", "yŋ").replace("ong", "uŋ").replace("ng", "ŋ");
+            s = s.replace("p", "pʰ").replace("t", "tʰ").replace("k", "kʰ")
+                    .replace("b", "p").replace("d", "t").replace("g", "k")
+                    .replace("zh", "tʂ").replace("ch", "tʂʰ").replace("sh", "ʂ").replace("r", "ʐ")
+                    .replace("z", "ts").replace("c", "tsʰ")
+                    .replace("j", "tɕ").replace("q", "tɕʰ").replace("x", "ɕ").replace("h", "x");
+            sb.append(s);
+            if (tone == '4') tone = '5';
+            if (tone != '_') sb.append(tone);
+            return sb.toString();
+        }
+
         public static List<String> getAllTones(String s) {
             if (s == null || s.equals("")) return null;     // Fail
             char tone = s.charAt(s.length() - 1);
@@ -369,6 +393,7 @@ public class Orthography {
         public static final int CANTONESE_PINYIN = 1;
         public static final int YALE = 2;
         public static final int SIDNEY_LAU = 3;
+        public static final int IPA= 4;
         // References:
         // http://en.wikipedia.org/wiki/Jyutping
         // http://en.wikipedia.org/wiki/Cantonese_Pinyin
@@ -376,18 +401,10 @@ public class Orthography {
         // http://en.wikipedia.org/wiki/Sidney_Lau
         // http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/
 
-        private static final Map<String, String> mapInitialsJ2C = new HashMap<>();
-        private static final Map<String, String> mapInitialsJ2Y = new HashMap<>();
-        private static final Map<String, String> mapInitialsJ2L = new HashMap<>();
-        private static final Map<String, String> mapInitialsC2J = new HashMap<>();
-        private static final Map<String, String> mapInitialsY2J = new HashMap<>();
-        private static final Map<String, String> mapInitialsL2J = new HashMap<>();
-        private static final Map<String, String> mapFinalsJ2C = new HashMap<>();
-        private static final Map<String, String> mapFinalsJ2Y = new HashMap<>();
-        private static final Map<String, String> mapFinalsJ2L = new HashMap<>();
-        private static final Map<String, String> mapFinalsC2J = new HashMap<>();
-        private static final Map<String, String> mapFinalsY2J = new HashMap<>();
-        private static final Map<String, String> mapFinalsL2J = new HashMap<>();
+        private static final List<Map<String, String>> listInitials = new ArrayList<>();
+        private static final List<Map<String, String>> listFinals = new ArrayList<>();
+        private static final List<Map<String, String>> listInitialsR = new ArrayList<>();
+        private static final List<Map<String, String>> listFinalsR = new ArrayList<>();
 
         public static String canonicalize(String s, int system) {
             // Convert from given system to Jyutping
@@ -399,9 +416,9 @@ public class Orthography {
             Map<String, String> mapInitials = null, mapFinals = null;
             switch (system) {
                 case JYUTPING:          return s;
-                case CANTONESE_PINYIN:  mapInitials = mapInitialsC2J; mapFinals = mapFinalsC2J; break;
-                case YALE:              mapInitials = mapInitialsY2J; mapFinals = mapFinalsY2J; break;
-                case SIDNEY_LAU:        mapInitials = mapInitialsL2J; mapFinals = mapFinalsL2J; break;
+                default:
+                    mapInitials = listInitialsR.get(system - 1);
+                    mapFinals = listFinalsR.get(system - 1);
             }
 
             // Get tone
@@ -448,9 +465,9 @@ public class Orthography {
             Map<String, String> mapInitials = null, mapFinals = null;
             switch (system) {
                 case JYUTPING:          return s;
-                case CANTONESE_PINYIN:  mapInitials = mapInitialsJ2C; mapFinals = mapFinalsJ2C; break;
-                case YALE:              mapInitials = mapInitialsJ2Y; mapFinals = mapFinalsJ2Y; break;
-                case SIDNEY_LAU:        mapInitials = mapInitialsJ2L; mapFinals = mapFinalsJ2L; break;
+                default:
+                    mapInitials = listInitials.get(system - 1);
+                    mapFinals = listFinals.get(system - 1);
             }
 
             // Get tone
@@ -476,11 +493,30 @@ public class Orthography {
             }
 
             // In Cantonese Pinyin, tones 7,8,9 are used for entering tones
-            if (system == CANTONESE_PINYIN && "ptk".indexOf(Objects.requireNonNull(fin).charAt(fin.length() - 1)) >= 0) {
+            boolean isEnteringTone = "ptk".indexOf(Objects.requireNonNull(fin).charAt(fin.length() - 1)) >= 0;
+            if (system == CANTONESE_PINYIN && isEnteringTone) {
                 switch (tone) {
                     case '1': tone = '7'; break;
                     case '3': tone = '8'; break;
                     case '6': tone = '9'; break;
+                }
+            }
+
+            // IPA tones
+            if (system == IPA) {
+                if (isEnteringTone) {
+                    switch (tone) {
+                        case '1': tone = '7'; break;
+                        case '3': tone = '9'; break;
+                        case '6': tone = '8'; break;
+                    }
+                } else {
+                    switch (tone) {
+                        case '2': tone = '3'; break;
+                        case '3': tone = '5'; break;
+                        case '4': tone = '2'; break;
+                        case '5': tone = '4'; break;
+                    }
                 }
             }
 
@@ -897,17 +933,21 @@ public class Orthography {
             reader.close();
 
             // Cantonese
+            for (int i = Cantonese.CANTONESE_PINYIN; i <= Cantonese.IPA; i++) {
+                Cantonese.listInitials.add(new HashMap<>());
+                Cantonese.listInitialsR.add(new HashMap<>());
+                Cantonese.listFinals.add(new HashMap<>());
+                Cantonese.listFinalsR.add(new HashMap<>());
+            }
             inputStream = resources.openRawResource(R.raw.orthography_ct_initials);
             reader = new BufferedReader(new InputStreamReader(inputStream));
             while ((line = reader.readLine()) != null) {
                 if (line.equals("") || line.charAt(0) == '#') continue;
                 fields = line.split("\\s+");
-                Cantonese.mapInitialsJ2C.put(fields[0], fields[1]);
-                Cantonese.mapInitialsJ2Y.put(fields[0], fields[2]);
-                Cantonese.mapInitialsJ2L.put(fields[0], fields[3]);
-                Cantonese.mapInitialsC2J.put(fields[1], fields[0]);
-                Cantonese.mapInitialsY2J.put(fields[2], fields[0]);
-                Cantonese.mapInitialsL2J.put(fields[3], fields[0]);
+                for (int i = Cantonese.CANTONESE_PINYIN; i <= Cantonese.IPA; i++) {
+                    Cantonese.listInitials.get(i - 1).put(fields[0], fields[i]);
+                    Cantonese.listInitialsR.get(i - 1).put(fields[i], fields[0]);
+                }
             }
             reader.close();
 
@@ -916,12 +956,10 @@ public class Orthography {
             while ((line = reader.readLine()) != null) {
                 if (line.equals("") || line.charAt(0) == '#') continue;
                 fields = line.split("\\s+");
-                Cantonese.mapFinalsJ2C.put(fields[0], fields[1]);
-                Cantonese.mapFinalsJ2Y.put(fields[0], fields[2]);
-                Cantonese.mapFinalsJ2L.put(fields[0], fields[3]);
-                Cantonese.mapFinalsC2J.put(fields[1], fields[0]);
-                Cantonese.mapFinalsY2J.put(fields[2], fields[0]);
-                Cantonese.mapFinalsL2J.put(fields[3], fields[0]);
+                for (int i = Cantonese.CANTONESE_PINYIN; i <= Cantonese.IPA; i++) {
+                    Cantonese.listFinals.get(i - 1).put(fields[0], fields[i]);
+                    Cantonese.listFinalsR.get(i - 1).put(fields[i], fields[i]);
+                }
             }
             reader.close();
 
