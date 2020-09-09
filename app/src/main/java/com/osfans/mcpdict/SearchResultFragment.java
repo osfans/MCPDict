@@ -1,10 +1,13 @@
 package com.osfans.mcpdict;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.fragment.app.ListFragment;
 import android.text.ClipboardManager;
+import android.text.TextUtils;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.LayoutInflater;
@@ -20,10 +23,19 @@ import android.widget.Toast;
 
 import com.mobiRic.ui.widget.Boast;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.Objects;
 
+import static com.osfans.mcpdict.MCPDatabase.COL_FIRST_READING;
+import static com.osfans.mcpdict.MCPDatabase.COL_HZ;
+import static com.osfans.mcpdict.MCPDatabase.COL_JP_FIRST;
+import static com.osfans.mcpdict.MCPDatabase.COL_LAST_READING;
+import static com.osfans.mcpdict.MCPDatabase.COL_UNICODE;
 import static com.osfans.mcpdict.MCPDatabase.MASK_ALL_READINGS;
+import static com.osfans.mcpdict.MCPDatabase.MASK_HZ;
 import static com.osfans.mcpdict.MCPDatabase.MASK_JP_ALL;
+import static com.osfans.mcpdict.MCPDatabase.MASK_UNICODE;
 
 @SuppressWarnings("deprecation")
 public class SearchResultFragment extends ListFragment {
@@ -33,6 +45,7 @@ public class SearchResultFragment extends ListFragment {
     private SearchResultCursorAdapter adapter;
     private final boolean showFavoriteButton;
     private View selectedEntry;
+    public final static String KEY_COL = "col";
 
     private static SearchResultFragment selectedFragment;
 
@@ -89,8 +102,32 @@ public class SearchResultFragment extends ListFragment {
         list.showContextMenuForChild(view);
     }
 
+    private Intent getDictIntent(int i, String hz) {
+        String link = MCPDatabase.getDictLink(i);
+        if (TextUtils.isEmpty(link)) return null;
+        String utf8 = null;
+        String big5 = null;
+        int unicode = hz.codePointAt(0);
+        String hex = Orthography.Hanzi.getHex(unicode);
+        try {
+            utf8 = URLEncoder.encode(hz, "utf-8");
+        } catch (UnsupportedEncodingException ignored) {
+        }
+        try {
+            big5 = URLEncoder.encode(hz, "big5");
+        } catch (UnsupportedEncodingException ignored) {
+        }
+        if (Objects.requireNonNull(big5).equals("%3F")) big5 = null;    // Unsupported character
+        link = String.format(link, utf8, hex, big5);
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        return intent;
+    }
+
     @Override
     public void onCreateContextMenu(ContextMenu menu, View view, ContextMenuInfo menuInfo) {
+        int col = getActivity().getIntent().getIntExtra(KEY_COL, -1);
+        getActivity().getIntent().removeExtra(KEY_COL);
         selectedFragment = this;
             // This is a bug with Android: when a context menu item is clicked,
             // all fragments of this class receive a call to onContextItemSelected.
@@ -110,19 +147,49 @@ public class SearchResultFragment extends ListFragment {
 
         // Inflate the context menu
         getActivity().getMenuInflater().inflate(R.menu.search_result_context_menu, menu);
-        SubMenu menuCopy = menu.findItem(R.id.menu_item_copy_readings).getSubMenu();
+        MenuItem itemCopy = menu.findItem(R.id.menu_item_copy_readings);
+        SubMenu menuCopy = itemCopy.getSubMenu();
+        MenuItem itemDict = menu.findItem(R.id.menu_item_dict_links);
+        SubMenu menuDictLinks = itemDict.getSubMenu();
         MenuItem item;
 
-        if ((tag & MASK_ALL_READINGS) > 0) menuCopy.add(MASK_ALL_READINGS, 0, 0, getString(R.string.copy_all));
-        for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
-            int mask = 1 << i;
-            if ((tag & mask) > 0) menuCopy.add(mask, 0, 0, MCPDatabase.getSearchAsName(i));
-        }
-        if ((tag & MASK_JP_ALL) > 0) menuCopy.add(MASK_JP_ALL, 0, 0, getString(R.string.copy_jp_all));
+        if (col < COL_HZ) {
+            if ((tag & MASK_ALL_READINGS) > 0)
+                menuCopy.add(MASK_ALL_READINGS, 0, 0, getString(R.string.copy_all));
+            for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
+                int mask = 1 << i;
+                if ((tag & mask) > 0) menuCopy.add(mask, 0, 0, MCPDatabase.getSearchAsName(i));
+            }
+            if ((tag & MASK_JP_ALL) > 0)
+                menuCopy.add(MASK_JP_ALL, 0, 0, getString(R.string.copy_jp_all));
 
+            for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
+                int mask = 1 << i;
+                String dict = MCPDatabase.getDictName(i);
+                if ((tag & mask) > 0 && !TextUtils.isEmpty(dict)) {
+                    item = menuDictLinks.add(dict);
+                    item.setIntent(getDictIntent(i, hanzi));
+                }
+            }
+        } else {
+            String dict = MCPDatabase.getDictName(col);
+            if (!TextUtils.isEmpty(dict)) {
+                item = menu.add(getString(R.string.one_dict_links, hanzi, dict));
+                item.setIntent(getDictIntent(col, hanzi));
+            }
+            menu.add(MASK_HZ, 0, 0, getString(R.string.copy_hz));
+            if (col == COL_UNICODE) menu.add(MASK_UNICODE, 0, 0, getString(R.string.copy_unicode));
+            else if (col >= COL_FIRST_READING)
+                menu.add(1<< col, 0, 0, getString(R.string.copy_one_reading, hanzi, MCPDatabase.getSearchAsName(col)));
+            if ((tag & MASK_ALL_READINGS) > 0)
+                menu.add(MASK_ALL_READINGS, 0, 0, getString(R.string.copy_one_reading, hanzi, getString(R.string.copy_all)));
+            if ((tag & MASK_JP_ALL) > 0)
+                menu.add(MASK_JP_ALL, 0, 0, getString(R.string.copy_one_reading, hanzi, getString(R.string.copy_jp_all)));
+            itemCopy.setVisible(false);
+            itemDict.setVisible(false);
+        }
 
         // Determine the functionality of the "favorite" item
-        //item = menu.getItem(1);
         item = menu.findItem(R.id.menu_item_favorite);
         Boolean is_favorite = (Boolean) selectedEntry.getTag(R.id.tag_favorite);
         item.setTitle(is_favorite ? R.string.favorite_view_or_edit : R.string.favorite_add);
@@ -132,10 +199,10 @@ public class SearchResultFragment extends ListFragment {
         });
 
         // Replace the placeholders in the menu items with the character selected
-        for (Menu m : new Menu[] {menu, menuCopy}) {
+        for (Menu m : new Menu[] {menu, menuCopy, menuDictLinks}) {
             for (int i = 0; i < m.size(); i++) {
                 item = m.getItem(i);
-                item.setTitle(String.format(item.getTitle().toString(), Orthography.Hanzi.toString(unicode)));
+                item.setTitle(String.format(item.getTitle().toString(), hanzi));
             }
         }
     }
@@ -149,9 +216,7 @@ public class SearchResultFragment extends ListFragment {
             String text = getCopyText(selectedEntry, mask);
             ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
             clipboard.setText(text);
-            String label = item.getTitle().toString();//.substring(2);     // this is ugly
-            String message = String.format(getString(R.string.copy_done), label);
-            Boast.showText(getActivity(), message, Toast.LENGTH_SHORT);
+            Boast.showText(getActivity(), R.string.copy_done, Toast.LENGTH_SHORT);
             return true;
         }
         return false;
@@ -161,18 +226,22 @@ public class SearchResultFragment extends ListFragment {
         int tag = (Integer) entry.getTag();
         if ((tag & mask) == 0) return null;
 
-        StringBuilder sb;
-        if (mask == MASK_JP_ALL) {
-            return ((TextView) entry.findViewById(R.id.text_hz)).getText().toString()
-                    + ((TextView) entry.findViewById(R.id.text_jp)).getText().toString();
-        } else if (mask == MASK_ALL_READINGS) {
-            return ((TextView) entry.findViewById(R.id.text_hz)).getText().toString()
-                    + ((TextView) entry.findViewById(R.id.text_readings)).getText().toString()
-                    + ((TextView) entry.findViewById(R.id.text_jp)).getText().toString();
+        StringBuilder sb = new StringBuilder();
+        if (mask == MASK_JP_ALL || mask == MASK_ALL_READINGS) {
+            sb.append(getCopyText(entry, MASK_HZ));
+            sb.append(" ");
+            sb.append(getCopyText(entry, MASK_UNICODE));
+            sb.append("\n");
+            for (int i = (mask == MASK_JP_ALL ? COL_JP_FIRST : COL_FIRST_READING); i <= COL_LAST_READING; i ++) {
+                String s = getCopyText(entry, 1<<i);
+                if (s != null) {
+                    sb.append(formatReading(entry, i));
+                }
+            }
+            return sb.toString();
         }
-        String[] allReadings = (String[]) entry.getTag(R.id.tag_readings);
         int index = Integer.toBinaryString(mask).length() - 1;
-        return allReadings[index];
+        return ((TextView)entry.findViewWithTag(index)).getText().toString();
     }
 
     private String formatReading(String prefix, String reading) {

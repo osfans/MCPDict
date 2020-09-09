@@ -37,10 +37,15 @@
     <string name="pref_key_tone_insensitive">TONE_INSENSITIVE</string>
 
     <string name="copy_readings">複製“%s”字或其讀音</string>
+    <string name="copy_one_reading">複製“%1$s”字的%2$s讀音</string>
+    <string name="copy_hz">複製“%s”字</string>
+    <string name="copy_unicode">複製“%s”字的統一碼</string>
+    <string name="dict_links">去在線詞典查詢“%s”字</string>
+    <string name="one_dict_links">去“%2$s”查詢“%1$s”字</string>
 
     <string name="copy_all">所有讀音</string>
     <string name="copy_jp_all">所有日語讀音</string>
-    <string name="copy_done">已將“%s”複製到剪貼板</string>
+    <string name="copy_done">已複製到剪貼板</string>
     <string name="search_as_jp_any">日語（任意讀音）</string>
     
     <string name="favorite_total">當前生字本中共有 %d 個生字</string>
