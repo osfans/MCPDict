@@ -39,13 +39,15 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static int COL_UNICODE;
     private static int COL_MC;
 
+    private static int COL_KR;
     public static int COL_JP_ANY;
     public static int COL_JP_FIRST;
     public static int COL_FIRST_READING;
     public static int COL_LAST_READING;
 
+    public static int MASK_HZ;
+    public static int MASK_UNICODE;
     public static int MASK_JP_ALL;
-    public static int MASK_NO_READINGS;
     public static int MASK_ALL_READINGS;
 
     private static final String TABLE_NAME = "mcpdict";
@@ -250,15 +252,17 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COL_HZ = cursor.getColumnIndex(SEARCH_AS_HZ);
         COL_UNICODE = cursor.getColumnIndex(SEARCH_AS_UNICODE);
         COL_MC = cursor.getColumnIndex(SEARCH_AS_MC);
+        COL_KR = cursor.getColumnIndex(SEARCH_AS_KR);
 
         COL_FIRST_READING = COL_UNICODE + 1;
         COL_LAST_READING = n - 1;
         COL_JP_FIRST = cursor.getColumnIndex(SEARCH_AS_JP_GO);
         COL_JP_ANY = COL_JP_FIRST + 2;
 
+        MASK_HZ = 1 << COL_HZ;
+        MASK_UNICODE = 1 << COL_UNICODE;
         MASK_JP_ALL = 0b11111 << COL_JP_FIRST;
-        MASK_NO_READINGS = (1<<COL_FIRST_READING) - 1;
-        MASK_ALL_READINGS   = ((1 << n) - 1) ^ MASK_NO_READINGS;
+        MASK_ALL_READINGS   = ((1 << n) - 1) ^ MASK_HZ ^ MASK_UNICODE;
 
         SEARCH_AS_NAMES = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -291,7 +295,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     }
 
     private static boolean isKR(int mode) {
-        return getColumnName(mode).contentEquals(SEARCH_AS_KR);
+        return mode == COL_KR;
     }
 
     private static boolean isJP(int mode) {
@@ -304,7 +308,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
 
     public static boolean isToneInsensitive(int mode) {
         boolean ret = true;
-        if (isHZ(mode) || isUnicode(mode) || isKR(mode) || isJP(mode)) ret = false;
+        if (mode < COL_MC || isKR(mode) || isJP(mode)) ret = false;
         return ret;
     }
 
