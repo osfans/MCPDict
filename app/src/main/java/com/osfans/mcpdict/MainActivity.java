@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import java.util.Locale;
+
 
 public class MainActivity extends ActivityWithOptionsMenu {
 
@@ -14,6 +16,7 @@ public class MainActivity extends ActivityWithOptionsMenu {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Locale.setDefault(Locale.KOREA);
         // Initialize the some "static" classes on separate threads
         new AsyncTask<Void, Void, Void>() {
             @Override

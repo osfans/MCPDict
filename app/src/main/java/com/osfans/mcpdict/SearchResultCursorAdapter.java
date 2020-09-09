@@ -1,15 +1,18 @@
 package com.osfans.mcpdict;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.text.Html;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextPaint;
+import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.text.style.URLSpan;
 import android.view.LayoutInflater;
@@ -17,6 +20,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CursorAdapter;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
@@ -24,6 +29,8 @@ import androidx.core.content.ContextCompat;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Objects;
+
+import static com.osfans.mcpdict.SearchResultFragment.KEY_COL;
 
 public class SearchResultCursorAdapter extends CursorAdapter {
 
@@ -71,87 +78,69 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
     private void setText(TextView textView, StringBuilder sb) {
         String string = sb.toString();
-        string = string.replaceFirst("<br/>$", "");
         textView.setText(Html.fromHtml(string));
         textView.setMovementMethod(LinkMovementMethod.getInstance());
         stripUnderlines(textView);
     }
 
-    @Override
-    public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        return inflater.inflate(layout, parent, false);
+    private View.OnClickListener getListener(final int index) {
+        return v -> {
+            ActivityWithOptionsMenu activity = (ActivityWithOptionsMenu) context;
+            activity.setIntent(activity.getIntent().putExtra(KEY_COL, index));
+            activity.registerForContextMenu(v);
+            activity.openContextMenu(v);
+            activity.unregisterForContextMenu(v);
+        };
     }
 
-    private String getLink(int i, String hanzi) {
-        String link = MCPDatabase.getDictLink(i);
-        if (link != null) {
-            String utf8 = null;
-            String big5 = null;
-            int unicode = hanzi.codePointAt(0);
-            String hex = Orthography.Hanzi.getHex(unicode);
-            try {
-                utf8 = URLEncoder.encode(hanzi, "utf-8");
-            } catch (UnsupportedEncodingException ignored) {
-            }
-            try {
-                big5 = URLEncoder.encode(hanzi, "big5");
-            } catch (UnsupportedEncodingException ignored) {
-            }
-            if (Objects.requireNonNull(big5).equals("%3F")) big5 = null;    // Unsupported character
-            link = String.format(link, utf8, hex, big5);
+    @Override
+    public View newView(Context context, Cursor cursor, ViewGroup parent) {
+        View view = inflater.inflate(layout, parent, false);
+        final TextView textViewHZ = view.findViewById(R.id.text_hz);
+        textViewHZ.setTag(MCPDatabase.COL_HZ);
+        textViewHZ.setOnClickListener(getListener(MCPDatabase.COL_HZ));
+        TextView textViewUnicode = view.findViewById(R.id.text_unicode);
+        textViewUnicode.setTag(MCPDatabase.COL_UNICODE);
+        textViewUnicode.setOnClickListener(getListener(MCPDatabase.COL_UNICODE));
+        TableLayout table = view.findViewById(R.id.text_readings);
+        for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
+            TableRow row = (TableRow)LayoutInflater.from(context).inflate(R.layout.search_result_row, null);
+            TextView textViewName = row.findViewById(R.id.text_name);
+            String name = String.format("〔%s〕", MCPDatabase.getName(i));
+            textViewName.setText(name);
+            textViewName.setTextColor(Color.parseColor(MCPDatabase.getColor(i)));
+            textViewName.setTag("name" + i);
+            final TextView textViewDetail = row.findViewById(R.id.text_detail);
+            textViewDetail.setTag(i);
+            row.setTag("row" + i);
+            row.setOnClickListener(getListener((Integer)textViewDetail.getTag()));
+            table.addView(row);
         }
-        return link;
+        return view;
     }
 
     @Override
     public void bindView(final View view, final Context context, Cursor cursor) {
         final int unicode;
         String hz, string;
-        StringBuilder sb = new StringBuilder();
         TextView textView;
-        String[] readings = new String[MCPDatabase.getColumnCount()];
-        int tag = MCPDatabase.MASK_NO_READINGS;
+        int tag = 0;
 
-        // HZ
-        hz = cursor.getString(MCPDatabase.COL_HZ);
-        unicode = hz.codePointAt(0);
-        sb.append(String.format("<span style='color:%s;'><big><a href='%s'>%s</a></big></span>",
-                MCPDatabase.getColor(MCPDatabase.COL_HZ),
-                getLink(MCPDatabase.COL_HZ, hz),
-                hz));
-        readings[MCPDatabase.COL_HZ] = hz;
-
-        // Variants
-        string = cursor.getString(cursor.getColumnIndex("variants"));
-        if (string != null) {
-            for (String s : string.split(" ")) {
-                sb.append(String.format("<span style='color: %s;'><small>(%s)</small></span>",
-                        MCPDatabase.getColor(MCPDatabase.COL_UNICODE),
-                        Orthography.Hanzi.toString(s)));
+        for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
+            string = cursor.getString(i);
+            boolean visible = string != null;
+            if (i >= MCPDatabase.COL_FIRST_READING) {
+                View row = view.findViewWithTag("row" + i);
+                row.setVisibility(visible ? View.VISIBLE : View.GONE);
             }
-        }
-
-        // Unicode
-        string = String.format("U+%04X", unicode);
-        sb.append(String.format("&nbsp;<span style='color:%s'><small><a href='%s'>%s</a></small></span>&nbsp;",
-                MCPDatabase.getColor(MCPDatabase.COL_UNICODE),
-                getLink(MCPDatabase.COL_UNICODE, hz),
-                string));
-        readings[MCPDatabase.COL_UNICODE] = string;
-
-        textView = view.findViewById(R.id.text_hz);
-        setText(textView, sb);
-        sb.setLength(0);
-
-        for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
-            if (i == MCPDatabase.COL_JP_FIRST) {
-                textView = view.findViewById(R.id.text_readings);
-                setText(textView, sb);
-                sb.setLength(0);
-            }
-            if ((string = cursor.getString(i)) == null) continue;
-            String name = MCPDatabase.getName(i);
+            if (!visible) continue;
+            tag |= 1 << i;
+            textView = view.findViewWithTag(i);
+            boolean isRichText = false;
             switch (MCPDatabase.getColumnName(i)) {
+                case MCPDatabase.SEARCH_AS_UNICODE:
+                    string = "U+" + string;
+                    break;
                 case MCPDatabase.SEARCH_AS_MC:
                     string = middleChineseDisplayer.display(string);
                     break;
@@ -173,25 +162,33 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 case MCPDatabase.SEARCH_AS_JP_KWAN:
                 case MCPDatabase.SEARCH_AS_JP_OTHER:
                     string = getRichText(japaneseDisplayer.display(string));
+                    isRichText = true;
                     break;
                 default:
                     string = getRichText(tone8Displayer.display(string));
+                    isRichText = true;
                     break;
             }
-            sb.append(String.format("<small><span style='color: %s;'>〔%s〕</span></small>", MCPDatabase.getColor(i), name));
-            String link = getLink(i, hz);
-            if (link != null) {
-                sb.append(String.format("<a href='%s'>%s  </a>&nbsp;", link, string));
-            } else {
-                sb.append(String.format("%s", string));
-            }
-            sb.append("<br/>");
-            tag |= 1 << i;
-            readings[i] = Html.fromHtml(string).toString();
+            if (isRichText) textView.setText(Html.fromHtml(string));
+            else textView.setText(string);
         }
 
-        textView = view.findViewById(R.id.text_jp);
-        setText(textView, sb);
+        // HZ
+        hz = cursor.getString(MCPDatabase.COL_HZ);
+        unicode = hz.codePointAt(0);
+
+        // Variants
+        StringBuilder sb = new StringBuilder();
+        string = cursor.getString(cursor.getColumnIndex("variants"));
+        if (string != null) {
+            sb.append("(");
+            for (String s : string.split(" ")) {
+                sb.append(Orthography.Hanzi.toString(s));
+            }
+            sb.append(")");
+        }
+        textView = view.findViewById(R.id.text_variants);
+        textView.setText(sb);
 
          // "Favorite" button
         boolean favorite = cursor.getInt(cursor.getColumnIndex("is_favorite")) == 1;
@@ -219,7 +216,6 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
         // Set the view's tag to indicate which readings exist
         view.setTag(tag);
-        view.setTag(R.id.tag_readings, readings);
     }
 
     private String getHexColor() {

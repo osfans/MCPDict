@@ -4,10 +4,15 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.webkit.WebView;
 
-public class HelpActivity extends ActivityWithOptionsMenu {
+import androidx.fragment.app.FragmentActivity;
+
+import java.util.Locale;
+
+public class HelpActivity extends FragmentActivity {
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Locale.setDefault(Locale.KOREA);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help_activity);
 
