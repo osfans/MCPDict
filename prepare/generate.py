@@ -10,12 +10,12 @@ HEADS = [
   ('mc', '中古', '中古', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s"),
   ('zy', '中原音韻', '近古', '#9A339F', '韻典網（中原音韻）', 'https://ytenx.org/trngyan/dzih/%s'),
   ('pu', '普通話', '普語', '#FF00FF', '漢典網', "http://www.zdic.net/hans/%s"),
-  ('tr', '泰如方言', '泰如', '#6161FF', '泰如小字典', "http://taerv.nguyoeh.com/"),
   ('nt', '南通話', '南通', '#6161FF', '南通方言網', "http://nantonghua.net/search/index.php?hanzi=%s"),
+  ('tr', '泰如方言', '泰如', '#6161FF', '泰如小字典', "http://taerv.nguyoeh.com/"),
   ('ic', '鹽城話', '鹽城', '#6161FF', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s"),
   #('lj', '南京話', '南京', '#6161FF', '南京官話拼音方案', "https://uliloewi.github.io/LangJinPinIn/PinInFangAng"),
+  ('sz', '蘇州話', '蘇州', '#00ADAD', '吳語學堂（蘇州）', "https://www.wugniu.com/search?table=suzhou_zi&char=%s"),
   ('sh', '上海話', '上海', '#00ADAD', '吳音小字典（上海）', "http://www.wu-chinese.com/minidict/search.php?searchlang=zaonhe&searchkey=%s"),
-  ('sz', '蘇州話', '蘇州', '#00ADAD', '吳音小字典（蘇州）', "http://www.wu-chinese.com/minidict/search.php?searchlang=suceu&searchkey=%s"),
   ('ct', '粵語', '粵語', '#269A26', '粵語審音配詞字庫', "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s"),
   ('mn', '閩南語', '閩南', '#FFAD00', '臺灣閩南語常用詞辭典', "http://twblg.dict.edu.tw/holodict_new/result.jsp?querytarget=1&radiobutton=0&limit=20&sample=%s"),
   ('vn', '越南語', '越南', '#FF6600', '漢越辭典摘引', "http://www.vanlangsj.org/hanviet/hv_timchu.php?unichar=%s"),
@@ -108,11 +108,23 @@ for line in open("../../ytenx/ytenx/sync/trngyan/TriungNgyanQimYonh.txt"):
       d[hz].append(py)
 update("zy", d)
 
+#nt
+#http://nantonghua.net
+d.clear()
+for line in open("nt.txt"):
+  fs = line.strip().split(',')
+  if fs[1]=='"hanzi"': continue
+  hz = fs[1].strip('"')[0]
+  py = fs[-6].strip('"') + fs[-4]
+  if py not in d[hz]:
+    d[hz].append(py)
+update("nt", d)
+
 #tr
 #http://taerv.nguyoeh.com/
 d.clear()
 trsm = {'g': 'k', 'd': 't', '': '', 'sh': 'ʂ', 'c': 'tsʰ', 'b': 'p', 'l': 'l', 'h': 'x', 'r': 'ʐ', 'zh': 'tʂ', 't': 'tʰ', 'v': 'v', 'ng': 'ŋ', 'q': 'tɕʰ', 'z': 'ts', 'j': 'tɕ', 'f': 'f', 'ch': 'tʂʰ', 'k': 'kʰ', 'n': 'n', 'x': 'ɕ', 'm': 'm', 's': 's', 'p': 'pʰ'}
-trym = {'ae': 'ɛ', 'ieh': 'iəʔ', 'ii': 'i', 'r': 'ʅ', 'eh': 'əʔ', 'io': 'iɔ', 'ieu': 'iəu', 'u': 'u', 'v': 'v', 'en': 'əŋ', 'a': 'a', 'on': 'ɔŋ', 'ei': 'əi', 'an': 'aŋ', 'oh': 'ɔʔ', 'i': 'j', 'ien': 'iəŋ', 'ion': 'iɔŋ', 'ah': 'aʔ', 'ih': 'iʔ', 'y': 'y', 'uei': 'uəi', 'uae': 'uɛ', 'aeh': 'ɛʔ', 'in': 'ĩ', 'ia': 'ia', 'z': 'ɿ', 'uh': 'uʔ', 'aen': 'ɛ̃', 'er': 'ɚ', 'eu': 'əu', 'iah': 'iaʔ', 'ueh': 'uəʔ', 'iae': 'iɛ', 'iuh': 'iuʔ', 'yen': 'yəŋ', 'ian': 'iaŋ', 'iun': 'iũ', 'un': 'ũ', 'o': 'ɔ', 'uan': 'uaŋ', 'ua': 'ua', 'uen': 'uəŋ', 'ioh': 'iɔʔ', 'iaen': 'iɛ̃', 'uaen': 'uɛ̃', 'uaeh': 'uɛʔ', 'iaeh': 'iɛʔ', 'uah': 'uaʔ', 'yeh': 'yəʔ', 'ya': 'ya'}
+trym = {'ae': 'ɛ', 'ieh': 'iəʔ', 'ii': 'i', 'r': 'ʅ', 'eh': 'əʔ', 'io': 'iɔ', 'ieu': 'iəu', 'u': 'u', 'v': 'v', 'en': 'əŋ', 'a': 'a', 'on': 'ɔŋ', 'ei': 'əi', 'an': 'aŋ', 'oh': 'ɔʔ', 'i': 'iⱼ', 'ien': 'iəŋ', 'ion': 'iɔŋ', 'ah': 'aʔ', 'ih': 'iʔ', 'y': 'y', 'uei': 'uəi', 'uae': 'uɛ', 'aeh': 'ɛʔ', 'in': 'ĩ', 'ia': 'ia', 'z': 'ɿ', 'uh': 'uʔ', 'aen': 'ɛ̃', 'er': 'ɚ', 'eu': 'əu', 'iah': 'iaʔ', 'ueh': 'uəʔ', 'iae': 'iɛ', 'iuh': 'iuʔ', 'yen': 'yəŋ', 'ian': 'iaŋ', 'iun': 'iũ', 'un': 'ũ', 'o': 'ɔ', 'uan': 'uaŋ', 'ua': 'ua', 'uen': 'uəŋ', 'ioh': 'iɔʔ', 'iaen': 'iɛ̃', 'uaen': 'uɛ̃', 'uaeh': 'uɛʔ', 'iaeh': 'iɛʔ', 'uah': 'uaʔ', 'yeh': 'yəʔ', 'ya': 'ya'}
 for line in open("cz6din3.csv"):
   fs = line.strip().split(',')
   if fs[0]=='"id"': continue
@@ -129,23 +141,11 @@ for line in open("cz6din3.csv"):
     d[jt].append(py)
 update("tr", d)
 
-#nt
-#http://nantonghua.net
-d.clear()
-for line in open("nt.txt"):
-  fs = line.strip().split(',')
-  if fs[1]=='"hanzi"': continue
-  hz = fs[1].strip('"')[0]
-  py = fs[-6].strip('"') + fs[-4]
-  if py not in d[hz]:
-    d[hz].append(py)
-update("nt", d)
-
 #ic
 #https://github.com/osfans/xu/blob/master/docs/xu.csv
 d.clear()
 icsm = {'g': 'k', 'd': 't', '': '', 'c': 'tsʰ', 'b': 'p', 'l': 'l', 'h': 'x', 't': 'tʰ', 'q': 'tɕʰ', 'z': 'ts', 'j': 'tɕ', 'f': 'f', 'k': 'kʰ', 'n': 'n', 'x': 'ɕ', 'm': 'm', 's': 's', 'p': 'pʰ', 'ng': 'ŋ'}
-icym = {'ae': 'ɛ', 'ieh': 'iəʔ', 'ii': 'i', 'eh': 'əʔ', 'io': 'iɔ', 'ieu': 'iəu', 'u': 'u', 'v': 'w', 'en': 'ən', 'a': 'a', 'on': 'ɔŋ', 'an': 'ã', 'oh': 'ɔʔ', 'i': 'j', 'ien': 'in', 'ion': 'iɔŋ', 'ah': 'aʔ', 'ih': 'iʔ', 'y': 'y', 'ui': 'ui', 'uae': 'uɛ', 'aeh': 'ɛʔ', 'in': 'ĩ', 'ia': 'ia', 'z': 'ɿ', 'uh': 'uʔ', 'aen': 'ɛ̃', 'er': 'ɚ', 'eu': 'əu', 'iah': 'iaʔ', 'ueh': 'uəʔ', 'iae': 'iɛ', 'iuh': 'iuʔ', 'yen': 'yn', 'ian': 'iã', 'iun': 'iũ', 'un': 'ũ', 'o': 'ɔ', 'uan': 'uã', 'ua': 'ua', 'uen': 'uən', 'ioh': 'iɔʔ', 'iaen': 'iɛ̃', 'uaen': 'uɛ̃', 'uaeh': 'uɛʔ', 'iaeh': 'iɛʔ', 'uah': 'uaʔ', 'yeh': 'yəʔ', 'ya': 'ya'}
+icym = {'ae': 'ɛ', 'ieh': 'iəʔ', 'ii': 'i', 'eh': 'əʔ', 'io': 'iɔ', 'ieu': 'iəu', 'u': 'u', 'v': 'w', 'en': 'ən', 'a': 'a', 'on': 'ɔŋ', 'an': 'ã', 'oh': 'ɔʔ', 'i': 'iⱼ', 'ien': 'in', 'ion': 'iɔŋ', 'ah': 'aʔ', 'ih': 'iʔ', 'y': 'y', 'ui': 'ui', 'uae': 'uɛ', 'aeh': 'ɛʔ', 'in': 'ĩ', 'ia': 'ia', 'z': 'ɿ', 'uh': 'uʔ', 'aen': 'ɛ̃', 'er': 'ɚ', 'eu': 'əu', 'iah': 'iaʔ', 'ueh': 'uəʔ', 'iae': 'iɛ', 'iuh': 'iuʔ', 'yen': 'yn', 'ian': 'iã', 'iun': 'iũ', 'un': 'ũ', 'o': 'ɔ', 'uan': 'uã', 'ua': 'ua', 'uen': 'uən', 'ioh': 'iɔʔ', 'iaen': 'iɛ̃', 'uaen': 'uɛ̃', 'uaeh': 'uɛʔ', 'iaeh': 'iɛʔ', 'uah': 'uaʔ', 'yeh': 'yəʔ', 'ya': 'ya'}
 for line in open("xu.csv"):
   line = line.strip()
   fs = line.split(',')
@@ -176,6 +176,31 @@ update("ic", d)
 
 #sz
 #https://github.com/NGLI/rime-wugniu_soutseu/blob/master/wugniu_soutseu.dict.yaml
+def sz2ipa(s):
+  tone = s[-1]
+  if tone.isdigit():
+    s = s[:-1]
+  else:
+    tone = ""
+  s = re.sub("y$", "ɿ", s)
+  s = re.sub("yu$", "ɥ", s)
+  s = re.sub("q$", "h", s)
+  s = s.replace("y", "ghi").replace("w", "ghu").replace("ii", "i").replace("uu", "u")
+  s = re.sub("(c|ch|j|sh|zh)u", "\\1iu", s)
+  s = re.sub("iu$", "yⱼ", s)
+  s = s.replace("au", "æ").replace("ieu", "y").replace("eu", "øʏ").replace("oe", "ø")\
+          .replace("an", "ã").replace("aon", "ɑ̃").replace("en", "ən")\
+          .replace("iuh", "yəʔ").replace("iu", "y").replace("ou", "əu").replace("aeh", "aʔ").replace("ah", "ɑʔ").replace("eh", "əʔ").replace("on", "oŋ")
+  s = re.sub("h$", "ʔ", s)
+  s = re.sub("er$", "əl", s)
+  s = s.replace("ph", "pʰ").replace("th", "tʰ").replace("kh", "kʰ").replace("tsh", "tsʰ")\
+          .replace("ch", "tɕʰ").replace("c", "tɕ").replace("sh", "ɕ").replace("j", "dʑ").replace("zh", "ʑ")\
+          .replace("gh", "ɦ").replace("ng", "ŋ").replace("gn", "ȵ")
+  s = re.sub("i$", "iⱼ", s)
+  s = re.sub("ie$", "i", s)
+  s = re.sub("e$", "ᴇ", s)
+  s = s + tone
+  return s
 d.clear()
 for line in open("wugniu_soutseu.dict.yaml"):
   line = line.strip()
@@ -183,6 +208,7 @@ for line in open("wugniu_soutseu.dict.yaml"):
   if len(fs) != 2: continue
   hz, py = fs
   if len(hz) == 1:
+    py = sz2ipa(py)
     if py not in d[hz]:
       d[hz].append(py)
 update("sz", d)
@@ -236,6 +262,45 @@ for line in open("/usr/share/unicode/Unihan_Readings.txt"):
       if y not in d[han]:
         d[han].append(y)
 update("ct", d)
+
+#sh
+def sh2ipa(s):
+  tag = s[0]
+  isTag = tag in "|*"
+  if isTag:
+    s = s[1:-1]
+  b = s
+  tone = s[-1]
+  if tone.isdigit():
+    s = s[:-1]
+  else:
+    tone = ""
+  s = re.sub("y$", "ɿ", s)
+  s = s.replace("y", "ghi").replace("w", "ghu").replace("ii", "i").replace("uu", "u")
+  s = re.sub("(c|ch|j|sh|zh)u", "\\1iu", s)
+  s = s.replace("au", "ɔ").replace("eu", "ɤ").replace("oe", "ø")\
+          .replace("an", "ã").replace("aon", "ɑ̃").replace("en", "ən")\
+          .replace("iuh", "yiʔ").replace("iu", "y").replace("eh", "əʔ")
+  s = re.sub("h$", "ʔ", s)
+  s = re.sub("r$", "əl", s)
+  s = s.replace("ph", "pʰ").replace("th", "tʰ").replace("kh", "kʰ").replace("tsh", "tsʰ")\
+          .replace("ch", "tɕʰ").replace("c", "tɕ").replace("sh", "ɕ").replace("j", "dʑ").replace("zh", "ʑ")\
+          .replace("gh", "ɦ").replace("ng", "ŋ")
+  s = re.sub("e$", "ᴇ", s)
+  s = s + tone
+  #print(b, s)
+  if isTag:
+    s = tag + s + tag
+  return s
+
+for i in unicodes.keys():
+  if "sh" in unicodes[i]:
+    sh = unicodes[i]["sh"]
+    if sh:
+      fs = sh.split(",")
+      fs = map(sh2ipa, fs)
+      sh = ",".join(fs)
+      unicodes[i]["sh"] = sh
 
 #hk
 #https://github.com/g0v/moedict-webkit/blob/master/h.txt
