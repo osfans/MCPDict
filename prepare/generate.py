@@ -16,7 +16,8 @@ HEADS = [
   #('lj', '南京話', '南京', '#6161FF', '南京官話拼音方案', "https://uliloewi.github.io/LangJinPinIn/PinInFangAng"),
   ('sz', '蘇州話', '蘇州', '#00ADAD', '吳語學堂（蘇州）', "https://www.wugniu.com/search?table=suzhou_zi&char=%s"),
   ('sh', '上海話', '上海', '#00ADAD', '吳音小字典（上海）', "http://www.wu-chinese.com/minidict/search.php?searchlang=zaonhe&searchkey=%s"),
-  ('ct', '粵語', '粵語', '#269A26', '粵語審音配詞字庫', "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s"),
+  ('hk', '客家話', '客語', '#006080', '薪典', "https://www.syndict.com/w2p.php?item=hak&word=%s"),
+  ('ct', '粵語', '粵語', '#008000', '粵語審音配詞字庫', "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s"),
   ('mn', '閩南語', '閩南', '#FFAD00', '臺灣閩南語常用詞辭典', "http://twblg.dict.edu.tw/holodict_new/result.jsp?querytarget=1&radiobutton=0&limit=20&sample=%s"),
   ('vn', '越南語', '越南', '#FF6600', '漢越辭典摘引', "http://www.vanlangsj.org/hanviet/hv_timchu.php?unichar=%s"),
   ('kr', '朝鮮語', '朝鮮', '#3366FF', 'Naver漢字辭典', "http://hanja.naver.com/hanja?q=%s"),
@@ -288,7 +289,6 @@ def sh2ipa(s):
           .replace("gh", "ɦ").replace("ng", "ŋ")
   s = re.sub("e$", "ᴇ", s)
   s = s + tone
-  #print(b, s)
   if isTag:
     s = tag + s + tag
   return s
@@ -304,6 +304,30 @@ for i in unicodes.keys():
 
 #hk
 #https://github.com/g0v/moedict-webkit/blob/master/h.txt
+#https://github.com/syndict/hakka/blob/master/hakka.dict.yaml
+hktones = {"44":"1", "33": "1", "11":"2", "31":"3", "13":"4", "52":"5", "53":"5", "5":"7", "1":"8", "3":"8"}
+def hk2ipa(s):
+  b = s
+  s = s.replace("er","ə").replace("ae","æ").replace("ii", "ɿ").replace("e", "ɛ")
+  s = s.replace("sl", "ɬ").replace("nj", "ɲ").replace("t", "tʰ").replace("zh", "t∫").replace("ch", "t∫ʰ").replace("sh", "∫").replace("p", "pʰ").replace("k", "kʰ").replace("z", "ts").replace("c", "tsʰ").replace("j", "tɕ").replace("q", "tɕʰ").replace("x", "tɕ").replace("r", "ʒ").replace("ng", "ŋ").replace("?", "ʔ").replace("b", "p").replace("d", "t").replace("g", "k")
+  tone = re.findall("\d+$", s)
+  if tone:
+    tone = tone[0]
+    tone2 = hktones[tone]
+    s = s.replace(tone, tone2)
+  return s
+
+d.clear()
+for line in open("hakka.dict.yaml"):
+  line = line.strip()
+  fs = line.split('\t')
+  if len(fs) < 2: continue
+  hz, py = fs[:2]
+  if len(hz) == 1:
+    py = hk2ipa(py)
+    if py not in d[hz] and py:
+      d[hz].append(py)
+update("hk", d)
 
 conn = sqlite3.connect('../app/src/main/assets/databases/mcpdict.db')
 c = conn.cursor()
