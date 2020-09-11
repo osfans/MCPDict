@@ -1,128 +1,128 @@
-#Hiragana, Katakana, Nippon-shiki, Hepburn-shiki
-あ	ア	a	a
-い	イ	i	i
-う	ウ	u	u
-え	エ	e	e
-お	オ	o	o
-や	ヤ	ya	ya
-ゆ	ユ	yu	yu
-よ	ヨ	yo	yo
-か	カ	ka	ka
-き	キ	ki	ki
-く	ク	ku	ku
-け	ケ	ke	ke
-こ	コ	ko	ko
-きゃ	キャ	kya	kya
-きゅ	キュ	kyu	kyu
-きょ	キョ	kyo	kyo
-さ	サ	sa	sa
-し	シ	si	shi
-す	ス	su	su
-せ	セ	se	se
-そ	ソ	so	so
-しゃ	シャ	sya	sha
-しゅ	シュ	syu	shu
-しょ	ショ	syo	sho
-た	タ	ta	ta
-ち	チ	ti	chi
-つ	ツ	tu	tsu
-て	テ	te	te
-と	ト	to	to
-ちゃ	チャ	tya	cha
-ちゅ	チュ	tyu	chu
-ちょ	チョ	tyo	cho
-な	ナ	na	na
-に	ニ	ni	ni
-ぬ	ヌ	nu	nu
-ね	ネ	ne	ne
-の	ノ	no	no
-にゃ	ニャ	nya	nya
-にゅ	ニュ	nyu	nyu
-にょ	ニョ	nyo	nyo
-は	ハ	ha	ha
-ひ	ヒ	hi	hi
-ふ	フ	hu	fu
-へ	ヘ	he	he
-ほ	ホ	ho	ho
-ひゃ	ヒャ	hya	hya
-ひゅ	ヒュ	hyu	hyu
-ひょ	ヒョ	hyo	hyo
-ま	マ	ma	ma
-み	ミ	mi	mi
-む	ム	mu	mu
-め	メ	me	me
-も	モ	mo	mo
-みゃ	ミャ	mya	mya
-みゅ	ミュ	myu	myu
-みょ	ミョ	myo	myo
-ら	ラ	ra	ra
-り	リ	ri	ri
-る	ル	ru	ru
-れ	レ	re	re
-ろ	ロ	ro	ro
-りゃ	リャ	rya	rya
-りゅ	リュ	ryu	ryu
-りょ	リョ	ryo	ryo
-わ	ワ	wa	wa
-ゐ	ヰ	wi	wi
-ゑ	ヱ	we	we
-を	ヲ	wo	wo
-ゐゃ	ヰャ	wya	wya
-ゐゅ	ヰュ	wyu	wyu
-ゐょ	ヰョ	wyo	wyo
-が	ガ	ga	ga
-ぎ	ギ	gi	gi
-ぐ	グ	gu	gu
-げ	ゲ	ge	ge
-ご	ゴ	go	go
-ぎゃ	ギャ	gya	gya
-ぎゅ	ギュ	gyu	gyu
-ぎょ	ギョ	gyo	gyo
-ざ	ザ	za	za
-じ	ジ	zi	ji
-ず	ズ	zu	zu
-ぜ	ゼ	ze	ze
-ぞ	ゾ	zo	zo
-じゃ	ジャ	zya	ja
-じゅ	ジュ	zyu	ju
-じょ	ジョ	zyo	jo
-だ	ダ	da	da
-ぢ	ヂ	di	dji
-づ	ヅ	du	dzu
-で	デ	de	de
-ど	ド	do	do
-ぢゃ	ヂャ	dya	dja
-ぢゅ	ヂュ	dyu	dju
-ぢょ	ヂョ	dyo	djo
-ば	バ	ba	ba
-び	ビ	bi	bi
-ぶ	ブ	bu	bu
-べ	ベ	be	be
-ぼ	ボ	bo	bo
-びゃ	ビャ	bya	bya
-びゅ	ビュ	byu	byu
-びょ	ビョ	byo	byo
-ぱ	パ	pa	pa
-ぴ	ピ	pi	pi
-ぷ	プ	pu	pu
-ぺ	ペ	pe	pe
-ぽ	ポ	po	po
-ぴゃ	ピャ	pya	pya
-ぴゅ	ピュ	pyu	pyu
-ぴょ	ピョ	pyo	pyo
-くゎ	クヮ	kwa	kwa
-くゐ	クヰ	kwi	kwi
-くゑ	クヱ	kwe	kwe
-くを	クヲ	kwo	kwo
-くゐゃ	クヰャ	kwya	kwya
-くゐゅ	クヰュ	kwyu	kwyu
-くゐょ	クヰョ	kwyo	kwyo
-ぐゎ	グヮ	gwa	gwa
-ぐゐ	グヰ	gwi	gwi
-ぐゑ	グヱ	gwe	gwe
-ぐを	グヲ	gwo	gwo
-ぐゐゃ	グヰャ	gwya	gwya
-ぐゐゅ	グヰュ	gwyu	gwyu
-ぐゐょ	グヰョ	gwyo	gwyo
-ん	ン	n	n
-っ	ッ	q	q
+#Hiragana, Katakana, Nippon-shiki, Hepburn-shiki, IPA
+あ	ア	a	a	a
+い	イ	i	i	i
+う	ウ	u	u	u
+え	エ	e	e	e
+お	オ	o	o	o
+や	ヤ	ya	ya	ja
+ゆ	ユ	yu	yu	ju
+よ	ヨ	yo	yo	jo
+か	カ	ka	ka	ka
+き	キ	ki	ki	ki
+く	ク	ku	ku	ku
+け	ケ	ke	ke	ke
+こ	コ	ko	ko	ko
+きゃ	キャ	kya	kya	kja
+きゅ	キュ	kyu	kyu	kju
+きょ	キョ	kyo	kyo	kjo
+さ	サ	sa	sa	sa
+し	シ	si	shi	ɕi
+す	ス	su	su	su
+せ	セ	se	se	se
+そ	ソ	so	so	so
+しゃ	シャ	sya	sha	ɕa
+しゅ	シュ	syu	shu	ɕu
+しょ	ショ	syo	sho	ɕo
+た	タ	ta	ta	ta
+ち	チ	ti	chi	tɕi
+つ	ツ	tu	tsu	tsu
+て	テ	te	te	te
+と	ト	to	to	to
+ちゃ	チャ	tya	cha	tɕa
+ちゅ	チュ	tyu	chu	tɕu
+ちょ	チョ	tyo	cho	tɕo
+な	ナ	na	na	na
+に	ニ	ni	ni	ni
+ぬ	ヌ	nu	nu	nu
+ね	ネ	ne	ne	ne
+の	ノ	no	no	no
+にゃ	ニャ	nya	nya	nja
+にゅ	ニュ	nyu	nyu	nju
+にょ	ニョ	nyo	nyo	njo
+は	ハ	ha	ha	ha
+ひ	ヒ	hi	hi	hi
+ふ	フ	hu	fu	fu
+へ	ヘ	he	he	he
+ほ	ホ	ho	ho	ho
+ひゃ	ヒャ	hya	hya	hja
+ひゅ	ヒュ	hyu	hyu	hju
+ひょ	ヒョ	hyo	hyo	hjo
+ま	マ	ma	ma	ma
+み	ミ	mi	mi	mi
+む	ム	mu	mu	mu
+め	メ	me	me	me
+も	モ	mo	mo	mo
+みゃ	ミャ	mya	mya	mja
+みゅ	ミュ	myu	myu	mju
+みょ	ミョ	myo	myo	mjo
+ら	ラ	ra	ra	ɾa
+り	リ	ri	ri	ɾi
+る	ル	ru	ru	ɾu
+れ	レ	re	re	ɾe
+ろ	ロ	ro	ro	ɾo
+りゃ	リャ	rya	rya	ɾja
+りゅ	リュ	ryu	ryu	ɾju
+りょ	リョ	ryo	ryo	ɾjo
+わ	ワ	wa	wa	wa
+ゐ	ヰ	wi	wi	wi
+ゑ	ヱ	we	we	we
+を	ヲ	wo	wo	wo
+ゐゃ	ヰャ	wya	wya	wja
+ゐゅ	ヰュ	wyu	wyu	wju
+ゐょ	ヰョ	wyo	wyo	wjo
+が	ガ	ga	ga	ga
+ぎ	ギ	gi	gi	gi
+ぐ	グ	gu	gu	gu
+げ	ゲ	ge	ge	ge
+ご	ゴ	go	go	go
+ぎゃ	ギャ	gya	gya	gja
+ぎゅ	ギュ	gyu	gyu	gju
+ぎょ	ギョ	gyo	gyo	gjo
+ざ	ザ	za	za	za
+じ	ジ	zi	ji	ʑi
+ず	ズ	zu	zu	zu
+ぜ	ゼ	ze	ze	ze
+ぞ	ゾ	zo	zo	zo
+じゃ	ジャ	zya	ja	ʑa
+じゅ	ジュ	zyu	ju	ʑu
+じょ	ジョ	zyo	jo	ʑo
+だ	ダ	da	da	da
+ぢ	ヂ	di	dji	dʑi
+づ	ヅ	du	dzu	dzu
+で	デ	de	de	de
+ど	ド	do	do	do
+ぢゃ	ヂャ	dya	dja	dʑa
+ぢゅ	ヂュ	dyu	dju	dʑu
+ぢょ	ヂョ	dyo	djo	dʑo
+ば	バ	ba	ba	ba
+び	ビ	bi	bi	bi
+ぶ	ブ	bu	bu	bu
+べ	ベ	be	be	be
+ぼ	ボ	bo	bo	bo
+びゃ	ビャ	bya	bya	bja
+びゅ	ビュ	byu	byu	bju
+びょ	ビョ	byo	byo	bjo
+ぱ	パ	pa	pa	pa
+ぴ	ピ	pi	pi	pi
+ぷ	プ	pu	pu	pu
+ぺ	ペ	pe	pe	pe
+ぽ	ポ	po	po	po
+ぴゃ	ピャ	pya	pya	pja
+ぴゅ	ピュ	pyu	pyu	pju
+ぴょ	ピョ	pyo	pyo	pjo
+くゎ	クヮ	kwa	kwa	kwa
+くゐ	クヰ	kwi	kwi	kwi
+くゑ	クヱ	kwe	kwe	kwe
+くを	クヲ	kwo	kwo	kwo
+くゐゃ	クヰャ	kwya	kwya	kwja
+くゐゅ	クヰュ	kwyu	kwyu	kwju
+くゐょ	クヰョ	kwyo	kwyo	kwjo
+ぐゎ	グヮ	gwa	gwa	gwa
+ぐゐ	グヰ	gwi	gwi	gwi
+ぐゑ	グヱ	gwe	gwe	gwe
+ぐを	グヲ	gwo	gwo	gwo
+ぐゐゃ	グヰャ	gwya	gwya	gwja
+ぐゐゅ	グヰュ	gwyu	gwyu	gwju
+ぐゐょ	グヰョ	gwyo	gwyo	gwjo
+ん	ン	n	n	n
+っ	ッ	q	q	ʔ

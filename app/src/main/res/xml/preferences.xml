@@ -1,6 +1,13 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
     <ListPreference
+        android:key="@string/pref_key_mc_display"
+        android:title="@string/pref_title_mc_display"
+        android:dialogTitle="@string/pref_title_mc_display"
+        android:entries="@array/pref_entries_mc_display"
+        android:entryValues="@array/pref_values_mc_display"
+        android:defaultValue="5" />
+    <ListPreference
         android:key="@string/pref_key_mandarin_display"
         android:title="@string/pref_title_mandarin_display"
         android:dialogTitle="@string/pref_title_mandarin_display"
@@ -15,11 +22,11 @@
         android:entryValues="@array/pref_values_cantonese_romanization"
         android:defaultValue="0" />
     <ListPreference
-        android:key="@string/pref_key_korean_display"
-        android:title="@string/pref_title_korean_display"
-        android:dialogTitle="@string/pref_title_korean_display"
-        android:entries="@array/pref_entries_korean_display"
-        android:entryValues="@array/pref_values_korean_display"
+        android:key="@string/pref_key_minnan_display"
+        android:title="@string/pref_title_minnan_display"
+        android:dialogTitle="@string/pref_title_minnan_display"
+        android:entries="@array/pref_entries_minnan_display"
+        android:entryValues="@array/pref_values_minnan_display"
         android:defaultValue="0" />
     <ListPreference
         android:key="@string/pref_key_vietnamese_tone_position"
@@ -27,6 +34,13 @@
         android:dialogTitle="@string/pref_title_vietnamese_tone_position"
         android:entries="@array/pref_entries_vietnamese_tone_position"
         android:entryValues="@array/pref_values_vietnamese_tone_position"
+        android:defaultValue="0" />
+    <ListPreference
+        android:key="@string/pref_key_korean_display"
+        android:title="@string/pref_title_korean_display"
+        android:dialogTitle="@string/pref_title_korean_display"
+        android:entries="@array/pref_entries_korean_display"
+        android:entryValues="@array/pref_values_korean_display"
         android:defaultValue="0" />
     <ListPreference
         android:key="@string/pref_key_japanese_display"

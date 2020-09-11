@@ -59,6 +59,18 @@
                 android:text="@string/option_tone_insensitive" />
         </TableRow>
 
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/result"
+                android:layout_span="2"
+                android:scrollbars="vertical"
+                android:enabled="true"
+                android:textIsSelectable="true"
+                android:focusable="true"
+                android:longClickable="true" />
+        </TableRow>
     </TableLayout>
 
     <View

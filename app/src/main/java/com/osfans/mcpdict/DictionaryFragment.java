@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +16,9 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 public class DictionaryFragment extends Fragment implements RefreshableFragment {
 
@@ -31,7 +32,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
     ArrayAdapter<CharSequence> adapter;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // A hack to avoid nested fragments from being inflated twice
         // Reference: http://stackoverflow.com/a/14695397
         if (selfView != null) {
@@ -52,7 +53,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
 
         // Set up the spinner
         spinnerSearchAs = selfView.findViewById(R.id.spinner_search_as);
-        adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item);
+        adapter = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
         refreshAdapter();
         adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         spinnerSearchAs.setAdapter(adapter);
@@ -106,7 +107,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
     private void updateCheckBoxesEnabled() {
         int mode = spinnerSearchAs.getSelectedItemPosition();
         checkBoxKuangxYonhOnly.setEnabled(!MCPDatabase.isMC(mode));
-        //checkBoxAllowVariants.setEnabled(MCPDatabase.isHZ(mode));
+        checkBoxAllowVariants.setEnabled(MCPDatabase.isHZ(mode));
         checkBoxToneInsensitive.setEnabled(MCPDatabase.isToneInsensitive(mode));
     }
 
@@ -118,9 +119,6 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
 
     @Override
     public void refresh() {
-        // Search on a separate thread
-        // Because AsyncTasks are put in a queue,
-        //   this will not run until the initialization of the orthography module finishes
         final String query = searchView.getQuery();
         final int mode = spinnerSearchAs.getSelectedItemPosition();
         new AsyncTask<Void, Void, Cursor>() {
@@ -138,8 +136,32 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
                 else {
                     textEmpty.setText(R.string.no_matches);
                 }
+                updateResult(data);
             }
         }.execute();
+    }
+
+    private void updateResult(Cursor data) {
+        TextView textResult = selfView.findViewById(R.id.result);
+        if (data != null && data.getCount() > 3) {
+            StringBuilder sb = new StringBuilder();
+            for (data.moveToFirst();
+                 !data.isAfterLast();
+                 data.moveToNext()) {
+                sb.append(data.getString(0));
+            }
+            textResult.setText(sb);
+            textResult.setVisibility(View.VISIBLE);
+        } else {
+            textResult.setVisibility(View.GONE);
+        }
+    }
+
+    public void refresh(String query, int mode) {
+        searchView.setQuery(query);
+        if (mode > MCPDatabase.COL_JP_ANY) mode = MCPDatabase.COL_JP_ANY;
+        spinnerSearchAs.setSelection(mode);
+        refresh();
     }
 
     public void refreshAdapter() {
