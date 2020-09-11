@@ -58,6 +58,17 @@
 
     </TableLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result"
+        android:enabled="true"
+        android:textIsSelectable="true"
+        android:focusable="true"
+        android:scrollbars="vertical"
+        android:maxLines="3"
+        android:longClickable="true" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

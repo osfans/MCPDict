@@ -68,4 +68,8 @@ public class CustomSearchView extends RelativeLayout {
     public String getQuery() {
         return editText.getText().toString();
     }
+
+    public void setQuery(String query) {
+        editText.setText(query);
+    }
 }

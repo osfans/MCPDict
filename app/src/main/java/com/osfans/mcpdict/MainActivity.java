@@ -76,7 +76,7 @@ public class MainActivity extends ActivityWithOptionsMenu {
         return getFragment(mPager.getCurrentItem());
     }
 
-    private DictionaryFragment getDictionaryFragment() {
+    public DictionaryFragment getDictionaryFragment() {
         return (DictionaryFragment) getFragment(PagerAdapter.PAGE_DICTIONARY);
     }
 

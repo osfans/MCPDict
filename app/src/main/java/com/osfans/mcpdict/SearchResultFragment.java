@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.fragment.app.ListFragment;
 import android.text.ClipboardManager;
 import android.text.TextUtils;
 import android.view.ContextMenu;
@@ -21,6 +20,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.fragment.app.ListFragment;
+
 import com.mobiRic.ui.widget.Boast;
 
 import java.io.UnsupportedEncodingException;
@@ -31,13 +33,10 @@ import static com.osfans.mcpdict.MCPDatabase.COL_FIRST_READING;
 import static com.osfans.mcpdict.MCPDatabase.COL_HZ;
 import static com.osfans.mcpdict.MCPDatabase.COL_JP_FIRST;
 import static com.osfans.mcpdict.MCPDatabase.COL_LAST_READING;
-import static com.osfans.mcpdict.MCPDatabase.COL_UNICODE;
 import static com.osfans.mcpdict.MCPDatabase.MASK_ALL_READINGS;
 import static com.osfans.mcpdict.MCPDatabase.MASK_HZ;
 import static com.osfans.mcpdict.MCPDatabase.MASK_JP_ALL;
-import static com.osfans.mcpdict.MCPDatabase.MASK_UNICODE;
 
-@SuppressWarnings("deprecation")
 public class SearchResultFragment extends ListFragment {
 
     private View selfView;
@@ -45,7 +44,6 @@ public class SearchResultFragment extends ListFragment {
     private SearchResultCursorAdapter adapter;
     private final boolean showFavoriteButton;
     private View selectedEntry;
-    public final static String KEY_COL = "col";
 
     private static SearchResultFragment selectedFragment;
 
@@ -59,7 +57,7 @@ public class SearchResultFragment extends ListFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // A hack to avoid nested fragments from being inflated twice
         // Reference: http://stackoverflow.com/a/14695397
         if (selfView != null) {
@@ -97,7 +95,7 @@ public class SearchResultFragment extends ListFragment {
     }
 
     @Override
-    public void onListItemClick(ListView list, View view, int position, long id) {
+    public void onListItemClick(ListView list, @NonNull View view, int position, long id) {
         // Show context menu on short clicks, too
         list.showContextMenuForChild(view);
     }
@@ -108,7 +106,7 @@ public class SearchResultFragment extends ListFragment {
         String utf8 = null;
         String big5 = null;
         int unicode = hz.codePointAt(0);
-        String hex = Orthography.Hanzi.getHex(unicode);
+        String hex = Orthography.HZ.toHex(unicode);
         try {
             utf8 = URLEncoder.encode(hz, "utf-8");
         } catch (UnsupportedEncodingException ignored) {
@@ -125,9 +123,10 @@ public class SearchResultFragment extends ListFragment {
     }
 
     @Override
-    public void onCreateContextMenu(ContextMenu menu, View view, ContextMenuInfo menuInfo) {
-        int col = getActivity().getIntent().getIntExtra(KEY_COL, -1);
-        getActivity().getIntent().removeExtra(KEY_COL);
+    public void onCreateContextMenu(@NonNull ContextMenu menu, View view, ContextMenuInfo menuInfo) {
+        Object obj = view.getTag(R.id.tag_col);
+        view.setTag(R.id.tag_col, null);
+        int col = obj == null ? -1 : (Integer) obj;
         selectedFragment = this;
             // This is a bug with Android: when a context menu item is clicked,
             // all fragments of this class receive a call to onContextItemSelected.
@@ -142,11 +141,10 @@ public class SearchResultFragment extends ListFragment {
         selectedEntry = list.getChildAt(position);
         TextView text = selectedEntry.findViewById(R.id.text_hz);
         String hanzi = text.getText().toString();
-        int unicode = hanzi.codePointAt(0);
-        int tag = (Integer) selectedEntry.getTag();
+        int tag = (Integer) selectedEntry.getTag(R.id.tag_mask);
 
         // Inflate the context menu
-        getActivity().getMenuInflater().inflate(R.menu.search_result_context_menu, menu);
+        requireActivity().getMenuInflater().inflate(R.menu.search_result_context_menu, menu);
         MenuItem itemCopy = menu.findItem(R.id.menu_item_copy_readings);
         SubMenu menuCopy = itemCopy.getSubMenu();
         MenuItem itemDict = menu.findItem(R.id.menu_item_dict_links);
@@ -178,9 +176,21 @@ public class SearchResultFragment extends ListFragment {
                 item.setIntent(getDictIntent(col, hanzi));
             }
             menu.add(MASK_HZ, 0, 10, getString(R.string.copy_hz));
-            if (col == COL_UNICODE) menu.add(MASK_UNICODE, 0, 0, getString(R.string.copy_unicode));
-            else if (col >= COL_FIRST_READING)
-                menu.add(1<< col, 0, 0, getString(R.string.copy_one_reading, hanzi, MCPDatabase.getSearchAsName(col)));
+            if (col >= COL_FIRST_READING) {
+                String searchAsName = MCPDatabase.getSearchAsName(col);
+                item = menu.add(getString(R.string.search_homophone, hanzi, searchAsName));
+                item.setOnMenuItemClickListener(i->{
+                    DictionaryFragment dictionaryFragment = ((MainActivity) requireActivity()).getDictionaryFragment();
+                    String query;
+                    if (MCPDatabase.isDisplayOnly(col))
+                        query = selectedEntry.findViewWithTag(col).getTag(R.id.tag_raw).toString();
+                    else
+                        query = ((TextView)selectedEntry.findViewWithTag(col)).getText().toString();
+                    dictionaryFragment.refresh(query, col);
+                    return true;
+                });
+                menu.add(1 << col, 0, 0, getString(R.string.copy_one_reading, hanzi, searchAsName));
+            }
             if (((1 << col) & MASK_JP_ALL) > 0)
                 menu.add(MASK_JP_ALL, 0, 0, getString(R.string.copy_all_jp));
             if ((tag & MASK_ALL_READINGS) > 0)
@@ -208,7 +218,7 @@ public class SearchResultFragment extends ListFragment {
     }
 
     @Override
-    public boolean onContextItemSelected(MenuItem item) {
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
         if (selectedFragment != this) return false;
         int mask = item.getGroupId();
         if (mask > 0) {
@@ -223,15 +233,14 @@ public class SearchResultFragment extends ListFragment {
     }
 
     private String getCopyText(View entry, int mask) {
-        int tag = (Integer) entry.getTag();
+        int tag = (Integer) entry.getTag(R.id.tag_mask);
         if ((tag & mask) == 0) return null;
 
         StringBuilder sb = new StringBuilder();
         if (mask == MASK_JP_ALL || mask == MASK_ALL_READINGS) {
-            sb.append(getCopyText(entry, MASK_HZ));
-            sb.append(" ");
-            sb.append(getCopyText(entry, MASK_UNICODE));
-            sb.append("\n");
+            String hz = getCopyText(entry, MASK_HZ);
+            assert hz != null;
+            sb.append(String.format("%s %s\n", hz, Orthography.HZ.toUnicode(hz)));
             for (int i = (mask == MASK_JP_ALL ? COL_JP_FIRST : COL_FIRST_READING); i <= COL_LAST_READING; i ++) {
                 String s = getCopyText(entry, 1<<i);
                 if (s != null) {
@@ -263,5 +272,9 @@ public class SearchResultFragment extends ListFragment {
 
     public void scrollToTop() {
         listView.setSelectionAfterHeaderView();
+    }
+
+    public void scroll(int index) {
+        listView.setSelection(index);
     }
 }

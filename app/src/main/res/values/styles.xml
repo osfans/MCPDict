@@ -5,6 +5,10 @@
         <item name="colorAccent">@color/accent</item>
     </style>
     <!-- Styles for TextViews -->
+    <style name="FontName">
+        <item name="android:textSize">14sp</item>
+    </style>
+
     <style name="FontDetail">
         <item name="android:textColor">?android:textColorPrimary</item>
         <item name="android:textSize">16sp</item>

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import androidx.annotation.NonNull;
 import androidx.fragment.app.ListFragment;
 import android.text.Spannable;
 import android.text.method.LinkMovementMethod;
@@ -29,7 +30,7 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
     private boolean hasNewItem;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // A hack to avoid nested fragments from being inflated twice
         // Reference: http://stackoverflow.com/a/14695397
         if (selfView != null) {
@@ -77,7 +78,7 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
         int p = spannable.toString().length() - 5;
         spannable.setSpan(new ClickableSpan() {
             @Override
-            public void onClick(View view) {
+            public void onClick(@NonNull View view) {
                 Log.d("MCP", "A");
                 FavoriteDialogs.import_(0);
                 Log.d("MCP", "B");
@@ -102,21 +103,20 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
     }
 
     @Override
-    public void onListItemClick(final ListView list, final View view, final int position, long id) {
+    public void onListItemClick(@NonNull final ListView list, final View view, final int position, long id) {
         // When a favorite item is clicked, display a SearchResultFragment below it
         //   to show the details about the character in the item, or hide the
         //   SearchResultFragment if it is already displayed
 
         // Find the Chinese character in the view being clicked
         TextView text = view.findViewById(R.id.text_hz);
-        String hanzi = text.getText().toString();
-        final int unicode = hanzi.codePointAt(0);
+        String hz = text.getText().toString();
 
-        if (adapter.isItemExpanded(unicode)) {
-            adapter.collapseItem(unicode, view, list);
+        if (adapter.isItemExpanded(hz)) {
+            adapter.collapseItem(hz, view, list);
         }
         else {
-            adapter.expandItem(unicode, view, list);
+            adapter.expandItem(hz, view, list);
         }
     }
 

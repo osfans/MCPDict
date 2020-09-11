@@ -13,6 +13,7 @@ import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 public class MCPDatabase extends SQLiteAssetHelper {
 
@@ -22,10 +23,10 @@ public class MCPDatabase extends SQLiteAssetHelper {
     // Must be the same order as defined in the string array "search_as"
 
     public static final String SEARCH_AS_HZ = "hz";
-    public static final String SEARCH_AS_UNICODE = "unicode";
     public static final String SEARCH_AS_MC = "mc";
     public static final String SEARCH_AS_PU = "pu";
     public static final String SEARCH_AS_CT = "ct";
+    public static final String SEARCH_AS_MN = "mn";
     public static final String SEARCH_AS_KR = "kr";
     public static final String SEARCH_AS_VN = "vn";
     public static final String SEARCH_AS_JP_GO = "jp_go";
@@ -36,7 +37,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_JP_ANY = SEARCH_AS_JP_TOU;
 
     public static int COL_HZ;
-    public static int COL_UNICODE;
     private static int COL_MC;
 
     private static int COL_KR;
@@ -46,7 +46,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static int COL_LAST_READING;
 
     public static int MASK_HZ;
-    public static int MASK_UNICODE;
     public static int MASK_JP_ALL;
     public static int MASK_ALL_READINGS;
 
@@ -91,53 +90,47 @@ public class MCPDatabase extends SQLiteAssetHelper {
         boolean kuangxYonhOnly = sp.getBoolean(r.getString(R.string.pref_key_kuangx_yonh_only), false);
         boolean allowVariants = sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true);
         boolean toneInsensitive = sp.getBoolean(r.getString(R.string.pref_key_tone_insensitive), false);
-        int cantoneseSystem = Integer.parseInt(sp.getString(r.getString(R.string.pref_key_cantonese_romanization), "0"));
+        int cantoneseSystem = Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(R.string.pref_key_cantonese_romanization), "0")));
 
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
         List<String> variants = new ArrayList<>();
-        if (Orthography.Hanzi.isHanzi(input)) mode = COL_HZ;
-        else if (Orthography.Hanzi.isUnicode(input)) mode = COL_UNICODE;
+        if (Orthography.HZ.isHz(input)) mode = COL_HZ;
+        else if (Orthography.HZ.isUnicode(input)) {
+            input = Orthography.HZ.toHz(input);
+            mode = COL_HZ;
+        }
         if (isHZ(mode)) {     // Each character is a query
-            for (int i = 0; i < input.length(); i++) {
-                int inputChar = input.codePointAt(i);
-                if (Character.isSupplementaryCodePoint(inputChar)) i += 1;
-                if (!Orthography.Hanzi.isHanzi(inputChar)) continue;
-                if (!Character.isSupplementaryCodePoint(inputChar) && input.indexOf(inputChar) < i) continue;     // Ignore a character if it has appeared earlier
-                String inputHex = Orthography.Hanzi.getHex(inputChar);
+            for (int unicode: input.codePoints().toArray()) {
+                if (!Orthography.HZ.isHz(unicode)) continue;
+                String hz = Orthography.HZ.toHz(unicode);
+                if (keywords.indexOf(hz) >= 0) continue;
                 if (!allowVariants) {
-                    keywords.add(Orthography.Hanzi.toString(inputChar));
-                }
-                else {
-                    for (int variant : Orthography.Hanzi.getVariants(inputChar)) {
-                        String variantHex = Orthography.Hanzi.getHex(variant);
-                        int p = keywords.indexOf(variantHex);
-                        if (variant == inputChar) {
+                    keywords.add(hz);
+                } else {
+                    for (int variant : Orthography.HZ.getVariants(unicode)) {
+                        String variantHz = Orthography.HZ.toHz(variant);
+                        int p = keywords.indexOf(variantHz);
+                        if (variant == unicode) {
                             if (p >= 0) {       // The character itself must appear where it is
                                 keywords.remove(p);
                                 variants.remove(p);
                             }
-                            keywords.add(Orthography.Hanzi.toString(variant));
+                            keywords.add(variantHz);
                             variants.add(null); // And no variant information is appended
-                        }
-                        else {
+                        } else {
                             if (p == -1) {      // This variant character may have appeared before
-                                keywords.add(Orthography.Hanzi.toString(variant));
-                                variants.add(inputHex);
-                            }
-                            else {
+                                keywords.add(variantHz);
+                                variants.add(hz);
+                            } else {
                                 if (variants.get(p) != null) {
-                                    variants.set(p, variants.get(p) + " " + inputHex);
+                                    variants.set(p, variants.get(p) + hz);
                                 }
                             }
                         }
                     }
                 }
             }
-        }
-        else if (isUnicode(mode)) {     // Each character is a query
-            if (input.toUpperCase().startsWith("U+")) input = input.substring(2);
-            keywords.add(input);
         }
         else {                          // Each contiguous run of non-separator and non-comma characters is a query
             if (isKR(mode)) { // For Korean, put separators around all hanguls
@@ -212,10 +205,10 @@ public class MCPDatabase extends SQLiteAssetHelper {
         String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);
 
         // Build outer query statement (returning all information about the matching Chinese characters)
-        qb.setTables("(" + query + ") AS u, mcpdict AS v LEFT JOIN user.favorite AS w ON v.unicode = w.unicode");
+        qb.setTables("(" + query + ") AS u, mcpdict AS v LEFT JOIN user.favorite AS w ON v.hz = w.hz");
         qb.setDistinct(true);
         String[] projection = {"v.*", "_id",
-                   "v.unicode AS unicode", "variants",
+                   "v.hz AS hz", "variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
         String selection = "u._id = v.rowid";
         if (kuangxYonhOnly) {
@@ -227,16 +220,16 @@ public class MCPDatabase extends SQLiteAssetHelper {
         return db.rawQuery(query, args.toArray(new String[0]));
     }
 
-    public static Cursor directSearch(int unicode) {
+    public static Cursor directSearch(String hz) {
         // Search for a single Chinese character without any conversions
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-        qb.setTables("mcpdict AS v LEFT JOIN user.favorite AS w ON v.unicode = w.unicode");
+        qb.setTables("mcpdict AS v LEFT JOIN user.favorite AS w ON v.hz = w.hz");
         String[] projection = {"v.*", "v.rowid AS _id",
-                   "v.unicode AS unicode", "NULL AS variants",
+                   "v.hz AS hz", "NULL AS variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
-        String selection = "v.unicode = ?";
+        String selection = "v.hz = ?";
         String query = qb.buildQuery(projection, selection, null, null, null, null);
-        String[] args = {Orthography.Hanzi.getHex(unicode)};
+        String[] args = {hz};
         return db.rawQuery(query, args);
     }
 
@@ -253,19 +246,17 @@ public class MCPDatabase extends SQLiteAssetHelper {
         int n = cursor.getColumnCount();
 
         COL_HZ = cursor.getColumnIndex(SEARCH_AS_HZ);
-        COL_UNICODE = cursor.getColumnIndex(SEARCH_AS_UNICODE);
         COL_MC = cursor.getColumnIndex(SEARCH_AS_MC);
         COL_KR = cursor.getColumnIndex(SEARCH_AS_KR);
 
-        COL_FIRST_READING = COL_UNICODE + 1;
+        COL_FIRST_READING = COL_HZ + 1;
         COL_LAST_READING = n - 1;
         COL_JP_FIRST = cursor.getColumnIndex(SEARCH_AS_JP_GO);
         COL_JP_ANY = COL_JP_FIRST + 2;
 
         MASK_HZ = 1 << COL_HZ;
-        MASK_UNICODE = 1 << COL_UNICODE;
         MASK_JP_ALL = 0b11111 << COL_JP_FIRST;
-        MASK_ALL_READINGS   = ((1 << n) - 1) ^ MASK_HZ ^ MASK_UNICODE;
+        MASK_ALL_READINGS   = ((1 << n) - 1) ^ MASK_HZ;
 
         SEARCH_AS_NAMES = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -293,10 +284,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
         return mode == COL_HZ;
     }
 
-    private static boolean isUnicode(int mode) {
-        return mode == COL_UNICODE;
-    }
-
     private static boolean isKR(int mode) {
         return mode == COL_KR;
     }
@@ -307,6 +294,11 @@ public class MCPDatabase extends SQLiteAssetHelper {
 
     public static boolean isAnyJP(int mode) {
         return mode == COL_JP_ANY;
+    }
+
+    public static boolean isDisplayOnly(int mode) {
+        String name = getColumnName(mode);
+        return name.contentEquals(SEARCH_AS_VN) || name.contentEquals(SEARCH_AS_PU) || name.contentEquals(SEARCH_AS_MN) || isMC(mode) || isKR(mode) || isJP(mode);
     }
 
     public static boolean isToneInsensitive(int mode) {
@@ -409,10 +401,5 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static String getColumnName(int index) {
         if (COLUMNS == null) getSearchAsColumns();
         return COLUMNS[index];
-    }
-
-    public static int getColumnCount() {
-        if (COLUMNS == null) getSearchAsColumns();
-        return COLUMNS.length;
     }
 }
