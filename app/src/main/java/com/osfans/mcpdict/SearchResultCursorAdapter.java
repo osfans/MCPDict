@@ -136,41 +136,38 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             if (!visible) continue;
             tag |= 1 << i;
             textView = view.findViewWithTag(i);
-            boolean isRichText = false;
+            CharSequence cs;
             switch (MCPDatabase.getColumnName(i)) {
                 case MCPDatabase.SEARCH_AS_UNICODE:
-                    string = "U+" + string;
+                    cs = "U+" + string;
                     break;
                 case MCPDatabase.SEARCH_AS_MC:
-                    string = middleChineseDisplayer.display(string);
+                    cs = middleChineseDisplayer.display(string);
                     break;
                 case MCPDatabase.SEARCH_AS_PU:
-                    string = mandarinDisplayer.display(string);
+                    cs = mandarinDisplayer.display(string);
                     break;
                 case MCPDatabase.SEARCH_AS_CT:
-                    string = cantoneseDisplayer.display(string);
+                    cs = cantoneseDisplayer.display(string);
                     break;
                 case MCPDatabase.SEARCH_AS_KR:
-                    string = koreanDisplayer.display(string);
+                    cs = koreanDisplayer.display(string);
                     break;
                 case MCPDatabase.SEARCH_AS_VN:
-                    string = vietnameseDisplayer.display(string);
+                    cs = vietnameseDisplayer.display(string);
                     break;
                 case MCPDatabase.SEARCH_AS_JP_GO:
                 case MCPDatabase.SEARCH_AS_JP_KAN:
                 case MCPDatabase.SEARCH_AS_JP_TOU:
                 case MCPDatabase.SEARCH_AS_JP_KWAN:
                 case MCPDatabase.SEARCH_AS_JP_OTHER:
-                    string = getRichText(japaneseDisplayer.display(string));
-                    isRichText = true;
+                    cs = getRichText(japaneseDisplayer.display(string));
                     break;
                 default:
-                    string = getRichText(tone8Displayer.display(string));
-                    isRichText = true;
+                    cs = getRichText(tone8Displayer.display(string));
                     break;
             }
-            if (isRichText) textView.setText(Html.fromHtml(string));
-            else textView.setText(string);
+            textView.setText(cs);
         }
 
         // HZ
@@ -223,10 +220,19 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return String.format("#%06X", color & 0xFFFFFF);
     }
 
-    private String getRichText(String richTextString) {
-        return richTextString
+    private CharSequence getRichText(String richTextString) {
+        String s = richTextString
+                .replaceAll("~~(.+?)~~", "<s>$1</s>")
+                .replaceAll("```(.+?)```", "<i>$1</i>")
+                .replaceAll("`(.+?)`", "<tt>$1</tt>")
+                .replaceAll("___(.+?)___", "<sup>$1</sup>")
+                .replaceAll("__(.+?)__", "<sub>$1</sub>")
+                .replaceAll("_(.+?)_", "<u>$1</u>")
+                .replaceAll("\\*\\*\\*(.+?)\\*\\*\\*", "<small>$1</small>")
+                .replaceAll("\\*\\*(.+?)\\*\\*", "<big>$1</big>")
                 .replaceAll("\\*(.+?)\\*", "<b>$1</b>")
                 .replaceAll("\\|(.+?)\\|", String.format("<span style='color: %s;'>$1</span>", getHexColor()));
+        return Html.fromHtml(s);
     }
 
     private abstract static class Displayer {

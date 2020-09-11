@@ -7,7 +7,7 @@
     <!-- Styles for TextViews -->
     <style name="FontDetail">
         <item name="android:textColor">?android:textColorPrimary</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <style name="FontDim">

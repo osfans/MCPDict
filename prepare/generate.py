@@ -94,16 +94,19 @@ def getIPA(name):
   return yms
 sms = getIPA("../../ytenx/ytenx/sync/trngyan/CjengMuxNgixQim.txt")
 yms = getIPA("../../ytenx/ytenx/sync/trngyan/YonhMuxNgixQim.txt")
-sds = {'去': '5', '入平': '<u>2</u>', '入去': '<u>5</u>', '入上': '<u>3</u>', '上': '3','陽平': '2', '陰平': '1'}
+sds = {'去': '5', '入平': '2', '入去': '5', '入上': '3', '上': '3','陽平': '2', '陰平': '1'}
 
 for line in open("../../ytenx/ytenx/sync/trngyan/TriungNgyanQimYonh.txt"):
   line = line.strip()
   if line.startswith('#'): continue
   fs = line.split(' ')
   hzs = fs[1]
-  py = sms[fs[4]]+yms[fs[5]]+sds[fs[2]]
+  sd = fs[2]
+  py = sms[fs[4]]+yms[fs[5]]+sds[sd]
   if "ɿ" in py:
     py = re.sub("([ʂɽ].*?)ɿ", "\\1ʅ", py)
+  if sd.startswith("入"):
+    py = "_%s_"%py
   for hz in hzs:
     if py not in d[hz]:
       d[hz].append(py)
