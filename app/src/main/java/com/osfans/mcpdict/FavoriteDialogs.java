@@ -30,18 +30,18 @@ public class FavoriteDialogs {
        FavoriteDialogs.activity = activity;
     }
 
-    public static void add(final int unicode) {
+    public static void add(final String hz) {
         final EditText editText = new EditText(activity);
         editText.setHint(R.string.favorite_add_hint);
         editText.setSingleLine(false);
         new AlertDialog.Builder(activity)
             .setIcon(R.drawable.ic_star_yellow)
-            .setTitle(String.format(activity.getString(R.string.favorite_add), Orthography.Hanzi.toString(unicode)))
+            .setTitle(String.format(activity.getString(R.string.favorite_add), hz))
             .setView(editText)
             .setPositiveButton(R.string.save, (dialog, which) -> {
                 String comment = editText.getText().toString();
-                UserDatabase.insertFavorite(unicode, comment);
-                String message = String.format(activity.getString(R.string.favorite_add_done), Orthography.Hanzi.toString(unicode));
+                UserDatabase.insertFavorite(hz, comment);
+                String message = String.format(activity.getString(R.string.favorite_add_done), hz);
                 Boast.showText(activity, message, Toast.LENGTH_SHORT);
                 FavoriteFragment fragment = activity.getFavoriteFragment();
                 if (fragment != null) {
@@ -54,31 +54,31 @@ public class FavoriteDialogs {
             .show();
     }
 
-    public static void view(final int unicode, final View view) {
+    public static void view(final String hz, final View view) {
         new AlertDialog.Builder(activity)
             .setIcon(R.drawable.ic_star_yellow)
-            .setTitle(String.format(activity.getString(R.string.favorite_view), Orthography.Hanzi.toString(unicode)))
+            .setTitle(String.format(activity.getString(R.string.favorite_view), hz))
             .setMessage(((TextView) view.findViewById(R.id.text_comment)).getText())
-            .setPositiveButton(String.format(activity.getString(R.string.favorite_edit_2lines), Orthography.Hanzi.toString(unicode)),
-                    (dialog, which) -> FavoriteDialogs.edit(unicode, view))
-            .setNegativeButton(String.format(activity.getString(R.string.favorite_delete_2lines), Orthography.Hanzi.toString(unicode)),
-                    (dialog, which) -> FavoriteDialogs.delete(unicode, false))
+            .setPositiveButton(String.format(activity.getString(R.string.favorite_edit_2lines), hz),
+                    (dialog, which) -> FavoriteDialogs.edit(hz, view))
+            .setNegativeButton(String.format(activity.getString(R.string.favorite_delete_2lines), hz),
+                    (dialog, which) -> FavoriteDialogs.delete(hz, false))
             .setNeutralButton(R.string.back, null)
             .show();
     }
 
-    public static void edit(final int unicode, View view) {
+    public static void edit(final String hz, View view) {
         final EditText editText = new EditText(activity);
         editText.setText(((TextView) view.findViewById(R.id.text_comment)).getText());
         editText.setSingleLine(false);
         new AlertDialog.Builder(activity)
             .setIcon(R.drawable.ic_star_yellow)
-            .setTitle(String.format(activity.getString(R.string.favorite_edit), Orthography.Hanzi.toString(unicode)))
+            .setTitle(String.format(activity.getString(R.string.favorite_edit), hz))
             .setView(editText)
             .setPositiveButton(R.string.save, (dialog, which) -> {
                 String comment = editText.getText().toString();
-                UserDatabase.updateFavorite(unicode, comment);
-                String message = String.format(activity.getString(R.string.favorite_edit_done), Orthography.Hanzi.toString(unicode));
+                UserDatabase.updateFavorite(hz, comment);
+                String message = String.format(activity.getString(R.string.favorite_edit_done), hz);
                 Boast.showText(activity, message, Toast.LENGTH_SHORT);
                 activity.getCurrentFragment().refresh();
             })
@@ -86,15 +86,16 @@ public class FavoriteDialogs {
             .show();
     }
 
-    public static void delete(final int unicode, boolean force) {
+    public static void delete(final String hz, boolean force) {
         if (force) {
-            UserDatabase.deleteFavorite(unicode);
-            String message = String.format(activity.getString(R.string.favorite_delete_done), Orthography.Hanzi.toString(unicode));
+            UserDatabase.deleteFavorite(hz);
+            String message = String.format(activity.getString(R.string.favorite_delete_done), hz);
             Boast.showText(activity, message, Toast.LENGTH_SHORT);
             FavoriteFragment fragment = activity.getFavoriteFragment();
             if (fragment != null) {
                 FavoriteCursorAdapter adapter = (FavoriteCursorAdapter) fragment.getListAdapter();
-                adapter.collapseItem(unicode);
+                assert adapter != null;
+                adapter.collapseItem(hz);
                 fragment.refresh();
             }
             activity.refresh();
@@ -107,7 +108,7 @@ public class FavoriteDialogs {
         long now = System.currentTimeMillis();
         boolean expired = (expiry == 0 || now > expiry);
         if (!expired) {
-            delete(unicode, true);
+            delete(hz, true);
             return;
         }
 
@@ -115,11 +116,11 @@ public class FavoriteDialogs {
         checkBox.setText(R.string.favorite_delete_no_confirm);
         new AlertDialog.Builder(activity)
             .setIcon(R.drawable.ic_alert)
-            .setTitle(String.format(activity.getString(R.string.favorite_delete), Orthography.Hanzi.toString(unicode)))
-            .setMessage(String.format(activity.getString(R.string.favorite_delete_confirm), Orthography.Hanzi.toString(unicode)))
+            .setTitle(String.format(activity.getString(R.string.favorite_delete), hz))
+            .setMessage(String.format(activity.getString(R.string.favorite_delete_confirm), hz))
             .setView(checkBox)
             .setPositiveButton(R.string.delete, (dialog, which) -> {
-                delete(unicode, true);
+                delete(hz, true);
                 if (checkBox.isChecked()) {
                     sp.edit().putLong(prefKey, System.currentTimeMillis() + 3600000).apply();
                         // No confirmation for 1 hour
@@ -141,6 +142,7 @@ public class FavoriteDialogs {
                 FavoriteFragment fragment = activity.getFavoriteFragment();
                 if (fragment != null) {
                     FavoriteCursorAdapter adapter = (FavoriteCursorAdapter) fragment.getListAdapter();
+                    assert adapter != null;
                     adapter.collapseAll();
                     fragment.refresh();
                 }

@@ -24,7 +24,7 @@ public class FavoriteCursorAdapter extends CursorAdapter {
     private final FavoriteFragment fragment;
     private final AtomicInteger nextId = new AtomicInteger(42);
         // Answer to life, the universe and everything
-    private final Set<Integer> expandedItems;
+    private final Set<String> expandedItems;
 
     public FavoriteCursorAdapter(Context context, int layout, Cursor cursor, FavoriteFragment fragment) {
         super(context, cursor, FLAG_REGISTER_CONTENT_OBSERVER);
@@ -45,7 +45,7 @@ public class FavoriteCursorAdapter extends CursorAdapter {
 
         // Add a SearchResultFragment to the container
         SearchResultFragment fragment = new SearchResultFragment(false);
-        this.fragment.getFragmentManager().beginTransaction().add(id, fragment).commit();
+        this.fragment.getChildFragmentManager().beginTransaction().add(id, fragment).commit();
         view.setTag(fragment);
             // Set the fragment as a tag of the view, so it can be retrieved in expandItem
 
@@ -54,19 +54,14 @@ public class FavoriteCursorAdapter extends CursorAdapter {
 
     @Override
     public void bindView(final View view, final Context context, Cursor cursor) {
-        final int unicode;
         String string;
         TextView textView;
 
         // Get the Chinese character from the cursor,
         //   and make sure we're binding it to the view recorded in itemStatus
-        string = cursor.getString(cursor.getColumnIndex("unicode"));
-        unicode = Integer.parseInt(string, 16);
-
-        // Chinese character
-        string = Orthography.Hanzi.toString(unicode);
+        String hz = cursor.getString(cursor.getColumnIndex("hz"));
         textView = view.findViewById(R.id.text_hz);
-        textView.setText(string);
+        textView.setText(hz);
 
         // Timestamp
         string = cursor.getString(cursor.getColumnIndex("local_timestamp"));
@@ -80,41 +75,41 @@ public class FavoriteCursorAdapter extends CursorAdapter {
 
         // "Edit" button
         final Button buttonEdit = view.findViewById(R.id.button_edit);
-        buttonEdit.setOnClickListener(v -> FavoriteDialogs.view(unicode, view));
+        buttonEdit.setOnClickListener(v -> FavoriteDialogs.view(hz, view));
 
         // "Delete" button
         final Button buttonDelete = view.findViewById(R.id.button_delete);
-        buttonDelete.setOnClickListener(v -> FavoriteDialogs.delete(unicode, false));
+        buttonDelete.setOnClickListener(v -> FavoriteDialogs.delete(hz, false));
 
         // Restore expanded status
-        if (expandedItems.contains(unicode)) {
-            expandItem(unicode, view);
+        if (expandedItems.contains(hz)) {
+            expandItem(hz, view);
         }
         else {
-            collapseItem(unicode, view);
+            collapseItem(hz, view);
         }
     }
 
-    public boolean isItemExpanded(int unicode) {
-        return expandedItems.contains(unicode);
+    public boolean isItemExpanded(String hz) {
+        return expandedItems.contains(hz);
     }
 
-    public void expandItem(int unicode, View view) {
-        expandItem(unicode, view, null);
+    public void expandItem(String hz, View view) {
+        expandItem(hz, view, null);
     }
 
     // Mark a Chinese character as expanded
     // If a view is provided, expand that view, too
     // If a list is provided, scroll the list so that the view is entirely visible
-    public void expandItem(final int unicode, final View view, final ListView list) {
-        expandedItems.add(unicode);
+    public void expandItem(final String hz, final View view, final ListView list) {
+        expandedItems.add(hz);
         if (view == null) return;
         final View container = view.findViewWithTag("container");
         final SearchResultFragment fragment = (SearchResultFragment) view.getTag();
         new AsyncTask<Void, Void, Cursor>() {
             @Override
             protected Cursor doInBackground(Void... params) {
-                return MCPDatabase.directSearch(unicode);
+                return MCPDatabase.directSearch(hz);
             }
             @Override
             protected void onPostExecute(Cursor data) {
@@ -126,19 +121,19 @@ public class FavoriteCursorAdapter extends CursorAdapter {
         }.execute();
     }
 
-    public void collapseItem(int unicode) {
-        collapseItem(unicode, null, null);
+    public void collapseItem(String hz) {
+        collapseItem(hz, null, null);
     }
 
-    public void collapseItem(int unicode, View view) {
-        collapseItem(unicode, view, null);
+    public void collapseItem(String hz, View view) {
+        collapseItem(hz, view, null);
     }
 
     // Mark a Chinese character as collapsed
     // If a view is provided, collapsed that view, too
     // If a list is provided, scroll the list so that the view is entirely visible
-    public void collapseItem(int unicode, View view, ListView list) {
-        expandedItems.remove(unicode);
+    public void collapseItem(String hz, View view, ListView list) {
+        expandedItems.remove(hz);
         if (view == null) return;
         View container = view.findViewWithTag("container");
         container.setVisibility(View.GONE);

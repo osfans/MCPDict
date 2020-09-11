@@ -1,20 +1,13 @@
 package com.osfans.mcpdict;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Color;
-import android.net.Uri;
 import android.preference.PreferenceManager;
-import android.text.Html;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.TextPaint;
 import android.text.TextUtils;
-import android.text.method.LinkMovementMethod;
-import android.text.style.URLSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,12 +18,9 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
+import androidx.core.text.HtmlCompat;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.Objects;
-
-import static com.osfans.mcpdict.SearchResultFragment.KEY_COL;
 
 public class SearchResultCursorAdapter extends CursorAdapter {
 
@@ -47,46 +37,10 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         this.showFavoriteButton = showFavoriteButton;
     }
 
-    private class URLSpanNoUnderline extends URLSpan {
-        public URLSpanNoUnderline(String url) {
-            super(url);
-        }
-        @Override public void updateDrawState(TextPaint ds) {
-            super.updateDrawState(ds);
-            String url = getURL();
-            int color;
-            if (url.startsWith("https://www.unicode.org")) {
-                color = Color.parseColor(MCPDatabase.getColor(MCPDatabase.COL_UNICODE));
-                ds.setColor(color);
-            }
-            ds.setUnderlineText(false);
-        }
-    }
-
-    private void stripUnderlines(TextView textView) {
-        Spannable s = new SpannableString(textView.getText());
-        URLSpan[] spans = s.getSpans(0, s.length(), URLSpan.class);
-        for (URLSpan span: spans) {
-            int start = s.getSpanStart(span);
-            int end = s.getSpanEnd(span);
-            s.removeSpan(span);
-            span = new URLSpanNoUnderline(span.getURL());
-            s.setSpan(span, start, end, 0);
-        }
-        textView.setText(s);
-    }
-
-    private void setText(TextView textView, StringBuilder sb) {
-        String string = sb.toString();
-        textView.setText(Html.fromHtml(string));
-        textView.setMovementMethod(LinkMovementMethod.getInstance());
-        stripUnderlines(textView);
-    }
-
     private View.OnClickListener getListener(final int index) {
         return v -> {
+            ((View)v.getParent().getParent().getParent()).setTag(R.id.tag_col, index);
             ActivityWithOptionsMenu activity = (ActivityWithOptionsMenu) context;
-            activity.setIntent(activity.getIntent().putExtra(KEY_COL, index));
             activity.registerForContextMenu(v);
             activity.openContextMenu(v);
             activity.unregisterForContextMenu(v);
@@ -99,17 +53,15 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         final TextView textViewHZ = view.findViewById(R.id.text_hz);
         textViewHZ.setTag(MCPDatabase.COL_HZ);
         textViewHZ.setOnClickListener(getListener(MCPDatabase.COL_HZ));
-        TextView textViewUnicode = view.findViewById(R.id.text_unicode);
-        textViewUnicode.setTag(MCPDatabase.COL_UNICODE);
-        textViewUnicode.setOnClickListener(getListener(MCPDatabase.COL_UNICODE));
         TableLayout table = view.findViewById(R.id.text_readings);
         for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
             TableRow row = (TableRow)LayoutInflater.from(context).inflate(R.layout.search_result_row, null);
             TextView textViewName = row.findViewById(R.id.text_name);
-            String name = String.format("〔%s〕", MCPDatabase.getName(i));
+            String name = MCPDatabase.getName(i);
             textViewName.setText(name);
-            textViewName.setTextColor(Color.parseColor(MCPDatabase.getColor(i)));
-            textViewName.setTag("name" + i);
+            int color = Color.parseColor(MCPDatabase.getColor(i));
+            textViewName.setBackgroundTintList(ColorStateList.valueOf(color));
+            textViewName.setTextColor(color);
             final TextView textViewDetail = row.findViewById(R.id.text_detail);
             textViewDetail.setTag(i);
             row.setTag("row" + i);
@@ -121,10 +73,9 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
     @Override
     public void bindView(final View view, final Context context, Cursor cursor) {
-        final int unicode;
         String hz, string;
         TextView textView;
-        int tag = 0;
+        int mask = 0;
 
         for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
             string = cursor.getString(i);
@@ -134,21 +85,27 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 row.setVisibility(visible ? View.VISIBLE : View.GONE);
             }
             if (!visible) continue;
-            tag |= 1 << i;
+            mask |= 1 << i;
             textView = view.findViewWithTag(i);
+            if (MCPDatabase.isDisplayOnly(i)) {
+                textView.setTag(R.id.tag_raw, getRawText(string));
+            }
             CharSequence cs;
             switch (MCPDatabase.getColumnName(i)) {
-                case MCPDatabase.SEARCH_AS_UNICODE:
-                    cs = "U+" + string;
+                case MCPDatabase.SEARCH_AS_HZ:
+                    cs = string;
                     break;
                 case MCPDatabase.SEARCH_AS_MC:
                     cs = middleChineseDisplayer.display(string);
                     break;
                 case MCPDatabase.SEARCH_AS_PU:
-                    cs = mandarinDisplayer.display(string);
+                    cs = getRichText(mandarinDisplayer.display(string));
                     break;
                 case MCPDatabase.SEARCH_AS_CT:
                     cs = cantoneseDisplayer.display(string);
+                    break;
+                case MCPDatabase.SEARCH_AS_MN:
+                    cs = getRichText(minnanDisplayer.display(string));
                     break;
                 case MCPDatabase.SEARCH_AS_KR:
                     cs = koreanDisplayer.display(string);
@@ -172,20 +129,17 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
         // HZ
         hz = cursor.getString(MCPDatabase.COL_HZ);
-        unicode = hz.codePointAt(0);
+        textView = view.findViewById(R.id.text_unicode);
+        textView.setText(Orthography.HZ.toUnicode(hz));
 
         // Variants
-        StringBuilder sb = new StringBuilder();
         string = cursor.getString(cursor.getColumnIndex("variants"));
-        if (string != null) {
-            sb.append("(");
-            for (String s : string.split(" ")) {
-                sb.append(Orthography.Hanzi.toString(s));
-            }
-            sb.append(")");
-        }
         textView = view.findViewById(R.id.text_variants);
-        textView.setText(sb);
+        if (!TextUtils.isEmpty(string)) {
+            textView.setText(String.format("(%s)", string));
+        } else {
+            textView.setText("");
+        }
 
          // "Favorite" button
         boolean favorite = cursor.getInt(cursor.getColumnIndex("is_favorite")) == 1;
@@ -193,9 +147,9 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         button.setOnClickListener(v -> {
             Boolean is_favorite = (Boolean) view.getTag(R.id.tag_favorite);
             if (is_favorite) {
-                FavoriteDialogs.view(unicode, view);
+                FavoriteDialogs.view(hz, view);
             } else {
-                FavoriteDialogs.add(unicode);
+                FavoriteDialogs.add(hz);
             }
         });
         if (showFavoriteButton) {
@@ -211,8 +165,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         textView = view.findViewById(R.id.text_comment);
         textView.setText(string);
 
-        // Set the view's tag to indicate which readings exist
-        view.setTag(tag);
+        // Set the view's mask to indicate which readings exist
+        view.setTag(R.id.tag_mask, mask);
     }
 
     private String getHexColor() {
@@ -232,7 +186,11 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 .replaceAll("\\*\\*(.+?)\\*\\*", "<big>$1</big>")
                 .replaceAll("\\*(.+?)\\*", "<b>$1</b>")
                 .replaceAll("\\|(.+?)\\|", String.format("<span style='color: %s;'>$1</span>", getHexColor()));
-        return Html.fromHtml(s);
+        return HtmlCompat.fromHtml(s, HtmlCompat.FROM_HTML_MODE_COMPACT);
+    }
+
+    private String getRawText(String s) {
+        return s.replaceAll("[~_`|*\\[\\]]", "");
     }
 
     private abstract static class Displayer {
@@ -272,7 +230,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
     private final Displayer middleChineseDisplayer = new Displayer() {
         public String lineBreak(String s) {return s.replace(",", "\n");}
-        public String displayOne(String s) {return Orthography.MiddleChinese.display(s) + middleChineseDetailDisplayer.display(s);}
+        public String displayOne(String s) {return Orthography.MiddleChinese.display(s, getStyle(R.string.pref_key_mc_display)) + middleChineseDetailDisplayer.display(s);}
     };
 
     private final Displayer middleChineseDetailDisplayer = new Displayer() {
@@ -284,7 +242,14 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     private int getStyle(int id) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         Resources r = context.getResources();
-        return Integer.parseInt(sp.getString(r.getString(id), "0"));
+        int i;
+        try {
+            i = sp.getInt(r.getString(id), 0);
+        } catch (Exception e) {
+            e.printStackTrace();
+            i = Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(id), "0")));
+        }
+        return i;
     }
 
     private final Displayer mandarinDisplayer = new Displayer() {
@@ -296,6 +261,12 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     private final Displayer cantoneseDisplayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Cantonese.display(s, getStyle(R.string.pref_key_cantonese_romanization));
+        }
+    };
+
+    private final Displayer minnanDisplayer = new Displayer() {
+        public String displayOne(String s) {
+            return Orthography.Minnan.display(s, getStyle(R.string.pref_key_minnan_display));
         }
     };
 

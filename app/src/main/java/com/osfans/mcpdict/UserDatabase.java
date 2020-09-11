@@ -35,7 +35,7 @@ class UserDatabase extends SQLiteOpenHelper {
     // "READ" OPERATIONS
 
     public static Cursor selectAllFavorites() {
-        String query = "SELECT rowid AS _id, unicode, comment, " +
+        String query = "SELECT rowid AS _id, hz, comment, " +
                        "STRFTIME('%Y/%m/%d', timestamp, 'localtime') AS local_timestamp " +
                        "FROM favorite ORDER BY timestamp DESC";
         return db.rawQuery(query, null);
@@ -43,23 +43,23 @@ class UserDatabase extends SQLiteOpenHelper {
 
     // "WRITE" OPERATIONS
 
-    public static void insertFavorite(int unicode, String comment) {
+    public static void insertFavorite(String hz, String comment) {
         ContentValues values = new ContentValues();
-        values.put("unicode", Orthography.Hanzi.getHex(unicode));
+        values.put("hz", hz);
         values.put("comment", comment);
         db.insert("favorite", null, values);
     }
 
-    public static void updateFavorite(int unicode, String comment) {
+    public static void updateFavorite(String hz, String comment) {
         ContentValues values = new ContentValues();
         values.put("comment", comment);
-        String[] args = {Orthography.Hanzi.getHex(unicode)};
-        db.update("favorite", values, "unicode = ?", args);
+        String[] args = {hz};
+        db.update("favorite", values, "hz = ?", args);
     }
 
-    public static void deleteFavorite(int unicode) {
-        String[] args = {Orthography.Hanzi.getHex(unicode)};
-        db.delete("favorite", "unicode = ?", args);
+    public static void deleteFavorite(String hz) {
+        String[] args = {hz};
+        db.delete("favorite", "hz = ?", args);
     }
 
     public static void deleteAllFavorites() {
@@ -74,8 +74,10 @@ class UserDatabase extends SQLiteOpenHelper {
 
     public static int selectBackupFavoriteCount() {
         db.execSQL("ATTACH DATABASE '" + getBackupPath() + "' AS backup");
-        String query = "SELECT rowid, unicode, comment, timestamp FROM backup.favorite";
-        int count = db.rawQuery(query, null).getCount();
+        String query = "SELECT rowid, hz, comment, timestamp FROM backup.favorite";
+        Cursor cursor = db.rawQuery(query, null);
+        int count = cursor.getCount();
+        cursor.close();
         db.execSQL("DETACH DATABASE backup");
         return count;
     }
@@ -86,15 +88,15 @@ class UserDatabase extends SQLiteOpenHelper {
 
     public static void importFavoritesMix() {
         db.execSQL("ATTACH DATABASE '" + getBackupPath() + "' AS backup");
-        db.execSQL("DELETE FROM favorite WHERE unicode IN (SELECT unicode FROM backup.favorite)");
-        db.execSQL("INSERT INTO favorite(unicode, comment, timestamp) SELECT unicode, comment, timestamp FROM backup.favorite");
+        db.execSQL("DELETE FROM favorite WHERE hz IN (SELECT hz FROM backup.favorite)");
+        db.execSQL("INSERT INTO favorite(hz, comment, timestamp) SELECT hz, comment, timestamp FROM backup.favorite");
         db.execSQL("DETACH DATABASE backup");
     }
 
     public static void importFavoritesAppend() {
         db.execSQL("ATTACH DATABASE '" + getBackupPath() + "' AS backup");
-        db.execSQL("DELETE FROM favorite WHERE unicode IN (SELECT unicode FROM backup.favorite)");
-        db.execSQL("INSERT INTO favorite(unicode, comment) SELECT unicode, comment FROM backup.favorite");
+        db.execSQL("DELETE FROM favorite WHERE hz IN (SELECT hz FROM backup.favorite)");
+        db.execSQL("INSERT INTO favorite(hz, comment) SELECT hz, comment FROM backup.favorite");
         db.execSQL("DETACH DATABASE backup");
     }
 
@@ -107,7 +109,7 @@ class UserDatabase extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE favorite (" +
-                   "    unicode TEXT UNIQUE NOT NULL," +
+                   "    hz TEXT UNIQUE NOT NULL," +
                    "    comment TEXT," +
                    "    timestamp REAL DEFAULT (JULIANDAY('now')) NOT NULL" +
                    ")");
