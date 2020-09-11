@@ -96,6 +96,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
         List<String> variants = new ArrayList<>();
+        if (Orthography.Hanzi.isHanzi(input)) mode = COL_HZ;
+        else if (Orthography.Hanzi.isUnicode(input)) mode = COL_UNICODE;
         if (isHZ(mode)) {     // Each character is a query
             for (int i = 0; i < input.length(); i++) {
                 int inputChar = input.codePointAt(i);
@@ -134,6 +136,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
             }
         }
         else if (isUnicode(mode)) {     // Each character is a query
+            if (input.toUpperCase().startsWith("U+")) input = input.substring(2);
             keywords.add(input);
         }
         else {                          // Each contiguous run of non-separator and non-comma characters is a query

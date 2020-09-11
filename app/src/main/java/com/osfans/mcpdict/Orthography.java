@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.Objects;
 
 import android.content.res.Resources;
+import android.text.TextUtils;
 
 public class Orthography {
 
@@ -34,6 +35,16 @@ public class Orthography {
 
         public static boolean isHanzi(int unicode) {
             return unicode >= FIRST_HANZI && unicode <= LAST_HANZI;
+        }
+
+        public static boolean isHanzi(String input) {
+            if (TextUtils.isEmpty(input)) return false;
+            return isHanzi(input.codePointAt(0));
+        }
+
+        public static boolean isUnicode(String input) {
+            if (TextUtils.isEmpty(input)) return false;
+            return input.toUpperCase().matches("(U\\+)?[0-9A-F]{4,5}");
         }
 
         public static int[] getVariants(int c) {
