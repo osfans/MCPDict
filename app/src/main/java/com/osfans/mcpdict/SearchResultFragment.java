@@ -155,13 +155,13 @@ public class SearchResultFragment extends ListFragment {
 
         if (col < COL_HZ) {
             if ((tag & MASK_ALL_READINGS) > 0)
-                menuCopy.add(MASK_ALL_READINGS, 0, 0, getString(R.string.copy_all));
+                menuCopy.add(MASK_ALL_READINGS, 0, 0, getString(R.string.all_reading));
             for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
                 int mask = 1 << i;
                 if ((tag & mask) > 0) menuCopy.add(mask, 0, 0, MCPDatabase.getSearchAsName(i));
             }
             if ((tag & MASK_JP_ALL) > 0)
-                menuCopy.add(MASK_JP_ALL, 0, 0, getString(R.string.copy_jp_all));
+                menuCopy.add(MASK_JP_ALL, 0, 0, getString(R.string.all_jp));
 
             for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
                 int mask = 1 << i;
@@ -177,14 +177,14 @@ public class SearchResultFragment extends ListFragment {
                 item = menu.add(getString(R.string.one_dict_links, hanzi, dict));
                 item.setIntent(getDictIntent(col, hanzi));
             }
-            menu.add(MASK_HZ, 0, 0, getString(R.string.copy_hz));
+            menu.add(MASK_HZ, 0, 10, getString(R.string.copy_hz));
             if (col == COL_UNICODE) menu.add(MASK_UNICODE, 0, 0, getString(R.string.copy_unicode));
             else if (col >= COL_FIRST_READING)
                 menu.add(1<< col, 0, 0, getString(R.string.copy_one_reading, hanzi, MCPDatabase.getSearchAsName(col)));
+            if (((1 << col) & MASK_JP_ALL) > 0)
+                menu.add(MASK_JP_ALL, 0, 0, getString(R.string.copy_all_jp));
             if ((tag & MASK_ALL_READINGS) > 0)
-                menu.add(MASK_ALL_READINGS, 0, 0, getString(R.string.copy_one_reading, hanzi, getString(R.string.copy_all)));
-            if ((tag & MASK_JP_ALL) > 0)
-                menu.add(MASK_JP_ALL, 0, 0, getString(R.string.copy_one_reading, hanzi, getString(R.string.copy_jp_all)));
+                menu.add(MASK_ALL_READINGS, 0, 0, getString(R.string.copy_all_reading));
             itemCopy.setVisible(false);
             itemDict.setVisible(false);
         }
