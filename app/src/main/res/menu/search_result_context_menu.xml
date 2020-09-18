@@ -1,14 +1,19 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android" >
     <item
+        android:id="@+id/menu_item_dict_links"
+        android:title="@string/dict_links" >
+        <menu />
+    </item>
+    <item
         android:id="@+id/menu_item_copy_readings"
         android:title="@string/copy_readings" >
         <menu />
     </item>
     <item
-        android:id="@+id/menu_item_dict_links"
-        android:title="@string/dict_links" >
-        <menu />
+        android:id="@+id/menu_item_share_readings"
+        android:title="@string/share_readings"
+        android:orderInCategory="90">
     </item>
     <item
         android:id="@+id/menu_item_favorite"

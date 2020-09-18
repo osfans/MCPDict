@@ -43,6 +43,7 @@
     <string name="dict_links">去在線詞典查詢“%s”字</string>
     <string name="one_dict_links">去“%2$s”查詢“%1$s”字</string>
     <string name="search_homophone">查詢“%1$s”字的%2$s同音字</string>
+    <string name="share_readings">分享“%s”字的所有讀音</string>
 
     <string name="all_reading">所有讀音</string>
     <string name="all_jp">所有日語讀音</string>
