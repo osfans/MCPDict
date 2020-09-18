@@ -175,7 +175,7 @@ public class SearchResultFragment extends ListFragment {
                 item = menu.add(getString(R.string.one_dict_links, hanzi, dict));
                 item.setIntent(getDictIntent(col, hanzi));
             }
-            menu.add(MASK_HZ, 0, 10, getString(R.string.copy_hz));
+            menu.add(MASK_HZ, 0, 90, getString(R.string.copy_hz));
             if (col >= COL_FIRST_READING) {
                 String searchAsName = MCPDatabase.getSearchAsName(col);
                 item = menu.add(getString(R.string.search_homophone, hanzi, searchAsName));
@@ -199,6 +199,12 @@ public class SearchResultFragment extends ListFragment {
             itemDict.setVisible(false);
         }
 
+        item = menu.findItem(R.id.menu_item_share_readings);
+        item.setOnMenuItemClickListener(i->{
+           shareReadings();
+           return true;
+        });
+
         // Determine the functionality of the "favorite" item
         item = menu.findItem(R.id.menu_item_favorite);
         Boolean is_favorite = (Boolean) selectedEntry.getTag(R.id.tag_favorite);
@@ -215,6 +221,16 @@ public class SearchResultFragment extends ListFragment {
                 item.setTitle(String.format(item.getTitle().toString(), hanzi));
             }
         }
+    }
+
+    public void shareReadings() {
+        String text = getCopyText(selectedEntry, MASK_ALL_READINGS);
+        String title = getCopyText(selectedEntry, MASK_HZ);
+        Intent intent = new Intent(android.content.Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, text);
+        intent.putExtra(Intent.EXTRA_TITLE, title);
+        startActivity(Intent.createChooser(intent, title));
     }
 
     @Override
