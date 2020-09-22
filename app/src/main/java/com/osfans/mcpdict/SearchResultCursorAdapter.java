@@ -96,7 +96,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                     cs = string;
                     break;
                 case MCPDatabase.SEARCH_AS_MC:
-                    cs = middleChineseDisplayer.display(string);
+                    cs = getRichText(middleChineseDisplayer.display(string));
                     break;
                 case MCPDatabase.SEARCH_AS_PU:
                     cs = getRichText(mandarinDisplayer.display(string));
@@ -176,9 +176,9 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
     private CharSequence getRichText(String richTextString) {
         String s = richTextString
+                .replace("\n", "<br/>")
                 .replaceAll("~~(.+?)~~", "<s>$1</s>")
-                .replaceAll("```(.+?)```", "<i>$1</i>")
-                .replaceAll("`(.+?)`", "<tt>$1</tt>")
+                .replaceAll("`(.+?)`", "<small><small>$1</small></small>")
                 .replaceAll("___(.+?)___", "<sup>$1</sup>")
                 .replaceAll("__(.+?)__", "<sub>$1</sub>")
                 .replaceAll("_(.+?)_", "<u>$1</u>")
@@ -190,7 +190,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     }
 
     private String getRawText(String s) {
-        return s.replaceAll("[~_`|*\\[\\]]", "");
+        return s.replaceAll("[~_|*\\[\\]]", "").replaceAll("`.+?`", "");
     }
 
     private abstract static class Displayer {
