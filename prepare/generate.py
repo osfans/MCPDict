@@ -67,6 +67,16 @@ for line in open("zyenpheng.dict.yaml"):
       d[hz].append(py)
 update("mc", d)
 
+dzih = list()
+for line in open("../../ytenx/ytenx/sync/kyonh/Dzih.txt"):
+  line = line.strip()
+  dzih.append(line.split(" ")[0])
+for i in unicodes.keys():
+  if "mc" in unicodes[i]:
+    py = unicodes[i]["mc"]
+    if py and i not in dzih:
+      unicodes[i]["mc"] = "|%s|"%(py.replace(",", "|,|"))
+
 #sg
 #https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/dciangx/DrienghTriang.txt
 d.clear()
@@ -122,6 +132,12 @@ for line in open("nt.txt"):
   if fs[1]=='"hanzi"': continue
   hz = fs[1].strip('"')[0]
   py = fs[-6].strip('"') + fs[-4]
+  if '白读' in line:
+    py = "%s`白`" % py
+  elif '文读' in line:
+    py = "%s`文`" % py
+  elif '又读' in line:
+    py = "%s`又`" % py
   if py not in d[hz]:
     d[hz].append(py)
 update("nt", d)
@@ -138,8 +154,18 @@ for line in open("cz6din3.csv"):
   fs[3] = fs[3].strip('"')
   fs[4] = fs[4].strip('"')
   fs[5] = fs[5].strip('"')
+  c = fs[6]
   if fs[3] == fs[4] == 'v': fs[3] = ''
   py = trsm[fs[3]]+trym[fs[4]]+fs[5]
+  if '白' in c or '口' in c or '常' in c or '古' in c or '舊' in c or '未' in c:
+    py = "%s`白`" % py
+  elif '正' in c or '本' in c:
+    py = "%s`正`" % py
+  elif '異' in c or '訓' in c or '避' in c or '又' in c:
+    py = "%s`又`" % py
+  elif '文' in c or '新' in c or '齶化' in c:
+    py = "%s`文`" % py
+  
   if py not in d[hz]:
     d[hz].append(py)
   jt = fs[2].replace('"','')
@@ -300,7 +326,7 @@ update("ct", d)
 #sh
 def sh2ipa(s):
   tag = s[0]
-  isTag = tag in "|*"
+  isTag = tag == "|"
   if isTag:
     s = s[1:-1]
   b = s
@@ -323,7 +349,7 @@ def sh2ipa(s):
   s = re.sub("e$", "ᴇ", s)
   s = s + tone
   if isTag:
-    s = tag + s + tag
+    s = "%s`白`" % s
   return s
 
 for i in unicodes.keys():
@@ -335,27 +361,36 @@ for i in unicodes.keys():
       sh = ",".join(fs)
       unicodes[i]["sh"] = sh
 
+#mn
+for i in unicodes.keys():
+  if "mn" in unicodes[i]:
+    py = unicodes[i]["mn"]
+    if py:
+      py = re.sub("\|(.*?)\|", "\\1`白`", py)
+      py = re.sub("\*(.*?)\*", "\\1`文`", py)
+      py = re.sub("\((.*?)\)", "\\1`俗`", py)
+      py = re.sub("\[(.*?)\]", "\\1`訓`", py)
+      unicodes[i]["mn"] = py
+
 #hk
 #https://github.com/syndict/hakka/blob/master/hakka.dict.yaml
 hktones = {"44":"1", "33": "1", "11":"2", "31":"3", "13":"4", "52":"5", "53":"5", "21":"6", "5":"7", "1":"8", "3":"8"}
 sxtones = {"²⁴":"1", "¹¹": "2", "³¹":"3", "⁵³":"3", "⁵⁵":"5", "²":"7", "⁵":"8"}
 hltones = {"⁵³":"1", "⁵⁵": "2", "²⁴":"3", "¹¹":"5", "³³":"6", "⁵":"7", "²":"8"}
 def hk2ipa(s, tones):
-  p = s[-1]
-  if p in "文白":
+  c = s[-1]
+  if c in "文白":
     s = s[:-1]
   else:
-    p = ""
+    c = ""
   s = s.replace("er","ə").replace("ae","æ").replace("ii", "ɿ").replace("e", "ɛ")
   s = s.replace("sl", "ɬ").replace("nj", "ɲ").replace("t", "tʰ").replace("zh", "t∫").replace("ch", "t∫ʰ").replace("sh", "∫").replace("p", "pʰ").replace("k", "kʰ").replace("z", "ts").replace("c", "tsʰ").replace("j", "tɕ").replace("q", "tɕʰ").replace("x", "ɕ").replace("rh", "ʒ").replace("r", "ʒ").replace("ng", "ŋ").replace("?", "ʔ").replace("b", "p").replace("d", "t").replace("g", "k")
   tone = re.findall("[¹²³⁴⁵\d]+$", s)
   if tone:
     tone = tone[0]
     s = s.replace(tone, tones[tone])
-  if p == "文":
-    s = "*%s*"%s
-  elif p == "白":
-    s = "_%s_"%s
+  if c == "文" or c == "白":
+    s = "%s`%s`"%(s,c)
   return s
 
 d.clear()
