@@ -436,8 +436,13 @@ c = conn.cursor()
 c.execute("DROP TABLE IF EXISTS mcpdict")
 c.execute("CREATE VIRTUAL TABLE mcpdict USING fts3 (%s)"%FIELDS)
 c.executemany(INSERT, ZHEADS[1:])
+
+def cjkorder(s):
+  n = ord(s)
+  return n + 0x10000 if n < 0x4E00 else n
+
 f = open("han.txt","w")
-for i in sorted(unicodes.keys()):
+for i in sorted(unicodes.keys(), key=cjkorder):
   n = ord(i)
   if 0xE000<=n<=0xF8FF or 0xF0000<=n<=0xFFFFD or 0x100000<=n<=0x10FFFD:
     continue
