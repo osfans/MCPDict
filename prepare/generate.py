@@ -160,7 +160,7 @@ for line in open("cz6din3.csv"):
   if '白' in c or '口' in c or '常' in c or '古' in c or '舊' in c or '未' in c:
     py = "%s`白`" % py
   elif '正' in c or '本' in c:
-    py = "%s`正`" % py
+    py = "%s`本`" % py
   elif '異' in c or '訓' in c or '避' in c or '又' in c:
     py = "%s`又`" % py
   elif '文' in c or '新' in c or '齶化' in c:
@@ -178,19 +178,36 @@ update("tr", d)
 d.clear()
 icsm = {'g': 'k', 'd': 't', '': '', 'c': 'tsʰ', 'b': 'p', 'l': 'l', 'h': 'x', 't': 'tʰ', 'q': 'tɕʰ', 'z': 'ts', 'j': 'tɕ', 'f': 'f', 'k': 'kʰ', 'n': 'n', 'x': 'ɕ', 'm': 'm', 's': 's', 'p': 'pʰ', 'ng': 'ŋ'}
 icym = {'ae': 'ɛ', 'ieh': 'iəʔ', 'ii': 'i', 'eh': 'əʔ', 'io': 'iɔ', 'ieu': 'iəu', 'u': 'u', 'v': 'v', 'en': 'ən', 'a': 'a', 'on': 'ɔŋ', 'an': 'ã', 'oh': 'ɔʔ', 'i': 'j', 'ien': 'in', 'ion': 'iɔŋ', 'ah': 'aʔ', 'ih': 'iʔ', 'y': 'y', 'ui': 'ui', 'uae': 'uɛ', 'aeh': 'ɛʔ', 'in': 'ĩ', 'ia': 'ia', 'z': 'ɿ', 'uh': 'uʔ', 'aen': 'ɛ̃', 'er': 'ɚ', 'eu': 'əu', 'iah': 'iaʔ', 'ueh': 'uəʔ', 'iae': 'iɛ', 'iuh': 'iuʔ', 'yen': 'yn', 'ian': 'iã', 'iun': 'iũ', 'un': 'ũ', 'o': 'ɔ', 'uan': 'uã', 'ua': 'ua', 'uen': 'uən', 'ioh': 'iɔʔ', 'iaen': 'iɛ̃', 'uaen': 'uɛ̃', 'uaeh': 'uɛʔ', 'iaeh': 'iɛʔ', 'uah': 'uaʔ', 'yeh': 'yəʔ', 'ya': 'ya'}
-for line in open("xu.csv"):
+for line in open("ic.txt"):
   line = line.strip()
-  fs = line.split(',')
-  hzs = fs[1].replace('"','')
-  py = fs[2].replace('"','')
+  if not line: continue
+  fs = line.split('\t')
+  py,hzs = fs
   sm = re.findall("^[^aeiouvy]?", py)[0]
   sd = py[-1]
   ym = py[len(sm):-1]
   py = icsm[sm]+icym[ym]+sd
-  for hz in hzs.split(" "):
-    if len(hz) == 1:
-      if py not in d[hz]:
-        d[hz].append(py)
+  hzs = re.findall("(.)([+-=*?]?)(（.*?）)?", hzs)
+  for hz, c, m in hzs:
+    p = ""
+    if c and c in '-+=*?':
+      if c == '-':
+        p = "白"
+      elif c == '+':
+        p = "又"
+      elif c == '=':
+        p = "文"
+      elif c == '*' or c == '?':
+        p = "俗"
+    p = p + m
+    if p:
+      p = "`%s`" % p
+    p = py + p
+    if p not in d[hz]:
+      if c == '-':
+        d[hz].insert(0, p)
+      else:
+        d[hz].append(p)
 update("ic", d)
 
 #lj
