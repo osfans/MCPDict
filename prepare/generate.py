@@ -67,15 +67,28 @@ for line in open("zyenpheng.dict.yaml"):
       d[hz].append(py)
 update("mc", d)
 
-dzih = list()
+pq = dict()
+for line in open("../../ytenx/ytenx/sync/kyonh/PrengQim.txt"):
+    line = line.strip()
+    fs = line.split(" ")
+    pq[fs[0]] = fs[1]
+dzih = defaultdict(list)
 for line in open("../../ytenx/ytenx/sync/kyonh/Dzih.txt"):
   line = line.strip()
-  dzih.append(line.split(" ")[0])
-for i in unicodes.keys():
-  if "mc" in unicodes[i]:
-    py = unicodes[i]["mc"]
-    if py and i not in dzih:
-      unicodes[i]["mc"] = "|%s|"%(py.replace(",", "|,|"))
+  fs = line.split(" ")
+  dzih[fs[0]].append(pq[fs[1]])
+for hz in unicodes.keys():
+  if "mc" in unicodes[hz]:
+    py = unicodes[hz]["mc"]
+    if py:
+      if hz in dzih:
+        pys = [py if py in dzih[hz] else "|%s|" % py for py in py.split(",")]
+        for py in dzih[hz]:
+          if py not in pys:
+            pys.append(py)
+        unicodes[hz]["mc"] = ",".join(pys)
+      else:
+        unicodes[hz]["mc"] = "|%s|"%(py.replace(",", "|,|"))
 
 #sg
 #https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/dciangx/DrienghTriang.txt
