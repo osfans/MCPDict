@@ -28,13 +28,17 @@ public class Orthography {
     // All methods return null on failure.
 
     public static class HZ {
-        public static final int FIRST_HZ = 0x3400;
-        public static final int LAST_HZ = 0x3134A;
-
         private static final Map<Integer,String> variants = new HashMap<>();
 
         public static boolean isHz(int unicode) {
-            return unicode >= FIRST_HZ && unicode <= LAST_HZ;
+            return (unicode >= 0x4E00 && unicode <= 0x9FFF)
+                    ||(unicode >= 0x3400 && unicode <= 0x4DBF)
+                    || (unicode >= 0x20000 && unicode <= 0x2A6DF)
+                    || (unicode >= 0x2A700 && unicode <= 0x2B73F)
+                    || (unicode >= 0x2B740 && unicode <= 0x2B81F)
+                    || (unicode >= 0x2B820 && unicode <= 0x2CEAF)
+                    || (unicode >= 0x2CEB0 && unicode <= 0x2EBEF)
+                    || (unicode >= 0x30000 && unicode <= 0x3134F);
         }
 
         public static boolean isHz(String hz) {
@@ -63,7 +67,17 @@ public class Orthography {
         }
 
         public static String toUnicode(String hz) {
-            return String.format("U+%04X", hz.codePointAt(0));
+            int unicode = hz.codePointAt(0);
+            String ext = "";
+            if (unicode >= 0x3400 && unicode <= 0x4DBF) ext = "A";
+            else if (unicode >= 0x20000 && unicode <= 0x2A6DF) ext = "B";
+            else if (unicode >= 0x2A700 && unicode <= 0x2B73F) ext = "C";
+            else if (unicode >= 0x2B740 && unicode <= 0x2B81F) ext = "D";
+            else if (unicode >= 0x2B820 && unicode <= 0x2CEAF) ext = "E";
+            else if (unicode >= 0x2CEB0 && unicode <= 0x2EBEF) ext = "F";
+            else if (unicode >= 0x30000 && unicode <= 0x3134F) ext = "G";
+            if (!TextUtils.isEmpty(ext)) ext = "擴" + ext;
+            return String.format("U+%04X %s", unicode, ext);
         }
 
         public static String toHex(int unicode) {
