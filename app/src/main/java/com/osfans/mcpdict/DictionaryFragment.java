@@ -107,7 +107,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
     private void updateCheckBoxesEnabled() {
         int mode = spinnerSearchAs.getSelectedItemPosition();
         checkBoxKuangxYonhOnly.setEnabled(!MCPDatabase.isMC(mode));
-        checkBoxAllowVariants.setEnabled(MCPDatabase.isHZ(mode));
+        //checkBoxAllowVariants.setEnabled(MCPDatabase.isHZ(mode));
         checkBoxToneInsensitive.setEnabled(MCPDatabase.isToneInsensitive(mode));
     }
 
