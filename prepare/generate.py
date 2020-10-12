@@ -71,7 +71,7 @@ pq = dict()
 for line in open("../../ytenx/ytenx/sync/kyonh/PrengQim.txt"):
     line = line.strip()
     fs = line.split(" ")
-    pq[fs[0]] = fs[1]
+    pq[fs[0]] = fs[1].replace("'", "0")
 dzih = defaultdict(list)
 for line in open("../../ytenx/ytenx/sync/kyonh/Dzih.txt"):
   line = line.strip()
