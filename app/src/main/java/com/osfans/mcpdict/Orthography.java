@@ -51,6 +51,21 @@ public class Orthography {
             return input.toUpperCase().matches("(U\\+)?[0-9A-F]{4,5}");
         }
 
+        public static boolean isBH(String s) {
+            if (TextUtils.isEmpty(s)) return false;
+            return s.matches("[1-9][0-9]?");
+        }
+
+        public static boolean isBS(String s) {
+            if (TextUtils.isEmpty(s)) return false;
+            return isHz(s.codePointAt(0)) && s.substring(1).matches("-?[0-9]{1,2}");
+        }
+
+        public static boolean isPY(String s) {
+            if (TextUtils.isEmpty(s)) return false;
+            return s.matches("[a-z]+[0-4]?");
+        }
+
         public static int[] getVariants(int unicode) {
             if (variants.containsKey(unicode)) return variants.get(unicode).codePoints().toArray();
             return new int[] {unicode};

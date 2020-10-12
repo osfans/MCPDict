@@ -53,6 +53,10 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         final TextView textViewHZ = view.findViewById(R.id.text_hz);
         textViewHZ.setTag(MCPDatabase.COL_HZ);
         textViewHZ.setOnClickListener(getListener(MCPDatabase.COL_HZ));
+        TextView textView = view.findViewById(R.id.text_bh);
+        textView.setTag(MCPDatabase.COL_BH);
+        textView = view.findViewById(R.id.text_bs);
+        textView.setTag(MCPDatabase.COL_BS);
         TableLayout table = view.findViewById(R.id.text_readings);
         for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
             TableRow row = (TableRow)LayoutInflater.from(context).inflate(R.layout.search_result_row, null);
@@ -94,6 +98,13 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             switch (MCPDatabase.getColumnName(i)) {
                 case MCPDatabase.SEARCH_AS_HZ:
                     cs = string;
+                    break;
+                case MCPDatabase.SEARCH_AS_BH:
+                    cs = context.getResources().getString(R.string.total_strokes_format, string);
+                    break;
+                case MCPDatabase.SEARCH_AS_BS:
+                    String bh = string.substring(1).replace('f', '-');
+                    cs = context.getResources().getString(R.string.radical_count_format, string.substring(0, 1), bh);
                     break;
                 case MCPDatabase.SEARCH_AS_MC:
                     cs = getRichText(middleChineseDisplayer.display(string));
