@@ -6,6 +6,8 @@ from collections import defaultdict
 HEADS = [
   ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s'),
   #('unicode', '統一碼', '統一碼', '#808080', 'Unihan', 'https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%s'),
+  ('bh', '總筆畫數', '筆畫', '#808080', None, None),
+  ('bs', '部首餘筆', '部首', '#808080', None, None),
   ('sg', '上古', '上古', '#9A339F', '韻典網（上古音系）', 'https://ytenx.org/dciangx/dzih/%s'),
   ('mc', '中古', '中古', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s"),
   ('zy', '中原音韻', '近古', '#9A339F', '韻典網（中原音韻）', 'https://ytenx.org/trngyan/dzih/%s'),
@@ -27,7 +29,8 @@ HEADS = [
   ('jp_kan', '日語漢音', '日漢', '#FF0000', None, None),
   ('jp_tou', '日語唐音', '日唐', '#FF0000', None, None),
   ('jp_kwan', '日語慣用音', '日慣', '#FF0000', None, None),
-  ('jp_other', '日語其他讀音', '日他', '#FF0000', None, None)]
+  ('jp_other', '日語其他讀音', '日他', '#FF0000', None, None),
+]
 ZHEADS = list(zip(*HEADS))
 KEYS = ZHEADS[0]
 FIELDS = ", ".join(["%s TEXT"%i for i in KEYS])
@@ -278,7 +281,8 @@ update("sz", d)
 #pu
 def hex2chr(uni):
     "把unicode轉換成漢字"
-    return chr(int(uni[2:], 16))
+    if uni.startswith("U+"): uni = uni[2:]
+    return chr(int(uni, 16))
 def norm(py):
     if py == "wòng": py= "weng4"
     py = py.replace('ɑ', 'a').replace('ɡ', 'g')
@@ -461,18 +465,56 @@ for line in tk:
           d[hz].append(hk2ipa(py[0], sxtones))
 update("sx", d)
 
+#all hz readings
+def cjkorder(s):
+  n = ord(s)
+  return n + 0x10000 if n < 0x4E00 else n
+keys = sorted(unicodes.keys(), key=cjkorder)
+
+#bh
+d.clear()
+for line in open("/usr/share/unicode/Unihan_IRGSources.txt"):
+    fields = line.strip().split("\t", 2)
+    if len(fields) != 3:
+        continue
+    han, typ, val = fields
+    han = hex2chr(han)
+    if typ == "kTotalStrokes" and han in keys:
+        d[han].append(val)
+update("bh", d)
+
+#bs
+bs = dict()
+for line in open("/usr/share/unicode/CJKRadicals.txt"):
+    fields = line.strip().split("; ", 2)
+    if len(fields) != 3:
+        continue
+    order, radical, han = fields
+    han = hex2chr(han)
+    bs[order] = han
+d.clear()
+for line in open("/usr/share/unicode/Unihan_IRGSources.txt"):
+    fields = line.strip().split("\t", 2)
+    if len(fields) != 3:
+        continue
+    han, typ, vals = fields
+    han = hex2chr(han)
+    if typ == "kRSUnicode" and han in keys:
+      for val in vals.split(" "):
+        fs = val.split(".")
+        order, left = fs
+        left = left.replace('-', 'f')
+        d[han].append(bs[order]+left)
+update("bs", d)
+
 conn = sqlite3.connect('../app/src/main/assets/databases/mcpdict.db')
 c = conn.cursor()
 c.execute("DROP TABLE IF EXISTS mcpdict")
 c.execute("CREATE VIRTUAL TABLE mcpdict USING fts3 (%s)"%FIELDS)
 c.executemany(INSERT, ZHEADS[1:])
 
-def cjkorder(s):
-  n = ord(s)
-  return n + 0x10000 if n < 0x4E00 else n
-
 f = open("han.txt","w")
-for i in sorted(unicodes.keys(), key=cjkorder):
+for i in keys:
   n = ord(i)
   if 0xE000<=n<=0xF8FF or 0xF0000<=n<=0xFFFFD or 0x100000<=n<=0x10FFFD:
     continue
