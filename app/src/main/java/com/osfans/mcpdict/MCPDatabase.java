@@ -23,6 +23,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
     // Must be the same order as defined in the string array "search_as"
 
     public static final String SEARCH_AS_HZ = "hz";
+    public static final String SEARCH_AS_BH = "bh";
+    public static final String SEARCH_AS_BS = "bs";
     public static final String SEARCH_AS_MC = "mc";
     public static final String SEARCH_AS_PU = "pu";
     public static final String SEARCH_AS_CT = "ct";
@@ -37,7 +39,10 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_JP_ANY = SEARCH_AS_JP_TOU;
 
     public static int COL_HZ;
+    public static int COL_BH;
+    public static int COL_BS;
     private static int COL_MC;
+    private static int COL_PU;
 
     private static int COL_KR;
     public static int COL_JP_ANY;
@@ -95,11 +100,15 @@ public class MCPDatabase extends SQLiteAssetHelper {
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
         List<String> variants = new ArrayList<>();
-        if (Orthography.HZ.isHz(input)) mode = COL_HZ;
+        if (Orthography.HZ.isBH(input)) mode = COL_BH;
+        else if (Orthography.HZ.isBS(input)) {
+            mode = COL_BS;
+            input = input.replace("-", "f");
+        } else if (Orthography.HZ.isHz(input)) mode = COL_HZ;
         else if (Orthography.HZ.isUnicode(input)) {
             input = Orthography.HZ.toHz(input);
             mode = COL_HZ;
-        }
+        } else if (Orthography.HZ.isPY(input) && mode < COL_FIRST_READING) mode = COL_PU;
         if (isHZ(mode)) {     // Each character is a query
             for (int unicode: input.codePoints().toArray()) {
                 if (!Orthography.HZ.isHz(unicode)) continue;
@@ -165,7 +174,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
                 }
                 if (token == null) continue;
                 List<String> allTones = null;
-                if (toneInsensitive) {
+                if (toneInsensitive && isToneInsensitive(mode)) {
                     switch (getColumnName(mode)) {
                         case SEARCH_AS_MC: allTones = Orthography.MiddleChinese.getAllTones(token); break;
                         case SEARCH_AS_PU: allTones = Orthography.Mandarin.getAllTones(token); break;
@@ -246,17 +255,20 @@ public class MCPDatabase extends SQLiteAssetHelper {
         int n = cursor.getColumnCount();
 
         COL_HZ = cursor.getColumnIndex(SEARCH_AS_HZ);
+        COL_BH = cursor.getColumnIndex(SEARCH_AS_BH);
+        COL_BS = cursor.getColumnIndex(SEARCH_AS_BS);
         COL_MC = cursor.getColumnIndex(SEARCH_AS_MC);
+        COL_PU = cursor.getColumnIndex(SEARCH_AS_PU);
         COL_KR = cursor.getColumnIndex(SEARCH_AS_KR);
 
-        COL_FIRST_READING = COL_HZ + 1;
+        COL_FIRST_READING = COL_BS + 1;
         COL_LAST_READING = n - 1;
         COL_JP_FIRST = cursor.getColumnIndex(SEARCH_AS_JP_GO);
         COL_JP_ANY = COL_JP_FIRST + 2;
 
         MASK_HZ = 1 << COL_HZ;
         MASK_JP_ALL = 0b11111 << COL_JP_FIRST;
-        MASK_ALL_READINGS   = ((1 << n) - 1) ^ MASK_HZ;
+        MASK_ALL_READINGS   = (1 << n) - (1 << COL_FIRST_READING);
 
         SEARCH_AS_NAMES = new ArrayList<>();
         for (int i = 0; i < n; i++) {
