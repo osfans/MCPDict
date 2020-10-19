@@ -12,12 +12,13 @@ HEADS = [
   ('mc', '中古', '中古', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s"),
   ('zy', '中原音韻', '近古', '#9A339F', '韻典網（中原音韻）', 'https://ytenx.org/trngyan/dzih/%s'),
   ('pu', '普通話', '普語', '#FF00FF', '漢典網', "http://www.zdic.net/hans/%s"),
-  ('nt', '南通話', '南通', '#6161FF', '南通方言網', "http://nantonghua.net/search/index.php?hanzi=%s"),
-  ('tr', '泰如方言', '泰如', '#6161FF', '泰如小字典', "http://taerv.nguyoeh.com/"),
-  ('ic', '鹽城話', '鹽城', '#6161FF', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s"),
-  #('lj', '南京話', '南京', '#6161FF', '南京官話拼音方案', "https://uliloewi.github.io/LangJinPinIn/PinInFangAng"),
-  ('sz', '蘇州話', '蘇州', '#00ADAD', '吳語學堂（蘇州）', "https://www.wugniu.com/search?table=suzhou_zi&char=%s"),
-  ('sh', '上海話', '上海', '#00ADAD', '吳音小字典（上海）', "http://www.wu-chinese.com/minidict/search.php?searchlang=zaonhe&searchkey=%s"),
+  ('nt', '南通話', '南通', '#0000FF', '南通方言網', "http://nantonghua.net/search/index.php?hanzi=%s"),
+  ('tr', '泰如方言', '泰如', '#0000FF', '泰如小字典', "http://taerv.nguyoeh.com/"),
+  ('ic', '鹽城話', '鹽城', '#0000FF', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s"),
+  #('lj', '南京話', '南京', '#0000FF', '南京官話拼音方案', "https://uliloewi.github.io/LangJinPinIn/PinInFangAng"),
+  ('sz', '蘇州話', '蘇州', '#1E90FF', '吳語學堂（蘇州）', "https://www.wugniu.com/search?table=suzhou_zi&char=%s"),
+  ('sh', '上海話', '上海', '#1E90FF', '吳音小字典（上海）', "http://www.wu-chinese.com/minidict/search.php?searchlang=zaonhe&searchkey=%s"),
+  ('nc', '南昌話', '南昌', '#00ADAD', None, None),
   ('hk', '客家話綜合口音', '客語', '#008000', '薪典', "https://www.syndict.com/w2p.php?item=hak&word=%s"),
   ('hl', '客家話海陸腔', '海陸', '#008000', '客語萌典', "https://www.moedict.tw/:%s"),
   ('sx', '客家話四縣腔', '四縣', '#008000', '客語萌典', "https://www.moedict.tw/:%s"),
@@ -47,6 +48,9 @@ for r in c.execute('SELECT * FROM mcpdict'):
   row["hz"] = i
   unicodes[i] = row
 conn.close()
+
+# patch
+unicodes["冇"]["kr"]=None
 
 def update(k, d):
   for i,v in d.items():
@@ -464,6 +468,40 @@ for line in tk:
         if py:
           d[hz].append(hk2ipa(py[0], sxtones))
 update("sx", d)
+
+#nc
+readings = "白文又"
+d.clear()
+def get_readings(index):
+	if not index: return ''
+	return "`%s`"%readings[int(index)-1]
+def readorder(py):
+	index = readings.index(py[-2])+1 if py.endswith('`') else 0
+	return "%d%s"%(index,py)
+def sub(m):
+	ret = ''
+	for i in m.group(1):
+		if i in "12345":continue
+		ret += i + m.group(2)
+	return ret
+for line in open("nc"):
+	line = line.strip().replace(" ", "").replace("(", "（").replace(")","）")
+	if line.startswith("#") or not line: continue
+	line = re.sub('（(.*?)）(\d)', sub, line)
+	fs = re.findall("^([^\u3400-\U0003134f]+ ?)(.*)$", line)[0]
+	py, hzs = fs
+	if not hzs: continue
+	for hz,r in re.findall("(.)(\d?)", hzs):
+		item = py+get_readings(r)
+		if item not in d[hz]:
+			d[hz].append(item)
+		if py.endswith('k7') or py.endswith('k8'):
+			item = re.sub('k([78])', 'ʔ\\1', py)+get_readings('3')
+			if item not in d[hz]:
+				d[hz].append(item)
+for hz in d:
+	d[hz] = sorted(d[hz], key=readorder)
+update("nc", d)
 
 #all hz readings
 def cjkorder(s):
