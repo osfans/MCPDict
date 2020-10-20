@@ -2,6 +2,23 @@
 
 import sqlite3, re, json
 from collections import defaultdict
+import logging
+from time import time
+
+logging.basicConfig(format='[%(asctime)s] %(message)s', level=logging.INFO)
+start = time()
+
+def timeit():
+    global start
+    end = time()
+    passed = end - start
+    start = end
+    return passed
+
+def hex2chr(uni):
+    "把unicode轉換成漢字"
+    if uni.startswith("U+"): uni = uni[2:]
+    return chr(int(uni, 16))
 
 HEADS = [
   ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s'),
@@ -38,6 +55,7 @@ FIELDS = ", ".join(["%s TEXT"%i for i in KEYS])
 COUNT = len(KEYS)
 INSERT = 'INSERT INTO mcpdict VALUES (%s)'%(','.join('?'*COUNT))
 
+#db
 unicodes=defaultdict(dict)
 conn = sqlite3.connect('mcpdict.db')
 conn.row_factory = sqlite3.Row
@@ -51,6 +69,7 @@ conn.close()
 
 # patch
 unicodes["冇"]["kr"]=None
+logging.info("讀取數據庫 %.3f" % timeit())
 
 def update(k, d):
   for i,v in d.items():
@@ -96,6 +115,7 @@ for hz in unicodes.keys():
         unicodes[hz]["mc"] = ",".join(pys)
       else:
         unicodes[hz]["mc"] = "|%s|"%(py.replace(",", "|,|"))
+logging.info("處理中古音 %.3f" % timeit())
 
 #sg
 #https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/dciangx/DrienghTriang.txt
@@ -110,6 +130,7 @@ for line in open("../../ytenx/ytenx/sync/dciangx/DrienghTriang.txt"):
     if py not in d[hz]:
       d[hz].append(py)
 update("sg", d)
+logging.info("處理上古音 %.3f" % timeit())
 
 #zy
 #https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/trngyan
@@ -143,6 +164,7 @@ for line in open("../../ytenx/ytenx/sync/trngyan/TriungNgyanQimYonh.txt"):
     if py not in d[hz]:
       d[hz].append(py)
 update("zy", d)
+logging.info("處理近古音 %.3f" % timeit())
 
 #nt
 #http://nantonghua.net
@@ -161,6 +183,7 @@ for line in open("nt.txt"):
   if py not in d[hz]:
     d[hz].append(py)
 update("nt", d)
+logging.info("處理南通話 %.3f" % timeit())
 
 #tr
 #http://taerv.nguyoeh.com/
@@ -192,6 +215,7 @@ for line in open("cz6din3.csv"):
   if jt!=hz and py not in d[jt]:
     d[jt].append(py)
 update("tr", d)
+logging.info("處理泰如話 %.3f" % timeit())
 
 #ic
 #https://github.com/osfans/xu/blob/master/docs/xu.csv
@@ -229,6 +253,7 @@ for line in open("ic"):
       else:
         d[hz].append(p)
 update("ic", d)
+logging.info("處理鹽城話 %.3f" % timeit())
 
 #lj
 #https://github.com/uliloewi/lang2jin1/blob/master/langjin.dict.yaml
@@ -281,35 +306,33 @@ for line in open("wugniu_soutseu.dict.yaml"):
     if py not in d[hz]:
       d[hz].append(py)
 update("sz", d)
+logging.info("處理蘇州話 %.3f" % timeit())
 
 #pu
-def hex2chr(uni):
-    "把unicode轉換成漢字"
-    if uni.startswith("U+"): uni = uni[2:]
-    return chr(int(uni, 16))
 def norm(py):
     if py == "wòng": py= "weng4"
-    py = py.replace('ɑ', 'a').replace('ɡ', 'g')
-    tones=['ā', 'á', 'ǎ', 'à', 'ē', 'é', 'ě', 'è', 'ī', 'í', 'ǐ', 'ì', 'ō', 'ó', 'ǒ', 'ò', 'ū', 'ú', 'ǔ', 'ù', 'ǘ', 'ǚ', 'ǜ', 'ń', 'ň', 'ǹ', 'm̄', 'ḿ', 'm̀','ê̄','ế','ê̌','ề']
-    toneb=["a1","a2","a3","a4","e1","e2","e3","e4","i1","i2","i3","i4","o1","o2","o3","o4","u1","u2","u3","u4","ü2","ü3","ü4","n2","n3","n4","m1","m2", "m4",'ea1','ea2','ea3','ea4']
-    for i in tones:
-        py=py.replace(i,toneb[tones.index(i)])
-    py=py.replace('ü','v')
+    py = py.replace('ɑ', 'a').replace('ɡ', 'g').replace('ü','v')
+    tonea=['ā', 'á', 'ǎ', 'à', 'ē', 'é', 'ě', 'è', 'ī', 'í', 'ǐ', 'ì', 'ō', 'ó', 'ǒ', 'ò', 'ū', 'ú', 'ǔ', 'ù', 'ǘ', 'ǚ', 'ǜ', 'ń', 'ň', 'ǹ', 'm̄', 'ḿ', 'm̀','ê̄','ế','ê̌','ề']
+    toneb=["a1","a2","a3","a4","e1","e2","e3","e4","i1","i2","i3","i4","o1","o2","o3","o4","u1","u2","u3","u4","v2","v3","v4","n2","n3","n4","m1","m2", "m4",'ea1','ea2','ea3','ea4']
+    for i in tonea:
+      if i in py:
+        py=py.replace(i, toneb[tonea.index(i)])
+        break
     py=re.sub("(\d)(.*)$", r'\2\1', py)
     return py
 
 d.clear()
 for line in open("/usr/share/unicode/Unihan_Readings.txt"):
+    if not line.startswith("U"): continue
     fields = line.strip().split("\t", 2)
-    if len(fields) != 3:
-        continue
     han, typ, yin = fields
-    han = hex2chr(han)
     if typ == "kMandarin":
-        yin = yin.strip().split(" ")
-        for y in yin:
-            d[han].append(norm(y))
+      han = hex2chr(han)
+      yin = yin.strip().split(" ")
+      for y in yin:
+        d[han].append(norm(y))
 update("pu", d)
+logging.info("處理普通話 %.3f" % timeit())
 
 #https://github.com/g0v/moedict-data-csld/blob/master/中華語文大辭典全稿-20160620.csv
 def update_twpy(hz, py):
@@ -329,14 +352,17 @@ for line in open("中華語文大辭典全稿-20160620.csv"):
   line = line.strip()
   fs = line.split(",")
   if len(fs) <= 13: continue
+  if fs[1]!='終定稿': continue
   cht = fs[5]
   chs = fs[6]
   py = fs[11]
-  py = norm(py)
-  if re.match("^[a-z]+\d?$", py):
+  if not py: continue
+  if len(chs) == 1 or len(cht)==1:
+    py = norm(py)
     update_twpy(cht, py)
     if chs != cht:
       update_twpy(chs, py)
+logging.info("處理大辭典 %.3f" % timeit())
 
 #ct
 #https://github.com/rime/rime-cantonese/blob/master/jyut6ping3.dict.yaml
@@ -350,16 +376,18 @@ for line in open("jyut6ping3.dict.yaml"):
     if py not in d[hz]:
       d[hz].append(py)
 for line in open("/usr/share/unicode/Unihan_Readings.txt"):
+  line = line.strip()
+  if not line.startswith("U"): continue
   fields = line.strip().split("\t", 2)
-  if len(fields) != 3: continue
   han, typ, yin = fields
-  han = hex2chr(han)
   if typ == "kCantonese":
     yin = yin.strip().split(" ")
+    han = hex2chr(han)
     for y in yin:
       if y not in d[han]:
         d[han].append(y)
 update("ct", d)
+logging.info("處理廣東話 %.3f" % timeit())
 
 #sh
 def sh2ipa(s):
@@ -398,6 +426,7 @@ for i in unicodes.keys():
       fs = map(sh2ipa, fs)
       sh = ",".join(fs)
       unicodes[i]["sh"] = sh
+logging.info("處理上海話 %.3f" % timeit())
 
 #mn
 for i in unicodes.keys():
@@ -409,6 +438,7 @@ for i in unicodes.keys():
       py = re.sub("\((.*?)\)", "\\1`俗`", py)
       py = re.sub("\[(.*?)\]", "\\1`訓`", py)
       unicodes[i]["mn"] = py
+logging.info("處理閩南話 %.3f" % timeit())
 
 #hk
 #https://github.com/syndict/hakka/blob/master/hakka.dict.yaml
@@ -468,6 +498,7 @@ for line in tk:
         if py:
           d[hz].append(hk2ipa(py[0], sxtones))
 update("sx", d)
+logging.info("處理客家話 %.3f" % timeit())
 
 #nc
 readings = "白文又"
@@ -502,48 +533,50 @@ for line in open("nc"):
 for hz in d:
 	d[hz] = sorted(d[hz], key=readorder)
 update("nc", d)
-
-#all hz readings
-def cjkorder(s):
-  n = ord(s)
-  return n + 0x10000 if n < 0x4E00 else n
-keys = sorted(unicodes.keys(), key=cjkorder)
+logging.info("處理南昌話 %.3f" % timeit())
 
 #bh
 d.clear()
 for line in open("/usr/share/unicode/Unihan_IRGSources.txt"):
+    if not line.startswith("U"): continue
     fields = line.strip().split("\t", 2)
-    if len(fields) != 3:
-        continue
     han, typ, val = fields
-    han = hex2chr(han)
-    if typ == "kTotalStrokes" and han in keys:
+    if typ == "kTotalStrokes":
+      han = hex2chr(han)
+      if han in unicodes:
         d[han].append(val)
 update("bh", d)
+logging.info("處理總畫數 %.3f" % timeit())
 
 #bs
 bs = dict()
 for line in open("/usr/share/unicode/CJKRadicals.txt"):
-    fields = line.strip().split("; ", 2)
-    if len(fields) != 3:
-        continue
+    line = line.strip()
+    if not line or line.startswith("#"): continue
+    fields = line.split("; ", 2)
     order, radical, han = fields
     han = hex2chr(han)
     bs[order] = han
 d.clear()
 for line in open("/usr/share/unicode/Unihan_IRGSources.txt"):
+    if not line.startswith("U"): continue
     fields = line.strip().split("\t", 2)
-    if len(fields) != 3:
-        continue
     han, typ, vals = fields
+    if typ != "kRSUnicode": continue
     han = hex2chr(han)
-    if typ == "kRSUnicode" and han in keys:
-      for val in vals.split(" "):
-        fs = val.split(".")
-        order, left = fs
-        left = left.replace('-', 'f')
-        d[han].append(bs[order]+left)
+    if han not in unicodes: continue
+    for val in vals.split(" "):
+      fs = val.split(".")
+      order, left = fs
+      left = left.replace('-', 'f')
+      d[han].append(bs[order]+left)
 update("bs", d)
+logging.info("部首檢字法 %.3f" % timeit())
+
+#all hz readings
+def cjkorder(s):
+  n = ord(s)
+  return n + 0x10000 if n < 0x4E00 else n
 
 conn = sqlite3.connect('../app/src/main/assets/databases/mcpdict.db')
 c = conn.cursor()
@@ -552,7 +585,7 @@ c.execute("CREATE VIRTUAL TABLE mcpdict USING fts3 (%s)"%FIELDS)
 c.executemany(INSERT, ZHEADS[1:])
 
 f = open("han.txt","w")
-for i in keys:
+for i in sorted(unicodes.keys(), key=cjkorder):
   n = ord(i)
   if 0xE000<=n<=0xF8FF or 0xF0000<=n<=0xFFFFD or 0x100000<=n<=0x10FFFD:
     continue
@@ -564,4 +597,6 @@ for i in keys:
 f.close()
 conn.commit()
 conn.close()
+logging.info("保存數據庫 %.3f" % timeit())
+
 print(len(unicodes))
