@@ -71,14 +71,28 @@ conn.close()
 unicodes["冇"]["kr"]=None
 logging.info("讀取數據庫 %.3f" % timeit())
 
+kCompatibilityVariants = dict()
 def update(k, d):
+  global kCompatibilityVariants
   for i,v in d.items():
+    i = kCompatibilityVariants.get(i, i)
     if i not in unicodes:
       unicodes[i] = {"hz": i, "unicode": "%04X"%ord(i)}
     if unicodes[i].get(k, None): continue
     unicodes[i][k] = ",".join(v)
 
 d=defaultdict(list)
+
+#kCompatibilityVariant
+for line in open("/usr/share/unicode/Unihan_IRGSources.txt"):
+    if not line.startswith("U"): continue
+    fields = line.strip().split("\t", 2)
+    han, typ, val = fields
+    if typ == "kCompatibilityVariant":
+      han = hex2chr(han)
+      val = hex2chr(val)
+      kCompatibilityVariants[han] = val
+logging.info("處理兼容字 %.3f" % timeit())
 
 #mc
 #https://github.com/biopolyhedron/rime-middle-chinese/blob/master/zyenpheng.dict.yaml
