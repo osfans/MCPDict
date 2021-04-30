@@ -22,7 +22,7 @@ import java.util.Objects;
 public class MCPDatabase extends SQLiteAssetHelper {
 
     private static final String DATABASE_NAME = "mcpdict.db";
-    private static final int DATABASE_VERSION = 14;
+    private static final int DATABASE_VERSION = 15;
 
     // Must be the same order as defined in the string array "search_as"
 
