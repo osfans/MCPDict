@@ -116,6 +116,10 @@ public class Orthography {
             return s.replace('\'', '0');
         }
 
+        private static boolean isIY(String fin, int i) {
+            return fin.charAt(i) == 'i' || fin.charAt(i) == 'y';
+        }
+
         public static String display(String s, int system) {
             // Restore apostrophes
             s =  s.replace('0', '\'');
@@ -157,7 +161,7 @@ public class Orthography {
                 if (fin.charAt(0) == 'j') {
                     if (fin.length() < 2) return null;  // Fail
                     extraJ = true;
-                    if (fin.charAt(1) == 'i' || fin.charAt(1) == 'y') {
+                    if (isIY(fin, 1)) {
                         fin = fin.substring(1);
                     }
                     else {
@@ -167,12 +171,12 @@ public class Orthography {
 
                 // Recover omitted glide in final
                 if (Objects.requireNonNull(init).endsWith("r")) {       // 只能拼二等或三等韻，二等韻省略介音r
-                    if (fin.charAt(0) != 'i' && fin.charAt(0) != 'y') {
+                    if (!isIY(fin, 0)) {
                         fin = "r" + fin;
                     }
                 }
                 else if (init.endsWith("j")) {  // 只能拼三等韻，省略介音i
-                    if (fin.charAt(0) != 'i' && fin.charAt(0) != 'y') {
+                    if (!isIY(fin, 0)) {
                         fin = "i" + fin;
                     }
                 }
@@ -273,12 +277,12 @@ public class Orthography {
 
                 // Recover omitted glide in final
                 if (Objects.requireNonNull(init).endsWith("r")) {       // 只能拼二等或三等韻，二等韻省略介音r
-                    if (fin.charAt(0) != 'i' && fin.charAt(0) != 'y') {
+                    if (!isIY(fin, 0)) {
                         fin = "r" + fin;
                     }
                 }
                 else if (init.endsWith("j")) {  // 只能拼三等韻，省略介音i
-                    if (fin.charAt(0) != 'i' && fin.charAt(0) != 'y') {
+                    if (!isIY(fin, 0)) {
                         fin = "i" + fin;
                     }
                 }
@@ -561,8 +565,8 @@ public class Orthography {
             if (s == null || s.length() == 0) return s;
 
             // Choose map first
-            Map<String, String> mapInitials = null, mapFinals = null;
-            int index = 0;
+            Map<String, String> mapInitials, mapFinals;
+            int index;
             switch (system) {
                 case JYUTPING:          return s;
                 case IPA:
@@ -615,8 +619,8 @@ public class Orthography {
             // Convert from Jyutping to given system
 
             // Choose map first
-            Map<String, String> mapInitials = null, mapFinals = null;
-            int index = 0;
+            Map<String, String> mapInitials, mapFinals;
+            int index;
             switch (system) {
                 case JYUTPING:          return s;
                 case IPA:
@@ -948,7 +952,7 @@ public class Orthography {
                 }
                 String key = s.substring(p, p+2);
                 if (map.containsKey(key + "_")) {
-                    if (key.equals("dd") || p+4 <= s.length() && s.substring(p, p+4).equals("uwow")) {
+                    if (key.equals("dd") || p+4 <= s.length() && s.startsWith("uwow", p)) {
                         sb.append(map.get(key + "_"));      // Tone marker doesn't go here
                     }
                     else {

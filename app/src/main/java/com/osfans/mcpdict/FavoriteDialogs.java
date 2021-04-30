@@ -12,8 +12,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 
-import com.mobiRic.ui.widget.Boast;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -42,7 +40,7 @@ public class FavoriteDialogs {
                 String comment = editText.getText().toString();
                 UserDatabase.insertFavorite(hz, comment);
                 String message = String.format(activity.getString(R.string.favorite_add_done), hz);
-                Boast.showText(activity, message, Toast.LENGTH_SHORT);
+                Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
                 FavoriteFragment fragment = activity.getFavoriteFragment();
                 if (fragment != null) {
                     fragment.notifyAddItem();
@@ -79,7 +77,7 @@ public class FavoriteDialogs {
                 String comment = editText.getText().toString();
                 UserDatabase.updateFavorite(hz, comment);
                 String message = String.format(activity.getString(R.string.favorite_edit_done), hz);
-                Boast.showText(activity, message, Toast.LENGTH_SHORT);
+                Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
                 activity.getCurrentFragment().refresh();
             })
             .setNegativeButton(R.string.cancel, null)
@@ -90,7 +88,7 @@ public class FavoriteDialogs {
         if (force) {
             UserDatabase.deleteFavorite(hz);
             String message = String.format(activity.getString(R.string.favorite_delete_done), hz);
-            Boast.showText(activity, message, Toast.LENGTH_SHORT);
+            Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
             FavoriteFragment fragment = activity.getFavoriteFragment();
             if (fragment != null) {
                 FavoriteCursorAdapter adapter = (FavoriteCursorAdapter) fragment.getListAdapter();
@@ -138,7 +136,7 @@ public class FavoriteDialogs {
             .setPositiveButton(R.string.clear, (dialog, which) -> {
                 UserDatabase.deleteAllFavorites();
                 String message = activity.getString(R.string.favorite_clear_done);
-                Boast.showText(activity, message, Toast.LENGTH_SHORT);
+                Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
                 FavoriteFragment fragment = activity.getFavoriteFragment();
                 if (fragment != null) {
                     FavoriteCursorAdapter adapter = (FavoriteCursorAdapter) fragment.getListAdapter();
@@ -303,7 +301,7 @@ public class FavoriteDialogs {
                     String message = activity.getString(backupFile1.exists() ?
                                                         R.string.favorite_import_delete_backup_fail :
                                                         R.string.favorite_import_delete_backup_done);
-                    Boast.showText(activity, message, Toast.LENGTH_SHORT);
+                    Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
                 })
                 .setNegativeButton(R.string.keep, null)
                 .show();
