@@ -3,7 +3,6 @@ package com.osfans.mcpdict;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import java.util.Locale;
@@ -12,7 +11,6 @@ import java.util.Locale;
 public class MainActivity extends ActivityWithOptionsMenu {
 
     private ViewPager2 mPager;
-    private PagerAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +53,7 @@ public class MainActivity extends ActivityWithOptionsMenu {
     }
 
     private void initAdapter() {
-        mAdapter = new PagerAdapter(this);
+        PagerAdapter mAdapter = new PagerAdapter(this);
         mAdapter.createFragment(PagerAdapter.PAGE_DICTIONARY);
         mAdapter.createFragment(PagerAdapter.PAGE_FAVORITE);
         mPager.setAdapter(mAdapter);

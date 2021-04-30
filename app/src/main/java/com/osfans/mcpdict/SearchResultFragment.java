@@ -1,11 +1,12 @@
 package com.osfans.mcpdict;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.ClipboardManager;
 import android.text.TextUtils;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -22,8 +23,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.ListFragment;
-
-import com.mobiRic.ui.widget.Boast;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -240,9 +239,10 @@ public class SearchResultFragment extends ListFragment {
         if (mask > 0) {
             // Generate the text to copy to the clipboard
             String text = getCopyText(selectedEntry, mask);
-            ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
-            clipboard.setText(text);
-            Boast.showText(getActivity(), R.string.copy_done, Toast.LENGTH_SHORT);
+            ClipboardManager clipboard = (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText("item", text);
+            clipboard.setPrimaryClip(clip);
+            Toast.makeText(getContext(), R.string.copy_done, Toast.LENGTH_SHORT).show();
             return true;
         }
         return false;

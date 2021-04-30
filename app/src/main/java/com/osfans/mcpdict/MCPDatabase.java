@@ -118,7 +118,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
             for (int unicode: input.codePoints().toArray()) {
                 if (!Orthography.HZ.isHz(unicode)) continue;
                 String hz = Orthography.HZ.toHz(unicode);
-                if (keywords.indexOf(hz) >= 0) continue;
+                if (keywords.contains(hz)) continue;
                 if (!allowVariants) {
                     keywords.add(hz);
                 } else {
