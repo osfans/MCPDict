@@ -1,8 +1,5 @@
 <androidx.fragment.app.FragmentContainerView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".SettingsActivity"
-    android:id="@+id/fragment_settings"
-    android:name="com.osfans.mcpdict.SettingsFragment"
+    android:id="@+id/settings_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />

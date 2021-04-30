@@ -16,7 +16,7 @@
             android:gravity="center_vertical" >
             <TextView
                 android:text="@string/search_for"
-                android:paddingRight="-4dp" />
+                android:paddingEnd="-4dp" />
             <com.osfans.mcpdict.CustomSearchView
                 android:id="@+id/search_view" />
         </TableRow>
@@ -25,7 +25,7 @@
             android:gravity="center_vertical" >
             <TextView
                 android:text="@string/search_as"
-                android:paddingRight="-4dp" />
+                android:paddingEnd="-4dp" />
             <Spinner
                 android:id="@+id/spinner_search_as" />
         </TableRow>
@@ -35,11 +35,11 @@
             android:paddingTop="6dp" >
             <TextView
                 android:text="@string/search_options"
-                android:paddingRight="-4dp" />
+                android:paddingEnd="-4dp" />
             <CheckBox
                 android:id="@+id/check_box_kuangx_yonh_only"
                 android:text="@string/option_kuangx_yonh_only"
-                android:paddingRight="8dp" />
+                android:paddingEnd="8dp" />
         </TableRow>
 
         <TableRow
