@@ -7,6 +7,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.preference.PreferenceManager;
+import android.text.Spanned;
+import android.text.TextUtils;
+
+import androidx.core.text.HtmlCompat;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
@@ -63,6 +67,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     private static ArrayList<String> COLORS;
     private static ArrayList<String> DICT_NAMES;
     private static ArrayList<String> DICT_LINKS;
+    private static ArrayList<String> INTROS;
 
     private static Context context;
     private static SQLiteDatabase db = null;
@@ -243,7 +248,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
     }
 
     private static void getSearchAsColumns() {
-        // Search for a single Chinese character without any conversions
         if (COLUMNS != null) return;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
@@ -278,7 +282,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
     }
 
     public static ArrayList<String> getSearchAsNames() {
-        // Search for a single Chinese character without any conversions
         if (SEARCH_AS_NAMES == null) getSearchAsColumns();
         return SEARCH_AS_NAMES;
     }
@@ -320,7 +323,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
     }
 
     private static void getNames() {
-        // Search for a single Chinese character without any conversions
         if (NAMES != null) return;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
@@ -342,7 +344,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
     }
 
     private static void getColors() {
-        // Search for a single Chinese character without any conversions
         if (COLORS != null) return;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
@@ -365,7 +366,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
     }
 
     private static void getDictNames() {
-        // Search for a single Chinese character without any conversions
         if (DICT_NAMES != null) return;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
@@ -388,7 +388,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
     }
 
     private static void getDictLinks() {
-        // Search for a single Chinese character without any conversions
         if (DICT_LINKS != null) return;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
@@ -408,6 +407,30 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static String getDictLink(int index) {
         if (DICT_LINKS == null) getDictLinks();
         return DICT_LINKS.get(index);
+    }
+
+    private static void getIntros() {
+        if (INTROS != null) return;
+        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+        qb.setTables(TABLE_NAME);
+        String[] projection = {"*"};
+        String query = qb.buildQuery(projection, "rowid = 6",  null, null, null, null);
+        Cursor cursor = db.rawQuery(query, null);
+        cursor.moveToFirst();
+        int n = cursor.getColumnCount();
+        INTROS = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            String c = cursor.getString(i);
+            INTROS.add(c);
+        }
+        cursor.close();
+    }
+
+    public static Spanned getIntro(int index) {
+        if (INTROS == null) getIntros();
+        String intro = INTROS.get(index);
+        if (TextUtils.isEmpty(intro)) intro = INTROS.get(0);
+        return HtmlCompat.fromHtml(intro, HtmlCompat.FROM_HTML_MODE_COMPACT);
     }
 
     public static String getColumnName(int index) {

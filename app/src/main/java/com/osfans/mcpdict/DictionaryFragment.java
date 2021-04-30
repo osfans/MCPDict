@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -131,7 +132,8 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
                 fragmentResult.setData(data);
                 TextView textEmpty = fragmentResult.getView().findViewById(android.R.id.empty);
                 if (query.trim().equals("")) {
-                    textEmpty.setText("");
+                    textEmpty.setText(MCPDatabase.getIntro(mode));
+                    textEmpty.setMovementMethod(LinkMovementMethod.getInstance());
                 }
                 else {
                     textEmpty.setText(R.string.no_matches);

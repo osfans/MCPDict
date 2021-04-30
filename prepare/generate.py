@@ -25,37 +25,37 @@ def hex2chr(uni):
     return chr(int(uni, 16))
 
 HEADS = [
-  ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s'),
+  ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s',"本程序可以查詢漢字在古今中外多種語言中的讀音，可輸入普通話拼音、漢字、Unicode編碼、筆畫、部首進行查詢。"),
   #('unicode', '統一碼', '統一碼', '#808080', 'Unihan', 'https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%s'),
-  ('bh', '總筆畫數', '筆畫', '#808080', None, None),
-  ('bs', '部首餘筆', '部首', '#808080', None, None),
-  ('sg', '上古（鄭張尚芳）', '上古', '#9A339F', '韻典網（上古音系）', 'https://ytenx.org/dciangx/dzih/%s'),
-  ('ba', '上古（白一平沙加爾）', '白沙', '#9A339F', None, None),
-  ('mc', '中古', '中古', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s"),
-  ('yt', '韻圖', '韻圖', '#9A339F', None, None),
-  ('zy', '中原音韻', '近古', '#9A339F', '韻典網（中原音韻）', 'https://ytenx.org/trngyan/dzih/%s'),
-  ('pu', '普通話', '普語', '#FF00FF', '漢典網', "http://www.zdic.net/hans/%s"),
-  ('nt', '南通話', '南通', '#0000FF', '南通方言網', "http://nantonghua.net/search/index.php?hanzi=%s"),
-  ('tr', '泰如方言', '泰如', '#0000FF', '泰如小字典', "http://taerv.nguyoeh.com/query.php?table=泰如字典&簡體=%s"),
-  ('ic', '鹽城話', '鹽城', '#0000FF', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s"),
+  ('bh', '總筆畫數', '筆畫', '#808080', None, None, None),
+  ('bs', '部首餘筆', '部首', '#808080', None, None, None),
+  ('sg', '上古（鄭張尚芳）', '上古', '#9A339F', '韻典網（上古音系）', 'https://ytenx.org/dciangx/dzih/%s',"上古音來自韻典網的《<a href=https://ytenx.org/dciangx/>上古音系</a>》"),
+  ('ba', '上古（白一平沙加爾）', '白沙', '#9A339F', None, None, "上古音白一平沙加爾擬音來自：<a href=http://ocbaxtersagart.lsait.lsa.umich.edu/>http://ocbaxtersagart.lsait.lsa.umich.edu/</a>"),
+  ('mc', '中古', '中古', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s", "中古音主要來自韻典網的《<a href=https://ytenx.org/kyonh/>廣韻</a>》，還有一部分讀音來自<a href=https://github.com/biopolyhedron/rime-middle-chinese>中古全拼輸入法</a>，以灰色顯示"),
+  ('yt', '韻圖', '韻圖', '#9A339F', None, None, "韻圖擬音來自QQ共享文檔<a href=https://docs.qq.com/sheet/DYk9aeldWYXpLZENj>韻圖音系同音字表</a>"),
+  ('zy', '中原音韻', '近古', '#9A339F', '韻典網（中原音韻）', 'https://ytenx.org/trngyan/dzih/%s', "近古音來自韻典網的《<a href=https://ytenx.org/trngyan/>中原音韻</a>》"),
+  ('pu', '普通話', '普語', '#FF00FF', '漢典網', "http://www.zdic.net/hans/%s", "普通話讀音主要來自<a href=https://www.zdic.net/>漢典</a>與<a href=http://yedict.com/>字海</a>，還有一部分讀音來自<a href=https://www.moedict.tw/>萌典</a>，以灰色顯示"),
+  ('nt', '南通話', '南通', '#0000FF', '南通方言網', "http://nantonghua.net/search/index.php?hanzi=%s", "南通話讀音來自<a href=http://nantonghua.net/archives/5127/南通话字音查询/>南通方言網</a>"),
+  ('tr', '泰如方言', '泰如', '#0000FF', '泰如小字典', "http://taerv.nguyoeh.com/query.php?table=泰如字典&簡體=%s", "泰如方言讀音來自<a href=http://taerv.nguyoeh.com/>泰如小字典</a>"),
+  ('ic', '鹽城話', '鹽城', '#0000FF', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s", "鹽城話讀音主要來自<a href=http://huae.nguyoeh.com/>類音字彙</a>，並補充了《鹽城縣志》等讀音"),
   #('lj', '南京話', '南京', '#0000FF', '南京官話拼音方案', "https://uliloewi.github.io/LangJinPinIn/PinInFangAng"),
-  ('sz', '蘇州話', '蘇州', '#1E90FF', '吳語學堂（蘇州）', "https://www.wugniu.com/search?table=suzhou_zi&char=%s"),
-  ('sh', '上海話', '上海', '#1E90FF', '吳音小字典（上海）', "http://www.wu-chinese.com/minidict/search.php?searchlang=zaonhe&searchkey=%s"),
-  ('ra', '瑞安城關', '瑞安', '#1E90FF', None, None),
-  ('nc', '南昌話', '南昌', '#00ADAD', None, None),
-  ('hk', '客家話綜合口音', '客語', '#008000', '薪典', "https://www.syndict.com/w2p.php?item=hak&word=%s"),
-  ('hl', '客家話海陸腔', '海陸', '#008000', '客語萌典', "https://www.moedict.tw/:%s"),
-  ('sx', '客家話四縣腔', '四縣', '#008000', '客語萌典', "https://www.moedict.tw/:%s"),
-  ('ct', '粵語', '粵語', '#FFAD00', '粵語審音配詞字庫', "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s"),
-  ('mn', '閩南語', '閩南', '#FF6600', '臺灣閩南語常用詞辭典', "http://twblg.dict.edu.tw/holodict_new/result.jsp?querytarget=1&radiobutton=0&limit=20&sample=%s"),
-  ('vn', '越南語', '越南', '#DB7093', '漢越辭典摘引', "http://www.vanlangsj.org/hanviet/hv_timchu.php?unichar=%s"),
-  ('km', '中世紀朝鮮語', '朝中', '#BA55D3', None, None),
-  ('kr', '朝鮮語', '朝鮮', '#BA55D3', 'Naver漢字辭典', "http://hanja.naver.com/hanja?q=%s"),
-  ('jp_go', '日語吳音', '日吳', '#FF0000', None, None),
-  ('jp_kan', '日語漢音', '日漢', '#FF0000', None, None),
-  ('jp_tou', '日語唐音', '日唐', '#FF0000', None, None),
-  ('jp_kwan', '日語慣用音', '日慣', '#FF0000', None, None),
-  ('jp_other', '日語其他讀音', '日他', '#FF0000', None, None),
+  ('sz', '蘇州話', '蘇州', '#1E90FF', '吳語學堂（蘇州）', "https://www.wugniu.com/search?table=suzhou_zi&char=%s", "蘇州話讀音來自<a href=https://www.wugniu.com/>吳語學堂</a>"),
+  ('sh', '上海話', '上海', '#1E90FF', '吳音小字典（上海）', "http://www.wu-chinese.com/minidict/search.php?searchlang=zaonhe&searchkey=%s", "上海話讀音來自《上海市區方言志》（1988年版），感謝蔡子文錄入。該書記錄的是中派上海話音系（使用者多出生於20世紀40至70年代），與<a href=http://www.wu-chinese.com/minidict/>吳音小字典</a>記錄的音系並不完全相同。"),
+  ('ra', '瑞安城關', '瑞安', '#1E90FF', None, None, "瑞安城關讀音由<u>落橙</u>提供"),
+  ('nc', '南昌話', '南昌', '#00ADAD', None, None, "南昌話讀音由<u>澀口的茶</u>提供"),
+  ('hk', '客家話綜合口音', '客語', '#008000', '薪典', "https://www.syndict.com/w2p.php?item=hak&word=%s", "客家話綜合口音來自<a href=https://www.syndict.com/>薪典</a>"),
+  ('hl', '客家話海陸腔', '海陸', '#008000', '客語萌典', "https://www.moedict.tw/:%s", "客家話海陸腔讀音來自<a href=https://www.moedict.tw/>客語萌典</a>"),
+  ('sx', '客家話四縣腔', '四縣', '#008000', '客語萌典', "https://www.moedict.tw/:%s", "客家話四縣腔讀音來自<a href=https://www.moedict.tw/>客語萌典</a>"),
+  ('ct', '粵語', '粵語', '#FFAD00', '粵語審音配詞字庫', "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s", "粵語讀音主要來自<a href=http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/>粵語審音配詞字庫</a>，還補充了<a href=http://www.unicode.org/charts/unihan.html>Unihan</a>的部分讀音"),
+  ('mn', '閩南語', '閩南', '#FF6600', '臺灣閩南語常用詞辭典', "http://twblg.dict.edu.tw/holodict_new/result.jsp?querytarget=1&radiobutton=0&limit=20&sample=%s", "閩南語讀音來自<a href=https://twblg.dict.edu.tw/holodict_new/>臺灣閩南語常用詞辭典</a>"),
+  ('vn', '越南語', '越南', '#DB7093', '漢越辭典摘引', "http://www.vanlangsj.org/hanviet/hv_timchu.php?unichar=%s", "越南語讀音來自<a href=http://www.vanlangsj.org/hanviet/>漢越辭典摘引</a>"),
+  ('km', '中世紀朝鮮語', '朝中', '#BA55D3', None, None, "中世紀朝鮮語讀音來自<a href=https://github.com/nk2028/sino-korean-readings>韓國漢字音歷史層次研究</a>"),
+  ('kr', '朝鮮語', '朝鮮', '#BA55D3', 'Naver漢字辭典', "http://hanja.naver.com/hanja?q=%s", "朝鮮語讀音來自<a href=http://hanja.naver.com/>Naver漢字辭典</a>"),
+  ('jp_go', '日語吳音', '日吳', '#FF0000', None, None, "日語讀音來自《漢字源》改訂第五版。《漢字源》區分了漢字的吳音、漢音、唐音與慣用音，並提供了“歷史假名遣”寫法。該辭典曾經有<a href=http://ocn.study.goo.ne.jp/online/contents/kanjigen/>在線版本</a>，但已於2014年1月底終止服務。"),
+  ('jp_kan', '日語漢音', '日漢', '#FF0000', None, None, "日語讀音來自《漢字源》改訂第五版。《漢字源》區分了漢字的吳音、漢音、唐音與慣用音，並提供了“歷史假名遣”寫法。該辭典曾經有<a href=http://ocn.study.goo.ne.jp/online/contents/kanjigen/>在線版本</a>，但已於2014年1月底終止服務。"),
+  ('jp_tou', '日語唐音', '日唐', '#FF0000', None, None, "日語讀音來自《漢字源》改訂第五版。《漢字源》區分了漢字的吳音、漢音、唐音與慣用音，並提供了“歷史假名遣”寫法。該辭典曾經有<a href=http://ocn.study.goo.ne.jp/online/contents/kanjigen/>在線版本</a>，但已於2014年1月底終止服務。"),
+  ('jp_kwan', '日語慣用音', '日慣', '#FF0000', None, None, None),
+  ('jp_other', '日語其他讀音', '日他', '#FF0000', None, None, None),
 ]
 ZHEADS = list(zip(*HEADS))
 KEYS = ZHEADS[0]
@@ -387,7 +387,7 @@ def update_twpy(hz, py):
   if len(hz) != 1 or len(py) == 0: return
   k = "pu"
   v = unicodes[hz].get(k, None)
-  pyu = "_%s_" % py
+  pyu = "|%s|" % py
   if v:
     vl = v.split(",")
     if py not in vl and pyu not in vl:
