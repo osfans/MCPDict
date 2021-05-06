@@ -106,6 +106,9 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                     String bh = string.substring(1).replace('f', '-');
                     cs = context.getResources().getString(R.string.radical_count_format, string.substring(0, 1), bh);
                     break;
+                case MCPDatabase.SEARCH_AS_BA:
+                    cs = tone8Displayer.display(string);
+                    break;
                 case MCPDatabase.SEARCH_AS_MC:
                     cs = getRichText(middleChineseDisplayer.display(string));
                     break;
