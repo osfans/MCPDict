@@ -318,9 +318,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     }
 
     public static boolean isToneInsensitive(int mode) {
-        boolean ret = true;
-        if (mode < COL_MC || isKR(mode) || isJP(mode)) ret = false;
-        return ret;
+        return !isKR(mode) && !isJP(mode);
     }
 
     private static void getNames() {
