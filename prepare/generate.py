@@ -678,6 +678,7 @@ c.executemany(INSERT, ZHEADS[1:])
 
 f = open("缺字","w")
 fpy = open("缺音", "w")
+notoext = set(open("NotoSansCJK-Regular.txt").read().strip())
 for i in sorted(unicodes.keys(), key=cjkorder):
   n = ord(i)
   if 0xE000<=n<=0xF8FF or 0xF0000<=n<=0xFFFFD or 0x100000<=n<=0x10FFFD:
@@ -688,18 +689,15 @@ for i in sorted(unicodes.keys(), key=cjkorder):
   v = list(map(d.get, KEYS))
   c.execute(INSERT, v)
   if n >= 0x20000 or 0x9FD1<=n<=0x9FFF or 0x4DB6<=n<=0x4DBF:
-    f.write(i)
+    if i not in notoext:
+      f.write(i)
   if not d.get("pu"):
     fpy.write(i)
 f.close()
 
 for i in chain(range(0x3400,0xa000),range(0x20000,0x31350)):
   c = chr(i)
-  if c in unicodes:
-    d = unicodes[c]
-    if not d.get("pu"):
-      fpy.write(c)
-  else:
+  if c not in unicodes:
     try:
       name = unicodedata.name(c)
       if name.startswith("CJK UNIFIED"):
