@@ -89,14 +89,9 @@ def update(k, d):
 d=defaultdict(list)
 
 #kCompatibilityVariant
-for line in open("/usr/share/unicode/Unihan_IRGSources.txt"):
-    if not line.startswith("U"): continue
-    fields = line.strip().split("\t", 2)
-    han, typ, val = fields
-    if typ == "kCompatibilityVariant":
-      han = hex2chr(han)
-      val = hex2chr(val)
-      kCompatibilityVariants[han] = val
+for line in open("../app/src/main/res/raw/orthography_hz_compatibility.txt"):
+    han, val = line.rstrip()
+    kCompatibilityVariants[han] = val
 logging.info("處理兼容字 %.3f" % timeit())
 
 #mc
