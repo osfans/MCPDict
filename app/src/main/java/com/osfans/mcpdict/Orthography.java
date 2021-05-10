@@ -29,6 +29,7 @@ public class Orthography {
 
     public static class HZ {
         private static final Map<Integer,String> variants = new HashMap<>();
+        private static final Map<Integer,Integer> compatibility = new HashMap<>();
 
         public static boolean isHz(int unicode) {
             return (unicode >= 0x4E00 && unicode <= 0x9FFF)
@@ -39,7 +40,9 @@ public class Orthography {
                     || (unicode >= 0x2B740 && unicode <= 0x2B81F)
                     || (unicode >= 0x2B820 && unicode <= 0x2CEAF)
                     || (unicode >= 0x2CEB0 && unicode <= 0x2EBEF)
-                    || (unicode >= 0x30000 && unicode <= 0x3134F);
+                    || (unicode >= 0x30000 && unicode <= 0x3134F)
+                    || (unicode >= 0xF900 && unicode <= 0xFAFF)
+                    || (unicode >= 0x2F800 && unicode <= 0x2FA1F);
         }
 
         public static boolean isHz(String hz) {
@@ -72,6 +75,11 @@ public class Orthography {
             return new int[] {unicode};
         }
 
+        public static int getCompatibility(int unicode) {
+            if (compatibility.containsKey(unicode)) return compatibility.get(unicode);
+            return unicode;
+        }
+
         public static String toHz(String input) {
             if (input.toUpperCase().startsWith("U+")) input = input.substring(2);
             int unicode = Integer.parseInt(input, 16);
@@ -79,6 +87,7 @@ public class Orthography {
         }
 
         public static String toHz(int unicode) {
+            unicode = getCompatibility(unicode);
             return String.valueOf(Character.toChars(unicode));
         }
 
@@ -1081,6 +1090,15 @@ public class Orthography {
             while ((line = reader.readLine()) != null) {
                 int c = line.codePointAt(0);
                 HZ.variants.put(c, line);
+            }
+            reader.close();
+
+            // Character compatibility variants
+            inputStream = resources.openRawResource(R.raw.orthography_hz_compatibility);
+            reader = new BufferedReader(new InputStreamReader(inputStream));
+            while ((line = reader.readLine()) != null) {
+                int c = line.codePointAt(0);
+                HZ.compatibility.put(c, line.codePoints().toArray()[1]);
             }
             reader.close();
 
