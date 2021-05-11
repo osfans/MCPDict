@@ -47,6 +47,16 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         };
     }
 
+    private int getMeasuredWidth(TextView textView) {
+        textView.measure(0, 0);
+        return textView.getMeasuredWidth();
+    }
+
+    private int getMaxWidth(TextView textView) {
+        textView.setText("中文");
+        return getMeasuredWidth(textView);
+    }
+
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         View view = inflater.inflate(layout, parent, false);
@@ -58,14 +68,17 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         textView = view.findViewById(R.id.text_bs);
         textView.setTag(MCPDatabase.COL_BS);
         TableLayout table = view.findViewById(R.id.text_readings);
+        int width = 0;
         for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
             TableRow row = (TableRow)LayoutInflater.from(context).inflate(R.layout.search_result_row, null);
             TextView textViewName = row.findViewById(R.id.text_name);
             String name = MCPDatabase.getName(i);
+            if (width == 0) width = getMaxWidth(textViewName);
             textViewName.setText(name);
             int color = Color.parseColor(MCPDatabase.getColor(i));
             textViewName.setBackgroundTintList(ColorStateList.valueOf(color));
             textViewName.setTextColor(color);
+            textViewName.setTextScaleX(width/(float)getMeasuredWidth(textViewName));
             final TextView textViewDetail = row.findViewById(R.id.text_detail);
             textViewDetail.setTag(i);
             row.setTag("row" + i);
