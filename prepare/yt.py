@@ -25,7 +25,13 @@ def get_dict():
 								yt[int(i)]=y
 		f = open("yt.txt", "w")
 		for i in sorted(yt.keys()):
-			print(i,yt[i],file=f)
+			y = yt[i]
+			t = y[-1]
+			if t == "3" : y = y[:-1]+"5"
+			elif t == "2" : y = y[:-1]+"3"
+			elif t == "1" : y = y[:-1]+"1"
+			else: y = y + "7"
+			print(i,y,file=f)
 		f.close()
 	
 	pq = dict()

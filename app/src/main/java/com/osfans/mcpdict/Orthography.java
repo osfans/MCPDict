@@ -236,7 +236,8 @@ public class Orthography {
             if (tone == 7) {
                 ym = ym.replace('m', 'p').replace('n', 't').replace('ŋ','k');
             }
-            if (TextUtils.isEmpty(init) || "bdgzjlmn".contains(init.substring(0, 1))) tone += 1;
+            //不分陰陽
+            //if (TextUtils.isEmpty(init) || "bdgzjlmn".contains(init.substring(0, 1))) tone += 1;
             return mapSms.get(init)[system] + ym + tone;
         }
 

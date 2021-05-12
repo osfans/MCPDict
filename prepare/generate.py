@@ -30,12 +30,12 @@ HEADS = [
   #('unicode', '統一碼', '統一碼', '#808080', 'Unihan', 'https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%s'),
   ('bh', '總筆畫數', '總筆畫數', '#808080', None, None, None),
   ('bs', '部首餘筆', '部首餘筆', '#808080', None, None, None),
-  ('sg', '上古（鄭張尚芳）', '鄭張尚芳', '#9A339F', '韻典網（上古音系）', 'https://ytenx.org/dciangx/dzih/%s',"上古音來自韻典網的《<a href=https://ytenx.org/dciangx/>上古音系</a>》"),
-  ('ba', '上古（白一平沙加爾）', '白沙2015', '#9A339F', None, None, "上古音白一平沙加爾擬音來自：<a href=http://ocbaxtersagart.lsait.lsa.umich.edu/>http://ocbaxtersagart.lsait.lsa.umich.edu/</a>"),
-  ('mc', '廣韻', '廣韻', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s", "中古音主要來自韻典網的《<a href=https://ytenx.org/kyonh/>廣韻</a>》，還有一部分讀音來自<a href=https://github.com/biopolyhedron/rime-middle-chinese>中古全拼輸入法</a>，以灰色顯示"),
+  ('sg', '上古（鄭張尚芳）', '鄭張尚芳', '#9A339F', '韻典網（上古音系）', 'https://ytenx.org/dciangx/dzih/%s',"上古音鄭張尚芳擬音來自<a href=https://ytenx.org/dciangx/>韻典網</a>"),
+  ('ba', '上古（白一平沙加爾）', '白沙2015', '#9A339F', None, None, "上古音白一平沙加爾2015年擬音來自：<a href=http://ocbaxtersagart.lsait.lsa.umich.edu/>http://ocbaxtersagart.lsait.lsa.umich.edu/</a>"),
+  ('mc', '廣韻', '廣韻', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s", "廣韻讀音來自《<a href=https://ytenx.org/kyonh/>韻典網</a>》，灰色讀音來自<a href=https://github.com/biopolyhedron/rime-middle-chinese>中古全拼輸入法</a>。括號中注明了《廣韻》中的聲母、韻攝、韻目、等、呼、聲調，以及《平水韻》中的韻部。對於“支脂祭真仙宵侵鹽”八個有重紐的韻，僅在聲母爲脣牙喉音時標註A、B類。廣韻韻目中缺少冬系上聲、臻系上聲、臻系去聲和痕系入聲，“韻典網”上把它們補全了，分別作“湩”、“𧤛”、“櫬”、“麧”。由於“𧤛”字不易顯示，故以同韻目的“齔”字代替。"),
   ('yt', '韻圖', '韻圖', '#9A339F', None, None, "韻圖擬音來自QQ共享文檔<a href=https://docs.qq.com/sheet/DYk9aeldWYXpLZENj>韻圖音系同音字表</a>"),
-  ('zy', '中原音韻', '中原音韻', '#9A339F', '韻典網（中原音韻）', 'https://ytenx.org/trngyan/dzih/%s', "近古音來自韻典網的《<a href=https://ytenx.org/trngyan/>中原音韻</a>》"),
-  ('pu', '普通話', '普通話', '#FF00FF', '漢典網', "http://www.zdic.net/hans/%s", "普通話讀音主要來自<a href=https://www.zdic.net/>漢典</a>與<a href=http://yedict.com/>字海</a>，還有一部分讀音來自<a href=https://www.moedict.tw/>萌典</a>，以灰色顯示"),
+  ('zy', '中原音韻', '中原音韻', '#9A339F', '韻典網（中原音韻）', 'https://ytenx.org/trngyan/dzih/%s', "中原音韻擬音來自<a href=https://ytenx.org/trngyan/>韻典網</a>。下標“入”表明是古入聲字。"),
+  ('pu', '普通話', '普通話', '#FF00FF', '漢典網', "http://www.zdic.net/hans/%s", "普通話讀音主要來自<a href=https://www.zdic.net/>漢典</a>與<a href=http://yedict.com/>字海</a>，灰色讀音來自<a href=https://www.moedict.tw/>萌典</a>"),
   ('nt', '南通話', '南通', '#0000FF', '南通方言網', "http://nantonghua.net/search/index.php?hanzi=%s", "南通話讀音來自<a href=http://nantonghua.net/archives/5127/南通话字音查询/>南通方言網</a>"),
   ('tr', '泰如方言', '泰如', '#0000FF', '泰如小字典', "http://taerv.nguyoeh.com/query.php?table=泰如字典&簡體=%s", "泰如方言讀音來自<a href=http://taerv.nguyoeh.com/>泰如小字典</a>"),
   ('ic', '鹽城話', '鹽城', '#0000FF', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s", "鹽城話讀音主要來自<a href=http://huae.nguyoeh.com/>類音字彙</a>，並補充了《鹽城縣志》等讀音"),
@@ -47,10 +47,10 @@ HEADS = [
   ('hk', '客家話綜合口音', '綜合客語', '#008000', '薪典', "https://www.syndict.com/w2p.php?item=hak&word=%s", "客家話綜合口音來自<a href=https://www.syndict.com/>薪典</a>"),
   ('hl', '客家話海陸腔', '海陸客語', '#008000', '客語萌典', "https://www.moedict.tw/:%s", "客家話海陸腔讀音來自<a href=https://www.moedict.tw/>客語萌典</a>"),
   ('sx', '客家話四縣腔', '四縣客語', '#008000', '客語萌典', "https://www.moedict.tw/:%s", "客家話四縣腔讀音來自<a href=https://www.moedict.tw/>客語萌典</a>"),
-  ('ct', '廣州粵語', '廣州', '#FFAD00', '粵語審音配詞字庫', "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s", "粵語讀音主要來自<a href=http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/>粵語審音配詞字庫</a>，還補充了<a href=http://www.unicode.org/charts/unihan.html>Unihan</a>的部分讀音"),
-  ('mn', '閩南語', '閩南語', '#FF6600', '臺灣閩南語常用詞辭典', "http://twblg.dict.edu.tw/holodict_new/result.jsp?querytarget=1&radiobutton=0&limit=20&sample=%s", "閩南語讀音來自<a href=https://twblg.dict.edu.tw/holodict_new/>臺灣閩南語常用詞辭典</a>"),
+  ('ct', '廣州粵語', '廣州', '#FFAD00', '粵語審音配詞字庫', "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s", "廣州粵語讀音主要來自<a href=http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/>粵語審音配詞字庫</a>，另有部分讀音來自<a href=http://www.unicode.org/charts/unihan.html>Unihan</a>。括號中的爲異讀讀音。"),
+  ('mn', '閩南語', '閩南語', '#FF6600', '臺灣閩南語常用詞辭典', "http://twblg.dict.edu.tw/holodict_new/result.jsp?querytarget=1&radiobutton=0&limit=20&sample=%s", "閩南語讀音來自<a href=https://twblg.dict.edu.tw/holodict_new/>臺灣閩南語常用詞辭典</a>。下標“俗”表示“俗讀音”，“替”表示“替代字”，指的是某個字的讀音其實來自另一個字，比如“人”字的lang5音其實來自“儂”字。有些字會有用斜線分隔的兩個讀音（如“人”字的jin5/lin5），前者爲高雄音（第一優勢腔），後者爲臺北音（第二優勢腔）。"),
   ('vn', '越南語', '越南', '#DB7093', '漢越辭典摘引', "http://www.vanlangsj.org/hanviet/hv_timchu.php?unichar=%s", "越南語讀音來自<a href=http://www.vanlangsj.org/hanviet/>漢越辭典摘引</a>"),
-  ('km', '中世紀朝鮮語', '中世朝鮮', '#BA55D3', None, None, "中世紀朝鮮語讀音來自<a href=https://github.com/nk2028/sino-korean-readings>韓國漢字音歷史層次研究</a>"),
+  ('kr_mid', '中世紀朝鮮語', '中世朝鮮', '#BA55D3', None, None, "中世紀朝鮮語讀音來自<a href=https://github.com/nk2028/sino-korean-readings>韓國漢字音歷史層次研究</a>"),
   ('kr', '朝鮮語', '朝鮮', '#BA55D3', 'Naver漢字辭典', "http://hanja.naver.com/hanja?q=%s", "朝鮮語讀音來自<a href=http://hanja.naver.com/>Naver漢字辭典</a>"),
   ('jp_go', '日語吳音', '日語吳音', '#FF0000', None, None, "日語讀音來自《漢字源》改訂第五版。《漢字源》區分了漢字的吳音、漢音、唐音與慣用音，並提供了“歷史假名遣”寫法。該辭典曾經有<a href=http://ocn.study.goo.ne.jp/online/contents/kanjigen/>在線版本</a>，但已於2014年1月底終止服務。"),
   ('jp_kan', '日語漢音', '日語漢音', '#FF0000', None, None, "日語讀音來自《漢字源》改訂第五版。《漢字源》區分了漢字的吳音、漢音、唐音與慣用音，並提供了“歷史假名遣”寫法。該辭典曾經有<a href=http://ocn.study.goo.ne.jp/online/contents/kanjigen/>在線版本</a>，但已於2014年1月底終止服務。"),
@@ -129,7 +129,7 @@ for hz in unicodes.keys():
         unicodes[hz]["mc"] = ",".join(pys)
       else:
         unicodes[hz]["mc"] = "|%s|"%(py.replace(",", "|,|"))
-logging.info("處理中古音 %.3f" % timeit())
+logging.info("處理廣韻 %.3f" % timeit())
 
 #yt
 import yt
@@ -194,12 +194,12 @@ for line in open("../../ytenx/ytenx/sync/trngyan/TriungNgyanQimYonh.txt"):
   if "ɿ" in py:
     py = re.sub("([ʂɽ].*?)ɿ", "\\1ʅ", py)
   if sd.startswith("入"):
-    py = "_%s_"%py
+    py = "%s`入`"%py
   for hz in hzs:
     if py not in d[hz]:
       d[hz].append(py)
 update("zy", d)
-logging.info("處理近古音 %.3f" % timeit())
+logging.info("處理中原音韻 %.3f" % timeit())
 
 #nt
 #http://nantonghua.net
@@ -501,7 +501,7 @@ for i in unicodes.keys():
       py = re.sub("\|(.*?)\|", "\\1`白`", py)
       py = re.sub("\*(.*?)\*", "\\1`文`", py)
       py = re.sub("\((.*?)\)", "\\1`俗`", py)
-      py = re.sub("\[(.*?)\]", "\\1`訓`", py)
+      py = re.sub("\[(.*?)\]", "\\1`替`", py)
       unicodes[i]["mn"] = py
 logging.info("處理閩南話 %.3f" % timeit())
 
@@ -600,7 +600,7 @@ for hz in d:
 update("nc", d)
 logging.info("處理南昌話 %.3f" % timeit())
 
-#km
+#kr_mid
 #https://github.com/nk2028/sino-korean-readings/blob/main/woosun-sin.csv
 d.clear()
 for line in open("woosun-sin.csv"):
@@ -610,8 +610,8 @@ for line in open("woosun-sin.csv"):
     py = "".join(fs[1:4])
     if py not in d[hz]:
       d[hz].append(py)
-update("km", d)
-logging.info("處理中世朝 %.3f" % timeit())
+update("kr_mid", d)
+logging.info("處理中世朝鮮 %.3f" % timeit())
 
 #patch
 patch = ruamel.yaml.load(open("patch.yaml"), Loader=ruamel.yaml.Loader)
