@@ -11,6 +11,7 @@ from openpyxl import load_workbook
 
 logging.basicConfig(format='[%(asctime)s] %(message)s', level=logging.INFO)
 start = time()
+start0 = start
 
 def timeit():
     global start
@@ -164,7 +165,7 @@ for sheet in load_workbook("BaxterSagartOC2015-10-13.xlsx"):
         if py not in d[hz]:
           d[hz].append(py)
 update("ba", d)
-logging.info("處理白沙2015 %.3f" % timeit())
+logging.info("處理白沙 %.3f" % timeit())
 
 #zy
 #https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/trngyan
@@ -430,7 +431,7 @@ for line in open("/usr/share/unicode/Unihan_Readings.txt"):
       if y not in d[han]:
         d[han].append(y)
 update("ct", d)
-logging.info("處理廣東話 %.3f" % timeit())
+logging.info("處理廣州話 %.3f" % timeit())
 
 #sh
 def sh2ipa(s):
@@ -676,16 +677,16 @@ fpy = open("缺音", "w")
 notoext = set(open("NotoSansCJK-Regular.txt").read().strip())
 for i in sorted(unicodes.keys(), key=cjkorder):
   n = ord(i)
-  if 0xE000<=n<=0xF8FF or 0xF0000<=n<=0xFFFFD or 0x100000<=n<=0x10FFFD:
+  if (n<0x3400 and n not in (0x25A1, 0x3007)) or 0xA000<=n<0xF900 or 0xFB00<=n<0x20000 or n>=0x31350:
+    print(i, unicodes[i])
     continue
-  if (n<0x3400 and n!=0x3007) or n>0x3134F:
-    continue
-  d = unicodes[i]
-  v = list(map(d.get, KEYS))
-  c.execute(INSERT, v)
+  #SMP2 and unicode 13
   if n >= 0x20000 or 0x9FD1<=n<=0x9FFF or 0x4DB6<=n<=0x4DBF:
     if i not in notoext:
       f.write(i)
+  d = unicodes[i]
+  v = list(map(d.get, KEYS))
+  c.execute(INSERT, v)
   if not d.get("pu"):
     fpy.write(i)
 f.close()
@@ -704,5 +705,5 @@ fpy.close()
 conn.commit()
 conn.close()
 logging.info("保存數據庫 %.3f" % timeit())
-
-print(len(unicodes))
+logging.info("處理總時間 %.3f" % (time() - start0))
+logging.info("音典總字數 %d" % len(unicodes))

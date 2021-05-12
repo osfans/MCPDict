@@ -33,6 +33,7 @@ public class Orthography {
 
         public static boolean isHz(int unicode) {
             return (unicode >= 0x4E00 && unicode <= 0x9FFF)
+                    || unicode == 0x25A1 //□
                     || unicode == 0x3007 //〇
                     || (unicode >= 0x3400 && unicode <= 0x4DBF)
                     || (unicode >= 0x20000 && unicode <= 0x2A6DF)
