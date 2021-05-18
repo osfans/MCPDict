@@ -132,7 +132,8 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
                 fragmentResult.setData(data);
                 TextView textEmpty = fragmentResult.getView().findViewById(android.R.id.empty);
                 if (query.trim().equals("")) {
-                    textEmpty.setText(MCPDatabase.getIntro(mode));
+                    textEmpty.setText(getString(R.string.hz_number, MCPDatabase.getHzNumber(mode)));
+                    textEmpty.append(MCPDatabase.getIntro(mode));
                     textEmpty.setMovementMethod(LinkMovementMethod.getInstance());
                 }
                 else {
