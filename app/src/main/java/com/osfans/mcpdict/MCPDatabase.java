@@ -248,6 +248,24 @@ public class MCPDatabase extends SQLiteAssetHelper {
         return db.rawQuery(query, args);
     }
 
+    public static int getHzNumber(int mode) {
+        // Search for a single Chinese character without any conversions
+        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+        qb.setTables("mcpdict");
+        String[] projection = {"count(*)"};
+        String col = getColumnName(mode);
+        String selection = col + " IS NOT NULL AND rowid > 6";
+        if (col.contentEquals(SEARCH_AS_JP_ANY)) {
+            selection = "(jp_go IS NOT NULL OR jp_kan IS NOT NULL OR jp_tou IS NOT NULL OR jp_kwan IS NOT NULL OR jp_other IS NOT NULL) AND rowid > 6";
+        }
+        String query = qb.buildQuery(projection, selection, null, null, null, null);
+        Cursor cursor = db.rawQuery(query, null);
+        cursor.moveToFirst();
+        int n = cursor.getInt(0);
+        cursor.close();
+        return n;
+    }
+
     private static void getSearchAsColumns() {
         if (COLUMNS != null) return;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();

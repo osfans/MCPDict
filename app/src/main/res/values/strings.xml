@@ -213,4 +213,5 @@
         <item>4</item>
     </string-array>
 
+    <string name="hz_number">收%s字。</string>
 </resources>
