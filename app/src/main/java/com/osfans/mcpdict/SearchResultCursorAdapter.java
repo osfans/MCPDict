@@ -22,6 +22,9 @@ import androidx.core.text.HtmlCompat;
 
 import java.util.Objects;
 
+import static com.osfans.mcpdict.MCPDatabase.COL_BH;
+import static com.osfans.mcpdict.MCPDatabase.COL_BS;
+
 public class SearchResultCursorAdapter extends CursorAdapter {
 
     private final Context context;
@@ -64,9 +67,9 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         textViewHZ.setTag(MCPDatabase.COL_HZ);
         textViewHZ.setOnClickListener(getListener(MCPDatabase.COL_HZ));
         TextView textView = view.findViewById(R.id.text_bh);
-        textView.setTag(MCPDatabase.COL_BH);
+        textView.setTag(COL_BH);
         textView = view.findViewById(R.id.text_bs);
-        textView.setTag(MCPDatabase.COL_BS);
+        textView.setTag(COL_BS);
         TableLayout table = view.findViewById(R.id.text_readings);
         int width = 0;
         for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
@@ -104,20 +107,20 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             if (!visible) continue;
             mask |= 1 << i;
             textView = view.findViewWithTag(i);
-            if (MCPDatabase.isDisplayOnly(i)) {
-                textView.setTag(R.id.tag_raw, getRawText(string));
-            }
+            textView.setTag(R.id.tag_raw, getRawText(string));
             CharSequence cs;
             switch (MCPDatabase.getColumnName(i)) {
                 case MCPDatabase.SEARCH_AS_HZ:
                     cs = string;
-                    break;
-                case MCPDatabase.SEARCH_AS_BH:
-                    cs = context.getResources().getString(R.string.total_strokes_format, string);
-                    break;
-                case MCPDatabase.SEARCH_AS_BS:
-                    String bh = string.substring(1).replace('f', '-');
-                    cs = context.getResources().getString(R.string.radical_count_format, string.substring(0, 1), bh);
+                    String str = cursor.getString(COL_BH);
+                    TextView tv = view.findViewWithTag(COL_BH);
+                    tv.setText(context.getResources().getString(R.string.total_strokes_format, str));
+                    str = cursor.getString(COL_BS);
+                    tv = view.findViewWithTag(COL_BS);
+                    String bs = str.substring(0, 1);
+                    String bh = str.substring(1).replace('f', '-');
+                    str = context.getResources().getString(R.string.radical_count_format, bs, bh);
+                    tv.setText(str);
                     break;
                 case MCPDatabase.SEARCH_AS_BA:
                     cs = tone8Displayer.display(string);

@@ -284,14 +284,14 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COL_PU = cursor.getColumnIndex(SEARCH_AS_PU);
         COL_KR = cursor.getColumnIndex(SEARCH_AS_KR);
 
-        COL_FIRST_READING = COL_BS + 1;
-        COL_LAST_READING = n - 1;
         COL_JP_FIRST = cursor.getColumnIndex(SEARCH_AS_JP_GO);
         COL_JP_ANY = COL_JP_FIRST + 2;
+        COL_FIRST_READING = COL_HZ + 1;
+        COL_LAST_READING = COL_JP_FIRST + 4;
 
         MASK_HZ = 1 << COL_HZ;
         MASK_JP_ALL = 0b11111 << COL_JP_FIRST;
-        MASK_ALL_READINGS   = (1 << n) - (1 << COL_FIRST_READING);
+        MASK_ALL_READINGS   = (1 << (COL_LAST_READING + 1)) - (1 << COL_FIRST_READING);
 
         SEARCH_AS_NAMES = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -328,11 +328,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
 
     public static boolean isAnyJP(int mode) {
         return mode == COL_JP_ANY;
-    }
-
-    public static boolean isDisplayOnly(int mode) {
-        String name = getColumnName(mode);
-        return name.contentEquals(SEARCH_AS_VN) || name.contentEquals(SEARCH_AS_PU) || name.contentEquals(SEARCH_AS_MN) || isMC(mode) || isKR(mode) || isJP(mode);
     }
 
     public static boolean isToneInsensitive(int mode) {

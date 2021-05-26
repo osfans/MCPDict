@@ -26,10 +26,8 @@ def hex2chr(uni):
     return chr(int(uni, 16))
 
 HEADS = [
-  ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s',"本程序可以查詢漢字在古今中外多種語言中的讀音，可輸入普通話拼音、漢字、Unicode編碼、筆畫、部首進行查詢。"),
+  ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s',"本程序支持多種方式查詢漢字在古今中外多種語言中的讀音。如輸入𰻞（漢字）、30EDE或U+30EDE（Unicode編碼）、biang2（普通話拼音）、43（總筆畫數）、辵39（部首餘筆），均可查詢到“𰻞”的讀音。"),
   #('unicode', '統一碼', '統一碼', '#808080', 'Unihan', 'https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%s'),
-  ('bh', '總筆畫數', '總筆畫數', '#808080', None, None, None),
-  ('bs', '部首餘筆', '部首餘筆', '#808080', None, None, None),
   ('sg', '上古（鄭張尚芳）', '鄭張尚芳', '#9A339F', '韻典網（上古音系）', 'https://ytenx.org/dciangx/dzih/%s',"上古音鄭張尚芳擬音來自<a href=https://ytenx.org/dciangx/>韻典網</a>"),
   ('ba', '上古（白一平沙加爾）', '白沙2015', '#9A339F', None, None, "上古音白一平沙加爾2015年擬音來自：<a href=http://ocbaxtersagart.lsait.lsa.umich.edu/>http://ocbaxtersagart.lsait.lsa.umich.edu/</a>"),
   ('mc', '廣韻', '廣韻', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s", "廣韻讀音來自《<a href=https://ytenx.org/kyonh/>韻典網</a>》，灰色讀音來自<a href=https://github.com/biopolyhedron/rime-middle-chinese>中古全拼輸入法</a>。括號中注明了《廣韻》中的聲母、韻攝、韻目、等、呼、聲調，以及《平水韻》中的韻部。對於“支脂祭真仙宵侵鹽”八個有重紐的韻，僅在聲母爲脣牙喉音時標註A、B類。廣韻韻目中缺少冬系上聲、臻系上聲、臻系去聲和痕系入聲，“韻典網”上把它們補全了，分別作“湩”、“𧤛”、“櫬”、“麧”。由於“𧤛”字不易顯示，故以同韻目的“齔”字代替。"),
@@ -57,6 +55,8 @@ HEADS = [
   ('jp_tou', '日語唐音', '日語唐音', '#FF0000', None, None, "日語讀音來自《漢字源》改訂第五版。《漢字源》區分了漢字的吳音、漢音、唐音與慣用音，並提供了“歷史假名遣”寫法。該辭典曾經有<a href=http://ocn.study.goo.ne.jp/online/contents/kanjigen/>在線版本</a>，但已於2014年1月底終止服務。"),
   ('jp_kwan', '日語慣用音', '日語慣用', '#FF0000', None, None, None),
   ('jp_other', '日語其他讀音', '日語其他', '#FF0000', None, None, None),
+  ('bh', '總筆畫數', '總筆畫數', '#808080', None, None, None),
+  ('bs', '部首餘筆', '部首餘筆', '#808080', None, None, None),
 ]
 ZHEADS = list(zip(*HEADS))
 KEYS = ZHEADS[0]

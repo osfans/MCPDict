@@ -1,3 +1,12 @@
+bh:
+    □: 3
+    〇: 1
+    鿖: 7
+    鿗: 9
+    鿪: 17
+bs:
+    □: 囗0
+    〇: 乙0
 sh:
     眙: ɦi6
 jp_other:
@@ -8,8 +17,10 @@ jp_other:
     𨩃: syun
     𣷺: sou
     𣖔: hou
+    𡑮: soku
 ct:
     㛟: wun6
+    𡃜: kok3
 kr:
     冇: null
     㐕: yul
@@ -216,7 +227,7 @@ pu: #yedict
     㔲: gui3 #簋?
     㕀: you2 #㽕
     㕍: dui1 #堆
-    㕓𫑮: chan2 #廛
+    㕓𫑮𠪨𡏂: chan2 #廛
     㕔: ting1 #厅
     㕝: li4 #叓
     㕳: xiong1 #詾
@@ -258,7 +269,7 @@ pu: #yedict
     㘮: yi4 #墿
     㘯: chang2 #塲
     㘳: qiu1 #丘
-    㘻: yin1 #堙
+    㘻𡋘: yin1 #堙
     㘼: kao3 #?
     㦳㘽: zai1 #栽
     㘾: yu3
@@ -303,7 +314,7 @@ pu: #yedict
     㞢: zhi1 #之
     㞣: fen1 #芬
     㞮: chu1 #出
-    㞵: tao1 #𠬢
+    㞵𠬥: tao1 #𠬢
     㟕: dou3
     㟗: bin1 #豳
     㟡: juan4 #腃
@@ -584,8 +595,7 @@ pu: #yedict
     㼃: lie4 #?
     㼄: ji1 #玑
     㼅: kuang4
-    㽅𢍪: deng1
-    𧯭: deng1 #登豋
+    㽅𢍪𧯭𡖚: deng1 #登豋
     㽍: gan1 #坩
     㽐: xian1 #馦
     㽒: sheng1 #甥
@@ -675,7 +685,7 @@ pu: #yedict
     䋺𬘴: qiu1 #鞧
     䌉: gang1 #纲
     䌲: xun1 #纁
-    䍏: wang3 #网
+    䍏𠔿: wang3 #网
     䍧䍭𬙰: zang1 #牂
     䍰: yan1 #𦎣
     䍹: shan1 #膻
@@ -905,7 +915,7 @@ pu: #yedict
     𠇲: xiu1 #休
     𠈃: bao3 #保
     𠈄: huan4 #宦
-    𠈇: su4 #夙
+    𠈇𠉦: su4 #夙
     𠈈: ci3 #佌
     𠈉: kan3 #侃
     𠈋: rong2 #戎
@@ -914,7 +924,6 @@ pu: #yedict
     𠈴: chi1 #痴
     𠈹: you1 #攸
     𠉛: cheng2
-    𠉦: su4 #夙
     𠉫: guang4 #俇
     𠉮: juan4 #倦
     𠉴: yu3
@@ -998,7 +1007,7 @@ pu: #yedict
     𠟽: gua1 #刮
     𠟿: jiao3 #剿
     𠠌: lie4
-    𠠒: mo2 #劘
+    𠠒𠞥: mo2 #劘
     𠠥: chan2 #劖
     𠠫: li2 #劙
     𠠬: qian1
@@ -1036,7 +1045,7 @@ pu: #yedict
     𠩐: chen2 #辰
     𠩬𣀗: li2 #斄
     𠩯: cun2 #存
-    𠩰: hou4 #厚
+    𠩰𠪀𠩞𠪋: hou4 #厚
     𠪊: lian2 #廉
     𠪴: chu3
     𠫂: lu2 #壚
@@ -1092,7 +1101,7 @@ pu: #yedict
     𠶈: she4
     𠶖: wang3
     𠶥: qiong2
-    𠷔𠸶: sang1,sang4 #丧
+    𠷔𠸶𠷫𡂤𡂧: sang1,sang4 #丧
     𠷕: chui1 #吹
     𠷾: heng4 #啈
     𠸉: ke4
@@ -1128,7 +1137,7 @@ pu: #yedict
     𠻺: ya4
     𠻻: bi4
     𠻼: dou4
-    𠼕: bai4 #呗
+    𠼕𡁭: bai4,bei #呗
     𠼦: man4 #谩
     𠼭: bo1
     𠼰: geng3
@@ -1148,7 +1157,7 @@ pu: #yedict
     𠾶: jing3
     𠾼: jue2
     𠿁: si1 #越南?
-    𠿊: chi1 #吃
+    𠿊𡁒: chi1 #吃
     𠿍: dian4 #唸
     𠿎: hua1 #𡁑
     𠿒: he1 #喝
@@ -1186,7 +1195,7 @@ pu: #yedict
     𡆀: hong1
     𡆇: huo4
     𡆑: yan2 #㘙
-    𡆠: ri4 #日
+    𡆠𡇁𡇗: ri4 #日
     𡆴: nie4 #㘝
     𡇊: pu3 #圃
     𡇙: duo4
@@ -1211,13 +1220,13 @@ pu: #yedict
     𡌄: che1
     𡌅: fo2
     𡌧: yu1 #淤
-    𡌨: pi2,pi4 #埤
+    𡌨𡌸𡌹𡐕: pi2,pi4 #埤
     𡌮: pei2 #培
     𡌰: ni2 #泥
     𡌳: yu4 #域
     𡌶: ban4 #湴
     𡌺: meng2 #
-    𡍖: dai4 #埭
+    𡍖𡐡: dai4 #埭
     𡍩: che4 #坼
     𡍵: jun4 #峻
     𡎎: xu4 #婿
@@ -1226,10 +1235,10 @@ pu: #yedict
     𡎰: chi2 #墀
     𡎲: tai2 #臺
     𡎴: gong4 #𡔕
-    𡎸𡏳: jin3 #堇
+    𡎸𡏳𡐳𦰩: jin3 #堇
     𡏅: lang2 #>
     𡏆𡒶: yang3
-    𡏰: fen4 #𡊄
+    𡏰𠬁𡊯𡍊𡏙𡓴: fen4 #𡊄
     𡏱: lei2 #虆
     𡏾: ji4
     𡐧: tan2 #壜
@@ -1239,22 +1248,22 @@ pu: #yedict
     𡑕: shen1
     𡑜: lin2 #壣
     𡑡: huan2 #环
-    𡑥: ku1 #堀
+    𡑥𡒈: ku1 #堀
     𡑦: man4 #墁
     𡑧: ku1 #𧷎
     𡒗: man3
     𡒲: chen2 #尘
-    𡓐: e4 #堮
+    𡓐𡑇: e4 #堮
     𡓨: wen3 #?
     𡓽: xun1
     𡔂: se4,sai4 #塞
     𡔚: chen2 #尘
     𡔽: shou4 #寿
     𡕚: jue2,jiao4 #觉
-    𡕠𡕡: pu2 #𡰿
+    𡕠𡕡𡕞𡖆: pu2 #𡰿
     𡕬: hang4 #𡕧
-    𡕷: xiong4 #夐
-    𡖂: kui2 #夔
+    𡕷𡕳: xiong4 #夐
+    𡖂𣦞𧃍𡕿: kui2 #夔
     𡖇: duo1 #多
     𡖈: duo1 #多
     𡖋: yi4 #亦
@@ -1264,7 +1273,7 @@ pu: #yedict
     𡗜: quan3,ba2 #犬,犮
     𡗝: yi2 #夷
     𡗟: jie4 #介
-    𡗻: fu2 #㚕
+    𡗻𡘉: fu2 #㚕
     𡘊: ben3 #畚
     𡘌: xie4 #𡗼
     𡘎: gu1 #𡗷
@@ -1532,13 +1541,13 @@ pu: #yedict
     𢈿: huo4 #或
     𢉀: lou4 #漏
     𢉈: qiang2 #墙
-    𢉙: shu4 #庶
+    𢉙𠩽𠪌𠪛𠪜𠪤: shu4 #庶
     𢉛: cong1 #𢊕
     𢉟: bing4 #屏
     𢉼: geng1,ao1
     𢊰: xian4 #䵇
     𢊴: lian2 #奁
-    𢋊: yong1 #壅
+    𢋊𡓱𡔏: yong1,yong3 #壅
     𢋑: wu3 #庑
     𢋱: zhuo2 #𤉐
     𢌡: jiong3
@@ -1610,7 +1619,7 @@ pu: #yedict
     𢘆: heng2 #恒
     𢘎: nuo4 #懦
     𢘐: dong1 #𩜍
-    𢘓: mou2 #谋
+    𢘓𠰔: mou2 #谋
     𢘛: chi4
     𢘜: si1
     𢘻: xi1 #悉
@@ -1786,7 +1795,7 @@ pu: #yedict
     𢺋: tan1 #摊
     𢺻: fu2 #扶
     𢻃: chi3 #豉
-    𢻈: zhi1 #㩼
+    𢻈𡖙: zhi1 #㩼
     𢻥: cao1 #操
     𢻬: fu3 #抚
     𢻯: xue2 #學
@@ -1979,7 +1988,6 @@ pu: #yedict
     𣦃: jian3 #剪
     𣦔: zheng3 #整
     𣦗: chi3 #齿
-    𣦞: kui2 #夔
     𣦨: gui1 #归
     𣦸𣦹𣧇: si3 #死
     𣦻: can2 #𣦼
@@ -2000,7 +2008,7 @@ pu: #yedict
     𣪋: jiu4 #救
     𣪍: dian4 #殿
     𣪏: gan3 #敢
-    𣪥: hu4,huo4 #嗀
+    𣪥𠹢𡔮: hu4,huo4 #嗀
     𣪧: jiao3,fang1
     𣪬: gou4 #𤚲
     𣪻𣫞: zao2 #凿
@@ -2030,7 +2038,7 @@ pu: #yedict
     𣲛: xing3
     𣲴: fei4 #沸
     𣲺: jue2 #决
-    𣲿: nao2 #硇
+    𣲿𠬦: nao2 #硇
     𣳇: guai4,zuo3 #𰛢
     𰛢: guai4 #𣲾
     𣳈: xian1
@@ -2548,7 +2556,7 @@ pu: #yedict
     𥍤: mao2 #矛
     𥎌: feng2
     𥎞: zuan3,zuan4,cuan4,cuan1 #䂎
-    𥎦: hou2,hou4 #侯
+    𥎦𠨶: hou2,hou4 #侯
     𥎻: zhou1 #矪
     𥏬: tang2 #唐
     𥏳: si4 #俟
@@ -2743,7 +2751,7 @@ pu: #yedict
     𥺼𮇔: ya4
     𥻂𥽭: lan4 #糷
     𥻅: bi4 #煏
-    𥻔: fen4 #粪
+    𥻔𡐢: fen4 #粪
     𥻘: lin2
     𥻚: yin1
     𥻟: nuo4 #糯
@@ -3027,7 +3035,6 @@ pu: #yedict
     𧂭: nou4 #耨
     𧂮: jing4
     𧂯: yun4
-    𧃍: kui2 #夔
     𧃡: zao3 #藻
     𧃸: hui1
     𧄉: zong3
@@ -3148,7 +3155,7 @@ pu: #yedict
     𧧷: jiu4 #救
     𧧼: yi4 #谊
     𧧽: feng1 #𧥹
-    𧨁𧪰𧭨𧬑: jie1 #嗟
+    𧨁𧪰𧭨𧬑𨲠𩬡𠺜: jie1 #嗟
     𧨃: xi4 #鬩
     𧨍𧨻𠌜: xi4 #徯
     𧨎: wan2 
@@ -3168,7 +3175,7 @@ pu: #yedict
     𧬹: li3 #禮
     𧬺: di4
     𧭂: qie4 #𧫕
-    𧮸: he4 #壑
+    𧮸𡋹𡎙: he4 #壑
     𧯴: chu3,shu4,lin2 #楚,树
     𧰆𬤷: bi1 #豍
     𧰉: lao2 #䝁
@@ -3185,7 +3192,7 @@ pu: #yedict
     𧲎: meng2 #𧲍
     𧲔: wei4 #𧲝
     𧲚: wei2 #䝐
-    𧲛: jian4 #薦
+    𧲛𠭶: jian4 #薦
     𧳋: zhi4 #𢊁廌
     𧳯: zhu1 #猪
     𧴛: xie4 #獬
@@ -3321,7 +3328,7 @@ pu: #yedict
     𨤐: mi2 #𥹄
     𨤒: wei2,wei4 #为
     𨤓: juan4 #眷
-    𨤖: juan3,juan4 #卷
+    𨤖𠨟: juan3,juan4 #卷
     𨤳: li2
     𨥈: ji3 #>
     𨥉: shan1 #>
@@ -3428,7 +3435,6 @@ pu: #yedict
     𨰫: yan2
     𨰰: bao3 #𨰦
     𨲂: niao3 #䦊
-    𨲠𩬡: jie1 #嗟
     𨳇: men2 #門
     𨳍𫵱: qi1 #>
     𨳒𮤭: diao3 #屌
@@ -3683,7 +3689,7 @@ pu: #yedict
     𪓵𪓗: cu4,qiu1 #𪓰
     𪔝: tong2 #𪔜
     𪔧: tie1 #𪔪
-    𪔵𪔭: fen2 #鼖
+    𪔵𪔭𡒡: fen2 #鼖
     𪕋𪕢: liu2,liu3 #䶉
     𪕏: you4 #鼬
     𪕸: gu3 #𪕷
@@ -3800,7 +3806,7 @@ pu: #yedict
     㳢: qiao2 #𣾷
     㻘: shen3 #𤪺
     䦀: yu3 #𨦫
-    䶷: jiao4 #叫
+    䶷𠮧𠮪𠶼𠸵𠻌: jiao4 #叫
     䶸: yao1 #吆
     䶹: zuo3 #左
     䶺: na4 #肭
@@ -3827,11 +3833,11 @@ pu: #yedict
     鿳鿸: tuo2,duo4 #
     鿴: dong1 #鮗
     𠃬: chou2 #𠷎
-    𠓥: bian1 #鞭
+    𠓥𠓠: bian1 #鞭
     𠠦: fu4 #副疈
     𡍬: mu4 #睦
     𢄉: tun2 #豚
-    𢏚: chou2 #畴
+    𢏚𠭵𠰟: chou2 #畴
     𣅛: ze4 #昃
     𦊮: mi2 #䍘
     𣂏: ju1 #㪺
@@ -3894,10 +3900,9 @@ pu: #yedict
     𨫍: hui4,sui4,rui4 #鏸
     𤿲: fu1,pi2 #麸
     𣖔: hou4
-    𠌫: bi4 #跸
+    𠌫𡁘: bi4 #跸
     𠏹: fo2 #佛
     𠑊: yan3 #俨
-    𠔿: wang3 #网
     𠖱: hu4 #沍冱
     𠘨: ming2 #明
     𠝏: jian4 #剑
@@ -3905,7 +3910,7 @@ pu: #yedict
     𠠺: keng1 #劥
     𠥼: dou3 #斗
     𠵅: hua2 #嘩
-    𠽟: zao4 #噪
+    𠽟𠹏: zao4 #噪
     𡈁: guo2
     𡈽: tu3 #土
     𡑭𡋗: hui4,wei4 #𡑭
@@ -3977,7 +3982,6 @@ pu: #yedict
     𦦙: ju3 #举
     𦪷: mu4 #艒
     𦫿: ai4 #艾
-    𦰩: jin1,qin2,jin3,jin4 #堇
     𦱳: zi1 #兹
     𦾔: jiu4 #旧
     𧑉: chong2 #蟲
@@ -4026,24 +4030,24 @@ pu: #yedict
     𠀑: tian1 #天
     𠀙𠀞: li4 #丽
     𠀜: qiu1,min3 #邱,皿
-    𠀠: ji1 #箕
+    𠀠𠔝𠚙𠵶𠷛: ji1 #箕
     𠀣: qi2
     𠀥: gen4 #亘
     𠀩𢆊: ting1 #汀
     𠀫: ji1
     𠀪: ge2
     𠀭: ping2 #平
-    𠀯: yuan1 #渊
+    𠀯𡆼: yuan1 #渊
     𠀰: duo1 #多
     𠀵: yang2
     𠀶: shi1
     𠀺: chu2 #除
-    𠀻: yuan2 #鼋
+    𠀻𠒞: yuan2 #鼋
     𠁀: shi4 dai4 #世代
     𠁃𥤔: pu1 #铺
-    𠁅: chu4 #处
+    𠁅𠙚: chu4 #处
     𠁇: bu4 yi2,yi4
-    𠁈: jun1 #君
+    𠁈𠱩𠱭𠱰𠺞: jun1 #君
     𠁊: shuang3 #爽
     𠁋: pu1, dong1 #𠁃
     𠁌: ye2
@@ -4052,7 +4056,7 @@ pu: #yedict
     𠁒: jia3 #假
     𠁓: yu4
     𠁖: chuan4
-    𠁘: zai3 #载
+    𠁘𠧋𡔬𡕀: zai3,zai4 #载
     𠁛: dao4
     𠁜: yong3 #踊
     𠁢: bu3 #卜
@@ -4184,7 +4188,7 @@ pu: #yedict
     𠆔: ni4 #堄
     𠆕: bie4 #𢆣
     𠆘: yi4 #裔
-    𠆜: qi2 #𪗍
+    𠆜𠬎: qi2 #𪗍
     𠆞: shan1 #羶
     𠆠: wei3,men2 #亹
     𠆡: cuan4 #爨
@@ -4276,7 +4280,7 @@ pu: #yedict
     𠈷: bi3 #俾
     𠈻: ji2 #𠌢
     𠈼: shun4 #顺
-    𠈽: yi1 #伊
+    𠈽𠜧𠜰: yi1 #伊
     𠈾: zai3 #宰
     𠉀: hou4 #候
     𠉃: di1 #低
@@ -4386,11 +4390,11 @@ pu: #yedict
     𠋽: da2 #㒓
     𠋾: bao3 #宝
     𠋿: zuo4 #侳
-    㑢𠊬𠌁𠌋𠌢𠍠: ji2 #谻
+    㑢𠊬𠌁𠌋𠌢𠍠𠙏𠫲: ji2,jue2 #谻
     𠍘𠌂𠎃: san3 #伞
     𠌃: liu2 #𢕍
     𠌄: zhan3 #展
-    𠌆: quan2 #全
+    𠌆𠓳: quan2 #全
     𠌇: lang2
     𠌈𠎚: lun2 #仑
     𠌉: ban1 #𠔯
@@ -4441,9 +4445,9 @@ pu: #yedict
     𠍮: chui2 #倕
     𠍰: zhi4 #偫
     𠍶: ru2 #儒
-    𠍷: bo2 #僰
+    𠍷𠒹: bo2 #僰
     𠍸: zhong4 #衆
-    𠍺: xia4 #夏
+    𠍺𡔰𡕭𡕻𡕾𡖃: xia4 #夏
     𠍻: chou2 #俦
     𠎂𠎟: jiu4 #僦
     𠎄: dun1
@@ -4493,7 +4497,7 @@ pu: #yedict
     𠏔: cu4 #蹙
     𠏗: liao2 #僚
     𠏙: shu3 #鼠
-    𠏜: shan4 #僐
+    𠏜𠑫: shan4 #僐
     𠏣: yu4 #篽
     𠏪: xie4 #㒠
     𠏬: ping1 #俜
@@ -4538,3 +4542,1766 @@ pu: #yedict
     𠑇: ying4 #媵
     𠑌: tui2 #尵
     𠑍: nao2,nao3 #獿
+    𠑏: cui4
+    𠑒: wei3 #𩘚
+    𠑓: ni3 #你
+    𠑔: bao4 #儤
+    𠑜: mi3
+    𠑝: yao4
+    𠑠: sa4 #𠎷
+    𠑣: xian1 #仙
+    𠑤: zao1,cao2 #傮
+    𠑦: nie4
+    𠑧: quan4
+    𠑨: kan4
+    𠑩: jue2 #矍
+    𠑭: hong1
+    𠑮: sui4
+    𠑳: ti4,di4,xi2 #锡
+    𠑵: fo2 #佛
+    𠑸: ji4 #旡
+    𠑼: gu3 #𠑹
+    𠑿𠤐𡕣: zhang3,chang2 #长
+    𠒀: zan1 #簪
+    𠒁: si3 #死
+    𠒈: mai4 #売?
+    𠒉: wang1 #尫
+    𠒊: si4 #兕
+    𠒏𠒖𡊪𡋰: yao2 #尧
+    𠒐𠓈: wan4 ke4 #
+    𠒓: xi1
+    𠒔: jing1 #兢?
+    𠒕: pai4
+    𠒗: shen1
+    𠒘: bai3 ke4 #兡
+    𠒙: qian1 ke4 #兛
+    𠒚: ke4
+    𠒛: xian1
+    𠒟: dou1 #兜?
+    𠒠: hao4
+    𠒡: dou3
+    𠒤: ni3
+    𠒩: yi4
+    𠒪: guo3
+    𠒫: ming2 #明
+    𠒭: hao2 ke4 #兞
+    𠒮: jian1 #熸
+    𠒲: shi2 ke4 #兙
+    𠒳: bi4
+    𠒴: le4 #樂
+    𠒶: lu4 #圥
+    𠒻: pu3
+    𠒼: huang4 #晃
+    𠒽: hui1 #辉
+    𠓂𠓃: yao4 #耀
+    𠓄: ma3
+    𠓇: sang2 #?
+    𠓉: guang1
+    𠓍: li3
+    𠓎: gong1 dun1
+    𠓏: gong1 dan4
+    𠓒: zan4
+    𠓓: ming2 #𨮠
+    𠓕: zan4
+    𠓘: xi3
+    𠓚: lan2 #𠓖
+    𠓦: xi1 #西?
+    𠓧: jie4 #𠓢
+    𠓯: che1
+    𠓰: shuang1
+    𠔄: ye3 #也
+    𠔅𠔆: dai3 #歹
+    𠔇: zhi1 #之
+    𠔏: gong4 #共
+    𠔗: jian3 #𢆚
+    𠔘: fu2 #髴
+    𠔜𠔧: kun1 #坤
+    𠔡: yu2,fen1 #渝?
+    𠔢: zhi1
+    𠔣: gong3 #巩
+    𠔥: jian1 #兼
+    𠔩: dian3 #典?
+    𠔪: fan1 #番?
+    𠔫: zuo4
+    𠔱: yi4 #异
+    𠔳: lian2 #廉?
+    𠔴: ju4,ju1 #踞?
+    𠔵: qi2,yi3 #齮?
+    𠔷: chang3
+    𠕀𠕈𡉮: wang3 #网
+    𠕉: xue2 #穴
+    𠕎𠕜: rou4 #肉
+    𠕏: wang3 #罔
+    𠕔: ken3 #肯
+    𠕙𠕚𠕬𡇾𡈌𡈘: mao4 #冒
+    𠕡𡇘: yao1 #𡆩
+    𠕢: jue2 #爵
+    𠕪: mi4 #鼏
+    𠕫: hao4 #昊
+    𠕯: fu2 #黻?
+    𠕱: jian4
+    𠕵: kang4 #亢
+    𠕶: wu4 #兀
+    𠕷: an1 #安
+    𠕹: tian1 #天
+    𠕺: rong2 #容
+    𠕼: rou4 #宍?
+    𠕽: shui3
+    𠕾𠖇: ming2 #冥
+    𠖀: zong1 #宗?
+    𠖁𠖌𠜍: guan1,guan4 #冠
+    𠖃: yi2 #宜
+    𠖅: you4 #宥?
+    𠖉: jun1 #军
+    𠖊: jia3,xia2 #叚
+    𠖍: liang4 #亮?
+    𠖏: ji4 #寄?
+    𠖐: fu4 #富
+    𠖑: huan2
+    𠖒: pai4
+    𠖔: jia1 #家
+    𠖕: zhi4 #寘?
+    𠖖: lao2,ma3 #牢
+    𠖗: qin3 #寝
+    𠖙: dan1 #耽?
+    𠖚: xuan1 #宣
+    𠖜𠖣: yan1 #烟
+    𠖞: yi4
+    𠖠: gu3 #古
+    𠖡: guan1
+    𠖢: che4
+    𠖦: yin1 #禋
+    𠖧𠖪: mi4 #蜜
+    𠖩: dian1 #颠?
+    𠖭: liao3
+    𠖮: jiu3 #𣲄
+    𠖲: fen2 #汾?
+    𠁾: zou4 #㔿?
+    𠖴: wu3
+    𠖵: xiang2 #瓨
+    𠖸: cang1 #凔
+    𠖺: ka3
+    𠖻: lei4 #泪?
+    𠖼𠗀: zao3 #枣?
+    𠖽: zuo4
+    𠗁: qi1
+    𠗄: yi2 #𠗺
+    𠗅: xu4 #侐
+    𠗇: chen4,hui1 #疢
+    𠗍: bi2 #𣴨
+    𠗎: zhuang1 #庄
+    𠗑: teng2
+    𠗒: pu3 #浦?
+    𠗓: juan1 #涓?
+    𠗔: li3 #浬
+    𠗗: lie4 #冽
+    𠗜: qing1 #清
+    𠗞: ding4
+    𠗡: cai3 #綵
+    𠗢: lie4 #冽
+    𠗧: si1 #凘
+    𠗪: ai1
+    𠗬: lou4 #漏?
+    𠗭: shi4
+    𠗮: shen4 #湛
+    𠗯: quan2
+    𠗱𡒉𡒤𡒥: zang1 #臧
+    𠗷: lang2
+    𠘀𠘗: dong1 #冬
+    𠘄: yin4 #印
+    𠘇𠘒: he2 #𠘢
+    𠘈: chan2 #潺
+    𠘉: jing3
+    𠘍: li4 #凓
+    𠘎: hui4,kuai4
+    𠘏: shen3 #𠘆
+    𠘐: lin3 #凛
+    𠘓: long2
+    𠘔: ping2 #凭?
+    𠘘: yan3 #奄
+    𠘛: kuang4
+    𠘜: pu1
+    𠘠: huai2,guai1
+    𠘡: lin3 #凜
+    𠘤: leng3 #冷
+    𠘦: ye3 #冶
+    𠘩: wu2 #无
+    𠘫: chu4
+    𠘬: cong2,ji1 #从
+    𠘭: tai2,keng1,yun3 #台
+    𠘮: yun3 #允?
+    𠘲: da4,tian1 #大,天
+    𠘴𠙄𠙈𠙊𠙗: feng1 #风
+    𠘵: su4 #夙
+    𠘶: fou3 #否
+    𠘷: yong3 #永
+    𠘸: ji4 #旡
+    𠘼: qu1 #𩖷
+    𠘽: min2 #民
+    𠘾: shang1 #商
+    𠘿: ya1
+    𠙀: wan3 #盌?
+    𠙃: si4 #兕
+    𠙇𠙑: ye4 #夜
+    𠙉: shi3 #始
+    𠙋: yi3 #以
+    𠙌: yang2
+    𠙍: hui3 #虺?
+    𠙐: bu4 #不
+    𠙒: feng4 #賵
+    𠙓: dou1 #兜?
+    𠙘: jue2 #爵
+    𠙙: guan4 #冠
+    𠙛: xun2 #寻
+    𠙜: zhi2 #執
+    𠙝: jiang1
+    𠙟: sheng4 #胜
+    𠙡: dou1 #兜?
+    𠙢: qu2 #蘧
+    𠙧: dou1 #兜?
+    𠙨: ji1
+    𠙩: fan2
+    𠙪: qiao2
+    𠙫: li3
+    𠙭: zi3 #子
+    𠙮: pi4 #甓?
+    𠙯: yan4 #燕?
+    𠙰: weng4
+    𠙱: pi1
+    𠙲: tai4
+    𠙳: lian4 #灓?
+    𠙵: kou3 #口
+    𠙷𠚁: xin4 #囟
+    𠙸𠙿: gan1 #甘
+    𠙹𠙾𠚀𠚋: zai1,zi1 #甾
+    𠙺: zheng4 #正
+    𠙻: wang2 #王
+    𠙽: kui4,kuai4 #块
+    𠚂: fou3,zi1 #缶
+    𠚇: hua4 #画
+    𠚈: shi2
+    𠚌𠚟𡔫𡕂𡕃𡕈: yun1 #㚃
+    𠚍: chang4 #𠚊
+    𠚎: tu2 #图
+    𠚏: cha1 #臿
+    𠚑𡇢: mian4 #面
+    𠚒𠚕: chi3 #齿
+    𠚖: qu3 #曲
+    𠚗: han2 #函
+    𠚘: tao1 #䈱
+    𠚚: bin1 #豳?
+    𠚛𡒽: kuai4 #块
+    𠚝: nai3 #乃
+    𠚞: dao1 #𠥒
+    𠚤: tong2 #仝
+    𠚦: si4 #似
+    𠚩𠚬𠧓: bo1 #剥
+    𠚪𠠴: zong4,cong2 #从
+    𠚫: yi4,ai4 #艾?,刈?
+    𠚰: ke4 #刻
+    𠚲: jian3 #㔓
+    𠚶: qi4 #𢩬
+    𠚷: chi3 #𠛔
+    𠚸: gou1 #𠛎
+    𠚾: ya4 #砑
+    𠚿: chan3 #铲
+    𠛁: yong4 #用
+    𠛄𠛟: yi4 #刈
+    𠛇: ren4
+    𠛈: fu4
+    𠛍: jie2 #截
+    𠛏: zhou1 #州
+    𠛗: jie2 #劫
+    𠛛𠛷: ge1 #割
+    𠛜: xing2 #刑
+    𠛝: geng1 #耕
+    𠛞: ben4 #夯
+    𠛠𠞚: wan1 #剜
+    𠛧: bo1 #剥
+    𠛨: chi4 #㓼?
+    𠛯: zhi4 #制?
+    𠛲: chuang4 #创
+    𠛴𠜽: cha4 #刹
+    𠛹: shan1 #删
+    𠛻: shua1 #𠛚?
+    𠛼: jing1 #荆
+    𠛽: jie2,qia4 #㓤?
+    𠛾: jin4 #𪟖
+    𠛿: qiu2,zhuo2 #虬
+    𠜀: chi4 #㓼
+    𠜆: chu1 #初
+    𠜇: ke4 #刻
+    𠜊: lie4 #列
+    𠜌: chuo4 #㲋
+    𠜒: li4 #𠞉
+    𠜔: zhi4 #制
+    𠜕: cha1 #𠝞
+    𠜚: xing2 #刑
+    𠜛𠝴𠝾: gang1 #刚
+    𠜜: gua1 #刮
+    𠜝: gong1 #工
+    𠜟: yuan1 #剈
+    𠜠: yuan1 #剈?
+    𠜡: fu4
+    𠜢: qing4
+    𠜣: li2 #剓?
+    𠜥: li4 #𠜒𠞉
+    𠜦: bing3 #𠱛丙
+    𠜨: he2 #劾
+    𠜩: tiao1 #𠛪
+    𠜪: qia4 #㓣
+    𠜫: li4 #利
+    𠜷𠝅: duan4 #断
+    𠜸: ji4 #剂
+    𠜺: lie4 #列
+    𠜿𠝁: zhi4 #制
+    𠝀: chuang4 #创
+    𠝂: juan4 #眷
+    𠝆: xing2 #𠜚?
+    𠝈: shu3 #鼠?
+    𠝉: zhi4 #𠝦?
+    𠝊: xing2
+    𠝋: wei4 #尉?
+    𠝌: bo1,po1 #剥
+    𠝍: sheng4 #剩?
+    𠝎: bing3
+    𠝒: pou1 #剖
+    𠝙: jiu3 #纠
+    𠝜: cuo4 #剒
+    𠝠: sou1 #𠝬
+    𠝡: qiao1 #锹
+    𠝣: jian3,qian2 #前
+    𠝦: zhi4 #制
+    𠝧: lu4 #勠
+    𠝩: zuan1 #劗
+    𠝮: sui4
+    𠝯: li2 #剺?
+    𠝰: wei1 #危
+    𠝱: chi4
+    𠝵: chuang4 #创
+    𠝶: chui2
+    𠝷: ban1,fen2 #鳻
+    𠝸: wu4 #務
+    𠞁: ce4 #策
+    𠞅: ji4 #畟
+    𠞋: ze2 #则
+    𠞌: pou1 #剖
+    𠞍: wen3 #吻
+    𠞎: jiu3,jiu1 #𠛩
+    𠞏: jie2 #劫
+    𠞐: cuo4 #剉
+    𠞑: liu2 #劉
+    𠞒: yan1 #剦?
+    𠞓: su4
+    𠞔: sheng3
+    𠞘: chi4 #㓼
+    𠞛: shan4 #骟
+    𠞜: li4,lie4 #䅀
+    𠞝: lie4 #茢
+    𠞣: jing1 #荆?
+    𠞦: ce4 #策
+    𠞨: lu4 #戮
+    𠞪: hao2 #𠢕豪
+    𠞫: ke4 #刻
+    𠞲: li2 #剺
+    𠞳: jian3 #剪
+    𠞴: chuang4 #创
+    𠞷: huo4,hua4 #劃?
+    𠞻: chi4 #𠞘
+    𠞼: tou2 #㓱
+    𠞽: jian3 #剪
+    𠟀: diao1,zhao1 #鳭
+    𠟁: liu2 #劉
+    𠟇: sheng4 #剩
+    𠟏: cuo4 #剒
+    𠟐: chuang4 #创
+    𠟑: fa2 #罚
+    𠟒: mao4
+    𠟔: ze2 #则
+    𠟕: qu3 #
+    𠟖: xi1 #𠟊
+    𠟘: jiao3 #剿
+    𠟙: yun2
+    𠟚: deng3
+    𠟛: zhao1 #釗?
+    𠟜: qian1 #𠠃
+    𠟝: jie4 #芥
+    𠟞: mao3 #脑
+    𠟠: jian3 #剪
+    𠟡: yan3,yan4,shan4 #剡
+    𠟢: xian2 #挦
+    𠟫: li4 #𠞉
+    𠟬𠠀: chua1,cui4 #㔍
+    𠟮: jie2 #魝
+    𠟱: huo4,hua4 #劃
+    𠟳: ping2 #𢆟
+    𠟵: ju4,ji2 #剧
+    𠟷: huo4,hua4 #劃
+    𠟾: jiao3 #剿
+    𠠂: li2 #劙
+    𠠅: jian3 #𢆚
+    𠠆: jian4 #剑
+    𠠈: cang1
+    𠠓: ying2
+    𠠕: piao1 #飘
+    𠠖: gong4 #𠞖
+    𠠘: ju1 #𠟰
+    𠠛𠠰: kuo4 #𠠎
+    𠠞: li2 #劙
+    𠠟: lian2 #劆?
+    𠠡: ti1 #剔
+    𠠣: mi2 #靡
+    𠠤: chan2 #劖
+    𠠧𠣆: piao1,piao4 #剽勡
+    𠠨: er4 #刵
+    𠠮: chan3 #刬
+    𠠱: ling2 #𠠢
+    𠠲: li4 #力
+    𠠸: cai2 #扐
+    𠠻: ban3,he4 #𠡀
+    𠠼: quan4 #劝
+    𠠽: huo3
+    𠠾: li1
+    𠠿: li4 #励?
+    𠡁𠡅: chi4 #敕
+    𠡆: xuan2
+    𠡇: tai2
+    𠡈: mo4,miao3 #劰
+    𠡉: gu3 #鼓
+    𠡋: rong2 #榮
+    𠡌: he2 #劾
+    𠡍𠡕: jin4 #劲
+    𠡓: yi4 #逸
+    𠡖: liu2
+    𠡗: chen2
+    𠡘: zai4
+    𠡙: pu2
+    𠡟: jiu1 #赳
+    𠡢: yi4 #𠡝
+    𠡦: nian2 #年
+    𠡨: wei3
+    𠡩: li2 #剓?
+    𠡪: dian4
+    𠡫: yi4 #勚
+    𠡬: wa1 #劸
+    𠡯: zi4 #𠡸
+    𠡰: jue2 #䠇
+    𠡲: zhao4
+    𠡴: li2 #剓
+    𠡵: wu4
+    𠡹: can2 #𠡡残
+    𠡼: xu4 #勖
+    𠡽: qing2 #勍
+    𠡾𠢉: yi4 #勩
+    𠡿: bing1 #兵
+    𠢀𠢄: qin2 #勤
+    𠢁: juan4 #倦?
+    𠢂: xie2 #拹
+    𠢊: bian1
+    𠢋: yun2
+    𠢎: jiu4 #舅
+    𠢏: juan4 #劵
+    𠢐: li2 #剺
+    𠢒: pi4 #㔡
+    𠢖: mian3 #勉
+    𠢗: di2 #敌
+    𠢘: hang1
+    𠢜: lu4 #勠
+    𠢦𠢫: zheng3 #整
+    𠢧: sheng4 #胜
+    𠢨: li4
+    𠢬: wu2
+    𠢭: jue2 #𠢤
+    𠢯: lu4 #勠
+    𠢰: xiang4 #勨
+    𠢶: jiao3 #剿
+    𠢷: kun3 #阃
+    𠢸: lao2 #勞?
+    𠢺: juan4 #𣜨
+    𠢻𠢾𠣋: lv4 #勴
+    𠢼: xun1 #勋
+    𠢽: bi4 #筚
+    𠢿: lei2 #㔣
+    𠣀𠣃: qiang3,jiang4 #勥
+    𠣁: lao2 #劳
+    𠣅: xie4 #㔎
+    𠣈: luan2,lian4 #挛
+    𠣌: zhuo4
+    𠣍: han4 #翰
+    𠣎: you4 #幼
+    𠣓: yun2
+    𠣔: chui2 #垂
+    𠣗: yi1 #医
+    𠣚: xun2 #旬
+    𠣜: xiong1,shi1
+    𠣝: yun2
+    𠣞: jun1 #军
+    𠣢: yun2
+    𠣣: gai4 #丐
+    𠣦: jun1 #军
+    𠣧: chu2 #芻
+    𠣩: yue1 #约
+    𠣭: hong1 #訇
+    𠣮: ju1 #鞠
+    𠣯: kuai3,kuai4 #蒯
+    𠣱: kui4 #喟
+    𠣴𠣸𠤇𡕴: fu4 #復
+    𠣷: jing4 #敬?
+    𠣹: yu4 #匓
+    𠣻: pao2 #匏
+    𠣼: pao2 #匏
+    𠣽: jiu4 #匓
+    𠤁: pao2
+    𠤂: qiong2 #穷
+    𠤃: pao2 #匏?
+    𠤅: e4 #㔩
+    𠤉: jue2 #绝
+    𠤋: shi1 #虱
+    𠤑: yi2 #疑
+    𠤒: yi4 #施
+    𠤓: yang2 #輰
+    𠤔: zhi3 #旨
+    𠤙: jiu4 #厩
+    𠤚𠤞𠤟: zhuo2 #卓
+    𠤛: zhen1 #真
+    𠤜: yi2 #疑
+    𠤠: chang2 #嘗?
+    𠤡: jian1
+    𠤢: qiu1 #丘
+    𠤤: zhen1 #眞
+    𠤥: ru2,ruan3 #𠤦
+    𠤨: han4
+    𠤪: yi1 #一
+    𠤬: fang1 #匚
+    𠤭: wang2,zheng4,pi3 #亡,正,匹?
+    𠤯: bei1 #杯
+    𠤱𠤳: fu3 #簠
+    𠤵: sheng1 #生
+    𠤶: ni4 #匿?
+    𠤷: yi2 #匜
+    𠤸: yao2 #𩋃
+    𠤻: bo1,bo3 #播
+    𠤽: zhi2 #直
+    𠤿: han2 #𠤾
+    𠥀: bei1 #杯
+    𠥁: qi3
+    𠥂: jiu4 #柩
+    𠥃𠥶: ti1 #㔸
+    𠥄𠯕: shen4 #甚
+    𠥅: qu1 #區?
+    𠥆: kuang1 #匩
+    𠥉: bi4 #箄
+    𠥋: hu1 #匫
+    𠥌: bi3
+    𠥏: fu2 #幅
+    𠥒: dao1 #𠚜
+    𠥚: gou4 #彀
+    𠥛: wei2 #帷
+    𠥟: fu3 #簠
+    𠥡: e4 #噩?
+    𠥣: bian1 #笾
+    𠥥: hui4 #匯?
+    𠥭: dao1
+    𠥮: lou4 #㔷
+    𠥯: di3 #抵
+    𠥱: yue4 #月
+    𠥲: ya4 #亜?
+    𠥳: guang1
+    𠥵: ye3 #𠥇
+    𠥷: ou1 #歐?
+    𠥺: ou1 #鏂
+    𠥻: ji2 #疾
+    𠥽: zi3,ji3 #𠂔
+    𠥾: cu4 #卒
+    𠦀: bao3 #保
+    𠦁: dou3,zhu3 #斗
+    𠦆: ban1 #𠦒?
+    𠦇: hai4 #亥
+    𠦉: shi2 jin1 #?
+    𠦍: tao1 #夲
+    𠦑: shu1 #叔
+    𠦓: pi1 #丕
+    𠦔: shi4 #世
+    𠦕𠦘: gong3 #𢀜
+    𠦖: an4 #岸?
+    𠦙: zhi1 #支
+    𠦚: nian2 #年
+    𠦛: bing1 #兵
+    𠦞: bei3
+    𠦟: ji1,wei4 #击,軎
+    𠦠: dan4
+    𠦢: xie2 #协
+    𠦣: ji2 #𠦫
+    𠦤: chan2,shan4,dan1 #单
+    𠦥: bu4
+    𠦦: fan2
+    𠦩: shi2 mei2
+    𠦭: bu4
+    𠦮: ju3 #举
+    𠦰: geng3
+    𠦱: li4
+    𠦴: che1,ju1 #车
+    𠦵: shi1 #师
+    𠦶: ge2 #革
+    𠦷: wo4 #斡
+    𠦸: luan4 #乱
+    𠦼: sun3
+    𠦽: hui4
+    𠦾: se4
+    𠧁: dang1
+    𠧂: jing4
+    𠧃: pi2 #脾
+    𠧄: gan4 #幹?
+    𠧈𠧉: dun1,tuan2 #敦
+    𠧊: yang2 #陽?
+    𠧎𠧏𠭟𠮗: luan4,luan2 #乱
+    𠧐: chou1 #犨
+    𠧑: rang3 #壤
+    𠧔: jing1
+    𠧘𠧺𠧾: qian2 #虔
+    𠧜: xi1 #西
+    𠧝: xu1 #虚
+    𠧡𠧢: zhuan1 #專
+    𠧣: jin4 #近
+    𠧥: li4 #丽
+    𠧦: zi1 #兹
+    𠧨: jiu4 #咎
+    𠧬: jun4
+    𠧭: pu2
+    𠧮: bu3
+    𠧯: huan4 #奐?
+    𠧱𠨅: nai3 #乃
+    𠧲𠧽𡘻𡙉: heng2 #衡
+    𠧳𠧹𠧻: ke4 #克
+    𠧶: ke4,kei1 #剋
+    𠧸: lu3 #卤
+    𠧼: su4 #粟
+    𠨀: zhen1 #貞
+    𠨁: xie4 #𠨇?
+    𠨂: wo3 #我
+    𠨄𠨈: xie4 #𠨇
+    𠨇: cheng2 #乘
+    𠨉: bu3
+    𠨋: tiao2 #𠧪
+    𠨏: you4
+    𠨓𠨖: zhuan4 #𠨎𩔊
+    𠨔: yi4
+    𠨗𠨳: e4 #厄
+    𠨙: yu4 #御
+    𠨛𠨝: yuan4 #怨
+    𠨞: qing1 #卿
+    𠨣: dou4 #𨮃
+    𠨨𠨩: qian1 #迁
+    𠨫: luan3 #卵
+    𠨬: zhi1 #卮
+    𠨯: yu3 #宇
+    𠨰: nv3 #女
+    𠨱𠨷𠩟: chen2 #辰
+    𠨹: pai4 #派?
+    𠨺𠩋: chi4 #斥
+    𠨽: bi4 #庇?
+    𠩅: wa4 #瓦
+    𠩇: mang2,pang2 #厖,龎?
+    𠩊: zhi3 #旨
+    𠩌𠩛: xi2 #席
+    𠩍: ying4,ying1 #应
+    𠩎: zha3 #厏
+    𠩑: pang2 #龎?
+    𠩒: hou4 #厚?
+    𠩓: tiao1 #庣
+    𠩖: geng1 #庚?
+    𠩙: e2 #峨
+    𠩚: you2 #庮
+    𠩜: meng3 #猛
+    𠩝: fang2 #房
+    𠩡: ze4 #昃
+    𠩢: ting2 #庭
+    𠩣: xiong1
+    𠩦: yi2 #𠩗
+    𠩨: nu2 #孥
+    𠩩: ze4 #仄
+    𠩭: chun2 #淳
+    𠩮: dun4,shun3 #盾
+    𠩱: shou4,shu2,dao4 #瓙
+    𠩲𠩶: bian3 #𠪂匾
+    𠩳: si1 #虒?
+    𠩴: xia4 #厦
+    𠩸: kui4 #馈
+    𠩹: sou3 #𠪇
+    𠩻𠪅: duan4 #段
+    𠩼𠪁: dao4 #盗
+    𠩾: qiu1
+    𠪆𠪏𠪼: jue2 #厥
+    𠪈: qie4,ke4 #𠩧
+    𠪉: cuo2 #嵯
+    𠪍: you1 #忧
+    𠪎: an1 #庵?
+    𠪓: nu3 #砮
+    𠪔𠪬: yin2 #崟
+    𠪕: li4,li2 #麗?
+    𠪖: li4 #坜
+    𠪝: dian4 #奠
+    𠪞: cuo4 #厝
+    𠪠: li4
+    𠪡: tu2
+    𠪥: yuan2 #原
+    𠪦: qie4,ke4 #厒
+    𠪪: zui1,chui2 #厜
+    𠪫: fa2 #瞂
+    𠪭: ao2 #厫
+    𠪯: yao2 #𢋇
+    𠪰: yuan2,yuan4 #原
+    𠪵: dong3
+    𠪹: meng2 #甍
+    𠪽: you2
+    𠪾: li4 #厯?
+    𠪿: li4
+    𠫀: bi4
+    𠫁: yao3
+    𠫇𠫊: ting1 #厅
+    𠫈: ji4 #𣯅
+    𠫋: su1 #㢝
+    𠫑: biao1 #驫?
+    𠫔𠫖𠬟: gong1 #肱
+    𠫕: ju4,mu4 #巨,目
+    𠫗: rou2,si1
+    𠫙: qiong2 #穹
+    𠫚: mou2,mu4 #牟
+    𠫞: dui4 #兑
+    𠫟: qu4 #去
+    𠫠: tu2 #徒
+    𠫡: bao3 #呆保
+    𠫢: zhuan1 #叀？
+    𠫥: qu4 #去
+    𠫦: di4 #帝
+    𠫧: bing3
+    𠫩: zheng1 #争
+    𠫪: liu4 #六
+    𠫫: hua2 #华
+    𠫬𡋢: you1 #幽
+    𠫯: lei2,lei3,lei4 #累
+    𠫰: can1,shen1,cen1,san1 #参
+    𠫱: zhai1 #斋
+    𠫳: ji2 #彶
+    𠫴: shao3
+    𠫻𡘞𡙂: ben3 #畚
+    𠫼: qi2,ji4 #齐
+    𠫽: sa1 #仨
+    𠫿: fan4 #軬
+    𠬀: xu4,chu4 #畜
+    𠬂: jia3 #斝
+    𠬄: san1 #叁?
+    𠬅: san1 #叁
+    𠬇: qi4 #弃
+    𠬊: shan1,xian1
+    𠬏: wang3
+    𠬐: qi2 #脐
+    𠬑: qu4 #去
+    𠬔: ding3 #鼎?
+    𠬗: yi2
+    𠬘: ji1 #齏
+    𠬚: gui3 #宄
+    𠬡: fan3 #反
+    𠬤: yi4,ze2,gao1 #睪
+    𠬧: shou1 #收
+    𠬩: fu2 #服
+    𠬫𠭝𠭠𠭼𡕶: jun4,ruan3 #㼱
+    𠬭: guai4 #怪
+    𠬯𠬹: xi1 #希
+    𠬰: xi1 #𠬬
+    𠬱𠰎: pi2 #皮
+    𠬲: sou3 #叟
+    𠬳: gao4 #诰
+    𠬴: san1
+    𠬵: you4
+    𠬷: wu3
+    𠬺: you3 #友
+    𠬻: feng4 #奉
+    𠬼: ben1,ben4 #奔
+    𠬽: ye4
+    𠬿: bing1 #兵
+    𠭀𠭚𠭞: ruo4,re3 #若
+    𠭁: de2,dei3 #得
+    𠭂: jiao4 #𡥉
+    𠭃: qian1,xian2 #臤
+    𠭄: shu4
+    𠭅: zheng4
+    𠭆𠭏: shi4 #事
+    𠭊: jia4,xia2 #叚
+    𠭌𠭨: sang1 #桑
+    𠭍: geng1,geng4 #更
+    𠭐: yan2 #延?
+    𠭑: qi2
+    𠭒: man4 #曼?
+    𠭓: shu1 #叔?
+    𠭔: ban3 #阪
+    𠭕𠭡: zou4 #奏
+    𠭛: bian4,pan2 #弁
+    𠭜: shen1 #申
+    𠭢: jing3 #阱
+    𠭣: tun2 #豚
+    𠭦: bao4 #𤔣?
+    𠭧: shou4 #受
+    𠭩: you1
+    𠭪: wa4
+    𠭫: ji4
+    𠭬: ji1 #鳮?
+    𠭭: yu2
+    𠭮: jing3 #穽
+    𠭱: liu2 #刘
+    𠭲: yang2 #揚
+    𠭳: kang1 #康
+    𠭷: li2 #𠭰
+    𠭸: gai4 #㕢
+    𠭻: yong1 #庸
+    𠭽𠭾𠮇: si4 #㣈
+    𠮁: sha1 #杀
+    𠮂: fu2 #黻?
+    𠮄: zhuo2 #𠭴
+    𠮅: hong2
+    𠮈𠮉𡓝: rui4 #叡
+    𠮋: qu4 #趣
+    𠮍: sou1 #𢯱
+    𠮎: wu1 #巫
+    𠮐: zhuo1,zhu2 #𠮌
+    𠮒: xiang1 #𥫖?
+    𠮓: bian4 #变
+    𠮔: li4
+    𠮕: you1 #忧
+    𠮖: luan2 #奱
+    𠮘: zhai1 #齋
+    𠮛: zhi3 #旨
+    𠮝: mi1,ji1 #卟
+    𠮞𠮲𠯊: yu4,xu1 #吁
+    𠮢: you4 #右
+    𠮣: wu3 #吾
+    𠮤𠯖: han4 #𢎘
+    𠮥: zhao4,shao4 #召
+    𠮬: you1 #𠮫
+    𠮮: gua1,hua2,hou4 #𠯑,后
+    𠮸: kou3
+    𠮺: kou3
+    𠮻: jiu3
+    𠮼: jiao4 #噭
+    𠯌𠯛𠲲𠳈𠳺𠳻𠴽: lin4 #吝
+    𠯎: ji3
+    𠯏: chi1,ji2,qi4 #吃,𠺪
+    𠯒: hua4 #化
+    𠯚: huang1 #荒
+    𠯝𠯞: di3 #呧
+    𠯡𠰆𠹙𡄊: chi1 #吃
+    𠯤: jiang3
+    𠯥: cui4
+    𠯧: kou3
+    𠯨: fen1
+    𠯬: jie2 #𠯙
+    𠯮: pin3 #品
+    𠯵: wu2 #吴
+    𠯶: ju4,gou1 #句
+    𠰊: pi4 #𠯔
+    𠰗: hu1 #呼
+    𠰙: za2 #囐
+    𠰝: xi4 #呬
+    𠰞: fu4 #复
+    𠰡: jin1 #𠰇
+    𠰣: bi3,bie2
+    𠰤: fang1
+    𠰥: ruo4 #若
+    𠰦: he2,han4
+    𠰧: guo2,yu4 #国
+    𠰨: e2
+    𠰩: yong4 #呥
+    𠰪: zheng4
+    𠰫: chun1
+    𠰬: you2
+    𠰭: mao3
+    𠰮: sheng1
+    𠰯: cong1
+    𠰰: dai4
+    𠰱: zhi4
+    𠰵: fu1 #趺
+    𠰶: wang2 #王
+    𠰷: lu2 #嚧
+    𠰸𠽥𠾰: yan4,ye4 #咽
+    𠰿: yong3 #咏
+    𠱅: sheng4 #𪢎
+    𠱆: yun4,dan4
+    𠱎𠳉𠱱: di3 #诋
+    𠱏: wa3 #咓
+    𠱒: ru2 #吺
+    𠱕: cui4,su1 #𠻜
+    𠱖𠳱𡀚: xun4 #讯
+    𠱟: chi1 #嗤
+    𠱣𠽭𠽮𠽯: di1 #𡄷
+    𠱦: zhong4
+    𠱪: e4 #𠱫
+    𠱬: zhou1 #周
+    𠱮: yuan1 #肙?
+    𠱴: yin2 #唫?
+    𠱵: wu2 #吴?
+    𠱹: tuo1
+    𠱺: cheng2
+    𠱻: zai4
+    𠱽: zai4
+    𠱿: xie2
+    𠲀: li4
+    𠲁: sui1 #虽?
+    𠲂: wu2
+    𠲃: yin4
+    𠲄: mao3
+    𠲅: se4,pao2 #咆?
+    𠲆: he2,han4 #和
+    𠲇: bu4
+    𠲈: cuan1
+    𠲉: ren4
+    𠲐𠶩: gu1 #呱
+    𠲕: chuang2 #噇
+    𠲘: shan4 #善
+    𠲝: duo1 #嚉
+    𠲣𡁲𡄶: ti4 #嚏
+    𠲦: rong2
+    𠲩: e4,xue2 #𠱫
+    𠲪: e4 #呃
+    𠲫: ji3 #𠱨
+    𠲬: ji1 #𠰠
+    𠲭𠳘𠸰: you1 #呦
+    𠲯: hui4 #诲
+    𠲰: yun3 #喗
+    𠲶: mian3 #喕
+    𠲼: nie4 #啮
+    𠳄: ling2 #灵
+    𠳅: wen4 #问
+    𠳍: ti4 #嚔
+    𠳛: zi1
+    𠳜: mai4 #唛
+    𠳞: que4 #佉
+    𠳟: nong4 #哢
+    𠳠: zhang3
+    𠳡: chuan4
+    𠳢: chi4
+    𠳣: han4
+    𠳤: bu4
+    𠳥: tong2
+    𠳦: man4
+    𠳧: long2
+    𠳨: mei2
+    𠳩: bi3
+    𠳪: wen3 #吻
+    𠳫: beng4,peng2 #𥦜
+    𠳮: qiao2 #乔
+    𠳯: hao4 #号
+    𠳰: xie4 #𠲊
+    𠳵: lin2 #邻
+    𠳷: qu1 #呿
+    𠳸: ji1 #嗘
+    𠴀: ya3 #哑
+    𠴁: xu3,hou3 #呴
+    𠴃𠸅: ku1 #哭
+    𠴅: rong2 #容
+    𠴆: tong1
+    𠴈: hong2 #吰
+    𠴍: shun3 #吮
+    𠴎: ao
+    𠴏: mang2 #吂
+    𠴞: ban4
+    𠴟: mie1 #咩
+    𠴧𠻎: ji4 #哜
+    𠴬𠿚: zha2 #喋
+    𠴮: pen1 #喷
+    𠴴𠶴: za1 #咂
+    𠴶: wa1 #𠴺
+    𠴷: jue2 #𧮫
+    𠵀: shi1 #师
+    𠵁: chou2 #雠
+    𠵂: lan2 #啉
+    𠵃: za2 #啈
+    𠵄: xu2 #冔
+    𠵊: shan4 #善
+    𠵑: xu3 #𠴁?
+    𠵒: cui4 #啐
+    𠵔: peng4
+    𠵕: mu4
+    𠵖: jian1 #溅
+    𠵗: guang1
+    𠵙: yin2
+    𠵚: xi1,an4
+    𠵛: e4
+    𠵜: wang3
+    𠵝: ya2
+    𠵞: wu4
+    𠵟: mu4
+    𠵡: sa4 #𠱡
+    𠵢: xia4,he4 #吓
+    𠵥: wu4 #悟
+    𠵪: ning2 #𤕦?
+    𠵰: xiao1 #哓
+    𠵲: ge3 #哿
+    𠵵: an3 #唵
+    𠶁𡁝: xing1 #𡃳
+    𠶋: jie4
+    𠶒: dan4 #𭈂
+    𠶗: zhi2
+    𠶠: zhi4
+    𠶤: shang4
+    𠶪: hao2 #嗥
+    𠶭: lou #喽
+    𠶮: xi3 #喜
+    𠶳𠶶: qi3 #启
+    𠶵: qi3 #杞
+    𠶺: geng3 #哽
+    𠶽: guan1 #𠴨
+    𠷆: zha4 #咋
+    𠷗: yan4 #谚
+    𠷘: jiu1 #啾
+    𠷚: sha4 #嗄
+    𠷜: gou3 #苟
+    𠷝𡃪: kui4 #喟
+    𠷣: chi1 #嗤
+    𠷥: ting2
+    𠷧: mie4
+    𠷩: jiang1
+    𠷪: hai4 #嗐
+    𠷬: jian4 #谏
+    𠷭: han2 #㖤
+    𠷮: du2
+    𠷯: mei2
+    𠷰: mian3 #喕
+    𠷱: gan1
+    𠷲: xun2 #噚?
+    𠷳: gui3 #晷
+    𠷴: hou4
+    𠷵: zhou4
+    𠷶: long2
+    𠷷: ji4
+    𠷹: shuang3 #爽
+    𠷼: nv4 #恧
+    𠷽: ce4 #策
+    𠸀: yao3 #咬
+    𠸃𠸇: xun4 #噀
+    𠸆: dan4,tan2 #澹
+    𠸌: hui4
+    𠸚: hou3 #吼
+    𠸤: dai4
+    𠸦: kan1
+    𠸪: luo4
+    𠸭: shi2,ti2 #啼㖷
+    𠸯: yan4
+    𠸷: fu2 #哹
+    𠸻: sha4,za2 #唼
+    𠸿: duan4 #斷
+    𠹂: ci2 #飺
+    𠹒: hong3 #哄
+    𠹚: yun2 #呁
+    𠹜: nie4 #喦
+    𠹞: an1,an2 #啽
+    𠹡: huang2 #喤
+    𠹣: ning2 #𠽽
+    𠹧𠾃𠿧𡂦𡃬𡄚𡅟: shang1 #商
+    𠹨: cu2 #殂
+    𠹪: fu3 #䞤
+    𠹫𠻮𠾂: se4 #啬
+    𠹬: huo4 #旤?
+    𠹮: zui3
+    𠹱: qu2
+    𠹿: shi1 #𡀾
+    𠺀: yong3 #𠹍
+    𠺁: ruo4
+    𠺂: rang3 #嚷?
+    𠺃: zhen4
+    𠺄: an3 #唵
+    𠺅: lie4
+    𠺆: tao4
+    𠺇: xi3 #喜?
+    𠺈: nian2
+    𠺉: men2
+    𠺊: rong2
+    𠺋: que1
+    𠺍: chen1
+    𠺎: ma4 #駡
+    𠺏: chi4 #啻
+    𠺑: xiao4 #笑
+    𠺓: ai2 #啀
+    𠺠: long2 #咙
+    𠺡: ke2 #咳
+    𠺤: zhe2 #哲
+    𠺽: sha2 #啥
+    𠻄: huang4
+    𠻉: shi4
+    𠻑: chi1,xi1
+    𠻔𠼥𠽁: xue2,jue2 #噱
+    𠻕: chuai4,zuo1 #嘬
+    𠻖: xing1 #星
+    𠻢: hu1 #嘑
+    𠻩: tiao3 #誂
+    𠻭: hu2 #壷
+    𠻯: zha1 #哳
+    𠻰𠼛: fu4 #阜
+    𠻲: hao3 #𭉞
+    𠻶: mo4 #嗼
+    𠻾: wang4
+    𠻿: chan3
+    𠼀: zhang1
+    𠼁: rang3 #嚷?
+    𠼂: chen2
+    𠼃: chan2
+    𠼄: shu4
+    𠼅: yan1
+    𠼆: zhuo2 #𠿡
+    𠼇: lou4
+    𠼈: ruo2
+    𠼉: chun2 #唇
+    𠼊: wei4 #喂?
+    𠼋: wen4
+    𠼌: zheng1
+    𠼍: ji1 #噭
+    𠼎: mi3
+    𠼏: zuo4
+    𠼐: li2 #𠼝
+    𠼑: hao4
+    𠼒: ben4
+    𠼔: chang2
+    𠼙: sang3 #嗓
+    𠼚: bai4 #呗
+    𠼜: nie4 #啮
+    𠼣: chuo4 #啜
+    𠼧: yan2 #岩
+    𠼨: jiao4 #嘂
+    𠼫𠾑: xian2 #衔
+    𠽉: shen1
+    𠽋: ni4
+    𠽛: yin1
+    𠽠: duan4
+    𠽢: bo2 #㗘
+    𠽳: pan2 #𠽲
+    𠽴: chuan3 #喘
+    𠽸: xiao1,ao2 #囂
+    𠽺𠾅𠿦𡁬𡂨𡅚𡓶: yin2 #嚚
+    𠾁𡂞: yi4 #呓
+    𠾄: shan4 #善
+    𠾈: you2 #游
+    𠾊: tuo4 #唾
+    𠾎: san3
+    𠾒: ya3
+    𠾖𡄛: qi4 #器
+    𠾗: han4 #𡁀
+    𠾘: yan4
+    𠾙: fu4
+    𠾚: fei4
+    𠾛: huang2
+    𠾜: se4
+    𠾝: dan4
+    𠾞: fen2
+    𠾟: ke3
+    𠾠: gou3
+    𠾡: deng3
+    𠾣: jin4 #𠾬
+    𠾦: bei1 #悲
+    𠾧: shou4 #兽
+    𠾪: yuan4 #噮
+    𠾯: xiao1 #嚣
+    𠾱𡄋: zan3,can3 #噆
+    𠾳: ge1
+    𠾺: shan4 #善
+    𠾿: xiang4
+    𠿅: huan4 #唤
+    𠿌: yao2 #嗂
+    𠿐: man2 #谩
+    𠿖: biao1 #彪
+    𠿙: pao2 #咆
+    𠿨: gan1
+    𠿩: rui4
+    𠿮: yin3 #饮
+    𠿳: lian2
+    𠿺: zang4
+    𠿻: qiao4
+    𠿼: sha1
+    𠿽: fu3 #鬴釜
+    𠿾: an1 #𫫡
+    𠿿: yi4 #𭇀
+    𡀀: lin3
+    𡀁: se4
+    𡀂: lei2
+    𡀃: zhen1
+    𡀄: kun3
+    𡀅: ji1
+    𡀆: nu4,pi3 #怒,嚭?
+    𡀈: ting2
+    𡀉: die2 #疊?
+    𡀊: run4
+    𡀋: an1
+    𡀌: sui4
+    𡀍: yu4
+    𡀎: wei1
+    𡀏: wei2
+    𡀐: zhu4 #佇
+    𡀒: xiao1,jiao1 #嘐
+    𡀓: ling2 #灵
+    𡀕: hou2 #喉?
+    𡀛: hu1 #呼
+    𡀜: nong4 #弄
+    𡀸: tong1
+    𡀻: yang2
+    𡀼: ying4 #𡀘
+    𡁂: chi2 #𡂙
+    𡁃𡁦𡄙: ze2 #赜
+    𡁄: yu4 #𠽵
+    𡁅𡅛: chan2,chan4 #嚵
+    𡁐: yi4 #嗌
+    𡁖: ye4 #㗼
+    𡁗: qiao4 #𠿕
+    𡁟: bin1 #𰈚
+    𡁠: er3,nuo4 #喏
+    𡁡: kuo4
+    𡁢: wen1
+    𡁣: ma3
+    𡁤: ge2
+    𡁥: tuo2 #鼍?
+    𡁩: yun4 #韵
+    𡁫: zui3 #嘴
+    𡂉: shi4 #誓
+    𡂋: dan4 #啖
+    𡂔: qi1,zu2 #嘁
+    𡂜: chuo4 #𣤕
+    𡂥: tan4 #叹
+    𡂬: jin3
+    𡂶𡄌: jie2 #碣
+    𡂷: kuan1
+    𡂸: zhi2
+    𡂹: shen3
+    𡂺: yang3 #养,痒
+    𡂻: qing4
+    𡂼: ma4
+    𡂽: tan2
+    𡂾: teng2
+    𡃎: fen2
+    𡃜: que4
+    𡃞: zan4
+    𡃟: nang2 #囊?
+    𡃠: fou3,pou3,tou4 #咅
+    𡃣: zhan4 #战
+    𡃥: heng1 #哼
+    𡃧: xu1 #嘘
+    𡃨: xi1 #嘻
+    𡃫𡅔𡅝𡅮𡅴𡆉𡅾: yan2 #严
+    𡃭: ge1 #歌
+    𡃮𡆓: zhou1,chou2 #诪
+    𡃯: tang2 #唐
+    𡃰: xi1 #嚱
+    𡃱: ta4,huan2 #嚺,𡄤
+    𡃲: nei3
+    𡄂: pi3 #嚭?
+    𡄃: ma4
+    𡄄: can1
+    𡄅: tu2 #圖?
+    𡄆: xue2
+    𡄈: xin1 #馨
+    𡄉: ning2 #𦷠
+    𡄗: bo2,pao4,bao4 #嚗
+    𡄘: yi3 #齮
+    𡄜: nang2 #囊?
+    𡄝: xi3 #囍?
+    𡄞: tuo2 #鼍?
+    𡄠: chuan3 #喘
+    𡄥: yan3 #噞
+    𡄦: lin2
+    𡄸: yong1,yong3 #噰
+    𡄺: piao1 #嘌
+    𡄼𡅗: xi4 #虩
+    𡄿: nang2 #囊?
+    𡅀: pei4
+    𡅁: zhai1 #𡅓
+    𡅜: bao4,po2 #𧭤
+    𡅞: lan2 #嚂
+    𡅣: xiao1
+    𡅤𡅸𡆐𡆒: jian1 #艰
+    𡅦: gao1 #鼛
+    𡅧: nan2 #𭉼
+    𡅰: cao2 #嘈
+    𡅲: nie4
+    𡅼: fan4 #𡁈
+    𡅿: tan2 #嘾
+    𡆃: shan4
+    𡆊: dang3
+    𡆋: jue2 #嚼?
+    𡆎: tian3 #靦
+    𡆔: xiao1 #嚣
+    𡆛: zhui1
+    𡆜: zhu3
+    𡆝: luan2
+    𡆟: ken3 #啃
+    𡆡: qi3 #起
+    𡆧: chuang1 #囱
+    𡆨: liang2 #良
+    𡆫: wei2 #围
+    𡆭: wan4
+    𡆳𡆷𡇆: hu1 #曶
+    𡆵: kun3 #壼
+    𡆶: mu2,xi1 #模,息
+    𡆹: yu3
+    𡆺: shou3
+    𡆻𡆿𡇎𡇏𡇕𡈑: guo2 #国
+    𡆾𡇇: jiong3 #冏
+    𡇃: yi4 #邑
+    𡇉: hu4 #笏
+    𡇋: yuan2 #源
+    𡇌: hui2 #回
+    𡇍: hua4 #画
+    𡇐: ben3
+    𡇔: lou2 #娄
+    𡇛: zhi2 #直
+    𡇡: mu4 #目
+    𡇣: gu3 #古
+    𡇥: ping1 
+    𡇨: nan1 #囡
+    𡇪: jiao4 #窖
+    𡇫𡇴𡈖𡈇: tu2 #图
+    𡇹: yue4 #月
+    𡇽: yan1 #烟
+    𡈂: yuan2 #園?
+    𡈃: yuan2 #園?
+    𡈄: tu2 #圗?
+    𡈔: le4 #𡇢
+    𡈛: yuan1
+    𡈜: piao4
+    𡈝: man3,bo2 #满
+    𡈟: kan4 #看
+    𡈢𡈳𡈷: kun3 #捆
+    𡈤: yuan2 #園
+    𡈥: zhuo2
+    𡈪: man3 #满
+    𡈫𡈸: e2,you2 #囮
+    𡈬: chuan2
+    𡈱: you2 #㘥?
+    𡈻: luan2 #圞
+    𡈾: yi4 #瘗
+    𡉀: quan2 #全
+    𡉁: nai3
+    𡉃: han3,yan4 #厂?
+    𡉈: zai4,cai3 #在
+    𡉊𡉝𡉨: ji1 #基
+    𡉌: jiu3
+    𡉍: juan1,zui1 #脧
+    𡉔: se4 #涩
+    𡉘𡊋𡊽𡎈: feng1 #封
+    𡉙: xi4 #墍
+    𡉜: zhen1,dou3 #㘰
+    𡉞: hong2 #𧮯谹
+    𡉟: zhuang4 #壮
+    𡉠: zai4 #在
+    𡉢: jian1 #堅
+    𡉣𡉿𣏅: gen1 #根
+    𡉤: gen1,bu4 #根
+    𡉥: chong1,zhong1
+    𡉧: sheng1
+    𡉬𡉳𡉶𡊆𡊇𡊈𡊓𡌟𡍓: chi2 #坻
+    𡉯: mu3 #牡
+    𡉰𡊏: zhi4 #至
+    𡉱𡊢: tan1 #坍
+    𡉲: jun1 #均
+    𡉵: zhao4 #兆
+    𡉹: she4 #社
+    𡉽: lu4 #甪
+    𡊀: tai4 #汰
+    𡊂𡊎: zuo4 #坐
+    𡊃: ban3 #阪
+    𡊊: yi2 #圯
+    𡊌: tai4 #汰
+    𡊐: ao4 #垇
+    𡊑𡊒: xi3 #玺
+    𡊔: shi4 #市
+    𡊕: shu1,ya3
+    𡊖: ben3
+    𡊗: jia1
+    𡊘: yan4
+    𡊙: jian1 #堅?
+    𡊚: bai2,po1 #坡
+    𡊜: dian4 #坫?
+    𡊤𡐐: peng2 #堋
+    𡊦: gou4 #垢
+    𡊬𡌖: keng1 #坑
+    𡊱: zhao1
+    𡊴: ni2 #泥
+    𡊵: tuo2 #堶
+    𡊷𡋳𡏴𡑃: yin2 #垠
+    𡊹𡍏𡍯𡎱𡐲: yin1,shu4 #垔
+    𡊺: yang2,han4 #瀚
+    𡊾: zhai2 #宅
+    𡊿: chong1,chong3
+    𡋄: quan2
+    𡋅: an1 #垵
+    𡋆: xi4
+    𡋇: fen2 #𣴞?
+    𡋈: yin4
+    𡋉: wa1
+    𡋊: shu4
+    𡋋: fan4 #盕?
+    𡋌: yu2
+    𡋍: shi4,gong4 #筮
+    𡋎: lao3 #𡑍?
+    𡋏: zuo4 #坐?
+    𡋐: zuo4 #坐?
+    𡋑: zuo4 #坐?
+    𡋒: xue3
+    𡋔: xi4
+    𡋕: xun2
+    𡋖: jian1
+    𡋛: tai2 #臺
+    𡋜: zi3 #胏
+    𡋝: chi3 #垑
+    𡋞: hu2 #胡
+    𡋠: bao3,pu4 #堡
+    𡋓𡋫: you3 #𡊧
+    𡋮𡋸𡌱𡐟: ao4 #墺
+    𡋱: long4 #𥦌
+    𡋺: yan2 #埏
+    𡋿𡌙: dui1 #堆
+    𡌁𡌑𡌒: xing2 #型
+    𡌆: yu2 #畬
+    𡌇: qi4 #砌?
+    𡌈: na4
+    𡌉: xiao4
+    𡌊: qiu2
+    𡌋: qiu2
+    𡌌: qin2
+    𡌍: sheng1
+    𡌎: yan2
+    𡌏: shen1 #竧
+    𡌐: dian4
+    𡌓: lu3 #塷
+    𡌕: gang1 #堽
+    𡌗: yuan4,huan2 #垸
+    𡌘: tu2 #涂
+    𡌝: ao4 #坳
+    𡌢: han4
+    𡌥: e4 #堊
+    𡌫𡌬: tai2 #臺
+    𡌯: ye3 #漜
+    𡌵: zi3 #胏?
+    𡌷: ku1 #堀?
+    𡌻: geng1
+    𡌼: qi2,fang4 #岐
+    𡌽: dian4
+    𡌾: kong1 #埪?
+    𡌿: jing1 #𫮎
+    𡍀: fang2 #妨
+    𡍁: zhi1
+    𡍂: zuo4
+    𡍃: fu4
+    𡍅: cheng2
+    𡍆: fen1
+    𡍇: qian1
+    𡍈: bo2
+    𡍉: bei4
+    𡍋: ben4 #笨
+    𡍎𡑙: zhe2 #磔
+    𡍑: di4 #地
+    𡍔: che4 #坼
+    𡍕𡐽: die2 #堞
+    𡍗: nao3 #脑
+    𡍛: yin2
+    𡍠: zhi2 #埴
+    𡍧: bo2 #𡋯
+    𡍭: ken3 #垦
+    𡍰: fa2,fei4 #墢
+    𡍱: cang2,zang4 #藏
+    𡍳: xi4 #塈
+    𡍴𡍺𡒀𡔅𡔌: chong2,zhong4 #重
+    𡍸: nie4,lei3 #嵒,垒
+    𡍹: bai3
+    𡍼: tu2 #塗?
+    𡍽: qian2
+    𡍾: shan4 #𪤆?
+    𡍿: yan4 #堰?
+    𡎀: jin4 #盡?
+    𡎂: sheng1
+    𡎃: shu4
+    𡎄: yin1 #垔?
+    𡎅: tan4
+    𡎆: dun1 #墩
+    𡎇: hou2 #堠
+    𡎋: hou4 #厚
+    𡎌: ai4 #壒
+    𡎏: nie4 #㙞
+    𡎕: yi3 #蟻
+    𡎖: xun1 #塤
+    𡎗: lie4 #𡊻
+    𡎠: ying4
+    𡎧: mei2 #㙁
+    𡎨: xu4,lv4 #婿
+    𡎩: geng3 #埂
+    𡎪: hao4 #𧇼
+    𡎵: zhai4 #寨
+    𡎶: yi4 #瘗
+    𡎷㲄: ku1,jue2 #
+    𡎹: qin2,jin1 #埐
+    𡎼隑: gai1,gai4,qi2,ai2 #
+    𡎽: fu2 #郛
+    𡏃: yi4 #㙪
+    𡏇𡑸𡒰𡒴𡒿𡓬: di4 #地
+    𡏈: zheng3 #拯
+    𡏉: yan4
+    𡏊: qian1
+    𡏋: pu2,pu3 #𰊉
+    𡏌: ru4
+    𡏍: e4
+    𡏎: yi4
+    𡏏: gong1
+    𡏐: xin1
+    𡏑: qin2
+    𡏒: gen1
+    𡏓: chang4
+    𡏔: zhuo2
+    𡏕: cheng2 #塍
+    𡏗: duo2 #多
+    𡏜: shu2 #䴰
+    𡏝𡏫: zhe2,jie2 #榤
+    𡏟: yao2 #窑
+    𡏡: long3 #壠
+    𡏨: jie1 #堦?
+    𡏬: liu2 #瑬
+    𡏶: fen2 #坟
+    𡏷: xun2 #𡑎
+    𡏸𡒐: zhi4 #懫
+    𡏹: ling2 #陵
+    𡏻: gao1
+    𡏿: bu4
+    𡐀: dang4 #𡑑?
+    𡐁: yi4
+    𡐂: sui4
+    𡐃: dang1
+    𡐄: ji2
+    𡐅: xue3
+    𡐆: dan4
+    𡐇: lun2
+    𡐈: lin2
+    𡐉: tai2 #臺
+    𡐊𡑼𡒼: ji1 #墼
+    𡐍: he4 #壑
+    𡐎𡔥𡔦: hu2 #壶
+    𡐑: mu4 #睦
+    𡐛: qian4 #堑
+    𡐜: zhi4 #𤦄
+    𡐣𡑉: fu4 #𥨍
+    𡐦: duo4 #堕
+    𡐩: shun4 #舜
+    𡐪: chen2 #尘
+    𡐫: zi3 #子
+    𡐬: tai2 #台
+    𡐭: pu3
+    𡐰: li4 #坜
+    𡐱: pian2
+    𡐴: tan2 #壇？
+    𡐵: ping2
+    𡐶: peng2
+    𡐷: chu2
+    𡐸: zhao4
+    𡐹: jing3,en3
+    𡐺: tao2
+    𡐻: zhi4
+    𡐼: yan2 #𡐩舜
+    𡐾: di1,ti2 #堤
+    𡑁: chen2 #尘
+    𡑂: ruan2 #𤲬
+    𡑅𡒦: ya1,ya4 #压
+    𡑊: duo3 #埵
+    𡑋: yan2 #埏
+    𡑌𡑠: zhi2 #埴
+    𡑏𡑹: dao3 #壔
+    𡑐: chen3 #墋
+    𡑑: dang4 #盪
+    𡑛: jiao4 #窖
+    𡑨: yin3
+    𡑫: jia1
+    𡑬: lin2
+    𡑮: se4
+    𡑷: ai4 #壒
+    𡑺: sheng4 #圣
+    𡑿𡓙: pu2 #墣
+    𡒂: hui3 #毁
+    𡒅𡒜: qiang2 #墙
+    𡒆: tian2 #填
+    𡒇: zong1 #堫?
+    𡒋: qiao1 #墽
+    𡒎: tu2 #途
+    𡒑: gua4
+    𡒕: yin2 #殥
+    𡒙: suo3
+    𡒚: yuan1
+    𡒛: chi2 #墀?
+    𡒝: cang1
+    𡒞: chi2,hu3
+    𡒟: li2
+    𡒠: zong1 #堫?
+    𡒣: jin4 #墐
+    𡒨: bin4 #殡
+    𡒷: pan1,ban1
+    𡒸: ceng2
+    𡒹: gai4
+    𡒺: pian1
+    𡒻: zhi2
+    𡓄: beng3,feng1 #埄
+    𡓅: yin1
+    𡓇: lu3 #卤?
+    𡓊: fa2,fei4 #墢坺
+    𡓌: zong1 #堫?
+    𡓑: zhun3 #埻
+    𡓕: xun1
+    𡓗: duo4,sui2 #堕
+    𡓚: ken3 #恳
+    𡓛: he4 #壑
+    𡓤: tui2 #墤
+    𡓧: tai4,lie4 #燤?
+    𡓩: luan2
+    𡓪: mo4
+    𡓫: ying1
+    𡓲: ta1 #塌
+    𡓳: zhe2 #𤮱
+    𡓵: yin2 #寅
+    𡓸: li4 #𣦯
+    𡓹: chi2 #墀?
+    𡓺: pang2
+    𡓻: jun4
+    𡓼: he4 #壑
+    𡔀: you1 #悠
+    𡔁: lei3,die2
+    𡔃: tan1 #坍
+    𡔄: yi4
+    𡔆: long3 #㙙
+    𡔈: chu1 #初
+    𡔉𡔓: li2,li4 #
+    𡔊: shu2 #塾
+    𡔋: dun1 #墩
+    𡔎: huan2
+    𡔑: lan4 #壏?
+    𡔗: he4 #壑
+    𡔘: cu1 #麤
+    𡔙: cu1 #粗
+    𡔝: qing4,sheng1 #磬,声
+    𡔟: ping2 #凭
+    𡔠: xun4 #訓?
+    𡔡: jia1,jia2 #夾
+    𡔤: suo1 #蓑
+    𡔧: liang4 #亮?
+    𡔩𡔻: wa1 #蛙
+    𡔭: fei1 #𡌦
+    𡔯: xi3 #喜
+    𡔲𡔳: hu2 #壶
+    𡔵: gou4 #㝅
+    𡔶: kun3 #壼
+    𡔷: gu3 #鼓
+    𡔸: yi4 #殪
+    𡔹𡔾𡕋𡕌𡕍𡘵: yi1 #壹
+    𡔺: shou4,xun2 #寿,尋?
+    𡔼: tai2 #臺
+    𡕅: huan2 #寰
+    𡕆: yi4 #懿
+    𡕇: zhe2 #哲
+    𡕊: yuan2
+    𡕎: du4 #蠹
+    𡕑: chou2 #俦
+    𡕓: qi2,ji4 #齐
+    𡕔: gu1,gu3,ying2 #夃
+    𡕕: xue2 #学
+    𡕘: lao2 #牢
+    𡕙: dong1,qi2 #冬,𦙟?
+    𡕛: huang2 #黄
+    𡕜: qu1 #屈
+    𡕝: xi3 #徙
+    𡕟: yao1,yao3 #夭
+    𡕤: mai4 #麦?
+    𡕦: ce4 #畟?
+    𡕩𡕫: mian3 #𡕢
+    𡕯𡕹: yao4 #要
+    𡕱: xiong4 #夐?
+    𡕲: sheng4 #胜
+    𡕸: kui2 #夔?
+    𡕺: yu4 #御
+    𡕼𡕽𡖀: hun1 #婚
+    𡖁: ju2 #鞠
+    𡖄: wai4 #外
+    𡖅: yuan4,wan3,wan1 #夗
+    𡖍: ye4 #夜
+    𡖏: wan3
+    𡖕: su4 #夙
+    𡖘: mai4 #麥?
+    𡖜: gou4 #够
+    𡖟: chi1 #螭
+    𡖠: guai4 #𡖪
+    𡖥: qing1 #卿?
+    𡖦: wai4
+    𡖨: hui1 #㷇
+    𡖩: duo1 #多
+    𡖭: nuo2 #𡖔
+    𡖮: kua1
+    𡖰: yi2 #迻
+    𡖴𡖷𡖸: yin2 #夤
+    𡖹: zha1 #㗬
+    𡖽: zhi2 #𡖻
+    𡗀: tu2
+    𡗃: niao3 #鸟
+    𡗇: lie4 #猎
+    𡗌: yong1 #郺
+    𡗒: guai4 #夬
+    𡗕: yi4 #亦
+    𡗖: meng4 #孟
+    𡗘: qiao2 #乔?
+    𡗙: bao1
+    𡗚: nao4 #闹
+    𡗛: ze4 #仄
+    𡗠: nei4 #内
+    𡗡: qing1 #青
+    𡗣: ding1
+    𡗧: ben3 #本?
+    𡗨𡗰𡘄: di1,di4,ti4 #奃
+    𡗩: chi4,zhuan4 #赤
+    𡗪: juan4 #卷
+    𡗫: mai4
+    𡗬: bi3
+    𡗭: zao3 #枣
+    𡗮: da4
+    𡗯: fen1
+    𡗱: zou3 #走
+    𡗴: kua1 #夸
+    𡗶: shang4
+    𡗺𡗽: jun1 #军
+    𡗾𡗿: wu2 #吴
+    𡘀: ke3
+    𡘁: ci3,hui4
+    𡘂: tao4 #套
+    𡘃: pan2 #盘
+    𡘅: ze2 #澤
+    𡘆: kua1 #夸
+    𡘇: jie4 #玠
+    𡘈𡘜: ku1 #哭
+    𡘋: bing4 #並
+    𡘑: kun1 #坤?
+    𡘒: fen4 #奋
+    𡘔: huan4 #奐?
+    𡘕: zhi1
+    𡘖: shuang3,jia2 #爽,夾?
+    𡘗: da4,zao3,hui3 #𧈹
+    𡘘: cu1,jia2 #𡘛,夾?
+    𡘚: kuan1 #宽
+    𡘟: huan2 #𡘍
+    𡘠: lao2 #牢
+    𡘢𡘱: ji2
+    𡘣: pao4 #奅
+    𡘤: yan1 #奄
+    𡘥: chi4
+    𡘦: lun2
+    𡘨: quan2 #𡙐
+    𡘫: wen3 #稳
+    𡘬: dong1 #冬
+    𡘲: mu2,mo2 #模
+    𡘳: liang2
+    𡘼: se4 #瑟
+    𡘽: fan2 #樊?
+    𡘿: mai4
+    𡙄: hui3
+    𡙆: yun1 #𣽂
+    𡙈: bao4 #报
+    𡙊: zhen #真
+    𡙌: tai4 #泰
+    蘣: tou3,tong4
+    讀読: du2,dou4 #读
+    □: bia1,pia1,duang1,biu
