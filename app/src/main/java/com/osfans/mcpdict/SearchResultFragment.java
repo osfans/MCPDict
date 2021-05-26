@@ -180,11 +180,7 @@ public class SearchResultFragment extends ListFragment {
                 item = menu.add(getString(R.string.search_homophone, hanzi, searchAsName));
                 item.setOnMenuItemClickListener(i->{
                     DictionaryFragment dictionaryFragment = ((MainActivity) requireActivity()).getDictionaryFragment();
-                    String query;
-                    if (MCPDatabase.isDisplayOnly(col))
-                        query = selectedEntry.findViewWithTag(col).getTag(R.id.tag_raw).toString();
-                    else
-                        query = ((TextView)selectedEntry.findViewWithTag(col)).getText().toString();
+                    String query = selectedEntry.findViewWithTag(col).getTag(R.id.tag_raw).toString();
                     dictionaryFragment.refresh(query, col);
                     return true;
                 });
