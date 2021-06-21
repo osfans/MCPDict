@@ -184,7 +184,7 @@
     </string-array>
 
     <string name="pref_key_vietnamese_tone_position">VIETNAMESE_TONE_POSITION</string>
-    <string name="pref_title_vietnamese_tone_position">越南語聲調標記方式</string>
+    <string name="pref_title_vietnamese_tone_position">越南語顯示方式</string>
     <string-array name="pref_entries_vietnamese_tone_position">
         <item>@string/ipa</item>
         <item>舊式（hòa, thủy）</item>
@@ -206,6 +206,23 @@
         <item>黑本式羅馬字</item>
     </string-array>
     <string-array name="pref_values_japanese_display">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string name="pref_key_tone_display">TONE_DISPLAY</string>
+    <string name="pref_title_tone_display">調類顯示方式</string>
+    <string-array name="pref_entries_tone_display">
+        <item>數圈：①③⑤⑦</item>
+        <item>數字：1357</item>
+        <item>漢字：平上去入</item>
+        <item>半圈：꜀꜂꜄꜆</item>
+        <item>不顯示</item>
+    </string-array>
+    <string-array name="pref_values_tone_display">
         <item>0</item>
         <item>1</item>
         <item>2</item>

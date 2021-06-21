@@ -96,6 +96,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         String hz, string;
         TextView textView;
         int mask = 0;
+        Orthography.setToneStyle(getStyle(R.string.pref_key_tone_display));
 
         for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
             string = cursor.getString(i);
@@ -123,7 +124,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                     tv.setText(str);
                     break;
                 case MCPDatabase.SEARCH_AS_BA:
-                    cs = tone8Displayer.display(string);
+                    cs = baDisplayer.display(string);
                     break;
                 case MCPDatabase.SEARCH_AS_MC:
                     cs = getRichText(middleChineseDisplayer.display(string));
@@ -150,8 +151,21 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 case MCPDatabase.SEARCH_AS_JP_OTHER:
                     cs = getRichText(japaneseDisplayer.display(string));
                     break;
-                default:
+                case MCPDatabase.SEARCH_AS_YT:
+                    cs = getRichText(tone4Displayer.display(string));
+                    break;
+                case MCPDatabase.SEARCH_AS_IC:
+                case MCPDatabase.SEARCH_AS_ZY:
+                    cs = getRichText(tone5Displayer.display(string));
+                    break;
+                case MCPDatabase.SEARCH_AS_SX:
+                    cs = getRichText(tone6Displayer.display(string));
+                    break;
+                case MCPDatabase.SEARCH_AS_RA:
                     cs = getRichText(tone8Displayer.display(string));
+                    break;
+                default:
+                    cs = getRichText(tone7Displayer.display(string));
                     break;
             }
             textView.setText(cs);
@@ -223,6 +237,13 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return s.replaceAll("[~_|*\\[\\]]", "").replaceAll("`.+?`", "");
     }
 
+    private static boolean isIPA(char c) {
+        int type = Character.getType(c);
+        return Character.isLetterOrDigit(c)
+                || type == Character.NON_SPACING_MARK
+                || type == Character.OTHER_NUMBER;
+    }
+
     private abstract static class Displayer {
         protected static final String NULL_STRING = "-";
 
@@ -234,14 +255,14 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             int L = s.length(), p = 0;
             while (p < L) {
                 int q = p;
-                while (q < L && Character.isLetterOrDigit(s.charAt(q))) q++;
+                while (q < L && isIPA(s.charAt(q))) q++;
                 if (q > p) {
                     String t1 = s.substring(p, q);
                     String t2 = displayOne(t1);
                     sb.append(t2 == null ? t1 : t2);
                     p = q;
                 }
-                while (p < L && !Character.isLetterOrDigit(s.charAt(p))) p++;
+                while (p < L && !isIPA(s.charAt(p))) p++; //
                 sb.append(s.substring(q, p));
             }
             // Add spaces as hints for line wrapping
@@ -300,9 +321,39 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         }
     };
 
-    private final Displayer tone8Displayer = new Displayer() {
+    private final Displayer baDisplayer = new Displayer() {
         public String displayOne(String s) {
             return s;
+        }
+    };
+
+    private final Displayer tone4Displayer = new Displayer() {
+        public String displayOne(String s) {
+            return Orthography.Tone8.display4(s);
+        }
+    };
+
+    private final Displayer tone5Displayer = new Displayer() {
+        public String displayOne(String s) {
+            return Orthography.Tone8.display5(s);
+        }
+    };
+
+    private final Displayer tone6Displayer = new Displayer() {
+        public String displayOne(String s) {
+            return Orthography.Tone8.display6(s);
+        }
+    };
+
+    private final Displayer tone7Displayer = new Displayer() {
+        public String displayOne(String s) {
+            return Orthography.Tone8.display7(s);
+        }
+    };
+
+    private final Displayer tone8Displayer = new Displayer() {
+        public String displayOne(String s) {
+            return Orthography.Tone8.display(s);
         }
     };
 

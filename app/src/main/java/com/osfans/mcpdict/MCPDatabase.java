@@ -43,6 +43,13 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_JP_OTHER = "jp_other";
     public static final String SEARCH_AS_JP_ANY = SEARCH_AS_JP_TOU;
 
+    public static final String SEARCH_AS_IC = "ic";
+    public static final String SEARCH_AS_ZY = "zy";
+    public static final String SEARCH_AS_YT = "yt";
+    public static final String SEARCH_AS_SX = "sx";
+    public static final String SEARCH_AS_RA = "ra";
+
+
     public static int COL_HZ;
     public static int COL_BH;
     public static int COL_BS;
