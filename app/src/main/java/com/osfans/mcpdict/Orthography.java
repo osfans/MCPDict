@@ -27,6 +27,52 @@ public class Orthography {
     // which returns the given *canonicalized* syllable in all possible tones.
     // All methods return null on failure.
 
+    //0123456789 :;<= >?
+    private final static String[] TONES_NAME =  new String[] {
+            "", "陰平", "陽平", "陰上", "陽上", "陰去", "陽去", "陰入", "陽入", "中入",
+            "平", "上", "去", "入", "陰舒", "陽舒"};
+
+    private final static String[] TONES_NUMBER =  new String[] {
+            "", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+            "1", "3", "5", "7", "5", "6"};
+
+    private final static String[] TONES_CIRCLE =  new String[] {
+            "", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨",
+            "①", "③", "⑤", "⑦", "⑤", "⑥"};
+
+    private final static String[] TONES_TYPE =  new String[] {
+            "", "꜀", "꜁", "꜂", "꜃", "꜄", "꜅", "꜆", "꜇", "꜀",
+            "꜀", "꜂", "꜄", "꜆", "꜄", "꜅"};
+
+    private static int mToneStyle = 0;
+
+    public static void setToneStyle(int style) {
+        mToneStyle = style;
+    }
+
+    public static String formatTone(String base, int index) {
+        switch (mToneStyle) {
+            case 0:
+                return base + TONES_CIRCLE[index];
+            case 1:
+                return base + TONES_NUMBER[index];
+            case 2:
+                return base + TONES_NAME[index];
+            case 3:
+                if ((index >=1 && index <=4) || index == 10 || index == 11)
+                    return TONES_TYPE[index] + base;
+                else return base + TONES_TYPE[index];
+            default:
+                return base;
+        }
+    }
+
+    public static String formatTone(String base, char tone) {
+        if (tone == '_') return base;
+        int index = tone - '0';
+        return formatTone(base, index);
+    }
+
     public static class HZ {
         private static final Map<Integer,String> variants = new HashMap<>();
         private static final Map<Integer,Integer> compatibility = new HashMap<>();
@@ -136,14 +182,14 @@ public class Orthography {
             if (system < 0) return s;
             if (system == 0) system = 5;
             // Get tone first
-            int tone = 1;
+            char tone = ':';
             switch (s.charAt(s.length() - 1)) {
-                case 'x': tone = 3; s = s.substring(0, s.length() - 1); break;
-                case 'h': tone = 5; s = s.substring(0, s.length() - 1); break;
-                case 'd': tone = 5; break;
-                case 'p': tone = 7; s = s.substring(0, s.length() - 1) + "m"; break;
-                case 't': tone = 7; s = s.substring(0, s.length() - 1) + "n"; break;
-                case 'k': tone = 7; s = s.substring(0, s.length() - 1) + "ng"; break;
+                case 'x': tone = ';'; s = s.substring(0, s.length() - 1); break;
+                case 'h': tone = '<'; s = s.substring(0, s.length() - 1); break;
+                case 'd': tone = '<'; break;
+                case 'p': tone = '='; s = s.substring(0, s.length() - 1) + "m"; break;
+                case 't': tone = '='; s = s.substring(0, s.length() - 1) + "n"; break;
+                case 'k': tone = '='; s = s.substring(0, s.length() - 1) + "ng"; break;
             }
 
             // Split initial and final
@@ -233,12 +279,12 @@ public class Orthography {
                 dryungNriux = (extraJ || init.equals("j")) ? "A" : "B";
             }
             String ym = mapYms.get(dryungNriux+fin)[system];
-            if (tone == 7) {
+            if (tone == '=') {
                 ym = ym.replace('m', 'p').replace('n', 't').replace('ŋ','k');
             }
             //不分陰陽
             //if (TextUtils.isEmpty(init) || "bdgzjlmn".contains(init.substring(0, 1))) tone += 1;
-            return mapSms.get(init)[system] + ym + tone;
+            return formatTone(mapSms.get(init)[system] + ym, tone);
         }
 
         public static String detail(String s) {
@@ -505,7 +551,6 @@ public class Orthography {
         }
 
         public static String getIPA(String s, char tone) {
-            StringBuilder sb = new StringBuilder();
             s = s.replace("yu","v").replace("y","i").replace("ii","i")
                     .replace("v","y").replaceFirst("^([jqx])u", "$1y")
                     .replaceFirst("([zcs])i", "$1ɿ").replaceFirst("([zcs]h|r)i", "$1ʅ")
@@ -519,10 +564,9 @@ public class Orthography {
                     .replace("zh", "tʂ").replace("ch", "tʂʰ").replace("sh", "ʂ").replace("r", "ʐ")
                     .replace("z", "ts").replace("c", "tsʰ")
                     .replace("j", "tɕ").replace("q", "tɕʰ").replace("x", "ɕ").replace("h", "x");
-            sb.append(s);
-            if (tone == '4') tone = '5';
-            if (tone != '_') sb.append(tone);
-            return sb.toString();
+            if (tone == '3') tone = ';';
+            else if (tone == '4') tone = '<';
+            return formatTone(s, tone);
         }
 
         public static List<String> getAllTones(String s) {
@@ -696,7 +740,7 @@ public class Orthography {
 
             // In Yale, initial "y" is omitted if final begins with "yu"
             if (system == YALE && Objects.requireNonNull(init).equals("y") && Objects.requireNonNull(fin).startsWith("yu")) init = "";
-
+            if (system == IPA) return formatTone(init + fin, tone);
             return init + fin + (tone == '_' ? "" : tone);
         }
 
@@ -734,7 +778,7 @@ public class Orthography {
             String base = s;
             if (tone >= '1' && tone <= '8') {
                 base = s.substring(0, s.length() - 1);
-                if (tone == '2') tone = '3';
+                if (tone == '2') tone = ';';
                 else if (tone == '3') tone = '5';
                 else if (tone == '4') tone = '7';
                 else if (tone == '5') tone = '2';
@@ -745,7 +789,7 @@ public class Orthography {
             s = base;
             s = s.replace("oo", "ɔ").replaceFirst("o(k|ng)", "ɔ$1").replace("o", "ə");
             s = s.replaceFirst("^(p|t|k|ts)h", "$1ʰ").replace("ng", "ŋ").replace("j", "dz").replaceFirst("h$","ʔ").replace("nn","̃");
-            s = s + (tone == '_' ? "" : tone);
+            s = formatTone(s, tone);
             return s;
         }
     }
@@ -774,6 +818,31 @@ public class Orthography {
             if (tone != '7') result.add(base + '7');
             if (tone != '8') result.add(base + '8');
             return result;
+        }
+
+        public static String display(String s) {
+            char tone = s.charAt(s.length() - 1);
+            if ("12345678".indexOf(tone) >= 0) {
+                String base = s.substring(0, s.length() - 1);
+                return formatTone(base, tone);
+            }
+            return s;
+        }
+
+        public static String display7(String s) {
+            return display(s).replace("陰上","上");
+        }
+
+        public static String display6(String s) {
+            return display7(s).replace("陰去","去");
+        }
+
+        public static String display5(String s) {
+            return display6(s).replace("陰入","入");
+        }
+
+        public static String display4(String s) {
+            return display5(s).replace("陰平","平");
         }
     }
 
@@ -917,7 +986,6 @@ public class Orthography {
         private static String getIPA(String s, char tone) {
             boolean isEnteringTone = "ptc".indexOf(s.charAt(s.length() - 1)) >= 0 ||
                     s.endsWith("ch");
-            StringBuilder sb = new StringBuilder();
             s = s.replace("b","ɓ").replace("dd", "ɗ").replace("d", "j")
                     .replace("ph", "f").replace("gi", "z").replaceFirst("^gh?", "ɣ")
                     .replace("s", "ʂ").replace("x", "s").replace("kh", "kʰ").replaceFirst("^[cq]([^h])", "k$1")
@@ -930,13 +998,13 @@ public class Orthography {
                     .replace("uw", "ɨ").replace("ow", "əː").replace("oo", "ô").replace("o", "ɔ").replace("ô", "o")
                     .replace("ie", "iə").replaceFirst("([iuɨ])a$", "$1ə")
                     .replace("ɨəː", "ɨə").replace("uo", "uə").replaceFirst("([aːəeɛiɨ])[uɔ]$", "$1w");
-            sb.append(s);
+            int index = 0;
             if (isEnteringTone) {
-                sb.append(tone == 's' ? 7 : 8);
+                index = tone == 's' ? 7 : 8;
             } else {
-                sb.append("_frxsj".indexOf(tone) + 1);
+                index = "_frxsj".indexOf(tone) + 1;
             }
-            return sb.toString();
+            return formatTone(s, index);
         }
 
         // Rules for placing the tone marker follows this page in Vietnamese Wikipedia:
