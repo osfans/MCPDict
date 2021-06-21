@@ -88,6 +88,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             row.setOnClickListener(getListener((Integer)textViewDetail.getTag()));
             table.addView(row);
         }
+        table.setColumnShrinkable(1, true);
         return view;
     }
 
