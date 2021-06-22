@@ -30,27 +30,48 @@ public class Orthography {
     //0123456789 :;<= >?
     private final static String[] TONES_NAME =  new String[] {
             "", "陰平", "陽平", "陰上", "陽上", "陰去", "陽去", "陰入", "陽入", "中入",
-            "平", "上", "去", "入", "陰舒", "陽舒"};
+            "平", "上", "去", "入", "陰舒", "陽舒", "次濁入"};
 
     private final static String[] TONES_NUMBER =  new String[] {
             "", "1", "2", "3", "4", "5", "6", "7", "8", "9",
-            "1", "3", "5", "7", "5", "6"};
+            "1", "3", "5", "7", "5", "6", "9"};
 
     private final static String[] TONES_CIRCLE =  new String[] {
             "", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨",
-            "①", "③", "⑤", "⑦", "⑤", "⑥"};
+            "①", "③", "⑤", "⑦", "⑤", "⑥", "⑨"};
 
     private final static String[] TONES_TYPE =  new String[] {
             "", "꜀", "꜁", "꜂", "꜃", "꜄", "꜅", "꜆", "꜇", "꜀",
-            "꜀", "꜂", "꜄", "꜆", "꜄", "꜅"};
+            "꜀", "꜂", "꜄", "꜆", "꜄", "꜅", "꜁"};
 
     private static int mToneStyle = 0;
+    private static int mToneValueStyle = 0;
 
     public static void setToneStyle(int style) {
         mToneStyle = style;
     }
 
+    public static void setToneValueStyle(int style) {
+        mToneValueStyle = style;
+    }
+
     public static String formatTone(String base, int index) {
+        switch (mToneValueStyle) {
+            case 0:
+                String base2 = base.replaceAll("[¹²³⁴⁵]", "");
+                if (base.length() - base2.length() == 2) {
+                    base = base.replaceAll("([¹²³⁴⁵])\\1", "$1");
+                }
+                base = base.replace('¹', '˩')
+                        .replace('²', '˨')
+                        .replace('³', '˧')
+                        .replace('⁴', '˦')
+                        .replace('⁵', '˥');
+                break;
+            case 2:
+                base = base.replaceAll("[¹²³⁴⁵]", "");
+                break;
+        }
         switch (mToneStyle) {
             case 0:
                 return base + TONES_CIRCLE[index];
@@ -426,6 +447,7 @@ public class Orthography {
         private static final Map<String, String> mapToBopomofoWhole = new HashMap<>();
         private static final Map<Character, Character> mapToBopomofoTone = new HashMap<>();
 
+        private static final String[] toneValues = new String[]{ "⁵⁵", "³⁵", "²¹⁴", "⁵¹"};
         public static String canonicalize(String s) {
             // Input can be either pinyin or bopomofo
             if (s == null || s.length() == 0) return s;
@@ -564,6 +586,7 @@ public class Orthography {
                     .replace("zh", "tʂ").replace("ch", "tʂʰ").replace("sh", "ʂ").replace("r", "ʐ")
                     .replace("z", "ts").replace("c", "tsʰ")
                     .replace("j", "tɕ").replace("q", "tɕʰ").replace("x", "ɕ").replace("h", "x");
+            if (tone >= '1' && tone <= '4') s += toneValues[tone - '1'];
             if (tone == '3') tone = ';';
             else if (tone == '4') tone = '<';
             return formatTone(s, tone);
@@ -601,6 +624,8 @@ public class Orthography {
         public static final int CANTONESE_PINYIN = 2;
         public static final int YALE = 3;
         public static final int SIDNEY_LAU = 4;
+        private static final String[] toneValues = new String[]{ "⁵⁵", "²¹", "³⁵", "¹³", "³³", "²²", "⁵", "²", "³"};
+
         // References:
         // http://en.wikipedia.org/wiki/Jyutping
         // http://en.wikipedia.org/wiki/Cantonese_Pinyin
@@ -740,7 +765,7 @@ public class Orthography {
 
             // In Yale, initial "y" is omitted if final begins with "yu"
             if (system == YALE && Objects.requireNonNull(init).equals("y") && Objects.requireNonNull(fin).startsWith("yu")) init = "";
-            if (system == IPA) return formatTone(init + fin, tone);
+            if (system == IPA) return formatTone(init + fin + (tone <= '9' ? toneValues[tone - '1']: ""), tone);
             return init + fin + (tone == '_' ? "" : tone);
         }
 
@@ -799,10 +824,10 @@ public class Orthography {
             if (s == null || s.equals("")) return null;     // Fail
             char tone = s.charAt(s.length() - 1);
             String base = s;
-            if ("12345678".indexOf(tone) >= 0) {
+            if ("123456789".indexOf(tone) >= 0) {
                 base = s.substring(0, s.length() - 1);
-            }
-            else {
+            } else {
+                if (tone == '0') base = s.substring(0, s.length() - 1);
                 tone = '_';
             }
             if (base.equals("")) return null;               // Fail
@@ -817,14 +842,17 @@ public class Orthography {
             if (tone != '6') result.add(base + '6');
             if (tone != '7') result.add(base + '7');
             if (tone != '8') result.add(base + '8');
+            if (tone != '9') result.add(base + '9');
             return result;
         }
 
         public static String display(String s) {
             char tone = s.charAt(s.length() - 1);
-            if ("12345678".indexOf(tone) >= 0) {
+            if ("123456789".indexOf(tone) >= 0) {
                 String base = s.substring(0, s.length() - 1);
                 return formatTone(base, tone);
+            } else {
+                if (tone == '0') s = s.substring(0, s.length() - 1);
             }
             return s;
         }
@@ -843,6 +871,10 @@ public class Orthography {
 
         public static String display4(String s) {
             return display5(s).replace("陰平","平");
+        }
+
+        public static String displayTD(String s) {
+            return display5(s).replace("中入","次濁入");
         }
     }
 

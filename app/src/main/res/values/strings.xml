@@ -107,7 +107,7 @@
     <string name="ipa">音標</string>
 
     <string name="pref_key_mc_display">MC_DISPLAY</string>
-    <string name="pref_title_mc_display">中古音顯示方式</string>
+    <string name="pref_title_mc_display">廣韻擬音</string>
     <string-array name="pref_entries_mc_display">
         <item>古韻羅馬字</item>
         <item>高本漢</item>
@@ -130,7 +130,7 @@
     </string-array>
 
     <string name="pref_key_mandarin_display">MANDARIN_DISPLAY</string>
-    <string name="pref_title_mandarin_display">普通話顯示方式</string>
+    <string name="pref_title_mandarin_display">普通話</string>
     <string-array name="pref_entries_mandarin_display">
         <item>@string/ipa</item>
         <item>漢語拼音</item>
@@ -143,7 +143,7 @@
     </string-array>
 
     <string name="pref_key_cantonese_romanization">CANTONESE_ROMANIZATION</string>
-    <string name="pref_title_cantonese_romanization">粵語拼音系統（用於輸入和顯示）</string>
+    <string name="pref_title_cantonese_romanization">廣州話拼音（用於輸入和顯示）</string>
     <string-array name="pref_entries_cantonese_romanization">
         <item>@string/ipa</item>
         <item>香港語言學學會式（粵拼）</item>
@@ -160,7 +160,7 @@
     </string-array>
 
     <string name="pref_key_minnan_display">MINNAN_DISPLAY</string>
-    <string name="pref_title_minnan_display">閩南語顯示方式</string>
+    <string name="pref_title_minnan_display">閩南語</string>
     <string-array name="pref_entries_minnan_display">
         <item>@string/ipa</item>
         <item>臺羅拼音</item>
@@ -171,7 +171,7 @@
     </string-array>
 
     <string name="pref_key_korean_display">KOREAN_DISPLAY</string>
-    <string name="pref_title_korean_display">朝鮮語顯示方式</string>
+    <string name="pref_title_korean_display">朝鮮語</string>
     <string-array name="pref_entries_korean_display">
         <item>@string/ipa</item>
         <item>諺文</item>
@@ -184,7 +184,7 @@
     </string-array>
 
     <string name="pref_key_vietnamese_tone_position">VIETNAMESE_TONE_POSITION</string>
-    <string name="pref_title_vietnamese_tone_position">越南語顯示方式</string>
+    <string name="pref_title_vietnamese_tone_position">越南語</string>
     <string-array name="pref_entries_vietnamese_tone_position">
         <item>@string/ipa</item>
         <item>舊式（hòa, thủy）</item>
@@ -197,7 +197,7 @@
     </string-array>
 
     <string name="pref_key_japanese_display">JAPANESE_DISPLAY</string>
-    <string name="pref_title_japanese_display">日語顯示方式</string>
+    <string name="pref_title_japanese_display">日語</string>
     <string-array name="pref_entries_japanese_display">
         <item>@string/ipa</item>
         <item>平假名</item>
@@ -214,13 +214,13 @@
     </string-array>
 
     <string name="pref_key_tone_display">TONE_DISPLAY</string>
-    <string name="pref_title_tone_display">調類顯示方式</string>
+    <string name="pref_title_tone_display">調類</string>
     <string-array name="pref_entries_tone_display">
         <item>數圈：①③⑤⑦</item>
-        <item>數字：1357</item>
+        <item>數字：1 3 5 7</item>
         <item>漢字：平上去入</item>
-        <item>半圈：꜀꜂꜄꜆</item>
-        <item>不顯示</item>
+        <item>四角：꜀平 ꜂上 去꜄ 入꜆</item>
+        <item>隱藏</item>
     </string-array>
     <string-array name="pref_values_tone_display">
         <item>0</item>
@@ -230,5 +230,18 @@
         <item>4</item>
     </string-array>
 
-    <string name="hz_number">收%s字。</string>
+    <string name="pref_key_tone_value_display">TONE_VALUE_DISPLAY</string>
+    <string name="pref_title_tone_value_display">調值</string>
+    <string-array name="pref_entries_tone_value_display">
+        <item>符號</item>
+        <item>數字</item>
+        <item>隱藏</item>
+    </string-array>
+    <string-array name="pref_values_tone_value_display">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string name="hz_number">收字：%d\n</string>
 </resources>
