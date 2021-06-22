@@ -234,6 +234,7 @@ logging.info("處理南通話 %.3f" % timeit())
 d.clear()
 trsm = {'g': 'k', 'd': 't', '': '', 'sh': 'ʂ', 'c': 'tsʰ', 'b': 'p', 'l': 'l', 'h': 'x', 'r': 'ʐ', 'zh': 'tʂ', 't': 'tʰ', 'v': 'v', 'ng': 'ŋ', 'q': 'tɕʰ', 'z': 'ts', 'j': 'tɕ', 'f': 'f', 'ch': 'tʂʰ', 'k': 'kʰ', 'n': 'n', 'x': 'ɕ', 'm': 'm', 's': 's', 'p': 'pʰ'}
 trym = {'ae': 'ɛ', 'ieh': 'iəʔ', 'ii': 'i', 'r': 'ʅ', 'eh': 'əʔ', 'io': 'iɔ', 'ieu': 'iəu', 'u': 'u', 'v': 'v', 'en': 'əŋ', 'a': 'a', 'on': 'ɔŋ', 'ei': 'əi', 'an': 'aŋ', 'oh': 'ɔʔ', 'i': 'j', 'ien': 'iəŋ', 'ion': 'iɔŋ', 'ah': 'aʔ', 'ih': 'iʔ', 'y': 'y', 'uei': 'uəi', 'uae': 'uɛ', 'aeh': 'ɛʔ', 'in': 'ĩ', 'ia': 'ia', 'z': 'ɿ', 'uh': 'uʔ', 'aen': 'ɛ̃', 'er': 'ɚ', 'eu': 'əu', 'iah': 'iaʔ', 'ueh': 'uəʔ', 'iae': 'iɛ', 'iuh': 'iuʔ', 'yen': 'yəŋ', 'ian': 'iaŋ', 'iun': 'iũ', 'un': 'ũ', 'o': 'ɔ', 'uan': 'uaŋ', 'ua': 'ua', 'uen': 'uəŋ', 'ioh': 'iɔʔ', 'iaen': 'iɛ̃', 'uaen': 'uɛ̃', 'uaeh': 'uɛʔ', 'iaeh': 'iɛʔ', 'uah': 'uaʔ', 'yeh': 'yəʔ', 'ya': 'ya'}
+trsd = {'0':'','1':'²¹','2':'³⁵','3':'²¹³', '5':'⁴⁴', '6':'²²','7':'⁴', '8':'³⁵'}
 for line in open("cz6din3.csv"):
   fs = line.strip().split(',')
   if fs[0]=='"id"': continue
@@ -244,7 +245,7 @@ for line in open("cz6din3.csv"):
   fs[5] = fs[5].strip('"')
   c = fs[6]
   if fs[3] == fs[4] == 'v': fs[3] = ''
-  py = trsm[fs[3]]+trym[fs[4]]+fs[5]
+  py = trsm[fs[3]]+trym[fs[4]]+trsd[fs[5]]+fs[5]
   if '白' in c or '口' in c or '常' in c or '古' in c or '舊' in c or '未' in c:
     py = "%s`白`" % py
   elif '正' in c or '本' in c:
@@ -363,8 +364,8 @@ def sz2ipa(s):
   s = re.sub("i$", "iⱼ", s)
   s = re.sub("ie$", "i", s)
   s = re.sub("e$", "ᴇ", s)
-  tones = {"1": "⁴⁴1", "2": "²²³2", "3":"⁵¹3", "5": "⁵²³5", "6":"²³¹6", "7":"⁴³7", "8":"²³8"}
-  s = s + tones.get(tone, tone)
+  tones = {"1": "⁴⁴", "2": "²²³", "3":"⁵¹", "5": "⁵²³", "6":"²³¹", "7":"⁴³", "8":"²³"}
+  s = s + tones.get(tone, "") + tone
   return s
 d.clear()
 for line in open("wugniu_soutseu.dict.yaml"):

@@ -98,6 +98,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         TextView textView;
         int mask = 0;
         Orthography.setToneStyle(getStyle(R.string.pref_key_tone_display));
+        Orthography.setToneValueStyle(getStyle(R.string.pref_key_tone_value_display));
 
         for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
             string = cursor.getString(i);
@@ -164,6 +165,9 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                     break;
                 case MCPDatabase.SEARCH_AS_RA:
                     cs = getRichText(tone8Displayer.display(string));
+                    break;
+                case MCPDatabase.SEARCH_AS_TD:
+                    cs = getRichText(toneTdDisplayer.display(string));
                     break;
                 default:
                     cs = getRichText(tone7Displayer.display(string));
@@ -355,6 +359,12 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     private final Displayer tone8Displayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Tone8.display(s);
+        }
+    };
+
+    private final Displayer toneTdDisplayer = new Displayer() {
+        public String displayOne(String s) {
+            return Orthography.Tone8.displayTD(s);
         }
     };
 
