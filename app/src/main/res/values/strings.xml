@@ -242,4 +242,29 @@
     </string-array>
 
     <string name="hz_number">收字：%d個\n</string>
+
+    <string name="pref_key_show_languages">SHOW_LANGUAGES</string>
+    <string name="show_languages">顯示語言：</string>
+    <string-array name="pref_entries_show_languages">
+        <item>全部語言</item>
+        <item>僅官話</item>
+        <item>僅淮語</item>
+        <item>僅吳語</item>
+        <item>僅客語</item>
+        <item>僅六南方言</item>
+        <item>僅代表方言</item>
+        <item>僅古代漢語</item>
+        <item>僅域外方言</item>
+    </string-array>
+    <string-array name="pref_values_show_languages">
+        <item>""</item>
+        <item>pu,nt,tr,ic</item>
+        <item>nt,tr,ic</item>
+        <item>td,sz,sh,ra</item>
+        <item>hk,hl,sx</item>
+        <item>td,sz,sh,ra,nc,hk,hl,sx,ct,mn</item>
+        <item>pu,tr,sz,nc,hk,ct,mn</item>
+        <item>sg,ba,mc,yt,zy</item>
+        <item>vn,kr_mid,kr,jp_go,jp_kan,jp_tou,jp_kwan,jp_other</item>
+    </string-array>
 </resources>

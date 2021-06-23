@@ -24,6 +24,15 @@
         <TableRow
             android:gravity="center_vertical" >
             <TextView
+                android:text="@string/show_languages" />
+            <Spinner
+                android:id="@+id/spinner_show_languages" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_vertical"
+            android:paddingTop="6dp" >
+            <TextView
                 android:text="@string/search_as" />
             <Spinner
                 android:id="@+id/spinner_search_as" />
