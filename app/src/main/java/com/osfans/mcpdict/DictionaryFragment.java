@@ -25,11 +25,11 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
 
     private View selfView;
     private CustomSearchView searchView;
-    private Spinner spinnerSearchAs;
+    private Spinner spinnerSearchAs, spinnerShowLang;
     private CheckBox checkBoxKuangxYonhOnly;
     private CheckBox checkBoxAllowVariants;
     private SearchResultFragment fragmentResult;
-    ArrayAdapter<CharSequence> adapter;
+    ArrayAdapter<CharSequence> adapter, adapterShowLang;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -52,6 +52,24 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         });
 
         // Set up the spinner
+        spinnerShowLang = selfView.findViewById(R.id.spinner_show_languages);
+        adapterShowLang = ArrayAdapter.createFromResource(requireActivity(),
+                R.array.pref_entries_show_languages, android.R.layout.simple_spinner_item);
+        adapterShowLang.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerShowLang.setAdapter(adapterShowLang);
+        int position = PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt(getString(R.string.pref_key_show_languages), 0);
+        spinnerShowLang.setSelection(position);
+        spinnerShowLang.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                sp.edit().putInt(getString(R.string.pref_key_show_languages), position).apply();
+                searchView.clickSearchButton();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
         spinnerSearchAs = selfView.findViewById(R.id.spinner_search_as);
         adapter = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
         refreshAdapter();

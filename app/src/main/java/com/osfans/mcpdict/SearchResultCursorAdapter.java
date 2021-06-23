@@ -92,6 +92,12 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return view;
     }
 
+    private boolean isColumnVisible(String languages, int i) {
+        if (TextUtils.isEmpty(languages) || i < MCPDatabase.COL_FIRST_READING) return true;
+        String col = MCPDatabase.getColumnName(i);
+        return languages.matches("(.*,)?"+col+"(,.*)?");
+    }
+
     @Override
     public void bindView(final View view, final Context context, Cursor cursor) {
         String hz, string;
@@ -99,10 +105,12 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         int mask = 0;
         Orthography.setToneStyle(getStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(getStyle(R.string.pref_key_tone_value_display));
+        int showLanguages = PreferenceManager.getDefaultSharedPreferences(context).getInt(context.getString(R.string.pref_key_show_languages), 0);
+        String languages = context.getResources().getStringArray(R.array.pref_values_show_languages)[showLanguages];
 
         for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
             string = cursor.getString(i);
-            boolean visible = string != null;
+            boolean visible = string != null && isColumnVisible(languages, i);
             if (i >= MCPDatabase.COL_FIRST_READING) {
                 View row = view.findViewWithTag("row" + i);
                 row.setVisibility(visible ? View.VISIBLE : View.GONE);
