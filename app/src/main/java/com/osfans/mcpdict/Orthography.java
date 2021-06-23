@@ -135,7 +135,7 @@ public class Orthography {
 
         public static boolean isPY(String s) {
             if (TextUtils.isEmpty(s)) return false;
-            return s.matches("[a-z]+[0-4]?");
+            return s.matches("[a-z]+[0-4?]?");
         }
 
         public static int[] getVariants(int unicode) {

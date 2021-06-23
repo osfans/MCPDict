@@ -108,7 +108,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
         Resources r = context.getResources();
         boolean kuangxYonhOnly = sp.getBoolean(r.getString(R.string.pref_key_kuangx_yonh_only), false);
         boolean allowVariants = sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true);
-        boolean toneInsensitive = sp.getBoolean(r.getString(R.string.pref_key_tone_insensitive), false);
         int cantoneseSystem = Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(R.string.pref_key_cantonese_romanization), "0")));
 
         // Split the input string into keywords and canonicalize them
@@ -188,7 +187,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
                 }
                 if (token == null) continue;
                 List<String> allTones = null;
-                if (toneInsensitive && isToneInsensitive(mode)) {
+                if (token.endsWith("?") && isToneInsensitive(mode)) {
+                    token = token.substring(0, token.length()-1);
                     switch (getColumnName(mode)) {
                         case SEARCH_AS_MC: allTones = Orthography.MiddleChinese.getAllTones(token); break;
                         case SEARCH_AS_PU: allTones = Orthography.Mandarin.getAllTones(token); break;
