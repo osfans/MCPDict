@@ -138,6 +138,13 @@ public class Orthography {
             return s.matches("[a-z]+[0-4?]?");
         }
 
+        public static boolean isIPA(char c) {
+            int type = Character.getType(c);
+            return Character.isLetterOrDigit(c)
+                    || type == Character.NON_SPACING_MARK
+                    || type == Character.OTHER_NUMBER;
+        }
+
         public static int[] getVariants(int unicode) {
             if (variants.containsKey(unicode)) return variants.get(unicode).codePoints().toArray();
             return new int[] {unicode};
