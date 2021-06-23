@@ -243,5 +243,5 @@
         <item>2</item>
     </string-array>
 
-    <string name="hz_number">收字：%d\n</string>
+    <string name="hz_number">收字：%d個\n</string>
 </resources>
