@@ -28,7 +28,6 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
     private Spinner spinnerSearchAs;
     private CheckBox checkBoxKuangxYonhOnly;
     private CheckBox checkBoxAllowVariants;
-    private CheckBox checkBoxToneInsensitive;
     private SearchResultFragment fragmentResult;
     ArrayAdapter<CharSequence> adapter;
 
@@ -71,7 +70,6 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         // Set up the checkboxes
         checkBoxKuangxYonhOnly = selfView.findViewById(R.id.check_box_kuangx_yonh_only);
         checkBoxAllowVariants = selfView.findViewById(R.id.check_box_allow_variants);
-        checkBoxToneInsensitive = selfView.findViewById(R.id.check_box_tone_insensitive);
         loadCheckBoxes();
         updateCheckBoxesEnabled();
         CompoundButton.OnCheckedChangeListener checkBoxListener = (view, isChecked) -> {
@@ -80,7 +78,6 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         };
         checkBoxKuangxYonhOnly.setOnCheckedChangeListener(checkBoxListener);
         checkBoxAllowVariants.setOnCheckedChangeListener(checkBoxListener);
-        checkBoxToneInsensitive.setOnCheckedChangeListener(checkBoxListener);
 
         // Get a reference to the SearchResultFragment
         fragmentResult = (SearchResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);
@@ -93,7 +90,6 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         Resources r = getResources();
         checkBoxKuangxYonhOnly.setChecked(sp.getBoolean(r.getString(R.string.pref_key_kuangx_yonh_only), false));
         checkBoxAllowVariants.setChecked(sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true));
-        checkBoxToneInsensitive.setChecked(sp.getBoolean(r.getString(R.string.pref_key_tone_insensitive), false));
     }
 
     private void saveCheckBoxes() {
@@ -101,7 +97,6 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         Resources r = getResources();
         sp.edit().putBoolean(r.getString(R.string.pref_key_kuangx_yonh_only), checkBoxKuangxYonhOnly.isChecked())
                  .putBoolean(r.getString(R.string.pref_key_allow_variants), checkBoxAllowVariants.isChecked())
-                 .putBoolean(r.getString(R.string.pref_key_tone_insensitive), checkBoxToneInsensitive.isChecked())
                  .apply();
     }
 
@@ -109,7 +104,6 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         int mode = spinnerSearchAs.getSelectedItemPosition();
         checkBoxKuangxYonhOnly.setEnabled(!MCPDatabase.isMC(mode));
         //checkBoxAllowVariants.setEnabled(MCPDatabase.isHZ(mode));
-        //checkBoxToneInsensitive.setEnabled(MCPDatabase.isToneInsensitive(mode));
     }
 
     @Override

@@ -28,13 +28,11 @@
     <string name="search_as">查詢模式：</string>
     <string name="search_options">查詢選項：</string>
     <string name="option_kuangx_yonh_only">僅在《廣韻》內查找</string>
-    <string name="option_allow_variants">簡繁、異體轉換</string>
-    <string name="option_tone_insensitive">聲調不敏感</string>
+    <string name="option_allow_variants">異體字</string>
     <string name="no_matches">未找到符合條件的漢字。</string>
 
     <string name="pref_key_kuangx_yonh_only">KUANGX_YONH_ONLY</string>
     <string name="pref_key_allow_variants">ALLOW_VARIANTS</string>
-    <string name="pref_key_tone_insensitive">TONE_INSENSITIVE</string>
 
     <string name="copy_readings">複製“%s”字或其讀音</string>
     <string name="copy_one_reading">複製“%1$s”字的%2$s讀音</string>
