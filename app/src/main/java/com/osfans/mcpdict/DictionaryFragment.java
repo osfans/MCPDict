@@ -25,11 +25,10 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
 
     private View selfView;
     private CustomSearchView searchView;
-    private Spinner spinnerSearchAs, spinnerShowLang;
-    private CheckBox checkBoxKuangxYonhOnly;
+    private Spinner spinnerSearchAs;
     private CheckBox checkBoxAllowVariants;
     private SearchResultFragment fragmentResult;
-    ArrayAdapter<CharSequence> adapter, adapterShowLang;
+    ArrayAdapter<CharSequence> adapter, adapterShowLang, adapterShowChar;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -52,7 +51,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         });
 
         // Set up the spinner
-        spinnerShowLang = selfView.findViewById(R.id.spinner_show_languages);
+        Spinner spinnerShowLang = selfView.findViewById(R.id.spinner_show_languages);
         adapterShowLang = ArrayAdapter.createFromResource(requireActivity(),
                 R.array.pref_entries_show_languages, android.R.layout.simple_spinner_item);
         adapterShowLang.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -70,6 +69,24 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
+        Spinner spinnerShowChar = selfView.findViewById(R.id.spinner_show_characters);
+        adapterShowChar = ArrayAdapter.createFromResource(requireActivity(),
+                R.array.pref_entries_charset, android.R.layout.simple_spinner_item);
+        adapterShowChar.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerShowChar.setAdapter(adapterShowChar);
+        position = PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt(getString(R.string.pref_key_charset), 0);
+        spinnerShowChar.setSelection(position);
+        spinnerShowChar.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                sp.edit().putInt(getString(R.string.pref_key_charset), position).apply();
+                searchView.clickSearchButton();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
         spinnerSearchAs = selfView.findViewById(R.id.spinner_search_as);
         adapter = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
         refreshAdapter();
@@ -78,7 +95,6 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         spinnerSearchAs.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                updateCheckBoxesEnabled();
                 searchView.clickSearchButton();
             }
             @Override
@@ -86,15 +102,12 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         });
 
         // Set up the checkboxes
-        checkBoxKuangxYonhOnly = selfView.findViewById(R.id.check_box_kuangx_yonh_only);
         checkBoxAllowVariants = selfView.findViewById(R.id.check_box_allow_variants);
         loadCheckBoxes();
-        updateCheckBoxesEnabled();
         CompoundButton.OnCheckedChangeListener checkBoxListener = (view, isChecked) -> {
             saveCheckBoxes();
             searchView.clickSearchButton();
         };
-        checkBoxKuangxYonhOnly.setOnCheckedChangeListener(checkBoxListener);
         checkBoxAllowVariants.setOnCheckedChangeListener(checkBoxListener);
 
         // Get a reference to the SearchResultFragment
@@ -106,22 +119,13 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
     private void loadCheckBoxes() {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
         Resources r = getResources();
-        checkBoxKuangxYonhOnly.setChecked(sp.getBoolean(r.getString(R.string.pref_key_kuangx_yonh_only), false));
         checkBoxAllowVariants.setChecked(sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true));
     }
 
     private void saveCheckBoxes() {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
         Resources r = getResources();
-        sp.edit().putBoolean(r.getString(R.string.pref_key_kuangx_yonh_only), checkBoxKuangxYonhOnly.isChecked())
-                 .putBoolean(r.getString(R.string.pref_key_allow_variants), checkBoxAllowVariants.isChecked())
-                 .apply();
-    }
-
-    private void updateCheckBoxesEnabled() {
-        int mode = spinnerSearchAs.getSelectedItemPosition();
-        checkBoxKuangxYonhOnly.setEnabled(!MCPDatabase.isMC(mode));
-        //checkBoxAllowVariants.setEnabled(MCPDatabase.isHZ(mode));
+        sp.edit().putBoolean(r.getString(R.string.pref_key_allow_variants), checkBoxAllowVariants.isChecked()).apply();
     }
 
     @Override

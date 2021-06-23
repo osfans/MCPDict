@@ -2,7 +2,9 @@
 <resources>
 
     <string name="search_for">查詢：</string>
-    <string name="search_as">模式：</string>
+    <string name="search_as">條件：</string>
     <string name="search_options">選項：</string>
+    <string name="show_languages">顯示：</string>
+
 
 </resources>
