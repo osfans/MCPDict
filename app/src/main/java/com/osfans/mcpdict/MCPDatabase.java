@@ -106,7 +106,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         // Get options and settings from SharedPreferences
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         Resources r = context.getResources();
-        boolean kuangxYonhOnly = sp.getBoolean(r.getString(R.string.pref_key_kuangx_yonh_only), false);
+        boolean kuangxYonhOnly = sp.getInt(r.getString(R.string.pref_key_charset), 0) == 1;
         boolean allowVariants = sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true);
         int cantoneseSystem = Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(R.string.pref_key_cantonese_romanization), "0")));
 
