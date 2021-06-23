@@ -25,13 +25,11 @@
 
     <string name="search_hint">輸入漢字或讀音</string>
     <string name="search_for">查詢內容：</string>
-    <string name="search_as">查詢模式：</string>
+    <string name="search_as">查詢條件：</string>
     <string name="search_options">查詢選項：</string>
-    <string name="option_kuangx_yonh_only">僅在《廣韻》內查找</string>
     <string name="option_allow_variants">異體字</string>
     <string name="no_matches">未找到符合條件的漢字。</string>
 
-    <string name="pref_key_kuangx_yonh_only">KUANGX_YONH_ONLY</string>
     <string name="pref_key_allow_variants">ALLOW_VARIANTS</string>
 
     <string name="copy_readings">複製“%s”字或其讀音</string>
@@ -266,5 +264,13 @@
         <item>pu,tr,sz,nc,hk,ct,mn</item>
         <item>sg,ba,mc,yt,zy</item>
         <item>vn,kr_mid,kr,jp_go,jp_kan,jp_tou,jp_kwan,jp_other</item>
+    </string-array>
+
+    <string name="pref_key_charset">SHOW_CHARSET</string>
+    <string-array name="pref_entries_charset">
+        <item>全部漢字</item>
+        <item>僅廣韻</item>
+<!--        <item>僅GB2312</item>-->
+<!--        <item>僅BIG5</item>-->
     </string-array>
 </resources>

@@ -22,14 +22,6 @@
         </TableRow>
 
         <TableRow
-            android:gravity="center_vertical" >
-            <TextView
-                android:text="@string/show_languages" />
-            <Spinner
-                android:id="@+id/spinner_show_languages" />
-        </TableRow>
-
-        <TableRow
             android:gravity="center_vertical"
             android:paddingTop="6dp" >
             <TextView
@@ -43,9 +35,8 @@
             android:paddingTop="6dp" >
             <TextView
                 android:text="@string/search_options" />
-            <CheckBox
-                android:id="@+id/check_box_kuangx_yonh_only"
-                android:text="@string/option_kuangx_yonh_only" />
+            <Spinner
+                android:id="@+id/spinner_show_characters" />
         </TableRow>
 
         <TableRow
@@ -54,6 +45,14 @@
                 android:id="@+id/check_box_allow_variants"
                 android:layout_column="1"
                 android:text="@string/option_allow_variants" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_vertical" >
+            <TextView
+                android:text="@string/show_languages" />
+            <Spinner
+                android:id="@+id/spinner_show_languages" />
         </TableRow>
 
     </TableLayout>
