@@ -8,8 +8,8 @@ android {
         applicationId "com.osfans.mcpdict"
         minSdkVersion 24
         targetSdkVersion 30
-        versionCode 16
-        versionName "4.6_2021.06.23"
+        versionCode 18
+        versionName "4.6_2021.06.29"
     }
 
     signingConfigs {

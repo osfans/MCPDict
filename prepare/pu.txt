@@ -1880,7 +1880,7 @@
 啧	ze2
 啨	qing2,ying1
 啩𫫔	gua4
-啪	pa1
+啪	pa1,pia1
 啫	zhe3,shi4
 啬𰉒𭍠	se4
 啭	zhuan4,|zhuan3|
@@ -49204,7 +49204,7 @@
 𡙈	bao4	#报
 𡙊	zhen	#真
 𡙌	tai4	#泰
-□	bia1,pia1,duang1,biu
+□	bia1,duang1,biu
 𡛏	ge3
 𡛿	zuo3
 𡟏	hui2
@@ -55906,6 +55906,7 @@
 𰂔	yu2
 𠸋	ku3
 𫭸	heng4
+𰚷	di1,di3	#氐
 #cin
 𡃕	chuan1
 𡆞	dou4

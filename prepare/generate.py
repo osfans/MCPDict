@@ -26,7 +26,7 @@ def hex2chr(uni):
     return chr(int(uni, 16))
 
 HEADS = [
-  ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s',"更新：2021-06-24<br>說明：<br>　　本程序源自“<a href=https://github.com/MaigoAkisame/MCPDict>漢字古今中外讀音查詢</a>”，收錄了更多漢字、更多語言、更多讀音，當然錯誤也更多，可去<a href=https://github.com/osfans/MCPDict>漢字音典</a>或進<a href=mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3D-hNzAQCgZQL-uIlhFrxWJ56umCexsmBi>QQ群</a>提出寶貴意見。<br>　　本程序將多種語言的漢字讀音集成於本地數據庫，默認用國際音標注音，可用於比較各語言讀音的異同，也能給學習本程序所收的語言提供有限的幫助。<br>　　本程序支持多種方式查詢漢字及其讀音，如輸入𰻞（漢字）、30EDE（Unicode編碼）、biang2（普通話拼音）、43（總筆畫數）、辵39（部首餘筆），均可查到“𰻞”及其讀音。音節末尾的“?”可匹配任何聲調。<br>"),
+  ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s',"更新：2021-06-29<br>說明：<br>　　本程序源自“<a href=https://github.com/MaigoAkisame/MCPDict>漢字古今中外讀音查詢</a>”，收錄了更多漢字、更多語言、更多讀音，當然錯誤也更多，可去<a href=https://github.com/osfans/MCPDict>漢字音典</a>或進<a href=mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3D-hNzAQCgZQL-uIlhFrxWJ56umCexsmBi>QQ群</a>提出寶貴意見。<br>　　本程序將多種語言的漢字讀音集成於本地數據庫，默認用國際音標注音，可用於比較各語言讀音的異同，也能給學習本程序所收的語言提供有限的幫助。<br>　　本程序支持多種方式查詢漢字及其讀音，如輸入𰻞（漢字）、30EDE（Unicode編碼）、biang2（普通話拼音）、43（總筆畫數）、辵39（部首餘筆），均可查到“𰻞”及其讀音。音節末尾的“?”可匹配任何聲調。<br>"),
   #('unicode', '統一碼', '統一碼', '#808080', 'Unihan', 'https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%s'),
   ('sg', '上古（鄭張尚芳）', '鄭張', '#9A339F', '韻典網（上古音系）', 'https://ytenx.org/dciangx/dzih/%s',"名稱：上古音鄭張尚芳擬音<br>來源：<a href=https://ytenx.org/dciangx/>韻典網</a>"),
   ('ba', '上古（白一平沙加爾）', '白沙2015', '#9A339F', None, None, "更新：2015-10-13<br>名稱：上古音白一平沙加爾2015年擬音<br>來源：<a href=http://ocbaxtersagart.lsait.lsa.umich.edu/>http://ocbaxtersagart.lsait.lsa.umich.edu/</a>"),
@@ -36,18 +36,18 @@ HEADS = [
   ('pu', '普通話', '普通話', '#FF00FF', '漢典網', "http://www.zdic.net/hans/%s", "名稱：普通話、國語<br>來源：<a href=https://www.zdic.net/>漢典</a>、<a href=http://yedict.com/>字海</a>、<a href=https://www.moedict.tw/>萌典</a><br>說明：灰色讀音來自<a href=https://www.moedict.tw/>萌典</a>。可使用漢語拼音、注音符號查詢漢字。在輸入漢語拼音時，可以用數字1、2、3、4代表聲調，放在音節末尾，“?”可代表任何聲調；字母ü可用v代替。例如查詢普通話讀lüè的字時可輸入lve4。在輸入注音符號時，聲調一般放在音節末尾，但表示輕聲的點（˙）既可以放在音節開頭，也可以放在音節末尾，例如“的”字的讀音可拼作“˙ㄉㄜ”或“ㄉㄜ˙”。"),
   ('nt', '南通話', '南通', '#0000FF', '南通方言網', "http://nantonghua.net/search/index.php?hanzi=%s", "更新：2018-01-08<br>名稱：南通話<br>來源：<a href=http://nantonghua.net/archives/5127/南通话字音查询/>南通方言網</a>"),
   ('tr', '泰如方言', '泰如', '#0000FF', '泰如小字典', "http://taerv.nguyoeh.com/query.php?table=泰如字典&簡體=%s", "更新：2021-06-22<br>名稱：泰如方言<br>來源：<a href=http://taerv.nguyoeh.com/>泰如小字典</a>"),
-  ('ic', '鹽城話', '鹽城', '#0000FF', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s", "名稱：鹽城話<br>來源：<a href=http://huae.nguyoeh.com/>類音字彙</a>，《鹽城縣志》等"),
+  ('ic', '鹽城話', '鹽城', '#0000FF', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s", "更新：2021-06-29<br>名稱：鹽城話<br>來源：<a href=http://huae.nguyoeh.com/>類音字彙</a>、鹽城縣志、鹽城方言研究等"),
   #('lj', '南京話', '南京', '#0000FF', '南京官話拼音方案', "https://uliloewi.github.io/LangJinPinIn/PinInFangAng"),
-  ('td', '通東談話', '通東', '#7C00FF', None, None, "更新：2021-06-23<br>名稱：通東談話<br>來源：網友<u>正心修身</u>"),
+  ('td', '通東談話', '通東', '#7C00FF', None, None, "更新：2021-06-29<br>名稱：通東談話<br>來源：網友<u>正心修身</u>"),
   ('sz', '蘇州話', '蘇州', '#1E90FF', '吳語學堂（蘇州）', "https://www.wugniu.com/search?table=suzhou_zi&char=%s", "名稱：蘇州話<br>來源：<a href=https://github.com/NGLI/rime-wugniu_soutseu>蘇州吳語拼音輸入方案</a>、<a href=https://www.wugniu.com/>吳語學堂</a>"),
   ('sh', '上海話', '上海', '#1E90FF', '吳音小字典（上海）', "http://www.wu-chinese.com/minidict/search.php?searchlang=zaonhe&searchkey=%s", "名稱：上海話<br>來源：《上海市區方言志》（1988年版），蔡子文錄入<br>說明：該書記錄的是中派上海話音系（使用者多出生於20世紀40至70年代），與<a href=http://www.wu-chinese.com/minidict/>吳音小字典</a>記錄的音系並不完全相同。"),
-  ('ra', '瑞安城關', '瑞安', '#1E90FF', None, None, "更新：2021-05-24<br>名稱：瑞安城關讀音<br>來源：網友<u>落橙</u>"),
+  ('ra', '瑞安東山', '瑞安東山', '#1E90FF', None, None, "更新：2021-06-29<br>名稱：瑞安東山話<br>來源：網友<u>落橙</u>"),
   ('nc', '南昌話', '南昌', '#00ADAD', None, None, "名稱：南昌話<br>來源：網友<u>澀口的茶</u>"),
   ('hk', '客家話綜合口音', '綜合客語', '#008000', '薪典', "https://www.syndict.com/w2p.php?item=hak&word=%s", "更新：2019-04-19<br>名稱：客家話綜合口音<br>來源：<a href=https://github.com/syndict/hakka/>客語輸入法</a>、<a href=https://www.syndict.com/>薪典</a>"),
   ('hl', '客家話海陸腔', '海陸客語', '#008000', '客語萌典', "https://www.moedict.tw/:%s", "名稱：客家話海陸腔<br>來源：<a href=https://www.moedict.tw/>客語萌典</a>"),
   ('sx', '客家話四縣腔', '四縣客語', '#008000', '客語萌典', "https://www.moedict.tw/:%s", "名稱：客家話四縣腔<br>來源：<a href=https://www.moedict.tw/>客語萌典</a>"),
   ('ct', '廣州話', '廣州', '#FFAD00', '粵語審音配詞字庫', "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s", "名稱：廣州話<br>來源：<a href=http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/>粵語審音配詞字庫</a>、<a href=http://www.unicode.org/charts/unihan.html>Unihan</a><br>說明：括號中的爲異讀讀音"),
-  ('mn', '閩南語', '閩南', '#FF6600', '臺灣閩南語常用詞辭典', "http://twblg.dict.edu.tw/holodict_new/result.jsp?querytarget=1&radiobutton=0&limit=20&sample=%s", "更新：2018-07-05<br>名稱：閩南語<br>來源：<a href=https://twblg.dict.edu.tw/holodict_new/>臺灣閩南語常用詞辭典</a><br>說明：下標“俗”表示“俗讀音”，“替”表示“替代字”，指的是某個字的讀音其實來自另一個字，比如“人”字的lang5音其實來自“儂”字。有些字會有用斜線分隔的兩個讀音（如“人”字的jin5/lin5），前者爲高雄音（第一優勢腔），後者爲臺北音（第二優勢腔）。"),
+  ('mn', '閩南語', '閩南', '#FF6600', '臺灣閩南語常用詞辭典', "http://twblg.dict.edu.tw/holodict_new/result.jsp?querytarget=1&radiobutton=0&limit=20&sample=%s", "更新：2020-05-17<br>名稱：閩南語<br>來源：<a href=https://github.com/tauhu-tw/tauhu-taigi>豆腐台語詞庫</a>、<a href=https://twblg.dict.edu.tw/holodict_new/>臺灣閩南語常用詞辭典</a><br>說明：下標“俗”表示“俗讀音”，“替”表示“替代字”，指的是某個字的讀音其實來自另一個字，比如“人”字的lang5音其實來自“儂”字。有些字會有用斜線分隔的兩個讀音（如“人”字的jin5/lin5），前者爲高雄音（第一優勢腔），後者爲臺北音（第二優勢腔）。"),
   ('vn', '越南語', '越南', '#DB7093', '漢越辭典摘引', "http://www.vanlangsj.org/hanviet/hv_timchu.php?unichar=%s", "名稱：越南語<br>來源：<a href=http://www.vanlangsj.org/hanviet/>漢越辭典摘引</a>"),
   ('kr_mid', '中世紀朝鮮語', '中世朝鮮', '#BA55D3', None, None, "名稱：中世紀朝鮮語<br>來源：<a href=https://github.com/nk2028/sino-korean-readings>韓國漢字音歷史層次研究</a>"),
   ('kr', '朝鮮語', '朝鮮', '#BA55D3', 'Naver漢字辭典', "http://hanja.naver.com/hanja?q=%s", "名稱：朝鮮語、韓語<br>來源：<a href=http://hanja.naver.com/>Naver漢字辭典</a><br>說明：括號前的讀音爲漢字本來的讀音，也是朝鮮的標準音，而括號內的讀音爲韓國應用<a href=http://zh.wikipedia.org/wiki/%E9%A0%AD%E9%9F%B3%E6%B3%95%E5%89%87>頭音法則</a>之後的讀音。"),
@@ -58,6 +58,7 @@ HEADS = [
   ('jp_other', '日語其他讀音', '日語其他', '#FF0000', None, None, None),
   ('bh', '總筆畫數', '總筆畫數', '#808080', None, None, None),
   ('bs', '部首餘筆', '部首餘筆', '#808080', None, None, None),
+  ('fl', '分類', '分類', '#808080', None, None, None),
 ]
 ZHEADS = list(zip(*HEADS))
 KEYS = ZHEADS[0]
@@ -97,12 +98,46 @@ for line in open("../app/src/main/res/raw/orthography_hz_compatibility.txt"):
     kCompatibilityVariants[han] = val
 logging.info("處理兼容字 %.3f" % timeit())
 
-#hz grade
-g1 = set(open("一级字").read().strip().split("\n"))
-g2 = set(open("二级字").read().strip().split("\n"))
-
-def get_missing(g, k):
-    return print("".join(set(g)-set(k)))
+#fl
+d.clear()
+for line in open("/usr/share/unicode/Unihan_DictionaryIndices.txt"):
+  if not line.startswith("U"): continue
+  han, typ, val = line.strip().split("\t", 2)
+  han = hex2chr(han)
+  if typ == "kIRGKangXi" and val.endswith("0"):
+    d[han].append(typ)
+for line in open("/usr/share/unicode/Unihan_OtherMappings.txt"):
+  if not line.startswith("U"): continue
+  han, typ, val = line.strip().split("\t", 2)
+  han = hex2chr(han)
+  if typ == "kTGH":
+    order = int(val.split(":")[1])
+    if order <= 3500: level = 1
+    elif order <= 6500: level = 2
+    else: level = 3    
+    d[han].append("%s%d"%(typ, level))
+  elif typ in ("kGB0", "kBigFive"):
+    d[han].append(typ)
+  elif typ == "kHKSCS":
+    d[han].append("kBigFiveHK")
+for line in open("/usr/share/unicode/Unihan_DictionaryLikeData.txt"):
+  if not line.startswith("U"): continue
+  han, typ, val = line.strip().split("\t", 2)
+  if typ == "kHKGlyph":
+    han = hex2chr(han)
+    d[han].append(typ)
+for line in open("/usr/share/unicode/Unihan_IRGSources.txt"):
+  if not line.startswith("U"): continue
+  han, typ, val = line.strip().split("\t", 2)
+  if typ == "kIRG_TSource" and val.startswith("T1-"):
+    han = hex2chr(han)
+    d[han].append("T1")
+for line in open("方言調查字表"):
+  han = line.strip()
+  if han:
+    d[han].append("FD")
+update("fl", d)
+logging.info("漢字分類 %.3f" % timeit())
 
 #mc
 d.clear()
@@ -269,6 +304,7 @@ logging.info("處理泰如話 %.3f" % timeit())
 d.clear()
 icsm = {'g': 'k', 'd': 't', '': '', 'c': 'tsʰ', 'b': 'p', 'l': 'l', 'h': 'x', 't': 'tʰ', 'q': 'tɕʰ', 'z': 'ts', 'j': 'tɕ', 'f': 'f', 'k': 'kʰ', 'n': 'n', 'x': 'ɕ', 'm': 'm', 's': 's', 'p': 'pʰ', 'ng': 'ŋ'}
 icym = {'ae': 'ɛ', 'ieh': 'iəʔ', 'ii': 'i', 'eh': 'əʔ', 'io': 'iɔ', 'ieu': 'iəu', 'u': 'u', 'v': 'v', 'en': 'ən', 'a': 'a', 'on': 'ɔŋ', 'an': 'ã', 'oh': 'ɔʔ', 'i': 'j', 'ien': 'in', 'ion': 'iɔŋ', 'ah': 'aʔ', 'ih': 'iʔ', 'y': 'y', 'ui': 'ui', 'uae': 'uɛ', 'aeh': 'ɛʔ', 'in': 'ĩ', 'ia': 'ia', 'z': 'ɿ', 'uh': 'uʔ', 'aen': 'ɛ̃', 'er': 'ɚ', 'eu': 'əu', 'iah': 'iaʔ', 'ueh': 'uəʔ', 'iae': 'iɛ', 'iuh': 'iuʔ', 'yen': 'yn', 'ian': 'iã', 'iun': 'iũ', 'un': 'ũ', 'o': 'ɔ', 'uan': 'uã', 'ua': 'ua', 'uen': 'uən', 'ioh': 'iɔʔ', 'iaen': 'iɛ̃', 'uaen': 'uɛ̃', 'uaeh': 'uɛʔ', 'iaeh': 'iɛʔ', 'uah': 'uaʔ', 'yeh': 'yəʔ', 'ya': 'ya', '': ''}
+icsd = {'1':'³¹', "2":'²¹³',"3":"⁵⁵", "5":"³⁵","7":"⁵"}
 for line in open("ic"):
   line = line.strip()
   if not line: continue
@@ -276,8 +312,9 @@ for line in open("ic"):
   py,hzs = fs
   sm = re.findall("^[^aeiouvy]?g?", py)[0]
   sd = py[-1]
-  ym = py[len(sm):-1]
-  py = icsm[sm]+icym[ym]+sd
+  if sd not in "12357": sd = ""
+  ym = py[len(sm):len(py)-len(sd)]
+  py = icsm[sm]+icym[ym]+icsd.get(sd,"")+sd
   hzs = re.findall("(.)([+-=*?]?)(（.*?）)?", hzs)
   for hz, c, m in hzs:
     p = ""
@@ -288,8 +325,10 @@ for line in open("ic"):
         p = "又"
       elif c == '=':
         p = "文"
-      elif c == '*' or c == '?':
+      elif c == '*':
         p = "俗"
+      elif c == '?':
+        p = "待考"
     p = p + m
     if p:
       p = "`%s`" % p
@@ -318,8 +357,8 @@ logging.info("處理鹽城話 %.3f" % timeit())
 #td
 d.clear()
 for line in open("通東談話.csv"):
-  line = line.strip('\n').replace('"','')
-  fs = line.split('\t')
+  line = line.strip('\n')
+  fs = [i.strip(' "') for i in line.split('\t')]
   hz, jt, py = fs[:3]
   sd = fs[4]
   if py == "IPA": continue
@@ -348,6 +387,7 @@ def sz2ipa(s):
   else:
     tone = ""
   s = re.sub("y$", "ɿ", s)
+  s = re.sub("^yu$", "ghiu", s)
   s = re.sub("yu$", "ʮ", s)
   s = re.sub("q$", "h", s)
   s = s.replace("y", "ghi").replace("w", "ghu").replace("ii", "i").replace("uu", "u")
@@ -457,27 +497,34 @@ for i in unicodes.keys():
 logging.info("處理上海話 %.3f" % timeit())
 
 #ra
-def ra2ipa(s):
-  s = re.sub("([^aeiouy])u([1-8])", "\\1ʋʷ\\2", s)
-  s = s.replace("y", "J").replace("io","yo").replace("Jo","yo").replace("ae", "ɛ").replace("ao", "ɔ").replace("eu", "əʉ").replace("ou", "əu").replace("oe", "ø").replace("yu", "y").replace("iu", "y")\
-          .replace("an", "aŋ").replace("en", "əŋ").replace("on", "oŋ")
-  s = s.replace("ph", "pʰ").replace("th", "tʰ").replace("kh", "kʰ").replace("tsh", "tsʰ")\
-          .replace("ch", "tɕʰ").replace("c", "tɕ").replace("sh", "ɕ").replace("j", "dʑ").replace("J","j").replace("zh", "ʑ")\
-          .replace("gh", "ɦ").replace("ng", "ŋ")
-  return s
 d.clear()
-for line in open("同音字表-瑞安.csv"):
-  fs = line.strip().split('\t')
-  hz = fs[0]
-  py = fs[2]
+for line in open("方言调查字表-瑞安東山.csv"):
+  fs = [i.strip('" ') for i in line.strip('\n').split('\t')]
+  hz,py,yb,zs = fs
+  if not py: continue
+  sd = py[-1] if py[-1].isdigit() else ""
   if len(hz) == 1:
-    py = ra2ipa(py)
-    if py not in d[hz]:
-      d[hz].append(py)
+    yb = yb.strip("0").replace('˩','¹')\
+                      .replace('˨','²')\
+                      .replace('˧','³')\
+                      .replace('˦','⁴')\
+                      .replace('˥','⁵')
+    js = yb + sd + ("`%s`"% zs if zs else "")
+    if js not in d[hz]:
+      d[hz].append(js)
 update("ra", d)
-logging.info("處理瑞安話 %.3f" % timeit())
+logging.info("處理瑞安東山話 %.3f" % timeit())
 
 #mn
+d.clear()
+for line in open("豆腐台語詞庫.csv"):
+  fs = line.strip().split(',')
+  hz = fs[1]
+  py = fs[0]
+  if len(hz) == 1:
+    if py not in d[hz]:
+      d[hz].append(py)
+update("mn", d)
 for i in unicodes.keys():
   if "mn" in unicodes[i]:
     py = unicodes[i]["mn"]

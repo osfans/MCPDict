@@ -101,25 +101,6 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return languages.matches("(.*,)?"+col+"(,.*)?");
     }
 
-    private boolean isCharVisible(int charset, String hz) {
-        if (charset <= 1) return true;
-        else if (charset == 2) {
-            try {
-                byte[] gb2312 = hz.getBytes("gb2312");
-                return gb2312.length == 2 && ((gb2312[0] & 0xFF) >= 0xB0) && ((gb2312[1] & 0xFF) >= 0xA1);
-            } catch (Exception ignored) {
-            }
-        }
-        else if (charset == 3) {
-            try {
-                String big5 = URLEncoder.encode(hz, "big5");
-                return !Objects.requireNonNull(big5).equals("%3F");
-            } catch (Exception ignored) {
-            }
-        }
-        return false;
-    }
-
     @Override
     public void bindView(final View view, final Context context, Cursor cursor) {
         String hz, string;

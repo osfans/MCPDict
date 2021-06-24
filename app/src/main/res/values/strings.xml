@@ -268,7 +268,25 @@
     <string-array name="pref_entries_charset">
         <item>全部漢字</item>
         <item>僅廣韻</item>
-<!--        <item>僅GB2312</item>-->
-<!--        <item>僅BIG5</item>-->
+        <item>僅康熙字典</item>
+        <item>僅方言調查字表</item>
+        <item>僅常用字字形表</item>
+        <item>僅常用國字標準字體表</item>
+        <item>僅通用規範漢字表</item>
+        <item>僅通用規範漢字表一級字</item>
+        <item>僅大五碼</item>
+        <item>僅GB2312</item>
+    </string-array>
+    <string-array name="pref_values_charset">
+        <item>""</item>
+        <item>""</item>
+        <item>kIRGKangXi</item>
+        <item>FD</item>
+        <item>kHKGlyph</item>
+        <item>T1</item>
+        <item>kTGH*</item>
+        <item>kTGH1</item>
+        <item>kBigFive*</item>
+        <item>kGB0</item>
     </string-array>
 </resources>

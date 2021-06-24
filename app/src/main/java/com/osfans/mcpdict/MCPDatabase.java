@@ -22,7 +22,7 @@ import java.util.Objects;
 public class MCPDatabase extends SQLiteAssetHelper {
 
     private static final String DATABASE_NAME = "mcpdict.db";
-    private static final int DATABASE_VERSION = 16;
+    private static final int DATABASE_VERSION = BuildConfig.VERSION_CODE;
 
     // Must be the same order as defined in the string array "search_as"
 
@@ -106,7 +106,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
         // Get options and settings from SharedPreferences
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         Resources r = context.getResources();
-        boolean kuangxYonhOnly = sp.getInt(r.getString(R.string.pref_key_charset), 0) == 1;
+        int charset = sp.getInt(r.getString(R.string.pref_key_charset), 0);
+        boolean kuangxYonhOnly = charset == 1;
         boolean allowVariants = sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true);
         int cantoneseSystem = Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(R.string.pref_key_cantonese_romanization), "0")));
 
@@ -236,6 +237,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
         String selection = "u._id = v.rowid";
         if (kuangxYonhOnly) {
             selection += " AND mc IS NOT NULL";
+        } else if (charset > 0) {
+            selection += String.format(" AND fl MATCH '%s'", r.getStringArray(R.array.pref_values_charset)[charset]);
         }
         query = qb.buildQuery(projection, selection, null, null, "rank", null);
 
