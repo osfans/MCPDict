@@ -7,9 +7,9 @@ def hex2chr(uni):
     "把unicode轉換成漢字"
     return chr(int(uni[2:], 16))
 
-def main():
+def get():
     "主程序"
-    fname = "../app/src/main/res/raw/orthography_hz_variants.txt"
+    fname = "orthography_hz_variants.txt"
     org = OrderedDict()
     for line in open(fname):
         line = line.strip()
@@ -61,10 +61,4 @@ def main():
         if han not in org:
             org[han] = "".join(dic[han]).strip()
 
-    target = open(fname+"4", "w", encoding="U8")
-    for han in org:
-        print("%s%s" % (han, org[han]), file=target)
-    target.close()
-
-if __name__ == "__main__":
-    main()
+    return {han:han+org[han] for han in org}

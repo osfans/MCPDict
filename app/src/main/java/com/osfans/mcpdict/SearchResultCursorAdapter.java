@@ -195,7 +195,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         // Variants
         string = cursor.getString(cursor.getColumnIndex("variants"));
         textView = view.findViewById(R.id.text_variants);
-        if (!TextUtils.isEmpty(string)) {
+        if (!TextUtils.isEmpty(string) && !string.contentEquals(hz)) {
             textView.setText(String.format("(%s)", string));
         } else {
             textView.setText("");
