@@ -95,7 +95,6 @@ public class Orthography {
     }
 
     public static class HZ {
-        private static final Map<Integer,String> variants = new HashMap<>();
         private static final Map<Integer,Integer> compatibility = new HashMap<>();
 
         public static boolean isHz(int unicode) {
@@ -145,14 +144,8 @@ public class Orthography {
                     || type == Character.OTHER_NUMBER;
         }
 
-        public static int[] getVariants(int unicode) {
-            if (variants.containsKey(unicode)) return variants.get(unicode).codePoints().toArray();
-            return new int[] {unicode};
-        }
-
         public static int getCompatibility(int unicode) {
-            if (compatibility.containsKey(unicode)) return compatibility.get(unicode);
-            return unicode;
+            return compatibility.getOrDefault(unicode, unicode);
         }
 
         public static String toHz(String input) {
@@ -1193,15 +1186,6 @@ public class Orthography {
         String[] fields;
 
         try {
-            // Character variants
-            inputStream = resources.openRawResource(R.raw.orthography_hz_variants);
-            reader = new BufferedReader(new InputStreamReader(inputStream));
-            while ((line = reader.readLine()) != null) {
-                int c = line.codePointAt(0);
-                HZ.variants.put(c, line);
-            }
-            reader.close();
-
             // Character compatibility variants
             inputStream = resources.openRawResource(R.raw.orthography_hz_compatibility);
             reader = new BufferedReader(new InputStreamReader(inputStream));

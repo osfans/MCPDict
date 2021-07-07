@@ -108,12 +108,10 @@ public class MCPDatabase extends SQLiteAssetHelper {
         Resources r = context.getResources();
         int charset = sp.getInt(r.getString(R.string.pref_key_charset), 0);
         boolean kuangxYonhOnly = charset == 1;
-        boolean allowVariants = sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true);
         int cantoneseSystem = Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(R.string.pref_key_cantonese_romanization), "0")));
 
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
-        List<String> variants = new ArrayList<>();
         if (Orthography.HZ.isBH(input)) mode = COL_BH;
         else if (Orthography.HZ.isBS(input)) {
             mode = COL_BS;
@@ -128,31 +126,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
                 if (!Orthography.HZ.isHz(unicode)) continue;
                 String hz = Orthography.HZ.toHz(unicode);
                 if (keywords.contains(hz)) continue;
-                if (!allowVariants) {
-                    keywords.add(hz);
-                } else {
-                    for (int variant : Orthography.HZ.getVariants(unicode)) {
-                        String variantHz = Orthography.HZ.toHz(variant);
-                        int p = keywords.indexOf(variantHz);
-                        if (variant == unicode) {
-                            if (p >= 0) {       // The character itself must appear where it is
-                                keywords.remove(p);
-                                variants.remove(p);
-                            }
-                            keywords.add(variantHz);
-                            variants.add(null); // And no variant information is appended
-                        } else {
-                            if (p == -1) {      // This variant character may have appeared before
-                                keywords.add(variantHz);
-                                variants.add(hz);
-                            } else {
-                                if (variants.get(p) != null) {
-                                    variants.set(p, variants.get(p) + hz);
-                                }
-                            }
-                        }
-                    }
-                }
+                keywords.add(hz);
             }
         }
         else {                          // Each contiguous run of non-separator and non-comma characters is a query
@@ -217,12 +191,13 @@ public class MCPDatabase extends SQLiteAssetHelper {
         qb.setTables("mcpdict");
         List<String> queries = new ArrayList<>();
         List<String> args = new ArrayList<>();
+        boolean allowVariants = isHZ(mode) && sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true);
         for (int i = 0; i < keywords.size(); i++) {
-            String variant = (isHZ(mode) && allowVariants && variants.get(i) != null) ?
-                             ("\"" + variants.get(i) + "\"") : "null";
+            String variant = allowVariants ? ("\"" + keywords.get(i) + "\"") : "null";
             String[] projection = {"rowid AS _id", i + " AS rank", variant + " AS variants"};
             for (String column : columns) {
-                queries.add(qb.buildQuery(projection, column + " MATCH ?", null, null, null, null));
+                String col = allowVariants ? "va" : column;
+                queries.add(qb.buildQuery(projection, col + " MATCH ?", null, null, null, null));
                 args.add(keywords.get(i));
             }
         }

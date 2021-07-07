@@ -8,6 +8,7 @@ import ruamel.yaml
 from itertools import chain
 import unicodedata
 from openpyxl import load_workbook
+import variant
 
 logging.basicConfig(format='[%(asctime)s] %(message)s', level=logging.INFO)
 start = time()
@@ -58,6 +59,7 @@ HEADS = [
   ('jp_other', '日語其他讀音', '日語其他', '#FF0000', None, None, None),
   ('bh', '總筆畫數', '總筆畫數', '#808080', None, None, None),
   ('bs', '部首餘筆', '部首餘筆', '#808080', None, None, None),
+  ('va', '異體字', '異體字', '#808080', None, None, None),
   ('fl', '分類', '分類', '#808080', None, None, None),
 ]
 ZHEADS = list(zip(*HEADS))
@@ -692,6 +694,14 @@ for line in open("/usr/share/unicode/Unihan_IRGSources.txt"):
       d[han].append(bs[order]+left)
 update("bs", d)
 logging.info("部首檢字法 %.3f" % timeit())
+
+#variant
+variants = variant.get()
+for i in list(unicodes.keys()):
+  d = unicodes[i]
+  if d.get("pu"):
+    d["va"] = " ".join(variants.get(i, i))
+logging.info("處理異體字 %.3f" % timeit())
 
 #stat
 counts = dict()
