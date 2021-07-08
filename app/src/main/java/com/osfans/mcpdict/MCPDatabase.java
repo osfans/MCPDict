@@ -30,25 +30,26 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_BH = "bh";
     public static final String SEARCH_AS_BS = "bs";
     public static final String SEARCH_AS_BA = "ba";
-    public static final String SEARCH_AS_MC = "mc";
-    public static final String SEARCH_AS_PU = "pu";
-    public static final String SEARCH_AS_CT = "ct";
-    public static final String SEARCH_AS_MN = "mn";
-    public static final String SEARCH_AS_KR = "kr";
-    public static final String SEARCH_AS_VN = "vn";
-    public static final String SEARCH_AS_JP_GO = "jp_go";
-    public static final String SEARCH_AS_JP_KAN = "jp_kan";
-    public static final String SEARCH_AS_JP_TOU = "jp_tou";
-    public static final String SEARCH_AS_JP_KWAN = "jp_kwan";
-    public static final String SEARCH_AS_JP_OTHER = "jp_other";
-    public static final String SEARCH_AS_JP_ANY = SEARCH_AS_JP_TOU;
+    public static final String SEARCH_AS_MC = "ltc_mc";
+    public static final String SEARCH_AS_CMN = "cmn";
+    public static final String SEARCH_AS_GZ = "yue_gz";
+    public static final String SEARCH_AS_NAN = "nan";
+    public static final String SEARCH_AS_KOR = "ko_kor";
+    public static final String SEARCH_AS_OKM = "ko_okm";
+    public static final String SEARCH_AS_VI = "vi";
+    public static final String SEARCH_AS_JA_GO = "ja_go";
+    public static final String SEARCH_AS_JA_KAN = "ja_kan";
+    public static final String SEARCH_AS_JA_TOU = "ja_tou";
+    public static final String SEARCH_AS_JA_KWAN = "ja_kwan";
+    public static final String SEARCH_AS_JA_OTHER = "ja_other";
+    public static final String SEARCH_AS_JA_ANY = SEARCH_AS_JA_TOU;
 
-    public static final String SEARCH_AS_IC = "ic";
-    public static final String SEARCH_AS_ZY = "zy";
-    public static final String SEARCH_AS_YT = "yt";
-    public static final String SEARCH_AS_SX = "sx";
-    public static final String SEARCH_AS_RA = "ra";
-    public static final String SEARCH_AS_TD = "td";
+    public static final String SEARCH_AS_IC = "cmn_hy_ic";
+    public static final String SEARCH_AS_ZY = "ltc_zy";
+    public static final String SEARCH_AS_YT = "ltc_yt";
+    public static final String SEARCH_AS_SX = "hak_sx";
+    public static final String SEARCH_AS_RADS = "wuu_oj_rads";
+    public static final String SEARCH_AS_TD = "wuu_td";
 
 
     public static int COL_HZ;
@@ -57,20 +58,19 @@ public class MCPDatabase extends SQLiteAssetHelper {
     private static int COL_MC;
     private static int COL_PU;
 
-    private static int COL_KR;
-    public static int COL_JP_ANY;
-    public static int COL_JP_FIRST;
+    public static int COL_JA_ANY;
+    public static int COL_JA_FIRST;
     public static int COL_FIRST_READING;
     public static int COL_LAST_READING;
 
     public static int MASK_HZ;
-    public static int MASK_JP_ALL;
+    public static int MASK_JA_ALL;
     public static int MASK_ALL_READINGS;
 
     private static final String TABLE_NAME = "mcpdict";
 
     private static String[] COLUMNS;
-    private static final String[] JP_COLUMNS = new String[] {SEARCH_AS_JP_GO, SEARCH_AS_JP_KAN, SEARCH_AS_JP_TOU, SEARCH_AS_JP_KWAN, SEARCH_AS_JP_OTHER};
+    private static final String[] JA_COLUMNS = new String[] {SEARCH_AS_JA_GO, SEARCH_AS_JA_KAN, SEARCH_AS_JA_TOU, SEARCH_AS_JA_KWAN, SEARCH_AS_JA_OTHER};
     private static ArrayList<String> SEARCH_AS_NAMES;
     private static ArrayList<String> NAMES;
     private static ArrayList<String> COLORS;
@@ -130,7 +130,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
             }
         }
         else {                          // Each contiguous run of non-separator and non-comma characters is a query
-            if (isKR(mode)) { // For Korean, put separators around all hanguls
+            if (isKO(mode)) { // For Korean, put separators around all hanguls
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < input.length(); i++) {
                     char c = input.charAt(i);
@@ -149,13 +149,15 @@ public class MCPDatabase extends SQLiteAssetHelper {
                 // Canonicalization
                 switch (getColumnName(mode)) {
                     case SEARCH_AS_MC: token = Orthography.MiddleChinese.canonicalize(token); break;
-                    case SEARCH_AS_PU: token = Orthography.Mandarin.canonicalize(token); break;
-                    case SEARCH_AS_CT: token = Orthography.Cantonese.canonicalize(token, cantoneseSystem); break;
-                    case SEARCH_AS_KR: token = Orthography.Korean.canonicalize(token); break;
-                    case SEARCH_AS_VN: token = Orthography.Vietnamese.canonicalize(token); break;
-                    case SEARCH_AS_JP_GO:
-                    case SEARCH_AS_JP_KAN:
-                    case SEARCH_AS_JP_ANY:
+                    case SEARCH_AS_CMN: token = Orthography.Mandarin.canonicalize(token); break;
+                    case SEARCH_AS_GZ: token = Orthography.Cantonese.canonicalize(token, cantoneseSystem); break;
+                    case SEARCH_AS_KOR:
+                    case SEARCH_AS_OKM:
+                        token = Orthography.Korean.canonicalize(token); break;
+                    case SEARCH_AS_VI: token = Orthography.Vietnamese.canonicalize(token); break;
+                    case SEARCH_AS_JA_GO:
+                    case SEARCH_AS_JA_KAN:
+                    case SEARCH_AS_JA_ANY:
                         token = Orthography.Japanese.canonicalize(token); break;
                     default:
                         break;
@@ -166,9 +168,9 @@ public class MCPDatabase extends SQLiteAssetHelper {
                     token = token.substring(0, token.length()-1);
                     switch (getColumnName(mode)) {
                         case SEARCH_AS_MC: allTones = Orthography.MiddleChinese.getAllTones(token); break;
-                        case SEARCH_AS_PU: allTones = Orthography.Mandarin.getAllTones(token); break;
-                        case SEARCH_AS_CT: allTones = Orthography.Cantonese.getAllTones(token); break;
-                        case SEARCH_AS_VN: allTones = Orthography.Vietnamese.getAllTones(token); break;
+                        case SEARCH_AS_CMN: allTones = Orthography.Mandarin.getAllTones(token); break;
+                        case SEARCH_AS_GZ: allTones = Orthography.Cantonese.getAllTones(token); break;
+                        case SEARCH_AS_VI: allTones = Orthography.Vietnamese.getAllTones(token); break;
                         default:
                             allTones = Orthography.Tone8.getAllTones(token); break;
                     }
@@ -184,7 +186,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         if (keywords.isEmpty()) return null;
 
         // Columns to search
-        String[] columns = isAnyJP(mode) ? JP_COLUMNS : new String[] {getColumnName(mode)};
+        String[] columns = isAnyJA(mode) ? JA_COLUMNS : new String[] {getColumnName(mode)};
 
         // Build inner query statement (a union query returning the id's of matching Chinese characters)
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
@@ -249,16 +251,15 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COL_BH = cursor.getColumnIndex(SEARCH_AS_BH);
         COL_BS = cursor.getColumnIndex(SEARCH_AS_BS);
         COL_MC = cursor.getColumnIndex(SEARCH_AS_MC);
-        COL_PU = cursor.getColumnIndex(SEARCH_AS_PU);
-        COL_KR = cursor.getColumnIndex(SEARCH_AS_KR);
+        COL_PU = cursor.getColumnIndex(SEARCH_AS_CMN);
 
-        COL_JP_FIRST = cursor.getColumnIndex(SEARCH_AS_JP_GO);
-        COL_JP_ANY = COL_JP_FIRST + 2;
+        COL_JA_FIRST = cursor.getColumnIndex(SEARCH_AS_JA_GO);
+        COL_JA_ANY = COL_JA_FIRST + 2;
         COL_FIRST_READING = COL_HZ + 1;
-        COL_LAST_READING = COL_JP_FIRST + 4;
+        COL_LAST_READING = COL_JA_FIRST + 4;
 
         MASK_HZ = 1 << COL_HZ;
-        MASK_JP_ALL = 0b11111 << COL_JP_FIRST;
+        MASK_JA_ALL = 0b11111 << COL_JA_FIRST;
         MASK_ALL_READINGS   = (1 << (COL_LAST_READING + 1)) - (1 << COL_FIRST_READING);
 
         SEARCH_AS_NAMES = new ArrayList<>();
@@ -286,20 +287,20 @@ public class MCPDatabase extends SQLiteAssetHelper {
         return mode == COL_HZ;
     }
 
-    private static boolean isKR(int mode) {
-        return mode == COL_KR;
+    private static boolean isKO(int mode) {
+        return getColumnName(mode).startsWith("ko_");
     }
 
-    private static boolean isJP(int mode) {
-        return mode >= COL_JP_FIRST;
+    private static boolean isJA(int mode) {
+        return mode >= COL_JA_FIRST;
     }
 
-    public static boolean isAnyJP(int mode) {
-        return mode == COL_JP_ANY;
+    public static boolean isAnyJA(int mode) {
+        return mode == COL_JA_ANY;
     }
 
     public static boolean isToneInsensitive(int mode) {
-        return !isKR(mode) && !isJP(mode);
+        return !isKO(mode) && !isJA(mode);
     }
 
     private static void getNames() {

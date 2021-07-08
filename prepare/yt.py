@@ -35,14 +35,14 @@ def get_dict():
 		f.close()
 	
 	pq = dict()
-	for line in open("../../ytenx/ytenx/sync/kyonh/PrengQim.txt"):
+	for line in open("PrengQim.txt"):
 		line = line.strip()
 		if line.startswith("#"): continue
 		fs = line.split(" ")
 		pq[fs[1]] = yt[int(fs[0])]
 
 	d=defaultdict(list)
-	for line in open("../../RIME/rime-middle-chinese/zyenpheng.dict.yaml"):
+	for line in open("zyenpheng.dict.yaml"):
 		line = line.strip()
 		fs = line.split('\t')
 		if len(fs) < 2: continue
