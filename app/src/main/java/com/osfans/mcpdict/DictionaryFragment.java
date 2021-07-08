@@ -30,6 +30,18 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
     private SearchResultFragment fragmentResult;
     ArrayAdapter<CharSequence> adapter, adapterShowLang, adapterShowChar;
 
+    private void updateCurrentLanguage(int position) {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        sp.edit().putInt(getString(R.string.pref_key_show_language_index), position).apply();
+        String name = getResources().getStringArray(R.array.pref_values_show_languages)[position];
+        if (position == 1) {
+            int mode = spinnerSearchAs.getSelectedItemPosition();
+            name = MCPDatabase.getColumnName(mode);
+            if (name.contentEquals("jp_tou")) name = "jp_go,jp_kan,jp_tou,jp_kwan,jp_other";
+        }
+        sp.edit().putString(getString(R.string.pref_key_show_language_names), name).apply();
+    }
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // A hack to avoid nested fragments from being inflated twice
@@ -56,13 +68,12 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
                 R.array.pref_entries_show_languages, android.R.layout.simple_spinner_item);
         adapterShowLang.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerShowLang.setAdapter(adapterShowLang);
-        int position = PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt(getString(R.string.pref_key_show_languages), 0);
+        int position = PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt(getString(R.string.pref_key_show_language_index), 0);
         spinnerShowLang.setSelection(position);
         spinnerShowLang.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
-                sp.edit().putInt(getString(R.string.pref_key_show_languages), position).apply();
+                updateCurrentLanguage(position);
                 searchView.clickSearchButton();
             }
             @Override
@@ -95,6 +106,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         spinnerSearchAs.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                updateCurrentLanguage(spinnerShowLang.getSelectedItemPosition());
                 searchView.clickSearchButton();
             }
             @Override
