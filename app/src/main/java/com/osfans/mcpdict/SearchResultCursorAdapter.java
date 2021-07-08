@@ -108,8 +108,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         int mask = 0;
         Orthography.setToneStyle(getStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(getStyle(R.string.pref_key_tone_value_display));
-        int showLanguages = PreferenceManager.getDefaultSharedPreferences(context).getInt(context.getString(R.string.pref_key_show_languages), 0);
-        String languages = context.getResources().getStringArray(R.array.pref_values_show_languages)[showLanguages];
+        String languages = PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.pref_key_show_language_names), "");
 
         for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
             string = cursor.getString(i);
