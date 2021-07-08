@@ -578,7 +578,7 @@ public class Orthography {
                     .replaceFirst("([zcs])i", "$1ɿ").replaceFirst("([zcs]h|r)i", "$1ʅ")
                     .replace("w","u").replace("uu","u")
                     .replace("un", "uen").replace("ui", "uei").replace("iu", "iou")
-                    .replaceFirst("([iy])e$","$1ɛ").replaceFirst("e(ng)?$", "ɤ$1").replace("er", "ɚ").replace("en", "ən")
+                    .replaceFirst("([iy])e$","$1ɛ").replaceFirst("e$", "ɤ").replaceFirst("e(ng)$", "ɤ$1").replace("er", "ɚ").replace("en", "ən")
                     .replace("ao", "au").replaceFirst("([iy])an$", "$1ɛn")
                     .replace("ong", "uŋ").replace("ng", "ŋ");
             s = s.replace("p", "pʰ").replace("t", "tʰ").replace("k", "kʰ")

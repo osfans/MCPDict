@@ -30,11 +30,11 @@ import java.util.Objects;
 
 import static com.osfans.mcpdict.MCPDatabase.COL_FIRST_READING;
 import static com.osfans.mcpdict.MCPDatabase.COL_HZ;
-import static com.osfans.mcpdict.MCPDatabase.COL_JP_FIRST;
+import static com.osfans.mcpdict.MCPDatabase.COL_JA_FIRST;
 import static com.osfans.mcpdict.MCPDatabase.COL_LAST_READING;
 import static com.osfans.mcpdict.MCPDatabase.MASK_ALL_READINGS;
 import static com.osfans.mcpdict.MCPDatabase.MASK_HZ;
-import static com.osfans.mcpdict.MCPDatabase.MASK_JP_ALL;
+import static com.osfans.mcpdict.MCPDatabase.MASK_JA_ALL;
 
 public class SearchResultFragment extends ListFragment {
 
@@ -157,8 +157,8 @@ public class SearchResultFragment extends ListFragment {
                 int mask = 1 << i;
                 if ((tag & mask) > 0) menuCopy.add(mask, 0, 0, MCPDatabase.getSearchAsName(i));
             }
-            if ((tag & MASK_JP_ALL) > 0)
-                menuCopy.add(MASK_JP_ALL, 0, 0, getString(R.string.all_jp));
+            if ((tag & MASK_JA_ALL) > 0)
+                menuCopy.add(MASK_JA_ALL, 0, 0, getString(R.string.all_jp));
 
             for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
                 int mask = 1 << i;
@@ -186,8 +186,8 @@ public class SearchResultFragment extends ListFragment {
                 });
                 menu.add(1 << col, 0, 0, getString(R.string.copy_one_reading, hanzi, searchAsName));
             }
-            if (((1 << col) & MASK_JP_ALL) > 0)
-                menu.add(MASK_JP_ALL, 0, 0, getString(R.string.copy_all_jp));
+            if (((1 << col) & MASK_JA_ALL) > 0)
+                menu.add(MASK_JA_ALL, 0, 0, getString(R.string.copy_all_jp));
             if ((tag & MASK_ALL_READINGS) > 0)
                 menu.add(MASK_ALL_READINGS, 0, 0, getString(R.string.copy_all_reading));
             itemCopy.setVisible(false);
@@ -249,11 +249,11 @@ public class SearchResultFragment extends ListFragment {
         if ((tag & mask) == 0) return null;
 
         StringBuilder sb = new StringBuilder();
-        if (mask == MASK_JP_ALL || mask == MASK_ALL_READINGS) {
+        if (mask == MASK_JA_ALL || mask == MASK_ALL_READINGS) {
             String hz = getCopyText(entry, MASK_HZ);
             assert hz != null;
             sb.append(String.format("%s %s\n", hz, Orthography.HZ.toUnicode(hz)));
-            for (int i = (mask == MASK_JP_ALL ? COL_JP_FIRST : COL_FIRST_READING); i <= COL_LAST_READING; i ++) {
+            for (int i = (mask == MASK_JA_ALL ? COL_JA_FIRST : COL_FIRST_READING); i <= COL_LAST_READING; i ++) {
                 String s = getCopyText(entry, 1<<i);
                 if (s != null) {
                     sb.append(formatReading(entry, i));

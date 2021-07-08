@@ -46,10 +46,10 @@
     <string name="copy_all_reading">複製“%1$s”字的所有讀音</string>
     <string name="copy_all_jp">複製“%1$s”字的所有日語讀音</string>
     <string name="copy_done">已複製到剪貼板</string>
-    <string name="search_as_jp_any">日語（任意讀音）</string>
+    <string name="search_as_ja_any">日語（任意讀音）</string>
 
     <string name="total_strokes_format">共%s畫</string>
-    <string name="radical_count_format">%s部%s畫</string>
+    <string name="radical_count_format">%1$s部%2$s畫</string>
 
     <string name="favorite_total">當前生字本中共有 %d 個生字</string>
     <string name="favorite_empty">當前生字本中沒有生字。\n\n在“字典”頁面，點擊查詢結果右上角的五角星，可以把相應的漢字加入生字本中。\n\n若您備份過生字本，可以按此導入。</string>
@@ -248,6 +248,7 @@
         <item>官話</item>
         <item>淮語</item>
         <item>吳語</item>
+        <item>吳語甌江片</item>
         <item>客語</item>
         <item>六南方言</item>
         <item>代表方言</item>
@@ -257,14 +258,15 @@
     <string-array name="pref_values_show_languages">
         <item>""</item>
         <item>""</item>
-        <item>pu,nt,tr,ic</item>
-        <item>nt,tr,ic</item>
-        <item>td,sz,sh,ra</item>
-        <item>hk,hl,sx</item>
-        <item>td,sz,sh,ra,nc,hk,hl,sx,ct,mn</item>
-        <item>pu,tr,sz,nc,hk,ct,mn</item>
-        <item>sg,ba,mc,yt,zy</item>
-        <item>vn,kr_mid,kr,jp_go,jp_kan,jp_tou,jp_kwan,jp_other</item>
+        <item>cmn.*</item>
+        <item>cmn_hy_.+</item>
+        <item>wuu.*</item>
+        <item>wuu_oj_.+</item>
+        <item>hak.*</item>
+        <item>wuu.*|gan.*|hak.*|yue_gz|nan.*</item>
+        <item>cmn|cmn_hy_tr|wuu_sz|gan_nc|hak|yue_gz|nan</item>
+        <item>och_.+|ltc_.+</item>
+        <item>vi|ko_.+|ja_.+</item>
     </string-array>
 
     <string name="pref_key_charset">SHOW_CHARSET</string>
@@ -289,7 +291,7 @@
         <item>T1</item>
         <item>kTGH*</item>
         <item>kTGH1</item>
-        <item>kBigFive*</item>
+        <item>kBigFive</item>
         <item>kGB0</item>
     </string-array>
 </resources>

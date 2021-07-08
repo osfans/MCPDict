@@ -7,11 +7,11 @@ bh:
 bs:
     □: 囗0
     〇: 乙0
-sh:
+wuu_sh:
     眙: ɦi6
-mn:
+nan:
     檔: tong2,tong3
-jp_other:
+ja_other:
     䰳: jou
     龼: sen,kei,ei
     鿅: rei
@@ -20,10 +20,10 @@ jp_other:
     𣷺: sou
     𣖔: hou
     𡑮: soku
-ct:
+yue_gz:
     㛟: wun6
     𡃜: kok3
-kr:
+ko_kor:
     冇: null
     㐕: yul
     㐠: yul
@@ -166,4 +166,3 @@ kr:
     朰: mol
     虄: sal
     仒: eo
-
