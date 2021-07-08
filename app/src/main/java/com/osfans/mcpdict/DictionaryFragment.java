@@ -37,7 +37,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         if (position == 1) {
             int mode = spinnerSearchAs.getSelectedItemPosition();
             name = MCPDatabase.getColumnName(mode);
-            if (name.contentEquals("jp_tou")) name = "jp_go,jp_kan,jp_tou,jp_kwan,jp_other";
+            if (name.contentEquals("ja_tou")) name = "ja_.+";
         }
         sp.edit().putString(getString(R.string.pref_key_show_language_names), name).apply();
     }
@@ -189,7 +189,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
 
     public void refresh(String query, int mode) {
         searchView.setQuery(query);
-        if (mode > MCPDatabase.COL_JP_ANY) mode = MCPDatabase.COL_JP_ANY;
+        if (mode > MCPDatabase.COL_JA_ANY) mode = MCPDatabase.COL_JA_ANY;
         spinnerSearchAs.setSelection(mode);
         refresh();
     }
@@ -197,8 +197,8 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
     public void refreshAdapter() {
         if (adapter != null) {
             adapter.clear();
-            for (int i = 0; i < MCPDatabase.COL_JP_ANY; i++) adapter.add(MCPDatabase.getSearchAsNames().get(i));
-            adapter.add(getString(R.string.search_as_jp_any));
+            for (int i = 0; i < MCPDatabase.COL_JA_ANY; i++) adapter.add(MCPDatabase.getSearchAsNames().get(i));
+            adapter.add(getString(R.string.search_as_ja_any));
         }
     }
 }

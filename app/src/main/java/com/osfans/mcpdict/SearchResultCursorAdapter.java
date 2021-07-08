@@ -8,7 +8,6 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,8 +20,6 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.core.text.HtmlCompat;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.Objects;
 
 import static com.osfans.mcpdict.MCPDatabase.COL_BH;
@@ -97,8 +94,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
     private boolean isColumnVisible(String languages, int i) {
         if (TextUtils.isEmpty(languages) || i < MCPDatabase.COL_FIRST_READING) return true;
-        String col = MCPDatabase.getColumnName(i);
-        return languages.matches("(.*,)?"+col+"(,.*)?");
+        return MCPDatabase.getColumnName(i).matches(languages);
     }
 
     @Override
@@ -141,26 +137,27 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 case MCPDatabase.SEARCH_AS_MC:
                     cs = getRichText(middleChineseDisplayer.display(string));
                     break;
-                case MCPDatabase.SEARCH_AS_PU:
+                case MCPDatabase.SEARCH_AS_CMN:
                     cs = getRichText(mandarinDisplayer.display(string));
                     break;
-                case MCPDatabase.SEARCH_AS_CT:
+                case MCPDatabase.SEARCH_AS_GZ:
                     cs = cantoneseDisplayer.display(string);
                     break;
-                case MCPDatabase.SEARCH_AS_MN:
+                case MCPDatabase.SEARCH_AS_NAN:
                     cs = getRichText(minnanDisplayer.display(string));
                     break;
-                case MCPDatabase.SEARCH_AS_KR:
+                case MCPDatabase.SEARCH_AS_KOR:
+                case MCPDatabase.SEARCH_AS_OKM:
                     cs = koreanDisplayer.display(string);
                     break;
-                case MCPDatabase.SEARCH_AS_VN:
+                case MCPDatabase.SEARCH_AS_VI:
                     cs = vietnameseDisplayer.display(string);
                     break;
-                case MCPDatabase.SEARCH_AS_JP_GO:
-                case MCPDatabase.SEARCH_AS_JP_KAN:
-                case MCPDatabase.SEARCH_AS_JP_TOU:
-                case MCPDatabase.SEARCH_AS_JP_KWAN:
-                case MCPDatabase.SEARCH_AS_JP_OTHER:
+                case MCPDatabase.SEARCH_AS_JA_GO:
+                case MCPDatabase.SEARCH_AS_JA_KAN:
+                case MCPDatabase.SEARCH_AS_JA_TOU:
+                case MCPDatabase.SEARCH_AS_JA_KWAN:
+                case MCPDatabase.SEARCH_AS_JA_OTHER:
                     cs = getRichText(japaneseDisplayer.display(string));
                     break;
                 case MCPDatabase.SEARCH_AS_YT:
@@ -173,7 +170,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 case MCPDatabase.SEARCH_AS_SX:
                     cs = getRichText(tone6Displayer.display(string));
                     break;
-                case MCPDatabase.SEARCH_AS_RA:
+                case MCPDatabase.SEARCH_AS_RADS:
                     cs = getRichText(tone8Displayer.display(string));
                     break;
                 case MCPDatabase.SEARCH_AS_TD:
