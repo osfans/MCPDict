@@ -55907,6 +55907,8 @@
 𠸋	ku3
 𫭸	heng4
 𰚷	di1,di3	#氐
+𨡙	dan1	#𨢿
+𢫗	pai1	#拍?
 #cin
 𡃕	chuan1
 𡆞	dou4
@@ -70750,7 +70752,6 @@
 𨡕	bi4	#䤉
 𨡖	yu1	#䣿
 𨡘	zhi4	#𦜋
-𨡙	qiang4,qin1
 𨡚	yu4
 𨡛	chou3	#醜?
 𨡜	yao2
