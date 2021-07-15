@@ -147,7 +147,6 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                     cs = getRichText(minnanDisplayer.display(string));
                     break;
                 case MCPDatabase.SEARCH_AS_KOR:
-                case MCPDatabase.SEARCH_AS_OKM:
                     cs = koreanDisplayer.display(string);
                     break;
                 case MCPDatabase.SEARCH_AS_VI:
