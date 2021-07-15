@@ -26,7 +26,7 @@ def hex2chr(uni):
     return chr(int(uni, 16))
 
 HEADS = [
-  ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s',"更新：2021-07-09<br>說明：<br>　　本程序源自“<a href=https://github.com/MaigoAkisame/MCPDict>漢字古今中外讀音查詢</a>”，收錄了更多漢字、更多語言、更多讀音，當然錯誤也更多，可去<a href=https://github.com/osfans/MCPDict>漢字音典</a>或進<a href=mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3D-hNzAQCgZQL-uIlhFrxWJ56umCexsmBi>QQ群</a>提出寶貴意見。<br>　　本程序將多種語言的漢字讀音集成於本地數據庫，默認用國際音標注音，可用於比較各語言讀音的異同，也能給學習本程序所收的語言提供有限的幫助。<br>　　本程序支持多種方式查詢漢字及其讀音，如輸入𰻞（漢字）、30EDE（Unicode編碼）、biang2（普通話拼音）、43（總筆畫數）、辵39（部首餘筆），均可查到“𰻞”及其讀音。音節末尾的“?”可匹配任何聲調。<br>"),
+  ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s',"更新：2021-07-16<br>說明：<br>　　本程序源自“<a href=https://github.com/MaigoAkisame/MCPDict>漢字古今中外讀音查詢</a>”，收錄了更多漢字、更多語言、更多讀音，當然錯誤也更多，可去<a href=https://github.com/osfans/MCPDict>漢字音典</a>或進<a href=mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3D-hNzAQCgZQL-uIlhFrxWJ56umCexsmBi>QQ群</a>提出寶貴意見。<br>　　本程序將多種語言的漢字讀音集成於本地數據庫，默認用國際音標注音，可用於比較各語言讀音的異同，也能給學習本程序所收的語言提供有限的幫助。<br>　　本程序支持多種方式查詢漢字及其讀音，如輸入𰻞（漢字）、30EDE（Unicode編碼）、biang2（普通話拼音）、43（總筆畫數）、辵39（部首餘筆），均可查到“𰻞”及其讀音。音節末尾的“?”可匹配任何聲調。<br>"),
   #('unicode', '統一碼', '統一碼', '#808080', 'Unihan', 'https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%s'),
   ('och_sg', '上古（鄭張尚芳）', '鄭張', '#9A339F', '韻典網（上古音系）', 'https://ytenx.org/dciangx/dzih/%s',"名稱：上古音鄭張尚芳擬音<br>來源：<a href=https://ytenx.org/dciangx/>韻典網</a>"),
   ('och_ba', '上古（白一平沙加爾）', '白沙2015', '#9A339F', None, None, "更新：2015-10-13<br>名稱：上古音白一平沙加爾2015年擬音<br>來源：<a href=http://ocbaxtersagart.lsait.lsa.umich.edu/>http://ocbaxtersagart.lsait.lsa.umich.edu/</a>"),
@@ -34,11 +34,14 @@ HEADS = [
   ('ltc_yt', '韻圖', '韻圖', '#9A339F', None, None, "名稱：韻圖擬音<br>來源：QQ共享文檔<a href=https://docs.qq.com/sheet/DYk9aeldWYXpLZENj>韻圖音系同音字表</a>"),
   ('ltc_zy', '中原音韻', '中原音韻', '#9A339F', '韻典網（中原音韻）', 'https://ytenx.org/trngyan/dzih/%s', "名稱：中原音韻擬音<br>來源：<a href=https://ytenx.org/trngyan/>韻典網</a><br>說明：平聲分陰陽，入聲派三聲。下標“入”表示古入聲字"),
   ('cmn', '普通話', '普通話', '#FF00FF', '漢典網', "http://www.zdic.net/hans/%s", "更新：2021-07-08<br>名稱：普通話、國語<br>來源：<a href=https://www.zdic.net/>漢典</a>、<a href=http://yedict.com/>字海</a>、<a href=https://www.moedict.tw/>萌典</a><br>說明：灰色讀音來自<a href=https://www.moedict.tw/>萌典</a>。可使用漢語拼音、注音符號查詢漢字。在輸入漢語拼音時，可以用數字1、2、3、4代表聲調，放在音節末尾，“?”可代表任何聲調；字母ü可用v代替。例如查詢普通話讀lüè的字時可輸入lve4。在輸入注音符號時，聲調一般放在音節末尾，但表示輕聲的點（˙）既可以放在音節開頭，也可以放在音節末尾，例如“的”字的讀音可拼作“˙ㄉㄜ”或“ㄉㄜ˙”。"),
-  ('cmn_hy_nt', '南通話', '南通', '#0000FF', '南通方言網', "http://nantonghua.net/search/index.php?hanzi=%s", "更新：2018-01-08<br>名稱：南通話<br>來源：<a href=http://nantonghua.net/archives/5127/南通话字音查询/>南通方言網</a>"),
-  ('cmn_hy_tr', '泰如方言', '泰如', '#0000FF', '泰如小字典', "http://taerv.nguyoeh.com/query.php?table=泰如字典&簡體=%s", "更新：2021-06-22<br>名稱：泰如方言<br>來源：<a href=http://taerv.nguyoeh.com/>泰如小字典</a>"),
-  ('cmn_hy_ic', '鹽城話', '鹽城', '#0000FF', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s", "更新：2021-07-08<br>名稱：鹽城話<br>來源：<a href=http://huae.nguyoeh.com/>類音字彙</a>、鹽城縣志、鹽城方言研究（步鳳）等"),
+  ('cmn_xn_yzll', '永州零陵話', '永州零陵', '#C600FF', None, None, "更新：2021-07-15<br>名稱：永州零陵話<br>來源：<a href=https://github.com/shinzoqchiuq/yongzhou-homophony-syllabary>永州官話同音字表</a>、《湖南省志·方言志》<br>說明：本同音字表描寫的是屬於山北片區的永州零陵區口音，整理自《湖南省志·方言志》，有脣齒擦音 /f/，無全濁塞擦音 /dz/ 和 /dʒ/，「彎」「汪」不同韻，區分陰去和陽去"),
+  ('cmn_hy_hc_fdgc', '肥東古城話', '肥東古城', '#0000FF', None, None, "更新：2021-07-12<br>名稱：肥東古城話<br>來源：安徽肥東古城方言同音字匯"),
+  ('cmn_hy_hc_ic', '鹽城話', '鹽城', '#0000FF', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s", "更新：2021-07-12<br>名稱：鹽城話<br>來源：<a href=http://huae.nguyoeh.com/>類音字彙</a>、鹽城縣志、鹽城方言研究（步鳳）等"),
+  ('cmn_hy_tt_nt', '南通話', '南通', '#0000FF', '南通方言網', "http://nantonghua.net/search/index.php?hanzi=%s", "更新：2018-01-08<br>名稱：南通話<br>來源：<a href=http://nantonghua.net/archives/5127/南通话字音查询/>南通方言網</a>"),
+  ('cmn_hy_tt_tr', '泰如方言', '泰如', '#0000FF', '泰如小字典', "http://taerv.nguyoeh.com/query.php?table=泰如字典&簡體=%s", "更新：2021-06-22<br>名稱：泰如方言<br>來源：<a href=http://taerv.nguyoeh.com/>泰如小字典</a>"),
+  ('cmn_hy_tt_xh', '興化話', '興化', '#0000FF', None, None, "更新：2021-07-15<br>名稱：興化話<br>來源：江蘇興化方言音系、興化方言詞典"),
   #('lj', '南京話', '南京', '#0000FF', '南京官話拼音方案', "https://uliloewi.github.io/LangJinPinIn/PinInFangAng"),
-  ('wuu_td', '通東談話', '通東', '#7C00FF', None, None, "更新：2021-07-08<br>名稱：通東談話<br>來源：網友<u>正心修身</u>"),
+  ('wuu_td', '通東談話', '通東', '#7C00FF', None, None, "更新：2021-07-16<br>名稱：通東談話<br>來源：網友<u>正心修身</u>"),
   ('wuu', '標準吳語', '吳語', '#1E90FF', '標準吳語字典', "http://nguyoeh.com/query.php?table=吳語字典&簡體=%s", "更新：2021-07-09<br>名稱：標準吳語<br>來源：<a href=http://nguyoeh.com/>標準吳語字典</a>"),
   ('wuu_sz', '蘇州話', '蘇州', '#1E90FF', '吳語學堂（蘇州）', "https://www.wugniu.com/search?table=suzhou_zi&char=%s", "名稱：蘇州話<br>來源：<a href=https://github.com/NGLI/rime-wugniu_soutseu>蘇州吳語拼音輸入方案</a>、<a href=https://www.wugniu.com/>吳語學堂</a>"),
   ('wuu_sh', '上海話', '上海', '#1E90FF', '吳音小字典（上海）', "http://www.wu-chinese.com/minidict/search.php?searchlang=zaonhe&searchkey=%s", "名稱：上海話<br>來源：《上海市區方言志》（1988年版），蔡子文錄入<br>說明：該書記錄的是中派上海話音系（使用者多出生於20世紀40至70年代），與<a href=http://www.wu-chinese.com/minidict/>吳音小字典</a>記錄的音系並不完全相同。"),
@@ -53,6 +56,7 @@ HEADS = [
   ('yue_gz', '廣州話', '廣州', '#FFAD00', '粵語審音配詞字庫', "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s", "名稱：廣州話<br>來源：<a href=http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/>粵語審音配詞字庫</a>、<a href=http://www.unicode.org/charts/unihan.html>Unihan</a><br>說明：括號中的爲異讀讀音"),
   ('nan', '閩南語', '閩南', '#FF6600', '臺灣閩南語常用詞辭典', "http://twblg.dict.edu.tw/holodict_new/result.jsp?querytarget=1&radiobutton=0&limit=20&sample=%s", "更新：2020-05-17<br>名稱：閩南語<br>來源：<a href=https://github.com/tauhu-tw/tauhu-taigi>豆腐台語詞庫</a>、<a href=https://twblg.dict.edu.tw/holodict_new/>臺灣閩南語常用詞辭典</a><br>說明：下標“俗”表示“俗讀音”，“替”表示“替代字”，指的是某個字的讀音其實來自另一個字，比如“人”字的lang5音其實來自“儂”字。有些字會有用斜線分隔的兩個讀音（如“人”字的jin5/lin5），前者爲高雄音（第一優勢腔），後者爲臺北音（第二優勢腔）。"),
   ('nan_pn', '普寧話', '普寧', '#FF6600', None, None, "更新：2021-07-08<br>名稱：普寧話<br>來源：由<u>阿纓</u>提供"),
+  ('nan_st', '汕頭話', '汕頭', '#FF6600', None, None, "更新：2021-07-14<br>名稱：汕頭話<br>來源：由<u>Kiattan</u>提供"),
   ('vi', '越南語', '越南', '#DB7093', '漢越辭典摘引', "http://www.vanlangsj.org/hanviet/hv_timchu.php?unichar=%s", "名稱：越南語<br>來源：<a href=http://www.vanlangsj.org/hanviet/>漢越辭典摘引</a>"),
   ('ko_okm', '中世紀朝鮮語', '中世朝鮮', '#BA55D3', None, None, "名稱：中世紀朝鮮語<br>來源：<a href=https://github.com/nk2028/sino-korean-readings>韓國漢字音歷史層次研究</a>"),
   ('ko_kor', '朝鮮語', '朝鮮', '#BA55D3', 'Naver漢字辭典', "http://hanja.naver.com/hanja?q=%s", "名稱：朝鮮語、韓語<br>來源：<a href=http://hanja.naver.com/>Naver漢字辭典</a><br>說明：括號前的讀音爲漢字本來的讀音，也是朝鮮的標準音，而括號內的讀音爲韓國應用<a href=http://zh.wikipedia.org/wiki/%E9%A0%AD%E9%9F%B3%E6%B3%95%E5%89%87>頭音法則</a>之後的讀音。"),
@@ -259,6 +263,33 @@ for line in open("TriungNgyanQimYonh.txt"):
 update("ltc_zy", d)
 logging.info("處理中原音韻 %.2f" % timeit())
 
+#yzll
+d.clear()
+tones = {"1": "¹³", "2": "³³", "3":"⁵⁵", "5": "²⁴", "6":"³²⁴"}
+for line in open("永州官話同音字表.tsv"):
+  line = line.strip("\n")
+  fs = line.split("\t")
+  hz,jt,py,bz = fs
+  if len(hz)!=1: continue
+  sd = py[-1].replace("5","6").replace("4","5")
+  py = py[:-1]
+  py = py.replace("w","u").replace("uu", "u")
+  py = re.sub("^(ts|tsh|s|z)i", "\\1ɿ", py)
+  py = re.sub("^y(?=[^u])", "i", py).replace("ii","i")
+  py = re.sub("^(c|ch|sh|zh)u", "\\1yu", py)
+  py = py.replace("iu", "iou").replace("ui", "uei").replace("yun", "yn").replace("un", "uen")
+  ipa = py.replace("ou", "əu").replace("ao", "au").replace("ang", "ã").replace("an", "ẽ").replace("yu", "y")
+  ipa = re.sub("^h", "x", ipa).replace("gh", "ɣ").replace("sh", "ɕ").replace("zh", "ʑ").replace("h", "ʰ")\
+      .replace("ts", "ʦ").replace("c", "ʨ").replace("ng", "ŋ")
+  ipa = ipa + tones[sd] + sd
+  if bz:
+    ipa += "`%s`"%bz
+  d[hz].append(ipa)
+  if jt != hz and ipa not in d[jt]:
+    d[jt].append(ipa)
+update("cmn_xn_yzll", d)
+logging.info("處理永州零陵話 %.2f" % timeit())
+
 #nt
 #http://nantonghua.net
 d.clear()
@@ -275,7 +306,7 @@ for line in open("nt.txt"):
     py = "%s`又`" % py
   if py not in d[hz]:
     d[hz].append(py)
-update("cmn_hy_nt", d)
+update("cmn_hy_tt_nt", d)
 logging.info("處理南通話 %.2f" % timeit())
 
 #tr
@@ -310,8 +341,52 @@ for line in open("cz6din3.csv"):
   if not jt: continue
   if jt!=hz and py not in d[jt]:
     d[jt].append(py)
-update("cmn_hy_tr", d)
+update("cmn_hy_tt_tr", d)
 logging.info("處理泰如話 %.2f" % timeit())
+
+#xh
+d.clear()
+xhsd = {'1':'³²⁴', "2":'³⁵',"3":"²¹³", "5":"⁵³","6":"²¹","7":"⁴","8":"⁵"}
+for line in open("興化同音字表.tsv"):
+  line = line.strip()
+  if line.startswith("#"):
+    ym = line[1:]
+  else:
+    fs = line.split("\t")
+    sm = fs[0].replace("ø", "")
+    for sd,hzs,n in re.findall("［(\d)］(.*?)((?=［)|$)", fs[1]):
+      py = sm + ym + xhsd[sd]+sd
+      hzs = re.findall("(.)\d?([+-=*/?]?)\d?(\{.*?\})?", hzs)
+      for hz, c, m in hzs:
+        m = m.strip("{}")
+        p = ""
+        if c and c in '-+=*?':
+          if c == '-':
+            p = "白"
+          elif c == '+':
+            p = "又"
+          elif c == '=':
+            p = "文"
+          elif c == '*':
+            p = "俗"
+          elif c == '/':
+            p = "书"
+          elif c == '?':
+            p = "待考"
+        if p and m:
+          p = p + "：" + m
+        else:
+          p = p + m
+        if p:
+          p = "`%s`" % p
+        p = py + p
+        if p not in d[hz]:
+          if c == '-':
+            d[hz].insert(0, p)
+          else:
+            d[hz].append(p)
+update("cmn_hy_tt_xh", d)
+logging.info("處理興化話 %.2f" % timeit())
 
 #ic
 #https://github.com/osfans/xu/blob/master/docs/xu.csv
@@ -319,7 +394,7 @@ d.clear()
 icsm = {'g': 'k', 'd': 't', '': '', 'c': 'tsʰ', 'b': 'p', 'l': 'l', 'h': 'x', 't': 'tʰ', 'q': 'tɕʰ', 'z': 'ts', 'j': 'tɕ', 'f': 'f', 'k': 'kʰ', 'n': 'n', 'x': 'ɕ', 'm': 'm', 's': 's', 'p': 'pʰ', 'ng': 'ŋ'}
 icym = {'ae': 'ɛ', 'ieh': 'iəʔ', 'ii': 'i', 'eh': 'əʔ', 'io': 'iɔ', 'ieu': 'iəu', 'u': 'u', 'v': 'v', 'en': 'ən', 'a': 'a', 'on': 'ɔŋ', 'an': 'ã', 'oh': 'ɔʔ', 'i': 'j', 'ien': 'in', 'ion': 'iɔŋ', 'ah': 'aʔ', 'ih': 'iʔ', 'y': 'y', 'ui': 'ui', 'uae': 'uɛ', 'aeh': 'ɛʔ', 'in': 'ĩ', 'ia': 'ia', 'z': 'ɿ', 'uh': 'uʔ', 'aen': 'ɛ̃', 'er': 'ɚ', 'eu': 'əu', 'iah': 'iaʔ', 'ueh': 'uəʔ', 'iae': 'iɛ', 'iuh': 'iuʔ', 'yen': 'yn', 'ian': 'iã', 'iun': 'iũ', 'un': 'ũ', 'o': 'ɔ', 'uan': 'uã', 'ua': 'ua', 'uen': 'uən', 'ioh': 'iɔʔ', 'iaen': 'iɛ̃', 'uaen': 'uɛ̃', 'uaeh': 'uɛʔ', 'iaeh': 'iɛʔ', 'uah': 'uaʔ', 'yeh': 'yəʔ', 'ya': 'ya', '': ''}
 icsd = {'1':'³¹', "2":'²¹³',"3":"⁵⁵", "5":"³⁵","7":"⁵"}
-for line in open("鹽城同音字表"):
+for line in open("鹽城同音字表.tsv"):
   line = line.strip()
   if not line: continue
   fs = line.split('\t')
@@ -352,8 +427,33 @@ for line in open("鹽城同音字表"):
         d[hz].insert(0, p)
       else:
         d[hz].append(p)
-update("cmn_hy_ic", d)
+update("cmn_hy_hc_ic", d)
 logging.info("處理鹽城話 %.2f" % timeit())
+
+#fdgc
+d.clear()
+tones = {"1":"³¹",'2':"³⁵",'3':"²¹³","5":"⁵³","7":"⁴⁴"}
+for line in open("肥東古城同音字表.tsv"):
+  line = line.strip()
+  if line.startswith("#"): continue
+  ipa,hzs = line.split("\t")
+  sd = ipa[-1]
+  if sd.isdigit():
+    ipa = ipa[:-1] + tones[sd] + sd
+  else:
+    sd = ""
+  hzs = re.findall("(.)(\d)?\*?(\(.*?\))?", hzs)
+  for hz,index,m in hzs:
+    p = ipa
+    if m:
+      m = m.strip("()")
+      p = "%s`%s`" % (p, m)
+    if index == "1":
+      d[hz].insert(0, p)
+    else:
+      d[hz].append(p)    
+update("cmn_hy_hc_fdgc", d)
+logging.info("處理肥東古城話 %.2f" % timeit())
 
 #lj
 #https://github.com/uliloewi/lang2jin1/blob/master/langjin.dict.yaml
@@ -370,7 +470,7 @@ logging.info("處理鹽城話 %.2f" % timeit())
 
 #td
 d.clear()
-for line in open("通東談話.csv"):
+for line in open("通東談話 字表.tsv"):
   line = line.strip('\n')
   fs = [i.strip(' "') for i in line.split('\t')]
   hz, jt, py = fs[:3]
@@ -643,10 +743,10 @@ for i in unicodes.keys():
       unicodes[i]["nan"] = py
 logging.info("處理閩南話 %.2f" % timeit())
 
-#nan
+#nan_pn
 d.clear()
 tones = {'˥˦':8,'˥˧':3,'˦˦':2,'˧˨':7,'˧˩˩':6,'˨˨˧':1,'˨˩':5,'˨˩˧':4}
-for line in open("普宁字表初稿.csv"):
+for line in open("普宁字表初稿.tsv"):
   fs = [i.strip('" ') for i in line.strip('\n').split('\t')]
   hz,yb,zs = fs[:3]
   if not yb: continue
@@ -665,9 +765,33 @@ for line in open("普宁字表初稿.csv"):
 update("nan_pn", d)
 logging.info("處理普寧話 %.2f" % timeit())
 
+#nan_st
+d.clear()
+tones = [1, 5, 2, 6, 3, 7, 4, 8]
+for line in open("方言调查字表 （汕头）.tsv"):
+  fs = [i.strip('" ') for i in line.strip('\n').split('\t')]
+  hz,py,yb,zs = fs[:4]
+  if not yb: continue
+  sd = py[-1]
+  if sd.isdigit():
+    sd = str(tones.index(int(sd)) + 1)
+  else:
+    sd = ""
+  if len(hz) == 1:
+    yb = yb.strip("0").replace('˩','¹')\
+                      .replace('˨','²')\
+                      .replace('˧','³')\
+                      .replace('˦','⁴')\
+                      .replace('˥','⁵')
+    js = yb + sd + ("`%s`"% zs if zs else "")
+    if js not in d[hz]:
+      d[hz].append(js)
+update("nan_st", d)
+logging.info("處理汕頭話 %.2f" % timeit())
+
 #hak
 #https://github.com/syndict/hakka/blob/master/hakka.dict.yaml
-hktones = {"⁴⁴":"1", "³³": "1", "¹¹":"2", "³¹":"3", "¹³":"4", "⁵²":"5", "⁵³":"5", "²¹":"6", "⁵":"7", "¹":"8", "³":"8"}
+hktones = {"⁴⁴":"1", "³³": "1", "¹¹":"2", "³¹":"3", "¹³":"4", "⁵²":"5", "⁵³":"5", "²¹":"6", "¹":"7", "⁵":"8", "³":"8"}
 sxtones = {"²⁴":"1", "¹¹": "2", "³¹":"3", "⁵³":"3", "⁵⁵":"5", "²":"7", "⁵":"8"}
 hltones = {"⁵³":"1", "⁵⁵": "2", "²⁴":"3", "¹¹":"5", "³³":"6", "⁵":"7", "²":"8"}
 def hk2ipa(s, tones):
