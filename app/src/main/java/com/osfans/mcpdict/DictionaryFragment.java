@@ -103,10 +103,14 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         refreshAdapter();
         adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         spinnerSearchAs.setAdapter(adapter);
+        position = PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt(getString(R.string.pref_key_search_as), 0);
+        spinnerSearchAs.setSelection(position);
         spinnerSearchAs.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 updateCurrentLanguage(spinnerShowLang.getSelectedItemPosition());
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                sp.edit().putInt(getString(R.string.pref_key_search_as), position).apply();
                 searchView.clickSearchButton();
             }
             @Override

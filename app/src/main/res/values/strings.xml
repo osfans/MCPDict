@@ -47,6 +47,7 @@
     <string name="copy_all_jp">複製“%1$s”字的所有日語讀音</string>
     <string name="copy_done">已複製到剪貼板</string>
     <string name="search_as_ja_any">日語（任意讀音）</string>
+    <string name="pref_key_search_as">SEARCH_AS</string>
 
     <string name="total_strokes_format">共%s畫</string>
     <string name="radical_count_format">%1$s部%2$s畫</string>
