@@ -35,7 +35,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_GZ = "yue_gz";
     public static final String SEARCH_AS_NAN = "nan";
     public static final String SEARCH_AS_KOR = "ko_kor";
-    public static final String SEARCH_AS_OKM = "ko_okm";
     public static final String SEARCH_AS_VI = "vi";
     public static final String SEARCH_AS_JA_GO = "ja_go";
     public static final String SEARCH_AS_JA_KAN = "ja_kan";
@@ -152,7 +151,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
                     case SEARCH_AS_CMN: token = Orthography.Mandarin.canonicalize(token); break;
                     case SEARCH_AS_GZ: token = Orthography.Cantonese.canonicalize(token, cantoneseSystem); break;
                     case SEARCH_AS_KOR:
-                    case SEARCH_AS_OKM:
                         token = Orthography.Korean.canonicalize(token); break;
                     case SEARCH_AS_VI: token = Orthography.Vietnamese.canonicalize(token); break;
                     case SEARCH_AS_JA_GO:
@@ -288,7 +286,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     }
 
     private static boolean isKO(int mode) {
-        return getColumnName(mode).startsWith("ko_");
+        return getColumnName(mode).contentEquals(SEARCH_AS_KOR);
     }
 
     private static boolean isJA(int mode) {
