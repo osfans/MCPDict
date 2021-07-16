@@ -24,10 +24,11 @@ import java.util.Objects;
 
 import static com.osfans.mcpdict.MCPDatabase.COL_BH;
 import static com.osfans.mcpdict.MCPDatabase.COL_BS;
+import static com.osfans.mcpdict.MCPDatabase.COL_HZ;
 
 public class SearchResultCursorAdapter extends CursorAdapter {
 
-    private final Context context;
+    private static Context context;
     private final int layout;
     private final LayoutInflater inflater;
     private final boolean showFavoriteButton;
@@ -97,6 +98,61 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return MCPDatabase.getColumnName(i).matches(languages);
     }
 
+    public static CharSequence formatIPA(int i, String string) {
+        CharSequence cs = "";
+        if (TextUtils.isEmpty(string)) return "";
+        switch (MCPDatabase.getColumnName(i)) {
+            case MCPDatabase.SEARCH_AS_BA:
+                cs = baDisplayer.display(string);
+                break;
+            case MCPDatabase.SEARCH_AS_MC:
+                cs = getRichText(middleChineseDisplayer.display(string));
+                break;
+            case MCPDatabase.SEARCH_AS_CMN:
+                cs = getRichText(mandarinDisplayer.display(string));
+                break;
+            case MCPDatabase.SEARCH_AS_GZ:
+                cs = cantoneseDisplayer.display(string);
+                break;
+            case MCPDatabase.SEARCH_AS_NAN:
+                cs = getRichText(minnanDisplayer.display(string));
+                break;
+            case MCPDatabase.SEARCH_AS_KOR:
+                cs = koreanDisplayer.display(string);
+                break;
+            case MCPDatabase.SEARCH_AS_VI:
+                cs = vietnameseDisplayer.display(string);
+                break;
+            case MCPDatabase.SEARCH_AS_JA_GO:
+            case MCPDatabase.SEARCH_AS_JA_KAN:
+            case MCPDatabase.SEARCH_AS_JA_TOU:
+            case MCPDatabase.SEARCH_AS_JA_KWAN:
+            case MCPDatabase.SEARCH_AS_JA_OTHER:
+                cs = getRichText(japaneseDisplayer.display(string));
+                break;
+            case MCPDatabase.SEARCH_AS_YT:
+                cs = getRichText(tone4Displayer.display(string));
+                break;
+            case MCPDatabase.SEARCH_AS_IC:
+            case MCPDatabase.SEARCH_AS_ZY:
+                cs = getRichText(tone5Displayer.display(string));
+                break;
+            case MCPDatabase.SEARCH_AS_SX:
+                cs = getRichText(tone6Displayer.display(string));
+                break;
+            case MCPDatabase.SEARCH_AS_RADS:
+                cs = getRichText(tone8Displayer.display(string));
+                break;
+            case MCPDatabase.SEARCH_AS_TD:
+                cs = getRichText(toneTdDisplayer.display(string));
+                break;
+            default:
+                cs = getRichText(tone7Displayer.display(string));
+                break;
+        }
+        return cs;
+    }
+
     @Override
     public void bindView(final View view, final Context context, Cursor cursor) {
         String hz, string;
@@ -118,66 +174,19 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             textView = view.findViewWithTag(i);
             textView.setTag(R.id.tag_raw, getRawText(string));
             CharSequence cs;
-            switch (MCPDatabase.getColumnName(i)) {
-                case MCPDatabase.SEARCH_AS_HZ:
-                    cs = string;
-                    String str = cursor.getString(COL_BH);
-                    TextView tv = view.findViewWithTag(COL_BH);
-                    tv.setText(context.getResources().getString(R.string.total_strokes_format, str));
-                    str = cursor.getString(COL_BS);
-                    tv = view.findViewWithTag(COL_BS);
-                    String bs = str.substring(0, 1);
-                    String bh = str.substring(1).replace('f', '-');
-                    str = context.getResources().getString(R.string.radical_count_format, bs, bh);
-                    tv.setText(str);
-                    break;
-                case MCPDatabase.SEARCH_AS_BA:
-                    cs = baDisplayer.display(string);
-                    break;
-                case MCPDatabase.SEARCH_AS_MC:
-                    cs = getRichText(middleChineseDisplayer.display(string));
-                    break;
-                case MCPDatabase.SEARCH_AS_CMN:
-                    cs = getRichText(mandarinDisplayer.display(string));
-                    break;
-                case MCPDatabase.SEARCH_AS_GZ:
-                    cs = cantoneseDisplayer.display(string);
-                    break;
-                case MCPDatabase.SEARCH_AS_NAN:
-                    cs = getRichText(minnanDisplayer.display(string));
-                    break;
-                case MCPDatabase.SEARCH_AS_KOR:
-                    cs = koreanDisplayer.display(string);
-                    break;
-                case MCPDatabase.SEARCH_AS_VI:
-                    cs = vietnameseDisplayer.display(string);
-                    break;
-                case MCPDatabase.SEARCH_AS_JA_GO:
-                case MCPDatabase.SEARCH_AS_JA_KAN:
-                case MCPDatabase.SEARCH_AS_JA_TOU:
-                case MCPDatabase.SEARCH_AS_JA_KWAN:
-                case MCPDatabase.SEARCH_AS_JA_OTHER:
-                    cs = getRichText(japaneseDisplayer.display(string));
-                    break;
-                case MCPDatabase.SEARCH_AS_YT:
-                    cs = getRichText(tone4Displayer.display(string));
-                    break;
-                case MCPDatabase.SEARCH_AS_IC:
-                case MCPDatabase.SEARCH_AS_ZY:
-                    cs = getRichText(tone5Displayer.display(string));
-                    break;
-                case MCPDatabase.SEARCH_AS_SX:
-                    cs = getRichText(tone6Displayer.display(string));
-                    break;
-                case MCPDatabase.SEARCH_AS_RADS:
-                    cs = getRichText(tone8Displayer.display(string));
-                    break;
-                case MCPDatabase.SEARCH_AS_TD:
-                    cs = getRichText(toneTdDisplayer.display(string));
-                    break;
-                default:
-                    cs = getRichText(tone7Displayer.display(string));
-                    break;
+            if (i == COL_HZ) {
+                cs = string;
+                String str = cursor.getString(COL_BH);
+                TextView tv = view.findViewWithTag(COL_BH);
+                tv.setText(context.getResources().getString(R.string.total_strokes_format, str));
+                str = cursor.getString(COL_BS);
+                tv = view.findViewWithTag(COL_BS);
+                String bs = str.substring(0, 1);
+                String bh = str.substring(1).replace('f', '-');
+                str = context.getResources().getString(R.string.radical_count_format, bs, bh);
+                tv.setText(str);
+            } else {
+                cs = formatIPA(i, string);
             }
             textView.setText(cs);
         }
@@ -224,12 +233,12 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         view.setTag(R.id.tag_mask, mask);
     }
 
-    private String getHexColor() {
+    private static String getHexColor() {
         int color = ContextCompat.getColor(context, R.color.dim);
         return String.format("#%06X", color & 0xFFFFFF);
     }
 
-    private CharSequence getRichText(String richTextString) {
+    private static CharSequence getRichText(String richTextString) {
         String s = richTextString
                 .replace("\n", "<br/>")
                 .replaceAll("~~(.+?)~~", "<s>$1</s>")
@@ -244,22 +253,23 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return HtmlCompat.fromHtml(s, HtmlCompat.FROM_HTML_MODE_COMPACT);
     }
 
-    private String getRawText(String s) {
+    public static String getRawText(String s) {
+        if (TextUtils.isEmpty(s)) return "";
         return s.replaceAll("[~_|*\\[\\]]", "").replaceAll("`.+?`", "");
     }
 
-    private final Displayer middleChineseDisplayer = new Displayer() {
+    private static final Displayer middleChineseDisplayer = new Displayer() {
         public String lineBreak(String s) {return s.replace(",", "\n");}
         public String displayOne(String s) {return Orthography.MiddleChinese.display(s, getStyle(R.string.pref_key_mc_display)) + middleChineseDetailDisplayer.display(s);}
     };
 
-    private final Displayer middleChineseDetailDisplayer = new Displayer() {
+    private static final Displayer middleChineseDetailDisplayer = new Displayer() {
         public String lineBreak(String s) {return s.replace(",", "\n");}
         public String displayOne(String s) {return "(" + Orthography.MiddleChinese.detail(s) + ")";}
         public String display(String s) {return " " + super.display(s);}
     };
 
-    private int getStyle(int id) {
+    private static int getStyle(int id) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         Resources r = context.getResources();
         int i;
@@ -272,79 +282,79 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return i;
     }
 
-    private final Displayer mandarinDisplayer = new Displayer() {
+    private static final Displayer mandarinDisplayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Mandarin.display(s, getStyle(R.string.pref_key_mandarin_display));
         }
     };
 
-    private final Displayer cantoneseDisplayer = new Displayer() {
+    private static final Displayer cantoneseDisplayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Cantonese.display(s, getStyle(R.string.pref_key_cantonese_romanization));
         }
     };
 
-    private final Displayer minnanDisplayer = new Displayer() {
+    private static final Displayer minnanDisplayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Minnan.display(s, getStyle(R.string.pref_key_minnan_display));
         }
     };
 
-    private final Displayer baDisplayer = new Displayer() {
+    private static final Displayer baDisplayer = new Displayer() {
         public String displayOne(String s) {
             return s;
         }
     };
 
-    private final Displayer tone4Displayer = new Displayer() {
+    private static final Displayer tone4Displayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Tone8.display4(s);
         }
     };
 
-    private final Displayer tone5Displayer = new Displayer() {
+    private static final Displayer tone5Displayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Tone8.display5(s);
         }
     };
 
-    private final Displayer tone6Displayer = new Displayer() {
+    private static final Displayer tone6Displayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Tone8.display6(s);
         }
     };
 
-    private final Displayer tone7Displayer = new Displayer() {
+    private static final Displayer tone7Displayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Tone8.display7(s);
         }
     };
 
-    private final Displayer tone8Displayer = new Displayer() {
+    private static final Displayer tone8Displayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Tone8.display(s);
         }
     };
 
-    private final Displayer toneTdDisplayer = new Displayer() {
+    private static final Displayer toneTdDisplayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Tone8.displayTD(s);
         }
     };
 
-    private final Displayer koreanDisplayer = new Displayer() {
+    private static final Displayer koreanDisplayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Korean.display(s, getStyle(R.string.pref_key_korean_display));
         }
     };
 
-    private final Displayer vietnameseDisplayer = new Displayer() {
+    private static final Displayer vietnameseDisplayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Vietnamese.display(s, getStyle(R.string.pref_key_vietnamese_tone_position));
         }
     };
 
-    private final Displayer japaneseDisplayer = new Displayer() {
+    private static final Displayer japaneseDisplayer = new Displayer() {
         public String lineBreak(String s) {
             if (s.charAt(0) == '[') {
                 s = '[' + s.substring(1).replace("[", "\n[");
