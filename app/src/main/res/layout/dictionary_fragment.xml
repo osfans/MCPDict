@@ -2,10 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="12dp"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
+    android:padding="6dp"
     android:orientation="vertical" >
 
     <TableLayout
@@ -67,6 +64,12 @@
         android:scrollbars="vertical"
         android:maxLines="3"
         android:longClickable="true" />
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:id="@+id/resultRich" />
 
     <View
         android:layout_width="match_parent"
