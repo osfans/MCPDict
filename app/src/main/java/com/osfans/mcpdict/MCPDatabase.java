@@ -29,7 +29,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_HZ = "hz";
     public static final String SEARCH_AS_BH = "bh";
     public static final String SEARCH_AS_BS = "bs";
-    public static final String SEARCH_AS_BA = "ba";
+    public static final String SEARCH_AS_BA = "och_ba";
     public static final String SEARCH_AS_MC = "ltc_mc";
     public static final String SEARCH_AS_CMN = "cmn";
     public static final String SEARCH_AS_GZ = "yue_gz";
@@ -415,5 +415,9 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static String getColumnName(int index) {
         if (COLUMNS == null) getSearchAsColumns();
         return COLUMNS[index];
+    }
+
+    public static boolean isReading(int index) {
+        return index >= COL_FIRST_READING && index <= COL_LAST_READING;
     }
 }

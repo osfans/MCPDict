@@ -10,6 +10,7 @@ import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
@@ -20,6 +21,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class DictionaryFragment extends Fragment implements RefreshableFragment {
 
@@ -177,17 +181,49 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
 
     private void updateResult(Cursor data) {
         TextView textResult = selfView.findViewById(R.id.result);
-        if (data != null && data.getCount() > 3) {
+        WebView webView = selfView.findViewById(R.id.resultRich);
+        final String query = searchView.getQuery();
+        int i = spinnerSearchAs.getSelectedItemPosition();
+        boolean isZY = MCPDatabase.isReading(i) && Orthography.HZ.isHz(query);
+        Map<String, String> pys = new HashMap<>();
+        if (data != null && data.getCount() >= 3) {
             StringBuilder sb = new StringBuilder();
-            for (data.moveToFirst();
-                 !data.isAfterLast();
-                 data.moveToNext()) {
-                sb.append(data.getString(0));
+            if (isZY) {
+                sb.append("<style>\n" +
+                        "  @font-face {\n" +
+                        "    font-family: ipa;\n" +
+                        "    src: url('file:///android_res/font/ipa.ttf');\n" +
+                        "  }\n" +
+                        "  p {font-family: ipa, sans-serif; word-wrap: break-word;}" +
+                        "    rt {font-size: 0.9em; background-color: #F0FFF0;}\n" +
+                        "  </style><p>");
             }
-            textResult.setText(sb);
-            textResult.setVisibility(View.VISIBLE);
+            for (data.moveToFirst(); !data.isAfterLast(); data.moveToNext()) {
+                String hz = data.getString(0);
+                CharSequence py = SearchResultCursorAdapter.formatIPA(i, SearchResultCursorAdapter.getRawText(data.getString(i)));
+                if (isZY) {
+                    pys.put(hz, py.toString());
+                } else {
+                    sb.append(hz);
+                }
+            }
+            if (isZY) {
+                for (int unicode: query.codePoints().toArray()) {
+                    if (!Orthography.HZ.isHz(unicode)) continue;
+                    String hz = Orthography.HZ.toHz(unicode);
+                    sb.append(String.format("<ruby>%s<rt>%s</rt></ruby>&nbsp;&nbsp;&nbsp;&nbsp;", hz, pys.getOrDefault(hz, "")));
+                }
+                webView.loadDataWithBaseURL(null, sb.toString(), "text/html", "utf-8", null);
+                webView.setVisibility(View.VISIBLE);
+                textResult.setVisibility(View.GONE);
+            } else {
+                textResult.setText(sb);
+                textResult.setVisibility(View.VISIBLE);
+                webView.setVisibility(View.GONE);
+            }
         } else {
             textResult.setVisibility(View.GONE);
+            webView.setVisibility(View.GONE);
         }
     }
 
