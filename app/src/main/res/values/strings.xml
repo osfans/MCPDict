@@ -242,31 +242,35 @@
     <string-array name="pref_entries_show_languages">
         <item>全部語言</item>
         <item>當前語言</item>
+        <item>古代漢語</item>
+        <item>代表方言</item>
         <item>官話</item>
         <item>淮語</item>
+        <item>淮語洪巢片</item>
         <item>淮語通泰片</item>
         <item>吳語</item>
         <item>吳語甌江片</item>
         <item>客語</item>
         <item>閩南語</item>
+        <item>閩南語潮汕片</item>
         <item>六南方言</item>
-        <item>代表方言</item>
-        <item>古代漢語</item>
         <item>域外方言</item>
     </string-array>
     <string-array name="pref_values_show_languages">
         <item>""</item>
         <item>""</item>
+        <item>och_.+|ltc_.+</item>
+        <item>cmn|cmn_hy_tt_tr|wuu_sz|gan_nc|hak|yue_gz|nan</item>
         <item>cmn.*</item>
         <item>cmn_hy_.+</item>
-        <item>cmn_hy_tt.*</item>
+        <item>cmn_hy_hc_.+</item>
+        <item>cmn_hy_tt_.+</item>
         <item>wuu.*</item>
         <item>wuu_oj_.+</item>
         <item>hak.*</item>
         <item>nan.*</item>
+        <item>nan_cs_.+</item>
         <item>wuu.*|gan.*|hak.*|yue_gz|nan.*</item>
-        <item>cmn|cmn_hy_tr|wuu_sz|gan_nc|hak|yue_gz|nan</item>
-        <item>och_.+|ltc_.+</item>
         <item>vi|ko_.+|ja_.+</item>
     </string-array>
 
