@@ -1,6 +1,7 @@
 package com.osfans.mcpdict;
 
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.os.AsyncTask;
@@ -10,6 +11,7 @@ import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -21,6 +23,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.webkit.WebSettingsCompat;
+import androidx.webkit.WebViewFeature;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -179,6 +183,11 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         }.execute();
     }
 
+    private boolean isNightMode() {
+        int nightModeFlags = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+        return nightModeFlags == Configuration.UI_MODE_NIGHT_YES;
+    }
+
     private void updateResult(Cursor data) {
         TextView textResult = selfView.findViewById(R.id.result);
         WebView webView = selfView.findViewById(R.id.resultRich);
@@ -212,6 +221,14 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
                     if (!Orthography.HZ.isHz(unicode)) continue;
                     String hz = Orthography.HZ.toHz(unicode);
                     sb.append(String.format("<ruby>%s<rt>%s</rt></ruby>&nbsp;&nbsp;&nbsp;&nbsp;", hz, pys.getOrDefault(hz, "")));
+                }
+                WebSettings settings = webView.getSettings();
+                if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
+                    if (isNightMode()) {
+                        WebSettingsCompat.setForceDark(settings, WebSettingsCompat.FORCE_DARK_ON);
+                    } else {
+                        WebSettingsCompat.setForceDark(settings, WebSettingsCompat.FORCE_DARK_OFF);
+                    }
                 }
                 webView.loadDataWithBaseURL(null, sb.toString(), "text/html", "utf-8", null);
                 webView.setVisibility(View.VISIBLE);
