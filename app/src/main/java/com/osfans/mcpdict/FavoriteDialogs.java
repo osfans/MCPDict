@@ -34,7 +34,7 @@ public class FavoriteDialogs {
         editText.setHint(R.string.favorite_add_hint);
         editText.setSingleLine(false);
         new AlertDialog.Builder(activity)
-            .setIcon(R.drawable.ic_star_yellow)
+            .setIcon(android.R.drawable.btn_star_big_on)
             .setTitle(String.format(activity.getString(R.string.favorite_add), hz))
             .setView(editText)
             .setPositiveButton(R.string.save, (dialog, which) -> {
@@ -55,7 +55,7 @@ public class FavoriteDialogs {
 
     public static void view(final String hz, final View view) {
         new AlertDialog.Builder(activity)
-            .setIcon(R.drawable.ic_star_yellow)
+            .setIcon(android.R.drawable.btn_star_big_on)
             .setTitle(String.format(activity.getString(R.string.favorite_view), hz))
             .setMessage(((TextView) view.findViewById(R.id.text_comment)).getText())
             .setPositiveButton(String.format(activity.getString(R.string.favorite_edit_2lines), hz),
@@ -71,7 +71,7 @@ public class FavoriteDialogs {
         editText.setText(((TextView) view.findViewById(R.id.text_comment)).getText());
         editText.setSingleLine(false);
         new AlertDialog.Builder(activity)
-            .setIcon(R.drawable.ic_star_yellow)
+            .setIcon(android.R.drawable.btn_star_big_on)
             .setTitle(String.format(activity.getString(R.string.favorite_edit), hz))
             .setView(editText)
             .setPositiveButton(R.string.save, (dialog, which) -> {
@@ -114,7 +114,7 @@ public class FavoriteDialogs {
         final CheckBox checkBox = new CheckBox(activity);
         checkBox.setText(R.string.favorite_delete_no_confirm);
         new AlertDialog.Builder(activity)
-            .setIcon(R.drawable.ic_alert)
+            .setIcon(android.R.drawable.ic_dialog_alert)
             .setTitle(String.format(activity.getString(R.string.favorite_delete), hz))
             .setMessage(String.format(activity.getString(R.string.favorite_delete_confirm), hz))
             .setView(checkBox)
@@ -131,7 +131,7 @@ public class FavoriteDialogs {
 
     public static void deleteAll() {
         new AlertDialog.Builder(activity)
-            .setIcon(R.drawable.ic_alert)
+            .setIcon(android.R.drawable.ic_dialog_alert)
             .setTitle(activity.getString(R.string.favorite_clear))
             .setMessage(activity.getString(R.string.favorite_clear_confirm))
             .setPositiveButton(R.string.clear, (dialog, which) -> {
@@ -157,7 +157,7 @@ public class FavoriteDialogs {
             try {
                 UserDatabase.exportFavorites();
                 new AlertDialog.Builder(activity)
-                    .setIcon(R.drawable.ic_info)
+                    .setIcon(android.R.drawable.ic_dialog_info)
                     .setTitle(activity.getString(R.string.favorite_export))
                     .setMessage(String.format(activity.getString(R.string.favorite_export_done),
                                               UserDatabase.getBackupPath()))
@@ -171,7 +171,7 @@ public class FavoriteDialogs {
         else {
             long timestamp = backupFile.lastModified();
             new AlertDialog.Builder(activity)
-                .setIcon(R.drawable.ic_alert)
+                .setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle(activity.getString(R.string.favorite_export))
                 .setMessage(String.format(activity.getString(R.string.favorite_export_overwrite),
                             UserDatabase.getBackupPath(),
@@ -194,7 +194,7 @@ public class FavoriteDialogs {
             File backupFile = new File(UserDatabase.getBackupPath());
             if (!backupFile.exists()) {
                 new AlertDialog.Builder(activity)
-                    .setIcon(R.drawable.ic_error)
+                    .setIcon(android.R.drawable.ic_delete)
                     .setTitle(activity.getString(R.string.favorite_import))
                     .setMessage(String.format(activity.getString(R.string.favorite_import_file_not_found),
                                               UserDatabase.getBackupPath()))
@@ -209,7 +209,7 @@ public class FavoriteDialogs {
             }
             catch (SQLiteException e) {
                 new AlertDialog.Builder(activity)
-                    .setIcon(R.drawable.ic_error)
+                    .setIcon(android.R.drawable.ic_delete)
                     .setTitle(activity.getString(R.string.favorite_import))
                     .setMessage(String.format(activity.getString(R.string.favorite_import_read_fail),
                                               UserDatabase.getBackupPath()))
@@ -220,7 +220,7 @@ public class FavoriteDialogs {
 
             if (count == 0) {
                 new AlertDialog.Builder(activity)
-                    .setIcon(R.drawable.ic_error)
+                    .setIcon(android.R.drawable.ic_delete)
                     .setTitle(activity.getString(R.string.favorite_import))
                     .setMessage(String.format(activity.getString(R.string.favorite_import_empty_file),
                                               UserDatabase.getBackupPath()))
@@ -231,7 +231,7 @@ public class FavoriteDialogs {
 
             if (UserDatabase.selectAllFavorites().getCount() == 0) {
                 new AlertDialog.Builder(activity)
-                .setIcon(R.drawable.ic_info)
+                .setIcon(android.R.drawable.ic_dialog_info)
                 .setTitle(activity.getString(R.string.favorite_import))
                 .setMessage(String.format(activity.getString(R.string.favorite_import_detail),
                                           UserDatabase.getBackupPath(),
@@ -245,7 +245,7 @@ public class FavoriteDialogs {
             }
             else {
                 new AlertDialog.Builder(activity)
-                    .setIcon(R.drawable.ic_info)
+                    .setIcon(android.R.drawable.ic_dialog_info)
                     .setTitle(activity.getString(R.string.favorite_import))
                     .setMessage(String.format(activity.getString(R.string.favorite_import_detail_select_mode),
                                               UserDatabase.getBackupPath(),
@@ -258,7 +258,7 @@ public class FavoriteDialogs {
 
         case 1:
             new AlertDialog.Builder(activity)
-                .setIcon(R.drawable.ic_question)
+                .setIcon(android.R.drawable.ic_menu_help)
                 .setTitle(activity.getString(R.string.favorite_import_select_mode))
                 .setSingleChoiceItems(R.array.favorite_import_modes, -1, null)
                 .setPositiveButton(R.string.import_, (dialog, which) -> {
@@ -292,7 +292,7 @@ public class FavoriteDialogs {
             activity.refresh();
 
             new AlertDialog.Builder(activity)
-                .setIcon(R.drawable.ic_info)
+                .setIcon(android.R.drawable.ic_dialog_info)
                 .setTitle(activity.getString(R.string.favorite_import))
                 .setMessage(String.format(activity.getString(R.string.favorite_import_done),
                         UserDatabase.getBackupPath()))
@@ -315,7 +315,7 @@ public class FavoriteDialogs {
             String logPath = activity.getExternalFilesDir(null) + "/crash.log";
             FileUtils.dumpException(logPath, e);
             new AlertDialog.Builder(activity)
-                .setIcon(R.drawable.ic_error)
+                .setIcon(android.R.drawable.ic_delete)
                 .setTitle(activity.getString(R.string.crash))
                 .setMessage(String.format(activity.getString(R.string.crash_saved), logPath))
                 .setPositiveButton(R.string.ok, null)
@@ -323,7 +323,7 @@ public class FavoriteDialogs {
         }
         catch (IOException ex) {
             new AlertDialog.Builder(activity)
-                .setIcon(R.drawable.ic_error)
+                .setIcon(android.R.drawable.ic_delete)
                 .setTitle(activity.getString(R.string.crash))
                 .setMessage(activity.getString(R.string.crash_unsaved))
                 .setPositiveButton(R.string.ok, null)

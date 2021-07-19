@@ -13,6 +13,7 @@
             android:gravity="center_vertical" >
             <TextView
                 android:text="@string/search_for"
+                android:paddingStart="0dp"
                 android:paddingEnd="-4dp" />
             <com.osfans.mcpdict.CustomSearchView
                 android:id="@+id/search_view" />
@@ -22,6 +23,7 @@
             android:gravity="center_vertical" >
             <TextView
                 android:text="@string/search_as"
+                android:paddingStart="0dp"
                 android:paddingEnd="-4dp" />
             <Spinner
                 android:id="@+id/spinner_search_as" />
@@ -32,9 +34,11 @@
             android:paddingTop="6dp" >
             <TextView
                 android:text="@string/search_options"
+                android:paddingStart="0dp"
                 android:paddingEnd="-4dp" />
             <Spinner
                 android:id="@+id/spinner_show_characters"
+                android:paddingStart="0dp"
                 android:paddingEnd="8dp" />
         </TableRow>
 
@@ -50,6 +54,7 @@
             android:gravity="center_vertical" >
             <TextView
                 android:text="@string/show_languages"
+                android:paddingStart="0dp"
                 android:paddingEnd="-4dp" />
             <Spinner
                 android:id="@+id/spinner_show_languages" />
