@@ -37,7 +37,7 @@ public class ActivityWithOptionsMenu extends AppCompatActivity {
         }
         if (id == R.id.menu_item_about) {
             Dialog dialog = new AlertDialog.Builder(this)
-                    .setIcon(R.drawable.ic_info)
+                    .setIcon(android.R.drawable.ic_dialog_info)
                     .setTitle(R.string.about)
                     .setMessage(HtmlCompat.fromHtml(getString(R.string.about_message, BuildConfig.VERSION_NAME), HtmlCompat.FROM_HTML_MODE_COMPACT))
                     .setPositiveButton(R.string.ok, null)

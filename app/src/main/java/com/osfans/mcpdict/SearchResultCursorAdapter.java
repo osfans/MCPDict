@@ -222,7 +222,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             }
         });
         if (showFavoriteButton) {
-            button.setBackgroundResource(favorite ? R.drawable.ic_star_yellow : R.drawable.ic_star_white);
+            button.setBackgroundResource(favorite ? android.R.drawable.btn_star_big_on : android.R.drawable.btn_star_big_off);
         }
         else {
             button.setVisibility(View.GONE);
