@@ -161,12 +161,12 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         new AsyncTask<Void, Void, Cursor>() {
             @Override
             protected Cursor doInBackground(Void... params) {
-                return MCPDatabase.search(query, mode);
+                return MCPDatabase.search(query, mode, getContext());
             }
             @Override
             protected void onPostExecute(Cursor data) {
                 fragmentResult.setData(data);
-                TextView textEmpty = fragmentResult.getView().findViewById(android.R.id.empty);
+                TextView textEmpty = fragmentResult.requireView().findViewById(android.R.id.empty);
                 if (query.trim().equals("")) {
                     textEmpty.setText(MCPDatabase.getIntro(mode));
                     textEmpty.setMovementMethod(LinkMovementMethod.getInstance());

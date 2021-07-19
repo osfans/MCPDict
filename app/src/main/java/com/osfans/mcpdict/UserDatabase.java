@@ -1,6 +1,7 @@
 package com.osfans.mcpdict;
 
 import java.io.IOException;
+import java.lang.ref.WeakReference;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -15,21 +16,26 @@ class UserDatabase extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "user";
     private static final int DATABASE_VERSION = 1;
 
-    private static Context context;
+    private static WeakReference<Context> mContext;
+
     private static SQLiteDatabase db = null;
 
-    public static void initialize(Context c) {
+    public static Context getContext() {
+        return mContext.get();
+    }
+
+    public static void initialize(Context context) {
         if (db != null) return;
-        context = c;
+        mContext = new WeakReference<>(context);
         db = new UserDatabase(context).getWritableDatabase();
     }
 
     public static String getDatabasePath() {
-        return context.getDatabasePath(DATABASE_NAME).getAbsolutePath();
+        return getContext().getDatabasePath(DATABASE_NAME).getAbsolutePath();
     }
 
     public static String getBackupPath() {
-        return context.getExternalFilesDir(null) + "/" + DATABASE_NAME + ".db";
+        return getContext().getExternalFilesDir(null) + "/" + DATABASE_NAME + ".db";
     }
 
     // "READ" OPERATIONS

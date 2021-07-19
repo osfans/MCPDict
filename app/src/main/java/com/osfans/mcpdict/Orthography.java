@@ -299,13 +299,13 @@ public class Orthography {
                             "h", "gh", "q", "", "j").contains(init)) {
                 dryungNriux = (extraJ || init.equals("j")) ? "A" : "B";
             }
-            String ym = mapYms.get(dryungNriux+fin)[system];
+            String ym = Objects.requireNonNull(mapYms.get(dryungNriux + fin))[system];
             if (tone == '=') {
                 ym = ym.replace('m', 'p').replace('n', 't').replace('ŋ','k');
             }
             //不分陰陽
             //if (TextUtils.isEmpty(init) || "bdgzjlmn".contains(init.substring(0, 1))) tone += 1;
-            return formatTone(mapSms.get(init)[system] + ym, tone);
+            return formatTone(Objects.requireNonNull(mapSms.get(init))[system] + ym, tone);
         }
 
         public static String detail(String s) {
@@ -473,7 +473,7 @@ public class Orthography {
                     s = mapFromBopomofoPartial.get(s.substring(0, 1)) +
                         mapFromBopomofoPartial.get(s.substring(1));
                     if (s.startsWith("jv") || s.startsWith("qv") || s.startsWith("xv")) {
-                        s = s.substring(0, 1) + "u" + s.substring(2);
+                        s = s.charAt(0) + "u" + s.substring(2);
                     }
                 }
                 else {
@@ -547,7 +547,7 @@ public class Orthography {
                 }
                 else {
                     if (s.startsWith("ju") || s.startsWith("qu") || s.startsWith("xu")) {
-                        s = s.substring(0, 1) + "v" + s.substring(2);
+                        s = s.charAt(0) + "v" + s.substring(2);
                     }
                     int p = s.length();
                     if (p > 2) p = 2;
@@ -1030,7 +1030,7 @@ public class Orthography {
                     .replace("uw", "ɨ").replace("ow", "əː").replace("oo", "ô").replace("o", "ɔ").replace("ô", "o")
                     .replace("ie", "iə").replaceFirst("([iuɨ])a$", "$1ə")
                     .replace("ɨəː", "ɨə").replace("uo", "uə").replaceFirst("([aːəeɛiɨ])[uɔ]$", "$1w");
-            int index = 0;
+            int index;
             if (isEnteringTone) {
                 index = tone == 's' ? 7 : 8;
             } else {

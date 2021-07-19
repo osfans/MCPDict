@@ -54,7 +54,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static int COL_HZ;
     public static int COL_BH;
     public static int COL_BS;
-    private static int COL_MC;
     private static int COL_PU;
 
     public static int COL_JA_ANY;
@@ -77,12 +76,10 @@ public class MCPDatabase extends SQLiteAssetHelper {
     private static ArrayList<String> DICT_LINKS;
     private static ArrayList<String> INTROS;
 
-    private static Context context;
     private static SQLiteDatabase db = null;
 
-    public static void initialize(Context c) {
+    public static void initialize(Context context) {
         if (db != null) return;
-        context = c;
         db = new MCPDatabase(context).getWritableDatabase();
         String userDbPath = UserDatabase.getDatabasePath();
         db.execSQL("ATTACH DATABASE '" + userDbPath + "' AS user");
@@ -99,14 +96,14 @@ public class MCPDatabase extends SQLiteAssetHelper {
         // db = getWritableDatabase();
     }
 
-    public static Cursor search(String input, int mode) {
+    public static Cursor search(String input, int mode, Context context) {
         // Search for one or more keywords, considering mode and options
 
         // Get options and settings from SharedPreferences
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         Resources r = context.getResources();
         int charset = sp.getInt(r.getString(R.string.pref_key_charset), 0);
-        boolean kuangxYonhOnly = charset == 1;
+        boolean mcOnly = charset == 1;
         int cantoneseSystem = Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(R.string.pref_key_cantonese_romanization), "0")));
 
         // Split the input string into keywords and canonicalize them
@@ -129,7 +126,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
             }
         }
         else {                          // Each contiguous run of non-separator and non-comma characters is a query
-            if (isKO(mode)) { // For Korean, put separators around all hanguls
+            if (isKO(mode)) { // For Korean, put separators around all hangul
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < input.length(); i++) {
                     char c = input.charAt(i);
@@ -210,7 +207,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
                    "v.hz AS hz", "variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
         String selection = "u._id = v.rowid";
-        if (kuangxYonhOnly) {
+        if (mcOnly) {
             selection += " AND mc IS NOT NULL";
         } else if (charset > 0) {
             selection += String.format(" AND fl MATCH '%s'", r.getStringArray(R.array.pref_values_charset)[charset]);
@@ -248,7 +245,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COL_HZ = cursor.getColumnIndex(SEARCH_AS_HZ);
         COL_BH = cursor.getColumnIndex(SEARCH_AS_BH);
         COL_BS = cursor.getColumnIndex(SEARCH_AS_BS);
-        COL_MC = cursor.getColumnIndex(SEARCH_AS_MC);
         COL_PU = cursor.getColumnIndex(SEARCH_AS_CMN);
 
         COL_JA_FIRST = cursor.getColumnIndex(SEARCH_AS_JA_GO);
@@ -275,10 +271,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static String getSearchAsName(int index) {
         if (SEARCH_AS_NAMES == null) getSearchAsColumns();
         return SEARCH_AS_NAMES.get(index);
-    }
-
-    public static boolean isMC(int mode) {
-        return mode == COL_MC;
     }
 
     public static boolean isHZ(int mode) {
