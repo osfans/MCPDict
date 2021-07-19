@@ -22,9 +22,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.ListFragment;
 
 import java.io.UnsupportedEncodingException;
+import java.lang.ref.WeakReference;
 import java.net.URLEncoder;
 import java.util.Objects;
 
@@ -44,7 +46,7 @@ public class SearchResultFragment extends ListFragment {
     private final boolean showFavoriteButton;
     private View selectedEntry;
 
-    private static SearchResultFragment selectedFragment;
+    private static WeakReference<SearchResultFragment> selectedFragment;
 
     public SearchResultFragment() {
         this(true);
@@ -78,8 +80,8 @@ public class SearchResultFragment extends ListFragment {
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         // Set up the adapter
         if (adapter == null) {
@@ -126,7 +128,7 @@ public class SearchResultFragment extends ListFragment {
         Object obj = view.getTag(R.id.tag_col);
         view.setTag(R.id.tag_col, null);
         int col = obj == null ? -1 : (Integer) obj;
-        selectedFragment = this;
+        selectedFragment = new WeakReference<>(this);
             // This is a bug with Android: when a context menu item is clicked,
             // all fragments of this class receive a call to onContextItemSelected.
             // Therefore we need to remember which fragment created the context menu.
@@ -139,7 +141,7 @@ public class SearchResultFragment extends ListFragment {
             // but list.getChildAt() on the next line requires the position of the item in currently visible items
         selectedEntry = list.getChildAt(position);
         TextView text = selectedEntry.findViewById(R.id.text_hz);
-        String hanzi = text.getText().toString();
+        String hz = text.getText().toString();
         int tag = (Integer) selectedEntry.getTag(R.id.tag_mask);
 
         // Inflate the context menu
@@ -165,26 +167,26 @@ public class SearchResultFragment extends ListFragment {
                 String dict = MCPDatabase.getDictName(i);
                 if ((tag & mask) > 0 && !TextUtils.isEmpty(dict)) {
                     item = menuDictLinks.add(dict);
-                    item.setIntent(getDictIntent(i, hanzi));
+                    item.setIntent(getDictIntent(i, hz));
                 }
             }
         } else {
             String dict = MCPDatabase.getDictName(col);
             if (!TextUtils.isEmpty(dict)) {
-                item = menu.add(getString(R.string.one_dict_links, hanzi, dict));
-                item.setIntent(getDictIntent(col, hanzi));
+                item = menu.add(getString(R.string.one_dict_links, hz, dict));
+                item.setIntent(getDictIntent(col, hz));
             }
             menu.add(MASK_HZ, 0, 90, getString(R.string.copy_hz));
             if (col >= COL_FIRST_READING) {
                 String searchAsName = MCPDatabase.getSearchAsName(col);
-                item = menu.add(getString(R.string.search_homophone, hanzi, searchAsName));
+                item = menu.add(getString(R.string.search_homophone, hz, searchAsName));
                 item.setOnMenuItemClickListener(i->{
                     DictionaryFragment dictionaryFragment = ((MainActivity) requireActivity()).getDictionaryFragment();
                     String query = selectedEntry.findViewWithTag(col).getTag(R.id.tag_raw).toString();
                     dictionaryFragment.refresh(query, col);
                     return true;
                 });
-                menu.add(1 << col, 0, 0, getString(R.string.copy_one_reading, hanzi, searchAsName));
+                menu.add(1 << col, 0, 0, getString(R.string.copy_one_reading, hz, searchAsName));
             }
             if (((1 << col) & MASK_JA_ALL) > 0)
                 menu.add(MASK_JA_ALL, 0, 0, getString(R.string.copy_all_jp));
@@ -213,7 +215,7 @@ public class SearchResultFragment extends ListFragment {
         for (Menu m : new Menu[] {menu, menuCopy, menuDictLinks}) {
             for (int i = 0; i < m.size(); i++) {
                 item = m.getItem(i);
-                item.setTitle(String.format(item.getTitle().toString(), hanzi));
+                item.setTitle(String.format(item.getTitle().toString(), hz));
             }
         }
     }
@@ -230,7 +232,7 @@ public class SearchResultFragment extends ListFragment {
 
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
-        if (selectedFragment != this) return false;
+        if (selectedFragment.get() != this) return false;
         int mask = item.getGroupId();
         if (mask > 0) {
             // Generate the text to copy to the clipboard
@@ -284,9 +286,5 @@ public class SearchResultFragment extends ListFragment {
 
     public void scrollToTop() {
         listView.setSelectionAfterHeaderView();
-    }
-
-    public void scroll(int index) {
-        listView.setSelection(index);
     }
 }
