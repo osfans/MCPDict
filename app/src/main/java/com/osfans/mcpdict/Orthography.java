@@ -36,10 +36,6 @@ public class Orthography {
             "", "1", "2", "3", "4", "5", "6", "7", "8", "9",
             "1", "3", "5", "7", "5", "6", "9"};
 
-    private final static String[] TONES_CIRCLE =  new String[] {
-            "", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨",
-            "①", "③", "⑤", "⑦", "⑤", "⑥", "⑨"};
-
     private final static String[] TONES_TYPE =  new String[] {
             "", "꜀", "꜁", "꜂", "꜃", "꜄", "꜅", "꜆", "꜇", "꜀",
             "꜀", "꜂", "꜄", "꜆", "꜄", "꜅", "꜁"};
@@ -72,9 +68,10 @@ public class Orthography {
                 base = base.replaceAll("[¹²³⁴⁵]", "");
                 break;
         }
+        if (index == 0) return base;
         switch (mToneStyle) {
             case 0:
-                return base + TONES_CIRCLE[index];
+                return base + (char)('①' + index - 1);
             case 1:
                 return base + TONES_NUMBER[index];
             case 2:
@@ -847,12 +844,14 @@ public class Orthography {
         }
 
         public static String display(String s) {
-            char tone = s.charAt(s.length() - 1);
-            if ("123456789".indexOf(tone) >= 0) {
-                String base = s.substring(0, s.length() - 1);
-                return formatTone(base, tone);
-            } else {
-                if (tone == '0') s = s.substring(0, s.length() - 1);
+            String tone = s.replaceAll("[^\\d]+", "");
+            if (tone.contentEquals("0")) {
+                s = s.substring(0, s.length() - 1);
+                return s;
+            }
+            if (!TextUtils.isEmpty(tone) && !s.contentEquals(tone)) {
+                String base = s.substring(0, s.length() - tone.length());
+                return formatTone(base, Integer.parseInt(tone));
             }
             return s;
         }
