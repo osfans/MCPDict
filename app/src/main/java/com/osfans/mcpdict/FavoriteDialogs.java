@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 @SuppressLint("SimpleDateFormat")
 public class FavoriteDialogs {
@@ -285,7 +286,7 @@ public class FavoriteDialogs {
             if (fragment != null) {
                 fragment.notifyAddItem();
                 FavoriteCursorAdapter adapter = (FavoriteCursorAdapter) fragment.getListAdapter();
-                adapter.collapseAll();
+                Objects.requireNonNull(adapter).collapseAll();
                 fragment.refresh();
             }
             activity.refresh();
@@ -297,10 +298,10 @@ public class FavoriteDialogs {
                         UserDatabase.getBackupPath()))
                 .setPositiveButton(R.string.delete, (dialog, which) -> {
                     File backupFile1 = new File(UserDatabase.getBackupPath());
-                    backupFile1.delete();
-                    String message = activity.getString(backupFile1.exists() ?
-                                                        R.string.favorite_import_delete_backup_fail :
-                                                        R.string.favorite_import_delete_backup_done);
+                    boolean deleted = backupFile1.delete();
+                    String message = activity.getString(deleted ?
+                                                        R.string.favorite_import_delete_backup_done :
+                                                        R.string.favorite_import_delete_backup_fail);
                     Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
                 })
                 .setNegativeButton(R.string.keep, null)

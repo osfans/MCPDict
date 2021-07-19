@@ -20,9 +20,6 @@
     <string name="clear">清空</string>
     <string name="overwrite">覆蓋</string>
 
-    <string name="tab_dictionary">字典</string>
-    <string name="tab_favorite">生字本</string>
-
     <string name="search_hint">輸入漢字或讀音</string>
     <string name="search_for">查詢內容：</string>
     <string name="search_as">查詢條件：</string>
@@ -35,7 +32,6 @@
     <string name="copy_readings">複製“%s”字或其讀音</string>
     <string name="copy_one_reading">複製“%1$s”字的%2$s讀音</string>
     <string name="copy_hz">複製“%s”字</string>
-    <string name="copy_unicode">複製“%s”字的統一碼</string>
     <string name="dict_links">去在線詞典查詢“%s”字</string>
     <string name="one_dict_links">去“%2$s”查詢“%1$s”字</string>
     <string name="search_homophone">查詢“%1$s”字的%2$s同音字</string>

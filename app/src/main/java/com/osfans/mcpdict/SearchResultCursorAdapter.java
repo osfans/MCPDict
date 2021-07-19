@@ -20,6 +20,7 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.core.text.HtmlCompat;
 
+import java.lang.ref.WeakReference;
 import java.util.Objects;
 
 import static com.osfans.mcpdict.MCPDatabase.COL_BH;
@@ -28,23 +29,27 @@ import static com.osfans.mcpdict.MCPDatabase.COL_HZ;
 
 public class SearchResultCursorAdapter extends CursorAdapter {
 
-    private static Context context;
+    private static WeakReference<Context> context;
     private final int layout;
     private final LayoutInflater inflater;
     private final boolean showFavoriteButton;
 
     public SearchResultCursorAdapter(Context context, int layout, Cursor cursor, boolean showFavoriteButton) {
         super(context, cursor, FLAG_REGISTER_CONTENT_OBSERVER);
-        this.context = context;
+        SearchResultCursorAdapter.context = new WeakReference<>(context);
         this.layout = layout;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.showFavoriteButton = showFavoriteButton;
     }
 
+    private static Context getContext() {
+        return context.get();
+    }
+
     private View.OnClickListener getListener(final int index) {
         return v -> {
             ((View)v.getParent().getParent().getParent()).setTag(R.id.tag_col, index);
-            ActivityWithOptionsMenu activity = (ActivityWithOptionsMenu) context;
+            ActivityWithOptionsMenu activity = (ActivityWithOptionsMenu) getContext();
             activity.registerForContextMenu(v);
             activity.openContextMenu(v);
             activity.unregisterForContextMenu(v);
@@ -99,7 +104,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     }
 
     public static CharSequence formatIPA(int i, String string) {
-        CharSequence cs = "";
+        CharSequence cs;
         if (TextUtils.isEmpty(string)) return "";
         switch (MCPDatabase.getColumnName(i)) {
             case MCPDatabase.SEARCH_AS_BA:
@@ -115,7 +120,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 cs = cantoneseDisplayer.display(string);
                 break;
             case MCPDatabase.SEARCH_AS_NAN:
-                cs = getRichText(minnanDisplayer.display(string));
+                cs = getRichText(nanDisplayer.display(string));
                 break;
             case MCPDatabase.SEARCH_AS_KOR:
                 cs = koreanDisplayer.display(string);
@@ -234,7 +239,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     }
 
     private static String getHexColor() {
-        int color = ContextCompat.getColor(context, R.color.dim);
+        int color = ContextCompat.getColor(getContext(), R.color.dim);
         return String.format("#%06X", color & 0xFFFFFF);
     }
 
@@ -270,8 +275,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     };
 
     private static int getStyle(int id) {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-        Resources r = context.getResources();
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getContext());
+        Resources r = getContext().getResources();
         int i;
         try {
             i = sp.getInt(r.getString(id), 0);
@@ -294,7 +299,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         }
     };
 
-    private static final Displayer minnanDisplayer = new Displayer() {
+    private static final Displayer nanDisplayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Minnan.display(s, getStyle(R.string.pref_key_minnan_display));
         }
