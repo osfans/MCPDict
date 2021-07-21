@@ -43,18 +43,14 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_JA_OTHER = "ja_other";
     public static final String SEARCH_AS_JA_ANY = SEARCH_AS_JA_TOU;
 
-    public static final String SEARCH_AS_IC = "cmn_hy_ic";
-    public static final String SEARCH_AS_ZY = "ltc_zy";
-    public static final String SEARCH_AS_YT = "ltc_yt";
-    public static final String SEARCH_AS_SX = "hak_sx";
-    public static final String SEARCH_AS_RADS = "wuu_oj_rads";
-    public static final String SEARCH_AS_TD = "wuu_td";
-
-
     public static int COL_HZ;
     public static int COL_BH;
     public static int COL_BS;
-    private static int COL_PU;
+    public static int COL_MC;
+    public static int COL_CMN;
+    public static int COL_GZ;
+    public static int COL_NAN;
+    public static int COL_VI;
 
     public static int COL_JA_ANY;
     public static int COL_JA_FIRST;
@@ -75,6 +71,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     private static ArrayList<String> DICT_NAMES;
     private static ArrayList<String> DICT_LINKS;
     private static ArrayList<String> INTROS;
+    private static ArrayList<String> TONE_NAMES;
 
     private static SQLiteDatabase db = null;
 
@@ -116,7 +113,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         else if (Orthography.HZ.isUnicode(input)) {
             input = Orthography.HZ.toHz(input);
             mode = COL_HZ;
-        } else if (Orthography.HZ.isPY(input) && mode < COL_FIRST_READING) mode = COL_PU;
+        } else if (Orthography.HZ.isPY(input) && mode < COL_FIRST_READING) mode = COL_CMN;
         if (isHZ(mode)) {     // Each character is a query
             for (int unicode: input.codePoints().toArray()) {
                 if (!Orthography.HZ.isHz(unicode)) continue;
@@ -167,7 +164,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
                         case SEARCH_AS_GZ: allTones = Orthography.Cantonese.getAllTones(token); break;
                         case SEARCH_AS_VI: allTones = Orthography.Vietnamese.getAllTones(token); break;
                         default:
-                            allTones = Orthography.Tone8.getAllTones(token); break;
+                            allTones = Orthography.Tones.getAllTones(token); break;
                     }
                 }
                 if (allTones != null) {
@@ -245,7 +242,11 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COL_HZ = cursor.getColumnIndex(SEARCH_AS_HZ);
         COL_BH = cursor.getColumnIndex(SEARCH_AS_BH);
         COL_BS = cursor.getColumnIndex(SEARCH_AS_BS);
-        COL_PU = cursor.getColumnIndex(SEARCH_AS_CMN);
+        COL_MC = cursor.getColumnIndex(SEARCH_AS_MC);
+        COL_CMN = cursor.getColumnIndex(SEARCH_AS_CMN);
+        COL_GZ = cursor.getColumnIndex(SEARCH_AS_GZ);
+        COL_NAN = cursor.getColumnIndex(SEARCH_AS_NAN);
+        COL_VI = cursor.getColumnIndex(SEARCH_AS_VI);
 
         COL_JA_FIRST = cursor.getColumnIndex(SEARCH_AS_JA_GO);
         COL_JA_ANY = COL_JA_FIRST + 2;
@@ -402,6 +403,28 @@ public class MCPDatabase extends SQLiteAssetHelper {
         String intro = INTROS.get(index);
         if (TextUtils.isEmpty(intro)) intro = INTROS.get(0);
         return HtmlCompat.fromHtml(intro, HtmlCompat.FROM_HTML_MODE_COMPACT);
+    }
+
+    private static void getToneNames() {
+        if (TONE_NAMES != null) return;
+        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+        qb.setTables(TABLE_NAME);
+        String[] projection = {"*"};
+        String query = qb.buildQuery(projection, "rowid = 7",  null, null, null, null);
+        Cursor cursor = db.rawQuery(query, null);
+        cursor.moveToFirst();
+        int n = cursor.getColumnCount();
+        TONE_NAMES = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            String c = cursor.getString(i);
+            TONE_NAMES.add(c);
+        }
+        cursor.close();
+    }
+
+    public static String getToneName(int lang) {
+        if (TONE_NAMES == null) getToneNames();
+        return TONE_NAMES.get(lang);
     }
 
     public static String getColumnName(int index) {

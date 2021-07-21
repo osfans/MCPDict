@@ -27,19 +27,6 @@ public class Orthography {
     // which returns the given *canonicalized* syllable in all possible tones.
     // All methods return null on failure.
 
-    //0123456789 :;<= >?
-    private final static String[] TONES_NAME =  new String[] {
-            "", "陰平", "陽平", "陰上", "陽上", "陰去", "陽去", "陰入", "陽入", "中入",
-            "平", "上", "去", "入", "陰舒", "陽舒", "次濁入"};
-
-    private final static String[] TONES_NUMBER =  new String[] {
-            "", "1", "2", "3", "4", "5", "6", "7", "8", "9",
-            "1", "3", "5", "7", "5", "6", "9"};
-
-    private final static String[] TONES_TYPE =  new String[] {
-            "", "꜀", "꜁", "꜂", "꜃", "꜄", "꜅", "꜆", "꜇", "꜀",
-            "꜀", "꜂", "꜄", "꜆", "꜄", "꜅", "꜁"};
-
     private static int mToneStyle = 0;
     private static int mToneValueStyle = 0;
 
@@ -51,44 +38,53 @@ public class Orthography {
         mToneValueStyle = style;
     }
 
-    public static String formatTone(String base, int index) {
-        switch (mToneValueStyle) {
-            case 0:
-                String base2 = base.replaceAll("[¹²³⁴⁵]", "");
-                if (base.length() - base2.length() == 2) {
-                    base = base.replaceAll("([¹²³⁴⁵])\\1", "$1");
-                }
-                base = base.replace('¹', '˩')
-                        .replace('²', '˨')
-                        .replace('³', '˧')
-                        .replace('⁴', '˦')
-                        .replace('⁵', '˥');
-                break;
-            case 2:
-                base = base.replaceAll("[¹²³⁴⁵]", "");
-                break;
+    public static String formatTone(String base, int tone, int lang) {
+        if (tone <= 0 || tone > 15) return base;
+        String s = MCPDatabase.getToneName(lang);
+        if (TextUtils.isEmpty(s)) return base;
+        tone = tone - 1;
+        String toneAllStyles = s.split(",")[tone];
+        String[] styles = toneAllStyles.split(" ");
+        String tv = styles[0];
+        if (!TextUtils.isEmpty(tv) && mToneValueStyle <= 1) {
+            if (mToneValueStyle == 0) { //符號
+                if (tv.length() == 2 && tv.charAt(0) == tv.charAt(1))
+                    tv = tv.substring(0, 1);
+                tv = tv.replace('1', '˩')
+                        .replace('2', '˨')
+                        .replace('3', '˧')
+                        .replace('4', '˦')
+                        .replace('5', '˥');
+            } else { //數字
+                tv = tv.replace('1', '¹')
+                        .replace('2', '²')
+                        .replace('3', '³')
+                        .replace('4', '⁴')
+                        .replace('5', '⁵');
+            }
+            base += tv;
         }
-        if (index == 0) return base;
         switch (mToneStyle) {
-            case 0:
-                return base + (char)('①' + index - 1);
-            case 1:
-                return base + TONES_NUMBER[index];
-            case 2:
-                return base + TONES_NAME[index];
-            case 3:
-                if ((index >=1 && index <=4) || index == 10 || index == 11)
-                    return TONES_TYPE[index] + base;
-                else return base + TONES_TYPE[index];
-            default:
+            case 5:
                 return base;
+            case 0:
+                return base + (1 + tone);
+            default:
+                if (mToneStyle == 4) {
+                    char a = styles[1].charAt(0);
+                    if (a >= '1' && a <= '4') return styles[mToneStyle] + base;
+                }
+                String sTone = styles[mToneStyle];
+                if (mToneStyle <= 2 && !TextUtils.isEmpty(sTone)) {
+                    char a = sTone.charAt(0);
+                    sTone = sTone.replace(a, (char)(a - '1' + '①'));
+                    if (sTone.length() == 2) {
+                        char b = sTone.charAt(1);
+                        sTone = sTone.replace(b, (char)(b - 'a' + 'A'));
+                    }
+                }
+                return base + sTone;
         }
-    }
-
-    public static String formatTone(String base, char tone) {
-        if (tone == '_') return base;
-        int index = tone - '0';
-        return formatTone(base, index);
     }
 
     public static class HZ {
@@ -200,14 +196,14 @@ public class Orthography {
             if (system < 0) return s;
             if (system == 0) system = 5;
             // Get tone first
-            char tone = ':';
+            int tone = 1;
             switch (s.charAt(s.length() - 1)) {
-                case 'x': tone = ';'; s = s.substring(0, s.length() - 1); break;
-                case 'h': tone = '<'; s = s.substring(0, s.length() - 1); break;
-                case 'd': tone = '<'; break;
-                case 'p': tone = '='; s = s.substring(0, s.length() - 1) + "m"; break;
-                case 't': tone = '='; s = s.substring(0, s.length() - 1) + "n"; break;
-                case 'k': tone = '='; s = s.substring(0, s.length() - 1) + "ng"; break;
+                case 'x': tone = 2; s = s.substring(0, s.length() - 1); break;
+                case 'h': tone = 3; s = s.substring(0, s.length() - 1); break;
+                case 'd': tone = 3; break;
+                case 'p': tone = 4; s = s.substring(0, s.length() - 1) + "m"; break;
+                case 't': tone = 4; s = s.substring(0, s.length() - 1) + "n"; break;
+                case 'k': tone = 4; s = s.substring(0, s.length() - 1) + "ng"; break;
             }
 
             // Split initial and final
@@ -297,12 +293,10 @@ public class Orthography {
                 dryungNriux = (extraJ || init.equals("j")) ? "A" : "B";
             }
             String ym = Objects.requireNonNull(mapYms.get(dryungNriux + fin))[system];
-            if (tone == '=') {
+            if (tone == 4) {
                 ym = ym.replace('m', 'p').replace('n', 't').replace('ŋ','k');
             }
-            //不分陰陽
-            //if (TextUtils.isEmpty(init) || "bdgzjlmn".contains(init.substring(0, 1))) tone += 1;
-            return formatTone(Objects.requireNonNull(mapSms.get(init))[system] + ym, tone);
+            return formatTone(Objects.requireNonNull(mapSms.get(init))[system] + ym, tone, MCPDatabase.COL_MC);
         }
 
         public static String detail(String s) {
@@ -444,7 +438,6 @@ public class Orthography {
         private static final Map<String, String> mapToBopomofoWhole = new HashMap<>();
         private static final Map<Character, Character> mapToBopomofoTone = new HashMap<>();
 
-        private static final String[] toneValues = new String[]{ "⁵⁵", "³⁵", "²¹⁴", "⁵¹"};
         public static String canonicalize(String s) {
             // Input can be either pinyin or bopomofo
             if (s == null || s.length() == 0) return s;
@@ -581,12 +574,9 @@ public class Orthography {
             s = s.replace("p", "pʰ").replace("t", "tʰ").replace("k", "kʰ")
                     .replace("b", "p").replace("d", "t").replace("g", "k")
                     .replace("zh", "tʂ").replace("ch", "tʂʰ").replace("sh", "ʂ").replace("r", "ʐ")
-                    .replace("z", "ts").replace("c", "tsʰ")
-                    .replace("j", "tɕ").replace("q", "tɕʰ").replace("x", "ɕ").replace("h", "x");
-            if (tone >= '1' && tone <= '4') s += toneValues[tone - '1'];
-            if (tone == '3') tone = ';';
-            else if (tone == '4') tone = '<';
-            return formatTone(s, tone);
+                    .replace("z", "ʦ").replace("c", "ʦʰ")
+                    .replace("j", "ʨ").replace("q", "ʨʰ").replace("x", "ɕ").replace("h", "x");
+            return formatTone(s, tone - '0', MCPDatabase.COL_CMN);
         }
 
         public static List<String> getAllTones(String s) {
@@ -621,7 +611,6 @@ public class Orthography {
         public static final int CANTONESE_PINYIN = 2;
         public static final int YALE = 3;
         public static final int SIDNEY_LAU = 4;
-        private static final String[] toneValues = new String[]{ "⁵⁵", "²¹", "³⁵", "¹³", "³³", "²²", "⁵", "²", "³"};
 
         // References:
         // http://en.wikipedia.org/wiki/Jyutping
@@ -747,22 +736,15 @@ public class Orthography {
                 if (isEnteringTone) {
                     switch (tone) {
                         case '1': tone = '7'; break;
-                        case '3': tone = '9'; break;
-                        case '6': tone = '8'; break;
-                    }
-                } else {
-                    switch (tone) {
-                        case '2': tone = '3'; break;
-                        case '3': tone = '5'; break;
-                        case '4': tone = '2'; break;
-                        case '5': tone = '4'; break;
+                        case '3': tone = '8'; break;
+                        case '6': tone = '9'; break;
                     }
                 }
             }
 
             // In Yale, initial "y" is omitted if final begins with "yu"
             if (system == YALE && Objects.requireNonNull(init).equals("y") && Objects.requireNonNull(fin).startsWith("yu")) init = "";
-            if (system == IPA) return formatTone(init + fin + (tone <= '9' ? toneValues[tone - '1']: ""), tone);
+            if (system == IPA) return formatTone(init + fin, tone - '0', MCPDatabase.COL_GZ);
             return init + fin + (tone == '_' ? "" : tone);
         }
 
@@ -800,23 +782,18 @@ public class Orthography {
             String base = s;
             if (tone >= '1' && tone <= '8') {
                 base = s.substring(0, s.length() - 1);
-                if (tone == '2') tone = ';';
-                else if (tone == '3') tone = '5';
-                else if (tone == '4') tone = '7';
-                else if (tone == '5') tone = '2';
-                else if (tone == '7') tone = '6';
             } else {
-                tone = '_';
+                tone = '0';
             }
             s = base;
             s = s.replace("oo", "ɔ").replaceFirst("o(k|ng)", "ɔ$1").replace("o", "ə");
             s = s.replaceFirst("^(p|t|k|ts)h", "$1ʰ").replace("ng", "ŋ").replace("j", "dz").replaceFirst("h$","ʔ").replace("nn","̃");
-            s = formatTone(s, tone);
+            s = formatTone(s, tone - '0', MCPDatabase.COL_NAN);
             return s;
         }
     }
 
-    public static class Tone8 {
+    public static class Tones {
         public static List<String> getAllTones(String s) {
             if (s == null || s.equals("")) return null;     // Fail
             char tone = s.charAt(s.length() - 1);
@@ -843,37 +820,12 @@ public class Orthography {
             return result;
         }
 
-        public static String display(String s) {
+        public static String display(String s, int col) {
+            if (!s.matches("[^\\d]+\\d+")) return s;
             String tone = s.replaceAll("[^\\d]+", "");
-            if (tone.contentEquals("0")) {
-                s = s.substring(0, s.length() - 1);
-                return s;
-            }
-            if (!TextUtils.isEmpty(tone) && !s.contentEquals(tone)) {
-                String base = s.substring(0, s.length() - tone.length());
-                return formatTone(base, Integer.parseInt(tone));
-            }
-            return s;
-        }
-
-        public static String display7(String s) {
-            return display(s).replace("陰上","上");
-        }
-
-        public static String display6(String s) {
-            return display7(s).replace("陰去","去");
-        }
-
-        public static String display5(String s) {
-            return display6(s).replace("陰入","入");
-        }
-
-        public static String display4(String s) {
-            return display5(s).replace("陰平","平");
-        }
-
-        public static String displayTD(String s) {
-            return display5(s).replace("中入","次濁入");
+            String base = s.substring(0, s.length() - tone.length());
+            if (tone.contentEquals("0")) return base;
+            return formatTone(base, Integer.parseInt(tone), col);
         }
     }
 
@@ -928,7 +880,7 @@ public class Orthography {
 
         private static String getIPA(String s) {
             s = s.replace("t", "tʰ").replace("d", "t")
-                    .replace("j", "tɕ").replace("y", "j").replace("ch", "tɕʰ")
+                    .replace("j", "ʨ").replace("y", "j").replace("ch", "ʨʰ")
                     .replace("r", "ɾ").replace("ng", "ŋ")
                     .replace("p", "pʰ").replace("b", "p")
                     .replace("kk", "K").replace("k", "kʰ").replace("g", "k").replace("K", "k͈")
@@ -1035,7 +987,7 @@ public class Orthography {
             } else {
                 index = "_frxsj".indexOf(tone) + 1;
             }
-            return formatTone(s, index);
+            return formatTone(s, index, MCPDatabase.COL_VI);
         }
 
         // Rules for placing the tone marker follows this page in Vietnamese Wikipedia:
