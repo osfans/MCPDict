@@ -6,10 +6,10 @@ import os.path
 
 def get_dict():
 	yt = dict()
-	if os.path.exists("yt.txt"):
-		f = open("yt.txt")
+	if os.path.exists("yt.tsv"):
+		f = open("yt.tsv")
 		for line in f:
-			fs = line.strip().split(" ")
+			fs = line.strip().split("\t")
 			yt[int(fs[0])] = fs[1]
 		f.close()
 	else:
@@ -23,15 +23,12 @@ def get_dict():
 						elif type(v) is str and "#" in v:
 							for i in v.split("#"):
 								yt[int(i)]=y
-		f = open("yt.txt", "w")
+		f = open("yt.tsv", "w")
 		for i in sorted(yt.keys()):
 			y = yt[i]
 			t = y[-1]
-			if t == "3" : y = y[:-1]+"5"
-			elif t == "2" : y = y[:-1]+"3"
-			elif t == "1" : y = y[:-1]+"1"
-			else: y = y + "7"
-			print(i,y,file=f)
+			if not t.isdigit(): y = y + "4"
+			print("%s\t%s" %(i,y),file=f)
 		f.close()
 	
 	pq = dict()

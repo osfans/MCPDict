@@ -135,24 +135,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             case MCPDatabase.SEARCH_AS_JA_OTHER:
                 cs = getRichText(japaneseDisplayer.display(string));
                 break;
-            case MCPDatabase.SEARCH_AS_YT:
-                cs = getRichText(tone4Displayer.display(string));
-                break;
-            case MCPDatabase.SEARCH_AS_IC:
-            case MCPDatabase.SEARCH_AS_ZY:
-                cs = getRichText(tone5Displayer.display(string));
-                break;
-            case MCPDatabase.SEARCH_AS_SX:
-                cs = getRichText(tone6Displayer.display(string));
-                break;
-            case MCPDatabase.SEARCH_AS_RADS:
-                cs = getRichText(tone8Displayer.display(string));
-                break;
-            case MCPDatabase.SEARCH_AS_TD:
-                cs = getRichText(toneTdDisplayer.display(string));
-                break;
             default:
-                cs = getRichText(tone7Displayer.display(string));
+                cs = getRichText(toneDisplayer.display(string, i));
                 break;
         }
         return cs;
@@ -275,11 +259,13 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     };
 
     private static int getStyle(int id) {
+        int value = 0;
+        if (id == R.string.pref_key_tone_display) value = 1;
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getContext());
         Resources r = getContext().getResources();
         int i;
         try {
-            i = sp.getInt(r.getString(id), 0);
+            i = sp.getInt(r.getString(id), value);
         } catch (Exception e) {
             e.printStackTrace();
             i = Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(id), "0")));
@@ -311,39 +297,9 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         }
     };
 
-    private static final Displayer tone4Displayer = new Displayer() {
+    private static final Displayer toneDisplayer = new Displayer() {
         public String displayOne(String s) {
-            return Orthography.Tone8.display4(s);
-        }
-    };
-
-    private static final Displayer tone5Displayer = new Displayer() {
-        public String displayOne(String s) {
-            return Orthography.Tone8.display5(s);
-        }
-    };
-
-    private static final Displayer tone6Displayer = new Displayer() {
-        public String displayOne(String s) {
-            return Orthography.Tone8.display6(s);
-        }
-    };
-
-    private static final Displayer tone7Displayer = new Displayer() {
-        public String displayOne(String s) {
-            return Orthography.Tone8.display7(s);
-        }
-    };
-
-    private static final Displayer tone8Displayer = new Displayer() {
-        public String displayOne(String s) {
-            return Orthography.Tone8.display(s);
-        }
-    };
-
-    private static final Displayer toneTdDisplayer = new Displayer() {
-        public String displayOne(String s) {
-            return Orthography.Tone8.displayTD(s);
+            return Orthography.Tones.display(s, getCol());
         }
     };
 

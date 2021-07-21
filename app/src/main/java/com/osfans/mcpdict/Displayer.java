@@ -2,6 +2,7 @@ package com.osfans.mcpdict;
 
 abstract class Displayer {
     protected static final String NULL_STRING = "-";
+    public int col;
 
     public String display(String s) {
         if (s == null) return NULL_STRING;
@@ -30,6 +31,16 @@ abstract class Displayer {
                 .trim();
         return s;
     }
+
+    public String display(String s, int i) {
+        col = i;
+        return display(s);
+    }
+
+    public int getCol() {
+        return col;
+    }
+
 
     public String lineBreak(String s) {
         return s;
