@@ -55,7 +55,7 @@
         android:dialogTitle="@string/pref_title_tone_display"
         android:entries="@array/pref_entries_tone_display"
         android:entryValues="@array/pref_values_tone_display"
-        android:defaultValue="0" />
+        android:defaultValue="1" />
     <ListPreference
         android:key="@string/pref_key_tone_value_display"
         android:title="@string/pref_title_tone_value_display"
