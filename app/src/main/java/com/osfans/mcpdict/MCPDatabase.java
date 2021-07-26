@@ -188,7 +188,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         boolean allowVariants = isHZ(mode) && sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true);
         for (int i = 0; i < keywords.size(); i++) {
             String variant = allowVariants ? ("\"" + keywords.get(i) + "\"") : "null";
-            String[] projection = {"rowid AS _id", i + " AS rank", variant + " AS variants"};
+            String[] projection = {"rowid AS _id", i + " AS rank", "offsets(mcpdict) AS vaIndex", variant + " AS variants"};
             for (String column : columns) {
                 String col = allowVariants ? "va" : column;
                 queries.add(qb.buildQuery(projection, col + " MATCH ?", null, null, null, null));
@@ -205,11 +205,11 @@ public class MCPDatabase extends SQLiteAssetHelper {
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
         String selection = "u._id = v.rowid";
         if (mcOnly) {
-            selection += " AND mc IS NOT NULL";
+            selection += " AND ltc_mc IS NOT NULL";
         } else if (charset > 0) {
             selection += String.format(" AND fl MATCH '%s'", r.getStringArray(R.array.pref_values_charset)[charset]);
         }
-        query = qb.buildQuery(projection, selection, null, null, "rank", null);
+        query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", null);
 
         // Search
         return db.rawQuery(query, args.toArray(new String[0]));
