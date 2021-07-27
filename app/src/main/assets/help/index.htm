@@ -1,6 +1,10 @@
 <meta http-equiv=content-type content="text/html;charset=utf-8">
 <title>漢字古今中外讀音查詢 幫助</title>
 <style>
+  @font-face {
+      font-family: ipa;
+      src: url("file:///android_res/font/ipa.ttf")
+  }
   body {font-size: 16px}
   h1 {font-size: 24px; color: #9D261D}
   h2 {font-size: 20px; color: #000080; text-indent: 10px}
@@ -17,6 +21,11 @@
   div.romanization table tr.separator {height: 10px}
   .emph {color: red}
   .dim {color: #808080}
+  .block {border: 1px gray solid; background: #E6E6FA;  width: 50%; margin: auto; padding: 3px}
+  .hz {font-size: 200%; color: #9D261D;}
+  .ipa {font-family: ipa;}
+  .dialect {border: 1px gray solid; border-radius: 3px;}
+  .comment {font-size: 70%;}
 </style>
 
 <script language=javascript>
@@ -36,10 +45,28 @@ function toggle(id) {
 <h1>目錄</h1>
 
 <ul>
+  <li><a href=#sec_dialect>方言說明</a>
   <li><a href=#sec_interface>界面介紹</a>
   <li><a href=#sec_example>查詢舉例</a>
-  <li><a href=#sec_romanization>輸入及顯示方式</a>
+  <li><a href=#sec_romanization>輸入顯示</a>
 </ul>
+
+<a name=sec_dialect></a>
+<h1>方言說明</h1>
+
+<h2>普寧方言</h2>
+<p>　　本文所記錄的普寧方言屬於潮汕話，是閩方言的一種，以普寧市區流沙東街道爲代表。原屬於流沙鎮的流沙東、西、南、北街道及佔隴鎮發音具有較高的一致性，內部差別主要體現在個別調值不同。大多數粵東閩方言有18個聲母，分別爲：p、pʰ、b、m、t、tʰ、n、l、ts、tsʰ、dz、s、k、kʰ、g、h、ʔ，其中普寧方言p、pʰ、b、m逢今讀合口呼絕大部分字，變爲脣齒音，記爲pf、pfʰ、bv、ɱ等脣齒聲母。實際上不單聲母發音部位發生了變化，就是介音也從u變成ʋ，如"配"的實際音值爲pfʰʋe，"霧"的實際音值爲bvʋu或者bvʋ̍，爲簡化音系，仍記爲pfʰue、bvu等，因此本表普寧方言記錄22個聲母，而韻母數量不發生變化。
+  部分聲母存在變體，如：h-聲母逢合口呼今部分字聲母爲ɸ-，逢齊齒呼少部分字新派讀ɕ-聲母，如"現"讀ɕiaŋ，均屬於自由變體，讀音暫不作記錄。還有一些聲母變體僅在連讀詞中出現，而單字音不存在，如："好"在"有好"（得以的意思）的語流中讀音ɦuo，如"有好食"（有東西喫）。</p>
+<p>　　字表中以小字註釋解釋，規則爲："文"表示文讀音，"訓"表示訓讀音。還有部分字音無法確認是否爲文讀音，則以詞組註釋，其中註釋的詞中有與該字目相同的字則表示這個詞讀這個音時可以組的詞語，若不同則表示這個字作爲單字詞時表達的意思。如：“勘”讀“ŋam˨˨˧”時註釋爲“估測”，與字目不同，說明ŋam˨˨˧是一個單字詞，意思是“估測”，寫作“勘”；</p>
+<div class=block><span class=hz>勘</span>&nbsp;<span class="dialect" style="border-color:#FF6600"><font color="#FF6600">普寧</font></span>&nbsp;<span class=ipa>ŋam˨˨˧</span><span class="comment">估测</span><span class=ipa>, kʰam˨˨˧</span></div>
+<p>　　又如下圖，"想"字的siaŋ˥˧的註釋爲"理想"，其中一字與字目相同，說明"想"讀siaŋ˥˧時可以組的詞語有"理想"</p>
+<div class=block><span class=hz>想</span>&nbsp;<span class="dialect" style="border-color:#FF6600"><font color="#FF6600">普寧</font></span>&nbsp;<span class=ipa>siaŋ˥˧</span><span class="comment">理想</span><span class=ipa>, siõ˨˩˧</span> </div>
+<p>　　部分字音找不到對應的漢字，使用讀音相近的字作爲"替字"記錄，作註釋"˭"。如："koŋ˥˧"的意思是水杯，這裏用一個"罁"作爲替字</p>
+<div class=block><span class=hz>罁</span>&nbsp;<span class="dialect" style="border-color:#FF6600"><font color="#FF6600">普寧</font></span>&nbsp;<span class=ipa>koŋ˥˧</span><span class="comment">˭水杯</span> </div>
+<p>　　部分字音存在內部差別，作註釋"又"。如下圖中"推"有一個又音tʰui</p>
+<div class=block><span class=hz>推</span>&nbsp;<span class="dialect" style="border-color:#FF6600"><font color="#FF6600">普寧</font></span>&nbsp;<span class=ipa>tʰo˨˨˧, tʰui˨˨˧</span><span class="comment">又</span> </div>
+
+<p align=right><a href=#sec_contents>回頁首</a></p>
 
 <a name=sec_interface></a>
 <h1>界面介紹</h1>
@@ -54,8 +81,7 @@ function toggle(id) {
 <p>　　在“查詢模式”欄中，可以指定查詢內容的類別，即漢字或某種語言的讀音。</p>
 <p>　　“查詢選項”包括以下三項：</p>
 <p>　　<b>(1) 僅在《廣韻》中查找：</b>在“查詢模式”不是“中古拼音”時有效。選中該項時，只返回《廣韻》中收錄的字，即數據庫中有中古音的字。這些字一般爲繁體字。當“查詢模式”爲“中古拼音”的時候，當然只能查到《廣韻》中的字。</p>
-<p>　　<b>(2) 簡繁、異體轉換：</b>僅在“查詢模式”爲“漢字”時有效。選中該項時，可以同時查詢所輸入漢字的簡體字、繁體字、異體字。如果在手機上輸入繁體字有困難，這個選項就很有用了。簡體、繁體、異體字轉換表來自<a href=http://ytenx.org/>韻典網</a>的<a href=https://github.com/BYVoid/ytenx>GitHub開源代碼庫</a>。</p>
-<p>　　<b>(3) 聲調不敏感：</b>在“查詢模式”爲“中古拼音”、“普通話”、“粵語”、“吳語（上海話）”、“閩南語”、“越南語”時有效。選中該項時，可以同時查詢與所輸入的讀音聲母、韻母均相同但聲調不同的音節。</p>
+<p>　　<b>(2) 異體字：</b>僅在“查詢模式”爲“漢字”時有效。選中該項時，可以同時查詢所輸入漢字的簡體字、繁體字等異體字。如果在手機上輸入繁體字有困難，這個選項就很有用了。簡體、繁體、異體字轉換表來自<a href=http://ytenx.org/>韻典網</a>的<a href=https://github.com/BYVoid/ytenx>GitHub開源代碼庫</a>。</p>
 <p>　　查詢結果顯示了漢字的Unicode編碼及各種語言的讀音。若某字的查詢結果右上角顯示一顆灰色五角星，則表示該字尚未被加入生字本，點擊灰色五角星可以將該字添加到生字本中（同時可以寫一條筆記）；若顯示一顆黃色五角星，則表示該字已在生字本中，點擊黃色五角星可以查看、修改該字的筆記，或者把該字從生字本中刪除。點擊某一漢字的查詢結果中除五角星外的部分，可以呼出一個菜單（如下圖）。利用這個菜單，可以將該字的讀音複製到剪貼板，也可以進行生字本操作（添加、刪除、修改筆記等）。</p>
 
 <p align=center><img class=example src=context_menu.png></p>
@@ -107,12 +133,12 @@ function toggle(id) {
 <p align=center><img class=example src=ex_gwon.png></p>
 
 <p>　　查詢朝鮮語時，可以在“查詢內容”欄中輸入諺文；若手機輸入不方便，也可以輸入羅馬字。在此，輸入“권”的羅馬字“gwon”。圖片截取了前兩個朝鮮語讀“권”的字。</p>
-<p>　　查詢其它語言時也都可以輸入羅馬字，詳細的羅馬字方案請參見下面“<a href=#sec_romanization>輸入和顯示方式</a>”一節。</p>
+<p>　　查詢其它語言時也都可以輸入羅馬字，詳細的羅馬字方案請參見下面“<a href=#sec_romanization>輸入顯示</a>”一節。</p>
 
 <p align=right><a href=#sec_contents>回頁首</a></p>
 
 <a name=sec_romanization></a>
-<h1>輸入及顯示方式</h1>
+<h1>輸入顯示</h1>
 
 <h2>普通話</h2>
 
@@ -210,7 +236,7 @@ function toggle(id) {
   <div align=center><a class=switch onclick="toggle('ct_final')">收起</a></div>
 </div>
 
-<h2>粵語</h2>
+<h2>香港粵語</h2>
 
 <p>　　本程序支持如下四種粵語拼音系統：</p>
 <p>
@@ -350,7 +376,7 @@ function toggle(id) {
   <div align=center><a class=switch onclick="toggle('ct_tone')">收起</a></div>
 </div>
 
-<h2>閩南語</h2>
+<h2>臺灣閩南語</h2>
 
 <p>　　本程序採用<a href=https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E9%96%A9%E5%8D%97%E8%AA%9E%E7%BE%85%E9%A6%AC%E5%AD%97%E6%8B%BC%E9%9F%B3%E6%96%B9%E6%A1%88>臺灣閩南語羅馬字拼音方案</a>（簡稱“臺羅拼音”）標註閩南語讀音。</p>
 
