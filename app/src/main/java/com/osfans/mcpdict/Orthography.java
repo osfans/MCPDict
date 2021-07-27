@@ -43,8 +43,11 @@ public class Orthography {
         String s = MCPDatabase.getToneName(lang);
         if (TextUtils.isEmpty(s)) return base;
         tone = tone - 1;
-        String toneAllStyles = s.split(",")[tone];
+        String[] tones = s.split(",");
+        if (tones.length <= tone) return base;
+        String toneAllStyles = tones[tone];
         String[] styles = toneAllStyles.split(" ");
+        if (styles.length != 5) return base;
         String tv = styles[0];
         if (!TextUtils.isEmpty(tv) && mToneValueStyle <= 1) {
             if (mToneValueStyle == 0) { //符號
@@ -70,12 +73,13 @@ public class Orthography {
             case 0:
                 return base + (1 + tone);
             default:
-                if (mToneStyle == 4) {
+                String sTone = styles[mToneStyle];
+                if (TextUtils.isEmpty(sTone) || sTone.contentEquals("0")) return base;
+                if (mToneStyle == 4 && !TextUtils.isEmpty(styles[1])) {
                     char a = styles[1].charAt(0);
                     if (a >= '1' && a <= '4') return styles[mToneStyle] + base;
                 }
-                String sTone = styles[mToneStyle];
-                if (mToneStyle <= 2 && !TextUtils.isEmpty(sTone)) {
+                if (mToneStyle <= 2) {
                     char a = sTone.charAt(0);
                     sTone = sTone.replace(a, (char)(a - '1' + '①'));
                     if (sTone.length() == 2) {
