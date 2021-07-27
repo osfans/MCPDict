@@ -186,7 +186,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         textView.setText(Orthography.HZ.toUnicode(hz));
 
         // Variants
-        string = cursor.getString(cursor.getColumnIndex("variants"));
+        string = cursor.getString(cursor.getColumnIndexOrThrow("variants"));
         textView = view.findViewById(R.id.text_variants);
         if (!TextUtils.isEmpty(string) && !string.contentEquals(hz)) {
             textView.setText(String.format("(%s)", string));
@@ -195,7 +195,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         }
 
          // "Favorite" button
-        boolean favorite = cursor.getInt(cursor.getColumnIndex("is_favorite")) == 1;
+        boolean favorite = cursor.getInt(cursor.getColumnIndexOrThrow("is_favorite")) == 1;
         Button button = view.findViewById(R.id.button_favorite);
         button.setOnClickListener(v -> {
             Boolean is_favorite = (Boolean) view.getTag(R.id.tag_favorite);
@@ -214,7 +214,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         view.setTag(R.id.tag_favorite, favorite);
 
         // Favorite comment
-        string = cursor.getString(cursor.getColumnIndex("comment"));
+        string = cursor.getString(cursor.getColumnIndexOrThrow("comment"));
         textView = view.findViewById(R.id.text_comment);
         textView.setText(string);
 
