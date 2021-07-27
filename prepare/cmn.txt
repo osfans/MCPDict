@@ -55910,6 +55910,8 @@
 𨡙	dan1	#𨢿
 𢫗	pai1	#拍?
 𮬭	liu4
+𩹆	zhan4	#䱠
+𩻣	zhan4	#䱠
 #cin
 𡃕	chuan1
 𡆞	dou4
@@ -73553,7 +73555,6 @@
 𩸽	long3,long2
 𩹁	bing4	#鮩
 𩹃	e2	#䱮
-𩹆	chan3	#䱠
 𩹋	di4,ti2	#䱱
 𩹌𣎕	guan1	#鳏
 𩹐	geng3	#鲠
@@ -73617,7 +73618,6 @@
 𩻙	e4	#鰐
 𩻞	ru2	#鱬
 𩻠	man2	#鳗
-𩻣	chan3	#䱠
 𩻥	jian4	#鰎
 𩻦	sao1	#鲹
 𩻨	zi1	#鲻
