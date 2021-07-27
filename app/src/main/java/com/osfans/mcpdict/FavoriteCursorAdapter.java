@@ -59,17 +59,17 @@ public class FavoriteCursorAdapter extends CursorAdapter {
 
         // Get the Chinese character from the cursor,
         //   and make sure we're binding it to the view recorded in itemStatus
-        String hz = cursor.getString(cursor.getColumnIndex("hz"));
+        String hz = cursor.getString(cursor.getColumnIndexOrThrow("hz"));
         textView = view.findViewById(R.id.text_hz);
         textView.setText(hz);
 
         // Timestamp
-        string = cursor.getString(cursor.getColumnIndex("local_timestamp"));
+        string = cursor.getString(cursor.getColumnIndexOrThrow("local_timestamp"));
         textView = view.findViewById(R.id.text_timestamp);
         textView.setText(string);
 
         // Comment
-        string = cursor.getString(cursor.getColumnIndex("comment"));
+        string = cursor.getString(cursor.getColumnIndexOrThrow("comment"));
         textView = view.findViewById(R.id.text_comment);
         textView.setText(string);
 
