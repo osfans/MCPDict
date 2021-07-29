@@ -53,6 +53,9 @@ def get():
                 uni = uni.split("<")[0]
                 if hex2chr(han) != hex2chr(uni):
                     dic[hex2chr(han)].add(hex2chr(uni))
+    for line in open("異體字字典"):
+        line = line.strip()
+        dic[line[0]].update(set(line[1:]))
     for han in sorted(dic.keys()):
         if han in org:
             for i in dic[han]:
