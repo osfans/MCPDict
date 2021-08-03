@@ -29,14 +29,12 @@ import java.io.UnsupportedEncodingException;
 import java.lang.ref.WeakReference;
 import java.net.URLEncoder;
 import java.util.Objects;
+import java.util.Set;
 
 import static com.osfans.mcpdict.MCPDatabase.COL_FIRST_READING;
 import static com.osfans.mcpdict.MCPDatabase.COL_HZ;
-import static com.osfans.mcpdict.MCPDatabase.COL_JA_FIRST;
 import static com.osfans.mcpdict.MCPDatabase.COL_LAST_READING;
-import static com.osfans.mcpdict.MCPDatabase.MASK_ALL_READINGS;
-import static com.osfans.mcpdict.MCPDatabase.MASK_HZ;
-import static com.osfans.mcpdict.MCPDatabase.MASK_JA_ALL;
+import static com.osfans.mcpdict.MCPDatabase.COL_ALL_READINGS;
 
 public class SearchResultFragment extends ListFragment {
 
@@ -45,6 +43,7 @@ public class SearchResultFragment extends ListFragment {
     private SearchResultCursorAdapter adapter;
     private final boolean showFavoriteButton;
     private View selectedEntry;
+    private final int GROUP_READING = 1;
 
     private static WeakReference<SearchResultFragment> selectedFragment;
 
@@ -142,7 +141,7 @@ public class SearchResultFragment extends ListFragment {
         selectedEntry = list.getChildAt(position);
         TextView text = selectedEntry.findViewById(R.id.text_hz);
         String hz = text.getText().toString();
-        int tag = (Integer) selectedEntry.getTag(R.id.tag_mask);
+        Set<Integer> cols = (Set) selectedEntry.getTag(R.id.tag_cols);
 
         // Inflate the context menu
         requireActivity().getMenuInflater().inflate(R.menu.search_result_context_menu, menu);
@@ -153,19 +152,15 @@ public class SearchResultFragment extends ListFragment {
         MenuItem item;
 
         if (col < COL_HZ) {
-            if ((tag & MASK_ALL_READINGS) > 0)
-                menuCopy.add(MASK_ALL_READINGS, 0, 0, getString(R.string.all_reading));
+            if (cols.size() > 2)
+                menuCopy.add(GROUP_READING, COL_ALL_READINGS, 0, getString(R.string.all_reading));
             for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
-                int mask = 1 << i;
-                if ((tag & mask) > 0) menuCopy.add(mask, 0, 0, MCPDatabase.getSearchAsName(i));
+                if ((cols.contains(i))) menuCopy.add(GROUP_READING, i, 0, MCPDatabase.getSearchAsName(i));
             }
-            if ((tag & MASK_JA_ALL) > 0)
-                menuCopy.add(MASK_JA_ALL, 0, 0, getString(R.string.all_jp));
 
             for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
-                int mask = 1 << i;
                 String dict = MCPDatabase.getDictName(i);
-                if ((tag & mask) > 0 && !TextUtils.isEmpty(dict)) {
+                if ((cols.contains(i)) && !TextUtils.isEmpty(dict)) {
                     item = menuDictLinks.add(dict);
                     item.setIntent(getDictIntent(i, hz));
                 }
@@ -176,7 +171,7 @@ public class SearchResultFragment extends ListFragment {
                 item = menu.add(getString(R.string.one_dict_links, hz, dict));
                 item.setIntent(getDictIntent(col, hz));
             }
-            menu.add(MASK_HZ, 0, 90, getString(R.string.copy_hz));
+            menu.add(GROUP_READING, COL_HZ, 90, getString(R.string.copy_hz));
             if (col >= COL_FIRST_READING) {
                 String searchAsName = MCPDatabase.getSearchAsName(col);
                 item = menu.add(getString(R.string.search_homophone, hz, searchAsName));
@@ -186,12 +181,10 @@ public class SearchResultFragment extends ListFragment {
                     dictionaryFragment.refresh(query, col);
                     return true;
                 });
-                menu.add(1 << col, 0, 0, getString(R.string.copy_one_reading, hz, searchAsName));
+                menu.add(GROUP_READING, col, 0, getString(R.string.copy_one_reading, hz, searchAsName));
             }
-            if (((1 << col) & MASK_JA_ALL) > 0)
-                menu.add(MASK_JA_ALL, 0, 0, getString(R.string.copy_all_jp));
-            if ((tag & MASK_ALL_READINGS) > 0)
-                menu.add(MASK_ALL_READINGS, 0, 0, getString(R.string.copy_all_reading));
+            if (cols.size() > 2)
+                menu.add(GROUP_READING, COL_ALL_READINGS, 0, getString(R.string.copy_all_reading));
             itemCopy.setVisible(false);
             itemDict.setVisible(false);
         }
@@ -221,8 +214,8 @@ public class SearchResultFragment extends ListFragment {
     }
 
     public void shareReadings() {
-        String text = getCopyText(selectedEntry, MASK_ALL_READINGS);
-        String title = getCopyText(selectedEntry, MASK_HZ);
+        String text = getCopyText(selectedEntry, COL_ALL_READINGS);
+        String title = getCopyText(selectedEntry, COL_HZ);
         Intent intent = new Intent(android.content.Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(android.content.Intent.EXTRA_TEXT, text);
@@ -233,10 +226,11 @@ public class SearchResultFragment extends ListFragment {
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
         if (selectedFragment.get() != this) return false;
-        int mask = item.getGroupId();
-        if (mask > 0) {
+        int groupId = item.getGroupId();
+        if (groupId == GROUP_READING) {
+            int itemId = item.getItemId();
             // Generate the text to copy to the clipboard
-            String text = getCopyText(selectedEntry, mask);
+            String text = getCopyText(selectedEntry, itemId);
             ClipboardManager clipboard = (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData clip = ClipData.newPlainText("item", text);
             clipboard.setPrimaryClip(clip);
@@ -246,25 +240,27 @@ public class SearchResultFragment extends ListFragment {
         return false;
     }
 
-    private String getCopyText(View entry, int mask) {
-        int tag = (Integer) entry.getTag(R.id.tag_mask);
-        if ((tag & mask) == 0) return null;
+    private String getCopyText(View entry, int col) {
+        Set<Integer> cols = (Set<Integer>) entry.getTag(R.id.tag_cols);
 
-        StringBuilder sb = new StringBuilder();
-        if (mask == MASK_JA_ALL || mask == MASK_ALL_READINGS) {
-            String hz = getCopyText(entry, MASK_HZ);
+        if (cols.contains(col))
+            return ((TextView)entry.findViewWithTag(col)).getText().toString();
+
+        if (col == COL_ALL_READINGS) {
+            if (cols.size() <= 2) return null;
+            StringBuilder sb = new StringBuilder();
+            String hz = getCopyText(entry, COL_HZ);
             assert hz != null;
             sb.append(String.format("%s %s\n", hz, Orthography.HZ.toUnicode(hz)));
-            for (int i = (mask == MASK_JA_ALL ? COL_JA_FIRST : COL_FIRST_READING); i <= COL_LAST_READING; i ++) {
-                String s = getCopyText(entry, 1<<i);
+            for (int i = COL_FIRST_READING; i <= COL_LAST_READING; i ++) {
+                String s = getCopyText(entry, i);
                 if (s != null) {
                     sb.append(formatReading(entry, i));
                 }
             }
             return sb.toString();
         }
-        int index = Integer.toBinaryString(mask).length() - 1;
-        return ((TextView)entry.findViewWithTag(index)).getText().toString();
+        return null;
     }
 
     private String formatReading(String prefix, String reading) {
@@ -273,9 +269,8 @@ public class SearchResultFragment extends ListFragment {
     }
 
     private String formatReading(View entry, int index) {
-        int mask = 1 << index;
         String prefix = MCPDatabase.getName(index);
-        String reading = Objects.requireNonNull(getCopyText(entry, mask));
+        String reading = Objects.requireNonNull(getCopyText(entry, index));
         return formatReading(prefix, reading);
     }
 

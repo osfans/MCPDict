@@ -16,7 +16,7 @@
 -->
 
     <tag android:id="@+id/tag_favorite" />
-    <tag android:id="@+id/tag_mask" />
+    <tag android:id="@+id/tag_cols" />
     <tag android:id="@+id/tag_col" />
 
     <LinearLayout
