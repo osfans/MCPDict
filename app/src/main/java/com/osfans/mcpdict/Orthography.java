@@ -201,6 +201,7 @@ public class Orthography {
             if (system == 0) system = 5;
             // Get tone first
             int tone = 1;
+            String s0 = s;
             switch (s.charAt(s.length() - 1)) {
                 case 'x': tone = 2; s = s.substring(0, s.length() - 1); break;
                 case 'h': tone = 3; s = s.substring(0, s.length() - 1); break;
@@ -300,7 +301,7 @@ public class Orthography {
             if (tone == 4) {
                 ym = ym.replace('m', 'p').replace('n', 't').replace('ŋ','k');
             }
-            return formatTone(Objects.requireNonNull(mapSms.get(init))[system] + ym, tone, MCPDatabase.COL_MC);
+            return String.format("%s(%s)", formatTone(Objects.requireNonNull(mapSms.get(init))[system] + ym, tone, MCPDatabase.COL_MC), detail(s0));
         }
 
         public static String detail(String s) {
