@@ -30,6 +30,9 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_HZ = "hz";
     public static final String SEARCH_AS_BH = "bh";
     public static final String SEARCH_AS_BS = "bs";
+    public static final String SEARCH_AS_KX = "kx";
+
+    public static final String SEARCH_AS_SG = "och_sg";
     public static final String SEARCH_AS_BA = "och_ba";
     public static final String SEARCH_AS_MC = "ltc_mc";
     public static final String SEARCH_AS_CMN = "cmn";
@@ -47,6 +50,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static int COL_HZ;
     public static int COL_BH;
     public static int COL_BS;
+    public static int COL_KX;
+    public static int COL_SG;
     public static int COL_MC;
     public static int COL_CMN;
     public static int COL_GZ;
@@ -100,11 +105,17 @@ public class MCPDatabase extends SQLiteAssetHelper {
         Resources r = context.getResources();
         int charset = sp.getInt(r.getString(R.string.pref_key_charset), 0);
         boolean mcOnly = charset == 1;
+        boolean kxOnly = charset == 2;
         int cantoneseSystem = Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(R.string.pref_key_cantonese_romanization), "0")));
 
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
-        if (Orthography.HZ.isBH(input)) mode = COL_BH;
+        if (mode == COL_KX) {
+            if (!TextUtils.isEmpty(input) && !input.startsWith(":") && !input.startsWith("：")){
+                 input = ":" + input;
+            }
+        }
+        else if (Orthography.HZ.isBH(input)) mode = COL_BH;
         else if (Orthography.HZ.isBS(input)) {
             mode = COL_BS;
             input = input.replace("-", "f");
@@ -114,11 +125,16 @@ public class MCPDatabase extends SQLiteAssetHelper {
             mode = COL_HZ;
         } else if (Orthography.HZ.isPY(input) && mode < COL_FIRST_READING) mode = COL_CMN;
         if (isHZ(mode)) {     // Each character is a query
-            for (int unicode: input.codePoints().toArray()) {
-                if (!Orthography.HZ.isHz(unicode)) continue;
-                String hz = Orthography.HZ.toHz(unicode);
-                if (keywords.contains(hz)) continue;
-                keywords.add(hz);
+            if (input.startsWith(":") || input.startsWith("：")){
+                keywords.add("%" + input.substring(1) + "%");
+                mode = COL_KX;
+            } else {
+                for (int unicode : input.codePoints().toArray()) {
+                    if (!Orthography.HZ.isHz(unicode)) continue;
+                    String hz = Orthography.HZ.toHz(unicode);
+                    if (keywords.contains(hz)) continue;
+                    keywords.add(hz);
+                }
             }
         } else if (input.startsWith(":") || input.startsWith("：")){
             keywords.add("%" + input.substring(1) + "%");
@@ -211,10 +227,12 @@ public class MCPDatabase extends SQLiteAssetHelper {
         String selection = "u._id = v.rowid AND v.rowid > 7";
         if (mcOnly) {
             selection += " AND ltc_mc IS NOT NULL";
+        } else if (kxOnly) {
+            selection += " AND kx IS NOT NULL";
         } else if (charset > 0) {
             selection += String.format(" AND fl MATCH '%s'", r.getStringArray(R.array.pref_values_charset)[charset]);
         }
-        query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", null);
+        query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", "0,1000");
 
         // Search
         return db.rawQuery(query, args.toArray(new String[0]));
@@ -228,13 +246,13 @@ public class MCPDatabase extends SQLiteAssetHelper {
                    "v.hz AS hz", "NULL AS variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
         String selection = "v.hz = ?";
-        String query = qb.buildQuery(projection, selection, null, null, null, null);
+        String query = qb.buildQuery(projection, selection, null, null, null, "0,1000");
         String[] args = {hz};
         return db.rawQuery(query, args);
     }
 
     private static void getSearchAsColumns() {
-        if (COLUMNS != null) return;
+        if (COLUMNS != null || db == null) return;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         String[] projection = {"*"};
@@ -247,6 +265,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COL_HZ = cursor.getColumnIndex(SEARCH_AS_HZ);
         COL_BH = cursor.getColumnIndex(SEARCH_AS_BH);
         COL_BS = cursor.getColumnIndex(SEARCH_AS_BS);
+        COL_KX = cursor.getColumnIndex(SEARCH_AS_KX);
+        COL_SG = cursor.getColumnIndex(SEARCH_AS_SG);
         COL_MC = cursor.getColumnIndex(SEARCH_AS_MC);
         COL_CMN = cursor.getColumnIndex(SEARCH_AS_CMN);
         COL_GZ = cursor.getColumnIndex(SEARCH_AS_GZ);
@@ -255,7 +275,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
 
         COL_JA_FIRST = cursor.getColumnIndex(SEARCH_AS_JA_GO);
         COL_JA_ANY = COL_JA_FIRST + 2;
-        COL_FIRST_READING = COL_HZ + 1;
+        COL_FIRST_READING = COL_SG;
         COL_LAST_READING = COL_JA_FIRST + 4;
 
         SEARCH_AS_NAMES = new ArrayList<>();
