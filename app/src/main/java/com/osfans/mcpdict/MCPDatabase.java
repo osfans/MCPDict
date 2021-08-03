@@ -57,9 +57,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static int COL_FIRST_READING;
     public static int COL_LAST_READING;
 
-    public static int MASK_HZ;
-    public static int MASK_JA_ALL;
-    public static int MASK_ALL_READINGS;
+    public static int COL_ALL_READINGS = 1000;
 
     private static final String TABLE_NAME = "mcpdict";
 
@@ -252,10 +250,6 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COL_JA_ANY = COL_JA_FIRST + 2;
         COL_FIRST_READING = COL_HZ + 1;
         COL_LAST_READING = COL_JA_FIRST + 4;
-
-        MASK_HZ = 1 << COL_HZ;
-        MASK_JA_ALL = 0b11111 << COL_JA_FIRST;
-        MASK_ALL_READINGS   = (1 << (COL_LAST_READING + 1)) - (1 << COL_FIRST_READING);
 
         SEARCH_AS_NAMES = new ArrayList<>();
         for (int i = 0; i < n; i++) {
