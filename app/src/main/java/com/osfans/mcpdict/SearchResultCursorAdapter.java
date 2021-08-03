@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.database.Cursor;
-import android.graphics.Color;
+import android.graphics.Typeface;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -18,6 +18,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.core.text.HtmlCompat;
 
 import java.lang.ref.WeakReference;
@@ -35,6 +36,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     private final int layout;
     private final LayoutInflater inflater;
     private final boolean showFavoriteButton;
+    private final Typeface mTypefaceHan;
 
     public SearchResultCursorAdapter(Context context, int layout, Cursor cursor, boolean showFavoriteButton) {
         super(context, cursor, FLAG_REGISTER_CONTENT_OBSERVER);
@@ -42,6 +44,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         this.layout = layout;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.showFavoriteButton = showFavoriteButton;
+        mTypefaceHan = ResourcesCompat.getFont(context, R.font.han);
     }
 
     private static Context getContext() {
@@ -92,6 +95,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             textViewName.setTextScaleX(width/(float)getMeasuredWidth(textViewName));
             final TextView textViewDetail = row.findViewById(R.id.text_detail);
             textViewDetail.setTag(i);
+            if (i == MCPDatabase.COL_MC) textViewDetail.setTypeface(mTypefaceHan);
             row.setTag("row" + i);
             row.setOnClickListener(getListener((Integer)textViewDetail.getTag()));
             table.addView(row);
@@ -251,13 +255,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
     private static final Displayer middleChineseDisplayer = new Displayer() {
         public String lineBreak(String s) {return s.replace(",", "\n");}
-        public String displayOne(String s) {return Orthography.MiddleChinese.display(s, getStyle(R.string.pref_key_mc_display)) + middleChineseDetailDisplayer.display(s);}
-    };
-
-    private static final Displayer middleChineseDetailDisplayer = new Displayer() {
-        public String lineBreak(String s) {return s.replace(",", "\n");}
-        public String displayOne(String s) {return "(" + Orthography.MiddleChinese.detail(s) + ")";}
-        public String display(String s) {return " " + super.display(s);}
+        public String displayOne(String s) {return Orthography.MiddleChinese.display(s, getStyle(R.string.pref_key_mc_display));}
     };
 
     private static int getStyle(int id) {

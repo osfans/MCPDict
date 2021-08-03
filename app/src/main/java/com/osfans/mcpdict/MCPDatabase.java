@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import android.preference.PreferenceManager;
 import android.text.Spanned;
 import android.text.TextUtils;
+import android.util.Log;
 
 import androidx.core.text.HtmlCompat;
 
@@ -119,8 +120,9 @@ public class MCPDatabase extends SQLiteAssetHelper {
                 if (keywords.contains(hz)) continue;
                 keywords.add(hz);
             }
-        }
-        else {                          // Each contiguous run of non-separator and non-comma characters is a query
+        } else if (input.startsWith(":") || input.startsWith("：")){
+            keywords.add("%" + input.substring(1) + "%");
+        } else {                          // Each contiguous run of non-separator and non-comma characters is a query
             if (isKO(mode)) { // For Korean, put separators around all hangul
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < input.length(); i++) {
@@ -187,10 +189,15 @@ public class MCPDatabase extends SQLiteAssetHelper {
         for (int i = 0; i < keywords.size(); i++) {
             String variant = allowVariants ? ("\"" + keywords.get(i) + "\"") : "null";
             String[] projection = {"rowid AS _id", i + " AS rank", "offsets(mcpdict) AS vaIndex", variant + " AS variants"};
+            String key = keywords.get(i);
+            String sel = " MATCH ?";
+            if (key.startsWith("%") && key.endsWith("%")) {
+                sel = " LIKE ?";
+            }
             for (String column : columns) {
                 String col = allowVariants ? "va" : column;
-                queries.add(qb.buildQuery(projection, col + " MATCH ?", null, null, null, null));
-                args.add(keywords.get(i));
+                queries.add(qb.buildQuery(projection, col + sel, null, null, null, null));
+                args.add(key);
             }
         }
         String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);
@@ -201,7 +208,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         String[] projection = {"v.*", "_id",
                    "v.hz AS hz", "variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
-        String selection = "u._id = v.rowid";
+        String selection = "u._id = v.rowid AND v.rowid > 7";
         if (mcOnly) {
             selection += " AND ltc_mc IS NOT NULL";
         } else if (charset > 0) {
