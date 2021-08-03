@@ -1,5 +1,6 @@
 package com.osfans.mcpdict;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
@@ -29,6 +30,8 @@ import java.util.Set;
 import static com.osfans.mcpdict.MCPDatabase.COL_BH;
 import static com.osfans.mcpdict.MCPDatabase.COL_BS;
 import static com.osfans.mcpdict.MCPDatabase.COL_HZ;
+import static com.osfans.mcpdict.MCPDatabase.COL_KX;
+import static com.osfans.mcpdict.MCPDatabase.getName;
 
 public class SearchResultCursorAdapter extends CursorAdapter {
 
@@ -75,12 +78,14 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         View view = inflater.inflate(layout, parent, false);
         final TextView textViewHZ = view.findViewById(R.id.text_hz);
-        textViewHZ.setTag(MCPDatabase.COL_HZ);
-        textViewHZ.setOnClickListener(getListener(MCPDatabase.COL_HZ));
+        textViewHZ.setTag(COL_HZ);
+        textViewHZ.setOnClickListener(getListener(COL_HZ));
         TextView textView = view.findViewById(R.id.text_bh);
         textView.setTag(COL_BH);
         textView = view.findViewById(R.id.text_bs);
         textView.setTag(COL_BS);
+        textView = view.findViewById(R.id.text_kx);
+        textView.setTag(COL_KX);
         TableLayout table = view.findViewById(R.id.text_readings);
         int width = 0;
         for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
@@ -157,39 +162,54 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         Orthography.setToneValueStyle(getStyle(R.string.pref_key_tone_value_display));
         String languages = PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.pref_key_show_language_names), "");
 
-        for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
+        for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
             string = cursor.getString(i);
             boolean visible = string != null && isColumnVisible(languages, i);
-            if (i >= MCPDatabase.COL_FIRST_READING) {
-                View row = view.findViewWithTag("row" + i);
-                row.setVisibility(visible ? View.VISIBLE : View.GONE);
-            }
+            View row = view.findViewWithTag("row" + i);
+            row.setVisibility(visible ? View.VISIBLE : View.GONE);
             if (!visible) continue;
             cols.add(i);
             textView = view.findViewWithTag(i);
             textView.setTag(R.id.tag_raw, getRawText(string));
-            CharSequence cs;
-            if (i == COL_HZ) {
-                cs = string;
-                String str = cursor.getString(COL_BH);
-                TextView tv = view.findViewWithTag(COL_BH);
-                tv.setText(context.getResources().getString(R.string.total_strokes_format, str));
-                str = cursor.getString(COL_BS);
-                tv = view.findViewWithTag(COL_BS);
-                String bs = str.substring(0, 1);
-                String bh = str.substring(1).replace('f', '-');
-                str = context.getResources().getString(R.string.radical_count_format, bs, bh);
-                tv.setText(str);
-            } else {
-                cs = formatIPA(i, string);
-            }
+            CharSequence cs = formatIPA(i, string);
             textView.setText(cs);
         }
 
         // HZ
-        hz = cursor.getString(MCPDatabase.COL_HZ);
+        hz = cursor.getString(COL_HZ);
+        textView = view.findViewWithTag(COL_HZ);
+        textView.setText(hz);
+        cols.add(COL_HZ);
         textView = view.findViewById(R.id.text_unicode);
         textView.setText(Orthography.HZ.toUnicode(hz));
+        String str = cursor.getString(COL_BH);
+        TextView tv = view.findViewWithTag(COL_BH);
+        tv.setText(context.getResources().getString(R.string.total_strokes_format, str));
+        str = cursor.getString(COL_BS);
+        tv = view.findViewWithTag(COL_BS);
+        String bs = str.substring(0, 1);
+        String bh = str.substring(1).replace('f', '-');
+        str = context.getResources().getString(R.string.radical_count_format, bs, bh);
+        tv.setText(str);
+        tv = view.findViewWithTag(COL_KX);
+        String kx =  cursor.getString(COL_KX);
+        if (!TextUtils.isEmpty(kx)) {
+            tv.setText(getName(COL_KX));
+            tv.setOnClickListener(view1 -> {
+                TextView showText = new TextView(getContext());
+                showText.setText(kx);
+                showText.setPadding(12, 12, 12, 12);
+                showText.setTextIsSelectable(true);
+                new AlertDialog.Builder(getContext())
+                        .setTitle(hz)
+                        .setView(showText)
+                        .setPositiveButton(R.string.back, null)
+                        .show();
+            });
+            tv.setVisibility(View.VISIBLE);
+        } else {
+            tv.setVisibility(View.GONE);
+        }
 
         // Variants
         string = cursor.getString(cursor.getColumnIndexOrThrow("variants"));

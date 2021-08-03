@@ -290,7 +290,7 @@
     <string-array name="pref_values_charset">
         <item>""</item>
         <item>""</item>
-        <item>kIRGKangXi</item>
+        <item>""</item>
         <item>FD</item>
         <item>kHKGlyph</item>
         <item>T1</item>

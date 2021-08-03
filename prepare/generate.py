@@ -28,6 +28,7 @@ def hex2chr(uni):
 HEADS = [
   ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s',"版本：V4.7 (2021-08-02)<br>說明：<br>　　本程序源自“<a href=https://github.com/MaigoAkisame/MCPDict>漢字古今中外讀音查詢</a>”，收錄了更多漢字、更多語言、更多讀音，當然錯誤也更多，可去<a href=https://github.com/osfans/MCPDict>漢字音典</a>或進<a href=mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3D-hNzAQCgZQL-uIlhFrxWJ56umCexsmBi>QQ群</a>提出寶貴意見。<br>　　本程序將多種語言的漢字讀音集成於本地數據庫，默認用國際音標注音，可用於比較各語言讀音的異同，也能給學習本程序所收的語言提供有限的幫助。<br>　　本程序支持多種方式查詢漢字及其讀音，如輸入𰻞（漢字）、30EDE（Unicode編碼）、biang2（普通話拼音）、43（總筆畫數）、辵39（部首餘筆），均可查到“𰻞”及其讀音。音節末尾的“?”可匹配任何聲調。<br>",None),
   #('unicode', '統一碼', '統一碼', '#808080', 'Unihan', 'https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%s',None),
+  ('kx', '康熙字典', '康熙', '#808080', None, None, "名稱：康熙字典<br>來源：<a href=https://github.com/7468696e6b/kangxiDictText/>GitHub</a>",None),
   ('och_sg', '上古（鄭張尚芳）', '鄭張', '#9A339F', '韻典網（上古音系）', 'https://ytenx.org/dciangx/dzih/%s',"名稱：上古音鄭張尚芳擬音<br>來源：<a href=https://ytenx.org/dciangx/>韻典網</a>",None),
   ('och_ba', '上古（白一平沙加爾）', '白沙2015', '#9A339F', None, None, "更新：2015-10-13<br>名稱：上古音白一平沙加爾2015年擬音<br>來源：<a href=http://ocbaxtersagart.lsait.lsa.umich.edu/>http://ocbaxtersagart.lsait.lsa.umich.edu/</a>",None),
   ('ltc_mc', '廣韻', '廣韻', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s", "名稱：廣韻<br>來源：<a href=https://ytenx.org/kyonh/>韻典網</a><br>說明：括號中注明了《廣韻》中的聲母、韻攝、韻目、等、呼、聲調，以及《平水韻》中的韻部。對於“支脂祭真仙宵侵鹽”八個有重紐的韻，僅在聲母爲脣牙喉音時標註A、B類。廣韻韻目中缺少冬系上聲、臻系上聲、臻系去聲和痕系入聲，“韻典網”上把它們補全了，分別作“湩”、“𧤛”、“櫬”、“麧”。由於“𧤛”字不易顯示，故以同韻目的“齔”字代替。"," 1 1 平 ꜀, 3 2 上 ꜂, 5 3 去 ꜄, 7 4 入 ꜆"),
@@ -124,12 +125,6 @@ logging.info("處理兼容字 %.2f" % timeit())
 
 #fl
 d.clear()
-for line in open("/usr/share/unicode/Unihan_DictionaryIndices.txt"):
-  if not line.startswith("U"): continue
-  han, typ, val = line.strip().split("\t", 2)
-  han = hex2chr(han)
-  if typ == "kIRGKangXi" and val.endswith("0"):
-    d[han].append(typ)
 for line in open("/usr/share/unicode/Unihan_OtherMappings.txt"):
   if not line.startswith("U"): continue
   han, typ, val = line.strip().split("\t", 2)
@@ -589,7 +584,7 @@ logging.info("處理蘇州話 %.2f" % timeit())
 
 #cmn
 d.clear()
-for line in open("cmn.txt"):
+for line in open("cmn.tsv"):
   line = line.strip()
   if not line or line.startswith("#"):
     continue
@@ -938,6 +933,17 @@ for lang in patch:
         unicodes[i]["hz"] = i
       unicodes[i][lang] = patch[lang][hz]
 logging.info("修正漢字音 %.2f" % timeit())
+
+#kx
+d.clear()
+for line in open("kangxizidian-v3f.txt"):
+  fs = line.strip().split('\t\t')
+  hz = fs[0]
+  if len(hz) == 1:
+    js = fs[1].replace("", "\n").split("\n\n", 1)[1].strip()
+    d[hz].append(js)
+update("kx", d)
+logging.info("處理康熙字典 %.2f" % timeit())
 
 #bh
 d.clear()
