@@ -21,7 +21,9 @@ import androidx.core.content.ContextCompat;
 import androidx.core.text.HtmlCompat;
 
 import java.lang.ref.WeakReference;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 import static com.osfans.mcpdict.MCPDatabase.COL_BH;
 import static com.osfans.mcpdict.MCPDatabase.COL_BS;
@@ -146,7 +148,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     public void bindView(final View view, final Context context, Cursor cursor) {
         String hz, string;
         TextView textView;
-        int mask = 0;
+        Set<Integer> cols = new HashSet<>();
         Orthography.setToneStyle(getStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(getStyle(R.string.pref_key_tone_value_display));
         String languages = PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.pref_key_show_language_names), "");
@@ -159,7 +161,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 row.setVisibility(visible ? View.VISIBLE : View.GONE);
             }
             if (!visible) continue;
-            mask |= 1 << i;
+            cols.add(i);
             textView = view.findViewWithTag(i);
             textView.setTag(R.id.tag_raw, getRawText(string));
             CharSequence cs;
@@ -218,8 +220,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         textView = view.findViewById(R.id.text_comment);
         textView.setText(string);
 
-        // Set the view's mask to indicate which readings exist
-        view.setTag(R.id.tag_mask, mask);
+        // Set the view's cols to indicate which readings exist
+        view.setTag(R.id.tag_cols, cols);
     }
 
     private static String getHexColor() {
