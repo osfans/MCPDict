@@ -1,5 +1,7 @@
 package com.osfans.mcpdict;
 
+import android.text.TextUtils;
+
 abstract class Displayer {
     protected static final String NULL_STRING = "-";
     public int col;
@@ -16,7 +18,7 @@ abstract class Displayer {
             if (q > p) {
                 String t1 = s.substring(p, q);
                 String t2 = displayOne(t1);
-                sb.append(t2 == null ? t1 : t2);
+                sb.append(TextUtils.isEmpty(t2) ? t1 : t2);
                 p = q;
             }
             while (p < L && !Orthography.HZ.isIPA(s.charAt(p))) p++; //

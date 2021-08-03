@@ -30,7 +30,7 @@ HEADS = [
   #('unicode', '統一碼', '統一碼', '#808080', 'Unihan', 'https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%s',None),
   ('och_sg', '上古（鄭張尚芳）', '鄭張', '#9A339F', '韻典網（上古音系）', 'https://ytenx.org/dciangx/dzih/%s',"名稱：上古音鄭張尚芳擬音<br>來源：<a href=https://ytenx.org/dciangx/>韻典網</a>",None),
   ('och_ba', '上古（白一平沙加爾）', '白沙2015', '#9A339F', None, None, "更新：2015-10-13<br>名稱：上古音白一平沙加爾2015年擬音<br>來源：<a href=http://ocbaxtersagart.lsait.lsa.umich.edu/>http://ocbaxtersagart.lsait.lsa.umich.edu/</a>",None),
-  ('ltc_mc', '廣韻', '廣韻', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s", "名稱：廣韻擬音<br>來源：<a href=https://ytenx.org/kyonh/>韻典網</a>、<a href=https://github.com/biopolyhedron/rime-middle-chinese>中古全拼輸入法</a><br>說明：灰色讀音來自中古全拼輸入法。括號中注明了《廣韻》中的聲母、韻攝、韻目、等、呼、聲調，以及《平水韻》中的韻部。對於“支脂祭真仙宵侵鹽”八個有重紐的韻，僅在聲母爲脣牙喉音時標註A、B類。廣韻韻目中缺少冬系上聲、臻系上聲、臻系去聲和痕系入聲，“韻典網”上把它們補全了，分別作“湩”、“𧤛”、“櫬”、“麧”。由於“𧤛”字不易顯示，故以同韻目的“齔”字代替。"," 1 1 平 ꜀, 3 2 上 ꜂, 5 3 去 ꜄, 7 4 入 ꜆"),
+  ('ltc_mc', '廣韻', '廣韻', '#9A339F', '韻典網', "http://ytenx.org/zim?kyonh=1&dzih=%s", "名稱：廣韻<br>來源：<a href=https://ytenx.org/kyonh/>韻典網</a><br>說明：括號中注明了《廣韻》中的聲母、韻攝、韻目、等、呼、聲調，以及《平水韻》中的韻部。對於“支脂祭真仙宵侵鹽”八個有重紐的韻，僅在聲母爲脣牙喉音時標註A、B類。廣韻韻目中缺少冬系上聲、臻系上聲、臻系去聲和痕系入聲，“韻典網”上把它們補全了，分別作“湩”、“𧤛”、“櫬”、“麧”。由於“𧤛”字不易顯示，故以同韻目的“齔”字代替。"," 1 1 平 ꜀, 3 2 上 ꜂, 5 3 去 ꜄, 7 4 入 ꜆"),
   ('ltc_yt', '韻圖', '韻圖', '#9A339F', None, None, "名稱：韻圖擬音<br>來源：QQ共享文檔<a href=https://docs.qq.com/sheet/DYk9aeldWYXpLZENj>韻圖音系同音字表</a>"," 1 1 平 ꜀, 3 2 上 ꜂, 5 3 去 ꜄, 7 4 入 ꜆"),
   ('ltc_zy', '中原音韻', '中原音韻', '#9A339F', '韻典網（中原音韻）', 'https://ytenx.org/trngyan/dzih/%s', "名稱：中原音韻擬音<br>來源：<a href=https://ytenx.org/trngyan/>韻典網</a><br>說明：平聲分陰陽，入聲派三聲。下標“入”表示古入聲字","33 1 1a 陰平 ꜀,35 2 1b 陽平 ꜁,214 3 2 上 ꜂,51 5 3 去 ꜄"),
   ('cmn', '普通話', '普通話', '#FF00FF', '漢典網', "http://www.zdic.net/hans/%s", "更新：2021-07-08<br>名稱：普通話、國語<br>來源：<a href=https://www.zdic.net/>漢典</a>、<a href=http://yedict.com/>字海</a>、<a href=https://www.moedict.tw/>萌典</a><br>說明：灰色讀音來自<a href=https://www.moedict.tw/>萌典</a>。可使用漢語拼音、注音符號查詢漢字。在輸入漢語拼音時，可以用數字1、2、3、4代表聲調，放在音節末尾，“?”可代表任何聲調；字母ü可用v代替。例如查詢普通話讀lüè的字時可輸入lve4。在輸入注音符號時，聲調一般放在音節末尾，但表示輕聲的點（˙）既可以放在音節開頭，也可以放在音節末尾，例如“的”字的讀音可拼作“˙ㄉㄜ”或“ㄉㄜ˙”。","55 1 1a 陰平 ꜀,35 2 1b 陽平 ꜁,215 3 2 上 ꜂,51 5 3 去 ꜄"),
@@ -89,7 +89,7 @@ for r in c.execute('SELECT * FROM mcpdict'):
   row = dict(r)
   del row["pu"]
   row["hz"] = i
-  row["ltc_mc"] = row.pop("mc")
+  del row["mc"]
   row["wuu_sh"] = row.pop("sh")
   row["yue_gz"] = row.pop("ct")
   row["nan"] = row.pop("mn")
@@ -163,38 +163,21 @@ logging.info("漢字分類 %.2f" % timeit())
 
 #mc
 d.clear()
-for line in open("zyenpheng.dict.yaml"):
-  line = line.strip()
-  fs = line.split('\t')
-  if len(fs) < 2: continue
-  hz, py = fs[:2]
-  if len(hz) == 1:
-    if py not in d[hz]:
-      d[hz].append(py)
-update("ltc_mc", d)
-
 pq = dict()
 for line in open("PrengQim.txt"):
     line = line.strip()
     fs = line.split(" ")
     pq[fs[0]] = fs[1].replace("'", "0")
-dzih = defaultdict(list)
+last = ""
 for line in open("Dzih.txt"):
   line = line.strip()
   fs = line.split(" ")
-  dzih[fs[0]].append(pq[fs[1]])
-for hz in unicodes.keys():
-  if "ltc_mc" in unicodes[hz]:
-    py = unicodes[hz]["ltc_mc"]
-    if py:
-      if hz in dzih:
-        pys = [py if py in dzih[hz] else "|%s|" % py for py in py.split(",")]
-        for py in dzih[hz]:
-          if py not in pys:
-            pys.append(py)
-        unicodes[hz]["ltc_mc"] = ",".join(pys)
-      else:
-        unicodes[hz]["ltc_mc"] = "|%s|"%(py.replace(",", "|,|"))
+  if len(fs[0]) == 1:
+    js = fs[3]
+    if "上同" in js: js = js.replace("上同", "同" + last)
+    else: last = fs[0]
+    d[fs[0]].append("%s`%s`"%(pq[fs[1]], js))
+update("ltc_mc", d)
 logging.info("處理廣韻 %.2f" % timeit())
 
 #yt
