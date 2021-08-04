@@ -63,7 +63,13 @@
         <TextView
             android:id="@+id/text_kx"
             android:visibility="gone"
-            android:textColor="?android:textColorLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/text_hd"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp" />

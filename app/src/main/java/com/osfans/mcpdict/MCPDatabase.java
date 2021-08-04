@@ -6,6 +6,7 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
+import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.text.Spanned;
 import android.text.TextUtils;
@@ -31,6 +32,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_BH = "bh";
     public static final String SEARCH_AS_BS = "bs";
     public static final String SEARCH_AS_KX = "kx";
+    public static final String SEARCH_AS_HD = "hd";
 
     public static final String SEARCH_AS_SG = "och_sg";
     public static final String SEARCH_AS_BA = "och_ba";
@@ -51,6 +53,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static int COL_BH;
     public static int COL_BS;
     public static int COL_KX;
+    public static int COL_HD;
+
     public static int COL_SG;
     public static int COL_MC;
     public static int COL_CMN;
@@ -71,7 +75,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     private static final String[] JA_COLUMNS = new String[] {SEARCH_AS_JA_GO, SEARCH_AS_JA_KAN, SEARCH_AS_JA_TOU, SEARCH_AS_JA_KWAN, SEARCH_AS_JA_OTHER};
     private static ArrayList<String> SEARCH_AS_NAMES;
     private static ArrayList<String> NAMES;
-    private static ArrayList<String> COLORS;
+    private static ArrayList<Integer> COLORS;
     private static ArrayList<String> DICT_NAMES;
     private static ArrayList<String> DICT_LINKS;
     private static ArrayList<String> INTROS;
@@ -106,13 +110,15 @@ public class MCPDatabase extends SQLiteAssetHelper {
         int charset = sp.getInt(r.getString(R.string.pref_key_charset), 0);
         boolean mcOnly = charset == 1;
         boolean kxOnly = charset == 2;
+        boolean hdOnly = charset == 3;
         int cantoneseSystem = Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(R.string.pref_key_cantonese_romanization), "0")));
 
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
-        if (mode == COL_KX) {
-            if (!TextUtils.isEmpty(input) && !input.startsWith(":") && !input.startsWith("：")){
-                 input = ":" + input;
+        if (mode == COL_KX || mode == COL_HD) {
+            if (!TextUtils.isEmpty(input) && !input.startsWith(":") && !input.startsWith("：") && !Orthography.HZ.isPY(input)){
+                if (Orthography.HZ.isSingleHZ(input)) mode = COL_HZ;
+                else input = ":" + input;
             }
         }
         else if (Orthography.HZ.isBH(input)) mode = COL_BH;
@@ -229,6 +235,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
             selection += " AND ltc_mc IS NOT NULL";
         } else if (kxOnly) {
             selection += " AND kx IS NOT NULL";
+        } else if (hdOnly) {
+            selection += " AND hd IS NOT NULL";
         } else if (charset > 0) {
             selection += String.format(" AND fl MATCH '%s'", r.getStringArray(R.array.pref_values_charset)[charset]);
         }
@@ -266,6 +274,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COL_BH = cursor.getColumnIndex(SEARCH_AS_BH);
         COL_BS = cursor.getColumnIndex(SEARCH_AS_BS);
         COL_KX = cursor.getColumnIndex(SEARCH_AS_KX);
+        COL_HD = cursor.getColumnIndex(SEARCH_AS_HD);
+
         COL_SG = cursor.getColumnIndex(SEARCH_AS_SG);
         COL_MC = cursor.getColumnIndex(SEARCH_AS_MC);
         COL_CMN = cursor.getColumnIndex(SEARCH_AS_CMN);
@@ -316,7 +326,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     }
 
     private static void getNames() {
-        if (NAMES != null) return;
+        if (NAMES != null || db == null) return;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         String[] projection = {"*"};
@@ -348,12 +358,12 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COLORS = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             String c = cursor.getString(i);
-            COLORS.add(c);
+            COLORS.add(Color.parseColor(c));
         }
         cursor.close();
     }
 
-    public static String getColor(int index) {
+    public static int getColor(int index) {
         if (COLORS == null) getColors();
         return COLORS.get(index);
     }

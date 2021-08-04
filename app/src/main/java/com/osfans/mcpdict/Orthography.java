@@ -114,6 +114,11 @@ public class Orthography {
             return isHz(hz.codePointAt(0));
         }
 
+        public static boolean isSingleHZ(String hz) {
+            if (TextUtils.isEmpty(hz)) return false;
+            return hz.codePoints().toArray().length == 1;
+        }
+
         public static boolean isUnicode(String input) {
             if (TextUtils.isEmpty(input)) return false;
             return input.toUpperCase().matches("(U\\+)?[0-9A-F]{4,5}");
@@ -131,7 +136,7 @@ public class Orthography {
 
         public static boolean isPY(String s) {
             if (TextUtils.isEmpty(s)) return false;
-            return s.matches("[a-z]+[0-4?]?");
+            return s.matches("[a-z]+[0-5?]?");
         }
 
         public static boolean isIPA(char c) {
