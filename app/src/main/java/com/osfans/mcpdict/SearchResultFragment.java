@@ -94,12 +94,6 @@ public class SearchResultFragment extends ListFragment {
         }
     }
 
-    @Override
-    public void onListItemClick(ListView list, @NonNull View view, int position, long id) {
-        // Show context menu on short clicks, too
-        list.showContextMenuForChild(view);
-    }
-
     private Intent getDictIntent(int i, String hz) {
         String link = MCPDatabase.getDictLink(i);
         if (TextUtils.isEmpty(link)) return null;

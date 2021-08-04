@@ -279,6 +279,7 @@
         <item>全部漢字</item>
         <item>僅廣韻</item>
         <item>僅康熙字典</item>
+        <item>僅漢語大字典</item>
         <item>僅方言調查字表</item>
         <item>僅常用字字形表</item>
         <item>僅常用國字標準字體表</item>
@@ -288,6 +289,7 @@
         <item>僅GB2312</item>
     </string-array>
     <string-array name="pref_values_charset">
+        <item>""</item>
         <item>""</item>
         <item>""</item>
         <item>""</item>
