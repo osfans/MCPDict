@@ -29,6 +29,7 @@ import java.util.Set;
 
 import static com.osfans.mcpdict.MCPDatabase.COL_BH;
 import static com.osfans.mcpdict.MCPDatabase.COL_BS;
+import static com.osfans.mcpdict.MCPDatabase.COL_HD;
 import static com.osfans.mcpdict.MCPDatabase.COL_HZ;
 import static com.osfans.mcpdict.MCPDatabase.COL_KX;
 import static com.osfans.mcpdict.MCPDatabase.getName;
@@ -86,6 +87,14 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         textView.setTag(COL_BS);
         textView = view.findViewById(R.id.text_kx);
         textView.setTag(COL_KX);
+        textView.setText(getName(COL_KX));
+        int color = MCPDatabase.getColor(COL_KX);
+        textView.setTextColor(color);
+        textView = view.findViewById(R.id.text_hd);
+        textView.setTag(COL_HD);
+        textView.setText(getName(COL_HD));
+        color = MCPDatabase.getColor(COL_HD);
+        textView.setTextColor(color);
         TableLayout table = view.findViewById(R.id.text_readings);
         int width = 0;
         for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
@@ -94,7 +103,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             String name = MCPDatabase.getName(i);
             if (width == 0) width = getMaxWidth(textViewName);
             textViewName.setText(name);
-            int color = Color.parseColor(MCPDatabase.getColor(i));
+            color = MCPDatabase.getColor(i);
             textViewName.setBackgroundTintList(ColorStateList.valueOf(color));
             textViewName.setTextColor(color);
             textViewName.setTextScaleX(width/(float)getMeasuredWidth(textViewName));
@@ -153,6 +162,11 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return cs;
     }
 
+    private CharSequence formatPassage(String hz, String js) {
+        String s = String.format("<h1>%s</h1><p>%s</p>", hz, js.replace("\n", "<br/>"));
+        return HtmlCompat.fromHtml(s, HtmlCompat.FROM_HTML_MODE_COMPACT);
+    }
+
     @Override
     public void bindView(final View view, final Context context, Cursor cursor) {
         String hz, string;
@@ -194,16 +208,29 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         tv = view.findViewWithTag(COL_KX);
         String kx =  cursor.getString(COL_KX);
         if (!TextUtils.isEmpty(kx)) {
-            tv.setText(getName(COL_KX));
             tv.setOnClickListener(view1 -> {
                 TextView showText = new TextView(getContext());
-                showText.setText(kx);
-                showText.setPadding(12, 12, 12, 12);
+                showText.setPadding(24, 24, 24, 24);
                 showText.setTextIsSelectable(true);
+                showText.setText(formatPassage(hz, kx));
                 new AlertDialog.Builder(getContext())
-                        .setTitle(hz)
                         .setView(showText)
-                        .setPositiveButton(R.string.back, null)
+                        .show();
+            });
+            tv.setVisibility(View.VISIBLE);
+        } else {
+            tv.setVisibility(View.GONE);
+        }
+        tv = view.findViewWithTag(COL_HD);
+        String hd =  cursor.getString(COL_HD);
+        if (!TextUtils.isEmpty(hd)) {
+            tv.setOnClickListener(view1 -> {
+                TextView showText = new TextView(getContext());
+                showText.setPadding(24, 24, 24, 24);
+                showText.setTextIsSelectable(true);
+                showText.setText(formatPassage(hz, hd));
+                new AlertDialog.Builder(getContext())
+                        .setView(showText)
                         .show();
             });
             tv.setVisibility(View.VISIBLE);
