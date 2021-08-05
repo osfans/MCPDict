@@ -36,14 +36,13 @@ def get_dict():
 		line = line.strip()
 		if line.startswith("#"): continue
 		fs = line.split(" ")
-		pq[fs[1]] = yt[int(fs[0])]
+		pq[fs[0]] = yt[int(fs[0])]
 
 	d=defaultdict(list)
-	for line in open("zyenpheng.dict.yaml"):
+	for line in open("Dzih.txt"):
 		line = line.strip()
-		fs = line.split('\t')
-		if len(fs) < 2: continue
-		hz, py = fs[:2]
-		if len(hz) == 1 and py in pq:
-			d[hz].append(pq[py])
+		fs = line.split(" ")
+		hz = fs[0]
+		if len(hz) == 1:
+			d[hz].append(yt[int(fs[1])])
 	return d

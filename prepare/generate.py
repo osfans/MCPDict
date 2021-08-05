@@ -951,10 +951,12 @@ d.clear()
 hd=defaultdict(dict)
 numbers="❶❷❸❹❺❻❼❽❾❿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿"
 for line in open("handa.txt"):
-  fs = line.strip().split('\t')
+  line = line.strip('\n')
+  fs = line.split('\t')
   if len(fs[0]) == 1:
     hz,py,js = fs[:3]
-    if py == "None": py = ""
+    if py == "None":
+        py = ""
     if py in hd[hz]:
       hd[hz][py].append(js)
     else:

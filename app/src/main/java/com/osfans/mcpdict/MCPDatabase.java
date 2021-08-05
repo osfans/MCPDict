@@ -116,8 +116,9 @@ public class MCPDatabase extends SQLiteAssetHelper {
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
         if (mode == COL_KX || mode == COL_HD) {
-            if (!TextUtils.isEmpty(input) && !input.startsWith(":") && !input.startsWith("：")){
-                 input = ":" + input;
+            if (!TextUtils.isEmpty(input) && !input.startsWith(":") && !input.startsWith("：") && !Orthography.HZ.isPY(input)){
+                if (Orthography.HZ.isSingleHZ(input)) mode = COL_HZ;
+                else input = ":" + input;
             }
         }
         else if (Orthography.HZ.isBH(input)) mode = COL_BH;
