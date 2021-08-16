@@ -249,9 +249,10 @@
         <item>淮語洪巢片</item>
         <item>淮語通泰片</item>
         <item>吳語</item>
+        <item>吳語上麗片</item>
         <item>吳語甌江片</item>
         <item>客語</item>
-        <item>閩南語</item>
+        <item>閩語</item>
         <item>閩南語潮汕片</item>
         <item>六南方言</item>
         <item>域外方言</item>
@@ -266,6 +267,7 @@
         <item>cmn_hy_hc_.+</item>
         <item>cmn_hy_tt_.+</item>
         <item>wuu.*</item>
+        <item>wuu_sl_.+</item>
         <item>wuu_oj_.+</item>
         <item>hak.*</item>
         <item>nan.*</item>
