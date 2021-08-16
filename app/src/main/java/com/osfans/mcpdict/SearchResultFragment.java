@@ -99,8 +99,7 @@ public class SearchResultFragment extends ListFragment {
         if (TextUtils.isEmpty(link)) return null;
         String utf8 = null;
         String big5 = null;
-        int unicode = hz.codePointAt(0);
-        String hex = Orthography.HZ.toHex(unicode);
+        String hex = Orthography.HZ.toUnicodeHex(hz);
         try {
             utf8 = URLEncoder.encode(hz, "utf-8");
         } catch (UnsupportedEncodingException ignored) {
