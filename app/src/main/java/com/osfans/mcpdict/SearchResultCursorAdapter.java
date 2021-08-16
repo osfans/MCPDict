@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.graphics.Typeface;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -81,14 +82,13 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         final TextView textViewHZ = view.findViewById(R.id.text_hz);
         textViewHZ.setTag(COL_HZ);
         textViewHZ.setOnClickListener(getListener(COL_HZ));
-        TextView textView = view.findViewById(R.id.text_bh);
-        textView.setTag(COL_BH);
-        textView = view.findViewById(R.id.text_bs);
-        textView.setTag(COL_BS);
+        TextView textView = view.findViewById(R.id.text_unicode);
+        int color = MCPDatabase.getColor(COL_BH);
+        textView.setTextColor(color);
         textView = view.findViewById(R.id.text_kx);
         textView.setTag(COL_KX);
         textView.setText(getName(COL_KX));
-        int color = MCPDatabase.getColor(COL_KX);
+        color = MCPDatabase.getColor(COL_KX);
         textView.setTextColor(color);
         textView = view.findViewById(R.id.text_hd);
         textView.setTag(COL_HD);
@@ -127,6 +127,9 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         CharSequence cs;
         if (TextUtils.isEmpty(string)) return "";
         switch (MCPDatabase.getColumnName(i)) {
+            case MCPDatabase.SEARCH_AS_SG:
+                cs = getRichText(string.replace(",", "\n"));
+                break;
             case MCPDatabase.SEARCH_AS_BA:
                 cs = baDisplayer.display(string);
                 break;
@@ -163,7 +166,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     }
 
     private CharSequence formatPassage(String hz, String js) {
-        String s = String.format("<h1>%s</h1><p>%s</p>", hz, js.replace("\n", "<br/>"));
+        String[] fs = js.split("\n", 2);
+        String s = String.format("<p><big><big><big>%s</big></big></big> %s</p><br><p>%s</p>", hz, fs[0], fs[1].replace("\n", "<br/>"));
         return HtmlCompat.fromHtml(s, HtmlCompat.FROM_HTML_MODE_COMPACT);
     }
 
@@ -195,24 +199,38 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         textView.setText(hz);
         cols.add(COL_HZ);
         textView = view.findViewById(R.id.text_unicode);
-        textView.setText(Orthography.HZ.toUnicode(hz));
-        String str = cursor.getString(COL_BH);
-        TextView tv = view.findViewWithTag(COL_BH);
-        tv.setText(context.getResources().getString(R.string.total_strokes_format, str));
-        str = cursor.getString(COL_BS);
-        tv = view.findViewWithTag(COL_BS);
-        String bs = str.substring(0, 1);
-        String bh = str.substring(1).replace('f', '-');
-        str = context.getResources().getString(R.string.radical_count_format, bs, bh);
-        tv.setText(str);
-        tv = view.findViewWithTag(COL_KX);
+        String unicode = Orthography.HZ.toUnicode(hz);
+        textView.setText(unicode);
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("<h1>%s</h1><p>【Unicode】%s %s</p>", hz, unicode, Orthography.HZ.getUnicodeExt(hz)));
+        for (int i = MCPDatabase.COL_LF; i < MCPDatabase.COL_VA; i++) {
+            if (i == COL_KX) i = COL_BH;
+            String str = cursor.getString(i);
+            if (i == COL_BS) str = str.replace("f", "-");
+            if (TextUtils.isEmpty(str)) continue;
+            str = str.toUpperCase();
+            sb.append(String.format("<p>【%s】%s</p>", MCPDatabase.getSearchAsName(i), str));
+        }
+        String info = sb.toString().replace(",", ", ");
+        textView.setOnClickListener(view1 -> {
+            TextView showText = new TextView(getContext());
+            showText.setPadding(24, 24, 24, 24);
+            showText.setTextIsSelectable(true);
+            showText.setText(HtmlCompat.fromHtml(info, HtmlCompat.FROM_HTML_MODE_COMPACT));
+            new AlertDialog.Builder(getContext())
+                    .setView(showText)
+                    .show();
+        });
+        TextView tv = view.findViewWithTag(COL_KX);
         String kx =  cursor.getString(COL_KX);
         if (!TextUtils.isEmpty(kx)) {
             tv.setOnClickListener(view1 -> {
                 TextView showText = new TextView(getContext());
                 showText.setPadding(24, 24, 24, 24);
                 showText.setTextIsSelectable(true);
-                showText.setText(formatPassage(hz, kx));
+                showText.setMovementMethod(LinkMovementMethod.getInstance());
+                String text = kx.replaceFirst("^(.*?)(\\d+).(\\d+)", "$1<a href=https://www.kangxizidian.com/kangxi/$2.gif>第$2頁</a>第$3字");
+                showText.setText(formatPassage(hz, text));
                 new AlertDialog.Builder(getContext())
                         .setView(showText)
                         .show();
@@ -228,7 +246,9 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 TextView showText = new TextView(getContext());
                 showText.setPadding(24, 24, 24, 24);
                 showText.setTextIsSelectable(true);
-                showText.setText(formatPassage(hz, hd));
+                showText.setMovementMethod(LinkMovementMethod.getInstance());
+                String text = hd.replaceFirst("(\\d+).(\\d+)", "【汉語大字典】<a href=https://www.homeinmists.com/hd/png/$1.png>第$1頁</a>第$2字");
+                showText.setText(formatPassage(hz, text));
                 new AlertDialog.Builder(getContext())
                         .setView(showText)
                         .show();
@@ -283,11 +303,11 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     private static CharSequence getRichText(String richTextString) {
         String s = richTextString
                 .replace("\n", "<br/>")
-                .replaceAll("~~(.+?)~~", "<s>$1</s>")
+                //.replaceAll("~~(.+?)~~", "<s>$1</s>")
                 .replaceAll("`(.+?)`", "<small><small>$1</small></small>")
-                .replaceAll("___(.+?)___", "<sup>$1</sup>")
-                .replaceAll("__(.+?)__", "<sub>$1</sub>")
-                .replaceAll("_(.+?)_", "<u>$1</u>")
+                //.replaceAll("___(.+?)___", "<sup>$1</sup>")
+                //.replaceAll("__(.+?)__", "<sub>$1</sub>")
+                //.replaceAll("_(.+?)_", "<u>$1</u>")
                 .replaceAll("\\*\\*\\*(.+?)\\*\\*\\*", "<small>$1</small>")
                 .replaceAll("\\*\\*(.+?)\\*\\*", "<big>$1</big>")
                 .replaceAll("\\*(.+?)\\*", "<b>$1</b>")
