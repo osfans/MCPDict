@@ -202,7 +202,7 @@ public class Orthography {
         public static String display(String s, int system) {
             // Restore apostrophes
             s =  s.replace('0', '\'');
-            if (system < 0) return s;
+            if (system < 0) return HZ.isPY(s) ? String.format("%s(%s)", s,detail(s)) : s;
             if (system == 0) system = 5;
             // Get tone first
             int tone = 1;
