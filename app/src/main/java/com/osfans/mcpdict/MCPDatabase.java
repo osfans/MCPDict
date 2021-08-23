@@ -217,9 +217,14 @@ public class MCPDatabase extends SQLiteAssetHelper {
                 sel = " LIKE ?";
             }
             for (String column : columns) {
-                String col = allowVariants ? "va" : column;
+                String col = column;
                 queries.add(qb.buildQuery(projection, col + sel, null, null, null, null));
                 args.add(key);
+                if (allowVariants) {
+                    col = "va";
+                    queries.add(qb.buildQuery(projection, col + sel, null, null, null, null));
+                    args.add(key);
+                }
             }
         }
         String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);

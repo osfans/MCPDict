@@ -64,4 +64,4 @@ def get():
         if han not in org:
             org[han] = "".join(dic[han]).strip()
 
-    return {han:han+org[han] for han in org}
+    return {han:org[han] for han in org if org[han]}

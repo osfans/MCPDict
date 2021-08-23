@@ -1159,8 +1159,8 @@ for line in open("/usr/share/unicode/Unihan_IRGSources.txt"):
     han, typ, val = fields
     if typ == "kTotalStrokes":
       han = hex2chr(han)
-      if han in unicodes:
-        d[han].append(val)
+      #if han not in unicodes: continue
+      d[han].append(val)
 update("bh", d)
 logging.info("處理總畫數 %.2f" % timeit())
 
@@ -1180,7 +1180,7 @@ for line in open("/usr/share/unicode/Unihan_IRGSources.txt"):
     han, typ, vals = fields
     if typ != "kRSUnicode": continue
     han = hex2chr(han)
-    if han not in unicodes: continue
+    #if han not in unicodes: continue
     for val in vals.split(" "):
       fs = val.split(".")
       order, left = fs
@@ -1193,7 +1193,7 @@ logging.info("部首檢字法 %.2f" % timeit())
 variants = variant.get()
 for i in list(unicodes.keys()):
   d = unicodes[i]
-  if d.get("cmn"):
+  if i in variants:
     d["va"] = " ".join(variants.get(i, i))
 logging.info("處理異體字 %.2f" % timeit())
 
