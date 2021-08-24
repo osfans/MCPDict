@@ -161,7 +161,16 @@ public class Orthography {
             return String.valueOf(Character.toChars(unicode));
         }
 
+        public static String toUnicodeHex(String hz) {
+            int unicode = hz.codePointAt(0);
+            return String.format("%04X", unicode);
+        }
+
         public static String toUnicode(String hz) {
+            return String.format("U+%s", toUnicodeHex(hz));
+        }
+
+        public static String getUnicodeExt(String hz) {
             int unicode = hz.codePointAt(0);
             String ext = "";
             if (unicode >= 0x3400 && unicode <= 0x4DBF) ext = "A";
@@ -172,11 +181,7 @@ public class Orthography {
             else if (unicode >= 0x2CEB0 && unicode <= 0x2EBEF) ext = "F";
             else if (unicode >= 0x30000 && unicode <= 0x3134F) ext = "G";
             if (!TextUtils.isEmpty(ext)) ext = "擴" + ext;
-            return String.format("U+%04X %s", unicode, ext);
-        }
-
-        public static String toHex(int unicode) {
-            return String.format("%04X", unicode);
+            return ext;
         }
     }
 
@@ -439,7 +444,7 @@ public class Orthography {
         public static final int BOPOMOFO = 2;
 
         private static final Map<String, String> mapPinyin = new HashMap<>();
-        private static final char[] vowels = {'a', 'o', 'e', 'i', 'u', 'v', 'n', 'm'};
+        private static final char[] vowels = {'a', 'o', 'e', 'ê', 'i', 'u', 'v', 'n', 'm'};
 
         private static final Map<String, String> mapFromBopomofoPartial = new HashMap<>();
         private static final Map<String, String> mapFromBopomofoWhole = new HashMap<>();
@@ -516,6 +521,7 @@ public class Orthography {
                 return getIPA(s, tone);
             case PINYIN:
                 // Find letter to carry the tone
+                s = s.replace("ea", "ê");
                 int pos = -1;
                 if (s.endsWith("iu")) {     // In the combination "iu", "u" gets the tone
                     pos = s.length() - 1;
@@ -578,7 +584,7 @@ public class Orthography {
                     .replaceFirst("([zcs])i", "$1ɿ").replaceFirst("([zcs]h|r)i", "$1ʅ")
                     .replace("w","u").replace("uu","u")
                     .replace("un", "uen").replace("ui", "uei").replace("iu", "iou")
-                    .replaceFirst("([iy])e$","$1ɛ").replaceFirst("e$", "ɤ").replaceFirst("e(ng)$", "ɤ$1").replace("er", "ɚ").replace("en", "ən")
+                    .replaceFirst("([iy])e$","$1ɛ").replace("ea", "ɛ").replaceFirst("e$", "ɤ").replaceFirst("e(ng)$", "ɤ$1").replace("er", "ɚ").replace("en", "ən")
                     .replace("ao", "au").replaceFirst("([iy])an$", "$1ɛn")
                     .replace("ong", "uŋ").replace("ng", "ŋ");
             s = s.replace("p", "pʰ").replace("t", "tʰ").replace("k", "kʰ")

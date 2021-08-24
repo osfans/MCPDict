@@ -33,6 +33,9 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_BS = "bs";
     public static final String SEARCH_AS_KX = "kx";
     public static final String SEARCH_AS_HD = "hd";
+    public static final String SEARCH_AS_LF = "lf";
+    public static final String SEARCH_AS_WBH = "wbh";
+    public static final String SEARCH_AS_VA = "va";
 
     public static final String SEARCH_AS_SG = "och_sg";
     public static final String SEARCH_AS_BA = "och_ba";
@@ -54,6 +57,9 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static int COL_BS;
     public static int COL_KX;
     public static int COL_HD;
+    public static int COL_LF;
+    public static int COL_WBH;
+    public static int COL_VA;
 
     public static int COL_SG;
     public static int COL_MC;
@@ -73,6 +79,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
 
     private static String[] COLUMNS;
     private static final String[] JA_COLUMNS = new String[] {SEARCH_AS_JA_GO, SEARCH_AS_JA_KAN, SEARCH_AS_JA_TOU, SEARCH_AS_JA_KWAN, SEARCH_AS_JA_OTHER};
+    private static final String[] WB_COLUMNS = new String[] {"wbh", "wb86", "wb98", "wb06"};
     private static ArrayList<String> SEARCH_AS_NAMES;
     private static ArrayList<String> NAMES;
     private static ArrayList<Integer> COLORS;
@@ -125,6 +132,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
         else if (Orthography.HZ.isBS(input)) {
             mode = COL_BS;
             input = input.replace("-", "f");
+        } else if (mode == COL_LF || mode == COL_WBH) {
+            // not search hz
         } else if (Orthography.HZ.isHz(input)) mode = COL_HZ;
         else if (Orthography.HZ.isUnicode(input)) {
             input = Orthography.HZ.toHz(input);
@@ -201,6 +210,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
 
         // Columns to search
         String[] columns = isAnyJA(mode) ? JA_COLUMNS : new String[] {getColumnName(mode)};
+        if (mode == COL_WBH) columns = WB_COLUMNS;
 
         // Build inner query statement (a union query returning the id's of matching Chinese characters)
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
@@ -280,6 +290,9 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COL_BS = cursor.getColumnIndex(SEARCH_AS_BS);
         COL_KX = cursor.getColumnIndex(SEARCH_AS_KX);
         COL_HD = cursor.getColumnIndex(SEARCH_AS_HD);
+        COL_LF = cursor.getColumnIndex(SEARCH_AS_LF);
+        COL_WBH = cursor.getColumnIndex(SEARCH_AS_WBH);
+        COL_VA = cursor.getColumnIndex(SEARCH_AS_VA);
 
         COL_SG = cursor.getColumnIndex(SEARCH_AS_SG);
         COL_MC = cursor.getColumnIndex(SEARCH_AS_MC);
