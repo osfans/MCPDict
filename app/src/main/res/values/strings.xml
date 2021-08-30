@@ -131,7 +131,7 @@
     </string-array>
 
     <string name="pref_key_cantonese_romanization">CANTONESE_ROMANIZATION</string>
-    <string name="pref_title_cantonese_romanization">廣州話拼音（用於輸入和顯示）</string>
+    <string name="pref_title_cantonese_romanization">香港粵語拼音（用於輸入和顯示）</string>
     <string-array name="pref_entries_cantonese_romanization">
         <item>@string/ipa</item>
         <item>香港語言學學會式（粵拼）</item>
