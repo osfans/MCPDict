@@ -229,7 +229,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 showText.setPadding(24, 24, 24, 24);
                 showText.setTextIsSelectable(true);
                 showText.setMovementMethod(LinkMovementMethod.getInstance());
-                String text = kx.replaceFirst("^(.*?)(\\d+).(\\d+)", "$1<a href=https://www.kangxizidian.com/kangxi/$2.gif>第$2頁</a>第$3字");
+                String text = kx.replaceFirst("^(.*?)(\\d+).(\\d+)", "$1<a href=https://kangxizidian.com/kxhans/"+hz+">第$2頁第$3字</a>");
                 showText.setText(formatPassage(hz, text));
                 new AlertDialog.Builder(getContext())
                         .setView(showText)

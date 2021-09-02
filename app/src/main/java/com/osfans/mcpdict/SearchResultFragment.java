@@ -97,19 +97,14 @@ public class SearchResultFragment extends ListFragment {
     private Intent getDictIntent(int i, String hz) {
         String link = MCPDatabase.getDictLink(i);
         if (TextUtils.isEmpty(link)) return null;
-        String utf8 = null;
         String big5 = null;
         String hex = Orthography.HZ.toUnicodeHex(hz);
-        try {
-            utf8 = URLEncoder.encode(hz, "utf-8");
-        } catch (UnsupportedEncodingException ignored) {
-        }
         try {
             big5 = URLEncoder.encode(hz, "big5");
         } catch (UnsupportedEncodingException ignored) {
         }
         if (Objects.requireNonNull(big5).equals("%3F")) big5 = null;    // Unsupported character
-        link = String.format(link, utf8, hex, big5);
+        link = String.format(link, hz, hex, big5);
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return intent;
