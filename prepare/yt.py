@@ -25,7 +25,7 @@ def get_dict():
 								yt[int(i)]=y
 		f = open("yt.tsv", "w")
 		for i in sorted(yt.keys()):
-			y = yt[i]
+			y = yt[i].replace('g', 'ɡ')
 			t = y[-1]
 			if not t.isdigit(): y = y + "4"
 			print("%s\t%s" %(i,y),file=f)
