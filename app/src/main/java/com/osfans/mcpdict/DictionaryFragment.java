@@ -193,7 +193,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         WebView webView = selfView.findViewById(R.id.resultRich);
         final String query = searchView.getQuery();
         int i = spinnerSearchAs.getSelectedItemPosition();
-        boolean isZY = MCPDatabase.isReading(i) && Orthography.HZ.isHz(query);
+        boolean isZY = MCPDatabase.isReading(i) && query.length() >= 3 && Orthography.HZ.isHz(query);
         Map<String, String> pys = new HashMap<>();
         if (data != null && data.getCount() >= 3) {
             StringBuilder sb = new StringBuilder();
@@ -246,7 +246,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
 
     public void refresh(String query, int mode) {
         searchView.setQuery(query);
-        if (mode > MCPDatabase.COL_JA_ANY) mode = MCPDatabase.COL_JA_ANY;
+        if (mode > MCPDatabase.COL_JA_ANY) mode = MCPDatabase.COL_HZ;
         spinnerSearchAs.setSelection(mode);
         refresh();
     }
@@ -254,7 +254,9 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
     public void refreshAdapter() {
         if (adapter != null) {
             adapter.clear();
-            for (int i = 0; i < MCPDatabase.COL_JA_ANY; i++) adapter.add(MCPDatabase.getSearchAsNames().get(i));
+            if (MCPDatabase.getSearchAsNames() == null) return;
+            for (int i = 0; i < MCPDatabase.COL_JA_ANY; i++)
+                adapter.add(MCPDatabase.getSearchAsNames().get(i));
             adapter.add(getString(R.string.search_as_ja_any));
         }
     }
