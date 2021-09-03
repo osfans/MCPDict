@@ -257,10 +257,10 @@
         <item>域外方言</item>
     </string-array>
     <string-array name="pref_values_show_languages">
-        <item>""</item>
+        <item>.+</item>
         <item>""</item>
         <item>och_.+|ltc_.+</item>
-        <item>cmn|cmn_hy_tt_tr|wuu_sz|gan_nc|hak|yue_gz|nan</item>
+        <item>cmn_|cmn_xn_yzll|cmn_hy_hc_yz|wuu_sz|gan_nc|hak_|yue_hk|nan_tw</item>
         <item>cmn.*</item>
         <item>cmn_hy_.+</item>
         <item>cmn_hy_hc_.+</item>
@@ -273,8 +273,8 @@
         <item>nan.*</item>
         <item>nan_lz_.+</item>
         <item>nan_cs_.+</item>
-        <item>wuu.*|gan.*|hak.*|yue_gz|nan.*</item>
-        <item>vi|ko_.+|ja_.+</item>
+        <item>wuu.*|gan.*|hak.*|yue.*|nan.*</item>
+        <item>vi_|ko_.+|ja_.+</item>
     </string-array>
 
     <string name="pref_key_charset">SHOW_CHARSET</string>
@@ -282,6 +282,7 @@
     <string-array name="pref_entries_charset">
         <item>全部漢字</item>
         <item>僅廣韻</item>
+        <item>僅說文解字</item>
         <item>僅康熙字典</item>
         <item>僅漢語大字典</item>
         <item>僅方言調查字表</item>
@@ -293,10 +294,11 @@
         <item>僅GB2312</item>
     </string-array>
     <string-array name="pref_values_charset">
-        <item>""</item>
-        <item>""</item>
-        <item>""</item>
-        <item>""</item>
+        <item>hz</item>
+        <item>ltc_mc</item>
+        <item>sw</item>
+        <item>kx</item>
+        <item>hd</item>
         <item>FD</item>
         <item>kHKGlyph</item>
         <item>T1</item>

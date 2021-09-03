@@ -803,7 +803,7 @@ public class Orthography {
             }
             s = base;
             s = s.replace("oo", "ɔ").replaceFirst("o(k|ng)", "ɔ$1").replace("o", "ə");
-            s = s.replaceFirst("^(p|t|k|ts)h", "$1ʰ").replace("ng", "ŋ").replace("j", "dz").replaceFirst("h$","ʔ").replace("nn","̃");
+            s = s.replaceFirst("^(p|t|k|ts)h", "$1ʰ").replace("ng", "ŋ").replace("j", "dz").replaceFirst("^g", "ɡ").replaceFirst("h$","ʔ").replace("nn","̃");
             s = formatTone(s, tone - '0', MCPDatabase.COL_NAN);
             return s;
         }

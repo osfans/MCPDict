@@ -31,6 +31,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_HZ = "hz";
     public static final String SEARCH_AS_BH = "bh";
     public static final String SEARCH_AS_BS = "bs";
+    public static final String SEARCH_AS_SW = "sw";
     public static final String SEARCH_AS_KX = "kx";
     public static final String SEARCH_AS_HD = "hd";
     public static final String SEARCH_AS_LF = "lf";
@@ -40,11 +41,11 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_SG = "och_sg";
     public static final String SEARCH_AS_BA = "och_ba";
     public static final String SEARCH_AS_MC = "ltc_mc";
-    public static final String SEARCH_AS_CMN = "cmn";
-    public static final String SEARCH_AS_GZ = "yue_gz";
-    public static final String SEARCH_AS_NAN = "nan";
+    public static final String SEARCH_AS_CMN = "cmn_";
+    public static final String SEARCH_AS_GZ = "yue_hk";
+    public static final String SEARCH_AS_NAN = "nan_tw";
     public static final String SEARCH_AS_KOR = "ko_kor";
-    public static final String SEARCH_AS_VI = "vi";
+    public static final String SEARCH_AS_VI = "vi_";
     public static final String SEARCH_AS_JA_GO = "ja_go";
     public static final String SEARCH_AS_JA_KAN = "ja_kan";
     public static final String SEARCH_AS_JA_TOU = "ja_tou";
@@ -55,6 +56,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static int COL_HZ;
     public static int COL_BH;
     public static int COL_BS;
+    public static int COL_SW;
     public static int COL_KX;
     public static int COL_HD;
     public static int COL_LF;
@@ -116,8 +118,9 @@ public class MCPDatabase extends SQLiteAssetHelper {
         Resources r = context.getResources();
         int charset = sp.getInt(r.getString(R.string.pref_key_charset), 0);
         boolean mcOnly = charset == 1;
-        boolean kxOnly = charset == 2;
-        boolean hdOnly = charset == 3;
+        boolean kxOnly = charset == 3;
+        boolean hdOnly = charset == 4;
+        boolean swOnly = charset == 2;
         int cantoneseSystem = Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(R.string.pref_key_cantonese_romanization), "0")));
 
         // Split the input string into keywords and canonicalize them
@@ -248,6 +251,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
         String selection = "u._id = v.rowid AND v.rowid > 7";
         if (mcOnly) {
             selection += " AND ltc_mc IS NOT NULL";
+        } else if (swOnly) {
+            selection += " AND sw IS NOT NULL";
         } else if (kxOnly) {
             selection += " AND kx IS NOT NULL";
         } else if (hdOnly) {
@@ -288,6 +293,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COL_HZ = cursor.getColumnIndex(SEARCH_AS_HZ);
         COL_BH = cursor.getColumnIndex(SEARCH_AS_BH);
         COL_BS = cursor.getColumnIndex(SEARCH_AS_BS);
+        COL_SW = cursor.getColumnIndex(SEARCH_AS_SW);
         COL_KX = cursor.getColumnIndex(SEARCH_AS_KX);
         COL_HD = cursor.getColumnIndex(SEARCH_AS_HD);
         COL_LF = cursor.getColumnIndex(SEARCH_AS_LF);
@@ -449,7 +455,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
 
     public static Spanned getIntro(int index) {
         if (INTROS == null) getIntros();
-        String intro = INTROS.get(index);
+        String intro = index < 0 ? "" : INTROS.get(index);
         if (TextUtils.isEmpty(intro)) intro = INTROS.get(0);
         return HtmlCompat.fromHtml(intro, HtmlCompat.FROM_HTML_MODE_COMPACT);
     }
@@ -478,7 +484,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
 
     public static String getColumnName(int index) {
         if (COLUMNS == null) getSearchAsColumns();
-        return COLUMNS[index];
+        return index < 0 ? "" : COLUMNS[index];
     }
 
     public static boolean isReading(int index) {

@@ -33,6 +33,7 @@ import static com.osfans.mcpdict.MCPDatabase.COL_BS;
 import static com.osfans.mcpdict.MCPDatabase.COL_HD;
 import static com.osfans.mcpdict.MCPDatabase.COL_HZ;
 import static com.osfans.mcpdict.MCPDatabase.COL_KX;
+import static com.osfans.mcpdict.MCPDatabase.COL_SW;
 import static com.osfans.mcpdict.MCPDatabase.getName;
 
 public class SearchResultCursorAdapter extends CursorAdapter {
@@ -85,6 +86,11 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         TextView textView = view.findViewById(R.id.text_unicode);
         int color = MCPDatabase.getColor(COL_BH);
         textView.setTextColor(color);
+        textView = view.findViewById(R.id.text_sw);
+        textView.setTag(COL_SW);
+        textView.setText(getName(COL_SW));
+        color = MCPDatabase.getColor(COL_SW);
+        textView.setTextColor(color);
         textView = view.findViewById(R.id.text_kx);
         textView.setTag(COL_KX);
         textView.setText(getName(COL_KX));
@@ -109,7 +115,6 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             textViewName.setTextScaleX(width/(float)getMeasuredWidth(textViewName));
             final TextView textViewDetail = row.findViewById(R.id.text_detail);
             textViewDetail.setTag(i);
-            if (i == MCPDatabase.COL_MC) textViewDetail.setTypeface(mTypefaceHan);
             row.setTag("row" + i);
             row.setOnClickListener(getListener((Integer)textViewDetail.getTag()));
             table.addView(row);
@@ -128,7 +133,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         if (TextUtils.isEmpty(string)) return "";
         switch (MCPDatabase.getColumnName(i)) {
             case MCPDatabase.SEARCH_AS_SG:
-                cs = getRichText(string.replace(",", "\n"));
+                cs = getRichText(string);
                 break;
             case MCPDatabase.SEARCH_AS_BA:
                 cs = baDisplayer.display(string);
@@ -166,9 +171,9 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     }
 
     private CharSequence formatPassage(String hz, String js) {
-        String[] fs = js.split("\n", 2);
+        String[] fs = (js+"\n").split("\n", 2);
         String s = String.format("<p><big><big><big>%s</big></big></big> %s</p><br><p>%s</p>", hz, fs[0], fs[1].replace("\n", "<br/>"));
-        return HtmlCompat.fromHtml(s, HtmlCompat.FROM_HTML_MODE_COMPACT);
+        return getRichText(s);
     }
 
     @Override
@@ -202,9 +207,9 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         String unicode = Orthography.HZ.toUnicode(hz);
         textView.setText(unicode);
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("<h1>%s</h1><p>【Unicode】%s %s</p>", hz, unicode, Orthography.HZ.getUnicodeExt(hz)));
+        sb.append(String.format("<p><big><big><big>%s</big></big></big></p><p>【統一碼】%s %s</p>", hz, unicode, Orthography.HZ.getUnicodeExt(hz)));
         for (int i = MCPDatabase.COL_LF; i < MCPDatabase.COL_VA; i++) {
-            if (i == COL_KX) i = COL_BH;
+            if (i == COL_SW) i = COL_BH;
             String str = cursor.getString(i);
             if (i == COL_BS) str = str.replace("f", "-");
             if (TextUtils.isEmpty(str)) continue;
@@ -221,7 +226,24 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                     .setView(showText)
                     .show();
         });
-        TextView tv = view.findViewWithTag(COL_KX);
+        TextView tv = view.findViewWithTag(COL_SW);
+        String sw =  cursor.getString(COL_SW);
+        if (!TextUtils.isEmpty(sw)) {
+            tv.setOnClickListener(view1 -> {
+                TextView showText = new TextView(getContext());
+                showText.setPadding(24, 24, 24, 24);
+                showText.setTextIsSelectable(true);
+                showText.setMovementMethod(LinkMovementMethod.getInstance());
+                showText.setText(formatPassage(hz, sw));
+                new AlertDialog.Builder(getContext())
+                        .setView(showText)
+                        .show();
+            });
+            tv.setVisibility(View.VISIBLE);
+        } else {
+            tv.setVisibility(View.GONE);
+        }
+        tv = view.findViewWithTag(COL_KX);
         String kx =  cursor.getString(COL_KX);
         if (!TextUtils.isEmpty(kx)) {
             tv.setOnClickListener(view1 -> {
@@ -308,8 +330,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                 //.replaceAll("___(.+?)___", "<sup>$1</sup>")
                 //.replaceAll("__(.+?)__", "<sub>$1</sub>")
                 //.replaceAll("_(.+?)_", "<u>$1</u>")
-                .replaceAll("\\*\\*\\*(.+?)\\*\\*\\*", "<small>$1</small>")
-                .replaceAll("\\*\\*(.+?)\\*\\*", "<big>$1</big>")
+                //.replaceAll("\\*\\*\\*(.+?)\\*\\*\\*", "<small>$1</small>")
+                //.replaceAll("\\*\\*(.+?)\\*\\*", "<big>$1</big>")
                 .replaceAll("\\*(.+?)\\*", "<b>$1</b>")
                 .replaceAll("\\|(.+?)\\|", String.format("<span style='color: %s;'>$1</span>", getHexColor()));
         return HtmlCompat.fromHtml(s, HtmlCompat.FROM_HTML_MODE_COMPACT);
@@ -321,7 +343,6 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     }
 
     private static final Displayer middleChineseDisplayer = new Displayer() {
-        public String lineBreak(String s) {return s.replace(",", "\n");}
         public String displayOne(String s) {return Orthography.MiddleChinese.display(s, getStyle(R.string.pref_key_mc_display));}
     };
 
