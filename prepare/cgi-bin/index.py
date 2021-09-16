@@ -1,14 +1,11 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-import sys
+import sys, re
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-import re, os
 import xml.etree.ElementTree as ET
 xmlname = "strings.xml"
-if not os.path.exists(xmlname):
-	xmlname = "../../app/src/main/res/values/strings.xml"
 tree = ET.parse(xmlname)
 root = tree.getroot()
 def getStrings(name):
@@ -21,8 +18,6 @@ def getString(name):
 
 import sqlite3
 dbname = 'mcpdict.db'
-if not os.path.exists(dbname):
-	dbname = '../../app/src/main/assets/databases/mcpdict.db'
 conn = sqlite3.connect(dbname)
 conn.row_factory = sqlite3.Row
 c = conn.cursor()

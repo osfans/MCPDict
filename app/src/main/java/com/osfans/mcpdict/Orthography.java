@@ -141,6 +141,7 @@ public class Orthography {
 
         public static boolean isIPA(char c) {
             int type = Character.getType(c);
+            if (isHz(c)) return false;
             return Character.isLetterOrDigit(c)
                     || type == Character.NON_SPACING_MARK
                     || type == Character.OTHER_NUMBER;

@@ -1,14 +1,11 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-import sys
+import sys, re
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-import re, os
 import xml.etree.ElementTree as ET
 xmlname = "strings.xml"
-if not os.path.exists(xmlname):
-	xmlname = "../../app/src/main/res/values/strings.xml"
 tree = ET.parse(xmlname)
 root = tree.getroot()
 def getStrings(name):
@@ -21,8 +18,6 @@ def getString(name):
 
 import sqlite3
 dbname = 'mcpdict.db'
-if not os.path.exists(dbname):
-	dbname = '../../app/src/main/assets/databases/mcpdict.db'
 conn = sqlite3.connect(dbname)
 conn.row_factory = sqlite3.Row
 c = conn.cursor()
@@ -62,6 +57,7 @@ print("""<html lang=ko>
 			padding: 0 3px;
 			border-radius: 5px;
 			text-align: center;
+			vertical-align: top;
 			transform-origin: right;
 			font-size: 80%%;
 		}
@@ -91,6 +87,10 @@ print("""<html lang=ko>
 		td {
 			vertical-align: top;
 			align: left;
+		}
+		ul {
+			margin: 1px;
+			padding: 0px 6px;
 		}
 	</style>
 </head><body>
@@ -183,6 +183,40 @@ def getKeys(key):
 def getSelect(key, value):
 	return 'SELECT *,offsets(mcpdict) AS vaIndex FROM mcpdict where (`%s` %s "%s") AND rowid > 7 %s' % (key, word, value, getCharsetSQL())
 
+regions={
+	'och_':'歷史音',
+	'ltc_':'歷史音',
+	'cmn_':'官話',
+	'cmn_hy_':'江淮官話',
+	'cmn_hy_hc_':'江淮官話-洪巢片',
+	'cmn_hy_tt_':'江淮官話-通泰片',
+	'wuu_':'吳語',
+	'wuu_oj_':'吳語-甌江片',
+	'wuu_sl_':'吳語-上麗片',
+	'gan_':'贛語',
+	'hak_':'客語',
+	'hsn_':'湘語',
+	'yue_':'粵語',
+	'csp_':'南部平話',
+	'nan_':'閩南語',
+	'nan_lz_':'閩南語-雷州片',
+	'nan_cs_':'閩南語-潮汕片',
+	'cdo_':'閩東語',
+	'vi_':'域外方音',
+	'ko_':'域外方音',
+	'ja_':'域外方音',
+}
+
+rks = sorted(regions.keys(),key=lambda k:-k.count('_'))
+
+def getRegion(k):
+	for i in rks:
+		if k.startswith(i):
+			return regions[i]
+
+def getRegionDiff(k, last):
+	return k.count("-") - last.count("-")
+
 for value in hzs:
 	sqls = list(map(lambda x: getSelect(x, value), getKeys(key)))
 	sqls = (' UNION '.join(sqls)) + 'ORDER BY vaIndex LIMIT 10'
@@ -196,13 +230,27 @@ for value in hzs:
 			if r[k]:
 				s += "<div class=y>%s</div>" % (NAMES[k])
 		s += "</div>\n"
-		s += "<table>"
+		last = ""
 		for k in KEYS_READING:
 			if not re.match(language, k): continue
 			if r[k]:
-				s += ("<tr><td align=right><div class=place style='border:1px %s solid;'><font color=%s>%s</font></div></td><td class=ipa>%s</td></tr>\n"%(COLORS[k],COLORS[k],NAMES[k],rich(r, k)))
-		if s:
-			s += "</table>\n"
+				region = getRegion(k)
+				if region != last:
+					if last:
+						diff = getRegionDiff(region, last)
+						if diff <= 0:
+							s += "</ul></details>\n" * (1 - diff)
+						else:
+							n = region.count("-")
+							start = 1 if region.startswith(last) else 0
+							for i in range(start, n):
+								if i == 0:
+									s += "</ul></details>\n"
+								s += "<details open><summary>%s</summary><ul>"%region.split("-")[i]
+					s +="<details open><summary>%s</summary><ul>"%region.rsplit("-", 1)[-1]
+					last = region
+				s += ("<ul><div class=place style='border:1px %s solid;'><font color=%s>%s</font></div><div class=ipa>%s</div></ul>"%(COLORS[k],COLORS[k],NAMES[k],rich(r, k)))
+		s+="</ul></details>\n"
 if not s:
 	s = getString("no_matches")
 print(s)
