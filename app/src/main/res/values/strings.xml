@@ -239,7 +239,7 @@
     <string-array name="pref_entries_show_languages">
         <item>全部語言</item>
         <item>當前語言</item>
-        <item>古代漢語</item>
+        <item>歷史音</item>
         <item>代表方言</item>
         <item>官話</item>
         <item>淮語</item>
@@ -249,18 +249,20 @@
         <item>吳語台州片</item>
         <item>吳語上麗片</item>
         <item>吳語甌江片</item>
+        <item>徽語嚴州片</item>
         <item>客語</item>
+        <item>粵語</item>
         <item>閩語</item>
         <item>閩南語雷州片</item>
         <item>閩南語潮汕片</item>
         <item>六南方言</item>
-        <item>域外方言</item>
+        <item>域外方音</item>
     </string-array>
     <string-array name="pref_values_show_languages">
         <item>.+</item>
         <item>""</item>
         <item>och_.+|ltc_.+</item>
-        <item>cmn_|cmn_xn_yzll|cmn_hy_hc_yz|wuu_sz|gan_nc|hak_|yue_hk|nan_tw</item>
+        <item>cmn_|cmn_xn_yzll|cmn_hy_hc_yz|wuu_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_nshu|yue_hk|csp_nntz|nan_tw|cdo_nd</item>
         <item>cmn.*</item>
         <item>cmn_hy_.+</item>
         <item>cmn_hy_hc_.+</item>
@@ -269,11 +271,13 @@
         <item>wuu_tz_.+</item>
         <item>wuu_sl_.+</item>
         <item>wuu_oj_.+</item>
+        <item>czh_yz_.+</item>
         <item>hak.*</item>
-        <item>nan.*</item>
+        <item>yue.*|csp_.+</item>
+        <item>nan.*|cdo_.+</item>
         <item>nan_lz_.+</item>
         <item>nan_cs_.+</item>
-        <item>wuu.*|gan.*|hak.*|yue.*|nan.*</item>
+        <item>wuu.*|czh.*|gan.*|hak.*|hsn.*|yue.*|nan.*|cdo.*|csp.*</item>
         <item>vi_|ko_.+|ja_.+</item>
     </string-array>
 

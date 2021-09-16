@@ -10,7 +10,6 @@ import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.text.Spanned;
 import android.text.TextUtils;
-import android.util.Log;
 
 import androidx.core.text.HtmlCompat;
 
@@ -142,7 +141,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
             input = Orthography.HZ.toHz(input);
             mode = COL_HZ;
         } else if (Orthography.HZ.isPY(input) && mode < COL_FIRST_READING) mode = COL_CMN;
-        if (isHZ(mode)) {     // Each character is a query
+        if (isHzMode(mode)) {     // Each character is a query
             if (input.startsWith(":") || input.startsWith("：")){
                 keywords.add("%" + input.substring(1) + "%");
                 mode = COL_KX;
@@ -172,7 +171,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
             }
             for (String token : input.split("[\\s,]+")) {
                 if (token.equals("")) continue;
-                token = token.toLowerCase(Locale.US);
+                if (!token.startsWith("Ǿ")) //FTS3不支持Ǿ大小寫搜索
+                    token = token.toLowerCase(Locale.US);
                 // Canonicalization
                 switch (getColumnName(mode)) {
                     case SEARCH_AS_MC: token = Orthography.MiddleChinese.canonicalize(token); break;
@@ -220,7 +220,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         qb.setTables("mcpdict");
         List<String> queries = new ArrayList<>();
         List<String> args = new ArrayList<>();
-        boolean allowVariants = isHZ(mode) && sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true);
+        boolean allowVariants = isHzMode(mode) && sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true);
         for (int i = 0; i < keywords.size(); i++) {
             String variant = allowVariants ? ("\"" + keywords.get(i) + "\"") : "null";
             String[] projection = {"rowid AS _id", i + " AS rank", "offsets(mcpdict) AS vaIndex", variant + " AS variants"};
@@ -329,7 +329,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         return SEARCH_AS_NAMES.get(index);
     }
 
-    public static boolean isHZ(int mode) {
+    public static boolean isHzMode(int mode) {
         return mode == COL_HZ;
     }
 
