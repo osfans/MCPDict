@@ -11,3 +11,7 @@ for g in font.glyphs():
         font.removeGlyph(g)
 font.generate("../app/src/main/res/font/han.ttf")
 font.close()
+
+font = fontforge.open("ipa.sfd")
+font.generate("../app/src/main/res/font/ipa.ttf")
+font.close()

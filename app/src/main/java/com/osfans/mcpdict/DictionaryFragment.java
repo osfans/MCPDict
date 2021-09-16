@@ -193,7 +193,9 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         WebView webView = selfView.findViewById(R.id.resultRich);
         final String query = searchView.getQuery();
         int i = spinnerSearchAs.getSelectedItemPosition();
-        boolean isZY = MCPDatabase.isReading(i) && query.length() >= 3 && Orthography.HZ.isHz(query);
+        boolean isZY = MCPDatabase.isReading(i) && query.length() >= 3
+                && !Orthography.HZ.isBS(query)
+                && Orthography.HZ.isHz(query);
         Map<String, String> pys = new HashMap<>();
         if (data != null && data.getCount() >= 3) {
             StringBuilder sb = new StringBuilder();
