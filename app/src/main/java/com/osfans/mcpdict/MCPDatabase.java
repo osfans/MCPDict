@@ -171,7 +171,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
             }
             for (String token : input.split("[\\s,]+")) {
                 if (token.equals("")) continue;
-                token = token.toLowerCase(Locale.US);
+                if (!token.startsWith("Ǿ")) //FTS3不支持Ǿ大小寫搜索
+                    token = token.toLowerCase(Locale.US);
                 // Canonicalization
                 switch (getColumnName(mode)) {
                     case SEARCH_AS_MC: token = Orthography.MiddleChinese.canonicalize(token); break;

@@ -84,7 +84,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         textViewHZ.setTag(COL_HZ);
         textViewHZ.setOnClickListener(getListener(COL_HZ));
         TextView textView = view.findViewById(R.id.text_unicode);
-        int color = MCPDatabase.getColor(COL_BH);
+        int color = MCPDatabase.getColor(MCPDatabase.COL_LF);
         textView.setTextColor(color);
         textView = view.findViewById(R.id.text_sw);
         textView.setTag(COL_SW);

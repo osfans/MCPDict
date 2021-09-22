@@ -249,6 +249,7 @@
         <item>吳語台州片</item>
         <item>吳語上麗片</item>
         <item>吳語甌江片</item>
+        <item>徽語嚴州片</item>
         <item>客語</item>
         <item>粵語</item>
         <item>閩語</item>
@@ -261,7 +262,7 @@
         <item>.+</item>
         <item>""</item>
         <item>och_.+|ltc_.+</item>
-        <item>cmn_|cmn_xn_yzll|cmn_hy_hc_yz|wuu_sz|gan_nc|hak_whhb|hsn_nshu|yue_hk|csp_nntz|nan_tw|cdo_nd</item>
+        <item>cmn_|cmn_xn_yzll|cmn_hy_hc_yz|wuu_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_nshu|yue_hk|csp_nntz|nan_tw|cdo_nd</item>
         <item>cmn.*</item>
         <item>cmn_hy_.+</item>
         <item>cmn_hy_hc_.+</item>
@@ -270,12 +271,13 @@
         <item>wuu_tz_.+</item>
         <item>wuu_sl_.+</item>
         <item>wuu_oj_.+</item>
+        <item>czh_yz_.+</item>
         <item>hak.*</item>
         <item>yue.*|csp_.+</item>
         <item>nan.*|cdo_.+</item>
         <item>nan_lz_.+</item>
         <item>nan_cs_.+</item>
-        <item>wuu.*|gan.*|hak.*|hsn.*|yue.*|nan.*|cdo.*|csp.*</item>
+        <item>wuu.*|czh.*|gan.*|hak.*|hsn.*|yue.*|nan.*|cdo.*|csp.*</item>
         <item>vi_|ko_.+|ja_.+</item>
     </string-array>
 
