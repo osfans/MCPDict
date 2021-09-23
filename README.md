@@ -1,8 +1,19 @@
 # MCPDict: 漢字音典
 
-這是一個Android應用程序，可以查詢漢字在古今中外多種語言中的讀音（包括中古漢語、普通話、粵語、吳語（上海話）、閩南語、朝鮮語、越南語、日語），也可以通過這些語言中的讀音來反查漢字。
+這是一個安卓應用程序，可以查詢漢字在古今中外多種語言中的讀音及釋義，也可以通過這些語言中的讀音來反查漢字。  
+另有[網頁版](https://mcpdict.sourceforge.io/)提供了簡單的查詢功能。
+
+## 下載 
+[<img alt="GitHub Release" src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' height='80px'>](https://github.com/osfans/MCPDict/releases)
+[<img alt='Coolapk' src='https://static.coolapk.com/static/web/v8/img/icon.png' height='60px'/>](https://www.coolapk.com/apk/com.osfans.mcpdict)
 
 ## 版本歷史
+
+### V5.0 (2021.09.15)
+支持Unicode 14.0，增加多种方言讀音，增加說文解字、廣韻、康熙字典、漢語大字典的字義。
+
+### V4.0 (2020.08.20)
+“漢字音典”初始版本
 
 ### V3.0 (2016.05.03)
 添加功能：<br>
