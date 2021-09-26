@@ -9,24 +9,37 @@ from itertools import chain
 import unicodedata
 import variant
 
-logging.basicConfig(format='[%(asctime)s] %(message)s', level=logging.INFO)
+logging.basicConfig(format='%(message)s', level=logging.INFO)
 start = time()
 start0 = start
 
 def timeit():
-    global start
-    end = time()
-    passed = end - start
-    start = end
-    return passed
+  global start
+  end = time()
+  passed = end - start
+  start = end
+  return passed
+
+d=defaultdict(list)
+
+def log(s, l=d, f=None):
+  if not f: f = timeit()
+  if l:
+    logging.info(f"({len(l):5d}) {f:6.3f} {s}")
 
 def hex2chr(uni):
     "把unicode轉換成漢字"
     if uni.startswith("U+"): uni = uni[2:]
     return chr(int(uni, 16))
 
+def ishz(c):
+  c = c.strip()
+  if len(c) != 1: return False
+  n = ord(c)
+  return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<0x31350
+
 HEADS = [
-  ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s',"版本：V5.0 (2021-09-24)<br>說明：<br>　　本程序源自“<a href=https://github.com/MaigoAkisame/MCPDict>漢字古今中外讀音查詢</a>”，收錄了更多語言、更多讀音，錯誤也更多，可去<a href=https://github.com/osfans/MCPDict>主頁</a>和<a href=mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3D-hNzAQCgZQL-uIlhFrxWJ56umCexsmBi>QQ群</a>提出意見与建議。<br>　　本程序將多種語言的漢字讀音集成於本地數據庫，默認用國際音標注音，可用於比較各語言讀音的異同，也能給學習本程序所收的語言提供有限的幫助。<br>　　本程序收錄了統一碼14.0全部漢字（包含“鿽鿾鿿𪛞𪛟𫜵𫜶𫜷𫜸”，不包含部首及兼容區漢字）、〇（同“星”或“零”）、□（有音無字、本字不明）。支持形音義等多種查詢方式，可輸入𰻞（漢字）、30EDE（統一碼）、biang2（普通話拼音，音節末尾的“?”可匹配任何聲調）、43（總筆畫數）、辵39（部首餘筆），均可查到“𰻞”字，也可以選擇兩分、五筆畫等輸入形碼進行查詢，還可以選擇說文解字、康熙字典、漢語大字典等通過釋義中出現的詞語搜索到相應的漢字。",None),
+  ('hz', '漢字', '漢字', '#9D261D', '字海', 'http://yedict.com/zscontent.asp?uni=%2$s',"版本：V5.0 (2021-09-28)<br>說明：<br>　　本程序源自“<a href=https://github.com/MaigoAkisame/MCPDict>漢字古今中外讀音查詢</a>”，收錄了更多語言、更多讀音，錯誤也更多，可去<a href=https://github.com/osfans/MCPDict>主頁</a>和<a href=mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3D-hNzAQCgZQL-uIlhFrxWJ56umCexsmBi>QQ群</a>提出意見与建議。<br>　　本程序將多種語言的漢字讀音集成於本地數據庫，默認用國際音標注音，可用於比較各語言讀音的異同，也能給學習本程序所收的語言提供有限的幫助。<br>　　本程序收錄了統一碼14.0全部漢字（包含“鿽鿾鿿𪛞𪛟𫜵𫜶𫜷𫜸”，不包含部首及兼容區漢字）、〇（同“星”或“零”）、□（有音無字、本字不明）。支持形音義等多種查詢方式，可輸入𰻞（漢字）、30EDE（統一碼）、biang2（普通話拼音，音節末尾的“?”可匹配任何聲調）、43（總筆畫數）、辵39（部首餘筆），均可查到“𰻞”字，也可以選擇兩分、五筆畫等輸入形碼進行查詢，還可以選擇說文解字、康熙字典、漢語大字典等通過釋義中出現的詞語搜索到相應的漢字。",None),
   ('lf', '兩分', '兩分', '#1E90FF', None, None, "名稱：兩分<br>來源：<a href=http://yedict.com/zslf.htm>兩分查字</a><br>說明：可以輸入“雲龍”或“yunlong”查到“𱁬”",None),
   ('wbh', '五筆畫', '五筆畫', '#1E90FF', None, None, "名稱：五筆畫<br>來源：<a href=https://github.com/CNMan/UnicodeCJK-WuBi>五筆字型Unicode CJK超大字符集編碼數據庫</a><br>說明：12345分別代表橫豎撇捺折，可以輸入“12345”查到“札”。也可以輸入五筆字型的編碼查詢漢字，比如輸入“snn”查詢“扎”。",None),
   ('sw', '說文解字', '說文', '#1E90FF', "說文解字線上搜索", "http://www.shuowen.org/?kaishu=%s", "名稱：說文解字<br>來源：<a href=https://github.com/shuowenjiezi/shuowen/>說文解字網站數據</a>",None),
@@ -42,15 +55,16 @@ HEADS = [
   ('cmn_xn_yzll', '永州零陵話', '零陵', '#C600FF', None, None, "更新：2021-07-15<br>名稱：永州零陵話<br>來源：<a href=https://github.com/shinzoqchiuq/yongzhou-homophony-syllabary>永州官話同音字表</a>、《湖南省志·方言志》<br>說明：本同音字表描寫的是屬於山北片區的永州零陵區口音，整理自《湖南省志·方言志》，有脣齒擦音 /f/，無全濁塞擦音 /dz/ 和 /dʒ/，「彎」「汪」不同韻，區分陰去和陽去","13 1 1a 陰平 ꜀,33 2 1b 陽平 ꜁,55 3 2 上 ꜂,24 5 3a 陰去 ꜄,324 6 3b 陰去 ꜅"),
   ('cmn_hy_hc_fdgc', '肥東古城話', '肥東古城', '#800080', None, None, "更新：2021-07-12<br>名稱：肥東古城話<br>來源：安徽肥東古城方言同音字匯","31 1 1a 陰平 ꜀,35 2 1b 陽平 ꜁,213 3 2 上 ꜂,,53 5 3 去 ꜄,,44 7 4 入 ꜆"),
   ('cmn_hy_hc_lj', '南京話', '南京', '#800080', None,None, "更新：2021-08-04<br>名稱：南京話<br>來源：<a href=https://github.com/uliloewi/lang2jin1>南京話拼音输入法</a>", "31 1 1a 陰平 ꜀,13 2 1b 陽平 ꜁,212 3 2 上 ꜂,44 5 3 去 ꜄,5 7 4 入 ꜆"),
-  ('cmn_hy_hc_yz', '揚州話', '揚州', '#800080', None,None, "更新：2021-09-13<br>名稱：揚州話<br>來源：<u>慕禃</u>", "21 1 1a 陰平 ꜀,35 2 1b 陽平 ꜁,42 3 2 上 ꜂,,55 5 3 去 ꜄,,4 7 4 入 ꜆,2 8 4b 陽入 ꜇"),
+  ('cmn_hy_hc_yz', '揚州話', '揚州', '#800080', None,None, "更新：2021-09-27<br>名稱：揚州話<br>來源：<u>慕禃</u>", "21 1 1a 陰平 ꜀,35 2 1b 陽平 ꜁,42 3 2 上 ꜂,,55 5 3 去 ꜄,,4 7 4 入 ꜆,2 8 4b 陽入 ꜇"),
   ('cmn_hy_hc_bf', '濱阜方言', '濱阜', '#800080', None, None, "版本：V3.0 (2021-08-29)<br>名稱：濱阜方言<br>來源：<u>清竮塵</u>整理自《濱海縣志》","52 1 1a 陰平 ꜀,25 2 1b 陽平 ꜁,211 3 2 上 ꜂,,334 5 3 去 ꜄,,4 7 4 入 ꜆"),
-  ('cmn_hy_hc_yc', '鹽城話', '鹽城', '#800080', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s", "更新：2021-09-17<br>名稱：鹽城話<br>來源：<a href=http://huae.nguyoeh.com/>類音字彙</a>、鹽城縣志、鹽城方言研究（步鳳）等","31 1 1a 陰平 ꜀,213 2 1b 陽平 ꜁,55 3 2 上 ꜂,,35 5 3 去 ꜄,,5 7 4 入 ꜆"),
+  ('cmn_hy_hc_yc', '鹽城話', '鹽城', '#800080', '淮語字典', "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s", "更新：2021-09-17<br>名稱：鹽城話<br>來源：<a href=http://huae.nguyoeh.com/>類音字彙</a>、鹽城縣志、osfans口音","31 1 1a 陰平 ꜀,213 2 1b 陽平 ꜁,55 3 2 上 ꜂,,35 5 3 去 ꜄,,5 7 4 入 ꜆"),
+  ('cmn_hy_hc_ycbf', '鹽城步鳳話', '鹽城步鳳', '#800080', None, None, "更新：2021-09-27<br>名稱：鹽城步鳳話<br>來源：osfans整理自《鹽城方言研究》（步鳳）","31 1 1a 陰平 ꜀,213 2 1b 陽平 ꜁,33 3 2 上 ꜂,,35 5 3 去 ꜄,,5 7 4 入 ꜆"),
   ('cmn_hy_tt_xh', '興化話', '興化', '#800080', None, None, "更新：2021-07-15<br>名稱：興化話<br>來源：江蘇興化方言音系、興化方言詞典","324 1 1a 陰平 ꜀,35 2 1b 陽平 ꜁,213 3 2 上 ꜂,,53 5 3a 陰去 ꜄,21 6 3b 陽去 ꜅,4 7 4a 陰入 ꜆,5 8 4b 陽入 ꜇"),
   ('cmn_hy_tt_tr', '泰如方言', '泰如', '#800080', '泰如小字典', "http://taerv.nguyoeh.com/query.php?table=泰如字典&簡體=%s", "更新：2021-08-01<br>名稱：泰如方言<br>來源：<a href=http://taerv.nguyoeh.com/>泰如小字典</a>","21 1 1a 陰平 ꜀,35 2 1b 陽平 ꜁,213 3 2 上 ꜂,,44 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,4 7 4a 陰入 ꜆,35 8 4b 陽入 ꜇"),
   ('cmn_hy_tt_nt', '南通話', '南通', '#800080', '南通方言網', "http://nantonghua.net/search/index.php?hanzi=%s", "更新：2018-01-08<br>名稱：南通話<br>來源：<a href=http://nantonghua.net/archives/5127/南通话字音查询/>南通方言網</a>","21 1 1a 陰平 ꜀,35 2 1b 陽平 ꜁,55 3 2 上 ꜂,,42 5 3a 陰去 ꜄,213 6 3b 陽去 ꜅,42 7 4a 陰入 ꜆,55 8 4b 陽入 ꜇"),
-  ('wuu_pl_td', '包場正餘餘東話', '包場-餘東', '#0000FF', None, None, "更新：2021-09-22<br>名稱：包場正餘餘東話<br>來源：<u>正心修身</u>","44 1 1a 陰平 ꜀,113 2 1b 陽平 ꜁,51 3 2a 陰上 ꜂,231 4 2b 陽上 ꜃,334 5 3a 陰去 ꜄,213 6 3b 陽去 ꜅,34 7 4a 陰入 ꜆,23 8a 4b 陽入 ꜇,5 8b 4c 次濁入 ꜁"),
-  ('wuu_pl_jj', '靖江話', '靖江', '#0000FF', None, None, "更新：2021-09-23<br>名稱：靖江話<br>來源：江蘇靖江方言同音字匯，有一定修改，轉錄者<u>落橙</u>","433 1 1a 陰平 ꜀,223 2 1b 陽平 ꜁,334 3 2 上 ꜂,,51 5 3a 陰去 ꜄,31 6 3b 陽去 ꜅,55 7 4a 陰入 ꜆,34 8a 4b 陽入 ꜇"),
-  ('wuu_sz', '蘇州話', '蘇州', '#0000FF', '吳語學堂（蘇州）', "https://www.wugniu.com/search?table=suzhou_zi&char=%s", "更新：2021-09-22<br>名稱：蘇州話<br>來源：<a href=https://github.com/NGLI/rime-wugniu_soutseu>蘇州吳語拼音輸入方案</a>、<u>樛木</u><br>說明：灰色的爲老派翹舌音，是樛木整理自《一百年前的蘇州話》、《鄉音字類》，加*的漢字表示[ʐ][dʐ]歸屬、陽上陽去歸屬缺乏直接資料，以區分這兩者的蘇州行政區劃內的方吳語爲基準。對於《一百年前的蘇州話》有而《鄉音字類》中沒有的字，因《一百年前的蘇州話》記音不含聲調，則其聲調以今音爲準。","44 1 1a 陰平 ꜀,223 2 1b 陽平 ꜁,51 3 2 上 ꜂,31 4 2b 陽上 ꜃,523 5 3a 陰去 ꜄,231 6 3b 陽去 ꜅,4 7 4a 陰入 ꜆,23 8 4b 陽入 ꜇"),
+  ('wuu_pl_td', '包場正餘餘東話', '包場-餘東', '#0000FF', None, None, "更新：2021-09-28<br>名稱：包場正餘餘東話<br>來源：<u>正心修身</u>基於呂四方言研究及海門縣方言志修改整理擴充而成","44 1 1a 陰平 ꜀,113 2 1b 陽平 ꜁,51 3 2a 陰上 ꜂,231 4 2b 陽上 ꜃,334 5 3a 陰去 ꜄,213 6 3b 陽去 ꜅,34 7 4a 陰入 ꜆,23 8a 4b 陽入 ꜇,5 8b 4c 次濁入 ꜁"),
+  ('wuu_pl_jj', '靖江話', '靖江', '#0000FF', None, None, "更新：2021-09-25<br>名稱：靖江話<br>來源：江蘇靖江方言同音字匯，有一定修改，轉錄者<u>落橙</u>","433 1 1a 陰平 ꜀,223 2 1b 陽平 ꜁,334 3 2 上 ꜂,,51 5 3a 陰去 ꜄,31 6 3b 陽去 ꜅,55 7 4a 陰入 ꜆,34 8a 4b 陽入 ꜇"),
+  ('wuu_sz', '蘇州話', '蘇州', '#0000FF', '吳語學堂（蘇州）', "https://www.wugniu.com/search?table=suzhou_zi&char=%s", "更新：2021-09-28<br>名稱：蘇州話<br>來源：<a href=https://github.com/NGLI/rime-wugniu_soutseu>蘇州吳語拼音輸入方案</a>、一百年前的蘇州話、鄉音字類<br>說明：灰色的爲老派翹舌音，是樛木整理自《一百年前的蘇州話》、《鄉音字類》，加*的漢字表示[ʐ][dʐ]歸屬、陽上陽去歸屬缺乏直接資料，以區分這兩者的蘇州行政區劃內的方吳語爲基準。對於《一百年前的蘇州話》有而《鄉音字類》中沒有的字，因《一百年前的蘇州話》記音不含聲調，則其聲調以今音爲準。","44 1 1a 陰平 ꜀,223 2 1b 陽平 ꜁,51 3 2 上 ꜂,31 4 2b 陽上 ꜃,523 5 3a 陰去 ꜄,231 6 3b 陽去 ꜅,4 7 4a 陰入 ꜆,23 8 4b 陽入 ꜇"),
   ('wuu_sh', '上海話', '上海', '#0000FF', '吳音小字典（上海）', "http://www.wu-chinese.com/minidict/search.php?searchlang=zaonhe&searchkey=%s", "名稱：上海話<br>來源：《上海市區方言志》（1988年版），蔡子文錄入<br>說明：該書記錄的是中派上海話音系（使用者多出生於20世紀40至70年代），與<a href=http://www.wu-chinese.com/minidict/>吳音小字典</a>記錄的音系並不完全相同。","53 1 1 平 ꜀,,,,34 5 3a 陰去 ꜄,23 6 3b 陽去 ꜅,55 7 4a 陰入 ꜆,12 8 4b 陽入 ꜇"),
   ('wuu_jy', '縉雲話', '縉雲', '#0000FF', None, None, "更新：2021-08-26<br>名稱：縉雲話<br>來源：由東甌組<u>老虎</u>、<u>林奈安</u>提供","334 1 1a 陰平 ꜀,231 2 1b 陽平 ꜁,53 3 2a 陰上 ꜂,31 4 2b 陽上 ꜃,554 5 3a 陰去 ꜄,213 6 3b 陽去 ꜅,423 7 4a 陰入 ꜆,35 8 4b 陽入 ꜇"),
   ('wuu_cnpm', '蒼南蒲門方言島', '蒼南蒲門', '#0000FF', None, None, "更新：2021-08-17<br>名稱：蒼南蒲門甌語方言島<br>來源：<u>落橙</u>","44 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,45 3 2a 陰上 ꜂,24 4 2b 陽上 ꜃,42 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,323 7 4a 陰入 ꜆,212 8 4b 陽入 ꜇"),
@@ -60,20 +74,24 @@ HEADS = [
   ('wuu_sl_yh', '雲和話', '雲和', '#0000FF', None, None, "更新：2021-08-17<br>名稱：雲和話<br>來源：<u>落橙</u>、<u>阿纓</u>","324 1 1a 陰平 ꜀,423 2 1b 陽平 ꜁,53 3 2a 陰上 ꜂,21 4 2b 陽上 ꜃,55 5 3a 陰去 ꜄,223 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,24 8 4b 陽入 ꜇"),
   ('wuu_sl_tsly', '泰順羅陽話', '泰順羅陽', '#0000FF', None, None, "更新：2021-08-13<br>名稱：泰順羅陽話<br>來源：<u>落橙</u>、<u>阿纓</u>","224 1 1a 陰平 ꜀,42 2 1b 陽平 ꜁,51 3 2a 陰上 ꜂,21 4 2b 陽上 ꜃,35 5 3a 陰去 ꜄,11 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,1 8 4b 陽入 ꜇,33 0 0 小稱 0"),
   ('wuu_sl_sy', '松陽話', '松陽', '#0000FF', None, None, "更新：2021-09-11<br>名稱：松陽話<br>來源：<u>落橙</u>","51 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,214 3 2a 陰上 ꜂,22 4 2b 陽上 ꜃,35 5 3a 陰去 ꜄,13 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,2 8 4b 陽入 ꜇"),
-  ('wuu_oj_wz', '溫州話', '溫州', '#0000FF', None, None, "版本：V2.0 (2021-09-10)<br>名稱：溫州話<br>來源：<u>阿纓</u>","33 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,35 3 2a 陰上 ꜂,35 4 2b 陽上 ꜃,52 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,213 7 4a 陰入 ꜆,213 8 4b 陽入 ꜇"),
+  ('wuu_oj_yqyc', '樂清樂成話', '樂清樂成', '#0000FF', None, None, "更新：2021-09-25<br>名稱：樂清樂成話<br>來源：由東甌組<u>落橙</u>、<u>老虎</u>、<u>阿纓</u>提供","44 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,35 3 2a 陰上 ꜂,34 4 2b 陽上 ꜃,52 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,323 7 4a 陰入 ꜆,212 8 4b 陽入 ꜇"),
+  ('wuu_oj_wz', '溫州話', '溫州', '#0000FF', None, None, "版本：V2.0 (2021-09-10)<br>名稱：溫州話<br>來源：<u>阿纓</u>整理自《溫州話音檔》","33 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,35 3 2a 陰上 ꜂,35 4 2b 陽上 ꜃,52 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,213 7 4a 陰入 ꜆,213 8 4b 陽入 ꜇"),
+  ('wuu_oj_rads', '瑞安東山話', '瑞安東山', '#0000FF', None, None, "更新：2021-09-25<br>名稱：瑞安東山話<br>來源：由東甌組<u>落橙</u>、<u>老虎</u>提供","44 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,35 3 2a 陰上 ꜂,13 4 2b 陽上 ꜃,52 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,322 7 4a 陰入 ꜆,322 8 4b 陽入 ꜇"),
   ('wuu_oj_ra', '瑞安話', '瑞安', '#0000FF', None, None, "更新：2021-09-17<br>名稱：瑞安話<br>說明：主要參考《瑞安話語音研究（陳海芳）》，有一定的修改，轉錄者<u>落橙</u>","55 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,35 3 2a 陰上 ꜂,24 4 2b 陽上 ꜃,52 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,434 7 4a 陰入 ꜆,323 8 4b 陽入 ꜇"),
-  ('wuu_oj_rads', '瑞安東山話', '瑞安東山', '#0000FF', None, None, "更新：2021-09-23<br>名稱：瑞安東山話<br>來源：由東甌組<u>落橙</u>、<u>老虎</u>提供","44 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,35 3 2a 陰上 ꜂,13 4 2b 陽上 ꜃,52 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,322 7 4a 陰入 ꜆,211 8 4b 陽入 ꜇"),
-  ('wuu_oj_rahl', '瑞安湖嶺話', '瑞安湖嶺', '#0000FF', None, None, "更新：2021-09-10<br>名稱：瑞安湖嶺話<br>來源：《瑞安湖嶺方言音系（太田斋）》，轉錄者落橙，校對者阿纓","44 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,35 3 2a 陰上 ꜂,13 4 2b 陽上 ꜃,53 5 3a 陰去 ꜄,212 6 3b 陽去 ꜅,424 7 4a 陰入 ꜆,323 8 4b 陽入 ꜇"),
   ('wuu_oj_rats', '瑞安陶山話', '瑞安陶山', '#0000FF', None, None, "更新：2021-09-23<br>名稱：瑞安陶山話<br>來源：浙南甌語(顏逸明)，有一定的修改，轉錄者落橙","55 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,35 3 2a 陰上 ꜂,24 4 2b 陽上 ꜃,52 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,323 7 4a 陰入 ꜆,212 8 4b 陽入 ꜇"),
-  ('wuu_oj_yqyc', '樂清樂成話', '樂清樂成', '#0000FF', None, None, "更新：2021-09-17<br>名稱：樂清樂成話<br>來源：由東甌組<u>落橙</u>、<u>老虎</u>、<u>阿纓</u>提供","44 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,35 3 2a 陰上 ꜂,34 4 2b 陽上 ꜃,52 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,323 7 4a 陰入 ꜆,212 8 4b 陽入 ꜇"),
-  ('wuu_oj_py', '平陽話', '平陽', '#0000FF', None, None, "更新：2021-09-24<br>名稱：平陽話<br>來源：平陽方言記略，轉錄者<u>落橙</u>","44 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,54 3 2a 陰上 ꜂,24 4 2b 陽上 ꜃,32 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,35 7 4a 陰入 ꜆,213 8 4b 陽入 ꜇"),
+  ('wuu_oj_rahl', '瑞安湖嶺話', '瑞安湖嶺', '#0000FF', None, None, "更新：2021-09-10<br>名稱：瑞安湖嶺話<br>來源：《瑞安湖嶺方言音系（太田斋）》，轉錄者落橙，校對者阿纓","44 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,35 3 2a 陰上 ꜂,13 4 2b 陽上 ꜃,53 5 3a 陰去 ꜄,212 6 3b 陽去 ꜅,424 7 4a 陰入 ꜆,323 8 4b 陽入 ꜇"),
+  ('wuu_oj_py', '平陽話', '平陽', '#0000FF', None, None, "更新：2021-09-25<br>名稱：平陽話<br>來源：平陽方言記略，轉錄者<u>落橙</u>","44 1 1a 陰平 ꜀,31 2 1b 陽平 ꜁,54 3 2a 陰上 ꜂,24 4 2b 陽上 ꜃,32 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,35 7 4a 陰入 ꜆,213 8 4b 陽入 ꜇"),
+  ('wuu_oj_lg', '龍港話', '龍港', '#0000FF', None, None, "更新：2021-09-25<br>名稱：龍港話<br>來源：《蒼南方言志》中的龍港字表，其成書時龍港尚未脫離蒼南，轉錄人落橙，龍港：太保人","44 1 1a 陰平 ꜀,21 2 1b 陽平 ꜁,54 3 2a 陰上 ꜂,45 4 2b 陽上 ꜃,42 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,24 7 4a 陰入 ꜆,213 8 4b 陽入 ꜇"),
+  ('wuu_oj_cnys', '蒼南宜山話', '蒼南宜山', '#0000FF', None, None, "更新：2021-09-28<br>名稱：蒼南宜山話<br>來源：《甌語音系》轉錄人落橙","44 1 1a 陰平 ꜀,21 2 1b 陽平 ꜁,54 3 2a 陰上 ꜂,24 4 2b 陽上 ꜃,42 5 3a 陰去 ꜄,11 6 3b 陽去 ꜅,34 7 4a 陰入 ꜆,213 8 4b 陽入 ꜇"),
   ('czh_yz_cacc', '淳安淳城話', '淳安淳城', '#1E90FF', None, None, "更新：2021-09-22<br>名稱：淳安淳城話<br>來源：<u>清竮塵</u>整理自曹志耘《徽語嚴州方言研究》","224 1 1a 陰平 ꜀,445 2 1b 陽平 ꜁,55 3 2 上 ꜂,,,22 6 3 去 ꜄,5 7 4a 陰入 ꜆,13 8 4b 陽入 ꜇"),
-  ('czh_yz_jdmcwd', '建德梅城文讀', '建德梅城', '#1E90FF', None, None, "更新：2021-09-24<br>名稱：建德梅城文讀<br>來源：<u>清竮塵</u>整理自曹志耘《徽語嚴州方言研究》","334 1 1a 陰平 ꜀,211 2 1b 陽平 ꜁,55 3 2 上 ꜂,,,213 6 3 去 ꜄,5 7 4a 陰入 ꜆,12 8 4b 陽入 ꜇"),
+  ('czh_yz_jdmc', '建德梅城話', '建德梅城', '#1E90FF', None, None, "更新：2021-09-24<br>名稱：建德梅城<br>來源：<u>清竮塵</u>整理自曹志耘《徽語嚴州方言研究》<br>說明：文白讀調值不同","423 1 1a 陰平 ꜀,334 2 1b 陽平 ꜁,213 3 2 上 ꜂,,,55 6 3 去 ꜄,5 7 4a 陰入 ꜆,12 8 4b 陽入 ꜇,,,334 1b 1c 陰平 ꜀,211 2b 1d 陽平 ꜁,55 3b 2b 上 ꜂,,,213 6b 3b 去 ꜄"),
+  ('czh_yz_jdsc', '建德壽昌話', '建德壽昌', '#1E90FF', None, None, "更新：2021-09-28<br>名稱：建德壽昌<br>來源：<u>清竮塵</u>整理自曹志耘《徽語嚴州方言研究》<br>說明：文白讀調值不同","112 1 1a 陰平 ꜀,52 2 1b 陽平 ꜁,324 3 2a 陰上 ꜂,53 4 2b 陽上 ꜃,334 5 3 去 ꜄,,55 7a 4a 上陰入 ꜆,12 8a 4c 陽入 ꜇,3 7b 4b 下陰入 ꜀,,334 1b 1c 陰平 ꜀,112 2b 1d 陽平 ꜁,55 3b 2b 上 ꜂,,,324 6 3b 去 ꜄,5 7c 4d 陰入 ꜆,13 8b 4e 陽入 ꜇"),
   ('czh_yz_sasc', '遂安獅城話', '遂安獅城', '#1E90FF', None, None, "更新：2021-09-24<br>名稱：遂安獅城話<br>來源：<u>清竮塵</u>整理自曹志耘《徽語嚴州方言研究》","534 1 1a 陰平 ꜀,33 2 1b 陽平 ꜁,213 3 2a 陰上 ꜂,24 4 2b 陽上 ꜃,,52 6 3 去 ꜄,24 7 4 入 ꜆"),
+  ('czh_yz_lxcs', '蘭溪船上話', '蘭溪船上', '#1E90FF', None, None, "更新：2021-09-27<br>名稱：蘭溪船上話<br>來源：<u>清竮塵</u>整理自劉倩《九姓漁民方言研究》","224 1 1a 陰平 ꜀,445 2 1b 陽平 ꜁,55 3 2 上 ꜂,,,22 6 3 去 ꜄,5 7 4a 陰入 ꜆,13 8 4b 陽入 ꜇"),
   ('gan_nc', '南昌話', '南昌', '#20B2AA', None, None, "名稱：南昌話<br>來源：<u>澀口的茶</u>","42 1 1a 陰平 ꜀,24 2 1b 陽平 ꜁,213 3 2 上 ꜂,,45 5 3a 陰去 ꜄,21 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,21 8 4b 陽入 ꜇"),
   ('gan_lc', '臨川話', '臨川', '#20B2AA', None, None, "更新：2021-08-27<br>名稱：臨川話<br>來源：<u>啵啵</u>整理自《撫州方言研究》","11 1 1a 陰平 ꜀,24 2 1b 陽平 ꜁,35 3 2 上 ꜂,,42 5 3a 陰去 ꜄,33 6 3b 陽去 ꜅,2 7 4a 陰入 ꜆,5 8 4b 陽入 ꜇"),
-  ('hak_whhb', '五華橫陂客家話', '五華橫陂', '#008000', None, None,"更新：2021-08-12<br>名稱：五華橫陂客家話<br>來源：魏宇文《五華方言同音字匯》","44 1 1a 陰平 ꜀,13 2 1b 陽平 ꜁,31 3 2 上 ꜂,,53 5 3 去 ꜄,,1 7 4a 陰入 ꜆,5 8 4b 陽入 ꜇"),
-  ('hak_whsz', '五華水寨客家話', '五華水寨', '#008000', None, None,"更新：2021-08-12<br>名稱：五華水寨客家話<br>來源：《廣東五華客家話比較研究》，徐汎平，2010","44 1 1a 陰平 ꜀,13 2 1b 陽平 ꜁,31 3 2 上 ꜂,,53 5 3 去 ꜄,,2 7 4a 陰入 ꜆,4 8 4b 陽入 ꜇"),
+  ('hak_whhb', '五華橫陂客家話', '五華橫陂', '#008000', None, None,"更新：2021-09-27<br>名稱：五華橫陂客家話<br>來源：<u>阿缨</u>整理自魏宇文《五華方言同音字匯》","44 1 1a 陰平 ꜀,13 2 1b 陽平 ꜁,31 3 2 上 ꜂,,53 5 3 去 ꜄,,1 7 4a 陰入 ꜆,5 8 4b 陽入 ꜇"),
+  ('hak_whsz', '五華水寨客家話', '五華水寨', '#008000', None, None,"更新：2021-09-27<br>名稱：五華水寨客家話<br>來源：<u>阿缨</u>整理自《廣東五華客家話比較研究》，徐汎平，2010","44 1 1a 陰平 ꜀,13 2 1b 陽平 ꜁,31 3 2 上 ꜂,,53 5 3 去 ꜄,,2 7 4a 陰入 ꜆,4 8 4b 陽入 ꜇"),
   ('hak_hl', '客家話海陸腔', '海陸客語', '#008000', '客語萌典', "https://www.moedict.tw/:%s", "名稱：客家話海陸腔<br>來源：<a href=https://www.moedict.tw/>客語萌典</a>","53 1 1a 陰平 ꜀,55 2 1b 陽平 ꜁,24 3 2 上 ꜂,,11 5 3a 陰去 ꜄,33 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,2 8 4b 陽入 ꜇"),
   ('hak_sx', '客家話四縣腔', '四縣客語', '#008000', '客語萌典', "https://www.moedict.tw/:%s", "名稱：客家話四縣腔<br>來源：<a href=https://www.moedict.tw/>客語萌典</a>","24 1 1a 陰平 ꜀,11 2 1b 陽平 ꜁,31 3 2 上 ꜂,,55 5 3 去 ꜄,,2 7 4a 陰入 ꜆,5 8 4b 陽入 ꜇"),
   ('hsn_nshu', '女書', '女書', '#FF69B4', None, None, "更新：2021-08-27<br>名稱：女書、江永女書<br>來源：<a href=https://nushuscript.org/>在線女書字典</a><br>說明：女書，又名江永女書，是一種獨特的漢語書寫系統。它是一種專門由女性使用的文字，起源於中國湖南省南部永州的江永縣。其一般被用來書寫屬於湘語永全片的江永城關方言。以前在江永縣及其毗鄰的道縣、江華瑤族自治縣的大瑤山、以及廣西部分地區的婦女之間流行、傳承。<br>注明女書寫法的來自趙麗明、徐焰編纂的《女書規範字書法字帖》，注明女書編號的來自宮哲兵、唐功暐編纂的《女書標準字字典》，兩者音系不完全相同。","44 1 1a 陰平 ꜀,42 2 1b 陽平 ꜁,35 3 2a 陰上 ꜂,13 4 2b 陽上 ꜃,21 5 3a 陰去 ꜄,33 6 3b 陽去 ꜅,5 7 4 入 ꜆"),
@@ -86,9 +104,9 @@ HEADS = [
   ('nan_lz_wcls', '吳川蘭石東話', '吳川蘭石', '#FF6600', None, None, "版本：V2.0 (2021-08-23)<br>名稱：吳川蘭石東話<br>來源：<u>Kiattan</u>","33 1 1a 陰平 ꜀,22 2 1b 陽平 ꜁,31 3 2a 陰上 ꜂,42 4 2b 陽上 ꜃,44 5 3a 陰去 ꜄,453 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,2 8 4b 陽入 ꜇"),
   ('nan_lz_dbls', '電白龍山海話', '電白龍山', '#FF6600', None, None, "版本：V2.0 (2021-08-23)<br>名稱：電白龍山海話<br>來源：<u>Kiattan</u>","33 1 1a 陰平 ꜀,22 2 1b 陽平 ꜁,31 3 2a 陰上 ꜂,42 4 2b 陽上 ꜃,44 5 3a 陰去 ꜄,453 6 3b 陽去 ꜅,53 6b 3c 陽去b ꜃,5 7 4a 陰入 ꜆,2 8 4b 陽入 ꜇"),
   ('nan_lz_ldzz', '羅定漳州話', '羅定漳州', '#FF6600', None, None, "版本：V2.0 (2021-08-23)<br>名稱：羅定漳州話<br>來源：<u>Kiattan</u>","45 1a 1a 陰平a ꜀,55 1b 1b 陰平b ꜆,24 2a 1c 陽平a ꜁,22 2b 1d 陽平b ꜇,21 2c 1e 陽平c ꜇,451 3 2a 陰上 ꜂,443 4 2b 陽上 ꜃,31 5 3 去 ꜄,5 7 4a 陰入 ꜆,2 8 4b 陽入 ꜇"),
-  ('nan_cs_pn', '普寧話', '普寧', '#FF6600', None, None, "版本：V2.0 (2021-08-18)<br>名稱：普寧話<br>來源：<u>阿纓</u>","223 1 1a 陰平 ꜀,44 2 1b 陽平 ꜁,53 3 2a 陰上 ꜂,213 4 2b 陽上 ꜃,21 5 3a 陰去 ꜄,311 6 3b 陽去 ꜅,32 7 4a 陰入 ꜆,54 8 4b 陽入 ꜇"),
+  ('nan_cs_pn', '普寧話', '普寧', '#FF6600', None, None, "版本：V2.1 (2021-09-27)<br>名稱：普寧話<br>來源：<u>阿纓</u>","223 1 1a 陰平 ꜀,44 2 1b 陽平 ꜁,53 3 2a 陰上 ꜂,213 4 2b 陽上 ꜃,21 5 3a 陰去 ꜄,311 6 3b 陽去 ꜅,32 7 4a 陰入 ꜆,54 8 4b 陽入 ꜇"),
   ('nan_cs_st', '汕頭話', '汕頭', '#FF6600', None, None, "版本：V2.3 (2021-09-04)<br>名稱：汕頭話<br>來源：<u>Kiattan</u>","33 1 1a 陰平 ꜀,55 2 1b 陽平 ꜁,52 3 2a 陰上 ꜂,35 4 2b 陽上 ꜃,212 5 3a 陰去 ꜄,31 6 3b 陽去 ꜅,2 7 4a 陰入 ꜆,54 8 4b 陽入 ꜇"),
-  ('nan_cs_rp', '饒平話', '饒平', '#FF6600', None, None, "版本：V1.4 (2021-08-29)<br>名稱：饒平話<br>來源：<u>四方麻東</u>","33 1 1a 陰平 ꜀,55 2 1b 陽平 ꜁,51 3 2a 陰上 ꜂,25 4 2b 陽上 ꜃,212 5 3a 陰去 ꜄,21 6 3b 陽去 ꜅,2 7 4a 陰入 ꜆,54 8 4b 陽入 ꜇"),
+  ('nan_cs_rp', '饒平話', '饒平', '#FF6600', None, None, "版本：V1.5 (2021-09-23)<br>名稱：饒平話<br>來源：<u>四方麻東</u>","33 1 1a 陰平 ꜀,55 2 1b 陽平 ꜁,51 3 2a 陰上 ꜂,25 4 2b 陽上 ꜃,212 5 3a 陰去 ꜄,21 6 3b 陽去 ꜅,2 7 4a 陰入 ꜆,54 8 4b 陽入 ꜇"),
   ('nan_cs_hllj', '惠來隆江話', '惠來隆江', '#FF6600', None, None, "版本：V1.02 (2021-09-24)<br>名稱：惠來隆江話<br>來源：<u>空白</u>","35 1 1a 陰平 ꜀,44 2 1b 陽平 ꜁,53 3 2a 陰上 ꜂,11 4 2b 陽上 ꜃,41 5 3 去 ꜄,,2 7 4a 陰入 ꜆,5 8 4b 陽入 ꜇"),
   ('nan_cs_cy', '潮陽話', '潮陽', '#FF6600', None, None, "版本：V1.0 (2021-09-23)<br>名稱：潮陽話<br>來源：<u>與子偕老</u>","21 1 1a 陰平 ꜀,55 3 2a 陰上 ꜂,51 5 3a 陰去 ꜄,32 7 4a 陰入 ꜆,33 2 1b 陽平 ꜁,51 4 2b 陽上 ꜃,331 6 3b 陽去 ꜅,5 8 4b 陽入 ꜇"),
   ('cdo_nd', '寧德話', '寧德', '#DB7093', None, None, "更新：2021-08-12<br>名稱：寧德話<br>來源：<u>落橙</u>、<u>阿纓</u>","44 1 1a 陰平 ꜀,22 2 1b 陽平 ꜁,42 3 2 上 ꜂,,35 5 3a 陰去 ꜄,332 6 3b 陽去 ꜅,2 7 4a 陰入 ꜆,5 8 4b 陽入 ꜇"),
@@ -140,7 +158,7 @@ for r in c.execute('SELECT * FROM mcpdict'):
   row["ja_other"] = row.pop("jp_other")
   unicodes[i] = row
 conn.close()
-logging.info("讀取數據庫 %.2f" % timeit())
+log("加載", None)
 
 kCompatibilityVariants = dict()
 def update(k, d):
@@ -157,13 +175,11 @@ def update(k, d):
       vs = vs.replace("g", "ɡ")
     unicodes[i][k] = vs
 
-d=defaultdict(list)
-
 #kCompatibilityVariant
 for line in open("../app/src/main/res/raw/orthography_hz_compatibility.txt"):
     han, val = line.rstrip()
     kCompatibilityVariants[han] = val
-logging.info("處理兼容字 %.2f" % timeit())
+log("兼容字", None)
 
 #ST
 stVariants = dict()
@@ -191,13 +207,13 @@ for line in open("Dzih.txt"):
     js = "%s`%s`"%(pq[fs[1]], js)
     d[hz].append(js)
 update("ltc_mc", d)
-logging.info("處理廣韻 %.2f" % timeit())
+log("廣韻")
 
 #yt
 import yt
 ytd = yt.get_dict()
 update("ltc_yt", ytd)
-logging.info("處理韻圖 %.2f" % timeit())
+log("韻圖")
 
 #sg
 #https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/dciangx/DrienghTriang.txt
@@ -214,7 +230,7 @@ for line in open("DrienghTriang.txt"):
   if js not in d[hz]:
     d[hz].append(js)
 update("och_sg", d)
-logging.info("處理上古音 %.2f" % timeit())
+log("鄭張")
 
 #ba
 #http://ocbaxtersagart.lsait.lsa.umich.edu/BaxterSagartOC2015-10-13.xlsx
@@ -227,7 +243,7 @@ for line in open("BaxterSagartOC2015-10-13.tsv"):
     if js not in d[hz]:
       d[hz].append(js)
 update("och_ba", d)
-logging.info("處理白沙 %.2f" % timeit())
+log("白沙")
 
 #zy
 #https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/trngyan
@@ -261,7 +277,7 @@ for line in open("TriungNgyanQimYonh.txt"):
     if py not in d[hz]:
       d[hz].append(py)
 update("ltc_zy", d)
-logging.info("處理中原音韻 %.2f" % timeit())
+log("中原音韻")
 
 #lgy
 d.clear()
@@ -286,7 +302,7 @@ for line in open("lau_guoq_in.dict.yaml"):
   if py not in d[hz]:
     d[hz].append(py)
 update("ltc_lgy", d)
-logging.info("處理老國音 %.2f" % timeit())
+log("老國音")
 
 #yzll
 d.clear()
@@ -312,7 +328,7 @@ for line in open("永州官話同音字表.tsv"):
   if jt != hz and ipa not in d[jt]:
     d[jt].append(ipa)
 update("cmn_xn_yzll", d)
-logging.info("處理永州零陵話 %.2f" % timeit())
+log("零陵")
 
 #bf
 d.clear()
@@ -358,7 +374,7 @@ for line in open("阜寧同音字表3.0.tsv"):
           else:
             d[hz].append(p)
 update("cmn_hy_hc_bf", d)
-logging.info("處理滨阜方言 %.2f" % timeit())
+log("滨阜")
 
 #nt
 #http://nantonghua.net
@@ -377,7 +393,7 @@ for line in open("nt.txt"):
   if py not in d[hz]:
     d[hz].append(py)
 update("cmn_hy_tt_nt", d)
-logging.info("處理南通話 %.2f" % timeit())
+log("南通")
 
 #tr
 #http://taerv.nguyoeh.com/
@@ -411,7 +427,7 @@ for line in open("cz6din3.csv"):
   if jt!=hz and py not in d[jt]:
     d[jt].append(py)
 update("cmn_hy_tt_tr", d)
-logging.info("處理泰如話 %.2f" % timeit())
+log("泰如")
 
 #xh
 d.clear()
@@ -421,7 +437,7 @@ for line in open("興化同音字表.tsv"):
     ym = line[1:]
   else:
     fs = line.split("\t")
-    sm = fs[0].replace("ø", "")
+    sm = fs[0].replace("0", "")
     for sd,hzs,n in re.findall("［(\d)］(.*?)((?=［)|$)", fs[1]):
       py = sm + ym +sd
       hzs = re.findall("(.)\d?([+-=*/?]?)\d?(\{.*?\})?", hzs)
@@ -454,7 +470,7 @@ for line in open("興化同音字表.tsv"):
           else:
             d[hz].append(p)
 update("cmn_hy_tt_xh", d)
-logging.info("處理興化話 %.2f" % timeit())
+log("興化")
 
 #yc
 d.clear()
@@ -498,7 +514,48 @@ for line in open("鹽城同音字表.tsv"):
       else:
         d[hz].append(p)
 update("cmn_hy_hc_yc", d)
-logging.info("處理鹽城話 %.2f" % timeit())
+log("鹽城")
+
+#bf
+d.clear()
+for line in open("鹽城方言研究-步鳳.tsv"):
+  line = line.strip().replace('"','')
+  if not line: continue
+  if line.startswith("#"):
+    ym = line[1:].split()[0]
+  else:
+    fs = line.split("\t")
+    if len(fs) != 2: continue
+    sm = fs[0]
+    for sd,hzs,n in re.findall("\[(\d+)\](.*?)((?=\[)|$)", fs[1]):
+      py = sm + ym +sd
+      py = py.replace("0", "")
+      hzs = re.findall("(.)([+-=?]?)(\{.*?\})?", hzs)
+      for hz, c, m in hzs:
+        m = m.strip("{}")
+        if "}" in m: print(m)
+        p = ""
+        if c and c in '-+=*?':
+          if c == '-':
+            p = "白"
+          elif c == '=':
+            p = "文"
+          elif c == '?':
+            p = "待考"
+        if p and m:
+          p = p + "：" + m
+        else:
+          p = p + m
+        if p:
+          p = "`%s`" % p
+        p = py + p
+        if p not in d[hz]:
+          if c == '-':
+            d[hz].insert(0, p)
+          else:
+            d[hz].append(p)
+update("cmn_hy_hc_ycbf", d)
+log("鹽城步鳳")
 
 #fdgc
 d.clear()
@@ -518,7 +575,7 @@ for line in open("肥東古城同音字表.tsv"):
     else:
       d[hz].append(p)    
 update("cmn_hy_hc_fdgc", d)
-logging.info("處理肥東古城話 %.2f" % timeit())
+log("肥東古城")
 
 #lj
 #https://github.com/uliloewi/lang2jin1/blob/master/langjin.dict.yaml
@@ -526,10 +583,15 @@ ljsm = {'g': 'k', 'd': 't', '': '', 'sh': 'ʂ', 'c': 'tsʰ', 'b': 'p', 'l': 'l',
 def lj2ipa(py):
   py = re.sub("r([1-5])$", "ʅ\\1", py)
   if py.startswith("ʅ"): py = "r" + py
-  fs = re.findall("^([^aäüeiouyʅ1-9]+)?(.*)(\d)?$", py)
-  if len(fs)<1:
-    print(py, fs)
-  sm,ym,sd = fs[0]
+  #fs = re.findall("^([^aäüeiouyʅ1-9]+)?(.*)(\d)?$", py)
+  sm = py[:2]
+  if sm not in ljsm: sm = py[0]
+  if sm not in ljsm: sm = ""
+  sd = py[-1]
+  ym = py[len(sm):-1]
+  if not sd.isdigit():
+    ym = ym + sd
+    sd = ""
   sm = ljsm[sm]
   ym = ym.replace("y", "ɿ").replace("ü", "y").replace("än", "ẽ").replace("ä", "ɛ")\
     .replace("ao", "ɔ").replace("ei", "əi").replace("ou", "əɯ")\
@@ -541,11 +603,11 @@ for line in open("langjin.dict.yaml"):
   fs = line.split('\t')
   if len(fs) < 2: continue
   hz, py = fs[:2]
-  if len(hz) != 1 or py in "vw": continue
+  if len(hz)!=1 or py in "vw": continue
   if py not in d[hz]:
     d[hz].append(lj2ipa(py))
 update("cmn_hy_hc_lj", d)
-logging.info("處理南京話 %.2f" % timeit())
+log("南京")
 
 #yz
 d.clear()
@@ -569,7 +631,7 @@ for line in open("揚州同音字表.tsv"):
     if p not in d[hz]:
       d[hz].append(p)
 update("cmn_hy_hc_yz", d)
-logging.info("處理揚州話 %.2f" % timeit())
+log("揚州")
 
 #td
 d.clear()
@@ -592,7 +654,7 @@ for line in open("通東談話 字表.tsv"):
     if js not in d[jt]:
       d[jt].append(js)
 update("wuu_pl_td", d)
-logging.info("處理通東話 %.2f" % timeit())
+log("通東")
 
 #wuu_pl_jj
 d.clear()
@@ -613,7 +675,7 @@ for line in open("靖江方言同音字汇.tsv"):
         if p not in d[hz]:
           d[hz].append(p)
 update("wuu_pl_jj", d)
-logging.info("處理靖江話 %.2f" % timeit())
+log("靖江")
 
 #lh
 d.clear()
@@ -630,7 +692,7 @@ for line in open("临海方言字表.tsv"):
   if jt != hz and js not in d[jt]:
     d[jt].append(js)
 update("wuu_tz_lh", d)
-logging.info("處理临海話 %.2f" % timeit())
+log("临海")
 
 #xj
 d.clear()
@@ -647,7 +709,7 @@ for line in open("仙居方言字表.tsv"):
   if jt != hz and js not in d[jt]:
     d[jt].append(js)
 update("wuu_tz_xj", d)
-logging.info("處理仙居話 %.2f" % timeit())
+log("仙居")
 
 #sz
 #https://github.com/NGLI/rime-wugniu_soutseu/blob/master/wugniu_soutseu.dict.yaml
@@ -723,7 +785,7 @@ for line in open("wugniu_soutseu.dict.yaml"):
     if py not in d[hz]:
       d[hz].append(py)
 update("wuu_sz", d)
-logging.info("處理蘇州話 %.2f" % timeit())
+log("蘇州")
 
 #cmn
 d.clear()
@@ -735,7 +797,7 @@ for line in open("cmn.tsv"):
   for hz in hzs:
     d[hz] = py.split(",")
 update("cmn_",d)
-logging.info("處理普通話 %.2f" % timeit())
+log("普通話")
 
 #gz
 #https://github.com/rime/rime-cantonese/blob/master/jyut6ping3.dict.yaml
@@ -760,7 +822,7 @@ for line in open("/usr/share/unicode/Unihan_Readings.txt"):
       if y not in d[han]:
         d[han].append(y)
 update("yue_hk", d)
-logging.info("處理香港話 %.2f" % timeit())
+log("香港")
 
 #yl
 ipas={'b∅': 'p', 'p∅': 'pʰ', 'bb∅': 'ɓ', 'm∅': 'm', 'f∅': 'f', 'd∅': 't', 't∅': 'tʰ', 'dd∅': 'ɗ', 'n∅': 'n', 'l∅': 'l', 'sl∅': 'ɬ', 'g∅': 'k', 'k∅': 'kʰ', 'gw∅': 'kʷ', 'kw∅': 'kʷʰ', 'h∅': 'h', 'ng∅': 'ŋ', 'z∅': 'tʃ', 'c∅': 'tʃʰ', 's∅': 'ʃ', 'nj∅': 'ȵ', 'j∅': 'j', 'w∅': 'w', '∅': '', 'aa': 'a', 'ai': 'ai', 'au': 'au', 'an': 'an', 'ah': 'aʔ', 'am': 'am', 'ang': 'aŋ', 'at': 'at', 'ap': 'ap', 'ak': 'ak', 'o': 'ɔ', 'oi': 'ɔi', 'ou': 'ɔu', 'on': 'ɔn', 'om': 'ɔm', 'ong': 'ɔŋ', 'ot': 'ɔt', 'op': 'ɔp', 'ok': 'ɔk', 'oe': 'œ', 'oen': 'œn', 'yng': 'œŋ', 'yet': 'œt', 'yk': 'œk', 'oek': 'œk', 'oep': 'œp', 'e': 'ɛ', 'een': 'ɛn', 'ing': 'eŋ', 'ik': 'ek', 'eo': 'o', 'eou': 'əu', 'eat': 'ət', 'eu': 'ɛu', 'ei': 'ei', 'en': 'ɛn', 'em': 'ɛm', 'eng': 'ɛŋ', 'et': 'ɛt', 'ep': 'ɛp', 'ek': 'ɛk', 'i': 'i', 'iu': 'iu', 'in': 'in', 'im': 'im', 'it': 'it', 'ip': 'ip', 'iik': 'ik', 'u': 'u', 'ui': 'ui', 'un': 'un', 'ung': 'oŋ', 'ut': 'ut', 'uk': 'ok', 'yu': 'y', 'yun': 'yn', 'yut': 'yt', 'm': 'm̩', 'ng': 'ŋ̍', '': ''}
@@ -777,7 +839,7 @@ for line in open("鬱林話字表-粵拼版-21年9月15日.tsv"):
   if js not in d[hz]:
     d[hz].append(js)
 update("yue_yl", d)
-logging.info("處理鬱林話 %.2f" % timeit())
+log("鬱林")
 
 #nnbh
 d.clear()
@@ -865,7 +927,7 @@ for line in open("naamning_baakwaa.dict.yaml"):
   if js not in d[hz]:
     d[hz].append(js)
 update("yue_nnbh", d)
-logging.info("處理南寧白話 %.2f" % timeit())
+log("南寧白話")
 
 #nntz
 d.clear()
@@ -951,7 +1013,7 @@ for line in open("naamning_bingwaa.dict.yaml"):
   if js not in d[hz]:
     d[hz].append(js)
 update("csp_nntz", d)
-logging.info("處理南寧平話 %.2f" % timeit())
+log("南寧亭子")
 
 #sh
 def sh2ipa(s):
@@ -990,7 +1052,7 @@ for i in unicodes.keys():
       fs = map(sh2ipa, fs)
       sh = ",".join(fs)
       unicodes[i]["wuu_sh"] = sh
-logging.info("處理上海話 %.2f" % timeit())
+log("上海")
 
 #sy
 d.clear()
@@ -1006,7 +1068,7 @@ for line in open("松阳方言字表.tsv"):
   if jt != hz and js not in d[jt]:
     d[jt].append(js)
 update("wuu_sl_sy", d)
-logging.info("處理松陽話 %.2f" % timeit())
+log("松陽")
 
 #sc
 d.clear()
@@ -1022,7 +1084,7 @@ for line in open("吴语遂昌话字表.tsv"):
   if js not in d[hz]:
     d[hz].append(js)
 update("wuu_sl_sc", d)
-logging.info("處理遂昌話 %.2f" % timeit())
+log("遂昌")
 
 #yh
 d.clear()
@@ -1041,7 +1103,7 @@ for line in open("云和方言同音字表.tsv"):
     if js not in d[jt]:
       d[jt].append(js)
 update("wuu_sl_yh", d)
-logging.info("處理雲和話 %.2f" % timeit())
+log("雲和")
 
 #tsly
 d.clear()
@@ -1060,7 +1122,7 @@ for line in open("泰顺罗阳同音字表.tsv"):
     if js not in d[jt]:
       d[jt].append(js)
 update("wuu_sl_tsly", d)
-logging.info("處理泰順羅陽話 %.2f" % timeit())
+log("泰順羅陽")
 
 #ra
 d.clear()
@@ -1082,7 +1144,7 @@ for line in open("瑞安话语音研究（陈海芳）-字表.tsv"):
         if p not in d[hz]:
           d[hz].append(p)
 update("wuu_oj_ra", d)
-logging.info("處理瑞安話 %.2f" % timeit())
+log("瑞安")
 
 #rads
 d.clear()
@@ -1098,7 +1160,7 @@ for line in open("瑞安東山-方言调查字表.tsv"):
     if js not in d[jt]:
       d[jt].append(js)
 update("wuu_oj_rads", d)
-logging.info("處理瑞安東山話 %.2f" % timeit())
+log("瑞安東山")
 
 #rahl
 d.clear()
@@ -1119,7 +1181,7 @@ for line in open("瑞安湖岭方言字表（太田斋）.tsv"):
         if p not in d[hz]:
           d[hz].append(p)
 update("wuu_oj_rahl", d)
-logging.info("處理瑞安湖嶺話 %.2f" % timeit())
+log("瑞安湖嶺")
 
 #rats
 d.clear()
@@ -1140,7 +1202,7 @@ for line in open("浙南瓯语(颜逸明)-瑞安陶山-字表.tsv"):
         if p not in d[hz]:
           d[hz].append(p)
 update("wuu_oj_rats", d)
-logging.info("處理瑞安陶山話 %.2f" % timeit())
+log("瑞安陶山")
 
 #yqyc
 d.clear()
@@ -1155,7 +1217,7 @@ for line in open("乐清乐成字表.tsv"):
     if jt != hz and len(jt) == 1 and js not in d[jt]:
       d[jt].append(js)
 update("wuu_oj_yqyc", d)
-logging.info("處理樂清樂成話 %.2f" % timeit())
+log("樂清樂成")
 
 #wz
 d.clear()
@@ -1173,7 +1235,7 @@ for line in open("温州方言同音字表2.0.tsv"):
   if jt != hz and len(jt) == 1 and js not in d[jt]:
     d[jt].append(js)
 update("wuu_oj_wz", d)
-logging.info("處理溫州話 %.2f" % timeit())
+log("溫州")
 
 #cnpm
 d.clear()
@@ -1189,7 +1251,7 @@ for line in open("苍南蒲门瓯语方言岛字表.tsv"):
   if jt != hz and len(jt) == 1 and js not in d[jt]:
     d[jt].append(js)
 update("wuu_cnpm", d)
-logging.info("處理蒼南蒲門話 %.2f" % timeit())
+log("蒼南蒲門")
 
 #wuu_oj_py
 d.clear()
@@ -1210,7 +1272,49 @@ for line in open("平阳方言记略(陈承融)-字表.tsv"):
         if p not in d[hz]:
           d[hz].append(p)
 update("wuu_oj_py", d)
-logging.info("處理平陽話 %.2f" % timeit())
+log("平陽")
+
+#wuu_oj_lg
+d.clear()
+for line in open("苍南方言志-龙港-字表.tsv"):
+  line = line.strip().replace('"','').replace(' ','')
+  if not line: continue
+  if line.startswith("#"):
+    ym = line[1:].split()[0]
+  else:
+    fs = line.split("\t")
+    sm = fs[0]
+    for sd,hzs in re.findall("\[(\d)\]([^\[\]]+)", fs[1]):
+      py = sm + ym + sd
+      hzs = re.findall("(.)(\{.*?\})?", hzs)
+      for hz, m in hzs:
+        m = m.replace("{", "`").replace("}", "`")
+        p = py + m
+        if p not in d[hz]:
+          d[hz].append(p)
+update("wuu_oj_lg", d)
+log("龍港")
+
+#wuu_oj_cnys
+d.clear()
+for line in open("苍南宜山字表.tsv"):
+  line = line.rstrip("\n").replace('"','').replace(' ','')
+  if not line: continue
+  if line.startswith("#"):
+    ym = line[1:].split()[0]
+  else:
+    fs = line.split("\t")
+    sm = fs[0]
+    for sd,hzs in re.findall("\[(\d)\]([^\[\]]+)", fs[1]):
+      py = sm + ym + sd
+      hzs = re.findall("(.)(\{.*?\})?", hzs)
+      for hz, m in hzs:
+        m = m.replace("{", "`").replace("}", "`")
+        p = py + m
+        if p not in d[hz]:
+          d[hz].append(p)
+update("wuu_oj_cnys", d)
+log("蒼南宜山")
 
 #jy
 tones = {'阳入':8,'阴上':3,'阳平':2,'阴入':7,'阳去':6,'阴平':1,'阴去':5,'阳上':4}
@@ -1227,7 +1331,7 @@ for line in open("缙云字表.tsv"):
     if js not in d[jt]:
       d[jt].append(js)
 update("wuu_jy", d)
-logging.info("處理縉雲話 %.2f" % timeit())
+log("縉雲")
 
 #nan
 d.clear()
@@ -1248,7 +1352,7 @@ for i in unicodes.keys():
       py = re.sub("\((.*?)\)", "\\1`俗`", py)
       py = re.sub("\[(.*?)\]", "\\1`替`", py)
       unicodes[i]["nan_tw"] = py
-logging.info("處理閩南話 %.2f" % timeit())
+log("閩南")
 
 #nan_lz
 lzs = ["dbls", "ldzz", "lz", "wcls"]
@@ -1277,12 +1381,12 @@ for index,lz in enumerate(lzs):
       if js not in d[hz]:
         d[hz].append(js)
   update("nan_lz_" + lz, d)
-logging.info("處理粤西閩語 %.2f" % timeit())
+log("粤西閩語")
 
 #nan_pn
 d.clear()
 tones = {'54':8,'53':3,'44':2,'32':7,'311':6,'223':1,'21':5,'213':4}
-for line in open("普宁字表初稿2（繁体兼容）.tsv"):
+for line in open("普宁字表初稿2.1（繁体兼容）.tsv"):
   fs = [i.strip('" ') for i in line.strip('\n').split('\t')]
   hz,yb,zs,sm,ym,sd = fs[:6]
   if not yb or len(hz) != 1: continue
@@ -1293,7 +1397,7 @@ for line in open("普宁字表初稿2（繁体兼容）.tsv"):
   if js not in d[hz]:
     d[hz].append(js)
 update("nan_cs_pn", d)
-logging.info("處理普寧話 %.2f" % timeit())
+log("普寧")
 
 #nan_st
 d.clear()
@@ -1311,11 +1415,11 @@ for line in open("方言调查字表2.3 （汕头）(3600字).tsv"):
     if js not in d[hz]:
       d[hz].append(js)
 update("nan_cs_st", d)
-logging.info("處理汕頭話 %.2f" % timeit())
+log("汕頭")
 
 #nan_cc_rp
 d.clear()
-for line in open("方言调查字表（闽-饶平）1.4.tsv"):
+for line in open("方言调查字表（闽-饶平）1.5.tsv"):
   fs = [i.strip('" ') for i in line.strip('\n').split('\t')]
   hz,py,yb,zs = fs[:4]
   if not yb: continue
@@ -1328,7 +1432,7 @@ for line in open("方言调查字表（闽-饶平）1.4.tsv"):
     if js not in d[hz]:
       d[hz].append(js)
 update("nan_cs_rp", d)
-logging.info("處理饒平話 %.2f" % timeit())
+log("饒平")
 
 #nan_cs_hllj
 tones = {'阳入':8,'阴上':3,'阳平':2,'阴入':7,'阴平':1,'去声':5,'阳上':4}
@@ -1348,7 +1452,7 @@ for line in open("惠来隆江字表1.02.tsv"):
     if js not in d[jt]:
       d[jt].append(js)
 update("nan_cs_hllj", d)
-logging.info("處理惠來隆江話 %.2f" % timeit())
+log("惠來隆江")
 
 #nan_cs_hllj
 d.clear()
@@ -1470,7 +1574,7 @@ for line in open("潮阳话字表1.0.tsv"):
   if js not in d[hz]:
     d[hz].append(js)
 update("nan_cs_cy", d)
-logging.info("處理潮陽話 %.2f" % timeit())
+log("潮陽")
 
 #cdo_nd
 tones = {'陽入':8,'上':3,'陽平':2,'陰入':7,'陽去':6,'陰平':1,'陰去':5}
@@ -1487,7 +1591,7 @@ for line in open("闽东宁德方言字表.tsv"):
     if js not in d[jt]:
       d[jt].append(js)
 update("cdo_nd", d)
-logging.info("處理寧德話 %.2f" % timeit())
+log("寧德")
 
 #hak
 #https://github.com/syndict/hakka/blob/master/hakka.dict.yaml
@@ -1534,7 +1638,7 @@ for line in tk:
         if py:
           d[hz].append(hk2ipa(py[0], sxtones))
 update("hak_sx", d)
-logging.info("處理客家話 %.2f" % timeit())
+log("客家")
 
 #hak_whhb
 d.clear()
@@ -1548,23 +1652,23 @@ for line in open("五华横陂客家方言字表.tsv"):
   if js not in d[hz]:
     d[hz].append(js)
 update("hak_whhb", d)
-logging.info("處理五華橫陂話 %.2f" % timeit())
+log("五華橫陂")
 
 #hak_whsz
 d.clear()
 tones = {'44':1,'13':2,'31':3,'53':5,'2':7,'4':8}
 for line in open("五华水寨客家话字表.tsv"):
   fs = [i.strip('" ') for i in line.strip('\n').split('\t')]
-  yb,hz = fs[:2]
+  yb,hz,zs = fs[:3]
   if not yb or len(hz) != 1: continue
   dz = re.findall("\d+$", yb)[0]
   yb = yb[:-len(dz)]
   sd = str(tones.get(dz))
-  js = yb + sd
+  js = yb + sd + ("`%s`"% zs if zs else "")
   if js not in d[hz]:
     d[hz].append(js)
 update("hak_whsz", d)
-logging.info("處理五華水寨話 %.2f" % timeit())
+log("五華水寨")
 
 #nc
 readings = "白文又"
@@ -1599,7 +1703,7 @@ for line in open("nc"):
 for hz in d:
   d[hz] = sorted(d[hz], key=readorder)
 update("gan_nc", d)
-logging.info("處理南昌話 %.2f" % timeit())
+log("南昌")
 
 #lc
 d.clear()
@@ -1638,7 +1742,7 @@ for line in open("臨川字表.tsv"):
           else:
             d[hz].append(p)
 update("gan_lc", d)
-logging.info("處理臨川話 %.2f" % timeit())
+log("臨川")
 
 #nshu
 d.clear()
@@ -1687,7 +1791,7 @@ for line in open("nsbzzzd.csv"):
   for hz in hzs:
     d[hz].append(py)
 update("hsn_nshu", d)
-logging.info("處理女書 %.2f" % timeit())
+log("女書")
 
 #cacc
 d.clear()
@@ -1715,11 +1819,11 @@ for line in open("淳安淳城同音字表.tsv"):
           else:
             d[hz].append(p)
 update("czh_yz_cacc", d)
-logging.info("處理淳安淳城話 %.2f" % timeit())
+log("淳安淳城")
 
-#jdmcwd
+#jdmc
 d.clear()
-for line in open("建德梅城文读.tsv"):
+for line in open("建德梅城白读.tsv"):
   line = line.strip('\n')
   fs = [i.strip('" ') for i in line.split('\t')]
   if not fs: continue
@@ -1742,8 +1846,91 @@ for line in open("建德梅城文读.tsv"):
             d[hz].insert(0, p)
           else:
             d[hz].append(p)
-update("czh_yz_jdmcwd", d)
-logging.info("處理建德梅城文讀 %.2f" % timeit())
+for line in open("建德梅城文读.tsv"):
+  line = line.strip('\n')
+  fs = [i.strip('" ') for i in line.split('\t')]
+  if not fs: continue
+  if fs[0].startswith("#"):
+    ym = fs[0][1:]
+  else:
+    if len(fs) != 2: continue
+    sm = fs[0].replace("Ø", "")
+    for sd,hzs in re.findall("\[(\d+)\]([^\[\]]+)", fs[1]):
+      if sd in "1236": sd = "1" + sd
+      py = sm + ym +sd
+      hzm = re.findall("(.)\d?(\{.*?\})?", hzs)
+      for hz, m in hzm:
+        m = m.strip("{}")
+        p = ""
+        if m:
+          p = "`文读。%s`" % m
+        else:
+          p = "`文`"
+        p = py + p
+        if p not in d[hz]:
+          if c == '-':
+            d[hz].insert(0, p)
+          else:
+            d[hz].append(p)
+update("czh_yz_jdmc", d)
+log("建德梅城")
+
+#jdsc
+d.clear()
+for line in open("建德寿昌白读.tsv"):
+  line = line.strip('\n')
+  fs = [i.strip('" ') for i in line.split('\t')]
+  if not fs: continue
+  if fs[0].startswith("#"):
+    ym = fs[0][1:]
+  else:
+    if len(fs) != 2: continue
+    sm = fs[0].replace("Ø", "")
+    for sd,hzs in re.findall("\[(\d+[ab]?)\]([^\[\]]+)", fs[1]):
+      if sd == "7a": sd = "7"
+      elif sd == "7b": sd = "9"
+      elif sd == "0": sd = ""
+      py = sm + ym +sd
+      hzm = re.findall("(.)\d?(\{.*?\})?", hzs)
+      for hz, m in hzm:
+        m = m.strip("{}")
+        p = ""
+        if m:
+          p = "`%s`" % m
+        p = py + p
+        if p not in d[hz]:
+          if c == '-':
+            d[hz].insert(0, p)
+          else:
+            d[hz].append(p)
+for line in open("建德寿昌文读.tsv"):
+  line = line.strip('\n')
+  fs = [i.strip('" ') for i in line.split('\t')]
+  if not fs: continue
+  if fs[0].startswith("#"):
+    ym = fs[0][1:]
+  else:
+    if len(fs) != 2: continue
+    sm = fs[0].replace("Ø", "")
+    for sd,hzs in re.findall("\[(\d+)\]([^\[\]]+)", fs[1]):
+      if sd.isdigit(): sd = "1" + sd
+      py = sm + ym +sd
+      hzm = re.findall("(.)\d?(\{.*?\})?", hzs)
+      for hz, m in hzm:
+        m = m.strip("{}")
+        p = ""
+        if m:
+          p = "`文读。%s`" % m
+        else:
+          p = "`文`"
+        p = py + p
+        if p not in d[hz]:
+          if c == '-':
+            d[hz].insert(0, p)
+          else:
+            d[hz].append(p)
+update("czh_yz_jdsc", d)
+log("建德壽昌")
 
 #sasc
 d.clear()
@@ -1757,7 +1944,7 @@ for line in open("遂安狮城同音字表.tsv"):
     if len(fs) != 2: continue
     sm = fs[0].replace("Ø", "")
     for sd,hzs in re.findall("\[(\d+)\]([^\[\]]+)", fs[1]):
-      py = sm + ym +sd
+      py = sm + ym + sd
       hzm = re.findall("(.)\d?(\{.*?\})?", hzs)
       for hz, m in hzm:
         m = m.strip("{}")
@@ -1771,7 +1958,36 @@ for line in open("遂安狮城同音字表.tsv"):
           else:
             d[hz].append(p)
 update("czh_yz_sasc", d)
-logging.info("處理遂安獅城話 %.2f" % timeit())
+log("遂安獅城")
+
+#lxcs
+d.clear()
+tones = {"1b": "11", "3b": "13", "5b":"15", "8b":"18", "7a":"7", "7b":"9"}
+for line in open("兰溪船上话同音字表.tsv"):
+  line = line.strip('\n')
+  fs = [i.strip('" ') for i in line.split('\t')]
+  if not fs: continue
+  if fs[0].startswith("#"):
+    ym = fs[0][1:]
+  else:
+    if len(fs) < 2: continue
+    sm = fs[0].replace("Ø", "")
+    for sd,hzs in re.findall("\[(\d+[ab]?)\]([^\[\]]+)", fs[1]):
+      py = sm + ym + tones.get(sd, sd)
+      hzm = re.findall("(.)\d?=?(\{.*?\})?", hzs)
+      for hz, m in hzm:
+        m = m.strip("{}")
+        p = ""
+        if m:
+          p = "`%s`" % m
+        p = py + p
+        if p not in d[hz]:
+          if c == '-':
+            d[hz].insert(0, p)
+          else:
+            d[hz].append(p)
+update("czh_yz_lxcs", d)
+log("蘭溪船上")
 
 #ko
 #https://github.com/nk2028/sino-korean-readings/blob/main/woosun-sin.csv
@@ -1784,7 +2000,7 @@ for line in open("woosun-sin.csv"):
     if py not in d[hz]:
       d[hz].append(py)
 update("ko_okm", d)
-logging.info("處理中世朝鮮 %.2f" % timeit())
+log("中世朝鮮")
 
 #patch
 patch = ruamel.yaml.load(open("patch.yaml"), Loader=ruamel.yaml.Loader)
@@ -1794,7 +2010,7 @@ for lang in patch:
       if i not in unicodes:
         unicodes[i]["hz"] = i
       unicodes[i][lang] = patch[lang][hz]
-logging.info("修正漢字音 %.2f" % timeit())
+log("修正", None)
 
 #sw
 d.clear()
@@ -1804,7 +2020,7 @@ for line in open("shuowen.tsv"):
   js = fs[1].replace("\t", "\n").strip()
   d[hz].append(js)
 update("sw", d)
-logging.info("處理說文解字 %.2f" % timeit())
+log("說文解字")
 
 #kx
 d.clear()
@@ -1816,7 +2032,7 @@ for line in open("kangxizidian-v3f.txt"):
     js = re.sub("頁(\d+)第(\d+)\n", lambda x: "%04d.%d"%(int(x[1]),int(x[2])), js)
     d[hz].append(js)
 update("kx", d)
-logging.info("處理康熙字典 %.2f" % timeit())
+log("康熙字典")
 
 #hd
 d.clear()
@@ -1845,7 +2061,7 @@ for hz in hd:
   js = re.sub("=(.)", "“\\1”", js).strip()
   d[hz] = ["%s\n%s"%(pages[hz], js)]
 update("hd", d)
-logging.info("處理漢語大字典 %.2f" % timeit())
+log("漢語大字典")
 
 #bh
 d.clear()
@@ -1857,7 +2073,7 @@ for line in open("/usr/share/unicode/Unihan_IRGSources.txt"):
       han = hex2chr(han)
       d[han].append(val)
 update("bh", d)
-logging.info("處理總畫數 %.2f" % timeit())
+log("總畫數")
 
 #bs
 bs = dict()
@@ -1881,7 +2097,7 @@ for line in open("/usr/share/unicode/Unihan_IRGSources.txt"):
       left = left.replace('-', 'f')
       d[han].append(bs[order]+left)
 update("bs", d)
-logging.info("部首檢字法 %.2f" % timeit())
+log("部首檢字")
 
 #variant
 variants = variant.get()
@@ -1889,13 +2105,7 @@ for i in list(unicodes.keys()):
   vad = unicodes[i]
   if i in variants:
     vad["va"] = " ".join(variants.get(i, i))
-logging.info("處理異體字 %.2f" % timeit())
-
-def ishz(c):
-  c = c.strip()
-  if len(c) != 1: return False
-  n = ord(c)
-  return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<0x31350
+log("異體字")
 
 #cj
 d.clear()
@@ -1930,7 +2140,7 @@ for line in open("cangjie6.dict.yaml"):
   if ishz(hz):
     d[hz].append(cj)
 update("cj6", d)
-logging.info("處理仓頡 %.2f" % timeit())
+log("仓頡")
 
 #wb
 d.clear()
@@ -1972,7 +2182,7 @@ for line in open("wb.csv"):
   if ishz(hz):
     d[hz].append(wb)
 update("wbh", d)
-logging.info("處理五筆 %.2f" % timeit())
+log("五筆")
 
 #lf
 d.clear()
@@ -2003,7 +2213,7 @@ for line in open("lfzy.tsv"):
       lf = lf.replace(" ", "")
       d[hz].append(lf)
 update("lf", d)
-logging.info("處理兩分 %.2f" % timeit())
+log("兩分")
 
 #fl
 d.clear()
@@ -2036,7 +2246,7 @@ for line in open("方言調查字表"):
   if han:
     d[han].append("FD")
 update("fl", d)
-logging.info("漢字分類 %.2f" % timeit())
+log("分類")
 
 #filter
 for i in sorted(unicodes.keys()):
@@ -2087,6 +2297,5 @@ fpy.close()
 
 conn.commit()
 conn.close()
-logging.info("保存數據庫 %.2f" % timeit())
-logging.info("處理總時間 %.2f" % (time() - start0))
-logging.info("音典總字數 %d" % len(unicodes))
+log("保存", None)
+log("耗時", unicodes, time() - start0)

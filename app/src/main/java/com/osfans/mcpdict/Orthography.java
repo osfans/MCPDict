@@ -39,7 +39,7 @@ public class Orthography {
     }
 
     public static String formatTone(String base, int tone, int lang) {
-        if (tone <= 0 || tone > 15) return base;
+        if (tone <= 0 || tone > 20) return base;
         String s = MCPDatabase.getToneName(lang);
         if (TextUtils.isEmpty(s)) return base;
         tone = tone - 1;
@@ -590,7 +590,7 @@ public class Orthography {
                     .replace("ong", "uŋ").replace("ng", "ŋ");
             s = s.replace("p", "pʰ").replace("t", "tʰ").replace("k", "kʰ")
                     .replace("b", "p").replace("d", "t").replace("g", "k")
-                    .replace("zh", "tʂ").replace("ch", "tʂʰ").replace("sh", "ʂ").replace("r", "ʐ")
+                    .replace("zh", "tʂ").replace("ch", "tʂʰ").replace("sh", "ʂ").replace("r", "ɻ")
                     .replace("z", "ʦ").replace("c", "ʦʰ")
                     .replace("j", "ʨ").replace("q", "ʨʰ").replace("x", "ɕ").replace("h", "x");
             return formatTone(s, tone - '0', MCPDatabase.COL_CMN);
