@@ -57,6 +57,7 @@ public class CustomSearchView extends RelativeLayout {
             editText.clearFocus();
             InputMethodManager imm = (InputMethodManager)v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+            setQuery();
             listener.onClick(v);
         });
     }
@@ -66,10 +67,16 @@ public class CustomSearchView extends RelativeLayout {
     }
 
     public String getQuery() {
-        return editText.getText().toString();
+        return MCPDatabase.getInput(getContext());
     }
 
     public void setQuery(String query) {
         editText.setText(query);
+        MCPDatabase.putInput(getContext(), query);
+    }
+
+    private void setQuery() {
+        String query = editText.getText().toString();
+        setQuery(query);
     }
 }
