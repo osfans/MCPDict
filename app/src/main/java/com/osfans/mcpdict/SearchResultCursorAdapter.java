@@ -34,7 +34,7 @@ import static com.osfans.mcpdict.MCPDatabase.COL_HD;
 import static com.osfans.mcpdict.MCPDatabase.COL_HZ;
 import static com.osfans.mcpdict.MCPDatabase.COL_KX;
 import static com.osfans.mcpdict.MCPDatabase.COL_SW;
-import static com.osfans.mcpdict.MCPDatabase.getName;
+import static com.osfans.mcpdict.MCPDatabase.getLabel;
 
 public class SearchResultCursorAdapter extends CursorAdapter {
 
@@ -88,17 +88,17 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         textView.setTextColor(color);
         textView = view.findViewById(R.id.text_sw);
         textView.setTag(COL_SW);
-        textView.setText(getName(COL_SW));
+        textView.setText(getLabel(COL_SW));
         color = MCPDatabase.getColor(COL_SW);
         textView.setTextColor(color);
         textView = view.findViewById(R.id.text_kx);
         textView.setTag(COL_KX);
-        textView.setText(getName(COL_KX));
+        textView.setText(getLabel(COL_KX));
         color = MCPDatabase.getColor(COL_KX);
         textView.setTextColor(color);
         textView = view.findViewById(R.id.text_hd);
         textView.setTag(COL_HD);
-        textView.setText(getName(COL_HD));
+        textView.setText(getLabel(COL_HD));
         color = MCPDatabase.getColor(COL_HD);
         textView.setTextColor(color);
         TableLayout table = view.findViewById(R.id.text_readings);
@@ -106,7 +106,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
             TableRow row = (TableRow)LayoutInflater.from(context).inflate(R.layout.search_result_row, null);
             TextView textViewName = row.findViewById(R.id.text_name);
-            String name = MCPDatabase.getName(i);
+            String name = MCPDatabase.getLabel(i);
             if (width == 0) width = getMaxWidth(textViewName);
             textViewName.setText(name);
             color = MCPDatabase.getColor(i);
@@ -123,9 +123,14 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return view;
     }
 
-    private boolean isColumnVisible(String languages, int i) {
-        if (TextUtils.isEmpty(languages) || i < MCPDatabase.COL_FIRST_READING) return true;
-        return MCPDatabase.getColumnName(i).matches(languages);
+    private boolean isColumnVisible(String languages, Set<String> customs, int i) {
+        if (i < MCPDatabase.COL_FIRST_READING) return true;
+        String column = MCPDatabase.getColumnName(i);
+        if (TextUtils.isEmpty(languages)) {
+            if (customs == null || customs.size() == 0) return true;
+            return customs.contains(column);
+        }
+        return column.matches(languages);
     }
 
     public static CharSequence formatIPA(int i, String string) {
@@ -184,10 +189,11 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         Orthography.setToneStyle(getStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(getStyle(R.string.pref_key_tone_value_display));
         String languages = PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.pref_key_show_language_names), "");
+        Set<String> customs = PreferenceManager.getDefaultSharedPreferences(context).getStringSet(context.getString(R.string.pref_key_custom_languages), null);
 
         for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
             string = cursor.getString(i);
-            boolean visible = string != null && isColumnVisible(languages, i);
+            boolean visible = string != null && isColumnVisible(languages, customs, i);
             View row = view.findViewWithTag("row" + i);
             row.setVisibility(visible ? View.VISIBLE : View.GONE);
             if (!visible) continue;
@@ -214,7 +220,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             if (i == COL_BS) str = str.replace("f", "-");
             if (TextUtils.isEmpty(str)) continue;
             str = str.toUpperCase();
-            sb.append(String.format("<p>【%s】%s</p>", MCPDatabase.getSearchAsName(i), str));
+            sb.append(String.format("<p>【%s】%s</p>", MCPDatabase.getLabel(i), str));
         }
         String info = sb.toString().replace(",", ", ");
         textView.setOnClickListener(view1 -> {

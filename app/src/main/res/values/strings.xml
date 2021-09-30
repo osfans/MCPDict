@@ -41,7 +41,6 @@
     <string name="copy_all_reading">複製“%1$s”字的所有讀音</string>
     <string name="copy_done">已複製到剪貼板</string>
     <string name="search_as_ja_any">日語（任意讀音）</string>
-    <string name="pref_key_search_as">SEARCH_AS</string>
 
     <string name="favorite_total">當前生字本中共有 %d 個生字</string>
     <string name="favorite_empty">當前生字本中沒有生字。\n\n在“字典”頁面，點擊查詢結果右上角的五角星，可以把相應的漢字加入生字本中。\n\n若您備份過生字本，可以按此導入。</string>
@@ -239,6 +238,7 @@
     <string-array name="pref_entries_show_languages">
         <item>全部語言</item>
         <item>當前語言</item>
+        <item>@string/pref_title_custom_languages</item>
         <item>歷史音</item>
         <item>代表方言</item>
         <item>官話</item>
@@ -260,6 +260,7 @@
     </string-array>
     <string-array name="pref_values_show_languages">
         <item>.+</item>
+        <item>""</item>
         <item>""</item>
         <item>och_.+|ltc_.+</item>
         <item>cmn_|cmn_xn_yzll|cmn_hy_hc_yz|wuu_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_nshu|yue_hk|csp_nntz|nan_tw|cdo_nd</item>
@@ -311,4 +312,8 @@
         <item>kBigFive</item>
         <item>kGB0</item>
     </string-array>
+    <string name="pref_key_custom_languages">CUSTOM_LANGUAGES</string>
+    <string name="pref_title_custom_languages">自選語言</string>
+    <string name="pref_key_input">INPUT</string>
+    <string name="pref_key_language">LANGUAGE</string>
 </resources>

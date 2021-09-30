@@ -78,11 +78,12 @@ public class MCPDatabase extends SQLiteAssetHelper {
 
     private static final String TABLE_NAME = "mcpdict";
 
-    private static String[] COLUMNS;
+    private static String[] ALL_COLUMNS;
     private static final String[] JA_COLUMNS = new String[] {SEARCH_AS_JA_GO, SEARCH_AS_JA_KAN, SEARCH_AS_JA_TOU, SEARCH_AS_JA_KWAN, SEARCH_AS_JA_OTHER};
     private static final String[] WB_COLUMNS = new String[] {"wbh", "wb86", "wb98", "wb06"};
-    private static ArrayList<String> SEARCH_AS_NAMES;
-    private static ArrayList<String> NAMES;
+    private static ArrayList<String> LANGUAGES, ALL_LANGUAGES;
+    private static ArrayList<String> COLUMNS;
+    private static ArrayList<String> LABELS;
     private static ArrayList<Integer> COLORS;
     private static ArrayList<String> DICT_NAMES;
     private static ArrayList<String> DICT_LINKS;
@@ -96,7 +97,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         db = new MCPDatabase(context).getWritableDatabase();
         String userDbPath = UserDatabase.getDatabasePath();
         db.execSQL("ATTACH DATABASE '" + userDbPath + "' AS user");
-        getSearchAsColumns();
+        initArrays();
     }
 
     public MCPDatabase(Context context) {
@@ -109,8 +110,10 @@ public class MCPDatabase extends SQLiteAssetHelper {
         // db = getWritableDatabase();
     }
 
-    public static Cursor search(String input, int mode, Context context) {
+    public static Cursor search(Context context) {
         // Search for one or more keywords, considering mode and options
+        String input = getInput(context);
+        int mode = getColumnIndex(context);
 
         // Get options and settings from SharedPreferences
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
@@ -279,15 +282,15 @@ public class MCPDatabase extends SQLiteAssetHelper {
         return db.rawQuery(query, args);
     }
 
-    private static void getSearchAsColumns() {
-        if (COLUMNS != null || db == null) return;
+    private static void initArrays() {
+        if (ALL_COLUMNS != null || db == null) return;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         String[] projection = {"*"};
         String query = qb.buildQuery(projection, "rowid = 1",  null, null, null, null);
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
-        COLUMNS = cursor.getColumnNames();
+        ALL_COLUMNS = cursor.getColumnNames();
         int n = cursor.getColumnCount();
 
         COL_HZ = cursor.getColumnIndex(SEARCH_AS_HZ);
@@ -312,21 +315,32 @@ public class MCPDatabase extends SQLiteAssetHelper {
         COL_FIRST_READING = COL_SG;
         COL_LAST_READING = COL_JA_FIRST + 4;
 
-        SEARCH_AS_NAMES = new ArrayList<>();
+        LANGUAGES = new ArrayList<>();
+        COLUMNS = new ArrayList<>();
+        ALL_LANGUAGES = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            SEARCH_AS_NAMES.add(cursor.getString(i));
+            if (i < COL_JA_ANY) {
+                LANGUAGES.add(cursor.getString(i));
+                COLUMNS.add(cursor.getColumnName(i));
+            }
+            ALL_LANGUAGES.add(cursor.getString(i));
         }
         cursor.close();
     }
 
-    public static ArrayList<String> getSearchAsNames() {
-        if (SEARCH_AS_NAMES == null) getSearchAsColumns();
-        return SEARCH_AS_NAMES;
+    public static ArrayList<String> getLanguages() {
+        if (LANGUAGES == null) initArrays();
+        return LANGUAGES;
     }
 
-    public static String getSearchAsName(int index) {
-        if (SEARCH_AS_NAMES == null) getSearchAsColumns();
-        return SEARCH_AS_NAMES.get(index);
+    public static ArrayList<String> getFields() {
+        if (COLUMNS == null) initArrays();
+        return COLUMNS;
+    }
+
+    public static String getFullName(int index) {
+        if (ALL_LANGUAGES == null) initArrays();
+        return ALL_LANGUAGES.get(index);
     }
 
     public static boolean isHzMode(int mode) {
@@ -349,8 +363,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
         return !isKO(mode) && !isJA(mode);
     }
 
-    private static void getNames() {
-        if (NAMES != null || db == null) return;
+    private static void getLabels() {
+        if (LABELS != null || db == null) return;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         String[] projection = {"*"};
@@ -358,16 +372,16 @@ public class MCPDatabase extends SQLiteAssetHelper {
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
         int n = cursor.getColumnCount();
-        NAMES = new ArrayList<>();
+        LABELS = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            NAMES.add(cursor.getString(i));
+            LABELS.add(cursor.getString(i));
         }
         cursor.close();
     }
 
-    public static String getName(int index) {
-        if (NAMES == null) getNames();
-        return NAMES.get(index);
+    public static String getLabel(int index) {
+        if (LABELS == null) getLabels();
+        return LABELS.get(index);
     }
 
     private static void getColors() {
@@ -453,8 +467,9 @@ public class MCPDatabase extends SQLiteAssetHelper {
         cursor.close();
     }
 
-    public static Spanned getIntro(int index) {
+    public static Spanned getIntro(Context context) {
         if (INTROS == null) getIntros();
+        int index = getColumnIndex(context);
         String intro = index < 0 ? "" : INTROS.get(index);
         if (TextUtils.isEmpty(intro)) intro = INTROS.get(0);
         return HtmlCompat.fromHtml(intro, HtmlCompat.FROM_HTML_MODE_COMPACT);
@@ -483,11 +498,47 @@ public class MCPDatabase extends SQLiteAssetHelper {
     }
 
     public static String getColumnName(int index) {
-        if (COLUMNS == null) getSearchAsColumns();
-        return index < 0 ? "" : COLUMNS[index];
+        if (ALL_COLUMNS == null) initArrays();
+        return index < 0 ? "" : ALL_COLUMNS[index];
     }
 
     public static boolean isReading(int index) {
         return index >= COL_FIRST_READING && index <= COL_LAST_READING;
+    }
+
+    private static void putString(Context context, int key, String value) {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        sp.edit().putString(context.getString(key), value).apply();
+    }
+
+    private static String getString(Context context, int key) {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        return sp.getString(context.getResources().getString(key), "");
+    }
+
+    public static void putInput(Context context, String value) {
+        putString(context, R.string.pref_key_input, value);
+    }
+
+    public static String getInput(Context context) {
+        return getString(context, R.string.pref_key_input);
+    }
+
+    public static void putLanguage(Context context, String value) {
+        putString(context, R.string.pref_key_language, value);
+    }
+
+    public static String getLanguage(Context context) {
+        return getString(context, R.string.pref_key_language);
+    }
+
+    public static void putColumnIndex(Context context, int mode) {
+        String value = getFullName(mode);
+        putLanguage(context, value);
+    }
+
+    public static int getColumnIndex(Context context) {
+        String value = getLanguage(context);
+        return ALL_LANGUAGES.indexOf(value);
     }
 }

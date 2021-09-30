@@ -143,7 +143,7 @@ public class SearchResultFragment extends ListFragment {
             if (cols.size() > 2)
                 menuCopy.add(GROUP_READING, COL_ALL_READINGS, 0, getString(R.string.all_reading));
             for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
-                if ((cols.contains(i))) menuCopy.add(GROUP_READING, i, 0, MCPDatabase.getSearchAsName(i));
+                if ((cols.contains(i))) menuCopy.add(GROUP_READING, i, 0, MCPDatabase.getFullName(i));
             }
 
             for (int i = MCPDatabase.COL_HZ; i <= MCPDatabase.COL_LAST_READING; i++) {
@@ -161,7 +161,7 @@ public class SearchResultFragment extends ListFragment {
             }
             menu.add(GROUP_READING, COL_HZ, 90, getString(R.string.copy_hz));
             if (col >= COL_FIRST_READING) {
-                String searchAsName = MCPDatabase.getSearchAsName(col);
+                String searchAsName = MCPDatabase.getFullName(col);
                 item = menu.add(getString(R.string.search_homophone, hz, searchAsName));
                 item.setOnMenuItemClickListener(i->{
                     DictionaryFragment dictionaryFragment = ((MainActivity) requireActivity()).getDictionaryFragment();
@@ -257,7 +257,7 @@ public class SearchResultFragment extends ListFragment {
     }
 
     private String formatReading(View entry, int index) {
-        String prefix = MCPDatabase.getName(index);
+        String prefix = MCPDatabase.getLabel(index);
         String reading = Objects.requireNonNull(getCopyText(entry, index));
         return formatReading(prefix, reading);
     }
