@@ -11,7 +11,7 @@ import java.util.Locale;
 public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Locale.setDefault(Locale.KOREA);
+        Utils.setLocale(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
         getSupportFragmentManager()

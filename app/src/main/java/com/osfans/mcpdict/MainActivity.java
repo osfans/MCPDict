@@ -1,12 +1,11 @@
 package com.osfans.mcpdict;
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 
 import androidx.viewpager2.widget.ViewPager2;
-
-import java.util.Locale;
-
 
 public class MainActivity extends ActivityWithOptionsMenu {
 
@@ -14,7 +13,7 @@ public class MainActivity extends ActivityWithOptionsMenu {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Locale.setDefault(Locale.KOREA);
+        Utils.setLocale(this);
         // Initialize the some "static" classes on separate threads
         new AsyncTask<Void, Void, Void>() {
             @Override
@@ -87,5 +86,13 @@ public class MainActivity extends ActivityWithOptionsMenu {
         if (fragment != null) {
             fragment.refresh();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        String title = sp.getString(getString(R.string.pref_key_custom_title), getString(R.string.app_name));
+        setTitle(title);
     }
 }

@@ -6,13 +6,11 @@ import android.webkit.WebView;
 
 import androidx.fragment.app.FragmentActivity;
 
-import java.util.Locale;
-
 public class HelpActivity extends FragmentActivity {
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Locale.setDefault(Locale.KOREA);
+        Utils.setLocale(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help_activity);
 

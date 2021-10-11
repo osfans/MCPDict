@@ -35,12 +35,15 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
 
     private View selfView;
     private CustomSearchView searchView;
-    private Spinner spinnerSearchAs;
+    private Spinner spinnerSearchAs, spinnerShowLang;
     private CheckBox checkBoxAllowVariants;
     private SearchResultFragment fragmentResult;
     ArrayAdapter<CharSequence> adapter, adapterShowLang, adapterShowChar;
 
-    private void updateCurrentLanguage(int position) {
+    private void updateCurrentLanguage() {
+        Object column = spinnerSearchAs.getSelectedItem();
+        if (column != null) Utils.putLanguage(getContext(), column.toString());
+        int position = spinnerShowLang.getSelectedItemPosition();
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
         sp.edit().putInt(getString(R.string.pref_key_show_language_index), position).apply();
         String name = getResources().getStringArray(R.array.pref_values_show_languages)[position];
@@ -68,14 +71,13 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         // Set up the search view
         searchView = selfView.findViewById(R.id.search_view);
         searchView.setSearchButtonOnClickListener(view -> {
-            Object column = spinnerSearchAs.getSelectedItem();
-            if (column != null) MCPDatabase.putLanguage(getContext(), column.toString());
+            updateCurrentLanguage();
             refresh();
             fragmentResult.scrollToTop();
         });
 
         // Set up the spinner
-        Spinner spinnerShowLang = selfView.findViewById(R.id.spinner_show_languages);
+        spinnerShowLang = selfView.findViewById(R.id.spinner_show_languages);
         adapterShowLang = ArrayAdapter.createFromResource(requireActivity(),
                 R.array.pref_entries_show_languages, android.R.layout.simple_spinner_item);
         adapterShowLang.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -85,7 +87,6 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         spinnerShowLang.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                updateCurrentLanguage(position);
                 searchView.clickSearchButton();
             }
             @Override
@@ -118,7 +119,6 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         spinnerSearchAs.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                updateCurrentLanguage(spinnerShowLang.getSelectedItemPosition());
                 searchView.clickSearchButton();
             }
             @Override
@@ -265,7 +265,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
                 }
             }
             //adapter.add(getString(R.string.search_as_ja_any));
-            String column = MCPDatabase.getLanguage(getContext());
+            String column = Utils.getLanguage(getContext());
             int index = adapter.getPosition(column);
             if (index >= 0) spinnerSearchAs.setSelection(index);
         }

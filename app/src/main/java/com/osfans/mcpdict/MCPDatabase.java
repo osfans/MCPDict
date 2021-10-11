@@ -84,7 +84,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     private static ArrayList<String> LANGUAGES, ALL_LANGUAGES;
     private static ArrayList<String> COLUMNS;
     private static ArrayList<String> LABELS;
-    private static ArrayList<Integer> COLORS;
+    private static ArrayList<String> COLORS;
     private static ArrayList<String> DICT_NAMES;
     private static ArrayList<String> DICT_LINKS;
     private static ArrayList<String> INTROS;
@@ -112,7 +112,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
 
     public static Cursor search(Context context) {
         // Search for one or more keywords, considering mode and options
-        String input = getInput(context);
+        String input = Utils.getInput(context);
         int mode = getColumnIndex(context);
 
         // Get options and settings from SharedPreferences
@@ -395,15 +395,23 @@ public class MCPDatabase extends SQLiteAssetHelper {
         int n = cursor.getColumnCount();
         COLORS = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            String c = cursor.getString(i);
-            COLORS.add(Color.parseColor(c));
+            COLORS.add(cursor.getString(i));
         }
         cursor.close();
     }
 
     public static int getColor(int index) {
         if (COLORS == null) getColors();
-        return COLORS.get(index);
+        String c = COLORS.get(index);
+        if (c.contains(",")) c = c.split(",")[0];
+        return Color.parseColor(c);
+    }
+
+    public static int getSubColor(int index) {
+        if (COLORS == null) getColors();
+        String c = COLORS.get(index);
+        if (c.contains(",")) c = c.split(",")[1];
+        return Color.parseColor(c);
     }
 
     private static void getDictNames() {
@@ -472,6 +480,11 @@ public class MCPDatabase extends SQLiteAssetHelper {
         int index = getColumnIndex(context);
         String intro = index < 0 ? "" : INTROS.get(index);
         if (TextUtils.isEmpty(intro)) intro = INTROS.get(0);
+        if (index == 0) {
+            intro = String.format(Locale.getDefault(), "%s%s<br>%s", context.getString(R.string.version), BuildConfig.VERSION_NAME, intro);
+        } else if (index > 0) {
+            intro = String.format(Locale.getDefault(), "%s%s<br>%s", context.getString(R.string.name), getFullName(index), intro);
+        }
         return HtmlCompat.fromHtml(intro, HtmlCompat.FROM_HTML_MODE_COMPACT);
     }
 
@@ -506,39 +519,12 @@ public class MCPDatabase extends SQLiteAssetHelper {
         return index >= COL_FIRST_READING && index <= COL_LAST_READING;
     }
 
-    private static void putString(Context context, int key, String value) {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-        sp.edit().putString(context.getString(key), value).apply();
-    }
-
-    private static String getString(Context context, int key) {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-        return sp.getString(context.getResources().getString(key), "");
-    }
-
-    public static void putInput(Context context, String value) {
-        putString(context, R.string.pref_key_input, value);
-    }
-
-    public static String getInput(Context context) {
-        return getString(context, R.string.pref_key_input);
-    }
-
-    public static void putLanguage(Context context, String value) {
-        putString(context, R.string.pref_key_language, value);
-    }
-
-    public static String getLanguage(Context context) {
-        return getString(context, R.string.pref_key_language);
-    }
-
     public static void putColumnIndex(Context context, int mode) {
         String value = getFullName(mode);
-        putLanguage(context, value);
+        Utils.putLanguage(context, value);
     }
-
     public static int getColumnIndex(Context context) {
-        String value = getLanguage(context);
+        String value = Utils.getLanguage(context);
         return ALL_LANGUAGES.indexOf(value);
     }
 }

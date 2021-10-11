@@ -67,12 +67,12 @@ public class CustomSearchView extends RelativeLayout {
     }
 
     public String getQuery() {
-        return MCPDatabase.getInput(getContext());
+        return Utils.getInput(getContext());
     }
 
     public void setQuery(String query) {
         editText.setText(query);
-        MCPDatabase.putInput(getContext(), query);
+        Utils.putInput(getContext(), query);
     }
 
     private void setQuery() {

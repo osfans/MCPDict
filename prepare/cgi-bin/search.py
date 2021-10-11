@@ -187,10 +187,13 @@ regions={
 	'och_':'歷史音',
 	'ltc_':'歷史音',
 	'cmn_':'官話',
+	'cmn_xn_':'西南官話',
 	'cmn_hy_':'江淮官話',
 	'cmn_hy_hc_':'江淮官話-洪巢片',
 	'cmn_hy_tt_':'江淮官話-通泰片',
+	'cmn_fyd_':'官話方言島',
 	'wuu_':'吳語',
+	'wuu_th_':'吳語-太湖片',
 	'wuu_oj_':'吳語-甌江片',
 	'wuu_sl_':'吳語-上麗片',
 	'czh_':'徽語',
@@ -217,6 +220,20 @@ def getRegion(k):
 
 def getRegionDiff(k, last):
 	return k.count("-") - last.count("-")
+
+def getColorName(k):
+	name = NAMES[k]
+	color = COLORS[k]
+	fmt = "<font color=%s>%s</font>"
+	if "," in color:
+		colors = color.split(",")
+		m = len(name)//2
+		names = name[:m],name[m:]
+		s = ""
+		for i in range(2):
+			s += fmt % (colors[1 - i], names[i])
+		return s
+	return fmt % (color, name)
 
 for value in hzs:
 	sqls = list(map(lambda x: getSelect(x, value), getKeys(key)))
@@ -250,7 +267,8 @@ for value in hzs:
 								s += "<details open><summary>%s</summary><ul>"%region.split("-")[i]
 					s +="<details open><summary>%s</summary><ul>"%region.rsplit("-", 1)[-1]
 					last = region
-				s += ("<ul><div class=place style='border:1px %s solid;'><font color=%s>%s</font></div><div class=ipa>%s</div></ul>"%(COLORS[k],COLORS[k],NAMES[k],rich(r, k)))
+				color = COLORS[k].split(",")[0]
+				s += ("<ul><div class=place style='border:1px %s solid;'>%s</div><div class=ipa>%s</div></ul>"%(color,getColorName(k),rich(r, k)))
 		s+="</ul></details>\n"
 if not s:
 	s = getString("no_matches")

@@ -57,13 +57,15 @@ public class Orthography {
                         .replace('2', '˨')
                         .replace('3', '˧')
                         .replace('4', '˦')
-                        .replace('5', '˥');
+                        .replace('5', '˥')
+                        .replace('0', ' ');
             } else { //數字
                 tv = tv.replace('1', '¹')
                         .replace('2', '²')
                         .replace('3', '³')
                         .replace('4', '⁴')
-                        .replace('5', '⁵');
+                        .replace('5', '⁵')
+                        .replace('0', '⁰');
             }
             base += tv;
         }
