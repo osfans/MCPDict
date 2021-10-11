@@ -6,10 +6,17 @@ import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
 import android.preference.PreferenceManager;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
+import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,8 +32,10 @@ import androidx.core.text.HtmlCompat;
 
 import java.lang.ref.WeakReference;
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.IntStream;
 
 import static com.osfans.mcpdict.MCPDatabase.COL_BH;
 import static com.osfans.mcpdict.MCPDatabase.COL_BS;
@@ -34,7 +43,9 @@ import static com.osfans.mcpdict.MCPDatabase.COL_HD;
 import static com.osfans.mcpdict.MCPDatabase.COL_HZ;
 import static com.osfans.mcpdict.MCPDatabase.COL_KX;
 import static com.osfans.mcpdict.MCPDatabase.COL_SW;
+import static com.osfans.mcpdict.MCPDatabase.getColor;
 import static com.osfans.mcpdict.MCPDatabase.getLabel;
+import static com.osfans.mcpdict.MCPDatabase.getSubColor;
 
 public class SearchResultCursorAdapter extends CursorAdapter {
 
@@ -77,6 +88,21 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return getMeasuredWidth(textView);
     }
 
+    private void formatTextView(TextView tv, int i) {
+        int color = MCPDatabase.getColor(i);
+        int subColor = MCPDatabase.getSubColor(i);
+        if (color == subColor) {
+            tv.setBackgroundTintList(ColorStateList.valueOf(color));
+        } else {
+            GradientDrawable gd = new GradientDrawable(
+                    GradientDrawable.Orientation.LEFT_RIGHT,
+                    new int[] {subColor, color, color});
+            gd.setCornerRadius(5f);
+            tv.setBackground(gd);
+        }
+        tv.setAlpha(0.8f);
+    }
+
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         View view = inflater.inflate(layout, parent, false);
@@ -108,10 +134,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             TextView textViewName = row.findViewById(R.id.text_name);
             String name = MCPDatabase.getLabel(i);
             if (width == 0) width = getMaxWidth(textViewName);
+            formatTextView(textViewName, i);
             textViewName.setText(name);
-            color = MCPDatabase.getColor(i);
-            textViewName.setBackgroundTintList(ColorStateList.valueOf(color));
-            textViewName.setTextColor(color);
             textViewName.setTextScaleX(width/(float)getMeasuredWidth(textViewName));
             final TextView textViewDetail = row.findViewById(R.id.text_detail);
             textViewDetail.setTag(i);
@@ -181,6 +205,17 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return getRichText(s);
     }
 
+    private void hasGlyph(String s) {
+        Paint paint = new Paint();
+        Typeface typeface = Typeface.DEFAULT;//ResourcesCompat.getFont(getContext(), R.font.han);
+        //paint.setTypeface(typeface);
+        for(int i:s.codePoints().toArray()
+             ) {
+            String t = Orthography.HZ.toHz(i);
+            Log.e("kyle", t+"="+paint.hasGlyph(t));
+        }
+    }
+
     @Override
     public void bindView(final View view, final Context context, Cursor cursor) {
         String hz, string;
@@ -201,6 +236,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             textView = view.findViewWithTag(i);
             textView.setTag(R.id.tag_raw, getRawText(string));
             CharSequence cs = formatIPA(i, string);
+            //hasGlyph(string);
             textView.setText(cs);
         }
 
