@@ -523,6 +523,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         String value = getFullName(mode);
         Utils.putLanguage(context, value);
     }
+
     public static int getColumnIndex(Context context) {
         String value = Utils.getLanguage(context);
         return ALL_LANGUAGES.indexOf(value);

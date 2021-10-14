@@ -246,9 +246,16 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         }
     }
 
+    private void refreshSearchAs() {
+        String lang = Utils.getLanguage(getContext());
+        int index = adapter.getPosition(lang);
+        if (index >= 0) spinnerSearchAs.setSelection(index);
+    }
+
     public void refresh(String query, int mode) {
         searchView.setQuery(query);
         MCPDatabase.putColumnIndex(getContext(), mode);
+        refreshSearchAs();
         refresh();
     }
 
@@ -265,9 +272,7 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
                 }
             }
             //adapter.add(getString(R.string.search_as_ja_any));
-            String column = Utils.getLanguage(getContext());
-            int index = adapter.getPosition(column);
-            if (index >= 0) spinnerSearchAs.setSelection(index);
+            refreshSearchAs();
         }
     }
 }

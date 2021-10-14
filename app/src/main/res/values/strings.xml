@@ -243,7 +243,7 @@
         <item>代表方言</item>
         <item>官話</item>
         <item>西南官話</item>
-        <item>淮語</item>
+        <item>江淮官話</item>
         <item>淮語洪巢片</item>
         <item>淮語通泰片</item>
         <item>官話方言島</item>
@@ -267,7 +267,7 @@
         <item>""</item>
         <item>""</item>
         <item>och_.+|ltc_.+</item>
-        <item>cmn_|cmn_xn_yzll|cmn_hy_hc_yz|wuu_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_nshu|yue_hk|csp_nntz|nan_tw|cdo_nd</item>
+        <item>cmn_|cmn_xn_yzll|cmn_hy_hc_yz|cjy_zh_yyhsy|wuu_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_nshu|yue_hk|csp_nntz|nan_tw|cdo_nd</item>
         <item>cmn.*</item>
         <item>cmn_xn_.+</item>
         <item>cmn_hy_.+</item>
@@ -286,7 +286,7 @@
         <item>nan.*|cdo_.+</item>
         <item>nan_lz_.+</item>
         <item>nan_cs_.+</item>
-        <item>wuu.*|czh.*|gan.*|hak.*|hsn.*|yue.*|nan.*|cdo.*|csp.*</item>
+        <item>cjy.*|wuu.*|czh.*|gan.*|hak.*|hsn.*|yue.*|nan.*|cdo.*|csp.*</item>
         <item>vi_|ko_.+|ja_.+</item>
     </string-array>
 

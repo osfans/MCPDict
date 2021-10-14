@@ -6,8 +6,10 @@ import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
 import android.preference.PreferenceManager;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
@@ -86,21 +88,19 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return getMeasuredWidth(textView);
     }
 
-    private void setSpanText(TextView tv, int i, String s) {
-        SpannableStringBuilder builder = new SpannableStringBuilder();
-        int m = s.length() / 2;
-        String s1 = s.substring(0, m);
-        String s2 = s.substring(m);
-        SpannableString str1= new SpannableString(s1);
+    private void formatTextView(TextView tv, int i) {
         int color = MCPDatabase.getColor(i);
         int subColor = MCPDatabase.getSubColor(i);
-        str1.setSpan(new ForegroundColorSpan(subColor), 0, str1.length(), 0);
-        builder.append(str1);
-        SpannableString str2= new SpannableString(s2);
-        str2.setSpan(new ForegroundColorSpan(color), 0, str2.length(), 0);
-        builder.append(str2);
-
-        tv.setText(builder, TextView.BufferType.SPANNABLE);
+        if (color == subColor) {
+            tv.setBackgroundTintList(ColorStateList.valueOf(color));
+        } else {
+            GradientDrawable gd = new GradientDrawable(
+                    GradientDrawable.Orientation.LEFT_RIGHT,
+                    new int[] {subColor, color, color});
+            gd.setCornerRadius(5f);
+            tv.setBackground(gd);
+        }
+        tv.setAlpha(0.8f);
     }
 
     @Override
@@ -134,9 +134,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             TextView textViewName = row.findViewById(R.id.text_name);
             String name = MCPDatabase.getLabel(i);
             if (width == 0) width = getMaxWidth(textViewName);
-            color = MCPDatabase.getColor(i);
-            textViewName.setBackgroundTintList(ColorStateList.valueOf(color));
-            setSpanText(textViewName, i, name);
+            formatTextView(textViewName, i);
+            textViewName.setText(name);
             textViewName.setTextScaleX(width/(float)getMeasuredWidth(textViewName));
             final TextView textViewDetail = row.findViewById(R.id.text_detail);
             textViewDetail.setTag(i);
@@ -213,8 +212,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         for(int i:s.codePoints().toArray()
              ) {
             String t = Orthography.HZ.toHz(i);
-            if (!paint.hasGlyph(t))
-                Log.e("kyle", t+"="+paint.hasGlyph(t));
+            Log.e("kyle", t+"="+paint.hasGlyph(t));
         }
     }
 
@@ -238,7 +236,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             textView = view.findViewWithTag(i);
             textView.setTag(R.id.tag_raw, getRawText(string));
             CharSequence cs = formatIPA(i, string);
-            hasGlyph(string);
+            //hasGlyph(string);
             textView.setText(cs);
         }
 

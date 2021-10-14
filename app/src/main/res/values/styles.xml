@@ -10,6 +10,9 @@
     <style name="FontName">
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/border</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
     <style name="FontDetail">
