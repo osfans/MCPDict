@@ -143,7 +143,7 @@ def getCharsetSQL():
 	return sql
 
 if hzs:
-	hzs = hzs.decode("U8")[:10].strip()
+	hzs = hzs.decode("U8").strip()
 else:
 	print(INTROS.get(key, INTROS["hz"]))
 	conn.close()
@@ -219,6 +219,7 @@ def getRegion(k):
 	for i in rks:
 		if k.startswith(i):
 			return regions[i]
+	return ""
 
 def getRegionDiff(k, last):
 	return k.count("-") - last.count("-")

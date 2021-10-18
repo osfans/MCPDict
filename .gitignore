@@ -9,3 +9,5 @@ build/
 *.db
 *.iml
 *.keystore
+*.xls
+*.xlsx
