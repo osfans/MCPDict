@@ -241,20 +241,23 @@
         <item>@string/pref_title_custom_languages</item>
         <item>歷史音</item>
         <item>代表方言</item>
+        <item>中原官話</item>
         <item>西南官話</item>
         <item>淮語</item>
         <item>淮語洪巢片</item>
         <item>淮語通泰片</item>
         <item>官話方言島</item>
         <item>吳語</item>
-        <item>吳語毗陵片</item>
         <item>吳語太湖片</item>
+        <item>吳語毗陵小片</item>
+        <item>吳語蘇滬嘉小片</item>
         <item>吳語台州片</item>
         <item>吳語上麗片</item>
         <item>吳語甌江片</item>
         <item>徽語嚴州片</item>
         <item>贛語</item>
         <item>客語</item>
+        <item>湘語</item>
         <item>粵語</item>
         <item>閩語</item>
         <item>閩南語雷州片</item>
@@ -266,23 +269,26 @@
         <item>""</item>
         <item>""</item>
         <item>och_.+|ltc_.+</item>
-        <item>cmn_|cmn_xn_yzll|cmn_hy_hc_yz|cjy_zh_yyhsy|wuu_th_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_nshu|yue_hk|csp_nntz|nan_tw|cdo_nd</item>
+        <item>cmn_|cmn_zho_xa|cmn_jil_jn|cmn_xn_hg_wh|cmn_hy_hc_yz|cjy_bz_ty|wuu_th_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_cs|yue_hk|csp_nntz|nan_tw|cdo_nd|mnp_jo</item>
+        <item>cmn_zho_.+</item>
         <item>cmn_xn_.+</item>
         <item>cmn_hy_.+</item>
         <item>cmn_hy_hc_.+</item>
         <item>cmn_hy_tt_.+</item>
         <item>cmn_fyd_.+</item>
         <item>wuu.*</item>
-        <item>wuu_pl_.+</item>
         <item>wuu_th_.+</item>
+        <item>wuu_th_pl_.+</item>
+        <item>wuu_th_shj_.+</item>
         <item>wuu_tz_.+</item>
         <item>wuu_sl_.+</item>
         <item>wuu_oj_.+</item>
         <item>czh_yz_.+</item>
         <item>gan.*</item>
         <item>hak.*</item>
+        <item>hsn_.+</item>
         <item>yue.*|csp_.+</item>
-        <item>nan.*|cdo_.+</item>
+        <item>nan.*|cdo_.+|mnp_.+</item>
         <item>nan_lz_.+</item>
         <item>nan_cs_.+</item>
         <item>vi_|ko_.+|ja_.+</item>
