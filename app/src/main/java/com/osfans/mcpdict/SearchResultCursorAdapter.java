@@ -367,13 +367,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
     private static CharSequence getRichText(String richTextString) {
         String s = richTextString
                 .replace("\n", "<br/>")
-                //.replaceAll("~~(.+?)~~", "<s>$1</s>")
-                .replaceAll("`(.+?)`", "<small><small>$1</small></small>")
-                //.replaceAll("___(.+?)___", "<sup>$1</sup>")
-                //.replaceAll("__(.+?)__", "<sub>$1</sub>")
-                //.replaceAll("_(.+?)_", "<u>$1</u>")
-                //.replaceAll("\\*\\*\\*(.+?)\\*\\*\\*", "<small>$1</small>")
-                //.replaceAll("\\*\\*(.+?)\\*\\*", "<big>$1</big>")
+                .replace("{", "<small><small>")
+                .replace("}", "</small></small>")
                 .replaceAll("\\*(.+?)\\*", "<b>$1</b>")
                 .replaceAll("\\|(.+?)\\|", String.format("<span style='color: %s;'>$1</span>", getHexColor()));
         return HtmlCompat.fromHtml(s, HtmlCompat.FROM_HTML_MODE_COMPACT);
@@ -381,7 +376,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
     public static String getRawText(String s) {
         if (TextUtils.isEmpty(s)) return "";
-        return s.replaceAll("[~_|*\\[\\]]", "").replaceAll("`.+?`", "");
+        return s.replaceAll("[~_|*\\[\\]]", "").replaceAll("\\{.*?\\}", "");
     }
 
     private static final Displayer middleChineseDisplayer = new Displayer() {
