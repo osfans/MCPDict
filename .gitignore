@@ -11,3 +11,6 @@ build/
 *.keystore
 *.xls
 *.xlsx
+*.pdf
+揚州*.tsv
+__pycache__

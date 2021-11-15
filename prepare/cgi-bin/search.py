@@ -104,7 +104,7 @@ def rich(r, k):
 	if k == "och_ba": return s
 	s = re.sub(", ?", ", ", s)
 	s = s.replace("\n", "<br>")
-	s = re.sub("`(.*?)`", "<div class=desc>\\1</div>", s)
+	s = re.sub("\{(.*?)\}", "<div class=desc>\\1</div>", s)
 	s = re.sub("\|(.*?)\|", "<font color='#808080'>\\1</font>", s)
 	s = re.sub("\*(.*?)\*", "<b>\\1</b>", s)
 	return s
@@ -188,16 +188,10 @@ regions={
 	'ltc_':'歷史音',
 	'cmn_':'官話',
 	'cmn_xn_':'西南官話',
-	'cmn_hy_':'江淮官話',
-	'cmn_hy_hc_':'江淮官話-洪巢片',
-	'cmn_hy_tt_':'江淮官話-通泰片',
-	'cmn_hy_hx_':'江淮官話-黃孝片',
+	'cmn_jh_':'江淮官話',
 	'cmn_fyd_':'官話方言島',
 	'cjy_':'晉語',
 	'wuu_':'吳語',
-	'wuu_th_':'吳語-太湖片',
-	'wuu_oj_':'吳語-甌江片',
-	'wuu_sl_':'吳語-上麗片',
 	'czh_':'徽語',
 	'gan_':'贛語',
 	'hak_':'客語',
@@ -205,8 +199,6 @@ regions={
 	'yue_':'粵語',
 	'csp_':'南部平話',
 	'nan_':'閩南語',
-	'nan_lz_':'閩南語-雷州片',
-	'nan_cs_':'閩南語-潮汕片',
 	'cdo_':'閩東語',
 	'vi_':'域外方音',
 	'ko_':'域外方音',
