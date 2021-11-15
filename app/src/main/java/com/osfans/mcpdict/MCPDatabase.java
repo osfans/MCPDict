@@ -42,7 +42,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_MC = "ltc_mc";
     public static final String SEARCH_AS_CMN = "cmn_";
     public static final String SEARCH_AS_GZ = "yue_hk";
-    public static final String SEARCH_AS_NAN = "nan_tw";
+    public static final String SEARCH_AS_NAN = "nan_qz_tw";
     public static final String SEARCH_AS_KOR = "ko_kor";
     public static final String SEARCH_AS_VI = "vi_";
     public static final String SEARCH_AS_JA_GO = "ja_go";

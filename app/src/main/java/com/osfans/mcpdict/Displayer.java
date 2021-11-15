@@ -25,10 +25,9 @@ abstract class Displayer {
             sb.append(s.substring(q, p));
         }
         // Add spaces as hints for line wrapping
-        s = sb.toString().replace(",", ", ")
+        s = sb.toString().replace(",", " ")
                 .replace("(", " (")
                 .replace("]", "] ")
-                .replaceAll(" +", " ")
                 .replace(" ,", ",")
                 .trim();
         return s;
