@@ -840,8 +840,11 @@ public class Orthography {
         }
 
         public static String display(String s, int col) {
-            if (!s.matches("[^\\d]+\\d+")) return s;
-            String tone = s.replaceAll("[^\\d]+", "");
+            if (TextUtils.isEmpty(s) || s.length() < 2) return s;
+            char c = s.charAt(s.length() - 1);
+            if (!Character.isDigit(c)) return s;
+            char c2 = s.charAt(s.length() - 2);
+            String tone = c + "" + (Character.isDigit(c2) ? c2 : "");
             String base = s.substring(0, s.length() - tone.length());
             if (tone.contentEquals("0")) return base;
             return formatTone(base, Integer.parseInt(tone), col);
