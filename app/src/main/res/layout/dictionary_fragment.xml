@@ -15,6 +15,7 @@
             <TextView
                 android:text="@string/search_for" />
             <com.osfans.mcpdict.CustomSearchView
+                android:layout_span="2"
                 android:id="@+id/search_view" />
         </TableRow>
 
@@ -24,6 +25,7 @@
             <TextView
                 android:text="@string/search_as" />
             <Spinner
+                android:layout_span="2"
                 android:id="@+id/spinner_search_as" />
         </TableRow>
 
@@ -34,13 +36,8 @@
                 android:text="@string/search_options" />
             <Spinner
                 android:id="@+id/spinner_show_characters" />
-        </TableRow>
-
-        <TableRow
-            android:gravity="center_vertical" >
             <CheckBox
                 android:id="@+id/check_box_allow_variants"
-                android:layout_column="1"
                 android:text="@string/option_allow_variants" />
         </TableRow>
 
