@@ -13,4 +13,6 @@ build/
 *.xlsx
 *.pdf
 揚州*.tsv
+南通.csv
+泰如.csv
 __pycache__

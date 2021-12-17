@@ -246,13 +246,15 @@
         <item>中原官話</item>
         <item>蘭銀官話</item>
         <item>淮語</item>
-        <item>淮語通泰片</item>
         <item>淮語洪巢片</item>
+        <item>淮語通泰片</item>
         <item>淮語黃孝片</item>
+        <item>晉語</item>
+        <item>晉語并州片</item>
+        <item>晉語汾州小片</item>
+        <item>官話方言島</item>
         <item>西南官話</item>
         <item>西南官話西蜀片</item>
-        <item>官話方言島</item>
-        <item>晉語</item>
         <item>吳語</item>
         <item>吳語太湖片</item>
         <item>吳語毗陵小片</item>
@@ -260,18 +262,19 @@
         <item>吳語台州片</item>
         <item>吳語上麗片</item>
         <item>吳語甌江片</item>
-        <item>閩語</item>
-        <item>閩南語漳泉片</item>
-        <item>閩南語潮汕片</item>
-        <item>閩南語雷州片</item>
+        <item>徽語</item>
+        <item>徽語嚴州片</item>
+        <item>贛語</item>
         <item>客語</item>
         <item>粵語</item>
         <item>湘語</item>
-        <item>贛語</item>
-        <item>徽語</item>
-        <item>徽語嚴州片</item>
-        <item>鄉話</item>
         <item>平話和土話</item>
+        <item>鄉話</item>
+        <item>閩語</item>
+        <item>閩南語</item>
+        <item>閩南語漳泉片</item>
+        <item>閩南語潮汕片</item>
+        <item>閩南語雷州片</item>
         <item>域外方音</item>
     </string-array>
     <string-array name="pref_values_show_languages">
@@ -279,18 +282,20 @@
         <item>""</item>
         <item>""</item>
         <item>och_.+|ltc_.+</item>
-        <item>cmn_|cmn_jil_jn|cmn_zho_xa|cmn_ly_yc|cmn_xn_xs_mc_jwyj|cmn_jh_hc_yz|cjy_db_dt|wuu_th_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_cs|yue_hk|nan_zq_tw|cdo_nd|mnp_jo</item>
+        <item>cmn_|cmn_jil_jn|cmn_zho_xa|cmn_ly_yc|cmn_xn_xs_mc_jwyj|cmn_jh_hc_yz|cjy_db_dt|wuu_th_shj_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_cs|yue_hk|nan_zq_tw|cdo_nd|mnp_jo|wxa_ylmxp</item>
         <item>cmn_jil_.+</item>
         <item>cmn_zho_.+</item>
         <item>cmn_ly_.+</item>
         <item>cmn_jh_.+</item>
-        <item>cmn_jh_tt_.+</item>
         <item>cmn_jh_hc_.+</item>
+        <item>cmn_jh_tt_.+</item>
         <item>cmn_jh_hx_.+</item>
+        <item>cjy_.+</item>
+        <item>cjy_bz_.+</item>
+        <item>cjy_ll_.+</item>
+        <item>cmn_fyd_.+</item>
         <item>cmn_xn_.+</item>
         <item>cmn_xn_xs_.+</item>
-        <item>cmn_fyd_.+</item>
-        <item>cjy_.+</item>
         <item>wuu.*</item>
         <item>wuu_th_.+</item>
         <item>wuu_th_pl_.+</item>
@@ -298,18 +303,19 @@
         <item>wuu_tz_.+</item>
         <item>wuu_sl_.+</item>
         <item>wuu_oj_.+</item>
-        <item>nan.*|cdo_.+|mnp_.+</item>
-        <item>nan_zq_.+</item>
-        <item>nan_cs_.+</item>
-        <item>nan_lz_.+</item>
+        <item>czh_.+</item>
+        <item>czh_yz_.+</item>
+        <item>gan.*</item>
         <item>hak.*</item>
         <item>yue.*|csp_.+</item>
         <item>hsn_.+</item>
-        <item>gan.*</item>
-        <item>czh_.+</item>
-        <item>czh_yz_.+</item>
-        <item>wxa_.+</item>
         <item>xxx_.+|csp_.+</item>
+        <item>wxa_.+</item>
+        <item>nan_.+|cdo_.+|mnp_.+</item>
+        <item>nan_.+</item>
+        <item>nan_zq_.+</item>
+        <item>nan_cs_.+</item>
+        <item>nan_lz_.+</item>
         <item>vi_|ko_.+|ja_.+</item>
     </string-array>
 
@@ -322,6 +328,7 @@
         <item>僅康熙字典</item>
         <item>僅漢語大字典</item>
         <item>僅方言調查字表</item>
+        <item>僅古籍印刷通用字規範字形表</item>
         <item>僅常用字字形表</item>
         <item>僅常用國字標準字體表</item>
         <item>僅大五碼</item>
@@ -333,6 +340,7 @@
         <item>kx</item>
         <item>hd</item>
         <item>FD</item>
+        <item>GJ</item>
         <item>kHKGlyph</item>
         <item>T1</item>
         <item>kBigFive</item>

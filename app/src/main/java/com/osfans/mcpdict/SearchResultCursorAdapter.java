@@ -256,7 +256,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             if (i == COL_BS) str = str.replace("f", "-");
             if (TextUtils.isEmpty(str)) continue;
             str = str.toUpperCase();
-            sb.append(String.format("<p>【%s】%s</p>", MCPDatabase.getLabel(i), str));
+            sb.append(String.format("<p>【%s】%s</p>", MCPDatabase.getFullName(i), str));
         }
         String info = sb.toString().replace(",", ", ");
         textView.setOnClickListener(view1 -> {
@@ -376,7 +376,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
     public static String getRawText(String s) {
         if (TextUtils.isEmpty(s)) return "";
-        return s.replaceAll("[~_|*\\[\\]]", "").replaceAll("\\{.*?\\}", "");
+        return s.replaceAll("[|*\\[\\]]", "").replaceAll("\\{.*?\\}", "");
     }
 
     private static final Displayer middleChineseDisplayer = new Displayer() {
@@ -388,14 +388,12 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         if (id == R.string.pref_key_tone_display) value = 1;
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getContext());
         Resources r = getContext().getResources();
-        int i;
         try {
-            i = sp.getInt(r.getString(id), value);
+            return Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(id), String.valueOf(value))));
         } catch (Exception e) {
-            e.printStackTrace();
-            i = Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(id), "0")));
+            //e.printStackTrace();
         }
-        return i;
+        return value;
     }
 
     private static final Displayer mandarinDisplayer = new Displayer() {
