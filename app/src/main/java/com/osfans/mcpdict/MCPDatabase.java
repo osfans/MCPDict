@@ -42,7 +42,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
     public static final String SEARCH_AS_MC = "ltc_mc";
     public static final String SEARCH_AS_CMN = "cmn_";
     public static final String SEARCH_AS_GZ = "yue_hk";
-    public static final String SEARCH_AS_NAN = "nan_qz_tw";
+    public static final String SEARCH_AS_NAN = "nan_zq_tw";
     public static final String SEARCH_AS_KOR = "ko_kor";
     public static final String SEARCH_AS_VI = "vi_";
     public static final String SEARCH_AS_JA_GO = "ja_go";
@@ -174,8 +174,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
             }
             for (String token : input.split("[\\s,]+")) {
                 if (token.equals("")) continue;
-                if (!token.startsWith("Ǿ")) //FTS3不支持Ǿ大小寫搜索
-                    token = token.toLowerCase(Locale.US);
+                token = token.toLowerCase(Locale.US);
                 // Canonicalization
                 switch (getColumnName(mode)) {
                     case SEARCH_AS_MC: token = Orthography.MiddleChinese.canonicalize(token); break;
@@ -400,18 +399,19 @@ public class MCPDatabase extends SQLiteAssetHelper {
         cursor.close();
     }
 
-    public static int getColor(int index) {
+    public static int getColor(int index, int i) {
         if (COLORS == null) getColors();
         String c = COLORS.get(index);
-        if (c.contains(",")) c = c.split(",")[0];
+        if (c.contains(",")) c = c.split(",")[i];
         return Color.parseColor(c);
     }
 
+    public static int getColor(int index) {
+        return getColor(index, 0);
+    }
+
     public static int getSubColor(int index) {
-        if (COLORS == null) getColors();
-        String c = COLORS.get(index);
-        if (c.contains(",")) c = c.split(",")[1];
-        return Color.parseColor(c);
+        return getColor(index, 1);
     }
 
     private static void getDictNames() {
