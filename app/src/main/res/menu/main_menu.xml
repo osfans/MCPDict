@@ -6,13 +6,17 @@
         android:icon="@android:drawable/ic_menu_preferences"
         android:title="@string/settings" />
     <item
-        android:id="@+id/menu_item_help"
+        android:id="@+id/menu_item_info"
         app:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/info" />
+    <item
+        android:id="@+id/menu_item_help"
+        app:showAsAction="never"
         android:icon="@android:drawable/ic_menu_help"
         android:title="@string/help" />
     <item
         android:id="@+id/menu_item_about"
         app:showAsAction="never"
-        android:icon="@android:drawable/ic_menu_info_details"
         android:title="@string/about" />
 </menu>
