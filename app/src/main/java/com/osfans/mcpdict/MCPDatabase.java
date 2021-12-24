@@ -475,6 +475,19 @@ public class MCPDatabase extends SQLiteAssetHelper {
         cursor.close();
     }
 
+    public static String getIntroText(Context context) {
+        if (INTROS == null) getIntros();
+        int index = getColumnIndex(context);
+        String intro = index < 0 ? "" : INTROS.get(index);
+        if (TextUtils.isEmpty(intro)) intro = INTROS.get(0);
+        if (index == 0) {
+            intro = String.format(Locale.getDefault(), "%s%s<br>%s", context.getString(R.string.version), BuildConfig.VERSION_NAME, intro);
+        } else if (index > 0) {
+            intro = String.format(Locale.getDefault(), "<h1>%s</h1>%s<h2>音系說明</h2><h2>同音字表</h2>",getFullName(index), intro);
+        }
+        return intro;
+    }
+
     public static Spanned getIntro(Context context) {
         if (INTROS == null) getIntros();
         int index = getColumnIndex(context);
