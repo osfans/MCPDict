@@ -30,6 +30,11 @@ public class ActivityWithOptionsMenu extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+        if (id == R.id.menu_item_info) {
+            intent = new Intent(this, InfoActivity.class);
+            startActivity(intent);
+            return true;
+        }
         if (id == R.id.menu_item_help) {
             intent = new Intent(this, HelpActivity.class);
             startActivity(intent);
