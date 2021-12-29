@@ -1,5 +1,4 @@
 gen
-prepare/*.db
 publish
 pretty.py
 .idea/
@@ -7,5 +6,6 @@ pretty.py
 gradle.properties
 local.properties
 build/
+*.db
 *.iml
 *.keystore
