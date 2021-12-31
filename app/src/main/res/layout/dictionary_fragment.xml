@@ -5,51 +5,42 @@
     android:padding="6dp"
     android:orientation="vertical" >
 
-    <TableLayout
+    <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:stretchColumns="1" >
+        android:layout_height="wrap_content">
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/spinner_search_as" />
+        <com.osfans.mcpdict.CustomSearchView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/search_view" />
+    </LinearLayout>
 
-        <TableRow
-            android:gravity="center_vertical" >
-            <TextView
-                android:text="@string/search_for" />
-            <com.osfans.mcpdict.CustomSearchView
-                android:layout_span="2"
-                android:id="@+id/search_view" />
-        </TableRow>
 
-        <TableRow
-            android:gravity="center_vertical"
-            android:paddingTop="6dp" >
-            <TextView
-                android:text="@string/search_as" />
-            <Spinner
-                android:layout_span="2"
-                android:id="@+id/spinner_search_as" />
-        </TableRow>
-
-        <TableRow
-            android:gravity="center_vertical"
-            android:paddingTop="6dp" >
-            <TextView
-                android:text="@string/search_options" />
-            <Spinner
-                android:id="@+id/spinner_show_characters" />
-            <CheckBox
-                android:id="@+id/check_box_allow_variants"
-                android:text="@string/option_allow_variants" />
-        </TableRow>
-
-        <TableRow
-            android:gravity="center_vertical" >
-            <TextView
-                android:text="@string/show_languages" />
-            <Spinner
-                android:id="@+id/spinner_show_languages" />
-        </TableRow>
-
-    </TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/spinner_show_languages" />
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/spinner_show_characters" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/check_box_allow_variants"
+            android:text="@string/option_allow_variants" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
