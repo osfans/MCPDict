@@ -532,6 +532,10 @@ public class MCPDatabase extends SQLiteAssetHelper {
         return index >= COL_FIRST_READING && index <= COL_LAST_READING;
     }
 
+    public static boolean isDialect(int index) {
+        return index >= COL_CMN && index < COL_VI;
+    }
+
     public static void putColumnIndex(Context context, int mode) {
         String value = getFullName(mode);
         Utils.putLanguage(context, value);
