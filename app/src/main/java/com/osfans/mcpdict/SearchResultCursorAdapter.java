@@ -149,6 +149,10 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
     private boolean isColumnVisible(String languages, Set<String> customs, int i) {
         if (i < MCPDatabase.COL_FIRST_READING) return true;
+        if (languages.contentEquals("3")) { //縣級
+            String name = MCPDatabase.getLabel(i);
+            return MCPDatabase.isDialect(i) && name.length() <= 3;
+        }
         String column = MCPDatabase.getColumnName(i);
         if (TextUtils.isEmpty(languages)) {
             if (customs == null || customs.size() == 0) return true;

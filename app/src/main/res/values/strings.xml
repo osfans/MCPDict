@@ -240,8 +240,9 @@
         <item>全部語言</item>
         <item>當前語言</item>
         <item>@string/pref_title_custom_languages</item>
-        <item>歷史音</item>
+        <item>縣級方言</item>
         <item>代表方言</item>
+        <item>歷史音</item>
         <item>冀魯官話</item>
         <item>中原官話</item>
         <item>蘭銀官話</item>
@@ -281,8 +282,9 @@
         <item>.+</item>
         <item>""</item>
         <item>""</item>
-        <item>och_.+|ltc_.+</item>
+        <item>"3"</item>
         <item>cmn_|cmn_jil_jn|cmn_zho_xa|cmn_ly_yc|cmn_xn_xs_mc_jwyj|cmn_jh_hc_yz|cjy_db_dt|wuu_th_shj_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_cs|yue_hk|nan_zq_tw|cdo_nd|mnp_jo|wxa_ylmxp</item>
+        <item>och_.+|ltc_.+</item>
         <item>cmn_jil_.+</item>
         <item>cmn_zho_.+</item>
         <item>cmn_ly_.+</item>
