@@ -12,6 +12,7 @@ abstract class Displayer {
         // Find all regions of [a-z0-9]+ in s, and apply displayer to each of them
         StringBuilder sb = new StringBuilder();
         int L = s.length(), p = 0;
+        boolean isMeaning;
         while (p < L) {
             int q = p;
             while (q < L && Orthography.HZ.isIPA(s.charAt(q))) q++;
@@ -21,7 +22,12 @@ abstract class Displayer {
                 sb.append(TextUtils.isEmpty(t2) ? t1 : t2);
                 p = q;
             }
-            while (p < L && !Orthography.HZ.isIPA(s.charAt(p))) p++; //
+            isMeaning = false;
+            while (p < L && (isMeaning || !Orthography.HZ.isIPA(s.charAt(p)))) {
+                if (s.charAt(p) == '{') isMeaning = true;
+                else if (s.charAt(p) == '}') isMeaning = false;
+                p++; //
+            }
             sb.append(s.substring(q, p));
         }
         // Add spaces as hints for line wrapping
