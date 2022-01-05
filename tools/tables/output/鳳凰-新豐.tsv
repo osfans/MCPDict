@@ -1,4389 +1,4391 @@
 #漢字	音標	解釋	#('nan_cs_fhxf', '鳳凰-新豐話', '鳳凰-新豐', '#FF6600', None, None, '版本：V1.0 (2021-12-31)<br>來源：<u>四方麻東</u>', '34 1 1a 陰平 ꜀,55 2 1b 陽平 ꜁,52 3 2a 陰上 ꜂,25 4 2b 陽上 ꜃,212 5 3a 陰去 ꜄,22 6 3b 陽去 ꜅,32 7 4a 陰入 ꜆,54 8 4b 陽入 ꜇')
-一	it⑦4	it˧˨
-一	tsek⑧8	tsɛk˥˦
-丁	tenɡ①1	tɛŋ˧˦
-七	tshit⑦4	tsʰit˧˨
-丈	tsianɡ④6	tsiaŋ˨˥
-丈	tionn④6	tiõ˨˥
-丈	tnɡ④6	tŋ˨˥
-三	sam①1	sam˧˦
-三	sann①1	sã˧˦
-上	sianɡ④6	siaŋ˨˥
-上	tsionn④6	tsiõ˨˥
-上	tsionn⑥7	tsiõ˨˨
-上	tshionn④6	tsʰiõ˨˥
-下	hia④6	hia˨˥
-下	he④6	hɛ˨˥
-下	e④6	ɛ˨˥
-下	e⑥7	ɛ˨˨
-下	ke④6	kɛ˨˥
-不	put⑦4	put˧˨
-丐	kai⑤3	kai˨˩˨
-丑	thiu③2	tʰiu˥˨
-且	tshiann③2	tsʰiã˥˨
-丕	phi③2	pʰi˥˨
-世	si⑤3	si˨˩˨
-世	sua⑤3	sua˨˩˨
-丘	khiu①1	kʰiu˧˦
-丙	piann③2	piã˥˨
-丞	senɡ②5	sɛŋ˥˥
-丟	tiu①1	tiu˧˦
-並	penɡ④6	pɛŋ˨˥
-丫	a①1	a˧˦
-中	tonɡ①1	toŋ˧˦
-中	tonɡ⑤3	toŋ˨˩˨
-中	tenɡ⑤3	tɛŋ˨˩˨
-中	tanɡ①1	taŋ˧˦
-串	tshuan⑤3	tsʰuan˨˩˨
-丸	uan②5	uan˥˥
-丸	inn②5	ĩ˥˥
-丹	tan①1	tan˧˦
-丹	tuann①1	tuã˧˦
-主	tsu③2	tsu˥˨
-乃	nai③2	nai˥˨
-久	ku③2	ku˥˨
-么	iau①1	iau˧˦
-之	tsur①1	tsɯ˧˦
-乍	tsann⑤3	tsã˨˩˨
-乎	hu①1	hu˧˦
-乏	huat⑧8	huat˥˦
-乖	kuai①1	kuai˧˦
-乘	senɡ②5	sɛŋ˥˥
-乙	it⑦4	it˧˨
-九	kiu③2	kiu˥˨
-九	kau③2	kau˥˨
-乞	khurt⑦4	kʰɯt˧˨
-也	ia③2	ia˥˨
-乳	ju③2	dzu˥˨
-乾	khian②5	kʰiɛn˥˥
-乾	khen②5	kʰɛn˥˥
-乾	kan①1	kan˧˦
-乾	kuann①1	kuã˧˦
-亂	luan④6	luan˨˥
-了	liau③2	liau˥˨
-事	sur⑥7	sɯ˨˨
-事	tai⑥7	tai˨˨
-二	ji④6	dzi˨˥
-二	ji⑥7	dzi˨˨
-于	u①1	u˧˦
-云	un⑥7	un˨˨
-互	hu④6	hu˨˥
-互	hou⑥7	hou˨˨
-五	u③2	u˥˨
-五	nɡou③2	ŋou˥˨
-五	nɡou④6	ŋou˨˥
-井	tsenn③2	tsɛ̃˥˨
-些	se①1	sɛ˧˦
-亞	a⑤3	a˨˩˨
-亞	a①1	a˧˦
-亡	buanɡ②5	buaŋ˥˥
-交	kau①1	kau˧˦
-亥	hai④6	hai˨˥
-亦	ia⑥7	ia˨˨
-亨	henɡ①1	hɛŋ˧˦
-享	hianɡ③2	hiaŋ˥˨
-京	kiann①1	kiã˧˦
-亭	tenɡ②5	tɛŋ˥˥
-亮	lianɡ④6	liaŋ˨˥
-人	jin②5	dzin˥˥
-人	nanɡ②5	naŋ˥˥
-什	sim④6	sim˨˥
-什	tsap⑧8	tsap˥˦
-仁	jin②5	dzin˥˥
-今	kim①1	kim˧˦
-介	kai⑤3	kai˨˩˨
-仍	jenɡ②5	dzɛŋ˥˥
-仔	tsur③2	tsɯ˥˨
-仔	tsai③2	tsai˥˨
-仔	kiann③2	kiã˥˨
-他	tha①1	tʰa˧˦
-仗	tsianɡ④6	tsiaŋ˨˥
-付	hu⑤3	hu˨˩˨
-仙	sian①1	siɛn˧˦
-仙	sen①1	tsɛn˧˦
-代	tai⑤3	tai˨˩˨
-代	to⑥7	to˨˨
-代	thoi⑤3	tʰoi˨˩˨
-令	lenɡ④6	lɛŋ˨˥
-以	inn③2	ĩ˥˨
-仰	nɡianɡ③2	ŋiaŋ˥˨
-仲	tonɡ④6	toŋ˨˥
-件	kiann④6	kiã˨˥
-任	jim④6	dzim˨˥
-任	jim⑥7	dzim˨˨
-份	hun⑥7	hun˨˨
-仿	huanɡ③2	huaŋ˥˨
-企	ki④6	ki˨˥
-企	khia④6	kʰia˨˥
-伊	i①1	i˧˦
-伍	nɡou③2	ŋou˥˨
-伏	hok⑧8	hok˥˦
-伐	huat⑧8	huat˥˦
-休	hiunn①1	hiũ˧˦
-伯	peh⑦4	pɛʔ˧˨
-估	kou③2	kou˥˨
-伴	phuann④6	pʰuã˨˥
-伶	lenɡ②5	lɛŋ˥˥
-伸	sin①1	sin˧˦
-伸	tshun①1	tsʰun˧˦
-伺	sur④6	sɯ˨˥
-似	sur④6	sɯ˨˥
-但	tan④6	tan˨˥
-佈	pu⑤3	pu˨˩˨
-佈	pou⑤3	pou˨˩˨
-位	ui⑥7	ui˨˨
-低	ti①1	ti˧˦
-住	tsu④6	tsu˨˥
-佐	tso③2	tso˥˨
-何	ho②5	ho˥˥
-何	ua②5	ua˥˥
-余	ur②5	ɯ˥˥
-佛	hut⑧8	hut˥˦
-佛	hut⑦4	hut˧˨
-作	tsak⑦4	tsak˧˨
-作	tsoh⑦4	tsoʔ˧˨
-佞	lenɡ④6	lɛŋ˨˥
-你	lur③2	lɯ˥˨
-佩	pue④6	puɛ˨˥
-佳	kia①1	kia˧˦
-使	sai③2	sai˥˨
-使	sai⑤3	sai˨˩˨
-侃	khan③2	kʰan˥˨
-侄	tiat⑧8	tiɛt˥˦
-侄	tet⑧8	tɛt˥˦
-來	lai②5	lai˥˥
-侈	tshi③2	tsʰi˥˨
-例	li⑥7	li˨˨
-侍	si④6	si˨˥
-供	kionɡ①1	kioŋ˧˦
-供	kenɡ①1	kɛŋ˧˦
-依	i①1	i˧˦
-侮	bu③2	bu˥˨
-侯	hou②5	hou˥˥
-侵	tshim②5	tsʰim˥˥
-侶	lur④6	lɯ˨˥
-便	pian④6	piɛn˨˥
-便	pen④6	pɛn˨˥
-便	pin⑥7	pin˨˨
-便	pan②5	pan˥˥
-係	hi④6	hi˨˥
-促	tshok⑦4	tsʰok˧˨
-促	tshek⑦4	tsʰɛk˧˨
-俄	nɡo②5	ŋo˥˥
-俊	tsun⑤3	tsun˨˩˨
-俏	tshiau③2	tsʰiau˥˨
-俗	sok⑧8	sok˥˦
-俘	hu①1	hu˧˦
-保	pau③2	pau˥˨
-保	po③2	po˥˨
-俟	sur④6	sɯ˨˥
-俠	hiap⑧8	hiap˥˦
-信	sin⑤3	sin˨˩˨
-修	siu①1	siu˧˦
-俯	hu③2	hu˥˨
-俱	ku④6	ku˨˥
-俸	honɡ③2	hoŋ˥˨
-俾	pi③2	pi˥˨
-倉	tshanɡ①1	tsʰaŋ˧˦
-倉	tshnɡ①1	tsʰŋ˧˦
-個	ko④6	ko˨˥
-個	kai②5	kai˥˥
-倍	pue④6	puɛ˨˥
-倒	tau③2	tau˥˨
-倒	to③2	to˥˨
-倒	to⑤3	to˨˩˨
-倔	khut⑦4	kʰut˧˨
-倘	thanɡ③2	tʰaŋ˥˨
-候	hau⑥7	hau˨˨
-倚	i③2	i˥˨
-倚	ua③2	ua˥˨
-倡	tshianɡ⑤3	tsʰiaŋ˨˩˨
-倦	kuan④6	kuan˨˥
-倩	tshiann⑤3	tsʰiã˨˩˨
-倩	tshiah⑦4	tsʰiaʔ˧˨
-倪	ɡoi②5	goi˥˥
-倫	lun②5	lun˥˥
-倭	oi③2	oi˥˨
-值	tek⑧8	tɛk˥˦
-值	tat⑧8	tat˥˦
-假	kia③2	kia˥˨
-假	kiann③2	kiã˥˨
-假	ke③2	kɛ˥˨
-偉	ui③2	ui˥˨
-偏	phian①1	pʰiɛn˧˦
-偏	phen①1	pʰɛn˧˦
-偕	kai①1	kai˧˦
-做	tso⑤3	tso˨˩˨
-停	thenɡ②5	tʰɛŋ˥˥
-健	kian④6	kiɛn˨˥
-健	en④6	ɛn˨˥
-健	kiann⑥7	kiã˨˨
-側	tshek⑦4	tsʰɛk˧˨
-偵	tsenɡ①1	tsɛŋ˧˦
-偶	nɡou③2	ŋou˥˨
-偷	thau①1	tʰau˧˦
-偽	nɡui④6	ŋui˨˥
-傀	kui③2	kui˥˨
-傅	hu⑤3	hu˨˩˨
-傅	pou⑤3	pou˨˩˨
-傍	phanɡ②5	pʰaŋ˥˥
-傑	kiat⑧8	kiɛt˥˦
-傑	ket⑧8	kɛt˥˦
-傘	suann⑤3	suã˨˩˨
-備	pi④6	pi˨˥
-傢	ke①1	kɛ˧˦
-催	tshui①1	tsʰui˧˦
-傲	nɡau④6	ŋau˨˥
-傳	thuan②5	tʰuan˥˥
-傳	tnɡ⑥7	tŋ˨˨
-債	tse⑤3	tsɛ˨˩˨
-傷	sianɡ①1	siaŋ˧˦
-傷	sionn①1	siõ˧˦
-傻	sa④6	sa˨˥
-傾	khenɡ①1	kʰɛŋ˧˦
-僅	kurn③2	kɯn˥˨
-像	sianɡ④6	siaŋ˨˥
-像	sionn⑤3	siõ˨˩˨
-像	tshionn④6	tsʰiõ˨˥
-僕	pok⑧8	pok˥˦
-僧	tsenɡ①1	tsɛŋ˧˦
-僭	tshiam⑤3	tsʰiam˨˩˨
-僵	kianɡ①1	kiaŋ˧˦
-價	ke⑤3	kɛ˨˩˨
-僻	phiah⑦4	pʰiaʔ˧˨
-僻	phiah⑧8	pʰiaʔ˥˦
-儀	nɡi②5	ŋi˥˥
-儂	nanɡ②5	naŋ˥˥
-億	ek⑧8	ɛk˥˦
-儉	khiam④6	kʰiam˨˥
-儒	ju②5	dzu˥˥
-償	sianɡ②5	siaŋ˥˥
-償	sionn②5	siõ˥˥
-儡	lui③2	lui˥˨
-優	iu①1	iu˧˦
-儲	thu②5	tʰu˥˥
-允	jun③2	dzun˥˨
-元	nɡuan②5	ŋuan˥˥
-兄	hiann①1	hiã˧˦
-充	tshonɡ①1	tsʰoŋ˧˦
-兆	tiau④6	tiau˨˥
-兇	hionɡ①1	hioŋ˧˦
-先	sin①1	sin˧˦
-先	soinn①1	sõi˧˦
-光	kuanɡ①1	kuaŋ˧˦
-光	knɡ①1	kŋ˧˦
-克	khiok⑦4	kʰiok˧˨
-免	mian③2	miɛn˥˨
-免	men③2	mɛn˥˨
-免	min③2	min˥˨
-兌	tue④6	tuɛ˨˥
-兒	ji②5	dzi˥˥
-兒	ni①1	ni˧˦
-兔	thou⑤3	tʰou˨˩˨
-兜	tau①1	tau˧˦
-兢	khenɡ①1	kʰɛŋ˧˦
-入	jip⑧8	dzip˥˦
-全	tshuan②5	tsʰuan˥˥
-全	tsnɡ②5	tsŋ˥˥
-兩	lianɡ③2	liaŋ˥˨
-兩	nio③2	niõ˥˨
-兩	no④6	nõ˨˥
-八	pueh⑦4	puɛʔ˧˨
-公	konɡ①1	koŋ˧˦
-公	kanɡ①1	kaŋ˧˦
-六	lak⑧8	lak˥˦
-兮	hi①1	hi˧˦
-共	kanɡ⑥7	kaŋ˨˨
-兵	piann①1	piã˧˦
-其	khi②5	kʰi˥˥
-具	ku④6	ku˨˥
-典	tian③2	tiɛn˥˨
-典	ten③2	tɛn˥˨
-兹	tsur①1	tsɯ˧˦
-冀	ki⑤3	ki˨˩˨
-內	lai④6	lai˨˥
-冉	jiam③2	dziam˥˨
-冊	tsheh⑦4	tsʰɛʔ˧˨
-再	tsai⑤3	tsai˨˩˨
-冒	mau④6	mau˨˥
-冠	kuan①1	kuan˧˦
-冠	kuan⑤3	kuan˨˩˨
-冢	thonɡ③2	tʰoŋ˥˨
-冤	uan①1	uan˧˦
-冥	menɡ②5	mɛŋ˥˥
-冬	tanɡ①1	taŋ˧˦
-冰	piann①1	piã˧˦
-冶	ia③2	ia˥˨
-冷	ne③2	nɛ̃˥˨
-淨	tsenɡ④6	tsɛŋ˨˥
-凄	tshi①1	tsʰi˧˦
-准	tsun③2	tsun˥˨
-凉	lianɡ②5	liaŋ˥˥
-凌	lenɡ②5	lɛŋ˥˥
-凍	tonɡ⑤3	toŋ˨˩˨
-凍	tanɡ⑤3	taŋ˨˩˨
-湊	tshou⑤3	tsʰou˨˩˨
-凛	lim③2	lim˥˨
-凝	nɡenɡ②5	ŋɛŋ˥˥
-几	ki③2	ki˥˨
-凡	huam②5	huam˥˥
-凰	huanɡ②5	huaŋ˥˥
-凱	khai③2	kʰai˥˨
-凳	tenɡ⑤3	tɛŋ˨˩˨
-凶	hionɡ①1	hioŋ˧˦
-出	tshut⑦4	tsʰut˧˨
-函	ham②5	ham˥˥
-刀	to①1	to˧˦
-刁	tiau①1	tiau˧˦
-刃	jim③2	dzim˥˨
-分	hun①1	hun˧˦
-分	hun⑥7	hun˨˨
-分	pun①1	pun˧˦
-切	tshiat⑦4	tsʰiɛt˧˨
-切	tshet⑦4	tsʰɛt˧˨
-刈	nɡi④6	ŋi˨˥
-刊	khan②5	kʰan˥˥
-刎	un④6	un˨˥
-刑	henɡ②5	hɛŋ˥˥
-划	hua②5	hua˥˥
-划	ko⑤3	ko˨˩˨
-列	liat⑧8	liɛt˥˦
-列	let⑧8	lɛt˥˦
-初	tsho①1	tsʰo˧˦
-初	tsheu①1	tsʰɛu˧˦
-刪	san①1	san˧˦
-判	phuan⑤3	pʰuan˨˩˨
-判	phuann⑤3	pʰuã˨˩˨
-別	piat⑧8	piɛt˥˦
-別	pet⑧8	pɛt˥˦
-別	pat⑧8	pat˥˦
-別	pat⑦4	pat˧˨
-刨	phau①1	pʰau˧˦
-利	li④6	li˨˥
-利	lai⑥7	lai˨˨
-刮	kueh⑦4	kuɛʔ˧˨
-到	tau⑤3	tau˨˩˨
-到	kau⑤3	kau˨˩˨
-制	tsi⑤3	tsi˨˩˨
-刷	sueh⑦4	suɛʔ˧˨
-券	kuan⑤3	kuan˨˩˨
-刺	tshnɡ⑤3	tsʰŋ˨˩˨
-刺	tshi⑤3	tsʰi˨˩˨
-刺	tshiah⑦4	tsʰiaʔ˧˨
-刻	khek⑦4	kʰɛk˧˨
-刻	khat⑦4	kʰat˧˨
-剁	to②5	to˥˥
-剃	thi⑤3	tʰi˨˩˨
-則	tsek⑦4	tsɛk˧˨
-削	siah⑦4	siaʔ˧˨
-前	tsoinn②5	tsõi˥˥
-剔	thek⑦4	tʰɛk˧˨
-剖	phou③2	pʰou˥˨
-剛	kanɡ①1	kaŋ˧˦
-剝	pak⑦4	pak˧˨
-剩	sin②5	sin˥˥
-剩	sin⑥7	sin˨˨
-剪	tsian③2	tsiɛn˥˨
-剪	tsen③2	tsɛn˥˨
-副	hu⑤3	hu˨˩˨
-割	kuah⑦4	kuaʔ˧˨
-創	tshanɡ⑤3	tsʰaŋ˨˩˨
-創	tshonɡ⑤3	tsʰoŋ˨˩˨
-剿	jiau③2	dziau˥˨
-劃	ueh⑧8	uɛʔ˥˦
-劇	kiah⑧8	kiaʔ˥˦
-劈	phek⑦4	pʰɛk˧˨
-劉	lau②5	lau˥˥
-劊	kuai⑤3	kuai˨˩˨
-劍	kiam⑤3	kiam˨˩˨
-力	lat⑧8	lat˥˦
-功	konɡ①1	koŋ˧˦
-功	kanɡ①1	kaŋ˧˦
-加	kia①1	kia˧˦
-加	ke①1	kɛ˧˦
-劣	luat⑦4	luat˧˨
-努	no⑤3	no˨˩˨
-劫	kiap⑦4	kiap˧˨
-勁	kenn⑤3	kɛ̃˨˩˨
-勃	puat⑧8	puat˥˦
-勇	ionɡ③2	ioŋ˥˨
-勉	mian③2	miɛn˥˨
-勉	men③2	mɛn˥˨
-勒	lek⑧8	lɛk˥˦
-動	tonɡ④6	toŋ˨˥
-動	tanɡ④6	taŋ˨˥
-動	thanɡ④6	tʰaŋ˨˥
-勘	kham①1	kʰam˧˦
-務	bu④6	bu˨˥
-勛	hurn①1	hɯn˧˦
-勝	senɡ⑤3	sɛŋ˨˩˨
-勞	lau②5	lau˥˥
-募	mo④6	mo˨˥
-勢	si⑤3	si˨˩˨
-勤	khurn②5	kʰɯn˥˥
-勵	li④6	li˨˥
-勸	khnɡ⑤3	kʰŋ˨˩˨
-勺	tshiah⑧8	tsʰiaʔ˥˦
-勾	kau①1	kau˧˦
-勿	mai⑤3	mai˨˩˨
-勻	un②5	un˥˥
-包	pau①1	pau˧˦
-匆	tshonɡ①1	tsʰoŋ˧˦
-化	hua①1	hua˧˦
-化	hue⑤3	huɛ˨˩˨
-北	pak⑦4	pak˧˨
-匙	si②5	si˥˥
-匠	tshionn⑥7	tsʰiõ˨˨
-匡	khuanɡ①1	kʰuaŋ˧˦
-匡	khanɡ①1	kʰaŋ˧˦
-匣	ap⑧8	ap˥˦
-匪	huinn③2	hũi˥˨
-匯	hue④6	huɛ˨˥
-匹	phit⑦4	pʰit˧˨
-匾	pian③2	piɛn˥˨
-匾	pen③2	pɛn˥˨
-匾	pin③2	pin˥˨
-匿	nek⑧8	nɛk˥˦
-區	khu①1	kʰu˧˦
-區	au①1	au˧˦
-十	tsap⑧8	tsap˥˦
-千	tshoinn①1	tsʰõi˧˦
-卅	sam①1	sam˧˦
-升	senɡ①1	sɛŋ˧˦
-午	nɡou③2	ŋou˥˨
-午	nɡou④6	ŋou˨˥
-半	puann⑤3	puã˨˩˨
-卑	pi①1	pi˧˦
-卒	tsut⑦4	tsut˧˨
-卓	toh⑦4	toʔ˧˨
-協	hiap⑧8	hiap˥˦
-南	lam②5	lam˥˥
-博	phak⑦4	pʰak˧˨
-卜	pok⑦4	pok˧˨
-占	tsiam①1	tsiam˧˦
-占	tsiam⑤3	tsiam˨˩˨
-卦	kua⑤3	kua˨˩˨
-卦	kue⑤3	kuɛ˨˩˨
-卯	bau③2	bau˥˨
-印	in⑤3	in˨˩˨
-危	nɡui②5	ŋui˥˥
-即	tsiat⑦4	tsiɛt˧˨
-即	tset⑦4	tsɛt˧˨
-卵	luan③2	luan˥˨
-卵	nnɡ④6	nŋ˨˥
-卷	kuan③2	kuan˥˨
-卷	knɡ③2	kŋ˥˨
-卸	sia⑤3	sia˨˩˨
-卻	khiak⑦4	kʰiak˧˨
-卿	khenɡ①1	kʰɛŋ˧˦
-厄	eh⑦4	ɛʔ˧˨
-厘	li②5	li˥˥
-厚	kau④6	kau˨˥
-厝	tshu⑤3	tsʰu˨˩˨
-原	nɡuan②5	ŋuan˥˥
-廂	sionn①1	siõ˧˦
-厥	khiat⑦4	kʰiɛt˧˨
-厥	khet⑦4	kʰɛt˧˨
-厥	kueh⑦4	kuɛʔ˨
-廚	tou②5	tou˥˥
-厭	iam⑤3	iam˨˩˨
-厮	sur①1	sɯ˧˦
-厲	li④6	li˨˥
-去	khur⑤3	kʰɯ˨˩˨
-參	tsham①1	tsʰam˧˦
-參	som①1	som˧˦
-又	iu④6	iu˨˥
-叉	tshe①1	tsʰɛ˧˦
-及	kip⑧8	kip˥˦
-友	iu③2	iu˥˨
-反	huan③2	huan˥˨
-反	puenn③2	puɛ̃˥˨
-叔	sok⑦4	sok˧˨
-叔	tsek⑦4	tsɛk˧˨
-取	tshu③2	tsʰu˥˨
-取	tshiu③2	tsʰiu˥˨
-受	siu④6	siu˨˥
-叙	su④6	su˨˥
-叛	puan④6	puan˨˥
-叟	sou③2	sou˥˨
-叢	tsanɡ②5	tsaŋ˥˥
-口	khau③2	kʰau˥˨
-古	kou③2	kou˥˨
-句	ku⑤3	ku˨˩˨
-另	lenɡ④6	lɛŋ˨˥
-叨	tau①1	tau˧˦
-叩	khau⑤3	kʰau˨˩˨
-只	tsi③2	tsi˥˨
-叫	kio⑤3	kio˨˩˨
-召	tiau④6	tiau˨˥
-可	kho③2	kʰo˥˨
-可	khiok⑦4	kʰiok˧˨
-台	thai①1	tʰai˧˦
-史	sur③2	sɯ˥˨
-史	sai③2	sai˥˨
-右	iu④6	iu˨˥
-司	sur①1	sɯ˧˦
-司	si①1	si˧˦
-吁	ju④6	dzu˨˥
-吃	nɡurt⑦4	ŋɯt˧˨
-各	kak⑦4	kak˧˨
-各	koh⑦4	koʔ˧˨
-合	hap⑧8	hap˥˦
-合	kap⑦4	kap˧˨
-合	kop⑧8	kop˥˦
-合	hah⑧8	haʔ˥˦
-合	kah⑦4	kaʔ˧˨
-合	kah⑧8	kaʔ˥˦
-吉	kit⑦4	kit˧˨
-吊	tiau⑤3	tiau˨˩˨
-同	thonɡ②5	tʰoŋ˥˥
-同	tanɡ②5	taŋ˥˥
-名	menɡ②5	mɛŋ˥˥
-名	mia②5	miã˥˥
-后	hou④6	hou˨˥
-吏	li⑥7	li˨˨
-吐	thou⑤3	tʰou˨˩˨
-向	hianɡ⑤3	hiaŋ˨˩˨
-向	nɡ⑤3	ŋ˨˩˨
-君	kun①1	kun˧˦
-吝	lian④6	liɛn˨˥
-吝	len④6	lɛn˨˥
-吞	thun①1	tʰun˧˦
-吟	nɡim②5	ŋim˥˥
-吠	pui⑥7	pui˨˨
-否	hounn③2	hõu˥˨
-否	phi③2	pʰi˥˨
-含	ham②5	ham˥˥
-含	kam②5	kam˥˥
-吳	ɡou②5	gou˥˥
-吵	tshau①1	tsʰau˧˦
-吸	khip⑦4	kʰip˧˨
-吸	hiap⑦4	hiap˧˨
-吹	tshue①1	tsʰuɛ˧˦
-吻	mut⑦4	mut˧˨
-吼	hou⑤3	hou˨˩˨
-吼	hau③2	hau˥˨
-吾	u②5	u˥˥
-呂	lur④6	lɯ˨˥
-呆	nɡai②5	ŋai˥˥
-呈	thiann②5	tʰiã˥˥
-告	kau⑤3	kau˨˩˨
-告	ko⑤3	ko˨˩˨
-呢	ni①1	ni˧˦
-呢	ni②5	ni˥˥
-呢	ne①1	nɛ˧˦
-周	tsiu①1	tsiu˧˦
-味	bi⑥7	bi˨˨
-呻	sin①1	sin˧˦
-呻	tshan①1	tsʰan˧˦
-呼	u①1	u˧˦
-呼	hu①1	hu˧˦
-呼	hou①1	hou˧˦
-呼	khou①1	kʰou˧˦
-命	menɡ④6	mɛŋ˨˥
-命	mia⑥7	miã˨˨
-和	hua②5	hua˥˥
-和	ho④6	ho˨˥
-和	hue②5	huɛ˥˥
-咎	kiu④6	kiu˨˥
-咏	ionɡ⑤3	ioŋ˨˩˨
-咒	tsiu⑤3	tsiu˨˩˨
-咨	tsur①1	tsɯ˧˦
-咬	ka④6	ka˨˥
-咳	hai④6	hai˨˥
-咵	khua①1	kʰua˧˦
-咸	ham②5	ham˥˥
-哀	ai①1	ai˧˦
-品	phin③2	pʰin˥˨
-哄	honɡ①1	hoŋ˧˦
-哄	honɡ③2	hoŋ˥˨
-哈	hah⑦4	haʔ˧˨
-員	uan②5	uan˥˥
-哥	ko①1	ko˧˦
-哭	khau⑤3	kʰau˨˩˨
-哲	tiat⑦4	tiɛt˧˨
-哲	tet⑦4	tɛt˧˨
-哽	kenn③2	kɛ̃˥˨
-唆	so①1	so˧˦
-唇	tun②5	tun˥˥
-唉	ai①1	ai˧˦
-唐	thanɡ②5	tʰaŋ˥˥
-唐	tnɡ②5	tŋ˥˥
-售	tshiu②5	tsʰiu˥˥
-唯	jui②5	dzui˥˥
-唱	tshianɡ⑤3	tsʰiaŋ˨˩˨
-唱	tshionn⑤3	tsʰiõ˨˩˨
-唸	liam⑥7	liam˨˨
-啄	toh⑦4	toʔ˧˨
-商	sianɡ①1	siaŋ˧˦
-問	mnɡ⑥7	mŋ˨˨
-啞	e③2	ɛ˥˨
-啟	khi③2	kʰi˥˨
-啼	thi②5	tʰi˥˥
-喂	ui③2	ui˥˨
-善	sian④6	siɛn˨˥
-善	sen④6	sɛn˨˥
-喉	au②5	au˥˥
-喊	ham⑤3	ham˨˩˨
-喘	tshuan③2	tsʰuan˥˨
-喚	huan⑤3	huan˨˩˨
-喜	hi③2	hi˥˨
-喝	hat⑦4	hat˧˨
-喝	huah⑦4	huaʔ˧˨
-喧	suan①1	suan˧˦
-喪	sanɡ⑤3	saŋ˨˩˨
-喪	snɡ①1	sŋ˧˦
-喬	khiau②5	kʰiau˥˥
-單	sian④6	siɛn˨˥
-單	sen④6	sɛn˨˥
-單	sian②5	siɛn˥˥
-單	sen②5	sɛn˥˥
-單	tuann①1	tuã˧˦
-喻	ju④6	dzu˨˥
-嗅	hiunn⑤3	hiũ˨˩˨
-嗓	sanɡ③2	saŋ˥˨
-嗟	tsa①1	tsa˧˦
-嗣	sur②5	sɯ˥˥
-嗽	sau⑤3	sau˨˩˨
-嘆	than⑤3	tʰan˨˩˨
-嘉	kia①1	kia˧˦
-嘔	au③2	au˥˨
-嘗	sionn②5	siõ˥˥
-嘮	lau①1	lau˧˦
-嘯	sau⑤3	sau˨˩˨
-嘲	tshiau③2	tsʰiau˥˨
-嘴	tshui⑤3	tsʰui˨˩˨
-嘻	hi①1	hi˧˦
-噓	hur①1	hɯ˧˦
-噦	ueh⑦4	uɛʔ˧˨
-器	khi⑤3	kʰi˨˩˨
-噩	nɡak⑧8	ŋak˥˦
-噴	phun⑤3	pʰun˨˩˨
-嚇	heh⑦4	hɛʔ˧˨
-嚴	nɡiam②5	ŋiam˥˥
-嚷	jianɡ③2	dziaŋ˥˨
-囂	nɡau①1	ŋau˧˦
-囉	lo①1	lo˧˦
-囊	lanɡ③2	laŋ˥˨
-囑	tsok⑦4	tsok˧˨
-囚	tshiu②5	tsʰiu˥˥
-四	si⑤3	si˨˩˨
-囝	kiann③2	kiã˥˨
-回	hue②5	huɛ˥˥
-因	in①1	in˧˦
-囤	thun②5	tʰun˥˥
-囤	tun①1	tun˧˦
-囥	khnɡ⑤3	kʰŋ˨˩˨
-困	khun⑤3	kʰun˨˩˨
-囱	tshonɡ①1	tsʰoŋ˧˦
-固	ku⑤3	ku˨˩˨
-圈	khuan①1	kʰuan˧˦
-國	kok⑦4	kok˧˨
-圍	ui②5	ui˥˥
-園	hnɡ②5	hŋ˥˥
-圓	inn②5	ĩ˥˥
-圖	thu②5	tʰu˥˥
-圖	tou②5	tou˥˥
-團	thuan②5	tʰuan˥˥
-土	thou③2	tʰou˥˨
-在	tsai④6	tsai˨˥
-在	to④6	to˨˥
-圭	kui①1	kui˧˦
-地	ti⑥7	ti˨˨
-地	to⑤3	to˨˩˨
-址	tsi③2	tsi˥˨
-坂	pan③2	pan˥˨
-坂	puann③2	puã˥˨
-均	kurn①1	kɯn˧˦
-坍	tham①1	tʰam˧˦
-坎	kham③2	kʰam˥˨
-坎	kham①1	kʰam˧˦
-坎	kham⑤3	kʰam˨˩˨
-坐	tso④6	tso˨˥
-坐	tsho⑦4	tsʰo˨˨
-坑	khenn①1	kʰɛ̃˧˦
-坡	po①1	po˧˦
-坤	khun①1	kʰun˧˦
-坦	than③2	tʰan˥˨
-坪	phenɡ②5	pʰɛŋ˥˥
-坪	phiann②5	pʰiã˥˥
-坯	phue①1	pʰuɛ˧˦
-坷	kho①1	kʰo˧˦
-垂	sui②5	sui˥˥
-垂	sue②5	suɛ˥˥
-型	henɡ②5	hɛŋ˥˥
-垢	kou⑤3	kou˨˩˨
-垢	kau③2	kau˥˨
-垮	khua①1	kʰua˧˦
-垻	pa⑤3	pa˨˩˨
-垾	huann⑥7	huã˨˨
-埃	ai①1	ai˧˦
-埋	mai②5	mai˥˥
-城	siann②5	siã˥˥
-域	hok⑧8	hok˥˦
-埠	pou①1	pou˧˦
-埭	to⑥7	to˨˨
-執	tsip⑦4	tsip˧˨
-培	pue②5	puɛ˥˥
-基	ki①1	ki˧˦
-堂	thanɡ②5	tʰaŋ˥˥
-堂	tnɡ②5	tŋ˥˥
-堅	kian①1	kiɛn˧˦
-堅	ken①1	kɛn˧˦
-堆	tui①1	tui˧˦
-堆	tu①1	tu˧˦
-堡	pau③2	pau˥˨
-堤	toi①1	toi˧˦
-堪	kham①1	kʰam˧˦
-堯	nɡiau②5	ŋiau˥˥
-堰	iam①1	iam˧˦
-報	po⑤3	po˨˩˨
-場	tshianɡ②5	tsʰiaŋ˥˥
-場	tionn②5	tiõ˥˥
-堵	tu③2	tu˥˨
-塊	ko⑤3	ko˨˩˨
-塋	ionɡ②5	ioŋ˥˥
-塌	thap⑧8	tʰap˥˦
-塌	thap⑦4	tʰap˧˨
-塑	sok⑦4	sok˧˨
-塑	suak⑦4	suak˧˨
-塔	thah⑦4	tʰaʔ˧˨
-塗	thu②5	tʰu˥˥
-塗	tou②5	tou˥˥
-塗	to②5	to˥˥
-塗	thou②5	tʰou˥˥
-塘	thanɡ②5	tʰaŋ˥˥
-塘	tnɡ②5	tŋ˥˥
-塞	sat⑦4	sat˧˨
-填	thian②5	tʰiɛn˥˥
-填	then②5	tʰɛn˥˥
-塵	tin②5	tin˥˥
-塵	thun②5	tʰun˥˥
-境	kenɡ③2	kɛŋ˥˨
-墅	su③2	su˥˨
-墊	tian④6	tiɛn˨˥
-墊	ten④6	tɛn˨˥
-墓	mo④6	mo˨˥
-墜	tui⑥7	tui˨˨
-墜	thui⑥7	tʰui˨˨
-增	tsenɡ①1	tsɛŋ˧˦
-墟	hur①1	hɯ˧˦
-墨	bak⑧8	bak˥˦
-墩	tun①1	tun˧˦
-墮	tui⑥7	tui˨˨
-墳	phun②5	pʰun˥˥
-墾	khurn③2	kʰɯn˥˨
-壁	piah⑦4	piaʔ˧˨
-壇	tuann②5	tuã˥˥
-壑	hak⑦4	hak˧˨
-壓	iap⑦4	iap˧˨
-壓	ap⑦4	ap˧˨
-壘	lui③2	lui˥˨
-壞	huai④6	huai˨˥
-壟	lonɡ③2	loŋ˥˨
-壤	jianɡ③2	dziaŋ˥˨
-壩	pa⑤3	pa˨˩˨
-士	sur④6	sɯ˨˥
-壬	jim④6	dzim˨˥
-壯	tsanɡ⑤3	tsaŋ˨˩˨
-壺	hu②5	hu˥˥
-壽	siu⑥7	siu˨˨
-夏	he⑥7	hɛ˨˨
-夕	sek⑦4	sɛk˧˨
-外	ɡua⑥7	gua˨˨
-夙	sok⑦4	sok˧˨
-多	to①1	to˧˦
-夜	me⑤3	mɛ̃˨˩˨
-夜	me②5	mɛ̃˥˥
-夠	kau⑤3	kau˨˩˨
-夢	manɡ⑥7	maŋ˨˨
-夥	hue③2	huɛ˥˨
-夥	ua④6	ua˨˥
-大	tai④6	tai˨˥
-大	tua⑥7	tua˨˨
-天	thian①1	tʰiɛn˧˦
-天	then①1	tʰɛn˧˦
-天	thinn①1	tʰĩ˧˦
-太	thai⑤3	tʰai˨˩˨
-夫	hu①1	hu˧˦
-夫	pou①1	pou˧˦
-夭	iau①1	iau˧˦
-央	ianɡ①1	iaŋ˧˦
-央	nɡ①1	ŋ˧˦
-失	sit⑦4	sit˧˨
-夷	i②5	i˥˥
-夾	kiap⑦4	kiap˧˨
-夾	koih⑦4	koiʔ˧˨
-夾	nɡoih⑦4	ŋoiʔ˧˨
-奇	khi②5	kʰi˥˥
-奇	khia①1	kʰia˧˦
-奈	nai④6	nai˨˥
-奉	honɡ④6	hoŋ˨˥
-奎	khui②5	kʰui˥˥
-奏	tsau⑤3	tsau˨˩˨
-契	khoi⑤3	kʰoi˨˩˨
-奔	pun①1	pun˧˦
-奔	phun①1	pʰun˧˦
-套	thau⑤3	tʰau˨˩˨
-奚	hi②5	hi˥˥
-奠	tian④6	tiɛn˨˥
-奠	ten④6	tɛn˨˥
-奢	tshia①1	tsʰia˧˦
-奥	o⑤3	o˨˩˨
-奪	toh⑧8	toʔ˥˦
-奮	hun⑤3	hun˨˩˨
-女	ni③2	ni˥˨
-女	nnɡ③2	nŋ˥˨
-奴	nou②5	nou˥˥
-奶	nai③2	nai˥˨
-奶	ni④6	ni˨˥
-奶	ni①1	ni˧˦
-奶	ne①1	nɛ˧˦
-奶	lenɡ①1	lɛŋ˧˦
-奸	kan①1	kan˧˦
-好	hau③2	hau˥˨
-好	haunn⑤3	hãu˨˩˨
-好	ho③2	ho˥˨
-如	ju②5	dzu˥˥
-妃	hui①1	hui˧˦
-妄	buanɡ③2	buaŋ˥˨
-妊	jim④6	dzim˨˥
-妒	kou⑤3	kou˨˩˨
-妓	ki④6	ki˨˥
-妖	iau①1	iau˧˦
-妗	kim④6	kim˨˥
-妙	miau④6	miau˨˥
-妝	tsuanɡ①1	tsuaŋ˧˦
-妝	tsnɡ①1	tsŋ˧˦
-妥	tho③2	tʰo˥˨
-妨	huanɡ②5	huaŋ˥˥
-妹	mue④6	muɛ˨˥
-妹	mue⑥7	muɛ˨˨
-妻	tshi①1	tsʰi˧˦
-妾	tshiap⑦4	tsʰiap˧˨
-姆	m③2	m˥˨
-姊	tsi③2	tsi˥˨
-始	sur③2	sɯ˥˨
-姐	tse③2	tsɛ˥˨
-姐	tsia③2	tsia˥˨
-姑	kou①1	kou˧˦
-姓	senn⑤3	sɛ̃˨˩˨
-委	ui③2	ui˥˨
-姘	phenɡ①1	pʰɛŋ˧˦
-姚	io②5	io˥˥
-姜	kianɡ①1	kiaŋ˧˦
-姦	kan①1	kan˧˦
-姨	i②5	i˥˥
-姬	ki①1	ki˧˦
-姻	in①1	in˧˦
-姿	tsur①1	tsɯ˧˦
-威	ui①1	ui˧˦
-娃	ua①1	ua˧˦
-娑	so①1	so˧˦
-娘	lianɡ②5	liaŋ˥˥
-娘	nio②5	niõ˥˥
-娛	u②5	u˥˥
-娛	ɡu②5	gu˥˥
-娠	sin②5	sin˥˥
-娩	mian③2	miɛn˥˨
-娩	men③2	mɛn˥˨
-娶	tshu③2	tsʰu˥˨
-婆	po②5	po˥˥
-婆	phua②5	pʰua˥˥
-婉	uan③2	uan˥˨
-婚	hun①1	hun˧˦
-婢	pi④6	pi˨˥
-婦	hu④6	hu˨˥
-婦	pu④6	pu˨˥
-婪	lam②5	lam˥˥
-婿	sai⑤3	sai˨˩˨
-媒	bue②5	buɛ˥˥
-媚	mi④6	mi˨˥
-媳	sek⑦4	sɛk˧˨
-媽	ma①1	ma˧˦
-媽	ma②5	ma˥˥
-媽	ma③2	ma˥˨
-嫁	ke⑤3	kɛ˨˩˨
-嫂	sau③2	sau˥˨
-嫂	so③2	so˥˨
-嫌	hiam②5	hiam˥˥
-嫖	phiau②5	pʰiau˥˥
-嫡	tiah⑦4	tiaʔ˧˨
-嫩	lun⑤3	lun˨˩˨
-嬉	hi①1	hi˧˦
-嬌	kiau①1	kiau˧˦
-嬰	enɡ①1	ɛŋ˧˦
-嬴	ionɡ①1	ioŋ˧˦
-嬸	sim③2	sim˥˨
-孀	snɡ①1	sŋ˧˦
-子	tsur③2	tsɯ˥˨
-子	tsi③2	tsi˥˨
-孔	khonɡ③2	kʰoŋ˥˨
-孕	jenɡ④6	dzɛŋ˨˥
-字	jur④6	dzɯ˨˥
-字	ji⑥7	dzi˨˨
-存	tshun②5	tsʰun˥˥
-孝	hau⑤3	hau˨˩˨
-孝	ha⑤3	ha˨˩˨
-孟	menɡ③2	mɛŋ˥˨
-季	khui⑤3	kʰui˨˩˨
-季	kui⑤3	kui˨˩˨
-孤	kou①1	kou˧˦
-孥	nou①1	nou˧˦
-孥	nou②5	nou˥˥
-孩	hai②5	hai˥˥
-孫	sun①1	sun˧˦
-孫	snɡ①1	sŋ˧˦
-學	hak⑧8	hak˥˦
-學	oh⑧8	oʔ˥˦
-孽	nɡiat⑧8	ŋiɛt˥˦
-孽	nɡet⑧8	ŋɛt˥˦
-宅	theh⑧8	tʰɛʔ˥˦
-宇	u③2	u˥˨
-守	siu③2	siu˥˨
-安	an①1	an˧˦
-安	uann①1	uã˧˦
-宋	sonɡ⑤3	soŋ˨˩˨
-完	uan②5	uan˥˥
-宏	honɡ②5	hoŋ˥˥
-宕	tanɡ④6	taŋ˨˥
-宗	tsonɡ①1	tsoŋ˧˦
-官	kuann①1	kuã˧˦
-宙	tiu④6	tiu˨˥
-定	tenɡ④6	tɛŋ˨˥
-定	tiann⑥7	tiã˨˨
-宛	uan③2	uan˥˨
-宜	nɡi②5	ŋi˥˥
-客	kheh⑦4	kʰɛʔ˧˨
-客	khah⑦4	kʰaʔ˧˨
-宣	suan①1	suan˧˦
-室	sit⑦4	sit˧˨
-宥	iu④6	iu˨˥
-宦	huam④6	huam˨˥
-宮	kenɡ①1	kɛŋ˧˦
-宰	tsai③2	tsai˥˨
-害	hai⑥7	hai˨˨
-宴	an⑤3	an˨˩˨
-宵	siau①1	siau˧˦
-家	ke①1	kɛ˧˦
-家	ka①1	ka˧˦
-容	ionɡ②5	ioŋ˥˥
-宿	sok⑦4	sok˧˨
-宿	suah⑦4	suaʔ˧˨
-寂	sok⑦4	sok˧˨
-寄	kia⑤3	kia˨˩˨
-寅	in②5	in˥˥
-密	mit⑧8	mit˥˦
-密	mat⑧8	mat˥˦
-密	bat⑧8	bat˥˦
-寇	khou⑤3	kʰou˨˩˨
-富	pu⑤3	pu˨˩˨
-寐	mue④6	muɛ˨˥
-寒	han②5	han˥˥
-寒	kuann②5	kuã˥˥
-寓	nɡo④6	ŋo˨˥
-寓	nɡo②5	ŋo˥˥
-寞	mok⑧8	mok˥˦
-察	tshat⑦4	tsʰat˧˨
-寡	kua③2	kua˥˨
-寢	tshim③2	tsʰim˥˨
-寥	liau②5	liau˥˥
-實	sit⑧8	sit˥˦
-實	tsat⑧8	tsat˥˦
-寧	lenɡ②5	lɛŋ˥˥
-寨	tse⑥7	tsɛ˨˨
-審	sim③2	sim˥˨
-寫	sia③2	sia˥˨
-寬	khuan①1	kʰuan˧˦
-寬	khuann①1	kʰuã˧˦
-寮	liau②5	liau˥˥
-寵	thonɡ③2	tʰoŋ˥˨
-寶	po③2	po˥˨
-寸	tshun⑤3	tsʰun˨˩˨
-寺	si⑥7	si˨˨
-封	honɡ①1	hoŋ˧˦
-封	huanɡ①1	huaŋ˧˦
-射	sia⑥7	sia˨˨
-將	tsianɡ①1	tsiaŋ˧˦
-將	tsianɡ⑤3	tsiaŋ˨˩˨
-專	tsuan①1	tsuan˧˦
-尊	tsun①1	tsun˧˦
-尋	tshim②5	tsʰim˥˥
-尋	siam②5	siam˥˥
-尋	tshinn②5	tsʰĩ˥˥
-對	tui⑤3	tui˨˩˨
-導	tau④6	tau˨˥
-小	siau③2	siau˥˨
-小	sio③2	sio˥˨
-少	siau③2	siau˥˨
-少	siau⑤3	siau˨˩˨
-少	tsio③2	tsio˥˨
-尖	tsiam①1	tsiam˧˦
-尚	sianɡ④6	siaŋ˨˥
-尚	sionn⑥7	siõ˨˨
-尤	iu②5	iu˥˥
-尬	kai⑤3	kai˨˩˨
-就	tsiu④6	tsiu˨˥
-尷	kam①1	kam˧˦
-尸	si①1	si˧˦
-尹	urn③2	ɯn˥˨
-尺	tshioh⑦4	tsʰioʔ˧˨
-尼	ni②5	ni˥˥
-尾	bue③2	buɛ˥˨
-尿	jio⑥7	dzio˨˨
-局	kek⑧8	kɛk˥˦
-屁	phui⑤3	pʰui˨˩˨
-居	kur①1	kɯ˧˦
-屈	khut⑦4	kʰut˧˨
-届	kai⑤3	kai˨˩˨
-屋	ok⑦4	ok˧˨
-屎	sai③2	sai˥˨
-屏	phin②5	pʰin˥˥
-屐	kiah⑧8	kiaʔ˥˦
-屑	sut⑦4	sut˧˨
-展	tian③2	tiɛn˥˨
-展	ten③2	tɛn˥˨
-屠	tou②5	tou˥˥
-屢	lu③2	lu˥˨
-層	tsan②5	tsan˥˥
-履	li③2	li˥˨
-屬	sok⑧8	sok˥˦
-屯	thun②5	tʰun˥˥
-山	san①1	san˧˦
-山	suann①1	suã˧˦
-岔	tsha①1	tsʰa˧˦
-岔	tshe①1	tsʰɛ˧˦
-岡	kanɡ①1	kaŋ˧˦
-岡	knɡ①1	kŋ˧˦
-岳	nɡak⑧8	ŋak˥˦
-岸	nɡai④6	ŋai˨˥
-岸	huann⑥7	huã˨˨
-峙	sur④6	sɯ˨˥
-峰	honɡ①1	hoŋ˧˦
-島	tau③2	tau˥˨
-峽	kiap⑧8	kiap˥˦
-峽	kiap⑦4	kiap˧˨
-崇	tshonɡ②5	tsʰoŋ˥˥
-崑	khun①1	kʰun˧˦
-崔	tshui①1	tsʰui˧˦
-崖	nɡai②5	ŋai˥˥
-崗	kanɡ①1	kaŋ˧˦
-崗	knɡ①1	kŋ˧˦
-崙	lun②5	lun˥˥
-崩	panɡ①1	paŋ˧˦
-嵌	khiam②5	kʰiam˥˥
-嵩	sonɡ①1	soŋ˧˦
-嶺	nia③2	niã˥˨
-嶽	nɡak⑧8	ŋak˥˦
-巍	nɡui②5	ŋui˥˥
-巖	nɡiam②5	ŋiam˥˥
-川	tshuan①1	tsʰuan˧˦
-州	tsiu①1	tsiu˧˦
-巡	sun②5	sun˥˥
-巢	tshau②5	tsʰau˥˥
-工	kanɡ①1	kaŋ˧˦
-左	tso③2	tso˥˨
-巧	khiau③2	kʰiau˥˨
-巧	kha③2	kʰa˥˨
-巨	kur④6	kɯ˨˥
-巫	bu②5	bu˥˥
-差	tsha①1	tsʰa˧˦
-差	tshe①1	tsʰɛ˧˦
-己	ki③2	ki˥˨
-已	inn③2	ĩ˥˨
-巳	tsi④6	tsi˨˥
-巴	pa①1	pa˧˦
-巷	hanɡ⑥7	haŋ˨˨
-巾	kurn①1	kɯn˧˦
-市	tshi④6	tsʰi˨˥
-布	pou⑤3	pou˨˩˨
-帆	phanɡ②5	pʰaŋ˥˥
-希	hi①1	hi˧˦
-帖	thiap⑦4	tʰiap˧˨
-帚	siu③2	siu˥˨
-帚	tsiu③2	tsiu˥˨
-帝	ti⑤3	ti˨˩˨
-帥	sue⑤3	suɛ˨˩˨
-師	sur①1	sɯ˧˦
-師	sai①1	sai˧˦
-席	siah⑧8	siaʔ˥˦
-席	tshioh⑧8	tsʰioʔ˥˦
-帳	tionn⑤3	tiõ˨˩˨
-帶	tua⑤3	tua˨˩˨
-帷	jui②5	dzui˥˥
-常	tshianɡ②5	tsʰiaŋ˥˥
-常	sionn②5	siõ˥˥
-帽	bo⑥7	bo˨˨
-幅	pak⑦4	pak˧˨
-幕	mo④6	mo˨˥
-幢	tonɡ②5	toŋ˥˥
-幣	pi④6	pi˨˥
-幫	panɡ①1	paŋ˧˦
-干	kan①1	kan˧˦
-平	phenɡ②5	pʰɛŋ˥˥
-平	penn②5	pɛ̃˥˥
-平	phenn②5	pʰɛ̃˥˥
-年	ni②5	nĩ˥˥
-并	penɡ④6	pɛŋ˨˥
-幸	henɡ④6	hɛŋ˨˥
-幹	kan⑤3	kan˨˩˨
-幻	huan⑤3	huan˨˩˨
-幻	huam⑤3	huam˨˩˨
-幼	iu⑤3	iu˨˩˨
-幽	hiunn①1	hiũ˧˦
-幾	ki①1	ki˧˦
-幾	ki③2	ki˥˨
-幾	kui③2	kui˥˨
-庇	pi⑤3	pi˨˩˨
-序	su④6	su˨˥
-底	ti③2	ti˥˨
-底	toi③2	toi˥˨
-店	tiam⑤3	tiam˨˩˨
-庚	kenn①1	kɛ̃˧˦
-府	hu③2	hu˥˨
-度	tou⑥7	tou˨˨
-座	tso⑥7	tso˨˨
-庫	khou⑤3	kʰou˨˩˨
-庭	thenɡ②5	tʰɛŋ˥˥
-庭	tiann②5	tiã˥˥
-庵	am①1	am˧˦
-庶	su⑤3	su˨˩˨
-康	khanɡ①1	kʰaŋ˧˦
-庸	ionɡ①1	ioŋ˧˦
-廁	tshe⑤3	tsʰɛ˨˩˨
-廈	he⑥7	hɛ˨˨
-廉	liam②5	liam˥˥
-廊	lanɡ②5	laŋ˥˥
-廓	kuak⑦4	kuak˧˨
-廖	liau⑥7	liau˨˨
-廟	bio⑥7	bio˨˨
-廠	tshianɡ③2	tsʰiaŋ˥˨
-廢	hui⑤3	hui˨˩˨
-廣	kuanɡ③2	kuaŋ˥˨
-廣	knɡ③2	kŋ˥˨
-廬	lu②5	lu˥˥
-廬	lou②5	lou˥˥
-廳	thiann①1	tʰiã˧˦
-延	ian④6	iɛn˨˥
-延	en④6	ɛn˨˥
-廷	thenɡ②5	tʰɛŋ˥˥
-建	kian④6	kiɛn˨˥
-建	ken④6	kɛn˨˥
-建	kian⑤3	kiɛn˨˩˨
-建	ken⑤3	kɛn˨˩˨
-弄	lonɡ④6	loŋ˨˥
-弊	pi⑥7	pi˨˨
-式	sek⑦4	sɛk˧˨
-弓	kenɡ①1	kɛŋ˧˦
-引	in③2	in˥˨
-弗	hut⑦4	hut˧˨
-弘	honɡ②5	hoŋ˥˥
-弟	ti④6	ti˨˥
-弦	hian②5	hiɛn˥˥
-弦	hen②5	hɛn˥˥
-弦	hinn②5	hĩ˥˥
-弱	jiak⑧8	dziak˥˦
-弱	nioh⑧8	nioʔ˥˦
-張	tsianɡ①1	tsiaŋ˧˦
-張	tionn①1	tiõ˧˦
-強	khianɡ②5	kʰiaŋ˥˥
-強	kianɡ③2	kiaŋ˥˨
-弼	pit⑧8	pit˥˦
-彀	kau⑤3	kau˨˩˨
-彈	than②5	tʰan˥˥
-彈	tuann②5	tuã˥˥
-彈	tuann⑥7	tuã˨˨
-彌	ni③2	ni˥˨
-彎	uan①1	uan˧˦
-彗	hui④6	hui˨˥
-形	henɡ②5	hɛŋ˥˥
-彩	tshai③2	tsʰai˥˨
-彪	piu①1	piu˧˦
-彬	pin①1	pin˧˦
-彭	phenn②5	pʰɛ̃˥˥
-影	iann③2	iã˥˨
-彷	phanɡ②5	pʰaŋ˥˥
-役	hiah⑧8	hiaʔ˥˦
-彼	pi③2	pi˥˨
-往	uanɡ③2	uaŋ˥˨
-征	tsenɡ①1	tsɛŋ˧˦
-待	thai④6	tʰai˨˥
-很	hurn③2	hɯn˥˨
-律	lut⑧8	lut˥˦
-後	hau④6	hau˨˥
-後	au④6	au˨˥
-徐	sur②5	sɯ˥˥
-徐	tshur②5	tsʰɯ˥˥
-徑	kenn⑤3	kɛ̃˨˩˨
-徒	thu②5	tʰu˥˥
-得	tit⑦4	tit˧˨
-徙	sua③2	sua˥˨
-徛	khia④6	kʰia˨˥
-從	tshonɡ②5	tsʰoŋ˥˥
-御	ɡur⑥7	gɯ˨˨
-復	hiunn④6	hiũ˨˥
-復	hok⑧8	hok˥˦
-循	sun②5	sun˥˥
-微	mui②5	mui˥˥
-徵	tenɡ①1	tɛŋ˧˦
-德	tek⑦4	tɛk˧˨
-徹	thiat⑦4	tʰiɛt˧˨
-徹	thet⑦4	tʰɛt˧˨
-徽	hui①1	hui˧˦
-心	sim①1	sim˧˦
-必	pit⑦4	pit˧˨
-忌	ki④6	ki˨˥
-忌	khi⑥7	kʰi˨˨
-忍	jim③2	dzim˥˨
-忍	lun③2	lun˥˨
-志	tsi⑤3	tsi˨˩˨
-忘	buanɡ②5	buaŋ˥˥
-忙	manɡ②5	maŋ˥˥
-忝	thiam③2	tʰiam˥˨
-忠	tonɡ①1	toŋ˧˦
-快	khuai⑤3	kʰuai˨˩˨
-快	khue⑤3	kʰuɛ˨˩˨
-念	liam④6	liam˨˥
-忽	hut⑦4	hut˧˨
-怒	no⑤3	nõ˨˩˨
-怒	lou③2	lou˥˨
-怕	phann⑤3	pʰã˨˩˨
-怖	pu⑤3	pu˨˩˨
-思	sur①1	sɯ˧˦
-思	sur⑤3	sɯ˨˩˨
-思	si①1	si˧˦
-怠	tai④6	tai˨˥
-怡	i②5	i˥˥
-急	kip⑦4	kip˧˨
-性	senn⑤3	sɛ̃˨˩˨
-怨	uan⑤3	uan˨˩˨
-怪	kuai⑤3	kuai˨˩˨
-怪	kue⑤3	kuɛ˨˩˨
-怯	khiak⑦4	kʰiak˧˨
-恃	si④6	si˨˥
-恆	henɡ②5	hɛŋ˥˥
-恆	an②5	an˥˥
-恍	huanɡ③2	huaŋ˥˨
-恐	khionɡ③2	kʰioŋ˥˨
-恕	su⑤3	su˨˩˨
-恙	ianɡ④6	iaŋ˨˥
-恢	hue①1	huɛ˧˦
-恤	sut⑦4	sut˧˨
-恥	tshi③2	tsʰi˥˨
-恨	hurn④6	hɯn˨˥
-恩	urn①1	ɯn˧˦
-恭	kionɡ①1	kioŋ˧˦
-息	sek⑦4	sɛk˧˨
-恰	khap⑦4	kʰap˧˨
-悄	tshiau③2	tsʰiau˥˨
-悅	juat⑧8	dzuat˥˦
-悉	sek⑦4	sɛk˧˨
-悍	han③2	han˥˨
-悔	hue⑤3	huɛ˨˩˨
-悟	nɡo④6	ŋo˨˥
-悟	nɡo②5	ŋo˥˥
-悠	hiunn①1	hiũ˧˦
-患	huam④6	huam˨˥
-悲	pui①1	pui˧˦
-悴	tsui④6	tsui˨˥
-情	tshenɡ②5	tsʰɛŋ˥˥
-情	tsiann②5	tsiã˥˥
-惑	hok⑧8	hok˥˦
-惜	sioh⑦4	sioʔ˧˨
-惟	jui②5	dzui˥˥
-惠	hui④6	hui˨˥
-惡	u⑤3	u˨˩˨
-惡	ak⑦4	ak˧˨
-惡	oh⑦4	oʔ˧˨
-惰	tuann④6	tuã˨˥
-惱	nau③2	nau˥˨
-惱	lo③2	lo˥˨
-想	sianɡ③2	siaŋ˥˨
-想	sionn④6	siõ˨˥
-惹	jia③2	dzia˥˨
-惻	tshek⑦4	tsʰɛk˧˨
-愁	tshou②5	tsʰou˥˥
-愈	ju③2	dzu˥˨
-愉	ju②5	dzu˥˥
-意	i⑤3	i˨˩˨
-愕	nɡak⑧8	ŋak˥˦
-愕	nɡoh⑧8	ŋoʔ˥˦
-愚	nɡo②5	ŋo˥˥
-愛	ainn⑤3	ãi˨˩˨
-感	kam③2	kam˥˨
-愷	khai③2	kʰai˥˨
-慈	tshur②5	tsʰɯ˥˥
-態	thai⑤3	tʰai˨˩˨
-慌	huanɡ①1	huaŋ˧˦
-慎	sin③2	sin˥˨
-慕	mo④6	mo˨˥
-慘	tsham③2	tsʰam˥˨
-慚	tsham②5	tsʰam˥˥
-慢	muan④6	muan˨˥
-慢	man⑥7	man˨˨
-慣	kuan⑤3	kuan˨˩˨
-慣	kuinn⑤3	kũi˨˩˨
-慧	hui④6	hui˨˥
-慨	khai⑤3	kʰai˨˩˨
-慮	lur④6	lɯ˨˥
-慰	ue⑤3	uɛ˨˩˨
-慶	khenɡ⑤3	kʰɛŋ˨˩˨
-慷	khanɡ③2	kʰaŋ˥˨
-慾	iok⑧8	iok˥˦
-憂	iu①1	iu˧˦
-憋	pih⑦4	piʔ˧˨
-憎	tsenɡ①1	tsɛŋ˧˦
-憐	lian②5	liɛn˥˥
-憐	len②5	lɛn˥˥
-憑	phenɡ②5	pʰɛŋ˥˥
-憚	tan④6	tan˨˥
-憤	hun⑤3	hun˨˩˨
-憫	mian③2	miɛn˥˨
-憫	men③2	mɛn˥˨
-憲	hian⑤3	hiɛn˨˩˨
-憲	hen⑤3	hɛn˨˩˨
-憶	i⑤3	i˨˩˨
-憶	it⑦4	it˧˨
-憾	ham④6	ham˨˥
-憾	ham⑥7	ham˨˨
-懂	tonɡ③2	toŋ˥˨
-懇	khurn③2	kʰɯn˥˨
-懈	hai④6	hai˨˥
-應	enɡ①1	ɛŋ˧˦
-應	enɡ⑤3	ɛŋ˨˩˨
-應	in⑤3	in˨˩˨
-懊	au⑤3	au˨˩˨
-懊	o⑤3	o˨˩˨
-懲	thenɡ③2	tʰɛŋ˥˨
-懵	monɡ③2	moŋ˥˨
-懶	lan③2	lan˥˨
-懶	tuann④6	tuã˨˥
-懷	huai②5	huai˥˥
-懸	hian②5	hiɛn˥˥
-懸	hen②5	hɛn˥˥
-懸	kuinn②5	kũi˥˥
-懺	tshiam①1	tsʰiam˧˦
-懺	tshiam⑤3	tsʰiam˨˩˨
-懼	ku④6	ku˨˥
-懿	i④6	i˨˥
-戀	luan⑤3	luan˨˩˨
-戈	kho①1	kʰo˧˦
-戊	bou⑥7	bou˨˨
-戌	sut⑦4	sut˧˨
-戍	sue⑤3	suɛ˨˩˨
-戎	jonɡ②5	dzoŋ˥˥
-成	senɡ②5	sɛŋ˥˥
-成	siann②5	siã˥˥
-成	tsiann②5	tsiã˥˥
-成	tshiann②5	tsʰiã˥˥
-我	nɡo③2	ŋo˥˨
-我	ua③2	ua˥˨
-戒	kai⑤3	kai˨˩˨
-或	hok⑧8	hok˥˦
-戚	tshek⑦4	tsʰɛk˧˨
-戟	kek⑦4	kɛk˧˨
-截	tsoih⑧8	tsoiʔ˥˦
-戮	lok⑧8	lok˥˦
-戰	tsian⑤3	tsiɛn˨˩˨
-戰	tsen⑤3	tsɛn˨˩˨
-戲	hi⑤3	hi˨˩˨
-戳	tshiok⑦4	tsʰiok˧˨
-戴	tai⑤3	tai˨˩˨
-戴	to⑤3	to˨˩˨
-戴	ti⑤3	ti˨˩˨
-戶	hou④6	hou˨˥
-戽	hou⑤3	hou˨˩˨
-房	panɡ②5	paŋ˥˥
-所	so③2	so˥˨
-扁	pian③2	piɛn˥˨
-扁	pen③2	pɛn˥˨
-扁	pinn③2	pĩ˥˨
-扇	sian⑤3	siɛn˨˩˨
-扇	sen⑤3	tsɛn˨˩˨
-扇	sinn⑤3	sĩ˨˩˨
-手	tshiu③2	tsʰiu˥˨
-才	tshai②5	tsʰai˥˥
-才	tsai②5	tsai˥˥
-扎	tsat⑦4	tsat˧˨
-打	ta③2	ta˥˨
-扔	jenɡ①1	dzɛŋ˧˦
-托	thoh⑦4	tʰoʔ˧˨
-扛	knɡ①1	kŋ˧˦
-扣	khau⑤3	kʰau˨˩˨
-扭	niu③2	niu˥˨
-扮	pan⑤3	pan˨˩˨
-扯	tshe③2	tsʰɛ˥˨
-扶	hu②5	hu˥˥
-批	phue①1	pʰuɛ˧˦
-扼	eh⑦4	ɛʔ˧˨
-找	tau③2	tau˥˨
-承	senɡ②5	sɛŋ˥˥
-承	sin②5	sin˥˥
-技	ki④6	ki˨˥
-抄	tshau①1	tsʰau˧˦
-把	pa③2	pa˥˨
-把	pe③2	pɛ˥˨
-抑	at⑦4	at˧˨
-抓	tsuann①1	tsuã˧˦
-投	tau②5	tau˥˥
-抖	tou③2	tou˥˨
-抖	tau③2	tau˥˨
-抗	khanɡ⑤3	kʰaŋ˨˩˨
-折	sih⑧8	siʔ˥˦
-折	tsih⑧8	tsiʔ˥˦
-折	tsih⑦4	tsiʔ˧˨
-抛	phau①1	pʰau˧˦
-抛	pha①1	pʰa˧˦
-披	phi①1	pʰi˧˦
-抬	thai②5	tʰai˥˥
-抱	pho④6	pʰo˨˥
-抵	ti③2	ti˥˨
-抵	toi③2	toi˥˨
-抹	buah⑦4	buaʔ˧˨
-押	ap⑦4	ap˧˨
-押	ah⑦4	aʔ˧˨
-抽	thiu①1	tʰiu˧˦
-拂	hut⑦4	hut˧˨
-拆	thiah⑦4	tʰiaʔ˧˨
-拇	bo③2	bo˥˨
-拈	liam①1	liam˧˦
-拈	ni①1	nĩ˧˦
-拉	la①1	la˧˦
-拉	lap⑦4	lap˧˨
-拍	phah⑦4	pʰaʔ˧˨
-拐	kuai③2	kuai˥˨
-拒	kur④6	kɯ˨˥
-拔	puat⑧8	puat˥˦
-拔	pueh⑧8	puɛʔ˥˦
-拖	thua①1	tʰua˧˦
-拗	au③2	au˥˨
-拗	a③2	a˥˨
-拘	khu①1	kʰu˧˦
-拙	tshuat⑦4	tsʰuat˧˨
-拚	pun⑤3	pun˨˩˨
-拚	piann⑤3	piã˨˩˨
-招	tsiau①1	tsiau˧˦
-招	tsio①1	tsio˧˦
-拜	pai⑤3	pai˨˩˨
-括	kuat⑦4	kuat˧˨
-拭	tshit⑦4	tsʰit˧˨
-拯	tsin③2	tsin˥˨
-拱	kionɡ③2	kioŋ˥˨
-拳	khun②5	kʰun˥˥
-拳	kun②5	kun˥˥
-拼	phenɡ①1	pʰɛŋ˧˦
-拾	sip⑧8	sip˥˦
-拿	na③2	nã˥˨
-持	thi②5	tʰi˥˥
-持	ti②5	ti˥˥
-指	tsi③2	tsi˥˨
-指	tsnɡ③2	tsŋ˥˨
-指	tsoinn③2	tsõi˥˨
-指	ki③2	ki˥˨
-按	an⑤3	an˨˩˨
-挑	thiau①1	tʰiau˧˦
-挑	thio①1	tʰio˧˦
-挖	uai①1	uai˧˦
-挖	ueh⑦4	uɛʔ˧˨
-挨	ai①1	ai˧˦
-挨	oi①1	oi˧˦
-挪	no②5	no˥˥
-振	tsin③2	tsin˥˨
-振	tin③2	tin˥˨
-挺	thenɡ③2	tʰɛŋ˥˨
-挽	man③2	man˥˨
-挾	hiap⑧8	hiap˥˦
-挾	kiap⑧8	kiap˥˦
-挾	nɡiap⑧8	ŋiap˥˦
-挾	koih⑧8	koiʔ˥˦
-捆	khun③2	kʰun˥˨
-捉	tshok⑦4	tsʰok˧˨
-捋	luah⑧8	luaʔ˥˦
-捋	lut⑧8	lut˥˦
-捍	han③2	han˥˨
-捏	niap⑦4	niap˧˨
-捏	niap⑧8	niap˥˦
-捐	kian①1	kiɛn˧˦
-捐	ken①1	kɛn˧˦
-捕	pu①1	pu˧˦
-捧	honɡ③2	hoŋ˥˨
-捧	phonɡ③2	pʰoŋ˥˨
-捨	sia⑤3	sia˨˩˨
-捲	knɡ③2	kŋ˥˨
-捶	tui②5	tui˥˥
-捷	tsiap⑧8	tsiap˥˦
-捺	nai④6	nai˨˥
-掀	hurn①1	hɯn˧˦
-掀	hian①1	hiɛn˧˦
-掀	hen①1	hɛn˧˦
-掂	tiam①1	tiam˧˦
-掃	sau⑤3	sau˨˩˨
-授	siu④6	siu˨˥
-掉	tiau⑥7	tiau˨˨
-掌	tsionn③2	tsiõ˥˨
-掏	thau①1	tʰau˧˦
-排	phai②5	pʰai˥˥
-排	pai②5	pai˥˥
-掘	kut⑧8	kut˥˦
-掛	khua⑤3	kʰua˨˩˨
-掛	kua⑤3	kua˨˩˨
-掛	kue⑤3	kuɛ˨˩˨
-掠	liah⑧8	liaʔ˥˦
-探	tham⑤3	tʰam˨˩˨
-接	tsiap⑦4	tsiap˧˨
-接	tsih⑦4	tsiʔ˧˨
-控	khonɡ⑤3	kʰoŋ˨˩˨
-推	thui①1	tʰui˧˦
-推	tshui①1	tsʰui˧˦
-推	tho①1	tʰo˧˦
-掩	iam①1	iam˧˦
-掩	iam②5	iam˥˨
-措	tshu⑤3	tsʰu˨˩˨
-揀	koinn③2	kõi˥˨
-揉	jiu②5	dziu˥˥
-描	miau②5	miau˥˥
-描	bio②5	bio˥˥
-提	thi②5	tʰi˥˥
-插	tshap⑦4	tsʰap˧˨
-插	tshah⑦4	tsʰaʔ˧˨
-揚	ianɡ②5	iaŋ˥˥
-揚	tshionn②5	tsʰiõ˥˥
-換	huan⑤3	huan˨˩˨
-換	uann⑥7	uã˨˨
-握	ok⑦4	ok˧˨
-揩	khoi①1	kʰoi˧˦
-揭	kit⑦4	kit˧˨
-揭	kiah⑦4	kiaʔ˧˨
-揮	hui①1	hui˧˦
-援	ian④6	iɛn˨˥
-援	en④6	ɛn˨˥
-損	sun③2	sun˥˨
-損	snɡ③2	sŋ˥˨
-搐	thek⑦4	tʰɛk˧˨
-搓	tsho①1	tsʰo˧˦
-搖	iau②5	iau˥˥
-搖	io②5	io˥˥
-搜	siau①1	siau˧˦
-搞	kau③2	kau˥˨
-搪	thanɡ②5	tʰaŋ˥˥
-搪	thnɡ⑥7	tʰŋ˨˨
-搬	puann①1	puã˧˦
-搭	tap⑦4	tap˧˨
-搭	tah⑦4	taʔ˧˨
-搶	tshionn③2	tsʰiõ˥˨
-携	hi④6	hi˨˥
-摔	tsut⑦4	tsut˧˨
-摔	sut⑦4	sut˧˨
-摘	tiah⑦4	tiaʔ˧˨
-摟	lou③2	lou˥˨
-摩	mo①1	mo˧˦
-摩	bua②5	bua˥˥
-摳	khau①1	kʰau˧˦
-摸	mo①1	mo˧˦
-摸	monɡ②5	moŋ˥˥
-摸	mak⑦4	mak˧˨
-摺	tsih⑦4	tsiʔ˧˨
-撇	phiat⑦4	pʰiɛt˧˨
-撇	phet⑦4	pʰɛt˧˨
-撇	phuat⑦4	pʰuat˧˨
-撈	lau①1	lau˧˦
-撈	lo①1	lo˧˦
-撏	tsiam②5	tsiam˥˥
-撐	thenn①1	tʰɛ̃˧˦
-撐	thenn⑤3	tʰɛ̃˨˩˨
-撒	sat⑦4	sat˧˨
-撒	suah⑦4	suaʔ˧˨
-撓	nau①1	nau˧˦
-撓	niau①1	niau˧˦
-撕	sur①1	sɯ˧˦
-撞	tsuanɡ④6	tsuaŋ˨˥
-撞	tonɡ⑥7	toŋ˨˨
-撞	tnɡ⑥7	tŋ˨˨
-撤	thiat⑦4	tʰiɛt˧˨
-撤	thet⑦4	tʰɛt˧˨
-撥	phuah⑦4	pʰuaʔ˧˨
-撩	liau②5	liau˥˥
-撩	lio②5	lio˥˥
-撫	bu③2	bu˥˨
-播	pua⑤3	pua˨˩˨
-撮	tshoh⑦4	tsʰoʔ˧˨
-撰	tsuan④6	tsuan˨˥
-撲	phok⑦4	pʰok˧˨
-撼	ham③2	ham˥˨
-擁	ionɡ⑤3	ioŋ˨˩˨
-擅	sian④6	siɛn˨˥
-擅	sen④6	sɛn˨˥
-擇	toh⑧8	toʔ˥˦
-擊	khek⑦4	kʰɛk˧˨
-擋	tanɡ③2	taŋ˥˨
-操	tshau①1	tsʰau˧˦
-操	tshau⑤3	tsʰau˨˩˨
-擎	khenɡ②5	kʰɛŋ˥˥
-擎	khia②5	kʰia˥˥
-擒	khim②5	kʰim˥˥
-擔	tam①1	tam˧˦
-擔	tann①1	tã˧˦
-擔	tann⑤3	tã˨˩˨
-據	kur④6	kɯ˨˥
-擠	tsinn⑤3	tsĩ˨˩˨
-擦	tshat⑦4	tsʰat˧˨
-擬	nɡi③2	ŋi˥˨
-擲	tann④6	tã˨˥
-擴	khuanɡ⑤3	kʰuaŋ˨˩˨
-擺	pai③2	pai˥˨
-擾	jiau③2	dziau˥˨
-攀	phan①1	pʰan˧˦
-攏	lonɡ③2	loŋ˥˨
-攔	lan②5	lan˥˥
-攘	jianɡ③2	dziaŋ˥˨
-攝	niap⑦4	niap˧˨
-攤	thuann①1	tʰuã˧˦
-攤	nua③2	nuã˥˨
-攤	nua⑤3	nuã˨˩˨
-攪	kiau③2	kiau˥˨
-攪	ka③2	ka˥˨
-攬	lam③2	lam˥˨
-支	tsinn①1	tsĩ˧˦
-支	ki①1	ki˧˦
-收	siu①1	siu˧˦
-改	koi③2	koi˥˨
-攻	konɡ①1	koŋ˧˦
-放	huanɡ⑤3	huaŋ˨˩˨
-放	panɡ⑤3	paŋ˨˩˨
-政	tsenɡ⑤3	tsɛŋ˨˩˨
-故	ku⑤3	ku˨˩˨
-故	ku⑥7	ku˨˨
-效	hau⑥7	hau˨˨
-敏	mian③2	miɛn˥˨
-敏	men③2	mɛn˥˨
-救	kiu⑤3	kiu˨˩˨
-敗	pai⑥7	pai˨˨
-教	ka⑤3	ka˨˩˨
-敝	pi⑥7	pi˨˨
-敢	kann③2	kã˥˨
-散	suann③2	suã˥˨
-散	suann⑤3	suã˨˩˨
-敦	tun①1	tun˧˦
-敨	thau③2	tʰau˥˨
-敬	kenɡ⑤3	kɛŋ˨˩˨
-敲	khiau①1	kʰiau˧˦
-敲	kha⑤3	kʰa˨˩˨
-整	tsiann③2	tsiã˥˨
-敵	tek⑧8	tɛk˥˦
-敷	hu①1	hu˧˦
-敷	phou①1	pʰou˧˦
-數	su⑤3	su˨˩˨
-數	siau⑤3	siau˨˩˨
-斂	liam③2	liam˥˨
-斃	pi⑥7	pi˨˨
-文	bun②5	bun˥˥
-斑	pan①1	pan˧˦
-斑	puenn①1	puɛ̃˧˦
-斗	tau③2	tau˥˨
-料	liau⑥7	liau˨˨
-斛	hok⑧8	hok˥˦
-斜	sia②5	sia˥˥
-斜	sia①1	sia˧˦
-斟	tsim①1	tsim˧˦
-斡	uat⑦4	uat˧˨
-斡	ut⑦4	ut˧˨
-斤	kurn①1	kɯn˧˦
-斥	tshek⑦4	tsʰɛk˧˨
-斧	pou③2	pou˥˨
-斬	tsam③2	tsam˥˨
-斯	sur①1	sɯ˧˦
-新	sin②5	sin˥˥
-斷	tuan⑤3	tuan˨˩˨
-斷	tuan④6	tuan˨˥
-斷	tnɡ④6	tŋ˨˥
-方	huanɡ①1	huaŋ˧˦
-方	hnɡ①1	hŋ˧˦
-方	pnɡ①1	pŋ˧˦
-方	panɡ①1	paŋ˧˦
-於	i①1	i˧˦
-施	si①1	si˧˦
-旁	phanɡ②5	pʰaŋ˥˥
-旅	li③2	li˥˨
-旋	suan②5	suan˥˥
-旋	tsnɡ⑥7	tsŋ˨˨
-族	tsok⑧8	tsok˥˦
-族	tsak⑧8	tsak˥˦
-旗	ki②5	ki˥˥
-既	ki⑤3	ki˨˩˨
-日	jit⑧8	dzit˥˦
-旦	tan⑤3	tan˨˩˨
-旦	tuann⑤3	tuã˨˩˨
-旨	tsi③2	tsi˥˨
-早	tsau③2	tsau˥˨
-早	tsa③2	tsa˥˨
-旬	sun②5	sun˥˥
-旭	hiok⑦4	hiok˧˨
-旱	uann④6	uã˨˥
-旺	uanɡ④6	uaŋ˨˥
-昂	nɡanɡ①1	ŋaŋ˧˦
-昆	khun①1	kʰun˧˦
-昌	tshianɡ①1	tsʰiaŋ˧˦
-明	menɡ②5	mɛŋ˥˥
-明	me②5	mɛ̃˥˥
-昏	hun①1	hun˧˦
-昏	hnɡ①1	hŋ˧˦
-易	i④6	i˨˥
-易	ek⑧8	ɛk˥˦
-易	iah⑧8	iaʔ˥˦
-易	ɡoi⑥7	goi˨˨
-昔	sek⑦4	sɛk˧˨
-星	tshenn①1	tsʰɛ̃˧˦
-星	san①1	san˧˦
-映	ianɡ⑤3	iaŋ˨˩˨
-春	tshun①1	tsʰun˧˦
-昧	mue④6	muɛ˨˥
-昨	tsoh⑧8	tsoʔ˥˦
-昨	tsa①1	tsa˧˦
-昭	tsiau①1	tsiau˧˦
-是	si④6	si˨˥
-時	si②5	si˥˥
-晉	tsin⑤3	tsin˨˩˨
-晏	an⑤3	an˨˩˨
-晏	uann⑤3	uã˨˩˨
-晚	mnɡ③2	mŋ˥˨
-晝	tiu④6	tiu˨˥
-晝	tau⑤3	tau˨˩˨
-晦	hue⑤3	huɛ˨˩˨
-晨	sin②5	sin˥˥
-普	phou③2	pʰou˥˨
-景	kenɡ③2	kɛŋ˥˨
-晴	tsenn②5	tsɛ̃˥˥
-晶	tsiann①1	tsiã˧˦
-智	ti⑤3	ti˨˩˨
-暇	hia②5	hia˥˥
-暈	un④6	un˨˥
-暑	su③2	su˥˨
-暖	luan③2	luan˥˨
-暗	am⑤3	am˨˩˨
-暝	menɡ②5	mɛŋ˥˥
-暝	me②5	mɛ̃˥˥
-暢	thianɡ⑤3	tʰiaŋ˨˩˨
-暫	tsiam④6	tsiam˨˥
-暮	mo④6	mo˨˥
-暴	pau④6	pau˨˥
-暹	siam②5	siam˥˥
-曆	leh⑧8	lɛʔ˥˦
-曉	hiau③2	hiau˥˨
-曝	phak⑧8	pʰak˥˦
-曠	khuanɡ⑤3	kʰuaŋ˨˩˨
-曩	lanɡ③2	laŋ˥˨
-曬	sai⑤3	sai˨˩˨
-曰	uat⑦4	uat˧˨
-曲	khiok⑦4	kʰiok˧˨
-曲	khek⑦4	kʰɛk˧˨
-更	kenɡ①1	kɛŋ˧˦
-更	kenɡ⑤3	kɛŋ˨˩˨
-更	kenn①1	kɛ̃˧˦
-書	tsur①1	tsɯ˧˦
-曹	tshau②5	tsʰau˥˥
-曾	tsenɡ①1	tsɛŋ˧˦
-曾	tsenɡ②5	tsɛŋ˥˥
-曾	tsan①1	tsan˧˦
-替	thi⑤3	tʰi˨˩˨
-替	thoi⑤3	tʰoi˨˩˨
-最	tsue⑤3	tsuɛ˨˩˨
-會	kuai⑤3	kuai˨˩˨
-會	hue④6	huɛ˨˥
-會	oi④6	oi˨˥
-月	ɡueh⑧8	guɛʔ˥˦
-有	iu③2	iu˥˨
-有	u④6	u˨˥
-朋	phenɡ②5	pʰɛŋ˥˥
-服	hok⑧8	hok˥˦
-朔	suak⑦4	suak˧˨
-朔	sok⑦4	sok˧˨
-朕	tim④6	tim˨˥
-朗	lanɡ④6	laŋ˨˥
-朗	lanɡ②5	laŋ˥˥
-望	buanɡ④6	buaŋ˨˥
-望	mo⑥7	mõ˨˨
-朝	tsiau①1	tsiau˧˦
-朝	tshiau②5	tsʰiau˥˥
-期	khi②5	kʰi˥˥
-木	bak⑧8	bak˥˦
-未	bue⑥7	buɛ˨˨
-末	muat⑧8	muat˥˦
-末	buah⑧8	buaʔ˥˦
-本	pnɡ③2	pŋ˥˨
-札	tsat⑦4	tsat˧˨
-朱	tsu①1	tsu˧˦
-朵	to②5	to˥˥
-朽	hiunn③2	hiũ˥˨
-杈	tshe①1	tsʰɛ˧˦
-杉	sam①1	sam˧˦
-李	li③2	li˥˨
-杏	henɡ⑤3	hɛŋ˨˩˨
-材	tshai②5	tsʰai˥˥
-村	tshnɡ①1	tsʰŋ˧˦
-杖	tsianɡ④6	tsiaŋ˨˥
-杜	tou④6	tou˨˥
-杞	khi③2	kʰi˥˨
-束	sok⑦4	sok˧˨
-杠	kanɡ⑤3	kaŋ˨˩˨
-杠	konɡ⑤3	koŋ˨˩˨
-杭	hanɡ②5	haŋ˥˥
-杯	pue①1	puɛ˧˦
-東	tonɡ①1	toŋ˧˦
-東	tanɡ①1	taŋ˧˦
-杳	miau③2	miau˥˨
-松	sonɡ②5	soŋ˥˥
-板	pan③2	pan˥˨
-枉	uanɡ③2	uaŋ˥˨
-析	sek⑦4	sɛk˧˨
-枕	tsim③2	tsim˥˨
-林	lim②5	lim˥˥
-林	na②5	nã˥˥
-枚	bue②5	buɛ˥˥
-果	kuann③2	kuã˥˨
-果	kue③2	kuɛ˥˨
-枝	ki①1	ki˧˦
-枯	kou①1	kou˧˦
-枵	iau①1	iau˧˦
-架	ke⑤3	kɛ˨˩˨
-枷	ke②5	kɛ˥˥
-枸	kau③2	kau˥˨
-柄	penn⑤3	pɛ̃˨˩˨
-柏	peh⑦4	pɛʔ˧˨
-某	monɡ③2	moŋ˥˨
-柑	kam①1	kam˧˦
-柑	kann①1	kã˧˦
-染	jiam③2	dziam˥˨
-染	ni③2	nĩ˥˨
-柔	jiu②5	dziu˥˥
-柚	iu⑥7	iu˨˨
-查	tsa①1	tsa˧˦
-查	tshe②5	tsʰɛ˥˥
-柩	kiu④6	kiu˨˥
-柬	kan③2	kan˥˨
-柯	kho①1	kʰo˧˦
-柯	kua①1	kua˧˦
-柱	thiau④6	tʰiau˨˥
-柳	liu③2	liu˥˨
-柴	tsha②5	tsʰa˥˥
-柿	sai④6	sai˨˥
-栗	lat⑧8	lat˥˦
-校	hau④6	hau˨˥
-校	ka⑤3	ka˨˩˨
-栩	hu③2	hu˥˨
-株	tsu①1	tsu˧˦
-核	hut⑧8	hut˥˦
-核	hek⑦4	hɛk˧˨
-核	hat⑧8	hat˥˦
-根	kurn①1	kɯn˧˦
-格	keh⑦4	kɛʔ˧˨
-栽	tsai①1	tsai˧˦
-桂	kui⑤3	kui˨˩˨
-桃	to②5	to˥˥
-桃	tho②5	tʰo˥˥
-案	uann⑤3	uã˨˩˨
-桉	an⑤3	an˨˩˨
-桌	toh⑦4	toʔ˧˨
-桐	thonɡ②5	tʰoŋ˥˥
-桐	thanɡ②5	tʰaŋ˥˥
-桑	snɡ①1	sŋ˧˦
-桓	henɡ②5	hɛŋ˥˥
-桶	thanɡ③2	tʰaŋ˥˨
-桸	hia①1	hia˧˦
-桿	han③2	han˥˨
-桿	kuann①1	kuã˧˦
-梁	lianɡ②5	liaŋ˥˥
-梁	nio②5	niõ˥˥
-梅	bue②5	buɛ˥˥
-梓	tsur③2	tsɯ˥˨
-梔	ki①1	ki˧˦
-條	tiau②5	tiau˥˥
-梢	sau①1	sau˧˦
-梢	siau①1	siau˧˦
-梧	nɡo②5	ŋo˥˥
-梨	lai②5	lai˥˥
-梭	so①1	so˧˦
-梯	thui①1	tʰui˧˦
-械	hai④6	hai˨˥
-梳	seu①1	sɛu˧˦
-梵	huam②5	huam˥˥
-棄	khi⑤3	kʰi˨˩˨
-棋	ki②5	ki˥˥
-棍	kun⑤3	kun˨˩˨
-棒	panɡ④6	paŋ˨˥
-棕	tsanɡ①1	tsaŋ˧˦
-棗	tso③2	tso˥˨
-棘	kek⑦4	kɛk˧˨
-棚	penn②5	pɛ̃˥˥
-棟	tonɡ⑤3	toŋ˨˩˨
-棧	tsan⑤3	tsan˨˩˨
-森	som①1	som˧˦
-棲	tshi①1	tsʰi˧˦
-棵	kho①1	kʰo˧˦
-椅	inn③2	ĩ˥˨
-植	sit⑧8	sit˥˦
-椒	tsio①1	tsio˧˦
-椰	ia②5	ia˥˥
-椽	uan②5	uan˥˥
-楊	ianɡ②5	iaŋ˥˥
-楊	ionn②5	iõ˥˥
-楓	panɡ①1	paŋ˧˦
-楚	tsho③2	tsʰo˥˨
-楝	noi⑥7	nõi˨˨
-楞	lenɡ②5	lɛŋ˥˥
-楣	bai②5	bai˥˥
-業	nɡiap⑧8	ŋiap˥˦
-業	ɡiap⑧8	giap˥˦
-極	kek⑧8	kɛk˥˦
-楷	khai③2	kʰai˥˨
-概	khai⑤3	kʰai˨˩˨
-榆	ju②5	dzu˥˥
-榔	lanɡ②5	laŋ˥˥
-榔	no②5	nõ˥˥
-榛	tsin①1	tsin˧˦
-榜	panɡ③2	paŋ˥˨
-榨	tsa⑤3	tsa˨˩˨
-榮	ionɡ②5	ioŋ˥˥
-榴	liu②5	liu˥˥
-榻	thap⑦4	tʰap˧˨
-構	kou⑤3	kou˨˩˨
-槌	thui①1	tʰui˧˦
-槍	tshionn①1	tsʰiõ˧˦
-槐	huai②5	huai˥˥
-檻	kham③2	kʰam˥˨
-檻	kham⑤3	kʰam˨˩˨
-槳	tsionn③2	tsiõ˥˨
-槽	tso②5	tso˥˥
-樂	lak⑧8	lak˥˦
-樂	ɡauh⑧8	gauʔ˥˦
-樓	lau②5	lau˥˥
-標	phiau①1	pʰiau˧˦
-標	pio①1	pio˧˦
-樞	khu①1	kʰu˧˦
-樟	tsianɡ①1	tsiaŋ˧˦
-樟	tsionn①1	tsiõ˧˦
-樟	tsnɡ①1	tsŋ˧˦
-模	mo①1	mo˧˦
-模	mo②5	mo˥˥
-模	bou②5	bou˥˥
-樣	ianɡ④6	iaŋ˨˥
-樣	ionn⑥7	iõ˨˨
-樵	tsiau①1	tsiau˧˦
-樹	su④6	su˨˥
-樹	tshiu⑥7	tsʰiu˨˨
-橄	kann①1	kã˧˦
-橋	kio②5	kio˥˥
-橘	kit⑦4	kit˧˨
-橙	tshenɡ②5	tsʰɛŋ˥˥
-橛	kueh⑧8	kuɛʔ˥˦
-機	ki①1	ki˧˦
-機	kui①1	kui˧˦
-橫	huenn②5	huɛ̃˥˥
-檀	than②5	tʰan˥˥
-檐	liam②5	liam˥˥
-檐	tsinn②5	tsĩ˥˥
-檢	kiam③2	kiam˥˨
-檳	pin①1	pin˧˦
-櫃	kuinn⑥7	kũi˨˨
-櫓	lu③2	lu˥˨
-櫻	enɡ①1	ɛŋ˧˦
-欄	lan②5	lan˥˥
-權	khuan②5	kʰuan˥˥
-欖	lam③2	lam˥˨
-欖	na③2	nã˥˨
-欛	pa⑤3	pa˨˩˨
-欠	khiam⑤3	kʰiam˨˩˨
-次	tshur⑤3	tsʰɯ˨˩˨
-欣	hurn①1	hɯn˧˦
-欲	ainn⑤3	ãi˨˩˨
-欲	boh⑦4	boʔ˧˨
-欺	khi①1	kʰi˧˦
-欽	khim①1	kʰim˧˦
-款	khuan③2	kʰuan˥˨
-歇	hiah⑦4	hiaʔ˧˨
-歉	khiam③2	kʰiam˥˨
-歌	ko①1	ko˧˦
-歌	kua①1	kua˧˦
-歐	au①1	au˧˦
-歡	huan①1	huan˧˦
-歡	huann①1	huã˧˦
-止	tsi③2	tsi˥˨
-正	tsiann①1	tsiã˧˦
-正	tsiann⑤3	tsiã˨˩˨
-此	tshur③2	tsʰɯ˥˨
-步	pou⑥7	pou˨˨
-武	bu③2	bu˥˨
-歧	khi②5	kʰi˥˥
-歧	ki②5	ki˥˥
-歪	uai①1	uai˧˦
-歲	sue⑤3	suɛ˨˩˨
-歲	hue⑤3	huɛ˨˩˨
-歷	leh⑧8	lɛʔ˥˦
-歸	kui①1	kui˧˦
-死	si③2	si˥˨
-殃	ianɡ①1	iaŋ˧˦
-殆	tai④6	tai˨˥
-殉	sun②5	sun˥˥
-殊	su②5	su˥˥
-殖	sit⑧8	sit˥˦
-殘	tshan②5	tsʰan˥˥
-殯	pin⑤3	pin˨˩˨
-殯	pin①1	pin˧˦
-殲	tshiam①1	tsʰiam˧˦
-段	tuan④6	tuan˨˥
-段	tnɡ⑥7	tŋ˨˨
-殷	hurn①1	hɯn˧˦
-殺	suah⑦4	suaʔ˧˨
-殼	khak⑦4	kʰak˧˨
-殿	tian④6	tiɛn˨˥
-殿	ten④6	tɛn˨˥
-殿	toinn⑥7	tõi˨˨
-毀	huinn③2	hũi˥˨
-毅	nɡi⑤3	ŋi˨˩˨
-毆	au①1	au˧˦
-毋	bo②5	bo˥˥
-毋	m⑥7	m˨˥
-母	bo③2	bo˥˨
-母	bou③2	bou˥˨
-每	mue③2	muɛ˥˨
-毒	tak⑧8	tak˥˦
-比	pi③2	pi˥˨
-毛	mau②5	mau˥˥
-毛	mo②5	mõ˥˥
-毫	hau②5	hau˥˥
-毯	than③2	tʰan˥˨
-氏	si④6	si˨˥
-民	min②5	min˥˥
-氣	khi⑤3	kʰi˨˩˨
-氣	khui⑤3	kʰui˨˩˨
-氯	lek⑧8	lɛk˥˦
-水	sui③2	sui˥˨
-水	tsui③2	tsui˥˨
-永	ionɡ③2	ioŋ˥˨
-汁	tsap⑦4	tsap˧˨
-求	khiu②5	kʰiu˥˥
-汗	han③2	han˥˨
-汗	han②5	han˥˥
-汗	kuann⑥7	kuã˨˨
-汝	ju③2	dzu˥˨
-汝	lur③2	lɯ˥˨
-汞	konɡ⑤3	koŋ˨˩˨
-江	kanɡ①1	kaŋ˧˦
-池	ti②5	ti˥˥
-污	u①1	u˧˦
-汪	uanɡ①1	uaŋ˧˦
-汲	khip⑦4	kʰip˧˨
-決	kuat⑦4	kuat˧˨
-汽	khi⑤3	kʰi˨˩˨
-沁	sim③2	sim˥˨
-沂	khi②5	kʰi˥˥
-沃	o⑤3	o˨˩˨
-沃	ok⑦4	ok˧˨
-沃	ak⑦4	ak˧˨
-沈	sim③2	sim˥˨
-沈	tim②5	tim˥˥
-沈	thim⑥7	tʰim˨˨
-沉	tim②5	tim˥˥
-沉	thim⑥7	tʰim˨˨
-沌	tun④6	tun˨˥
-沐	mok⑧8	mok˥˦
-沒	mut⑧8	mut˥˦
-沒	mok⑧8	mok˥˦
-沙	sa①1	sa˧˦
-沙	sua①1	sua˧˦
-沛	phai⑤3	pʰai˨˩˨
-沫	muat⑧8	muat˥˦
-沫	buah⑧8	buaʔ˥˦
-河	ho②5	ho˥˥
-沸	hut⑦4	hut˧˨
-油	iu②5	iu˥˥
-治	ti⑥7	ti˨˨
-治	ti②5	ti˥˥
-治	thai②5	tʰai˥˥
-沼	jiau⑤3	dziau˨˩˨
-沾	liam①1	liam˧˦
-沾	tiam①1	tiam˧˦
-沿	in②5	in˥˥
-況	khuanɡ⑤3	kʰuaŋ˨˩˨
-泄	siap⑧8	siap˥˦
-泉	tsuann②5	tsuã˥˥
-泊	poh⑧8	poʔ˥˦
-泌	pi⑤3	pi˨˩˨
-泔	kam①1	kam˧˦
-法	huap⑦4	huap˧˨
-泛	huam⑤3	huam˨˩˨
-泡	phau⑤3	pʰau˨˩˨
-泡	pha④6	pʰa˨˥
-波	po①1	po˧˦
-泣	khip⑦4	kʰip˧˨
-泥	ni②5	ni˥˥
-注	tsu⑤3	tsu˨˩˨
-泰	thai⑤3	tʰai˨˩˨
-泳	ionɡ⑤3	ioŋ˨˩˨
-洋	ianɡ②5	iaŋ˥˥
-洋	ionn②5	iõ˥˥
-洗	soi③2	soi˥˨
-洛	lok⑧8	lok˥˦
-洞	thonɡ②5	tʰoŋ˥˥
-洞	tanɡ⑥7	taŋ˨˨
-津	tsin①1	tsin˧˦
-洪	honɡ②5	hoŋ˥˥
-洪	anɡ②5	aŋ˥˥
-洲	tsiu①1	tsiu˧˦
-活	uah⑧8	uaʔ˥˦
-洼	ua①1	ua˧˦
-洽	tsiap⑧8	tsiap˥˦
-派	phai⑤3	pʰai˨˩˨
-流	liu②5	liu˥˥
-流	lau②5	lau˥˥
-浙	tsit⑦4	tsit˧˨
-浥	ip⑦4	ip˧˨
-浦	phou③2	pʰou˥˨
-浩	hau①1	hau˧˦
-浪	lanɡ④6	laŋ˨˥
-浪	nnɡ⑥7	nŋ˨˨
-浮	phu②5	pʰu˥˥
-浴	iok⑧8	iok˥˦
-浴	ek⑧8	ɛk˥˦
-海	hai③2	hai˥˨
-浸	tsim⑤3	tsim˨˩˨
-消	siau①1	siau˧˦
-涉	siap⑧8	siap˥˦
-涎	ian④6	iɛn˨˥
-涎	en④6	ɛn˨˥
-涎	tsuann②5	tsuã˥˥
-涓	kian①1	kiɛn˧˦
-涓	ken①1	kɛn˧˦
-涕	thi⑤3	tʰi˨˩˨
-涮	sueh⑦4	suɛʔ˧˨
-涮	suan⑤3	suan˨˩˨
-涯	nɡai②5	ŋai˥˥
-液	ek⑧8	ɛk˥˦
-液	sioh⑧8	sioʔ˥˦
-淆	nɡau②5	ŋau˥˥
-淋	lim②5	lim˥˥
-淋	lam②5	lam˥˥
-淑	sok⑦4	sok˧˨
-淚	lui④6	lui˨˥
-淡	tam④6	tam˨˥
-淡	tann④6	tã˨˥
-淤	ur⑤3	ɯ˨˩˨
-淪	lun②5	lun˥˥
-淫	im②5	im˥˥
-淮	huai②5	huai˥˥
-深	tshim①1	tsʰim˧˦
-淵	ian①1	iɛn˧˦
-淵	en①1	ɛn˧˦
-混	hun④6	hun˨˥
-淹	iam①1	iam˧˦
-淹	im①1	im˧˦
-淺	tshian③2	tsʰiɛn˥˨
-淺	tshen③2	tsʰɛn˥˨
-添	thiam①1	tʰiam˧˦
-清	tshenɡ①1	tsʰɛŋ˧˦
-減	kiam③2	kiam˥˨
-渠	khur②5	kʰɯ˥˥
-渡	tou⑥7	tou˨˨
-渣	tsa①1	tsa˧˦
-温	un①1	un˧˦
-測	tshek⑦4	tsʰɛk˧˨
-港	kanɡ③2	kaŋ˥˨
-渴	kuah⑦4	kuaʔ˧˨
-游	iu②5	iu˥˥
-渺	miau③2	miau˥˨
-渾	hun④6	hun˨˥
-湖	ou②5	ou˥˥
-湧	ionɡ⑤3	ioŋ˨˩˨
-湧	enɡ③2	ɛŋ˥˨
-湯	thanɡ①1	tʰaŋ˧˦
-湯	thnɡ①1	tʰŋ˧˦
-溉	khai⑤3	kʰai˨˩˨
-源	nɡuan②5	ŋuan˥˥
-準	tsun③2	tsun˥˨
-溜	liu⑤3	liu˨˩˨
-溝	kau①1	kau˧˦
-溪	khoi①1	kʰoi˧˦
-溺	nek⑧8	nɛk˥˦
-滂	phanɡ①1	pʰaŋ˧˦
-滅	mit⑧8	mit˥˦
-滋	tsur①1	tsɯ˧˦
-滑	kut⑧8	kut˥˦
-滔	thau①1	tʰau˧˦
-滬	hu④6	hu˨˥
-滯	thi⑤3	tʰi˨˩˨
-滲	tsham①1	tsʰam˧˦
-滲	siam⑤3	siam˨˩˨
-滴	tih⑦4	tiʔ˧˨
-滸	hu③2	hu˥˨
-滾	kun③2	kun˥˨
-滿	muan③2	muan˥˨
-滿	mua③2	muã˥˨
-漁	hur②5	hɯ˥˥
-漂	phiau①1	pʰiau˧˦
-漂	phio⑤3	pʰio˨˩˨
-漆	tship⑦4	tsʰip˧˨
-漆	tshat⑦4	tsʰat˧˨
-漏	lau⑥7	lau˨˨
-漏	lau⑤3	lau˨˩˨
-演	in②5	in˥˥
-漚	au⑤3	au˨˩˨
-漢	han⑤3	han˨˩˨
-漫	muan④6	muan˨˥
-漱	suak⑦4	suak˧˨
-漲	tsianɡ⑤3	tsiaŋ˨˩˨
-漳	tsianɡ①1	tsiaŋ˧˦
-漳	tsionn①1	tsiõ˧˦
-漸	tsiam④6	tsiam˨˥
-漿	tsionn①1	tsiõ˧˦
-潑	phuah⑦4	pʰuaʔ˧˨
-潔	kiat⑦4	kiɛt˧˨
-潔	ket⑦4	kɛt˧˨
-潘	phuann①1	pʰuã˧˦
-潘	phun①1	pʰun˧˦
-潛	tshiam②5	tsʰiam˥˥
-潤	jun④6	dzun˨˥
-潭	tham②5	tʰam˥˥
-潮	tio②5	tio˥˥
-潰	khui④6	kʰui˨˥
-澀	siap⑦4	siap˧˨
-澄	thenɡ②5	tʰɛŋ˥˥
-澆	nau①1	nau˧˦
-澡	tshau⑤3	tsʰau˨˩˨
-澤	tsek⑧8	tsɛk˥˦
-激	kek⑦4	kɛk˧˨
-濁	juak⑧8	dzuak˥˦
-濁	tsuak⑧8	tsuak˥˦
-濃	lonɡ②5	loŋ˥˥
-濕	sip⑦4	sip˧˨
-濟	tsi⑤3	tsi˨˩˨
-濟	tsoi⑥7	tsoi˨˨
-濤	thiu②5	tʰiu˥˥
-濫	lam④6	lam˨˥
-濾	lur④6	lɯ˨˥
-瀉	sia⑤3	sia˨˩˨
-瀋	sim③2	sim˥˨
-瀑	phak⑧8	pʰak˥˦
-灌	kuan⑤3	kuan˨˩˨
-灑	sai⑤3	sai˨˩˨
-灑	sa⑤3	sa˨˩˨
-灘	thuann①1	tʰuã˧˦
-灣	uan①1	uan˧˦
-火	hue③2	huɛ˥˨
-灰	hui①1	hui˧˦
-灰	hue①1	huɛ˧˦
-灰	hu①1	hu˧˦
-灶	tsau⑤3	tsau˨˩˨
-灸	ku⑤3	ku˨˩˨
-災	tsai①1	tsai˧˦
-炊	tshue①1	tsʰuɛ˧˦
-炎	iam④6	iam˨˥
-炎	iam⑥7	iam˨˨
-炒	tsha③2	tsʰa˥˨
-炕	khanɡ⑤3	kʰaŋ˨˩˨
-炙	tsioh⑦4	tsioʔ˧˨
-炭	thuann⑤3	tʰuã˨˩˨
-炮	phau⑤3	pʰau˨˩˨
-炯	kenɡ③2	kɛŋ˥˨
-炸	tsa⑤3	tsa˨˩˨
-為	ui②5	ui˥˥
-為	ui⑥7	ui˨˨
-烈	liat⑧8	liɛt˥˦
-烈	let⑧8	lɛt˥˦
-烏	ou①1	ou˧˦
-烘	honɡ①1	hoŋ˧˦
-烘	hanɡ①1	haŋ˧˦
-烙	lok⑧8	lok˥˦
-烙	luah⑦4	luaʔ˧˨
-烤	khau③2	kʰau˥˨
-烹	phenɡ①1	pʰɛŋ˧˦
-焉	ian①1	iɛn˧˦
-焉	en①1	ɛn˧˦
-焊	han③2	han˥˨
-焚	un②5	un˥˥
-無	bu②5	bu˥˥
-無	bo②5	bo˥˥
-焦	tsiau①1	tsiau˧˦
-焰	iam⑥7	iam˨˨
-然	jian②5	dziɛn˥˥
-然	jen②5	dzɛn˥˥
-煉	lian⑥7	liɛn˨˨
-煉	len⑥7	lɛn˨˨
-煌	huanɡ②5	huaŋ˥˥
-煎	tsian①1	tsiɛn˧˦
-煎	tsen①1	tsɛn˧˦
-煎	tsuann①1	tsuã˧˦
-煙	in①1	in˧˦
-煠	tsah⑧8	tsaʔ˥˦
-煠	sah⑧8	saʔ˥˦
-煥	huan⑤3	huan˨˩˨
-照	tsiau⑤3	tsiau˨˩˨
-照	tsio⑤3	tsio˨˩˨
-煩	huan②5	huan˥˥
-煮	tsur③2	tsɯ˥˨
-熄	sek⑦4	sɛk˧˨
-熄	sit⑦4	sit˧˨
-熊	him②5	him˥˥
-熏	hurn①1	hɯn˧˦
-熏	hun①1	hun˧˦
-熔	ionɡ②5	ioŋ˥˥
-熙	hi①1	hi˧˦
-熟	sek⑧8	sɛk˥˦
-熨	ut⑦4	ut˧˨
-熬	nɡau②5	ŋau˥˥
-熱	jiat⑧8	dziɛt˥˦
-熱	jet⑧8	dzɛt˥˦
-熱	juah⑧8	dzuaʔ˥˦
-燃	jian②5	dziɛn˥˥
-燃	jen②5	dzɛn˥˥
-燃	hiann②5	hiã˥˥
-燈	tenɡ①1	tɛŋ˧˦
-燎	liau②5	liau˥˥
-燒	sio①1	sio˧˦
-燕	ian①1	iɛn˧˦
-燕	en①1	ɛn˧˦
-燕	ian⑤3	iɛn˨˩˨
-燕	en⑤3	ɛn˨˩˨
-燕	inn⑤3	ĩ˨˩˨
-燙	thnɡ⑤3	tʰŋ˨˩˨
-營	ionɡ②5	ioŋ˥˥
-營	iann②5	iã˥˥
-燦	tshan⑤3	tsʰan˨˩˨
-燭	tsek⑦4	tsɛk˧˨
-爆	pau④6	pau˨˥
-爐	lou②5	lou˥˥
-爛	lan④6	lan˨˥
-爛	nua⑥7	nuã˨˨
-爪	jiau③2	dziau˥˨
-爪	jiau⑤3	dziau˨˩˨
-爬	pe②5	pɛ˥˥
-爭	tsenn①1	tsɛ̃˧˦
-爵	tsiak⑦4	tsiak˧˨
-父	hu④6	hu˨˥
-父	pe④6	pɛ˨˥
-爸	pa①1	pa˧˦
-爸	pe④6	pɛ˨˥
-爹	tia①1	tia˧˦
-爺	ia②5	ia˥˥
-爽	suanɡ③2	suaŋ˥˨
-爽	snɡ③2	sŋ˥˨
-爾	jur③2	dzɯ˥˨
-牀	snɡ②5	sŋ˥˥
-牀	tshnɡ②5	tsʰŋ˥˥
-牆	tshionn②5	tsʰiõ˥˥
-片	phian⑤3	pʰiɛn˨˩˨
-片	phen⑤3	pʰɛn˨˩˨
-片	phinn⑤3	pʰĩ˨˩˨
-版	pan③2	pan˥˨
-牌	pai②5	pai˥˥
-牒	tiap⑧8	tiap˥˦
-牘	tok⑧8	tok˥˦
-牙	ɡe②5	gɛ˥˥
-牛	ɡu②5	gu˥˥
-牡	bou③2	bou˥˨
-牢	lo②5	lo˥˥
-牧	mok⑧8	mok˥˦
-物	mueh⑧8	muɛʔ˥˦
-牲	senɡ①1	sɛŋ˧˦
-牲	senn①1	sɛ̃˧˦
-特	tek⑧8	tɛk˥˦
-牽	khan①1	kʰan˧˦
-犀	sai①1	sai˧˦
-犁	li②5	li˥˥
-犁	loi②5	loi˥˥
-犒	khau⑤3	kʰau˨˩˨
-犧	hi①1	hi˧˦
-犬	khian③2	kʰiɛn˥˨
-犬	khen③2	kʰɛn˥˨
-犯	huam④6	huam˨˥
-狀	tsuanɡ④6	tsuaŋ˨˥
-狀	tso④6	tso˨˥
-狀	tsnɡ⑥7	tsŋ˨˨
-狂	khuanɡ②5	kʰuaŋ˥˥
-狂	knɡ②5	kŋ˥˥
-狄	tek⑧8	tɛk˥˦
-狐	hu②5	hu˥˥
-狐	hou②5	hou˥˥
-狗	kau③2	kau˥˨
-狡	kau③2	kau˥˨
-狹	hiap⑧8	hiap˥˦
-狹	oih⑧8	oiʔ˥˦
-狼	lanɡ②5	laŋ˥˥
-猛	menɡ③2	mɛŋ˥˨
-猛	me③2	mɛ̃˥˨
-猜	tshai①1	tsʰai˧˦
-猝	tsut⑦4	tsut˧˨
-猬	ui③2	ui˥˨
-猴	kau②5	kau˥˥
-猶	iu②5	iu˥˥
-猾	kut⑧8	kut˥˦
-獃	tai①1	tai˧˦
-獄	ɡek⑧8	gɛk˥˦
-獅	sai①1	sai˧˦
-獎	tsianɡ⑤3	tsiaŋ˨˩˨
-獐	kionn①1	kiõ˧˦
-獨	tok⑧8	tok˥˦
-獨	tak⑧8	tak˥˦
-獲	uak⑧8	uak˥˦
-獵	lah⑧8	laʔ˥˦
-獸	siu⑤3	siu˨˩˨
-獺	thuah⑦4	tʰuaʔ˧˨
-獻	hian⑤3	hiɛn˨˩˨
-獻	hen⑤3	hɛn˨˩˨
-玄	hian②5	hiɛn˥˥
-玄	hen②5	hɛn˥˥
-率	lut⑧8	lut˥˦
-率	tsut⑦4	tsut˧˨
-玉	ɡek⑧8	gɛk˥˦
-王	uanɡ②5	uaŋ˥˥
-王	henɡ②5	hɛŋ˥˥
-玩	nɡuan③2	ŋuan˥˨
-玫	bun②5	bun˥˥
-玻	po①1	po˧˦
-珀	phek⑦4	pʰɛk˧˨
-珊	san①1	san˧˦
-珍	tian①1	tiɛn˧˦
-珍	ten①1	tɛn˧˦
-珠	tsu①1	tsu˧˦
-珠	tsiu①1	tsiu˧˦
-班	pan①1	pan˧˦
-現	hin⑥7	hin˨˨
-球	kiu②5	kiu˥˥
-理	li③2	li˥˨
-琉	liu②5	liu˥˥
-琴	khim②5	kʰim˥˥
-琵	pi②5	pi˥˥
-琶	pe②5	pɛ˥˥
-瑕	hia②5	hia˥˥
-瑞	sui④6	sui˨˥
-瑟	sek⑦4	sɛk˧˨
-瑣	so③2	so˥˨
-瑰	kui⑤3	kui˨˩˨
-璃	li②5	li˥˥
-璞	phok⑦4	pʰok˧˨
-璧	piah⑦4	piaʔ˧˨
-環	huan②5	huan˥˥
-璽	jur③2	dzɯ˥˨
-瓊	khionɡ②5	kʰioŋ˥˥
-瓊	khenɡ②5	kʰɛŋ˥˥
-瓜	kue①1	kuɛ˧˦
-瓢	phiau②5	pʰiau˥˥
-瓤	jianɡ②5	dziaŋ˥˥
-瓤	nnɡ②5	nŋ˥˥
-瓦	ua①1	ua˧˦
-瓦	hia④6	hia˨˥
-瓮	anɡ⑤3	aŋ˨˩˨
-瓶	phin②5	pʰin˥˥
-瓶	pan②5	pan˥˥
-瓷	tshur②5	tsʰɯ˥˥
-甘	kam①1	kam˧˦
-甚	sim③2	sim˥˨
-甚	sim④6	sim˨˥
-甜	tiam②5	tiam˥˥
-生	senɡ①1	sɛŋ˧˦
-生	senn①1	sɛ̃˧˦
-生	tshenn①1	tsʰɛ̃˧˦
-產	suann③2	suã˥˨
-甥	senɡ①1	sɛŋ˧˦
-用	ionɡ④6	ioŋ˨˥
-用	enɡ⑥7	ɛŋ˨˨
-甫	phou③2	pʰou˥˨
-甬	ionɡ⑤3	ioŋ˨˩˨
-田	thian⑤3	tʰiɛn˥˥
-田	then⑤3	tʰɛn˥˥
-田	tshan⑤3	tsʰan˥˥
-由	iu②5	iu˥˥
-甲	kah⑦4	kaʔ˧˨
-申	sin①1	sin˧˦
-男	lam②5	lam˥˥
-界	kai⑤3	kai˨˩˨
-界	koi⑤3	koi˨˩˨
-畏	ui⑤3	ui˨˩˨
-留	liu②5	liu˥˥
-留	lau②5	lau˥˥
-畜	thiok⑦4	tʰiok˧˨
-畜	thek⑦4	tʰɛk˧˨
-畝	bou③2	bou˥˨
-畢	pit⑦4	pit˧˨
-畢	pit⑧8	pit˥˦
-略	liak⑧8	liak˥˦
-番	huan①1	huan˧˦
-畫	ue⑥7	uɛ˨˨
-畫	ueh⑧8	uɛʔ˥˦
-異	i④6	i˨˥
-當	tanɡ①1	taŋ˧˦
-當	tanɡ③2	taŋ˥˨
-當	tnɡ①1	tŋ˧˦
-當	tnɡ③2	tŋ˥˨
-疆	kianɡ①1	kiaŋ˧˦
-疊	tiap⑧8	tiap˥˦
-疊	thiap⑧8	tʰiap˥˦
-疊	thah⑧8	tʰaʔ˥˦
-疏	so①1	so˧˦
-疏	so⑤3	so˨˩˨
-疏	seu①1	sɛu˧˦
-疑	ɡi②5	gi˥˥
-疤	pa①1	pa˧˦
-疥	koi⑤3	koi˨˩˨
-疫	mok⑧8	mok˥˦
-疫	mut⑧8	mut˥˦
-疲	phi②5	pʰi˥˥
-疵	tshur①1	tsʰɯ˧˦
-疹	tsian③2	tsiɛn˥˨
-疹	tsen③2	tsɛn˥˨
-疼	tonɡ⑤3	toŋ˨˩˨
-疼	thiann⑤3	tʰiã˨˩˨
-疽	tsu①1	tsu˧˦
-疾	tsit⑧8	tsit˥˦
-病	penn⑥7	pɛ̃˨˨
-症	tsenɡ⑤3	tsɛŋ˨˩˨
-痊	tshuan②5	tsʰuan˥˥
-痔	thi④6	tʰi˨˥
-痕	hun②5	hun˥˥
-痛	thonɡ⑤3	tʰoŋ˨˩˨
-痞	phi③2	pʰi˥˨
-痞	phainn③2	pʰãi˥˨
-痣	ki⑤3	ki˨˩˨
-痰	tham②5	tʰam˥˥
-痱	pui⑤3	pui˨˩˨
-痴	tshi①1	tsʰi˧˦
-痹	pi⑤3	pi˨˩˨
-瘋	huanɡ①1	huaŋ˧˦
-瘟	un①1	un˧˦
-瘡	tshnɡ①1	tsʰŋ˧˦
-瘦	sou⑤3	sou˨˩˨
-瘦	sou③2	sou˥˨
-瘧	nɡiak⑧8	ŋiak˥˦
-瘸	khue②5	kʰuɛ˥˥
-癖	phiah⑦4	pʰiaʔ˧˨
-癢	ianɡ③2	iaŋ˥˨
-癢	tsionn④6	tsiõ˨˥
-癩	nai④6	nai˨˥
-癬	sian③2	siɛn˥˨
-癬	sen③2	sɛn˥˨
-癸	kui⑤3	kui˨˩˨
-登	tenɡ①1	tɛŋ˧˦
-發	huat⑦4	huat˧˨
-白	peh⑧8	pɛʔ˥˦
-百	peh⑦4	pɛʔ˧˨
-皂	tsau④6	tsau˨˥
-的	ti①1	ti˧˦
-的	tek⑧8	tɛk˥˦
-皆	kai①1	kai˧˦
-皇	huanɡ②5	huaŋ˥˥
-皇	uanɡ②5	uaŋ˥˥
-皖	uan③2	uan˥˨
-皮	phi②5	pʰi˥˥
-皮	phue②5	pʰuɛ˥˥
-皺	niau⑤3	niau˨˩˨
-皿	menɡ③2	mɛŋ˥˨
-盂	hu②5	hu˥˥
-盅	tsenɡ①1	tsɛŋ˧˦
-盆	phun②5	pʰun˥˥
-盈	ionɡ②5	ioŋ˥˥
-益	iah⑦4	iaʔ˧˨
-盒	ap⑧8	ap˥˦
-盔	khue①1	kʰuɛ˧˦
-盜	tau④6	tau˨˥
-盛	senɡ④6	sɛŋ˨˥
-盞	tsuann③2	tsuã˥˨
-盟	menɡ②5	mɛŋ˥˥
-盡	tsin④6	tsin˨˥
-監	kam①1	kam˧˦
-監	kam⑤3	kam˨˩˨
-盤	phuan②5	pʰuan˥˥
-盤	puann②5	puã˥˥
-盧	lou②5	lou˥˥
-目	mak⑧8	mak˥˦
-盲	manɡ②5	maŋ˥˥
-盲	menɡ②5	mɛŋ˥˥
-盲	me②5	mɛ̃˥˥
-直	tek⑧8	tɛk˥˦
-直	tit⑧8	tit˥˦
-相	sianɡ①1	siaŋ˧˦
-相	sianɡ⑤3	siaŋ˨˩˨
-相	sio①1	sio˧˦
-相	sionn⑤3	siõ˨˩˨
-盼	phan⑤3	pʰan˨˩˨
-盾	tun③2	tun˥˨
-省	senn③2	sɛ̃˥˨
-眉	bai②5	bai˥˥
-看	khan①1	kʰan˧˦
-看	khan⑤3	kʰan˨˩˨
-看	khuann⑤3	kʰuã˨˩˨
-看	thoinn③2	tʰõi˥˨
-真	tsin①1	tsin˧˦
-眠	min②5	min˥˥
-眠	mnɡ②5	mŋ˥˥
-眨	tsap⑦4	tsap˧˨
-眩	hian②5	hiɛn˥˥
-眩	hen②5	hɛn˥˥
-眩	hin②5	hin˥˥
-眷	kuan⑤3	kuan˨˩˨
-眸	monɡ②5	moŋ˥˥
-眼	nɡan③2	ŋan˥˨
-眼	oinn③2	õi˥˨
-眾	tsenɡ⑤3	tsɛŋ˨˩˨
-睛	tsenɡ①1	tsɛŋ˧˦
-睜	tsenɡ①1	tsɛŋ˧˦
-睡	sui④6	sui˨˥
-督	tok⑦4	tok˧˨
-睬	tshai③2	tsʰai˥˨
-瞄	miau②5	miau˥˥
-瞄	bio②5	bio˥˥
-瞎	hat⑦4	hat˧˨
-瞞	mua②5	muã˥˥
-瞧	tshiau②5	tsʰiau˥˥
-瞪	tenɡ⑤3	tɛŋ˨˩˨
-瞬	sun⑤3	sun˨˩˨
-瞭	liau②5	liau˥˥
-瞭	liau③2	liau˥˨
-瞳	thonɡ②5	tʰoŋ˥˥
-瞻	tsiam①1	tsiam˧˦
-瞿	khur②5	kʰɯ˥˥
-矛	mau②5	mau˥˥
-矢	si③2	si˥˨
-矣	i⑥7	i˨˨
-知	ti①1	ti˧˦
-知	ti⑤3	ti˨˩˨
-知	tsai①1	tsai˧˦
-矩	kur③2	kɯ˥˨
-矬	tsho②5	tsʰo˥˥
-短	to③2	to˥˨
-矮	oi③2	oi˥˨
-矯	kiau③2	kiau˥˨
-石	sioh⑧8	sioʔ˥˦
-石	tsioh⑧8	tsioʔ˥˦
-砂	sa①1	sa˧˦
-砌	kih⑦4	kiʔ˧˨
-砍	kham③2	kʰam˥˨
-研	nɡian①1	ŋiɛn˧˦
-研	nɡen①1	ŋɛn˧˦
-研	nɡian③2	ŋiɛn˥˨
-研	nɡen③2	ŋɛn˥˨
-研	nɡoi③2	ŋõi˥˨
-破	phua⑤3	pʰua˨˩˨
-硝	siau①1	siau˧˦
-硫	liu②5	liu˥˥
-硬	nɡe④6	ŋɛ̃˨˥
-硯	inn⑥7	ĩ˨˨
-碎	tshui⑤3	tsʰui˨˩˨
-碑	pi①1	pi˧˦
-碗	uann③2	uã˥˨
-碟	tih⑧8	tiʔ˥˦
-碧	phek⑦4	pʰɛk˧˨
-碩	sek⑦4	sɛk˧˨
-確	khak⑦4	kʰak˧˨
-碼	be③2	bɛ˥˨
-碾	tian③2	tiɛn˥˨
-碾	ten③2	tɛn˥˨
-磁	tshur②5	tsʰɯ˥˥
-磕	khap⑦4	kʰap˧˨
-磚	tsnɡ①1	tsŋ˧˦
-磨	bo⑥7	bo˨˨
-磨	bua②5	bua˥˥
-磬	khenɡ⑤3	kʰɛŋ˨˩˨
-磷	lin②5	lin˥˥
-礙	ɡai⑥7	gai˨˨
-礦	khuanɡ⑤3	kʰuaŋ˨˩˨
-礬	huam⑤3	huam˨˩˨
-示	si⑥7	si˨˨
-社	sia④6	sia˨˥
-祀	sur④6	sɯ˨˥
-祈	khi②5	kʰi˥˥
-祐	iu④6	iu˨˥
-祖	tsou③2	tsou˥˨
-祝	tsok⑦4	tsok˧˨
-神	sin②5	sin˥˥
-祠	sur②5	sɯ˥˥
-祥	sianɡ②5	siaŋ˥˥
-票	phio⑤3	pʰio˨˩˨
-祭	tsi⑤3	tsi˨˩˨
-禀	pin③2	pin˥˨
-禁	kim①1	kim˧˦
-禁	kim⑤3	kim˨˩˨
-禄	lok⑧8	lok˥˦
-禍	hua④6	hua˨˥
-福	hok⑦4	hok˧˨
-禦	ɡur④6	gɯ˨˥
-禧	hi①1	hi˧˦
-禪	sian②5	siɛn˥˥
-禪	sen②5	sɛn˥˥
-禪	sian④6	siɛn˨˥
-禪	sen④6	sɛn˨˥
-禮	li③2	li˥˨
-禮	loi③2	loi˥˨
-禱	tau③2	tau˥˨
-禹	u③2	u˥˨
-禽	khim②5	kʰim˥˥
-禾	ho②5	ho˨˩˨
-禾	ta②5	ta˥˥
-禿	thek⑦4	tʰɛk˧˨
-秀	siu⑤3	siu˨˩˨
-私	sur①1	sɯ˧˦
-私	si①1	si˧˦
-私	sai①1	sai˧˦
-秉	penɡ③2	pɛŋ˥˨
-秋	tshiu①1	tsʰiu˧˦
-科	khue①1	kʰuɛ˧˦
-秒	miau③2	miau˥˨
-秘	pi⑤3	pi˨˩˨
-租	tsou①1	tsou˧˦
-秤	tshin⑤3	tsʰin˨˩˨
-秦	tshin②5	tsʰin˥˥
-秧	ianɡ①1	iaŋ˧˦
-秧	nɡ①1	ŋ˧˦
-秩	tiat⑦4	tiɛt˧˨
-秩	tet⑦4	tɛt˧˨
-秫	tsut⑧8	tsut˥˦
-移	i②5	i˥˥
-稀	hi①1	hi˧˦
-程	thiann②5	tʰiã˥˥
-稍	tshiau③2	tsʰiau˥˨
-稅	sue⑤3	suɛ˨˩˨
-稗	phuenn⑥7	pʰuɛ̃˨˨
-稚	tsinn③2	tsĩ˥˨
-稠	tiu②5	tiu˥˥
-稭	kai①1	kai˧˦
-種	tsenɡ③2	tsɛŋ˥˨
-種	tsenɡ⑤3	tsɛŋ˨˩˨
-稱	tshenɡ①1	tsʰɛŋ˧˦
-稱	tshenɡ⑤3	tsʰɛŋ˨˩˨
-稱	tshin⑤3	tsʰin˨˩˨
-稷	tsek⑦4	tsɛk˧˨
-稻	tau④6	tau˨˥
-稻	tiu④6	tiu˨˥
-稼	ke⑤3	kɛ˨˩˨
-稽	ki①1	ki˧˦
-稿	ko③2	ko˥˨
-穀	kok⑦4	kok˧˨
-穀	kak⑦4	kak˧˨
-穄	tsi⑤3	tsi˨˩˨
-穆	mok⑧8	mok˥˦
-積	tsek⑦4	tsɛk˧˨
-積	tseh⑦4	tsɛʔ˧˨
-穎	thenɡ③2	tʰɛŋ˥˨
-穗	sui⑥7	sui˨˨
-穢	ue⑤3	uɛ˨˩˨
-穩	un③2	un˥˨
-穴	huat⑧8	huat˥˦
-究	kiu⑤3	kiu˨˩˨
-穹	kionɡ①1	kioŋ˧˦
-空	khonɡ①1	kʰoŋ˧˦
-空	khanɡ①1	kʰaŋ˧˦
-空	khanɡ⑤3	kʰaŋ˨˩˨
-穿	tshuan①1	tsʰuan˧˦
-穿	tshnɡ①1	tsʰŋ˧˦
-突	tut⑧8	tut˥˦
-窄	tsa③2	tsa˥˨
-窒	tiat⑦4	tiɛt˧˨
-窒	tet⑦4	tɛt˧˨
-窖	ka⑤3	ka˨˩˨
-窗	thenɡ①1	tʰɛŋ˧˦
-窟	khut⑦4	kʰut˧˨
-窩	o①1	o˧˦
-窮	khionɡ②5	kʰioŋ˥˥
-窮	kenɡ②5	kɛŋ˥˥
-窯	io②5	io˥˥
-窺	kui①1	kui˧˦
-竄	tshuan⑤3	tsʰuan˨˩˨
-竅	khiau⑤3	kʰiau˨˩˨
-立	lip⑧8	lip˥˦
-站	tsam④6	tsam˨˥
-竟	kenɡ③2	kɛŋ˥˨
-章	tsianɡ①1	tsiaŋ˧˦
-章	tsionn①1	tsiõ˧˦
-竣	tsun⑤3	tsun˨˩˨
-童	thonɡ②5	tʰoŋ˥˥
-竭	kiat⑧8	kiɛt˥˦
-竭	ket⑧8	kɛt˥˦
-端	tuan①1	tuan˧˦
-競	kenɡ④6	kɛŋ˨˥
-竹	tek⑦4	tɛk˧˨
-竿	kuann①1	kuã˧˦
-竿	ko①1	ko˧˦
-笑	siau⑤3	siau˨˩˨
-笑	tshio⑤3	tsʰio˨˩˨
-笙	senɡ①1	sɛŋ˧˦
-笛	tek⑧8	tɛk˥˦
-符	hu②5	hu˥˥
-笨	pun③2	pun˥˨
-第	ti④6	ti˨˥
-第	toinn④6	tõi˨˥
-筅	tshoinn③2	tsʰõi˥˨
-筆	pit⑦4	pit˧˨
-等	tenɡ③2	tɛŋ˥˨
-等	tan③2	tan˥˨
-筋	kurn①1	kɯn˧˦
-筏	huat⑧8	huat˥˦
-筐	khuanɡ①1	kʰuaŋ˧˦
-筐	khenɡ①1	kʰɛŋ˧˦
-筒	thonɡ②5	tʰoŋ˥˥
-筒	tanɡ②5	taŋ˥˥
-答	tap⑦4	tap˧˨
-策	tsheh⑦4	tsʰɛʔ˧˨
-筷	khuai⑤3	kʰuai˨˩˨
-箋	tsian①1	tsiɛn˧˦
-箋	tsen①1	tsɛn˧˦
-箍	khou①1	kʰou˧˦
-箏	tsenɡ①1	tsɛŋ˧˦
-算	suan⑤3	suan˨˩˨
-算	snɡ⑤3	sŋ˨˩˨
-管	kuan③2	kuan˥˨
-管	knɡ③2	kŋ˥˨
-箬	jiak⑧8	dziak˥˦
-箬	hioh⑧8	hioʔ˥˦
-箬	hah⑦4	haʔ˧˨
-箭	tsinn⑤3	tsĩ˨˩˨
-箱	sionn①1	siõ˧˦
-箸	tur⑥7	tɯ˨˨
-節	tsiat⑦4	tsiɛt˧˨
-節	tset⑦4	tsɛt˧˨
-節	tsoih⑦4	tsoiʔ˧˨
-節	tsat⑦4	tsat˧˨
-範	huam④6	huam˨˥
-篆	tuan④6	tuan˨˥
-篇	phian①1	pʰiɛn˧˦
-篇	phen①1	pʰɛn˧˦
-築	tok⑦4	tok˧˨
-篡	tshuan⑤3	tsʰuan˨˩˨
-篤	tok⑦4	tok˧˨
-篦	pin⑤3	pin˨˩˨
-篩	sai①1	sai˧˦
-篩	thai①1	tʰai˧˦
-篷	phonɡ②5	pʰoŋ˥˥
-篷	phanɡ②5	pʰaŋ˥˥
-篾	bih⑧8	biʔ˥˦
-簡	kan③2	kan˥˨
-簫	siau①1	siau˧˦
-簸	pua⑤3	pua˨˩˨
-簽	tshiam①1	tsʰiam˧˦
-簾	liam②5	liam˥˥
-簿	phou④6	pʰou˨˥
-籃	lam①1	lam˧˦
-籃	na②5	nã˥˥
-籌	thiu②5	tʰiu˥˥
-籍	tsia④6	tsia˨˥
-籠	lonɡ②5	loŋ˥˥
-籠	lonɡ③2	loŋ˥˨
-籠	lanɡ②5	laŋ˥˥
-籠	lenɡ②5	lɛŋ˥˥
-籤	tshiam①1	tsʰiam˧˦
-籬	li②5	li˥˥
-籮	lo②5	lo˥˥
-籮	lua②5	lua˥˥
-米	bi③2	bi˥˨
-粉	hun③2	hun˥˨
-粒	liap⑧8	liap˥˦
-粕	phoh	pʰoʔ
-粗	tshou①1	tsʰou˧˦
-粘	liam①1	liam˧˦
-粟	tshek⑦4	tsʰɛk˧˨
-粥	kiok⑦4	kiok˧˨
-粱	lianɡ②5	liaŋ˥˥
-粵	uat⑧8	uat˥˦
-粹	tsui④6	tsui˨˥
-粽	tsanɡ⑤3	tsaŋ˨˩˨
-精	tsenɡ①1	tsɛŋ˧˦
-精	tsiann①1	tsiã˧˦
-糊	hu②5	hu˥˥
-糊	kou②5	kou˥˥
-糍	tsi②5	tsi˥˥
-糕	kau①1	kau˧˦
-糕	ko①1	ko˧˦
-糖	thnɡ②5	tʰŋ˥˥
-糜	mi②5	mi˥˥
-糜	mue②5	muɛ˥˥
-糞	pun⑤3	pun˨˩˨
-糟	tsau①1	tsau˧˦
-糟	tso①1	tso˧˦
-糠	khanɡ①1	kʰaŋ˧˦
-糠	khnɡ①1	kʰŋ˧˦
-糧	nio②5	niõ˥˥
-糴	tiah⑧8	tiaʔ˥˦
-糶	thio⑤3	tʰio˨˩˨
-系	hi④6	hi˨˥
-糾	kiu④6	kiu˨˥
-紀	ki③2	ki˥˨
-紀	ki⑤3	ki˨˩˨
-紂	tiu④6	tiu˨˥
-約	iok⑦4	iok˧˨
-約	iak⑦4	iak˧˨
-約	ioh⑦4	ioʔ˧˨
-紅	anɡ②5	aŋ˥˥
-紋	bun②5	bun˥˥
-納	nap⑧8	nap˥˦
-紐	niu③2	niu˥˨
-純	sun②5	sun˥˥
-紗	sa①1	sa˧˦
-紗	se①1	sɛ˧˦
-紙	tsua③2	tsua˥˨
-級	khip⑦4	kʰip˧˨
-紛	hun①1	hun˧˦
-素	su⑤3	su˨˩˨
-素	sou⑤3	sou˨˩˨
-紡	huanɡ③2	huaŋ˥˨
-紡	phanɡ③2	pʰaŋ˥˨
-索	sok⑦4	sok˧˨
-索	soh⑦4	soʔ˧˨
-紫	tsi③2	tsi˥˨
-累	lui③2	lui˥˨
-累	lui⑥7	lui˨˨
-細	soi⑤3	soi˨˩˨
-紹	siau④6	siau˨˥
-終	tsonɡ①1	tsoŋ˧˦
-組	tsu①1	tsu˧˦
-結	kit⑦4	kit˧˨
-結	kat⑦4	kat˧˨
-絕	tsoh⑧8	tsoʔ˥˦
-絞	ka③2	ka˥˨
-絡	lok⑧8	lok˥˦
-給	kip⑦4	kip˧˨
-絨	jonɡ②5	dzoŋ˥˥
-絮	su⑤3	su˨˩˨
-絮	tsheu⑤3	tsʰɛu˨˩˨
-統	thonɡ③2	tʰoŋ˥˨
-絲	si①1	si˧˦
-綁	panɡ③2	paŋ˥˨
-綏	sui②5	sui˥˥
-經	kenɡ①1	kɛŋ˧˦
-經	kenn①1	kɛ̃˧˦
-經	kiann①1	kiã˧˦
-綠	lok⑧8	lok˥˦
-綢	tiu②5	tiu˥˥
-維	jui②5	dzui˥˥
-綱	kanɡ①1	kaŋ˧˦
-網	manɡ④6	maŋ˨˥
-綴	tshuak⑦4	tsʰuat˧˨
-綴	tue⑤3	tuɛ˨˩˨
-綻	tenɡ④6	tɛŋ˨˥
-綽	tshiak⑦4	tsʰiak˧˨
-綿	mian②5	miɛn˥˥
-綿	men②5	mɛn˥˥
-綿	mi②5	mĩ˥˥
-緊	kin③2	kin˥˨
-緒	su③2	su˥˨
-線	suann⑤3	suã˨˩˨
-緝	tship⑦4	tsʰip˧˨
-緞	tnɡ⑥7	tŋ˨˨
-緣	uan②5	uan˥˥
-編	phian①1	pʰiɛn˧˦
-編	phen①1	pʰɛn˧˦
-編	pinn①1	pĩ˧˦
-緩	huan③2	huan˥˨
-緩	man⑥7	man˨˨
-緬	mian②5	miɛn˥˥
-緬	men②5	mɛn˥˥
-緬	mian③2	miɛn˥˨
-緬	men③2	mɛn˥˨
-緯	ui③2	ui˥˨
-練	lian⑥7	liɛn˨˨
-練	len⑥7	lɛn˨˨
-縊	i⑤3	i˨˩˨
-縐	niau⑤3	niau˨˩˨
-縛	pak⑧8	pak˥˦
-縣	kuinn⑥7	kũi˨˨
-縫	honɡ②5	hoŋ˥˥
-縫	phonɡ②5	pʰoŋ˥˥
-縫	phanɡ⑥7	pʰaŋ˨˨
-縮	sok⑦4	sok˧˨
-縱	tsonɡ⑤3	tsoŋ˨˩˨
-縷	lu③2	lu˥˨
-總	tsonɡ③2	tsoŋ˥˨
-總	tsanɡ③2	tsaŋ˥˨
-績	tseh⑦4	tsɛʔ˧˨
-繁	huan②5	huan˥˥
-織	tsit⑦4	tsit˧˨
-繞	jiau⑤3	dziau˨˩˨
-繩	sin②5	sin˥˥
-繪	kuai⑤3	kuai˨˩˨
-繫	hi④6	hi˨˥
-繭	koinn③2	kõi˥˨
-繳	kiau③2	kiau˥˨
-繼	ki⑤3	ki˨˩˨
-續	sok⑧8	sok˥˦
-纏	tinn②5	tĩ˥˥
-纓	enɡ①1	ɛŋ˧˦
-纔	tshai②5	tsʰai˥˥
-纖	tshiam①1	tsʰiam˧˦
-纜	lam③2	lam˥˨
-缸	kanɡ①1	kaŋ˧˦
-缸	knɡ①1	kŋ˧˦
-缺	khueh⑦4	kʰuɛʔ˧˨
-缺	khih⑦4	kʰiʔ˧˨
-缽	puah⑦4	puaʔ˧˨
-罐	kuan⑤3	kuan˨˩˨
-罕	han③2	han˥˨
-罩	tsau④6	tsau˨˥
-罪	tsue④6	tsuɛ˨˥
-罪	tso④6	tso˨˥
-置	ti⑤3	ti˨˩˨
-罰	huat⑧8	huat˥˦
-署	su③2	su˥˨
-罵	me⑥7	mɛ˨˨
-罷	pa④6	pa˨˥
-羅	lo②5	lo˥˥
-羈	ki①1	ki˧˦
-羊	ionn②5	iõ˥˥
-羌	kianɡ①1	kiaŋ˧˦
-美	mui③2	mui˥˨
-羔	ko①1	ko˧˦
-羞	siu①1	siu˧˦
-群	khun②5	kʰun˥˥
-羨	ian④6	iɛn˨˥
-羨	en④6	ɛn˨˥
-義	nɡi④6	ŋi˨˥
-羹	kenn①1	kɛ̃˧˦
-羽	u③2	u˥˨
-翁	onɡ①1	oŋ˧˦
-翁	anɡ①1	aŋ˧˦
-翁	enɡ①1	ɛŋ˧˦
-翅	tshi⑤3	tsʰi˨˩˨
-翅	thi⑤3	tʰi˨˩˨
-習	sip⑧8	sip˥˦
-翠	tshui⑤3	tsʰui˨˩˨
-翰	han②5	han˥˥
-翻	huan①1	huan˧˦
-翼	ek⑧8	ɛk˥˦
-翼	sit⑧8	sit˥˦
-耀	iau④6	iau˨˥
-耀	tshionn⑦4	tsʰiõ˨˩
-老	lau③2	lau˥˨
-老	lau④6	lau˨˥
-考	khau③2	kʰau˥˨
-者	tsia③2	tsia˥˨
-而	jur②5	dzɯ˥˥
-耍	snɡ③2	sŋ˥˨
-耐	nai④6	nai˨˥
-耕	kenn①1	kɛ̃˧˦
-耗	ho⑤3	ho˨˩˨
-耳	jur③2	dzɯ˥˨
-耳	hinn④6	hĩ˨˥
-耶	ia①1	ia˧˦
-耽	tam①1	tam˧˦
-耿	kenɡ③2	kɛŋ˥˨
-聊	liau②5	liau˥˥
-聖	senɡ⑤3	sɛŋ˨˩˨
-聖	siann⑤3	siã˨˩˨
-聘	phenɡ⑤3	pʰɛŋ˨˩˨
-聘	phiann⑤3	pʰiã˨˩˨
-聚	tsu④6	tsu˨˥
-聞	bun④6	bun˨˥
-聯	lian②5	liɛn˥˥
-聯	len②5	lɛn˥˥
-聰	tshonɡ①1	tsʰoŋ˧˦
-聲	siann①1	siã˧˦
-聶	niap⑦4	niap˧˨
-職	tseh⑦4	tsɛʔ˧˨
-聽	thenɡ⑤3	tʰɛŋ˨˩˨
-聽	thiann①1	tʰiã˧˦
-聾	lanɡ②5	laŋ˥˥
-肄	i⑤3	i˨˩˨
-肅	sok⑦4	sok˧˨
-肆	sur⑤3	sɯ˨˩˨
-肆	si⑤3	si˨˩˨
-肇	siau④6	siau˨˥
-肉	nek⑧8	nɛk˥˦
-肉	bah⑦4	baʔ˧˨
-肋	lek⑧8	lɛk˥˦
-肌	ki①1	ki˧˦
-肘	tiu③2	tiu˥˨
-肚	tou③2	tou˥˨
-肚	tou④6	tou˨˥
-肛	kanɡ①1	kaŋ˧˦
-肝	kuann①1	kuã˧˦
-股	kou③2	kou˥˨
-肢	tsinn①1	tsĩ˧˦
-肢	ki①1	ki˧˦
-肥	pui②5	pui˥˥
-肩	koinn①1	kõi˧˦
-肪	huanɡ③2	huaŋ˥˨
-肯	khenɡ③2	kʰɛŋ˥˨
-育	iok⑧8	iok˥˦
-肴	nɡau②5	ŋau˥˥
-肺	hui⑤3	hui˨˩˨
-胃	ui④6	ui˨˥
-背	pue④6	puɛ˨˥
-背	pue⑤3	puɛ˨˩˨
-背	pi⑤3	pi˨˩˨
-胎	tho①1	tʰo˧˦
-胖	phuan⑤3	pʰua˨˩˨
-胖	phonɡ⑤3	pʰoŋ˨˩˨
-胚	phue①1	pʰuɛ˧˦
-胞	pau①1	pau˧˦
-胡	hu②5	hu˥˥
-胡	hou②5	hou˥˥
-胡	ou②5	ou˥˥
-胥	su①1	su˧˦
-胳	koh⑦4	koʔ˧˨
-胸	henɡ①1	hɛŋ˧˦
-能	lenɡ②5	lɛŋ˥˥
-脂	tsinn①1	tsĩ˧˦
-脅	hiap⑧8	hiap˥˦
-脆	tshui⑤3	tsʰui˨˩˨
-脆	tshui③2	tsʰui˥˨
-脈	meh⑧8	mɛʔ˥˦
-脊	tsit⑦4	tsit˧˨
-脊	tsiah⑦4	tsiaʔ˧˨
-脖	puat⑧8	puat˥˦
-脫	thut⑦4	tʰut˧˨
-脯	pou③2	pou˥˨
-脹	tsianɡ⑤3	tsiaŋ˨˩˨
-脹	tionn⑤3	tiõ˨˩˨
-脾	phi②5	pʰi˥˥
-腋	ek⑧8	ɛk˥˦
-腌	iam①1	iam˧˦
-腎	sian④6	siɛn˨˥
-腎	sen④6	sɛn˨˥
-腐	hu①1	hu˧˦
-腐	hu⑥7	hu˨˨
-腑	hu③2	hu˥˨
-腔	khionn①1	kʰiõ˧˦
-腕	uan③2	uan˥˨
-腡	lo②5	lo˥˥
-腥	senɡ①1	sɛŋ˧˦
-腥	tshenn①1	tsʰɛ̃˧˦
-腥	tshenn⑤3	tsʰɛ̃˨˩˨
-腦	nau③2	nau˥˨
-腦	lo③2	lo˥˨
-腩	lam③2	lam˥˨
-腫	tsenɡ③2	tsɛŋ˥˨
-腮	sai①1	sai˧˦
-腮	tshi①1	tsʰi˧˦
-腰	io①1	io˧˦
-腱	kian④6	kiɛn˨˥
-腱	en④6	ɛn˨˥
-腳	kiok⑦4	kiok˧˨
-腳	kioh⑦4	kioʔ˧˨
-腳	kha①1	kʰa˧˦
-腸	tshianɡ②5	tsʰiaŋ˥˥
-腸	tnɡ②5	tŋ˥˥
-腹	pak⑦4	pak˧˨
-腿	thui③2	tʰui˥˨
-膏	ko①1	ko˧˦
-膚	hu①1	hu˧˦
-膜	moh⑧8	moʔ˥˦
-膝	tship⑦4	tsʰip˧˨
-膠	ka①1	ka˧˦
-膨	phenn②5	pʰɛ̃˥˥
-膩	jur④6	dzɯ˨˥
-膩	ji⑥7	dzi˨˨
-膳	sian④6	siɛn˨˥
-膽	tann③2	tã˥˨
-膿	lonɡ②5	loŋ˥˥
-膿	lanɡ②5	laŋ˥˥
-臀	thun②5	tʰun˥˥
-臀	tian④6	tiɛn˨˥
-臀	ten④6	tɛn˨˥
-臂	pi⑤3	pi˨˩˨
-臉	liam③2	liam˥˨
-臉	lian③2	liɛn˥˨
-臉	len③2	lɛn˥˨
-臊	tshau⑤3	tsʰau˨˩˨
-臊	tsho①1	tsʰo˧˦
-臍	tsai②5	tsai˥˥
-臓	tsanɡ④6	tsaŋ˨˥
-臘	lah⑧8	laʔ˥˦
-臣	tshin②5	tsʰin˥˥
-臥	o⑤3	o˨˩˨
-臧	tsanɡ①1	tsaŋ˧˦
-臨	lim②5	lim˥˥
-自	tsur⑥7	tsɯ˨˨
-臭	tshau⑤3	tsʰau˨˩˨
-至	tsi⑤3	tsi˨˩˨
-致	ti⑤3	ti˨˩˨
-臺	thai②5	tʰai˥˥
-臺	tai②5	tai˥˥
-臻	tsin①1	tsin˧˦
-臼	khu④6	kʰu˨˥
-舀	io③2	io˥˨
-舂	tsenɡ①1	tsɛŋ˧˦
-舅	ku④6	ku˨˥
-與	ur③2	ɯ˥˨
-興	henɡ①1	hɛŋ˧˦
-興	henɡ⑤3	hɛŋ˨˩˨
-舉	kur③2	kɯ˥˨
-舊	ku⑥7	ku˨˨
-舌	tsih⑧8	tsiʔ˥˦
-舍	sia⑤3	sia˨˩˨
-舒	su①1	su˧˦
-舒	tshur①1	tsʰɯ˧˦
-舔	thiam③2	tʰiam˥˨
-舛	tshuan③2	tsʰuan˥˨
-舜	sun⑤3	sun˨˩˨
-舞	bu③2	bu˥˨
-舞	monɡ④6	moŋ˨˥
-舟	tsiu①1	tsiu˧˦
-航	hanɡ②5	haŋ˥˥
-航	phanɡ②5	pʰaŋ˥˥
-般	puann①1	puã˧˦
-舵	tua④6	tua˨˥
-船	tsun②5	tsun˥˥
-艇	thenɡ③2	tʰɛŋ˥˨
-艦	lam③2	lam˥˨
-良	lianɡ②5	liaŋ˥˥
-艱	kan①1	kan˧˦
-色	sek⑦4	sɛk˧˨
-艷	iam⑥7	iam˨˨
-艾	nɡai④6	ŋai˨˥
-艾	hiann⑥7	hiã˨˨
-芋	ou⑥7	ou˨˨
-芍	tshiak⑦4	tsʰiak˧˨
-芒	manɡ②5	maŋ˥˥
-芙	phu②5	pʰu˥˥
-芝	tsur①1	tsɯ˧˦
-芥	kai⑤3	kai˨˩˨
-芥	kua⑤3	kua˨˩˨
-芥	kah⑦4	kaʔ˧˨
-芥	keh⑦4	kɛʔ˧˨
-芫	uan②5	uan˥˥
-芬	hun①1	hun˧˦
-芭	pa①1	pa˧˦
-花	hua①1	hua˧˦
-花	hue①1	huɛ˧˦
-芳	huanɡ①1	huaŋ˧˦
-芳	phanɡ①1	pʰaŋ˧˦
-芹	khurn②5	kʰɯn˥˥
-芻	tshu①1	tsʰu˧˦
-芽	ɡe②5	gɛ˥˥
-苔	thai②5	tʰai˥˥
-苔	thi②5	tʰi˥˥
-苗	miau②5	miau˥˥
-苗	bio②5	bio˥˥
-苛	kho①1	kʰo˧˦
-苟	kou③2	kou˥˨
-若	jiak⑧8	dziak˥˦
-若	jioh⑧8	dzioʔ˥˦
-若	na④6	na˨˥
-苦	khou③2	kʰou˥˨
-苧	teu④6	tɛu˨˥
-英	enɡ①1	ɛŋ˧˦
-茂	monɡ④6	moŋ˨˥
-范	huam④6	huam˨˥
-茄	kia①1	kia˧˦
-茄	kio②5	kio˥˥
-茅	mau②5	mau˥˥
-茫	manɡ②5	maŋ˥˥
-茶	te②5	tɛ˥˥
-茸	jonɡ②5	dzoŋ˥˥
-荀	sun②5	sun˥˥
-荆	kenɡ①1	kɛŋ˧˦
-草	tshau③2	tsʰau˥˨
-草	tsho③2	tsʰo˥˨
-荒	huanɡ①1	huaŋ˧˦
-荒	hnɡ①1	hŋ˧˦
-荔	li④6	li˨˥
-荔	noi⑥7	nõi˨˨
-荷	ho②5	ho˥˥
-荷	o⑤3	o˨˩˨
-荷	o④6	o˨˥
-荽	sui①1	sui˧˦
-莊	tsanɡ①1	tsaŋ˧˦
-莊	tsnɡ①1	tsŋ˧˦
-莓	bue②5	buɛ˥˥
-莓	m⑥7	m˨˨
-莧	hoinn⑥7	hõi˨˨
-莫	mok⑧8	mok˥˦
-莽	manɡ③2	maŋ˥˨
-菊	kek⑦4	kɛk˧˨
-菌	khun③2	kʰun˥˨
-菜	tshai⑤3	tsʰai˨˩˨
-菩	phu②5	pʰu˥˥
-華	hua①1	hua˧˦
-華	hua②5	hua˥˥
-菱	lenɡ②5	lɛŋ˥˥
-菲	hui①1	hui˧˦
-萄	tho②5	tʰo˥˥
-萌	menɡ②5	mɛŋ˥˥
-萬	buan⑥7	buan˨˨
-落	lak⑦4	lak˧˨
-落	loh⑧8	loʔ˥˦
-落	lauh⑧8	lauʔ˥˦
-葉	iap⑧8	iap˥˦
-葉	hiap⑧8	hiap˥˦
-葉	hioh⑧8	hioʔ˥˦
-葉	hah⑦4	haʔ˧˨
-著	tu⑤3	tu˨˩˨
-著	tioh⑦4	tioʔ˧˨
-著	tioh⑧8	tioʔ˥˦
-著	toh⑧8	toʔ˥˦
-葛	kuah⑦4	kuaʔ˧˨
-董	tonɡ③2	toŋ˥˨
-董	tanɡ③2	taŋ˥˨
-葦	ui③2	ui˥˨
-葬	tsnɡ⑤3	tsŋ˨˩˨
-葱	tshanɡ①1	tsʰaŋ˧˦
-葵	khui②5	kʰui˥˥
-葵	kue②5	kuɛ˥˥
-葷	hun①1	hun˧˦
-蒓	sun②5	sun˥˥
-蒙	monɡ②5	moŋ˥˥
-蒜	snɡ⑤3	sŋ˨˩˨
-蒲	phu②5	pʰu˥˥
-蒸	tsenɡ①1	tsɛŋ˧˦
-蒹	kiam①1	kiam˧˦
-蒼	tshanɡ①1	tsʰaŋ˧˦
-蒿	hau①1	hau˧˦
-蒿	o①1	o˧˦
-蓄	thiok⑦4	tʰiok˧˨
-蓄	hak⑦4	hak˧˨
-蓋	kai⑤3	kai˨˩˨
-蓋	kua⑤3	kua˨˩˨
-蓑	so①1	so˧˦
-蓬	phonɡ②5	pʰoŋ˥˥
-蓮	lian②5	liɛn˥˥
-蓮	len②5	lɛn˥˥
-蓮	noi②5	nõi˥˥
-蔔	pok⑧8	pok˥˦
-蔗	tsia⑤3	tsia˨˩˨
-蔡	tshua⑤3	tsʰua˨˩˨
-蔣	tsionn③2	tsiõ˥˨
-蔫	ian①1	iɛn˧˦
-蔫	en①1	ɛn˧˦
-蔬	so①1	so˧˦
-蔭	im⑤3	im˨˩˨
-蔻	khou⑤3	kʰou˨˩˨
-蔽	pi⑥7	pi˨˨
-蕊	lui③2	lui˥˨
-蕩	tanɡ④6	taŋ˨˥
-蕩	tnɡ④6	tŋ˨˥
-蕭	siau①1	siau˧˦
-薄	poh⑧8	poʔ˥˦
-薅	hau①1	hau˧˦
-薅	khau①1	kʰau˧˦
-薇	mui②5	mui˥˥
-薑	kionn①1	kiõ˧˦
-薛	sih⑦4	siʔ˧˨
-薦	tsin⑤3	tsin˨˩˨
-薩	sat⑦4	sat˧˨
-薪	tsin②5	tsin˥˥
-薯	tsur②5	tsɯ˥˥
-薰	hurn①1	hɯn˧˦
-薰	hun①1	hun˧˦
-薺	tshi②5	tsʰi˥˥
-薺	tsinn②5	tsĩ˥˥
-藉	tsia④6	tsia˨˥
-藍	lam②5	lam˥˥
-藍	na②5	nã˥˥
-藏	tshanɡ②5	tsʰaŋ˥˥
-藏	tsanɡ④6	tsaŋ˨˥
-藐	miau③2	miau˥˨
-藕	nɡou③2	ŋou˥˨
-藕	nau④6	nau˨˥
-藕	kau④6	kau˨˥
-藝	ɡoi⑥7	goi˨˨
-藤	tin②5	tin˥˥
-藥	iak⑧8	iak˥˦
-藥	ioh⑧8	ioʔ˥˦
-藩	phuan①1	pʰuan˧˦
-藹	ai③2	ai˥˨
-藿	khak⑦4	kʰak˧˨
-蘇	sou①1	sou˧˦
-蘭	lan②5	lan˥˥
-蘸	tsam⑤3	tsam˨˩˨
-蘿	lo②5	lo˥˥
-虎	hu①1	hu˧˦
-虎	hounn③2	hõu˥˨
-虐	nɡiak⑧8	ŋiak˥˦
-虔	khian①1	kʰiɛn˧˦
-虔	khen①1	kʰɛn˧˦
-處	tshu⑤3	tsʰu˨˩˨
-虛	hur①1	hɯ˧˦
-虜	lu③2	lu˥˨
-虞	nɡo②5	ŋo˥˥
-號	hau①1	hau˧˦
-號	ho⑥7	ho˨˨
-虧	khui①1	kʰui˧˦
-虱	sat⑦4	sat˧˨
-虹	honɡ②5	hoŋ˥˥
-虹	khenɡ④6	kʰɛŋ˨˥
-蚊	bun①1	bun˧˦
-蚌	honɡ③2	hoŋ˥˨
-蚣	kanɡ①1	kaŋ˧˦
-蚤	tsau③2	tsau˥˨
-蚶	ham①1	ham˧˦
-蛆	tsu①1	tsu˧˦
-蛇	tsua②5	tsua˥˥
-蛋	tan⑤3	tan˨˩˨
-蛙	ua①1	ua˧˦
-蛛	tu①1	tu˧˦
-蛤	kap⑦4	kap˧˨
-蛤	hah⑦4	haʔ˧˨
-蛾	nɡo②5	ŋo˥˥
-蜀	tsuak⑧8	tsuak˥˦
-蜀	juak⑧8	dzuak˥˦
-蜀	tsek⑧8	tsek˥˦
-蜂	phanɡ①1	pʰaŋ˧˦
-蜓	thenɡ②5	tʰɛŋ˥˥
-蜜	mit⑧8	mit˥˦
-蜜	bit⑧8	bit˥˦
-蜻	tshenn①1	tsʰɛ̃˧˦
-蝎	hiat⑦4	hiɛt˧˨
-蝎	het⑦4	hɛt˧˨
-蝎	hat⑦4	hat˧˨
-蝕	sih⑧8	siʔ˥˦
-蝗	huanɡ②5	huaŋ˥˥
-蝙	phian①1	pʰiɛn˧˦
-蝙	phen①1	pʰɛn˧˦
-蝙	pian③2	piɛn˥˨
-蝙	pen③2	pɛn˥˨
-蝠	hok⑦4	hok˧˨
-蝦	he②5	hɛ˥˥
-蝶	tiap⑧8	tiap˥˦
-蝸	o①1	o˧˦
-蝸	ua①1	ua˧˦
-螂	lanɡ②5	laŋ˥˥
-融	ionɡ②5	ioŋ˥˥
-螢	ionɡ②5	ioŋ˥˥
-螳	thanɡ②5	tʰaŋ˥˥
-螺	lo②5	lo˥˥
-蟀	sut⑦4	sut˧˨
-蟄	tek⑧8	tɛk˥˦
-蟆	mo①1	mo˧˦
-蟬	sian②5	siɛn˥˥
-蟬	sen②5	sɛn˥˥
-蟲	thanɡ②5	tʰaŋ˥˥
-蟶	than①1	tʰan˧˦
-蟹	hoi④6	hoi˨˥
-蟻	hia④6	hia˨˥
-蠅	sin②5	sin˥˥
-蠔	hau②5	hau˥˥
-蠔	o②5	o˥˥
-蠟	lah⑧8	laʔ˥˦
-蠢	tshun③2	tsʰun˥˨
-蠶	tshoinn②5	tsʰõi˥˥
-蠻	man②5	man˥˥
-血	hueh⑦4	huɛʔ˧˨
-行	hanɡ②5	haŋ˥˥
-行	henɡ②5	hɛŋ˥˥
-行	henɡ④6	hɛŋ˨˥
-行	kiann②5	kiã˥˥
-術	sut⑧8	sut˥˦
-街	koi①1	koi˧˦
-衙	ɡe②5	gɛ˥˥
-衛	ue④6	uɛ˨˥
-衝	tshonɡ①1	tsʰoŋ˧˦
-衝	tshionɡ⑤3	tsʰioŋ˨˩˨
-衡	henɡ②5	hɛŋ˥˥
-衣	i①1	i˧˦
-衣	ui①1	ui˧˦
-表	piau③2	piau˥˨
-表	pio③2	pio˥˨
-衰	sue①1	suɛ˧˦
-袁	uan②5	uan˥˥
-袋	to⑥7	to˨˨
-袍	phau②5	pʰau˥˥
-袖	siu⑤3	siu˨˩˨
-被	pi④6	pi˨˥
-被	phue④6	pʰuɛ˨˥
-袱	hok⑧8	hok˥˦
-裁	tshai②5	tsʰai˥˥
-裂	lih⑧8	liʔ˥˦
-裏	li③2	li˥˨
-裏	lai④6	lai˨˥
-裕	ju④6	dzu˨˥
-裙	kun②5	kun˥˥
-補	pou③2	pou˥˨
-裝	tsuanɡ①1	tsuaŋ˧˦
-裝	tsnɡ①1	tsŋ˧˦
-裳	sianɡ②5	siaŋ˥˥
-裸	lo③2	lo˥˨
-裹	kue③2	kuɛ˥˨
-製	tsi⑤3	tsi˨˩˨
-複	hok⑦4	hok˧˨
-褒	phau①1	pʰau˧˦
-褚	su③2	su˥˨
-褥	jok⑧8	dzok˥˦
-褪	tho⑤3	tʰo˨˩˨
-褪	thnɡ⑤3	tʰŋ˨˩˨
-褲	khou⑤3	kʰou˨˩˨
-褻	siat⑦4	siɛt˧˨
-褻	set⑦4	sɛt˧˨
-襄	sianɡ①1	siaŋ˧˦
-襖	o③2	o˥˨
-襟	kim①1	kim˧˦
-襪	ɡueh⑧8	guɛʔ˥˦
-襯	tshin⑤3	tsʰin˨˩˨
-襲	sip⑧8	sip˥˦
-西	si①1	si˧˦
-西	sai①1	sai˧˦
-要	iau①1	iau˧˦
-要	iau⑤3	iau˨˩˨
-覆	hok⑧8	hok˥˦
-覆	phak⑦4	pʰak˧˨
-覆	phiu⑤3	pʰiu˨˩˨
-覈	hek⑦4	hɛk˧˨
-見	kian⑤3	kiɛn˨˩˨
-見	ken⑤3	kɛn˨˩˨
-見	kinn⑤3	kĩ˨˩˨
-規	kui①1	kui˧˦
-覓	mit⑧8	mit˥˦
-視	si④6	si˨˥
-視	si⑥7	si˨˨
-親	tshin①1	tsʰin˧˦
-覺	kak⑦4	kak˧˨
-覽	lam③2	lam˥˨
-觀	kuan①1	kuan˧˦
-觀	kuan⑤3	kuan˨˩˨
-角	kak⑦4	kak˧˨
-解	hai④6	hai˨˥
-解	koi③2	koi˥˨
-解	koi⑤3	koi˨˩˨
-解	oi④6	oi˨˥
-觸	tshok⑦4	tsʰok˧˨
-言	nɡan②5	ŋan˥˥
-訂	tenɡ⑤3	tɛŋ˨˩˨
-訃	hu⑤3	hu˨˩˨
-計	ki⑤3	ki˨˩˨
-計	koi⑤3	koi˨˩˨
-訊	sin⑤3	sin˨˩˨
-討	tho③2	tʰo˥˨
-訓	hun⑤3	hun˨˩˨
-記	ki⑤3	ki˨˩˨
-訛	ho⑤3	ho˨˩˨
-訝	ɡia②5	gia˥˥
-訟	sonɡ④6	soŋ˨˥
-訣	kuat⑦4	kuat˧˨
-訪	huanɡ③2	huaŋ˥˨
-設	siat⑦4	siɛt˧˨
-設	set⑦4	sɛt˧˨
-許	hur③2	hɯ˥˨
-許	khou③2	kʰou˥˨
-訴	su⑤3	su˨˩˨
-診	tsian③2	tsiɛn˥˨
-診	tsen③2	tsɛn˥˨
-詐	tsa⑤3	tsa˨˩˨
-詔	jiau⑤3	dziau˨˩˨
-詔	tsiau③2	tsiau˨˩˨
-評	phenɡ②5	pʰɛŋ˥˥
-詞	sur②5	sɯ˥˥
-詢	sun②5	sun˥˥
-詣	tsi③2	tsi˥˨
-試	tshi⑤3	tsʰi˨˩˨
-詩	si①1	si˧˦
-詭	kui③2	kui˥˨
-話	ue⑥7	uɛ˨˨
-該	kai①1	kai˧˦
-詳	sianɡ②5	siaŋ˥˥
-詼	khue①1	kʰuɛ˧˦
-誅	tu①1	tu˧˦
-誌	tsi⑤3	tsi˨˩˨
-認	jin⑥7	dzin˨˨
-誓	si⑥7	si˨˨
-誓	tsua⑥7	tsua˨˨
-誕	tan⑤3	tan˨˩˨
-誘	iu③2	iu˥˨
-語	ɡur③2	gɯ˥˨
-誠	senɡ②5	sɛŋ˥˥
-誣	bu②5	bu˥˥
-誤	ɡou⑥7	gou˨˨
-誦	sonɡ④6	soŋ˨˥
-說	sueh⑦4	suɛʔ˧˨
-説	sueh⑦4	suɛʔ˧˨
-誰	sui②5	sui˥˥
-課	khue⑤3	kʰuɛ˨˩˨
-誼	nɡi⑤3	ŋi˨˩˨
-調	thiau②5	tʰiau˥˥
-調	tiau⑥7	tiau˨˨
-諄	tun①1	tun˧˦
-談	tham②5	tʰam˥˥
-請	tshiann③2	tsʰiã˥˨
-諒	lianɡ④6	liaŋ˨˥
-論	lun④6	lun˨˥
-諜	tiap⑧8	tiap˥˦
-諧	hai②5	hai˥˥
-諫	kam⑤3	kam˨˩˨
-諱	hui⑤3	hui˨˩˨
-諳	am①1	am˧˦
-諷	honɡ⑤3	hoŋ˨˩˨
-諷	honɡ③2	hoŋ˥˨
-諸	tsu①1	tsu˧˦
-諺	nɡan④6	ŋan˨˥
-諾	nap⑧8	nap˥˦
-謀	monɡ②5	moŋ˥˥
-謂	ui④6	ui˨˥
-謂	ui⑤3	ui˨˩˨
-謊	huanɡ①1	huaŋ˧˦
-謎	mi④6	mi˨˥
-謗	panɡ④6	paŋ˨˥
-謙	khiam①1	kʰiam˧˦
-講	kanɡ③2	kaŋ˥˨
-講	konɡ③2	koŋ˥˨
-謝	sia⑥7	sia˨˨
-謝	tsia⑥7	tsia˨˨
-謠	iau②5	iau˥˥
-謬	miu④6	miu˨˥
-謹	kurn③2	kɯn˥˨
-證	tsenɡ⑤3	tsɛŋ˨˩˨
-譏	ki①1	ki˧˦
-識	sek⑦4	sɛk˧˨
-譚	tham②5	tʰam˥˥
-譜	phou③2	pʰou˥˨
-警	kenɡ④6	kɛŋ˨˥
-譬	phi⑤3	pʰi˨˩˨
-譯	ek⑧8	ɛk˥˦
-議	nɡi③2	ŋi˥˨
-護	hu④6	hu˨˥
-譽	ur④6	ɯ˨˥
-讀	thak⑧8	tʰak˥˦
-變	pian⑤3	piɛn˨˩˨
-變	pen⑤3	pɛn˨˩˨
-變	pinn⑤3	pĩ˨˩˨
-讎	tshiu②5	tsʰiu˥˥
-讒	tsham②5	tsʰam˥˥
-讓	jianɡ④6	dziaŋ˨˥
-讓	nio⑥7	niõ˨˨
-谷	kok⑦4	kok˧˨
-豁	huah⑦4	huaʔ˧˨
-豁	khuah⑦4	kʰuaʔ˧˨
-豆	tau⑥7	tau˨˨
-豈	kha③2	kʰa˥˨
-豉	si⑥7	si˨˨
-豌	uan①1	uan˧˦
-豎	su④6	su˨˥
-豐	honɡ①1	hoŋ˧˦
-豕	si③2	si˥˨
-豚	thun②5	tʰun˥˥
-象	sianɡ④6	siaŋ˨˥
-象	tshionn④6	tsʰiõ˨˥
-豪	hau②5	hau˥˥
-豫	ur④6	ɯ˨˥
-豬	tur①1	tɯ˧˦
-豹	pa⑤3	pa˨˩˨
-豺	tshai②5	tsʰai˥˥
-貂	tiau①1	tiau˧˦
-貌	mau④6	mau˨˥
-貓	nɡiau①1	ŋiau˧˦
-貝	pue④6	puɛ˨˥
-貝	pue⑤3	puɛ˨˩˨
-貞	tsenɡ①1	tsɛŋ˧˦
-負	hu④6	hu˨˥
-財	tshai②5	tsʰai˥˥
-貢	konɡ⑤3	koŋ˨˩˨
-貧	phin②5	pʰin˥˥
-貧	pan②5	pan˥˥
-貨	hue⑤3	huɛ˨˩˨
-販	huan⑤3	huan˨˩˨
-貪	tham①1	tʰam˧˦
-貫	kuan⑤3	kuan˨˩˨
-責	tseh⑦4	tsɛʔ˧˨
-貯	teu③2	tɛu˥˨
-貳	ji④6	dzi˨˥
-貳	ji⑥7	dzi˨˨
-貴	kui⑤3	kui˨˩˨
-貶	phian③2	pʰiɛn˥˨
-貶	phen③2	pʰɛn˥˨
-貶	phin③2	pʰin˥˨
-買	bue③2	buɛ˥˨
-貸	tai⑤3	tai˨˩˨
-費	hui⑤3	hui˨˩˨
-費	pi⑤3	pi˨˩˨
-貼	thiap⑦4	tʰiap˧˨
-貼	thoih⑦4	tʰoiʔ˧˨
-貽	i②5	i˥˥
-貿	monɡ⑤3	moŋ˨˩˨
-賀	ho⑥7	ho˨˨
-賂	lu④6	lu˨˥
-賃	jim④6	dzim˨˥
-賄	iu④6	iu˨˥
-資	tsur①1	tsɯ˧˦
-賈	kia③2	kia˥˨
-賊	tshat⑧8	tsʰat˥˦
-賓	pin①1	pin˧˦
-賜	sur⑤3	sɯ˨˩˨
-賞	sionn⑤3	siõ˨˩˨
-賠	pue②5	puɛ˥˥
-賢	hian②5	hiɛn˥˥
-賢	hen②5	hɛn˥˥
-賣	bue⑥7	buɛ˨˨
-賤	tsuann⑥7	tsuã˨˨
-賦	hu⑤3	hu˨˩˨
-質	tsioh⑦4	tsioʔ˧˨
-賬	tionn⑤3	tiõ˨˩˨
-賭	tu③2	tu˥˨
-賴	lai④6	lai˨˥
-賴	nai④6	nai˨˥
-賴	lua⑥7	lua˨˨
-賺	tsuan⑤3	tsuan˨˩˨
-賺	tann⑥7	tã˨˨
-賺	than⑤3	tʰan˨˩˨
-購	kou⑤3	kou˨˩˨
-賽	sai⑤3	sai˨˩˨
-贅	tsui④6	tsui˨˥
-贈	tsan⑥7	tsan˨˨
-贊	tsan⑤3	tsan˨˩˨
-贍	tsiam①1	tsiam˧˦
-贏	iann②5	iã˥˥
-贓	tsanɡ①1	tsaŋ˧˦
-贖	sok⑧8	sok˥˦
-贛	konɡ⑤3	koŋ˨˩˨
-赤	tshiah⑦4	tsʰiaʔ˧˨
-赦	sia⑤3	sia˨˩˨
-赫	heh⑦4	hɛʔ˧˨
-走	tsau③2	tsau˥˨
-赴	hu⑤3	hu˨˩˨
-起	khi③2	kʰi˥˨
-趁	tsian③2	tsiɛn˥˨
-趁	tsen③2	tsɛn˥˨
-趁	than⑤3	tʰan˨˩˨
-超	thiau⑤3	tʰiau˨˩˨
-越	uat⑧8	uat˥˦
-趕	kuann③2	kuã˥˨
-趙	tio④6	tio˨˥
-趟	thanɡ③2	tʰaŋ˥˨
-趣	tshu⑤3	tsʰu˨˩˨
-趨	tshu①1	tsʰu˧˦
-足	tsok⑦4	tsok˧˨
-趾	tsi③2	tsi˥˨
-跋	puat⑧8	puat˥˦
-跌	tiat⑦4	tiɛt˧˨
-跌	tet⑦4	tɛt˧˨
-跌	tiat⑧8	tiɛt˥˦
-跌	tet⑧8	tɛt˥˦
-跑	phau③2	pʰau˥˨
-距	kur④6	kɯ˨˥
-跟	kurn①1	kɯn˧˦
-跡	tsiah⑦4	tsiaʔ˧˨
-跨	khua①1	kʰua˧˦
-跪	kuinn④6	kũi˨˥
-路	lou⑥7	lou˨˨
-跳	thiau⑤3	tʰiau˨˩˨
-跳	tio②5	tio˥˥
-踏	tah⑧8	taʔ˥˦
-踐	tsian③2	tsiɛn˥˨
-踐	tsen③2	tsɛn˥˨
-踢	that⑦4	tʰat˧˨
-蹄	toi②5	toi˥˥
-蹊	khi①1	kʰi˧˦
-蹤	tsonɡ①1	tsoŋ˧˦
-蹲	tsun①1	tsun˧˦
-蹲	tun①1	tun˧˦
-蹺	khiau①1	kʰiau˧˦
-躁	tshau⑤3	tsʰau˨˩˨
-躍	iak⑦4	iak˧˨
-身	sin①1	sin˧˦
-躬	kionɡ①1	kioŋ˧˦
-躲	to②5	to˥˥
-躺	thanɡ③2	tʰaŋ˥˨
-車	tshia①1	tsʰia˧˦
-車	kur①1	kɯ˧˦
-軋	tsat⑦4	tsat˧˨
-軋	khoih⑦4	kʰoiʔ˧˨
-軌	khui③2	kʰui˥˨
-軍	kun①1	kun˧˦
-軒	hurn①1	hɯn˧˦
-軛	eh⑦4	ɛʔ˧˨
-軟	nnɡ③2	nŋ˥˨
-軸	tek⑧8	tɛk˥˦
-軻	kho①1	kʰo˧˦
-較	ka⑤3	ka˨˩˨
-載	tsai③2	tsai˥˨
-載	tsai⑤3	tsai˨˩˨
-載	tsai⑥7	tsai˨˨
-輔	hu④6	hu˨˥
-輕	khin①1	kʰin˧˦
-輕	khia①1	kʰia˧˦
-輛	lianɡ③2	liaŋ˥˨
-輜	tsur①1	tsɯ˧˦
-輝	hui①1	hui˧˦
-輟	tshuat⑦4	tsʰuat˧˨
-輦	lin③2	lin˥˨
-輩	pue⑤3	puɛ˨˩˨
-輪	lun②5	lun˥˥
-輯	tship⑦4	tsʰip˧˨
-輸	su①1	su˧˦
-輻	pak⑦4	pak˧˨
-轄	hat⑦4	hat˧˨
-轉	tsuan③2	tsuan˥˨
-轉	tnɡ③2	tŋ˥˨
-轍	thiat⑦4	tʰiɛt˧˨
-轍	thet⑦4	tʰɛt˧˨
-轎	kio⑥7	kio˨˨
-轟	honɡ①1	hoŋ˧˦
-辛	sin②5	sin˥˥
-辜	ku①1	ku˧˦
-辜	kou①1	kou˧˦
-辟	phek⑦4	pʰɛk˧˨
-辣	luah⑦4	luaʔ˧˨
-辣	luah⑧8	luaʔ˥˦
-辦	pan⑥7	pan˨˨
-辦	phuenn⑥7	pʰuɛ̃˨˨
-辨	pian④6	piɛn˨˥
-辨	pen④6	pɛn˨˥
-辭	sur②5	sɯ˥˥
-辭	si②5	si˥˥
-辮	pinn④6	pĩ˨˥
-辮	pinn①1	pĩ˧˦
-辯	pian④6	piɛn˨˥
-辯	pen④6	pɛn˨˥
-辰	sin②5	sin˥˥
-辱	jok⑧8	dzok˥˦
-農	lonɡ②5	loŋ˥˥
-迂	u①1	u˧˦
-迄	nɡurt⑦4	ŋɯt˧˨
-迅	sin⑤3	sin˨˩˨
-迎	nɡenɡ②5	ŋɛŋ˥˥
-迎	iann②5	iã˥˥
-近	kurn④6	kɯn˨˥
-迥	kenɡ③2	kɛŋ˥˨
-迫	pek⑦4	pɛk˧˨
-迭	tiat⑦4	tiɛt˧˨
-迭	tet⑦4	tɛt˧˨
-述	sut⑧8	sut˥˦
-迷	mi②5	mi˥˥
-追	tui①1	tui˧˦
-退	tho⑤3	tʰo˨˩˨
-送	sanɡ⑤3	saŋ˨˩˨
-逃	to②5	to˥˥
-逆	nɡek⑧8	ŋɛk˥˦
-透	thau⑤3	tʰau˨˩˨
-逐	tok⑧8	tok˥˦
-途	thu②5	tʰu˥˥
-逗	tau⑥7	tau˨˨
-通	thonɡ①1	tʰoŋ˧˦
-通	thanɡ①1	tʰaŋ˧˦
-通	thanɡ⑤3	tʰaŋ˨˩˨
-逛	kuanɡ④6	kuaŋ˨˥
-逝	si⑥7	si˨˨
-逝	tsua⑥7	tsua˨˨
-逞	thenɡ③2	tʰɛŋ˥˨
-速	sok⑦4	sok˧˨
-造	tsau④6	tsau˨˥
-逢	honɡ②5	hoŋ˥˥
-連	lian②5	liɛn˥˥
-連	len②5	lɛn˥˥
-進	tsin⑤3	tsin˨˩˨
-逵	khui②5	kʰui˥˥
-逸	it⑧8	it˥˦
-逼	pek⑦4	pɛk˧˨
-逾	ju②5	dzu˥˥
-遁	tun④6	tun˨˥
-遂	sui②5	sui˥˥
-遇	nɡo④6	ŋo˨˥
-運	un⑥7	un˨˨
-遍	pian⑤3	piɛn˨˩˨
-遍	pen⑤3	pɛn˨˩˨
-遍	phian⑤3	pʰiɛn˨˩˨
-遍	phen⑤3	pʰɛn˨˩˨
-遍	pin⑤3	pin˨˩˨
-過	kua①1	kua˧˦
-過	ua①1	ua˧˦
-過	kua⑤3	kua˨˩˨
-過	ko⑤3	ko˨˩˨
-過	kue⑤3	kuɛ˨˩˨
-遐	hia②5	hia˥˥
-道	tau④6	tau˨˥
-達	tat⑧8	tat˥˦
-違	ui②5	ui˥˥
-遜	sun⑤3	sun˨˩˨
-遞	ti②5	ti˥˥
-遞	ti④6	ti˨˥
-遠	ian③2	iɛn˥˨
-遠	en③2	ɛn˥˨
-遠	hnɡ④6	hŋ˨˥
-遣	khian③2	kʰiɛn˥˨
-遣	khen③2	kʰɛn˥˨
-適	sek⑦4	sɛk˧˨
-遭	tsau①1	tsau˧˦
-遮	tsia①1	tsia˧˦
-遲	tshi②5	tsʰi˥˥
-遵	tsun①1	tsun˧˦
-遷	tshian①1	tsʰiɛn˧˦
-遷	tshen①1	tsʰɛn˧˦
-選	suan③2	suan˥˨
-遺	jui②5	dzui˥˥
-遼	liau②5	liau˥˥
-遽	kur④6	kɯ˨˥
-避	pi⑥7	pi˨˨
-邀	hiau①1	hiau˧˦
-邀	kiau①1	kiau˧˦
-邀	khiau①1	kʰiau˧˦
-邁	mai④6	mai˨˥
-還	huan②5	huan˥˥
-還	hoinn②5	hõi˥˥
-邊	pian①1	piɛn˧˦
-邊	pen①1	pɛn˧˦
-邊	pinn①1	pĩ˧˦
-邑	ip⑦4	ip˧˨
-邦	panɡ①1	paŋ˧˦
-邪	sia②5	sia˥˥
-邯	ham②5	ham˥˥
-邵	siau④6	siau˨˥
-郁	hiok⑦4	hiok˧˨
-郊	kau①1	kau˧˦
-郎	lanɡ②5	laŋ˥˥
-郎	nnɡ②5	nŋ˥˥
-郡	kun④6	kun˨˥
-部	pou④6	pou˨˥
-郭	kueh⑦4	kuɛʔ˧˨
-郵	iu②5	iu˥˥
-都	tou①1	tou˧˦
-都	to①1	to˧˦
-鄂	nɡak⑧8	ŋak˥˦
-鄉	hianɡ①1	hiaŋ˧˦
-鄉	hionn①1	hiõ˧˦
-鄒	tsou①1	tsou˧˦
-鄙	phi③2	pʰi˥˨
-鄧	tenɡ④6	tɛŋ˨˥
-鄭	tenn⑥7	tɛ̃˨˨
-鄰	lin②5	lin˥˥
-酉	iu③2	iu˥˨
-酌	tsiak⑦4	tsiak˧˨
-配	phue⑤3	pʰuɛ˨˩˨
-酒	tsiu③2	tsiu˥˨
-酣	ham①1	ham˧˦
-酥	sou①1	sou˧˦
-酪	lok⑧8	lok˥˦
-酬	tshiu②5	tsʰiu˥˥
-酵	kann⑤3	kã˨˩˨
-酷	khok⑦4	kʰok˧˨
-酸	snɡ①1	sŋ˧˦
-醇	sun②5	sun˥˥
-醉	tsui⑤3	tsui˨˩˨
-醋	tshou⑤3	tsʰou˨˩˨
-醒	senɡ③2	sɛŋ˥˨
-醒	tshenn③2	tsʰɛ̃˥˨
-醜	tshiu②5	tsʰiu˥˨
-醜	thiu②5	tʰiu˥˨
-醫	ui①1	ui˧˦
-醬	tsionn⑤3	tsiõ˨˩˨
-釀	jianɡ③2	dziaŋ˥˨
-采	tshai③2	tsʰai˥˨
-釋	sek⑦4	sɛk˧˨
-里	li③2	li˥˨
-重	tonɡ④6	toŋ˨˥
-重	tenɡ②5	tɛŋ˥˥
-重	tanɡ④6	taŋ˨˥
-野	ia③2	ia˥˨
-量	lianɡ②5	liaŋ˥˥
-量	lianɡ④6	liaŋ˨˥
-量	nio②5	niõ˥˥
-金	kim①1	kim˧˦
-釘	tenɡ①1	tɛŋ˧˦
-釘	tenɡ⑤3	tɛŋ˨˩˨
-釜	hu③2	hu˥˨
-針	tsam①1	tsam˧˦
-釣	tionn⑤3	tiõ˨˩˨
-釵	thoi①1	tʰoi˧˦
-鈍	tun④6	tun˨˥
-鈔	tshau①1	tsʰau˧˦
-鈞	kurn①1	kɯn˧˦
-鈴	lenɡ①1	lɛŋ˧˦
-鉗	khiam②5	kʰiam˥˥
-鉗	kinn②5	kĩ˥˥
-鉗	khinn②5	kʰĩ˥˥
-鉛	in②5	in˥˥
-鉤	kau①1	kau˧˦
-鉸	ka①1	ka˧˦
-銀	nɡurn②5	ŋɯn˥˥
-銃	tshenɡ⑤3	tsʰɛŋ˨˩˨
-銅	tanɡ②5	taŋ˥˥
-銘	menɡ②5	mɛŋ˥˥
-銜	ham②5	ham˥˥
-銜	kann②5	kã˥˥
-銷	siau①1	siau˧˦
-銼	tsho⑤3	tsʰo˨˩˨
-鋒	honɡ①1	hoŋ˧˦
-鋤	tsho②5	tsʰo˥˥
-鋤	tur②5	tɯ˥˥
-鋤	thur②5	tʰɯ˥˥
-鋪	phou①1	pʰou˧˦
-鋪	phou⑤3	pʰou˨˩˨
-鋭	jue④6	dzuɛ˨˥
-鋸	kur⑤3	kɯ˨˩˨
-鋼	knɡ⑤3	kŋ˨˩˨
-錄	lok⑧8	lok˥˦
-錐	tsui①1	tsui˧˦
-錘	tui②5	tui˥˥
-錘	thui②5	tʰui˥˥
-錠	tenɡ④6	tɛŋ˨˥
-錢	tshian②5	tsʰiɛn˥˥
-錢	tshen②5	tsʰɛn˥˥
-錢	tsinn②5	tsĩ˥˥
-錦	kim③2	kim˥˨
-錫	siah⑦4	siaʔ˧˨
-錯	tsho⑤3	tsʰo˨˩˨
-錶	pio①1	pio˧˦
-鍋	ue①1	uɛ˧˦
-鍍	tou⑥7	tou˨˨
-鍛	tuan⑤3	tuan˨˩˨
-鍪	bau②5	bau˥˥
-鍵	kian④6	kiɛn˨˥
-鍵	en④6	ɛn˨˥
-鎖	so③2	so˥˨
-鎮	tin⑤3	tin˨˩˨
-鏟	tshan③2	tsʰan˥˨
-鏡	kiann⑤3	kiã˨˩˨
-鐘	tsenɡ①1	tsɛŋ˧˦
-鐮	liam②5	liam˥˥
-鐲	tshok⑦4	tsʰok˧˨
-鐵	thih⑦4	tʰiʔ˧˨
-鐸	tak⑧8	tak˥˦
-鑄	tsu⑤3	tsu˨˩˨
-鑊	uak⑧8	uak˥˦
-鑒	kam⑤3	kam˨˩˨
-鑲	sianɡ①1	siaŋ˧˦
-鑲	sionn①1	siõ˧˦
-鑷	niap⑦4	niap˧˨
-鑼	lo②5	lo˥˥
-鑽	tsnɡ⑤3	tsŋ˨˩˨
-鑿	tshak⑧8	tsʰak˥˦
-長	tshianɡ②5	tsʰiaŋ˥˥
-長	tsianɡ③2	tsiaŋ˥˨
-長	tionn③2	tiõ˥˨
-長	tnɡ②5	tŋ˥˥
-門	mnɡ②5	mŋ˥˥
-閂	tshuann⑤3	tsʰuã˨˩˨
-閃	siam③2	siam˥˨
-閉	pi⑥7	pi˨˨
-開	khai①1	kʰai˧˦
-開	khui①1	kʰui˧˦
-閏	jun④6	dzun˨˥
-閒	oinn②5	õi˥˥
-間	kan①1	kan˧˦
-間	koinn①1	kõi˧˦
-間	koinn⑤3	kõi˨˩˨
-閘	tsah⑧8	tsaʔ˥˦
-閣	koh⑦4	koʔ˧˨
-閨	kui①1	kui˧˦
-閩	man②5	man˥˥
-閲	luat⑦4	luat˧˨
-閹	iam①1	iam˧˦
-閻	nɡiam②5	ŋiam˥˥
-闊	khuah⑦4	kʰuaʔ˧˨
-闕	khueh⑦4	kʰuɛʔ˧˨
-關	kuan①1	kuan˧˦
-關	kuenn①1	kuɛ̃˧˦
-闢	phek⑦4	pʰɛk˧˨
-阜	hu④6	hu˨˥
-阮	nɡuan③2	ŋuan˥˨
-防	huanɡ②5	huaŋ˥˥
-阻	tso③2	tso˥˨
-阿	o①1	o˧˦
-阿	a①1	a˧˦
-陀	tho②5	tʰo˥˥
-附	hu⑤3	hu˨˩˨
-陋	lou④6	lou˨˥
-陌	mit⑧8	mit˥˦
-降	hanɡ②5	haŋ˥˥
-降	kanɡ⑤3	kaŋ˨˩˨
-降	konɡ⑤3	koŋ˨˩˨
-限	han④6	han˨˥
-陛	pi④6	pi˨˥
-陝	siam③2	siam˥˨
-陡	tau③2	tau˥˨
-院	inn⑥7	ĩ˨˨
-陣	tin⑥7	tin˨˨
-陣	tsun⑥7	tsun˨˨
-陣	tsun②5	tsun˥˥
-除	tur②5	tɯ˥˥
-陪	pue②5	puɛ˥˥
-陰	im①1	im˧˦
-陳	thin②5	tʰin˥˥
-陳	tan②5	tan˥˥
-陵	lenɡ②5	lɛŋ˥˥
-陶	thau②5	tʰau˥˥
-陷	ham⑥7	ham˨˨
-陸	lok⑧8	lok˥˦
-陸	lek⑧8	lɛk˥˦
-陽	ianɡ②5	iaŋ˥˥
-陽	ionn②5	iõ˥˥
-隆	lonɡ②5	loŋ˥˥
-隊	tui⑥7	tui˨˨
-隍	huanɡ②5	huaŋ˥˥
-隍	nɡ②5	ŋ˥˥
-階	kai①1	kai˧˦
-隔	keh⑦4	kɛʔ˧˨
-隕	un④6	un˨˥
-隘	ai③2	ai˥˨
-隙	khiah⑦4	kʰiaʔ˧˨
-際	tsi⑤3	tsi˨˩˨
-障	tsianɡ⑤3	tsiaŋ˨˩˨
-隧	sui⑥7	sui˨˨
-隨	sui②5	sui˥˥
-險	hiam③2	hiam˥˨
-隱	un③2	un˥˨
-隴	lonɡ③2	loŋ˥˨
-隴	lenɡ③2	lɛŋ˥˨
-隸	ti④6	ti˨˥
-隻	tsiah⑦4	tsiaʔ˧˨
-雀	tshiak⑦4	tsʰiak˧˨
-雀	tsiah⑦4	tsiaʔ˧˨
-雁	nɡan④6	ŋan˨˥
-雄	hionɡ②5	hioŋ˥˥
-雅	nɡia③2	ŋia˥˨
-集	tsip⑧8	tsip˥˦
-雇	kou⑤3	kou˨˩˨
-雌	tshur②5	tsʰɯ˥˥
-雍	ionɡ①1	ioŋ˧˦
-雕	tiau①1	tiau˧˦
-雖	sui①1	sui˧˦
-雙	sanɡ①1	saŋ˧˦
-雛	tshu①1	tsʰu˧˦
-雜	tsap⑧8	tsap˥˦
-雞	koi①1	koi˧˦
-離	li②5	li˥˥
-離	li⑥7	li˨˨
-難	lan②5	lan˥˥
-難	lan⑥7	lan˨˨
-雨	u③2	u˥˨
-雨	hou④6	hou˨˥
-雪	soh⑦4	soʔ˧˨
-雲	un②5	un˥˥
-雲	hun②5	hun˥˥
-零	lenɡ②5	lɛŋ˥˥
-零	lan②5	lan˥˥
-雷	lui②5	lui˥˥
-雹	phak⑧8	pʰak˥˦
-電	tian④6	tiɛn˨˥
-電	ten④6	tɛn˨˥
-需	su①1	su˧˦
-霄	siau①1	siau˧˦
-霄	sio①1	sio˧˦
-震	tsin③2	tsin˥˨
-霉	bue②5	buɛ˥˥
-霍	khak⑦4	kʰak˧˨
-霎	siap⑦4	siap˧˨
-霜	snɡ①1	sŋ˧˦
-霞	hia②5	hia˥˥
-霧	bu⑥7	bu˨˨
-露	lou⑤3	lou˨˩˨
-露	lou⑥7	lou˨˨
-霸	pa⑤3	pa˨˩˨
-霹	phek⑦4	pʰɛk˧˨
-靄	ai③2	ai˥˨
-靈	lenɡ②5	lɛŋ˥˥
-青	tshenn①1	tsʰɛ̃˧˦
-靜	tsenn④6	tsɛ̃˨˥
-非	hui①1	hui˧˦
-靠	khau⑤3	kʰau˨˩˨
-靠	kho⑤3	kʰo˨˩˨
-靠	kou④6	kou˨˥
-靡	mi②5	mi˥˥
-面	min⑥7	min˨˨
-靨	iap⑦4	iap˧˨
-革	kek⑦4	kɛk˧˨
-靴	hia①1	hia˧˦
-鞋	oi②5	oi˥˥
-鞍	uann①1	uã˧˦
-鞏	khionɡ③2	kʰioŋ˥˨
-鞘	siau①1	siau˧˦
-鞭	pian①1	piɛn˧˦
-鞭	pen①1	pɛn˧˦
-韌	jim③2	dzim˥˨
-韌	jun⑥7	dzun˨˨
-韓	han②5	han˥˥
-韭	ku③2	ku˥˨
-音	im①1	im˧˦
-韶	siau④6	siau˨˥
-韻	un④6	un˨˥
-響	hianɡ⑤3	hiaŋ˨˩˨
-頂	tenɡ③2	tɛŋ˥˨
-頃	khenɡ③2	kʰɛŋ˥˨
-項	hanɡ④6	haŋ˨˥
-順	sun④6	sun˨˥
-須	su①1	su˧˦
-頌	sonɡ④6	soŋ˨˥
-預	ur④6	ɯ˨˥
-頑	nɡuan③2	ŋuan˥˨
-頑	nɡui②5	ŋũi˥˥
-頒	pan①1	pan˧˦
-頓	tun④6	tun˨˥
-頓	tun⑤3	tun˨˩˨
-頓	tnɡ⑤3	tŋ˨˩˨
-頗	pho③2	pʰo˥˨
-頗	phuann③2	pʰuã˥˨
-領	nia③2	niã˥˨
-頭	thau②5	tʰau˥˥
-頸	kenn⑤3	kɛ̃˨˩˨
-頻	phin②5	pʰin˥˥
-頽	thue②5	tʰuɛ˥˥
-顆	kho③2	kʰo˥˨
-題	toi②5	toi˥˥
-額	ɡiah⑧8	giaʔ˥˦
-額	hiah⑧8	hiaʔ˥˦
-顏	nɡuan②5	ŋuan˥˥
-顏	nɡan⑤3	ŋan˥˥
-顏	hiann②5	hiã˥˥
-願	nɡuan④6	ŋuan˨˥
-顛	tian①1	tiɛn˧˦
-顛	ten①1	tin˧˦
-顛	tin①1	tin˧˦
-類	lui⑥7	lui˨˨
-顧	ku⑤3	ku˨˩˨
-顧	kou⑤3	kou˨˩˨
-顫	tsian⑤3	tsiɛn˨˩˨
-顫	tsen⑤3	tsɛn˨˩˨
-顯	hian③2	hiɛn˥˨
-顯	hen③2	hɛn˥˨
-風	honɡ①1	hoŋ˧˦
-風	huanɡ①1	huaŋ˧˦
-飄	phiau①1	pʰiau˧˦
-飈	phiau①1	pʰiau˧˦
-飈	pio①1	pio˧˦
-飛	hui①1	hui˧˦
-飛	pue①1	puɛ˧˦
-食	sit⑧8	sit˥˦
-食	tsiah⑧8	tsiaʔ˥˦
-飢	ki①1	ki˧˦
-飩	thun①1	tʰun˧˦
-飫	ur⑤3	ɯ˨˩˨
-飯	huan④6	huan˨˥
-飯	huam④6	huam˨˥
-飯	pnɡ⑥7	pŋ˨˨
-飲	im③2	im˥˨
-飲	am③2	am˥˨
-飼	sur④6	sɯ˨˥
-飼	tshi⑥7	tsʰi˨˨
-飽	pa③2	pa˥˨
-飾	sek⑦4	sɛk˧˨
-餃	kiau③2	kiau˥˨
-餅	piann③2	piã˥˨
-餉	hianɡ③2	hiaŋ˥˨
-養	ianɡ③2	iaŋ˥˨
-養	ionn③2	iõ˥˨
-餐	tshan①1	tsʰan˧˦
-餒	nue③2	nuɛ˥˨
-餓	ɡo⑥7	go˨˨
-餘	ur②5	ɯ˥˥
-餛	hun②5	hun˥˥
-館	kuan③2	kuan˥˨
-饅	muan④6	muan˨˥
-饅	man④6	man˨˥
-饑	ki①1	ki˧˦
-饒	jiau②5	dziau˥˥
-饒	jio②5	dzio˥˥
-饞	tsham②5	tsʰam˥˥
-首	siu③2	siu˥˨
-香	hianɡ①1	hiaŋ˧˦
-香	hionn①1	hiõ˧˦
-馨	henɡ①1	hɛŋ˧˦
-馬	ma①1	ma˧˦
-馬	ma③2	ma˥˨
-馬	be③2	bɛ˥˨
-馭	ɡur④6	gɯ˨˥
-馮	panɡ②5	paŋ˥˥
-馱	tho②5	tʰo˥˥
-馳	tshi②5	tsʰi˥˥
-駁	poh⑦4	poʔ˧˨
-駐	tsu④6	tsu˨˥
-駒	khu①1	kʰu˧˦
-駕	ke⑤3	kɛ˨˩˨
-駛	sai③2	sai˥˨
-駝	thoh⑧8	tʰoʔ˥˦
-駭	hai④6	hai˨˥
-駱	loh⑧8	loʔ˥˦
-騎	khia②5	kʰia˥˥
-騙	phian⑤3	pʰiɛn˨˩˨
-騙	phen⑤3	pʰɛn˨˩˨
-騙	phin⑤3	pʰin˨˩˨
-騰	thenɡ②5	tʰɛŋ˥˥
-騷	sau①1	sau˧˦
-騾	lo②5	lo˥˥
-驅	khu①1	kʰu˧˦
-驕	kiau①1	kiau˧˦
-驗	nɡiam⑥7	ŋiam˨˨
-驚	kenɡ①1	kɛŋ˧˦
-驚	kiann①1	kiã˧˦
-驟	tsou④6	tsou˨˥
-驢	lur②5	lɯ˥˥
-骨	kut⑦4	kut˧˨
-骯	anɡ①1	aŋ˧˦
-髒	tsanɡ①1	tsaŋ˧˦
-髓	tshue③2	tsʰuɛ˥˨
-體	thi③2	tʰi˥˨
-體	thoinn③2	tʰõi˥˨
-高	kau①1	kau˧˦
-高	ko①1	ko˧˦
-髮	huat⑦4	huat˧˨
-鬃	tsanɡ①1	tsaŋ˧˦
-鬆	sonɡ①1	soŋ˧˦
-鬆	sanɡ①1	saŋ˧˦
-鬍	hou②5	hou˥˥
-鬚	tshiu①1	tsʰiu˧˦
-鬥	tou⑤3	tou˨˩˨
-鬥	tau⑤3	tau˨˩˨
-鬧	nau④6	nau˨˥
-鬧	nau⑥7	nau˨˨
-鬧	lau⑥7	lau˨˨
-鬮	khau①1	kʰau˧˦
-鬱	ut⑦4	ut˧˨
-鬼	kui③2	kui˥˨
-魁	khue②5	kʰuɛ˥˥
-魂	hun②5	hun˥˥
-魄	phek⑦4	pʰɛk˧˨
-魏	nɡui⑥7	ŋui˨˨
-魔	mo①1	mo˧˦
-魔	mo②5	mo˥˥
-魚	hur②5	hɯ˥˥
-魯	lu③2	lu˥˨
-鮎	liam②5	liam˥˥
-鮑	pau④6	pau˨˥
-鮮	sian③2	siɛn˥˨
-鮮	sen③2	sɛn˥˨
-鮮	tshinn①1	tsʰĩ˧˦
-鯉	li③2	li˥˨
-鯊	sua①1	sua˧˦
-鯨	khenɡ②5	kʰɛŋ˥˥
-鯽	tsit⑦4	tsit˧˨
-鰓	sai①1	sai˧˦
-鰓	tshi①1	tsʰi˧˦
-鰥	kuan①1	kuan˧˦
-鰾	phio④6	pʰio˨˥
-鱉	pih⑦4	piʔ˧˨
-鱗	lin②5	lin˥˥
-鱗	lan②5	lan˥˥
-鱷	nɡak⑧8	ŋak˥˦
-鳥	tsiau③2	tsiau˥˨
-鳳	honɡ④6	hoŋ˨˥
-鳴	menɡ②5	mɛŋ˥˥
-鴉	a①1	a˧˦
-鴛	uan①1	uan˧˦
-鴦	ionn①1	iõ˧˦
-鴨	ah⑦4	aʔ˧˨
-鴻	honɡ②5	hoŋ˥˥
-鴿	kap⑦4	kap˧˨
-鵝	ɡo②5	go˥˥
-鵡	bu③2	bu˥˨
-鵲	tshiak⑦4	tsʰiak˧˨
-鶯	enɡ①1	ɛŋ˧˦
-鶴	hoh⑧8	hoʔ˥˦
-鷹	enɡ①1	ɛŋ˧˦
-鸚	enɡ①1	ɛŋ˧˦
-鸞	luan②5	luan˥˥
-鹵	lou③2	lou˥˨
-鹵	lou④6	lou˨˥
-鹹	kiam②5	kiam˥˥
-鹽	iam②5	iam˥˥
-鹿	tek⑧8	tɛk˥˦
-麗	li④6	li˨˥
-麗	li②5	li˥˥
-麥	beh⑧8	bɛʔ˥˦
-麵	mi⑥7	mĩ˨˨
-麻	ba②5	ba˥˥
-麻	mua②5	mua˥˥
-麾	hui①1	hui˧˦
-黃	huanɡ②5	huaŋ˥˥
-黃	nɡ②5	ŋ˥˥
-黍	siu③2	siu˥˨
-黎	li②5	li˥˥
-黎	loi②5	loi˥˥
-黏	liam①1	liam˧˦
-黏	liam②5	liam˥˥
-黑	hek⑦4	hɛk˧˨
-默	mit⑧8	mit˥˦
-點	tiam③2	tiam˥˨
-黨	tanɡ③2	taŋ˥˨
-鼎	tiann③2	tiã˥˨
-鼓	kou③2	kou˥˨
-鼠	tshur③2	tsʰɯ˥˨
-鼻	phinn⑥7	pʰĩ˨˨
-鼾	huann②5	huã˥˥
-齊	tshi②5	tsʰi˥˥
-齊	tsoi②5	tsoi˥˥
-齋	tse①1	tsɛ˧˦
-齒	tshi③2	tsʰi˥˨
-齒	khi③2	kʰi˥˨
-齦	khurn③2	kʰɯn˥˨
-齦	nɡurn②5	ŋɯn˥˥
-龍	lenɡ②5	lɛŋ˥˥
-龐	phanɡ②5	pʰaŋ˥˥
-龜	ku①1	ku˧˦
+一	it7
+一	tsɛk8	訓
+丁	tɛŋ1
+七	tsʰit7
+丈	tsiaŋ4	文
+丈	tiõ4	白
+丈	tŋ4	白
+三	sam1	文
+三	sã1	白
+上	siaŋ4	文
+上	tsiõ4	白
+上	tsiõ6	白
+上	tsʰiõ4	白，使上
+下	hia4	文
+下	hɛ4	白，動詞
+下	ɛ4	白，方位
+下	ɛ6	白，一～
+下	kɛ4	白，低矮
+不	put7
+丐	kai5
+丑	tʰiu3
+且	tsʰiã3
+丕	pʰi3
+世	si5	文
+世	sua5	白，續
+丘	kʰiu1
+丙	piã3
+丞	sɛŋ2
+丟	tiu1
+並	pɛŋ4
+丫	a1
+中	toŋ1	文
+中	toŋ5	文
+中	tɛŋ5	白
+中	taŋ1	白
+串	tsʰuan5
+丸	uan2
+丸	ĩ2	訓“圓”
+丹	tan1	文
+丹	tuã1	白，牡～
+主	tsu3
+乃	nai3
+久	ku3
+么	iau1
+之	tsɯ1
+乍	tsã5
+乎	hu1
+乏	huat8
+乖	kuai1
+乘	sɛŋ2
+乙	it7
+九	kiu3	文
+九	kau3	白
+乞	kʰɯt7
+也	ia3
+乳	dzu3
+乾	kʰiɛn2	文
+乾	kʰɛn2	又，鳳凰下埔音
+乾	kan1	文
+乾	kuã1	白
+亂	luan4
+了	liau3
+事	sɯ6	文
+事	tai6	白
+二	dzi4	文
+二	dzi6
+于	u1	單～
+云	un6
+互	hu4	文
+互	hou6
+五	u3	文，二一添作～
+五	ŋou3	文
+五	ŋou4	白
+井	tsɛ̃3
+些	sɛ1
+亞	a5
+亞	a1	又
+亡	buaŋ2
+交	kau1
+亥	hai4
+亦	ia6	訓“也”
+亨	hɛŋ1
+享	hiaŋ3
+京	kiã1
+亭	tɛŋ2
+亮	liaŋ4
+人	dzin2
+人	naŋ2	訓
+什	sim4	～麽
+什	tsap8
+仁	dzin2
+今	kim1
+介	kai5
+仍	dzɛŋ2
+仔	tsɯ3
+仔	tsai3
+仔	kiã3	訓
+他	tʰa1
+仗	tsiaŋ4
+付	hu5
+仙	siɛn1
+仙	tsɛn1	又，鳳凰下埔音
+代	tai5	交～
+代	to6	白
+代	tʰoi5	訓“替”
+令	lɛŋ4
+以	ĩ3
+仰	ŋiaŋ3
+仲	toŋ4
+件	kiã4
+任	dzim4
+任	dzim6
+份	hun6
+仿	huaŋ3
+企	ki4
+企	kʰia4	訓，～鵝
+伊	i1
+伍	ŋou3
+伏	hok8
+伐	huat8
+休	hiũ1
+伯	pɛʔ7
+估	kou3
+伴	pʰuã4
+伶	lɛŋ2
+伸	sin1	文
+伸	tsʰun1	白
+伺	sɯ4
+似	sɯ4
+但	tan4
+佈	pu5	文
+佈	pou5	～田
+位	ui6
+低	ti1
+住	tsu4
+佐	tso3
+何	ho2	文
+何	ua2	白
+余	ɯ2
+佛	hut8
+佛	hut7
+作	tsak7	文
+作	tsoʔ7	白
+佞	lɛŋ4
+你	lɯ3
+佩	puɛ4
+佳	kia1
+使	sai3
+使	sai5
+侃	kʰan3
+侄	tiɛt8
+侄	tɛt8	又，鳳凰下埔音
+來	lai2
+侈	tsʰi3
+例	li6
+侍	si4
+供	kioŋ1	文
+供	kɛŋ1	白
+依	i1
+侮	bu3
+侯	hou2
+侵	tsʰim2
+侶	lɯ4
+便	piɛn4	文
+便	pɛn4	又，鳳凰下埔音
+便	pin6
+便	pan2	白，～宜
+係	hi4
+促	tsʰok7	文
+促	tsʰɛk7	白
+俄	ŋo2
+俊	tsun5
+俏	tsʰiau3
+俗	sok8
+俘	hu1
+保	pau3	文
+保	po3
+俟	sɯ4
+俠	hiap8
+信	sin5
+修	siu1
+俯	hu3
+俱	ku4
+俸	hoŋ3
+俾	pi3
+倉	tsʰaŋ1	文
+倉	tsʰŋ1	白
+個	ko4	文
+個	kai2	訓
+倍	puɛ4
+倒	tau3	文
+倒	to3
+倒	to5
+倔	kʰut7
+倘	tʰaŋ3
+候	hau6
+倚	i3	文
+倚	ua3	白
+倡	tsʰiaŋ5
+倦	kuan4
+倩	tsʰiã5	央～
+倩	tsʰiaʔ7
+倪	ɡoi2
+倫	lun2
+倭	oi3	俗
+值	tɛk8	文
+值	tat8	白
+假	kia3	文
+假	kiã3	假期
+假	kɛ3	白
+偉	ui3
+偏	pʰiɛn1
+偏	pʰɛn1	又，鳳凰下埔音
+偕	kai1
+做	tso5
+停	tʰɛŋ2
+健	kiɛn4	文
+健	ɛn4	又，鳳凰下埔音
+健	kiã6	白
+側	tsʰɛk7
+偵	tsɛŋ1
+偶	ŋou3
+偷	tʰau1
+偽	ŋui4
+傀	kui3
+傅	hu5	文
+傅	pou5	白，姓氏
+傍	pʰaŋ2
+傑	kiɛt8
+傑	kɛt8	又，鳳凰下埔音
+傘	suã5
+備	pi4
+傢	kɛ1
+催	tsʰui1
+傲	ŋau4
+傳	tʰuan2
+傳	tŋ6
+債	tsɛ5
+傷	siaŋ1	文
+傷	siõ1	白
+傻	sa4
+傾	kʰɛŋ1
+僅	kɯn3
+像	siaŋ4	文
+像	siõ5	訓“相”
+像	tsʰiõ4	白
+僕	pok8
+僧	tsɛŋ1
+僭	tsʰiam5
+僵	kiaŋ1
+價	kɛ5
+僻	pʰiaʔ7
+僻	pʰiaʔ8	又
+儀	ŋi2
+儂	naŋ2	替
+億	ɛk8
+儉	kʰiam4
+儒	dzu2
+償	siaŋ2	文
+償	siõ2	白
+儡	lui3
+優	iu1
+儲	tʰu2
+允	dzun3
+元	ŋuan2
+兄	hiã1
+充	tsʰoŋ1
+兆	tiau4
+兇	hioŋ1
+先	sin1	～生
+先	sõi1
+光	kuaŋ1	文
+光	kŋ1	白
+克	kʰiok7
+免	miɛn3	文
+免	mɛn3	又，鳳凰下埔音
+免	min3
+兌	tuɛ4
+兒	dzi2
+兒	ni1	白
+兔	tʰou5
+兜	tau1
+兢	kʰɛŋ1
+入	dzip8
+全	tsʰuan2	文
+全	tsŋ2	白
+兩	liaŋ3	文
+兩	niõ3	白，斤兩
+兩	nõ4	白
+八	puɛʔ7
+公	koŋ1	文
+公	kaŋ1	白
+六	lak8
+兮	hi1
+共	kaŋ6
+兵	piã1
+其	kʰi2
+具	ku4
+典	tiɛn3
+典	tɛn3	又，鳳凰下埔音
+兹	tsɯ1
+冀	ki5
+內	lai4	訓“裏”
+冉	dziam3
+冊	tsʰɛʔ7
+再	tsai5
+冒	mau4
+冠	kuan1
+冠	kuan5
+冢	tʰoŋ3
+冤	uan1
+冥	mɛŋ2
+冬	taŋ1
+冰	piã1
+冶	ia3
+冷	nɛ̃3
+淨	tsɛŋ4
+凄	tsʰi1
+准	tsun3
+凉	liaŋ2
+凌	lɛŋ2
+凍	toŋ5	文
+凍	taŋ5	白
+湊	tsʰou5
+凛	lim3
+凝	ŋɛŋ2
+几	ki3
+凡	huam2
+凰	huaŋ2
+凱	kʰai3
+凳	tɛŋ5
+凶	hioŋ1
+出	tsʰut7
+函	ham2
+刀	to1
+刁	tiau1
+刃	dzim3
+分	hun1	文
+分	hun6	文
+分	pun1	白
+切	tsʰiɛt7	文
+切	tsʰɛt7	又，鳳凰下埔音
+刈	ŋi4
+刊	kʰan2
+刎	un4
+刑	hɛŋ2
+划	hua2	划算
+划	ko5	～船
+列	liɛt8
+列	lɛt8	又，鳳凰下埔音
+初	tsʰo1	文
+初	tsʰɛu1	白
+刪	san1
+判	pʰuan5	文
+判	pʰuã5	白
+別	piɛt8	文
+別	pɛt8	又，鳳凰下埔音
+別	pat8	白，～儂
+別	pat7	白
+刨	pʰau1
+利	li4	文
+利	lai6	白
+刮	kuɛʔ7
+到	tau5
+到	kau5	訓
+制	tsi5
+刷	suɛʔ7
+券	kuan5
+刺	tsʰŋ5
+刺	tsʰi5	名詞
+刺	tsʰiaʔ7	白
+刻	kʰɛk7	文
+刻	kʰat7	白
+剁	to2
+剃	tʰi5
+則	tsɛk7
+削	siaʔ7
+前	tsõi2
+剔	tʰɛk7
+剖	pʰou3
+剛	kaŋ1
+剝	pak7
+剩	sin2
+剩	sin6	又
+剪	tsiɛn3
+剪	tsɛn3	又，鳳凰下埔音
+副	hu5
+割	kuaʔ7
+創	tsʰaŋ5	文
+創	tsʰoŋ5	替
+剿	dziau3
+劃	uɛʔ8
+劇	kiaʔ8
+劈	pʰɛk7
+劉	lau2
+劊	kuai5
+劍	kiam5
+力	lat8
+功	koŋ1	文
+功	kaŋ1	白
+加	kia1	文
+加	kɛ1	白
+劣	luat7
+努	no5
+劫	kiap7
+勁	kɛ̃5
+勃	puat8
+勇	ioŋ3
+勉	miɛn3
+勉	mɛn3	又，鳳凰下埔音
+勒	lɛk8
+動	toŋ4	文
+動	taŋ4	白
+動	tʰaŋ4	白，觸碰
+勘	kʰam1
+務	bu4
+勛	hɯn1
+勝	sɛŋ5
+勞	lau2
+募	mo4
+勢	si5
+勤	kʰɯn2
+勵	li4
+勸	kʰŋ5
+勺	tsʰiaʔ8
+勾	kau1
+勿	mai5	訓
+勻	un2
+包	pau1
+匆	tsʰoŋ1
+化	hua1	替
+化	huɛ5
+北	pak7
+匙	si2
+匠	tsʰiõ6
+匡	kʰuaŋ1
+匡	kʰaŋ1
+匣	ap8
+匪	hũi3
+匯	huɛ4
+匹	pʰit7
+匾	piɛn3
+匾	pɛn3	又，鳳凰下埔音
+匾	pin3	又
+匿	nɛk8
+區	kʰu1
+區	au1
+十	tsap8
+千	tsʰõi1
+卅	sam1
+升	sɛŋ1
+午	ŋou3	文
+午	ŋou4	白，地支
+半	puã5
+卑	pi1
+卒	tsut7
+卓	toʔ7
+協	hiap8
+南	lam2
+博	pʰak7
+卜	pok7
+占	tsiam1
+占	tsiam5
+卦	kua5	文
+卦	kuɛ5	白
+卯	bau3
+印	in5
+危	ŋui2
+即	tsiɛt7
+即	tsɛt7	又，鳳凰下埔音
+卵	luan3	文
+卵	nŋ4	白
+卷	kuan3	文
+卷	kŋ3	白
+卸	sia5
+卻	kʰiak7
+卿	kʰɛŋ1
+厄	ɛʔ7
+厘	li2
+厚	kau4
+厝	tsʰu5	替
+原	ŋuan2
+廂	siõ1
+厥	kʰiɛt7
+厥	kʰɛt7	又，鳳凰下埔音
+厥	kuɛʔ7	白
+廚	tou2
+厭	iam5
+厮	sɯ1
+厲	li4
+去	kʰɯ5
+參	tsʰam1
+參	som1
+又	iu4
+叉	tsʰɛ1
+及	kip8
+友	iu3
+反	huan3	文
+反	puɛ̃3	白
+叔	sok7	文
+叔	tsɛk7	白
+取	tsʰu3
+取	tsʰiu3	白
+受	siu4
+叙	su4
+叛	puan4
+叟	sou3
+叢	tsaŋ2
+口	kʰau3
+古	kou3
+句	ku5
+另	lɛŋ4
+叨	tau1
+叩	kʰau5
+只	tsi3
+叫	kio5
+召	tiau4
+可	kʰo3
+可	kʰiok7	～汗
+台	tʰai1
+史	sɯ3	文
+史	sai3	白，姓氏
+右	iu4
+司	sɯ1	文
+司	si1	白
+吁	dzu4
+吃	ŋɯt7
+各	kak7	文
+各	koʔ7	白，～號
+合	hap8	文
+合	kap7	文
+合	kop8	替
+合	haʔ8	白
+合	kaʔ7	白
+合	kaʔ8	白
+吉	kit7
+吊	tiau5
+同	tʰoŋ2	文
+同	taŋ2	白
+名	mɛŋ2	文
+名	miã2	白
+后	hou4
+吏	li6
+吐	tʰou5
+向	hiaŋ5	文
+向	ŋ5	白
+君	kun1
+吝	liɛn4
+吝	lɛn4	又，鳳凰下埔音
+吞	tʰun1
+吟	ŋim2
+吠	pui6
+否	hõu3
+否	pʰi3
+含	ham2	文
+含	kam2	白
+吳	ɡou2
+吵	tsʰau1
+吸	kʰip7
+吸	hiap7	白
+吹	tsʰuɛ1
+吻	mut7	俗
+吼	hou5	文
+吼	hau3	白
+吾	u2
+呂	lɯ4
+呆	ŋai2
+呈	tʰiã2
+告	kau5	文
+告	ko5
+呢	ni1
+呢	ni2
+呢	nɛ1	替
+周	tsiu1
+味	bi6
+呻	sin1	文
+呻	tsʰan1	白
+呼	u1	文
+呼	hu1	文，又
+呼	hou1	招～
+呼	kʰou1	白
+命	mɛŋ4	文
+命	miã6	白
+和	hua2	文
+和	ho4	文
+和	huɛ2	白，～尚
+咎	kiu4
+咏	ioŋ5
+咒	tsiu5
+咨	tsɯ1
+咬	ka4
+咳	hai4	俗
+咵	kʰua1
+咸	ham2
+哀	ai1
+品	pʰin3
+哄	hoŋ1
+哄	hoŋ3
+哈	haʔ7
+員	uan2
+哥	ko1
+哭	kʰau5
+哲	tiɛt7
+哲	tɛt7	又，鳳凰下埔音
+哽	kɛ̃3
+唆	so1
+唇	tun2
+唉	ai1
+唐	tʰaŋ2	文
+唐	tŋ2	白
+售	tsʰiu2
+唯	dzui2
+唱	tsʰiaŋ5	文
+唱	tsʰiõ5	白
+唸	liam6
+啄	toʔ7
+商	siaŋ1
+問	mŋ6
+啞	ɛ3
+啟	kʰi3
+啼	tʰi2
+喂	ui3
+善	siɛn4
+善	sɛn4	又，鳳凰下埔音
+喉	au2
+喊	ham5
+喘	tsʰuan3
+喚	huan5
+喜	hi3
+喝	hat7	文
+喝	huaʔ7	白
+喧	suan1
+喪	saŋ5
+喪	sŋ1
+喬	kʰiau2
+單	siɛn4
+單	sɛn4	又，鳳凰下埔音
+單	siɛn2	～于
+單	sɛn2	又，鳳凰下埔音
+單	tuã1
+喻	dzu4
+嗅	hiũ5
+嗓	saŋ3
+嗟	tsa1
+嗣	sɯ2
+嗽	sau5
+嘆	tʰan5
+嘉	kia1
+嘔	au3
+嘗	siõ2
+嘮	lau1
+嘯	sau5
+嘲	tsʰiau3
+嘴	tsʰui5	訓“喙”
+嘻	hi1
+噓	hɯ1
+噦	uɛʔ7
+器	kʰi5
+噩	ŋak8
+噴	pʰun5
+嚇	hɛʔ7
+嚴	ŋiam2
+嚷	dziaŋ3
+囂	ŋau1
+囉	lo1
+囊	laŋ3
+囑	tsok7
+囚	tsʰiu2
+四	si5
+囝	kiã3
+回	huɛ2
+因	in1
+囤	tʰun2
+囤	tun1	俗
+囥	kʰŋ5
+困	kʰun5
+囱	tsʰoŋ1
+固	ku5
+圈	kʰuan1
+國	kok7
+圍	ui2
+園	hŋ2
+圓	ĩ2
+圖	tʰu2	文
+圖	tou2
+團	tʰuan2
+土	tʰou3
+在	tsai4
+在	to4	訓
+圭	kui1
+地	ti6
+地	to5	替，口語
+址	tsi3
+坂	pan3	文
+坂	puã3	白，地名
+均	kɯn1
+坍	tʰam1
+坎	kʰam3
+坎	kʰam1	～坷
+坎	kʰam5
+坐	tso4
+坐	tsʰo7	替，裝
+坑	kʰɛ̃1
+坡	po1
+坤	kʰun1
+坦	tʰan3
+坪	pʰɛŋ2	文
+坪	pʰiã2	白
+坯	pʰuɛ1
+坷	kʰo1
+垂	sui2	文
+垂	suɛ2	白
+型	hɛŋ2
+垢	kou5	文
+垢	kau3	白
+垮	kʰua1
+垻	pa5
+垾	huã6
+埃	ai1
+埋	mai2
+城	siã2
+域	hok8
+埠	pou1
+埭	to6
+執	tsip7
+培	puɛ2
+基	ki1
+堂	tʰaŋ2	文
+堂	tŋ2	白
+堅	kiɛn1
+堅	kɛn1	又，鳳凰下埔音
+堆	tui1
+堆	tu1	口語
+堡	pau3
+堤	toi1
+堪	kʰam1
+堯	ŋiau2
+堰	iam1	俗
+報	po5
+場	tsʰiaŋ2	文，排～
+場	tiõ2	白
+堵	tu3
+塊	ko5
+塋	ioŋ2
+塌	tʰap8
+塌	tʰap7
+塑	sok7	俗
+塑	suak7	俗，又
+塔	tʰaʔ7
+塗	tʰu2	文
+塗	tou2
+塗	to2	又，口語
+塗	tʰou2	白
+塘	tʰaŋ2	文
+塘	tŋ2	白
+塞	sat7
+填	tʰiɛn2
+填	tʰɛn2	又，鳳凰下埔音
+塵	tin2	文
+塵	tʰun2	白，筅～
+境	kɛŋ3
+墅	su3
+墊	tiɛn4
+墊	tɛn4	又，鳳凰下埔音
+墓	mo4
+墜	tui6
+墜	tʰui6	白
+增	tsɛŋ1
+墟	hɯ1
+墨	bak8
+墩	tun1
+墮	tui6	俗
+墳	pʰun2
+墾	kʰɯn3
+壁	piaʔ7
+壇	tuã2
+壑	hak7
+壓	iap7
+壓	ap7	同“押”
+壘	lui3
+壞	huai4
+壟	loŋ3
+壤	dziaŋ3
+壩	pa5
+士	sɯ4
+壬	dzim4
+壯	tsaŋ5
+壺	hu2
+壽	siu6
+夏	hɛ6
+夕	sɛk7
+外	ɡua6
+夙	sok7
+多	to1
+夜	mɛ̃5	俗，又
+夜	mɛ̃2	訓“暝”
+夠	kau5
+夢	maŋ6
+夥	huɛ3
+夥	ua4	多
+大	tai4	文
+大	tua6	白
+天	tʰiɛn1	文
+天	tʰɛn1	又，鳳凰下埔音
+天	tʰĩ1	白
+太	tʰai5
+夫	hu1	文
+夫	pou1	白
+夭	iau1
+央	iaŋ1	文
+央	ŋ1	白，中～
+失	sit7
+夷	i2
+夾	kiap7	文
+夾	koiʔ7	白
+夾	ŋoiʔ7	白，又
+奇	kʰi2
+奇	kʰia1
+奈	nai4
+奉	hoŋ4
+奎	kʰui2
+奏	tsau5
+契	kʰoi5
+奔	pun1
+奔	pʰun1
+套	tʰau5
+奚	hi2
+奠	tiɛn4
+奠	tɛn4	又，鳳凰下埔音
+奢	tsʰia1
+奥	o5
+奪	toʔ8
+奮	hun5
+女	ni3	文，口語
+女	nŋ3
+奴	nou2
+奶	nai3	文
+奶	ni4	訓
+奶	ni1	訓
+奶	nɛ1	替
+奶	lɛŋ1	替
+奸	kan1
+好	hau3	文
+好	hãu5
+好	ho3
+如	dzu2
+妃	hui1
+妄	buaŋ3
+妊	dzim4
+妒	kou5
+妓	ki4
+妖	iau1
+妗	kim4
+妙	miau4
+妝	tsuaŋ1	文
+妝	tsŋ1	白
+妥	tʰo3
+妨	huaŋ2
+妹	muɛ4	小稱
+妹	muɛ6
+妻	tsʰi1
+妾	tsʰiap7
+姆	m3
+姊	tsi3
+始	sɯ3
+姐	tsɛ3
+姐	tsia3	小～
+姑	kou1
+姓	sɛ̃5
+委	ui3
+姘	pʰɛŋ1
+姚	io2
+姜	kiaŋ1
+姦	kan1
+姨	i2
+姬	ki1
+姻	in1
+姿	tsɯ1
+威	ui1
+娃	ua1
+娑	so1
+娘	liaŋ2	文，爹～
+娘	niõ2	白
+娛	u2
+娛	ɡu2	又
+娠	sin2
+娩	miɛn3
+娩	mɛn3	又，鳳凰下埔音
+娶	tsʰu3
+婆	po2	文
+婆	pʰua2
+婉	uan3
+婚	hun1
+婢	pi4
+婦	hu4	文
+婦	pu4	白，新～
+婪	lam2
+婿	sai5
+媒	buɛ2
+媚	mi4
+媳	sɛk7
+媽	ma1
+媽	ma2	又
+媽	ma3	祖母
+嫁	kɛ5
+嫂	sau3	文，又
+嫂	so3	白
+嫌	hiam2
+嫖	pʰiau2
+嫡	tiaʔ7
+嫩	lun5
+嬉	hi1
+嬌	kiau1
+嬰	ɛŋ1
+嬴	ioŋ1
+嬸	sim3
+孀	sŋ1
+子	tsɯ3	文
+子	tsi3	白
+孔	kʰoŋ3
+孕	dzɛŋ4
+字	dzɯ4	文
+字	dzi6	白
+存	tsʰun2
+孝	hau5	文
+孝	ha5	白
+孟	mɛŋ3
+季	kʰui5
+季	kui5	又，姓氏
+孤	kou1
+孥	nou1
+孥	nou2
+孩	hai2
+孫	sun1
+孫	sŋ1	白，姓氏
+學	hak8	文
+學	oʔ8	白
+孽	ŋiɛt8
+孽	ŋɛt8	又，鳳凰下埔音
+宅	tʰɛʔ8
+宇	u3
+守	siu3
+安	an1	文
+安	uã1	白
+宋	soŋ5
+完	uan2
+宏	hoŋ2
+宕	taŋ4
+宗	tsoŋ1
+官	kuã1
+宙	tiu4
+定	tɛŋ4	文，醒～
+定	tiã6	白
+宛	uan3
+宜	ŋi2
+客	kʰɛʔ7
+客	kʰaʔ7	～廳
+宣	suan1
+室	sit7
+宥	iu4
+宦	huam4
+宮	kɛŋ1
+宰	tsai3
+害	hai6
+宴	an5
+宵	siau1
+家	kɛ1
+家	ka1	替，～己
+容	ioŋ2
+宿	sok7	文，～命
+宿	suaʔ7	訓
+寂	sok7	俗
+寄	kia5
+寅	in2
+密	mit8	文
+密	mat8	白，又，～～
+密	bat8	白
+寇	kʰou5
+富	pu5
+寐	muɛ4
+寒	han2	文
+寒	kuã2	白
+寓	ŋo4
+寓	ŋo2	又
+寞	mok8
+察	tsʰat7
+寡	kua3
+寢	tsʰim3
+寥	liau2
+實	sit8	文
+實	tsat8	白
+寧	lɛŋ2
+寨	tsɛ6
+審	sim3
+寫	sia3
+寬	kʰuan1	文
+寬	kʰuã1	白
+寮	liau2
+寵	tʰoŋ3
+寶	po3
+寸	tsʰun5
+寺	si6
+封	hoŋ1	文
+封	huaŋ1	白
+射	sia6
+將	tsiaŋ1
+將	tsiaŋ5
+專	tsuan1
+尊	tsun1
+尋	tsʰim2
+尋	siam2	白，又，量詞
+尋	tsʰĩ2	白，量詞
+對	tui5
+導	tau4
+小	siau3	文
+小	sio3	白
+少	siau3	文
+少	siau5	文
+少	tsio3	白
+尖	tsiam1
+尚	siaŋ4	文
+尚	siõ6	白，和～
+尤	iu2
+尬	kai5
+就	tsiu4
+尷	kam1
+尸	si1
+尹	ɯn3
+尺	tsʰioʔ7
+尼	ni2
+尾	buɛ3
+尿	dzio6
+局	kɛk8
+屁	pʰui5
+居	kɯ1
+屈	kʰut7
+届	kai5
+屋	ok7
+屎	sai3
+屏	pʰin2
+屐	kiaʔ8
+屑	sut7
+展	tiɛn3
+展	tɛn3	又，鳳凰下埔音
+屠	tou2
+屢	lu3
+層	tsan2
+履	li3
+屬	sok8
+屯	tʰun2
+山	san1	文
+山	suã1	白
+岔	tsʰa1	文
+岔	tsʰɛ1	白
+岡	kaŋ1	文
+岡	kŋ1	白，地名
+岳	ŋak8
+岸	ŋai4	文
+岸	huã6	白
+峙	sɯ4
+峰	hoŋ1
+島	tau3
+峽	kiap8
+峽	kiap7	又
+崇	tsʰoŋ2
+崑	kʰun1
+崔	tsʰui1
+崖	ŋai2
+崗	kaŋ1	文
+崗	kŋ1	白，地名
+崙	lun2
+崩	paŋ1
+嵌	kʰiam2
+嵩	soŋ1
+嶺	niã3
+嶽	ŋak8
+巍	ŋui2
+巖	ŋiam2
+川	tsʰuan1
+州	tsiu1
+巡	sun2
+巢	tsʰau2
+工	kaŋ1
+左	tso3
+巧	kʰiau3
+巧	kʰa3	白
+巨	kɯ4
+巫	bu2
+差	tsʰa1	文
+差	tsʰɛ1	白
+差	tsʰɛ1
+己	ki3
+已	ĩ3
+巳	tsi4
+巴	pa1
+巷	haŋ6
+巾	kɯn1
+市	tsʰi4
+布	pou5
+帆	pʰaŋ2
+希	hi1
+帖	tʰiap7
+帚	siu3
+帚	tsiu3	又
+帝	ti5
+帥	suɛ5
+師	sɯ1	文
+師	sai1	白
+席	siaʔ8
+席	tsʰioʔ8
+帳	tiõ5
+帶	tua5
+帷	dzui2
+常	tsʰiaŋ2	文，～～
+常	siõ2	白
+帽	bo6
+幅	pak7
+幕	mo4
+幢	toŋ2
+幣	pi4
+幫	paŋ1
+干	kan1
+平	pʰɛŋ2	文
+平	pɛ̃2	白
+平	pʰɛ̃2	白，使平
+年	nĩ2
+并	pɛŋ4
+幸	hɛŋ4
+幹	kan5
+幻	huan5
+幻	huam5	又
+幼	iu5
+幽	hiũ1
+幾	ki1
+幾	ki3	文
+幾	kui3	白
+庇	pi5
+序	su4
+底	ti3	文
+底	toi3	白
+店	tiam5
+庚	kɛ̃1
+府	hu3
+度	tou6
+座	tso6
+庫	kʰou5
+庭	tʰɛŋ2	文
+庭	tiã2	白
+庵	am1
+庶	su5
+康	kʰaŋ1
+庸	ioŋ1
+廁	tsʰɛ5
+廈	hɛ6
+廉	liam2
+廊	laŋ2
+廓	kuak7
+廖	liau6
+廟	bio6
+廠	tsʰiaŋ3
+廢	hui5
+廣	kuaŋ3	文
+廣	kŋ3	白
+廬	lu2	文
+廬	lou2	～山
+廳	tʰiã1
+延	iɛn4
+延	ɛn4	又，鳳凰下埔音
+廷	tʰɛŋ2
+建	kiɛn4
+建	kɛn4	又，鳳凰下埔音
+建	kiɛn5	福～
+建	kɛn5	又，鳳凰下埔音
+弄	loŋ4
+弊	pi6
+式	sɛk7
+弓	kɛŋ1
+引	in3
+弗	hut7
+弘	hoŋ2
+弟	ti4
+弦	hiɛn2	文
+弦	hɛn2	又，鳳凰下埔音
+弦	hĩ2	白
+弱	dziak8	文
+弱	nioʔ8	白，軟～
+張	tsiaŋ1	文
+張	tiõ1	白
+強	kʰiaŋ2
+強	kiaŋ3
+弼	pit8
+彀	kau5
+彈	tʰan2	文
+彈	tuã2	白，～琴
+彈	tuã6	白
+彌	ni3
+彎	uan1
+彗	hui4
+形	hɛŋ2
+彩	tsʰai3
+彪	piu1
+彬	pin1
+彭	pʰɛ̃2
+影	iã3
+彷	pʰaŋ2
+役	hiaʔ8
+彼	pi3
+往	uaŋ3
+征	tsɛŋ1
+待	tʰai4
+很	hɯn3
+律	lut8
+後	hau4	～生
+後	au4
+徐	sɯ2	文
+徐	tsʰɯ2	白
+徑	kɛ̃5
+徒	tʰu2
+得	tit7
+徙	sua3
+徛	kʰia4
+從	tsʰoŋ2
+御	ɡɯ6
+復	hiũ4
+復	hok8
+循	sun2
+微	mui2
+徵	tɛŋ1
+德	tɛk7
+徹	tʰiɛt7
+徹	tʰɛt7	又，鳳凰下埔音
+徽	hui1
+心	sim1
+必	pit7
+忌	ki4	文
+忌	kʰi6	白
+忍	dzim3	文
+忍	lun3	白
+志	tsi5
+忘	buaŋ2
+忙	maŋ2
+忝	tʰiam3
+忠	toŋ1
+快	kʰuai5	文
+快	kʰuɛ5	白
+念	liam4
+忽	hut7
+怒	nõ5	文
+怒	lou3	白
+怕	pʰã5
+怖	pu5
+思	sɯ1	文
+思	sɯ5	文，意～
+思	si1	白，相～
+怠	tai4
+怡	i2
+急	kip7
+性	sɛ̃5
+怨	uan5
+怪	kuai5	文
+怪	kuɛ5	白，無～
+怯	kʰiak7
+恃	si4
+恆	hɛŋ2
+恆	an2	替，緊
+恍	huaŋ3
+恐	kʰioŋ3
+恕	su5
+恙	iaŋ4
+恢	huɛ1
+恤	sut7
+恥	tsʰi3
+恨	hɯn4
+恩	ɯn1
+恭	kioŋ1
+息	sɛk7
+恰	kʰap7
+悄	tsʰiau3
+悅	dzuat8
+悉	sɛk7
+悍	han3
+悔	huɛ5
+悟	ŋo4
+悟	ŋo2	又，孫～空
+悠	hiũ1
+患	huam4
+悲	pui1
+悴	tsui4
+情	tsʰɛŋ2	文
+情	tsiã2	白
+惑	hok8
+惜	sioʔ7
+惟	dzui2
+惠	hui4
+惡	u5
+惡	ak7	文
+惡	oʔ7	白，困難
+惰	tuã4	訓
+惱	nau3	文
+惱	lo3	白，煩～
+想	siaŋ3	文
+想	siõ4	白
+惹	dzia3
+惻	tsʰɛk7
+愁	tsʰou2
+愈	dzu3
+愉	dzu2
+意	i5
+愕	ŋak8	文
+愕	ŋoʔ8	白
+愚	ŋo2
+愛	ãi5
+感	kam3
+愷	kʰai3
+慈	tsʰɯ2
+態	tʰai5
+慌	huaŋ1
+慎	sin3
+慕	mo4
+慘	tsʰam3
+慚	tsʰam2
+慢	muan4	文
+慢	man6
+慣	kuan5	文
+慣	kũi5	白，～勢
+慧	hui4
+慨	kʰai5
+慮	lɯ4
+慰	uɛ5
+慶	kʰɛŋ5
+慷	kʰaŋ3
+慾	iok8
+憂	iu1
+憋	piʔ7
+憎	tsɛŋ1
+憐	liɛn2
+憐	lɛn2	又，鳳凰下埔音
+憑	pʰɛŋ2
+憚	tan4
+憤	hun5
+憫	miɛn3
+憫	mɛn3	又，鳳凰下埔音
+憲	hiɛn5
+憲	hɛn5	又，鳳凰下埔音
+憶	i5	俗
+憶	it7	白，～得
+憾	ham4
+憾	ham6
+懂	toŋ3
+懇	kʰɯn3
+懈	hai4
+應	ɛŋ1	文，～該
+應	ɛŋ5	文
+應	in5	白
+懊	au5
+懊	o5	又
+懲	tʰɛŋ3
+懵	moŋ3
+懶	lan3	文
+懶	tuã4	白
+懷	huai2
+懸	hiɛn2	文
+懸	hɛn2	又，鳳凰下埔音
+懸	kũi2	白，高
+懺	tsʰiam1
+懺	tsʰiam5
+懼	ku4
+懿	i4
+戀	luan5
+戈	kʰo1
+戊	bou6
+戌	sut7
+戍	suɛ5
+戎	dzoŋ2
+成	sɛŋ2	文
+成	siã2	白，比率
+成	tsiã2	白
+成	tsʰiã2	白，使成
+我	ŋo3	文
+我	ua3	白
+戒	kai5
+或	hok8
+戚	tsʰɛk7
+戟	kɛk7
+截	tsoiʔ8
+戮	lok8
+戰	tsiɛn5
+戰	tsɛn5	又，鳳凰下埔音
+戲	hi5
+戳	tsʰiok7	替
+戴	tai5	文
+戴	to5	白，姓氏
+戴	ti5	白，～帽
+戶	hou4
+戽	hou5
+房	paŋ2
+所	so3
+扁	piɛn3	文
+扁	pɛn3	又，鳳凰下埔音
+扁	pĩ3	白
+扇	siɛn5	文
+扇	tsɛn5	又，鳳凰下埔音
+扇	sĩ5	白
+手	tsʰiu3
+才	tsʰai2
+才	tsai2	秀～
+扎	tsat7
+打	ta3
+扔	dzɛŋ1
+托	tʰoʔ7
+扛	kŋ1
+扣	kʰau5
+扭	niu3
+扮	pan5
+扯	tsʰɛ3
+扶	hu2
+批	pʰuɛ1
+扼	ɛʔ7
+找	tau3
+承	sɛŋ2	文
+承	sin2	白
+技	ki4
+抄	tsʰau1
+把	pa3	文
+把	pɛ3	白
+抑	at7
+抓	tsuã1
+投	tau2
+抖	tou3	文，～擻
+抖	tau3	白
+抗	kʰaŋ5
+折	siʔ8
+折	tsiʔ8
+折	tsiʔ7
+抛	pʰau1	文
+抛	pʰa1	白
+披	pʰi1
+抬	tʰai2
+抱	pʰo4
+抵	ti3	文
+抵	toi3	白
+抹	buaʔ7
+押	ap7	文
+押	aʔ7	白
+抽	tʰiu1
+拂	hut7
+拆	tʰiaʔ7
+拇	bo3
+拈	liam1	文
+拈	nĩ1	白
+拉	la1	俗
+拉	lap7
+拍	pʰaʔ7
+拐	kuai3
+拒	kɯ4
+拔	puat8	文
+拔	puɛʔ8	白
+拖	tʰua1
+拗	au3	文
+拗	a3	白
+拘	kʰu1
+拙	tsʰuat7
+拚	pun5
+拚	piã5
+招	tsiau1	文
+招	tsio1	白
+拜	pai5
+括	kuat7
+拭	tsʰit7
+拯	tsin3
+拱	kioŋ3
+拳	kʰun2
+拳	kun2	～頭
+拼	pʰɛŋ1
+拾	sip8
+拿	nã3
+持	tʰi2
+持	ti2	记～
+指	tsi3
+指	tsŋ3	訓，～甲
+指	tsõi3	白，手～
+指	ki3	白，動詞
+按	an5
+挑	tʰiau1	文
+挑	tʰio1	白
+挖	uai1	俗
+挖	uɛʔ7
+挨	ai1	文
+挨	oi1	白
+挪	no2
+振	tsin3
+振	tin3	～動
+挺	tʰɛŋ3
+挽	man3
+挾	hiap8	文
+挾	kiap8	文
+挾	ŋiap8	又
+挾	koiʔ8	白
+捆	kʰun3
+捉	tsʰok7
+捋	luaʔ8	替
+捋	lut8	白
+捍	han3
+捏	niap7	文
+捏	niap8
+捐	kiɛn1
+捐	kɛn1	又，鳳凰下埔音
+捕	pu1
+捧	hoŋ3
+捧	pʰoŋ3
+捨	sia5
+捲	kŋ3
+捶	tui2
+捷	tsiap8
+捺	nai4	俗
+掀	hɯn1
+掀	hiɛn1
+掀	hɛn1	又，鳳凰下埔音
+掂	tiam1
+掃	sau5
+授	siu4
+掉	tiau6
+掌	tsiõ3
+掏	tʰau1
+排	pʰai2	～場
+排	pai2
+掘	kut8
+掛	kʰua5	文
+掛	kua5	佩戴
+掛	kuɛ5	白，～紙
+掠	liaʔ8	訓“搦”
+探	tʰam5
+接	tsiap7	文
+接	tsiʔ7	白
+控	kʰoŋ5
+推	tʰui1	新
+推	tsʰui1	文
+推	tʰo1	白
+掩	iam1	俗
+掩	iam2
+措	tsʰu5
+揀	kõi3
+揉	dziu2
+描	miau2	文
+描	bio2	白
+提	tʰi2
+插	tsʰap7	文
+插	tsʰaʔ7	白
+揚	iaŋ2	文
+揚	tsʰiõ2	白
+換	huan5	文
+換	uã6	白
+握	ok7
+揩	kʰoi1
+揭	kit7	地名
+揭	kiaʔ7	白
+揮	hui1
+援	iɛn4
+援	ɛn4	又，鳳凰下埔音
+損	sun3	文
+損	sŋ3	白
+搐	tʰɛk7
+搓	tsʰo1
+搖	iau2	文
+搖	io2	白
+搜	siau1
+搞	kau3
+搪	tʰaŋ2	文
+搪	tʰŋ6	白，搪瓷
+搬	puã1
+搭	tap7	文
+搭	taʔ7	白
+搶	tsʰiõ3
+携	hi4
+摔	tsut7
+摔	sut7
+摘	tiaʔ7
+摟	lou3
+摩	mo1	文
+摩	bua2	白
+摳	kʰau1
+摸	mo1	文
+摸	moŋ2
+摸	mak7
+摺	tsiʔ7
+撇	pʰiɛt7	文
+撇	pʰɛt7	又，鳳凰下埔音
+撇	pʰuat7
+撈	lau1	文
+撈	lo1	白
+撏	tsiam2
+撐	tʰɛ̃1
+撐	tʰɛ̃5
+撒	sat7	文
+撒	suaʔ7	白
+撓	nau1	文
+撓	niau1
+撕	sɯ1
+撞	tsuaŋ4	文
+撞	toŋ6
+撞	tŋ6	白，遭遇
+撤	tʰiɛt7
+撤	tʰɛt7	又，鳳凰下埔音
+撥	pʰuaʔ7
+撩	liau2	文
+撩	lio2	白
+撫	bu3
+播	pua5
+撮	tsʰoʔ7
+撰	tsuan4
+撲	pʰok7
+撼	ham3
+擁	ioŋ5
+擅	siɛn4
+擅	sɛn4	又，鳳凰下埔音
+擇	toʔ8
+擊	kʰɛk7
+擋	taŋ3
+操	tsʰau1
+操	tsʰau5
+擎	kʰɛŋ2	文
+擎	kʰia2	替
+擒	kʰim2
+擔	tam1	文
+擔	tã1	白
+擔	tã5	白
+據	kɯ4
+擠	tsĩ5
+擦	tsʰat7
+擬	ŋi3
+擲	tã4	訓
+擴	kʰuaŋ5
+擺	pai3
+擾	dziau3
+攀	pʰan1
+攏	loŋ3
+攔	lan2
+攘	dziaŋ3
+攝	niap7
+攤	tʰuã1
+攤	nuã3	替
+攤	nuã5	替
+攪	kiau3
+攪	ka3	白
+攬	lam3
+支	tsĩ1
+支	ki1	白
+收	siu1
+改	koi3
+攻	koŋ1
+放	huaŋ5	文
+放	paŋ5	白
+政	tsɛŋ5
+故	ku5
+故	ku6	訓“舊”
+效	hau6
+敏	miɛn3
+敏	mɛn3	又，鳳凰下埔音
+救	kiu5
+敗	pai6
+教	ka5
+敝	pi6
+敢	kã3
+散	suã3
+散	suã5
+敦	tun1
+敨	tʰau3
+敬	kɛŋ5
+敲	kʰiau1
+敲	kʰa5	白
+整	tsiã3
+敵	tɛk8
+敷	hu1	文
+敷	pʰou1	白
+數	su5	無～
+數	siau5	白
+斂	liam3
+斃	pi6
+文	bun2
+斑	pan1	文
+斑	puɛ̃1	白
+斗	tau3
+料	liau6
+斛	hok8
+斜	sia2	文
+斜	sia1	白
+斟	tsim1
+斡	uat7	文
+斡	ut7	白
+斤	kɯn1
+斥	tsʰɛk7
+斧	pou3
+斬	tsam3
+斯	sɯ1
+新	sin2
+斷	tuan5	文
+斷	tuan4	文
+斷	tŋ4	白
+方	huaŋ1	文
+方	hŋ1	白
+方	pŋ1	白，姓氏
+方	paŋ1	白
+於	i1
+施	si1
+旁	pʰaŋ2
+旅	li3
+旋	suan2
+旋	tsŋ6
+族	tsok8	文
+族	tsak8	白，種～
+旗	ki2
+既	ki5
+日	dzit8
+旦	tan5	文
+旦	tuã5	白
+旨	tsi3
+早	tsau3	文
+早	tsa3	白
+旬	sun2
+旭	hiok7
+旱	uã4
+旺	uaŋ4
+昂	ŋaŋ1
+昆	kʰun1
+昌	tsʰiaŋ1
+明	mɛŋ2	文
+明	mɛ̃2	白，～年
+昏	hun1
+昏	hŋ1	白，暝～，夜晚
+易	i4	文
+易	ɛk8	文
+易	iaʔ8	白，～經
+易	ɡoi6	訓
+昔	sɛk7
+星	tsʰɛ̃1
+星	san1	零～
+映	iaŋ5
+春	tsʰun1
+昧	muɛ4
+昨	tsoʔ8
+昨	tsa1	替
+昭	tsiau1
+是	si4
+時	si2
+晉	tsin5
+晏	an5	文
+晏	uã5	白，晚
+晚	mŋ3
+晝	tiu4	文
+晝	tau5	白
+晦	huɛ5
+晨	sin2
+普	pʰou3
+景	kɛŋ3
+晴	tsɛ̃2
+晶	tsiã1
+智	ti5
+暇	hia2
+暈	un4
+暑	su3
+暖	luan3
+暗	am5
+暝	mɛŋ2	文
+暝	mɛ̃2	白
+暢	tʰiaŋ5
+暫	tsiam4
+暮	mo4
+暴	pau4
+暹	siam2
+曆	lɛʔ8
+曉	hiau3
+曝	pʰak8
+曠	kʰuaŋ5
+曩	laŋ3
+曬	sai5
+曰	uat7
+曲	kʰiok7	文
+曲	kʰɛk7	白
+更	kɛŋ1	文
+更	kɛŋ5	文
+更	kɛ̃1	白
+書	tsɯ1
+曹	tsʰau2
+曾	tsɛŋ1	文
+曾	tsɛŋ2	文
+曾	tsan1	白，姓氏
+替	tʰi5	文
+替	tʰoi5	白
+最	tsuɛ5
+會	kuai5
+會	huɛ4
+會	oi4	訓“解”
+月	ɡuɛʔ8
+有	iu3	文
+有	u4	白
+朋	pʰɛŋ2
+服	hok8
+朔	suak7
+朔	sok7	又
+朕	tim4
+朗	laŋ4
+朗	laŋ2	又，伊～
+望	buaŋ4	文
+望	mõ6	白
+朝	tsiau1
+朝	tsʰiau2
+期	kʰi2
+木	bak8
+未	buɛ6
+末	muat8	文
+末	buaʔ8	白
+本	pŋ3
+札	tsat7
+朱	tsu1
+朵	to2
+朽	hiũ3
+杈	tsʰɛ1
+杉	sam1
+李	li3
+杏	hɛŋ5
+材	tsʰai2
+村	tsʰŋ1
+杖	tsiaŋ4
+杜	tou4
+杞	kʰi3
+束	sok7
+杠	kaŋ5	文
+杠	koŋ5	～桿
+杭	haŋ2
+杯	puɛ1
+東	toŋ1	文
+東	taŋ1	白
+杳	miau3
+松	soŋ2
+板	pan3
+枉	uaŋ3
+析	sɛk7
+枕	tsim3
+林	lim2
+林	nã2	地名
+枚	buɛ2
+果	kuã3	文
+果	kuɛ3	白
+枝	ki1
+枯	kou1
+枵	iau1
+架	kɛ5
+枷	kɛ2
+枸	kau3
+柄	pɛ̃5
+柏	pɛʔ7
+某	moŋ3
+柑	kam1	文，油～
+柑	kã1	白
+染	dziam3	文
+染	nĩ3	白
+柔	dziu2
+柚	iu6
+查	tsa1
+查	tsʰɛ2
+柩	kiu4
+柬	kan3
+柯	kʰo1	文
+柯	kua1	白
+柱	tʰiau4
+柳	liu3
+柴	tsʰa2	訓
+柿	sai4
+栗	lat8
+校	hau4
+校	ka5
+栩	hu3
+株	tsu1
+核	hut8
+核	hɛk7	文
+核	hat8	白，淋巴結
+根	kɯn1
+格	kɛʔ7
+栽	tsai1
+桂	kui5
+桃	to2	楊～
+桃	tʰo2
+案	uã5
+桉	an5
+桌	toʔ7
+桐	tʰoŋ2	文
+桐	tʰaŋ2	白，～油
+桑	sŋ1
+桓	hɛŋ2	俗
+桶	tʰaŋ3
+桸	hia1
+桿	han3	俗
+桿	kuã1
+梁	liaŋ2	文
+梁	niõ2	白
+梅	buɛ2
+梓	tsɯ3
+梔	ki1
+條	tiau2
+梢	sau1
+梢	siau1
+梧	ŋo2
+梨	lai2
+梭	so1
+梯	tʰui1
+械	hai4
+梳	sɛu1
+梵	huam2
+棄	kʰi5
+棋	ki2
+棍	kun5
+棒	paŋ4
+棕	tsaŋ1
+棗	tso3
+棘	kɛk7
+棚	pɛ̃2
+棟	toŋ5
+棧	tsan5
+森	som1
+棲	tsʰi1
+棵	kʰo1
+椅	ĩ3
+植	sit8
+椒	tsio1
+椰	ia2
+椽	uan2	俗
+楊	iaŋ2	文
+楊	iõ2	白
+楓	paŋ1
+楚	tsʰo3
+楝	nõi6
+楞	lɛŋ2
+楣	bai2
+業	ŋiap8	文
+業	ɡiap8	頻繁
+極	kɛk8
+楷	kʰai3
+概	kʰai5
+榆	dzu2
+榔	laŋ2	文
+榔	nõ2	白
+榛	tsin1
+榜	paŋ3
+榨	tsa5
+榮	ioŋ2
+榴	liu2
+榻	tʰap7
+構	kou5
+槌	tʰui1
+槍	tsʰiõ1
+槐	huai2
+檻	kʰam3
+檻	kʰam5
+槳	tsiõ3
+槽	tso2
+樂	lak8
+樂	ɡauʔ8
+樓	lau2
+標	pʰiau1	文
+標	pio1	白
+樞	kʰu1
+樟	tsiaŋ1	文
+樟	tsiõ1	白
+樟	tsŋ1	地名
+模	mo1	文
+模	mo2	文，又
+模	bou2
+樣	iaŋ4	文，一般～
+樣	iõ6	白
+樵	tsiau1
+樹	su4	文
+樹	tsʰiu6	白
+橄	kã1
+橋	kio2
+橘	kit7
+橙	tsʰɛŋ2
+橛	kuɛʔ8	一截
+機	ki1	文
+機	kui1	白
+橫	huɛ̃2
+檀	tʰan2
+檐	liam2
+檐	tsĩ2	臨～水
+檢	kiam3
+檳	pin1
+櫃	kũi6
+櫓	lu3
+櫻	ɛŋ1
+欄	lan2
+權	kʰuan2
+欖	lam3	文
+欖	nã3	白
+欛	pa5
+欠	kʰiam5
+次	tsʰɯ5
+欣	hɯn1
+欲	ãi5	訓
+欲	boʔ7	訓
+欺	kʰi1
+欽	kʰim1
+款	kʰuan3
+歇	hiaʔ7
+歉	kʰiam3
+歌	ko1	文
+歌	kua1	白
+歐	au1
+歡	huan1	文
+歡	huã1	白
+止	tsi3
+正	tsiã1
+正	tsiã5
+此	tsʰɯ3
+步	pou6
+武	bu3
+歧	kʰi2
+歧	ki2
+歪	uai1
+歲	suɛ5
+歲	huɛ5	白
+歷	lɛʔ8
+歸	kui1
+死	si3
+殃	iaŋ1
+殆	tai4
+殉	sun2
+殊	su2
+殖	sit8
+殘	tsʰan2
+殯	pin5
+殯	pin1	又
+殲	tsʰiam1
+段	tuan4	文
+段	tŋ6	白
+殷	hɯn1
+殺	suaʔ7
+殼	kʰak7
+殿	tiɛn4	文
+殿	tɛn4	又，鳳凰下埔音
+殿	tõi6	白
+毀	hũi3
+毅	ŋi5
+毆	au1
+毋	bo2
+毋	m6
+母	bo3
+母	bou3	妻
+每	muɛ3
+毒	tak8
+比	pi3
+毛	mau2	文
+毛	mõ2
+毫	hau2
+毯	tʰan3
+氏	si4
+民	min2
+氣	kʰi5	文
+氣	kʰui5	白
+氯	lɛk8	俗
+水	sui3	文
+水	tsui3	白
+永	ioŋ3
+汁	tsap7
+求	kʰiu2
+汗	han3	文
+汗	han2	文，可～
+汗	kuã6	白
+汝	dzu3	文
+汝	lɯ3	白
+汞	koŋ5
+江	kaŋ1
+池	ti2
+污	u1
+汪	uaŋ1
+汲	kʰip7
+決	kuat7
+汽	kʰi5
+沁	sim3	俗
+沂	kʰi2	俗
+沃	o5	俗
+沃	ok7	文
+沃	ak7	白
+沈	sim3
+沈	tim2
+沈	tʰim6	使沉
+沉	tim2
+沉	tʰim6	使沉
+沌	tun4
+沐	mok8
+沒	mut8
+沒	mok8	又
+沙	sa1	文
+沙	sua1	白
+沛	pʰai5
+沫	muat8	文
+沫	buaʔ8	白
+河	ho2
+沸	hut7	俗
+油	iu2
+治	ti6
+治	ti2
+治	tʰai2	白
+沼	dziau5
+沾	liam1	俗
+沾	tiam1
+沿	in2
+況	kʰuaŋ5
+泄	siap8
+泉	tsuã2
+泊	poʔ8
+泌	pi5
+泔	kam1
+法	huap7
+泛	huam5
+泡	pʰau5	文
+泡	pʰa4	白
+波	po1
+泣	kʰip7
+泥	ni2
+注	tsu5
+泰	tʰai5
+泳	ioŋ5
+洋	iaŋ2	文
+洋	iõ2	白
+洗	soi3
+洛	lok8
+洞	tʰoŋ2	文
+洞	taŋ6	白
+津	tsin1
+洪	hoŋ2	文
+洪	aŋ2	白
+洲	tsiu1
+活	uaʔ8
+洼	ua1
+洽	tsiap8
+派	pʰai5
+流	liu2	文
+流	lau2	白
+浙	tsit7
+浥	ip7
+浦	pʰou3
+浩	hau1
+浪	laŋ4	文
+浪	nŋ6	白
+浮	pʰu2
+浴	iok8	文
+浴	ɛk8	白
+海	hai3
+浸	tsim5
+消	siau1
+涉	siap8
+涎	iɛn4	俗
+涎	ɛn4	又，鳳凰下埔音
+涎	tsuã2	替
+涓	kiɛn1
+涓	kɛn1	又，鳳凰下埔音
+涕	tʰi5
+涮	suɛʔ7	俗
+涮	suan5
+涯	ŋai2
+液	ɛk8	文
+液	sioʔ8	白
+淆	ŋau2
+淋	lim2	文
+淋	lam2	白
+淑	sok7
+淚	lui4
+淡	tam4	文
+淡	tã4	白
+淤	ɯ5
+淪	lun2
+淫	im2
+淮	huai2
+深	tsʰim1
+淵	iɛn1
+淵	ɛn1	又，鳳凰下埔音
+混	hun4
+淹	iam1
+淹	im1	口語
+淺	tsʰiɛn3
+淺	tsʰɛn3	又，鳳凰下埔音
+添	tʰiam1
+清	tsʰɛŋ1
+減	kiam3
+渠	kʰɯ2
+渡	tou6
+渣	tsa1
+温	un1
+測	tsʰɛk7
+港	kaŋ3
+渴	kuaʔ7
+游	iu2
+渺	miau3
+渾	hun4
+湖	ou2
+湧	ioŋ5	文
+湧	ɛŋ3	白
+湯	tʰaŋ1	文，商～
+湯	tʰŋ1	白
+溉	kʰai5
+源	ŋuan2
+準	tsun3
+溜	liu5
+溝	kau1
+溪	kʰoi1
+溺	nɛk8
+滂	pʰaŋ1
+滅	mit8
+滋	tsɯ1
+滑	kut8
+滔	tʰau1
+滬	hu4
+滯	tʰi5
+滲	tsʰam1	俗
+滲	siam5	白
+滴	tiʔ7
+滸	hu3
+滾	kun3
+滿	muan3	文
+滿	muã3	白
+漁	hɯ2
+漂	pʰiau1
+漂	pʰio5
+漆	tsʰip7	文，～器
+漆	tsʰat7	白
+漏	lau6
+漏	lau5
+演	in2
+漚	au5
+漢	han5
+漫	muan4
+漱	suak7	俗
+漲	tsiaŋ5
+漳	tsiaŋ1	文
+漳	tsiõ1	白，地名
+漸	tsiam4
+漿	tsiõ1
+潑	pʰuaʔ7
+潔	kiɛt7
+潔	kɛt7	又，鳳凰下埔音
+潘	pʰuã1
+潘	pʰun1	泔水
+潛	tsʰiam2
+潤	dzun4
+潭	tʰam2
+潮	tio2
+潰	kʰui4
+澀	siap7
+澄	tʰɛŋ2
+澆	nau1
+澡	tsʰau5
+澤	tsɛk8
+激	kɛk7
+濁	dzuak8
+濁	tsuak8	又
+濃	loŋ2
+濕	sip7
+濟	tsi5
+濟	tsoi6	替
+濤	tʰiu2
+濫	lam4
+濾	lɯ4
+瀉	sia5
+瀋	sim3
+瀑	pʰak8
+灌	kuan5
+灑	sai5
+灑	sa5	又，瀟～
+灘	tʰuã1
+灣	uan1
+火	huɛ3
+灰	hui1	新
+灰	huɛ1
+灰	hu1	替
+灶	tsau5
+灸	ku5
+災	tsai1
+炊	tsʰuɛ1
+炎	iam4
+炎	iam6
+炒	tsʰa3
+炕	kʰaŋ5
+炙	tsioʔ7
+炭	tʰuã5
+炮	pʰau5
+炯	kɛŋ3
+炸	tsa5
+為	ui2
+為	ui6
+烈	liɛt8
+烈	lɛt8	又，鳳凰下埔音
+烏	ou1
+烘	hoŋ1	文
+烘	haŋ1	白
+烙	lok8
+烙	luaʔ7	替
+烤	kʰau3
+烹	pʰɛŋ1
+焉	iɛn1
+焉	ɛn1	又，鳳凰下埔音
+焊	han3
+焚	un2
+無	bu2	～數
+無	bo2
+焦	tsiau1
+焰	iam6
+然	dziɛn2
+然	dzɛn2	又，鳳凰下埔音
+煉	liɛn6
+煉	lɛn6	又，鳳凰下埔音
+煌	huaŋ2
+煎	tsiɛn1	文
+煎	tsɛn1	又，鳳凰下埔音
+煎	tsuã1	白
+煙	in1
+煠	tsaʔ8
+煠	saʔ8
+煥	huan5
+照	tsiau5	文
+照	tsio5	白
+煩	huan2
+煮	tsɯ3
+熄	sɛk7	文
+熄	sit7	白
+熊	him2
+熏	hɯn1	文
+熏	hun1
+熔	ioŋ2
+熙	hi1
+熟	sɛk8
+熨	ut7
+熬	ŋau2
+熱	dziɛt8	文
+熱	dzɛt8	又，鳳凰下埔音
+熱	dzuaʔ8	白
+燃	dziɛn2	文
+燃	dzɛn2	又，鳳凰下埔音
+燃	hiã2	白
+燈	tɛŋ1
+燎	liau2
+燒	sio1
+燕	iɛn1	文
+燕	ɛn1	又，鳳凰下埔音
+燕	iɛn5	文，～窩
+燕	ɛn5	又，鳳凰下埔音
+燕	ĩ5	白
+燙	tʰŋ5
+營	ioŋ2	文，～養
+營	iã2	白
+燦	tsʰan5
+燭	tsɛk7
+爆	pau4
+爐	lou2
+爛	lan4	文
+爛	nuã6	白
+爪	dziau3
+爪	dziau5
+爬	pɛ2
+爭	tsɛ̃1
+爵	tsiak7
+父	hu4
+父	pɛ4	訓
+爸	pa1
+爸	pɛ4	白
+爹	tia1
+爺	ia2
+爽	suaŋ3	文
+爽	sŋ3	白
+爾	dzɯ3
+牀	sŋ2	籠～
+牀	tsʰŋ2
+牆	tsʰiõ2
+片	pʰiɛn5	文
+片	pʰɛn5	又，鳳凰下埔音
+片	pʰĩ5	白
+版	pan3
+牌	pai2
+牒	tiap8
+牘	tok8
+牙	ɡɛ2
+牛	ɡu2
+牡	bou3
+牢	lo2
+牧	mok8
+物	muɛʔ8
+牲	sɛŋ1	文
+牲	sɛ̃1	白
+特	tɛk8
+牽	kʰan1
+犀	sai1
+犁	li2	文
+犁	loi2	白
+犒	kʰau5
+犧	hi1
+犬	kʰiɛn3
+犬	kʰɛn3	又，鳳凰下埔音
+犯	huam4
+狀	tsuaŋ4	文
+狀	tso4	～元
+狀	tsŋ6	白
+狂	kʰuaŋ2	文
+狂	kŋ2	白
+狄	tɛk8
+狐	hu2	文
+狐	hou2
+狗	kau3
+狡	kau3
+狹	hiap8	文
+狹	oiʔ8	白
+狼	laŋ2
+猛	mɛŋ3	文
+猛	mɛ̃3	白
+猜	tsʰai1
+猝	tsut7	俗
+猬	ui3
+猴	kau2
+猶	iu2
+猾	kut8
+獃	tai1
+獄	ɡɛk8
+獅	sai1
+獎	tsiaŋ5
+獐	kiõ1
+獨	tok8	文
+獨	tak8	白，孤～
+獲	uak8
+獵	laʔ8
+獸	siu5
+獺	tʰuaʔ7
+獻	hiɛn5
+獻	hɛn5	又，鳳凰下埔音
+玄	hiɛn2
+玄	hɛn2	又，鳳凰下埔音
+率	lut8
+率	tsut7
+玉	ɡɛk8
+王	uaŋ2	文
+王	hɛŋ2	白
+玩	ŋuan3
+玫	bun2	俗
+玻	po1
+珀	pʰɛk7
+珊	san1
+珍	tiɛn1
+珍	tɛn1	又，鳳凰下埔音
+珠	tsu1
+珠	tsiu1	白，目～
+班	pan1
+現	hin6
+球	kiu2
+理	li3
+琉	liu2
+琴	kʰim2
+琵	pi2
+琶	pɛ2
+瑕	hia2
+瑞	sui4
+瑟	sɛk7
+瑣	so3
+瑰	kui5
+璃	li2
+璞	pʰok7
+璧	piaʔ7
+環	huan2
+璽	dzɯ3	俗
+瓊	kʰioŋ2	秦～
+瓊	kʰɛŋ2
+瓜	kuɛ1
+瓢	pʰiau2
+瓤	dziaŋ2	文
+瓤	nŋ2	白
+瓦	ua1	文
+瓦	hia4	白
+瓮	aŋ5
+瓶	pʰin2
+瓶	pan2	白
+瓷	tsʰɯ2
+甘	kam1
+甚	sim3
+甚	sim4	又
+甜	tiam2
+生	sɛŋ1	文
+生	sɛ̃1	白
+生	tsʰɛ̃1	白
+產	suã3
+甥	sɛŋ1
+用	ioŋ4	文，吳～
+用	ɛŋ6	白
+甫	pʰou3
+甬	ioŋ5
+田	tʰiɛn5	文
+田	tʰɛn5	又，鳳凰下埔音
+田	tsʰan5	訓
+由	iu2
+甲	kaʔ7
+申	sin1
+男	lam2
+界	kai5	文
+界	koi5	白，地名
+畏	ui5
+留	liu2	文
+留	lau2	白
+畜	tʰiok7	文
+畜	tʰɛk7	白
+畝	bou3
+畢	pit7
+畢	pit8	又，～業
+略	liak8
+番	huan1
+畫	uɛ6	名詞
+畫	uɛʔ8	動詞
+異	i4
+當	taŋ1	文
+當	taŋ3	文
+當	tŋ1	白
+當	tŋ3	白
+疆	kiaŋ1
+疊	tiap8	文
+疊	tʰiap8	動詞
+疊	tʰaʔ8	替，量詞
+疏	so1	文
+疏	so5	文
+疏	sɛu1	白
+疑	ɡi2
+疤	pa1
+疥	koi5
+疫	mok8	俗
+疫	mut8	俗，又
+疲	pʰi2
+疵	tsʰɯ1
+疹	tsiɛn3
+疹	tsɛn3	又，鳳凰下埔音
+疼	toŋ5
+疼	tʰiã5	替
+疽	tsu1	俗
+疾	tsit8
+病	pɛ̃6
+症	tsɛŋ5
+痊	tsʰuan2
+痔	tʰi4
+痕	hun2
+痛	tʰoŋ5
+痞	pʰi3	文
+痞	pʰãi3	白
+痣	ki5
+痰	tʰam2
+痱	pui5
+痴	tsʰi1
+痹	pi5
+瘋	huaŋ1
+瘟	un1
+瘡	tsʰŋ1
+瘦	sou5
+瘦	sou3	又
+瘧	ŋiak8
+瘸	kʰuɛ2
+癖	pʰiaʔ7
+癢	iaŋ3	文
+癢	tsiõ4	白
+癩	nai4
+癬	siɛn3
+癬	sɛn3	又，鳳凰下埔音
+癸	kui5
+登	tɛŋ1
+發	huat7
+白	pɛʔ8
+百	pɛʔ7
+皂	tsau4
+的	ti1
+的	tɛk8
+皆	kai1
+皇	huaŋ2
+皇	uaŋ2	又
+皖	uan3
+皮	pʰi2	文
+皮	pʰuɛ2	白
+皺	niau5
+皿	mɛŋ3
+盂	hu2	訓
+盅	tsɛŋ1
+盆	pʰun2
+盈	ioŋ2
+益	iaʔ7
+盒	ap8
+盔	kʰuɛ1
+盜	tau4
+盛	sɛŋ4
+盞	tsuã3
+盟	mɛŋ2
+盡	tsin4
+監	kam1
+監	kam5
+盤	pʰuan2	文
+盤	puã2	白
+盧	lou2
+目	mak8
+盲	maŋ2	新
+盲	mɛŋ2	文
+盲	mɛ̃2	白
+直	tɛk8	文
+直	tit8	白
+相	siaŋ1	文
+相	siaŋ5	文
+相	sio1	白
+相	siõ5	白
+盼	pʰan5
+盾	tun3
+省	sɛ̃3
+眉	bai2
+看	kʰan1	文
+看	kʰan5	文
+看	kʰuã5	白
+看	tʰõi3	訓
+真	tsin1
+眠	min2
+眠	mŋ2	～起，早上
+眨	tsap7
+眩	hiɛn2	文
+眩	hɛn2	又，鳳凰下埔音
+眩	hin2
+眷	kuan5
+眸	moŋ2
+眼	ŋan3	文
+眼	õi3	白，龍～
+眾	tsɛŋ5
+睛	tsɛŋ1
+睜	tsɛŋ1
+睡	sui4
+督	tok7
+睬	tsʰai3
+瞄	miau2	文
+瞄	bio2	白
+瞎	hat7
+瞞	muã2
+瞧	tsʰiau2
+瞪	tɛŋ5
+瞬	sun5
+瞭	liau2
+瞭	liau3
+瞳	tʰoŋ2
+瞻	tsiam1
+瞿	kʰɯ2
+矛	mau2
+矢	si3
+矣	i6
+知	ti1	文
+知	ti5	～識
+知	tsai1	白
+矩	kɯ3
+矬	tsʰo2
+短	to3
+矮	oi3
+矯	kiau3
+石	sioʔ8	～榴
+石	tsioʔ8
+砂	sa1
+砌	kiʔ7	訓
+砍	kʰam3
+研	ŋiɛn1	文
+研	ŋɛn1	又，鳳凰下埔音
+研	ŋiɛn3	文，細看
+研	ŋɛn3	又，鳳凰下埔音
+研	ŋõi3	白
+破	pʰua5
+硝	siau1
+硫	liu2
+硬	ŋɛ̃4
+硯	ĩ6
+碎	tsʰui5
+碑	pi1
+碗	uã3
+碟	tiʔ8
+碧	pʰɛk7
+碩	sɛk7
+確	kʰak7
+碼	bɛ3
+碾	tiɛn3	俗
+碾	tɛn3	又，鳳凰下埔音
+磁	tsʰɯ2
+磕	kʰap7
+磚	tsŋ1
+磨	bo6
+磨	bua2
+磬	kʰɛŋ5
+磷	lin2
+礙	ɡai6
+礦	kʰuaŋ5
+礬	huam5
+示	si6
+社	sia4
+祀	sɯ4
+祈	kʰi2
+祐	iu4
+祖	tsou3
+祝	tsok7
+神	sin2
+祠	sɯ2
+祥	siaŋ2
+票	pʰio5
+祭	tsi5
+禀	pin3
+禁	kim1
+禁	kim5
+禄	lok8
+禍	hua4
+福	hok7
+禦	ɡɯ4
+禧	hi1
+禪	siɛn2
+禪	sɛn2	又，鳳凰下埔音
+禪	siɛn4
+禪	sɛn4	又，鳳凰下埔音
+禮	li3	文，少～
+禮	loi3	白
+禱	tau3
+禹	u3
+禽	kʰim2
+禾	ho2
+禾	ta2	訓
+禿	tʰɛk7
+秀	siu5
+私	sɯ1	文
+私	si1	白，家～
+私	sai1	白
+秉	pɛŋ3
+秋	tsʰiu1
+科	kʰuɛ1
+秒	miau3
+秘	pi5
+租	tsou1
+秤	tsʰin5
+秦	tsʰin2
+秧	iaŋ1	文
+秧	ŋ1	白
+秩	tiɛt7
+秩	tɛt7	又，鳳凰下埔音
+秫	tsut8
+移	i2
+稀	hi1
+程	tʰiã2
+稍	tsʰiau3
+稅	suɛ5
+稗	pʰuɛ̃6
+稚	tsĩ3	訓
+稠	tiu2
+稭	kai1
+種	tsɛŋ3
+種	tsɛŋ5
+稱	tsʰɛŋ1	文
+稱	tsʰɛŋ5	文
+稱	tsʰin5	白
+稷	tsɛk7
+稻	tau4
+稻	tiu4	訓
+稼	kɛ5
+稽	ki1
+稿	ko3
+穀	kok7	文
+穀	kak7	白
+穄	tsi5
+穆	mok8
+積	tsɛk7	文
+積	tsɛʔ7	白
+穎	tʰɛŋ3	俗
+穗	sui6
+穢	uɛ5
+穩	un3
+穴	huat8
+究	kiu5
+穹	kioŋ1
+空	kʰoŋ1	文
+空	kʰaŋ1	白
+空	kʰaŋ5	白
+穿	tsʰuan1	文
+穿	tsʰŋ1	白
+突	tut8
+窄	tsa3
+窒	tiɛt7
+窒	tɛt7	又，鳳凰下埔音
+窖	ka5
+窗	tʰɛŋ1
+窟	kʰut7
+窩	o1
+窮	kʰioŋ2	文
+窮	kɛŋ2	白
+窯	io2
+窺	kui1
+竄	tsʰuan5
+竅	kʰiau5
+立	lip8
+站	tsam4
+竟	kɛŋ3
+章	tsiaŋ1	文
+章	tsiõ1	白
+竣	tsun5
+童	tʰoŋ2
+竭	kiɛt8
+竭	kɛt8	又，鳳凰下埔音
+端	tuan1
+競	kɛŋ4
+竹	tɛk7
+竿	kuã1
+竿	ko1	訓“篙”
+笑	siau5	文
+笑	tsʰio5	白
+笙	sɛŋ1
+笛	tɛk8
+符	hu2
+笨	pun3
+第	ti4	文
+第	tõi4	白
+筅	tsʰõi3
+筆	pit7
+等	tɛŋ3	文
+等	tan3	白
+筋	kɯn1
+筏	huat8
+筐	kʰuaŋ1	文
+筐	kʰɛŋ1	白
+筒	tʰoŋ2	文
+筒	taŋ2	白
+答	tap7
+策	tsʰɛʔ7
+筷	kʰuai5
+箋	tsiɛn1
+箋	tsɛn1	又，鳳凰下埔音
+箍	kʰou1
+箏	tsɛŋ1
+算	suan5	文
+算	sŋ5	白
+管	kuan3	文
+管	kŋ3	白
+箬	dziak8	文
+箬	hioʔ8	白
+箬	haʔ7	替
+箭	tsĩ5
+箱	siõ1
+箸	tɯ6
+節	tsiɛt7	文
+節	tsɛt7	又，鳳凰下埔音
+節	tsoiʔ7	白，節日
+節	tsat7	白
+範	huam4
+篆	tuan4
+篇	pʰiɛn1
+篇	pʰɛn1	又，鳳凰下埔音
+築	tok7
+篡	tsʰuan5
+篤	tok7
+篦	pin5
+篩	sai1	文，～酒
+篩	tʰai1	白
+篷	pʰoŋ2	文
+篷	pʰaŋ2	白
+篾	biʔ8
+簡	kan3
+簫	siau1
+簸	pua5
+簽	tsʰiam1
+簾	liam2
+簿	pʰou4
+籃	lam1	豬～
+籃	nã2	白
+籌	tʰiu2
+籍	tsia4
+籠	loŋ2	文
+籠	loŋ3	文
+籠	laŋ2	白
+籠	lɛŋ2	白，～牀
+籤	tsʰiam1
+籬	li2
+籮	lo2	文
+籮	lua2	白
+米	bi3
+粉	hun3
+粒	liap8
+粕	pʰoʔ-9207
+粗	tsʰou1
+粘	liam1
+粟	tsʰɛk7
+粥	kiok7	俗
+粱	liaŋ2
+粵	uat8
+粹	tsui4
+粽	tsaŋ5
+精	tsɛŋ1	文
+精	tsiã1	白
+糊	hu2	文
+糊	kou2	白
+糍	tsi2
+糕	kau1	文，糟～
+糕	ko1
+糖	tʰŋ2
+糜	mi2	文
+糜	muɛ2	白，粥
+糞	pun5
+糟	tsau1	文
+糟	tso1	鏖～
+糠	kʰaŋ1	文
+糠	kʰŋ1	白
+糧	niõ2
+糴	tiaʔ8
+糶	tʰio5
+系	hi4
+糾	kiu4
+紀	ki3
+紀	ki5
+紂	tiu4
+約	iok7	猜測
+約	iak7	文
+約	ioʔ7	白
+紅	aŋ2
+紋	bun2
+納	nap8
+紐	niu3
+純	sun2
+紗	sa1	文
+紗	sɛ1	白
+紙	tsua3
+級	kʰip7
+紛	hun1
+素	su5	文
+素	sou5	味～
+紡	huaŋ3	文
+紡	pʰaŋ3	白
+索	sok7	文
+索	soʔ7	白
+紫	tsi3
+累	lui3
+累	lui6
+細	soi5
+紹	siau4
+終	tsoŋ1
+組	tsu1
+結	kit7
+結	kat7	白
+絕	tsoʔ8
+絞	ka3
+絡	lok8
+給	kip7
+絨	dzoŋ2
+絮	su5	文
+絮	tsʰɛu5	替
+統	tʰoŋ3
+絲	si1
+綁	paŋ3
+綏	sui2
+經	kɛŋ1	文
+經	kɛ̃1	白，～布
+經	kiã1	白，名詞
+綠	lok8
+綢	tiu2
+維	dzui2
+綱	kaŋ1
+網	maŋ4
+綴	tsʰuat7
+綴	tuɛ5
+綻	tɛŋ4	俗
+綽	tsʰiak7
+綿	miɛn2	文
+綿	mɛn2	又，鳳凰下埔音
+綿	mĩ2	白
+緊	kin3
+緒	su3
+線	suã5
+緝	tsʰip7
+緞	tŋ6
+緣	uan2
+編	pʰiɛn1
+編	pʰɛn1	又，鳳凰下埔音
+編	pĩ1	白
+緩	huan3
+緩	man6	訓“慢”
+緬	miɛn2
+緬	mɛn2	又，鳳凰下埔音
+緬	miɛn3	又
+緬	mɛn3	又，鳳凰下埔音
+緯	ui3
+練	liɛn6
+練	lɛn6	又，鳳凰下埔音
+縊	i5
+縐	niau5
+縛	pak8
+縣	kũi6
+縫	hoŋ2
+縫	pʰoŋ2
+縫	pʰaŋ6
+縮	sok7
+縱	tsoŋ5
+縷	lu3
+總	tsoŋ3	文
+總	tsaŋ3	白
+績	tsɛʔ7
+繁	huan2
+織	tsit7
+繞	dziau5
+繩	sin2
+繪	kuai5
+繫	hi4
+繭	kõi3
+繳	kiau3
+繼	ki5
+續	sok8
+纏	tĩ2
+纓	ɛŋ1
+纔	tsʰai2
+纖	tsʰiam1
+纜	lam3
+缸	kaŋ1	文
+缸	kŋ1	白
+缺	kʰuɛʔ7
+缺	kʰiʔ7
+缽	puaʔ7
+罐	kuan5
+罕	han3
+罩	tsau4
+罪	tsuɛ4
+罪	tso4	白，得～
+置	ti5
+罰	huat8
+署	su3
+罵	mɛ6
+罷	pa4
+羅	lo2
+羈	ki1
+羊	iõ2
+羌	kiaŋ1
+美	mui3
+羔	ko1
+羞	siu1
+群	kʰun2
+羨	iɛn4
+羨	ɛn4	又，鳳凰下埔音
+義	ŋi4
+羹	kɛ̃1
+羽	u3
+翁	oŋ1	文
+翁	aŋ1	白
+翁	ɛŋ1	白，姓氏
+翅	tsʰi5	魚～
+翅	tʰi5
+習	sip8
+翠	tsʰui5
+翰	han2
+翻	huan1
+翼	ɛk8	文
+翼	sit8	白
+耀	iau4	文
+耀	tsʰiõ7	白
+老	lau3	文
+老	lau4	白
+考	kʰau3
+者	tsia3
+而	dzɯ2
+耍	sŋ3	訓“爽”
+耐	nai4
+耕	kɛ̃1
+耗	ho5
+耳	dzɯ3	文
+耳	hĩ4	白
+耶	ia1
+耽	tam1
+耿	kɛŋ3
+聊	liau2
+聖	sɛŋ5	文，～杯
+聖	siã5	白
+聘	pʰɛŋ5	文
+聘	pʰiã5	白
+聚	tsu4
+聞	bun4
+聯	liɛn2
+聯	lɛn2	又，鳳凰下埔音
+聰	tsʰoŋ1
+聲	siã1
+聶	niap7
+職	tsɛʔ7
+聽	tʰɛŋ5
+聽	tʰiã1
+聾	laŋ2
+肄	i5
+肅	sok7
+肆	sɯ5	文
+肆	si5	白
+肇	siau4
+肉	nɛk8
+肉	baʔ7	訓
+肋	lɛk8
+肌	ki1
+肘	tiu3
+肚	tou3
+肚	tou4
+肛	kaŋ1
+肝	kuã1
+股	kou3
+肢	tsĩ1
+肢	ki1	白
+肥	pui2
+肩	kõi1
+肪	huaŋ3
+肯	kʰɛŋ3
+育	iok8
+肴	ŋau2
+肺	hui5
+胃	ui4
+背	puɛ4	文，動詞
+背	puɛ5	文，名詞
+背	pi5	替，動詞
+胎	tʰo1
+胖	pʰua5
+胖	pʰoŋ5
+胚	pʰuɛ1
+胞	pau1
+胡	hu2	文
+胡	hou2	～椒
+胡	ou2	白，姓氏
+胥	su1
+胳	koʔ7
+胸	hɛŋ1
+能	lɛŋ2
+脂	tsĩ1
+脅	hiap8
+脆	tsʰui5
+脆	tsʰui3	又
+脈	mɛʔ8
+脊	tsit7
+脊	tsiaʔ7
+脖	puat8
+脫	tʰut7
+脯	pou3
+脹	tsiaŋ5	文
+脹	tiõ5	白
+脾	pʰi2
+腋	ɛk8
+腌	iam1
+腎	siɛn4
+腎	sɛn4	又，鳳凰下埔音
+腐	hu1
+腐	hu6	又，豆～
+腑	hu3
+腔	kʰiõ1
+腕	uan3
+腡	lo2
+腥	sɛŋ1	文
+腥	tsʰɛ̃1	白
+腥	tsʰɛ̃5	白
+腦	nau3	文
+腦	lo3	白
+腩	lam3
+腫	tsɛŋ3
+腮	sai1	文
+腮	tsʰi1	白
+腰	io1
+腱	kiɛn4
+腱	ɛn4	又，鳳凰下埔音
+腳	kiok7
+腳	kioʔ7
+腳	kʰa1	訓
+腸	tsʰiaŋ2	文
+腸	tŋ2	白
+腹	pak7
+腿	tʰui3
+膏	ko1
+膚	hu1
+膜	moʔ8
+膝	tsʰip7
+膠	ka1
+膨	pʰɛ̃2
+膩	dzɯ4	文
+膩	dzi6	白，小～
+膳	siɛn4
+膽	tã3
+膿	loŋ2	文
+膿	laŋ2	白
+臀	tʰun2
+臀	tiɛn4	俗
+臀	tɛn4	又，鳳凰下埔音
+臂	pi5
+臉	liam3	文
+臉	liɛn3	好～
+臉	lɛn3	又，鳳凰下埔音
+臊	tsʰau5
+臊	tsʰo1
+臍	tsai2
+臓	tsaŋ4
+臘	laʔ8
+臣	tsʰin2
+臥	o5
+臧	tsaŋ1
+臨	lim2
+自	tsɯ6
+臭	tsʰau5
+至	tsi5
+致	ti5
+臺	tʰai2
+臺	tai2	祝英～
+臻	tsin1
+臼	kʰu4
+舀	io3
+舂	tsɛŋ1
+舅	ku4
+與	ɯ3
+興	hɛŋ1
+興	hɛŋ5
+舉	kɯ3
+舊	ku6
+舌	tsiʔ8
+舍	sia5
+舒	su1	文
+舒	tsʰɯ1	白，鋪
+舔	tʰiam3
+舛	tsʰuan3
+舜	sun5
+舞	bu3
+舞	moŋ4	白
+舟	tsiu1
+航	haŋ2
+航	pʰaŋ2	俗
+般	puã1
+舵	tua4
+船	tsun2
+艇	tʰɛŋ3
+艦	lam3
+良	liaŋ2
+艱	kan1
+色	sɛk7
+艷	iam6
+艾	ŋai4	文
+艾	hiã6	白
+芋	ou6
+芍	tsʰiak7
+芒	maŋ2
+芙	pʰu2
+芝	tsɯ1
+芥	kai5	文
+芥	kua5	白，～菜
+芥	kaʔ7	替，～藍，鳳凰音
+芥	kɛʔ7	替，～藍，新豐音
+芫	uan2
+芬	hun1
+芭	pa1
+花	hua1	文
+花	huɛ1	白
+芳	huaŋ1	文
+芳	pʰaŋ1	白，香
+芹	kʰɯn2
+芻	tsʰu1
+芽	ɡɛ2
+苔	tʰai2	文
+苔	tʰi2	白，青～
+苗	miau2	文
+苗	bio2	白
+苛	kʰo1
+苟	kou3
+若	dziak8	文
+若	dzioʔ8	白
+若	na4	白
+苦	kʰou3
+苧	tɛu4
+英	ɛŋ1
+茂	moŋ4
+范	huam4
+茄	kia1
+茄	kio2
+茅	mau2
+茫	maŋ2
+茶	tɛ2
+茸	dzoŋ2
+荀	sun2
+荆	kɛŋ1
+草	tsʰau3	文
+草	tsʰo3
+草	tsʰau3	白
+荒	huaŋ1	文
+荒	hŋ1	白
+荔	li4	文
+荔	nõi6	白，～果，荔枝
+荷	ho2
+荷	o5	又
+荷	o4
+荽	sui1
+莊	tsaŋ1	文，～嚴
+莊	tsŋ1	白
+莓	buɛ2
+莓	m6	覆盆子
+莧	hõi6
+莫	mok8
+莽	maŋ3
+菊	kɛk7
+菌	kʰun3
+菜	tsʰai5
+菩	pʰu2
+華	hua1
+華	hua2
+菱	lɛŋ2
+菲	hui1
+萄	tʰo2
+萌	mɛŋ2
+萬	buan6
+落	lak7	替
+落	loʔ8
+落	lauʔ8	掉落
+葉	iap8
+葉	hiap8	又
+葉	hioʔ8	訓“箬”
+葉	haʔ7	訓
+著	tu5
+著	tioʔ7
+著	tioʔ8	正確
+著	toʔ8	～火
+葛	kuaʔ7
+董	toŋ3	文
+董	taŋ3	白，姓氏
+葦	ui3
+葬	tsŋ5
+葱	tsʰaŋ1
+葵	kʰui2	文
+葵	kuɛ2	～頭扇
+葷	hun1
+蒓	sun2
+蒙	moŋ2
+蒜	sŋ5
+蒲	pʰu2
+蒸	tsɛŋ1
+蒹	kiam1
+蒼	tsʰaŋ1
+蒿	hau1	文
+蒿	o1	白
+蓄	tʰiok7
+蓄	hak7	購置
+蓋	kai5	文
+蓋	kua5	白
+蓑	so1
+蓬	pʰoŋ2
+蓮	liɛn2	文
+蓮	lɛn2	又，鳳凰下埔音
+蓮	nõi2	白
+蔔	pok8
+蔗	tsia5
+蔡	tsʰua5
+蔣	tsiõ3
+蔫	iɛn1
+蔫	ɛn1	又，鳳凰下埔音
+蔬	so1
+蔭	im5
+蔻	kʰou5
+蔽	pi6
+蕊	lui3
+蕩	taŋ4	文
+蕩	tŋ4	白
+蕭	siau1
+薄	poʔ8
+薅	hau1	文
+薅	kʰau1	白
+薇	mui2
+薑	kiõ1
+薛	siʔ7
+薦	tsin5
+薩	sat7
+薪	tsin2
+薯	tsɯ2
+薰	hɯn1	文
+薰	hun1
+薺	tsʰi2
+薺	tsĩ2	～葱，荸薺
+藉	tsia4
+藍	lam2	文
+藍	nã2	白，姓氏
+藏	tsʰaŋ2
+藏	tsaŋ4
+藐	miau3
+藕	ŋou3	文
+藕	nau4	白，新豐音
+藕	kau4	白，鳳凰音
+藝	ɡoi6
+藤	tin2
+藥	iak8	文，芍～
+藥	ioʔ8	白
+藩	pʰuan1
+藹	ai3
+藿	kʰak7
+蘇	sou1
+蘭	lan2
+蘸	tsam5
+蘿	lo2
+虎	hu1	馬～
+虎	hõu3
+虐	ŋiak8
+虔	kʰiɛn1
+虔	kʰɛn1	又，鳳凰下埔音
+處	tsʰu5
+虛	hɯ1
+虜	lu3
+虞	ŋo2
+號	hau1	文
+號	ho6	白
+虧	kʰui1
+虱	sat7
+虹	hoŋ2	文
+虹	kʰɛŋ4	替
+蚊	bun1
+蚌	hoŋ3
+蚣	kaŋ1
+蚤	tsau3
+蚶	ham1
+蛆	tsu1	俗
+蛇	tsua2
+蛋	tan5
+蛙	ua1
+蛛	tu1
+蛤	kap7
+蛤	haʔ7	俗
+蛾	ŋo2
+蜀	tsuak8
+蜀	dzuak8	又
+蜀	tsek8	一
+蜂	pʰaŋ1
+蜓	tʰɛŋ2
+蜜	mit8	文
+蜜	bit8
+蜻	tsʰɛ̃1
+蝎	hiɛt7
+蝎	hɛt7	又，鳳凰下埔音
+蝎	hat7
+蝕	siʔ8
+蝗	huaŋ2
+蝙	pʰiɛn1
+蝙	pʰɛn1	又，鳳凰下埔音
+蝙	piɛn3	又
+蝙	pɛn3	又，鳳凰下埔音
+蝠	hok7
+蝦	hɛ2
+蝶	tiap8
+蝸	o1	俗
+蝸	ua1	俗，又
+螂	laŋ2
+融	ioŋ2
+螢	ioŋ2
+螳	tʰaŋ2
+螺	lo2
+蟀	sut7
+蟄	tɛk8
+蟆	mo1	俗
+蟬	siɛn2
+蟬	sɛn2	又，鳳凰下埔音
+蟲	tʰaŋ2
+蟶	tʰan1
+蟹	hoi4
+蟻	hia4
+蠅	sin2
+蠔	hau2	文
+蠔	o2	白
+蠟	laʔ8
+蠢	tsʰun3
+蠶	tsʰõi2
+蠻	man2
+血	huɛʔ7
+行	haŋ2
+行	hɛŋ2	文，～李
+行	hɛŋ4	文
+行	kiã2	白
+術	sut8
+街	koi1
+衙	ɡɛ2
+衛	uɛ4
+衝	tsʰoŋ1
+衝	tsʰioŋ5	替
+衡	hɛŋ2
+衣	i1	文
+衣	ui1	白
+表	piau3	文
+表	pio3	白
+衰	suɛ1
+袁	uan2
+袋	to6
+袍	pʰau2
+袖	siu5
+被	pi4	文
+被	pʰuɛ4	白，名詞
+袱	hok8
+裁	tsʰai2
+裂	liʔ8
+裏	li3	文
+裏	lai4	白
+裕	dzu4
+裙	kun2
+補	pou3
+裝	tsuaŋ1	文
+裝	tsŋ1	白
+裳	siaŋ2
+裸	lo3
+裹	kuɛ3
+製	tsi5
+複	hok7
+褒	pʰau1
+褚	su3
+褥	dzok8
+褪	tʰo5	俗
+褪	tʰŋ5
+褲	kʰou5
+褻	siɛt7
+褻	sɛt7	又，鳳凰下埔音
+襄	siaŋ1
+襖	o3
+襟	kim1
+襪	ɡuɛʔ8
+襯	tsʰin5
+襲	sip8
+西	si1	文
+西	sai1	白
+要	iau1
+要	iau5
+覆	hok8	文
+覆	pʰak7	白
+覆	pʰiu5	白
+覈	hɛk7
+見	kiɛn5
+見	kɛn5	又，鳳凰下埔音
+見	kĩ5
+規	kui1
+覓	mit8
+視	si4
+視	si6
+親	tsʰin1
+覺	kak7
+覽	lam3
+觀	kuan1
+觀	kuan5
+角	kak7
+解	hai4	文
+解	koi3	白
+解	koi5	白
+解	oi4	白，會
+觸	tsʰok7
+言	ŋan2
+訂	tɛŋ5
+訃	hu5
+計	ki5	文，夥～
+計	koi5	白
+訊	sin5
+討	tʰo3
+訓	hun5
+記	ki5
+訛	ho5
+訝	ɡia2
+訟	soŋ4
+訣	kuat7
+訪	huaŋ3
+設	siɛt7
+設	sɛt7	又，鳳凰下埔音
+許	hɯ3
+許	kʰou3	白，姓氏
+訴	su5
+診	tsiɛn3
+診	tsɛn3	又，鳳凰下埔音
+詐	tsa5
+詔	dziau5
+詔	tsiau3
+評	pʰɛŋ2
+詞	sɯ2
+詢	sun2
+詣	tsi3	俗
+試	tsʰi5
+詩	si1
+詭	kui3
+話	uɛ6
+該	kai1
+詳	siaŋ2
+詼	kʰuɛ1
+誅	tu1
+誌	tsi5
+認	dzin6
+誓	si6	文
+誓	tsua6	白，咒～
+誕	tan5
+誘	iu3
+語	ɡɯ3
+誠	sɛŋ2
+誣	bu2
+誤	ɡou6
+誦	soŋ4
+說	suɛʔ7
+説	suɛʔ7
+誰	sui2
+課	kʰuɛ5
+誼	ŋi5
+調	tʰiau2
+調	tiau6
+諄	tun1
+談	tʰam2
+請	tsʰiã3
+諒	liaŋ4
+論	lun4
+諜	tiap8
+諧	hai2
+諫	kam5
+諱	hui5
+諳	am1
+諷	hoŋ5
+諷	hoŋ3
+諸	tsu1
+諺	ŋan4
+諾	nap8
+謀	moŋ2
+謂	ui4
+謂	ui5
+謊	huaŋ1
+謎	mi4
+謗	paŋ4
+謙	kʰiam1
+講	kaŋ3	文
+講	koŋ3
+謝	sia6	文
+謝	tsia6	白，姓氏
+謠	iau2
+謬	miu4
+謹	kɯn3
+證	tsɛŋ5
+譏	ki1
+識	sɛk7
+譚	tʰam2
+譜	pʰou3
+警	kɛŋ4
+譬	pʰi5
+譯	ɛk8
+議	ŋi3
+護	hu4
+譽	ɯ4
+讀	tʰak8
+變	piɛn5	文
+變	pɛn5	又，鳳凰下埔音
+變	pĩ5	白
+讎	tsʰiu2
+讒	tsʰam2
+讓	dziaŋ4	文
+讓	niõ6	白
+谷	kok7
+豁	huaʔ7
+豁	kʰuaʔ7	又
+豆	tau6
+豈	kʰa3
+豉	si6
+豌	uan1
+豎	su4
+豐	hoŋ1
+豕	si3
+豚	tʰun2
+象	siaŋ4	文
+象	tsʰiõ4	白
+豪	hau2
+豫	ɯ4
+豬	tɯ1
+豹	pa5
+豺	tsʰai2
+貂	tiau1
+貌	mau4
+貓	ŋiau1
+貝	puɛ4
+貝	puɛ5	寶～
+貞	tsɛŋ1
+負	hu4
+財	tsʰai2
+貢	koŋ5
+貧	pʰin2
+貧	pan2	白，～懶
+貨	huɛ5
+販	huan5
+貪	tʰam1
+貫	kuan5
+責	tsɛʔ7
+貯	tɛu3
+貳	dzi4	文
+貳	dzi6
+貴	kui5
+貶	pʰiɛn3
+貶	pʰɛn3	又，鳳凰下埔音
+貶	pʰin3
+買	buɛ3
+貸	tai5
+費	hui5	文
+費	pi5	白，姓氏
+貼	tʰiap7	文
+貼	tʰoiʔ7	白
+貽	i2
+貿	moŋ5
+賀	ho6
+賂	lu4
+賃	dzim4
+賄	iu4	俗
+資	tsɯ1
+賈	kia3
+賊	tsʰat8
+賓	pin1
+賜	sɯ5
+賞	siõ5
+賠	puɛ2
+賢	hiɛn2
+賢	hɛn2	又，鳳凰下埔音
+賣	buɛ6
+賤	tsuã6
+賦	hu5
+質	tsioʔ7
+賬	tiõ5
+賭	tu3
+賴	lai4	文
+賴	nai4	文
+賴	lua6	白
+賺	tsuan5	文
+賺	tã6	白，錯誤
+賺	tʰan5	訓“趁”
+購	kou5
+賽	sai5
+贅	tsui4
+贈	tsan6
+贊	tsan5
+贍	tsiam1
+贏	iã2
+贓	tsaŋ1
+贖	sok8
+贛	koŋ5
+赤	tsʰiaʔ7
+赦	sia5
+赫	hɛʔ7
+走	tsau3
+赴	hu5
+起	kʰi3
+趁	tsiɛn3	俗
+趁	tsɛn3	又，鳳凰下埔音
+趁	tʰan5	白，賺
+超	tʰiau5
+越	uat8
+趕	kuã3
+趙	tio4
+趟	tʰaŋ3
+趣	tsʰu5
+趨	tsʰu1
+足	tsok7
+趾	tsi3
+跋	puat8
+跌	tiɛt7
+跌	tɛt7	又，鳳凰下埔音
+跌	tiɛt8	又
+跌	tɛt8	又，鳳凰下埔音
+跑	pʰau3
+距	kɯ4
+跟	kɯn1
+跡	tsiaʔ7
+跨	kʰua1
+跪	kũi4
+路	lou6
+跳	tʰiau5
+跳	tio2
+踏	taʔ8
+踐	tsiɛn3
+踐	tsɛn3	又，鳳凰下埔音
+踢	tʰat7
+蹄	toi2
+蹊	kʰi1	俗
+蹤	tsoŋ1
+蹲	tsun1
+蹲	tun1
+蹺	kʰiau1
+躁	tsʰau5
+躍	iak7
+身	sin1
+躬	kioŋ1
+躲	to2
+躺	tʰaŋ3
+車	tsʰia1
+車	kɯ1
+軋	tsat7	俗
+軋	kʰoiʔ7	替
+軌	kʰui3
+軍	kun1
+軒	hɯn1
+軛	ɛʔ7
+軟	nŋ3
+軸	tɛk8
+軻	kʰo1
+較	ka5
+載	tsai3
+載	tsai5
+載	tsai6
+輔	hu4
+輕	kʰin1
+輕	kʰia1	～薄
+輛	liaŋ3
+輜	tsɯ1
+輝	hui1
+輟	tsʰuat7
+輦	lin3
+輩	puɛ5
+輪	lun2
+輯	tsʰip7
+輸	su1
+輻	pak7
+轄	hat7
+轉	tsuan3	文
+轉	tŋ3	白
+轍	tʰiɛt7
+轍	tʰɛt7	又，鳳凰下埔音
+轎	kio6
+轟	hoŋ1
+辛	sin2
+辜	ku1	文
+辜	kou1
+辟	pʰɛk7
+辣	luaʔ7
+辣	luaʔ8
+辦	pan6	文
+辦	pʰuɛ̃6	白
+辨	piɛn4
+辨	pɛn4	又，鳳凰下埔音
+辭	sɯ2	文
+辭	si2	白
+辮	pĩ4	動詞
+辮	pĩ1	名詞
+辯	piɛn4
+辯	pɛn4	又，鳳凰下埔音
+辰	sin2
+辱	dzok8
+農	loŋ2
+迂	u1
+迄	ŋɯt7
+迅	sin5
+迎	ŋɛŋ2	文
+迎	iã2	白
+近	kɯn4
+迥	kɛŋ3
+迫	pɛk7
+迭	tiɛt7
+迭	tɛt7	又，鳳凰下埔音
+述	sut8
+迷	mi2
+追	tui1
+退	tʰo5
+送	saŋ5
+逃	to2
+逆	ŋɛk8
+透	tʰau5
+逐	tok8
+途	tʰu2
+逗	tau6
+通	tʰoŋ1	文
+通	tʰaŋ1	白
+通	tʰaŋ5	替
+逛	kuaŋ4
+逝	si6	文
+逝	tsua6	白，次
+逞	tʰɛŋ3
+速	sok7
+造	tsau4
+逢	hoŋ2
+連	liɛn2
+連	lɛn2	又，鳳凰下埔音
+進	tsin5
+逵	kʰui2
+逸	it8
+逼	pɛk7
+逾	dzu2
+遁	tun4
+遂	sui2
+遇	ŋo4
+運	un6
+遍	piɛn5	文
+遍	pɛn5	又，鳳凰下埔音
+遍	pʰiɛn5	文，又，普～
+遍	pʰɛn5	又，鳳凰下埔音
+遍	pin5
+過	kua1
+過	ua1	又
+過	kua5	重～，再～
+過	ko5	重～，再～
+過	kuɛ5	白
+遐	hia2
+道	tau4
+達	tat8
+違	ui2
+遜	sun5
+遞	ti2
+遞	ti4
+遠	iɛn3	文
+遠	ɛn3	又，鳳凰下埔音
+遠	hŋ4	白
+遣	kʰiɛn3
+遣	kʰɛn3	又，鳳凰下埔音
+適	sɛk7
+遭	tsau1
+遮	tsia1
+遲	tsʰi2
+遵	tsun1
+遷	tsʰiɛn1
+遷	tsʰɛn1	又，鳳凰下埔音
+選	suan3
+遺	dzui2
+遼	liau2
+遽	kɯ4
+避	pi6
+邀	hiau1
+邀	kiau1	帶領，鳳凰音
+邀	kʰiau1	帶領，新豐音
+邁	mai4
+還	huan2	文
+還	hõi2	白，動詞
+邊	piɛn1	文
+邊	pɛn1	又，鳳凰下埔音
+邊	pĩ1	白
+邑	ip7
+邦	paŋ1
+邪	sia2
+邯	ham2
+邵	siau4
+郁	hiok7
+郊	kau1
+郎	laŋ2	文
+郎	nŋ2	白
+郡	kun4
+部	pou4
+郭	kuɛʔ7
+郵	iu2
+都	tou1
+都	to1	口語
+鄂	ŋak8
+鄉	hiaŋ1	文
+鄉	hiõ1	白
+鄒	tsou1
+鄙	pʰi3
+鄧	tɛŋ4
+鄭	tɛ̃6
+鄰	lin2
+酉	iu3
+酌	tsiak7
+配	pʰuɛ5
+酒	tsiu3
+酣	ham1
+酥	sou1
+酪	lok8
+酬	tsʰiu2
+酵	kã5
+酷	kʰok7
+酸	sŋ1
+醇	sun2
+醉	tsui5
+醋	tsʰou5
+醒	sɛŋ3	文，～定
+醒	tsʰɛ̃3	白
+醜	tsʰiu2
+醜	tʰiu2	俗
+醫	ui1
+醬	tsiõ5
+釀	dziaŋ3
+采	tsʰai3
+釋	sɛk7
+里	li3
+重	toŋ4	文
+重	tɛŋ2	白
+重	taŋ4	白
+野	ia3
+量	liaŋ2	文
+量	liaŋ4	文
+量	niõ2	白
+金	kim1
+釘	tɛŋ1
+釘	tɛŋ5
+釜	hu3
+針	tsam1
+釣	tiõ5
+釵	tʰoi1
+鈍	tun4
+鈔	tsʰau1
+鈞	kɯn1
+鈴	lɛŋ1
+鉗	kʰiam2	文
+鉗	kĩ2	白，鉄～
+鉗	kʰĩ2	白，火～
+鉛	in2
+鉤	kau1
+鉸	ka1
+銀	ŋɯn2
+銃	tsʰɛŋ5
+銅	taŋ2
+銘	mɛŋ2
+銜	ham2	文
+銜	kã2	白
+銷	siau1
+銼	tsʰo5
+鋒	hoŋ1
+鋤	tsʰo2	文
+鋤	tɯ2	～頭
+鋤	tʰɯ2	～草
+鋪	pʰou1
+鋪	pʰou5
+鋭	dzuɛ4
+鋸	kɯ5
+鋼	kŋ5
+錄	lok8
+錐	tsui1
+錘	tui2
+錘	tʰui2
+錠	tɛŋ4
+錢	tsʰiɛn2	文
+錢	tsʰɛn2	又，鳳凰下埔音
+錢	tsĩ2	白
+錦	kim3
+錫	siaʔ7
+錯	tsʰo5
+錶	pio1
+鍋	uɛ1
+鍍	tou6
+鍛	tuan5
+鍪	bau2
+鍵	kiɛn4
+鍵	ɛn4	又，鳳凰下埔音
+鎖	so3
+鎮	tin5
+鏟	tsʰan3
+鏡	kiã5
+鐘	tsɛŋ1
+鐮	liam2
+鐲	tsʰok7	俗
+鐵	tʰiʔ7
+鐸	tak8
+鑄	tsu5
+鑊	uak8
+鑒	kam5
+鑲	siaŋ1	文
+鑲	siõ1	白
+鑷	niap7
+鑼	lo2
+鑽	tsŋ5
+鑿	tsʰak8
+長	tsʰiaŋ2	文
+長	tsiaŋ3	文
+長	tiõ3	白
+長	tŋ2	白
+門	mŋ2
+閂	tsʰuã5
+閃	siam3
+閉	pi6
+開	kʰai1	文
+開	kʰui1	白
+閏	dzun4
+閒	õi2
+間	kan1	文
+間	kõi1	白
+間	kõi5	白
+閘	tsaʔ8
+閣	koʔ7
+閨	kui1
+閩	man2
+閲	luat7
+閹	iam1
+閻	ŋiam2
+闊	kʰuaʔ7
+闕	kʰuɛʔ7
+關	kuan1	文
+關	kuɛ̃1	白
+闢	pʰɛk7
+阜	hu4
+阮	ŋuan3
+防	huaŋ2
+阻	tso3
+阿	o1	文
+阿	a1
+陀	tʰo2
+附	hu5
+陋	lou4
+陌	mit8
+降	haŋ2	文
+降	kaŋ5	文
+降	koŋ5	～頭咒
+限	han4
+陛	pi4
+陝	siam3
+陡	tau3
+院	ĩ6
+陣	tin6	文
+陣	tsun6	白，時～
+陣	tsun2	白，又
+除	tɯ2
+陪	puɛ2
+陰	im1
+陳	tʰin2	文
+陳	tan2	白，姓氏
+陵	lɛŋ2
+陶	tʰau2
+陷	ham6
+陸	lok8	文
+陸	lɛk8	白
+陽	iaŋ2	文
+陽	iõ2	白，地名
+隆	loŋ2
+隊	tui6
+隍	huaŋ2	文
+隍	ŋ2	白
+階	kai1
+隔	kɛʔ7
+隕	un4
+隘	ai3
+隙	kʰiaʔ7
+際	tsi5
+障	tsiaŋ5
+隧	sui6
+隨	sui2
+險	hiam3
+隱	un3
+隴	loŋ3
+隴	lɛŋ3
+隸	ti4
+隻	tsiaʔ7
+雀	tsʰiak7	文
+雀	tsiaʔ7	白，麻～
+雁	ŋan4
+雄	hioŋ2
+雅	ŋia3
+集	tsip8
+雇	kou5
+雌	tsʰɯ2
+雍	ioŋ1
+雕	tiau1
+雖	sui1
+雙	saŋ1
+雛	tsʰu1
+雜	tsap8
+雞	koi1
+離	li2
+離	li6
+難	lan2
+難	lan6
+雨	u3	文，節氣
+雨	hou4	白
+雪	soʔ7
+雲	un2	地名
+雲	hun2	白
+零	lɛŋ2	文
+零	lan2	白
+雷	lui2
+雹	pʰak8
+電	tiɛn4
+電	tɛn4	又，鳳凰下埔音
+需	su1
+霄	siau1	文
+霄	sio1	白，地名
+震	tsin3
+霉	buɛ2
+霍	kʰak7
+霎	siap7
+霜	sŋ1
+霞	hia2
+霧	bu6
+露	lou5
+露	lou6	名詞
+霸	pa5
+霹	pʰɛk7
+靄	ai3
+靈	lɛŋ2
+青	tsʰɛ̃1
+靜	tsɛ̃4
+非	hui1
+靠	kʰau5	文
+靠	kʰo5
+靠	kou4	訓“怙”
+靡	mi2
+面	min6
+靨	iap7
+革	kɛk7
+靴	hia1
+鞋	oi2
+鞍	uã1
+鞏	kʰioŋ3
+鞘	siau1
+鞭	piɛn1
+鞭	pɛn1	又，鳳凰下埔音
+韌	dzim3
+韌	dzun6
+韓	han2
+韭	ku3
+音	im1
+韶	siau4
+韻	un4
+響	hiaŋ5
+頂	tɛŋ3
+頃	kʰɛŋ3
+項	haŋ4
+順	sun4
+須	su1
+頌	soŋ4
+預	ɯ4
+頑	ŋuan3
+頑	ŋũi2	麻痹
+頒	pan1
+頓	tun4	文
+頓	tun5	動詞
+頓	tŋ5	白
+頗	pʰo3	文
+頗	pʰuã3	白
+領	niã3
+頭	tʰau2
+頸	kɛ̃5
+頻	pʰin2
+頽	tʰuɛ2
+顆	kʰo3
+題	toi2
+額	ɡiaʔ8	名額
+額	hiaʔ8
+顏	ŋuan2
+顏	ŋan5
+顏	hiã2	姓氏
+願	ŋuan4
+顛	tiɛn1	文
+顛	tin1	又，鳳凰下埔音
+顛	tin1	～倒
+類	lui6
+顧	ku5	文
+顧	kou5
+顫	tsiɛn5
+顫	tsɛn5	又，鳳凰下埔音
+顯	hiɛn3
+顯	hɛn3	又，鳳凰下埔音
+風	hoŋ1	文
+風	huaŋ1	白
+飄	pʰiau1
+飈	pʰiau1	文
+飈	pio1	白
+飛	hui1	文
+飛	puɛ1	白
+食	sit8
+食	tsiaʔ8
+飢	ki1
+飩	tʰun1
+飫	ɯ5
+飯	huan4	文
+飯	huam4	文，又
+飯	pŋ6	白
+飲	im3	文
+飲	am3	白
+飼	sɯ4	文
+飼	tsʰi6	白
+飽	pa3
+飾	sɛk7
+餃	kiau3
+餅	piã3
+餉	hiaŋ3	俗
+養	iaŋ3	文
+養	iõ3	白
+餐	tsʰan1
+餒	nuɛ3
+餓	ɡo6
+餘	ɯ2
+餛	hun2
+館	kuan3
+饅	muan4
+饅	man4	又
+饑	ki1
+饒	dziau2	文
+饒	dzio2	白，地名
+饞	tsʰam2
+首	siu3
+香	hiaŋ1	文
+香	hiõ1	白
+馨	hɛŋ1
+馬	ma1	～虎
+馬	ma3	文，～上
+馬	bɛ3	白
+馭	ɡɯ4
+馮	paŋ2
+馱	tʰo2
+馳	tsʰi2
+駁	poʔ7
+駐	tsu4
+駒	kʰu1
+駕	kɛ5
+駛	sai3
+駝	tʰoʔ8
+駭	hai4
+駱	loʔ8
+騎	kʰia2
+騙	pʰiɛn5	文
+騙	pʰɛn5	又，鳳凰下埔音
+騙	pʰin5	口語
+騰	tʰɛŋ2
+騷	sau1
+騾	lo2
+驅	kʰu1
+驕	kiau1
+驗	ŋiam6
+驚	kɛŋ1	文，～蟄
+驚	kiã1	白
+驟	tsou4
+驢	lɯ2
+骨	kut7
+骯	aŋ1
+髒	tsaŋ1
+髓	tsʰuɛ3
+體	tʰi3	文
+體	tʰõi3	白
+高	kau1	文
+高	ko1
+髮	huat7
+鬃	tsaŋ1
+鬆	soŋ1	文
+鬆	saŋ1	白
+鬍	hou2
+鬚	tsʰiu1
+鬥	tou5	文
+鬥	tau5	白
+鬧	nau4	文
+鬧	nau6	文
+鬧	lau6	白，～熱
+鬮	kʰau1
+鬱	ut7
+鬼	kui3
+魁	kʰuɛ2
+魂	hun2
+魄	pʰɛk7
+魏	ŋui6
+魔	mo1
+魔	mo2	又
+魚	hɯ2
+魯	lu3
+鮎	liam2
+鮑	pau4
+鮮	siɛn3
+鮮	sɛn3	又，鳳凰下埔音
+鮮	tsʰĩ1
+鯉	li3
+鯊	sua1
+鯨	kʰɛŋ2
+鯽	tsit7
+鰓	sai1	文
+鰓	tsʰi1	白
+鰥	kuan1
+鰾	pʰio4
+鱉	piʔ7
+鱗	lin2	文
+鱗	lan2	白
+鱷	ŋak8
+鳥	tsiau3
+鳳	hoŋ4
+鳴	mɛŋ2
+鴉	a1
+鴛	uan1
+鴦	iõ1
+鴨	aʔ7
+鴻	hoŋ2
+鴿	kap7
+鵝	ɡo2
+鵡	bu3
+鵲	tsʰiak7
+鶯	ɛŋ1
+鶴	hoʔ8
+鷹	ɛŋ1
+鸚	ɛŋ1
+鸞	luan2
+鹵	lou3
+鹵	lou4
+鹹	kiam2
+鹽	iam2
+鹿	tɛk8
+麗	li4
+麗	li2
+麥	bɛʔ8
+麵	mĩ6
+麻	ba2
+麻	mua2	白
+麾	hui1
+黃	huaŋ2	文
+黃	ŋ2	白
+黍	siu3
+黎	li2	文
+黎	loi2	白，姓氏
+黏	liam1	文
+黏	liam2
+黑	hɛk7
+默	mit8
+點	tiam3
+黨	taŋ3
+鼎	tiã3
+鼓	kou3
+鼠	tsʰɯ3
+鼻	pʰĩ6
+鼾	huã2
+齊	tsʰi2	文
+齊	tsoi2	白
+齋	tsɛ1
+齒	tsʰi3	文，不～
+齒	kʰi3	白
+齦	kʰɯn3
+齦	ŋɯn2
+龍	lɛŋ2
+龐	pʰaŋ2
+龜	ku1

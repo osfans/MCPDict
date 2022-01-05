@@ -11,4 +11,5 @@ class 字表(表):
 	ybTrimSpace = False
 	
 	def parse(self, fs):
-		return fs[0], "\t".join(fs[1:])
+		fq = fs[1].split(" ")[0]
+		return fs[0], fq, "\t".join(fs[2:])
