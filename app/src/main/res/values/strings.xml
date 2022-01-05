@@ -260,6 +260,7 @@
         <item>吳語太湖片</item>
         <item>吳語毗陵小片</item>
         <item>吳語蘇滬嘉小片</item>
+        <item>吳語甬江小片</item>
         <item>吳語台州片</item>
         <item>吳語上麗片</item>
         <item>吳語甌江片</item>
@@ -271,6 +272,8 @@
         <item>湘語</item>
         <item>平話和土話</item>
         <item>鄉話</item>
+        <item>鄉話麻高片</item>
+        <item>鄉話白八片</item>
         <item>閩語</item>
         <item>閩南語</item>
         <item>閩南語漳泉片</item>
@@ -283,7 +286,7 @@
         <item>""</item>
         <item>""</item>
         <item>"3"</item>
-        <item>cmn_|cmn_jil_jn|cmn_zho_xa|cmn_ly_yc|cmn_xn_xs_mc_jwyj|cmn_jh_hc_yz|cjy_db_dt|wuu_th_shj_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_cs|yue_hk|nan_zq_tw|cdo_nd|mnp_jo|wxa_ylmxp</item>
+        <item>cmn_|cmn_jil_jn|cmn_zho_xa|cmn_ly_yc|cmn_xn_xs_mc_jwyj|cmn_jh_hc_yz|cjy_db_dt|wuu_th_shj_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_cs|yue_hk|nan_zq_tw|cdo_nd|mnp_jo|wxa_mg_ylmxp</item>
         <item>och_.+|ltc_.+</item>
         <item>cmn_jil_.+</item>
         <item>cmn_zho_.+</item>
@@ -302,6 +305,7 @@
         <item>wuu_th_.+</item>
         <item>wuu_th_pl_.+</item>
         <item>wuu_th_shj_.+</item>
+        <item>wuu_th_yj_.+</item>
         <item>wuu_tz_.+</item>
         <item>wuu_sl_.+</item>
         <item>wuu_oj_.+</item>
@@ -313,6 +317,8 @@
         <item>hsn_.+</item>
         <item>xxx_.+|csp_.+</item>
         <item>wxa_.+</item>
+        <item>wxa_mg_.+</item>
+        <item>wxa_bb_.+</item>
         <item>nan_.+|cdo_.+|mnp_.+</item>
         <item>nan_.+</item>
         <item>nan_zq_.+</item>

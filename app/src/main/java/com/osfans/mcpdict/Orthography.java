@@ -332,7 +332,7 @@ public class Orthography {
             // Split initial and final
             String init = null, fin = null;
             boolean extraJ = false;
-            int p = s.indexOf('0');
+            int p = s.indexOf('\'');
             if (p >= 0) {               // Abnormal syllables containing apostrophes
                 init = s.substring(0, p);
                 fin = s.substring(p + 1);

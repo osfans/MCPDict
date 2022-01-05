@@ -30,7 +30,9 @@ class 字表(表):
 	def parse(self, fs):
 		hz = fs[0]
 		js = fs[3]
+		if js == "[同上]": js = "同上"
 		if "上同" in js: js = js.replace("上同", "同" + self.last)
+		elif "同上" in js: js = js.replace("同上", "同" + self.last)
 		else: self.last = hz
 		py = self.pq[fs[1]]
 		return hz, py, js
