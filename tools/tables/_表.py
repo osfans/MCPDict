@@ -171,7 +171,7 @@ class 表:
 	def write(self, d):
 		self.patch(d)
 		t = open(self.tpath, "w")
-		print(f"#漢字\t音標\t解釋\t#{self.head}", file=t)
+		print(f"#漢字\t音標\t解釋#{self.head}", file=t)
 		for hz in sorted(d.keys()):
 			pys = d[hz]
 			hz = self.kCompatibilityVariants.get(hz, hz)
@@ -198,8 +198,7 @@ class 表:
 					yb = yb.lower().replace("g", "ɡ")
 					if self.ybTrimSpace:
 						yb = yb.replace(" ", "")
-				if js:
-					yb = f"{yb}\t{js}"
+				yb = f"{yb}\t{js}"
 				yb = self.norm(yb)
 				print(f"{hz}\t{yb}", file=t)
 		t.close()
