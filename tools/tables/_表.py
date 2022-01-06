@@ -48,7 +48,6 @@ class 表:
 	_time = os.path.getmtime(__file__)
 	_file = None
 	_sep = None
-	_color = None
 	_lang = None
 	_city = None
 	tones = None
@@ -64,12 +63,10 @@ class 表:
 	jointer = ","
 	count = 0
 
-	@property
-	def color(self):
-		if self._color: return self._color
-		if self.isDict(): return "#1E90FF"
-		if self.isOldChinese(): return "#4D4D4D"
-		f = self.key
+	def getColor(self, f):
+		if f == "hz": return "#9D261D"
+		if "_" not in f: return "#1E90FF"
+		if f.startswith("ltc_") or f.startswith("och_"): return "#4D4D4D"
 		if f.startswith("cjy_"): return "#00008B"
 		if f.startswith("cmn_jh_"): return "#800080"
 		if f.startswith("cmn_jil_"): return "#A60918"
@@ -87,7 +84,13 @@ class 表:
 		if f.startswith("hak_"): return "#008000"
 		if f.startswith("wxa_"): return "#E7348D"
 		if f.startswith("yue_"): return "#FFAD00"
-		return "#000000"
+		if f.startswith("csp_"): return "#FF9900"
+		if f.startswith("xxx_"): return "#E600B1"
+		return "#8B0000"
+
+	@property
+	def color(self):
+		return ",".join(map(self.getColor, self.key.split(",")))
 
 	@property
 	def spath(self):
@@ -115,7 +118,7 @@ class 表:
 		return self.__module__.split(".")[-1]
 	
 	def __str__(self):
-		return self.key
+		return self.key.split(",")[0]
 
 	@property
 	def lang(self):
@@ -130,7 +133,7 @@ class 表:
 		
 	@property
 	def head(self):
-		return self.key, self.lang, self.city, self.color, self.site, self.url, self.desc, self.tones
+		return str(self), self.lang, self.city, self.color, self.site, self.url, self.desc, self.tones
 
 	def outdated(self):
 		classfile = inspect.getfile(self.__class__)
@@ -204,7 +207,7 @@ class 表:
 		t.close()
 
 	def isLang(self):
-		return "_" in self.key
+		return "_" in str(self)
 
 	def isDict(self):
 		return not self.isLang()
@@ -241,7 +244,7 @@ class 表:
 		for hz, ybs in d.items():
 			if hz not in dicts:
 				dicts[hz] = {"hz": hz}
-			dicts[hz][self.key] = self.jointer.join(ybs)
+			dicts[hz][str(self)] = self.jointer.join(ybs)
 	
 	def parse(self, fs):
 		return tuple(fs[:3])

@@ -1,8 +1,8 @@
-#漢字	音標	解釋#('cmn_xn_hg_xhdz', '新晃凳寨話', '新晃凳寨', '#C600FF', None, None, '版本：2022-01-04<br>來源：<u>拜振华</u>', '13 1 1a 陰平 ꜀,11 2 1b 陽平 ꜁,21 3 2 上 ꜂,,45 5 3 去 ꜄')
+#漢字	音標	解釋#('cmn_xn_hg_xhdz', '新晃凳寨話', '新晃凳寨', '#C600FF', None, None, '版本：2022-01-06<br>來源：<u>拜振华</u>', '13 1 1a 陰平 ꜀,11 2 1b 陽平 ꜁,21 3 2 上 ꜂,,45 5 3 去 ꜄')
 㲃	tɕiəu5	拧
 燶	noŋ1	软和
 䀦	ku3	轻视
-䍐	kan4	网
+䍐	kan5	网
 一	ʑi2	
 丁	tin1	
 七	tɕʰi2	
@@ -28,7 +28,7 @@
 丫	ŋa1	
 中	tsoŋ1	
 中	tsoŋ5	
-串	tɕʰuen5	
+串	tɕʰyen5	
 丸	van2	
 丹	tan1	
 主	tɕy3	
@@ -111,7 +111,7 @@
 任	ɣən2	白
 任	ɣən5	
 份	fən5	
-仿	fanɡ3	
+仿	faŋ3	
 企	tɕʰi3	
 伊	ʑi1	
 伍	vu3	
@@ -212,13 +212,13 @@
 倒	tau5	
 倔	tɕye2	
 倖	ɕin5	
-倘	tʰaŋ3	
+倘	tʰaŋ1	
 候	həu5	
 倚	ʑi3	
 借	tɕie5	新
 借	tsie5	老
 倡	tsʰaŋ5	
-倣	fanɡ3	
+倣	faŋ3	
 倦	tɕyen5	
 倨	ku1	白，同""跍
 倩	tsʰen5	老
@@ -252,7 +252,7 @@
 傭	ʑoŋ1	
 傲	ŋau5	
 傳	tɕyen5	
-傳	tɕʰuen2	
+傳	tɕʰyen2	
 債	tsai5	
 傷	saŋ1	
 傻	ha3	白读
@@ -260,8 +260,8 @@
 傾	tɕʰin1	
 僂	ləu2	
 僅	tɕin3	
-像	tɕʰianɡ5	老
-像	sianɡ5	老
+像	tɕʰiaŋ5	老
+像	siaŋ5	老
 像	ɕiaŋ5	新
 僑	tɕʰiau2	
 僕	pʰu2	
@@ -270,7 +270,7 @@
 僧	sən1	
 僱	ku5	
 僳	səu5	
-僵	tɕianɡ1	
+僵	tɕiaŋ1	
 價	ka5	
 價	tɕia5	
 僻	pʰi5	
@@ -303,7 +303,7 @@
 克	kʰe2	
 兌	təi5	
 免	mien3	
-兒	ɣə2	
+兒	ɣə3	
 兔	tʰəu5	
 兕	sɿ5	
 兜	təu1	
@@ -311,7 +311,7 @@
 入	ɣəu2	
 入	ʑy2	
 內	nəi5	
-全	tɕʰuen2	
+全	tɕʰyen2	
 兩	liaŋ3	
 八	pa2	
 公	koŋ1	
@@ -355,7 +355,7 @@
 凡	fan2	
 凰	hoŋ5	
 凱	kʰai3	
-凳	ten5	
+凳	tən5	
 凶	ɕioŋ1	
 凸	tʰəu2	
 凹	ŋau1	
@@ -384,7 +384,7 @@
 制	tsɿ5	
 刷	sa2	
 刷	ɕya2	
-券	tɕʰuen5	
+券	tɕʰyen5	
 刹	sa2	
 刺	tsʰɿ5	
 刻	kʰe2	
@@ -444,7 +444,7 @@
 動	toŋ5	
 勘	kʰan1	
 務	vu5	
-勛	ɕyin1	
+勛	ɕyn1	
 勝	sən1	
 勝	sən5	
 勞	lau2	
@@ -454,7 +454,7 @@
 勦	tɕiau3	新
 勦	tsiau3	老
 勵	li5	
-勸	tɕʰuen5	
+勸	tɕʰyen5	
 勺	sau2	
 勻	ʑyn2	
 勾	kəu1	
@@ -543,7 +543,7 @@
 叨	tʰau1	
 叩	kʰəu5	
 只	tsɿ1	
-只	tsɿ2	
+只	tsɿ3	
 叫	tɕiau5	
 召	tsau5	
 叮	tin1	
@@ -696,7 +696,7 @@
 喉	həu2	
 喊	han3	
 喋	tie2	
-喘	tɕʰuen3	
+喘	tɕʰyen3	
 喙	fəi5	
 喚	fan5	
 喜	ɕi3	
@@ -775,7 +775,7 @@
 噴	pʰən1	
 噴	pʰən5	喷饭
 噶	ka2	
-噸	ten5	
+噸	tən5	
 噹	taŋ1	
 嚀	ȵin2	
 嚇	he2	
@@ -794,7 +794,7 @@
 嚼	tɕʰio5	文读
 囂	ɕiau1	
 囉	lo2	
-囊	nanɡ2	
+囊	naŋ2	
 囌	səu1	
 囑	tɕy3	
 囑	tsəu3	
@@ -811,7 +811,7 @@
 固	ku5	
 圃	pu3	
 圇	nən2	
-圈	tɕʰuen1	
+圈	tɕʰyen1	
 國	kue2	
 圍	vəi2	
 園	ʑyen2	
@@ -1004,7 +1004,7 @@
 委	vəi3	
 姘	pʰin1	
 姚	ʑau2	
-姜	tɕianɡ1	
+姜	tɕiaŋ1	
 姝	səu1	
 姣	tɕiau1	
 姥	mu3	
@@ -1080,7 +1080,7 @@
 存	tsʰən2	
 孜	tsɿ1	
 孝	ɕiau5	
-孟	monɡ5	
+孟	moŋ5	
 孢	pau1	
 季	tɕi5	
 孤	ku1	
@@ -1121,7 +1121,7 @@
 害	hai5	
 宴	ȵien5	老
 宴	ʑen5	新
-宵	siau1	老
+宵	siau3	老
 宵	ɕiau1	新
 家	ka1	家公
 家	tɕia1	
@@ -1169,9 +1169,10 @@
 專	tɕyen1	
 尉	vəi5	
 尊	tsən1	
-尋	ɕyin2	
+尋	ɕyn2	
 對	təi5	
-導	tau5	
+導	tau3	
+導	tau5	领导
 小	siau3	老
 小	ɕiau3	新
 少	sau3	
@@ -1270,9 +1271,9 @@
 巍	vəi1	
 巒	luan2	
 巔	tien1	
-川	tɕʰuen1	
+川	tɕʰyen1	
 州	tsəu1	
-巡	ɕyin2	
+巡	ɕyn2	
 巢	tsʰau2	
 工	koŋ1	
 左	tso3	
@@ -1350,7 +1351,7 @@
 康	kʰaŋ1	
 庸	ʑoŋ1	
 廁	tsʰe2	
-廂	sianɡ1	老
+廂	siaŋ1	老
 廂	ɕiaŋ1	新
 廄	tɕiəu5	
 廈	ɕia5	
@@ -1388,8 +1389,8 @@
 弭	mi3	
 弱	zo5	
 張	tsaŋ1	
-強	tɕʰianɡ2	
-強	tɕʰianɡ3	勉强
+強	tɕʰiaŋ2	
+強	tɕʰiaŋ3	勉强
 弼	pi2	
 彆	pie2	
 彈	tan5	
@@ -1434,7 +1435,7 @@
 徨	faŋ2	
 復	fu2	恢复，报复、重复
 復	fu5	复原、光复
-循	ɕyin2	
+循	ɕyn2	
 徬	faŋ2	
 微	vəi1	
 徵	tsən1	
@@ -1446,7 +1447,7 @@
 必	pi2	
 忌	tɕi5	
 忍	ɣən3	白
-忍	tsən3	文
+忍	zən3	
 忐	tʰan3	
 忑	tʰe2	
 忒	tʰe2	
@@ -1525,7 +1526,7 @@
 惦	tien5	
 惰	to5	
 惱	nau3	
-想	sianɡ3	老
+想	siaŋ3	老
 想	ɕiaŋ3	新
 惶	faŋ2	
 惹	ɣe3	
@@ -1571,7 +1572,7 @@
 憋	pie2	
 憎	tsən5	
 憐	lien2	
-憑	pən4	白，依靠
+憑	pən5	白，依靠
 憑	pʰin2	
 憔	tsʰiau2	老
 憔	tɕʰiau2	新
@@ -1606,7 +1607,7 @@
 戍	ɕy5	
 戎	ɣoŋ2	
 成	tsʰən2	
-我	ŋo1	
+我	ŋo3	
 戒	kai5	文读
 戒	ke5	白读
 或	fe2	白读
@@ -1615,7 +1616,7 @@
 戛	ka2	
 戟	tɕi3	
 戡	kʰan1	
-戧	tɕʰianɡ1	
+戧	tɕʰiaŋ1	
 戩	tɕien3	新
 戩	tsien3	老
 截	tɕie2	新
@@ -1642,7 +1643,8 @@
 才	tsʰai2	
 扎	tsa2	
 扒	pʰa2	
-打	ta3	
+打	ta3	文
+打	tʰiaŋ5	白
 扔	ɣən1	白
 托	tʰo2	
 扛	kaŋ1	
@@ -1715,7 +1717,7 @@
 拮	tɕie2	
 拯	tsən3	
 拱	koŋ3	
-拳	tɕʰuen2	
+拳	tɕʰyen2	
 拷	kʰau3	
 拼	pʰin1	
 拽	ʑe5	
@@ -1758,8 +1760,8 @@
 捫	mən2	
 捭	pai3	
 捱	ŋai2	
-捲	tɕʰuen1	
-捲	tɕʰuen2	
+捲	tɕʰyen1	
+捲	tɕʰyen2	
 捶	tsʰəi2	
 捶	tɕʰy2	
 捷	tɕie2	新
@@ -1980,7 +1982,7 @@
 斜	ɕie2	新
 斟	tsən1	
 斡	ɣo5	
-斢	tʰiau1	换
+斢	tʰiau3	换
 斤	tɕin1	
 斥	tsʰɿ5	
 斧	fu3	
@@ -2005,12 +2007,12 @@
 族	tsʰəu2	老
 旗	tɕʰi2	
 既	tɕi5	
-日	ɣə2	白
+日	ɣə3	白
 日	tsɿ2	文
 旦	tan5	
 旨	tsɿ3	
 早	tsau3	
-旬	ɕyin2	
+旬	ɕyn2	
 旭	ɕy5	
 旱	han5	
 旺	vaŋ5	
@@ -2029,7 +2031,7 @@
 星	ɕin1	新
 映	ʑin5	
 春	tsʰən1	
-春	tɕʰyin1	
+春	tɕʰyn1	
 昧	məi5	
 昨	tso2	
 昭	tsau1	
@@ -2242,7 +2244,7 @@
 椒	tsiau1	老
 椰	ʑe1	
 椹	sən5	
-椿	tɕʰyin1	
+椿	tɕʰyn1	
 楊	ʑaŋ2	
 楓	hoŋ1	
 楔	ɕie2	
@@ -2317,7 +2319,7 @@
 櫻	ŋən1	白读
 櫻	ʑin1	文读
 欄	lan2	
-權	tɕʰuen2	
+權	tɕʰyen2	
 欒	luan2	
 欖	lan3	
 欠	tɕʰien5	
@@ -2350,7 +2352,7 @@
 歿	me2	
 殃	ʑaŋ1	
 殆	tai5	
-殉	ɕyin5	
+殉	ɕyn5	
 殊	səu2	
 殊	ɕy2	
 殍	pʰiau3	
@@ -2384,7 +2386,7 @@
 氏	sɿ5	
 民	min2	
 氓	maŋ2	
-氕	pʰie1	
+氕	pʰie2	
 氖	nai3	
 氛	fən5	
 氟	fu2	
@@ -2398,7 +2400,7 @@
 氰	tsʰin1	老
 水	səi3	
 水	ɕy3	
-水	ɕyəi3	
+水	ɕyəi1	
 永	ʑoŋ3	新派
 永	ʑyn3	老派
 氾	fan5	
@@ -2413,7 +2415,7 @@
 汗	han5	汗水
 汙	vu1	
 汛	ɕin5	老
-汛	ɕyin5	新
+汛	ɕyn5	新
 汜	sɿ5	
 汝	ɣəu3	白
 汝	zəu3	文
@@ -2434,7 +2436,7 @@
 沈	tsʰən2	
 沈	sən3	
 沉	tsʰən2	
-沌	ten5	
+沌	tən5	
 沐	mu5	
 沒	me2	
 沖	tsʰoŋ1	
@@ -2457,7 +2459,7 @@
 泄	ɕie2	新
 泄	ɕie5	新
 泅	tɕʰiəu2	
-泉	tɕʰuen2	
+泉	tɕʰyen2	
 泊	po2	
 泌	pi5	
 泓	hoŋ2	
@@ -2522,7 +2524,7 @@
 淆	ɕiau2	
 淇	tɕʰi2	
 淋	lin2	
-淌	tʰaŋ3	
+淌	tʰaŋ1	
 淑	səu1	
 淒	tsʰəi1	
 淖	nau5	
@@ -2538,7 +2540,7 @@
 淮	fai2	
 深	sən1	
 淳	tsʰən2	
-淳	tɕʰyin2	
+淳	tɕʰyn2	
 淵	ʑyen1	
 淶	lai2	
 混	fən5	
@@ -2547,7 +2549,7 @@
 淺	tsʰien3	老
 淺	tɕʰien3	新
 添	tʰien1	
-淼	miao3	
+淼	miau3	
 清	tsʰin1	老
 渙	fan5	
 減	kan3	老
@@ -2564,7 +2566,7 @@
 港	kaŋ3	
 渴	kʰo2	
 游	ʑəu2	
-渺	miao3	
+渺	miau3	
 渾	fən2	文读
 渾	fən5	混蛋
 渾	kʰuən2	白读
@@ -2576,7 +2578,7 @@
 湎	mien3	
 湓	pʰən2	
 湖	fu2	
-湘	sianɡ1	老
+湘	siaŋ1	老
 湘	ɕiaŋ1	新
 湛	tsan5	新
 湛	tsen5	老
@@ -2788,12 +2790,12 @@
 熙	ɕi1	
 熟	səu2	
 熬	ŋau2	
-熱	ɣə2	
+熱	ɣə3	
 熵	saŋ1	
 熾	tsʰɿ5	
 燃	ɣen2	白老
 燈	tən1	
-燉	ten5	
+燉	tən5	
 燎	liau2	
 燐	lin2	
 燒	sau1	
@@ -2807,7 +2809,7 @@
 燬	fəi3	
 燭	tsəu2	
 燴	fəi5	
-燻	ɕyin1	
+燻	ɕyn1	
 燼	tɕin5	新
 燼	tsin5	老
 爆	pau5	
@@ -2852,10 +2854,10 @@
 犛	mau2	
 犢	təu2	
 犧	ɕi1	
-犬	tɕʰuen3	
+犬	tɕʰyen3	
 犯	fan5	
 狀	tsaŋ5	
-狂	kʰuanɡ2	
+狂	kʰuaŋ2	
 狃	ȵiəu3	
 狄	ti2	
 狐	fu2	
@@ -3011,7 +3013,7 @@
 當	taŋ1	
 當	taŋ5	
 畸	tɕʰi2	
-疆	tɕianɡ1	
+疆	tɕiaŋ1	
 疇	tsʰəu2	
 疊	tie2	
 疏	səu1	
@@ -3034,7 +3036,7 @@
 痂	tɕia1	
 病	pin5	
 症	tsən1	
-痊	tɕʰuen2	
+痊	tɕʰyen2	
 痔	tsɿ5	
 痕	hən2	
 痘	təu5	
@@ -3128,14 +3130,14 @@
 盯	tin1	
 盲	maŋ2	
 直	tsɿ2	
-相	sianɡ1	老
-相	sianɡ5	老
+相	siaŋ1	老
+相	siaŋ5	老
 相	ɕiaŋ1	新
 相	ɕiaŋ5	新
 盹	tən3	
 盼	pʰan5	新
 盼	pʰuan5	老
-盾	ten5	
+盾	tən5	
 省	sən3	
 省	sin3	老
 省	ɕin3	新
@@ -3186,9 +3188,9 @@
 瞥	pʰie3	
 瞧	tsʰiau2	老
 瞧	tɕʰiau2	新
-瞪	ten5	
+瞪	tən5	
 瞬	sən5	
-瞬	ɕyin5	
+瞬	ɕyn5	
 瞭	liau3	
 瞰	kʰan5	
 瞳	tʰoŋ2	
@@ -3287,7 +3289,7 @@
 神	sən2	
 祟	səi5	
 祠	tsʰɿ2	
-祥	sianɡ2	老
+祥	siaŋ2	老
 祥	ɕiaŋ2	新
 票	pʰiau5	
 祭	tɕi5	新
@@ -3312,7 +3314,7 @@
 秋	tsʰiəu1	老
 秋	tɕʰiəu1	新
 科	kʰo1	
-秒	miao3	
+秒	miau3	
 秕	pi3	
 租	tsəu1	
 秣	mo2	
@@ -3363,7 +3365,7 @@
 穹	tɕʰioŋ2	
 空	kʰoŋ1	
 空	kʰoŋ5	
-穿	tɕʰuen1	
+穿	tɕʰyen1	
 突	tʰəu2	
 窄	tse2	
 窒	tsɿ5	
@@ -3389,7 +3391,7 @@
 竟	tɕin5	
 章	tsaŋ1	
 竣	tɕyn5	
-童	tʰoŋ1	
+童	tʰoŋ2	
 竭	tɕie2	
 端	tuan1	
 競	tɕin5	
@@ -3440,7 +3442,7 @@
 築	tsəu2	
 篙	kau1	
 篡	tsʰuan5	
-篡	tɕʰuen5	
+篡	tɕʰyen5	
 篤	təu2	
 篦	pi1	
 篩	se2	
@@ -3523,7 +3525,7 @@
 紓	səu1	
 紓	ɕy1	
 純	tsʰən2	
-純	tɕʰyin2	
+純	tɕʰyn2	
 純	suən2	
 紗	sa1	
 紙	tsɿ3	
@@ -3598,7 +3600,7 @@
 緩	fan3	
 緬	mien3	
 緯	vəi3	
-緲	miao3	
+緲	miau3	
 練	lien5	
 緻	tsɿ5	
 縛	fu5	
@@ -3665,13 +3667,13 @@
 羅	lo2	
 羈	tɕi1	
 羊	ʑaŋ1	
-羌	tɕʰianɡ1	
+羌	tɕʰiaŋ1	
 美	məi3	
 羔	kau1	
 羚	lin2	
 羞	siəu1	老
 羞	ɕiəu1	新
-群	tɕʰyin2	
+群	tɕʰyn2	
 羥	tɕʰin1	
 羨	sien5	老
 羨	ɕien5	新
@@ -3688,7 +3690,7 @@
 翎	lin2	
 習	si2	老
 習	ɕi2	新
-翔	sianɡ2	老
+翔	siaŋ2	老
 翔	ɕiaŋ2	新
 翟	ti2	
 翟	tse2	
@@ -3704,7 +3706,7 @@
 老	lau3	
 考	kʰau3	
 者	tse3	
-而	ɣə2	
+而	ɣə3	
 而	ɣe2	
 耍	sa3	
 耐	nai5	
@@ -3785,7 +3787,7 @@
 脖	po2	
 脡	tʰin3	
 脣	tsʰən2	
-脣	tɕʰyin2	
+脣	tɕʰyn2	
 脩	siəu1	老
 脩	ɕiəu1	新
 脫	tʰo2	
@@ -3799,7 +3801,7 @@
 腎	sən5	
 腐	fu3	
 腑	fu3	
-腔	tɕʰianɡ1	
+腔	tɕʰiaŋ1	
 腕	van5	
 腖	toŋ5	
 腡	lo2	
@@ -3865,7 +3867,7 @@
 舒	səu1	
 舒	ɕy1	
 舔	tʰien3	
-舜	ɕyin5	
+舜	ɕyn5	
 舞	vu3	
 舟	tsəu1	
 舢	san1	
@@ -3877,7 +3879,7 @@
 舶	pe2	
 舷	ɕien2	新
 舷	ɕyen2	老
-船	tɕʰuen2	
+船	tɕʰyen2	
 艄	sau1	
 艇	tʰin3	
 艋	moŋ3	
@@ -3987,8 +3989,8 @@
 葉	ʑe2	
 著	tsʰo5	着凉
 著	tau3	等着
+著	tɕy5	著名
 著	tɕy5	
-著	tɕiu5	著名
 著	tso2	衣着
 葛	ko2	
 葡	pʰu2	
@@ -4057,7 +4059,7 @@
 薇	vəi1	
 薈	fəi5	
 薊	tɕi5	
-薑	tɕianɡ1	
+薑	tɕiaŋ1	
 薔	tsʰiaŋ1	
 薛	sie1	老
 薛	ɕye1	新
@@ -4067,7 +4069,7 @@
 薪	ɕin1	新
 薯	səu3	
 薯	ɕy3	
-薰	ɕyin1	
+薰	ɕyn1	
 薺	tɕi5	新
 薺	tsi5	老
 藉	tɕi2	新
@@ -4075,7 +4077,7 @@
 藍	lan2	
 藏	tsʰaŋ2	
 藏	tsaŋ5	
-藐	miao3	
+藐	miau3	
 藕	ŋəu3	
 藝	ȵi5	老
 藝	ʑi5	新
@@ -4087,7 +4089,7 @@
 藻	tsau3	
 蘆	ləu2	
 蘇	səu1	
-蘊	ɕyin1	
+蘊	ɕyn1	
 蘋	pʰin2	
 蘑	mo2	
 蘭	lan2	
@@ -4150,8 +4152,8 @@
 蜜	min1	白
 蜞	tɕʰi2	
 蜢	moŋ3	
-蜣	tɕʰianɡ1	
-蜷	tɕʰuen2	
+蜣	tɕʰiaŋ1	
+蜷	tɕʰyen2	
 蜻	tsʰin2	老
 蝌	kʰo1	
 蝕	sɿ2	
@@ -4190,7 +4192,7 @@
 蟣	tɕi1	
 蟥	faŋ2	
 蟬	tsʰan2	
-蟲	tsʰoŋ1	
+蟲	tsʰoŋ2	
 蟹	ka2	白读
 蟹	ɕie5	文读
 蟻	ʑi3	新
@@ -4203,7 +4205,7 @@
 蠕	zəu2	文
 蠟	la2	
 蠡	li2	
-蠢	tɕʰyin3	
+蠢	tɕʰyn3	
 蠣	li5	
 蠱	ku3	
 蠶	tsʰan2	
@@ -4245,7 +4247,7 @@
 裔	ʑi5	
 裕	ʑy5	
 裘	tɕʰiəu2	
-裙	tɕʰyin2	
+裙	tɕʰyn2	
 補	pu3	
 裝	tɕyaŋ1	
 裝	tsaŋ1	
@@ -4269,7 +4271,7 @@
 褲	kʰu5	
 褸	li3	老
 褸	ly3	新
-襄	sianɡ1	老
+襄	siaŋ1	老
 襄	ɕiaŋ1	新
 襖	ŋau2	
 襟	tɕin1	
@@ -4315,7 +4317,7 @@
 訊	sin5	老
 訊	ɕin5	新
 討	tʰau3	
-訓	ɕyin5	
+訓	ɕyn5	
 訕	san5	
 訕	sən5	
 訖	tɕʰi3	
@@ -4341,7 +4343,7 @@
 詛	tsəu3	
 詞	tsʰɿ2	
 詠	ʑoŋ3	
-詢	ɕyin2	
+詢	ɕyn2	
 詣	ȵi5	老
 詣	ʑi5	新
 詤	faŋ3	
@@ -4352,7 +4354,7 @@
 詭	kuəi3	
 話	fa5	
 該	kai1	
-詳	sianɡ2	老
+詳	siaŋ2	老
 詳	ɕiaŋ2	新
 詹	tsan1	新
 詹	tsen1	老
@@ -4608,7 +4610,7 @@
 蹣	pʰuan2	
 蹤	tsoŋ1	
 蹦	poŋ5	
-蹬	ten5	
+蹬	tən5	
 蹭	tsʰən5	
 蹲	tən1	
 蹶	tɕye2	
@@ -4626,7 +4628,7 @@
 躬	koŋ1	文读
 躬	tɕioŋ1	白读，躬背
 躲	to3	
-躺	tʰaŋ3	
+躺	tʰaŋ1	
 軀	tɕʰy1	
 車	tsʰe1	
 車	te1	白
@@ -4691,7 +4693,7 @@
 迂	ʑy1	
 迄	tɕʰi3	
 迅	ɕin5	老
-迅	ɕyin5	新
+迅	ɕyn5	新
 迎	ȵin2	
 近	tɕin5	
 返	fan3	
@@ -4737,7 +4739,7 @@
 逸	ʑi5	
 逼	pi2	
 逾	ʑy2	
-遁	ten5	
+遁	tən5	
 遂	səi5	
 遇	ʑy5	
 遊	ʑəu2	
@@ -4751,7 +4753,7 @@
 違	vəi2	
 遙	ʑau2	
 遛	liəu1	
-遜	ɕyin5	
+遜	ɕyn5	
 遞	təi5	白读
 遞	ti5	文读
 遠	fan3	
@@ -4773,7 +4775,7 @@
 邀	ʑau1	
 邁	mai5	
 還	fan2	
-邈	miao3	
+邈	miau3	
 邊	pien1	
 邋	la1	
 邏	lo2	
@@ -4806,9 +4808,9 @@
 鄂	ɣo5	
 鄉	ɕiaŋ1	
 鄒	tsəu1	
-鄖	ɕyin1	
+鄖	ɕyn1	
 鄙	pi3	
-鄧	ten5	
+鄧	tən5	
 鄭	tsən5	
 鄰	lin2	
 鄱	pʰo2	
@@ -4834,7 +4836,7 @@
 醃	ʑen1	
 醅	pʰəi1	
 醇	tsʰən2	
-醇	tɕʰyin2	
+醇	tɕʰyn2	
 醉	tsəi5	
 醋	tsʰəu5	
 醍	tʰi2	
@@ -4842,7 +4844,7 @@
 醒	sin3	老
 醒	ɕin3	新
 醚	mi2	
-醛	tɕʰuen2	
+醛	tɕʰyen2	
 醜	tsʰəu3	
 醞	ʑyn5	
 醫	ʑi1	
@@ -4873,7 +4875,7 @@
 釵	tsʰa1	
 鈀	pa1	
 鈉	na2	
-鈍	ten5	
+鈍	tən5	
 鈑	pan3	
 鈔	tsʰau1	
 鈕	ȵiəu3	
@@ -4987,7 +4989,7 @@
 鑠	so5	
 鑫	ɕin1	
 鑰	ʑo2	
-鑲	sianɡ1	老
+鑲	siaŋ1	老
 鑲	ɕiaŋ1	新
 鑷	ȵie5	
 鑼	lo2	
@@ -4996,7 +4998,7 @@
 鑾	luan2	
 鑿	tsʰo5	
 钁	tɕie2	
-長	tsʰaŋ1	
+長	tsʰaŋ2	
 長	tsaŋ3	
 門	mən2	
 閂	suan1	
@@ -5089,7 +5091,7 @@
 隱	ʑin3	
 隴	loŋ3	
 隸	li5	
-隻	tsɿ1	
+隻	tsɿ2	
 隼	sən3	
 雀	tɕʰio2	
 雁	ŋan5	
@@ -5176,7 +5178,7 @@
 鞦	tsʰiəu1	老
 鞦	tɕʰiəu1	新
 鞭	pien1	
-韁	tɕianɡ1	
+韁	tɕiaŋ1	
 韃	ta2	
 韆	tsʰien1	老
 韋	vəi3	
@@ -5195,14 +5197,14 @@
 頃	tɕʰin1	
 項	haŋ5	
 順	sən5	
-順	ɕyin5	
+順	ɕyn5	
 須	ɕi1	老
 須	ɕy1	新
 頌	soŋ5	
 預	ʑy5	
 頑	van2	
 頒	pan1	
-頓	ten5	
+頓	tən5	
 頗	pʰo1	
 領	lin3	
 頡	ʑe2	
@@ -5231,7 +5233,7 @@
 顯	ɕien3	
 顰	pʰin2	
 顱	ləu2	
-顴	tɕʰuen2	
+顴	tɕʰyen2	
 風	hoŋ1	
 颯	sa5	飒飒響
 颱	tʰai2	
@@ -5241,7 +5243,7 @@
 飛	fəi1	
 食	sɿ2	
 飢	tɕi1	
-飩	ten5	
+飩	tən5	
 飪	ɣən5	白
 飯	fan5	
 飲	ʑin3	
@@ -5286,7 +5288,7 @@
 馮	pʰin2	
 馱	tʰo2	
 馳	tsʰɿ2	
-馴	ɕyin5	
+馴	ɕyn5	
 駁	po2	
 駐	tɕy5	
 駑	nəu2	
@@ -5417,7 +5419,7 @@
 鵰	tiau1	
 鵲	tɕʰio2	
 鶉	tsʰən2	
-鶉	tɕʰyin2	
+鶉	tɕʰyn2	
 鶯	ʑin1	
 鶴	ho5	
 鶿	tsʰɿ2	
@@ -5496,7 +5498,7 @@
 龜	kuəi1	
 龜	tɕiəu1	
 𡎺	tsuəi2	塞
-𢱟	tsʰan3	新
+𢱟	tsʰan2	新
 𢱟	tsʰen3	老，抽打
 𣉿	tsau1	脆
 𤢈	tən5	狗咬

@@ -37,6 +37,7 @@
     <string name="one_dict_links">去“%2$s”查詢“%1$s”字</string>
     <string name="search_homophone">查詢“%1$s”字的%2$s同音字</string>
     <string name="share_readings">分享“%s”字的所有讀音</string>
+    <string name="goto_info">查看“%s”的詳細信息</string>
 
     <string name="all_reading">所有讀音</string>
     <string name="copy_all_reading">複製“%1$s”字的所有讀音</string>
@@ -286,7 +287,7 @@
         <item>""</item>
         <item>""</item>
         <item>"3"</item>
-        <item>cmn_|cmn_jil_jn|cmn_zho_xa|cmn_ly_yc|cmn_xn_xs_mc_jwyj|cmn_jh_hc_yz|cjy_db_dt|wuu_th_shj_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_cs|yue_hk|nan_zq_tw|cdo_nd|mnp_jo|wxa_mg_ylmxp</item>
+        <item>cmn_|cmn_jil_jn|cmn_zho_xa|cmn_ly_yc|cmn_xn_xs_mc_jwyj|cmn_jh_hc_yz|cjy_ll_fy|wuu_th_shj_sz|czh_yz_cacc|gan_nc|hak_whhb|hsn_cs|yue_hk|nan_zq_tw|cdo_nd|mnp_jo|wxa_mg_ylmxp</item>
         <item>och_.+|ltc_.+</item>
         <item>cmn_jil_.+</item>
         <item>cmn_zho_.+</item>
