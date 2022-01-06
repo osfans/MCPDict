@@ -11,7 +11,7 @@ class 字表(表):
 		ym = ""
 		for line in open(self.spath):
 			line = self.format(line)
-			line = line.strip().replace("Ǿ", "ˀ").replace('"','').replace("[","［").replace("]", "］").replace("?","？")
+			line = line.strip().replace("Ǿ", "ˀ").replace('"','').replace("＝","=").replace("—","-").replace("｛","{").replace("｝","}").replace("[","［").replace("]", "］").replace("?","？")
 			if not line: continue
 			if line.startswith("#"):
 				ym = line[1:]

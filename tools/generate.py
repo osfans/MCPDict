@@ -12,7 +12,7 @@ langs = getLangs()
 for lang in langs:
 	lang.load(dicts)
 
-keys = [lang.key for lang in langs]
+keys = [str(lang) for lang in langs]
 dialects = [k for k in keys if "_" in k]
 fields = ",".join(keys)
 qmarks = ','.join('?' * len(keys))

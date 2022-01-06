@@ -6,5 +6,4 @@ class 字表(表):
 	key = "ja_other"
 	dbkey = "jp_other"
 	_lang = "日語其他讀音"
-	_color = "#8B0000"
 	note = ""
