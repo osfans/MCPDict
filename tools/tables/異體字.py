@@ -5,6 +5,5 @@ from tables._表 import 表
 class 字表(表):
 	key = "va"
 	_lang = "異體字"
-	_color = "#808080"
 	note = ""
 	tones = None
