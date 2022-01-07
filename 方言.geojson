@@ -1,0 +1,2435 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "济南",
+        "方言片": "冀鲁官话石济片聊秦小片",
+        "地点": "山东济南市中心",
+        "marker-size": "large",
+        "marker-color": "CC0000",
+        "marker-symbol": "a",
+        "录入人": "Web",
+        "参考文献": "#汉语多功能字库#",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.995062,
+          36.65886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "徐州",
+        "方言片": "中原官话A徐淮片",
+        "地点": "江苏徐州市中心",
+        "marker-size": "large",
+        "marker-color": "E06666",
+        "marker-symbol": "a",
+        "录入人": "慕禃",
+        "参考文献": "《江苏省志·方言志》",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.18554,
+          34.28823
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "赣榆",
+        "方言片": "中原官话A徐淮片",
+        "地点": "江苏连云港赣榆区中心",
+        "marker-size": "medium",
+        "marker-color": "E06666",
+        "marker-symbol": "a",
+        "录入人": "慕禃",
+        "参考文献": "《江苏省志·方言志》",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.1773,
+          34.84065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "银川",
+        "方言片": "兰银官话银吴片",
+        "地点": "宁夏银川市中心",
+        "marker-size": "large",
+        "marker-color": "E99899",
+        "marker-symbol": "a",
+        "录入人": "慕禃",
+        "参考文献": "《银川话音档》",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.24284,
+          38.47314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "古县尧店",
+        "方言片": "中原官话B汾河片平阳小片",
+        "地点": "山西临汾古县旧县镇尧店村",
+        "marker-size": "small",
+        "marker-color": "2741B1",
+        "marker-symbol": "b",
+        "录入人": "Skanda & Hynuza",
+        "参考文献": "《古县（尧店）方言音系及其与周边方言声调的比较研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.91541,
+          36.16526
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "垣曲新城",
+        "方言片": "中原官话B汾河片绛州小片",
+        "地点": "山西运城垣曲新城镇",
+        "marker-size": "small",
+        "marker-color": "2741B1",
+        "marker-symbol": "b",
+        "录入人": "Skanda & Hynuza",
+        "参考文献": "《垣曲县新城镇方言语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.67403,
+          35.31113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "西安",
+        "方言片": "中原官话B关中片",
+        "地点": "陕西西安市中心",
+        "marker-size": "large",
+        "marker-color": "2741B1",
+        "marker-symbol": "b",
+        "录入人": "Web",
+        "参考文献": "#汉语多功能字库#",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.93425,
+          34.23053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "澄城王庄",
+        "方言片": "中原官话B关中片",
+        "地点": "陕西渭南澄城王庄",
+        "marker-size": "small",
+        "marker-color": "2741B1",
+        "marker-symbol": "b",
+        "录入人": "清竮尘",
+        "参考文献": "《陕西澄城（王庄镇）方言同音字汇集》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.850635,
+          35.28255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "秦安郭嘉",
+        "方言片": "中原官话B陇中片",
+        "地点": "甘肃天水秦安郭嘉",
+        "marker-size": "small",
+        "marker-color": "2741B1",
+        "marker-symbol": "b",
+        "录入人": "清竮尘",
+        "参考文献": "《甘肃秦安县郭嘉方言语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.601588,
+          34.940098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "文水开栅",
+        "方言片": "晋语并州片",
+        "地点": "山西吕梁文水开栅镇",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "Skanda",
+        "参考文献": "《山西文水开栅方言语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.070732,
+          37.510146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "文水裴会",
+        "方言片": "晋语并州片",
+        "地点": "山西吕梁文水西槽头乡裴会村",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "Hynuza",
+        "参考文献": "《山西文水裴会村话语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.020596,
+          37.294349
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "平遥",
+        "方言片": "晋语并州片",
+        "地点": "山西晋中平遥城内",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "Skanda & Sun",
+        "参考文献": "《平遥话音档》《现代晋语的研究》",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.18,
+          37.2
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "介休",
+        "方言片": "晋语并州片",
+        "地点": "山西晋中介休城关",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "Vinchi",
+        "参考文献": "《介休方言志》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.915614,
+          37.036054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "介休张良",
+        "方言片": "晋语并州片",
+        "地点": "山西晋中介休连福镇张良村",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "Skanda",
+        "参考文献": "《介休市张良村方言语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.013856,
+          37.063939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "沁源王陶",
+        "方言片": "晋语并州片",
+        "地点": "山西长治沁源王陶乡",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "Hynuza",
+        "参考文献": "《晋语沁源县王陶话语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.195173,
+          36.87932
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "孝义",
+        "方言片": "晋语并州片",
+        "地点": "山西吕梁孝义旧城",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "Hynuza",
+        "参考文献": "《孝义文化丛书-乡言研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.777873,
+          37.145062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "孝义下堡",
+        "方言片": "晋语吕梁片汾州小片",
+        "地点": "山西吕梁孝义下堡镇",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "Hynuza",
+        "参考文献": "《孝义下堡方言语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.584,
+          37.149401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "孝义白壁关",
+        "方言片": "晋语吕梁片汾州小片",
+        "地点": "山西吕梁孝义高阳镇白壁关村",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "Skanda",
+        "参考文献": "《山西孝义白壁关话语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.714367,
+          37.141314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "汾阳",
+        "方言片": "晋语吕梁片汾州小片",
+        "地点": "山西吕梁汾阳城关",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "Hynuza",
+        "参考文献": "《汾阳话与普通话》《汾阳方言研究》",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.78777,
+          37.2654199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "中阳",
+        "方言片": "晋语吕梁片汾州小片",
+        "地点": "山西吕梁中阳城关",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "Skanda",
+        "参考文献": "《山西中阳方言语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.181078,
+          37.3572925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "临县车赶",
+        "方言片": "晋语吕梁片汾州小片",
+        "地点": "山西吕梁临县车赶乡",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "灰原哀",
+        "参考文献": "《临县车赶乡话语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.07756,
+          37.7880834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "佳县佳芦",
+        "方言片": "晋语吕梁片汾州小片",
+        "地点": "陕西榆林佳县佳芦镇",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "Skanda",
+        "参考文献": "《佳县（佳芦镇）方言音系研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.49357,
+          38.037811
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "偏关",
+        "方言片": "晋语五台片",
+        "地点": "山西忻州偏关新关镇",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "sainirwuu, Skanda, Hynuza",
+        "参考文献": "《山西偏关方言语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.508728,
+          39.437252
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "大同",
+        "方言片": "晋语大包片",
+        "地点": "山西大同市中心",
+        "marker-size": "large",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "慕禃",
+        "参考文献": "《大同方言志》",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.14013,
+          40.25585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "阳原化稍营",
+        "方言片": "晋语张呼片",
+        "地点": "河北张家口阳原化稍营",
+        "marker-size": "small",
+        "marker-color": "8C7BE8",
+        "marker-symbol": "b",
+        "录入人": "osfans",
+        "参考文献": "《河北阳原（化稍营）方言同音字汇》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.632166,
+          40.256158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "祁门军话",
+        "方言片": "官话",
+        "地点": "安徽黄山祁门安凌赤岭",
+        "marker-size": "small",
+        "marker-color": "EE93F6",
+        "marker-symbol": "c",
+        "方言岛": "√",
+        "录入人": "清竮尘",
+        "参考文献": "《祁门军话语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.578233,
+          30.049407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "信丰官话",
+        "方言片": "官话",
+        "地点": "江西赣州信丰县中心",
+        "marker-size": "medium",
+        "marker-color": "EE93F6",
+        "marker-symbol": "c",
+        "方言岛": "√",
+        "录入人": "清竮尘",
+        "参考文献": "《赣南官话语音及系属考察》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.92285,
+          25.38617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "赣州官话",
+        "方言片": "官话",
+        "地点": "江西赣州市中心",
+        "marker-size": "large",
+        "marker-color": "EE93F6",
+        "marker-symbol": "c",
+        "方言岛": "√",
+        "录入人": "清竮尘",
+        "参考文献": "《赣南官话语音及系属考察》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.924234,
+          25.820899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "华楼正话",
+        "方言片": "官话",
+        "地点": "广东茂名电白林头华楼",
+        "marker-size": "small",
+        "marker-color": "EE93F6",
+        "marker-symbol": "c",
+        "方言岛": "√",
+        "录入人": "清竮尘",
+        "参考文献": "《广东电白旧时正话》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.083329,
+          21.619245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "南平官话",
+        "方言片": "官话",
+        "地点": "福建南平延平区中心",
+        "marker-size": "medium",
+        "marker-color": "EE93F6",
+        "marker-symbol": "c",
+        "方言岛": "√",
+        "录入人": "清竮尘",
+        "参考文献": "《福建南平方言同音字汇》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.18202,
+          26.63798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "武汉",
+        "方言片": "西南官话湖广片鄂中小片",
+        "地点": "湖北武汉市中心",
+        "marker-size": "large",
+        "marker-color": "D041E1",
+        "marker-symbol": "c",
+        "录入人": "Web",
+        "参考文献": "#汉语多功能字库#",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.02919,
+          30.58203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "零陵",
+        "方言片": "西南官话桂柳片湘南小片",
+        "地点": "湖南永州零陵区中心",
+        "marker-size": "medium",
+        "marker-color": "D041E1",
+        "marker-symbol": "c",
+        "录入人": "shinzoqchiuq",
+        "参考文献": "#永州官话同音字表#《湖南省志·方言志》",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.63112,
+          26.22255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "象州中平",
+        "方言片": "西南官话桂柳片桂北小片",
+        "地点": "广西来宾象州中平",
+        "marker-size": "small",
+        "marker-color": "D041E1",
+        "marker-symbol": "c",
+        "录入人": "清竮尘",
+        "参考文献": "《广西象州中平官话同音字汇》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.948761,
+          24.009379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "象州纳禄",
+        "方言片": "西南官话桂柳片桂北小片",
+        "地点": "广西来宾象州罗秀纳禄",
+        "marker-size": "small",
+        "marker-color": "D041E1",
+        "marker-symbol": "c",
+        "录入人": "清竮尘",
+        "参考文献": "《广西象州县罗修镇纳禄村官话研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.84878,
+          24.064672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "武鸣官话",
+        "方言片": "西南官话桂柳片桂北小片",
+        "地点": "广西南宁武鸣区中心",
+        "marker-size": "medium",
+        "marker-color": "D041E1",
+        "marker-symbol": "c",
+        "方言岛": "√",
+        "录入人": "清竮尘",
+        "参考文献": "《武鸣县城官话调查报告》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.27461,
+          23.15866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "遵义",
+        "方言片": "西南官话西蜀片岷赤小片",
+        "地点": "贵州遵义红花岗市中心",
+        "marker-size": "large",
+        "marker-color": "D041E1",
+        "marker-symbol": "c",
+        "录入人": "播州東條希",
+        "参考文献": "《遵义方言的语音特点和新老差异》《‹遵义方言音系的特点›读后感》《遵义方言音系的特点》《遵义市志 方言》",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.941389,
+          27.709444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "桐梓娄山关",
+        "方言片": "西南官话西蜀片岷赤小片",
+        "地点": "贵州遵义桐梓娄山关",
+        "marker-size": "small",
+        "marker-color": "D041E1",
+        "marker-symbol": "c",
+        "录入人": "播州東條希",
+        "参考文献": "《桐梓方言志》",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.83,
+          28.124722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "綦江古南",
+        "方言片": "西南官话西蜀片岷赤小片",
+        "地点": "重庆重庆綦江古南",
+        "marker-size": "small",
+        "marker-color": "D041E1",
+        "marker-symbol": "c",
+        "录入人": "播州東條希",
+        "参考文献": "《綦江方言音系调查研究》《永川等六区县方言语音调查研究》",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.656389,
+          29.018056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "犍为玉津",
+        "方言片": "西南官话西蜀片岷赤小片",
+        "地点": "四川乐山犍为玉津",
+        "marker-size": "small",
+        "marker-color": "D041E1",
+        "marker-symbol": "c",
+        "录入人": "是的 我是一个玩家",
+        "参考文献": "《犍为方言单字声调声学语音实验分析》《四川方言调查报告》",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.951111,
+          29.201111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "荣县旭阳",
+        "方言片": "西南官话西蜀片江贡小片",
+        "地点": "四川自贡荣县",
+        "marker-size": "small",
+        "marker-color": "D041E1",
+        "marker-symbol": "c",
+        "录入人": "Ascendanter",
+        "参考文献": "《四川方言调查报告》《四川荣县方言音系及其内部差异研究》",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.419167,
+          29.456111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "肥东古城",
+        "方言片": "江淮官话洪巢片",
+        "地点": "安徽合肥肥东古城",
+        "marker-size": "small",
+        "marker-color": "800080",
+        "marker-symbol": "c",
+        "录入人": "osfans",
+        "参考文献": "《安徽肥东古城方言同音字汇》",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.81507,
+          32.144316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "南京",
+        "方言片": "江淮官话洪巢片",
+        "地点": "江苏南京市中心",
+        "marker-size": "large",
+        "marker-color": "800080",
+        "marker-symbol": "c",
+        "录入人": "Web",
+        "参考文献": "#南京话拼音输入法#",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.787043,
+          32.056215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "扬州",
+        "方言片": "江淮官话洪巢片",
+        "地点": "江苏扬州市中心",
+        "marker-size": "large",
+        "marker-color": "800080",
+        "marker-symbol": "c",
+        "录入人": "慕禃",
+        "参考文献": "/",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.43157,
+          32.39463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "仪征",
+        "方言片": "江淮官话洪巢片",
+        "地点": "江苏扬州仪征市中心",
+        "marker-size": "large",
+        "marker-color": "800080",
+        "marker-symbol": "c",
+        "录入人": "慕禃",
+        "参考文献": "《仪征市志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.18444,
+          32.27203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "海州",
+        "方言片": "江淮官话洪巢片",
+        "地点": "江苏连云港海州区中心",
+        "marker-size": "medium",
+        "marker-color": "800080",
+        "marker-symbol": "c",
+        "录入人": "清竮尘",
+        "参考文献": "《海州方言同音字汇》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.193951,
+          34.597397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "淮安",
+        "方言片": "江淮官话洪巢片",
+        "地点": "江苏淮安淮安清江浦",
+        "marker-size": "small",
+        "marker-color": "800080",
+        "marker-symbol": "c",
+        "录入人": "osfans",
+        "参考文献": "《淮阴市志》《淮阴县志》《淮安方言单音动词汇释》《淮安方言单音形容词汇释》",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.039668,
+          33.567097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "阜宁",
+        "方言片": "江淮官话洪巢片",
+        "地点": "江苏盐城阜宁",
+        "marker-size": "small",
+        "marker-color": "800080",
+        "marker-symbol": "c",
+        "录入人": "清竮尘",
+        "参考文献": "《滨海县志》",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.80258,
+          33.75931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "盐城",
+        "方言片": "江淮官话洪巢片",
+        "地点": "江苏盐城亭湖区中心",
+        "marker-size": "medium",
+        "marker-color": "800080",
+        "marker-symbol": "c",
+        "录入人": "osfans",
+        "参考文献": "《类音字汇》《盐城县志》",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.136582,
+          33.387887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "盐城步凤",
+        "方言片": "江淮官话洪巢片",
+        "地点": "江苏盐城亭湖步凤",
+        "marker-size": "small",
+        "marker-color": "800080",
+        "marker-symbol": "c",
+        "录入人": "oofans",
+        "参考文献": "《盐城方言研究（步凤）》",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.304639,
+          33.335591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "兴化",
+        "方言片": "江淮官话通泰片",
+        "地点": "江苏泰州兴化市中心",
+        "marker-size": "large",
+        "marker-color": "800080",
+        "marker-symbol": "c",
+        "录入人": "osfans",
+        "参考文献": "《江苏兴化方言音系》《兴化方言词典》",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.85272,
+          32.91041
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "南通",
+        "方言片": "江淮官话通泰片",
+        "地点": "江苏南通市中心",
+        "marker-size": "large",
+        "marker-color": "800080",
+        "marker-symbol": "c",
+        "录入人": "Web",
+        "参考文献": "#南通方言网#"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.85737,
+          32.00986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "武穴花桥",
+        "方言片": "江淮官话黄孝片",
+        "地点": "湖北黄冈武穴花桥",
+        "marker-size": "small",
+        "marker-color": "800080",
+        "marker-symbol": "c",
+        "录入人": "清竮尘",
+        "参考文献": "《湖北省武穴市花桥话语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.724721,
+          30.005899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "包场-余东",
+        "方言片": "吴语太湖片毗陵小片",
+        "地点": "江苏南通海门包场、余东",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "正心修身",
+        "参考文献": "《吕四方言研究》《海门方言志》",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.420247,
+          32.054318
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "靖江",
+        "方言片": "吴语太湖片毗陵小片",
+        "地点": "江苏泰州靖江市中心",
+        "marker-size": "large",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙",
+        "参考文献": "《江苏靖江方言同音字汇》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.27454,
+          32.01494
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "金坛",
+        "方言片": "吴语太湖片毗陵小片",
+        "地点": "江苏常州金坛区中心",
+        "marker-size": "medium",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "正心修身",
+        "参考文献": "《金坛县志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.59794,
+          31.72322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "江阴",
+        "方言片": "吴语太湖片毗陵小片",
+        "地点": "江苏无锡江阴市中心",
+        "marker-size": "large",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "虎虎",
+        "参考文献": "《江阴方言同音字汇》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.28432,
+          31.91919
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "苏州",
+        "方言片": "吴语太湖片苏沪嘉小片",
+        "地点": "江苏苏州市中心",
+        "marker-size": "large",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "樛木",
+        "参考文献": "#苏州吴语拼音输入方案#",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.63132,
+          31.30227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "常熟唐市",
+        "方言片": "吴语太湖片苏沪嘉小片",
+        "地点": "江苏苏州常熟唐市",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "鹜高赭纱匕"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.848542,
+          31.548614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "太仓鹿河",
+        "方言片": "吴语太湖片苏沪嘉小片",
+        "地点": "江苏苏州太仓鹿河",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "鹜高赭纱匕"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.08346,
+          31.693729
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "上海江镇",
+        "方言片": "吴语太湖片苏沪嘉小片",
+        "地点": "上海上海浦东江镇",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "鹜高赭纱匕"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.746288,
+          31.173529
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "上海川沙",
+        "方言片": "吴语太湖片苏沪嘉小片",
+        "地点": "上海上海浦东川沙",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "鹜高赭纱匕"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.702729,
+          31.195989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "上海",
+        "方言片": "吴语太湖片苏沪嘉小片",
+        "地点": "上海上海市中心",
+        "marker-size": "large",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "蔡子文",
+        "参考文献": "《上海市区方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.49104,
+          31.222426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "湖州",
+        "方言片": "吴语太湖片苕溪小片",
+        "地点": "浙江湖州市中心",
+        "marker-size": "large",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "Vô Danh"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.102398,
+          30.867198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "杭州",
+        "方言片": "吴语太湖片杭州小片",
+        "地点": "浙江杭州市中心",
+        "marker-size": "large",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "Web",
+        "参考文献": "#汉语多功能字库#",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.16922,
+          30.24255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "富阳东梓关",
+        "方言片": "吴语太湖片临绍小片",
+        "地点": "浙江杭州富阳场口东梓关",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "Biaz Imia",
+        "参考文献": "《吴语富阳（东梓关）方言音系》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.823347,
+          29.886811
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "临海",
+        "方言片": "吴语台州片",
+        "地点": "浙江台州临海市中心",
+        "marker-size": "large",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.14495,
+          28.8584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "仙居",
+        "方言片": "吴语台州片",
+        "地点": "浙江台州仙居县中心",
+        "marker-size": "medium",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.72881,
+          28.84683
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "缙云",
+        "方言片": "吴语金衢片",
+        "地点": "浙江丽水缙云县中心",
+        "marker-size": "medium",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "老虎、林奈安"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.09158,
+          28.65928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "武义",
+        "方言片": "吴语金衢片",
+        "地点": "浙江金华武义县中心",
+        "marker-size": "medium",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "一三"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.81651,
+          28.8926
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "遂昌",
+        "方言片": "吴语上丽片丽水小片",
+        "地点": "浙江丽水遂昌县中心",
+        "marker-size": "medium",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙、阿缨"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.27602,
+          28.59213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "云和",
+        "方言片": "吴语上丽片丽水小片",
+        "地点": "浙江丽水云和县中心",
+        "marker-size": "medium",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙、阿缨"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.574086,
+          28.103191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "泰顺罗阳",
+        "方言片": "吴语上丽片丽水小片",
+        "地点": "浙江温州泰顺罗阳",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙、阿缨"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.712596,
+          27.556266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "松阳",
+        "方言片": "吴语上丽片丽水小片",
+        "地点": "浙江丽水松阳县中心",
+        "marker-size": "medium",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.486483,
+          28.450375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "乐清乐成",
+        "方言片": "吴语瓯江片",
+        "地点": "浙江温州乐清乐成",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙、老虎、阿缨"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.98338,
+          28.11289
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "永嘉",
+        "方言片": "吴语瓯江片",
+        "地点": "浙江温州永嘉县中心",
+        "marker-size": "medium",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙",
+        "参考文献": "《永嘉县志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.69171,
+          28.15336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "永强",
+        "方言片": "吴语瓯江片",
+        "地点": "浙江温州龙湾永强",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙",
+        "参考文献": "《瓯语音系》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.81303,
+          27.93252
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "温州",
+        "方言片": "吴语瓯江片",
+        "地点": "浙江温州市中心",
+        "marker-size": "large",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "阿缨",
+        "参考文献": "《温州话音档》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.65505,
+          28.01489
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "瑞安东山",
+        "方言片": "吴语瓯江片",
+        "地点": "浙江温州瑞安东山",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙、老虎"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.649043,
+          27.754418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "瑞安陶山",
+        "方言片": "吴语瓯江片",
+        "地点": "浙江温州瑞安陶山",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙",
+        "参考文献": "《浙南瓯语》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.496132,
+          27.842914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "瑞安湖岭",
+        "方言片": "吴语瓯江片",
+        "地点": "浙江温州瑞安湖岭",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙",
+        "参考文献": "《瑞安湖岭方言音系》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.391676,
+          27.901944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "平阳",
+        "方言片": "吴语瓯江片",
+        "地点": "浙江温州平阳县中心",
+        "marker-size": "medium",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.563203,
+          27.671906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "龙港",
+        "方言片": "吴语瓯江片",
+        "地点": "浙江温州龙港市中心",
+        "marker-size": "large",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙、龙港太保人",
+        "参考文献": "《苍南方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.549705,
+          27.578103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "文成",
+        "方言片": "吴语瓯江片",
+        "地点": "浙江温州文成县中心",
+        "marker-size": "medium",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙",
+        "参考文献": "《文成县志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.09063,
+          27.78678
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "苍南宜山",
+        "方言片": "吴语瓯江片",
+        "地点": "浙江温州苍南宜山",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "录入人": "落橙",
+        "参考文献": "《瓯语音系》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.541852,
+          27.514407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "苍南蒲门",
+        "方言片": "吴语瓯江片",
+        "地点": "浙江温州苍南马站蒲门",
+        "marker-size": "small",
+        "marker-color": "0000FF",
+        "marker-symbol": "d",
+        "方言岛": "√",
+        "录入人": "落橙、阿缨",
+        "参考文献": "《浙南蒲门瓯语方言岛语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.446521,
+          27.23416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "浮梁旧城",
+        "方言片": "徽语祁婺片",
+        "地点": "江西景德镇浮梁浮梁旧城",
+        "marker-size": "small",
+        "marker-color": "1E90FF",
+        "marker-symbol": "d",
+        "录入人": "Pekkhak（啵啵）",
+        "参考文献": "《江西浮梁（旧城村）方言同音字汇》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.250999,
+          29.374012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "祁门箬坑",
+        "方言片": "徽语祁婺片",
+        "地点": "安徽黄山祁门箬坑",
+        "marker-size": "small",
+        "marker-color": "1E90FF",
+        "marker-symbol": "d",
+        "录入人": "Її",
+        "参考文献": "《祁门箬坑方言研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.575,
+          29.8583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "建德梅城",
+        "方言片": "徽语严州片",
+        "地点": "浙江杭州建德梅城",
+        "marker-size": "small",
+        "marker-color": "1E90FF",
+        "marker-symbol": "d",
+        "录入人": "清竮尘",
+        "参考文献": "《徽语严州方言研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.504176,
+          29.540885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "建德寿昌",
+        "方言片": "徽语严州片",
+        "地点": "浙江杭州建德寿昌",
+        "marker-size": "small",
+        "marker-color": "1E90FF",
+        "marker-symbol": "d",
+        "录入人": "清竮尘",
+        "参考文献": "《徽语严州方言研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.221815,
+          29.358762
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "遂安狮城",
+        "方言片": "徽语严州片",
+        "地点": "浙江杭州淳安姜家(搬迁)",
+        "marker-size": "small",
+        "marker-color": "1E90FF",
+        "marker-symbol": "d",
+        "录入人": "清竮尘",
+        "参考文献": "《徽语严州方言研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.668234,
+          29.47146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "南昌",
+        "方言片": "赣语昌都片",
+        "地点": "江西南昌市中心",
+        "marker-size": "large",
+        "marker-color": "20B2AA",
+        "marker-symbol": "e",
+        "录入人": "涩口的茶"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.908514,
+          28.687256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "高安杨墟",
+        "方言片": "赣语宜浏片",
+        "地点": "江西宜春高安杨墟老屋周家",
+        "marker-size": "small",
+        "marker-color": "20B2AA",
+        "marker-symbol": "e",
+        "录入人": "Pekkhak（啵啵）",
+        "参考文献": "《高安（老屋周家）方言的语音系统》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.230523,
+          28.312913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "临川上顿渡",
+        "方言片": "赣语抚广片",
+        "地点": "江西抚州临川上钝渡",
+        "marker-size": "small",
+        "marker-color": "20B2AA",
+        "marker-symbol": "e",
+        "录入人": "Pekkhak（啵啵）",
+        "参考文献": "《抚州方言研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.298144,
+          27.939222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "余干玉亭",
+        "方言片": "赣语鹰弋片",
+        "地点": "江西上饶余干玉亭",
+        "marker-size": "small",
+        "marker-color": "20B2AA",
+        "marker-symbol": "e",
+        "录入人": "Pekkhak（啵啵）",
+        "参考文献": "《余干方言同音字表》《赣方言概要》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.693411,
+          28.716375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "五华横陂",
+        "方言片": "客家话粤台片龙华小片",
+        "地点": "广东梅州五华横陂",
+        "marker-size": "small",
+        "marker-color": "678F00",
+        "marker-symbol": "e",
+        "录入人": "阿缨",
+        "参考文献": "《五华方音同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.735515,
+          23.876196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "五华水寨",
+        "方言片": "客家话粤台片龙华小片",
+        "地点": "广东梅州五华水寨",
+        "marker-size": "small",
+        "marker-color": "678F00",
+        "marker-symbol": "e",
+        "录入人": "阿缨",
+        "参考文献": "《广东五华客家话比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.761672,
+          23.924074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "香港",
+        "方言片": "粤语广府片",
+        "地点": "香港香港标准音",
+        "marker-size": "small",
+        "marker-color": "FFAD00",
+        "marker-symbol": "f",
+        "录入人": "Web",
+        "参考文献": "#粤语审音配词词库##Unihan#",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16546,
+          22.27534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "南宁白话",
+        "方言片": "粤语邕浔片",
+        "地点": "广西南宁市中心",
+        "marker-size": "large",
+        "marker-color": "FFAD00",
+        "marker-symbol": "f",
+        "录入人": "Web",
+        "参考文献": "#南宁话输入方案#"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.317204,
+          22.823123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "玉林",
+        "方言片": "粤语勾漏片",
+        "地点": "广西玉林市中心",
+        "marker-size": "large",
+        "marker-color": "FFAD00",
+        "marker-symbol": "f",
+        "录入人": "赤须夜蜂虎",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.151843,
+          22.626162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "南宁亭子平话",
+        "方言片": "粤语平话",
+        "地点": "广西南宁江南亭子",
+        "marker-size": "small",
+        "marker-color": "FFAD00",
+        "marker-symbol": "f",
+        "录入人": "Web",
+        "参考文献": "#南宁话输入方案#"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.32038,
+          22.787895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "长沙",
+        "方言片": "湘语长益片长潭小片",
+        "地点": "湖南长沙市区",
+        "marker-size": "small",
+        "marker-color": "FF69B4",
+        "marker-symbol": "g",
+        "录入人": "跳跳老鼠",
+        "参考文献": "《训诂谐音》《湘音检字》《长沙话音档》《长沙方言词典》",
+        "繁简": "繁简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.002739,
+          28.1827
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "桂林平山土话",
+        "方言片": "(五岭)土话",
+        "地点": "广西桂林象山平山",
+        "marker-size": "small",
+        "marker-color": "E600B1",
+        "marker-symbol": "h",
+        "录入人": "清竮尘",
+        "参考文献": "《桂林平山土话语音研究》",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.292558,
+          25.232691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "江永上江圩土话",
+        "方言片": "(五岭)土话",
+        "地点": "湖南永州江永上江圩",
+        "marker-size": "small",
+        "marker-color": "E600B1",
+        "marker-symbol": "h",
+        "录入人": "Web",
+        "参考文献": "#在线女书字典#",
+        "繁简": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.455944,
+          25.349413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "台湾",
+        "方言片": "闽南语漳泉片",
+        "地点": "台湾台语综合音",
+        "marker-size": "small",
+        "marker-color": "FF6600",
+        "marker-symbol": "j",
+        "录入人": "Web",
+        "参考文献": "#豆腐台语词库##台湾闽南语常用词辞典#"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.520076,
+          25.030724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "泉州",
+        "方言片": "闽南语漳泉片",
+        "地点": "福建泉州市中心",
+        "marker-size": "large",
+        "marker-color": "FF6600",
+        "marker-symbol": "j",
+        "录入人": "林"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.589421,
+          24.908853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "博罗泰美福佬话",
+        "方言片": "闽南语漳泉片",
+        "地点": "广东惠州博罗泰美",
+        "marker-size": "small",
+        "marker-color": "FF6600",
+        "marker-symbol": "j",
+        "方言岛": "√",
+        "录入人": "林"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.471176,
+          23.297703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "潮州",
+        "方言片": "闽南语潮汕片",
+        "地点": "广东潮州市中心",
+        "marker-size": "large",
+        "marker-color": "FF6600",
+        "marker-symbol": "j",
+        "录入人": "Kiattan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.628308,
+          23.666675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "汕头",
+        "方言片": "闽南语潮汕片",
+        "地点": "广东汕头市中心",
+        "marker-size": "large",
+        "marker-color": "FF6600",
+        "marker-symbol": "j",
+        "录入人": "Kiattan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.721576,
+          23.382689
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "普宁",
+        "方言片": "闽南语潮汕片",
+        "地点": "广东揭阳普宁市中心",
+        "marker-size": "large",
+        "marker-color": "FF6600",
+        "marker-symbol": "j",
+        "录入人": "阿缨"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.16573,
+          23.29734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "饶平",
+        "方言片": "闽南语潮汕片",
+        "地点": "广东潮州饶平县中心",
+        "marker-size": "medium",
+        "marker-color": "FF6600",
+        "marker-symbol": "j",
+        "录入人": "四方麻冬"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.0039,
+          23.66412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "饶平新丰",
+        "方言片": "闽南语潮汕片",
+        "地点": "广东潮州饶平新丰",
+        "marker-size": "small",
+        "marker-color": "FF6600",
+        "marker-symbol": "j",
+        "录入人": "四方麻冬"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.85906,
+          24.049334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "惠来隆江",
+        "方言片": "闽南语潮汕片",
+        "地点": "广东揭阳惠来隆江",
+        "marker-size": "small",
+        "marker-color": "FF6600",
+        "marker-symbol": "j",
+        "录入人": "空白"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.181212,
+          22.983141
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "潮阳",
+        "方言片": "闽南语潮汕片",
+        "地点": "广东汕头潮阳区中心",
+        "marker-size": "medium",
+        "marker-color": "FF6600",
+        "marker-symbol": "j",
+        "录入人": "与子偕老"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.60157,
+          23.26489
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "雷州黎话",
+        "方言片": "闽南语雷州片",
+        "地点": "广东湛江雷州市中心",
+        "marker-size": "large",
+        "marker-color": "FF6600",
+        "marker-symbol": "j",
+        "方言岛": "√",
+        "录入人": "Kiattan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.095823,
+          20.913798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "吴川兰石东话",
+        "方言片": "闽南语雷州片",
+        "地点": "广东湛江吴川兰石",
+        "marker-size": "small",
+        "marker-color": "FF6600",
+        "marker-symbol": "j",
+        "方言岛": "√",
+        "录入人": "Kiattan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.83118,
+          21.518631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "电白龙山海话",
+        "方言片": "闽南语雷州片",
+        "地点": "广东茂名电白博贺龙山",
+        "marker-size": "small",
+        "marker-color": "FF6600",
+        "marker-symbol": "j",
+        "方言岛": "√",
+        "录入人": "Kiattan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.154418,
+          21.478322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "宁德",
+        "方言片": "闽东语侯官片",
+        "地点": "福建宁德市中心",
+        "marker-size": "large",
+        "marker-color": "C56A2D",
+        "marker-symbol": "j",
+        "录入人": "落橙、阿缨"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.52623,
+          26.66022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "苍南钱库蛮话",
+        "方言片": "闽东语",
+        "地点": "浙江温州苍南钱库",
+        "marker-size": "small",
+        "marker-color": "4D2A08",
+        "marker-symbol": "j",
+        "方言岛": "√",
+        "录入人": "阿缨"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.57524,
+          27.47988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "方言": "建瓯",
+        "方言片": "闽北语建瓯片",
+        "地点": "福建南平建瓯市中心",
+        "marker-size": "large",
+        "marker-color": "4D2A08",
+        "marker-symbol": "j",
+        "录入人": "Web",
+        "参考文献": "#汉语多功能字库#",
+        "繁简": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.30498,
+          27.02266
+        ]
+      }
+    }
+  ]
+}
