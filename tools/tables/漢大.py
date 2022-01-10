@@ -23,7 +23,8 @@ class 字表(表):
 				if hz in kCompatibilityVariants and js.startswith("同"): continue
 				pages[hz] = page
 				if py == "None":
-						py = ""
+					py = ""
+				py = py.rstrip("5")
 				if py in hd[hz]:
 					hd[hz][py].append(js)
 				else:

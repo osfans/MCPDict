@@ -12,6 +12,7 @@ logging.basicConfig(format='%(message)s', level=logging.INFO)
 
 SOURCE = "data"
 TARGET = "output"
+VARIANT_FILE = f"tables/{SOURCE}/正字.tsv"
 
 YDS = {"+":"又","-":"白","*":"俗", "/":"書","\\":"語","=":"文","~":"訓","≈":"替", "?":"存疑",}
 def getYD(py):
@@ -32,7 +33,8 @@ def getCompatibilityVariants():
 
 def getSTVariants(level=2):
 	d = dict()
-	for line in open("tables/%s/STCharacters.tsv" % SOURCE):
+	for line in open(VARIANT_FILE):
+		if line.startswith("#"): continue
 		fs = line.strip().split("\t")
 		if level == 1 and "#" in line:
 			continue
@@ -138,6 +140,9 @@ class 表:
 	def outdated(self):
 		classfile = inspect.getfile(self.__class__)
 		classtime = os.path.getmtime(classfile)
+		varianttime = os.path.getmtime(VARIANT_FILE)
+		if classtime < varianttime:
+			classtime = varianttime
 		ftime = os.path.getmtime(self.spath)
 		if os.path.exists(self.tpath):
 			if not os.path.exists(self.spath):
