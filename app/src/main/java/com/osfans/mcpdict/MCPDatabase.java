@@ -475,10 +475,10 @@ public class MCPDatabase extends SQLiteAssetHelper {
         cursor.close();
     }
 
-    public static String getIntroText(Context context) {
+    public static String getIntroText(Context context, int index) {
         if (INTROS == null) getIntros();
-        int index = getColumnIndex(context);
-        String intro = index < 0 ? "" : INTROS.get(index);
+        if (index < 0) index = getColumnIndex(context);
+        String intro = INTROS.get(index);
         if (TextUtils.isEmpty(intro)) intro = INTROS.get(0);
         if (index == 0) {
             intro = String.format(Locale.getDefault(), "%s%s<br>%s", context.getString(R.string.version), BuildConfig.VERSION_NAME, intro);

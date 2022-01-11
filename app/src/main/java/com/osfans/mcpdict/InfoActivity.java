@@ -1,6 +1,7 @@
 package com.osfans.mcpdict;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +19,8 @@ public class InfoActivity extends FragmentActivity {
         Utils.setLocale(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help_activity);
+        Intent intent = getIntent();
+        int index = intent.getIntExtra("index", -1);
 
         WebView webView = findViewById(R.id.web_view_help);
         webView.getSettings().setJavaScriptEnabled(true);
@@ -39,7 +42,7 @@ public class InfoActivity extends FragmentActivity {
                 "  h1 {font-size: 24px; color: #9D261D}\n" +
                 "  h2 {font-size: 20px; color: #000080; text-indent: 10px}\n" +
                 " </style>");
-        sb.append(MCPDatabase.getIntroText(this));
+        sb.append(MCPDatabase.getIntroText(this, index));
         webView.loadDataWithBaseURL(null, sb.toString(), "text/html", "utf-8", null);
     }
 
