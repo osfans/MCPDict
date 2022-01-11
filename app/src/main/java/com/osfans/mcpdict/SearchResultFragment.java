@@ -162,6 +162,13 @@ public class SearchResultFragment extends ListFragment {
             menu.add(GROUP_READING, COL_HZ, 90, getString(R.string.copy_hz));
             if (col >= COL_FIRST_READING) {
                 String searchAsName = MCPDatabase.getFullName(col);
+                item = menu.add(getString(R.string.goto_info, searchAsName));
+                item.setOnMenuItemClickListener(i->{
+                    Intent intent = new Intent(getContext(), InfoActivity.class);
+                    intent.putExtra("index", col);
+                    startActivity(intent);
+                    return true;
+                });
                 item = menu.add(getString(R.string.search_homophone, hz, searchAsName));
                 item.setOnMenuItemClickListener(i->{
                     DictionaryFragment dictionaryFragment = ((MainActivity) requireActivity()).getDictionaryFragment();
