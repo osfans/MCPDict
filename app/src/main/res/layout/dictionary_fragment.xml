@@ -53,7 +53,7 @@
         android:maxLines="3"
         android:longClickable="true" />
 
-    <WebView
+    <com.osfans.mcpdict.AutoWebView
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:visibility="gone"

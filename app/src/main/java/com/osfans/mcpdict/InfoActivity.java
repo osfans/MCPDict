@@ -2,15 +2,9 @@ package com.osfans.mcpdict;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
 
 import androidx.fragment.app.FragmentActivity;
-import androidx.webkit.WebSettingsCompat;
-import androidx.webkit.WebViewFeature;
 
 public class InfoActivity extends FragmentActivity {
     @SuppressLint("SetJavaScriptEnabled")
@@ -22,16 +16,7 @@ public class InfoActivity extends FragmentActivity {
         Intent intent = getIntent();
         int index = intent.getIntExtra("index", -1);
 
-        WebView webView = findViewById(R.id.web_view_help);
-        webView.getSettings().setJavaScriptEnabled(true);
-        WebSettings settings = webView.getSettings();
-        if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
-            if (isNightMode()) {
-                WebSettingsCompat.setForceDark(settings, WebSettingsCompat.FORCE_DARK_ON);
-            } else {
-                WebSettingsCompat.setForceDark(settings, WebSettingsCompat.FORCE_DARK_OFF);
-            }
-        }
+        AutoWebView webView = findViewById(R.id.web_view_help);
         StringBuilder sb = new StringBuilder();
         sb.append("<style>\n" +
                 "  @font-face {\n" +
@@ -46,8 +31,4 @@ public class InfoActivity extends FragmentActivity {
         webView.loadDataWithBaseURL(null, sb.toString(), "text/html", "utf-8", null);
     }
 
-    private boolean isNightMode() {
-        int nightModeFlags = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
-        return nightModeFlags == Configuration.UI_MODE_NIGHT_YES;
-    }
 }
