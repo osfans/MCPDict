@@ -8,9 +8,7 @@ from time import time
 start = time()
 
 dicts = defaultdict(dict)
-langs = getLangs()
-for lang in langs:
-	lang.load(dicts)
+langs = getLangs(dicts)
 
 keys = [str(lang) for lang in langs]
 dialects = [k for k in keys if "_" in k]

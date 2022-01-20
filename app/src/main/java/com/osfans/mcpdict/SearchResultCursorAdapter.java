@@ -47,6 +47,8 @@ import static com.osfans.mcpdict.MCPDatabase.getColor;
 import static com.osfans.mcpdict.MCPDatabase.getLabel;
 import static com.osfans.mcpdict.MCPDatabase.getSubColor;
 
+import org.osmdroid.util.GeoPoint;
+
 public class SearchResultCursorAdapter extends CursorAdapter {
 
     private static WeakReference<Context> context;
@@ -147,7 +149,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return view;
     }
 
-    private boolean isColumnVisible(String languages, Set<String> customs, int i) {
+    public static boolean isColumnVisible(String languages, Set<String> customs, int i) {
         if (i < MCPDatabase.COL_FIRST_READING) return true;
         if (languages.contentEquals("3")) { //縣級
             String name = MCPDatabase.getLabel(i);
@@ -216,7 +218,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         for(int i:s.codePoints().toArray()
              ) {
             String t = Orthography.HZ.toHz(i);
-            Log.e("kyle", t+"="+paint.hasGlyph(t));
+            //Log.e("kyle", t+"="+paint.hasGlyph(t));
         }
     }
 
@@ -337,7 +339,14 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
          // "Favorite" button
         boolean favorite = cursor.getInt(cursor.getColumnIndexOrThrow("is_favorite")) == 1;
-        Button button = view.findViewById(R.id.button_favorite);
+        Button button = view.findViewById(R.id.button_map);
+        button.setOnClickListener(v -> {
+            MyMapView mapView = new MyMapView(getContext(), hz);
+            new AlertDialog.Builder(getContext(), android.R.style.Theme_DeviceDefault_Light_NoActionBar_Fullscreen)
+                    .setView(mapView)
+                    .show();
+        });
+        button = view.findViewById(R.id.button_favorite);
         button.setOnClickListener(v -> {
             Boolean is_favorite = (Boolean) view.getTag(R.id.tag_favorite);
             if (is_favorite) {
