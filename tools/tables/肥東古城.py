@@ -6,7 +6,7 @@ from tables._表 import 表
 class 字表(表):
 	key = "cmn_jh_hc_fdgc"
 	_file = "肥東古城同音字表*.tsv"
-	note = "更新：2021-11-15<br>來源：osfans整理自栗華益、鄒冠麗《安徽肥東古城方言同音字彙》"
+	note = "來源：osfans整理自栗華益、鄒冠麗《安徽肥東古城方言同音字彙》"
 	tones = "31 1 1a 陰平 ꜀,35 2 1b 陽平 ꜁,213 3 2 上 ꜂,,53 5 3 去 ꜄,,44 7 4 入 ꜆"
 
 	def parse(self, fs):

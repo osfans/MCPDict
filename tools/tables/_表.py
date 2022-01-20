@@ -53,6 +53,11 @@ class 表:
 	_lang = None
 	_city = None
 	tones = None
+	location = None
+	size = None
+	ver = None
+	_color = None
+	
 	disorder = False
 	hasHead = True
 	patches = None
@@ -66,28 +71,10 @@ class 表:
 	count = 0
 
 	def getColor(self, f):
+		if self._color: return self._color
 		if f == "hz": return "#9D261D"
 		if "_" not in f: return "#1E90FF"
 		if f.startswith("ltc_") or f.startswith("och_"): return "#4D4D4D"
-		if f.startswith("cjy_"): return "#00008B"
-		if f.startswith("cmn_jh_"): return "#800080"
-		if f.startswith("cmn_jil_"): return "#A60918"
-		if f.startswith("cmn_zho_"): return "#FF00C7"
-		if f.startswith("cmn_ly_"): return "#C9007D"
-		if f.startswith("cmn_xn_"): return "#C600FF"
-		if f.startswith("cmn_"): return "#FF0000"
-		if f.startswith("hsn_"): return "#FF69B4"
-		if f.startswith("wuu_"): return "#0000FF"
-		if f.startswith("nan_"): return "#FF6600"
-		if f.startswith("mnp_"): return "#AC5370"
-		if f.startswith("cdo_"): return "#DB7093"
-		if f.startswith("gan_"): return "#20B2AA"
-		if f.startswith("czh_"): return "#1E90FF"
-		if f.startswith("hak_"): return "#008000"
-		if f.startswith("wxa_"): return "#E7348D"
-		if f.startswith("yue_"): return "#FFAD00"
-		if f.startswith("csp_"): return "#FF9900"
-		if f.startswith("xxx_"): return "#E600B1"
 		return "#8B0000"
 
 	@property
@@ -130,12 +117,13 @@ class 表:
 
 	@property
 	def desc(self):
+		if self.ver: self.note = f"版本：{self.ver}<br>{self.note}"
 		if self.count > 0: return "字數：%d<br><br>%s"%(self.count, self.note)
 		return self.note
 		
 	@property
 	def head(self):
-		return str(self), self.lang, self.city, self.color, self.site, self.url, self.desc, self.tones
+		return str(self), self.lang, self.city, self.color, self.site, self.url, self.desc, self.tones, self.location, self.size
 
 	def outdated(self):
 		classfile = inspect.getfile(self.__class__)
@@ -162,7 +150,7 @@ class 表:
 			d[hz] = py.split(",")
 
 	def norm(self, yb):
-		yb = yb.replace("᷉", "̃")\
+		yb = yb.replace("᷉", "̃").replace("ə˞", "ɚ")\
 			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ")\
 			.replace("ʣ", "dz").replace("ʥ", "dʑ")
 		return yb

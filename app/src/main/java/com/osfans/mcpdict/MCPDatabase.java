@@ -15,6 +15,8 @@ import androidx.core.text.HtmlCompat;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
+import org.osmdroid.util.GeoPoint;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -89,6 +91,8 @@ public class MCPDatabase extends SQLiteAssetHelper {
     private static ArrayList<String> DICT_LINKS;
     private static ArrayList<String> INTROS;
     private static ArrayList<String> TONE_NAMES;
+    private static ArrayList<String> LOCATIONS;
+    private static ArrayList<String> SIZES;
 
     private static SQLiteDatabase db = null;
 
@@ -250,7 +254,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         String[] projection = {"v.*", "_id",
                    "v.hz AS hz", "variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
-        String selection = "u._id = v.rowid AND v.rowid > 7";
+        String selection = "u._id = v.rowid AND v.rowid > 9";
         if (mcOnly) {
             selection += " AND ltc_mc IS NOT NULL";
         } else if (swOnly) {
@@ -362,45 +366,30 @@ public class MCPDatabase extends SQLiteAssetHelper {
         return !isKO(mode) && !isJA(mode);
     }
 
-    private static void getLabels() {
-        if (LABELS != null || db == null) return;
+    private static ArrayList<String> getArrays(int rowid) {
+        if (db == null) return null;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         String[] projection = {"*"};
-        String query = qb.buildQuery(projection, "rowid = 2", null, null, null, null);
-        Cursor cursor = db.rawQuery(query, null);
+        String query = qb.buildQuery(projection, "rowid = ?", null, null, null, null);
+        Cursor cursor = db.rawQuery(query, new String[]{String.valueOf(rowid)});
         cursor.moveToFirst();
         int n = cursor.getColumnCount();
-        LABELS = new ArrayList<>();
+        ArrayList<String> array = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            LABELS.add(cursor.getString(i));
+            array.add(cursor.getString(i));
         }
         cursor.close();
+        return array;
     }
 
     public static String getLabel(int index) {
-        if (LABELS == null) getLabels();
+        if (LABELS == null) LABELS = getArrays(2);
         return LABELS.get(index);
     }
 
-    private static void getColors() {
-        if (COLORS != null) return;
-        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-        qb.setTables(TABLE_NAME);
-        String[] projection = {"*"};
-        String query = qb.buildQuery(projection, "rowid = 3",  null, null, null, null);
-        Cursor cursor = db.rawQuery(query, null);
-        cursor.moveToFirst();
-        int n = cursor.getColumnCount();
-        COLORS = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            COLORS.add(cursor.getString(i));
-        }
-        cursor.close();
-    }
-
     public static int getColor(int index, int i) {
-        if (COLORS == null) getColors();
+        if (COLORS == null) COLORS = getArrays(3);
         String c = COLORS.get(index);
         if (c.contains(",")) c = c.split(",")[i];
         return Color.parseColor(c);
@@ -414,65 +403,19 @@ public class MCPDatabase extends SQLiteAssetHelper {
         return getColor(index, 1);
     }
 
-    private static void getDictNames() {
-        if (DICT_NAMES != null) return;
-        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-        qb.setTables(TABLE_NAME);
-        String[] projection = {"*"};
-        String query = qb.buildQuery(projection, "rowid = 4",  null, null, null, null);
-        Cursor cursor = db.rawQuery(query, null);
-        cursor.moveToFirst();
-        int n = cursor.getColumnCount();
-        DICT_NAMES = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            String c = cursor.getString(i);
-            DICT_NAMES.add(c);
-        }
-        cursor.close();
-    }
-
     public static String getDictName(int index) {
-        if (DICT_NAMES == null) getDictNames();
+        if (DICT_NAMES == null) DICT_NAMES = getArrays(4);
         return DICT_NAMES.get(index);
     }
 
-    private static void getDictLinks() {
-        if (DICT_LINKS != null) return;
-        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-        qb.setTables(TABLE_NAME);
-        String[] projection = {"*"};
-        String query = qb.buildQuery(projection, "rowid = 5",  null, null, null, null);
-        Cursor cursor = db.rawQuery(query, null);
-        cursor.moveToFirst();
-        int n = cursor.getColumnCount();
-        DICT_LINKS = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            String c = cursor.getString(i);
-            DICT_LINKS.add(c);
-        }
-        cursor.close();
-    }
-
     public static String getDictLink(int index) {
-        if (DICT_LINKS == null) getDictLinks();
+        if (DICT_LINKS == null) DICT_LINKS = getArrays(5);
         return DICT_LINKS.get(index);
     }
 
     private static void getIntros() {
         if (INTROS != null) return;
-        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-        qb.setTables(TABLE_NAME);
-        String[] projection = {"*"};
-        String query = qb.buildQuery(projection, "rowid = 6",  null, null, null, null);
-        Cursor cursor = db.rawQuery(query, null);
-        cursor.moveToFirst();
-        int n = cursor.getColumnCount();
-        INTROS = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            String c = cursor.getString(i);
-            INTROS.add(c);
-        }
-        cursor.close();
+        INTROS = getArrays(6);
     }
 
     public static String getIntroText(Context context, int index) {
@@ -501,26 +444,38 @@ public class MCPDatabase extends SQLiteAssetHelper {
         return HtmlCompat.fromHtml(intro, HtmlCompat.FROM_HTML_MODE_COMPACT);
     }
 
-    private static void getToneNames() {
-        if (TONE_NAMES != null) return;
-        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-        qb.setTables(TABLE_NAME);
-        String[] projection = {"*"};
-        String query = qb.buildQuery(projection, "rowid = 7",  null, null, null, null);
-        Cursor cursor = db.rawQuery(query, null);
-        cursor.moveToFirst();
-        int n = cursor.getColumnCount();
-        TONE_NAMES = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            String c = cursor.getString(i);
-            TONE_NAMES.add(c);
-        }
-        cursor.close();
+    public static String getToneName(int lang) {
+        if (TONE_NAMES == null) TONE_NAMES = getArrays(7);
+        return TONE_NAMES.get(lang);
     }
 
-    public static String getToneName(int lang) {
-        if (TONE_NAMES == null) getToneNames();
-        return TONE_NAMES.get(lang);
+    public static Double getLocation(int index, int pos) {
+        if (LOCATIONS == null) LOCATIONS = getArrays(8);
+        String location = LOCATIONS.get(index);
+        if (TextUtils.isEmpty(location)) return null;
+        return Double.parseDouble(location.split(",")[pos]);
+    }
+
+    private static Double getLat(int index) {
+        return getLocation(index, 0);
+    }
+
+    private static Double getLong(int index) {
+        return getLocation(index, 1);
+    }
+
+    public static GeoPoint getPoint(int index) {
+        if (getLat(index) == null) return null;
+        return new GeoPoint(getLat(index), getLong(index));
+    }
+
+    public static int getSize(int index) {
+        if (SIZES == null) SIZES = getArrays(9);
+        try {
+            return Integer.parseInt(SIZES.get(index));
+        } catch (Exception ignore) {
+           return 4;
+        }
     }
 
     public static String getColumnName(int index) {

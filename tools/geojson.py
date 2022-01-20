@@ -13,16 +13,16 @@ sheet = sheets["档案"]
 
 for row in sheet.rows:
 	fs = [row[i].value if row[i].value else "" for i in range(26)]
-	if not fs[0] or not fs[8]:
+	if not fs[0] or not fs[10]:
 		continue
-	jd, wd = fs[11], fs[12]
+	jd, wd = fs[10], fs[11]
 	try:
 		jd = float(jd)
 		wd = float(wd)
 	except:
 		continue
 	color = row[1].fill.fgColor.value[2:]
-	place = "".join(fs[13:18])
+	place = "".join(fs[12:17])
 	size = "small"
 	if "市中心" in place: size = "large"
 	elif "中心" in place: size = "medium"
@@ -30,7 +30,7 @@ for row in sheet.rows:
 		"type": "Feature",
 		"properties": {
 			"方言": fs[1],
-			"方言片": "".join(fs[4:7]),
+			"方言片": "".join(fs[5:8]),
 			"地点": place,
 			"marker-size": size,
 			"marker-color": color,
@@ -41,14 +41,18 @@ for row in sheet.rows:
 			"coordinates": [jd, wd]
 		}
 	}
-	if fs[7]:
-		Feature["properties"]["方言岛"] = fs[7]
+	if fs[8]:
+		Feature["properties"]["方言岛"] = fs[8]
+	if fs[22]:
+		Feature["properties"]["录入人"] = fs[22]
 	if fs[23]:
-		Feature["properties"]["录入人"] = fs[23]
+		value = fs[23]
+		if row[23].hyperlink:
+			target = row[23].hyperlink.target
+			value = f"<a herf={target}>{value}</a>"
+		Feature["properties"]["参考文献"] = value
 	if fs[24]:
-		Feature["properties"]["参考文献"] = fs[24]
-	if fs[25]:
-		Feature["properties"]["繁简"] = fs[25]
+		Feature["properties"]["繁简"] = fs[24]
 	FeatureCollection["features"].append(Feature)
 
 json.dump(FeatureCollection, fp=open("../方言.geojson","w"),ensure_ascii=False,indent=2)

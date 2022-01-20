@@ -1,4 +1,4 @@
-#漢字	音標	解釋#('ko_kor', '朝鮮語', '朝鮮', '#8B0000', 'Naver漢字辭典', 'http://hanja.naver.com/hanja?q=%s', '來源：<a href=http://hanja.naver.com/>Naver漢字辭典</a><br>說明：括號前的讀音爲漢字本來的讀音，也是朝鮮的標準音，而括號內的讀音爲韓國應用<a href=http://zh.wikipedia.org/wiki/%E9%A0%AD%E9%9F%B3%E6%B3%95%E5%89%87>頭音法則</a>之後的讀音。', None)
+#漢字	音標	解釋#('ko_kor', '朝鮮語', '朝鮮', '#8B0000', 'Naver漢字辭典', 'http://hanja.naver.com/hanja?q=%s', '來源：<a href=http://hanja.naver.com/>Naver漢字辭典</a><br>說明：括號前的讀音爲漢字本來的讀音，也是朝鮮的標準音，而括號內的讀音爲韓國應用<a href=http://zh.wikipedia.org/wiki/%E9%A0%AD%E9%9F%B3%E6%B3%95%E5%89%87>頭音法則</a>之後的讀音。', None, None, None)
 一	il	
 丁	jeong	
 丂	gyo	
