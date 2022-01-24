@@ -1,4 +1,4 @@
-#漢字	音標	解釋#('nan_lz_lz', '雷州話', '雷州', '#8B0000', None, None, '版本：V2.5 (2021-11-20)<br>來源：<u>Kiattan</u>', '24 1 1a 陰平 ꜀,22 2 1b 陽平 ꜁,41 3 2a 陰上 ꜂,33 4 2b 陽上 ꜃,21 5 3a 陰去 ꜄,453 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,2 8 4b 陽入 ꜇', None, None)
+#漢字	音標	解釋#('nan_lz_lz', '雷州話', '雷州', '#8B0000', None, None, '來源：<u>Kiattan</u>', '24 1 1a 陰平 ꜀,22 2 1b 陽平 ꜁,41 3 2a 陰上 ꜂,33 4 2b 陽上 ꜃,21 5 3a 陰去 ꜄,453 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,2 8 4b 陽入 ꜇', None, None)
 一	jiak7	訓
 一	iɛk7	
 七	tsʰiɛk7	
@@ -39,7 +39,7 @@
 交	kiau1	
 亥	hai4	
 亦	ik7	
-人	naŋ2	
+人	naŋ2	訓
 仇	tsʰiu2	
 仙	siɛŋ1	
 代	tai4	
@@ -92,6 +92,7 @@
 傾	kʰiŋ6	
 像	sio5	不～
 像	siaŋ5=	不～
+儂	naŋ2	
 允	iɛŋ5	
 元	jiɛŋ2	
 兄	hia1	
@@ -176,6 +177,7 @@
 卵	taŋ6	
 卷	kɛŋ3	～起
 厚	kau4	
+厝	tsu5	
 原	jiɛŋ2	
 厭	iam5	
 去	kʰu5	
@@ -238,7 +240,7 @@
 四	si5	
 囝	kia3	
 回	hui2	
-回	tui3	
+回	tui3	訓
 因	iɛŋ1	
 困	kʰuŋ5	
 圈	kʰɛu1	（訓“箍”）圓～
@@ -269,7 +271,7 @@
 塌	tʰap7	
 塔	tʰa6	
 塗	tʰɛu2	
-塗	tʰu2	“塗”
+塗	tʰu2	
 填	tʰiɛŋ2	
 墊	tʰiam4	
 墊	tʰiap7	
@@ -384,7 +386,7 @@
 尿	jio1	
 局	kʰok7	
 屈	kʰuak7	
-屋	tsu5	
+屋	tsu5	訓“厝”
 屍	si1	
 屍	su1=	
 屎	sai3	
@@ -396,7 +398,7 @@
 嶺	nia3	
 州	tsiu1	
 巢	tsʰau2	
-巢	siu1	
+巢	siu1	訓
 工	kaŋ1	
 左	tso3	
 巷	ho1	
@@ -543,7 +545,7 @@
 挖	uak6	
 挨	ŋai5	～著
 捆	kʰuŋ3	
-捉	lia4	
+捉	lia4	訓“掠”
 捋	luak7	
 捏	tɛ2	
 掀	hiɛŋ1	
@@ -552,6 +554,7 @@
 掌	tsio3	
 排	pai2	
 掛	kʰua5	
+掠	lia4	捉），lia453（拿
 探	tʰam5	
 接	tsiap7	
 控	kʰoŋ5	
@@ -568,7 +571,7 @@
 搭	ta6	
 搭	tap7=	
 搶	tsʰiaŋ3	
-摘	mo6	
+摘	mo6	訓
 摸	ma1	
 撇	pʰiɛk7	
 撈	lau6	
@@ -639,7 +642,7 @@
 替	tiɛk7	
 最	tsui5	
 會	hui6	開～
-會	oi6	（訓）～不～
+會	oi6	（訓“解”）～不～
 月	wɛ4	
 有	iu6	
 服	hok8	
@@ -792,7 +795,7 @@
 溝	kau1	
 溫	uŋ1	
 滅	miɛk8	
-滯	niŋ4	
+滯	niŋ4	訓
 滴	tik7	
 滾	kuŋ3	
 滿	mua3	
@@ -982,6 +985,7 @@
 租	tsu6=	
 秤	tsʰiɛŋ5	～杆
 秧	o1	
+秫	tsuk8	
 移	ji2	
 稅	suɛ5	
 稅	sui6=	
@@ -990,10 +994,10 @@
 稻	tiu4	
 稿	ko3	
 稿	kau3=	
-穀	tsʰiak7	
+穀	tsʰiak7	訓“粟”
 穴	hik7	
-空	kʰaŋ1	～虛
-空	kʰoŋ1=	～虛
+空	kʰaŋ1	
+空	kʰoŋ1=	
 穿	tsʰuaŋ1	
 突	tuk7	
 窗	tʰiaŋ1	
@@ -1042,7 +1046,7 @@
 粗	tsʰɛu1	
 粘	tsiam1	～性
 粘	nak7	（訓）～性
-粟	siak7	
+粟	tsʰiak7	（白）／siak5
 粥	tsok7	
 糉	tsaŋ5	
 精	tsiŋ1	
@@ -1063,6 +1067,7 @@
 紙	tsua3	
 級	kʰip7	
 紡	vaŋ3	
+索	so6	
 紫	tsʰu5	
 細	si6	
 紹	siau4	
@@ -1084,7 +1089,7 @@
 縫	hoŋ2	裁～
 織	tsik7	
 繡	siu5	
-繩	so6	
+繩	so6	訓“索”
 繳	kiau3	
 續	sok8	
 纏	tsʰiɛŋ2	
@@ -1262,6 +1267,7 @@
 規	kui1	
 親	tsʰiɛŋ1	
 角	kak7	
+解	oi6	
 言	ŋiɛŋ2	
 討	tʰo3	
 討	tʰau3=	
@@ -1352,8 +1358,8 @@
 輩	puɛ5	
 輸	si1	
 輸	su1	
-轉	tui3-	～身
 轉	tsiɛŋ3	～身
+轉	tui3	
 轎	kio1	
 轟	hoŋ1	
 辣	lua4	

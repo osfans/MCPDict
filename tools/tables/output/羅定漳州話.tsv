@@ -1,4 +1,4 @@
-#漢字	音標	解釋#('nan_zq_ldzz', '羅定漳州話', '羅定漳州話', '#8B0000', None, None, '版本：V2.5 (2021-11-20)<br>來源：<u>Kiattan</u>', '45 1a 1a 陰平a ꜀,55 1b 1b 陰平b ꜆,24 2a 1c 陽平a ꜁,22 2b 1d 陽平b ꜇,21 2c 1e 陽平c ꜇,451 3 2a 陰上 ꜂,443 4 2b 陽上 ꜃,31 5 3 去 ꜄,5 7 4a 陰入 ꜆,2 8 4b 陽入 ꜇', None, None)
+#漢字	音標	解釋#('nan_zq_ldzz', '羅定漳州話', '羅定漳州話', '#8B0000', None, None, '來源：<u>Kiattan</u>', '45 1a 1a 陰平a ꜀,55 1b 1b 陰平b ꜆,24 2a 1c 陽平a ꜁,22 2b 1d 陽平b ꜇,21 2c 1e 陽平c ꜇,451 3 2a 陰上 ꜂,443 4 2b 陽上 ꜃,31 5 3 去 ꜄,5 7 4a 陰入 ꜆,2 8 4b 陽入 ꜇', None, None)
 一	it9	
 七	tsʰit9	
 丈	tsiaŋ7	
@@ -26,7 +26,7 @@
 井	tsɛ6	
 交	kau1	
 亦	jiek9	
-人	laŋ3	
+人	laŋ3	訓
 仇	tsʰiu3	
 仙	sien1	
 代	te7	
@@ -67,6 +67,7 @@
 傷	siaŋ1	
 傾	kʰiŋ1	
 像	tsʰiaŋ7	不～
+儂	laŋ3	
 允	un6	
 元	uon3	
 兄	hia1	
@@ -138,6 +139,7 @@
 卵	nui7	
 卷	lun6	～起
 厚	kau7	
+厝	tsʰu8	
 原	yen4	
 厭	iam8	
 去	kʰi8	
@@ -179,7 +181,7 @@
 哪	tai6	
 哭	hau6	
 唱	tsʰyo8	
-啄	tiem1	
+啄	tiem1	訓
 問	ɓui7	
 善	sien4	
 喉	au3	
@@ -193,7 +195,7 @@
 嚴	niam7	
 四	si8	
 囝	kia6	
-回	tui6	
+回	tui6	訓
 因	in1	
 困	kʰun8	
 圈	kʰuon1	圓～
@@ -313,7 +315,7 @@
 尿	yo7	
 局	kok10	
 屈	ut9	
-屋	tsʰu8	
+屋	tsʰu8	訓“厝”
 屍	si1	
 屎	sai6	
 展	tsien6	
@@ -322,7 +324,7 @@
 岸	ŋuon7	
 嶺	nia6	
 州	tsiu1	
-巢	siu7	
+巢	siu7	訓
 工	kaŋ1	
 左	tso6	
 巷	haŋ8	
@@ -407,7 +409,7 @@
 成	siŋ3	
 戰	tsien8	
 戲	hi8	
-戴	tua8	
+戴	tua8	訓“帶”
 戶	ou3	
 房	paŋ3	
 扁	pien6	
@@ -416,7 +418,7 @@
 托	tʰok9	
 扣	kʰau8	
 扮	pan7	
-扯	ɓan6	
+扯	ɓan6	訓
 扶	hua7	
 批	pʰɐi1	
 抄	tsʰau1	
@@ -437,20 +439,22 @@
 括	kʰuot9	
 拱	koŋ6	
 拳	kʰuon3	
-拿	pʰe3	
+拿	pʰe3	訓
 指	tsi6	
 挑	tʰyo1	
 挖	uot9	
 挨	na1	～著
 捆	kʰun6	
-捉	ɗia7	
+捉	ɗia7	訓“掠”
 捋	luot10	
 捏	niu6	
+捱	ŋai7	
 掃	sau8	～地
 掃	sau8	～帚
 掌	tsyo6	
 排	pai3	
 掛	kʰau8	
+掠	ɗia7	
 探	tʰam8	
 接	tsi6	
 控	hoŋ8	
@@ -465,7 +469,7 @@
 搬	pua1	
 搭	ta6	
 搶	tsʰyo6	
-摘	kʰyo6	
+摘	kʰyo6	訓
 摸	ɓo3	
 撇	pʰiet9	
 撈	lau1	
@@ -525,7 +529,7 @@
 替	tʰɐi7	
 最	tsui8	
 會	hye7	開～
-會	ɐi7	（訓）～不～
+會	ɐi7	（訓“解”）～不～
 月	hye7	
 有	u7	
 服	hok10	
@@ -545,7 +549,7 @@
 板	pan6	
 林	lim3	
 果	ko6	
-枯	ɓau6	
+枯	ɓau6	訓
 柄	pia8	
 柑	kim1	
 染	ni6	
@@ -606,7 +610,7 @@
 歸	tui6	
 死	si6	
 殘	tsʰan3	
-殺	tʰai1	
+殺	tʰai1	訓“治”
 殼	kʰak9	
 毀	ui6	
 母	wo6	
@@ -626,7 +630,7 @@
 沙	sua1	
 河	ho5	
 油	iu3	
-治	tsi7	
+治	tsi7／tʰai45	殺
 泉	tsʰuon3	
 法	huot9	
 泛	huon7	
@@ -634,7 +638,7 @@
 泥	tʰou3	
 注	tsy8	
 洗	sɐi6	
-洞	kʰaŋ1	
+洞	kʰaŋ1	訓“空”
 活	ua7	
 派	pʰai8	
 流	lau3	
@@ -692,7 +696,7 @@
 熊	hoŋ3	
 熏	hun1	
 熟	sik10	
-熬	ŋai7	
+熬	ŋai7	訓“捱”
 熱	jiet10	
 燈	tiŋ1	
 燒	hia3	
@@ -728,7 +732,7 @@
 獵	liap10	
 獻	hien8	
 玉	ɓa6	
-王	ui3	
+王	ui3	訓“黃”
 班	pan1	
 現	ien7	
 球	kʰiu3	
@@ -811,6 +815,7 @@
 租	tsou1	
 秤	tsʰiŋ1	～杆
 秧	yo1	
+秫	tsut10	
 移	i4	
 稅	se8	
 程	tsʰiŋ3	
@@ -819,7 +824,7 @@
 稿	kau6	
 穀	kok9	
 穴	uot10	
-空	kʰaŋ1	～虛
+空	kʰaŋ1	
 穿	tsʰui1	
 突	tut10	
 窗	tsʰyo1	
@@ -859,10 +864,11 @@
 粗	tsʰou1	
 粘	li3	～性
 粟	sok9	
-粥	moi3	
+粥	moi3	訓“糜”
 糉	tsaŋ8	
 精	tsiŋ1	
 糖	tʰoŋ3	
+糜	moi3	
 糞	hun8	
 糟	tsau1	
 糠	kʰoŋ1	
@@ -878,6 +884,7 @@
 紙	tsua6	
 級	kʰip9	
 紡	hoŋ6	
+索	so6	
 紫	tsi6	
 細	sɐi8	
 紹	siau7	
@@ -886,7 +893,7 @@
 絕	tsuot10	
 絨	jioŋ3	
 絲	si1	
-綁	pak10	
+綁	pak10	訓“縛”
 經	kiŋ1	
 綠	lak10	
 綢	tsʰou3	
@@ -895,11 +902,12 @@
 線	sua8	
 緞	tuon7	
 緣	uon3	
+縛	pak10	
 縣	kuon7	
 縫	hoŋ4	裁～
 織	tsik9	
 繡	sou8	
-繩	so6	
+繩	so6	訓“索”
 繳	kieu6	
 續	tsok10	
 纏	tsien7	
@@ -909,7 +917,7 @@
 罰	huot10	
 罵	ɓe3	
 羊	yo3	
-美	lieŋ8	
+美	lieŋ8	訓“靚”
 翁	ioŋ1	
 習	tsap10	
 翻	huon1	
@@ -921,7 +929,7 @@
 聲	sia1	
 聽	tʰia1	～見
 肅	sok9	
-肉	ɓa6	
+肉	ɓa6	訓
 肚	tou7	豬～
 肚	tou7	腸～
 肝	kua1	
@@ -976,7 +984,7 @@
 莊	tsoŋ1	
 莧	i7	
 莫	ɓuok10	
-菊	tsʰik9	
+菊	tsʰik9	訓
 菌	kʰun6	
 菜	tsʰai8	
 菩	pʰu3	
@@ -1053,6 +1061,7 @@
 規	kʰui1	
 親	tsʰin1	
 角	kak9	
+解	ɐi7	
 言	ien3	
 討	tʰou6	
 訓	hun8	
@@ -1082,7 +1091,7 @@
 變	pi8	
 讓	jiaŋ7	
 豆	tau7	
-豎	toŋ7	
+豎	toŋ7	訓
 象	tsiaŋ7	
 豬	ti1	
 豹	pau8	
@@ -1134,6 +1143,7 @@
 輩	pye8	
 輸	su1	
 轉	tsun6	～身
+轉	tui6	
 轎	kyo7	
 轟	kuaŋ1	
 辣	lua7	
@@ -1161,7 +1171,7 @@
 道	tau7	
 達	tat10	
 遠	hui7	
-遮	ia1	
+遮	ia1	訓
 遲	ɓui6	
 遵	tsuon1	
 遷	tsʰien1	
@@ -1255,6 +1265,7 @@
 露	lou7	
 靈	liŋ3	
 青	tsʰe1	
+靚	lieŋ8	
 靜	tsʰiŋ7	
 靠	kʰau8	
 面	ɓin7	～上
@@ -1307,12 +1318,12 @@
 魏	ŋai7	
 魚	hi3	
 鰓	soi1	
-鳥	lan7	陰莖
+鳥	lan7	（訓）陰莖
 鳳	hoŋ3	
 鴨	a6	
 鴿	kap9	
 鵝	ŋo1	
-鹵	iap9	
+鹵	iap9	訓
 鹹	kiam3	
 鹽	iam3	
 鹿	lak10	

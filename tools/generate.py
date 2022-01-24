@@ -25,6 +25,10 @@ NAME='../app/src/main/assets/databases/mcpdict.db'
 os.remove(NAME)
 conn = sqlite3.connect(NAME)
 c = conn.cursor()
+for i in keys:
+	if keys.count(i) > 1:
+		print(f"{i}重名")
+		exit()
 c.execute("CREATE VIRTUAL TABLE mcpdict USING fts3 (%s)" % fields)
 c.executemany(INSERT, rows)
 for i in sorted(dicts.keys(), key=cjkorder):

@@ -4,8 +4,8 @@ from tables._表 import 表
 import re
 
 class 字表(表):
-	_file = "粤西闽语方言字表2.5（繁体）(文锋).tsv"
-	note = "版本：V2.5 (2021-11-20)<br>來源：<u>Kiattan</u>"
+	_file = "粤西闽语方言字表*.tsv"
+	note = "來源：<u>Kiattan</u>"
 
 	def parse(self, fs):
 		if len(fs) < 6: return

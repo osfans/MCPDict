@@ -1,36 +1,22 @@
 package com.osfans.mcpdict;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
-import android.view.View;
 
 import androidx.core.content.res.ResourcesCompat;
-import androidx.core.graphics.BitmapCompat;
-import androidx.core.graphics.drawable.DrawableCompat;
 
-import org.osmdroid.bonuspack.clustering.MarkerClusterer;
-import org.osmdroid.bonuspack.clustering.RadiusMarkerClusterer;
-import org.osmdroid.bonuspack.clustering.StaticCluster;
 import org.osmdroid.bonuspack.kml.KmlDocument;
 import org.osmdroid.bonuspack.kml.Style;
-import org.osmdroid.bonuspack.overlays.FolderZOverlay;
-import org.osmdroid.config.Configuration;
 import org.osmdroid.events.MapListener;
 import org.osmdroid.events.ScrollEvent;
 import org.osmdroid.events.ZoomEvent;
-import org.osmdroid.tileprovider.MapTileProviderBase;
-import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.BoundingBox;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.CustomZoomButtonsController;
@@ -38,19 +24,14 @@ import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.CopyrightOverlay;
 import org.osmdroid.views.overlay.FolderOverlay;
 import org.osmdroid.views.overlay.GroundOverlay;
-import org.osmdroid.views.overlay.Marker;
-import org.osmdroid.views.overlay.MinimapOverlay;
 import org.osmdroid.views.overlay.Overlay;
 import org.osmdroid.views.overlay.ScaleBarOverlay;
-import org.osmdroid.views.overlay.TilesOverlay;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 public class MyMapView extends MapView {
-    FolderOverlay mFolderOverlay;
+    FolderOverlay mHzOverlay;
 
     public MyMapView(Context context) {
         super(context);
@@ -59,6 +40,12 @@ public class MyMapView extends MapView {
     public MyMapView(Context context, String hz) {
         this(context);
         init(hz);
+    }
+
+    public void show() {
+        new AlertDialog.Builder(getContext(), android.R.style.Theme_DeviceDefault_Light_NoActionBar_Fullscreen)
+                .setView(this)
+                .show();
     }
 
     @Override
@@ -77,9 +64,9 @@ public class MyMapView extends MapView {
 
             @Override
             public boolean onZoom(ZoomEvent event) {
-                if (getOverlays().contains(mFolderOverlay)) {
+                if (getOverlays().contains(mHzOverlay)) {
                     Double level = event.getZoomLevel();
-                    for(Overlay item: mFolderOverlay.getItems()) {
+                    for(Overlay item: mHzOverlay.getItems()) {
                         ((MyMarker)item).setZoomLevel(level);
                     }
                     invalidate();
@@ -91,12 +78,12 @@ public class MyMapView extends MapView {
         getZoomController().setVisibility(CustomZoomButtonsController.Visibility.NEVER);
         setMinZoomLevel(4d);
         setMaxZoomLevel(20d);
-//        GroundOverlay groundOverlay = new GroundOverlay();
+//        GroundOverlay chinaOverlay = new GroundOverlay();
 //        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.china);
-//        groundOverlay.setImage(bitmap);
-//        groundOverlay.setPosition(new GeoPoint(54d, 73d), new GeoPoint(17d, 135d));
-//        groundOverlay.setTransparency(0.5f);
-        FolderOverlay chinaOverlay = geoJsonifyMap("china.geojson");
+//        chinaOverlay.setImage(bitmap);
+//        chinaOverlay.setPosition(new GeoPoint(57.5d, 67.1d), new GeoPoint(-6.9d, 141.4d));
+//        chinaOverlay.setTransparency(0.5f);
+        FolderOverlay geoOverlay = geoJsonifyMap("china.geojson");
         CopyrightOverlay copyrightOverlay = new CopyrightOverlay(getContext()) {
             @Override
             public void setCopyrightNotice(String pCopyrightNotice) {
@@ -106,18 +93,19 @@ public class MyMapView extends MapView {
         ScaleBarOverlay scaleBarOverlay = new ScaleBarOverlay(this);
         scaleBarOverlay.setAlignBottom(true);
         scaleBarOverlay.setAlignRight(true);
-        mFolderOverlay = initHZ(hz);
+        mHzOverlay = initHZ(hz);
 
-        getOverlays().add(chinaOverlay);
+        //getOverlays().add(chinaOverlay);
+        getOverlays().add(geoOverlay);
         getOverlays().add(copyrightOverlay);
         getOverlays().add(scaleBarOverlay);
-        getOverlays().add(mFolderOverlay);
+        getOverlays().add(mHzOverlay);
         invalidate();
 
         // Workaround for osmdroid issue
         // See: https://github.com/osmdroid/osmdroid/issues/337
         addOnFirstLayoutListener((v, left, top, right, bottom) -> {
-            BoundingBox boundingBox = (mFolderOverlay.getItems().size() >= 3 ? mFolderOverlay : chinaOverlay).getBounds();
+            BoundingBox boundingBox = (mHzOverlay.getItems().size() >= 3 ? mHzOverlay : geoOverlay).getBounds();
             // Yep, it's called 2 times. Another workaround for zoomToBoundingBox.
             // See: https://github.com/osmdroid/osmdroid/issues/236#issuecomment-257061630
             zoomToBoundingBox(boundingBox, false);
