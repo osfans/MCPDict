@@ -341,10 +341,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         boolean favorite = cursor.getInt(cursor.getColumnIndexOrThrow("is_favorite")) == 1;
         Button button = view.findViewById(R.id.button_map);
         button.setOnClickListener(v -> {
-            MyMapView mapView = new MyMapView(getContext(), hz);
-            new AlertDialog.Builder(getContext(), android.R.style.Theme_DeviceDefault_Light_NoActionBar_Fullscreen)
-                    .setView(mapView)
-                    .show();
+            new MyMapView(getContext(), hz).show();
         });
         button = view.findViewById(R.id.button_favorite);
         button.setOnClickListener(v -> {

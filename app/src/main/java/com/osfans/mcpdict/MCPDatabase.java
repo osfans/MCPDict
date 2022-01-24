@@ -474,7 +474,7 @@ public class MCPDatabase extends SQLiteAssetHelper {
         try {
             return Integer.parseInt(SIZES.get(index));
         } catch (Exception ignore) {
-           return 4;
+           return 0;
         }
     }
 

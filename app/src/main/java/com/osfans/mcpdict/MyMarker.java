@@ -48,17 +48,17 @@ public class MyMarker extends Marker {
         boolean enabled = true;
         float alpha = 0f;
         switch (mSize) {
-            case 0:
+            case 5:
                 break;
-            case 1:
+            case 4:
                 enabled = (d >= 6);
                 if (d > 5) alpha = 0.05f ;
                 break;
-            case 2:
+            case 3:
                 enabled = (d >= 7.5);
                 if (d > 7) alpha = 0.05f ;
                 break;
-            case 3:
+            case 2:
                 enabled = (d >= 8.5);
                 if (d > 8) alpha = 0.05f ;
                 break;

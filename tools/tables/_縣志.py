@@ -11,8 +11,11 @@ class 字表(表):
 		ym = ""
 		for line in open(self.spath):
 			line = self.format(line)
-			line = line.strip().replace("Ǿ", "ˀ").replace('"','').replace("＝","=").replace("—","-").replace("｛","{").replace("｝","}").replace("[","［").replace("]", "］").replace("?","？")
+			line = line.strip().replace("Ǿ", "ˀ").replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？")
+			line = re.sub("\[(\d+)\]", "［\\1］",line)
+			line = re.sub("［([^0-9]+.*?)］", "[\\1]",line)
 			if not line: continue
+			line = line.lstrip()
 			if line.startswith("#"):
 				ym = line[1:]
 				if not ym: continue
@@ -25,7 +28,7 @@ class 字表(表):
 				if sd == "0": sd = ""
 				py = sm + ym +sd
 				py = py.lstrip("0Ø∅")
-				hzs = re.findall("(.)\d?([+\-/=~≈\\\*？$&]?)\d?(\{.*?\})?", hzs)
+				hzs = re.findall("(.)\d?([+\-/=~≈\\\*？$&r]?)\d?(\{.*?\})?", hzs)
 				for hz, c, js in hzs:
 					if hz == " ": continue
 					p = ""
@@ -41,6 +44,9 @@ class 字表(表):
 								c = ""
 							elif c == '&':
 								p = "(连读前字调)"
+								c = ""
+							elif c == 'r':
+								p = "(兒化)"
 								c = ""
 					js = js.strip("{}")
 					p = py + c + "\t" + p + js

@@ -12,5 +12,5 @@ class 字表(表):
 	
 	def format(self, line):
 		line = line.replace("*", "□").replace("(","（").replace(")","）").replace("（","{").replace("）","}").replace("、","/")
-		line = re.sub('^""	', "", line)
+		line = re.sub('^	".*?"	', "", line)
 		return line
