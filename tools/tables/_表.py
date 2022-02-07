@@ -150,7 +150,7 @@ class 表:
 			d[hz] = py.split(",")
 
 	def norm(self, yb):
-		yb = yb.replace("᷉", "̃").replace("ə˞", "ɚ")\
+		yb = yb.replace("᷉", "̃")\
 			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ")\
 			.replace("ʣ", "dz").replace("ʥ", "dʑ")
 		return yb
