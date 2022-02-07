@@ -43,7 +43,8 @@ def getInfos():
 			colors.append(subcolor)
 		colors = ["#"+ i for i in colors]
 		color = ",".join(colors)
-		point = fs[11].replace(" ", "")
+		point = fs[11].replace(" ", "").strip()
+		if not point: continue
 		wd, jd = map(float, point.split(","))
 		place = "".join(fs[12:17])
 		size = fs[18].count("★")
@@ -61,7 +62,7 @@ def getInfos():
 		name = fs[0] if "〃" in fs[1] else fs[1]
 		name = opencc(name).replace("清","淸").replace("榆","楡").replace("峯","峰").replace("樑","梁")
 		section = opencc("".join(fs[6]))
-		label = fs[5][0].lower()
+		#label = fs[5][0].lower()
 		ver = None
 		ver = fs[2].strftime("%Y-%m-%d")
 		editor = None

@@ -146,6 +146,7 @@ public class Orthography {
             if (isHz(c)) return false;
             return Character.isLetterOrDigit(c)
                     || type == Character.NON_SPACING_MARK
+                    || type == Character.MODIFIER_SYMBOL
                     || type == Character.OTHER_NUMBER;
         }
 
