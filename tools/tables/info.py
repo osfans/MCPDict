@@ -60,7 +60,7 @@ def getInfos():
 				target = row[23].hyperlink.target
 				book = f"<a herf={target}>{book}</a>"
 		name = fs[0] if "〃" in fs[1] else fs[1]
-		name = opencc(name).replace("清","淸").replace("榆","楡").replace("峯","峰").replace("樑","梁")
+		name = opencc(name).replace("清","淸").replace("榆","楡").replace("峯","峰").replace("樑","梁").replace("嶽","岳")
 		section = opencc("".join(fs[6]))
 		#label = fs[5][0].lower()
 		ver = None
