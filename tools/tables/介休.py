@@ -11,5 +11,5 @@ class 字表(表):
 	simplified = 2
 	
 	def format(self, line):
-		line = line.replace("ʼ", "ʰ").replace("g［1］", "g1")
-		return line.replace("ø", "")
+		line = line.replace("ʼ", "ʰ").replace("g［1］", "g1").replace("ø", "")
+		return line

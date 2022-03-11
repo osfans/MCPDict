@@ -36,30 +36,31 @@ def getInfos():
 	for row in sheet.rows:
 		fs = [row[i].value if row[i].value else "" for i in range(26)]
 		if not fs[2] or type(fs[2]) is str: continue
-		color = row[9].fill.fgColor.value[2:]
+		color = row[10].fill.fgColor.value[2:]
 		colors = [color]
-		subcolor = row[10].fill.fgColor.value[2:]
+		subcolor = row[11].fill.fgColor.value[2:]
 		if subcolor != "000000":
 			colors.append(subcolor)
 		colors = ["#"+ i for i in colors]
 		color = ",".join(colors)
-		point = fs[11].replace(" ", "").strip()
+		point = fs[12].replace(" ", "").replace("，",",").strip()
 		if not point: continue
 		wd, jd = map(float, point.split(","))
-		place = "".join(fs[12:17])
-		size = fs[18].count("★")
+		place = "".join(fs[13:18])
+		size = fs[19].count("★")
 		marker_size = "small"
 		if size >= 4: marker_size = "large"
 		elif size == 3: marker_size = "medium"
-		if fs[22] and fs[22] != "Web":
-			editor = opencc(fs[22])
+		if fs[23] and fs[23] != "Web":
+			editor = opencc(fs[23])
 		book = ""
-		if fs[23]:
-			book = opencc(fs[23])
-			if row[23].hyperlink:
-				target = row[23].hyperlink.target
+		if fs[24]:
+			book = opencc(fs[24])
+			if row[24].hyperlink:
+				target = row[24].hyperlink.target
 				book = f"<a herf={target}>{book}</a>"
-		name = fs[0] if "〃" in fs[1] else fs[1]
+		name = fs[1].strip()
+		if "〃" in name or not name: name = fs[0]
 		name = opencc(name).replace("清","淸").replace("榆","楡").replace("峯","峰").replace("樑","梁").replace("嶽","岳")
 		section = opencc("".join(fs[6]))
 		#label = fs[5][0].lower()
@@ -82,16 +83,16 @@ def getInfos():
 				"coordinates": [jd, wd]
 			}
 		}
-		if fs[17] == "☑":
-			Feature["properties"]["方言島"] = fs[17]
+		if fs[18] == "☑":
+			Feature["properties"]["方言島"] = fs[18]
 		if ver:
 			Feature["properties"]["版本"] = ver
 		if editor:
 			Feature["properties"]["錄入人"] = editor
 		if book:
 			Feature["properties"]["參考文獻"] = book
-		if fs[24]:
-			Feature["properties"]["繁簡"] = fs[24]
+		if fs[25]:
+			Feature["properties"]["繁簡"] = fs[25]
 		FeatureCollection["features"].append(Feature)
 	json.dump(FeatureCollection, fp=open("../方言.geojson","w"),ensure_ascii=False,indent=2)
 	f = open(tpath, "w")
