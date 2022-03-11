@@ -19,7 +19,7 @@ class 字表(表):
 			if line.startswith("#"):
 				ym = line[1:]
 				if not ym: continue
-				ym = ym.split()[0]
+				ym = ym.split("\t")[0].strip()
 				continue
 			fs = line.split("\t")[:2]
 			if len(fs) != 2: continue

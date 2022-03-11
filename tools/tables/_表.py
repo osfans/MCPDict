@@ -119,7 +119,7 @@ class 表:
 	def desc(self):
 		if self.ver: self.note = f"版本：{self.ver}<br>{self.note}"
 		if self.count > 0: return "字數：%d<br><br>%s"%(self.count, self.note)
-		return self.note
+		return self.note.replace("\n", "")
 		
 	@property
 	def head(self):
@@ -168,6 +168,13 @@ class 表:
 		self.patch(d)
 		t = open(self.tpath, "w")
 		print(f"#漢字\t音標\t解釋#{self.head}", file=t)
+		print(f"#簡稱\t/\t{self.city}#與文件名一致", file=t)
+		print(f"#全稱\t/\t{self.lang}#xx話", file=t)
+		print(f"#版本\t/\t#版本號或更新時間", file=t)
+		print(f"#聲母\t/\t#聲母順序，用逗號分開。如：b,p,m,f", file=t)
+		print(f"#韻母\t/\t#韻母順序，用逗號分開。如：a,o,e", file=t)
+		print(f"#聲調\t/\t{self.tones}#每個聲調包括：五度調值 八聲 四聲 漢字調類 四角調類，調內用空格分隔，調間用逗號分開。如：55 1 1a 陰平 ꜀,35 2 1b 陽平 ꜁,214 3 2 上 ꜂,51 5 3 去 ꜄", file=t)
+		print(f"#說明\t/\t{self.desc}#HTML格式，僅允許一行，用<br>換行", file=t)
 		for hz in sorted(d.keys()):
 			pys = d[hz]
 			hz = self.kCompatibilityVariants.get(hz, hz)
@@ -212,6 +219,7 @@ class 表:
 		for line in open(self.tpath):
 			line = line.strip()
 			if line.startswith("#"): continue
+			if "\t" not in line: continue
 			hz, py = line.split("\t", 1)
 			if self.isDict():
 				py = py.replace("\t", "\n")
