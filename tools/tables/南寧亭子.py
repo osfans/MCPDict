@@ -32,6 +32,8 @@ class 字表(表):
 			yb += "\\"
 		elif c == "(書)":
 			yb += "/"
+		elif c == "(習)" or c == "(常)":
+			yb += "*"
 		elif c == "※":
 			pass
 		else:
