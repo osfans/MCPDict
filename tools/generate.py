@@ -21,8 +21,12 @@ rows[5] = list(rows[5])
 rows[5][0] = "語言數：%d<br>字數：%d<br><br>%s"%(len(dialects),len(dicts),rows[5][0])
 
 #db
-NAME='../app/src/main/assets/databases/mcpdict.db'
-os.remove(NAME)
+NAME = '../app/src/main/assets/databases/mcpdict.db'
+DIR = os.path.dirname(NAME)
+if os.path.exists(NAME):
+	os.remove(NAME)
+if not os.path.exists(DIR):
+	os.mkdir(DIR)
 conn = sqlite3.connect(NAME)
 c = conn.cursor()
 for i in keys:
