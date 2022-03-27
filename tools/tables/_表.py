@@ -26,14 +26,14 @@ def isHZ(c):
 
 def getCompatibilityVariants():
 	d = dict()
-	for line in open("../app/src/main/res/raw/orthography_hz_compatibility.txt"):
+	for line in open("../app/src/main/res/raw/orthography_hz_compatibility.txt",encoding="U8"):
 		hz, val = line.rstrip()
 		d[hz] = val
 	return d
 
 def getSTVariants(level=2):
 	d = dict()
-	for line in open(VARIANT_FILE):
+	for line in open(VARIANT_FILE,encoding="U8"):
 		if line.startswith("#"): continue
 		fs = line.strip().split("\t")
 		if level == 1 and "#" in line:
@@ -131,10 +131,10 @@ class 表:
 		varianttime = os.path.getmtime(VARIANT_FILE)
 		if classtime < varianttime:
 			classtime = varianttime
-		ftime = os.path.getmtime(self.spath)
+		if not self.spath or not os.path.exists(self.spath):
+			return False
 		if os.path.exists(self.tpath):
-			if not os.path.exists(self.spath):
-				return False
+			ftime = os.path.getmtime(self.spath)
 			ttime = os.path.getmtime(self.tpath)
 			if ttime < self._time: return True
 			if ttime < classtime: return True
@@ -166,7 +166,7 @@ class 表:
 
 	def write(self, d):
 		self.patch(d)
-		t = open(self.tpath, "w")
+		t = open(self.tpath, "w",encoding="U8")
 		print(f"#漢字\t音標\t解釋#{self.head}", file=t)
 		print(f"#簡稱\t/\t{self.city}#與文件名一致", file=t)
 		print(f"#全稱\t/\t{self.lang}#xx話", file=t)
@@ -216,7 +216,8 @@ class 表:
 		start = time()
 		if self.outdated(): self.update()
 		d = defaultdict(list)
-		for line in open(self.tpath):
+		if not self.tpath or not os.path.exists(self.tpath): return
+		for line in open(self.tpath,encoding="U8"):
 			line = line.strip()
 			if line.startswith("#"): continue
 			if "\t" not in line: continue
@@ -242,6 +243,7 @@ class 表:
 	
 	def load(self, dicts):
 		d = self.read()
+		if not d: return
 		for hz, ybs in d.items():
 			if hz not in dicts:
 				dicts[hz] = {"hz": hz}
@@ -266,7 +268,7 @@ class 表:
 		d = defaultdict(list)
 		firstline = False
 		
-		for line in open(self.spath):
+		for line in open(self.spath,encoding="U8"):
 			if self.hasHead and not firstline:
 				firstline = True
 				continue

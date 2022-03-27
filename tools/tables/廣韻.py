@@ -21,7 +21,7 @@ class 字表(表):
 
 	def getPQ(self):
 		pq = dict()
-		for line in open(self.get_fullname("PrengQim.txt")):
+		for line in open(self.get_fullname("PrengQim.txt"),encoding="U8"):
 			line = line.strip()
 			fs = line.split(" ")
 			pq[fs[0]] = fs[1].replace("'", "0")

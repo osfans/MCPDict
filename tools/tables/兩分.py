@@ -13,7 +13,7 @@ class 字表(表):
 		return fs[0], fs[1]
 
 	def patch(self, d):
-		for line in open(self.get_fullname("lfzy.tsv")):
+		for line in open(self.get_fullname("lfzy.tsv"),encoding="U8"):
 			fs = line.strip().split("\t")
 			hz, lf = fs[:2]
 			if "(" in lf:

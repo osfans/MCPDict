@@ -7,7 +7,7 @@ from tables._表 import 表
 class 字表(表):
 	def update(self):
 		d = defaultdict(list)
-		for line in open(self.spath):
+		for line in open(self.spath,encoding="U8"):
 			line = line.strip().replace(",","，").replace(";","；").replace(":","：").replace("？（", "□（")
 			if line.startswith("#"):
 				ym = line[1:]

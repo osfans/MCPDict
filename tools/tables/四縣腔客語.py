@@ -35,7 +35,7 @@ class 字表(表):
 
 	def update(self):
 		d = defaultdict(list)
-		tk = json.load(open(self.spath))
+		tk = json.load(open(self.spath,encoding="U8"))
 		for line in tk:
 				hz = line["title"]
 				heteronyms = line["heteronyms"]

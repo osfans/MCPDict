@@ -9,7 +9,7 @@ class 字表(表):
 	def update(self):
 		d = defaultdict(list)
 		ym = ""
-		for line in open(self.spath):
+		for line in open(self.spath,encoding="U8"):
 			line = self.format(line)
 			line = line.strip().replace("Ǿ", "ˀ").replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？")
 			line = re.sub("\[(\d+)\]", "［\\1］",line)

@@ -16,7 +16,7 @@ class 字表(表):
 		numbers="❶❷❸❹❺❻❼❽❾❿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿"
 		kCompatibilityVariants = getCompatibilityVariants()
 		pages = dict()
-		for line in open(self.spath):
+		for line in open(self.spath,encoding="U8"):
 			fs = line.strip('\n').split('\t')
 			if len(fs[0]) == 1:
 				hz,py,js,page = fs[:4]

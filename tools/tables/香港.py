@@ -21,7 +21,7 @@ class 字表(表):
 		return hz, py
 
 	def patch(self, d):
-		for line in open("/usr/share/unicode/Unihan_Readings.txt"):
+		for line in open(self.get_fullname("Unihan_Readings.txt"),encoding="U8"):
 			line = line.strip()
 			if not line.startswith("U"): continue
 			fields = line.strip().split("\t", 2)
