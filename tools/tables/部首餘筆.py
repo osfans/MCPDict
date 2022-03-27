@@ -3,23 +3,25 @@
 from tables._表 import 表
 from tables import hex2chr
 
-bs = dict()
-for line in open("/usr/share/unicode/CJKRadicals.txt"):
-	line = line.strip()
-	if not line or line.startswith("#"): continue
-	fields = line.split("; ", 2)
-	order, radical, han = fields
-	han = hex2chr(han)
-	bs[order] = han
-
 class 字表(表):
 	key = "bs"
 	note = ""
 	_lang = "部首餘筆"
-	_file = "/usr/share/unicode/Unihan_IRGSources.txt"
+	_file = "Unihan_IRGSources.txt"
 	_sep = "\t"
 	patches = {"□": "囗0", "〇": "乙0"}
+	bs = dict()
 	
+	def __init__(self):
+		表.__init__(self)
+		for line in open(self.get_fullname("CJKRadicals.txt"),encoding="U8"):
+			line = line.strip()
+			if not line or line.startswith("#"): continue
+			fields = line.split("; ", 2)
+			order, radical, han = fields
+			han = hex2chr(han)
+			self.bs[order] = han
+
 	def parse(self, fs):
 		if len(fs) < 3: return
 		hz, typ, vals = fs
@@ -29,6 +31,6 @@ class 字表(表):
 		for val in vals.split(" "):
 			order, left = val.split(".")
 			left = left.replace('-', 'f')
-			js = bs[order]+left
+			js = self.bs[order]+left
 			l.append(js)
 		return hz, ",".join(l)

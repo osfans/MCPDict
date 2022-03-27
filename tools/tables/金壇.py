@@ -13,7 +13,7 @@ class 字表(表):
 
 	def update(self):
 		d = defaultdict(list)
-		for line in open(self.spath):
+		for line in open(self.spath,encoding="U8"):
 			line = line.strip().replace('"','').replace(' ','').rstrip()
 			if '\t' not in line: continue
 			fs = line.split("\t")

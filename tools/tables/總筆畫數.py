@@ -7,7 +7,7 @@ class 字表(表):
 	key = "bh"
 	note = ""
 	_lang = "總筆畫數"
-	_file = "/usr/share/unicode/Unihan_IRGSources.txt"
+	_file = "Unihan_IRGSources.txt"
 	_sep = "\t"
 	patches = {"□": "3", "〇": "1"}
 	

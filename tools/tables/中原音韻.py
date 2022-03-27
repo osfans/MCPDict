@@ -20,7 +20,7 @@ class 字表(表):
 
 	def getIPA(self, name):
 		yms = dict()
-		for line in open(self.get_fullname(name)):
+		for line in open(self.get_fullname(name),encoding="U8"):
 			line = line.strip('\n')
 			if line.startswith('#'): continue
 			fs = line.split(' ')

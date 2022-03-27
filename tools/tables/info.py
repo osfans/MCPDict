@@ -2,6 +2,7 @@
 
 import subprocess, json, os
 from openpyxl import load_workbook
+from opencc import OpenCC
 
 spath = "汉音字典字表档案（长期更新）.xlsx"
 tpath = "tables/output/info.tsv"
@@ -11,8 +12,7 @@ FeatureCollection = {
   "features": []
 }
 
-def opencc(sim):
-	return subprocess.check_output(["opencc"], input=sim, text=True)
+opencc = OpenCC("s2t.json")
 
 def outdated():
 	if not os.path.exists(tpath): return True
@@ -25,7 +25,7 @@ def outdated():
 def getInfos():
 	d = dict()
 	if not outdated():
-		f = open(tpath)
+		f = open(tpath,encoding="U8")
 		for line in f:
 			fs = line.rstrip("\n").split("\t")
 			d[fs[0]] = fs[1:]
@@ -52,17 +52,17 @@ def getInfos():
 		if size >= 4: marker_size = "large"
 		elif size == 3: marker_size = "medium"
 		if fs[23] and fs[23] != "Web":
-			editor = opencc(fs[23])
+			editor = opencc.convert(fs[23])
 		book = ""
 		if fs[24]:
-			book = opencc(fs[24])
+			book = opencc.convert(fs[24])
 			if row[24].hyperlink:
 				target = row[24].hyperlink.target
 				book = f"<a herf={target}>{book}</a>"
 		name = fs[1].strip()
 		if "〃" in name or not name: name = fs[0]
-		name = opencc(name).replace("清","淸").replace("榆","楡").replace("峯","峰").replace("樑","梁").replace("嶽","岳")
-		section = opencc("".join(fs[6]))
+		name = opencc.convert(name).replace("清","淸").replace("榆","楡").replace("峯","峰").replace("樑","梁").replace("嶽","岳")
+		section = opencc.convert("".join(fs[6]))
 		#label = fs[5][0].lower()
 		ver = None
 		ver = fs[2].strftime("%Y-%m-%d")
@@ -94,8 +94,8 @@ def getInfos():
 		if fs[25]:
 			Feature["properties"]["繁簡"] = fs[25]
 		FeatureCollection["features"].append(Feature)
-	json.dump(FeatureCollection, fp=open("../方言.geojson","w"),ensure_ascii=False,indent=2)
-	f = open(tpath, "w")
+	json.dump(FeatureCollection, fp=open("../方言.geojson","w",encoding="U8"),ensure_ascii=False,indent=2)
+	f = open(tpath, "w",encoding="U8")
 	for i in d:
 		print("%s\t%s" % (i, "\t".join(map(lambda x:x if x else "", d[i]))), file=f)
 	f.close()
