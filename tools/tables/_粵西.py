@@ -5,12 +5,12 @@ import re
 
 class 字表(表):
 	_file = "粤西闽语方言字表*.tsv"
-	note = "來源：<u>Kiattan</u>"
 
 	def parse(self, fs):
 		if len(fs) < 6: return
 		hz = fs[0]
 		ybs = fs[self.index]
+		ybs = ybs.replace("／", "/")
 		if not ybs or ybs.startswith("—"): return
 		_js = hz[1:] if len(hz)>1 else ""
 		_js = _js.strip("（）")

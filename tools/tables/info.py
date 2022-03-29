@@ -14,6 +14,14 @@ FeatureCollection = {
 
 opencc = OpenCC("s2t.json")
 
+def convert(s):
+	if not s: return ""
+	if type(s) is not str: return s
+	return opencc.convert(s).replace("清","淸")\
+							.replace("榆","楡")\
+							.replace("樑","梁")\
+							.replace("嶽","岳")
+
 def outdated():
 	if not os.path.exists(tpath): return True
 	classtime = os.path.getmtime(__file__)
@@ -34,40 +42,42 @@ def getInfos():
 	sheets = load_workbook(spath)
 	sheet = sheets["档案"]
 	for row in sheet.rows:
-		fs = [row[i].value if row[i].value else "" for i in range(26)]
-		if not fs[2] or type(fs[2]) is str: continue
-		color = row[10].fill.fgColor.value[2:]
+		fs = [convert(row[i].value) for i in range(26)]
+		if not fs[3] or type(fs[3]) is str: continue
+		lang = fs[0].strip()
+		name = fs[1].strip()
+		if lang == name:
+			lang = ""
+		color = row[1].fill.fgColor.value[2:]
+		subcolor = row[2].fill.fgColor.value[2:]
+		ver = fs[3].strftime("%Y-%m-%d")
+		point = fs[4].replace(" ", "").replace("，",",").strip()
+		place = "".join(fs[5:10])
+		island = fs[10]
+		size = fs[11].count("★")
+		editor = fs[13].strip("/")
+		book = fs[14].strip("/")
+		section = fs[23]
+		jf = fs[15]
+		#label = fs[5][0].lower()
+
 		colors = [color]
-		subcolor = row[11].fill.fgColor.value[2:]
 		if subcolor != "000000":
 			colors.append(subcolor)
 		colors = ["#"+ i for i in colors]
 		color = ",".join(colors)
-		point = fs[12].replace(" ", "").replace("，",",").strip()
-		if not point: continue
-		wd, jd = map(float, point.split(","))
-		place = "".join(fs[13:18])
-		size = fs[19].count("★")
 		marker_size = "small"
 		if size >= 4: marker_size = "large"
 		elif size == 3: marker_size = "medium"
-		if fs[23] and fs[23] != "Web":
-			editor = opencc.convert(fs[23])
-		book = ""
-		if fs[24]:
-			book = opencc.convert(fs[24])
-			if row[24].hyperlink:
-				target = row[24].hyperlink.target
+		if not editor or editor == "Web":
+			editor = ""
+		if book:
+			if row[14].hyperlink:
+				target = row[14].hyperlink.target
 				book = f"<a herf={target}>{book}</a>"
-		name = fs[1].strip()
-		if "〃" in name or not name: name = fs[0]
-		name = opencc.convert(name).replace("清","淸").replace("榆","楡").replace("峯","峰").replace("樑","梁").replace("嶽","岳")
-		section = opencc.convert("".join(fs[6]))
-		#label = fs[5][0].lower()
-		ver = None
-		ver = fs[2].strftime("%Y-%m-%d")
-		editor = None
-		d[name] = color, ver, point, str(size)
+		d[name] = lang, color, ver, point, str(size), editor, book
+		if not point: continue
+		wd, jd = map(float, point.split(","))
 		Feature = {
 			"type": "Feature",
 			"properties": {
@@ -83,16 +93,16 @@ def getInfos():
 				"coordinates": [jd, wd]
 			}
 		}
-		if fs[18] == "☑":
-			Feature["properties"]["方言島"] = fs[18]
+		if island == "☑":
+			Feature["properties"]["方言島"] = island
 		if ver:
 			Feature["properties"]["版本"] = ver
 		if editor:
 			Feature["properties"]["錄入人"] = editor
 		if book:
-			Feature["properties"]["參考文獻"] = book
-		if fs[25]:
-			Feature["properties"]["繁簡"] = fs[25]
+			Feature["properties"]["參考資料"] = book
+		if jf:
+			Feature["properties"]["繁簡"] = jf
 		FeatureCollection["features"].append(Feature)
 	json.dump(FeatureCollection, fp=open("../方言.geojson","w",encoding="U8"),ensure_ascii=False,indent=2)
 	f = open(tpath, "w",encoding="U8")

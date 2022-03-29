@@ -57,6 +57,9 @@ class 表:
 	size = None
 	ver = None
 	_color = None
+	book = ""
+	editor = ""
+	note = ""
 	
 	disorder = False
 	hasHead = True
@@ -70,16 +73,10 @@ class 表:
 	jointer = ","
 	count = 0
 
-	def getColor(self, f):
-		if self._color: return self._color
-		if f == "hz": return "#9D261D"
-		if "_" not in f: return "#1E90FF"
-		if f.startswith("ltc_") or f.startswith("och_"): return "#4D4D4D"
-		return "#8B0000"
-
 	@property
 	def color(self):
-		return ",".join(map(self.getColor, self.key.split(",")))
+		if self._color: return self._color
+		return "#1E90FF"
 
 	@property
 	def spath(self):
@@ -112,15 +109,19 @@ class 表:
 	@property
 	def lang(self):
 		if self._lang: return self._lang
-		if self.city.endswith("話"): return self.city
+		if self.city[-1] in "話語音": return self.city
+		if self.key.startswith("ltc_"): return self.city
 		return f"{self.city}話"
 
 	@property
 	def desc(self):
-		if self.ver: self.note = f"版本：{self.ver}<br>{self.note}"
-		if self.count > 0: return "字數：%d<br><br>%s"%(self.count, self.note)
-		return self.note.replace("\n", "")
-		
+		s = self.note
+		if self.book: s = f"參考資料：{self.book}<br>{s}"
+		if self.editor: s = f"錄入人：{self.editor}<br>{s}"
+		if self.ver: s = f"版本：{self.ver}<br>{s}"
+		if self.count > 0: s = "字數：%d<br><br>%s"%(self.count, s)
+		return s.replace("\n", "")
+
 	@property
 	def head(self):
 		return str(self), self.lang, self.city, self.color, self.site, self.url, self.desc, self.tones, self.location, self.size
@@ -150,7 +151,7 @@ class 表:
 			d[hz] = py.split(",")
 
 	def norm(self, yb):
-		yb = yb.replace("᷉", "̃")\
+		yb = yb.replace("᷉", "̃").replace("ⱼ", "ᶽ")\
 			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ")\
 			.replace("ʣ", "dz").replace("ʥ", "dʑ")
 		return yb
@@ -167,14 +168,16 @@ class 表:
 	def write(self, d):
 		self.patch(d)
 		t = open(self.tpath, "w",encoding="U8")
-		print(f"#漢字\t音標\t解釋#{self.head}", file=t)
-		print(f"#簡稱\t/\t{self.city}#與文件名一致", file=t)
-		print(f"#全稱\t/\t{self.lang}#xx話", file=t)
-		print(f"#版本\t/\t#版本號或更新時間", file=t)
-		print(f"#聲母\t/\t#聲母順序，用逗號分開。如：b,p,m,f", file=t)
-		print(f"#韻母\t/\t#韻母順序，用逗號分開。如：a,o,e", file=t)
-		print(f"#聲調\t/\t{self.tones}#每個聲調包括：五度調值 八聲 四聲 漢字調類 四角調類，調內用空格分隔，調間用逗號分開。如：55 1 1a 陰平 ꜀,35 2 1b 陽平 ꜁,214 3 2 上 ꜂,51 5 3 去 ꜄", file=t)
-		print(f"#說明\t/\t{self.desc}#HTML格式，僅允許一行，用<br>換行", file=t)
+		print(f"#漢字\t音標\t解釋", file=t)
+		print(f"#簡稱\t/\t{self.city}", file=t)
+		print(f"#全稱\t/\t{self.lang}", file=t)
+		print(f"#聲母\t/\t", file=t)
+		print(f"#韻母\t/\t", file=t)
+		print(f"#聲調\t/\t{self.tones}", file=t)
+		print(f"#版本\t/\t{self.ver}", file=t)
+		print(f"#錄入人\t/\t{self.editor}", file=t)
+		print(f"#參考資料\t/\t{self.book}", file=t)
+		print(f"#說明\t/\t{self.note}", file=t)
 		for hz in sorted(d.keys()):
 			pys = d[hz]
 			hz = self.kCompatibilityVariants.get(hz, hz)

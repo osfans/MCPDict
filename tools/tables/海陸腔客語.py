@@ -25,7 +25,6 @@ def py2yb(s, tones):
   
 class 字表(表):
 	key = "hak_hl"
-	_lang = "海陸腔客語"
 	#https://github.com/g0v/moedict-data-hakka/blob/master/dict-hakka.json
 	_file = "dict-hakka.json"
 	note = "來源：<a href=https://www.moedict.tw/>客語萌典</a>"

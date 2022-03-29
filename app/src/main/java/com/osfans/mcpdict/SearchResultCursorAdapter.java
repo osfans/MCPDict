@@ -138,7 +138,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             if (width == 0) width = getMaxWidth(textViewName);
             formatTextView(textViewName, i);
             textViewName.setText(name);
-            if (name.length() > 2) textViewName.setTextScaleX(width/(float)getMeasuredWidth(textViewName));
+            float ratio = width/(float)getMeasuredWidth(textViewName);
+            if (ratio < 1) textViewName.setTextScaleX(ratio);
             final TextView textViewDetail = row.findViewById(R.id.text_detail);
             textViewDetail.setTag(i);
             row.setTag("row" + i);

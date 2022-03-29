@@ -5,9 +5,7 @@ from collections import defaultdict
 from tables._表 import 表
 
 class 字表(表):
-	key = "hak_yz_bl,yue_"
-	_lang = "博羅本地話"
-	note = "來源：<u>Kiattan</u>整理自《博羅方言同音字彙》"
+	key = "hak_yz_bl"
 	tones = "44 1 1a 陰平 ꜀,11 2 1b 陽平 ꜁,35 3 2 上 ꜂,,13 5 3a 陰去 ꜄,42 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,2 8a 4b 陽入 ꜇,55 9 5 高平變調 "
 	_file = "博罗本地话同音字表.tsv"
 	toneValues = {"44":1, "11":2,"35":3,"13":5,"42":6,"5":7,"2":8,"55":9}

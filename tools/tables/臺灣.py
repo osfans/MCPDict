@@ -5,7 +5,6 @@ from tables._數據庫 import 字表 as 表
 
 class 字表(表):
 	key = "nan_zq_tw"
-	_lang = "臺灣閩南語"
 	dbkey = "mn"
 	site = "臺灣閩南語常用詞辭典"
 	url = "http://twblg.dict.edu.tw/holodict_new/result.jsp?querytarget=1&radiobutton=0&limit=20&sample=%s"

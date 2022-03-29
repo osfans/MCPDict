@@ -1,11 +1,13 @@
-#漢字	音標	解釋#('nan_lz_lz', '雷州話', '雷州', '#8B0000', None, None, '來源：<u>Kiattan</u>', '24 1 1a 陰平 ꜀,22 2 1b 陽平 ꜁,41 3 2a 陰上 ꜂,33 4 2b 陽上 ꜃,21 5 3a 陰去 ꜄,453 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,2 8 4b 陽入 ꜇', None, None)
-#簡稱	/	雷州#與文件名一致
-#全稱	/	雷州話#xx話
-#版本	/	#版本號或更新時間
-#聲母	/	#聲母順序，用逗號分開。如：b,p,m,f
-#韻母	/	#韻母順序，用逗號分開。如：a,o,e
-#聲調	/	24 1 1a 陰平 ꜀,22 2 1b 陽平 ꜁,41 3 2a 陰上 ꜂,33 4 2b 陽上 ꜃,21 5 3a 陰去 ꜄,453 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,2 8 4b 陽入 ꜇#每個聲調包括：五度調值 八聲 四聲 漢字調類 四角調類，調內用空格分隔，調間用逗號分開。如：55 1 1a 陰平 ꜀,35 2 1b 陽平 ꜁,214 3 2 上 ꜂,51 5 3 去 ꜄
-#說明	/	來源：<u>Kiattan</u>#HTML格式，僅允許一行，用<br>換行
+#漢字	音標	解釋
+#簡稱	/	雷州
+#全稱	/	雷州黎話
+#聲母	/	
+#韻母	/	
+#聲調	/	24 1 1a 陰平 ꜀,22 2 1b 陽平 ꜁,41 3 2a 陰上 ꜂,33 4 2b 陽上 ꜃,21 5 3a 陰去 ꜄,453 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,2 8 4b 陽入 ꜇
+#版本	/	2022-03-23
+#錄入人	/	Kiattan
+#參考資料	/	
+#說明	/	
 一	jiak7	訓
 一	iɛk7	
 七	tsʰiɛk7	
@@ -27,7 +29,7 @@
 主	tsi3	
 久	ku3	
 之	tsu1	
-乏	vak7	
+乏	bak7	
 乖	o6	訓
 乖	kuai6	
 九	kau3	
@@ -131,7 +133,7 @@
 冰	piŋ1	
 准	tsuŋ3	
 凍	toŋ5	
-凡	vaŋ2	
+凡	baŋ2	
 凶	hioŋ1	
 出	tsʰuk7	
 刀	to1	
@@ -167,7 +169,7 @@
 包	pau1	
 化	hua5	
 北	pak7	
-匪	vi2	
+匪	bi2	
 匯	hui6	
 匹	pʰik7	
 區	kʰi1	
@@ -181,7 +183,7 @@
 博	pok7	
 占	tsiam1	～領
 印	iɛŋ4	
-卵	taŋ6	
+卵	nui4	
 卷	kɛŋ3	～起
 厚	kau4	
 厝	tsu5	
@@ -193,7 +195,7 @@
 叉	tsʰɛ1	
 叉	tsʰa1=	
 及	kip7	
-反	vaŋ3	
+反	baŋ3	
 叔	tsip7	
 受	siu4	
 叛	puaŋ5	
@@ -219,7 +221,7 @@
 呂	lu3	
 告	ko5	
 周	tsiu1	
-味	vi1	
+味	bi1	
 命	mia1	
 咒	tsiu5	
 咬	ka4	
@@ -285,7 +287,7 @@
 墓	mɛu1	
 墟	hi1	
 墟	tsʰi4	訓“市”
-墨	vak8	
+墨	bak8	
 墩	tuŋ1	
 墳	wɛŋ2	
 壁	pia6	
@@ -387,7 +389,7 @@
 尖	tsiam1	
 就	tsiu4	
 尺	tsʰiɔ6	
-尾	vuɛ3	
+尾	buɛ3	
 尾	mi3=	
 尿	niau6	
 尿	jio1	
@@ -505,7 +507,7 @@
 懸	kuai2-	
 戍	su4	
 成	tsia2	
-我	va3	
+我	ba3	
 戰	tsiɛŋ6	
 戲	hi5	
 戴	tai5	
@@ -614,7 +616,7 @@
 新	siɛŋ1	
 斷	tui4	折～
 方	paŋ1	
-方	vaŋ1=	
+方	baŋ1=	
 旋	siɛŋ2	
 旗	ki2	
 日	jiɛk7	
@@ -692,7 +694,7 @@
 桌	tsʰo2	
 桑	suaŋ1	
 桶	tʰaŋ3	
-梅	vuɛ2	
+梅	buɛ2	
 條	tiau2	
 梨	li2	
 梭	so1	
@@ -750,7 +752,7 @@
 殺	sua6	
 殼	kʰak7	
 毀	hui3	
-母	vo3	
+母	bo3	
 毒	tok8	
 比	pi3	
 毛	mo2	
@@ -772,8 +774,8 @@
 油	iu2	
 治	tsi4	
 泉	siap8	
-法	vak7	
-泛	vaŋ5	
+法	bak7	
+泛	baŋ5	
 波	po1	
 泥	ni2	
 注	tsu5	
@@ -784,7 +786,7 @@
 流	lau2	
 浪	laŋ6	
 浮	pʰu2	
-浮	vɛu2	
+浮	bɛu2	
 海	hai3	
 浸	tsim5	
 消	siau1	
@@ -792,7 +794,7 @@
 淚	lui6	
 淡	tam4	
 淡	tsia3	訓
-深	tsim1	
+深	tsʰim1	
 混	huŋ5	
 淺	tsʰiɛŋ5	
 添	tʰiam1	
@@ -831,13 +833,13 @@
 炭	tʰua5	
 炮	pʰau5	
 烏	ɛu1	
-無	vo2	
+無	bo2	
 然	iɛŋ2	
 煉	liɛŋ4	
 煎	tsi1	
 煙	huŋ1	
 照	tsiau5	
-煩	vaŋ2	
+煩	baŋ2	
 煮	tsu3	
 熄	sik7	
 熊	hioŋ2	
@@ -865,7 +867,7 @@
 牌	pai2	
 牙	ŋɛ2	
 牙	ia2=	
-牛	vu2	
+牛	bu2	
 牛	niu2=	
 牢	lo2	
 物	mi4-	
@@ -875,7 +877,7 @@
 犁	loi2	
 犁	li2=	
 犧	hi1	
-犯	vaŋ4	
+犯	baŋ4	
 狂	kʰuaŋ1	
 狗	kau3	
 狹	oi4	
@@ -920,7 +922,7 @@
 畫	hua6	
 疊	tʰa4	
 疑	ŋi2	
-疤	va6	
+疤	ba6	
 疤	pa1	
 病	pɛ1	
 痕	huŋ2	
@@ -933,7 +935,7 @@
 癡	tsʰi6	
 癢	tsio2	
 癬	siɛŋ3	
-發	vak7	
+發	bak7	
 白	pɛ4	
 百	pɛ6	
 皮	pʰuɛ2	
@@ -946,7 +948,7 @@
 目	mok7=	
 直	tiɛk8	
 省	sɛŋ3	
-眉	vai2	
+眉	bai2	
 看	kʰaŋ6	～見
 看	kʰua6	～見
 真	tsʰiɛŋ1	
@@ -965,7 +967,7 @@
 碗	ua3	
 磁	tsʰu2	
 磚	tsui1	
-磨	vua2	動詞
+磨	bua2	動詞
 磨	mo1	米加工成粉的工具
 礙	ŋai1	
 礦	kuaŋ5	
@@ -1046,14 +1048,15 @@
 簿	pu6=	賬～
 籃	na2	
 籠	loŋ2	
-米	vi3	
+米	bi3	
 米	mai6	
 粒	liap8	
 粒	lip7=	
 粗	tsʰɛu1	
 粘	tsiam1	～性
 粘	nak7	（訓）～性
-粟	tsʰiak7	（白）／siak5
+粟	tsʰiak7-	
+粟	siak7	
 粥	tsok7	
 糉	tsaŋ5	
 精	tsiŋ1	
@@ -1073,7 +1076,7 @@
 純	suŋ2	
 紙	tsua3	
 級	kʰip7	
-紡	vaŋ3	
+紡	baŋ3	
 索	so6	
 紫	tsʰu5	
 細	si6	
@@ -1138,7 +1141,7 @@
 胡	hu2=	
 胸	hiaŋ1	
 能	nɛŋ2	
-脈	vɛ4	
+脈	bɛ4	
 脊	tsik7	
 脫	tʰui5	
 腎	siɛŋ4	
@@ -1165,7 +1168,7 @@
 舍	sia3	～不得
 舍	sɛ3	（文，宿～）～不得
 舞	mɛu3	
-舞	vu3=	
+舞	bu3=	
 航	haŋ2	
 船	tsuŋ2	
 艦	lam6	
@@ -1188,7 +1191,7 @@
 菜	tsʰai5	
 菩	pʰu2	
 華	hua2	
-萬	vaŋ1	
+萬	baŋ1	
 落	lo4	
 落	lak7=	
 葉	jiap8	
@@ -1202,7 +1205,7 @@
 蓋	kai6=	
 蓬	hoŋ2	
 蓮	liɛŋ2	
-蔑	vi1	
+蔑	bi1	
 蔗	tsia3	
 蔡	tsʰua5	
 蔡	tsʰai5=	
@@ -1266,7 +1269,7 @@
 裙	kuŋ2	
 補	pɛu3	
 褲	kʰɛu5	
-襪	vak8	
+襪	bak8	
 西	sai1	
 要	iau5	需～
 要	ai5	需～
@@ -1324,8 +1327,8 @@
 貪	tʰam1	
 貴	kui5	
 貶	piɛŋ3	
-買	voi3	
-費	vi5	
+買	boi3	
+費	bi5	
 貼	nak7	
 賀	ho4	
 資	tsu1	
@@ -1333,7 +1336,7 @@
 賒	sia1	
 賓	piɛŋ1	
 賠	pʰui2	
-賣	voi1	
+賣	boi1	
 賤	tsiɛŋ4	
 質	tsiɛk7	
 賭	tu3	
@@ -1500,7 +1503,7 @@
 雹	pʰak7	
 電	tiɛŋ4	
 霜	suaŋ1	
-霧	vɛu5	
+霧	bɛu5	
 霧	mɛu5	
 露	lɛu1	
 霸	pa5	
@@ -1532,7 +1535,7 @@
 風	huaŋ1	
 飄	pʰiau1	
 飛	puɛ1	
-飛	vi1=	
+飛	bi1=	
 食	tsia4	
 飯	pui1	
 飼	tsʰi1	
@@ -1542,13 +1545,13 @@
 餐	tsʰaŋ6	
 餐	tui5	
 餓	oi6	訓
-餓	nɡo1	
+餓	ŋo1	
 餘	ji2	
 饒	iau2	
 香	pʰaŋ1	訓“芳”
 香	hio1	
 香	hiaŋ1	
-馬	vɛ3	
+馬	bɛ3	
 馬	ma3=	
 馮	paŋ2	
 駁	pok7	
@@ -1589,12 +1592,12 @@
 鹿	tiak8	
 麟	laŋ2	
 麟	liɛŋ5	
-麥	vɛ4	
+麥	bɛ4	
 麻	mua2	
 黃	ui2	
 點	tiam3	
 黨	taŋ3	
-黴	vuɛ2	
+黴	buɛ2	
 鼓	kɛu3	
 鼠	tsʰu3	
 鼠	si3=	
