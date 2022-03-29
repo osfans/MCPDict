@@ -4,7 +4,6 @@ from tables._表 import 表
 
 class 字表(表):
 	key = "cmn_xn_xs_jg_rx"
-	note = "來源：<u>Ascendanter</u>整理自《四川方言調查報告》《四川榮縣方言音系及其內部差異研究》"
 	tones = "45 1 1a 陰平 ꜀,21 2 1b 陽平 ꜁,42 3 2 上 ꜂,,214 5 3 去 ꜄"
 	_file = "青陽正韻*.tsv"
 	toneValues = {"45":1,"21":2,"42":3, "214":5}

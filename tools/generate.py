@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import sqlite3, re, os
+import sqlite3, re, os, sys
 from collections import defaultdict
 from tables import *
 
@@ -8,7 +8,10 @@ from time import time
 start = time()
 
 dicts = defaultdict(dict)
-langs = getLangs(dicts)
+if len(sys.argv) > 1:
+	langs = getLangs(dicts, sys.argv[1:])
+else:
+	langs = getLangs(dicts)
 
 keys = [str(lang) for lang in langs]
 dialects = [k for k in keys if "_" in k]

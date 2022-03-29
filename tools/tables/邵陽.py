@@ -5,7 +5,6 @@ import re
 
 class 字表(表):
 	key = "hsn_ls_sy"
-	note = "來源：鲍厚星.湖南邵阳方言音系[J].方言,1989(3):196-207.<br>轉錄者：DaiDzao"
 	tones = "55 1 1a 陰平 ꜀,12 2 1b 陽平 ꜁,42 3 2 上 ꜂,,35 5 3a 陰去 ꜄,24 6 3b 陽去 ꜅,33 7 4 入 ꜆"
 	_file = "邵陽.tsv"
 	disorder = True

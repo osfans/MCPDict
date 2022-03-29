@@ -5,7 +5,6 @@ import re
 
 class 字表(表):
 	key = "ltc_zy"
-	_lang = "中原音韻"
 	#https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/trngyan
 	_file = "TriungNgyanQimYonh.txt"
 	note = "來源：<a href=https://ytenx.org/trngyan/>韻典網</a><br>說明：平聲分陰陽，入聲派三聲。<b>黑體字</b>表示古入聲字"

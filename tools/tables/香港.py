@@ -6,7 +6,6 @@ from tables import hex2chr
 class 字表(表):
 	key = "yue_hk"
 	_file = "jyut6ping3.dict.yaml"
-	_lang = "香港粵語"
 	site = "粵語審音配詞字庫"
 	url = "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s"
 	note = "來源：<a href=http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/>粵語審音配詞字庫</a>、<a href=http://www.unicode.org/charts/unihan.html>Unihan</a><br>說明：括號中的爲異讀讀音"
