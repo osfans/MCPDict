@@ -112,9 +112,6 @@ public class SearchResultFragment extends ListFragment {
 
     @Override
     public void onCreateContextMenu(@NonNull ContextMenu menu, View view, ContextMenuInfo menuInfo) {
-        Object obj = view.getTag(R.id.tag_col);
-        view.setTag(R.id.tag_col, null);
-        int col = obj == null ? -1 : (Integer) obj;
         selectedFragment = new WeakReference<>(this);
             // This is a bug with Android: when a context menu item is clicked,
             // all fragments of this class receive a call to onContextItemSelected.
@@ -127,9 +124,12 @@ public class SearchResultFragment extends ListFragment {
             // info.position is the position of the item in the entire list
             // but list.getChildAt() on the next line requires the position of the item in currently visible items
         selectedEntry = list.getChildAt(position);
-        TextView text = selectedEntry.findViewById(R.id.text_hz);
+        SearchResultCursorAdapter.ViewHolder holder = (SearchResultCursorAdapter.ViewHolder) selectedEntry.getTag();
+        int col = holder.col;
+        holder.col = -1;
+        TextView text = holder.tvHZ;
         String hz = text.getText().toString();
-        Set<Integer> cols = (Set) selectedEntry.getTag(R.id.tag_cols);
+        Set<Integer> cols = holder.cols;
 
         // Inflate the context menu
         requireActivity().getMenuInflater().inflate(R.menu.search_result_context_menu, menu);
@@ -172,7 +172,7 @@ public class SearchResultFragment extends ListFragment {
                 item = menu.add(getString(R.string.search_homophone, hz, searchAsName));
                 item.setOnMenuItemClickListener(i->{
                     DictionaryFragment dictionaryFragment = ((MainActivity) requireActivity()).getDictionaryFragment();
-                    String query = selectedEntry.findViewWithTag(col).getTag(R.id.tag_raw).toString();
+                    String query = holder.tvDetails[col].getTag().toString();
                     dictionaryFragment.refresh(query, col);
                     return true;
                 });
@@ -192,10 +192,9 @@ public class SearchResultFragment extends ListFragment {
 
         // Determine the functionality of the "favorite" item
         item = menu.findItem(R.id.menu_item_favorite);
-        Boolean is_favorite = (Boolean) selectedEntry.getTag(R.id.tag_favorite);
-        item.setTitle(is_favorite ? R.string.favorite_view_or_edit : R.string.favorite_add);
+        item.setTitle(holder.isFavorite ? R.string.favorite_view_or_edit : R.string.favorite_add);
         item.setOnMenuItemClickListener(i->{
-            selectedEntry.findViewById(R.id.button_favorite).performClick();
+            holder.btnFavorite.performClick();
             return true;
         });
 
@@ -236,10 +235,11 @@ public class SearchResultFragment extends ListFragment {
     }
 
     private String getCopyText(View entry, int col) {
-        Set<Integer> cols = (Set<Integer>) entry.getTag(R.id.tag_cols);
+        SearchResultCursorAdapter.ViewHolder holder = (SearchResultCursorAdapter.ViewHolder) entry.getTag();
+        Set<Integer> cols = holder.cols;
 
         if (cols.contains(col))
-            return ((TextView)entry.findViewWithTag(col)).getText().toString();
+            return holder.tvDetails[col].getText().toString();
 
         if (col == COL_ALL_READINGS) {
             if (cols.size() <= 2) return null;

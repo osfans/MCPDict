@@ -15,10 +15,6 @@
     Reference: http://stackoverflow.com/a/12528960
 -->
 
-    <tag android:id="@+id/tag_favorite" />
-    <tag android:id="@+id/tag_cols" />
-    <tag android:id="@+id/tag_col" />
-
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
