@@ -8,3 +8,6 @@ class 字表(表):
 	_file = "靖江东兴.tsv"
 	simplified = 2
 
+	def format(self, line):
+		if '""	"#' in line: line = line.split("\t", 1)[1]
+		return line

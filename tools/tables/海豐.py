@@ -11,7 +11,7 @@ class 字表(表):
 
 	def parse(self, fs):
 		l = list()
-		hz,bds,wds,js = fs[:4]
+		hz,wds,bds,js = fs[:4]
 		if not hz: return
 		hz = hz[0]
 		yd = len(bds) > 0 and len(wds) > 0

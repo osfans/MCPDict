@@ -10,5 +10,5 @@ class 字表(表):
 	simplified = 2
 	
 	def format(self, line):
-		line = re.sub("^(.*?)［", "\\1	[", line)
+		line = re.sub("^(.*?)［", "\\1	［", line)
 		return line

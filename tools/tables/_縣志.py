@@ -15,7 +15,7 @@ class 字表(表):
 			line = re.sub("\[(\d+)\]", "［\\1］",line)
 			line = re.sub("［([^0-9]+.*?)］", "[\\1]",line)
 			if not line: continue
-			line = line.lstrip()
+			line = line.lstrip(" ")
 			if line.startswith("#"):
 				ym = line[1:]
 				if not ym: continue
@@ -23,7 +23,8 @@ class 字表(表):
 				continue
 			fs = line.split("\t")[:2]
 			if len(fs) != 2: continue
-			sm = fs[0]
+			sm = fs[0].strip()
+			if len(sm) > 1 and sm.endswith("h"): sm = sm[:-1] + "ʰ"
 			for sd,hzs in re.findall("［(\d+)］([^［］]+)", fs[1]):
 				if sd == "0": sd = ""
 				py = sm + ym +sd

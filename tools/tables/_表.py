@@ -193,7 +193,7 @@ class 表:
 			if self.disorder:
 				pys = sorted(pys,key=lambda x:x.split("\t", 1)[0][-1])
 			for py in pys:
-				py = py.strip().replace("Ǿ", "ˀ")
+				py = py.strip().replace("Ǿ", "ˀ").lstrip("Ø")
 				if "\t" in py:
 					yb, js = py.split("\t", 1)
 					yb = yb.strip()

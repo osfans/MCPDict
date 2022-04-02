@@ -23,8 +23,8 @@ def getLangs(dicts, key=None):
 	for mod in l:
 		try:
 			lang = importlib.import_module(f"tables.{mod}").字表()
-		except:
-			print(f"\t\t\t未找到 {mod}")
+		except Exception as e:
+			print(f"\t\t\t未找到 {mod}", e)
 			continue
 		if mod in d:
 			lang._lang, lang._color, lang.ver, lang.location, lang.size, lang.editor, lang.book = d[mod]
