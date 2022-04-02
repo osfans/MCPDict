@@ -11,4 +11,4 @@ class 字表(表):
 	
 	def format(self, line):
 		line = re.sub("[\[［](\d)[\]］][）)]","\\1)",line)
-		return line.replace("ø", "")
+		return line

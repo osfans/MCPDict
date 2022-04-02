@@ -10,6 +10,6 @@ class 字表(表):
 	simplified = 2
 
 	def format(self, line):
-		line = line.replace("［", "[").replace("］","]").replace("", "Ø").replace("", "")
-		line = re.sub("^(.*?) ?\[", "\\1	[", line)
+		line = line.replace("", "Ø").replace("", "")
+		line = re.sub("^(.*?)［", "\\1	［", line)
 		return line
