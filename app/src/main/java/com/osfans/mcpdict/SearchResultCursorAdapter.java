@@ -6,17 +6,12 @@ import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.preference.PreferenceManager;
-import android.text.SpannableString;
-import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
-import android.text.style.ForegroundColorSpan;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,10 +27,8 @@ import androidx.core.text.HtmlCompat;
 
 import java.lang.ref.WeakReference;
 import java.util.HashSet;
-import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
-import java.util.stream.IntStream;
 
 import static com.osfans.mcpdict.MCPDatabase.COL_BH;
 import static com.osfans.mcpdict.MCPDatabase.COL_BS;
@@ -45,9 +38,6 @@ import static com.osfans.mcpdict.MCPDatabase.COL_KX;
 import static com.osfans.mcpdict.MCPDatabase.COL_SW;
 import static com.osfans.mcpdict.MCPDatabase.getColor;
 import static com.osfans.mcpdict.MCPDatabase.getLabel;
-import static com.osfans.mcpdict.MCPDatabase.getSubColor;
-
-import org.osmdroid.util.GeoPoint;
 
 public class SearchResultCursorAdapter extends CursorAdapter {
 
@@ -70,7 +60,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         return context.get();
     }
 
-    private View.OnClickListener getListener(final int index) {
+    private static View.OnClickListener getListener(final int index) {
         return v -> {
             ((View)v.getParent().getParent().getParent()).setTag(R.id.tag_col, index);
             ActivityWithOptionsMenu activity = (ActivityWithOptionsMenu) getContext();
@@ -102,33 +92,45 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             gd.setCornerRadius(5f);
             tv.setBackground(gd);
         }
-        tv.setAlpha(0.8f);
+        //tv.setAlpha(0.8f);
+    }
+
+    static class ViewHolder {
+        TextView tvHZ, tvUnicode, tvSW, tvKX, tvHD, tvComment, tvVariant;
+        Button btnMap, btnFavorite;
+
+        public ViewHolder(View view) {
+            tvHZ = (TextView) view.findViewById(R.id.text_hz);
+            tvHZ.setTag(COL_HZ);
+            tvHZ.setOnClickListener(getListener(COL_HZ));
+            tvUnicode = view.findViewById(R.id.text_unicode);
+            int color = MCPDatabase.getColor(MCPDatabase.COL_LF);
+            tvUnicode.setTextColor(color);
+            tvSW = view.findViewById(R.id.text_sw);
+            tvSW.setTag(COL_SW);
+            tvSW.setText(getLabel(COL_SW));
+            color = MCPDatabase.getColor(COL_SW);
+            tvSW.setTextColor(color);
+            tvKX = view.findViewById(R.id.text_kx);
+            tvKX.setTag(COL_KX);
+            tvKX.setText(getLabel(COL_KX));
+            color = MCPDatabase.getColor(COL_KX);
+            tvKX.setTextColor(color);
+            tvHD = view.findViewById(R.id.text_hd);
+            tvHD.setTag(COL_HD);
+            tvHD.setText(getLabel(COL_HD));
+            color = MCPDatabase.getColor(COL_HD);
+            tvHD.setTextColor(color);
+            tvComment = view.findViewById(R.id.text_comment);
+            tvVariant = view.findViewById(R.id.text_variants);
+            btnMap = view.findViewById(R.id.button_map);
+            btnFavorite = view.findViewById(R.id.button_favorite);
+        }
     }
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         View view = inflater.inflate(layout, parent, false);
-        final TextView textViewHZ = view.findViewById(R.id.text_hz);
-        textViewHZ.setTag(COL_HZ);
-        textViewHZ.setOnClickListener(getListener(COL_HZ));
-        TextView textView = view.findViewById(R.id.text_unicode);
-        int color = MCPDatabase.getColor(MCPDatabase.COL_LF);
-        textView.setTextColor(color);
-        textView = view.findViewById(R.id.text_sw);
-        textView.setTag(COL_SW);
-        textView.setText(getLabel(COL_SW));
-        color = MCPDatabase.getColor(COL_SW);
-        textView.setTextColor(color);
-        textView = view.findViewById(R.id.text_kx);
-        textView.setTag(COL_KX);
-        textView.setText(getLabel(COL_KX));
-        color = MCPDatabase.getColor(COL_KX);
-        textView.setTextColor(color);
-        textView = view.findViewById(R.id.text_hd);
-        textView.setTag(COL_HD);
-        textView.setText(getLabel(COL_HD));
-        color = MCPDatabase.getColor(COL_HD);
-        textView.setTextColor(color);
         TableLayout table = view.findViewById(R.id.text_readings);
         int width = 0;
         for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
@@ -147,6 +149,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             table.addView(row);
         }
         table.setColumnShrinkable(1, true);
+        ViewHolder holder = new ViewHolder(view);
+        view.setTag(holder);
         return view;
     }
 
@@ -225,6 +229,8 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
     @Override
     public void bindView(final View view, final Context context, Cursor cursor) {
+        ViewHolder holder = (ViewHolder)view.getTag();
+
         String hz, string;
         TextView textView;
         Set<Integer> cols = new HashSet<>();
@@ -249,10 +255,9 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
         // HZ
         hz = cursor.getString(COL_HZ);
-        textView = view.findViewWithTag(COL_HZ);
-        textView.setText(hz);
+        holder.tvHZ.setText(hz);
         cols.add(COL_HZ);
-        textView = view.findViewById(R.id.text_unicode);
+        textView = holder.tvUnicode;
         String unicode = Orthography.HZ.toUnicode(hz);
         textView.setText(unicode);
         StringBuilder sb = new StringBuilder();
@@ -275,7 +280,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
                     .setView(showText)
                     .show();
         });
-        TextView tv = view.findViewWithTag(COL_SW);
+        TextView tv = holder.tvSW;
         String sw =  cursor.getString(COL_SW);
         if (!TextUtils.isEmpty(sw)) {
             tv.setOnClickListener(view1 -> {
@@ -292,7 +297,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         } else {
             tv.setVisibility(View.GONE);
         }
-        tv = view.findViewWithTag(COL_KX);
+        tv = holder.tvKX;
         String kx =  cursor.getString(COL_KX);
         if (!TextUtils.isEmpty(kx)) {
             tv.setOnClickListener(view1 -> {
@@ -310,7 +315,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
         } else {
             tv.setVisibility(View.GONE);
         }
-        tv = view.findViewWithTag(COL_HD);
+        tv = holder.tvHD;
         String hd =  cursor.getString(COL_HD);
         if (!TextUtils.isEmpty(hd)) {
             tv.setOnClickListener(view1 -> {
@@ -331,7 +336,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
         // Variants
         string = cursor.getString(cursor.getColumnIndexOrThrow("variants"));
-        textView = view.findViewById(R.id.text_variants);
+        textView = holder.tvVariant;
         if (!TextUtils.isEmpty(string) && !string.contentEquals(hz)) {
             textView.setText(String.format("(%s)", string));
         } else {
@@ -340,11 +345,10 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
          // "Favorite" button
         boolean favorite = cursor.getInt(cursor.getColumnIndexOrThrow("is_favorite")) == 1;
-        Button button = view.findViewById(R.id.button_map);
-        button.setOnClickListener(v -> {
+        holder.btnMap.setOnClickListener(v -> {
             new MyMapView(getContext(), hz).show();
         });
-        button = view.findViewById(R.id.button_favorite);
+        Button button = holder.btnFavorite;
         button.setOnClickListener(v -> {
             Boolean is_favorite = (Boolean) view.getTag(R.id.tag_favorite);
             if (is_favorite) {
@@ -363,7 +367,7 @@ public class SearchResultCursorAdapter extends CursorAdapter {
 
         // Favorite comment
         string = cursor.getString(cursor.getColumnIndexOrThrow("comment"));
-        textView = view.findViewById(R.id.text_comment);
+        textView = holder.tvComment;
         textView.setText(string);
 
         // Set the view's cols to indicate which readings exist
