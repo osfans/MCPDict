@@ -131,15 +131,13 @@ public class SearchResultCursorAdapter extends CursorAdapter {
             rows = new TableRow[MCPDatabase.COL_LAST_READING + 1];
             tvDetails[COL_HZ] = tvHZ;
             TableLayout table = view.findViewById(R.id.text_readings);
-            int width = 0;
             for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
                 TableRow row = (TableRow)LayoutInflater.from(context).inflate(R.layout.search_result_row, null);
                 TextView textViewName = row.findViewById(R.id.text_name);
                 String name = MCPDatabase.getLabel(i);
-                if (width == 0) width = getMaxWidth(textViewName);
                 formatTextView(textViewName, i);
                 textViewName.setText(name);
-                float ratio = width/(float)getMeasuredWidth(textViewName);
+                float ratio = 8f/(name.getBytes().length + name.length()) * 1.25f;
                 if (ratio < 1) textViewName.setTextScaleX(ratio);
                 row.setOnClickListener(getListener(i));
                 table.addView(row);
