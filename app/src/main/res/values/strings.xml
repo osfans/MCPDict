@@ -239,6 +239,7 @@
     <string name="show_languages">顯示語言：</string>
     <string-array name="pref_entries_show_languages">
         <item>全部語言</item>
+        <item>普方古对照</item>
         <item>當前語言</item>
         <item>@string/pref_title_custom_languages</item>
         <item>縣級方言</item>
@@ -284,6 +285,7 @@
     </string-array>
     <string-array name="pref_values_show_languages">
         <item>.+</item>
+        <item>""</item>
         <item>""</item>
         <item>""</item>
         <item>"3"</item>
