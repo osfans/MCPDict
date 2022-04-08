@@ -58,6 +58,7 @@ public class Orthography {
                         .replace('3', '˧')
                         .replace('4', '˦')
                         .replace('5', '˥')
+                        .replace('6', ' ')
                         .replace('0', ' ');
             } else { //數字
                 tv = tv.replace('1', '¹')
@@ -65,6 +66,7 @@ public class Orthography {
                         .replace('3', '³')
                         .replace('4', '⁴')
                         .replace('5', '⁵')
+                        .replace('6', '⁶')
                         .replace('0', '⁰');
             }
             base += tv;
