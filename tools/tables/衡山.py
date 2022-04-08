@@ -5,7 +5,6 @@ import re
 
 class 字表(表):
 	key = "hsn_cayi_hs"
-	tones = "33 1 1a 陰平 ꜀,21 2 1b 陽平 ꜁,13 3 2 上 ꜂,,45 5 3a 陰去 ꜄,34 6 3b 陽去 ꜅,24 7 4 入 ꜆"
 	_file = "衡山話字表*.tsv"
 	disorder = True
 

@@ -9,8 +9,6 @@ import re
 
 class 字表(表):
 	key = "ltc_yt"
-	note = "來源：QQ共享文檔<a href=https://docs.qq.com/sheet/DYk9aeldWYXpLZENj>韻圖音系同音字表</a>"
-	tones = " 1 1 平 ꜀, 3 2 上 ꜂, 5 3 去 ꜄, 7 4 入 ꜆"
 	_file = "Dzih.txt"
 	hasHead = False
 

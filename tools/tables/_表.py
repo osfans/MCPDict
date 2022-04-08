@@ -50,13 +50,11 @@ class 表:
 	_time = os.path.getmtime(__file__)
 	_file = None
 	_sep = None
-	_lang = None
-	_city = None
 	tones = None
 	location = None
 	size = None
 	ver = None
-	_color = None
+	color = "#1E90FF"
 	book = ""
 	editor = ""
 	note = ""
@@ -74,11 +72,6 @@ class 表:
 	count = 0
 
 	@property
-	def color(self):
-		if self._color: return self._color
-		return "#1E90FF"
-
-	@property
 	def spath(self):
 		sname = self._file
 		if not sname: sname = f"{self.city}.tsv"
@@ -87,8 +80,8 @@ class 表:
 		g = glob(sname)
 		if g:
 			if len(g) == 1: return g[0]
-		print(sname, g)
-	
+		logging.error(f"\t\t\t{sname} {g}")
+
 	def get_fullname(self, name):
 		return os.path.join(self.path, SOURCE, name)
 
@@ -100,18 +93,10 @@ class 表:
 
 	@property
 	def city(self):
-		if self._city: return self._city
 		return self.__module__.split(".")[-1]
 	
 	def __str__(self):
 		return self.key.split(",")[0]
-
-	@property
-	def lang(self):
-		if self._lang: return self._lang
-		if self.city[-1] in "話語音": return self.city
-		if self.key.startswith("ltc_"): return self.city
-		return f"{self.city}話"
 
 	@property
 	def desc(self):
@@ -150,12 +135,23 @@ class 表:
 				continue
 			d[hz] = py.split(",")
 
-	def norm(self, yb):
+	def normAll(self, yb):
 		yb = yb.replace("᷉", "̃").replace("ⱼ", "ᶽ")\
 			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ")\
 			.replace("ʣ", "dz").replace("ʥ", "dʑ")
 		return yb
-	
+
+	def normYb(self, yb):
+		if self.isLang() and self.isYb:
+			yb = yb.strip()
+			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "ˀ").lstrip("0∅Ø零")
+			yb = yb.lower().replace("g", "ɡ").replace("ʼ", "ʰ")
+			if not yb.startswith("h") and "h" in yb:
+				yb = yb.replace("h", "ʰ")
+			if self.ybTrimSpace:
+				yb = yb.replace(" ", "")
+		return yb
+
 	def isOldChinese(self):
 		return self.key.startswith("ltc_") or self.key.startswith("och_")
 
@@ -193,19 +189,14 @@ class 表:
 			if self.disorder:
 				pys = sorted(pys,key=lambda x:x.split("\t", 1)[0][-1])
 			for py in pys:
-				py = py.strip().replace("Ǿ", "ˀ").lstrip("Ø")
 				if "\t" in py:
 					yb, js = py.split("\t", 1)
-					yb = yb.strip()
 					js = js.strip().replace("~", "～")
 				else:
 					yb, js = py, ""
-				if self.isLang() and self.isYb:
-					yb = yb.lower().replace("g", "ɡ")
-					if self.ybTrimSpace:
-						yb = yb.replace(" ", "")
+				yb = self.normYb(yb)
 				yb = f"{yb}\t{js}"
-				yb = self.norm(yb)
+				yb = self.normAll(yb)
 				print(f"{hz}\t{yb}", file=t)
 		t.close()
 

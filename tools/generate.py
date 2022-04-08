@@ -9,7 +9,8 @@ start = time()
 
 dicts = defaultdict(dict)
 if len(sys.argv) > 1:
-	langs = getLangs(dicts, sys.argv[1:])
+	keys = [re.sub("^.*/(.*?)\.py$", "\\1", i) for i in sys.argv[1:]]
+	langs = getLangs(dicts, keys)
 else:
 	langs = getLangs(dicts)
 

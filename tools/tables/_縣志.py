@@ -11,7 +11,7 @@ class 字表(表):
 		ym = ""
 		for line in open(self.spath,encoding="U8"):
 			line = self.format(line)
-			line = line.strip().replace("Ǿ", "ˀ").replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？")
+			line = line.strip().replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？")
 			line = re.sub("\[(\d+)\]", "［\\1］",line)
 			line = re.sub("［([^0-9]+.*?)］", "[\\1]",line)
 			if not line: continue
@@ -24,11 +24,9 @@ class 字表(表):
 			fs = line.split("\t")[:2]
 			if len(fs) != 2: continue
 			sm = fs[0].strip()
-			if len(sm) > 1 and sm.endswith("h"): sm = sm[:-1] + "ʰ"
 			for sd,hzs in re.findall("［(\d+)］([^［］]+)", fs[1]):
 				if sd == "0": sd = ""
 				py = sm + ym +sd
-				py = py.lstrip("0Ø∅")
 				hzs = re.findall("(.)\d?([+\-/=~≈\\\*？$&r]?)\d?(\{.*?\})?", hzs)
 				for hz, c, js in hzs:
 					if hz == " ": continue

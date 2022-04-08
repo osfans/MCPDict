@@ -5,7 +5,7 @@ from tables._表 import 表
 class 字表(表):
 	key = "cj5"
 	_file = "Cangjie5.tsv"
-	_lang = "倉頡五代"
+	lang = "倉頡五代"
 	note = "來源：https://github.com/Jackchows/Cangjie5"
 
 	def parse(self, fs):

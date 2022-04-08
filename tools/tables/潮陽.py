@@ -7,7 +7,6 @@ yms = {'i':'i', 'u':'u', 'a':'a', 'ia':'ia', 'ua':'ua', 'o':'o', 'io':'io', 'e':
 
 class 字表(表):
 	key = "nan_cs_cy"
-	tones = "21 1 1a 陰平 ꜀,55 3 2a 陰上 ꜂,51 5 3a 陰去 ꜄,32 7 4a 陰入 ꜆,33 2 1b 陽平 ꜁,51 4 2b 陽上 ꜃,331 6 3b 陽去 ꜅,5 8 4b 陽入 ꜇"
 	_file = "潮阳话字表1.0.tsv"
 
 	def parse(self, fs):

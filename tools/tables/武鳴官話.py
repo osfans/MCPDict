@@ -5,9 +5,7 @@ from tables._縣志 import 字表 as 表
 class 字表(表):
 	key = "cmn_xn_wmgh"
 	_file = "武鸣官话同音字表20211009.tsv"
-	tones = "33 1 1a 陰平 ꜀,21 2 1b 陽平 ꜁,55 3 2 上 ꜂,,24 5 3 去 ꜄,,55 7a 4a 高入 ꜆,21 7b 4b 低入 ꜀,35   借入調 "
 	toneValues = {"7a":"7", "7b":"8"}
-	simplified = 2
 
 	def format(self, line):
 		for i,j in self.toneValues.items():

@@ -4,8 +4,8 @@ from tables._表 import 表
 
 class 字表(表):
 	key = "hz"
-	_lang = "漢字"
-	_color = "#9D261D"
+	lang = "漢字"
+	color = "#9D261D"
 	site = "漢字音典在線版"
 	url = "https://mcpdict.sourceforge.io/cgi-bin/search.py?hz=%s"
 	note = """　　本程序源自“<a href=https://github.com/MaigoAkisame/MCPDict>漢字古今中外讀音查詢</a>”，收錄了更多語言、更多讀音，錯誤也更多，可去<a href=https://github.com/osfans/MCPDict>GitHub</a>、<a href=mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3D-hNzAQCgZQL-uIlhFrxWJ56umCexsmBi>QQ群</a>、<a href=https://www.coolapk.com/apk/com.osfans.mcpdict>酷安</a>提出意見与建議、提供同音字表請求收錄。<br>

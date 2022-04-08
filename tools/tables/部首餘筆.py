@@ -6,7 +6,7 @@ from tables import hex2chr
 class 字表(表):
 	key = "bs"
 	note = ""
-	_lang = "部首餘筆"
+	lang = "部首餘筆"
 	_file = "Unihan_IRGSources.txt"
 	_sep = "\t"
 	patches = {"□": "囗0", "〇": "乙0"}

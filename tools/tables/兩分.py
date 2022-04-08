@@ -5,7 +5,7 @@ from tables._表 import 表
 class 字表(表):
 	key = "lf"
 	_file = "liangfen.dict.yaml"
-	_lang = "兩分"
+	lang = "兩分"
 	note = "來源：<a href=http://yedict.com/zslf.htm>兩分查字</a><br>說明：可以輸入“雲龍”或“yunlong”查到“𱁬”"
 	
 	def parse(self, fs):

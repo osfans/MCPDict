@@ -36,8 +36,6 @@ class 字表(表):
 	dbkey = "sh"
 	site = "吳音小字典（上海）"
 	url = "http://www.wu-chinese.com/minidict/search.php?searchlang=zaonhe&searchkey=%s"
-	note = "來源：《上海市區方言志》（1988年版），蔡子文錄入<br>說明：該書記錄的是中派上海話音系（使用者多出生於20世紀40至70年代），與<a href=http://www.wu-chinese.com/minidict/>吳音小字典</a>記錄的音系並不完全相同。"
-	tones = "53 1 1 平 ꜀,,,,34 5 3a 陰去 ꜄,23 6 3b 陽去 ꜅,55 7 4a 陰入 ꜆,12 8 4b 陽入 ꜇"
 	patches = {"眙": "ɦi6", "汩": "kuəʔ7", "汨": "miʔ8"}
 
 	def format(self, py):

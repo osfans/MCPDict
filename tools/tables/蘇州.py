@@ -33,8 +33,6 @@ class 字表(表):
 	key = "wuu_th_shj_sz"
 	site = "吳語學堂（蘇州）"
 	url = "https://www.wugniu.com/search?table=suzhou_zi&char=%s"
-	note = "來源：<a href=https://github.com/NGLI/rime-wugniu_soutseu>蘇州吳語拼音輸入方案</a>"
-	tones = "44 1 1a 陰平 ꜀,223 2 1b 陽平 ꜁,51 3 2 上 ꜂,,523 5 3a 陰去 ꜄,231 6 3b 陽去 ꜅,4 7 4a 陰入 ꜆,23 8 4b 陽入 ꜇"
 	_file = "wugniu_soutseu.dict.yaml"
 
 	def parse(self, fs):

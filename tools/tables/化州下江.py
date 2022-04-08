@@ -4,7 +4,6 @@ from tables._表 import 表
 
 class 字表(表):
 	key = "yue_wh_hzxj"
-	tones = "55 1 1a 陰平 ꜀,35 3 2a 陰上 ꜂,33 5 3a 陰去 ꜄,214 2 1b 陽平 ꜁,214 4 2b 陽上 ꜃,21 6 3b 陽去 ꜅,5 7a 4a 上陰入 ꜆,33 7b 4b 下陰入 ꜀,22 8 4c 陽入 ꜇"
 	_file = "化州下江字表*.tsv"
 	sms = {"b#":"p",
 "p#":"pʰ",

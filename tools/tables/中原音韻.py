@@ -7,8 +7,6 @@ class 字表(表):
 	key = "ltc_zy"
 	#https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/trngyan
 	_file = "TriungNgyanQimYonh.txt"
-	note = "來源：<a href=https://ytenx.org/trngyan/>韻典網</a><br>說明：平聲分陰陽，入聲派三聲。<b>黑體字</b>表示古入聲字"
-	tones = "33 1 1a 陰平 ꜀,35 2 1b 陽平 ꜁,214 3 2 上 ꜂,51 5 3 去 ꜄"
 	site = '韻典網（中原音韻）'
 	url = 'https://ytenx.org/trngyan/dzih/%s'
 	

@@ -5,7 +5,7 @@ import re
 
 class 字表(表):
 	key = "kx"
-	_lang = "康熙字典"
+	lang = "康熙字典"
 	_file = "kangxizidian-v3f.txt"
 	_sep = "\t\t"
 	site = "康熙字典網上版"

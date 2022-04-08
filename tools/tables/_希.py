@@ -9,7 +9,7 @@ class 字表(表):
 		sy = yb.rstrip("˩˨˧˦˥")
 		sd = yb[len(sy):]
 		if sd not in self.toneValues:
-			print("\t\t\t", fs)
+			print(f"\t\t\t{fs}")
 			return
 		sd = self.toneValues[sd]
 		yb = sy + str(sd)
