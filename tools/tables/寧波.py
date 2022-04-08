@@ -13,5 +13,4 @@ class 字表(表):
     周志鋒：《江蘇教育版<寧波方言詞典>詞目用字問題》，方言 2008 年第一期<br>
     《鄞縣通志·文獻志·方言》，鄞縣通志館，1951<br>
     P. G. von Möllendorff：《The Ningpo Syllabary》，Shanghai: American Presbyterian Mission Press，1901"""
-	tones = "53 1 1a 陰平 ꜀,24 2 1b 陽平 ꜁,35 3 2 上 ꜂,,44 5 3a 陰去 ꜄,213 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,12 8 4b 陽入 ꜇"
 	toneValues = {"53":1, "24":2, "35":3, "44":5, "213":6, "5":7, "12":8}

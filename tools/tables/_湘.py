@@ -5,10 +5,14 @@ import re
 
 class 字表(表):
 	disorder = True
-	simplified = 2
 
 	def parse(self, fs):
-		_, yb, sd, hzs = fs[:4]
+		if len(fs) > 3:
+			_, yb, sd, hzs = fs[:4]
+		else:
+			yb, sd, hzs = fs[:3]
+		sd = sd.rstrip("a")
+		if sd.endswith("b"): sd = "1" + sd[:-1]
 		yb = yb + sd
 		l = list()
 		for hz, c, js in re.findall("(.)([-=]?)(\[[^[]]*?\[[^[]]*?\][^[]]*?\]|\[.*?\])?", hzs):

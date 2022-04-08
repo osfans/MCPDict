@@ -4,6 +4,5 @@ from tables._表 import 表
 
 class 字表(表):
 	key = "va"
-	_lang = "異體字"
-	note = ""
+	lang = "異體字"
 	tones = None

@@ -4,7 +4,6 @@ from tables._表 import 表
 
 class 字表(表):
 	_file = "鄉話*.tsv"
-	simplified = 2
 
 	def parse(self, fs):
 		hz, js = fs[:2]

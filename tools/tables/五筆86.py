@@ -4,5 +4,5 @@ from tables._五筆 import 字表 as 表
 
 class 字表(表):
 	key = "wb86"
-	_lang = "五筆86版"
+	lang = "五筆86版"
 	index = 2

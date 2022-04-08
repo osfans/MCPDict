@@ -6,9 +6,7 @@ import re
 class 字表(表):
 	key = "hak_yt_mz"
 	_file = "梅县话*.tsv"
-	tones = "44 1 1a 陰平 ꜀,22 2 1b 陽平 ꜁,31 3 2 上 ꜂,,52 5 3 去 ꜄,,1 7 4a 陰入 ꜆,5 8 4b 陽入 ꜇"
 	toneValues = {"44":1, "22":2,"31":3,"52":5,"1":7,"5":8}
-	simplified = 2
 
 	def format(self, line):
 		line = line.replace('"', '')

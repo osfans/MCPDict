@@ -5,10 +5,8 @@ from tables._表 import 表
 
 class 字表(表):
 	key = "cmn_jh_hc_yc"
-	note = "來源：osfans整理自<a href=http://huae.nguyoeh.com/>《類音字彙》</a>、《鹽城縣志》"
 	site = "淮語字典"
 	url = "https://huae.sourceforge.io/query.php?table=類音字彙&字=%s"
-	tones = "31 1 1a 陰平 ꜀,213 2 1b 陽平 ꜁,55 3 2 上 ꜂,,35 5 3 去 ꜄,,5 7 4 入 ꜆"
 	sms = {'g': 'k', 'd': 't', '': '', 'c': 'tsʰ', 'b': 'p', 'l': 'l', 'h': 'x', 't': 'tʰ', 'q': 'tɕʰ', 'z': 'ts', 'j': 'tɕ', 'f': 'f', 'k': 'kʰ', 'n': 'n', 'x': 'ɕ', 'm': 'm', 's': 's', 'p': 'pʰ', 'ng': 'ŋ'}
 	yms = {'ae': 'ɛ', 'ieh': 'iəʔ', 'ii': 'iɪ̃', 'eh': 'əʔ', 'io': 'iɔ', 'ieu': 'iɤɯ', 'u': 'õ', 'v': 'u', 'en': 'ən', 'a': 'ɑ', 'on': 'ɔŋ', 'an': 'ɑ̃', 'oh': 'ɔʔ', 'i': 'i', 'ien': 'in', 'ion': 'iɔŋ', 'ah': 'aʔ', 'ih': 'iʔ', 'y': 'y', 'ui': 'uɪ', 'uae': 'uɛ', 'aeh': 'æʔ', 'in': 'iɪ̃', 'ia': 'iɑ', 'z': 'ɿ', 'uh': 'oʔ', 'aen': 'ɛ̃', 'eu': 'ɤɯ', 'iah': 'iaʔ', 'ueh': 'uəʔ', 'iae': 'iɛ', 'iuh': 'yoʔ', 'yen': 'yn', 'ian': 'iɑ̃', 'iun': 'yõ', 'un': 'õ', 'o': 'ɔ', 'uan': 'uɑ̃', 'ua': 'uɑ', 'uen': 'uən', 'ioh': 'iɔʔ', 'iaen': 'iɛ̃', 'uaen': 'uɛ̃', 'uaeh': 'uæʔ', 'iaeh': 'iæʔ', 'uah': 'uaʔ', 'yeh': 'yəʔ', 'ya': 'ya', '': ''}
 	disorder = True

@@ -6,7 +6,7 @@ import re
 
 class 字表(表):
 	key = "hd"
-	_lang = "漢語大字典"
+	lang = "漢語大字典"
 	note = "來源：<a href=https://github.com/zi-phoenicia/hydzd/>GitHub</a>"
 	hasHead = False
 	

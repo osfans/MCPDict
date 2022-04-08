@@ -27,10 +27,8 @@ class 字表(表):
 	key = "hak_hl"
 	#https://github.com/g0v/moedict-data-hakka/blob/master/dict-hakka.json
 	_file = "dict-hakka.json"
-	note = "來源：<a href=https://www.moedict.tw/>客語萌典</a>"
 	site = "客語萌典"
 	url = "https://www.moedict.tw/:%s"
-	tones = "53 1 1a 陰平 ꜀,55 2 1b 陽平 ꜁,24 3 2 上 ꜂,,11 5 3a 陰去 ꜄,33 6 3b 陽去 ꜅,5 7 4a 陰入 ꜆,2 8 4b 陽入 ꜇"
 
 	def update(self):
 		d = defaultdict(list)

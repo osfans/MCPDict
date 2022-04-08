@@ -6,7 +6,7 @@ from tables import hex2chr
 class 字表(表):
 	key = "fl"
 	note = "方言調查字表"
-	_lang = "分類"
+	lang = "分類"
 	_file = "方言調查字表"
 
 	def parse(self, fs):

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import subprocess, json, os
+import json, os
 from openpyxl import load_workbook
 from opencc import OpenCC
 
@@ -20,7 +20,8 @@ def convert(s):
 	return opencc.convert(s).replace("清","淸")\
 							.replace("榆","楡")\
 							.replace("樑","梁")\
-							.replace("嶽","岳")
+							.replace("嶽","岳")\
+							.replace("慄", "栗")
 
 def outdated():
 	if not os.path.exists(tpath): return True
@@ -29,6 +30,43 @@ def outdated():
 	if classtime > stime: stime = classtime
 	ttime = os.path.getmtime(tpath)
 	return stime > ttime
+
+markers = {1: '꜀', 2: '꜁', 3: '꜂', 4: '꜃', 5: '꜄', 6: '꜅', 7: '꜆', 8: '꜇'}
+markers2 = {1: '꜆', 2: '꜆', 3: '꜄', 4: '꜅', 5: '꜂', 6: '꜃', 7: '꜀', 8: '꜁'}
+def getTones(tones):
+	l = [""] * 40
+	t4s = [""] * 6
+	for i,ts in enumerate(tones):
+		i = i + 1
+		index = i
+		if ts:
+			for j,t in enumerate(ts.split(",")):
+				if t.startswith("["):
+					index = t[1:t.index("]")]
+					if index[-1] in "abcd": index = int(index[:-1]) + 10 *(ord(index[-1])-ord("a"))
+					else: index = int(index)
+					t = t[t.index("]")+1:]
+				if t[0].isdigit():
+					n = t.lstrip("012345")
+					v = t[:len(t)-len(n)]
+				else:
+					n = t
+					v = ""
+				#334 1 1a 陰平 ꜀
+				t8 = i
+				t4 = (i+1)//2
+				if i == 10:
+					t8 = 0
+					t4 = 0
+				elif i == 9: t4 = 5
+				if "," in ts:
+					t8 = str(t8) + chr(ord("a") + j)
+				if "," in ts or tones[i - 2 if i % 2 == 0 else i]:
+					t4s[t4]+="1"
+					t4 = str(t4) + chr(ord("a") + len(t4s[t4]) - 1)
+				m = markers.get(i, '') if j == 0 else markers2.get(i, '')
+				l[index] = f"{v} {t8} {t4} {n} {m}"
+	return ",".join(l[1:]).rstrip(",")
 
 def getInfos():
 	d = dict()
@@ -42,24 +80,27 @@ def getInfos():
 	sheets = load_workbook(spath)
 	sheet = sheets["档案"]
 	for row in sheet.rows:
-		fs = [convert(row[i].value) for i in range(26)]
-		if not fs[3] or type(fs[3]) is str: continue
+		fs = [convert(row[i].value) for i in range(37)]
+		if not fs[4] or type(fs[4]) is str: continue
 		lang = fs[0].strip()
 		name = fs[1].strip()
-		if lang == name:
-			lang = ""
-		color = row[1].fill.fgColor.value[2:]
+		color = row[3].fill.fgColor.value[2:]
 		subcolor = row[2].fill.fgColor.value[2:]
-		ver = fs[3].strftime("%Y-%m-%d")
-		point = fs[4].replace(" ", "").replace("，",",").strip()
-		place = "".join(fs[5:10])
-		island = fs[10]
-		size = fs[11].count("★")
-		editor = fs[13].strip("/")
-		book = fs[14].strip("/")
-		section = fs[23]
-		jf = fs[15]
-		#label = fs[5][0].lower()
+		ver = fs[4].strftime("%Y-%m-%d")
+		point = fs[5].replace(" ", "").replace("，",",").strip()
+		place = "".join(fs[6:11])
+		island = fs[11]
+		size = fs[12].count("★")
+		editor = fs[14].strip("/")
+		book = fs[15].strip("/")
+		note = fs[16]
+		tones = fs[19:29]
+		section = fs[36]
+		jf = fs[17]
+		if book:
+			if row[15].hyperlink:
+				target = row[15].hyperlink.target
+				book = f"<a herf={target}>{book}</a>"
 
 		colors = [color]
 		if subcolor != "000000":
@@ -71,11 +112,7 @@ def getInfos():
 		elif size == 3: marker_size = "medium"
 		if not editor or editor == "Web":
 			editor = ""
-		if book:
-			if row[14].hyperlink:
-				target = row[14].hyperlink.target
-				book = f"<a herf={target}>{book}</a>"
-		d[name] = lang, color, ver, point, str(size), editor, book
+		d[name] = lang, color, ver, point, str(size), editor, book, note, jf, getTones(tones)
 		if not point: continue
 		wd, jd = map(float, point.split(","))
 		Feature = {

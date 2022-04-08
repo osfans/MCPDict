@@ -25,8 +25,6 @@ def py2yb(py):
 
 class 字表(表):
 	key = "cmn_jh_hc_lj"
-	note = "來源：<a href=https://github.com/uliloewi/lang2jin1>南京話拼音输入法</a>"
-	tones = "31 1 1a 陰平 ꜀,13 2 1b 陽平 ꜁,212 3 2 上 ꜂,44 5 3 去 ꜄,5 7 4 入 ꜆"
 	_file = "langjin.dict.yaml"
 
 	def parse(self, fs):
