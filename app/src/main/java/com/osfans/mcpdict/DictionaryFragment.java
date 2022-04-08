@@ -42,10 +42,11 @@ public class DictionaryFragment extends Fragment implements RefreshableFragment 
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
         sp.edit().putInt(getString(R.string.pref_key_show_language_index), position).apply();
         String name = getResources().getStringArray(R.array.pref_values_show_languages)[position];
-        if (position == 1) {
+        if (position == 1 || position == 2) {
             int mode = MCPDatabase.getColumnIndex(getContext());
             name = MCPDatabase.getColumnName(mode);
             if (name.contentEquals("ja_tou")) name = "ja_.+";
+            if (position == 1) name = "cmn_|ltc_mc|" + name;
         }
         sp.edit().putString(getString(R.string.pref_key_show_language_names), name).apply();
     }
