@@ -1,19 +1,17 @@
 #!/usr/bin/env python3
 
-from tables._表 import 表
+from tables._表 import 表 as _表
 from tables import hex2chr
 
-class 字表(表):
-	key = "bs"
+class 表(_表):
 	note = ""
-	lang = "部首餘筆"
 	_file = "Unihan_IRGSources.txt"
 	_sep = "\t"
 	patches = {"□": "囗0", "〇": "乙0"}
 	bs = dict()
 	
 	def __init__(self):
-		表.__init__(self)
+		_表.__init__(self)
 		for line in open(self.get_fullname("CJKRadicals.txt"),encoding="U8"):
 			line = line.strip()
 			if not line or line.startswith("#"): continue

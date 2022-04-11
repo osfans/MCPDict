@@ -1,0 +1,95 @@
+#!/usr/bin/env python3
+
+from tables._表 import 表 as _表
+
+class 表(_表):
+	sms = {"b#":"p",
+"p#":"pʰ",
+"bb#":"ɓ",
+"m#":"m",
+"f#":"f",
+"d#":"t",
+"t#":"tʰ",
+"dd#":"ɗ",
+"n#":"n",
+"l#":"l",
+"z#":"ts",
+"c#":"tsʰ",
+"s#":"s",
+"sl#":"ɬ",
+"g#":"k",
+"k#":"kʰ",
+"ng#":"ŋ",
+"gw#":"kʋ",
+"kw#":"kʰʋ",
+"ngw#":"ŋʋ",
+"h#":"h",
+"w#":"ʋ",
+"j#":"j",
+"nj#":"ȵ",
+"#":"ʔ"}
+	yms = {"aa":"aː",
+"aai":"aːj",
+"aau":"aːw",
+"aan":"aːn",
+"aang":"aːŋ",
+"aam":"aːm",
+"aat":"at̚",
+"aak":"ak̚",
+"aap":"ap̚",
+"ai":"ɐj",
+"au":"ɐw",
+"an":"ɐn",
+"ang":"ɐŋ",
+"am":"ɐm",
+"at":"ɐt̚",
+"ak":"ɐk̚",
+"ap":"ɐp̚",
+"e":"ɛ",
+"ei":"ɛj",
+"eu":"e̯ɛw",
+"en":"e̯ɛn",
+"eng":"e̯ɛŋ",
+"em":"e̯ɛm",
+"et":"e̯ɛt̚",
+"ek":"e̯ɛk̚",
+"ep":"e̯ɛp̚",
+"i":"i",
+"iu":"iw",
+"in":"in",
+"ing":"iŋ",
+"im":"im",
+"it":"ɪt̚",
+"ik":"ɪk̚",
+"ip":"ɪp̚",
+"o":"ɔ",
+"oi":"u̯ɔj",
+"eoi":"ɵj",
+"ou":"u̯ɔw",
+"ooau":"u̯ɔɒw",
+"on":"u̯ɔn",
+"ong":"u̯ɔŋʷ",
+"ot":"u̯ɔt̚",
+"ok":"u̯ɔk̚",
+"u":"ʋ̩",
+"ui":"ʋ̩j",
+"un":"un",
+"ung":"uŋʷ",
+"ut":"ʊt̚",
+"uk":"ʊk̚",
+"ng":"ŋ̍",
+"m":"m̩",
+"n":"n̩"
+}
+
+	def parse(self, fs):
+		hz, sm, ym, sd, js = fs[0], fs[8], fs[9], fs[10], fs[11]
+		if not sm and not sd: return
+		sm = self.sms.get(sm+"#", sm)
+		ym = self.yms.get(ym, ym)
+		if ym and ym.endswith("̚"):
+			if sd == "1": sd = "7"
+			elif sd == "3": sd = "8"
+			elif sd == "6": sd = "9"
+		yb = sm + ym + sd
+		return hz, yb, js

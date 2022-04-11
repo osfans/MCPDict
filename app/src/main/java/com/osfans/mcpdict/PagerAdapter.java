@@ -19,7 +19,7 @@ public class PagerAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         if (position == PAGE_FAVORITE) return new FavoriteFragment();
-        return new DictionaryFragment();
+        return new DictFragment();
     }
 
     @Override

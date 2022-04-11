@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 
-from tables._表 import 表
+from tables._表 import 表 as _表
 
-class 字表(表):
-	key = "hz"
-	lang = "漢字"
+class 表(_表):
 	color = "#9D261D"
 	site = "漢字音典在線版"
 	url = "https://mcpdict.sourceforge.io/cgi-bin/search.py?hz=%s"

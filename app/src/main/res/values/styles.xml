@@ -25,6 +25,10 @@
         <item name="android:textColor">@color/dim</item>
     </style>
 
+    <style name="FontLink">
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
     <style name="FontFavoriteEntry">
         <item name="android:textColor">@color/hz</item>
         <item name="android:textSize">25sp</item>

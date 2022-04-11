@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
@@ -23,7 +22,6 @@ import org.osmdroid.views.CustomZoomButtonsController;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.CopyrightOverlay;
 import org.osmdroid.views.overlay.FolderOverlay;
-import org.osmdroid.views.overlay.GroundOverlay;
 import org.osmdroid.views.overlay.Overlay;
 import org.osmdroid.views.overlay.ScaleBarOverlay;
 
@@ -115,22 +113,23 @@ public class MyMapView extends MapView {
     }
     
     private FolderOverlay initHZ(String hz) {
-        Cursor cursor = MCPDatabase.directSearch(hz);
+        Cursor cursor = DB.directSearch(hz);
         cursor.moveToFirst();
         Context context = getContext();
         String languages = PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.pref_key_show_language_names), "");
         Set<String> customs = PreferenceManager.getDefaultSharedPreferences(context).getStringSet(context.getString(R.string.pref_key_custom_languages), null);
         FolderOverlay folderOverlay = new FolderOverlay();
-        for (int i = MCPDatabase.COL_FIRST_READING; i <= MCPDatabase.COL_LAST_READING; i++) {
+        for (String lang: DB.getLanguages()) {
+            int i = DB.getColumnIndex(lang);
             String string1 = cursor.getString(i);
-            boolean visible = string1 != null && SearchResultCursorAdapter.isColumnVisible(languages, customs, i);
+            boolean visible = string1 != null && ResultAdapter.isColumnVisible(languages, customs, lang);
             if (!visible) continue;
-            GeoPoint point = MCPDatabase.getPoint(i);
+            GeoPoint point = DB.getPoint(lang);
             if (point == null) continue;
-            CharSequence yb = SearchResultCursorAdapter.formatIPA(i,  SearchResultCursorAdapter.getRawText(string1));
-            CharSequence js = SearchResultCursorAdapter.formatIPA(i,  string1);
-            int size = MCPDatabase.getSize(i);
-            MyMarker marker = new MyMarker(this, MCPDatabase.getColor(i), MCPDatabase.getLabel(i), yb.toString() , js.toString(), size);
+            CharSequence yb = ResultAdapter.formatIPA(lang,  ResultAdapter.getRawText(string1));
+            CharSequence js = ResultAdapter.formatIPA(lang,  string1);
+            int size = DB.getSize(lang);
+            MyMarker marker = new MyMarker(this, DB.getColor(lang), DB.getLabel(lang), yb.toString() , js.toString(), size);
             marker.setPosition(point);
             folderOverlay.add(marker);
         }

@@ -244,90 +244,14 @@
         <item>@string/pref_title_custom_languages</item>
         <item>縣級方言</item>
         <item>代表方言</item>
-        <item>歷史音</item>
-        <item>冀魯官話</item>
-        <item>中原官話</item>
-        <item>蘭銀官話</item>
-        <item>淮語</item>
-        <item>淮語洪巢片</item>
-        <item>淮語通泰片</item>
-        <item>淮語黃孝片</item>
-        <item>晉語</item>
-        <item>晉語并州片</item>
-        <item>晉語汾州小片</item>
-        <item>官話方言島</item>
-        <item>西南官話</item>
-        <item>西南官話西蜀片</item>
-        <item>吳語</item>
-        <item>吳語太湖片</item>
-        <item>吳語毗陵小片</item>
-        <item>吳語蘇滬嘉小片</item>
-        <item>吳語甬江小片</item>
-        <item>吳語台州片</item>
-        <item>吳語上麗片</item>
-        <item>吳語甌江片</item>
-        <item>徽語</item>
-        <item>徽語嚴州片</item>
-        <item>贛語</item>
-        <item>客語</item>
-        <item>粵語</item>
-        <item>湘語</item>
-        <item>平話和土話</item>
-        <item>鄉話</item>
-        <item>鄉話麻高片</item>
-        <item>鄉話白八片</item>
-        <item>閩語</item>
-        <item>閩南語</item>
-        <item>閩南語漳泉片</item>
-        <item>閩南語潮汕片</item>
-        <item>閩南語雷州片</item>
-        <item>域外方音</item>
     </string-array>
     <string-array name="pref_values_show_languages">
-        <item>.+</item>
+        <item>*</item>
         <item>""</item>
         <item>""</item>
         <item>""</item>
         <item>"3"</item>
         <item>"5"</item>
-        <item>och_.+|ltc_.+</item>
-        <item>cmn_jil_.+</item>
-        <item>cmn_zho_.+</item>
-        <item>cmn_ly_.+</item>
-        <item>cmn_jh_.+</item>
-        <item>cmn_jh_hc_.+</item>
-        <item>cmn_jh_tt_.+</item>
-        <item>cmn_jh_hx_.+</item>
-        <item>cjy_.+</item>
-        <item>cjy_bz_.+</item>
-        <item>cjy_ll_.+</item>
-        <item>cmn_fyd_.+</item>
-        <item>cmn_xn_.+</item>
-        <item>cmn_xn_xs_.+</item>
-        <item>wuu.*</item>
-        <item>wuu_th_.+</item>
-        <item>wuu_th_pl_.+</item>
-        <item>wuu_th_shj_.+</item>
-        <item>wuu_th_yj_.+</item>
-        <item>wuu_tz_.+</item>
-        <item>wuu_sl_.+</item>
-        <item>wuu_oj_.+</item>
-        <item>czh_.+</item>
-        <item>czh_yz_.+</item>
-        <item>gan.*</item>
-        <item>hak.*</item>
-        <item>yue.*|csp_.+</item>
-        <item>hsn_.+</item>
-        <item>xxx_.+|csp_.+</item>
-        <item>wxa_.+</item>
-        <item>wxa_mg_.+</item>
-        <item>wxa_bb_.+</item>
-        <item>nan_.+|cdo_.+|mnp_.+</item>
-        <item>nan_.+</item>
-        <item>nan_zq_.+</item>
-        <item>nan_cs_.+</item>
-        <item>nan_lz_.+</item>
-        <item>vi_|ko_.+|ja_.+</item>
     </string-array>
 
     <string name="pref_key_charset">SHOW_CHARSET</string>
@@ -364,7 +288,7 @@
     <string name="pref_key_custom_title">CUSTOM_TITLE</string>
     <string name="language">語言</string>
     <string name="appearance">外觀</string>
-    <string name="pref_title_font">字形標準（重啓後生效）</string>
+    <string name="pref_title_font">字形標準</string>
     <string name="pref_key_locale">LOCALE</string>
     <string-array name="pref_entries_locale">
         <item>默認</item>
@@ -385,4 +309,7 @@
     <string name="name">名稱：</string>
     <string name="version">版本：</string>
     <string name="map">地圖</string>
+    <string name="pref_key_fq">FQ</string>
+    <string name="default_fq">地圖集二分區</string>
+    <string name="pref_title_fq">分區方案</string>
 </resources>

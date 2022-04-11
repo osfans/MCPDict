@@ -92,7 +92,7 @@ public class FavoriteDialogs {
             Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
             FavoriteFragment fragment = activity.getFavoriteFragment();
             if (fragment != null) {
-                FavoriteCursorAdapter adapter = (FavoriteCursorAdapter) fragment.getListAdapter();
+                FavoriteAdapter adapter = (FavoriteAdapter) fragment.getListAdapter();
                 assert adapter != null;
                 adapter.collapseItem(hz);
                 fragment.refresh();
@@ -140,7 +140,7 @@ public class FavoriteDialogs {
                 Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
                 FavoriteFragment fragment = activity.getFavoriteFragment();
                 if (fragment != null) {
-                    FavoriteCursorAdapter adapter = (FavoriteCursorAdapter) fragment.getListAdapter();
+                    FavoriteAdapter adapter = (FavoriteAdapter) fragment.getListAdapter();
                     assert adapter != null;
                     adapter.collapseAll();
                     fragment.refresh();
@@ -285,7 +285,7 @@ public class FavoriteDialogs {
             FavoriteFragment fragment = activity.getFavoriteFragment();
             if (fragment != null) {
                 fragment.notifyAddItem();
-                FavoriteCursorAdapter adapter = (FavoriteCursorAdapter) fragment.getListAdapter();
+                FavoriteAdapter adapter = (FavoriteAdapter) fragment.getListAdapter();
                 Objects.requireNonNull(adapter).collapseAll();
                 fragment.refresh();
             }

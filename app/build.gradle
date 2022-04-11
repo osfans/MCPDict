@@ -7,8 +7,8 @@ android {
         applicationId "com.osfans.mcpdict"
         minSdkVersion 24
         targetSdkVersion 32
-        versionCode 56
-        versionName "5.5 (2022.04.08)"
+        versionCode 59
+        versionName "5.5 (2022.04.16)"
     }
 
     signingConfigs {
@@ -47,10 +47,10 @@ android {
 
 dependencies {
     implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
-    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
-    implementation 'androidx.preference:preference:1.1.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.preference:preference:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'androidx.webkit:webkit:1.4.0'
     implementation 'org.osmdroid:osmdroid-android:6.1.11'
     implementation 'com.github.MKergall:osmbonuspack:6.7.0'

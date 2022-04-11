@@ -14,9 +14,13 @@ class Utils {
         sp.edit().putString(context.getString(key), value).apply();
     }
 
-    public static String getString(Context context, int key) {
+    public static String getString(Context context, int key, String defaultValue) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-        return sp.getString(context.getResources().getString(key), "");
+        return sp.getString(context.getString(key), defaultValue);
+    }
+
+    public static String getString(Context context, int key) {
+        return getString(context, key, "");
     }
 
     public static void putInput(Context context, String value) {

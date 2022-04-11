@@ -14,9 +14,9 @@ public class InfoActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help_activity);
         Intent intent = getIntent();
-        int index = intent.getIntExtra("index", -1);
+        String lang = intent.getStringExtra("lang");
 
-        AutoWebView webView = findViewById(R.id.web_view_help);
+        MyWebView webView = findViewById(R.id.web_view_help);
         StringBuilder sb = new StringBuilder();
         sb.append("<style>\n" +
                 "  @font-face {\n" +
@@ -27,7 +27,7 @@ public class InfoActivity extends FragmentActivity {
                 "  h1 {font-size: 24px; color: #9D261D}\n" +
                 "  h2 {font-size: 20px; color: #000080; text-indent: 10px}\n" +
                 " </style>");
-        sb.append(MCPDatabase.getIntroText(this, index));
+        sb.append(DB.getIntroText(this, lang));
         webView.loadDataWithBaseURL(null, sb.toString(), "text/html", "utf-8", null);
     }
 

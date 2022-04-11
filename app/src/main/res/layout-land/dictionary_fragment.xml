@@ -15,7 +15,7 @@
                 android:text="@string/search_for"
                 android:paddingStart="0dp"
                 android:paddingEnd="-4dp" />
-            <com.osfans.mcpdict.CustomSearchView
+            <com.osfans.mcpdict.MySearchView
                 android:id="@+id/search_view" />
         </TableRow>
 
@@ -74,7 +74,7 @@
         </TableRow>
 
         <TableRow>
-            <com.osfans.mcpdict.AutoWebView
+            <com.osfans.mcpdict.MyWebView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="gone"
@@ -90,7 +90,7 @@
         android:background="?android:attr/listDivider" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:name="com.osfans.mcpdict.SearchResultFragment"
+        android:name="com.osfans.mcpdict.ResultFragment"
         android:id="@+id/fragment_search_result"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

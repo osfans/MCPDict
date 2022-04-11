@@ -2,7 +2,7 @@
 
 import re, json
 from collections import defaultdict
-from tables._表 import 表
+from tables._表 import 表 as _表
 
 toneValues = {"⁵³":"1", "⁵⁵": "2", "²⁴":"3", "¹¹":"5", "³³":"6", "⁵":"7", "²":"8"}
 def py2yb(s, tones):
@@ -23,10 +23,8 @@ def py2yb(s, tones):
 		s += "-"
 	return s
   
-class 字表(表):
-	key = "hak_hl"
+class 表(_表):
 	#https://github.com/g0v/moedict-data-hakka/blob/master/dict-hakka.json
-	_file = "dict-hakka.json"
 	site = "客語萌典"
 	url = "https://www.moedict.tw/:%s"
 

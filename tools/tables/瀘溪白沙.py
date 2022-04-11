@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
-from tables._鄉話 import 字表 as 表
+from tables._鄉話 import 表 as _表
 
-class 字表(表):
-	key = "wxa_bb_bs_lxbs"
+class 表(_表):
 	index = 19
 

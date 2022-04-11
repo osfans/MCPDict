@@ -4,13 +4,10 @@ from openpyxl import load_workbook
 from collections import defaultdict
 import os.path
 
-from tables._表 import 表
+from tables._表 import 表 as _表
 import re
 
-class 字表(表):
-	key = "ltc_yt"
-	_file = "Dzih.txt"
-	hasHead = False
+class 表(_表):
 
 	def get_dict(self):
 		yt = dict()
