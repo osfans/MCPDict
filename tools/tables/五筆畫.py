@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 
-from tables._五筆 import 字表 as 表
+from tables._五筆 import 表 as _表
 
-class 字表(表):
-	key = "wbh"
-	lang = "五筆畫"
+class 表(_表):
 	index = 5
 

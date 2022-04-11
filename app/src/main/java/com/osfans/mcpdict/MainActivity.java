@@ -7,13 +7,14 @@ import android.preference.PreferenceManager;
 
 import androidx.viewpager2.widget.ViewPager2;
 
-public class MainActivity extends ActivityWithOptionsMenu {
+public class MainActivity extends BaseActivity {
 
     private ViewPager2 mPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Utils.setLocale(this);
+        DB.initFQ(this);
         // Initialize the some "static" classes on separate threads
         new AsyncTask<Void, Void, Void>() {
             @Override
@@ -27,7 +28,7 @@ public class MainActivity extends ActivityWithOptionsMenu {
             @Override
             protected Void doInBackground(Void... params) {
                 UserDatabase.initialize(MainActivity.this);
-                MCPDatabase.initialize(MainActivity.this);
+                DB.initialize(MainActivity.this);
                 return null;
             }
             protected void onPostExecute(Void result) {
@@ -73,8 +74,8 @@ public class MainActivity extends ActivityWithOptionsMenu {
         return getFragment(mPager.getCurrentItem());
     }
 
-    public DictionaryFragment getDictionaryFragment() {
-        return (DictionaryFragment) getFragment(PagerAdapter.PAGE_DICTIONARY);
+    public DictFragment getDictionaryFragment() {
+        return (DictFragment) getFragment(PagerAdapter.PAGE_DICTIONARY);
     }
 
     public FavoriteFragment getFavoriteFragment() {

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
 from tables import *
-import os
+import os, re
 import logging
 from time import time
 from collections import defaultdict
 from glob import glob
 import inspect
+from openpyxl import load_workbook
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 
@@ -43,24 +44,43 @@ def getSTVariants(level=2):
 			d[fs[0]] = fs[1]
 	return d
 
+def getTsvName(xls):
+	return re.sub("\.xlsx?$", ".tsv", xls)
+
+def isXls(fname):
+	return fname.endswith(".xls") or fname.endswith("xlsx")
+
+def xls2tsv(xls):
+	tsv = getTsvName(xls)
+	if not os.path.exists(xls): return
+	if os.path.exists(tsv):
+		xtime = os.path.getmtime(xls)
+		ttime = os.path.getmtime(tsv)
+		if ttime >= xtime: return
+	wb = load_workbook(xls)
+	sheet = wb.worksheets[0]
+	lines = list()
+	for row in sheet.rows:
+		fs = [(str(int(j.value)) if type(j.value) is float else str(j.value).strip()) if j.value else "" for j in row[:10]]
+		if any(fs):
+			line = "\t".join(fs) + "\n"
+			lines.append(line)
+	t = open(tsv, "w", encoding="U8")
+	t.writelines(lines)
+	t.close()
+
 class 表:
-	site = None
-	url = None
 	path = os.path.dirname(os.path.abspath(__file__))
 	_time = os.path.getmtime(__file__)
 	_file = None
 	_sep = None
-	tones = None
-	location = None
-	size = None
-	ver = None
 	color = "#1E90FF"
-	book = ""
-	editor = ""
+	short = ""
 	note = ""
-	
+	site = ""
+	url = ""
+
 	disorder = False
-	hasHead = True
 	patches = None
 	ybTrimSpace = True
 	kCompatibilityVariants = getCompatibilityVariants()
@@ -68,48 +88,48 @@ class 表:
 	normVariants = getSTVariants(1)
 	stVariants = getSTVariants(2)
 	isYb = True
-	jointer = ","
-	count = 0
+	jointer = "," #廣韻、鄭張 \n
+	syds = defaultdict(set)
+	d = defaultdict(list)
+	__mod = None
+
+	def setmod(self, mod):
+		self.__mod = mod
+
+	def __str__(self):
+		if self.__mod: return self.__mod
+		return self.__module__.split(".")[-1]
 
 	@property
 	def spath(self):
 		sname = self._file
-		if not sname: sname = f"{self.city}.tsv"
+		if not self.short: self.short = self.info["簡稱"]
+		if not self.short: self.short = str(self)
+		if not sname: sname = f"{self.short}.tsv"
 		if not sname.startswith("/"):
-			sname = os.path.join(self.path, SOURCE, sname)
+			sname = self.get_fullname(sname)
 		g = glob(sname)
-		if g:
-			if len(g) == 1: return g[0]
-		logging.error(f"\t\t\t{sname} {g}")
+		if not g or len(g) != 1:
+			if isXls(sname):
+				self._file = getTsvName(self._file)
+				return self.spath
+			logging.error(f"\t\t\t{sname} {g}")
+			return
+		sname = g[0]
+		if isXls(sname):
+			xls2tsv(sname)
+			sname = getTsvName(sname)
+		self._file = os.path.basename(sname)
+		return sname
 
 	def get_fullname(self, name):
 		return os.path.join(self.path, SOURCE, name)
 
 	@property
 	def tpath(self):
-		tpath = os.path.join(self.path, TARGET, self.city)
+		tpath = os.path.join(self.path, TARGET, str(self))
 		if not tpath.endswith(".tsv"): tpath += ".tsv"
 		return tpath
-
-	@property
-	def city(self):
-		return self.__module__.split(".")[-1]
-	
-	def __str__(self):
-		return self.key.split(",")[0]
-
-	@property
-	def desc(self):
-		s = self.note
-		if self.book: s = f"參考資料：{self.book}<br>{s}"
-		if self.editor: s = f"錄入人：{self.editor}<br>{s}"
-		if self.ver: s = f"版本：{self.ver}<br>{s}"
-		if self.count > 0: s = "字數：%d<br><br>%s"%(self.count, s)
-		return s.replace("\n", "")
-
-	@property
-	def head(self):
-		return str(self), self.lang, self.city, self.color, self.site, self.url, self.desc, self.tones, self.location, self.size
 
 	def outdated(self):
 		classfile = inspect.getfile(self.__class__)
@@ -138,7 +158,8 @@ class 表:
 	def normAll(self, yb):
 		yb = yb.replace("᷉", "̃").replace("ⱼ", "ᶽ")\
 			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ")\
-			.replace("ʣ", "dz").replace("ʥ", "dʑ")
+			.replace("ʣ", "dz").replace("ʥ", "dʑ")\
+			.replace("", "ᵑ").replace("", "ᶽ")
 		return yb
 
 	def normYb(self, yb):
@@ -152,28 +173,13 @@ class 表:
 				yb = yb.replace(" ", "")
 		return yb
 
-	def isOldChinese(self):
-		return self.key.startswith("ltc_") or self.key.startswith("och_")
-
-	def isForeign(self):
-		return self.key.startswith("vi_") or self.key.startswith("ko_") or self.key.startswith("ja_")
-
 	def isDialect(self):
-		return self.isLang() and not self.isForeign() and not self.isOldChinese()
+		return self.langType and self.langType not in ("歷史音",)
 
 	def write(self, d):
 		self.patch(d)
 		t = open(self.tpath, "w",encoding="U8")
 		print(f"#漢字\t音標\t解釋", file=t)
-		print(f"#簡稱\t/\t{self.city}", file=t)
-		print(f"#全稱\t/\t{self.lang}", file=t)
-		print(f"#聲母\t/\t", file=t)
-		print(f"#韻母\t/\t", file=t)
-		print(f"#聲調\t/\t{self.tones}", file=t)
-		print(f"#版本\t/\t{self.ver}", file=t)
-		print(f"#錄入人\t/\t{self.editor}", file=t)
-		print(f"#參考資料\t/\t{self.book}", file=t)
-		print(f"#說明\t/\t{self.note}", file=t)
 		for hz in sorted(d.keys()):
 			pys = d[hz]
 			hz = self.kCompatibilityVariants.get(hz, hz)
@@ -200,47 +206,62 @@ class 表:
 				print(f"{hz}\t{yb}", file=t)
 		t.close()
 
-	def isLang(self):
-		return "_" in str(self)
+	@property
+	def langType(self):
+		return self.info["地圖集二分區"]
 
-	def isDict(self):
-		return not self.isLang()
+	def isLang(self):
+		return self.langType != None
+
+	@property
+	def count(self):
+		return len(self.d)
+
+	@property
+	def sydCount(self):
+		return len(self.syds)
+
+	@property
+	def syCount(self):
+		return len(set(map(lambda x:x.rstrip("1234567890"), self.syds.keys())))
 
 	def read(self):
 		start = time()
 		if self.outdated(): self.update()
-		d = defaultdict(list)
+		self.syds.clear()
+		self.d.clear()
 		if not self.tpath or not os.path.exists(self.tpath): return
 		for line in open(self.tpath,encoding="U8"):
 			line = line.strip()
 			if line.startswith("#"): continue
 			if "\t" not in line: continue
 			hz, py = line.split("\t", 1)
-			if self.isDict():
-				py = py.replace("\t", "\n")
-			else:
+			if self.isLang():
 				js = ""
 				if "\t" in py: py, js = py.split("\t", 1)
 				yd = getYD(py)
 				if yd and py.count("*") <= 1:
 					js = f"({yd}){js}"
 					py = py[:-1]
-				if js.startswith("(") and js.endswith(")"):
+				if re.match("^\([^()]*?\)$", js):
 					js = js[1:-1]
+				syd = re.sub("\(.*?\)","",py).strip(" *|")
+				if "-" not in syd:
+					self.syds[syd].add(hz)
 				if js: py += "{%s}" % js
-			if py not in d[hz]:
-				d[hz].append(py)
+			else:
+				py = py.replace("\t", "\n")
+			if py not in self.d[hz]:
+				self.d[hz].append(py)
 		passed = time() - start
-		self.count = len(d)
-		logging.info(f"({self.count:5d}) {passed:5.3f} {self.city}")
-		return d
+		logging.info(f"({self.count:5d}-{self.sydCount:4d}-{self.syCount:4d}) {passed:6.3f} {self}")
 	
 	def load(self, dicts):
-		d = self.read()
-		if not d: return
-		for hz, ybs in d.items():
+		self.read()
+		if not self.d: return
+		for hz, ybs in self.d.items():
 			if hz not in dicts:
-				dicts[hz] = {"hz": hz}
+				dicts[hz] = {"漢字": hz}
 			dicts[hz][str(self)] = self.jointer.join(ybs)
 	
 	def parse(self, fs):
@@ -253,22 +274,23 @@ class 表:
 	def sep(self):
 		if self._sep: return self._sep
 		sep = "\t"
-		if self.spath.endswith(".csv"): sep = ","
-		elif self.spath.endswith(".tsv"): sep = "\t"
-		elif self.spath.endswith(".txt"): sep = " "
+		spath = self.spath
+		if spath.endswith(".csv"): sep = ","
+		elif spath.endswith(".tsv"): sep = "\t"
+		elif spath.endswith(".txt"): sep = " "
 		return sep
 
 	def update(self):
 		d = defaultdict(list)
-		firstline = False
-		
+		sep = self.sep
+		skip = self.info.get("跳過行數", 0)
+		lineno = 0
 		for line in open(self.spath,encoding="U8"):
-			if self.hasHead and not firstline:
-				firstline = True
-				continue
+			lineno += 1
+			if lineno <= skip: continue
 			if line.startswith('#') or line.startswith('"#') : continue
 			line = self.format(line)
-			fs = [i.strip('" \t') for i in line.strip('\n').split(self.sep)]
+			fs = [i.strip('" \t') for i in line.strip('\n').split(sep)]
 			entries = self.parse(fs)
 			if not entries: continue
 			if type(entries) is tuple: entries = [entries]

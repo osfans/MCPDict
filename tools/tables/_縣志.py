@@ -2,14 +2,18 @@
 
 import re
 from collections import defaultdict
-from tables._表 import 表
+from tables._表 import 表 as _表
 
-class 字表(表):
+class 表(_表):
 	disorder = True
 	def update(self):
 		d = defaultdict(list)
 		ym = ""
+		skip = self.info.get("跳過行數", 0)
+		lineno = 0
 		for line in open(self.spath,encoding="U8"):
+			lineno += 1
+			if lineno <= skip: continue
 			line = self.format(line)
 			line = line.strip().replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？")
 			line = re.sub("\[(\d+)\]", "［\\1］",line)
@@ -21,6 +25,14 @@ class 字表(表):
 				if not ym: continue
 				ym = ym.split("\t")[0].strip()
 				continue
+			if "［" not in line and re.match(".*[①-⑨]", line):
+				for i in range(1,10):
+					sda = chr(ord('①') + (i - 1))
+					sdb = f"［{i}］"
+					line = line.replace(sda, sdb)
+			if "{" not in line and "（" in line:
+				line = line.replace("（","{").replace("）","}")
+			if "\t" not in line: line = re.sub("^(.*?)\［", "\\1	［", line)
 			fs = line.split("\t")[:2]
 			if len(fs) != 2: continue
 			sm = fs[0].strip()

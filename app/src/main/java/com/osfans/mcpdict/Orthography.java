@@ -38,9 +38,9 @@ public class Orthography {
         mToneValueStyle = style;
     }
 
-    public static String formatTone(String base, int tone, int lang) {
+    public static String formatTone(String base, int tone, String lang) {
         if (tone <= 0 || tone > 30) return base;
-        String s = MCPDatabase.getToneName(lang);
+        String s = DB.getToneName(lang);
         if (TextUtils.isEmpty(s)) return base;
         tone = tone - 1;
         String[] tones = s.split(",");
@@ -317,7 +317,7 @@ public class Orthography {
             if (tone == 4) {
                 ym = ym.replace('m', 'p').replace('n', 't').replace('ŋ','k');
             }
-            return String.format("%s(%s)", formatTone(Objects.requireNonNull(mapSms.get(init))[system] + ym, tone, MCPDatabase.COL_MC), detail(s0));
+            return String.format("%s(%s)", formatTone(Objects.requireNonNull(mapSms.get(init))[system] + ym, tone, DB.GY), detail(s0));
         }
 
         public static String detail(String s) {
@@ -598,7 +598,7 @@ public class Orthography {
                     .replace("zh", "tʂ").replace("ch", "tʂʰ").replace("sh", "ʂ").replace("r", "ɻ")
                     .replace("z", "ts").replace("c", "tsʰ")
                     .replace("j", "tɕ").replace("q", "tɕʰ").replace("x", "ɕ").replace("h", "x");
-            return formatTone(s, tone - '0', MCPDatabase.COL_CMN);
+            return formatTone(s, tone - '0', DB.CMN);
         }
 
         public static List<String> getAllTones(String s) {
@@ -766,7 +766,7 @@ public class Orthography {
 
             // In Yale, initial "y" is omitted if final begins with "yu"
             if (system == YALE && Objects.requireNonNull(init).equals("y") && Objects.requireNonNull(fin).startsWith("yu")) init = "";
-            if (system == IPA) return formatTone(init + fin, tone - '0', MCPDatabase.COL_GZ);
+            if (system == IPA) return formatTone(init + fin, tone - '0', DB.HK);
             return init + fin + (tone == '_' ? "" : tone);
         }
 
@@ -810,7 +810,7 @@ public class Orthography {
             s = base;
             s = s.replace("oo", "ɔ").replaceFirst("o(k|ng)", "ɔ$1").replace("o", "ə");
             s = s.replaceFirst("^(p|t|k|ts)h", "$1ʰ").replace("ng", "ŋ").replace("j", "dz").replaceFirst("^g", "ɡ").replaceFirst("h$","ʔ").replace("nn","̃");
-            s = formatTone(s, tone - '0', MCPDatabase.COL_NAN);
+            s = formatTone(s, tone - '0', DB.TW);
             return s;
         }
     }
@@ -842,7 +842,7 @@ public class Orthography {
             return result;
         }
 
-        public static String display(String s, int col) {
+        public static String display(String s, String lang) {
             if (TextUtils.isEmpty(s) || s.length() < 2) return s;
             if (Character.isDigit(s.charAt(0))) return s;
             char c = s.charAt(s.length() - 1);
@@ -851,7 +851,7 @@ public class Orthography {
             String tone = "" + (Character.isDigit(c2) ? c2 : "") + c;
             String base = s.substring(0, s.length() - tone.length());
             if (tone.contentEquals("0")) return base;
-            return formatTone(base, Integer.parseInt(tone), col);
+            return formatTone(base, Integer.parseInt(tone), lang);
         }
     }
 
@@ -1013,7 +1013,7 @@ public class Orthography {
             } else {
                 index = "_frxsj".indexOf(tone) + 1;
             }
-            return formatTone(s, index, MCPDatabase.COL_VI);
+            return formatTone(s, index, DB.VI);
         }
 
         // Rules for placing the tone marker follows this page in Vietnamese Wikipedia:

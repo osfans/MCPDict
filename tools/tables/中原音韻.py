@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 
-from tables._表 import 表
+from tables._表 import 表 as _表
 import re
 
-class 字表(表):
-	key = "ltc_zy"
+class 表(_表):
 	#https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/trngyan
-	_file = "TriungNgyanQimYonh.txt"
 	site = '韻典網（中原音韻）'
 	url = 'https://ytenx.org/trngyan/dzih/%s'
 	

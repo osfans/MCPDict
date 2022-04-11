@@ -1,12 +1,18 @@
 package com.osfans.mcpdict;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.ListPreference;
 import androidx.preference.MultiSelectListPreference;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
-import java.util.Locale;
+import java.util.ArrayList;
 
 public class SettingsActivity extends AppCompatActivity {
     @Override
@@ -21,18 +27,54 @@ public class SettingsActivity extends AppCompatActivity {
 
     }
 
-    public static class SettingsFragment extends PreferenceFragmentCompat {
+    public static class SettingsFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener {
+        MultiSelectListPreference mCustomLanguages;
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             setPreferencesFromResource(R.xml.preferences, rootKey);
-            MultiSelectListPreference msp = findPreference(getString(R.string.pref_key_custom_languages));
-            boolean visible = MCPDatabase.getLanguages() != null;
-            if (msp != null) {
-                msp.setVisible(visible);
-                if (visible) {
-                    msp.setEntries(MCPDatabase.getLanguages().toArray(new String[0]));
-                    msp.setEntryValues(MCPDatabase.getFields().toArray(new String[0]));
-                }
+            mCustomLanguages = findPreference(getString(R.string.pref_key_custom_languages));
+            ListPreference lp = findPreference(getString(R.string.pref_key_fq));
+            String[] entries = DB.getFqColumns();
+            if (entries != null) {
+                lp.setEntries(entries);
+                lp.setEntryValues(entries);
+            }
+            initCustomLanguages();
+        }
+
+        private void initCustomLanguages() {
+            String[] languages = DB.getSearchColumns();
+            if (mCustomLanguages != null && languages != null) {
+                mCustomLanguages.setEntries(languages);
+                mCustomLanguages.setEntryValues(languages);
+            }
+        }
+
+        @Override
+        public void onDisplayPreferenceDialog(Preference preference) {
+            if (preference.getKey().equals(getString(R.string.pref_key_custom_languages))) initCustomLanguages();
+            super.onDisplayPreferenceDialog(preference);
+        }
+
+        @Override
+        public void onResume() {
+            super.onResume();
+            getPreferenceManager().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
+
+        }
+
+        @Override
+        public void onPause() {
+            getPreferenceManager().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(this);
+            super.onPause();
+        }
+
+        @Override
+        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+            if (s.contentEquals(getString(R.string.pref_key_fq)) || s.contentEquals(getString(R.string.pref_key_locale))) {
+                Intent intent = new Intent(getContext(), MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
             }
         }
     }

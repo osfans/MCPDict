@@ -2,9 +2,9 @@
 
 import re
 from collections import defaultdict
-from tables._表 import 表
+from tables._表 import 表 as _表
 
-class 字表(表):
+class 表(_表):
 	def update(self):
 		d = defaultdict(list)
 		for line in open(self.spath,encoding="U8"):

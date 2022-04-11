@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-from tables._表 import 表
+from tables._表 import 表 as _表
 
 #http://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialectIndex.php?point=A
-class 字表(表):
+class 表(_表):
 	site = "漢語多功能字庫"
 	url = "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/dialect.php?word=%s"
 	toneNames = None

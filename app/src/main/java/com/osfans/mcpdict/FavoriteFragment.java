@@ -27,7 +27,7 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
     private View header;
     private TextView textTotal;
     private ListView listView;
-    private FavoriteCursorAdapter adapter;
+    private FavoriteAdapter adapter;
     private boolean hasNewItem;
 
     @Override
@@ -98,7 +98,7 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
 
         // Set up the adapter
         if (adapter == null) {
-            adapter = new FavoriteCursorAdapter(getActivity(), R.layout.favorite_item, null, this);
+            adapter = new FavoriteAdapter(getActivity(), R.layout.favorite_item, null, this);
             setListAdapter(adapter);
         }
     }

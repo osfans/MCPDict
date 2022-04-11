@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 
-from tables._表 import 表
+from tables._表 import 表 as _表
 import re
 
-class 字表(表):
-	key = "ltc_lgy"
-	_file = "lau_guoq_in.dict.yaml"
+class 表(_表):
 
 	def parse(self, fs):
 		if len(fs) < 2: return

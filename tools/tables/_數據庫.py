@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-import sqlite3
+import sqlite3, re
 from collections import defaultdict
-from tables._表 import 表
+from tables._表 import 表 as _表
 
-class 字表(表):
+class 表(_表):
 	_file = "mcpdict.db"
 	isYb = False
 
@@ -17,6 +17,7 @@ class 字表(表):
 			hz = chr(int(r["unicode"],16))
 			pys = r[self.dbkey]
 			if not pys: continue
+			pys = re.sub("\[\d\]", ",",pys).strip(",")
 			for py in pys.split(","):
 				py = py.strip()
 				if not py: continue

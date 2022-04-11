@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 
-from tables._表 import 表
+from tables._表 import 表 as _表
 
-class 字表(表):
-	key = "lf"
+class 表(_表):
 	_file = "liangfen.dict.yaml"
-	lang = "兩分"
 	note = "來源：<a href=http://yedict.com/zslf.htm>兩分查字</a><br>說明：可以輸入“雲龍”或“yunlong”查到“𱁬”"
 	
 	def parse(self, fs):

@@ -4,7 +4,7 @@ import android.text.TextUtils;
 
 abstract class Displayer {
     protected static final String NULL_STRING = "-";
-    public int col;
+    public String mLang;
 
     public String display(String s) {
         if (s == null) return NULL_STRING;
@@ -39,13 +39,13 @@ abstract class Displayer {
         return s;
     }
 
-    public String display(String s, int i) {
-        col = i;
+    public String display(String s, String lang) {
+        mLang = lang;
         return display(s);
     }
 
-    public int getCol() {
-        return col;
+    public String getLang() {
+        return mLang;
     }
 
 

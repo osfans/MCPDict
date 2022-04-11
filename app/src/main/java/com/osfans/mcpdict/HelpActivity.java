@@ -13,7 +13,7 @@ public class HelpActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help_activity);
 
-        AutoWebView webView = findViewById(R.id.web_view_help);
+        MyWebView webView = findViewById(R.id.web_view_help);
         webView.loadUrl("file:///android_asset/help/index.htm");
     }
 }
