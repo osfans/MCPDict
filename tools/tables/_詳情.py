@@ -135,7 +135,7 @@ def load():
 			"陳邡二排序":orders[3],
 			"陳邡二顏色":colors[2],
 			"陳邡二分區":types[3],
-			"省":places[0],
+			"省":convert(places[0]).strip("*"),
 			"市":places[1],
 			"縣":places[2],
 			"鎮":places[3],

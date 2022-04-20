@@ -61,6 +61,9 @@ def getLangs(dicts, argv=None):
 			if d["簡繁"] == "簡": lang.simplified = 2
 			addAllFq(types[0], d["地圖集二分區"], d["地圖集二排序"])
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
+			if d["省"]:
+				addAllFq(types[1], d["省"], "ZZZZ")
+				d["音典分區"] += "," + d["省"]
 			addAllFq(types[2], d["陳邡分區"], d["陳邡排序"], True)
 			addCf2Fq(types[3], d["陳邡二分區"], d["陳邡二排序"])
 			lang.info = d
