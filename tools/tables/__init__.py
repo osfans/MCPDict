@@ -43,7 +43,7 @@ def getLangs(dicts, argv=None):
 		mods.extend(argv if argv else infos.keys())
 		lb = ["總筆畫數","部首餘筆","倉頡三代","倉頡五代","倉頡六代","五筆86版","五筆98版","五筆06版","異體字","分類"]
 		mods.extend(lb)
-	types = [dict(),dict(),dict(),dict()]
+	types = [dict(),dict(),dict(),dict(),dict()]
 	keys = None
 	for mod in mods:
 		if mod in infos:
@@ -65,6 +65,7 @@ def getLangs(dicts, argv=None):
 				addAllFq(types[1], d["省"], "ZZZZ")
 				d["音典分區"] += "," + d["省"]
 			addAllFq(types[2], d["陳邡分區"], d["陳邡排序"], True)
+			addAllFq(types[4], d["俞銓（正心）分區"], d["俞銓（正心）排序"], True)
 			addCf2Fq(types[3], d["陳邡二分區"], d["陳邡二排序"])
 			lang.info = d
 			lang.load(dicts)
@@ -97,6 +98,7 @@ def getLangs(dicts, argv=None):
 	hz.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:(x.count("-"),types[0][x])))
 	hz.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
 	hz.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:(x.count("-"),types[2][x])))
+	hz.info["俞銓（正心）分區"] = ",".join(sorted(types[4].keys(),key=lambda x:(x.count("-"),types[4][x])))
 	hz.info["陳邡二分區"] = ",".join(",".join(sorted(types[3][i].keys(),key=lambda x:types[3][i][x])) for i in types[3])
 	print("語言數", count)
 	return langs

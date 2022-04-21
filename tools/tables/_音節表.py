@@ -10,7 +10,7 @@ class 表(_表):
 
 	def parse(self, fs):
 		sy, sd, hzs = fs[1:4]
-		yb = sy + str(self.toneNames[sd])
+		yb = sy.strip() + str(self.toneNames[sd])
 		l = list()
 		for hz in hzs.split(","):
 			hz = hz.strip()
