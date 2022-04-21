@@ -48,7 +48,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         else name = spinnerShowLang.getSelectedItem().toString();
         if (position == 1 || position == 2) {
             name = Utils.getLanguage(getContext());
-            if (position == 1) name = String.format("%s|%s|%s", DB.CMN, DB.GY, name);
+            if (position == 1) name = String.format("%s,%s,%s", DB.CMN, DB.GY, name);
         }
         sp.edit().putString(getString(R.string.pref_key_show_language_names), name).apply();
     }

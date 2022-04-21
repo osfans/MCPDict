@@ -31,8 +31,12 @@ import java.net.URLEncoder;
 import java.util.Objects;
 import java.util.Set;
 
+import static com.osfans.mcpdict.DB.ALL_LANGUAGES;
 import static com.osfans.mcpdict.DB.COL_ALL_LANGUAGES;
 import static com.osfans.mcpdict.DB.COL_HZ;
+import static com.osfans.mcpdict.DB.HZ;
+import static com.osfans.mcpdict.DB.getColumn;
+import static com.osfans.mcpdict.DB.getColumnIndex;
 
 public class ResultFragment extends ListFragment {
 
@@ -92,8 +96,7 @@ public class ResultFragment extends ListFragment {
         }
     }
 
-    private Intent getDictIntent(int i, String hz) {
-        String lang = DB.getColumn(i);
+    private Intent getDictIntent(String lang, String hz) {
         String link = DB.getDictLink(lang);
         if (TextUtils.isEmpty(link)) return null;
         String big5 = null;
@@ -124,11 +127,11 @@ public class ResultFragment extends ListFragment {
             // but list.getChildAt() on the next line requires the position of the item in currently visible items
         selectedEntry = list.getChildAt(position);
         ResultAdapter.ViewHolder holder = (ResultAdapter.ViewHolder) selectedEntry.getTag();
-        int col = holder.col;
-        holder.col = -1;
+        String col = holder.col;
+        holder.col = "";
         TextView text = holder.tvHZ;
         String hz = text.getText().toString();
-        Set<Integer> cols = holder.cols;
+        Set<String> cols = holder.cols;
 
         // Inflate the context menu
         requireActivity().getMenuInflater().inflate(R.menu.search_result_context_menu, menu);
@@ -138,24 +141,22 @@ public class ResultFragment extends ListFragment {
         SubMenu menuDictLinks = itemDict.getSubMenu();
         MenuItem item;
 
-        if (col < 0) {
+        if (TextUtils.isEmpty(col)) {
             if (cols.size() > 2)
                 menuCopy.add(GROUP_READING, COL_ALL_LANGUAGES, 0, getString(R.string.all_reading));
-            for (int i = 0; i <= DB.COL_LAST_LANG; i++) {
-                if ((cols.contains(i))) menuCopy.add(GROUP_READING, i, 0, DB.getColumn(i));
-            }
-
             for (String lang: DB.getSearchColumns()) {
+                if ((cols.contains(lang))) {
+                    menuCopy.add(GROUP_READING, getColumnIndex(lang), 0, lang);
+                }
                 String dict = DB.getDictName(lang);
-                int i = DB.getColumnIndex(lang);
-                if ((cols.contains(i)) && !TextUtils.isEmpty(dict)) {
+                if ((cols.contains(lang)) && !TextUtils.isEmpty(dict)) {
                     item = menuDictLinks.add(dict);
-                    item.setIntent(getDictIntent(i, hz));
+                    item.setIntent(getDictIntent(lang, hz));
                 }
             }
         } else {
-            String lang = DB.getColumn(col);
-            String dict = DB.getDictName(lang);
+            String lang = col;
+            String dict = DB.getDictName(col);
             if (!TextUtils.isEmpty(dict)) {
                 item = menu.add(getString(R.string.one_dict_links, hz, dict));
                 item.setIntent(getDictIntent(col, hz));
@@ -172,11 +173,11 @@ public class ResultFragment extends ListFragment {
                 item = menu.add(getString(R.string.search_homophone, hz, lang));
                 item.setOnMenuItemClickListener(i->{
                     DictFragment dictFragment = ((MainActivity) requireActivity()).getDictionaryFragment();
-                    String query = holder.tvDetails[col].getTag().toString();
-                    dictFragment.refresh(query, lang);
+//                    String query = holder.tvDetails[col].getTag().toString();
+//                    dictFragment.refresh(query, lang);
                     return true;
                 });
-                menu.add(GROUP_READING, col, 0, getString(R.string.copy_one_reading, hz, lang));
+                menu.add(GROUP_READING, getColumnIndex(col), 0, getString(R.string.copy_one_reading, hz, lang));
             }
             if (cols.size() > 2)
                 menu.add(GROUP_READING, COL_ALL_LANGUAGES, 0, getString(R.string.copy_all_reading));
@@ -208,8 +209,8 @@ public class ResultFragment extends ListFragment {
     }
 
     public void shareReadings() {
-        String text = getCopyText(selectedEntry, COL_ALL_LANGUAGES);
-        String title = getCopyText(selectedEntry, COL_HZ);
+        String text = getCopyText(selectedEntry, ALL_LANGUAGES);
+        String title = getCopyText(selectedEntry, HZ);
         Intent intent = new Intent(android.content.Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(android.content.Intent.EXTRA_TEXT, text);
@@ -224,7 +225,8 @@ public class ResultFragment extends ListFragment {
         if (groupId == GROUP_READING) {
             int itemId = item.getItemId();
             // Generate the text to copy to the clipboard
-            String text = getCopyText(selectedEntry, itemId);
+            String lang = itemId == COL_ALL_LANGUAGES ? ALL_LANGUAGES : getColumn(itemId);
+            String text = getCopyText(selectedEntry, lang);
             ClipboardManager clipboard = (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData clip = ClipData.newPlainText("item", text);
             clipboard.setPrimaryClip(clip);
@@ -234,22 +236,21 @@ public class ResultFragment extends ListFragment {
         return false;
     }
 
-    private String getCopyText(View entry, int col) {
+    private String getCopyText(View entry, String col) {
         ResultAdapter.ViewHolder holder = (ResultAdapter.ViewHolder) entry.getTag();
-        Set<Integer> cols = holder.cols;
+        Set<String> cols = holder.cols;
 
         if (cols.contains(col))
-            return holder.tvDetails[col].getText().toString();
+            return holder.rawTexts.get(col);
 
-        if (col == COL_ALL_LANGUAGES) {
+        if (col.contentEquals(ALL_LANGUAGES)) {
             if (cols.size() <= 2) return null;
             StringBuilder sb = new StringBuilder();
-            String hz = getCopyText(entry, COL_HZ);
+            String hz = getCopyText(entry, HZ);
             assert hz != null;
             sb.append(String.format("%s %s\n", hz, Orthography.HZ.toUnicode(hz)));
             for (String lang: DB.getLanguages()) {
-                int i = DB.getColumnIndex(lang);
-                String s = getCopyText(entry, i);
+                String s = getCopyText(entry, lang);
                 if (s != null) {
                     sb.append(formatReading(entry, lang));
                 }
@@ -266,7 +267,7 @@ public class ResultFragment extends ListFragment {
 
     private String formatReading(View entry, String lang) {
         String prefix = DB.getLabel(lang);
-        String reading = Objects.requireNonNull(getCopyText(entry, DB.getColumnIndex(lang)));
+        String reading = Objects.requireNonNull(getCopyText(entry,lang));
         return formatReading(prefix, reading);
     }
 

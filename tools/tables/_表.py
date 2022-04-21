@@ -88,7 +88,6 @@ class 表:
 	normVariants = getSTVariants(1)
 	stVariants = getSTVariants(2)
 	isYb = True
-	jointer = "," #廣韻、鄭張 \n
 	syds = defaultdict(set)
 	d = defaultdict(list)
 	__mod = None
@@ -262,7 +261,7 @@ class 表:
 		for hz, ybs in self.d.items():
 			if hz not in dicts:
 				dicts[hz] = {"漢字": hz}
-			dicts[hz][str(self)] = self.jointer.join(ybs)
+			dicts[hz][str(self)] = ",".join(ybs)
 	
 	def parse(self, fs):
 		return tuple(fs[:3])

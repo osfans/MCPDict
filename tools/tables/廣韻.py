@@ -9,7 +9,6 @@ class 表(_表):
 	url = 'http://ytenx.org/zim?kyonh=1&dzih=%s'
 	last = ""
 	isYb = False
-	jointer = "\n"
 	
 	def __init__(self):
 		self.pq = self.getPQ()
