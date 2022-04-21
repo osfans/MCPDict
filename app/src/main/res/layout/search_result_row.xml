@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
-    android:gravity="top" android:visibility="gone">
-    <TextView android:id="@+id/text_name"  style="@style/FontName" android:layout_width="45sp"/>
-    <TextView android:id="@+id/text_detail" android:layout_marginStart="8dp" style="@style/FontDetail" android:layout_width="wrap_content"/>
-</TableRow>

@@ -8,7 +8,6 @@ class 表(_表):
 	note = "來源：<a href=https://ytenx.org/dciangx/>韻典網上古音鄭張尚芳擬音</a><br>說明：在擬音後面的括號中注明了《上古音系》中的反切、聲符、韻部。"
 	ybTrimSpace = False
 	isYb = False
-	jointer = "\n"
 
 	def parse(self, fs):
 		hz = fs[0]

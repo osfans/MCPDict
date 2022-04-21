@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
+import android.text.TextUtils;
 import android.view.MotionEvent;
 
 import androidx.core.content.res.ResourcesCompat;
@@ -116,18 +117,15 @@ public class MyMapView extends MapView {
         Cursor cursor = DB.directSearch(hz);
         cursor.moveToFirst();
         Context context = getContext();
-        String languages = PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.pref_key_show_language_names), "");
-        Set<String> customs = PreferenceManager.getDefaultSharedPreferences(context).getStringSet(context.getString(R.string.pref_key_custom_languages), null);
         FolderOverlay folderOverlay = new FolderOverlay();
-        for (String lang: DB.getLanguages()) {
-            int i = DB.getColumnIndex(lang);
-            String string1 = cursor.getString(i);
-            boolean visible = string1 != null && ResultAdapter.isColumnVisible(languages, customs, lang);
-            if (!visible) continue;
+        for (String lang: DB.getVisibleColumns(context)) {
             GeoPoint point = DB.getPoint(lang);
             if (point == null) continue;
-            CharSequence yb = ResultAdapter.formatIPA(lang,  ResultAdapter.getRawText(string1));
-            CharSequence js = ResultAdapter.formatIPA(lang,  string1);
+            int i = DB.getColumnIndex(lang);
+            String string = cursor.getString(i);
+            if (TextUtils.isEmpty(string)) continue;
+            CharSequence yb = ResultAdapter.formatIPA(lang,  ResultAdapter.getRawText(string));
+            CharSequence js = ResultAdapter.formatIPA(lang,  string);
             int size = DB.getSize(lang);
             MyMarker marker = new MyMarker(this, DB.getColor(lang), DB.getLabel(lang), yb.toString() , js.toString(), size);
             marker.setPosition(point);

@@ -22,6 +22,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.Set;
 
 public class DB extends SQLiteAssetHelper {
 
@@ -40,6 +41,9 @@ public class DB extends SQLiteAssetHelper {
     public static final String WBH = "五筆畫";
     public static final String VA = "異體字";
     public static final String FL = "分類";
+    public static final String VARIANTS = "variants";
+    public static final String COMMENT = "comment";
+    public static final String UNICODE = "unicode";
 
     public static final String SG = "上古（鄭張尚芳）";
     public static final String BA = "上古（白一平沙加爾2015）";
@@ -82,6 +86,7 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_LAST_LANG;
 
     public static int COL_ALL_LANGUAGES = 1000;
+    public static final String ALL_LANGUAGES = "*";
 
     private static final String TABLE_NAME = "mcpdict";
     private static final String TABLE_INFO = "info";
@@ -392,12 +397,37 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static int getColumnIndex(String lang) {
-        return COLUMNS.indexOf(lang);
+        return COLUMNS.contains(lang) ? COLUMNS.indexOf(lang) : -1;
     }
 
     public static String getColumn(int index) {
         if (COLUMNS == null) initArrays();
         return index < 0 ? "" : COLUMNS.get(index);
+    }
+
+    public static List<String> getVisibleColumns(Context context) {
+        String languages = PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.pref_key_show_language_names), "");
+        Set<String> customs = PreferenceManager.getDefaultSharedPreferences(context).getStringSet(context.getString(R.string.pref_key_custom_languages), null);
+
+        if (languages.contentEquals("*")) return LANGUAGES;
+        if (languages.contentEquals("3") || languages.contentEquals("5")) {
+            return queryInfo(String.format("級別  >= \"%s\"", languages));
+        }
+        if (TextUtils.isEmpty(languages)) return new ArrayList<>(customs);
+        ArrayList<String> array = new ArrayList<>();
+        if (languages.contains(",")) {
+            for (String lang: languages.split(",")) {
+                if (getColumnIndex(lang) >= 1) array.add(lang);
+            }
+            return array;
+        }
+        array = DB.getLanguages(languages);
+        if (array != null && array.size() > 0) {
+            return array;
+        }
+        array = new ArrayList<>();
+        if (getColumnIndex(languages) >= 1) array.add(languages);
+        return array;
     }
 
     public static boolean isHzMode(String lang) {
@@ -426,7 +456,9 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static String getLabel(String lang) {
-        return getFieldString(lang, "簡稱");
+        String s = getFieldString(lang, "簡稱");
+        if (s.length() == 2) s = String.format(" %s ", s);
+        return s;
     }
 
     public static int getColor(String lang, int i) {
@@ -548,10 +580,6 @@ public class DB extends SQLiteAssetHelper {
 
     public static boolean isLang(String lang) {
         return !TextUtils.isEmpty(getLangType(lang));
-    }
-
-    public static boolean isPreLang(String lang) {
-        return getColumnIndex(lang) < COL_FIRST_LANG;
     }
 
     public static String[] getFqColumns() {

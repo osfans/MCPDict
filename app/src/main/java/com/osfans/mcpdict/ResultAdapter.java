@@ -1,46 +1,59 @@
 package com.osfans.mcpdict;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.res.ColorStateList;
-import android.content.res.Resources;
-import android.database.Cursor;
-import android.graphics.drawable.GradientDrawable;
-import android.preference.PreferenceManager;
-import android.text.TextUtils;
-import android.text.method.LinkMovementMethod;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.CursorAdapter;
-import android.widget.TableLayout;
-import android.widget.TableRow;
-import android.widget.TextView;
-
-import androidx.core.content.ContextCompat;
-import androidx.core.content.res.ResourcesCompat;
-import androidx.core.text.HtmlCompat;
-
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
-
 import static com.osfans.mcpdict.DB.COL_BH;
 import static com.osfans.mcpdict.DB.COL_BS;
 import static com.osfans.mcpdict.DB.COL_HD;
 import static com.osfans.mcpdict.DB.COL_HZ;
 import static com.osfans.mcpdict.DB.COL_KX;
 import static com.osfans.mcpdict.DB.COL_SW;
+import static com.osfans.mcpdict.DB.COMMENT;
 import static com.osfans.mcpdict.DB.HD;
 import static com.osfans.mcpdict.DB.HZ;
 import static com.osfans.mcpdict.DB.KX;
 import static com.osfans.mcpdict.DB.SW;
+import static com.osfans.mcpdict.DB.UNICODE;
+import static com.osfans.mcpdict.DB.VARIANTS;
+import static com.osfans.mcpdict.DB.getColor;
+import static com.osfans.mcpdict.DB.getColumn;
 import static com.osfans.mcpdict.DB.getLabel;
+import static com.osfans.mcpdict.DB.getLanguages;
+import static com.osfans.mcpdict.DB.getSubColor;
+
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
+import android.database.Cursor;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.preference.PreferenceManager;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.TextUtils;
+import android.text.method.LinkMovementMethod;
+import android.text.style.CharacterStyle;
+import android.text.style.DrawableMarginSpan;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.ParagraphStyle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CursorAdapter;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.core.text.HtmlCompat;
+
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 
 public class ResultAdapter extends CursorAdapter {
 
@@ -61,111 +74,95 @@ public class ResultAdapter extends CursorAdapter {
         return context.get();
     }
 
-    private static View.OnClickListener getListener(final String lang) {
-        return v -> {
-            ViewHolder holder = (ViewHolder) ((View)v.getParent().getParent()).getTag();
-            holder.col = DB.getColumnIndex(lang);
-            BaseActivity activity = (BaseActivity) getContext();
-            activity.registerForContextMenu(v);
-            activity.openContextMenu(v);
-            activity.unregisterForContextMenu(v);
-        };
-    }
-
-    private static int getMeasuredWidth(TextView textView) {
-        textView.measure(0, 0);
-        return textView.getMeasuredWidth();
-    }
-
-    private static int getMaxWidth(TextView textView) {
-        textView.setText("中文");
-        return getMeasuredWidth(textView);
-    }
-
-    private static void formatTextView(TextView tv, String lang) {
-        int color = DB.getColor(lang);
-        int subColor = DB.getSubColor(lang);
-        if (color == subColor) {
-            tv.setBackgroundTintList(ColorStateList.valueOf(color));
-        } else {
-            GradientDrawable gd = new GradientDrawable(
-                    GradientDrawable.Orientation.LEFT_RIGHT,
-                    new int[] {subColor, color, color});
-            gd.setCornerRadius(5f);
-            tv.setBackground(gd);
-        }
-        //tv.setAlpha(0.8f);
-    }
-
-    static class ViewHolder {
+    static class ViewHolder implements View.OnClickListener{
         TextView tvHZ, tvUnicode, tvSW, tvKX, tvHD, tvComment, tvVariant;
         Button btnMap, btnFavorite;
-        TextView[] tvDetails;
-        TableRow[] rows;
+        TextView tvReadings;
         boolean isFavorite;
-        Set<Integer> cols;
-        int col = -1;
+        Set<String> cols;
+        String col = "";
+        HashMap<String, ParagraphStyle> spans;
+        HashMap<String, String> rawTexts;
+        HashMap<String, TextView> tvs;
 
-        public ViewHolder(View view, Context context) {
+        public ViewHolder(View view) {
             tvHZ = view.findViewById(R.id.text_hz);
-            tvHZ.setOnClickListener(getListener(HZ));
+            tvHZ.setOnClickListener(this);
             tvUnicode = view.findViewById(R.id.text_unicode);
+            tvUnicode.setOnClickListener(this);
             tvSW = view.findViewById(R.id.text_sw);
             tvSW.setText(getLabel(SW));
+            tvSW.setOnClickListener(this);
             tvKX = view.findViewById(R.id.text_kx);
             tvKX.setText(getLabel(KX));
+            tvKX.setOnClickListener(this);
             tvHD = view.findViewById(R.id.text_hd);
             tvHD.setText(getLabel(HD));
+            tvHD.setOnClickListener(this);
             tvComment = view.findViewById(R.id.text_comment);
             tvVariant = view.findViewById(R.id.text_variants);
+            tvs = new HashMap<>();
+            tvs.put(UNICODE, tvUnicode);
+            tvs.put(SW, tvSW);
+            tvs.put(KX, tvKX);
+            tvs.put(HD, tvHD);
+            tvs.put(COMMENT, tvComment);
+            tvs.put(VARIANTS, tvVariant);
             btnMap = view.findViewById(R.id.button_map);
+            btnMap.setOnClickListener(this);
             btnFavorite = view.findViewById(R.id.button_favorite);
-            tvDetails = new TextView[DB.COL_LAST_LANG + 1];
-            rows = new TableRow[DB.COL_LAST_LANG + 1];
-            tvDetails[0] = tvHZ;
-            TableLayout table = view.findViewById(R.id.text_readings);
-            for (String lang: DB.getLanguages()) {
-                int i = DB.getColumnIndex(lang);
-                TableRow row = (TableRow)LayoutInflater.from(context).inflate(R.layout.search_result_row, null);
-                TextView textViewName = row.findViewById(R.id.text_name);
-                String name = DB.getLabel(lang);
-                if (TextUtils.isEmpty(name)) continue;
-                formatTextView(textViewName, lang);
-                textViewName.setText(name);
-                float ratio = 8f/(name.getBytes().length + name.length()) * 1.25f;
-                if (ratio < 1) textViewName.setTextScaleX(ratio);
-                row.setOnClickListener(getListener(lang));
-                table.addView(row);
-                tvDetails[i]  = row.findViewById(R.id.text_detail);
-                rows[i] = row;
+            tvReadings = view.findViewById(R.id.text_readings);
+            spans = new HashMap<>();
+            rawTexts = new HashMap<>();
+            float fontSize = tvReadings.getTextSize();
+            TextDrawable.IBuilder builder = TextDrawable.builder()
+                    .beginConfig()
+                    .withBorder(1)
+                    .width((int) (fontSize * 3.1f))  // width in px
+                    .height((int) (fontSize * 1.25f)) // height in px
+                    .fontSize(fontSize)
+                    .endConfig()
+                    .roundRect(5);
+            for (String lang: getLanguages()) {
+                Drawable drawable = builder.build(getLabel(lang), getColor(lang), getSubColor(lang));
+                DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
+                spans.put(lang, span);
             }
-            table.setColumnShrinkable(1, true);
+        }
+
+        @Override
+        public void onClick(View view) {
+            Context context = getContext();
+            String hz = rawTexts.get(HZ);
+            if (view == btnMap) {
+                new MyMapView(context, hz).show();
+                return;
+            } else if (view == tvReadings) {
+                BaseActivity activity = (BaseActivity) getContext();
+                activity.registerForContextMenu(view);
+                activity.openContextMenu(view);
+                activity.unregisterForContextMenu(view);
+            }
+            for (String key: new String[]{UNICODE, SW, KX, HD}) {
+                if (view == tvs.get(key)) {
+                    TextView showText = new TextView(context);
+                    showText.setPadding(24, 24, 24, 24);
+                    showText.setTextIsSelectable(true);
+                    showText.setMovementMethod(LinkMovementMethod.getInstance());
+                    showText.setText(formatPassage(hz, rawTexts.get(key)));
+                    new AlertDialog.Builder(context).setView(showText).show();
+                    return;
+                }
+            }
         }
     }
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         View view = inflater.inflate(layout, parent, false);
-        ViewHolder holder = new ViewHolder(view, context);
+        ViewHolder holder = new ViewHolder(view);
         view.setTag(holder);
         return view;
-    }
-
-    public static boolean isColumnVisible(String languages, Set<String> customs, String lang) {
-        if (DB.isPreLang(lang) || languages.contentEquals("*")) return true;
-        if (languages.contentEquals("3") || languages.contentEquals("5")) {
-            int size = DB.getSize(lang);
-            return size >= Integer.parseInt(languages);
-        }
-        if (TextUtils.isEmpty(languages)) {
-            if (customs == null || customs.size() == 0) return true;
-            return customs.contains(lang);
-        }
-        ArrayList<String> array = DB.getLanguages(languages);
-        if (array != null && array.size() > 0) {
-            return array.contains(lang);
-        }
-        return lang.matches(languages);
     }
 
     public static CharSequence formatIPA(String lang, String string) {
@@ -173,7 +170,7 @@ public class ResultAdapter extends CursorAdapter {
         if (TextUtils.isEmpty(string)) return "";
         switch (lang) {
             case DB.SG:
-                cs = getRichText(string);
+                cs = getRichText(string.replace(",", "  "));
                 break;
             case DB.BA:
                 cs = baDisplayer.display(string);
@@ -210,7 +207,7 @@ public class ResultAdapter extends CursorAdapter {
         return cs;
     }
 
-    private CharSequence formatPassage(String hz, String js) {
+    private static CharSequence formatPassage(String hz, String js) {
         String[] fs = (js+"\n").split("\n", 2);
         String s = String.format("<p><big><big><big>%s</big></big></big> %s</p><br><p>%s</p>", hz, fs[0], fs[1].replace("\n", "<br/>"));
         return getRichText(s);
@@ -220,122 +217,77 @@ public class ResultAdapter extends CursorAdapter {
     public void bindView(final View view, final Context context, Cursor cursor) {
         ViewHolder holder = (ViewHolder)view.getTag();
 
-        String hz, string;
-        TextView textView;
-        Set<Integer> cols = new HashSet<>();
+        String hz, s;
+        Set<String> cols = new HashSet<>();
         Orthography.setToneStyle(getStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(getStyle(R.string.pref_key_tone_value_display));
-        String languages = PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.pref_key_show_language_names), "");
-        Set<String> customs = PreferenceManager.getDefaultSharedPreferences(context).getStringSet(context.getString(R.string.pref_key_custom_languages), null);
+        hz = cursor.getString(COL_HZ);
 
-        for (String lang: DB.getLanguages()) {
+        SpannableStringBuilder ssb = new SpannableStringBuilder();
+        for (String lang : DB.getVisibleColumns(context)) {
             int i = DB.getColumnIndex(lang);
-            string = cursor.getString(i);
-            boolean visible = string != null && isColumnVisible(languages, customs, lang);
-            if (holder.rows[i] == null) continue;
-            holder.rows[i].setVisibility(visible ? View.VISIBLE : View.GONE);
-            if (!visible) continue;
-            cols.add(i);
-            textView = holder.tvDetails[i];
-            textView.setTag(getRawText(string));
-            CharSequence cs = formatIPA(lang, string);
-            textView.setText(cs);
+            s = cursor.getString(i);
+            if (TextUtils.isEmpty(s)) continue;
+            CharSequence cs = formatIPA(lang, s);
+            int n = ssb.length();
+            ssb.append(" ", holder.spans.get(lang), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            ssb.append(cs);
+            ssb.append("\n");
+            ssb.setSpan(new MyClickableSpan(lang), n, ssb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            cols.add(lang);
+        }
+        holder.tvReadings.setText(ssb);
+        holder.tvReadings.setMovementMethod(LinkMovementMethod.getInstance());
+
+        for (int i = DB.COL_HZ; i < DB.COL_VA; i++) {
+            s = cursor.getString(i);
+            if (TextUtils.isEmpty(s)) s = "";
+            if (i == COL_BS) s = s.replace("f", "-");
+            else if (i == COL_KX) s = s.replaceFirst("^(.*?)(\\d+).(\\d+)", "$1<a href=https://kangxizidian.com/kxhans/" + hz + ">第$2頁第$3字</a>");
+            else if (i == COL_HD) s = s.replaceFirst("(\\d+).(\\d+)", "【汉語大字典】<a href=https://www.homeinmists.com/hd/png/$1.png>第$1頁</a>第$2字");
+            holder.rawTexts.put(DB.getColumn(i), s);
         }
 
         // HZ
-        hz = cursor.getString(COL_HZ);
+        TextView tv;
         holder.tvHZ.setText(hz);
-        cols.add(COL_HZ);
-        textView = holder.tvUnicode;
-        String unicode = Orthography.HZ.toUnicode(hz);
-        textView.setText(unicode);
+        cols.add(HZ);
+        // Unicode
+        s = Orthography.HZ.toUnicode(hz);
+        holder.tvUnicode.setText(s);
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("<p><big><big><big>%s</big></big></big></p><p>【統一碼】%s %s</p>", hz, unicode, Orthography.HZ.getUnicodeExt(hz)));
+        String unicode = s;
+        sb.append(String.format("<p>【統一碼】%s %s</p>", unicode, Orthography.HZ.getUnicodeExt(hz)));
         for (int i = DB.COL_LF; i < DB.COL_VA; i++) {
             if (i == COL_SW) i = COL_BH;
-            String str = cursor.getString(i);
-            if (i == COL_BS) str = str.replace("f", "-");
-            if (TextUtils.isEmpty(str)) continue;
-            str = str.toUpperCase();
-            sb.append(String.format("<p>【%s】%s</p>", DB.getColumn(i), str));
+            String lang = getColumn(i);
+            s = holder.rawTexts.getOrDefault(lang, "");
+            if (TextUtils.isEmpty(s)) continue;
+            sb.append(String.format("<p>【%s】%s</p>", lang, s));
         }
         String info = sb.toString().replace(",", ", ");
-        textView.setOnClickListener(view1 -> {
-            TextView showText = new TextView(getContext());
-            showText.setPadding(24, 24, 24, 24);
-            showText.setTextIsSelectable(true);
-            showText.setText(HtmlCompat.fromHtml(info, HtmlCompat.FROM_HTML_MODE_COMPACT));
-            new AlertDialog.Builder(getContext())
-                    .setView(showText)
-                    .show();
-        });
-        TextView tv = holder.tvSW;
-        String sw =  cursor.getString(COL_SW);
-        if (!TextUtils.isEmpty(sw)) {
-            tv.setOnClickListener(view1 -> {
-                TextView showText = new TextView(getContext());
-                showText.setPadding(24, 24, 24, 24);
-                showText.setTextIsSelectable(true);
-                showText.setMovementMethod(LinkMovementMethod.getInstance());
-                showText.setText(formatPassage(hz, sw));
-                new AlertDialog.Builder(getContext())
-                        .setView(showText)
-                        .show();
-            });
-            tv.setVisibility(View.VISIBLE);
-        } else {
-            tv.setVisibility(View.GONE);
-        }
-        tv = holder.tvKX;
-        String kx =  cursor.getString(COL_KX);
-        if (!TextUtils.isEmpty(kx)) {
-            tv.setOnClickListener(view1 -> {
-                TextView showText = new TextView(getContext());
-                showText.setPadding(24, 24, 24, 24);
-                showText.setTextIsSelectable(true);
-                showText.setMovementMethod(LinkMovementMethod.getInstance());
-                String text = kx.replaceFirst("^(.*?)(\\d+).(\\d+)", "$1<a href=https://kangxizidian.com/kxhans/"+hz+">第$2頁第$3字</a>");
-                showText.setText(formatPassage(hz, text));
-                new AlertDialog.Builder(getContext())
-                        .setView(showText)
-                        .show();
-            });
-            tv.setVisibility(View.VISIBLE);
-        } else {
-            tv.setVisibility(View.GONE);
-        }
-        tv = holder.tvHD;
-        String hd =  cursor.getString(COL_HD);
-        if (!TextUtils.isEmpty(hd)) {
-            tv.setOnClickListener(view1 -> {
-                TextView showText = new TextView(getContext());
-                showText.setPadding(24, 24, 24, 24);
-                showText.setTextIsSelectable(true);
-                showText.setMovementMethod(LinkMovementMethod.getInstance());
-                String text = hd.replaceFirst("(\\d+).(\\d+)", "【汉語大字典】<a href=https://www.homeinmists.com/hd/png/$1.png>第$1頁</a>第$2字");
-                showText.setText(formatPassage(hz, text));
-                new AlertDialog.Builder(getContext())
-                        .setView(showText)
-                        .show();
-            });
-            tv.setVisibility(View.VISIBLE);
-        } else {
-            tv.setVisibility(View.GONE);
-        }
-
+        holder.rawTexts.put(UNICODE, info);
         // Variants
-        string = cursor.getString(cursor.getColumnIndexOrThrow("variants"));
-        textView = holder.tvVariant;
-        if (!TextUtils.isEmpty(string) && !string.contentEquals(hz)) {
-            textView.setText(String.format("(%s)", string));
-        } else {
-            textView.setText("");
+        s = cursor.getString(cursor.getColumnIndexOrThrow(VARIANTS));
+        if (!TextUtils.isEmpty(s) && !s.contentEquals(hz)) {
+            s = String.format("(%s)", s);
+        } else s = "";
+        holder.rawTexts.put(VARIANTS, s);
+        holder.tvVariant.setText(s);
+        // Favorite comment
+        s = cursor.getString(cursor.getColumnIndexOrThrow(COMMENT));
+        holder.rawTexts.put(COMMENT, s);
+        holder.tvComment.setText(s);
+
+        for (String key: new String[]{SW, KX, HD, VARIANTS, COMMENT}) {
+            tv = holder.tvs.get(key);
+            s =  holder.rawTexts.get(key);
+            tv.setVisibility(TextUtils.isEmpty(s) ? View.GONE: View.VISIBLE);
         }
 
          // "Favorite" button
         boolean favorite = cursor.getInt(cursor.getColumnIndexOrThrow("is_favorite")) == 1;
         holder.isFavorite = favorite;
-        holder.btnMap.setOnClickListener(v -> new MyMapView(getContext(), hz).show());
         Button button = holder.btnFavorite;
         button.setOnClickListener(v -> {
             if (holder.isFavorite) {
@@ -346,15 +298,9 @@ public class ResultAdapter extends CursorAdapter {
         });
         if (showFavoriteButton) {
             button.setBackgroundResource(favorite ? android.R.drawable.btn_star_big_on : android.R.drawable.btn_star_big_off);
-        }
-        else {
+        } else {
             button.setVisibility(View.GONE);
         }
-
-        // Favorite comment
-        string = cursor.getString(cursor.getColumnIndexOrThrow("comment"));
-        textView = holder.tvComment;
-        textView.setText(string);
 
         // Set the view's cols to indicate which readings exist
         holder.cols = cols;
