@@ -87,12 +87,13 @@ def load():
 		if not filename: continue
 		fileformat = fs[3].strip()
 		fileskip = int(fs[4]) if fs[4] else 0
-		orders = [str(fs[i]).strip() for i in (30,33,38,37)]
-		colors = [row[i].fill.fgColor.value[2:] for i in (31,33,39)]
-		subcolors = [row[i].fill.fgColor.value[2:] for i in (31,34,40)]
+		orders = [str(fs[i]).strip() for i in (30,33,38,37,50)]
+		colors = [row[i].fill.fgColor.value[2:] for i in (31,34,39,39,51)]
+		subcolors = [row[i].fill.fgColor.value[2:] for i in (31,35,40,40,52)]
 		types = [fs[i].strip() for i in (32,36)]
 		types.append(convert(fs[49]))
 		types.append(",".join(fs[41:49]))
+		types.append(fs[53].strip())
 		j = 6
 		point = fs[j].replace(" ", "").replace("，",",").strip()
 		places = fs[j+1:j+6]
@@ -132,8 +133,11 @@ def load():
 			"陳邡排序":orders[2],
 			"陳邡顏色":colors[2],
 			"陳邡分區":types[2],
+			"俞銓（正心）排序":orders[4],
+			"俞銓（正心）顏色":colors[4],
+			"俞銓（正心）分區":convert(types[4]),
 			"陳邡二排序":orders[3],
-			"陳邡二顏色":colors[2],
+			"陳邡二顏色":colors[3],
 			"陳邡二分區":types[3],
 			"省":convert(places[0]).strip("*"),
 			"市":places[1],
@@ -151,6 +155,10 @@ def load():
 		}
 		try:
 			wd, jd = map(float, point.split(","))
+			if abs(wd) > 90:
+				jd, wd = wd, jd
+				point = f"{wd},{jd}"
+				d[lang]["坐標"] = point
 		except:
 			continue
 		Feature = {
@@ -161,6 +169,7 @@ def load():
 				"地圖集二分區": types[0],
 				"音典分區": types[1],
 				"陳邡分區":types[2],
+				"俞銓（正心）分區":types[4],
 				"marker-color": colors[0],
 				"marker-size": marker_size,
 				"marker-symbol": orders[0][0].upper() if orders[0] else "",
