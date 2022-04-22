@@ -70,7 +70,7 @@ public class DB extends SQLiteAssetHelper {
     public static final String _ORDER = "排序";
     public static final String FIRST_FQ = "地圖集二分區";
     private static String[] FQS = null;
-    private static ArrayList<String> LANGUAGES = null;
+    private static String[] LANGUAGES = null;
     private static String[] SEARCH_COLUMNS = null;
 
     public static int COL_HZ;
@@ -93,7 +93,7 @@ public class DB extends SQLiteAssetHelper {
 
     private static String[] JA_COLUMNS = null;
     private static String[] WB_COLUMNS = null;
-    private static ArrayList<String> COLUMNS;
+    private static String[] COLUMNS;
     private static String[] FQ_COLUMNS;
     private static SQLiteDatabase db = null;
 
@@ -293,12 +293,7 @@ public class DB extends SQLiteAssetHelper {
         ORDER = FQ.replace(_FQ, _ORDER);
         COLOR = FQ.replace(_FQ, _COLOR);
         FQS = getFieldString(HZ, FQ).split(",");
-        ArrayList<String> arrayList = queryInfo(FIRST_FQ.replace(_FQ, _COLOR) + " is not null");
-        if (arrayList != null) {
-            SEARCH_COLUMNS = arrayList.toArray(new String[0]);
-        } else {
-            SEARCH_COLUMNS = null;
-        }
+        SEARCH_COLUMNS = queryInfo(FIRST_FQ.replace(_FQ, _COLOR) + " is not null");
         LANGUAGES = queryInfo(FQ + " is not null and rowid > 1");
     }
 
@@ -311,7 +306,7 @@ public class DB extends SQLiteAssetHelper {
         String query = qb.buildQuery(projection, selection,  null, null, null, null);
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
-        COLUMNS = new ArrayList<>(Arrays.asList(cursor.getColumnNames()));
+        COLUMNS = cursor.getColumnNames();
         ArrayList<String> arrayList = new ArrayList<>();
         for(String s: COLUMNS) {
             if (s.startsWith(JA_)) arrayList.add(s);
@@ -349,11 +344,11 @@ public class DB extends SQLiteAssetHelper {
         cursor.close();
     }
 
-    private static ArrayList<String> queryInfo(String selection) {
+    private static String[] queryInfo(String selection) {
         return queryInfo(selection, null);
     }
 
-    private static ArrayList<String> queryInfo(String selection, String args) {
+    private static String[] queryInfo(String selection, String args) {
         if (db == null) return null;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
@@ -362,17 +357,17 @@ public class DB extends SQLiteAssetHelper {
         Cursor cursor = db.rawQuery(query, TextUtils.isEmpty(args) ? null : new String[]{String.format("\"%s\"", args)});
         cursor.moveToFirst();
         int n = cursor.getCount();
-        ArrayList<String> ret = new ArrayList<>();
+        String[] a = new String[n];
         for (int i = 0; i < n; i++) {
             String s = cursor.getString(0);
-            ret.add(s);
+            a[i] = s;
             cursor.moveToNext();
         }
         cursor.close();
-        return ret;
+        return a;
     }
 
-    public static ArrayList<String> getLanguages() {
+    public static String[] getLanguages() {
         initArrays();
         if (LANGUAGES == null) {
             LANGUAGES = queryInfo(FQ + " is not null and rowid > 1");
@@ -380,7 +375,7 @@ public class DB extends SQLiteAssetHelper {
         return LANGUAGES;
     }
 
-    public static ArrayList<String> getLanguages(String type) {
+    public static String[] getLanguages(String type) {
         if (type.contentEquals("*")) return getLanguages();
         if (TextUtils.isEmpty(type)) return null;
         return queryInfo(String.format("%s MATCH ? and rowid > 1", FQ), type);
@@ -389,23 +384,24 @@ public class DB extends SQLiteAssetHelper {
     public static String[] getSearchColumns() {
         initArrays();
         if (SEARCH_COLUMNS == null) {
-            ArrayList<String> arrayList = queryInfo(COLOR + " is not null");
-            if (arrayList != null)
-                SEARCH_COLUMNS = arrayList.toArray(new String[0]);
+            SEARCH_COLUMNS = queryInfo(COLOR + " is not null");
         }
         return SEARCH_COLUMNS;
     }
 
     public static int getColumnIndex(String lang) {
-        return COLUMNS.contains(lang) ? COLUMNS.indexOf(lang) : -1;
+        for (int i = 0; i < COLUMNS.length; i++) {
+            if (COLUMNS[i].contentEquals(lang)) return i;
+        }
+        return -1;
     }
 
-    public static String getColumn(int index) {
+    public static String getColumn(int i) {
         if (COLUMNS == null) initArrays();
-        return index < 0 ? "" : COLUMNS.get(index);
+        return i < 0 ? "" : COLUMNS[i];
     }
 
-    public static List<String> getVisibleColumns(Context context) {
+    public static String[] getVisibleColumns(Context context) {
         String languages = PreferenceManager.getDefaultSharedPreferences(context).getString(context.getString(R.string.pref_key_show_language_names), "");
         Set<String> customs = PreferenceManager.getDefaultSharedPreferences(context).getStringSet(context.getString(R.string.pref_key_custom_languages), null);
 
@@ -413,21 +409,20 @@ public class DB extends SQLiteAssetHelper {
         if (languages.contentEquals("3") || languages.contentEquals("5")) {
             return queryInfo(String.format("級別  >= \"%s\"", languages));
         }
-        if (TextUtils.isEmpty(languages)) return new ArrayList<>(customs);
+        if (TextUtils.isEmpty(languages)) return customs.toArray(new String[0]);
         ArrayList<String> array = new ArrayList<>();
         if (languages.contains(",")) {
             for (String lang: languages.split(",")) {
                 if (getColumnIndex(lang) >= 1) array.add(lang);
             }
-            return array;
+            return array.toArray(new String[0]);
         }
-        array = DB.getLanguages(languages);
-        if (array != null && array.size() > 0) {
-            return array;
+        String[] a = DB.getLanguages(languages);
+        if (a != null && a.length > 0) {
+            return a;
         }
-        array = new ArrayList<>();
-        if (getColumnIndex(languages) >= 1) array.add(languages);
-        return array;
+        if (getColumnIndex(languages) >= 1) return new String[]{languages};
+        return null;
     }
 
     public static boolean isHzMode(String lang) {

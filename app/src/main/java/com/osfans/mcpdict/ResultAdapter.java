@@ -22,19 +22,15 @@ import static com.osfans.mcpdict.DB.getSubColor;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.GradientDrawable;
 import android.preference.PreferenceManager;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
-import android.text.style.CharacterStyle;
 import android.text.style.DrawableMarginSpan;
-import android.text.style.ForegroundColorSpan;
 import android.text.style.ParagraphStyle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -44,16 +40,15 @@ import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.core.text.HtmlCompat;
 
 import java.lang.ref.WeakReference;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+import java.util.WeakHashMap;
 
 public class ResultAdapter extends CursorAdapter {
 
@@ -81,9 +76,9 @@ public class ResultAdapter extends CursorAdapter {
         boolean isFavorite;
         Set<String> cols;
         String col = "";
-        HashMap<String, ParagraphStyle> spans;
-        HashMap<String, String> rawTexts;
-        HashMap<String, TextView> tvs;
+        WeakHashMap<String, ParagraphStyle> spans;
+        WeakHashMap<String, String> rawTexts;
+        WeakHashMap<String, TextView> tvs;
 
         public ViewHolder(View view) {
             tvHZ = view.findViewById(R.id.text_hz);
@@ -101,7 +96,7 @@ public class ResultAdapter extends CursorAdapter {
             tvHD.setOnClickListener(this);
             tvComment = view.findViewById(R.id.text_comment);
             tvVariant = view.findViewById(R.id.text_variants);
-            tvs = new HashMap<>();
+            tvs = new WeakHashMap<>();
             tvs.put(UNICODE, tvUnicode);
             tvs.put(SW, tvSW);
             tvs.put(KX, tvKX);
@@ -112,8 +107,8 @@ public class ResultAdapter extends CursorAdapter {
             btnMap.setOnClickListener(this);
             btnFavorite = view.findViewById(R.id.button_favorite);
             tvReadings = view.findViewById(R.id.text_readings);
-            spans = new HashMap<>();
-            rawTexts = new HashMap<>();
+            spans = new WeakHashMap<>();
+            rawTexts = new WeakHashMap<>();
             float fontSize = tvReadings.getTextSize();
             TextDrawable.IBuilder builder = TextDrawable.builder()
                     .beginConfig()
@@ -138,7 +133,7 @@ public class ResultAdapter extends CursorAdapter {
                 new MyMapView(context, hz).show();
                 return;
             } else if (view == tvReadings) {
-                BaseActivity activity = (BaseActivity) getContext();
+                BaseActivity activity = (BaseActivity) context;
                 activity.registerForContextMenu(view);
                 activity.openContextMenu(view);
                 activity.unregisterForContextMenu(view);
@@ -155,14 +150,6 @@ public class ResultAdapter extends CursorAdapter {
                 }
             }
         }
-    }
-
-    @Override
-    public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        View view = inflater.inflate(layout, parent, false);
-        ViewHolder holder = new ViewHolder(view);
-        view.setTag(holder);
-        return view;
     }
 
     public static CharSequence formatIPA(String lang, String string) {
@@ -214,6 +201,26 @@ public class ResultAdapter extends CursorAdapter {
     }
 
     @Override
+    public View newView(Context context, Cursor cursor, ViewGroup parent) {
+        View view = inflater.inflate(layout, parent, false);
+        ViewHolder holder = new ViewHolder(view);
+        view.setTag(holder);
+        return view;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        View view;
+        if (convertView != null) view = convertView;
+        else {
+            view = inflater.inflate(layout, parent, false);
+            ViewHolder holder = new ViewHolder(view);
+            view.setTag(holder);
+        }
+        return super.getView(position, view, parent);
+    }
+
+    @Override
     public void bindView(final View view, final Context context, Cursor cursor) {
         ViewHolder holder = (ViewHolder)view.getTag();
 
@@ -224,7 +231,7 @@ public class ResultAdapter extends CursorAdapter {
         hz = cursor.getString(COL_HZ);
 
         SpannableStringBuilder ssb = new SpannableStringBuilder();
-        for (String lang : DB.getVisibleColumns(context)) {
+        for (String lang : DB.getVisibleColumns(getContext())) {
             int i = DB.getColumnIndex(lang);
             s = cursor.getString(i);
             if (TextUtils.isEmpty(s)) continue;
