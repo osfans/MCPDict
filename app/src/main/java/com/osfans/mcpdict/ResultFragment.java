@@ -121,12 +121,12 @@ public class ResultFragment extends Fragment {
             // info.position is the position of the item in the entire list
             // but list.getChildAt() on the next line requires the position of the item in currently visible items
         //selectedEntry = list.getChildAt(position);
-        ResultAdapter.ViewHolder holder = (ResultAdapter.ViewHolder) selectedEntry.getTag();
-        String col = holder.col;
-        holder.col = "";
-        TextView text = holder.tvHZ;
-        String hz = text.getText().toString();
-        Set<String> cols = holder.cols;
+//        ResultAdapter.ViewHolder holder = (ResultAdapter.ViewHolder) selectedEntry.getTag();
+//        String col = holder.col;
+//        holder.col = "";
+//        TextView text = holder.tvHZ;
+//        String hz = text.getText().toString();
+//        Set<String> cols = holder.cols;
 
         // Inflate the context menu
         requireActivity().getMenuInflater().inflate(R.menu.search_result_context_menu, menu);
@@ -136,71 +136,71 @@ public class ResultFragment extends Fragment {
         SubMenu menuDictLinks = itemDict.getSubMenu();
         MenuItem item;
 
-        if (TextUtils.isEmpty(col)) {
-            if (cols.size() > 2)
-                menuCopy.add(GROUP_READING, COL_ALL_LANGUAGES, 0, getString(R.string.all_reading));
-            for (String lang: DB.getSearchColumns()) {
-                if ((cols.contains(lang))) {
-                    menuCopy.add(GROUP_READING, getColumnIndex(lang), 0, lang);
-                }
-                String dict = DB.getDictName(lang);
-                if ((cols.contains(lang)) && !TextUtils.isEmpty(dict)) {
-                    item = menuDictLinks.add(dict);
-                    item.setIntent(getDictIntent(lang, hz));
-                }
-            }
-        } else {
-            String lang = col;
-            String dict = DB.getDictName(col);
-            if (!TextUtils.isEmpty(dict)) {
-                item = menu.add(getString(R.string.one_dict_links, hz, dict));
-                item.setIntent(getDictIntent(col, hz));
-            }
-            menu.add(GROUP_READING, COL_HZ, 90, getString(R.string.copy_hz));
-            if (DB.isLang(lang)) {
-                item = menu.add(getString(R.string.goto_info, lang));
-                item.setOnMenuItemClickListener(i->{
-                    Intent intent = new Intent(getContext(), InfoActivity.class);
-                    intent.putExtra("lang", lang);
-                    startActivity(intent);
-                    return true;
-                });
-                item = menu.add(getString(R.string.search_homophone, hz, lang));
-                item.setOnMenuItemClickListener(i->{
-                    DictFragment dictFragment = ((MainActivity) requireActivity()).getDictionaryFragment();
-//                    String query = holder.tvDetails[col].getTag().toString();
-//                    dictFragment.refresh(query, lang);
-                    return true;
-                });
-                menu.add(GROUP_READING, getColumnIndex(col), 0, getString(R.string.copy_one_reading, hz, lang));
-            }
-            if (cols.size() > 2)
-                menu.add(GROUP_READING, COL_ALL_LANGUAGES, 0, getString(R.string.copy_all_reading));
-            itemCopy.setVisible(false);
-            itemDict.setVisible(false);
-        }
+//        if (TextUtils.isEmpty(col)) {
+//            if (cols.size() > 2)
+//                menuCopy.add(GROUP_READING, COL_ALL_LANGUAGES, 0, getString(R.string.all_reading));
+//            for (String lang: DB.getSearchColumns()) {
+//                if ((cols.contains(lang))) {
+//                    menuCopy.add(GROUP_READING, getColumnIndex(lang), 0, lang);
+//                }
+//                String dict = DB.getDictName(lang);
+//                if ((cols.contains(lang)) && !TextUtils.isEmpty(dict)) {
+//                    item = menuDictLinks.add(dict);
+//                    item.setIntent(getDictIntent(lang, hz));
+//                }
+//            }
+//        } else {
+//            String lang = col;
+//            String dict = DB.getDictName(col);
+//            if (!TextUtils.isEmpty(dict)) {
+//                item = menu.add(getString(R.string.one_dict_links, hz, dict));
+//                item.setIntent(getDictIntent(col, hz));
+//            }
+//            menu.add(GROUP_READING, COL_HZ, 90, getString(R.string.copy_hz));
+//            if (DB.isLang(lang)) {
+//                item = menu.add(getString(R.string.goto_info, lang));
+//                item.setOnMenuItemClickListener(i->{
+//                    Intent intent = new Intent(getContext(), InfoActivity.class);
+//                    intent.putExtra("lang", lang);
+//                    startActivity(intent);
+//                    return true;
+//                });
+//                item = menu.add(getString(R.string.search_homophone, hz, lang));
+//                item.setOnMenuItemClickListener(i->{
+//                    DictFragment dictFragment = ((MainActivity) requireActivity()).getDictionaryFragment();
+////                    String query = holder.tvDetails[col].getTag().toString();
+////                    dictFragment.refresh(query, lang);
+//                    return true;
+//                });
+//                menu.add(GROUP_READING, getColumnIndex(col), 0, getString(R.string.copy_one_reading, hz, lang));
+//            }
+//            if (cols.size() > 2)
+//                menu.add(GROUP_READING, COL_ALL_LANGUAGES, 0, getString(R.string.copy_all_reading));
+//            itemCopy.setVisible(false);
+//            itemDict.setVisible(false);
+//        }
 
-        item = menu.findItem(R.id.menu_item_share_readings);
-        item.setOnMenuItemClickListener(i->{
-           shareReadings();
-           return true;
-        });
-
-        // Determine the functionality of the "favorite" item
-        item = menu.findItem(R.id.menu_item_favorite);
-        item.setTitle(holder.isFavorite ? R.string.favorite_view_or_edit : R.string.favorite_add);
-        item.setOnMenuItemClickListener(i->{
-            holder.btnFavorite.performClick();
-            return true;
-        });
-
-        // Replace the placeholders in the menu items with the character selected
-        for (Menu m : new Menu[] {menu, menuCopy, menuDictLinks}) {
-            for (int i = 0; i < m.size(); i++) {
-                item = m.getItem(i);
-                item.setTitle(String.format(item.getTitle().toString(), hz));
-            }
-        }
+//        item = menu.findItem(R.id.menu_item_share_readings);
+//        item.setOnMenuItemClickListener(i->{
+//           shareReadings();
+//           return true;
+//        });
+//
+//        // Determine the functionality of the "favorite" item
+//        item = menu.findItem(R.id.menu_item_favorite);
+//        item.setTitle(holder.isFavorite ? R.string.favorite_view_or_edit : R.string.favorite_add);
+//        item.setOnMenuItemClickListener(i->{
+//            holder.btnFavorite.performClick();
+//            return true;
+//        });
+//
+//        // Replace the placeholders in the menu items with the character selected
+//        for (Menu m : new Menu[] {menu, menuCopy, menuDictLinks}) {
+//            for (int i = 0; i < m.size(); i++) {
+//                item = m.getItem(i);
+//                item.setTitle(String.format(item.getTitle().toString(), hz));
+//            }
+//        }
     }
 
     public void shareReadings() {
@@ -232,14 +232,14 @@ public class ResultFragment extends Fragment {
     }
 
     private String getCopyText(View entry, String col) {
-        ResultAdapter.ViewHolder holder = (ResultAdapter.ViewHolder) entry.getTag();
-        Set<String> cols = holder.cols;
-
-        if (cols.contains(col))
-            return holder.rawTexts.get(col);
+//        ResultAdapter.ViewHolder holder = (ResultAdapter.ViewHolder) entry.getTag();
+//        Set<String> cols = holder.cols;
+//
+//        if (cols.contains(col))
+//            return holder.rawTexts.get(col);
 
         if (col.contentEquals(ALL_LANGUAGES)) {
-            if (cols.size() <= 2) return null;
+//            if (cols.size() <= 2) return null;
             StringBuilder sb = new StringBuilder();
             String hz = getCopyText(entry, HZ);
             assert hz != null;
@@ -292,6 +292,8 @@ public class ResultFragment extends Fragment {
                     "    font-family: ipa;\n" +
                     "    src: url('file:///android_res/font/ipa.ttf');\n" +
                     "  }\n" +
+                    "  details summary::-webkit-details-marker {display: none}\n" +
+                    "  details summary::-moz-list-bullet {font-size: 0}\n" +
                     "  summary {color: #808080}\n" +
                     "  div {\n" +
                     "         display:inline-block;\n" +
@@ -362,9 +364,9 @@ public class ResultFragment extends Fragment {
                 if (!TextUtils.isEmpty(s) && !s.contentEquals(hz)) {
                     s = String.format("(%s)", s);
                 } else s = "";
-                ssb.append(String.format("<details open='open'><summary>" +
+                ssb.append(String.format("<details open><summary>" +
                         "<div class=hz>%s</div><div class=variant>%s</div></summary>", hz, s));
-                ssb.append("<div style='display: inline; float:right; margin-top: -2em;'>");
+                ssb.append("<div style='display: block; float:right; margin-top: -2em;'>");
                 s = Orthography.HZ.toUnicode(hz);
                 ssb.append(String.format("<div class=y onclick='toggleInfo(\"%s%s\")'>%s</div>", hz, DB.UNICODE, s));
                 StringBuilder dictBuilder = new StringBuilder();
@@ -388,7 +390,7 @@ public class ResultFragment extends Fragment {
                     ssb.append(String.format("<div class=y onclick='mcpdict.showFavorite(\"%s\", %d, \"%s\")'>&nbsp;%s&nbsp;</div>", hz, favorite ? 1 : 0, comment, label));
                     //button.setBackgroundResource(favorite ? android.R.drawable.btn_star_big_on : android.R.drawable.btn_star_big_off);
                 }
-                ssb.append("</div><br>");
+                ssb.append("</div>");
                 ssb.append(dictBuilder);
                 String fq = "";
                 String fqTemp;
@@ -399,14 +401,14 @@ public class ResultFragment extends Fragment {
                     fqTemp = DB.getFq(col);
                     if (!fqTemp.contentEquals(fq)) {
                         if (!TextUtils.isEmpty(fq)) ssb.append("</details>");
-                        ssb.append(String.format("<details open=open><summary>%s</summary>", fqTemp));
+                        ssb.append(String.format("<details open><summary>%s</summary>", fqTemp));
                     }
                     CharSequence ipa = DictApp.formatIPA(col, s);
                     ssb.append(String.format("<div class=place style='background: linear-gradient(to left, %s, %s);'>%s</div><div class=ipa>%s</div><br>",
                             DB.getHexColor(col), DB.getHexSubColor(col), DB.getLabel(col), ipa));
                     fq = fqTemp;
                 }
-                ssb.append("</details>");
+                if (!TextUtils.isEmpty(fq)) ssb.append("</details>");
                 ssb.append("</details>");
             }
             if (isZY) {
