@@ -273,6 +273,77 @@ public class ResultFragment extends Fragment {
     public void setData(Cursor cursor) {
         final String query = Utils.getInput(getContext());
         StringBuilder sb = new StringBuilder();
+
+        sb.append("<html><head><style>\n" +
+                "  @font-face {\n" +
+                "    font-family: ipa;\n" +
+                "    src: url('file:///android_res/font/ipa.ttf');\n" +
+                "  }\n" +
+                "  @font-face {\n" +
+                "    font-family: hanbcde;\n" +
+                "    src: url('file:///android_res/font/hanbcde.ttf');\n" +
+                "  }\n" +
+                "  @font-face {\n" +
+                "    font-family: hanfg;\n" +
+                "    src: url('file:///android_res/font/hanfg.ttf');\n" +
+                "  }\n" +
+                "  details summary::-webkit-details-marker {display: none}\n" +
+                "  details summary::-moz-list-bullet {font-size: 0}\n" +
+                "  summary {color: #808080}\n" +
+                "  div {\n" +
+                "         display:inline-block;\n" +
+                "         align: left;\n" +
+                "      }\n" +
+                "      .block{display:none;}\n"+
+                "      .place,.dict {\n" +
+                "         border: 1px black solid;\n" +
+                "         padding: 0 3px;\n" +
+                "         border-radius: 5px;\n" +
+                "         color: white;" +
+                "         background: #1E90FF;\n" +
+                "         text-align: center;\n" +
+                "         vertical-align: top;\n" +
+                "         transform-origin: right;\n" +
+                "         font-size: 0.8em;\n" +
+                "      }\n" +
+                "      body {\n" +
+                "         font-family: ipa, hanfg, hanbcde, sans;\n" +
+                "      }\n" +
+                "      .ipa {\n" +
+                "         padding: 0 5px;\n" +
+                "      }\n" +
+                "      .desc {\n" +
+                "         font-size: 0.6em;\n" +
+                "      }\n" +
+                "      .hz {\n" +
+                "         font-size: 1.8em;\n" +
+                "         color: #9D261D;\n" +
+                "      }\n" +
+                "      .variant {\n" +
+                "         color: #808080;\n" +
+                "      }\n" +
+                "      .y {\n" +
+                "         color: #1E90FF;\n" +
+                "         margin: 0 5px;\n" +
+                "      }\n" +
+                "      p {\n" +
+                "         margin: 0.2em 0;\n" +
+                "      }\n" +
+                "      td {\n" +
+                "         vertical-align: top;\n" +
+                "         align: left;\n" +
+                "      }\n" +
+                "      ul {\n" +
+                "         margin: 1px;\n" +
+                "         padding: 0px 6px;\n" +
+                "      }" +
+                "    rt {font-size: 0.9em; background-color: #F0FFF0;}  " +
+                "  </style><script>" +
+                "function toggleInfo(s) {" +
+                "var d = document.getElementById(s); " +
+                "d.style.display = d.style.display == 'block' ? 'none' : 'block';" +
+                "}" +
+                "</script></head><body>");
         if (TextUtils.isEmpty(query)) {
             sb.append(DB.getIntro(getContext()));
         } else if (cursor == null || cursor.getCount() == 0) {
@@ -287,68 +358,6 @@ public class ResultFragment extends Fragment {
                     && !Orthography.HZ.isBS(query)
                     && Orthography.HZ.isHz(query);
             Map<String, String> pys = new HashMap<>();
-            sb.append("<html><head><style>\n" +
-                    "  @font-face {\n" +
-                    "    font-family: ipa;\n" +
-                    "    src: url('file:///android_res/font/ipa.ttf');\n" +
-                    "  }\n" +
-                    "  details summary::-webkit-details-marker {display: none}\n" +
-                    "  details summary::-moz-list-bullet {font-size: 0}\n" +
-                    "  summary {color: #808080}\n" +
-                    "  div {\n" +
-                    "         display:inline-block;\n" +
-                    "         align: left;\n" +
-                    "      }\n" +
-                    "      .block{display:none;}\n"+
-                    "      .place,.dict {\n" +
-                    "         border: 1px black solid;\n" +
-                    "         padding: 0 3px;\n" +
-                    "         border-radius: 5px;\n" +
-                    "         color: white;" +
-                    "         background: #1E90FF;\n" +
-                    "         text-align: center;\n" +
-                    "         vertical-align: top;\n" +
-                    "         transform-origin: right;\n" +
-                    "         font-size: 0.8em;\n" +
-                    "      }\n" +
-                    "      body {\n" +
-                    "         font-family: ipa, sans;\n" +
-                    "      }\n" +
-                    "      .ipa {\n" +
-                    "         padding: 0 5px;\n" +
-                    "      }\n" +
-                    "      .desc {\n" +
-                    "         font-size: 0.6em;\n" +
-                    "      }\n" +
-                    "      .hz {\n" +
-                    "         font-size: 1.8em;\n" +
-                    "         color: #9D261D;\n" +
-                    "      }\n" +
-                    "      .variant {\n" +
-                    "         color: #808080;\n" +
-                    "      }\n" +
-                    "      .y {\n" +
-                    "         color: #1E90FF;\n" +
-                    "         margin: 0 5px;\n" +
-                    "      }\n" +
-                    "      p {\n" +
-                    "         margin: 0.2em 0;\n" +
-                    "      }\n" +
-                    "      td {\n" +
-                    "         vertical-align: top;\n" +
-                    "         align: left;\n" +
-                    "      }\n" +
-                    "      ul {\n" +
-                    "         margin: 1px;\n" +
-                    "         padding: 0px 6px;\n" +
-                    "      }" +
-                    "    rt {font-size: 0.9em; background-color: #F0FFF0;}  " +
-                    "  </style><script>" +
-                    "function toggleInfo(s) {" +
-                    "var d = document.getElementById(s); " +
-                    "d.style.display = d.style.display == 'block' ? 'none' : 'block';" +
-                    "}" +
-                    "</script></head><body>");
             StringBuilder hzB = new StringBuilder();
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);

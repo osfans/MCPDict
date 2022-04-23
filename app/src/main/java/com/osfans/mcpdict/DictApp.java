@@ -1,16 +1,18 @@
 package com.osfans.mcpdict;
 
-import static com.osfans.mcpdict.DB.COL_HD;
-import static com.osfans.mcpdict.DB.COL_KX;
-
 import android.app.Application;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
+import android.graphics.fonts.Font;
+import android.graphics.fonts.FontFamily;
+import android.os.Build;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
+import android.widget.TextView;
 
-import androidx.core.content.ContextCompat;
-import androidx.core.text.HtmlCompat;
+import androidx.annotation.RequiresApi;
 
+import java.io.IOException;
 import java.util.Objects;
 
 public class DictApp extends Application {
@@ -146,5 +148,21 @@ public class DictApp extends Application {
         String[] fs = (js+"\n").split("\n", 2);
         String s = String.format("<p><big><big><big>%s</big></big></big> %s</p><br><p>%s</p>", hz, fs[0], fs[1].replace("\n", "<br/>"));
         return getRichText(s);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.Q)
+    public static void customTypeFace(TextView view) {
+        try {
+            Typeface tf = new Typeface.CustomFallbackBuilder(
+                    new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.ipa).build()).build()
+            ).addCustomFallback(
+                    new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanbcde).build()).build()
+            ).addCustomFallback(
+                    new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanfg).build()).build()
+            ).setSystemFallback("sans-serif").build();
+            view.setTypeface(tf);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

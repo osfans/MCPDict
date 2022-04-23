@@ -3,13 +3,12 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.DayNight">
         <item name="colorAccent">@color/accent</item>
-        <item name="android:fontFamily">@font/han</item>
+        <item name="android:fontFamily">@font/ipa</item>
         <item name="android:navigationBarColor">?android:colorBackground</item>
     </style>
     <!-- Styles for TextViews -->
     <style name="FontName">
         <item name="android:textSize">14sp</item>
-        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:background">@drawable/border</item>
         <item name="android:textAlignment">center</item>
@@ -18,7 +17,6 @@
     <style name="FontDetail">
         <item name="android:textColor">?android:textColorPrimary</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">@font/ipa</item>
     </style>
 
     <style name="FontDim">
