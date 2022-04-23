@@ -53,36 +53,40 @@ public class FavoriteDialogs {
             .show();
     }
 
-    public static void view(final String hz, final View view) {
+    public static void view(final String hz, String comment) {
         new AlertDialog.Builder(activity)
-            .setIcon(android.R.drawable.btn_star_big_on)
-            .setTitle(String.format(activity.getString(R.string.favorite_view), hz))
-            .setMessage(((TextView) view.findViewById(R.id.text_comment)).getText())
-            .setPositiveButton(String.format(activity.getString(R.string.favorite_edit_2lines), hz),
-                    (dialog, which) -> FavoriteDialogs.edit(hz, view))
-            .setNegativeButton(String.format(activity.getString(R.string.favorite_delete_2lines), hz),
-                    (dialog, which) -> FavoriteDialogs.delete(hz, false))
-            .setNeutralButton(R.string.back, null)
-            .show();
+                .setIcon(android.R.drawable.btn_star_big_on)
+                .setTitle(String.format(activity.getString(R.string.favorite_view), hz))
+                .setMessage(comment)
+                .setPositiveButton(String.format(activity.getString(R.string.favorite_edit_2lines), hz),
+                        (dialog, which) -> FavoriteDialogs.edit(hz, comment))
+                .setNegativeButton(String.format(activity.getString(R.string.favorite_delete_2lines), hz),
+                        (dialog, which) -> FavoriteDialogs.delete(hz, false))
+                .setNeutralButton(R.string.back, null)
+                .show();
     }
 
-    public static void edit(final String hz, View view) {
+    public static void view(final String hz, final View view) {
+        view(hz, ((TextView) view.findViewById(R.id.text_comment)).getText().toString());
+    }
+
+    public static void edit(final String hz, String comment) {
         final EditText editText = new EditText(activity);
-        editText.setText(((TextView) view.findViewById(R.id.text_comment)).getText());
+        editText.setText(comment);
         editText.setSingleLine(false);
         new AlertDialog.Builder(activity)
-            .setIcon(android.R.drawable.btn_star_big_on)
-            .setTitle(String.format(activity.getString(R.string.favorite_edit), hz))
-            .setView(editText)
-            .setPositiveButton(R.string.save, (dialog, which) -> {
-                String comment = editText.getText().toString();
-                UserDatabase.updateFavorite(hz, comment);
-                String message = String.format(activity.getString(R.string.favorite_edit_done), hz);
-                Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
-                activity.getCurrentFragment().refresh();
-            })
-            .setNegativeButton(R.string.cancel, null)
-            .show();
+                .setIcon(android.R.drawable.btn_star_big_on)
+                .setTitle(String.format(activity.getString(R.string.favorite_edit), hz))
+                .setView(editText)
+                .setPositiveButton(R.string.save, (dialog, which) -> {
+                    String s = editText.getText().toString();
+                    UserDatabase.updateFavorite(hz, s);
+                    String message = String.format(activity.getString(R.string.favorite_edit_done), hz);
+                    Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
+                    activity.getCurrentFragment().refresh();
+                })
+                .setNegativeButton(R.string.cancel, null)
+                .show();
     }
 
     public static void delete(final String hz, boolean force) {

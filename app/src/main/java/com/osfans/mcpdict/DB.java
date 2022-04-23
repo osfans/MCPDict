@@ -41,6 +41,9 @@ public class DB extends SQLiteAssetHelper {
     public static final String WBH = "五筆畫";
     public static final String VA = "異體字";
     public static final String FL = "分類";
+
+    public static final String MAP = "地圖";
+    public static final String IS_FAVORITE = "is_favorite";
     public static final String VARIANTS = "variants";
     public static final String COMMENT = "comment";
     public static final String UNICODE = "unicode";
@@ -413,7 +416,9 @@ public class DB extends SQLiteAssetHelper {
         ArrayList<String> array = new ArrayList<>();
         if (languages.contains(",")) {
             for (String lang: languages.split(",")) {
-                if (getColumnIndex(lang) >= 1) array.add(lang);
+                if (getColumnIndex(lang) >= 1 && !array.contains(lang)) {
+                    array.add(lang);
+                }
             }
             return array.toArray(new String[0]);
         }
@@ -422,7 +427,7 @@ public class DB extends SQLiteAssetHelper {
             return a;
         }
         if (getColumnIndex(languages) >= 1) return new String[]{languages};
-        return null;
+        return new String[0];
     }
 
     public static boolean isHzMode(String lang) {
@@ -456,6 +461,13 @@ public class DB extends SQLiteAssetHelper {
         return s;
     }
 
+    public static String getLabel(int i) {
+        String lang = getColumn(i);
+        String s = getFieldString(lang, "簡稱");
+        if (s.length() == 2) s = String.format(" %s ", s);
+        return s;
+    }
+
     public static int getColor(String lang, int i) {
         if (COLUMNS == null) initArrays();
         String c = getFieldString(lang, COLOR);
@@ -470,6 +482,14 @@ public class DB extends SQLiteAssetHelper {
 
     public static int getSubColor(String lang) {
         return getColor(lang, 1);
+    }
+
+    public static String getHexColor(String lang) {
+        return String.format("#%06X", getColor(lang) & 0xFFFFFF);
+    }
+
+    public static String getHexSubColor(String lang) {
+        return String.format("#%06X", getSubColor(lang) & 0xFFFFFF);
     }
 
     public static String getDictName(String lang) {
@@ -533,11 +553,10 @@ public class DB extends SQLiteAssetHelper {
         return intro;
     }
 
-    public static Spanned getIntro(Context context) {
+    public static String getIntro(Context context) {
         initArrays();
         String lang = Utils.getLanguage(context);
-        String intro = _getIntro(context, lang);
-        return HtmlCompat.fromHtml(intro, HtmlCompat.FROM_HTML_MODE_COMPACT);
+        return _getIntro(context, lang);
     }
 
     public static String getToneName(String lang) {
@@ -574,7 +593,7 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static boolean isLang(String lang) {
-        return !TextUtils.isEmpty(getLangType(lang));
+        return !TextUtils.isEmpty(getLangType(lang)) && !lang.contentEquals(HZ);
     }
 
     public static String[] getFqColumns() {
@@ -586,5 +605,30 @@ public class DB extends SQLiteAssetHelper {
         initArrays();
         if (FQS == null) FQS = getFieldString(HZ, FQ).split(",");
         return FQS;
+    }
+
+    public static String getFq(String lang) {
+        initArrays();
+        String s = getFieldString(lang, FQ);
+        if (TextUtils.isEmpty(s)) return "";
+        return s.split("[,-]")[0];
+    }
+
+    public static String getUnicode(Cursor cursor) {
+        StringBuilder sb = new StringBuilder();
+        String hz = cursor.getString(COL_HZ);
+        sb.append(String.format("<div id=%s%s class=block>", hz, UNICODE));
+        String s = Orthography.HZ.toUnicode(hz);
+        sb.append(String.format("<div class=place>統一碼</div><div class=ipa>%s %s</div><br>", s, Orthography.HZ.getUnicodeExt(hz)));
+        for (int i = DB.COL_LF; i < DB.COL_VA; i++) {
+            if (i == COL_SW) i = COL_BH;
+            String lang = getColumn(i);
+            s = cursor.getString(i);
+            if (i == COL_BS) s = s.replace("f", "-");
+            if (TextUtils.isEmpty(s)) continue;
+            sb.append(String.format("<div class=place>%s</div><div class=ipa>%s</div><br>", lang, s));
+        }
+        sb.append("</div>");
+        return sb.toString();
     }
 }

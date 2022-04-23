@@ -3,11 +3,13 @@
     package="com.osfans.mcpdict">
 
     <application
+        android:name=".DictApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
         android:supportsRtl="true"
+        android:hardwareAccelerated="true"
         android:fullBackupContent="@xml/backup_descriptor">
 
         <activity

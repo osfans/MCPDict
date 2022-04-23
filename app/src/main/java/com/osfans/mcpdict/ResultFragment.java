@@ -17,32 +17,38 @@ import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView.AdapterContextMenuInfo;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.ListFragment;
+import androidx.fragment.app.Fragment;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.ref.WeakReference;
 import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
 import static com.osfans.mcpdict.DB.ALL_LANGUAGES;
 import static com.osfans.mcpdict.DB.COL_ALL_LANGUAGES;
+import static com.osfans.mcpdict.DB.COL_HD;
 import static com.osfans.mcpdict.DB.COL_HZ;
+import static com.osfans.mcpdict.DB.COL_KX;
+import static com.osfans.mcpdict.DB.COMMENT;
 import static com.osfans.mcpdict.DB.HZ;
+import static com.osfans.mcpdict.DB.VARIANTS;
 import static com.osfans.mcpdict.DB.getColumn;
 import static com.osfans.mcpdict.DB.getColumnIndex;
+import static com.osfans.mcpdict.DB.getLabel;
+import static com.osfans.mcpdict.DB.getUnicode;
 
-public class ResultFragment extends ListFragment {
+public class ResultFragment extends Fragment {
 
     private View selfView;
-    private ListView listView;
-    private ResultAdapter adapter;
+    private MyWebView mWebView;
     private final boolean showFavoriteButton;
     private View selectedEntry;
     private final int GROUP_READING = 1;
@@ -72,10 +78,10 @@ public class ResultFragment extends ListFragment {
         selfView = inflater.inflate(R.layout.search_result_fragment, container, false);
 
         // Get a reference to the ListView
-        listView = selfView.findViewById(android.R.id.list);
+        mWebView = selfView.findViewById(R.id.webResult);
 
         // Set up a context menu for each item of the search result
-        registerForContextMenu(listView);
+        //registerForContextMenu(listView);
 
         return selfView;
     }
@@ -83,17 +89,6 @@ public class ResultFragment extends ListFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        // Set up the adapter
-        if (adapter == null) {
-            adapter = new ResultAdapter(
-                getActivity(),
-                R.layout.search_result_item,
-                null,
-                showFavoriteButton
-            );
-            setListAdapter(adapter);
-        }
     }
 
     private Intent getDictIntent(String lang, String hz) {
@@ -120,12 +115,12 @@ public class ResultFragment extends ListFragment {
             // Therefore we need to remember which fragment created the context menu.
 
         // Find the Chinese character in the view being clicked
-        ListView list = (ListView) view;
+        //ListView list = (ListView) view;
         AdapterContextMenuInfo info = (AdapterContextMenuInfo) menuInfo;
-        int position = info.position - list.getFirstVisiblePosition();
+        //int position = info.position - list.getFirstVisiblePosition();
             // info.position is the position of the item in the entire list
             // but list.getChildAt() on the next line requires the position of the item in currently visible items
-        selectedEntry = list.getChildAt(position);
+        //selectedEntry = list.getChildAt(position);
         ResultAdapter.ViewHolder holder = (ResultAdapter.ViewHolder) selectedEntry.getTag();
         String col = holder.col;
         holder.col = "";
@@ -271,12 +266,164 @@ public class ResultFragment extends ListFragment {
         return formatReading(prefix, reading);
     }
 
-    public void setData(Cursor data) {
-        if (adapter == null) return;
-        adapter.changeCursor(data);
+    public void scrollToTop() {
+        //listView.setSelectionAfterHeaderView();
     }
 
-    public void scrollToTop() {
-        listView.setSelectionAfterHeaderView();
+    public void setData(Cursor cursor) {
+        final String query = Utils.getInput(getContext());
+        StringBuilder sb = new StringBuilder();
+        if (TextUtils.isEmpty(query)) {
+            sb.append(DB.getIntro(getContext()));
+        } else if (cursor == null || cursor.getCount() == 0) {
+            sb.append(getString(R.string.no_matches));
+        } else {
+            Orthography.setToneStyle(DictApp.getStyle(R.string.pref_key_tone_display));
+            Orthography.setToneValueStyle(DictApp.getStyle(R.string.pref_key_tone_value_display));
+            StringBuilder ssb = new StringBuilder();
+            int n = cursor.getCount();
+            String lang = Utils.getLanguage(getContext());
+            boolean isZY = DB.isLang(lang) && query.length() >= 3 && n >= 3
+                    && !Orthography.HZ.isBS(query)
+                    && Orthography.HZ.isHz(query);
+            Map<String, String> pys = new HashMap<>();
+            sb.append("<html><head><style>\n" +
+                    "  @font-face {\n" +
+                    "    font-family: ipa;\n" +
+                    "    src: url('file:///android_res/font/ipa.ttf');\n" +
+                    "  }\n" +
+                    "  summary {color: #808080}\n" +
+                    "  div {\n" +
+                    "         display:inline-block;\n" +
+                    "         align: left;\n" +
+                    "      }\n" +
+                    "      .block{display:none;}\n"+
+                    "      .place,.dict {\n" +
+                    "         border: 1px black solid;\n" +
+                    "         padding: 0 3px;\n" +
+                    "         border-radius: 5px;\n" +
+                    "         color: white;" +
+                    "         background: #1E90FF;\n" +
+                    "         text-align: center;\n" +
+                    "         vertical-align: top;\n" +
+                    "         transform-origin: right;\n" +
+                    "         font-size: 0.8em;\n" +
+                    "      }\n" +
+                    "      body {\n" +
+                    "         font-family: ipa, sans;\n" +
+                    "      }\n" +
+                    "      .ipa {\n" +
+                    "         padding: 0 5px;\n" +
+                    "      }\n" +
+                    "      .desc {\n" +
+                    "         font-size: 0.6em;\n" +
+                    "      }\n" +
+                    "      .hz {\n" +
+                    "         font-size: 1.8em;\n" +
+                    "         color: #9D261D;\n" +
+                    "      }\n" +
+                    "      .variant {\n" +
+                    "         color: #808080;\n" +
+                    "      }\n" +
+                    "      .y {\n" +
+                    "         color: #1E90FF;\n" +
+                    "         margin: 0 5px;\n" +
+                    "      }\n" +
+                    "      p {\n" +
+                    "         margin: 0.2em 0;\n" +
+                    "      }\n" +
+                    "      td {\n" +
+                    "         vertical-align: top;\n" +
+                    "         align: left;\n" +
+                    "      }\n" +
+                    "      ul {\n" +
+                    "         margin: 1px;\n" +
+                    "         padding: 0px 6px;\n" +
+                    "      }" +
+                    "    rt {font-size: 0.9em; background-color: #F0FFF0;}  " +
+                    "  </style><script>" +
+                    "function toggleInfo(s) {" +
+                    "var d = document.getElementById(s); " +
+                    "d.style.display = d.style.display == 'block' ? 'none' : 'block';" +
+                    "}" +
+                    "</script></head><body>");
+            StringBuilder hzB = new StringBuilder();
+            for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+                String hz = cursor.getString(COL_HZ);
+                int i = cursor.getColumnIndex(lang);
+                CharSequence py = DictApp.formatIPA(lang, DictApp.getRawText(cursor.getString(i)));
+                if (isZY) {
+                    pys.put(hz, py.toString());
+                } else {
+                    //hzB.append(String.format("<a href=\"#%s\">%s</a>&nbsp;", hz, hz));
+                    hzB.append(hz);
+                }
+                String s = cursor.getString(cursor.getColumnIndexOrThrow(VARIANTS));
+                if (!TextUtils.isEmpty(s) && !s.contentEquals(hz)) {
+                    s = String.format("(%s)", s);
+                } else s = "";
+                ssb.append(String.format("<details open='open'><summary>" +
+                        "<div class=hz>%s</div><div class=variant>%s</div></summary>", hz, s));
+                ssb.append("<div style='display: inline; float:right; margin-top: -2em;'>");
+                s = Orthography.HZ.toUnicode(hz);
+                ssb.append(String.format("<div class=y onclick='toggleInfo(\"%s%s\")'>%s</div>", hz, DB.UNICODE, s));
+                StringBuilder dictBuilder = new StringBuilder();
+                dictBuilder.append(getUnicode(cursor));
+                for (int j = DB.COL_SW; j <= DB.COL_HD; j++) {
+                    s = cursor.getString(j);
+                    if (TextUtils.isEmpty(s)) continue;
+                    String col = getColumn(j);
+                    ssb.append(String.format("<div class=y onclick='toggleInfo(\"%s%s\")'>%s</div>", hz, col, getLabel(j)));
+                    if (j == COL_KX) s = s.replaceFirst("^(.*?)(\\d+).(\\d+)", "$1<a href=https://kangxizidian.com/kxhans/" + hz + ">第$2頁第$3字</a>");
+                    else if (j == COL_HD) s = s.replaceFirst("(\\d+).(\\d+)", "<a href=https://www.homeinmists.com/hd/png/$1.png>第$1頁</a>第$2字");
+                    s = DictApp.getRichText(s).toString();
+                    dictBuilder.append(String.format("<div id=%s%s class=block><div class=place>%s</div><div class=ipa>%s</div><br></div>", hz, col, col, s));
+                }
+                ssb.append(String.format("<div class=y onclick='mcpdict.showMap(\"%s\")'>%s</div>", hz, DB.MAP));
+                // "Favorite" button
+                String comment = cursor.getString(cursor.getColumnIndexOrThrow(COMMENT));
+                if (showFavoriteButton) {
+                    boolean favorite = cursor.getInt(cursor.getColumnIndexOrThrow(DB.IS_FAVORITE)) == 1;
+                    String label = favorite ? "⭐":"⛤";
+                    ssb.append(String.format("<div class=y onclick='mcpdict.showFavorite(\"%s\", %d, \"%s\")'>&nbsp;%s&nbsp;</div>", hz, favorite ? 1 : 0, comment, label));
+                    //button.setBackgroundResource(favorite ? android.R.drawable.btn_star_big_on : android.R.drawable.btn_star_big_off);
+                }
+                ssb.append("</div><br>");
+                ssb.append(dictBuilder);
+                String fq = "";
+                String fqTemp;
+                for (String col : DB.getVisibleColumns(getContext())) {
+                    int index = DB.getColumnIndex(col);
+                    s = cursor.getString(index);
+                    if (TextUtils.isEmpty(s)) continue;
+                    fqTemp = DB.getFq(col);
+                    if (!fqTemp.contentEquals(fq)) {
+                        if (!TextUtils.isEmpty(fq)) ssb.append("</details>");
+                        ssb.append(String.format("<details open=open><summary>%s</summary>", fqTemp));
+                    }
+                    CharSequence ipa = DictApp.formatIPA(col, s);
+                    ssb.append(String.format("<div class=place style='background: linear-gradient(to left, %s, %s);'>%s</div><div class=ipa>%s</div><br>",
+                            DB.getHexColor(col), DB.getHexSubColor(col), DB.getLabel(col), ipa));
+                    fq = fqTemp;
+                }
+                ssb.append("</details>");
+                ssb.append("</details>");
+            }
+            if (isZY) {
+                sb.append("<nav>");
+                for (int unicode : query.codePoints().toArray()) {
+                    if (!Orthography.HZ.isHz(unicode)) continue;
+                    String hz = Orthography.HZ.toHz(unicode);
+                    sb.append(String.format("<ruby>%s<rt>%s</rt></ruby>&nbsp;&nbsp;&nbsp;&nbsp;", hz, pys.getOrDefault(hz, "")));
+                }
+                sb.append("</nav>");
+            } else if (n >= 2){
+                sb.append("<nav>");
+                sb.append(hzB);
+                sb.append("</nav>");
+            }
+            sb.append(ssb);
+        }
+        mWebView.loadDataWithBaseURL(null, sb.toString(), "text/html", "utf-8", null);
     }
 }

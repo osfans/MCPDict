@@ -59,27 +59,6 @@
             <Spinner
                 android:id="@+id/spinner_show_languages" />
         </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/result"
-                android:layout_span="2"
-                android:scrollbars="vertical"
-                android:enabled="true"
-                android:textIsSelectable="true"
-                android:focusable="true"
-                android:longClickable="true" />
-        </TableRow>
-
-        <TableRow>
-            <com.osfans.mcpdict.MyWebView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:id="@+id/resultRich" />
-        </TableRow>
     </TableLayout>
 
     <View
