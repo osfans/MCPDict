@@ -1,11 +1,22 @@
 package com.osfans.mcpdict;
 
+import static com.osfans.mcpdict.DB.COL_BS;
+import static com.osfans.mcpdict.DB.COL_HD;
+import static com.osfans.mcpdict.DB.COL_HZ;
+import static com.osfans.mcpdict.DB.COL_KX;
+import static com.osfans.mcpdict.DB.COMMENT;
+import static com.osfans.mcpdict.DB.VARIANTS;
+import static com.osfans.mcpdict.DB.getColumn;
+import static com.osfans.mcpdict.DB.getLabel;
+import static com.osfans.mcpdict.DB.getUnicode;
+
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
@@ -14,16 +25,20 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.Fragment;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
 public class DictFragment extends Fragment implements RefreshableFragment {
@@ -164,72 +179,10 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 return DB.search(getContext());
             }
             @Override
-            protected void onPostExecute(Cursor data) {
-                fragmentResult.setData(data);
-                TextView textEmpty = fragmentResult.requireView().findViewById(android.R.id.empty);
-                String query = searchView.getQuery();
-                if (TextUtils.isEmpty(query)) {
-                    textEmpty.setText(DB.getIntro(getContext()));
-                    textEmpty.setMovementMethod(LinkMovementMethod.getInstance());
-                }
-                else {
-                    textEmpty.setText(R.string.no_matches);
-                }
-                updateResult(data);
+            protected void onPostExecute(Cursor cursor) {
+                fragmentResult.setData(cursor);
             }
         }.execute();
-    }
-
-    private void updateResult(Cursor data) {
-        TextView textResult = selfView.findViewById(R.id.result);
-        MyWebView webView = selfView.findViewById(R.id.resultRich);
-        final String query = searchView.getQuery();
-        Object obj = spinnerSearchAs.getSelectedItem();
-        String lang = obj != null ? obj.toString() : DB.HZ;
-        boolean isZY = DB.isLang(lang) && query.length() >= 3
-                && !Orthography.HZ.isBS(query)
-                && Orthography.HZ.isHz(query);
-        Map<String, String> pys = new HashMap<>();
-        if (data != null && data.getCount() >= 3) {
-            StringBuilder sb = new StringBuilder();
-            if (isZY) {
-                sb.append("<style>\n" +
-                        "  @font-face {\n" +
-                        "    font-family: ipa;\n" +
-                        "    src: url('file:///android_res/font/ipa.ttf');\n" +
-                        "  }\n" +
-                        "  p {font-family: ipa, sans-serif; word-wrap: break-word;}" +
-                        "    rt {font-size: 0.9em; background-color: #F0FFF0;}\n" +
-                        "  </style><p>");
-            }
-            for (data.moveToFirst(); !data.isAfterLast(); data.moveToNext()) {
-                String hz = data.getString(0);
-                int i = data.getColumnIndex(lang);
-                CharSequence py = ResultAdapter.formatIPA(lang, ResultAdapter.getRawText(data.getString(i)));
-                if (isZY) {
-                    pys.put(hz, py.toString());
-                } else {
-                    sb.append(hz);
-                }
-            }
-            if (isZY) {
-                for (int unicode: query.codePoints().toArray()) {
-                    if (!Orthography.HZ.isHz(unicode)) continue;
-                    String hz = Orthography.HZ.toHz(unicode);
-                    sb.append(String.format("<ruby>%s<rt>%s</rt></ruby>&nbsp;&nbsp;&nbsp;&nbsp;", hz, pys.getOrDefault(hz, "")));
-                }
-                webView.loadDataWithBaseURL(null, sb.toString(), "text/html", "utf-8", null);
-                webView.setVisibility(View.VISIBLE);
-                textResult.setVisibility(View.GONE);
-            } else {
-                textResult.setText(sb);
-                textResult.setVisibility(View.VISIBLE);
-                webView.setVisibility(View.GONE);
-            }
-        } else {
-            textResult.setVisibility(View.GONE);
-            webView.setVisibility(View.GONE);
-        }
     }
 
     private void refreshSearchAs() {

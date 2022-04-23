@@ -124,8 +124,8 @@ public class MyMapView extends MapView {
             int i = DB.getColumnIndex(lang);
             String string = cursor.getString(i);
             if (TextUtils.isEmpty(string)) continue;
-            CharSequence yb = ResultAdapter.formatIPA(lang,  ResultAdapter.getRawText(string));
-            CharSequence js = ResultAdapter.formatIPA(lang,  string);
+            CharSequence yb = DictApp.formatIPA(lang,  DictApp.getRawText(string));
+            CharSequence js = DictApp.formatIPA(lang,  string);
             int size = DB.getSize(lang);
             MyMarker marker = new MyMarker(this, DB.getColor(lang), DB.getLabel(lang), yb.toString() , js.toString(), size);
             marker.setPosition(point);
