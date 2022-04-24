@@ -466,15 +466,13 @@ public class DB extends SQLiteAssetHelper {
 
     public static String getLabel(String lang) {
         String s = getFieldString(lang, "簡稱");
-        if (s.length() == 2) s = String.format(" %s ", s);
+        //if (s.length() == 2) s = String.format(" %s ", s);
         return s;
     }
 
     public static String getLabel(int i) {
         String lang = getColumn(i);
-        String s = getFieldString(lang, "簡稱");
-        if (s.length() == 2) s = String.format(" %s ", s);
-        return s;
+        return getLabel(lang);
     }
 
     public static int getColor(String lang, int i) {
