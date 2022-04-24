@@ -1,6 +1,8 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory android:title="@string/language">
         <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_fq"
             android:title="@string/pref_title_fq"
             android:defaultValue="@string/default_fq"/>
@@ -9,54 +11,63 @@
             android:title="@string/pref_title_custom_languages"
            />
         <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_mc_display"
             android:title="@string/pref_title_mc_display"
             android:entries="@array/pref_entries_mc_display"
             android:entryValues="@array/pref_values_mc_display"
             android:defaultValue="5" />
         <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_mandarin_display"
             android:title="@string/pref_title_mandarin_display"
             android:entries="@array/pref_entries_mandarin_display"
             android:entryValues="@array/pref_values_mandarin_display"
             android:defaultValue="0" />
         <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_cantonese_romanization"
             android:title="@string/pref_title_cantonese_romanization"
             android:entries="@array/pref_entries_cantonese_romanization"
             android:entryValues="@array/pref_values_cantonese_romanization"
             android:defaultValue="0" />
         <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_minnan_display"
             android:title="@string/pref_title_minnan_display"
             android:entries="@array/pref_entries_minnan_display"
             android:entryValues="@array/pref_values_minnan_display"
             android:defaultValue="0" />
         <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_vietnamese_tone_position"
             android:title="@string/pref_title_vietnamese_tone_position"
             android:entries="@array/pref_entries_vietnamese_tone_position"
             android:entryValues="@array/pref_values_vietnamese_tone_position"
             android:defaultValue="0" />
         <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_korean_display"
             android:title="@string/pref_title_korean_display"
             android:entries="@array/pref_entries_korean_display"
             android:entryValues="@array/pref_values_korean_display"
             android:defaultValue="0" />
         <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_japanese_display"
             android:title="@string/pref_title_japanese_display"
             android:entries="@array/pref_entries_japanese_display"
             android:entryValues="@array/pref_values_japanese_display"
             android:defaultValue="0" />
         <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_tone_display"
             android:title="@string/pref_title_tone_display"
             android:entries="@array/pref_entries_tone_display"
             android:entryValues="@array/pref_values_tone_display"
             android:defaultValue="1" />
         <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_tone_value_display"
             android:title="@string/pref_title_tone_value_display"
             android:entries="@array/pref_entries_tone_value_display"
@@ -69,6 +80,7 @@
             android:title="@string/custom_title"
             android:defaultValue="@string/app_name"/>
         <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_locale"
             android:title="@string/pref_title_font"
             android:entries="@array/pref_entries_locale"
