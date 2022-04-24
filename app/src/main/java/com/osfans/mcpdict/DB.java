@@ -412,8 +412,16 @@ public class DB extends SQLiteAssetHelper {
         if (languages.contentEquals("3") || languages.contentEquals("5")) {
             return queryInfo(String.format("級別  >= \"%s\"", languages));
         }
-        if (TextUtils.isEmpty(languages)) return customs.toArray(new String[0]);
         ArrayList<String> array = new ArrayList<>();
+        if (TextUtils.isEmpty(languages)) {
+            if (customs == null || customs.size() == 0) return LANGUAGES;
+            for (String lang: getLanguages()) {
+                if (!array.contains(lang) && customs.contains(lang)) {
+                    array.add(lang);
+                }
+            }
+            return array.toArray(new String[0]);
+        }
         if (languages.contains(",")) {
             for (String lang: languages.split(",")) {
                 if (getColumnIndex(lang) >= 1 && !array.contains(lang)) {
