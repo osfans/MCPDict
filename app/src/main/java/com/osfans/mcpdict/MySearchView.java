@@ -29,11 +29,9 @@ public class MySearchView extends RelativeLayout {
         inflater.inflate(R.layout.custom_search_view, this, true);
 
         editText = findViewById(R.id.text_query);
+        editText.setTypeface(DictApp.getDictTypeFace());
         clearButton = findViewById(R.id.button_clear);
         searchButton = findViewById(R.id.button_search);
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
-            DictApp.customTypeFace(editText);
-        }
 
         // Toggle the clear button when user edits text
         editText.addTextChangedListener(new TextWatcher() {

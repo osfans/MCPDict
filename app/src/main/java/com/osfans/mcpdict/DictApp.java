@@ -1,6 +1,16 @@
 package com.osfans.mcpdict;
 
+import static com.osfans.mcpdict.DB.COL_HD;
+import static com.osfans.mcpdict.DB.COL_KX;
+import static com.osfans.mcpdict.DB.COL_SW;
+import static com.osfans.mcpdict.DB.HD;
+import static com.osfans.mcpdict.DB.KX;
+import static com.osfans.mcpdict.DB.SW;
+
+import android.app.ActivityManager;
 import android.app.Application;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.graphics.fonts.Font;
@@ -11,12 +21,14 @@ import android.text.TextUtils;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
+import androidx.core.text.HtmlCompat;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class DictApp extends Application {
     private static DictApp mApp;
+    private static Typeface tf;
 
     public DictApp() {
         mApp = this;
@@ -54,7 +66,9 @@ public class DictApp extends Application {
     }
 
     private static final Displayer gyDisplayer = new Displayer() {
-        public String displayOne(String s) {return Orthography.MiddleChinese.display(s, getToneStyle(R.string.pref_key_mc_display));}
+        public String displayOne(String s) {
+            return Orthography.MiddleChinese.display(s, getToneStyle(R.string.pref_key_mc_display));
+        }
     };
 
     private static final Displayer cmnDisplayer = new Displayer() {
@@ -148,26 +162,34 @@ public class DictApp extends Application {
         return cs;
     }
 
-    public static CharSequence formatPassage(String hz, String js) {
-        String[] fs = (js+"\n").split("\n", 2);
-        String s = String.format("<p><big><big><big>%s</big></big></big> %s</p><br><p>%s</p>", hz, fs[0], fs[1].replace("\n", "<br/>"));
-        return getRichText(s);
+    public static CharSequence formatPopUp(String hz, int i, String s) {
+        if (TextUtils.isEmpty(s)) return "";
+        if (i == COL_SW) s = s.replace("{", "<small>").replace("}", "</small>");
+        else if (i == COL_KX) s = s.replaceFirst("^(.*?)(\\d+).(\\d+)", "$1<a href=https://kangxizidian.com/kxhans/" + hz + ">第$2頁第$3字</a>");
+        else if (i == COL_HD) s = s.replaceFirst("(\\d+).(\\d+)", "【汉語大字典】<a href=https://www.homeinmists.com/hd/png/$1.png>第$1頁</a>第$2字");
+        String[] fs = (s + "\n").split("\n", 2);
+        String text = String.format("<p><big><big><big>%s</big></big></big> %s</p><br><p>%s</p>", hz, fs[0], fs[1].replace("\n", "<br/>"));
+        return HtmlCompat.fromHtml(text, HtmlCompat.FROM_HTML_MODE_COMPACT);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.Q)
-    public static void customTypeFace(TextView view) {
+    public static Typeface getDictTypeFace() {
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
         try {
-            Typeface tf = new Typeface.CustomFallbackBuilder(
-                    new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.ipa).build()).build()
-            ).addCustomFallback(
-                    new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanbcde).build()).build()
-            ).addCustomFallback(
-                    new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanfg).build()).build()
-            ).setSystemFallback("sans-serif").build();
-            view.setTypeface(tf);
+            if (tf == null) {
+                tf = new Typeface.CustomFallbackBuilder(
+                        new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.ipa).build()).build()
+                ).addCustomFallback(
+                        new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanbcde).build()).build()
+                ).addCustomFallback(
+                        new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanfg).build()).build()
+                ).setSystemFallback("sans-serif")
+                        .build();
+            }
+            return tf;
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     public static float getScale() {
@@ -175,7 +197,7 @@ public class DictApp extends Application {
     }
 
     public static int getDisplayFormat() {
-        int value = 1;
+        int value = 2;
         try {
             SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
             return Integer.parseInt(Objects.requireNonNull(sp.getString(mApp.getString(R.string.pref_key_format), String.valueOf(value))));
@@ -184,4 +206,16 @@ public class DictApp extends Application {
         }
         return value;
     }
+
+    public static boolean enableFontExt() {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        return sp.getBoolean(mApp.getString(R.string.pref_key_font_ext), true);
+    }
+
+//    public static void restartApplication() {
+//        final Intent intent = mApp.getPackageManager().getLaunchIntentForPackage(mApp.getPackageName());
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        mApp.startActivity(intent);
+//        android.os.Process.killProcess(android.os.Process.myPid());
+//    }
 }

@@ -1,5 +1,31 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/appearance">
+        <EditTextPreference
+            android:defaultValue="@string/app_name"
+            android:key="@string/pref_key_custom_title"
+            android:title="@string/custom_title"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:useSimpleSummaryProvider="true"
+            android:key="@string/pref_key_locale"
+            android:title="@string/pref_title_font"
+            android:entries="@array/pref_entries_locale"
+            android:entryValues="@array/pref_values_locale"
+            android:defaultValue="" />
+        <ListPreference
+            app:useSimpleSummaryProvider="true"
+            android:key="@string/pref_key_format"
+            android:title="@string/pref_title_format"
+            android:entries="@array/pref_entries_format"
+            android:entryValues="@array/pref_values_format"
+            android:defaultValue="2" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_font_ext"
+            android:summary="@string/font_ext_warning"
+            android:title="@string/pref_title_font_ext" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/language">
         <ListPreference
             app:useSimpleSummaryProvider="true"
@@ -73,25 +99,5 @@
             android:entries="@array/pref_entries_tone_value_display"
             android:entryValues="@array/pref_values_tone_value_display"
             android:defaultValue="0" />
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/appearance">
-        <ListPreference
-            app:useSimpleSummaryProvider="true"
-            android:key="@string/pref_key_format"
-            android:title="@string/pref_title_format"
-            android:entries="@array/pref_entries_format"
-            android:entryValues="@array/pref_values_format"
-            android:defaultValue="1" />
-        <EditTextPreference
-            android:key="@string/pref_key_custom_title"
-            android:title="@string/custom_title"
-            android:defaultValue="@string/app_name"/>
-        <ListPreference
-            app:useSimpleSummaryProvider="true"
-            android:key="@string/pref_key_locale"
-            android:title="@string/pref_title_font"
-            android:entries="@array/pref_entries_locale"
-            android:entryValues="@array/pref_values_locale"
-            android:defaultValue="" />
     </PreferenceCategory>
 </PreferenceScreen>

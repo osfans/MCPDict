@@ -2,15 +2,22 @@ package com.osfans.mcpdict;
 
 import static com.osfans.mcpdict.DB.ALL_LANGUAGES;
 import static com.osfans.mcpdict.DB.COL_ALL_LANGUAGES;
+import static com.osfans.mcpdict.DB.COL_BH;
 import static com.osfans.mcpdict.DB.COL_HD;
 import static com.osfans.mcpdict.DB.COL_HZ;
 import static com.osfans.mcpdict.DB.COL_KX;
+import static com.osfans.mcpdict.DB.COL_SW;
 import static com.osfans.mcpdict.DB.COMMENT;
+import static com.osfans.mcpdict.DB.HD;
 import static com.osfans.mcpdict.DB.HZ;
+import static com.osfans.mcpdict.DB.KX;
+import static com.osfans.mcpdict.DB.SW;
 import static com.osfans.mcpdict.DB.VARIANTS;
+import static com.osfans.mcpdict.DB.getColor;
 import static com.osfans.mcpdict.DB.getColumn;
 import static com.osfans.mcpdict.DB.getColumnIndex;
 import static com.osfans.mcpdict.DB.getLabel;
+import static com.osfans.mcpdict.DB.getSubColor;
 import static com.osfans.mcpdict.DB.getUnicode;
 
 import android.content.ClipData;
@@ -18,13 +25,22 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.SpannableStringBuilder;
+import android.text.Spanned;
 import android.text.TextUtils;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.text.style.DrawableMarginSpan;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.RelativeSizeSpan;
+import android.text.style.TypefaceSpan;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.LayoutInflater;
@@ -33,11 +49,13 @@ import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.Fragment;
 
@@ -53,8 +71,8 @@ import java.util.Objects;
 public class ResultFragment extends Fragment {
 
     private View selfView;
+    private View mScroll;
     private TextView mTextView;
-    private View mTextScroll, mWebScroll;
     private MyWebView mWebView;
     private final boolean showFavoriteButton;
     private final Entry mEntry = new Entry();
@@ -65,6 +83,7 @@ public class ResultFragment extends Fragment {
     private final int MSG_SEARCH = 1;
     private final int MSG_GOTO_INFO = 2;
     private final int MSG_FAVORITE = 3;
+    private final int MSG_MAP = 4;
     private final Handler mHandler = new Handler(){
         @Override
         public void handleMessage(@NonNull Message msg) {
@@ -88,6 +107,9 @@ public class ResultFragment extends Fragment {
                     } else {
                         FavoriteDialogs.add(mEntry.hz);
                     }
+                    break;
+                case MSG_MAP:
+                    new MyMapView(getContext(), mEntry.hz).show();
                     break;
             }
         }
@@ -116,16 +138,19 @@ public class ResultFragment extends Fragment {
 
         // Inflate the fragment view
         selfView = inflater.inflate(R.layout.search_result_fragment, container, false);
-
-        mTextScroll = selfView.findViewById(R.id.txtScroll);
-        mTextView = selfView.findViewById(R.id.txtResult);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            DictApp.customTypeFace(mTextView);
-        }
-        mWebScroll = selfView.findViewById(R.id.webScroll);
-        mWebView = selfView.findViewById(R.id.webResult);
+        mScroll = selfView.findViewById(R.id.scroll);
+        mWebView = selfView.findViewById(R.id.map);
         mWebView.setTag(this);
         registerForContextMenu(mWebView);
+        mTextView = new TextView(requireContext());
+        mTextView.setTextAppearance(R.style.FontDetail);
+        if (DictApp.enableFontExt()) mTextView.setTypeface(DictApp.getDictTypeFace());
+        mTextView.setTextIsSelectable(true);
+        mTextView.setMovementMethod(LinkMovementMethod.getInstance());
+        LinearLayout layout = selfView.findViewById(R.id.layout);
+        layout.addView(mTextView);
+        mTextView.setTag(this);
+        registerForContextMenu(mTextView);
         return selfView;
     }
 
@@ -156,6 +181,10 @@ public class ResultFragment extends Fragment {
         mEntry.raw = raw;
         mEntry.favorite = favorite;
         mEntry.comment = comment;
+    }
+
+    public void setEntry(Entry entry) {
+        setEntry(entry.hz, entry.lang,entry.raw, entry.favorite, entry.comment);
     }
 
     @Override
@@ -364,7 +393,7 @@ public class ResultFragment extends Fragment {
                     && !Orthography.HZ.isBS(query)
                     && Orthography.HZ.isHz(query);
             Map<String, String> pys = new HashMap<>();
-            StringBuilder hzB = new StringBuilder();
+            StringBuilder hzs = new StringBuilder();
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 int i = cursor.getColumnIndex(lang);
@@ -372,8 +401,8 @@ public class ResultFragment extends Fragment {
                 if (isZY) {
                     pys.put(hz, py.toString());
                 } else {
-                    //hzB.append(String.format("<a href=\"#%s\">%s</a>&nbsp;", hz, hz));
-                    hzB.append(hz);
+                    //hzs.append(String.format("<a href=\"#%s\">%s</a>&nbsp;", hz, hz));
+                    hzs.append(hz);
                 }
                 String s = cursor.getString(cursor.getColumnIndexOrThrow(VARIANTS));
                 if (!TextUtils.isEmpty(s) && !s.contentEquals(hz)) {
@@ -390,7 +419,7 @@ public class ResultFragment extends Fragment {
                 dictBuilder.append(getUnicode(cursor));
                 StringBuilder raws = new StringBuilder();
                 raws.append(String.format("%s %s\n", hz, s));
-                for (int j = DB.COL_SW; j <= DB.COL_HD; j++) {
+                for (int j = COL_SW; j <= DB.COL_HD; j++) {
                     s = cursor.getString(j);
                     if (TextUtils.isEmpty(s)) continue;
                     String col = getColumn(j);
@@ -447,7 +476,7 @@ public class ResultFragment extends Fragment {
                 sb.append("</nav>");
             } else if (n >= 2){
                 sb.append("<nav>");
-                sb.append(hzB);
+                sb.append(hzs);
                 sb.append("</nav>");
             }
             sb.append(ssb);
@@ -462,23 +491,156 @@ public class ResultFragment extends Fragment {
         } else if (cursor == null || cursor.getCount() == 0) {
             sb.append(getString(R.string.no_matches));
         } else {
+            StringBuilder hzs = new StringBuilder();
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 sb.append(hz);
+                hzs.append(hz);
+                // Variants
+                String s = cursor.getString(cursor.getColumnIndexOrThrow(VARIANTS));
+                if (!TextUtils.isEmpty(s) && !s.contentEquals(hz)) {
+                    s = String.format("(%s)", s);
+                    sb.append(s);
+                };
+                String unicode = Orthography.HZ.toUnicode(hz);
+                sb.append(" " + unicode);
+                // SW
+                for (int i = COL_SW; i <= COL_HD; i++) {
+                    s = cursor.getString(i);
+                    if (!TextUtils.isEmpty(s)) {
+                        sb.append(" " + getLabel(i));
+                    }
+                }
                 sb.append("\n");
+                StringBuilder sb2 = new StringBuilder();
                 for (String col : DB.getVisibleColumns(getContext())) {
                     int i = cursor.getColumnIndex(col);
-                    String s = cursor.getString(i);
+                    s = cursor.getString(i);
                     if (TextUtils.isEmpty(s)) continue;
                     String label = getLabel(col);
-                    sb.append(String.format("[%s]", label));
-                    sb.append(HtmlCompat.fromHtml(DictApp.formatIPA(col, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT));
-                    sb.append("\n");
+                    sb2.append(String.format("［%s］", label));
+                    sb2.append(HtmlCompat.fromHtml(DictApp.formatIPA(col, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT));
+                    sb2.append("\n");
                 }
+                if (sb2.length() > 0) {
+                    sb.append("──────────\n");
+                    sb.append(sb2);
+                }
+                if (!cursor.isLast()) sb.append("══════════\n");
+            }
+            if (hzs.length() > 1) {
+                hzs.append("\n══════════\n");
+                sb.insert(0, hzs);
             }
         }
         mTextView.setText(sb.toString());
-        mTextScroll.setScrollY(0);
+    }
+
+    private void setTableData(String query, Cursor cursor) {
+        SpannableStringBuilder ssb = new SpannableStringBuilder();
+        if (TextUtils.isEmpty(query)) {
+            ssb.append(HtmlCompat.fromHtml(DB.getIntro(getContext()), HtmlCompat.FROM_HTML_MODE_COMPACT));
+        } else if (cursor == null || cursor.getCount() == 0) {
+            ssb.append(getString(R.string.no_matches));
+        } else {
+            String s;
+            float fontSize = mTextView.getTextSize() * 0.8f;
+            TextDrawable.IBuilder builder = TextDrawable.builder()
+                    .beginConfig()
+                    .withBorder(3)
+                    .width((int) (fontSize * 3.4f))  // width in px
+                    .height((int) (fontSize * 1.6f)) // height in px
+                    .fontSize(fontSize)
+                    .endConfig()
+                    .roundRect(5);
+            StringBuilder hzs = new StringBuilder();
+            for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+                String hz = cursor.getString(COL_HZ);
+                hzs.append(hz);
+
+                String comment = cursor.getString(cursor.getColumnIndexOrThrow(COMMENT));
+                boolean bFavorite = cursor.getInt(cursor.getColumnIndexOrThrow(DB.IS_FAVORITE)) == 1;
+                int n = ssb.length();
+                ssb.append(hz, new ForegroundColorSpan(getColor(HZ)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ssb.setSpan(new RelativeSizeSpan(1.8f), n, ssb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                // Variants
+                s = cursor.getString(cursor.getColumnIndexOrThrow(VARIANTS));
+                if (!TextUtils.isEmpty(s) && !s.contentEquals(hz)) {
+                    s = String.format("(%s)", s);
+                    ssb.append(s, new ForegroundColorSpan(getResources().getColor(R.color.dim)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                };
+                // Unicode
+                String unicode = Orthography.HZ.toUnicode(hz);
+                StringBuilder sb2 = new StringBuilder();
+                sb2.append(String.format("<p>【統一碼】%s %s</p>", unicode, Orthography.HZ.getUnicodeExt(hz)));
+                for (int i = DB.COL_LF; i < DB.COL_VA; i++) {
+                    if (i == COL_SW) i = COL_BH;
+                    String lang = getColumn(i);
+                    s = cursor.getString(i);
+                    if (TextUtils.isEmpty(s)) continue;
+                    sb2.append(String.format("<p>【%s】%s</p>", lang, s));
+                }
+                int color = getColor(SW);
+                ssb.append(" " + unicode + " ", new PopupSpan(DictApp.formatPopUp(hz, COL_HZ, sb2.toString()), color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                StringBuilder raws = new StringBuilder();
+                raws.append(String.format("%s %s\n", hz, unicode));
+                // yb
+                SpannableStringBuilder ssb2 = new SpannableStringBuilder();
+                for (String lang : DB.getVisibleColumns(getContext())) {
+                    int i = getColumnIndex(lang);
+                    s = cursor.getString(i);
+                    if (TextUtils.isEmpty(s)) continue;
+                    CharSequence cs = HtmlCompat.fromHtml(DictApp.formatIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
+                    n = ssb2.length();
+                    String label = getLabel(i);
+                    Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
+                    DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
+                    ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    String raw = DictApp.getRawText(s);
+                    Entry e = new Entry(hz, lang, raw, bFavorite, comment);
+                    ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    ssb2.append(cs);
+                    ssb2.append("\n");
+                    raws.append(formatReading(label, raw));
+                }
+                mRaws.put(hz, raws.toString());
+                // SW
+                for (int i = COL_SW; i <= COL_HD; i++) {
+                    s = cursor.getString(i);
+                    if (!TextUtils.isEmpty(s)) {
+                        ssb.append(" " + getLabel(i) + " ", new PopupSpan(DictApp.formatPopUp(hz, i, s), color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    }
+                }
+                // Map
+                if (ssb2.length() > 0) {
+                    ssb.append(DB.MAP + " ", new PopupSpan(hz, color) {
+                        @Override
+                        public void onClick(@NonNull View view) {
+                            view.post(() -> showMap(hz));
+                        }
+                    }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                }
+                // Favorite
+                if (showFavoriteButton) {
+                    String label = bFavorite ? "⭐":"⛤";
+                    ssb.append(" " + label + " ", new PopupSpan(hz, color) {
+                        @Override
+                        public void onClick(@NonNull View view) {
+                            showFavorite(hz, bFavorite, comment);
+                        }
+                    }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                }
+                ssb.append("\n");
+                ssb.append(ssb2);
+            }
+            if (hzs.length() > 1) {
+                hzs.append("\n");
+                ssb.insert(0, hzs);
+            }
+        }
+        //Future<PrecomputedTextCompat> future =  PrecomputedTextCompat.getTextFuture(ssb, mTextView.getTextMetricsParamsCompat(), null);
+        //mTextView.setTextFuture(future);
+        mTextView.setText(ssb);
     }
 
     public void setData(Cursor cursor) {
@@ -486,24 +648,24 @@ public class ResultFragment extends Fragment {
         Orthography.setToneStyle(DictApp.getToneStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(DictApp.getToneStyle(R.string.pref_key_tone_value_display));
         mRaws.clear();
-
+        mTextView.setVisibility(View.GONE);
+        mWebView.setVisibility(View.GONE);
         switch (DictApp.getDisplayFormat()) {
-            case 0: // text
-                mTextScroll.setVisibility(View.VISIBLE);
-                mWebScroll.setVisibility(View.GONE);
-                setTextData(query, cursor);
-                break;
             case 2: //web
-                mTextScroll.setVisibility(View.GONE);
-                mWebScroll.setVisibility(View.VISIBLE);
                 setWebData(query, cursor);
+                mWebView.setVisibility(View.VISIBLE);
+                break;
+            case 0: // text
+                setTextData(query, cursor);
+                mTextView.setVisibility(View.VISIBLE);
                 break;
             default: //table
-                mTextScroll.setVisibility(View.VISIBLE);
-                mWebScroll.setVisibility(View.GONE);
+                setTableData(query, cursor);
+                mTextView.setVisibility(View.VISIBLE);
                 break;
         }
         if (cursor != null) cursor.close();
+        mScroll.setScrollY(0);
     }
 
     public void showContextMenu(float x, float y) {
@@ -511,7 +673,25 @@ public class ResultFragment extends Fragment {
             if (!mWebView.isDirty()) {
                 showMenu = true;
                 mWebView.showContextMenu(x, y);
+                //openContextMenu(mWebView);
             }
         });
+    }
+
+    public void openContextMenu(View v) {
+        showMenu = true;
+        requireActivity().openContextMenu(v);
+    }
+
+    public void showMap(String hz) {
+        mEntry.hz = hz;
+        mHandler.sendEmptyMessage(MSG_MAP);
+    }
+
+    public void showFavorite(String hz, boolean favorite, String comment) {
+        mEntry.hz = hz;
+        mEntry.favorite = favorite;
+        mEntry.comment = comment;
+        mHandler.sendEmptyMessage(MSG_FAVORITE);
     }
 }
