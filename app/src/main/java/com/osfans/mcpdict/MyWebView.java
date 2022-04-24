@@ -1,5 +1,6 @@
 package com.osfans.mcpdict;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.util.AttributeSet;
@@ -12,13 +13,12 @@ import androidx.webkit.WebSettingsCompat;
 import androidx.webkit.WebViewFeature;
 
 public class MyWebView extends WebView {
+    @SuppressLint("SetJavaScriptEnabled")
     public MyWebView(@NonNull Context context, AttributeSet attrs) {
         super(context, attrs);
         WebSettings settings = getSettings();
         settings.setJavaScriptEnabled(true);
         addJavascriptInterface(new MyWeb(this), "mcpdict");
-        settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
-        setLayerType(View.LAYER_TYPE_HARDWARE, null);
         if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
             if (isNightMode()) {
                 WebSettingsCompat.setForceDark(settings, WebSettingsCompat.FORCE_DARK_ON);

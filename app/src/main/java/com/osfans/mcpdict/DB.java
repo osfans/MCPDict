@@ -47,6 +47,7 @@ public class DB extends SQLiteAssetHelper {
     public static final String VARIANTS = "variants";
     public static final String COMMENT = "comment";
     public static final String UNICODE = "unicode";
+    public static final String LANG = "語言";
 
     public static final String SG = "上古（鄭張尚芳）";
     public static final String BA = "上古（白一平沙加爾2015）";
@@ -451,7 +452,7 @@ public class DB extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
         String[] projection = {String.format("\"%s\"", field)};
-        String query = qb.buildQuery(projection, "語言 match ?",  null, null, null, null);
+        String query = qb.buildQuery(projection, LANG + " match ?",  null, null, null, null);
         Cursor cursor = db.rawQuery(query, new String[]{String.format("\"%s\"", lang)});
         String s = "";
         if (cursor.getCount() > 0) {
@@ -541,7 +542,7 @@ public class DB extends SQLiteAssetHelper {
             sb.append(intro);
             sb.append("<br><h2>已收錄語言</h2><table border=1 cellspacing=0>");
             sb.append("<tr>");
-            String[] fields = new String[]{"語言", "字數", "音節數", "不帶調音節數"};
+            String[] fields = new String[]{LANG, "字數", "音節數", "不帶調音節數"};
             for (String field: fields) {
                 sb.append(String.format("<th>%s</th>", field));
             }

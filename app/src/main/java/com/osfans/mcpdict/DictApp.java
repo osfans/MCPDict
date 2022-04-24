@@ -165,4 +165,8 @@ public class DictApp extends Application {
             e.printStackTrace();
         }
     }
+
+    public static float getScale() {
+        return mApp.getResources().getDisplayMetrics().density;
+    }
 }
