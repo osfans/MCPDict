@@ -403,21 +403,23 @@ public class ResultFragment extends Fragment {
                 ssb.append(dictBuilder);
                 String fq = "";
                 String fqTemp;
+                boolean opened = false;
                 for (String col : DB.getVisibleColumns(getContext())) {
                     int index = DB.getColumnIndex(col);
                     s = cursor.getString(index);
                     if (TextUtils.isEmpty(s)) continue;
                     fqTemp = DB.getFq(col);
                     if (!fqTemp.contentEquals(fq)) {
-                        if (!TextUtils.isEmpty(fq)) ssb.append("</details>");
+                        if (opened) ssb.append("</details>");
                         ssb.append(String.format("<details open><summary>%s</summary>", fqTemp));
+                        opened = true;
                     }
                     CharSequence ipa = DictApp.formatIPA(col, s);
                     ssb.append(String.format("<div class=place style='background: linear-gradient(to left, %s, %s);'>%s</div><div class=ipa>%s</div><br>",
                             DB.getHexColor(col), DB.getHexSubColor(col), DB.getLabel(col), ipa));
                     fq = fqTemp;
                 }
-                if (!TextUtils.isEmpty(fq)) ssb.append("</details>");
+                if (opened) ssb.append("</details>");
                 ssb.append("</details>");
             }
             if (isZY) {
