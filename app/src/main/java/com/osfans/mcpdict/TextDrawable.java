@@ -102,7 +102,7 @@ public class TextDrawable extends ShapeDrawable {
         int width = this.width < 0 ? r.width() : this.width;
         int height = this.height < 0 ? r.height() : this.height;
         textPaint.setTextSize(fontSize);
-        float ratio = 3.0f * 4f / (text.length() + text.getBytes().length) ;
+        float ratio = 3.3f * 4f / (text.length() + text.getBytes().length) ;
         if (ratio < 1f) textPaint.setTextScaleX(ratio);
         canvas.drawText(text, width / 2, height / 2 - ((textPaint.descent() + textPaint.ascent()) / 2), textPaint);
 
@@ -188,7 +188,7 @@ public class TextDrawable extends ShapeDrawable {
             width = -1;
             height = -1;
             shape = new RectShape();
-            font = Typeface.create("sans-serif-light", Typeface.NORMAL);
+            font = Typeface.SANS_SERIF;
             fontSize = -1;
             isBold = false;
             toUpperCase = false;

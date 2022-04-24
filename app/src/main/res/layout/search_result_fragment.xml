@@ -1,28 +1,18 @@
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_marginTop="2dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <ScrollView
-        android:id="@+id/txtScroll"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/txtResult"
-            style="@style/FontDetail"
-            android:hyphenationFrequency="none"
-            android:textIsSelectable="true"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.osfans.mcpdict.MyWebView
+            android:id="@+id/map"
+            android:visibility="gone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </ScrollView>
-    <ScrollView
-        android:visibility="gone"
-        android:id="@+id/webScroll"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <com.osfans.mcpdict.MyWebView
-        android:id="@+id/webResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    </ScrollView>
-</LinearLayout>
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</ScrollView>

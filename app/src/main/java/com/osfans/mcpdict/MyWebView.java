@@ -6,7 +6,6 @@ import android.content.res.Configuration;
 import android.util.AttributeSet;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.webkit.WebSettingsCompat;
