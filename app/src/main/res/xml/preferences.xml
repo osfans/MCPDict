@@ -75,6 +75,13 @@
             android:defaultValue="0" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/appearance">
+        <ListPreference
+            app:useSimpleSummaryProvider="true"
+            android:key="@string/pref_key_format"
+            android:title="@string/pref_title_format"
+            android:entries="@array/pref_entries_format"
+            android:entryValues="@array/pref_values_format"
+            android:defaultValue="1" />
         <EditTextPreference
             android:key="@string/pref_key_custom_title"
             android:title="@string/custom_title"

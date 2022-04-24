@@ -25,10 +25,14 @@ public class DictApp extends Application {
     public static CharSequence getRichText(String richTextString) {
         String s = richTextString
                 .replace("\n", "<br/>")
-                .replace("{", "<div class=desc>")
-                .replace("}", "</div>")
                 .replaceAll("\\*(.+?)\\*", "<b>$1</b>")
                 .replaceAll("\\|(.+?)\\|", "<span style='color: #808080;'>$1</span>");
+        int i = getDisplayFormat();
+        if (i == 1) {
+            s = s.replace("{", "<small><small>").replace("}", "</small></small>");
+        } else if (i == 2) {
+            s = s.replace("{", "<div class=desc>").replace("}", "</div>");
+        }
         return s;
     }
 
@@ -37,7 +41,7 @@ public class DictApp extends Application {
         return s.replaceAll("[|*\\[\\]]", "").replaceAll("\\{.*?\\}", "");
     }
 
-    public static int getStyle(int id) {
+    public static int getToneStyle(int id) {
         int value = 0;
         if (id == R.string.pref_key_tone_display) value = 1;
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
@@ -50,24 +54,24 @@ public class DictApp extends Application {
     }
 
     private static final Displayer gyDisplayer = new Displayer() {
-        public String displayOne(String s) {return Orthography.MiddleChinese.display(s, getStyle(R.string.pref_key_mc_display));}
+        public String displayOne(String s) {return Orthography.MiddleChinese.display(s, getToneStyle(R.string.pref_key_mc_display));}
     };
 
     private static final Displayer cmnDisplayer = new Displayer() {
         public String displayOne(String s) {
-            return Orthography.Mandarin.display(s, getStyle(R.string.pref_key_mandarin_display));
+            return Orthography.Mandarin.display(s, getToneStyle(R.string.pref_key_mandarin_display));
         }
     };
 
     private static final Displayer hkDisplayer = new Displayer() {
         public String displayOne(String s) {
-            return Orthography.Cantonese.display(s, getStyle(R.string.pref_key_cantonese_romanization));
+            return Orthography.Cantonese.display(s, getToneStyle(R.string.pref_key_cantonese_romanization));
         }
     };
 
     private static final Displayer twDisplayer = new Displayer() {
         public String displayOne(String s) {
-            return Orthography.Minnan.display(s, getStyle(R.string.pref_key_minnan_display));
+            return Orthography.Minnan.display(s, getToneStyle(R.string.pref_key_minnan_display));
         }
     };
 
@@ -85,19 +89,19 @@ public class DictApp extends Application {
 
     private static final Displayer korDisplayer = new Displayer() {
         public String displayOne(String s) {
-            return Orthography.Korean.display(s, getStyle(R.string.pref_key_korean_display));
+            return Orthography.Korean.display(s, getToneStyle(R.string.pref_key_korean_display));
         }
     };
 
     private static final Displayer viDisplayer = new Displayer() {
         public String displayOne(String s) {
-            return Orthography.Vietnamese.display(s, getStyle(R.string.pref_key_vietnamese_tone_position));
+            return Orthography.Vietnamese.display(s, getToneStyle(R.string.pref_key_vietnamese_tone_position));
         }
     };
 
     private static final Displayer jaDisplayer = new Displayer() {
         public String displayOne(String s) {
-            return Orthography.Japanese.display(s, getStyle(R.string.pref_key_japanese_display));
+            return Orthography.Japanese.display(s, getToneStyle(R.string.pref_key_japanese_display));
         }
     };
 
@@ -168,5 +172,16 @@ public class DictApp extends Application {
 
     public static float getScale() {
         return mApp.getResources().getDisplayMetrics().density;
+    }
+
+    public static int getDisplayFormat() {
+        int value = 1;
+        try {
+            SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+            return Integer.parseInt(Objects.requireNonNull(sp.getString(mApp.getString(R.string.pref_key_format), String.valueOf(value))));
+        } catch (Exception e) {
+            //e.printStackTrace();
+        }
+        return value;
     }
 }

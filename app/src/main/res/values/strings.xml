@@ -312,4 +312,16 @@
     <string name="pref_key_fq">FQ</string>
     <string name="default_fq">地圖集二分區</string>
     <string name="pref_title_fq">分區方案</string>
+    <string name="pref_key_format">FORMAT</string>
+    <string name="pref_title_format">顯示格式</string>
+    <string-array name="pref_entries_format">
+        <item>文字版</item>
+        <item>表格版</item>
+        <item>網頁版</item>
+    </string-array>
+    <string-array name="pref_values_format">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 </resources>

@@ -19,11 +19,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.LayoutInflater;
@@ -32,10 +33,12 @@ import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.Fragment;
 
 import java.io.UnsupportedEncodingException;
@@ -50,17 +53,19 @@ import java.util.Objects;
 public class ResultFragment extends Fragment {
 
     private View selfView;
+    private TextView mTextView;
+    private View mTextScroll, mWebScroll;
     private MyWebView mWebView;
     private final boolean showFavoriteButton;
-    private Entry mEntry = new Entry();
+    private final Entry mEntry = new Entry();
     private boolean showMenu;
-    private HashMap<String, String> mRaws = new HashMap<>();
+    private final HashMap<String, String> mRaws = new HashMap<>();
     private final int GROUP_READING = 1;
 
     private final int MSG_SEARCH = 1;
     private final int MSG_GOTO_INFO = 2;
     private final int MSG_FAVORITE = 3;
-    private Handler mHandler = new Handler(){
+    private final Handler mHandler = new Handler(){
         @Override
         public void handleMessage(@NonNull Message msg) {
             int what = msg.what;
@@ -112,6 +117,12 @@ public class ResultFragment extends Fragment {
         // Inflate the fragment view
         selfView = inflater.inflate(R.layout.search_result_fragment, container, false);
 
+        mTextScroll = selfView.findViewById(R.id.txtScroll);
+        mTextView = selfView.findViewById(R.id.txtResult);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            DictApp.customTypeFace(mTextView);
+        }
+        mWebScroll = selfView.findViewById(R.id.webScroll);
         mWebView = selfView.findViewById(R.id.webResult);
         mWebView.setTag(this);
         registerForContextMenu(mWebView);
@@ -259,20 +270,17 @@ public class ResultFragment extends Fragment {
         return mRaws.get(mEntry.hz);
     }
 
-    private String formatReading(String prefix, String reading) {
+    private String formatReading(String label, String reading) {
         String separator = reading.contains("\n") ? "\n" : " ";
-        return "[" + prefix + "]" + separator + reading + "\n";
+        return "[" + label + "]" + separator + reading + "\n";
     }
 
     public void scrollToTop() {
         //listView.setSelectionAfterHeaderView();
     }
 
-    public void setData(Cursor cursor) {
-        final String query = Utils.getInput(getContext());
+    private void setWebData(String query, Cursor cursor) {
         StringBuilder sb = new StringBuilder();
-        mRaws.clear();
-
         sb.append("<html><head><style>\n" +
                 "  @font-face {\n" +
                 "    font-family: ipa;\n" +
@@ -349,8 +357,6 @@ public class ResultFragment extends Fragment {
         } else if (cursor == null || cursor.getCount() == 0) {
             sb.append(getString(R.string.no_matches));
         } else {
-            Orthography.setToneStyle(DictApp.getStyle(R.string.pref_key_tone_display));
-            Orthography.setToneValueStyle(DictApp.getStyle(R.string.pref_key_tone_value_display));
             StringBuilder ssb = new StringBuilder();
             int n = cursor.getCount();
             String lang = Utils.getLanguage(getContext());
@@ -447,6 +453,57 @@ public class ResultFragment extends Fragment {
             sb.append(ssb);
         }
         mWebView.loadDataWithBaseURL(null, sb.toString(), "text/html", "utf-8", null);
+    }
+
+    private void setTextData(String query, Cursor cursor) {
+        SpannableStringBuilder sb = new SpannableStringBuilder();
+        if (TextUtils.isEmpty(query)) {
+            sb.append(HtmlCompat.fromHtml(DB.getIntro(getContext()), HtmlCompat.FROM_HTML_MODE_COMPACT));
+        } else if (cursor == null || cursor.getCount() == 0) {
+            sb.append(getString(R.string.no_matches));
+        } else {
+            for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+                String hz = cursor.getString(COL_HZ);
+                sb.append(hz);
+                sb.append("\n");
+                for (String col : DB.getVisibleColumns(getContext())) {
+                    int i = cursor.getColumnIndex(col);
+                    String s = cursor.getString(i);
+                    if (TextUtils.isEmpty(s)) continue;
+                    String label = getLabel(col);
+                    sb.append(String.format("[%s]", label));
+                    sb.append(HtmlCompat.fromHtml(DictApp.formatIPA(col, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT));
+                    sb.append("\n");
+                }
+            }
+        }
+        mTextView.setText(sb.toString());
+        mTextScroll.setScrollY(0);
+    }
+
+    public void setData(Cursor cursor) {
+        final String query = Utils.getInput(getContext());
+        Orthography.setToneStyle(DictApp.getToneStyle(R.string.pref_key_tone_display));
+        Orthography.setToneValueStyle(DictApp.getToneStyle(R.string.pref_key_tone_value_display));
+        mRaws.clear();
+
+        switch (DictApp.getDisplayFormat()) {
+            case 0: // text
+                mTextScroll.setVisibility(View.VISIBLE);
+                mWebScroll.setVisibility(View.GONE);
+                setTextData(query, cursor);
+                break;
+            case 2: //web
+                mTextScroll.setVisibility(View.GONE);
+                mWebScroll.setVisibility(View.VISIBLE);
+                setWebData(query, cursor);
+                break;
+            default: //table
+                mTextScroll.setVisibility(View.VISIBLE);
+                mWebScroll.setVisibility(View.GONE);
+                break;
+        }
+        if (cursor != null) cursor.close();
     }
 
     public void showContextMenu(float x, float y) {
