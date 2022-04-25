@@ -22,9 +22,9 @@ def addAllFq(d, fq, order,ignorePian = False):
 		if ignorePian and name.endswith("片"): continue
 		d[name] = "-".join(order.split("-")[0:i+1])
 
-def addCf2Fq(d, fq, order):
+def addCfFq(d, fq, order):
 	if fq is None: return
-	fqs = fq.split(",")
+	fqs = fq.split(",")[1:]
 	for i,fq in enumerate(fqs):
 		if not fq: continue
 		if i not in d: d[i] = dict()
@@ -64,12 +64,20 @@ def getLangs(dicts, argv=None):
 			if d["省"]:
 				addAllFq(types[1], d["省"], "ZZZZ")
 				d["音典分區"] += "," + d["省"]
-			addAllFq(types[2], d["陳邡分區"], d["陳邡排序"], True)
-			addAllFq(types[4], d["俞銓（正心）分區"], d["俞銓（正心）排序"], True)
-			addCf2Fq(types[3], d["陳邡二分區"], d["陳邡二排序"])
+			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
+			addAllFq(types[3], d["俞銓（正心）分區"], d["俞銓（正心）排序"], True)
 			lang.info = d
 			lang.load(dicts)
-			if lang.count == 0: continue
+			if d["文件名"] != "mcpdict.db":
+				if lang.count < 100:
+					print(f"\t\t\t字數太少 {mod}")
+					continue
+				if lang.syCount < 90:
+					print(f"\t\t\t音節太少 {mod}")
+					continue
+			spath  = lang.spath
+			if spath:
+				d["文件名"] = os.path.basename(spath)
 			count += 1
 		else:
 			lang = import_module(f"tables.{mod}").表()
@@ -87,7 +95,7 @@ def getLangs(dicts, argv=None):
 		lang.info["不帶調音節數"] = syCount if syCount and syCount != sydCount else None
 		lang.info["網站"] = lang.site
 		lang.info["網址"] = lang.url
-		lang.info["說明"] = lang.note if lang.note else None
+		if lang.note: lang.info["說明"] = lang.note
 		if not keys: keys = lang.info.keys()
 		langs.append(lang)
 	hz = langs[0]
@@ -97,8 +105,7 @@ def getLangs(dicts, argv=None):
 	hz.info["說明"] = "字數：%d<br>語言數：%d<br><br>%s"%(len(dicts), count, hz.note)
 	hz.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:(x.count("-"),types[0][x])))
 	hz.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
-	hz.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:(x.count("-"),types[2][x])))
-	hz.info["俞銓（正心）分區"] = ",".join(sorted(types[4].keys(),key=lambda x:(x.count("-"),types[4][x])))
-	hz.info["陳邡二分區"] = ",".join(",".join(sorted(types[3][i].keys(),key=lambda x:types[3][i][x])) for i in types[3])
+	hz.info["陳邡分區"] = ",".join(sorted(types[3].keys(),key=lambda x:(x.count("-"),types[3][x])))
+	hz.info["俞銓（正心）分區"] = ",".join(sorted(types[3].keys(),key=lambda x:(x.count("-"),types[3][x])))
 	print("語言數", count)
 	return langs

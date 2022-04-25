@@ -8,9 +8,7 @@ import static com.osfans.mcpdict.DB.COL_HZ;
 import static com.osfans.mcpdict.DB.COL_KX;
 import static com.osfans.mcpdict.DB.COL_SW;
 import static com.osfans.mcpdict.DB.COMMENT;
-import static com.osfans.mcpdict.DB.HD;
 import static com.osfans.mcpdict.DB.HZ;
-import static com.osfans.mcpdict.DB.KX;
 import static com.osfans.mcpdict.DB.SW;
 import static com.osfans.mcpdict.DB.VARIANTS;
 import static com.osfans.mcpdict.DB.getColor;
@@ -27,7 +25,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.os.Build;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -35,12 +33,9 @@ import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
-import android.text.style.ClickableSpan;
 import android.text.style.DrawableMarginSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
-import android.text.style.TypefaceSpan;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.LayoutInflater;
@@ -55,8 +50,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.text.HtmlCompat;
+import androidx.core.text.PrecomputedTextCompat;
+import androidx.core.widget.TextViewCompat;
 import androidx.fragment.app.Fragment;
 
 import java.io.UnsupportedEncodingException;
@@ -484,7 +480,7 @@ public class ResultFragment extends Fragment {
         mWebView.loadDataWithBaseURL(null, sb.toString(), "text/html", "utf-8", null);
     }
 
-    private void setTextData(String query, Cursor cursor) {
+    private SpannableStringBuilder setTextData(String query, Cursor cursor) {
         SpannableStringBuilder sb = new SpannableStringBuilder();
         if (TextUtils.isEmpty(query)) {
             sb.append(HtmlCompat.fromHtml(DB.getIntro(getContext()), HtmlCompat.FROM_HTML_MODE_COMPACT));
@@ -533,10 +529,10 @@ public class ResultFragment extends Fragment {
                 sb.insert(0, hzs);
             }
         }
-        mTextView.setText(sb.toString());
+        return sb;
     }
 
-    private void setTableData(String query, Cursor cursor) {
+    private SpannableStringBuilder setTableData(String query, Cursor cursor) {
         SpannableStringBuilder ssb = new SpannableStringBuilder();
         if (TextUtils.isEmpty(query)) {
             ssb.append(HtmlCompat.fromHtml(DB.getIntro(getContext()), HtmlCompat.FROM_HTML_MODE_COMPACT));
@@ -638,9 +634,12 @@ public class ResultFragment extends Fragment {
                 ssb.insert(0, hzs);
             }
         }
-        //Future<PrecomputedTextCompat> future =  PrecomputedTextCompat.getTextFuture(ssb, mTextView.getTextMetricsParamsCompat(), null);
-        //mTextView.setTextFuture(future);
-        mTextView.setText(ssb);
+        return ssb;
+    }
+
+    private SpannableStringBuilder getTextData(String query, Cursor cursor, int format) {
+        if (format == 0) return setTextData(query, cursor);
+        return setTableData(query, cursor);
     }
 
     public void setData(Cursor cursor) {
@@ -650,22 +649,29 @@ public class ResultFragment extends Fragment {
         mRaws.clear();
         mTextView.setVisibility(View.GONE);
         mWebView.setVisibility(View.GONE);
-        switch (DictApp.getDisplayFormat()) {
-            case 2: //web
-                setWebData(query, cursor);
-                mWebView.setVisibility(View.VISIBLE);
-                break;
-            case 0: // text
-                setTextData(query, cursor);
-                mTextView.setVisibility(View.VISIBLE);
-                break;
-            default: //table
-                setTableData(query, cursor);
-                mTextView.setVisibility(View.VISIBLE);
-                break;
+        int format = DictApp.getDisplayFormat();
+        if (format == 2) { //web
+            setWebData(query, cursor);
+            mWebView.setVisibility(View.VISIBLE);
+            if (cursor != null) cursor.close();
+            mScroll.setScrollY(0);
+        } else {
+            new AsyncTask<Void, Void, PrecomputedTextCompat>() {
+                @Override
+                protected PrecomputedTextCompat doInBackground(Void... params) {
+                    SpannableStringBuilder ssb = getTextData(query, cursor, format);
+                    if (cursor != null) cursor.close();
+                    return PrecomputedTextCompat.create(ssb, TextViewCompat.getTextMetricsParams(mTextView));
+                }
+
+                @Override
+                protected void onPostExecute(PrecomputedTextCompat textCompat) {
+                    TextViewCompat.setPrecomputedText(mTextView, textCompat);
+                    mTextView.setVisibility(View.VISIBLE);
+                    mScroll.setScrollY(0);
+                }
+            }.execute();
         }
-        if (cursor != null) cursor.close();
-        mScroll.setScrollY(0);
     }
 
     public void showContextMenu(float x, float y) {
