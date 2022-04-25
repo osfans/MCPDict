@@ -19,7 +19,7 @@
             android:title="@string/pref_title_format"
             android:entries="@array/pref_entries_format"
             android:entryValues="@array/pref_values_format"
-            android:defaultValue="2" />
+            android:defaultValue="1" />
         <SwitchPreference
             android:defaultValue="true"
             android:key="@string/pref_key_font_ext"

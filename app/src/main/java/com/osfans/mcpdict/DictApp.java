@@ -3,14 +3,8 @@ package com.osfans.mcpdict;
 import static com.osfans.mcpdict.DB.COL_HD;
 import static com.osfans.mcpdict.DB.COL_KX;
 import static com.osfans.mcpdict.DB.COL_SW;
-import static com.osfans.mcpdict.DB.HD;
-import static com.osfans.mcpdict.DB.KX;
-import static com.osfans.mcpdict.DB.SW;
 
-import android.app.ActivityManager;
 import android.app.Application;
-import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.graphics.fonts.Font;
@@ -18,9 +12,7 @@ import android.graphics.fonts.FontFamily;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
-import android.widget.TextView;
 
-import androidx.annotation.RequiresApi;
 import androidx.core.text.HtmlCompat;
 
 import java.io.IOException;
@@ -28,7 +20,7 @@ import java.util.Objects;
 
 public class DictApp extends Application {
     private static DictApp mApp;
-    private static Typeface tf;
+    private static Typeface tf, tfIPA;
 
     public DictApp() {
         mApp = this;
@@ -192,12 +184,19 @@ public class DictApp extends Application {
         return null;
     }
 
+    public static Typeface getIPA() {
+        if (tfIPA == null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            tfIPA = mApp.getResources().getFont(R.font.ipa);
+        }
+        return tfIPA;
+    }
+
     public static float getScale() {
         return mApp.getResources().getDisplayMetrics().density;
     }
 
     public static int getDisplayFormat() {
-        int value = 2;
+        int value = 1;
         try {
             SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
             return Integer.parseInt(Objects.requireNonNull(sp.getString(mApp.getString(R.string.pref_key_format), String.valueOf(value))));

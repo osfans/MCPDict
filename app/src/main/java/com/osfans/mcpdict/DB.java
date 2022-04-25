@@ -42,18 +42,18 @@ public class DB extends SQLiteAssetHelper {
     public static final String VA = "異體字";
     public static final String FL = "分類";
 
-    public static final String MAP = "地圖";
+    public static final String MAP = " \uD83C\uDF0F ";
     public static final String IS_FAVORITE = "is_favorite";
     public static final String VARIANTS = "variants";
     public static final String COMMENT = "comment";
     public static final String UNICODE = "unicode";
     public static final String LANG = "語言";
 
-    public static final String SG = "上古（鄭張尚芳）";
-    public static final String BA = "上古（白一平沙加爾2015）";
-    public static final String GY = "廣韻";
+    public static final String SG = "上古擬音（鄭張尚芳）";
+    public static final String BA = "上古擬音（白一平沙加爾2015）";
+    public static final String GY = "廣韻擬音";
     public static final String CMN = "普通話";
-    public static final String HK = "香港話";
+    public static final String HK = "香港粵語標準音";
     public static final String TW = "臺灣閩南語";
     public static final String KOR = "朝鮮語";
     public static final String VI = "越南語";
@@ -514,9 +514,8 @@ public class DB extends SQLiteAssetHelper {
         } else {
             StringBuilder sb = new StringBuilder();
             sb.append(String.format(Locale.getDefault(), "%s%s<br>", context.getString(R.string.name), lang));
-            ArrayList<String> fields = new ArrayList<>(Arrays.asList("錄入人","參考資料","版本","字數","音節數","不帶調音節數",""));
+            ArrayList<String> fields = new ArrayList<>(Arrays.asList("錄入人","參考資料","文件名","版本","字數","音節數","不帶調音節數",""));
             fields.addAll(Arrays.asList(FQ_COLUMNS));
-            fields.set(fields.size() - 1, ""); //陳邡二僅排序不同
             fields.add("");
             for (String field: fields) {
                 if (TextUtils.isEmpty(field)) sb.append("<br>");

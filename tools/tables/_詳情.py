@@ -76,39 +76,48 @@ def load():
 	d = dict()
 	wb = load_workbook(spath)
 	sheet = wb.worksheets[0]
+	firstLine = True
+	fields = []
 	for row in sheet.rows:
-		fs = [j.value if j.value else "" for i,j in enumerate(row)]
-		ver = fs[5]
+		line = [j.value if j.value else "" for i,j in enumerate(row)]
+		if firstLine:
+			fields = line
+			firstLine = False
+		fs = dict(zip(fields, row))
+		ver = fs["版本/更新時間"].value
 		if type(ver) is str and ver: continue
 		ver = ver.strftime("%Y-%m-%d") if ver else None
-		lang = fs[0].strip()
-		short = fs[1].strip()
-		filename = fs[2].strip()
+		lang = fs["語言"].value
+		short = fs["簡稱"].value
+		filename = fs["文件名"].value
 		if not filename: continue
-		fileformat = fs[3].strip()
-		fileskip = int(fs[4]) if fs[4] else 0
-		orders = [str(fs[i]).strip() for i in (30,33,38,37,50)]
-		colors = [row[i].fill.fgColor.value[2:] for i in (31,34,39,39,51)]
-		subcolors = [row[i].fill.fgColor.value[2:] for i in (31,35,40,40,52)]
-		types = [fs[i].strip() for i in (32,36)]
-		types.append(convert(fs[49]))
-		types.append(",".join(fs[41:49]))
-		types.append(fs[53].strip())
-		j = 6
-		point = fs[j].replace(" ", "").replace("，",",").strip()
-		places = fs[j+1:j+6]
-		island = fs[j+6]
-		size = fs[j+7].count("★")
-		tones = fs[j+8:j+18]
-		en = 24
-		editor = fs[en].strip("/")
-		book = fs[en+1].strip("/")
-		if book:
-			if row[en+1].hyperlink:
-				target = row[en+1].hyperlink.target
-				book = f"<a herf={target}>{book}</a>"
-		note = fs[en+2]
-		jf = convert(fs[en+3])
+		fileformat = fs["字表格式"].value
+		fileskip = int(fs["跳過行數"].value) if fs["跳過行數"].value else 0
+		orders = [fs[i].value for i in ("地圖集二排序", "音典排序","陳邡排序","俞銓（正心）排序")]
+		colors = [fs[i].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典顏色","陳邡顏色","俞銓（正心）顏色")]
+		subcolors = [fs[i].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典過渡色","陳邡過渡色","俞銓過渡色")]
+		types = [fs[i].value for i in ("地圖集二分區", "音典分區","陳邡分區","俞銓（正心）分區")]
+		#types.append(convert(",".join(fs[40:49]).rstrip(",")))
+		#types.append(fs[53].strip())
+		point = fs["緯度,經度"].value
+		if point: point = point.replace(" ", "").replace("，",",").strip()
+		places = [fs[i].value if fs[i].value else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
+		island = fs["方言島"].value
+		size = fs["級別(5星爲代表方言-1星最大時顯示)"].value
+		size = size.count("★") if size else 0
+		j = fields.index("[1]陰平")
+		tones = [line[i] for i in range(j,j+10)]
+		editor = fs["錄入人"].value
+		books = fs["參考文獻"]
+		book = None
+		if books.value:
+			if books.hyperlink:
+				target = books.hyperlink.target
+				book = f"<a herf={target}>{books.value}</a>"
+			else:
+				book = books.value
+		note = fs["說明"].value
+		jf = convert(fs["繁簡"].value)
 		for i,c in enumerate(subcolors):
 			if c and c != "000000" and c != colors[i]:
 				colors[i] += f",{c}"
@@ -133,12 +142,9 @@ def load():
 			"陳邡排序":orders[2],
 			"陳邡顏色":colors[2],
 			"陳邡分區":types[2],
-			"俞銓（正心）排序":orders[4],
-			"俞銓（正心）顏色":colors[4],
-			"俞銓（正心）分區":convert(types[4]),
-			"陳邡二排序":orders[3],
-			"陳邡二顏色":colors[3],
-			"陳邡二分區":types[3],
+			"俞銓（正心）排序":orders[3],
+			"俞銓（正心）顏色":colors[3],
+			"俞銓（正心）分區":convert(types[3]),
 			"省":convert(places[0]).strip("*"),
 			"市":places[1],
 			"縣":places[2],
@@ -169,7 +175,7 @@ def load():
 				"地圖集二分區": types[0],
 				"音典分區": types[1],
 				"陳邡分區":types[2],
-				"俞銓（正心）分區":types[4],
+				"俞銓（正心）分區":types[3],
 				"marker-color": colors[0],
 				"marker-size": marker_size,
 				"marker-symbol": orders[0][0].upper() if orders[0] else "",

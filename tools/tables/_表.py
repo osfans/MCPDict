@@ -57,11 +57,12 @@ def xls2tsv(xls):
 		xtime = os.path.getmtime(xls)
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
+	if xls.endswith(".xls"): xls += "x"
 	wb = load_workbook(xls)
 	sheet = wb.worksheets[0]
 	lines = list()
 	for row in sheet.rows:
-		fs = [(str(int(j.value)) if type(j.value) is float else str(j.value).strip()) if j.value else "" for j in row[:10]]
+		fs = [(str(int(j.value)) if type(j.value) is float else str(j.value).strip()) if j.value else "" for j in row[:20]]
 		if any(fs):
 			line = "\t".join(fs) + "\n"
 			lines.append(line)
