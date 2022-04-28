@@ -211,6 +211,11 @@ public class DictApp extends Application {
         return sp.getBoolean(mApp.getString(R.string.pref_key_font_ext), true);
     }
 
+    public static String getTitle() {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        return sp.getString(mApp.getString(R.string.pref_key_custom_title), mApp.getString(R.string.app_name));
+    }
+
 //    public static void restartApplication() {
 //        final Intent intent = mApp.getPackageManager().getLaunchIntentForPackage(mApp.getPackageName());
 //        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

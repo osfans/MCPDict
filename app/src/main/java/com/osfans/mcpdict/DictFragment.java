@@ -19,6 +19,7 @@ import android.preference.PreferenceManager;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -96,14 +97,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         adapterShowLang = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
         adapterShowLang.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerShowLang.setAdapter(adapterShowLang);
-        spinnerShowLang.setOnItemSelectedListener(new OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                searchView.clickSearchButton();
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
-        });
 
         Spinner spinnerShowChar = selfView.findViewById(R.id.spinner_show_characters);
         adapterShowChar = ArrayAdapter.createFromResource(requireActivity(),
@@ -112,6 +105,23 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         spinnerShowChar.setAdapter(adapterShowChar);
         int position = PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt(getString(R.string.pref_key_charset), 0);
         spinnerShowChar.setSelection(position);
+
+        spinnerSearchAs = selfView.findViewById(R.id.spinner_search_as);
+        adapter = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
+        refreshAdapter();
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
+        spinnerSearchAs.setAdapter(adapter);
+
+        // Set up the checkboxes
+        checkBoxAllowVariants = selfView.findViewById(R.id.check_box_allow_variants);
+        loadCheckBoxes();
+
+        CompoundButton.OnCheckedChangeListener checkBoxListener = (view, isChecked) -> {
+            saveCheckBoxes();
+            searchView.clickSearchButton();
+        };
+        checkBoxAllowVariants.setOnCheckedChangeListener(checkBoxListener);
+
         spinnerShowChar.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -122,12 +132,14 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
         });
-
-        spinnerSearchAs = selfView.findViewById(R.id.spinner_search_as);
-        adapter = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
-        refreshAdapter();
-        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
-        spinnerSearchAs.setAdapter(adapter);
+        spinnerShowLang.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                searchView.clickSearchButton();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
         spinnerSearchAs.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -136,15 +148,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
         });
-
-        // Set up the checkboxes
-        checkBoxAllowVariants = selfView.findViewById(R.id.check_box_allow_variants);
-        loadCheckBoxes();
-        CompoundButton.OnCheckedChangeListener checkBoxListener = (view, isChecked) -> {
-            saveCheckBoxes();
-            searchView.clickSearchButton();
-        };
-        checkBoxAllowVariants.setOnCheckedChangeListener(checkBoxListener);
 
         // Get a reference to the SearchResultFragment
         fragmentResult = (ResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);
@@ -165,13 +168,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-        refreshAdapter();
-        refresh();
-    }
-
-    @Override
     public void refresh() {
         new AsyncTask<Void, Void, Cursor>() {
             @Override
@@ -188,13 +184,14 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private void refreshSearchAs() {
         String lang = Utils.getLanguage(getContext());
         int index = adapter.getPosition(lang);
+        if (index >= adapter.getCount()) index = 0;
         if (index >= 0) spinnerSearchAs.setSelection(index);
     }
 
     private void refreshShowLang() {
         int index = PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt(getString(R.string.pref_key_show_language_index), 0);
-        if (adapterShowLang.getCount() <= index) index = 0;
-        spinnerShowLang.setSelection(index);
+        if (index >= adapterShowLang.getCount()) index = 0;
+        if (index >= 0) spinnerShowLang.setSelection(index);
     }
 
     public void refresh(String query, String lang) {
