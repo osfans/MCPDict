@@ -66,6 +66,7 @@ public class MainActivity extends BaseActivity {
     @Override
     public void onRestart() {
         super.onRestart();
+        setTitle(DictApp.getTitle());
         // Make settings take effect immediately as the user navigates back to the dictionary
         refresh();
     }
@@ -87,13 +88,5 @@ public class MainActivity extends BaseActivity {
         if (fragment != null) {
             fragment.refresh();
         }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
-        String title = sp.getString(getString(R.string.pref_key_custom_title), getString(R.string.app_name));
-        setTitle(title);
     }
 }

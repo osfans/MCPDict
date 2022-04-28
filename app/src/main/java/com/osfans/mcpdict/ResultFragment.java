@@ -36,6 +36,7 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.DrawableMarginSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.LayoutInflater;
@@ -153,6 +154,19 @@ public class ResultFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (DictApp.getDisplayFormat() == 2) {
+            mTextView.setVisibility(View.GONE);
+            mWebView.setVisibility(View.VISIBLE);
+        } else {
+            mTextView.setVisibility(View.VISIBLE);
+            mWebView.setVisibility(View.GONE);
+        }
+
     }
 
     private Intent getDictIntent(String lang, String hz) {
@@ -647,8 +661,6 @@ public class ResultFragment extends Fragment {
         Orthography.setToneStyle(DictApp.getToneStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(DictApp.getToneStyle(R.string.pref_key_tone_value_display));
         mRaws.clear();
-        mTextView.setVisibility(View.GONE);
-        mWebView.setVisibility(View.GONE);
         int format = DictApp.getDisplayFormat();
         if (format == 2) { //web
             setWebData(query, cursor);
