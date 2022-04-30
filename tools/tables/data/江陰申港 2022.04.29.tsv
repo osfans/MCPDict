@@ -23,7 +23,8 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	tsɿ⁴⁵	只	衹			tsɿ3
 	tsəʔ⁵⁵	只	衹	（口語）～有，～好		tsəʔ7
 	tsɿ⁴⁵	姊	姊	～妹		tsɿ3
-	tsi⁴⁵	姊	姊	（口語）～～		tsi3
+	tsi⁴⁵	姊	姊	（口語）阿～		tsi3
+	tsi⁴⁵	姐	姐	（口語）阿～		tsi3
 	tsɿ⁴⁵	指	指			tsɿ3
 	tsɿ⁴⁵	子	子			tsɿ3
 	tsəʔ⁵⁵	子	子	兒～，餃～		tsəʔ7
@@ -31,6 +32,8 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	tsɿ⁴⁵	制	制	～度		tsɿ3
 	tsɿ⁴⁵	制	製	～造		tsɿ3
 	tsɿ⁴⁵	止	止			tsɿ3
+	tsɿ⁴⁵	芷	芷			tsɿ3
+	tsɿ⁴⁵	沚	沚			tsɿ3
 	tsɿ⁴⁵	趾	趾			tsɿ3
 	tsɿ⁴⁵	址	址			tsɿ3
 	tsʰɿ³¹²	翅	翅			tsʰɿ5B
@@ -70,6 +73,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	dzɿ³¹	持	持			dzɿ2
 	dzɿ²⁴	滞	滯			dzɿ6
 	dzɿ²⁴	稚	稚			dzɿ6
+	dzɿ²⁴	雉	雉			dzɿ6
 	dzɿ²⁴	痔	痔			dzɿ6
 	dzɿ²⁴	治	治			dzɿ6
 	sɿ⁵³	斯	斯			sɿ1
@@ -97,6 +101,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	sɿ⁴³⁴	势	勢			sɿ5A
 	sɿ⁴³⁴	赐	賜			sɿ5A
 	sɿ⁴³⁴	四	四			sɿ5A
+	sɿ⁴³⁴	泗	泗			sɿ5A
 	sɿ⁴³⁴	肆	肆			sɿ5A
 	sɿ⁴³⁴	试	試			sɿ5A
 	zɿ³¹	瓷	瓷			zɿ2
@@ -264,7 +269,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	li⁴⁵	里	裡	～面		li3
 	li⁴⁵	理	理			li3
 	li⁴⁵	俚	俚			li3
-	li⁴⁵	娌	娌			li3
+	li⁴⁵	娌	娌	妯～		li3
 	li⁴⁵	鲤	鯉			li3
 	li²⁴	隶	隸	又		li6
 	li²⁴	隶	隷	又		li6
@@ -276,6 +281,8 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	li²⁴	丽	麗			li6
 	li²⁴	履	履			li6
 	li²⁴	利	利			li6
+	li²⁴	俐	俐	伶～		li6
+	li²⁴	蜊	蜊	蛤～		li6
 	li²⁴	痢	痢			li6
 	li²⁴	吏	吏			li6
 	li²⁴	泪	淚			li6
@@ -286,7 +293,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	tsi⁴³⁴	际	際			tsi5A
 	tsi⁴³⁴	济	濟			tsi5A
 	tsi⁴³⁴	剂	劑			tsi5A
-	tsi⁴³⁴	醉	醉	又		tsi5A
+	tsi⁴³⁴	醉	醉	（白）		tsi5A
 	tsi⁴³⁴	左	左	～手		tsi5A
 	tsʰi⁵³	蛆	蛆			tsʰi1
 	tsʰi⁵³	趋	趨			tsʰi1
@@ -345,7 +352,9 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	tɕi⁴³⁴	既	既			tɕi5A
 	tɕi⁴³⁴	既	旣			tɕi5A
 	tɕi⁴³⁴	季	季			tɕi5A
-	tɕʰi⁵³	溪	溪			tɕʰi1
+	tɕʰi⁵³	溪	溪	小～		tɕʰi1
+	tɕʰi⁵³	溪	谿	玉～生（李商隱），慈～（浙江地名）		tɕʰi1
+	tɕʰi⁵³	谿	谿	姓		tɕʰi1
 	tɕʰi⁵³	欺	欺			tɕʰi1
 	tɕʰi⁴⁵	岂	豈			tɕʰi3
 	tɕʰi⁴⁵	启	啓			tɕʰi3
@@ -386,10 +395,11 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ȵi³¹	疑	疑			ȵi2
 	ȵi³¹	拟	擬			ȵi2
 	ȵi³¹	沂	沂	臨～		ȵi2
-	ȵi⁴⁵	你	你			ȵi3
-	ȵi⁴⁵	你	妳			ȵi3
-	ȵi⁴⁵	你	祢			ȵi3
-	ȵi⁴⁵	你	伱			ȵi3
+	ȵi⁴⁵	你	你	第二人稱		ȵi3
+	ȵi⁴⁵	你	妳	用於女性的第二人稱		ȵi3
+	ȵi⁴⁵	你	祢	用於神的第二人稱		ȵi3
+	ȵi⁴⁵	你	伱	同“你”		ȵi3
+	ȵi⁴⁵	你	儞	同“你”		ȵi3
 	ȵi²⁴	艺	藝			ȵi6
 	ȵi²⁴	谊	誼			ȵi6
 	ȵi²⁴	腻	膩			ȵi6
@@ -399,7 +409,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ɕi⁵³	牺	犧			ɕi1
 	ɕi⁵³	熙	熙			ɕi1
 	ɕi⁵³	熙	煕			ɕi1
-	ɕi⁵³	熙	熈			ɕi1
+	ɕi⁵³	熙	熈	俗熙字		ɕi1
 	ɕi⁵³	希	希			ɕi1
 	ɕi⁵³	稀	稀			ɕi1
 	ɕi⁵³	嬉	嬉			ɕi1
@@ -407,7 +417,12 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ɕi⁴³⁴	戏	戲			ɕi5A
 	ɕi⁴³⁴	戏	戱			ɕi5A
 	ɕi⁴³⁴	戏	戯			ɕi5A
-	ɦi³¹	携	攜			ɦi2
+	ɦi³¹	奚	奚			ɦi2
+	ɦi³¹	携	携	俗攜字		ɦi2
+	ɦi³¹	携	攜	～帶		ɦi2
+	ɦi³¹	携	擕	俗攜字		ɦi2
+	ɦi³¹	携	㩗	俗攜字		ɦi2
+	ɦi³¹	携	㩦	俗攜字		ɦi2
 	ɦi³¹	畦	畦			ɦi2
 	ɦi³¹	移	移			ɦi2
 	ɦi³¹	夷	夷			ɦi2
@@ -431,6 +446,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ɦi²⁴	亿	億			ɦi6
 	ɦiɪʔ²⁴	忆	憶	記～		ɦiɪʔ8
 	ɦi²⁴	刈	刈	磨～落個咧：磨损了		ɦi6
+	i⁵³	伊	伊			i1
 	i⁵³	医	醫			i1
 	i⁵³	衣	衣			i1
 	i⁵³	依	依			i1
@@ -473,6 +489,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	bu²⁴	埠	埠			bu6
 	bu²⁴	伏	伏	～下來		bu6
 	fu⁵³	孵	孵			fu1
+	fu⁵³	俘	俘			fu1
 	fu⁵³	夫	夫			fu1
 	fu⁵³	肤	膚			fu1
 	fu⁵³	敷	敷			fu1
@@ -536,6 +553,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	kʰu³¹²	裤	褲			kʰu5B
 	hu⁵³	呼	呼			hu1
 	hu⁴⁵	虎	虎			hu3
+	hu⁴⁵	琥	琥			hu3
 	hu⁴⁵	浒	滸	水～傳		hu3
 	ɕy⁴⁵	浒	滸	～墅關		ɕy3
 	ɦu³¹	吴	吳			ɦu2
@@ -597,14 +615,14 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	tɕy⁴³⁴	据	據			tɕy5A
 	tɕy⁴³⁴	锯	鋸			tɕy5A
 	tɕy⁴³⁴	驻	駐			tɕy5A
-	tɕy⁴³⁴	注	注			tɕy5A
-	tɕy⁴³⁴	注	註			tɕy5A
+	tɕy⁴³⁴	注	注	～射，～意		tɕy5A
+	tɕy⁴³⁴	注	註	批～，～釋		tɕy5A
 	tɕy⁴³⁴	蛀	蛀			tɕy5A
 	tɕy⁴³⁴	铸	鑄			tɕy5A
 	tɕy⁴³⁴	句	句			tɕy5A
 	tɕy⁴³⁴	鳜	鱖			tɕy5A
-	ɕy⁵³	枢	樞			ɕy1
-	tɕʰy⁵³	区	區			tɕʰy1
+	tɕʰy⁵³	枢	樞			tɕʰy1
+	tɕʰy⁵³	区	區	～域		tɕʰy1
 	tɕʰy⁵³	驱	驅			tɕʰy1
 	tɕʰy⁵³	吹	吹			tɕʰy1
 	tɕʰy⁴⁵	处	處	相～		tɕʰy3
@@ -812,6 +830,8 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	sɪ⁴³⁴	腺	腺			sɪ5A
 	zɪ³¹	前	前			zɪ2
 	zɪ³¹	旋	旋	～鑿：螺絲刀		zɪ2
+	zɪ³¹	璇	璇			zɪ2
+	zɪ³¹	璇	璿			zɪ2
 	zɪ²⁴	贱	賤			zɪ6
 	zɪ²⁴	羡	羨			zɪ6
 	ɪ⁴⁵	呕	嘔	又		ɪ3
@@ -863,11 +883,12 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	dʑiɪ²⁴	健	健			dʑiɪ6
 	ȵiɪ⁵³	拈	拈			ȵiɪ1
 	ȵiɪ³¹	黏	黏			ȵiɪ2
-	ȵiɪ³¹	粘	粘			ȵiɪ2
+	ȵiɪ³¹	粘	粘	俗黏字		ȵiɪ2
 	ȵiɪ³¹	严	嚴			ȵiɪ2
 	ȵiɪ³¹	鲇	鮎			ȵiɪ2
 	ȵiɪ³¹	鲇	鯰			ȵiɪ2
 	ȵiɪ³¹	年	年			ȵiɪ2
+	ȵiɪ³¹	年	秊	年本字		ȵiɪ2
 	ȵiɪ³¹	妍	妍			ȵiɪ2
 	ȵiɪ³¹	妍	姸			ȵiɪ2
 	ȵiɪ³¹	研	研			ȵiɪ2
@@ -955,8 +976,9 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	pi⁴³⁴	臂	臂	又		pi5A
 	pʰai⁵³	胚	胚			pʰai1
 	pʰai⁵³	坯	坯			pʰai1
+	pʰai⁵³	坏	坏			pʰai1
+	pʰai⁵³	丕	丕			pʰai1
 	pʰei⁵³	剖	剖			pʰei1
-	pʰəɯ⁵³	剖	剖			pʰəɯ1
 	pʰai³¹²	配	配			pʰai5B
 	bai³¹	培	培			bai2
 	bai³¹	陪	陪			bai2
@@ -1055,7 +1077,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	tsei⁴⁵	走	走			tsei3
 	tsai⁴³⁴	缀	綴			tsai5A
 	tsai⁴³⁴	赘	贅			tsai5A
-	tsai⁴³⁴	醉	醉	又		tsai5A
+	tsai⁴³⁴	醉	醉	（文）		tsai5A
 	tsei⁴³⁴	奏	奏			tsei5A
 	tsei⁴³⁴	皱	皺			tsei5A
 	tsei⁴³⁴	绉	縐	～巴巴		tsei5A
@@ -1069,9 +1091,9 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	tsʰai⁵³	炊	炊			tsʰai1
 	tsʰei⁵³	抽	抽			tsʰei1
 	tsʰei⁴⁵	丑	丑	小～		tsʰei3
-	tsʰei⁴⁵	丑	醜			tsʰei3
-	tsʰai³¹²	脆	脆			tsʰai5B
-	tsʰi³¹²	脆	脆			tsʰi5B
+	tsʰei⁴⁵	丑	醜	～八怪		tsʰei3
+	tsʰai³¹²	脆	脆	（文）		tsʰai5B
+	tsʰi³¹²	脆	脆	（白）		tsʰi5B
 	tsʰai³¹²	翠	翠			tsʰai5B
 	tsʰei³¹²	凑	湊			tsʰei5B
 	tsʰei³¹²	臭	臭			tsʰei5B
@@ -1100,15 +1122,24 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	zai²⁴	坠	墜			zai6
 	zei²⁴	纣	紂			zei6
 	zei²⁴	宙	宙			zei6
-	dzei²⁴	冑	冑	甲～		dzei6
-	dzei²⁴	胄	胄	～裔，貴～		dzei6
+	dzei²⁴	籀	籀			dzei6
+	dzei²⁴	籀	籒			dzei6
+	dzei²⁴	冑	冑	甲～（從“冃”，與“胄”不同）		dzei6
+	dzei²⁴	胄	胄	～裔，貴～（從“肉”，與“冑”不同）		dzei6
+	dzei²⁴	伷	伷	貴～（同“胄”，多用於人名）		dzei6
 	dzei²⁴	骤	驟			dzei6
 	sai⁵³	虽	雖			sai1
 	si⁵³	尿	尿			si1
-	sei⁵³	搜	搜			sei1
+	sei⁵³	溲	溲	排泄小便		sei1
+	sei⁵³	搜	搜	～查，～集		sei1
+	sei⁵³	搜	蒐	～集		sei1
+	sei⁵³	蒐	蒐	茜草		sei1
 	sei⁵³	飕	颼			sei1
 	sei⁵³	馊	餿			sei1
 	sei⁵³	收	收			sei1
+	sei⁴⁵	叟	叟			sei3
+	sei⁴⁵	叟	叜	古文叟字		sei3
+	sei⁴⁵	傁	傁			sei3
 	sei⁴⁵	手	手			sei3
 	sei⁴⁵	首	首			sei3
 	sei⁴⁵	守	守			sei3
@@ -1137,7 +1168,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	zei²⁴	售	售			zei6
 	kei⁵³	沟	溝			kei1
 	kei⁵³	勾	勾	～當，～銷		kei1
-	kei⁵³	勾	句			kei1
+	kei⁵³	句	句	高～麗		kei1
 	kei⁵³	钩	鉤			kei1
 	kei⁵³	钩	鈎			kei1
 	kei⁴⁵	狗	狗			kei3
@@ -1162,6 +1193,10 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ɦʰei²⁴	后	後	～底：後面		ɦʰei6
 	ɦʰei²⁴	候	候			ɦʰei6
 	ei⁵³	欧	歐			ei1
+	ei⁵³	区	區	姓		ei1
+	ei⁵³	瓯	甌			ei1
+	ei⁵³	讴	謳			ei1
+	ei⁵³	沤	漚			ei1
 	ei⁵³	鸥	鷗			ei1
 	ei⁵³	殴	毆			ei1
 	ei⁴⁵	呕	嘔	當表示嘔吐時，申港衹單說嘔，不說嘔吐。		ei3
@@ -1185,7 +1220,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	kʰuai⁵³	亏	虧			kʰuai1
 	kʰuai³¹²	块	塊			kʰuai5B
 	kʰuai³¹²	喟	喟	～嘆		kʰuai5B
-	ɡuai³¹	癸	癸			ɡuai2
+	kuai⁴⁵	癸	癸			kuai3
 	ɡuai³¹	逵	逵			ɡuai2
 	ɡuai³¹	葵	葵	又		ɡuai2
 	ɡuai²⁴	溃	潰			ɡuai6
@@ -1208,13 +1243,16 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	bai³¹	徘	徘	～徊		bai2
 	ɦuai³¹	徊	徊	徘～		ɦuai2
 	ɦuai³¹	回	回	一～		ɦuai2
-	ɦuai³¹	回	囘			ɦuai2
+	ɦuai³¹	回	囘	一～		ɦuai2
+	ɦuai³¹	回	囬	一～		ɦuai2
 	ɦuai³¹	回	迴	～轉		ɦuai2
+	ɦuai³¹	回	逥	～轉		ɦuai2
 	ɦuai³¹	回	廻	～轉		ɦuai2
+	ɦuai³¹	回	廽	～轉		ɦuai2
 	ɦuai³¹	茴	茴			ɦuai2
 	ɦuai³¹	危	危			ɦuai2
 	ɦuai³¹	为	爲	行～		ɦuai2
-	ɦuai³¹	为	為			ɦuai2
+	ɦuai³¹	为	為	俗爲字		ɦuai2
 	ɦuai³¹	违	違			ɦuai2
 	ɦuai³¹	围	圍			ɦuai2
 	ɦuai²⁴	汇	匯	～合		ɦuai6
@@ -1229,9 +1267,9 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ɦuai²⁴	惠	惠			ɦuai6
 	ɦuai²⁴	慧	慧			ɦuai6
 	ɦuai²⁴	伪	僞			ɦuai6
-	ɦuai²⁴	伪	偽			ɦuai6
+	ɦuai²⁴	伪	偽	俗僞字		ɦuai6
 	ɦuai²⁴	为	爲	～人民服務		ɦuai6
-	ɦuai²⁴	为	為			ɦuai6
+	ɦuai²⁴	为	為	俗爲字		ɦuai6
 	ɦuai²⁴	位	位			ɦuai6
 	ɦuai²⁴	魏	魏			ɦuai6
 	ɦuai²⁴	讳	諱			ɦuai6
@@ -1254,6 +1292,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	pʰɤ⁵³	潘	潘			pʰɤ1
 	pʰɤ³¹²	判	判			pʰɤ5B
 	bɤ³¹	盘	盤			bɤ2
+	bɤ³¹	胖	胖	心寬體～		bɤ2
 	bɤ²⁴	伴	伴			bɤ6
 	bɤ²⁴	拌	拌			bɤ6
 	bɤ²⁴	叛	叛			bɤ6
@@ -1321,6 +1360,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	dzɤ³¹	传	傳	水滸～		dzɤ2
 	dzɤ³¹	椽	椽			dzɤ2
 	dzɤ²⁴	篆	篆			dzɤ6
+	dzɤ²⁴	蒃	蒃			dzɤ6
 	dzɤ²⁴	传	傳			dzɤ6
 	sɤ⁵³	膻	膻			sɤ1
 	sɤ⁵³	膻	羶			sɤ1
@@ -1468,7 +1508,8 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	kuɤ⁴³⁴	观	觀	寺～		kuɤ5A
 	kʰuɤ⁵³	宽	寬			kʰuɤ1
 	kʰuɤ⁴⁵	款	款			kʰuɤ3
-	huɤ⁵³	欢	歡			huɤ1
+	huɤ⁵³	欢	鬨			huɤ1
+	huɤ⁵³	欢	懽			huɤ1
 	huɤ⁴³⁴	焕	煥			huɤ5A
 	huɤ⁴³⁴	唤	喚			huɤ5A
 	ɦuɤ³¹	完	完			ɦuɤ2
@@ -1497,6 +1538,8 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	bo³¹	爬	爬			bo2
 	bo³¹	琶	琶			bo2
 	bo²⁴	耙	耙			bo6
+	mo³¹	蟆	蟆			mo2
+	mo³¹	蟆	蟇			mo2
 	mo³¹	麻	蔴			mo2
 	mo³¹	麻	麻			mo2
 	mo⁴⁵	马	馬			mo3
@@ -1545,7 +1588,9 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ŋo³¹	瓦	瓦			ŋo2
 	ŋo⁴⁵	瓦	瓦	磚～		ŋo3
 	ho⁵³	虾	蝦			ho1
-	ho⁵³	花	花			ho1
+	ho⁵³	花	花	～瓣，～費，姓		ho1
+	ho⁵³	花	蘤	～瓣		ho1
+	ho⁵³	花	芲	～瓣		ho1
 	ho⁴³⁴	化	化			ho5A
 	ɦo³¹	华	華			ɦo2
 	ɦo³¹	铧	鏵			ɦo2
@@ -1603,6 +1648,9 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	dəɯ³¹	驼	駝			dəɯ2
 	dəɯ³¹	驮	馱			dəɯ2
 	dəɯ³¹	驮	駄			dəɯ2
+	dəɯ³¹	陀	陀			dəɯ2
+	dəɯ³¹	佗	佗			dəɯ2
+	dəɯ³¹	沱	沱	滂～		dəɯ2
 	dəɯ³¹	徒	徒			dəɯ2
 	dəɯ³¹	屠	屠			dəɯ2
 	dəɯ³¹	途	途			dəɯ2
@@ -1643,6 +1691,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ləɯ⁴⁵	鲁	魯			ləɯ3
 	ləɯ⁴⁵	橹	櫓			ləɯ3
 	ləɯ⁴⁵	虏	虜			ləɯ3
+	ləɯ⁴⁵	掳	擄			ləɯ3
 	ləɯ⁴⁵	卤	鹵			ləɯ3
 	ləɯ⁴⁵	卤	滷			ləɯ3
 	lei⁴⁵	篓	簍			lei3
@@ -1689,10 +1738,12 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	səɯ⁴³⁴	数	數	～目（名詞）		səɯ5A
 	səɯ⁴³⁴	漱	漱	～口		səɯ5A
 	zəɯ³¹	锄	鋤			zəɯ2
+	zəɯ³¹	雏	雛			zəɯ2
 	zəɯ²⁴	坐	坐			zəɯ6
 	zəɯ²⁴	座	座			zəɯ6
 	kəɯ⁵³	哥	哥			kəɯ1
 	kəɯ⁵³	歌	歌			kəɯ1
+	kəɯ⁵³	歌	謌			kəɯ1
 	kəɯ⁵³	锅	鍋			kəɯ1
 	kəɯ⁵³	戈	戈			kəɯ1
 	kəɯ⁴⁵	个	個	～別		kəɯ3
@@ -1709,6 +1760,9 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	kʰəɯ³¹²	课	課			kʰəɯ5B
 	ŋəɯ³¹	娥	娥			ŋəɯ2
 	ŋəɯ³¹	蛾	蛾			ŋəɯ2
+	ŋəɯ³¹	讹	訛			ŋəɯ2
+	ŋəɯ³¹	讹	譌	訛本字		ŋəɯ2
+	ŋəɯ³¹	囮	囮			ŋəɯ2
 	ŋəɯ³¹	鹅	鵝			ŋəɯ2
 	ŋəɯ³¹	鹅	鵞			ŋəɯ2
 	ŋəɯ³¹	鹅	䳗			ŋəɯ2
@@ -1831,7 +1885,11 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ȵi³¹	儿	兒	（白）～子，貓～		ȵi2
 	ŋ³¹	儿	兒	（白）兒綴		ŋ2
 	ɦər³¹	而	而			ɦər2
+	ər⁴⁵	尔	尔	同“𡭗”，即同“爾”		ər3
 	ər⁴⁵	尔	爾			ər3
+	ər⁴⁵	尔	𡭗	同“爾”		ər3
+	ər⁴⁵	尔	尓	同“𡭗”，即同“爾”		ər3
+	ər⁴⁵	尔	尒	同“𡭗”，即同“爾”		ər3
 	ər⁴⁵	耳	耳	（文）		ər3
 	ȵi⁴⁵	耳	耳	（白）～朵		ȵi3
 	ər⁴⁵	饵	餌	（文）		ər3
@@ -1978,6 +2036,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	lɛ²⁴	烂	爛			lɛ6
 	nɛ²⁴	烂	爛	僅“爛泥”一詞		nɛ6
 	tsɛ⁵³	簪	簪			tsɛ1
+	tsai⁵³	灾	灾	同“災”		tsai1
 	tsai⁵³	灾	災			tsai1
 	tsai⁵³	栽	栽			tsai1
 	tsɑ⁵³	斋	齋			tsɑ1
@@ -2149,6 +2208,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	kʰuɑ³¹²	筷	筷			kʰuɑ5B
 	kʰuɑ³¹²	快	快			kʰuɑ5B
 	ɡuɛ³¹	环	環			ɡuɛ2
+	ɡuɛ³¹	寰	寰			ɡuɛ2
 	ɡuɛ²⁴	掼	摜	用力扔		ɡuɛ6
 	huɑ⁵³	歪	歪	又		huɑ1
 	huɛ⁴³⁴	甩	甩			huɛ5A
@@ -2174,11 +2234,16 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	pɑ⁵³	巴	巴	中～車		pɑ1
 	bɑ²⁴	吧	吧			bɑ6
 	tɑ⁴⁵	打	打			tɑ3
-	tʰɑ⁵³	他	他			tʰɑ1
-	tʰɑ⁵³	他	祂			tʰɑ1
-	tʰɑ⁵³	它	它			tʰɑ1
-	tʰɑ⁵³	它	牠			tʰɑ1
-	tʰɑ⁵³	她	她			tʰɑ1
+	dɑ³¹	他	他	（口）第三人稱		dɑ2
+	dɑ³¹	他	祂	（口）神明的第三人稱		dɑ2
+	dɑ³¹	它	它	（口）無生物的第三身指稱詞		dɑ2
+	dɑ³¹	它	牠	（口）動物的第三人稱		dɑ2
+	dɑ³¹	她	她	（口）女性第三人稱		dɑ2
+	tʰɑ⁵³	他	他	（文）其～		tʰɑ1
+	tʰɑ⁵³	他	祂	（文）		tʰɑ1
+	tʰɑ⁵³	它	它	（文）		tʰɑ1
+	tʰɑ⁵³	它	牠	（文）		tʰɑ1
+	tʰɑ⁵³	她	她	（文）		tʰɑ1
 	dɑ²⁴	大	大	～學，～蒜		dɑ6
 	lɑ⁵³	拉	拉			lɑ1
 	lɑ³¹	垃	垃	～圾（新）		lɑ2
@@ -2523,7 +2588,9 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	tsʰiaɤ⁵³	缲	繰	～邊		tsʰiaɤ1
 	tsʰiaɤ⁵³	悄	悄			tsʰiaɤ1
 	tsʰiaɤ³¹²	俏	俏			tsʰiaɤ5B
+	tsʰiaɤ³¹²	峭	峭			tsʰiaɤ5B
 	ziaɤ³¹	瞧	瞧			ziaɤ2
+	siaɤ⁵³	峭	峭	～岐（原爲蕭岐，今改爲峭岐，仍念蕭岐）		siaɤ1
 	siaɤ⁵³	消	消			siaɤ1
 	siaɤ⁵³	宵	宵			siaɤ1
 	siaɤ⁵³	硝	硝			siaɤ1
@@ -3000,7 +3067,9 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	dzəŋ³¹	城	城			dzəŋ2
 	dzəŋ³¹	诚	誠			dzəŋ2
 	dzəŋ²⁴	阵	陣			dzəŋ6
+	dzəŋ²⁴	嵊	嵊	～泗列島		dzəŋ6
 	dzəŋ²⁴	剩	剩			dzəŋ6
+	dzəŋ²⁴	剩	賸			dzəŋ6
 	tsʰəŋ⁴⁵	逞	逞			tsʰəŋ3
 	dzəŋ²⁴	郑	鄭			dzəŋ6
 	səŋ⁵³	参	參	人～		səŋ1
@@ -3061,11 +3130,14 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	kəŋ⁵³	跟	跟			kəŋ1
 	kəŋ⁵³	根	根			kəŋ1
 	kəŋ⁵³	更	更	～換		kəŋ1
+	kəŋ⁵³	羹	羹			kəŋ1
 	kəŋ⁵³	庚	庚			kəŋ1
 	kəŋ⁵³	耕	耕			kəŋ1
 	kəŋ⁴⁵	哽	哽			kəŋ3
 	kəŋ⁴⁵	耿	耿			kəŋ3
 	kəŋ⁴³⁴	更	更	～好		kəŋ5A
+	kəŋ⁴³⁴	亘	亙			kəŋ5A
+	kəŋ⁴³⁴	艮	艮			kəŋ5A
 	kʰəŋ⁵³	坑	坑			kʰəŋ1
 	kʰəŋ⁴⁵	恳	懇			kʰəŋ3
 	kʰəŋ⁴⁵	垦	墾			kʰəŋ3
@@ -3124,13 +3196,14 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	biŋ²⁴	并	竝	～且		biŋ6
 	biŋ²⁴	并	𠀤	～且		biŋ6
 	miŋ³¹	民	民			miŋ2
-	miŋ³¹	悯	憫			miŋ2
-	miŋ³¹	敏	敏			miŋ2
+	miŋ⁴⁵	悯	憫			miŋ3
+	miŋ⁴⁵	敏	敏			miŋ3
 	miŋ³¹	明	明	聰～		miŋ2
 	miŋ³¹	明	朙	聰～		miŋ2
 	miŋ³¹	名	名			miŋ2
 	miŋ³¹	铭	銘			miŋ2
 	miŋ⁴⁵	闽	閩			miŋ3
+	miŋ⁴⁵	闵	閔			miŋ3
 	miŋ⁴⁵	鸣	鳴			miŋ3
 	miŋ⁴⁵	皿	皿			miŋ3
 	miŋ⁴⁵	冥	冥			miŋ3
@@ -3139,6 +3212,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	miŋ⁴⁵	螟	螟			miŋ3
 	miŋ²⁴	命	命			miŋ6
 	tiŋ⁵³	丁	丁			tiŋ1
+	tiŋ⁵³	仃	仃	伶～		tiŋ1
 	tiŋ⁵³	钉	釘	名詞		tiŋ1
 	tiŋ⁵³	疔	疔			tiŋ1
 	tiŋ⁵³	蜓	蜓	蜻～		tiŋ1
@@ -3175,7 +3249,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	liŋ³¹	灵	靈			liŋ2
 	liŋ³¹	零	零			liŋ2
 	liŋ³¹	铃	鈴			liŋ2
-	liŋ³¹	伶	伶			liŋ2
+	liŋ³¹	伶	伶	～仃，～俐		liŋ2
 	liŋ³¹	翎	翎			liŋ2
 	liŋ³¹	龄	齡			liŋ2
 	liŋ⁴⁵	领	領			liŋ3
@@ -3274,7 +3348,8 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	dʑiŋ²⁴	槿	槿			dʑiŋ6
 	dʑiŋ²⁴	馑	饉	饑～		dʑiŋ6
 	dʑiŋ²⁴	仅	僅			dʑiŋ6
-	dʑiŋ³¹	勤	勤			dʑiŋ2
+	dʑiŋ³¹	勤	勤	～勞，殷～		dʑiŋ2
+	dʑiŋ³¹	勤	懃	慇～		dʑiŋ2
 	dʑiŋ³¹	芹	芹			dʑiŋ2
 	dʑiŋ³¹	擎	擎			dʑiŋ2
 	dʑiŋ³¹	鲸	鯨			dʑiŋ2
@@ -3295,7 +3370,10 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ɕiŋ⁴³⁴	衅	釁			ɕiŋ5A
 	ɕiŋ⁴³⁴	兴	興	高～		ɕiŋ5A
 	ɦiŋ³¹	吟	吟			ɦiŋ2
-	ɦiŋ³¹	淫	淫			ɦiŋ2
+	ɦiŋ³¹	淫	淫	～雨，～亂		ɦiŋ2
+	ɦiŋ³¹	淫	滛	淫訛字		ɦiŋ2
+	ɦiŋ³¹	淫	婬	～亂		ɦiŋ2
+	ɦiŋ³¹	霪	霪	～雨		ɦiŋ2
 	ɦiŋ³¹	银	銀			ɦiŋ2
 	ɦiŋ³¹	寅	寅			ɦiŋ2
 	ɦiŋ³¹	行	行			ɦiŋ2
@@ -3312,13 +3390,17 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ɦiŋ³¹	萤	螢			ɦiŋ2
 	ɦiŋ²⁴	幸	幸	～福		ɦiŋ6
 	ɦiŋ²⁴	幸	倖	～免		ɦiŋ6
+	ɦiŋ²⁴	尹	尹			ɦiŋ6
 	iŋ⁵³	音	音			iŋ1
 	iŋ⁵³	阴	陰			iŋ1
-	iŋ⁵³	阴	隂			iŋ1
+	iŋ⁵³	阴	隂	俗陰字		iŋ1
 	iŋ⁵³	荫	蔭			iŋ1
 	iŋ⁵³	因	因			iŋ1
+	iŋ⁵³	因	囙	俗因字		iŋ1
 	iŋ⁵³	姻	姻			iŋ1
-	iŋ⁵³	殷	殷			iŋ1
+	iŋ⁵³	姻	婣	同姻		iŋ1
+	iŋ⁵³	殷	殷	～切，～勤		iŋ1
+	iŋ⁵³	殷	慇	～懃		iŋ1
 	iŋ⁵³	应	應	～當		iŋ1
 	iŋ⁵³	鹰	鷹			iŋ1
 	iŋ⁵³	蝇	蠅			iŋ1
@@ -3360,12 +3442,14 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	uəŋ⁴⁵	稳	穩			uəŋ3
 	paŋ⁵³	浜	浜			paŋ1
 	pʰaŋ⁵³	乓	乓			pʰaŋ1
+	pʰaŋ⁴⁵	碰	碰			pʰaŋ3
+	pʰaŋ³¹²	碰	碰	～杯		pʰaŋ5B
 	baŋ³¹	朋	朋			baŋ2
 	baŋ³¹	鹏	鵬			baŋ2
 	baŋ³¹	膨	膨			baŋ2
 	baŋ³¹	棚	棚			baŋ2
 	baŋ²⁴	蚌	蚌			baŋ6
-	baŋ²⁴	碰	碰			baŋ6
+	baŋ²⁴	碰	碰	～著		baŋ6
 	maŋ⁴⁵	猛	猛	密		maŋ3
 	maŋ²⁴	孟	孟			maŋ6
 	laŋ⁴⁵	冷	冷			laŋ3
@@ -3396,6 +3480,8 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	dzaŋ³¹	常	常			dzaŋ2
 	dzaŋ²⁴	丈	丈			dzaŋ6
 	dzaŋ²⁴	杖	杖			dzaŋ6
+	dzaŋ²⁴	剩	剩	（俗）～下來（正字應爲長）		dzaŋ6
+	dzaŋ²⁴	长	長	剩：身無～物		dzaŋ6
 	saŋ⁵³	商	商			saŋ1
 	saŋ⁵³	伤	傷			saŋ1
 	saŋ⁵³	生	生	先～（老师）		saŋ1
@@ -3410,7 +3496,8 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	zaŋ²⁴	上	上			zaŋ6
 	zaŋ²⁴	尚	尚			zaŋ6
 	zaŋ²⁴	尚	尙			zaŋ6
-	kaŋ⁵³	更	更			kaŋ1
+	kaŋ⁵³	更	更	半夜三～		kaŋ1
+	kaŋ⁵³	羹	羹	～飯		kaŋ1
 	kaŋ⁵³	庚	庚			kaŋ1
 	kaŋ⁵³	耕	耕	～田		kaŋ1
 	kaŋ⁴⁵	哽	哽			kaŋ3
@@ -3422,9 +3509,9 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ŋaŋ²⁴	硬	硬			ŋaŋ6
 	haŋ⁵³	亨	亨	大～		haŋ1
 	haŋ⁴³⁴	夯	夯			haŋ5A
-	ɦʰaŋ³¹	行	行	～頭		ɦʰaŋ2
+	ɦʰaŋ³¹	行	行	～頭，～李，銀～		ɦʰaŋ2
 	ɦʰaŋ³¹	桁	桁	～條		ɦʰaŋ2
-	ɦʰaŋ²⁴	杏	杏			ɦʰaŋ6
+	ɦʰaŋ²⁴	杏	杏	～春橋（江陰地名），～花		ɦʰaŋ6
 	liaŋ³¹	良	良			liaŋ2
 	liaŋ³¹	凉	涼			liaŋ2
 	liaŋ³¹	量	量	動詞，測～		liaŋ2
@@ -3432,6 +3519,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	liaŋ³¹	梁	梁			liaŋ2
 	liaŋ³¹	梁	樑			liaŋ2
 	liaŋ³¹	粱	粱			liaŋ2
+	liaŋ⁴⁵	俩	倆			liaŋ3
 	liaŋ⁴⁵	两	兩	～個，斤～		liaŋ3
 	liaŋ⁴⁵	魉	魎	魑魅魍～		liaŋ3
 	liaŋ⁴⁵	辆	輛			liaŋ3
@@ -3493,7 +3581,9 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ɕiaŋ⁴⁵	饷	餉			ɕiaŋ3
 	ɕiaŋ⁴⁵	享	享			ɕiaŋ3
 	ɕiaŋ⁴⁵	响	響			ɕiaŋ3
-	ɕiaŋ⁴³⁴	向	向			ɕiaŋ5A
+	ɕiaŋ⁴³⁴	向	向	方～，面～，～來		ɕiaŋ5A
+	ɕiaŋ⁴³⁴	向	嚮	～導，從前		ɕiaŋ5A
+	ɕiaŋ⁴³⁴	向	曏	從前		ɕiaŋ5A
 	ɦiaŋ³¹	羊	羊			ɦiaŋ2
 	ɦiaŋ³¹	洋	洋			ɦiaŋ2
 	ɦiaŋ³¹	烊	烊			ɦiaŋ2
@@ -3517,16 +3607,18 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	paŋ⁴⁵	绑	綁			paŋ3
 	paŋ⁴³⁴	谤	謗			paŋ5A
 	pʰaŋ⁵³	髈	髈			pʰaŋ1
+	pʰaŋ⁵³	滂	滂			pʰaŋ1
 	pʰaŋ³¹²	胖	胖			pʰaŋ5B
-	baŋ³¹	滂	滂			baŋ2
+	baŋ³¹	滂	滂	～沱		baŋ2
 	baŋ³¹	旁	旁	～邊，～皇		baŋ2
+	baŋ³¹	傍	傍	～邊		baŋ2
 	baŋ³¹	螃	螃			baŋ2
 	baŋ³¹	膀	膀			baŋ2
 	baŋ³¹	防	防			baŋ2
 	baŋ³¹	庞	龐			baŋ2
 	baŋ³¹	彷	彷	～徨		baŋ2
 	baŋ³¹	彷	徬	～徨		baŋ2
-	baŋ²⁴	傍	傍			baŋ6
+	baŋ²⁴	傍	傍	依～		baŋ6
 	baŋ²⁴	棒	棒			baŋ6
 	maŋ³¹	忙	忙			maŋ2
 	maŋ³¹	芒	芒			maŋ2
@@ -3715,7 +3807,8 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	tɪʔ⁵⁵	的	的	目～，打～		tɪʔ7
 	tɪʔ⁵⁵	滴	滴			tɪʔ7
 	tɪʔ⁵⁵	嫡	嫡			tɪʔ7
-	tɪʔ⁵⁵	摘	摘	～下來		tɪʔ7
+	tɪʔ⁵⁵	摘	摘	（俗）～下來（正字應爲扚）		tɪʔ7
+	tɪʔ⁵⁵	扚	扚	～下來		tɪʔ7
 	tʰɪʔ⁵⁵	贴	貼			tʰɪʔ7
 	tʰɪʔ⁵⁵	帖	帖	字～，請～，妥～		tʰɪʔ7
 	tʰɪʔ⁵⁵	铁	鐵			tʰɪʔ7
@@ -3769,8 +3862,13 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	tsʰɪʔ⁵⁵	辑	輯			tsʰɪʔ7
 	tsʰɪʔ⁵⁵	七	七			tsʰɪʔ7
 	tsʰɪʔ⁵⁵	漆	漆			tsʰɪʔ7
-	tsʰɪʔ⁵⁵	戚	戚			tsʰɪʔ7
+	tsʰɪʔ⁵⁵	戚	戚	親～，哀～，干～（斧頭）		tsʰɪʔ7
+	tsʰɪʔ⁵⁵	戚	慽	哀～		tsʰɪʔ7
+	tsʰɪʔ⁵⁵	戚	慼	哀～		tsʰɪʔ7
+	tsʰɪʔ⁵⁵	戚	鏚	干～（斧頭）		tsʰɪʔ7
 	zɪʔ²⁴	捷	捷			zɪʔ8
+	zɪʔ²⁴	睫	睫			zɪʔ8
+	zɪʔ²⁴	婕	婕			zɪʔ8
 	zɪʔ²⁴	集	集			zɪʔ8
 	zɪʔ²⁴	习	習			zɪʔ8
 	zɪʔ²⁴	截	截			zɪʔ8
@@ -3785,6 +3883,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	sɪʔ⁵⁵	屑	屑			sɪʔ7
 	sɪʔ⁵⁵	楔	楔			sɪʔ7
 	sɪʔ⁵⁵	雪	雪			sɪʔ7
+	sɪʔ⁵⁵	燮	燮			sɪʔ7
 	sɪʔ⁵⁵	悉	悉			sɪʔ7
 	sɪʔ⁵⁵	蟋	蟋			sɪʔ7
 	sɪʔ⁵⁵	息	息			sɪʔ7
@@ -3807,8 +3906,11 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	tɕiɪʔ⁵⁵	髻	髻			tɕiɪʔ7
 	tɕiɪʔ⁵⁵	劫	劫			tɕiɪʔ7
 	tɕiɪʔ⁵⁵	揭	揭			tɕiɪʔ7
+	tɕiɪʔ⁵⁵	讦	訐	攻～		tɕiɪʔ7
 	tɕiɪʔ⁵⁵	结	結			tɕiɪʔ7
 	tɕiɪʔ⁵⁵	洁	潔			tɕiɪʔ7
+	tɕiɪʔ⁵⁵	洁	絜	同“潔”		tɕiɪʔ7
+	tɕiɪʔ⁵⁵	絜	絜	姓		tɕiɪʔ7
 	tɕiɪʔ⁵⁵	秸	秸			tɕiɪʔ7
 	tɕiɪʔ⁵⁵	桔	桔	～梗		tɕiɪʔ7
 	tɕiɪʔ⁵⁵	戟	戟			tɕiɪʔ7
@@ -3824,7 +3926,8 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	tɕʰiɪʔ⁵⁵	吃	喫	～飯		tɕʰiɪʔ7
 	tɕʰiɪʔ⁵⁵	泣	泣			tɕʰiɪʔ7
 	dʑiɪʔ²⁴	杰	杰	周～倫		dʑiɪʔ8
-	dʑiɪʔ²⁴	杰	傑			dʑiɪʔ8
+	dʑiɪʔ²⁴	杰	傑	～出		dʑiɪʔ8
+	dʑiɪʔ²⁴	桀	桀			dʑiɪʔ8
 	dʑiɪʔ²⁴	竭	竭			dʑiɪʔ8
 	dʑiɪʔ²⁴	及	及			dʑiɪʔ8
 	dʑiɪʔ²⁴	极	極			dʑiɪʔ8
@@ -3844,6 +3947,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ɕiɪʔ⁵⁵	吸	吸			ɕiɪʔ7
 	ɦiɪʔ²⁴	叶	叶	同“協”		ɦiɪʔ8
 	ɦiɪʔ²⁴	叶	葉			ɦiɪʔ8
+	ɦiɪʔ²⁴	絜	絜	《禮·大學》是以君子有絜矩之道也		ɦiɪʔ8
 	ɦiɪʔ²⁴	页	頁			ɦiɪʔ8
 	ɦiɪʔ²⁴	协	協			ɦiɪʔ8
 	ɦiɪʔ²⁴	掖	掖			ɦiɪʔ8
@@ -3913,7 +4017,9 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	lɔʔ²⁴	烙	烙			lɔʔ8
 	lɔʔ²⁴	骆	駱			lɔʔ8
 	lɔʔ²⁴	酪	酪			lɔʔ8
-	lɔʔ²⁴	洛	洛			lɔʔ8
+	lɔʔ²⁴	洛	洛	～水，～陽		lɔʔ8
+	lɔʔ²⁴	洛	雒	～陽（漢光武帝劉秀改洛陽爲雒陽，魏文帝曹丕改回洛陽）		lɔʔ8
+	lɔʔ²⁴	雒	雒	姓		lɔʔ8
 	lɔʔ²⁴	络	絡	活～		lɔʔ8
 	lɔʔ²⁴	乐	樂			lɔʔ8
 	lɔʔ²⁴	鹿	鹿			lɔʔ8
@@ -3943,7 +4049,8 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	tsɔʔ⁵⁵	嘱	囑			tsɔʔ7
 	tsʰɔʔ⁵⁵	撮	撮			tsʰɔʔ7
 	tsʰɔʔ⁵⁵	猝	猝			tsʰɔʔ7
-	tɕʰiɔʔ⁵⁵	出	出			tɕʰiɔʔ7
+	tɕʰiɔʔ⁵⁵	出	出	～去		tɕʰiɔʔ7
+	tɕʰiɔʔ⁵⁵	出	齣	一～戲		tɕʰiɔʔ7
 	tsʰɔʔ⁵⁵	戳	戳			tsʰɔʔ7
 	tsʰɔʔ⁵⁵	龊	齪			tsʰɔʔ7
 	tsʰɔʔ⁵⁵	畜	畜	～生		tsʰɔʔ7
@@ -3953,6 +4060,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	dzɔʔ²⁴	镯	鐲			dzɔʔ8
 	dzɔʔ²⁴	逐	逐			dzɔʔ8
 	dzɔʔ²⁴	轴	軸			dzɔʔ8
+	dzɔʔ²⁴	妯	妯	～娌		dzɔʔ8
 	ɕiɔʔ⁵⁵	说	說			ɕiɔʔ7
 	ɕiɔʔ⁵⁵	说	説			ɕiɔʔ7
 	sɔʔ⁵⁵	宿	宿			sɔʔ7
@@ -4039,8 +4147,13 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	dʑiɔʔ²⁴	倔	倔			dʑiɔʔ8
 	dʑiɔʔ²⁴	局	局			dʑiɔʔ8
 	ȵiɔʔ²⁴	肉	肉			ȵiɔʔ8
+	ȵiɔʔ²⁴	肉	宍			ȵiɔʔ8
+	ɕiɔʔ⁵⁵	噱	噱	～頭		ɕiɔʔ7
 	ɕiɔʔ⁵⁵	血	血			ɕiɔʔ7
+	ɕiɔʔ⁵⁵	恤	恤			ɕiɔʔ7
 	ɕiɔʔ⁵⁵	恤	卹			ɕiɔʔ7
+	ɕiɔʔ⁵⁵	恤	䘏			ɕiɔʔ7
+	ɕiɔʔ⁵⁵	恤	賉			ɕiɔʔ7
 	ɕiɔʔ⁵⁵	畜	畜	～牧業		ɕiɔʔ7
 	ɕiɔʔ⁵⁵	蓄	蓄			ɕiɔʔ7
 	ɕiɔʔ⁵⁵	旭	旭			ɕiɔʔ7
@@ -4053,7 +4166,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	ɦiɔʔ²⁴	穴	穴			ɦiɔʔ8
 	ɦiɔʔ²⁴	域	域			ɦiɔʔ8
 	ɦiɔʔ²⁴	疫	疫			ɦiɔʔ8
-	ɦiɪʔ²⁴	疫	疫			ɦiɪʔ8
+	ɦiɪʔ²⁴	疫	疫	新讀		ɦiɪʔ8
 	ɦiɔʔ²⁴	役	役			ɦiɔʔ8
 	ɦiɔʔ²⁴	育	育			ɦiɔʔ8
 	ɦiɔʔ²⁴	玉	玉			ɦiɔʔ8
@@ -4070,6 +4183,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	pəʔ⁵⁵	钵	缽			pəʔ7
 	pʰəʔ⁵⁵	泼	潑			pʰəʔ7
 	pʰəʔ⁵⁵	迫	迫			pʰəʔ7
+	pʰəʔ⁵⁵	珀	珀			pʰəʔ7
 	bəʔ²⁴	鼻	鼻	（又音）～頭：指鼻子		bəʔ8
 	bəʔ²⁴	勃	勃			bəʔ8
 	bəʔ²⁴	饽	餑			bəʔ8
@@ -4087,6 +4201,8 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	vəʔ²⁴	佛	佛			vəʔ8
 	vəʔ²⁴	物	物	～理，事～		vəʔ8
 	təʔ⁵⁵	得	得			təʔ7
+	təʔ⁵⁵	掇	掇	移動：～一～檯子		təʔ7
+	təʔ⁵⁵	䊞	䊞	黏		təʔ7
 	təʔ⁵⁵	德	德			təʔ7
 	tʰəʔ⁵⁵	脱	脫			tʰəʔ7
 	dəʔ²⁴	夺	奪			dəʔ8
@@ -4163,6 +4279,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	kəʔ⁵⁵	合	合	～用用（指合用，公用），～勒一堆（指合夥）		kəʔ7
 	kəʔ⁵⁵	鸽	鴿			kəʔ7
 	kəʔ⁵⁵	割	割			kəʔ7
+	kəʔ⁵⁵	蛤	蛤	～蜊		kəʔ7
 	kəʔ⁵⁵	葛	葛			kəʔ7
 	kɪʔ⁵⁵	个	個	又		kɪʔ7
 	kəʔ⁵⁵	个	個	又		kəʔ7
@@ -4210,6 +4327,7 @@ ID	IPA	simp	trad	detail	piŋyiŋ	调类
 	pɑʔ⁵⁵	柏	柏			pɑʔ7
 	pɑʔ⁵⁵	伯	伯			pɑʔ7
 	pʰɑʔ⁵⁵	迫	迫			pʰɑʔ7
+	pʰɑʔ⁵⁵	珀	珀			pʰɑʔ7
 	pʰɑʔ⁵⁵	帕	帕			pʰɑʔ7
 	pʰɑʔ⁵⁵	泊	泊			pʰɑʔ7
 	pʰɑʔ⁵⁵	拍	拍			pʰɑʔ7
