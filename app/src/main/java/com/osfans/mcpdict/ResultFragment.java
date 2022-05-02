@@ -2,10 +2,8 @@ package com.osfans.mcpdict;
 
 import static com.osfans.mcpdict.DB.ALL_LANGUAGES;
 import static com.osfans.mcpdict.DB.COL_ALL_LANGUAGES;
-import static com.osfans.mcpdict.DB.COL_BH;
 import static com.osfans.mcpdict.DB.COL_HD;
 import static com.osfans.mcpdict.DB.COL_HZ;
-import static com.osfans.mcpdict.DB.COL_KX;
 import static com.osfans.mcpdict.DB.COL_SW;
 import static com.osfans.mcpdict.DB.COMMENT;
 import static com.osfans.mcpdict.DB.HZ;
@@ -29,7 +27,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.text.Html;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextUtils;
@@ -37,7 +34,6 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.DrawableMarginSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
-import android.util.Base64;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -54,14 +50,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.text.HtmlCompat;
-import androidx.core.text.PrecomputedTextCompat;
-import androidx.core.widget.TextViewCompat;
 import androidx.fragment.app.Fragment;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.ref.WeakReference;
 import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -485,7 +478,7 @@ public class ResultFragment extends Fragment {
         mWebView.loadDataWithBaseURL(null, sb.toString(), "text/html", "utf-8", null);
     }
 
-    private SpannableStringBuilder setTextData(String query, Cursor cursor) {
+    private CharSequence setTextData(String query, Cursor cursor) {
         SpannableStringBuilder sb = new SpannableStringBuilder();
         if (TextUtils.isEmpty(query)) {
             sb.append(HtmlCompat.fromHtml(DB.getIntro(getContext()), HtmlCompat.FROM_HTML_MODE_COMPACT));
@@ -534,7 +527,7 @@ public class ResultFragment extends Fragment {
                 sb.insert(0, hzs);
             }
         }
-        return sb;
+        return sb.toString();
     }
 
     private SpannableStringBuilder setTableData(String query, Cursor cursor) {
@@ -633,7 +626,7 @@ public class ResultFragment extends Fragment {
         return ssb;
     }
 
-    private SpannableStringBuilder getTextData(String query, Cursor cursor, int format) {
+    private CharSequence getTextData(String query, Cursor cursor, int format) {
         if (format == 0) return setTextData(query, cursor);
         return setTableData(query, cursor);
     }
@@ -650,17 +643,17 @@ public class ResultFragment extends Fragment {
             if (cursor != null) cursor.close();
             mScroll.setScrollY(0);
         } else {
-            new AsyncTask<Void, Void, PrecomputedTextCompat>() {
+            new AsyncTask<Void, Void, CharSequence>() {
                 @Override
-                protected PrecomputedTextCompat doInBackground(Void... params) {
-                    SpannableStringBuilder ssb = getTextData(query, cursor, format);
+                protected CharSequence doInBackground(Void... params) {
+                    CharSequence ssb = getTextData(query, cursor, format);
                     if (cursor != null) cursor.close();
-                    return PrecomputedTextCompat.create(ssb, TextViewCompat.getTextMetricsParams(mTextView));
+                    return ssb;
                 }
 
                 @Override
-                protected void onPostExecute(PrecomputedTextCompat textCompat) {
-                    TextViewCompat.setPrecomputedText(mTextView, textCompat);
+                protected void onPostExecute(CharSequence text) {
+                    mTextView.setText(text);
                     mTextView.setVisibility(View.VISIBLE);
                     mScroll.setScrollY(0);
                 }
