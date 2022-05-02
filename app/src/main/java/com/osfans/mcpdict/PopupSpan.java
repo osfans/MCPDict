@@ -21,14 +21,7 @@ public class PopupSpan extends ClickableSpan {
 
     @Override
     public void onClick(View v) {
-        Context context = v.getContext();
-        TextView tv = new TextView(context);
-        tv.setPadding(24, 24, 24, 24);
-        if (DictApp.enableFontExt()) tv.setTypeface(DictApp.getDictTypeFace());
-        tv.setTextIsSelectable(true);
-        tv.setMovementMethod(LinkMovementMethod.getInstance());
-        tv.setText(text);
-        new AlertDialog.Builder(context).setView(tv).show();
+        DictApp.showDict(v.getContext(), text);
     }
 
     @Override

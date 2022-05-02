@@ -29,6 +29,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.Html;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextUtils;
@@ -36,6 +37,7 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.DrawableMarginSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
+import android.util.Base64;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -59,6 +61,7 @@ import androidx.fragment.app.Fragment;
 import java.io.UnsupportedEncodingException;
 import java.lang.ref.WeakReference;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -93,9 +96,7 @@ public class ResultFragment extends Fragment {
                     break;
                 case MSG_GOTO_INFO:
                     removeCallbacksAndMessages(null);
-                    Intent intent = new Intent(getContext(), InfoActivity.class);
-                    intent.putExtra("lang", mEntry.lang);
-                    startActivity(intent);
+                    DictApp.info(requireActivity(), mEntry.lang);
                     break;
                 case MSG_FAVORITE:
                     removeCallbacksAndMessages(null);
@@ -233,19 +234,19 @@ public class ResultFragment extends Fragment {
                 }
             }
         } else {
-            String lang = col;
             String dict = DB.getDictName(col);
             if (!TextUtils.isEmpty(dict)) {
                 item = menu.add(getString(R.string.one_dict_links, hz, dict));
                 item.setIntent(getDictIntent(col, hz));
             }
             menu.add(GROUP_READING, COL_HZ, 90, getString(R.string.copy_hz));
-            if (DB.isLang(lang)) {
-                item = menu.add(getString(R.string.goto_info, lang));
+            String language = DB.getLanguage(col);
+            if (DB.isLang(col)) {
+                item = menu.add(getString(R.string.goto_info, language));
                 item.setOnMenuItemClickListener(i->mHandler.sendEmptyMessage(MSG_GOTO_INFO));
-                item = menu.add(getString(R.string.search_homophone, hz, lang));
+                item = menu.add(getString(R.string.search_homophone, hz, language));
                 item.setOnMenuItemClickListener(i->mHandler.sendEmptyMessage(MSG_SEARCH));
-                menu.add(GROUP_READING, getColumnIndex(col), 0, getString(R.string.copy_one_reading, hz, lang));
+                menu.add(GROUP_READING, getColumnIndex(col), 0, getString(R.string.copy_one_reading, hz, language));
             }
             if (cols.size() > 2)
                 menu.add(GROUP_READING, COL_ALL_LANGUAGES, 0, getString(R.string.copy_all_reading));
@@ -385,12 +386,7 @@ public class ResultFragment extends Fragment {
                 "         padding: 0px 6px;\n" +
                 "      }" +
                 "    rt {font-size: 0.9em; background-color: #F0FFF0;}  " +
-                "  </style><script>" +
-                "function toggleInfo(s) {" +
-                "var d = document.getElementById(s); " +
-                "d.style.display = d.style.display == 'block' ? 'none' : 'block';" +
-                "}" +
-                "</script></head><body>");
+                "  </style></head><body>");
         if (TextUtils.isEmpty(query)) {
             sb.append(DB.getIntro(getContext()));
         } else if (cursor == null || cursor.getCount() == 0) {
@@ -423,22 +419,18 @@ public class ResultFragment extends Fragment {
                 ssb.append(String.format("<details %s><summary>" +
                         "<div class=hz>%s</div><div class=variant>%s</div></summary>", openDetails ? "open" : "", hz, s));
                 ssb.append("<div style='display: block; float:right; margin-top: -2em;'>");
-                s = Orthography.HZ.toUnicode(hz);
-                ssb.append(String.format("<div class=y onclick='toggleInfo(\"%s%s\")'>%s</div>", hz, DB.UNICODE, s));
-                StringBuilder dictBuilder = new StringBuilder();
-                dictBuilder.append(getUnicode(cursor));
+                String unicode = Orthography.HZ.toUnicode(hz);
+                ssb.append(String.format("<div class=y onclick='mcpdict.showDict(\"%s\", %s, \"%s\")'>%s</div>", hz, COL_HZ, getUnicode(cursor), unicode));
                 StringBuilder raws = new StringBuilder();
                 raws.append(String.format("%s %s\n", hz, s));
                 for (int j = COL_SW; j <= DB.COL_HD; j++) {
                     s = cursor.getString(j);
                     if (TextUtils.isEmpty(s)) continue;
                     String col = getColumn(j);
-                    ssb.append(String.format("<div class=y onclick='toggleInfo(\"%s%s\")'>%s</div>", hz, col, getLabel(j)));
-                    if (j == COL_KX) s = s.replaceFirst("^(.*?)(\\d+).(\\d+)", "$1<a href=https://kangxizidian.com/kxhans/" + hz + ">第$2頁第$3字</a>");
-                    else if (j == COL_HD) s = s.replaceFirst("(\\d+).(\\d+)", "<a href=https://www.homeinmists.com/hd/png/$1.png>第$1頁</a>第$2字");
-                    s = DictApp.getRichText(s).toString();
-                    dictBuilder.append(String.format("<div id=%s%s class=block><div class=place>%s</div><div class=ipa>%s</div><br></div>", hz, col, col, s));
+                    s = s.replace("\n", "<br>");
+                    ssb.append(String.format("<div class=y onclick='mcpdict.showDict(\"%s\", %d, \"%s\")'>%s</div>", hz, j, s, col));
                 }
+                Log.e("kyle", ssb.toString());
                 ssb.append(String.format("<div class=y onclick='mcpdict.showMap(\"%s\")'>%s</div>", hz, DB.MAP));
                 // "Favorite" button
                 String comment = cursor.getString(cursor.getColumnIndexOrThrow(COMMENT));
@@ -449,7 +441,6 @@ public class ResultFragment extends Fragment {
                     ssb.append(String.format("<div class=y onclick='mcpdict.showFavorite(\"%s\", %d, \"%s\")'>&nbsp;%s&nbsp;</div>", hz, favorite, comment, label));
                 }
                 ssb.append("</div>");
-                ssb.append(dictBuilder);
                 String fq = "";
                 String fqTemp;
                 boolean opened = false;
@@ -581,17 +572,8 @@ public class ResultFragment extends Fragment {
                 };
                 // Unicode
                 String unicode = Orthography.HZ.toUnicode(hz);
-                StringBuilder sb2 = new StringBuilder();
-                sb2.append(String.format("<p>【統一碼】%s %s</p>", unicode, Orthography.HZ.getUnicodeExt(hz)));
-                for (int i = DB.COL_LF; i < DB.COL_VA; i++) {
-                    if (i == COL_SW) i = COL_BH;
-                    String lang = getColumn(i);
-                    s = cursor.getString(i);
-                    if (TextUtils.isEmpty(s)) continue;
-                    sb2.append(String.format("<p>【%s】%s</p>", lang, s));
-                }
                 int color = getColor(SW);
-                ssb.append(" " + unicode + " ", new PopupSpan(DictApp.formatPopUp(hz, COL_HZ, sb2.toString()), color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ssb.append(" " + unicode + " ", new PopupSpan(DictApp.formatPopUp(hz, COL_HZ, getUnicode(cursor)), color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 StringBuilder raws = new StringBuilder();
                 raws.append(String.format("%s %s\n", hz, unicode));
                 // yb

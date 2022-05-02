@@ -1,5 +1,7 @@
 package com.osfans.mcpdict;
 
+import static com.osfans.mcpdict.DB.COL_HZ;
+
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 
@@ -17,6 +19,11 @@ public class MyWeb {
     @JavascriptInterface
     public void showMap(String hz) {
         getFragment().showMap(hz);
+    }
+
+    @JavascriptInterface
+    public void showDict(String hz, int i, String text) {
+        DictApp.showDict(mWebView.getContext(), DictApp.formatPopUp(hz, i, text));
     }
 
     @JavascriptInterface

@@ -5,6 +5,8 @@ import static com.osfans.mcpdict.DB.COL_KX;
 import static com.osfans.mcpdict.DB.COL_SW;
 
 import android.app.Application;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.graphics.fonts.Font;
@@ -12,7 +14,11 @@ import android.graphics.fonts.FontFamily;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
+import android.text.method.LinkMovementMethod;
+import android.view.Gravity;
+import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.text.HtmlCompat;
 
 import java.io.IOException;
@@ -214,6 +220,56 @@ public class DictApp extends Application {
     public static String getTitle() {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
         return sp.getString(mApp.getString(R.string.pref_key_custom_title), mApp.getString(R.string.app_name));
+    }
+
+    public static void info(Context context, String lang) {
+        MyWebView webView = new MyWebView(context, null);
+        String sb = "<style>\n" +
+                "  @font-face {\n" +
+                "      font-family: ipa;\n" +
+                "      src: url(\"file:///android_res/font/ipa.ttf\")\n" +
+                "  }\n" +
+                "  body {font-size: 16px}\n" +
+                "  h1 {font-size: 24px; color: #9D261D}\n" +
+                "  h2 {font-size: 20px; color: #000080; text-indent: 10px}\n" +
+                " </style>" +
+                DB.getIntroText(context, lang);
+        webView.loadDataWithBaseURL(null, sb, "text/html", "utf-8", null);
+
+        new AlertDialog.Builder(context)
+                .setView(webView)
+                .show();
+    }
+
+    public static void about(Context context) {
+        Dialog dialog = new AlertDialog.Builder(context)
+                .setIcon(android.R.drawable.ic_dialog_info)
+                .setTitle(R.string.about)
+                .setMessage(HtmlCompat.fromHtml(context.getString(R.string.about_message, BuildConfig.VERSION_NAME), HtmlCompat.FROM_HTML_MODE_COMPACT))
+                .setPositiveButton(R.string.ok, null)
+                .show();
+        TextView messageText = dialog.findViewById(android.R.id.message);
+        assert messageText != null;
+        messageText.setGravity(Gravity.CENTER);
+        messageText.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    public static void help(Context context) {
+        MyWebView webView = new MyWebView(context, null);
+        webView.loadUrl("file:///android_asset/help/index.htm");
+        new AlertDialog.Builder(context, R.style.Theme_AppCompat_DayNight_NoActionBar)
+                .setView(webView)
+                .show();
+    }
+
+    public static void showDict(Context context, CharSequence s) {
+        TextView tv = new TextView(context);
+        tv.setPadding(24, 24, 24, 24);
+        if (DictApp.enableFontExt()) tv.setTypeface(DictApp.getDictTypeFace());
+        tv.setTextIsSelectable(true);
+        tv.setMovementMethod(LinkMovementMethod.getInstance());
+        tv.setText(s);
+        new AlertDialog.Builder(context).setView(tv).show();
     }
 
 //    public static void restartApplication() {

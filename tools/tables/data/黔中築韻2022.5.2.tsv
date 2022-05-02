@@ -986,6 +986,7 @@
 粥	粥	zu2	tsu˨˩	tsu˨˩	文读
 祝	祝	zu2	tsu˨˩	tsu˨˩	
 𡎺	𡎺	zu2	tsu˨˩	tsu˨˩	
+足	足	zu2	tsu˨˩	tsu˨˩	~球
 促	促	zu2	tsu˨˩	tsu˨˩	
 誶	谇	zu2	tsu˨˩	tsu˨˩	白读1
 踤	踤	zu2	tsu˨˩	tsu˨˩	白读1
@@ -1028,7 +1029,7 @@
 怵	怵	cu2	tsʰu˨˩	tsʰu˨˩	
 徂	徂	cu2	tsʰu˨˩	tsʰu˨˩	
 殂	殂	cu2	tsʰu˨˩	tsʰu˨˩	
-簇	簇	cu2	tsʰu˨˩	tsʰu˨˩	
+簇	簇	cu2	tsʰu˨˩	tsʰu˨˩	文读
 捽	捽	cu2	tsʰu˨˩	tsʰu˨˩	白读
 蹙	蹙	cu2	tsʰu˨˩	tsʰu˨˩	
 蹵	蹵	cu2	tsʰu˨˩	tsʰu˨˩	
@@ -1251,6 +1252,7 @@
 喇	喇	la3	la˦˧	l̃ᴀ˦˧	
 哪	哪	la3	la˦˧	l̃ᴀ˦˧	
 拉	拉	la3	la˦˧	l̃ᴀ˦˧	长~~
+啦	啦	la3	la˦˧	l̃ᴀ˦˧	相当于“了”
 邋	邋	la3	la˦˧	l̃ᴀ˦˧	~糊
 了	了	la3	la˦˧	l̃ᴀ˦˧	白读1
 那	那	la4	la˨˦	l̃ᴀ˨˦	文读
@@ -1260,7 +1262,8 @@
 咋	咋	za1	tsa˦˥	tsᴀ˦˥	~翻翻；咋咋呼呼，指说话声音很大
 咱	咱	za1	tsa˦˥	tsᴀ˦˥	“自家”的合音
 啄	啄	za1	tsa˦˥	tsᴀ˦˥	鸡~食，形容人吃饭不专注，吃一会儿停一会儿
-奓	奓	za1	tsa˦˥	tsᴀ˦˥	分开
+奓	奓	za1	tsa˦˥	tsᴀ˦˥	张开
+䐒	䐒	za1	tsa˦˥	tsᴀ˦˥	
 蔗	蔗	za1	tsa˦˥	tsᴀ˦˥	~糖，即红糖
 挓	挓	za1	tsa˦˥	tsᴀ˦˥	
 雜	杂	za2	tsa˨˩	tsᴀ˨˩	
@@ -1569,7 +1572,7 @@
 奪	夺	do2	to˨˩	d̥ɔ˨˩	
 鐸	铎	do2	to˨˩	d̥ɔ˨˩	
 度	度	do2	to˨˩	d̥ɔ˨˩	揣~
-掇	掇	do2	to˨˩	d̥ɔ˨˩	
+掇	掇	do2	to˨˩	d̥ɔ˨˩	文读
 咄	咄	do2	to˨˩	d̥ɔ˨˩	
 戳	戳	do2	to˨˩	d̥ɔ˨˩	白读
 篤	笃	do2	to˨˩	d̥ɔ˨˩	矮~~，蔑称，指矮子
@@ -1599,6 +1602,7 @@
 脫	脱	to3	tʰo˦˧	tʰɔ˦˧	~肛
 囉	啰	lo1	lo˦˥	l̃ɔ˦˥	
 籮	箩	lo1	lo˦˥	l̃ɔ˦˥	一挝~，指一大堆
+嘍	喽	lo1	lo˦˥	l̃ɔ˦˥	白读3
 咯	咯	lo1	lo˦˥	l̃ɔ˦˥	白读2
 了	了	lo1	lo˦˥	l̃ɔ˦˥	白读3
 搙	搙	lo1	lo˦˥	l̃ɔ˦˥	
@@ -1628,6 +1632,7 @@
 倮	倮	lo3	lo˦˧	l̃ɔ˦˧	
 諾	诺	lo3	lo˦˧	l̃ɔ˦˧	唯唯~~
 謱	謱	lo3	lo˦˧	l̃ɔ˦˧	~謰，指说话啰嗦或做事裹搅
+嘍	喽	lo3	lo˦˧	l̃ɔ˦˧	白读1
 了	了	lo3	lo˦˧	l̃ɔ˦˧	白读2
 咯	咯	lo3	lo˦˧	l̃ɔ˦˧	白读1
 糯	糯	lo4	lo˨˦	l̃ɔ˨˦	
@@ -1873,6 +1878,7 @@
 默	默	me2	mɛ˨˩	mᵇɛ˨˩	
 嘿	嘿	me2	mɛ˨˩	mᵇɛ˨˩	文读2
 沒	没	me3	mɛ˦˧	mᵇɛ˦˧	“没有”合音
+的	的	de2	tɛ˨˩	d̥ɛ˨˩	没得事~；不要紧~
 得	得	de2	tɛ˨˩	d̥ɛ˨˩	
 德	德	de2	tɛ˨˩	d̥ɛ˨˩	
 點	点	de3	tɛ˦˧	d̥ɛ˦˧	这~；那~；哪~，“点儿”合音
@@ -2046,6 +2052,7 @@
 杰	杰	jie2	tɕiɛ˨˩	tɕɨɛ˨˩	
 揭	揭	jie2	tɕiɛ˨˩	tɕɨɛ˨˩	
 竭	竭	jie2	tɕiɛ˨˩	tɕɨɛ˨˩	
+羯	羯	jie2	tɕiɛ˨˩	tɕɨɛ˨˩	
 結	结	jie2	tɕiɛ˨˩	tɕɨɛ˨˩	
 詰	诘	jie2	tɕiɛ˨˩	tɕɨɛ˨˩	
 頡	颉	jie2	tɕiɛ˨˩	tɕɨɛ˨˩	
@@ -2094,6 +2101,7 @@
 纈	缬	xie2	ɕiɛ˨˩	ɕɨɛ˨˩	
 薛	薛	xie2	ɕiɛ˨˩	ɕɨɛ˨˩	
 歇	歇	xie2	ɕiɛ˨˩	ɕɨɛ˨˩	
+蝎	蝎	xie2	ɕiɛ˨˩	ɕɨɛ˨˩	
 屑	屑	xie2	ɕiɛ˨˩	ɕɨɛ˨˩	
 雪	雪	xie2	ɕiɛ˨˩	ɕɨɛ˨˩	
 血	血	xie2	ɕiɛ˨˩	ɕɨɛ˨˩	
@@ -2126,7 +2134,7 @@
 冶	冶	ie3	iɛ˦˧	ɦɨɛ˦˧	
 噦	哕	ie3	iɛ˦˧	ɦɨɛ˦˧	
 夜	夜	ie4	iɛ˨˦	ɦɨɛ˨˦	
-掇	掇	due2	tuɛ˨˩	d̥uɛ˨˩	~上去，指捅过去或上前应对
+掇	掇	due2	tuɛ˨˩	d̥uɛ˨˩	指捅过去或上前应对，有硬碰硬之意
 頹	颓	tue2	tʰuɛ˨˩	tʰuɛ˨˩	白读
 賊	贼	zue2	tsuɛ˨˩	tsuɛ˨˩	白读
 拙	拙	zue2	tsuɛ˨˩	tsuɛ˨˩	~劣
@@ -2174,6 +2182,7 @@
 崛	崛	qiu2	tɕʰiu˨˩	tɕʰɨ̹u˨˩	白读
 掘	掘	qiu2	tɕʰiu˨˩	tɕʰɨ̹u˨˩	白读
 族	族	qiu2	tɕʰiu˨˩	tɕʰɨ̹u˨˩	
+簇	簇	qiu2	tɕʰiu˨˩	tɕʰɨ̹u˨˩	白读
 促	促	qiu2	tɕʰiu˨˩	tɕʰɨ̹u˨˩	敦~
 捽	捽	qiu2	tɕʰiu˨˩	tɕʰɨ̹u˨˩	文读
 曲	曲	qiu2	tɕʰiu˨˩	tɕʰɨ̹u˨˩	
@@ -2299,8 +2308,8 @@
 曬	晒	sai4	sai˨˦	sɐɛ˨˦	
 該	该	gai1	kai˦˥	ɟ̊ɐɛ˦˥	
 街	街	gai1	kai˦˥	ɟ̊ɐɛ˦˥	
-皆	皆	gai1	kai˦˥	ɟ̊ɐɛ˦˥	
-階	阶	gai1	kai˦˥	ɟ̊ɐɛ˦˥	
+皆	皆	gai1	kai˦˥	ɟ̊ɐɛ˦˥	白读
+階	阶	gai1	kai˦˥	ɟ̊ɐɛ˦˥	白读
 偕	偕	gai1	kai˦˥	ɟ̊ɐɛ˦˥	宠辱~忘
 改	改	gai3	kai˦˧	ɟ̊ɐɛ˦˧	
 解	解	gai3	kai˦˧	ɟ̊ɐɛ˦˧	白读
@@ -2308,12 +2317,12 @@
 蓋	盖	gai4	kai˨˦	ɟ̊ɐɛ˨˦	
 丐	丐	gai4	kai˨˦	ɟ̊ɐɛ˨˦	
 介	介	gai4	kai˨˦	ɟ̊ɐɛ˨˦	白读
-芥	芥	gai4	kai˨˦	ɟ̊ɐɛ˨˦	
+芥	芥	gai4	kai˨˦	ɟ̊ɐɛ˨˦	白读
 界	界	gai4	kai˨˦	ɟ̊ɐɛ˨˦	白读
 屆	届	gai4	kai˨˦	ɟ̊ɐɛ˨˦	白读
 戒	戒	gai4	kai˨˦	ɟ̊ɐɛ˨˦	白读
 械	械	gai4	kai˨˦	ɟ̊ɐɛ˨˦	白读
-誡	诫	gai4	kai˨˦	ɟ̊ɐɛ˨˦	
+誡	诫	gai4	kai˨˦	ɟ̊ɐɛ˨˦	白读
 開	开	kai1	kʰai˦˥	cʰɐɛ˦˥	
 揩	揩	kai1	kʰai˦˥	cʰɐɛ˦˥	白读
 凱	凯	kai3	kʰai˦˧	cʰɐɛ˦˧	
@@ -2359,11 +2368,11 @@
 孩	孩	hai2	xai˨˩	çɐɛ˨˩	
 骸	骸	hai2	xai˨˩	çɐɛ˨˩	
 鞋	鞋	hai2	xai˨˩	çɐɛ˨˩	
-偕	偕	hai2	xai˨˩	çɐɛ˨˩	
+偕	偕	hai2	xai˨˩	çɐɛ˨˩	白读
 諧	谐	hai2	xai˨˩	çɐɛ˨˩	白读
 還	还	hai2	xai˨˩	çɐɛ˨˩	白读1
 海	海	hai3	xai˦˧	çɐɛ˦˧	
-蟹	蟹	hai3	xai˦˧	çɐɛ˦˧	螃~
+蟹	蟹	hai3	xai˦˧	çɐɛ˦˧	白读
 亥	亥	hai3	xai˦˧	çɐɛ˦˧	辛~革命
 亥	亥	hai4	xai˨˦	çɐɛ˨˦	
 害	害	hai4	xai˨˦	çɐɛ˨˦	
@@ -2375,13 +2384,18 @@
 呆	呆	ai2	ai˨˩	ɦɐɛ˨˩	~板
 哎	哎	ai2	ai˨˩	ɦɐɛ˨˩	~呀
 哎	哎	ai3	ai˦˧	ɦɐɛ˦˧	~哟
+皆	皆	jiai1	tɕiai˦˥	tɕɨɐɛ˦˥	文读
+階	阶	jiai1	tɕiai˦˥	tɕɨɐɛ˦˥	文读
 解	解	jiai3	tɕiai˦˧	tɕɨɐɛ˦˧	文读
 介	介	jiai4	tɕiai˨˦	tɕɨɐɛ˨˦	文读
+芥	芥	jiai4	tɕiai˨˦	tɕɨɐɛ˨˦	文读
 界	界	jiai4	tɕiai˨˦	tɕɨɐɛ˨˦	文读
 屆	届	jiai4	tɕiai˨˦	tɕɨɐɛ˨˦	文读
 戒	戒	jiai4	tɕiai˨˦	tɕɨɐɛ˨˦	文读
 械	械	jiai4	tɕiai˨˦	tɕɨɐɛ˨˦	文读
+誡	诫	jiai4	tɕiai˨˦	tɕɨɐɛ˨˦	文读
 揩	揩	qiai1	tɕʰiai˦˥	tɕʰɨɐɛ˦˥	文读
+偕	偕	xiai2	ɕiai˨˩	ɕɨɐɛ˨˩	文读
 諧	谐	xiai2	ɕiai˨˩	ɕɨɐɛ˨˩	文读
 解	解	xiai4	ɕiai˨˦	ɕɨɐɛ˨˦	姓
 懈	懈	xiai4	ɕiai˨˦	ɕɨɐɛ˨˦	
@@ -2390,6 +2404,7 @@
 摔	摔	zuai1	tsuai˦˥	tsuɐɛ˦˥	白读
 睉	睉	zuai1	tsuai˦˥	tsuɐɛ˦˥	
 臜	臜	zuai1	tsuai˦˥	tsuɐɛ˦˥	白读1
+掇	掇	zuai2	tsuai˨˩	tsuɐɛ˨˩	白读
 拙	拙	zuai2	tsuai˨˩	tsuɐɛ˨˩	笨~
 茁	茁	zuai2	tsuai˨˩	tsuɐɛ˨˩	~实
 跩	跩	zuai3	tsuai˦˧	tsuɐɛ˦˧	文读
@@ -2804,7 +2819,8 @@
 遭	遭	zao1	tsau˦˥	tsᴀɔ˦˥	
 釗	钊	zao1	tsau˦˥	tsᴀɔ˦˥	
 抓	抓	zao1	tsau˦˥	tsᴀɔ˦˥	狗刨~
-著	着	zao2	tsau˨˩	tsᴀɔ˨˩	~了，遭殃了
+著	着	zao2	tsau˨˩	tsᴀɔ˨˩	表示被动，相当于“被”
+遭	遭	zao2	tsau˨˩	tsᴀɔ˨˩	~了
 早	早	zao3	tsau˦˧	tsᴀɔ˦˧	
 棗	枣	zao3	tsau˦˧	tsᴀɔ˦˧	
 蚤	蚤	zao3	tsau˦˧	tsᴀɔ˦˧	
@@ -3146,6 +3162,7 @@
 偷	偷	lou1	ləu˦˥	l̃ɘu˦˥	白读
 撈	捞	lou1	ləu˦˥	l̃ɘu˦˥	~起来；~家什
 顱	颅	lou1	ləu˦˥	l̃ɘu˦˥	额~，即额头
+嘍	喽	lou1	ləu˦˥	l̃ɘu˦˥	白读2
 樓	楼	lou2	ləu˨˩	l̃ɘu˨˩	
 僂	偻	lou2	ləu˨˩	l̃ɘu˨˩	
 婁	娄	lou2	ləu˨˩	l̃ɘu˨˩	
@@ -3153,6 +3170,7 @@
 縷	缕	lou3	ləu˦˧	l̃ɘu˦˧	
 褸	褛	lou3	ləu˦˧	l̃ɘu˦˧	
 嶁	嵝	lou3	ləu˦˧	l̃ɘu˦˧	
+嘍	喽	lou3	ləu˦˧	l̃ɘu˦˧	文读
 簍	篓	lou3	ləu˦˧	l̃ɘu˦˧	
 漏	漏	lou4	ləu˨˦	l̃ɘu˨˦	
 陋	陋	lou4	ləu˨˦	l̃ɘu˨˦	

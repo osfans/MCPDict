@@ -8,10 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.graphics.Color;
 import android.preference.PreferenceManager;
-import android.text.Spanned;
 import android.text.TextUtils;
-
-import androidx.core.text.HtmlCompat;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
@@ -34,9 +31,9 @@ public class DB extends SQLiteAssetHelper {
     public static final String HZ = "漢字";
     public static final String BH = "總筆畫數";
     public static final String BS = "部首餘筆";
-    public static final String SW = "說文解字";
-    public static final String KX = "康熙字典";
-    public static final String HD = "漢語大字典";
+    public static final String SW = "說文";
+    public static final String KX = "康熙";
+    public static final String HD = "漢大";
     public static final String LF = "兩分";
     public static final String WBH = "五筆畫";
     public static final String VA = "異體字";
@@ -47,21 +44,22 @@ public class DB extends SQLiteAssetHelper {
     public static final String VARIANTS = "variants";
     public static final String COMMENT = "comment";
     public static final String UNICODE = "unicode";
-    public static final String LANG = "語言";
+    public static final String LANGUAGE = "語言";
+    public static final String LABEL = "簡稱";
 
-    public static final String SG = "上古擬音（鄭張尚芳）";
-    public static final String BA = "上古擬音（白一平沙加爾2015）";
-    public static final String GY = "廣韻擬音";
+    public static final String SG = "鄭張";
+    public static final String BA = "白-沙";
+    public static final String GY = "廣韻";
     public static final String CMN = "普通話";
-    public static final String HK = "香港粵語標準音";
-    public static final String TW = "臺灣閩南語";
-    public static final String KOR = "朝鮮語";
-    public static final String VI = "越南語";
+    public static final String HK = "香港";
+    public static final String TW = "臺灣";
+    public static final String KOR = "朝鮮";
+    public static final String VI = "越南";
     public static final String JA_GO = "日語吳音";
     public static final String JA_KAN = "日語漢音";
     public static final String JA_TOU = "日語唐音";
-    public static final String JA_KWAN = "日語慣用音";
-    public static final String JA_OTHER = "日語其他讀音";
+    public static final String JA_KWAN = "日語慣用";
+    public static final String JA_OTHER = "日語其他";
     public static final String JA_ANY = JA_TOU;
     public static final String JA_ = "日語";
     public static final String WB_ = "五筆";
@@ -86,7 +84,6 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_LF;
     public static int COL_WBH;
     public static int COL_VA;
-    private static int COL_FIRST_LANG;
     public static int COL_LAST_LANG;
 
     public static int COL_ALL_LANGUAGES = 1000;
@@ -330,7 +327,6 @@ public class DB extends SQLiteAssetHelper {
         COL_HD = getColumnIndex(HD);
         COL_KX = getColumnIndex(KX);
         COL_WBH = getColumnIndex(WBH);
-        COL_FIRST_LANG = getColumnIndex(SG);
         COL_LAST_LANG = getColumnIndex(BH) - 1;
         cursor.close();
 
@@ -356,7 +352,7 @@ public class DB extends SQLiteAssetHelper {
         if (db == null) return null;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
-        String[] projection = {"*"};
+        String[] projection = {LABEL};
         String query = qb.buildQuery(projection, selection,  null, null, ORDER, null);
         Cursor cursor = db.rawQuery(query, TextUtils.isEmpty(args) ? null : new String[]{String.format("\"%s\"", args)});
         cursor.moveToFirst();
@@ -452,7 +448,7 @@ public class DB extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
         String[] projection = {String.format("\"%s\"", field)};
-        String query = qb.buildQuery(projection, LANG + " match ?",  null, null, null, null);
+        String query = qb.buildQuery(projection, LABEL + " match ?",  null, null, null, null);
         Cursor cursor = db.rawQuery(query, new String[]{String.format("\"%s\"", lang)});
         String s = "";
         if (cursor.getCount() > 0) {
@@ -465,19 +461,17 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static String getLabel(String lang) {
-        String s = getFieldString(lang, "簡稱");
-        //if (s.length() == 2) s = String.format(" %s ", s);
-        return s;
+        return lang;
     }
 
     public static String getLabel(int i) {
-        String lang = getColumn(i);
-        return getLabel(lang);
+        return getColumn(i);
     }
 
     public static int getColor(String lang, int i) {
         if (COLUMNS == null) initArrays();
         String c = getFieldString(lang, COLOR);
+        if (TextUtils.isEmpty(c)) c = getFieldString(lang, FIRST_FQ.replace(_FQ, _COLOR));
         if (TextUtils.isEmpty(c)) return Color.BLACK;
         if (c.contains(",")) c = c.split(",")[i];
         return Color.parseColor(c);
@@ -507,13 +501,17 @@ public class DB extends SQLiteAssetHelper {
         return getFieldString(lang, "網址");
     }
 
+    public static String getLanguage(String lang) {
+        return getFieldString(lang, LANGUAGE);
+    }
+
     private static String _getIntro(Context context, String lang) {
         String intro = TextUtils.isEmpty(lang) ? "" : getFieldString(lang, "說明");
         if (lang.contentEquals(HZ)) {
             intro = String.format(Locale.getDefault(), "%s%s<br>%s", context.getString(R.string.version), BuildConfig.VERSION_NAME, intro);
         } else {
             StringBuilder sb = new StringBuilder();
-            sb.append(String.format(Locale.getDefault(), "%s%s<br>", context.getString(R.string.name), lang));
+            sb.append(String.format(Locale.getDefault(), "%s%s<br>", context.getString(R.string.name), getLanguage(lang)));
             ArrayList<String> fields = new ArrayList<>(Arrays.asList("錄入人","參考資料","文件名","版本","字數","音節數","不帶調音節數",""));
             fields.addAll(Arrays.asList(FQ_COLUMNS));
             fields.add("");
@@ -539,7 +537,7 @@ public class DB extends SQLiteAssetHelper {
             sb.append(intro);
             sb.append("<br><h2>已收錄語言</h2><table border=1 cellspacing=0>");
             sb.append("<tr>");
-            String[] fields = new String[]{LANG, "字數", "音節數", "不帶調音節數"};
+            String[] fields = new String[]{LANGUAGE, "字數", "音節數", "不帶調音節數"};
             for (String field: fields) {
                 sb.append(String.format("<th>%s</th>", field));
             }
@@ -554,7 +552,7 @@ public class DB extends SQLiteAssetHelper {
             sb.append("</table>");
             intro = sb.toString();
         } else {
-            intro = String.format(Locale.getDefault(), "<h1>%s</h1>%s<h2>音系說明</h2><h2>同音字表</h2>", lang, intro);
+            intro = String.format(Locale.getDefault(), "<h1>%s</h1>%s<h2>音系說明</h2><h2>同音字表</h2>", getLanguage(lang), intro);
         }
         return intro;
     }
@@ -621,20 +619,16 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static String getUnicode(Cursor cursor) {
-        StringBuilder sb = new StringBuilder();
         String hz = cursor.getString(COL_HZ);
-        sb.append(String.format("<div id=%s%s class=block>", hz, UNICODE));
         String s = Orthography.HZ.toUnicode(hz);
-        sb.append(String.format("<div class=place>統一碼</div><div class=ipa>%s %s</div><br>", s, Orthography.HZ.getUnicodeExt(hz)));
-        for (int i = DB.COL_LF; i < DB.COL_VA; i++) {
-            if (i == COL_SW) i = COL_BH;
-            String lang = getColumn(i);
-            s = cursor.getString(i);
-            if (i == COL_BS) s = s.replace("f", "-");
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("<p>【統一碼】%s %s</p>", s, Orthography.HZ.getUnicodeExt(hz)));
+        for (int j = DB.COL_LF; j < DB.COL_VA; j++) {
+            if (j == COL_SW) j = COL_BH;
+            s = cursor.getString(j);
             if (TextUtils.isEmpty(s)) continue;
-            sb.append(String.format("<div class=place>%s</div><div class=ipa>%s</div><br>", lang, s));
+            sb.append(String.format("<p>【%s】%s</p>", getColumn(j), s));
         }
-        sb.append("</div>");
         return sb.toString();
     }
 }
