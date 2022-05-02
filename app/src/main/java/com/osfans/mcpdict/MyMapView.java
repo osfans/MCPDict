@@ -141,9 +141,7 @@ public class MyMapView extends MapView {
             e.printStackTrace();
         }
 
-        Drawable defaultMarker = ResourcesCompat.getDrawable(getResources(), R.drawable.marker_default, getContext().getTheme());
-        Bitmap defaultBitmap = ((BitmapDrawable) defaultMarker).getBitmap();
-        Style defaultStyle = new Style(defaultBitmap, 0x1f000000, 2f, 0xffffffff);
+        Style defaultStyle = new Style(null, 0x1f000000, 2f, 0xffffffff);
         return (FolderOverlay) kmlDocument.mKmlRoot.buildOverlay(this, defaultStyle, null, kmlDocument);
     }
 }
