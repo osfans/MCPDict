@@ -31,26 +31,15 @@ public class BaseActivity extends AppCompatActivity {
             return true;
         }
         if (id == R.id.menu_item_info) {
-            intent = new Intent(this, InfoActivity.class);
-            startActivity(intent);
+            DictApp.info(this, "");
             return true;
         }
         if (id == R.id.menu_item_help) {
-            intent = new Intent(this, HelpActivity.class);
-            startActivity(intent);
+            DictApp.help(this);
             return true;
         }
         if (id == R.id.menu_item_about) {
-            Dialog dialog = new AlertDialog.Builder(this)
-                    .setIcon(android.R.drawable.ic_dialog_info)
-                    .setTitle(R.string.about)
-                    .setMessage(HtmlCompat.fromHtml(getString(R.string.about_message, BuildConfig.VERSION_NAME), HtmlCompat.FROM_HTML_MODE_COMPACT))
-                    .setPositiveButton(R.string.ok, null)
-                    .show();
-            TextView messageText = dialog.findViewById(android.R.id.message);
-            assert messageText != null;
-            messageText.setGravity(Gravity.CENTER);
-            messageText.setMovementMethod(LinkMovementMethod.getInstance());
+            DictApp.about(this);
             return true;
         }
         return super.onOptionsItemSelected(item);

@@ -127,7 +127,7 @@ def load():
 		elif size == 3: marker_size = "medium"
 		if not editor or editor == "Web":
 			editor = ""
-		d[lang] = {
+		d[short] = {
 			"語言":lang,
 			"簡稱":short,
 			"文件名":filename,

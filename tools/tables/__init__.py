@@ -39,7 +39,7 @@ def getLangs(dicts, argv=None):
 		mods = ["漢字"]
 		mods.extend(argv)
 	else:
-		mods = ["漢字","兩分","五筆畫","說文解字","康熙字典","漢語大字典"]
+		mods = ["漢字","兩分","五筆畫","說文","康熙","漢大"]
 		mods.extend(argv if argv else infos.keys())
 		lb = ["總筆畫數","部首餘筆","倉頡三代","倉頡五代","倉頡六代","五筆86版","五筆98版","五筆06版","異體字","分類"]
 		mods.extend(lb)
@@ -63,7 +63,8 @@ def getLangs(dicts, argv=None):
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
 			if d["省"]:
 				addAllFq(types[1], d["省"], "ZZZZ")
-				d["音典分區"] += "," + d["省"]
+				if not d["音典分區"]: d["音典分區"] = ""
+				d["音典分區"] +=  "," + d["省"]
 			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
 			addAllFq(types[3], d["俞銓（正心）分區"], d["俞銓（正心）排序"], True)
 			lang.info = d

@@ -31,11 +31,11 @@
     <string name="pref_key_allow_variants">ALLOW_VARIANTS</string>
 
     <string name="copy_readings">複製“%s”字或其讀音</string>
-    <string name="copy_one_reading">複製“%1$s”字的%2$s讀音</string>
+    <string name="copy_one_reading">複製“%1$s”字的“%2$s”讀音</string>
     <string name="copy_hz">複製“%s”字</string>
     <string name="dict_links">去在線詞典查詢“%s”字</string>
     <string name="one_dict_links">去“%2$s”查詢“%1$s”字</string>
-    <string name="search_homophone">查詢“%1$s”字的%2$s同音字</string>
+    <string name="search_homophone">查詢“%1$s”字的“%2$s”同音字</string>
     <string name="share_readings">分享“%s”字的所有讀音</string>
     <string name="goto_info">查看“%s”的詳細信息</string>
 

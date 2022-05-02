@@ -1,45 +1,25 @@
 package com.osfans.mcpdict;
 
-import static com.osfans.mcpdict.DB.COL_BS;
-import static com.osfans.mcpdict.DB.COL_HD;
-import static com.osfans.mcpdict.DB.COL_HZ;
-import static com.osfans.mcpdict.DB.COL_KX;
-import static com.osfans.mcpdict.DB.COMMENT;
-import static com.osfans.mcpdict.DB.VARIANTS;
-import static com.osfans.mcpdict.DB.getColumn;
-import static com.osfans.mcpdict.DB.getLabel;
-import static com.osfans.mcpdict.DB.getUnicode;
-
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.text.Spanned;
 import android.text.TextUtils;
-import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
-import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.Fragment;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
 import java.util.Set;
 
 public class DictFragment extends Fragment implements RefreshableFragment {

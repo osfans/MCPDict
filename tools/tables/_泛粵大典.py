@@ -7,7 +7,7 @@ class 表(_表):
 	def parse(self, fs):
 		if len(fs) < 4: return
 		js = ""
-		if str(self) == "江門市區話（墟頂）":
+		if str(self) == "江門墟頂":
 			hz = fs[0]
 			py = fs[3]+fs[4]
 			yb = fs[14] + fs[15]

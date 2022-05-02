@@ -1,15 +1,14 @@
 package com.osfans.mcpdict;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.content.res.ResourcesCompat;
 
 import org.osmdroid.bonuspack.kml.KmlDocument;
@@ -27,7 +26,6 @@ import org.osmdroid.views.overlay.Overlay;
 import org.osmdroid.views.overlay.ScaleBarOverlay;
 
 import java.io.IOException;
-import java.util.Set;
 
 public class MyMapView extends MapView {
     FolderOverlay mHzOverlay;
@@ -42,7 +40,7 @@ public class MyMapView extends MapView {
     }
 
     public void show() {
-        new AlertDialog.Builder(getContext(), android.R.style.Theme_DeviceDefault_Light_NoActionBar_Fullscreen)
+        new AlertDialog.Builder(getContext(), R.style.Theme_AppCompat_DayNight_NoActionBar)
                 .setView(this)
                 .show();
     }

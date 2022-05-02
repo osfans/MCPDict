@@ -45,10 +45,10 @@ def getSTVariants(level=2):
 	return d
 
 def getTsvName(xls):
-	return re.sub("\.xlsx?$", ".tsv", xls)
+	return xls.replace("xlsx", "tsv")
 
 def isXls(fname):
-	return fname.endswith(".xls") or fname.endswith("xlsx")
+	return fname.endswith("xlsx")
 
 def xls2tsv(xls):
 	tsv = getTsvName(xls)
@@ -57,7 +57,6 @@ def xls2tsv(xls):
 		xtime = os.path.getmtime(xls)
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
-	if xls.endswith(".xls"): xls += "x"
 	wb = load_workbook(xls)
 	sheet = wb.worksheets[0]
 	lines = list()
@@ -108,11 +107,12 @@ class 表:
 		if not sname: sname = f"{self.short}.tsv"
 		if not sname.startswith("/"):
 			sname = self.get_fullname(sname)
+		if sname.endswith(".xls"): sname += "x"
 		g = glob(sname)
 		if not g or len(g) != 1:
 			if isXls(sname):
 				self._file = getTsvName(self._file)
-				return self.spath
+				return self.get_fullname(self._file)
 			logging.error(f"\t\t\t{sname} {g}")
 			return
 		sname = g[0]
@@ -137,10 +137,11 @@ class 表:
 		varianttime = os.path.getmtime(VARIANT_FILE)
 		if classtime < varianttime:
 			classtime = varianttime
-		if not self.spath or not os.path.exists(self.spath):
+		spath = self.spath
+		if not spath or not os.path.exists(spath):
 			return False
 		if os.path.exists(self.tpath):
-			ftime = os.path.getmtime(self.spath)
+			ftime = os.path.getmtime(spath)
 			ttime = os.path.getmtime(self.tpath)
 			if ttime < self._time: return True
 			if ttime < classtime: return True
