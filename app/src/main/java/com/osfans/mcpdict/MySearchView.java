@@ -11,7 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 
-public class MySearchView extends RelativeLayout {
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+public class MySearchView extends ConstraintLayout {
 
     private final EditText editText;
     private final Button clearButton;
@@ -29,7 +31,7 @@ public class MySearchView extends RelativeLayout {
         inflater.inflate(R.layout.custom_search_view, this, true);
 
         editText = findViewById(R.id.text_query);
-        editText.setTypeface(DictApp.getDictTypeFace());
+        editText.setTypeface(Utils.getDictTypeFace());
         clearButton = findViewById(R.id.button_clear);
         searchButton = findViewById(R.id.button_search);
 
@@ -68,12 +70,12 @@ public class MySearchView extends RelativeLayout {
     }
 
     public String getQuery() {
-        return Utils.getInput(getContext());
+        return Utils.getInput();
     }
 
     public void setQuery(String query) {
         editText.setText(query);
-        Utils.putInput(getContext(), query);
+        Utils.putInput(query);
     }
 
     private void setQuery() {

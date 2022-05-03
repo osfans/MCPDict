@@ -89,7 +89,7 @@ public class ResultFragment extends Fragment {
                     break;
                 case MSG_GOTO_INFO:
                     removeCallbacksAndMessages(null);
-                    DictApp.info(requireActivity(), mEntry.lang);
+                    Utils.info(requireActivity(), mEntry.lang);
                     break;
                 case MSG_FAVORITE:
                     removeCallbacksAndMessages(null);
@@ -135,7 +135,7 @@ public class ResultFragment extends Fragment {
         registerForContextMenu(mWebView);
         mTextView = new TextView(requireContext());
         mTextView.setTextAppearance(R.style.FontDetail);
-        if (DictApp.enableFontExt()) mTextView.setTypeface(DictApp.getDictTypeFace());
+        if (Utils.enableFontExt()) mTextView.setTypeface(Utils.getDictTypeFace());
         mTextView.setTextIsSelectable(true);
         mTextView.setMovementMethod(LinkMovementMethod.getInstance());
         LinearLayout layout = selfView.findViewById(R.id.layout);
@@ -153,7 +153,7 @@ public class ResultFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        if (DictApp.getDisplayFormat() == 2) {
+        if (Utils.getDisplayFormat() == 2) {
             mTextView.setVisibility(View.GONE);
             mWebView.setVisibility(View.VISIBLE);
         } else {
@@ -211,7 +211,7 @@ public class ResultFragment extends Fragment {
         MenuItem itemDict = menu.findItem(R.id.menu_item_dict_links);
         SubMenu menuDictLinks = itemDict.getSubMenu();
         MenuItem item;
-        List<String> cols = Arrays.asList(DB.getVisibleColumns(getContext()));
+        List<String> cols = Arrays.asList(DB.getVisibleColumns());
 
         if (TextUtils.isEmpty(col)) {
             if (cols.size() > 2)
@@ -233,7 +233,7 @@ public class ResultFragment extends Fragment {
                 item.setIntent(getDictIntent(col, hz));
             }
             menu.add(GROUP_READING, COL_HZ, 90, getString(R.string.copy_hz));
-            String language = DB.getLanguage(col);
+            String language = DB.getLanguageByLabel(col);
             if (DB.isLang(col)) {
                 item = menu.add(getString(R.string.goto_info, language));
                 item.setOnMenuItemClickListener(i->mHandler.sendEmptyMessage(MSG_GOTO_INFO));
@@ -381,13 +381,13 @@ public class ResultFragment extends Fragment {
                 "    rt {font-size: 0.9em; background-color: #F0FFF0;}  " +
                 "  </style></head><body>");
         if (TextUtils.isEmpty(query)) {
-            sb.append(DB.getIntro(getContext()));
+            sb.append(DB.getIntro());
         } else if (cursor == null || cursor.getCount() == 0) {
             sb.append(getString(R.string.no_matches));
         } else {
             StringBuilder ssb = new StringBuilder();
             int n = cursor.getCount();
-            String lang = Utils.getLanguage(getContext());
+            String lang = Utils.getLabel();
             boolean isZY = DB.isLang(lang) && query.length() >= 3 && n >= 3
                     && !Orthography.HZ.isBS(query)
                     && Orthography.HZ.isHz(query);
@@ -396,7 +396,7 @@ public class ResultFragment extends Fragment {
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 int i = cursor.getColumnIndex(lang);
-                CharSequence py = DictApp.formatIPA(lang, DictApp.getRawText(cursor.getString(i)));
+                CharSequence py = Utils.formatIPA(lang, Utils.getRawText(cursor.getString(i)));
                 if (isZY) {
                     pys.put(hz, py.toString());
                 } else {
@@ -437,7 +437,7 @@ public class ResultFragment extends Fragment {
                 String fq = "";
                 String fqTemp;
                 boolean opened = false;
-                for (String col : DB.getVisibleColumns(getContext())) {
+                for (String col : DB.getVisibleColumns()) {
                     int index = DB.getColumnIndex(col);
                     s = cursor.getString(index);
                     if (TextUtils.isEmpty(s)) continue;
@@ -447,8 +447,8 @@ public class ResultFragment extends Fragment {
                         ssb.append(String.format("<details open><summary>%s</summary>", fqTemp));
                         opened = true;
                     }
-                    CharSequence ipa = DictApp.formatIPA(col, s);
-                    String raw = DictApp.getRawText(s);
+                    CharSequence ipa = Utils.formatIPA(col, s);
+                    String raw = Utils.getRawText(s);
                     String label = DB.getLabel(col);
                     ssb.append(String.format("<div onclick='mcpdict.onClick(\"%s\", \"%s\", \"%s\", %d, \"%s\",event.pageX, event.pageY)' class=row><div class=place style='background: linear-gradient(to left, %s, %s);'>%s</div><div class=ipa>%s</div></div>",
                             hz, col, raw, favorite, comment,
@@ -481,7 +481,7 @@ public class ResultFragment extends Fragment {
     private CharSequence setTextData(String query, Cursor cursor) {
         SpannableStringBuilder sb = new SpannableStringBuilder();
         if (TextUtils.isEmpty(query)) {
-            sb.append(HtmlCompat.fromHtml(DB.getIntro(getContext()), HtmlCompat.FROM_HTML_MODE_COMPACT));
+            sb.append(HtmlCompat.fromHtml(DB.getIntro(), HtmlCompat.FROM_HTML_MODE_COMPACT));
         } else if (cursor == null || cursor.getCount() == 0) {
             sb.append(getString(R.string.no_matches));
         } else {
@@ -507,13 +507,13 @@ public class ResultFragment extends Fragment {
                 }
                 sb.append("\n");
                 StringBuilder sb2 = new StringBuilder();
-                for (String col : DB.getVisibleColumns(getContext())) {
+                for (String col : DB.getVisibleColumns()) {
                     int i = cursor.getColumnIndex(col);
                     s = cursor.getString(i);
                     if (TextUtils.isEmpty(s)) continue;
                     String label = getLabel(col);
                     sb2.append(String.format("［%s］", label));
-                    sb2.append(HtmlCompat.fromHtml(DictApp.formatIPA(col, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT));
+                    sb2.append(HtmlCompat.fromHtml(Utils.formatIPA(col, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT));
                     sb2.append("\n");
                 }
                 if (sb2.length() > 0) {
@@ -533,7 +533,7 @@ public class ResultFragment extends Fragment {
     private SpannableStringBuilder setTableData(String query, Cursor cursor) {
         SpannableStringBuilder ssb = new SpannableStringBuilder();
         if (TextUtils.isEmpty(query)) {
-            ssb.append(HtmlCompat.fromHtml(DB.getIntro(getContext()), HtmlCompat.FROM_HTML_MODE_COMPACT));
+            ssb.append(HtmlCompat.fromHtml(DB.getIntro(), HtmlCompat.FROM_HTML_MODE_COMPACT));
         } else if (cursor == null || cursor.getCount() == 0) {
             ssb.append(getString(R.string.no_matches));
         } else {
@@ -566,22 +566,22 @@ public class ResultFragment extends Fragment {
                 // Unicode
                 String unicode = Orthography.HZ.toUnicode(hz);
                 int color = getColor(SW);
-                ssb.append(" " + unicode + " ", new PopupSpan(DictApp.formatPopUp(hz, COL_HZ, getUnicode(cursor)), color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ssb.append(" " + unicode + " ", new PopupSpan(Utils.formatPopUp(hz, COL_HZ, getUnicode(cursor)), color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 StringBuilder raws = new StringBuilder();
                 raws.append(String.format("%s %s\n", hz, unicode));
                 // yb
                 SpannableStringBuilder ssb2 = new SpannableStringBuilder();
-                for (String lang : DB.getVisibleColumns(getContext())) {
+                for (String lang : DB.getVisibleColumns()) {
                     int i = getColumnIndex(lang);
                     s = cursor.getString(i);
                     if (TextUtils.isEmpty(s)) continue;
-                    CharSequence cs = HtmlCompat.fromHtml(DictApp.formatIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
+                    CharSequence cs = HtmlCompat.fromHtml(Utils.formatIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
                     n = ssb2.length();
                     String label = getLabel(i);
                     Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
                     DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
                     ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    String raw = DictApp.getRawText(s);
+                    String raw = Utils.getRawText(s);
                     Entry e = new Entry(hz, lang, raw, bFavorite, comment);
                     ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                     ssb2.append(cs);
@@ -593,7 +593,7 @@ public class ResultFragment extends Fragment {
                 for (int i = COL_SW; i <= COL_HD; i++) {
                     s = cursor.getString(i);
                     if (!TextUtils.isEmpty(s)) {
-                        ssb.append(" " + getLabel(i) + " ", new PopupSpan(DictApp.formatPopUp(hz, i, s), color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        ssb.append(" " + getLabel(i) + " ", new PopupSpan(Utils.formatPopUp(hz, i, s), color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                     }
                 }
                 // Map
@@ -632,11 +632,11 @@ public class ResultFragment extends Fragment {
     }
 
     public void setData(Cursor cursor) {
-        final String query = Utils.getInput(getContext());
-        Orthography.setToneStyle(DictApp.getToneStyle(R.string.pref_key_tone_display));
-        Orthography.setToneValueStyle(DictApp.getToneStyle(R.string.pref_key_tone_value_display));
+        final String query = Utils.getInput();
+        Orthography.setToneStyle(Utils.getToneStyle(R.string.pref_key_tone_display));
+        Orthography.setToneValueStyle(Utils.getToneStyle(R.string.pref_key_tone_value_display));
         mRaws.clear();
-        int format = DictApp.getDisplayFormat();
+        int format = Utils.getDisplayFormat();
         if (format == 2) { //web
             setWebData(query, cursor);
             mWebView.setVisibility(View.VISIBLE);

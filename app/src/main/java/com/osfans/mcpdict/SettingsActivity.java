@@ -3,21 +3,17 @@ package com.osfans.mcpdict;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.ListPreference;
 import androidx.preference.MultiSelectListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
-import java.util.ArrayList;
-
 public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Utils.setLocale(this);
+        Utils.setLocale();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
         getSupportFragmentManager()

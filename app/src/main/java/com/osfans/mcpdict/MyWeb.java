@@ -1,8 +1,5 @@
 package com.osfans.mcpdict;
 
-import static com.osfans.mcpdict.DB.COL_HZ;
-
-import android.util.Log;
 import android.webkit.JavascriptInterface;
 
 public class MyWeb {
@@ -23,7 +20,7 @@ public class MyWeb {
 
     @JavascriptInterface
     public void showDict(String hz, int i, String text) {
-        DictApp.showDict(mWebView.getContext(), DictApp.formatPopUp(hz, i, text));
+        Utils.showDict(mWebView.getContext(), Utils.formatPopUp(hz, i, text));
     }
 
     @JavascriptInterface
@@ -35,7 +32,7 @@ public class MyWeb {
     public void onClick(String hz, String lang, String raw, int favorite, String comment, int x, int y) {
         ResultFragment resultFragment = getFragment();
         resultFragment.setEntry(hz, lang, raw, favorite==1, comment);
-        resultFragment.showContextMenu(x*DictApp.getScale(), y*DictApp.getScale());
+        resultFragment.showContextMenu(x* Utils.getScale(), y* Utils.getScale());
     }
 
 }

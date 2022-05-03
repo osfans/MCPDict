@@ -2,14 +2,10 @@ package com.osfans.mcpdict;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.core.content.res.ResourcesCompat;
 
 import org.osmdroid.bonuspack.kml.KmlDocument;
 import org.osmdroid.bonuspack.kml.Style;
@@ -114,16 +110,15 @@ public class MyMapView extends MapView {
     private FolderOverlay initHZ(String hz) {
         Cursor cursor = DB.directSearch(hz);
         cursor.moveToFirst();
-        Context context = getContext();
         FolderOverlay folderOverlay = new FolderOverlay();
-        for (String lang: DB.getVisibleColumns(context)) {
+        for (String lang: DB.getVisibleColumns()) {
             GeoPoint point = DB.getPoint(lang);
             if (point == null) continue;
             int i = DB.getColumnIndex(lang);
             String string = cursor.getString(i);
             if (TextUtils.isEmpty(string)) continue;
-            CharSequence yb = DictApp.formatIPA(lang,  DictApp.getRawText(string));
-            CharSequence js = DictApp.formatIPA(lang,  string);
+            CharSequence yb = Utils.formatIPA(lang,  Utils.getRawText(string));
+            CharSequence js = Utils.formatIPA(lang,  string);
             int size = DB.getSize(lang);
             MyMarker marker = new MyMarker(this, DB.getColor(lang), DB.getLabel(lang), yb.toString() , js.toString(), size);
             marker.setPosition(point);
