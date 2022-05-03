@@ -3,6 +3,7 @@
 from tables._表 import 表 as _表
 
 class 表(_表):
+	full = "說文解字"
 	short = "說文"
 	site = "說文解字線上搜索"
 	url = "http://www.shuowen.org/?kaishu=%s"

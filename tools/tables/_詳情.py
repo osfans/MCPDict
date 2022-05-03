@@ -97,8 +97,20 @@ def load():
 		colors = [fs[i].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典顏色","陳邡顏色","俞銓（正心）顏色")]
 		subcolors = [fs[i].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典過渡色","陳邡過渡色","俞銓過渡色")]
 		types = [fs[i].value for i in ("地圖集二分區", "音典分區","陳邡分區","俞銓（正心）分區")]
-		#types.append(convert(",".join(fs[40:49]).rstrip(",")))
-		#types.append(fs[53].strip())
+		tmp = types[0]
+		if tmp:
+			if "-" in tmp: types[0]+="," + tmp.split("-")[0]
+		else: types[0] = ","
+		tmp = types[1]
+		if tmp:
+			if "-" in tmp: types[1]+="," + tmp.split("-")[0]
+		else: types[1] = ","
+		start = fields.index("下拉1")
+		collapse = fs["下拉4，折疊分区"].value
+		if collapse == None: collapse = ""
+		dropdown = [row[i].value if row[i].value else "" for i in range(start, start + 9)]
+		if types[2] == None: types[2] = ""
+		types[2] += "," + collapse + "," + (",".join(dropdown))
 		point = fs["緯度,經度"].value
 		if point: point = point.replace(" ", "").replace("，",",").strip()
 		places = [fs[i].value if fs[i].value else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]

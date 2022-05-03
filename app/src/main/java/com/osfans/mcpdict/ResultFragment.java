@@ -34,7 +34,6 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.DrawableMarginSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.LayoutInflater;
@@ -423,7 +422,6 @@ public class ResultFragment extends Fragment {
                     s = s.replace("\n", "<br>");
                     ssb.append(String.format("<div class=y onclick='mcpdict.showDict(\"%s\", %d, \"%s\")'>%s</div>", hz, j, s, col));
                 }
-                Log.e("kyle", ssb.toString());
                 ssb.append(String.format("<div class=y onclick='mcpdict.showMap(\"%s\")'>%s</div>", hz, DB.MAP));
                 // "Favorite" button
                 String comment = cursor.getString(cursor.getColumnIndexOrThrow(COMMENT));
@@ -441,7 +439,7 @@ public class ResultFragment extends Fragment {
                     int index = DB.getColumnIndex(col);
                     s = cursor.getString(index);
                     if (TextUtils.isEmpty(s)) continue;
-                    fqTemp = DB.getFq(col);
+                    fqTemp = DB.getWebFq(col);
                     if (!fqTemp.contentEquals(fq)) {
                         if (opened) ssb.append("</details>");
                         ssb.append(String.format("<details open><summary>%s</summary>", fqTemp));
