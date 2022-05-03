@@ -558,7 +558,11 @@ public class DB extends SQLiteAssetHelper {
             for (String field: fields) {
                 if (TextUtils.isEmpty(field)) sb.append("<br>");
                 String value = getFieldByLanguage(language, field);
-                if (!TextUtils.isEmpty(value)) {
+                if (!TextUtils.isEmpty(value) && !value.contentEquals("/")) {
+                    if (field.endsWith(_FQ)) {
+                        value = value.replace(","," ,").split(",")[0].trim();
+                        if (TextUtils.isEmpty(value)) continue;
+                    }
                     sb.append(String.format(Locale.getDefault(), "%s：%s<br>", field, value));
                 }
             }
@@ -650,11 +654,15 @@ public class DB extends SQLiteAssetHelper {
         return FQS;
     }
 
-    public static String getFq(String lang) {
+    public static String getWebFq(String lang) {
         initArrays();
         String s = getFieldByLabel(lang, FQ);
         if (TextUtils.isEmpty(s)) return "";
-        return s.split("[,-]")[0];
+        if (s.contains(",")) {
+            s = s.replace(",", " ,");
+            return s.split(",")[1].trim();
+        }
+        return s;
     }
 
     public static String getUnicode(Cursor cursor) {

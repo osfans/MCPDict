@@ -15,7 +15,7 @@ def cjkorder(s):
 
 def addAllFq(d, fq, order,ignorePian = False):
 	if order is None or fq is None: return
-	fqs = fq.split("-")
+	fqs = fq.split(",")[0].split("-")
 	for i in range(len(fqs)):
 		name = "-".join(fqs[0:i+1])
 		if not name or name in d: continue
@@ -24,12 +24,14 @@ def addAllFq(d, fq, order,ignorePian = False):
 
 def addCfFq(d, fq, order):
 	if fq is None: return
-	fqs = fq.split(",")[1:]
+	fqs = fq.split(",")[2:]
 	for i,fq in enumerate(fqs):
 		if not fq: continue
-		if i not in d: d[i] = dict()
-		if fq not in d[i]:
-			d[i][fq] = order
+		if fq not in d:
+			d[fq] = i, order
+		#if i not in d: d[i] = dict()
+		# if fq not in d[i]:
+		# 	d[i][fq] = order
 
 def getLangs(dicts, argv=None):
 	infos = tables._詳情.load()
@@ -59,6 +61,7 @@ def getLangs(dicts, argv=None):
 				print(f"\t\t\t{e} {mod}")
 				continue
 			if d["簡繁"] == "簡": lang.simplified = 2
+			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 			addAllFq(types[0], d["地圖集二分區"], d["地圖集二排序"])
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
 			if d["省"]:
@@ -83,7 +86,7 @@ def getLangs(dicts, argv=None):
 		else:
 			lang = import_module(f"tables.{mod}").表()
 			d = dict()
-			d["語言"] = mod
+			d["語言"] = lang.full if lang.full else mod
 			d["簡稱"] = lang.short if lang.short else mod
 			d["地圖集二顏色"] = lang.color if count == 0 else None
 			d["地圖集二分區"] = None
@@ -106,7 +109,9 @@ def getLangs(dicts, argv=None):
 	hz.info["說明"] = "字數：%d<br>語言數：%d<br><br>%s"%(len(dicts), count, hz.note)
 	hz.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:(x.count("-"),types[0][x])))
 	hz.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
-	hz.info["陳邡分區"] = ",".join(sorted(types[3].keys(),key=lambda x:(x.count("-"),types[3][x])))
+	hz.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:types[2][x]))
+	#hz.info["陳邡分區"] = ",".join([",".join(sorted(types[2][i].keys(),key=lambda x:types[2][i][x])) for i in types[2]])
 	hz.info["俞銓（正心）分區"] = ",".join(sorted(types[3].keys(),key=lambda x:(x.count("-"),types[3][x])))
+	print(hz.info["陳邡分區"])
 	print("語言數", count)
 	return langs

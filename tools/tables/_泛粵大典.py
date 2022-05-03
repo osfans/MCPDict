@@ -7,13 +7,18 @@ class 表(_表):
 	def parse(self, fs):
 		if len(fs) < 4: return
 		js = ""
-		if str(self) == "江門墟頂":
+		if str(self) == "開平沙塘":
+			hz = fs[0]
+			py = fs[2]+fs[3]
+			yb = fs[5] + fs[6]
+			js = fs[4]
+		elif str(self) == "新會會城":
+			hz, _, py, yb = fs[:4]
+		else:
 			hz = fs[0]
 			py = fs[3]+fs[4]
 			yb = fs[14] + fs[15]
 			js = fs[17]
-		else:
-			hz, _, py, yb = fs[:4]
 		if not py or not yb: return
 		sd = py[-1]
 		if not sd.isdigit(): sd = "0"

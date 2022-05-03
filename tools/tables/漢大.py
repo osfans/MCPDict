@@ -5,6 +5,7 @@ from collections import defaultdict
 import re
 
 class 表(_表):
+	full = "漢語大字典"
 	short = "漢大"
 	note = "來源：<a href=https://github.com/zi-phoenicia/hydzd/>GitHub</a>"
 	

@@ -75,6 +75,7 @@ class 表:
 	_file = None
 	_sep = None
 	color = "#1E90FF"
+	full = ""
 	short = ""
 	note = ""
 	site = ""
