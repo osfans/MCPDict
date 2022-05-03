@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
@@ -20,20 +22,19 @@ import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import java.util.Set;
-
 public class DictFragment extends Fragment implements RefreshableFragment {
 
     private View selfView;
     private MySearchView searchView;
-    private Spinner spinnerSearchAs, spinnerShowLang;
+    private Spinner spinnerShowLang;
+    private AutoCompleteTextView autoCompleteSearchLang;
     private CheckBox checkBoxAllowVariants;
     private ResultFragment fragmentResult;
-    ArrayAdapter<CharSequence> adapter, adapterShowLang, adapterShowChar;
+    ArrayAdapter<CharSequence> adapterShowLang, adapterShowChar;
 
     private void updateCurrentLanguage() {
-        Object column = spinnerSearchAs.getSelectedItem();
-        if (column != null) Utils.putLanguage(getContext(), column.toString());
+        String lang = autoCompleteSearchLang.getText().toString();
+        Utils.putLanguage(lang);
         int position = spinnerShowLang.getSelectedItemPosition();
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
         sp.edit().putInt(getString(R.string.pref_key_show_language_index), position).apply();
@@ -43,7 +44,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         else if (position < preFqs.length) name = preFqs[position];
         else name = spinnerShowLang.getSelectedItem().toString();
         if (position == 1 || position == 2) {
-            name = Utils.getLanguage(getContext());
+            name = Utils.getLabel();
+            if (!DB.isLang(name)) name = DB.HZ;
             if (position == 1) name = String.format("%s,%s,%s", DB.CMN, DB.GY, name);
         }
         sp.edit().putString(getString(R.string.pref_key_show_language_names), name).apply();
@@ -86,12 +88,18 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         int position = PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt(getString(R.string.pref_key_charset), 0);
         spinnerShowChar.setSelection(position);
 
-        spinnerSearchAs = selfView.findViewById(R.id.spinner_search_as);
-        adapter = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
-        refreshAdapter();
-        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
-        spinnerSearchAs.setAdapter(adapter);
-
+        autoCompleteSearchLang = selfView.findViewById(R.id.search_lang);
+        autoCompleteSearchLang.setAdapter(new LanguageAdapter(requireContext(), null, true));
+        autoCompleteSearchLang.setOnFocusChangeListener((view, b) -> {
+            if (b) {
+                ((AutoCompleteTextView)view).showDropDown();
+            }
+        });
+        Button buttonLangClear = selfView.findViewById(R.id.button_lang_clear);
+        buttonLangClear.setOnClickListener(v -> {
+            autoCompleteSearchLang.setText("");
+            autoCompleteSearchLang.requestFocus();
+        });
         // Set up the checkboxes
         checkBoxAllowVariants = selfView.findViewById(R.id.check_box_allow_variants);
         loadCheckBoxes();
@@ -120,18 +128,11 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
         });
-        spinnerSearchAs.setOnItemSelectedListener(new OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                searchView.clickSearchButton();
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
-        });
+        autoCompleteSearchLang.setOnItemClickListener((adapterView, view, i, l) -> searchView.clickSearchButton());
 
         // Get a reference to the SearchResultFragment
         fragmentResult = (ResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);
-
+        refreshAdapter();
         return selfView;
     }
 
@@ -152,7 +153,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         new AsyncTask<Void, Void, Cursor>() {
             @Override
             protected Cursor doInBackground(Void... params) {
-                return DB.search(getContext());
+                return DB.search();
             }
             @Override
             protected void onPostExecute(Cursor cursor) {
@@ -162,10 +163,9 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     }
 
     private void refreshSearchAs() {
-        String lang = Utils.getLanguage(getContext());
-        int index = adapter.getPosition(lang);
-        if (index >= adapter.getCount()) index = 0;
-        if (index >= 0) spinnerSearchAs.setSelection(index);
+        String lang = Utils.getLanguage();
+        if (TextUtils.isEmpty(lang)) lang = DB.HZ;
+        autoCompleteSearchLang.setText(lang);
     }
 
     private void refreshShowLang() {
@@ -174,30 +174,15 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         if (index >= 0) spinnerShowLang.setSelection(index);
     }
 
-    public void refresh(String query, String lang) {
+    public void refresh(String query, String label) {
         searchView.setQuery(query);
-        Utils.putLanguage(getContext(), lang);
+        Utils.putLabel(label);
         refreshSearchAs();
         refresh();
     }
 
     public void refreshAdapter() {
-        if (adapter != null) {
-            adapter.clear();
-            String[] columns = DB.getSearchColumns();
-            if (columns == null) return;
-            Set<String> customs = PreferenceManager.getDefaultSharedPreferences(getContext()).getStringSet(getString(R.string.pref_key_custom_languages), null);
-            if (customs == null || customs.size() == 0) {
-                adapter.addAll(columns);
-            }
-            else {
-                for (String lang: columns) {
-                    if (customs.contains(lang)) adapter.add(lang);
-                }
-            }
-            //adapter.add(getString(R.string.search_as_ja_any));
-            refreshSearchAs();
-        }
+        refreshSearchAs();
         if (adapterShowLang != null) {
             adapterShowLang.clear();
             String[] preFqs = getResources().getStringArray(R.array.pref_entries_show_languages);

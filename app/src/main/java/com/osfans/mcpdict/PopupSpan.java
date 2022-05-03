@@ -1,14 +1,8 @@
 package com.osfans.mcpdict;
 
-import android.content.Context;
 import android.text.TextPaint;
-import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.view.View;
-import android.widget.TextView;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.core.text.HtmlCompat;
 
 public class PopupSpan extends ClickableSpan {
     CharSequence text;
@@ -21,7 +15,7 @@ public class PopupSpan extends ClickableSpan {
 
     @Override
     public void onClick(View v) {
-        DictApp.showDict(v.getContext(), text);
+        Utils.showDict(v.getContext(), text);
     }
 
     @Override

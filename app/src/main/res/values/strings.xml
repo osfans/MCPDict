@@ -22,6 +22,7 @@
     <string name="overwrite">覆蓋</string>
 
     <string name="search_hint">輸入字或音</string>
+    <string name="search_lang_hint">輸入或選擇語言</string>
     <string name="search_for">查詢內容：</string>
     <string name="search_as">查詢條件：</string>
     <string name="search_options">查詢選項：</string>

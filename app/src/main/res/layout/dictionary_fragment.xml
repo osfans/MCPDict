@@ -1,23 +1,43 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="6dp"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <Spinner
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:id="@+id/spinner_search_as" />
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/search_lang"
+                android:hint="@string/search_lang_hint"
+                android:completionThreshold="0"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <Button
+                android:id="@+id/button_lang_clear"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@android:drawable/ic_menu_close_clear_cancel"
+                android:backgroundTint="?android:attr/colorForeground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/search_lang"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <com.osfans.mcpdict.MySearchView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
+            android:layout_weight="1"
             android:id="@+id/search_view" />
     </LinearLayout>
 
