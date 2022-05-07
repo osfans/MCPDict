@@ -11,9 +11,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import android.content.res.Resources;
 import android.text.TextUtils;
+import android.util.Log;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Orthography {
 
@@ -38,17 +45,25 @@ public class Orthography {
         mToneValueStyle = style;
     }
 
-    public static String formatTone(String base, int tone, String lang) {
-        if (tone <= 0 || tone > 30) return base;
-        String s = DB.getToneName(lang);
-        if (TextUtils.isEmpty(s)) return base;
-        tone = tone - 1;
-        String[] tones = s.split(",");
-        if (tones.length <= tone) return base;
-        String toneAllStyles = tones[tone];
-        String[] styles = toneAllStyles.split(" ");
-        if (styles.length != 5) return base;
-        String tv = styles[0];
+    private static String getJSONString(JSONArray styles, int index) {
+        try {
+            return styles.getString(index);
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public static String formatTone(String base, String tone, String lang) {
+        if (tone.contentEquals("0") || TextUtils.isEmpty(tone)) return base;
+        tone = tone.toUpperCase();
+        JSONArray styles = null;
+        try {
+            JSONObject jsonObject = DB.getToneName(lang);
+            styles = jsonObject.getJSONArray(tone);
+        } catch (Exception ignored) {
+        }
+        if (styles == null || styles.length() != 5) return base + tone;
+        String tv = getJSONString(styles, 0);
         if (!TextUtils.isEmpty(tv) && mToneValueStyle <= 1) {
             if (mToneValueStyle == 0) { //符號
                 if (tv.length() == 2 && tv.charAt(0) == tv.charAt(1))
@@ -77,19 +92,16 @@ public class Orthography {
             case 0:
                 return base + (1 + tone);
             default:
-                String sTone = styles[mToneStyle];
+                String sTone = getJSONString(styles, mToneStyle);
+                String style1 = getJSONString(styles, 1);
                 if (TextUtils.isEmpty(sTone) || sTone.contentEquals("0")) return base;
-                if (mToneStyle == 4 && !TextUtils.isEmpty(styles[1])) {
-                    char a = styles[1].charAt(0);
-                    if (a >= '1' && a <= '4') return styles[mToneStyle] + base;
+                if (mToneStyle == 4 && !TextUtils.isEmpty(style1)) {
+                    char a = style1.charAt(0);
+                    if (a >= '1' && a <= '4') return sTone + base;
                 }
                 if (mToneStyle <= 2) {
                     char a = sTone.charAt(0);
                     sTone = sTone.replace(a, (char)(a - '1' + '①'));
-                    if (sTone.length() == 2) {
-                        char b = sTone.charAt(1);
-                        sTone = sTone.replace(b, (char)(b - 'a' + 'A'));
-                    }
                 }
                 return base + sTone;
         }
@@ -317,7 +329,7 @@ public class Orthography {
             if (tone == 4) {
                 ym = ym.replace('m', 'p').replace('n', 't').replace('ŋ','k');
             }
-            return String.format("%s(%s)", formatTone(Objects.requireNonNull(mapSms.get(init))[system] + ym, tone, DB.GY), detail(s0));
+            return String.format("%s(%s)", formatTone(Objects.requireNonNull(mapSms.get(init))[system] + ym, tone + "", DB.GY), detail(s0));
         }
 
         public static String detail(String s) {
@@ -598,7 +610,7 @@ public class Orthography {
                     .replace("zh", "tʂ").replace("ch", "tʂʰ").replace("sh", "ʂ").replace("r", "ɻ")
                     .replace("z", "ts").replace("c", "tsʰ")
                     .replace("j", "tɕ").replace("q", "tɕʰ").replace("x", "ɕ").replace("h", "x");
-            return formatTone(s, tone - '0', DB.CMN);
+            return formatTone(s, tone + "", DB.CMN);
         }
 
         public static List<String> getAllTones(String s) {
@@ -766,7 +778,7 @@ public class Orthography {
 
             // In Yale, initial "y" is omitted if final begins with "yu"
             if (system == YALE && Objects.requireNonNull(init).equals("y") && Objects.requireNonNull(fin).startsWith("yu")) init = "";
-            if (system == IPA) return formatTone(init + fin, tone - '0', DB.HK);
+            if (system == IPA) return formatTone(init + fin, tone + "", DB.HK);
             return init + fin + (tone == '_' ? "" : tone);
         }
 
@@ -810,7 +822,7 @@ public class Orthography {
             s = base;
             s = s.replace("oo", "ɔ").replaceFirst("o(k|ng)", "ɔ$1").replace("o", "ə");
             s = s.replaceFirst("^(p|t|k|ts)h", "$1ʰ").replace("ng", "ŋ").replace("j", "dz").replaceFirst("^g", "ɡ").replaceFirst("h$","ʔ").replace("nn","̃");
-            s = formatTone(s, tone - '0', DB.TW);
+            s = formatTone(s, "" + tone, DB.TW);
             return s;
         }
     }
@@ -845,13 +857,15 @@ public class Orthography {
         public static String display(String s, String lang) {
             if (TextUtils.isEmpty(s) || s.length() < 2) return s;
             if (Character.isDigit(s.charAt(0))) return s;
-            char c = s.charAt(s.length() - 1);
-            if (!Character.isDigit(c)) return s;
-            char c2 = s.charAt(s.length() - 2);
-            String tone = "" + (Character.isDigit(c2) ? c2 : "") + c;
-            String base = s.substring(0, s.length() - tone.length());
-            if (tone.contentEquals("0")) return base;
-            return formatTone(base, Integer.parseInt(tone), lang);
+            Pattern pattern = Pattern.compile("^(.+)([0-9]{1,2}[a-z]?)$");
+            Matcher matcher = pattern.matcher(s);
+            if (matcher.matches()) {
+                String tone = matcher.group(2);
+                if (TextUtils.isEmpty(tone)) return s;
+                String base = matcher.group(1);
+                return formatTone(base, tone, lang);
+            }
+            return s;
         }
     }
 
@@ -1013,7 +1027,7 @@ public class Orthography {
             } else {
                 index = "_frxsj".indexOf(tone) + 1;
             }
-            return formatTone(s, index, DB.VI);
+            return formatTone(s, index + "", DB.VI);
         }
 
         // Rules for placing the tone marker follows this page in Vietnamese Wikipedia:

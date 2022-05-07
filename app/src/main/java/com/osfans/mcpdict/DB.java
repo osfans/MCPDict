@@ -10,8 +10,11 @@ import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 
+import com.google.gson.JsonObject;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.osmdroid.util.GeoPoint;
 
 import java.util.ArrayList;
@@ -468,7 +471,7 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static boolean hasTone(String lang) {
-        return !TextUtils.isEmpty(getToneName(lang));
+        return getToneName(lang) != null;
     }
 
     public static String getField(String selection, String lang, String field) {
@@ -606,8 +609,15 @@ public class DB extends SQLiteAssetHelper {
         return _getIntro(Utils.getLanguage());
     }
 
-    public static String getToneName(String lang) {
-        return getFieldByLabel(lang, "聲調");
+    public static JSONObject getToneName(String lang) {
+        String s = getFieldByLabel(lang, "聲調");
+        if (TextUtils.isEmpty(s)) return null;
+        try {
+            return new JSONObject(s);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public static Double getLocation(String lang, int pos) {
@@ -617,11 +627,11 @@ public class DB extends SQLiteAssetHelper {
     }
 
     private static Double getLat(String lang) {
-        return getLocation(lang, 0);
+        return getLocation(lang, 1);
     }
 
     private static Double getLong(String lang) {
-        return getLocation(lang, 1);
+        return getLocation(lang, 0);
     }
 
     public static GeoPoint getPoint(String lang) {

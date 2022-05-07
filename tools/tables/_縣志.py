@@ -15,11 +15,12 @@ class 表(_表):
 			lineno += 1
 			if lineno <= skip: continue
 			line = self.format(line)
-			line = line.strip().replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？")
-			line = re.sub("\[(\d+)\]", "［\\1］",line)
+			line = line.strip().replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？").replace("：[", "	[")
+			line = re.sub("\[(\d+[a-zA-Z]?)\]", "［\\1］",line)
 			line = re.sub("［([^0-9]+.*?)］", "[\\1]",line)
 			if not line: continue
 			line = line.lstrip(" ")
+			if line.startswith("	#"): line = line[1:]
 			if line.startswith("#"):
 				ym = line[1:]
 				if not ym: continue
@@ -36,7 +37,7 @@ class 表(_表):
 			fs = line.split("\t")[:2]
 			if len(fs) != 2: continue
 			sm = fs[0].strip()
-			for sd,hzs in re.findall("［(\d+)］([^［］]+)", fs[1]):
+			for sd,hzs in re.findall("［(\d+[a-zA-Z]?)］([^［］]+)", fs[1]):
 				if sd == "0": sd = ""
 				py = sm + ym +sd
 				hzs = re.findall("(.)\d?([+\-/=~≈\\\*？$&r]?)\d?(\{.*?\})?", hzs)

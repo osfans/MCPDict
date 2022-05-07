@@ -8,6 +8,7 @@ from collections import defaultdict
 from glob import glob
 import inspect
 from openpyxl import load_workbook
+from xlrd import open_workbook
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 
@@ -45,18 +46,15 @@ def getSTVariants(level=2):
 	return d
 
 def getTsvName(xls):
-	return xls.replace("xlsx", "tsv")
+	return re.sub("xlsx?", "tsv", xls)
 
-def isXls(fname):
+def isXlsx(fname):
 	return fname.endswith("xlsx")
 
-def xls2tsv(xls):
-	tsv = getTsvName(xls)
-	if not os.path.exists(xls): return
-	if os.path.exists(tsv):
-		xtime = os.path.getmtime(xls)
-		ttime = os.path.getmtime(tsv)
-		if ttime >= xtime: return
+def isXls(fname):
+	return fname.endswith("xls") or fname.endswith("xlsx")
+
+def getXlsxLines(xls):
 	wb = load_workbook(xls)
 	sheet = wb.worksheets[0]
 	lines = list()
@@ -65,6 +63,28 @@ def xls2tsv(xls):
 		if any(fs):
 			line = "\t".join(fs) + "\n"
 			lines.append(line)
+	return lines
+
+def getXlsLines(xls):
+	wb = open_workbook(xls)
+	sheet = wb.sheet_by_index(0)
+	lines = list()
+	for i in range(sheet.nrows):
+		fs = sheet.row_values(i)
+		fs = [(str(int(j)) if type(j) is float else str(j).strip()) if j else "" for j in fs]
+		if any(fs):
+			line = "\t".join(fs) + "\n"
+			lines.append(line)
+	return lines
+
+def xls2tsv(xls):
+	tsv = getTsvName(xls)
+	if not os.path.exists(xls): return
+	if os.path.exists(tsv):
+		xtime = os.path.getmtime(xls)
+		ttime = os.path.getmtime(tsv)
+		if ttime >= xtime: return
+	lines = getXlsxLines(xls) if isXlsx(xls) else getXlsLines(xls)
 	t = open(tsv, "w", encoding="U8")
 	t.writelines(lines)
 	t.close()
@@ -108,14 +128,18 @@ class 表:
 		if not sname: sname = f"{self.short}.tsv"
 		if not sname.startswith("/"):
 			sname = self.get_fullname(sname)
-		if sname.endswith(".xls"): sname += "x"
 		g = glob(sname)
 		if not g or len(g) != 1:
 			if isXls(sname):
 				self._file = getTsvName(self._file)
-				return self.get_fullname(self._file)
-			logging.error(f"\t\t\t{sname} {g}")
-			return
+				sname = self.get_fullname(self._file)
+				g = glob(sname)
+				if not g or len(g) != 1:
+					logging.error(f"\t\t\t{sname} {g}")
+					return
+			else:
+				logging.error(f"\t\t\t未找到{sname} {g}")
+				return
 		sname = g[0]
 		if isXls(sname):
 			xls2tsv(sname)
@@ -167,7 +191,7 @@ class 表:
 	def normYb(self, yb):
 		if self.isLang() and self.isYb:
 			yb = yb.strip()
-			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "ˀ").lstrip("0∅Ø零")
+			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("0∅Ø零")
 			yb = yb.lower().replace("g", "ɡ").replace("ʼ", "ʰ")
 			if not yb.startswith("h") and "h" in yb:
 				yb = yb.replace("h", "ʰ")

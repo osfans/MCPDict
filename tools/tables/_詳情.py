@@ -35,7 +35,7 @@ def outdated():
 markers = {1: '꜀', 2: '꜁', 3: '꜂', 4: '꜃', 5: '꜄', 6: '꜅', 7: '꜆', 8: '꜇'}
 markers2 = {1: '꜆', 2: '꜆', 3: '꜄', 4: '꜅', 5: '꜂', 6: '꜃', 7: '꜀', 8: '꜁'}
 def getTones(tones):
-	l = [""] * 40
+	l = dict()
 	t4s = [""] * 6
 	for i,ts in enumerate(tones):
 		i = i + 1
@@ -45,8 +45,6 @@ def getTones(tones):
 		for j,t in enumerate(ts.split(",")):
 			if t.startswith("["):
 				index = t[1:t.index("]")]
-				if index[-1] in "abcd": index = int(index[:-1]) + 10 *(ord(index[-1])-ord("a"))
-				else: index = int(index)
 				t = t[t.index("]")+1:]
 			if t[0].isdigit():
 				n = t.lstrip("012345")
@@ -67,8 +65,8 @@ def getTones(tones):
 				t4s[t4]+="1"
 				t4 = str(t4) + chr(ord("a") + len(t4s[t4]) - 1)
 			m = markers.get(i, '') if j == 0 else markers2.get(i, '')
-			l[index] = f"{v} {t8} {t4} {n} {m}"
-	return ",".join(l[1:]).rstrip(",")
+			l[str(index)] = (v,str(t8),str(t4),n,m)
+	return json.dumps(l, ensure_ascii=False).upper()
 
 def load():
 	if not outdated():
@@ -111,7 +109,7 @@ def load():
 		dropdown = [row[i].value if row[i].value else "" for i in range(start, start + 9)]
 		if types[2] == None: types[2] = ""
 		types[2] += "," + collapse + "," + (",".join(dropdown))
-		point = fs["緯度,經度"].value
+		point = fs["經緯度"].value
 		if point: point = point.replace(" ", "").replace("，",",").strip()
 		places = [fs[i].value if fs[i].value else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
 		island = fs["方言島"].value
@@ -172,11 +170,11 @@ def load():
 			"聲調":getTones(tones),
 		}
 		try:
-			wd, jd = map(float, point.split(","))
+			jd, wd = map(float, point.split(","))
 			if abs(wd) > 90:
 				jd, wd = wd, jd
-				point = f"{wd},{jd}"
-				d[lang]["坐標"] = point
+			point = f"{jd},{wd}"
+			d[lang]["坐標"] = point
 		except:
 			continue
 		Feature = {

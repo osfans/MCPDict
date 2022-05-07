@@ -83,13 +83,14 @@ class 表(_表):
 }
 
 	def parse(self, fs):
-		hz, sm, ym, sd, js = fs[0], fs[8], fs[9], fs[10], fs[11]
-		if not sm and not sd: return
-		sm = self.sms.get(sm+"#", sm)
-		ym = self.yms.get(ym, ym)
-		if ym and ym.endswith("̚"):
+		hz, yb, js = fs[0], fs[1], fs[3]
+		if not yb: return
+		sd = yb[-1]
+		if sd.isdigit():
 			if sd == "1": sd = "7"
 			elif sd == "3": sd = "8"
 			elif sd == "6": sd = "9"
-		yb = sm + ym + sd
+		else:
+			sd = ""
+		yb = yb.rstrip("0123456789") + sd
 		return hz, yb, js

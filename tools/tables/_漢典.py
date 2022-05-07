@@ -20,6 +20,7 @@ class 表(_表):
 		dls = dls.rstrip("12345.").replace("_x0008_","")
 		if len(dls) == 4: dls = re.sub("^(..)","\\1/", dls)
 		l = list()
+		js = js.replace("<br>", " ")
 		for sm in sms.split("/"):
 			for ym in yms.split("/"):
 				for dl in dls.split("/"):

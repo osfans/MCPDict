@@ -4,13 +4,6 @@ from tables._縣志 import 表 as _表
 import re
 
 class 表(_表):
-	toneValues = {"7a":"7", "7b":"9"}
-	
-	def format(self, line):
-		for i,j in self.toneValues.items():
-			line = line.replace("[%s]" % i, "[%s]" % j)
-		return line
-
 	def patch(self, d):
 		for line in open(self.get_fullname("建德寿昌文读.tsv"),encoding="U8"):
 			line = line.strip('\n')
@@ -23,7 +16,7 @@ class 表(_表):
 			if len(fs) != 2: continue
 			sm = fs[0]
 			for sd,hzs in re.findall("\[(\d+)\]([^\[\]]+)", fs[1]):
-				if sd.isdigit(): sd = "1" + sd
+				if sd.isdigit(): sd = sd + "w"
 				yb = sm + ym +sd
 				hzm = re.findall("(.)\d?(\{.*?\})?", hzs)
 				for hz, m in hzm:
