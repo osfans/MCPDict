@@ -38,6 +38,20 @@
            />
         <ListPreference
             app:useSimpleSummaryProvider="true"
+            android:key="@string/pref_key_tone_display"
+            android:title="@string/pref_title_tone_display"
+            android:entries="@array/pref_entries_tone_display"
+            android:entryValues="@array/pref_values_tone_display"
+            android:defaultValue="1" />
+        <ListPreference
+            app:useSimpleSummaryProvider="true"
+            android:key="@string/pref_key_tone_value_display"
+            android:title="@string/pref_title_tone_value_display"
+            android:entries="@array/pref_entries_tone_value_display"
+            android:entryValues="@array/pref_values_tone_value_display"
+            android:defaultValue="0" />
+        <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_mc_display"
             android:title="@string/pref_title_mc_display"
             android:entries="@array/pref_entries_mc_display"
@@ -84,20 +98,6 @@
             android:title="@string/pref_title_japanese_display"
             android:entries="@array/pref_entries_japanese_display"
             android:entryValues="@array/pref_values_japanese_display"
-            android:defaultValue="0" />
-        <ListPreference
-            app:useSimpleSummaryProvider="true"
-            android:key="@string/pref_key_tone_display"
-            android:title="@string/pref_title_tone_display"
-            android:entries="@array/pref_entries_tone_display"
-            android:entryValues="@array/pref_values_tone_display"
-            android:defaultValue="1" />
-        <ListPreference
-            app:useSimpleSummaryProvider="true"
-            android:key="@string/pref_key_tone_value_display"
-            android:title="@string/pref_title_tone_value_display"
-            android:entries="@array/pref_entries_tone_value_display"
-            android:entryValues="@array/pref_values_tone_value_display"
             android:defaultValue="0" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -50,24 +50,6 @@
 □	pəŋ3	凸
 □	məŋ3	～□：捂住
 □	təŋ3	聽人～：聽人戲弄
-□	tɕi5	油～～：菜放油放多了，喫起來膩
-□	kuɛ5	□～：靈巧
-□	lai15	使勁爬動，掙扎
-□	dzʱei15	鈸撞擊發出的響聲
-□	dʑʱiau15	七彎八拐
-□	ŋɔo5	較勁
-□	ləu15	怒視
-□	tɕiəu5	～酸：很酸
-□	tɕiəu5	歪曲事實
-□	tsã5	縫補
-□	tiẽ5	租用
-□	dʑʱiẽ15	～疤子：受傷後皮膚留下的疤痕
-□	ɕiẽ5	～前天：前天的前一天
-□	maŋ5	～～：嬰兒
-□	kuaŋ5	～清：水很清亮
-□	ɡʱuaŋ15	狗叫
-□	mɔŋ15	拉
-□	ləŋ5	白～噠：很白
 □	ta6	□□～：腰扭傷
 □	lo6	～沙：分離出沙子
 □	tsɔo6	錯
@@ -88,12 +70,30 @@
 □	dʑʱia8	躲～～：捉迷藏
 □	ləu8	～□床：□面有圍擋的床
 □	tsəu8	～□：用力打
+□	tɕi5a	油～～：菜放油放多了，喫起來膩
+□	kuɛ5a	□～：靈巧
+□	ŋɔo5a	較勁
+□	tɕiəu5a	～酸：很酸
+□	tɕiəu5a	歪曲事實
+□	tsã5a	縫補
+□	tiẽ5a	租用
+□	ɕiẽ5a	～前天：前天的前一天
+□	maŋ5a	～～：嬰兒
+□	kuaŋ5a	～清：水很清亮
+□	ləŋ5a	白～噠：很白
+□	lai5b	使勁爬動，掙扎
+□	dzʱei5b	鈸撞擊發出的響聲
+□	dʑʱiau5b	七彎八拐
+□	ləu5b	怒視
+□	dʑʱiẽ5b	～疤子：受傷後皮膚留下的疤痕
+□	ɡʱuaŋ5b	狗叫
+□	mɔŋ5b	拉
 㞎	pa3	～～：糞便
 㩳	dzʱəŋ3	(存疑)推
 㩳	səŋ3	
 㩳	səŋ3	往前推
 㪗	dʱau3	
-㲃	tɕiəu5	～蓋子：把蓋子扭開
+㲃	tɕiəu5a	～蓋子：把蓋子扭開
 䐬	tsɔo2	(存疑)～病：喫了東西就反胃的病
 一	i7	
 丁	tiaŋ1	
@@ -104,12 +104,12 @@
 上	xɔŋ6	(存疑)地～
 下	xa6-	底～，～降；全部
 下	ɕia6=	底～；～降
-不	pu5	
-不	n̩5	(訓讀)
-丐	kai5	乞～
+不	pu5a	
+不	n̩5a	(訓讀)
+丐	kai5a	乞～
 丑	dzʱəu3	
 且	dʑʱie3	
-世	sɿ5	
+世	sɿ5a	
 丘	dʑʱiəu1	
 丙	pin3	
 丞	tsən2	
@@ -118,8 +118,8 @@
 丫	ŋa1-	
 丫	ia1=	
 中	tsəŋ1	當～
-中	tsəŋ5	射～
-串	ɡʱuø̃15	
+中	tsəŋ5a	射～
+串	ɡʱuø̃5b	
 丸	uø̃2	肉～
 丹	tɛ̃1	
 主	ky3	
@@ -148,7 +148,7 @@
 井	tɕiaŋ3-	
 井	tɕin3=	
 些	ɕi1	
-亞	ia5	
+亞	ia5a	
 亡	mɔ̃2	
 交	tɕiau1	
 亥	xe6	
@@ -166,14 +166,14 @@
 仇	tsəu2	
 仇	tɕiəu2	
 今	tɕin1	
-介	kai5-	
-介	tɕie5=	
+介	kai5a-	
+介	tɕie5a=	
 仍	in2	
 仕	sɿ6	
 他	dʱa1	
-仗	tsɔŋ5	
 仗	tsɔŋ6	
-付	fu5	
+仗	tsɔŋ5a	
+付	fu5a	
 仙	ɕiẽ1	
 代	te6	
 令	lin6	
@@ -194,14 +194,14 @@
 伙	xo3	
 伯	pø7	
 估	ku1	～計
-估	tsø̃5	～領
+估	tsø̃5a	～領
 伴	pø̃6	
 伶	lin2	
 伸	sən1	
-伺	dzʱɿ15	
+伺	dzʱɿ5b	
 似	tsɿ6	
 但	tã6	
-佈	po5=	
+佈	po5a=	
 位	uei6	
 低	ti1	
 住	ky6	
@@ -215,9 +215,9 @@
 你	n̩3-	
 你	ȵi3=	
 佢	ky2	
-佩	bʱi15	
+佩	bʱi5b	
 佳	tɕia1	
-併	pin5	
+併	pin5a	
 使	sɿ3	
 侄	dzʱɿ8	
 來	le2	
@@ -225,7 +225,7 @@
 例	li6	
 侍	tsɿ6	
 供	kəŋ1	～不起
-供	kəŋ5	上～
+供	kəŋ5a	上～
 依	i1	
 侮	vu3	
 侯	xau2	
@@ -234,27 +234,27 @@
 便	piẽ6	方～；～着墻：倚靠着墻
 促	dzʱəu7	
 俄	ŋo2	
-俊	tsən5	
-俏	dʑʱiau15	
+俊	tsən5a	
+俏	dʑʱiau5b	
 俗	səu8	
 俘	fu2	～擄
 保	pɔo3	
 俟	sɿ6	
-信	ɕin5	
+信	ɕin5a	
 修	ɕiəu1	
 俯	fu3	
 俱	ky1	
 倆	liɔŋ3	
 倉	dzʱɔŋ1	
-個	ko5	
+個	ko5a	
 倍	pi6	
 倒	tɔo3	打～；顛～
-倒	to5	～水
+倒	to5a	～水
 倔	kuø7	
 倘	dʱɔŋ3	～使
 候	xau6	
 倚	i3	
-借	tɕia5-	
+借	tɕia5a-	
 倡	dzʱɔŋ1	
 倣	fuɔ̃3	
 倦	kuø̃6	
@@ -265,7 +265,7 @@
 假	tɕia3	真～；放～
 偉	uei3	
 偏	bʱiẽ1	
-做	tsəu5	
+做	tsəu5a	
 停	tiaŋ2	
 健	tɕiẽ6	
 側	dzʱe7	
@@ -274,7 +274,7 @@
 偶	ŋəu3=	
 偷	dʱau1	
 傀	kuɛ3	～儡
-傅	fu5	
+傅	fu5a	
 傍	pɔŋ6	
 傑	dʑʱi7	
 傘	sɛ̃3	
@@ -284,8 +284,8 @@
 傲	ŋɔo6	
 傳	kuø̃2	～達
 傳	kuø̃6	～記
-債	tsɛ5-	
-債	tsai5=	
+債	tsɛ5a-	
+債	tsai5a=	
 傷	sɔŋ1	
 傻	sa3	
 傾	dʑʱin1	
@@ -297,13 +297,13 @@
 僞	uei3	
 僥	tɕiau3	～幸
 僧	sən1	
-僱	ku5	
+僱	ku5a	
 僵	tɕiɔŋ1	
-價	tɕia5	
+價	tɕia5a	
 僻	bʱi7	
 儀	ȵi2	
 儂	ləŋ2	
-億	i5	
+億	i5a	
 儉	tɕiẽ3	
 儘	tɕin6	
 償	sɔŋ2	
@@ -320,10 +320,10 @@
 先	ɕiẽ1	
 光	kuɔ̃1	
 克	ɡʱe7	
-兌	ti5	
+兌	ti5a	
 免	miẽ3	
 兒	ø2	
-兔	dʱəu15	
+兔	dʱəu5b	
 兜	tau1	
 入	y8	
 內	li6	
@@ -339,13 +339,13 @@
 具	ky6	
 典	tiẽ3	
 兼	tɕiẽ1	
-冀	tɕi5	
+冀	tɕi5a	
 冉	uø̃3	
 冊	dzʱe7	
-再	tsɛ5	
-冒	mɔo5	
+再	tsɛ5a	
+冒	mɔo5a	
 冠	kuø̃1	衣～
-冠	kuø̃5	～軍
+冠	kuø̃5a	～軍
 冤	uø̃1	
 冥	min2	
 冬	təŋ1	
@@ -355,12 +355,12 @@
 准	kuen3	
 凌	lin6-	下～：結冰
 凌	lin2=	
-凍	təŋ5	
+凍	təŋ5a	
 凝	ȵin2	
 凡	fã2	
 凰	fɔ̃2	
 凱	ɡʱai3	
-凳	tən5	
+凳	tən5a	
 凶	ɕiəŋ1	
 凹	ŋɔo1	
 出	ɡʱy7	
@@ -377,20 +377,20 @@
 划	fua2	～船
 列	li8	
 初	dzʱəu1	
-判	bʱø̃15	
+判	bʱø̃5b	
 別	bʱi8	區～；離～
 刨	bʱɔo2	～地
 利	li6	
 刪	sã1	
 刮	kua7	
-到	to5	
-制	tsɿ5	
+到	to5a	
+制	tsɿ5a	
 刷	sa7	
-券	kuø̃5	
-刺	dzʱɿ15	
+券	kuø̃5a	
+刺	dzʱɿ5b	
 刻	ɡʱe7	時～；刀～
-剁	to5	
-剃	dʱi15	
+剁	to5a	
+剃	dʱi5b	
 則	tse7	
 削	ɕio7	
 剋	ɡʱe7	省
@@ -404,9 +404,9 @@
 剩	sən6	
 剪	tɕiẽ3	
 剮	kua3	
-副	fu5	
+副	fu5a	
 割	kø7	
-創	dzʱɔŋ15	
+創	dzʱɔŋ5b	
 剿	tɕiau3	
 劃	fua6	
 劄	tsa7	用針～
@@ -414,9 +414,9 @@
 劈	bʱia7-	
 劈	bʱi7=	
 劉	liəu2	
-劊	kuɛ5	
-劍	tɕiẽ5	
-劑	tɕi5	一～藥
+劊	kuɛ5a	
+劍	tɕiẽ5a	
+劑	tɕi5a	一～藥
 力	li8	
 功	kəŋ1	
 加	tɕia1	
@@ -424,9 +424,9 @@
 助	tsəu6	
 努	ləu3	
 劫	tɕi7	
-勁	tɕin5	有～
-勁	tɕin5	
 勁	tɕin3=	
+勁	tɕin5a	有～
+勁	tɕin5a	
 勃	bʱʊ7	
 勇	iəŋ3	
 勉	miẽ3	
@@ -434,14 +434,14 @@
 動	təŋ6	
 勘	ɡʱø̃1	
 務	vu6	
-勝	sən5	～敗；～任
+勝	sən5a	～敗；～任
 勞	lɔo2	
 募	mo6	
-勢	sɿ5	
+勢	sɿ5a	
 勤	tɕin2	
 勳	fən1	
 勵	li6	
-勸	ɡʱuø̃15	
+勸	ɡʱuø̃5b	
 勺	sau2	
 勻	uen2	
 勾	tɕiau1-	
@@ -450,7 +450,7 @@
 包	pɔo1	
 匆	dzʱəŋ1	
 匈	ɕiəŋ1	
-化	fua5	
+化	fua5a	
 北	pø7	
 匙	sɿ2	湯～；鑰～
 匠	dʑʱiɔŋ6	
@@ -467,7 +467,7 @@
 千	dʑʱiẽ1	
 升	sən1	
 午	u3	
-半	pø̃5	
+半	pø̃5a	
 卑	pe1	
 卒	tsəu7	士～
 卓	tso7	
@@ -477,22 +477,22 @@
 卜	bʱʊ7	
 占	tsø̃1	～卜
 卡	ɡʱa3	
-卦	kua5	
+卦	kua5a	
 卯	mɔo3	
-印	in5	
+印	in5a	
 危	uei2	
 即	tɕi7	
 卵	lo3	
-卸	ɕi5	
+卸	ɕi5a	
 卹	ɕi7	
 卻	dʑʱio7	
 卿	dʑʱin1	
 厚	xau6	
 原	uø̃2	
 厥	kuø7	
-厭	iẽ5	
+厭	iẽ5a	
 厲	li6	
-去	dʑʱi15	
+去	dʑʱi5b	
 參	sɛ̃1	
 參	dzʱø̃1	
 參	sən1	人～
@@ -504,16 +504,16 @@
 叔	səu7	
 取	dʑʱi3	
 受	səu6	
-叛	bʱø̃15	
+叛	bʱø̃5b	
 叢	tsəŋ2	
 口	dʑʱiau3	
 古	ku3	
-句	ky5	
+句	ky5a	
 另	lin6	
 叨	tɔo1	嘮～
-叩	ɡʱɔo15	～頭
-只	tsɿ5	～有
-叫	tɕiau5	
+叩	ɡʱɔo5b	～頭
+只	tsɿ5a	～有
+叫	tɕiau5a	
 召	tsau1	
 可	ɡʱo3	
 史	sɿ3	
@@ -524,19 +524,19 @@
 合	xø7	十～一升
 合	xø8	集～
 吉	tɕi7	
-吊	tiau5	
+吊	tiau5a	
 同	təŋ2	
 名	miaŋ2-	
 名	min2=	
 后	xau6	
 吏	li6	
-吐	dʱəu15	～痰；嘔～
-向	ɕiɔŋ5	
+吐	dʱəu5b	～痰；嘔～
+向	ɕiɔŋ5a	
 君	kuen1	
 吝	ȵin6	～嗇
 吞	dʱən1	
 吟	in2	
-吠	fei5	
+吠	fei5a	
 否	fu3-	
 否	fəu3=	
 吩	fən1	
@@ -553,7 +553,7 @@
 呆	ŋai2	
 呈	tsən2-	
 呈	dzʱən2=	
-告	kɔo5	
+告	kɔo5a	
 周	tsəu1	
 味	uei6	
 呼	fu1	
@@ -561,8 +561,8 @@
 命	min6=	
 和	xo2	～氣；～面
 和	xo6	
-咐	fu5	
-咒	tsəu5	
+咐	fu5a	
+咒	tsəu5a	
 咨	tsɿ1	
 咬	ŋau3-	
 咬	iau3=	
@@ -585,8 +585,8 @@
 唐	tɔŋ2	
 售	səu6	
 唯	uei2	
-唱	dzʱɔŋ15	
-唾	dʱo15	～液
+唱	dzʱɔŋ5b	
+唾	dʱo5b	～液
 啃	dʑʱien3-	
 啃	ɡʱen3=	
 啄	tso7	
@@ -600,28 +600,28 @@
 喉	xau2	
 喊	xã3	
 喘	dʱuø̃3	
-喚	fø̃5	
+喚	fø̃5a	
 喜	ɕi3-	
 喝	xø7	～酒；～彩；吆～
 喧	ɕiẽ1	
 喪	sɔŋ1	婚～
-喪	sɔŋ5	～失
+喪	sɔŋ5a	～失
 喫	dʑʱia8	
 喬	tɕiau2	
 單	tã1	～位
 單	tɛ̃1	
 單	tsø̃2	
 喻	y6	
-嗅	ɕiəŋ5-	
-嗅	ɕiəu5=	
+嗅	ɕiəŋ5a-	
+嗅	ɕiəu5a=	
 嗇	se7	
 嗍	so1	吸吮
 嗓	sɔŋ3	
 嗜	sɿ6	
 嗣	tsɿ2	
 嗤	dzʱɿ3	～笑
-嗽	səu5	咳～
-嘆	dʱã15	
+嗽	səu5a	咳～
+嘆	dʱã5b	
 嘉	tɕia1	
 嘔	ȵiau3-	～吐
 嘔	ŋəu3=	
@@ -634,9 +634,9 @@
 噍	dʑʱiau1	
 噎	i7	
 噓	ɕy1	吹～
-噦	ya15	大聲叫喊
-器	dʑʱi15	
-噴	fən5	～水；～香
+噦	ya5b	大聲叫喊
+器	dʑʱi5b	
+噴	fən5a	～水；～香
 嚇	xa7-	～唬
 嚇	xe7	
 嚇	ɕia7=	
@@ -649,15 +649,15 @@
 囊	lɔŋ2	
 囑	tsəu7	
 囚	tɕiəu2	
-四	sɿ5	
+四	sɿ5a	
 回	fei2	
 因	in1	
-囤	tən5	
+囤	tən5a	
 囪	dzʱəŋ1	
-困	ɡʱuen15	
-固	ku5	
+困	ɡʱuen5b	
+固	ku5a	
 圈	ɡʱuø̃1	圓～
-圈	kuø̃5	豬～
+圈	kuø̃5a	豬～
 國	kuø7	
 圍	uei2	
 園	uø̃2	
@@ -683,13 +683,13 @@
 坪	piaŋ2-	
 坪	pin2=	
 坯	bʱe1	土～
-坳	ŋɔo5	
+坳	ŋɔo5a	
 垂	kuei2	
 型	ɕin2	
 垛	to6	疊置
-垢	kəu5	
+垢	kəu5a	
 垮	ɡʱua3	
-垻	pa5	
+垻	pa5a	
 埂	ken3	
 埃	ŋai2	
 埋	mai2	
@@ -706,8 +706,8 @@
 堤	ti1	
 堪	ɡʱø̃1	～誤；～探
 堯	iau2	
-堰	iẽ5	
-報	pɔo5	
+堰	iẽ5a	
+報	pɔo5a	
 場	tsɔŋ2	
 堵	təu3	
 塊	kuɛ3	
@@ -725,7 +725,7 @@
 境	tɕin3	
 墊	tiẽ6	
 墓	mo6	
-墜	ɡʱuei15	
+墜	ɡʱuei5b	
 增	tsən1	
 墟	ɕy1	
 墨	mø8	
@@ -743,10 +743,10 @@
 壞	fe6	
 壟	ləŋ3	
 壤	iɔŋ6	土～
-壩	pa5	
+壩	pa5a	
 士	sɿ6	
 壬	vən6	
-壯	tsɔŋ5	
+壯	tsɔŋ5a	
 壺	fu2	
 壽	səu6	
 夏	xa6-	春～秋冬
@@ -756,12 +756,12 @@
 多	to1	
 夜	ia6-	
 夜	ie6=	
-夠	kɔo5	
+夠	kɔo5a	
 夢	məŋ6	
 夥	xo3	
 大	ta6=	～家；～夫
 天	dʱiẽ1	
-太	dʱai15	
+太	dʱai5b	
 夫	fu1	
 央	iɔŋ1	
 失	sɿ7	
@@ -771,16 +771,16 @@
 奈	lai6	
 奉	xəŋ6	
 奎	kuei1	
-奏	tsau5	
-契	dʑʱi15	～約
+奏	tsau5a	
+契	dʑʱi5b	～約
 奔	pən1	
-套	dʱɔo15	
+套	dʱɔo5b	
 奚	ɕi1	
 奠	tiẽ6	
 奢	sø1	
-奧	ŋɔo5	
+奧	ŋɔo5a	
 奪	dʱø8	
-奮	fən5	
+奮	fən5a	
 女	ŋy3-	
 女	y3=	
 奴	ləu2	
@@ -788,10 +788,10 @@
 奸	kã1-	
 奸	tɕiẽ1=	
 好	xɔo3	～壞
-好	xɔo5	喜～
+好	xɔo5a	喜～
 妃	fei1	
 妄	uɔ̃2	
-妒	təu5	
+妒	təu5a	
 妓	tɕi6	
 妖	iau1	
 妙	miau6	
@@ -807,7 +807,7 @@
 姐	tɕia3-	
 姐	tɕi3=	
 姑	ku1	
-姓	ɕin5	
+姓	ɕin5a	
 委	uei3	
 姚	iau2	
 姜	tɕiɔŋ1	
@@ -828,12 +828,12 @@
 婚	fən1	
 婢	pei1	
 婦	fu6	
-婿	ɕi5	女～
+婿	ɕi5a	女～
 媒	me2	
 媚	mi2	
 媳	ɕi7	
 媽	ma1	
-嫁	ka5-	～女
+嫁	ka5a-	～女
 嫂	sɔo3	
 嫌	ɕiẽ2	
 嫖	piau2	～賭
@@ -851,9 +851,9 @@
 孕	vən6	
 字	tsɿ6	
 存	tsən2	
-孝	ɕiau5	
+孝	ɕiau5a	
 孟	məŋ6	
-季	tɕi5	
+季	tɕi5a	
 孤	ku1	
 孩	xai2	
 孫	sən1	
@@ -866,10 +866,10 @@
 宇	y3	
 守	səu3	
 安	ŋø̃1	
-宋	səŋ5	
+宋	səŋ5a	
 完	uø̃2	
 宏	xəŋ2	
-宕	tɔŋ5	
+宕	tɔŋ5a	
 宗	tsəŋ1	
 官	kuø̃1	
 宙	dzʱəu6	
@@ -885,19 +885,19 @@
 宮	kəŋ1	
 宰	tsai3	
 害	xe6	
-宴	iẽ5	
+宴	iẽ5a	
 宵	ɕiau1	
 家	ka1-	自～
 家	tɕia1=	
 容	iəŋ2	
-宿	ɕiəu5	星～
 宿	səu7	
+宿	ɕiəu5a	星～
 寂	dʑʱi7	
-寄	tɕi5	
+寄	tɕi5a	
 寅	in2	
 密	mi8	
-寇	dʑʱiau15	
-富	fu5	
+寇	dʑʱiau5b	
+富	fu5a	
 寐	mi6	
 寒	xø̃2	
 寓	y6	
@@ -907,31 +907,31 @@
 寢	dʑʱin3	
 實	sɿ8	
 寧	ȵin2	
-寨	sɛ5	
+寨	sɛ5a	
 審	sən3	
 寫	ɕia3-	
 寬	ɡʱø̃1	
 寵	dzʱəŋ3	
 寶	pɔo3	
-寸	dzʱən15	
+寸	dzʱən5b	
 寺	tsɿ6	
 封	xəŋ1	
 射	sa6-	
 將	tɕiɔŋ1	～來
-將	tɕiɔŋ5	大～
+將	tɕiɔŋ5a	大～
 專	kuø̃1	
 尊	tsən1	
 尋	tɕin2-	
 尋	ɕin2=	
-對	te5	
-導	dʱɔo15	
+對	te5a	
+導	dʱɔo5b	
 小	ɕiau3	
 少	sɔo3	多～
-少	sɔo5	～年
+少	sɔo5a	～年
 尖	tɕiẽ1	
 尚	sɔŋ6	
 尤	iəu2	
-尬	kai5	
+尬	kai5a	
 就	tɕiəu6	
 尷	kã1	～尬
 尸	sɿ1	
@@ -942,10 +942,10 @@
 尿	ɕi1-	～尿=
 尿	ȵiau6=	
 局	ky7	
-屁	bʱi15	
+屁	bʱi5b	
 居	ky1	
-屆	kai5-	
-屆	tɕie5=	
+屆	kai5a-	
+屆	tɕie5a=	
 屈	tɕy7	
 屋	vu7	
 屌	tiau3	男陰；厲害
@@ -954,7 +954,7 @@
 屐	tɕi1	
 屑	ɕi7	不～；木～
 展	tsø̃3	
-屜	dʱi15	抽～
+屜	dʱi5b	抽～
 屠	təu2	
 屢	li3-	
 屢	lei3	
@@ -965,7 +965,7 @@
 山	sã1	
 岐	tɕi2	
 岑	tɕiẽ2	
-岔	dzʱa15	三～路
+岔	dzʱa5b	三～路
 岡	kɔŋ1	
 岩	ŋɛ̃2-	
 岩	ȵiẽ2	
@@ -1006,58 +1006,58 @@
 巷	ɕiaŋ6=	
 巾	tɕin1	
 市	sɿ6	
-布	po5	
+布	po5a	
 帆	fã2	
 希	ɕi1	
-帕	bʱa15	
+帕	bʱa5b	
 帖	dʱi7	請～；碑～
 帘	liẽ2	
 帚	tsəu3	
 帛	pø7	
-帝	ti5	
-帥	sɛ5	
+帝	ti5a	
+帥	sɛ5a	
 師	sɿ1	
 席	ɕi8	
-帳	tsɔŋ5	
-帶	tai5	
+帳	tsɔŋ5a	
+帶	tai5a	
 常	sɔŋ2	
 帽	mɔo6	
 幅	fu7	
 幌	fɔ̃3	
 幔	mã6	
 幕	mo6	
-幟	tsɿ5	
-幣	pi5	
+幟	tsɿ5a	
+幣	pi5a	
 幫	pɔŋ1	
 干	kø̃1	
 平	piaŋ2-	
 平	pin2=	
 年	ȵiẽ2	
 幸	ɕin6	
-幹	kã5	
+幹	kã5a	
 幺	iau1	～二三
 幻	fã6	
-幼	iəu5	
+幼	iəu5a	
 幽	iəu1	
 幾	tɕi1	
 幾	tɕi3	
-庇	bʱi15	
+庇	bʱi5b	
 牀	tsɔŋ2	
 序	ɕi6	
 底	ti3	
-店	tiẽ5	
+店	tiẽ5a	
 庚	ken1	
 府	fu3	
 度	təu6	
 座	tso6	
-庫	ɡʱu15	
+庫	ɡʱu5b	
 庭	dʱin2	
 庵	ŋø̃1	
-庶	ɕy5	
+庶	ɕy5a	
 康	ɡʱɔŋ1	
 庸	iəŋ2	
 廁	dzʱɿ1-	茅～：廁所
-廁	dzʱe15=	
+廁	dzʱe5b=	
 廂	ɕiɔŋ1	
 廈	xa6-	～門
 廈	ɕia6=	～門
@@ -1069,17 +1069,17 @@
 廝	sɿ1	
 廟	miau6	
 廠	dzʱɔŋ3	
-廢	fei5	
+廢	fei5a	
 廣	kuɔ̃3	
 廬	ləu2	～山
 廳	dʱin1	
 延	iẽ2	
 廷	tin2	
-建	tɕiẽ5	
 建	tɕiẽ1=	
+建	tɕiẽ5a	
 弄	ləŋ6	
-弊	pi5	
-式	sɿ5	
+弊	pi5a	
+式	sɿ5a	
 弓	kəŋ1	
 引	in3	
 弘	xəŋ2	
@@ -1118,7 +1118,7 @@
 從	dzʱəŋ1	～容
 從	tsəŋ2	跟～
 御	y6	
-徧	bʱiẽ15	
+徧	bʱiẽ5b	
 復	fu7	
 循	ɕin2	
 微	uei1	
@@ -1130,30 +1130,30 @@
 必	pi7	
 忌	tɕi6	
 忍	vən3	
-忖	dzʱən15	
-志	tsɿ5	
+忖	dzʱən5b	
+志	tsɿ5a	
 忘	uɔ̃2	
 忙	mɔŋ1	
 忠	tsəŋ1	
-快	ɡʱuɛ15	
+快	ɡʱuɛ5b	
 念	ȵiẽ6	
 忽	fu8	
-忿	fən5	
+忿	fən5a	
 怒	ləu6	
-怕	bʱa15	
-怖	bʱo15-	
+怕	bʱa5b	
+怖	bʱo5b-	
 思	sɿ1	
 怠	te6	
 急	tɕi7	
-性	ɕin5	
+性	ɕin5a	
 怨	uø̃6	
-怪	kuɛ5	
+怪	kuɛ5a	
 怯	dʑʱi7	
 恃	tsɿ2	
 恆	xen2	
 恍	fɔ̃3	
 恐	ɡʱəŋ3	
-恕	ɕy5	
+恕	ɕy5a	
 恙	iɔŋ6	
 恢	fei1	
 恤	ɕi7	
@@ -1173,60 +1173,60 @@
 患	fã6	
 悲	pe1	
 悶	mən6	
-悼	dʱɔo15	
+悼	dʱɔo5b	
 情	tɕin2	
-惋	uø̃5	
+惋	uø̃5a	
 惑	xø8	
 惜	ɕi7	
 惟	uei2	
 惠	fei6	
-惡	ŋo5	可～；～人
 惡	ŋo7	善～
+惡	ŋo5a	可～；～人
 惰	to6	
 惱	lɔo3	
 想	ɕiɔŋ3	
 惹	ia3	
 愁	tsau2	
 愈	y6	
-意	i5	
-愛	ŋɛ5	
+意	i5a	
+愛	ŋɛ5a	
 感	kø̃3	
-愧	ɡʱuei15	
+愧	ɡʱuei5b	
 慈	tsɿ2	
-態	dʱai15	
+態	dʱai5b	
 慌	fɔ̃1	
 慎	sən6	
 慕	mo6	
 慘	dzʱã3	
 慚	tsã2	
 慢	mã6	
-慣	kuã5	
+慣	kuã5a	
 慧	fei6	
-慨	ɡʱai15	慷～
-慪	ȵiau5-	～氣
-慪	ŋəu5=	
+慨	ɡʱai5b	慷～
+慪	ȵiau5a-	～氣
+慪	ŋəu5a=	
 慫	səŋ3	～恿
 慮	li6-	
 慮	lei6	
-慰	uei5	
-慶	dʑʱin15	
+慰	uei5a	
+慶	dʑʱin5b	
 慷	ɡʱɔŋ1	
 憂	iəu1	
 憋	pi7	
 憎	tsən1	
 憐	liẽ2	
 憑	pin2	
-憤	fən5	
+憤	fən5a	
 憨	xø̃1	
 憫	min3	
-憲	ɕiẽ5	
-憶	i5	
+憲	ɕiẽ5a	
+憶	i5a	
 憾	xã3	
 懂	təŋ3	
 懇	dʑʱien3-	
 懇	ɡʱen3=	
-應	in5	～當；～對
-懊	ŋɔo5	～惱；～悔
+應	in5a	～當；～對
+懊	ŋɔo5a	～惱；～悔
 懦	lo6	
 懲	tsən2	
 懵	məŋ3	
@@ -1234,32 +1234,32 @@
 懷	fɛ2	
 懸	fuø̃2-	
 懸	ɕiẽ2=	
-懺	dzʱã15	
+懺	dzʱã5b	
 懼	ky6	
-戀	liẽ5	
+戀	liẽ5a	
 戈	ko1	
 戊	u6	
 戌	ɕi7	
-戍	ɕi5	
+戍	ɕi5a	
 戎	iəŋ2	
 成	tsən2	
 我	ŋo3	
-戒	kai5-	
-戒	tɕie5=	
+戒	kai5a-	
+戒	tɕie5a=	
 或	xø8	
 戚	dʑʱi7	
 戟	tɕi7	
 截	tɕi7	
-戰	tsã5	
-戲	ɕi5	
+戰	tsã5a	
+戲	ɕi5a	
 戳	dzʱʊ8	
-戴	tai5	
+戴	tai5a	
 戶	fu6	
-戽	xo5	
+戽	xo5a	
 房	fuɔ̃2	
 所	so3	
 扁	piẽ3	
-扇	sø̃5	
+扇	sø̃5a	
 手	səu3	
 才	tse2	
 扎	tsa7	
@@ -1267,16 +1267,16 @@
 扔	in2	
 托	dʱo7	
 扛	kɔŋ1	
-扣	dʑʱiau15	～住
+扣	dʑʱiau5b	～住
 扭	ȵiau3	
-扮	pã5	
+扮	pã5a	
 扯	dzʱa3-	
 扯	dzʱø3=	
 扳	pã1	
 扶	fu2	
 批	bʱi1	
 扼	ŋø8	
-扽	tən5	
+扽	tən5a	
 找	tsau3	
 承	tsən2	
 技	tɕi6	
@@ -1286,7 +1286,7 @@
 抓	tsa1	
 投	tau2	
 抖	tau3	
-抗	ɡʱɔŋ15	
+抗	ɡʱɔŋ5b	
 折	tsø7	
 抨	lø8	
 披	bʱi1	
@@ -1316,7 +1316,7 @@
 拚	bʱiaŋ1-	
 拚	bʱin1=	
 招	tsau1	
-拜	pɛ5	
+拜	pɛ5a	
 括	kua7	
 拯	tsən2	
 拱	kəŋ3	
@@ -1328,13 +1328,13 @@
 拿	la8	
 持	tsɿ2	
 指	tsɿ3	
-按	ŋã5	
+按	ŋã5a	
 挑	dʱiau1	
 挖	ua7	
 挨	ŋai1	
 挪	lo2	
-挫	dzʱo15	
-振	tsən5	
+挫	dzʱo5b	
+振	tsən5a	
 挺	dʱin3=	
 挽	vã3	
 挾	kɛ7	～菜
@@ -1355,24 +1355,24 @@
 掀	ɕiẽ1	
 掂	tiẽ1	～量
 掃	sɔo3	～地
-掃	sɔo5	～帚
+掃	sɔo5a	～帚
 授	səu6	
-掉	tiau5	
+掉	tiau5a	
 掌	tsɔŋ3	
 掏	tɔo2	～出來
 掐	ɡʱa1	
 排	bʱai2	
 掘	kuø7	
-掛	kua5	
+掛	kua5a	
 掠	lio7	
-探	dʱã15	試～
-探	dʱø̃15	
+探	dʱã5b	試～
+探	dʱø̃5b	
 接	tɕi7	
-控	ɡʱəŋ15	
+控	ɡʱəŋ5b	
 推	dʱe1	
 掩	iẽ3	
-措	dzʱo15	～置
-掮	tɕiẽ5	
+措	dzʱo5b	～置
+掮	tɕiẽ5a	
 揀	tɕiẽ3	
 揈	xəŋ1	
 揉	iəu2	
@@ -1383,7 +1383,7 @@
 揖	i7	作～
 揚	iɔŋ2	
 換	fø̃6	
-揞	ŋø̃5	～住
+揞	ŋø̃5a	～住
 揣	dʱø̃3	
 揩	ɡʱi1	
 揭	tɕi7	
@@ -1397,7 +1397,7 @@
 搛	tɕiẽ1	
 搜	sau1	
 搞	kɔo3	
-搧	sø̃5	
+搧	sø̃5a	
 搨	dʱɛ7	
 搬	pø̃1	
 搭	tɛ7	
@@ -1432,7 +1432,7 @@
 撩	liau2	～起來
 撫	fu3	
 撮	dzʱø7	
-撰	tsø̃5	
+撰	tsø̃5a	
 撲	bʱʊ7	
 撼	xã3	
 擀	kø̃3	～麵
@@ -1445,8 +1445,8 @@
 擎	tɕiaŋ2	
 擒	tɕin2	
 擔	tã1	～任
-擔	tã5	挑～
-據	ky5	
+擔	tã5a	挑～
+據	ky5a	
 擠	tɕi3	
 擡	te2	
 擦	dzʱa7	
@@ -1463,7 +1463,7 @@
 攘	iɔŋ3	
 攙	dzʱã1	
 攝	se7	
-攢	tsã5	積～
+攢	tsã5a	積～
 攤	dʱɛ̃1	
 攪	tɕiau3	
 攬	lɛ̃3	
@@ -1471,25 +1471,25 @@
 收	səu1	
 改	kai3	
 攻	kəŋ1	
-放	fuɔ̃5	
-政	tsən5	
-故	ku5	
+放	fuɔ̃5a	
+政	tsən5a	
+故	ku5a	
 效	ɕiau6	
 敏	min3	
-救	tɕiəu5	
+救	tɕiəu5a	
 敗	pai6	
 敘	ɕi6	
-教	kau5-	
-教	kɔo5	～書
-教	tɕiau5=	～書；～育
-敝	pi5	
+教	kau5a-	
+教	tɕiau5a=	～書；～育
+教	kɔo5a	～書
+敝	pi5a	
 敞	dzʱɔŋ3	
 敢	kø̃3	
-散	sɛ̃5	
 散	sã6	鞋帶～了；分～
+散	sɛ̃5a	
 敥	ie6	粉狀物慢慢落下來
 敦	tən1	
-敬	tɕin5	
+敬	tɕin5a	
 敲	ɡʱau1-	
 敲	ɡʱɔo1	
 敲	dʑʱiau1=	
@@ -1498,9 +1498,9 @@
 敵	dʱi8	
 敷	fu1	
 數	səu3	動詞
-數	səu5	名詞
+數	səu5a	名詞
 斂	liẽ3	
-斃	pi5	
+斃	pi5a	
 文	vən2	
 斑	pã1	
 斗	tau3	
@@ -1523,9 +1523,9 @@
 旋	ɕiẽ2=	
 族	tsəu8	
 旗	tɕi2	
-既	tɕi5	
+既	tɕi5a	
 日	ȵi8	
-旦	tã5	
+旦	tã5a	
 旨	tsɿ3	
 早	tsɔo3	
 早	xø̃6	
@@ -1542,8 +1542,8 @@
 昔	ɕi7	
 星	ɕiaŋ1-	
 星	ɕin1=	
-映	iaŋ5-	
-映	in5=	
+映	iaŋ5a-	
+映	in5a=	
 春	ɡʱuen1	
 昧	mi6	
 昨	dzʱo8	
@@ -1552,47 +1552,47 @@
 時	sɿ2	
 晃	fɔ̃3	
 晃	fɔ̃6	～眼
-晉	tɕin5	
+晉	tɕin5a	
 晌	ɕiɔŋ3	
-晏	ŋã5	
+晏	ŋã5a	
 晚	vã3	
-晝	tsəu5	
-晦	fei5	
+晝	tsəu5a	
+晦	fei5a	
 晨	sən2	
 普	bʱo3	
 景	tɕin3	
 晴	tɕiaŋ2-	
 晴	tɕin2=	
 晶	tɕin1	
-智	tsɿ5	
+智	tsɿ5a	
 暇	ɕia2	
 暈	fən1	
 暑	ɕy3	
 暖	fuø̃3	
-暗	ŋø̃5	
-暢	dzʱɔŋ15	
+暗	ŋø̃5a	
+暢	dzʱɔŋ5b	
 暫	tsã6	
 暮	mo6	
 暴	pɔo6	
 曆	li8	
 曉	ɕiau3	
 曝	bʱʊ7	
-曠	ɡʱuɔ̃15	
+曠	ɡʱuɔ̃5b	
 曩	lɔŋ2	
-曬	sɛ5	
+曬	sɛ5a	
 曰	yø7	
 曲	dʑʱiəu7	
 曳	i7	
 更	ken1	五～
-更	ken5	～加
+更	ken5a	～加
 書	ɕy1	
 曹	tsɔo2	
 曾	tsən1	姓氏
 曾	tsən2	～經
-替	dʱi15	
-最	tɕi5	
-會	kuɛ5	
+替	dʱi5b	
+最	tɕi5a	
 會	fei6	開～；～不～
+會	kuɛ5a	
 月	yø7	
 有	iəu3	
 朋	pəŋ2	
@@ -1641,8 +1641,8 @@
 枝	tsɿ1	
 枯	ɡʱu1	
 枵	ɕiau1	
-架	ka5-	
-架	tɕia5=	
+架	ka5a-	
+架	tɕia5a=	
 柄	pin3	
 柏	pø7	
 某	miau3-	
@@ -1668,11 +1668,11 @@
 格	ke7	
 栽	tsɛ1	
 栿	fu8	
-桂	kuei5	
+桂	kuei5a	
 桃	tɔo2	
 桅	uei2	
 框	ɡʱuɔ̃1	
-案	ŋã5	
+案	ŋã5a	
 桌	tso7	
 桐	təŋ2	
 桑	sɔŋ1	
@@ -1691,19 +1691,19 @@
 梨	li2	
 梭	so1	～布
 梯	dʱi1	
-械	kai5-	
-械	tɕie5=	
+械	kai5a-	
+械	tɕie5a=	
 梳	səu1	～頭
 棄	dʑʱi7	
 棉	miẽ2	
 棋	tɕi2	
-棍	kuen5	
-棒	pɔŋ5	
+棍	kuen5a	
 棒	xəŋ6	
+棒	pɔŋ5a	
 棕	tsəŋ1	
 棗	tsɔo3	
 棚	pəŋ2	
-棟	təŋ5	
+棟	təŋ5a	
 棠	tɔŋ2	
 棧	tsã6	
 森	sɛ̃1	
@@ -1725,26 +1725,26 @@
 楚	dzʱəu3	
 楝	liẽ6	～樹
 楦	ɕiẽ1	
-業	ȵie5-	
+業	ȵie5a-	
 業	ȵi8	
-業	ie5=	
+業	ie5a=	
 極	dʑʱi8	
 楷	ɡʱai3	
-概	ɡʱai15	
+概	ɡʱai5b	
 榔	lɔŋ2	
 榕	iəŋ2	
 榜	pɔŋ3	
-榨	tsa5	～油
+榨	tsa5a	～油
 榫	sən3	
 榮	iaŋ2-	
 榮	iəŋ2=	
 榴	liəu2	石～
 榻	dʱa7	
-構	ko5	
+構	ko5a	
 槌	kuei2	
 槍	dʑʱiɔŋ1	
 槐	fɛ2	
-槓	kɔŋ5	
+槓	kɔŋ5a	
 槳	tɕiɔŋ3	
 槽	tsɔo2	馬～
 樁	tsɔŋ1	
@@ -1753,7 +1753,7 @@
 樓	lau2	
 標	piau1	
 樞	dʑʱy1	
-樞	tɕiəu5	
+樞	tɕiəu5a	
 樟	tsɔŋ1	
 模	mo2	～子；～範
 樣	iɔŋ6	
@@ -1772,8 +1772,8 @@
 橫	vaŋ2-	
 橫	fən2=	～豎；蠻橫
 檀	tɛ̃2	
-檔	tɔŋ5	
-檜	kuɛ5	
+檔	tɔŋ5a	
+檜	kuɛ5a	
 檢	tɕiẽ3	
 檳	pin1	～榔
 櫃	kuei6	
@@ -1783,9 +1783,9 @@
 欄	lɛ̃2	
 權	kuø̃2	
 欖	lɛ̃3	橄～
-欛	pa5	
-欠	dʑʱiẽ15	
-次	dzʱɿ15	
+欛	pa5a	
+欠	dʑʱiẽ5b	
+次	dzʱɿ5b	
 欣	ɕin1	
 欲	io7-	
 欲	iəu7=	
@@ -1793,19 +1793,19 @@
 欽	dʑʱin1	
 款	ɡʱø̃3	
 歇	ɕi7	
-歉	dʑʱiẽ15	
+歉	dʑʱiẽ5b	
 歌	ko1	
 歐	ȵiau1	
 歡	fuø̃1	
 止	tsɿ3	
-正	tsaŋ5-	
-正	tsən5=	
+正	tsaŋ5a-	
+正	tsən5a=	
 此	dzʱɿ3	
 步	po6	
 武	vu3	
 歧	tɕi2	
 歪	ve1	
-歲	ɕi5	
+歲	ɕi5a	
 歷	li8	
 歸	kuei1	
 死	sɿ3	
@@ -1816,7 +1816,7 @@
 殖	dzʱɿ8	
 殘	tsɛ̃2	
 殮	liẽ3	
-殯	pin5	
+殯	pin5a	
 殲	dʑʱiẽ1	
 段	tø̃6	
 殷	in1	
@@ -1836,7 +1836,7 @@
 氏	si6	
 民	min2	
 氓	məŋ2	
-氣	dʑʱi15	
+氣	dʑʱi5b	
 水	ɕy3	
 永	vən3	
 汁	tsɿ7	
@@ -1852,39 +1852,39 @@
 汪	uɔ̃1	一～水
 汴	piẽ6	
 決	kuø7	
-汽	dʑʱi15	
-沁	dʑʱin5	
+汽	dʑʱi5b	
+沁	dʑʱin5a	
 沂	tɕi2	～河
 沈	sən3	
 沉	tsən2	
-沌	tən5	
+沌	tən5a	
 沒	mø7	
 沓	dʱɛ7	
 沖	dzʱəŋ1	
 沙	sa1	
-沛	bʱi15	
+沛	bʱi5b	
 沫	mø8	
 河	xo2	
 油	iəu2	
 治	tsɿ6	
 沾	ȵiẽ2	
 沿	uø̃2	
-況	ɡʱuɔ̃15	
+況	ɡʱuɔ̃5b	
 泅	tɕiəu2	
 泉	tɕiẽ2	
 泊	bʱø7	梁山～
-泌	pi5	
+泌	pi5a	
 泔	kø̃1	～水
 法	fa7	方～
-泛	fã5	
+泛	fã5a	
 泡	bʱo1	
-泡	bʱɔo15	
+泡	bʱɔo5b	
 波	pʊ1	
 泣	ɕi7	
 泥	ȵi2	
-注	ky5	
-泰	dʱai15	
-泳	vən5	
+注	ky5a	
+泰	dʱai5b	
+泳	vən5a	
 洋	iɔŋ2	
 洗	ɕi3	
 洛	lo8	
@@ -1895,22 +1895,22 @@
 洲	tsəu1	
 活	xø8	
 洽	dʑʱia7	
-派	bʱai15	
+派	bʱai5b	
 流	liəu2	
 浙	tsø7	
 浦	bʱo3	
-浩	xɔo5	
+浩	xɔo5a	
 浪	lɔŋ6	
 浮	po2-	浮在水面上
 浮	bʱɔo2-	
 浮	fu2=	
 浴	iəu7=	
 海	xɛ3	
-浸	tɕin5	
+浸	tɕin5a	
 消	ɕiau1	
 涉	se7	
 涎	iẽ2	
-涕	dʱi15	鼻～
+涕	dʱi5b	鼻～
 涮	sa7	～洗
 涯	ia2	天～
 液	i7	
@@ -1946,12 +1946,12 @@
 渺	miau3	
 渾	fən1	
 渾	fən2	～濁
-湊	dzʱau15	
+湊	dzʱau5b	
 湖	fu2	
 湘	ɕiɔŋ1	
 湧	iəŋ3	
 湯	dʱɔŋ1	
-溉	ɡʱai15	
+溉	ɡʱai5b	
 源	uø̃2	
 準	kuen3	
 溜	liəu1	
@@ -1968,8 +1968,8 @@
 滓	tsɿ3	
 滔	dʱɔo1	
 滬	fu6	
-滯	dzʱɿ15	停～
-滲	dzʱɔŋ15	
+滯	dzʱɿ5b	停～
+滲	dzʱɔŋ5b	
 滴	tia7-	
 滴	ti7=	
 滸	fu3	水～
@@ -1977,16 +1977,16 @@
 滿	mø̃3	
 漂	bʱiau1	～浮
 漂	bʱiau3	～白
-漂	bʱiau15	～亮
+漂	bʱiau5b	～亮
 漆	dʑʱi7	
 漏	lau6	
 演	iẽ3	
-漚	ȵiau5-	
-漚	ŋəu5=	
-漢	xø̃5	
+漚	ȵiau5a-	
+漚	ŋəu5a=	
+漢	xø̃5a	
 漤	lã6	
 漫	mã6	
-漱	səu5	～口
+漱	səu5a	～口
 漲	tsɔŋ3	
 漸	tsã6-	
 漸	tɕiẽ6=	
@@ -1998,9 +1998,9 @@
 潤	vən6	
 潭	tø̃2	
 潮	tsau2	
-潰	kuei5-	
-潰	ɡʱuei15=	～膿
-潲	sau5	
+潰	kuei5a-	
+潰	ɡʱuei5b=	～膿
+潲	sau5a	
 澀	sø7	
 澄	tən1	水濁
 澄	tsən2	
@@ -2012,20 +2012,20 @@
 激	tɕi7	
 濃	ləŋ2	
 濕	sɿ7	
-濟	tɕi5	
+濟	tɕi5a	
 濤	tɔo2	
-濫	lɛ̃5	
+濫	lɛ̃5a	
 濬	in3	
-濺	tsã5	
+濺	tsã5a	
 濾	li6-	
 濾	lei6	
-瀉	ɕi5	
+瀉	ɕi5a	
 瀑	bʱʊ7	
-灌	kuø̃5	
+灌	kuø̃5a	
 灑	sɛ3-	
 灑	sa3	
 灑	sai3=	
-灒	tsã5	
+灒	tsã5a	
 灘	dʱɛ̃1	
 灣	uã1	
 火	xo3	
@@ -2035,11 +2035,11 @@
 災	tsai1	
 炊	dʑʱy1-	
 炎	iẽ2	
-炕	ɡʱɔŋ15	
+炕	ɡʱɔŋ5b	
 炙	tsɿ7	
-炭	dʱã15	
-炮	bʱɔo15	
-炸	tsa5	
+炭	dʱã5b	
+炮	bʱɔo5b	
+炸	tsa5a	
 烈	li8	
 烊	iɔŋ2	
 烏	vu1	
@@ -2060,11 +2060,11 @@
 煉	liẽ6	
 煎	tɕiẽ1	
 煙	iẽ1	
-煞	sa5	把病傳染給別人
 煞	sɛ7	
+煞	sa5a	把病傳染給別人
 煤	mi2	
-煥	fø̃5	
-照	tsau5	
+煥	fø̃5a	
+照	tsau5a	
 煨	vei1	
 煩	fã2	
 煮	ky3	
@@ -2075,7 +2075,7 @@
 熙	ɕi1	
 熛	piau1	液體從縫隙中噴出
 熟	səu8	
-熨	uen5	
+熨	uen5a	
 熬	ŋau2	
 熬	ŋɔo2	
 熱	ȵi8-	
@@ -2085,13 +2085,13 @@
 燎	liau2	
 燐	lin2	
 燒	sau1	
-燕	iẽ5	～窩；～子
-燙	dʱɔŋ15	
+燕	iẽ5a	～窩；～子
+燙	dʱɔŋ5b	
 營	iəŋ2	
-燥	tsɔo5	
-燦	dzʱã15	
+燥	tsɔo5a	
+燦	dzʱã5b	
 燭	tsəu7	
-爆	bʱɔo15	
+爆	bʱɔo5b	
 爐	ləu2	
 爛	lã6	
 爪	tsau3	～牙
@@ -2104,11 +2104,11 @@
 爹	tia1-	～～：祖父
 爹	tie1=	父親
 爺	ia2-	父親
-爺	ie15=	祖父
+爺	ie5b=	祖父
 爽	sɔŋ3	
 爾	ø3	
 牆	tɕiɔŋ2	
-片	bʱiẽ15	
+片	bʱiẽ5b	
 版	pã3	
 牌	pai2	
 牘	dʱəu7	
@@ -2126,9 +2126,9 @@
 牽	dʑʱiẽ1	
 犀	ɕi1	
 犁	li2	
-犍	tɕiẽ5	
+犍	tɕiẽ5a	
 犒	kɔo6-	
-犒	ɡʱɔo5=	
+犒	ɡʱɔo5a=	
 犢	dʱəu7	
 犧	ɕi1	
 犬	ɡʱø̃6	
@@ -2145,7 +2145,7 @@
 狼	lɔŋ2	
 猛	məŋ3	
 猜	dzʱai1	
-猝	dzʱəu15-	
+猝	dzʱəu5b-	
 猝	dzʱəu7=	倉～
 猩	ɕiaŋ1	
 猬	uei6	
@@ -2161,15 +2161,15 @@
 獨	tsəu7	
 獲	xo7	
 獵	li7	
-獸	ɕiəu5	
+獸	ɕiəu5a	
 獺	dʱa7	水～
-獻	ɕiẽ5	
+獻	ɕiẽ5a	
 玄	fuø̃2-	
 玄	ɕiẽ2=	
 率	sɛ6	～領
 率	li7	速～
 率	li8	
-玉	y5	
+玉	y5a	
 王	uɔ̃2	
 玩	uã2	
 玫	mi2	
@@ -2206,7 +2206,7 @@
 瓶	pin2	
 瓷	tsɿ2	～器
 甌	ȵiau1	
-甕	vəŋ5	
+甕	vəŋ5a	
 甘	kø̃1	
 甚	sən6	桑～
 甚	sən6	
@@ -2222,9 +2222,9 @@
 甲	tɕia7	
 申	sən1	
 男	lø̃2	
-界	kai5-	
-界	tɕie5=	
-畏	uei5	
+界	kai5a-	
+界	tɕie5a=	
+畏	uei5a	
 留	liəu2	
 畜	ɕiəu7-	
 畜	dzʱəu7=	
@@ -2236,16 +2236,16 @@
 畫	fa6	
 異	i6	
 當	tɔŋ1	～時；應～
-當	tɔŋ5	～作；典～
+當	tɔŋ5a	～作；典～
 疆	tɕiɔŋ1	
 疊	dʱi7	
 疏	səu1	～遠
 疑	ȵi2-	
 疑	i2=	
 疔	tiaŋ1	
-疝	sã5	～氣
+疝	sã5a	～氣
 疤	pa1	
-疥	kai5	
+疥	kai5a	
 疫	y7	
 疲	pi2	
 疵	dzʱɿ1	吹毛求～
@@ -2256,16 +2256,16 @@
 痂	tɕia1	
 病	piaŋ6-	
 病	pin6=	
-症	tsən5	
+症	tsən5a	
 痔	tsɿ6	
 痕	xen2	
 痘	tau6	
-痛	dʱəŋ15	
+痛	dʱəŋ5b	
 痞	bʱi3	
 痢	li6	
-痣	tsɿ5	
+痣	tsɿ5a	
 痰	tsã2	
-痱	fei5	～子
+痱	fei5a	～子
 痳	ma2	
 痴	dzʱɿ1	
 痹	pi1	
@@ -2274,10 +2274,10 @@
 瘍	iɔŋ2	潰～
 瘟	uen1	
 瘡	dzʱɔŋ1	
-瘦	sau5	
+瘦	sau5a	
 瘧	ȵio7	
 瘰	lo3	
-瘴	tsɔŋ5	～氣
+瘴	tsɔŋ5a	～氣
 瘸	tɕia2-	
 療	liau2	
 癌	ŋai2	
@@ -2302,7 +2302,7 @@
 皮	pi2	
 皴	dzʱən1	
 皺	tsau2	
-皺	tsau5	
+皺	tsau5a	
 皿	min3	
 盅	tsəŋ1	
 盆	pən2	
@@ -2324,34 +2324,34 @@
 盲	mɔŋ1	
 直	dzʱɿ8	
 相	ɕiɔŋ1	互～
-相	ɕiɔŋ5	～貌
-盼	bʱã15	
+相	ɕiɔŋ5a	～貌
+盼	bʱã5b	
 盾	tən6	矛～
 省	sən3	反～
 眉	mi2	
-看	ɡʱã15	～守；～見
+看	ɡʱã5b	～守；～見
 真	tsən1	
 眠	miẽ2	
 眨	tsɛ7	～眼
 眩	fuø̃2	
 眵	dzʱɿ1	
 眶	ɡʱuɔ̃1	眼～
-眷	kuø̃5	
+眷	kuø̃5a	
 眼	ŋã3	
-眾	tsəŋ5	
+眾	tsəŋ5a	
 着	tso7	衣～；附～
 着	tɕio7	
-睏	ɡʱuen15	
+睏	ɡʱuen5b	
 睛	tɕiaŋ1-	
 睛	tɕin1=	
 睜	tsən1	
 睡	fei3	
-睡	fei5	
+睡	fei5a	
 督	təu7	
 睦	mʊ8	
 睦	ləu8	
 睬	dzʱai3	
-瞄	miau5	(存疑)四處看
+瞄	miau5a	(存疑)四處看
 瞌	ɡʱo7	
 瞎	xa7	
 瞖	i1	
@@ -2372,14 +2372,14 @@
 矯	tɕiau1	
 石	sa8-	
 石	sɿ8=	
-砌	dʑʱi15	
+砌	dʑʱi5b	
 砍	ɡʱø̃3	
 砑	ŋa7-	
 砑	ia7=	
 研	ȵiẽ1-	
 研	iẽ1=	
 砰	paŋ3	～門：用力關緊門
-破	bʱʊ15	
+破	bʱʊ5b	
 砸	tsa7	
 硃	ky1	
 硝	ɕiau1	
@@ -2388,23 +2388,23 @@
 硬	ken3	
 硬	ŋen6=	
 硯	ȵiẽ6	
-碎	dʑʱi15	
+碎	dʑʱi5b	
 碑	pe1	
-碓	te5	
+碓	te5a	
 碗	uø̃3	
 碟	dʱi7	
 碧	pi7	
-碰	bʱəŋ15	
+碰	bʱəŋ5b	
 確	ɡʱo7-	
 確	dʑʱio7=	
 碼	ma3	
 碾	ȵiẽ3	
 磁	tsɿ2	～石
 磉	sɔŋ3	
-磐	dʑʱin15	
+磐	dʑʱin5b	
 磑	ȵien1	
 磕	ɡʱo7-	
-磕	ɡʱəu15=	
+磕	ɡʱəu5b=	
 磚	kuø̃1	
 磨	mʊ2	～刀石
 磴	tən3	(存疑)柱下石
@@ -2412,7 +2412,7 @@
 礎	dzʱəu3	
 礓	tɕiɔŋ1	
 礙	ŋɛ6	
-礦	ɡʱuɔ̃15	
+礦	ɡʱuɔ̃5b	
 礬	fã2	
 示	sɿ6	
 社	sø6	
@@ -2427,11 +2427,11 @@
 神	sən2	
 祠	tsɿ2	
 祥	tɕiɔŋ2	
-票	bʱiau15	
-祭	tɕi5	
+票	bʱiau5b	
+祭	tɕi5a	
 祿	ləu8	
 禁	tɕin1	
-禁	tɕin5	～不住；～止
+禁	tɕin5a	～不住；～止
 禍	xo6	
 福	fu7	
 禦	y6	
@@ -2443,22 +2443,22 @@
 禽	tɕin2	
 禾	o2	
 禿	dʱəu7	
-秀	ɕiəu5	
+秀	ɕiəu5a	
 私	sɿ1	
 秉	pin3	
 秋	dʑʱiəu1	～天
 科	ɡʱo1	
 秒	miau3	
 秕	bʱi1	
-秘	pi5	
+秘	pi5a	
 租	tsəu1	
-秤	dzʱən15	
+秤	dzʱən5b	
 秦	tɕin2	
 秧	iɔŋ1	
 秩	dzʱɿ7	
 移	i2	
 稀	ɕi1	
-稅	fei5	
+稅	fei5a	
 稈	kø̃3	稻～
 程	tsən2	
 稍	sau1	
@@ -2467,11 +2467,11 @@
 稟	pin3	
 稠	tsəu2	
 種	tsəŋ3	～類
-種	tsəŋ5	～樹
+種	tsəŋ5a	～樹
 稱	dzʱən1	～呼
-稱	dzʱən15	相～
+稱	dzʱən5b	相～
 稻	tɔo6	
-稼	tɕia5	
+稼	tɕia5a	
 稽	tɕi1	
 稿	kɔo3	
 穀	ku7	
@@ -2479,17 +2479,17 @@
 穎	in3	
 穗	ɕi6-	
 穗	sei6	
-穢	fei5	
+穢	fei5a	
 穩	uen3	
 穫	xo7	
 穰	iɔŋ2	
 穴	ɕi8	
-究	tɕiəu5	
+究	tɕiəu5a	
 空	ɡʱəŋ1	～虛；～缺
 穿	ɡʱuø̃1	
 突	dʱəu7	
 窄	tse7	
-窖	kau5	
+窖	kau5a	
 窗	dzʱɔŋ1	
 窘	kuen1	
 窟	ɡʱu7	～窿
@@ -2500,22 +2500,22 @@
 窯	iau2	
 窺	ɡʱuei1	
 窿	ləŋ2	
-竄	dzʱø̃15	
-竅	dʑʱiau15	
-竈	tsɔo5	
+竄	dzʱø̃5b	
+竅	dʑʱiau5b	
+竈	tsɔo5a	
 竊	dʑʱi7	
 立	li8	
-站	tsã5	
 站	tsã6	
-竟	tɕin5	
+站	tsã5a	
+竟	tɕin5a	
 章	tsɔŋ1	
 童	təŋ2	
 端	tø̃1	
-競	tɕin5	
+競	tɕin5a	
 竹	tsəu7	
 竿	kø̃3	竹～
 笊	tsa1	
-笑	ɕiau5	
+笑	ɕiau5a	
 笙	sən1	
 笛	dʱi7	
 笠	li8	
@@ -2532,24 +2532,24 @@
 答	tɛ7	
 策	dzʱe7	
 筧	tɕiẽ3	
-筵	iẽ5	
-筷	ɡʱuɛ15	
+筵	iẽ5a	
+筷	ɡʱuɛ5b	
 箅	pi6	
 箋	dʑʱiẽ1	
 箍	ku1	
 箏	tsən1	
-算	sø̃5	
+算	sø̃5a	
 管	kuø̃3	
-箭	tɕiẽ5	
+箭	tɕiẽ5a	
 箱	ɕiɔŋ1	
-箸	ky5	
+箸	ky5a	
 節	tɕi7	
 範	fã6	
 篆	kuø̃6	
 篇	bʱiẽ1	
 築	tsəu7	
 篙	kɔo1	
-篡	dzʱø̃15	
+篡	dzʱø̃5b	
 篤	təu7	
 篩	sai1	
 篷	pəŋ2	
@@ -2562,21 +2562,21 @@
 簫	ɕiau1	
 簰	pai2	
 簷	iẽ2	
-簸	pʊ5	～～；～箕
+簸	pʊ5a	～～；～箕
 簽	dʑʱiẽ1	
 簾	liẽ2	
 簿	po6	
 簿	bʱʊ6	
 籃	lɛ̃2	
 籌	tsəu2	
-籍	dʑʱi15	
+籍	dʑʱi5b	
 籠	ləŋ2	
 籤	dʑʱiẽ1	
 籬	li2	
 籮	lo2	
 米	mi3	
 粉	fən3	
-粒	dʱi15	
+粒	dʱi5b	
 粗	dzʱəu1	
 粘	tsø̃1	
 粟	ɕiəu7	
@@ -2584,17 +2584,17 @@
 粱	liɔŋ2	
 粳	ken3	
 粵	yø7	
-粹	dʑʱi15	純～
-糉	tsəŋ5	
+粹	dʑʱi5b	純～
+糉	tsəŋ5a	
 精	tɕiaŋ1-	
 精	tɕin1=	
 糊	fu2	
 糍	tsɿ2	～粑
 糕	kɔo1	
 糖	tɔŋ2	
-糙	dzʱɔo15	粗～；～米
+糙	dzʱɔo5b	粗～；～米
 糜	mi2	
-糞	fən5	
+糞	fən5a	
 糟	tsɔo1	
 糠	ɡʱɔŋ1	
 糧	liɔŋ2	
@@ -2614,24 +2614,24 @@
 紙	tsɿ3	
 級	tɕi7	
 紛	fən1	
-素	səu5	
+素	səu5a	
 紡	fuɔ̃3	
 索	so7	繩～
 紫	tsɿ3	
 紮	tsɛ7	
 累	li3-	連～
 累	le6=	
-細	ɕi5	
+細	ɕi5a	
 紹	sau6	
 終	tsəŋ1	
 組	tsəu3	
-絆	bʱã15	
+絆	bʱã5b	
 結	tɕi7	
 絕	dʑʱi8	
 絞	tɕiau3	
 絡	lo8	
 絨	iəŋ2	
-絮	ɕi5	
+絮	ɕi5a	
 統	dʱəŋ3	
 絲	sɿ1	
 絹	kuø̃1	
@@ -2643,14 +2643,14 @@
 維	uei2	
 綱	kɔŋ1	
 網	uɔ̃3	
-綴	kuei5	
-綻	tsã5	～放
+綴	kuei5a	
+綻	tsã5a	～放
 綽	tso7	闊～
 綾	lin2	
 綿	miẽ2	
 緊	tɕin3	
 緖	ɕi6	
-線	ɕiẽ5	
+線	ɕiẽ5a	
 緞	tø̃6	
 緣	uø̃2	
 編	piẽ1	
@@ -2658,14 +2658,14 @@
 緬	miẽ3	
 緯	uei3	
 練	liẽ6	
-縊	i5	
+縊	i5a	
 縐	tsau2	
 縛	pʊ7	
 縣	ɕiẽ6	
 縫	xəŋ2	～衣服
 縫	xəŋ6	一條～
 縮	səu7	
-縱	tsəŋ5	
+縱	tsəŋ5a	
 縷	li3-	
 縷	lei3	
 總	tsəŋ3	
@@ -2675,16 +2675,16 @@
 織	tsɿ7	
 繞	iau3	
 繞	iau3	～線
-繡	ɕiəu5	
+繡	ɕiəu5a	
 繩	sən2	
 繪	fei6	
-繫	tɕi5	～鞋帶
 繫	ɕi6	連
+繫	tɕi5a	～鞋帶
 繭	tɕiẽ3	
 繰	tɕiau3	
 繳	tɕiau3	
-繼	tɕi5	
-纂	tsø̃5	編～
+繼	tɕi5a	
+纂	tsø̃5a	編～
 續	səu8	
 纍	li3	～積
 纏	tsø̃2	
@@ -2695,13 +2695,13 @@
 缺	ɡʱuø7	
 缽	pø7	
 罈	tɛ̃2	
-罐	kuø̃5	
+罐	kuø̃5a	
 罕	xø̃3	
-罩	tsɔo5	
+罩	tsɔo5a	
 罪	tɕi6	
-置	tsɿ5	
+置	tsɿ5a	
 罰	fa8	
-署	ɕy5	專～
+署	ɕy5a	專～
 罵	ma6	
 罷	pa6	
 羅	lo2	
@@ -2711,20 +2711,20 @@
 羔	kɔo1	
 羞	ɕiəu1	
 羣	kuen2	
-羨	ɕiẽ5	
+羨	ɕiẽ5a	
 義	ȵi6	
-羶	sø̃5	
+羶	sø̃5a	
 羹	ken1	
 羽	y3	
 翁	vəŋ1	
-翅	tsɿ5	
+翅	tsɿ5a	
 翎	lin2	
 習	ɕi8	
-翠	dʑʱi15	
-翠	dzʱei15	
+翠	dʑʱi5b	
+翠	dzʱei5b	
 翡	fei1	～翠
 翰	xø̃6	
-翹	dʑʱiau15	
+翹	dʑʱiau5b	
 翻	fã1	
 翼	i7	
 耀	iau6	
@@ -2736,7 +2736,7 @@
 耐	lai6	
 耕	tɕien1-	
 耕	ken1=	
-耗	xɔo5	
+耗	xɔo5a	
 耘	uen2	
 耙	pa6	犁～
 耬	lau3	
@@ -2744,8 +2744,8 @@
 耽	tã1	
 耿	ken3	
 聊	liau2	
-聖	sən5	
-聘	bʱin15	
+聖	sən5a	
+聘	bʱin5b	
 聚	ɕi6	
 聞	vən2	
 聯	liẽ2	
@@ -2755,13 +2755,13 @@
 聳	səŋ3	
 聶	ȵi7	
 職	tsɿ7	
-聽	dʱiaŋ15-	
-聽	dʱin15=	
+聽	dʱiaŋ5b-	
+聽	dʱin5b=	
 聾	ləŋ2	
 肅	səu7	
-肆	sɿ5	
 肆	i6	～業
-肇	tsau5	
+肆	sɿ5a	
+肇	tsau5a	
 肉	ȵiəu8	
 肋	lø8	
 肌	tɕi1	
@@ -2780,33 +2780,33 @@
 肯	dʑʱien3-	
 肯	ɡʱen3=	
 育	iəu7	
-肺	fei5	
+肺	fei5a	
 胃	uei6	
-胄	tsəu5	
-背	pi5-	
-背	bʱi15-	～誦
+胄	tsəu5a	
+背	pi5a-	
+背	bʱi5b-	～誦
 背	pe6-	
-背	pe5=	
+背	pe5a=	
 胎	dʱɛ1	
-胖	bʱɔŋ15	
+胖	bʱɔŋ5b	
 胚	bʱe1	～胎
 胛	tɕia7	肩～
 胞	pɔo1	
 胡	fu2	
 胭	iẽ1	
-胯	ɡʱua15	
+胯	ɡʱua5b	
 胱	kuɔ̃1	
 胳	ka7	～膊
 胸	ɕiəŋ1	
 能	lən2	
 脂	tsɿ1	
 脅	ɕi8	
-脆	dʑʱi15	
+脆	dʑʱi5b	
 脈	mø8	
 脊	tɕi7	
 脫	dʱø7	
 脯	bʱo1	胸～
-脹	tsɔŋ5	
+脹	tsɔŋ5a	
 脾	pi2	
 腆	tiẽ3	～肚
 腋	i7	
@@ -2815,16 +2815,16 @@
 腑	fu3	
 腔	ɡʱɔŋ1-	
 腔	dʑʱiɔŋ1=	
-腕	uø̃5	
+腕	uø̃5a	
 腡	lo2	
-腥	ɕiaŋ5-	
-腥	ɕin5=	
+腥	ɕiaŋ5a-	
+腥	ɕin5a=	
 腦	lɔo3	
 腫	tsəŋ3	
 腭	ŋo7	
 腮	sɛ1	
 腰	iau1	
-腱	tɕiẽ5	
+腱	tɕiẽ5a	
 腳	tso7	
 腸	tsɔŋ2	
 腹	fu7	
@@ -2837,12 +2837,12 @@
 膝	dʑʱi7	
 膠	tɕiau1=	
 膨	pən2	～脹
-膩	ȵi5	
+膩	ȵi5a	
 膳	sã6	
 膽	tã3	
 膿	ləŋ2	
 臀	tən2	
-臂	pi5	
+臂	pi5a	
 臃	iəŋ1	
 臉	liẽ3	
 臊	sɔo1	～氣
@@ -2853,9 +2853,9 @@
 臥	ŋo6	
 臨	lin2	
 自	tsɿ6	
-臭	dzʱəu15	香～
-至	tsɿ5	
-致	tsɿ5	
+臭	dzʱəu5b	香～
+至	tsɿ5a	
+致	tsɿ5a	
 臺	te2	
 臺	tei2	
 臻	tsən1	
@@ -2865,14 +2865,14 @@
 舅	tɕiəu6	
 與	y3	給～
 興	ɕin1	～旺
-興	ɕin5	高～
+興	ɕin5a	高～
 舉	ky3	
 舊	tɕiəu6	
 舌	sø7	
 舒	ɕy1	
 舔	dʱiẽ3	以舌取物
-舖	bʱo15	店～
-舜	fən5	
+舖	bʱo5b	店～
+舜	fən5a	
 舞	vu3	
 舟	tsəu1	
 航	xɔŋ2	
@@ -2882,7 +2882,7 @@
 船	kuø̃2	
 艇	dʱin3	
 艙	dzʱɔŋ1	
-艦	kã5	
+艦	kã5a	
 良	liɔŋ2	
 艱	kã1-	
 艱	tɕiẽ1=	
@@ -2894,7 +2894,7 @@
 芒	mɔŋ1	
 芙	fu2	～蓉
 芝	tsɿ1	
-芥	kai5	
+芥	kai5a	
 芬	fən1	
 芭	pa1	
 花	fua1	
@@ -2909,7 +2909,7 @@
 苟	kəu3	
 若	io8	
 苦	ɡʱu3	
-苧	ky5	～麻
+苧	ky5a	～麻
 英	in1	
 茂	miau6	
 范	fã6	
@@ -2931,15 +2931,15 @@
 荷	xo2	
 莊	tsɔŋ1	
 莓	mi2	
-莖	tɕin5	
-莠	iəu5	
+莖	tɕin5a	
+莠	iəu5a	
 莧	xã6	～菜
 莫	mo8	
 莽	mɔŋ3	
 菊	tɕiəu7	
 菌	kuen1	
 菖	dzʱɔŋ1	～蒲
-菜	dzʱai15	
+菜	dzʱai5b	
 菠	pʊ1	
 菢	po6	～小雞
 菢	pɔo6	
@@ -2953,44 +2953,44 @@
 萬	vã6	
 落	lo8	
 葉	i8	
-著	ky5	顯～
+著	ky5a	顯～
 葛	kø7	
 葡	po2	
 董	təŋ3	
 葦	uei3	蘆～
 葫	fu2	
-葬	tsɔŋ5	
+葬	tsɔŋ5a	
 葵	kuei2	
 葷	fən1	
 蒐	sau1	
 蒙	məŋ2	
-蒜	sø̃5	
+蒜	sø̃5a	
 蒲	po2	
 蒸	tsən1	
 蒼	dzʱɔŋ1	
 蒿	kɔo1	
 蓄	ɕiəu7	
 蓉	iəŋ2	
-蓋	kai5	
+蓋	kai5a	
 蓑	so1	
-蓖	bʱi15	
 蓖	pi6	～麻
+蓖	bʱi5b	
 蓬	pəŋ2	
 蓮	liẽ2	
 蔓	mã6	
-蔗	tsa5	
 蔗	tsa7	
-蔡	dzʱai15	
+蔗	tsa5a	
+蔡	dzʱai5b	
 蔣	tɕiɔŋ3	
 蔥	dzʱəŋ1	
 蔬	səu1	
-蔭	in5	
-蔽	pi5	
+蔭	in5a	
+蔽	pi5a	
 蕉	tɕiau1	香～
 蕊	ȵi7	
 蕎	tɕiau2	
 蕨	kuø7	
-蕩	dʱɔŋ15	放～
+蕩	dʱɔŋ5b	放～
 蕭	ɕiau1	
 薄	bʱʊ8	
 薅	xɔo1	
@@ -2998,9 +2998,9 @@
 薛	ɕi7	
 薩	sa8	
 薪	ɕin1	
-薯	ɕy5	白～
+薯	ɕy5a	白～
 薰	fən1	
-藉	dʑʱi15	
+藉	dʑʱi5b	
 藍	lɛ̃2	
 藏	tsɔŋ2	隱～
 藏	tsɔŋ6	西～
@@ -3018,18 +3018,18 @@
 蘇	səu1	
 蘋	pin2	
 蘭	lɛ̃2	
-蘸	tsã5	～醬油
+蘸	tsã5a	～醬油
 蘿	lo2	
 虎	fu3	
 虐	ȵio7	
 虔	tɕiẽ2	
 處	ɡʱy3	相～
-處	ɡʱy15	～所
+處	ɡʱy5b	～所
 虛	ɕy1	
 虜	ləu3	
 號	xɔo6	呼～；～數
 虧	ɡʱuei1	
-虹	kɔŋ5	
+虹	kɔŋ5a	
 虻	mɔŋ1	
 蚊	mən1-	
 蚊	vən2=	
@@ -3039,7 +3039,7 @@
 蚤	tsɔo3	
 蚯	dʑʱiəu1	
 蚶	xø̃1	
-蛀	ky5	
+蛀	ky5a	
 蛆	dʑʱi1	生～
 蛇	sa2-	
 蛇	sø2=	
@@ -3048,7 +3048,7 @@
 蛙	ua1	
 蛛	ky1	
 蛤	ka2	～蟆
-蛻	dʱi15-	
+蛻	dʱi5b-	
 蛾	ŋo2	
 蜀	ɕy3	
 蜂	xəŋ1	
@@ -3061,7 +3061,7 @@
 蝕	sɿ7	
 蝗	fɔ̃2	
 蝙	piẽ3	
-蝠	fu5	
+蝠	fu5a	
 蝦	xa1-	～哩：蝦子；(存疑)螃～：螃蟹
 蝦	ɕia1=	魚～
 蝨	se7	～婆：長在頭髮中的小蟲，黑色，令頭髮很癢
@@ -3128,33 +3128,33 @@
 裸	lo3	
 裹	li3	
 裹	ko3	
-製	tsɿ5	
+製	tsɿ5a	
 複	fu7	
 褒	pɔo1	
 褚	ky3	姓氏
 褥	iəu8	
 褯	ɕi1	
-褲	ɡʱu15	
+褲	ɡʱu5b	
 褶	tsø7	
 襖	ŋɔo3	
 襟	tɕin1	
 襠	tɔŋ1	
 襪	va8	
-襯	dzʱən15	
+襯	dzʱən5b	
 襲	ɕi7	
 襻	bʱã1	紐～
 西	ɕi1	
 要	iau1	～求
-要	iau5	想～；重～
+要	iau5a	想～；重～
 覆	fu7	
-見	tɕiẽ5	
+見	tɕiẽ5a	
 規	kuei1	
 覓	mi7	
 視	sɿ6	
 親	dʑʱin1	
-親	dʑʱin15	～家
-覺	kau5	
+親	dʑʱin5b	～家
 覺	tɕio7	知～
+覺	kau5a	
 覽	lɛ̃3	
 觀	kuø̃1	
 觀	kuø̃1	參～；寺～
@@ -3163,10 +3163,10 @@
 解	tɕie3=	
 觸	tsəu7	
 言	iẽ2	
-訂	tin5	
-訃	bʱo15	
-計	tɕi5	
-訊	ɕin5	
+訂	tin5a	
+訃	bʱo5b	
+計	tɕi5a	
+訊	ɕin5a	
 討	dʱɔo3	
 訓	fən6	
 託	dʱo7	
@@ -3177,14 +3177,14 @@
 訪	fuɔ̃3	
 設	sø7	
 許	ɕy3	
-訴	səu5	
+訴	səu5a	
 診	tsən3	
-註	ky5	
-詐	tsa5	
+註	ky5a	
+詐	tsa5a	
 評	pin2	
 詞	tsɿ2	
-詠	vən5	
-試	sɿ5	
+詠	vən5a	
+試	sɿ5a	
 詩	sɿ1	
 詭	kuei3	
 話	fa6	
@@ -3193,12 +3193,12 @@
 詳	tɕiɔŋ2	
 誅	ky1	
 誇	ɡʱua1	
-誌	tsɿ5	
+誌	tsɿ5a	
 認	ȵin6-	
 認	vən6=	
 誓	sɿ6	
 誕	dʱɛ̃6	
-誘	iəu5	
+誘	iəu5a	
 語	y3	
 誠	tsən2	
 誣	vu1	
@@ -3207,10 +3207,10 @@
 說	fø7	～話
 誰	ɕy2-	
 誰	fei2=	
-課	ɡʱo15	
+課	ɡʱo5b	
 誼	ȵi3	
 調	tiau2	～和
-調	tiau5	～動；音～
+調	tiau5a	～動；音～
 談	tã2	
 請	dʑʱiaŋ3-	
 請	dʑʱin3=	
@@ -3218,9 +3218,9 @@
 論	lən2	～語
 論	lən6	議～
 諜	dʱi7	
-諫	tɕiẽ5	
+諫	tɕiẽ5a	
 諱	fei3	
-諷	xəŋ5	
+諷	xəŋ5a	
 諸	ky1	
 諺	ȵiẽ6	
 諾	lo6	
@@ -3238,7 +3238,7 @@
 謠	iau2	
 謬	miau6	
 謹	tɕin3	
-證	tsən5	
+證	tsən5a	
 譏	tɕi1	
 識	sɿ7	
 譚	tã2	
@@ -3250,7 +3250,7 @@
 護	fu6	
 譽	y3	榮～
 讀	dʱəu7	
-變	piẽ5	
+變	piẽ5a	
 讒	tsã2	
 讓	iaŋ6	
 谷	ku7	
@@ -3268,28 +3268,28 @@
 豫	y6	
 豬	ky1	
 豶	fən2	
-豹	pɔo5	
+豹	pɔo5a	
 豺	tsai2	
 貂	tiau1	
 貌	mɔo6	
 貓	mɔo1	
-貝	pi5	
+貝	pi5a	
 貞	tsən1	
 負	fu6	
 財	tse2	
-貢	kəŋ5	
+貢	kəŋ5a	
 貧	pin2	
-貨	xo5	
-販	fã5	
+貨	xo5a	
+販	fã5a	
 貪	dʱø̃1	
-貫	kuø̃5	
+貫	kuø̃5a	
 責	tse7	
 貳	ø6	
-貴	kuei5	
+貴	kuei5a	
 貶	piẽ3	
 買	mai3	
 貸	te6	
-費	fei5	～用
+費	fei5a	～用
 貼	dʱi7	
 貿	miau6	
 賀	xo6	
@@ -3302,24 +3302,24 @@
 賒	sa1-	
 賒	sø1=	
 賓	pin1	
-賜	dzʱɿ15	
+賜	dzʱɿ5b	
 賞	ɕiɔŋ3	
 賠	pi2	
 賢	ɕiẽ2	
 賣	mai6	
 賤	tɕiẽ6	
-賦	fu5	
-質	tsɿ5	
+賦	fu5a	
 質	tsɿ7	
-賬	tsɔŋ5	
+質	tsɿ5a	
+賬	tsɔŋ5a	
 賭	təu3	
 賴	lai6	
 賺	tsã6	
-購	ko5	
-賽	sai5	
-贅	kuei5	
+購	ko5a	
+賽	sai5a	
+贅	kuei5a	
 贈	tsən6	
-贊	tsã5	
+贊	tsã5a	
 贏	iaŋ2-	
 贏	in2=	
 贓	tsɔŋ1	
@@ -3327,15 +3327,15 @@
 赤	dzʱɿ7	
 赦	sø6	
 走	tsau3	
-赴	bʱo15	
+赴	bʱo5b	
 起	dʑʱi3	
-趁	dzʱən15	
+趁	dzʱən5b	
 超	dzʱau1	
 越	yø7	
 趕	kø̃3	
 趙	tsau6	
-趟	dʱɔŋ15	一～
-趣	dʑʱi15	
+趟	dʱɔŋ5b	一～
+趣	dʑʱi5b	
 趨	dʑʱi1	
 足	tsəu7	
 趼	tɕiẽ3	
@@ -3350,10 +3350,10 @@
 跟	ken1=	
 跡	tɕi7	
 跨	ka2	(存疑)～過門檻
-跨	ɡʱua15	
+跨	ɡʱua5b	
 跪	ɡʱuei3	
 路	ləu6	
-跳	dʱiau15	
+跳	dʱiau5b	
 踏	dʱɛ7	
 踐	tɕiẽ3	
 踒	o1	
@@ -3366,7 +3366,7 @@
 蹩	bʱie3	走路時腳板不正
 蹭	tsən1	
 蹲	tsən1	
-躁	dzʱɔo15	
+躁	dzʱɔo5b	
 躍	ȵio8	
 躡	ȵi7	～腳走
 身	sən1	
@@ -3383,9 +3383,9 @@
 軒	ɕiẽ1	
 軟	uø̃3	
 軸	dzʱəu8	
-較	tɕiau5	
+較	tɕiau5a	
 載	tsɛ3	年～
-載	tsɛ5	～重
+載	tsɛ5a	～重
 輔	fu3	
 輕	dʑʱiaŋ1-	
 輕	dʑʱin1=	
@@ -3394,19 +3394,19 @@
 輝	fei1	
 輞	uɔ̃3	車～
 輦	ȵiẽ3	
-輩	pe5	
+輩	pe5a	
 輪	lən2	
 輯	tɕi7	編～
 輸	ɕy1	
-輻	fu5	
+輻	fu5a	
 轄	xa7	管～
 轅	uø̃2	
 轉	kuø̃3	～眼
-轉	kuø̃5	～圈
+轉	kuø̃5a	～圈
 轍	dzʱø7	
 轎	tɕiau6	
 轟	xəŋ3	
-轡	bʱi15	
+轡	bʱi5b	
 辛	ɕin1	
 辜	ku1	
 辟	bʱi7	
@@ -3420,7 +3420,7 @@
 辱	iəu8	
 農	ləŋ2	
 迂	y1	
-迅	ɕin5	
+迅	ɕin5a	
 迎	in2	
 近	tɕin6	
 返	fã3	
@@ -3428,19 +3428,19 @@
 迫	bʱø7	
 述	ɕy7	
 迷	mi2	
-迸	pəŋ5	
+迸	pəŋ5a	
 追	kuei1	
-退	dʱi15	
-送	səŋ5	
+退	dʱi5b	
+送	səŋ5a	
 逃	tɔo2	
 逆	ȵi6	
 逍	ɕiau1	
-透	dʱau15	
+透	dʱau5b	
 逐	dzʱəu8	
 途	təu2	
 逗	tau1	
 通	dʱəŋ1	
-逛	kuɔ̃5	
+逛	kuɔ̃5a	
 逝	sɿ6	
 逞	dzʱən3	
 速	səu7	
@@ -3449,23 +3449,23 @@
 連	liẽ2	
 逮	tɛ3	
 逮	te6	
-進	tɕin5	
+進	tɕin5a	
 逵	kuei2	
 逸	i7	
 逼	pi7	
 遁	tən6	
-遂	sei15	
+遂	sei5b	
 遇	y6	
 遊	iəu2	
 運	uen6	
-遍	bʱiẽ15	一～；～地
-過	ko5	
+遍	bʱiẽ5b	一～；～地
+過	ko5a	
 遐	ɕia2	
 道	tɔo6	
 達	dʱa7	
 違	uei2	
 遥	iau2	
-遜	sən5	
+遜	sən5a	
 遞	ti6	
 遠	uø̃3	
 遣	dʑʱiẽ3	
@@ -3481,17 +3481,17 @@
 遼	liau2	
 避	pi6	
 邀	iau1	
-邁	man15	
+邁	man5b	
 還	fã2	～原
 還	xɛ̃2	
 邊	piẽ1	
 邋	la3	(存疑)～糊：不講衛生
 邋	lɛ8	
-那	la5	
+那	la5a	
 邦	pɔŋ1	
 邪	tɕia2-	
 邪	ɕie2=	
-邵	sau5	
+邵	sau5a	
 郊	tɕiau1	
 郎	lɔŋ2	
 郝	xo7	
@@ -3509,28 +3509,28 @@
 鄰	lin2	
 酉	iəu3	
 酌	tso7	
-配	bʱi15	
+配	bʱi5b	
 酒	tɕiəu3	
 酣	xø̃1	
 酥	səu1	
 酪	lo8	
 酬	tsəu2	
-酵	ɕiau5	
-酷	ɡʱu15	
+酵	ɕiau5a	
+酷	ɡʱu5b	
 酸	sø̃1	
 醃	iẽ1	
 醇	fən2	
-醉	tɕi5-	
+醉	tɕi5a-	
 醉	tsei3	
-醋	dzʱəu15	
+醋	dzʱəu5b	
 醒	ɕiaŋ3-	
 醒	ɕin3=	
 醜	dzʱəu3	
 醫	i1	
-醬	tɕiɔŋ5	
+醬	tɕiɔŋ5a	
 醭	bʱʊ7	
-釀	iɔŋ5	
-釁	ɕin5	挑～
+釀	iɔŋ5a	
+釁	ɕin5a	挑～
 釅	ȵiẽ6	～茶
 采	dzʱai3	
 釉	iəu6	
@@ -3544,12 +3544,12 @@
 釐	li2	
 金	tɕin1	
 釘	tiaŋ1-	鐵～
-釘	tiaŋ5-	～住；扔，丟
+釘	tiaŋ5a-	～住；扔，丟
 釘	tin1=	鐵～
-釘	tin5=	～住
+釘	tin5a=	～住
 釜	fu3	
 針	tsən1	
-釣	tiau5	
+釣	tiau5a	
 釵	dzʱɛ1	
 鈍	tən6	
 鈔	dzʱɔo1	
@@ -3561,17 +3561,17 @@
 鉤	tɕiau1	
 鉸	tɕiau3	
 銀	ȵin2	
-銃	dzʱəŋ15	
+銃	dzʱəŋ5b	
 銅	təŋ2	
 銘	min2	
 銜	xã2	
-銳	uei5	
+銳	uei5a	
 銷	ɕiau1	
-銼	dzʱo15	
+銼	dzʱo5b	
 鋒	xəŋ1	
 鋤	tsəu2	
 鋪	bʱo1	～設
-鋸	ki5	
+鋸	ki5a	
 鋼	kɔŋ1	
 錄	ləu8	
 錐	kuei1	
@@ -3580,9 +3580,9 @@
 錦	tɕin3	
 錨	mɔo2	
 錫	ɕi7	
-錮	ku5	
-錯	dzʱo15	～誤
+錮	ku5a	
 錯	dzʱo7	
+錯	dzʱo5b	～誤
 錶	piau3	
 鍊	liẽ6	
 鍋	ko1	
@@ -3590,17 +3590,17 @@
 鍘	tsa7	
 鍛	tø̃6	
 鍬	tɕiau1	
-鍵	tɕiẽ5	
+鍵	tɕiẽ5a	
 鍾	tsəŋ1	
 鎖	so3	
-鎮	tsən5	
+鎮	tsən5a	
 鏊	ŋɔo6	
 鏟	dzʱã3	
-鏡	tɕin5	
-鏨	tsã5	～花
+鏡	tɕin5a	
+鏨	tsã5a	～花
 鏵	fua2	
-鏽	ɕiəu5	鐵～
-鏾	ɕiẽ5	～雞：閹雞
+鏽	ɕiəu5a	鐵～
+鏾	ɕiẽ5a	～雞：閹雞
 鐃	iau2	
 鐐	liau6	
 鐘	tsəŋ1	
@@ -3612,28 +3612,28 @@
 鐸	dʱo7	
 鐺	tɔŋ1	
 鐾	bʱi6	
-鑄	ky5	
+鑄	ky5a	
 鑊	xo7	
-鑑	kã5	
+鑑	kã5a	
 鑞	lɛ8	錫～
 鑰	io8	～匙
 鑲	ɕiɔŋ1	
 鑷	ȵi7	～子
 鑼	lo2	
-鑽	tsã5	
-鑽	tsø̃5	木工用具
+鑽	tsã5a	
+鑽	tsø̃5a	木工用具
 長	tsɔŋ2	～短
 長	tsɔŋ3	生～
 門	mən2	
 閂	sã1	
 閃	sø̃3	
-閉	pi5	
+閉	pi5a	
 開	ɡʱɛ1	
 閏	vən6	
 閑	xã2-	
 閑	ɕiẽ2=	
 間	kã1-	中～；空～
-間	kã5	～斷
+間	kã5a	～斷
 閘	tsa7	
 閣	ko7	
 閥	fa8	
@@ -3657,7 +3657,7 @@
 陌	pø7-	
 陌	mø7=	
 降	ɕiɔŋ2	
-降	tɕiɔŋ5	下～
+降	tɕiɔŋ5a	下～
 限	xã6-	
 限	ɕiẽ6=	
 陛	bʱi6	～下
@@ -3675,20 +3675,20 @@
 陸	ləu8	
 陽	iɔŋ2	
 隆	ləŋ2	
-隊	ti5	
+隊	ti5a	
 隍	fɔ̃2	
 階	kai1-	
 階	tɕie1=	
-隔	ke5	
-隘	ŋɛ5	
+隔	ke5a	
+隘	ŋɛ5a	
 際	tɕi7	
-障	tsɔŋ5	保～
-隧	sei15	
-隨	sei15	
+障	tsɔŋ5a	保～
+隧	sei5b	
+隨	sei5b	
 險	ɕiẽ3	
 隱	in3	
 隴	ləŋ3	
-隸	li5	
+隸	li5a	
 隻	tsɿ7=	
 雀	dʑʱio7	
 雁	ŋã6-	
@@ -3714,36 +3714,36 @@
 雲	uen2	
 零	lin2	
 雷	le2	
-雹	bʱɔo15	
+雹	bʱɔo5b	
 電	tiẽ6	
 需	ɕi1	
 霄	ɕiau1	
-震	tsən5	
+震	tsən5a	
 霉	mi2	
 霍	xo7	
-霎	sa5	
+霎	sa5a	
 霓	ȵi2	
 霜	sɔŋ1	
 霞	ɕia2	
 霧	vu6	
 露	ləu6	
-霸	pa5	
+霸	pa5a	
 靈	lin2	
 青	dʑʱiaŋ1-	
 青	dʑʱin1=	
 靖	tɕin6	
 靜	tɕin6	
 非	fei1	
-靠	ɡʱɔo15	
+靠	ɡʱɔo5b	
 面	miẽ6	
-靨	iẽ5	
-革	ke5	
+靨	iẽ5a	
+革	ke5a	
 靴	fia1-	
 靴	ɕya1=	
 鞋	xai2	
 鞍	ŋø̃1	
 鞏	kəŋ3	
-鞘	dʑʱiau15	
+鞘	dʑʱiau5b	
 鞠	tɕiəu7	
 鞦	dʑʱiəu1	～韆
 鞭	piẽ1	
@@ -3753,7 +3753,7 @@
 韭	tɕiəu3	
 音	in1	
 韶	sau2	～關
-韻	uen5	
+韻	uen5a	
 響	ɕiɔŋ3	
 頁	i8	
 頂	tin3	
@@ -3766,7 +3766,7 @@
 預	y6	
 頑	uã2	～固；～皮
 頒	pã1	
-頓	tən5	
+頓	tən5a	
 頗	bʱʊ3	
 領	lin3	
 頭	tau2	
@@ -3782,17 +3782,17 @@
 顛	tiẽ1	
 類	li6-	
 類	le6	
-顧	ku5	
-顫	tsã5	
+顧	ku5a	
+顫	tsã5a	
 顯	ɕiẽ3	
-顴	kuø̃5	～骨
+顴	kuø̃5a	～骨
 風	xəŋ1	
 颼	sau1	
 飄	bʱiau1	
 飛	fei1	
 食	sɿ7	
 飢	tɕi1	～餓
-飩	tən5	
+飩	tən5a	
 飯	fã6	
 飲	in3	～酒
 飲	in6	～馬
@@ -3814,8 +3814,8 @@
 餞	tɕiẽ6	～行
 餡	ɕiẽ6	
 館	kuø̃3	
-餵	y5-	
-餵	uei5=	
+餵	y5a-	
+餵	uei5a=	
 餾	liəu2	
 餿	sau1	
 饃	mʊ2	
@@ -3833,14 +3833,14 @@
 駁	pʊ7	
 駐	ky1	
 駒	ky1	
-駕	tɕia5=	
+駕	tɕia5a=	
 駙	fu6	
 駛	sɿ3	
 駝	to2	
 駱	lo8	
-駿	tsən5	
+駿	tsən5a	
 騎	tɕi2	
-騙	bʱiẽ15	欺～
+騙	bʱiẽ5b	欺～
 騰	tən2	
 騷	sɔo1	
 騾	lo2	
@@ -3861,8 +3861,8 @@
 鬆	səŋ1	
 鬍	fu2	～鬚
 鬚	ɕi1	鬍～
-鬢	pin5	
-鬥	tau5	
+鬢	pin5a	
+鬥	tau5a	
 鬧	lɔo6	
 鬱	iəu7	
 鬼	kuei3	
@@ -3889,7 +3889,7 @@
 鰾	bʱo1	
 鱉	pi7	
 鱔	sø̃6	
-鱖	kuei5	
+鱖	kuei5a	
 鱗	lin2	
 鳥	tiau3-	
 鳥	ȵiau3=	
@@ -3948,7 +3948,7 @@
 鼬	iəu6	黃～
 鼻	bʱi6	
 鼾	xø̃1	
-齈	ləŋ5	
+齈	ləŋ5a	
 齊	tɕi2	
 齋	tsai1	
 齒	dzʱɿ3	(存疑)理睬
@@ -3960,6 +3960,6 @@
 𠢕	ŋɔo2	～人：有本事的人
 𠻞	ɡʱaŋ3	(訓讀)咳嗽
 𡎺	tsəu7	鼻子塞；用力塞
-𣕅	bʱɔo15	～個：十個
+𣕅	bʱɔo5b	～個：十個
 𨃅	pai1	本字跛
 𨉣	xa1	～腰

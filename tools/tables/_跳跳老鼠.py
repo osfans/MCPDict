@@ -12,8 +12,6 @@ class 表(_表):
 		else:
 			yb, sd, hzs = fs[:3]
 		if sd == "調號": return
-		sd = sd.rstrip("a")
-		if sd.endswith("b"): sd = "1" + sd[:-1]
 		yb = yb + sd
 		l = list()
 		for hz, c, js in re.findall("(.)([-=]?)(\[[^[]]*?\[[^[]]*?\][^[]]*?\]|\[.*?\])?", hzs):
