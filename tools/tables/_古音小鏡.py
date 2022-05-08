@@ -13,8 +13,11 @@ class 表(_表):
 		elif fs[3].isdigit():
 			hz, sm, ym, tv, js = fs[:5]
 			sy = sm + ym
-		elif fs[4].isdigit():
+		elif str(self) == "滁州":
 			_, hz, sm, ym, tv, js = fs[:6]
+			sy = sm + ym
+		elif fs[4].isdigit():
+			_, hz, sm, ym, tv, _, js = fs[:7]
 			sy = sm + ym
 		elif fs[2] and fs[2][-1].isdigit():
 			hz, _, sy, js = fs[:4]
