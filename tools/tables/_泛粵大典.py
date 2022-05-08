@@ -16,17 +16,17 @@ class 表(_表):
 			hz, _, py, yb = fs[:4]
 		else:
 			hz = fs[0]
-			py = fs[3]+fs[4]
-			yb = fs[14] + fs[15]
+			yb = fs[14] + fs[15] + fs[4]
 			js = fs[17]
+			return hz, yb, js
 		if not py or not yb: return
 		sd = py[-1]
 		if not sd.isdigit(): sd = "0"
 		py = py.rstrip("1234567890")
 		if py and py[-1] in "ptk":
-			if sd == "1": sd = "8"
-			elif sd == "2": sd = "7"
-			elif sd == "4": sd = "10"
-			elif sd == "6": sd = "9"
+			if sd == "1": sd = "7b"
+			elif sd == "2": sd = "7a"
+			elif sd == "5": sd = "9"
+			elif sd == "6": sd = "8"
 		yb = yb.rstrip("1234567890") + sd
 		return hz, yb, js
