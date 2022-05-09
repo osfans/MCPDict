@@ -43,12 +43,14 @@ import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.text.HtmlCompat;
+import androidx.core.widget.TextViewCompat;
 import androidx.fragment.app.Fragment;
 
 import java.io.UnsupportedEncodingException;
@@ -134,13 +136,15 @@ public class ResultFragment extends Fragment {
         registerForContextMenu(mWebView);
         mTextView = new TextView(requireContext());
         mTextView.setTextAppearance(R.style.FontDetail);
-        if (Utils.enableFontExt()) mTextView.setTypeface(Utils.getDictTypeFace());
+        mTextView.setTypeface(Utils.getDictTypeFace());
         mTextView.setTextIsSelectable(true);
         mTextView.setMovementMethod(LinkMovementMethod.getInstance());
         LinearLayout layout = selfView.findViewById(R.id.layout);
         layout.addView(mTextView);
         mTextView.setTag(this);
         registerForContextMenu(mTextView);
+        Orthography.setToneStyle(Utils.getToneStyle(R.string.pref_key_tone_display));
+        Orthography.setToneValueStyle(Utils.getToneStyle(R.string.pref_key_tone_value_display));
         return selfView;
     }
 
@@ -315,6 +319,10 @@ public class ResultFragment extends Fragment {
         StringBuilder sb = new StringBuilder();
         sb.append("<html><head><style>\n" +
                 "  @font-face {\n" +
+                "    font-family: tone;\n" +
+                "    src: url('file:///android_res/font/tone.ttf');\n" +
+                "  }\n" +
+                "  @font-face {\n" +
                 "    font-family: ipa;\n" +
                 "    src: url('file:///android_res/font/ipa.ttf');\n" +
                 "  }\n" +
@@ -345,10 +353,13 @@ public class ResultFragment extends Fragment {
                 "         vertical-align: top;\n" +
                 "         transform-origin: right;\n" +
                 "         font-size: 0.8em;\n" +
-                "      }\n" +
-                "      body {\n" +
-                "         font-family: ipa, hanfg, hanbcde, sans;\n" +
-                "      }\n" +
+                "      }\n");
+        if (Utils.useFontTone()) {
+            sb.append("      body { font-family: tone, hanfg, hanbcde, sans; }\n");
+        } else {
+            sb.append("      body { font-family: ipa, hanfg, hanbcde, sans; }\n");
+        }
+        sb.append(
                 "      .ipa {\n" +
                 "         padding: 0 5px;\n" +
                 "      }\n" +
@@ -631,8 +642,6 @@ public class ResultFragment extends Fragment {
 
     public void setData(Cursor cursor) {
         final String query = Utils.getInput();
-        Orthography.setToneStyle(Utils.getToneStyle(R.string.pref_key_tone_display));
-        Orthography.setToneValueStyle(Utils.getToneStyle(R.string.pref_key_tone_value_display));
         mRaws.clear();
         int format = Utils.getDisplayFormat();
         if (format == 2) { //web
@@ -641,6 +650,7 @@ public class ResultFragment extends Fragment {
             if (cursor != null) cursor.close();
             mScroll.setScrollY(0);
         } else {
+            mTextView.setTypeface(Utils.getDictTypeFace());
             new AsyncTask<Void, Void, CharSequence>() {
                 @Override
                 protected CharSequence doInBackground(Void... params) {

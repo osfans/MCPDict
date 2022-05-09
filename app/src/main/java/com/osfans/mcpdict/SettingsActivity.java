@@ -69,8 +69,12 @@ public class SettingsActivity extends AppCompatActivity {
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
             if (s.contentEquals(getString(R.string.pref_key_fq)) || s.contentEquals(getString(R.string.pref_key_locale))) {
                 Intent intent = new Intent(getContext(), MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
+            } else if (s.contentEquals(getString(R.string.pref_key_tone_display))) {
+                Orthography.setToneStyle(Utils.getToneStyle(R.string.pref_key_tone_display));
+            } else if (s.contentEquals(getString(R.string.pref_key_tone_value_display))) {
+                Orthography.setToneValueStyle(Utils.getToneStyle(R.string.pref_key_tone_value_display));
             } else if (s.contentEquals(getString(R.string.pref_key_format))) {
                 //restart
             }
