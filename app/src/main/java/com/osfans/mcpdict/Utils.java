@@ -21,14 +21,13 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.text.HtmlCompat;
 
-import java.io.IOException;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
 
 public class Utils extends Application {
     private static Utils mApp;
-    private static Typeface tf, tfIPA;
+    private static Typeface tfHan, tfHanTone, tfIPA, tfIPATone;
 
     public Utils() {
         mApp = this;
@@ -170,28 +169,53 @@ public class Utils extends Application {
         return HtmlCompat.fromHtml(text, HtmlCompat.FROM_HTML_MODE_COMPACT);
     }
 
+    public static boolean useFontTone() {
+        return getToneStyle(R.string.pref_key_tone_display) == 5;
+    }
+
     public static Typeface getDictTypeFace() {
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
+        if (!enableFontExt()) return getIPA();
         try {
-            if (tf == null) {
-                tf = new Typeface.CustomFallbackBuilder(
-                        new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.ipa).build()).build()
-                ).addCustomFallback(
-                        new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanbcde).build()).build()
-                ).addCustomFallback(
-                        new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanfg).build()).build()
-                ).setSystemFallback("sans-serif")
-                        .build();
+            if (useFontTone()) {
+                if (tfHanTone == null) {
+                    Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.tone).build()).build()
+                    ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanbcde).build()).build()
+                    ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanfg).build()).build()
+                    );
+                    tfHanTone = builder.build();
+                }
+                return tfHanTone;
+            } else {
+                if (tfHan == null) {
+                    Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.ipa).build()).build()
+                    ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanbcde).build()).build()
+                    ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanfg).build()).build()
+                    );
+                    tfHan = builder.build();
+                }
+                return tfHan;
             }
-            return tf;
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception ignore) {
         }
         return null;
     }
 
     public static Typeface getIPA() {
-        if (tfIPA == null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return null;
+        if (useFontTone()) {
+            if (tfIPATone == null) {
+                tfIPATone = mApp.getResources().getFont(R.font.tone);
+            }
+            return tfIPATone;
+        }
+        if (tfIPA == null) {
             tfIPA = mApp.getResources().getFont(R.font.ipa);
         }
         return tfIPA;
