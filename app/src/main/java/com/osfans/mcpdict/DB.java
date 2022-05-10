@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.google.gson.JsonObject;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
@@ -59,10 +60,7 @@ public class DB extends SQLiteAssetHelper {
     public static final String VI = "越南";
     public static final String JA_GO = "日語吳音";
     public static final String JA_KAN = "日語漢音";
-    public static final String JA_TOU = "日語唐音";
-    public static final String JA_KWAN = "日語慣用";
     public static final String JA_OTHER = "日語其他";
-    public static final String JA_ANY = JA_TOU;
     public static final String JA_ = "日語";
     public static final String WB_ = "五筆";
 
@@ -194,9 +192,9 @@ public class DB extends SQLiteAssetHelper {
                     case KOR:
                         token = Orthography.Korean.canonicalize(token); break;
                     case VI: token = Orthography.Vietnamese.canonicalize(token); break;
-                    case JA_GO:
                     case JA_KAN:
-                    case JA_ANY:
+                    case JA_GO:
+                    case JA_OTHER:
                         token = Orthography.Japanese.canonicalize(token); break;
                     default:
                         break;
@@ -225,7 +223,7 @@ public class DB extends SQLiteAssetHelper {
         if (keywords.isEmpty()) return null;
 
         // Columns to search
-        String[] columns = lang.contentEquals(JA_ANY) ? JA_COLUMNS : new String[] {lang};
+        String[] columns = lang.contentEquals(JA_OTHER) ? JA_COLUMNS : new String[] {lang};
         if (lang.contentEquals(WBH)) columns = WB_COLUMNS;
 
         // Build inner query statement (a union query returning the id's of matching Chinese characters)
@@ -670,7 +668,9 @@ public class DB extends SQLiteAssetHelper {
         if (TextUtils.isEmpty(s)) return "";
         if (s.contains(",")) {
             s = s.replace(",", " ,");
-            return s.split(",")[1].trim();
+            String[] fs = s.split(",");
+            if (fs.length < 2) return fs[0].trim();
+            return fs[1].trim();
         }
         return s;
     }

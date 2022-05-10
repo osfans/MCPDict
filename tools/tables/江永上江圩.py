@@ -4,8 +4,6 @@ from tables._表 import 表 as _表
 import re
 
 class 表(_表):
-	toneValues = ['44','42','35','13','21','33','5']
-
 	def parse(self, fs):
 		ns = fs[0]
 		if len(ns) != 1: return
@@ -14,9 +12,7 @@ class 表(_表):
 		py = re.sub("^h", "x", py)
 		py = py.replace("nj", "ȵ").replace('ng', 'ŋ').replace("c", "ɕ").replace('h', 'ʰ')
 		py = py.replace("oe", "ø").replace('e', 'ə').replace('iə', 'ie').replace('w', 'ɯ')
-		tone = re.findall('\d+', py)[0]
-		tonetype = str(self.toneValues.index(tone)+1)
-		py = py.replace(tone, tonetype)
+		py = self.dz2dl(py)
 		l = list()
 		for hz in hzs:
 			yb = py + ns

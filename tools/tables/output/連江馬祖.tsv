@@ -37,8 +37,8 @@
 舉	ky3	
 義	ŋiɛ6	
 烏	u1	
-樂	ŋouk8	
-樂	ŋyok8	
+樂	ŋouk?	
+樂	ŋyok?	
 乖	kuai1	
 乙	eik7	
 九	kau3	
@@ -205,7 +205,7 @@
 勸	kʰuɔŋ5	
 包	pau1	
 匏	pu2	
-化	huɑ5	
+化	huɑ?	
 北	pɔyk7	
 匙	sie2	
 匪	pʰui3	
@@ -297,12 +297,12 @@
 因	iŋ1	
 团	tʰuaŋ2	
 困	kʰɔuŋ5	
-圍	uːi6	
+圍	uːi2	
 國	kuɔk7	
 圖	tu2	
 圓	uoŋ2	
 國	kuɔk7	
-圍	uːi6	
+圍	uːi2	
 園	uoŋ2	
 園	huoŋ2	
 圓	uoŋ2	
@@ -410,15 +410,15 @@
 孝	hɑu5	
 季	kiɛ5	
 孤	ku1	
-學	oʔ8	
-學	ouk8	
-學	hoʔ8	
-學	houk8	
+學	oʔ?	
+學	ouk?	
+學	hoʔ?	
+學	houk?	
 孫	souŋ1	
-學	oʔ8	
-學	ouk8	
-學	hoʔ8	
-學	houk8	
+學	oʔ?	
+學	ouk?	
+學	hoʔ?	
+學	houk?	
 守	siu3	
 安	aŋ1	
 官	kuaŋ1	
@@ -721,11 +721,10 @@
 易	ei6	
 星	siŋ1	
 春	tsʰuŋ1	
-昨	soʔ8	昨暝。 昨夜
-昨	soʔ8	
-昨	souk8	
-昨	tsoʔ8	
-昨	tsouk8	
+昨	soʔ?	昨暝。 昨夜
+昨	souk?	
+昨	tsoʔ?	
+昨	tsouk?	
 是	sei6	
 晝	tɑu5	
 時	si2	
@@ -751,9 +750,9 @@
 有	ou6	
 有	iu3	
 服	huk8	
-木	mouk8	木工。 木瓜
-木	mouk8	
-木	muk8	
+木	mouk?	木工。 木瓜
+木	muk?	
+木	mouk?	
 未	ei6	乙未 未来。
 未	ei6	
 未	uːi6	
@@ -822,8 +821,8 @@
 概	kʰɑi5	
 槃	puaŋ2	
 槩	kʰɑi5	
-樂	ŋouk8	
-樂	ŋyok8	
+樂	ŋouk?	
+樂	ŋyok?	
 樓	lɑu2	
 樓	lɛu2	
 樟	tsyoŋ1	
@@ -985,8 +984,8 @@
 獎	tsyoŋ3	
 獨	tuk8	
 玄	hieŋ2	
-玉	ŋuoʔ8	
-玉	ŋyk8	
+玉	ŋuoʔ?	
+玉	ŋyk?	
 王	uoŋ2	
 環	kʰuaŋ2	
 現	hiɛŋ6	
@@ -1069,8 +1068,8 @@
 知	ti1	
 矩	ky3	
 矮	e3	
-石	sik8	
-石	suoʔ8	
+石	sik?	
+石	suoʔ?	
 破	pʰɔ5	
 破	pʰuɑi5	
 礱	løyŋ2	
@@ -1172,8 +1171,8 @@
 絡	loʔ8	
 絮	tsʰɔ5	丝瓜。
 經	kiŋ1	
-綠	luoʔ8	
-綠	lyk8	
+綠	luoʔ?	
+綠	lyk?	
 網	mɔyŋ6	
 緊	kiŋ3	
 緖	søy6	
@@ -1199,8 +1198,8 @@
 絕	tsyok8	
 績	tseik7	
 緒	søy6	
-綠	luoʔ8	
-綠	lyk8	
+綠	luoʔ?	
+綠	lyk?	
 纏	tieŋ2	
 缺	kʰiɛk7	
 罐	kuɑŋ5	
@@ -1700,16 +1699,16 @@
 階	kie1	
 阿	a1	
 附	hou6	
-陸	luk8	
-陸	lyk8	
+陸	luk?	
+陸	lyk?	
 陳	tiŋ2	
 院	iɛŋ6	
 除	ty2	
 陰	eiŋ1	
 陰	iŋ1	
 陳	tiŋ2	
-陸	luk8	
-陸	lyk8	
+陸	luk?	
+陸	lyk?	
 陽	yoŋ2	
 隊	tuːi6	
 階	kie1	
@@ -1857,8 +1856,10 @@
 鼎	tiaŋ3	
 鼠	tsʰy3	
 鼻	pei6	嗅 鼻涕。
+鼻	pei5	
 鼻	pei6	
 鼻	pʰei6	
+鼻	pʰei5	
 齊	tse2	
 齊	tse2	
 齒	kʰi3	

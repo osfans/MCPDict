@@ -5,7 +5,6 @@ from collections import defaultdict
 from tables._表 import 表 as _表
 
 class 表(_表):
-	toneValues = {"44":1, "11":2,"35":3,"13":5,"42":6,"5":7,"2":8,"55":9}
 
 	def update(self):
 		d = defaultdict(list)
@@ -20,7 +19,7 @@ class 表(_表):
 			if len(fs) != 2: continue
 			sm = fs[0].strip("ø ")
 			for sd,hzs in re.findall("［(\d+)］([^［］]+)", fs[1].replace("\t","")):
-				yb = sm + ym + str(self.toneValues[sd])
+				yb = self.dz2dl(sm + ym, sd)
 				hzs = re.findall("(.)(（[^）]*?（.*?）.*?）|（.*?）)?", hzs)
 				for hz, js in hzs:
 					if hz == " ": continue

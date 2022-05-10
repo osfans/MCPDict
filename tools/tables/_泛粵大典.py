@@ -22,11 +22,12 @@ class 表(_表):
 		if not py or not yb: return
 		sd = py[-1]
 		if not sd.isdigit(): sd = "0"
-		py = py.rstrip("1234567890")
-		if py and py[-1] in "ptk":
+		#py = py.rstrip("1234567890")
+		yb = yb.rstrip("1234567890")
+		if yb and yb[-1] in "ptk":
 			if sd == "1": sd = "7b"
 			elif sd == "2": sd = "7a"
 			elif sd == "5": sd = "9"
 			elif sd == "6": sd = "8"
-		yb = yb.rstrip("1234567890") + sd
+		yb = yb + sd
 		return hz, yb, js

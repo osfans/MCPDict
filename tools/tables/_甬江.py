@@ -9,12 +9,9 @@ class 表(_表):
 		return line.replace("☐", "□")
 
 	def parse(self, fs):
-		hz,_,yb,js = fs
+		hz,_,yb,js = fs[:4]
 		if len(hz) != 1: return
 		for i in self.tonesymbol:
 			yb = yb.replace(i, str(self.tonesymbol.index(i) + 1))
-		_yb = yb.rstrip("12345")
-		sd = yb[len(_yb):]
-		sd = self.toneValues[sd]
-		yb = _yb + str(sd)
+		yb = self.dz2dl(yb)
 		return hz, yb, js
