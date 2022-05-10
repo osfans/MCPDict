@@ -150,8 +150,6 @@ public class Utils extends Application {
                 break;
             case DB.JA_GO:
             case DB.JA_KAN:
-            case DB.JA_TOU:
-            case DB.JA_KWAN:
             case DB.JA_OTHER:
                 cs = getRichText(jaDisplayer.display(string));
                 break;

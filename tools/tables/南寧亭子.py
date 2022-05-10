@@ -8,29 +8,7 @@ class 表(_表):
 
 	def parse(self, fs):
 		_,hz,_,yb,py,js,c = fs
-		sd = py[-1]
-		enter = py[-2]
-		if enter in "ptk":
-			if sd == "3": sd = "7"
-			elif sd == "2": sd = "8"
-			elif sd == "5": sd = "9"
-			else: sd = "10"
-		yb = yb.rstrip("012345") + sd
-		if c == "(白)":
-			yb += "-"
-		elif c == "(文)":
-			yb += "="
-		elif c == "(又)":
-			yb += "+"
-		elif c == "(訓)":
-			yb += "~"
-		elif c == "(語)":
-			yb += "\\"
-		elif c == "(書)":
-			yb += "/"
-		elif c == "※":
-			pass
-		else:
-			js = c + js
+		yb = self.dz2dl(yb)
+		js = c + js
 		return hz, yb, js
 

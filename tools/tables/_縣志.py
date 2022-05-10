@@ -15,7 +15,7 @@ class 表(_表):
 			lineno += 1
 			if lineno <= skip: continue
 			line = self.format(line)
-			line = line.strip().replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？").replace("：[", "	[")
+			line = line.strip().replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？").replace("：[", "	[").replace("{：",'{')
 			line = re.sub("\[(\d+[a-zA-Z]?)\]", "［\\1］",line)
 			line = re.sub("［([^0-9]+.*?)］", "[\\1]",line)
 			if not line: continue
@@ -37,9 +37,11 @@ class 表(_表):
 			fs = line.split("\t")[:2]
 			if len(fs) != 2: continue
 			sm = fs[0].strip()
+			lstrip = str(self) in ("運城", "興縣")
 			for sd,hzs in re.findall("［(\d+[a-zA-Z]?)］([^［］]+)", fs[1]):
 				if sd == "0": sd = ""
 				py = sm + ym +sd
+				if lstrip: py = py.lstrip("ø")
 				hzs = re.findall("(.)\d?([+\-/=~≈\\\*？$&r]?)\d?(\{.*?\})?", hzs)
 				for hz, c, js in hzs:
 					if hz == " ": continue

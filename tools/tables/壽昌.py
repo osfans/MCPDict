@@ -16,7 +16,7 @@ class 表(_表):
 			if len(fs) != 2: continue
 			sm = fs[0]
 			for sd,hzs in re.findall("\[(\d+)\]([^\[\]]+)", fs[1]):
-				if sd.isdigit(): sd = sd + "w"
+				if sd.isdigit(): sd = sd + "d"
 				yb = sm + ym +sd
 				hzm = re.findall("(.)\d?(\{.*?\})?", hzs)
 				for hz, m in hzm:

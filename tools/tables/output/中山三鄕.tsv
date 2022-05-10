@@ -111,7 +111,7 @@
 僑	kʰiu2	
 侯	hou2	
 侵	tsʰɐm2	
-便	pʰi2	便宜
+便	pʰi1	便宜
 俗	sok7	
 保	pɔ3	
 信	sin5	
@@ -208,14 +208,14 @@
 削	siok7	
 前	tsai2	
 剔	tʰek8	
-剝	mɔk8	白,文
-剝	mɔk7	
-剝	mak8	
+剝	mɔk7	白,文
+剝	mɔk8	
 剝	mak7	
-剝	pɔk8	
+剝	mak8	
 剝	pɔk7	
-剝	pak8	
+剝	pɔk8	
 剝	pak7	
+剝	pak8	
 劇	kʰek7	剧烈,戏剧
 剩	sin6	
 剪	tsin3	
@@ -304,10 +304,10 @@
 吉	kɐt7	白,文
 吉	kit7	
 同	tʰaŋ2	
-名	mɐŋ2	白,文
-名	mɐŋ6	
-名	mia2	
+名	mɐŋ6	白,文
+名	mɐŋ2	
 名	mia6	
+名	mia2	
 后	hou3	王后
 吏	li6	
 吞	tʰun1	
@@ -742,7 +742,7 @@
 房	paŋ2	
 所	sɔ3	
 扁	pi3	
-扇	si7	
+扇	si5	
 手	tsʰiu3	
 才	tsʰai2	
 扛	kou1	
@@ -855,7 +855,7 @@
 斯	si2	
 新	sin1	
 方	fɔŋ1	
-施	si1	
+施	si2	
 旁	pʰɔŋ6	
 旅	li3	
 族	tsok7	
@@ -879,18 +879,18 @@
 春	tsʰun1	
 昭	tsʰiu2	
 是	si6	
-晝	tau5	白,文
-晝	tau1	
-晝	tsau5	
+晝	tau1	白,文
+晝	tau5	
 晝	tsau1	
+晝	tsau5	
 顯	hin3	
 時	si2	
 曉	hiau5	
 晚	man3	
-晝	tau5	白,文
-晝	tau1	
-晝	tsau5	
+晝	tau1	白,文
+晝	tau5	
 晝	tsau1	
+晝	tsau5	
 景	keŋ3	
 智	tsi5	
 暫	tsam6	
@@ -1253,10 +1253,10 @@
 環	uan2	
 璽	sɐi3	
 珊	san2	
-珍	tsɐn2	白,文
-珍	tsɐn1	
-珍	tsin2	
+珍	tsɐn1	白,文
+珍	tsɐn2	
 珍	tsin1	
+珍	tsin2	
 珠	tsi2	
 珤	pou3	
 班	pan1	
@@ -1327,10 +1327,10 @@
 鹽	iɐm2	
 監	kam5	太监
 盒	hap8	
-盖	kʰoi1	白,文
-盖	kʰoi5	
-盖	kʰai1	
+盖	kʰoi5	白,文
+盖	kʰoi1	
 盖	kʰai5	
+盖	kʰai1	
 盤	pua2	
 盜	tou1	
 盞	tsan3	
@@ -1388,7 +1388,7 @@
 祥	tsʰiɔŋ2	
 祭	tse5	
 禍	uo1	
-祿	lok8	
+祿	lok7	
 禁	kim5	禁止
 禍	uo1	
 福	hok7	
@@ -1740,10 +1740,10 @@
 葬	tsou5	
 葱	tsʰaŋ1	
 蒙	moŋ6	
-蓋	kʰoi1	白,文
-蓋	kʰoi5	
-蓋	kʰai1	
+蓋	kʰoi5	白,文
+蓋	kʰoi1	
 蓋	kʰai5	
+蓋	kʰai1	
 蓖	pʰi2	
 藍	lam2	
 蓬	foŋ6	
@@ -1772,7 +1772,7 @@
 蘭	lan2	
 虎	hɔ3	
 虑	lui1	
-虔	kʰin8	
+虔	kʰin6	
 處	tsʰu3	相处
 虛	hi2	
 虧	kʰuɐi2	
@@ -1805,14 +1805,14 @@
 血	huoiʔ7	
 衆	tsioŋ5	
 衇	mɐiʔ8	
-行	ou1	行列,银行
-行	ou2	
-行	ɔŋ1	
+行	ou2	行列,银行
+行	ou1	
 行	ɔŋ2	
-行	hou1	
+行	ɔŋ1	
 行	hou2	
-行	hɔŋ1	
+行	hou1	
 行	hɔŋ2	
+行	hɔŋ1	
 銜	ham2	
 衖	hou6	
 衛	uɐi1	
@@ -1870,7 +1870,7 @@
 誅	tsi2	
 誇	kʰua2	
 認	tsin6	
-誏	lɔŋ8	
+誏	lɔŋ6	
 誓	sɐi1	
 誕	tan1	
 語	ŋi3	
@@ -1889,7 +1889,7 @@
 謌	kua1	
 謙	him2	
 講	kou3	
-謝	tsia7	
+謝	tsia5	
 證	tsieŋ5	
 譌	ŋɔ6	
 譜	pʰu3	
@@ -1930,7 +1930,7 @@
 諜	tip7	
 讒	tsʰam1	
 諺	ŋin6	
-謝	tsia7	
+謝	tsia5	
 謙	him2	
 譜	pʰu3	
 谷	kok8	
@@ -2134,7 +2134,7 @@
 醋	tsʰɔ5	
 醎	kiam2	
 醜	tsʰiu3	
-醩	tsɐu1	
+醩	tsɐu2	
 醫	i2	
 醬	tsiu5	
 釉	iu2	
@@ -2162,7 +2162,7 @@
 鋸	ku5	
 錐	tsui1	
 錦	kam3	
-錫	siaʔ8	
+錫	siaʔ7	
 錯	tsʰou5	
 鍼	tsiam1	
 鎖	sau3	
@@ -2189,7 +2189,7 @@
 鋤	tsʰɐu2	
 銳	ioi1	
 錯	tsʰou5	
-錫	siaʔ8	
+錫	siaʔ7	
 鑼	lau2	
 錐	tsui1	
 錦	kam3	
@@ -2277,7 +2277,7 @@
 非	fi2	
 靠	kʰau5	
 面	bin6	脸蛋
-革	kak7	
+革	kak?	
 鞋	e2	
 鞌	on2	
 鞍	on2	

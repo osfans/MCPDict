@@ -82,15 +82,11 @@ def getLangs(dicts, argv=None):
 			lang.info = d
 			lang.load(dicts)
 			if d["文件名"] != "mcpdict.db":
-				if lang.count < 100:
+				if lang.count < 900:
 					print(f"\t\t\t字數太少 {mod}")
-					continue
-				if lang.syCount < 90:
+				elif lang.syCount < 100:
 					print(f"\t\t\t音節太少 {mod}")
-					continue
-			spath  = lang.spath
-			if spath:
-				d["文件名"] = os.path.basename(spath)
+			lang.info["文件名"] = lang._file
 			count += 1
 		else:
 			lang = import_module(f"tables.{mod}").表()

@@ -141,10 +141,10 @@ class 表:
 				logging.error(f"\t\t\t未找到{sname} {g}")
 				return
 		sname = g[0]
+		self._file = os.path.basename(sname)
 		if isXls(sname):
 			xls2tsv(sname)
 			sname = getTsvName(sname)
-		self._file = os.path.basename(sname)
 		return sname
 
 	def get_fullname(self, name):
@@ -332,3 +332,22 @@ class 表:
 				if p not in d[hz]:
 					d[hz].append(p)
 		self.write(d)
+
+	def splitSySd(self, syd):
+		if not syd: return "",""
+		sy = syd.rstrip("0123456789")
+		sd = syd[len(sy):]
+		return sy,sd
+
+	def dz2dl(self, sy, dz=None):
+		sy = sy.strip()
+		if dz is None: sy,dz = self.splitSySd(sy)
+		if not dz or dz == "0": return sy
+		dl = ""
+		if dz not in self.toneMaps:
+			dl = "?"
+		else:
+			dl = self.toneMaps[dz]
+		if sy and sy[-1] in "ptkʔ" and dz + "0" in self.toneMaps:
+			dl = self.toneMaps[dz + "0"]
+		return sy + dl

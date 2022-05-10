@@ -4,7 +4,6 @@ import re
 from tables._表 import 表 as _表
 
 class 表(_表):
-	toneValues = {'55':1,'24':2,'52':3,'31':5,'33':6,'2':7,'5':8}
 
 	def parse(self, fs):
 		l = list()
@@ -18,11 +17,7 @@ class 表(_表):
 					ybzs = re.findall("^(.*?)（(.*?)）$", yb)
 					yb = ybzs[0][0]
 					c = ybzs[0][1]
-				ipa = yb.rstrip("12345")
-				sd = yb[len(ipa):]
-				if sd:
-					sd = str(self.toneValues[sd])
-				yb = ipa + sd
+				yb = self.dz2dl(yb)
 				if yd:
 					c = '-' if ybs == bds else '='
 					yb = yb + c

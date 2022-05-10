@@ -7,7 +7,7 @@ class 表(_表):
 	
 	def format(self, line):
 		line = line.replace("*", "□").replace("(","（").replace(")","）").replace("（","{").replace("）","}").replace("、","/")
-		line = line.replace("윽", "")
+		line = re.sub("[가-힣]", "", line)
 		if line.startswith("#"):
 			line = re.sub('^(#[^ ]*) .*?	', '\\1', line)
 		else:

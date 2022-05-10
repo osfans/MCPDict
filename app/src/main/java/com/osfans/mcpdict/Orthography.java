@@ -1,5 +1,11 @@
 package com.osfans.mcpdict;
 
+import android.content.res.Resources;
+import android.text.TextUtils;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,14 +19,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import android.content.res.Resources;
-import android.text.TextUtils;
-import android.util.Log;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class Orthography {
 
@@ -857,7 +855,7 @@ public class Orthography {
         public static String display(String s, String lang) {
             if (TextUtils.isEmpty(s) || s.length() < 2) return s;
             if (Character.isDigit(s.charAt(0))) return s;
-            Pattern pattern = Pattern.compile("^(.+)([0-9]{1,2}[a-z]?)$");
+            Pattern pattern = Pattern.compile("^(.+?)([0-9]{1,2}[a-z]?)$");
             Matcher matcher = pattern.matcher(s);
             if (matcher.matches()) {
                 String tone = matcher.group(2);

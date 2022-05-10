@@ -26,15 +26,6 @@ class 表(_表):
 		else:
 			return
 		if not hz or tv == "调": return
-		if tv:
-			if tv not in self.toneMaps:
-				#print(tv)
-				sd = "?"
-			else:
-				sd = self.toneMaps[tv]
-			if sy[-1] in "ptkʔ" and tv + "0" in self.toneMaps:
-				sd = self.toneMaps[tv + "0"]
-		else: sd = ""
-		yb = sy + sd
+		yb = self.dz2dl(sy, tv)
 		return hz, yb, js
 

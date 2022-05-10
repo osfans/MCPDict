@@ -79,18 +79,25 @@ class 表(_表):
 "uk":"ʊk̚",
 "ng":"ŋ̍",
 "m":"m̩",
-"n":"n̩"
+"n":"n̩",
+"":""
 }
 
 	def parse(self, fs):
-		hz, yb, js = fs[0], fs[2], fs[4]
+		hz, yb, js = fs[0], fs[2], fs[3]
 		if not yb: return
-		sd = yb[-1]
+		yb = yb.lstrip("又").replace("gv", "gw")
+		yb, sd = self.splitSySd(yb)
 		if sd.isdigit():
-			if sd == "1": sd = "7"
-			elif sd == "3": sd = "8"
-			elif sd == "6": sd = "9"
+			if yb[-1] in "ptk":
+				if sd == "1": sd = "7"
+				elif sd == "3": sd = "8"
+				elif sd == "6": sd = "9"
 		else:
 			sd = ""
-		yb = yb.rstrip("0123456789") + sd
+		for ym in sorted(self.yms.keys(), key=lambda x:-len(x)):
+			if yb.endswith(ym):
+				sm = yb[:-len(ym)]
+				break
+		yb = self.sms[sm+"#"] + self.yms[ym] + sd
 		return hz, yb, js
