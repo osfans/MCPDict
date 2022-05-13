@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -34,6 +35,8 @@ public class Orthography {
 
     private static int mToneStyle = 0;
     private static int mToneValueStyle = 0;
+    private static final Pattern mPattern = Pattern.compile("^(.+?)([0-9]{1,2}[a-z]?)$");
+
 
     public static void setToneStyle(int style) {
         mToneStyle = style;
@@ -860,37 +863,27 @@ public class Orthography {
     }
 
     public static class Tones {
-        public static List<String> getAllTones(String s) {
+        public static List<String> getAllTones(String s, String lang) {
             if (s == null || s.equals("")) return null;     // Fail
-            char tone = s.charAt(s.length() - 1);
-            String base = s;
-            if ("123456789".indexOf(tone) >= 0) {
-                base = s.substring(0, s.length() - 1);
-            } else {
-                if (tone == '0') base = s.substring(0, s.length() - 1);
-                tone = '_';
-            }
-            if (base.equals("")) return null;               // Fail
-
+            JSONObject jsonObject = DB.getToneName(lang);
+            if (jsonObject == null) return null;
             List<String> result = new ArrayList<>();
-            result.add(s);
-            if (tone != '1') result.add(base + '1');
-            if (tone != '2') result.add(base + '2');
-            if (tone != '3') result.add(base + '3');
-            if (tone != '4') result.add(base + '4');
-            if (tone != '5') result.add(base + '5');
-            if (tone != '6') result.add(base + '6');
-            if (tone != '7') result.add(base + '7');
-            if (tone != '8') result.add(base + '8');
-            if (tone != '9') result.add(base + '9');
+            for (Iterator<String> it = jsonObject.keys(); it.hasNext(); ) {
+                String tone = it.next();
+                result.add(s + tone);
+            }
             return result;
+        }
+
+        public static boolean hasTone(String s) {
+            Matcher matcher = mPattern.matcher(s);
+            return matcher.matches();
         }
 
         public static String display(String s, String lang) {
             if (TextUtils.isEmpty(s) || s.length() < 2) return s;
             if (Character.isDigit(s.charAt(0))) return s;
-            Pattern pattern = Pattern.compile("^(.+?)([0-9]{1,2}[a-z]?)$");
-            Matcher matcher = pattern.matcher(s);
+            Matcher matcher = mPattern.matcher(s);
             if (matcher.matches()) {
                 String tone = matcher.group(2);
                 if (TextUtils.isEmpty(tone)) return s;
