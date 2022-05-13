@@ -49,13 +49,7 @@ public class MainActivity extends AppCompatActivity {
         Utils.setLocale();
         DB.initFQ();
         // Initialize the some "static" classes on separate threads
-        new AsyncTask<Void, Void, Void>() {
-            @Override
-            protected Void doInBackground(Void... params) {
-                Orthography.initialize(getResources());
-                return null;
-            }
-        }.execute();
+        new Thread(()->Orthography.initialize(getResources())).start();
 
         new AsyncTask<Void, Void, Void>() {
             @Override
@@ -70,13 +64,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }.execute();
 
-        new AsyncTask<Void, Void, Void>() {
-            @Override
-            protected Void doInBackground(Void... params) {
-                FavoriteDialogs.initialize(MainActivity.this);
-                return null;
-            }
-        }.execute();
+        new Thread(()->FavoriteDialogs.initialize(MainActivity.this)).start();
 
         // Set up activity layout
         super.onCreate(savedInstanceState);
