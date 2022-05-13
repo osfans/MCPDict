@@ -52,7 +52,7 @@ public class Orthography {
     }
 
     public static String formatTone(String base, String tone, String lang) {
-        if (tone.contentEquals("0") || TextUtils.isEmpty(tone)) return base;
+        if (TextUtils.isEmpty(tone) || tone.contentEquals("0") || tone.contentEquals("_")) return base;
         tone = tone.toUpperCase();
         JSONArray styles = null;
         try {
@@ -62,16 +62,27 @@ public class Orthography {
         }
         if (styles == null || styles.length() != 5) return base + tone;
         String tv = getJSONString(styles, 0);
+        String style1 = getJSONString(styles, 1);
         if (mToneStyle == 5) mToneValueStyle = 1;
         if (!TextUtils.isEmpty(tv)) {
             if (mToneValueStyle == 0) { //符號
                 if (tv.length() == 2 && tv.charAt(0) == tv.charAt(1)) tv = tv.substring(0, 1);
                 if (tv.startsWith("-")) {
+                    if (tv.length() == 3 && tv.charAt(1) == tv.charAt(2)) tv = tv.substring(0, 2);
                     tv = tv.replace('1', '꜖')
                             .replace('2', '꜕')
                             .replace('3', '꜔')
                             .replace('4', '꜓')
                             .replace('5', '꜒')
+                            .replace('6', ' ')
+                            .replace('0', ' ')
+                            .replace("-", "");
+                } else if (style1.startsWith("0") && tv.length() == 1) {
+                    tv = tv.replace('1', '꜌')
+                            .replace('2', '꜋')
+                            .replace('3', '꜊')
+                            .replace('4', '꜉')
+                            .replace('5', '꜈')
                             .replace('6', ' ')
                             .replace('0', ' ');
                 } else {
@@ -100,7 +111,6 @@ public class Orthography {
                 return base + tv + tone;
             default:
                 String sTone = getJSONString(styles, mToneStyle == 5 ? 1 : mToneStyle);
-                String style1 = getJSONString(styles, 1);
                 if (TextUtils.isEmpty(sTone) || sTone.contentEquals("0")) return base + tv;
                 if (mToneStyle == 4 && !TextUtils.isEmpty(style1)) {
                     char a = style1.charAt(0);
@@ -109,7 +119,11 @@ public class Orthography {
                 }
                 if (mToneStyle <= 2) {
                     char a = sTone.charAt(0);
-                    sTone = sTone.replace(a, (char)(a - '1' + '①'));
+                    sTone = sTone.replace('0', '⓪').replace(a, (char)(a - '1' + '①'));
+                    if (sTone.length() == 2) {
+                        char b = sTone.charAt(1);
+                        sTone = sTone.replace(b, (char)(b - 'A' + 'ⓐ'));
+                    }
                     return base + tv + sTone;
                 }
                 if (mToneStyle == 5) {
