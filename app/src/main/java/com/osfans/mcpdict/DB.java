@@ -201,15 +201,15 @@ public class DB extends SQLiteAssetHelper {
                 }
                 if (token == null) continue;
                 List<String> allTones = null;
-                if (token.endsWith("?") && hasTone(lang)) {
-                    token = token.substring(0, token.length()-1);
+                if ((token.endsWith("?") || !Orthography.Tones.hasTone(token)) && hasTone(lang)) {
+                    if (token.endsWith("?")) token = token.substring(0, token.length()-1);
                     switch (lang) {
                         case GY: allTones = Orthography.MiddleChinese.getAllTones(token); break;
                         case CMN: allTones = Orthography.Mandarin.getAllTones(token); break;
                         case HK: allTones = Orthography.Cantonese.getAllTones(token); break;
                         case VI: allTones = Orthography.Vietnamese.getAllTones(token); break;
                         default:
-                            allTones = Orthography.Tones.getAllTones(token); break;
+                            allTones = Orthography.Tones.getAllTones(token, lang); break;
                     }
                 }
                 if (allTones != null) {
