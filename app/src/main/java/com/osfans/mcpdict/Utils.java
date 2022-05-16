@@ -173,9 +173,8 @@ public class Utils extends Application {
         return getToneStyle(R.string.pref_key_tone_display) == 5;
     }
 
-    public static Typeface getDictTypeFace() {
+    public static Typeface getHanFont() {
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
-        if (!enableFontExt()) return getIPA();
         try {
             if (useFontTone()) {
                 if (tfHanTone == null) {
@@ -205,6 +204,12 @@ public class Utils extends Application {
         } catch (Exception ignore) {
         }
         return null;
+    }
+
+    public static Typeface getDictTypeFace() {
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
+        if (!enableFontExt()) return getIPA();
+        return getHanFont();
     }
 
     public static Typeface getIPA() {
