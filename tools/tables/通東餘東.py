@@ -7,13 +7,9 @@ class 表(_表):
 	simplified = 0
 
 	def parse(self, fs):
-		hz, _, _, yb, py, _, js = fs[:7]
-		if not py or py == "拼音": return
-		sd = py[-1]
+		hz, _, _, yb, _, dz, js = fs[:7]
+		if not hz or not yb: return
 		if yb.startswith("ʔ"): yb = "ˀ" + yb[1:]
-		if sd == "0": sd = ""
-		elif sd == "¹": sd = "8"
-		elif sd == "²": sd = "9"
-		if sd: yb += sd
+		yb = self.dz2dl(yb, dz)
 		return hz, yb, js
 
