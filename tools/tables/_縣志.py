@@ -15,6 +15,7 @@ class 表(_表):
 			lineno += 1
 			if lineno <= skip: continue
 			line = self.format(line)
+			if str(self) in ("丹鳳","商州") and line.startswith("#"): continue
 			line = line.strip().replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？").replace("：[", "	[").replace("{：",'{')
 			line = re.sub("\[(\d+[a-zA-Z]?)\]", "［\\1］",line)
 			line = re.sub("［([^0-9]+.*?)］", "[\\1]",line)

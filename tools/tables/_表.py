@@ -55,7 +55,7 @@ def isXls(fname):
 	return fname.endswith("xls") or fname.endswith("xlsx")
 
 def getXlsxLines(xls):
-	wb = load_workbook(xls)
+	wb = load_workbook(xls, data_only=True)
 	sheet = wb.worksheets[0]
 	lines = list()
 	for row in sheet.rows:
@@ -200,7 +200,7 @@ class 表:
 		return yb
 
 	def isDialect(self):
-		return self.langType and self.langType not in ("歷史音",)
+		return self.langType and not self.langType.startswith("歷史音")
 
 	def write(self, d):
 		self.patch(d)
@@ -348,6 +348,6 @@ class 表:
 			dl = "?"
 		else:
 			dl = self.toneMaps[dz]
-		if sy and sy[-1] in "ptkʔ" and dz + "0" in self.toneMaps:
+		if sy and sy[-1] in "ptkʔ̚" and dz + "0" in self.toneMaps:
 			dl = self.toneMaps[dz + "0"]
 		return sy + dl

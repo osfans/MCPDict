@@ -547,7 +547,7 @@ public class DB extends SQLiteAssetHelper {
     }
 
     private static String _getIntro(String language) {
-        String intro = TextUtils.isEmpty(language) ? "" : getFieldByLanguage(language, "說明");
+        String intro = TextUtils.isEmpty(language) ? "" : getFieldByLanguage(language, "說明").replace("\n", "<br>");
         if (language.contentEquals(HZ)) {
             intro = String.format(Locale.getDefault(), "%s%s<br>%s", Utils.getContext().getString(R.string.version), BuildConfig.VERSION_NAME, intro);
         } else {
@@ -669,7 +669,7 @@ public class DB extends SQLiteAssetHelper {
         if (s.contains(",")) {
             s = s.replace(",", " ,");
             String[] fs = s.split(",");
-            if (fs.length < 2) return fs[0].trim();
+            if (fs.length < 2 || TextUtils.isEmpty(fs[1].trim())) return fs[0].trim();
             return fs[1].trim();
         }
         return s;

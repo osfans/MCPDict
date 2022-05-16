@@ -6,5 +6,6 @@ class 表(_表):
 
 	def parse(self, fs):
 		if len(fs) < 7: return
-		_,hz,yb,_,_,_,js = fs[:7]
+		_,hz,yb,_,_,sd,js = fs[:7]
+		yb = yb + sd
 		return hz, yb, js

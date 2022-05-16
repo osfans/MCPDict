@@ -7,7 +7,11 @@ class 表(_表):
 	disorder = True
 
 	def parse(self, fs):
-		if len(fs) > 3 and fs[3]:
+		if str(self) in ("婁底萬寶",):
+			yb, _, sd, hzs = fs[:4]
+		elif str(self) in ("新田茂家",):
+			yb, sd, _, hzs = fs[:4]
+		elif len(fs) > 3 and fs[3]:
 			_, yb, sd, hzs = fs[:4]
 		else:
 			yb, sd, hzs = fs[:3]

@@ -56,7 +56,6 @@ public class Orthography {
 
     public static String formatTone(String base, String tone, String lang) {
         if (TextUtils.isEmpty(tone) || tone.contentEquals("0") || tone.contentEquals("_")) return base;
-        tone = tone.toUpperCase();
         JSONArray styles = null;
         try {
             JSONObject jsonObject = DB.getToneName(lang);
@@ -125,7 +124,7 @@ public class Orthography {
                     sTone = sTone.replace('0', '⓪').replace(a, (char)(a - '1' + '①'));
                     if (sTone.length() == 2) {
                         char b = sTone.charAt(1);
-                        sTone = sTone.replace(b, (char)(b - 'A' + 'ⓐ'));
+                        sTone = sTone.replace(b, (char)(b - 'a' + 'ⓐ'));
                     }
                     return base + tv + sTone;
                 }
@@ -134,7 +133,7 @@ public class Orthography {
                     sTone = sTone.replace(a, (char)(a - '0' + '₀'));
                     if (sTone.length() == 2) {
                         char b = sTone.charAt(1);
-                        sTone = sTone.replace(b, (char)(b - 'A' + 'ⓐ'));
+                        sTone = sTone.replace(b, (char)(b - 'a' + 'ⓐ'));
                     }
                     return base + sTone + tv;
                 }

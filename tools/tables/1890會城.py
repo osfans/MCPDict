@@ -5,10 +5,7 @@ from tables._表 import 表 as _表
 class 表(_表):
 
 	def parse(self, fs):
-		_,_,hzs,sm,ym = fs[:5]
+		hz,_,_,sm,ym,js = fs[:6]
 		yb = sm + ym
-		if not yb: return
-		l = list()
-		for hz in hzs:
-			l.append((hz, yb))
-		return l
+		if not hz or not yb: return
+		return hz, yb, js

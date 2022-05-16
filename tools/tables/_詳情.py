@@ -66,7 +66,7 @@ def getTones(tones):
 				t4 = str(t4) + chr(ord("a") + len(t4s[t4]) - 1)
 			m = markers.get(i, '') if j == 0 else markers2.get(i, '')
 			l[str(index)] = (v,str(t8),str(t4),n,m)
-	return json.dumps(l, ensure_ascii=False).upper()
+	return json.dumps(l, ensure_ascii=False).lower()
 
 def load():
 	if not outdated():
@@ -97,11 +97,11 @@ def load():
 		types = [fs[i].value for i in ("地圖集二分區", "音典分區","陳邡分區","俞銓（正心）分區")]
 		tmp = types[0]
 		if tmp:
-			if "-" in tmp: types[0]+="," + tmp.split("-")[0]
+			types[0] += "," + (tmp.split("-")[0] if "-" in tmp else "")
 		else: types[0] = ","
 		tmp = types[1]
 		if tmp:
-			if "-" in tmp: types[1]+="," + tmp.split("-")[0]
+			types[1] += "," + (tmp.split("-")[1] if "-" in tmp else "")
 		else: types[1] = ","
 		start = fields.index("下拉1")
 		collapse = fs["下拉4，折疊分区"].value
