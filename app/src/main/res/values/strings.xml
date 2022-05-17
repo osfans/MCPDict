@@ -206,7 +206,7 @@
     <string name="pref_key_tone_display">TONE_DISPLAY</string>
     <string name="pref_title_tone_display">調類</string>
     <string-array name="pref_entries_tone_display">
-        <item>數字</item>
+        <item>拼音：12345678</item>
         <item>八聲：①③⑤⑦</item>
         <item>四聲：①②③④</item>
         <item>漢字：平上去入</item>

@@ -486,7 +486,7 @@
 廂	siõ1	
 厥	kʰiɛt7	
 厥	kʰɛt7	又，地域差
-厥	kueʔ7	白
+厥	kueʔ6	白
 廚	tou2	
 厭	iam5	
 厮	sɯ1	
@@ -702,7 +702,7 @@
 坎	kʰam1	～坷
 坎	kʰam5	
 坐	tso4	
-坐	tsʰo7	替，裝
+坐	tsʰo6	替，裝
 坑	kʰɛ̃1	
 坡	po1	
 坤	kʰun1	
@@ -859,7 +859,6 @@
 妝	tsŋ1	白
 妥	tʰo3	
 妨	huaŋ2	
-妹	mue4	小稱
 妹	mue6	
 妻	tsʰi1	
 妾	tsʰiap7	
@@ -1078,7 +1077,7 @@
 嶺	niã3	
 嶽	ŋak8	
 巍	ŋui2	
-巖	ŋiam2	
+巖	ŋam2	
 川	tsʰuan1	
 州	tsiu1	
 巡	sun2	
@@ -1543,7 +1542,7 @@
 推	tsʰui1	文
 推	tʰo1	白
 掩	iam1	俗
-掩	iam2	
+掩	iam3	
 措	tsʰu5	
 揀	kõi3	
 揉	dziu2	
@@ -1839,7 +1838,8 @@
 東	toŋ1	文
 東	taŋ1	白
 杳	miau3	
-松	soŋ2	
+松	soŋ2	文
+松	sɛŋ2	白
 板	pan3	
 枉	uaŋ3	
 析	sɛk7	
@@ -2501,9 +2501,9 @@
 用	ɛŋ6	白
 甫	pʰou3	
 甬	ioŋ5	
-田	tʰiɛn5	文
-田	tʰɛn5	又，地域差
-田	tsʰan5	訓
+田	tʰiɛn2	文
+田	tʰɛn2	又，地域差
+田	tsʰan2	訓
 由	iu2	
 甲	kaʔ7	
 申	sin1	
@@ -2729,7 +2729,7 @@
 禱	tau3	
 禹	u3	
 禽	kʰim2	
-禾	o2	
+禾	o5	
 禾	ta2	訓
 禿	tʰok7	文
 禿	tʰɛk7	白
@@ -2890,7 +2890,7 @@
 米	bi3	
 粉	hun3	
 粒	liap8	
-粕	pʰoʔ-9207	
+粕	pʰoʔ	
 粗	tsʰou1	
 粘	liam1	
 粟	tsʰɛk7	
@@ -3063,7 +3063,7 @@
 翼	ɛk8	文
 翼	sit8	白
 耀	iau4	文
-耀	tsʰiõ7	白
+耀	tsʰiõ?	白
 老	lau3	文
 老	lau4	白
 考	kʰau3	
@@ -3537,7 +3537,6 @@
 見	kĩ5	
 規	kui1	
 覓	mit8	
-視	si4	
 視	si6	
 親	tsʰin1	
 覺	kak7	
@@ -3573,7 +3572,7 @@
 診	tsɛn3	又，地域差
 詐	tsa5	
 詔	dziau5	
-詔	tsiau3	
+詔	tsiau5	
 評	pʰɛŋ2	
 詞	sɯ2	
 詢	sun2	
@@ -3603,6 +3602,7 @@
 課	kʰue5	
 誼	ŋi5	
 調	tʰiau2	
+調	tʰiau5	～皮
 調	tiau6	
 諄	tun1	
 談	tʰam2	
@@ -3685,7 +3685,8 @@
 貨	hue5	
 販	huan5	
 貪	tʰam1	
-貫	kuan5	
+貫	kuan5	文
+貫	kŋ5	白
 責	tsɛʔ7	
 貯	tɛu3	
 貳	dzi4	文
@@ -3963,8 +3964,8 @@
 醋	tsʰou5	
 醒	sɛŋ3	文，～定
 醒	tsʰɛ̃3	白
-醜	tsʰiu2	
-醜	tʰiu2	俗
+醜	tsʰiu3	
+醜	tʰiu3	俗
 醫	ui1	
 醬	tsiõ5	
 釀	dziaŋ3	
@@ -4227,11 +4228,11 @@
 額	ɡiaʔ8	名額
 額	hiaʔ8	
 顏	ŋuan2	
-顏	ŋan5	
+顏	ŋan2	
 顏	hiã2	姓氏
 願	ŋuan4	
 顛	tiɛn1	文
-顛	tin1	又，地域差
+顛	tɛn1	又，地域差
 顛	tin1	～倒
 類	lui6	
 顧	ku5	文

@@ -14,5 +14,4 @@ class 表(_表):
 		ym = ym.rstrip("12345678")
 		sd = sd.strip()
 		yb = sms[sm] + yms[ym] + sd
-		p = "%s\t%s" % (yb, js)
 		return hz, yb, js

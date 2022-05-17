@@ -4,29 +4,24 @@ import re, json
 from collections import defaultdict
 from tables._表 import 表 as _表
 
-toneValues = {"⁵³":"1", "⁵⁵": "2", "²⁴":"3", "¹¹":"5", "³³":"6", "⁵":"7", "²":"8"}
-def py2yb(s, tones):
-	c = s[-1]
-	if c in "文白":
-		s = s[:-1]
-	else:
-		c = ""
-	s = s.replace("er","ə").replace("ae","æ").replace("ii", "ɿ").replace("e", "ɛ").replace("o", "ɔ")
-	s = s.replace("sl", "ɬ").replace("nj", "ɲ").replace("t", "tʰ").replace("zh", "tʃ").replace("ch", "tʃʰ").replace("sh", "ʃ").replace("p", "pʰ").replace("k", "kʰ").replace("z", "ts").replace("c", "tsʰ").replace("j", "tɕ").replace("q", "tɕʰ").replace("x", "ɕ").replace("rh", "ʒ").replace("r", "ʒ").replace("ng", "ŋ").replace("?", "ʔ").replace("b", "p").replace("d", "t").replace("g", "k")
-	tone = re.findall("[¹²³⁴⁵\d]+$", s)
-	if tone:
-		tone = tone[0]
-		s = s.replace(tone, tones[tone])
-	if c == "文":
-		s+="="
-	elif c == "白":
-		s += "-"
-	return s
-  
 class 表(_表):
 	#https://github.com/g0v/moedict-data-hakka/blob/master/dict-hakka.json
 	site = "客語萌典"
 	url = "https://www.moedict.tw/:%s"
+	def py2yb(self, s):
+		c = s[-1]
+		if c in "文白":
+			s = s[:-1]
+		else:
+			c = ""
+		s = s.replace("er","ə").replace("ae","æ").replace("ii", "ɿ").replace("e", "ɛ").replace("o", "ɔ")
+		s = s.replace("sl", "ɬ").replace("nj", "ɲ").replace("t", "tʰ").replace("zh", "tʃ").replace("ch", "tʃʰ").replace("sh", "ʃ").replace("p", "pʰ").replace("k", "kʰ").replace("z", "ts").replace("c", "tsʰ").replace("j", "tɕ").replace("q", "tɕʰ").replace("x", "ɕ").replace("rh", "ʒ").replace("r", "ʒ").replace("ng", "ŋ").replace("?", "ʔ").replace("b", "p").replace("d", "t").replace("g", "k")
+		s = self.dz2dl(s)
+		if c == "文":
+			s+="="
+		elif c == "白":
+			s += "-"
+		return s.strip()
 
 	def update(self):
 		d = defaultdict(list)
@@ -39,7 +34,7 @@ class 表(_表):
 					pys = i["pinyin"]
 					py = re.findall("海⃞(.+?)\\b", pys)
 					if py and py[0]:
-						yb = py2yb(py[0], toneValues).strip()
+						yb = self.py2yb(py[0]).strip()
 						if yb: d[hz].append(yb)
 		self.write(d)
 

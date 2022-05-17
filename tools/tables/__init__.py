@@ -82,6 +82,7 @@ def getLangs(dicts, argv=None):
 			lang.info = d
 			lang.load(dicts)
 			if d["文件名"] != "mcpdict.db":
+				if lang.count == 0: continue
 				if lang.count < 900:
 					print(f"\t\t\t字數太少 {mod}")
 				elif lang.syCount < 100:
