@@ -83,8 +83,11 @@ def load():
 			firstLine = False
 		fs = dict(zip(fields, row))
 		ver = fs["版本/更新時間"].value
-		if type(ver) is str and ver: continue
-		ver = ver.strftime("%Y-%m-%d") if ver else None
+		if type(ver) is str:
+			if ver == "/": ver = None
+			else: continue
+		else:
+			ver = ver.strftime("%Y-%m-%d") if ver else None
 		lang = fs["語言"].value
 		short = fs["簡稱"].value
 		filename = fs["文件名"].value
@@ -112,6 +115,7 @@ def load():
 		point = fs["經緯度"].value
 		if point: point = point.replace(" ", "").replace("，",",").strip()
 		places = [fs[i].value if fs[i].value else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
+		place = ("".join(places)).replace("/", "")
 		island = fs["方言島"].value
 		size = fs["級別(5星爲代表方言-1星最大時顯示)"].value
 		size = size.count("★") if size else 0
@@ -160,8 +164,9 @@ def load():
 			"縣":places[2],
 			"鎮":places[3],
 			"村":places[4],
+			"地點": place,
 			"版本":ver,
-			"坐標":point,
+			"經緯度":point,
 			"級別":str(size),
 			"錄入人":editor,
 			"參考資料":book,
@@ -174,14 +179,14 @@ def load():
 			if abs(wd) > 90:
 				jd, wd = wd, jd
 			point = f"{jd},{wd}"
-			d[lang]["坐標"] = point
+			d[lang]["經緯度"] = point
 		except:
 			continue
 		Feature = {
 			"type": "Feature",
 			"properties": {
 				"語言": lang,
-				"地點": "".join(places),
+				"地點": place,
 				"地圖集二分區": types[0],
 				"音典分區": types[1],
 				"陳邡分區":types[2],

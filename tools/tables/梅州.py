@@ -4,8 +4,6 @@ from tables._縣志 import 表 as _表
 import re
 
 class 表(_表):
-	toneValues = {"44":1, "22":2,"31":3,"52":5,"1":7,"5":8}
-
 	def format(self, line):
 		line = line.replace('"', '')
 		if "\t" in line:
@@ -16,7 +14,7 @@ class 表(_表):
 					results = re.findall("^\[(\d+)\](.+)$", i)
 					if results:
 						sd,hzs = results[0]
-						sd = "[%s]"%self.toneValues[sd]
+						sd = "[%s]"%self.toneMaps[sd]
 						i = sd + hzs
 				line += i
 		return line

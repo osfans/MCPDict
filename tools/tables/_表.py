@@ -16,7 +16,7 @@ SOURCE = "data"
 TARGET = "output"
 VARIANT_FILE = f"tables/{SOURCE}/正字.tsv"
 
-YDS = {"+":"又","-":"白","*":"俗", "/":"書","\\":"語","=":"文","~":"訓","≈":"替", "?":"存疑"}
+YDS = {"+":"又", "-":"白", "*":"俗", "/":"書","\\":"語","=":"文","?":"存疑"}
 def getYD(py):
 	return YDS.get(py[-1], "")
 
@@ -71,7 +71,7 @@ def getXlsLines(xls):
 	lines = list()
 	for i in range(sheet.nrows):
 		fs = sheet.row_values(i)
-		fs = [(str(int(j)) if type(j) is float else str(j).strip()) if j else "" for j in fs]
+		fs = [(str(int(j)) if type(j) is float else str(j).strip().replace("\t", "")) if j else "" for j in fs]
 		if any(fs):
 			line = "\t".join(fs) + "\n"
 			lines.append(line)
@@ -335,17 +335,31 @@ class 表:
 
 	def splitSySd(self, syd):
 		if not syd: return "",""
+		tonesymbol = "⁰¹²³⁴⁵⁶"
+		tonemark = "˩˨˧˦˥"
+		for i in tonesymbol:
+			syd = syd.replace(i, str(tonesymbol.index(i)))
+		for i in tonemark:
+			syd = syd.replace(i, str(tonemark.index(i)+1))
 		sy = syd.rstrip("0123456789")
 		sd = syd[len(sy):]
 		return sy,sd
 
 	def dz2dl(self, sy, dz=None):
 		sy = sy.strip()
-		if dz is None: sy,dz = self.splitSySd(sy)
+		if dz is None:
+			if "/" in sy:
+				return "/".join(map(self.dz2dl, sy.split("/")))
+			sy,dz = self.splitSySd(sy)
 		if not dz or dz == "0": return sy
 		dl = ""
 		if dz not in self.toneMaps:
-			dl = "?"
+			if len(dz) == 1:
+				dz = dz + dz
+				if dz in self.toneMaps:
+					dl = self.toneMaps[dz]
+			else:
+				dl = "?"
 		else:
 			dl = self.toneMaps[dz]
 		if sy and sy[-1] in "ptkʔ̚" and dz + "0" in self.toneMaps:
