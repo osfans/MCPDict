@@ -241,7 +241,7 @@ public class DB extends SQLiteAssetHelper {
                 sel = " LIKE ?";
             }
             for (String column : columns) {
-                String col = column;
+                String col = "\"" + column + "\"";
                 queries.add(qb.buildQuery(projection, col + sel, null, null, null, null));
                 args.add(key);
 
