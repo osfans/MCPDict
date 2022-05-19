@@ -346,6 +346,11 @@ public class Utils extends Application {
         return DB.getLabelByLanguage(language);
     }
 
+    public static int getShowLanguageIndex() {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        return sp.getInt(mApp.getString(R.string.pref_key_show_language_index), 0);
+    }
+
     public static void setLocale() {
         String locale = getStr(R.string.pref_key_locale);
         if (TextUtils.isEmpty(locale)) locale = "ko";
