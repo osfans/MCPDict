@@ -867,6 +867,7 @@ public class Orthography {
             JSONObject jsonObject = DB.getToneName(lang);
             if (jsonObject == null) return null;
             List<String> result = new ArrayList<>();
+            result.add(s);
             for (Iterator<String> it = jsonObject.keys(); it.hasNext(); ) {
                 String tone = it.next();
                 result.add(s + tone);
