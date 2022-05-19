@@ -169,7 +169,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     }
 
     private void refreshShowLang() {
-        int index = PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt(getString(R.string.pref_key_show_language_index), 0);
+        int index = Utils.getShowLanguageIndex();
         if (index >= adapterShowLang.getCount()) index = 0;
         if (index >= 0) spinnerShowLang.setSelection(index);
     }

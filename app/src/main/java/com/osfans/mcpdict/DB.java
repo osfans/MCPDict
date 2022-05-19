@@ -456,9 +456,12 @@ public class DB extends SQLiteAssetHelper {
             }
             return array.toArray(new String[0]);
         }
-        String[] a = DB.getLabels(languages);
-        if (a != null && a.length > 0) {
-            return a;
+        int index = Utils.getShowLanguageIndex();
+        if (index >= 5) {
+            String[] a = DB.getLabels(languages);
+            if (a != null && a.length > 0) {
+                return a;
+            }
         }
         if (getColumnIndex(languages) >= 1) return new String[]{languages};
         return new String[0];
