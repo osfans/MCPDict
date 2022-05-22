@@ -78,7 +78,7 @@ class 表(_表):
 			for sd,hzs in re.findall("［(\d+[a-zA-Z]?)］([^［］]+)", fs[1]):
 				if sd == "0": sd = ""
 				py = sm + ym +sd
-				hzs = re.findall("(.)\d?([+\-/=\\\*？$&r]?)\d?(\{.*?\})?", hzs)
+				hzs = re.findall("(.)\d?([<+\-/=\\\*？$&r]?)\d?(\{.*?\})?", hzs)
 				for hz, c, js in hzs:
 					if hz == " ": continue
 					p = ""
@@ -97,6 +97,9 @@ class 表(_表):
 								c = ""
 							elif c == 'r':
 								p = "(兒化)"
+								c = ""
+							elif c == '<':
+								p = "(舊)"
 								c = ""
 					js = js.strip("{}")
 					p = py + c + "\t" + p + js
