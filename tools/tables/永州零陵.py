@@ -15,7 +15,7 @@ class 表(_表):
 		py = re.sub("^(c|ch|sh|zh)u", "\\1yu", py)
 		py = py.replace("iu", "iou").replace("ui", "uei").replace("yun", "yn").replace("un", "uen")
 		yb = py.replace("ou", "əu").replace("ao", "au").replace("ang", "ã").replace("an", "ẽ").replace("yu", "y")
-		yb = re.sub("^h", "x", yb).replace("gh", "ɣ").replace("sh", "ɕ").replace("zh", "ʑ").replace("h", "ʰ")\
-			.replace("ts", "ts").replace("c", "tɕ").replace("ng", "ŋ")
+		yb = re.sub("^h", "x", yb).replace("gh", "ɣ")
+		yb = re.sub("^sh", "ɕ", yb).replace("zh", "ʑ").replace("h", "ʰ").replace("c", "tɕ").replace("ng", "ŋ")
 		yb = yb + sd
 		return hz, yb, js
