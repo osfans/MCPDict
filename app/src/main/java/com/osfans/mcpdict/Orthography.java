@@ -55,14 +55,17 @@ public class Orthography {
     }
 
     public static String formatTone(String base, String tone, String lang) {
-        if (TextUtils.isEmpty(tone) || tone.contentEquals("0") || tone.contentEquals("_")) return base;
+        if (TextUtils.isEmpty(tone) || tone.contentEquals("_")) return base;
         JSONArray styles = null;
         try {
             JSONObject jsonObject = DB.getToneName(lang);
             styles = jsonObject.getJSONArray(tone);
         } catch (Exception ignored) {
         }
-        if (styles == null || styles.length() != 5) return base + tone;
+        if (styles == null || styles.length() != 5) {
+            if (tone.contentEquals("0")) return base;
+            return base + tone;
+        }
         String tv = getJSONString(styles, 0);
         String style1 = getJSONString(styles, 1);
         if (mToneStyle == 5) mToneValueStyle = 1;
@@ -113,7 +116,7 @@ public class Orthography {
                 return base + tv + tone;
             default:
                 String sTone = getJSONString(styles, mToneStyle == 5 ? 1 : mToneStyle);
-                if (TextUtils.isEmpty(sTone) || sTone.contentEquals("0")) return base + tv;
+                if (TextUtils.isEmpty(sTone)) return base + tv;
                 if (mToneStyle == 4 && !TextUtils.isEmpty(style1)) {
                     char a = style1.charAt(0);
                     if (a >= '1' && a <= '4') return sTone + base + tv;
