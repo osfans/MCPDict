@@ -54,12 +54,18 @@ def isXlsx(fname):
 def isXls(fname):
 	return fname.endswith("xls") or fname.endswith("xlsx")
 
+def processFs(v):
+	t = type(v)
+	if t is float or t is int: return "%d" % v
+	if v is None: return ""
+	return str(v).strip()
+
 def getXlsxLines(xls):
 	wb = load_workbook(xls, data_only=True)
 	sheet = wb.worksheets[0]
 	lines = list()
 	for row in sheet.rows:
-		fs = [(str(int(j.value)) if type(j.value) is float else str(j.value).strip()) if j.value else "" for j in row[:20]]
+		fs = [processFs(j.value) for j in row[:20]]
 		if any(fs):
 			line = "\t".join(fs) + "\n"
 			lines.append(line)
@@ -191,7 +197,7 @@ class 表:
 	def normYb(self, yb):
 		if self.isLang() and self.isYb:
 			yb = yb.strip()
-			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("0∅Ø零")
+			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("0∅Ø〇零")
 			yb = yb.lower().replace("g", "ɡ").replace("ʼ", "ʰ")
 			if not yb.startswith("h") and "h" in yb:
 				yb = yb.replace("h", "ʰ")
@@ -351,7 +357,7 @@ class 表:
 			if "/" in sy:
 				return "/".join(map(self.dz2dl, sy.split("/")))
 			sy,dz = self.splitSySd(sy)
-		if not dz or dz == "0": return sy
+		if not dz: return sy
 		dl = ""
 		if dz not in self.toneMaps:
 			if len(dz) == 1:

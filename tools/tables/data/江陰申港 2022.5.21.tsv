@@ -16,6 +16,10 @@ simp	trad	detail	调类
 辎	輜		tsɿ1
 之	之		tsɿ1
 芝	芝		tsɿ1
+孜	孜		tsɿ1
+梓	梓		tsɿ3
+滓	滓		tsɿ3
+籽	籽		tsɿ3
 紫	紫		tsɿ3
 纸	紙		tsɿ3
 只	只	《詩經》母也天～	tsɿ3
@@ -37,6 +41,7 @@ simp	trad	detail	调类
 趾	趾		tsɿ3
 址	址		tsɿ3
 翅	翅		tsʰɿ5B
+渍	漬		tsɿ5A
 致	致	導～	tsɿ5A
 致	緻	標～，精～	tsɿ5A
 至	至		tsɿ5A
@@ -258,6 +263,7 @@ simp	trad	detail	调类
 鬄	鬄		tʰi5B
 剃	鬀	～頭	tʰi5B
 替	替		tʰi5B
+达	达	达，滑也	tʰi5B
 堤	堤		di2
 题	題		di2
 提	提		di2
@@ -427,6 +433,7 @@ simp	trad	detail	调类
 歧	歧		dʑi2
 祁	祁		dʑi2
 鳍	鰭		dʑi2
+俟	俟	万～，複姓	dʑi2
 其	其		dʑi2
 棋	碁		dʑi2
 棋	棊		dʑi2
@@ -439,6 +446,8 @@ simp	trad	detail	调类
 琦	琦		dʑi2
 棋	棋		dʑi2
 期	期		dʑi2
+期	朞		dʑi2
+期	稘	朞本字。周年爲稘。	dʑi2
 旗	旗		dʑi2
 麒	麒		dʑi2
 祈	祈		dʑi2
@@ -553,6 +562,7 @@ simp	trad	detail	调类
 普	普		pʰu3
 溥	溥		pʰu3
 浦	浦		pʰu3
+埔	埔		pʰu3
 脯	脯		pʰu3
 剖	剖		pʰəɯ3
 破	破		pʰəɯ5B
@@ -1591,6 +1601,7 @@ simp	trad	detail	调类
 锻	鍛		tɤ5A
 贪	貪		tʰɤ1
 湍	湍		tʰɤ1
+貒	貒		tʰɤ1
 探	探		tʰɤ5B
 彖	彖		tʰɤ5B
 抟	摶		dɤ2
@@ -1642,9 +1653,11 @@ simp	trad	detail	调类
 毡	氊		tsɤ1
 毡	氈		tsɤ1
 钻	鑽	～研	tsɤ1
+颛	顓		tsɤ1
 专	專		tsɤ1
 砖	磚		tsɤ1
 撰	撰		dzɤ6
+馔	饌		dzɤ6
 展	展		tsɤ3
 纂	纂		tsɤ3
 转	轉	～眼	tsɤ3
@@ -1654,13 +1667,17 @@ simp	trad	detail	调类
 颤	顫		tsɤ5A
 钻	鑽	電～	tsɤ5A
 转	轉	～圓圈	tsɤ5A
+啭	囀		tsɤ5A
 参	參		tsʰɤ1
 餐	餐	～廳，～巾紙	tsʰɤ1
 餐	餐	吃一～	tsʰɛ1
 汆	汆	燙一下食物	tsʰɤ1
 窜	竄		tsʰɤ1
-篡	篡		tsʰɤ1
+篡	篡		tsʰɤ5B
+篡	簒		tsʰɤ5B
 川	川		tsʰɤ1
+撺	攛		tsʰɤ1
+蹿	躥		tsʰɤ1
 穿	穿		tsʰɤ1
 惨	慘		tsʰɤ3
 喘	喘		tsʰɤ3
@@ -1834,9 +1851,13 @@ simp	trad	detail	调类
 罐	罐		kuɤ5A
 观	觀	寺～	kuɤ5A
 宽	寬		kʰuɤ1
+髋	髖		kʰuɤ1
 款	款		kʰuɤ3
 欢	歡		huɤ1
 欢	懽		huɤ1
+獾	獾		huɤ1
+獾	貛		huɤ1
+獾	䝔		huɤ1
 焕	煥		huɤ5A
 唤	喚		huɤ5A
 痪	瘓		huɤ5A
@@ -1989,6 +2010,7 @@ simp	trad	detail	调类
 菟	莵		tʰəɯ5B
 菟	菟		dəɯ2
 菟	莵		dəɯ2
+鼍	鼉		dəɯ2
 驼	駞		dəɯ2
 驼	駝		dəɯ2
 驮	馱		dəɯ2
@@ -2108,7 +2130,7 @@ simp	trad	detail	调类
 裹	裹		kəɯ3
 过	過		kəɯ5A
 科	科		kʰəɯ1
-窠	窠		kʰəɯ1
+窠	窠	被頭～：被窩	kʰəɯ1
 棵	棵		kʰəɯ1
 蝌	蝌		kʰəɯ1
 颗	顆		kʰəɯ1
@@ -2255,12 +2277,17 @@ simp	trad	detail	调类
 釉	釉		ɦiəɯ6
 优	優		iəɯ1
 忧	憂		iəɯ1
+攸	攸		iəɯ1
 悠	悠		iəɯ1
 幽	幽		iəɯ1
 有	有		iəɯ3
 友	友		iəɯ3
 莠	莠		ɦiəɯ6
 诱	誘		ɦiəɯ6
+鼬	鼬		ɦiəɯ6
+囿	囿		ɦiəɯ6
+侑	侑		ɦiəɯ6
+宥	宥		ɦiəɯ6
 幼	幼		iəɯ5A
 儿	兒	（文）～童	ɦər2
 儿	兒	（白）～子，貓～	ȵi2
@@ -2344,6 +2371,7 @@ simp	trad	detail	调类
 范	範	規～	vɛ6
 犯	犯		vɛ6
 饭	飯		vɛ6
+万	万	同萬	vɛ6
 万	萬		vɛ6
 卍	卍	內典萬字	vɛ6
 卐	卐	同卍，亦被用作德國納粹黨黨徽	vɛ6
@@ -2397,6 +2425,7 @@ simp	trad	detail	调类
 待	待		dai6
 怠	怠		dai6
 殆	殆		dai6
+岱	岱		dai6
 代	代		dai6
 袋	袋		dai6
 逮	逮		dai6
@@ -2692,7 +2721,7 @@ simp	trad	detail	调类
 汏	汏	洗：～衣裳	dɑ6
 拉	拉		lɑ1
 垃	垃	～圾（新）	lɑ2
-圾	圾	垃～（新）	si
+圾	圾	垃～（新）	si1
 遮	遮		tsɑ1
 蔗	蔗		tsɑ1
 抓	抓	（文）	tsɑ1
@@ -2859,6 +2888,9 @@ simp	trad	detail	调类
 倒	倒	～掛	taɤ5A
 滔	滔		tʰaɤ1
 掏	掏	～出來	tʰaɤ1
+韬	韜		tʰaɤ1
+韬	弢		tʰaɤ1
+鞱	鞱		tʰaɤ1
 讨	討		tʰaɤ3
 套	套		tʰaɤ5B
 桃	桃		daɤ2
@@ -2867,6 +2899,8 @@ simp	trad	detail	调类
 淘	淘		daɤ2
 陶	陶		daɤ2
 道	道		daɤ6
+焘	燾		daɤ6
+纛	纛		daɤ6
 稻	稻		daɤ6
 盗	盜		daɤ6
 导	導		daɤ6
@@ -3014,7 +3048,18 @@ simp	trad	detail	调类
 膘	膘		piaɤ1
 标	標		piaɤ1
 彪	彪		piaɤ1
-表	表		piaɤ3
+猋	猋		piaɤ1
+飙	飆		piaɤ1
+飙	颷		piaɤ1
+飙	飈	飇字之譌	piaɤ1
+飙	飇	同飆	piaɤ1
+飙	飊	同飆	piaɤ1
+飑	颮		piaɤ1
+骉	驫		piaɤ1
+髟	髟		piaɤ1
+杓	杓		piaɤ1
+表	表	～示，～格	piaɤ3
+表	錶	手～	piaɤ3
 飘	飄		pʰiaɤ1
 漂	漂	～流，～浮	pʰiaɤ1
 漂	漂	～白	pʰiaɤ3
@@ -3217,11 +3262,15 @@ simp	trad	detail	调类
 筒	筒		doŋ6
 统	統		tʰoŋ3
 痛	痛		tʰoŋ5B
+仝	仝		doŋ2
+砼	砼		doŋ2
 同	同		doŋ2
 同	衕	衚～	doŋ2
 峒	峒	崆～（山名）	doŋ2
 铜	銅		doŋ2
 桐	桐		doŋ2
+佟	佟		doŋ2
+潼	潼		doŋ2
 童	童		doŋ2
 僮	僮		doŋ2
 瞳	瞳		doŋ2
@@ -3344,9 +3393,9 @@ simp	trad	detail	调类
 哄	哄	～搶	hoŋ1
 烘	烘		hoŋ1
 哄	哄	～騙	hoŋ3
-哄	哄	起～	hoŋ5A
-哄	鬨	起～	hoŋ5A
-哄	閧	起～	hoŋ5A
+哄	哄	起～	ɦoŋ6
+哄	鬨	起～	ɦoŋ6
+哄	閧	俗鬨字	ɦoŋ6
 弘	弘		ɦʰoŋ2
 宏	宏		ɦʰoŋ2
 红	紅		ɦʰoŋ2
@@ -3381,6 +3430,7 @@ simp	trad	detail	调类
 炯	炯		tɕioŋ3
 椿	椿	香～	tɕʰyiŋ1
 椿	椿	（文）	tsʰəŋ1
+穹	穹		tɕʰioŋ1
 春	春	～山頭：春天	tɕʰyiŋ1
 春	春	（文）	tsʰəŋ1
 蠢	蠢		tɕʰyiŋ3
@@ -3390,6 +3440,7 @@ simp	trad	detail	调类
 裙	帬	裙本字	dʑyiŋ2
 裙	裠	同裙	dʑyiŋ2
 琼	瓊		dʑioŋ2
+邛	邛		dʑioŋ2
 穷	窮		dʑioŋ2
 煢	煢		dʑioŋ2
 嬛	嬛	同惸	dʑioŋ2
@@ -3422,11 +3473,13 @@ simp	trad	detail	调类
 芸	蕓	～薹	ɦyiŋ2
 耘	耘		ɦyiŋ2
 秐	秐	同耘	ɦyiŋ2
-赢	贏		ɦyiŋ2
+赢	贏	（白）	ɦyiŋ2
 赢	贏	（文）	ɦiŋ2
 荣	榮		ɦioŋ2
 茸	茸		zoŋ2
 戎	戎		zoŋ2
+冗	冗	同宂	zoŋ6
+冗	宂		zoŋ6
 熊	熊		ɦioŋ2
 雄	雄		ɦioŋ2
 融	融		ɦioŋ2
@@ -3437,7 +3490,7 @@ simp	trad	detail	调类
 榕	榕		ɦioŋ2
 熔	熔		ɦioŋ2
 庸	庸		ɦioŋ2
-熨	熨		ɦioŋ6
+熨	熨		ɦyiŋ6
 韵	韵		ɦyiŋ6
 韵	韻		ɦyiŋ6
 运	運		ɦyiŋ6
@@ -3447,6 +3500,8 @@ simp	trad	detail	调类
 佣	佣	～金	ɦioŋ6
 佣	傭	～人	ɦioŋ6
 雍	雍		ioŋ1
+拥	擁	（白）～勒一堆：湊在一起	oŋ1
+拥	擁		ioŋ1
 允	允		ioŋ3
 永	永		ioŋ3
 泳	泳		ioŋ3
@@ -3461,6 +3516,10 @@ simp	trad	detail	调类
 踊	踊		ioŋ3
 酝	醖		yiŋ5A
 酝	醞		yiŋ5A
+蕴	蘊		yiŋ5A
+蕴	藴		yiŋ5A
+蕰	薀		yiŋ5A
+蕰	蕰		yiŋ5A
 奔	犇		pəŋ1
 奔	奔		pəŋ1
 锛	錛	斧～	pəŋ1
@@ -3523,6 +3582,7 @@ simp	trad	detail	调类
 豚	豚		dəŋ2
 饨	飩		dəŋ2
 臀	臀		dəŋ2
+屯	屯		dəŋ2
 囤	囤		dəŋ2
 滕	滕		dəŋ2
 腾	騰		dəŋ2
@@ -3578,6 +3638,7 @@ simp	trad	detail	调类
 怔	怔		tsəŋ1
 正	正	～月	tsəŋ1
 症	癥	～結	tsəŋ1
+谆	諄		tsəŋ1
 枕	枕		tsəŋ3
 姫	姫	謹愼	tsəŋ3
 轸	軫		tsəŋ3
@@ -3602,6 +3663,8 @@ simp	trad	detail	调类
 蹭	蹭		tsʰəŋ5B
 琛	琛		tsʰəŋ1
 郴	郴		tsʰəŋ1
+柽	檉		tsʰəŋ1
+蛏	蟶		tsʰəŋ1
 称	稱		tsʰəŋ1
 嗔	嗔		tsʰəŋ1
 瞋	瞋		tsʰəŋ1
@@ -3690,7 +3753,12 @@ simp	trad	detail	调类
 人	人	～民	zəŋ2
 仁	仁		zəŋ2
 唇	唇		zəŋ2
+唇	脣		zəŋ2
+莼	蓴		zəŋ2
+莼	蒓	通作蓴	zəŋ2
 纯	純		zəŋ2
+淳	淳		zəŋ2
+淳	湻		zəŋ2
 醇	醇		zəŋ2
 鹑	鶉		zəŋ2
 曾	曾		zəŋ2
@@ -3914,6 +3982,7 @@ simp	trad	detail	调类
 婧	婧		ziŋ6
 心	心		siŋ1
 辛	辛		siŋ1
+莘	莘	～莊（上海地名）	siŋ1
 新	新		siŋ1
 薪	薪		siŋ1
 迅	迅		siŋ5A
@@ -4302,6 +4371,9 @@ simp	trad	detail	调类
 横	橫	～豎	ɦuaŋ2
 横	橫	～對（蠻橫）	uaŋ1
 帮	幫		paŋ1
+帮	幇	同幫	paŋ1
+帮	幚	同幫	paŋ1
+梆	梆		paŋ1
 邦	邦		paŋ1
 榜	榜		paŋ3
 绑	綁		paŋ3
@@ -4468,6 +4540,7 @@ simp	trad	detail	调类
 巷	巷		ɦʰaŋ6
 旺	旺	形容詞，特指火旺	ɦiaŋ6
 光	光		kuaŋ1
+光	灮	光本字	kuaŋ1
 胱	胱		kuaŋ1
 广	廣		kuaŋ3
 匡	匡		kʰuaŋ1
@@ -4770,6 +4843,7 @@ simp	trad	detail	调类
 摸	摸		moʔ8
 漠	漠		moʔ8
 穆	穆		moʔ8
+万	万	～俟，複姓	moʔ8
 木	木		moʔ8
 沐	沐		moʔ8
 么	麼		moʔ8
@@ -4993,6 +5067,7 @@ simp	trad	detail	调类
 畜	畜	～牧業	ɕioʔ7
 蓄	蓄		ɕioʔ7
 旭	旭		ɕioʔ7
+顼	頊		ɕioʔ7
 入	入		ʑioʔ8
 抈	抈	折疊	ioʔ7
 玥	玥		ɦioʔ8
@@ -5236,6 +5311,10 @@ simp	trad	detail	调类
 瘩	瘩		tɑʔ7
 搨	搨	～本	tʰɑʔ7
 塔	塔		tʰɑʔ7
+挞	撻		tʰɑʔ7
+闼	闥		tʰɑʔ7
+𠉂	㒓		tʰɑʔ7
+鳎	鰨		tʰɑʔ7
 榻	榻		tʰɑʔ7
 塌	塌		tʰɑʔ7
 溻	溻		tʰɑʔ7
@@ -5243,7 +5322,13 @@ simp	trad	detail	调类
 遢	遢	邋（lɑʔ）～	tʰɑʔ7
 獭	獺	水～	tʰɑʔ7
 踏	踏		dɑʔ8
+龖	龖		dɑʔ8
+龘	龘		dɑʔ8
+达	逹	達字之譌	dɑʔ8
 达	達		dɑʔ8
+达	达	與達同	dɑʔ8
+达	迖	达字之譌	dɑʔ8
+达	迏	达字之譌	dɑʔ8
 纳	納		nɑʔ8
 捺	捺		nɑʔ8
 邋	邋	～遢（tɑʔ）	nɑʔ8
@@ -5335,6 +5420,7 @@ simp	trad	detail	调类
 略	略		liɑʔ8
 掠	掠		liɑʔ8
 且	且		tsʰiɑ3
+爵	爵		tsiɑʔ7
 雀	雀	麻～：麻將；麻～子：麻雀	tsiɑʔ7
 鹊	鵲		tsʰiɑʔ7
 削	削		siɑʔ7

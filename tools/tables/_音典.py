@@ -30,13 +30,16 @@ class 表(_表):
 			hz,_,_,yb,js = fs[:5]
 		elif name in ("蒼南錢庫",):
 			sm,ym,sd,hz,js = fs[:5]
-			if sd == "轻声": sd = ""
+			if sd == "轻声": sd = "0"
 			yb = sm + ym + sd
 		elif name in ("1890會城",):
 			hz,_,_,sm,ym,js = fs[:6]
 			yb = sm + ym
 		elif name in ("貴陽",):
 			hz, _, _, _, ipa, js = fs[:6]
+		elif name in ("樂淸"):
+			_, sm, ym, sd, hz, js = fs[:6]
+			yb = sm + ym + sd
 		elif name in ("淸末溫州",):
 			_,hz,sy,_,_,sd,js = fs[:7]
 			yb = sy + sd
@@ -75,6 +78,9 @@ class 表(_表):
 			ipa = sm + ym + sd
 		elif name in ("普寧",):
 			hz,_,js,sm,ym,sd = fs[:6]
+			ipa = sm + ym + sd
+		elif name in ("中山三鄕",):
+			hz,sm,ym,sd, _, js = fs[:6]
 			ipa = sm + ym + sd
 		elif name in ("南山南頭",):
 			hz, _, _, _, ipa, js = fs[:6]
