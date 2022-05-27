@@ -86,6 +86,7 @@ class 表(_表):
 			hz, _, _, _, ipa, js = fs[:6]
 		elif name in ("通東餘東",):
 			hz, _, _, sy, _, sd, js = fs[:7]
+			sy = sy.lstrip("ʔ")
 			ipa = sy + sd
 		elif name in ("南寧", "南寧亭子"):
 			_, hz, _, ipa, _, js, c = fs[:7]

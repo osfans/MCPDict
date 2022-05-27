@@ -593,6 +593,7 @@
 坪	h	iaak	5	坪頂村	h	iak	21												
 羥	h	iaak	5		h	iak	21												
 艇	h	iaak	5		h	iak	21												
+謔	h	iaak	2		h	iak	55												
 喫	h	iaak	1		h	iak	33												
 燩	h	iaak	1		h	iak	33												
 𢶡	h	iaak	1		h	iak	33												
@@ -679,8 +680,8 @@
 竅	h	iu	1		h	iu	33												
 囂	h	iu	1		h	iu	33												
 曉	h	iu	2		h	iu	55												
-哼	h	m		白讀	h	m													
-哼	h	ng		文讀	h	ŋ													
+哼	h	m	0	白讀	h	m	0												
+哼	h	ng	0	文讀	h	ŋ	0												
 婆	h	u	5	老婆乸	h	u	21												
 妥	h	u	5		h	u	21												
 橢	h	u	5		h	u	21												
@@ -826,13 +827,13 @@
 統	h	ung	2		h	ʊŋ	55												
 盾	h	ut	5	矛盾	h	ut	21												
 豚	h	ut	5		h	ut	21												
-呀	j	aa			j	a													
+呀	j	aa	0		j	a	0												
 也	j	aa	5		j	a	21												
 洩	j	aai	6		j	ai	32												
 曳	j	aai	6		j	ai	32												
 吔	j	aai	6		j	ai	32												
-唷	j	o			j	ɔ													
-喲	j	o			j	ɔ													
+唷	j	o	0		j	ɔ	0												
+喲	j	o	0		j	ɔ	0												
 野	j	ea	5		j	ə	21												
 冶	j	ea	5		j	ə	21												
 椰	j	ea	4		j	ə	22												
@@ -1389,6 +1390,7 @@
 亟	g	eak	6	亟需	k	ək	32												
 激	g	eak	2		k	ək	55												
 擊	g	eak	2		k	ək	55												
+戟	g	eak	2		k	ək	55												
 今	g	eam	1		k	əm	33												
 金	g	eam	1		k	əm	33												
 錦	g	eam	2		k	əm	55												
@@ -1523,6 +1525,7 @@
 孤	g	u	1		k	u	33												
 辜	g	u	1		k	u	33												
 僱	g	u	1		k	u	33												
+沽	g	u	1		k	u	33												
 固	g	u	1		k	u	33												
 故	g	u	1		k	u	33												
 錮	g	u	1		k	u	33												
@@ -1533,6 +1536,7 @@
 哥	g	u	2		k	u	55												
 估	g	u	2		k	u	55												
 咕	g	u	2		k	u	55												
+沽	g	u	2	屠沽	k	u	55												
 古	g	u	2		k	u	55												
 股	g	u	2		k	u	55												
 詁	g	u	2		k	u	55												
@@ -1596,7 +1600,7 @@
 柜	g	ui	2	柜柳	k	ui	55												
 䢹	g	ui	2		k	ui	55												
 𠢈	g	ui	2		k	ui	55												
-公	g	uk	5	老公;公仔	k	ʊk	21												
+公	g	uk	5	老公|公仔	k	ʊk	21												
 局	g	uk	6		k	ʊk	32												
 穀	g	uk	2		k	ʊk	55												
 谷	g	uk	2		k	ʊk	55												
@@ -1742,6 +1746,7 @@
 仇	k	eau	4		kʰ	əu	22												
 毬	k	eau	4		kʰ	əu	22												
 求	k	eau	4		kʰ	əu	22												
+裘	k	eau	4		kʰ	əu	22												
 球	k	eau	4		kʰ	əu	22												
 龜	k	eau	1		kʰ	əu	33												
 茄	k	e	5		kʰ	ɛ	21												
@@ -1834,13 +1839,13 @@
 啦	l	aa	1		l	a	33												
 喇	l	aa	1		l	a	33												
 喇	l	aa	1		l	a	33												
-拉	l	aa	2	阿拉伯；卡拉OK	l	a	55												
+拉	l	aa	2	阿拉伯|南斯拉夫	l	a	55												
 豊	l	aai	5		l	ai	21												
 禮	l	aai	5		l	ai	21												
 犁	l	aai	4		l	ai	22												
 鸝	l	aai	4		l	ai	22												
 黎	l	aai	4		l	ai	22												
-麗	l	aai	4	麗洞	l	ai	22												
+麗	l	aai	4	麗洞村	l	ai	22												
 賴	l	aai	6		l	ai	32												
 例	l	aai	6		l	ai	32												
 勵	l	aai	6		l	ai	32												
@@ -1985,6 +1990,7 @@
 陵	l	eang	4		l	əŋ	22												
 靈	l	eang	4		l	əŋ	22												
 齡	l	eang	4		l	əŋ	22												
+零	l	eang	4	文讀	l	əŋ	22												
 令	l	eang	4	漢複姓有令狐氏	l	əŋ	22												
 愣	l	eang	4		l	əŋ	22												
 拎	l	eang	4		l	əŋ	22												
@@ -2008,7 +2014,7 @@
 糧	l	iaang	4		l	iaŋ	22												
 良	l	iaang	4		l	iaŋ	22												
 量	l	iaang	4	測量	l	iaŋ	22												
-零	l	iaang	4		l	iaŋ	22												
+零	l	iaang	4	白讀	l	iaŋ	22												
 亮	l	iaang	6		l	iaŋ	32												
 諒	l	iaang	6		l	iaŋ	32												
 輛	l	iaang	6		l	iaŋ	32												
@@ -2168,7 +2174,7 @@
 壘	l	ut	6	神荼鬱壘	l	ut	32												
 栗	l	ut	6		l	ut	32												
 慄	l	ut	6		l	ut	32												
-嗎	m	aa		語氣助詞	m͡b	a													
+嗎	m	aa	0	語氣助詞	m͡b	a	0												
 嗎	m	aa	2	嗎啡	m͡b	a	55												
 瑪	m	aa	5		m͡b	a	21												
 碼	m	aa	5		m͡b	a	21												
@@ -2445,8 +2451,8 @@
 夢	m	ung	6		m͡b	ʊŋ	32												
 檬	m	ung	2		m͡b	ʊŋ	55												
 懵	m	ung	2		m͡b	ʊŋ	55												
-嗯	m				m͡b														
-嗯	ng				ŋ͡g														
+嗯	m		0		m͡b		0												
+嗯	ng		0		ŋ͡g		0												
 午	ng		5		ŋ͡g		21												
 吳	m		4		m͡b		22												
 吾	m		4		m͡b		22												
@@ -2459,7 +2465,7 @@
 寤	ng		6		ŋ͡g		32												
 五	ng		2		ŋ͡g		55												
 伍	ng		2		ŋ͡g		55												
-哪	n	aa		語氣助詞	n͡d	a													
+哪	n	aa	0	語氣助詞	n͡d	a	0												
 拿	n	aa	4		n͡d	a	22												
 哪	n	aa	4	哪吒	n͡d	a	22												
 哪	n	aa	4		n͡d	a	22												
@@ -2679,7 +2685,6 @@
 箬	ng	iaak	6		ŋ͡g	iak	32												
 篛	ng	iaak	6		ŋ͡g	iak	32												
 若	ng	iaak	6		ŋ͡g	iak	32												
-謔	ng	iaak	2		ŋ͡g	iak	55												
 嚷	ng	iaang	6		ŋ͡g	iaŋ	32												
 壤	ng	iaang	6		ŋ͡g	iaŋ	32												
 攘	ng	iaang	6		ŋ͡g	iaŋ	32												
@@ -3133,7 +3138,6 @@
 濕	s	iaak	2	白讀	s	iak	55												
 爍	s	iaak	2		s	iak	55												
 削	s	iaak	2		s	iak	55												
-酌	s	iaak	2		s	iak	55												
 灼	s	iaak	2		s	iak	55												
 鵲	s	iaak	2		s	iak	55												
 勺	s	iaak	2		s	iak	55												
@@ -3771,7 +3775,7 @@
 汁	z	ip	2		t͡s	ip	55												
 執	z	ip	2		t͡s	ip	55												
 節	z	it	5	竹節	t͡s	it	21												
-疾	z	it	6	疾速 白讀	t͡s	it	32												
+疾	z	it	6	疾速|白讀	t͡s	it	32												
 截	z	it	6		t͡s	it	32												
 絕	z	it	6		t͡s	it	32												
 姪	z	it	6		t͡s	it	32												
@@ -3875,6 +3879,8 @@
 駿	z	un	1		t͡s	un	33												
 圳	z	un	1		t͡s	un	33												
 尊	z	un	1		t͡s	un	33												
+樽	z	un	1		t͡s	un	33												
+樽	z	ut	5	量詞	t͡s	ut	21												
 遵	z	un	1		t͡s	un	33												
 屯	z	un	1	難也	t͡s	un	33												
 鱒	z	un	1	習讀音疑爲讀半邊所致	t͡s	un	33												
@@ -4289,7 +4295,7 @@
 齣	c	ut	2		t͡sʰ	ut	55												
 怵	c	ut	2		t͡sʰ	ut	55												
 黜	c	ut	2		t͡sʰ	ut	55												
-吧	v	aa			ʋ	a													
+吧	v	aa	0		ʋ	a	0												
 踝	v	aa	5		ʋ	a	21												
 爸	v	aa	4		ʋ	a	22												
 嘩	v	aa	4		ʋ	a	22												
@@ -4712,7 +4718,7 @@
 不	v	ut	2		ʋ	ut	55												
 屈	v	ut	2	使彎曲	ʋ	ut	55												
 鬱	v	ut	2		ʋ	ut	55												
-啊		aa			ʔ	a													
+啊		aa	0		ʔ	a	0												
 阿		aa	1	阿媽	ʔ	a	33												
 安		aa	1	安人	ʔ	a	33												
 埡		aa	1		ʔ	a	33												
@@ -4723,9 +4729,9 @@
 啞		aa	1	象聲詞；語氣詞	ʔ	a	33												
 打		aa	2		ʔ	a	55												
 啞		aa	2		ʔ	a	55												
-哎		aai			ʔ	ai													
-唉		aai			ʔ	ai													
-欸		aai			ʔ	ai													
+哎		aai	0		ʔ	ai	0												
+唉		aai	0		ʔ	ai	0												
+欸		aai	0		ʔ	ai	0												
 大		aai	6		ʔ	ai	32												
 逮		aai	6		ʔ	ai	32												
 弟		aai	6		ʔ	ai	32												
@@ -4824,7 +4830,7 @@
 嘔		aau	2		ʔ	au	55												
 嘔		aau	2		ʔ	au	55												
 嘔		aau	2		ʔ	au	55												
-哦		o		語氣助詞	ʔ	ɔ													
+哦		o	0	語氣助詞	ʔ	ɔ	0												
 導		o	6		ʔ	ɔ	32												
 蹈		o	6		ʔ	ɔ	32												
 悼		o	6		ʔ	ɔ	32												
@@ -4867,7 +4873,7 @@
 擋		ong	2		ʔ	ɔŋ	55												
 檔		ong	2		ʔ	ɔŋ	55												
 黨		ong	2		ʔ	ɔŋ	55												
-欸		eai			ʔ	əi													
+欸		eai	0		ʔ	əi	0												
 地		eai	6		ʔ	əi	32												
 知		eai	1		ʔ	əi	33												
 嘀		eak	6		ʔ	ək	32												
