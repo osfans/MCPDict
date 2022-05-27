@@ -9,6 +9,7 @@ from glob import glob
 import inspect
 from openpyxl import load_workbook
 from xlrd import open_workbook
+from docx import Document
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 
@@ -46,7 +47,7 @@ def getSTVariants(level=2):
 	return d
 
 def getTsvName(xls):
-	return re.sub("xlsx?", "tsv", xls)
+	return xls.rsplit(".", 1)[0] + ".tsv"
 
 def isXlsx(fname):
 	return fname.endswith("xlsx")
@@ -91,6 +92,21 @@ def xls2tsv(xls):
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
 	lines = getXlsxLines(xls) if isXlsx(xls) else getXlsLines(xls)
+	t = open(tsv, "w", encoding="U8")
+	t.writelines(lines)
+	t.close()
+
+def isDocx(fname):
+	return fname.endswith("docx")
+	
+def docx2tsv(doc):
+	tsv = getTsvName(doc)
+	if not os.path.exists(doc): return
+	if os.path.exists(tsv):
+		xtime = os.path.getmtime(doc)
+		ttime = os.path.getmtime(tsv)
+		if ttime >= xtime: return
+	lines = [line.text + "\n" for line in Document(doc).paragraphs]
 	t = open(tsv, "w", encoding="U8")
 	t.writelines(lines)
 	t.close()
@@ -150,6 +166,9 @@ class 表:
 		self._file = os.path.basename(sname)
 		if isXls(sname):
 			xls2tsv(sname)
+			sname = getTsvName(sname)
+		elif isDocx(sname):
+			docx2tsv(sname)
 			sname = getTsvName(sname)
 		return sname
 
@@ -360,7 +379,9 @@ class 表:
 		if not dz: return sy
 		dl = ""
 		if dz not in self.toneMaps:
-			if len(dz) == 1:
+			if dz == "0":
+				dl = dz
+			elif len(dz) == 1:
 				dz = dz + dz
 				if dz in self.toneMaps:
 					dl = self.toneMaps[dz]
