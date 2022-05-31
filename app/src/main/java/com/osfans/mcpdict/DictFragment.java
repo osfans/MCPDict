@@ -71,8 +71,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             refresh();
             fragmentResult.scrollToTop();
         });
-        String query = searchView.getQuery();
-        if (!TextUtils.isEmpty(query)) searchView.setQuery(query);
+//        String query = searchView.getQuery();
+//        if (!TextUtils.isEmpty(query)) searchView.setQuery(query);
 
         // Set up the spinner
         spinnerShowLang = selfView.findViewById(R.id.spinner_show_languages);
