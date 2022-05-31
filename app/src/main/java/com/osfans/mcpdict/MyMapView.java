@@ -143,22 +143,25 @@ public class MyMapView extends MapView {
         cursor.moveToFirst();
         FolderOverlay folderOverlay = new FolderOverlay();
         double level = getZoomLevelDouble();
-        for (String lang: DB.getVisibleColumns()) {
-            GeoPoint point = DB.getPoint(lang);
-            if (point == null) continue;
-            int i = DB.getColumnIndex(lang);
-            String string = cursor.getString(i);
-            if (TextUtils.isEmpty(string)) continue;
-            CharSequence yb = Utils.formatIPA(lang,  Utils.getRawText(string));
-            CharSequence js = Utils.formatIPA(lang,  string);
-            int size = DB.getSize(lang);
-            MyMarker marker = new MyMarker(this, DB.getColor(lang), DB.getLabel(lang), yb.toString() , js.toString(), size);
-            marker.setPosition(point);
-            marker.setZoomLevel(level);
-            folderOverlay.add(marker);
+        try {
+            for (String lang : DB.getVisibleColumns()) {
+                GeoPoint point = DB.getPoint(lang);
+                if (point == null) continue;
+                int i = DB.getColumnIndex(lang);
+                String string = cursor.getString(i);
+                if (TextUtils.isEmpty(string)) continue;
+                CharSequence yb = Utils.formatIPA(lang, Utils.getRawText(string));
+                CharSequence js = Utils.formatIPA(lang, string);
+                int size = DB.getSize(lang);
+                MyMarker marker = new MyMarker(this, DB.getColor(lang), DB.getLabel(lang), yb.toString(), js.toString(), size);
+                marker.setPosition(point);
+                marker.setZoomLevel(level);
+                folderOverlay.add(marker);
+            }
+            mHzOverlay = folderOverlay;
+            getOverlays().add(mHzOverlay);
+        } catch (Exception ignore) {
         }
-        mHzOverlay = folderOverlay;
-        getOverlays().add(mHzOverlay);
     }
 
     public FolderOverlay geoJsonifyMap(String fileName, boolean isProvince) {
