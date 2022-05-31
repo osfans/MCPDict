@@ -53,7 +53,7 @@
 乙	ik4	
 九	kau2	
 九	kiu2	文
-乞	kʰɯʔ4	白，～伊
+乞	kʰɯʔ4/kʰiʔ4	白，～伊
 乞	kʰɯk4	
 也	ia2	
 乳	dzu2	
@@ -62,7 +62,6 @@
 乾	kʰiaŋ5	
 亂	luaŋ6	
 了	liau2	
-了	liau3	又
 事	sɯ7	
 二	no6	訓“兩”
 二	dzi6	
@@ -147,6 +146,7 @@
 你	lɯ2	訓“汝”
 你	ni2	
 佩	pue6	
+佬	lau2	
 佳	kia1	
 使	sai2	
 使	sai3	
@@ -249,6 +249,8 @@
 價	ke3	
 僻	pʰiaʔ8	
 儀	ŋi5	
+儂	naŋ5	白，人
+儂	loŋ5	文
 億	ek8	
 儉	kʰiam6	
 儒	dzu5	
@@ -314,6 +316,8 @@
 凝	ŋiŋ5	
 凝	ŋeŋ5	又
 凡	huaŋ5	
+凰	uaŋ5	白
+凰	huaŋ5	
 凱	kʰai2	
 凳	teŋ3	
 凶	hioŋ1	
@@ -353,7 +357,7 @@
 刺	tɕʰiaʔ4	又白
 刻	kʰak4	
 刻	kʰek4	文
-剁	tok	訓
+剁	tok4	訓
 剁	to3	文
 剃	tʰi3	
 則	tsek4	
@@ -507,6 +511,8 @@
 召	tiau6	
 召	ɕiau6	又，姓氏
 可	kʰo2	
+台	tʰai1	
+台	tʰai5	
 史	sai2	
 史	sɯ2	
 右	iu6	
@@ -588,6 +594,7 @@
 哽	kẽ2	
 唆	so1	
 唇	tuŋ5	
+唇	suŋ5	文，眼皮
 唉	ai1	
 唉	ai7	
 唐	tŋ5	白，姓氏
@@ -643,6 +650,8 @@
 嘮	lau5	
 嘯	sau3	
 嘴	tsʰui7	
+嘶	soi1	白
+嘶	sɯ1	文
 嘻	hi1	
 噎	ik4	
 噎	i3	又
@@ -684,6 +693,7 @@
 在	to6	俗
 在	tsai6	
 圭	kui1	
+地	to3	俗，掃～
 地	ti7	
 址	tɕi2	
 均	kɯŋ1	
@@ -780,9 +790,10 @@
 天	tʰĩ1	
 天	tʰiaŋ1	文
 太	tʰai3	
-夫	pou1	諸～
+夫	pou1	白，諸～
 夫	hu1	文
 夭	iau1	
+央	ŋ1	白
 央	iaŋ1	
 失	ɕik4	
 夷	i5	
@@ -826,6 +837,7 @@
 妒	tou3	
 妓	ki6	
 妖	iau1	
+妗	kim6	舅媽
 妙	miau6	
 妥	tʰo2	
 妨	huaŋ5	
@@ -862,6 +874,7 @@
 婉	uaŋ2	
 婚	huŋ1	
 婢	pi6	
+婦	pu6	白，新～
 婦	hu6	
 婪	nam5	
 婿	sai3	
@@ -880,6 +893,7 @@
 嫡	tek8	
 嫩	nuŋ3	
 嫩	luŋ3	又
+嫪	lau7	
 嬉	hi1	
 嬌	kiau1	
 嬰	eŋ1	
@@ -943,6 +957,7 @@
 寄	kia3	
 寅	iŋ5	
 密	mik8	
+寇	kʰau3	白
 寇	kʰou3	
 富	pu3	
 寐	mue6	
@@ -992,6 +1007,7 @@
 尷	kam1	
 尹	ɯŋ2	
 尺	tɕʰioʔ4	
+尻	kʰa1	～川（屁股）
 尼	ni5	
 尾	ᵐbue2	
 尾	mai2	又
@@ -1045,6 +1061,7 @@
 嶺	niã2	
 嶽	ŋak8	
 巍	ŋui5	
+巔	tiaŋ1	
 巖	ŋam5	
 川	tsʰuaŋ1	
 州	tɕiu1	
@@ -1222,6 +1239,7 @@
 念	niam7	
 忽	huk4	
 忿	huŋ2	
+怎	tsã3	
 怒	no3	
 怕	pʰã3	
 怖	pu3	
@@ -1231,6 +1249,7 @@
 急	kip4	
 性	sẽ3	
 怨	uaŋ2	
+怪	kue3	白，無～
 怪	kuai3	
 怯	kʰiap4	
 恃	ɕi6	
@@ -1257,7 +1276,7 @@
 悠	iu1	文
 患	huaŋ6	
 悲	pui1	
-悴	tsʰui3	
+悴	tsui6	
 悵	tɕiaŋ3	
 悶	ᵐbuŋ6	又
 悶	ᵐbuŋ7	
@@ -1743,6 +1762,7 @@
 曬	sai3	
 曰	iak4	
 曰	uak4	又，白
+曱	ka1	～甴（蟑螂）
 曲	kʰek4	
 曲	kʰiok4	文
 更	kẽ1	白
@@ -1773,6 +1793,7 @@
 朝	tɕiau1	
 朝	tɕʰiau5	
 期	kʰi5	
+朥	la5	俗，豬油
 木	ᵐbak8	
 未	ᵐbue7	
 未	ᵐbi7	文
@@ -1799,8 +1820,6 @@
 東	taŋ1	
 東	toŋ1	文
 杳	miau2	
-松	saŋ1	
-松	soŋ1	文
 松	soŋ5	
 板	poĩ2	白
 板	paŋ2	
@@ -1863,6 +1882,7 @@
 梅	ᵐbue5	
 梓	tsɯ2	
 條	tiau5	
+梟	hiao1	
 梢	sau1	
 梢	sau3	
 梢	ɕiau1	
@@ -1896,6 +1916,8 @@
 椿	tsʰuŋ1	
 楊	iõ5	白
 楊	iaŋ5	文
+楓	panɡ1	白，潮州～溪
+楓	hoŋ1	
 楚	tsʰo2	
 楞	leŋ5	
 楣	ᵐbai5	
@@ -2014,6 +2036,7 @@
 母	m2	又
 母	ᵐbo2	
 每	mue2	
+毐	ai2	
 毒	tak8	
 比	pi2	
 毛	mo5	
@@ -2079,6 +2102,7 @@
 法	huak4	
 泛	huaŋ3	
 泡	pʰa6	
+泡	pʰau3	文，一～茶
 波	po1	
 泣	kʰip4	
 泥	ni5	
@@ -2227,6 +2251,7 @@
 澆	nau1	
 澡	tsʰau3	
 澤	tsek8	
+澳	o3	
 激	kek4	
 濁	tsuak8	
 濃	loŋ5	
@@ -2250,7 +2275,7 @@
 灘	tʰuã1	
 灣	uaŋ1	
 火	hue2	
-灰	hu1	俗
+灰	hu1	俗，訓“烌”
 灰	hue1	
 灰	hui1	文
 灶	tsau3	
@@ -2269,6 +2294,7 @@
 爲	ui5	
 爲	ui7	又
 烈	liak8	
+烌	hu1	
 烏	ou1	
 烘	hoŋ1	
 烘	hoŋ5	又
@@ -2276,6 +2302,7 @@
 烤	kʰau2	
 烹	pʰeŋ1	
 焉	iaŋ1	
+焗	kok8	
 焚	uŋ5	
 無	ᵐbo5	
 無	ᵐbu5	
@@ -2465,6 +2492,7 @@
 由	iu5	
 甲	kaʔ4	
 申	ɕiŋ1	
+甴	tsuaʔ8	曱～（蟑螂）
 男	nam5	
 界	kai3	
 畏	uĩ3	
@@ -2511,19 +2539,25 @@
 痰	tʰam5	
 痱	ᵐbui3	
 痹	pi3	
-瘋	hoŋ1	
+瘁	tsui6	
+瘋	huaŋ1	
 瘟	uŋ1	
 瘡	tsʰŋ1	
+瘤	lau5	白
+瘤	liu5	文
 瘦	saŋ2	訓
 瘦	sou2	
 瘧	ŋiauʔ8	
 瘸	kʰue5	
+癆	lau5	
 癡	tɕʰi1	
 癢	tɕiõ6	
 癢	iaŋ6	文
 癩	nai6	
 癩	tʰai2	俗
 癬	ɕiaŋ2	
+癮	iŋ2	
+癲	tiaŋ1	
 癸	kui3	
 登	teŋ1	
 發	huak4	
@@ -2622,6 +2656,7 @@
 砍	kʰam2	
 研	ŋoĩ2/ŋaĩ2	白
 研	ŋiaŋ2	
+砧	tiam1	
 硝	ɕiau1	
 硫	liu5	
 硬	ŋẽ6	
@@ -2677,7 +2712,7 @@
 禿	tʰok4	
 秀	ɕiu3	
 私	sai1	白，走～
-私	si1	又白，家～
+私	ɕi2	又白，家～
 私	sɯ1	
 秉	piã3	
 秋	tɕʰiu1	
@@ -2688,8 +2723,8 @@
 租	tsou1	
 秤	tɕʰiŋ3	
 秦	tɕʰiŋ5	
-秧	ŋ1	
-秧	iaŋ1	
+秧	ŋ1	白
+秧	iaŋ1	文
 秩	tiak4	
 秫	tsuk8	
 移	i5	
@@ -2776,6 +2811,7 @@
 笑	tɕʰio3	
 笙	seŋ1	
 笛	tek8	
+笠	loiʔ8	
 符	hu5	
 笨	puŋ2	
 笨	puŋ3	
@@ -2852,7 +2888,7 @@
 粱	niõ5	
 粱	liaŋ5	文
 粵	uak8	
-粹	tsue6	
+粹	tsui6	
 粹	tsʰui3	文
 糉	tsaŋ3	
 精	tɕiã1	
@@ -2963,6 +2999,8 @@
 績	tseʔ4	
 繁	huaŋ5	
 繁	pʰo5	又，姓氏
+繆	niu5	綢～
+繆	niu6	又，紕～
 繫	ki3	
 織	tɕik4	
 繞	dziau3	
@@ -2976,6 +3014,7 @@
 繼	ki3	
 纂	tsʰuaŋ3	
 續	sok8	
+續	sua3	口
 纏	tĩ5	
 纓	eŋ2	
 纔	tsʰai5	
@@ -3012,6 +3051,8 @@
 翁	oŋ1	
 翅	tɕʰi3	
 習	ɕip8	
+翕	hoʔ4	俗，～相
+翕	hip4	
 翠	tsʰui3	
 翰	haŋ5	
 翻	huaŋ1	
@@ -3132,6 +3173,7 @@
 膜	moʔ8	
 膝	tsʰek4	
 膠	ka1	
+膦	laŋ6	白，男陰
 膨	pʰẽ5	
 膩	dzɯ6	
 膳	ɕiaŋ6	
@@ -3159,7 +3201,6 @@
 臭	hiũ3	
 至	tɕi3	
 致	ti3	
-臺	tʰai1	
 臺	tʰai5	
 臻	tɕiŋ1	
 臼	kʰu6	
@@ -3173,7 +3214,7 @@
 舊	ku7	
 舌	tɕiʔ8	
 舍	ɕia3	
-舒	tsʰɯ1	～開
+舒	tsʰɯ1	白，～開
 舒	su1	文
 舔	tʰiam2	
 舛	tsʰuaŋ2	
@@ -3254,7 +3295,7 @@
 菌	kʰuŋ2	
 菜	tsʰai3	
 菩	pʰu5	
-菩	pʰo5	又
+菩	pʰo6	又
 華	hua5	
 華	hua1	又
 菱	leŋ5	
@@ -3337,7 +3378,6 @@
 薺	tɕĩ5	白
 薺	tɕʰi5	
 藉	tɕia6	
-藉	tɕiaʔ6	
 藍	nam5	
 藏	tsʰaŋ5	
 藏	tsaŋ6	
@@ -3385,6 +3425,7 @@
 蜀	dzuak8	又
 蜂	pʰaŋ1	
 蜂	hoŋ1	文
+蜍	su5	
 蜓	tʰeŋ5	
 蜜	ᵐbik8	
 蜻	tsʰẽ1	
@@ -3414,6 +3455,7 @@
 蟶	tseŋ1	
 蟹	hoi6	
 蟻	ŋi6	文
+蟾	ɕiam5	
 蠅	ɕiŋ5	
 蠍	hiak4	
 蠍	hak4	又
@@ -3472,6 +3514,8 @@
 褯	tsoiʔ4	
 褯	tɕia6	文
 褲	kʰou3	
+褸	lau1	風～
+褸	lu2	襤～
 襄	ɕiaŋ1	
 襖	o2	
 襟	kim1	
@@ -3572,7 +3616,8 @@
 諳	am3	
 諷	hoŋ3	
 諸	ta1	～夫（男性）
-諸	tsu	
+諸	tsɯ1	白，～娘（女性）
+諸	tsu1	
 諺	ŋaŋ6	
 諾	nap8	
 謀	mou5	
@@ -3588,6 +3633,7 @@
 謝	ɕia7	
 謠	io5	
 謬	miu6	
+謬	niu6	又
 謳	au1	
 謹	kɯŋ2	
 證	tseŋ3	
@@ -3787,8 +3833,8 @@
 辯	piaŋ6	
 辰	ɕiŋ5	
 辱	dziok8/dzok8	
-農	noŋ5	
-農	loŋ5	又
+農	loŋ5	
+農	noŋ5	又
 迂	u1	
 迅	ɕiŋ3	
 迎	iã5	白，～老爷
@@ -3959,7 +4005,8 @@
 鋤	tʰɯ5	又
 鋤	tsʰo5	文
 鋦	kek8	
-鋪	pʰou3	
+鋪	pʰou1	動詞
+鋪	pʰou3	又，店～
 鋭	dzue6	
 鋸	kɯ3	
 鋼	kɯŋ3	
@@ -4005,6 +4052,7 @@
 鑞	laʔ8	
 鑢	lɯ3	
 鑢	tʰɯ3	又
+鑫	him1	
 鑰	iak4	
 鑲	ɕiaŋ1	
 鑷	niap4	
@@ -4201,6 +4249,7 @@
 顯	hiaŋ2	
 風	huaŋ1	
 風	hoŋ1	文
+颱	tʰai1	
 颼	ɕiau1	
 颼	sou1	文
 飄	pʰiau1	
@@ -4268,6 +4317,7 @@
 驟	tsou6	
 驢	lɯ5	
 骨	kuk4	
+骹	kʰa1	脚
 髒	tsŋ3	
 髓	tsʰue2	
 體	tʰi2	
@@ -4275,6 +4325,8 @@
 高	kau1	
 髮	huak4	
 鬃	tsaŋ1	
+鬆	saŋ1	
+鬆	soŋ1	文
 鬈	kʰuaŋ5	
 鬥	tau3	
 鬥	tou3	文
@@ -4297,14 +4349,17 @@
 鮮	tɕʰĩ1	
 鮮	ɕiaŋ2	
 鯉	li2	
+鯊	sua1	
 鯗	ɕiõ2	
 鯗	ɕiaŋ2	
+鯧	tɕʰiõ1	
 鯨	kʰeŋ5	
 鯽	tɕik4	
 鰣	ɕi5	
 鰥	kuaŋ1	
 鰭	tɕʰi1	白
 鰭	kʰi5	
+鰻	muã5	
 鰾	pʰio6	
 鱉	piʔ4	
 鱖	kui3	

@@ -59,7 +59,7 @@ def processFs(v):
 	t = type(v)
 	if t is float or t is int: return "%d" % v
 	if v is None: return ""
-	return str(v).strip()
+	return str(v).strip().replace("\t", " ").replace("\n", " ")
 
 def getXlsxLines(xls):
 	wb = load_workbook(xls, data_only=True)
@@ -78,7 +78,7 @@ def getXlsLines(xls):
 	lines = list()
 	for i in range(sheet.nrows):
 		fs = sheet.row_values(i)
-		fs = [(str(int(j)) if type(j) is float else str(j).strip().replace("\t", "")) if j else "" for j in fs]
+		fs = [processFs(j) for j in fs]
 		if any(fs):
 			line = "\t".join(fs) + "\n"
 			lines.append(line)

@@ -59,7 +59,7 @@
 摩	mo5	mo5	mo˥˥											
 朵	to2	do2	to˥˨											
 躲	to2	do2	to˥˨											
-剁	tok	dog	tok	訓										
+剁	tok4	dog4	tok˨	訓										
 剁	to3	do3	to˨˩˨	文										
 妥	tho2	to2	tʰo˥˨											
 唾	tho2	to2	tʰo˥˨											
@@ -183,8 +183,8 @@
 訝	gia3	ghia3	ᵑɡia˨˩˨											
 迓	gia3	ghia3	ᵑɡia˨˩˨											
 蝦	he5	hê5	he˥˥											
-嚇	hennh7	hênh4	he ̃ʔ˨											
-嚇	heh7	hêh4	heʔ˨	又										
+嚇	hennh4	hênh4	he ̃ʔ˨											
+嚇	heh4	hêh4	heʔ˨	又										
 霞	hia5	hia5	hia˥˥											
 遐	hia5	hia5	hia˥˥											
 瑕	hia5	hia5	hia˥˥											
@@ -202,10 +202,10 @@
 亞	a3	a3	a˨˩˨	又										
 姐	tsia2	zia2	tɕia˥˨	小~										
 姐	tse2	zê2	tse˥˨	文										
-借	tsioh7	zioh4	tɕioʔ˨											
+借	tsioh4	zioh4	tɕioʔ˨											
 且	tshiann2	cian2	tɕʰia ̃˥˨											
 藉	tsia6	zia6	tɕia˧˥											
-褯	tsoih7	zoih4	tsoiʔ˨											
+褯	tsoih4	zoih4	tsoiʔ˨											
 褯	tsia6	zia6	tɕia˧˥	文										
 些	se1	sê1	se˧˧											
 寫	sia2	sia2	ɕia˥˨											
@@ -220,7 +220,7 @@
 遮	tsia1	zia1	tɕia˧˧											
 者	tsia2	zia2	tɕia˥˨											
 蔗	tsia3	zia3	tɕia˨˩˨											
-車	kur1	ge1	kɯ˧˧											
+車	kɯ1	ge1	kɯ˧˧											
 車	tshia1	cia1	tɕʰia˧˧											
 扯	tshe2	cê2	tsʰe˥˨											
 蛇	tsua5	zua5	tsua˥˥											
@@ -266,12 +266,13 @@
 譜	phou2	pou2	pʰou˥˨											
 布	pou3	bou3	pou˨˩˨											
 布	pu3	bu3	pu˨˩˨	文										
-鋪	phou3	pou3	pʰou˨˩˨											
+鋪	phou1	pou1	pʰou˧˧	動詞										
+鋪	phou3	pou3	pʰou˨˩˨	又，店~										
 普	phou2	pou2	pʰou˥˨											
 浦	phou2	pou2	pʰou˥˨											
 怖	pu3	bu3	pu˨˩˨											
 菩	phu5	pu5	pʰu˥˥											
-菩	pho5	po5	pʰo˥˥	又										
+菩	pho6	po6	pʰo˧˥	又										
 蒲	phu5	pu5	pʰu˥˥											
 脯	pou2	bou2	pou˥˨											
 部	pou6	bou6	pou˧˥											
@@ -336,7 +337,7 @@
 酥	sou1	sou1	sou˧˧											
 素	sou3	sou3	sou˨˩˨	白，味~										
 素	su3	su3	su˨˩˨											
-塑	sok7	sog4	sok˨											
+塑	sok4	sog4	sok˨											
 訴	su3	su3	su˨˩˨											
 嗉	su3	su3	su˨˩˨											
 辜	kou1	gou1	kou˧˧	白，姓氏										
@@ -371,7 +372,7 @@
 誤	gou7	ghou7	ᵑɡou˧˩											
 呼	khou1	kou1	kʰou˧˧											
 呼	hu1	hu1	hu˧˧	文										
-虎	hounn2	houn2	ho ̃u ̃˥˨											
+虎	honnunn2	houn2	ho ̃u ̃˥˨											
 滸	hu2	hu2	hu˥˨											
 戽	hou6	hou6	hou˧˥											
 乎	hu1	hu1	hu˧˧											
@@ -384,7 +385,7 @@
 狐	hou5	hou5	hou˥˥											
 狐	hu5	hu5	hu˥˥	文										
 湖	ou5	ou5	ou˥˥											
-鈑	poinn2	boin2	po ̃i ̃˥˨											
+鈑	ponninn2	boin2	po ̃i ̃˥˨											
 鈑	pang2	bang2	paŋ˥˨	文										
 戶	hou6	hou6	hou˧˥											
 滬	hu6	hu6	hu˧˥											
@@ -393,99 +394,100 @@
 烏	ou1	ou1	ou˧˧											
 汙	u1	u1	u˧˧											
 塢	u1	u1	u˧˧											
-惡	oh7	oh4	oʔ˨	難										
-惡	ak7	ag4	ak˨											
+惡	oh4	oh4	oʔ˨	難										
+惡	ak4	ag4	ak˨											
 女	nng2	neng2	nŋ˥˨											
 女	ni2	ni2	ni˥˨	文，釣～										
 廬	lou5	lou5	lou˥˥											
 廬	lu5	lu5	lu˥˥	文										
-驢	lur5	le5	lɯ˥˥											
-呂	lur6	le6	lɯ˧˥											
-侶	lur6	le6	lɯ˧˥											
+驢	lɯ5	le5	lɯ˥˥											
+呂	lɯ6	le6	lɯ˧˥											
+侶	lɯ6	le6	lɯ˧˥											
 旅	li2	li2	li˥˨											
-慮	lur6	le6	lɯ˧˥											
-濾	lur6	le6	lɯ˧˥											
-鑢	lur3	le3	lɯ˨˩˨											
-鑢	thur3	te3	tʰɯ˨˩˨	又										
-蛆	tshur1	ce1	tsʰɯ˧˧											
+慮	lɯ6	le6	lɯ˧˥											
+濾	lɯ6	le6	lɯ˧˥											
+鑢	lɯ3	le3	lɯ˨˩˨											
+鑢	thɯ3	te3	tʰɯ˨˩˨	又										
+蛆	tshɯ1	ce1	tsʰɯ˧˧											
 蛆	tsu1	zu1	tsu˧˧	文										
 疽	tsu1	zu1	tsu˧˧											
 胥	su1	su1	su˧˧											
 絮	su6	su6	su˧˥											
-徐	tshur5	ce5	tsʰɯ˥˥											
+徐	tshɯ5	ce5	tsʰɯ˥˥											
 序	su6	su6	su˧˥											
 緒	su6	su6	su˧˥											
 敘	su6	su6	su˧˥											
-豬	tur1	de1	tɯ˧˧											
+豬	tɯ1	de1	tɯ˧˧											
 著	tu3	du3	tu˨˩˨											
 著	tioh8	dioh8	tioʔ˥˦	又										
-著	tioh7	dioh4	tioʔ˨	又，沉~										
+著	tioh4	dioh4	tioʔ˨	又，沉~										
 著	toh8	doh8	toʔ˥˦	～火										
 褚	su2	su2	su˥˨	姓氏										
 褚	tu2	du2	tu˥˨											
-除	tur5	de5	tɯ˥˥											
+除	tɯ5	de5	tɯ˥˥											
 儲	thu5	tu5	tʰu˥˥											
 苧	tiu6	diu6	tiu˧˥											
-箸	tur7	de7	tɯ˧˩											
+箸	tɯ7	de7	tɯ˧˩											
 阻	tso2	zo2	tso˥˨											
 初	tshiu1	ciu1	tɕʰiu˧˧											
 初	tsho1	co1	tsʰo˧˧	文										
 楚	tsho2	co2	tsʰo˥˨											
-鋤	tur5	de5	tɯ˥˥											
-鋤	thur5	te5	tʰɯ˥˥	又										
+鋤	tɯ5	de5	tɯ˥˥											
+鋤	thɯ5	te5	tʰɯ˥˥	又										
 鋤	tsho5	co5	tsʰo˥˥	文										
 疏	so1	so1	so˧˧											
 蔬	so1	so1	so˧˧											
 梳	siu1	siu1	ɕiu˧˧											
 所	so2	so2	so˥˨											
 諸	ta1	da1	ta˧˧	~夫（男性）										
-諸	tsu	zu	tsu											
-煮	tsur5	ze5	tsɯ˥˥											
+諸	tsɯ1	ze1	tsɯ˧˧	白，~娘（女性）										
+諸	tsu1	zu1	tsu˧˧											
+煮	tsɯ5	ze5	tsɯ˥˥											
 處	tshu2	cu2	tsʰu˥˨											
-書	tsur1	ze1	tsɯ˧˧											
-舒	tshur1	ce1	tsʰɯ˧˧	~開										
+書	tsɯ1	ze1	tsɯ˧˧											
+舒	tshɯ1	ce1	tsʰɯ˧˧	白，~開										
 舒	su1	su1	su˧˧	文										
-鼠	tshur2	ce2	tsʰɯ˥˨											
+鼠	tshɯ2	ce2	tsʰɯ˥˨											
 暑	su2	su2	su˥˨											
 黍	su2	su2	su˥˨											
 庶	su3	su3	su˨˩˨											
 恕	su3	su3	su˨˩˨											
 墅	su2	su2	su˥˨											
-薯	tsur5	ze5	tsɯ˥˥											
+薯	tsɯ5	ze5	tsɯ˥˥											
 署	su2	su2	su˥˨											
 如	dzu5	ru5	dzu˥˥											
-汝	lur2	le2	lɯ˥˨											
-汝	dzur2	re2	dzɯ˥˨	文										
-居	kur1	ge1	kɯ˧˧											
-居	kur1	ge1	kɯ˧˧											
-車	kur1	ge1	kɯ˧˧											
-舉	kur2	ge2	kɯ˥˨											
-鋸	kur3	ge3	kɯ˨˩˨											
-據	kur6	ge6	kɯ˧˥											
-墟	hur1	he1	hɯ˧˧											
-去	khur3	ke3	kʰɯ˨˩˨											
-渠	khur5	ke5	kʰɯ˥˥											
-巨	kur6	ge6	kɯ˧˥											
-距	kur6	ge6	kɯ˧˥											
-拒	kur6	ge6	kɯ˧˥											
-遽	kur6	ge6	kɯ˧˥											
-魚	hur5	he5	hɯ˥˥											
-漁	hur5	he5	hɯ˥˥											
-語	gur2	ghe2	ᵑɡɯ˥˨											
-禦	ur6	e6	ɯ˧˥											
-禦	gur6	ghe6	ᵑɡɯ˧˥	又										
-虛	hur1	he1	hɯ˧˧											
-噓	hur1	he1	hɯ˧˧											
+汝	lɯ2	le2	lɯ˥˨											
+汝	dzɯ2	re2	dzɯ˥˨	文										
+居	kɯ1	ge1	kɯ˧˧											
+居	kɯ1	ge1	kɯ˧˧											
+車	kɯ1	ge1	kɯ˧˧											
+舉	kɯ2	ge2	kɯ˥˨											
+鋸	kɯ3	ge3	kɯ˨˩˨											
+據	kɯ6	ge6	kɯ˧˥											
+墟	hɯ1	he1	hɯ˧˧											
+去	khɯ3	ke3	kʰɯ˨˩˨											
+渠	khɯ5	ke5	kʰɯ˥˥											
+巨	kɯ6	ge6	kɯ˧˥											
+距	kɯ6	ge6	kɯ˧˥											
+拒	kɯ6	ge6	kɯ˧˥											
+遽	kɯ6	ge6	kɯ˧˥											
+魚	hɯ5	he5	hɯ˥˥											
+漁	hɯ5	he5	hɯ˥˥											
+語	gɯ2	ghe2	ᵑɡɯ˥˨											
+禦	ɯ6	e6	ɯ˧˥											
+禦	gɯ6	ghe6	ᵑɡɯ˧˥	又										
+虛	hɯ1	he1	hɯ˧˧											
+噓	hɯ1	he1	hɯ˧˧											
 許	khou2	kou2	kʰou˥˨	白，姓氏										
-許	hur2	he2	hɯ˥˨											
-淤	ur3	e3	ɯ˨˩˨											
+許	hɯ2	he2	hɯ˥˨											
+淤	ɯ3	e3	ɯ˨˩˨											
 於	i1	i1	i˧˧											
-餘	ur5	e5	ɯ˥˥											
-與	ur2	e2	ɯ˥˨											
-譽	ur6	e6	ɯ˧˥											
-預	ur6	e6	ɯ˧˥											
-豫	ur6	e6	ɯ˧˥											
-夫	pou1	bou1	pou˧˧	諸~										
+餘	ɯ5	e5	ɯ˥˥											
+與	ɯ2	e2	ɯ˥˨											
+譽	ɯ6	e6	ɯ˧˥											
+預	ɯ6	e6	ɯ˧˥											
+豫	ɯ6	e6	ɯ˧˥											
+夫	pou1	bou1	pou˧˧	白，諸~										
 夫	hu1	hu1	hu˧˧	文										
 膚	hu1	hu1	hu˧˧											
 甫	phou2	pou2	pʰou˥˨											
@@ -548,12 +550,12 @@
 駐	tsu3	zu3	tsu˨˩˨											
 注	tsu3	zu3	tsu˨˩˨											
 廚	tou5	dou5	tou˥˥											
-柱	thiau6	tiau6	tʰiau˧˥											
+柱	thiau6	tiao6	tʰiau˧˥											
 住	tiu7	diu7	tiu˧˩											
 住	tsu6	zu6	tsu˧˥	文										
 芻	tshu1	cu1	tsʰu˧˧											
 雛	tshu1	cu1	tsʰu˧˧											
-數	siau3	siau3	ɕiau˨˩˨											
+數	siau3	siao3	ɕiau˨˩˨											
 數	su3	su3	su˨˩˨	文										
 珠	tsiu1	ziu1	tɕiu˧˧	白										
 珠	tsu1	zu1	tsu˧˧											
@@ -573,12 +575,12 @@
 拘	khu1	ku1	kʰu˧˧											
 駒	khu1	ku1	kʰu˧˧											
 俱	ku6	gu6	ku˧˥											
-矩	kur2	ge2	kɯ˥˨											
+矩	kɯ2	ge2	kɯ˥˨											
 句	ku3	gu3	ku˨˩˨											
 區	khu1	ku1	kʰu˧˧											
 驅	khu1	ku1	kʰu˧˧											
-瞿	khur5	ke5	kʰɯ˥˥	姓氏										
-瞿	kur6	ge6	kɯ˧˥											
+瞿	khɯ5	ke5	kʰɯ˥˥	姓氏										
+瞿	kɯ6	ge6	kɯ˧˥											
 具	ku6	gu6	ku˧˥											
 懼	ku6	gu6	ku˧˥											
 虞	ngo5	ngo5	ŋo˥˥											
@@ -608,7 +610,9 @@
 戴	to3	do3	to˨˩˨	又，姓氏										
 戴	tai3	dai3	tai˨˩˨	文										
 胎	tho1	to1	tʰo˧˧											
-臺	thai1	tai1	tʰai˧˧											
+台	thai1	tai1	tʰai˧˧											
+台	thai5	tai5	tʰai˥˥											
+颱	thai1	tai1	tʰai˧˧											
 態	thai3	tai3	tʰai˨˩˨											
 貸	tai3	dai3	tai˨˩˨											
 臺	thai5	tai5	tʰai˥˥											
@@ -679,7 +683,7 @@
 癩	nai6	nai6	nai˧˥											
 蔡	tshuann3	cuan3	tsʰua ̃˨˩˨											
 蓋	khainn3/khoinn3	kain3/koin3	kʰai ̃˨˩˨/kʰoi ̃˨˩˨											
-蓋	kah7	gah4	kaʔ˨	又										
+蓋	kah4	gah4	kaʔ˨	又										
 蓋	kua3	gua3	kua˨˩˨											
 蓋	kai3	gai3	kai˨˩˨	文										
 丐	kai3	gai3	kai˨˩˨											
@@ -699,11 +703,11 @@
 偕	hai5	hai5	hai˥˥											
 偕	kai1	gai1	kai˧˧											
 稭	kai1	gai1	kai˧˧											
-稭	kiak7	giag4	kiak˨											
+稭	kiak4	giag4	kiak˨											
 街	koi1	goi1	koi˧˧											
 階	kai1	gai1	kai˧˧											
 戒	kai3	gai3	kai˨˩˨											
-芥	khah7	kah4	kʰaʔ˨	白，~藍										
+芥	khah4	kah4	kʰaʔ˨	白，~藍										
 芥	kai3	gai3	kai˨˩˨											
 尬	kai3	gai3	kai˨˩˨											
 界	kai3	gai3	kai˨˩˨											
@@ -727,7 +731,7 @@
 買	boi2	bhoi2	ᵐboi˥˨											
 賣	boi7	bhoi7	ᵐboi˧˩											
 奶	ni6	ni6	ni˧˥											
-奶	ni1	nê1	ne˧˧	口										
+奶	ne1	nê1	ne˧˧	口										
 奶	nai2	nai2	nai˥˨	文										
 債	tse3	zê3	tse˨˩˨											
 釵	toi1	doi1	toi˧˧											
@@ -752,7 +756,7 @@
 懈	hai6	hai6	hai˧˥											
 矮	oi2	oi2	oi˥˨											
 隘	ai2	ai2	ai˥˨											
-隘	ek7	êg4	ek˨	又										
+隘	ek4	êg4	ek˨	又										
 敗	pai7	bai7	pai˧˩											
 邁	mai6	mai6	mai˧˥											
 寨	tse3	zê3	tse˨˩˨											
@@ -816,12 +820,17 @@
 濟	tsi3	zi3	tɕi˨˩˨											
 妻	tshi1	ci1	tɕʰi˧˧											
 淒	tshi1	ci1	tɕʰi˧˧											
-砌	kih7	gih4	kiʔ˨											
+砌	kih4	gih4	kiʔ˨											
 齊	tsoinn5	zoin5	tsoi ̃˥˥											
 齊	tshi5	ci5	tɕʰi˥˥											
 臍	tsai5	zai5	tsai˥˥											
 薺	tsinn5	zin5	tɕi ̃˥˥	白										
 薺	tshi5	ci5	tɕʰi˥˥											
+嘶	soi1	soi1	soi˧˧	白										
+嘶	sɯ1	se1	sɯ˧˧	文										
+撕	thi3	ti3	tʰi˨˩˨	俗										
+撕	li3	li3	li˨˩˨	俗										
+撕	sɯ1	se1	sɯ˧˧											
 西	sai1	sai1	sai˧˧											
 西	si1	si1	ɕi˧˧	文										
 棲	tshi1	ci1	tɕʰi˧˧											
@@ -846,7 +855,7 @@
 係	hi6	hi6	hi˧˥											
 繋	ki3	gi3	ki˨˩˨											
 縊	i3	i3	i˨˩˨											
-縊	ek7	êg4	ek˨	又										
+縊	ek4	êg4	ek˨	又										
 杯	pue1	buê1	pue˧˧											
 背	pue3	buê3	pue˨˩˨											
 輩	pue3	buê3	pue˨˩˨											
@@ -896,7 +905,7 @@
 塊	ko3	go3	ko˨˩˨											
 桅	ui5	ui5	ui˥˥											
 桅	ngui5	ngui5	ŋui˥˥	又										
-灰	hu1	hu1	hu˧˧	俗										
+灰	hu1	hu1	hu˧˧	俗，訓“烌”										
 灰	hue1	huê1	hue˧˧											
 灰	hui1	hui1	hui˧˧	文										
 悔	hue3	huê3	hue˨˩˨											
@@ -915,6 +924,7 @@
 會	kuai3	guai3	kuai˨˩˨											
 繪	kuai3	guai3	kuai˨˩˨											
 乖	kuai1	guai1	kuai˧˧											
+怪	kue3	guê3	kue˨˩˨	白，無~										
 怪	kuai3	guai3	kuai˨˩˨											
 蒯	kuai3	guai3	kuai˨˩˨											
 淮	huai5	huai5	huai˥˥											
@@ -940,7 +950,7 @@
 歲	sue3	suê3	sue˨˩˨	文										
 彗	hui6	hui6	hui˧˥											
 綴	tue3	duê3	tue˨˩˨											
-綴	tshuak7	cuag4	tsʰuak˨											
+綴	tshuak4	cuag4	tsʰuak˨											
 贅	tsui6	zui6	tsui˧˥											
 稅	sue3	suê3	sue˨˩˨											
 說	sue3	suê3	sue˨˩˨											
@@ -989,20 +999,17 @@
 荔	noi7	noi7	noi˧˩											
 荔	li6	li6	li˧˥	文										
 紫	tsi2	zi2	tɕi˥˨											
-雌	tshur5	ce5	tsʰɯ˥˥											
-此	tshur2	ce2	tsʰɯ˥˨											
+雌	tshɯ5	ce5	tsʰɯ˥˥											
+此	tshɯ2	ce2	tsʰɯ˥˨											
 刺	tshi3	ci3	tɕʰi˨˩˨	白										
 刺	tshng3	ceng3	tsʰŋ˨˩˨	文										
-刺	tshiah7	ciah4	tɕʰiaʔ˨	又白										
-疵	tshur5	ce5	tsʰɯ˥˥											
-斯	sur1	se1	sɯ˧˧											
-撕	thi3	ti3	tʰi˨˩˨	俗										
-撕	li3	li3	li˨˩˨	俗										
-撕	sur1	se1	sɯ˧˧											
-廝	sur1	se1	sɯ˧˧											
-璽	dzur2	re2	dzɯ˥˨											
+刺	tshiah4	ciah4	tɕʰiaʔ˨	又白										
+疵	tshɯ5	ce5	tsʰɯ˥˥											
+斯	sɯ1	se1	sɯ˧˧											
+廝	sɯ1	se1	sɯ˧˧											
+璽	dzɯ2	re2	dzɯ˥˨											
 徙	sua2	sua2	sua˥˨											
-賜	sur3	se3	sɯ˨˩˨											
+賜	sɯ3	se3	sɯ˨˩˨											
 知	tsai1	zai1	tsai˧˧											
 知	ti1	di1	ti˧˧	文										
 智	ti3	di3	ti˨˩˨											
@@ -1015,7 +1022,7 @@
 枝	ki1	gi1	ki˧˧											
 肢	tsinn1	zin1	tɕi ̃˧˧											
 只	tsi2	zi2	tɕi˥˨											
-只	tsiah7	ziah4	tɕiaʔ˨	又										
+只	tsiah4	ziah4	tɕiaʔ˨	又										
 紙	tsua2	zua2	tsua˥˨											
 侈	tshi2	ci2	tɕʰi˥˨											
 施	si1	si1	ɕi˧˧											
@@ -1027,7 +1034,7 @@
 氏	si6	si6	ɕi˧˥											
 豉	si7	si7	ɕi˧˩											
 兒	dzi5	ri5	dzi˥˥											
-爾	dzur2	re2	dzɯ˥˨											
+爾	dzɯ2	re2	dzɯ˥˨											
 羈	ki6	gi6	ki˧˥											
 寄	kia3	gia3	kia˨˩˨											
 企	khia6	kia6	kʰia˧˥	俗										
@@ -1078,39 +1085,40 @@
 美	mui2	mui2	mui˥˨											
 媚	mi6	mi6	mi˧˥											
 寐	mue6	muê6	mue˧˥											
+地	to3	do3	to˨˩˨	俗，掃~										
 地	ti7	di7	ti˧˩											
 尼	ni5	ni5	ni˥˥											
 呢	ni5	ni5	ni˥˥											
 呢	ni1	ni1	ni˧˧	又										
 呢	ne1	nê1	ne˧˧	又										
 呢	ni7	ni7	ni˧˩	又										
-膩	dzur6	re6	dzɯ˧˥											
+膩	dzɯ6	re6	dzɯ˧˥											
 梨	lai5	lai5	lai˥˥											
 履	li2	li2	li˥˨											
 利	lai7	lai7	lai˧˩											
 利	li6	li6	li˧˥	文										
 痢	li6	li6	li˧˥											
-咨	tsur1	ze1	tsɯ˧˧											
-資	tsur1	ze1	tsɯ˧˧											
-姿	tsur1	ze1	tsɯ˧˧											
+咨	tsɯ1	ze1	tsɯ˧˧											
+資	tsɯ1	ze1	tsɯ˧˧											
+姿	tsɯ1	ze1	tsɯ˧˧											
 姊	tsi2	zi2	tɕi˥˨											
-次	tshur3	ce3	tsʰɯ˨˩˨											
-瓷	tshur5	ce5	tsʰɯ˥˥											
+次	tshɯ3	ce3	tsʰɯ˨˩˨											
+瓷	tshɯ5	ce5	tsʰɯ˥˥											
 糍	tsinn5	zin5	tɕi ̃˥˥											
-糍	tshur5	ce5	tsʰɯ˥˥	文										
-自	tsur7	ze7	tsɯ˧˩											
+糍	tshɯ5	ce5	tsʰɯ˥˥	文										
+自	tsɯ7	ze7	tsɯ˧˩											
 私	sai1	sai1	sai˧˧	白，走~										
-私	si1	si1	si˧˧	又白，家~										
-私	sur1	se1	sɯ˧˧											
+私	si2	si1	ɕi˥˨	又白，家~										
+私	sɯ1	se1	sɯ˧˧											
 死	si2	si2	ɕi˥˨											
 四	si3	si3	ɕi˨˩˨											
-肆	sur3	se3	sɯ˨˩˨											
+肆	sɯ3	se3	sɯ˨˩˨											
 致	ti3	di3	ti˨˩˨											
 遲	tshi5	ci5	tɕʰi˥˥											
 雉	ti6	di6	ti˧˥											
 稚	tsinn2	zin2	tɕi ̃˥˨											
 師	sai1	sai1	sai˧˧											
-師	sur1	se1	sɯ˧˧	文										
+師	sɯ1	se1	sɯ˧˧	文										
 獅	sai1	sai1	sai˧˧											
 脂	tsinn1	zin1	tɕi ̃˧˧											
 指	ki2	gi2	ki˥˨											
@@ -1131,7 +1139,7 @@
 二	no6	no6	no˧˥	訓“兩”										
 二	dzi6	ri6	dzi˧˥											
 貳	no6	no6	no˧˥											
-貳	dzur6	re6	dzɯ˧˥											
+貳	dzɯ6	re6	dzɯ˧˥											
 肌	ki1	gi1	ki˧˧											
 飢	ki1	gi1	ki˧˧											
 幾	ki1	gi1	ki˧˧											
@@ -1151,7 +1159,7 @@
 姨	ai5	ai5	ai˥˥	俗										
 姨	i5	i5	i˥˥											
 肄	i3	i3	i˨˩˨											
-你	lur2	le2	lɯ˥˨	訓“汝”										
+你	lɯ2	le2	lɯ˥˨	訓“汝”										
 你	ni2	ni2	ni˥˨											
 厘	li5	li5	li˥˥											
 狸	lai5	lai5	lai˥˥	白，狐~										
@@ -1162,50 +1170,50 @@
 裏	li2	li2	li˥˨											
 鯉	li2	li2	li˥˨											
 吏	li7	li7	li˧˩											
-茲	tsur1	ze1	tsɯ˧˧											
-茲	tshur5	ce5	tsʰɯ˥˥	龜兹										
-滋	tsur1	ze1	tsɯ˧˧											
+茲	tsɯ1	ze1	tsɯ˧˧											
+茲	tshɯ5	ce5	tsʰɯ˥˥	龜兹										
+滋	tsɯ1	ze1	tsɯ˧˧											
 子	tsi2	zi2	tɕi˥˨											
-子	tsur2	ze2	tsɯ˥˨	文										
-梓	tsur2	ze2	tsɯ˥˨											
-磁	tshur5	ce5	tsʰɯ˥˥											
-慈	tshur5	ce5	tsʰɯ˥˥											
+子	tsɯ2	ze2	tsɯ˥˨	文										
+梓	tsɯ2	ze2	tsɯ˥˨											
+磁	tshɯ5	ce5	tsʰɯ˥˥											
+慈	tshɯ5	ce5	tsʰɯ˥˥											
 字	dzi7	ri7	dzi˧˩											
-字	dzur6	re6	dzɯ˧˥	文										
+字	dzɯ6	re6	dzɯ˧˥	文										
 司	si1	si1	ɕi˧˧											
 絲	si1	si1	ɕi˧˧											
-思	sur1	se1	sɯ˧˧											
-伺	sur6	se6	sɯ˧˥											
-辭	sur5	se5	sɯ˥˥											
-詞	sur5	se5	sɯ˥˥											
-祠	sur5	se5	sɯ˥˥											
+思	sɯ1	se1	sɯ˧˧											
+伺	sɯ6	se6	sɯ˧˥											
+辭	sɯ5	se5	sɯ˥˥											
+詞	sɯ5	se5	sɯ˥˥											
+祠	sɯ5	se5	sɯ˥˥											
 巳	tsi6	zi6	tɕi˧˥											
-祀	sur6	se6	sɯ˧˥											
-似	sur6	se6	sɯ˧˥											
+祀	sɯ6	se6	sɯ˧˥											
+似	sɯ6	se6	sɯ˧˥											
 寺	dzi7	ri7	dzi˧˩											
-嗣	sur6	se6	sɯ˧˥											
-嗣	sur5	se5	sɯ˥˥	又										
+嗣	sɯ6	se6	sɯ˧˥											
+嗣	sɯ5	se5	sɯ˥˥	又										
 飼	tshi7	ci7	tɕʰi˧˩											
 置	ti3	di3	ti˨˩˨											
 癡	tshi1	ci1	tɕʰi˧˧											
 恥	tshi3	ci3	tɕʰi˨˩˨											
 持	thi5	ti5	tʰi˥˥											
 峙	si6	si6	ɕi˧˥											
-峙	sur6	se6	sɯ˧˥	文										
+峙	sɯ6	se6	sɯ˧˥	文										
 痔	thi6	ti6	tʰi˧˥											
 治	ti7	di7	ti˧˩											
-輜	tsur1	ze1	tsɯ˧˧											
+輜	tsɯ1	ze1	tsɯ˧˧											
 廁	tshe3	cê3	tsʰe˨˩˨											
-俟	sur6	se6	sɯ˧˥											
-士	sur6	se6	sɯ˧˥											
-事	sur7	se7	sɯ˧˩											
+俟	sɯ6	se6	sɯ˧˥											
+士	sɯ6	se6	sɯ˧˥											
+事	sɯ7	se7	sɯ˧˩											
 史	sai2	sai2	sai˥˨											
-史	sur2	se2	sɯ˥˨											
+史	sɯ2	se2	sɯ˥˨											
 使	sai2	sai2	sai˥˨											
 使	sai3	sai3	sai˨˩˨											
 駛	sai2	sai2	sai˥˨											
-芝	tsur1	ze1	tsɯ˧˧											
-之	tsur1	ze1	tsɯ˧˧											
+芝	tsɯ1	ze1	tsɯ˧˧											
+之	tsɯ1	ze1	tsɯ˧˧											
 址	tsi2	zi2	tɕi˥˨											
 止	tsi2	zi2	tɕi˥˨											
 趾	tsoinn2	zoin2	tsoi ̃˥˨	白										
@@ -1223,11 +1231,11 @@
 市	tshi6	ci6	tɕʰi˧˥											
 恃	si6	si6	ɕi˧˥											
 侍	si6	si6	ɕi˧˥											
-而	dzur5	re5	dzɯ˥˥											
+而	dzɯ5	re5	dzɯ˥˥											
 耳	hinn6	hin6	hi ̃˧˥											
-耳	dzur2	re2	dzɯ˥˨											
+耳	dzɯ2	re2	dzɯ˥˨											
 餌	dzi7	ri7	dzi˧˩											
-餌	dzur2	re2	dzɯ˥˨	文										
+餌	dzɯ2	re2	dzɯ˥˨	文										
 基	ki1	gi1	ki˧˧											
 姬	ki1	gi1	ki˧˧											
 己	ki2	gi2	ki˥˨											
@@ -1259,7 +1267,7 @@
 異	i6	i6	i˧˥											
 機	kui1	gui1	kui˧˧	白										
 機	ki1	gi1	ki˧˧											
-鉿	hah7	hah4	haʔ˨											
+鉿	hah4	hah4	haʔ˨											
 譏	ki1	gi1	ki˧˧											
 饑	ki1	gi1	ki˧˧											
 幾	ki1	gi1	ki˧˧											
@@ -1312,9 +1320,10 @@
 淚	lui6	lui6	lui˧˥											
 醉	tsui3	zui3	tsui˨˩˨											
 翠	tshui3	cui3	tsʰui˨˩˨											
-悴	tshui3	cui3	tsʰui˨˩˨											
+悴	tsui6	zui6	tsui˧˥											
 雖	sui1	sui1	sui˧˧											
-粹	tsue6	zuê6	tsue˧˥											
+瘁	tsui6	zui6	tsui˧˥											
+粹	tsui6	zui6	tsui˧˥											
 粹	tshui3	cui3	tsʰui˨˩˨	文										
 遂	sui5	sui5	sui˥˥											
 隧	sui5	sui5	sui˥˥											
@@ -1324,9 +1333,9 @@
 錘	thui5	tui5	tʰui˥˥											
 墜	tui6	dui6	tui˧˥											
 衰	sue1	suê1	sue˧˧											
-摔	suk7	sug4	suk˨											
+摔	suk4	sug4	suk˨											
 帥	sue3	suê3	sue˨˩˨											
-率	suk7	sug4	suk˨											
+率	suk4	sug4	suk˨											
 率	luk8	lug8	luk˥˦											
 錐	tsui1	zui1	tsui˧˧											
 水	tsui2	zui2	tsui˥˨											
@@ -1347,7 +1356,7 @@
 夔	khui5	kui5	kʰui˥˥											
 揆	khui5	kui5	kʰui˥˥											
 櫃	kuinn7	guin7	kui ̃˧˩											
-櫃	kur2	ge2	kɯ˥˨	又										
+櫃	kɯ2	ge2	kɯ˥˨	又										
 帷	dzui5	rui5	dzui˥˥											
 位	ui7	ui7	ui˧˩											
 維	dzui5	rui5	dzui˥˥											
@@ -1396,304 +1405,304 @@
 蝟	ui2	ui2	ui˥˨											
 蝟	ui3	ui3	ui˨˩˨	又										
 匯	hui6	hui6	hui˧˥											
-褒	pau1	bau1	pau˧˧											
+褒	pau1	bao1	pau˧˧											
 保	po2	bo2	po˥˨											
-保	pau2	bau2	pau˥˨	文										
-堡	pau2	bau2	pau˥˨											
+保	pau2	bao2	pau˥˨	文										
+堡	pau2	bao2	pau˥˨											
 寶	po2	bo2	po˥˨											
 報	po3	bo3	po˨˩˨											
-袍	phau5	pau5	pʰau˥˥											
+袍	phau5	pao5	pʰau˥˥											
 抱	pho6	po6	pʰo˧˥											
-暴	pau6	bau6	pau˧˥											
+暴	pau6	bao6	pau˧˥											
 毛	mo5	mo5	mo˥˥											
-冒	mau6	mau6	mau˧˥											
+冒	mau6	mao6	mau˧˥											
 帽	bo7	bho7	ᵐbo˧˩											
 刀	to1	do1	to˧˧											
-叨	tau1	dau1	tau˧˧											
+叨	tau1	dao1	tau˧˧											
 倒	to2	do2	to˥˨											
-倒	tau2	dau2	tau˥˨	文										
-島	tau2	dau2	tau˥˨											
-禱	tau2	dau2	tau˥˨											
-到	kau3	gau3	kau˨˩˨	俗										
-到	tau3	dau3	tau˨˩˨											
+倒	tau2	dao2	tau˥˨	文										
+島	tau2	dao2	tau˥˨											
+禱	tau2	dao2	tau˥˨											
+到	kau3	gao3	kau˨˩˨	俗										
+到	tau3	dao3	tau˨˩˨											
 倒	to3	do3	to˨˩˨											
-掏	thau1	tau1	tʰau˧˧											
-掏	thau5	tau5	tʰau˥˥	又										
-滔	thau1	tau1	tʰau˧˧											
+掏	thau1	tao1	tʰau˧˧											
+掏	thau5	tao5	tʰau˥˥	又										
+滔	thau1	tao1	tʰau˧˧											
 討	tho2	to2	tʰo˥˨											
-套	thau3	tau3	tʰau˨˩˨											
+套	thau3	tao3	tʰau˨˩˨											
 桃	to5	do5	to˥˥	楊~										
 桃	tho5	to5	tʰo˥˥	又										
 逃	to5	do5	to˥˥											
-陶	thau5	tau5	tʰau˥˥											
+陶	thau5	tao5	tʰau˥˥											
 萄	tho5	to5	tʰo˥˥											
 濤	thiu5	tiu5	tʰiu˥˥											
 稻	tiu6	diu6	tiu˧˥											
-稻	tau6	dau6	tau˧˥											
-道	tau6	dau6	tau˧˥											
-導	tau6	dau6	tau˧˥											
-盜	tau6	dau6	tau˧˥											
+稻	tau6	dao6	tau˧˥											
+道	tau6	dao6	tau˧˥											
+導	tau6	dao6	tau˧˥											
+盜	tau6	dao6	tau˧˥											
 腦	lo2	lo2	lo˥˨	白，頭~										
-腦	nau2	nau2	nau˥˨											
+腦	nau2	nao2	nau˥˨											
 惱	lo2	lo2	lo˥˨	白，煩~										
-惱	nau2	nau2	nau˥˨											
-勞	lau5	lau5	lau˥˥											
+惱	nau2	nao2	nau˥˨											
+勞	lau5	lao5	lau˥˥											
 撈	lio5	lio5	lio˥˥	白										
-撈	liau5	liau5	liau˥˥	又白										
-撈	lau5	lau5	lau˥˥	文										
-撈	lau1	lau1	lau˧˧	又										
-嘮	lau5	lau5	lau˥˥											
+撈	liau5	liao5	liau˥˥	又白										
+撈	lau5	lao5	lau˥˥	文										
+撈	lau1	lao1	lau˧˧	又										
+嘮	lau5	lao5	lau˥˥											
 牢	lo5	lo5	lo˥˥											
-老	lau6	lau6	lau˧˥											
-老	lau2	lau2	lau˥˨	文										
-遭	tsau1	zau1	tsau˧˧											
-糟	tsau1	zau1	tsau˧˧											
+老	lau6	lao6	lau˧˥											
+老	lau2	lao2	lau˥˨	文										
+遭	tsau1	zao1	tsau˧˧											
+糟	tsau1	zao1	tsau˧˧											
 早	tsa2	za2	tsa˥˨											
-早	tsau2	zau2	tsau˥˨	文，~起										
+早	tsau2	zao2	tsau˥˨	文，~起										
 棗	tso2	zo2	tso˥˨											
-蚤	tsau2	zau2	tsau˥˨											
-澡	tshau3	cau3	tsʰau˨˩˨											
-躁	tshau3	cau3	tsʰau˨˩˨											
-灶	tsau3	zau3	tsau˨˩˨											
-操	tshau1	cau1	tsʰau˧˧											
-操	tshau3	cau3	tsʰau˨˩˨	又，曹~										
-造	tsau6	zau6	tsau˧˥											
+蚤	tsau2	zao2	tsau˥˨											
+澡	tshau3	cao3	tsʰau˨˩˨											
+躁	tshau3	cao3	tsʰau˨˩˨											
+灶	tsau3	zao3	tsau˨˩˨											
+操	tshau1	cao1	tsʰau˧˧											
+操	tshau3	cao3	tsʰau˨˩˨	又，曹~										
+造	tsau6	zao6	tsau˧˥											
 草	tsho2	co2	tsʰo˥˨											
-草	tshau2	cau2	tsʰau˥˨	文										
-曹	tshau5	cau5	tsʰau˥˥											
-皂	tsau6	zau6	tsau˧˥											
-騷	sau1	sau1	sau˧˧											
+草	tshau2	cao2	tsʰau˥˨	文										
+曹	tshau5	cao5	tsʰau˥˥											
+皂	tsau6	zao6	tsau˧˥											
+騷	sau1	sao1	sau˧˧											
 臊	tsho1	co1	tsʰo˧˧											
-臊	tshau3	cau3	tsʰau˨˩˨	又										
-掃	sau3	sau3	sau˨˩˨											
+臊	tshau3	cao3	tsʰau˨˩˨	又										
+掃	sau3	sao3	sau˨˩˨											
 嫂	so2	so2	so˥˨											
-掃	sau3	sau3	sau˨˩˨											
+掃	sau3	sao3	sau˨˩˨											
 高	ko1	go1	ko˧˧	白，姓氏										
-高	kau1	gau1	kau˧˧											
+高	kau1	gao1	kau˧˧											
 膏	ko1	go1	ko˧˧											
 羔	ko1	go1	ko˧˧											
 糕	ko1	go1	ko˧˧											
 稿	ko2	go2	ko˥˨											
 告	ko3	go3	ko˨˩˨											
-告	kau3	gau3	kau˨˩˨	文										
-考	khau2	kau2	kʰau˥˨											
-烤	khau2	kau2	kʰau˥˨											
+告	kau3	gao3	kau˨˩˨	文										
+考	khau2	kao2	kʰau˥˨											
+烤	khau2	kao2	kʰau˥˨											
 靠	kou6	gou6	kou˧˥	俗										
-靠	khau3	kau3	kʰau˨˩˨											
+靠	khau3	kao3	kʰau˨˩˨											
 犒	ko2	go2	ko˥˨											
-犒	khau3	kau3	kʰau˨˩˨	文										
-熬	ngau5	ngau5	ŋau˥˥											
-傲	ngau6	ngau6	ŋau˧˥											
+犒	khau3	kao3	kʰau˨˩˨	文										
+熬	ngau5	ngao5	ŋau˥˥											
+傲	ngau6	ngao6	ŋau˧˥											
 蒿	o1	o1	o˧˧											
-蒿	hau1	hau1	hau˧˧	文										
-薅	khau1	kau1	kʰau˧˧											
-薅	hau1	hau1	hau˧˧	文										
+蒿	hau1	hao1	hau˧˧	文										
+薅	khau1	kao1	kʰau˧˧											
+薅	hau1	hao1	hau˧˧	文										
 好	ho2	ho2	ho˥˨											
-好	hoh7	hoh4	hoʔ˨	又										
-好	hau2	hau2	hau˥˨	文										
-好	haunn3	haun3	hau ̃˨˩˨	又文										
+好	hoh4	hoh4	hoʔ˨	又										
+好	hau2	hao2	hau˥˨	文										
+好	haunn3	haon3	hau ̃˨˩˨	又文										
 耗	ho3	ho3	ho˨˩˨											
-豪	hau5	hau5	hau˥˥											
-毫	hau5	hau5	hau˥˥											
-號	hau1	hau1	hau˧˧											
-浩	hau1	hau1	hau˧˧											
+豪	hau5	hao5	hau˥˥											
+毫	hau5	hao5	hau˥˥											
+號	hau1	hao1	hau˧˧											
+浩	hau1	hao1	hau˧˧											
 號	ho7	ho7	ho˧˩											
-爊	ngau5	ngau5	ŋau˥˥											
+爊	ngau5	ngao5	ŋau˥˥											
 襖	o2	o2	o˥˨											
 奧	o3	o3	o˨˩˨											
 懊	o3	o3	o˨˩˨	白										
-懊	au3	au3	au˨˩˨											
-包	pau1	bau1	pau˧˧											
-胞	pau1	bau1	pau˧˧											
+懊	au3	ao3	au˨˩˨											
+包	pau1	bao1	pau˧˧											
+胞	pau1	bao1	pau˧˧											
 飽	pa2	ba2	pa˥˨											
 豹	pa3	ba3	pa˨˩˨											
-爆	pau6	bau6	pau˧˥											
+爆	pau6	bao6	pau˧˥											
 泡	pha6	pa6	pʰa˧˥											
-拋	phau1	pau1	pʰau˧˧											
-炮	phau3	pau3	pʰau˨˩˨											
-跑	phau2	pau2	pʰau˥˨											
-鮑	pau6	bau6	pau˧˥											
-刨	phau5	pau5	pʰau˥˥											
-刨	phau1	pau1	pʰau˧˧	又										
-茅	mau5	mau5	mau˥˥											
-貓	ngiau1	ngiau1	ŋiau˧˧											
-卯	bau2	bhau2	ᵐbau˥˨											
-貌	mau6	mau6	mau˧˥											
-鐃	nau5	nau5	nau˥˥											
-撓	niau1	niau1	niau˧˧	白										
-撓	nau5	nau5	nau˥˥											
-鬧	nau6	nau6	nau˧˥											
+泡	phau3	pao3	pʰau˨˩˨	文，一~茶										
+拋	phau1	pao1	pʰau˧˧											
+炮	phau3	pao3	pʰau˨˩˨											
+跑	phau2	pao2	pʰau˥˨											
+鮑	pau6	bao6	pau˧˥											
+刨	phau5	pao5	pʰau˥˥											
+刨	phau1	pao1	pʰau˧˧	又										
+茅	mau5	mao5	mau˥˥											
+貓	ngiau1	ngiao1	ŋiau˧˧											
+卯	bau2	bhao2	ᵐbau˥˨											
+貌	mau6	mao6	mau˧˥											
+鐃	nau5	nao5	nau˥˥											
+撓	niau1	niao1	niau˧˧	白										
+撓	nau5	nao5	nau˥˥											
+鬧	nau6	nao6	nau˧˥											
 罩	ta3	da3	ta˨˩˨	又										
-罩	tsau6	zau6	tsau˧˥											
+罩	tsau6	zao6	tsau˧˥											
 抓	tsua1	zua1	tsua˧˧											
-爪	dziau2	riau2	dziau˥˨											
-找	tau2	dau2	tau˥˨											
-笊	tsau2	zau2	tsau˥˨											
-抄	tshau1	cau1	tsʰau˧˧											
-鈔	tshau1	cau1	tsʰau˧˧											
+爪	dziau2	riao2	dziau˥˨											
+找	tau2	dao2	tau˥˨											
+笊	tsau2	zao2	tsau˥˨											
+抄	tshau1	cao1	tsʰau˧˧											
+鈔	tshau1	cao1	tsʰau˧˧											
 炒	tsha2	ca2	tsʰa˥˨											
-吵	tshau1	cau1	tsʰau˧˧											
-巢	tshau5	cau5	tsʰau˥˥											
-梢	sau1	sau1	sau˧˧											
-梢	sau3	sau3	sau˨˩˨											
-梢	siau1	siau1	ɕiau˧˧											
-捎	siau1	siau1	ɕiau˧˧											
-稍	tshiau1	ciau1	tɕʰiau˧˧											
-稍	tshiau2	ciau2	tɕʰiau˥˨											
-潲	sau3	sau3	sau˨˩˨											
-交	kau1	gau1	kau˧˧											
-郊	kau1	gau1	kau˧˧											
+吵	tshau1	cao1	tsʰau˧˧											
+巢	tshau5	cao5	tsʰau˥˥											
+梢	sau1	sao1	sau˧˧											
+梢	sau3	sao3	sau˨˩˨											
+梢	siau1	siao1	ɕiau˧˧											
+捎	siau1	siao1	ɕiau˧˧											
+稍	tshiau1	ciao1	tɕʰiau˧˧											
+稍	tshiau2	ciao2	tɕʰiau˥˨											
+潲	sau3	sao3	sau˨˩˨											
+交	kau1	gao1	kau˧˧											
+郊	kau1	gao1	kau˧˧											
 膠	ka1	ga1	ka˧˧											
 絞	ka2	ga2	ka˥˨											
-狡	kau2	gau2	kau˥˨											
+狡	kau2	gao2	kau˥˨											
 鉸	ka1	ga1	ka˧˧											
-搞	kau2	gau2	kau˥˨											
+搞	kau2	gao2	kau˥˨											
 攪	ka2	ga2	ka˥˨											
-攪	kiau2	giau2	kiau˥˨	文										
+攪	kiau2	giao2	kiau˥˨	文										
 教	ka3	ga3	ka˨˩˨											
 較	ka3	ga3	ka˨˩˨											
 酵	ka3	ga3	ka˨˩˨											
 窖	ka3	ga3	ka˨˩˨											
 校	ka3	ga3	ka˨˩˨											
-覺	kak7	gag4	kak˨											
+覺	kak4	gag4	kak˨											
 敲	kha3	ka3	kʰa˨˩˨											
-敲	khiau1	kiau1	kʰiau˧˧											
+敲	khiau1	kiao1	kʰiau˧˧											
 巧	kha2	ka2	kʰa˥˨											
 咬	ka6	ga6	ka˧˥											
-孝	hau3	hau3	hau˨˩˨											
-肴	ngau5	ngau5	ŋau˥˥											
-淆	ngau5	ngau5	ŋau˥˥											
-效	hau7	hau7	hau˧˩											
-校	hau6	hau6	hau˧˥											
-坳	au1	au1	au˧˧											
-拗	au2	au2	au˥˨											
+孝	hau3	hao3	hau˨˩˨											
+肴	ngau5	ngao5	ŋau˥˥											
+淆	ngau5	ngao5	ŋau˥˥											
+效	hau7	hao7	hau˧˩											
+校	hau6	hao6	hau˧˥											
+坳	au1	ao1	au˧˧											
+拗	au2	ao2	au˥˨											
 飈	pio1	bio1	pio˧˧											
 標	pio1	bio1	pio˧˧											
-標	phiau1	piau1	pʰiau˧˧	文										
+標	phiau1	piao1	pʰiau˧˧	文										
 錶	pio1	bio1	pio˧˧											
-表	piau2	biau2	piau˥˨											
-飄	phiau1	piau1	pʰiau˧˧											
-漂	phiau1	piau1	pʰiau˧˧	又										
+表	piau2	biao2	piau˥˨											
+飄	phiau1	piao1	pʰiau˧˧											
+漂	phiau1	piao1	pʰiau˧˧	又										
 漂	pio3	bio3	pio˨˩˨											
-漂	phiau3	piau3	pʰiau˨˩˨	文										
+漂	phiau3	piao3	pʰiau˨˩˨	文										
 票	phio3	pio3	pʰio˨˩˨											
-嫖	phiau5	piau5	pʰiau˥˥											
+嫖	phiau5	piao5	pʰiau˥˥											
 瓢	phio6	pio6	pʰio˧˥											
 鰾	phio6	pio6	pʰio˧˥											
 描	bio5	bhio5	ᵐbio˥˥	白										
-描	miau5	miau5	miau˥˥											
+描	miau5	miao5	miau˥˥											
 苗	bio5	bhio5	ᵐbio˥˥	白，蝦~										
-苗	miau5	miau5	miau˥˥											
-藐	miau2	miau2	miau˥˨											
-渺	miau2	miau2	miau˥˨											
-秒	miau2	miau2	miau˥˨											
+苗	miau5	miao5	miau˥˥											
+藐	miau2	miao2	miau˥˨											
+渺	miau2	miao2	miau˥˨											
+秒	miau2	miao2	miau˥˨											
 廟	bio7	bhio7	ᵐbio˧˩											
-妙	miau6	miau6	miau˧˥											
-燎	liau5	liau5	liau˥˥											
-焦	tsiau1	ziau1	tɕiau˧˧											
+妙	miau6	miao6	miau˧˥											
+燎	liau5	liao5	liau˥˥											
+焦	tsiau1	ziao1	tɕiau˧˧											
 椒	tsio1	zio1	tɕio˧˧											
-剿	tshau1	cau1	tsʰau˧˧	俗										
-鍬	tshiau1	ciau1	tɕʰiau˧˧											
+剿	tshau1	cao1	tsʰau˧˧	俗										
+鍬	tshiau1	ciao1	tɕʰiau˧˧											
 鍬	tshiu1	ciu1	tɕʰiu˧˧	又										
-繰	tshiau1	ciau1	tɕʰiau˧˧											
-繰	tshau5	cau5	tsʰau˥˥	又										
-悄	tshiau1	ciau1	tɕʰiau˧˧											
-悄	tshiau2	ciau2	tɕʰiau˥˨	又										
-俏	tshiau2	ciau2	tɕʰiau˥˨											
-樵	tsiau1	ziau1	tɕiau˧˧											
-瞧	tshiau5	ciau5	tɕʰiau˥˥											
-消	siau1	siau1	ɕiau˧˧											
-宵	siau1	siau1	ɕiau˧˧											
+繰	tshiau1	ciao1	tɕʰiau˧˧											
+繰	tshau5	cao5	tsʰau˥˥	又										
+悄	tshiau1	ciao1	tɕʰiau˧˧											
+悄	tshiau2	ciao2	tɕʰiau˥˨	又										
+俏	tshiau2	ciao2	tɕʰiau˥˨											
+樵	tsiau1	ziao1	tɕiau˧˧											
+瞧	tshiau5	ciao5	tɕʰiau˥˥											
+消	siau1	siao1	ɕiau˧˧											
+宵	siau1	siao1	ɕiau˧˧											
 霄	sio1	sio1	ɕio˧˧	白，漳州雲~										
-霄	siau1	siau1	ɕiau˧˧											
-硝	siau1	siau1	ɕiau˧˧											
-銷	siau1	siau1	ɕiau˧˧											
+霄	siau1	siao1	ɕiau˧˧											
+硝	siau1	siao1	ɕiau˧˧											
+銷	siau1	siao1	ɕiau˧˧											
 小	sio2	sio2	ɕio˥˨	白										
-小	siau2	siau2	ɕiau˥˨											
+小	siau2	siao2	ɕiau˥˨											
 笑	tshio3	cio3	tɕʰio˨˩˨											
-鞘	siau2	siau2	ɕiau˥˨											
-朝	tsiau1	ziau1	tɕiau˧˧											
-超	thiau3	tiau3	tʰiau˨˩˨											
-朝	tshiau5	ciau5	tɕʰiau˥˥											
+鞘	siau2	siao2	ɕiau˥˨											
+朝	tsiau1	ziao1	tɕiau˧˧											
+超	thiau3	tiao3	tʰiau˨˩˨											
+朝	tshiau5	ciao5	tɕʰiau˥˥											
 潮	tio5	dio5	tio˥˥											
 趙	tio7	dio7	tio˧˩											
-兆	tiau6	diau6	tiau˧˥											
-肇	siau6	siau6	ɕiau˧˥											
-召	tiau6	diau6	tiau˧˥											
-召	siau6	siau6	ɕiau˧˥	又，姓氏										
-昭	tsiau1	ziau1	tɕiau˧˧											
+兆	tiau6	diao6	tiau˧˥											
+肇	siau6	siao6	ɕiau˧˥											
+召	tiau6	diao6	tiau˧˥											
+召	siau6	siao6	ɕiau˧˥	又，姓氏										
+昭	tsiau1	ziao1	tɕiau˧˧											
 招	tsio1	zio1	tɕio˧˧	白										
-招	tsiau1	ziau1	tɕiau˧˧											
-沼	dziau3	riau3	dziau˨˩˨											
+招	tsiau1	ziao1	tɕiau˧˧											
+沼	dziau3	riao3	dziau˨˩˨											
 照	tsio3	zio3	tɕio˨˩˨											
-詔	tsiau3	ziau3	tɕiau˨˩˨											
-詔	dziau3	riau3	dziau˨˩˨	又，漳州~安										
+詔	tsiau3	ziao3	tɕiau˨˩˨											
+詔	dziau3	riao3	dziau˨˩˨	又，漳州~安										
 燒	sio1	sio1	ɕio˧˧											
 少	tsio2	zio2	tɕio˥˨											
-少	siau3	siau3	ɕiau˨˩˨	又										
-韶	siau6	siau6	ɕiau˧˥											
-紹	siau6	siau6	ɕiau˧˥											
+少	siau3	siao3	ɕiau˨˩˨	又										
+韶	siau6	siao6	ɕiau˧˥											
+紹	siau6	siao6	ɕiau˧˥											
 邵	sionn7	sion7	ɕio ̃˧˩	白										
-邵	siau6	siau6	ɕiau˧˥											
-饒	dziau5	riau5	dziau˥˥											
-擾	dziau2	riau2	dziau˥˨											
-繞	dziau3	riau3	dziau˨˩˨											
-驕	kiau1	giau1	kiau˧˧											
-嬌	kiau1	giau1	kiau˧˧											
-矯	kiau1	giau1	kiau˧˧											
-矯	kiau2	giau2	kiau˥˨	又										
-喬	khiau5	kiau5	kʰiau˥˥											
+邵	siau6	siao6	ɕiau˧˥											
+饒	dziau5	riao5	dziau˥˥											
+擾	dziau2	riao2	dziau˥˨											
+繞	dziau3	riao3	dziau˨˩˨											
+驕	kiau1	giao1	kiau˧˧											
+嬌	kiau1	giao1	kiau˧˧											
+矯	kiau1	giao1	kiau˧˧											
+矯	kiau2	giao2	kiau˥˨	又										
+喬	khiau5	kiao5	kʰiau˥˥											
 橋	kio5	gio5	kio˥˥											
 轎	kio7	gio7	kio˧˩											
-囂	ngau1	ngau1	ŋau˧˧											
-枵	iau1	iau1	iau˧˧											
-妖	iau1	iau1	iau˧˧											
-邀	iau1	iau1	iau˧˧											
+囂	ngau1	ngao1	ŋau˧˧											
+枵	iau1	iao1	iau˧˧											
+妖	iau1	iao1	iau˧˧											
+邀	iau1	iao1	iau˧˧											
 腰	io1	io1	io˧˧											
-要	iau1	iau1	iau˧˧											
-夭	iau1	iau1	iau˧˧											
-要	iau3	iau3	iau˨˩˨											
+要	iau1	iao1	iau˧˧											
+夭	iau1	iao1	iau˧˧											
+要	iau3	iao3	iau˨˩˨											
 搖	io5	io5	io˥˥											
 謠	io5	io5	io˥˥											
 窯	io5	io5	io˥˥											
 姚	io5	io5	io˥˥											
 舀	io2	io2	io˥˨											
-耀	iau6	iau6	iau˧˥											
-刁	tiau1	diau1	tiau˧˧											
-貂	tiau1	diau1	tiau˧˧											
-雕	tiau1	diau1	tiau˧˧											
-鳥	tsiau2	ziau2	tɕiau˥˨											
-吊	tiau3	diau3	tiau˨˩˨											
+耀	iau6	iao6	iau˧˥											
+刁	tiau1	diao1	tiau˧˧											
+貂	tiau1	diao1	tiau˧˧											
+雕	tiau1	diao1	tiau˧˧											
+鳥	tsiau2	ziao2	tɕiau˥˨											
+吊	tiau3	diao3	tiau˨˩˨											
 釣	tionn3	dion3	tio ̃˨˩˨											
 挑	thio1	tio1	tʰio˧˧											
-跳	thiau3	tiau3	tʰiau˨˩˨											
+跳	thiau3	tiao3	tʰiau˨˩˨											
 跳	tio7	dio7	tio˧˩	又										
 糶	thio3	tio3	tʰio˨˩˨											
-條	tiau5	diau5	tiau˥˥											
-調	thiau5	tiau5	tʰiau˥˥											
-調	thiau3	tiau3	tʰiau˨˩˨	又，~皮										
-掉	tiau7	diau7	tiau˧˩											
-調	tiau7	diau7	tiau˧˩	又，聲~										
+條	tiau5	diao5	tiau˥˥											
+調	thiau5	tiao5	tʰiau˥˥											
+調	thiau3	tiao3	tʰiau˨˩˨	又，~皮										
+掉	tiau7	diao7	tiau˧˩											
+調	tiau7	diao7	tiau˧˩	又，聲~										
 尿	dzio7	rio7	dzio˧˩											
-聊	liau5	liau5	liau˥˥											
-遼	liau5	liau5	liau˥˥											
-撩	liau5	liau5	liau˥˥											
-寥	liau5	liau5	liau˥˥											
-廖	liau3	liau3	liau˨˩˨											
-了	liau2	liau2	liau˥˨											
-了	liau3	liau3	liau˨˩˨	又										
-料	liau7	liau7	liau˧˩											
-簫	siau1	siau1	ɕiau˧˧											
-蕭	siau1	siau1	ɕiau˧˧											
-嘯	sau3	sau3	sau˨˩˨											
-澆	nau1	nau1	nau˧˧											
-繳	kiau2	giau2	kiau˥˨											
+聊	liau5	liao5	liau˥˥											
+遼	liau5	liao5	liau˥˥											
+撩	liau5	liao5	liau˥˥											
+寥	liau5	liao5	liau˥˥											
+廖	liau3	liao3	liau˨˩˨											
+了	liau2	liao2	liau˥˨											
+料	liau7	liao7	liau˧˩											
+簫	siau1	siao1	ɕiau˧˧											
+蕭	siau1	siao1	ɕiau˧˧											
+嘯	sau3	sao3	sau˨˩˨											
+澆	nau1	nao1	nau˧˧											
+繳	kiau2	giao2	kiau˥˨											
 叫	kio3	gio3	kio˨˩˨											
-竅	khiau3	kiau3	kʰiau˨˩˨											
-堯	ngiau5	ngiau5	ŋiau˥˥											
-曉	hiau2	hiau2	hiau˥˨											
-麼	moh7	moh4	moʔ˨											
-杳	miau2	miau2	miau˥˨											
+竅	khiau3	kiao3	kʰiau˨˩˨											
+堯	ngiau5	ngiao5	ŋiau˥˥											
+曉	hiau2	hiao2	hiau˥˨											
+麼	moh4	moh4	moʔ˨											
+杳	miau2	miao2	miau˥˨											
 剖	phou1	pou1	pʰou˧˧	又										
 剖	phou2	pou2	pʰou˥˨											
 某	mou2	mou2	mou˥˨											
@@ -1705,102 +1714,104 @@
 茂	mou6	mou6	mou˧˥											
 戊	bou7	bhou7	ᵐbou˧˩											
 貿	mou3	mou3	mou˨˩˨											
-兜	tau1	dau1	tau˧˧											
-斗	tau2	dau2	tau˥˨											
-抖	tau2	dau2	tau˥˨											
-陡	tau2	dau2	tau˥˨											
-鬥	tau3	dau3	tau˨˩˨											
+兜	tau1	dao1	tau˧˧											
+斗	tau2	dao2	tau˥˨											
+抖	tau2	dao2	tau˥˨											
+陡	tau2	dao2	tau˥˨											
+鬥	tau3	dao3	tau˨˩˨											
 鬥	tou3	dou3	tou˨˩˨	文										
-偷	thau1	tau1	tʰau˧˧											
-透	thau3	tau3	tʰau˨˩˨											
-頭	thau5	tau5	tʰau˥˥											
-投	tau5	dau5	tau˥˥											
-豆	tau7	dau7	tau˧˩											
-逗	tau7	dau7	tau˧˩											
+偷	thau1	tao1	tʰau˧˧											
+透	thau3	tao3	tʰau˨˩˨											
+頭	thau5	tao5	tʰau˥˥											
+投	tau5	dao5	tau˥˥											
+豆	tau7	dao7	tau˧˩											
+逗	tau7	dao7	tau˧˩											
 耨	no3	no3	no˨˩˨											
-耨	nau7	nau7	nau˧˩	文										
+耨	nau7	nao7	nau˧˩	文										
 耨	dziok8	riog8	dziok˥˦	又										
-樓	lau5	lau5	lau˥˥											
+樓	lau5	lao5	lau˥˥											
 摟	lou2	lou2	lou˥˨											
-簍	lau2	lau2	lau˥˨											
-漏	lau7	lau7	lau˧˩											
-漏	lau3	lau3	lau˨˩˨	又										
+簍	lau2	lao2	lau˥˨											
+漏	lau7	lao7	lau˧˩											
+漏	lau3	lao3	lau˨˩˨	又										
 陋	lou6	lou6	lou˧˥											
-走	tsau2	zau2	tsau˥˨											
-奏	tsau3	zau3	tsau˨˩˨											
+走	tsau2	zao2	tsau˥˨											
+奏	tsau3	zao3	tsau˨˩˨											
 湊	tshou3	cou3	tsʰou˨˩˨											
 叟	sou2	sou2	sou˥˨											
-嗽	sau3	sau3	sau˨˩˨											
-勾	kau1	gau1	kau˧˧											
-鉤	kau1	gau1	kau˧˧											
-溝	kau1	gau1	kau˧˧											
-狗	kau2	gau2	kau˥˨											
+嗽	sau3	sao3	sau˨˩˨											
+勾	kau1	gao1	kau˧˧											
+鉤	kau1	gao1	kau˧˧											
+溝	kau1	gao1	kau˧˧											
+狗	kau2	gao2	kau˥˨											
 苟	kou2	gou2	kou˥˨											
-垢	kau2	gau2	kau˥˨											
+垢	kau2	gao2	kau˥˨											
 垢	kou3	gou3	kou˨˩˨	文										
 彀	kou3	gou3	kou˨˩˨											
-夠	kau3	gau3	kau˨˩˨											
+夠	kau3	gao3	kau˨˩˨											
 夠	kou3	gou3	kou˨˩˨	文										
 構	kou3	gou3	kou˨˩˨											
 購	kou3	gou3	kou˨˩˨											
 媾	kou3	gou3	kou˨˩˨											
-摳	khau1	kau1	kʰau˧˧											
-口	khau2	kau2	kʰau˥˨											
+摳	khau1	kao1	kʰau˧˧											
+口	khau2	kao2	kʰau˥˨											
 叩	kha3	ka3	kʰa˨˩˨											
-叩	khau3	kau3	kʰau˨˩˨	文										
+叩	khau3	kao3	kʰau˨˩˨	文										
 扣	kha3	ka3	kʰa˨˩˨											
-扣	khau3	kau3	kʰau˨˩˨	文										
+扣	khau3	kao3	kʰau˨˩˨	文										
+寇	khau3	kao3	kʰau˨˩˨	白										
 寇	khou3	kou3	kʰou˨˩˨											
-藕	kau6	gau6	kau˧˥											
+藕	kau6	gao6	kau˧˥											
 偶	ngou2	ngou2	ŋou˥˨											
-吼	hau2	hau2	hau˥˨											
+吼	hau2	hao2	hau˥˨											
 蔻	khou3	kou3	kʰou˨˩˨											
-侯	kau5	gau5	kau˥˥											
-侯	hau7	hau7	hau˧˩	又										
+侯	kau5	gao5	kau˥˥											
+侯	hau7	hao7	hau˧˩	又										
 侯	hou5	hou5	hou˥˥	文，姓氏										
-喉	au5	au5	au˥˥											
-猴	kau5	gau5	kau˥˥											
-後	au6	au6	au˧˥											
-後	hau6	hau6	hau˧˥	~生										
+喉	au5	ao5	au˥˥											
+猴	kau5	gao5	kau˥˥											
+後	au6	ao6	au˧˥											
+後	hau6	hao6	hau˧˥	~生										
 后	hou6	hou6	hou˧˥											
-厚	kau6	gau6	kau˧˥											
-候	hau7	hau7	hau˧˩											
-謳	au1	au1	au˧˧											
-歐	au1	au1	au˧˧											
-鷗	au1	au1	au˧˧											
+厚	kau6	gao6	kau˧˥											
+候	hau7	hao7	hau˧˩											
+謳	au1	ao1	au˧˧											
+歐	au1	ao1	au˧˧											
+鷗	au1	ao1	au˧˧											
 鷗	ou1	ou1	ou˧˧	文，汕頭~汀										
-區	au1	au1	au˧˧											
-嘔	au2	au2	au˥˨											
-毆	au1	au1	au˧˧											
-毆	au2	au2	au˥˨	又										
-漚	au3	au3	au˨˩˨											
-漚	au1	au1	au˧˧	又										
-慪	au1	au1	au˧˧											
+區	au1	ao1	au˧˧											
+嘔	au2	ao2	au˥˨											
+毆	au1	ao1	au˧˧											
+毆	au2	ao2	au˥˨	又										
+漚	au3	ao3	au˨˩˨											
+漚	au1	ao1	au˧˧	又										
+慪	au1	ao1	au˧˧											
 否	hounn2	houn2	hou ̃˥˨											
 富	pu3	bu3	pu˨˩˨											
 副	hu3	hu3	hu˨˩˨											
 浮	phu5	pu5	pʰu˥˥											
 阜	hu6	hu6	hu˧˥											
 負	hu6	hu6	hu˧˥											
+婦	pu6	bu6	pu˧˥	白，新~										
 婦	hu6	hu6	hu˧˥											
-複	hok7	hog4	hok˨											
+複	hok4	hog4	hok˨											
 謀	mou5	mou5	mou˥˥											
-矛	mau5	mau5	mau˥˥											
+矛	mau5	mao5	mau˥˥											
 眸	mou5	mou5	mou˥˥											
-紐	nau6	nau6	nau˧˥	白										
+紐	nau6	nao6	nau˧˥	白										
 紐	niu2	niu2	niu˥˨											
-扭	nau6	nau6	nau˧˥	白										
+扭	nau6	nao6	nau˧˥	白										
 扭	niu2	niu2	niu˥˨											
-留	lau5	lau5	lau˥˥											
+留	lau5	lao5	lau˥˥											
 留	liu5	liu5	liu˥˥	文										
 榴	liu5	liu5	liu˥˥											
-劉	lau5	lau5	lau˥˥											
-流	lau5	lau5	lau˥˥											
+劉	lau5	lao5	lau˥˥											
+流	lau5	lao5	lau˥˥											
 流	liu5	liu5	liu˥˥	文										
 硫	liu5	liu5	liu˥˥											
 琉	liu5	liu5	liu˥˥											
 柳	liu2	liu2	liu˥˨											
-溜	lau3	lau3	lau˨˩˨	又										
+溜	lau3	lao3	lau˨˩˨	又										
 溜	liu1	liu1	liu˧˧											
 溜	liu3	liu3	liu˨˩˨	文										
 揪	tshiu1	ciu1	tɕʰiu˧˧											
@@ -1818,7 +1829,7 @@
 囚	tshiu5	ciu5	tɕʰiu˥˥											
 袖	siu3	siu3	ɕiu˨˩˨											
 肘	tiu2	diu2	tiu˥˨											
-晝	tau3	dau3	tau˨˩˨	白										
+晝	tau3	dao3	tau˨˩˨	白										
 晝	tiu6	diu6	tiu˧˥											
 抽	thiu1	tiu1	tʰiu˧˧											
 丑	thiu2	tiu2	tʰiu˥˨											
@@ -1828,19 +1839,19 @@
 紂	tiu6	diu6	tiu˧˥											
 宙	tiu6	diu6	tiu˧˥											
 鄒	tsou1	zou1	tsou˧˧											
-皺	niau3	niau3	niau˨˩˨											
+皺	niau3	niao3	niau˨˩˨											
 皺	tsou3	zou3	tsou˨˩˨	文										
-縐	niau3	niau3	niau˨˩˨											
-縐	dziau3	riau3	dziau˨˩˨											
+縐	niau3	niao3	niau˨˩˨											
+縐	dziau3	riao3	dziau˨˩˨											
 愁	tshou5	cou5	tsʰou˥˥											
 驟	tsou6	zou6	tsou˧˥											
-餿	siau1	siau1	ɕiau˧˧											
-搜	siau1	siau1	ɕiau˧˧											
-颼	siau1	siau1	ɕiau˧˧											
+餿	siau1	siao1	ɕiau˧˧											
+搜	siau1	siao1	ɕiau˧˧											
+颼	siau1	siao1	ɕiau˧˧											
 颼	sou1	sou1	sou˧˧	文										
 瘦	sang2	sang2	saŋ˥˨	訓										
 瘦	sou2	sou2	sou˥˨											
-漱	sok7	sog4	sok˨	又										
+漱	sok4	sog4	sok˨	又										
 漱	tshiu3	ciu3	tɕʰiu˨˩˨											
 周	tsiu1	ziu1	tɕiu˧˧											
 舟	tsiu1	ziu1	tɕiu˧˧											
@@ -1850,8 +1861,8 @@
 咒	tsiu3	ziu3	tɕiu˨˩˨											
 醜	tshiu2	ciu2	tɕʰiu˥˨	又										
 醜	thiu2	tiu2	tʰiu˥˨											
-臭	tshau3	cau3	tsʰau˨˩˨											
-臭	hiu3	hiun3	hiu ̃˨˩˨											
+臭	tshau3	cao3	tsʰau˨˩˨											
+臭	hiunn3	hiun3	hiu ̃˨˩˨											
 收	siu1	siu1	ɕiu˧˧											
 手	tshiu2	ciu2	tɕʰiu˥˨											
 首	siu2	siu2	ɕiu˥˨											
@@ -1866,8 +1877,8 @@
 柔	dziu5	riu5	dziu˥˥											
 揉	dziu5	riu5	dziu˥˥											
 鳩	kiu1	giu1	kiu˧˧											
-鬮	kau1	gau1	kau˧˧											
-九	kau2	gau2	kau˥˨											
+鬮	kau1	gao1	kau˧˧											
+九	kau2	gao2	kau˥˨											
 九	kiu2	giu2	kiu˥˨	文										
 久	ku2	gu2	ku˥˨											
 韭	ku2	gu2	ku˥˨											
@@ -1912,6 +1923,7 @@
 柚	iu7	iu7	iu˧˩											
 彪	piu1	biu1	piu˧˧											
 謬	miu6	miu6	miu˧˥											
+謬	niu6	niu6	niu˧˥	又										
 丟	tiu1	diu1	tiu˧˧											
 糾	kiu6	giu6	kiu˧˥											
 幽	hiunn1	hiun1	hiu ̃˧˧											
@@ -2059,7 +2071,7 @@
 嚴	ngiam5	ngiam5	ŋiam˥˥											
 儼	ngiam2	ngiam2	ŋiam˥˨											
 釅	ngiam5	ngiam5	ŋiam˥˥											
-鍁	hurng1	heng1	hɯŋ˧˧											
+鍁	hɯng1	heng1	hɯŋ˧˧											
 鍁	hiang1	hiang1	hiaŋ˧˧	又										
 崦	iam1	iam1	iam˧˧											
 掂	tiam1	diam1	tiam˧˧											
@@ -2087,79 +2099,79 @@
 範	huang6	huang6	huaŋ˧˥											
 犯	huang6	huang6	huaŋ˧˥											
 梵	huang6	huang6	huaŋ˧˥											
-答	tap7	dab4	tap˨											
-搭	tah7	dah4	taʔ˨											
+答	tap4	dab4	tap˨											
+搭	tah4	dah4	taʔ˨											
 踏	tah8	dah8	taʔ˥˦											
 納	nap8	nab8	nap˥˦											
 拉	la1	la1	la˧˧											
 雜	tsap8	zab8	tsap˥˦											
-蛤	kap7	gab4	kap˨											
-鴿	kap7	gab4	kap˨											
-喝	huah7	huah4	huaʔ˨											
-喝	uah7	uah4	uaʔ˨	又										
-喝	tuah7	duah4	tuaʔ˨	俗										
-喝	hak7	hag4	hak˨	文，~彩										
+蛤	kap4	gab4	kap˨											
+鴿	kap4	gab4	kap˨											
+喝	huah4	huah4	huaʔ˨											
+喝	uah4	uah4	uaʔ˨	又										
+喝	tuah4	duah4	tuaʔ˨	俗										
+喝	hak4	hag4	hak˨	文，~彩										
 合	hah8	hah8	haʔ˥˦											
 合	hap8	hab8	hap˥˦	文										
 盒	ap8	ab8	ap˥˦											
-榻	thap7	tab4	tʰap˨											
-塔	thah7	tah4	tʰaʔ˨											
+榻	thap4	tab4	tʰap˨											
+塔	thah4	tah4	tʰaʔ˨											
 塌	thap8	tab8	tʰap˥˦											
 臘	lah8	lah8	laʔ˥˦											
 蠟	lah8	lah8	laʔ˥˦											
 鑞	lah8	lah8	laʔ˥˦											
-卅	sap7	sab4	sap˨											
-磕	khap7	kab4	kʰap˨											
-盍	khap7	kab4	kʰap˨											
-盍	hap7	hab4	hap˨											
-劄	tsap7	zab4	tsap˨											
-眨	tsap7	zab4	tsap˨											
-插	tshah7	cah4	tsʰaʔ˨											
-插	tshap7	cab4	tsʰap˨	又										
+卅	sap4	sab4	sap˨											
+磕	khap4	kab4	kʰap˨											
+盍	khap4	kab4	kʰap˨											
+盍	hap4	hab4	hap˨											
+劄	tsap4	zab4	tsap˨											
+眨	tsap4	zab4	tsap˨											
+插	tshah4	cah4	tsʰaʔ˨											
+插	tshap4	cab4	tsʰap˨	又										
 閘	tsah8	zah8	tsaʔ˥˦											
 煠	sah8	sah8	saʔ˥˦											
-霎	siap7	siab4	ɕiap˨											
-夾	koih7	goih4	koiʔ˨											
+霎	siap4	siab4	ɕiap˨											
+夾	koih4	goih4	koiʔ˨											
 夾	koih8	goih8	koiʔ˥˦	又										
 夾	kiap8	giab8	kiap˥˦	文										
-袷	koih7	goih4	koiʔ˨											
-恰	khap7	kab4	kʰap˨											
-掐	khap7	kab4	kʰap˨											
+袷	koih4	goih4	koiʔ˨											
+恰	khap4	kab4	kʰap˨											
+掐	khap4	kab4	kʰap˨											
 狹	oih8	oih8	oiʔ˥˦											
 狹	hiap8	hiab8	hiap˥˦	文										
-峽	kiap7	giab4	kiap˨											
+峽	kiap4	giab4	kiap˨											
 峽	kiap8	giab8	kiap˥˦	又										
 峽	hap8	hab8	hap˥˦	又，潮南~山										
 洽	tsiap8	ziab8	tɕiap˥˦											
-甲	kah7	gah4	kaʔ˨											
+甲	kah4	gah4	kaʔ˨											
 匣	ap8	ab8	ap˥˦											
-狎	ap7	ab4	ap˨											
-鴨	ah7	ah4	aʔ˨											
-押	ah7	ah4	aʔ˨											
-壓	iap7	iab4	iap˨											
-聶	niap7	niab4	niap˨											
-鑷	niap7	niab4	niap˨											
+狎	ap4	ab4	ap˨											
+鴨	ah4	ah4	aʔ˨											
+押	ah4	ah4	aʔ˨											
+壓	iap4	iab4	iap˨											
+聶	niap4	niab4	niap˨											
+鑷	niap4	niab4	niap˨											
 獵	lah8	lah8	laʔ˥˦											
-接	tsih7	zih4	tɕiʔ˨											
-接	tsiap7	ziab4	tɕiap˨	文										
-妾	tshiap7	ciab4	tɕʰiap˨											
+接	tsih4	zih4	tɕiʔ˨											
+接	tsiap4	ziab4	tɕiap˨	文										
+妾	tshiap4	ciab4	tɕʰiap˨											
 捷	tsiap8	ziab8	tɕiap˥˦											
-輒	tiak7	diag4	tiak˨											
-摺	tsih7	zih4	tɕiʔ˨											
-摺	dzih7	rih4	dziʔ˨	又										
-攝	niap7	niab4	niap˨											
+輒	tiak4	diag4	tiak˨											
+摺	tsih4	zih4	tɕiʔ˨											
+摺	dzih4	rih4	dziʔ˨	又										
+攝	niap4	niab4	niap˨											
 涉	siap8	siab8	ɕiap˥˦											
-靨	iap7	iab4	iap˨											
+靨	iap4	iab4	iap˨											
 葉	hioh8	hioh8	hioʔ˥˦											
 葉	iap8	iab8	iap˥˦	又，姓氏										
 葉	hiap8	hiab8	hiap˥˦	文										
-燁	iak7	iag4	iak˨											
+燁	iak4	iag4	iak˨											
 劫	kiap8	giab8	kiap˥˦											
-怯	khiap7	kiab4	kʰiap˨											
+怯	khiap4	kiab4	kʰiap˨											
 業	ngiap8	ngiab8	ŋiap˥˦											
 脅	hiap8	hiab8	hiap˥˦											
-貼	thiap7	tiab4	tʰiap˨											
-帖	thiap7	tiab4	tʰiap˨											
+貼	thiap4	tiab4	tʰiap˨											
+帖	thiap4	tiab4	tʰiap˨											
 疊	thah8	tah8	tʰaʔ˥˦											
 疊	thiap8	tiab8	tʰiap˥˦	文										
 牒	tiap8	diab8	tiap˥˦											
@@ -2168,7 +2180,7 @@
 協	hiap8	hiab8	hiap˥˦											
 俠	hiap8	hiab8	hiap˥˦											
 挾	hiap8	hiab8	hiap˥˦											
-法	huak7	huag4	huak˨											
+法	huak4	huag4	huak˨											
 乏	huak8	huag8	huak˥˦											
 乏	hek8	hêg8	hek˥˦	又										
 乏	hak8	hag8	hak˥˦	又										
@@ -2233,32 +2245,32 @@
 淫	im5	im5	im˥˥											
 立	lip8	lib8	lip˥˦											
 粒	liap8	liab8	liap˥˦											
-緝	tsip7	zib4	tɕip˨											
+緝	tsip4	zib4	tɕip˨											
 集	tsip8	zib8	tɕip˥˦											
-輯	tsip7	zib4	tɕip˨											
+輯	tsip4	zib4	tɕip˨											
 習	sip8	sib8	ɕip˥˦											
 襲	sip8	sib8	ɕip˥˦											
 蟄	tek8	dêg8	tek˥˦											
-澀	siap7	siab4	ɕiap˨											
-汁	tsap7	zab4	tsap˨											
-執	tsip7	zib4	tɕip˨											
-濕	tsap7	zab4	tsap˨											
-濕	sip7	sib4	ɕip˨											
+澀	siap4	siab4	ɕiap˨											
+汁	tsap4	zab4	tsap˨											
+執	tsip4	zib4	tɕip˨											
+濕	tsap4	zab4	tsap˨											
+濕	sip4	sib4	ɕip˨											
 十	tsap8	zab8	tsap˥˦											
 什	tsap8	zab8	tsap˥˦	白										
 什	sip8	sib8	ɕip˥˦											
 什	sim5	sim5	ɕim˥˥	又										
 拾	sip8	sib8	ɕip˥˦											
 入	dzip8	rib8	dzip˥˦											
-急	kip7	gib4	kip˨											
-級	khip7	kib4	kʰip˨											
-汲	khip7	kib4	kʰip˨											
-給	kip7	gib4	kip˨											
-泣	khip7	kib4	kʰip˨											
+急	kip4	gib4	kip˨											
+級	khip4	kib4	kʰip˨											
+汲	khip4	kib4	kʰip˨											
+給	kip4	gib4	kip˨											
+泣	khip4	kib4	kʰip˨											
 及	kip8	gib8	kip˥˦											
-吸	khip7	kib4	kʰip˨											
-邑	ip7	ib4	ip˨											
-揖	ip7	ib4	ip˨											
+吸	khip4	kib4	kʰip˨											
+邑	ip4	ib4	ip˨											
+揖	ip4	ib4	ip˨											
 丹	tuann1	duan1	tua ̃˧˧	白，牡~										
 丹	tang1	dang1	taŋ˧˧											
 單	tuann1	duan1	tua ̃˧˧											
@@ -2341,7 +2353,7 @@
 扮	pang3	bang3	paŋ˨˩˨	又										
 盼	phang3	pang3	pʰaŋ˨˩˨											
 瓣	phiang3	piang3	pʰiaŋ˨˩˨											
-瓣	hah7	hah4	haʔ˨	俗										
+瓣	hah4	hah4	haʔ˨	俗										
 辦	phoinn7	poin7	pʰoi ̃˧˩											
 辦	pang7	bang7	paŋ˧˩	文										
 綻	teng6	dêng6	teŋ˧˥											
@@ -2402,7 +2414,7 @@
 綿	miang5	miang5	miaŋ˥˥											
 免	miang2	miang2	miaŋ˥˨											
 勉	miang3	miang3	miaŋ˨˩˨											
-娩	miang7	miang4	miaŋ˨											
+娩	miang4	miang4	miaŋ˨											
 緬	miang5	miang5	miaŋ˥˥											
 面	ming7	ming7	miŋ˧˩											
 麵	minn7	min7	mi ̃˧˩											
@@ -2446,7 +2458,7 @@
 膳	siang6	siang6	ɕiaŋ˧˥											
 擅	siang6	siang6	ɕiaŋ˧˥											
 禪	siang6	siang6	ɕiaŋ˧˥											
-然	ni5	nin1	ni ̃˧˧	白，宽~										
+然	ninn1	nin1	ni ̃˧˧	白，宽~										
 然	dziang5	riang5	dziaŋ˥˥											
 燃	hiann5	hian5	hia ̃˥˥	白										
 燃	dziang5	riang5	dziaŋ˥˥											
@@ -2466,8 +2478,8 @@
 健	kiang6	giang6	kiaŋ˧˥											
 腱	kiang6	giang6	kiaŋ˧˥											
 言	ngang5	ngang5	ŋaŋ˥˥											
-軒	hurng1	heng1	hɯŋ˧˧											
-掀	hurng1	heng1	hɯŋ˧˧											
+軒	hɯng1	heng1	hɯŋ˧˧											
+掀	hɯng1	heng1	hɯŋ˧˧											
 掀	hiang1	hiang1	hiaŋ˧˧	文										
 憲	hiang3	hiang3	hiaŋ˨˩˨											
 獻	hiang3	hiang3	hiaŋ˨˩˨											
@@ -2540,92 +2552,92 @@
 燕	iang3	iang3	iaŋ˨˩˨	文，~窩										
 咽	ing1	ing1	iŋ˧˧											
 咽	iang3	iang3	iaŋ˨˩˨	又										
-咽	iak7	iag4	iak˨	又										
+咽	iak4	iag4	iak˨	又										
 宴	ang3	ang3	aŋ˨˩˨											
-獺	thuah7	tuah4	tʰuaʔ˨											
-達	tak7	dag4	tak˨											
+獺	thuah4	tuah4	tʰuaʔ˨											
+達	tak4	dag4	tak˨											
 捺	nap8	nab8	nap˥˦											
 辣	luah8	luah8	luaʔ˥˦											
-辣	luah7	luah4	luaʔ˨	又										
+辣	luah4	luah4	luaʔ˨	又										
 辣	lah8	lah8	laʔ˥˦	又										
 癩	thai2	tai2	tʰai˥˨	俗										
 癩	nai6	nai6	nai˧˥											
-擦	tshak7	cag4	tsʰak˨											
-撒	suah7	suah4	suaʔ˨											
-撒	sak7	sag4	sak˨	文										
-薩	sak7	sag4	sak˨											
-割	kuah7	guah4	kuaʔ˨											
-葛	kuah7	guah4	kuaʔ˨											
-渴	kuah7	guah4	kuaʔ˨											
-喝	huah7	huah4	huaʔ˨											
-曷	hak7	hag4	hak˨											
-八	poih7	boih4	poiʔ˨											
-八	pah7	bah4	paʔ˨	文										
+擦	tshak4	cag4	tsʰak˨											
+撒	suah4	suah4	suaʔ˨											
+撒	sak4	sag4	sak˨	文										
+薩	sak4	sag4	sak˨											
+割	kuah4	guah4	kuaʔ˨											
+葛	kuah4	guah4	kuaʔ˨											
+渴	kuah4	guah4	kuaʔ˨											
+喝	huah4	huah4	huaʔ˨											
+曷	hak4	hag4	hak˨											
+八	poih4	boih4	poiʔ˨											
+八	pah4	bah4	paʔ˨	文										
 拔	poih8	boih8	poiʔ˥˦											
-劄	tsak7	zag4	tsak˨											
-扎	tsak7	zag4	tsak˨											
-紮	tsak7	zag4	tsak˨											
-察	tshak7	cag4	tsʰak˨											
-殺	suah7	suah4	suaʔ˨											
-軋	khoih7	koih4	kʰoiʔ˨											
-軋	iak7	iag4	iak˨	又										
-軋	ak7	ag4	ak˨	又										
-軋	tsap7	zab4	tsap˨	又										
-軋	kak7	gag4	kak˨	又										
-鍘	tsak7	zag4	tsak˨											
-瞎	hak7	hag4	hak˨											
-轄	khak7	kag4	kʰak˨											
+劄	tsak4	zag4	tsak˨											
+扎	tsak4	zag4	tsak˨											
+紮	tsak4	zag4	tsak˨											
+察	tshak4	cag4	tsʰak˨											
+殺	suah4	suah4	suaʔ˨											
+軋	khoih4	koih4	kʰoiʔ˨											
+軋	iak4	iag4	iak˨	又										
+軋	ak4	ag4	ak˨	又										
+軋	tsap4	zab4	tsap˨	又										
+軋	kak4	gag4	kak˨	又										
+鍘	tsak4	zag4	tsak˨											
+瞎	hak4	hag4	hak˨											
+轄	khak4	kag4	kʰak˨											
 別	pak8	bag8	pak˥˦	白，~儂										
 別	piak8	biag8	piak˥˦											
-憋	pih7	bih4	piʔ˨											
-鱉	pih7	bih4	piʔ˨											
-別	pak7	bag4	pak˨	又，認識										
+憋	pih4	bih4	piʔ˨											
+鱉	pih4	bih4	piʔ˨											
+別	pak4	bag4	pak˨	又，認識										
 滅	mik8	mig8	mik˥˦											
 滅	miak8	miag8	miak˥˦	文										
 列	liak8	liag8	liak˥˦											
 裂	lih8	lih8	liʔ˥˦											
 烈	liak8	liag8	liak˥˦											
-薛	sih7	sih4	ɕiʔ˨											
+薛	sih4	sih4	ɕiʔ˨											
 褻														
 泄	siap8	siab8	ɕiap˥˦											
-哲	tiak7	diag4	tiak˨											
-徹	thiak7	tiag4	tʰiak˨											
-撤	thiak7	tiag4	tʰiak˨											
-轍	thiak7	tiag4	tʰiak˨											
-折	tsih7	zih4	tɕiʔ˨											
-浙	tsiak7	ziag4	tɕiak˨											
+哲	tiak4	diag4	tiak˨											
+徹	thiak4	tiag4	tʰiak˨											
+撤	thiak4	tiag4	tʰiak˨											
+轍	thiak4	tiag4	tʰiak˨											
+折	tsih4	zih4	tɕiʔ˨											
+浙	tsiak4	ziag4	tɕiak˨											
 舌	tsih8	zih8	tɕiʔ˥˦											
-設	siak7	siag4	ɕiak˨											
+設	siak4	siag4	ɕiak˨											
 折	tsih8	zih8	tɕiʔ˥˦	又										
 熱	dzuah8	ruah8	dzuaʔ˥˦											
 熱	dziak8	riag8	dziak˥˦	文										
-孑	khiak7	kiag4	kʰiak˨											
+孑	khiak4	kiag4	kʰiak˨											
 傑	kiak8	giag8	kiak˥˦											
 孽	ngiak8	ngiag8	ŋiak˥˦											
-揭	kik7	gig4	kik˨	又，~陽										
-揭	kiah7	giah4	kiaʔ˨											
+揭	kik4	gig4	kik˨	又，~陽										
+揭	kiah4	giah4	kiaʔ˨											
 竭	kiak8	giag8	kiak˥˦											
-歇	hiah7	hiah4	hiaʔ˨											
-蠍	hiak7	hiag4	hiak˨											
-蠍	hak7	hag4	hak˨	又										
-謁	hak7	hag4	hak˨											
-撇	phuah7	puah4	pʰuaʔ˨											
-篾	bih7	bhih4	ᵐbiʔ˨											
-鐵	thih7	tih4	tʰiʔ˨											
-迭	tiak7	diag4	tiak˨											
+歇	hiah4	hiah4	hiaʔ˨											
+蠍	hiak4	hiag4	hiak˨											
+蠍	hak4	hag4	hak˨	又										
+謁	hak4	hag4	hak˨											
+撇	phuah4	puah4	pʰuaʔ˨											
+篾	bih4	bhih4	ᵐbiʔ˨											
+鐵	thih4	tih4	tʰiʔ˨											
+迭	tiak4	diag4	tiak˨											
 跌	tiak8	diag8	tiak˥˦											
 捏	niap8	niab8	niap˥˦											
-捏	niap7	niab4	niap˨	又，~造										
-節	tsoih7	zoih4	tsoiʔ˨											
-節	tsak7	zag4	tsak˨	文										
-切	tshiak7	ciag4	tɕʰiak˨											
+捏	niap4	niab4	niap˨	又，~造										
+節	tsoih4	zoih4	tsoiʔ˨											
+節	tsak4	zag4	tsak˨	文										
+切	tshiak4	ciag4	tɕʰiak˨											
 截	tsoih8	zoih8	tsoiʔ˥˦											
-屑	siah7	siah4	ɕiaʔ˨											
-結	kak7	gag4	kak˨											
-結	kiak7	giag4	kiak˨	又										
-結	kik7	gig4	kik˨	又										
-潔	kiak7	giag4	kiak˨											
-噎	ik7	ig4	ik˨											
+屑	siah4	siah4	ɕiaʔ˨											
+結	kak4	gag4	kak˨											
+結	kiak4	giag4	kiak˨	又										
+結	kik4	gig4	kik˨	又										
+潔	kiak4	giag4	kiak˨											
+噎	ik4	ig4	ik˨											
 噎	i3	i3	i˨˩˨	又										
 搬	puann1	buan1	pua ̃˧˧											
 般	puann1	buan1	pua ̃˧˧											
@@ -2672,7 +2684,7 @@
 官	kuann1	guan1	kua ̃˧˧											
 觀	kuang1	guang1	kuaŋ˧˧											
 冠	kuang1	guang1	kuaŋ˧˧											
-管	kurng2	geng2	kɯŋ˥˨	白，氣~										
+管	kɯng2	geng2	kɯŋ˥˨	白，氣~										
 管	kuang2	guang2	kuaŋ˥˨	文										
 館	kuang2	guang2	kuaŋ˥˨											
 冠	kuang3	guang3	kuaŋ˨˩˨	又										
@@ -2706,7 +2718,7 @@
 撰	tsuang6	zuang6	tsuaŋ˧˥											
 閂	tshuann3	cuan3	tsʰua ̃˨˩˨											
 拴	tshuang5	cuang5	tsʰuaŋ˥˥											
-涮	sueh7	suêh4	sueʔ˨	俗										
+涮	sueh4	suêh4	sueʔ˨	俗										
 涮	suang3	suang3	suaŋ˨˩˨											
 關	kuenn1	guên1	kue ̃˧˧	白										
 關	kuang1	guang1	kuaŋ˧˧											
@@ -2748,7 +2760,7 @@
 串	tshuang3	cuang3	tsʰuaŋ˨˩˨											
 船	tsung5	zung5	tsuŋ˥˥											
 軟	nng2	neng2	nŋ˥˨											
-卷	kurng2	geng2	kɯŋ˥˨											
+卷	kɯng2	geng2	kɯŋ˥˨											
 卷	kuang2	guang2	kuaŋ˥˨	文										
 卷	kuang6	guang6	kuaŋ˧˥	又										
 眷	kuang3	guang3	kuaŋ˨˩˨											
@@ -2786,10 +2798,10 @@
 晚	mung2	mung2	muŋ˥˨											
 挽	mang2	mang2	maŋ˥˨											
 萬	buang7	bhuang7	ᵐbuaŋ˧˩											
-萬	bang7	mang7	maŋ˧˩	白，潮陽音										
-勸	khurng3	keng3	kʰŋ˨˩˨											
+萬	mang7	mang7	maŋ˧˩	白，潮陽音										
+勸	khng3	keng3	kʰŋ˨˩˨											
 券	kuang3	guang3	kuaŋ˨˩˨											
-元	ngurng5	ngeng5	ŋɯŋ˥˥	訓“銀”										
+元	ngɯng5	ngeng5	ŋɯŋ˥˥	訓“銀”										
 元	nguang5	nguang5	ŋuaŋ˥˥	文										
 原	nguang5	nguang5	ŋuaŋ˥˥											
 源	nguang5	nguang5	ŋuaŋ˥˥											
@@ -2820,83 +2832,83 @@
 眩	hiang5	hiang5	hiaŋ˥˥	文										
 淵	iang1	iang1	iaŋ˧˧											
 淵	uang1	uang1	uaŋ˧˧	又										
-缽	puah7	buah4	puaʔ˨											
-撥	puah7	buah4	puaʔ˨											
-潑	phuah7	puah4	pʰuaʔ˨											
-潑	phuak7	puag4	pʰuak˨	俗										
+缽	puah4	buah4	puaʔ˨											
+撥	puah4	buah4	puaʔ˨											
+潑	phuah4	puah4	pʰuaʔ˨											
+潑	phuak4	puag4	pʰuak˨	俗										
 鈸	buah8	bhuah8	ᵐbuaʔ˥˦											
 鈸	puak8	buag8	puak˥˦	文										
 跋	puah8	buah8	puaʔ˥˦											
 跋	puak8	buag8	puak˥˦	文										
 末	buah8	bhuah8	ᵐbuaʔ˥˦											
 末	muak8	muag8	muak˥˦	文										
-抹	buah7	bhuah4	ᵐbuaʔ˨											
+抹	buah4	bhuah4	ᵐbuaʔ˨											
 沫	buah8	bhuah8	ᵐbuaʔ˥˦											
 沫	muak8	muag8	muak˥˦	文，郭~若										
 掇	toh8	doh8	toʔ˥˦											
-掇	tshuak7	cuag4	tsʰuak˨	又，俗										
-脫	thuk7	tug4	tʰuk˨											
+掇	tshuak4	cuag4	tsʰuak˨	又，俗										
+脫	thuk4	tug4	tʰuk˨											
 奪	toh8	doh8	toʔ˥˦											
 捋	luk8	lug8	luk˥˦											
-捋	luak7	luag4	luak˨	文										
-撮	tshoh7	coh4	tsʰoʔ˨											
-撮	tshuak7	cuag4	tsʰuak˨	文										
-括	kuak7	guag4	kuak˨											
-闊	khuah7	kuah4	kʰuaʔ˨											
-豁	hak7	hag4	hak˨											
+捋	luak4	luag4	luak˨	文										
+撮	tshoh4	coh4	tsʰoʔ˨											
+撮	tshuak4	cuag4	tsʰuak˨	文										
+括	kuak4	guag4	kuak˨											
+闊	khuah4	kuah4	kʰuaʔ˨											
+豁	hak4	hag4	hak˨											
 活	uah8	uah8	uaʔ˥˦											
-斡	uk7	ug4	uk˨											
-斡	uak7	uag4	uak˨	文										
+斡	uk4	ug4	uk˨											
+斡	uak4	uag4	uak˨	文										
 滑	kuk8	gug8	kuk˥˦											
 猾	kuk8	gug8	kuk˥˦											
 挖	uai1	uai1	uai˧˧											
-刷	sueh7	suêh4	sueʔ˨											
-刮	kueh7	guêh4	kueʔ˨											
-劣	luak7	luag4	luak˨											
+刷	sueh4	suêh4	sueʔ˨											
+刮	kueh4	guêh4	kueʔ˨											
+劣	luak4	luag4	luak˨											
 絕	tsoh8	zoh8	tsoʔ˥˦											
-雪	soh7	soh4	soʔ˨											
-輟	tshuak7	cuag4	tsʰuak˨											
-拙	tshuak7	cuag4	tsʰuak˨											
-說	sueh7	suêh4	sueʔ˨											
+雪	soh4	soh4	soʔ˨											
+輟	tshuak4	cuag4	tsʰuak˨											
+拙	tshuak4	cuag4	tsʰuak˨											
+說	sueh4	suêh4	sueʔ˨											
 悅	dzuak8	ruag8	dzuak˥˦											
-閲	luak7	luag4	luak˨											
-發	huak7	huag4	huak˨											
-髮	huak7	huag4	huak˨											
+閲	luak4	luag4	luak˨											
+發	huak4	huag4	huak˨											
+髮	huak4	huag4	huak˨											
 伐	huak8	huag8	huak˥˦											
 筏	huak8	huag8	huak˥˦											
 罰	huak8	huag8	huak˥˦											
 襪	gueh8	ghuêh8	ᵑɡueʔ˥˦											
-厥	khiak7	kiag4	kʰiak˨											
-孓	khuak7	kuag4	kʰuak˨											
-孓	kuak7	guag4	kuak˨	俗										
-闕	khueh7	kuêh4	kʰueʔ˨											
-闕	khiak7	kiag4	kʰiak˨	文										
+厥	khiak4	kiag4	kʰiak˨											
+孓	khuak4	kuag4	kʰuak˨											
+孓	kuak4	guag4	kuak˨	俗										
+闕	khueh4	kuêh4	kʰueʔ˨											
+闕	khiak4	kiag4	kʰiak˨	文										
 掘	kuk8	gug8	kuk˥˦											
 橛	khek8	kêg8	kʰek˥˦											
 橛	kueh8	guêh8	kueʔ˥˦	又										
-橛	khiak7	kiag4	kʰiak˨	文										
+橛	khiak4	kiag4	kʰiak˨	文										
 月	gueh8	ghuêh8	ᵑɡueʔ˥˦											
-噦	ueh7	uêh4	ueʔ˨											
+噦	ueh4	uêh4	ueʔ˨											
 越	uak8	uag8	uak˥˦											
-曰	iak7	iag4	iak˨											
-曰	uak7	uag4	uak˨	又，白										
+曰	iak4	iag4	iak˨											
+曰	uak4	uag4	uak˨	又，白										
 粵	uak8	uag8	uak˥˦											
-決	kuak7	guag4	kuak˨											
-訣	kuak7	guag4	kuak˨											
-缺	khueh7	kuêh4	kʰueʔ˨											
-缺	khih7	kih4	kʰiʔ˨	又										
-血	hueh7	huêh4	hueʔ˨											
+決	kuak4	guag4	kuak˨											
+訣	kuak4	guag4	kuak˨											
+缺	khueh4	kuêh4	kʰueʔ˨											
+缺	khih4	kih4	kʰiʔ˨	又										
+血	hueh4	huêh4	hueʔ˨											
 穴	huak8	huag8	huak˥˦											
 吞	thung1	tung1	tʰuŋ˧˧											
-根	kurng1	geng1	kɯŋ˧˧											
-跟	kurng1	geng1	kɯŋ˧˧											
-墾	khurng2	keng2	kʰɯŋ˥˨											
-懇	khurng2	keng2	kʰɯŋ˥˨											
-齦	ngurng5	ngeng2	ŋɯŋ˥˨											
+根	kɯng1	geng1	kɯŋ˧˧											
+跟	kɯng1	geng1	kɯŋ˧˧											
+墾	khɯng2	keng2	kʰɯŋ˥˨											
+懇	khɯng2	keng2	kʰɯŋ˥˨											
+齦	ngɯng2	ngeng2	ŋɯŋ˥˨											
 痕	hung5	hung5	huŋ˥˥											
-很	hurng2	heng2	hɯŋ˥˨											
-恨	hurng6	heng6	hɯŋ˧˥											
-恩	urng1	eng1	ɯŋ˧˧											
+很	hɯng2	heng2	hɯŋ˥˨											
+恨	hɯng6	heng6	hɯŋ˧˥											
+恩	ɯng1	eng1	ɯŋ˧˧											
 彬	ping1	bing1	piŋ˧˧											
 賓	ping1	bing1	piŋ˧˧											
 檳	ping1	bing1	piŋ˧˧											
@@ -2966,62 +2978,62 @@
 忍	dzim2	rim2	dzim˥˨											
 認	dzing7	ring7	dziŋ˧˩											
 刃	dzim2	rim2	dzim˥˨											
-巾	kurng1	geng1	kɯŋ˧˧											
+巾	kɯng1	geng1	kɯŋ˧˧											
 緊	king2	ging2	kiŋ˥˨											
-僅	kurng2	geng2	kɯŋ˥˨											
-銀	ngurng5/nging5	ngeng5/nging5	ŋɯŋ˥˥/ŋiŋ˥˥											
+僅	kɯng2	geng2	kɯŋ˥˨											
+銀	ngɯng5/nging5	ngeng5/nging5	ŋɯŋ˥˥/ŋiŋ˥˥											
 釁	hiang3	hiang3	hiaŋ˨˩˨											
 因	ing1	ing1	iŋ˧˧											
 姻	ing1	ing1	iŋ˧˧											
 印	ing3	ing3	iŋ˨˩˨											
 寅	ing5	ing5	iŋ˥˥											
 引	ing2	ing2	iŋ˥˨											
-斤	kurng1	geng1	kɯŋ˧˧											
-筋	kurng1	geng1	kɯŋ˧˧											
-謹	kurng2	geng2	kɯŋ˥˨											
-勤	khurng5	keng5	kʰɯŋ˥˥											
-芹	khurng5	keng5	kʰɯŋ˥˥											
-近	kurng6	geng6	kɯŋ˧˥											
-欣	hurng1	heng1	hɯŋ˧˧											
-殷	hurng1	heng1	hɯŋ˧˧											
-隱	urng2	eng2	ɯŋ˥˨											
+斤	kɯng1	geng1	kɯŋ˧˧											
+筋	kɯng1	geng1	kɯŋ˧˧											
+謹	kɯng2	geng2	kɯŋ˥˨											
+勤	khɯng5	keng5	kʰɯŋ˥˥											
+芹	khɯng5	keng5	kʰɯŋ˥˥											
+近	kɯng6	geng6	kɯŋ˧˥											
+欣	hɯng1	heng1	hɯŋ˧˧											
+殷	hɯng1	heng1	hɯŋ˧˧											
+隱	ɯng2	eng2	ɯŋ˥˨											
 隱	ung2	ung2	uŋ˥˨	又										
 隱	ing2	ing2	iŋ˥˨	又										
-筆	pik7	big4	pik˨											
+筆	pik4	big4	pik˨											
 畢	pik8	big8	pik˥˦											
-畢	pik7	big4	pik˨	又										
-必	pik7	big4	pik˨											
-匹	phik7	pig4	pʰik˨											
+畢	pik4	big4	pik˨	又										
+必	pik4	big4	pik˨											
+匹	phik4	pig4	pʰik˨											
 弼	pik8	big8	pik˥˦											
 密	mik8	mig8	mik˥˦											
 蜜	bik8	bhig8	ᵐbik˥˦											
 昵	nek8	nêg8	nek˥˦											
 栗	lak8	lag8	lak˥˦	白，猴~										
 栗	liak8	liag8	liak˥˦											
-七	tshik7	cig4	tɕʰik˨											
-漆	tshak7	cag4	tsʰak˨											
+七	tshik4	cig4	tɕʰik˨											
+漆	tshak4	cag4	tsʰak˨											
 疾	tsik8	zig8	tɕik˥˦											
-悉	sek7	sêg4	sek˨											
-膝	tshek7	cêg4	tsʰek˨											
-窒	thak7	tag4	tʰak˨	白										
-窒	tiak7	diag4	tiak˨											
-侄	tiak7	diag4	tiak˨											
-秩	tiak7	diag4	tiak˨											
-瑟	sek7	sêg4	sek˨											
-虱	sak7	sag4	sak˨											
-質	tsioh7	zioh4	tɕioʔ˨											
+悉	sek4	sêg4	sek˨											
+膝	tshek4	cêg4	tsʰek˨											
+窒	thak4	tag4	tʰak˨	白										
+窒	tiak4	diag4	tiak˨											
+侄	tiak4	diag4	tiak˨											
+秩	tiak4	diag4	tiak˨											
+瑟	sek4	sêg4	sek˨											
+虱	sak4	sag4	sak˨											
+質	tsioh4	zioh4	tɕioʔ˨											
 實	sik8	sig8	ɕik˥˦											
-失	sik7	sig4	ɕik˨											
-室	sik7	sig4	ɕik˨											
+失	sik4	sig4	ɕik˨											
+室	sik4	sig4	ɕik˨											
 日	dzik8	rig8	dzik˥˦											
-吉	kik7	gig4	kik˨											
-吉	kiak7	giag4	kiak˨	又										
-詰	kiak7	giag4	kiak˨											
-一	ik7	ig4	ik˨											
-乙	ik7	ig4	ik˨											
+吉	kik4	gig4	kik˨											
+吉	kiak4	giag4	kiak˨	又										
+詰	kiak4	giag4	kiak˨											
+一	ik4	ig4	ik˨											
+乙	ik4	ig4	ik˨											
 逸	ek8	êg8	ek˥˦											
-乞	khurh7	keh4	kʰɯʔ˨	白，~伊										
-乞	khurk7	keg4	kʰɯk˨											
+乞	khɯh4/khih4	keh4/kih4	kʰɯʔ˨/kʰiʔ˨	白，~伊										
+乞	khɯk4	keg4	kʰɯk˨											
 奔	pung1	bung1	puŋ˧˧											
 本	pung2	bung2	puŋ˥˨											
 噴	pung3	bung3	puŋ˨˩˨											
@@ -3036,14 +3048,14 @@
 墩	tung1	dung1	tuŋ˧˧											
 頓	tng3	deng3	tŋ˨˩˨											
 頓	tung6	dung6	tuŋ˧˥	文										
-頓	tok7	dog4	tok˨	又，冒~單于										
+頓	tok4	dog4	tok˨	又，冒~單于										
 褪	thng3	teng3	tʰŋ˨˩˨											
 褪	tho3	to3	tʰo˨˩˨	又										
 屯	thung5	tung5	tʰuŋ˥˥											
 豚	thung5	tung5	tʰuŋ˥˥											
 飩	thung1	tung1	tʰuŋ˧˧											
 臀	tiang6	diang6	tiaŋ˧˥	俗										
-臀	tau2	dau2	tau˥˨	俗										
+臀	tau2	dao2	tau˥˨	俗										
 臀	thung5	tung5	tʰuŋ˥˥											
 囤	tung1	dung1	tuŋ˧˧											
 囤	tung6	dung6	tuŋ˧˥											
@@ -3110,6 +3122,7 @@
 春	tshung1	cung1	tsʰuŋ˧˧											
 蠢	tshung2	cung2	tsʰuŋ˥˨											
 唇	tung5	dung5	tuŋ˥˥											
+唇	sung5	sung5	suŋ˥˥	文，眼皮										
 盾	tung2	dung2	tuŋ˥˨											
 順	sung6	sung6	suŋ˧˥											
 舜	sung3	sung3	suŋ˨˩˨											
@@ -3119,18 +3132,18 @@
 醇	sung5	sung5	suŋ˥˥											
 潤	dzung6	rung6	dzuŋ˧˥											
 閏	dzung6	rung6	dzuŋ˧˥											
-均	kurng1	geng1	kɯŋ˧˧											
-鈞	kurng1	geng1	kɯŋ˧˧											
+均	kɯng1	geng1	kɯŋ˧˧											
+鈞	kɯng1	geng1	kɯŋ˧˧											
 菌	khung2	kung2	kʰuŋ˥˨											
 窘	khung2	kung2	kʰuŋ˥˨											
-窘	khuk7	kug4	kʰuk˨	又										
+窘	khuk4	kug4	kʰuk˨	又										
 窘	kiong2	giong2	kioŋ˥˨	又										
 隕	ung5	ung5	uŋ˥˥											
 隕	ung6	ung6	uŋ˧˥	又										
 隕	ung7	ung7	uŋ˧˩	又										
 勻	ung5	ung5	uŋ˥˥											
 允	dzung2	rung2	dzuŋ˥˨											
-尹	urng2	eng2	ɯŋ˥˨											
+尹	ɯng2	eng2	ɯŋ˥˨											
 分	pung1	bung1	puŋ˧˧	白										
 分	hung1	hung1	huŋ˧˧											
 粉	hung2	hung2	huŋ˥˨											
@@ -3149,64 +3162,64 @@
 蚊	bung1	bhung1	ᵐbuŋ˧˧											
 聞	bung6	bhung6	ᵐbuŋ˧˥											
 聞	pung6	bung6	puŋ˧˥	新，新~										
-吻	buk7	bhug4	ᵐbuk˨											
-刎	buk7	bhug4	ᵐbuk˨											
+吻	buk4	bhug4	ᵐbuk˨											
+刎	buk4	bhug4	ᵐbuk˨											
 問	mung7	mung7	muŋ˧˩											
 君	kung1	gung1	kuŋ˧˧											
 軍	kung1	gung1	kuŋ˧˧											
 群	khung5	kung5	kʰuŋ˥˥											
 裙	kung5	gung5	kuŋ˥˥											
 郡	kung7	gung7	kuŋ˧˩											
-熏	hurng1	heng1	hɯŋ˧˧											
+熏	hɯng1	heng1	hɯŋ˧˧											
 熏	hung1	hung1	huŋ˧˧	文										
-勛	hurng1	heng1	hɯŋ˧˧											
-薰	hurng1	heng1	hɯŋ˧˧											
+勛	hɯng1	heng1	hɯŋ˧˧											
+薰	hɯng1	heng1	hɯŋ˧˧											
 薰	hung1	hung1	huŋ˧˧	文										
 葷	hung1	hung1	huŋ˧˧											
 訓	hung3	hung3	huŋ˨˩˨											
-熨	uk7	ug4	uk˨											
+熨	uk4	ug4	uk˨											
 雲	hung5	hung5	huŋ˥˥											
 云	ung5	ung5	uŋ˥˥											
 韻	ung7	ung7	uŋ˧˩											
 運	ung7	ung7	uŋ˧˩											
 暈	ung7	ung7	uŋ˧˩											
-不	puk7	bug4	puk˨											
+不	puk4	bug4	puk˨											
 勃	puak8	buag8	puak˥˦											
 脖	puak8	buag8	puak˥˦											
 沒	mok8	mog8	mok˥˦											
 沒	muk8	mug8	muk˥˦											
 突	tuk8	dug8	tuk˥˦											
-卒	tsuk7	zug4	tsuk˨											
+卒	tsuk4	zug4	tsuk˨											
 猝	tsui6	zui6	tsui˧˥											
-骨	kuk7	gug4	kuk˨											
-窟	khuh7	kuh4	kʰuʔ˨											
-窟	khuk7	kug4	kʰuk˨	文										
-忽	huk7	hug4	huk˨											
+骨	kuk4	gug4	kuk˨											
+窟	khuh4	kuh4	kʰuʔ˨											
+窟	khuk4	kug4	kʰuk˨	文										
+忽	huk4	hug4	huk˨											
 核	huk8	hug8	huk˥˦											
 律	luk8	lug8	luk˥˦											
-率	tsuk7	zug4	tsuk˨											
-率	suk7	sug4	suk˨											
+率	tsuk4	zug4	tsuk˨											
+率	suk4	sug4	suk˨											
 卒	tsui6	zui6	tsui˧˥											
-戌	suk7	sug4	suk˨											
-恤	suk7	sug4	suk˨											
-絀	tshuak7	cuag4	tsʰuak˨											
-蟀	suk7	sug4	suk˨											
-出	tshuk7	cug4	tsʰuk˨											
+戌	suk4	sug4	suk˨											
+恤	suk4	sug4	suk˨											
+絀	tshuak4	cuag4	tsʰuak˨											
+蟀	suk4	sug4	suk˨											
+出	tshuk4	cug4	tsʰuk˨											
 術	suk8	sug8	suk˥˦											
 述	suk8	sug8	suk˥˦											
 秫	tsuk8	zug8	tsuk˥˦											
-橘	kik7	gig4	kik˨											
-弗	huk7	hug4	huk˨											
-拂	huk7	hug4	huk˨											
+橘	kik4	gig4	kik˨											
+弗	huk4	hug4	huk˨											
+拂	huk4	hug4	huk˨											
 佛	huk8	hug8	huk˥˦											
-物	mih6	mih4	miʔ˨	又，~個										
+物	mih4	mih4	miʔ˨	又，~個										
 物	mueh8	muêh8	mueʔ˥˦											
 勿	mai3	mai3	mai˨˩˨	訓										
-勿	buk7	bhug4	ᵐbuk˨	文										
-勿	muk7	mug4	muk˨	又										
-屈	khuk7	kug4	kʰuk˨											
+勿	buk4	bhug4	ᵐbuk˨	文										
+勿	muk4	mug4	muk˨	又										
+屈	khuk4	kug4	kʰuk˨											
 掘	kuk8	gug8	kuk˥˦											
-倔	khuk7	kug4	kʰuk˨											
+倔	khuk4	kug4	kʰuk˨											
 氯	lek8	lêg8	lek˥˦											
 幫	pang1	bang1	paŋ˧˧											
 榜	pang2	bang2	paŋ˥˨											
@@ -3267,13 +3280,13 @@
 喪	sang3	sang3	saŋ˨˩˨	文										
 嗓	sng1	seng1	sŋ˧˧											
 嗓	sang2	sang2	saŋ˥˨	文										
-岡	kurng1	geng1	kɯŋ˧˧	白										
+岡	kɯng1	geng1	kɯŋ˧˧	白										
 岡	kang1	gang1	kaŋ˧˧											
 剛	kang1	gang1	kaŋ˧˧											
-鋼	kurng3	geng3	kɯŋ˨˩˨											
-缸	kurng1	geng1	kɯŋ˧˧											
+鋼	kɯng3	geng3	kɯŋ˨˩˨											
+缸	kɯng1	geng1	kɯŋ˧˧											
 綱	kang1	gang1	kaŋ˧˧											
-崗	kurng1	geng1	kɯŋ˧˧											
+崗	kɯng1	geng1	kɯŋ˧˧											
 崗	kang1	gang1	kaŋ˧˧	文										
 康	khang1	kang1	kʰaŋ˧˧											
 糠	khang1	kang1	kʰaŋ˧˧											
@@ -3312,7 +3325,7 @@
 獎	tsiang3	ziang3	tɕiaŋ˨˩˨											
 將	tsiang3	ziang3	tɕiaŋ˨˩˨											
 醬	tsionn3	zion3	tɕio ̃˨˩˨											
-嗆	tshoh7	coh4	tsʰoʔ˨	白										
+嗆	tshoh4	coh4	tsʰoʔ˨	白										
 槍	tshionn1	cion1	tɕʰio ̃˧˧											
 搶	tshionn2	cion2	tɕʰio ̃˥˨											
 牆	tshionn5	cion5	tɕʰio ̃˥˥											
@@ -3429,9 +3442,10 @@
 向	hiann3	hian3	hia ̃˨˩˨	白										
 向	niann3	nian3	nia ̃˨˩˨	又										
 向	hiang3	hiang3	hiaŋ˨˩˨	文										
+央	ng1	ng1	ŋ˧˧	白										
 央	iang1	iang1	iaŋ˧˧											
-秧	ng1	ng1	ŋ˧˧											
-秧	iang1	iang1	iaŋ˧˧											
+秧	ng1	ng1	ŋ˧˧	白										
+秧	iang1	iang1	iaŋ˧˧	文										
 殃	iang1	iang1	iaŋ˧˧											
 羊	ionn5	ion5	io ̃˥˥											
 洋	ionn5	ion5	io ̃˥˥	白										
@@ -3447,7 +3461,7 @@
 癢	iang6	iang6	iaŋ˧˥	文										
 樣	ionn7	ion7	io ̃˧˩											
 恙	iang6	iang6	iaŋ˧˥											
-博	phak7	pag4	pʰak˨											
+博	phak4	pag4	pʰak˨											
 薄	poh8	boh8	poʔ˥˦											
 泊	poh8	boh8	poʔ˥˦											
 莫	mok8	mog8	mok˥˦											
@@ -3455,70 +3469,70 @@
 摸	mou5	mou5	mou˥˥											
 寞	mok8	mog8	mok˥˦											
 幕	mo6	mo6	mo˧˥											
-托	thoh7	toh4	tʰoʔ˨											
+托	thoh4	toh4	tʰoʔ˨											
 鐸	tak8	dag8	tak˥˦											
 踱	tak8	dag8	tak˥˦											
 度	tak8	dag8	tak˥˦											
 諾	nap8	nab8	nap˥˦											
-落	lauh8	lauh8	lauʔ˥˦											
-落	lauh5	lauh5	lauʔ˥˥	又										
+落	lauh8	laoh8	lauʔ˥˦											
+落	lauh5	laoh5	lauʔ˥˥	又										
 落	loh8	loh8	loʔ˥˦	又										
-落	lak7	lag4	lak˨	又，~皮										
+落	lak4	lag4	lak˨	又，~皮										
 落	la6	la6	la˧˥	文，~下										
 洛	lok8	log8	lok˥˦											
 駱	loh8	loh8	loʔ˥˦											
 絡	lok8	log8	lok˥˦											
 酪	lok8	log8	lok˥˦											
-烙	luah7	luah4	luaʔ˨											
+烙	luah4	luah4	luaʔ˨											
 樂	lak8	lag8	lak˥˦											
-作	tsoh7	zoh4	tsoʔ˨	白										
-作	tsak7	zag4	tsak˨											
+作	tsoh4	zoh4	tsoʔ˨	白										
+作	tsak4	zag4	tsak˨											
 鑿	tshak8	cag8	tsʰak˥˦											
 昨	tsa1	za1	tsa˧˧											
-索	soh7	soh4	soʔ˨	白										
-索	sok7	sog4	sok˨											
-各	kak7	gag4	kak˨											
-閣	koh7	goh4	koʔ˨											
-胳	keh7	gêh4	keʔ˨											
+索	soh4	soh4	soʔ˨	白										
+索	sok4	sog4	sok˨											
+各	kak4	gag4	kak˨											
+閣	koh4	goh4	koʔ˨											
+胳	keh4	gêh4	keʔ˨											
 鄂	ngak8	ngag8	ŋak˥˦											
 鱷	ngak8	ngag8	ŋak˥˦											
-壑	hak7	hag4	hak˨											
+壑	hak4	hag4	hak˨											
 鶴	hoh8	hoh8	hoʔ˥˦											
-惡	ak7	ag4	ak˨											
+惡	ak4	ag4	ak˨											
 掠	liah8	liah8	liaʔ˥˦	白，抓										
 掠	liak8	liag8	liak˥˦											
 略	liak8	liag8	liak˥˦											
-爵	tsiak7	ziag4	tɕiak˨											
-雀	tsiauh7	ziauh4	tɕiauʔ˨	白，打麻~										
-雀	tshiak7	ciag4	tɕʰiak˨											
-鵲	tshiak7	ciag4	tɕʰiak˨											
-嚼	tsiak7	ziag4	tɕiak˨											
-削	siah7	siah4	ɕiaʔ˨											
-酌	tiak7	diag4	tiak˨											
-酌	tsiak7	ziag4	tɕiak˨	又										
-綽	tsiak7	ziag4	tɕiak˨											
-綽	tshok7	cog4	tsʰok˨	又										
+爵	tsiak4	ziag4	tɕiak˨											
+雀	tsiauh4	ziaoh4	tɕiauʔ˨	白，打麻~										
+雀	tshiak4	ciag4	tɕʰiak˨											
+鵲	tshiak4	ciag4	tɕʰiak˨											
+嚼	tsiak4	ziag4	tɕiak˨											
+削	siah4	siah4	ɕiaʔ˨											
+酌	tiak4	diag4	tiak˨											
+酌	tsiak4	ziag4	tɕiak˨	又										
+綽	tsiak4	ziag4	tɕiak˨											
+綽	tshok4	cog4	tsʰok˨	又										
 勺	sioh8	sioh8	ɕioʔ˥˦											
-勺	tsiak7	ziag4	tɕiak˨	文										
-芍	tsiak7	ziag4	tɕiak˨											
-芍	tsiak7	ziag4	tɕiak˨	又										
+勺	tsiak4	ziag4	tɕiak˨	文										
+芍	tsiak4	ziag4	tɕiak˨											
+芍	tsiak4	ziag4	tɕiak˨	又										
 若	na7	na7	na˧˩	又										
 若	dzioh8	rioh8	dzioʔ˥˦	白，提问										
 若	dziak8	riag8	dziak˥˦	文										
 弱	dziak8	riag8	dziak˥˦											
-腳	kioh7	gioh4	kioʔ˨											
-腳	kiok7	giog4	kiok˨	文										
-卻	khiak7	kiag4	kʰiak˨											
-虐	ngiak7	ngiag4	ŋiak˨											
-瘧	ngiauh8	ngiauh8	ŋiauʔ˥˦											
-約	ioh7	ioh4	ioʔ˨											
-約	iak7	iag4	iak˨	文										
-鉻	kak7	gag4	kak˨											
-鑰	iak7	iag4	iak˨											
-躍	iak7	iag4	iak˨											
-光	kurng1	geng1	kɯŋ˧˧											
+腳	kioh4	gioh4	kioʔ˨											
+腳	kiok4	giog4	kiok˨	文										
+卻	khiak4	kiag4	kʰiak˨											
+虐	ngiak4	ngiag4	ŋiak˨											
+瘧	ngiauh8	ngiaoh8	ŋiauʔ˥˦											
+約	ioh4	ioh4	ioʔ˨											
+約	iak4	iag4	iak˨	文										
+鉻	kak4	gag4	kak˨											
+鑰	iak4	iag4	iak˨											
+躍	iak4	iag4	iak˨											
+光	kɯng1	geng1	kɯŋ˧˧											
 光	kuang1	guang1	kuaŋ˧˧	文										
-廣	kurng2	geng2	kɯŋ˥˨	白，~州										
+廣	kɯng2	geng2	kɯŋ˥˨	白，~州										
 廣	kuang2	guang2	kuaŋ˥˨											
 曠	khuang3	kuang3	kʰuaŋ˨˩˨											
 荒	hng1	hng1	hŋ˧˧	白										
@@ -3531,6 +3545,8 @@
 蝗	huang5	huang5	huaŋ˥˥											
 皇	uang5	uang5	uaŋ˥˥	白										
 皇	huang5	huang5	huaŋ˥˥											
+凰	uang5	uang5	uaŋ˥˥	白										
+凰	huang5	huang5	huaŋ˥˥											
 汪	uang1	uang1	uaŋ˧˧											
 方	pung1	bung1	puŋ˧˧	白，姓氏										
 方	hng1	hng1	hŋ˧˧	又										
@@ -3570,15 +3586,15 @@
 王	uang5	uang5	uaŋ˥˥											
 往	uang2	uang2	uaŋ˥˨											
 旺	uang6	uang6	uaŋ˧˥											
-郭	kueh7	guêh4	kueʔ˨											
+郭	kueh4	guêh4	kueʔ˨											
 擴	khuang3	kuang3	kʰuaŋ˨˩˨											
-擴	khuak7	kuag4	kʰuak˨	又										
-廓	kuak7	guag4	kuak˨											
-霍	khak7	kag4	kʰak˨											
-藿	khak7	kag4	kʰak˨											
+擴	khuak4	kuag4	kʰuak˨	又										
+廓	kuak4	guag4	kuak˨											
+霍	khak4	kag4	kʰak˨											
+藿	khak4	kag4	kʰak˨											
 鑊	uak8	uag8	uak˥˦											
 縛	pak8	bag8	pak˥˦											
-钁	khiak7	kiag4	kʰiak˨											
+钁	khiak4	kiag4	kʰiak˨											
 邦	pang1	bang1	paŋ˧˧											
 綁	pang2	bang2	paŋ˥˨											
 胖	phuann5	puan5	pʰua ̃˥˥	肥~症										
@@ -3595,7 +3611,7 @@
 雙	sang1	sang1	saŋ˧˧											
 江	kang1	gang1	kaŋ˧˧											
 肛	kang1	gang1	kaŋ˧˧											
-扛	kurng1	geng1	kɯŋ˧˧											
+扛	kɯng1	geng1	kɯŋ˧˧											
 講	kang2	gang2	kaŋ˥˨											
 港	kang2	gang2	kaŋ˥˨											
 耩	kang2	gang2	kaŋ˥˨											
@@ -3606,34 +3622,34 @@
 降	hang5	hang5	haŋ˥˥											
 項	hang6	hang6	haŋ˧˥											
 巷	hang7	hang7	haŋ˧˩											
-剝	pak7	bag4	pak˨											
-駁	poh7	boh4	poʔ˨											
-璞	phok7	pog4	pʰok˨											
-雹	phak7	pag4	pʰak˨											
+剝	pak4	bag4	pak˨											
+駁	poh4	boh4	poʔ˨											
+璞	phok4	pog4	pʰok˨											
+雹	phak4	pag4	pʰak˨											
 卓	toh8	doh8	toʔ˥˦											
-桌	toh7	doh4	toʔ˨											
-琢	toh7	doh4	toʔ˨											
-啄	toh7	doh4	toʔ˨											
+桌	toh4	doh4	toʔ˨											
+琢	toh4	doh4	toʔ˨											
+啄	toh4	doh4	toʔ˨											
 戳	tuh8	duh8	tuʔ˥˦											
 濁	tsuak8	zuag8	tsuak˥˦											
 濯	tek8	dêg8	tek˥˦											
 濯	tsuak8	zuag8	tsuak˥˦											
-捉	tshok7	cog4	tsʰok˨											
-鐲	tshok7	cog4	tsʰok˨											
+捉	tshok4	cog4	tsʰok˨											
+鐲	tshok4	cog4	tsʰok˨											
 鐲	tsuak8	zuag8	tsuak˥˦	又										
-朔	suak7	suag4	suak˨											
-朔	sok7	sog4	sok˨	又										
-覺	kak7	gag4	kak˨											
-角	kak7	gag4	kak˨											
-餃	kiau2	giau2	kiau˥˨											
-確	khak7	kag4	kʰak˨											
-殼	khak7	kag4	kʰak˨											
+朔	suak4	suag4	suak˨											
+朔	sok4	sog4	sok˨	又										
+覺	kak4	gag4	kak˨											
+角	kak4	gag4	kak˨											
+餃	kiau2	giao2	kiau˥˨											
+確	khak4	kag4	kʰak˨											
+殼	khak4	kag4	kʰak˨											
 嶽	ngak8	ngag8	ŋak˥˦											
-樂	gauh8	ghauh8	ᵑɡauʔ˥˦											
+樂	gauh8	ghaoh8	ᵑɡauʔ˥˦											
 樂	lak8	lag8	lak˥˦	又										
 學	oh8	oh8	oʔ˥˦											
 學	hak8	hag8	hak˥˦	文										
-握	ok7	og4	ok˨											
+握	ok4	og4	ok˨											
 崩	pong1	bong1	poŋ˧˧											
 朋	pheng5	pêng5	pʰeŋ˥˥											
 登	teng1	dêng1	teŋ˧˧											
@@ -3701,70 +3717,70 @@
 應	eng3	êng3	eŋ˨˩˨	文										
 蠅	sing5	sing5	ɕiŋ˥˥											
 孕	heng6	hêng6	heŋ˧˥											
-北	pak7	bag4	pak˨											
+北	pak4	bag4	pak˨											
 墨	bak8	bhag8	ᵐbak˥˦											
 万	mok8	mog8	mok˥˦	姓氏										
 默	mik8	mig8	mik˥˦											
 默	mek8	mêg8	mek˥˦	又										
-德	tek7	dêg4	tek˨											
-得	tik7	dig4	tik˨											
-忒	tek7	dêg4	tek˨											
+德	tek4	dêg4	tek˨											
+得	tik4	dig4	tik˨											
+忒	tek4	dêg4	tek˨											
 特	tek8	dêg8	tek˥˦											
 肋	lek8	lêg8	lek˥˦											
 勒	lek8	lêg8	lek˥˦											
 勒	tek8	dêg8	tek˥˦	又，彌~佛										
-則	tsek7	zêg4	tsek˨											
+則	tsek4	zêg4	tsek˨											
 賊	tshak8	cag8	tsʰak˥˦											
-塞	sak7	sag4	sak˨											
-刻	khak7	kag4	kʰak˨											
-刻	khek7	kêg4	kʰek˨	文										
-克	khiok7	kiog4	kʰiok˨											
-黑	hek7	hêg4	hek˨											
-逼	pek7	bêg4	pek˨											
+塞	sak4	sag4	sak˨											
+刻	khak4	kag4	kʰak˨											
+刻	khek4	kêg4	kʰek˨	文										
+克	khiok4	kiog4	kʰiok˨											
+黑	hek4	hêg4	hek˨											
+逼	pek4	bêg4	pek˨											
 匿	nek8	nêg8	nek˥˦											
 力	lak8	lag8	lak˥˦											
-即	tsiak7	ziag4	tɕiak˨											
-鯽	tsik7	zig4	tɕik˨											
-稷	tsek7	zêg4	tsek˨											
-息	sek7	sêg4	sek˨											
-熄	sek7	sêg4	sek˨											
-媳	sek7	sêg4	sek˨											
-飭	thek7	têg4	tʰek˨											
+即	tsiak4	ziag4	tɕiak˨											
+鯽	tsik4	zig4	tɕik˨											
+稷	tsek4	zêg4	tsek˨											
+息	sek4	sêg4	sek˨											
+熄	sek4	sêg4	sek˨											
+媳	sek4	sêg4	sek˨											
+飭	thek4	têg4	tʰek˨											
 直	tik8	dig8	tik˥˦											
 值	tak8	dag8	tak˥˦											
 值	tek8	dêg8	tek˥˦	文										
-側	tshek7	cêg4	tsʰek˨											
-測	tshek7	cêg4	tsʰek˨											
-惻	tshek7	cêg4	tsʰek˨											
-色	sek7	sêg4	sek˨											
-織	tsik7	zig4	tɕik˨											
-職	tseh7	zêh4	tseʔ˨											
-食	tsiah7	ziah4	tɕiaʔ˨											
+側	tshek4	cêg4	tsʰek˨											
+測	tshek4	cêg4	tsʰek˨											
+惻	tshek4	cêg4	tsʰek˨											
+色	sek4	sêg4	sek˨											
+織	tsik4	zig4	tɕik˨											
+職	tseh4	zêh4	tseʔ˨											
+食	tsiah4	ziah4	tɕiaʔ˨											
 食	sik8	sig8	ɕik˥˦	又，火~										
 蝕	sih8	sih8	ɕiʔ˥˦											
-識	sek7	sêg4	sek˨											
-式	sek7	sêg4	sek˨											
-拭	tshik7	cig4	tɕʰik˨											
-拭	sek7	sêg4	sek˨	文										
-飾	sek7	sêg4	sek˨											
-殖	sek7	sêg4	sek˨											
-植	sek7	sêg4	sek˨											
-棘	kek7	gêg4	kek˨											
+識	sek4	sêg4	sek˨											
+式	sek4	sêg4	sek˨											
+拭	tshik4	cig4	tɕʰik˨											
+拭	sek4	sêg4	sek˨	文										
+飾	sek4	sêg4	sek˨											
+殖	sek4	sêg4	sek˨											
+植	sek4	sêg4	sek˨											
+棘	kek4	gêg4	kek˨											
 極	kek8	gêg8	kek˥˦											
 憶	ek8	êg8	ek˥˦	文										
-憶	ek7	êg4	ek˨	又文，記~力										
+憶	ek4	êg4	ek˨	又文，記~力										
 憶	i3	i3	i˨˩˨	又										
 憶	inn3	in3	i ̃˨˩˨	又，~得										
-憶	ik7	ig4	ik˨	白，~得										
+憶	ik4	ig4	ik˨	白，~得										
 億	ek8	êg8	ek˥˦											
-抑	ak7	ag4	ak˨											
+抑	ak4	ag4	ak˨											
 抑	a1	a1	a˧˧	俗										
 弋	ek8	êg8	ek˥˦											
 翼	sik8	sig8	ɕik˥˦											
 翼	iah8	iah8	iaʔ˥˦	又										
 翼	ek8	êg8	ek˥˦	文										
 弘	hong5	hong5	hoŋ˥˥											
-國	kok7	gog4	kok˨											
+國	kok4	gog4	kok˨											
 或	hok8	hog8	hok˥˦											
 惑	hok8	hog8	hok˥˦											
 域	hok8	hog8	hok˥˦											
@@ -3776,7 +3792,7 @@
 盲	mang5	mang5	maŋ˥˥	文										
 猛	menn2	mên2	me ̃˥˨											
 孟	meng6	mêng6	meŋ˧˥											
-打	phah7	pah4	pʰaʔ˨	俗，訓“拍”										
+打	phah4	pah4	pʰaʔ˨	俗，訓“拍”										
 打	ta2	da2	ta˥˨											
 冷	nenn2	nên2	ne ̃˥˨											
 撐	thenn1	tên1	tʰe ̃˧˧											
@@ -3972,77 +3988,76 @@
 刑	heng5	hêng5	heŋ˥˥											
 型	heng5	hêng5	heŋ˥˥											
 形	heng5	hêng5	heŋ˥˥											
-百	peh7	bêh4	peʔ˨											
-柏	peh7	bêh4	peʔ˨											
-伯	peh7	bêh4	peʔ˨											
-迫	pek7	bêg4	pek˨											
-拍	phah7	pah4	pʰaʔ˨											
-珀	phek7	pêg4	pʰek˨											
-魄	phek7	pêg4	pʰek˨											
-魄	thoh7	toh4	tʰoʔ˨	又										
+百	peh4	bêh4	peʔ˨											
+柏	peh4	bêh4	peʔ˨											
+伯	peh4	bêh4	peʔ˨											
+迫	pek4	bêg4	pek˨											
+拍	phah4	pah4	pʰaʔ˨											
+珀	phek4	pêg4	pʰek˨											
+魄	phek4	pêg4	pʰek˨											
+魄	thoh4	toh4	tʰoʔ˨	又										
 白	peh8	bêh8	peʔ˥˦											
 帛	peh8	bêh8	peʔ˥˦											
 陌	mik8	mig8	mik˥˦											
 陌	mek8	mêg8	mek˥˦	文										
-拆	thiah7	tiah4	tʰiaʔ˨											
+拆	thiah4	tiah4	tʰiaʔ˨											
 擇	toh8	doh8	toʔ˥˦											
 澤	tsek8	zêg8	tsek˥˦											
 宅	theh8	têh8	tʰeʔ˥˦											
 窄	tsa3	za3	tsa˨˩˨											
-格	keh7	gêh4	keʔ˨											
-客	kheh7	kêh4	kʰeʔ˨											
-客	khah7	kah4	kʰaʔ˨	又										
+格	keh4	gêh4	keʔ˨											
+客	kheh4	kêh4	kʰeʔ˨											
+客	khah4	kah4	kʰaʔ˨	又										
 咳	ka1	ga1	ka˧˧											
 額	hiah8	hiah8	hiaʔ˥˦											
-赫	heh7	hêh4	heʔ˨											
+赫	heh4	hêh4	heʔ˨											
 麥	beh8	bhêh8	ᵐbeʔ˥˦											
 脈	meh8	mêh8	meʔ˥˦											
-摘	tiah7	diah4	tiaʔ˨											
-責	tseh7	zêh4	tseʔ˨											
-策	tsheh7	cêh4	tsʰeʔ˨											
-冊	tsheh7	cêh4	tsʰeʔ˨											
+摘	tiah4	diah4	tiaʔ˨											
+責	tseh4	zêh4	tseʔ˨											
+策	tsheh4	cêh4	tsʰeʔ˨											
+冊	tsheh4	cêh4	tsʰeʔ˨											
 柵	tsah8	zah8	tsaʔ˥˦											
 柵	sang1	sang1	saŋ˧˧	又										
-革	kek7	gêg4	kek˨											
-隔	keh7	gêh4	keʔ˨											
+革	kek4	gêg4	kek˨											
+隔	keh4	gêh4	keʔ˨											
 核	huk8	hug8	huk˥˦	俗										
-核	hek7	hêg4	hek˨	文										
-厄	eh7	êh4	eʔ˨											
-扼	eh7	êh4	eʔ˨											
-軛	eh7	êh4	eʔ˨											
-碧	phek7	pêg4	pʰek˨											
-戟	kek7	gêg4	kek˨											
-隙	khiah7	kiah4	kʰiaʔ˨											
+核	hek4	hêg4	hek˨	文										
+厄	eh4	êh4	eʔ˨											
+扼	eh4	êh4	eʔ˨											
+軛	eh4	êh4	eʔ˨											
+碧	phek4	pêg4	pʰek˨											
+戟	kek4	gêg4	kek˨											
+隙	khiah4	kiah4	kʰiaʔ˨											
 劇	kiah8	giah8	kiaʔ˥˦											
 屐	kiah8	giah8	kiaʔ˥˦											
 逆	ngek8	ngêg8	ŋek˥˦											
-璧	piah7	biah4	piaʔ˨											
+璧	piah4	biah4	piaʔ˨											
 僻	phiah8	piah8	pʰiaʔ˥˦											
-辟	phek7	pêg4	pʰek˨											
-積	tseh7	zêh4	tseʔ˨											
-積	tsek7	zêg4	tsek˨	文，~惡										
-跡	tsiah7	ziah4	tɕiaʔ˨											
-脊	tsiah7	ziah4	tɕiaʔ˨											
+辟	phek4	pêg4	pʰek˨											
+積	tseh4	zêh4	tseʔ˨											
+積	tsek4	zêg4	tsek˨	文，~惡										
+跡	tsiah4	ziah4	tɕiaʔ˨											
+脊	tsiah4	ziah4	tɕiaʔ˨											
 籍	tsia6	zia6	tɕia˧˥											
-藉	tsiah6	ziah6	tɕiaʔ˧˥											
-昔	sek7	sêg4	sek˨											
-惜	sioh7	sioh4	ɕioʔ˨											
+昔	sek4	sêg4	sek˨											
+惜	sioh4	sioh4	ɕioʔ˨											
 席	tshioh8	cioh8	tɕʰioʔ˥˦											
 席	siah8	siah8	ɕiaʔ˥˦	又，酒~										
-夕	sek7	sêg4	sek˨											
-擲	sek7	sêg4	sek˨											
-只	tsiah7	ziah4	tɕiaʔ˨											
-炙	tshiah7	ciah4	tɕʰiaʔ˨											
-赤	tshiah7	ciah4	tɕʰiaʔ˨											
-斥	tshek7	cêg4	tsʰek˨											
-尺	tshioh7	cioh4	tɕʰioʔ˨											
-射	iah7	iah4	iaʔ˨	通“斁”										
-適	sek7	sêg4	sek˨											
-釋	sek7	sêg4	sek˨											
+夕	sek4	sêg4	sek˨											
+擲	sek4	sêg4	sek˨											
+只	tsiah4	ziah4	tɕiaʔ˨											
+炙	tshiah4	ciah4	tɕʰiaʔ˨											
+赤	tshiah4	ciah4	tɕʰiaʔ˨											
+斥	tshek4	cêg4	tsʰek˨											
+尺	tshioh4	cioh4	tɕʰioʔ˨											
+射	iah4	iah4	iaʔ˨	通“斁”										
+適	sek4	sêg4	sek˨											
+釋	sek4	sêg4	sek˨											
 石	tsioh8	zioh8	tɕioʔ˥˦											
 石	sioh8	sioh8	ɕioʔ˥˦	又，~榴										
-碩	sek7	sêg4	sek˨											
-益	iah7	iah4	iaʔ˨											
+碩	sek4	sêg4	sek˨											
+益	iah4	iah4	iaʔ˨											
 亦	ia7	ia7	ia˧˩	訓“也”										
 亦	ek8	êg8	ek˥˦											
 譯	ek8	êg8	ek˥˦											
@@ -4050,37 +4065,37 @@
 易	ek8	êg8	ek˥˦											
 液	ek8	êg8	ek˥˦											
 腋	ek8	êg8	ek˥˦											
-壁	piah7	biah4	piaʔ˨											
-霹	phek7	pêg4	pʰek˨											
-劈	phek7	pêg4	pʰek˨											
-劈	phoh7	poh4	pʰoʔ˨	又										
+壁	piah4	biah4	piaʔ˨											
+霹	phek4	pêg4	pʰek˨											
+劈	phek4	pêg4	pʰek˨											
+劈	phoh4	poh4	pʰoʔ˨	又										
 覓	mik8	mig8	mik˥˦											
-滴	tih7	dih4	tiʔ˨											
-嫡	tiah7	diah4	tiaʔ˨	白										
+滴	tih4	dih4	tiʔ˨											
+嫡	tiah4	diah4	tiaʔ˨	白										
 嫡	tek8	dêg8	tek˥˦											
 的	tek8	dêg8	tek˥˦											
 的	ti1	di1	ti˧˧	文										
-踢	thak7	tag4	tʰak˨											
-踢	nek7	nêg4	nek˨	俗										
-踢	thek7	têg4	tʰek˨	文										
-剔	thak7	tag4	tʰak˨											
-剔	thek7	têg4	tʰek˨	文										
+踢	thak4	tag4	tʰak˨											
+踢	nek4	nêg4	nek˨	俗										
+踢	thek4	têg4	tʰek˨	文										
+剔	thak4	tag4	tʰak˨											
+剔	thek4	têg4	tʰek˨	文										
 狄	tek8	dêg8	tek˥˦											
 笛	tek8	dêg8	tek˥˦											
 敵	tek8	dêg8	tek˥˦											
-糴	tiah7	diah4	tiaʔ˨											
+糴	tiah4	diah4	tiaʔ˨											
 溺	nek8	nêg8	nek˥˦											
 曆	leh8	lêh8	leʔ˥˦											
 歷	leh8	lêh8	leʔ˥˦											
-績	tseh7	zêh4	tseʔ˨											
-戚	tshek7	cêg4	tsʰek˨											
-寂	sok7	sog4	sok˨											
-錫	siah7	siah4	ɕiaʔ˨											
-析	sek7	sêg4	sek˨											
-擊	khek7	kêg4	kʰek˨											
-激	kek7	gêg4	kek˨											
-喫	ngek7	ngêg4	ŋek˨											
-喫	ngiak7	ngiag4	ŋiak˨	又										
+績	tseh4	zêh4	tseʔ˨											
+戚	tshek4	cêg4	tsʰek˨											
+寂	sok4	sog4	sok˨											
+錫	siah4	siah4	ɕiaʔ˨											
+析	sek4	sêg4	sek˨											
+擊	khek4	kêg4	kʰek˨											
+激	kek4	gêg4	kek˨											
+喫	ngek4	ngêg4	ŋek˨											
+喫	ngiak4	ngiag4	ŋiak˨	又										
 礦	khuang3	kuang3	kʰuaŋ˨˩˨											
 橫	huenn5	huên5	hue ̃˥˥											
 轟	hong1	hong1	hoŋ˧˧											
@@ -4101,7 +4116,7 @@
 螢	eng5	êng5	eŋ˥˥											
 瑩	eng5	êng5	eŋ˥˥											
 迥	kuang2	guang2	kuaŋ˥˨											
-虢	khiak7	kiag4	kʰiak˨											
+虢	khiak4	kiag4	kʰiak˨											
 獲	uak8	uag8	uak˥˦											
 劃	ueh8	uêh8	ueʔ˥˦											
 役	hiah8	hiah8	hiaʔ˥˦	白										
@@ -4192,17 +4207,19 @@
 甕	ang3	ang3	aŋ˨˩˨											
 冬	tang1	dang1	taŋ˧˧											
 統	thong2	tong2	tʰoŋ˥˨											
-農	nong5	nong5	noŋ˥˥											
-農	long5	long5	loŋ˥˥	又										
+農	long5	long5	loŋ˥˥											
+農	nong5	nong5	noŋ˥˥	又										
 膿	lang5	lang5	laŋ˥˥											
 膿	long5	long5	loŋ˥˥	文										
 宗	tsong1	zong1	tsoŋ˧˧											
-松	sang1	sang1	saŋ˧˧											
-松	song1	song1	soŋ˧˧	文										
+鬆	sang1	sang1	saŋ˧˧											
+鬆	song1	song1	soŋ˧˧	文										
 宋	song3	song3	soŋ˨˩˨											
 風	huang1	huang1	huaŋ˧˧											
 風	hong1	hong1	hoŋ˧˧	文										
-瘋	hong1	hong1	hoŋ˧˧											
+楓	pang1	bang1	pang˧˧	白，潮州~溪										
+楓	hong1	hong1	hoŋ˧˧											
+瘋	huang1	huang1	huaŋ˧˧											
 諷	hong3	hong3	hoŋ˨˩˨											
 豐	hong1	hong1	hoŋ˧˧											
 馮	pang5	bang5	paŋ˥˥											
@@ -4229,7 +4246,7 @@
 宮	keng1	gêng1	keŋ˧˧											
 穹	kiong1	giong1	kioŋ˧˧	俗										
 穹	khiong5	kiong5	kʰioŋ˥˥											
-窮	khiau1	kiau1	kʰiau˧˧	訓										
+窮	khiau1	kiao1	kʰiau˧˧	訓										
 窮	khiong5	kiong5	kʰioŋ˥˥											
 熊	him5	him5	him˥˥											
 雄	hiong5	hiong5	hioŋ˥˥											
@@ -4298,47 +4315,47 @@
 湧	eng2	êng2	eŋ˥˨											
 湧	iong2	iong2	ioŋ˥˨	文										
 用	eng7	êng7	eŋ˧˩											
-蔔	pok7	bog4	pok˨											
+蔔	pok4	bog4	pok˨											
 蔔	pok8	bog8	pok˥˦											
-撲	phok7	pog4	pʰok˨											
-僕	phok7	pog4	pʰok˨											
+撲	phok4	pog4	pʰok˨											
+僕	phok4	pog4	pʰok˨											
 僕	pok8	bog8	pok˥˦											
 曝	phak8	pag8	pʰak˥˦											
-曝	pau6	bau6	pau˧˥	又，~光										
+曝	pau6	bao6	pau˧˥	又，~光										
 瀑	phak8	pag8	pʰak˥˦											
 木	bak8	bhag8	ᵐbak˥˦											
 沐	mok8	mog8	mok˥˦											
-禿	thuk7	tug4	tʰuk˨											
-禿	thek7	têg4	tʰek˨											
-禿	thok7	tog4	tʰok˨											
+禿	thuk4	tug4	tʰuk˨											
+禿	thek4	têg4	tʰek˨											
+禿	thok4	tog4	tʰok˨											
 獨	tok8	dog8	tok˥˦											
 讀	thak8	tag8	tʰak˥˦											
-讀	tau7	dau7	tau˧˩											
+讀	tau7	dao7	tau˧˩											
 牘	tok8	dog8	tok˥˦											
 鹿	tek8	dêg8	tek˥˦											
-漉	lok7	log4	lok˨											
+漉	lok4	log4	lok˨											
 祿	lok8	log8	lok˥˦											
 族	tsok8	zog8	tsok˥˦											
-速	sok7	sog4	sok˨											
-穀	kok7	gog4	kok˨											
-哭	khau3	kau3	kʰau˨˩˨	俗										
-哭	khok7	kog4	kʰok˨											
+速	sok4	sog4	sok˨											
+穀	kok4	gog4	kok˨											
+哭	khau3	kao3	kʰau˨˩˨	俗										
+哭	khok4	kog4	kʰok˨											
 斛	hok8	hog8	hok˥˦											
-屋	ok7	og4	ok˨											
-篤	tok7	dog4	tok˨											
-督	tok7	dog4	tok˨											
+屋	ok4	og4	ok˨											
+篤	tok4	dog4	tok˨											
+督	tok4	dog4	tok˨											
 毒	tak8	dag8	tak˥˦											
-酷	khok7	kog4	kʰok˨											
-沃	ak7	ag4	ak˨											
-沃	ok7	og4	ok˨	文										
+酷	khok4	kog4	kʰok˨											
+沃	ak4	ag4	ak˨											
+沃	ok4	og4	ok˨	文										
 沃	o6	o6	o˧˥	又										
 沃	o3	o3	o˨˩˨	又，~爾瑪										
-福	hok7	hog4	hok˨											
-幅	pak7	bag4	pak˨											
-蝠	hok7	hog4	hok˨											
-複	hok7	hog4	hok˨											
+福	hok4	hog4	hok˨											
+幅	pak4	bag4	pak˨											
+蝠	hok4	hog4	hok˨											
+複	hok4	hog4	hok˨											
 複	hok8	hog8	hok˥˦	又										
-腹	pak7	bag4	pak˨											
+腹	pak4	bag4	pak˨											
 覆	hok8	hog8	hok˥˦											
 服	hok8	hog8	hok˥˦											
 伏	hok8	hog8	hok˥˦											
@@ -4351,56 +4368,94 @@
 陸	lek8	lêg8	lek˥˦											
 陸	lok8	log8	lok˥˦	文，海~豐										
 戮	lok8	log8	lok˥˦											
-肅	sok7	sog4	sok˨											
-夙	sok7	sog4	sok˨											
-宿	suah7	suah4	suaʔ˨											
-宿	sok7	sog4	sok˨	文，~命										
-竹	tek7	dêg4	tek˨											
-築	tok7	dog4	tok˨											
-畜	thiok7	tiog4	tʰiok˨											
-搐	thek7	têg4	tʰek˨											
+肅	sok4	sog4	sok˨											
+夙	sok4	sog4	sok˨											
+宿	suah4	suah4	suaʔ˨											
+宿	sok4	sog4	sok˨	文，~命										
+竹	tek4	dêg4	tek˨											
+築	tok4	dog4	tok˨											
+畜	thiok4	tiog4	tʰiok˨											
+搐	thek4	têg4	tʰek˨											
 逐	tok8	dog8	tok˥˦											
 軸	tek8	dêg8	tek˥˦											
-縮	sok7	sog4	sok˨											
-祝	tsok7	zog4	tsok˨											
+縮	sok4	sog4	sok˨											
+祝	tsok4	zog4	tsok˨											
 粥	tsok8	zog8	tsok˥˦											
-叔	tsek7	zêg4	tsek˨											
-叔	sok7	sog4	sok˨	文，李~同										
+叔	tsek4	zêg4	tsek˨											
+叔	sok4	sog4	sok˨	文，李~同										
 熟	sek8	sêg8	sek˥˦											
-淑	sok7	sog4	sok˨											
+淑	sok4	sog4	sok˨											
 肉	nek8	nêg8	nek˥˦											
-肉	bah7	bhah4	ᵐbaʔ˨	訓										
-菊	kek7	gêg4	kek˨											
-畜	thiok7	tiog4	tʰiok˨											
-蓄	thiok7	tiog4	tʰiok˨											
-鬱	hiok7	hiog4	hiok˨											
-鬱	uk7	ug4	uk˨											
+肉	bah4	bhah4	ᵐbaʔ˨	訓										
+菊	kek4	gêg4	kek˨											
+畜	thiok4	tiog4	tʰiok˨											
+蓄	thiok4	tiog4	tʰiok˨											
+鬱	hiok4	hiog4	hiok˨											
+鬱	uk4	ug4	uk˨											
 育	iok8	iog8	iok˥˦											
 綠	lek8	lêg8	lek˥˦											
 錄	lok8	log8	lok˥˦											
-足	tsok7	zog4	tsok˨											
-促	tshok7	cog4	tsʰok˨											
-粟	tshek7	cêg4	tsʰek˨											
+足	tsok4	zog4	tsok˨											
+促	tshok4	cog4	tsʰok˨											
+粟	tshek4	cêg4	tsʰek˨											
 俗	sok8	sog8	sok˥˦											
 續	sok8	sog8	sok˥˦											
-燭	tsek7	zêg4	tsek˨											
-囑	tsok7	zog4	tsok˨											
-觸	tshok7	cog4	tsʰok˨											
+燭	tsek4	zêg4	tsek˨											
+囑	tsok4	zog4	tsok˨											
+觸	tshok4	cog4	tsʰok˨											
 贖	sok8	sog8	sok˥˦											
-束	sok7	sog4	sok˨											
+束	sok4	sog4	sok˨											
 蜀	tsuak8	zuag8	tsuak˥˦											
 蜀	dzuak8	ruag8	dzuak˥˦	又										
 屬	sok8	sog8	sok˥˦											
 辱	dziok8/dzok8	riog8/rog8	dziok˥˦/dzok˥˦											
 褥	dzok8	rog8	dzok˥˦											
 鋦	kek8	gêg8	kek˥˦											
-鞠	kiok7	giog4	kiok˨											
-曲	khek7	kêg4	kʰek˨											
-曲	khiok7	kiog4	kʰiok˨	文										
+鞠	kiok4	giog4	kiok˨											
+曲	khek4	kêg4	kʰek˨											
+曲	khiok4	kiog4	kʰiok˨	文										
 局	kek8	gêg8	kek˥˦											
 玉	gek8	ghêg8	ᵑɡek˥˦											
 獄	gek8	ghêg8	ᵑɡek˥˦											
-旭	hiok7	hiog4	hiok˨											
+旭	hiok4	hiog4	hiok˨											
 浴	ek8	êg8	ek˥˦											
 欲	ainn3	ain3	ai ̃˨˩˨	俗，訓“愛”										
 欲	iok8	iog8	iok˥˦											
+妗	kim6	gim6	kim˧˥	舅媽										
+膦	lang6	lang6	laŋ˧˥	白，男陰										
+癲	tiang1	diang1	tiaŋ˧˧											
+巔	tiang1	diang1	tiaŋ˧˧											
+蟾	siam5	siam5	ɕiam˥˥											
+蜍	su5	su5	su˥˥											
+鑫	him1	him1	him˧˧											
+翕	hoh4	hoh4	hoʔ˨	俗，~相										
+翕	hip4	hib4	hip˨											
+鰻	muann5	mua5	mua ̃˥˥											
+癮	ing2	ing2	iŋ˥˨											
+鯧	tshionn1	cion1	tɕʰio ̃˧˧											
+鯊	sua1	sua1	sua˧˧											
+澳	o3	o3	o˨˩˨											
+瘤	lau5	lao5	lau˥˥	白										
+瘤	liu5	liu5	liu˥˥	文										
+癆	lau5	lao5	lau˥˥											
+朥	la5	la5	la˥˥	俗，豬油										
+褸	lau1	lao1	lau˧˧	風~										
+褸	lu2	lu2	lu˥˨	襤~										
+佬	lau2	lao2	lau˥˨											
+笠	loih8	loih8	loiʔ˥˦											
+嫪	lau7	lao7	lau˧˩											
+毐	ai2	ai2	ai˥˨											
+繆	niu5	niu5	niu˥˥	綢~										
+繆	niu6	niu6	niu˧˥	又，紕~										
+砧	tiam1	diam1	tiam˧˧											
+梟	hiau1	hiao1	hiao˧˧											
+續	sua3	sua3	sua˨˩˨	口										
+焗	kok8	gog8	kok˥˦											
+曱	ka1	ga1	ka˧˧	~甴（蟑螂）										
+甴	tsuah8	zuah8	tsuaʔ˥˦	曱~（蟑螂）										
+骹	kha1	ka1	kʰa˧˧	脚										
+尻	kha1	ka1	kʰa˧˧	~川（屁股）										
+烌	hu1	hu1	hu˧˧											
+儂	nang5	nang5	naŋ˥˥	白，人										
+儂	long5	long5	loŋ˥˥	文										
+怎	tsann3	zan3	tsa ̃˨˩˨											
