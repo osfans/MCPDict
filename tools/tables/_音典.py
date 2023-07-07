@@ -10,7 +10,7 @@ class 表(_表):
 		yb = ""
 		ipa = ""
 		js = ""
-		if name in ("汝城", "瑞安東山", "香港新界", "長壽", "宜章巖泉"):
+		if name in ("汝城", "瑞安東山", "香港新界", "長壽", "宜章巖泉","郴州","樂昌皈塘","嘉禾普滿","尤溪"):
 			hz, yb, js = fs[:3]
 		elif name in ("南通金沙",):
 			hz, js, yb = fs[:3]
@@ -65,6 +65,9 @@ class 表(_表):
 		elif name in ("松陽", "臨海", "泰順羅陽", "雲和", "仙居"):
 			hz, _, sy, sd, js = fs[:5]
 			ipa = sy + sd
+		elif name in ("江門禮樂","江門潮連"):
+			hz, sm, ym, sd, js = fs[:5]
+			ipa = sm + ym + sd
 		elif name in ("瑞安湖嶺",):
 			_, hz, ipa, _, js = fs[:5]
 		elif name in ("湖州",):
@@ -73,6 +76,8 @@ class 表(_表):
 			_, hz, _, ipa, js = fs[:5]
 		elif name in ("鳳凰-新豐","潮州","汕頭"):
 			hz, _, _, ipa, js = fs[:5]
+		elif name in ("雷州",):
+			hz, _, _, _, _, ipa = fs[:6]
 		elif name in ("長泰",):
 			_, sm, ym, sd, hz, js = fs[:6]
 			ipa = sm + ym + sd

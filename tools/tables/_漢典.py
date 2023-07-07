@@ -5,7 +5,10 @@ import re
 
 class 表(_表):
 	def parse(self, fs):
-		if len(fs) > 9:
+		name = str(self)
+		if name == "仙遊":
+			hz, sms, yms, dzs, js = fs[:5]
+		elif len(fs) > 9:
 			hz,_,_,_,_,sms,yms,dzs,_,js = fs[:10]
 		else:
 			hz,_,_,_,sms,yms,dzs,_,js = fs[:9]
