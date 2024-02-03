@@ -9,6 +9,7 @@ from glob import glob
 import inspect
 from openpyxl import load_workbook
 from xlrd import open_workbook
+from docx import Document
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 
@@ -46,7 +47,7 @@ def getSTVariants(level=2):
 	return d
 
 def getTsvName(xls):
-	return re.sub("xlsx?", "tsv", xls)
+	return xls.rsplit(".", 1)[0] + ".tsv"
 
 def isXlsx(fname):
 	return fname.endswith("xlsx")
@@ -54,12 +55,18 @@ def isXlsx(fname):
 def isXls(fname):
 	return fname.endswith("xls") or fname.endswith("xlsx")
 
+def processFs(v):
+	t = type(v)
+	if t is float or t is int: return "%d" % v
+	if v is None: return ""
+	return str(v).strip().replace("\t", " ").replace("\n", " ")
+
 def getXlsxLines(xls):
 	wb = load_workbook(xls, data_only=True)
 	sheet = wb.worksheets[0]
 	lines = list()
 	for row in sheet.rows:
-		fs = [(str(int(j.value)) if type(j.value) is float else str(j.value).strip()) if j.value else "" for j in row[:20]]
+		fs = [processFs(j.value) for j in row[:20]]
 		if any(fs):
 			line = "\t".join(fs) + "\n"
 			lines.append(line)
@@ -71,7 +78,7 @@ def getXlsLines(xls):
 	lines = list()
 	for i in range(sheet.nrows):
 		fs = sheet.row_values(i)
-		fs = [(str(int(j)) if type(j) is float else str(j).strip().replace("\t", "")) if j else "" for j in fs]
+		fs = [processFs(j) for j in fs]
 		if any(fs):
 			line = "\t".join(fs) + "\n"
 			lines.append(line)
@@ -85,6 +92,21 @@ def xls2tsv(xls):
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
 	lines = getXlsxLines(xls) if isXlsx(xls) else getXlsLines(xls)
+	t = open(tsv, "w", encoding="U8")
+	t.writelines(lines)
+	t.close()
+
+def isDocx(fname):
+	return fname.endswith("docx")
+	
+def docx2tsv(doc):
+	tsv = getTsvName(doc)
+	if not os.path.exists(doc): return
+	if os.path.exists(tsv):
+		xtime = os.path.getmtime(doc)
+		ttime = os.path.getmtime(tsv)
+		if ttime >= xtime: return
+	lines = [line.text + "\n" for line in Document(doc).paragraphs]
 	t = open(tsv, "w", encoding="U8")
 	t.writelines(lines)
 	t.close()
@@ -145,6 +167,9 @@ class 表:
 		if isXls(sname):
 			xls2tsv(sname)
 			sname = getTsvName(sname)
+		elif isDocx(sname):
+			docx2tsv(sname)
+			sname = getTsvName(sname)
 		return sname
 
 	def get_fullname(self, name):
@@ -191,7 +216,7 @@ class 表:
 	def normYb(self, yb):
 		if self.isLang() and self.isYb:
 			yb = yb.strip()
-			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("0∅Ø零")
+			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("0∅Ø〇零")
 			yb = yb.lower().replace("g", "ɡ").replace("ʼ", "ʰ")
 			if not yb.startswith("h") and "h" in yb:
 				yb = yb.replace("h", "ʰ")
@@ -351,10 +376,12 @@ class 表:
 			if "/" in sy:
 				return "/".join(map(self.dz2dl, sy.split("/")))
 			sy,dz = self.splitSySd(sy)
-		if not dz or dz == "0": return sy
+		if not dz: return sy
 		dl = ""
 		if dz not in self.toneMaps:
-			if len(dz) == 1:
+			if dz == "0":
+				dl = dz
+			elif len(dz) == 1:
 				dz = dz + dz
 				if dz in self.toneMaps:
 					dl = self.toneMaps[dz]
