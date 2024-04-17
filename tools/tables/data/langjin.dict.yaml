@@ -1,4 +1,4 @@
-﻿# Rime dictionary
+# Rime dictionary
 # encoding: UTF-8 w/o BOM
 #
 # 南京官話拼音〔南京〕
@@ -1617,6 +1617,7 @@ use_preset_vocabulary: true
 番	fang1
 番	fang2
 番	pang1
+番	po2
 碆	bo1
 碆	po2
 玻	bo1
@@ -2264,6 +2265,8 @@ use_preset_vocabulary: true
 叉	chä1	1%
 杈	cha1
 杈	chä4
+差	chä4
+差	chä1
 差	cha1
 差	cha4
 差	cy1
@@ -2337,7 +2340,7 @@ use_preset_vocabulary: true
 奼	du4
 奼	zha4
 姹	cha3
-瘥	cha4
+瘥	chä4
 瘥	co2
 瘥	zie1
 衩	cha4
@@ -3040,6 +3043,7 @@ use_preset_vocabulary: true
 憃	chuang1
 憃	chong1
 𠑙	chong4
+𧘂	chong4
 𪄻	chong1
 尰	shong4
 瘇	shong4
@@ -6644,7 +6648,6 @@ use_preset_vocabulary: true
 氛	fen2
 雰	fen1
 𨷹	fen1
-錀	fen1
 馮	fen2
 馮	pin2
 堸	fen2
@@ -10539,6 +10542,7 @@ use_preset_vocabulary: true
 堯	iao2
 嶢	iao2
 僥	iao2
+僥	jao3
 垚	iao2
 顤	iao2
 顤	iao4
@@ -10595,6 +10599,7 @@ use_preset_vocabulary: true
 磝	iao2
 𢿣	iao2
 𢿣	qao1
+𢿣	qi5
 肴	iao2
 肴	xao2
 餚	iao2
@@ -10633,6 +10638,7 @@ use_preset_vocabulary: true
 𪖐	iou4
 窔	iao4
 𥦒	iao4
+䆞	iao4
 耀	iao4
 曜	iao4
 燿	iao4
@@ -13181,6 +13187,7 @@ use_preset_vocabulary: true
 宭	jüin1
 宭	qüin2
 鮶	jüin1
+錀	jüin1
 僒	jüin4
 㖥	jüin4
 㻒	jüin4
@@ -15438,11 +15445,11 @@ use_preset_vocabulary: true
 溜	liou4
 霤	liou4
 鷚	liou4
-鷚	miao2
+鷚	miou2
 鷚	mou2
 鷚	qou2
-㙀	liou4
-畂	liou4
+㙀	jou4
+畂	jou4
 僇	liou4
 僇	lu5
 廇	liou4
@@ -17044,13 +17051,13 @@ use_preset_vocabulary: true
 命	min4
 詺	min4
 䒌	min4
-繆	miao2
-繆	miao4
+繆	miou2
+繆	miou4
 繆	mou2
 繆	mu5
-䋷	miao2
+䋷	miou2
 䋷	mou2
-謬	miao4
+謬	miou4
 摸	mo1
 摸	mo2
 摸	mo5
@@ -26006,7 +26013,8 @@ use_preset_vocabulary: true
 鷲	ziou4
 㠇	ziou4
 昨	zo5
-昨	zo5
+昨	zo2
+昨	co2
 左	zo3
 左	zo4
 𠂇	zo3
