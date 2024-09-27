@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 32
-
+    compileSdkVersion 35
     defaultConfig {
         applicationId "com.osfans.mcpdict"
         minSdkVersion 24
@@ -41,8 +40,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_22
+        targetCompatibility JavaVersion.VERSION_22
+    }
+    namespace 'com.osfans.mcpdict'
+    buildFeatures {
+        buildConfig true
     }
 }
 
