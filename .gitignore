@@ -12,8 +12,6 @@ build/
 *.xls
 *.xlsx
 *.pdf
-揚州*.tsv
-南通.csv
 __pycache__
 *.doc  
 *.docx  

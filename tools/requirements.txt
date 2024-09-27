@@ -1,0 +1,8 @@
+et-xmlfile==1.1.0
+lxml==5.3.0
+OpenCC==1.1.9
+openpyxl==3.1.5
+pillow==10.4.0
+python-docx==1.1.2
+typing_extensions==4.12.2
+xlrd==2.0.1
