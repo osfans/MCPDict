@@ -15,10 +15,10 @@ class 表(_表):
 				continue
 			if len(fs) != 2: continue
 			sm = fs[0]
-			for sd,hzs in re.findall("\[(\d+)\]([^\[\]]+)", fs[1]):
+			for sd,hzs in re.findall(r"\[(\d+)\]([^\[\]]+)", fs[1]):
 				if sd.isdigit(): sd = sd + "d"
 				yb = sm + ym +sd
-				hzm = re.findall("(.)\d?(\{.*?\})?", hzs)
+				hzm = re.findall(r"(.)\d?(\{.*?\})?", hzs)
 				for hz, m in hzm:
 					js = m.strip("{}")
 					p = f"{yb}=\t{js}"

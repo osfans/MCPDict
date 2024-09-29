@@ -10,18 +10,18 @@ class 表(_表):
 	def format(self, line):
 		name = str(self)
 		if name in ("安澤",):
-			line = re.sub("^(.*?)［", "\\1	［", line)
+			line = re.sub(r"^(.*?)［", "\\1	［", line)
 		elif name in ("寶應望直港","羅山周黨","涇縣茂林","沁源", "同江二屯","象山鶴浦","趙縣"):
-			line = re.sub("^(.*?) ?\[", "\\1	[", line)
+			line = re.sub(r"^(.*?) ?\[", "\\1	[", line)
 		elif name in ("宜昌",):
 			line = line.replace('""	"', '"#')
 		elif name in ("巢湖",):
 			line = line.replace('""	"', '"#').replace("ø","Ø")\
 				.replace("（0）","[0]").replace(")","）").replace("（","｛").replace("）","｝")
 		elif name in ("羅山",):
-			line = re.sub("[:：] ?\[", "	[", line).replace("ø","Ø")
+			line = re.sub(r"[:：] ?\[", "	[", line).replace("ø","Ø")
 		elif name in ("介休張蘭",):
-			line = re.sub("[\[［](\d)[\]］][）)]","\\1)",line)
+			line = re.sub(r"[\[［](\d)[\]］][）)]","\\1)",line)
 		elif name in ("赤壁神山",):
 			line = line.replace("", "ᵑ")
 		elif name in ("羅田大河岸",):
@@ -36,7 +36,7 @@ class 表(_表):
 			line = line.replace("", "Ø").replace("", "")
 			line = re.sub("^(.*?)［", "\\1	［", line)
 		elif name in ("昆明","建水臨安",):
-			line = re.sub("^.*?\t", "", line)
+			line = re.sub(r"^.*?\t", "", line)
 			line = line.replace("(", "{").replace("〔", "{").replace("（","{").replace(")", "}").replace("）", "}")
 		elif name in ("丹鳳","商州","嘉定中","嘉定西","嘉定城","嘉定外","寶山","寶山羅店"):
 			if line.startswith("#"): line = "#"
@@ -57,7 +57,7 @@ class 表(_表):
 			line = self.format(line)
 			if not line: continue
 			line = line.strip().replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？").replace("：[", "	[").replace("{：",'{')
-			line = re.sub("\[(\d+[a-zA-Z]?)\]", "［\\1］",line)
+			line = re.sub(r"\[(\d+[a-zA-Z]?)\]", "［\\1］",line)
 			line = re.sub("［([^0-9]+.*?)］", "[\\1]",line)
 			if "{" not in line and "（" in line:
 				line = line.replace("（","{").replace("）","}")
@@ -73,13 +73,13 @@ class 表(_表):
 					sda = chr(ord('①') + (i - 1))
 					sdb = f"［{i}］"
 					line = line.replace(sda, sdb)
-			if "\t" not in line: line = re.sub("^(.*?)\［", "\\1	［", line)
+			if "\t" not in line: line = re.sub(r"^(.*?)\［", "\\1	［", line)
 			fs = line.split("\t")[:2]
 			if len(fs) != 2: continue
 			sm = fs[0].strip()
-			for sd,hzs in re.findall("［(\d+[a-zA-Z]?)］([^［］]+)", fs[1]):
+			for sd,hzs in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", fs[1]):
 				py = sm + ym +sd
-				hzs = re.findall("(.)\d?([<+\-/=\\\*？$&r]?)\d?(\{.*?\})?", hzs)
+				hzs = re.findall(r"(.)\d?([<+\-/=\\\*？$&r]?)\d?(\{.*?\})?", hzs)
 				for hz, c, js in hzs:
 					if hz == " ": continue
 					p = ""

@@ -11,7 +11,7 @@ class 表(_表):
 		line = line.replace("!{","{(西官陰平借詞)")
 		line = re.sub("(@)(?!{)","{西官陽平借詞}",line)
 		line = line.replace("@{","{(西官陽平借詞)")
-		line = re.sub("(\$)(?!{)","{西官上聲借詞}",line)
+		line = re.sub(r"(\$)(?!{)","{西官上聲借詞}",line)
 		line = line.replace("${","{(西官上聲借詞)")
 		line = re.sub("(%)(?!{)","{西官去聲借詞}",line)
 		line = line.replace("%{","{(西官去聲借詞)")

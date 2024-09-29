@@ -8,7 +8,7 @@ ljsm = {'g': 'k', 'd': 't', '': '', 'sh': 'ʂ', 'c': 'tsʰ', 'b': 'p', 'l': 'l',
 def py2yb(py):
 	py = re.sub("r([1-5])$", "ʅ\\1", py)
 	if py.startswith("ʅ"): py = "r" + py
-	#fs = re.findall("^([^aäüeiouyʅ1-9]+)?(.*)(\d)?$", py)
+	#fs = re.findall(r"^([^aäüeiouyʅ1-9]+)?(.*)(\d)?$", py)
 	sm = py[:2]
 	if sm not in ljsm: sm = py[0]
 	if sm not in ljsm: sm = ""

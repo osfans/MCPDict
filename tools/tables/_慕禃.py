@@ -12,13 +12,13 @@ class 表(_表):
 			if line.startswith("#"):
 				ym = line[1:]
 				continue
-			fs = re.findall("^(.*?)[ø\t ]*([①-⑧])", line)
+			fs = re.findall(r"^(.*?)[ø\t ]*([①-⑧])", line)
 			if not fs: continue
 			sm = fs[0][0]
 			for sd,hzs in re.findall("([①-⑧])([^①-⑧]+)", line):
 				sd = ord(sd) - ord('①') + 1
 				py = sm + ym + str(sd)
-				for c, hz, js in re.findall("([？#\-\+])?(.)(（[^（）]*?（.*?）.*?）|（.*?）)?", hzs):
+				for c, hz, js in re.findall(r"([？#\-\+])?(.)(（[^（）]*?（.*?）.*?）|（.*?）)?", hzs):
 					if hz == " ": continue
 					if js: js = js[1:-1]
 					p = ""

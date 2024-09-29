@@ -9,11 +9,11 @@ class 表(_表):
 	def format(self, line):
 		if " " not in line: return "#"
 		line = line.strip()
-		line = re.sub("<(.*?)>","\\1{讀書音}",line)
-		line = re.sub("\[(.*?)\]","\\1{特殊音}",line)
-		line = re.sub("(.)\*","\\1{海口話影響}",line)
-		line = re.sub("([1-5])", "[\\1]", line)
-		line = re.sub("([ptk]) ", "\\1 [5]", line)
-		line = re.sub("^(.*?)\[", "\\1	[", line)
+		line = re.sub(r"<(.*?)>","\\1{讀書音}",line)
+		line = re.sub(r"\[(.*?)\]","\\1{特殊音}",line)
+		line = re.sub(r"(.)\*","\\1{海口話影響}",line)
+		line = re.sub(r"([1-5])", "[\\1]", line)
+		line = re.sub(r"([ptk]) ", "\\1 [5]", line)
+		line = re.sub(r"^(.*?)\[", "\\1	[", line)
 		line = line.replace(" ", "")
 		return line

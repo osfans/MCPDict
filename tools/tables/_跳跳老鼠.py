@@ -24,7 +24,7 @@ class 表(_表):
 		if sd == "調號": return
 		yb = sy + sd
 		l = list()
-		for hz, c, js in re.findall("(.)([-=]?)(\[[^[]]*?\[[^[]]*?\][^[]]*?\]|\[.*?\])?", hzs):
+		for hz, c, js in re.findall(r"(.)([-=]?)(\[[^[]]*?\[[^[]]*?\][^[]]*?\]|\[.*?\])?", hzs):
 			if js: js = js[1:-1]
 			if hz == "~": hz = "□"
 			l.append((hz, yb + c, js))
