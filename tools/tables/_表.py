@@ -25,7 +25,7 @@ def isHZ(c):
 	c = c.strip()
 	if len(c) != 1: return False
 	n = ord(c)
-	return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<0x31350
+	return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<0x323AF
 
 def getCompatibilityVariants():
 	d = dict()
