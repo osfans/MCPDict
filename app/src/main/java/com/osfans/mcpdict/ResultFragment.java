@@ -327,12 +327,16 @@ public class ResultFragment extends Fragment {
                 "    src: url('file:///android_res/font/ipa.ttf');\n" +
                 "  }\n" +
                 "  @font-face {\n" +
-                "    font-family: hanbcde;\n" +
-                "    src: url('file:///android_res/font/hanbcde.ttf');\n" +
+                "    font-family: p0;\n" +
+                "    src: url('file:///android_res/font/p0.otf');\n" +
                 "  }\n" +
                 "  @font-face {\n" +
-                "    font-family: hanfg;\n" +
-                "    src: url('file:///android_res/font/hanfg.ttf');\n" +
+                "    font-family: p2;\n" +
+                "    src: url('file:///android_res/font/p2.otf');\n" +
+                "  }\n" +
+                "  @font-face {\n" +
+                "    font-family: p3;\n" +
+                "    src: url('file:///android_res/font/p3.otf');\n" +
                 "  }\n" +
                 "  details summary::-webkit-details-marker {display: none}\n" +
                 "  details summary::-moz-list-bullet {font-size: 0}\n" +
@@ -355,9 +359,9 @@ public class ResultFragment extends Fragment {
                 "         font-size: 0.8em;\n" +
                 "      }\n");
         if (Utils.useFontTone()) {
-            sb.append("      body { font-family: tone, hanfg, hanbcde, sans; }\n");
+            sb.append("      body { font-family: tone, p0, p2, p3, sans; }\n");
         } else {
-            sb.append("      body { font-family: ipa, hanfg, hanbcde, sans; }\n");
+            sb.append("      body { font-family: ipa, p0, p2, p3, sans; }\n");
         }
         sb.append(
                 "      .ipa {\n" +

@@ -181,9 +181,11 @@ public class Utils extends Application {
                     Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.tone).build()).build()
                     ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanbcde).build()).build()
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p0).build()).build()
                     ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanfg).build()).build()
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p2).build()).build()
+                    ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p3).build()).build()
                     );
                     tfHanTone = builder.build();
                 }
@@ -193,9 +195,11 @@ public class Utils extends Application {
                     Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.ipa).build()).build()
                     ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanbcde).build()).build()
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p0).build()).build()
                     ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanfg).build()).build()
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p2).build()).build()
+                    ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p3).build()).build()
                     );
                     tfHan = builder.build();
                 }

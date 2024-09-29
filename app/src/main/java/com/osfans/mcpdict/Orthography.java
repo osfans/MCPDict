@@ -148,18 +148,20 @@ public class Orthography {
         private static final Map<Integer,Integer> compatibility = new HashMap<>();
 
         public static boolean isHz(int unicode) {
-            return (unicode >= 0x4E00 && unicode <= 0x9FFF)
-                    || unicode == 0x25A1 //□
+            return unicode == 0x25A1 //□
                     || unicode == 0x3007 //〇
-                    || (unicode >= 0x3400 && unicode <= 0x4DBF)
-                    || (unicode >= 0x20000 && unicode <= 0x2A6DF)
-                    || (unicode >= 0x2A700 && unicode <= 0x2B73F)
-                    || (unicode >= 0x2B740 && unicode <= 0x2B81F)
-                    || (unicode >= 0x2B820 && unicode <= 0x2CEAF)
-                    || (unicode >= 0x2CEB0 && unicode <= 0x2EBEF)
-                    || (unicode >= 0x30000 && unicode <= 0x3134F)
-                    || (unicode >= 0xF900 && unicode <= 0xFAFF)
-                    || (unicode >= 0x2F800 && unicode <= 0x2FA1F);
+                    || (unicode >= 0x4E00 && unicode <= 0x9FFF)   // CJK Unified Ideographs
+                    || (unicode >= 0x3400 && unicode <= 0x4DBF)   // CJK Extension A
+                    || (unicode >= 0x20000 && unicode <= 0x2A6DF) // CJK Extension B
+                    || (unicode >= 0x2A700 && unicode <= 0x2B73F) // CJK Extension C
+                    || (unicode >= 0x2B740 && unicode <= 0x2B81F) // CJK Extension D
+                    || (unicode >= 0x2B820 && unicode <= 0x2CEAF) // CJK Extension E
+                    || (unicode >= 0x2CEB0 && unicode <= 0x2EBEF) // CJK Extension F
+                    || (unicode >= 0x30000 && unicode <= 0x3134F) // CJK Extension G
+                    || (unicode >= 0x31350 && unicode <= 0x323AF) // CJK Extension H
+                    || (unicode >= 0x2EBF0 && unicode <= 0x2EE5F) // CJK Extension I
+                    || (unicode >= 0xF900 && unicode <= 0xFAFF)   // CJK Compatibility Ideographs
+                    || (unicode >= 0x2F800 && unicode <= 0x2FA1F); // CJK Compatibility Ideographs Supplement
         }
 
         public static boolean isHz(String hz) {
@@ -235,6 +237,8 @@ public class Orthography {
             else if (unicode >= 0x2B820 && unicode <= 0x2CEAF) ext = "E";
             else if (unicode >= 0x2CEB0 && unicode <= 0x2EBEF) ext = "F";
             else if (unicode >= 0x30000 && unicode <= 0x3134F) ext = "G";
+            else if (unicode >= 0x31350 && unicode <= 0x323AF) ext = "H";
+            else if (unicode >= 0x2EBF0 && unicode <= 0x2EE5F) ext = "I";
             if (!TextUtils.isEmpty(ext)) ext = "擴" + ext;
             return ext;
         }
