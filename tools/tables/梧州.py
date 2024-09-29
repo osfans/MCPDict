@@ -9,7 +9,7 @@ class 表(_表):
 		if "[" not in fs[0]: return
 		l = list()
 		line = fs[0].replace(" ", "")
-		for yb, hzs in re.findall("\[(.*?)\]([^[]+)", line):
+		for yb, hzs in re.findall(r"\[(.*?)\]([^[]+)", line):
 			yb = self.dz2dl(yb)
 			for hz, js in re.findall("(.)(（.*?）)?", hzs):
 				l.append((hz, yb, js.strip("（）")))

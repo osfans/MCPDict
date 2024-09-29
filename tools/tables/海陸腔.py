@@ -32,7 +32,7 @@ class 表(_表):
 				if len(hz) != 1: continue
 				for i in heteronyms:
 					pys = i["pinyin"]
-					py = re.findall("海⃞(.+?)\\b", pys)
+					py = re.findall(r"海⃞(.+?)\b", pys)
 					if py and py[0]:
 						yb = self.py2yb(py[0]).strip()
 						if yb: d[hz].append(yb)

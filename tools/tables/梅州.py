@@ -11,7 +11,7 @@ class 表(_表):
 			line = fs[0]+"\t"
 			for i in fs[1:]:
 				if i.startswith("["):
-					results = re.findall("^\[(\d+)\](.+)$", i)
+					results = re.findall(r"^\[(\d+)\](.+)$", i)
 					if results:
 						sd,hzs = results[0]
 						sd = "[%s]"%self.toneMaps[sd]

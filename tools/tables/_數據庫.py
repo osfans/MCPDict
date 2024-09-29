@@ -17,7 +17,7 @@ class 表(_表):
 			hz = chr(int(r["unicode"],16))
 			pys = r[self.dbkey]
 			if not pys: continue
-			pys = re.sub("\[\d\]", ",",pys).strip(",")
+			pys = re.sub(r"\[\d\]", ",",pys).strip(",")
 			for py in pys.split(","):
 				py = py.strip()
 				if not py: continue

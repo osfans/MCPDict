@@ -135,7 +135,7 @@ def load():
 		for i,c in enumerate(subcolors):
 			if c and c != "000000" and c != colors[i]:
 				colors[i] += f",{c}"
-		colors = [re.sub("(\w+)", "#\\1", i) for i in colors]
+		colors = [re.sub(r"(\w+)", "#\\1", i) for i in colors]
 		marker_size = "small"
 		if size >= 4: marker_size = "large"
 		elif size == 3: marker_size = "medium"
@@ -211,7 +211,7 @@ def load():
 		if jf:
 			Feature["properties"]["繁簡"] = jf
 		FeatureCollection["features"].append(Feature)
-	json.dump(FeatureCollection, fp=open("../方言.geojson","w",encoding="U8"),ensure_ascii=False,indent=2)
-	json.dump(d, fp=open(tpath,"w",encoding="U8"),ensure_ascii=False,indent=2)
+	json.dump(FeatureCollection, fp=open("../方言.geojson","w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
+	json.dump(d, fp=open(tpath,"w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
 	return d
 

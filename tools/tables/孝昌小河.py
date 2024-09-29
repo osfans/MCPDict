@@ -9,6 +9,6 @@ class 表(_表):
 		yb, hzs = fs[0].split(" ")[:2]
 		yb = self.dz2dl(yb)
 		l = list()
-		for hz, js in re.findall("(.)(\{.*?\})?", hzs):
+		for hz, js in re.findall(r"(.)(\{.*?\})?", hzs):
 			l.append((hz, yb, js))
 		return l

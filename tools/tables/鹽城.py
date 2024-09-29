@@ -19,7 +19,7 @@ class 表(_表):
 		if sd not in "12357": sd = ""
 		ym = py[len(sm):len(py)-len(sd)]
 		yb = self.sms[sm]+self.yms[ym]+sd
-		hzs = re.findall("(.)([+-=*?]?)(\{.*?\})?", hzs)
+		hzs = re.findall(r"(.)([+-=*?]?)(\{.*?\})?", hzs)
 		l = list()
 		for hz, c, js in hzs:
 			p = ""

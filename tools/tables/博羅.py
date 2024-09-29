@@ -18,9 +18,9 @@ class 表(_表):
 			fs = line.split("\t", 1)
 			if len(fs) != 2: continue
 			sm = fs[0].strip("ø ")
-			for sd,hzs in re.findall("［(\d+)］([^［］]+)", fs[1].replace("\t","")):
+			for sd,hzs in re.findall(r"［(\d+)］([^［］]+)", fs[1].replace("\t","")):
 				yb = self.dz2dl(sm + ym, sd)
-				hzs = re.findall("(.)(（[^）]*?（.*?）.*?）|（.*?）)?", hzs)
+				hzs = re.findall(r"(.)(（[^）]*?（.*?）.*?）|（.*?）)?", hzs)
 				for hz, js in hzs:
 					if hz == " ": continue
 					js = js[1:-1]

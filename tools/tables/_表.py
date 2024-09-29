@@ -92,7 +92,7 @@ def xls2tsv(xls):
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
 	lines = getXlsxLines(xls) if isXlsx(xls) else getXlsLines(xls)
-	t = open(tsv, "w", encoding="U8")
+	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.writelines(lines)
 	t.close()
 
@@ -107,7 +107,7 @@ def docx2tsv(doc):
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
 	lines = [line.text + "\n" for line in Document(doc).paragraphs]
-	t = open(tsv, "w", encoding="U8")
+	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.writelines(lines)
 	t.close()
 
@@ -229,7 +229,7 @@ class 表:
 
 	def write(self, d):
 		self.patch(d)
-		t = open(self.tpath, "w",encoding="U8")
+		t = open(self.tpath, "w", encoding="U8", newline="\n")
 		print(f"#漢字\t音標\t解釋", file=t)
 		for hz in sorted(d.keys()):
 			pys = d[hz]
@@ -294,9 +294,9 @@ class 表:
 				if yd and py.count("*") <= 1:
 					js = f"({yd}){js}"
 					py = py[:-1]
-				if re.match("^\([^()]*?\)$", js):
+				if re.match(r"^\([^()]*?\)$", js):
 					js = js[1:-1]
-				syd = re.sub("\(.*?\)","",py).strip(" *|")
+				syd = re.sub(r"\(.*?\)","",py).strip(" *|")
 				if "-" not in syd:
 					self.syds[syd].add(hz)
 				if js: py += "{%s}" % js
