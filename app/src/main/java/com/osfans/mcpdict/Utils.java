@@ -163,7 +163,7 @@ public class Utils extends Application {
         if (TextUtils.isEmpty(s)) return "";
         if (i == COL_SW) s = s.replace("{", "<small>").replace("}", "</small>");
         else if (i == COL_KX) s = s.replaceFirst("^(.*?)(\\d+).(\\d+)", "$1<a href=https://kangxizidian.com/kxhans/" + hz + ">第$2頁第$3字</a>");
-        else if (i == COL_HD) s = s.replaceFirst("(\\d+).(\\d+)", "【汉語大字典】<a href=https://www.homeinmists.com/hd/png/$1.png>第$1頁</a>第$2字");
+        else if (i == COL_HD) s = s.replaceFirst("(\\d+).(\\d+)", "【漢語大字典】<a href=https://www.homeinmists.com/hd/png/$1.png>第$1頁</a>第$2字").replace("lv", "lü").replace("nv", "nü");
         String[] fs = (s + "\n").split("\n", 2);
         String text = String.format("<p><big><big><big>%s</big></big></big> %s</p><br><p>%s</p>", hz, fs[0], fs[1].replace("\n", "<br/>"));
         return HtmlCompat.fromHtml(text, HtmlCompat.FROM_HTML_MODE_COMPACT);
