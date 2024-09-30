@@ -41,6 +41,7 @@ public class DB extends SQLiteAssetHelper {
     public static final String LF = "兩分";
     public static final String WBH = "五筆畫";
     public static final String VA = "異體字";
+    public static final String VS = "變體";
     public static final String FL = "分類";
 
     public static final String MAP = " \uD83C\uDF0F ";
@@ -85,6 +86,7 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_LF;
     public static int COL_WBH;
     public static int COL_VA;
+    public static int COL_VS;
     public static int COL_LAST_LANG;
 
     public static int COL_ALL_LANGUAGES = 1000;
@@ -326,6 +328,7 @@ public class DB extends SQLiteAssetHelper {
         COL_SW = getColumnIndex(SW);
         COL_LF = getColumnIndex(LF);
         COL_VA = getColumnIndex(VA);
+        COL_VS = getColumnIndex(VS);
         COL_HD = getColumnIndex(HD);
         COL_KX = getColumnIndex(KX);
         COL_WBH = getColumnIndex(WBH);

@@ -43,7 +43,7 @@ def getLangs(dicts, argv=None):
 	else:
 		mods = ["漢字","兩分","五筆畫","說文","康熙","漢大"]
 		mods.extend(argv if argv else infos.keys())
-		lb = ["總筆畫數","部首餘筆","倉頡三代","倉頡五代","倉頡六代","五筆86版","五筆98版","五筆06版","異體字","分類"]
+		lb = ["總筆畫數","部首餘筆","倉頡三代","倉頡五代","倉頡六代","五筆86版","五筆98版","五筆06版","異體字","變體","分類"]
 		mods.extend(lb)
 	types = [dict(),dict(),dict(),dict(),dict()]
 	keys = None
