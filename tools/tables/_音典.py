@@ -36,7 +36,7 @@ class 表(_表):
 			hz,_,_,sm,ym,js = fs[:6]
 			yb = sm + ym
 		elif name in ("貴陽",):
-			hz, _, _, _, ipa, js = fs[:6]
+			hz, _, _, ipa, js = fs[:6]
 		elif name in ("樂淸"):
 			_, sm, ym, sd, hz, js = fs[:6]
 			yb = sm + ym + sd
