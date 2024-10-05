@@ -55,19 +55,19 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
             popup.inflate(R.menu.favorite_manage_popup_menu);
             popup.setOnMenuItemClickListener(item -> {
                 int id = item.getItemId();
-                switch (id) {
-                    case R.id.menu_item_export:
-                        FavoriteDialogs.export(false);
-                        return true;
-                    case R.id.menu_item_import:
-                        FavoriteDialogs.import_(0);
-                        return true;
-                    case R.id.menu_item_clear:
-                        FavoriteDialogs.deleteAll();
-                        return true;
-                    default:
-                        return false;
+                if  (id == R.id.menu_item_export) {
+                    FavoriteDialogs.export(false);
+                    return true;
                 }
+                if (id == R.id.menu_item_import) {
+                    FavoriteDialogs.import_(0);
+                    return true;
+                }
+                if (id == R.id.menu_item_clear) {
+                    FavoriteDialogs.deleteAll();
+                    return true;
+                }
+                return false;
             });
             popup.show();
         });
