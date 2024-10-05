@@ -9,7 +9,7 @@ class 表(_表):
 
 	def parse(self, fs):
 		name = str(self)
-		if name in ("臨川",):
+		if name in ("臨川","奉新宋埠"):
 			sy, sd, hzs = fs[:3]
 			if sy:
 				self.sy = sy
