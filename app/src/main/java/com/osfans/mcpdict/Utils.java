@@ -290,7 +290,7 @@ public class Utils extends Application {
     public static void help(Context context) {
         MyWebView webView = new MyWebView(context, null);
         webView.loadUrl("file:///android_asset/help/index.htm");
-        new AlertDialog.Builder(context, R.style.Theme_AppCompat_DayNight_NoActionBar)
+        new AlertDialog.Builder(context, androidx.appcompat.R.style.Theme_AppCompat_DayNight_NoActionBar)
                 .setView(webView)
                 .show();
     }

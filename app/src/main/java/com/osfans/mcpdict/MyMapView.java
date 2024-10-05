@@ -45,7 +45,7 @@ public class MyMapView extends MapView {
     }
 
     public void show() {
-        new AlertDialog.Builder(getContext(), R.style.Theme_AppCompat_DayNight_NoActionBar)
+        new AlertDialog.Builder(getContext(), androidx.appcompat.R.style.Theme_AppCompat_DayNight_NoActionBar)
                 .setView(this)
                 .show();
     }
