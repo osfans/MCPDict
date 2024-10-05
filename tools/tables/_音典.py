@@ -108,6 +108,12 @@ class 表(_表):
 			hz, _, _, _, _, _, _, ipa, js = fs[:9]
 		elif name in ("新晃凳寨",):
 			hz,_,_,_,_,_,_,ipa,js = fs[:9]
+		elif name in ("如東豐利",):
+			hz,_,sy,_,_,_,sd,_,_,js = fs[:10]
+			yb = sy + sd
+		elif name in ("如東大豫",):
+			hz,_,_,_,sd,js,sm,ym,_ = fs[:9]
+			yb = sm + ym + sd
 		elif len(fs) >= 4:
 			hz, _, ipa, js = fs[:4]
 		elif len(fs) == 2:
