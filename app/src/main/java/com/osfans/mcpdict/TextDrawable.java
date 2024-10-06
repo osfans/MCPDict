@@ -16,8 +16,8 @@ import android.graphics.drawable.shapes.RectShape;
 import android.graphics.drawable.shapes.RoundRectShape;
 
 /**
- * @author amulya
- * @datetime 14 Oct 2014, 3:53 PM
+ * author amulya
+ * datetime 14 Oct 2014, 3:53 PM
  */
 public class TextDrawable extends ShapeDrawable {
 
@@ -98,13 +98,13 @@ public class TextDrawable extends ShapeDrawable {
         canvas.translate(r.left, r.top);
 
         // draw text
-        float fontSize = this.fontSize < 0 ? (Math.min(width, height) / 2) : this.fontSize;
+        float fontSize = this.fontSize < 0 ? Math.min(width, height) / 2.0f : this.fontSize;
         int width = this.width < 0 ? r.width() : this.width;
         int height = this.height < 0 ? r.height() : this.height;
         textPaint.setTextSize(fontSize);
         float ratio = 3.3f * 4f / (text.length() + text.getBytes().length) ;
         if (ratio < 1f) textPaint.setTextScaleX(ratio);
-        canvas.drawText(text, width / 2, height / 2 - ((textPaint.descent() + textPaint.ascent()) / 2), textPaint);
+        canvas.drawText(text, width / 2.0f, height / 2.0f - ((textPaint.descent() + textPaint.ascent()) / 2), textPaint);
 
         canvas.restoreToCount(count);
 
@@ -112,7 +112,7 @@ public class TextDrawable extends ShapeDrawable {
 
     private void drawBorder(Canvas canvas) {
         RectF rect = new RectF(getBounds());
-        rect.inset(borderThickness/2, borderThickness/2);
+        rect.inset(borderThickness / 2.0f, borderThickness / 2.0f);
 
         if (shape instanceof OvalShape) {
             canvas.drawOval(rect, borderPaint);
@@ -297,45 +297,45 @@ public class TextDrawable extends ShapeDrawable {
     }
 
     public interface IConfigBuilder {
-        public IConfigBuilder width(int width);
+        IConfigBuilder width(int width);
 
-        public IConfigBuilder height(int height);
+        IConfigBuilder height(int height);
 
-        public IConfigBuilder textColor(int color);
+        IConfigBuilder textColor(int color);
 
-        public IConfigBuilder withBorder(int thickness);
+        IConfigBuilder withBorder(int thickness);
 
-        public IConfigBuilder useFont(Typeface font);
+        IConfigBuilder useFont(Typeface font);
 
-        public IConfigBuilder fontSize(float size);
+        IConfigBuilder fontSize(float size);
 
-        public IConfigBuilder bold();
+        IConfigBuilder bold();
 
-        public IConfigBuilder toUpperCase();
+        IConfigBuilder toUpperCase();
 
-        public IShapeBuilder endConfig();
+        IShapeBuilder endConfig();
     }
 
-    public static interface IBuilder {
+    public interface IBuilder {
 
-        public TextDrawable build(String text, int color);
-        public TextDrawable build(String text, int color, int subColor);
+        TextDrawable build(String text, int color);
+        TextDrawable build(String text, int color, int subColor);
     }
 
-    public static interface IShapeBuilder {
+    public interface IShapeBuilder {
 
-        public IConfigBuilder beginConfig();
+        IConfigBuilder beginConfig();
 
-        public IBuilder rect();
+        IBuilder rect();
 
-        public IBuilder round();
+        IBuilder round();
 
-        public IBuilder roundRect(int radius);
+        IBuilder roundRect(int radius);
 
-        public TextDrawable buildRect(String text, int color);
+        TextDrawable buildRect(String text, int color);
 
-        public TextDrawable buildRoundRect(String text, int color, int radius);
+        TextDrawable buildRoundRect(String text, int color, int radius);
 
-        public TextDrawable buildRound(String text, int color);
+        TextDrawable buildRound(String text, int color);
     }
 }

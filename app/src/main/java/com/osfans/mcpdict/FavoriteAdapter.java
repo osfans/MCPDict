@@ -115,7 +115,8 @@ public class FavoriteAdapter extends CursorAdapter {
             protected void onPostExecute(Cursor data) {
                 fragment.setData(data);
                 container.setVisibility(View.VISIBLE);
-                if (list == null) return;
+                if (list == null) {
+                }
                 //scrollListToShowItem(list, view);
             }
         }.execute();

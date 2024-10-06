@@ -2,6 +2,7 @@ package com.osfans.mcpdict;
 
 import android.content.Context;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -9,7 +10,6 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -40,7 +40,7 @@ public class MySearchView extends ConstraintLayout {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             public void onTextChanged(CharSequence s, int start, int before, int count) {}
             public void afterTextChanged(Editable s) {
-                clearButton.setVisibility((s.length() == 0) ? View.GONE : View.VISIBLE);
+                clearButton.setVisibility(TextUtils.isEmpty(s) ? View.GONE : View.VISIBLE);
             }
         });
 

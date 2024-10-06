@@ -52,10 +52,14 @@ public class Utils extends Application {
         return s.replaceAll("[|*\\[\\]]", "").replaceAll("\\{.*?\\}", "");
     }
 
+    public static SharedPreferences getPreference() {
+        return mApp.getSharedPreferences(PreferenceManager.getDefaultSharedPreferencesName(mApp), Context.MODE_PRIVATE);
+    }
+
     public static int getToneStyle(int id) {
         int value = 0;
         if (id == R.string.pref_key_tone_display) value = 1;
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        SharedPreferences sp = getPreference();
         try {
             return Integer.parseInt(Objects.requireNonNull(sp.getString(mApp.getString(id), String.valueOf(value))));
         } catch (Exception e) {
@@ -122,40 +126,18 @@ public class Utils extends Application {
     public static CharSequence formatIPA(String lang, String string) {
         CharSequence cs;
         if (TextUtils.isEmpty(string)) return "";
-        switch (lang) {
-            case DB.SG:
-                cs = getRichText(string.replace(",", "  "));
-                break;
-            case DB.BA:
-                cs = baDisplayer.display(string);
-                break;
-            case DB.GY:
-                cs = getRichText(gyDisplayer.display(string));
-                break;
-            case DB.CMN:
-                cs = getRichText(cmnDisplayer.display(string));
-                break;
-            case DB.HK:
-                cs = hkDisplayer.display(string);
-                break;
-            case DB.TW:
-                cs = getRichText(twDisplayer.display(string));
-                break;
-            case DB.KOR:
-                cs = korDisplayer.display(string);
-                break;
-            case DB.VI:
-                cs = viDisplayer.display(string);
-                break;
-            case DB.JA_GO:
-            case DB.JA_KAN:
-            case DB.JA_OTHER:
-                cs = getRichText(jaDisplayer.display(string));
-                break;
-            default:
-                cs = getRichText(toneDisplayer.display(string, lang));
-                break;
-        }
+        cs = switch (lang) {
+            case DB.SG -> getRichText(string.replace(",", "  "));
+            case DB.BA -> baDisplayer.display(string);
+            case DB.GY -> getRichText(gyDisplayer.display(string));
+            case DB.CMN -> getRichText(cmnDisplayer.display(string));
+            case DB.HK -> hkDisplayer.display(string);
+            case DB.TW -> getRichText(twDisplayer.display(string));
+            case DB.KOR -> korDisplayer.display(string);
+            case DB.VI -> viDisplayer.display(string);
+            case DB.JA_GO, DB.JA_KAN, DB.JA_OTHER -> getRichText(jaDisplayer.display(string));
+            default -> getRichText(toneDisplayer.display(string, lang));
+        };
         return cs;
     }
 
@@ -237,7 +219,7 @@ public class Utils extends Application {
     public static int getDisplayFormat() {
         int value = 1;
         try {
-            SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+            SharedPreferences sp = getPreference();
             return Integer.parseInt(Objects.requireNonNull(sp.getString(mApp.getString(R.string.pref_key_format), String.valueOf(value))));
         } catch (Exception e) {
             //e.printStackTrace();
@@ -246,12 +228,12 @@ public class Utils extends Application {
     }
 
     public static boolean enableFontExt() {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        SharedPreferences sp = getPreference();
         return sp.getBoolean(mApp.getString(R.string.pref_key_font_ext), true);
     }
 
     public static String getTitle() {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        SharedPreferences sp = getPreference();
         return sp.getString(mApp.getString(R.string.pref_key_custom_title), mApp.getString(R.string.app_name));
     }
 
@@ -306,17 +288,17 @@ public class Utils extends Application {
     }
 
     public static void putStr(int key, String value) {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        SharedPreferences sp = getPreference();
         sp.edit().putString(mApp.getString(key), value).apply();
     }
 
     public static String getStr(int key, String defaultValue) {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        SharedPreferences sp = getPreference();
         return sp.getString(mApp.getString(key), defaultValue);
     }
 
     public static Set<String> getStrSet(int key) {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        SharedPreferences sp = getPreference();
         return sp.getStringSet(mApp.getString(key), null);
     }
 
@@ -351,7 +333,7 @@ public class Utils extends Application {
     }
 
     public static int getShowLanguageIndex() {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        SharedPreferences sp = getPreference();
         return sp.getInt(mApp.getString(R.string.pref_key_show_language_index), 0);
     }
 
