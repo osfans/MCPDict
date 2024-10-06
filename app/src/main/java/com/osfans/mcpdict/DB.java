@@ -7,11 +7,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.graphics.Color;
-import android.preference.PreferenceManager;
 import android.text.TextUtils;
-import android.util.Log;
 
-import com.google.gson.JsonObject;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 import org.json.JSONException;
@@ -127,7 +124,7 @@ public class DB extends SQLiteAssetHelper {
         String lang = Utils.getLabel();
 
         // Get options and settings from SharedPreferences
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences sp = Utils.getPreference();
         Resources r = context.getResources();
         int charset = sp.getInt(r.getString(R.string.pref_key_charset), 0);
         boolean mcOnly = charset == 1;
@@ -184,7 +181,7 @@ public class DB extends SQLiteAssetHelper {
                 input = sb.toString();
             }
             for (String token : input.split("[\\s,]+")) {
-                if (token.equals("")) continue;
+                if (TextUtils.isEmpty(token)) continue;
                 token = token.toLowerCase(Locale.US);
                 // Canonicalization
                 switch (lang) {
@@ -205,14 +202,13 @@ public class DB extends SQLiteAssetHelper {
                 List<String> allTones = null;
                 if ((token.endsWith("?") || !Orthography.Tones.hasTone(token)) && hasTone(lang)) {
                     if (token.endsWith("?")) token = token.substring(0, token.length()-1);
-                    switch (lang) {
-                        case GY: allTones = Orthography.MiddleChinese.getAllTones(token); break;
-                        case CMN: allTones = Orthography.Mandarin.getAllTones(token); break;
-                        case HK: allTones = Orthography.Cantonese.getAllTones(token); break;
-                        case VI: allTones = Orthography.Vietnamese.getAllTones(token); break;
-                        default:
-                            allTones = Orthography.Tones.getAllTones(token, lang); break;
-                    }
+                    allTones = switch (lang) {
+                        case GY -> Orthography.MiddleChinese.getAllTones(token);
+                        case CMN -> Orthography.Mandarin.getAllTones(token);
+                        case HK -> Orthography.Cantonese.getAllTones(token);
+                        case VI -> Orthography.Vietnamese.getAllTones(token);
+                        default -> Orthography.Tones.getAllTones(token, lang);
+                    };
                 }
                 if (allTones != null) {
                     keywords.addAll(allTones);
@@ -376,8 +372,8 @@ public class DB extends SQLiteAssetHelper {
         return query(LABEL, selection, args);
     }
 
-    private static String[] queryLanguage(String selection, String args) {
-        return query(LANGUAGE, selection, args);
+    private static String[] queryLanguage(String selection) {
+        return query(LANGUAGE, selection, null);
     }
 
     public static Cursor getLanguageCursor(CharSequence constraint) {
@@ -394,7 +390,7 @@ public class DB extends SQLiteAssetHelper {
     public static String[] getLanguages() {
         initArrays();
         if (LANGUAGES == null) {
-            LANGUAGES = queryLanguage(FQ + " is not null and rowid > 1", null);
+            LANGUAGES = queryLanguage(FQ + " is not null and rowid > 1");
         }
         return LANGUAGES;
     }
@@ -443,7 +439,7 @@ public class DB extends SQLiteAssetHelper {
         }
         ArrayList<String> array = new ArrayList<>();
         if (TextUtils.isEmpty(languages)) {
-            if (customs == null || customs.size() == 0) return LABELS;
+            if (customs == null || customs.isEmpty()) return LABELS;
             for (String lang: getLabels()) {
                 if (!array.contains(lang) && customs.contains(lang)) {
                     array.add(lang);

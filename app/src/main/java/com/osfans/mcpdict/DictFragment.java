@@ -5,7 +5,6 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,7 +35,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         String lang = autoCompleteSearchLang.getText().toString();
         Utils.putLanguage(lang);
         int position = spinnerShowLang.getSelectedItemPosition();
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        SharedPreferences sp = Utils.getPreference();
         sp.edit().putInt(getString(R.string.pref_key_show_language_index), position).apply();
         String[] preFqs = getResources().getStringArray(R.array.pref_values_show_languages);
         String name;
@@ -85,7 +84,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 R.array.pref_entries_charset, android.R.layout.simple_spinner_item);
         adapterShowChar.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerShowChar.setAdapter(adapterShowChar);
-        int position = PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt(getString(R.string.pref_key_charset), 0);
+        int position = Utils.getPreference().getInt(getString(R.string.pref_key_charset), 0);
         spinnerShowChar.setSelection(position);
 
         autoCompleteSearchLang = selfView.findViewById(R.id.search_lang);
@@ -113,7 +112,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         spinnerShowChar.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                SharedPreferences sp = Utils.getPreference();
                 sp.edit().putInt(getString(R.string.pref_key_charset), position).apply();
                 searchView.clickSearchButton();
             }
@@ -137,13 +136,13 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     }
 
     private void loadCheckBoxes() {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        SharedPreferences sp = Utils.getPreference();
         Resources r = getResources();
         checkBoxAllowVariants.setChecked(sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true));
     }
 
     private void saveCheckBoxes() {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        SharedPreferences sp = Utils.getPreference();
         Resources r = getResources();
         sp.edit().putBoolean(r.getString(R.string.pref_key_allow_variants), checkBoxAllowVariants.isChecked()).apply();
     }

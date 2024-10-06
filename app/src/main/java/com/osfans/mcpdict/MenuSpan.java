@@ -1,8 +1,8 @@
 package com.osfans.mcpdict;
 
-import android.text.TextPaint;
-import android.text.style.ClickableSpan;
 import android.view.View;
+
+import androidx.annotation.NonNull;
 
 public class MenuSpan extends MyClickableSpan {
     Entry entry;
@@ -12,7 +12,7 @@ public class MenuSpan extends MyClickableSpan {
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(@NonNull View v) {
         ResultFragment resultFragment = (ResultFragment) v.getTag();
         resultFragment.setEntry(entry);
         resultFragment.openContextMenu(v);

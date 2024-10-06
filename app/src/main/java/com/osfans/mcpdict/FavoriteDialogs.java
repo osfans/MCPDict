@@ -3,7 +3,6 @@ package com.osfans.mcpdict;
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteException;
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -105,7 +104,7 @@ public class FavoriteDialogs {
             return;
         }
 
-        final SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(activity);
+        final SharedPreferences sp = Utils.getPreference();
         final String prefKey = activity.getString(R.string.pref_key_favorite_delete_no_confirm_expiry);
         long expiry = sp.getLong(prefKey, 0);
         long now = System.currentTimeMillis();
