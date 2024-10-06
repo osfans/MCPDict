@@ -506,6 +506,7 @@ public class ResultFragment extends Fragment {
             sb.append(getString(R.string.no_matches));
         } else {
             StringBuilder hzs = new StringBuilder();
+            int count = cursor.getCount();
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 sb.append(hz);
@@ -542,7 +543,7 @@ public class ResultFragment extends Fragment {
                 }
                 if (!cursor.isLast()) sb.append("══════════\n");
             }
-            if (hzs.length() > 1) {
+            if (count > 1) {
                 hzs.append("\n══════════\n");
                 sb.insert(0, hzs);
             }
@@ -568,6 +569,7 @@ public class ResultFragment extends Fragment {
                     .endConfig()
                     .roundRect(5);
             StringBuilder hzs = new StringBuilder();
+            int count = cursor.getCount();
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 hzs.append(hz);
@@ -638,7 +640,7 @@ public class ResultFragment extends Fragment {
                 ssb.append("\n");
                 ssb.append(ssb2);
             }
-            if (hzs.length() > 1) {
+            if (count > 1) {
                 hzs.append("\n");
                 ssb.insert(0, hzs);
             }
