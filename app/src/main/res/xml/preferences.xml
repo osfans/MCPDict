@@ -20,11 +20,19 @@
             android:entries="@array/pref_entries_format"
             android:entryValues="@array/pref_values_format"
             android:defaultValue="1" />
-        <SwitchPreference
+        <!-- <SwitchPreference
             android:defaultValue="true"
             android:key="@string/pref_key_font_ext"
             android:summary="@string/font_ext_warning"
-            android:title="@string/pref_title_font_ext" />
+            android:title="@string/pref_title_font_ext" /> -->
+        <ListPreference
+            app:useSimpleSummaryProvider="true"
+            android:key="@string/pref_key_font"
+            android:title="@string/pref_title_font_ext"
+            android:summary="@string/font_ext_warning"
+            android:entries="@array/pref_entries_font"
+            android:entryValues="@array/pref_values_font"
+            android:defaultValue="0" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/language">
         <ListPreference

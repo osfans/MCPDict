@@ -162,9 +162,11 @@ public class Utils extends Application {
                 if (tfHanTone == null) {
                     Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.tone).build()).build()
-                    ).addCustomFallback(
+                    );
+                    if (fontExFirst()) builder.addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p0).build()).build()
-                    ).addCustomFallback(
+                    );
+                    builder.addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p2).build()).build()
                     ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p3).build()).build()
@@ -176,9 +178,11 @@ public class Utils extends Application {
                 if (tfHan == null) {
                     Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.ipa).build()).build()
-                    ).addCustomFallback(
+                    );
+                    if (fontExFirst()) builder.addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p0).build()).build()
-                    ).addCustomFallback(
+                    );
+                    builder.addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p2).build()).build()
                     ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p3).build()).build()
@@ -227,9 +231,23 @@ public class Utils extends Application {
         return value;
     }
 
+    public static int getFontFormat() {
+        int value = 0;
+        try {
+            SharedPreferences sp = getPreference();
+            return Integer.parseInt(Objects.requireNonNull(sp.getString(mApp.getString(R.string.pref_key_font), String.valueOf(value))));
+        } catch (Exception e) {
+            //e.printStackTrace();
+        }
+        return value;
+    }
+
+    public static boolean fontExFirst() {
+        return getFontFormat() == 1;
+    }
+
     public static boolean enableFontExt() {
-        SharedPreferences sp = getPreference();
-        return sp.getBoolean(mApp.getString(R.string.pref_key_font_ext), true);
+        return getFontFormat() != 2;
     }
 
     public static String getTitle() {

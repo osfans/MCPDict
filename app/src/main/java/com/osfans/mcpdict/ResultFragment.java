@@ -360,9 +360,14 @@ public class ResultFragment extends Fragment {
                       }
                 """);
         if (Utils.useFontTone()) {
-            sb.append("      body { font-family: tone, p0, p2, p3, sans; }\n");
+            sb.append("      body { font-family: tone, ");
         } else {
-            sb.append("      body { font-family: ipa, p0, p2, p3, sans; }\n");
+            sb.append("      body { font-family: ipa, ");
+        }
+        if (Utils.fontExFirst()) {
+            sb.append("p0, p2, p3, sans; }\n");
+        } else {
+            sb.append("sans, p0, p2, p3; }\n");
         }
         sb.append("""
                               .ipa {

@@ -319,7 +319,18 @@
     <string name="pref_title_format">顯示格式</string>
     <string name="pref_key_font_ext">FONT_EXT</string>
     <string name="font_ext_warning">文字版、表格版如出现卡頓，則建議關閉大字庫。重啟後生效。</string>
-    <string name="pref_title_font_ext">大字庫</string>
+    <string name="pref_title_font_ext">大字庫（重啟後生效）</string>
+    <string name="pref_key_font">FONT</string>
+    <string-array name="pref_entries_font">
+        <item>大字庫托底</item>
+        <item>大字庫優先</item>
+        <item>關閉大字庫</item>
+    </string-array>
+    <string-array name="pref_values_font">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
     <string-array name="pref_entries_format">
         <item>文字版</item>
         <item>表格版</item>
