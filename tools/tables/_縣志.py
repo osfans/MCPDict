@@ -9,7 +9,7 @@ class 表(_表):
 	
 	def format(self, line):
 		name = str(self)
-		if name in ("安澤",):
+		if name in ("安澤和川",):
 			line = re.sub(r"^(.*?)［", "\\1	［", line)
 		elif name in ("寶應望直港","羅山周黨","涇縣茂林","沁源", "同江二屯","象山鶴浦","趙縣"):
 			line = re.sub(r"^(.*?) ?\[", "\\1	[", line)

@@ -69,7 +69,6 @@ def getLangs(dicts, argv=None):
 				if not d["音典分區"]: d["音典分區"] = ""
 				d["音典分區"] +=  "," + d["省"]
 			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
-			addAllFq(types[3], d["俞銓（正心）分區"], d["俞銓（正心）排序"], True)
 			if d["聲調"]:
 				toneMaps = dict()
 				sds = json.loads(d["聲調"])
@@ -116,6 +115,5 @@ def getLangs(dicts, argv=None):
 	hz.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:(x.count("-"),types[0][x])))
 	hz.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
 	hz.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:types[2][x]))
-	hz.info["俞銓（正心）分區"] = ",".join(sorted(types[3].keys(),key=lambda x:(x.count("-"),types[3][x])))
 	print("語言數", count)
 	return langs
