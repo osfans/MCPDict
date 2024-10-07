@@ -441,7 +441,7 @@ public class ResultFragment extends Fragment {
                 ssb.append(String.format("<div class=y onclick='mcpdict.showDict(\"%s\", %s, \"%s\")'>%s</div>", hz, COL_HZ, getUnicode(cursor), unicode));
                 StringBuilder raws = new StringBuilder();
                 raws.append(String.format("%s %s\n", hz, s));
-                for (int j = COL_SW; j <= DB.COL_HD; j++) {
+                for (int j = COL_SW; j <= COL_HD; j++) {
                     s = cursor.getString(j);
                     if (TextUtils.isEmpty(s)) continue;
                     String col = getColumn(j);
