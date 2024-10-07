@@ -243,7 +243,7 @@ public class Utils extends Application {
     }
 
     public static boolean fontExFirst() {
-        return getFontFormat() == 1;
+        return getFontFormat() == 0;
     }
 
     public static boolean enableFontExt() {
