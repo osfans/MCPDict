@@ -688,6 +688,12 @@ public class DB extends SQLiteAssetHelper {
             if (TextUtils.isEmpty(s)) continue;
             sb.append(String.format("<p>【%s】%s</p>", getColumn(j), s));
         }
+        for (int j = DB.COL_VA; j <= DB.COL_VS; j++) {
+            s = cursor.getString(j);
+            if (TextUtils.isEmpty(s)) continue;
+            s = s.replace(",", " ");
+            sb.append(String.format("<p class=ivs>【%s】%s</p>", getColumn(j), s));
+        }
         return sb.toString();
     }
 }

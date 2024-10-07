@@ -322,8 +322,8 @@
     <string name="pref_title_font_ext">大字庫（重啟後生效）</string>
     <string name="pref_key_font">FONT</string>
     <string-array name="pref_entries_font">
-        <item>大字庫托底</item>
         <item>大字庫優先</item>
+        <item>大字庫托底</item>
         <item>關閉大字庫</item>
     </string-array>
     <string-array name="pref_values_font">

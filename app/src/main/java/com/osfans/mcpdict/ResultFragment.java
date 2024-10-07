@@ -383,6 +383,10 @@ public class ResultFragment extends Fragment {
                               .variant {
                                  color: #808080;
                               }
+                              .ivs {
+                                font-size: 1.8em;
+                                font-family: p0, p2, p3;
+                              }
                               .y {
                                  color: #1E90FF;
                                  margin: 0 5px;
