@@ -33,6 +33,7 @@ public class DB extends SQLiteAssetHelper {
     public static final String BH = "總筆畫數";
     public static final String BS = "部首餘筆";
     public static final String SW = "說文";
+    public static final String GYHZ = "匯纂";
     public static final String KX = "康熙";
     public static final String HD = "漢大";
     public static final String LF = "兩分";
@@ -79,6 +80,7 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_BS;
     public static int COL_SW;
     public static int COL_KX;
+    public static int COL_GYHZ;
     public static int COL_HD;
     public static int COL_LF;
     public static int COL_WBH;
@@ -326,6 +328,7 @@ public class DB extends SQLiteAssetHelper {
         COL_VA = getColumnIndex(VA);
         COL_VS = getColumnIndex(VS);
         COL_HD = getColumnIndex(HD);
+        COL_GYHZ = getColumnIndex(GYHZ);
         COL_KX = getColumnIndex(KX);
         COL_WBH = getColumnIndex(WBH);
         COL_LAST_LANG = getColumnIndex(BH) - 1;
