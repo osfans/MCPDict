@@ -86,6 +86,7 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_WBH;
     public static int COL_VA;
     public static int COL_VS;
+    public static int COL_FIRST_LANG;
     public static int COL_LAST_LANG;
 
     public static int COL_ALL_LANGUAGES = 1000;
@@ -331,7 +332,8 @@ public class DB extends SQLiteAssetHelper {
         COL_GYHZ = getColumnIndex(GYHZ);
         COL_KX = getColumnIndex(KX);
         COL_WBH = getColumnIndex(WBH);
-        COL_LAST_LANG = getColumnIndex(BH) - 1;
+        COL_FIRST_LANG = COL_HD + 1;
+        COL_LAST_LANG = COL_BH - 1;
         cursor.close();
 
         qb.setTables(TABLE_INFO);
