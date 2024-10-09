@@ -338,6 +338,10 @@ public class ResultFragment extends Fragment {
                     font-family: p3;
                     src: url('file:///android_res/font/p3.otf');
                   }
+                  @font-face {
+                    font-family: pua;
+                    src: url('file:///android_res/font/pua.ttf');
+                  }
                   details summary::-webkit-details-marker {display: none}
                   details summary::-moz-list-bullet {font-size: 0}
                   summary {color: #808080}
@@ -365,9 +369,9 @@ public class ResultFragment extends Fragment {
             sb.append("      body { font-family: ipa, ");
         }
         if (Utils.fontExFirst()) {
-            sb.append("p0, p2, p3, sans; }\n");
+            sb.append("p0, p2, p3, pua, sans; }\n");
         } else {
-            sb.append("sans, p0, p2, p3; }\n");
+            sb.append("sans, p0, p2, p3, pua; }\n");
         }
         sb.append("""
                               .ipa {
@@ -385,7 +389,7 @@ public class ResultFragment extends Fragment {
                               }
                               .ivs {
                                 font-size: 1.8em;
-                                font-family: p0, p2, p3;
+                                font-family: p0, p2, p3, pua;
                               }
                               .y {
                                  color: #1E90FF;
