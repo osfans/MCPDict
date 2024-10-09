@@ -142,7 +142,7 @@ def load():
 		if not editor or editor == "Web":
 			editor = ""
 		d[short] = {
-			"行號":row[0].row,
+			"序號":row[0].row,
 			"語言":lang,
 			"簡稱":short,
 			"文件名":filename,
