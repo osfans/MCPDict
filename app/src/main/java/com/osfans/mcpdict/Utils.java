@@ -172,6 +172,8 @@ public class Utils extends Application {
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p2).build()).build()
                     ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p3).build()).build()
+                    ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.pua).build()).build()
                     );
                     tfHanTone = builder.build();
                 }
@@ -188,6 +190,8 @@ public class Utils extends Application {
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p2).build()).build()
                     ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p3).build()).build()
+                    ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.pua).build()).build()
                     );
                     tfHan = builder.build();
                 }
