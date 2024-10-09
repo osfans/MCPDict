@@ -142,6 +142,28 @@ public class Utils extends Application {
         return cs;
     }
 
+    public static CharSequence formatUnknownIPA(String lang, String string) {
+        StringBuilder sb = new StringBuilder();
+        String s = string.replace("},", "}\n");
+        String input = Utils.getInput();
+        if (Orthography.HZ.isUnknown(input)) sb.append(s);
+        else {
+            if (input.startsWith(":") || input.startsWith("：")) {
+                input = input.substring(1);
+            }
+            String[] inputs = input.split("[, ]+");
+            for (String i : s.split("\n")) {
+                for (String j: inputs) {
+                    if (i.contains(j)) {
+                        sb.append(i).append("\n");
+                        break;
+                    }
+                }
+            }
+        }
+        return formatIPA(lang, sb.toString());
+    }
+
     public static CharSequence formatPopUp(String hz, int i, String s) {
         if (TextUtils.isEmpty(s)) return "";
         if (i == COL_SW) s = s.replace("{", "<small>").replace("}", "</small>");
