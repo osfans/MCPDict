@@ -465,24 +465,43 @@ public class ResultFragment extends Fragment {
                 String fq = "";
                 String fqTemp;
                 boolean opened = false;
-                for (String col : DB.getVisibleColumns()) {
+                if (Orthography.HZ.isUnknown(hz)) {
+                    String col = Utils.getLabel();
+                    if (!DB.isLang(col)) continue;
                     int index = DB.getColumnIndex(col);
                     s = cursor.getString(index);
                     if (TextUtils.isEmpty(s)) continue;
                     fqTemp = DB.getWebFq(col);
                     if (!fqTemp.contentEquals(fq)) {
-                        if (opened) ssb.append("</details>");
                         ssb.append(String.format("<details open><summary>%s</summary>", fqTemp));
-                        opened = true;
                     }
-                    CharSequence ipa = Utils.formatIPA(col, s);
+                    CharSequence ipa = Utils.formatUnknownIPA(col, s);
                     String raw = Utils.getRawText(s);
                     String label = DB.getLabel(col);
-                    ssb.append(String.format(Locale.CHINESE,"<div onclick='mcpdict.onClick(\"%s\", \"%s\", \"%s\", %d, \"%s\",event.pageX, event.pageY)' class=row><div class=place style='background: linear-gradient(to left, %s, %s);'>%s</div><div class=ipa>%s</div></div>",
+                    ssb.append(String.format(Locale.CHINESE,"<div onclick='mcpdict.onClick(\"%s\", \"%s\", \"%s\", %d, \"%s\",event.pageX, event.pageY)' class=row><div class=place style='background: linear-gradient(to left, %s, %s);'>%s</div><br><div class=ipa>%s</div></div>",
                             hz, col, raw, favorite, comment,
                             DB.getHexColor(col), DB.getHexSubColor(col), label, ipa));
-                    fq = fqTemp;
                     raws.append(formatReading(label, raw));
+                } else {
+                    for (String col : DB.getVisibleColumns()) {
+                        int index = DB.getColumnIndex(col);
+                        s = cursor.getString(index);
+                        if (TextUtils.isEmpty(s)) continue;
+                        fqTemp = DB.getWebFq(col);
+                        if (!fqTemp.contentEquals(fq)) {
+                            if (opened) ssb.append("</details>");
+                            ssb.append(String.format("<details open><summary>%s</summary>", fqTemp));
+                            opened = true;
+                        }
+                        CharSequence ipa = Utils.formatIPA(col, s);
+                        String raw = Utils.getRawText(s);
+                        String label = DB.getLabel(col);
+                        ssb.append(String.format(Locale.CHINESE,"<div onclick='mcpdict.onClick(\"%s\", \"%s\", \"%s\", %d, \"%s\",event.pageX, event.pageY)' class=row><div class=place style='background: linear-gradient(to left, %s, %s);'>%s</div><div class=ipa>%s</div></div>",
+                                hz, col, raw, favorite, comment,
+                                DB.getHexColor(col), DB.getHexSubColor(col), label, ipa));
+                        fq = fqTemp;
+                        raws.append(formatReading(label, raw));
+                    }
                 }
                 mRaws.put(hz, raws.toString());
                 if (opened) ssb.append("</details>");
@@ -536,14 +555,26 @@ public class ResultFragment extends Fragment {
                 }
                 sb.append("\n");
                 StringBuilder sb2 = new StringBuilder();
-                for (String col : DB.getVisibleColumns()) {
+                if (Orthography.HZ.isUnknown(hz)) {
+                    String col = Utils.getLabel();
+                    if (!DB.isLang(col)) continue;
                     int i = cursor.getColumnIndex(col);
                     s = cursor.getString(i);
                     if (TextUtils.isEmpty(s)) continue;
                     String label = getLabel(col);
                     sb2.append(String.format("［%s］", label));
-                    sb2.append(HtmlCompat.fromHtml(Utils.formatIPA(col, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT));
+                    sb2.append(HtmlCompat.fromHtml(Utils.formatUnknownIPA(col, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT));
                     sb2.append("\n");
+                } else {
+                    for (String col : DB.getVisibleColumns()) {
+                        int i = cursor.getColumnIndex(col);
+                        s = cursor.getString(i);
+                        if (TextUtils.isEmpty(s)) continue;
+                        String label = getLabel(col);
+                        sb2.append(String.format("［%s］", label));
+                        sb2.append(HtmlCompat.fromHtml(Utils.formatIPA(col, s).toString(), HtmlCompat.FROM_HTML_MODE_COMPACT));
+                        sb2.append("\n");
+                    }
                 }
                 if (!TextUtils.isEmpty(sb2)) {
                     sb.append("──────────\n");
@@ -601,11 +632,13 @@ public class ResultFragment extends Fragment {
                 raws.append(String.format("%s %s\n", hz, unicode));
                 // yb
                 SpannableStringBuilder ssb2 = new SpannableStringBuilder();
-                for (String lang : DB.getVisibleColumns()) {
+                if (Orthography.HZ.isUnknown(hz)) {
+                    String lang = Utils.getLabel();
+                    if (!DB.isLang(lang)) continue;
                     int i = getColumnIndex(lang);
                     s = cursor.getString(i);
                     if (TextUtils.isEmpty(s)) continue;
-                    CharSequence cs = HtmlCompat.fromHtml(Utils.formatIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
+                    CharSequence cs = HtmlCompat.fromHtml(Utils.formatUnknownIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
                     n = ssb2.length();
                     String label = getLabel(i);
                     Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
@@ -617,6 +650,24 @@ public class ResultFragment extends Fragment {
                     ssb2.append(cs);
                     ssb2.append("\n");
                     raws.append(formatReading(label, raw));
+                } else {
+                    for (String lang : DB.getVisibleColumns()) {
+                        int i = getColumnIndex(lang);
+                        s = cursor.getString(i);
+                        if (TextUtils.isEmpty(s)) continue;
+                        CharSequence cs = HtmlCompat.fromHtml(Utils.formatIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
+                        n = ssb2.length();
+                        String label = getLabel(i);
+                        Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
+                        DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
+                        ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        String raw = Utils.getRawText(s);
+                        Entry e = new Entry(hz, lang, raw, bFavorite, comment);
+                        ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        ssb2.append(cs);
+                        ssb2.append("\n");
+                        raws.append(formatReading(label, raw));
+                    }
                 }
                 mRaws.put(hz, raws.toString());
                 // SW
