@@ -147,8 +147,16 @@ public class Orthography {
     public static class HZ {
         private static final Map<Integer,Integer> compatibility = new HashMap<>();
 
+        public static boolean isUnknown(int unicode) {
+            return unicode == 0x25A1; //□
+        }
+
+        public static boolean isUnknown(String hz) {
+            return isUnknown(hz.codePointAt(0));
+        }
+
         public static boolean isHz(int unicode) {
-            return unicode == 0x25A1 //□
+            return isUnknown(unicode) //□
                     || unicode == 0x3007 //〇
                     || (unicode >= 0x4E00 && unicode <= 0x9FFF)   // CJK Unified Ideographs
                     || (unicode >= 0x3400 && unicode <= 0x4DBF)   // CJK Extension A
