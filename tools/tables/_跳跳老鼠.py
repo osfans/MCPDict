@@ -15,6 +15,10 @@ class 表(_表):
 				self.sy = sy
 			else:
 				sy = self.sy
+		elif name in ("長沙雙江",):
+			sy, sd, _, hzs = fs[:4]
+			hzs = re.sub("[₁₂₃]", "", hzs)
+			hzs = hzs.replace("[", "［").replace("]", "］").replace("（", "[").replace("）", "]").replace("(", "[").replace(")", "]")
 		elif name in ("湘鄕棋梓",):
 			sy, sd, _, hzs = fs[:4]
 		elif len(fs) > 3 and fs[3]:
