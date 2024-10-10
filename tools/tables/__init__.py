@@ -82,7 +82,7 @@ def getLangs(dicts, argv=None):
 			except Exception as e:
 				print(f"\t\t\t{e} {mod}")
 				continue
-			if d["簡繁"] == "簡": lang.simplified = 2
+			if d["簡繁"] == "简": lang.simplified = 2
 			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 			addAllFq(types[0], d["地圖集二分區"], d["地圖集二排序"])
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
