@@ -37,9 +37,10 @@ public class DB extends SQLiteAssetHelper {
     public static final String KX = "康熙";
     public static final String HD = "漢大";
     public static final String LF = "兩分";
+    public static final String ZX = "字形描述";
     public static final String WBH = "五筆畫";
     public static final String VA = "異體字";
-    public static final String VS = "變體";
+    public static final String VS = "字形變體";
     public static final String FL = "分類";
 
     public static final String MAP = " \uD83C\uDF0F ";
@@ -83,6 +84,7 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_GYHZ;
     public static int COL_HD;
     public static int COL_LF;
+    public static int COL_ZX;
     public static int COL_WBH;
     public static int COL_VA;
     public static int COL_VS;
@@ -326,6 +328,7 @@ public class DB extends SQLiteAssetHelper {
         COL_BS = getColumnIndex(BS);
         COL_SW = getColumnIndex(SW);
         COL_LF = getColumnIndex(LF);
+        COL_ZX = getColumnIndex(ZX);
         COL_VA = getColumnIndex(VA);
         COL_VS = getColumnIndex(VS);
         COL_HD = getColumnIndex(HD);
@@ -682,6 +685,23 @@ public class DB extends SQLiteAssetHelper {
         return s;
     }
 
+    private static String formatIDS(String s) {
+        s = s.replace("UCS2003", "2003")
+            .replace("G", "中")
+            .replace("H", "港")
+            .replace("M", "澳")
+            .replace("T", "臺")
+            .replace("J", "日")
+            .replace("K", "韓")
+            .replace("P", "朝")
+            .replace("V", "越")
+            .replace("U", "統")
+            .replace("S", "大")
+            .replace("B", "英")
+            .replace("2003", "UCS2003");
+        return s;
+    }
+
     public static String getUnicode(Cursor cursor) {
         String hz = cursor.getString(COL_HZ);
         String s = Orthography.HZ.toUnicode(hz);
@@ -691,6 +711,7 @@ public class DB extends SQLiteAssetHelper {
             if (j == COL_SW) j = COL_BH;
             s = cursor.getString(j);
             if (TextUtils.isEmpty(s)) continue;
+            if (j == COL_ZX) s = formatIDS(s);
             sb.append(String.format("<p>【%s】%s</p>", getColumn(j), s));
         }
         for (int j = DB.COL_VA; j <= DB.COL_VS; j++) {
