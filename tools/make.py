@@ -36,7 +36,7 @@ for i in sorted(dicts.keys(), key=cjkorder):
 	c.execute(INSERT, v)
 
 #info
-keys = list(langs[7 if len(keys) > 7 else 1].info.keys())
+keys = list(langs[xing_keys_len if len(keys) > xing_keys_len else 1].info.keys())
 fields = [f"`{i}`" for i in keys]
 CREATE = 'CREATE VIRTUAL TABLE info USING fts3 (%s)' % (",".join(fields))
 INSERT = 'INSERT INTO info VALUES (%s)'% (','.join('?' * len(keys)))
