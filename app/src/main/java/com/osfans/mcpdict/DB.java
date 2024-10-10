@@ -47,6 +47,7 @@ public class DB extends SQLiteAssetHelper {
     public static final String IS_FAVORITE = "is_favorite";
     public static final String VARIANTS = "variants";
     public static final String COMMENT = "comment";
+    public static final String INDEX = "索引";
     public static final String LANGUAGE = "語言";
     public static final String LABEL = "簡稱";
 
@@ -388,7 +389,7 @@ public class DB extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
         String[] projection = {LANGUAGE, "rowid as _id"};
-        String query = qb.buildQuery(projection, LANGUAGE + " LIKE ? and " + FIRST_FQ.replace(_FQ, _COLOR) + " is not null",  null, null, ORDER, null);
+        String query = qb.buildQuery(projection, LANGUAGE + INDEX + " LIKE ? and " + FIRST_FQ.replace(_FQ, _COLOR) + " is not null",  null, null, ORDER, null);
         Cursor cursor = db.rawQuery(query, new String[]{"%"+constraint+"%"});
         if (cursor.getCount() > 0) return cursor;
         cursor.close();
