@@ -318,19 +318,21 @@
     <string name="pref_key_format">FORMAT</string>
     <string name="pref_title_format">顯示格式</string>
     <string name="pref_key_font_ext">FONT_EXT</string>
-    <string name="font_ext_warning">文字版、表格版如出現卡頓，則建議關閉大字庫。重啟後生效。</string>
-    <string name="pref_title_font_ext">大字庫（重啟後生效）</string>
+    <string name="font_ext_warning">文字版、表格版如出現卡頓，則建議關閉大字庫字體。</string>
+    <string name="pref_title_font_ext">默認字體</string>
     <string name="pref_key_font">FONT</string>
     <string name="book_format">【%s】</string>
     <string-array name="pref_entries_font">
-        <item>大字庫托底</item>
-        <item>大字庫優先</item>
-        <item>關閉大字庫</item>
+        <item>系統字體優先</item>
+        <item>系統宋體優先</item>
+        <item>大字庫字體優先</item>
+        <item>關閉大字庫字體</item>
     </string-array>
     <string-array name="pref_values_font">
         <item>0</item>
         <item>1</item>
         <item>2</item>
+        <item>3</item>
     </string-array>
     <string-array name="pref_entries_format">
         <item>文字版</item>

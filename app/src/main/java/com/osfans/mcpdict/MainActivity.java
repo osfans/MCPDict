@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Utils.setLocale();
+        Utils.setActivityTheme(this);
         DB.initFQ();
         // Initialize the some "static" classes on separate threads
         new Thread(()->Orthography.initialize(getResources())).start();
