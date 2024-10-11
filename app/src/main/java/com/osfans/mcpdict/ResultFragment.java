@@ -369,9 +369,9 @@ public class ResultFragment extends Fragment {
             sb.append("      body { font-family: ipa, ");
         }
         if (Utils.fontExFirst()) {
-            sb.append("p0, p2, p3, pua, sans; }\n");
+            sb.append(String.format("p0, p2, p3, pua, %s; }\n", Utils.getDefaultFont()));
         } else {
-            sb.append("sans, p0, p2, p3, pua; }\n");
+            sb.append(String.format("%s, p0, p2, p3, pua; }\n", Utils.getDefaultFont()));
         }
         sb.append("""
                               .ipa {

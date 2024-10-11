@@ -20,6 +20,7 @@ import android.view.Gravity;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
 import java.util.Locale;
@@ -179,6 +180,13 @@ public class Utils extends Application {
         return getToneStyle(R.string.pref_key_tone_display) == 5;
     }
 
+    public static void refreshFont() {
+        tfHan = null;
+        tfHanTone = null;
+        tfIPA = null;
+        tfIPATone = null;
+    }
+
     public static Typeface getHanFont() {
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
         try {
@@ -197,6 +205,7 @@ public class Utils extends Application {
                     ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.pua).build()).build()
                     );
+                    builder.setSystemFallback(getDefaultFont());
                     tfHanTone = builder.build();
                 }
                 return tfHanTone;
@@ -215,6 +224,7 @@ public class Utils extends Application {
                     ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.pua).build()).build()
                     );
+                    builder.setSystemFallback(getDefaultFont());
                     tfHan = builder.build();
                 }
                 return tfHan;
@@ -270,12 +280,32 @@ public class Utils extends Application {
         return value;
     }
 
-    public static boolean fontExFirst() {
+    public static boolean useSerif() {
         return getFontFormat() == 1;
     }
 
+    public static String getDefaultFont() {
+        return useSerif() ? "serif" : "sans";
+    }
+
+    public static boolean fontExFirst() {
+        return getFontFormat() == 2;
+    }
+
     public static boolean enableFontExt() {
-        return getFontFormat() != 2;
+        return getFontFormat() != 3;
+    }
+
+    private static int getAppTheme() {
+        return switch (getFontFormat()) {
+            case 0 -> R.style.AppThemeSans;
+            case 1, 2 -> R.style.AppThemeSerif;
+            default -> R.style.AppTheme;
+        };
+    }
+
+    public static void setActivityTheme(AppCompatActivity app) {
+        app.setTheme(getAppTheme());
     }
 
     public static String getTitle() {
