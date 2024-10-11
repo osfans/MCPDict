@@ -353,11 +353,21 @@ public class Utils extends Application {
                 .show();
     }
 
+    public static String getFontFeatureSettings() {
+        String locale = getStr(R.string.pref_key_locale);
+        if (!TextUtils.isEmpty(locale) && locale.contentEquals("zh-cn")) return "";
+        return  "cv01";
+    }
+
+    public static void setTypeface(TextView tv) {
+        tv.setTypeface(getDictTypeFace());
+        tv.setFontFeatureSettings(getFontFeatureSettings());
+    }
+
     public static void showDict(Context context, CharSequence s) {
         TextView tv = new TextView(context);
         tv.setPadding(24, 24, 24, 24);
-        tv.setTypeface(Utils.getDictTypeFace());
-        tv.setFontFeatureSettings("cv01");
+        setTypeface(tv);
         tv.setTextIsSelectable(true);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
         tv.setText(s);

@@ -31,7 +31,6 @@ public class MyMarker extends Marker {
         mTextPaint.setAntiAlias(true);
         mTextPaint.setTextAlign(Paint.Align.LEFT);
         mTextPaint.setTypeface(Utils.getIPA());
-        mTextPaint.setFontFeatureSettings("cv01");
         mSize = size;
     }
 
