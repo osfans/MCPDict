@@ -242,7 +242,7 @@
     <string name="show_languages">顯示語言：</string>
     <string-array name="pref_entries_show_languages">
         <item>全部語言</item>
-        <item>普方古对照</item>
+        <item>普方古對照</item>
         <item>當前語言</item>
         <item>@string/pref_title_custom_languages</item>
         <item>縣級方言</item>
@@ -318,7 +318,7 @@
     <string name="pref_key_format">FORMAT</string>
     <string name="pref_title_format">顯示格式</string>
     <string name="pref_key_font_ext">FONT_EXT</string>
-    <string name="font_ext_warning">文字版、表格版如出现卡頓，則建議關閉大字庫。重啟後生效。</string>
+    <string name="font_ext_warning">文字版、表格版如出現卡頓，則建議關閉大字庫。重啟後生效。</string>
     <string name="pref_title_font_ext">大字庫（重啟後生效）</string>
     <string name="pref_key_font">FONT</string>
     <string-array name="pref_entries_font">
