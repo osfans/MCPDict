@@ -18,7 +18,7 @@
     <string name="manage">管理</string>
     <string name="export">導出</string>
     <string name="import_">導入</string>
-    <string name="clear">清空</string>
+    <string name="clear">淸空</string>
     <string name="overwrite">覆蓋</string>
 
     <string name="search_hint">輸入字或音</string>
@@ -84,9 +84,9 @@
     <string name="favorite_import_delete_backup_done">已刪除生字本備份文件。</string>
     <string name="favorite_import_delete_backup_fail">刪除失敗，文件仍存在</string>
 
-    <string name="favorite_clear">清空生字本</string>
-    <string name="favorite_clear_confirm">確定清空生字本嗎？清空後無法恢復！</string>
-    <string name="favorite_clear_done">已清空生字本</string>
+    <string name="favorite_clear">淸空生字本</string>
+    <string name="favorite_clear_confirm">確定淸空生字本嗎？淸空後無法恢復！</string>
+    <string name="favorite_clear_done">已淸空生字本</string>
 
     <string name="crash">操作失敗</string>
     <string name="crash_saved">已將錯誤信息保存至文件 %s。\n\n請與作者 Maigo (maigoakisame@gmail.com) 聯繫。</string>
@@ -100,11 +100,11 @@
     <string name="pref_title_mc_display">廣韻擬音</string>
     <string-array name="pref_entries_mc_display">
         <item>古韻羅馬字</item>
-        <item>高本漢</item>
+        <item>髙本漢</item>
         <item>王力</item>
         <item>李榮</item>
         <item>邵榮芬</item>
-        <item>鄭張尚芳</item>
+        <item>鄭張尙芳</item>
         <item>潘悟雲</item>
         <item>蒲立本</item>
     </string-array>
