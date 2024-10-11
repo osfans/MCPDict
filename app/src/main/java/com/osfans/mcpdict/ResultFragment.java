@@ -135,8 +135,7 @@ public class ResultFragment extends Fragment {
         registerForContextMenu(mWebView);
         mTextView = new TextView(requireContext());
         mTextView.setTextAppearance(R.style.FontDetail);
-        mTextView.setTypeface(Utils.getDictTypeFace());
-        mTextView.setFontFeatureSettings("cv01");
+        Utils.setTypeface(mTextView);
         mTextView.setTextIsSelectable(true);
         mTextView.setMovementMethod(LinkMovementMethod.getInstance());
         LinearLayout layout = selfView.findViewById(R.id.layout);
@@ -363,12 +362,13 @@ public class ResultFragment extends Fragment {
                          transform-origin: right;
                          font-size: 0.8em;
                       }
+                      body {
                 """);
-        if (Utils.useFontTone()) {
-            sb.append("      body { font-feature-settings: 'cv01'; font-family: tone, ");
-        } else {
-            sb.append("      body { font-feature-settings: 'cv01'; font-family: ipa, ");
-        }
+        String feat = Utils.getFontFeatureSettings();
+        if (!feat.isEmpty()) sb.append(String.format("font-feature-settings: %s;\n", feat));
+        sb.append("      font-family: ");
+        sb.append(Utils.useFontTone() ? "tone" : "ipa");
+        sb.append(", ");
         if (Utils.fontExFirst()) {
             sb.append(String.format("p0, p2, p3, pua, %s; }\n", Utils.getDefaultFont()));
         } else {
@@ -723,8 +723,7 @@ public class ResultFragment extends Fragment {
             if (cursor != null) cursor.close();
             mScroll.setScrollY(0);
         } else {
-            mTextView.setTypeface(Utils.getDictTypeFace());
-            mTextView.setFontFeatureSettings("cv01");
+            Utils.setTypeface(mTextView);
             new AsyncTask<Void, Void, CharSequence>() {
                 @Override
                 protected CharSequence doInBackground(Void... params) {

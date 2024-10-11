@@ -62,8 +62,7 @@ public class FavoriteAdapter extends CursorAdapter {
         String hz = cursor.getString(cursor.getColumnIndexOrThrow("hz"));
         textView = view.findViewById(R.id.text_hz);
         textView.setText(hz);
-        textView.setTypeface(Utils.getDictTypeFace());
-        textView.setFontFeatureSettings("cv01");
+        Utils.setTypeface(textView);
 
         // Timestamp
         string = cursor.getString(cursor.getColumnIndexOrThrow("local_timestamp"));
@@ -74,8 +73,7 @@ public class FavoriteAdapter extends CursorAdapter {
         string = cursor.getString(cursor.getColumnIndexOrThrow("comment"));
         textView = view.findViewById(R.id.text_comment);
         textView.setText(string);
-        textView.setTypeface(Utils.getDictTypeFace());
-        textView.setFontFeatureSettings("cv01");
+        Utils.setTypeface(textView);
 
         // "Edit" button
         final Button buttonEdit = view.findViewById(R.id.button_edit);
