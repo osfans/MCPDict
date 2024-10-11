@@ -136,6 +136,7 @@ public class ResultFragment extends Fragment {
         mTextView = new TextView(requireContext());
         mTextView.setTextAppearance(R.style.FontDetail);
         mTextView.setTypeface(Utils.getDictTypeFace());
+        mTextView.setFontFeatureSettings("cv01");
         mTextView.setTextIsSelectable(true);
         mTextView.setMovementMethod(LinkMovementMethod.getInstance());
         LinearLayout layout = selfView.findViewById(R.id.layout);
@@ -328,15 +329,15 @@ public class ResultFragment extends Fragment {
                   }
                   @font-face {
                     font-family: p0;
-                    src: url('file:///android_res/font/p0.otf');
+                    src: url('file:///android_res/font/p0.otf')format('opentype');
                   }
                   @font-face {
                     font-family: p2;
-                    src: url('file:///android_res/font/p2.otf');
+                    src: url('file:///android_res/font/p2.otf')format('opentype');
                   }
                   @font-face {
                     font-family: p3;
-                    src: url('file:///android_res/font/p3.otf');
+                    src: url('file:///android_res/font/p3.otf')format('opentype');
                   }
                   @font-face {
                     font-family: pua;
@@ -364,9 +365,9 @@ public class ResultFragment extends Fragment {
                       }
                 """);
         if (Utils.useFontTone()) {
-            sb.append("      body { font-family: tone, ");
+            sb.append("      body { font-feature-settings: 'cv01'; font-family: tone, ");
         } else {
-            sb.append("      body { font-family: ipa, ");
+            sb.append("      body { font-feature-settings: 'cv01'; font-family: ipa, ");
         }
         if (Utils.fontExFirst()) {
             sb.append(String.format("p0, p2, p3, pua, %s; }\n", Utils.getDefaultFont()));
@@ -405,9 +406,9 @@ public class ResultFragment extends Fragment {
                               ul {
                                  margin: 1px;
                                  padding: 0px 6px;
-                              }\
-                            rt {font-size: 0.9em; background-color: #F0FFF0;}  \
-                          </style></head><body>\
+                              }
+                              rt {font-size: 0.9em; background-color: #F0FFF0;}
+                          </style></head><body>
                         """);
         if (TextUtils.isEmpty(query)) {
             sb.append(DB.getIntro());
@@ -723,6 +724,7 @@ public class ResultFragment extends Fragment {
             mScroll.setScrollY(0);
         } else {
             mTextView.setTypeface(Utils.getDictTypeFace());
+            mTextView.setFontFeatureSettings("cv01");
             new AsyncTask<Void, Void, CharSequence>() {
                 @Override
                 protected CharSequence doInBackground(Void... params) {

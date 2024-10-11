@@ -31,7 +31,8 @@ public class MySearchView extends ConstraintLayout {
         inflater.inflate(R.layout.custom_search_view, this, true);
 
         editText = findViewById(R.id.text_query);
-        editText.setTypeface(Utils.getHanFont());
+        editText.setTypeface(Utils.getDictTypeFace());
+        editText.setFontFeatureSettings("cv01");
         clearButton = findViewById(R.id.button_clear);
         searchButton = findViewById(R.id.button_search);
 

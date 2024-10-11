@@ -54,6 +54,7 @@ public class TextDrawable extends ShapeDrawable {
         textPaint.setFakeBoldText(builder.isBold);
         textPaint.setStyle(Paint.Style.FILL);
         textPaint.setTypeface(builder.font);
+        textPaint.setFontFeatureSettings("cv01");
         textPaint.setTextAlign(Paint.Align.CENTER);
         textPaint.setStrokeWidth(builder.borderThickness);
 
