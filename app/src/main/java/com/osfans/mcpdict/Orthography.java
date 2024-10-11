@@ -337,14 +337,14 @@ public class Orthography {
 
             // Distinguish 重韻
             switch (fin) {
-                case "ia":          // 牙音声母爲戈韻，其餘爲麻韻
+                case "ia":          // 牙音聲母爲戈韻，其餘爲麻韻
                     if (Arrays.asList("k", "kh", "g", "ng").contains(init)) {
                         fin = "Ia";
                     }
                     break;
                 case "ieng":
                 case "yeng":
-                    // 脣牙喉音声母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲清韻
+                    // 脣牙喉音聲母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲清韻
                     if (Arrays.asList("p", "ph", "b", "m",
                             "k", "kh", "g", "ng",
                             "h", "gh", "q", "",
@@ -352,12 +352,12 @@ public class Orthography {
                         fin = (fin.equals("ieng")) ? "Ieng" : "Yeng";
                     }
                     break;
-                case "in":     // 莊組声母爲臻韻，其餘爲眞韻
+                case "in":     // 莊組聲母爲臻韻，其餘爲眞韻
                     if (Arrays.asList("cr", "chr", "zr", "sr", "zsr").contains(init)) {
                         fin = "In";
                     }
                     break;
-                case "yn":     // 脣牙喉音声母直接接-yn者爲眞韻，其餘爲諄韻
+                case "yn":     // 脣牙喉音聲母直接接-yn者爲眞韻，其餘爲諄韻
                     if (Arrays.asList("p", "ph", "b", "m",
                             "k", "kh", "g", "ng",
                             "h", "gh", "q", "").contains(init) && !extraJ) {
@@ -442,14 +442,14 @@ public class Orthography {
 
             // Distinguish 重韻
             switch (fin) {
-                case "ia":          // 牙音声母爲戈韻，其餘爲麻韻
+                case "ia":          // 牙音聲母爲戈韻，其餘爲麻韻
                     if (Arrays.asList("k", "kh", "g", "ng").contains(init)) {
                         fin = "Ia";
                     }
                     break;
                 case "ieng":
                 case "yeng":
-                    // 脣牙喉音声母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲清韻
+                    // 脣牙喉音聲母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲清韻
                     if (Arrays.asList("p", "ph", "b", "m",
                             "k", "kh", "g", "ng",
                             "h", "gh", "q", "",
@@ -457,12 +457,12 @@ public class Orthography {
                         fin = (fin.equals("ieng")) ? "Ieng" : "Yeng";
                     }
                     break;
-                case "in":     // 莊組声母爲臻韻，其餘爲眞韻
+                case "in":     // 莊組聲母爲臻韻，其餘爲眞韻
                     if (Arrays.asList("cr", "chr", "zr", "sr", "zsr").contains(init)) {
                         fin = "In";
                     }
                     break;
-                case "yn":     // 脣牙喉音声母直接接-yn者爲眞韻，其餘爲諄韻
+                case "yn":     // 脣牙喉音聲母直接接-yn者爲眞韻，其餘爲諄韻
                     if (Arrays.asList("p", "ph", "b", "m",
                             "k", "kh", "g", "ng",
                             "h", "gh", "q", "").contains(init) && !extraJ) {
