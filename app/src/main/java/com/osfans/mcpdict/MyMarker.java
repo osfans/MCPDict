@@ -30,7 +30,7 @@ public class MyMarker extends Marker {
         mTextPaint.setTextSize(24);
         mTextPaint.setAntiAlias(true);
         mTextPaint.setTextAlign(Paint.Align.LEFT);
-        mTextPaint.setTypeface(Utils.getIPA());
+        mTextPaint.setTypeface(Utils.getIPATypeface());
         mSize = size;
     }
 

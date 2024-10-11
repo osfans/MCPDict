@@ -180,14 +180,14 @@ public class Utils extends Application {
         return getToneStyle(R.string.pref_key_tone_display) == 5;
     }
 
-    public static void refreshFont() {
+    public static void refreshTypeface() {
         tfHan = null;
         tfHanTone = null;
         tfIPA = null;
         tfIPATone = null;
     }
 
-    public static Typeface getHanFont() {
+    private static Typeface getHanTypeface() {
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
         try {
             if (useFontTone()) {
@@ -234,13 +234,13 @@ public class Utils extends Application {
         return null;
     }
 
-    public static Typeface getDictTypeFace() {
+    private static Typeface getDictTypeface() {
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
-        if (!enableFontExt()) return getIPA();
-        return getHanFont();
+        if (!enableFontExt()) return getIPATypeface();
+        return getHanTypeface();
     }
 
-    public static Typeface getIPA() {
+    public static Typeface getIPATypeface() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return null;
         if (useFontTone()) {
             if (tfIPATone == null) {
@@ -360,7 +360,7 @@ public class Utils extends Application {
     }
 
     public static void setTypeface(TextView tv) {
-        tv.setTypeface(getDictTypeFace());
+        tv.setTypeface(getDictTypeface());
         tv.setFontFeatureSettings(getFontFeatureSettings());
     }
 
