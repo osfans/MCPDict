@@ -4,8 +4,7 @@ from tables._表 import 表 as _表
 from tables import hex2chr
 
 class 表(_表):
-	tones = None
-	_file = "uvs.txt"
+	_files = ["uvs0.txt", "uvs2.txt", "uvs3.txt"]
 
 	def parse(self, fs):
 		hz, vs = fs
