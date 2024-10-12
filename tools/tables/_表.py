@@ -115,6 +115,7 @@ class 表:
 	path = os.path.dirname(os.path.abspath(__file__))
 	_time = os.path.getmtime(__file__)
 	_file = None
+	_files = None
 	_sep = None
 	color = "#1E90FF"
 	full = ""
@@ -144,6 +145,9 @@ class 表:
 
 	@property
 	def spath(self):
+		if self._files:
+			self._files = [self.get_fullname(f) for f in self._files]
+			self._file = self._files[0]
 		sname = self._file
 		if not self.short: self.short = self.info["簡稱"]
 		if not self.short: self.short = str(self)
@@ -336,26 +340,28 @@ class 表:
 		sep = self.sep
 		skip = self.info.get("跳過行數", 0)
 		lineno = 0
-		for line in open(self.spath,encoding="U8"):
-			lineno += 1
-			if lineno <= skip: continue
-			if line.startswith('#') or line.startswith('"#') : continue
-			line = self.format(line)
-			fs = [i.strip('" \t') for i in line.strip('\n').split(sep)]
-			entries = self.parse(fs)
-			if not entries: continue
-			if type(entries) is tuple: entries = [entries]
-			for fs in entries:
-				if len(fs) <= 1: continue
-				if len(fs) >= 2:
-					hz, yb = fs[:2]
-					js = "\t".join(fs[2:])
-				if not hz or len(hz) != 1: continue
-				if not yb: continue
-				p = f"{yb}\t{js}"
-				p = p.strip()
-				if p not in d[hz]:
-					d[hz].append(p)
+		files = self._files if self._files else [self.spath]
+		for spath in files:
+			for line in open(spath,encoding="U8"):
+				lineno += 1
+				if lineno <= skip: continue
+				if line.startswith('#') or line.startswith('"#') : continue
+				line = self.format(line)
+				fs = [i.strip('" \t') for i in line.strip('\n').split(sep)]
+				entries = self.parse(fs)
+				if not entries: continue
+				if type(entries) is tuple: entries = [entries]
+				for fs in entries:
+					if len(fs) <= 1: continue
+					if len(fs) >= 2:
+						hz, yb = fs[:2]
+						js = "\t".join(fs[2:])
+					if not hz or len(hz) != 1: continue
+					if not yb: continue
+					p = f"{yb}\t{js}"
+					p = p.strip()
+					if p not in d[hz]:
+						d[hz].append(p)
 		self.write(d)
 
 	def splitSySd(self, syd):
