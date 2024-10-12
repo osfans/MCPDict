@@ -83,8 +83,8 @@ def load():
 		fileskip = int(fs["跳過行數"].value) if fs["跳過行數"].value else 0
 		orders = [fs[i].value for i in ("地圖集二排序", "音典排序","陳邡排序")]
 		colors = [fs[i].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典顏色","陳邡顏色")]
-		subcolors = [fs[i].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典過渡色","陳邡過渡色")]
-		types = [fs[i].value for i in ("地圖集二分區", "音典分區","下拉4，折疊分区")]
+		subcolors = [fs[i].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典過渡色","陳邡顏色")]
+		types = [fs[i].value for i in ("地圖集二分區", "音典分區","下拉2，折疊分区")]
 		tmp = types[0]
 		if tmp:
 			types[0] += "," + (tmp.split("-")[0] if "-" in tmp else "")
@@ -93,8 +93,8 @@ def load():
 		if tmp:
 			types[1] += "," + (tmp.split("-")[1] if "-" in tmp else "")
 		else: types[1] = ","
-		start = fields.index("下拉3")
-		collapse = fs["下拉4，折疊分区"].value
+		start = fields.index("下拉1")
+		collapse = fs["下拉2，折疊分区"].value
 		if collapse == None: collapse = ""
 		dropdown = [row[i].value if row[i].value else "" for i in range(start, start + 6)]
 		if types[2] == None: types[2] = ""
