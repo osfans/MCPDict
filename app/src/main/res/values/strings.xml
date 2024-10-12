@@ -319,14 +319,14 @@
     <string name="pref_title_format">顯示格式</string>
     <string name="pref_key_font_ext">FONT_EXT</string>
     <string name="font_ext_warning">文字版、表格版如出現卡頓，則建議關閉大字庫字體。</string>
-    <string name="pref_title_font_ext">默認字體</string>
+    <string name="pref_title_font_ext">字體順序</string>
     <string name="pref_key_font">FONT</string>
     <string name="book_format">【%s】</string>
     <string-array name="pref_entries_font">
-        <item>系統字體優先</item>
-        <item>系統宋體優先</item>
-        <item>大字庫字體優先</item>
-        <item>關閉大字庫字體</item>
+        <item>系統字體、文津宋體</item>
+        <item>系統宋體、文津宋體</item>
+        <item>僅文津宋體</item>
+        <item>僅系統字體</item>
     </string-array>
     <string-array name="pref_values_font">
         <item>0</item>
