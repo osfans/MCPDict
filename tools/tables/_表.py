@@ -17,7 +17,7 @@ SOURCE = "data"
 TARGET = "output"
 VARIANT_FILE = f"tables/{SOURCE}/正字.tsv"
 
-YDS = {"+":"又", "-":"白", "*":"俗", "/":"書","\\":"語","=":"文","?":"存疑"}
+YDS = {"+":"又", "-":"白", "*":"俗", "/":"書","\\":"語","=":"文","?":"存疑", "@": "訓"}
 def getYD(py):
 	return YDS.get(py[-1], "")
 
@@ -47,7 +47,7 @@ def getSTVariants(level=2):
 	return d
 
 def getTsvName(xls):
-	return xls.rsplit(".", 1)[0] + ".tsv"
+	return re.sub(r"(\(\d?\))+$", "", xls.rsplit(".", 1)[0]) + ".tsv"
 
 def isXlsx(fname):
 	return fname.endswith("xlsx")
@@ -66,7 +66,7 @@ def getXlsxLines(xls):
 	sheet = wb.worksheets[0]
 	lines = list()
 	for row in sheet.rows:
-		fs = [processFs(j.value) for j in row[:20]]
+		fs = [processFs(j.value) for j in row[:50]]
 		if any(fs):
 			line = "\t".join(fs) + "\n"
 			lines.append(line)

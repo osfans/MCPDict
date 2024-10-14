@@ -15,10 +15,23 @@ class 表(_表):
 				self.sy = sy
 			else:
 				sy = self.sy
+		elif name in ("宜章巖泉",):
+			sy, sd, hzs = fs[:3]
+		elif name in ("平陰東阿",):
+			sy, sd, _, hzs = fs[:4]
+			if sy:
+				self.sy = sy
+			else:
+				sy = self.sy
+			yb = sy + sd
+			hzs = hzs.replace("¨", "□")\
+				.replace("(", "[").replace(")", "]").replace("（", "[").replace("）", "]")
 		elif name in ("長沙雙江",):
 			sy, sd, _, hzs = fs[:4]
 			hzs = re.sub("[₁₂₃]", "", hzs)
 			hzs = hzs.replace("[", "［").replace("]", "］").replace("（", "[").replace("）", "]").replace("(", "[").replace(")", "]")
+		elif name in ("會同高椅","會同青朗"):
+			sy, _, sd, hzs = fs[:4]
 		elif name in ("湘鄕棋梓",):
 			sy, sd, _, hzs = fs[:4]
 		elif len(fs) > 3 and fs[3]:
