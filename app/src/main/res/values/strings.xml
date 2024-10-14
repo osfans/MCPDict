@@ -119,6 +119,23 @@
         <item>7</item>
     </string-array>
 
+    <string name="pref_key_zyyy_display">ZYYY_DISPLAY</string>
+    <string name="pref_title_zyyy_display">中原音韻擬音</string>
+    <string-array name="pref_entries_zyyy_display">
+        <item>楊耐思</item>
+        <item>寧繼福</item>
+        <item>薛鳳生（音位形式）</item>
+        <item>unt（音位形式）</item>
+        <item>unt</item>
+    </string-array>
+    <string-array name="pref_values_mc_display">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
     <string name="pref_key_mandarin_display">MANDARIN_DISPLAY</string>
     <string name="pref_title_mandarin_display">普通話</string>
     <string-array name="pref_entries_mandarin_display">

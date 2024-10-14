@@ -76,6 +76,12 @@ public class Utils extends Application {
         }
     };
 
+    private static final Displayer zyyyDisplayer = new Displayer() {
+        public String displayOne(String s) {
+            return Orthography.ZhongyuanYinyun.display(s, getToneStyle(R.string.pref_key_zyyy_display));
+        }
+    };
+
     private static final Displayer cmnDisplayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.Mandarin.display(s, getToneStyle(R.string.pref_key_mandarin_display));
@@ -132,6 +138,7 @@ public class Utils extends Application {
             case DB.SG -> getRichText(string.replace(",", "  "));
             case DB.BA -> baDisplayer.display(string);
             case DB.GY -> getRichText(gyDisplayer.display(string));
+            case DB.ZYYY -> getRichText(zyyyDisplayer.display(string));
             case DB.CMN -> getRichText(cmnDisplayer.display(string));
             case DB.HK -> hkDisplayer.display(string);
             case DB.TW -> getRichText(twDisplayer.display(string));
