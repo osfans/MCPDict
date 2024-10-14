@@ -688,7 +688,7 @@ public class DB extends SQLiteAssetHelper {
 
     private static String formatIDS(String s) {
         s = s.replace("UCS2003", "2003")
-            .replace("G", "中")
+            .replace("G", "陸")
             .replace("H", "港")
             .replace("M", "澳")
             .replace("T", "臺")
