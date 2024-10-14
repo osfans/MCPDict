@@ -114,7 +114,7 @@ def load():
 		if books.value:
 			if books.hyperlink:
 				target = books.hyperlink.target
-				book = f"<a herf={target}>{books.value}</a>"
+				book = f"<a href={target}>{books.value}</a>"
 			else:
 				book = books.value
 		note = fs["說明"].value
