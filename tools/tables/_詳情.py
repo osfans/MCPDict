@@ -3,8 +3,9 @@
 import json, os, re
 from openpyxl import load_workbook
 
-spath = "漢字音典字表檔案（長期更新）.xlsx"
-tpath = "tables/output/%s.json" % (__name__.split(".")[-1])
+curdir = os.path.dirname(__file__)
+spath = os.path.join(curdir, "..", "漢字音典字表檔案（長期更新）.xlsx")
+tpath = os.path.join(curdir, "output", os.path.basename(__file__).replace(".py", ".json"))
 
 FeatureCollection = {
   "type": "FeatureCollection",

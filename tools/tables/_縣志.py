@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import re
+import re, regex
 from collections import defaultdict
 from tables._表 import 表 as _表
 
@@ -42,8 +42,58 @@ class 表(_表):
 			if line.startswith("#"): line = "#"
 		elif name in ("運城", "興縣"):
 			line = line.replace("ø", "")
+		elif name in ("永定", "連城四堡", "上杭古田"):
+			line = line.replace("*", "@")
 		elif name in ("雲霄",):
 			line = line.replace("（","{").replace("）","}").replace("〉","}")
+		elif name in ("道縣梅花",):
+			#!西官陰平藉詞@西官陽平藉詞$西官上聲藉詞%西官去聲藉詞
+			line = re.sub("(!)(?!{)","{西官陰平借詞}",line)
+			line = line.replace("!{","{(西官陰平借詞)")
+			line = re.sub("(@)(?!{)","{西官陽平借詞}",line)
+			line = line.replace("@{","{(西官陽平借詞)")
+			line = re.sub(r"(\$)(?!{)","{西官上聲借詞}",line)
+			line = line.replace("${","{(西官上聲借詞)")
+			line = re.sub("(%)(?!{)","{西官去聲借詞}",line)
+			line = line.replace("%{","{(西官去聲借詞)")
+		elif name in ("連城文保", "長汀"):
+			if line.startswith("#"): return line
+			line = line.replace("（","{").replace("）","}")
+			line = line.replace("[","［").replace("]","］")
+			line = line.replace("*（", "□（")
+			line = re.sub(r"\*(.)", "\\1?", line)
+			line = re.sub(r"［(.)(.*?)］", "\\1*\\2", line)
+			fs = line.split("\t")
+			for i,sd in enumerate(self.toneMaps.values()):
+				fs[i + 1] = f"[{sd}]" + fs[i + 1]
+			line = "".join(fs)
+		elif name in ("博白",):
+			if line.startswith("#"): return "#"
+			find = re.findall(r"\[(.*?)(\d+)\]", line)
+			if not find: return
+			sy = find[0][0]
+			line = re.sub(r"\[(.*?)(\d+)\]", lambda x:f"[{self.toneMaps[x[2]]}]", line)
+			line = sy + line
+		elif name in ("江門荷塘(下)",):
+			if line.startswith("#"): return "#"
+			fs = line.split("\t", 2)
+			sm, ym = fs[:2]
+			line = line.replace("(", "（").replace(")", "）").replace("[", "〔").replace("]", "〕")
+			line = re.sub(r"（([^（）]*?)）〔([^〔〕]*?)〕", "{\\1：\\2}", line)
+			line = re.sub(r"〔([^〔〕]*?)〕（([^（）]*?)）", "{\\1：\\2}", line)
+			line = re.sub(r"（(.*?)）", "{\\1}", line)
+			line = re.sub(r"〔(.*?)〕", "{\\1}", line)
+			line = line.replace("}{", "；")
+			line = re.sub(r"\t(\d+)", lambda x: "["+ self.dz2dl(ym + x[1]).replace(ym, "") +"]", line)
+			line = line.replace("\t" + ym, ym + "\t")
+			fs = line.split("\t", 1)
+			line = fs[0] + "\t" + fs[1].replace("\t", "")
+			if "kʰwaŋ" in line: print(line)
+		elif name in ("敦煌", "洛陽"):
+			line = re.sub(r"\[(\d+)\]", lambda x: "["+self.dz2dl(x[1])+"]", line)\
+				.replace("(", "（").replace(")", "）").replace("\t", "").rstrip("12345 \t\n")
+			line = re.sub(r"\[([^\d].*?)\]", "（\\1）", line)
+			line = regex.sub("（((?>[^（）]+|(?R))*)）", "{\\1}", line)
 		return line
 
 	def update(self):
@@ -79,12 +129,12 @@ class 表(_表):
 			sm = fs[0].strip()
 			for sd,hzs in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", fs[1]):
 				py = sm + ym +sd
-				hzs = re.findall(r"(.)\d?([<+\-/=\\\*？$&r]?)\d?(\{.*?\})?", hzs)
+				hzs = regex.findall(r"(.)\d?([<+\-/=\\\*？$&r@]?)\d?(\{(?>[^\{\}]+|(?R))*?\})?", hzs)
 				for hz, c, js in hzs:
 					if hz == " ": continue
 					p = ""
 					if c:
-						if c in "+-*/=\\":
+						if c in "+-*/=@\\":
 							pass
 						else:
 							if c == '？':

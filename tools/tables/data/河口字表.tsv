@@ -1,0 +1,3432 @@
+num	粤拼	声	韵	调	IPA	声	韵	调	字	注释		test		IPA	粤拼	
+1	baa1	b	aa	1	pa44	p	a	44	巴			1		pa44	baa1	
+2	baa1	b	aa	1	pa44	p	a	44	芭			1		pa44	baa1	
+3	baa1	b	aa	1	pa44	p	a	44	疤			1		pa44	baa1	
+4	baa1	b	aa	1	pa44	p	a	44	吧			1		pa44	baa1	
+5	baa1	b	aa	1	pa44	p	a	44	叭			1		pa44	baa1	
+6	baa1	b	aa	1	pa44	p	a	44	笆			1		pa44	baa1	
+7	baa2\5	b	aa	2\5	pa31	p	a	31	把			1		pa31	baa2\5	
+8	baa2\5	b	aa	2\5	pa31	p	a	31	靶			1		pa31	baa2\5	
+9	baa3	b	aa	3	pa24	p	a	24	霸			1		pa24	baa3	
+10	baa3	b	aa	3	pa24	p	a	24	坝			1		pa24	baa3	
+11	baa3	b	aa	3	pa24	p	a	24	爸			1		pa24	baa3	
+12	baa6	b	aa	6	pa54	p	a	54	罢			1		pa54	baa6	
+13	paa1	p	aa	1	pʰa44	pʰ	a	44	趴			1		pʰa44	paa1	
+14	paa1	p	aa	1	pʰa44	pʰ	a	44	葩			1		pʰa44	paa1	
+15	paa4	p	aa	4	pʰa52	pʰ	a	52	爬			1		pʰa52	paa4	
+16	paa4	p	aa	4	pʰa52	pʰ	a	52	琶			1		pʰa52	paa4	
+17	paa4	p	aa	4	pʰa52	pʰ	a	52	杷			1		pʰa52	paa4	
+18	paa4	p	aa	4	pʰa52	pʰ	a	52	扒			1		pʰa52	paa4	
+19	paa3	p	aa	3	pʰa24	pʰ	a	24	怕			1		pʰa24	paa3	
+20	maa1	m	aa	1	ma44	m	a	44	吗			1		ma44	maa1	
+21	maa1	m	aa	1	ma44	m	a	44	孖			1		ma44	maa1	
+22	maa1	m	aa	1	ma44	m	a	44	马	马虎		1		ma44	maa1	
+23	maa4	m	aa	4	ma52	m	a	52	麻			1		ma52	maa4	
+24	maa4	m	aa	4	ma52	m	a	52	蟆			1		ma52	maa4	
+25	maa2\5	m	aa	2\5	ma31	m	a	31	马	骑马		1		ma31	maa2\5	
+26	maa2\5	m	aa	2\5	ma31	m	a	31	码			1		ma31	maa2\5	
+27	maa2\5	m	aa	2\5	ma31	m	a	31	玛			1		ma31	maa2\5	
+28	maa2\5	m	aa	2\5	ma31	m	a	31	蚂			1		ma31	maa2\5	
+29	maa3	m	aa	3	ma24	m	a	24	妈			1		ma24	maa3	
+30	maa6	m	aa	6	ma54	m	a	54	骂			1		ma54	maa6	
+31	faa1	f	aa	1	fa44	f	a	44	花			1		fa44	faa1	
+32	faa3	f	aa	3	fa24	f	a	24	化			1		fa24	faa3	
+33	waa1	w	aa	1	wa44	w	a	44	蛙			1		wa44	waa1	
+34	waa1	w	aa	1	wa44	w	a	44	洼			1		wa44	waa1	
+35	waa1	w	aa	1	wa44	w	a	44	娲			1		wa44	waa1	
+36	waa1	w	aa	1	wa44	w	a	44	哗			1		wa44	waa1	
+37	waa4	w	aa	4	wa52	w	a	52	话			1		wa52	waa4	
+38	waa6	w	aa	6	wa54	w	a	54	华	中华		1		wa54	waa6	
+39	waa6	w	aa	6	wa54	w	a	54	华	华山，姓		1		wa54	waa6	
+40	waa6	w	aa	6	wa54	w	a	54	桦			1		wa54	waa6	
+41	daa2\5	d	aa	2\5	ta31	t	a	31	打			1		ta31	daa2\5	
+42	taa1	t	aa	1	tʰa44	tʰ	a	44	他			1		tʰa44	taa1	
+43	taa1	t	aa	1	tʰa44	tʰ	a	44	她			1		tʰa44	taa1	
+44	taa1	t	aa	1	tʰa44	tʰ	a	44	它			1		tʰa44	taa1	
+45	naa1	n	aa	1	na44	n	a	44	□	补丁		1		na44	naa1	
+46	naa4	n	aa	4	na52	n	a	52	拿			1		na52	naa4	
+47	naa2\5	n	aa	2\5	na31	n	a	31	哪			1		na31	naa2\5	
+48	naa2\5	n	aa	2\5	na31	n	a	31	那	那里		1		na31	naa2\5	
+49	laa1	l	aa	1	la44	l	a	44	啦			1		la44	laa1	
+50	laa1	l	aa	1	la44	l	a	44	喇			1		la44	laa1	
+51	gaa1	g	aa	1	ka44	k	a	44	家			1		ka44	gaa1	
+52	gaa1	g	aa	1	ka44	k	a	44	加			1		ka44	gaa1	
+53	gaa1	g	aa	1	ka44	k	a	44	痂			1		ka44	gaa1	
+54	gaa1	g	aa	1	ka44	k	a	44	嘉			1		ka44	gaa1	
+55	gaa1	g	aa	1	ka44	k	a	44	傢			1		ka44	gaa1	
+56	gaa1	g	aa	1	ka44	k	a	44	瓜			1		ka44	gaa1	
+57	gaa2\5	g	aa	2\5	ka31	k	a	31	假	真假		1		ka31	gaa2\5	
+58	gaa2\5	g	aa	2\5	ka31	k	a	31	贾			1		ka31	gaa2\5	
+59	gaa2\5	g	aa	2\5	ka31	k	a	31	寡			1		ka31	gaa2\5	
+60	gaa2\5	g	aa	2\5	ka31	k	a	31	剐			1		ka31	gaa2\5	
+61	gaa2\5	g	aa	2\5	ka31	k	a	31	假	放假		1		ka31	gaa2\5	
+62	gaa3	g	aa	3	ka24	k	a	24	架			1		ka24	gaa3	
+63	gaa3	g	aa	3	ka24	k	a	24	驾			1		ka24	gaa3	
+64	gaa3	g	aa	3	ka24	k	a	24	嫁			1		ka24	gaa3	
+65	gaa3	g	aa	3	ka24	k	a	24	稼			1		ka24	gaa3	
+66	gaa3	g	aa	3	ka24	k	a	24	价			1		ka24	gaa3	
+67	gaa6	g	aa	6	ka54	k	a	54	□	~菠萝，凤梨		1		ka54	gaa6	
+68	kaa1	k	aa	1	kʰa44	kʰ	a	44	夸			1		kʰa44	kaa1	
+69	kaa2\5	k	aa	2\5	kʰa31	kʰ	a	31	垮			1		kʰa31	kaa2\5	
+70	kaa2\5	k	aa	2\5	kʰa31	kʰ	a	31	卡	卡住		1		kʰa31	kaa2\5	
+71	kaa3	k	aa	3	kʰa24	kʰ	a	24	挂			1		kʰa24	kaa3	
+72	kaa3	k	aa	3	kʰa24	kʰ	a	24	卡	银行卡		1		kʰa24	kaa3	
+73	haa1	h	aa	1	ha44	h	a	44	虾			1		ha44	haa1	
+74	haa1	h	aa	1	ha44	h	a	44	蛤			1		ha44	haa1	
+75	haa1	h	aa	1	ha44	h	a	44	哈			1		ha44	haa1	
+76	haa4	h	aa	4	ha52	h	a	52	霞			1		ha52	haa4	
+77	haa4	h	aa	4	ha52	h	a	52	瑕			1		ha52	haa4	
+78	haa4	h	aa	4	ha52	h	a	52	遐			1		ha52	haa4	
+79	haa2\5	h	aa	2\5	ha31	h	a	31	下	下山		1		ha31	haa2\5	
+80	haa6	h	aa	6	ha54	h	a	54	夏			1		ha54	haa6	
+81	haa6	h	aa	6	ha54	h	a	54	厦	厦门		1		ha54	haa6	
+82	haa6	h	aa	6	ha54	h	a	54	下	底下		1		ha54	haa6	
+83	ngaa1	ng	aa	1	ŋa44	ŋ	a	44	鸦			1		ŋa44	ngaa1	
+84	ngaa1	ng	aa	1	ŋa44	ŋ	a	44	丫	丫头		1		ŋa44	ngaa1	
+85	ngaa1	ng	aa	1	ŋa44	ŋ	a	44	桠			1		ŋa44	ngaa1	
+86	ngaa4	ng	aa	4	ŋa52	ŋ	a	52	牙			1		ŋa52	ngaa4	
+87	ngaa4	ng	aa	4	ŋa52	ŋ	a	52	芽			1		ŋa52	ngaa4	
+88	ngaa4	ng	aa	4	ŋa52	ŋ	a	52	衙			1		ŋa52	ngaa4	
+89	ngaa4	ng	aa	4	ŋa52	ŋ	a	52	琊			1		ŋa52	ngaa4	
+90	ngaa2\5	ng	aa	2\5	ŋa31	ŋ	a	31	雅			1		ŋa31	ngaa2\5	
+91	ngaa2\5	ng	aa	2\5	ŋa31	ŋ	a	31	瓦			1		ŋa31	ngaa2\5	
+92	ngaa2\5	ng	aa	2\5	ŋa31	ŋ	a	31	哑			1		ŋa31	ngaa2\5	
+93	ngaa6	ng	aa	6	ŋa54	ŋ	a	54	伢			1		ŋa54	ngaa6	
+94	ngaa6	ng	aa	6	ŋa54	ŋ	a	54	瓦	动词		1		ŋa54	ngaa6	
+95	zaa1	z	aa	1	tsa44	ts	a	44	査	姓		1		tsa44	zaa1	
+96	zaa1	z	aa	1	tsa44	ts	a	44	渣			1		tsa44	zaa1	
+97	zaa1	z	aa	1	tsa44	ts	a	44	抓			1		tsa44	zaa1	
+98	zaa1	z	aa	1	tsa44	ts	a	44	吒			1		tsa44	zaa1	
+99	zaa3	z	aa	3	tsa24	ts	a	24	诈			1		tsa24	zaa3	
+100	zaa3	z	aa	3	tsa24	ts	a	24	榨			1		tsa24	zaa3	
+101	zaa3	z	aa	3	tsa24	ts	a	24	炸			1		tsa24	zaa3	
+102	zaa3	z	aa	3	tsa24	ts	a	24	乍			1		tsa24	zaa3	
+103	caa1	c	aa	1	tsʰa44	tsʰ	a	44	叉			1		tsʰa44	caa1	
+104	caa1	c	aa	1	tsʰa44	tsʰ	a	44	杈	枝杈		1		tsʰa44	caa1	
+105	caa1	c	aa	1	tsʰa44	tsʰ	a	44	差	差别		1		tsʰa44	caa1	
+106	caa4	c	aa	4	tsʰa52	tsʰ	a	52	茬			1		tsʰa52	caa4	
+107	caa4	c	aa	4	tsʰa52	tsʰ	a	52	查	调查		1		tsʰa52	caa4	
+108	caa4	c	aa	4	tsʰa52	tsʰ	a	52	茶			1		tsʰa52	caa4	
+109	caa4	c	aa	4	tsʰa52	tsʰ	a	52	搽			1		tsʰa52	caa4	
+110	caa3	c	aa	3	tsʰa24	tsʰ	a	24	岔			1		tsʰa24	caa3	
+111	caa3	c	aa	3	tsʰa24	tsʰ	a	24	诧			1		tsʰa24	caa3	
+112	saa1	s	aa	1	sa44	s	a	44	沙			1		sa44	saa1	
+113	saa1	s	aa	1	sa44	s	a	44	纱			1		sa44	saa1	
+114	saa1	s	aa	1	sa44	s	a	44	砂			1		sa44	saa1	
+115	saa1	s	aa	1	sa44	s	a	44	莎			1		sa44	saa1	
+116	saa1	s	aa	1	sa44	s	a	44	痧			1		sa44	saa1	
+117	saa1	s	aa	1	sa44	s	a	44	裟			1		sa44	saa1	
+118	saa1	s	aa	1	sa44	s	a	44	鲨			1		sa44	saa1	
+119	saa2\5	s	aa	2\5	sa31	s	a	31	耍			1		sa31	saa2\5	
+120	saa2\5	s	aa	2\5	sa31	s	a	31	洒			1		sa31	saa2\5	
+121	saa3	s	aa	3	sa24	s	a	24	□	摸		1		sa24	saa3	
+122	jaa1	j	aa	1	ja44	j	a	44	呀			1		ja44	jaa1	
+123	njaa1	nj	aa	1	ȵa44	ȵ	a	44	□	拿		1		ȵa44	njaa1	
+124	aa1		aa	1	a44	Ǿ	a	44	阿			1		a44	aa1	
+125	aa3		aa	3	a24	Ǿ	a	24	亚			1		a24	aa3	
+126	be1	b	e	1	pɛ44	p	ɛ	44	啤			1		pɛ44	be1	
+127	me4	m	e	4	mɛ52	m	ɛ	52	咩			1		mɛ52	me4	
+128	me2\5	m	e	2\5	mɛ31	m	ɛ	31	□	歪的		1		mɛ31	me2\5	
+129	me6	m	e	6	mɛ54	m	ɛ	54	□	扯~，歪的		1		mɛ54	me6	
+130	de1	d	e	1	tɛ44	t	ɛ	44	爹			1		tɛ44	de1	
+131	de2\5	d	e	2\5	tɛ31	t	ɛ	31	嗲			1		tɛ31	de2\5	
+132	sle1	sl	e	1	ɬɛ44	ɬ	ɛ	44	些			1		ɬɛ44	sle1	
+133	sle2\5	sl	e	2\5	ɬɛ31	ɬ	ɛ	31	写			1		ɬɛ31	sle2\5	
+134	sle3	sl	e	3	ɬɛ24	ɬ	ɛ	24	泻			1		ɬɛ24	sle3	
+135	sle3	sl	e	3	ɬɛ24	ɬ	ɛ	24	卸			1		ɬɛ24	sle3	
+136	ke4	k	e	4	kʰɛ52	kʰ	ɛ	52	茄			1		kʰɛ52	ke4	
+137	ke4	k	e	4	kʰɛ52	kʰ	ɛ	52	骑			1		kʰɛ52	ke4	
+138	he1	h	e	1	hɛ44	h	ɛ	44	靴			1		hɛ44	he1	
+139	ze1	z	e	1	tsɛ44	ts	ɛ	44	遮			1		tsɛ44	ze1	
+140	ze2\5	z	e	2\5	tsɛ31	ts	ɛ	31	姐			1		tsɛ31	ze2\5	
+141	ze2\5	z	e	2\5	tsɛ31	ts	ɛ	31	者			1		tsɛ31	ze2\5	
+142	ze3	z	e	3	tsɛ24	ts	ɛ	24	借			1		tsɛ24	ze3	
+143	ze3	z	e	3	tsɛ24	ts	ɛ	24	蔗			1		tsɛ24	ze3	
+144	ze6	z	e	6	tsɛ54	ts	ɛ	54	谢			1		tsɛ54	ze6	
+145	ze6	z	e	6	tsɛ54	ts	ɛ	54	榭			1		tsɛ54	ze6	
+146	ce1	c	e	1	tsʰɛ44	tsʰ	ɛ	44	车			1		tsʰɛ44	ce1	
+147	ce4	c	e	4	tsʰɛ52	tsʰ	ɛ	52	邪			1		tsʰɛ52	ce4	
+148	ce4	c	e	4	tsʰɛ52	tsʰ	ɛ	52	斜			1		tsʰɛ52	ce4	
+149	ce2\5	c	e	2\5	tsʰɛ31	tsʰ	ɛ	31	且			1		tsʰɛ31	ce2\5	
+150	ce2\5	c	e	2\5	tsʰɛ31	tsʰ	ɛ	31	扯			1		tsʰɛ31	ce2\5	
+151	ce3	c	e	3	tsʰɛ24	tsʰ	ɛ	24	斜			1		tsʰɛ24	ce3	
+152	se1	s	e	1	sɛ44	s	ɛ	44	奢			1		sɛ44	se1	
+153	se1	s	e	1	sɛ44	s	ɛ	44	赊			1		sɛ44	se1	
+154	se4	s	e	4	sɛ52	s	ɛ	52	佘			1		sɛ52	se4	
+155	se2\5	s	e	2\5	sɛ31	s	ɛ	31	捨			1		sɛ31	se2\5	
+156	se2\5	s	e	2\5	sɛ31	s	ɛ	31	社			1		sɛ31	se2\5	
+157	se2\5	s	e	2\5	sɛ31	s	ɛ	31	舍	舍得		1		sɛ31	se2\5	
+158	se3	s	e	3	sɛ24	s	ɛ	24	舍	宿舍		1		sɛ24	se3	
+159	se6	s	e	6	sɛ54	s	ɛ	54	射			1		sɛ54	se6	
+160	se6	s	e	6	sɛ54	s	ɛ	54	麝			1		sɛ54	se6	
+161	se6	s	e	6	sɛ54	s	ɛ	54	赦			1		sɛ54	se6	
+162	je4	j	e	4	jɛ52	j	ɛ	52	耶			1		jɛ52	je4	
+163	je4	j	e	4	jɛ52	j	ɛ	52	爷			1		jɛ52	je4	
+164	je4	j	e	4	jɛ52	j	ɛ	52	椰			1		jɛ52	je4	
+165	je2\5	j	e	2\5	jɛ31	j	ɛ	31	惹			1		jɛ31	je2\5	
+166	je2\5	j	e	2\5	jɛ31	j	ɛ	31	野			1		jɛ31	je2\5	
+167	je2\5	j	e	2\5	jɛ31	j	ɛ	31	也			1		jɛ31	je2\5	
+168	je6	j	e	6	jɛ54	j	ɛ	54	夜			1		jɛ54	je6	
+169	bo1	b	o	1	pɔ44	p	ɔ	44	波			1		pɔ44	bo1	
+170	bo1	b	o	1	pɔ44	p	ɔ	44	菠			1		pɔ44	bo1	
+171	bo1	b	o	1	pɔ44	p	ɔ	44	玻			1		pɔ44	bo1	
+172	bo3	b	o	3	pɔ24	p	ɔ	24	播			1		pɔ24	bo3	
+173	po1	p	o	1	pʰɔ44	pʰ	ɔ	44	颇			1		pʰɔ44	po1	
+174	po1	p	o	1	pʰɔ44	pʰ	ɔ	44	坡			1		pʰɔ44	po1	
+175	po4	p	o	4	pʰɔ52	pʰ	ɔ	52	婆			1		pʰɔ52	po4	
+176	po4	p	o	4	pʰɔ52	pʰ	ɔ	52	菩			1		pʰɔ52	po4	
+177	po2\5	p	o	2\5	pʰɔ31	pʰ	ɔ	31	跛			1		pʰɔ31	po2\5	
+178	po3	p	o	3	pʰɔ24	pʰ	ɔ	24	破			1		pʰɔ24	po3	
+179	mo1	m	o	1	mɔ44	m	ɔ	44	魔			1		mɔ44	mo1	
+180	mo1	m	o	1	mɔ44	m	ɔ	44	摩			1		mɔ44	mo1	
+181	mo1	m	o	1	mɔ44	m	ɔ	44	么			1		mɔ44	mo1	
+182	mo4	m	o	4	mɔ52	m	ɔ	52	磨	磨刀		1		mɔ52	mo4	
+183	mo3	m	o	3	mɔ24	m	ɔ	24	摸			1		mɔ24	mo3	
+184	mo6	m	o	6	mɔ54	m	ɔ	54	磨	石磨		1		mɔ54	mo6	
+185	fo1	f	o	1	fɔ44	f	ɔ	44	科			1		fɔ44	fo1	
+186	fo1	f	o	1	fɔ44	f	ɔ	44	蝌			1		fɔ44	fo1	
+187	fo2\5	f	o	2\5	fɔ31	f	ɔ	31	火			1		fɔ31	fo2\5	
+188	fo2\5	f	o	2\5	fɔ31	f	ɔ	31	伙			1		fɔ31	fo2\5	
+189	fo3	f	o	3	fɔ24	f	ɔ	24	货			1		fɔ24	fo3	
+190	wo1	w	o	1	wɔ44	w	ɔ	44	锅			1		wɔ44	wo1	
+191	wo1	w	o	1	wɔ44	w	ɔ	44	倭			1		wɔ44	wo1	
+192	wo1	w	o	1	wɔ44	w	ɔ	44	窝			1		wɔ44	wo1	
+193	wo1	w	o	1	wɔ44	w	ɔ	44	蜗			1		wɔ44	wo1	
+194	wo4	w	o	4	wɔ52	w	ɔ	52	和	和气		1		wɔ52	wo4	
+195	wo4	w	o	4	wɔ52	w	ɔ	52	禾			1		wɔ52	wo4	
+196	wo3	w	o	3	wɔ24	w	ɔ	24	涴	脏		1		wɔ24	wo3	
+197	wo6	w	o	6	wɔ54	w	ɔ	54	卧			1		wɔ54	wo6	
+198	wo6	w	o	6	wɔ54	w	ɔ	54	祸			1		wɔ54	wo6	
+199	do1	d	o	1	tɔ44	t	ɔ	44	多			1		tɔ44	do1	
+200	do1	d	o	1	tɔ44	t	ɔ	44	哆			1		tɔ44	do1	
+201	do2\5	d	o	2\5	tɔ31	t	ɔ	31	朵			1		tɔ31	do2\5	
+202	do2\5	d	o	2\5	tɔ31	t	ɔ	31	躲			1		tɔ31	do2\5	
+203	do6	d	o	6	tɔ54	t	ɔ	54	舵			1		tɔ54	do6	
+204	do6	d	o	6	tɔ54	t	ɔ	54	惰			1		tɔ54	do6	
+205	do6	d	o	6	tɔ54	t	ɔ	54	剁			1		tɔ54	do6	
+206	do6	d	o	6	tɔ54	t	ɔ	54	堕			1		tɔ54	do6	
+207	do6	d	o	6	tɔ54	t	ɔ	54	唾			1		tɔ54	do6	
+208	to1	t	o	1	tʰɔ44	tʰ	ɔ	44	拖			1		tʰɔ44	to1	
+209	to4	t	o	4	tʰɔ52	tʰ	ɔ	52	驼			1		tʰɔ52	to4	
+210	to4	t	o	4	tʰɔ52	tʰ	ɔ	52	佗			1		tʰɔ52	to4	
+211	to4	t	o	4	tʰɔ52	tʰ	ɔ	52	砣			1		tʰɔ52	to4	
+212	to4	t	o	4	tʰɔ52	tʰ	ɔ	52	跎			1		tʰɔ52	to4	
+213	to4	t	o	4	tʰɔ52	tʰ	ɔ	52	驮			1		tʰɔ52	to4	
+214	to2\5	t	o	2\5	tʰɔ31	tʰ	ɔ	31	妥			1		tʰɔ31	to2\5	
+215	to2\5	t	o	2\5	tʰɔ31	tʰ	ɔ	31	椭			1		tʰɔ31	to2\5	
+216	no4	n	o	4	nɔ52	n	ɔ	52	挪			1		nɔ52	no4	
+217	no4	n	o	4	nɔ52	n	ɔ	52	娜			1		nɔ52	no4	
+218	no4	n	o	4	nɔ52	n	ɔ	52	那	地名		1		nɔ52	no4	
+219	no2\5	n	o	2\5	nɔ31	n	ɔ	31	□	拿		1		nɔ31	no2\5	
+220	no6	n	o	6	nɔ54	n	ɔ	54	糯			1		nɔ54	no6	
+221	no6	n	o	6	nɔ54	n	ɔ	54	懦			1		nɔ54	no6	
+222	lo1	l	o	1	lɔ44	l	ɔ	44	啰			1		lɔ44	lo1	
+223	lo4	l	o	4	lɔ52	l	ɔ	52	罗			1		lɔ52	lo4	
+224	lo4	l	o	4	lɔ52	l	ɔ	52	锣			1		lɔ52	lo4	
+225	lo4	l	o	4	lɔ52	l	ɔ	52	箩			1		lɔ52	lo4	
+226	lo4	l	o	4	lɔ52	l	ɔ	52	萝			1		lɔ52	lo4	
+227	lo4	l	o	4	lɔ52	l	ɔ	52	骡			1		lɔ52	lo4	
+228	lo4	l	o	4	lɔ52	l	ɔ	52	螺			1		lɔ52	lo4	
+229	lo4	l	o	4	lɔ52	l	ɔ	52	逻			1		lɔ52	lo4	
+230	lo2\5	l	o	2\5	lɔ31	l	ɔ	31	裸			1		lɔ31	lo2\5	
+231	lo3	l	o	3	lɔ24	l	ɔ	24	脶			1		lɔ24	lo3	
+232	lo6	l	o	6	lɔ54	l	ɔ	54	咯			1		lɔ54	lo6	
+233	lo6	l	o	6	lɔ54	l	ɔ	54	□	逛		1		lɔ54	lo6	
+234	slo1	sl	o	1	ɬɔ44	ɬ	ɔ	44	梭			1		ɬɔ44	slo1	
+235	slo1	sl	o	1	ɬɔ44	ɬ	ɔ	44	唆			1		ɬɔ44	slo1	
+236	slo2\5	sl	o	2\5	ɬɔ31	ɬ	ɔ	31	锁			1		ɬɔ31	slo2\5	
+237	slo2\5	sl	o	2\5	ɬɔ31	ɬ	ɔ	31	琐			1		ɬɔ31	slo2\5	
+238	go1	g	o	1	kɔ44	k	ɔ	44	歌			1		kɔ44	go1	
+239	go1	g	o	1	kɔ44	k	ɔ	44	戈			1		kɔ44	go1	
+240	go2\5	g	o	2\5	kɔ31	k	ɔ	31	果			1		kɔ31	go2\5	
+241	go2\5	g	o	2\5	kɔ31	k	ɔ	31	裹			1		kɔ31	go2\5	
+242	go3	g	o	3	kɔ24	k	ɔ	24	哥			1		kɔ24	go3	
+243	go3	g	o	3	kɔ24	k	ɔ	24	过			1		kɔ24	go3	
+244	go6	g	o	6	kɔ54	k	ɔ	54	个			1		kɔ54	go6	
+245	ko1	k	o	1	kʰɔ44	kʰ	ɔ	44	柯			1		kʰɔ44	ko1	
+246	ko1	k	o	1	kʰɔ44	kʰ	ɔ	44	棵			1		kʰɔ44	ko1	
+247	ko1	k	o	1	kʰɔ44	kʰ	ɔ	44	颗			1		kʰɔ44	ko1	
+248	ko3	k	o	3	kʰɔ24	kʰ	ɔ	24	课			1		kʰɔ24	ko3	
+249	ho1	h	o	1	hɔ44	h	ɔ	44	呵	呵护		1		hɔ44	ho1	
+250	ho4	h	o	4	hɔ52	h	ɔ	52	河			1		hɔ52	ho4	
+251	ho4	h	o	4	hɔ52	h	ɔ	52	何			1		hɔ52	ho4	
+252	ho4	h	o	4	hɔ52	h	ɔ	52	荷	荷花		1		hɔ52	ho4	
+253	ho4	h	o	4	hɔ52	h	ɔ	52	荷	薄荷		1		hɔ52	ho4	
+254	ho2\5	h	o	2\5	hɔ31	h	ɔ	31	可			1		hɔ31	ho2\5	
+255	ho6	h	o	6	hɔ54	h	ɔ	54	贺			1		hɔ54	ho6	
+256	ho6	h	o	6	hɔ54	h	ɔ	54	荷	负荷		1		hɔ54	ho6	
+257	ngo4	ng	o	4	ŋɔ52	ŋ	ɔ	52	蛾			1		ŋɔ52	ngo4	
+258	ngo4	ng	o	4	ŋɔ52	ŋ	ɔ	52	鹅			1		ŋɔ52	ngo4	
+259	ngo4	ng	o	4	ŋɔ52	ŋ	ɔ	52	峨			1		ŋɔ52	ngo4	
+260	ngo4	ng	o	4	ŋɔ52	ŋ	ɔ	52	娥			1		ŋɔ52	ngo4	
+261	ngo2\5	ng	o	2\5	ŋɔ31	ŋ	ɔ	31	我			1		ŋɔ31	ngo2\5	
+262	ngo6	ng	o	6	ŋɔ54	ŋ	ɔ	54	饿			1		ŋɔ54	ngo6	
+263	zo2\5	z	o	2\5	tsɔ31	ts	ɔ	31	左			1		tsɔ31	zo2\5	
+264	zo2\5	z	o	2\5	tsɔ31	ts	ɔ	31	阻			1		tsɔ31	zo2\5	
+265	zo2\5	z	o	2\5	tsɔ31	ts	ɔ	31	俎			1		tsɔ31	zo2\5	
+266	zo6	z	o	6	tsɔ54	ts	ɔ	54	佐			1		tsɔ54	zo6	
+267	zo6	z	o	6	tsɔ54	ts	ɔ	54	座			1		tsɔ54	zo6	
+268	zo6	z	o	6	tsɔ54	ts	ɔ	54	助			1		tsɔ54	zo6	
+269	zo6	z	o	6	tsɔ54	ts	ɔ	54	坐			1		tsɔ54	zo6	
+270	co1	c	o	1	tsʰɔ44	tsʰ	ɔ	44	搓			1		tsʰɔ44	co1	
+271	co1	c	o	1	tsʰɔ44	tsʰ	ɔ	44	初			1		tsʰɔ44	co1	
+272	co4	c	o	4	tsʰɔ52	tsʰ	ɔ	52	锄			1		tsʰɔ52	co4	
+273	co2\5	c	o	2\5	tsʰɔ31	tsʰ	ɔ	31	楚			1		tsʰɔ31	co2\5	
+274	co2\5	c	o	2\5	tsʰɔ31	tsʰ	ɔ	31	礎			1		tsʰɔ31	co2\5	
+275	co2\5	c	o	2\5	tsʰɔ31	tsʰ	ɔ	31	坐			1		tsʰɔ31	co2\5	
+276	co3	c	o	3	tsʰɔ24	tsʰ	ɔ	24	错			1		tsʰɔ24	co3	
+277	co3	c	o	3	tsʰɔ24	tsʰ	ɔ	24	挫			1		tsʰɔ24	co3	
+278	so1	s	o	1	sɔ44	s	ɔ	44	蓑			1		sɔ44	so1	
+279	so1	s	o	1	sɔ44	s	ɔ	44	梳			1		sɔ44	so1	
+280	so1	s	o	1	sɔ44	s	ɔ	44	疏			1		sɔ44	so1	
+281	so1	s	o	1	sɔ44	s	ɔ	44	蔬			1		sɔ44	so1	
+282	so4	s	o	4	sɔ52	s	ɔ	52	傻			1		sɔ52	so4	
+283	so2\5	s	o	2\5	sɔ31	s	ɔ	31	所			1		sɔ31	so2\5	
+284	o1		o	1	ɔ44	Ǿ	ɔ	44	阿	阿胶		1		ɔ44	o1	
+285	o1		o	1	ɔ44	Ǿ	ɔ	44	屙			1		ɔ44	o1	
+286	o2\5		o	2\5	ɔ31	Ǿ	ɔ	31	哦	表应答		1		ɔ31	o2\5	
+287	o3		o	3	ɔ24	Ǿ	ɔ	24	哦	表疑问		1		ɔ24	o3	
+288	zi1	z	i	1	tsi44	ts	i	44	猪			1		tsi44	zi1	
+289	zi1	z	i	1	tsi44	ts	i	44	诸			1		tsi44	zi1	
+290	zi1	z	i	1	tsi44	ts	i	44	诛			1		tsi44	zi1	
+291	zi1	z	i	1	tsi44	ts	i	44	蛛			1		tsi44	zi1	
+292	zi1	z	i	1	tsi44	ts	i	44	株			1		tsi44	zi1	
+293	zi1	z	i	1	tsi44	ts	i	44	朱			1		tsi44	zi1	
+294	zi1	z	i	1	tsi44	ts	i	44	珠			1		tsi44	zi1	
+295	zi1	z	i	1	tsi44	ts	i	44	知			1		tsi44	zi1	
+296	zi1	z	i	1	tsi44	ts	i	44	蜘			1		tsi44	zi1	
+297	zi1	z	i	1	tsi44	ts	i	44	支			1		tsi44	zi1	
+298	zi1	z	i	1	tsi44	ts	i	44	枝			1		tsi44	zi1	
+299	zi1	z	i	1	tsi44	ts	i	44	肢			1		tsi44	zi1	
+300	zi1	z	i	1	tsi44	ts	i	44	栀			1		tsi44	zi1	
+301	zi1	z	i	1	tsi44	ts	i	44	脂			1		tsi44	zi1	
+302	zi1	z	i	1	tsi44	ts	i	44	之			1		tsi44	zi1	
+303	zi1	z	i	1	tsi44	ts	i	44	芝			1		tsi44	zi1	
+304	zi2\5	z	i	2\5	tsi31	ts	i	31	煮			1		tsi31	zi2\5	
+305	zi2\5	z	i	2\5	tsi31	ts	i	31	主			1		tsi31	zi2\5	
+306	zi2\5	z	i	2\5	tsi31	ts	i	31	拄			1		tsi31	zi2\5	
+307	zi2\5	z	i	2\5	tsi31	ts	i	31	纸			1		tsi31	zi2\5	
+308	zi2\5	z	i	2\5	tsi31	ts	i	31	只			1		tsi31	zi2\5	
+309	zi2\5	z	i	2\5	tsi31	ts	i	31	旨			1		tsi31	zi2\5	
+310	zi2\5	z	i	2\5	tsi31	ts	i	31	指			1		tsi31	zi2\5	
+311	zi2\5	z	i	2\5	tsi31	ts	i	31	止			1		tsi31	zi2\5	
+312	zi2\5	z	i	2\5	tsi31	ts	i	31	趾			1		tsi31	zi2\5	
+313	zi2\5	z	i	2\5	tsi31	ts	i	31	址			1		tsi31	zi2\5	
+314	zi3	z	i	3	tsi24	ts	i	24	著			1		tsi24	zi3	
+315	zi3	z	i	3	tsi24	ts	i	24	驻			1		tsi24	zi3	
+316	ci1	c	i	1	tsʰi44	tsʰ	i	44	痴			1		tsʰi44	ci1	
+317	ci1	c	i	1	tsʰi44	tsʰ	i	44	嗤			1		tsʰi44	ci1	
+318	ci4	c	i	4	tsʰi52	tsʰ	i	52	除			1		tsʰi52	ci4	
+319	ci4	c	i	4	tsʰi52	tsʰ	i	52	厨			1		tsʰi52	ci4	
+320	ci4	c	i	4	tsʰi52	tsʰ	i	52	雏			1		tsʰi52	ci4	
+321	ci4	c	i	4	tsʰi52	tsʰ	i	52	池			1		tsʰi52	ci4	
+322	ci4	c	i	4	tsʰi52	tsʰ	i	52	驰			1		tsʰi52	ci4	
+323	ci4	c	i	4	tsʰi52	tsʰ	i	52	迟			1		tsʰi52	ci4	
+324	ci4	c	i	4	tsʰi52	tsʰ	i	52	持			1		tsʰi52	ci4	
+325	ci2\5	c	i	2\5	tsʰi31	tsʰ	i	31	处			1		tsʰi31	ci2\5	
+326	ci2\5	c	i	2\5	tsʰi31	tsʰ	i	31	杵			1		tsʰi31	ci2\5	
+327	ci2\5	c	i	2\5	tsʰi31	tsʰ	i	31	柱			1		tsʰi31	ci2\5	
+328	ci2\5	c	i	2\5	tsʰi31	tsʰ	i	31	储			1		tsʰi31	ci2\5	
+329	ci2\5	c	i	2\5	tsʰi31	tsʰ	i	31	侈			1		tsʰi31	ci2\5	
+330	ci2\5	c	i	2\5	tsʰi31	tsʰ	i	31	耻			1		tsʰi31	ci2\5	
+331	ci2\5	c	i	2\5	tsʰi31	tsʰ	i	31	齿			1		tsʰi31	ci2\5	
+332	ci2\5	c	i	2\5	tsʰi31	tsʰ	i	31	始			1		tsʰi31	ci2\5	
+333	ci3	c	i	3	tsʰi24	tsʰ	i	24	翅			1		tsʰi24	ci3	
+334	ci3	c	i	3	tsʰi24	tsʰ	i	24	厕			1		tsʰi24	ci3	
+335	si1	s	i	1	si44	s	i	44	书			1		si44	si1	
+336	si1	s	i	1	si44	s	i	44	输	运输		1		si44	si1	
+337	si1	s	i	1	si44	s	i	44	舒			1		si44	si1	
+338	si1	s	i	1	si44	s	i	44	枢			1		si44	si1	
+339	si1	s	i	1	si44	s	i	44	输			1		si44	si1	
+340	si1	s	i	1	si44	s	i	44	施			1		si44	si1	
+341	si1	s	i	1	si44	s	i	44	尸			1		si44	si1	
+342	si1	s	i	1	si44	s	i	44	诗			1		si44	si1	
+343	si4	s	i	4	si52	s	i	52	薯			1		si52	si4	
+344	si4	s	i	4	si52	s	i	52	殊			1		si52	si4	
+345	si4	s	i	4	si52	s	i	52	匙			1		si52	si4	
+346	si4	s	i	4	si52	s	i	52	时			1		si52	si4	
+347	si2\5	s	i	2\5	si31	s	i	31	署			1		si31	si2\5	
+348	si2\5	s	i	2\5	si31	s	i	31	暑			1		si31	si2\5	
+349	si2\5	s	i	2\5	si31	s	i	31	鼠			1		si31	si2\5	
+350	si2\5	s	i	2\5	si31	s	i	31	黍			1		si31	si2\5	
+351	si2\5	s	i	2\5	si31	s	i	31	豕			1		si31	si2\5	
+352	si2\5	s	i	2\5	si31	s	i	31	屎			1		si31	si2\5	
+353	si2\5	s	i	2\5	si31	s	i	31	矢			1		si31	si2\5	
+354	si2\5	s	i	2\5	si31	s	i	31	市			1		si31	si2\5	
+355	si2\5	s	i	2\5	si31	s	i	31	史			1		si31	si2\5	
+356	si3	s	i	3	si24	s	i	24	试			1		si24	si3	
+357	si3	s	i	3	si24	s	i	24	处			1		si24	si3	
+358	si3	s	i	3	si24	s	i	24	庶			1		si24	si3	
+359	ji1	j	i	1	ji44	j	i	44	於	于此		1		ji44	ji1	
+360	ji1	j	i	1	ji44	j	i	44	淤			1		ji44	ji1	
+361	ji1	j	i	1	ji44	j	i	44	迂			1		ji44	ji1	
+362	ji1	j	i	1	ji44	j	i	44	于			1		ji44	ji1	
+363	ji1	j	i	1	ji44	j	i	44	伊			1		ji44	ji1	
+364	ji1	j	i	1	ji44	j	i	44	医			1		ji44	ji1	
+365	ji1	j	i	1	ji44	j	i	44	衣			1		ji44	ji1	
+366	ji1	j	i	1	ji44	j	i	44	依			1		ji44	ji1	
+367	ji4	j	i	4	ji52	j	i	52	如			1		ji52	ji4	
+368	ji4	j	i	4	ji52	j	i	52	余			1		ji52	ji4	
+369	ji4	j	i	4	ji52	j	i	52	疑			1		ji52	ji4	
+370	ji4	j	i	4	ji52	j	i	52	愚			1		ji52	ji4	
+371	ji4	j	i	4	ji52	j	i	52	虞			1		ji52	ji4	
+372	ji4	j	i	4	ji52	j	i	52	娱			1		ji52	ji4	
+373	ji4	j	i	4	ji52	j	i	52	盂			1		ji52	ji4	
+374	ji4	j	i	4	ji52	j	i	52	榆			1		ji52	ji4	
+375	ji4	j	i	4	ji52	j	i	52	逾			1		ji52	ji4	
+376	ji4	j	i	4	ji52	j	i	52	愉			1		ji52	ji4	
+377	ji4	j	i	4	ji52	j	i	52	宜			1		ji52	ji4	
+378	ji4	j	i	4	ji52	j	i	52	谊			1		ji52	ji4	
+379	ji4	j	i	4	ji52	j	i	52	仪			1		ji52	ji4	
+380	ji4	j	i	4	ji52	j	i	52	移			1		ji52	ji4	
+381	ji4	j	i	4	ji52	j	i	52	夷			1		ji52	ji4	
+382	ji4	j	i	4	ji52	j	i	52	姨			1		ji52	ji4	
+383	ji4	j	i	4	ji52	j	i	52	饴			1		ji52	ji4	
+384	ji2\5	j	i	2\5	ji31	j	i	31	汝			1		ji31	ji2\5	
+385	ji2\5	j	i	2\5	ji31	j	i	31	语			1		ji31	ji2\5	
+386	nji4	nj	i	4	ȵi52	ȵ	i	52	鱼			1		ȵi52	nji4	
+387	nji4	nj	i	4	ȵi52	ȵ	i	52	渔			1		ȵi52	nji4	
+388	nji4	nj	i	4	ȵi52	ȵ	i	52	儿			1		ȵi52	nji4	
+389	nji4	nj	i	4	ȵi52	ȵ	i	52	疑			1		ȵi52	nji4	
+390	nji2\5	nj	i	2\5	ȵi31	ȵ	i	31	尔			1		ȵi31	nji2\5	
+391	nji2\5	nj	i	2\5	ȵi31	ȵ	i	31	耳			1		ȵi31	nji2\5	
+392	nji2\5	nj	i	2\5	ȵi31	ȵ	i	31	饵			1		ȵi31	nji2\5	
+393	nji2\5	nj	i	2\5	ȵi31	ȵ	i	31	语			1		ȵi31	nji2\5	
+394	nji6	nj	i	6	ȵi54	ȵ	i	54	二			1		ȵi54	nji6	
+395	nji6	nj	i	6	ȵi54	ȵ	i	54	贰			1		ȵi54	nji6	
+396	fu1	f	u	1	fu44	f	u	44	夫			1		fu44	fu1	
+397	fu1	f	u	1	fu44	f	u	44	肤			1		fu44	fu1	
+398	fu1	f	u	1	fu44	f	u	44	敷			1		fu44	fu1	
+399	fu1	f	u	1	fu44	f	u	44	俘			1		fu44	fu1	
+400	fu1	f	u	1	fu44	f	u	44	孵			1		fu44	fu1	
+401	fu1	f	u	1	fu44	f	u	44	呼			1		fu44	fu1	
+402	fu1	f	u	1	fu44	f	u	44	枯			1		fu44	fu1	
+403	fu4	f	u	4	fu52	f	u	52	符			1		fu52	fu4	
+404	fu4	f	u	4	fu52	f	u	52	扶			1		fu52	fu4	
+405	fu4	f	u	4	fu52	f	u	52	芙			1		fu52	fu4	
+406	fu4	f	u	4	fu52	f	u	52	乎			1		fu52	fu4	
+407	fu2\5	f	u	2\5	fu31	f	u	31	府			1		fu31	fu2\5	
+408	fu2\5	f	u	2\5	fu31	f	u	31	腑			1		fu31	fu2\5	
+409	fu2\5	f	u	2\5	fu31	f	u	31	俯			1		fu31	fu2\5	
+410	fu2\5	f	u	2\5	fu31	f	u	31	斧			1		fu31	fu2\5	
+411	fu2\5	f	u	2\5	fu31	f	u	31	虎			1		fu31	fu2\5	
+412	fu2\5	f	u	2\5	fu31	f	u	31	浒			1		fu31	fu2\5	
+413	fu2\5	f	u	2\5	fu31	f	u	31	抚			1		fu31	fu2\5	
+414	fu2\5	f	u	2\5	fu31	f	u	31	腐			1		fu31	fu2\5	
+415	fu2\5	f	u	2\5	fu31	f	u	31	甫			1		fu31	fu2\5	
+416	fu2\5	f	u	2\5	fu31	f	u	31	釜			1		fu31	fu2\5	
+417	fu2\5	f	u	2\5	fu31	f	u	31	妇			1		fu31	fu2\5	
+418	fu2\5	f	u	2\5	fu31	f	u	31	苦			1		fu31	fu2\5	
+419	fu3	f	u	3	fu24	f	u	24	库			1		fu24	fu3	
+420	fu3	f	u	3	fu24	f	u	24	裤			1		fu24	fu3	
+421	fu3	f	u	3	fu24	f	u	24	赋			1		fu24	fu3	
+422	wu1	w	u	1	wu44	w	u	44	乌			1		wu44	wu1	
+423	wu1	w	u	1	wu44	w	u	44	污			1		wu44	wu1	
+424	wu1	w	u	1	wu44	w	u	44	坞			1		wu44	wu1	
+425	wu1	w	u	1	wu44	w	u	44	呜			1		wu44	wu1	
+426	wu4	w	u	4	wu52	w	u	52	胡			1		wu52	wu4	
+427	wu4	w	u	4	wu52	w	u	52	湖			1		wu52	wu4	
+428	wu4	w	u	4	wu52	w	u	52	狐			1		wu52	wu4	
+429	wu4	w	u	4	wu52	w	u	52	壶			1		wu52	wu4	
+430	wu4	w	u	4	wu52	w	u	52	葫			1		wu52	wu4	
+431	wu4	w	u	4	wu52	w	u	52	蝴			1		wu52	wu4	
+432	wu4	w	u	4	wu52	w	u	52	糊			1		wu52	wu4	
+433	wu6	w	u	6	wu54	w	u	54	户			1		wu54	wu6	
+434	wu6	w	u	6	wu54	w	u	54	沪			1		wu54	wu6	
+435	wu6	w	u	6	wu54	w	u	54	互			1		wu54	wu6	
+436	wu6	w	u	6	wu54	w	u	54	恶	可恶		1		wu54	wu6	
+437	gu1	g	u	1	ku44	k	u	44	姑			1		ku44	gu1	
+438	gu1	g	u	1	ku44	k	u	44	孤			1		ku44	gu1	
+439	gu1	g	u	1	ku44	k	u	44	菇			1		ku44	gu1	
+440	gu1	g	u	1	ku44	k	u	44	辜			1		ku44	gu1	
+441	gu2\5	g	u	2\5	ku31	k	u	31	古			1		ku31	gu2\5	
+442	gu2\5	g	u	2\5	ku31	k	u	31	估			1		ku31	gu2\5	
+443	gu2\5	g	u	2\5	ku31	k	u	31	牯			1		ku31	gu2\5	
+444	gu2\5	g	u	2\5	ku31	k	u	31	股			1		ku31	gu2\5	
+445	gu2\5	g	u	2\5	ku31	k	u	31	鼓			1		ku31	gu2\5	
+446	gu3	g	u	3	ku24	k	u	24	故			1		ku24	gu3	
+447	gu3	g	u	3	ku24	k	u	24	固			1		ku24	gu3	
+448	gu3	g	u	3	ku24	k	u	24	锢			1		ku24	gu3	
+449	gu3	g	u	3	ku24	k	u	24	雇			1		ku24	gu3	
+450	gu3	g	u	3	ku24	k	u	24	顾			1		ku24	gu3	
+451	ku1	k	u	1	kʰu44	kʰ	u	44	箍			1		kʰu44	ku1	
+452	baai2\5	b	aai	2\5	pai31	p	ai	31	摆			1		pai31	baai2\5	
+453	baai3	b	aai	3	pai24	p	ai	24	拜			1		pai24	baai3	
+454	baai6	b	aai	6	pai54	p	ai	54	稗			1		pai54	baai6	
+455	baai6	b	aai	6	pai54	p	ai	54	败			1		pai54	baai6	
+456	paai4	p	aai	4	pʰai52	pʰ	ai	52	排			1		pʰai52	paai4	
+457	paai4	p	aai	4	pʰai52	pʰ	ai	52	牌			1		pʰai52	paai4	
+458	paai4	p	aai	4	pʰai52	pʰ	ai	52	徘			1		pʰai52	paai4	
+459	paai3	p	aai	3	pʰai24	pʰ	ai	24	派			1		pʰai24	paai3	
+460	paai3	p	aai	3	pʰai24	pʰ	ai	24	湃			1		pʰai24	paai3	
+461	maai4	m	aai	4	mai52	m	ai	52	埋			1		mai52	maai4	
+462	maai4	m	aai	4	mai52	m	ai	52	霾			1		mai52	maai4	
+463	maai2\5	m	aai	2\5	mai31	m	ai	31	买			1		mai31	maai2\5	
+464	maai6	m	aai	6	mai54	m	ai	54	卖			1		mai54	maai6	
+465	maai6	m	aai	6	mai54	m	ai	54	迈			1		mai54	maai6	
+466	faai3	f	aai	3	fai24	f	ai	24	快			1		fai24	faai3	
+467	waai1	w	aai	1	wai44	w	ai	44	歪			1		wai44	waai1	
+468	waai4	w	aai	4	wai52	w	ai	52	怀			1		wai52	waai4	
+469	waai4	w	aai	4	wai52	w	ai	52	槐			1		wai52	waai4	
+470	waai4	w	aai	4	wai52	w	ai	52	淮			1		wai52	waai4	
+471	waai6	w	aai	6	wai54	w	ai	54	坏			1		wai54	waai6	
+472	daai2\5	d	aai	2\5	tai31	t	ai	31	歹			1		tai31	daai2\5	
+473	daai2\5	d	aai	2\5	tai31	t	ai	31	傣			1		tai31	daai2\5	
+474	daai3	d	aai	3	tai24	t	ai	24	戴			1		tai24	daai3	
+475	daai3	d	aai	3	tai24	t	ai	24	带			1		tai24	daai3	
+476	daai6	d	aai	6	tai54	t	ai	54	大	大夫		1		tai54	daai6	
+477	taai3	t	aai	3	tʰai24	tʰ	ai	24	态			1		tʰai24	taai3	
+478	taai3	t	aai	3	tʰai24	tʰ	ai	24	太			1		tʰai24	taai3	
+479	taai3	t	aai	3	tʰai24	tʰ	ai	24	泰			1		tʰai24	taai3	
+480	naai2\5	n	aai	2\5	nai31	n	ai	31	乃			1		nai31	naai2\5	
+481	naai2\5	n	aai	2\5	nai31	n	ai	31	奶			1		nai31	naai2\5	
+482	naai2\5	n	aai	2\5	nai31	n	ai	31	氖			1		nai31	naai2\5	
+483	laai1	l	aai	1	lai44	l	ai	44	拉			1		lai44	laai1	
+484	laai3	l	aai	3	lai24	l	ai	24	癞			1		lai24	laai3	
+485	laai6	l	aai	6	lai54	l	ai	54	赖			1		lai54	laai6	
+486	slaai2\5	sl	aai	2\5	ɬai31	ɬ	ai	31	徙			1		ɬai31	slaai2\5	
+487	slaai2\5	sl	aai	2\5	ɬai31	ɬ	ai	31	玺			1		ɬai31	slaai2\5	
+488	gaai1	g	aai	1	kai44	k	ai	44	皆			1		kai44	gaai1	
+489	gaai1	g	aai	1	kai44	k	ai	44	阶			1		kai44	gaai1	
+490	gaai1	g	aai	1	kai44	k	ai	44	佳			1		kai44	gaai1	
+491	gaai1	g	aai	1	kai44	k	ai	44	街			1		kai44	gaai1	
+492	gaai1	g	aai	1	kai44	k	ai	44	乖			1		kai44	gaai1	
+493	gaai2\5	g	aai	2\5	kai31	k	ai	31	解	解开		1		kai31	gaai2\5	
+494	gaai2\5	g	aai	2\5	kai31	k	ai	31	拐			1		kai31	gaai2\5	
+495	gaai3	g	aai	3	kai24	k	ai	24	介			1		kai24	gaai3	
+496	gaai3	g	aai	3	kai24	k	ai	24	界			1		kai24	gaai3	
+497	gaai3	g	aai	3	kai24	k	ai	24	芥			1		kai24	gaai3	
+498	gaai3	g	aai	3	kai24	k	ai	24	尬			1		kai24	gaai3	
+499	gaai3	g	aai	3	kai24	k	ai	24	疥			1		kai24	gaai3	
+500	gaai3	g	aai	3	kai24	k	ai	24	届			1		kai24	gaai3	
+501	gaai3	g	aai	3	kai24	k	ai	24	戒			1		kai24	gaai3	
+502	gaai3	g	aai	3	kai24	k	ai	24	怪			1		kai24	gaai3	
+503	kaai2\5	k	aai	2\5	kʰai31	kʰ	ai	31	楷			1		kʰai31	kaai2\5	
+504	kaai3	k	aai	3	kʰai24	kʰ	ai	24	块			1		kʰai24	kaai3	
+505	kaai3	k	aai	3	kʰai24	kʰ	ai	24	刽			1		kʰai24	kaai3	
+506	kaai3	k	aai	3	kʰai24	kʰ	ai	24	筷			1		kʰai24	kaai3	
+507	haai1	h	aai	1	hai44	h	ai	44	揩			1		hai44	haai1	
+508	haai4	h	aai	4	hai52	h	ai	52	孩			1		hai52	haai4	
+509	haai4	h	aai	4	hai52	h	ai	52	谐			1		hai52	haai4	
+510	haai4	h	aai	4	hai52	h	ai	52	鞋			1		hai52	haai4	
+511	haai2\5	h	aai	2\5	hai31	h	ai	31	蟹			1		hai31	haai2\5	
+512	haai6	h	aai	6	hai54	h	ai	54	解	姓		1		hai54	haai6	
+513	haai6	h	aai	6	hai54	h	ai	54	骇			1		hai54	haai6	
+514	haai6	h	aai	6	hai54	h	ai	54	械			1		hai54	haai6	
+515	haai6	h	aai	6	hai54	h	ai	54	懈			1		hai54	haai6	
+516	ngaai4	ng	aai	4	ŋai52	ŋ	ai	52	涯			1		ŋai52	ngaai4	
+517	ngaai4	ng	aai	4	ŋai52	ŋ	ai	52	崖			1		ŋai52	ngaai4	
+518	ngaai4	ng	aai	4	ŋai52	ŋ	ai	52	捱			1		ŋai52	ngaai4	
+519	ngaai6	ng	aai	6	ŋai54	ŋ	ai	54	隘			1		ŋai54	ngaai6	
+520	zaai1	z	aai	1	tsai44	ts	ai	44	斋			1		tsai44	zaai1	
+521	zaai3	z	aai	3	tsai24	ts	ai	24	债			1		tsai24	zaai3	
+522	zaai6	z	aai	6	tsai54	ts	ai	54	寨			1		tsai54	zaai6	
+523	caai1	c	aai	1	tsʰai44	tsʰ	ai	44	猜			1		tsʰai44	caai1	
+524	caai1	c	aai	1	tsʰai44	tsʰ	ai	44	钗			1		tsʰai44	caai1	
+525	caai1	c	aai	1	tsʰai44	tsʰ	ai	44	差	出差		1		tsʰai44	caai1	
+526	caai4	c	aai	4	tsʰai52	tsʰ	ai	52	豺			1		tsʰai52	caai4	
+527	caai4	c	aai	4	tsʰai52	tsʰ	ai	52	柴			1		tsʰai52	caai4	
+528	caai2\5	c	aai	2\5	tsʰai31	tsʰ	ai	31	踩			1		tsʰai31	caai2\5	
+529	saai3	s	aai	3	sai24	s	ai	24	晒			1		sai24	saai3	
+530	aai1		aai	1	ai44	Ǿ	ai	44	挨			1		ai44	aai1	
+531	aai1		aai	1	ai44	Ǿ	ai	44	唉			1		ai44	aai1	
+532	aai2\5		aai	2\5	ai31	Ǿ	ai	31	矮			1		ai31	aai2\5	
+533	bai1	b	ai	1	pɐi44	p	ɐi	44	跛			1		pɐi44	bai1	
+534	bai3	b	ai	3	pɐi24	p	ɐi	24	陛			1		pɐi24	bai3	
+535	bai3	b	ai	3	pɐi24	p	ɐi	24	闭			1		pɐi24	bai3	
+536	bai3	b	ai	3	pɐi24	p	ɐi	24	敝			1		pɐi24	bai3	
+537	bai3	b	ai	3	pɐi24	p	ɐi	24	蔽			1		pɐi24	bai3	
+538	bai6	b	ai	6	pɐi54	p	ɐi	54	弊			1		pɐi54	bai6	
+539	bai6	b	ai	6	pɐi54	p	ɐi	54	币			1		pɐi54	bai6	
+540	bai6	b	ai	6	pɐi54	p	ɐi	54	毙			1		pɐi54	bai6	
+541	pai1	p	ai	1	pʰɐi44	pʰ	ɐi	44	批			1		pʰɐi44	pai1	
+542	pai1	p	ai	1	pʰɐi44	pʰ	ɐi	44	□	猜		1		pʰɐi44	pai1	
+543	pai1	p	ai	1	pʰɐi44	pʰ	ɐi	44	蓖			1		pʰɐi44	pai1	
+544	mai4	m	ai	4	mɐi52	m	ɐi	52	迷			1		mɐi52	mai4	
+545	mai4	m	ai	4	mɐi52	m	ɐi	52	谜			1		mɐi52	mai4	
+546	mai2\5	m	ai	2\5	mɐi31	m	ɐi	31	米			1		mɐi31	mai2\5	
+547	fai1	f	ai	1	fɐi44	f	ɐi	44	麾			1		fɐi44	fai1	
+548	fai1	f	ai	1	fɐi44	f	ɐi	44	挥			1		fɐi44	fai1	
+549	fai1	f	ai	1	fɐi44	f	ɐi	44	辉			1		fɐi44	fai1	
+550	fai1	f	ai	1	fɐi44	f	ɐi	44	徽			1		fɐi44	fai1	
+551	fai3	f	ai	3	fɐi24	f	ɐi	24	废			1		fɐi24	fai3	
+552	fai3	f	ai	3	fɐi24	f	ɐi	24	肺			1		fɐi24	fai3	
+553	fai3	f	ai	3	fɐi24	f	ɐi	24	费			1		fɐi24	fai3	
+554	fai6	f	ai	6	fɐi54	f	ɐi	54	吠			1		fɐi54	fai6	
+555	wai1	w	ai	1	wɐi44	w	ɐi	44	威			1		wɐi44	wai1	
+556	wai4	w	ai	4	wɐi52	w	ɐi	52	为	作为		1		wɐi52	wai4	
+557	wai4	w	ai	4	wɐi52	w	ɐi	52	维			1		wɐi52	wai4	
+558	wai4	w	ai	4	wɐi52	w	ɐi	52	惟			1		wɐi52	wai4	
+559	wai4	w	ai	4	wɐi52	w	ɐi	52	遗			1		wɐi52	wai4	
+560	wai4	w	ai	4	wɐi52	w	ɐi	52	唯			1		wɐi52	wai4	
+561	wai4	w	ai	4	wɐi52	w	ɐi	52	违			1		wɐi52	wai4	
+562	wai4	w	ai	4	wɐi52	w	ɐi	52	围			1		wɐi52	wai4	
+563	wai2\5	w	ai	2\5	wɐi31	w	ɐi	31	毁			1		wɐi31	wai2\5	
+564	wai2\5	w	ai	2\5	wɐi31	w	ɐi	31	萎			1		wɐi31	wai2\5	
+565	wai2\5	w	ai	2\5	wɐi31	w	ɐi	31	委			1		wɐi31	wai2\5	
+566	wai2\5	w	ai	2\5	wɐi31	w	ɐi	31	讳			1		wɐi31	wai2\5	
+567	wai2\5	w	ai	2\5	wɐi31	w	ɐi	31	伟			1		wɐi31	wai2\5	
+568	wai2\5	w	ai	2\5	wɐi31	w	ɐi	31	苇			1		wɐi31	wai2\5	
+569	wai2\5	w	ai	2\5	wɐi31	w	ɐi	31	纬			1		wɐi31	wai2\5	
+570	wai3	w	ai	3	wɐi24	w	ɐi	24	喂			1		wɐi24	wai3	
+571	wai3	w	ai	3	wɐi24	w	ɐi	24	畏			1		wɐi24	wai3	
+572	wai3	w	ai	3	wɐi24	w	ɐi	24	慰			1		wɐi24	wai3	
+573	wai6	w	ai	6	wɐi54	w	ɐi	54	惠			1		wɐi54	wai6	
+574	wai6	w	ai	6	wɐi54	w	ɐi	54	慧			1		wɐi54	wai6	
+575	wai6	w	ai	6	wɐi54	w	ɐi	54	卫			1		wɐi54	wai6	
+576	dai1	d	ai	1	tɐi44	t	ɐi	44	低			1		tɐi44	dai1	
+577	dai2\5	d	ai	2\5	tɐi31	t	ɐi	31	底			1		tɐi31	dai2\5	
+578	dai2\5	d	ai	2\5	tɐi31	t	ɐi	31	抵			1		tɐi31	dai2\5	
+579	dai3	d	ai	3	tɐi24	t	ɐi	24	帝			1		tɐi24	dai3	
+580	dai6	d	ai	6	tɐi54	t	ɐi	54	弟			1		tɐi54	dai6	
+581	dai6	d	ai	6	tɐi54	t	ɐi	54	第			1		tɐi54	dai6	
+582	dai6	d	ai	6	tɐi54	t	ɐi	54	递			1		tɐi54	dai6	
+583	dai6	d	ai	6	tɐi54	t	ɐi	54	逮			1		tɐi54	dai6	
+584	tai1	t	ai	1	tʰɐi44	tʰ	ɐi	44	梯			1		tʰɐi44	tai1	
+585	tai4	t	ai	4	tʰɐi52	tʰ	ɐi	52	堤			1		tʰɐi52	tai4	
+586	tai4	t	ai	4	tʰɐi52	tʰ	ɐi	52	题			1		tʰɐi52	tai4	
+587	tai4	t	ai	4	tʰɐi52	tʰ	ɐi	52	提			1		tʰɐi52	tai4	
+588	tai4	t	ai	4	tʰɐi52	tʰ	ɐi	52	蹄			1		tʰɐi52	tai4	
+589	tai4	t	ai	4	tʰɐi52	tʰ	ɐi	52	啼			1		tʰɐi52	tai4	
+590	tai2\5	t	ai	2\5	tʰɐi31	tʰ	ɐi	31	体			1		tʰɐi31	tai2\5	
+591	tai2\5	t	ai	2\5	tʰɐi31	tʰ	ɐi	31	弟			1		tʰɐi31	tai2\5	
+592	tai3	t	ai	3	tʰɐi24	tʰ	ɐi	24	替			1		tʰɐi24	tai3	
+593	tai3	t	ai	3	tʰɐi24	tʰ	ɐi	24	涕			1		tʰɐi24	tai3	
+594	tai3	t	ai	3	tʰɐi24	tʰ	ɐi	24	剃			1		tʰɐi24	tai3	
+595	tai3	t	ai	3	tʰɐi24	tʰ	ɐi	24	屉			1		tʰɐi24	tai3	
+596	tai3	t	ai	3	tʰɐi24	tʰ	ɐi	24	贷			1		tʰɐi24	tai3	
+597	nai4	n	ai	4	nɐi52	n	ɐi	52	泥			1		nɐi52	nai4	
+598	nai4	n	ai	4	nɐi52	n	ɐi	52	尼			1		nɐi52	nai4	
+599	nai6	n	ai	6	nɐi54	n	ɐi	54	腻			1		nɐi54	nai6	
+600	lai4	l	ai	4	lɐi52	l	ɐi	52	犁			1		lɐi52	lai4	
+601	lai4	l	ai	4	lɐi52	l	ɐi	52	黎			1		lɐi52	lai4	
+602	lai2\5	l	ai	2\5	lɐi31	l	ɐi	31	礼			1		lɐi31	lai2\5	
+603	lai6	l	ai	6	lɐi54	l	ɐi	54	例			1		lɐi54	lai6	
+604	lai6	l	ai	6	lɐi54	l	ɐi	54	厉			1		lɐi54	lai6	
+605	lai6	l	ai	6	lɐi54	l	ɐi	54	励			1		lɐi54	lai6	
+606	lai6	l	ai	6	lɐi54	l	ɐi	54	丽			1		lɐi54	lai6	
+607	lai6	l	ai	6	lɐi54	l	ɐi	54	隶			1		lɐi54	lai6	
+608	lai6	l	ai	6	lɐi54	l	ɐi	54	荔			1		lɐi54	lai6	
+609	slai1	sl	ai	1	ɬɐi44	ɬ	ɐi	44	□	大声喊叫		1		ɬɐi44	slai1	
+610	slai1	sl	ai	1	ɬɐi44	ɬ	ɐi	44	西			1		ɬɐi44	slai1	
+611	slai2\5	sl	ai	2\5	ɬɐi31	ɬ	ɐi	31	洗			1		ɬɐi31	slai2\5	
+612	slai3	sl	ai	3	ɬɐi24	ɬ	ɐi	24	细			1		ɬɐi24	slai3	
+613	gai1	g	ai	1	kɐi44	k	ɐi	44	鸡			1		kɐi44	gai1	
+614	gai1	g	ai	1	kɐi44	k	ɐi	44	系	系鞋带		1		kɐi44	gai1	
+615	gai1	g	ai	1	kɐi44	k	ɐi	44	圭			1		kɐi44	gai1	
+616	gai1	g	ai	1	kɐi44	k	ɐi	44	闺			1		kɐi44	gai1	
+617	gai1	g	ai	1	kɐi44	k	ɐi	44	归			1		kɐi44	gai1	
+618	gai2\5	g	ai	2\5	kɐi31	k	ɐi	31	桅			1		kɐi31	gai2\5	
+619	gai2\5	g	ai	2\5	kɐi31	k	ɐi	31	诡			1		kɐi31	gai2\5	
+620	gai2\5	g	ai	2\5	kɐi31	k	ɐi	31	轨			1		kɐi31	gai2\5	
+621	gai2\5	g	ai	2\5	kɐi31	k	ɐi	31	癸			1		kɐi31	gai2\5	
+622	gai2\5	g	ai	2\5	kɐi31	k	ɐi	31	鬼			1		kɐi31	gai2\5	
+623	gai3	g	ai	3	kɐi24	k	ɐi	24	计			1		kɐi24	gai3	
+624	gai3	g	ai	3	kɐi24	k	ɐi	24	继			1		kɐi24	gai3	
+625	gai3	g	ai	3	kɐi24	k	ɐi	24	髻			1		kɐi24	gai3	
+626	gai3	g	ai	3	kɐi24	k	ɐi	24	鳜			1		kɐi24	gai3	
+627	gai3	g	ai	3	kɐi24	k	ɐi	24	桂			1		kɐi24	gai3	
+628	gai3	g	ai	3	kɐi24	k	ɐi	24	季			1		kɐi24	gai3	
+629	gai3	g	ai	3	kɐi24	k	ɐi	24	贵			1		kɐi24	gai3	
+630	gai6	g	ai	6	kɐi54	k	ɐi	54	跪			1		kɐi54	gai6	
+631	gai6	g	ai	6	kɐi54	k	ɐi	54	柜			1		kɐi54	gai6	
+632	kai1	k	ai	1	kʰɐi44	kʰ	ɐi	44	稽			1		kʰɐi44	kai1	
+633	kai1	k	ai	1	kʰɐi44	kʰ	ɐi	44	奚			1		kʰɐi44	kai1	
+634	kai1	k	ai	1	kʰɐi44	kʰ	ɐi	44	溪			1		kʰɐi44	kai1	
+635	kai1	k	ai	1	kʰɐi44	kʰ	ɐi	44	规			1		kʰɐi44	kai1	
+636	kai1	k	ai	1	kʰɐi44	kʰ	ɐi	44	亏			1		kʰɐi44	kai1	
+637	kai1	k	ai	1	kʰɐi44	kʰ	ɐi	44	窥			1		kʰɐi44	kai1	
+638	kai4	k	ai	4	kʰɐi52	kʰ	ɐi	52	奎			1		kʰɐi52	kai4	
+639	kai4	k	ai	4	kʰɐi52	kʰ	ɐi	52	携			1		kʰɐi52	kai4	
+640	kai4	k	ai	4	kʰɐi52	kʰ	ɐi	52	畦			1		kʰɐi52	kai4	
+641	kai4	k	ai	4	kʰɐi52	kʰ	ɐi	52	逵			1		kʰɐi52	kai4	
+642	kai4	k	ai	4	kʰɐi52	kʰ	ɐi	52	葵			1		kʰɐi52	kai4	
+643	kai2\5	k	ai	2\5	kʰɐi31	kʰ	ɐi	31	启			1		kʰɐi31	kai2\5	
+644	kai3	k	ai	3	kʰɐi24	kʰ	ɐi	24	契			1		kʰɐi24	kai3	
+645	kai3	k	ai	3	kʰɐi24	kʰ	ɐi	24	愧			1		kʰɐi24	kai3	
+646	hai1	h	ai	1	hɐi44	h	ɐi	44	閪			1		hɐi44	hai1	
+647	hai6	h	ai	6	hɐi54	h	ɐi	54	系	联系		1		hɐi54	hai6	
+648	hai6	h	ai	6	hɐi54	h	ɐi	54	係			1		hɐi54	hai6	
+649	ngai1	ng	ai	1	ŋɐi44	ŋ	ɐi	44	□	乞求		1		ŋɐi44	ngai1	
+650	ngai4	ng	ai	4	ŋɐi52	ŋ	ɐi	52	危			1		ŋɐi52	ngai4	
+651	ngai2\5	ng	ai	2\5	ŋɐi31	ŋ	ɐi	31	蚁			1		ŋɐi31	ngai2\5	
+652	ngai6	ng	ai	6	ŋɐi54	ŋ	ɐi	54	艺			1		ŋɐi54	ngai6	
+653	ngai6	ng	ai	6	ŋɐi54	ŋ	ɐi	54	刈			1		ŋɐi54	ngai6	
+654	ngai6	ng	ai	6	ŋɐi54	ŋ	ɐi	54	毅			1		ŋɐi54	ngai6	
+655	ngai6	ng	ai	6	ŋɐi54	ŋ	ɐi	54	伪			1		ŋɐi54	ngai6	
+656	ngai6	ng	ai	6	ŋɐi54	ŋ	ɐi	54	魏			1		ŋɐi54	ngai6	
+657	zai1	z	ai	1	tsɐi44	ts	ɐi	44	挤			1		tsɐi44	zai1	
+658	zai1	z	ai	1	tsɐi44	ts	ɐi	44	剂			1		tsɐi44	zai1	
+659	zai2\5	z	ai	2\5	tsɐi31	ts	ɐi	31	仔			1		tsɐi31	zai2\5	
+660	zai3	z	ai	3	tsɐi24	ts	ɐi	24	祭			1		tsɐi24	zai3	
+661	zai3	z	ai	3	tsɐi24	ts	ɐi	24	际			1		tsɐi24	zai3	
+662	zai3	z	ai	3	tsɐi24	ts	ɐi	24	济			1		tsɐi24	zai3	
+663	zai3	z	ai	3	tsɐi24	ts	ɐi	24	制			1		tsɐi24	zai3	
+664	zai6	z	ai	6	tsɐi54	ts	ɐi	54	滞			1		tsɐi54	zai6	
+665	cai1	c	ai	1	tsʰɐi44	tsʰ	ɐi	44	妻			1		tsʰɐi44	cai1	
+666	cai1	c	ai	1	tsʰɐi44	tsʰ	ɐi	44	栖			1		tsʰɐi44	cai1	
+667	cai1	c	ai	1	tsʰɐi44	tsʰ	ɐi	44	凄			1		tsʰɐi44	cai1	
+668	cai4	c	ai	4	tsʰɐi52	tsʰ	ɐi	52	齐			1		tsʰɐi52	cai4	
+669	cai3	c	ai	3	tsʰɐi24	tsʰ	ɐi	24	砌			1		tsʰɐi24	cai3	
+670	sai3	s	ai	3	sɐi24	s	ɐi	24	婿			1		sɐi24	sai3	
+671	sai3	s	ai	3	sɐi24	s	ɐi	24	世			1		sɐi24	sai3	
+672	sai3	s	ai	3	sɐi24	s	ɐi	24	势			1		sɐi24	sai3	
+673	sai3	s	ai	3	sɐi24	s	ɐi	24	誓			1		sɐi24	sai3	
+674	sai6	s	ai	6	sɐi54	s	ɐi	54	逝			1		sɐi54	sai6	
+675	doi1	d	oi	1	tɔi44	t	ɔi	44	呆			1		tɔi44	doi1	
+676	doi6	d	oi	6	tɔi54	t	ɔi	54	待			1		tɔi54	doi6	
+677	doi6	d	oi	6	tɔi54	t	ɔi	54	怠			1		tɔi54	doi6	
+678	doi6	d	oi	6	tɔi54	t	ɔi	54	殆			1		tɔi54	doi6	
+679	doi6	d	oi	6	tɔi54	t	ɔi	54	代			1		tɔi54	doi6	
+680	doi6	d	oi	6	tɔi54	t	ɔi	54	袋			1		tɔi54	doi6	
+681	doi6	d	oi	6	tɔi54	t	ɔi	54	岱			1		tɔi54	doi6	
+682	toi1	t	oi	1	tʰɔi44	tʰ	ɔi	44	胎			1		tʰɔi44	toi1	
+683	toi4	t	oi	4	tʰɔi52	tʰ	ɔi	52	台			1		tʰɔi52	toi4	
+684	toi4	t	oi	4	tʰɔi52	tʰ	ɔi	52	苔			1		tʰɔi52	toi4	
+685	toi4	t	oi	4	tʰɔi52	tʰ	ɔi	52	抬			1		tʰɔi52	toi4	
+686	noi3	n	oi	3	nɔi24	n	ɔi	24	□	累		1		nɔi24	noi3	
+687	noi6	n	oi	6	nɔi54	n	ɔi	54	耐			1		nɔi54	noi6	
+688	noi6	n	oi	6	nɔi54	n	ɔi	54	奈			1		nɔi54	noi6	
+689	loi1	l	oi	1	lɔi44	l	ɔi	44	□	爬		1		lɔi44	loi1	
+690	loi4	l	oi	4	lɔi52	l	ɔi	52	来			1		lɔi52	loi4	
+691	sloi1	sl	oi	1	ɬɔi44	ɬ	ɔi	44	腮			1		ɬɔi44	sloi1	
+692	sloi1	sl	oi	1	ɬɔi44	ɬ	ɔi	44	鳃			1		ɬɔi44	sloi1	
+693	goi1	g	oi	1	kɔi44	k	ɔi	44	该			1		kɔi44	goi1	
+694	goi2\5	g	oi	2\5	kɔi31	k	ɔi	31	改			1		kɔi31	goi2\5	
+695	goi3	g	oi	3	kɔi24	k	ɔi	24	盖			1		kɔi24	goi3	
+696	koi3	k	oi	3	kʰɔi24	kʰ	ɔi	24	概			1		kʰɔi24	koi3	
+697	koi3	k	oi	3	kʰɔi24	kʰ	ɔi	24	溉			1		kʰɔi24	koi3	
+698	koi3	k	oi	3	kʰɔi24	kʰ	ɔi	24	慨			1		kʰɔi24	koi3	
+699	koi3	k	oi	3	kʰɔi24	kʰ	ɔi	24	丐			1		kʰɔi24	koi3	
+700	hoi1	h	oi	1	hɔi44	h	ɔi	44	开			1		hɔi44	hoi1	
+701	hoi2\5	h	oi	2\5	hɔi31	h	ɔi	31	凯			1		hɔi31	hoi2\5	
+702	hoi2\5	h	oi	2\5	hɔi31	h	ɔi	31	海			1		hɔi31	hoi2\5	
+703	hoi6	h	oi	6	hɔi54	h	ɔi	54	亥			1		hɔi54	hoi6	
+704	hoi6	h	oi	6	hɔi54	h	ɔi	54	害			1		hɔi54	hoi6	
+705	ngoi6	ng	oi	6	ŋɔi54	ŋ	ɔi	54	外			1		ŋɔi54	ngoi6	
+706	ngoi6	ng	oi	6	ŋɔi54	ŋ	ɔi	54	碍			1		ŋɔi54	ngoi6	
+707	ngoi6	ng	oi	6	ŋɔi54	ŋ	ɔi	54	艾			1		ŋɔi54	ngoi6	
+708	zoi1	z	oi	1	tsɔi44	ts	ɔi	44	灾			1		tsɔi44	zoi1	
+709	zoi1	z	oi	1	tsɔi44	ts	ɔi	44	栽			1		tsɔi44	zoi1	
+710	zoi2\5	z	oi	2\5	tsɔi31	ts	ɔi	31	宰			1		tsɔi31	zoi2\5	
+711	zoi2\5	z	oi	2\5	tsɔi31	ts	ɔi	31	载			1		tsɔi31	zoi2\5	
+712	zoi3	z	oi	3	tsɔi24	ts	ɔi	24	再			1		tsɔi24	zoi3	
+713	zoi3	z	oi	3	tsɔi24	ts	ɔi	24	载	载重		1		tsɔi24	zoi3	
+714	zoi6	z	oi	6	tsɔi54	ts	ɔi	54	在			1		tsɔi54	zoi6	
+715	zoi6	z	oi	6	tsɔi54	ts	ɔi	54	载	满载		1		tsɔi54	zoi6	
+716	coi4	c	oi	4	tsʰɔi52	tsʰ	ɔi	52	才			1		tsʰɔi52	coi4	
+717	coi4	c	oi	4	tsʰɔi52	tsʰ	ɔi	52	材			1		tsʰɔi52	coi4	
+718	coi4	c	oi	4	tsʰɔi52	tsʰ	ɔi	52	财			1		tsʰɔi52	coi4	
+719	coi4	c	oi	4	tsʰɔi52	tsʰ	ɔi	52	裁			1		tsʰɔi52	coi4	
+720	coi2\5	c	oi	2\5	tsʰɔi31	tsʰ	ɔi	31	彩			1		tsʰɔi31	coi2\5	
+721	coi2\5	c	oi	2\5	tsʰɔi31	tsʰ	ɔi	31	睬			1		tsʰɔi31	coi2\5	
+722	coi2\5	c	oi	2\5	tsʰɔi31	tsʰ	ɔi	31	在			1		tsʰɔi31	coi2\5	
+723	coi2\5	c	oi	2\5	tsʰɔi31	tsʰ	ɔi	31	采			1		tsʰɔi31	coi2\5	
+724	coi3	c	oi	3	tsʰɔi24	tsʰ	ɔi	24	赛			1		tsʰɔi24	coi3	
+725	coi3	c	oi	3	tsʰɔi24	tsʰ	ɔi	24	蔡			1		tsʰɔi24	coi3	
+726	coi3	c	oi	3	tsʰɔi24	tsʰ	ɔi	24	菜			1		tsʰɔi24	coi3	
+727	oi1		oi	1	ɔi44	Ǿ	ɔi	44	哀			1		ɔi44	oi1	
+728	oi1		oi	1	ɔi44	Ǿ	ɔi	44	埃			1		ɔi44	oi1	
+729	oi2\5		oi	2\5	ɔi31	Ǿ	ɔi	31	蔼			1		ɔi31	oi2\5	
+730	oi2\5		oi	2\5	ɔi31	Ǿ	ɔi	31	霭			1		ɔi31	oi2\5	
+731	oi3		oi	3	ɔi24	Ǿ	ɔi	24	爱			1		ɔi24	oi3	
+732	oi3		oi	3	ɔi24	Ǿ	ɔi	24	暧			1		ɔi24	oi3	
+733	bei1	b	ei	1	pei44	p	ei	44	碑			1		pei44	bei1	
+734	bei1	b	ei	1	pei44	p	ei	44	卑			1		pei44	bei1	
+735	bei1	b	ei	1	pei44	p	ei	44	悲			1		pei44	bei1	
+736	bei2\5	b	ei	2\5	pei31	p	ei	31	比			1		pei31	bei2\5	
+737	bei2\5	b	ei	2\5	pei31	p	ei	31	彼			1		pei31	bei2\5	
+738	bei3	b	ei	3	pei24	p	ei	24	臂			1		pei24	bei3	
+739	bei3	b	ei	3	pei24	p	ei	24	泌			1		pei24	bei3	
+740	bei3	b	ei	3	pei24	p	ei	24	庇			1		pei24	bei3	
+741	bei3	b	ei	3	pei24	p	ei	24	痹			1		pei24	bei3	
+742	bei3	b	ei	3	pei24	p	ei	24	秘			1		pei24	bei3	
+743	bei6	b	ei	6	pei54	p	ei	54	被	被打		1		pei54	bei6	
+744	bei6	b	ei	6	pei54	p	ei	54	避			1		pei54	bei6	
+745	bei6	b	ei	6	pei54	p	ei	54	备			1		pei54	bei6	
+746	bei6	b	ei	6	pei54	p	ei	54	鼻			1		pei54	bei6	
+747	pei1	p	ei	1	pʰei44	pʰ	ei	44	披			1		pʰei44	pei1	
+748	pei1	p	ei	1	pʰei44	pʰ	ei	44	丕			1		pʰei44	pei1	
+749	pei1	p	ei	1	pʰei44	pʰ	ei	44	胚			1		pʰei44	pei1	
+750	pei1	p	ei	1	pʰei44	pʰ	ei	44	纰			1		pʰei44	pei1	
+751	pei4	p	ei	4	pʰei52	pʰ	ei	52	皮			1		pʰei52	pei4	
+752	pei4	p	ei	4	pʰei52	pʰ	ei	52	疲			1		pʰei52	pei4	
+753	pei4	p	ei	4	pʰei52	pʰ	ei	52	脾			1		pʰei52	pei4	
+754	pei4	p	ei	4	pʰei52	pʰ	ei	52	琵			1		pʰei52	pei4	
+755	pei4	p	ei	4	pʰei52	pʰ	ei	52	枇			1		pʰei52	pei4	
+756	pei2\5	p	ei	2\5	pʰei31	pʰ	ei	31	鄙			1		pʰei31	pei2\5	
+757	pei2\5	p	ei	2\5	pʰei31	pʰ	ei	31	彼			1		pʰei31	pei2\5	
+758	pei2\5	p	ei	2\5	pʰei31	pʰ	ei	31	被	被窝		1		pʰei31	pei2\5	
+759	pei2\5	p	ei	2\5	pʰei31	pʰ	ei	31	婢			1		pʰei31	pei2\5	
+760	pei3	p	ei	3	pʰei24	pʰ	ei	24	譬			1		pʰei24	pei3	
+761	pei3	p	ei	3	pʰei24	pʰ	ei	24	屁			1		pʰei24	pei3	
+762	mei4	m	ei	4	mei52	m	ei	52	糜			1		mei52	mei4	
+763	mei4	m	ei	4	mei52	m	ei	52	弥			1		mei52	mei4	
+764	mei4	m	ei	4	mei52	m	ei	52	眉			1		mei52	mei4	
+765	mei4	m	ei	4	mei52	m	ei	52	楣			1		mei52	mei4	
+766	mei4	m	ei	4	mei52	m	ei	52	霉			1		mei52	mei4	
+767	mei4	m	ei	4	mei52	m	ei	52	微			1		mei52	mei4	
+768	mei2\5	m	ei	2\5	mei31	m	ei	31	美			1		mei31	mei2\5	
+769	mei2\5	m	ei	2\5	mei31	m	ei	31	尾			1		mei31	mei2\5	
+770	mei6	m	ei	6	mei54	m	ei	54	未			1		mei54	mei6	
+771	mei6	m	ei	6	mei54	m	ei	54	味			1		mei54	mei6	
+772	fei1	f	ei	1	fei44	f	ei	44	非			1		fei44	fei1	
+773	fei1	f	ei	1	fei44	f	ei	44	飞			1		fei44	fei1	
+774	fei1	f	ei	1	fei44	f	ei	44	妃			1		fei44	fei1	
+775	fei1	f	ei	1	fei44	f	ei	44	绯			1		fei44	fei1	
+776	fei1	f	ei	1	fei44	f	ei	44	啡			1		fei44	fei1	
+777	fei1	f	ei	1	fei44	f	ei	44	菲			1		fei44	fei1	
+778	fei1	f	ei	1	fei44	f	ei	44	霏			1		fei44	fei1	
+779	fei4	f	ei	4	fei52	f	ei	52	肥			1		fei52	fei4	
+780	fei2\5	f	ei	2\5	fei31	f	ei	31	匪			1		fei31	fei2\5	
+781	fei2\5	f	ei	2\5	fei31	f	ei	31	翡			1		fei31	fei2\5	
+782	dei6	d	ei	6	tei54	t	ei	54	地			1		tei54	dei6	
+783	nei2\5	n	ei	2\5	nei31	n	ei	31	女			1		nei31	nei2\5	
+784	nei2\5	n	ei	2\5	nei31	n	ei	31	你			1		nei31	nei2\5	
+785	nei2\5	n	ei	2\5	nei31	n	ei	31	洱			1		nei31	nei2\5	
+786	nei3	n	ei	3	nei24	n	ei	24	□	躲藏		1		nei24	nei3	
+787	lei1	l	ei	1	lei44	l	ei	44	□	粪~		1		lei44	lei1	
+788	lei1	l	ei	1	lei44	l	ei	44	璃			1		lei44	lei1	
+789	lei4	l	ei	4	lei52	l	ei	52	离			1		lei52	lei4	
+790	lei4	l	ei	4	lei52	l	ei	52	篱			1		lei52	lei4	
+791	lei4	l	ei	4	lei52	l	ei	52	漓			1		lei52	lei4	
+792	lei4	l	ei	4	lei52	l	ei	52	璃			1		lei52	lei4	
+793	lei4	l	ei	4	lei52	l	ei	52	梨			1		lei52	lei4	
+794	lei4	l	ei	4	lei52	l	ei	52	厘			1		lei52	lei4	
+795	lei4	l	ei	4	lei52	l	ei	52	狸			1		lei52	lei4	
+796	lei4	l	ei	4	lei52	l	ei	52	鹂			1		lei52	lei4	
+797	lei4	l	ei	4	lei52	l	ei	52	蠡			1		lei52	lei4	
+798	lei2\5	l	ei	2\5	lei31	l	ei	31	履			1		lei31	lei2\5	
+799	lei2\5	l	ei	2\5	lei31	l	ei	31	缕			1		lei31	lei2\5	
+800	lei2\5	l	ei	2\5	lei31	l	ei	31	李			1		lei31	lei2\5	
+801	lei2\5	l	ei	2\5	lei31	l	ei	31	里			1		lei31	lei2\5	
+802	lei2\5	l	ei	2\5	lei31	l	ei	31	理			1		lei31	lei2\5	
+803	lei2\5	l	ei	2\5	lei31	l	ei	31	鲤			1		lei31	lei2\5	
+804	lei2\5	l	ei	2\5	lei31	l	ei	31	旅			1		lei31	lei2\5	
+805	lei6	l	ei	6	lei54	l	ei	54	利			1		lei54	lei6	
+806	lei6	l	ei	6	lei54	l	ei	54	痢			1		lei54	lei6	
+807	lei6	l	ei	6	lei54	l	ei	54	吏			1		lei54	lei6	
+808	slei1	sl	ei	1	ɬei44	ɬ	ei	44	须			1		ɬei44	slei1	
+809	slei1	sl	ei	1	ɬei44	ɬ	ei	44	需			1		ɬei44	slei1	
+810	slei1	sl	ei	1	ɬei44	ɬ	ei	44	斯			1		ɬei44	slei1	
+811	slei1	sl	ei	1	ɬei44	ɬ	ei	44	厮			1		ɬei44	slei1	
+812	slei1	sl	ei	1	ɬei44	ɬ	ei	44	撕			1		ɬei44	slei1	
+813	slei1	sl	ei	1	ɬei44	ɬ	ei	44	私			1		ɬei44	slei1	
+814	slei1	sl	ei	1	ɬei44	ɬ	ei	44	师			1		ɬei44	slei1	
+815	slei1	sl	ei	1	ɬei44	ɬ	ei	44	狮			1		ɬei44	slei1	
+816	slei1	sl	ei	1	ɬei44	ɬ	ei	44	司			1		ɬei44	slei1	
+817	slei1	sl	ei	1	ɬei44	ɬ	ei	44	丝			1		ɬei44	slei1	
+818	slei1	sl	ei	1	ɬei44	ɬ	ei	44	思			1		ɬei44	slei1	
+819	slei2\5	sl	ei	2\5	ɬei31	ɬ	ei	31	死			1		ɬei31	slei2\5	
+820	slei3	sl	ei	3	ɬei24	ɬ	ei	24	絮			1		ɬei24	slei3	
+821	slei3	sl	ei	3	ɬei24	ɬ	ei	24	四			1		ɬei24	slei3	
+822	slei3	sl	ei	3	ɬei24	ɬ	ei	24	肆			1		ɬei24	slei3	
+823	gei1	g	ei	1	kei44	k	ei	44	居			1		kei44	gei1	
+824	gei1	g	ei	1	kei44	k	ei	44	车	车马炮		1		kei44	gei1	
+825	gei1	g	ei	1	kei44	k	ei	44	饥			1		kei44	gei1	
+826	gei1	g	ei	1	kei44	k	ei	44	肌			1		kei44	gei1	
+827	gei1	g	ei	1	kei44	k	ei	44	羁			1		kei44	gei1	
+828	gei1	g	ei	1	kei44	k	ei	44	基			1		kei44	gei1	
+829	gei1	g	ei	1	kei44	k	ei	44	几	茶几		1		kei44	gei1	
+830	gei1	g	ei	1	kei44	k	ei	44	几	几乎		1		kei44	gei1	
+831	gei1	g	ei	1	kei44	k	ei	44	机			1		kei44	gei1	
+832	gei1	g	ei	1	kei44	k	ei	44	讥			1		kei44	gei1	
+833	gei2\5	g	ei	2\5	kei31	k	ei	31	举			1		kei31	gei2\5	
+834	gei2\5	g	ei	2\5	kei31	k	ei	31	矩			1		kei31	gei2\5	
+835	gei2\5	g	ei	2\5	kei31	k	ei	31	己			1		kei31	gei2\5	
+836	gei2\5	g	ei	2\5	kei31	k	ei	31	纪			1		kei31	gei2\5	
+837	gei2\5	g	ei	2\5	kei31	k	ei	31	杞			1		kei31	gei2\5	
+838	gei2\5	g	ei	2\5	kei31	k	ei	31	几	几个		1		kei31	gei2\5	
+839	gei3	g	ei	3	kei24	k	ei	24	据			1		kei24	gei3	
+840	gei3	g	ei	3	kei24	k	ei	24	锯			1		kei24	gei3	
+841	gei3	g	ei	3	kei24	k	ei	24	句			1		kei24	gei3	
+842	gei3	g	ei	3	kei24	k	ei	24	寄			1		kei24	gei3	
+843	gei3	g	ei	3	kei24	k	ei	24	记			1		kei24	gei3	
+844	gei3	g	ei	3	kei24	k	ei	24	既			1		kei24	gei3	
+845	kei1	k	ei	1	kʰei44	kʰ	ei	44	拘			1		kʰei44	kei1	
+846	kei1	k	ei	1	kʰei44	kʰ	ei	44	驹			1		kʰei44	kei1	
+847	kei1	k	ei	1	kʰei44	kʰ	ei	44	俱			1		kʰei44	kei1	
+848	kei1	k	ei	1	kʰei44	kʰ	ei	44	区			1		kʰei44	kei1	
+849	kei1	k	ei	1	kʰei44	kʰ	ei	44	驱			1		kʰei44	kei1	
+850	kei1	k	ei	1	kʰei44	kʰ	ei	44	躯			1		kʰei44	kei1	
+851	kei4	k	ei	4	kʰei52	kʰ	ei	52	渠			1		kʰei52	kei4	
+852	kei4	k	ei	4	kʰei52	kʰ	ei	52	瞿			1		kʰei52	kei4	
+853	kei4	k	ei	4	kʰei52	kʰ	ei	52	奇			1		kʰei52	kei4	
+854	kei4	k	ei	4	kʰei52	kʰ	ei	52	岐			1		kʰei52	kei4	
+855	kei4	k	ei	4	kʰei52	kʰ	ei	52	祁			1		kʰei52	kei4	
+856	kei4	k	ei	4	kʰei52	kʰ	ei	52	鳍			1		kʰei52	kei4	
+857	kei4	k	ei	4	kʰei52	kʰ	ei	52	其			1		kʰei52	kei4	
+858	kei4	k	ei	4	kʰei52	kʰ	ei	52	棋			1		kʰei52	kei4	
+859	kei4	k	ei	4	kʰei52	kʰ	ei	52	期			1		kʰei52	kei4	
+860	kei4	k	ei	4	kʰei52	kʰ	ei	52	旗			1		kʰei52	kei4	
+861	kei4	k	ei	4	kʰei52	kʰ	ei	52	祈			1		kʰei52	kei4	
+862	kei2\5	k	ei	2\5	kʰei31	kʰ	ei	31	拒			1		kʰei31	kei2\5	
+863	kei2\5	k	ei	2\5	kʰei31	kʰ	ei	31	距			1		kʰei31	kei2\5	
+864	kei2\5	k	ei	2\5	kʰei31	kʰ	ei	31	企			1		kʰei31	kei2\5	
+865	hei1	h	ei	1	hei44	h	ei	44	墟			1		hei44	hei1	
+866	hei1	h	ei	1	hei44	h	ei	44	虚			1		hei44	hei1	
+867	hei1	h	ei	1	hei44	h	ei	44	嘘			1		hei44	hei1	
+868	hei1	h	ei	1	hei44	h	ei	44	牺			1		hei44	hei1	
+869	hei1	h	ei	1	hei44	h	ei	44	欺			1		hei44	hei1	
+870	hei1	h	ei	1	hei44	h	ei	44	嬉			1		hei44	hei1	
+871	hei1	h	ei	1	hei44	h	ei	44	熙			1		hei44	hei1	
+872	hei1	h	ei	1	hei44	h	ei	44	希			1		hei44	hei1	
+873	hei1	h	ei	1	hei44	h	ei	44	稀			1		hei44	hei1	
+874	hei2\5	h	ei	2\5	hei31	h	ei	31	喜			1		hei31	hei2\5	
+875	hei2\5	h	ei	2\5	hei31	h	ei	31	岂			1		hei31	hei2\5	
+876	hei3	h	ei	3	hei24	h	ei	24	去			1		hei24	hei3	
+877	hei3	h	ei	3	hei24	h	ei	24	戏			1		hei24	hei3	
+878	hei3	h	ei	3	hei24	h	ei	24	器			1		hei24	hei3	
+879	hei3	h	ei	3	hei24	h	ei	24	弃			1		hei24	hei3	
+880	hei3	h	ei	3	hei24	h	ei	24	气			1		hei24	hei3	
+881	hei3	h	ei	3	hei24	h	ei	24	汽			1		hei24	hei3	
+882	zei1	z	ei	1	tsei44	ts	ei	44	资			1		tsei44	zei1	
+883	zei1	z	ei	1	tsei44	ts	ei	44	姿			1		tsei44	zei1	
+884	zei1	z	ei	1	tsei44	ts	ei	44	咨			1		tsei44	zei1	
+885	zei1	z	ei	1	tsei44	ts	ei	44	兹			1		tsei44	zei1	
+886	zei1	z	ei	1	tsei44	ts	ei	44	滋			1		tsei44	zei1	
+887	zei2\5	z	ei	2\5	tsei31	ts	ei	31	紫			1		tsei31	zei2\5	
+888	zei2\5	z	ei	2\5	tsei31	ts	ei	31	姊			1		tsei31	zei2\5	
+889	zei2\5	z	ei	2\5	tsei31	ts	ei	31	子			1		tsei31	zei2\5	
+890	zei6	z	ei	6	tsei54	ts	ei	54	序			1		tsei54	zei6	
+891	zei6	z	ei	6	tsei54	ts	ei	54	叙			1		tsei54	zei6	
+892	zei6	z	ei	6	tsei54	ts	ei	54	绪			1		tsei54	zei6	
+893	zei6	z	ei	6	tsei54	ts	ei	54	聚			1		tsei54	zei6	
+894	zei6	z	ei	6	tsei54	ts	ei	54	自			1		tsei54	zei6	
+895	zei6	z	ei	6	tsei54	ts	ei	54	似			1		tsei54	zei6	
+896	zei6	z	ei	6	tsei54	ts	ei	54	祀			1		tsei54	zei6	
+897	zei6	z	ei	6	tsei54	ts	ei	54	巳			1		tsei54	zei6	
+898	zei6	z	ei	6	tsei54	ts	ei	54	字			1		tsei54	zei6	
+899	zei6	z	ei	6	tsei54	ts	ei	54	牸			1		tsei54	zei6	
+900	zei6	z	ei	6	tsei54	ts	ei	54	寺			1		tsei54	zei6	
+901	zei6	z	ei	6	tsei54	ts	ei	54	嗣			1		tsei54	zei6	
+902	zei6	z	ei	6	tsei54	ts	ei	54	饲			1		tsei54	zei6	
+903	cei1	c	ei	1	tsʰei44	tsʰ	ei	44	蛆			1		tsʰei44	cei1	
+904	cei1	c	ei	1	tsʰei44	tsʰ	ei	44	趋			1		tsʰei44	cei1	
+905	cei1	c	ei	1	tsʰei44	tsʰ	ei	44	疵			1		tsʰei44	cei1	
+906	cei4	c	ei	4	tsʰei52	tsʰ	ei	52	徐			1		tsʰei52	cei4	
+907	cei4	c	ei	4	tsʰei52	tsʰ	ei	52	雌			1		tsʰei52	cei4	
+908	cei4	c	ei	4	tsʰei52	tsʰ	ei	52	瓷			1		tsʰei52	cei4	
+909	cei4	c	ei	4	tsʰei52	tsʰ	ei	52	慈			1		tsʰei52	cei4	
+910	cei4	c	ei	4	tsʰei52	tsʰ	ei	52	磁			1		tsʰei52	cei4	
+911	cei4	c	ei	4	tsʰei52	tsʰ	ei	52	辞			1		tsʰei52	cei4	
+912	cei4	c	ei	4	tsʰei52	tsʰ	ei	52	词			1		tsʰei52	cei4	
+913	cei4	c	ei	4	tsʰei52	tsʰ	ei	52	祠			1		tsʰei52	cei4	
+914	cei4	c	ei	4	tsʰei52	tsʰ	ei	52	脐			1		tsʰei52	cei4	
+915	cei2\5	c	ei	2\5	tsʰei31	tsʰ	ei	31	取			1		tsʰei31	cei2\5	
+916	cei2\5	c	ei	2\5	tsʰei31	tsʰ	ei	31	娶			1		tsʰei31	cei2\5	
+917	cei2\5	c	ei	2\5	tsʰei31	tsʰ	ei	31	此			1		tsʰei31	cei2\5	
+918	cei2\5	c	ei	2\5	tsʰei31	tsʰ	ei	31	似			1		tsʰei31	cei2\5	
+919	cei3	c	ei	3	tsʰei24	tsʰ	ei	24	趣			1		tsʰei24	cei3	
+920	cei3	c	ei	3	tsʰei24	tsʰ	ei	24	刺			1		tsʰei24	cei3	
+921	cei3	c	ei	3	tsʰei24	tsʰ	ei	24	赐			1		tsʰei24	cei3	
+922	cei3	c	ei	3	tsʰei24	tsʰ	ei	24	次			1		tsʰei24	cei3	
+923	bui1	b	ui	1	pui44	p	ui	44	杯			1		pui44	bui1	
+924	bui3	b	ui	3	pui24	p	ui	24	辈			1		pui24	bui3	
+925	bui3	b	ui	3	pui24	p	ui	24	背			1		pui24	bui3	
+926	bui3	b	ui	3	pui24	p	ui	24	贝			1		pui24	bui3	
+927	bui6	b	ui	6	pui54	p	ui	54	焙			1		pui54	bui6	
+928	pui4	p	ui	4	pʰui52	pʰ	ui	52	培			1		pʰui52	pui4	
+929	pui4	p	ui	4	pʰui52	pʰ	ui	52	陪			1		pʰui52	pui4	
+930	pui4	p	ui	4	pʰui52	pʰ	ui	52	赔			1		pʰui52	pui4	
+931	pui4	p	ui	4	pʰui52	pʰ	ui	52	裴			1		pʰui52	pui4	
+932	pui2\5	p	ui	2\5	pʰui31	pʰ	ui	31	倍			1		pʰui31	pui2\5	
+933	pui3	p	ui	3	pʰui24	pʰ	ui	24	配			1		pʰui24	pui3	
+934	pui3	p	ui	3	pʰui24	pʰ	ui	24	佩			1		pʰui24	pui3	
+935	mui4	m	ui	4	mui52	m	ui	52	梅			1		mui52	mui4	
+936	mui4	m	ui	4	mui52	m	ui	52	枚			1		mui52	mui4	
+937	mui4	m	ui	4	mui52	m	ui	52	媒			1		mui52	mui4	
+938	mui4	m	ui	4	mui52	m	ui	52	煤			1		mui52	mui4	
+939	mui4	m	ui	4	mui52	m	ui	52	霉			1		mui52	mui4	
+940	mui2\5	m	ui	2\5	mui31	m	ui	31	每			1		mui31	mui2\5	
+941	mui3	m	ui	3	mui24	m	ui	24	妹	（又）		1		mui24	mui3	
+942	mui3	m	ui	3	mui24	m	ui	24	霉	（又）		1		mui24	mui3	
+943	mui6	m	ui	6	mui54	m	ui	54	妹			1		mui54	mui6	
+944	fui1	f	ui	1	fui44	f	ui	44	灰			1		fui44	fui1	
+945	fui1	f	ui	1	fui44	f	ui	44	恢			1		fui44	fui1	
+946	fui1	f	ui	1	fui44	f	ui	44	魁			1		fui44	fui1	
+947	fui2\5	f	ui	2\5	fui31	f	ui	31	悔			1		fui31	fui2\5	
+948	fui2\5	f	ui	2\5	fui31	f	ui	31	贿			1		fui31	fui2\5	
+949	wui1	w	ui	1	wui44	w	ui	44	煨			1		wui44	wui1	
+950	wui4	w	ui	4	wui52	w	ui	52	回			1		wui52	wui4	
+951	wui2\5	w	ui	2\5	wui31	w	ui	31	会	学会		1		wui31	wui2\5	
+952	wui6	w	ui	6	wui54	w	ui	54	汇			1		wui54	wui6	
+953	wui6	w	ui	6	wui54	w	ui	54	秽			1		wui54	wui6	
+954	wui6	w	ui	6	wui54	w	ui	54	会	开会		1		wui54	wui6	
+955	wui6	w	ui	6	wui54	w	ui	54	会	会计		1		wui54	wui6	
+956	wui6	w	ui	6	wui54	w	ui	54	外	（又）		1		wui54	wui6	
+957	wui6	w	ui	6	wui54	w	ui	54	绘			1		wui54	wui6	
+958	dui1	d	ui	1	tui44	t	ui	44	堆			1		tui44	dui1	
+959	dui2\5	d	ui	2\5	tui31	t	ui	31	怼			1		tui31	dui2\5	
+960	dui3	d	ui	3	tui24	t	ui	24	对			1		tui24	dui3	
+961	dui6	d	ui	6	tui54	t	ui	54	队			1		tui54	dui6	
+962	dui6	d	ui	6	tui54	t	ui	54	兑			1		tui54	dui6	
+963	tui1	t	ui	1	tʰui44	tʰ	ui	44	推			1		tʰui44	tui1	
+964	tui4	t	ui	4	tʰui52	tʰ	ui	52	颓			1		tʰui52	tui4	
+965	tui2\5	t	ui	2\5	tʰui31	tʰ	ui	31	腿			1		tʰui31	tui2\5	
+966	tui3	t	ui	3	tʰui24	tʰ	ui	24	退			1		tʰui24	tui3	
+967	tui3	t	ui	3	tʰui24	tʰ	ui	24	蜕			1		tʰui24	tui3	
+968	nui6	n	ui	6	nui54	n	ui	54	内			1		nui54	nui6	
+969	lui4	l	ui	4	lui52	l	ui	52	雷			1		lui52	lui4	
+970	lui2\5	l	ui	2\5	lui31	l	ui	31	儡			1		lui31	lui2\5	
+971	lui2\5	l	ui	2\5	lui31	l	ui	31	垒			1		lui31	lui2\5	
+972	lui2\5	l	ui	2\5	lui31	l	ui	31	屡			1		lui31	lui2\5	
+973	lui2\5	l	ui	2\5	lui31	l	ui	31	吕			1		lui31	lui2\5	
+974	lui2\5	l	ui	2\5	lui31	l	ui	31	累	积累		1		lui31	lui2\5	
+975	lui6	l	ui	6	lui54	l	ui	54	累	连累		1		lui54	lui6	
+976	lui6	l	ui	6	lui54	l	ui	54	类			1		lui54	lui6	
+977	lui6	l	ui	6	lui54	l	ui	54	泪			1		lui54	lui6	
+978	slui1	sl	ui	1	ɬui44	ɬ	ui	44	虽			1		ɬui44	slui1	
+979	slui2\5	sl	ui	2\5	ɬui31	ɬ	ui	31	髓			1		ɬui31	slui2\5	
+980	slui2\5	sl	ui	2\5	ɬui31	ɬ	ui	31	绪			1		ɬui31	slui2\5	
+981	slui3	sl	ui	3	ɬui24	ɬ	ui	24	碎			1		ɬui24	slui3	
+982	slui3	sl	ui	3	ɬui24	ɬ	ui	24	岁			1		ɬui24	slui3	
+983	slui6	sl	ui	6	ɬui54	ɬ	ui	54	遂			1		ɬui54	slui6	
+984	slui6	sl	ui	6	ɬui54	ɬ	ui	54	隧			1		ɬui54	slui6	
+985	slui6	sl	ui	6	ɬui54	ɬ	ui	54	穗			1		ɬui54	slui6	
+986	slui6	sl	ui	6	ɬui54	ɬ	ui	54	瑞			1		ɬui54	slui6	
+987	kui1	k	ui	1	kʰui44	kʰ	ui	44	盔			1		kʰui44	kui1	
+988	kui2\5	k	ui	2\5	kʰui31	kʰ	ui	31	傀			1		kʰui31	kui2\5	
+989	kui3	k	ui	3	kʰui24	kʰ	ui	24	溃			1		kʰui24	kui3	
+990	zui1	z	ui	1	tsui44	ts	ui	44	追			1		tsui44	zui1	
+991	zui1	z	ui	1	tsui44	ts	ui	44	锥			1		tsui44	zui1	
+992	zui2\5	z	ui	2\5	tsui31	ts	ui	31	嘴			1		tsui31	zui2\5	
+993	zui3	z	ui	3	tsui24	ts	ui	24	最			1		tsui24	zui3	
+994	zui3	z	ui	3	tsui24	ts	ui	24	醉			1		tsui24	zui3	
+995	zui6	z	ui	6	tsui54	ts	ui	54	罪			1		tsui54	zui6	
+996	zui6	z	ui	6	tsui54	ts	ui	54	坠			1		tsui54	zui6	
+997	zui6	z	ui	6	tsui54	ts	ui	54	缀			1		tsui54	zui6	
+998	zui6	z	ui	6	tsui54	ts	ui	54	赘			1		tsui54	zui6	
+999	cui1	c	ui	1	tsʰui44	tsʰ	ui	44	催			1		tsʰui44	cui1	
+1000	cui1	c	ui	1	tsʰui44	tsʰ	ui	44	崔			1		tsʰui44	cui1	
+1001	cui1	c	ui	1	tsʰui44	tsʰ	ui	44	吹			1		tsʰui44	cui1	
+1002	cui1	c	ui	1	tsʰui44	tsʰ	ui	44	炊			1		tsʰui44	cui1	
+1003	cui4	c	ui	4	tsʰui52	tsʰ	ui	52	随			1		tsʰui52	cui4	
+1004	cui4	c	ui	4	tsʰui52	tsʰ	ui	52	垂			1		tsʰui52	cui4	
+1005	cui4	c	ui	4	tsʰui52	tsʰ	ui	52	槌			1		tsʰui52	cui4	
+1006	cui4	c	ui	4	tsʰui52	tsʰ	ui	52	锤			1		tsʰui52	cui4	
+1007	cui2\5	c	ui	2\5	tsʰui31	tsʰ	ui	31	璀			1		tsʰui31	cui2\5	
+1008	cui3	c	ui	3	tsʰui24	tsʰ	ui	24	翠			1		tsʰui24	cui3	
+1009	cui3	c	ui	3	tsʰui24	tsʰ	ui	24	粹			1		tsʰui24	cui3	
+1010	cui3	c	ui	3	tsʰui24	tsʰ	ui	24	脆			1		tsʰui24	cui3	
+1011	sui1	s	ui	1	sui44	s	ui	44	衰			1		sui44	sui1	
+1012	sui4	s	ui	4	sui52	s	ui	52	谁			1		sui52	sui4	
+1013	sui4	s	ui	4	sui52	s	ui	52	隋			1		sui52	sui4	
+1014	sui2\5	s	ui	2\5	sui31	s	ui	31	水			1		sui31	sui2\5	
+1015	sui3	s	ui	3	sui24	s	ui	24	帅			1		sui24	sui3	
+1016	sui3	s	ui	3	sui24	s	ui	24	税			1		sui24	sui3	
+1017	sui6	s	ui	6	sui54	s	ui	54	睡			1		sui54	sui6	
+1018	jui6	j	ui	6	jui54	j	ui	54	芮			1		jui54	jui6	
+1019	jui6	j	ui	6	jui54	j	ui	54	锐			1		jui54	jui6	
+1020	njui1	nj	ui	1	ȵui44	ȵ	ui	44	□	戳		1		ȵui44	njui1	
+1021	njui2\5	nj	ui	2\5	ȵui31	ȵ	ui	31	蕊			1		ȵui31	njui2\5	
+1022	njui2\5	nj	ui	2\5	ȵui31	ȵ	ui	31	乳			1		ȵui31	njui2\5	
+1023	baau1	b	aau	1	pau44	p	au	44	包			1		pau44	baau1	
+1024	baau1	b	aau	1	pau44	p	au	44	胞			1		pau44	baau1	
+1025	baau1	b	aau	1	pau44	p	au	44	褒			1		pau44	baau1	
+1026	baau1	b	aau	1	pau44	p	au	44	苞			1		pau44	baau1	
+1027	baau2\5	b	aau	2\5	pau31	p	au	31	饱			1		pau31	baau2\5	
+1028	baau3	b	aau	3	pau24	p	au	24	鲍			1		pau24	baau3	
+1029	baau3	b	aau	3	pau24	p	au	24	豹			1		pau24	baau3	
+1030	baau3	b	aau	3	pau24	p	au	24	爆			1		pau24	baau3	
+1031	paau1	p	aau	1	pʰau44	pʰ	au	44	抛			1		pʰau44	paau1	
+1032	paau4	p	aau	4	pʰau52	pʰ	au	52	刨			1		pʰau52	paau4	
+1033	paau2\5	p	aau	2\5	pʰau31	pʰ	au	31	跑			1		pʰau31	paau2\5	
+1034	paau3	p	aau	3	pʰau24	pʰ	au	24	炮			1		pʰau24	paau3	
+1035	paau3	p	aau	3	pʰau24	pʰ	au	24	泡			1		pʰau24	paau3	
+1036	maau4	m	aau	4	mau52	m	au	52	茅			1		mau52	maau4	
+1037	maau4	m	aau	4	mau52	m	au	52	矛			1		mau52	maau4	
+1038	maau2\5	m	aau	2\5	mau31	m	au	31	卯			1		mau31	maau2\5	
+1039	maau2\5	m	aau	2\5	mau31	m	au	31	牡			1		mau31	maau2\5	
+1040	maau6	m	aau	6	mau54	m	au	54	貌			1		mau54	maau6	
+1041	naau6	n	aau	6	nau54	n	au	54	闹			1		nau54	naau6	
+1042	laau1	l	aau	1	lau44	l	au	44	捞	捞鱼		1		lau44	laau1	
+1043	laau4	l	aau	4	lau52	l	au	52	捞	抬起		1		lau52	laau4	
+1044	gaau1	g	aau	1	kau44	k	au	44	交			1		kau44	gaau1	
+1045	gaau1	g	aau	1	kau44	k	au	44	郊			1		kau44	gaau1	
+1046	gaau1	g	aau	1	kau44	k	au	44	胶			1		kau44	gaau1	
+1047	gaau2\5	g	aau	2\5	kau31	k	au	31	绞			1		kau31	gaau2\5	
+1048	gaau2\5	g	aau	2\5	kau31	k	au	31	狡			1		kau31	gaau2\5	
+1049	gaau2\5	g	aau	2\5	kau31	k	au	31	搅			1		kau31	gaau2\5	
+1050	gaau2\5	g	aau	2\5	kau31	k	au	31	搞			1		kau31	gaau2\5	
+1051	gaau3	g	aau	3	kau24	k	au	24	教			1		kau24	gaau3	
+1052	gaau3	g	aau	3	kau24	k	au	24	校	校对		1		kau24	gaau3	
+1053	gaau3	g	aau	3	kau24	k	au	24	较			1		kau24	gaau3	
+1054	gaau3	g	aau	3	kau24	k	au	24	酵			1		kau24	gaau3	
+1055	gaau3	g	aau	3	kau24	k	au	24	窖			1		kau24	gaau3	
+1056	gaau3	g	aau	3	kau24	k	au	24	觉			1		kau24	gaau3	
+1057	kaau4	k	aau	4	kʰau52	kʰ	au	52	□	搅拌		1		kʰau52	kaau4	
+1058	haau1	h	aau	1	hau44	h	au	44	敲			1		hau44	haau1	
+1059	haau1	h	aau	1	hau44	h	au	44	烤			1		hau44	haau1	
+1060	haau4	h	aau	4	hau52	h	au	52	姣			1		hau52	haau4	
+1061	haau2\5	h	aau	2\5	hau31	h	au	31	巧			1		hau31	haau2\5	
+1062	haau2\5	h	aau	2\5	hau31	h	au	31	考			1		hau31	haau2\5	
+1063	haau3	h	aau	3	hau24	h	au	24	孝			1		hau24	haau3	
+1064	haau6	h	aau	6	hau54	h	au	54	效			1		hau54	haau6	
+1065	haau6	h	aau	6	hau54	h	au	54	校	学校，上校		1		hau54	haau6	
+1066	ngaau4	ng	aau	4	ŋau52	ŋ	au	52	肴			1		ŋau52	ngaau4	
+1067	ngaau4	ng	aau	4	ŋau52	ŋ	au	52	淆			1		ŋau52	ngaau4	
+1068	ngaau2\5	ng	aau	2\5	ŋau31	ŋ	au	31	咬			1		ŋau31	ngaau2\5	
+1069	zaau1	z	aau	1	tsau44	ts	au	44	□	晾干		1		tsau44	zaau1	
+1070	zaau2\5	z	aau	2\5	tsau31	ts	au	31	爪			1		tsau31	zaau2\5	
+1071	zaau2\5	z	aau	2\5	tsau31	ts	au	31	找			1		tsau31	zaau2\5	
+1072	zaau3	z	aau	3	tsau24	ts	au	24	罩			1		tsau24	zaau3	
+1073	caau1	c	aau	1	tsʰau44	tsʰ	au	44	抄			1		tsʰau44	caau1	
+1074	caau1	c	aau	1	tsʰau44	tsʰ	au	44	钞			1		tsʰau44	caau1	
+1075	caau4	c	aau	4	tsʰau52	tsʰ	au	52	巢			1		tsʰau52	caau4	
+1076	caau2\5	c	aau	2\5	tsʰau31	tsʰ	au	31	炒			1		tsʰau31	caau2\5	
+1077	caau2\5	c	aau	2\5	tsʰau31	tsʰ	au	31	吵			1		tsʰau31	caau2\5	
+1078	saau1	s	aau	1	sau44	s	au	44	梢			1		sau44	saau1	
+1079	saau1	s	aau	1	sau44	s	au	44	捎			1		sau44	saau1	
+1080	saau2\5	s	aau	2\5	sau31	s	au	31	稍			1		sau31	saau2\5	
+1081	saau3	s	aau	3	sau24	s	au	24	潲			1		sau24	saau3	
+1082	saau3	s	aau	3	sau24	s	au	24	哨			1		sau24	saau3	
+1083	njaau1	nj	aau	1	ȵau44	ȵ	au	44	挠			1		ȵau44	njaau1	
+1084	njaau2\5	nj	aau	2\5	ȵau31	ȵ	au	31	爪			1		ȵau31	njaau2\5	
+1085	aau3		aau	3	au24	Ǿ	au	24	坳			1		au24	aau3	
+1086	aau3		aau	3	au24	Ǿ	au	24	拗			1		au24	aau3	
+1087	bau1	b	au	1	pɐu44	p	ɐu	44	□	蹲		1		pɐu44	bau1	
+1088	pau1	p	au	1	pʰɐu44	pʰ	ɐu	44	剖			1		pʰɐu44	pau1	
+1089	mau1	m	au	1	mɐu44	m	ɐu	44	□	霉点		1		mɐu44	mau1	
+1090	mau4	m	au	4	mɐu52	m	ɐu	52	谋			1		mɐu52	mau4	
+1091	mau2\5	m	au	2\5	mɐu31	m	ɐu	31	某			1		mɐu31	mau2\5	
+1092	mau2\5	m	au	2\5	mɐu31	m	ɐu	31	亩			1		mɐu31	mau2\5	
+1093	mau6	m	au	6	mɐu54	m	ɐu	54	戊			1		mɐu54	mau6	
+1094	mau6	m	au	6	mɐu54	m	ɐu	54	茂			1		mɐu54	mau6	
+1095	mau6	m	au	6	mɐu54	m	ɐu	54	贸			1		mɐu54	mau6	
+1096	mau6	m	au	6	mɐu54	m	ɐu	54	谬			1		mɐu54	mau6	
+1097	fau4	f	au	4	fɐu52	f	ɐu	52	浮			1		fɐu52	fau4	
+1098	fau2\5	f	au	2\5	fɐu31	f	ɐu	31	否			1		fɐu31	fau2\5	
+1099	wau4	w	au	4	wɐu52	w	ɐu	52	□	拟声词，狗吠声		1		wɐu52	wau4	
+1100	dau1	d	au	1	tɐu44	t	ɐu	44	兜			1		tɐu44	dau1	
+1101	dau2\5	d	au	2\5	tɐu31	t	ɐu	31	斗	一斗米		1		tɐu31	dau2\5	
+1102	dau2\5	d	au	2\5	tɐu31	t	ɐu	31	抖			1		tɐu31	dau2\5	
+1103	dau2\5	d	au	2\5	tɐu31	t	ɐu	31	陡			1		tɐu31	dau2\5	
+1104	dau3	d	au	3	tɐu24	t	ɐu	24	斗	斗争		1		tɐu24	dau3	
+1105	dau6	d	au	6	tɐu54	t	ɐu	54	豆			1		tɐu54	dau6	
+1106	dau6	d	au	6	tɐu54	t	ɐu	54	逗			1		tɐu54	dau6	
+1107	dau6	d	au	6	tɐu54	t	ɐu	54	痘			1		tɐu54	dau6	
+1108	dau6	d	au	6	tɐu54	t	ɐu	54	窦			1		tɐu54	dau6	
+1109	tau1	t	au	1	tʰɐu44	tʰ	ɐu	44	偷			1		tʰɐu44	tau1	
+1110	tau4	t	au	4	tʰɐu52	tʰ	ɐu	52	头			1		tʰɐu52	tau4	
+1111	tau4	t	au	4	tʰɐu52	tʰ	ɐu	52	投			1		tʰɐu52	tau4	
+1112	tau3	t	au	3	tʰɐu24	tʰ	ɐu	24	透			1		tʰɐu24	tau3	
+1113	nau1	n	au	1	nɐu44	n	ɐu	44	嬲			1		nɐu44	nau1	
+1114	nau2\5	n	au	2\5	nɐu31	n	ɐu	31	钮			1		nɐu31	nau2\5	
+1115	nau2\5	n	au	2\5	nɐu31	n	ɐu	31	扭			1		nɐu31	nau2\5	
+1116	lau1	l	au	1	lɐu44	l	ɐu	44	褛			1		lɐu44	lau1	
+1117	lau4	l	au	4	lɐu52	l	ɐu	52	楼			1		lɐu52	lau4	
+1118	lau4	l	au	4	lɐu52	l	ɐu	52	流			1		lɐu52	lau4	
+1119	lau4	l	au	4	lɐu52	l	ɐu	52	刘			1		lɐu52	lau4	
+1120	lau4	l	au	4	lɐu52	l	ɐu	52	留			1		lɐu52	lau4	
+1121	lau4	l	au	4	lɐu52	l	ɐu	52	榴			1		lɐu52	lau4	
+1122	lau4	l	au	4	lɐu52	l	ɐu	52	硫			1		lɐu52	lau4	
+1123	lau4	l	au	4	lɐu52	l	ɐu	52	琉			1		lɐu52	lau4	
+1124	lau4	l	au	4	lɐu52	l	ɐu	52	馏			1		lɐu52	lau4	
+1125	lau2\5	l	au	2\5	lɐu31	l	ɐu	31	搂			1		lɐu31	lau2\5	
+1126	lau2\5	l	au	2\5	lɐu31	l	ɐu	31	篓			1		lɐu31	lau2\5	
+1127	lau2\5	l	au	2\5	lɐu31	l	ɐu	31	柳			1		lɐu31	lau2\5	
+1128	lau3	l	au	3	lɐu24	l	ɐu	24	溜			1		lɐu24	lau3	
+1129	lau3	l	au	3	lɐu24	l	ɐu	24	漏			1		lɐu24	lau3	
+1130	lau6	l	au	6	lɐu54	l	ɐu	54	漏	（又）		1		lɐu54	lau6	
+1131	lau6	l	au	6	lɐu54	l	ɐu	54	陋			1		lɐu54	lau6	
+1132	slau1	sl	au	1	ɬɐu44	ɬ	ɐu	44	修			1		ɬɐu44	slau1	
+1133	slau1	sl	au	1	ɬɐu44	ɬ	ɐu	44	羞			1		ɬɐu44	slau1	
+1134	slau1	sl	au	1	ɬɐu44	ɬ	ɐu	44	搜			1		ɬɐu44	slau1	
+1135	slau1	sl	au	1	ɬɐu44	ɬ	ɐu	44	馊			1		ɬɐu44	slau1	
+1136	slau2\5	sl	au	2\5	ɬɐu31	ɬ	ɐu	31	叟			1		ɬɐu31	slau2\5	
+1137	slau3	sl	au	3	ɬɐu24	ɬ	ɐu	24	嗽			1		ɬɐu24	slau3	
+1138	slau3	sl	au	3	ɬɐu24	ɬ	ɐu	24	绣			1		ɬɐu24	slau3	
+1139	slau3	sl	au	3	ɬɐu24	ɬ	ɐu	24	秀			1		ɬɐu24	slau3	
+1140	slau3	sl	au	3	ɬɐu24	ɬ	ɐu	24	宿	星宿		1		ɬɐu24	slau3	
+1141	slau3	sl	au	3	ɬɐu24	ɬ	ɐu	24	锈			1		ɬɐu24	slau3	
+1142	gau1	g	au	1	kɐu44	k	ɐu	44	沟	水沟		1		kɐu44	gau1	
+1143	gau1	g	au	1	kɐu44	k	ɐu	44	鸠			1		kɐu44	gau1	
+1144	gau1	g	au	1	kɐu44	k	ɐu	44	阄			1		kɐu44	gau1	
+1145	gau2\5	g	au	2\5	kɐu31	k	ɐu	31	狗			1		kɐu31	gau2\5	
+1146	gau2\5	g	au	2\5	kɐu31	k	ɐu	31	枸			1		kɐu31	gau2\5	
+1147	gau2\5	g	au	2\5	kɐu31	k	ɐu	31	纠			1		kɐu31	gau2\5	
+1148	gau3	g	au	3	kɐu24	k	ɐu	24	够			1		kɐu24	gau3	
+1149	gau6	g	au	6	kɐu54	k	ɐu	54	□	块		1		kɐu54	gau6	
+1150	kau1	k	au	1	kʰɐu44	kʰ	ɐu	44	沟	沟通		1		kʰɐu44	kau1	
+1151	kau4	k	au	4	kʰɐu52	kʰ	ɐu	52	蚯	蚯蚓		1		kʰɐu52	kau4	
+1152	kau3	k	au	3	kʰɐu24	kʰ	ɐu	24	叩			1		kʰɐu24	kau3	
+1153	kau3	k	au	3	kʰɐu24	kʰ	ɐu	24	构			1		kʰɐu24	kau3	
+1154	kau3	k	au	3	kʰɐu24	kʰ	ɐu	24	购			1		kʰɐu24	kau3	
+1155	kau3	k	au	3	kʰɐu24	kʰ	ɐu	24	扣			1		kʰɐu24	kau3	
+1156	kau3	k	au	3	kʰɐu24	kʰ	ɐu	24	寇			1		kʰɐu24	kau3	
+1157	hau4	h	au	4	hɐu52	h	ɐu	52	侯			1		hɐu52	hau4	
+1158	hau4	h	au	4	hɐu52	h	ɐu	52	喉			1		hɐu52	hau4	
+1159	hau4	h	au	4	hɐu52	h	ɐu	52	猴			1		hɐu52	hau4	
+1160	hau2\5	h	au	2\5	hɐu31	h	ɐu	31	口			1		hɐu31	hau2\5	
+1161	hau2\5	h	au	2\5	hɐu31	h	ɐu	31	厚			1		hɐu31	hau2\5	
+1162	hau6	h	au	6	hɐu54	h	ɐu	54	后			1		hɐu54	hau6	
+1163	hau6	h	au	6	hɐu54	h	ɐu	54	候			1		hɐu54	hau6	
+1164	ngau1	ng	au	1	ŋɐu44	ŋ	ɐu	44	勾			1		ŋɐu44	ngau1	
+1165	ngau1	ng	au	1	ŋɐu44	ŋ	ɐu	44	钩			1		ŋɐu44	ngau1	
+1166	ngau1	ng	au	1	ŋɐu44	ŋ	ɐu	44	抠			1		ŋɐu44	ngau1	
+1167	ngau4	ng	au	4	ŋɐu52	ŋ	ɐu	52	牛			1		ŋɐu52	ngau4	
+1168	ngau2\5	ng	au	2\5	ŋɐu31	ŋ	ɐu	31	藕			1		ŋɐu31	ngau2\5	
+1169	ngau2\5	ng	au	2\5	ŋɐu31	ŋ	ɐu	31	偶			1		ŋɐu31	ngau2\5	
+1170	zau1	z	au	1	tsɐu44	ts	ɐu	44	邹			1		tsɐu44	zau1	
+1171	zau1	z	au	1	tsɐu44	ts	ɐu	44	周			1		tsɐu44	zau1	
+1172	zau1	z	au	1	tsɐu44	ts	ɐu	44	舟			1		tsɐu44	zau1	
+1173	zau1	z	au	1	tsɐu44	ts	ɐu	44	州			1		tsɐu44	zau1	
+1174	zau1	z	au	1	tsɐu44	ts	ɐu	44	洲			1		tsɐu44	zau1	
+1175	zau2\5	z	au	2\5	tsɐu31	ts	ɐu	31	走			1		tsɐu31	zau2\5	
+1176	zau2\5	z	au	2\5	tsɐu31	ts	ɐu	31	酒			1		tsɐu31	zau2\5	
+1177	zau2\5	z	au	2\5	tsɐu31	ts	ɐu	31	肘			1		tsɐu31	zau2\5	
+1178	zau2\5	z	au	2\5	tsɐu31	ts	ɐu	31	帚			1		tsɐu31	zau2\5	
+1179	zau3	z	au	3	tsɐu24	ts	ɐu	24	奏			1		tsɐu24	zau3	
+1180	zau3	z	au	3	tsɐu24	ts	ɐu	24	昼			1		tsɐu24	zau3	
+1181	zau3	z	au	3	tsɐu24	ts	ɐu	24	皱			1		tsɐu24	zau3	
+1182	zau3	z	au	3	tsɐu24	ts	ɐu	24	咒			1		tsɐu24	zau3	
+1183	zau6	z	au	6	tsɐu54	ts	ɐu	54	就			1		tsɐu54	zau6	
+1184	zau6	z	au	6	tsɐu54	ts	ɐu	54	纣			1		tsɐu54	zau6	
+1185	zau6	z	au	6	tsɐu54	ts	ɐu	54	宙			1		tsɐu54	zau6	
+1186	zau6	z	au	6	tsɐu54	ts	ɐu	54	骤			1		tsɐu54	zau6	
+1187	zau6	z	au	6	tsɐu54	ts	ɐu	54	袖			1		tsɐu54	zau6	
+1188	cau1	c	au	1	tsʰɐu44	tsʰ	ɐu	44	秋			1		tsʰɐu44	cau1	
+1189	cau1	c	au	1	tsʰɐu44	tsʰ	ɐu	44	抽			1		tsʰɐu44	cau1	
+1190	cau4	c	au	4	tsʰɐu52	tsʰ	ɐu	52	囚			1		tsʰɐu52	cau4	
+1191	cau4	c	au	4	tsʰɐu52	tsʰ	ɐu	52	泅			1		tsʰɐu52	cau4	
+1192	cau4	c	au	4	tsʰɐu52	tsʰ	ɐu	52	绸			1		tsʰɐu52	cau4	
+1193	cau4	c	au	4	tsʰɐu52	tsʰ	ɐu	52	稠			1		tsʰɐu52	cau4	
+1194	cau4	c	au	4	tsʰɐu52	tsʰ	ɐu	52	筹			1		tsʰɐu52	cau4	
+1195	cau4	c	au	4	tsʰɐu52	tsʰ	ɐu	52	酬			1		tsʰɐu52	cau4	
+1196	cau2\5	c	au	2\5	tsʰɐu31	tsʰ	ɐu	31	丑			1		tsʰɐu31	cau2\5	
+1197	cau3	c	au	3	tsʰɐu24	tsʰ	ɐu	24	凑			1		tsʰɐu24	cau3	
+1198	cau3	c	au	3	tsʰɐu24	tsʰ	ɐu	24	臭			1		tsʰɐu24	cau3	
+1199	cau3	c	au	3	tsʰɐu24	tsʰ	ɐu	24	嗅			1		tsʰɐu24	cau3	
+1200	sau1	s	au	1	sɐu44	s	ɐu	44	收			1		sɐu44	sau1	
+1201	sau4	s	au	4	sɐu52	s	ɐu	52	愁			1		sɐu52	sau4	
+1202	sau4	s	au	4	sɐu52	s	ɐu	52	仇			1		sɐu52	sau4	
+1203	sau2\5	s	au	2\5	sɐu31	s	ɐu	31	手			1		sɐu31	sau2\5	
+1204	sau2\5	s	au	2\5	sɐu31	s	ɐu	31	首			1		sɐu31	sau2\5	
+1205	sau2\5	s	au	2\5	sɐu31	s	ɐu	31	守			1		sɐu31	sau2\5	
+1206	sau3	s	au	3	sɐu24	s	ɐu	24	瘦			1		sɐu24	sau3	
+1207	sau3	s	au	3	sɐu24	s	ɐu	24	兽			1		sɐu24	sau3	
+1208	sau6	s	au	6	sɐu54	s	ɐu	54	受			1		sɐu54	sau6	
+1209	sau6	s	au	6	sɐu54	s	ɐu	54	寿			1		sɐu54	sau6	
+1210	sau6	s	au	6	sɐu54	s	ɐu	54	授			1		sɐu54	sau6	
+1211	sau6	s	au	6	sɐu54	s	ɐu	54	售			1		sɐu54	sau6	
+1212	jau1	j	au	1	jɐu44	j	ɐu	44	优			1		jɐu44	jau1	
+1213	jau1	j	au	1	jɐu44	j	ɐu	44	忧			1		jɐu44	jau1	
+1214	jau1	j	au	1	jɐu44	j	ɐu	44	幽			1		jɐu44	jau1	
+1215	jau4	j	au	4	jɐu52	j	ɐu	52	柔			1		jɐu52	jau4	
+1216	jau4	j	au	4	jɐu52	j	ɐu	52	揉			1		jɐu52	jau4	
+1217	jau4	j	au	4	jɐu52	j	ɐu	52	尤			1		jɐu52	jau4	
+1218	jau4	j	au	4	jɐu52	j	ɐu	52	邮			1		jɐu52	jau4	
+1219	jau4	j	au	4	jɐu52	j	ɐu	52	由			1		jɐu52	jau4	
+1220	jau4	j	au	4	jɐu52	j	ɐu	52	油			1		jɐu52	jau4	
+1221	jau4	j	au	4	jɐu52	j	ɐu	52	游			1		jɐu52	jau4	
+1222	jau4	j	au	4	jɐu52	j	ɐu	52	犹			1		jɐu52	jau4	
+1223	jau4	j	au	4	jɐu52	j	ɐu	52	悠			1		jɐu52	jau4	
+1224	jau2\5	j	au	2\5	jɐu31	j	ɐu	31	有			1		jɐu31	jau2\5	
+1225	jau2\5	j	au	2\5	jɐu31	j	ɐu	31	友			1		jɐu31	jau2\5	
+1226	jau2\5	j	au	2\5	jɐu31	j	ɐu	31	酉			1		jɐu31	jau2\5	
+1227	jau2\5	j	au	2\5	jɐu31	j	ɐu	31	莠			1		jɐu31	jau2\5	
+1228	jau2\5	j	au	2\5	jɐu31	j	ɐu	31	诱			1		jɐu31	jau2\5	
+1229	jau3	j	au	3	jɐu24	j	ɐu	24	幼			1		jɐu24	jau3	
+1230	jau6	j	au	6	jɐu54	j	ɐu	54	又			1		jɐu54	jau6	
+1231	jau6	j	au	6	jɐu54	j	ɐu	54	右			1		jɐu54	jau6	
+1232	jau6	j	au	6	jɐu54	j	ɐu	54	佑			1		jɐu54	jau6	
+1233	jau6	j	au	6	jɐu54	j	ɐu	54	柚			1		jɐu54	jau6	
+1234	jau6	j	au	6	jɐu54	j	ɐu	54	鼬			1		jɐu54	jau6	
+1235	njau3	nj	au	3	ȵɐu24	ȵ	ɐu	24	皱			1		ȵɐu24	njau3	
+1236	au1		au	1	ɐu44	Ǿ	ɐu	44	欧			1		ɐu44	au1	
+1237	au1		au	1	ɐu44	Ǿ	ɐu	44	区	姓		1		ɐu44	au1	
+1238	au1		au	1	ɐu44	Ǿ	ɐu	44	瓯			1		ɐu44	au1	
+1239	au1		au	1	ɐu44	Ǿ	ɐu	44	殴			1		ɐu44	au1	
+1240	au2\5		au	2\5	ɐu31	Ǿ	ɐu	31	呕			1		ɐu31	au2\5	
+1241	au3		au	3	ɐu24	Ǿ	ɐu	24	怄			1		ɐu24	au3	
+1242	bou1	b	ou	1	pou44	p	ou	44	煲			1		pou44	bou1	
+1243	bou1	b	ou	1	pou44	p	ou	44	□	了		1		pou44	bou1	
+1244	bou2\5	b	ou	2\5	pou31	p	ou	31	补			1		pou31	bou2\5	
+1245	bou2\5	b	ou	2\5	pou31	p	ou	31	保			1		pou31	bou2\5	
+1246	bou2\5	b	ou	2\5	pou31	p	ou	31	堡			1		pou31	bou2\5	
+1247	bou2\5	b	ou	2\5	pou31	p	ou	31	宝			1		pou31	bou2\5	
+1248	bou2\5	b	ou	2\5	pou31	p	ou	31	斧			1		pou31	bou2\5	
+1249	bou3	b	ou	3	pou24	p	ou	24	布			1		pou24	bou3	
+1250	bou3	b	ou	3	pou24	p	ou	24	怖			1		pou24	bou3	
+1251	bou3	b	ou	3	pou24	p	ou	24	报			1		pou24	bou3	
+1252	bou6	b	ou	6	pou54	p	ou	54	部			1		pou54	bou6	
+1253	bou6	b	ou	6	pou54	p	ou	54	簿			1		pou54	bou6	
+1254	bou6	b	ou	6	pou54	p	ou	54	步			1		pou54	bou6	
+1255	bou6	b	ou	6	pou54	p	ou	54	捕			1		pou54	bou6	
+1256	bou6	b	ou	6	pou54	p	ou	54	暴			1		pou54	bou6	
+1257	bou6	b	ou	6	pou54	p	ou	54	菢			1		pou54	bou6	
+1258	pou1	p	ou	1	pʰou44	pʰ	ou	44	铺	铺设		1		pʰou44	pou1	
+1259	pou4	p	ou	4	pʰou52	pʰ	ou	52	蒲			1		pʰou52	pou4	
+1260	pou4	p	ou	4	pʰou52	pʰ	ou	52	袍			1		pʰou52	pou4	
+1261	pou4	p	ou	4	pʰou52	pʰ	ou	52	浮			1		pʰou52	pou4	
+1262	pou2\5	p	ou	2\5	pʰou31	pʰ	ou	31	谱			1		pʰou31	pou2\5	
+1263	pou2\5	p	ou	2\5	pʰou31	pʰ	ou	31	普			1		pʰou31	pou2\5	
+1264	pou2\5	p	ou	2\5	pʰou31	pʰ	ou	31	浦			1		pʰou31	pou2\5	
+1265	pou2\5	p	ou	2\5	pʰou31	pʰ	ou	31	抱			1		pʰou31	pou2\5	
+1266	pou2\5	p	ou	2\5	pʰou31	pʰ	ou	31	脯			1		pʰou31	pou2\5	
+1267	pou2\5	p	ou	2\5	pʰou31	pʰ	ou	31	甫			1		pʰou31	pou2\5	
+1268	pou3	p	ou	3	pʰou24	pʰ	ou	24	铺	店铺		1		pʰou24	pou3	
+1269	mou4	m	ou	4	mou52	m	ou	52	模			1		mou52	mou4	
+1270	mou4	m	ou	4	mou52	m	ou	52	摹			1		mou52	mou4	
+1271	mou4	m	ou	4	mou52	m	ou	52	毛			1		mou52	mou4	
+1272	mou4	m	ou	4	mou52	m	ou	52	无	无辜		1		mou52	mou4	
+1273	mou2\5	m	ou	2\5	mou31	m	ou	31	无	无事		1		mou31	mou2\5	
+1274	mou2\5	m	ou	2\5	mou31	m	ou	31	武			1		mou31	mou2\5	
+1275	mou2\5	m	ou	2\5	mou31	m	ou	31	舞			1		mou31	mou2\5	
+1276	mou2\5	m	ou	2\5	mou31	m	ou	31	侮			1		mou31	mou2\5	
+1277	mou2\5	m	ou	2\5	mou31	m	ou	31	鹉			1		mou31	mou2\5	
+1278	mou2\5	m	ou	2\5	mou31	m	ou	31	母			1		mou31	mou2\5	
+1279	mou2\5	m	ou	2\5	mou31	m	ou	31	拇			1		mou31	mou2\5	
+1280	mou2\5	m	ou	2\5	mou31	m	ou	31	姆			1		mou31	mou2\5	
+1281	mou3	m	ou	3	mou24	m	ou	24	□	婶婶		1		mou24	mou3	
+1282	mou6	m	ou	6	mou54	m	ou	54	暮			1		mou54	mou6	
+1283	mou6	m	ou	6	mou54	m	ou	54	慕			1		mou54	mou6	
+1284	mou6	m	ou	6	mou54	m	ou	54	墓			1		mou54	mou6	
+1285	mou6	m	ou	6	mou54	m	ou	54	募			1		mou54	mou6	
+1286	mou6	m	ou	6	mou54	m	ou	54	务			1		mou54	mou6	
+1287	mou6	m	ou	6	mou54	m	ou	54	雾			1		mou54	mou6	
+1288	mou6	m	ou	6	mou54	m	ou	54	冒			1		mou54	mou6	
+1289	mou6	m	ou	6	mou54	m	ou	54	帽			1		mou54	mou6	
+1290	dou1	d	ou	1	tou44	t	ou	44	都			1		tou44	dou1	
+1291	dou1	d	ou	1	tou44	t	ou	44	刀			1		tou44	dou1	
+1292	dou2\5	d	ou	2\5	tou31	t	ou	31	堵			1		tou31	dou2\5	
+1293	dou2\5	d	ou	2\5	tou31	t	ou	31	赌			1		tou31	dou2\5	
+1294	dou2\5	d	ou	2\5	tou31	t	ou	31	岛			1		tou31	dou2\5	
+1295	dou2\5	d	ou	2\5	tou31	t	ou	31	祷			1		tou31	dou2\5	
+1296	dou2\5	d	ou	2\5	tou31	t	ou	31	倒	打倒		1		tou31	dou2\5	
+1297	dou3	d	ou	3	tou24	t	ou	24	到			1		tou24	dou3	
+1298	dou6	d	ou	6	tou54	t	ou	54	杜			1		tou54	dou6	
+1299	dou6	d	ou	6	tou54	t	ou	54	度			1		tou54	dou6	
+1300	dou6	d	ou	6	tou54	t	ou	54	渡			1		tou54	dou6	
+1301	dou6	d	ou	6	tou54	t	ou	54	镀			1		tou54	dou6	
+1302	dou6	d	ou	6	tou54	t	ou	54	道			1		tou54	dou6	
+1303	dou6	d	ou	6	tou54	t	ou	54	稻			1		tou54	dou6	
+1304	dou6	d	ou	6	tou54	t	ou	54	盗			1		tou54	dou6	
+1305	dou6	d	ou	6	tou54	t	ou	54	导			1		tou54	dou6	
+1306	tou1	t	ou	1	tʰou44	tʰ	ou	44	滔			1		tʰou44	tou1	
+1307	tou4	t	ou	4	tʰou52	tʰ	ou	52	徒			1		tʰou52	tou4	
+1308	tou4	t	ou	4	tʰou52	tʰ	ou	52	屠			1		tʰou52	tou4	
+1309	tou4	t	ou	4	tʰou52	tʰ	ou	52	途			1		tʰou52	tou4	
+1310	tou4	t	ou	4	tʰou52	tʰ	ou	52	涂			1		tʰou52	tou4	
+1311	tou4	t	ou	4	tʰou52	tʰ	ou	52	图			1		tʰou52	tou4	
+1312	tou4	t	ou	4	tʰou52	tʰ	ou	52	桃			1		tʰou52	tou4	
+1313	tou4	t	ou	4	tʰou52	tʰ	ou	52	逃			1		tʰou52	tou4	
+1314	tou4	t	ou	4	tʰou52	tʰ	ou	52	淘			1		tʰou52	tou4	
+1315	tou4	t	ou	4	tʰou52	tʰ	ou	52	陶			1		tʰou52	tou4	
+1316	tou4	t	ou	4	tʰou52	tʰ	ou	52	萄			1		tʰou52	tou4	
+1317	tou4	t	ou	4	tʰou52	tʰ	ou	52	涛			1		tʰou52	tou4	
+1318	tou2\5	t	ou	2\5	tʰou31	tʰ	ou	31	肚			1		tʰou31	tou2\5	
+1319	tou2\5	t	ou	2\5	tʰou31	tʰ	ou	31	土			1		tʰou31	tou2\5	
+1320	tou2\5	t	ou	2\5	tʰou31	tʰ	ou	31	讨			1		tʰou31	tou2\5	
+1321	tou2\5	t	ou	2\5	tʰou31	tʰ	ou	31	吐	吐痰		1		tʰou31	tou2\5	
+1322	tou3	t	ou	3	tʰou24	tʰ	ou	24	吐	呕吐		1		tʰou24	tou3	
+1323	tou3	t	ou	3	tʰou24	tʰ	ou	24	兔			1		tʰou24	tou3	
+1324	tou3	t	ou	3	tʰou24	tʰ	ou	24	套			1		tʰou24	tou3	
+1325	nou4	n	ou	4	nou52	n	ou	52	奴			1		nou52	nou4	
+1326	nou2\5	n	ou	2\5	nou31	n	ou	31	努			1		nou31	nou2\5	
+1327	nou2\5	n	ou	2\5	nou31	n	ou	31	脑			1		nou31	nou2\5	
+1328	nou2\5	n	ou	2\5	nou31	n	ou	31	恼			1		nou31	nou2\5	
+1329	nou6	n	ou	6	nou54	n	ou	54	怒			1		nou54	nou6	
+1330	lou4	l	ou	4	lou52	l	ou	52	卢			1		lou52	lou4	
+1331	lou4	l	ou	4	lou52	l	ou	52	炉			1		lou52	lou4	
+1332	lou4	l	ou	4	lou52	l	ou	52	芦			1		lou52	lou4	
+1333	lou4	l	ou	4	lou52	l	ou	52	劳			1		lou52	lou4	
+1334	lou4	l	ou	4	lou52	l	ou	52	牢			1		lou52	lou4	
+1335	lou2\5	l	ou	2\5	lou31	l	ou	31	鲁			1		lou31	lou2\5	
+1336	lou2\5	l	ou	2\5	lou31	l	ou	31	橹			1		lou31	lou2\5	
+1337	lou2\5	l	ou	2\5	lou31	l	ou	31	虏			1		lou31	lou2\5	
+1338	lou2\5	l	ou	2\5	lou31	l	ou	31	卤			1		lou31	lou2\5	
+1339	lou2\5	l	ou	2\5	lou31	l	ou	31	老			1		lou31	lou2\5	
+1340	lou6	l	ou	6	lou54	l	ou	54	路			1		lou54	lou6	
+1341	lou6	l	ou	6	lou54	l	ou	54	赂			1		lou54	lou6	
+1342	lou6	l	ou	6	lou54	l	ou	54	露			1		lou54	lou6	
+1343	lou6	l	ou	6	lou54	l	ou	54	鹭			1		lou54	lou6	
+1344	slou1	sl	ou	1	ɬou44	ɬ	ou	44	苏			1		ɬou44	slou1	
+1345	slou1	sl	ou	1	ɬou44	ɬ	ou	44	酥			1		ɬou44	slou1	
+1346	slou1	sl	ou	1	ɬou44	ɬ	ou	44	须			1		ɬou44	slou1	
+1347	slou1	sl	ou	1	ɬou44	ɬ	ou	44	臊			1		ɬou44	slou1	
+1348	slou1	sl	ou	1	ɬou44	ɬ	ou	44	骚			1		ɬou44	slou1	
+1349	slou2\5	sl	ou	2\5	ɬou31	ɬ	ou	31	嫂			1		ɬou31	slou2\5	
+1350	slou3	sl	ou	3	ɬou24	ɬ	ou	24	素			1		ɬou24	slou3	
+1351	slou3	sl	ou	3	ɬou24	ɬ	ou	24	诉			1		ɬou24	slou3	
+1352	slou3	sl	ou	3	ɬou24	ɬ	ou	24	塑			1		ɬou24	slou3	
+1353	slou3	sl	ou	3	ɬou24	ɬ	ou	24	扫			1		ɬou24	slou3	
+1354	gou1	g	ou	1	kou44	k	ou	44	高			1		kou44	gou1	
+1355	gou1	g	ou	1	kou44	k	ou	44	膏			1		kou44	gou1	
+1356	gou1	g	ou	1	kou44	k	ou	44	羔			1		kou44	gou1	
+1357	gou1	g	ou	1	kou44	k	ou	44	糕			1		kou44	gou1	
+1358	gou2\5	g	ou	2\5	kou31	k	ou	31	稿			1		kou31	gou2\5	
+1359	gou3	g	ou	3	kou24	k	ou	24	告			1		kou24	gou3	
+1360	kou3	k	ou	3	kʰou24	kʰ	ou	24	靠			1		kʰou24	kou3	
+1361	kou3	k	ou	3	kʰou24	kʰ	ou	24	犒			1		kʰou24	kou3	
+1362	hou1	h	ou	1	hou44	h	ou	44	蒿			1		hou44	hou1	
+1363	hou4	h	ou	4	hou52	h	ou	52	豪			1		hou52	hou4	
+1364	hou4	h	ou	4	hou52	h	ou	52	壕			1		hou52	hou4	
+1365	hou4	h	ou	4	hou52	h	ou	52	毫			1		hou52	hou4	
+1366	hou4	h	ou	4	hou52	h	ou	52	号	呼号		1		hou52	hou4	
+1367	hou2\5	h	ou	2\5	hou31	h	ou	31	好	好坏		1		hou31	hou2\5	
+1368	hou3	h	ou	3	hou24	h	ou	24	好	喜好		1		hou24	hou3	
+1369	hou3	h	ou	3	hou24	h	ou	24	耗			1		hou24	hou3	
+1370	hou6	h	ou	6	hou54	h	ou	54	号	号数		1		hou54	hou6	
+1371	ngou4	ng	ou	4	ŋou52	ŋ	ou	52	熬			1		ŋou52	ngou4	
+1372	ngou6	ng	ou	6	ŋou54	ŋ	ou	54	傲			1		ŋou54	ngou6	
+1373	ngou6	ng	ou	6	ŋou54	ŋ	ou	54	鏊			1		ŋou54	ngou6	
+1374	zou1	z	ou	1	tsou44	ts	ou	44	租			1		tsou44	zou1	
+1375	zou1	z	ou	1	tsou44	ts	ou	44	遭			1		tsou44	zou1	
+1376	zou1	z	ou	1	tsou44	ts	ou	44	糟			1		tsou44	zou1	
+1377	zou2\5	z	ou	2\5	tsou31	ts	ou	31	祖			1		tsou31	zou2\5	
+1378	zou2\5	z	ou	2\5	tsou31	ts	ou	31	组			1		tsou31	zou2\5	
+1379	zou2\5	z	ou	2\5	tsou31	ts	ou	31	早			1		tsou31	zou2\5	
+1380	zou2\5	z	ou	2\5	tsou31	ts	ou	31	枣			1		tsou31	zou2\5	
+1381	zou2\5	z	ou	2\5	tsou31	ts	ou	31	蚤			1		tsou31	zou2\5	
+1382	zou2\5	z	ou	2\5	tsou31	ts	ou	31	澡			1		tsou31	zou2\5	
+1383	zou3	z	ou	3	tsou24	ts	ou	24	做			1		tsou24	zou3	
+1384	zou3	z	ou	3	tsou24	ts	ou	24	灶			1		tsou24	zou3	
+1385	zou6	z	ou	6	tsou54	ts	ou	54	皂			1		tsou54	zou6	
+1386	zou6	z	ou	6	tsou54	ts	ou	54	造			1		tsou54	zou6	
+1387	cou1	c	ou	1	tsʰou44	tsʰ	ou	44	粗			1		tsʰou44	cou1	
+1388	cou1	c	ou	1	tsʰou44	tsʰ	ou	44	操			1		tsʰou44	cou1	
+1389	cou1	c	ou	1	tsʰou44	tsʰ	ou	44	糙			1		tsʰou44	cou1	
+1390	cou4	c	ou	4	tsʰou52	tsʰ	ou	52	曹			1		tsʰou52	cou4	
+1391	cou4	c	ou	4	tsʰou52	tsʰ	ou	52	槽			1		tsʰou52	cou4	
+1392	cou2\5	c	ou	2\5	tsʰou31	tsʰ	ou	31	草			1		tsʰou31	cou2\5	
+1393	cou3	c	ou	3	tsʰou24	tsʰ	ou	24	醋			1		tsʰou24	cou3	
+1394	cou3	c	ou	3	tsʰou24	tsʰ	ou	24	措			1		tsʰou24	cou3	
+1395	cou3	c	ou	3	tsʰou24	tsʰ	ou	24	躁			1		tsʰou24	cou3	
+1396	sou2\5	s	ou	2\5	sou31	s	ou	31	数	动词		1		sou31	sou2\5	
+1397	sou3	s	ou	3	sou24	s	ou	24	数	名词		1		sou24	sou3	
+1398	ou2\5		ou	2\5	ou31	Ǿ	ou	31	袄			1		ou31	ou2\5	
+1399	ou3		ou	3	ou24	Ǿ	ou	24	懊			1		ou24	ou3	
+1400	ou3		ou	3	ou24	Ǿ	ou	24	奥			1		ou24	ou3	
+1401	peu4	p	eu	4	pʰiɛu52	pʰ	iɛu	52	嫖			1		pʰiɛu52	peu4	
+1402	meu3	m	eu	3	miɛu24	m	iɛu	24	猫			1		miɛu24	meu3	
+1403	deu1	d	eu	1	tiɛu44	t	iɛu	44	刁			1		tiɛu44	deu1	
+1404	teu2\5	t	eu	2\5	tʰiɛu31	tʰ	iɛu	31	□	倒出		1		tʰiɛu31	teu2\5	
+1405	neu2\5	n	eu	2\5	niɛu31	n	iɛu	31	鸟			1		niɛu31	neu2\5	
+1406	neu3	n	eu	3	niɛu24	n	iɛu	24	□	枯萎		1		niɛu24	neu3	
+1407	neu6	n	eu	6	niɛu54	n	iɛu	54	尿			1		niɛu54	neu6	
+1408	leu2\5	l	eu	2\5	liɛu31	l	iɛu	31	□	缠绕		1		liɛu31	leu2\5	
+1409	leu3	l	eu	3	liɛu24	l	iɛu	24	撩			1		liɛu24	leu3	
+1410	leu6	l	eu	6	liɛu54	l	iɛu	54	□	玩耍		1		liɛu54	leu6	
+1411	geu2\5	g	eu	2\5	kiɛu31	k	iɛu	31	九			1		kiɛu31	geu2\5	
+1412	geu2\5	g	eu	2\5	kiɛu31	k	iɛu	31	久			1		kiɛu31	geu2\5	
+1413	geu2\5	g	eu	2\5	kiɛu31	k	iɛu	31	韭			1		kiɛu31	geu2\5	
+1414	geu3	g	eu	3	kiɛu24	k	iɛu	24	救			1		kiɛu24	geu3	
+1415	geu3	g	eu	3	kiɛu24	k	iɛu	24	究			1		kiɛu24	geu3	
+1416	geu3	g	eu	3	kiɛu24	k	iɛu	24	灸			1		kiɛu24	geu3	
+1417	geu3	g	eu	3	kiɛu24	k	iɛu	24	咎			1		kiɛu24	geu3	
+1418	geu3	g	eu	3	kiɛu24	k	iɛu	24	疚			1		kiɛu24	geu3	
+1419	geu6	g	eu	6	kiɛu54	k	iɛu	54	旧			1		kiɛu54	geu6	
+1420	geu6	g	eu	6	kiɛu54	k	iɛu	54	舅			1		kiɛu54	geu6	
+1421	keu4	k	eu	4	kʰiɛu52	kʰ	iɛu	52	求			1		kʰiɛu52	keu4	
+1422	keu4	k	eu	4	kʰiɛu52	kʰ	iɛu	52	球			1		kʰiɛu52	keu4	
+1423	keu2\5	k	eu	2\5	kʰiɛu31	kʰ	iɛu	31	舅			1		kʰiɛu31	keu2\5	
+1424	heu1	h	eu	1	hiɛu44	h	iɛu	44	休			1		hiɛu44	heu1	
+1425	heu1	h	eu	1	hiɛu44	h	iɛu	44	丘			1		hiɛu44	heu1	
+1426	biu1	b	iu	1	piu44	p	iu	44	标			1		piu44	biu1	
+1427	biu1	b	iu	1	piu44	p	iu	44	彪			1		piu44	biu1	
+1428	biu1	b	iu	1	piu44	p	iu	44	表	手表		1		piu44	biu1	
+1429	biu2\5	b	iu	2\5	piu31	p	iu	31	表	表示		1		piu31	biu2\5	
+1430	biu2\5	b	iu	2\5	piu31	p	iu	31	裱			1		piu31	biu2\5	
+1431	biu2\5	b	iu	2\5	piu31	p	iu	31	婊			1		piu31	biu2\5	
+1432	piu1	p	iu	1	pʰiu44	pʰ	iu	44	飘			1		pʰiu44	piu1	
+1433	piu1	p	iu	1	pʰiu44	pʰ	iu	44	漂	漂泊		1		pʰiu44	piu1	
+1434	piu4	p	iu	4	pʰiu52	pʰ	iu	52	瓢			1		pʰiu52	piu4	
+1435	piu4	p	iu	4	pʰiu52	pʰ	iu	52	嫖			1		pʰiu52	piu4	
+1436	piu2\5	p	iu	2\5	pʰiu31	pʰ	iu	31	漂	漂白		1		pʰiu31	piu2\5	
+1437	piu3	p	iu	3	pʰiu24	pʰ	iu	24	票			1		pʰiu24	piu3	
+1438	piu3	p	iu	3	pʰiu24	pʰ	iu	24	漂	漂亮		1		pʰiu24	piu3	
+1439	miu4	m	iu	4	miu52	m	iu	52	苗			1		miu52	miu4	
+1440	miu4	m	iu	4	miu52	m	iu	52	描			1		miu52	miu4	
+1441	miu2\5	m	iu	2\5	miu31	m	iu	31	藐			1		miu31	miu2\5	
+1442	miu2\5	m	iu	2\5	miu31	m	iu	31	渺			1		miu31	miu2\5	
+1443	miu2\5	m	iu	2\5	miu31	m	iu	31	秒			1		miu31	miu2\5	
+1444	miu6	m	iu	6	miu54	m	iu	54	庙			1		miu54	miu6	
+1445	miu6	m	iu	6	miu54	m	iu	54	妙			1		miu54	miu6	
+1446	diu1	d	iu	1	tiu44	t	iu	44	刁			1		tiu44	diu1	
+1447	diu1	d	iu	1	tiu44	t	iu	44	貂			1		tiu44	diu1	
+1448	diu1	d	iu	1	tiu44	t	iu	44	雕			1		tiu44	diu1	
+1449	diu1	d	iu	1	tiu44	t	iu	44	丢			1		tiu44	diu1	
+1450	diu2\5	d	iu	2\5	tiu31	t	iu	31	屌			1		tiu31	diu2\5	
+1451	diu3	d	iu	3	tiu24	t	iu	24	钓			1		tiu24	diu3	
+1452	diu3	d	iu	3	tiu24	t	iu	24	吊			1		tiu24	diu3	
+1453	diu6	d	iu	6	tiu54	t	iu	54	掉			1		tiu54	diu6	
+1454	diu6	d	iu	6	tiu54	t	iu	54	调	音调		1		tiu54	diu6	
+1455	tiu1	t	iu	1	tʰiu44	tʰ	iu	44	挑			1		tʰiu44	tiu1	
+1456	tiu4	t	iu	4	tʰiu52	tʰ	iu	52	条			1		tʰiu52	tiu4	
+1457	tiu4	t	iu	4	tʰiu52	tʰ	iu	52	调	调查		1		tʰiu52	tiu4	
+1458	tiu3	t	iu	3	tʰiu24	tʰ	iu	24	跳			1		tʰiu24	tiu3	
+1459	liu4	l	iu	4	liu52	l	iu	52	燎			1		liu52	liu4	
+1460	liu4	l	iu	4	liu52	l	iu	52	撩			1		liu52	liu4	
+1461	liu4	l	iu	4	liu52	l	iu	52	疗			1		liu52	liu4	
+1462	liu4	l	iu	4	liu52	l	iu	52	聊			1		liu52	liu4	
+1463	liu4	l	iu	4	liu52	l	iu	52	辽			1		liu52	liu4	
+1464	liu4	l	iu	4	liu52	l	iu	52	寥			1		liu52	liu4	
+1465	liu2\5	l	iu	2\5	liu31	l	iu	31	燎	火烧火燎		1		liu31	liu2\5	
+1466	liu2\5	l	iu	2\5	liu31	l	iu	31	了			1		liu31	liu2\5	
+1467	liu6	l	iu	6	liu54	l	iu	54	料			1		liu54	liu6	
+1468	liu6	l	iu	6	liu54	l	iu	54	廖			1		liu54	liu6	
+1469	sliu1	sl	iu	1	ɬiu44	ɬ	iu	44	消			1		ɬiu44	sliu1	
+1470	sliu1	sl	iu	1	ɬiu44	ɬ	iu	44	宵			1		ɬiu44	sliu1	
+1471	sliu1	sl	iu	1	ɬiu44	ɬ	iu	44	霄			1		ɬiu44	sliu1	
+1472	sliu1	sl	iu	1	ɬiu44	ɬ	iu	44	硝			1		ɬiu44	sliu1	
+1473	sliu1	sl	iu	1	ɬiu44	ɬ	iu	44	销			1		ɬiu44	sliu1	
+1474	sliu1	sl	iu	1	ɬiu44	ɬ	iu	44	萧			1		ɬiu44	sliu1	
+1475	sliu1	sl	iu	1	ɬiu44	ɬ	iu	44	箫			1		ɬiu44	sliu1	
+1476	sliu2\5	sl	iu	2\5	ɬiu31	ɬ	iu	31	小			1		ɬiu31	sliu2\5	
+1477	sliu3	sl	iu	3	ɬiu24	ɬ	iu	24	笑			1		ɬiu24	sliu3	
+1478	giu1	g	iu	1	kiu44	k	iu	44	骄			1		kiu44	giu1	
+1479	giu1	g	iu	1	kiu44	k	iu	44	娇			1		kiu44	giu1	
+1480	giu2\5	g	iu	2\5	kiu31	k	iu	31	矫			1		kiu31	giu2\5	
+1481	giu2\5	g	iu	2\5	kiu31	k	iu	31	缴			1		kiu31	giu2\5	
+1482	giu3	g	iu	3	kiu24	k	iu	24	叫			1		kiu24	giu3	
+1483	giu6	g	iu	6	kiu54	k	iu	54	轿			1		kiu54	giu6	
+1484	kiu4	k	iu	4	kʰiu52	kʰ	iu	52	乔			1		kʰiu52	kiu4	
+1485	kiu4	k	iu	4	kʰiu52	kʰ	iu	52	侨			1		kʰiu52	kiu4	
+1486	kiu4	k	iu	4	kʰiu52	kʰ	iu	52	桥			1		kʰiu52	kiu4	
+1487	kiu2\5	k	iu	2\5	kʰiu31	kʰ	iu	31	韭			1		kʰiu31	kiu2\5	
+1488	kiu3	k	iu	3	kʰiu24	kʰ	iu	24	窍			1		kʰiu24	kiu3	
+1489	hiu1	h	iu	1	hiu44	h	iu	44	嚣			1		hiu44	hiu1	
+1490	hiu1	h	iu	1	hiu44	h	iu	44	侥			1		hiu44	hiu1	
+1491	hiu2\5	h	iu	2\5	hiu31	h	iu	31	晓			1		hiu31	hiu2\5	
+1492	ziu1	z	iu	1	tsiu44	ts	iu	44	焦			1		tsiu44	ziu1	
+1493	ziu1	z	iu	1	tsiu44	ts	iu	44	蕉			1		tsiu44	ziu1	
+1494	ziu1	z	iu	1	tsiu44	ts	iu	44	椒			1		tsiu44	ziu1	
+1495	ziu1	z	iu	1	tsiu44	ts	iu	44	醮			1		tsiu44	ziu1	
+1496	ziu1	z	iu	1	tsiu44	ts	iu	44	朝	今朝		1		tsiu44	ziu1	
+1497	ziu1	z	iu	1	tsiu44	ts	iu	44	昭			1		tsiu44	ziu1	
+1498	ziu1	z	iu	1	tsiu44	ts	iu	44	招			1		tsiu44	ziu1	
+1499	ziu2\5	z	iu	2\5	tsiu31	ts	iu	31	剿			1		tsiu31	ziu2\5	
+1500	ziu3	z	iu	3	tsiu24	ts	iu	24	照			1		tsiu24	ziu3	
+1501	ziu3	z	iu	3	tsiu24	ts	iu	24	诏			1		tsiu24	ziu3	
+1502	ziu6	z	iu	6	tsiu54	ts	iu	54	赵			1		tsiu54	ziu6	
+1503	ziu6	z	iu	6	tsiu54	ts	iu	54	兆			1		tsiu54	ziu6	
+1504	ziu6	z	iu	6	tsiu54	ts	iu	54	召			1		tsiu54	ziu6	
+1505	ciu1	c	iu	1	tsʰiu44	tsʰ	iu	44	超			1		tsʰiu44	ciu1	
+1506	ciu4	c	iu	4	tsʰiu52	tsʰ	iu	52	朝	朝代		1		tsʰiu52	ciu4	
+1507	ciu4	c	iu	4	tsʰiu52	tsʰ	iu	52	潮			1		tsʰiu52	ciu4	
+1508	ciu2\5	c	iu	2\5	tsʰiu31	tsʰ	iu	31	悄			1		tsʰiu31	ciu2\5	
+1509	ciu3	c	iu	3	tsʰiu24	tsʰ	iu	24	俏			1		tsʰiu24	ciu3	
+1510	ciu3	c	iu	3	tsʰiu24	tsʰ	iu	24	鞘			1		tsʰiu24	ciu3	
+1511	siu1	s	iu	1	siu44	s	iu	44	烧			1		siu44	siu1	
+1512	siu4	s	iu	4	siu52	s	iu	52	韶			1		siu52	siu4	
+1513	siu2\5	s	iu	2\5	siu31	s	iu	31	少	多少		1		siu31	siu2\5	
+1514	siu3	s	iu	3	siu24	s	iu	24	少	少年		1		siu24	siu3	
+1515	siu6	s	iu	6	siu54	s	iu	54	绍			1		siu54	siu6	
+1516	siu6	s	iu	6	siu54	s	iu	54	邵			1		siu54	siu6	
+1517	jiu1	j	iu	1	jiu44	j	iu	44	妖			1		jiu44	jiu1	
+1518	jiu1	j	iu	1	jiu44	j	iu	44	邀			1		jiu44	jiu1	
+1519	jiu1	j	iu	1	jiu44	j	iu	44	腰			1		jiu44	jiu1	
+1520	jiu1	j	iu	1	jiu44	j	iu	44	要	要求		1		jiu44	jiu1	
+1521	jiu1	j	iu	1	jiu44	j	iu	44	吆			1		jiu44	jiu1	
+1522	jiu4	j	iu	4	jiu52	j	iu	52	饶			1		jiu52	jiu4	
+1523	jiu4	j	iu	4	jiu52	j	iu	52	摇			1		jiu52	jiu4	
+1524	jiu4	j	iu	4	jiu52	j	iu	52	谣			1		jiu52	jiu4	
+1525	jiu4	j	iu	4	jiu52	j	iu	52	窑			1		jiu52	jiu4	
+1526	jiu4	j	iu	4	jiu52	j	iu	52	姚			1		jiu52	jiu4	
+1527	jiu4	j	iu	4	jiu52	j	iu	52	尧			1		jiu52	jiu4	
+1528	jiu2\5	j	iu	2\5	jiu31	j	iu	31	扰			1		jiu31	jiu2\5	
+1529	jiu2\5	j	iu	2\5	jiu31	j	iu	31	绕			1		jiu31	jiu2\5	
+1530	jiu2\5	j	iu	2\5	jiu31	j	iu	31	舀			1		jiu31	jiu2\5	
+1531	jiu2\5	j	iu	2\5	jiu31	j	iu	31	杳			1		jiu31	jiu2\5	
+1532	jiu3	j	iu	3	jiu24	j	iu	24	要	重要		1		jiu24	jiu3	
+1533	jiu6	j	iu	6	jiu54	j	iu	54	耀			1		jiu54	jiu6	
+1534	daam1	d	aam	1	tam44	t	am	44	耽			1		tam44	daam1	
+1535	daam1	d	aam	1	tam44	t	am	44	担	担任		1		tam44	daam1	
+1536	daam2\5	d	aam	2\5	tam31	t	am	31	胆			1		tam31	daam2\5	
+1537	daam3	d	aam	3	tam24	t	am	24	担	挑担		1		tam24	daam3	
+1538	daam6	d	aam	6	tam54	t	am	54	淡			1		tam54	daam6	
+1539	taam1	t	aam	1	tʰam44	tʰ	am	44	贪			1		tʰam44	taam1	
+1540	taam4	t	aam	4	tʰam52	tʰ	am	52	潭			1		tʰam52	taam4	
+1541	taam4	t	aam	4	tʰam52	tʰ	am	52	谭			1		tʰam52	taam4	
+1542	taam4	t	aam	4	tʰam52	tʰ	am	52	谈			1		tʰam52	taam4	
+1543	taam4	t	aam	4	tʰam52	tʰ	am	52	痰			1		tʰam52	taam4	
+1544	taam2\5	t	aam	2\5	tʰam31	tʰ	am	31	淡			1		tʰam31	taam2\5	
+1545	taam3	t	aam	3	tʰam24	tʰ	am	24	探			1		tʰam24	taam3	
+1546	naam4	n	aam	4	nam52	n	am	52	南			1		nam52	naam4	
+1547	naam4	n	aam	4	nam52	n	am	52	男			1		nam52	naam4	
+1548	naam2\5	n	aam	2\5	nam31	n	am	31	腩			1		nam31	naam2\5	
+1549	laam4	l	aam	4	lam52	l	am	52	蓝			1		lam52	laam4	
+1550	laam4	l	aam	4	lam52	l	am	52	篮			1		lam52	laam4	
+1551	laam2\5	l	aam	2\5	lam31	l	am	31	览			1		lam31	laam2\5	
+1552	laam2\5	l	aam	2\5	lam31	l	am	31	揽			1		lam31	laam2\5	
+1553	laam2\5	l	aam	2\5	lam31	l	am	31	榄			1		lam31	laam2\5	
+1554	laam6	l	aam	6	lam54	l	am	54	滥			1		lam54	laam6	
+1555	laam6	l	aam	6	lam54	l	am	54	缆			1		lam54	laam6	
+1556	slaam1	sl	aam	1	ɬam44	ɬ	am	44	三			1		ɬam44	slaam1	
+1557	gaam1	g	aam	1	kam44	k	am	44	尴			1		kam44	gaam1	
+1558	gaam1	g	aam	1	kam44	k	am	44	监	监视		1		kam44	gaam1	
+1559	gaam2\5	g	aam	2\5	kam31	k	am	31	减			1		kam31	gaam2\5	
+1560	gaam3	g	aam	3	kam24	k	am	24	监	太监		1		kam24	gaam3	
+1561	kaam2\5	k	aam	2\5	kʰam31	kʰ	am	31	槛			1		kʰam31	kaam2\5	
+1562	haam4	h	aam	4	ham52	h	am	52	咸			1		ham52	haam4	
+1563	haam4	h	aam	4	ham52	h	am	52	衔			1		ham52	haam4	
+1564	haam3	h	aam	3	ham24	h	am	24	喊			1		ham24	haam3	
+1565	zaam1	z	aam	1	tsam44	ts	am	44	簪			1		tsam44	zaam1	
+1566	zaam2\5	z	aam	2\5	tsam31	ts	am	31	斩			1		tsam31	zaam2\5	
+1567	zaam6	z	aam	6	tsam54	ts	am	54	暂			1		tsam54	zaam6	
+1568	zaam6	z	aam	6	tsam54	ts	am	54	站			1		tsam54	zaam6	
+1569	caam1	c	aam	1	tsʰam44	tsʰ	am	44	參			1		tsʰam44	caam1	
+1570	caam1	c	aam	1	tsʰam44	tsʰ	am	44	搀			1		tsʰam44	caam1	
+1571	caam1	c	aam	1	tsʰam44	tsʰ	am	44	杉			1		tsʰam44	caam1	
+1572	caam4	c	aam	4	tsʰam52	tsʰ	am	52	蚕			1		tsʰam52	caam4	
+1573	caam4	c	aam	4	tsʰam52	tsʰ	am	52	谗			1		tsʰam52	caam4	
+1574	caam4	c	aam	4	tsʰam52	tsʰ	am	52	馋			1		tsʰam52	caam4	
+1575	caam2\5	c	aam	2\5	tsʰam31	tsʰ	am	31	惨			1		tsʰam31	caam2\5	
+1576	saam1	s	aam	1	sam44	s	am	44	衫			1		sam44	saam1	
+1577	mam1	m	am	1	mɐm44	m	ɐm	44	□	水		1		mɐm44	mam1	
+1578	dam2\5	d	am	2\5	tɐm31	t	ɐm	31	□	蘸取		1		tɐm31	dam2\5	
+1579	dam2\5	d	am	2\5	tɐm31	t	ɐm	31	□	恰巧碰到		1		tɐm31	dam2\5	
+1580	dam3	d	am	3	tɐm24	t	ɐm	24	□	垂下		1		tɐm24	dam3	
+1581	tam2\5	t	am	2\5	tʰɐm31	tʰ	ɐm	31	凼			1		tʰɐm31	tam2\5	
+1582	tam3	t	am	3	tʰɐm24	tʰ	ɐm	24	□	哄		1		tʰɐm24	tam3	
+1583	nam2\5	n	am	2\5	nɐm31	n	ɐm	31	□	想		1		nɐm31	nam2\5	
+1584	nam3	n	am	3	nɐm24	n	ɐm	24	□	怀		1		nɐm24	nam3	
+1585	nam6	n	am	6	nɐm54	n	ɐm	54	□	潮湿的		1		nɐm54	nam6	
+1586	lam4	l	am	4	lɐm52	l	ɐm	52	林			1		lɐm52	lam4	
+1587	lam4	l	am	4	lɐm52	l	ɐm	52	淋			1		lɐm52	lam4	
+1588	lam4	l	am	4	lɐm52	l	ɐm	52	临			1		lɐm52	lam4	
+1589	lam3	l	am	3	lɐm24	l	ɐm	24	□	搭建		1		lɐm24	lam3	
+1590	lam6	l	am	6	lɐm54	l	ɐm	54	□	搭建		1		lɐm54	lam6	
+1591	slam1	sl	am	1	ɬɐm44	ɬ	ɐm	44	心			1		ɬɐm44	slam1	
+1592	gam1	g	am	1	kɐm44	k	ɐm	44	甘			1		kɐm44	gam1	
+1593	gam1	g	am	1	kɐm44	k	ɐm	44	柑			1		kɐm44	gam1	
+1594	gam2\5	g	am	2\5	kɐm31	k	ɐm	31	感			1		kɐm31	gam2\5	
+1595	gam2\5	g	am	2\5	kɐm31	k	ɐm	31	敢			1		kɐm31	gam2\5	
+1596	gam2\5	g	am	2\5	kɐm31	k	ɐm	31	橄			1		kɐm31	gam2\5	
+1597	gam6	g	am	6	kɐm54	k	ɐm	54	□	按下		1		kɐm54	gam6	
+1598	kam4	k	am	4	kʰɐm52	kʰ	ɐm	52	蟾			1		kʰɐm52	kam4	
+1599	kam4	k	am	4	kʰɐm52	kʰ	ɐm	52	禽			1		kʰɐm52	kam4	
+1600	ham1	h	am	1	hɐm44	h	ɐm	44	堪			1		hɐm44	ham1	
+1601	ham4	h	am	4	hɐm52	h	ɐm	52	含			1		hɐm52	ham4	
+1602	ham4	h	am	4	hɐm52	h	ɐm	52	函			1		hɐm52	ham4	
+1603	ham2\5	h	am	2\5	hɐm31	h	ɐm	31	砍			1		hɐm31	ham2\5	
+1604	ham3	h	am	3	hɐm24	h	ɐm	24	坎			1		hɐm24	ham3	
+1605	ham6	h	am	6	hɐm54	h	ɐm	54	撼			1		hɐm54	ham6	
+1606	ham6	h	am	6	hɐm54	h	ɐm	54	憾			1		hɐm54	ham6	
+1607	ngam4	ng	am	4	ŋɐm52	ŋ	ɐm	52	□	啰嗦		1		ŋɐm52	ngam4	
+1608	ngam6	ng	am	6	ŋɐm54	ŋ	ɐm	54	任			1		ŋɐm54	ngam6	
+1609	zam1	z	am	1	tsɐm44	ts	ɐm	44	针			1		tsɐm44	zam1	
+1610	zam1	z	am	1	tsɐm44	ts	ɐm	44	斟			1		tsɐm44	zam1	
+1611	zam2\5	z	am	2\5	tsɐm31	ts	ɐm	31	枕			1		tsɐm31	zam2\5	
+1612	zam3	z	am	3	tsɐm24	ts	ɐm	24	浸			1		tsɐm24	zam3	
+1613	cam1	c	am	1	tsʰɐm44	tsʰ	ɐm	44	侵			1		tsʰɐm44	cam1	
+1614	cam1	c	am	1	tsʰɐm44	tsʰ	ɐm	44	参	参差		1		tsʰɐm44	cam1	
+1615	cam4	c	am	4	tsʰɐm52	tsʰ	ɐm	52	寻			1		tsʰɐm52	cam4	
+1616	cam4	c	am	4	tsʰɐm52	tsʰ	ɐm	52	沉			1		tsʰɐm52	cam4	
+1617	cam2\5	c	am	2\5	tsʰɐm31	tsʰ	ɐm	31	寝			1		tsʰɐm31	cam2\5	
+1618	sam1	s	am	1	sɐm44	s	ɐm	44	森			1		sɐm44	sam1	
+1619	sam1	s	am	1	sɐm44	s	ɐm	44	参			1		sɐm44	sam1	
+1620	sam1	s	am	1	sɐm44	s	ɐm	44	深			1		sɐm44	sam1	
+1621	sam4	s	am	4	sɐm52	s	ɐm	52	岑			1		sɐm52	sam4	
+1622	sam2\5	s	am	2\5	sɐm31	s	ɐm	31	沈			1		sɐm31	sam2\5	
+1623	sam2\5	s	am	2\5	sɐm31	s	ɐm	31	审			1		sɐm31	sam2\5	
+1624	sam2\5	s	am	2\5	sɐm31	s	ɐm	31	婶			1		sɐm31	sam2\5	
+1625	sam6	s	am	6	sɐm54	s	ɐm	54	甚			1		sɐm54	sam6	
+1626	sam6	s	am	6	sɐm54	s	ɐm	54	渗			1		sɐm54	sam6	
+1627	jam1	j	am	1	jɐm44	j	ɐm	44	钦			1		jɐm44	jam1	
+1628	jam1	j	am	1	jɐm44	j	ɐm	44	音			1		jɐm44	jam1	
+1629	jam1	j	am	1	jɐm44	j	ɐm	44	阴			1		jɐm44	jam1	
+1630	jam1	j	am	1	jɐm44	j	ɐm	44	荫			1		jɐm44	jam1	
+1631	njam4	nj	am	4	ȵɐm52	ȵ	ɐm	52	吟			1		ȵɐm52	njam4	
+1632	njam4	nj	am	4	ȵɐm52	ȵ	ɐm	52	淫			1		ȵɐm52	njam4	
+1633	njam2\5	nj	am	2\5	ȵɐm31	ȵ	ɐm	31	饮			1		ȵɐm31	njam2\5	
+1634	njam6	nj	am	6	ȵɐm54	ȵ	ɐm	54	任			1		ȵɐm54	njam6	
+1635	am1		am	1	ɐm44	Ǿ	ɐm	44	庵			1		ɐm44	am1	
+1636	am2\5		am	2\5	ɐm31	Ǿ	ɐm	31	揞			1		ɐm31	am2\5	
+1637	am3		am	3	ɐm24	Ǿ	ɐm	24	暗			1		ɐm24	am3	
+1638	nem4	n	em	4	niɛm52	n	iɛm	52	黏			1		niɛm52	nem4	
+1639	nem4	n	em	4	niɛm52	n	iɛm	52	鲶			1		niɛm52	nem4	
+1640	lem2\5	l	em	2\5	liɛm31	l	iɛm	31	□	舔		1		liɛm31	lem2\5	
+1641	lem3	l	em	3	liɛm24	l	iɛm	24	□	半块		1		liɛm24	lem3	
+1642	gem1	g	em	1	kiɛm44	k	iɛm	44	今			1		kiɛm44	gem1	
+1643	gem1	g	em	1	kiɛm44	k	iɛm	44	金			1		kiɛm44	gem1	
+1644	gem2\5	g	em	2\5	kiɛm31	k	iɛm	31	锦			1		kiɛm31	gem2\5	
+1645	gem3	g	em	3	kiɛm24	k	iɛm	24	禁			1		kiɛm24	gem3	
+1646	gem6	g	em	6	kiɛm54	k	iɛm	54	□	压		1		kiɛm54	gem6	
+1647	kem1	k	em	1	kʰiɛm44	kʰ	iɛm	44	襟			1		kʰiɛm44	kem1	
+1648	kem4	k	em	4	kʰiɛm52	kʰ	iɛm	52	钳			1		kʰiɛm52	kem4	
+1649	kem4	k	em	4	kʰiɛm52	kʰ	iɛm	52	琴			1		kʰiɛm52	kem4	
+1650	kem2\5	k	em	2\5	kʰiɛm31	kʰ	iɛm	31	妗			1		kʰiɛm31	kem2\5	
+1651	hem1	h	em	1	hiɛm44	h	iɛm	44	鑫			1		hiɛm44	hem1	
+1652	dim1	d	im	1	tim44	t	im	44	掂	掂量		1		tim44	dim1	
+1653	dim2\5	d	im	2\5	tim31	t	im	31	点			1		tim31	dim2\5	
+1654	dim2\5	d	im	2\5	tim31	t	im	31	典			1		tim31	dim2\5	
+1655	dim3	d	im	3	tim24	t	im	24	店			1		tim24	dim3	
+1656	dim3	d	im	3	tim24	t	im	24	垫			1		tim24	dim3	
+1657	dim6	d	im	6	tim54	t	im	54	掂	搞掂		1		tim54	dim6	
+1658	tim1	t	im	1	tʰim44	tʰ	im	44	添			1		tʰim44	tim1	
+1659	tim4	t	im	4	tʰim52	tʰ	im	52	甜			1		tʰim52	tim4	
+1660	nim6	n	im	6	nim54	n	im	54	念			1		nim54	nim6	
+1661	nim6	n	im	6	nim54	n	im	54	验			1		nim54	nim6	
+1662	lim4	l	im	4	lim52	l	im	52	帘			1		lim52	lim4	
+1663	lim4	l	im	4	lim52	l	im	52	镰			1		lim52	lim4	
+1664	lim4	l	im	4	lim52	l	im	52	廉			1		lim52	lim4	
+1665	lim2\5	l	im	2\5	lim31	l	im	31	敛			1		lim31	lim2\5	
+1666	lim2\5	l	im	2\5	lim31	l	im	31	殓			1		lim31	lim2\5	
+1667	lim2\5	l	im	2\5	lim31	l	im	31	脸			1		lim31	lim2\5	
+1668	gim1	g	im	1	kim44	k	im	44	兼			1		kim44	gim1	
+1669	gim2\5	g	im	2\5	kim31	k	im	31	检			1		kim31	gim2\5	
+1670	gim2\5	g	im	2\5	kim31	k	im	31	俭			1		kim31	gim2\5	
+1671	gim3	g	im	3	kim24	k	im	24	剑			1		kim24	gim3	
+1672	him1	h	im	1	him44	h	im	44	谦			1		him44	him1	
+1673	him2\5	h	im	2\5	him31	h	im	31	险			1		him31	him2\5	
+1674	him3	h	im	3	him24	h	im	24	欠			1		him24	him3	
+1675	zim1	z	im	1	tsim44	ts	im	44	尖			1		tsim44	zim1	
+1676	zim1	z	im	1	tsim44	ts	im	44	沾			1		tsim44	zim1	
+1677	zim1	z	im	1	tsim44	ts	im	44	粘			1		tsim44	zim1	
+1678	zim1	z	im	1	tsim44	ts	im	44	瞻			1		tsim44	zim1	
+1679	zim1	z	im	1	tsim44	ts	im	44	占	占卜		1		tsim44	zim1	
+1680	zim1	z	im	1	tsim44	ts	im	44	詹			1		tsim44	zim1	
+1681	zim3	z	im	3	tsim24	ts	im	24	占	占据		1		tsim24	zim3	
+1682	zim6	z	im	6	tsim54	ts	im	54	渐			1		tsim54	zim6	
+1683	cim1	c	im	1	tsʰim44	tsʰ	im	44	签			1		tsʰim44	cim1	
+1684	sim4	s	im	4	sim52	s	im	52	蝉			1		sim52	sim4	
+1685	sim4	s	im	4	sim52	s	im	52	禅			1		sim52	sim4	
+1686	sim2\5	s	im	2\5	sim31	s	im	31	陕			1		sim31	sim2\5	
+1687	sim2\5	s	im	2\5	sim31	s	im	31	闪			1		sim31	sim2\5	
+1688	jim1	j	im	1	jim44	j	im	44	淹			1		jim44	jim1	
+1689	jim1	j	im	1	jim44	j	im	44	阉			1		jim44	jim1	
+1690	jim4	j	im	4	jim52	j	im	52	炎			1		jim52	jim4	
+1691	jim4	j	im	4	jim52	j	im	52	盐			1		jim52	jim4	
+1692	jim4	j	im	4	jim52	j	im	52	阎			1		jim52	jim4	
+1693	jim4	j	im	4	jim52	j	im	52	檐			1		jim52	jim4	
+1694	jim4	j	im	4	jim52	j	im	52	严			1		jim52	jim4	
+1695	jim4	j	im	4	jim52	j	im	52	嫌			1		jim52	jim4	
+1696	jim2\5	j	im	2\5	jim31	j	im	31	掩			1		jim31	jim2\5	
+1697	jim2\5	j	im	2\5	jim31	j	im	31	俨			1		jim31	jim2\5	
+1698	jim3	j	im	3	jim24	j	im	24	厌			1		jim24	jim3	
+1699	jim6	j	im	6	jim54	j	im	54	焰			1		jim54	jim6	
+1700	njim4	nj	im	4	ȵim52	ȵ	im	52	严			1		ȵim52	njim4	
+1701	njim2\5	nj	im	2\5	ȵim31	ȵ	im	31	染			1		ȵim31	njim2\5	
+1702	njim2\5	nj	im	2\5	ȵim31	ȵ	im	31	冉			1		ȵim31	njim2\5	
+1703	baan1	b	aan	1	pan44	p	an	44	班			1		pan44	baan1	
+1704	baan1	b	aan	1	pan44	p	an	44	斑			1		pan44	baan1	
+1705	baan1	b	aan	1	pan44	p	an	44	颁			1		pan44	baan1	
+1706	baan1	b	aan	1	pan44	p	an	44	扳			1		pan44	baan1	
+1707	baan2\5	b	aan	2\5	pan31	p	an	31	板			1		pan31	baan2\5	
+1708	baan2\5	b	aan	2\5	pan31	p	an	31	版			1		pan31	baan2\5	
+1709	baan6	b	aan	6	pan54	p	an	54	扮			1		pan54	baan6	
+1710	baan6	b	aan	6	pan54	p	an	54	办			1		pan54	baan6	
+1711	paan1	p	aan	1	pʰan44	pʰ	an	44	攀			1		pʰan44	paan1	
+1712	paan3	p	aan	3	pʰan24	pʰ	an	24	盼			1		pʰan24	paan3	
+1713	maan4	m	aan	4	man52	m	an	52	蛮			1		man52	maan4	
+1714	maan2\5	m	aan	2\5	man31	m	an	31	晚			1		man31	maan2\5	
+1715	maan6	m	aan	6	man54	m	an	54	慢			1		man54	maan6	
+1716	maan6	m	aan	6	man54	m	an	54	万			1		man54	maan6	
+1717	maan6	m	aan	6	man54	m	an	54	蔓			1		man54	maan6	
+1718	maan6	m	aan	6	man54	m	an	54	漫			1		man54	maan6	
+1719	maan6	m	aan	6	man54	m	an	54	幔			1		man54	maan6	
+1720	maan6	m	aan	6	man54	m	an	54	馒			1		man54	maan6	
+1721	faan1	f	aan	1	fan44	f	an	44	藩			1		fan44	faan1	
+1722	faan1	f	aan	1	fan44	f	an	44	翻			1		fan44	faan1	
+1723	faan1	f	aan	1	fan44	f	an	44	番			1		fan44	faan1	
+1724	faan1	f	aan	1	fan44	f	an	44	帆			1		fan44	faan1	
+1725	faan4	f	aan	4	fan52	f	an	52	凡			1		fan52	faan4	
+1726	faan4	f	aan	4	fan52	f	an	52	烦			1		fan52	faan4	
+1727	faan4	f	aan	4	fan52	f	an	52	矾			1		fan52	faan4	
+1728	faan4	f	aan	4	fan52	f	an	52	繁			1		fan52	faan4	
+1729	faan2\5	f	aan	2\5	fan31	f	an	31	反			1		fan31	faan2\5	
+1730	faan2\5	f	aan	2\5	fan31	f	an	31	返			1		fan31	faan2\5	
+1731	faan3	f	aan	3	fan24	f	an	24	瓣			1		fan24	faan3	
+1732	faan3	f	aan	3	fan24	f	an	24	贩			1		fan24	faan3	
+1733	faan6	f	aan	6	fan54	f	an	54	范			1		fan54	faan6	
+1734	faan6	f	aan	6	fan54	f	an	54	犯			1		fan54	faan6	
+1735	faan6	f	aan	6	fan54	f	an	54	饭			1		fan54	faan6	
+1736	faan6	f	aan	6	fan54	f	an	54	贩			1		fan54	faan6	
+1737	waan1	w	aan	1	wan44	w	an	44	弯			1		wan44	waan1	
+1738	waan1	w	aan	1	wan44	w	an	44	湾			1		wan44	waan1	
+1739	waan4	w	aan	4	wan52	w	an	52	还			1		wan52	waan4	
+1740	waan4	w	aan	4	wan52	w	an	52	环			1		wan52	waan4	
+1741	waan4	w	aan	4	wan52	w	an	52	顽			1		wan52	waan4	
+1742	waan2\5	w	aan	2\5	wan31	w	an	31	挽			1		wan31	waan2\5	
+1743	waan6	w	aan	6	wan54	w	an	54	患			1		wan54	waan6	
+1744	waan6	w	aan	6	wan54	w	an	54	宦			1		wan54	waan6	
+1745	waan6	w	aan	6	wan54	w	an	54	幻			1		wan54	waan6	
+1746	daan1	d	aan	1	tan44	t	an	44	丹			1		tan44	daan1	
+1747	daan1	d	aan	1	tan44	t	an	44	单			1		tan44	daan1	
+1748	daan1	d	aan	1	tan44	t	an	44	滩			1		tan44	daan1	
+1749	daan1	d	aan	1	tan44	t	an	44	摊			1		tan44	daan1	
+1750	daan3	d	aan	3	tan24	t	an	24	诞			1		tan24	daan3	
+1751	daan3	d	aan	3	tan24	t	an	24	旦			1		tan24	daan3	
+1752	daan6	d	aan	6	tan54	t	an	54	但			1		tan54	daan6	
+1753	daan6	d	aan	6	tan54	t	an	54	弹	子弹		1		tan54	daan6	
+1754	daan6	d	aan	6	tan54	t	an	54	蛋			1		tan54	daan6	
+1755	taan1	t	aan	1	tʰan44	tʰ	an	44	滩			1		tʰan44	taan1	
+1756	taan1	t	aan	1	tʰan44	tʰ	an	44	摊			1		tʰan44	taan1	
+1757	taan4	t	aan	4	tʰan52	tʰ	an	52	檀			1		tʰan52	taan4	
+1758	taan4	t	aan	4	tʰan52	tʰ	an	52	坛			1		tʰan52	taan4	
+1759	taan4	t	aan	4	tʰan52	tʰ	an	52	弹			1		tʰan52	taan4	
+1760	taan2\5	t	aan	2\5	tʰan31	tʰ	an	31	毯			1		tʰan31	taan2\5	
+1761	taan2\5	t	aan	2\5	tʰan31	tʰ	an	31	坦			1		tʰan31	taan2\5	
+1762	taan3	t	aan	3	tʰan24	tʰ	an	24	炭			1		tʰan24	taan3	
+1763	taan3	t	aan	3	tʰan24	tʰ	an	24	叹			1		tʰan24	taan3	
+1764	naan4	n	aan	4	nan52	n	an	52	难	困难		1		nan52	naan4	
+1765	naan6	n	aan	6	nan54	n	an	54	难	灾难		1		nan54	naan6	
+1766	laan1	l	aan	1	lan44	l	an	44	栏	（又）		1		lan44	laan1	
+1767	laan4	l	aan	4	lan52	l	an	52	兰			1		lan52	laan4	
+1768	laan4	l	aan	4	lan52	l	an	52	拦			1		lan52	laan4	
+1769	laan4	l	aan	4	lan52	l	an	52	栏			1		lan52	laan4	
+1770	laan2\5	l	aan	2\5	lan31	l	an	31	懒			1		lan31	laan2\5	
+1771	laan6	l	aan	6	lan54	l	an	54	烂			1		lan54	laan6	
+1772	slaan2\5	sl	aan	2\5	ɬan31	ɬ	an	31	散	散仙		1		ɬan31	slaan2\5	
+1773	slaan2\5	sl	aan	2\5	ɬan31	ɬ	an	31	伞			1		ɬan31	slaan2\5	
+1774	slaan3	sl	aan	3	ɬan24	ɬ	an	24	散	分散		1		ɬan24	slaan3	
+1775	gaan1	g	aan	1	kan44	k	an	44	艰			1		kan44	gaan1	
+1776	gaan1	g	aan	1	kan44	k	an	44	间	中间		1		kan44	gaan1	
+1777	gaan1	g	aan	1	kan44	k	an	44	奸			1		kan44	gaan1	
+1778	gaan1	g	aan	1	kan44	k	an	44	关			1		kan44	gaan1	
+1779	gaan2\5	g	aan	2\5	kan31	k	an	31	简			1		kan31	gaan2\5	
+1780	gaan2\5	g	aan	2\5	kan31	k	an	31	柬			1		kan31	gaan2\5	
+1781	gaan2\5	g	aan	2\5	kan31	k	an	31	拣			1		kan31	gaan2\5	
+1782	gaan2\5	g	aan	2\5	kan31	k	an	31	茧			1		kan31	gaan2\5	
+1783	gaan2\5	g	aan	2\5	kan31	k	an	31	碱			1		kan31	gaan2\5	
+1784	gaan3	g	aan	3	kan24	k	an	24	间	间断		1		kan24	gaan3	
+1785	gaan3	g	aan	3	kan24	k	an	24	谏			1		kan24	gaan3	
+1786	gaan3	g	aan	3	kan24	k	an	24	涧			1		kan24	gaan3	
+1787	gaan3	g	aan	3	kan24	k	an	24	惯			1		kan24	gaan3	
+1788	haan1	h	aan	1	han44	h	an	44	悭			1		han44	haan1	
+1789	haan4	h	aan	4	han52	h	an	52	闲			1		han52	haan4	
+1790	haan6	h	aan	6	han54	h	an	54	限			1		han54	haan6	
+1791	ngaan4	ng	aan	4	ŋan52	ŋ	an	52	颜			1		ŋan52	ngaan4	
+1792	ngaan2\5	ng	aan	2\5	ŋan31	ŋ	an	31	眼			1		ŋan31	ngaan2\5	
+1793	ngaan6	ng	aan	6	ŋan54	ŋ	an	54	雁			1		ŋan54	ngaan6	
+1794	zaan2\5	z	aan	2\5	tsan31	ts	an	31	盏			1		tsan31	zaan2\5	
+1795	zaan3	z	aan	3	tsan24	ts	an	24	赞			1		tsan24	zaan3	
+1796	zaan6	z	aan	6	tsan54	ts	an	54	绽			1		tsan54	zaan6	
+1797	zaan6	z	aan	6	tsan54	ts	an	54	栈			1		tsan54	zaan6	
+1798	zaan6	z	aan	6	tsan54	ts	an	54	撰			1		tsan54	zaan6	
+1799	caan1	c	aan	1	tsʰan44	tsʰ	an	44	餐			1		tsʰan44	caan1	
+1800	caan4	c	aan	4	tsʰan52	tsʰ	an	52	残			1		tsʰan52	caan4	
+1801	caan2\5	c	aan	2\5	tsʰan31	tsʰ	an	31	铲			1		tsʰan31	caan2\5	
+1802	caan2\5	c	aan	2\5	tsʰan31	tsʰ	an	31	产			1		tsʰan31	caan2\5	
+1803	caan3	c	aan	3	tsʰan24	tsʰ	an	24	灿			1		tsʰan24	caan3	
+1804	caan3	c	aan	3	tsʰan24	tsʰ	an	24	颤			1		tsʰan24	caan3	
+1805	saan1	s	aan	1	san44	s	an	44	珊			1		san44	saan1	
+1806	saan1	s	aan	1	san44	s	an	44	山			1		san44	saan1	
+1807	saan1	s	aan	1	san44	s	an	44	删			1		san44	saan1	
+1808	saan4	s	aan	4	san52	s	an	52	潺			1		san52	saan4	
+1809	saan3	s	aan	3	san24	s	an	24	汕			1		san24	saan3	
+1810	aan3		aan	3	an24	Ǿ	an	24	晏			1		an24	aan3	
+1811	ban1	b	an	1	pɐn44	p	ɐn	44	彬			1		pɐn44	ban1	
+1812	ban1	b	an	1	pɐn44	p	ɐn	44	宾			1		pɐn44	ban1	
+1813	ban1	b	an	1	pɐn44	p	ɐn	44	槟			1		pɐn44	ban1	
+1814	ban1	b	an	1	pɐn44	p	ɐn	44	奔			1		pɐn44	ban1	
+1815	ban2\5	b	an	2\5	pɐn31	p	ɐn	31	品			1		pɐn31	ban2\5	
+1816	ban2\5	b	an	2\5	pɐn31	p	ɐn	31	禀			1		pɐn31	ban2\5	
+1817	ban3	b	an	3	pɐn24	p	ɐn	24	殡			1		pɐn24	ban3	
+1818	ban3	b	an	3	pɐn24	p	ɐn	24	鬓			1		pɐn24	ban3	
+1819	ban6	b	an	6	pɐn54	p	ɐn	54	笨			1		pɐn54	ban6	
+1820	pan4	p	an	4	pʰɐn52	pʰ	ɐn	52	贫			1		pʰɐn52	pan4	
+1821	pan4	p	an	4	pʰɐn52	pʰ	ɐn	52	频			1		pʰɐn52	pan4	
+1822	pan3	p	an	3	pʰɐn24	pʰ	ɐn	24	喷			1		pʰɐn24	pan3	
+1823	man1	m	an	1	mɐn44	m	ɐn	44	焖			1		mɐn44	man1	
+1824	man4	m	an	4	mɐn52	m	ɐn	52	民			1		mɐn52	man4	
+1825	man4	m	an	4	mɐn52	m	ɐn	52	文			1		mɐn52	man4	
+1826	man4	m	an	4	mɐn52	m	ɐn	52	纹			1		mɐn52	man4	
+1827	man4	m	an	4	mɐn52	m	ɐn	52	闻			1		mɐn52	man4	
+1828	man4	m	an	4	mɐn52	m	ɐn	52	蚊			1		mɐn52	man4	
+1829	man2\5	m	an	2\5	mɐn31	m	ɐn	31	敏			1		mɐn31	man2\5	
+1830	man2\5	m	an	2\5	mɐn31	m	ɐn	31	吻			1		mɐn31	man2\5	
+1831	man2\5	m	an	2\5	mɐn31	m	ɐn	31	刎			1		mɐn31	man2\5	
+1832	man3	m	an	3	mɐn24	m	ɐn	24	□	一元		1		mɐn24	man3	
+1833	man6	m	an	6	mɐn54	m	ɐn	54	问			1		mɐn54	man6	
+1834	fan1	f	an	1	fɐn44	f	ɐn	44	昏			1		fɐn44	fan1	
+1835	fan1	f	an	1	fɐn44	f	ɐn	44	婚			1		fɐn44	fan1	
+1836	fan1	f	an	1	fɐn44	f	ɐn	44	分			1		fɐn44	fan1	
+1837	fan1	f	an	1	fɐn44	f	ɐn	44	芬			1		fɐn44	fan1	
+1838	fan1	f	an	1	fɐn44	f	ɐn	44	纷			1		fɐn44	fan1	
+1839	fan1	f	an	1	fɐn44	f	ɐn	44	熏			1		fɐn44	fan1	
+1840	fan1	f	an	1	fɐn44	f	ɐn	44	勋			1		fɐn44	fan1	
+1841	fan1	f	an	1	fɐn44	f	ɐn	44	薰			1		fɐn44	fan1	
+1842	fan1	f	an	1	fɐn44	f	ɐn	44	荤			1		fɐn44	fan1	
+1843	fan4	f	an	4	fɐn52	f	ɐn	52	焚			1		fɐn52	fan4	
+1844	fan4	f	an	4	fɐn52	f	ɐn	52	坟			1		fɐn52	fan4	
+1845	fan2\5	f	an	2\5	fɐn31	f	ɐn	31	粉			1		fɐn31	fan2\5	
+1846	fan2\5	f	an	2\5	fɐn31	f	ɐn	31	愤			1		fɐn31	fan2\5	
+1847	fan2\5	f	an	2\5	fɐn31	f	ɐn	31	粪			1		fɐn31	fan2\5	
+1848	fan2\5	f	an	2\5	fɐn31	f	ɐn	31	奋			1		fɐn31	fan2\5	
+1849	fan3	f	an	3	fɐn24	f	ɐn	24	训			1		fɐn24	fan3	
+1850	fan6	f	an	6	fɐn54	f	ɐn	54	忿			1		fɐn54	fan6	
+1851	fan6	f	an	6	fɐn54	f	ɐn	54	份			1		fɐn54	fan6	
+1852	wan1	w	an	1	wɐn44	w	ɐn	44	温			1		wɐn44	wan1	
+1853	wan1	w	an	1	wɐn44	w	ɐn	44	瘟			1		wɐn44	wan1	
+1854	wan4	w	an	4	wɐn52	w	ɐn	52	魂			1		wɐn52	wan4	
+1855	wan4	w	an	4	wɐn52	w	ɐn	52	馄			1		wɐn52	wan4	
+1856	wan4	w	an	4	wɐn52	w	ɐn	52	浑			1		wɐn52	wan4	
+1857	wan4	w	an	4	wɐn52	w	ɐn	52	匀			1		wɐn52	wan4	
+1858	wan4	w	an	4	wɐn52	w	ɐn	52	云			1		wɐn52	wan4	
+1859	wan4	w	an	4	wɐn52	w	ɐn	52	晕			1		wɐn52	wan4	
+1860	wan2\5	w	an	2\5	wɐn31	w	ɐn	31	稳			1		wɐn31	wan2\5	
+1861	wan2\5	w	an	2\5	wɐn31	w	ɐn	31	允			1		wɐn31	wan2\5	
+1862	wan2\5	w	an	2\5	wɐn31	w	ɐn	31	尹			1		wɐn31	wan2\5	
+1863	wan3	w	an	3	wɐn24	w	ɐn	24	□	困住		1		wɐn24	wan3	
+1864	wan6	w	an	6	wɐn54	w	ɐn	54	混			1		wɐn54	wan6	
+1865	wan6	w	an	6	wɐn54	w	ɐn	54	韵			1		wɐn54	wan6	
+1866	wan6	w	an	6	wɐn54	w	ɐn	54	运			1		wɐn54	wan6	
+1867	dan1	d	an	1	tɐn44	t	ɐn	44	敦			1		tɐn44	dan1	
+1868	dan1	d	an	1	tɐn44	t	ɐn	44	墩			1		tɐn44	dan1	
+1869	dan6	d	an	6	tɐn54	t	ɐn	54	□	颠簸		1		tɐn54	dan6	
+1870	dan6	d	an	6	tɐn54	t	ɐn	54	顿			1		tɐn54	dan6	
+1871	dan6	d	an	6	tɐn54	t	ɐn	54	遁			1		tɐn54	dan6	
+1872	tan1	t	an	1	tʰɐn44	tʰ	ɐn	44	吞			1		tʰɐn44	tan1	
+1873	tan1	t	an	1	tʰɐn44	tʰ	ɐn	44	饨			1		tʰɐn44	tan1	
+1874	tan4	t	an	4	tʰɐn52	tʰ	ɐn	52	屯			1		tʰɐn52	tan4	
+1875	tan4	t	an	4	tʰɐn52	tʰ	ɐn	52	臀			1		tʰɐn52	tan4	
+1876	tan2\5	t	an	2\5	tʰɐn31	tʰ	ɐn	31	盾			1		tʰɐn31	tan2\5	
+1877	tan2\5	t	an	2\5	tʰɐn31	tʰ	ɐn	31	钝			1		tʰɐn31	tan2\5	
+1878	tan3	t	an	3	tʰɐn24	tʰ	ɐn	24	□	脱		1		tʰɐn24	tan3	
+1879	lan4	l	an	4	lɐn52	l	ɐn	52	邻			1		lɐn52	lan4	
+1880	lan4	l	an	4	lɐn52	l	ɐn	52	鳞			1		lɐn52	lan4	
+1881	lan4	l	an	4	lɐn52	l	ɐn	52	论	论语		1		lɐn52	lan4	
+1882	lan4	l	an	4	lɐn52	l	ɐn	52	仑			1		lɐn52	lan4	
+1883	lan4	l	an	4	lɐn52	l	ɐn	52	伦			1		lɐn52	lan4	
+1884	lan4	l	an	4	lɐn52	l	ɐn	52	轮			1		lɐn52	lan4	
+1885	lan3	l	an	3	lɐn24	l	ɐn	24	□	念叨		1		lɐn24	lan3	
+1886	lan6	l	an	6	lɐn54	l	ɐn	54	论	议论		1		lɐn54	lan6	
+1887	slan1	sl	an	1	ɬɐn44	ɬ	ɐn	44	辛			1		ɬɐn44	slan1	
+1888	slan1	sl	an	1	ɬɐn44	ɬ	ɐn	44	新			1		ɬɐn44	slan1	
+1889	slan1	sl	an	1	ɬɐn44	ɬ	ɐn	44	薪			1		ɬɐn44	slan1	
+1890	slan2\5	sl	an	2\5	ɬɐn31	ɬ	ɐn	31	笋			1		ɬɐn31	slan2\5	
+1891	slan2\5	sl	an	2\5	ɬɐn31	ɬ	ɐn	31	榫			1		ɬɐn31	slan2\5	
+1892	slan3	sl	an	3	ɬɐn24	ɬ	ɐn	24	信			1		ɬɐn24	slan3	
+1893	slan3	sl	an	3	ɬɐn24	ɬ	ɐn	24	讯			1		ɬɐn24	slan3	
+1894	slan3	sl	an	3	ɬɐn24	ɬ	ɐn	24	迅			1		ɬɐn24	slan3	
+1895	slan3	sl	an	3	ɬɐn24	ɬ	ɐn	24	殉			1		ɬɐn24	slan3	
+1896	slan3	sl	an	3	ɬɐn24	ɬ	ɐn	24	逊			1		ɬɐn24	slan3	
+1897	gan1	g	an	1	kɐn44	k	ɐn	44	跟			1		kɐn44	gan1	
+1898	gan1	g	an	1	kɐn44	k	ɐn	44	根			1		kɐn44	gan1	
+1899	gan1	g	an	1	kɐn44	k	ɐn	44	巾			1		kɐn44	gan1	
+1900	gan1	g	an	1	kɐn44	k	ɐn	44	斤			1		kɐn44	gan1	
+1901	gan1	g	an	1	kɐn44	k	ɐn	44	筋			1		kɐn44	gan1	
+1902	gan1	g	an	1	kɐn44	k	ɐn	44	君			1		kɐn44	gan1	
+1903	gan1	g	an	1	kɐn44	k	ɐn	44	军			1		kɐn44	gan1	
+1904	gan2\5	g	an	2\5	kɐn31	k	ɐn	31	紧			1		kɐn31	gan2\5	
+1905	gan2\5	g	an	2\5	kɐn31	k	ɐn	31	仅			1		kɐn31	gan2\5	
+1906	gan2\5	g	an	2\5	kɐn31	k	ɐn	31	谨			1		kɐn31	gan2\5	
+1907	gan2\5	g	an	2\5	kɐn31	k	ɐn	31	滚			1		kɐn31	gan2\5	
+1908	gan3	g	an	3	kɐn24	k	ɐn	24	棍			1		kɐn24	gan3	
+1909	gan6	g	an	6	kɐn54	k	ɐn	54	近			1		kɐn54	gan6	
+1910	gan6	g	an	6	kɐn54	k	ɐn	54	郡			1		kɐn54	gan6	
+1911	kan1	k	an	1	kʰɐn44	kʰ	ɐn	44	昆			1		kʰɐn44	kan1	
+1912	kan1	k	an	1	kʰɐn44	kʰ	ɐn	44	坤			1		kʰɐn44	kan1	
+1913	kan1	k	an	1	kʰɐn44	kʰ	ɐn	44	均			1		kʰɐn44	kan1	
+1914	kan1	k	an	1	kʰɐn44	kʰ	ɐn	44	钧			1		kʰɐn44	kan1	
+1915	kan4	k	an	4	kʰɐn52	kʰ	ɐn	52	勤			1		kʰɐn52	kan4	
+1916	kan4	k	an	4	kʰɐn52	kʰ	ɐn	52	芹			1		kʰɐn52	kan4	
+1917	kan4	k	an	4	kʰɐn52	kʰ	ɐn	52	群			1		kʰɐn52	kan4	
+1918	kan4	k	an	4	kʰɐn52	kʰ	ɐn	52	裙			1		kʰɐn52	kan4	
+1919	kan2\5	k	an	2\5	kʰɐn31	kʰ	ɐn	31	近			1		kʰɐn31	kan2\5	
+1920	kan2\5	k	an	2\5	kʰɐn31	kʰ	ɐn	31	捆			1		kʰɐn31	kan2\5	
+1921	kan2\5	k	an	2\5	kʰɐn31	kʰ	ɐn	31	菌			1		kʰɐn31	kan2\5	
+1922	kan3	k	an	3	kʰɐn24	kʰ	ɐn	24	困			1		kʰɐn24	kan3	
+1923	han4	h	an	4	hɐn52	h	ɐn	52	痕			1		hɐn52	han4	
+1924	han2\5	h	an	2\5	hɐn31	h	ɐn	31	恳			1		hɐn31	han2\5	
+1925	han2\5	h	an	2\5	hɐn31	h	ɐn	31	垦			1		hɐn31	han2\5	
+1926	han2\5	h	an	2\5	hɐn31	h	ɐn	31	很			1		hɐn31	han2\5	
+1927	han6	h	an	6	hɐn54	h	ɐn	54	恨			1		hɐn54	han6	
+1928	ngan4	ng	an	4	ŋɐn52	ŋ	ɐn	52	龈			1		ŋɐn52	ngan4	
+1929	ngan4	ng	an	4	ŋɐn52	ŋ	ɐn	52	银			1		ŋɐn52	ngan4	
+1930	zan1	z	an	1	tsɐn44	ts	ɐn	44	津			1		tsɐn44	zan1	
+1931	zan1	z	an	1	tsɐn44	ts	ɐn	44	珍			1		tsɐn44	zan1	
+1932	zan1	z	an	1	tsɐn44	ts	ɐn	44	榛			1		tsɐn44	zan1	
+1933	zan1	z	an	1	tsɐn44	ts	ɐn	44	臻			1		tsɐn44	zan1	
+1934	zan1	z	an	1	tsɐn44	ts	ɐn	44	真			1		tsɐn44	zan1	
+1935	zan2\5	z	an	2\5	tsɐn31	ts	ɐn	31	準			1		tsɐn31	zan2\5	
+1936	zan2\5	z	an	2\5	tsɐn31	ts	ɐn	31	准			1		tsɐn31	zan2\5	
+1937	zan3	z	an	3	tsɐn24	ts	ɐn	24	进			1		tsɐn24	zan3	
+1938	zan3	z	an	3	tsɐn24	ts	ɐn	24	晋			1		tsɐn24	zan3	
+1939	zan3	z	an	3	tsɐn24	ts	ɐn	24	镇			1		tsɐn24	zan3	
+1940	zan3	z	an	3	tsɐn24	ts	ɐn	24	振			1		tsɐn24	zan3	
+1941	zan3	z	an	3	tsɐn24	ts	ɐn	24	震			1		tsɐn24	zan3	
+1942	zan3	z	an	3	tsɐn24	ts	ɐn	24	俊			1		tsɐn24	zan3	
+1943	zan6	z	an	6	tsɐn54	ts	ɐn	54	尽			1		tsɐn54	zan6	
+1944	zan6	z	an	6	tsɐn54	ts	ɐn	54	阵			1		tsɐn54	zan6	
+1945	can1	c	an	1	tsʰɐn44	tsʰ	ɐn	44	亲			1		tsʰɐn44	can1	
+1946	can1	c	an	1	tsʰɐn44	tsʰ	ɐn	44	春			1		tsʰɐn44	can1	
+1947	can4	c	an	4	tsʰɐn52	tsʰ	ɐn	52	秦			1		tsʰɐn52	can4	
+1948	can4	c	an	4	tsʰɐn52	tsʰ	ɐn	52	榛			1		tsʰɐn52	can4	
+1949	can4	c	an	4	tsʰɐn52	tsʰ	ɐn	52	臻			1		tsʰɐn52	can4	
+1950	can4	c	an	4	tsʰɐn52	tsʰ	ɐn	52	旬			1		tsʰɐn52	can4	
+1951	can4	c	an	4	tsʰɐn52	tsʰ	ɐn	52	循			1		tsʰɐn52	can4	
+1952	can4	c	an	4	tsʰɐn52	tsʰ	ɐn	52	巡			1		tsʰɐn52	can4	
+1953	can2\5	c	an	2\5	tsʰɐn31	tsʰ	ɐn	31	诊			1		tsʰɐn31	can2\5	
+1954	can2\5	c	an	2\5	tsʰɐn31	tsʰ	ɐn	31	疹			1		tsʰɐn31	can2\5	
+1955	can2\5	c	an	2\5	tsʰɐn31	tsʰ	ɐn	31	蠢			1		tsʰɐn31	can2\5	
+1956	can3	c	an	3	tsʰɐn24	tsʰ	ɐn	24	趁			1		tsʰɐn24	can3	
+1957	can3	c	an	3	tsʰɐn24	tsʰ	ɐn	24	衬			1		tsʰɐn24	can3	
+1958	san1	s	an	1	sɐn44	s	ɐn	44	身			1		sɐn44	san1	
+1959	san1	s	an	1	sɐn44	s	ɐn	44	申			1		sɐn44	san1	
+1960	san1	s	an	1	sɐn44	s	ɐn	44	伸			1		sɐn44	san1	
+1961	san1	s	an	1	sɐn44	s	ɐn	44	娠			1		sɐn44	san1	
+1962	san4	s	an	4	sɐn52	s	ɐn	52	神			1		sɐn52	san4	
+1963	san4	s	an	4	sɐn52	s	ɐn	52	辰			1		sɐn52	san4	
+1964	san4	s	an	4	sɐn52	s	ɐn	52	晨			1		sɐn52	san4	
+1965	san4	s	an	4	sɐn52	s	ɐn	52	臣			1		sɐn52	san4	
+1966	san4	s	an	4	sɐn52	s	ɐn	52	唇			1		sɐn52	san4	
+1967	san4	s	an	4	sɐn52	s	ɐn	52	纯			1		sɐn52	san4	
+1968	san2\5	s	an	2\5	sɐn31	s	ɐn	31	肾			1		sɐn31	san2\5	
+1969	san3	s	an	3	sɐn24	s	ɐn	24	舜			1		sɐn24	san3	
+1970	san6	s	an	6	sɐn54	s	ɐn	54	顺			1		sɐn54	san6	
+1971	san6	s	an	6	sɐn54	s	ɐn	54	慎			1		sɐn54	san6	
+1972	jan1	j	an	1	jɐn44	j	ɐn	44	恩			1		jɐn44	jan1	
+1973	jan1	j	an	1	jɐn44	j	ɐn	44	因			1		jɐn44	jan1	
+1974	jan1	j	an	1	jɐn44	j	ɐn	44	欣			1		jɐn44	jan1	
+1975	jan1	j	an	1	jɐn44	j	ɐn	44	殷			1		jɐn44	jan1	
+1976	jan3	j	an	3	jɐn24	j	ɐn	24	印			1		jɐn24	jan3	
+1977	njan4	nj	an	4	ȵɐn52	ȵ	ɐn	52	人			1		ȵɐn52	njan4	
+1978	njan4	nj	an	4	ȵɐn52	ȵ	ɐn	52	仁			1		ȵɐn52	njan4	
+1979	njan4	nj	an	4	ȵɐn52	ȵ	ɐn	52	寅			1		ȵɐn52	njan4	
+1980	njan2\5	nj	an	2\5	ȵɐn31	ȵ	ɐn	31	忍			1		ȵɐn31	njan2\5	
+1981	njan2\5	nj	an	2\5	ȵɐn31	ȵ	ɐn	31	引			1		ȵɐn31	njan2\5	
+1982	njan2\5	nj	an	2\5	ȵɐn31	ȵ	ɐn	31	隐			1		ȵɐn31	njan2\5	
+1983	njan3	nj	an	3	ȵɐn24	ȵ	ɐn	24	□	抖		1		ȵɐn24	njan3	
+1984	njan6	nj	an	6	ȵɐn54	ȵ	ɐn	54	刃			1		ȵɐn54	njan6	
+1985	njan6	nj	an	6	ȵɐn54	ȵ	ɐn	54	认			1		ȵɐn54	njan6	
+1986	njan6	nj	an	6	ȵɐn54	ȵ	ɐn	54	韧			1		ȵɐn54	njan6	
+1987	njan6	nj	an	6	ȵɐn54	ȵ	ɐn	54	润			1		ȵɐn54	njan6	
+1988	njan6	nj	an	6	ȵɐn54	ȵ	ɐn	54	闰			1		ȵɐn54	njan6	
+1989	njan6	nj	an	6	ȵɐn54	ȵ	ɐn	54	孕			1		ȵɐn54	njan6	
+1990	gon1	g	on	1	kɔn44	k	ɔn	44	干			1		kɔn44	gon1	
+1991	gon1	g	on	1	kɔn44	k	ɔn	44	肝			1		kɔn44	gon1	
+1992	gon1	g	on	1	kɔn44	k	ɔn	44	竿			1		kɔn44	gon1	
+1993	gon2\5	g	on	2\5	kɔn31	k	ɔn	31	赶			1		kɔn31	gon2\5	
+1994	gon2\5	g	on	2\5	kɔn31	k	ɔn	31	杆			1		kɔn31	gon2\5	
+1995	gon2\5	g	on	2\5	kɔn31	k	ɔn	31	秆			1		kɔn31	gon2\5	
+1996	hon4	h	on	4	hɔn52	h	ɔn	52	寒			1		hɔn52	hon4	
+1997	hon4	h	on	4	hɔn52	h	ɔn	52	韩			1		hɔn52	hon4	
+1998	hon4	h	on	4	hɔn52	h	ɔn	52	鼾			1		hɔn52	hon4	
+1999	hon2\5	h	on	2\5	hɔn31	h	ɔn	31	罕			1		hɔn31	hon2\5	
+2000	hon2\5	h	on	2\5	hɔn31	h	ɔn	31	旱			1		hɔn31	hon2\5	
+2001	hon3	h	on	3	hɔn24	h	ɔn	24	看			1		hɔn24	hon3	
+2002	hon3	h	on	3	hɔn24	h	ɔn	24	汉			1		hɔn24	hon3	
+2003	hon6	h	on	6	hɔn54	h	ɔn	54	汗			1		hɔn54	hon6	
+2004	hon6	h	on	6	hɔn54	h	ɔn	54	焊			1		hɔn54	hon6	
+2005	on1		on	1	ɔn44	Ǿ	ɔn	44	安			1		ɔn44	on1	
+2006	on1		on	1	ɔn44	Ǿ	ɔn	44	鞍			1		ɔn44	on1	
+2007	on3		on	3	ɔn24	Ǿ	ɔn	24	岸			1		ɔn24	on3	
+2008	on3		on	3	ɔn24	Ǿ	ɔn	24	按			1		ɔn24	on3	
+2009	on3		on	3	ɔn24	Ǿ	ɔn	24	案			1		ɔn24	on3	
+2010	bean1	b	ean	1	pən44	p	ən	44	冰			1		pən44	bean1	
+2011	bean1	b	ean	1	pən44	p	ən	44	兵			1		pən44	bean1	
+2012	bean2\5	b	ean	2\5	pən31	p	ən	31	丙			1		pən31	bean2\5	
+2013	bean2\5	b	ean	2\5	pən31	p	ən	31	秉			1		pən31	bean2\5	
+2014	bean2\5	b	ean	2\5	pən31	p	ən	31	饼			1		pən31	bean2\5	
+2015	bean3	b	ean	3	pən24	p	ən	24	柄			1		pən24	bean3	
+2016	bean3	b	ean	3	pən24	p	ən	24	併			1		pən24	bean3	
+2017	bean3	b	ean	3	pən24	p	ən	24	並			1		pən24	bean3	
+2018	bean6	b	ean	6	pən54	p	ən	54	病			1		pən54	bean6	
+2019	pean4	p	ean	4	pʰən52	pʰ	ən	52	平			1		pʰən52	pean4	
+2020	pean4	p	ean	4	pʰən52	pʰ	ən	52	坪			1		pʰən52	pean4	
+2021	pean4	p	ean	4	pʰən52	pʰ	ən	52	评			1		pʰən52	pean4	
+2022	pean4	p	ean	4	pʰən52	pʰ	ən	52	瓶			1		pʰən52	pean4	
+2023	pean4	p	ean	4	pʰən52	pʰ	ən	52	屏	围屏		1		pʰən52	pean4	
+2024	pean4	p	ean	4	pʰən52	pʰ	ən	52	萍			1		pʰən52	pean4	
+2025	pean3	p	ean	3	pʰən24	pʰ	ən	24	聘			1		pʰən24	pean3	
+2026	pean3	p	ean	3	pʰən24	pʰ	ən	24	姘			1		pʰən24	pean3	
+2027	mean4	m	ean	4	mən52	m	ən	52	鸣			1		mən52	mean4	
+2028	mean4	m	ean	4	mən52	m	ən	52	明			1		mən52	mean4	
+2029	mean4	m	ean	4	mən52	m	ən	52	名			1		mən52	mean4	
+2030	mean4	m	ean	4	mən52	m	ən	52	铭			1		mən52	mean4	
+2031	mean2\5	m	ean	2\5	mən31	m	ən	31	皿			1		mən31	mean2\5	
+2032	mean6	m	ean	6	mən54	m	ən	54	命			1		mən54	mean6	
+2033	wean4	w	ean	4	wən52	w	ən	52	营			1		wən52	wean4	
+2034	wean2\5	w	ean	2\5	wən31	w	ən	31	永			1		wən31	wean2\5	
+2035	wean6	w	ean	6	wən54	w	ən	54	泳			1		wən54	wean6	
+2036	wean6	w	ean	6	wən54	w	ən	54	咏			1		wən54	wean6	
+2037	wean6	w	ean	6	wən54	w	ən	54	颖			1		wən54	wean6	
+2038	dean1	d	ean	1	tən44	t	ən	44	丁			1		tən44	dean1	
+2039	dean1	d	ean	1	tən44	t	ən	44	钉	铁钉		1		tən44	dean1	
+2040	dean2\5	d	ean	2\5	tən31	t	ən	31	顶			1		tən31	dean2\5	
+2041	dean2\5	d	ean	2\5	tən31	t	ən	31	鼎			1		tən31	dean2\5	
+2042	dean3	d	ean	3	tən24	t	ən	24	钉	钉住		1		tən24	dean3	
+2043	dean6	d	ean	6	tən54	t	ən	54	订	订约		1		tən54	dean6	
+2044	dean6	d	ean	6	tən54	t	ən	54	定			1		tən54	dean6	
+2045	tean1	t	ean	1	tʰən44	tʰ	ən	44	厅			1		tʰən44	tean1	
+2046	tean1	t	ean	1	tʰən44	tʰ	ən	44	汀			1		tʰən44	tean1	
+2047	tean4	t	ean	4	tʰən52	tʰ	ən	52	亭			1		tʰən52	tean4	
+2048	tean4	t	ean	4	tʰən52	tʰ	ən	52	停			1		tʰən52	tean4	
+2049	tean4	t	ean	4	tʰən52	tʰ	ən	52	廷			1		tʰən52	tean4	
+2050	tean4	t	ean	4	tʰən52	tʰ	ən	52	庭			1		tʰən52	tean4	
+2051	tean4	t	ean	4	tʰən52	tʰ	ən	52	蜓			1		tʰən52	tean4	
+2052	tean2\5	t	ean	2\5	tʰən31	tʰ	ən	31	艇			1		tʰən31	tean2\5	
+2053	tean2\5	t	ean	2\5	tʰən31	tʰ	ən	31	挺			1		tʰən31	tean2\5	
+2054	tean3	t	ean	3	tʰən24	tʰ	ən	24	听			1		tʰən24	tean3	
+2055	nean1	n	ean	1	nən44	n	ən	44	□	奶水		1		nən44	nean1	
+2056	nean4	n	ean	4	nən52	n	ən	52	宁			1		nən52	nean4	
+2057	nean4	n	ean	4	nən52	n	ən	52	凝			1		nən52	nean4	
+2058	nean3	n	ean	3	nən24	n	ən	24	□	拿		1		nən24	nean3	
+2059	nean6	n	ean	6	nən54	n	ən	54	□	转过来		1		nən54	nean6	
+2060	lean1	l	ean	1	lən44	l	ən	44	拎			1		lən44	lean1	
+2061	lean4	l	ean	4	lən52	l	ən	52	陵			1		lən52	lean4	
+2062	lean4	l	ean	4	lən52	l	ən	52	凌			1		lən52	lean4	
+2063	lean4	l	ean	4	lən52	l	ən	52	菱			1		lən52	lean4	
+2064	lean4	l	ean	4	lən52	l	ən	52	灵			1		lən52	lean4	
+2065	lean4	l	ean	4	lən52	l	ən	52	零			1		lən52	lean4	
+2066	lean4	l	ean	4	lən52	l	ən	52	铃			1		lən52	lean4	
+2067	lean4	l	ean	4	lən52	l	ən	52	伶			1		lən52	lean4	
+2068	lean2\5	l	ean	2\5	lən31	l	ən	31	领			1		lən31	lean2\5	
+2069	lean2\5	l	ean	2\5	lən31	l	ən	31	岭			1		lən31	lean2\5	
+2070	lean3	l	ean	3	lən24	l	ən	24	靓			1		lən24	lean3	
+2071	lean6	l	ean	6	lən54	l	ən	54	令			1		lən54	lean6	
+2072	slean1	sl	ean	1	ɬən44	ɬ	ən	44	星			1		ɬən44	slean1	
+2073	slean1	sl	ean	1	ɬən44	ɬ	ən	44	腥			1		ɬən44	slean1	
+2074	slean2\5	sl	ean	2\5	ɬən31	ɬ	ən	31	省	反省		1		ɬən31	slean2\5	
+2075	slean2\5	sl	ean	2\5	ɬən31	ɬ	ən	31	醒			1		ɬən31	slean2\5	
+2076	slean3	sl	ean	3	ɬən24	ɬ	ən	24	□	锈		1		ɬən24	slean3	
+2077	slean3	sl	ean	3	ɬən24	ɬ	ən	24	性			1		ɬən24	slean3	
+2078	slean3	sl	ean	3	ɬən24	ɬ	ən	24	姓			1		ɬən24	slean3	
+2079	gean1	g	ean	1	kən44	k	ən	44	京			1		kən44	gean1	
+2080	gean1	g	ean	1	kən44	k	ən	44	荆			1		kən44	gean1	
+2081	gean1	g	ean	1	kən44	k	ən	44	惊			1		kən44	gean1	
+2082	gean1	g	ean	1	kən44	k	ən	44	兢			1		kən44	gean1	
+2083	gean1	g	ean	1	kən44	k	ən	44	经			1		kən44	gean1	
+2084	gean4	g	ean	4	kən52	k	ən	52	茎			1		kən52	gean4	
+2085	gean4	g	ean	4	kən52	k	ən	52	劲			1		kən52	gean4	
+2086	gean4	g	ean	4	kən52	k	ən	52	径			1		kən52	gean4	
+2087	gean2\5	g	ean	2\5	kən31	k	ən	31	境			1		kən31	gean2\5	
+2088	gean2\5	g	ean	2\5	kən31	k	ən	31	景			1		kən31	gean2\5	
+2089	gean2\5	g	ean	2\5	kən31	k	ən	31	警			1		kən31	gean2\5	
+2090	gean2\5	g	ean	2\5	kən31	k	ən	31	颈			1		kən31	gean2\5	
+2091	gean3	g	ean	3	kən24	k	ən	24	敬			1		kən24	gean3	
+2092	gean3	g	ean	3	kən24	k	ən	24	镜			1		kən24	gean3	
+2093	gean3	g	ean	3	kən24	k	ən	24	竞			1		kən24	gean3	
+2094	kean1	k	ean	1	kʰən44	kʰ	ən	44	倾			1		kʰən44	kean1	
+2095	kean4	k	ean	4	kʰən52	kʰ	ən	52	擎			1		kʰən52	kean4	
+2096	kean4	k	ean	4	kʰən52	kʰ	ən	52	鲸			1		kʰən52	kean4	
+2097	kean4	k	ean	4	kʰən52	kʰ	ən	52	琼			1		kʰən52	kean4	
+2098	kean4	k	ean	4	kʰən52	kʰ	ən	52	凝			1		kʰən52	kean4	
+2099	kean2\5	k	ean	2\5	kʰən31	kʰ	ən	31	顷			1		kʰən31	kean2\5	
+2100	hean1	h	ean	1	hən44	h	ən	44	卿			1		hən44	hean1	
+2101	hean1	h	ean	1	hən44	h	ən	44	轻			1		hən44	hean1	
+2102	hean1	h	ean	1	hən44	h	ən	44	馨			1		hən44	hean1	
+2103	hean1	h	ean	1	hən44	h	ən	44	兄			1		hən44	hean1	
+2104	hean1	h	ean	1	hən44	h	ən	44	兴			1		hən44	hean1	
+2105	hean3	h	ean	3	hən24	h	ən	24	庆			1		hən24	hean3	
+2106	hean3	h	ean	3	hən24	h	ən	24	磬			1		hən24	hean3	
+2107	hean3	h	ean	3	hən24	h	ən	24	兴			1		hən24	hean3	
+2108	zean1	z	ean	1	tsən44	ts	ən	44	精			1		tsən44	zean1	
+2109	zean1	z	ean	1	tsən44	ts	ən	44	晶			1		tsən44	zean1	
+2110	zean1	z	ean	1	tsən44	ts	ən	44	睛			1		tsən44	zean1	
+2111	zean1	z	ean	1	tsən44	ts	ən	44	贞			1		tsən44	zean1	
+2112	zean1	z	ean	1	tsən44	ts	ən	44	侦			1		tsən44	zean1	
+2113	zean1	z	ean	1	tsən44	ts	ən	44	正	正月		1		tsən44	zean1	
+2114	zean1	z	ean	1	tsən44	ts	ən	44	征			1		tsən44	zean1	
+2115	zean1	z	ean	1	tsən44	ts	ən	44	蒸			1		tsən44	zean1	
+2116	zean2\5	z	ean	2\5	tsən31	ts	ən	31	井			1		tsən31	zean2\5	
+2117	zean2\5	z	ean	2\5	tsən31	ts	ən	31	整			1		tsən31	zean2\5	
+2118	zean2\5	z	ean	2\5	tsən31	ts	ən	31	拯			1		tsən31	zean2\5	
+2119	zean3	z	ean	3	tsən24	ts	ən	24	正			1		tsən24	zean3	
+2120	zean3	z	ean	3	tsən24	ts	ən	24	政			1		tsən24	zean3	
+2121	zean3	z	ean	3	tsən24	ts	ən	24	证			1		tsən24	zean3	
+2122	zean3	z	ean	3	tsən24	ts	ən	24	症			1		tsən24	zean3	
+2123	zean6	z	ean	6	tsən54	ts	ən	54	静			1		tsən54	zean6	
+2124	zean6	z	ean	6	tsən54	ts	ən	54	靖			1		tsən54	zean6	
+2125	zean6	z	ean	6	tsən54	ts	ən	54	净			1		tsən54	zean6	
+2126	zean6	z	ean	6	tsən54	ts	ən	54	郑			1		tsən54	zean6	
+2127	cean1	c	ean	1	tsʰən44	tsʰ	ən	44	清			1		tsʰən44	cean1	
+2128	cean1	c	ean	1	tsʰən44	tsʰ	ən	44	青			1		tsʰən44	cean1	
+2129	cean1	c	ean	1	tsʰən44	tsʰ	ən	44	蜻			1		tsʰən44	cean1	
+2130	cean1	c	ean	1	tsʰən44	tsʰ	ən	44	称	称呼		1		tsʰən44	cean1	
+2131	cean4	c	ean	4	tsʰən52	tsʰ	ən	52	情			1		tsʰən52	cean4	
+2132	cean4	c	ean	4	tsʰən52	tsʰ	ən	52	晴			1		tsʰən52	cean4	
+2133	cean4	c	ean	4	tsʰən52	tsʰ	ən	52	惩			1		tsʰən52	cean4	
+2134	cean4	c	ean	4	tsʰən52	tsʰ	ən	52	呈			1		tsʰən52	cean4	
+2135	cean4	c	ean	4	tsʰən52	tsʰ	ən	52	程			1		tsʰən52	cean4	
+2136	cean2\5	c	ean	2\5	tsʰən31	tsʰ	ən	31	请			1		tsʰən31	cean2\5	
+2137	cean2\5	c	ean	2\5	tsʰən31	tsʰ	ən	31	逞			1		tsʰən31	cean2\5	
+2138	cean3	c	ean	3	tsʰən24	tsʰ	ən	24	秤			1		tsʰən24	cean3	
+2139	cean3	c	ean	3	tsʰən24	tsʰ	ən	24	称	称重		1		tsʰən24	cean3	
+2140	sean1	s	ean	1	sən44	s	ən	44	声			1		sən44	sean1	
+2141	sean1	s	ean	1	sən44	s	ən	44	升			1		sən44	sean1	
+2142	sean4	s	ean	4	sən52	s	ən	52	成			1		sən52	sean4	
+2143	sean4	s	ean	4	sən52	s	ən	52	城			1		sən52	sean4	
+2144	sean4	s	ean	4	sən52	s	ən	52	诚			1		sən52	sean4	
+2145	sean4	s	ean	4	sən52	s	ən	52	盛	盛满了		1		sən52	sean4	
+2146	sean4	s	ean	4	sən52	s	ən	52	乘			1		sən52	sean4	
+2147	sean4	s	ean	4	sən52	s	ən	52	绳			1		sən52	sean4	
+2148	sean4	s	ean	4	sən52	s	ən	52	承			1		sən52	sean4	
+2149	sean4	s	ean	4	sən52	s	ən	52	丞			1		sən52	sean4	
+2150	sean3	s	ean	3	sən24	s	ən	24	胜			1		sən24	sean3	
+2151	sean6	s	ean	6	sən54	s	ən	54	剩			1		sən54	sean6	
+2152	sean6	s	ean	6	sən54	s	ən	54	盛	盛夏		1		sən54	sean6	
+2153	jean1	j	ean	1	jən44	j	ən	44	莺			1		jən44	jean1	
+2154	jean1	j	ean	1	jən44	j	ən	44	鹦			1		jən44	jean1	
+2155	jean1	j	ean	1	jən44	j	ən	44	樱			1		jən44	jean1	
+2156	jean1	j	ean	1	jən44	j	ən	44	英			1		jən44	jean1	
+2157	jean1	j	ean	1	jən44	j	ən	44	婴			1		jən44	jean1	
+2158	jean1	j	ean	1	jən44	j	ən	44	缨			1		jən44	jean1	
+2159	jean1	j	ean	1	jən44	j	ən	44	应	应当		1		jən44	jean1	
+2160	jean4	j	ean	4	jən52	j	ən	52	迎			1		jən52	jean4	
+2161	jean4	j	ean	4	jən52	j	ən	52	盈			1		jən52	jean4	
+2162	jean4	j	ean	4	jən52	j	ən	52	赢			1		jən52	jean4	
+2163	jean4	j	ean	4	jən52	j	ən	52	形			1		jən52	jean4	
+2164	jean4	j	ean	4	jən52	j	ən	52	型			1		jən52	jean4	
+2165	jean4	j	ean	4	jən52	j	ən	52	刑			1		jən52	jean4	
+2166	jean4	j	ean	4	jən52	j	ən	52	营	（又）		1		jən52	jean4	
+2167	jean4	j	ean	4	jən52	j	ən	52	蝇			1		jən52	jean4	
+2168	jean2\5	j	ean	2\5	jən31	j	ən	31	影			1		jən31	jean2\5	
+2169	jean2\5	j	ean	2\5	jən31	j	ən	31	映			1		jən31	jean2\5	
+2170	jean3	j	ean	3	jən24	j	ən	24	应	应对，应用		1		jən24	jean3	
+2171	njean4	nj	ean	4	ȵən52	ȵ	ən	52	仍			1		ȵən52	njean4	
+2172	ean3		ean	3	ən24	Ǿ	ən	24	□	回应		1		ən24	ean3	
+2173	ben2\5	b	en	2\5	piɛn31	p	iɛn	31	扁			1		piɛn31	ben2\5	
+2174	ben2\5	b	en	2\5	piɛn31	p	iɛn	31	匾			1		piɛn31	ben2\5	
+2175	ben2\5	b	en	2\5	piɛn31	p	iɛn	31	贬			1		piɛn31	ben2\5	
+2176	pen3	p	en	3	pʰiɛn24	pʰ	iɛn	24	片			1		pʰiɛn24	pen3	
+2177	men4	m	en	4	miɛn52	m	iɛn	52	□	被压扁的样子		1		miɛn52	men4	
+2178	men2\5	m	en	2\5	miɛn31	m	iɛn	31	免			1		miɛn31	men2\5	
+2179	men2\5	m	en	2\5	miɛn31	m	iɛn	31	勉			1		miɛn31	men2\5	
+2180	ten3	t	en	3	tʰiɛn24	tʰ	iɛn	24	□	捣乱、耍赖		1		tʰiɛn24	ten3	
+2181	nen2\5	n	en	2\5	niɛn31	n	iɛn	31	捻			1		niɛn31	nen2\5	
+2182	nen3	n	en	3	niɛn24	n	iɛn	24	□	奶水		1		niɛn24	nen3	
+2183	hen1	h	en	1	hiɛn44	h	iɛn	44	圈			1		hiɛn44	hen1	
+2184	bin1	b	in	1	pin44	p	in	44	鞭			1		pin44	bin1	
+2185	bin1	b	in	1	pin44	p	in	44	编			1		pin44	bin1	
+2186	bin1	b	in	1	pin44	p	in	44	边			1		pin44	bin1	
+2187	bin2\5	b	in	2\5	pin31	p	in	31	扁			1		pin31	bin2\5	
+2188	bin2\5	b	in	2\5	pin31	p	in	31	匾			1		pin31	bin2\5	
+2189	bin2\5	b	in	2\5	pin31	p	in	31	贬			1		pin31	bin2\5	
+2190	bin3	b	in	3	pin24	p	in	24	□	哪里		1		pin24	bin3	
+2191	bin3	b	in	3	pin24	p	in	24	变			1		pin24	bin3	
+2192	bin3	b	in	3	pin24	p	in	24	辨			1		pin24	bin3	
+2193	bin3	b	in	3	pin24	p	in	24	辩			1		pin24	bin3	
+2194	bin3	b	in	3	pin24	p	in	24	辫			1		pin24	bin3	
+2195	bin6	b	in	6	pin54	p	in	54	汴			1		pin54	bin6	
+2196	bin6	b	in	6	pin54	p	in	54	便	方便		1		pin54	bin6	
+2197	pin1	p	in	1	pʰin44	pʰ	in	44	篇			1		pʰin44	pin1	
+2198	pin1	p	in	1	pʰin44	pʰ	in	44	偏			1		pʰin44	pin1	
+2199	pin1	p	in	1	pʰin44	pʰ	in	44	蝙			1		pʰin44	pin1	
+2200	pin4	p	in	4	pʰin52	pʰ	in	52	便	便宜		1		pʰin52	pin4	
+2201	pin3	p	in	3	pʰin24	pʰ	in	24	骗			1		pʰin24	pin3	
+2202	pin3	p	in	3	pʰin24	pʰ	in	24	遍			1		pʰin24	pin3	
+2203	pin3	p	in	3	pʰin24	pʰ	in	24	片			1		pʰin24	pin3	
+2204	min4	m	in	4	min52	m	in	52	绵			1		min52	min4	
+2205	min4	m	in	4	min52	m	in	52	棉			1		min52	min4	
+2206	min4	m	in	4	min52	m	in	52	眠			1		min52	min4	
+2207	min2\5	m	in	2\5	min31	m	in	31	免			1		min31	min2\5	
+2208	min2\5	m	in	2\5	min31	m	in	31	勉			1		min31	min2\5	
+2209	min2\5	m	in	2\5	min31	m	in	31	娩			1		min31	min2\5	
+2210	min2\5	m	in	2\5	min31	m	in	31	缅			1		min31	min2\5	
+2211	min2\5	m	in	2\5	min31	m	in	31	渑			1		min31	min2\5	
+2212	min6	m	in	6	min54	m	in	54	面			1		min54	min6	
+2213	din1	d	in	1	tin44	t	in	44	颠			1		tin44	din1	
+2214	din6	d	in	6	tin54	t	in	54	电			1		tin54	din6	
+2215	din6	d	in	6	tin54	t	in	54	殿			1		tin54	din6	
+2216	din6	d	in	6	tin54	t	in	54	奠			1		tin54	din6	
+2217	tin1	t	in	1	tʰin44	tʰ	in	44	天			1		tʰin44	tin1	
+2218	tin4	t	in	4	tʰin52	tʰ	in	52	田			1		tʰin52	tin4	
+2219	tin4	t	in	4	tʰin52	tʰ	in	52	填			1		tʰin52	tin4	
+2220	nin4	n	in	4	nin52	n	in	52	年			1		nin52	nin4	
+2221	nin2\5	n	in	2\5	nin31	n	in	31	碾			1		nin31	nin2\5	
+2222	nin2\5	n	in	2\5	nin31	n	in	31	辇			1		nin31	nin2\5	
+2223	nin2\5	n	in	2\5	nin31	n	in	31	撚			1		nin31	nin2\5	
+2224	lin4	l	in	4	lin52	l	in	52	连			1		lin52	lin4	
+2225	lin4	l	in	4	lin52	l	in	52	联			1		lin52	lin4	
+2226	lin4	l	in	4	lin52	l	in	52	怜			1		lin52	lin4	
+2227	lin4	l	in	4	lin52	l	in	52	莲			1		lin52	lin4	
+2228	lin3	l	in	3	lin24	l	in	24	□	一连串		1		lin24	lin3	
+2229	lin6	l	in	6	lin54	l	in	54	练			1		lin54	lin6	
+2230	lin6	l	in	6	lin54	l	in	54	炼			1		lin54	lin6	
+2231	lin6	l	in	6	lin54	l	in	54	恋			1		lin54	lin6	
+2232	slin1	sl	in	1	ɬin44	ɬ	in	44	仙			1		ɬin44	slin1	
+2233	slin1	sl	in	1	ɬin44	ɬ	in	44	鲜	新鲜		1		ɬin44	slin1	
+2234	slin1	sl	in	1	ɬin44	ɬ	in	44	先			1		ɬin44	slin1	
+2235	slin1	sl	in	1	ɬin44	ɬ	in	44	宣			1		ɬin44	slin1	
+2236	slin2\5	sl	in	2\5	ɬin31	ɬ	in	31	藓			1		ɬin31	slin2\5	
+2237	slin2\5	sl	in	2\5	ɬin31	ɬ	in	31	鲜	鲜有		1		ɬin31	slin2\5	
+2238	slin2\5	sl	in	2\5	ɬin31	ɬ	in	31	选			1		ɬin31	slin2\5	
+2239	slin3	sl	in	3	ɬin24	ɬ	in	24	线			1		ɬin24	slin3	
+2240	slin6	sl	in	6	ɬin54	ɬ	in	54	羡			1		ɬin54	slin6	
+2241	slin6	sl	in	6	ɬin54	ɬ	in	54	旋			1		ɬin54	slin6	
+2242	gin1	g	in	1	kin44	k	in	44	肩			1		kin44	gin1	
+2243	gin1	g	in	1	kin44	k	in	44	坚			1		kin44	gin1	
+2244	gin1	g	in	1	kin44	k	in	44	绢			1		kin44	gin1	
+2245	gin1	g	in	1	kin44	k	in	44	捐			1		kin44	gin1	
+2246	gin2\5	g	in	2\5	kin31	k	in	31	卷			1		kin31	gin2\5	
+2247	gin3	g	in	3	kin24	k	in	24	建			1		kin24	gin3	
+2248	gin3	g	in	3	kin24	k	in	24	见			1		kin24	gin3	
+2249	gin6	g	in	6	kin54	k	in	54	件			1		kin54	gin6	
+2250	gin6	g	in	6	kin54	k	in	54	健			1		kin54	gin6	
+2251	gin6	g	in	6	kin54	k	in	54	倦			1		kin54	gin6	
+2252	gin6	g	in	6	kin54	k	in	54	圈	猪圈		1		kin54	gin6	
+2253	gin6	g	in	6	kin54	k	in	54	眷			1		kin54	gin6	
+2254	gin6	g	in	6	kin54	k	in	54	键			1		kin54	gin6	
+2255	kin4	k	in	4	kʰin52	kʰ	in	52	乾	乾坤		1		kʰin52	kin4	
+2256	kin4	k	in	4	kʰin52	kʰ	in	52	虔			1		kʰin52	kin4	
+2257	kin4	k	in	4	kʰin52	kʰ	in	52	拳			1		kʰin52	kin4	
+2258	kin4	k	in	4	kʰin52	kʰ	in	52	权			1		kʰin52	kin4	
+2259	hin1	h	in	1	hin44	h	in	44	轩			1		hin44	hin1	
+2260	hin1	h	in	1	hin44	h	in	44	掀			1		hin44	hin1	
+2261	hin1	h	in	1	hin44	h	in	44	牵			1		hin44	hin1	
+2262	hin1	h	in	1	hin44	h	in	44	圈			1		hin44	hin1	
+2263	hin1	h	in	1	hin44	h	in	44	喧			1		hin44	hin1	
+2264	hin2\5	h	in	2\5	hin31	h	in	31	显			1		hin31	hin2\5	
+2265	hin2\5	h	in	2\5	hin31	h	in	31	犬			1		hin31	hin2\5	
+2266	hin3	h	in	3	hin24	h	in	24	宪			1		hin24	hin3	
+2267	hin3	h	in	3	hin24	h	in	24	献			1		hin24	hin3	
+2268	hin3	h	in	3	hin24	h	in	24	劝			1		hin24	hin3	
+2269	hin3	h	in	3	hin24	h	in	24	券			1		hin24	hin3	
+2270	zin1	z	in	1	tsin44	ts	in	44	煎			1		tsin44	zin1	
+2271	zin1	z	in	1	tsin44	ts	in	44	毡			1		tsin44	zin1	
+2272	zin1	z	in	1	tsin44	ts	in	44	笺			1		tsin44	zin1	
+2273	zin1	z	in	1	tsin44	ts	in	44	专			1		tsin44	zin1	
+2274	zin1	z	in	1	tsin44	ts	in	44	砖			1		tsin44	zin1	
+2275	zin2\5	z	in	2\5	tsin31	ts	in	31	剪			1		tsin31	zin2\5	
+2276	zin2\5	z	in	2\5	tsin31	ts	in	31	展			1		tsin31	zin2\5	
+2277	zin2\5	z	in	2\5	tsin31	ts	in	31	践			1		tsin31	zin2\5	
+2278	zin2\5	z	in	2\5	tsin31	ts	in	31	转	转变		1		tsin31	zin2\5	
+2279	zin3	z	in	3	tsin24	ts	in	24	箭			1		tsin24	zin3	
+2280	zin3	z	in	3	tsin24	ts	in	24	溅			1		tsin24	zin3	
+2281	zin3	z	in	3	tsin24	ts	in	24	战			1		tsin24	zin3	
+2282	zin3	z	in	3	tsin24	ts	in	24	荐			1		tsin24	zin3	
+2283	zin3	z	in	3	tsin24	ts	in	24	转	转圈		1		tsin24	zin3	
+2284	zin6	z	in	6	tsin54	ts	in	54	贱			1		tsin54	zin6	
+2285	zin6	z	in	6	tsin54	ts	in	54	饯			1		tsin54	zin6	
+2286	zin6	z	in	6	tsin54	ts	in	54	传	传记		1		tsin54	zin6	
+2287	zin6	z	in	6	tsin54	ts	in	54	篆			1		tsin54	zin6	
+2288	cin1	c	in	1	tsʰin44	tsʰ	in	44	迁			1		tsʰin44	cin1	
+2289	cin1	c	in	1	tsʰin44	tsʰ	in	44	千			1		tsʰin44	cin1	
+2290	cin1	c	in	1	tsʰin44	tsʰ	in	44	川			1		tsʰin44	cin1	
+2291	cin1	c	in	1	tsʰin44	tsʰ	in	44	穿			1		tsʰin44	cin1	
+2292	cin4	c	in	4	tsʰin52	tsʰ	in	52	钱			1		tsʰin52	cin4	
+2293	cin4	c	in	4	tsʰin52	tsʰ	in	52	缠			1		tsʰin52	cin4	
+2294	cin4	c	in	4	tsʰin52	tsʰ	in	52	前			1		tsʰin52	cin4	
+2295	cin4	c	in	4	tsʰin52	tsʰ	in	52	全			1		tsʰin52	cin4	
+2296	cin4	c	in	4	tsʰin52	tsʰ	in	52	泉			1		tsʰin52	cin4	
+2297	cin4	c	in	4	tsʰin52	tsʰ	in	52	传			1		tsʰin52	cin4	
+2298	cin2\5	c	in	2\5	tsʰin31	tsʰ	in	31	浅			1		tsʰin31	cin2\5	
+2299	cin2\5	c	in	2\5	tsʰin31	tsʰ	in	31	遣			1		tsʰin31	cin2\5	
+2300	cin2\5	c	in	2\5	tsʰin31	tsʰ	in	31	喘			1		tsʰin31	cin2\5	
+2301	cin3	c	in	3	tsʰin24	tsʰ	in	24	串			1		tsʰin24	cin3	
+2302	sin4	s	in	4	sin52	s	in	52	船			1		sin52	sin4	
+2303	sin2\5	s	in	2\5	sin31	s	in	31	鳝			1		sin31	sin2\5	
+2304	sin3	s	in	3	sin24	s	in	24	扇			1		sin24	sin3	
+2305	sin6	s	in	6	sin54	s	in	54	善			1		sin54	sin6	
+2306	sin6	s	in	6	sin54	s	in	54	膳			1		sin54	sin6	
+2307	jin1	j	in	1	jin44	j	in	44	烟			1		jin44	jin1	
+2308	jin1	j	in	1	jin44	j	in	44	燕	姓		1		jin44	jin1	
+2309	jin1	j	in	1	jin44	j	in	44	冤			1		jin44	jin1	
+2310	jin4	j	in	4	jin52	j	in	52	涎			1		jin52	jin4	
+2311	jin4	j	in	4	jin52	j	in	52	焉			1		jin52	jin4	
+2312	jin4	j	in	4	jin52	j	in	52	延			1		jin52	jin4	
+2313	jin4	j	in	4	jin52	j	in	52	筵			1		jin52	jin4	
+2314	jin4	j	in	4	jin52	j	in	52	言			1		jin52	jin4	
+2315	jin4	j	in	4	jin52	j	in	52	研			1		jin52	jin4	
+2316	jin4	j	in	4	jin52	j	in	52	贤			1		jin52	jin4	
+2317	jin4	j	in	4	jin52	j	in	52	弦			1		jin52	jin4	
+2318	jin4	j	in	4	jin52	j	in	52	圆			1		jin52	jin4	
+2319	jin4	j	in	4	jin52	j	in	52	员			1		jin52	jin4	
+2320	jin4	j	in	4	jin52	j	in	52	缘			1		jin52	jin4	
+2321	jin4	j	in	4	jin52	j	in	52	沿			1		jin52	jin4	
+2322	jin4	j	in	4	jin52	j	in	52	铅			1		jin52	jin4	
+2323	jin4	j	in	4	jin52	j	in	52	元			1		jin52	jin4	
+2324	jin4	j	in	4	jin52	j	in	52	原			1		jin52	jin4	
+2325	jin4	j	in	4	jin52	j	in	52	源			1		jin52	jin4	
+2326	jin4	j	in	4	jin52	j	in	52	袁			1		jin52	jin4	
+2327	jin4	j	in	4	jin52	j	in	52	辕			1		jin52	jin4	
+2328	jin4	j	in	4	jin52	j	in	52	园			1		jin52	jin4	
+2329	jin4	j	in	4	jin52	j	in	52	援			1		jin52	jin4	
+2330	jin4	j	in	4	jin52	j	in	52	玄			1		jin52	jin4	
+2331	jin4	j	in	4	jin52	j	in	52	悬			1		jin52	jin4	
+2332	jin4	j	in	4	jin52	j	in	52	完			1		jin52	jin4	
+2333	jin4	j	in	4	jin52	j	in	52	丸			1		jin52	jin4	
+2334	jin2\5	j	in	2\5	jin31	j	in	31	演			1		jin31	jin2\5	
+2335	njin4	nj	in	4	ȵin52	ȵ	in	52	然			1		ȵin52	njin4	
+2336	njin4	nj	in	4	ȵin52	ȵ	in	52	燃			1		ȵin52	njin4	
+2337	njin4	nj	in	4	ȵin52	ȵ	in	52	言			1		ȵin52	njin4	
+2338	njin2\5	nj	in	2\5	ȵin31	ȵ	in	31	软			1		ȵin31	njin2\5	
+2339	njin2\5	nj	in	2\5	ȵin31	ȵ	in	31	阮			1		ȵin31	njin2\5	
+2340	njin6	nj	in	6	ȵin54	ȵ	in	54	愿			1		ȵin54	njin6	
+2341	bun1	b	un	1	pun44	p	un	44	般			1		pun44	bun1	
+2342	bun1	b	un	1	pun44	p	un	44	搬			1		pun44	bun1	
+2343	bun2\5	b	un	2\5	pun31	p	un	31	本			1		pun31	bun2\5	
+2344	bun3	b	un	3	pun24	p	un	24	半			1		pun24	bun3	
+2345	bun3	b	un	3	pun24	p	un	24	绊			1		pun24	bun3	
+2346	bun6	b	un	6	pun54	p	un	54	伴			1		pun54	bun6	
+2347	bun6	b	un	6	pun54	p	un	54	拌			1		pun54	bun6	
+2348	bun6	b	un	6	pun54	p	un	54	叛			1		pun54	bun6	
+2349	pun1	p	un	1	pʰun44	pʰ	un	44	潘			1		pʰun44	pun1	
+2350	pun4	p	un	4	pʰun52	pʰ	un	52	盘			1		pʰun52	pun4	
+2351	pun4	p	un	4	pʰun52	pʰ	un	52	盆			1		pʰun52	pun4	
+2352	pun3	p	un	3	pʰun24	pʰ	un	24	判			1		pʰun24	pun3	
+2353	mun4	m	un	4	mun52	m	un	52	瞒			1		mun52	mun4	
+2354	mun4	m	un	4	mun52	m	un	52	门			1		mun52	mun4	
+2355	mun2\5	m	un	2\5	mun31	m	un	31	满			1		mun31	mun2\5	
+2356	mun6	m	un	6	mun54	m	un	54	闷			1		mun54	mun6	
+2357	fun1	f	un	1	fun44	f	un	44	欢			1		fun44	fun1	
+2358	fun1	f	un	1	fun44	f	un	44	宽			1		fun44	fun1	
+2359	fun2\5	f	un	2\5	fun31	f	un	31	款			1		fun31	fun2\5	
+2360	fun2\5	f	un	2\5	fun31	f	un	31	缓			1		fun31	fun2\5	
+2361	wun4	w	un	4	wun52	w	un	52	完	（又）		1		wun52	wun4	
+2362	wun2\5	w	un	2\5	wun31	w	un	31	碗			1		wun31	wun2\5	
+2363	wun2\5	w	un	2\5	wun31	w	un	31	皖			1		wun31	wun2\5	
+2364	wun2\5	w	un	2\5	wun31	w	un	31	腕			1		wun31	wun2\5	
+2365	wun6	w	un	6	wun54	w	un	54	玩	古玩		1		wun54	wun6	
+2366	wun6	w	un	6	wun54	w	un	54	唤			1		wun54	wun6	
+2367	wun6	w	un	6	wun54	w	un	54	焕			1		wun54	wun6	
+2368	wun6	w	un	6	wun54	w	un	54	换			1		wun54	wun6	
+2369	wun6	w	un	6	wun54	w	un	54	宦			1		wun54	wun6	
+2370	dun1	d	un	1	tun44	t	un	44	端			1		tun44	dun1	
+2371	dun2\5	d	un	2\5	tun31	t	un	31	短			1		tun31	dun2\5	
+2372	dun6	d	un	6	tun54	t	un	54	断			1		tun54	dun6	
+2373	dun6	d	un	6	tun54	t	un	54	段			1		tun54	dun6	
+2374	dun6	d	un	6	tun54	t	un	54	缎			1		tun54	dun6	
+2375	tun4	t	un	4	tʰun52	tʰ	un	52	团			1		tʰun52	tun4	
+2376	tun4	t	un	4	tʰun52	tʰ	un	52	豚			1		tʰun52	tun4	
+2377	tun2\5	t	un	2\5	tʰun31	tʰ	un	31	断			1		tʰun31	tun2\5	
+2378	nun2\5	n	un	2\5	nun31	n	un	31	暖			1		nun31	nun2\5	
+2379	nun6	n	un	6	nun54	n	un	54	嫩			1		nun54	nun6	
+2380	lun4	l	un	4	lun52	l	un	52	鸾			1		lun52	lun4	
+2381	lun4	l	un	4	lun52	l	un	52	銮			1		lun52	lun4	
+2382	lun4	l	un	4	lun52	l	un	52	峦			1		lun52	lun4	
+2383	lun2\5	l	un	2\5	lun31	l	un	31	卵			1		lun31	lun2\5	
+2384	lun6	l	un	6	lun54	l	un	54	乱			1		lun54	lun6	
+2385	slun1	sl	un	1	ɬun44	ɬ	un	44	酸			1		ɬun44	slun1	
+2386	slun1	sl	un	1	ɬun44	ɬ	un	44	孙			1		ɬun44	slun1	
+2387	slun2\5	sl	un	2\5	ɬun31	ɬ	un	31	损			1		ɬun31	slun2\5	
+2388	slun3	sl	un	3	ɬun24	ɬ	un	24	算			1		ɬun24	slun3	
+2389	slun3	sl	un	3	ɬun24	ɬ	un	24	蒜			1		ɬun24	slun3	
+2390	gun1	g	un	1	kun44	k	un	44	官			1		kun44	gun1	
+2391	gun1	g	un	1	kun44	k	un	44	棺			1		kun44	gun1	
+2392	gun1	g	un	1	kun44	k	un	44	观	参观		1		kun44	gun1	
+2393	gun1	g	un	1	kun44	k	un	44	冠	衣冠		1		kun44	gun1	
+2394	gun2\5	g	un	2\5	kun31	k	un	31	管			1		kun31	gun2\5	
+2395	gun2\5	g	un	2\5	kun31	k	un	31	馆			1		kun31	gun2\5	
+2396	gun3	g	un	3	kun24	k	un	24	贯			1		kun24	gun3	
+2397	gun3	g	un	3	kun24	k	un	24	灌			1		kun24	gun3	
+2398	gun3	g	un	3	kun24	k	un	24	罐			1		kun24	gun3	
+2399	gun3	g	un	3	kun24	k	un	24	观	寺观		1		kun24	gun3	
+2400	gun3	g	un	3	kun24	k	un	24	冠	冠军		1		kun24	gun3	
+2401	zun1	z	un	1	tsun44	ts	un	44	尊			1		tsun44	zun1	
+2402	zun1	z	un	1	tsun44	ts	un	44	遵			1		tsun44	zun1	
+2403	zun3	z	un	3	tsun24	ts	un	24	纂			1		tsun24	zun3	
+2404	cun1	c	un	1	tsʰun44	tsʰ	un	44	村			1		tsʰun44	cun1	
+2405	cun4	c	un	4	tsʰun52	tsʰ	un	52	存			1		tsʰun52	cun4	
+2406	cun3	c	un	3	tsʰun24	tsʰ	un	24	窜			1		tsʰun24	cun3	
+2407	cun3	c	un	3	tsʰun24	tsʰ	un	24	寸			1		tsʰun24	cun3	
+2408	njun3	nj	un	3	ȵun24	ȵ	un	24	钻	动词		1		ȵun24	njun3	
+2409	bang1	b	ang	1	paŋ44	p	aŋ	44	崩			1		paŋ44	bang1	
+2410	bang3	b	ang	3	paŋ24	p	aŋ	24	迸			1		paŋ24	bang3	
+2411	pang1	p	ang	1	pʰaŋ44	pʰ	aŋ	44	烹			1		pʰaŋ44	pang1	
+2412	pang4	p	ang	4	pʰaŋ52	pʰ	aŋ	52	朋			1		pʰaŋ52	pang4	
+2413	pang4	p	ang	4	pʰaŋ52	pʰ	aŋ	52	凭			1		pʰaŋ52	pang4	
+2414	pang4	p	ang	4	pʰaŋ52	pʰ	aŋ	52	彭			1		pʰaŋ52	pang4	
+2415	pang4	p	ang	4	pʰaŋ52	pʰ	aŋ	52	膨			1		pʰaŋ52	pang4	
+2416	pang4	p	ang	4	pʰaŋ52	pʰ	aŋ	52	棚			1		pʰaŋ52	pang4	
+2417	mang4	m	ang	4	maŋ52	m	aŋ	52	盲			1		maŋ52	mang4	
+2418	mang4	m	ang	4	maŋ52	m	aŋ	52	盟			1		maŋ52	mang4	
+2419	mang2\5	m	ang	2\5	maŋ31	m	aŋ	31	猛			1		maŋ31	mang2\5	
+2420	mang6	m	ang	6	maŋ54	m	aŋ	54	孟			1		maŋ54	mang6	
+2421	wang4	w	ang	4	waŋ52	w	aŋ	52	横			1		waŋ52	wang4	
+2422	wang4	w	ang	4	waŋ52	w	aŋ	52	宏			1		waŋ52	wang4	
+2423	dang1	d	ang	1	taŋ44	t	aŋ	44	登			1		taŋ44	dang1	
+2424	dang1	d	ang	1	taŋ44	t	aŋ	44	灯			1		taŋ44	dang1	
+2425	dang2\5	d	ang	2\5	taŋ31	t	aŋ	31	等			1		taŋ31	dang2\5	
+2426	dang3	d	ang	3	taŋ24	t	aŋ	24	凳			1		taŋ24	dang3	
+2427	dang6	d	ang	6	taŋ54	t	aŋ	54	邓			1		taŋ54	dang6	
+2428	tang4	t	ang	4	tʰaŋ52	tʰ	aŋ	52	腾			1		tʰaŋ52	tang4	
+2429	tang4	t	ang	4	tʰaŋ52	tʰ	aŋ	52	藤			1		tʰaŋ52	tang4	
+2430	tang4	t	ang	4	tʰaŋ52	tʰ	aŋ	52	疼			1		tʰaŋ52	tang4	
+2431	nang4	n	ang	4	naŋ52	n	aŋ	52	能			1		naŋ52	nang4	
+2432	nang3	n	ang	3	naŋ24	n	aŋ	24	□	连着		1		naŋ24	nang3	
+2433	lang2\5	l	ang	2\5	laŋ31	l	aŋ	31	冷			1		laŋ31	lang2\5	
+2434	lang3	l	ang	3	laŋ24	l	aŋ	24	□	毛衣		1		laŋ24	lang3	
+2435	lang3	l	ang	3	laŋ24	l	aŋ	24	□	拉		1		laŋ24	lang3	
+2436	lang6	l	ang	6	laŋ54	l	aŋ	54	楞			1		laŋ54	lang6	
+2437	gang1	g	ang	1	kaŋ44	k	aŋ	44	更	三更		1		kaŋ44	gang1	
+2438	gang1	g	ang	1	kaŋ44	k	aŋ	44	庚			1		kaŋ44	gang1	
+2439	gang1	g	ang	1	kaŋ44	k	aŋ	44	羹			1		kaŋ44	gang1	
+2440	gang1	g	ang	1	kaŋ44	k	aŋ	44	耕			1		kaŋ44	gang1	
+2441	gang2\5	g	ang	2\5	kaŋ31	k	aŋ	31	哽			1		kaŋ31	gang2\5	
+2442	gang2\5	g	ang	2\5	kaŋ31	k	aŋ	31	埂			1		kaŋ31	gang2\5	
+2443	gang2\5	g	ang	2\5	kaŋ31	k	aŋ	31	梗			1		kaŋ31	gang2\5	
+2444	gang2\5	g	ang	2\5	kaŋ31	k	aŋ	31	耿			1		kaŋ31	gang2\5	
+2445	gang3	g	ang	3	kaŋ24	k	aŋ	24	更	更加		1		kaŋ24	gang3	
+2446	kang3	k	ang	3	kʰaŋ24	kʰ	aŋ	24	□	绊住		1		kʰaŋ24	kang3	
+2447	hang1	h	ang	1	haŋ44	h	aŋ	44	坑			1		haŋ44	hang1	
+2448	hang1	h	ang	1	haŋ44	h	aŋ	44	亨			1		haŋ44	hang1	
+2449	hang4	h	ang	4	haŋ52	h	aŋ	52	恒			1		haŋ52	hang4	
+2450	hang4	h	ang	4	haŋ52	h	aŋ	52	行			1		haŋ52	hang4	
+2451	hang4	h	ang	4	haŋ52	h	aŋ	52	衡			1		haŋ52	hang4	
+2452	hang2\5	h	ang	2\5	haŋ31	h	aŋ	31	肯			1		haŋ31	hang2\5	
+2453	hang6	h	ang	6	haŋ54	h	aŋ	54	杏			1		haŋ54	hang6	
+2454	hang6	h	ang	6	haŋ54	h	aŋ	54	幸			1		haŋ54	hang6	
+2455	ngang6	ng	ang	6	ŋaŋ54	ŋ	aŋ	54	硬			1		ŋaŋ54	ngang6	
+2456	zang1	z	ang	1	tsaŋ44	ts	aŋ	44	曾	姓		1		tsaŋ44	zang1	
+2457	zang1	z	ang	1	tsaŋ44	ts	aŋ	44	增			1		tsaŋ44	zang1	
+2458	zang1	z	ang	1	tsaŋ44	ts	aŋ	44	憎			1		tsaŋ44	zang1	
+2459	zang1	z	ang	1	tsaŋ44	ts	aŋ	44	争			1		tsaŋ44	zang1	
+2460	zang1	z	ang	1	tsaŋ44	ts	aŋ	44	筝			1		tsaŋ44	zang1	
+2461	zang2\5	z	ang	2\5	tsaŋ31	ts	aŋ	31	□	扯		1		tsaŋ31	zang2\5	
+2462	zang6	z	ang	6	tsaŋ54	ts	aŋ	54	赠			1		tsaŋ54	zang6	
+2463	cang1	c	ang	1	tsʰaŋ44	tsʰ	aŋ	44	撑	撑腰		1		tsʰaŋ44	cang1	
+2464	cang4	c	ang	4	tsʰaŋ52	tsʰ	aŋ	52	曾	曾经		1		tsʰaŋ52	cang4	
+2465	cang4	c	ang	4	tsʰaŋ52	tsʰ	aŋ	52	层			1		tsʰaŋ52	cang4	
+2466	cang3	c	ang	3	tsʰaŋ24	tsʰ	aŋ	24	蹭			1		tsʰaŋ24	cang3	
+2467	cang3	c	ang	3	tsʰaŋ24	tsʰ	aŋ	24	撑	撑场		1		tsʰaŋ24	cang3	
+2468	cang6	c	ang	6	tsʰaŋ54	tsʰ	aŋ	54	澄			1		tsʰaŋ54	cang6	
+2469	cang6	c	ang	6	tsʰaŋ54	tsʰ	aŋ	54	橙			1		tsʰaŋ54	cang6	
+2470	sang1	s	ang	1	saŋ44	s	aŋ	44	僧			1		saŋ44	sang1	
+2471	sang1	s	ang	1	saŋ44	s	aŋ	44	生			1		saŋ44	sang1	
+2472	sang1	s	ang	1	saŋ44	s	aŋ	44	牲			1		saŋ44	sang1	
+2473	sang1	s	ang	1	saŋ44	s	aŋ	44	笙			1		saŋ44	sang1	
+2474	sang1	s	ang	1	saŋ44	s	aŋ	44	甥			1		saŋ44	sang1	
+2475	sang2\5	s	ang	2\5	saŋ31	s	aŋ	31	省			1		saŋ31	sang2\5	
+2476	njang1	nj	ang	1	ȵaŋ44	ȵ	aŋ	44	□	疤		1		ȵaŋ44	njang1	
+2477	njang2\5	nj	ang	2\5	ȵaŋ31	ȵ	aŋ	31	□	坚韧		1		ȵaŋ31	njang2\5	
+2478	njang3	nj	ang	3	ȵaŋ24	ȵ	aŋ	24	□	拔		1		ȵaŋ24	njang3	
+2479	ang1		ang	1	aŋ44	Ǿ	aŋ	44	□	锅		1		aŋ44	ang1	
+2480	ang2\5		ang	2\5	aŋ31	Ǿ	aŋ	31	□	硌		1		aŋ31	ang2\5	
+2481	ang3		ang	3	aŋ24	Ǿ	aŋ	24	□	再		1		aŋ24	ang3	
+2482	bong1	b	ong	1	pɔŋ44	p	ɔŋ	44	帮			1		pɔŋ44	bong1	
+2483	bong1	b	ong	1	pɔŋ44	p	ɔŋ	44	邦			1		pɔŋ44	bong1	
+2484	bong2\5	b	ong	2\5	pɔŋ31	p	ɔŋ	31	榜			1		pɔŋ31	bong2\5	
+2485	bong2\5	b	ong	2\5	pɔŋ31	p	ɔŋ	31	绑			1		pɔŋ31	bong2\5	
+2486	bong6	b	ong	6	pɔŋ54	p	ɔŋ	54	谤			1		pɔŋ54	bong6	
+2487	bong6	b	ong	6	pɔŋ54	p	ɔŋ	54	傍			1		pɔŋ54	bong6	
+2488	bong6	b	ong	6	pɔŋ54	p	ɔŋ	54	蚌			1		pɔŋ54	bong6	
+2489	pong1	p	ong	1	pʰɔŋ44	pʰ	ɔŋ	44	滂			1		pʰɔŋ44	pong1	
+2490	pong4	p	ong	4	pʰɔŋ52	pʰ	ɔŋ	52	旁			1		pʰɔŋ52	pong4	
+2491	pong4	p	ong	4	pʰɔŋ52	pʰ	ɔŋ	52	螃			1		pʰɔŋ52	pong4	
+2492	pong4	p	ong	4	pʰɔŋ52	pʰ	ɔŋ	52	庞			1		pʰɔŋ52	pong4	
+2493	pong3	p	ong	3	pʰɔŋ24	pʰ	ɔŋ	24	胖			1		pʰɔŋ24	pong3	
+2494	mong1	m	ong	1	mɔŋ44	m	ɔŋ	44	芒	（又）		1		mɔŋ44	mong1	
+2495	mong4	m	ong	4	mɔŋ52	m	ɔŋ	52	忙			1		mɔŋ52	mong4	
+2496	mong4	m	ong	4	mɔŋ52	m	ɔŋ	52	茫			1		mɔŋ52	mong4	
+2497	mong4	m	ong	4	mɔŋ52	m	ɔŋ	52	亡			1		mɔŋ52	mong4	
+2498	mong4	m	ong	4	mɔŋ52	m	ɔŋ	52	芒			1		mɔŋ52	mong4	
+2499	mong2\5	m	ong	2\5	mɔŋ31	m	ɔŋ	31	莽			1		mɔŋ31	mong2\5	
+2500	mong2\5	m	ong	2\5	mɔŋ31	m	ɔŋ	31	蟒			1		mɔŋ31	mong2\5	
+2501	mong2\5	m	ong	2\5	mɔŋ31	m	ɔŋ	31	网			1		mɔŋ31	mong2\5	
+2502	mong6	m	ong	6	mɔŋ54	m	ɔŋ	54	忘			1		mɔŋ54	mong6	
+2503	mong6	m	ong	6	mɔŋ54	m	ɔŋ	54	妄			1		mɔŋ54	mong6	
+2504	mong6	m	ong	6	mɔŋ54	m	ɔŋ	54	望			1		mɔŋ54	mong6	
+2505	fong1	f	ong	1	fɔŋ44	f	ɔŋ	44	荒			1		fɔŋ44	fong1	
+2506	fong1	f	ong	1	fɔŋ44	f	ɔŋ	44	慌			1		fɔŋ44	fong1	
+2507	fong1	f	ong	1	fɔŋ44	f	ɔŋ	44	方			1		fɔŋ44	fong1	
+2508	fong1	f	ong	1	fɔŋ44	f	ɔŋ	44	肪			1		fɔŋ44	fong1	
+2509	fong1	f	ong	1	fɔŋ44	f	ɔŋ	44	芳			1		fɔŋ44	fong1	
+2510	fong4	f	ong	4	fɔŋ52	f	ɔŋ	52	房			1		fɔŋ52	fong4	
+2511	fong4	f	ong	4	fɔŋ52	f	ɔŋ	52	防			1		fɔŋ52	fong4	
+2512	fong2\5	f	ong	2\5	fɔŋ31	f	ɔŋ	31	谎			1		fɔŋ31	fong2\5	
+2513	fong2\5	f	ong	2\5	fɔŋ31	f	ɔŋ	31	妨			1		fɔŋ31	fong2\5	
+2514	fong2\5	f	ong	2\5	fɔŋ31	f	ɔŋ	31	仿			1		fɔŋ31	fong2\5	
+2515	fong2\5	f	ong	2\5	fɔŋ31	f	ɔŋ	31	访			1		fɔŋ31	fong2\5	
+2516	fong3	f	ong	3	fɔŋ24	f	ɔŋ	24	放			1		fɔŋ24	fong3	
+2517	wong1	w	ong	1	wɔŋ44	w	ɔŋ	44	汪			1		wɔŋ44	wong1	
+2518	wong4	w	ong	4	wɔŋ52	w	ɔŋ	52	黄			1		wɔŋ52	wong4	
+2519	wong4	w	ong	4	wɔŋ52	w	ɔŋ	52	簧			1		wɔŋ52	wong4	
+2520	wong4	w	ong	4	wɔŋ52	w	ɔŋ	52	皇			1		wɔŋ52	wong4	
+2521	wong4	w	ong	4	wɔŋ52	w	ɔŋ	52	蝗			1		wɔŋ52	wong4	
+2522	wong4	w	ong	4	wɔŋ52	w	ɔŋ	52	王			1		wɔŋ52	wong4	
+2523	wong2\5	w	ong	2\5	wɔŋ31	w	ɔŋ	31	枉			1		wɔŋ31	wong2\5	
+2524	wong2\5	w	ong	2\5	wɔŋ31	w	ɔŋ	31	往			1		wɔŋ31	wong2\5	
+2525	wong6	w	ong	6	wɔŋ54	w	ɔŋ	54	旺			1		wɔŋ54	wong6	
+2526	dong1	d	ong	1	tɔŋ44	t	ɔŋ	44	当	当然		1		tɔŋ44	dong1	
+2527	dong2\5	d	ong	2\5	tɔŋ31	t	ɔŋ	31	党			1		tɔŋ31	dong2\5	
+2528	dong2\5	d	ong	2\5	tɔŋ31	t	ɔŋ	31	挡			1		tɔŋ31	dong2\5	
+2529	dong3	d	ong	3	tɔŋ24	t	ɔŋ	24	当	当铺		1		tɔŋ24	dong3	
+2530	dong6	d	ong	6	tɔŋ54	t	ɔŋ	54	荡			1		tɔŋ54	dong6	
+2531	dong6	d	ong	6	tɔŋ54	t	ɔŋ	54	宕			1		tɔŋ54	dong6	
+2532	tong1	t	ong	1	tʰɔŋ44	tʰ	ɔŋ	44	汤			1		tʰɔŋ44	tong1	
+2533	tong4	t	ong	4	tʰɔŋ52	tʰ	ɔŋ	52	堂			1		tʰɔŋ52	tong4	
+2534	tong4	t	ong	4	tʰɔŋ52	tʰ	ɔŋ	52	棠			1		tʰɔŋ52	tong4	
+2535	tong4	t	ong	4	tʰɔŋ52	tʰ	ɔŋ	52	螳			1		tʰɔŋ52	tong4	
+2536	tong4	t	ong	4	tʰɔŋ52	tʰ	ɔŋ	52	唐			1		tʰɔŋ52	tong4	
+2537	tong4	t	ong	4	tʰɔŋ52	tʰ	ɔŋ	52	糖			1		tʰɔŋ52	tong4	
+2538	tong4	t	ong	4	tʰɔŋ52	tʰ	ɔŋ	52	塘			1		tʰɔŋ52	tong4	
+2539	tong2\5	t	ong	2\5	tʰɔŋ31	tʰ	ɔŋ	31	倘			1		tʰɔŋ31	tong2\5	
+2540	tong2\5	t	ong	2\5	tʰɔŋ31	tʰ	ɔŋ	31	躺			1		tʰɔŋ31	tong2\5	
+2541	tong3	t	ong	3	tʰɔŋ24	tʰ	ɔŋ	24	烫			1		tʰɔŋ24	tong3	
+2542	nong4	n	ong	4	nɔŋ52	n	ɔŋ	52	囊			1		nɔŋ52	nong4	
+2543	nong6	n	ong	6	nɔŋ54	n	ɔŋ	54	□	裤裆		1		nɔŋ54	nong6	
+2544	long4	l	ong	4	lɔŋ52	l	ɔŋ	52	郎			1		lɔŋ52	long4	
+2545	long4	l	ong	4	lɔŋ52	l	ɔŋ	52	廊			1		lɔŋ52	long4	
+2546	long4	l	ong	4	lɔŋ52	l	ɔŋ	52	狼			1		lɔŋ52	long4	
+2547	long2\5	l	ong	2\5	lɔŋ31	l	ɔŋ	31	朗			1		lɔŋ31	long2\5	
+2548	long6	l	ong	6	lɔŋ54	l	ɔŋ	54	浪			1		lɔŋ54	long6	
+2549	slong1	sl	ong	1	ɬɔŋ44	ɬ	ɔŋ	44	桑			1		ɬɔŋ44	slong1	
+2550	slong3	sl	ong	3	ɬɔŋ24	ɬ	ɔŋ	24	丧			1		ɬɔŋ24	slong3	
+2551	gong1	g	ong	1	kɔŋ44	k	ɔŋ	44	冈			1		kɔŋ44	gong1	
+2552	gong1	g	ong	1	kɔŋ44	k	ɔŋ	44	岗			1		kɔŋ44	gong1	
+2553	gong1	g	ong	1	kɔŋ44	k	ɔŋ	44	刚			1		kɔŋ44	gong1	
+2554	gong1	g	ong	1	kɔŋ44	k	ɔŋ	44	纲			1		kɔŋ44	gong1	
+2555	gong1	g	ong	1	kɔŋ44	k	ɔŋ	44	钢			1		kɔŋ44	gong1	
+2556	gong1	g	ong	1	kɔŋ44	k	ɔŋ	44	缸			1		kɔŋ44	gong1	
+2557	gong1	g	ong	1	kɔŋ44	k	ɔŋ	44	光			1		kɔŋ44	gong1	
+2558	gong1	g	ong	1	kɔŋ44	k	ɔŋ	44	江			1		kɔŋ44	gong1	
+2559	gong1	g	ong	1	kɔŋ44	k	ɔŋ	44	扛			1		kɔŋ44	gong1	
+2560	gong2\5	g	ong	2\5	kɔŋ31	k	ɔŋ	31	广			1		kɔŋ31	gong2\5	
+2561	gong2\5	g	ong	2\5	kɔŋ31	k	ɔŋ	31	讲			1		kɔŋ31	gong2\5	
+2562	gong2\5	g	ong	2\5	kɔŋ31	k	ɔŋ	31	港			1		kɔŋ31	gong2\5	
+2563	gong3	g	ong	3	kɔŋ24	k	ɔŋ	24	钢			1		kɔŋ24	gong3	
+2564	gong3	g	ong	3	kɔŋ24	k	ɔŋ	24	降			1		kɔŋ24	gong3	
+2565	gong6	g	ong	6	kɔŋ54	k	ɔŋ	54	逛			1		kɔŋ54	gong6	
+2566	kong1	k	ong	1	kʰɔŋ44	kʰ	ɔŋ	44	匡			1		kʰɔŋ44	kong1	
+2567	kong1	k	ong	1	kʰɔŋ44	kʰ	ɔŋ	44	筐			1		kʰɔŋ44	kong1	
+2568	kong1	k	ong	1	kʰɔŋ44	kʰ	ɔŋ	44	眶			1		kʰɔŋ44	kong1	
+2569	kong1	k	ong	1	kʰɔŋ44	kʰ	ɔŋ	44	慷			1		kʰɔŋ44	kong1	
+2570	kong4	k	ong	4	kʰɔŋ52	kʰ	ɔŋ	52	狂			1		kʰɔŋ52	kong4	
+2571	kong3	k	ong	3	kʰɔŋ24	kʰ	ɔŋ	24	抗			1		kʰɔŋ24	kong3	
+2572	kong3	k	ong	3	kʰɔŋ24	kʰ	ɔŋ	24	旷			1		kʰɔŋ24	kong3	
+2573	kong3	k	ong	3	kʰɔŋ24	kʰ	ɔŋ	24	况			1		kʰɔŋ24	kong3	
+2574	kong3	k	ong	3	kʰɔŋ24	kʰ	ɔŋ	24	矿			1		kʰɔŋ24	kong3	
+2575	hong1	h	ong	1	hɔŋ44	h	ɔŋ	44	康			1		hɔŋ44	hong1	
+2576	hong1	h	ong	1	hɔŋ44	h	ɔŋ	44	糠			1		hɔŋ44	hong1	
+2577	hong1	h	ong	1	hɔŋ44	h	ɔŋ	44	腔			1		hɔŋ44	hong1	
+2578	hong4	h	ong	4	hɔŋ52	h	ɔŋ	52	行	行列，银行		1		hɔŋ52	hong4	
+2579	hong4	h	ong	4	hɔŋ52	h	ɔŋ	52	航			1		hɔŋ52	hong4	
+2580	hong4	h	ong	4	hɔŋ52	h	ɔŋ	52	杭			1		hɔŋ52	hong4	
+2581	hong6	h	ong	6	hɔŋ54	h	ɔŋ	54	项			1		hɔŋ54	hong6	
+2582	hong6	h	ong	6	hɔŋ54	h	ɔŋ	54	巷			1		hɔŋ54	hong6	
+2583	ngong4	ng	ong	4	ŋɔŋ52	ŋ	ɔŋ	52	昂			1		ŋɔŋ52	ngong4	
+2584	ngong6	ng	ong	6	ŋɔŋ54	ŋ	ɔŋ	54	憨			1		ŋɔŋ54	ngong6	
+2585	zong1	z	ong	1	tsɔŋ44	ts	ɔŋ	44	赃			1		tsɔŋ44	zong1	
+2586	zong1	z	ong	1	tsɔŋ44	ts	ɔŋ	44	脏	不干净		1		tsɔŋ44	zong1	
+2587	zong1	z	ong	1	tsɔŋ44	ts	ɔŋ	44	庄			1		tsɔŋ44	zong1	
+2588	zong1	z	ong	1	tsɔŋ44	ts	ɔŋ	44	装			1		tsɔŋ44	zong1	
+2589	zong3	z	ong	3	tsɔŋ24	ts	ɔŋ	24	葬			1		tsɔŋ24	zong3	
+2590	zong3	z	ong	3	tsɔŋ24	ts	ɔŋ	24	壮			1		tsɔŋ24	zong3	
+2591	zong6	z	ong	6	tsɔŋ54	ts	ɔŋ	54	藏	西藏		1		tsɔŋ54	zong6	
+2592	zong6	z	ong	6	tsɔŋ54	ts	ɔŋ	54	脏	肝脏		1		tsɔŋ54	zong6	
+2593	zong6	z	ong	6	tsɔŋ54	ts	ɔŋ	54	状			1		tsɔŋ54	zong6	
+2594	zong6	z	ong	6	tsɔŋ54	ts	ɔŋ	54	撞			1		tsɔŋ54	zong6	
+2595	cong1	c	ong	1	tsʰɔŋ44	tsʰ	ɔŋ	44	仓			1		tsʰɔŋ44	cong1	
+2596	cong1	c	ong	1	tsʰɔŋ44	tsʰ	ɔŋ	44	苍			1		tsʰɔŋ44	cong1	
+2597	cong1	c	ong	1	tsʰɔŋ44	tsʰ	ɔŋ	44	疮			1		tsʰɔŋ44	cong1	
+2598	cong1	c	ong	1	tsʰɔŋ44	tsʰ	ɔŋ	44	窗			1		tsʰɔŋ44	cong1	
+2599	cong4	c	ong	4	tsʰɔŋ52	tsʰ	ɔŋ	52	藏			1		tsʰɔŋ52	cong4	
+2600	cong4	c	ong	4	tsʰɔŋ52	tsʰ	ɔŋ	52	床			1		tsʰɔŋ52	cong4	
+2601	cong2\5	c	ong	2\5	tsʰɔŋ31	tsʰ	ɔŋ	31	闯			1		tsʰɔŋ31	cong2\5	
+2602	cong3	c	ong	3	tsʰɔŋ24	tsʰ	ɔŋ	24	创			1		tsʰɔŋ24	cong3	
+2603	song1	s	ong	1	sɔŋ44	s	ɔŋ	44	霜			1		sɔŋ44	song1	
+2604	song1	s	ong	1	sɔŋ44	s	ɔŋ	44	孀			1		sɔŋ44	song1	
+2605	song1	s	ong	1	sɔŋ44	s	ɔŋ	44	双			1		sɔŋ44	song1	
+2606	song2\5	s	ong	2\5	sɔŋ31	s	ɔŋ	31	爽			1		sɔŋ31	song2\5	
+2607	ong1		ong	1	ɔŋ44	Ǿ	ɔŋ	44	肮			1		ɔŋ44	ong1	
+2608	bung2\5	b	ung	2\5	puŋ31	p	uŋ	31	捧	捧着		1		puŋ31	bung2\5	
+2609	pung4	p	ung	4	pʰuŋ52	pʰ	uŋ	52	篷			1		pʰuŋ52	pung4	
+2610	pung4	p	ung	4	pʰuŋ52	pʰ	uŋ	52	蓬			1		pʰuŋ52	pung4	
+2611	pung2\5	p	ung	2\5	pʰuŋ31	pʰ	uŋ	31	捧	吹捧		1		pʰuŋ31	pung2\5	
+2612	pung3	p	ung	3	pʰuŋ24	pʰ	uŋ	24	碰			1		pʰuŋ24	pung3	
+2613	mung1	m	ung	1	muŋ44	m	uŋ	44	□	口感粉糯		1		muŋ44	mung1	
+2614	mung4	m	ung	4	muŋ52	m	uŋ	52	蒙			1		muŋ52	mung4	
+2615	mung2\5	m	ung	2\5	muŋ31	m	uŋ	31	懵			1		muŋ31	mung2\5	
+2616	mung6	m	ung	6	muŋ54	m	uŋ	54	梦			1		muŋ54	mung6	
+2617	fung1	f	ung	1	fuŋ44	f	uŋ	44	风			1		fuŋ44	fung1	
+2618	fung1	f	ung	1	fuŋ44	f	uŋ	44	枫			1		fuŋ44	fung1	
+2619	fung1	f	ung	1	fuŋ44	f	uŋ	44	疯			1		fuŋ44	fung1	
+2620	fung1	f	ung	1	fuŋ44	f	uŋ	44	丰			1		fuŋ44	fung1	
+2621	fung1	f	ung	1	fuŋ44	f	uŋ	44	封			1		fuŋ44	fung1	
+2622	fung1	f	ung	1	fuŋ44	f	uŋ	44	峰			1		fuŋ44	fung1	
+2623	fung1	f	ung	1	fuŋ44	f	uŋ	44	蜂			1		fuŋ44	fung1	
+2624	fung1	f	ung	1	fuŋ44	f	uŋ	44	锋			1		fuŋ44	fung1	
+2625	fung4	f	ung	4	fuŋ52	f	uŋ	52	冯			1		fuŋ52	fung4	
+2626	fung4	f	ung	4	fuŋ52	f	uŋ	52	逢			1		fuŋ52	fung4	
+2627	fung4	f	ung	4	fuŋ52	f	uŋ	52	缝			1		fuŋ52	fung4	
+2628	fung2\5	f	ung	2\5	fuŋ31	f	uŋ	31	讽			1		fuŋ31	fung2\5	
+2629	fung6	f	ung	6	fuŋ54	f	uŋ	54	凤			1		fuŋ54	fung6	
+2630	fung6	f	ung	6	fuŋ54	f	uŋ	54	奉			1		fuŋ54	fung6	
+2631	wung1	w	ung	1	wuŋ44	w	uŋ	44	翁			1		wuŋ44	wung1	
+2632	wung1	w	ung	1	wuŋ44	w	uŋ	44	嗡			1		wuŋ44	wung1	
+2633	dung1	d	ung	1	tuŋ44	t	uŋ	44	东			1		tuŋ44	dung1	
+2634	dung1	d	ung	1	tuŋ44	t	uŋ	44	冬			1		tuŋ44	dung1	
+2635	dung2\5	d	ung	2\5	tuŋ31	t	uŋ	31	董			1		tuŋ31	dung2\5	
+2636	dung2\5	d	ung	2\5	tuŋ31	t	uŋ	31	懂			1		tuŋ31	dung2\5	
+2637	dung3	d	ung	3	tuŋ24	t	uŋ	24	冻			1		tuŋ24	dung3	
+2638	dung6	d	ung	6	tuŋ54	t	uŋ	54	动			1		tuŋ54	dung6	
+2639	dung6	d	ung	6	tuŋ54	t	uŋ	54	栋			1		tuŋ54	dung6	
+2640	dung6	d	ung	6	tuŋ54	t	uŋ	54	洞			1		tuŋ54	dung6	
+2641	tung1	t	ung	1	tʰuŋ44	tʰ	uŋ	44	通			1		tʰuŋ44	tung1	
+2642	tung1	t	ung	1	tʰuŋ44	tʰ	uŋ	44	囱			1		tʰuŋ44	tung1	
+2643	tung4	t	ung	4	tʰuŋ52	tʰ	uŋ	52	同			1		tʰuŋ52	tung4	
+2644	tung4	t	ung	4	tʰuŋ52	tʰ	uŋ	52	铜			1		tʰuŋ52	tung4	
+2645	tung4	t	ung	4	tʰuŋ52	tʰ	uŋ	52	桐			1		tʰuŋ52	tung4	
+2646	tung4	t	ung	4	tʰuŋ52	tʰ	uŋ	52	筒			1		tʰuŋ52	tung4	
+2647	tung4	t	ung	4	tʰuŋ52	tʰ	uŋ	52	童			1		tʰuŋ52	tung4	
+2648	tung4	t	ung	4	tʰuŋ52	tʰ	uŋ	52	瞳			1		tʰuŋ52	tung4	
+2649	tung2\5	t	ung	2\5	tʰuŋ31	tʰ	uŋ	31	桶			1		tʰuŋ31	tung2\5	
+2650	tung2\5	t	ung	2\5	tʰuŋ31	tʰ	uŋ	31	捅			1		tʰuŋ31	tung2\5	
+2651	tung2\5	t	ung	2\5	tʰuŋ31	tʰ	uŋ	31	统			1		tʰuŋ31	tung2\5	
+2652	tung3	t	ung	3	tʰuŋ24	tʰ	uŋ	24	痛			1		tʰuŋ24	tung3	
+2653	nung1	n	ung	1	nuŋ44	n	uŋ	44	□	煮糊了		1		nuŋ44	nung1	
+2654	nung4	n	ung	4	nuŋ52	n	uŋ	52	农			1		nuŋ52	nung4	
+2655	nung4	n	ung	4	nuŋ52	n	uŋ	52	脓			1		nuŋ52	nung4	
+2656	nung4	n	ung	4	nuŋ52	n	uŋ	52	浓			1		nuŋ52	nung4	
+2657	nung6	n	ung	6	nuŋ54	n	uŋ	54	弄			1		nuŋ54	nung6	
+2658	lung1	l	ung	1	luŋ44	l	uŋ	44	窿			1		luŋ44	lung1	
+2659	lung4	l	ung	4	luŋ52	l	uŋ	52	笼	鸡笼		1		luŋ52	lung4	
+2660	lung4	l	ung	4	luŋ52	l	uŋ	52	聋			1		luŋ52	lung4	
+2661	lung4	l	ung	4	luŋ52	l	uŋ	52	隆			1		luŋ52	lung4	
+2662	lung4	l	ung	4	luŋ52	l	uŋ	52	龙			1		luŋ52	lung4	
+2663	lung2\5	l	ung	2\5	luŋ31	l	uŋ	31	笼	笼罩		1		luŋ31	lung2\5	
+2664	lung2\5	l	ung	2\5	luŋ31	l	uŋ	31	拢			1		luŋ31	lung2\5	
+2665	lung2\5	l	ung	2\5	luŋ31	l	uŋ	31	陇			1		luŋ31	lung2\5	
+2666	lung2\5	l	ung	2\5	luŋ31	l	uŋ	31	垄			1		luŋ31	lung2\5	
+2667	lung3	l	ung	3	luŋ24	l	uŋ	24	□	弯腰		1		luŋ24	lung3	
+2668	slung1	sl	ung	1	ɬuŋ44	ɬ	uŋ	44	松	轻松		1		ɬuŋ44	slung1	
+2669	slung3	sl	ung	3	ɬuŋ24	ɬ	uŋ	24	送			1		ɬuŋ24	slung3	
+2670	slung3	sl	ung	3	ɬuŋ24	ɬ	uŋ	24	宋			1		ɬuŋ24	slung3	
+2671	slung3	sl	ung	3	ɬuŋ24	ɬ	uŋ	24	诵			1		ɬuŋ24	slung3	
+2672	slung3	sl	ung	3	ɬuŋ24	ɬ	uŋ	24	颂			1		ɬuŋ24	slung3	
+2673	slung3	sl	ung	3	ɬuŋ24	ɬ	uŋ	24	讼			1		ɬuŋ24	slung3	
+2674	gung1	g	ung	1	kuŋ44	k	uŋ	44	公			1		kuŋ44	gung1	
+2675	gung1	g	ung	1	kuŋ44	k	uŋ	44	蚣			1		kuŋ44	gung1	
+2676	gung1	g	ung	1	kuŋ44	k	uŋ	44	工			1		kuŋ44	gung1	
+2677	gung1	g	ung	1	kuŋ44	k	uŋ	44	功			1		kuŋ44	gung1	
+2678	gung1	g	ung	1	kuŋ44	k	uŋ	44	攻			1		kuŋ44	gung1	
+2679	gung1	g	ung	1	kuŋ44	k	uŋ	44	弓			1		kuŋ44	gung1	
+2680	gung1	g	ung	1	kuŋ44	k	uŋ	44	躬			1		kuŋ44	gung1	
+2681	gung1	g	ung	1	kuŋ44	k	uŋ	44	宫			1		kuŋ44	gung1	
+2682	gung1	g	ung	1	kuŋ44	k	uŋ	44	恭			1		kuŋ44	gung1	
+2683	gung1	g	ung	1	kuŋ44	k	uŋ	44	供			1		kuŋ44	gung1	
+2684	gung2\5	g	ung	2\5	kuŋ31	k	uŋ	31	汞			1		kuŋ31	gung2\5	
+2685	gung2\5	g	ung	2\5	kuŋ31	k	uŋ	31	拱			1		kuŋ31	gung2\5	
+2686	gung2\5	g	ung	2\5	kuŋ31	k	uŋ	31	巩			1		kuŋ31	gung2\5	
+2687	gung3	g	ung	3	kuŋ24	k	uŋ	24	贡			1		kuŋ24	gung3	
+2688	gung3	g	ung	3	kuŋ24	k	uŋ	24	供			1		kuŋ24	gung3	
+2689	gung6	g	ung	6	kuŋ54	k	uŋ	54	共			1		kuŋ54	gung6	
+2690	kung4	k	ung	4	kʰuŋ52	kʰ	uŋ	52	穷			1		kʰuŋ52	kung4	
+2691	hung1	h	ung	1	huŋ44	h	uŋ	44	空			1		huŋ44	hung1	
+2692	hung1	h	ung	1	huŋ44	h	uŋ	44	烘			1		huŋ44	hung1	
+2693	hung1	h	ung	1	huŋ44	h	uŋ	44	胸			1		huŋ44	hung1	
+2694	hung1	h	ung	1	huŋ44	h	uŋ	44	凶			1		huŋ44	hung1	
+2695	hung4	h	ung	4	huŋ52	h	uŋ	52	红			1		huŋ52	hung4	
+2696	hung4	h	ung	4	huŋ52	h	uŋ	52	洪			1		huŋ52	hung4	
+2697	hung4	h	ung	4	huŋ52	h	uŋ	52	鸿			1		huŋ52	hung4	
+2698	hung4	h	ung	4	huŋ52	h	uŋ	52	虹			1		huŋ52	hung4	
+2699	hung4	h	ung	4	huŋ52	h	uŋ	52	熊			1		huŋ52	hung4	
+2700	hung4	h	ung	4	huŋ52	h	uŋ	52	雄			1		huŋ52	hung4	
+2701	hung2\5	h	ung	2\5	huŋ31	h	uŋ	31	孔			1		huŋ31	hung2\5	
+2702	hung2\5	h	ung	2\5	huŋ31	h	uŋ	31	恐			1		huŋ31	hung2\5	
+2703	hung3	h	ung	3	huŋ24	h	uŋ	24	控			1		huŋ24	hung3	
+2704	ngung3	ng	ung	3	ŋuŋ24	ŋ	uŋ	24	□	弯腰		1		ŋuŋ24	ngung3	
+2705	zung1	z	ung	1	tsuŋ44	ts	uŋ	44	棕			1		tsuŋ44	zung1	
+2706	zung1	z	ung	1	tsuŋ44	ts	uŋ	44	宗			1		tsuŋ44	zung1	
+2707	zung1	z	ung	1	tsuŋ44	ts	uŋ	44	中	当中		1		tsuŋ44	zung1	
+2708	zung1	z	ung	1	tsuŋ44	ts	uŋ	44	忠			1		tsuŋ44	zung1	
+2709	zung1	z	ung	1	tsuŋ44	ts	uŋ	44	终			1		tsuŋ44	zung1	
+2710	zung1	z	ung	1	tsuŋ44	ts	uŋ	44	踪			1		tsuŋ44	zung1	
+2711	zung1	z	ung	1	tsuŋ44	ts	uŋ	44	钟			1		tsuŋ44	zung1	
+2712	zung1	z	ung	1	tsuŋ44	ts	uŋ	44	盅			1		tsuŋ44	zung1	
+2713	zung2\5	z	ung	2\5	tsuŋ31	ts	uŋ	31	总			1		tsuŋ31	zung2\5	
+2714	zung2\5	z	ung	2\5	tsuŋ31	ts	uŋ	31	冢			1		tsuŋ31	zung2\5	
+2715	zung2\5	z	ung	2\5	tsuŋ31	ts	uŋ	31	种	种类		1		tsuŋ31	zung2\5	
+2716	zung2\5	z	ung	2\5	tsuŋ31	ts	uŋ	31	肿			1		tsuŋ31	zung2\5	
+2717	zung3	z	ung	3	tsuŋ24	ts	uŋ	24	粽			1		tsuŋ24	zung3	
+2718	zung3	z	ung	3	tsuŋ24	ts	uŋ	24	中	射中		1		tsuŋ24	zung3	
+2719	zung3	z	ung	3	tsuŋ24	ts	uŋ	24	众			1		tsuŋ24	zung3	
+2720	zung3	z	ung	3	tsuŋ24	ts	uŋ	24	纵			1		tsuŋ24	zung3	
+2721	zung3	z	ung	3	tsuŋ24	ts	uŋ	24	种	种树		1		tsuŋ24	zung3	
+2722	zung6	z	ung	6	tsuŋ54	ts	uŋ	54	重	轻重		1		tsuŋ54	zung6	
+2723	cung1	c	ung	1	tsʰuŋ44	tsʰ	uŋ	44	聪			1		tsʰuŋ44	cung1	
+2724	cung1	c	ung	1	tsʰuŋ44	tsʰ	uŋ	44	匆			1		tsʰuŋ44	cung1	
+2725	cung1	c	ung	1	tsʰuŋ44	tsʰ	uŋ	44	葱			1		tsʰuŋ44	cung1	
+2726	cung1	c	ung	1	tsʰuŋ44	tsʰ	uŋ	44	充			1		tsʰuŋ44	cung1	
+2727	cung1	c	ung	1	tsʰuŋ44	tsʰ	uŋ	44	冲			1		tsʰuŋ44	cung1	
+2728	cung4	c	ung	4	tsʰuŋ52	tsʰ	uŋ	52	丛			1		tsʰuŋ52	cung4	
+2729	cung4	c	ung	4	tsʰuŋ52	tsʰ	uŋ	52	松	松树		1		tsʰuŋ52	cung4	
+2730	cung4	c	ung	4	tsʰuŋ52	tsʰ	uŋ	52	虫			1		tsʰuŋ52	cung4	
+2731	cung4	c	ung	4	tsʰuŋ52	tsʰ	uŋ	52	崇			1		tsʰuŋ52	cung4	
+2732	cung4	c	ung	4	tsʰuŋ52	tsʰ	uŋ	52	从			1		tsʰuŋ52	cung4	
+2733	cung4	c	ung	4	tsʰuŋ52	tsʰ	uŋ	52	重	重复		1		tsʰuŋ52	cung4	
+2734	cung2\5	c	ung	2\5	tsʰuŋ31	tsʰ	uŋ	31	重	轻重		1		tsʰuŋ31	cung2\5	
+2735	cung2\5	c	ung	2\5	tsʰuŋ31	tsʰ	uŋ	31	宠			1		tsʰuŋ31	cung2\5	
+2736	cung3	c	ung	3	tsʰuŋ24	tsʰ	uŋ	24	□	碰到		1		tsʰuŋ24	cung3	
+2737	jung1	j	ung	1	juŋ44	j	uŋ	44	雍			1		juŋ44	jung1	
+2738	jung1	j	ung	1	juŋ44	j	uŋ	44	拥			1		juŋ44	jung1	
+2739	jung1	j	ung	1	juŋ44	j	uŋ	44	庸			1		juŋ44	jung1	
+2740	jung4	j	ung	4	juŋ52	j	uŋ	52	荣			1		juŋ52	jung4	
+2741	jung4	j	ung	4	juŋ52	j	uŋ	52	戎			1		juŋ52	jung4	
+2742	jung4	j	ung	4	juŋ52	j	uŋ	52	绒			1		juŋ52	jung4	
+2743	jung4	j	ung	4	juŋ52	j	uŋ	52	融			1		juŋ52	jung4	
+2744	jung4	j	ung	4	juŋ52	j	uŋ	52	茸			1		juŋ52	jung4	
+2745	jung4	j	ung	4	juŋ52	j	uŋ	52	容			1		juŋ52	jung4	
+2746	jung4	j	ung	4	juŋ52	j	uŋ	52	蓉			1		juŋ52	jung4	
+2747	jung2\5	j	ung	2\5	juŋ31	j	uŋ	31	冗			1		juŋ31	jung2\5	
+2748	jung2\5	j	ung	2\5	juŋ31	j	uŋ	31	甬			1		juŋ31	jung2\5	
+2749	jung2\5	j	ung	2\5	juŋ31	j	uŋ	31	勇			1		juŋ31	jung2\5	
+2750	jung2\5	j	ung	2\5	juŋ31	j	uŋ	31	涌			1		juŋ31	jung2\5	
+2751	jung6	j	ung	6	juŋ54	j	uŋ	54	用			1		juŋ54	jung6	
+2752	njung4	nj	ung	4	ȵuŋ52	ȵ	uŋ	52	绒			1		ȵuŋ52	njung4	
+2753	ung1		ung	1	uŋ44	Ǿ	uŋ	44	□	埋起来		1		uŋ44	ung1	
+2754	ung4		ung	4	uŋ52	Ǿ	uŋ	52	吴			1		uŋ52	ung4	
+2755	ung4		ung	4	uŋ52	Ǿ	uŋ	52	蜈			1		uŋ52	ung4	
+2756	ung4		ung	4	uŋ52	Ǿ	uŋ	52	吾			1		uŋ52	ung4	
+2757	ung4		ung	4	uŋ52	Ǿ	uŋ	52	梧			1		uŋ52	ung4	
+2758	ung2\5		ung	2\5	uŋ31	Ǿ	uŋ	31	□	推		1		uŋ31	ung2\5	
+2759	ung2\5		ung	2\5	uŋ31	Ǿ	uŋ	31	午			1		uŋ31	ung2\5	
+2760	ung2\5		ung	2\5	uŋ31	Ǿ	uŋ	31	五			1		uŋ31	ung2\5	
+2761	ung2\5		ung	2\5	uŋ31	Ǿ	uŋ	31	伍			1		uŋ31	ung2\5	
+2762	ung3		ung	3	uŋ24	Ǿ	uŋ	24	瓮			1		uŋ24	ung3	
+2763	ung6		ung	6	uŋ54	Ǿ	uŋ	54	误			1		uŋ54	ung6	
+2764	ung6		ung	6	uŋ54	Ǿ	uŋ	54	悟			1		uŋ54	ung6	
+2765	deng1	d	eng	1	tiɛŋ44	t	iɛŋ	44	□	啄		1		tiɛŋ44	deng1	
+2766	deng4	d	eng	4	tiɛŋ52	t	iɛŋ	52	□	怎样		1		tiɛŋ52	deng4	
+2767	deng2\5	d	eng	2\5	tiɛŋ31	t	iɛŋ	31	□	怎样		1		tiɛŋ31	deng2\5	
+2768	neng4	n	eng	4	niɛŋ52	n	iɛŋ	52	娘			1		niɛŋ52	neng4	
+2769	neng6	n	eng	6	niɛŋ54	n	iɛŋ	54	酿			1		niɛŋ54	neng6	
+2770	leng4	l	eng	4	liɛŋ52	l	iɛŋ	52	良			1		liɛŋ52	leng4	
+2771	leng4	l	eng	4	liɛŋ52	l	iɛŋ	52	凉			1		liɛŋ52	leng4	
+2772	leng4	l	eng	4	liɛŋ52	l	iɛŋ	52	量	丈量		1		liɛŋ52	leng4	
+2773	leng4	l	eng	4	liɛŋ52	l	iɛŋ	52	粮			1		liɛŋ52	leng4	
+2774	leng4	l	eng	4	liɛŋ52	l	iɛŋ	52	梁			1		liɛŋ52	leng4	
+2775	leng4	l	eng	4	liɛŋ52	l	iɛŋ	52	粱			1		liɛŋ52	leng4	
+2776	leng2\5	l	eng	2\5	liɛŋ31	l	iɛŋ	31	两			1		liɛŋ31	leng2\5	
+2777	leng6	l	eng	6	liɛŋ54	l	iɛŋ	54	亮			1		liɛŋ54	leng6	
+2778	leng6	l	eng	6	liɛŋ54	l	iɛŋ	54	谅			1		liɛŋ54	leng6	
+2779	leng6	l	eng	6	liɛŋ54	l	iɛŋ	54	辆			1		liɛŋ54	leng6	
+2780	leng6	l	eng	6	liɛŋ54	l	iɛŋ	54	量	数量		1		liɛŋ54	leng6	
+2781	sleng1	sl	eng	1	ɬiɛŋ44	ɬ	iɛŋ	44	相	互相		1		ɬiɛŋ44	sleng1	
+2782	sleng1	sl	eng	1	ɬiɛŋ44	ɬ	iɛŋ	44	箱			1		ɬiɛŋ44	sleng1	
+2783	sleng1	sl	eng	1	ɬiɛŋ44	ɬ	iɛŋ	44	厢			1		ɬiɛŋ44	sleng1	
+2784	sleng1	sl	eng	1	ɬiɛŋ44	ɬ	iɛŋ	44	湘			1		ɬiɛŋ44	sleng1	
+2785	sleng1	sl	eng	1	ɬiɛŋ44	ɬ	iɛŋ	44	襄			1		ɬiɛŋ44	sleng1	
+2786	sleng1	sl	eng	1	ɬiɛŋ44	ɬ	iɛŋ	44	镶			1		ɬiɛŋ44	sleng1	
+2787	sleng2\5	sl	eng	2\5	ɬiɛŋ31	ɬ	iɛŋ	31	想			1		ɬiɛŋ31	sleng2\5	
+2788	sleng3	sl	eng	3	ɬiɛŋ24	ɬ	iɛŋ	24	相	相貌		1		ɬiɛŋ24	sleng3	
+2789	geng1	g	eng	1	kiɛŋ44	k	iɛŋ	44	疆			1		kiɛŋ44	geng1	
+2790	geng1	g	eng	1	kiɛŋ44	k	iɛŋ	44	僵			1		kiɛŋ44	geng1	
+2791	geng1	g	eng	1	kiɛŋ44	k	iɛŋ	44	薑			1		kiɛŋ44	geng1	
+2792	geng1	g	eng	1	kiɛŋ44	k	iɛŋ	44	姜			1		kiɛŋ44	geng1	
+2793	keng4	k	eng	4	kʰiɛŋ52	kʰ	iɛŋ	52	强			1		kʰiɛŋ52	keng4	
+2794	keng2\5	k	eng	2\5	kʰiɛŋ31	kʰ	iɛŋ	31	强	勉强		1		kʰiɛŋ31	keng2\5	
+2795	heng1	h	eng	1	hiɛŋ44	h	iɛŋ	44	香			1		hiɛŋ44	heng1	
+2796	heng1	h	eng	1	hiɛŋ44	h	iɛŋ	44	乡			1		hiɛŋ44	heng1	
+2797	heng2\5	h	eng	2\5	hiɛŋ31	h	iɛŋ	31	享			1		hiɛŋ31	heng2\5	
+2798	heng2\5	h	eng	2\5	hiɛŋ31	h	iɛŋ	31	响			1		hiɛŋ31	heng2\5	
+2799	heng2\5	h	eng	2\5	hiɛŋ31	h	iɛŋ	31	饷			1		hiɛŋ31	heng2\5	
+2800	heng3	h	eng	3	hiɛŋ24	h	iɛŋ	24	向			1		hiɛŋ24	heng3	
+2801	zeng1	z	eng	1	tsiɛŋ44	ts	iɛŋ	44	将	将来		1		tsiɛŋ44	zeng1	
+2802	zeng1	z	eng	1	tsiɛŋ44	ts	iɛŋ	44	浆			1		tsiɛŋ44	zeng1	
+2803	zeng1	z	eng	1	tsiɛŋ44	ts	iɛŋ	44	张			1		tsiɛŋ44	zeng1	
+2804	zeng1	z	eng	1	tsiɛŋ44	ts	iɛŋ	44	章			1		tsiɛŋ44	zeng1	
+2805	zeng1	z	eng	1	tsiɛŋ44	ts	iɛŋ	44	樟			1		tsiɛŋ44	zeng1	
+2806	zeng2\5	z	eng	2\5	tsiɛŋ31	ts	iɛŋ	31	蒋			1		tsiɛŋ31	zeng2\5	
+2807	zeng2\5	z	eng	2\5	tsiɛŋ31	ts	iɛŋ	31	奖			1		tsiɛŋ31	zeng2\5	
+2808	zeng2\5	z	eng	2\5	tsiɛŋ31	ts	iɛŋ	31	桨			1		tsiɛŋ31	zeng2\5	
+2809	zeng2\5	z	eng	2\5	tsiɛŋ31	ts	iɛŋ	31	长	生长		1		tsiɛŋ31	zeng2\5	
+2810	zeng2\5	z	eng	2\5	tsiɛŋ31	ts	iɛŋ	31	涨			1		tsiɛŋ31	zeng2\5	
+2811	zeng2\5	z	eng	2\5	tsiɛŋ31	ts	iɛŋ	31	掌			1		tsiɛŋ31	zeng2\5	
+2812	zeng3	z	eng	3	tsiɛŋ24	ts	iɛŋ	24	酱			1		tsiɛŋ24	zeng3	
+2813	zeng3	z	eng	3	tsiɛŋ24	ts	iɛŋ	24	仗			1		tsiɛŋ24	zeng3	
+2814	zeng3	z	eng	3	tsiɛŋ24	ts	iɛŋ	24	将	大将		1		tsiɛŋ24	zeng3	
+2815	zeng3	z	eng	3	tsiɛŋ24	ts	iɛŋ	24	匠			1		tsiɛŋ24	zeng3	
+2816	zeng3	z	eng	3	tsiɛŋ24	ts	iɛŋ	24	帐			1		tsiɛŋ24	zeng3	
+2817	zeng3	z	eng	3	tsiɛŋ24	ts	iɛŋ	24	账			1		tsiɛŋ24	zeng3	
+2818	zeng3	z	eng	3	tsiɛŋ24	ts	iɛŋ	24	胀			1		tsiɛŋ24	zeng3	
+2819	zeng3	z	eng	3	tsiɛŋ24	ts	iɛŋ	24	障			1		tsiɛŋ24	zeng3	
+2820	zeng3	z	eng	3	tsiɛŋ24	ts	iɛŋ	24	瘴			1		tsiɛŋ24	zeng3	
+2821	zeng6	z	eng	6	tsiɛŋ54	ts	iɛŋ	54	象			1		tsiɛŋ54	zeng6	
+2822	ceng1	c	eng	1	tsʰiɛŋ44	tsʰ	iɛŋ	44	枪			1		tsʰiɛŋ44	ceng1	
+2823	ceng1	c	eng	1	tsʰiɛŋ44	tsʰ	iɛŋ	44	昌			1		tsʰiɛŋ44	ceng1	
+2824	ceng1	c	eng	1	tsʰiɛŋ44	tsʰ	iɛŋ	44	羌			1		tsʰiɛŋ44	ceng1	
+2825	ceng4	c	eng	4	tsʰiɛŋ52	tsʰ	iɛŋ	52	墙			1		tsʰiɛŋ52	ceng4	
+2826	ceng4	c	eng	4	tsʰiɛŋ52	tsʰ	iɛŋ	52	详			1		tsʰiɛŋ52	ceng4	
+2827	ceng4	c	eng	4	tsʰiɛŋ52	tsʰ	iɛŋ	52	祥			1		tsʰiɛŋ52	ceng4	
+2828	ceng4	c	eng	4	tsʰiɛŋ52	tsʰ	iɛŋ	52	长	长短		1		tsʰiɛŋ52	ceng4	
+2829	ceng4	c	eng	4	tsʰiɛŋ52	tsʰ	iɛŋ	52	肠			1		tsʰiɛŋ52	ceng4	
+2830	ceng4	c	eng	4	tsʰiɛŋ52	tsʰ	iɛŋ	52	场			1		tsʰiɛŋ52	ceng4	
+2831	ceng2\5	c	eng	2\5	tsʰiɛŋ31	tsʰ	iɛŋ	31	抢			1		tsʰiɛŋ31	ceng2\5	
+2832	ceng3	c	eng	3	tsʰiɛŋ24	tsʰ	iɛŋ	24	畅			1		tsʰiɛŋ24	ceng3	
+2833	ceng3	c	eng	3	tsʰiɛŋ24	tsʰ	iɛŋ	24	唱			1		tsʰiɛŋ24	ceng3	
+2834	ceng3	c	eng	3	tsʰiɛŋ24	tsʰ	iɛŋ	24	倡			1		tsʰiɛŋ24	ceng3	
+2835	seng1	s	eng	1	siɛŋ44	s	iɛŋ	44	商			1		siɛŋ44	seng1	
+2836	seng1	s	eng	1	siɛŋ44	s	iɛŋ	44	伤			1		siɛŋ44	seng1	
+2837	seng4	s	eng	4	siɛŋ52	s	iɛŋ	52	常			1		siɛŋ52	seng4	
+2838	seng4	s	eng	4	siɛŋ52	s	iɛŋ	52	尝			1		siɛŋ52	seng4	
+2839	seng4	s	eng	4	siɛŋ52	s	iɛŋ	52	裳	衣裳		1		siɛŋ52	seng4	
+2840	seng4	s	eng	4	siɛŋ52	s	iɛŋ	52	偿			1		siɛŋ52	seng4	
+2841	seng2\5	s	eng	2\5	siɛŋ31	s	iɛŋ	31	赏			1		siɛŋ31	seng2\5	
+2842	seng2\5	s	eng	2\5	siɛŋ31	s	iɛŋ	31	晌			1		siɛŋ31	seng2\5	
+2843	seng2\5	s	eng	2\5	siɛŋ31	s	iɛŋ	31	上	上山		1		siɛŋ31	seng2\5	
+2844	seng6	s	eng	6	siɛŋ54	s	iɛŋ	54	尚			1		siɛŋ54	seng6	
+2845	seng6	s	eng	6	siɛŋ54	s	iɛŋ	54	上	上面		1		siɛŋ54	seng6	
+2846	jeng1	j	eng	1	jiɛŋ44	j	iɛŋ	44	央			1		jiɛŋ44	jeng1	
+2847	jeng1	j	eng	1	jiɛŋ44	j	iɛŋ	44	秧			1		jiɛŋ44	jeng1	
+2848	jeng1	j	eng	1	jiɛŋ44	j	iɛŋ	44	殃			1		jiɛŋ44	jeng1	
+2849	jeng1	j	eng	1	jiɛŋ44	j	iɛŋ	44	鸯			1		jiɛŋ44	jeng1	
+2850	jeng4	j	eng	4	jiɛŋ52	j	iɛŋ	52	羊			1		jiɛŋ52	jeng4	
+2851	jeng4	j	eng	4	jiɛŋ52	j	iɛŋ	52	洋			1		jiɛŋ52	jeng4	
+2852	jeng4	j	eng	4	jiɛŋ52	j	iɛŋ	52	杨			1		jiɛŋ52	jeng4	
+2853	jeng4	j	eng	4	jiɛŋ52	j	iɛŋ	52	阳			1		jiɛŋ52	jeng4	
+2854	jeng4	j	eng	4	jiɛŋ52	j	iɛŋ	52	扬			1		jiɛŋ52	jeng4	
+2855	jeng4	j	eng	4	jiɛŋ52	j	iɛŋ	52	疡			1		jiɛŋ52	jeng4	
+2856	jeng2\5	j	eng	2\5	jiɛŋ31	j	iɛŋ	31	壤	土壤		1		jiɛŋ31	jeng2\5	
+2857	jeng2\5	j	eng	2\5	jiɛŋ31	j	iɛŋ	31	攘			1		jiɛŋ31	jeng2\5	
+2858	jeng2\5	j	eng	2\5	jiɛŋ31	j	iɛŋ	31	仰			1		jiɛŋ31	jeng2\5	
+2859	jeng2\5	j	eng	2\5	jiɛŋ31	j	iɛŋ	31	养			1		jiɛŋ31	jeng2\5	
+2860	jeng2\5	j	eng	2\5	jiɛŋ31	j	iɛŋ	31	氧			1		jiɛŋ31	jeng2\5	
+2861	jeng6	j	eng	6	jiɛŋ54	j	iɛŋ	54	样			1		jiɛŋ54	jeng6	
+2862	njeng2\5	nj	eng	2\5	ȵiɛŋ31	ȵ	iɛŋ	31	痒			1		ȵiɛŋ31	njeng2\5	
+2863	njeng6	nj	eng	6	ȵiɛŋ54	ȵ	iɛŋ	54	让			1		ȵiɛŋ54	njeng6	
+2864	daap8	d	aap	8	tap31	t	ap	31	答			1		tap31	daap8	1
+2865	daap8	d	aap	8	tap31	t	ap	31	搭			1		tap31	daap8	1
+2866	daap9	d	aap	9	tap55	t	ap	55	踏			1		tap55	daap9	1
+2867	daap9	d	aap	9	tap55	t	ap	55	沓			1		tap55	daap9	1
+2868	taap8	t	aap	8	tʰap31	tʰ	ap	31	塔			1		tʰap31	taap8	1
+2869	taap8	t	aap	8	tʰap31	tʰ	ap	31	塌			1		tʰap31	taap8	1
+2870	taap8	t	aap	8	tʰap31	tʰ	ap	31	溻			1		tʰap31	taap8	1
+2871	naap9	n	aap	9	nap55	n	ap	55	纳			1		nap55	naap9	1
+2872	naap9	n	aap	9	nap55	n	ap	55	捺			1		nap55	naap9	1
+2873	laap9	l	aap	9	lap55	l	ap	55	腊			1		lap55	laap9	1
+2874	laap9	l	aap	9	lap55	l	ap	55	蜡			1		lap55	laap9	1
+2875	gaap8	g	aap	8	kap31	k	ap	31	鸽			1		kap31	gaap8	1
+2876	gaap8	g	aap	8	kap31	k	ap	31	甲			1		kap31	gaap8	1
+2877	gaap8	g	aap	8	kap31	k	ap	31	胛			1		kap31	gaap8	1
+2878	gaap8	g	aap	8	kap31	k	ap	31	匣			1		kap31	gaap8	1
+2879	gaap9	g	aap	9	kap55	k	ap	55	夹			1		kap55	gaap9	1
+2880	haap9	h	aap	9	hap55	h	ap	55	恰			1		hap55	haap9	1
+2881	zaap8	z	aap	8	tsap31	ts	ap	31	眨			1		tsap31	zaap8	1
+2882	zaap9	z	aap	9	tsap55	ts	ap	55	杂			1		tsap55	zaap9	1
+2883	zaap9	z	aap	9	tsap55	ts	ap	55	闸			1		tsap55	zaap9	1
+2884	caap8	c	aap	8	tsʰap31	tsʰ	ap	31	插			1		tsʰap31	caap8	1
+2885	njaap8	nj	aap	8	ȵap31	ȵ	ap	31	眨			1		ȵap31	njaap8	1
+2886	aap8		aap	8	ap31	Ǿ	ap	31	鸭			1		ap31	aap8	1
+2887	dap7	d	ap	7	tɐp35	t	ɐp	35	□	舀		1		tɐp35	dap7	1
+2888	dap9	d	ap	9	tɐp55	t	ɐp	55	□	打		1		tɐp55	dap9	1
+2889	tap7	t	ap	7	tʰɐp35	tʰ	ɐp	35	□	对准、凑近		1		tʰɐp35	tap7	1
+2890	nap7	n	ap	7	nɐp35	n	ɐp	35	粒			1		nɐp35	nap7	1
+2891	nap7	n	ap	7	nɐp35	n	ɐp	35	凹			1		nɐp35	nap7	1
+2892	lap7	l	ap	7	lɐp35	l	ɐp	35	□	陷下去		1		lɐp35	lap7	1
+2893	lap7	l	ap	7	lɐp35	l	ɐp	35	笠			1		lɐp35	lap7	1
+2894	lap9	l	ap	9	lɐp55	l	ɐp	55	立			1		lɐp55	lap9	1
+2895	slap7	sl	ap	7	ɬɐp35	ɬ	ɐp	35	圾			1		ɬɐp35	slap7	1
+2896	gap7	g	ap	7	kɐp35	k	ɐp	35	蛤			1		kɐp35	gap7	1
+2897	hap9	h	ap	9	hɐp55	h	ɐp	55	合			1		hɐp55	hap9	1
+2898	hap9	h	ap	9	hɐp55	h	ɐp	55	恰			1		hɐp55	hap9	1
+2899	hap9	h	ap	9	hɐp55	h	ɐp	55	洽			1		hɐp55	hap9	1
+2900	hap9	h	ap	9	hɐp55	h	ɐp	55	盒			1		hɐp55	hap9	1
+2901	ngap7	ng	ap	7	ŋɐp35	ŋ	ɐp	35	□	说		1		ŋɐp35	ngap7	1
+2902	zap7	z	ap	7	tsɐp35	ts	ɐp	35	执			1		tsɐp35	zap7	1
+2903	zap7	z	ap	7	tsɐp35	ts	ɐp	35	汁			1		tsɐp35	zap7	1
+2904	zap9	z	ap	9	tsɐp55	ts	ɐp	55	集			1		tsɐp55	zap9	1
+2905	zap9	z	ap	9	tsɐp55	ts	ɐp	55	习			1		tsɐp55	zap9	1
+2906	zap9	z	ap	9	tsɐp55	ts	ɐp	55	袭			1		tsɐp55	zap9	1
+2907	zap9	z	ap	9	tsɐp55	ts	ɐp	55	什	什锦		1		tsɐp55	zap9	1
+2908	cap7	c	ap	7	tsʰɐp35	tsʰ	ɐp	35	缉			1		tsʰɐp35	cap7	1
+2909	cap7	c	ap	7	tsʰɐp35	tsʰ	ɐp	35	辑			1		tsʰɐp35	cap7	1
+2910	sap7	s	ap	7	sɐp35	s	ɐp	35	湿			1		sɐp35	sap7	1
+2911	sap9	s	ap	9	sɐp55	s	ɐp	55	十			1		sɐp55	sap9	1
+2912	sap9	s	ap	9	sɐp55	s	ɐp	55	什	什么		1		sɐp55	sap9	1
+2913	sap9	s	ap	9	sɐp55	s	ɐp	55	拾			1		sɐp55	sap9	1
+2914	jap7	j	ap	7	jɐp35	j	ɐp	35	泣			1		jɐp35	jap7	1
+2915	jap7	j	ap	7	jɐp35	j	ɐp	35	揖			1		jɐp35	jap7	1
+2916	jap9	j	ap	9	jɐp55	j	ɐp	55	入			1		jɐp55	jap9	1
+2917	njap7	nj	ap	7	ȵɐp35	ȵ	ɐp	35	□	搀扶		1		ȵɐp35	njap7	1
+2918	ap7		ap	7	ɐp35	Ǿ	ɐp	35	□	敷		1		ɐp35	ap7	1
+2919	dep9	d	ep	9	tiɛp55	t	iɛp	55	碟			1		tiɛp55	dep9	1
+2920	dep9	d	ep	9	tiɛp55	t	iɛp	55	蝶			1		tiɛp55	dep9	1
+2921	dep9	d	ep	9	tiɛp55	t	iɛp	55	谍			1		tiɛp55	dep9	1
+2922	dep9	d	ep	9	tiɛp55	t	iɛp	55	叠			1		tiɛp55	dep9	1
+2923	nep8	n	ep	8	niɛp31	n	iɛp	31	□	瘪		1		niɛp31	nep8	1
+2924	nep9	n	ep	9	niɛp55	n	iɛp	55	镊			1		niɛp55	nep9	1
+2925	nep9	n	ep	9	niɛp55	n	iɛp	55	蹑			1		niɛp55	nep9	1
+2926	nep9	n	ep	9	niɛp55	n	iɛp	55	聂			1		niɛp55	nep9	1
+2927	lep9	l	ep	9	liɛp55	l	iɛp	55	□	嘴馋		1		liɛp55	lep9	1
+2928	gep7	g	ep	7	kiɛp35	k	iɛp	35	急			1		kiɛp35	gep7	1
+2929	gep8	g	ep	8	kiɛp31	k	iɛp	31	□	苦涩		1		kiɛp31	gep8	1
+2930	gep9	g	ep	9	kiɛp55	k	iɛp	55	夹			1		kiɛp55	gep9	1
+2931	gep9	g	ep	9	kiɛp55	k	iɛp	55	颊			1		kiɛp55	gep9	1
+2932	kep7	k	ep	7	kʰiɛp35	kʰ	iɛp	35	级			1		kʰiɛp35	kep7	1
+2933	kep7	k	ep	7	kʰiɛp35	kʰ	iɛp	35	给	给予		1		kʰiɛp35	kep7	1
+2934	kep7	k	ep	7	kʰiɛp35	kʰ	iɛp	35	吸			1		kʰiɛp35	kep7	1
+2935	ep9		ep	9	iɛp55	Ǿ	iɛp	55	□	挤		1		iɛp55	ep9	1
+2936	dip9	d	ip	9	tip55	t	ip	55	碟			1		tip55	dip9	1
+2937	dip9	d	ip	9	tip55	t	ip	55	蝶			1		tip55	dip9	1
+2938	dip9	d	ip	9	tip55	t	ip	55	谍			1		tip55	dip9	1
+2939	dip9	d	ip	9	tip55	t	ip	55	叠			1		tip55	dip9	1
+2940	tip8	t	ip	8	tʰip31	tʰ	ip	31	贴			1		tʰip31	tip8	1
+2941	nip9	n	ip	9	nip55	n	ip	55	孽			1		nip55	nip9	1
+2942	nip9	n	ip	9	nip55	n	ip	55	镊			1		nip55	nip9	1
+2943	nip9	n	ip	9	nip55	n	ip	55	蹑			1		nip55	nip9	1
+2944	nip9	n	ip	9	nip55	n	ip	55	聂			1		nip55	nip9	1
+2945	lip9	l	ip	9	lip55	l	ip	55	猎			1		lip55	lip9	1
+2946	gip8	g	ip	8	kip31	k	ip	31	劫			1		kip31	gip8	1
+2947	hip8	h	ip	8	hip31	h	ip	31	歉			1		hip31	hip8	1
+2948	hip8	h	ip	8	hip31	h	ip	31	怯			1		hip31	hip8	1
+2949	hip8	h	ip	8	hip31	h	ip	31	胁			1		hip31	hip8	1
+2950	hip9	h	ip	9	hip55	h	ip	55	协			1		hip55	hip9	1
+2951	hip9	h	ip	9	hip55	h	ip	55	狭			1		hip55	hip9	1
+2952	hip9	h	ip	9	hip55	h	ip	55	峡			1		hip55	hip9	1
+2953	hip9	h	ip	9	hip55	h	ip	55	侠			1		hip55	hip9	1
+2954	hip9	h	ip	9	hip55	h	ip	55	挟			1		hip55	hip9	1
+2955	zip8	z	ip	8	tsip31	ts	ip	31	接			1		tsip31	zip8	1
+2956	zip9	z	ip	9	tsip55	ts	ip	55	捷			1		tsip55	zip9	1
+2957	cip8	c	ip	8	tsʰip31	tsʰ	ip	31	妾			1		tsʰip31	cip8	1
+2958	jip8	j	ip	8	jip31	j	ip	31	腌			1		jip31	jip8	1
+2959	jip9	j	ip	9	jip55	j	ip	55	叶			1		jip55	jip9	1
+2960	jip9	j	ip	9	jip55	j	ip	55	页			1		jip55	jip9	1
+2961	jip9	j	ip	9	jip55	j	ip	55	业			1		jip55	jip9	1
+2962	baat8	b	aat	8	pat31	p	at	31	八			1		pat31	baat8	1
+2963	baat9	b	aat	9	pat55	p	at	55	拔			1		pat55	baat9	1
+2964	maat8	m	aat	8	mat31	m	at	31	抹			1		mat31	maat8	1
+2965	maat9	m	aat	9	mat55	m	at	55	袜			1		mat55	maat9	1
+2966	faat8	f	aat	8	fat31	f	at	31	法			1		fat31	faat8	1
+2967	faat8	f	aat	8	fat31	f	at	31	发			1		fat31	faat8	1
+2968	faat9	f	aat	9	fat55	f	at	55	乏			1		fat55	faat9	1
+2969	faat9	f	aat	9	fat55	f	at	55	伐			1		fat55	faat9	1
+2970	faat9	f	aat	9	fat55	f	at	55	筏			1		fat55	faat9	1
+2971	faat9	f	aat	9	fat55	f	at	55	罚			1		fat55	faat9	1
+2972	faat9	f	aat	9	fat55	f	at	55	阀			1		fat55	faat9	1
+2973	waat8	w	aat	8	wat31	w	at	31	挖			1		wat31	waat8	1
+2974	waat9	w	aat	9	wat55	w	at	55	滑			1		wat55	waat9	1
+2975	waat9	w	aat	9	wat55	w	at	55	猾			1		wat55	waat9	1
+2976	daat9	d	aat	9	tat55	t	at	55	达			1		tat55	daat9	1
+2977	taat8	t	aat	8	tʰat31	tʰ	at	31	獭			1		tʰat31	taat8	1
+2978	taat8	t	aat	8	tʰat31	tʰ	at	31	遢			1		tʰat31	taat8	1
+2979	naat8	n	aat	8	nat31	n	at	31	□	烫		1		nat31	naat8	1
+2980	laat9	l	aat	9	lat55	l	at	55	辣			1		lat55	laat9	1
+2981	laat9	l	aat	9	lat55	l	at	55	邋			1		lat55	laat9	1
+2982	slaat8	sl	aat	8	ɬat31	ɬ	at	31	撒			1		ɬat31	slaat8	1
+2983	slaat8	sl	aat	8	ɬat31	ɬ	at	31	萨			1		ɬat31	slaat8	1
+2984	slaat8	sl	aat	8	ɬat31	ɬ	at	31	煞			1		ɬat31	slaat8	1
+2985	gaat8	g	aat	8	kat31	k	at	31	擖			1		kat31	gaat8	1
+2986	gaat8	g	aat	8	kat31	k	at	31	刮			1		kat31	gaat8	1
+2987	kaat8	k	aat	8	kʰat31	kʰ	at	31	□	碰到		1		kʰat31	kaat8	1
+2988	zaat8	z	aat	8	tsat31	ts	at	31	扎			1		tsat31	zaat8	1
+2989	zaat8	z	aat	8	tsat31	ts	at	31	轧			1		tsat31	zaat8	1
+2990	caat8	c	aat	8	tsʰat31	tsʰ	at	31	察			1		tsʰat31	caat8	1
+2991	caat8	c	aat	8	tsʰat31	tsʰ	at	31	刷			1		tsʰat31	caat8	1
+2992	saat8	s	aat	8	sat31	s	at	31	杀			1		sat31	saat8	1
+2993	aat8		aat	8	at31	Ǿ	at	31	压			1		at31	aat8	1
+2994	aat8		aat	8	at31	Ǿ	at	31	押			1		at31	aat8	1
+2995	bat7	b	at	7	pɐt35	p	ɐt	35	笔			1		pɐt35	bat7	1
+2996	bat7	b	at	7	pɐt35	p	ɐt	35	毕			1		pɐt35	bat7	1
+2997	bat7	b	at	7	pɐt35	p	ɐt	35	不			1		pɐt35	bat7	1
+2998	pat7	p	at	7	pʰɐt35	pʰ	ɐt	35	匹			1		pʰɐt35	pat7	1
+2999	mat9	m	at	9	mɐt55	m	ɐt	55	密			1		mɐt55	mat9	1
+3000	mat9	m	at	9	mɐt55	m	ɐt	55	蜜			1		mɐt55	mat9	1
+3001	mat9	m	at	9	mɐt55	m	ɐt	55	物			1		mɐt55	mat9	1
+3002	mat9	m	at	9	mɐt55	m	ɐt	55	勿			1		mɐt55	mat9	1
+3003	fat7	f	at	7	fɐt35	f	ɐt	35	窟			1		fɐt35	fat7	1
+3004	fat7	f	at	7	fɐt35	f	ɐt	35	忽			1		fɐt35	fat7	1
+3005	fat9	f	at	9	fɐt55	f	ɐt	55	佛			1		fɐt55	fat9	1
+3006	wat7	w	at	7	wɐt35	w	ɐt	35	屈			1		wɐt35	wat7	1
+3007	wat7	w	at	7	wɐt35	w	ɐt	35	郁			1		wɐt35	wat7	1
+3008	wat9	w	at	9	wɐt55	w	ɐt	55	核	果核		1		wɐt55	wat9	1
+3009	dat7	d	at	7	tɐt35	t	ɐt	35	□	放置		1		tɐt35	dat7	1
+3010	dat9	d	at	9	tɐt55	t	ɐt	55	突			1		tɐt55	dat9	1
+3011	tat9	t	at	9	tʰɐt55	tʰ	ɐt	55	□	脱轨		1		tʰɐt55	tat9	1
+3012	nat9	n	at	9	nɐt55	n	ɐt	55	□	怕		1		nɐt55	nat9	1
+3013	lat9	l	at	9	lɐt55	l	ɐt	55	栗			1		lɐt55	lat9	1
+3014	lat9	l	at	9	lɐt55	l	ɐt	55	律			1		lɐt55	lat9	1
+3015	lat9	l	at	9	lɐt55	l	ɐt	55	率			1		lɐt55	lat9	1
+3016	slat7	sl	at	7	ɬɐt35	ɬ	ɐt	35	膝			1		ɬɐt35	slat7	1
+3017	slat7	sl	at	7	ɬɐt35	ɬ	ɐt	35	瑟			1		ɬɐt35	slat7	1
+3018	slat7	sl	at	7	ɬɐt35	ɬ	ɐt	35	戌			1		ɬɐt35	slat7	1
+3019	slat7	sl	at	7	ɬɐt35	ɬ	ɐt	35	恤			1		ɬɐt35	slat7	1
+3020	slat7	sl	at	7	ɬɐt35	ɬ	ɐt	35	率			1		ɬɐt35	slat7	1
+3021	slat7	sl	at	7	ɬɐt35	ɬ	ɐt	35	蟀			1		ɬɐt35	slat7	1
+3022	gat7	g	at	7	kɐt35	k	ɐt	35	吉			1		kɐt35	gat7	1
+3023	gat7	g	at	7	kɐt35	k	ɐt	35	骨			1		kɐt35	gat7	1
+3024	gat7	g	at	7	kɐt35	k	ɐt	35	橘			1		kɐt35	gat7	1
+3025	gat9	g	at	9	kɐt55	k	ɐt	55	掘			1		kɐt55	gat9	1
+3026	gat9	g	at	9	kɐt55	k	ɐt	55	倔			1		kɐt55	gat9	1
+3027	hat7	h	at	7	hɐt35	h	ɐt	35	讫			1		hɐt35	hat7	1
+3028	hat7	h	at	7	hɐt35	h	ɐt	35	乞			1		hɐt35	hat7	1
+3029	hat7	h	at	7	hɐt35	h	ɐt	35	吃			1		hɐt35	hat7	1
+3030	hat9	h	at	9	hɐt55	h	ɐt	55	核	核心		1		hɐt55	hat9	1
+3031	zat7	z	at	7	tsɐt35	ts	ɐt	35	□	瓶盖		1		tsɐt35	zat7	1
+3032	zat7	z	at	7	tsɐt35	ts	ɐt	35	质			1		tsɐt35	zat7	1
+3033	zat7	z	at	7	tsɐt35	ts	ɐt	35	卒			1		tsɐt35	zat7	1
+3034	zat9	z	at	9	tsɐt55	ts	ɐt	55	疾			1		tsɐt55	zat9	1
+3035	zat9	z	at	9	tsɐt55	ts	ɐt	55	侄			1		tsɐt55	zat9	1
+3036	zat9	z	at	9	tsɐt55	ts	ɐt	55	□	赊账		1		tsɐt55	zat9	1
+3037	cat7	c	at	7	tsʰɐt35	tsʰ	ɐt	35	七			1		tsʰɐt35	cat7	1
+3038	cat7	c	at	7	tsʰɐt35	tsʰ	ɐt	35	漆			1		tsʰɐt35	cat7	1
+3039	cat7	c	at	7	tsʰɐt35	tsʰ	ɐt	35	出			1		tsʰɐt35	cat7	1
+3040	sat7	s	at	7	sɐt35	s	ɐt	35	失			1		sɐt35	sat7	1
+3041	sat7	s	at	7	sɐt35	s	ɐt	35	室			1		sɐt35	sat7	1
+3042	sat7	s	at	7	sɐt35	s	ɐt	35	虱			1		sɐt35	sat7	1
+3043	sat9	s	at	9	sɐt55	s	ɐt	55	实			1		sɐt55	sat9	1
+3044	sat9	s	at	9	sɐt55	s	ɐt	55	术			1		sɐt55	sat9	1
+3045	sat9	s	at	9	sɐt55	s	ɐt	55	述			1		sɐt55	sat9	1
+3046	jat7	j	at	7	jɐt35	j	ɐt	35	一			1		jɐt35	jat7	1
+3047	njat9	nj	at	9	ȵɐt55	ȵ	ɐt	55	日			1		ȵɐt55	njat9	1
+3048	slot7	sl	ot	7	ɬɔt35	ɬ	ɔt	35	唆			1		ɬɔt35	slot7	1
+3049	got8	g	ot	8	kɔt31	k	ɔt	31	割			1		kɔt31	got8	1
+3050	got8	g	ot	8	kɔt31	k	ɔt	31	葛			1		kɔt31	got8	1
+3051	hot8	h	ot	8	hɔt31	h	ɔt	31	渴			1		hɔt31	hot8	1
+3052	hot8	h	ot	8	hɔt31	h	ɔt	31	喝			1		hɔt31	hot8	1
+3053	beat7	b	eat	7	pət35	p	ət	35	逼			1		pət35	beat7	1
+3054	beat7	b	eat	7	pət35	p	ət	35	碧			1		pət35	beat7	1
+3055	beat7	b	eat	7	pət35	p	ət	35	璧			1		pət35	beat7	1
+3056	beat7	b	eat	7	pət35	p	ət	35	壁			1		pət35	beat7	1
+3057	peat7	p	eat	7	pʰət35	pʰ	ət	35	僻			1		pʰət35	peat7	1
+3058	peat7	p	eat	7	pʰət35	pʰ	ət	35	辟			1		pʰət35	peat7	1
+3059	peat7	p	eat	7	pʰət35	pʰ	ət	35	劈			1		pʰət35	peat7	1
+3060	meat7	m	eat	7	mət35	m	ət	35	□	用手分开		1		mət35	meat7	1
+3061	meat9	m	eat	9	mət55	m	ət	55	觅			1		mət55	meat9	1
+3062	feat9	f	eat	9	fət55	f	ət	55	□	甩		1		fət55	feat9	1
+3063	weat9	w	eat	9	wət55	w	ət	55	域			1		wət55	weat9	1
+3064	deat7	d	eat	7	tət35	t	ət	35	的	目的		1		tət35	deat7	1
+3065	deat7	d	eat	7	tət35	t	ət	35	滴			1		tət35	deat7	1
+3066	deat7	d	eat	7	tət35	t	ət	35	嫡			1		tət35	deat7	1
+3067	deat9	d	eat	9	tət55	t	ət	55	笛			1		tət55	deat9	1
+3068	deat9	d	eat	9	tət55	t	ət	55	敌			1		tət55	deat9	1
+3069	deat9	d	eat	9	tət55	t	ət	55	狄			1		tət55	deat9	1
+3070	deat9	d	eat	9	tət55	t	ət	55	籴			1		tət55	deat9	1
+3071	teat7	t	eat	7	tʰət35	tʰ	ət	35	踢			1		tʰət35	teat7	1
+3072	teat7	t	eat	7	tʰət35	tʰ	ət	35	剔			1		tʰət35	teat7	1
+3073	neat7	n	eat	7	nət35	n	ət	35	□	玩		1		nət35	neat7	1
+3074	neat7	n	eat	7	nət35	n	ət	35	匿			1		nət35	neat7	1
+3075	neat9	n	eat	9	nət55	n	ət	55	逆			1		nət55	neat9	1
+3076	neat9	n	eat	9	nət55	n	ət	55	溺			1		nət55	neat9	1
+3077	leat9	l	eat	9	lət55	l	ət	55	力			1		lət55	leat9	1
+3078	leat9	l	eat	9	lət55	l	ət	55	历			1		lət55	leat9	1
+3079	leat9	l	eat	9	lət55	l	ət	55	吏			1		lət55	leat9	1
+3080	sleat7	sl	eat	7	ɬət35	ɬ	ət	35	息			1		ɬət35	sleat7	1
+3081	sleat7	sl	eat	7	ɬət35	ɬ	ət	35	熄			1		ɬət35	sleat7	1
+3082	sleat7	sl	eat	7	ɬət35	ɬ	ət	35	媳			1		ɬət35	sleat7	1
+3083	sleat7	sl	eat	7	ɬət35	ɬ	ət	35	啬			1		ɬət35	sleat7	1
+3084	sleat7	sl	eat	7	ɬət35	ɬ	ət	35	惜			1		ɬət35	sleat7	1
+3085	sleat7	sl	eat	7	ɬət35	ɬ	ət	35	昔			1		ɬət35	sleat7	1
+3086	sleat7	sl	eat	7	ɬət35	ɬ	ət	35	释			1		ɬət35	sleat7	1
+3087	sleat7	sl	eat	7	ɬət35	ɬ	ət	35	锡			1		ɬət35	sleat7	1
+3088	sleat7	sl	eat	7	ɬət35	ɬ	ət	35	析			1		ɬət35	sleat7	1
+3089	geat7	g	eat	7	kət35	k	ət	35	击			1		kət35	geat7	1
+3090	geat7	g	eat	7	kət35	k	ət	35	激			1		kət35	geat7	1
+3091	geat9	g	eat	9	kət55	k	ət	55	极			1		kət55	geat9	1
+3092	geat9	g	eat	9	kət55	k	ət	55	屐			1		kət55	geat9	1
+3093	zeat7	z	eat	7	tsət35	ts	ət	35	即			1		tsət35	zeat7	1
+3094	zeat7	z	eat	7	tsət35	ts	ət	35	织			1		tsət35	zeat7	1
+3095	zeat7	z	eat	7	tsət35	ts	ət	35	职			1		tsət35	zeat7	1
+3096	zeat7	z	eat	7	tsət35	ts	ət	35	戟			1		tsət35	zeat7	1
+3097	zeat7	z	eat	7	tsət35	ts	ət	35	积			1		tsət35	zeat7	1
+3098	zeat7	z	eat	7	tsət35	ts	ət	35	迹			1		tsət35	zeat7	1
+3099	zeat7	z	eat	7	tsət35	ts	ət	35	脊			1		tsət35	zeat7	1
+3100	zeat7	z	eat	7	tsət35	ts	ət	35	只			1		tsət35	zeat7	1
+3101	zeat7	z	eat	7	tsət35	ts	ət	35	炙			1		tsət35	zeat7	1
+3102	zeat7	z	eat	7	tsət35	ts	ət	35	绩			1		tsət35	zeat7	1
+3103	zeat9	z	eat	9	tsət55	ts	ət	55	直			1		tsət55	zeat9	1
+3104	zeat9	z	eat	9	tsət55	ts	ət	55	值			1		tsət55	zeat9	1
+3105	zeat9	z	eat	9	tsət55	ts	ət	55	殖			1		tsət55	zeat9	1
+3106	zeat9	z	eat	9	tsət55	ts	ət	55	植			1		tsət55	zeat9	1
+3107	zeat9	z	eat	9	tsət55	ts	ət	55	籍			1		tsət55	zeat9	1
+3108	zeat9	z	eat	9	tsət55	ts	ət	55	藉			1		tsət55	zeat9	1
+3109	zeat9	z	eat	9	tsət55	ts	ət	55	席			1		tsət55	zeat9	1
+3110	zeat9	z	eat	9	tsət55	ts	ət	55	夕			1		tsət55	zeat9	1
+3111	zeat9	z	eat	9	tsət55	ts	ət	55	掷			1		tsət55	zeat9	1
+3112	zeat9	z	eat	9	tsət55	ts	ət	55	寂			1		tsət55	zeat9	1
+3113	ceat7	c	eat	7	tsʰət35	tsʰ	ət	35	饬			1		tsʰət35	ceat7	1
+3114	ceat7	c	eat	7	tsʰət35	tsʰ	ət	35	赤			1		tsʰət35	ceat7	1
+3115	ceat7	c	eat	7	tsʰət35	tsʰ	ət	35	斥			1		tsʰət35	ceat7	1
+3116	ceat7	c	eat	7	tsʰət35	tsʰ	ət	35	尺			1		tsʰət35	ceat7	1
+3117	ceat7	c	eat	7	tsʰət35	tsʰ	ət	35	戚			1		tsʰət35	ceat7	1
+3118	seat7	s	eat	7	sət35	s	ət	35	色			1		sət35	seat7	1
+3119	seat7	s	eat	7	sət35	s	ət	35	识			1		sət35	seat7	1
+3120	seat7	s	eat	7	sət35	s	ət	35	式			1		sət35	seat7	1
+3121	seat7	s	eat	7	sət35	s	ət	35	饰			1		sət35	seat7	1
+3122	seat7	s	eat	7	sət35	s	ət	35	适			1		sət35	seat7	1
+3123	seat9	s	eat	9	sət55	s	ət	55	食			1		sət55	seat9	1
+3124	seat9	s	eat	9	sət55	s	ət	55	蚀			1		sət55	seat9	1
+3125	seat9	s	eat	9	sət55	s	ət	55	石			1		sət55	seat9	1
+3126	jeat7	j	eat	7	jət35	j	ət	35	忆			1		jət35	jeat7	1
+3127	jeat7	j	eat	7	jət35	j	ət	35	亿			1		jət35	jeat7	1
+3128	jeat7	j	eat	7	jət35	j	ət	35	抑			1		jət35	jeat7	1
+3129	jeat7	j	eat	7	jət35	j	ət	35	益			1		jət35	jeat7	1
+3130	jeat7	j	eat	7	jət35	j	ət	35	缢			1		jət35	jeat7	1
+3131	jeat9	j	eat	9	jət55	j	ət	55	翼			1		jət55	jeat9	1
+3132	jeat9	j	eat	9	jət55	j	ət	55	亦			1		jət55	jeat9	1
+3133	jeat9	j	eat	9	jət55	j	ət	55	译			1		jət55	jeat9	1
+3134	jeat9	j	eat	9	jət55	j	ət	55	易	交易		1		jət55	jeat9	1
+3135	jeat9	j	eat	9	jət55	j	ət	55	液			1		jət55	jeat9	1
+3136	jeat9	j	eat	9	jət55	j	ət	55	腋			1		jət55	jeat9	1
+3137	eat9		eat	9	ət55	Ǿ	ət	55	嗝			1		ət55	eat9	1
+3138	net9	n	et	9	niɛt55	n	iɛt	55	捏			1		niɛt55	net9	1
+3139	get9	g	et	9	kiɛt55	k	iɛt	55	□	大喊		1		kiɛt55	get9	1
+3140	zet9	z	et	9	tsiɛt55	ts	iɛt	55	□	撕		1		tsiɛt55	zet9	1
+3141	cet9	c	et	9	tsʰiɛt55	tsʰ	iɛt	55	□	喷射		1		tsʰiɛt55	cet9	1
+3142	et8		et	8	iɛt31	Ǿ	iɛt	31	□	铲		1		iɛt31	et8	1
+3143	bit8	b	it	8	pit31	p	it	31	鳖			1		pit31	bit8	1
+3144	bit8	b	it	8	pit31	p	it	31	憋			1		pit31	bit8	1
+3145	bit9	b	it	9	pit55	p	it	55	别			1		pit55	bit9	1
+3146	pit8	p	it	8	pʰit31	pʰ	it	31	撇			1		pʰit31	pit8	1
+3147	mit9	m	it	9	mit55	m	it	55	灭			1		mit55	mit9	1
+3148	mit9	m	it	9	mit55	m	it	55	篾			1		mit55	mit9	1
+3149	dit8	d	it	8	tit31	t	it	31	跌			1		tit31	dit8	1
+3150	tit8	t	it	8	tʰit31	tʰ	it	31	铁			1		tʰit31	tit8	1
+3151	nit7	n	it	7	nit35	n	it	35	□	一点点		1		nit35	nit7	1
+3152	nit8	n	it	8	nit31	n	it	31	涅			1		nit31	nit8	1
+3153	lit9	l	it	9	lit55	l	it	55	列			1		lit55	lit9	1
+3154	lit9	l	it	9	lit55	l	it	55	烈			1		lit55	lit9	1
+3155	lit9	l	it	9	lit55	l	it	55	裂			1		lit55	lit9	1
+3156	lit9	l	it	9	lit55	l	it	55	劣			1		lit55	lit9	1
+3157	slit8	sl	it	8	ɬit31	ɬ	it	31	薛			1		ɬit31	slit8	1
+3158	slit8	sl	it	8	ɬit31	ɬ	it	31	泄			1		ɬit31	slit8	1
+3159	slit8	sl	it	8	ɬit31	ɬ	it	31	屑			1		ɬit31	slit8	1
+3160	slit8	sl	it	8	ɬit31	ɬ	it	31	楔			1		ɬit31	slit8	1
+3161	slit8	sl	it	8	ɬit31	ɬ	it	31	雪			1		ɬit31	slit8	1
+3162	git8	g	it	8	kit31	k	it	31	结			1		kit31	git8	1
+3163	git8	g	it	8	kit31	k	it	31	洁			1		kit31	git8	1
+3164	git9	g	it	9	kit55	k	it	55	杰			1		kit55	git9	1
+3165	kit8	k	it	8	kʰit31	kʰ	it	31	揭			1		kʰit31	kit8	1
+3166	kit8	k	it	8	kʰit31	kʰ	it	31	决			1		kʰit31	kit8	1
+3167	kit8	k	it	8	kʰit31	kʰ	it	31	诀			1		kʰit31	kit8	1
+3168	kit8	k	it	8	kʰit31	kʰ	it	31	缺			1		kʰit31	kit8	1
+3169	hit8	h	it	8	hit31	h	it	31	歇			1		hit31	hit8	1
+3170	hit8	h	it	8	hit31	h	it	31	蝎			1		hit31	hit8	1
+3171	hit8	h	it	8	hit31	h	it	31	血			1		hit31	hit8	1
+3172	hit9	h	it	9	hit55	h	it	55	穴			1		hit55	hit9	1
+3173	zit8	z	it	8	tsit31	ts	it	31	哲			1		tsit31	zit8	1
+3174	zit8	z	it	8	tsit31	ts	it	31	蜇			1		tsit31	zit8	1
+3175	zit8	z	it	8	tsit31	ts	it	31	辙			1		tsit31	zit8	1
+3176	zit8	z	it	8	tsit31	ts	it	31	折	折断		1		tsit31	zit8	1
+3177	zit8	z	it	8	tsit31	ts	it	31	浙			1		tsit31	zit8	1
+3178	zit8	z	it	8	tsit31	ts	it	31	节			1		tsit31	zit8	1
+3179	zit9	z	it	9	tsit55	ts	it	55	绝			1		tsit55	zit9	1
+3180	zit9	z	it	9	tsit55	ts	it	55	截			1		tsit55	zit9	1
+3181	cit8	c	it	8	tsʰit31	tsʰ	it	31	彻			1		tsʰit31	cit8	1
+3182	cit8	c	it	8	tsʰit31	tsʰ	it	31	撤			1		tsʰit31	cit8	1
+3183	cit8	c	it	8	tsʰit31	tsʰ	it	31	设			1		tsʰit31	cit8	1
+3184	cit8	c	it	8	tsʰit31	tsʰ	it	31	切			1		tsʰit31	cit8	1
+3185	sit8	s	it	8	sit31	s	it	31	涉			1		sit31	sit8	1
+3186	sit8	s	it	8	sit31	s	it	31	说			1		sit31	sit8	1
+3187	sit9	s	it	9	sit55	s	it	55	舌			1		sit55	sit9	1
+3188	sit9	s	it	9	sit55	s	it	55	折	折本		1		sit55	sit9	1
+3189	jit8	j	it	8	jit31	j	it	31	乙			1		jit31	jit8	1
+3190	jit9	j	it	9	jit55	j	it	55	拽			1		jit55	jit9	1
+3191	jit9	j	it	9	jit55	j	it	55	悦			1		jit55	jit9	1
+3192	jit9	j	it	9	jit55	j	it	55	阅			1		jit55	jit9	1
+3193	jit9	j	it	9	jit55	j	it	55	越			1		jit55	jit9	1
+3194	jit9	j	it	9	jit55	j	it	55	粤			1		jit55	jit9	1
+3195	njit9	nj	it	9	ȵit55	ȵ	it	55	热			1		ȵit55	njit9	1
+3196	njit9	nj	it	9	ȵit55	ȵ	it	55	月			1		ȵit55	njit9	1
+3197	but8	b	ut	8	put31	p	ut	31	钵			1		put31	but8	1
+3198	but8	b	ut	8	put31	p	ut	31	拨			1		put31	but8	1
+3199	but9	b	ut	9	put55	p	ut	55	勃			1		put55	but9	1
+3200	put8	p	ut	8	pʰut31	pʰ	ut	31	泼			1		pʰut31	put8	1
+3201	mut8	m	ut	8	mut31	m	ut	31	抹			1		mut31	mut8	1
+3202	mut9	m	ut	9	mut55	m	ut	55	末			1		mut55	mut9	1
+3203	mut9	m	ut	9	mut55	m	ut	55	沫			1		mut55	mut9	1
+3204	mut9	m	ut	9	mut55	m	ut	55	没			1		mut55	mut9	1
+3205	fut8	f	ut	8	fut31	f	ut	31	阔			1		fut31	fut8	1
+3206	fut8	f	ut	8	fut31	f	ut	31	豁			1		fut31	fut8	1
+3207	wut9	w	ut	9	wut55	w	ut	55	活			1		wut55	wut9	1
+3208	dut9	d	ut	9	tut55	t	ut	55	夺			1		tut55	dut9	1
+3209	tut8	t	ut	8	tʰut31	tʰ	ut	31	脱			1		tʰut31	tut8	1
+3210	nut7	n	ut	7	nut35	n	ut	35	□	吻		1		nut35	nut7	1
+3211	lut8	l	ut	8	lut31	l	ut	31	捋			1		lut31	lut8	1
+3212	kut8	k	ut	8	kʰut31	kʰ	ut	31	括			1		kʰut31	kut8	1
+3213	cut8	c	ut	8	tsʰut31	tsʰ	ut	31	撮			1		tsʰut31	cut8	1
+3214	cut9	c	ut	9	tsʰut55	tsʰ	ut	55	□	擦除		1		tsʰut55	cut9	1
+3215	ut8		ut	8	ut31	Ǿ	ut	31	□	拨到一边		1		ut31	ut8	1
+3216	bak7	b	ak	7	pak35	p	ak	35	北			1		pak35	bak7	1
+3217	bak7	b	ak	7	pak35	p	ak	35	百			1		pak35	bak7	1
+3218	bak7	b	ak	7	pak35	p	ak	35	柏			1		pak35	bak7	1
+3219	bak7	b	ak	7	pak35	p	ak	35	伯			1		pak35	bak7	1
+3220	bak9	b	ak	9	pak55	p	ak	55	白			1		pak55	bak9	1
+3221	bak9	b	ak	9	pak55	p	ak	55	帛			1		pak55	bak9	1
+3222	pak7	p	ak	7	pʰak35	pʰ	ak	35	拍			1		pʰak35	pak7	1
+3223	pak7	p	ak	7	pʰak35	pʰ	ak	35	魄			1		pʰak35	pak7	1
+3224	mak7	m	ak	7	mak35	m	ak	35	擘			1		mak35	mak7	1
+3225	mak9	m	ak	9	mak55	m	ak	55	墨			1		mak55	mak9	1
+3226	mak9	m	ak	9	mak55	m	ak	55	默			1		mak55	mak9	1
+3227	mak9	m	ak	9	mak55	m	ak	55	陌			1		mak55	mak9	1
+3228	mak9	m	ak	9	mak55	m	ak	55	麦			1		mak55	mak9	1
+3229	mak9	m	ak	9	mak55	m	ak	55	脉			1		mak55	mak9	1
+3230	wak9	w	ak	9	wak55	w	ak	55	画			1		wak55	wak9	1
+3231	wak9	w	ak	9	wak55	w	ak	55	划			1		wak55	wak9	1
+3232	dak7	d	ak	7	tak35	t	ak	35	得			1		tak35	dak7	1
+3233	dak7	d	ak	7	tak35	t	ak	35	德			1		tak35	dak7	1
+3234	dak9	d	ak	9	tak55	t	ak	55	特			1		tak55	dak9	1
+3235	nak7	n	ak	7	nak35	n	ak	35	□	黏		1		nak35	nak7	1
+3236	nak9	n	ak	9	nak55	n	ak	55	□	踩		1		nak55	nak9	1
+3237	lak9	l	ak	9	lak55	l	ak	55	□	刺儿		1		lak55	lak9	1
+3238	lak9	l	ak	9	lak55	l	ak	55	肋			1		lak55	lak9	1
+3239	lak9	l	ak	9	lak55	l	ak	55	勒			1		lak55	lak9	1
+3240	slak7	sl	ak	7	ɬak35	ɬ	ak	35	塞			1		ɬak35	slak7	1
+3241	gak7	g	ak	7	kak35	k	ak	35	格			1		kak35	gak7	1
+3242	gak7	g	ak	7	kak35	k	ak	35	革			1		kak35	gak7	1
+3243	gak7	g	ak	7	kak35	k	ak	35	隔			1		kak35	gak7	1
+3244	kak7	k	ak	7	kʰak35	kʰ	ak	35	□	绊住		1		kʰak35	kak7	1
+3245	kak7	k	ak	7	kʰak35	kʰ	ak	35	刻			1		kʰak35	kak7	1
+3246	hak7	h	ak	7	hak35	h	ak	35	克			1		hak35	hak7	1
+3247	hak7	h	ak	7	hak35	h	ak	35	黑			1		hak35	hak7	1
+3248	hak7	h	ak	7	hak35	h	ak	35	客			1		hak35	hak7	1
+3249	hak7	h	ak	7	hak35	h	ak	35	赫			1		hak35	hak7	1
+3250	hak7	h	ak	7	hak35	h	ak	35	吓			1		hak35	hak7	1
+3251	hak7	h	ak	7	hak35	h	ak	35	刻	（又）		1		hak35	hak7	1
+3252	ngak7	ng	ak	7	ŋak35	ŋ	ak	35	□	欺骗		1		ŋak35	ngak7	1
+3253	ngak7	ng	ak	7	ŋak35	ŋ	ak	35	扼			1		ŋak35	ngak7	1
+3254	ngak9	ng	ak	9	ŋak55	ŋ	ak	55	额			1		ŋak55	ngak9	1
+3255	zak7	z	ak	7	tsak35	ts	ak	35	则			1		tsak35	zak7	1
+3256	zak7	z	ak	7	tsak35	ts	ak	35	鲫			1		tsak35	zak7	1
+3257	zak7	z	ak	7	tsak35	ts	ak	35	窄			1		tsak35	zak7	1
+3258	zak7	z	ak	7	tsak35	ts	ak	35	责			1		tsak35	zak7	1
+3259	zak9	z	ak	9	tsak55	ts	ak	55	泽			1		tsak55	zak9	1
+3260	zak9	z	ak	9	tsak55	ts	ak	55	择			1		tsak55	zak9	1
+3261	zak9	z	ak	9	tsak55	ts	ak	55	宅			1		tsak55	zak9	1
+3262	zak9	z	ak	9	tsak55	ts	ak	55	摘			1		tsak55	zak9	1
+3263	cak7	c	ak	7	tsʰak35	tsʰ	ak	35	侧			1		tsʰak35	cak7	1
+3264	cak7	c	ak	7	tsʰak35	tsʰ	ak	35	测			1		tsʰak35	cak7	1
+3265	cak7	c	ak	7	tsʰak35	tsʰ	ak	35	拆			1		tsʰak35	cak7	1
+3266	cak7	c	ak	7	tsʰak35	tsʰ	ak	35	㿭			1		tsʰak35	cak7	1
+3267	cak7	c	ak	7	tsʰak35	tsʰ	ak	35	策			1		tsʰak35	cak7	1
+3268	cak7	c	ak	7	tsʰak35	tsʰ	ak	35	册			1		tsʰak35	cak7	1
+3269	cak9	c	ak	9	tsʰak55	tsʰ	ak	55	贼			1		tsʰak55	cak9	1
+3270	ak7		ak	7	ak35	Ǿ	ak	35	□	镯子		1		ak35	ak7	1
+3271	ak7		ak	7	ak35	Ǿ	ak	35	握			1		ak35	ak7	1
+3272	bok8	b	ok	8	pɔk31	p	ɔk	31	博			1		pɔk31	bok8	1
+3273	bok8	b	ok	8	pɔk31	p	ɔk	31	驳			1		pɔk31	bok8	1
+3274	bok9	b	ok	9	pɔk55	p	ɔk	55	泊			1		pɔk55	bok9	1
+3275	bok9	b	ok	9	pɔk55	p	ɔk	55	薄			1		pɔk55	bok9	1
+3276	bok9	b	ok	9	pɔk55	p	ɔk	55	雹			1		pɔk55	bok9	1
+3277	pok8	p	ok	8	pʰɔk31	pʰ	ɔk	31	泊	梁山泊		1		pʰɔk31	pok8	1
+3278	pok8	p	ok	8	pʰɔk31	pʰ	ɔk	31	朴			1		pʰɔk31	pok8	1
+3279	mok8	m	ok	8	mɔk31	m	ɔk	31	膜			1		mɔk31	mok8	1
+3280	mok8	m	ok	8	mɔk31	m	ɔk	31	幕			1		mɔk31	mok8	1
+3281	mok8	m	ok	8	mɔk31	m	ɔk	31	寞			1		mɔk31	mok8	1
+3282	mok9	m	ok	9	mɔk55	m	ɔk	55	莫			1		mɔk55	mok9	1
+3283	wok9	w	ok	9	wɔk55	w	ɔk	55	镬			1		wɔk55	wok9	1
+3284	dok9	d	ok	9	tɔk55	t	ɔk	55	铎			1		tɔk55	dok9	1
+3285	dok9	d	ok	9	tɔk55	t	ɔk	55	踱			1		tɔk55	dok9	1
+3286	tok8	t	ok	8	tʰɔk31	tʰ	ɔk	31	讬			1		tʰɔk31	tok8	1
+3287	tok8	t	ok	8	tʰɔk31	tʰ	ɔk	31	托			1		tʰɔk31	tok8	1
+3288	nok9	n	ok	9	nɔk55	n	ɔk	55	诺			1		nɔk55	nok9	1
+3289	lok8	l	ok	8	lɔk31	l	ɔk	31	烙			1		lɔk31	lok8	1
+3290	lok9	l	ok	9	lɔk55	l	ɔk	55	落			1		lɔk55	lok9	1
+3291	lok9	l	ok	9	lɔk55	l	ɔk	55	骆			1		lɔk55	lok9	1
+3292	lok9	l	ok	9	lɔk55	l	ɔk	55	酪			1		lɔk55	lok9	1
+3293	lok9	l	ok	9	lɔk55	l	ɔk	55	洛			1		lɔk55	lok9	1
+3294	lok9	l	ok	9	lɔk55	l	ɔk	55	络			1		lɔk55	lok9	1
+3295	lok9	l	ok	9	lɔk55	l	ɔk	55	乐	快乐		1		lɔk55	lok9	1
+3296	slok8	sl	ok	8	ɬɔk31	ɬ	ɔk	31	索			1		ɬɔk31	slok8	1
+3297	gok8	g	ok	8	kɔk31	k	ɔk	31	各			1		kɔk31	gok8	1
+3298	gok8	g	ok	8	kɔk31	k	ɔk	31	阁			1		kɔk31	gok8	1
+3299	gok8	g	ok	8	kɔk31	k	ɔk	31	搁			1		kɔk31	gok8	1
+3300	gok8	g	ok	8	kɔk31	k	ɔk	31	郭			1		kɔk31	gok8	1
+3301	gok8	g	ok	8	kɔk31	k	ɔk	31	觉	知觉		1		kɔk31	gok8	1
+3302	gok8	g	ok	8	kɔk31	k	ɔk	31	角			1		kɔk31	gok8	1
+3303	kok8	k	ok	8	kʰɔk31	kʰ	ɔk	31	廓			1		kʰɔk31	kok8	1
+3304	kok8	k	ok	8	kʰɔk31	kʰ	ɔk	31	确			1		kʰɔk31	kok8	1
+3305	kok8	k	ok	8	kʰɔk31	kʰ	ɔk	31	壳			1		kʰɔk31	kok8	1
+3306	hok8	h	ok	8	hɔk31	h	ɔk	31	郝			1		hɔk31	hok8	1
+3307	hok8	h	ok	8	hɔk31	h	ɔk	31	霍			1		hɔk31	hok8	1
+3308	hok8	h	ok	8	hɔk31	h	ɔk	31	藿			1		hɔk31	hok8	1
+3309	hok9	h	ok	9	hɔk55	h	ɔk	55	鹤			1		hɔk55	hok9	1
+3310	hok9	h	ok	9	hɔk55	h	ɔk	55	学			1		hɔk55	hok9	1
+3311	ngok7	ng	ok	7	ŋɔk35	ŋ	ɔk	35	□	我们		1		ŋɔk35	ngok7	1
+3312	ngok9	ng	ok	9	ŋɔk55	ŋ	ɔk	55	鄂			1		ŋɔk55	ngok9	1
+3313	ngok9	ng	ok	9	ŋɔk55	ŋ	ɔk	55	岳			1		ŋɔk55	ngok9	1
+3314	ngok9	ng	ok	9	ŋɔk55	ŋ	ɔk	55	乐	乐器		1		ŋɔk55	ngok9	1
+3315	zok8	z	ok	8	tsɔk31	ts	ɔk	31	作			1		tsɔk31	zok8	1
+3316	zok8	z	ok	8	tsɔk31	ts	ɔk	31	桌			1		tsɔk31	zok8	1
+3317	zok8	z	ok	8	tsɔk31	ts	ɔk	31	卓			1		tsɔk31	zok8	1
+3318	zok8	z	ok	8	tsɔk31	ts	ɔk	31	琢			1		tsɔk31	zok8	1
+3319	zok8	z	ok	8	tsɔk31	ts	ɔk	31	啄			1		tsɔk31	zok8	1
+3320	zok8	z	ok	8	tsɔk31	ts	ɔk	31	涿			1		tsɔk31	zok8	1
+3321	zok9	z	ok	9	tsɔk55	ts	ɔk	55	凿			1		tsɔk55	zok9	1
+3322	zok9	z	ok	9	tsɔk55	ts	ɔk	55	昨			1		tsɔk55	zok9	1
+3323	zok9	z	ok	9	tsɔk55	ts	ɔk	55	浊			1		tsɔk55	zok9	1
+3324	cok8	c	ok	8	tsʰɔk31	tsʰ	ɔk	31	戳			1		tsʰɔk31	cok8	1
+3325	sok8	s	ok	8	sɔk31	s	ɔk	31	朔			1		sɔk31	sok8	1
+3326	ok8		ok	8	ɔk31	Ǿ	ɔk	31	恶	善恶		1		ɔk31	ok8	1
+3327	nek7	n	ek	7	niɛk35	n	iɛk	35	□	你们		1		niɛk35	nek7	1
+3328	lek7	l	ek	7	liɛk35	l	iɛk	35	叻			1		liɛk35	lek7	1
+3329	lek9	l	ek	9	liɛk55	l	iɛk	55	略			1		liɛk55	lek9	1
+3330	lek9	l	ek	9	liɛk55	l	iɛk	55	掠			1		liɛk55	lek9	1
+3331	gek8	g	ek	8	kiɛk31	k	iɛk	31	脚			1		kiɛk31	gek8	1
+3332	kek7	k	ek	7	kʰiɛk35	kʰ	iɛk	35	□	他们		1		kʰiɛk35	kek7	1
+3333	kek8	k	ek	8	kʰiɛk31	kʰ	iɛk	31	却			1		kʰiɛk31	kek8	1
+3334	kek8	k	ek	8	kʰiɛk31	kʰ	iɛk	31	剧			1		kʰiɛk31	kek8	1
+3335	zek8	z	ek	8	tsiɛk31	ts	iɛk	31	爵			1		tsiɛk31	zek8	1
+3336	zek8	z	ek	8	tsiɛk31	ts	iɛk	31	雀			1		tsiɛk31	zek8	1
+3337	zek8	z	ek	8	tsiɛk31	ts	iɛk	31	酌			1		tsiɛk31	zek8	1
+3338	zek8	z	ek	8	tsiɛk31	ts	iɛk	31	灼			1		tsiɛk31	zek8	1
+3339	zek8	z	ek	8	tsiɛk31	ts	iɛk	31	着	穿着		1		tsiɛk31	zek8	1
+3340	zek9	z	ek	9	tsiɛk55	ts	iɛk	55	着	着火，睡着		1		tsiɛk55	zek9	1
+3341	cek8	c	ek	8	tsʰiɛk31	tsʰ	iɛk	31	卓			1		tsʰiɛk31	cek8	1
+3342	cek8	c	ek	8	tsʰiɛk31	tsʰ	iɛk	31	鹊			1		tsʰiɛk31	cek8	1
+3343	cek8	c	ek	8	tsʰiɛk31	tsʰ	iɛk	31	绰			1		tsʰiɛk31	cek8	1
+3344	jek8	j	ek	8	jiɛk31	j	iɛk	31	约			1		jiɛk31	jek8	1
+3345	jek9	j	ek	9	jiɛk55	j	iɛk	55	药			1		jiɛk55	jek9	1
+3346	ek9		ek	9	iɛk55	Ǿ	iɛk	55	□	脏		1		iɛk55	ek9	1
+3347	buk7	b	uk	7	puk35	p	uk	35	卜			1		puk35	buk7	1
+3348	buk9	b	uk	9	puk55	p	uk	55	仆	仆人		1		puk55	buk9	1
+3349	puk7	p	uk	7	pʰuk35	pʰ	uk	35	伏			1		pʰuk35	puk7	1
+3350	puk7	p	uk	7	pʰuk35	pʰ	uk	35	扑			1		pʰuk35	puk7	1
+3351	puk7	p	uk	7	pʰuk35	pʰ	uk	35	仆	仆倒		1		pʰuk35	puk7	1
+3352	puk9	p	uk	9	pʰuk55	pʰ	uk	55	瀑			1		pʰuk55	puk9	1
+3353	muk7	m	uk	7	muk35	m	uk	35	覆			1		muk35	muk7	1
+3354	muk9	m	uk	9	muk55	m	uk	55	木			1		muk55	muk9	1
+3355	muk9	m	uk	9	muk55	m	uk	55	目			1		muk55	muk9	1
+3356	muk9	m	uk	9	muk55	m	uk	55	穆			1		muk55	muk9	1
+3357	muk9	m	uk	9	muk55	m	uk	55	牧			1		muk55	muk9	1
+3358	fuk7	f	uk	7	fuk35	f	uk	35	福			1		fuk35	fuk7	1
+3359	fuk7	f	uk	7	fuk35	f	uk	35	幅			1		fuk35	fuk7	1
+3360	fuk7	f	uk	7	fuk35	f	uk	35	蝠			1		fuk35	fuk7	1
+3361	fuk7	f	uk	7	fuk35	f	uk	35	腹			1		fuk35	fuk7	1
+3362	fuk7	f	uk	7	fuk35	f	uk	35	複			1		fuk35	fuk7	1
+3363	fuk7	f	uk	7	fuk35	f	uk	35	覆			1		fuk35	fuk7	1
+3364	fuk9	f	uk	9	fuk55	f	uk	55	服			1		fuk55	fuk9	1
+3365	fuk9	f	uk	9	fuk55	f	uk	55	伏			1		fuk55	fuk9	1
+3366	fuk9	f	uk	9	fuk55	f	uk	55	復			1		fuk55	fuk9	1
+3367	duk7	d	uk	7	tuk35	t	uk	35	笃			1		tuk35	duk7	1
+3368	duk7	d	uk	7	tuk35	t	uk	35	督			1		tuk35	duk7	1
+3369	duk9	d	uk	9	tuk55	t	uk	55	独			1		tuk55	duk9	1
+3370	duk9	d	uk	9	tuk55	t	uk	55	读			1		tuk55	duk9	1
+3371	duk9	d	uk	9	tuk55	t	uk	55	牍			1		tuk55	duk9	1
+3372	duk9	d	uk	9	tuk55	t	uk	55	犊			1		tuk55	duk9	1
+3373	duk9	d	uk	9	tuk55	t	uk	55	毒			1		tuk55	duk9	1
+3374	tuk7	t	uk	7	tʰuk35	tʰ	uk	35	秃			1		tʰuk35	tuk7	1
+3375	nuk7	n	uk	7	nuk35	n	uk	35	擩			1		nuk35	nuk7	1
+3376	nuk9	n	uk	9	nuk55	n	uk	55	□	搓		1		nuk55	nuk9	1
+3377	luk7	l	uk	7	luk35	l	uk	35	□	条		1		luk35	luk7	1
+3378	luk7	l	uk	7	luk35	l	uk	35	□	滚		1		luk35	luk7	1
+3379	luk9	l	uk	9	luk55	l	uk	55	鹿			1		luk55	luk9	1
+3380	luk9	l	uk	9	luk55	l	uk	55	禄			1		luk55	luk9	1
+3381	luk9	l	uk	9	luk55	l	uk	55	六			1		luk55	luk9	1
+3382	luk9	l	uk	9	luk55	l	uk	55	陆			1		luk55	luk9	1
+3383	luk9	l	uk	9	luk55	l	uk	55	绿			1		luk55	luk9	1
+3384	luk9	l	uk	9	luk55	l	uk	55	录			1		luk55	luk9	1
+3385	sluk7	sl	uk	7	ɬuk35	ɬ	uk	35	肃			1		ɬuk35	sluk7	1
+3386	sluk7	sl	uk	7	ɬuk35	ɬ	uk	35	宿			1		ɬuk35	sluk7	1
+3387	sluk7	sl	uk	7	ɬuk35	ɬ	uk	35	缩			1		ɬuk35	sluk7	1
+3388	sluk7	sl	uk	7	ɬuk35	ɬ	uk	35	粟			1		ɬuk35	sluk7	1
+3389	guk7	g	uk	7	kuk35	k	uk	35	谷			1		kuk35	guk7	1
+3390	guk7	g	uk	7	kuk35	k	uk	35	菊			1		kuk35	guk7	1
+3391	guk9	g	uk	9	kuk55	k	uk	55	局			1		kuk55	guk9	1
+3392	guk9	g	uk	9	kuk55	k	uk	55	焗			1		kuk55	guk9	1
+3393	kuk7	k	uk	7	kʰuk35	kʰ	uk	35	曲			1		kʰuk35	kuk7	1
+3394	huk7	h	uk	7	huk35	h	uk	35	哭			1		huk35	huk7	1
+3395	huk7	h	uk	7	huk35	h	uk	35	酷			1		huk35	huk7	1
+3396	zuk7	z	uk	7	tsuk35	ts	uk	35	竹			1		tsuk35	zuk7	1
+3397	zuk7	z	uk	7	tsuk35	ts	uk	35	筑			1		tsuk35	zuk7	1
+3398	zuk7	z	uk	7	tsuk35	ts	uk	35	祝			1		tsuk35	zuk7	1
+3399	zuk7	z	uk	7	tsuk35	ts	uk	35	粥			1		tsuk35	zuk7	1
+3400	zuk7	z	uk	7	tsuk35	ts	uk	35	足			1		tsuk35	zuk7	1
+3401	zuk7	z	uk	7	tsuk35	ts	uk	35	烛			1		tsuk35	zuk7	1
+3402	zuk7	z	uk	7	tsuk35	ts	uk	35	嘱			1		tsuk35	zuk7	1
+3403	zuk9	z	uk	9	tsuk55	ts	uk	55	族			1		tsuk55	zuk9	1
+3404	zuk9	z	uk	9	tsuk55	ts	uk	55	逐			1		tsuk55	zuk9	1
+3405	zuk9	z	uk	9	tsuk55	ts	uk	55	轴			1		tsuk55	zuk9	1
+3406	zuk9	z	uk	9	tsuk55	ts	uk	55	俗			1		tsuk55	zuk9	1
+3407	zuk9	z	uk	9	tsuk55	ts	uk	55	续			1		tsuk55	zuk9	1
+3408	cuk7	c	uk	7	tsʰuk35	tsʰ	uk	35	速			1		tsʰuk35	cuk7	1
+3409	cuk7	c	uk	7	tsʰuk35	tsʰ	uk	35	畜			1		tsʰuk35	cuk7	1
+3410	cuk7	c	uk	7	tsʰuk35	tsʰ	uk	35	蓄			1		tsʰuk35	cuk7	1
+3411	cuk7	c	uk	7	tsʰuk35	tsʰ	uk	35	促			1		tsʰuk35	cuk7	1
+3412	cuk7	c	uk	7	tsʰuk35	tsʰ	uk	35	触			1		tsʰuk35	cuk7	1
+3413	cuk7	c	uk	7	tsʰuk35	tsʰ	uk	35	束			1		tsʰuk35	cuk7	1
+3414	suk7	s	uk	7	suk35	s	uk	35	叔			1		suk35	suk7	1
+3415	suk9	s	uk	9	suk55	s	uk	55	熟			1		suk55	suk9	1
+3416	suk9	s	uk	9	suk55	s	uk	55	淑			1		suk55	suk9	1
+3417	suk9	s	uk	9	suk55	s	uk	55	赎			1		suk55	suk9	1
+3418	suk9	s	uk	9	suk55	s	uk	55	蜀			1		suk55	suk9	1
+3419	suk9	s	uk	9	suk55	s	uk	55	属			1		suk55	suk9	1
+3420	njuk7	nj	uk	7	ȵuk35	ȵ	uk	35	□	别人		1		ȵuk35	njuk7	1
+3421	njuk7	nj	uk	7	ȵuk35	ȵ	uk	35	沃			1		ȵuk35	njuk7	1
+3422	njuk9	nj	uk	9	ȵuk55	ȵ	uk	55	肉			1		ȵuk55	njuk9	1
+3423	njuk9	nj	uk	9	ȵuk55	ȵ	uk	55	育			1		ȵuk55	njuk9	1
+3424	njuk9	nj	uk	9	ȵuk55	ȵ	uk	55	玉			1		ȵuk55	njuk9	1
+3425	njuk9	nj	uk	9	ȵuk55	ȵ	uk	55	狱			1		ȵuk55	njuk9	1
+3426	njuk9	nj	uk	9	ȵuk55	ȵ	uk	55	欲			1		ȵuk55	njuk9	1
+3427	njuk9	nj	uk	9	ȵuk55	ȵ	uk	55	浴			1		ȵuk55	njuk9	1
+3428	uk7		uk	7	uk35	Ǿ	uk	35	屋			1		uk35	uk7	1
+3429	m1		m	1	m44	Ǿ	m	44	唔			1		m44	m1	
+3430	m6		m	6	m54	Ǿ	m	54	□	婶婶		1		m54	m6	
+3431	n6		n	6	n54	Ǿ	n	54	嗯			1		n54	n6	
