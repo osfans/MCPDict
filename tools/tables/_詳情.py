@@ -159,14 +159,12 @@ def load():
 			"簡繁":jf,
 			"聲調":getTones(tones),
 		}
-		try:
-			jd, wd = map(float, point.split(","))
-			if abs(wd) > 90:
-				jd, wd = wd, jd
-			point = f"{jd},{wd}"
-			d[lang]["經緯度"] = point
-		except:
-			continue
+		if not point: continue
+		jd, wd = map(float, point.split(","))
+		if abs(wd) > 90:
+			jd, wd = wd, jd
+		point = f"{jd},{wd}"
+		d[short]["經緯度"] = point
 		Feature = {
 			"type": "Feature",
 			"properties": {
