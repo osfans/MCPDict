@@ -71,7 +71,7 @@ print("""<html lang=ko>
 			font-family: ipa;
 			src: url(/ipa.ttf);
 		}
-		body {
+		body, input[type="text"] {
 			font-family: ipa, sans;
 		}
 	</style>
