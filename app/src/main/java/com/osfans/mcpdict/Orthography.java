@@ -2,6 +2,7 @@ package com.osfans.mcpdict;
 
 import android.content.res.Resources;
 import android.text.TextUtils;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -18,6 +19,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -206,6 +208,7 @@ public class Orthography {
             int type = Character.getType(c);
             if (isHz(c)) return false;
             return Character.isLetterOrDigit(c)
+                    || c == '/'
                     || type == Character.NON_SPACING_MARK
                     || type == Character.MODIFIER_SYMBOL
                     || type == Character.OTHER_NUMBER;
@@ -506,11 +509,22 @@ public class Orthography {
     }
 
     public static class ZhongyuanYinyun {
-        public static String display(String s, int system) {
-            s = s.split(",")[system];
-            char tone = s.charAt(s.length() - 1);
-            s = s.substring(0, s.length() - 1);
-            return formatTone(s, tone + "", DB.ZYYY);
+        public static String display(String pys, String[] list) {
+            StringBuilder sb = new StringBuilder();
+            String[] ss = pys.split("/");
+            int n = list.length;
+            String[] names = Utils.getToneStyleNames(R.array.pref_entries_zyyy_display);
+            for (String system: list) {
+                int i = Integer.parseInt(system);
+                String s = ss[i];
+                char tone = s.charAt(s.length() - 1);
+                s = s.substring(0, s.length() - 1);
+                s = formatTone(s, tone + "", DB.ZYYY);
+                sb.append(s);
+                if (n > 1) sb.append(String.format("(%s)", names[i]));
+                sb.append(" ");
+            }
+            return sb.toString();
         }
     }
 
