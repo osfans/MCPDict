@@ -317,7 +317,7 @@ class 表:
 		for hz, ybs in self.d.items():
 			if hz not in dicts:
 				dicts[hz] = {"漢字": hz}
-			dicts[hz][str(self)] = ",".join(ybs)
+			dicts[hz][str(self)] = "\t".join(ybs)
 	
 	def parse(self, fs):
 		return tuple(fs[:3])

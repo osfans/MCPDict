@@ -16,13 +16,20 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.Gravity;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
@@ -70,6 +77,23 @@ public class Utils extends Application {
         return value;
     }
 
+    public static String[] getToneStyles(int id) {
+        SharedPreferences sp = getPreference();
+        String[] defaultList = new String[5];
+        if (id == R.string.pref_key_zyyy_display) defaultList = mApp.getResources().getStringArray(R.array.pref_default_values_zyyy_display);
+        try {
+            Set<String> set = sp.getStringSet(mApp.getString(id), null);
+            return set != null ? set.toArray(new String[0]) : defaultList;
+        } catch (Exception e) {
+            //e.printStackTrace();
+        }
+        return defaultList;
+    }
+
+    public static String[] getToneStyleNames(int id) {
+        return mApp.getResources().getStringArray(id);
+    }
+
     private static final Displayer gyDisplayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.MiddleChinese.display(s, getToneStyle(R.string.pref_key_mc_display));
@@ -78,7 +102,7 @@ public class Utils extends Application {
 
     private static final Displayer zyyyDisplayer = new Displayer() {
         public String displayOne(String s) {
-            return Orthography.ZhongyuanYinyun.display(s, getToneStyle(R.string.pref_key_zyyy_display));
+            return Orthography.ZhongyuanYinyun.display(s, getToneStyles(R.string.pref_key_zyyy_display));
         }
     };
 

@@ -128,11 +128,14 @@
         <item>unt（音位形式）</item>
         <item>unt</item>
     </string-array>
-    <string-array name="pref_values_mc_display">
+    <string-array name="pref_values_zyyy_display">
         <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="pref_default_values_zyyy_display">
         <item>4</item>
     </string-array>
 
