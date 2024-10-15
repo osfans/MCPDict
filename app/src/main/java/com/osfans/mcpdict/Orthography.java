@@ -505,6 +505,15 @@ public class Orthography {
         }
     }
 
+    public static class ZhongyuanYinyun {
+        public static String display(String s, int system) {
+            s = s.split(",")[system];
+            char tone = s.charAt(s.length() - 1);
+            s = s.substring(0, s.length() - 1);
+            return formatTone(s, tone + "", DB.ZYYY);
+        }
+    }
+
     public static class Mandarin {
         public static final int IPA = 0;
         public static final int PINYIN = 1;

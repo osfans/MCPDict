@@ -67,6 +67,13 @@
             android:defaultValue="5" />
         <ListPreference
             app:useSimpleSummaryProvider="true"
+            android:key="@string/pref_key_zyyy_display"
+            android:title="@string/pref_title_zyyy_display"
+            android:entries="@array/pref_entries_zyyy_display"
+            android:entryValues="@array/pref_values_zyyy_display"
+            android:defaultValue="4" />
+        <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_mandarin_display"
             android:title="@string/pref_title_mandarin_display"
             android:entries="@array/pref_entries_mandarin_display"
