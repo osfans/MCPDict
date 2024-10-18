@@ -10,7 +10,7 @@ start = time()
 dicts = defaultdict(dict)
 #sys.argv.extend(( "1884甯城",))
 if len(sys.argv) > 1:
-	argv = [os.path.basename(i).split(".")[0] for i in sys.argv[1:]]
+	argv = sys.argv[1:]
 	langs = getLangs(dicts, argv)
 else:
 	langs = getLangs(dicts)

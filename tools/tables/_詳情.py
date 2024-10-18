@@ -92,7 +92,7 @@ def load():
 		lang = fs["語言"].value
 		short = fs["簡稱"].value
 		filename = fs["文件名"].value
-		if not filename: continue
+		if not filename or filename.startswith("#"): continue
 		fileformat = fs["字表格式"].value
 		fileskip = int(fs["跳過行數"].value) if fs["跳過行數"].value else 0
 		orders = [fs[i].value for i in ("地圖集二排序", "音典排序","陳邡排序")]

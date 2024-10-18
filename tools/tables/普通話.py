@@ -14,6 +14,10 @@ class 表(_表):
 		hzs,py = fs[:2]
 		for hz in hzs:
 			for yb in py.split(","):
-				l.append((hz, yb))
+				js = ""
+				if "{" in yb:
+					yb, js = yb.split("{")
+					js = js[:-1]
+				l.append((hz, yb, js))
 		return l
 

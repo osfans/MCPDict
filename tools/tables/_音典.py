@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from tables._表 import 表 as _表
+import re
 
 class 表(_表):
 
@@ -10,12 +11,18 @@ class 表(_表):
 		yb = ""
 		ipa = ""
 		js = ""
-		if name in ("汝城", "瑞安東山", "新界客家話", "長壽", "宜章巖泉","郴州","樂昌皈塘","嘉禾普滿","尤溪","晉江"):
+		if name in ("汝城", "瑞安東山", "新界客家話", "長壽", "宜章巖泉","郴州","樂昌皈塘","嘉禾普滿","尤溪","晉江", "龍門路溪"):
 			hz, yb, js = fs[:3]
 		elif name in ("南通金沙",):
 			hz, js, yb = fs[:3]
 		elif name in ("江陰", "江陰新橋", "江陰申港"):
 			_, hz, js, yb = fs[:4]
+		elif name in ("蘇州",):
+			_, hz, sm, ym, sd, js = fs[:6]
+			yb = sm + ym + sd
+		elif name in ("龍游",):
+			_, hz, sm, ym, dz, _, js = fs[:7]
+			ipa = sm + ym + dz
 		elif name in ("1900梅惠",):
 			hz,_,_,yb = fs[:4]
 		elif name in ("劍川金華",):
@@ -60,9 +67,15 @@ class 表(_表):
 		elif name in ("遂昌","五華橫陂"):
 			hz, sy, sd, js = fs[:4]
 			ipa = sy + sd
+		elif name in ("開化",):
+			hz, js, sm, ym, sd = fs[:5]
+			yb = sm + ym + sd.strip("[]")
+			if re.match(r"（.*?）", js): js = js[1:-1]
 		elif name in ("富陽東梓關",):
 			_, hz, js, ipa = fs[:4]
-		elif name in ("嘉善", ):
+		elif name in ("新登下港",):
+			hz, ipa, js = fs[0], fs[6], fs[8]
+		elif name in ("嘉善", "上海"):
 			hz, sm, ym, sd, js = fs[:5]
 			yb = sm + ym + sd
 		elif name in ("松陽", "臨海", "泰順羅陽", "雲和", "仙居"):
@@ -89,6 +102,8 @@ class 表(_表):
 		elif name in ("武義",):
 			_, hz, _, ipa, js = fs[:5]
 		elif name in ("鳳凰-新豐","潮州","汕頭"):
+			hz, _, _, ipa, js = fs[:5]
+		elif name in ("汕頭市郊"):
 			hz, _, _, ipa, js = fs[:5]
 		elif name in ("雷州",):
 			hz, _, _, _, _, ipa = fs[:6]
@@ -131,6 +146,14 @@ class 表(_表):
 		elif name in ("新會天湖",):
 			hz, sm, ym, sd, js = fs[0], fs[11], fs[12], fs[13], fs[14]
 			ipa = sm + ym + sd
+		elif name in ("鶴山沙坪",):
+			hz, sm, jy, ym, sd, js = fs[0], fs[8], fs[9], fs[10], fs[11], fs[14]
+			l = list()
+			for i in ym.split("，"):
+				ipa = sm + jy + i + sd
+				yb = self.dz2dl(ipa)
+				l.append((hz, yb, js))
+			return l
 		elif name in ("縉雲",):
 			hz, _, _, _, _, js, _, ipa = fs[:8]
 		elif name in ("深圳西鄕","深圳沙井"):
@@ -156,6 +179,8 @@ class 表(_表):
 		elif name in ("中山石岐",):
 			hz, sm, ym, sd, js = fs[7], fs[12], fs[13], fs[14], fs[18]
 			ipa = sm + ym + sd
+		elif name in ("上饒沙溪",):
+			hz, yb, _, js = fs[:4]
 		elif len(fs) >= 4:
 			hz, _, ipa, js = fs[:4]
 		elif len(fs) == 2:
