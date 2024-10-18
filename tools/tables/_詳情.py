@@ -2,6 +2,7 @@
 
 import json, os, re
 from openpyxl import load_workbook
+from opencc import OpenCC
 
 curdir = os.path.dirname(__file__)
 spath = os.path.join(curdir, "..", "漢字音典字表檔案（長期更新）.xlsx")
@@ -11,6 +12,18 @@ FeatureCollection = {
   "type": "FeatureCollection",
   "features": []
 }
+
+opencc = OpenCC("s2t.json")
+
+def convert(s):
+	if not s: return ""
+	if type(s) is not str: return s
+	return opencc.convert(s)\
+		.replace("清","淸")\
+		.replace("榆","楡")\
+		.replace("樑","梁")\
+		.replace("嶽","岳")\
+		.replace("慄", "栗")
 
 def outdated():
 	if not os.path.exists(tpath): return True
@@ -144,8 +157,8 @@ def load():
 			"音典分區":types[1],
 			"陳邡排序":orders[2],
 			"陳邡顏色":colors[2],
-			"陳邡分區":types[2],
-			"省":places[0].strip("*"),
+			"陳邡分區":convert(types[2]),
+			"省":convert(places[0]).strip("*"),
 			"市":places[1],
 			"縣":places[2],
 			"鎮":places[3],
