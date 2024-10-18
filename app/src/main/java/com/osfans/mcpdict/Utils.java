@@ -176,7 +176,7 @@ public class Utils extends Application {
 
     public static CharSequence formatUnknownIPA(String lang, String string) {
         StringBuilder sb = new StringBuilder();
-        String s = string.replace("},", "}\n");
+        String s = string.replace("}\t", "}\n");
         String input = Utils.getInput();
         if (Orthography.HZ.isUnknown(input)) sb.append(s);
         else {
