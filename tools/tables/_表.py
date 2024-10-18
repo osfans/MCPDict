@@ -278,7 +278,7 @@ class 表:
 
 	@property
 	def syCount(self):
-		return len(set(map(lambda x:x.rstrip("1234567890"), self.syds.keys())))
+		return len(set(map(lambda x:x.split("/")[0].rstrip("1234567890"), self.syds.keys())))
 
 	def read(self):
 		start = time()

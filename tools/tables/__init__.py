@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import re, os, json
+import re, os, json, glob
 from importlib import import_module
 import tables._詳情
 from opencc import OpenCC
@@ -55,13 +55,26 @@ def addCfFq(d, fq, order):
 		# if fq not in d[i]:
 		# 	d[i][fq] = order
 
+def getLangsByArgv(infos, argv):
+	l = []
+	for a in argv:
+		if a in infos:
+			l.append(a)
+		elif os.path.isfile(a):
+			path = os.path.dirname(a)
+			for i in infos:
+				if a in glob.glob(os.path.join(path, infos[i]["文件名"])):
+					l.append(i)
+					break
+	return l
+
 def getLangs(dicts, argv=None):
 	infos = tables._詳情.load()
 	langs = []
 	count = 0
 	if argv:
 		mods = ["漢字"]
-		mods.extend(argv)
+		mods.extend(getLangsByArgv(infos, argv))
 	else:
 		mods = xing_keys.copy()
 		mods.extend(argv if argv else infos.keys())

@@ -58,16 +58,20 @@ class 表(_表):
 			line = line.replace("%{","{(西官去聲借詞)")
 		elif name in ("連城文保", "長汀"):
 			if line.startswith("#"): return line
-			line = line.replace("（","{").replace("）","}")
+			line = line.replace("(","（").replace(")","）")
 			line = line.replace("[","［").replace("]","］")
 			line = line.replace("*（", "□（")
+			line = regex.sub("（((?>[^（）]+|(?R))*)）", "{\\1}", line)
 			line = re.sub(r"\*(.)", "\\1?", line)
 			line = re.sub(r"［(.)(.*?)］", "\\1*\\2", line)
 			fs = line.split("\t")
 			for i,sd in enumerate(self.toneMaps.values()):
-				fs[i + 1] = f"[{sd}]" + fs[i + 1]
+				if fs[i + 1]:
+					fs[i + 1] = f"[{sd}]" + fs[i + 1]
 			line = "".join(fs)
-		elif name in ("博白",):
+		elif name in ("光山",):
+			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+		elif name in ("博白","東莞塘角"):
 			if line.startswith("#"): return "#"
 			find = re.findall(r"\[(.*?)(\d+)\]", line)
 			if not find: return
@@ -88,7 +92,6 @@ class 表(_表):
 			line = line.replace("\t" + ym, ym + "\t")
 			fs = line.split("\t", 1)
 			line = fs[0] + "\t" + fs[1].replace("\t", "")
-			if "kʰwaŋ" in line: print(line)
 		elif name in ("敦煌", "洛陽"):
 			line = re.sub(r"\[(\d+)\]", lambda x: "["+self.dz2dl(x[1])+"]", line)\
 				.replace("(", "（").replace(")", "）").replace("\t", "").rstrip("12345 \t\n")

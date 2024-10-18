@@ -17,6 +17,12 @@ class 表(_表):
 				sy = self.sy
 		elif name in ("宜章巖泉",):
 			sy, sd, hzs = fs[:3]
+		elif name in ("江華河路口"):
+			sy, sd, hzs = fs[:3]
+			hzs = hzs.replace("(", "[").replace(")", "]").replace("（", "[").replace("）", "]")
+		elif name in ("欽州正"):
+			sy, sd, hzs = fs[:3]
+			hzs = hzs.replace("{", "[").replace("}", "]")
 		elif name in ("平陰東阿",):
 			sy, sd, _, hzs = fs[:4]
 			if sy:
@@ -41,6 +47,7 @@ class 表(_表):
 		if sd == "調號": return
 		yb = sy + sd
 		l = list()
+		hzs = re.sub(r"(\[.*?\])([-=])", "\\2\\1", hzs)
 		for hz, c, js in re.findall(r"(.)([-=]?)(\[[^[]]*?\[[^[]]*?\][^[]]*?\]|\[.*?\])?", hzs):
 			if js: js = js[1:-1]
 			if hz == "~": hz = "□"

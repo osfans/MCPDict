@@ -540,8 +540,8 @@
 醜	丑	ch	eu	3	醜惡，醜陋	tʂʰ	ɤɯ	31
 臭	臭	ch	eu	5	臭味	tʂʰ	ɤɯ	44
 臭	臭	x	ieu	5	乳臭	ɕ	iʊ	44
-出	出	ch	ueh	7		tʂʰ	uə?	4
-齣	出	ch	ueh	7		tʂʰ	uə?	4
+出	出	ch	ueh	7		tʂʰ	uəʔ	4
+齣	出	ch	ueh	7		tʂʰ	uəʔ	4
 初	初	ch	v	1		tʂʰ	ʋ	21
 芻	刍	ch	v	1		tʂʰ	ʋ	21
 除	除	ch	v	2		tʂʰ	ʋ	24
@@ -629,7 +629,7 @@
 輳	辏	c	eu	5		tsʰ	ɤɯ	44
 粗	粗	c	v	1		tsʰ	ʋ	21
 促	促	c	oh	7		tsʰ	ɔʔ	4
-猝	猝	c	ueh	7		tsʰ	uə?	4
+猝	猝	c	ueh	7		tsʰ	uəʔ	4
 醋	醋	c	v	5		tsʰ	ʋ	44
 簇	簇	c	oh	7		tsʰ	ɔʔ	4
 汆	汆	c	un	1		tsʰ	ʊ̃	21
@@ -1247,7 +1247,7 @@
 谷	谷	g	oh	7	山谷	k	ɔʔ	4
 穀	谷	g	oh	7	稻穀	k	ɔʔ	4
 股	股	g	v	3		k	ʋ	31
-骨	骨	g	ueh	7		k	uə?	4
+骨	骨	g	ueh	7		k	uəʔ	4
 鼓	鼓	g	v	3		k	ʋ	31
 固	固	g	v	5		k	ʋ	44
 故	故	g	v	5		k	ʋ	44
@@ -1399,7 +1399,7 @@
 荷	荷	h	u	2		x	ʊ	24
 核	核	h	eh	8	核桃	x	əʔ	3
 覈	核	h	eh	8		x	əʔ	3
-𣝗	核	h	ueh	8	果𣝗，𣝗子	x	uə?	3
+𣝗	核	h	ueh	8	果𣝗，𣝗子	x	uəʔ	3
 齕	龁	h	eh	8	齕骨頭	x	əʔ	3
 盒	盒	h	uh	8		x	ʊʔ	3
 頜	颌	g	uh	7	頜腮	k	ʊʔ	4
@@ -1446,9 +1446,9 @@
 𩄬	𩄬	h	eu	5		x	ɤɯ	44
 乎	乎	h	v	1		x	ʋ	21
 呼	呼	h	v	1		x	ʋ	21
-忽	忽	h	ueh	7		x	uə?	4
-惚	惚	h	ueh	7		x	uə?	4
-囫	囫	h	ueh	8		x	uə?	3
+忽	忽	h	ueh	7		x	uəʔ	4
+惚	惚	h	ueh	7		x	uəʔ	4
+囫	囫	h	ueh	8		x	uəʔ	3
 狐	狐	h	v	2		x	ʋ	24
 弧	弧	h	v	2		x	ʋ	24
 胡	胡	h	v	2	胡亂	x	ʋ	24
@@ -1938,19 +1938,19 @@
 捲	卷	j	iun	3		tɕ	iʊ̃	31
 絹	绢	j	iun	5		tɕ	iʊ̃	44
 眷	眷	j	iun	5		tɕ	iʊ̃	44
-撅	撅	j	iuh	7		tɕ	iʊ?	4
-噘	噘	j	iuh	7		tɕ	iʊ?	4
-決	决	j	iuh	7		tɕ	iʊ?	4
-訣	诀	j	iuh	7		tɕ	iʊ?	4
-抉	抉	j	iuh	7		tɕ	iʊ?	4
+撅	撅	j	iuh	7		tɕ	iʊʔ	4
+噘	噘	j	iuh	7		tɕ	iʊʔ	4
+決	决	j	iuh	7		tɕ	iʊʔ	4
+訣	诀	j	iuh	7		tɕ	iʊʔ	4
+抉	抉	j	iuh	7		tɕ	iʊʔ	4
 覺	觉	g	o	5	睏覺	k	ɔ	44
 覺	觉	g	ah	7	覺察	k	aʔ	4
 覺	觉	j	iah	7	自覺	tɕ	iaʔ	4
-絕	绝	q	iuh	8		tɕʰ	iʊ?	3
-掘	掘	q	iuh	8	掘港	tɕʰ	iʊ?	3
-厥	厥	j	iuh	7		tɕ	iʊ?	4
-蕨	蕨	j	iuh	7		tɕ	iʊ?	4
-獗	獗	j	iuh	7		tɕ	iʊ?	4
+絕	绝	q	iuh	8		tɕʰ	iʊʔ	3
+掘	掘	q	iuh	8	掘港	tɕʰ	iʊʔ	3
+厥	厥	j	iuh	7		tɕ	iʊʔ	4
+蕨	蕨	j	iuh	7		tɕ	iʊʔ	4
+獗	獗	j	iuh	7		tɕ	iʊʔ	4
 爵	爵	j	iah	7		tɕ	iaʔ	4
 嚼	嚼	q	iah	8		tɕʰ	iaʔ	3
 軍	军	j	yen	1		tɕ	yəŋ	21
@@ -2047,7 +2047,7 @@
 刳	刳	k	ua	2	刮	kʰ	ua	24
 枯	枯	k	v	1		kʰ	ʋ	21
 哭	哭	k	oh	7		kʰ	ɔʔ	4
-窟	窟	k	ueh	7		kʰ	uə?	4
+窟	窟	k	ueh	7		kʰ	uəʔ	4
 骷	骷	k	v	1		kʰ	ʋ	21
 苦	苦	k	v	3		kʰ	ʋ	31
 庫	库	k	v	5		kʰ	ʋ	44
@@ -2427,7 +2427,7 @@
 律	律	l	ieh	8		l	iəʔ	3
 慮	虑	l	y	6		l	yᶨ	33
 率	率	sh	uae	5		ʂ	uɛ	44
-率	率	sh	ueh	7	率領	ʂ	uə?	4
+率	率	sh	ueh	7	率領	ʂ	uəʔ	4
 率	率	l	ieh	8	利率	l	iəʔ	3
 綠	绿	l	oh	8		l	ɔʔ	3
 氯	氯	l	oh	8		l	ɔʔ	3
@@ -2650,7 +2650,7 @@
 囊	囊	n	an	2		n	ã	24
 攮	攮	n	an	3		n	ã	31
 齉	齉	n	an	5		n	ã	44
-孬	孬	h	ueh	7		x	uə?	4
+孬	孬	h	ueh	7		x	uəʔ	4
 撓	挠	n	o	2		n	ɔ	24
 鐃	铙	n	o	2		n	ɔ	24
 惱	恼	n	o	3		n	ɔ	31
@@ -3131,9 +3131,9 @@
 犬	犬	q	iun	3		tɕʰ	iʊ̃	31
 勸	劝	q	iun	5		tɕʰ	iʊ̃	44
 券	券	q	iun	5		tɕʰ	iʊ̃	44
-炔	炔	q	iuh	7		tɕʰ	iʊ?	4
-缺	缺	q	iuh	7		tɕʰ	iʊ?	4
-闕	阙	q	iuh	7		tɕʰ	iʊ?	4
+炔	炔	q	iuh	7		tɕʰ	iʊʔ	4
+缺	缺	q	iuh	7		tɕʰ	iʊʔ	4
+闕	阙	q	iuh	7		tɕʰ	iʊʔ	4
 瘸	瘸	q	ya	2		tɕʰ	ya	24
 卻	却	q	iah	7		tɕʰ	iaʔ	4
 雀	雀	j	iah	7	麻雀	tɕ	iaʔ	4
@@ -3469,11 +3469,11 @@
 蜀	蜀	sh	oh	8		ʂ	ɔʔ	3
 鼠	鼠	ch	v	3		tʂʰ	ʋ	31
 薯	薯	sh	v	3		ʂ	ʋ	31
-術	术	sh	ueh	8		ʂ	uə?	3
-朮	朮	ch	ueh	8		tʂʰ	uə?	3
+術	术	sh	ueh	8		ʂ	uəʔ	3
+朮	朮	ch	ueh	8		tʂʰ	uəʔ	3
 戍	戍	sh	v	5		ʂ	ʋ	44
 束	束	s	oh	7		ʂ	ɔʔ	4
-述	述	sh	ueh	8		ʂ	uə?	3
+述	述	sh	ueh	8		ʂ	uəʔ	3
 樹	树	sh	v	6		ʂ	ʋ	33
 豎	竖	sh	v	6		ʂ	ʋ	33
 恕	恕	sh	v	5		ʂ	ʋ	44
@@ -3555,7 +3555,7 @@
 蘇	苏	s	v	1		s	ʋ	21
 酥	酥	s	v	1		s	ʋ	21
 穌	稣	s	v	1		s	ʋ	21
-窣	窣	s	ueh	7		s	uə?	4
+窣	窣	s	ueh	7		s	uəʔ	4
 俗	俗	s	oh	8		s	ɔʔ	3
 訴	诉	s	v	5		s	ʋ	44
 肅	肃	s	oh	7		s	ɔʔ	4
@@ -4242,7 +4242,7 @@
 酗	酗	x	y	5		ɕ	yᶨ	44
 緒	绪	q	y	6		tɕʰ	yᶨ	33
 續	续	s	oh	7		s	ɔʔ	4
-訹	訹	x	yeh	7	迷惑，引誘	ɕ	yə?	4
+訹	訹	x	yeh	7	迷惑，引誘	ɕ	yəʔ	4
 絮	絮	x	y	5		ɕ	yᶨ	44
 婿	婿	x	y	5		ɕ	yᶨ	44
 蓄	蓄	x	ioh	7		ɕ	iɔʔ	4
@@ -4267,12 +4267,12 @@
 𢪎	𢪎	x	ya	1		ɕ	ya	21
 削	削	x	iah	7		ɕ	iaʔ	4
 靴	靴	x	ya	1		ɕ	ya	21
-薛	薛	x	iuh	7		ɕ	iʊ?	4
-穴	穴	x	iuh	8		ɕ	iʊ?	3
+薛	薛	x	iuh	7		ɕ	iʊʔ	4
+穴	穴	x	iuh	8		ɕ	iʊʔ	3
 學	学	h	ah	8	學舌	x	aʔ	3
 學	学	x	iah	8	學習	ɕ	iaʔ	3
 雪	雪	x	yeh	7		ɕ	yəʔ	4
-血	血	x	iuh	7		ɕ	iʊ?	4
+血	血	x	iuh	7		ɕ	iʊʔ	4
 勳	勋	x	yen	1		ɕ	yəŋ	21
 熏	熏	x	yen	1		ɕ	yəŋ	21
 薰	熏	x	yen	1		ɕ	yəŋ	21
@@ -4643,18 +4643,18 @@
 媛	媛		iun	2			iʊ̃	24
 願	愿		iun	6			iʊ̃	33
 曰	曰		ya	1			ya	21
-曰	曰		iuh	8			iʊ?	3
+曰	曰		iuh	8			iʊʔ	3
 約	约		iah	7			iaʔ	4
 𦚢	𦚢		ya	1			ya	21
-月	月		iuh	8			iʊ?	3
-玥	玥		iuh	8			iʊ?	3
+月	月		iuh	8			iʊʔ	3
+玥	玥		iuh	8			iʊʔ	3
 岳	岳		iah	8			iaʔ	3
 嶽	岳		iah	8			iaʔ	3
-閱	阅		iuh	8			iʊ?	3
-悅	悦		iuh	8			iʊ?	3
+閱	阅		iuh	8			iʊʔ	3
+悅	悦		iuh	8			iʊʔ	3
 躍	跃		iah	8			iaʔ	3
-越	越		iuh	8			iʊ?	3
-粵	粤		iuh	8			iʊ?	3
+越	越		iuh	8			iʊʔ	3
+粵	粤		iuh	8			iʊʔ	3
 龠	龠		iah	8			iaʔ	3
 暈	晕		yen	1	頭暈		yəŋ	21
 暈	晕		yen	6	暈車		yəŋ	33

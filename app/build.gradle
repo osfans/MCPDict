@@ -7,7 +7,7 @@ android {
         minSdkVersion 24
         targetSdkVersion 33
         versionCode 71
-        versionName "5.7 (2024.10.17)"
+        versionName "5.7 (2024.10.18)"
     }
 
     signingConfigs {
