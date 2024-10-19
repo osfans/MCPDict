@@ -15,6 +15,9 @@ class 表(_表):
 				self.sy = sy
 			else:
 				sy = self.sy
+		elif name in ("望城",):
+			sy, sd, hzs = fs[:3]
+			hzs = hzs.replace("?", "□")
 		elif name in ("宜章巖泉",):
 			sy, sd, hzs = fs[:3]
 		elif name in ("江華河路口"):

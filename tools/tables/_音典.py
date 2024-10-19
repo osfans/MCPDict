@@ -14,12 +14,15 @@ class 表(_表):
 		if name in ("汝城", "瑞安東山", "新界客家話", "長壽", "宜章巖泉","郴州","樂昌皈塘","嘉禾普滿","尤溪","晉江", "龍門路溪"):
 			hz, yb, js = fs[:3]
 		elif name in ("南通金沙",):
-			hz, js, yb = fs[:3]
+			yb, hz, js = fs[:3]
 		elif name in ("江陰", "江陰新橋", "江陰申港"):
 			_, hz, js, yb = fs[:4]
 		elif name in ("蘇州",):
 			_, hz, sm, ym, sd, js = fs[:6]
 			yb = sm + ym + sd
+		elif name in ("東方八所",):
+			_, hz, sy, sd, js = fs[:5]
+			yb = sy + sd
 		elif name in ("龍游",):
 			_, hz, sm, ym, dz, _, js = fs[:7]
 			ipa = sm + ym + dz
@@ -78,6 +81,9 @@ class 表(_表):
 		elif name in ("嘉善", "上海"):
 			hz, sm, ym, sd, js = fs[:5]
 			yb = sm + ym + sd
+			if hz.endswith("-"):
+				hz = hz[:-1]
+				yb = yb + "-"
 		elif name in ("松陽", "臨海", "泰順羅陽", "雲和", "仙居"):
 			hz, _, sy, sd, js = fs[:5]
 			ipa = sy + sd
