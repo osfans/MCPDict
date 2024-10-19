@@ -78,6 +78,10 @@ class 表(_表):
 			sy = find[0][0]
 			line = re.sub(r"\[(.*?)(\d+)\]", lambda x:f"[{self.toneMaps[x[2]]}]", line)
 			line = sy + line
+		elif name in ("小店", "太谷", "祁縣", "壽陽", "楡次", "徐溝"):
+			fs = line.split("\t", 1)
+			fs[1] = fs[1].replace("\t", "")
+			line = "\t".join(fs)
 		elif name in ("江門荷塘(下)",):
 			if line.startswith("#"): return "#"
 			fs = line.split("\t", 2)
