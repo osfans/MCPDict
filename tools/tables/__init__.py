@@ -133,6 +133,7 @@ def getLangs(dicts, argv=None):
 			lang.info = d
 			lang.load(dicts)
 		lang.info["字數"] = lang.count
+		lang.info["□數"] = lang.unknownCount if lang.unknownCount else None
 		sydCount = lang.sydCount
 		syCount = lang.syCount
 		lang.info["音節數"] = sydCount if sydCount else None
