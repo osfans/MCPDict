@@ -565,7 +565,7 @@ public class DB extends SQLiteAssetHelper {
         } else {
             StringBuilder sb = new StringBuilder();
             sb.append(String.format(Locale.getDefault(), "%s%s<br>", Utils.getContext().getString(R.string.name), language));
-            ArrayList<String> fields = new ArrayList<>(Arrays.asList("序號","地點","經緯度","錄入人","參考資料","文件名","版本","字數","音節數","不帶調音節數",""));
+            ArrayList<String> fields = new ArrayList<>(Arrays.asList("序號","地點","經緯度","錄入人","參考資料","文件名","版本","字數","□數", "音節數","不帶調音節數",""));
             fields.addAll(Arrays.asList(FQ_COLUMNS));
             fields.add("");
             for (String field: fields) {
@@ -594,7 +594,7 @@ public class DB extends SQLiteAssetHelper {
             sb.append(intro);
             sb.append("<br><h2>已收錄語言</h2><table border=1 cellspacing=0>");
             sb.append("<tr>");
-            String[] fields = new String[]{LANGUAGE, "字數", "音節數", "不帶調音節數"};
+            String[] fields = new String[]{LANGUAGE, "字數", "□數", "音節數", "不帶調音節數"};
             for (String field: fields) {
                 sb.append(String.format("<th>%s</th>", field));
             }

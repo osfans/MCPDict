@@ -270,7 +270,11 @@ class 表:
 
 	@property
 	def count(self):
-		return len(self.d)
+		return len(self.d) + self.unknownCount - (1 if self.unknownCount > 0 else 0)
+	
+	@property
+	def unknownCount(self):
+		return len(self.d.get("□", []))
 
 	@property
 	def sydCount(self):
@@ -309,7 +313,7 @@ class 表:
 			if py not in self.d[hz]:
 				self.d[hz].append(py)
 		passed = time() - start
-		logging.info(f"({self.count:5d}-{self.sydCount:4d}-{self.syCount:4d}) {passed:6.3f} {self}")
+		logging.info(f"({self.count:5d}({self.unknownCount})-{self.sydCount:4d}-{self.syCount:4d}) {passed:6.3f} {self}")
 	
 	def load(self, dicts):
 		self.read()
