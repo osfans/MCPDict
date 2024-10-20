@@ -34,7 +34,7 @@ class 表(_表):
 			if sd.startswith('入') or sd == '去作陽':
 				yb = f'*{yb}*'
 			ybs[i] = yb
-		ybs = '/'.join(ybs).replace("*/*", "/")
+		ybs = '/'.join(ybs)
 
 		if 校註:
 			校註 = '校註：' + 校註

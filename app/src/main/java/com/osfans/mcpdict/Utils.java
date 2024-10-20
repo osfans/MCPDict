@@ -104,6 +104,11 @@ public class Utils extends Application {
         public String displayOne(String s) {
             return Orthography.ZhongyuanYinyun.display(s, getToneStyles(R.string.pref_key_zyyy_display));
         }
+
+        public String display(String s) {
+            if (s == null) return NULL_STRING;
+            return displayOne(s);
+        }
     };
 
     private static final Displayer cmnDisplayer = new Displayer() {
