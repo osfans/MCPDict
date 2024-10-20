@@ -208,7 +208,6 @@ public class Orthography {
             int type = Character.getType(c);
             if (isHz(c)) return false;
             return Character.isLetterOrDigit(c)
-                    || c == '/'
                     || type == Character.NON_SPACING_MARK
                     || type == Character.MODIFIER_SYMBOL
                     || type == Character.OTHER_NUMBER;
