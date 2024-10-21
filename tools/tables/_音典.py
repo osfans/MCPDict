@@ -11,7 +11,7 @@ class 表(_表):
 		yb = ""
 		ipa = ""
 		js = ""
-		if name in ("汝城", "瑞安東山", "新界客家話", "長壽", "宜章巖泉","郴州","樂昌皈塘","嘉禾普滿","尤溪","晉江", "龍門路溪"):
+		if name in ("汝城", "瑞安東山", "新界客家話", "長壽", "宜章巖泉","郴州","樂昌皈塘","嘉禾普滿","尤溪","晉江", "龍門路溪", "詔安", "道縣官话"):
 			hz, yb, js = fs[:3]
 		elif name in ("南通金沙",):
 			yb, hz, js = fs[:3]
@@ -63,18 +63,21 @@ class 表(_表):
 			ipa, hz, js = fs[:3]
 		elif name in ("惠來隆江",):
 			hz, ipa, js = fs[:3]
+		elif name in ("壽寧平溪"):
+			hz, ipa, js = fs[:3]
+			hz = hz.replace("", "□")
 		elif name in ("新會會城",):
 			hz, _, _, ipa = fs[:4]
 		elif name in ("廈門","漳州","饒平", "遵義", "犍爲玉津", "綦江古南", "桐梓婁山關"):
 			hz, _, ipa, js = fs[:4]
-		elif name in ("遂昌","五華橫陂"):
+		elif name in ("遂昌","五華橫陂","蔡家話"):
 			hz, sy, sd, js = fs[:4]
 			ipa = sy + sd
 		elif name in ("開化",):
 			hz, js, sm, ym, sd = fs[:5]
 			yb = sm + ym + sd.strip("[]")
 			if re.match(r"（.*?）", js): js = js[1:-1]
-		elif name in ("富陽東梓關",):
+		elif name in ("富陽東梓關","新登城陽"):
 			_, hz, js, ipa = fs[:4]
 		elif name in ("新登下港",):
 			hz, ipa, js = fs[0], fs[6], fs[8]
@@ -113,6 +116,7 @@ class 表(_表):
 			hz, _, _, ipa, js = fs[:5]
 		elif name in ("雷州",):
 			hz, _, _, _, _, ipa = fs[:6]
+			ipa = ipa.replace("˨˨˩", "˨˩")
 		elif name in ("長泰",):
 			_, sm, ym, sd, hz, js = fs[:6]
 			ipa = sm + ym + sd
@@ -137,9 +141,6 @@ class 表(_表):
 		elif name in ("鶴山雅瑤",):
 			hz, sm, ym, sd, _, _, _, js = fs[:8]
 			ipa = sm + ym + sd
-		elif name in ("開平沙塘",):
-			hz, sm, ym, sd, js = fs[:5]
-			yb = sm + ym + sd
 		elif name in ("揭陽",):
 			hz, _, _, _, _, ipa, yd, js = fs[:8]
 			yb = self.dz2dl(ipa)
@@ -165,7 +166,7 @@ class 表(_表):
 		elif name in ("深圳西鄕","深圳沙井"):
 			hz, _, _, _, _, _, _, ipa, js = fs[:9]
 		elif name in ("新晃凳寨",):
-			hz,_,_,_,_,_,_,ipa,js = fs[:9]
+			hz,ipa,js = fs[0], fs[9], fs[10]
 		elif name in ("如東豐利",):
 			hz,_,sy,_,_,_,sd,_,_,js = fs[:10]
 			yb = sy + sd
@@ -187,6 +188,8 @@ class 表(_表):
 			ipa = sm + ym + sd
 		elif name in ("上饒沙溪",):
 			hz, yb, _, js = fs[:4]
+		elif name in ("1818漳州",):
+			hz, yb = fs[0], fs[4]
 		elif len(fs) >= 4:
 			hz, _, ipa, js = fs[:4]
 		elif len(fs) == 2:

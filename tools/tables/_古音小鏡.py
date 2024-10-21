@@ -11,7 +11,7 @@ class 表(_表):
 		name = str(self)
 		if name in ("塔玆語", "海倫","宜興南",):
 			hz, sy, tv, js = fs[:4]
-		elif name in ("虎林", "吳江菀坪","景寧鄭坑","慈谿觀海衛",):
+		elif name in ("虎林", "吳江菀坪","景寧鄭坑","慈谿觀海衛","馬鞍山", "南陵", "南陵湖南街"):
 			hz, sm, ym, tv, js = fs[:5]
 			sy = sm + ym
 		elif name in ("滁州",):

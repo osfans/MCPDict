@@ -121,6 +121,8 @@ def getLangs(dicts, argv=None):
 					print(f"\t\t\t字數太少 {mod}")
 				elif lang.syCount < 100:
 					print(f"\t\t\t音節太少 {mod}")
+			if not len(toneMaps.keys()):
+				print("\t\t\t無調值")
 			lang.info["文件名"] = lang._file
 			count += 1
 		else:

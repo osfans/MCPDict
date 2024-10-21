@@ -38,7 +38,7 @@ class 表(_表):
 		elif name in ("昆明","建水臨安",):
 			line = re.sub(r"^.*?\t", "", line)
 			line = line.replace("(", "{").replace("〔", "{").replace("（","{").replace(")", "}").replace("）", "}")
-		elif name in ("丹鳳","商州","嘉定中","嘉定西","嘉定城","嘉定外","寶山","寶山羅店"):
+		elif name in ("丹鳳","商州","嘉定中","嘉定西","嘉定城","嘉定外","寶山","寶山羅店","南皮"):
 			if line.startswith("#"): line = "#"
 		elif name in ("運城", "興縣"):
 			line = line.replace("ø", "")
@@ -101,6 +101,13 @@ class 表(_表):
 				.replace("(", "（").replace(")", "）").replace("\t", "").rstrip("12345 \t\n")
 			line = re.sub(r"\[([^\d].*?)\]", "（\\1）", line)
 			line = regex.sub("（((?>[^（）]+|(?R))*)）", "{\\1}", line)
+		elif name in ("句容",):
+			if re.match(".*[①-⑨ⓐⓑ]+", line):
+				for i in range(1,10):
+					sda = chr(ord('①') + (i - 1))
+					sdb = f"［{i}］"
+					line = line.replace(sda, sdb)
+			line = line.replace("］ⓐ", "a］").replace("］ⓑ", "b］")
 		return line
 
 	def update(self):
@@ -123,7 +130,7 @@ class 表(_表):
 			if line.startswith("#"):
 				ym = line[1:]
 				if not ym: continue
-				ym = ym.split("\t")[0].strip()
+				ym = ym.split("\t")[0].strip().strip("[]")
 				continue
 			if "［" not in line and re.match(".*[①-⑨]", line):
 				for i in range(1,10):
@@ -133,7 +140,7 @@ class 表(_表):
 			if "\t" not in line: line = re.sub(r"^(.*?)\［", "\\1	［", line)
 			fs = line.split("\t")[:2]
 			if len(fs) != 2: continue
-			sm = fs[0].strip()
+			sm = fs[0].strip().strip("[]")
 			for sd,hzs in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", fs[1]):
 				py = sm + ym +sd
 				hzs = regex.findall(r"(.)\d?([<+\-/=\\\*？$&r@]?)\d?(\{(?>[^\{\}]+|(?R))*?\})?", hzs)

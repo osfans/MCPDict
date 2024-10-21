@@ -10,7 +10,6 @@ class 表(_表):
 	def update(self):
 		super().update()
 		self.note = self.get_note()
-		print(self.note)
 
 	def get_note(self):
 		sname = self.get_fullname(self._file)
@@ -20,7 +19,6 @@ class 表(_表):
 		lines = list()
 		for row in sheet.rows:
 			fs = [j.value if j.value else "" for j in row[:50]]
-			print(fs)
 			if any(fs):
 				line = "\t".join(fs)
 				if line:
@@ -35,7 +33,7 @@ class 表(_表):
 			js = "(書)%s" % js
 		elif py.endswith("-"):
 			py = py[:-1] + "="
-		js = js.strip()
+		js = js.strip().replace("|", "｜")
 		if not hz: hz = jt
 		return hz, py, js
 
