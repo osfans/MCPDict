@@ -61,9 +61,9 @@ def processFs(v):
 	if v is None: return ""
 	return str(v).strip().replace("\t", " ").replace("\n", " ")
 
-def getXlsxLines(xls):
+def getXlsxLines(xls, page=0):
 	wb = load_workbook(xls, data_only=True)
-	sheet = wb.worksheets[0]
+	sheet = wb.worksheets[page]
 	lines = list()
 	for row in sheet.rows:
 		fs = [processFs(j.value) for j in row[:50]]
@@ -72,9 +72,9 @@ def getXlsxLines(xls):
 			lines.append(line)
 	return lines
 
-def getXlsLines(xls):
+def getXlsLines(xls, page=0):
 	wb = open_workbook(xls)
-	sheet = wb.sheet_by_index(0)
+	sheet = wb.sheet_by_index(page)
 	lines = list()
 	for i in range(sheet.nrows):
 		fs = sheet.row_values(i)
@@ -84,14 +84,14 @@ def getXlsLines(xls):
 			lines.append(line)
 	return lines
 
-def xls2tsv(xls):
+def xls2tsv(xls, page=0):
 	tsv = getTsvName(xls)
 	if not os.path.exists(xls): return
 	if os.path.exists(tsv):
 		xtime = os.path.getmtime(xls)
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
-	lines = getXlsxLines(xls) if isXlsx(xls) else getXlsLines(xls)
+	lines = getXlsxLines(xls, page) if isXlsx(xls) else getXlsLines(xls, page)
 	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.writelines(lines)
 	t.close()
@@ -169,7 +169,8 @@ class 表:
 		sname = g[0]
 		self._file = os.path.basename(sname)
 		if isXls(sname):
-			xls2tsv(sname)
+			page = 1 if self.short in ("中山石岐", ) else 0
+			xls2tsv(sname, page)
 			sname = getTsvName(sname)
 		elif isDocx(sname):
 			docx2tsv(sname)
