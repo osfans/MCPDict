@@ -488,13 +488,21 @@ public class DB extends SQLiteAssetHelper {
         if (db == null) return "";
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
-        String[] projection = {String.format("\"%s\"", field)};
+        String[] projection = {String.format("\"%s\", \"%s\"", field, selection)};
         String query = qb.buildQuery(projection, selection + " match ?",  null, null, null, null);
         Cursor cursor = db.rawQuery(query, new String[]{String.format("\"%s\"", lang)});
         String s = "";
-        if (cursor.getCount() > 0) {
+        int n = cursor.getCount();
+        if (n > 0) {
             cursor.moveToFirst();
             s = cursor.getString(0);
+            for (int i = 1; i < n; i++) {
+                cursor.moveToNext();
+                String l = cursor.getString(1);
+                if (!TextUtils.isEmpty(l) && l.contentEquals(lang)) {
+                    s = cursor.getString(0);
+                }
+            }
         }
         cursor.close();
         if (TextUtils.isEmpty(s)) s = "";
