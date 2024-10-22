@@ -2,7 +2,6 @@ package com.osfans.mcpdict;
 
 import android.content.res.Resources;
 import android.text.TextUtils;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -19,7 +18,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -202,15 +200,6 @@ public class Orthography {
         public static boolean isPY(String s) {
             if (TextUtils.isEmpty(s)) return false;
             return s.matches("[a-z]+[0-5?]?");
-        }
-
-        public static boolean isIPA(char c) {
-            int type = Character.getType(c);
-            if (isHz(c)) return false;
-            return Character.isLetterOrDigit(c)
-                    || type == Character.NON_SPACING_MARK
-                    || type == Character.MODIFIER_SYMBOL
-                    || type == Character.OTHER_NUMBER;
         }
 
         public static int getCompatibility(int unicode) {
