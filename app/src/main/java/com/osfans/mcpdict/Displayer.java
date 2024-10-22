@@ -6,6 +6,15 @@ abstract class Displayer {
     protected static final String NULL_STRING = "-";
     public String mLang;
 
+    public boolean isIPA(char c) {
+        int type = Character.getType(c);
+        if (Orthography.HZ.isHz(c)) return false;
+        return Character.isLetterOrDigit(c)
+                || type == Character.NON_SPACING_MARK
+                || type == Character.MODIFIER_SYMBOL
+                || type == Character.OTHER_NUMBER;
+    }
+
     public String display(String s) {
         if (s == null) return NULL_STRING;
         s = lineBreak(s);
@@ -15,7 +24,7 @@ abstract class Displayer {
         boolean isMeaning;
         while (p < L) {
             int q = p;
-            while (q < L && Orthography.HZ.isIPA(s.charAt(q))) q++;
+            while (q < L && isIPA(s.charAt(q))) q++;
             if (q > p) {
                 String t1 = s.substring(p, q);
                 String t2 = displayOne(t1);
@@ -23,7 +32,7 @@ abstract class Displayer {
                 p = q;
             }
             isMeaning = false;
-            while (p < L && (isMeaning || !Orthography.HZ.isIPA(s.charAt(p)))) {
+            while (p < L && (isMeaning || !isIPA(s.charAt(p)))) {
                 if (s.charAt(p) == '{') isMeaning = true;
                 else if (s.charAt(p) == '}') isMeaning = false;
                 p++; //
