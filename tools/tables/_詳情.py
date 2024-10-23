@@ -13,17 +13,45 @@ FeatureCollection = {
   "features": []
 }
 
-opencc = OpenCC("s2t.json")
+n2o_dict = {}
 
-def convert(s):
+for line in open("tables/data/mulcodechar.dt", encoding="U8"):
+	if not line or line[0] == "#": continue
+	fs = line.strip().split("-")
+	if len(fs) < 2: continue
+	n2o_dict[fs[0]] = fs[1]
+
+opencc_s2t = OpenCC("s2t.json")
+opencc_t2s = OpenCC("t2s.json")
+
+def s2t(s):
 	if not s: return ""
 	if type(s) is not str: return s
-	return opencc.convert(s)\
-		.replace("清","淸")\
-		.replace("榆","楡")\
+	s = opencc_s2t.convert(s)\
 		.replace("樑","梁")\
 		.replace("嶽","岳")\
 		.replace("慄", "栗")
+	for n, o in n2o_dict.items():
+		s = s.replace(n, o)
+	return s
+
+def n2o(s):
+	if not s: return ""
+	for n, o in n2o_dict.items():
+		s = s.replace(n, o)
+	return s
+
+def o2n(s):
+	if not s: return ""
+	for n, o in n2o_dict.items():
+		s = s.replace(o, n)
+	return s
+
+def t2s(s, prepare = True):
+	s = o2n(s)
+	if prepare:
+		return s
+	return opencc_t2s.convert(s)
 
 def outdated():
 	if not os.path.exists(tpath): return True
@@ -89,8 +117,8 @@ def load():
 			else: continue
 		else:
 			ver = ver.strftime("%Y-%m-%d") if ver else None
-		lang = fs["語言"].value
-		short = fs["簡稱"].value
+		lang = n2o(fs["語言"].value)
+		short = n2o(fs["簡稱"].value)
 		filename = fs["文件名"].value
 		if not filename or filename.startswith("#"): continue
 		fileformat = fs["字表格式"].value
@@ -158,8 +186,8 @@ def load():
 			"音典分區":types[1],
 			"陳邡排序":orders[2],
 			"陳邡顏色":colors[2],
-			"陳邡分區":convert(types[2]),
-			"省":convert(places[0]).strip("*"),
+			"陳邡分區":s2t(types[2]),
+			"省":s2t(places[0]).strip("*"),
 			"市":places[1],
 			"縣":places[2],
 			"鎮":places[3],

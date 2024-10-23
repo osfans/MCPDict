@@ -3,7 +3,7 @@
 import re, os, json, glob
 from importlib import import_module
 import tables._詳情
-from opencc import OpenCC
+from tables._詳情 import t2s
 
 xing_keys = ["漢字","兩分","字形描述","五筆畫","說文","康熙","匯纂","漢大"]
 xing_keys_len = len(xing_keys)
@@ -11,25 +11,6 @@ def hex2chr(uni):
 	"把unicode轉換成漢字"
 	if uni.startswith("U+"): uni = uni[2:]
 	return chr(int(uni, 16))
-
-t2s_dict = {
-	"鄕":"鄉",
-	"玆":"兹",
-	"淸":"清",
-	"尙":"尚",
-	"髙":"高",
-	"靑":"青",
-	"楡":"榆",
-	"舖":"鋪",
-	"谿":"溪",
-}
-opencc = OpenCC("t2s.json")
-def t2s(s, prepare = True):
-	for i in t2s_dict:
-		s = s.replace(i,t2s_dict[i])
-	if prepare:
-		return s
-	return opencc.convert(s)
 
 def cjkorder(s):
 	n = ord(s)
