@@ -64,7 +64,7 @@ class 表(_表):
 		elif name in ("惠來隆江",):
 			hz, ipa, js = fs[:3]
 		elif name in ("壽寧平溪"):
-			hz, ipa, js = fs[:3]
+			hz, yb, js = fs[:3]
 			hz = hz.replace("", "□")
 		elif name in ("新會會城",):
 			hz, _, _, ipa = fs[:4]
