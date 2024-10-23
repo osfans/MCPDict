@@ -43,7 +43,7 @@ class 表(_表):
 			sy, sd, _, hzs = fs[:4]
 			hzs = re.sub("[₁₂₃]", "", hzs)
 			hzs = hzs.replace("[", "［").replace("]", "］").replace("（", "[").replace("）", "]").replace("(", "[").replace(")", "]")
-		elif name in ("會同高椅","會同青朗"):
+		elif name in ("會同髙椅","會同靑朗"):
 			sy, _, sd, hzs = fs[:4]
 		elif name in ("湘鄕棋梓",):
 			sy, sd, _, hzs = fs[:4]
