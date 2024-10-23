@@ -47,9 +47,18 @@ class 表(_表):
 			sy, _, sd, hzs = fs[:4]
 		elif name in ("湘鄕棋梓",):
 			sy, sd, _, hzs = fs[:4]
+		elif name in ("崇陽","通城塘湖"):
+			sy, sd, _, hzs = fs[:4]
+			hzs = hzs.replace("(", "[").replace(")", "]").replace("（", "[").replace("）", "]")
 		elif name in ("邵東斫曹","綏寧武陽","天柱江東"):
 			sy, sd = fs[:2]
 			hzs = "".join(fs[2:]).replace("\t", "").strip()
+		elif name in ("吉安雲樓",):
+			sy, sd, hzs = fs[:3]
+			hzs = hzs.replace("(", "[").replace(")", "]").replace("（", "[").replace("）", "]")
+			hzs = hzs.replace("₂", "2")
+			hzs = re.sub(r"(\d)(\[)", "\\2\\1", hzs)
+			sd = self.toneMaps[sd]
 		elif len(fs) > 3 and fs[3]:
 			_, sy, sd, hzs = fs[:4]
 		else:
