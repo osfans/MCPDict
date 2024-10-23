@@ -447,6 +447,9 @@ public class DB extends SQLiteAssetHelper {
         if (languages.contentEquals("3") || languages.contentEquals("5")) {
             return queryLabel(String.format("級別  >= \"%s\"", languages));
         }
+        else if (languages.contentEquals("1")) {
+            return queryLabel(String.format("方言島"));
+        }
         ArrayList<String> array = new ArrayList<>();
         if (TextUtils.isEmpty(languages)) {
             if (customs == null || customs.isEmpty()) return LABELS;

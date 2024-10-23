@@ -267,6 +267,7 @@
         <item>@string/pref_title_custom_languages</item>
         <item>縣級方言</item>
         <item>代表方言</item>
+        <item>方言島</item>
     </string-array>
     <string-array name="pref_values_show_languages">
         <item>*</item>
@@ -275,6 +276,7 @@
         <item>""</item>
         <item>"3"</item>
         <item>"5"</item>
+        <item>"1"</item>
     </string-array>
 
     <string name="pref_key_charset">SHOW_CHARSET</string>

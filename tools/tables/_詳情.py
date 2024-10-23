@@ -149,6 +149,7 @@ def load():
 			"文件名":filename,
 			"文件格式":fileformat,
 			"跳過行數":fileskip,
+			"方言島": island == "☑",
 			"地圖集二排序":orders[0],
 			"地圖集二顏色":colors[0],
 			"地圖集二分區":types[0],
