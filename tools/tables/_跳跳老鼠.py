@@ -23,7 +23,15 @@ class 表(_表):
 		elif name in ("江華河路口", "江華粟米塘", "全州黃沙河"):
 			sy, sd, hzs = fs[:3]
 			hzs = hzs.replace("(", "[").replace(")", "]").replace("（", "[").replace("）", "]")
-		elif name in ("欽州正"):
+		elif name in ("孝昌小河",):
+			if not fs[0]: return
+			groups = re.findall(r"^(.*?)(\d+) ?(.+)$", fs[0])
+			if not groups: return
+			sy, sd, hzs = groups[0]
+			if not sy or not hzs: return
+			sd = self.toneMaps[sd]
+			hzs = hzs.strip().replace("{", "[").replace("}", "]")
+		elif name in ("欽州正",):
 			sy, sd, hzs = fs[:3]
 			hzs = hzs.replace("{", "[").replace("}", "]")
 		elif name in ("唐山-開平"):
