@@ -1,19 +1,53 @@
 #漢字	音標	解釋
 □	pu1	彎腰
+□	toi1	掉進
+□	liau1	（腳尖）踢
 □	kio1	幾多
+□	ŋio1	
+□	pʰun1	有厚度
+□	lion1	捅、戳
 □	pa2	掛：背～鉤鐮
+□	ti2	拖、拉
 □	ki2	推
 □	no2	輕擦
+□	tsʰau2	均勻
 □	koi2	容易
 □	em2	抱頭低下
+□	iam2	拋灑
+□	ʃun2	邊緣
+□	le3	邊
+□	vo3	哭
 □	mau3	撞；擠
 □	hia3	跑步
+□	kʰue3	饑餓
+□	kʰim3	勤快
+□	nun3	吐出
+□	oŋ3	躺
 □	ke6	（輕）撬～
 □	voi6	不會
+□	pin6	掙脫
+□	sian6	（粥）稀
+□	kep7	覆蓋
+□	ep7	瞪眼
+□	siap7	閉眼
+□	at7	生氣
 □	let7	骯髒
+□	et7	按手指
 □	iat7	勾手指打頭
+□	mut7	木頭朽
+□	tsʰut7	在
+□	hot7	疲勞
+□	tʰak7	綁，系
+□	siak7	米粉
+□	kiok7	追趕
+□	pʰok7	剝開
+□	tep8	扔，拋
 □	lut8	挫
+□	lut8	脫毛
+□	sut8	（蜂）叮
+□	pʰuk8	（蟲咬）腫塊
 㖹	pʰun2	吹
+㧡	kai1	挑擔
 㧻	tuk7	手辟
 㪗	tʰo6	解開
 㬹	tsaŋ1	肘
@@ -56,7 +90,6 @@
 之	tsɿ1	
 乍	tsa3	
 乎	fu2	
-乏	hot7*	疲勞
 乏	fuap7	
 乖	kuai1	
 乘	ʃin3	
@@ -183,12 +216,10 @@
 借	tsia3	
 倡	tʃʰoŋ3	提～
 倣	foŋ3	
-倦	kʰue3	饑餓
 倦	kʰian3	
 倪	ŋoi2	
 倫	lun2	
 倭	e3	
-值	tsʰut7*	在
 值	tʃit8	
 假	ka3	真～，放～
 偉	vui6	
@@ -257,8 +288,8 @@
 內	nui6	
 全	tsian2-	
 全	tsʰian2=	
-兩	lioŋ3-	～個
-兩	lioŋ1=	斤～
+兩	lioŋ1	斤～
+兩	lioŋ3	～個
 八	pat7	
 公	kuŋ1	
 六	liuk7	
@@ -322,7 +353,6 @@
 剛	koŋ1	
 剜	van2	
 剝	pok7	
-剝	pʰok7*	剝開
 剩	ʃin6	
 剪	tsian3	
 剮	kua3	
@@ -355,7 +385,6 @@
 勝	ʃin3	～任，～敗
 勞	lo2	
 勢	ʃe3	
-勤	kʰim3*	勤快
 勤	kʰion2	
 勳	hiun1	
 勵	li6	
@@ -364,7 +393,6 @@
 勻	iun2	
 勾	keu1	
 勿	fut7	
-勻	tsʰau2*	均勻
 包	pau1	
 匆	tsʰuŋ1	
 匏	pʰu2	葫蘆
@@ -430,12 +458,10 @@
 叫	kiau3	
 召	ʃeu6	
 叭	pa1	
-叮	sut8*	（蜂）叮
 可	kʰo3	
 台	tʰoi2	天～
 史	sɿ3	
 右	iu6	
-号	vo3*	哭
 司	sɿ1	
 叻	liak8	能幹
 各	kok7	
@@ -446,7 +472,6 @@
 名	men2=	
 后	heu6	
 吏	li6	
-吐	nun3*	吐出
 吐	tʰu3	～痰，嘔～
 向	hioŋ3	
 君	kiun1	
@@ -497,7 +522,6 @@
 哽	kaŋ3	骨～在喉
 唆	so1	啰～
 唇	ʃun2	
-唇	ʃun2	邊緣
 唐	tʰoŋ2	
 唔	m6	否定詞
 唧	tsʰit7	
@@ -524,11 +548,12 @@
 喝	hot7	～酒，～彩
 喧	sian1	
 喪	soŋ3	婚～，～失
-喫	kʰe3*	咬，啃
+喫	kʰe3	咬，啃
 喬	kʰiau1	
 單	tan1	
 喻	i6	
 嗅	tʃʰiu3	
+嗇	sep7	吝～
 嗓	soŋ1	
 嗜	ʃi6	
 嗡	vuŋ1	
@@ -582,7 +607,6 @@
 坎	kʰam3	
 坐	tsʰo1	
 坑	kʰaŋ1	
-墜	toi1*	掉進
 坡	po1	
 坤	kʰun1	
 坦	tʰan6	
@@ -730,7 +754,6 @@
 嫡	tit7	
 嫩	nun6	
 嫲	ma2	婦人
-嫼	at7	生氣
 嬉	hi3	
 嬌	kiau1	
 嬰	in1	
@@ -945,7 +968,6 @@
 弊	pi6	
 式	sit7	
 弓	kiuŋ1	
-弓	kiuŋ1	彩虹
 引	in3	
 弘	fen6	
 弟	tʰe3-	
@@ -1091,6 +1113,7 @@
 戎	iuŋ1	
 成	ʃin2	
 成	ʃiaŋ2	
+我	ŋai2-	
 我	ŋa1	我的
 我	ŋo2	
 戒	kai3	
@@ -1115,7 +1138,6 @@
 扒	pe2	划船
 打	ta3	
 托	tʰok7	
-扚	ti2	拖、拉
 扛	koŋ1	
 扠	tʃʰa6	拎
 扣	kʰeu3	
@@ -1134,7 +1156,6 @@
 抄	tsʰau3	～寫
 把	pa3	～握
 抑	et7	
-抑	et7	按手指
 抓	tsa1	
 投	tʰeu2	
 抗	kʰoŋ3	
@@ -1185,7 +1206,6 @@
 挽	van3	
 挾	kiap7	～菜
 捂	ŋu2	
-捅	lion1*	捅、戳
 捅	tʰuŋ3	
 捆	kʰun3	
 捉	tsok7	
@@ -1221,10 +1241,9 @@
 掫	tseu1	
 掬	kʰiuk7	
 掮	kʰian2	
-擲	tep8*	扔，拋
 掹	paŋ1	拖、拉
 揀	kian3	
-揉	ŋio1	揉搓
+揉	ŋio1	
 揉	iu2	
 揍	tseu3	
 描	miau2	
@@ -1239,6 +1258,7 @@
 援	ian1	～救
 損	sun3	
 搏	pok7	
+搓	ŋio1	
 搖	ieu2	
 搜	seu1	
 搞	kau1	
@@ -1247,17 +1267,15 @@
 搪	tʰoŋ2	
 搬	pan1	
 搭	tap7	
-搭	tap7	贴
 搶	tsʰioŋ3	
 搽	tsʰa2	塗抹
 摃	kuŋ3	擊打
-擯	pin6*	掙脫
 摑	kuet7	
 摔	soi1	
 摘	tʃak7	
 摞	lui1	～起來
-摟	lui3*	抱
 摟	leu2	～抱
+摟	lui3	抱
 摧	tsʰui1	
 摩	mui1	
 摩	mo2	
@@ -1269,7 +1287,6 @@
 撕	sɿ1	
 撤	tʃiat7	
 撥	pʰat7	
-撩	liau1	（腳尖）踢
 撩	liau2	
 撫	vu3	
 撮	tsot7	一～米
@@ -1536,7 +1553,6 @@
 楊	ioŋ2	
 楓	puŋ1	
 楓	fuŋ1=	
-楔	siap7*	閉眼
 楚	tsu3	
 楝	lian6	苦～
 楞	lin2	
@@ -1677,7 +1693,6 @@
 沒	mut8	沉～，～有
 沙	sa1	
 沛	pʰai3	
-沒	mut7*	木頭朽
 沫	mat8	
 河	ho2	
 沸	pʰu1	
@@ -1816,7 +1831,6 @@
 潮	tʃʰeu2	
 潰	kʰui3	崩
 澀	sep7	
-澀	sep7	吝啬
 澄	tʃʰin2	
 澆	ŋiau2	
 澇	lo6	旱～
@@ -1839,7 +1853,6 @@
 瀋	ʃim3	
 瀾	lan1	口水
 灌	kuan3	
-灑	iam2*	拋灑
 灑	sa3	
 灘	tʰan1	
 灠	lam3	
@@ -2078,7 +2091,7 @@
 癩	lai3	
 癩	lat7	
 癬	sian3	
-癮	ŋian3*	
+癮	ŋian3	
 癸	kʰui2	
 登	ten1	
 發	fat7	～財
@@ -2100,7 +2113,6 @@
 益	iak7	
 盒	hap8	
 盔	foi1	
-盖	kep7*	覆蓋
 盛	ʃin6	興～
 盜	tʰo6	
 盞	tsan3	
@@ -2135,7 +2147,6 @@
 睬	tsʰai3	
 瞎	hat7	
 瞞	man6	
-瞪	ep7*	瞪眼
 瞪	ten1	
 瞭	liau2	
 瞳	tʰuŋ2	
@@ -2234,7 +2245,7 @@
 穆	muk8	
 穎	in6	
 穗	fui6	
-穢	ve3*	
+穢	ve3	
 穩	van3	
 穩	vun3	
 穫	vet7	
@@ -2247,7 +2258,7 @@
 突	tʰut7	
 窄	tsʰet8	
 窖	kau3	
-窗	tsʰuoŋ1	
+窗	tsʰuŋ1	
 窘	kʰiun3	
 窟	vut7	屎～：屁股
 窟	kʰut7	
@@ -2278,7 +2289,6 @@
 笠	lip7	
 笡	tsʰia6	斜
 符	pʰu2	
-笨	pʰun1	有厚度
 笨	pun3	
 第	tʰi6	
 筆	pit7	
@@ -2316,7 +2326,7 @@
 篩	tsʰe1	～子
 篷	puŋ2	
 簇	tsʰuk7	
-簍	lui3*	鱼篓
+簍	lui3	
 簟	tiam6	蓆
 簡	kian3	
 簧	vaŋ2	鎖～
@@ -2340,7 +2350,6 @@
 粒	lip7	
 粗	tsu1	
 粘	niam2	～米，～貼
-粞	siak7*	米粉
 粟	siuk7	
 粥	tʃuk7	
 粧	tsuoŋ1	
@@ -2360,7 +2369,6 @@
 糧	lioŋ2	
 糴	tʰet8	
 糶	tʰiau3	
-系	tʰak7*	綁，系
 系	hi6	
 糾	kiu6	～纏，～正
 紀	ki3	
@@ -2549,7 +2557,6 @@
 脫	tʰot7	
 脯	pʰu3	幹肉
 脯	pʰu6	胸～
-脫	lut8*	脫毛
 脹	tʃioŋ3	
 脾	pi2	
 腆	tian3	～肚子
@@ -2663,7 +2670,6 @@
 荊	kin1	
 荒	foŋ1	
 荔	li1=	
-荷	kai1	挑擔
 荷	ho2	～花，薄～
 莉	li6	
 莊	tsuoŋ1	
@@ -2771,6 +2777,7 @@
 號	ho6	呼～，～數
 虧	kʰui1	
 虱	set7	
+虹	kiuŋ1-	
 虹	fuŋ2=	
 虻	maŋ2	牛～
 蚊	mun1	
@@ -2889,9 +2896,9 @@
 覽	lam3	
 觀	kuan1	參～，寺～
 角	kok7	
-解	ke3-	鬆開
+解	ke3	鬆開
+解	kai3	講～
 解	hai3	姓，曉也
-解	kai3=	講～
 觸	tʃʰuk7	
 言	ŋian2	
 訂	ten1	～閱
@@ -3018,6 +3025,7 @@
 貸	tʰoi6	
 費	fui3	～用
 費	fui3	姓
+貼	tap7-	
 貼	tiap7=	
 貿	miau3	
 賀	ho6	
@@ -3088,7 +3096,6 @@
 躡	niap7	～手～腳
 身	ʃin41	
 躬	kiuŋ1	
-躺	oŋ3*	
 躺	tʰoŋ6	
 軀	kʰi1	
 車	tʃʰa1	馬～
@@ -3132,7 +3139,7 @@
 農	nuŋ2	
 迂	i6	
 迎	ŋiaŋ2	
-近	kʰion6=	
+近	kʰion6	
 迓	ŋa6	
 迫	pet7	
 述	ʃut8	
@@ -3143,7 +3150,6 @@
 送	suŋ3	
 逃	tʰo2	
 逆	ŋiak8	
-逐	kiok7*	追趕
 逐	tʃʰuk8	
 途	tʰu2	
 通	tʰuŋ1	
@@ -3184,7 +3190,6 @@
 邀	ieu1	
 邁	mai6	
 還	fan2	～原，～有
-邊	le3*	
 邊	pian1	
 邢	hin2	
 那	na6	
@@ -3382,7 +3387,7 @@
 雍	iuŋ1	
 雕	tiau1	
 雖	sui1	
-雙	ʃuoŋ1	
+雙	suŋ1	
 雛	tsʰi1	
 雜	tsʰap8	
 雞	ke1	
@@ -3395,8 +3400,8 @@
 雲	iun2	
 零	len2	
 雷	lui2	
-雹	pʰok8-	
-雹	pʰau3=	
+雹	pʰau3	
+雹	pʰok8	
 電	tʰian6	
 需	si1	
 霄	siau1	
@@ -3470,6 +3475,7 @@
 飛	pui1	
 食	ʃit8	
 飩	tun1	餛～
+飯	pʰon6-	
 飯	fan6=	
 飲	im3	～酒，米湯
 飼	tsʰɿ6	
@@ -3563,7 +3569,6 @@
 鱗	lin2	
 鱷	ŋok8	
 鱸	lu2	
-鮮	sian6	（粥）稀
 鳥	tiau1-	
 鳥	tiau3	肏
 鳥	niau1=	
@@ -3622,5 +3627,4 @@
 龕	kʰam1	
 龜	kui1	
 龞	piat7	
-𦢊	pʰuk8	（蟲咬）腫塊
 𨻧	liu2	～隍，地名
