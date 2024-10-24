@@ -106,7 +106,7 @@ public class Utils extends Application {
         }
 
         public boolean isIPA(char c) {
-            return super.isIPA(c) || c == '/';
+            return super.isIPA(c) || c == '/' || c == '(' || c == ')';
         }
     };
 
