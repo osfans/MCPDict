@@ -363,6 +363,7 @@ class 表:
 						js = "\t".join(fs[2:])
 					if not hz or len(hz) != 1: continue
 					if not yb: continue
+					if self.isDialect() and isHZ(yb[0]): continue
 					p = f"{yb}\t{js}"
 					p = p.strip()
 					if p not in d[hz]:

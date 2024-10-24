@@ -143,8 +143,8 @@ class 表(_表):
 			sm = fs[0].strip().strip("[]")
 			for sd,hzs in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", fs[1]):
 				py = sm + ym +sd
-				hzs = regex.findall(r"(.)\d?([<+\-/=\\\*？$&r@]?)\d?(\{(?>[^\{\}]+|(?R))*?\})?", hzs)
-				for hz, c, js in hzs:
+				hzs = regex.findall(r"(.)\d?([<+\-/=\\\*？$&r@]?)\d?(\{((?=[^\{\}]*)|(?R))*?\})?", hzs)
+				for hz, c, js, _ in hzs:
 					if hz == " ": continue
 					p = ""
 					if c:
@@ -166,7 +166,7 @@ class 表(_表):
 							elif c == '<':
 								p = "(舊)"
 								c = ""
-					js = js.strip("{}")
+					js = js[1:-1]
 					p = py + c + "\t" + p + js
 					if p not in d[hz]:
 						d[hz].append(p)

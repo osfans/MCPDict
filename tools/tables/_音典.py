@@ -110,7 +110,9 @@ class 表(_表):
 			hz, _, ipa, _, js = fs[:5]
 		elif name in ("武義",):
 			_, hz, _, ipa, js = fs[:5]
-		elif name in ("鳳凰-新豐","潮州","汕頭"):
+		elif name in ("鳳凰-新豐",):
+			hz, py, _, ipa, js = fs[:5]
+		elif name in ("潮州","汕頭"):
 			hz, _, _, ipa, js = fs[:5]
 		elif name in ("汕頭市郊"):
 			hz, _, _, ipa, js = fs[:5]
@@ -200,6 +202,7 @@ class 表(_表):
 			if ipa:
 				yb = self.dz2dl(ipa)
 			if len(hz) != 1 or not yb: return
+			yb = self.normYb(yb)
 			if hz in "?？☐�": hz = "□"
 			return hz, yb, js
 		return
