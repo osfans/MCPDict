@@ -13,5 +13,6 @@ build/
 *.xlsx
 *.pdf
 __pycache__
-*.doc  
-*.docx  
+*.doc
+*.docx
+yedict/
