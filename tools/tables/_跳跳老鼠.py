@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from tables._表 import 表 as _表
-import re
+import re, regex
 
 class 表(_表):
 	disorder = True
@@ -38,6 +38,11 @@ class 表(_表):
 			sy, sd, hzs = fs[:3]
 			hzs = hzs.replace("{", "[").replace("}", "]")
 			sd = self.toneMaps.get(sd, "0")
+		elif name in ("汨羅沙溪",):
+			sy, sd, hzs = fs[:3]
+			hzs = hzs.replace("(", "（").replace(")", "）")
+			hzs = regex.sub("（((?>[^（）]+|(?R))*)）", "[\\1]", hzs)
+			sd = self.toneMaps.get(sd, "?")
 		elif name in ("平陰東阿",):
 			sy, sd, _, hzs = fs[:4]
 			if sy:
@@ -45,8 +50,8 @@ class 表(_表):
 			else:
 				sy = self.sy
 			yb = sy + sd
-			hzs = hzs.replace("¨", "□")\
-				.replace("(", "[").replace(")", "]").replace("（", "[").replace("）", "]")
+			hzs = hzs.replace("¨", "□").replace("(", "（").replace(")", "）")
+			hzs = regex.sub("（((?>[^（）]+|(?R))*)）", "[\\1]", hzs)
 		elif name in ("長沙雙江",):
 			sy, sd, _, hzs = fs[:4]
 			hzs = re.sub("[₁₂₃]", "", hzs)
@@ -77,7 +82,7 @@ class 表(_表):
 		hzs = re.sub(r"(\[.*?\])([-=])", "\\2\\1", hzs)
 		for hz, c, js in re.findall(r"(.)([-=]?)(\[[^[]]*?\[[^[]]*?\][^[]]*?\]|\[.*?\])?", hzs):
 			if js: js = js[1:-1]
-			if hz == "~": hz = "□"
+			if hz in "~☐": hz = "□"
 			l.append((hz, yb + c, js))
 		return l
 

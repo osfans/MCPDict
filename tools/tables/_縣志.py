@@ -167,6 +167,9 @@ class 表(_表):
 								p = "(舊)"
 								c = ""
 					js = js[1:-1]
+					if js.count("{") != js.count("}"):
+						print("\t\t\tnot paired:", js)
+						js = js.replace("{", "").replace("}", "")
 					p = py + c + "\t" + p + js
 					if p not in d[hz]:
 						d[hz].append(p)
