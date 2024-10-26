@@ -94,12 +94,12 @@ class 表(_表):
 			hz, sm, ym, sd, js = fs[7], fs[12], fs[13], fs[14], fs[18]
 			ipa = sm + ym + sd
 		elif name in ("江門",):
-			hz, sm, ym, sd, jso, js = fs[7], fs[16], fs[17], fs[18], fs[8], fs[9]
+			hz, sm, ym, sd, jso, js = fs[7], fs[25], fs[26], fs[27], fs[11], fs[12]
 			ipa = sm + ym + sd
 			if jso: js = jso + "。" + js
 			js = js.strip("。")
 		elif name in ("江門墟頂","江門白沙","江門水南","江門沙仔尾","江門紫萊"):
-			hz, sm, ym, sd, js = fs[0], fs[17], fs[18], fs[11], fs[20] if len(fs) > 20 else ""
+			hz, sm, ym, sd, js = fs[0], fs[6], fs[7], fs[4], fs[9]
 			yb = sm + ym + sd
 		elif name in ("江門禮樂","江門潮連"):
 			hz, sm, ym, sd, js = fs[:5]
