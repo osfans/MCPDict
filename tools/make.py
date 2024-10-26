@@ -10,7 +10,7 @@ start = time()
 dicts = defaultdict(dict)
 #sys.argv.extend(( "1884甯城",))
 if len(sys.argv) > 1:
-	argv = [os.path.basename(i).split(".")[0] for i in sys.argv[1:]]
+	argv = sys.argv[1:]
 	langs = getLangs(dicts, argv)
 else:
 	langs = getLangs(dicts)
@@ -36,7 +36,7 @@ for i in sorted(dicts.keys(), key=cjkorder):
 	c.execute(INSERT, v)
 
 #info
-keys = list(langs[6 if len(keys) > 6 else 1].info.keys())
+keys = list(langs[xing_keys_len if len(keys) > xing_keys_len else 1].info.keys())
 fields = [f"`{i}`" for i in keys]
 CREATE = 'CREATE VIRTUAL TABLE info USING fts3 (%s)' % (",".join(fields))
 INSERT = 'INSERT INTO info VALUES (%s)'% (','.join('?' * len(keys)))

@@ -1545,7 +1545,6 @@
 任	kHKGlyph	
 任	T1	
 任	GJ	
-仼	kHKGlyph	
 份	FD	
 份	kBigFive	
 份	kHKGlyph	
@@ -9890,6 +9889,7 @@
 彝	kBigFive	
 彝	kHKGlyph	
 彝	GJ	
+彞	kBigFive	
 彞	T1	
 彡	GJ	
 形	FD	
@@ -21489,7 +21489,6 @@
 瘏	kBigFive	
 瘏	GJ	
 瘐	kBigFive	
-瘐	kHKGlyph	
 瘐	GJ	
 瘑	kBigFive	
 瘑	GJ	
@@ -21540,6 +21539,7 @@
 瘥	GJ	
 瘦	FD	
 瘦	kBigFive	
+瘦	kHKGlyph	
 瘦	T1	
 瘦	GJ	
 瘧	FD	
@@ -24127,6 +24127,7 @@
 箘	GJ	
 箙	kBigFive	
 箙	GJ	
+箚	kBigFive	
 箛	kBigFive	
 箛	GJ	
 箜	kBigFive	
@@ -36320,10 +36321,10 @@
 陛	T1	
 陛	GJ	
 陜	kBigFive	
-陜	kHKGlyph	
 陜	GJ	
 陝	FD	
 陝	kBigFive	
+陝	kHKGlyph	
 陝	T1	
 陝	GJ	
 陞	kBigFive	

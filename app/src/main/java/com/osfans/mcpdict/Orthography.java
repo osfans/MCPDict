@@ -147,19 +147,29 @@ public class Orthography {
     public static class HZ {
         private static final Map<Integer,Integer> compatibility = new HashMap<>();
 
+        public static boolean isUnknown(int unicode) {
+            return unicode == 0x25A1; //□
+        }
+
+        public static boolean isUnknown(String hz) {
+            return isUnknown(hz.codePointAt(0));
+        }
+
         public static boolean isHz(int unicode) {
-            return (unicode >= 0x4E00 && unicode <= 0x9FFF)
-                    || unicode == 0x25A1 //□
+            return isUnknown(unicode) //□
                     || unicode == 0x3007 //〇
-                    || (unicode >= 0x3400 && unicode <= 0x4DBF)
-                    || (unicode >= 0x20000 && unicode <= 0x2A6DF)
-                    || (unicode >= 0x2A700 && unicode <= 0x2B73F)
-                    || (unicode >= 0x2B740 && unicode <= 0x2B81F)
-                    || (unicode >= 0x2B820 && unicode <= 0x2CEAF)
-                    || (unicode >= 0x2CEB0 && unicode <= 0x2EBEF)
-                    || (unicode >= 0x30000 && unicode <= 0x3134F)
-                    || (unicode >= 0xF900 && unicode <= 0xFAFF)
-                    || (unicode >= 0x2F800 && unicode <= 0x2FA1F);
+                    || (unicode >= 0x4E00 && unicode <= 0x9FFF)   // CJK Unified Ideographs
+                    || (unicode >= 0x3400 && unicode <= 0x4DBF)   // CJK Extension A
+                    || (unicode >= 0x20000 && unicode <= 0x2A6DF) // CJK Extension B
+                    || (unicode >= 0x2A700 && unicode <= 0x2B73F) // CJK Extension C
+                    || (unicode >= 0x2B740 && unicode <= 0x2B81F) // CJK Extension D
+                    || (unicode >= 0x2B820 && unicode <= 0x2CEAF) // CJK Extension E
+                    || (unicode >= 0x2CEB0 && unicode <= 0x2EBEF) // CJK Extension F
+                    || (unicode >= 0x30000 && unicode <= 0x3134F) // CJK Extension G
+                    || (unicode >= 0x31350 && unicode <= 0x323AF) // CJK Extension H
+                    || (unicode >= 0x2EBF0 && unicode <= 0x2EE5F) // CJK Extension I
+                    || (unicode >= 0xF900 && unicode <= 0xFAFF)   // CJK Compatibility Ideographs
+                    || (unicode >= 0x2F800 && unicode <= 0x2FA1F); // CJK Compatibility Ideographs Supplement
         }
 
         public static boolean isHz(String hz) {
@@ -190,15 +200,6 @@ public class Orthography {
         public static boolean isPY(String s) {
             if (TextUtils.isEmpty(s)) return false;
             return s.matches("[a-z]+[0-5?]?");
-        }
-
-        public static boolean isIPA(char c) {
-            int type = Character.getType(c);
-            if (isHz(c)) return false;
-            return Character.isLetterOrDigit(c)
-                    || type == Character.NON_SPACING_MARK
-                    || type == Character.MODIFIER_SYMBOL
-                    || type == Character.OTHER_NUMBER;
         }
 
         public static int getCompatibility(int unicode) {
@@ -235,6 +236,8 @@ public class Orthography {
             else if (unicode >= 0x2B820 && unicode <= 0x2CEAF) ext = "E";
             else if (unicode >= 0x2CEB0 && unicode <= 0x2EBEF) ext = "F";
             else if (unicode >= 0x30000 && unicode <= 0x3134F) ext = "G";
+            else if (unicode >= 0x31350 && unicode <= 0x323AF) ext = "H";
+            else if (unicode >= 0x2EBF0 && unicode <= 0x2EE5F) ext = "I";
             if (!TextUtils.isEmpty(ext)) ext = "擴" + ext;
             return ext;
         }
@@ -295,7 +298,7 @@ public class Orthography {
                         break;
                     }
                 }
-                if (Objects.requireNonNull(fin).equals("")) return null;        // Fail
+                if (TextUtils.isEmpty(fin)) return null;        // Fail
 
                 // Extract extra "j" in syllables that look like 重紐A類
                 if (fin.charAt(0) == 'j') {
@@ -325,14 +328,14 @@ public class Orthography {
 
             // Distinguish 重韻
             switch (fin) {
-                case "ia":          // 牙音声母爲戈韻，其餘爲麻韻
+                case "ia":          // 牙音聲母爲戈韻，其餘爲麻韻
                     if (Arrays.asList("k", "kh", "g", "ng").contains(init)) {
                         fin = "Ia";
                     }
                     break;
                 case "ieng":
                 case "yeng":
-                    // 脣牙喉音声母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲清韻
+                    // 脣牙喉音聲母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲清韻
                     if (Arrays.asList("p", "ph", "b", "m",
                             "k", "kh", "g", "ng",
                             "h", "gh", "q", "",
@@ -340,12 +343,12 @@ public class Orthography {
                         fin = (fin.equals("ieng")) ? "Ieng" : "Yeng";
                     }
                     break;
-                case "in":     // 莊組声母爲臻韻，其餘爲眞韻
+                case "in":     // 莊組聲母爲臻韻，其餘爲眞韻
                     if (Arrays.asList("cr", "chr", "zr", "sr", "zsr").contains(init)) {
                         fin = "In";
                     }
                     break;
-                case "yn":     // 脣牙喉音声母直接接-yn者爲眞韻，其餘爲諄韻
+                case "yn":     // 脣牙喉音聲母直接接-yn者爲眞韻，其餘爲諄韻
                     if (Arrays.asList("p", "ph", "b", "m",
                             "k", "kh", "g", "ng",
                             "h", "gh", "q", "").contains(init) && !extraJ) {
@@ -400,7 +403,7 @@ public class Orthography {
                         break;
                     }
                 }
-                if (Objects.requireNonNull(fin).equals("")) return null;        // Fail
+                if (TextUtils.isEmpty(fin)) return null;        // Fail
 
                 // Extract extra "j" in syllables that look like 重紐A類
                 if (fin.charAt(0) == 'j') {
@@ -430,14 +433,14 @@ public class Orthography {
 
             // Distinguish 重韻
             switch (fin) {
-                case "ia":          // 牙音声母爲戈韻，其餘爲麻韻
+                case "ia":          // 牙音聲母爲戈韻，其餘爲麻韻
                     if (Arrays.asList("k", "kh", "g", "ng").contains(init)) {
                         fin = "Ia";
                     }
                     break;
                 case "ieng":
                 case "yeng":
-                    // 脣牙喉音声母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲清韻
+                    // 脣牙喉音聲母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲清韻
                     if (Arrays.asList("p", "ph", "b", "m",
                             "k", "kh", "g", "ng",
                             "h", "gh", "q", "",
@@ -445,12 +448,12 @@ public class Orthography {
                         fin = (fin.equals("ieng")) ? "Ieng" : "Yeng";
                     }
                     break;
-                case "in":     // 莊組声母爲臻韻，其餘爲眞韻
+                case "in":     // 莊組聲母爲臻韻，其餘爲眞韻
                     if (Arrays.asList("cr", "chr", "zr", "sr", "zsr").contains(init)) {
                         fin = "In";
                     }
                     break;
-                case "yn":     // 脣牙喉音声母直接接-yn者爲眞韻，其餘爲諄韻
+                case "yn":     // 脣牙喉音聲母直接接-yn者爲眞韻，其餘爲諄韻
                     if (Arrays.asList("p", "ph", "b", "m",
                             "k", "kh", "g", "ng",
                             "h", "gh", "q", "").contains(init) && !extraJ) {
@@ -480,16 +483,36 @@ public class Orthography {
         }
 
         public static List<String> getAllTones(String s) {
-            if (s == null || s.equals("")) return null;                 // Fail
+            if (TextUtils.isEmpty(s)) return null;                 // Fail
             String base = s.substring(0, s.length() - 1);
-            if (base.equals("")) return null;                           // Fail
-            switch (s.charAt(s.length() - 1)) {
-                case 'x': return Arrays.asList(s, base, base + "h");    // 上 -> 上,平,去
-                case 'h': return Arrays.asList(s, base, base + "x");    // 去 -> 去,平,上
-                case 'd': case 'p': case 't': case 'k':
-                          return Collections.singletonList(s);                      // 次入、入 -> self
-                default:  return Arrays.asList(s, s + "x", s + "h");    // 平 -> 平,上,去
+            if (TextUtils.isEmpty(base)) return null;                           // Fail
+            return switch (s.charAt(s.length() - 1)) {
+                case 'x' -> Arrays.asList(s, base, base + "h");    // 上 -> 上,平,去
+                case 'h' -> Arrays.asList(s, base, base + "x");    // 去 -> 去,平,上
+                case 'd', 'p', 't', 'k' ->
+                        Collections.singletonList(s);                      // 次入、入 -> self
+                default -> Arrays.asList(s, s + "x", s + "h");    // 平 -> 平,上,去
+            };
+        }
+    }
+
+    public static class ZhongyuanYinyun {
+        public static String display(String pys, String[] list) {
+            StringBuilder sb = new StringBuilder();
+            String[] ss = pys.split("/");
+            int n = list.length;
+            String[] names = Utils.getToneStyleNames(R.array.pref_entries_zyyy_display);
+            for (String system: list) {
+                int i = Integer.parseInt(system);
+                String s = ss[i];
+                char tone = s.charAt(s.length() - 1);
+                s = s.substring(0, s.length() - 1);
+                s = formatTone(s, tone + "", DB.ZYYY);
+                sb.append(s);
+                if (n > 1) sb.append(String.format("(%s)", names[i]));
+                sb.append(" ");
             }
+            return sb.toString();
         }
     }
 
@@ -510,7 +533,7 @@ public class Orthography {
 
         public static String canonicalize(String s) {
             // Input can be either pinyin or bopomofo
-            if (s == null || s.length() == 0) return s;
+            if (TextUtils.isEmpty(s)) return s;
 
             if (mapFromBopomofoPartial.containsKey(s.substring(0, 1)) ||
                 mapFromBopomofoTone.containsKey(s.charAt(0))) {   // Bopomofo
@@ -524,7 +547,7 @@ public class Orthography {
                     tone = mapFromBopomofoTone.get(s.charAt(s.length() - 1));
                     s = s.substring(0, s.length() - 1);
                 }
-                if (s.length() == 0) return null;   // Fail
+                if (TextUtils.isEmpty(s)) return null;   // Fail
                 if (mapFromBopomofoWhole.containsKey(s)) {
                     s = mapFromBopomofoWhole.get(s);
                 }
@@ -620,14 +643,11 @@ public class Orthography {
                     if (!mapToBopomofoPartial.containsKey(s.substring(p))) return null;   // Fail
                     s = mapToBopomofoPartial.get(s.substring(0, p)) + mapToBopomofoPartial.get(s.substring(p));
                 }
-                switch (tone) {
-                case '2': case '3': case '4':
-                    return s + mapToBopomofoTone.get(tone);
-                case '_':
-                    return mapToBopomofoTone.get(tone) + s;
-                default:
-                    return s;
-                }
+                return switch (tone) {
+                    case '2', '3', '4' -> s + mapToBopomofoTone.get(tone);
+                    case '_' -> mapToBopomofoTone.get(tone) + s;
+                    default -> s;
+                };
             default:
                 return null;    // Fail
             }
@@ -651,7 +671,7 @@ public class Orthography {
         }
 
         public static List<String> getAllTones(String s) {
-            if (s == null || s.equals("")) return null;     // Fail
+            if (TextUtils.isEmpty(s)) return null;     // Fail
             char tone = s.charAt(s.length() - 1);
             String base = s;
             if (tone >= '1' && tone <= '4') {
@@ -660,7 +680,7 @@ public class Orthography {
             else {
                 tone = '_';
             }
-            if (base.equals("")) return null;               // Fail
+            if (base.isEmpty()) return null;               // Fail
 
             List<String> result = new ArrayList<>();
             result.add(s);
@@ -699,7 +719,7 @@ public class Orthography {
             // Convert from given system to Jyutping
 
             // Check for null or empty string
-            if (s == null || s.length() == 0) return s;
+            if (TextUtils.isEmpty(s)) return s;
 
             // Choose map first
             Map<String, String> mapInitials, mapFinals;
@@ -739,15 +759,16 @@ public class Orthography {
 
             // In Cantonese Pinyin, tones 7,8,9 are used for entering tones
             // They need to be replaced by with 1,3,6 in Jyutping
-            switch (tone) {
-                case '7': tone = '1'; break;
-                case '8': tone = '3'; break;
-                case '9': tone = '6'; break;
-            }
+            tone = switch (tone) {
+                case '7' -> '1';
+                case '8' -> '3';
+                case '9' -> '6';
+                default -> tone;
+            };
 
             // In Yale, initial "y" is omitted if final begins with "yu"
             // If that happens, we need to put the initial "j" back in Jyutping
-            if (system == YALE && Objects.requireNonNull(init).equals("") && Objects.requireNonNull(fin).startsWith("yu")) init = "j";
+            if (system == YALE && TextUtils.isEmpty(init) && Objects.requireNonNull(fin).startsWith("yu")) init = "j";
 
             return init + fin + (tone == '_' ? "" : tone);
         }
@@ -795,21 +816,23 @@ public class Orthography {
             // In Cantonese Pinyin, tones 7,8,9 are used for entering tones
             boolean isEnteringTone = "ptk".indexOf(Objects.requireNonNull(fin).charAt(fin.length() - 1)) >= 0;
             if (system == CANTONESE_PINYIN && isEnteringTone) {
-                switch (tone) {
-                    case '1': tone = '7'; break;
-                    case '3': tone = '8'; break;
-                    case '6': tone = '9'; break;
-                }
+                tone = switch (tone) {
+                    case '1' -> '7';
+                    case '3' -> '8';
+                    case '6' -> '9';
+                    default -> tone;
+                };
             }
 
             // IPA tones
             if (system == IPA) {
                 if (isEnteringTone) {
-                    switch (tone) {
-                        case '1': tone = '7'; break;
-                        case '3': tone = '8'; break;
-                        case '6': tone = '9'; break;
-                    }
+                    tone = switch (tone) {
+                        case '1' -> '7';
+                        case '3' -> '8';
+                        case '6' -> '9';
+                        default -> tone;
+                    };
                 }
             }
 
@@ -820,7 +843,7 @@ public class Orthography {
         }
 
         public static List<String> getAllTones(String s) {
-            if (s == null || s.equals("")) return null;     // Fail
+            if (TextUtils.isEmpty(s)) return null;     // Fail
             char tone = s.charAt(s.length() - 1);
             String base = s;
             if (tone >= '1' && tone <= '6') {
@@ -829,7 +852,7 @@ public class Orthography {
             else {
                 tone = '_';
             }
-            if (base.equals("")) return null;               // Fail
+            if (base.isEmpty()) return null;               // Fail
 
             boolean isEnteringTone = "ptk".indexOf(base.charAt(base.length() - 1)) >= 0;
             List<String> result = new ArrayList<>();
@@ -866,7 +889,7 @@ public class Orthography {
 
     public static class Tones {
         public static List<String> getAllTones(String s, String lang) {
-            if (s == null || s.equals("")) return null;     // Fail
+            if (TextUtils.isEmpty(s)) return null;     // Fail
             JSONObject jsonObject = DB.getToneName(lang);
             if (jsonObject == null) return null;
             List<String> result = new ArrayList<>();
@@ -922,7 +945,7 @@ public class Orthography {
 
         public static String canonicalize(String s) {
             // Input can be either a hangul, or non-canonicalized romanization
-            if (s == null || s.length() == 0) return s;
+            if (TextUtils.isEmpty(s)) return s;
             char unicode = s.charAt(0);
             if (isHangul(unicode)) {    // Hangul
                 unicode -= FIRST_HANGUL;
@@ -996,7 +1019,7 @@ public class Orthography {
 
         public static String canonicalize(String s) {
             // Input can be either with diacritics, or non-canonicalized Telex string
-            if (s == null || s.length() == 0) return s;
+            if (TextUtils.isEmpty(s)) return s;
             char tone = '_';
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < s.length(); i++) {
@@ -1116,7 +1139,7 @@ public class Orthography {
         }
 
         public static List<String> getAllTones(String s) {
-            if (s == null || s.equals("")) return null;     // Fail
+            if (TextUtils.isEmpty(s)) return null;     // Fail
             char tone = s.charAt(s.length() - 1);
             String base = s;
             if ("rsfxj".indexOf(tone) >= 0) {
@@ -1125,7 +1148,7 @@ public class Orthography {
             else {
                 tone = '_';
             }
-            if (base.equals("")) return null;               // Fail
+            if (base.isEmpty()) return null;               // Fail
 
             boolean isEnteringTone = "ptc".indexOf(base.charAt(base.length() - 1)) >= 0 ||
                                      base.endsWith("ch");
@@ -1156,17 +1179,17 @@ public class Orthography {
         private static final Map<String, String> mapHepburn = new HashMap<>();
 
         public static String convertTo(String s, int system) {
-            if (s == null || s.length() == 0) return s;
+            if (TextUtils.isEmpty(s)) return s;
 
             // Choose map
-            Map<String, String> map = null;
-            switch (system) {
-                case IPA:       map = mapIPA;       break;
-                case HIRAGANA:  map = mapHiragana;  break;
-                case KATAKANA:  map = mapKatakana;  break;
-                case NIPPON:    map = mapNippon;    break;
-                case HEPBURN:   map = mapHepburn;   break;
-            }
+            Map<String, String> map = switch (system) {
+                case IPA -> mapIPA;
+                case HIRAGANA -> mapHiragana;
+                case KATAKANA -> mapKatakana;
+                case NIPPON -> mapNippon;
+                case HEPBURN -> mapHepburn;
+                default -> null;
+            };
 
             StringBuilder sb = new StringBuilder();
             int p = 0;
@@ -1195,6 +1218,10 @@ public class Orthography {
         }
     }
 
+    private static boolean skip(String line) {
+        return TextUtils.isEmpty(line) || line.charAt(0) == '#';
+    }
+
     // Initialization code
     public static void initialize(Resources resources) {
         if (initialized) return;
@@ -1218,7 +1245,7 @@ public class Orthography {
             inputStream = resources.openRawResource(R.raw.orthography_mc_initials);
             reader = new BufferedReader(new InputStreamReader(inputStream));
             while ((line = reader.readLine()) != null) {
-                if (line.equals("") || line.charAt(0) == '#') continue;
+                if (skip(line)) continue;
                 fields = line.split("\\t");
                 if (fields[0].equals("_")) fields[0] = "";
                 MiddleChinese.mapInitials.put(fields[0], fields[1]);
@@ -1229,7 +1256,7 @@ public class Orthography {
             inputStream = resources.openRawResource(R.raw.orthography_mc_finals);
             reader = new BufferedReader(new InputStreamReader(inputStream));
             while ((line = reader.readLine()) != null) {
-                if (line.equals("") || line.charAt(0) == '#') continue;
+                if (skip(line)) continue;
                 fields = line.split("\\t");
                 MiddleChinese.mapSjep.put(fields[0], fields[1]);
                 MiddleChinese.mapTongx.put(fields[0], fields[2]);
@@ -1243,7 +1270,7 @@ public class Orthography {
             inputStream = resources.openRawResource(R.raw.orthography_mc_bieng_sjyix);
             reader = new BufferedReader(new InputStreamReader(inputStream));
             while ((line = reader.readLine()) != null) {
-                if (line.equals("") || line.charAt(0) == '#') continue;
+                if (skip(line)) continue;
                 fields = line.split("\\s+");
                 for (int i = 0; i < fields[1].length(); i++) {
                     MiddleChinese.mapBiengSjyix.put(fields[1].charAt(i), fields[0]);
@@ -1255,7 +1282,7 @@ public class Orthography {
             inputStream = resources.openRawResource(R.raw.orthography_pu_pinyin);
             reader = new BufferedReader(new InputStreamReader(inputStream));
             while ((line = reader.readLine()) != null) {
-                if (line.equals("") || line.charAt(0) == '#') continue;
+                if (skip(line)) continue;
                 fields = line.split("\\s+");
                 Mandarin.mapPinyin.put(fields[0], fields[1] + fields[2]);
                 Mandarin.mapPinyin.put(fields[1] + fields[2], fields[0]);
@@ -1266,7 +1293,7 @@ public class Orthography {
             inputStream = resources.openRawResource(R.raw.orthography_pu_bopomofo);
             reader = new BufferedReader(new InputStreamReader(inputStream));
             while ((line = reader.readLine()) != null) {
-                if (line.equals("") || line.charAt(0) == '#') continue;
+                if (skip(line)) continue;
                 fields = line.split("\\s+");
                 if ("234_".contains(fields[1])) {
                     Mandarin.mapFromBopomofoTone.put(fields[0].charAt(0), fields[1].charAt(0));
@@ -1293,7 +1320,7 @@ public class Orthography {
             inputStream = resources.openRawResource(R.raw.orthography_ct_initials);
             reader = new BufferedReader(new InputStreamReader(inputStream));
             while ((line = reader.readLine()) != null) {
-                if (line.equals("") || line.charAt(0) == '#') continue;
+                if (skip(line)) continue;
                 fields = line.split("\\s+");
                 for (int i = 0; i <= 3; i++) {
                     Cantonese.listInitials.get(i).put(fields[0], fields[i + 1]);
@@ -1305,7 +1332,7 @@ public class Orthography {
             inputStream = resources.openRawResource(R.raw.orthography_ct_finals);
             reader = new BufferedReader(new InputStreamReader(inputStream));
             while ((line = reader.readLine()) != null) {
-                if (line.equals("") || line.charAt(0) == '#') continue;
+                if (skip(line)) continue;
                 fields = line.split("\\s+");
                 for (int i = 0; i <= 3; i++) {
                     Cantonese.listFinals.get(i).put(fields[0], fields[i + 1]);
@@ -1329,7 +1356,7 @@ public class Orthography {
             inputStream = resources.openRawResource(R.raw.orthography_vn);
             reader = new BufferedReader(new InputStreamReader(inputStream));
             while ((line = reader.readLine()) != null) {
-                if (line.equals("") || line.charAt(0) == '#') continue;
+                if (skip(line)) continue;
                 fields = line.split("\\s+");
                 Vietnamese.map.put(fields[0], fields[1] + fields[2]);
                 Vietnamese.map.put(fields[1] + fields[2], fields[0]);
@@ -1340,7 +1367,7 @@ public class Orthography {
             inputStream = resources.openRawResource(R.raw.orthography_jp);
             reader = new BufferedReader(new InputStreamReader(inputStream));
             while ((line = reader.readLine()) != null) {
-                if (line.equals("") || line.charAt(0) == '#') continue;
+                if (skip(line)) continue;
                 fields = line.split("\\s+");
                 for (int i = 0; i < 4; i++) {
                     Japanese.mapHiragana.put(fields[i], fields[0]);

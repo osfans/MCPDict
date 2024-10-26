@@ -33,7 +33,7 @@ class 表(_表):
 		py = py.replace("c", "tsʰ").replace('z', 'ts')
 		py = py.replace("q", "tɕʰ").replace('j', 'tɕ').replace('x', 'ɕ').replace('h', 'x').replace('w', 'v')
 		py = py.replace('ao', 'au').replace('e', 'ə').replace('iə', 'ie')
-		py = re.sub('o(\d)', 'ø\\1', py)
+		py = re.sub(r'o(\d)', 'ø\\1', py)
 		return py
 
 	def patch(self, d):
@@ -45,7 +45,7 @@ class 表(_表):
 			if not ns.isdigit(): continue
 			hzs = fs[2]
 			py = fs[1]
-			tone = re.findall('\d+', py)[0]
+			tone = re.findall(r'\d+', py)[0]
 			tonetype = str(tones.index(tone)+1)
 			py = py.replace(tone, tonetype)
 			yb = self.py2ipa(py)

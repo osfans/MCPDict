@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 
-import re, os, json
+import re, os, json, glob
 from importlib import import_module
 import tables._詳情
+from tables._詳情 import t2s
 
+xing_keys = ["漢字","兩分","字形描述","五筆畫","說文","康熙","匯纂","漢大"]
+xing_keys_len = len(xing_keys)
 def hex2chr(uni):
 	"把unicode轉換成漢字"
 	if uni.startswith("U+"): uni = uni[2:]
@@ -33,17 +36,30 @@ def addCfFq(d, fq, order):
 		# if fq not in d[i]:
 		# 	d[i][fq] = order
 
+def getLangsByArgv(infos, argv):
+	l = []
+	for a in argv:
+		if a in infos:
+			l.append(a)
+		elif os.path.isfile(a):
+			path = os.path.dirname(a)
+			for i in infos:
+				if a in glob.glob(os.path.join(path, infos[i]["文件名"])):
+					l.append(i)
+					break
+	return l
+
 def getLangs(dicts, argv=None):
 	infos = tables._詳情.load()
 	langs = []
 	count = 0
 	if argv:
 		mods = ["漢字"]
-		mods.extend(argv)
+		mods.extend(getLangsByArgv(infos, argv))
 	else:
-		mods = ["漢字","兩分","五筆畫","說文","康熙","漢大"]
+		mods = xing_keys.copy()
 		mods.extend(argv if argv else infos.keys())
-		lb = ["總筆畫數","部首餘筆","倉頡三代","倉頡五代","倉頡六代","五筆86版","五筆98版","五筆06版","異體字","分類"]
+		lb = ["總筆畫數","部首餘筆","倉頡三代","倉頡五代","倉頡六代","五筆86版","五筆98版","五筆06版","異體字","字形變體","分類"]
 		mods.extend(lb)
 	types = [dict(),dict(),dict(),dict(),dict()]
 	keys = None
@@ -60,7 +76,7 @@ def getLangs(dicts, argv=None):
 			except Exception as e:
 				print(f"\t\t\t{e} {mod}")
 				continue
-			if d["簡繁"] == "簡": lang.simplified = 2
+			if d["簡繁"] == "简": lang.simplified = 2
 			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 			addAllFq(types[0], d["地圖集二分區"], d["地圖集二排序"])
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
@@ -69,7 +85,6 @@ def getLangs(dicts, argv=None):
 				if not d["音典分區"]: d["音典分區"] = ""
 				d["音典分區"] +=  "," + d["省"]
 			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
-			addAllFq(types[3], d["俞銓（正心）分區"], d["俞銓（正心）排序"], True)
 			if d["聲調"]:
 				toneMaps = dict()
 				sds = json.loads(d["聲調"])
@@ -87,6 +102,8 @@ def getLangs(dicts, argv=None):
 					print(f"\t\t\t字數太少 {mod}")
 				elif lang.syCount < 100:
 					print(f"\t\t\t音節太少 {mod}")
+			if not len(toneMaps.keys()):
+				print("\t\t\t無調值")
 			lang.info["文件名"] = lang._file
 			count += 1
 		else:
@@ -99,12 +116,21 @@ def getLangs(dicts, argv=None):
 			lang.info = d
 			lang.load(dicts)
 		lang.info["字數"] = lang.count
+		lang.info["□數"] = lang.unknownCount if lang.unknownCount else None
 		sydCount = lang.sydCount
 		syCount = lang.syCount
 		lang.info["音節數"] = sydCount if sydCount else None
 		lang.info["不帶調音節數"] = syCount if syCount and syCount != sydCount else None
 		lang.info["網站"] = lang.site
 		lang.info["網址"] = lang.url
+		lang_t = lang.info["語言"]
+		lang_s = t2s(lang.info["語言"], True)
+		if lang_s not in lang_t:
+			lang_t += f",{lang_s}"
+		lang_s = t2s(lang.info["語言"], False)
+		if lang_s not in lang_t:
+			lang_t += f",{lang_s}"
+		lang.info["語言索引"] = lang_t
 		if lang.note: lang.info["說明"] = lang.note
 		if not keys: keys = lang.info.keys()
 		langs.append(lang)
@@ -116,6 +142,5 @@ def getLangs(dicts, argv=None):
 	hz.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:(x.count("-"),types[0][x])))
 	hz.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
 	hz.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:types[2][x]))
-	hz.info["俞銓（正心）分區"] = ",".join(sorted(types[3].keys(),key=lambda x:(x.count("-"),types[3][x])))
 	print("語言數", count)
 	return langs

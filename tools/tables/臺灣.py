@@ -10,10 +10,10 @@ class 表(_表):
 	patches = {"檔": "tong2,tong3"}
 
 	def format(self, py):
-		py = re.sub("\|(.*?)\|", "\\1\t白", py)
-		py = re.sub("\*(.*?)\*", "\\1\t文", py)
-		py = re.sub("\((.*?)\)", "\\1\t俗", py)
-		py = re.sub("\[(.*?)\]", "\\1\t替", py)
+		py = re.sub(r"\|(.*?)\|", "\\1\t白", py)
+		py = re.sub(r"\*(.*?)\*", "\\1\t文", py)
+		py = re.sub(r"\((.*?)\)", "\\1\t俗", py)
+		py = re.sub(r"\[(.*?)\]", "\\1\t替", py)
 		return py
 	
 	def patch(self, d):

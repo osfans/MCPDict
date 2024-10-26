@@ -17,7 +17,7 @@ SOURCE = "data"
 TARGET = "output"
 VARIANT_FILE = f"tables/{SOURCE}/正字.tsv"
 
-YDS = {"+":"又", "-":"白", "*":"俗", "/":"書","\\":"語","=":"文","?":"存疑"}
+YDS = {"+":"又", "-":"白", "*":"俗", "/":"書","\\":"語","=":"文","?":"存疑", "@": "訓"}
 def getYD(py):
 	return YDS.get(py[-1], "")
 
@@ -25,7 +25,7 @@ def isHZ(c):
 	c = c.strip()
 	if len(c) != 1: return False
 	n = ord(c)
-	return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<0x31350
+	return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<=0x323AF
 
 def getCompatibilityVariants():
 	d = dict()
@@ -47,7 +47,7 @@ def getSTVariants(level=2):
 	return d
 
 def getTsvName(xls):
-	return xls.rsplit(".", 1)[0] + ".tsv"
+	return re.sub(r"(\(\d?\))+$", "", xls.rsplit(".", 1)[0]) + ".tsv"
 
 def isXlsx(fname):
 	return fname.endswith("xlsx")
@@ -61,20 +61,20 @@ def processFs(v):
 	if v is None: return ""
 	return str(v).strip().replace("\t", " ").replace("\n", " ")
 
-def getXlsxLines(xls):
+def getXlsxLines(xls, page=0):
 	wb = load_workbook(xls, data_only=True)
-	sheet = wb.worksheets[0]
+	sheet = wb.worksheets[page]
 	lines = list()
 	for row in sheet.rows:
-		fs = [processFs(j.value) for j in row[:20]]
+		fs = [processFs(j.value) for j in row[:50]]
 		if any(fs):
 			line = "\t".join(fs) + "\n"
 			lines.append(line)
 	return lines
 
-def getXlsLines(xls):
+def getXlsLines(xls, page=0):
 	wb = open_workbook(xls)
-	sheet = wb.sheet_by_index(0)
+	sheet = wb.sheet_by_index(page)
 	lines = list()
 	for i in range(sheet.nrows):
 		fs = sheet.row_values(i)
@@ -84,15 +84,15 @@ def getXlsLines(xls):
 			lines.append(line)
 	return lines
 
-def xls2tsv(xls):
+def xls2tsv(xls, page=0):
 	tsv = getTsvName(xls)
 	if not os.path.exists(xls): return
 	if os.path.exists(tsv):
 		xtime = os.path.getmtime(xls)
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
-	lines = getXlsxLines(xls) if isXlsx(xls) else getXlsLines(xls)
-	t = open(tsv, "w", encoding="U8")
+	lines = getXlsxLines(xls, page) if isXlsx(xls) else getXlsLines(xls, page)
+	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.writelines(lines)
 	t.close()
 
@@ -107,7 +107,7 @@ def docx2tsv(doc):
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
 	lines = [line.text + "\n" for line in Document(doc).paragraphs]
-	t = open(tsv, "w", encoding="U8")
+	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.writelines(lines)
 	t.close()
 
@@ -115,6 +115,7 @@ class 表:
 	path = os.path.dirname(os.path.abspath(__file__))
 	_time = os.path.getmtime(__file__)
 	_file = None
+	_files = None
 	_sep = None
 	color = "#1E90FF"
 	full = ""
@@ -144,6 +145,9 @@ class 表:
 
 	@property
 	def spath(self):
+		if self._files:
+			self._files = [self.get_fullname(f) for f in self._files]
+			self._file = self._files[0]
 		sname = self._file
 		if not self.short: self.short = self.info["簡稱"]
 		if not self.short: self.short = str(self)
@@ -165,7 +169,8 @@ class 表:
 		sname = g[0]
 		self._file = os.path.basename(sname)
 		if isXls(sname):
-			xls2tsv(sname)
+			page = 1 if self.short in ("中山石岐", ) else 0
+			xls2tsv(sname, page)
 			sname = getTsvName(sname)
 		elif isDocx(sname):
 			docx2tsv(sname)
@@ -229,7 +234,7 @@ class 表:
 
 	def write(self, d):
 		self.patch(d)
-		t = open(self.tpath, "w",encoding="U8")
+		t = open(self.tpath, "w", encoding="U8", newline="\n")
 		print(f"#漢字\t音標\t解釋", file=t)
 		for hz in sorted(d.keys()):
 			pys = d[hz]
@@ -266,7 +271,11 @@ class 表:
 
 	@property
 	def count(self):
-		return len(self.d)
+		return len(self.d) + self.unknownCount - (1 if self.unknownCount > 0 else 0)
+	
+	@property
+	def unknownCount(self):
+		return len(self.d.get("□", []))
 
 	@property
 	def sydCount(self):
@@ -274,7 +283,7 @@ class 表:
 
 	@property
 	def syCount(self):
-		return len(set(map(lambda x:x.rstrip("1234567890"), self.syds.keys())))
+		return len(set(map(lambda x:x.split("/")[0].rstrip("1234567890"), self.syds.keys())))
 
 	def read(self):
 		start = time()
@@ -294,9 +303,9 @@ class 表:
 				if yd and py.count("*") <= 1:
 					js = f"({yd}){js}"
 					py = py[:-1]
-				if re.match("^\([^()]*?\)$", js):
+				if re.match(r"^\([^()]*?\)$", js):
 					js = js[1:-1]
-				syd = re.sub("\(.*?\)","",py).strip(" *|")
+				syd = re.sub(r"\(.*?\)","",py).strip(" *|")
 				if "-" not in syd:
 					self.syds[syd].add(hz)
 				if js: py += "{%s}" % js
@@ -305,7 +314,7 @@ class 表:
 			if py not in self.d[hz]:
 				self.d[hz].append(py)
 		passed = time() - start
-		logging.info(f"({self.count:5d}-{self.sydCount:4d}-{self.syCount:4d}) {passed:6.3f} {self}")
+		logging.info(f"({self.count:5d}({self.unknownCount})-{self.sydCount:4d}-{self.syCount:4d}) {passed:6.3f} {self}")
 	
 	def load(self, dicts):
 		self.read()
@@ -313,7 +322,7 @@ class 表:
 		for hz, ybs in self.d.items():
 			if hz not in dicts:
 				dicts[hz] = {"漢字": hz}
-			dicts[hz][str(self)] = ",".join(ybs)
+			dicts[hz][str(self)] = "\t".join(ybs)
 	
 	def parse(self, fs):
 		return tuple(fs[:3])
@@ -336,26 +345,29 @@ class 表:
 		sep = self.sep
 		skip = self.info.get("跳過行數", 0)
 		lineno = 0
-		for line in open(self.spath,encoding="U8"):
-			lineno += 1
-			if lineno <= skip: continue
-			if line.startswith('#') or line.startswith('"#') : continue
-			line = self.format(line)
-			fs = [i.strip('" \t') for i in line.strip('\n').split(sep)]
-			entries = self.parse(fs)
-			if not entries: continue
-			if type(entries) is tuple: entries = [entries]
-			for fs in entries:
-				if len(fs) <= 1: continue
-				if len(fs) >= 2:
-					hz, yb = fs[:2]
-					js = "\t".join(fs[2:])
-				if not hz or len(hz) != 1: continue
-				if not yb: continue
-				p = f"{yb}\t{js}"
-				p = p.strip()
-				if p not in d[hz]:
-					d[hz].append(p)
+		files = self._files if self._files else [self.spath]
+		for spath in files:
+			for line in open(spath,encoding="U8"):
+				lineno += 1
+				if lineno <= skip: continue
+				if line.startswith('#') or line.startswith('"#') : continue
+				line = self.format(line)
+				fs = [i.strip('" \t') for i in line.strip('\n').split(sep)]
+				entries = self.parse(fs)
+				if not entries: continue
+				if type(entries) is tuple: entries = [entries]
+				for fs in entries:
+					if len(fs) <= 1: continue
+					if len(fs) >= 2:
+						hz, yb = fs[:2]
+						js = "\t".join(fs[2:])
+					if not hz or len(hz) != 1: continue
+					if not yb: continue
+					if self.isDialect() and isHZ(yb[0]): continue
+					p = f"{yb}\t{js}"
+					p = p.strip()
+					if p not in d[hz]:
+						d[hz].append(p)
 		self.write(d)
 
 	def splitSySd(self, syd):

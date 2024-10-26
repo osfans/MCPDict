@@ -45,7 +45,7 @@ public class MyMapView extends MapView {
     }
 
     public void show() {
-        new AlertDialog.Builder(getContext(), R.style.Theme_AppCompat_DayNight_NoActionBar)
+        new AlertDialog.Builder(getContext(), androidx.appcompat.R.style.Theme_AppCompat_DayNight_NoActionBar)
                 .setView(this)
                 .show();
     }
@@ -87,8 +87,7 @@ public class MyMapView extends MapView {
                 boolean enabled = event.getZoomLevel() >= 7.5;
                 if (mHasProvinces) {
                     for (Overlay overlay : getOverlays()) {
-                        if (overlay instanceof FolderOverlay) {
-                            FolderOverlay folderOverlay = (FolderOverlay) overlay;
+                        if (overlay instanceof FolderOverlay folderOverlay) {
                             String desc = folderOverlay.getDescription();
                             if (!TextUtils.isEmpty(desc) && desc.contentEquals("province")) {
                                 folderOverlay.setEnabled(enabled);

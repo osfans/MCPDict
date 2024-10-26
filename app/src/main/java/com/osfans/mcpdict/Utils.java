@@ -1,5 +1,6 @@
 package com.osfans.mcpdict;
 
+import static com.osfans.mcpdict.DB.COL_GYHZ;
 import static com.osfans.mcpdict.DB.COL_HD;
 import static com.osfans.mcpdict.DB.COL_KX;
 import static com.osfans.mcpdict.DB.COL_SW;
@@ -15,12 +16,20 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.Gravity;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
@@ -52,10 +61,14 @@ public class Utils extends Application {
         return s.replaceAll("[|*\\[\\]]", "").replaceAll("\\{.*?\\}", "");
     }
 
+    public static SharedPreferences getPreference() {
+        return mApp.getSharedPreferences(PreferenceManager.getDefaultSharedPreferencesName(mApp), Context.MODE_PRIVATE);
+    }
+
     public static int getToneStyle(int id) {
         int value = 0;
         if (id == R.string.pref_key_tone_display) value = 1;
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        SharedPreferences sp = getPreference();
         try {
             return Integer.parseInt(Objects.requireNonNull(sp.getString(mApp.getString(id), String.valueOf(value))));
         } catch (Exception e) {
@@ -64,9 +77,36 @@ public class Utils extends Application {
         return value;
     }
 
+    public static String[] getToneStyles(int id) {
+        SharedPreferences sp = getPreference();
+        String[] defaultList = new String[5];
+        if (id == R.string.pref_key_zyyy_display) defaultList = mApp.getResources().getStringArray(R.array.pref_default_values_zyyy_display);
+        try {
+            Set<String> set = sp.getStringSet(mApp.getString(id), null);
+            return set != null ? set.toArray(new String[0]) : defaultList;
+        } catch (Exception e) {
+            //e.printStackTrace();
+        }
+        return defaultList;
+    }
+
+    public static String[] getToneStyleNames(int id) {
+        return mApp.getResources().getStringArray(id);
+    }
+
     private static final Displayer gyDisplayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.MiddleChinese.display(s, getToneStyle(R.string.pref_key_mc_display));
+        }
+    };
+
+    private static final Displayer zyyyDisplayer = new Displayer() {
+        public String displayOne(String s) {
+            return Orthography.ZhongyuanYinyun.display(s, getToneStyles(R.string.pref_key_zyyy_display));
+        }
+
+        public boolean isIPA(char c) {
+            return super.isIPA(c) || c == '/' || c == '(' || c == ')';
         }
     };
 
@@ -122,48 +162,50 @@ public class Utils extends Application {
     public static CharSequence formatIPA(String lang, String string) {
         CharSequence cs;
         if (TextUtils.isEmpty(string)) return "";
-        switch (lang) {
-            case DB.SG:
-                cs = getRichText(string.replace(",", "  "));
-                break;
-            case DB.BA:
-                cs = baDisplayer.display(string);
-                break;
-            case DB.GY:
-                cs = getRichText(gyDisplayer.display(string));
-                break;
-            case DB.CMN:
-                cs = getRichText(cmnDisplayer.display(string));
-                break;
-            case DB.HK:
-                cs = hkDisplayer.display(string);
-                break;
-            case DB.TW:
-                cs = getRichText(twDisplayer.display(string));
-                break;
-            case DB.KOR:
-                cs = korDisplayer.display(string);
-                break;
-            case DB.VI:
-                cs = viDisplayer.display(string);
-                break;
-            case DB.JA_GO:
-            case DB.JA_KAN:
-            case DB.JA_OTHER:
-                cs = getRichText(jaDisplayer.display(string));
-                break;
-            default:
-                cs = getRichText(toneDisplayer.display(string, lang));
-                break;
-        }
+        cs = switch (lang) {
+            case DB.SG -> getRichText(string.replace(",", "  "));
+            case DB.BA -> baDisplayer.display(string);
+            case DB.GY -> getRichText(gyDisplayer.display(string));
+            case DB.ZYYY -> getRichText(zyyyDisplayer.display(string));
+            case DB.CMN -> getRichText(cmnDisplayer.display(string));
+            case DB.HK -> hkDisplayer.display(string);
+            case DB.TW -> getRichText(twDisplayer.display(string));
+            case DB.KOR -> korDisplayer.display(string);
+            case DB.VI -> viDisplayer.display(string);
+            case DB.JA_GO, DB.JA_KAN, DB.JA_OTHER -> getRichText(jaDisplayer.display(string));
+            default -> getRichText(toneDisplayer.display(string, lang));
+        };
         return cs;
+    }
+
+    public static CharSequence formatUnknownIPA(String lang, String string) {
+        StringBuilder sb = new StringBuilder();
+        String s = string.replace("}\t", "}\n");
+        String input = Utils.getInput();
+        if (Orthography.HZ.isUnknown(input)) sb.append(s);
+        else {
+            if (input.startsWith(":") || input.startsWith("：")) {
+                input = input.substring(1);
+            }
+            String[] inputs = input.split("[, ]+");
+            for (String i : s.split("\n")) {
+                for (String j: inputs) {
+                    if (i.contains(j)) {
+                        sb.append(i).append("\n");
+                        break;
+                    }
+                }
+            }
+        }
+        return formatIPA(lang, sb.toString());
     }
 
     public static CharSequence formatPopUp(String hz, int i, String s) {
         if (TextUtils.isEmpty(s)) return "";
         if (i == COL_SW) s = s.replace("{", "<small>").replace("}", "</small>");
         else if (i == COL_KX) s = s.replaceFirst("^(.*?)(\\d+).(\\d+)", "$1<a href=https://kangxizidian.com/kxhans/" + hz + ">第$2頁第$3字</a>");
-        else if (i == COL_HD) s = s.replaceFirst("(\\d+).(\\d+)", "【汉語大字典】<a href=https://www.homeinmists.com/hd/png/$1.png>第$1頁</a>第$2字");
+        else if (i == COL_GYHZ) s = mApp.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceFirst("(\\d+).(\\d+)", "第$1頁第$2字");
+        else if (i == COL_HD) s = mApp.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceFirst("(\\d+).(\\d+)", "<a href=https://homeinmists.ilotus.org/hd/png/$1.png>第$1頁</a>第$2字").replace("lv", "lü").replace("nv", "nü");
         String[] fs = (s + "\n").split("\n", 2);
         String text = String.format("<p><big><big><big>%s</big></big></big> %s</p><br><p>%s</p>", hz, fs[0], fs[1].replace("\n", "<br/>"));
         return HtmlCompat.fromHtml(text, HtmlCompat.FROM_HTML_MODE_COMPACT);
@@ -173,18 +215,32 @@ public class Utils extends Application {
         return getToneStyle(R.string.pref_key_tone_display) == 5;
     }
 
-    public static Typeface getHanFont() {
+    public static void refreshTypeface() {
+        tfHan = null;
+        tfHanTone = null;
+        tfIPA = null;
+        tfIPATone = null;
+    }
+
+    private static Typeface getHanTypeface() {
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
         try {
             if (useFontTone()) {
                 if (tfHanTone == null) {
                     Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.tone).build()).build()
-                    ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanbcde).build()).build()
-                    ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanfg).build()).build()
                     );
+                    if (fontExFirst()) builder.addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p0).build()).build()
+                    );
+                    builder.addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p2).build()).build()
+                    ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p3).build()).build()
+                    ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.pua).build()).build()
+                    );
+                    builder.setSystemFallback(getDefaultFont());
                     tfHanTone = builder.build();
                 }
                 return tfHanTone;
@@ -192,11 +248,18 @@ public class Utils extends Application {
                 if (tfHan == null) {
                     Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.ipa).build()).build()
-                    ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanbcde).build()).build()
-                    ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.hanfg).build()).build()
                     );
+                    if (fontExFirst()) builder.addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p0).build()).build()
+                    );
+                    builder.addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p2).build()).build()
+                    ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p3).build()).build()
+                    ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.pua).build()).build()
+                    );
+                    builder.setSystemFallback(getDefaultFont());
                     tfHan = builder.build();
                 }
                 return tfHan;
@@ -206,13 +269,13 @@ public class Utils extends Application {
         return null;
     }
 
-    public static Typeface getDictTypeFace() {
+    private static Typeface getDictTypeface() {
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
-        if (!enableFontExt()) return getIPA();
-        return getHanFont();
+        if (!enableFontExt()) return getIPATypeface();
+        return getHanTypeface();
     }
 
-    public static Typeface getIPA() {
+    public static Typeface getIPATypeface() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return null;
         if (useFontTone()) {
             if (tfIPATone == null) {
@@ -233,7 +296,7 @@ public class Utils extends Application {
     public static int getDisplayFormat() {
         int value = 1;
         try {
-            SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+            SharedPreferences sp = getPreference();
             return Integer.parseInt(Objects.requireNonNull(sp.getString(mApp.getString(R.string.pref_key_format), String.valueOf(value))));
         } catch (Exception e) {
             //e.printStackTrace();
@@ -241,13 +304,47 @@ public class Utils extends Application {
         return value;
     }
 
+    public static int getFontFormat() {
+        int value = 0;
+        try {
+            SharedPreferences sp = getPreference();
+            return Integer.parseInt(Objects.requireNonNull(sp.getString(mApp.getString(R.string.pref_key_font), String.valueOf(value))));
+        } catch (Exception e) {
+            //e.printStackTrace();
+        }
+        return value;
+    }
+
+    public static boolean useSerif() {
+        return getFontFormat() == 1;
+    }
+
+    public static String getDefaultFont() {
+        return useSerif() ? "serif" : "sans";
+    }
+
+    public static boolean fontExFirst() {
+        return getFontFormat() == 2;
+    }
+
     public static boolean enableFontExt() {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
-        return sp.getBoolean(mApp.getString(R.string.pref_key_font_ext), true);
+        return getFontFormat() != 3;
+    }
+
+    private static int getAppTheme() {
+        return switch (getFontFormat()) {
+            case 0 -> R.style.AppThemeSans;
+            case 1, 2 -> R.style.AppThemeSerif;
+            default -> R.style.AppTheme;
+        };
+    }
+
+    public static void setActivityTheme(AppCompatActivity app) {
+        app.setTheme(getAppTheme());
     }
 
     public static String getTitle() {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        SharedPreferences sp = getPreference();
         return sp.getString(mApp.getString(R.string.pref_key_custom_title), mApp.getString(R.string.app_name));
     }
 
@@ -286,15 +383,26 @@ public class Utils extends Application {
     public static void help(Context context) {
         MyWebView webView = new MyWebView(context, null);
         webView.loadUrl("file:///android_asset/help/index.htm");
-        new AlertDialog.Builder(context, R.style.Theme_AppCompat_DayNight_NoActionBar)
+        new AlertDialog.Builder(context, androidx.appcompat.R.style.Theme_AppCompat_DayNight_NoActionBar)
                 .setView(webView)
                 .show();
+    }
+
+    public static String getFontFeatureSettings() {
+        String locale = getStr(R.string.pref_key_locale);
+        if (!TextUtils.isEmpty(locale) && locale.contentEquals("zh-cn")) return "";
+        return  "cv01";
+    }
+
+    public static void setTypeface(TextView tv) {
+        tv.setTypeface(getDictTypeface());
+        tv.setFontFeatureSettings(getFontFeatureSettings());
     }
 
     public static void showDict(Context context, CharSequence s) {
         TextView tv = new TextView(context);
         tv.setPadding(24, 24, 24, 24);
-        if (Utils.enableFontExt()) tv.setTypeface(Utils.getDictTypeFace());
+        setTypeface(tv);
         tv.setTextIsSelectable(true);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
         tv.setText(s);
@@ -302,17 +410,17 @@ public class Utils extends Application {
     }
 
     public static void putStr(int key, String value) {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        SharedPreferences sp = getPreference();
         sp.edit().putString(mApp.getString(key), value).apply();
     }
 
     public static String getStr(int key, String defaultValue) {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        SharedPreferences sp = getPreference();
         return sp.getString(mApp.getString(key), defaultValue);
     }
 
     public static Set<String> getStrSet(int key) {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        SharedPreferences sp = getPreference();
         return sp.getStringSet(mApp.getString(key), null);
     }
 
@@ -347,7 +455,7 @@ public class Utils extends Application {
     }
 
     public static int getShowLanguageIndex() {
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mApp);
+        SharedPreferences sp = getPreference();
         return sp.getInt(mApp.getString(R.string.pref_key_show_language_index), 0);
     }
 

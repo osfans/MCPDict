@@ -16,5 +16,5 @@ class 表(_表):
 	def parse(self, fs):
 		hz, js = fs
 		js = js.replace("", "\t").strip()[6:]
-		js = re.sub("頁(\d+)第(\d+)\t", lambda x: "%04d.%d"%(int(x[1]),int(x[2])), js)
+		js = re.sub(r"頁(\d+)第(\d+)\t", lambda x: "%04d.%d"%(int(x[1]),int(x[2])), js)
 		return hz, js

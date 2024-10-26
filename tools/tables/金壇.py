@@ -16,7 +16,7 @@ class 表(_表):
 			for sd,hzs in re.findall("([①-⑧])([^①-⑧]+)", fs[1]):
 				sd = ord(sd) - ord('①') + 1
 				py = sy + str(sd)
-				hzs = re.findall("(.)(\*)?(［\\d］)?(（.*?）)?", hzs)
+				hzs = re.findall(r"(.)(\*)?(［\d］)?(（.*?）)?", hzs)
 				for hz, s, c, js in hzs:
 					js = js.strip("（）")
 					p = "%s%s\t%s" % (c, py, js)

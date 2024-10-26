@@ -17,7 +17,7 @@ class 表(_表):
 			for dbkey in ["jp_tou", "jp_kwan", "jp_other"]:
 				pys = r[dbkey]
 				if not pys: continue
-				pys = re.sub("\[\d\]", ",",pys).strip(",")
+				pys = re.sub(r"\[\d\]", ",",pys).strip(",")
 				for py in pys.split(","):
 					py = py.strip()
 					if not py: continue

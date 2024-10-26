@@ -8,6 +8,14 @@
             app:useSimpleSummaryProvider="true" />
         <ListPreference
             app:useSimpleSummaryProvider="true"
+            android:key="@string/pref_key_font"
+            android:title="@string/pref_title_font_ext"
+            android:summary="@string/font_ext_warning"
+            android:entries="@array/pref_entries_font"
+            android:entryValues="@array/pref_values_font"
+            android:defaultValue="0" />
+        <ListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_locale"
             android:title="@string/pref_title_font"
             android:entries="@array/pref_entries_locale"
@@ -20,11 +28,11 @@
             android:entries="@array/pref_entries_format"
             android:entryValues="@array/pref_values_format"
             android:defaultValue="1" />
-        <SwitchPreference
+        <!-- <SwitchPreference
             android:defaultValue="true"
             android:key="@string/pref_key_font_ext"
             android:summary="@string/font_ext_warning"
-            android:title="@string/pref_title_font_ext" />
+            android:title="@string/pref_title_font_ext" /> -->
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/language">
         <ListPreference
@@ -57,6 +65,13 @@
             android:entries="@array/pref_entries_mc_display"
             android:entryValues="@array/pref_values_mc_display"
             android:defaultValue="5" />
+        <MultiSelectListPreference
+            app:useSimpleSummaryProvider="true"
+            android:key="@string/pref_key_zyyy_display"
+            android:title="@string/pref_title_zyyy_display"
+            android:entries="@array/pref_entries_zyyy_display"
+            android:entryValues="@array/pref_values_zyyy_display"
+            android:defaultValue="@array/pref_default_values_zyyy_display" />
         <ListPreference
             app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_mandarin_display"

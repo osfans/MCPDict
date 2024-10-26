@@ -9,7 +9,7 @@ class 表(_表):
 	def parse(self, fs):
 		py,hzs = fs
 		l = list()
-		for c,hz,js in re.findall("([？#\+])?(.)(（[^）]*?（.*?）.*?）|（.*?）)?", hzs):
+		for c,hz,js in re.findall(r"([？#\+])?(.)(（[^）]*?（.*?）.*?）|（.*?）)?", hzs):
 			if js: js = js[1:-1]
 			p = ""
 			if c == '+':

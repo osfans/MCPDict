@@ -30,8 +30,7 @@ public class FileUtils {
 
     public static void makeParentDirs(String path) {
         File parent = new File(path).getParentFile();
-        assert parent != null;
-        if (!parent.exists()) {
+        if (parent != null && !parent.exists()) {
             parent.mkdirs();
         }
     }
@@ -45,7 +44,7 @@ public class FileUtils {
     private static String convertStreamToString(InputStream is) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         StringBuilder sb = new StringBuilder();
-        String line = null;
+        String line;
         while ((line = reader.readLine()) != null) {
             sb.append(line).append("\n");
         }
@@ -57,7 +56,9 @@ public class FileUtils {
         InputStream fin = context.getContentResolver().openInputStream(fileUri);
         String ret = convertStreamToString(fin);
         //Make sure you close all streams.
-        fin.close();
+        if (fin != null) {
+            fin.close();
+        }
         return ret;
     }
 
