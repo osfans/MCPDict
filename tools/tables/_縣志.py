@@ -6,6 +6,8 @@ from tables._表 import 表 as _表
 
 class 表(_表):
 	disorder = True
+	ym = ""
+	ym2 = ""
 	
 	def format(self, line):
 		name = str(self)
@@ -82,6 +84,17 @@ class 表(_表):
 			fs = line.split("\t", 1)
 			fs[1] = fs[1].replace("\t", "")
 			line = "\t".join(fs)
+		elif name in ("東干語",):
+			if line.startswith("#"):
+				yms = line.rstrip().replace("#", "").split("\t")
+				if len(yms) != 2: return
+				ym, ym2 = yms
+				self.ym2 = ym2
+				return f"#{ym}"
+			sms = line.split("\t", 2)
+			sm, sm2, hzs = sms
+			sm = f"{sm2}{self.ym2}/{sm}".replace("Ø", "")
+			return f"{sm}\t{hzs}"
 		elif name in ("江門荷塘(下)",):
 			if line.startswith("#"): return "#"
 			fs = line.split("\t", 2)
