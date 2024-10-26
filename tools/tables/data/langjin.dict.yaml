@@ -9,7 +9,7 @@
 
 ---
 name: langjin
-version: "2024.10.25"
+version: "2024.10.26"
 sort: by_weight
 use_preset_vocabulary: true
 ...
@@ -1085,7 +1085,6 @@ use_preset_vocabulary: true
 㠲	bei4
 殍	bei4
 殍	biao4
-殍	fu1
 陛	bi4
 㙄	bi4
 䯗	bi4
@@ -2961,7 +2960,6 @@ use_preset_vocabulary: true
 婥	cho5
 磭	cho5
 磭	in3
-磭	lio5
 㲋	cho5
 𤟭	cho5
 婼	cho5
@@ -6756,6 +6754,8 @@ use_preset_vocabulary: true
 荂	xü1
 䓏	fu1
 孵	fu1
+殍	fu1
+𣨈	fu1
 豧	fu1
 豧	fu4
 豧	pou4
@@ -20278,7 +20278,6 @@ use_preset_vocabulary: true
 蛻	tuei4
 蛻	üe5
 𢄢	shuei4
-𢄢	zhr4
 涗	shuei4
 脣	shuen2
 漘	shuen2
@@ -26701,6 +26700,7 @@ use_preset_vocabulary: true
 晌	shang3
 蟑	zhang1
 爿	pang2
+爿	ciang2
 釺	ciän1
 墒	shang1
 紈	uang2
