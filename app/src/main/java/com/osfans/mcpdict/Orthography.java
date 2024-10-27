@@ -335,7 +335,7 @@ public class Orthography {
                     break;
                 case "ieng":
                 case "yeng":
-                    // 脣牙喉音聲母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲清韻
+                    // 脣牙喉音聲母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲淸韻
                     if (Arrays.asList("p", "ph", "b", "m",
                             "k", "kh", "g", "ng",
                             "h", "gh", "q", "",
@@ -440,7 +440,7 @@ public class Orthography {
                     break;
                 case "ieng":
                 case "yeng":
-                    // 脣牙喉音聲母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲清韻
+                    // 脣牙喉音聲母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲淸韻
                     if (Arrays.asList("p", "ph", "b", "m",
                             "k", "kh", "g", "ng",
                             "h", "gh", "q", "",
