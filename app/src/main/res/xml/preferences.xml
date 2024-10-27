@@ -93,6 +93,13 @@
             android:entries="@array/pref_entries_minnan_display"
             android:entryValues="@array/pref_values_minnan_display"
             android:defaultValue="0" />
+        <MultiSelectListPreference
+            app:useSimpleSummaryProvider="true"
+            android:key="@string/pref_key_dgy_display"
+            android:title="@string/pref_title_dgy_display"
+            android:entries="@array/pref_entries_dgy_display"
+            android:entryValues="@array/pref_values_dgy_display"
+            android:defaultValue="@array/pref_default_values_dgy_display" />
         <ListPreference
             app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_vietnamese_tone_position"

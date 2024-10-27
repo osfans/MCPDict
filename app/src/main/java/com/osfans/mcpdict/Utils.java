@@ -81,6 +81,7 @@ public class Utils extends Application {
         SharedPreferences sp = getPreference();
         String[] defaultList = new String[5];
         if (id == R.string.pref_key_zyyy_display) defaultList = mApp.getResources().getStringArray(R.array.pref_default_values_zyyy_display);
+        else if (id == R.string.pref_key_dgy_display) defaultList = mApp.getResources().getStringArray(R.array.pref_default_values_dgy_display);
         try {
             Set<String> set = sp.getStringSet(mApp.getString(id), null);
             return set != null ? set.toArray(new String[0]) : defaultList;
@@ -107,6 +108,22 @@ public class Utils extends Application {
 
         public boolean isIPA(char c) {
             return super.isIPA(c) || c == '/' || c == '(' || c == ')';
+        }
+    };
+
+    private static final Displayer dgyDisplayer = new Displayer() {
+        public String displayOne(String s) {
+            return Orthography.Dongganyu.display(s, getToneStyles(R.string.pref_key_dgy_display));
+        }
+
+        private static boolean isCyrillic(char ch) {
+            Character.UnicodeBlock block = Character.UnicodeBlock.of(ch);
+            return block == Character.UnicodeBlock.CYRILLIC
+                || block == Character.UnicodeBlock.CYRILLIC_SUPPLEMENTARY;
+        }
+
+        public boolean isIPA(char c) {
+            return super.isIPA(c) || isCyrillic(c) || c == '/' || c == '(' || c == ')';
         }
     };
 
@@ -167,6 +184,7 @@ public class Utils extends Application {
             case DB.BA -> baDisplayer.display(string);
             case DB.GY -> getRichText(gyDisplayer.display(string));
             case DB.ZYYY -> getRichText(zyyyDisplayer.display(string));
+            case DB.DGY -> getRichText(dgyDisplayer.display(string));
             case DB.CMN -> getRichText(cmnDisplayer.display(string));
             case DB.HK -> hkDisplayer.display(string);
             case DB.TW -> getRichText(twDisplayer.display(string));
