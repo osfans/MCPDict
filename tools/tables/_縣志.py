@@ -121,6 +121,8 @@ class 表(_表):
 					sdb = f"［{i}］"
 					line = line.replace(sda, sdb)
 			line = line.replace("］ⓐ", "a］").replace("］ⓑ", "b］")
+		elif name in ("休寧",):
+			line = line.replace("[3ˀ]", "[3]")
 		return line
 
 	def update(self):
