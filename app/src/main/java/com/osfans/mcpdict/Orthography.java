@@ -509,7 +509,8 @@ public class Orthography {
                 s = s.substring(0, s.length() - 1);
                 s = formatTone(s, tone + "", DB.ZYYY);
                 sb.append(s);
-                if (n > 1) sb.append(String.format("(%s)", names[i]));
+                String name = names[i].replace("（", "{").replace("）", "}");
+                if (n > 1) sb.append(String.format("(%s)", name));
                 sb.append(" ");
             }
             return sb.toString();
