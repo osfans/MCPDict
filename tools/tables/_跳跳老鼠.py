@@ -20,9 +20,10 @@ class 表(_表):
 			hzs = hzs.replace("?", "□")
 		elif name in ("宜章巖泉",):
 			sy, sd, hzs = fs[:3]
-		elif name in ("江華河路口", "江華粟米塘", "全州黃沙河"):
+		elif name in ("江華河路口", "江華粟米塘", "全州黃沙河", "安仁新洲", "1935長沙"):
 			sy, sd, hzs = fs[:3]
-			hzs = hzs.replace("(", "[").replace(")", "]").replace("（", "[").replace("）", "]")
+			hzs = hzs.replace("(", "（").replace(")", "）")
+			hzs = regex.sub("（((?>[^（）]+|(?R))*)）", "[\\1]", hzs)
 		elif name in ("孝昌小河",):
 			if not fs[0]: return
 			groups = re.findall(r"^(.*?)(\d+) ?(.+)$", fs[0])
@@ -61,7 +62,7 @@ class 表(_表):
 			sy, _, sd, hzs = fs[:4]
 		elif name in ("湘鄕棋梓",):
 			sy, sd, _, hzs = fs[:4]
-		elif name in ("崇陽","通城塘湖","沅陵死客子話","宜章東風","新田毛里","資興南鄕"):
+		elif name in ("崇陽","通城塘湖","沅陵死客子話","宜章東風","新田毛里","資興南鄕", "婁底石井"):
 			sy, sd, _, hzs = fs[:4]
 			hzs = hzs.replace("(", "（").replace(")", "）")
 			hzs = regex.sub("（((?>[^（）]+|(?R))*)）", "[\\1]", hzs)
@@ -81,10 +82,11 @@ class 表(_表):
 		if sd == "調號": return
 		yb = sy + sd
 		l = list()
-		hzs = re.sub(r"(\[.*?\])([-=])", "\\2\\1", hzs)
-		for hz, c, js in re.findall(r"(.)([-=]?)(\[[^[]]*?\[[^[]]*?\][^[]]*?\]|\[.*?\])?", hzs):
+		hzs = hzs.replace("[", "［").replace("]", "］")
+		hzs = re.sub(r"(［.*?］)([-=])", "\\2\\1", hzs)
+		for hz, c, js in re.findall(r"(.)([-=]?)(［[^［］]*?［[^［］]*?］[^［］]*?］|［.*?］)?", hzs):
 			if js: js = js[1:-1]
-			if hz in "~☐": hz = "□"
+			if hz in "☐": hz = "□"
 			l.append((hz, yb + c, js))
 		return l
 

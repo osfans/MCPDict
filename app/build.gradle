@@ -8,7 +8,7 @@ android {
         compileSdk 35
         buildToolsVersion = '35'
         versionCode 75
-        versionName "5.7 (2024.10.28)"
+        versionName "5.7 (2024.10.29)"
     }
 
     signingConfigs {
