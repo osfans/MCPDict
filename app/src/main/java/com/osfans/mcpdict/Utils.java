@@ -409,7 +409,7 @@ public class Utils extends Application {
     public static String getFontFeatureSettings() {
         String locale = getStr(R.string.pref_key_locale);
         if (!TextUtils.isEmpty(locale) && locale.contentEquals("zh-cn")) return "";
-        return  "cv01";
+        return "trad";
     }
 
     public static void setTypeface(TextView tv) {

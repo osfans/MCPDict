@@ -246,7 +246,7 @@ class 表:
 					hz = self.stVariants.get(hz, hz)
 			if not isHZ(hz):
 				if self.isDialect():
-					print("\t\t\t", hz, pys)
+					print(f"\t\t\t【{hz}】不是漢字，讀音爲：", ",".join([i.strip() for i in pys]))
 				continue
 			if self.disorder:
 				pys = sorted(pys,key=lambda x:x.split("\t", 1)[0][-1])

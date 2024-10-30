@@ -73,6 +73,9 @@ class 表(_表):
 			line = "".join(fs)
 		elif name in ("光山",):
 			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+		elif name in ("慈利",):
+			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+			line = line.replace("/", "")
 		elif name in ("博白","東莞塘角"):
 			if line.startswith("#"): return "#"
 			find = re.findall(r"\[(.*?)(\d+)\]", line)
@@ -156,8 +159,13 @@ class 表(_表):
 			fs = line.split("\t")[:2]
 			if len(fs) != 2: continue
 			sm = fs[0].strip().strip("[]")
+			pys = set()
 			for sd,hzs in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", fs[1]):
 				py = sm + ym +sd
+				if py not in pys:
+					pys.add(py)
+				else:
+					print(f"\t\t\t{py} 重複")
 				hzs = regex.findall(r"(.)\d?([<+\-/=\\\*？$&r@]?)\d?(\{((?=[^\{\}]*)|(?R))*?\})?", hzs)
 				for hz, c, js, _ in hzs:
 					if hz == " ": continue
@@ -183,7 +191,7 @@ class 表(_表):
 								c = ""
 					js = js[1:-1]
 					if js.count("{") != js.count("}"):
-						print("\t\t\tnot paired:", js)
+						print("\t\t\t 大括號未成對:", js)
 						js = js.replace("{", "").replace("}", "")
 					p = py + c + "\t" + p + js
 					if p not in d[hz]:
