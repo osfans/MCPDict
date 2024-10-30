@@ -7,8 +7,8 @@ android {
         targetSdkVersion 33
         compileSdk 35
         buildToolsVersion = '35'
-        versionCode 75
-        versionName "5.7 (2024.10.29)"
+        versionCode 76
+        versionName "5.7 (2024.10.30)"
     }
 
     signingConfigs {
@@ -56,7 +56,7 @@ dependencies {
     implementation 'androidx.viewpager2:viewpager2:1.1.0'
     implementation 'androidx.preference:preference:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.webkit:webkit:1.12.0'
+    implementation 'androidx.webkit:webkit:1.12.1'
     implementation 'org.osmdroid:osmdroid-android:6.1.11'
     implementation 'com.github.MKergall:osmbonuspack:6.7.0'
     // Fix Duplicate class
