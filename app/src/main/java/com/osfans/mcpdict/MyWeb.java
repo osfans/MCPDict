@@ -20,7 +20,7 @@ public class MyWeb {
 
     @JavascriptInterface
     public void showDict(String hz, int i, String text) {
-        Utils.showDict(mWebView.getContext(), i, Utils.formatPopUp(hz, i, text));
+        getFragment().requireActivity().runOnUiThread(() -> Utils.showDict(getFragment().getContext(), i, Utils.formatPopUp(hz, i, text)));
     }
 
     @JavascriptInterface
