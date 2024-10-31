@@ -246,17 +246,17 @@ public class Orthography {
     public static class MiddleChinese {
         private static final List<String> toneSuffixesUnchecked = Arrays.asList(
             "q", "X", "x", "ʔ", // 上聲；包含 unt 和 msoeg 擬音入聲 -q
-            "h", "H", "d", // 去聲
+            "h", "H", "d" // 去聲
         );
         private static final List<String> toneSuffixesChecked = Arrays.asList(
-            "p", "t", "k", "q", // 入聲
+            "p", "t", "k", "q" // 入聲
         );
         private static final List<String> vowelsHighUnt = Arrays.asList(
-            "i", "ɨ", "ʉ", "u", "e", // 支韻是 ie，所以 e 算高元音
+            "i", "ɨ", "ʉ", "u", "e" // 支韻是 ie，所以 e 算高元音
         );
         private static final List<String> vowelsNonHighUnt = Arrays.asList(
-            "ɛ", "ə", "o", "ɔ"
-            "æ", "a", "ɑ",
+            "ɛ", "ə", "o", "ɔ",
+            "æ", "a", "ɑ"
         );
 
         public static String display(String pys, String[] systems) {
@@ -306,7 +306,7 @@ public class Orthography {
                 sb.append(" ");
             }
             // 既有拼音擬音又有描述時，給描述添加括號
-            if (pyAndYbCount && descriptionCount) {
+            if (pyAndYbCount > 0 && descriptionCount > 0) {
                 sb.append("(");
             }
             // 描述
@@ -323,7 +323,7 @@ public class Orthography {
                 sb.append(s);
                 sb.append(" ");
             }
-            if (pyAndYbCount && descriptionCount) {
+            if (pyAndYbCount > 0 && descriptionCount > 0) {
                 sb.deleteCharAt(sb.length() - 1); // Remove last space
                 sb.append(")");
             }
@@ -374,9 +374,9 @@ public class Orthography {
                 case 'ŋ': result.add(base + "k"); break;
                 case 'ɴ': result.add(base + "q"); break;
             }
-            if (s.length() > 1 && s.substring(s.length() - 2) == 'ng') {
-                String base = s.substring(0, s.length() - 2);
-                result.add(base + "k");
+            if (s.length() > 1 && s.substring(s.length() - 2).contentEquals("ng")) {
+                String base2 = s.substring(0, s.length() - 2);
+                result.add(base2 + "k");
             }
             return result;
         }

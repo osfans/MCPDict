@@ -82,13 +82,26 @@ public class Utils extends Application {
         String[] defaultList = new String[5];
         if (id == R.string.pref_key_zyyy_display) defaultList = mApp.getResources().getStringArray(R.array.pref_default_values_zyyy_display);
         else if (id == R.string.pref_key_dgy_display) defaultList = mApp.getResources().getStringArray(R.array.pref_default_values_dgy_display);
+        else if (id == R.string.pref_key_mc_display) defaultList = mApp.getResources().getStringArray(R.array.pref_default_values_mc_display);
         try {
-            Set<String> set = sp.getStringSet(mApp.getString(id), null);
-            return set != null ? set.toArray(new String[0]) : defaultList;
+            Set<String> defaultSet = new HashSet<>(Arrays.asList(defaultList));
+            Set<String> set = sp.getStringSet(mApp.getString(id), defaultSet);
+            return set.toArray(new String[0]);
         } catch (Exception e) {
             //e.printStackTrace();
         }
         return defaultList;
+    }
+
+    public static String[] getToneStylesIndex(int id) {
+        String[] values = mApp.getResources().getStringArray(R.array.pref_values_mc_display);
+        String[] selected = getToneStyles(id);
+        String[] ret = new String[selected.length];
+        Arrays.sort(selected);
+        for (int i = 0; i < selected.length; i++) {
+            ret[i] = String.valueOf(Arrays.asList(values).indexOf(selected[i]));
+        }
+        return ret;
     }
 
     public static String[] getToneStyleNames(int id) {
@@ -97,11 +110,11 @@ public class Utils extends Application {
 
     private static final Displayer gyDisplayer = new Displayer() {
         public String displayOne(String s) {
-            return Orthography.MiddleChinese.display(s, getToneStyles(R.string.pref_key_mc_display));
+            return Orthography.MiddleChinese.display(s, getToneStylesIndex(R.string.pref_key_mc_display));
         }
 
         public boolean isIPA(char c) {
-            return super.isIPA(c) || c == '/';
+            return c != '{';
         }
     };
 
