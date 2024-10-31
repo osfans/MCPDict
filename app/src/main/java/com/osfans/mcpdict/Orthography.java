@@ -12,7 +12,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -259,37 +258,40 @@ public class Orthography {
             "æ", "a", "ɑ"
         );
 
-        public static String display(String pys, String[] systems) {
+        public static String display(String pys, int[] systems) {
             String[] ss = pys.split("/");
 
             // Get tone first
             int tone = 1;
             String tshetUinhDescription = ss[18];
-            switch (tshetUinhDescription.charAt(tshetUinhDescription.length() - 1)) {
-                case '平': tone = 1; break;
-                case '上': tone = 2; break;
-                case '去': tone = 3; break;
-                case '入': tone = 4; break;
-            }
+            tone = switch (tshetUinhDescription.charAt(tshetUinhDescription.length() - 1)) {
+                case '平' -> 1;
+                case '上' -> 2;
+                case '去' -> 3;
+                case '入' -> 4;
+                default -> tone;
+            };
+
+            String[] values = Utils.getStringArray(R.array.pref_values_mc_display);
 
             int pyAndYbCount = 0;
             int descriptionCount = 0;
             int bookCount = 0;
-            for (String system: systems) {
-                int i = Integer.parseInt(system);
+            for (int j: systems) {
+                int i = Integer.parseInt(values[j]);
                 if (i < 200) pyAndYbCount++;
                 else descriptionCount++;
                 if (300 <= i && i < 400) bookCount++;
             }
 
             StringBuilder sb = new StringBuilder();
-            String[] names = Utils.getToneStyleNames(R.array.pref_entries_mc_display);
+            String[] names = Utils.getStringArray(R.array.pref_entries_mc_display);
             // 拼音和擬音
-            for (String system: systems) {
-                int i = Integer.parseInt(system);
+            for (int j: systems) {
+                int i = Integer.parseInt(values[j]);
                 if (i >= 200) continue;
-                String s = ss[i];
-                String name = names[i];
+                String s = ss[j];
+                String name = names[j];
                 if (i < 100) {
                     // 拼音
                     name = name.replace("切韻拼音", "切拼");
@@ -310,15 +312,16 @@ public class Orthography {
                 sb.append("(");
             }
             // 描述
-            for (String system: systems) {
-                int i = Integer.parseInt(system);
+            for (int j: systems) {
+                int i = Integer.parseInt(values[j]);
                 if (i < 200) continue;
-                String s = ss[i];
+                String s = ss[j];
                 if (bookCount > 1) {
-                    switch (i) {
-                        case 300: s = "廣韻" + s; break;
-                        case 301: s = "平水" + s; break;
-                    }
+                    s = switch (i) {
+                        case 300 -> "廣韻" + s;
+                        case 301 -> "平水" + s;
+                        default -> s;
+                    };
                 }
                 sb.append(s);
                 sb.append(" ");
@@ -387,7 +390,7 @@ public class Orthography {
             StringBuilder sb = new StringBuilder();
             String[] ss = pys.split("/");
             int n = list.length;
-            String[] names = Utils.getToneStyleNames(R.array.pref_entries_zyyy_display);
+            String[] names = Utils.getStringArray(R.array.pref_entries_zyyy_display);
             for (String system: list) {
                 int i = Integer.parseInt(system);
                 String s = ss[i];
@@ -408,7 +411,6 @@ public class Orthography {
             StringBuilder sb = new StringBuilder();
             String[] ss = pys.split("/");
             int n = list.length;
-            String[] names = Utils.getToneStyleNames(R.array.pref_entries_dgy_display);
             for (String system: list) {
                 int i = 1 - Integer.parseInt(system);
                 String s = ss[i];

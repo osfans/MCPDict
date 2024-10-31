@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
@@ -86,25 +87,28 @@ public class Utils extends Application {
         try {
             Set<String> defaultSet = new HashSet<>(Arrays.asList(defaultList));
             Set<String> set = sp.getStringSet(mApp.getString(id), defaultSet);
-            return set.toArray(new String[0]);
+            String[] ret = set.toArray(new String[0]);
+            Arrays.sort(ret);
+            return ret;
         } catch (Exception e) {
             //e.printStackTrace();
         }
         return defaultList;
     }
 
-    public static String[] getToneStylesIndex(int id) {
-        String[] values = mApp.getResources().getStringArray(R.array.pref_values_mc_display);
+    public static int[] getToneStylesIndex(int id) {
+        String[] values = getStringArray(R.array.pref_values_mc_display);
+        List<String> list = Arrays.asList(values);
         String[] selected = getToneStyles(id);
-        String[] ret = new String[selected.length];
-        Arrays.sort(selected);
+        int[] index = new int[selected.length];
         for (int i = 0; i < selected.length; i++) {
-            ret[i] = String.valueOf(Arrays.asList(values).indexOf(selected[i]));
+            index[i] = list.indexOf(selected[i]);
         }
-        return ret;
+        Arrays.sort(index);
+        return index;
     }
 
-    public static String[] getToneStyleNames(int id) {
+    public static String[] getStringArray(int id) {
         return mApp.getResources().getStringArray(id);
     }
 

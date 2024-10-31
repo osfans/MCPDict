@@ -8,6 +8,8 @@ class 表(_表):
 	isYb = False
 
 	def parse(self, fs):
+		if fs[0] not in ('1919', '3177'):
+			fs[7] += '切'
 		hz = fs[1]
 		yb = '/'.join(fs[8:-1] + fs[2:8])
 		js = fs[-1]
