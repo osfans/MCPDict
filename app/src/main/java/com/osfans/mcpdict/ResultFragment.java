@@ -628,7 +628,7 @@ public class ResultFragment extends Fragment {
                 // Unicode
                 String unicode = Orthography.HZ.toUnicode(hz);
                 int color = getColor(SW);
-                ssb.append(" " + unicode + " ", new PopupSpan(Utils.formatPopUp(hz, COL_HZ, getUnicode(cursor)), color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ssb.append(" " + unicode + " ", new PopupSpan(Utils.formatPopUp(hz, COL_HZ, getUnicode(cursor)), COL_HZ, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 StringBuilder raws = new StringBuilder();
                 raws.append(String.format("%s %s\n", hz, unicode));
                 // yb
@@ -675,12 +675,12 @@ public class ResultFragment extends Fragment {
                 for (int i = COL_SW; i <= COL_HD; i++) {
                     s = cursor.getString(i);
                     if (!TextUtils.isEmpty(s)) {
-                        ssb.append(" " + getLabel(i) + " ", new PopupSpan(Utils.formatPopUp(hz, i, s), color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        ssb.append(" " + getLabel(i) + " ", new PopupSpan(Utils.formatPopUp(hz, i, s), i, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                     }
                 }
                 // Map
                 if (!TextUtils.isEmpty(ssb2)) {
-                    ssb.append(DB.MAP + " ", new PopupSpan(hz, color) {
+                    ssb.append(DB.MAP + " ", new PopupSpan(hz, 0, color) {
                         @Override
                         public void onClick(@NonNull View view) {
                             view.post(() -> showMap(hz));
@@ -690,7 +690,7 @@ public class ResultFragment extends Fragment {
                 // Favorite
                 if (showFavoriteButton) {
                     String label = bFavorite ? "⭐":"⛤";
-                    ssb.append(" " + label + " ", new PopupSpan(hz, color) {
+                    ssb.append(" " + label + " ", new PopupSpan(hz, 0, color) {
                         @Override
                         public void onClick(@NonNull View view) {
                             showFavorite(hz, bFavorite, comment);
