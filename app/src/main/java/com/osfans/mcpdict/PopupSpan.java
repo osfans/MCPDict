@@ -7,15 +7,17 @@ import android.view.View;
 public class PopupSpan extends ClickableSpan {
     CharSequence text;
     int color;
-    public PopupSpan(CharSequence s, int color) {
+    int lang;
+    public PopupSpan(CharSequence s, int lang, int color) {
         super();
         text = s;
         this.color = color;
+        this.lang = lang;
     }
 
     @Override
     public void onClick(View v) {
-        Utils.showDict(v.getContext(), text);
+        Utils.showDict(v.getContext(), lang, text);
     }
 
     @Override

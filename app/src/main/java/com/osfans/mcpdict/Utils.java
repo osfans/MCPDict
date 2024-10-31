@@ -417,10 +417,11 @@ public class Utils extends Application {
         tv.setFontFeatureSettings(getFontFeatureSettings());
     }
 
-    public static void showDict(Context context, CharSequence s) {
+    public static void showDict(Context context, int lang, CharSequence s) {
         TextView tv = new TextView(context);
         tv.setPadding(24, 24, 24, 24);
         setTypeface(tv);
+        if (lang == COL_HD) tv.setFontFeatureSettings("'ss01' 1"); // zh-cn and pinyin
         tv.setTextIsSelectable(true);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
         tv.setText(s);
