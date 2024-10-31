@@ -244,254 +244,87 @@ public class Orthography {
     }
 
     public static class MiddleChinese {
-        private static final Map<String, String> mapInitials = new HashMap<>();
-        private static final Map<String, String> mapFinals = new HashMap<>();
-        private static final Map<String, String> mapSjep = new HashMap<>(); // 攝
-        private static final Map<String, String> mapTongx = new HashMap<>();// 等
-        private static final Map<String, String> mapHo = new HashMap<>();   // 呼
-        private static final Map<Character, String> mapBiengSjyix = new HashMap<>();
-        private static final Map<String, String[]> mapSms = new HashMap<>();
-        private static final Map<String, String[]> mapYms = new HashMap<>();
+        public static String display(String pys, String[] systems) {
+            String[] ss = pys.split("/");
 
-        public static String canonicalize(String s) {
-            // Replace apostrophes with zeros to make SQLite FTS happy
-            return s.replace('\'', '0');
-        }
-
-        private static boolean isIY(String fin, int i) {
-            return fin.charAt(i) == 'i' || fin.charAt(i) == 'y';
-        }
-
-        public static String display(String s, int system) {
-            // Restore apostrophes
-            s =  s.replace('0', '\'');
-            if (system < 0) return HZ.isPY(s) ? String.format("%s(%s)", s,detail(s)) : s;
-            if (system == 0) system = 5;
             // Get tone first
             int tone = 1;
-            String s0 = s;
-            switch (s.charAt(s.length() - 1)) {
-                case 'x': tone = 2; s = s.substring(0, s.length() - 1); break;
-                case 'h': tone = 3; s = s.substring(0, s.length() - 1); break;
-                case 'd': tone = 3; break;
-                case 'p': tone = 4; s = s.substring(0, s.length() - 1) + "m"; break;
-                case 't': tone = 4; s = s.substring(0, s.length() - 1) + "n"; break;
-                case 'k': tone = 4; s = s.substring(0, s.length() - 1) + "ng"; break;
+            String tshetUinhDescription = ss[18];
+            switch (tshetUinhDescription.charAt(tshetUinhDescription.length() - 1)) {
+                case '平': tone = 1; break;
+                case '上': tone = 2; break;
+                case '去': tone = 3; break;
+                case '入': tone = 4; break;
             }
 
-            // Split initial and final
-            String init = null, fin = null;
-            boolean extraJ = false;
-            int p = s.indexOf('\'');
-            if (p >= 0) {               // Abnormal syllables containing apostrophes
-                init = s.substring(0, p);
-                fin = s.substring(p + 1);
-                if (init.equals("i")) init = "";
-                if (!mapInitials.containsKey(init)) return null;    // Fail
-                if (!mapFinals.containsKey(fin)) return null;       // Fail
+            int pyAndYbCount = 0;
+            int descriptionCount = 0;
+            int bookCount = 0;
+            for (String system: systems) {
+                int i = Integer.parseInt(system);
+                if (i < 200) pyAndYbCount++;
+                else descriptionCount++;
+                if (300 <= i && i < 400) bookCount++;
             }
-            else {
-                for (int i = 3; i >= 0; i--) {
-                    if (i <= s.length() && mapInitials.containsKey(s.substring(0, i))) {
-                        init = s.substring(0, i);
-                        fin = s.substring(i);
-                        break;
+
+            StringBuilder sb = new StringBuilder();
+            String[] names = Utils.getToneStyleNames(R.array.pref_entries_mc_display);
+            // 拼音和擬音
+            for (String system: systems) {
+                int i = Integer.parseInt(system);
+                if (i >= 200) continue;
+                String s = ss[i];
+                String name = names[i];
+                if (i < 100) {
+                    // 拼音
+                    name = name.replace("切韻拼音", "切拼");
+                    name = name.replace("轉寫", "").replace("羅馬字", "");
+                } else {
+                    // 擬音
+                    s = formatTone(s, tone + "", DB.GY);
+                    name = name.replace("（", "{").replace("）", "}");
+                    name = name.replace("通俗", "{通俗}");
+                    name = name.replace("擬音", "");
+                }
+                sb.append(s);
+                if (pyAndYbCount > 1) sb.append(String.format("(%s)", name));
+                sb.append(" ");
+            }
+            // 既有拼音擬音又有描述時，給描述添加括號
+            if (pyAndYbCount && descriptionCount) {
+                sb.append("(");
+            }
+            // 描述
+            for (String system: systems) {
+                int i = Integer.parseInt(system);
+                if (i < 200) continue;
+                String s = ss[i];
+                if (bookCount > 1) {
+                    switch (i) {
+                        case 300: s = "廣韻" + s; break;
+                        case 301: s = "平水" + s; break;
                     }
                 }
-                if (TextUtils.isEmpty(fin)) return null;        // Fail
-
-                // Extract extra "j" in syllables that look like 重紐A類
-                if (fin.charAt(0) == 'j') {
-                    if (fin.length() < 2) return null;  // Fail
-                    extraJ = true;
-                    if (isIY(fin, 1)) {
-                        fin = fin.substring(1);
-                    }
-                    else {
-                        fin = "i" + fin.substring(1);
-                    }
-                }
-
-                // Recover omitted glide in final
-                if (Objects.requireNonNull(init).endsWith("r")) {       // 只能拼二等或三等韻，二等韻省略介音r
-                    if (!isIY(fin, 0)) {
-                        fin = "r" + fin;
-                    }
-                }
-                else if (init.endsWith("j")) {  // 只能拼三等韻，省略介音i
-                    if (!isIY(fin, 0)) {
-                        fin = "i" + fin;
-                    }
-                }
+                sb.append(s);
+                sb.append(" ");
             }
-            if (!mapFinals.containsKey(fin)) return null;   // Fail
-
-            // Distinguish 重韻
-            switch (fin) {
-                case "ia":          // 牙音聲母爲戈韻，其餘爲麻韻
-                    if (Arrays.asList("k", "kh", "g", "ng").contains(init)) {
-                        fin = "Ia";
-                    }
-                    break;
-                case "ieng":
-                case "yeng":
-                    // 脣牙喉音聲母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲淸韻
-                    if (Arrays.asList("p", "ph", "b", "m",
-                            "k", "kh", "g", "ng",
-                            "h", "gh", "q", "",
-                            "cr", "chr", "zr", "sr", "zsr").contains(init) && !extraJ) {
-                        fin = (fin.equals("ieng")) ? "Ieng" : "Yeng";
-                    }
-                    break;
-                case "in":     // 莊組聲母爲臻韻，其餘爲眞韻
-                    if (Arrays.asList("cr", "chr", "zr", "sr", "zsr").contains(init)) {
-                        fin = "In";
-                    }
-                    break;
-                case "yn":     // 脣牙喉音聲母直接接-yn者爲眞韻，其餘爲諄韻
-                    if (Arrays.asList("p", "ph", "b", "m",
-                            "k", "kh", "g", "ng",
-                            "h", "gh", "q", "").contains(init) && !extraJ) {
-                        fin = "Yn";
-                    }
-                    break;
+            if (pyAndYbCount && descriptionCount) {
+                sb.deleteCharAt(sb.length() - 1); // Remove last space
+                sb.append(")");
             }
-
-            // Resolve 重紐
-            String dryungNriux = "";
-            if ("支脂祭眞仙宵侵鹽".indexOf(Objects.requireNonNull(mapFinals.get(fin)).charAt(0)) >= 0 &&
-                    Arrays.asList("p", "ph", "b", "m",
-                            "k", "kh", "g", "ng",
-                            "h", "gh", "q", "", "j").contains(init)) {
-                dryungNriux = (extraJ || init.equals("j")) ? "A" : "B";
-            }
-            String ym = Objects.requireNonNull(mapYms.get(dryungNriux + fin))[system];
-            if (tone == 4) {
-                ym = ym.replace('m', 'p').replace('n', 't').replace('ŋ','k');
-            }
-            return String.format("%s(%s)", formatTone(Objects.requireNonNull(mapSms.get(init))[system] + ym, tone + "", DB.GY), detail(s0));
-        }
-
-        public static String detail(String s) {
-            // Get tone first
-            int tone = 0;
-            switch (s.charAt(s.length() - 1)) {
-                case 'x': tone = 1; s = s.substring(0, s.length() - 1); break;
-                case 'h': tone = 2; s = s.substring(0, s.length() - 1); break;
-                case 'd': tone = 2; break;
-                case 'p': tone = 3; s = s.substring(0, s.length() - 1) + "m"; break;
-                case 't': tone = 3; s = s.substring(0, s.length() - 1) + "n"; break;
-                case 'k': tone = 3; s = s.substring(0, s.length() - 1) + "ng"; break;
-            }
-
-            // Split initial and final
-            String init = null, fin = null;
-            boolean extraJ = false;
-            int p = s.indexOf('\'');
-            if (p >= 0) {               // Abnormal syllables containing apostrophes
-                init = s.substring(0, p);
-                fin = s.substring(p + 1);
-                if (init.equals("i")) init = "";
-                if (!mapInitials.containsKey(init)) return null;    // Fail
-                if (!mapFinals.containsKey(fin)) return null;       // Fail
-            }
-            else {
-                for (int i = 3; i >= 0; i--) {
-                    if (i <= s.length() && mapInitials.containsKey(s.substring(0, i))) {
-                        init = s.substring(0, i);
-                        fin = s.substring(i);
-                        break;
-                    }
-                }
-                if (TextUtils.isEmpty(fin)) return null;        // Fail
-
-                // Extract extra "j" in syllables that look like 重紐A類
-                if (fin.charAt(0) == 'j') {
-                    if (fin.length() < 2) return null;  // Fail
-                    extraJ = true;
-                    if (fin.charAt(1) == 'i' || fin.charAt(1) == 'y') {
-                        fin = fin.substring(1);
-                    }
-                    else {
-                        fin = "i" + fin.substring(1);
-                    }
-                }
-
-                // Recover omitted glide in final
-                if (Objects.requireNonNull(init).endsWith("r")) {       // 只能拼二等或三等韻，二等韻省略介音r
-                    if (!isIY(fin, 0)) {
-                        fin = "r" + fin;
-                    }
-                }
-                else if (init.endsWith("j")) {  // 只能拼三等韻，省略介音i
-                    if (!isIY(fin, 0)) {
-                        fin = "i" + fin;
-                    }
-                }
-            }
-            if (!mapFinals.containsKey(fin)) return null;   // Fail
-
-            // Distinguish 重韻
-            switch (fin) {
-                case "ia":          // 牙音聲母爲戈韻，其餘爲麻韻
-                    if (Arrays.asList("k", "kh", "g", "ng").contains(init)) {
-                        fin = "Ia";
-                    }
-                    break;
-                case "ieng":
-                case "yeng":
-                    // 脣牙喉音聲母直接接-ieng,-yeng者及莊組爲庚韻，其餘爲淸韻
-                    if (Arrays.asList("p", "ph", "b", "m",
-                            "k", "kh", "g", "ng",
-                            "h", "gh", "q", "",
-                            "cr", "chr", "zr", "sr", "zsr").contains(init) && !extraJ) {
-                        fin = (fin.equals("ieng")) ? "Ieng" : "Yeng";
-                    }
-                    break;
-                case "in":     // 莊組聲母爲臻韻，其餘爲眞韻
-                    if (Arrays.asList("cr", "chr", "zr", "sr", "zsr").contains(init)) {
-                        fin = "In";
-                    }
-                    break;
-                case "yn":     // 脣牙喉音聲母直接接-yn者爲眞韻，其餘爲諄韻
-                    if (Arrays.asList("p", "ph", "b", "m",
-                            "k", "kh", "g", "ng",
-                            "h", "gh", "q", "").contains(init) && !extraJ) {
-                        fin = "Yn";
-                    }
-                    break;
-            }
-
-            // Resolve 重紐
-            String dryungNriux = "";
-            if ("支脂祭眞仙宵侵鹽".indexOf(Objects.requireNonNull(mapFinals.get(fin)).charAt(0)) >= 0 &&
-                    Arrays.asList("p", "ph", "b", "m",
-                                  "k", "kh", "g", "ng",
-                                  "h", "gh", "q", "", "j").contains(init)) {
-                dryungNriux = (extraJ || init.equals("j")) ? "A" : "B";
-            }
-
-            // Render details
-            String mux = mapInitials.get(init);
-            String sjep = mapSjep.get(fin);
-            char yonh = Objects.requireNonNull(mapFinals.get(fin)).charAt(fin.endsWith("d") ? 0 : tone);
-            String tongx = mapTongx.get(fin);
-            String ho = mapHo.get(fin);
-            String biengSjyix = mapBiengSjyix.get(yonh);
-
-            return mux + sjep + yonh + dryungNriux + tongx + ho + " " + biengSjyix;
+            return sb.toString();
         }
 
         public static List<String> getAllTones(String s) {
             if (TextUtils.isEmpty(s)) return null;                 // Fail
             String base = s.substring(0, s.length() - 1);
-            if (TextUtils.isEmpty(base)) return null;                           // Fail
+            if (TextUtils.isEmpty(base)) return null;              // Fail
             return switch (s.charAt(s.length() - 1)) {
-                case 'x' -> Arrays.asList(s, base, base + "h");    // 上 -> 上,平,去
-                case 'h' -> Arrays.asList(s, base, base + "x");    // 去 -> 去,平,上
-                case 'd', 'p', 't', 'k' ->
-                        Collections.singletonList(s);                      // 次入、入 -> self
-                default -> Arrays.asList(s, s + "x", s + "h");    // 平 -> 平,上,去
+                case 'q' -> Arrays.asList(s, base, base + "h");    // 上 -> 上,平,去
+                case 'h' -> Arrays.asList(s, base, base + "q");    // 去 -> 去,平,上
+                case 'p', 't', 'k' ->
+                        Collections.singletonList(s);              // 入 -> self
+                default -> Arrays.asList(s, s + "q", s + "h");     // 平 -> 平,上,去
             };
         }
     }
@@ -1258,43 +1091,6 @@ public class Orthography {
             while ((line = reader.readLine()) != null) {
                 int c = line.codePointAt(0);
                 HZ.compatibility.put(c, line.codePoints().toArray()[1]);
-            }
-            reader.close();
-
-            // Middle Chinese
-            inputStream = resources.openRawResource(R.raw.orthography_mc_initials);
-            reader = new BufferedReader(new InputStreamReader(inputStream));
-            while ((line = reader.readLine()) != null) {
-                if (skip(line)) continue;
-                fields = line.split("\\t");
-                if (fields[0].equals("_")) fields[0] = "";
-                MiddleChinese.mapInitials.put(fields[0], fields[1]);
-                MiddleChinese.mapSms.put(fields[0], Arrays.copyOfRange(fields, 1, fields.length));
-            }
-            reader.close();
-
-            inputStream = resources.openRawResource(R.raw.orthography_mc_finals);
-            reader = new BufferedReader(new InputStreamReader(inputStream));
-            while ((line = reader.readLine()) != null) {
-                if (skip(line)) continue;
-                fields = line.split("\\t");
-                MiddleChinese.mapSjep.put(fields[0], fields[1]);
-                MiddleChinese.mapTongx.put(fields[0], fields[2]);
-                MiddleChinese.mapHo.put(fields[0], fields[3]);
-                MiddleChinese.mapFinals.put(fields[0], fields[4]);
-                MiddleChinese.mapYms.put(fields[0], Arrays.copyOfRange(fields, 4, fields.length));
-            }
-            reader.close();
-
-            // Middle Chinese: 平水韻
-            inputStream = resources.openRawResource(R.raw.orthography_mc_bieng_sjyix);
-            reader = new BufferedReader(new InputStreamReader(inputStream));
-            while ((line = reader.readLine()) != null) {
-                if (skip(line)) continue;
-                fields = line.split("\\s+");
-                for (int i = 0; i < fields[1].length(); i++) {
-                    MiddleChinese.mapBiengSjyix.put(fields[1].charAt(i), fields[0]);
-                }
             }
             reader.close();
 

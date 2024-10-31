@@ -58,13 +58,13 @@
             android:entries="@array/pref_entries_tone_value_display"
             android:entryValues="@array/pref_values_tone_value_display"
             android:defaultValue="0" />
-        <ListPreference
+        <MultiSelectListPreference
             app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_mc_display"
             android:title="@string/pref_title_mc_display"
             android:entries="@array/pref_entries_mc_display"
             android:entryValues="@array/pref_values_mc_display"
-            android:defaultValue="5" />
+            android:defaultValue="@array/pref_default_values_mc_display" />
         <MultiSelectListPreference
             app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_zyyy_display"
