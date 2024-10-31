@@ -244,6 +244,21 @@ public class Orthography {
     }
 
     public static class MiddleChinese {
+        private static final List<String> toneSuffixesUnchecked = Arrays.asList(
+            "q", "X", "x", "ʔ", // 上聲；包含 unt 和 msoeg 擬音入聲 -q
+            "h", "H", "d", // 去聲
+        );
+        private static final List<String> toneSuffixesChecked = Arrays.asList(
+            "p", "t", "k", "q", // 入聲
+        );
+        private static final List<String> vowelsHighUnt = Arrays.asList(
+            "i", "ɨ", "ʉ", "u", "e", // 支韻是 ie，所以 e 算高元音
+        );
+        private static final List<String> vowelsNonHighUnt = Arrays.asList(
+            "ɛ", "ə", "o", "ɔ"
+            "æ", "a", "ɑ",
+        );
+
         public static String display(String pys, String[] systems) {
             String[] ss = pys.split("/");
 
@@ -317,15 +332,53 @@ public class Orthography {
 
         public static List<String> getAllTones(String s) {
             if (TextUtils.isEmpty(s)) return null;                 // Fail
+            List<String> result = new ArrayList<>();
+            result.add(s);
+
+            if (s.contains("/")) return result;
+
+            // 輸入上去入聲則只查詢該聲調
+            // 有女羅馬字因聲調變通拼寫複雜且使用者少，此處不考慮
+            if (toneSuffixesUnchecked.contains(s.substring(s.length() - 1)) ||
+                    toneSuffixesChecked.contains(s.substring(s.length() - 1)) ||
+                    s.contains("\u0301") || s.contains("\u0300")) // unt 擬音平上聲
+                return result;
+
+            // 輸入平聲則查詢對應四聲
+            // 上去聲
+            for (String suffix: toneSuffixesUnchecked) {
+                result.add(s + suffix);
+            }
+            boolean hasNonHighVowel = false;
+            for (String vowel: vowelsNonHighUnt) {
+                if (s.contains(vowel)) {
+                    hasNonHighVowel = true;
+                    result.add(s.replace(vowel, vowel + "\u0301"));
+                    result.add(s.replace(vowel, vowel + "\u0300"));
+                }
+            }
+            if (!hasNonHighVowel) {
+                // 在有非高元音時，高元音不可能是主元音
+                for (String vowel: vowelsHighUnt) {
+                    if (s.contains(vowel)) {
+                        result.add(s.replace(vowel, vowel + "\u0301"));
+                        result.add(s.replace(vowel, vowel + "\u0300"));
+                    }
+                }
+            }
+            // 入聲
             String base = s.substring(0, s.length() - 1);
-            if (TextUtils.isEmpty(base)) return null;              // Fail
-            return switch (s.charAt(s.length() - 1)) {
-                case 'q' -> Arrays.asList(s, base, base + "h");    // 上 -> 上,平,去
-                case 'h' -> Arrays.asList(s, base, base + "q");    // 去 -> 去,平,上
-                case 'p', 't', 'k' ->
-                        Collections.singletonList(s);              // 入 -> self
-                default -> Arrays.asList(s, s + "q", s + "h");     // 平 -> 平,上,去
-            };
+            switch (s.charAt(s.length() - 1)) {
+                case 'm': result.add(base + "p"); break;
+                case 'n': result.add(base + "t"); break;
+                case 'ŋ': result.add(base + "k"); break;
+                case 'ɴ': result.add(base + "q"); break;
+            }
+            if (s.length() > 1 && s.substring(s.length() - 2) == 'ng') {
+                String base = s.substring(0, s.length() - 2);
+                result.add(base + "k");
+            }
+            return result;
         }
     }
 
