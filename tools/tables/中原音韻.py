@@ -31,10 +31,10 @@ class 表(_表):
 				yb = yb.replace('sr', 'ʂ').replace('r', 'ɻ')  # 噝音後的 r 實爲捲舌標記
 				yb = yb.replace('y', 'j')
 			yb += self.sds[sd]
-			if sd.startswith('入') or sd == '去作陽':
-				yb = f'*{yb}*'
 			ybs[i] = yb
-		ybs = '/'.join(ybs).replace("*/*", "/")
+		ybs = '/'.join(ybs)
+		if sd.startswith('入') or sd == '去作陽':
+			ybs = f'*{ybs}*'
 
 		if 校註:
 			校註 = '校註：' + 校註

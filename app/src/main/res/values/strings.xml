@@ -97,26 +97,67 @@
     <string name="ipa">音標</string>
 
     <string name="pref_key_mc_display">MC_DISPLAY</string>
-    <string name="pref_title_mc_display">廣韻擬音</string>
+    <string name="pref_title_mc_display">廣韻拼音、擬音及音韻地位描述格式</string>
     <string-array name="pref_entries_mc_display">
+        <item>切韻拼音</item>
+        <item>白一平轉寫</item>
         <item>古韻羅馬字</item>
-        <item>髙本漢</item>
-        <item>王力</item>
-        <item>李榮</item>
-        <item>邵榮芬</item>
-        <item>鄭張尙芳</item>
-        <item>潘悟雲</item>
-        <item>蒲立本</item>
+        <item>有女羅馬字</item>
+        <item>髙本漢擬音</item>
+        <item>王力（1957）擬音</item>
+        <item>王力（1985）擬音</item>
+        <item>李榮擬音</item>
+        <item>邵榮芬擬音</item>
+        <item>蒲立本擬音</item>
+        <item>鄭張尙芳擬音</item>
+        <item>潘悟雲（2000）擬音</item>
+        <item>潘悟雲（2013）擬音</item>
+        <item>潘悟雲（2023）擬音</item>
+        <item>unt（2020）擬音</item>
+        <item>unt（2022）擬音</item>
+        <item>unt通俗擬音</item>
+        <item>msoeg擬音</item>
+        <item>切韻音系描述</item>
+        <item>攝</item>
+        <item>方音字彙描述</item>
+        <item>廣韻韻目原貌</item>
+        <item>折合平水韻目原貌</item>
+        <item>反切</item>
     </string-array>
     <string-array name="pref_values_mc_display">
-        <item>-1</item>
+        <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
+        <item>100</item>
+        <item>101</item>
+        <item>102</item>
+        <item>103</item>
+        <item>104</item>
+        <item>105</item>
+        <item>106</item>
+        <item>107</item>
+        <item>108</item>
+        <item>109</item>
+        <item>110</item>
+        <item>111</item>
+        <item>112</item>
+        <item>113</item>
+        <item>200</item>
+        <item>201</item>
+        <item>202</item>
+        <item>300</item>
+        <item>301</item>
+        <item>400</item>
+    </string-array>
+    <string-array name="pref_default_values_mc_display">
+        <item>0</item>
+        <item>109</item>
+        <item>111</item>
+        <item>200</item>
+        <item>201</item>
+        <item>300</item>
+        <item>400</item>
     </string-array>
 
     <string name="pref_key_zyyy_display">ZYYY_DISPLAY</string>
