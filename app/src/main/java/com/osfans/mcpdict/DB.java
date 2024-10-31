@@ -193,7 +193,6 @@ public class DB extends SQLiteAssetHelper {
                 token = token.toLowerCase(Locale.US);
                 // Canonicalization
                 switch (lang) {
-                    case GY: token = Orthography.MiddleChinese.canonicalize(token); break;
                     case CMN: token = Orthography.Mandarin.canonicalize(token); break;
                     case HK: token = Orthography.Cantonese.canonicalize(token, cantoneseSystem); break;
                     case KOR:
