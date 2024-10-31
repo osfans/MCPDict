@@ -97,7 +97,11 @@ public class Utils extends Application {
 
     private static final Displayer gyDisplayer = new Displayer() {
         public String displayOne(String s) {
-            return Orthography.MiddleChinese.display(s, getToneStyle(R.string.pref_key_mc_display));
+            return Orthography.MiddleChinese.display(s, getToneStyles(R.string.pref_key_mc_display));
+        }
+
+        public boolean isIPA(char c) {
+            return super.isIPA(c) || c == '/';
         }
     };
 
