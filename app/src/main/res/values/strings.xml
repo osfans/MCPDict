@@ -96,7 +96,7 @@
 
     <string name="ipa">音標</string>
 
-    <string name="pref_key_mc_display">MC_DISPLAY</string>
+    <string name="pref_key_mc_display">MC_DISPLAYS</string>
     <string name="pref_title_mc_display">廣韻拼音、擬音及音韻地位描述格式</string>
     <string-array name="pref_entries_mc_display">
         <item>切韻拼音</item>
