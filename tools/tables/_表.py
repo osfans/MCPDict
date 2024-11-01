@@ -10,6 +10,7 @@ import inspect
 from openpyxl import load_workbook
 from xlrd import open_workbook
 from docx import Document
+import regex
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 
@@ -185,6 +186,21 @@ class 表:
 		tpath = os.path.join(self.path, TARGET, str(self))
 		if not tpath.endswith(".tsv"): tpath += ".tsv"
 		return tpath
+
+	def normS(self, s, rep="[\\1]"):
+		s = s.replace("(", "（").replace(")", "）")
+		s = regex.sub("（((?>[^（）]+|(?R))*)）", rep, s)
+		return s
+
+	def normM(self, s, rep="〚\\1〛"):
+		s = s.replace("[", "［").replace("]", "］")
+		s = regex.sub("［((?>[^［］]+|(?R))*)］", rep, s)
+		return s
+
+	def normG(self, s, rep="｛\\1｝"):
+		s = s.replace("｛", "{").replace("｝", "}")
+		s = regex.sub(r"\{((?>[^\{\}]+|(?R))*)\}", rep, s)
+		return s
 
 	def outdated(self):
 		classfile = inspect.getfile(self.__class__)

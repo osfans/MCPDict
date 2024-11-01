@@ -15,21 +15,35 @@ class 表(_表):
 				self.sy = sy
 			else:
 				sy = self.sy
+		elif name in ("平陰東阿",):
+			sy, sd, _, hzs = fs[:4]
+			if sy:
+				self.sy = sy
+			else:
+				sy = self.sy
+			yb = sy + sd
+			hzs = self.normS(hzs)
+		elif name in ("宜章巖泉",):
+			sy, sd, hzs = fs[:3]
 		elif name in ("望城",):
 			sy, sd, hzs = fs[:3]
 			hzs = hzs.replace("?", "□")
-		elif name in ("宜章巖泉",):
-			sy, sd, hzs = fs[:3]
+		elif name in ("無錫",):
+			sy, hzs = fs[:2]
+			sd = ""
+			hzs = hzs.replace("？", "?").replace(" ", "")
+			hzs = self.normS(hzs)
 		elif name in ("思南塘頭",):
 			sy, sd, hzs = fs[:3]
-			hzs = hzs.replace("(", "（").replace(")", "）").replace("∽", "~").replace(" ", "")
-			hzs = re.sub("([₁-₃])(（)", "\\2\\1", hzs)
-			hzs = re.sub("([^（])([₁-₃])", "\\1（\\2）", hzs)
-			hzs = regex.sub("（((?>[^（）]+|(?R))*)）", "[\\1]", hzs)
-		elif name in ("江華河路口", "江華粟米塘", "全州黃沙河", "安仁新洲", "1935長沙"):
+			hzs = hzs.replace("∽", "~").replace(" ", "")
+			hzs = self.normS(hzs)
+		elif name in ("崇陽","通城塘湖","沅陵死客子話","宜章東風客家","新田毛里","資興南鄕", "婁底石井", "雙牌官話", "長沙黎圫","吉首", "懷化", "攸縣新市", "長沙星沙"):
+			sy, sd, _, hzs = fs[:4]
+			hzs = hzs.replace(")(", "；")
+			hzs = self.normS(hzs)
+		elif name in ("江華河路口", "江華粟米塘", "全州黃沙河", "安仁新洲", "1935長沙", "長沙黃花"):
 			sy, sd, hzs = fs[:3]
-			hzs = hzs.replace("(", "（").replace(")", "）")
-			hzs = regex.sub("（((?>[^（）]+|(?R))*)）", "[\\1]", hzs)
+			hzs = self.normS(hzs)
 		elif name in ("孝昌小河",):
 			if not fs[0]: return
 			groups = re.findall(r"^(.*?)(\d+) ?(.+)$", fs[0])
@@ -47,40 +61,45 @@ class 表(_表):
 			sd = self.toneMaps.get(sd, "0")
 		elif name in ("汨羅沙溪",):
 			sy, sd, hzs = fs[:3]
-			hzs = hzs.replace("(", "（").replace(")", "）")
-			hzs = regex.sub("（((?>[^（）]+|(?R))*)）", "[\\1]", hzs)
+			hzs = self.normS(hzs)
 			sd = sd.replace("42", "24")
+			hzs = hzs.replace("☐", "□")
 			sd = self.toneMaps.get(sd, "?")
-		elif name in ("平陰東阿",):
-			sy, sd, _, hzs = fs[:4]
-			if sy:
-				self.sy = sy
-			else:
-				sy = self.sy
-			yb = sy + sd
-			hzs = hzs.replace("¨", "□").replace("(", "（").replace(")", "）")
-			hzs = regex.sub("（((?>[^（）]+|(?R))*)）", "[\\1]", hzs)
 		elif name in ("長沙雙江",):
 			sy, sd, _, hzs = fs[:4]
-			hzs = re.sub("[₁₂₃]", "", hzs)
-			hzs = hzs.replace("[", "［").replace("]", "］").replace("（", "[").replace("）", "]").replace("(", "[").replace(")", "]")
+			hzs = hzs.replace("、（", "₁（")
+			hzs = self.normS(hzs)
 		elif name in ("會同髙椅","會同靑朗"):
 			sy, _, sd, hzs = fs[:4]
 		elif name in ("湘鄕棋梓",):
 			sy, sd, _, hzs = fs[:4]
-		elif name in ("崇陽","通城塘湖","沅陵死客子話","宜章東風","新田毛里","資興南鄕", "婁底石井", "雙牌官話", "長沙黎圫"):
-			sy, sd, _, hzs = fs[:4]
-			hzs = hzs.replace("(", "（").replace(")", "）")
-			hzs = regex.sub("（((?>[^（）]+|(?R))*)）", "[\\1]", hzs)
 		elif name in ("邵東斫曹","綏寧武陽","天柱江東"):
 			sy, sd = fs[:2]
 			hzs = "".join(fs[2:]).replace("\t", "").strip()
 		elif name in ("吉安雲樓",):
 			sy, sd, hzs = fs[:3]
-			hzs = hzs.replace("(", "（").replace(")", "）").replace("（", "[").replace("）", "]")
-			hzs = hzs.replace("₂", "2")
-			hzs = re.sub(r"(\d)(\[)", "\\2\\1", hzs)
+			hzs = self.normS(hzs)
 			sd = self.toneMaps[sd]
+		elif name in ("揚州",):
+			self.disorder = False
+			self.simplified = 0
+			sy, hzs = fs[:2]
+			sd = ""
+			l = ""
+			for c,hz,js in re.findall(r"([？#\+])?(.)(（[^）]*?（.*?）.*?）|（.*?）)?", hzs):
+				if js: js = js[1:-1]
+				p = ""
+				if c == '+':
+					p = "書"
+					c = ""
+				elif c == '？':
+					c = "?"
+				elif c == '#':
+					c = "*"
+				if p:
+					js = f"({p}){js}"
+				l += f"{hz}{c}[{js}]"
+			hzs = l
 		elif len(fs) > 3 and fs[3]:
 			_, sy, sd, hzs = fs[:4]
 		else:
@@ -88,11 +107,10 @@ class 表(_表):
 		if sd == "調號": return
 		yb = sy + sd
 		l = list()
-		hzs = hzs.replace("[", "［").replace("]", "］")
-		hzs = re.sub(r"(［.*?］)([-=])", "\\2\\1", hzs)
-		for hz, c, js in re.findall(r"(.)([-=]?)(［[^［］]*?［[^［］]*?］[^［］]*?］|［.*?］)?", hzs):
+		hzs = self.normM(hzs)
+		hzs = re.sub(r"(〚.*?〛)([-=])", "\\2\\1", hzs)
+		for hz, c, o, js in re.findall(r"(.)([-=*?]?)([₀-₉0-9]?)(〚.*?〛)?", hzs):
 			if js: js = js[1:-1]
-			if hz in "☐": hz = "□"
+			js = o + js
 			l.append((hz, yb + c, js))
 		return l
-
