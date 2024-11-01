@@ -290,14 +290,14 @@
 亂	luan6	
 了	liau3	～結
 事	sə6	
-二	ni6	
-二	ə6	
+二	ni6	1
+二	ə6	2
 于	y2	姓
 互	fu6	
 五	ŋ3	
 井	tɕiaŋ3	
-亞	ŋa5	
-亞	ia5	
+亞	ŋa5	1
+亞	ia5	2
 亡	uɔŋ2	
 交	kau1	
 亥	huai6	
@@ -444,8 +444,8 @@
 儲	tɕʰy2	
 允	yn3	
 元	yan2	
-兄	ɕyn1	
-兄	ɕiaŋ1	
+兄	ɕyn1	1
+兄	ɕiaŋ1	2
 充	tsʰuŋ1	
 兆	tsʰɛu6	
 兇	ɕyŋ1	
@@ -592,8 +592,8 @@
 占	tsɛn1	～卜
 卯	mau3	
 印	in5	
-危	uei1	
-危	uei2	
+危	uei1	1
+危	uei2	2
 即	tɕi1	
 卵	luan3	男陰
 卷	tɕyan5	
@@ -726,8 +726,8 @@
 嘔	ŋiau3	
 嘗	sɔŋ2	
 噓	ɕy1	
-嘮	lau1	
-嘮	lau2	
+嘮	lau1	1
+嘮	lau2	2
 嘴	tsuei5	
 噍	tɕʰiau6	咀嚼
 噤	tɕʰin3	打～:打顫
@@ -929,8 +929,8 @@
 守	ɕiu3	
 安	ŋuan1	
 宋	suŋ5	
-完	fuan2	
-完	uan2	
+完	fuan2	1
+完	uan2	₂
 宗	tsuŋ1	
 官	kuan1	
 宙	tɕʰiu6	
@@ -1029,8 +1029,8 @@
 峽	hɛ6	
 崇	tsʰuŋ2	
 崔	tsʰuei1	
-崖	ŋai2	
-崖	ŋan2	
+崖	ŋai2	1
+崖	ŋan2	2
 崗	kɔŋ1	
 崩	puŋ1	
 崽	tsuai3	兒子
@@ -1152,8 +1152,8 @@
 徒	tʰu2	
 得	tɛ1	
 徙	ɕi3	
-從	tsʰuŋ2	
-從	tɕʰyŋ2	
+從	tsʰuŋ2	1
+從	tɕʰyŋ2	2
 循	sun2	
 微	uei1	
 德	tɛ1	
@@ -1172,8 +1172,8 @@
 念	nian6	
 忽	fu1	
 忿	fɛn6	
-怒	nu5	
-怒	nu6	
+怒	nu5	1
+怒	nu6	2
 怕	pʰa5	
 思	sə1	
 怠	tʰuai6	
@@ -1332,8 +1332,8 @@
 拴	suan1	
 拼	pʰẽ1	
 拾	ɕi6	
-拿	na1	
-拿	na2	
+拿	na1	1
+拿	na2	2
 持	tsʰə2	
 指	tsə3	
 按	ŋuan5	
@@ -1413,11 +1413,11 @@
 摹	mu2	
 撂	liau6	丟、扔
 撇	pʰiɛ1	
-撈	lau1	
-撈	lau2	
+撈	lau1	1
+撈	lau2	2
 撏	tɕʰian2	拔
 撐	tsʰaŋ1	
-撐	tsʰaŋ5	
+撐	tsʰaŋ5	2
 撒	sa3	
 撕	sə1	
 撞	tsʰɔŋ6	
@@ -1847,10 +1847,10 @@
 浙	tsɛ1	
 浦	pʰu3	
 浩	hau6	
-浪	lɔŋ5	
-浪	lɔŋ6	
-浮	pʰau2	
-浮	fiau2	
+浪	lɔŋ5	1
+浪	lɔŋ6	₂
+浮	pʰau2	1
+浮	fiau2	2
 浴	y6	
 海	huai3	
 浸	tsẽ5	
@@ -1865,8 +1865,8 @@
 淑	su1	
 淘	tʰau2	
 淚	luei6	
-淡	tʰan3	
-淡	tʰan6	
+淡	tʰan3	1
+淡	tʰan6	2
 淤	y1	～泥
 淨	tɕʰiaŋ6	
 淩	lẽ2	
@@ -2047,8 +2047,8 @@
 狐	fu2	
 狗	kiau3	
 狡	kau3	
-狸	ti2	
-狸	tʰi2	
+狸	ti2	1
+狸	tʰi2	2
 狹	hɛ6	
 狼	lɔŋ2	
 猋	piau1	起～起跳:跳躍
@@ -2067,8 +2067,8 @@
 玄	ɕian2	河～邊:河邊
 玄	ɕyan2	
 率	ly1	
-玉	y1	
-玉	iu1	
+玉	y1	1
+玉	iu1	₂
 王	uɔŋ2	
 玩	uan2	
 玻	puo1	
@@ -2178,8 +2178,8 @@
 皖	uan3	
 皮	pʰi2	
 皺	tsɛu5	
-盂	y1	
-盂	y6	
+盂	y1	1
+盂	y6	2
 盅	tsuŋ1	
 盆	pʰɛn2	
 盈	in2	
@@ -2525,8 +2525,8 @@
 者	tsa3	
 而	ø2	
 耍	sa3	～賴
-耐	nai6	
-耐	nuai6	
+耐	nai6	1
+耐	nuai6	2
 耕	kian1	
 耗	hau5	
 耙	pʰa2	
@@ -2606,8 +2606,8 @@
 膏	kau1	
 膘	piau1	
 膚	fu1	
-膜	muo1	
-膜	muo6	
+膜	muo1	1
+膜	muo6	2
 膝	tɕʰi1	～頭:膝蓋
 膠	kau1	
 膨	pʰaŋ2	
@@ -2723,7 +2723,7 @@
 蔣	tɕiɔŋ3	
 蒔	sə6	～田:插秧
 蒙	muŋ1	
-蒙	muŋ2	
+蒙	muŋ2	2
 蒜	suan5	
 蒲	pʰu2	
 蒸	tsẽ1	
@@ -2882,8 +2882,8 @@
 角	kuo1	
 解	kai3	～釋
 解	ɕiɛ6	姓
-觸	tsʰu1	
-觸	tsʰu5	
+觸	tsʰu1	1
+觸	tsʰu5	2
 言	nian2	
 訂	tiaŋ1	
 計	tɕi5	
@@ -3220,8 +3220,8 @@
 鋤	tsʰu2	
 鋪	pʰu1	～床
 鋪	pʰu3	店～
-鋸	kiɛ5	
-鋸	kə5	
+鋸	kiɛ5	1
+鋸	kə5	2
 鋼	kɔŋ1	
 鋼	kɔŋ5	刀鈍了，鋼鋼
 錄	lu1	

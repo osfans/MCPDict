@@ -18,8 +18,8 @@ class 表(_表):
 		elif name in ("宜昌",):
 			line = line.replace('""	"', '"#')
 		elif name in ("巢湖",):
-			line = line.replace('""	"', '"#').replace("ø","Ø")\
-				.replace("（0）","[0]").replace(")","）").replace("（","｛").replace("）","｝")
+			line = line.replace('""	"', '"#').replace("ø","Ø").replace("（0）","[0]")
+			line = self.normS(line, "{\\1}")
 		elif name in ("羅山",):
 			line = re.sub(r"[:：] ?\[", "	[", line).replace("ø","Ø")
 		elif name in ("介休張蘭",):
@@ -40,14 +40,18 @@ class 表(_表):
 		elif name in ("昆明","建水臨安",):
 			line = re.sub(r"^.*?\t", "", line)
 			line = line.replace("(", "{").replace("〔", "{").replace("（","{").replace(")", "}").replace("）", "}")
-		elif name in ("丹鳳","商州","嘉定中","嘉定西","嘉定城","嘉定外","寶山","寶山羅店","南皮"):
+		elif name in ("丹鳳","嘉定中","嘉定西","嘉定城","嘉定外","寶山","寶山羅店","南皮"):
 			if line.startswith("#"): line = "#"
+		elif name in ("商州",):
+			if line.startswith("#"): line = "#"
+			line = re.sub(r"\[([^\d]+)\]", "\\1", line)
 		elif name in ("運城", "興縣"):
 			line = line.replace("ø", "")
 		elif name in ("永定", "連城四堡", "上杭古田"):
 			line = line.replace("*", "@")
 		elif name in ("雲霄",):
-			line = line.replace("（","{").replace("）","}").replace("〉","}")
+			line = line.replace("〉","）")
+			line = self.normS(line, "{\\1}")
 		elif name in ("道縣梅花",):
 			#!西官陰平藉詞@西官陽平藉詞$西官上聲藉詞%西官去聲藉詞
 			line = re.sub("(!)(?!{)","{西官陰平借詞}",line)
@@ -60,10 +64,9 @@ class 表(_表):
 			line = line.replace("%{","{(西官去聲借詞)")
 		elif name in ("連城文保", "長汀"):
 			if line.startswith("#"): return line
-			line = line.replace("(","（").replace(")","）")
 			line = line.replace("[","［").replace("]","］")
 			line = line.replace("*（", "□（")
-			line = regex.sub("（((?>[^（）]+|(?R))*)）", "{\\1}", line)
+			line = self.normS(line, "{\\1}")
 			line = re.sub(r"\*(.)", "\\1?", line)
 			line = re.sub(r"［(.)(.*?)］", "\\1*\\2", line)
 			fs = line.split("\t")
@@ -108,6 +111,8 @@ class 表(_表):
 			line = re.sub(r"（(.*?)）", "{\\1}", line)
 			line = re.sub(r"〔(.*?)〕", "{\\1}", line)
 			line = line.replace("}{", "；")
+			line = line.replace("{", "（").replace("}", "）")
+			line = regex.sub("（((?>[^（）]+|(?R))*)）", "{\\1}", line)
 			line = re.sub(r"\t(\d+)", lambda x: "["+ self.dz2dl(ym + x[1]).replace(ym, "") +"]", line)
 			line = line.replace("\t" + ym, ym + "\t")
 			fs = line.split("\t", 1)
@@ -142,7 +147,7 @@ class 表(_表):
 			line = re.sub(r"\[(\d+[a-zA-Z]?)\]", "［\\1］",line)
 			line = re.sub("［([^0-9]+.*?)］", "[\\1]",line)
 			if "{" not in line and "（" in line:
-				line = line.replace("（","{").replace("）","}")
+				line = self.normS(line, "{\\1}")
 			line = line.lstrip(" ")
 			if line.startswith("	#"): line = line[1:]
 			if line.startswith("#"):
@@ -166,8 +171,9 @@ class 表(_表):
 					pys.add(py)
 				else:
 					print(f"\t\t\t{py} 重複")
-				hzs = regex.findall(r"(.)\d?([<+\-/=\\\*？$&r@]?)\d?(\{((?=[^\{\}]*)|(?R))*?\})?", hzs)
-				for hz, c, js, _ in hzs:
+				hzs = self.normG(hzs)
+				hzs = re.findall(r"(.)\d?([<+\-/=\\\*？$&r@]?)\d?(｛.*?｝)?", hzs)
+				for hz, c, js in hzs:
 					if hz == " ": continue
 					p = ""
 					if c:
