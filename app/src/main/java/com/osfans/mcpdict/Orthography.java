@@ -53,6 +53,10 @@ public class Orthography {
         }
     }
 
+    public static String formatRoman(String s) {
+        return String.format("<i>%s</i>", s);
+    }
+
     public static String formatTone(String base, String tone, String lang) {
         if (TextUtils.isEmpty(tone) || tone.contentEquals("_")) return base;
         JSONArray styles = null;
@@ -294,6 +298,7 @@ public class Orthography {
                 String name = names[j];
                 if (i < 100) {
                     // 拼音
+                    s = formatRoman(s);
                     name = name.replace("切韻拼音", "切拼");
                     name = name.replace("轉寫", "").replace("羅馬字", "");
                 } else {
@@ -532,7 +537,7 @@ public class Orthography {
                         if (t != '_') sb.append(mapPinyin.get("_" + t));
                     }
                 }
-                return sb.toString();
+                return sb.toString(); //pinyin
             case BOPOMOFO:
                 if (mapToBopomofoWhole.containsKey(s)) {
                     s = mapToBopomofoWhole.get(s);
@@ -688,7 +693,7 @@ public class Orthography {
             Map<String, String> mapInitials, mapFinals;
             int index;
             switch (system) {
-                case JYUTPING:          return s;
+                case JYUTPING:          return formatRoman(s);
                 case IPA:
                     index = 3;
                     break;
@@ -747,7 +752,7 @@ public class Orthography {
             // In Yale, initial "y" is omitted if final begins with "yu"
             if (system == YALE && Objects.requireNonNull(init).equals("y") && Objects.requireNonNull(fin).startsWith("yu")) init = "";
             if (system == IPA) return formatTone(init + fin, tone + "", DB.HK);
-            return init + fin + (tone == '_' ? "" : tone);
+            return formatRoman(init + fin + (tone == '_' ? "" : tone));
         }
 
         public static List<String> getAllTones(String s) {
@@ -779,7 +784,7 @@ public class Orthography {
         private static final int IPA = 0;
         private static final int ROMAN = 1;
         public static String display(String s, int system) {
-            if (system == ROMAN) return s;
+            if (system == ROMAN) return formatRoman(s);
             char tone = s.charAt(s.length() - 1);
             String base = s;
             if (tone >= '1' && tone <= '8') {
@@ -891,7 +896,7 @@ public class Orthography {
 
         public static String display(String s, int system) {
             if (system == IPA) return getIPA(s);
-            if (system == ROMANIZATION) return s;
+            if (system == ROMANIZATION) return formatRoman(s);
 
             int L = s.length();
             int x, y, z, p, q;
@@ -1113,8 +1118,9 @@ public class Orthography {
                 if (q == p) return null;
                 p = q;
             }
-
-            return sb.toString();
+            s = sb.toString();
+            if (system == HEPBURN) s = formatRoman(s);
+            return  s;
         }
 
         public static String canonicalize(String s) {
@@ -1122,7 +1128,7 @@ public class Orthography {
         }
 
         public static String display(String s, int system) {
-            return (system == NIPPON) ? s : convertTo(s, system);
+            return (system == NIPPON) ? formatRoman(s) : convertTo(s, system);
         }
     }
 
