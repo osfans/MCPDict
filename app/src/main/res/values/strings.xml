@@ -373,6 +373,7 @@
     <string name="pref_key_locale">LOCALE</string>
     <string-array name="pref_entries_locale">
         <item>默認</item>
+        <item>系統</item>
         <item>大陸</item>
         <item>香港</item>
         <item>臺灣</item>
@@ -381,6 +382,7 @@
     </string-array>
     <string-array name="pref_values_locale">
         <item>""</item>
+        <item>sys</item>
         <item>zh-cn</item>
         <item>zh-hk</item>
         <item>zh-tw</item>

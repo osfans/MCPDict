@@ -430,6 +430,7 @@ public class Utils extends Application {
     public static String getFontFeatureSettings() {
         String locale = getStr(R.string.pref_key_locale);
         if (!TextUtils.isEmpty(locale) && locale.contentEquals("zh-cn")) return "";
+        if (locale.contentEquals("sys")) return "";
         return "trad";
     }
 
@@ -502,6 +503,7 @@ public class Utils extends Application {
     public static void setLocale() {
         String locale = getStr(R.string.pref_key_locale);
         if (TextUtils.isEmpty(locale)) locale = "ko";
+        else if (locale.contentEquals("sys")) return;
         Locale.setDefault(Locale.forLanguageTag(locale));
     }
 
