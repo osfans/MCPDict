@@ -367,11 +367,10 @@ public class ResultFragment extends Fragment {
         String feat = Utils.getFontFeatureSettings();
         if (!feat.isEmpty()) sb.append(String.format("font-feature-settings: %s;\n", feat));
         sb.append("      font-family: ");
-        sb.append(Utils.useFontTone() ? "tone" : "ipa");
-        sb.append(", ");
         if (Utils.fontExFirst()) {
             sb.append(String.format("p0, p2, p3, pua, %s; }\n", Utils.getDefaultFont()));
         } else {
+            sb.append(Utils.useFontTone() ? "tone," : "ipa,");
             sb.append(String.format("%s, p0, p2, p3, pua; }\n", Utils.getDefaultFont()));
         }
         sb.append("""

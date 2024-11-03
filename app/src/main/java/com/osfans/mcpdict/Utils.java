@@ -286,10 +286,7 @@ public class Utils extends Application {
             } else {
                 if (tfHan == null) {
                     Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.ipa).build()).build()
-                    );
-                    if (fontExFirst()) builder.addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p0).build()).build()
+                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), fontExFirst() ? R.font.p0 : R.font.ipa).build()).build()
                     );
                     builder.addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p2).build()).build()
@@ -443,7 +440,7 @@ public class Utils extends Application {
         TextView tv = new TextView(context);
         tv.setPadding(24, 24, 24, 24);
         setTypeface(tv);
-        if (lang == COL_HD) tv.setFontFeatureSettings("'ss01' 1"); // zh-cn and pinyin
+        if (lang == COL_HD) tv.setFontFeatureSettings("ss01"); // zh-cn and pinyin
         tv.setTextIsSelectable(true);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
         tv.setText(s);
