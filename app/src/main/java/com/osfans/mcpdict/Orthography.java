@@ -278,12 +278,14 @@ public class Orthography {
 
             String[] values = Utils.getStringArray(R.array.pref_values_mc_display);
 
-            int pyAndYbCount = 0;
+            int pyCount = 0;
+            int ybCount = 0;
             int descriptionCount = 0;
             int bookCount = 0;
             for (int j: systems) {
                 int i = Integer.parseInt(values[j]);
-                if (i < 200) pyAndYbCount++;
+                if (i < 100) pyCount++;
+                else if (i < 200) ybCount++;
                 else descriptionCount++;
                 if (300 <= i && i < 400) bookCount++;
             }
@@ -309,11 +311,11 @@ public class Orthography {
                     name = name.replace("擬音", "");
                 }
                 sb.append(s);
-                if (pyAndYbCount > 1) sb.append(String.format("(%s)", name));
+                if ((pyCount > 1 && i < 100) || (ybCount > 1 && i >= 100 && i < 200)) sb.append(String.format("(%s)", name));
                 sb.append(" ");
             }
             // 既有拼音擬音又有描述時，給描述添加括號
-            if (pyAndYbCount > 0 && descriptionCount > 0) {
+            if (pyCount + ybCount > 0 && descriptionCount > 0) {
                 sb.append("(");
             }
             // 描述
@@ -331,7 +333,7 @@ public class Orthography {
                 sb.append(s);
                 sb.append(" ");
             }
-            if (pyAndYbCount > 0 && descriptionCount > 0) {
+            if (pyCount + ybCount > 0 && descriptionCount > 0) {
                 sb.deleteCharAt(sb.length() - 1); // Remove last space
                 sb.append(")");
             }
