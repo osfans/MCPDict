@@ -24,6 +24,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
 import androidx.core.text.HtmlCompat;
 
 import java.util.Arrays;
@@ -497,6 +499,8 @@ public class Utils extends Application {
     }
 
     public static void setLocale() {
+        LocaleListCompat appLocale = LocaleListCompat.forLanguageTags("zh-Hant");
+        AppCompatDelegate.setApplicationLocales(appLocale);
         String locale = getStr(R.string.pref_key_locale);
         if (TextUtils.isEmpty(locale)) locale = "ko";
         Locale.setDefault(Locale.forLanguageTag(locale));
