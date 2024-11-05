@@ -9,6 +9,8 @@ class 表(_表):
 
 	def parse(self, fs):
 		name = str(self)
+		yb = ""
+		sd = ""
 		if name in ("臨川","奉新宋埠"):
 			sy, sd, hzs = fs[:3]
 			if sy:
@@ -29,8 +31,7 @@ class 表(_表):
 			sy, sd, hzs = fs[:3]
 			hzs = hzs.replace("?", "□")
 		elif name in ("無錫",):
-			sy, hzs = fs[:2]
-			sd = ""
+			yb, hzs = fs[:2]
 			hzs = hzs.replace("？", "?").replace(" ", "")
 			hzs = self.normS(hzs)
 		elif name in ("思南塘頭",):
@@ -52,6 +53,9 @@ class 表(_表):
 			if not sy or not hzs: return
 			sd = self.toneMaps[sd]
 			hzs = hzs.strip().replace("{", "[").replace("}", "]")
+		elif name in ("洞口",):
+			yb, hzs = fs[:2]
+			hzs = hzs.replace("{", "[").replace("}", "]")
 		elif name in ("欽州正",):
 			sy, sd, hzs = fs[:3]
 			hzs = hzs.replace("{", "[").replace("}", "]")
@@ -83,8 +87,7 @@ class 表(_表):
 		elif name in ("揚州",):
 			self.disorder = False
 			self.simplified = 0
-			sy, hzs = fs[:2]
-			sd = ""
+			yb, hzs = fs[:2]
 			l = ""
 			for c,hz,js in re.findall(r"([？#\+])?(.)(（[^）]*?（.*?）.*?）|（.*?）)?", hzs):
 				if js: js = js[1:-1]
@@ -105,7 +108,7 @@ class 表(_表):
 		else:
 			sy, sd, hzs = fs[:3]
 		if sd == "調號": return
-		yb = sy + sd
+		if not yb: yb = sy + sd
 		l = list()
 		hzs = self.normM(hzs)
 		hzs = re.sub(r"(〚.*?〛)([-=])", "\\2\\1", hzs)
