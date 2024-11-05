@@ -15,6 +15,8 @@ class 表(_表):
 			line = re.sub(r"^(.*?)［", "\\1	［", line)
 		elif name in ("寶應望直港","羅山周黨","涇縣茂林","沁源", "同江二屯","象山鶴浦","趙縣"):
 			line = re.sub(r"^(.*?) ?\[", "\\1	[", line)
+		elif name in ("萍鄕",):
+			line = line.lstrip("∅︀")
 		elif name in ("宜昌",):
 			line = line.replace('""	"', '"#')
 		elif name in ("巢湖",):
