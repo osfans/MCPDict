@@ -435,6 +435,7 @@ public class Utils extends Application {
     public static void setTypeface(TextView tv) {
         tv.setTypeface(getDictTypeface());
         tv.setFontFeatureSettings(getFontFeatureSettings());
+        tv.setElegantTextHeight(true);
     }
 
     public static void showDict(Context context, int lang, CharSequence s) {
