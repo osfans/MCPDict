@@ -22,6 +22,8 @@ abstract class Displayer {
         StringBuilder sb = new StringBuilder();
         int L = s.length(), p = 0;
         boolean isMeaning;
+        boolean isLang = DB.isLang(mLang);
+        String js;
         while (p < L) {
             int q = p;
             while (q < L && isIPA(s.charAt(q))) q++;
@@ -37,7 +39,9 @@ abstract class Displayer {
                 else if (s.charAt(p) == '}') isMeaning = false;
                 p++; //
             }
-            sb.append(s.substring(q, p));
+            js = s.substring(q, p);
+            if (isLang) js = js.replace("  ", "　").replace(" ", "").replace("　", " ");
+            sb.append(js);
         }
         // Add spaces as hints for line wrapping
         s = sb.toString().replace("\t", " ").replace(",", " ").replace("  ", " ")
@@ -55,7 +59,6 @@ abstract class Displayer {
     public String getLang() {
         return mLang;
     }
-
 
     public String lineBreak(String s) {
         return s;

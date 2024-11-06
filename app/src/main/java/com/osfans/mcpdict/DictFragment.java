@@ -21,7 +21,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     private View selfView;
     private MySearchView searchView;
-    private Spinner spinnerShowLang, spinnerShape;
+    private Spinner spinnerShowLang, spinnerShape, spinnerType;
     private AutoCompleteTextView autoCompleteSearchLang;
     private ResultFragment fragmentResult;
     ArrayAdapter<CharSequence> adapterShowLang, adapterShape;
@@ -84,8 +84,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
         
         Spinner spinnerCharset = selfView.findViewById(R.id.spinner_charset);
-        int position = Utils.getInt(R.string.pref_key_charset, 0);
-        spinnerCharset.setSelection(position);
+        spinnerCharset.setSelection(Utils.getInt(R.string.pref_key_charset, 0));
         spinnerCharset.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -96,6 +95,18 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
+        spinnerType = selfView.findViewById(R.id.spinner_type);
+        spinnerType.setSelection(Utils.getInt(R.string.pref_key_type, 0));
+        spinnerType.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Utils.putInt(R.string.pref_key_type, position);
+                searchView.clickSearchButton();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+    
         spinnerShape = selfView.findViewById(R.id.spinner_shape);
         adapterShape = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
         adapterShape.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -142,6 +153,11 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         fragmentResult = (ResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);
         refreshAdapter();
         return selfView;
+    }
+
+    public void setType(int value) {
+        spinnerType.setSelection(value);
+        Utils.putInt(R.string.pref_key_type, value);
     }
 
     @Override

@@ -73,7 +73,7 @@ public class ResultFragment extends Fragment {
     private final HashMap<String, String> mRaws = new HashMap<>();
     private final int GROUP_READING = 1;
 
-    private final int MSG_SEARCH = 1;
+    private final int MSG_SEARCH_HOMOPHONE = 1;
     private final int MSG_GOTO_INFO = 2;
     private final int MSG_FAVORITE = 3;
     private final int MSG_MAP = 4;
@@ -82,9 +82,10 @@ public class ResultFragment extends Fragment {
         public void handleMessage(@NonNull Message msg) {
             int what = msg.what;
             switch (what) {
-                case MSG_SEARCH:
+                case MSG_SEARCH_HOMOPHONE:
                     removeCallbacksAndMessages(null);
                     DictFragment dictFragment = ((MainActivity) requireActivity()).getDictionaryFragment();
+                    dictFragment.setType(1);
                     dictFragment.refresh(mEntry.raw, mEntry.lang);
                     break;
                 case MSG_GOTO_INFO:
@@ -240,7 +241,7 @@ public class ResultFragment extends Fragment {
                 item = menu.add(getString(R.string.goto_info, language));
                 item.setOnMenuItemClickListener(i->mHandler.sendEmptyMessage(MSG_GOTO_INFO));
                 item = menu.add(getString(R.string.search_homophone, hz, language));
-                item.setOnMenuItemClickListener(i->mHandler.sendEmptyMessage(MSG_SEARCH));
+                item.setOnMenuItemClickListener(i->mHandler.sendEmptyMessage(MSG_SEARCH_HOMOPHONE));
                 menu.add(GROUP_READING, getColumnIndex(col), 0, getString(R.string.copy_one_reading, hz, language));
             }
             if (cols.size() > 2)

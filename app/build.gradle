@@ -5,7 +5,7 @@ android {
         applicationId "com.osfans.mcpdict"
         minSdkVersion 24
         targetSdkVersion 35
-        versionCode 79
+        versionCode 80
         versionName "5.7 (2024.11.06)"
     }
 

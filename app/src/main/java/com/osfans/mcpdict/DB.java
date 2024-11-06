@@ -126,12 +126,23 @@ public class DB extends SQLiteAssetHelper {
         // db = getWritableDatabase();
     }
 
+    private static String splitHZ(String s) {
+        StringBuilder sb = new StringBuilder();
+        for (int unicode : s.codePoints().toArray()) {
+            if (!Orthography.HZ.isHz(unicode)) continue;
+            String hz = Orthography.HZ.toHz(unicode);
+            sb.append(hz).append(" ");
+        }
+        return sb.toString().trim();
+    }
+
     public static Cursor search() {
         Context context = Utils.getContext();
         // Search for one or more keywords, considering mode and options
         String input = Utils.getInput();
         String lang = Utils.getLabel();
         String shape = Utils.getShape();
+        int type = Utils.getInt(R.string.pref_key_type, 0);
 
         if (!TextUtils.isEmpty(shape)) lang = shape;
 
@@ -145,7 +156,12 @@ public class DB extends SQLiteAssetHelper {
 
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
-        if (lang.contentEquals(KX) || lang.contentEquals(HD)) {
+        if (type == 2){ //yi
+            if (Orthography.HZ.isHz(input)) {
+                String hzs = splitHZ(input);
+                if (!TextUtils.isEmpty(hzs)) keywords.add(hzs);
+            }
+        } else if (lang.contentEquals(KX) || lang.contentEquals(HD)) {
             if (!TextUtils.isEmpty(input) && !input.startsWith(":") && !input.startsWith("：") && !Orthography.HZ.isPY(input)){
                 if (Orthography.HZ.isSingleHZ(input)) lang = HZ;
                 else input = ":" + input;
@@ -163,20 +179,15 @@ public class DB extends SQLiteAssetHelper {
             input = Orthography.HZ.toHz(input);
             lang = HZ;
         } else if (Orthography.HZ.isPY(input) && !isLang(lang)) lang = CMN;
-        if (isHzMode(lang)) {     // Each character is a query
-            if (input.startsWith(":") || input.startsWith("：")){
-                keywords.add("%" + input.substring(1) + "%");
-                lang = KX;
-            } else {
-                for (int unicode : input.codePoints().toArray()) {
-                    if (!Orthography.HZ.isHz(unicode)) continue;
-                    String hz = Orthography.HZ.toHz(unicode);
-                    if (keywords.contains(hz)) continue;
-                    keywords.add(hz);
-                }
+        if (isHzMode(lang) && type == 0) {     // Each character is a query
+            for (int unicode : input.codePoints().toArray()) {
+                if (!Orthography.HZ.isHz(unicode)) continue;
+                String hz = Orthography.HZ.toHz(unicode);
+                if (keywords.contains(hz)) continue;
+                keywords.add(hz);
             }
         } else if (input.startsWith(":") || input.startsWith("：")){
-            keywords.add("%" + input.substring(1) + "%");
+            keywords.add(input.substring(1) + "*");
         } else {                          // Each contiguous run of non-separator and non-comma characters is a query
             if (lang.contentEquals(KOR)) { // For Korean, put separators around all hangul
                 StringBuilder sb = new StringBuilder();

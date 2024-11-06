@@ -124,6 +124,7 @@ class 表:
 	note = ""
 	site = ""
 	url = ""
+	dictionary = False
 
 	disorder = False
 	patches = None
@@ -248,6 +249,23 @@ class 表:
 	def isDialect(self):
 		return self.langType and not self.langType.startswith("歷史音")
 
+	def isDictionary(self):
+		return self.dictionary
+
+	def normJS(self, js):
+		if not js: return ""
+		last = ""
+		l = list()
+		for i in js:
+			if isHZ(i):
+				if last: l.append(last)
+				last = ""
+				l.append(i)
+			else:
+				last += i
+		if last: l.append(last)
+		return " ".join(l)
+
 	def write(self, d):
 		self.patch(d)
 		t = open(self.tpath, "w", encoding="U8", newline="\n")
@@ -315,6 +333,8 @@ class 表:
 			if self.isLang():
 				js = ""
 				if "\t" in py: py, js = py.split("\t", 1)
+				if js and self.isLang():
+					js = self.normJS(js)
 				yd = getYD(py)
 				if yd and py.count("*") <= 1:
 					js = f"({yd}){js}"
@@ -324,8 +344,13 @@ class 表:
 				syd = re.sub(r"\(.*?\)","",py).strip(" *|")
 				if "-" not in syd:
 					self.syds[syd].add(hz)
-				if js: py += "{%s}" % js
+				if js:
+					py += "{%s}" % js
 			else:
+				if self.isDictionary():
+					sep = "▲" if str(self) == "匯纂" else "\t"
+					py2, js = py.split(sep, 1)
+					py = py2 + sep + self.normJS(js)
 				py = py.replace("\t", "\n")
 			if py not in self.d[hz]:
 				self.d[hz].append(py)
