@@ -427,4 +427,10 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+    <string name="pref_key_type">KEY_TYPE</string>
+    <string-array name="pref_entries_type">
+        <item>字</item>
+        <item>音</item>
+        <item>義</item>
+    </string-array>
 </resources>

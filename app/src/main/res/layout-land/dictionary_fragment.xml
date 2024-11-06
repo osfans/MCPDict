@@ -55,8 +55,10 @@
                 android:text="@string/search_options"
                 android:paddingStart="0dp"
                 android:paddingEnd="-4dp" />
+
             <Spinner
-                android:id="@+id/spinner_show_characters"
+                android:id="@+id/spinner_charset"
+                android:entries="@array/pref_entries_charset"
                 android:paddingStart="0dp"
                 android:paddingEnd="8dp" />
         </TableRow>

@@ -37,7 +37,7 @@
         <com.osfans.mcpdict.MySearchView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:id="@+id/search_view" />
     </LinearLayout>
 
@@ -73,10 +73,11 @@
             android:id="@+id/spinner_shape" />
 
         <Spinner
-            android:id="@+id/spinner_show_characters"
+            android:id="@+id/spinner_charset"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="3" />
+            android:layout_weight="3"
+            android:entries="@array/pref_entries_charset" />
 
         <CheckBox
             android:id="@+id/check_box_allow_variants"

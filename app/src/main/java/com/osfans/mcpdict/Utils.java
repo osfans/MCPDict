@@ -16,12 +16,9 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.Gravity;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -29,12 +26,9 @@ import androidx.core.os.LocaleListCompat;
 import androidx.core.text.HtmlCompat;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
-import java.util.Objects;
 import java.util.Set;
 
 public class Utils extends Application {
@@ -68,27 +62,30 @@ public class Utils extends Application {
         return mApp.getSharedPreferences(PreferenceManager.getDefaultSharedPreferencesName(mApp), Context.MODE_PRIVATE);
     }
 
-    public static int getToneStyle(int id) {
-        int value = 0;
-        if (id == R.string.pref_key_tone_display) value = 1;
-        SharedPreferences sp = getPreference();
+    public static int getStrAsInt(int key, int defaultValue) {
+        String value = getStr(key);
         try {
-            return Integer.parseInt(Objects.requireNonNull(sp.getString(mApp.getString(id), String.valueOf(value))));
+            return Integer.parseInt(value);
         } catch (Exception e) {
             //e.printStackTrace();
         }
-        return value;
+        return defaultValue;
+    }
+
+    public static int getToneStyle(int id) {
+        int value = 0;
+        if (id == R.string.pref_key_tone_display) value = 1;
+        return getStrAsInt(id, value);
     }
 
     public static String[] getToneStyles(int id) {
-        SharedPreferences sp = getPreference();
         String[] defaultList = new String[5];
-        if (id == R.string.pref_key_zyyy_display) defaultList = mApp.getResources().getStringArray(R.array.pref_default_values_zyyy_display);
-        else if (id == R.string.pref_key_dgy_display) defaultList = mApp.getResources().getStringArray(R.array.pref_default_values_dgy_display);
-        else if (id == R.string.pref_key_mc_display) defaultList = mApp.getResources().getStringArray(R.array.pref_default_values_mc_display);
+        if (id == R.string.pref_key_zyyy_display) defaultList = getStringArray(R.array.pref_default_values_zyyy_display);
+        else if (id == R.string.pref_key_dgy_display) defaultList = getStringArray(R.array.pref_default_values_dgy_display);
+        else if (id == R.string.pref_key_mc_display) defaultList = getStringArray(R.array.pref_default_values_mc_display);
         try {
             Set<String> defaultSet = new HashSet<>(Arrays.asList(defaultList));
-            Set<String> set = sp.getStringSet(mApp.getString(id), defaultSet);
+            Set<String> set = getStrSet(id, defaultSet);
             String[] ret = set.toArray(new String[0]);
             Arrays.sort(ret);
             return ret;
@@ -332,25 +329,11 @@ public class Utils extends Application {
     }
 
     public static int getDisplayFormat() {
-        int value = 1;
-        try {
-            SharedPreferences sp = getPreference();
-            return Integer.parseInt(Objects.requireNonNull(sp.getString(mApp.getString(R.string.pref_key_format), String.valueOf(value))));
-        } catch (Exception e) {
-            //e.printStackTrace();
-        }
-        return value;
+        return getStrAsInt(R.string.pref_key_format, 1);
     }
 
     public static int getFontFormat() {
-        int value = 0;
-        try {
-            SharedPreferences sp = getPreference();
-            return Integer.parseInt(Objects.requireNonNull(sp.getString(mApp.getString(R.string.pref_key_font), String.valueOf(value))));
-        } catch (Exception e) {
-            //e.printStackTrace();
-        }
-        return value;
+        return getStrAsInt(R.string.pref_key_font, 0);
     }
 
     public static boolean useSerif() {
@@ -382,8 +365,7 @@ public class Utils extends Application {
     }
 
     public static String getTitle() {
-        SharedPreferences sp = getPreference();
-        return sp.getString(mApp.getString(R.string.pref_key_custom_title), mApp.getString(R.string.app_name));
+        return getStr(R.string.pref_key_custom_title, mApp.getString(R.string.app_name));
     }
 
     public static void info(Context context, String lang) {
@@ -450,28 +432,27 @@ public class Utils extends Application {
     }
 
     public static void putBool(int key, boolean value) {
-        SharedPreferences sp = getPreference();
-        sp.edit().putBoolean(mApp.getString(key), value).apply();
+         getPreference().edit().putBoolean(mApp.getString(key), value).apply();
     }
 
     public static boolean getBool(int key, boolean defaultValue) {
-        SharedPreferences sp = getPreference();
-        return sp.getBoolean(mApp.getString(key), defaultValue);
+        return getPreference().getBoolean(mApp.getString(key), defaultValue);
     }
 
     public static void putStr(int key, String value) {
-        SharedPreferences sp = getPreference();
-        sp.edit().putString(mApp.getString(key), value).apply();
+        getPreference().edit().putString(mApp.getString(key), value).apply();
     }
 
     public static String getStr(int key, String defaultValue) {
-        SharedPreferences sp = getPreference();
-        return sp.getString(mApp.getString(key), defaultValue);
+        return getPreference().getString(mApp.getString(key), defaultValue);
     }
 
     public static Set<String> getStrSet(int key) {
-        SharedPreferences sp = getPreference();
-        return sp.getStringSet(mApp.getString(key), null);
+        return getStrSet(key, null);
+    }
+
+    public static Set<String> getStrSet(int key, Set<String> defaultValue) {
+        return getPreference().getStringSet(mApp.getString(key), defaultValue);
     }
 
     public static String getStr(int key) {
@@ -514,13 +495,16 @@ public class Utils extends Application {
         return DB.getLabelByLanguage(language);
     }
 
-    public static int getShowLanguageIndex() {
-        SharedPreferences sp = getPreference();
-        return sp.getInt(mApp.getString(R.string.pref_key_show_language_index), 0);
+    public static int getInt(int key, int defaultValue) {
+        return getPreference().getInt(mApp.getString(key), defaultValue);
+    }
+
+    public static void putInt(int key, int value) {
+        getPreference().edit().putInt(mApp.getString(key), value).apply();
     }
 
     public static void setLocale() {
-        LocaleListCompat appLocale = LocaleListCompat.forLanguageTags("zh-Hant");
+        LocaleListCompat appLocale = LocaleListCompat.forLanguageTags("zh-TW");
         AppCompatDelegate.setApplicationLocales(appLocale);
         String locale = getStr(R.string.pref_key_locale);
         if (TextUtils.isEmpty(locale)) locale = "ko";
