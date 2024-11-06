@@ -1,7 +1,6 @@
 package com.osfans.mcpdict;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -136,15 +135,13 @@ public class DB extends SQLiteAssetHelper {
 
         if (!TextUtils.isEmpty(shape)) lang = shape;
 
-        // Get options and settings from SharedPreferences
-        SharedPreferences sp = Utils.getPreference();
-        Resources r = context.getResources();
-        int charset = sp.getInt(r.getString(R.string.pref_key_charset), 0);
+        // Get options and settings
+        int charset = Utils.getInt(R.string.pref_key_charset, 0);
         boolean mcOnly = charset == 1;
         boolean kxOnly = charset == 3;
         boolean hdOnly = charset == 4;
         boolean swOnly = charset == 2;
-        int cantoneseSystem = Integer.parseInt(Objects.requireNonNull(sp.getString(r.getString(R.string.pref_key_cantonese_romanization), "0")));
+        int cantoneseSystem = Utils.getStrAsInt(R.string.pref_key_cantonese_romanization, 0);
 
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
@@ -242,7 +239,7 @@ public class DB extends SQLiteAssetHelper {
         qb.setTables(TABLE_NAME);
         List<String> queries = new ArrayList<>();
         List<String> args = new ArrayList<>();
-        boolean allowVariants = isHzMode(lang) && sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true);
+        boolean allowVariants = isHzMode(lang) && Utils.getBool(R.string.pref_key_allow_variants, true);
         for (int i = 0; i < keywords.size(); i++) {
             String variant = allowVariants ? ("\"" + keywords.get(i) + "\"") : "null";
             String[] projection = {"rowid AS _id", i + " AS rank", "offsets(mcpdict) AS vaIndex", variant + " AS variants"};
@@ -281,7 +278,7 @@ public class DB extends SQLiteAssetHelper {
         } else if (hdOnly) {
             selection += String.format(" AND `%s` IS NOT NULL", HD);
         } else if (charset > 0) {
-            selection += String.format(" AND `%s` MATCH '%s'", FL, r.getStringArray(R.array.pref_values_charset)[charset]);
+            selection += String.format(" AND `%s` MATCH '%s'", FL, Utils.getStringArray(R.array.pref_values_charset)[charset]);
         }
         query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", "0,1000");
 
@@ -486,7 +483,7 @@ public class DB extends SQLiteAssetHelper {
             }
             return array.toArray(new String[0]);
         }
-        int index = Utils.getShowLanguageIndex();
+        int index = Utils.getInt(R.string.pref_key_show_language_index, 0);
         if (index >= 5) {
             String[] a = DB.getLabels(languages);
             if (a != null && a.length > 0) {

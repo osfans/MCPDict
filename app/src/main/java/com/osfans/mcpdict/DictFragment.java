@@ -1,7 +1,5 @@
 package com.osfans.mcpdict;
 
-import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -13,9 +11,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
@@ -28,16 +24,15 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private Spinner spinnerShowLang, spinnerShape;
     private AutoCompleteTextView autoCompleteSearchLang;
     private ResultFragment fragmentResult;
-    ArrayAdapter<CharSequence> adapterShowLang, adapterShowChar, adapterShape;
+    ArrayAdapter<CharSequence> adapterShowLang, adapterShape;
     private View layoutHzOption;
 
     private void updateCurrentLanguage() {
         String lang = autoCompleteSearchLang.getText().toString();
         Utils.putLanguage(lang);
         int position = spinnerShowLang.getSelectedItemPosition();
-        SharedPreferences sp = Utils.getPreference();
-        sp.edit().putInt(getString(R.string.pref_key_show_language_index), position).apply();
-        String[] preFqs = getResources().getStringArray(R.array.pref_values_show_languages);
+        Utils.putInt(R.string.pref_key_show_language_index, position);
+        String[] preFqs = Utils.getStringArray(R.array.pref_values_show_languages);
         String name;
         if (position < 0) name = "*";
         else if (position < preFqs.length) name = preFqs[position];
@@ -47,7 +42,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             if (!DB.isLang(name)) name = DB.HZ;
             if (position == 1) name = String.format("%s,%s,%s", DB.CMN, DB.GY, name);
         }
-        sp.edit().putString(getString(R.string.pref_key_show_language_names), name).apply();
+        Utils.putStr(R.string.pref_key_show_language_names, name);
     }
 
     @Override
@@ -88,18 +83,13 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             layoutHzOption.setVisibility(show ? View.VISIBLE : View.GONE);
         });
         
-        Spinner spinnerShowChar = selfView.findViewById(R.id.spinner_show_characters);
-        adapterShowChar = ArrayAdapter.createFromResource(requireActivity(),
-                R.array.pref_entries_charset, android.R.layout.simple_spinner_item);
-        adapterShowChar.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerShowChar.setAdapter(adapterShowChar);
-        int position = Utils.getPreference().getInt(getString(R.string.pref_key_charset), 0);
-        spinnerShowChar.setSelection(position);
-        spinnerShowChar.setOnItemSelectedListener(new OnItemSelectedListener() {
+        Spinner spinnerCharset = selfView.findViewById(R.id.spinner_charset);
+        int position = Utils.getInt(R.string.pref_key_charset, 0);
+        spinnerCharset.setSelection(position);
+        spinnerCharset.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                SharedPreferences sp = Utils.getPreference();
-                sp.edit().putInt(getString(R.string.pref_key_charset), position).apply();
+                Utils.putInt(R.string.pref_key_charset, position);
                 searchView.clickSearchButton();
             }
             @Override
@@ -131,10 +121,10 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
         // Set up the checkboxes
         CheckBox checkBoxAllowVariants = selfView.findViewById(R.id.check_box_allow_variants);
-        checkBoxAllowVariants.setChecked(getAllowVariants());
+        checkBoxAllowVariants.setChecked(Utils.getBool(R.string.pref_key_allow_variants, true));
 
         checkBoxAllowVariants.setOnCheckedChangeListener((view, isChecked) -> {
-            setAllowVariants(isChecked);
+             Utils.putBool(R.string.pref_key_allow_variants, isChecked);
             searchView.clickSearchButton();
         });
 
@@ -152,18 +142,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         fragmentResult = (ResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);
         refreshAdapter();
         return selfView;
-    }
-
-    private boolean getAllowVariants() {
-        SharedPreferences sp = Utils.getPreference();
-        Resources r = getResources();
-        return sp.getBoolean(r.getString(R.string.pref_key_allow_variants), true);
-    }
-
-    private void setAllowVariants(boolean value) {
-        SharedPreferences sp = Utils.getPreference();
-        Resources r = getResources();
-        sp.edit().putBoolean(r.getString(R.string.pref_key_allow_variants), value).apply();
     }
 
     @Override
@@ -188,11 +166,11 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     private void refreshShowLang() {
         adapterShowLang.clear();
-        String[] preFqs = getResources().getStringArray(R.array.pref_entries_show_languages);
+        String[] preFqs = Utils.getStringArray(R.array.pref_entries_show_languages);
         adapterShowLang.addAll(preFqs);
         String[] fqs = DB.getFqs();
         adapterShowLang.addAll(fqs);
-        int index = Utils.getShowLanguageIndex();
+        int index = Utils.getInt(R.string.pref_key_show_language_index, 0);
         if (index >= adapterShowLang.getCount()) index = 0;
         if (index >= 0) spinnerShowLang.setSelection(index);
     }
