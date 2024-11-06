@@ -222,7 +222,7 @@ public class Utils extends Application {
     public static CharSequence formatUnknownIPA(String lang, String string) {
         StringBuilder sb = new StringBuilder();
         String s = string.replace("}\t", "}\n");
-        String input = Utils.getInput();
+        String input = getInput();
         if (Orthography.HZ.isUnknown(input)) sb.append(s);
         else {
             if (input.startsWith(":") || input.startsWith("：")) {
@@ -449,6 +449,16 @@ public class Utils extends Application {
         new AlertDialog.Builder(context).setView(tv).show();
     }
 
+    public static void putBool(int key, boolean value) {
+        SharedPreferences sp = getPreference();
+        sp.edit().putBoolean(mApp.getString(key), value).apply();
+    }
+
+    public static boolean getBool(int key, boolean defaultValue) {
+        SharedPreferences sp = getPreference();
+        return sp.getBoolean(mApp.getString(key), defaultValue);
+    }
+
     public static void putStr(int key, String value) {
         SharedPreferences sp = getPreference();
         sp.edit().putString(mApp.getString(key), value).apply();
@@ -470,6 +480,16 @@ public class Utils extends Application {
 
     public static void putInput(String value) {
         putStr(R.string.pref_key_input, value);
+    }
+
+    public static String getShape() {
+        String shape = getStr(R.string.pref_key_shape);
+        if (shape.contentEquals(mApp.getString(R.string.hz_shapes))) shape = "";
+        return shape;
+    }
+
+    public static void putShape(String value) {
+        putStr(R.string.pref_key_shape, value);
     }
 
     public static String getInput() {

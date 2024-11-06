@@ -5,7 +5,7 @@ from importlib import import_module
 import tables._詳情
 from tables._詳情 import t2s
 
-xing_keys = ["漢字","兩分","字形描述","五筆畫","說文","康熙","匯纂","漢大"]
+xing_keys = ["漢字","說文","康熙","匯纂","漢大"]
 xing_keys_len = len(xing_keys)
 def hex2chr(uni):
 	"把unicode轉換成漢字"
@@ -59,7 +59,7 @@ def getLangs(dicts, argv=None):
 	else:
 		mods = xing_keys.copy()
 		mods.extend(argv if argv else infos.keys())
-		lb = ["總筆畫數","部首餘筆","倉頡三代","倉頡五代","倉頡六代","五筆86版","五筆98版","五筆06版","異體字","字形變體","分類"]
+		lb = ["異體字","字形變體","字形描述","兩分","總筆畫數","部首餘筆","五筆畫","五筆86版","五筆98版","五筆06版","倉頡三代","倉頡五代","倉頡六代","分類"]
 		mods.extend(lb)
 	types = [dict(),dict(),dict(),dict(),dict()]
 	keys = None
