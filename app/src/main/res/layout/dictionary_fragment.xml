@@ -50,15 +50,39 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:id="@+id/spinner_show_languages" />
-        <Spinner
+        <Button
+            android:id="@+id/button_hz_option"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:id="@+id/spinner_show_characters" />
+            android:text="@string/hz_option" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_hz_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:id="@+id/spinner_shape" />
+
+        <Spinner
+            android:id="@+id/spinner_show_characters"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" />
+
         <CheckBox
+            android:id="@+id/check_box_allow_variants"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/check_box_allow_variants"
+            android:layout_weight="1"
             android:text="@string/option_allow_variants" />
     </LinearLayout>
 

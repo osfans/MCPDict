@@ -91,8 +91,9 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_WBH;
     public static int COL_VA;
     public static int COL_VS;
-    public static int COL_FIRST_LANG;
-    public static int COL_LAST_LANG;
+    public static int COL_FIRST_LANG, COL_LAST_LANG;
+    public static int COL_FIRST_INFO, COL_LAST_INFO;
+    public static int COL_FIRST_SHAPE, COL_LAST_SHAPE;
 
     public static int COL_ALL_LANGUAGES = 1000;
     public static final String ALL_LANGUAGES = "*";
@@ -104,6 +105,7 @@ public class DB extends SQLiteAssetHelper {
     private static String[] WB_COLUMNS = null;
     private static String[] COLUMNS;
     private static String[] FQ_COLUMNS;
+    private static String[] SHAPE_COLUMNS;
     private static SQLiteDatabase db = null;
 
     public static void initialize(Context context) {
@@ -130,6 +132,9 @@ public class DB extends SQLiteAssetHelper {
         // Search for one or more keywords, considering mode and options
         String input = Utils.getInput();
         String lang = Utils.getLabel();
+        String shape = Utils.getShape();
+
+        if (!TextUtils.isEmpty(shape)) lang = shape;
 
         // Get options and settings from SharedPreferences
         SharedPreferences sp = Utils.getPreference();
@@ -153,8 +158,9 @@ public class DB extends SQLiteAssetHelper {
         else if (Orthography.HZ.isBS(input)) {
             lang = BS;
             input = input.replace("-", "f");
-        } else if (lang.contentEquals(LF) || lang.contentEquals(WBH)) {
+        } else if (!TextUtils.isEmpty(shape)) { //WB, CJ, LF
             // not search hz
+            ;;
         } else if (Orthography.HZ.isHz(input)) lang = HZ;
         else if (Orthography.HZ.isUnicode(input)) {
             input = Orthography.HZ.toHz(input);
@@ -338,21 +344,33 @@ public class DB extends SQLiteAssetHelper {
         COL_KX = getColumnIndex(KX);
         COL_WBH = getColumnIndex(WBH);
         COL_FIRST_LANG = COL_HD + 1;
-        COL_LAST_LANG = COL_BH - 1;
+        COL_LAST_LANG = COL_VA - 1;
+        COL_FIRST_INFO = COL_VA;
+        COL_LAST_INFO = COLUMNS.length - 2;
+        COL_FIRST_SHAPE = COL_VA + 2;
+        COL_LAST_SHAPE = COL_LAST_INFO;
         cursor.close();
-
+        arrayList.clear();
+        for(int col = COL_FIRST_SHAPE; col <= COL_LAST_SHAPE; col++) {
+            arrayList.add(COLUMNS[col]);
+        }
+        SHAPE_COLUMNS = arrayList.toArray(new String[0]);
+    
         qb.setTables(TABLE_INFO);
         query = qb.buildQuery(projection, selection,  null, null, null, null);
         cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
-        cursor.getColumnNames();
         arrayList.clear();
         for(String s: cursor.getColumnNames()) {
             if (s.endsWith(_FQ)) arrayList.add(s);
         }
-        FQ_COLUMNS = new String[arrayList.size()];
-        arrayList.toArray(FQ_COLUMNS);
+        FQ_COLUMNS = arrayList.toArray(new String[0]);
         cursor.close();
+    }
+
+    public static String[] getShapeColumns() {
+        initArrays();
+        return SHAPE_COLUMNS;
     }
 
     private static String[] query(String col, String selection, String args) {
@@ -720,18 +738,12 @@ public class DB extends SQLiteAssetHelper {
         String s = Orthography.HZ.toUnicode(hz);
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("<p>【統一碼】%s %s</p>", s, Orthography.HZ.getUnicodeExt(hz)));
-        for (int j = DB.COL_LF; j < DB.COL_VA; j++) {
-            if (j == COL_SW) j = COL_BH;
+        for (int j = DB.COL_FIRST_INFO; j <= DB.COL_LAST_INFO; j++) {
             s = cursor.getString(j);
             if (TextUtils.isEmpty(s)) continue;
             if (j == COL_ZX) s = formatIDS(s);
-            sb.append(String.format("<p>【%s】%s</p>", getColumn(j), s));
-        }
-        for (int j = DB.COL_VA; j <= DB.COL_VS; j++) {
-            s = cursor.getString(j);
-            if (TextUtils.isEmpty(s)) continue;
             s = s.replace(",", " ");
-            sb.append(String.format("<p class=ivs>【%s】%s</p>", getColumn(j), s));
+            sb.append(String.format("<p>【%s】%s</p>", getColumn(j), s));
         }
         return sb.toString();
     }
