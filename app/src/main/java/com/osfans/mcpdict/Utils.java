@@ -2,6 +2,7 @@ package com.osfans.mcpdict;
 
 import static com.osfans.mcpdict.DB.COL_GYHZ;
 import static com.osfans.mcpdict.DB.COL_HD;
+import static com.osfans.mcpdict.DB.COL_HZ;
 import static com.osfans.mcpdict.DB.COL_KX;
 import static com.osfans.mcpdict.DB.COL_SW;
 
@@ -111,6 +112,16 @@ public class Utils extends Application {
         return mApp.getResources().getStringArray(id);
     }
 
+    private static final Displayer sgDisplayer = new Displayer() {
+        public String displayOne(String s) {
+            return s;
+        }
+
+        public boolean isIPA(char c) {
+            return c != '{';
+        }
+    };
+
     private static final Displayer gyDisplayer = new Displayer() {
         public String displayOne(String s) {
             return Orthography.MiddleChinese.display(s, getToneStylesIndex(R.string.pref_key_mc_display));
@@ -195,22 +206,21 @@ public class Utils extends Application {
         }
     };
 
-
     public static CharSequence formatIPA(String lang, String string) {
         CharSequence cs;
         if (TextUtils.isEmpty(string)) return "";
         cs = switch (lang) {
-            case DB.SG -> getRichText(string.replace(",", "  "));
-            case DB.BA -> baDisplayer.display(string);
-            case DB.GY -> getRichText(gyDisplayer.display(string));
-            case DB.ZYYY -> getRichText(zyyyDisplayer.display(string));
-            case DB.DGY -> getRichText(dgyDisplayer.display(string));
-            case DB.CMN -> getRichText(cmnDisplayer.display(string));
-            case DB.HK -> hkDisplayer.display(string);
-            case DB.TW -> getRichText(twDisplayer.display(string));
-            case DB.KOR -> korDisplayer.display(string);
-            case DB.VI -> viDisplayer.display(string);
-            case DB.JA_GO, DB.JA_KAN, DB.JA_OTHER -> getRichText(jaDisplayer.display(string));
+            case DB.SG -> getRichText(sgDisplayer.display(string, lang));
+            case DB.BA -> baDisplayer.display(string, lang);
+            case DB.GY -> getRichText(gyDisplayer.display(string, lang));
+            case DB.ZYYY -> getRichText(zyyyDisplayer.display(string, lang));
+            case DB.DGY -> getRichText(dgyDisplayer.display(string, lang));
+            case DB.CMN -> getRichText(cmnDisplayer.display(string, lang));
+            case DB.HK -> hkDisplayer.display(string, lang);
+            case DB.TW -> getRichText(twDisplayer.display(string, lang));
+            case DB.KOR -> korDisplayer.display(string, lang);
+            case DB.VI -> viDisplayer.display(string, lang);
+            case DB.JA_GO, DB.JA_KAN, DB.JA_OTHER -> getRichText(jaDisplayer.display(string, lang));
             default -> getRichText(toneDisplayer.display(string, lang));
         };
         return cs;
@@ -240,6 +250,7 @@ public class Utils extends Application {
 
     public static CharSequence formatPopUp(String hz, int i, String s) {
         if (TextUtils.isEmpty(s)) return "";
+        if (i != COL_HZ) s = s.replace(" ", "");
         if (i == COL_SW) s = s.replace("{", "<small>").replace("}", "</small>");
         else if (i == COL_KX) s = s.replaceFirst("^(.*?)(\\d+).(\\d+)", "$1<a href=https://kangxizidian.com/kxhans/" + hz + ">第$2頁第$3字</a>");
         else if (i == COL_GYHZ) s = mApp.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceFirst("(\\d+).(\\d+)", "第$1頁第$2字");

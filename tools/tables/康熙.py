@@ -12,6 +12,7 @@ class 表(_表):
 	url = "https://kangxizidian.com/kxhans/%s"
 	note = "來源：<a href=https://github.com/7468696e6b/kangxiDictText/>康熙字典 Kangxi Dictionary TXT</a>"
 	ybTrimSpace = False
+	dictionary = True
 	
 	def parse(self, fs):
 		hz, js = fs
