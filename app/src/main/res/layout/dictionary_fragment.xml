@@ -41,50 +41,55 @@
             android:id="@+id/search_view" />
     </LinearLayout>
 
-
-    <LinearLayout
+    <LinearLayout android:id="@+id/layout_search_options"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:id="@+id/spinner_show_languages" />
-        <Button
-            android:id="@+id/button_hz_option"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="@string/hz_option" />
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/spinner_show_languages" />
+            <Button
+                android:id="@+id/button_hz_option"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/hz_option" />
 
-    <LinearLayout
-        android:id="@+id/layout_hz_option"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone">
+        </LinearLayout>
 
-        <Spinner
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/layout_hz_option"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:id="@+id/spinner_shape" />
+            android:visibility="gone">
 
-        <Spinner
-            android:id="@+id/spinner_charset"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:entries="@array/pref_entries_charset" />
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:id="@+id/spinner_shape" />
 
-        <CheckBox
-            android:id="@+id/check_box_allow_variants"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/option_allow_variants" />
+            <Spinner
+                android:id="@+id/spinner_charset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:entries="@array/pref_entries_charset" />
+
+            <CheckBox
+                android:id="@+id/check_box_allow_variants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/option_allow_variants" />
+        </LinearLayout>
     </LinearLayout>
 
     <View

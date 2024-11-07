@@ -4,7 +4,9 @@ import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -15,6 +17,8 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 public class DictFragment extends Fragment implements RefreshableFragment {
@@ -25,7 +29,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private AutoCompleteTextView autoCompleteSearchLang;
     private ResultFragment fragmentResult;
     ArrayAdapter<CharSequence> adapterShowLang, adapterShape;
-    private View layoutHzOption;
+    private View layoutHzOption, layoutSearchOption;
+    private View.OnTouchListener mListener;
 
     private void updateCurrentLanguage() {
         String lang = autoCompleteSearchLang.getText().toString();
@@ -74,6 +79,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         adapterShowLang.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerShowLang.setAdapter(adapterShowLang);
 
+        layoutSearchOption = selfView.findViewById(R.id.layout_search_options);
         layoutHzOption = selfView.findViewById(R.id.layout_hz_option);
         boolean showHzOption = Utils.getBool(R.string.pref_key_hz_option, false);
         layoutHzOption.setVisibility(showHzOption ? View.VISIBLE : View.GONE);
@@ -152,6 +158,24 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         // Get a reference to the SearchResultFragment
         fragmentResult = (ResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);
         refreshAdapter();
+        mListener = new View.OnTouchListener() {
+            private final GestureDetector gestureDetector = new GestureDetector(requireActivity(), new GestureDetector.SimpleOnGestureListener() {
+                @Override
+                public boolean onDoubleTap(MotionEvent e) {
+                    toggleFullscreen();
+                    return true;
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        };
+        searchView.findViewById(R.id.text_query).setOnTouchListener(mListener);
+        selfView.setClickable(true);
+        selfView.setOnTouchListener(mListener);
         return selfView;
     }
 
@@ -215,5 +239,17 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         refreshSearchAs();
         if (adapterShowLang != null) refreshShowLang();
         if (adapterShape != null) refreshShape();
+    }
+
+    public void toggleFullscreen() {
+        boolean show = layoutSearchOption.getVisibility() != View.VISIBLE;
+        ActionBar ab = ((AppCompatActivity) requireActivity()).getSupportActionBar();
+        if (ab == null) return;
+        if (show)
+            ab.show();
+        else {
+            ab.hide();
+        }
+        layoutSearchOption.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 }
