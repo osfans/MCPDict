@@ -38,7 +38,11 @@ class 表(_表):
 			sy, sd, hzs = fs[:3]
 			hzs = hzs.replace("∽", "~").replace(" ", "")
 			hzs = self.normS(hzs)
-		elif name in ("崇陽","通城塘湖","沅陵死客子話","宜章東風客家","新田毛里","資興南鄕", "婁底石井", "雙牌官話", "長沙黎圫","吉首", "懷化", "攸縣新市", "長沙星沙"):
+		elif name in ("桃源薛家沖",):
+			sy, sd, _, _, hzs = fs[:5]
+			hzs = hzs.replace(")(", "；")
+			hzs = self.normS(hzs)
+		elif name in ("崇陽","通城塘湖","沅陵死客子話","宜章東風客家","新田毛里","資興南鄕", "婁底石井", "雙牌官話", "長沙黎圫","吉首", "懷化", "攸縣新市", "長沙星沙", "東安蘆洪市", "宜章東風"):
 			sy, sd, _, hzs = fs[:4]
 			hzs = hzs.replace(")(", "；")
 			hzs = self.normS(hzs)
@@ -56,7 +60,7 @@ class 表(_表):
 		elif name in ("洞口",):
 			yb, hzs = fs[:2]
 			hzs = hzs.replace("{", "[").replace("}", "]")
-		elif name in ("欽州正",):
+		elif name in ("欽州正","道縣壽雁"):
 			sy, sd, hzs = fs[:3]
 			hzs = hzs.replace("{", "[").replace("}", "]")
 		elif name in ("唐山-開平"):
