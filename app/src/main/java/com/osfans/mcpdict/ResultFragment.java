@@ -36,9 +36,11 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,11 +74,13 @@ public class ResultFragment extends Fragment {
     private boolean showMenu;
     private final HashMap<String, String> mRaws = new HashMap<>();
     private final int GROUP_READING = 1;
+    private View.OnTouchListener mListener;
 
     private final int MSG_SEARCH_HOMOPHONE = 1;
     private final int MSG_GOTO_INFO = 2;
     private final int MSG_FAVORITE = 3;
     private final int MSG_MAP = 4;
+    private final int MSG_FULLSCREEN = 5;
     private final Handler mHandler = new Handler(){
         @Override
         public void handleMessage(@NonNull Message msg) {
@@ -102,6 +106,12 @@ public class ResultFragment extends Fragment {
                     break;
                 case MSG_MAP:
                     new MyMapView(getContext(), mEntry.hz).show();
+                    break;
+                case MSG_FULLSCREEN: {
+                    removeCallbacksAndMessages(null);
+                    DictFragment fragment = ((MainActivity) requireActivity()).getDictionaryFragment();
+                    fragment.toggleFullscreen();
+                }
                     break;
             }
         }
@@ -145,6 +155,24 @@ public class ResultFragment extends Fragment {
         registerForContextMenu(mTextView);
         Orthography.setToneStyle(Utils.getToneStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(Utils.getToneStyle(R.string.pref_key_tone_value_display));
+
+        mListener = new View.OnTouchListener() {
+            private final GestureDetector gestureDetector = new GestureDetector(requireActivity(), new GestureDetector.SimpleOnGestureListener() {
+                @Override
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
+                    mHandler.sendEmptyMessage(MSG_FULLSCREEN);
+                    return true;
+                }
+            });
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return false;
+            }
+        };
+        mTextView.setOnTouchListener(mListener);
+        mWebView.setOnTouchListener(mListener);
         return selfView;
     }
 
