@@ -40,7 +40,7 @@ abstract class Displayer {
                 p++; //
             }
             js = s.substring(q, p);
-            if (isLang) js = js.replace("  ", "　").replace(" ", "").replace("　", " ");
+            if (isLang) js = Utils.formatJS(js);
             sb.append(js);
         }
         // Add spaces as hints for line wrapping

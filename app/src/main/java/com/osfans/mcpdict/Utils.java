@@ -54,6 +54,10 @@ public class Utils extends Application {
         return s;
     }
 
+    public static String formatJS(String s) {
+        return s.replace("  ", "　").replace(" ", "").replace("　", " ");
+    }
+
     public static String getRawText(String s) {
         if (TextUtils.isEmpty(s)) return "";
         return s.replaceAll("[|*\\[\\]]", "").replaceAll("\\{.*?\\}", "");
@@ -250,7 +254,7 @@ public class Utils extends Application {
 
     public static CharSequence formatPopUp(String hz, int i, String s) {
         if (TextUtils.isEmpty(s)) return "";
-        if (i != COL_HZ) s = s.replace(" ", "");
+        if (i != COL_HZ) s = formatJS(s);
         if (i == COL_SW) s = s.replace("{", "<small>").replace("}", "</small>");
         else if (i == COL_KX) s = s.replaceFirst("^(.*?)(\\d+).(\\d+)", "$1<a href=https://kangxizidian.com/kxhans/" + hz + ">第$2頁第$3字</a>");
         else if (i == COL_GYHZ) s = mApp.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceFirst("(\\d+).(\\d+)", "第$1頁第$2字");
