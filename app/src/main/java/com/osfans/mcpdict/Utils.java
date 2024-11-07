@@ -230,19 +230,27 @@ public class Utils extends Application {
         return cs;
     }
 
+    public static String splitHZ(String s) {
+        StringBuilder sb = new StringBuilder();
+        for (int unicode : s.codePoints().toArray()) {
+            if (!Orthography.HZ.isHz(unicode)) continue;
+            String hz = Orthography.HZ.toHz(unicode);
+            sb.append(hz).append(" ");
+        }
+        return sb.toString().trim();
+    }
+
     public static CharSequence formatUnknownIPA(String lang, String string) {
         StringBuilder sb = new StringBuilder();
         String s = string.replace("}\t", "}\n");
         String input = getInput();
         if (Orthography.HZ.isUnknown(input)) sb.append(s);
         else {
-            if (input.startsWith(":") || input.startsWith("：")) {
-                input = input.substring(1);
-            }
             String[] inputs = input.split("[, ]+");
             for (String i : s.split("\n")) {
+                String i2 = i.replace(" ", "");
                 for (String j: inputs) {
-                    if (i.contains(j)) {
+                    if (i2.contains(j)) {
                         sb.append(i).append("\n");
                         break;
                     }

@@ -126,16 +126,6 @@ public class DB extends SQLiteAssetHelper {
         // db = getWritableDatabase();
     }
 
-    private static String splitHZ(String s) {
-        StringBuilder sb = new StringBuilder();
-        for (int unicode : s.codePoints().toArray()) {
-            if (!Orthography.HZ.isHz(unicode)) continue;
-            String hz = Orthography.HZ.toHz(unicode);
-            sb.append(hz).append(" ");
-        }
-        return sb.toString().trim();
-    }
-
     public static Cursor search() {
         Context context = Utils.getContext();
         // Search for one or more keywords, considering mode and options
@@ -158,11 +148,11 @@ public class DB extends SQLiteAssetHelper {
         List<String> keywords = new ArrayList<>();
         if (type == 2){ //yi
             if (Orthography.HZ.isHz(input)) {
-                String hzs = splitHZ(input);
+                String hzs = Utils.splitHZ(input);
                 if (!TextUtils.isEmpty(hzs)) keywords.add(hzs);
             }
         } else if (lang.contentEquals(KX) || lang.contentEquals(HD)) {
-            if (!TextUtils.isEmpty(input) && !input.startsWith(":") && !input.startsWith("：") && !Orthography.HZ.isPY(input)){
+            if (!TextUtils.isEmpty(input) && !Orthography.HZ.isPY(input)){
                 if (Orthography.HZ.isSingleHZ(input)) lang = HZ;
                 else input = ":" + input;
             }
@@ -186,8 +176,6 @@ public class DB extends SQLiteAssetHelper {
                 if (keywords.contains(hz)) continue;
                 keywords.add(hz);
             }
-        } else if (input.startsWith(":") || input.startsWith("：")){
-            keywords.add(input.substring(1) + "*");
         } else {                          // Each contiguous run of non-separator and non-comma characters is a query
             if (lang.contentEquals(KOR)) { // For Korean, put separators around all hangul
                 StringBuilder sb = new StringBuilder();
