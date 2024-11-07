@@ -466,7 +466,7 @@ public class ResultFragment extends Fragment {
                     s = String.format("(%s)", s);
                 } else s = "";
                 int current = cursor.getPosition();
-                boolean openDetails = current < 3 && !Orthography.HZ.isUnknown("□");
+                boolean openDetails = current < 3 && !Orthography.HZ.isUnknown(hz);
                 ssb.append(String.format("<details %s><summary>" +
                         "<div class=hz>%s</div><div class=variant>%s</div></summary>", openDetails ? "open" : "", hz, s));
                 ssb.append("<div style='display: block; float:right; margin-top: -2em;'>");
