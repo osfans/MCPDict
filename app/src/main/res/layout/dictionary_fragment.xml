@@ -9,36 +9,12 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
-            <AutoCompleteTextView
-                android:id="@+id/search_lang"
-                android:hint="@string/search_lang_hint"
-                android:completionThreshold="0"
-                android:singleLine="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-            <Button
-                android:id="@+id/button_lang_clear"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:background="@android:drawable/ic_menu_close_clear_cancel"
-                android:backgroundTint="?android:attr/colorForeground"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@id/search_lang"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.osfans.mcpdict.MySearchView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:id="@+id/search_view" />
+    <com.osfans.mcpdict.MySearchView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:id="@+id/search_view" />
     </LinearLayout>
 
     <LinearLayout android:id="@+id/layout_search_options"
@@ -47,40 +23,67 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/layout_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <Spinner
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:id="@+id/spinner_show_languages" />
             <Button
                 android:id="@+id/button_hz_option"
-                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="@string/hz_option" />
+            <Button
+                android:id="@+id/button_search_range"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/search_range" />
+            <Button
+                android:id="@+id/button_show_range"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/show_range" />
 
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBox_output_long"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/long_text"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_output_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/output_table"
+                    android:textSize="12sp" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layout_hz_option"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <Spinner
+                android:id="@+id/spinner_shape"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:id="@+id/spinner_shape" />
+                android:layout_weight="2" />
 
             <Spinner
                 android:id="@+id/spinner_charset"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="2"
                 android:entries="@array/pref_entries_charset" />
 
             <CheckBox
@@ -89,6 +92,78 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/option_allow_variants" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_search_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <Spinner
+                android:id="@+id/spinner_search_dict"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <AutoCompleteTextView
+                    android:id="@+id/search_lang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="0"
+                    android:hint="@string/search_lang_hint"
+                    android:singleLine="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button_lang_clear"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:drawable/ic_menu_close_clear_cancel"
+                    android:backgroundTint="?android:attr/colorForeground"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/search_lang"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/button_custom_languages"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/pref_title_custom_languages" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_show_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/spinner_show_languages" />
+
+            <Spinner
+                android:id="@+id/spinner_show_provinces"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+            <Spinner
+                android:id="@+id/spinner_show_sectors"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
         </LinearLayout>
     </LinearLayout>
 

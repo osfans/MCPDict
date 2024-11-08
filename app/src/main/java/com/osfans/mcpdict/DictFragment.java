@@ -29,7 +29,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private AutoCompleteTextView autoCompleteSearchLang;
     private ResultFragment fragmentResult;
     ArrayAdapter<CharSequence> adapterShowLang, adapterShape;
-    private View layoutHzOption, layoutSearchOption;
+    private View layoutSearchOption, layoutHzOption, layoutSearchRange, layoutShowRange;
     private View.OnTouchListener mListener;
 
     private void updateCurrentLanguage() {
@@ -88,7 +88,19 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             Utils.putBool(R.string.pref_key_hz_option, show);
             layoutHzOption.setVisibility(show ? View.VISIBLE : View.GONE);
         });
-        
+
+        layoutSearchRange = selfView.findViewById(R.id.layout_search_range);
+        selfView.findViewById(R.id.button_search_range).setOnClickListener(v -> {
+            boolean show = layoutSearchRange.getVisibility() != View.VISIBLE;
+            layoutSearchRange.setVisibility(show ? View.VISIBLE : View.GONE);
+        });
+
+        layoutShowRange = selfView.findViewById(R.id.layout_show_range);
+        selfView.findViewById(R.id.button_show_range).setOnClickListener(v -> {
+            boolean show = layoutShowRange.getVisibility() != View.VISIBLE;
+            layoutShowRange.setVisibility(show ? View.VISIBLE : View.GONE);
+        });
+
         Spinner spinnerCharset = selfView.findViewById(R.id.spinner_charset);
         spinnerCharset.setSelection(Utils.getInt(R.string.pref_key_charset, 0));
         spinnerCharset.setOnItemSelectedListener(new OnItemSelectedListener() {

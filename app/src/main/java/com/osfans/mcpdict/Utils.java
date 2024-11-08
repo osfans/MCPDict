@@ -262,7 +262,7 @@ public class Utils extends Application {
         if (TextUtils.isEmpty(s)) return "";
         if (i != COL_HZ) s = formatJS(s);
         if (i == COL_SW) s = s.replace("{", "<small>").replace("}", "</small>");
-        else if (i == COL_KX) s = s.replaceAll("(\\d+).(\\d+)", "$1<a href=https://kangxizidian.com/kxhans/" + hz + ">第$2頁第$3字</a>");
+        else if (i == COL_KX) s = s.replaceAll("(\\d+).(\\d+)", "<a href=https://kangxizidian.com/kxhans/" + hz + ">第$1頁第$2字</a>");
         else if (i == COL_GYHZ) s = mApp.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceFirst("(\\d+).(\\d+)", "第$1頁第$2字");
         else if (i == COL_HD) s = mApp.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceAll("(\\d+).(\\d+)", "<a href=https://homeinmists.ilotus.org/hd/png/$1.png>第$1頁</a>第$2字").replace("lv", "lü").replace("nv", "nü");
         String[] fs = (s + "\n").split("\n", 2);
