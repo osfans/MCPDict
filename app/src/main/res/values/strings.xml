@@ -429,8 +429,9 @@
     </string-array>
     <string name="pref_key_type">KEY_TYPE</string>
     <string-array name="pref_entries_type">
-        <item>字</item>
-        <item>音</item>
-        <item>義</item>
+        <item>漢字</item>
+        <item>讀音</item>
+        <item>注釋</item>
+        <item>辭典</item>
     </string-array>
 </resources>
