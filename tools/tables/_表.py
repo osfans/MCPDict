@@ -350,7 +350,7 @@ class 表:
 				if self.isDictionary():
 					sep = "▲" if str(self) == "匯纂" else "\t"
 					py2, js = py.split(sep, 1)
-					py = py2 + sep + self.normJS(js)
+					py = ("\n\n" if self.d[hz] else "") + py2 + sep + self.normJS(js)
 				py = py.replace("\t", "\n")
 			if py not in self.d[hz]:
 				self.d[hz].append(py)
