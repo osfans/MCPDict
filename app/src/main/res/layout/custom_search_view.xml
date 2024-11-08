@@ -11,7 +11,7 @@
         android:background="@android:drawable/ic_menu_search"
         android:backgroundTint="?android:attr/colorForeground"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/button_search"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -28,7 +28,7 @@
         android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_search"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/spinner_type"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -48,8 +48,8 @@
         android:layout_marginTop="1dp"
         android:entries="@array/pref_entries_type"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_search"
+        app:layout_constraintEnd_toStartOf="@id/text_query"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
