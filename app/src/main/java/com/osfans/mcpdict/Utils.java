@@ -432,7 +432,7 @@ public class Utils extends Application {
     public static String getFontFeatureSettings() {
         String locale = getStr(R.string.pref_key_locale);
         if (!TextUtils.isEmpty(locale) && locale.contentEquals("zh-cn")) return "";
-        return "trad";
+        return "ss12";
     }
 
     public static void setTypeface(TextView tv) {
@@ -446,6 +446,7 @@ public class Utils extends Application {
         tv.setPadding(24, 24, 24, 24);
         setTypeface(tv);
         if (lang == COL_HD) tv.setFontFeatureSettings("ss01"); // zh-cn and pinyin
+        else if (lang == COL_GYHZ) tv.setFontFeatureSettings(String.format("'ss01', '%s'", getFontFeatureSettings())); // zh-cn and pinyin
         tv.setTextIsSelectable(true);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
         tv.setText(s);
