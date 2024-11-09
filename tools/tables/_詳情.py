@@ -47,7 +47,7 @@ def o2n(s):
 		s = s.replace(o, n)
 	return s
 
-def t2s(s, prepare = True):
+def t2s(s, prepare = False):
 	s = o2n(s)
 	if prepare:
 		return s

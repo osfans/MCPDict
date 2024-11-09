@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import sqlite3, re, os, sys, json
+import sqlite3, os, sys
 from collections import defaultdict
 from time import time
 from tables import *
@@ -8,7 +8,6 @@ from tables import *
 start = time()
 
 dicts = defaultdict(dict)
-#sys.argv.extend(( "1884甯城",))
 if len(sys.argv) > 1:
 	argv = sys.argv[1:]
 	langs = getLangs(dicts, argv)
@@ -36,9 +35,10 @@ for i in sorted(dicts.keys(), key=cjkorder):
 	c.execute(INSERT, v)
 
 #info
-keys = list(langs[xing_keys_len if len(keys) > xing_keys_len else 1].info.keys())
-fields = [f"`{i}`" for i in keys]
-CREATE = 'CREATE VIRTUAL TABLE info USING fts3 (%s)' % (",".join(fields))
+keys = list(langs[辭典數 if len(keys) > 辭典數 else 1].info.keys())
+keys.remove("文件格式")
+keys.remove("跳過行數")
+CREATE = 'CREATE VIRTUAL TABLE info USING fts3 (%s)' % (",".join(keys))
 INSERT = 'INSERT INTO info VALUES (%s)'% (','.join('?' * len(keys)))
 c.execute(CREATE)
 for lang in langs:
