@@ -436,6 +436,10 @@
         <item>漢字</item>
         <item>讀音</item>
         <item>注釋</item>
-        <item>辭典</item>
+        <item>@string/dict</item>
     </string-array>
+    <string name="pref_key_dict">KEY_DICT</string>
+    <string name="dict">辭典</string>
+    <string name="pref_key_province">KEY_PROVINCE</string>
+    <string name="province">省份</string>
 </resources>

@@ -1,7 +1,6 @@
 package com.osfans.mcpdict;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
@@ -18,7 +17,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
-import java.util.Objects;
 import java.util.Set;
 
 public class DB extends SQLiteAssetHelper {
@@ -77,6 +75,7 @@ public class DB extends SQLiteAssetHelper {
     private static String[] LABELS = null;
     private static String[] LANGUAGES = null;
     private static String[] SEARCH_COLUMNS = null;
+    private static String[] PROVINCES = null;
 
     public static int COL_HZ;
     public static int COL_BH;
@@ -90,6 +89,7 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_WBH;
     public static int COL_VA;
     public static int COL_VS;
+    public static int COL_FIRST_DICT, COL_LAST_DICT;
     public static int COL_FIRST_LANG, COL_LAST_LANG;
     public static int COL_FIRST_INFO, COL_LAST_INFO;
     public static int COL_FIRST_SHAPE, COL_LAST_SHAPE;
@@ -104,6 +104,7 @@ public class DB extends SQLiteAssetHelper {
     private static String[] WB_COLUMNS = null;
     private static String[] COLUMNS;
     private static String[] FQ_COLUMNS;
+    private static String[] DICT_COLUMNS;
     private static String[] SHAPE_COLUMNS;
     private static SQLiteDatabase db = null;
 
@@ -127,14 +128,18 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static Cursor search() {
-        Context context = Utils.getContext();
         // Search for one or more keywords, considering mode and options
         String input = Utils.getInput();
         String lang = Utils.getLabel();
         String shape = Utils.getShape();
+        String dict = Utils.getDict();
         int type = Utils.getInt(R.string.pref_key_type, 0);
 
-        if (!TextUtils.isEmpty(shape)) lang = shape;
+        if (!TextUtils.isEmpty(shape) && type < 2) lang = shape;
+        if (!TextUtils.isEmpty(dict) && type == 3) {
+            type = 2;
+            lang = DB.getLabelByLanguage(dict);
+        }
 
         // Get options and settings
         int charset = Utils.getInt(R.string.pref_key_charset, 0);
@@ -163,7 +168,6 @@ public class DB extends SQLiteAssetHelper {
             input = input.replace("-", "f");
         } else if (!TextUtils.isEmpty(shape)) { //WB, CJ, LF
             // not search hz
-            ;;
         } else if (Orthography.HZ.isHz(input)) lang = HZ;
         else if (Orthography.HZ.isUnicode(input)) {
             input = Orthography.HZ.toHz(input);
@@ -339,7 +343,9 @@ public class DB extends SQLiteAssetHelper {
         COL_GYHZ = getColumnIndex(GYHZ);
         COL_KX = getColumnIndex(KX);
         COL_WBH = getColumnIndex(WBH);
-        COL_FIRST_LANG = COL_HD + 1;
+        COL_FIRST_DICT = COL_SW;
+        COL_LAST_DICT = COL_HD;
+        COL_FIRST_LANG = COL_LAST_DICT + 1;
         COL_LAST_LANG = COL_VA - 1;
         COL_FIRST_INFO = COL_VA;
         COL_LAST_INFO = COLUMNS.length - 2;
@@ -347,9 +353,12 @@ public class DB extends SQLiteAssetHelper {
         COL_LAST_SHAPE = COL_LAST_INFO;
         cursor.close();
         arrayList.clear();
-        for(int col = COL_FIRST_SHAPE; col <= COL_LAST_SHAPE; col++) {
-            arrayList.add(COLUMNS[col]);
+        for(int col = COL_FIRST_DICT; col <= COL_LAST_DICT; col++) {
+            arrayList.add(getLanguageByLabel(COLUMNS[col]));
         }
+        DICT_COLUMNS = arrayList.toArray(new String[0]);
+        arrayList.clear();
+        arrayList.addAll(Arrays.asList(COLUMNS).subList(COL_FIRST_SHAPE, COL_LAST_SHAPE + 1));
         SHAPE_COLUMNS = arrayList.toArray(new String[0]);
     
         qb.setTables(TABLE_INFO);
@@ -362,6 +371,11 @@ public class DB extends SQLiteAssetHelper {
         }
         FQ_COLUMNS = arrayList.toArray(new String[0]);
         cursor.close();
+    }
+
+    public static String[] getDictColumns() {
+        initArrays();
+        return DICT_COLUMNS;
     }
 
     public static String[] getShapeColumns() {
@@ -404,7 +418,7 @@ public class DB extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
         String[] projection = {LANGUAGE, "rowid as _id"};
-        String query = qb.buildQuery(projection, LANGUAGE + INDEX + " LIKE ? and " + FIRST_FQ.replace(_FQ, _COLOR) + " is not null",  null, null, ORDER, null);
+        String query = qb.buildQuery(projection, LANGUAGE + INDEX + " LIKE ? and 序號 is not null",  null, null, ORDER, null);
         Cursor cursor = db.rawQuery(query, new String[]{"%"+constraint+"%"});
         if (cursor.getCount() > 0) return cursor;
         cursor.close();
@@ -414,9 +428,15 @@ public class DB extends SQLiteAssetHelper {
     public static String[] getLanguages() {
         initArrays();
         if (LANGUAGES == null) {
-            LANGUAGES = queryLanguage(FQ + " is not null and rowid > 1");
+            LANGUAGES = queryLanguage("序號 is not null");
         }
         return LANGUAGES;
+    }
+
+    public static String[] getProvinces() {
+        initArrays();
+        if (PROVINCES == null || PROVINCES.length < 2) PROVINCES = getFieldByLabel(HZ, "省").split(",");
+        return PROVINCES;
     }
 
     public static String[] getLabels() {
@@ -427,10 +447,15 @@ public class DB extends SQLiteAssetHelper {
         return LABELS;
     }
 
-    public static String[] getLabels(String type) {
+    public static String[] getLabelsByFq(String type) {
         if (type.contentEquals("*")) return getLabels();
         if (TextUtils.isEmpty(type)) return null;
         return queryLabel(String.format("%s MATCH ? and rowid > 1", FQ), type);
+    }
+
+    public static String[] getLabelsByProvince(String type) {
+        if (TextUtils.isEmpty(type)) return null;
+        return queryLabel(String.format("%s MATCH ? and rowid > 1", "省"), type);
     }
 
     public static String[] getSearchColumns() {
@@ -442,6 +467,7 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static int getColumnIndex(String lang) {
+        initArrays();
         for (int i = 0; i < COLUMNS.length; i++) {
             if (COLUMNS[i].contentEquals(lang)) return i;
         }
@@ -449,20 +475,28 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static String getColumn(int i) {
-        if (COLUMNS == null) initArrays();
+        initArrays();
         return i < 0 ? "" : COLUMNS[i];
     }
 
     public static String[] getVisibleColumns() {
         String languages = Utils.getStr(R.string.pref_key_show_language_names);
         Set<String> customs = Utils.getStrSet(R.string.pref_key_custom_languages);
+        String province = Utils.getProvince();
+
+        if (!TextUtils.isEmpty(province)) {
+            String[] a = DB.getLabelsByProvince(province);
+            if (a != null && a.length > 0) {
+                return a;
+            }
+        }
 
         if (languages.contentEquals("*")) return LABELS;
         if (languages.contentEquals("3") || languages.contentEquals("5")) {
             return queryLabel(String.format("級別  >= \"%s\"", languages));
         }
         else if (languages.contentEquals("1")) {
-            return queryLabel(String.format("方言島"));
+            return queryLabel("方言島");
         }
         ArrayList<String> array = new ArrayList<>();
         if (TextUtils.isEmpty(languages)) {
@@ -484,7 +518,7 @@ public class DB extends SQLiteAssetHelper {
         }
         int index = Utils.getInt(R.string.pref_key_show_language_index, 0);
         if (index >= 5) {
-            String[] a = DB.getLabels(languages);
+            String[] a = DB.getLabelsByFq(languages);
             if (a != null && a.length > 0) {
                 return a;
             }
@@ -547,7 +581,7 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static int getColor(String lang, int i) {
-        if (COLUMNS == null) initArrays();
+        initArrays();
         String c = getFieldByLabel(lang, COLOR);
         if (TextUtils.isEmpty(c)) c = getFieldByLabel(lang, FIRST_FQ.replace(_FQ, _COLOR));
         if (TextUtils.isEmpty(c)) return Color.BLACK;

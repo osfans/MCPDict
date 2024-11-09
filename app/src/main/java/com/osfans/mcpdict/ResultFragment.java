@@ -2,9 +2,9 @@ package com.osfans.mcpdict;
 
 import static com.osfans.mcpdict.DB.ALL_LANGUAGES;
 import static com.osfans.mcpdict.DB.COL_ALL_LANGUAGES;
-import static com.osfans.mcpdict.DB.COL_HD;
+import static com.osfans.mcpdict.DB.COL_LAST_DICT;
 import static com.osfans.mcpdict.DB.COL_HZ;
-import static com.osfans.mcpdict.DB.COL_SW;
+import static com.osfans.mcpdict.DB.COL_FIRST_DICT;
 import static com.osfans.mcpdict.DB.COMMENT;
 import static com.osfans.mcpdict.DB.HZ;
 import static com.osfans.mcpdict.DB.SW;
@@ -474,7 +474,7 @@ public class ResultFragment extends Fragment {
                 ssb.append(String.format("<div class=y onclick='mcpdict.showDict(\"%s\", %s, \"%s\")'>%s</div>", hz, COL_HZ, getUnicode(cursor), unicode));
                 StringBuilder raws = new StringBuilder();
                 raws.append(String.format("%s %s\n", hz, s));
-                for (int j = COL_SW; j <= COL_HD; j++) {
+                for (int j = COL_FIRST_DICT; j <= COL_LAST_DICT; j++) {
                     s = cursor.getString(j);
                     if (TextUtils.isEmpty(s)) continue;
                     String col = getColumn(j);
@@ -575,8 +575,8 @@ public class ResultFragment extends Fragment {
                 }
                 String unicode = Orthography.HZ.toUnicode(hz);
                 sb.append(" ").append(unicode);
-                // SW
-                for (int i = COL_SW; i <= COL_HD; i++) {
+                // DICTS
+                for (int i = COL_FIRST_DICT; i <= COL_LAST_DICT; i++) {
                     s = cursor.getString(i);
                     if (!TextUtils.isEmpty(s)) {
                         sb.append(" ").append(getLabel(i));
@@ -699,8 +699,8 @@ public class ResultFragment extends Fragment {
                     }
                 }
                 mRaws.put(hz, raws.toString());
-                // SW
-                for (int i = COL_SW; i <= COL_HD; i++) {
+                // DICTS
+                for (int i = COL_FIRST_DICT; i <= COL_LAST_DICT; i++) {
                     s = cursor.getString(i);
                     if (!TextUtils.isEmpty(s)) {
                         ssb.append(" " + getLabel(i) + " ", new PopupSpan(Utils.formatPopUp(hz, i, s), i, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);

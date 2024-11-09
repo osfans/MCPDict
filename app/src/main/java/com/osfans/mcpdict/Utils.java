@@ -486,6 +486,16 @@ public class Utils extends Application {
         putStr(R.string.pref_key_input, value);
     }
 
+    public static String getDict() {
+        String value = getStr(R.string.pref_key_dict);
+        if (value.contentEquals(mApp.getString(R.string.dict))) value = "";
+        return value;
+    }
+
+    public static void putDict(String value) {
+        putStr(R.string.pref_key_dict, value);
+    }
+
     public static String getShape() {
         String shape = getStr(R.string.pref_key_shape);
         if (shape.contentEquals(mApp.getString(R.string.hz_shapes))) shape = "";
@@ -494,6 +504,16 @@ public class Utils extends Application {
 
     public static void putShape(String value) {
         putStr(R.string.pref_key_shape, value);
+    }
+
+    public static String getProvince() {
+        String value = getStr(R.string.pref_key_province);
+        if (value.contentEquals(mApp.getString(R.string.province))) value = "";
+        return value;
+    }
+
+    public static void putProvince(String value) {
+        putStr(R.string.pref_key_province, value);
     }
 
     public static String getInput() {
