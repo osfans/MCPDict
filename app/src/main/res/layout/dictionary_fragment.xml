@@ -49,7 +49,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <CheckBox
                     android:id="@+id/checkBox_output_long"
@@ -71,7 +72,7 @@
             android:id="@+id/layout_hz_option"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <Spinner
                 android:id="@+id/spinner_shape"
@@ -98,7 +99,7 @@
             android:id="@+id/layout_search_range"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
@@ -139,14 +140,15 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="@string/pref_title_custom_languages" />
+                android:text="@string/pref_title_custom_languages"
+                android:visibility="gone" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layout_show_range"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <Spinner
                 android:id="@+id/spinner_filters"
