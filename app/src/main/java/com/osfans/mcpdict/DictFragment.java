@@ -25,10 +25,10 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     private View selfView;
     private MySearchView searchView;
-    private Spinner spinnerShowLang, spinnerShape, spinnerType, spinnerDict, spinnerProvince;
+    private Spinner spinnerShowLang, spinnerShape, spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions;
     private AutoCompleteTextView autoCompleteSearchLang;
     private ResultFragment fragmentResult;
-    ArrayAdapter<CharSequence> adapterShowLang, adapterShape, adapterDict, adapterProvince;
+    ArrayAdapter<CharSequence> adapterDivisions, adapterShape, adapterDict, adapterProvince;
     private View layoutSearchOption, layoutHzOption, layoutSearchRange, layoutShowRange;
     private View.OnTouchListener mListener;
 
@@ -74,11 +74,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 //        if (!TextUtils.isEmpty(query)) searchView.setQuery(query);
 
         // Set up the spinner
-        spinnerShowLang = selfView.findViewById(R.id.spinner_show_languages);
-        adapterShowLang = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
-        adapterShowLang.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerShowLang.setAdapter(adapterShowLang);
-
         layoutSearchOption = selfView.findViewById(R.id.layout_search_options);
         layoutHzOption = selfView.findViewById(R.id.layout_hz_option);
         boolean showHzOption = Utils.getBool(R.string.pref_key_hz_option, false);
@@ -153,15 +148,32 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        spinnerProvince = selfView.findViewById(R.id.spinner_provinces);
+        spinnerProvinces = selfView.findViewById(R.id.spinner_provinces);
         adapterProvince = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
         adapterProvince.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerProvince.setAdapter(adapterProvince);
-        spinnerProvince.setOnItemSelectedListener(new OnItemSelectedListener() {
+        spinnerProvinces.setAdapter(adapterProvince);
+        spinnerProvinces.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String value = adapterProvince.getItem(position).toString();
                 Utils.putProvince(value);
+                Utils.putDivision("");
+                searchView.clickSearchButton();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
+        spinnerDivisions = selfView.findViewById(R.id.spinner_divisions);
+        adapterDivisions = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
+        adapterDivisions.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerDivisions.setAdapter(adapterDivisions);
+        spinnerDivisions.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String value = adapterDivisions.getItem(position).toString();
+                Utils.putDivision(value);
+                Utils.putProvince("");
                 searchView.clickSearchButton();
             }
             @Override
@@ -182,13 +194,16 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         checkBoxAllowVariants.setChecked(Utils.getBool(R.string.pref_key_allow_variants, true));
 
         checkBoxAllowVariants.setOnCheckedChangeListener((view, isChecked) -> {
-             Utils.putBool(R.string.pref_key_allow_variants, isChecked);
+            Utils.putBool(R.string.pref_key_allow_variants, isChecked);
             searchView.clickSearchButton();
         });
 
+        spinnerShowLang = selfView.findViewById(R.id.spinner_show_languages);
         spinnerShowLang.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Utils.putProvince("");
+                Utils.putDivision("");
                 searchView.clickSearchButton();
             }
             @Override
@@ -245,22 +260,11 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         autoCompleteSearchLang.setText(lang);
     }
 
-    private void refreshShowLang() {
-        adapterShowLang.clear();
-        String[] preFqs = Utils.getStringArray(R.array.pref_entries_show_languages);
-        adapterShowLang.addAll(preFqs);
-        String[] fqs = DB.getFqs();
-        adapterShowLang.addAll(fqs);
-        int index = Utils.getInt(R.string.pref_key_show_language_index, 0);
-        if (index >= adapterShowLang.getCount()) index = 0;
-        if (index >= 0) spinnerShowLang.setSelection(index);
-    }
-
     private void refreshDict() {
         String[] columns = DB.getDictColumns();
         if (columns == null) return;
         adapterDict.clear();
-        String head = Utils.getContext().getString(R.string.dict);
+        String head = Utils.getStringRes(R.string.dict);
         adapterDict.add(head);
         adapterDict.addAll(columns);
         String value = Utils.getDict();
@@ -273,7 +277,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         String[] columns = DB.getShapeColumns();
         if (columns == null) return;
         adapterShape.clear();
-        String head = Utils.getContext().getString(R.string.hz_shapes);
+        String head = Utils.getStringRes(R.string.hz_shapes);
         adapterShape.add(head);
         adapterShape.addAll(columns);
         String shape = Utils.getShape();
@@ -286,13 +290,25 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         String[] columns = DB.getProvinces();
         if (columns == null) return;
         adapterProvince.clear();
-        String head = Utils.getContext().getString(R.string.province);
+        String head = Utils.getStringRes(R.string.province);
         adapterProvince.add(head);
         adapterProvince.addAll(columns);
         String value = Utils.getProvince();
         int index = TextUtils.isEmpty(value) ? -1 : adapterProvince.getPosition(value);
         if (index >= adapterProvince.getCount() || index < 0 ) index = 0;
-        spinnerProvince.setSelection(index);
+        spinnerProvinces.setSelection(index);
+    }
+
+    private void refreshDivision() {
+        adapterDivisions.clear();
+        String head = Utils.getStringRes(R.string.division);
+        adapterDivisions.add(head);
+        String[] fqs = DB.getDivisions();
+        adapterDivisions.addAll(fqs);
+        String value = Utils.getDivision();
+        int index = TextUtils.isEmpty(value) ? -1 : adapterProvince.getPosition(value);
+        if (index >= adapterDivisions.getCount() || index < 0 ) index = 0;
+        spinnerDivisions.setSelection(index);
     }
 
     public void refresh(String query, String label) {
@@ -304,7 +320,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     public void refreshAdapter() {
         refreshSearchAs();
-        if (adapterShowLang != null) refreshShowLang();
+        if (adapterDivisions != null) refreshDivision();
         if (adapterShape != null) refreshShape();
         if (adapterDict != null) refreshDict();
         if (adapterProvince != null) refreshProvince();

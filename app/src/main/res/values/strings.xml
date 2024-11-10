@@ -442,4 +442,6 @@
     <string name="dict">辭典</string>
     <string name="pref_key_province">KEY_PROVINCE</string>
     <string name="province">省份</string>
+    <string name="pref_key_division">KEY_DIVISION</string>
+    <string name="division">分區</string>
 </resources>

@@ -71,7 +71,7 @@ public class DB extends SQLiteAssetHelper {
     public static final String _COLOR = "顏色";
     public static final String _ORDER = "排序";
     public static final String FIRST_FQ = "地圖集二分區";
-    private static String[] FQS = null;
+    private static String[] DIVISIONS = null;
     private static String[] LABELS = null;
     private static String[] LANGUAGES = null;
     private static String[] SEARCH_COLUMNS = null;
@@ -303,10 +303,10 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static void initFQ() {
-        FQ = Utils.getStr(R.string.pref_key_fq, Utils.getContext().getString(R.string.default_fq));
+        FQ = Utils.getStr(R.string.pref_key_fq, Utils.getStringRes(R.string.default_fq));
         ORDER = FQ.replace(_FQ, _ORDER);
         COLOR = FQ.replace(_FQ, _COLOR);
-        FQS = getFieldByLabel(HZ, FQ).split(",");
+        DIVISIONS = getFieldByLabel(HZ, FQ).split(",");
         SEARCH_COLUMNS = queryLabel(FIRST_FQ.replace(_FQ, _COLOR) + " is not null");
         LABELS = queryLabel(FQ + " is not null and rowid > 1");
     }
@@ -482,10 +482,18 @@ public class DB extends SQLiteAssetHelper {
     public static String[] getVisibleColumns() {
         String languages = Utils.getStr(R.string.pref_key_show_language_names);
         Set<String> customs = Utils.getStrSet(R.string.pref_key_custom_languages);
-        String province = Utils.getProvince();
 
+        String province = Utils.getProvince();
         if (!TextUtils.isEmpty(province)) {
             String[] a = DB.getLabelsByProvince(province);
+            if (a != null && a.length > 0) {
+                return a;
+            }
+        }
+
+        String division = Utils.getDivision();
+        if (!TextUtils.isEmpty(division)) {
+            String[] a = DB.getLabelsByFq(division);
             if (a != null && a.length > 0) {
                 return a;
             }
@@ -515,13 +523,6 @@ public class DB extends SQLiteAssetHelper {
                 }
             }
             return array.toArray(new String[0]);
-        }
-        int index = Utils.getInt(R.string.pref_key_show_language_index, 0);
-        if (index >= 5) {
-            String[] a = DB.getLabelsByFq(languages);
-            if (a != null && a.length > 0) {
-                return a;
-            }
         }
         if (getColumnIndex(languages) >= 1) return new String[]{languages};
         return new String[0];
@@ -620,10 +621,10 @@ public class DB extends SQLiteAssetHelper {
     private static String _getIntro(String language) {
         String intro = TextUtils.isEmpty(language) ? "" : getFieldByLanguage(language, "說明").replace("\n", "<br>");
         if (language.contentEquals(HZ)) {
-            intro = String.format(Locale.getDefault(), "%s%s<br>%s", Utils.getContext().getString(R.string.version), BuildConfig.VERSION_NAME, intro);
+            intro = String.format(Locale.getDefault(), "%s%s<br>%s", Utils.getStringRes(R.string.version), BuildConfig.VERSION_NAME, intro);
         } else {
             StringBuilder sb = new StringBuilder();
-            sb.append(String.format(Locale.getDefault(), "%s%s<br>", Utils.getContext().getString(R.string.name), language));
+            sb.append(String.format(Locale.getDefault(), "%s%s<br>", Utils.getStringRes(R.string.name), language));
             ArrayList<String> fields = new ArrayList<>(Arrays.asList("序號","地點","經緯度","錄入人","參考資料","文件名","版本","字數","□數", "音節數","不帶調音節數",""));
             fields.addAll(Arrays.asList(FQ_COLUMNS));
             fields.add("");
@@ -727,10 +728,10 @@ public class DB extends SQLiteAssetHelper {
         return FQ_COLUMNS;
     }
 
-    public static String[] getFqs() {
+    public static String[] getDivisions() {
         initArrays();
-        if (FQS == null) FQS = getFieldByLabel(HZ, FQ).split(",");
-        return FQS;
+        if (DIVISIONS == null) DIVISIONS = getFieldByLabel(HZ, FQ).split(",");
+        return DIVISIONS;
     }
 
     public static String getWebFq(String lang) {
