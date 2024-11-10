@@ -15,6 +15,7 @@ import org.osmdroid.util.GeoPoint;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
@@ -93,6 +94,17 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_FIRST_LANG, COL_LAST_LANG;
     public static int COL_FIRST_INFO, COL_LAST_INFO;
     public static int COL_FIRST_SHAPE, COL_LAST_SHAPE;
+
+    //public static final int FILTER_ALL = 0;
+    public static final int FILTER_ISLAND = 1;
+    public static final int FILTER_HZ = 2;
+    public static final int FILTER_LANGUAGE = 3;
+    public static final int FILTER_PFG = 4;
+    public static final int FILTER_PROVINCE = 5;
+    public static final int FILTER_DIVISION = 6;
+    public static final int FILTER_CUSTOM = 7;
+    public static final int FILTER_COUNTY = 8;
+    public static final int FILTER_TYPICAL = 9;
 
     public static int COL_ALL_LANGUAGES = 1000;
     public static final String ALL_LANGUAGES = "*";
@@ -480,52 +492,62 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static String[] getVisibleColumns() {
-        String languages = Utils.getStr(R.string.pref_key_show_language_names);
-        Set<String> customs = Utils.getStrSet(R.string.pref_key_custom_languages);
-
-        String province = Utils.getProvince();
-        if (!TextUtils.isEmpty(province)) {
-            String[] a = DB.getLabelsByProvince(province);
-            if (a != null && a.length > 0) {
-                return a;
-            }
-        }
-
-        String division = Utils.getDivision();
-        if (!TextUtils.isEmpty(division)) {
-            String[] a = DB.getLabelsByFq(division);
-            if (a != null && a.length > 0) {
-                return a;
-            }
-        }
-
-        if (languages.contentEquals("*")) return LABELS;
-        if (languages.contentEquals("3") || languages.contentEquals("5")) {
-            return queryLabel(String.format("級別  >= \"%s\"", languages));
-        }
-        else if (languages.contentEquals("1")) {
-            return queryLabel("方言島");
-        }
-        ArrayList<String> array = new ArrayList<>();
-        if (TextUtils.isEmpty(languages)) {
-            if (customs == null || customs.isEmpty()) return LABELS;
-            for (String lang: getLabels()) {
-                if (!array.contains(lang) && customs.contains(lang)) {
-                    array.add(lang);
+        int filter = Utils.getFilter();
+        String label = Utils.getLabel();
+        switch (filter) {
+            case FILTER_PROVINCE -> {
+                String province = Utils.getProvince();
+                if (!TextUtils.isEmpty(province)) {
+                    String[] a = DB.getLabelsByProvince(province);
+                    if (a != null && a.length > 0) {
+                        return a;
+                    }
                 }
             }
-            return array.toArray(new String[0]);
-        }
-        if (languages.contains(",")) {
-            for (String lang: languages.split(",")) {
-                if (getColumnIndex(lang) >= 1 && !array.contains(lang)) {
-                    array.add(lang);
+            case FILTER_DIVISION -> {
+                String division = Utils.getDivision();
+                if (!TextUtils.isEmpty(division)) {
+                    String[] a = DB.getLabelsByFq(division);
+                    if (a != null && a.length > 0) {
+                        return a;
+                    }
                 }
             }
-            return array.toArray(new String[0]);
+            case FILTER_CUSTOM -> {
+                Set<String> customs = Utils.getStrSet(R.string.pref_key_custom_languages);
+                if (customs == null || customs.isEmpty()) return LABELS;
+                ArrayList<String> array = new ArrayList<>();
+                for (String lang: getLabels()) {
+                    if (!array.contains(lang) && customs.contains(lang)) {
+                        array.add(lang);
+                    }
+                }
+                return array.toArray(new String[0]);
+            }
+            case FILTER_ISLAND -> {
+                return queryLabel("方言島");
+            }
+            case FILTER_COUNTY -> {
+                return queryLabel("級別  >= \"3\"");
+            }
+            case FILTER_TYPICAL -> {
+                return queryLabel("級別  >= \"5\"");
+            }
+            case FILTER_HZ -> {
+                return new String[]{};
+            }
+            case FILTER_LANGUAGE -> {
+                if (getColumnIndex(label) >= 0) return new String[]{label};
+            }
+            case FILTER_PFG -> {
+                Set<String> array = new HashSet<>();
+                array.add(GY);
+                array.add(CMN);
+                if (getColumnIndex(label) >= 0) array.add(label);
+                return array.toArray(new String[0]);
+            }
         }
-        if (getColumnIndex(languages) >= 1) return new String[]{languages};
-        return new String[0];
+        return LABELS;
     }
 
     public static boolean isHzMode(String lang) {

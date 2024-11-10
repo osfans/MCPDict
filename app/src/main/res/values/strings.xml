@@ -313,26 +313,19 @@
         <item>2</item>
     </string-array>
 
-    <string name="pref_key_show_language_index">SHOW_LANGUAGES</string>
-    <string name="pref_key_show_language_names">SHOW_LANGUAGE_NAMES</string>
+    <string name="pref_key_filters">KEY_FILTERS</string>
     <string name="show_languages">顯示語言：</string>
-    <string-array name="pref_entries_show_languages">
+    <string-array name="pref_entries_filters">
         <item>全部語言</item>
-        <item>普方古對照</item>
+        <item>方言島</item>
+        <item>僅漢字</item>
         <item>當前語言</item>
+        <item>普方古對照</item>
+        <item>當前省</item>
+        <item>當前分區</item>
         <item>@string/pref_title_custom_languages</item>
         <item>縣級方言</item>
         <item>代表方言</item>
-        <item>方言島</item>
-    </string-array>
-    <string-array name="pref_values_show_languages">
-        <item>*</item>
-        <item>""</item>
-        <item>""</item>
-        <item>""</item>
-        <item>"3"</item>
-        <item>"5"</item>
-        <item>"1"</item>
     </string-array>
 
     <string name="pref_key_charset">SHOW_CHARSET</string>

@@ -149,11 +149,11 @@
             android:visibility="visible">
 
             <Spinner
-                android:id="@+id/spinner_show_languages"
+                android:id="@+id/spinner_filters"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:entries="@array/pref_entries_show_languages" />
+                android:entries="@array/pref_entries_filters" />
 
             <Spinner
                 android:id="@+id/spinner_provinces"

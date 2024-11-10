@@ -530,6 +530,14 @@ public class Utils extends Application {
         putStr(R.string.pref_key_division, value);
     }
 
+    public static int getFilter() {
+        return getInt(R.string.pref_key_filters, 0);
+    }
+
+    public static void putFilter(int value) {
+        putInt(R.string.pref_key_filters, value);
+    }
+
     public static String getInput() {
         return getStr(R.string.pref_key_input);
     }
@@ -564,9 +572,5 @@ public class Utils extends Application {
         String locale = getStr(R.string.pref_key_locale);
         if (TextUtils.isEmpty(locale)) locale = "ko";
         Locale.setDefault(Locale.forLanguageTag(locale));
-    }
-
-    public static Context getContext() {
-        return mApp;
     }
 }

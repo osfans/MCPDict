@@ -25,30 +25,13 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     private View selfView;
     private MySearchView searchView;
-    private Spinner spinnerShowLang, spinnerShape, spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions;
+    private Spinner spinnerFilters, spinnerShape, spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions;
     private AutoCompleteTextView autoCompleteSearchLang;
     private ResultFragment fragmentResult;
     ArrayAdapter<CharSequence> adapterDivisions, adapterShape, adapterDict, adapterProvince;
     private View layoutSearchOption, layoutHzOption, layoutSearchRange, layoutShowRange;
     private View.OnTouchListener mListener;
-
-    private void updateCurrentLanguage() {
-        String lang = autoCompleteSearchLang.getText().toString();
-        Utils.putLanguage(lang);
-        int position = spinnerShowLang.getSelectedItemPosition();
-        Utils.putInt(R.string.pref_key_show_language_index, position);
-        String[] preFqs = Utils.getStringArray(R.array.pref_values_show_languages);
-        String name;
-        if (position < 0) name = "*";
-        else if (position < preFqs.length) name = preFqs[position];
-        else name = spinnerShowLang.getSelectedItem().toString();
-        if (position == 1 || position == 2) {
-            name = Utils.getLabel();
-            if (!DB.isLang(name)) name = DB.HZ;
-            if (position == 1) name = String.format("%s,%s,%s", DB.CMN, DB.GY, name);
-        }
-        Utils.putStr(R.string.pref_key_show_language_names, name);
-    }
+    private boolean initProvinceSelect, initDivisionSelect;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -66,7 +49,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         // Set up the search view
         searchView = selfView.findViewById(R.id.search_view);
         searchView.setSearchButtonOnClickListener(view -> {
-            updateCurrentLanguage();
             refresh();
             fragmentResult.scrollToTop();
         });
@@ -157,8 +139,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String value = adapterProvince.getItem(position).toString();
                 Utils.putProvince(value);
-                Utils.putDivision("");
-                searchView.clickSearchButton();
+                if (initProvinceSelect) spinnerFilters.setSelection(DB.FILTER_PROVINCE);
+                else initProvinceSelect = true;
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
@@ -173,8 +155,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String value = adapterDivisions.getItem(position).toString();
                 Utils.putDivision(value);
-                Utils.putProvince("");
-                searchView.clickSearchButton();
+                if (initDivisionSelect) spinnerFilters.setSelection(DB.FILTER_DIVISION);
+                else initDivisionSelect = true;
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
@@ -185,6 +167,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         autoCompleteSearchLang.setOnFocusChangeListener((v, b) -> {
             if (b) ((AutoCompleteTextView)v).showDropDown();
         });
+        String language = Utils.getLanguage();
+        autoCompleteSearchLang.setText(language);
         selfView.findViewById(R.id.button_lang_clear).setOnClickListener(v -> {
             autoCompleteSearchLang.setText("");
             autoCompleteSearchLang.requestFocus();
@@ -198,22 +182,26 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             searchView.clickSearchButton();
         });
 
-        spinnerShowLang = selfView.findViewById(R.id.spinner_show_languages);
-        spinnerShowLang.setOnItemSelectedListener(new OnItemSelectedListener() {
+        spinnerFilters = selfView.findViewById(R.id.spinner_filters);
+        spinnerFilters.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Utils.putProvince("");
-                Utils.putDivision("");
+                Utils.putFilter(position);
                 searchView.clickSearchButton();
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
         });
-        autoCompleteSearchLang.setOnItemClickListener((adapterView, view, i, l) -> searchView.clickSearchButton());
+        spinnerFilters.setSelection(Utils.getFilter());
+
+        autoCompleteSearchLang.setOnItemClickListener((adapterView, view, i, l) -> {
+            String lang = autoCompleteSearchLang.getText().toString();
+            Utils.putLanguage(lang);
+            searchView.clickSearchButton();
+        });
 
         // Get a reference to the SearchResultFragment
         fragmentResult = (ResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);
-        refreshAdapter();
         mListener = new View.OnTouchListener() {
             private final GestureDetector gestureDetector = new GestureDetector(requireActivity(), new GestureDetector.SimpleOnGestureListener() {
                 @Override
@@ -254,9 +242,9 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         }.execute();
     }
 
-    private void refreshSearchAs() {
+    private void refreshSearchLang() {
         String lang = Utils.getLanguage();
-        if (TextUtils.isEmpty(lang)) lang = DB.HZ;
+        if (!DB.isLang(lang)) lang = "";
         autoCompleteSearchLang.setText(lang);
     }
 
@@ -306,7 +294,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         String[] fqs = DB.getDivisions();
         adapterDivisions.addAll(fqs);
         String value = Utils.getDivision();
-        int index = TextUtils.isEmpty(value) ? -1 : adapterProvince.getPosition(value);
+        int index = TextUtils.isEmpty(value) ? -1 : adapterDivisions.getPosition(value);
         if (index >= adapterDivisions.getCount() || index < 0 ) index = 0;
         spinnerDivisions.setSelection(index);
     }
@@ -314,16 +302,15 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     public void refresh(String query, String label) {
         searchView.setQuery(query);
         Utils.putLabel(label);
-        refreshSearchAs();
+        refreshSearchLang();
         refresh();
     }
 
     public void refreshAdapter() {
-        refreshSearchAs();
         if (adapterDivisions != null) refreshDivision();
+        if (adapterProvince != null) refreshProvince();
         if (adapterShape != null) refreshShape();
         if (adapterDict != null) refreshDict();
-        if (adapterProvince != null) refreshProvince();
     }
 
     public void toggleFullscreen() {
