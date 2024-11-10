@@ -111,6 +111,10 @@ public class Utils extends Application {
         return index;
     }
 
+    public static String getStringRes(int key) {
+        return mApp.getString(key);
+    }
+
     public static String[] getStringArray(int id) {
         return mApp.getResources().getStringArray(id);
     }
@@ -514,6 +518,16 @@ public class Utils extends Application {
 
     public static void putProvince(String value) {
         putStr(R.string.pref_key_province, value);
+    }
+
+    public static String getDivision() {
+        String value = getStr(R.string.pref_key_division);
+        if (value.contentEquals(mApp.getString(R.string.division))) value = "";
+        return value;
+    }
+
+    public static void putDivision(String value) {
+        putStr(R.string.pref_key_division, value);
     }
 
     public static String getInput() {

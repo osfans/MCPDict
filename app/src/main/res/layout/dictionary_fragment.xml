@@ -100,12 +100,6 @@
             android:layout_height="wrap_content"
             android:visibility="visible">
 
-            <Spinner
-                android:id="@+id/spinner_dict"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2" />
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -118,6 +112,7 @@
                     android:completionThreshold="0"
                     android:hint="@string/search_lang_hint"
                     android:singleLine="true"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -132,6 +127,12 @@
                     app:layout_constraintEnd_toEndOf="@id/search_lang"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Spinner
+                android:id="@+id/spinner_dict"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
 
             <Button
                 android:id="@+id/button_custom_languages"
@@ -148,10 +149,11 @@
             android:visibility="visible">
 
             <Spinner
+                android:id="@+id/spinner_show_languages"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:id="@+id/spinner_show_languages" />
+                android:entries="@array/pref_entries_show_languages" />
 
             <Spinner
                 android:id="@+id/spinner_provinces"
@@ -160,7 +162,7 @@
                 android:layout_weight="2" />
 
             <Spinner
-                android:id="@+id/spinner_show_sectors"
+                android:id="@+id/spinner_divisions"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2" />
