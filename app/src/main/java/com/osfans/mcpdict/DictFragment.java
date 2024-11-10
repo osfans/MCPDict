@@ -67,14 +67,20 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
 
         layoutSearchRange = selfView.findViewById(R.id.layout_search_range);
+        boolean showSearchRange = Utils.getBool(R.string.pref_key_search_range, false);
+        layoutSearchRange.setVisibility(showSearchRange ? View.VISIBLE : View.GONE);
         selfView.findViewById(R.id.button_search_range).setOnClickListener(v -> {
             boolean show = layoutSearchRange.getVisibility() != View.VISIBLE;
+            Utils.putBool(R.string.pref_key_search_range, show);
             layoutSearchRange.setVisibility(show ? View.VISIBLE : View.GONE);
         });
 
         layoutShowRange = selfView.findViewById(R.id.layout_show_range);
+        boolean showShowRange = Utils.getBool(R.string.pref_key_show_range, false);
+        layoutShowRange.setVisibility(showShowRange ? View.VISIBLE : View.GONE);
         selfView.findViewById(R.id.button_show_range).setOnClickListener(v -> {
             boolean show = layoutShowRange.getVisibility() != View.VISIBLE;
+            Utils.putBool(R.string.pref_key_show_range, show);
             layoutShowRange.setVisibility(show ? View.VISIBLE : View.GONE);
         });
 
@@ -307,6 +313,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     }
 
     public void refreshAdapter() {
+        refreshSearchLang();
         if (adapterDivisions != null) refreshDivision();
         if (adapterProvince != null) refreshProvince();
         if (adapterShape != null) refreshShape();
@@ -314,14 +321,15 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     }
 
     public void toggleFullscreen() {
-        boolean show = layoutSearchOption.getVisibility() != View.VISIBLE;
         ActionBar ab = ((AppCompatActivity) requireActivity()).getSupportActionBar();
         if (ab == null) return;
-        if (show)
+        boolean show = !ab.isShowing();
+        if (show) {
             ab.show();
-        else {
+            layoutSearchOption.setVisibility(View.VISIBLE);
+        } else {
             ab.hide();
+            layoutSearchOption.setVisibility(View.GONE);
         }
-        layoutSearchOption.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 }
