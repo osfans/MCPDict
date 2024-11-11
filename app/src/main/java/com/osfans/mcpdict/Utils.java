@@ -233,14 +233,32 @@ public class Utils extends Application {
         return cs;
     }
 
-    public static String splitHZ(String s) {
+    public static String normWord(String s) {
+        if (TextUtils.isEmpty(s)) return "";
         StringBuilder sb = new StringBuilder();
         for (int unicode : s.codePoints().toArray()) {
-            if (!Orthography.HZ.isHz(unicode)) continue;
-            String hz = Orthography.HZ.toHz(unicode);
-            sb.append(hz).append(" ");
+            boolean isHZ = Orthography.HZ.isHz(unicode);
+            if (isHZ) {
+                sb.append(" ");
+            }
+            sb.appendCodePoint(unicode);
+            if (isHZ) {
+                sb.append(" ");
+            }
         }
-        return sb.toString().trim();
+        return String.format("\"%s\"", sb.toString().trim().replace("  ", " "));
+    }
+
+    public static String normInput(String s) {
+        String[] ss = s.split(" ");
+        String[] newSS = new String[ss.length];
+        int i = 0;
+        for (String word : ss) {
+            String newWord = normWord(word);
+            newSS[i] = newWord;
+            i++;
+        }
+        return String.format("'%s'", String.join(" ", newSS));
     }
 
     public static CharSequence formatUnknownIPA(String lang, String string) {
