@@ -57,6 +57,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
         // Set up the spinner
         layoutSearchOption = selfView.findViewById(R.id.layout_search_options);
+        setFullscreen(Utils.getBool(R.string.pref_key_fullscreen, true));
+
         layoutHzOption = selfView.findViewById(R.id.layout_hz_option);
         boolean showHzOption = Utils.getBool(R.string.pref_key_hz_option, false);
         layoutHzOption.setVisibility(showHzOption ? View.VISIBLE : View.GONE);
@@ -320,16 +322,21 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         if (adapterDict != null) refreshDict();
     }
 
-    public void toggleFullscreen() {
+    public void setFullscreen(boolean full) {
         ActionBar ab = ((AppCompatActivity) requireActivity()).getSupportActionBar();
         if (ab == null) return;
-        boolean show = !ab.isShowing();
-        if (show) {
-            ab.show();
-            layoutSearchOption.setVisibility(View.VISIBLE);
-        } else {
+        if (full) {
             ab.hide();
             layoutSearchOption.setVisibility(View.GONE);
+        } else {
+            ab.show();
+            layoutSearchOption.setVisibility(View.VISIBLE);
         }
+    }
+
+    public void toggleFullscreen() {
+        boolean full = !Utils.getBool(R.string.pref_key_fullscreen, true);
+        Utils.putBool(R.string.pref_key_fullscreen, full);
+        setFullscreen(full);
     }
 }
