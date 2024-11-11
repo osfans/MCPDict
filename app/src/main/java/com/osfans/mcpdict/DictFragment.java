@@ -31,7 +31,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     ArrayAdapter<CharSequence> adapterDivisions, adapterShape, adapterDict, adapterProvince;
     private View layoutSearchOption, layoutHzOption, layoutSearchRange, layoutShowRange;
     private View.OnTouchListener mListener;
-    private boolean initProvinceSelect, initDivisionSelect;
+    private int initProvinceSelect, initDivisionSelect;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -147,24 +147,29 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String value = adapterProvince.getItem(position).toString();
                 Utils.putProvince(value);
-                if (initProvinceSelect) spinnerFilters.setSelection(DB.FILTER_PROVINCE);
-                else initProvinceSelect = true;
+                if (initProvinceSelect > 0) {
+                    spinnerFilters.setSelection(DB.FILTER_PROVINCE);
+                    searchView.clickSearchButton();
+                }
+                initProvinceSelect++;
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
         spinnerDivisions = selfView.findViewById(R.id.spinner_divisions);
-        adapterDivisions = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
-        adapterDivisions.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapterDivisions = new AdapterDivisions(requireActivity(), android.R.layout.simple_spinner_item);
         spinnerDivisions.setAdapter(adapterDivisions);
         spinnerDivisions.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String value = adapterDivisions.getItem(position).toString();
                 Utils.putDivision(value);
-                if (initDivisionSelect) spinnerFilters.setSelection(DB.FILTER_DIVISION);
-                else initDivisionSelect = true;
+                if (initDivisionSelect > 0) {
+                    spinnerFilters.setSelection(DB.FILTER_DIVISION);
+                    searchView.clickSearchButton();
+                }
+                initDivisionSelect++;
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}

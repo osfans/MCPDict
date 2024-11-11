@@ -27,9 +27,12 @@ def addAllFq(d, fq, order,ignorePian = False):
 	fqs = fq.split(",")[0].split("-")
 	for i in range(len(fqs)):
 		name = "-".join(fqs[0:i+1])
-		if not name or name in d: continue
+		if not name: continue
 		if ignorePian and name.endswith("片"): continue
-		d[name] = "-".join(order.split("-")[0:i+1])
+		order = "-".join(order.split("-")[0:i+1])
+		if name in d:
+			if d[name] < order: continue
+		d[name] = order
 
 def addCfFq(d, fq, order):
 	if fq is None: return
@@ -148,7 +151,7 @@ def getLangs(dicts, argv=None):
 		省.remove("海外")
 		省.append("海外")
 	hz.info["省"] = ",".join(省)
-	hz.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:(x.count("-"),types[0][x])))
+	hz.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:types[0][x]))
 	hz.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
 	hz.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:types[2][x]))
 	print("語言數", count)
