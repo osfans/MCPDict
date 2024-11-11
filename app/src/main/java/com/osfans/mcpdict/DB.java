@@ -165,7 +165,7 @@ public class DB extends SQLiteAssetHelper {
         List<String> keywords = new ArrayList<>();
         if (type == 2){ //yi
             if (Orthography.HZ.isHz(input)) {
-                String hzs = Utils.splitHZ(input);
+                String hzs = Utils.normInput(input);
                 if (!TextUtils.isEmpty(hzs)) keywords.add(hzs);
             }
         } else if (lang.contentEquals(KX) || lang.contentEquals(HD)) {
@@ -192,7 +192,7 @@ public class DB extends SQLiteAssetHelper {
                 if (keywords.contains(hz)) continue;
                 keywords.add(hz);
             }
-        } else {                          // Each contiguous run of non-separator and non-comma characters is a query
+        } else if (type < 2) {                          // Each contiguous run of non-separator and non-comma characters is a query
             if (lang.contentEquals(KOR)) { // For Korean, put separators around all hangul
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < input.length(); i++) {
@@ -254,17 +254,17 @@ public class DB extends SQLiteAssetHelper {
         qb.setTables(TABLE_NAME);
         List<String> queries = new ArrayList<>();
         List<String> args = new ArrayList<>();
-        boolean allowVariants = isHzMode(lang) && Utils.getBool(R.string.pref_key_allow_variants, true);
+        boolean allowVariants = isHzMode(lang) && Utils.getBool(R.string.pref_key_allow_variants, true) && type < 2;
         for (int i = 0; i < keywords.size(); i++) {
-            String variant = allowVariants ? ("\"" + keywords.get(i) + "\"") : "null";
-            String[] projection = {"rowid AS _id", i + " AS rank", "offsets(mcpdict) AS vaIndex", variant + " AS variants"};
             String key = keywords.get(i);
+            String variant = allowVariants ? ("'" + key + "'") : "null";
+            String[] projection = {"rowid AS _id", i + " AS rank", "offsets(mcpdict) AS vaIndex", variant + " AS variants"};
             String sel = " MATCH ?";
             if (key.startsWith("%") && key.endsWith("%")) {
                 sel = " LIKE ?";
             }
             for (String column : columns) {
-                String col = "\"" + column + "\"";
+                String col = "`" + column + "`";
                 queries.add(qb.buildQuery(projection, col + sel, null, null, null, null));
                 args.add(key);
 
