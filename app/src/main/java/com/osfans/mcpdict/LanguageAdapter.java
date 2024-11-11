@@ -2,6 +2,7 @@ package com.osfans.mcpdict;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +23,11 @@ public class LanguageAdapter extends CursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        ((TextView)view).setText(convertToString(cursor));
+        String language = convertToString(cursor).toString();
+        TextView tv = (TextView)view;
+        tv.setText(language);
+        tv.setBackgroundColor(DB.getColor(DB.getLabelByLanguage(language)));
+        tv.setTextColor(Color.WHITE);
     }
 
     @Override
