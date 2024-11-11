@@ -295,7 +295,7 @@ public class DB extends SQLiteAssetHelper {
         } else if (charset > 0) {
             selection += String.format(" AND `%s` MATCH '%s'", FL, Utils.getStringArray(R.array.pref_values_charset)[charset]);
         }
-        query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", "0,1000");
+        query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", "0,100");
 
         // Search
         return db.rawQuery(query, args.toArray(new String[0]));
@@ -309,7 +309,7 @@ public class DB extends SQLiteAssetHelper {
                    "v.漢字 AS 漢字", "NULL AS variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
         String selection = "v.漢字 = ?";
-        String query = qb.buildQuery(projection, selection, null, null, null, "0,1000");
+        String query = qb.buildQuery(projection, selection, null, null, null, "0,100");
         String[] args = {hz};
         return db.rawQuery(query, args);
     }
@@ -491,8 +491,9 @@ public class DB extends SQLiteAssetHelper {
         return i < 0 ? "" : COLUMNS[i];
     }
 
-    public static String[] getVisibleColumns() {
+    public static String[] getVisibleColumns(int count) {
         int filter = Utils.getFilter();
+        if (count > 10 && filter != FILTER_HZ && filter != FILTER_PFG) filter = FILTER_LANGUAGE;
         String label = Utils.getLabel();
         switch (filter) {
             case FILTER_PROVINCE -> {
@@ -548,6 +549,10 @@ public class DB extends SQLiteAssetHelper {
             }
         }
         return LABELS;
+    }
+
+    public static String[] getVisibleColumns() {
+        return getVisibleColumns(1);
     }
 
     public static boolean isHzMode(String lang) {

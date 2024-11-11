@@ -445,6 +445,7 @@ public class ResultFragment extends Fragment {
         } else {
             StringBuilder ssb = new StringBuilder();
             int n = cursor.getCount();
+            String[] cols = DB.getVisibleColumns(n);
             String lang = Utils.getLabel();
             boolean isZY = DB.isLang(lang) && query.length() >= 3 && n >= 3
                     && !Orthography.HZ.isBS(query)
@@ -512,7 +513,7 @@ public class ResultFragment extends Fragment {
                             DB.getHexColor(col), DB.getHexSubColor(col), label, ipa));
                     raws.append(formatReading(label, raw));
                 } else {
-                    for (String col : DB.getVisibleColumns()) {
+                    for (String col : cols) {
                         int index = DB.getColumnIndex(col);
                         s = cursor.getString(index);
                         if (TextUtils.isEmpty(s)) continue;
@@ -563,6 +564,7 @@ public class ResultFragment extends Fragment {
         } else {
             StringBuilder hzs = new StringBuilder();
             int count = cursor.getCount();
+            String[] cols = DB.getVisibleColumns(count);
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 sb.append(hz);
@@ -595,7 +597,7 @@ public class ResultFragment extends Fragment {
                     sb2.append(HtmlCompat.fromHtml(Utils.formatUnknownIPA(col, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT));
                     sb2.append("\n");
                 } else {
-                    for (String col : DB.getVisibleColumns()) {
+                    for (String col : cols) {
                         int i = cursor.getColumnIndex(col);
                         s = cursor.getString(i);
                         if (TextUtils.isEmpty(s)) continue;
@@ -638,6 +640,7 @@ public class ResultFragment extends Fragment {
                     .roundRect(5);
             StringBuilder hzs = new StringBuilder();
             int count = cursor.getCount();
+            String[] cols = DB.getVisibleColumns(count);
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 hzs.append(hz);
@@ -680,7 +683,7 @@ public class ResultFragment extends Fragment {
                     ssb2.append("\n");
                     raws.append(formatReading(label, raw));
                 } else {
-                    for (String lang : DB.getVisibleColumns()) {
+                    for (String lang : cols) {
                         int i = getColumnIndex(lang);
                         s = cursor.getString(i);
                         if (TextUtils.isEmpty(s)) continue;
