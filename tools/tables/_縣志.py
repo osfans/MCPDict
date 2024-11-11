@@ -19,6 +19,11 @@ class 表(_表):
 			line = line.lstrip("∅︀")
 		elif name in ("宜昌",):
 			line = line.replace('""	"', '"#')
+		elif name in ("遂川",):
+			if "[" in line:
+				line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+			else:
+				line = "#" + line
 		elif name in ("巢湖",):
 			line = line.replace('""	"', '"#').replace("ø","Ø").replace("（0）","[0]")
 			line = self.normS(line, "{\\1}")
@@ -76,7 +81,7 @@ class 表(_表):
 				if fs[i + 1]:
 					fs[i + 1] = f"[{sd}]" + fs[i + 1]
 			line = "".join(fs)
-		elif name in ("光山",):
+		elif name in ("光山","南康唐江"):
 			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
 		elif name in ("慈利",):
 			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
