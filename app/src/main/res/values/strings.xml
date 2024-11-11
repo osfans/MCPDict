@@ -402,6 +402,7 @@
     <string name="pref_key_search_range">KEY_SEARCH_RANGE</string>
     <string name="show_range">顯示範圍</string>
     <string name="pref_key_show_range">KEY_SHOW_RANGE</string>
+    <string name="pref_key_fullscreen">KEY_FULLSCREEN</string>
     <string-array name="pref_entries_font">
         <item>系統字體、文津宋體</item>
         <item>系統宋體、文津宋體</item>
