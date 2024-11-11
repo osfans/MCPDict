@@ -249,9 +249,9 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     }
 
     private void refreshSearchLang() {
-        String lang = Utils.getLanguage();
-        if (!DB.isLang(lang)) lang = "";
-        autoCompleteSearchLang.setText(lang);
+        String languange = Utils.getLanguage();
+        if (!DB.isLang(Utils.getLabel())) languange = "";
+        autoCompleteSearchLang.setText(languange);
     }
 
     private void refreshDict() {
