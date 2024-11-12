@@ -136,11 +136,9 @@ def load():
 			types[1] += "," + (tmp.split("-")[1] if "-" in tmp else "")
 		else: types[1] = ","
 		start = fields.index("下拉1")
-		collapse = fs["下拉2，折疊分区"].value
-		if collapse == None: collapse = ""
-		dropdown = [row[i].value if row[i].value else "" for i in range(start, start + 6)]
+		dropdown = [row[i].value if row[i].value else "" for i in range(start, start + 2)]
 		if types[2] == None: types[2] = ""
-		types[2] = collapse + "," + (",".join(dropdown))
+		types[2] = "-".join(dropdown).strip("-")
 		point = fs["經緯度"].value
 		if point: point = point.replace(" ", "").replace("，",",").strip()
 		places = [fs[i].value if fs[i].value else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
