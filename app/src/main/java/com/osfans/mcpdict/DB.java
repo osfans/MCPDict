@@ -493,8 +493,8 @@ public class DB extends SQLiteAssetHelper {
 
     public static String[] getVisibleColumns(int count) {
         int filter = Utils.getFilter();
-        if (count > 10 && filter != FILTER_HZ && filter != FILTER_PFG) filter = FILTER_LANGUAGE;
-        else if (count > 30) filter = FILTER_HZ;
+        if (count > 30) filter = FILTER_HZ;
+        else if (count > 10 && filter != FILTER_HZ && filter != FILTER_PFG) filter = FILTER_LANGUAGE;
         String label = Utils.getLabel();
         switch (filter) {
             case FILTER_PROVINCE -> {
