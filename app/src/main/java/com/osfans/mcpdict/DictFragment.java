@@ -28,7 +28,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private Spinner spinnerFilters, spinnerShape, spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions;
     private AutoCompleteTextView autoCompleteSearchLang;
     private ResultFragment fragmentResult;
-    ArrayAdapter<CharSequence> adapterDivisions, adapterShape, adapterDict, adapterProvince;
+    ArrayAdapter<CharSequence> adapterShape, adapterDict, adapterProvince;
+    AdapterDivisions adapterDivisions;
     private View layoutSearchOption, layoutHzOption, layoutSearchRange, layoutShowRange;
     private View.OnTouchListener mListener;
     private int initProvinceSelect, initDivisionSelect;
@@ -164,6 +165,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String value = adapterDivisions.getItem(position).toString();
+                adapterDivisions.setSelection(position);
                 Utils.putDivision(value);
                 if (initDivisionSelect > 0) {
                     spinnerFilters.setSelection(DB.FILTER_DIVISION);
