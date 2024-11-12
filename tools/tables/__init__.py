@@ -91,7 +91,7 @@ def getLangs(dicts, argv=None):
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
 			if d["省"]:
 				省.add(d["省"])
-			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
+			addAllFq(types[2], d["陳邡分區"], d["陳邡排序"])
 			if d["聲調"]:
 				toneMaps = dict()
 				sds = json.loads(d["聲調"])

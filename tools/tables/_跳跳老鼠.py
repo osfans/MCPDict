@@ -77,7 +77,7 @@ class 表(_表):
 			sy, sd, _, hzs = fs[:4]
 			hzs = hzs.replace("、（", "₁（")
 			hzs = self.normS(hzs)
-		elif name in ("會同髙椅","會同靑朗"):
+		elif name in ("會同髙椅","會同靑朗", "臨武"):
 			sy, _, sd, hzs = fs[:4]
 		elif name in ("湘鄕棋梓",):
 			sy, sd, _, hzs = fs[:4]
