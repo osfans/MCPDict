@@ -147,6 +147,8 @@ public class DB extends SQLiteAssetHelper {
         String dict = Utils.getDict();
         int type = Utils.getInt(R.string.pref_key_type, 0);
 
+        if (input.startsWith("-")) input = input.substring(1);
+
         if (!TextUtils.isEmpty(shape) && type < 2) lang = shape;
         if (!TextUtils.isEmpty(dict) && type == 3) {
             type = 2;
