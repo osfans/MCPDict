@@ -36,14 +36,17 @@ def addAllFq(d, fq, order,ignorePian = False):
 
 def addCfFq(d, fq, order):
 	if fq is None: return
-	fqs = fq.split(",")[2:]
-	for i,fq in enumerate(fqs):
-		if not fq: continue
-		if fq not in d:
-			d[fq] = i, order
-		#if i not in d: d[i] = dict()
-		# if fq not in d[i]:
-		# 	d[i][fq] = order
+	fs = fq.split(",")
+	fqs = fs[0].split("-")
+	for i in range(len(fqs)):
+		name = "-".join(fqs[0:i+1])
+		if not name: continue
+		order = "-".join(order.split("-")[0:i+1])
+		if name in d:
+			if d[name] < order: continue
+		d[name] = order
+		if len(fs) >= 2: 
+			d[fs[1]] = ""
 
 def getLangsByArgv(infos, argv):
 	l = []
@@ -91,7 +94,7 @@ def getLangs(dicts, argv=None):
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
 			if d["省"]:
 				省.add(d["省"])
-			addAllFq(types[2], d["陳邡分區"], d["陳邡排序"])
+			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
 			if d["聲調"]:
 				toneMaps = dict()
 				sds = json.loads(d["聲調"])
