@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 
@@ -33,6 +34,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private View layoutSearchOption, layoutHzOption, layoutSearchRange, layoutShowRange;
     private View.OnTouchListener mListener;
     private int initProvinceSelect, initDivisionSelect;
+    private Button buttonFullscreen;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -58,7 +60,9 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
         // Set up the spinner
         layoutSearchOption = selfView.findViewById(R.id.layout_search_options);
-        setFullscreen(Utils.getBool(R.string.pref_key_fullscreen, true));
+        buttonFullscreen = selfView.findViewById(R.id.button_fullscreen);
+        buttonFullscreen.setOnClickListener(v -> toggleFullscreen());
+        setFullscreen(Utils.getBool(R.string.pref_key_fullscreen, false));
 
         layoutHzOption = selfView.findViewById(R.id.layout_hz_option);
         boolean showHzOption = Utils.getBool(R.string.pref_key_hz_option, false);
@@ -336,14 +340,16 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         if (full) {
             ab.hide();
             layoutSearchOption.setVisibility(View.GONE);
+            buttonFullscreen.setVisibility(View.VISIBLE);
         } else {
             ab.show();
             layoutSearchOption.setVisibility(View.VISIBLE);
+            buttonFullscreen.setVisibility(View.GONE);
         }
     }
 
     public void toggleFullscreen() {
-        boolean full = !Utils.getBool(R.string.pref_key_fullscreen, true);
+        boolean full = !Utils.getBool(R.string.pref_key_fullscreen, false);
         Utils.putBool(R.string.pref_key_fullscreen, full);
         setFullscreen(full);
     }
