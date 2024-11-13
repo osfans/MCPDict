@@ -1,43 +1,57 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="6dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="6dp">
 
     <LinearLayout
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    <com.osfans.mcpdict.MySearchView
-        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
-        android:id="@+id/search_view" />
+        android:gravity="center">
+
+        <com.osfans.mcpdict.MySearchView
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+        </com.osfans.mcpdict.MySearchView>
+
+        <Button
+            android:id="@+id/button_fullscreen"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:backgroundTint="?android:attr/colorForeground"
+            android:background="@android:drawable/ic_menu_more" />
     </LinearLayout>
 
-    <LinearLayout android:id="@+id/layout_search_options"
-        android:orientation="vertical"
+    <LinearLayout
+        android:id="@+id/layout_search_options"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/layout_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/button_hz_option"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="@string/hz_option" />
+
             <Button
                 android:id="@+id/button_search_range"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="@string/search_range" />
+
             <Button
                 android:id="@+id/button_show_range"
                 android:layout_width="0dp"
@@ -177,8 +191,8 @@
         android:background="?android:attr/listDivider" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:name="com.osfans.mcpdict.ResultFragment"
         android:id="@+id/fragment_search_result"
+        android:name="com.osfans.mcpdict.ResultFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
