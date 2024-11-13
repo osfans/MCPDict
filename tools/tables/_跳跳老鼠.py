@@ -5,6 +5,8 @@ import re, regex
 
 class 表(_表):
 	disorder = True
+	sm = ""
+	ym = ""
 	sy = ""
 
 	def parse(self, fs):
@@ -17,6 +19,24 @@ class 表(_表):
 				self.sy = sy
 			else:
 				sy = self.sy
+		elif name in ("景寧東坑",):
+			if len(fs) == 1 or not fs[1].strip():
+				self.ym = fs[0].strip()
+				return
+			yb, hzs = fs[:2]
+			yb = yb.strip().replace(" ", "")
+			if yb in "12345678":
+				yb = self.sy + yb
+			elif self.ym:
+				self.sm = yb.rstrip("12345678")
+				self.sy = self.sm + self.ym
+				yb = self.sy + yb[-1]
+			else:
+				self.sy = yb.rstrip("12345678")
+			hzs = hzs.replace("，", "(文)").replace("。", "(白)").replace("！", "(小稱)").replace(".", "(又)").replace("？", "(存疑)").replace(")（", " ")
+			hzs = self.normS(hzs)
+			if yb == "hɔi6":
+				print(hzs, fs)
 		elif name in ("平陰東阿",):
 			sy, sd, _, hzs = fs[:4]
 			if sy:
@@ -59,13 +79,13 @@ class 表(_表):
 			hzs = hzs.strip().replace("{", "[").replace("}", "]")
 		elif name in ("洞口",):
 			yb, hzs = fs[:2]
-			hzs = hzs.replace("{", "[").replace("}", "]")
+			hzs = self.normG(hzs, "[\\1]")
 		elif name in ("欽州正","道縣壽雁"):
 			sy, sd, hzs = fs[:3]
-			hzs = hzs.replace("{", "[").replace("}", "]")
+			hzs = self.normG(hzs, "[\\1]")
 		elif name in ("唐山-開平"):
 			sy, sd, hzs = fs[:3]
-			hzs = hzs.replace("{", "[").replace("}", "]")
+			hzs = self.normG(hzs, "[\\1]")
 			sd = self.toneMaps.get(sd, "0")
 		elif name in ("汨羅沙溪",):
 			sy, sd, hzs = fs[:3]
@@ -123,7 +143,7 @@ class 表(_表):
 		l = list()
 		hzs = self.normM(hzs)
 		hzs = re.sub(r"(〚.*?〛)([-=])", "\\2\\1", hzs)
-		for hz, c, o, js in re.findall(r"(.)([-=*?]?)([₀-₉0-9]?)(〚.*?〛)?", hzs):
+		for hz, c, o, js in re.findall(r"(.)([-=*?+]?)([₀-₉0-9]?)(〚.*?〛)?", hzs):
 			if js: js = js[1:-1]
 			js = o + js
 			l.append((hz, yb + c, js))
