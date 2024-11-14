@@ -616,6 +616,7 @@ public class Utils extends Application {
 
     public static String getLabel() {
         String language = getStr(R.string.pref_key_language);
+        if (TextUtils.isEmpty(language)) language = DB.HZ;
         return DB.getLabelByLanguage(language);
     }
 
