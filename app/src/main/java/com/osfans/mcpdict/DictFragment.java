@@ -216,9 +216,10 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Utils.putFilter(position);
-                boolean showDivision = position == DB.FILTER_DIVISION;
-                boolean showProvince = position == DB.FILTER_PROVINCE;
-                boolean showCustom = position == DB.FILTER_CUSTOM;
+                DB.FILTER_TYPE filter = Utils.getFilter();
+                boolean showDivision = filter == DB.FILTER_TYPE.DIVISION;
+                boolean showProvince = filter == DB.FILTER_TYPE.PROVINCE;
+                boolean showCustom = filter == DB.FILTER_TYPE.CUSTOM;
                 boolean show = showDivision|| showProvince || showCustom;
                 if (showDivision) {
                     spinnerDivisions.setVisibility(View.VISIBLE);
@@ -243,7 +244,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
         });
-        spinnerFilters.setSelection(Utils.getFilter());
+        spinnerFilters.setSelection(Utils.getFilter().ordinal());
 
         // Get a reference to the SearchResultFragment
         fragmentResult = (ResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);
@@ -289,9 +290,9 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     }
 
     private void refreshSearchLang() {
-        String languange = Utils.getLanguage();
-        if (!DB.isLang(Utils.getLabel())) languange = "";
-        acSearchLang.setText(languange);
+        String language = Utils.getLanguage();
+        if (!DB.isLang(Utils.getLabel())) language = "";
+        acSearchLang.setText(language);
     }
 
     private void refreshDict() {
