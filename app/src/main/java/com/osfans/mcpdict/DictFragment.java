@@ -23,8 +23,6 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import java.util.Locale;
-
 public class DictFragment extends Fragment implements RefreshableFragment {
 
     private View selfView;
@@ -195,10 +193,9 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         acCustomLang.setOnItemClickListener((adapterView, view, i, l) -> {
             TextView tv = (TextView) view;
             String lang = tv.getText().toString();
-            Utils.putStrSet(R.string.pref_key_custom_languages, lang);
-            acCustomLang.setHint(Utils.getCustomLanguageSummary());
+            Utils.putCustomLanguage(lang);
             acCustomLang.setText("");
-            searchView.clickSearchButton();
+            refreshCustomLanguage();
         });
         selfView.findViewById(R.id.button_custom_lang_clear).setOnClickListener(v -> {
             acCustomLang.setText("");
@@ -346,6 +343,11 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         int index = TextUtils.isEmpty(value) ? -1 : adapterDivisions.getPosition(value);
         if (index >= adapterDivisions.getCount() || index < 0 ) index = 0;
         spinnerDivisions.setSelection(index);
+    }
+
+    public void refreshCustomLanguage() {
+        acCustomLang.setHint(Utils.getCustomLanguageSummary());
+        searchView.clickSearchButton();
     }
 
     public void refresh(String query, String label) {
