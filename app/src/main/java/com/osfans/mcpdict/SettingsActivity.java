@@ -6,8 +6,6 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.ListPreference;
-import androidx.preference.MultiSelectListPreference;
-import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -25,32 +23,15 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public static class SettingsFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener {
-        MultiSelectListPreference mCustomLanguages;
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             setPreferencesFromResource(R.xml.preferences, rootKey);
-            mCustomLanguages = findPreference(getString(R.string.pref_key_custom_languages));
             ListPreference lp = findPreference(getString(R.string.pref_key_fq));
             String[] entries = DB.getFqColumns();
             if (entries != null) {
                 lp.setEntries(entries);
                 lp.setEntryValues(entries);
             }
-            initCustomLanguages();
-        }
-
-        private void initCustomLanguages() {
-            String[] languages = DB.getLanguages();
-            if (mCustomLanguages != null && languages != null) {
-                mCustomLanguages.setEntries(languages);
-                mCustomLanguages.setEntryValues(languages);
-            }
-        }
-
-        @Override
-        public void onDisplayPreferenceDialog(Preference preference) {
-            if (preference.getKey().equals(getString(R.string.pref_key_custom_languages))) initCustomLanguages();
-            super.onDisplayPreferenceDialog(preference);
         }
 
         @Override

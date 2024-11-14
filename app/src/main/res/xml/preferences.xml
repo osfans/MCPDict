@@ -1,4 +1,5 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory android:title="@string/appearance">
         <EditTextPreference
@@ -40,10 +41,6 @@
             android:key="@string/pref_key_fq"
             android:title="@string/pref_title_fq"
             android:defaultValue="@string/default_fq"/>
-        <MultiSelectListPreference
-            android:key="@string/pref_key_custom_languages"
-            android:title="@string/pref_title_custom_languages"
-            android:visibility="gone" />
         <ListPreference
             app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_tone_display"
