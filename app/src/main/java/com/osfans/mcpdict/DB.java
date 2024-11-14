@@ -167,11 +167,6 @@ public class DB extends SQLiteAssetHelper {
                 String hzs = Utils.normInput(input);
                 if (!TextUtils.isEmpty(hzs)) keywords.add(hzs);
             }
-        } else if (lang.contentEquals(KX) || lang.contentEquals(HD)) {
-            if (!TextUtils.isEmpty(input) && !Orthography.HZ.isPY(input)){
-                if (Orthography.HZ.isSingleHZ(input)) lang = HZ;
-                else input = ":" + input;
-            }
         }
         else if (Orthography.HZ.isBH(input)) lang = BH;
         else if (Orthography.HZ.isBS(input)) {
@@ -179,11 +174,13 @@ public class DB extends SQLiteAssetHelper {
             input = input.replace("-", "f");
         } else if (!TextUtils.isEmpty(shape)) { //WB, CJ, LF
             // not search hz
-        } else if (Orthography.HZ.isHz(input)) lang = HZ;
-        else if (Orthography.HZ.isUnicode(input)) {
+        } else if (Orthography.HZ.isHz(input)) {
+            lang = HZ;
+        } else if (Orthography.HZ.isUnicode(input)) {
             input = Orthography.HZ.toHz(input);
             lang = HZ;
         } else if (Orthography.HZ.isPY(input) && !isLang(lang)) lang = CMN;
+        if (type == 1 && isHzMode(lang)) type = 0;
         if (isHzMode(lang) && type == 0) {     // Each character is a query
             for (int unicode : input.codePoints().toArray()) {
                 if (!Orthography.HZ.isHz(unicode)) continue;
