@@ -738,7 +738,7 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static int getSize(String lang) {
-        String s = getFieldByLabel(lang, "級別");
+        String s = getFieldByLabel(lang, "地圖級別");
         if (TextUtils.isEmpty(s)) return 0;
         return Integer.parseInt(s);
     }
