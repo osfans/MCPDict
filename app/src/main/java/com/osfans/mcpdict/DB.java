@@ -154,9 +154,9 @@ public class DB extends SQLiteAssetHelper {
         if (input.startsWith("-")) input = input.substring(1);
 
         if (!TextUtils.isEmpty(shape) && type < 2) lang = shape;
-        if (!TextUtils.isEmpty(dict) && type == 3) {
+        if (type == 3) {
             type = 2;
-            lang = DB.getLabelByLanguage(dict);
+            lang = TextUtils.isEmpty(dict) ? TABLE_NAME : DB.getLabelByLanguage(dict);
         }
 
         // Get options and settings

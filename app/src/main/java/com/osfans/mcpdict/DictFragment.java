@@ -115,6 +115,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String value = adapterDict.getItem(position).toString();
                 Utils.putDict(value);
+                searchView.clickSearchButton();
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
