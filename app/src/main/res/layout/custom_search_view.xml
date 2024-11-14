@@ -4,16 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <Spinner
-        android:id="@+id/spinner_type"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:entries="@array/pref_entries_type"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/text_query"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/button_search"
         android:layout_width="32dp"
@@ -38,7 +28,7 @@
         android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_search"
-        app:layout_constraintStart_toEndOf="@id/spinner_type"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button

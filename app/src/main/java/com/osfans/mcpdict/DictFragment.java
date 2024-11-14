@@ -26,14 +26,17 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     private View selfView;
     private MySearchView searchView;
-    private Spinner spinnerFilters, spinnerShape, spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions;
+    private Spinner spinnerShape;
+    private Spinner spinnerType;
+    private Spinner spinnerDict;
+    private Spinner spinnerProvinces;
+    private Spinner spinnerDivisions;
     private AutoCompleteTextView autoCompleteSearchLang;
     private ResultFragment fragmentResult;
     ArrayAdapter<CharSequence> adapterShape, adapterDict, adapterProvince;
     AdapterDivisions adapterDivisions;
-    private View layoutSearchOption, layoutHzOption, layoutSearchRange, layoutShowRange;
+    private View layoutSearchOption, layoutHzOption, layoutShowRange, layoutSearcLang;
     private View.OnTouchListener mListener;
-    private int initProvinceSelect, initDivisionSelect;
     private Button buttonFullscreen;
 
     @Override
@@ -73,23 +76,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             layoutHzOption.setVisibility(show ? View.VISIBLE : View.GONE);
         });
 
-        layoutSearchRange = selfView.findViewById(R.id.layout_search_range);
-        boolean showSearchRange = Utils.getBool(R.string.pref_key_search_range, false);
-        layoutSearchRange.setVisibility(showSearchRange ? View.VISIBLE : View.GONE);
-        selfView.findViewById(R.id.button_search_range).setOnClickListener(v -> {
-            boolean show = layoutSearchRange.getVisibility() != View.VISIBLE;
-            Utils.putBool(R.string.pref_key_search_range, show);
-            layoutSearchRange.setVisibility(show ? View.VISIBLE : View.GONE);
-        });
-
         layoutShowRange = selfView.findViewById(R.id.layout_show_range);
-        boolean showShowRange = Utils.getBool(R.string.pref_key_show_range, false);
-        layoutShowRange.setVisibility(showShowRange ? View.VISIBLE : View.GONE);
-        selfView.findViewById(R.id.button_show_range).setOnClickListener(v -> {
-            boolean show = layoutShowRange.getVisibility() != View.VISIBLE;
-            Utils.putBool(R.string.pref_key_show_range, show);
-            layoutShowRange.setVisibility(show ? View.VISIBLE : View.GONE);
-        });
+        layoutSearcLang = selfView.findViewById(R.id.layout_search_lang);
 
         Spinner spinnerCharset = selfView.findViewById(R.id.spinner_charset);
         spinnerCharset.setSelection(Utils.getInt(R.string.pref_key_charset, 0));
@@ -109,6 +97,9 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Utils.putInt(R.string.pref_key_type, position);
+                boolean showDictionary = (position == DB.SEARCH_TYPE.DICTIONARY.ordinal());
+                spinnerDict.setVisibility(showDictionary ? View.VISIBLE : View.GONE);
+                layoutSearcLang.setVisibility(!showDictionary? View.VISIBLE : View.GONE);
                 searchView.clickSearchButton();
             }
             @Override
@@ -152,11 +143,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String value = adapterProvince.getItem(position).toString();
                 Utils.putProvince(value);
-                if (initProvinceSelect > 0) {
-                    spinnerFilters.setSelection(DB.FILTER_PROVINCE);
-                    searchView.clickSearchButton();
-                }
-                initProvinceSelect++;
+                searchView.clickSearchButton();
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
@@ -171,11 +158,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 String value = adapterDivisions.getItem(position).toString();
                 adapterDivisions.setSelection(position);
                 Utils.putDivision(value);
-                if (initDivisionSelect > 0) {
-                    spinnerFilters.setSelection(DB.FILTER_DIVISION);
-                    searchView.clickSearchButton();
-                }
-                initDivisionSelect++;
+                searchView.clickSearchButton();
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
@@ -201,13 +184,26 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             searchView.clickSearchButton();
         });
 
-        spinnerFilters = selfView.findViewById(R.id.spinner_filters);
+        Spinner spinnerFilters = selfView.findViewById(R.id.spinner_filters);
         spinnerFilters.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Utils.putFilter(position);
+                boolean showDivision = position == DB.FILTER_DIVISION;
+                boolean showProvince = position == DB.FILTER_PROVINCE;
+                boolean show = showDivision|| showProvince;
+                if (showDivision) {
+                    spinnerDivisions.setVisibility(View.VISIBLE);
+                    spinnerProvinces.setVisibility(View.GONE);
+                }
+                if (showProvince) {
+                    spinnerProvinces.setVisibility(View.VISIBLE);
+                    spinnerDivisions.setVisibility(View.GONE);
+                }
+                layoutShowRange.setVisibility(show ? View.VISIBLE : View.GONE);
                 searchView.clickSearchButton();
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
         });
