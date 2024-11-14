@@ -56,7 +56,7 @@
                 android:layout_weight="2">
 
                 <AutoCompleteTextView
-                    android:id="@+id/search_lang"
+                    android:id="@+id/text_search_lang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:completionThreshold="0"
@@ -74,7 +74,7 @@
                     android:background="@android:drawable/ic_menu_close_clear_cancel"
                     android:backgroundTint="?android:attr/colorForeground"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@id/search_lang"
+                    app:layout_constraintEnd_toEndOf="@id/text_search_lang"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -123,32 +123,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layout_show_range"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Spinner
-                android:id="@+id/spinner_provinces"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2" />
-
-            <Spinner
-                android:id="@+id/spinner_divisions"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2" />
-
-            <Button
-                android:id="@+id/button_custom_languages"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="@string/pref_title_custom_languages"
-                android:visibility="gone" />
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/layout_hz_option"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -172,6 +146,54 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/option_allow_variants" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_show_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/spinner_provinces"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+            <Spinner
+                android:id="@+id/spinner_divisions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_custom_lang"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <AutoCompleteTextView
+                    android:id="@+id/text_custom_lang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="0"
+                    android:hint="@string/pref_title_custom_languages"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button_custom_lang_clear"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:drawable/ic_menu_close_clear_cancel"
+                    android:backgroundTint="?android:attr/colorForeground"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/text_custom_lang"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </LinearLayout>
 
     </LinearLayout>

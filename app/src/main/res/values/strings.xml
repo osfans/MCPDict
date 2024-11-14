@@ -356,6 +356,7 @@
     </string-array>
     <string name="pref_key_custom_languages">CUSTOM_LANGUAGES</string>
     <string name="pref_title_custom_languages">自選語言</string>
+    <string name="select_custom_language_summary">已選%d個語言：%s</string>
     <string name="pref_key_input">INPUT</string>
     <string name="pref_key_language">LANGUAGE</string>
     <string name="custom_title">自定標題</string>

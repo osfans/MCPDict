@@ -40,7 +40,7 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         private void initCustomLanguages() {
-            String[] languages = DB.getSearchColumns();
+            String[] languages = DB.getLanguages();
             if (mCustomLanguages != null && languages != null) {
                 mCustomLanguages.setEntries(languages);
                 mCustomLanguages.setEntryValues(languages);

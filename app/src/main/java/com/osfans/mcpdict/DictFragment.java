@@ -16,11 +16,14 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+
+import java.util.Locale;
 
 public class DictFragment extends Fragment implements RefreshableFragment {
 
@@ -31,11 +34,11 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private Spinner spinnerDict;
     private Spinner spinnerProvinces;
     private Spinner spinnerDivisions;
-    private AutoCompleteTextView autoCompleteSearchLang;
+    private AutoCompleteTextView acSearchLang, acCustomLang;
     private ResultFragment fragmentResult;
     ArrayAdapter<CharSequence> adapterShape, adapterDict, adapterProvince;
     AdapterDivisions adapterDivisions;
-    private View layoutSearchOption, layoutHzOption, layoutShowRange, layoutSearcLang;
+    private View layoutSearchOption, layoutHzOption, layoutShowRange, layoutSearchLang, layoutCustomLang;
     private View.OnTouchListener mListener;
     private Button buttonFullscreen;
 
@@ -77,7 +80,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
 
         layoutShowRange = selfView.findViewById(R.id.layout_show_range);
-        layoutSearcLang = selfView.findViewById(R.id.layout_search_lang);
+        layoutSearchLang = selfView.findViewById(R.id.layout_search_lang);
+        layoutCustomLang = selfView.findViewById(R.id.layout_custom_lang);
 
         Spinner spinnerCharset = selfView.findViewById(R.id.spinner_charset);
         spinnerCharset.setSelection(Utils.getInt(R.string.pref_key_charset, 0));
@@ -99,7 +103,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 Utils.putInt(R.string.pref_key_type, position);
                 boolean showDictionary = (position == DB.SEARCH_TYPE.DICTIONARY.ordinal());
                 spinnerDict.setVisibility(showDictionary ? View.VISIBLE : View.GONE);
-                layoutSearcLang.setVisibility(!showDictionary? View.VISIBLE : View.GONE);
+                layoutSearchLang.setVisibility(!showDictionary? View.VISIBLE : View.GONE);
                 searchView.clickSearchButton();
             }
             @Override
@@ -165,17 +169,42 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        autoCompleteSearchLang = selfView.findViewById(R.id.search_lang);
-        autoCompleteSearchLang.setAdapter(new LanguageAdapter(requireContext(), null, true));
-        autoCompleteSearchLang.setOnFocusChangeListener((v, b) -> {
+        acSearchLang = selfView.findViewById(R.id.text_search_lang);
+        acSearchLang.setAdapter(new LanguageAdapter(requireContext(), null, true));
+        acSearchLang.setOnFocusChangeListener((v, b) -> {
             if (b) ((AutoCompleteTextView)v).showDropDown();
         });
         String language = Utils.getLanguage();
-        autoCompleteSearchLang.setText(language);
-        selfView.findViewById(R.id.button_lang_clear).setOnClickListener(v -> {
-            autoCompleteSearchLang.setText("");
-            autoCompleteSearchLang.requestFocus();
+        acSearchLang.setText(language);
+        acSearchLang.setOnItemClickListener((adapterView, view, i, l) -> {
+            String lang = acSearchLang.getText().toString();
+            Utils.putLanguage(lang);
+            searchView.clickSearchButton();
         });
+        selfView.findViewById(R.id.button_lang_clear).setOnClickListener(v -> {
+            acSearchLang.setText("");
+            acSearchLang.requestFocus();
+        });
+
+        acCustomLang = selfView.findViewById(R.id.text_custom_lang);
+        acCustomLang.setAdapter(new MultiLanguageAdapter(requireContext(), null, true));
+        acCustomLang.setOnFocusChangeListener((v, b) -> {
+            if (b) ((AutoCompleteTextView)v).showDropDown();
+        });
+        acCustomLang.setHint(Utils.getCustomLanguageSummary());
+        acCustomLang.setOnItemClickListener((adapterView, view, i, l) -> {
+            TextView tv = (TextView) view;
+            String lang = tv.getText().toString();
+            Utils.putStrSet(R.string.pref_key_custom_languages, lang);
+            acCustomLang.setHint(Utils.getCustomLanguageSummary());
+            acCustomLang.setText("");
+            searchView.clickSearchButton();
+        });
+        selfView.findViewById(R.id.button_custom_lang_clear).setOnClickListener(v -> {
+            acCustomLang.setText("");
+            acCustomLang.requestFocus();
+        });
+
         // Set up the checkboxes
         CheckBox checkBoxAllowVariants = selfView.findViewById(R.id.check_box_allow_variants);
         checkBoxAllowVariants.setChecked(Utils.getBool(R.string.pref_key_allow_variants, true));
@@ -192,14 +221,23 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 Utils.putFilter(position);
                 boolean showDivision = position == DB.FILTER_DIVISION;
                 boolean showProvince = position == DB.FILTER_PROVINCE;
-                boolean show = showDivision|| showProvince;
+                boolean showCustom = position == DB.FILTER_CUSTOM;
+                boolean show = showDivision|| showProvince || showCustom;
                 if (showDivision) {
                     spinnerDivisions.setVisibility(View.VISIBLE);
                     spinnerProvinces.setVisibility(View.GONE);
+                    layoutCustomLang.setVisibility(View.GONE);
                 }
                 if (showProvince) {
-                    spinnerProvinces.setVisibility(View.VISIBLE);
                     spinnerDivisions.setVisibility(View.GONE);
+                    spinnerProvinces.setVisibility(View.VISIBLE);
+                    layoutCustomLang.setVisibility(View.GONE);
+                }
+                if (showCustom) {
+                    spinnerProvinces.setVisibility(View.GONE);
+                    spinnerDivisions.setVisibility(View.GONE);
+                    layoutCustomLang.setVisibility(View.VISIBLE);
+                    acCustomLang.setHint(Utils.getCustomLanguageSummary());
                 }
                 layoutShowRange.setVisibility(show ? View.VISIBLE : View.GONE);
                 searchView.clickSearchButton();
@@ -209,12 +247,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
         spinnerFilters.setSelection(Utils.getFilter());
-
-        autoCompleteSearchLang.setOnItemClickListener((adapterView, view, i, l) -> {
-            String lang = autoCompleteSearchLang.getText().toString();
-            Utils.putLanguage(lang);
-            searchView.clickSearchButton();
-        });
 
         // Get a reference to the SearchResultFragment
         fragmentResult = (ResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);
@@ -262,7 +294,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private void refreshSearchLang() {
         String languange = Utils.getLanguage();
         if (!DB.isLang(Utils.getLabel())) languange = "";
-        autoCompleteSearchLang.setText(languange);
+        acSearchLang.setText(languange);
     }
 
     private void refreshDict() {
