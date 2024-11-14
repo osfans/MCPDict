@@ -10,6 +10,8 @@ import android.app.Application;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.graphics.fonts.Font;
 import android.graphics.fonts.FontFamily;
@@ -17,6 +19,7 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.TextView;
 
@@ -493,11 +496,23 @@ public class Utils extends Application {
     }
 
     public static Set<String> getStrSet(int key) {
-        return getStrSet(key, null);
+        return getStrSet(key, new HashSet<>());
     }
 
     public static Set<String> getStrSet(int key, Set<String> defaultValue) {
         return getPreference().getStringSet(mApp.getString(key), defaultValue);
+    }
+
+    public static void putStrSet(int key, String value) {
+        Set<String> set = getStrSet(key);
+        if (set.contains(value)) set.remove(value);
+        else set.add(value);
+        getPreference().edit().putStringSet(mApp.getString(key), set).apply();
+    }
+
+    public static String getCustomLanguageSummary()  {
+        Set<String> set = getStrSet(R.string.pref_key_custom_languages);
+        return mApp.getString(R.string.select_custom_language_summary, set.size(), String.join("、", set));
     }
 
     public static String getStr(int key) {
@@ -590,5 +605,16 @@ public class Utils extends Application {
         String locale = getStr(R.string.pref_key_locale);
         if (TextUtils.isEmpty(locale)) locale = "ko";
         Locale.setDefault(Locale.forLanguageTag(locale));
+    }
+
+    public static int obtainColor(Context context, int resId) {
+        TypedValue typedValue = new TypedValue();
+        Resources.Theme theme = context.getTheme();
+        theme.resolveAttribute(resId, typedValue,false);
+        int color = -1;
+        try (TypedArray arr = context.obtainStyledAttributes(typedValue.data, new int[]{resId})) {
+            color = arr.getColor(0, color);
+        }
+        return color;
     }
 }

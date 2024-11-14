@@ -523,11 +523,11 @@ public class DB extends SQLiteAssetHelper {
             }
             case FILTER_CUSTOM -> {
                 Set<String> customs = Utils.getStrSet(R.string.pref_key_custom_languages);
-                if (customs == null || customs.isEmpty()) return LABELS;
+                if (customs == null || customs.isEmpty()) return new String[]{};
                 ArrayList<String> array = new ArrayList<>();
-                for (String lang: getLabels()) {
+                for (String lang: getLanguages()) {
                     if (!array.contains(lang) && customs.contains(lang)) {
-                        array.add(lang);
+                        array.add(getLabelByLanguage(lang));
                     }
                 }
                 return array.toArray(new String[0]);

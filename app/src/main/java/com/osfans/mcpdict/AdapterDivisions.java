@@ -18,25 +18,14 @@ public class AdapterDivisions extends ArrayAdapter<CharSequence> {
 
     public AdapterDivisions(@NonNull Context context, int resource) {
         super(context, resource);
-        mColor = getTextColorPrimary(context, android.R.attr.textColorPrimary);
-        mColorHighlight = getTextColorPrimary(context, android.R.attr.textColorHighlight);
+        mColor = Utils.obtainColor(context, android.R.attr.textColorPrimary);
+        mColorHighlight = Utils.obtainColor(context, android.R.attr.textColorHighlight);
         mColorDim = context.getResources().getColor(R.color.dim, context.getTheme());
     }
 
     public void setSelection(int position) {
         mSelectedIndex =  position;
         notifyDataSetChanged();
-    }
-
-    private int getTextColorPrimary(Context context, int resId) {
-        TypedValue typedValue = new TypedValue();
-        Resources.Theme theme = context.getTheme();
-        theme.resolveAttribute(resId, typedValue,false);
-        int color = -1;
-        try (TypedArray arr = context.obtainStyledAttributes(typedValue.data, new int[]{resId})) {
-            color = arr.getColor(0, color);
-        }
-        return color;
     }
 
     @Override
