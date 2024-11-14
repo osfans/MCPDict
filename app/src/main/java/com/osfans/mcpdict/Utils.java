@@ -510,8 +510,33 @@ public class Utils extends Application {
         getPreference().edit().putStringSet(mApp.getString(key), set).apply();
     }
 
+    public static void putCustomLanguage(String lang) {
+        putStrSet(R.string.pref_key_custom_languages, lang);
+    }
+
+    public static Set<String> getCustomLanguages() {
+        int key = R.string.pref_key_custom_languages;
+        Set<String> customs = Utils.getStrSet(key);
+        if (customs.isEmpty()) return customs;
+        Set<String> set = new HashSet<>();
+        String[] langs = DB.getLanguages();
+        for (String lang: langs) {
+            if (customs.contains(lang)) {
+                set.add(lang);
+            }
+        }
+        if (set.size() != customs.size()) {
+            getPreference().edit().putStringSet(mApp.getString(key), set).apply();
+        }
+        return set;
+    }
+
+    public static boolean isCustomLanguage(String lang) {
+        return getCustomLanguages().contains(lang);
+    }
+
     public static String getCustomLanguageSummary()  {
-        Set<String> set = getStrSet(R.string.pref_key_custom_languages);
+        Set<String> set = getCustomLanguages();
         return mApp.getString(R.string.select_custom_language_summary, set.size(), String.join("、", set));
     }
 

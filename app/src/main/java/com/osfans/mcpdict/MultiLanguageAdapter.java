@@ -19,7 +19,7 @@ public class MultiLanguageAdapter extends LanguageAdapter {
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         String language = convertToString(cursor).toString();
-        Set<String> set = Utils.getStrSet(R.string.pref_key_custom_languages);
+        Set<String> set = Utils.getCustomLanguages();
         TextView tv = (TextView)view;
         tv.setText(language);
         tv.setTextColor(DB.getColor(DB.getLabelByLanguage(language)));

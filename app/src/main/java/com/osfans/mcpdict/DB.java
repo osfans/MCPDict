@@ -522,11 +522,11 @@ public class DB extends SQLiteAssetHelper {
                 }
             }
             case FILTER_CUSTOM -> {
-                Set<String> customs = Utils.getStrSet(R.string.pref_key_custom_languages);
-                if (customs == null || customs.isEmpty()) return new String[]{};
+                Set<String> customs = Utils.getCustomLanguages();
+                if (customs.isEmpty()) return new String[]{};
                 ArrayList<String> array = new ArrayList<>();
                 for (String lang: getLanguages()) {
-                    if (!array.contains(lang) && customs.contains(lang)) {
+                    if (customs.contains(lang)) {
                         array.add(getLabelByLanguage(lang));
                     }
                 }

@@ -81,14 +81,15 @@ public class ResultFragment extends Fragment {
     private final int MSG_FAVORITE = 3;
     private final int MSG_MAP = 4;
     private final int MSG_FULLSCREEN = 5;
+    private final int MSG_CUSTOM_LANGUAGE = 6;
     private final Handler mHandler = new Handler(){
         @Override
         public void handleMessage(@NonNull Message msg) {
             int what = msg.what;
+            DictFragment dictFragment = ((MainActivity) requireActivity()).getDictionaryFragment();
             switch (what) {
                 case MSG_SEARCH_HOMOPHONE:
                     removeCallbacksAndMessages(null);
-                    DictFragment dictFragment = ((MainActivity) requireActivity()).getDictionaryFragment();
                     dictFragment.setType(1);
                     dictFragment.refresh(mEntry.raw, mEntry.lang);
                     break;
@@ -109,9 +110,15 @@ public class ResultFragment extends Fragment {
                     break;
                 case MSG_FULLSCREEN: {
                     removeCallbacksAndMessages(null);
-                    DictFragment fragment = ((MainActivity) requireActivity()).getDictionaryFragment();
-                    fragment.toggleFullscreen();
+                    dictFragment.toggleFullscreen();
                 }
+                    break;
+                case MSG_CUSTOM_LANGUAGE:
+                    removeCallbacksAndMessages(null);
+                    String language = DB.getLanguageByLabel(mEntry.lang);
+                    Utils.putCustomLanguage(language);
+                    dictFragment.refreshCustomLanguage();
+                    Toast.makeText(getContext(), Utils.isCustomLanguage(language) ? R.string.add_to_custom_language_done : R.string.rm_from_custom_language_done, Toast.LENGTH_SHORT).show();
                     break;
             }
         }
@@ -266,6 +273,8 @@ public class ResultFragment extends Fragment {
             menu.add(GROUP_READING, COL_HZ, 90, getString(R.string.copy_hz));
             String language = DB.getLanguageByLabel(col);
             if (DB.isLang(col)) {
+                item = menu.add(getString(Utils.isCustomLanguage(language) ? R.string.rm_from_custom_language : R.string.add_to_custom_language, language));
+                item.setOnMenuItemClickListener(i->mHandler.sendEmptyMessage(MSG_CUSTOM_LANGUAGE));
                 item = menu.add(getString(R.string.goto_info, language));
                 item.setOnMenuItemClickListener(i->mHandler.sendEmptyMessage(MSG_GOTO_INFO));
                 item = menu.add(getString(R.string.search_homophone, hz, language));

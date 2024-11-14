@@ -40,6 +40,11 @@
     <string name="share_readings">分享“%s”字的所有讀音</string>
     <string name="goto_info">查看“%s”的詳細信息</string>
 
+    <string name="add_to_custom_language">把“%s”加入自選語言</string>
+    <string name="add_to_custom_language_done">已加入自選語言</string>
+    <string name="rm_from_custom_language">把“%s”移出自選語言</string>
+    <string name="rm_from_custom_language_done">已从自選語言移出</string>
+
     <string name="all_reading">所有讀音</string>
     <string name="copy_all_reading">複製“%1$s”字的所有讀音</string>
     <string name="copy_done">已複製到剪貼板</string>
