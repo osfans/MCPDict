@@ -99,16 +99,9 @@ public class DB extends SQLiteAssetHelper {
         HZ, YIN, YI, DICTIONARY,
     };
 
-    //public static final int FILTER_ALL = 0;
-    public static final int FILTER_ISLAND = 1;
-    public static final int FILTER_HZ = 2;
-    public static final int FILTER_LANGUAGE = 3;
-    public static final int FILTER_PFG = 4;
-    public static final int FILTER_PROVINCE = 5;
-    public static final int FILTER_DIVISION = 6;
-    public static final int FILTER_CUSTOM = 7;
-    public static final int FILTER_COUNTY = 8;
-    public static final int FILTER_TYPICAL = 9;
+    public static enum FILTER_TYPE {
+        ALL, ISLAND, HZ, LANGUAGE, PFG, CUSTOM, PROVINCE, CITY, COUNTY, DIVISION;
+    }
 
     public static int COL_ALL_LANGUAGES = 1000;
     public static final String ALL_LANGUAGES = "*";
@@ -498,12 +491,12 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static String[] getVisibleColumns(int count) {
-        int filter = Utils.getFilter();
-        if (count > 30) filter = FILTER_HZ;
-        else if (count > 10 && filter != FILTER_HZ && filter != FILTER_PFG) filter = FILTER_LANGUAGE;
+        FILTER_TYPE filter = Utils.getFilter();
+        if (count > 30) filter = FILTER_TYPE.HZ;
+        else if (count > 10 && filter != FILTER_TYPE.HZ && filter != FILTER_TYPE.PFG) filter = FILTER_TYPE.LANGUAGE;
         String label = Utils.getLabel();
         switch (filter) {
-            case FILTER_PROVINCE -> {
+            case PROVINCE -> {
                 String province = Utils.getProvince();
                 if (!TextUtils.isEmpty(province)) {
                     String[] a = DB.getLabelsByProvince(province);
@@ -512,7 +505,7 @@ public class DB extends SQLiteAssetHelper {
                     }
                 }
             }
-            case FILTER_DIVISION -> {
+            case DIVISION -> {
                 String division = Utils.getDivision();
                 if (!TextUtils.isEmpty(division)) {
                     String[] a = DB.getLabelsByFq(division);
@@ -521,7 +514,7 @@ public class DB extends SQLiteAssetHelper {
                     }
                 }
             }
-            case FILTER_CUSTOM -> {
+            case CUSTOM -> {
                 Set<String> customs = Utils.getCustomLanguages();
                 if (customs.isEmpty()) return new String[]{};
                 ArrayList<String> array = new ArrayList<>();
@@ -532,22 +525,22 @@ public class DB extends SQLiteAssetHelper {
                 }
                 return array.toArray(new String[0]);
             }
-            case FILTER_ISLAND -> {
+            case ISLAND -> {
                 return queryLabel("方言島");
             }
-            case FILTER_COUNTY -> {
-                return queryLabel("級別  >= \"3\"");
+            case COUNTY -> {
+                return queryLabel("length(縣) > 0 and length(鎮) == 0 and length(村) == 0");
             }
-            case FILTER_TYPICAL -> {
-                return queryLabel("級別  >= \"5\"");
+            case CITY -> {
+                return queryLabel("(length(省) > 0 or length(市) > 0) and length(縣) == 0");
             }
-            case FILTER_HZ -> {
+            case HZ -> {
                 return new String[]{};
             }
-            case FILTER_LANGUAGE -> {
+            case LANGUAGE -> {
                 if (getColumnIndex(label) >= 0) return new String[]{label};
             }
-            case FILTER_PFG -> {
+            case PFG -> {
                 Set<String> array = new HashSet<>();
                 array.add(GY);
                 array.add(CMN);
@@ -653,7 +646,7 @@ public class DB extends SQLiteAssetHelper {
     }
 
     private static String _getIntro(String language) {
-        if (TextUtils.isEmpty(language) || Utils.getFilter() == FILTER_HZ) language = HZ;
+        if (TextUtils.isEmpty(language) || Utils.getFilter() == FILTER_TYPE.HZ) language = HZ;
         String intro = TextUtils.isEmpty(language) ? "" : getFieldByLanguage(language, "說明").replace("\n", "<br>");
         if (language.contentEquals(HZ)) {
             intro = String.format(Locale.getDefault(), "%s%s<br>%s", Utils.getStringRes(R.string.version), BuildConfig.VERSION_NAME, intro);

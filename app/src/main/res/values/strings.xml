@@ -326,11 +326,11 @@
         <item>僅漢字</item>
         <item>當前語言</item>
         <item>普方古對照</item>
-        <item>選擇省份</item>
-        <item>選擇分區</item>
         <item>@string/pref_title_custom_languages</item>
+        <item>選擇省份</item>
+        <item>市級方言</item>
         <item>縣級方言</item>
-        <item>代表方言</item>
+        <item>選擇分區</item>
     </string-array>
 
     <string name="pref_key_charset">SHOW_CHARSET</string>
