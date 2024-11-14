@@ -22,7 +22,6 @@ public class MultiLanguageAdapter extends LanguageAdapter {
         Set<String> set = Utils.getCustomLanguages();
         TextView tv = (TextView)view;
         tv.setText(language);
-        tv.setTextColor(DB.getColor(DB.getLabelByLanguage(language)));
         tv.setBackgroundColor(set.contains(language) ? mColorHighlight : Color.TRANSPARENT);
     }
 }
