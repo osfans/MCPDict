@@ -187,7 +187,7 @@
                     android:id="@+id/button_custom_lang_clear"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:background="@android:drawable/ic_menu_close_clear_cancel"
+                    android:background="@android:drawable/ic_menu_more"
                     android:backgroundTint="?android:attr/colorForeground"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/text_custom_lang"
