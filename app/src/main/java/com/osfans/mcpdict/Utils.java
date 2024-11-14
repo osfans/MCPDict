@@ -500,7 +500,7 @@ public class Utils extends Application {
     }
 
     public static Set<String> getStrSet(int key, Set<String> defaultValue) {
-        return getPreference().getStringSet(mApp.getString(key), defaultValue);
+        return new HashSet<>(getPreference().getStringSet(mApp.getString(key), defaultValue));
     }
 
     public static void putStrSet(int key, String value) {
