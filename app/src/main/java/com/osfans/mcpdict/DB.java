@@ -95,6 +95,10 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_FIRST_INFO, COL_LAST_INFO;
     public static int COL_FIRST_SHAPE, COL_LAST_SHAPE;
 
+    public static enum SEARCH_TYPE {
+        HZ, YIN, YI, DICTIONARY,
+    };
+
     //public static final int FILTER_ALL = 0;
     public static final int FILTER_ISLAND = 1;
     public static final int FILTER_HZ = 2;

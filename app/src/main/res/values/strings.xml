@@ -316,13 +316,13 @@
     <string name="pref_key_filters">KEY_FILTERS</string>
     <string name="show_languages">顯示語言：</string>
     <string-array name="pref_entries_filters">
-        <item>全部語言</item>
+        <item>@string/show_range</item>
         <item>方言島</item>
         <item>僅漢字</item>
         <item>當前語言</item>
         <item>普方古對照</item>
-        <item>當前省</item>
-        <item>當前分區</item>
+        <item>選擇省份</item>
+        <item>選擇分區</item>
         <item>@string/pref_title_custom_languages</item>
         <item>縣級方言</item>
         <item>代表方言</item>
@@ -398,10 +398,7 @@
     <string name="hz_range">漢字範圍</string>
     <string name="hz_option">漢字選項</string>
     <string name="pref_key_hz_option">KEY_HZ_OPTION</string>
-    <string name="search_range">查詢範圍</string>
-    <string name="pref_key_search_range">KEY_SEARCH_RANGE</string>
     <string name="show_range">顯示範圍</string>
-    <string name="pref_key_show_range">KEY_SHOW_RANGE</string>
     <string name="pref_key_fullscreen">KEY_FULLSCREEN</string>
     <string-array name="pref_entries_font">
         <item>系統字體、文津宋體</item>
@@ -437,7 +434,7 @@
     <string name="pref_key_dict">KEY_DICT</string>
     <string name="dict">辭典</string>
     <string name="pref_key_province">KEY_PROVINCE</string>
-    <string name="province">省份</string>
+    <string name="province">全部省份</string>
     <string name="pref_key_division">KEY_DIVISION</string>
-    <string name="division">分區</string>
+    <string name="division">全部分區</string>
 </resources>
