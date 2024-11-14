@@ -144,7 +144,7 @@ def load():
 		places = [fs[i].value if fs[i].value else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
 		place = ("".join(places)).replace("/", "")
 		island = fs["方言島"].value
-		size = fs["級別(5星爲代表方言-1星最大時顯示)"].value
+		size = fs["地图級別"].value
 		size = size.count("★") if size else 0
 		j = fields.index("[1]陰平")
 		tones = [line[i] for i in range(j,j+10)]
@@ -193,7 +193,7 @@ def load():
 			"地點": place,
 			"版本":ver,
 			"經緯度":point,
-			"級別":str(size),
+			"地圖級別":str(size),
 			"錄入人":editor,
 			"參考資料":book,
 			"說明":note,
