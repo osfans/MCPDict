@@ -144,7 +144,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         spinnerProvinces.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String value = adapterProvince.getItem(position).toString();
+                String value = adapterProvince.getItem(position).toString().split(" ")[0];
                 Utils.putProvince(value);
                 searchView.clickSearchButton();
             }
