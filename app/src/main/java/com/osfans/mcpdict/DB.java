@@ -694,7 +694,8 @@ public class DB extends SQLiteAssetHelper {
             sb.append("</table>");
             intro = sb.toString();
         } else {
-            intro = String.format(Locale.getDefault(), "<h1>%s</h1>%s<h2>音系說明</h2><h2>同音字表</h2>", language, intro);
+            String phonology = getFieldByLanguage(language, "音系").replace("\n", "<br>");
+            intro = String.format(Locale.getDefault(), "<h1>%s</h1>%s<h2>音系說明</h2>%s<h2>同音字表</h2>", language, intro, phonology);
         }
         return intro;
     }

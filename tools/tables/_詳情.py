@@ -164,7 +164,8 @@ def load():
 				book = f"<a href={target}>{books.value}</a>"
 			else:
 				book = books.value
-		note = fs["說明"].value
+		音系 = fs["音系"].value
+		說明 = fs["說明"].value
 		jf = fs["繁簡"].value
 		for i,c in enumerate(subcolors):
 			if c and c != "000000" and c != colors[i]:
@@ -205,7 +206,8 @@ def load():
 			"維護人":editor,
 			"推薦人":recommend,
 			"參考資料":book,
-			"說明":note,
+			"音系":音系,
+			"說明":說明,
 			"簡繁":jf,
 			"聲調":getTones(tones),
 		}
