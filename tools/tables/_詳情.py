@@ -97,6 +97,11 @@ def getTones(tones):
 			l[str(index)] = (v,str(t8),str(t4),n,m)
 	return json.dumps(l, ensure_ascii=False).lower()
 
+def normNames(s):
+	if not s: return ""
+	s = s.replace("、", ",").replace("，",",")
+	return s
+
 def load():
 	if not outdated():
 		return json.load(open(tpath,encoding="U8"))
@@ -144,11 +149,13 @@ def load():
 		places = [fs[i].value if fs[i].value else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
 		place = ("".join(places)).replace("/", "")
 		island = fs["方言島"].value
+		capital = fs["省會"].value
 		size = fs["地图級別"].value
 		size = size.count("★") if size else 0
 		j = fields.index("[1]陰平")
 		tones = [line[i] for i in range(j,j+10)]
-		editor = fs["錄入人"].value
+		editor = normNames(fs["維護人"].value)
+		recommend = normNames(fs["推薦人"].value)
 		books = fs["來源"]
 		book = None
 		if books.value:
@@ -176,6 +183,7 @@ def load():
 			"文件格式":fileformat,
 			"跳過行數":fileskip,
 			"方言島": island == "☑",
+			"省會": capital == "☑",
 			"地圖集二排序":orders[0],
 			"地圖集二顏色":colors[0],
 			"地圖集二分區":types[0],
@@ -194,7 +202,8 @@ def load():
 			"版本":ver,
 			"經緯度":point,
 			"地圖級別":str(size),
-			"錄入人":editor,
+			"維護人":editor,
+			"推薦人":recommend,
 			"參考資料":book,
 			"說明":note,
 			"簡繁":jf,
@@ -228,7 +237,7 @@ def load():
 		if ver:
 			Feature["properties"]["版本"] = ver
 		if editor:
-			Feature["properties"]["錄入人"] = editor
+			Feature["properties"]["維護人"] = editor
 		if book:
 			Feature["properties"]["參考資料"] = book
 		if jf:
