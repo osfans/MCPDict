@@ -5,6 +5,7 @@ from importlib import import_module
 import tables._詳情
 from tables._詳情 import t2s
 from pypinyin import pinyin, Style
+from collections import defaultdict
 
 辭典 = ["漢字","說文","康熙","匯纂","漢大"]
 辭典數 = len(辭典)
@@ -73,7 +74,7 @@ def getLangs(dicts, argv=None):
 		mods.extend(argv if argv else infos.keys())
 		mods.extend(形碼)
 	types = [dict(),dict(),dict()]
-	省 = set()
+	省 = defaultdict(int)
 	keys = None
 	for mod in mods:
 		if mod in infos:
@@ -93,7 +94,7 @@ def getLangs(dicts, argv=None):
 			addAllFq(types[0], d["地圖集二分區"], d["地圖集二排序"])
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
 			if d["省"]:
-				省.add(d["省"])
+				省[d["省"]] += 1
 			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
 			if d["聲調"]:
 				toneMaps = dict()
@@ -149,11 +150,11 @@ def getLangs(dicts, argv=None):
 		if i not in hz.info: hz.info[i] = None
 	hz.info["字數"] = len(dicts)
 	hz.info["說明"] = "字數：%d<br>語言數：%d<br><br>%s"%(len(dicts), count, hz.note)
-	省 = sorted(省, key=get_pinyin)
-	if "海外" in 省:
-		省.remove("海外")
-		省.append("海外")
-	hz.info["省"] = ",".join(省)
+	省表 = sorted(省.keys(), key=get_pinyin)
+	if "海外" in 省表:
+		省表.remove("海外")
+		省表.append("海外")
+	hz.info["省"] = ",".join([f"{i} ({省[i]})" for i in 省表])
 	hz.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:types[0][x]))
 	hz.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
 	hz.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:types[2][x]))
