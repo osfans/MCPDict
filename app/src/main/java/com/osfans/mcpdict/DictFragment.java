@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -237,6 +239,18 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             Utils.putBool(R.string.pref_key_pfg, isChecked);
             search();
         });
+
+        RadioGroup radioGroup_area = selfView.findViewById(R.id.radioGroup_area);
+        radioGroup_area.setOnCheckedChangeListener((group, checkedId) -> {
+            int n = group.getChildCount();
+            for (int i = 0; i < n; i++) {
+                View radio = group.getChildAt(i);
+                if (radio.getId() == checkedId) Utils.putInt(R.string.pref_key_area_level, i);
+            }
+            search();
+        });
+        RadioButton radioButton = (RadioButton) radioGroup_area.getChildAt(Utils.getInt(R.string.pref_key_area_level, 0));
+        radioButton.setChecked(true);
 
         // Get a reference to the SearchResultFragment
         fragmentResult = (ResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);

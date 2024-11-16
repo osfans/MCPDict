@@ -144,31 +144,32 @@
                     android:layout_weight="2" />
 
                 <RadioGroup
+                    android:id="@+id/radioGroup_area"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checkedButton="@id/radioButton"
+                    android:checkedButton="@id/radioButton_province"
                     android:orientation="horizontal">
 
                     <RadioButton
-                        android:id="@+id/radioButton"
+                        android:id="@+id/radioButton_province"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="省" />
 
                     <RadioButton
-                        android:id="@+id/radioButton2"
+                        android:id="@+id/radioButton_capital"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="省會" />
 
                     <RadioButton
-                        android:id="@+id/radioButton3"
+                        android:id="@+id/radioButton_city"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="市" />
 
                     <RadioButton
-                        android:id="@+id/radioButton4"
+                        android:id="@+id/radioButton_county"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="縣" />
