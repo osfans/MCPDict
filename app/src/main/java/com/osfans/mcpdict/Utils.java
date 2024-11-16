@@ -588,9 +588,9 @@ public class Utils extends Application {
         putStr(R.string.pref_key_division, value);
     }
 
-    public static DB.FILTER_TYPE getFilter() {
+    public static DB.FILTER getFilter() {
         int i = getInt(R.string.pref_key_filters, 0);
-        return DB.FILTER_TYPE.values()[i];
+        return DB.FILTER.values()[i];
     }
 
     public static void putFilter(int value) {

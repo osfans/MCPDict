@@ -321,16 +321,14 @@
     <string name="pref_key_filters">KEY_FILTERS</string>
     <string name="show_languages">顯示語言：</string>
     <string-array name="pref_entries_filters">
-        <item>@string/show_range</item>
-        <item>方言島</item>
+        <item>顯示全部</item>
+        <item>僅方言島</item>
         <item>僅漢字</item>
         <item>當前語言</item>
-        <item>普方古對照</item>
-        <item>@string/pref_title_custom_languages</item>
-        <item>選擇省份</item>
-        <item>市級方言</item>
-        <item>縣級方言</item>
-        <item>選擇分區</item>
+        <item>預選语言</item>
+        <item>@string/custom_languages</item>
+        <item>方言分區</item>
+        <item>行政區</item>
     </string-array>
 
     <string name="pref_key_charset">SHOW_CHARSET</string>
@@ -360,7 +358,7 @@
         <item>kBigFive</item>
     </string-array>
     <string name="pref_key_custom_languages">CUSTOM_LANGUAGES</string>
-    <string name="pref_title_custom_languages">自選語言</string>
+    <string name="custom_languages">自選語言</string>
     <string name="select_custom_language_summary">已選%d個語言：%s</string>
     <string name="pref_key_input">INPUT</string>
     <string name="pref_key_language">LANGUAGE</string>
@@ -404,7 +402,6 @@
     <string name="hz_range">漢字範圍</string>
     <string name="hz_option">漢字選項</string>
     <string name="pref_key_hz_option">KEY_HZ_OPTION</string>
-    <string name="show_range">顯示範圍</string>
     <string name="pref_key_fullscreen">KEY_FULLSCREEN</string>
     <string-array name="pref_entries_font">
         <item>系統字體、文津宋體</item>
@@ -429,8 +426,8 @@
         <item>2</item>
     </string-array>
     <string name="pref_key_type">KEY_TYPE</string>
-    <string name="long_text">長文本(當前語言)</string>
-    <string name="output_table">表格(自選語言)</string>
+    <string name="long_text">長文本注音</string>
+    <string name="output_table">表格</string>
     <string-array name="pref_entries_type">
         <item>漢字</item>
         <item>讀音</item>
@@ -443,4 +440,7 @@
     <string name="province">全部省份</string>
     <string name="pref_key_division">KEY_DIVISION</string>
     <string name="division">全部分區</string>
+    <string name="pfg">普方古對照</string>
+    <string name="hz_only">僅漢字</string>
+    <string name="pref_key_pfg">KEY_PFG</string>
 </resources>

@@ -99,8 +99,8 @@ public class DB extends SQLiteAssetHelper {
         HZ, YIN, YI, DICTIONARY,
     };
 
-    public static enum FILTER_TYPE {
-        ALL, ISLAND, HZ, LANGUAGE, PFG, CUSTOM, PROVINCE, CITY, COUNTY, DIVISION;
+    public static enum FILTER {
+        ALL, ISLAND, HZ, CURRENT, PRESET, CUSTOM, DIVISION, AREA, PROVINCE, CITY, COUNTY;
     }
 
     public static int COL_ALL_LANGUAGES = 1000;
@@ -488,9 +488,9 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static String[] getVisibleColumns(int count) {
-        FILTER_TYPE filter = Utils.getFilter();
-        if (count > 30) filter = FILTER_TYPE.HZ;
-        else if (count > 10 && filter != FILTER_TYPE.HZ && filter != FILTER_TYPE.PFG) filter = FILTER_TYPE.LANGUAGE;
+        FILTER filter = Utils.getFilter();
+        if (count > 30) filter = FILTER.HZ;
+        else if (count > 10 && filter != FILTER.HZ) filter = FILTER.CURRENT;
         String label = Utils.getLabel();
         switch (filter) {
             case PROVINCE -> {
@@ -534,14 +534,15 @@ public class DB extends SQLiteAssetHelper {
             case HZ -> {
                 return new String[]{};
             }
-            case LANGUAGE -> {
-                if (getColumnIndex(label) >= 0) return new String[]{label};
-            }
-            case PFG -> {
-                Set<String> array = new HashSet<>();
-                array.add(GY);
-                array.add(CMN);
-                if (getColumnIndex(label) >= 0) array.add(label);
+            case CURRENT -> {
+                if (getColumnIndex(label) < 0) label = HZ;
+                ArrayList<String> array = new ArrayList<>();
+                array.add(label);
+                boolean pfg = Utils.getBool(R.string.pref_key_pfg, false);
+                if (pfg) {
+                    array.add(GY);
+                    array.add(CMN);
+                }
                 return array.toArray(new String[0]);
             }
         }
@@ -643,7 +644,7 @@ public class DB extends SQLiteAssetHelper {
     }
 
     private static String _getIntro(String language) {
-        if (TextUtils.isEmpty(language) || Utils.getFilter() == FILTER_TYPE.HZ) language = HZ;
+        if (TextUtils.isEmpty(language) || Utils.getFilter() == FILTER.HZ) language = HZ;
         String intro = TextUtils.isEmpty(language) ? "" : getFieldByLanguage(language, "說明").replace("\n", "<br>");
         if (language.contentEquals(HZ)) {
             intro = String.format(Locale.getDefault(), "%s%s<br>%s", Utils.getStringRes(R.string.version), BuildConfig.VERSION_NAME, intro);
