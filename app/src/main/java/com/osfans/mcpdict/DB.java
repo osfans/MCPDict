@@ -95,12 +95,12 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_FIRST_INFO, COL_LAST_INFO;
     public static int COL_FIRST_SHAPE, COL_LAST_SHAPE;
 
-    public static enum SEARCH_TYPE {
+    public enum SEARCH_TYPE {
         HZ, YIN, YI, DICTIONARY,
     };
 
-    public static enum FILTER {
-        ALL, ISLAND, HZ, CURRENT, PRESET, CUSTOM, DIVISION, AREA, PROVINCE, CITY, COUNTY;
+    public enum FILTER {
+        ALL, ISLAND, HZ, CURRENT, PRESET, CUSTOM, DIVISION, AREA
     }
 
     public static int COL_ALL_LANGUAGES = 1000;
@@ -493,14 +493,16 @@ public class DB extends SQLiteAssetHelper {
         else if (count > 10 && filter != FILTER.HZ) filter = FILTER.CURRENT;
         String label = Utils.getLabel();
         switch (filter) {
-            case PROVINCE -> {
+            case AREA -> {
+                int level = Utils.getInt(R.string.pref_key_area_level, 0);
                 String province = Utils.getProvince();
-                if (!TextUtils.isEmpty(province)) {
-                    String[] a = DB.getLabelsByProvince(province);
-                    if (a != null && a.length > 0) {
-                        return a;
-                    }
-                }
+                StringBuilder sb = new StringBuilder();
+                if (!TextUtils.isEmpty(province)) sb.append(String.format("省 = '%s'", province));
+                if (!TextUtils.isEmpty(province) && level > 0) sb.append(" and ");
+                if (level == 1) sb.append("省會");
+                else if (level == 2) sb.append("(length(省) > 0 or length(市) > 0) and length(縣) == 0 and length(鎮) == 0 and length(村) == 0");
+                else if (level == 3) sb.append("length(縣) > 0 and length(鎮) == 0 and length(村) == 0");
+                if (!TextUtils.isEmpty(sb)) return queryLabel(sb.toString());
             }
             case DIVISION -> {
                 String division = Utils.getDivision();
@@ -524,12 +526,6 @@ public class DB extends SQLiteAssetHelper {
             }
             case ISLAND -> {
                 return queryLabel("方言島");
-            }
-            case COUNTY -> {
-                return queryLabel("length(縣) > 0 and length(鎮) == 0 and length(村) == 0");
-            }
-            case CITY -> {
-                return queryLabel("(length(省) > 0 or length(市) > 0) and length(縣) == 0");
             }
             case HZ -> {
                 return new String[]{};

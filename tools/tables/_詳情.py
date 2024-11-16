@@ -146,10 +146,10 @@ def load():
 		types[2] = ",".join(dropdown).strip(",")
 		point = fs["經緯度"].value
 		if point: point = point.replace(" ", "").replace("，",",").strip()
-		places = [fs[i].value if fs[i].value else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
+		places = [fs[i].value.strip("/") if fs[i].value else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
 		place = ("".join(places)).replace("/", "")
 		island = fs["方言島"].value
-		capital = fs["省會"].value
+		省會 = fs["省會"].value
 		size = fs["地图級別"].value
 		size = size.count("★") if size else 0
 		j = fields.index("[1]陰平")
@@ -184,7 +184,6 @@ def load():
 			"文件格式":fileformat,
 			"跳過行數":fileskip,
 			"方言島": island == "☑",
-			"省會": capital == "☑",
 			"地圖集二排序":orders[0],
 			"地圖集二顏色":colors[0],
 			"地圖集二分區":types[0],
@@ -194,6 +193,7 @@ def load():
 			"陳邡排序":orders[2],
 			"陳邡顏色":colors[2],
 			"陳邡分區":s2t(types[2]),
+			"省會": 省會 == "☑",
 			"省":s2t(places[0]).strip("*"),
 			"市":places[1],
 			"縣":places[2],

@@ -443,4 +443,5 @@
     <string name="pfg">普方古對照</string>
     <string name="hz_only">僅漢字</string>
     <string name="pref_key_pfg">KEY_PFG</string>
+    <string name="pref_key_area_level">KEY_AREA_LEVEL</string>
 </resources>
