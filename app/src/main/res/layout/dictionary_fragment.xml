@@ -154,7 +154,7 @@
                         android:id="@+id/radioButton_province"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="省" />
+                        android:text="不限" />
 
                     <RadioButton
                         android:id="@+id/radioButton_capital"

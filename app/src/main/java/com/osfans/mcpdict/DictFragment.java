@@ -60,7 +60,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         searchView = selfView.findViewById(R.id.search_view);
         searchView.setSearchButtonOnClickListener(view -> {
             refresh();
-            fragmentResult.scrollToTop();
+            if (fragmentResult != null)fragmentResult.scrollToTop();
         });
 //        String query = searchView.getQuery();
 //        if (!TextUtils.isEmpty(query)) searchView.setQuery(query);
