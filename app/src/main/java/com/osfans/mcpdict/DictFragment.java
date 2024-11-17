@@ -143,6 +143,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         selfView.findViewById(R.id.layout_current).setTag(FILTER.CURRENT);
         selfView.findViewById(R.id.layout_custom).setTag(FILTER.CUSTOM);
         selfView.findViewById(R.id.layout_division).setTag(FILTER.DIVISION);
+        selfView.findViewById(R.id.layout_preset).setTag(FILTER.PRESET);
 
         spinnerProvinces = selfView.findViewById(R.id.spinner_provinces);
         adapterProvince = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
