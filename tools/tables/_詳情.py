@@ -146,10 +146,24 @@ def load():
 		types[2] = ",".join(dropdown).strip(",")
 		point = fs["經緯度"].value
 		if point: point = point.replace(" ", "").replace("，",",").strip()
-		places = [fs[i].value.strip("/") if fs[i].value else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
+		places = [fs[i].value if fs[i].value else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
 		place = ("".join(places)).replace("/", "")
 		island = fs["方言島"].value
-		省會 = fs["省會"].value
+		行政區級別 = fs["行政區級別"].value
+		if not 行政區級別:
+			行政區級別 = "省會,地級" if fs["省會"].value == "☑" else ""
+		if not 行政區級別:
+			n = 5 - places.count("")
+			if n == 1:
+				行政區級別 = "省級"
+			elif n == 2:
+				行政區級別 = "地級"
+			elif n == 3:
+				行政區級別 = "縣級"
+			elif n == 4:
+				行政區級別 = "鄕級"
+			elif n == 5:
+				行政區級別 = "村級"
 		size = fs["地图級別"].value
 		size = size.count("★") if size else 0
 		j = fields.index("[1]陰平")
@@ -193,7 +207,7 @@ def load():
 			"陳邡排序":orders[2],
 			"陳邡顏色":colors[2],
 			"陳邡分區":s2t(types[2]),
-			"省會": 省會 == "☑",
+			"行政區級別": 行政區級別,
 			"省":s2t(places[0]).strip("*"),
 			"市":places[1],
 			"縣":places[2],

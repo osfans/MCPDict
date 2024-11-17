@@ -241,17 +241,18 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             search();
         });
 
-        RadioGroup radioGroup_area = selfView.findViewById(R.id.radioGroup_area);
-        radioGroup_area.setOnCheckedChangeListener((group, checkedId) -> {
-            int n = group.getChildCount();
-            for (int i = 0; i < n; i++) {
-                View radio = group.getChildAt(i);
-                if (radio.getId() == checkedId) Utils.putInt(R.string.pref_key_area_level, i);
+        Spinner spinnerAreaLevel = selfView.findViewById(R.id.spinner_area_level);
+        spinnerAreaLevel.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
+                Utils.putInt(R.string.pref_key_area_level, i);
+                search();
             }
-            search();
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
-        RadioButton radioButton = (RadioButton) radioGroup_area.getChildAt(Utils.getInt(R.string.pref_key_area_level, 0));
-        radioButton.setChecked(true);
+        spinnerAreaLevel.setSelection(Utils.getInt(R.string.pref_key_area_level, 0));
 
         // Get a reference to the SearchResultFragment
         fragmentResult = (ResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);

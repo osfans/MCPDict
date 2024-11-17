@@ -444,4 +444,12 @@
     <string name="hz_only">僅漢字</string>
     <string name="pref_key_pfg">KEY_PFG</string>
     <string name="pref_key_area_level">KEY_AREA_LEVEL</string>
+    <string-array name="entries_area_level">
+        <item>不限</item>
+        <item>省會</item>
+        <item>地級</item>
+        <item>縣級</item>
+        <item>鄕級</item>
+        <item>村級</item>
+    </string-array>
 </resources>
