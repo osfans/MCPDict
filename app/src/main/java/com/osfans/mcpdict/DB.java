@@ -499,9 +499,10 @@ public class DB extends SQLiteAssetHelper {
                 StringBuilder sb = new StringBuilder();
                 if (!TextUtils.isEmpty(province)) sb.append(String.format("省 = '%s'", province));
                 if (!TextUtils.isEmpty(province) && level > 0) sb.append(" and ");
-                if (level == 1) sb.append("省會");
-                else if (level == 2) sb.append("(length(省) > 0 or length(市) > 0) and length(縣) == 0 and length(鎮) == 0 and length(村) == 0");
-                else if (level == 3) sb.append("length(縣) > 0 and length(鎮) == 0 and length(村) == 0");
+                if (level > 0) {
+                    String[] levels = Utils.getStringArray(R.array.entries_area_level);
+                    sb.append(String.format("行政區級別 match '%s'", levels[level]));
+                }
                 if (!TextUtils.isEmpty(sb)) return queryLabel(sb.toString());
             }
             case DIVISION -> {

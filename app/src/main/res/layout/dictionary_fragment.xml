@@ -133,7 +133,7 @@
 
             <LinearLayout
                 android:id="@+id/layout_area"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -141,39 +141,15 @@
                     android:id="@+id/spinner_provinces"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2" />
+                    android:layout_weight="1" />
 
-                <RadioGroup
-                    android:id="@+id/radioGroup_area"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checkedButton="@id/radioButton_province"
-                    android:orientation="horizontal">
+                <Spinner
+                    android:id="@+id/spinner_area_level"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:entries="@array/entries_area_level" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton_province"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="不限" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton_capital"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="省會" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton_city"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="市" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton_county"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="縣" />
-                </RadioGroup>
             </LinearLayout>
 
             <LinearLayout
@@ -191,7 +167,7 @@
 
                 <CheckBox
                     android:id="@+id/checkBox_output_long"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:enabled="false"
