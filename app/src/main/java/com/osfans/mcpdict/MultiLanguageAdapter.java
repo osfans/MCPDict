@@ -2,29 +2,26 @@ package com.osfans.mcpdict;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.CheckedTextView;
 
 import java.util.Set;
 
 public class MultiLanguageAdapter extends LanguageAdapter {
-    int mColorHighlight;
     View.OnClickListener onClick = null;
 
     public MultiLanguageAdapter(Context context, Cursor c, boolean autoRequery) {
         super(context, c, autoRequery);
-        mColorHighlight = Utils.obtainColor(context, android.R.attr.textColorHighlight);
     }
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         String language = convertToString(cursor).toString();
         Set<String> set = Utils.getCustomLanguages();
-        TextView tv = (TextView)view;
+        CheckedTextView tv = (CheckedTextView)view;
         tv.setText(language);
-        tv.setBackgroundColor(set.contains(language) ? mColorHighlight : Color.TRANSPARENT);
+        tv.setChecked(set.contains(language));
     }
 
     public void setOnItemClickListener(View.OnClickListener onClick) {

@@ -15,10 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -83,6 +80,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         layoutSearchLang = selfView.findViewById(R.id.layout_search_lang);
 
         Spinner spinnerCharset = selfView.findViewById(R.id.spinner_charset);
+        ((ArrayAdapter<?>)spinnerCharset.getAdapter()).setDropDownViewResource(R.layout.spinner_item);
         spinnerCharset.setSelection(Utils.getInt(R.string.pref_key_charset, 0));
         spinnerCharset.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
@@ -93,8 +91,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
         });
-
         spinnerType = selfView.findViewById(R.id.spinner_type);
+        ((ArrayAdapter<?>)spinnerType.getAdapter()).setDropDownViewResource(R.layout.spinner_item);
         spinnerType.setSelection(Utils.getInt(R.string.pref_key_type, 0));
         spinnerType.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
@@ -110,8 +108,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
 
         spinnerDict = selfView.findViewById(R.id.spinner_dict);
-        adapterDict = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
-        adapterDict.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapterDict = new ArrayAdapter<>(requireActivity(), R.layout.spinner_item);
         spinnerDict.setAdapter(adapterDict);
         spinnerDict.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
@@ -125,8 +122,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
 
         spinnerShape = selfView.findViewById(R.id.spinner_shape);
-        adapterShape = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
-        adapterShape.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapterShape = new ArrayAdapter<>(requireActivity(), R.layout.spinner_item);
+        adapterShape.setDropDownViewResource(R.layout.spinner_item);
         spinnerShape.setAdapter(adapterShape);
         spinnerShape.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
@@ -146,8 +143,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         selfView.findViewById(R.id.layout_preset).setTag(FILTER.PRESET);
 
         spinnerProvinces = selfView.findViewById(R.id.spinner_provinces);
-        adapterProvince = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item);
-        adapterProvince.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapterProvince = new ArrayAdapter<>(requireActivity(), R.layout.spinner_item);
+        adapterProvince.setDropDownViewResource(R.layout.spinner_item);
         spinnerProvinces.setAdapter(adapterProvince);
         spinnerProvinces.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
@@ -161,13 +158,12 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
 
         spinnerDivisions = selfView.findViewById(R.id.spinner_divisions);
-        adapterDivisions = new AdapterDivisions(requireActivity(), android.R.layout.simple_spinner_item);
+        adapterDivisions = new AdapterDivisions(requireActivity(), R.layout.spinner_item);
         spinnerDivisions.setAdapter(adapterDivisions);
         spinnerDivisions.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String value = adapterDivisions.getItem(position).toString();
-                adapterDivisions.setSelection(position);
                 Utils.putDivision(value);
                 search();
             }
@@ -222,6 +218,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
 
         Spinner spinnerFilters = selfView.findViewById(R.id.spinner_filters);
+        ((ArrayAdapter<?>)spinnerFilters.getAdapter()).setDropDownViewResource(R.layout.spinner_item);
         spinnerFilters.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -244,6 +241,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
 
         Spinner spinnerAreaLevel = selfView.findViewById(R.id.spinner_area_level);
+        ((ArrayAdapter<?>)spinnerAreaLevel.getAdapter()).setDropDownViewResource(R.layout.spinner_item);
         spinnerAreaLevel.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
