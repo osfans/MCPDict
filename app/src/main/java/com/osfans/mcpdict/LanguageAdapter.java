@@ -18,7 +18,7 @@ public class LanguageAdapter extends CursorAdapter {
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
-        return LayoutInflater.from(context).inflate(R.layout.custom_spinner_dropdown_item, parent, false);
+        return LayoutInflater.from(context).inflate(R.layout.spinner_item, parent, false);
     }
 
     @Override
