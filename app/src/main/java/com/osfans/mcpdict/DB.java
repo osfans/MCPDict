@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import android.graphics.Color;
 import android.text.TextUtils;
 
+import com.osfans.mcpdict.Orth.*;
+import com.osfans.mcpdict.Util.UserDatabase;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 import org.json.JSONException;
@@ -15,7 +17,6 @@ import org.osmdroid.util.GeoPoint;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
@@ -163,28 +164,28 @@ public class DB extends SQLiteAssetHelper {
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
         if (type == 2){ //yi
-            if (Orthography.HZ.isHz(input)) {
-                String hzs = Utils.normInput(input);
+            if (HanZi.isHz(input)) {
+                String hzs = DisplayHelper.normInput(input);
                 if (!TextUtils.isEmpty(hzs)) keywords.add(hzs);
             }
         }
-        else if (Orthography.HZ.isBH(input)) lang = BH;
-        else if (Orthography.HZ.isBS(input)) {
+        else if (HanZi.isBH(input)) lang = BH;
+        else if (HanZi.isBS(input)) {
             lang = BS;
             input = input.replace("-", "f");
         } else if (!TextUtils.isEmpty(shape)) { //WB, CJ, LF
             // not search hz
-        } else if (Orthography.HZ.isHz(input)) {
+        } else if (HanZi.isHz(input)) {
             lang = HZ;
-        } else if (Orthography.HZ.isUnicode(input)) {
-            input = Orthography.HZ.toHz(input);
+        } else if (HanZi.isUnicode(input)) {
+            input = HanZi.toHz(input);
             lang = HZ;
-        } else if (Orthography.HZ.isPY(input) && !isLang(lang)) lang = CMN;
+        } else if (HanZi.isPY(input) && !isLang(lang)) lang = CMN;
         if (type == 1 && isHzMode(lang)) type = 0;
         if (isHzMode(lang) && type == 0) {     // Each character is a query
             for (int unicode : input.codePoints().toArray()) {
-                if (!Orthography.HZ.isHz(unicode)) continue;
-                String hz = Orthography.HZ.toHz(unicode);
+                if (!HanZi.isHz(unicode)) continue;
+                String hz = HanZi.toHz(unicode);
                 if (keywords.contains(hz)) continue;
                 keywords.add(hz);
             }
@@ -193,7 +194,7 @@ public class DB extends SQLiteAssetHelper {
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < input.length(); i++) {
                     char c = input.charAt(i);
-                    if (Orthography.Korean.isHangul(c)) {
+                    if (Korean.isHangul(c)) {
                         sb.append(" ").append(c).append(" ");
                     }
                     else {
@@ -207,28 +208,28 @@ public class DB extends SQLiteAssetHelper {
                 token = token.toLowerCase(Locale.US);
                 // Canonicalization
                 switch (lang) {
-                    case CMN: token = Orthography.Mandarin.canonicalize(token); break;
-                    case HK: token = Orthography.Cantonese.canonicalize(token, cantoneseSystem); break;
+                    case CMN: token = Mandarin.canonicalize(token); break;
+                    case HK: token = Cantonese.canonicalize(token, cantoneseSystem); break;
                     case KOR:
-                        token = Orthography.Korean.canonicalize(token); break;
-                    case VI: token = Orthography.Vietnamese.canonicalize(token); break;
+                        token = Korean.canonicalize(token); break;
+                    case VI: token = Vietnamese.canonicalize(token); break;
                     case JA_KAN:
                     case JA_GO:
                     case JA_OTHER:
-                        token = Orthography.Japanese.canonicalize(token); break;
+                        token = Japanese.canonicalize(token); break;
                     default:
                         break;
                 }
                 if (token == null) continue;
                 List<String> allTones = null;
-                if ((token.endsWith("?") || !Orthography.Tones.hasTone(token)) && hasTone(lang)) {
+                if ((token.endsWith("?") || !Tones.hasTone(token)) && hasTone(lang)) {
                     if (token.endsWith("?")) token = token.substring(0, token.length()-1);
                     allTones = switch (lang) {
-                        case GY -> Orthography.MiddleChinese.getAllTones(token);
-                        case CMN -> Orthography.Mandarin.getAllTones(token);
-                        case HK -> Orthography.Cantonese.getAllTones(token);
-                        case VI -> Orthography.Vietnamese.getAllTones(token);
-                        default -> Orthography.Tones.getAllTones(token, lang);
+                        case GY -> MiddleChinese.getAllTones(token);
+                        case CMN -> Mandarin.getAllTones(token);
+                        case HK -> Cantonese.getAllTones(token);
+                        case VI -> Vietnamese.getAllTones(token);
+                        default -> Tones.getAllTones(token, lang);
                     };
                 }
                 if (allTones != null) {
@@ -790,9 +791,9 @@ public class DB extends SQLiteAssetHelper {
 
     public static String getUnicode(Cursor cursor) {
         String hz = cursor.getString(COL_HZ);
-        String s = Orthography.HZ.toUnicode(hz);
+        String s = HanZi.toUnicode(hz);
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("<p>【統一碼】%s %s</p>", s, Orthography.HZ.getUnicodeExt(hz)));
+        sb.append(String.format("<p>【統一碼】%s %s</p>", s, HanZi.getUnicodeExt(hz)));
         for (int j = DB.COL_FIRST_INFO; j <= DB.COL_LAST_INFO; j++) {
             s = cursor.getString(j);
             if (TextUtils.isEmpty(s)) continue;

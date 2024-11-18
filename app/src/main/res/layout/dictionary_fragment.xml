@@ -20,13 +20,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.osfans.mcpdict.MySearchView
+        <com.osfans.mcpdict.UI.MySearchView
             android:id="@+id/search_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4">
 
-        </com.osfans.mcpdict.MySearchView>
+        </com.osfans.mcpdict.UI.MySearchView>
 
         <Button
             android:id="@+id/button_fullscreen"

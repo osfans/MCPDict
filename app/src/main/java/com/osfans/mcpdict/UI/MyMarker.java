@@ -1,9 +1,11 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.UI;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
+
+import com.osfans.mcpdict.Utils;
 
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.Marker;

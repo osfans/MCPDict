@@ -1,4 +1,4 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.UI;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

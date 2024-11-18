@@ -1,4 +1,4 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.Adapter;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.cursoradapter.widget.CursorAdapter;
+
+import com.osfans.mcpdict.DB;
+import com.osfans.mcpdict.R;
 
 public class LanguageAdapter extends CursorAdapter {
 

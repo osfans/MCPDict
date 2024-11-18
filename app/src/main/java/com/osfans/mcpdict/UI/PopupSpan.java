@@ -1,8 +1,10 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.UI;
 
 import android.text.TextPaint;
 import android.text.style.ClickableSpan;
 import android.view.View;
+
+import com.osfans.mcpdict.Utils;
 
 public class PopupSpan extends ClickableSpan {
     CharSequence text;

@@ -2,9 +2,6 @@ package com.osfans.mcpdict;
 
 import static com.osfans.mcpdict.DB.COL_GYHZ;
 import static com.osfans.mcpdict.DB.COL_HD;
-import static com.osfans.mcpdict.DB.COL_HZ;
-import static com.osfans.mcpdict.DB.COL_KX;
-import static com.osfans.mcpdict.DB.COL_SW;
 
 import android.app.Application;
 import android.app.Dialog;
@@ -27,6 +24,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
+import com.osfans.mcpdict.Orth.*;
+import com.osfans.mcpdict.UI.MyWebView;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
@@ -36,33 +36,13 @@ import java.util.Set;
 public class Utils extends Application {
     private static Utils mApp;
     private static Typeface tfHan, tfHanTone, tfIPA, tfIPATone;
-    private static final String PAGE_FORMAT = "(\\d+)\\.(\\d+)";
 
     public Utils() {
         mApp = this;
     }
 
-    public static CharSequence getRichText(String richTextString) {
-        String s = richTextString
-                .replace("\n", "<br/>")
-                .replaceAll("\\*(.+?)\\*", "<b>$1</b>")
-                .replaceAll("\\|(.+?)\\|", "<span style='color: #808080;'>$1</span>");
-        int i = getDisplayFormat();
-        if (i == 1) {
-            s = s.replace("{", "<small><small>").replace("}", "</small></small>");
-        } else if (i == 2) {
-            s = s.replace("{", "<div class=desc>").replace("}", "</div>");
-        }
-        return s;
-    }
-
-    public static String formatJS(String s) {
-        return s.replace("  ", "　").replace(" ", "").replace("　", " ");
-    }
-
-    public static String getRawText(String s) {
-        if (TextUtils.isEmpty(s)) return "";
-        return s.replaceAll("[|*\\[\\]]", "").replaceAll("\\{.*?\\}", "");
+    public static Context getContext() {
+        return mApp;
     }
 
     public static SharedPreferences getPreference() {
@@ -118,11 +98,15 @@ public class Utils extends Application {
         return mApp.getString(key);
     }
 
+    public static String getStringRes(int key, Object... formatArgs) {
+        return mApp.getString(key, formatArgs);
+    }
+
     public static String[] getStringArray(int id) {
         return mApp.getResources().getStringArray(id);
     }
 
-    private static final Displayer sgDisplayer = new Displayer() {
+    private static final DisplayHelper SG_DISPLAY_HELPER = new DisplayHelper() {
         public String displayOne(String s) {
             return s;
         }
@@ -132,9 +116,9 @@ public class Utils extends Application {
         }
     };
 
-    private static final Displayer gyDisplayer = new Displayer() {
+    private static final DisplayHelper GY_DISPLAY_HELPER = new DisplayHelper() {
         public String displayOne(String s) {
-            return Orthography.MiddleChinese.display(s, getToneStylesIndex(R.string.pref_key_mc_display));
+            return MiddleChinese.display(s, getToneStylesIndex(R.string.pref_key_mc_display));
         }
 
         public boolean isIPA(char c) {
@@ -142,9 +126,9 @@ public class Utils extends Application {
         }
     };
 
-    private static final Displayer zyyyDisplayer = new Displayer() {
+    private static final DisplayHelper ZYYY_DISPLAY_HELPER = new DisplayHelper() {
         public String displayOne(String s) {
-            return Orthography.ZhongyuanYinyun.display(s, getToneStyles(R.string.pref_key_zyyy_display));
+            return ZhongyuanYinyun.display(s, getToneStyles(R.string.pref_key_zyyy_display));
         }
 
         public boolean isIPA(char c) {
@@ -152,9 +136,9 @@ public class Utils extends Application {
         }
     };
 
-    private static final Displayer dgyDisplayer = new Displayer() {
+    private static final DisplayHelper DGY_DISPLAY_HELPER = new DisplayHelper() {
         public String displayOne(String s) {
-            return Orthography.Dongganyu.display(s, getToneStyles(R.string.pref_key_dgy_display));
+            return Dongganyu.display(s, getToneStyles(R.string.pref_key_dgy_display));
         }
 
         private static boolean isCyrillic(char ch) {
@@ -168,51 +152,51 @@ public class Utils extends Application {
         }
     };
 
-    private static final Displayer cmnDisplayer = new Displayer() {
+    private static final DisplayHelper CMN_DISPLAY_HELPER = new DisplayHelper() {
         public String displayOne(String s) {
-            return Orthography.Mandarin.display(s, getToneStyle(R.string.pref_key_mandarin_display));
+            return Mandarin.display(s, getToneStyle(R.string.pref_key_mandarin_display));
         }
     };
 
-    private static final Displayer hkDisplayer = new Displayer() {
+    private static final DisplayHelper HK_DISPLAY_HELPER = new DisplayHelper() {
         public String displayOne(String s) {
-            return Orthography.Cantonese.display(s, getToneStyle(R.string.pref_key_cantonese_romanization));
+            return Cantonese.display(s, getToneStyle(R.string.pref_key_cantonese_romanization));
         }
     };
 
-    private static final Displayer twDisplayer = new Displayer() {
+    private static final DisplayHelper TW_DISPLAY_HELPER = new DisplayHelper() {
         public String displayOne(String s) {
-            return Orthography.Minnan.display(s, getToneStyle(R.string.pref_key_minnan_display));
+            return Minnan.display(s, getToneStyle(R.string.pref_key_minnan_display));
         }
     };
 
-    private static final Displayer baDisplayer = new Displayer() {
+    private static final DisplayHelper BA_DISPLAY_HELPER = new DisplayHelper() {
         public String displayOne(String s) {
             return s;
         }
     };
 
-    private static final Displayer toneDisplayer = new Displayer() {
+    private static final DisplayHelper TONE_DISPLAY_HELPER = new DisplayHelper() {
         public String displayOne(String s) {
-            return Orthography.Tones.display(s, getLang());
+            return Tones.display(s, getLang());
         }
     };
 
-    private static final Displayer korDisplayer = new Displayer() {
+    private static final DisplayHelper KOR_DISPLAY_HELPER = new DisplayHelper() {
         public String displayOne(String s) {
-            return Orthography.Korean.display(s, getToneStyle(R.string.pref_key_korean_display));
+            return Korean.display(s, getToneStyle(R.string.pref_key_korean_display));
         }
     };
 
-    private static final Displayer viDisplayer = new Displayer() {
+    private static final DisplayHelper VI_DISPLAY_HELPER = new DisplayHelper() {
         public String displayOne(String s) {
-            return Orthography.Vietnamese.display(s, getToneStyle(R.string.pref_key_vietnamese_tone_position));
+            return Vietnamese.display(s, getToneStyle(R.string.pref_key_vietnamese_tone_position));
         }
     };
 
-    private static final Displayer jaDisplayer = new Displayer() {
+    private static final DisplayHelper JA_DISPLAY_HELPER = new DisplayHelper() {
         public String displayOne(String s) {
-            return Orthography.Japanese.display(s, getToneStyle(R.string.pref_key_japanese_display));
+            return Japanese.display(s, getToneStyle(R.string.pref_key_japanese_display));
         }
     };
 
@@ -220,80 +204,21 @@ public class Utils extends Application {
         CharSequence cs;
         if (TextUtils.isEmpty(string)) return "";
         cs = switch (lang) {
-            case DB.SG -> getRichText(sgDisplayer.display(string, lang));
-            case DB.BA -> baDisplayer.display(string, lang);
-            case DB.GY -> getRichText(gyDisplayer.display(string, lang));
-            case DB.ZYYY -> getRichText(zyyyDisplayer.display(string, lang));
-            case DB.DGY -> getRichText(dgyDisplayer.display(string, lang));
-            case DB.CMN -> getRichText(cmnDisplayer.display(string, lang));
-            case DB.HK -> hkDisplayer.display(string, lang);
-            case DB.TW -> getRichText(twDisplayer.display(string, lang));
-            case DB.KOR -> korDisplayer.display(string, lang);
-            case DB.VI -> viDisplayer.display(string, lang);
-            case DB.JA_GO, DB.JA_KAN, DB.JA_OTHER -> getRichText(jaDisplayer.display(string, lang));
-            default -> getRichText(toneDisplayer.display(string, lang));
+            case DB.BA -> BA_DISPLAY_HELPER.display(string, lang);
+            case DB.HK -> HK_DISPLAY_HELPER.display(string, lang);
+            case DB.KOR -> KOR_DISPLAY_HELPER.display(string, lang);
+            case DB.VI -> VI_DISPLAY_HELPER.display(string, lang);
+
+            case DB.SG -> SG_DISPLAY_HELPER.displayRich(string, lang);
+            case DB.GY -> GY_DISPLAY_HELPER.displayRich(string, lang);
+            case DB.ZYYY -> ZYYY_DISPLAY_HELPER.displayRich(string, lang);
+            case DB.DGY -> DGY_DISPLAY_HELPER.displayRich(string, lang);
+            case DB.CMN -> CMN_DISPLAY_HELPER.displayRich(string, lang);
+            case DB.TW -> TW_DISPLAY_HELPER.displayRich(string, lang);
+            case DB.JA_GO, DB.JA_KAN, DB.JA_OTHER -> JA_DISPLAY_HELPER.displayRich(string, lang);
+            default -> TONE_DISPLAY_HELPER.displayRich(string, lang);
         };
         return cs;
-    }
-
-    public static String normWord(String s) {
-        if (TextUtils.isEmpty(s)) return "";
-        StringBuilder sb = new StringBuilder();
-        for (int unicode : s.codePoints().toArray()) {
-            boolean isHZ = Orthography.HZ.isHz(unicode);
-            if (isHZ) {
-                sb.append(" ");
-            }
-            sb.appendCodePoint(unicode);
-            if (isHZ) {
-                sb.append(" ");
-            }
-        }
-        return String.format("\"%s\"", sb.toString().trim().replace("  ", " "));
-    }
-
-    public static String normInput(String s) {
-        String[] ss = s.split(" ");
-        String[] newSS = new String[ss.length];
-        int i = 0;
-        for (String word : ss) {
-            String newWord = normWord(word);
-            newSS[i] = newWord;
-            i++;
-        }
-        return String.format("'%s'", String.join(" ", newSS));
-    }
-
-    public static CharSequence formatUnknownIPA(String lang, String string) {
-        StringBuilder sb = new StringBuilder();
-        String s = string.replace("}\t", "}\n");
-        String input = getInput();
-        if (Orthography.HZ.isUnknown(input)) sb.append(s);
-        else {
-            String[] inputs = input.split("[, ]+");
-            for (String i : s.split("\n")) {
-                String i2 = i.replace(" ", "");
-                for (String j: inputs) {
-                    if (i2.contains(j)) {
-                        sb.append(i).append("\n");
-                        break;
-                    }
-                }
-            }
-        }
-        return formatIPA(lang, sb.toString());
-    }
-
-    public static CharSequence formatPopUp(String hz, int i, String s) {
-        if (TextUtils.isEmpty(s)) return "";
-        if (i != COL_HZ) s = formatJS(s);
-        if (i == COL_SW) s = s.replace("{", "<small>").replace("}", "</small>");
-        else if (i == COL_KX) s = s.replaceAll(PAGE_FORMAT, "<a href=https://www.kangxizidian.com/v1/index.php?page=$1>第$1頁</a>第$2字");
-        else if (i == COL_GYHZ) s = mApp.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceFirst(PAGE_FORMAT, "第$1頁第$2字");
-        else if (i == COL_HD) s = mApp.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceAll(PAGE_FORMAT, "<a href=https://homeinmists.ilotus.org/hd/png/$1.png>第$1頁</a>第$2字").replace("lv", "lü").replace("nv", "nü");
-        String[] fs = (s + "\n").split("\n", 2);
-        String text = String.format("<p><big><big><big>%s</big></big></big> %s</p><br><p>%s</p>", hz, fs[0], fs[1].replace("\n", "<br/>"));
-        return HtmlCompat.fromHtml(text, HtmlCompat.FROM_HTML_MODE_COMPACT);
     }
 
     public static boolean useFontTone() {
@@ -450,7 +375,7 @@ public class Utils extends Application {
     public static void help(Context context) {
         MyWebView webView = new MyWebView(context, null);
         webView.loadUrl("file:///android_asset/help/index.htm");
-        new AlertDialog.Builder(context, androidx.appcompat.R.style.Theme_AppCompat_DayNight_NoActionBar)
+        new AlertDialog.Builder(context, R.style.Theme_AppCompat_DayNight_NoActionBar)
                 .setView(webView)
                 .show();
     }
@@ -519,8 +444,8 @@ public class Utils extends Application {
         Set<String> customs = Utils.getStrSet(key);
         if (customs.isEmpty()) return customs;
         Set<String> set = new HashSet<>();
-        String[] langs = DB.getLanguages();
-        for (String lang: langs) {
+        String[] languages = DB.getLanguages();
+        for (String lang: languages) {
             if (customs.contains(lang)) {
                 set.add(lang);
             }

@@ -1,4 +1,4 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.UI;
 
 import android.content.Context;
 import android.text.Editable;
@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.osfans.mcpdict.R;
+import com.osfans.mcpdict.Utils;
 
 public class MySearchView extends ConstraintLayout {
 

@@ -1,4 +1,4 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.Favorite;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -15,6 +15,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.osfans.mcpdict.DB;
+import com.osfans.mcpdict.R;
+import com.osfans.mcpdict.ResultFragment;
+import com.osfans.mcpdict.Utils;
 
 @SuppressLint("UseSparseArrays")
 public class FavoriteAdapter extends CursorAdapter {

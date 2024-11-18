@@ -1,6 +1,10 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.UI;
 
 import android.webkit.JavascriptInterface;
+
+import com.osfans.mcpdict.DisplayHelper;
+import com.osfans.mcpdict.ResultFragment;
+import com.osfans.mcpdict.Utils;
 
 public class MyWeb {
     MyWebView mWebView;
@@ -20,7 +24,7 @@ public class MyWeb {
 
     @JavascriptInterface
     public void showDict(String hz, int i, String text) {
-        getFragment().requireActivity().runOnUiThread(() -> Utils.showDict(getFragment().getContext(), i, Utils.formatPopUp(hz, i, text)));
+        getFragment().requireActivity().runOnUiThread(() -> Utils.showDict(getFragment().getContext(), i, DisplayHelper.formatPopUp(hz, i, text)));
     }
 
     @JavascriptInterface
