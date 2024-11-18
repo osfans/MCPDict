@@ -533,13 +533,12 @@ public class DB extends SQLiteAssetHelper {
                 return new String[]{};
             }
             case CURRENT -> {
-                if (getColumnIndex(label) < 0) label = HZ;
                 ArrayList<String> array = new ArrayList<>();
-                array.add(label);
+                if (!TextUtils.isEmpty(label) && !label.contentEquals(HZ)) array.add(label);
                 boolean pfg = Utils.getBool(R.string.pref_key_pfg, false);
                 if (pfg) {
-                    array.add(GY);
-                    array.add(CMN);
+                    if(!label.contentEquals(GY)) array.add(GY);
+                    if(!label.contentEquals(CMN)) array.add(CMN);
                 }
                 return array.toArray(new String[0]);
             }

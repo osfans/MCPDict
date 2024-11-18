@@ -22,18 +22,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 
 import com.osfans.mcpdict.Adapter.DivisionAdapter;
 import com.osfans.mcpdict.Adapter.LanguageAdapter;
 import com.osfans.mcpdict.Adapter.MultiLanguageAdapter;
 import com.osfans.mcpdict.DB.FILTER;
-import com.osfans.mcpdict.UI.MySearchView;
 
 public class DictFragment extends Fragment implements RefreshableFragment {
 
     private View selfView;
-    private MySearchView searchView;
+    private SearchView searchView;
     private Spinner spinnerShape,  spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions;
     private AutoCompleteTextView acSearchLang, acCustomLang;
     private ResultFragment fragmentResult;
@@ -58,10 +58,28 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
         // Set up the search view
         searchView = selfView.findViewById(R.id.search_view);
-        searchView.setSearchButtonOnClickListener(view -> {
-            refresh();
-            if (fragmentResult != null)fragmentResult.scrollToTop();
+        searchView.setIconified(false);
+        //searchView.setIconifiedByDefault(false);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                refresh(query);
+                searchView.clearFocus();
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                //do something
+                //当没有输入任何内容的时候清除结果，看实际需求
+                //if (TextUtils.isEmpty(newText)) mSearchResult.setVisibility(View.INVISIBLE);
+                if (TextUtils.isEmpty(newText)) {
+                    refresh(newText);
+                }
+                return false;
+            }
         });
+
 //        String query = searchView.getQuery();
 //        if (!TextUtils.isEmpty(query)) searchView.setQuery(query);
 
@@ -274,7 +292,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 return false;
             }
         };
-        searchView.findViewById(R.id.text_query).setOnTouchListener(listener);
+        searchView.findViewById(R.id.search_src_text).setOnTouchListener(listener);
         selfView.setClickable(true);
         selfView.setOnTouchListener(listener);
         return selfView;
@@ -303,7 +321,10 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             }
             @Override
             protected void onPostExecute(Cursor cursor) {
-                fragmentResult.setData(cursor);
+                if (fragmentResult != null) {
+                    fragmentResult.setData(cursor);
+                    fragmentResult.scrollToTop();
+                }
             }
         }.execute();
     }
@@ -372,8 +393,13 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     }
 
     public void refresh(String query, String label) {
-        searchView.setQuery(query);
+        searchView.setQuery(query, false);
         Utils.putLabel(label);
+        refresh(query);
+    }
+
+    public void refresh(String query) {
+        Utils.putInput(query);
         refreshSearchLang();
         refresh();
     }
@@ -407,6 +433,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     }
     
     private void search() {
-        searchView.clickSearchButton();
+        searchView.setQuery(searchView.getQuery(), true);
     }
 }
