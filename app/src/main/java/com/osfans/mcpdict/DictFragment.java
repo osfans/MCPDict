@@ -193,18 +193,20 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
 
         acCustomLang = selfView.findViewById(R.id.text_custom_lang);
-        acCustomLang.setAdapter(new MultiLanguageAdapter(requireContext(), null, true));
-        acCustomLang.setOnFocusChangeListener((v, b) -> {
-            if (b) ((AutoCompleteTextView)v).showDropDown();
-        });
-        acCustomLang.setHint(Utils.getCustomLanguageSummary());
-        acCustomLang.setOnItemClickListener((adapterView, view, i, l) -> {
+        MultiLanguageAdapter acAdapter = new MultiLanguageAdapter(requireContext(), null, true);
+        acAdapter.setOnItemClickListener(view -> {
             TextView tv = (TextView) view;
             String lang = tv.getText().toString();
             Utils.putCustomLanguage(lang);
-            acCustomLang.setText("");
             refreshCustomLanguage();
         });
+        acCustomLang.setAdapter(acAdapter);
+        acCustomLang.setOnFocusChangeListener((v, b) -> {
+            AutoCompleteTextView tv = (AutoCompleteTextView)v;
+            if (b) tv.showDropDown();
+            else tv.setText("");
+        });
+        acCustomLang.setHint(Utils.getCustomLanguageSummary());
         selfView.findViewById(R.id.button_custom_lang_clear).setOnClickListener(v -> {
             acCustomLang.setText("");
             acCustomLang.requestFocus();
