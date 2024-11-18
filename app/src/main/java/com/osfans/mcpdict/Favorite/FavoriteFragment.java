@@ -1,4 +1,4 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.Favorite;
 
 import android.annotation.SuppressLint;
 import android.database.Cursor;
@@ -19,6 +19,10 @@ import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.TextView.BufferType;
+
+import com.osfans.mcpdict.R;
+import com.osfans.mcpdict.RefreshableFragment;
+import com.osfans.mcpdict.Util.UserDatabase;
 
 @SuppressLint("UseSparseArrays")
 public class FavoriteFragment extends ListFragment implements RefreshableFragment {

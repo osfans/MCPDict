@@ -1,4 +1,4 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.Favorite;
 
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
@@ -10,6 +10,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
+
+import com.osfans.mcpdict.MainActivity;
+import com.osfans.mcpdict.R;
+import com.osfans.mcpdict.Util.FileUtils;
+import com.osfans.mcpdict.Util.UserDatabase;
+import com.osfans.mcpdict.Utils;
 
 import java.io.File;
 import java.io.IOException;

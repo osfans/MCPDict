@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.UI;
 
 
 import android.graphics.Paint;

@@ -1,4 +1,4 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.Util;
 
 import android.content.Context;
 import android.net.Uri;

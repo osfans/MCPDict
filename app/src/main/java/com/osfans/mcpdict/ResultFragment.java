@@ -53,6 +53,15 @@ import androidx.annotation.Nullable;
 import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.Fragment;
 
+import com.osfans.mcpdict.Favorite.FavoriteDialogs;
+import com.osfans.mcpdict.Orth.HanZi;
+import com.osfans.mcpdict.Orth.Orthography;
+import com.osfans.mcpdict.UI.MenuSpan;
+import com.osfans.mcpdict.UI.MyMapView;
+import com.osfans.mcpdict.UI.MyWebView;
+import com.osfans.mcpdict.UI.PopupSpan;
+import com.osfans.mcpdict.UI.TextDrawable;
+
 import java.io.UnsupportedEncodingException;
 import java.lang.ref.WeakReference;
 import java.net.URLEncoder;
@@ -74,7 +83,6 @@ public class ResultFragment extends Fragment {
     private boolean showMenu;
     private final HashMap<String, String> mRaws = new HashMap<>();
     private final int GROUP_READING = 1;
-    private View.OnTouchListener mListener;
 
     private final int MSG_SEARCH_HOMOPHONE = 1;
     private final int MSG_GOTO_INFO = 2;
@@ -116,8 +124,7 @@ public class ResultFragment extends Fragment {
                 case MSG_CUSTOM_LANGUAGE:
                     removeCallbacksAndMessages(null);
                     String language = DB.getLanguageByLabel(mEntry.lang);
-                    Utils.putCustomLanguage(language);
-                    dictFragment.refreshCustomLanguage();
+                    dictFragment.updateCustomLanguage(language);
                     Toast.makeText(getContext(), Utils.isCustomLanguage(language) ? R.string.add_to_custom_language_done : R.string.rm_from_custom_language_done, Toast.LENGTH_SHORT).show();
                     break;
             }
@@ -163,7 +170,7 @@ public class ResultFragment extends Fragment {
         Orthography.setToneStyle(Utils.getToneStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(Utils.getToneStyle(R.string.pref_key_tone_value_display));
 
-        mListener = new View.OnTouchListener() {
+        View.OnTouchListener listener = new View.OnTouchListener() {
             private final GestureDetector gestureDetector = new GestureDetector(requireActivity(), new GestureDetector.SimpleOnGestureListener() {
                 @Override
                 public boolean onDoubleTap(@NonNull MotionEvent e) {
@@ -178,8 +185,8 @@ public class ResultFragment extends Fragment {
                 return false;
             }
         };
-        mTextView.setOnTouchListener(mListener);
-        mWebView.setOnTouchListener(mListener);
+        mTextView.setOnTouchListener(listener);
+        mWebView.setOnTouchListener(listener);
         return selfView;
     }
 
@@ -205,7 +212,7 @@ public class ResultFragment extends Fragment {
         String link = DB.getDictLink(lang);
         if (TextUtils.isEmpty(link)) return null;
         String big5 = null;
-        String hex = Orthography.HZ.toUnicodeHex(hz);
+        String hex = HanZi.toUnicodeHex(hz);
         try {
             big5 = URLEncoder.encode(hz, "big5");
         } catch (UnsupportedEncodingException ignored) {
@@ -457,14 +464,14 @@ public class ResultFragment extends Fragment {
             String[] cols = DB.getVisibleColumns(n);
             String lang = Utils.getLabel();
             boolean isZY = DB.isLang(lang) && query.length() >= 3 && n >= 3
-                    && !Orthography.HZ.isBS(query)
-                    && Orthography.HZ.isHz(query);
+                    && !HanZi.isBS(query)
+                    && HanZi.isHz(query);
             Map<String, String> pys = new HashMap<>();
             StringBuilder hzs = new StringBuilder();
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 int i = cursor.getColumnIndex(lang);
-                CharSequence py = Utils.formatIPA(lang, Utils.getRawText(cursor.getString(i)));
+                CharSequence py = Utils.formatIPA(lang, DisplayHelper.getRawText(cursor.getString(i)));
                 if (isZY) {
                     pys.put(hz, py.toString());
                 } else {
@@ -476,11 +483,11 @@ public class ResultFragment extends Fragment {
                     s = String.format("(%s)", s);
                 } else s = "";
                 int current = cursor.getPosition();
-                boolean openDetails = current < 3 && !Orthography.HZ.isUnknown(hz);
+                boolean openDetails = current < 3 && !HanZi.isUnknown(hz);
                 ssb.append(String.format("<details %s><summary>" +
                         "<div class=hz>%s</div><div class=variant>%s</div></summary>", openDetails ? "open" : "", hz, s));
                 ssb.append("<div style='display: block; float:right; margin-top: -2em;'>");
-                String unicode = Orthography.HZ.toUnicode(hz);
+                String unicode = HanZi.toUnicode(hz);
                 ssb.append(String.format("<div class=y onclick='mcpdict.showDict(\"%s\", %s, \"%s\")'>%s</div>", hz, COL_HZ, getUnicode(cursor), unicode));
                 StringBuilder raws = new StringBuilder();
                 raws.append(String.format("%s %s\n", hz, s));
@@ -504,7 +511,7 @@ public class ResultFragment extends Fragment {
                 String fq = "";
                 String fqTemp;
                 boolean opened = false;
-                if (Orthography.HZ.isUnknown(hz)) {
+                if (HanZi.isUnknown(hz)) {
                     String col = Utils.getLabel();
                     if (!DB.isLang(col)) continue;
                     int index = DB.getColumnIndex(col);
@@ -514,8 +521,8 @@ public class ResultFragment extends Fragment {
                     if (!fqTemp.contentEquals(fq)) {
                         ssb.append(String.format("<details open><summary>%s</summary>", fqTemp));
                     }
-                    CharSequence ipa = Utils.formatUnknownIPA(col, s);
-                    String raw = Utils.getRawText(s);
+                    CharSequence ipa = DisplayHelper.formatUnknownIPA(col, s);
+                    String raw = DisplayHelper.getRawText(s);
                     String label = DB.getLabel(col);
                     ssb.append(String.format(Locale.CHINESE,"<div onclick='mcpdict.onClick(\"%s\", \"%s\", \"%s\", %d, \"%s\",event.pageX, event.pageY)' class=row><div class=place style='background: linear-gradient(to left, %s, %s);'>%s</div><br><div class=ipa>%s</div></div>",
                             hz, col, raw, favorite, comment,
@@ -533,7 +540,7 @@ public class ResultFragment extends Fragment {
                             opened = true;
                         }
                         CharSequence ipa = Utils.formatIPA(col, s);
-                        String raw = Utils.getRawText(s);
+                        String raw = DisplayHelper.getRawText(s);
                         String label = DB.getLabel(col);
                         ssb.append(String.format(Locale.CHINESE,"<div onclick='mcpdict.onClick(\"%s\", \"%s\", \"%s\", %d, \"%s\",event.pageX, event.pageY)' class=row><div class=place style='background: linear-gradient(to left, %s, %s);'>%s</div><div class=ipa>%s</div></div>",
                                 hz, col, raw, favorite, comment,
@@ -549,8 +556,8 @@ public class ResultFragment extends Fragment {
             if (isZY) {
                 sb.append("<nav>");
                 for (int unicode : query.codePoints().toArray()) {
-                    if (!Orthography.HZ.isHz(unicode)) continue;
-                    String hz = Orthography.HZ.toHz(unicode);
+                    if (!HanZi.isHz(unicode)) continue;
+                    String hz = HanZi.toHz(unicode);
                     sb.append(String.format("<ruby>%s<rt>%s</rt></ruby>&nbsp;&nbsp;&nbsp;&nbsp;", hz, pys.getOrDefault(hz, "")));
                 }
                 sb.append("</nav>");
@@ -584,7 +591,7 @@ public class ResultFragment extends Fragment {
                     s = String.format("(%s)", s);
                     sb.append(s);
                 }
-                String unicode = Orthography.HZ.toUnicode(hz);
+                String unicode = HanZi.toUnicode(hz);
                 sb.append(" ").append(unicode);
                 // DICTS
                 for (int i = COL_FIRST_DICT; i <= COL_LAST_DICT; i++) {
@@ -595,7 +602,7 @@ public class ResultFragment extends Fragment {
                 }
                 sb.append("\n");
                 StringBuilder sb2 = new StringBuilder();
-                if (Orthography.HZ.isUnknown(hz)) {
+                if (HanZi.isUnknown(hz)) {
                     String col = Utils.getLabel();
                     if (!DB.isLang(col)) continue;
                     int i = cursor.getColumnIndex(col);
@@ -603,7 +610,7 @@ public class ResultFragment extends Fragment {
                     if (TextUtils.isEmpty(s)) continue;
                     String label = getLabel(col);
                     sb2.append(String.format("［%s］", label));
-                    sb2.append(HtmlCompat.fromHtml(Utils.formatUnknownIPA(col, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT));
+                    sb2.append(HtmlCompat.fromHtml(DisplayHelper.formatUnknownIPA(col, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT));
                     sb2.append("\n");
                 } else {
                     for (String col : cols) {
@@ -666,26 +673,26 @@ public class ResultFragment extends Fragment {
                     ssb.append(s, new ForegroundColorSpan(getResources().getColor(R.color.dim)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 }
                 // Unicode
-                String unicode = Orthography.HZ.toUnicode(hz);
+                String unicode = HanZi.toUnicode(hz);
                 int color = getColor(SW);
-                ssb.append(" " + unicode + " ", new PopupSpan(Utils.formatPopUp(hz, COL_HZ, getUnicode(cursor)), COL_HZ, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ssb.append(" " + unicode + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, COL_HZ, getUnicode(cursor)), COL_HZ, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 StringBuilder raws = new StringBuilder();
                 raws.append(String.format("%s %s\n", hz, unicode));
                 // yb
                 SpannableStringBuilder ssb2 = new SpannableStringBuilder();
-                if (Orthography.HZ.isUnknown(hz)) {
+                if (HanZi.isUnknown(hz)) {
                     String lang = Utils.getLabel();
                     if (!DB.isLang(lang)) continue;
                     int i = getColumnIndex(lang);
                     s = cursor.getString(i);
                     if (TextUtils.isEmpty(s)) continue;
-                    CharSequence cs = HtmlCompat.fromHtml(Utils.formatUnknownIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
+                    CharSequence cs = HtmlCompat.fromHtml(DisplayHelper.formatUnknownIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
                     n = ssb2.length();
                     String label = getLabel(i);
                     Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
                     DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
                     ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    String raw = Utils.getRawText(s);
+                    String raw = DisplayHelper.getRawText(s);
                     Entry e = new Entry(hz, lang, raw, bFavorite, comment);
                     ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                     ssb2.append(cs);
@@ -702,7 +709,7 @@ public class ResultFragment extends Fragment {
                         Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
                         DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
                         ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                        String raw = Utils.getRawText(s);
+                        String raw = DisplayHelper.getRawText(s);
                         Entry e = new Entry(hz, lang, raw, bFavorite, comment);
                         ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                         ssb2.append(cs);
@@ -715,7 +722,7 @@ public class ResultFragment extends Fragment {
                 for (int i = COL_FIRST_DICT; i <= COL_LAST_DICT; i++) {
                     s = cursor.getString(i);
                     if (!TextUtils.isEmpty(s)) {
-                        ssb.append(" " + getLabel(i) + " ", new PopupSpan(Utils.formatPopUp(hz, i, s), i, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        ssb.append(" " + getLabel(i) + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, i, s), i, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                     }
                 }
                 // Map

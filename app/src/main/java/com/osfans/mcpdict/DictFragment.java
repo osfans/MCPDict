@@ -24,7 +24,11 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.osfans.mcpdict.Adapter.DivisionAdapter;
+import com.osfans.mcpdict.Adapter.LanguageAdapter;
+import com.osfans.mcpdict.Adapter.MultiLanguageAdapter;
 import com.osfans.mcpdict.DB.FILTER;
+import com.osfans.mcpdict.UI.MySearchView;
 
 public class DictFragment extends Fragment implements RefreshableFragment {
 
@@ -34,10 +38,9 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private AutoCompleteTextView acSearchLang, acCustomLang;
     private ResultFragment fragmentResult;
     ArrayAdapter<CharSequence> adapterShape, adapterDict, adapterProvince;
-    AdapterDivisions adapterDivisions;
+    DivisionAdapter adapterDivision;
     private View layoutSearchOption, layoutHz, layoutSearchLang;
     private LinearLayout layoutFilters;
-    private View.OnTouchListener mListener;
     private Button buttonFullscreen;
 
     @Override
@@ -129,7 +132,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String shape = adapterShape.getItem(position).toString();
-                Utils.putShape(shape);
+                Utils.putShape(position == 0 ? "" : shape);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
@@ -150,7 +153,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String value = adapterProvince.getItem(position).toString().split(" ")[0];
-                Utils.putProvince(value);
+                Utils.putProvince(position == 0 ? "" : value);
                 search();
             }
             @Override
@@ -158,13 +161,13 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
 
         spinnerDivisions = selfView.findViewById(R.id.spinner_divisions);
-        adapterDivisions = new AdapterDivisions(requireActivity(), R.layout.spinner_item);
-        spinnerDivisions.setAdapter(adapterDivisions);
+        adapterDivision = new DivisionAdapter(requireActivity(), R.layout.spinner_item);
+        spinnerDivisions.setAdapter(adapterDivision);
         spinnerDivisions.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String value = adapterDivisions.getItem(position).toString();
-                Utils.putDivision(value);
+                String value = adapterDivision.getItem(position).toString();
+                Utils.putDivision(position == 0 ? "" : value);
                 search();
             }
             @Override
@@ -193,8 +196,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         acAdapter.setOnItemClickListener(view -> {
             TextView tv = (TextView) view;
             String lang = tv.getText().toString();
-            Utils.putCustomLanguage(lang);
-            refreshCustomLanguage();
+            updateCustomLanguage(lang);
         });
         acCustomLang.setAdapter(acAdapter);
         acCustomLang.setOnFocusChangeListener((v, b) -> {
@@ -257,7 +259,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         // Get a reference to the SearchResultFragment
         fragmentResult = (ResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);
         refreshAdapter();
-        mListener = new View.OnTouchListener() {
+        View.OnTouchListener listener = new View.OnTouchListener() {
             private final GestureDetector gestureDetector = new GestureDetector(requireActivity(), new GestureDetector.SimpleOnGestureListener() {
                 @Override
                 public boolean onDoubleTap(MotionEvent e) {
@@ -272,9 +274,9 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 return false;
             }
         };
-        searchView.findViewById(R.id.text_query).setOnTouchListener(mListener);
+        searchView.findViewById(R.id.text_query).setOnTouchListener(listener);
         selfView.setClickable(true);
-        selfView.setOnTouchListener(mListener);
+        selfView.setOnTouchListener(listener);
         return selfView;
     }
 
@@ -352,18 +354,19 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     }
 
     private void refreshDivision() {
-        adapterDivisions.clear();
+        adapterDivision.clear();
         String head = Utils.getStringRes(R.string.division);
-        adapterDivisions.add(head);
+        adapterDivision.add(head);
         String[] fqs = DB.getDivisions();
-        adapterDivisions.addAll(fqs);
+        adapterDivision.addAll(fqs);
         String value = Utils.getDivision();
-        int index = TextUtils.isEmpty(value) ? -1 : adapterDivisions.getPosition(value);
-        if (index >= adapterDivisions.getCount() || index < 0 ) index = 0;
+        int index = TextUtils.isEmpty(value) ? -1 : adapterDivision.getPosition(value);
+        if (index >= adapterDivision.getCount() || index < 0 ) index = 0;
         spinnerDivisions.setSelection(index);
     }
 
-    public void refreshCustomLanguage() {
+    public void updateCustomLanguage(String lang) {
+        Utils.putCustomLanguage(lang);
         acCustomLang.setHint(Utils.getCustomLanguageSummary());
         search();
     }
@@ -377,7 +380,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     public void refreshAdapter() {
         refreshSearchLang();
-        if (adapterDivisions != null) refreshDivision();
+        if (adapterDivision != null) refreshDivision();
         if (adapterProvince != null) refreshProvince();
         if (adapterShape != null) refreshShape();
         if (adapterDict != null) refreshDict();

@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import com.osfans.mcpdict.Favorite.FavoriteFragment;
+
 public class PagerAdapter extends FragmentStateAdapter {
     private static final int NUM_PAGES = 2;
     public static final int PAGE_DICTIONARY = 0;

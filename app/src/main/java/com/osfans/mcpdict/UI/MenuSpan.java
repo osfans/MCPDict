@@ -1,8 +1,11 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.UI;
 
 import android.view.View;
 
 import androidx.annotation.NonNull;
+
+import com.osfans.mcpdict.Entry;
+import com.osfans.mcpdict.ResultFragment;
 
 public class MenuSpan extends MyClickableSpan {
     Entry entry;

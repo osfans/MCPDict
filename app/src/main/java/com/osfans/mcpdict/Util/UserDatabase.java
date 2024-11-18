@@ -1,4 +1,4 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.Util;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
@@ -9,7 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-class UserDatabase extends SQLiteOpenHelper {
+public class UserDatabase extends SQLiteOpenHelper {
 
     // STATIC VARIABLES AND METHODS
 

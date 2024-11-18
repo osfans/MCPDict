@@ -1,4 +1,4 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.UI;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -14,6 +14,8 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.graphics.drawable.shapes.RectShape;
 import android.graphics.drawable.shapes.RoundRectShape;
+
+import com.osfans.mcpdict.Utils;
 
 /**
  * author amulya

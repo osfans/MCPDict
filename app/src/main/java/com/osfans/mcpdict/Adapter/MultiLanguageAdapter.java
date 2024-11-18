@@ -1,10 +1,12 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.Adapter;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckedTextView;
+
+import com.osfans.mcpdict.Utils;
 
 import java.util.Set;
 
