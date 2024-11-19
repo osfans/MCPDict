@@ -73,11 +73,14 @@ public class DB extends SQLiteAssetHelper {
     public static final String _COLOR = "顏色";
     public static final String _ORDER = "排序";
     public static final String FIRST_FQ = "地圖集二分區";
+    public static final String PROVINCE = "省";
+    public static final String RECOMMEND = "推薦人";
+    public static final String EDITOR = "維護人";
+    public static final String ORDINAL = "序號";
     private static String[] DIVISIONS = null;
     private static String[] LABELS = null;
     private static String[] LANGUAGES = null;
     private static String[] SEARCH_COLUMNS = null;
-    private static String[] PROVINCES = null;
 
     public static int COL_HZ;
     public static int COL_BH;
@@ -101,7 +104,7 @@ public class DB extends SQLiteAssetHelper {
     };
 
     public enum FILTER {
-        ALL, ISLAND, HZ, CURRENT, PRESET, CUSTOM, DIVISION, AREA
+        ALL, ISLAND, HZ, CURRENT, RECOMMEND, CUSTOM, DIVISION, AREA, EDITOR
     }
 
     public static int COL_ALL_LANGUAGES = 1000;
@@ -317,7 +320,7 @@ public class DB extends SQLiteAssetHelper {
         COLOR = FQ.replace(_FQ, _COLOR);
         DIVISIONS = getFieldByLabel(HZ, FQ).split(",");
         SEARCH_COLUMNS = queryLabel(FIRST_FQ.replace(_FQ, _COLOR) + " is not null");
-        LABELS = queryLabel(FQ + " is not null and rowid > 1");
+        LABELS = queryLabel(FQ + " is not null");
     }
 
     private static void initArrays() {
@@ -416,7 +419,7 @@ public class DB extends SQLiteAssetHelper {
     }
 
     private static String[] queryLabel(String selection, String args) {
-        return query(LABEL, selection, args);
+        return query(LABEL, String.format("%s and rowid > 1", selection), args);
     }
 
     private static String[] queryLanguage(String selection) {
@@ -437,21 +440,20 @@ public class DB extends SQLiteAssetHelper {
     public static String[] getLanguages() {
         initArrays();
         if (LANGUAGES == null) {
-            LANGUAGES = queryLanguage("序號 is not null");
+            LANGUAGES = queryLanguage(ORDINAL + " is not null");
         }
         return LANGUAGES;
     }
 
-    public static String[] getProvinces() {
+    public static String[] getArrays(String col) {
         initArrays();
-        if (PROVINCES == null || PROVINCES.length < 2) PROVINCES = getFieldByLabel(HZ, "省").split(",");
-        return PROVINCES;
+        return getFieldByLabel(HZ, col).split(",");
     }
 
     public static String[] getLabels() {
         initArrays();
         if (LABELS == null) {
-            LABELS = queryLabel(FQ + " is not null and rowid > 1");
+            LABELS = queryLabel(FQ + " is not null");
         }
         return LABELS;
     }
@@ -459,12 +461,7 @@ public class DB extends SQLiteAssetHelper {
     public static String[] getLabelsByFq(String type) {
         if (type.contentEquals("*")) return getLabels();
         if (TextUtils.isEmpty(type)) return null;
-        return queryLabel(String.format("%s MATCH ? and rowid > 1", FQ), type);
-    }
-
-    public static String[] getLabelsByProvince(String type) {
-        if (TextUtils.isEmpty(type)) return null;
-        return queryLabel(String.format("%s MATCH ? and rowid > 1", "省"), type);
+        return queryLabel(String.format("%s MATCH ?", FQ), type);
     }
 
     public static String[] getSearchColumns() {
@@ -498,21 +495,30 @@ public class DB extends SQLiteAssetHelper {
                 int level = Pref.getInt(R.string.pref_key_area_level);
                 String province = Pref.getProvince();
                 StringBuilder sb = new StringBuilder();
-                if (!TextUtils.isEmpty(province)) sb.append(String.format("省 = '%s'", province));
-                if (!TextUtils.isEmpty(province) && level > 0) sb.append(" and ");
+                if (!TextUtils.isEmpty(province)) sb.append(String.format("%s MATCH '%s'", DB.PROVINCE, province));
                 if (level > 0) {
+                    if (!TextUtils.isEmpty(province)) sb.append(" and ");
                     String[] levels = Pref.getStringArray(R.array.entries_area_level);
-                    sb.append(String.format("行政區級別 match '%s'", levels[level]));
+                    sb.append(String.format("行政區級別 MATCH '%s'", levels[level]));
                 }
                 if (!TextUtils.isEmpty(sb)) return queryLabel(sb.toString());
             }
+            case RECOMMEND -> {
+                String value = Pref.getStr(R.string.pref_key_recommend, "");
+                if (TextUtils.isEmpty(value)) break;
+                return queryLabel(String.format("%s MATCH '%s'", DB.RECOMMEND, value));
+            }
+            case EDITOR -> {
+                String value = Pref.getStr(R.string.pref_key_editor, "");
+                if (TextUtils.isEmpty(value)) break;
+                return queryLabel(String.format("%s MATCH '%s'", DB.EDITOR, value));
+            }
             case DIVISION -> {
                 String division = Pref.getDivision();
-                if (!TextUtils.isEmpty(division)) {
-                    String[] a = DB.getLabelsByFq(division);
-                    if (a != null && a.length > 0) {
-                        return a;
-                    }
+                if (TextUtils.isEmpty(division)) break;
+                String[] a = DB.getLabelsByFq(division);
+                if (a != null && a.length > 0) {
+                    return a;
                 }
             }
             case CUSTOM -> {
@@ -648,7 +654,7 @@ public class DB extends SQLiteAssetHelper {
         } else {
             StringBuilder sb = new StringBuilder();
             sb.append(String.format(Locale.getDefault(), "%s%s<br>", Pref.getString(R.string.name), language));
-            ArrayList<String> fields = new ArrayList<>(Arrays.asList("序號","地點","經緯度","維護人","參考資料","文件名","版本","字數","□數", "音節數","不帶調音節數",""));
+            ArrayList<String> fields = new ArrayList<>(Arrays.asList(ORDINAL,"地點","經緯度","維護人","參考資料","文件名","版本","字數","□數", "音節數","不帶調音節數",""));
             fields.addAll(Arrays.asList(FQ_COLUMNS));
             fields.add("");
             for (String field: fields) {

@@ -325,10 +325,11 @@
         <item>僅方言島</item>
         <item>僅漢字</item>
         <item>當前語言</item>
-        <item>預選语言</item>
+        <item>推薦语言</item>
         <item>@string/custom_languages</item>
         <item>方言分區</item>
         <item>行政區</item>
+        <item>@string/editor</item>
     </string-array>
 
     <string name="pref_key_charset">SHOW_CHARSET</string>
@@ -436,6 +437,10 @@
     </string-array>
     <string name="pref_key_dict">KEY_DICT</string>
     <string name="dict">全部辭典</string>
+    <string name="pref_key_recommend">KEY_RECOMMEND</string>
+    <string name="recommend">推薦人</string>
+    <string name="pref_key_editor">KEY_EDITOR</string>
+    <string name="editor">維護人</string>
     <string name="pref_key_province">KEY_PROVINCE</string>
     <string name="province">全部省份</string>
     <string name="pref_key_division">KEY_DIVISION</string>
