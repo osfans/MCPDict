@@ -29,8 +29,8 @@
 
         <Button
             android:id="@+id/button_fullscreen"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:background="@android:drawable/ic_menu_more"
             android:backgroundTint="?android:attr/colorForeground" />
     </LinearLayout>
@@ -66,10 +66,9 @@
 
                 <Button
                     android:id="@+id/button_lang_clear"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:background="@android:drawable/ic_menu_close_clear_cancel"
-                    android:backgroundTint="?android:attr/colorForeground"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/ic_spinner_caret"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/text_search_lang"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -192,10 +191,9 @@
 
                 <Button
                     android:id="@+id/button_custom_lang_clear"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:background="@android:drawable/ic_menu_more"
-                    android:backgroundTint="?android:attr/colorForeground"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/ic_spinner_caret"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/text_custom_lang"
                     app:layout_constraintTop_toTopOf="parent" />
