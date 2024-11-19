@@ -510,7 +510,7 @@ public class DB extends SQLiteAssetHelper {
             case EDITOR -> {
                 String value = Pref.getStr(R.string.pref_key_editor, "");
                 if (TextUtils.isEmpty(value)) break;
-                return queryLabel(String.format("%s MATCH '%s'", DB.EDITOR, value));
+                return queryLabel(String.format("info MATCH '%s'", value));
             }
             case DIVISION -> {
                 String division = Pref.getDivision();
@@ -653,7 +653,7 @@ public class DB extends SQLiteAssetHelper {
         } else {
             StringBuilder sb = new StringBuilder();
             sb.append(String.format(Locale.getDefault(), "%s%s<br>", Pref.getString(R.string.name), language));
-            ArrayList<String> fields = new ArrayList<>(Arrays.asList(ORDINAL,"地點","經緯度","維護人","參考資料","文件名","版本","字數","□數", "音節數","不帶調音節數",""));
+            ArrayList<String> fields = new ArrayList<>(Arrays.asList(ORDINAL,"地點","經緯度", "作者", "錄入人", "維護人","來源", "參考文獻","文件名","版本","字數","□數", "音節數","不帶調音節數",""));
             fields.addAll(Arrays.asList(FQ_COLUMNS));
             fields.add("");
             for (String field: fields) {
