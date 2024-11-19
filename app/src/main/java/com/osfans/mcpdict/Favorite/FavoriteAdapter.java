@@ -120,7 +120,7 @@ public class FavoriteAdapter extends CursorAdapter {
             }
             @Override
             protected void onPostExecute(Cursor data) {
-                fragment.setData(data);
+                fragment.setData(hz, data);
                 container.setVisibility(View.VISIBLE);
                 if (list == null) {
                 }

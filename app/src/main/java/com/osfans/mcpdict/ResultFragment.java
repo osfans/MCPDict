@@ -760,8 +760,7 @@ public class ResultFragment extends Fragment {
         return setTableData(query, cursor);
     }
 
-    public void setData(Cursor cursor) {
-        final String query = Utils.getInput();
+    public void setData(String query, Cursor cursor) {
         mRaws.clear();
         int format = Utils.getDisplayFormat();
         if (format == 2) { //web
@@ -787,6 +786,11 @@ public class ResultFragment extends Fragment {
                 }
             }.execute();
         }
+    }
+
+    public void setData(Cursor cursor) {
+        final String query = Utils.getInput();
+        setData(query, cursor);
     }
 
     public void showContextMenu(float x, float y) {
