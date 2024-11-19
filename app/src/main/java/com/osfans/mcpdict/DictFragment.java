@@ -320,7 +320,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 return false;
             }
         };
-        searchView.findViewById(R.id.search_src_text).setOnTouchListener(listener);
+        searchView.findViewById(androidx.appcompat.R.id.search_src_text).setOnTouchListener(listener);
         selfView.setClickable(true);
         selfView.setOnTouchListener(listener);
         return selfView;
