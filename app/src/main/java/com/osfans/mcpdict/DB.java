@@ -305,7 +305,7 @@ public class DB extends SQLiteAssetHelper {
         String[] projection = {"v.*", "v.rowid AS _id",
                    "v.漢字 AS 漢字", "NULL AS variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
-        String selection = "v.漢字 = ?";
+        String selection = "v.漢字 match ?";
         String query = qb.buildQuery(projection, selection, null, null, null, "0,100");
         String[] args = {hz};
         return db.rawQuery(query, args);
