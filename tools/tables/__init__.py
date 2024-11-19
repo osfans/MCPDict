@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, json, glob
+import os, re, json, glob
 from importlib import import_module
 import tables._詳情
 from tables._詳情 import t2s
@@ -97,20 +97,10 @@ def getLangs(dicts, argv=None):
 			except Exception as e:
 				print(f"\t\t\t{e} {mod}")
 				continue
-			if d["簡繁"] == "简": lang.simplified = 2
+			if d["繁簡"] == "简": lang.simplified = 2
 			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 			addAllFq(types[0], d["地圖集二分區"], d["地圖集二排序"])
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
-			if d["省"]:
-				省[d["省"]] += 1
-			if d["推薦人"]:
-				for i in d["推薦人"].split(","):
-					推薦人[i.strip()] += 1
-			if d["維護人"]:
-				for i in d["維護人"].split(","):
-					i = i.strip()
-					if i:
-						維護人[i.strip()] += 1
 			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
 			if d["聲調"]:
 				toneMaps = dict()
@@ -132,6 +122,21 @@ def getLangs(dicts, argv=None):
 			if not len(toneMaps.keys()):
 				print("\t\t\t無調值")
 			lang.info["文件名"] = lang._file
+			if d["省"]:
+				省[d["省"]] += 1
+			if d["推薦人"]:
+				for i in d["推薦人"].split(","):
+					i = i.strip()
+					if i:
+						推薦人[i] += 1
+			editors = [set(d[i].split(",")) for i in ("作者", "錄入人", "維護人") if d[i]]
+			editor = set()
+			for i in editors:
+				editor.update(i)
+			for i in editor:
+				i = re.sub("（.*?）", "", i.strip())
+				if i:
+					維護人[i] += 1
 			count += 1
 		else:
 			lang = import_module(f"tables.{mod}").表()

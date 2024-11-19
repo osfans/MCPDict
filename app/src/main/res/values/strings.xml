@@ -329,7 +329,7 @@
         <item>@string/custom_languages</item>
         <item>方言分區</item>
         <item>行政區</item>
-        <item>@string/editor</item>
+        <item>維護人</item>
     </string-array>
 
     <string name="pref_key_charset">SHOW_CHARSET</string>
@@ -440,7 +440,7 @@
     <string name="pref_key_recommend">KEY_RECOMMEND</string>
     <string name="recommend">推薦人</string>
     <string name="pref_key_editor">KEY_EDITOR</string>
-    <string name="editor">維護人</string>
+    <string name="editor">作者、錄入人、維護人</string>
     <string name="pref_key_province">KEY_PROVINCE</string>
     <string name="province">全部省份</string>
     <string name="pref_key_division">KEY_DIVISION</string>
