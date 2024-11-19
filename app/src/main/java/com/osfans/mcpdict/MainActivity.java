@@ -9,10 +9,11 @@ import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.osfans.mcpdict.Adapter.PagerAdapter;
 import com.osfans.mcpdict.Favorite.FavoriteDialogs;
 import com.osfans.mcpdict.Favorite.FavoriteFragment;
 import com.osfans.mcpdict.Orth.Orthography;
-import com.osfans.mcpdict.Util.UserDatabase;
+import com.osfans.mcpdict.Util.UserDB;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
-                UserDatabase.initialize(MainActivity.this);
+                UserDB.initialize(MainActivity.this);
                 DB.initialize(MainActivity.this);
                 return null;
             }
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRestart() {
         super.onRestart();
-        setTitle(Utils.getTitle());
+        setTitle(Pref.getTitle());
         // Make settings take effect immediately as the user navigates back to the dictionary
         refresh();
     }

@@ -3,6 +3,7 @@ package com.osfans.mcpdict.Orth;
 import android.text.TextUtils;
 
 import com.osfans.mcpdict.DB;
+import com.osfans.mcpdict.DisplayHelper;
 
 import org.json.JSONObject;
 
@@ -12,6 +13,12 @@ import java.util.List;
 import java.util.regex.Matcher;
 
 public class Tones {
+    public static final DisplayHelper displayHelper = new DisplayHelper() {
+        public String displayOne(String s) {
+            return Tones.display(s, getLang());
+        }
+    };
+
     public static List<String> getAllTones(String s, String lang) {
         if (TextUtils.isEmpty(s)) return null;     // Fail
         JSONObject jsonObject = DB.getToneName(lang);

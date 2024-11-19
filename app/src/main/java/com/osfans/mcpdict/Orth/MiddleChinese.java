@@ -3,8 +3,9 @@ package com.osfans.mcpdict.Orth;
 import android.text.TextUtils;
 
 import com.osfans.mcpdict.DB;
+import com.osfans.mcpdict.DisplayHelper;
+import com.osfans.mcpdict.Pref;
 import com.osfans.mcpdict.R;
-import com.osfans.mcpdict.Utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,6 +27,16 @@ public class MiddleChinese {
             "æ", "a", "ɑ"
     );
 
+    public static final DisplayHelper displayHelper = new DisplayHelper() {
+        public String displayOne(String s) {
+            return MiddleChinese.display(s, Pref.getToneStylesIndex(R.string.pref_key_mc_display));
+        }
+
+        public boolean isIPA(char c) {
+            return c != '{';
+        }
+    };
+
     public static String display(String pys, int[] systems) {
         String[] ss = pys.split("/");
 
@@ -40,7 +51,7 @@ public class MiddleChinese {
             default -> tone;
         };
 
-        String[] values = Utils.getStringArray(R.array.pref_values_mc_display);
+        String[] values = Pref.getStringArray(R.array.pref_values_mc_display);
 
         int pyCount = 0;
         int ybCount = 0;
@@ -55,7 +66,7 @@ public class MiddleChinese {
         }
 
         StringBuilder sb = new StringBuilder();
-        String[] names = Utils.getStringArray(R.array.pref_entries_mc_display);
+        String[] names = Pref.getStringArray(R.array.pref_entries_mc_display);
         // 拼音和擬音
         for (int j : systems) {
             int i = Integer.parseInt(values[j]);

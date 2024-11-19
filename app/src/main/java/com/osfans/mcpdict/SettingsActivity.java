@@ -10,6 +10,7 @@ import androidx.preference.ListPreference;
 import androidx.preference.PreferenceFragmentCompat;
 
 import com.osfans.mcpdict.Orth.Orthography;
+import com.osfans.mcpdict.Util.FontUtil;
 
 import java.util.Objects;
 
@@ -56,13 +57,13 @@ public class SettingsActivity extends AppCompatActivity {
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
             if (TextUtils.isEmpty(s)) return;
             if (s.contentEquals(getString(R.string.pref_key_fq)) || s.contentEquals(getString(R.string.pref_key_locale)) || s.contentEquals(getString(R.string.pref_key_font))) {
-                if (s.contentEquals(getString(R.string.pref_key_font))) Utils.refreshTypeface();
+                if (s.contentEquals(getString(R.string.pref_key_font))) FontUtil.refreshTypeface();
                 Intent intent = new Intent(getContext(), MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             } else if (s.contentEquals(getString(R.string.pref_key_tone_display)) || s.contentEquals(getString(R.string.pref_key_tone_value_display))) {
-                Orthography.setToneStyle(Utils.getToneStyle(R.string.pref_key_tone_display));
-                Orthography.setToneValueStyle(Utils.getToneStyle(R.string.pref_key_tone_value_display));
+                Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
+                Orthography.setToneValueStyle(Pref.getToneStyle(R.string.pref_key_tone_value_display));
             } // TODO: R.string.pref_key_format restart
         }
     }

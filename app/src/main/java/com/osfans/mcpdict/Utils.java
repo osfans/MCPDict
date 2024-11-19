@@ -6,14 +6,8 @@ import static com.osfans.mcpdict.DB.COL_HD;
 import android.app.Application;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
-import android.graphics.Typeface;
-import android.graphics.fonts.Font;
-import android.graphics.fonts.FontFamily;
-import android.os.Build;
-import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.util.TypedValue;
@@ -24,18 +18,13 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
-import com.osfans.mcpdict.Orth.*;
 import com.osfans.mcpdict.UI.MyWebView;
+import com.osfans.mcpdict.Util.FontUtil;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Locale;
-import java.util.Set;
 
 public class Utils extends Application {
     private static Utils mApp;
-    private static Typeface tfHan, tfHanTone, tfIPA, tfIPATone;
 
     public Utils() {
         mApp = this;
@@ -43,301 +32,6 @@ public class Utils extends Application {
 
     public static Context getContext() {
         return mApp;
-    }
-
-    public static SharedPreferences getPreference() {
-        return mApp.getSharedPreferences(PreferenceManager.getDefaultSharedPreferencesName(mApp), Context.MODE_PRIVATE);
-    }
-
-    public static int getStrAsInt(int key, int defaultValue) {
-        String value = getStr(key);
-        try {
-            return Integer.parseInt(value);
-        } catch (Exception e) {
-            //e.printStackTrace();
-        }
-        return defaultValue;
-    }
-
-    public static int getToneStyle(int id) {
-        int value = 0;
-        if (id == R.string.pref_key_tone_display) value = 1;
-        return getStrAsInt(id, value);
-    }
-
-    public static String[] getToneStyles(int id) {
-        String[] defaultList = new String[5];
-        if (id == R.string.pref_key_zyyy_display) defaultList = getStringArray(R.array.pref_default_values_zyyy_display);
-        else if (id == R.string.pref_key_dgy_display) defaultList = getStringArray(R.array.pref_default_values_dgy_display);
-        else if (id == R.string.pref_key_mc_display) defaultList = getStringArray(R.array.pref_default_values_mc_display);
-        try {
-            Set<String> defaultSet = new HashSet<>(Arrays.asList(defaultList));
-            Set<String> set = getStrSet(id, defaultSet);
-            String[] ret = set.toArray(new String[0]);
-            Arrays.sort(ret);
-            return ret;
-        } catch (Exception e) {
-            //e.printStackTrace();
-        }
-        return defaultList;
-    }
-
-    public static int[] getToneStylesIndex(int id) {
-        String[] values = getStringArray(R.array.pref_values_mc_display);
-        List<String> list = Arrays.asList(values);
-        String[] selected = getToneStyles(id);
-        int[] index = new int[selected.length];
-        for (int i = 0; i < selected.length; i++) {
-            index[i] = list.indexOf(selected[i]);
-        }
-        Arrays.sort(index);
-        return index;
-    }
-
-    public static String getStringRes(int key) {
-        return mApp.getString(key);
-    }
-
-    public static String getStringRes(int key, Object... formatArgs) {
-        return mApp.getString(key, formatArgs);
-    }
-
-    public static String[] getStringArray(int id) {
-        return mApp.getResources().getStringArray(id);
-    }
-
-    private static final DisplayHelper SG_DISPLAY_HELPER = new DisplayHelper() {
-        public String displayOne(String s) {
-            return s;
-        }
-
-        public boolean isIPA(char c) {
-            return c != '{';
-        }
-    };
-
-    private static final DisplayHelper GY_DISPLAY_HELPER = new DisplayHelper() {
-        public String displayOne(String s) {
-            return MiddleChinese.display(s, getToneStylesIndex(R.string.pref_key_mc_display));
-        }
-
-        public boolean isIPA(char c) {
-            return c != '{';
-        }
-    };
-
-    private static final DisplayHelper ZYYY_DISPLAY_HELPER = new DisplayHelper() {
-        public String displayOne(String s) {
-            return ZhongyuanYinyun.display(s, getToneStyles(R.string.pref_key_zyyy_display));
-        }
-
-        public boolean isIPA(char c) {
-            return super.isIPA(c) || c == '/' || c == '(' || c == ')';
-        }
-    };
-
-    private static final DisplayHelper DGY_DISPLAY_HELPER = new DisplayHelper() {
-        public String displayOne(String s) {
-            return Dongganyu.display(s, getToneStyles(R.string.pref_key_dgy_display));
-        }
-
-        private static boolean isCyrillic(char ch) {
-            Character.UnicodeBlock block = Character.UnicodeBlock.of(ch);
-            return block == Character.UnicodeBlock.CYRILLIC
-                || block == Character.UnicodeBlock.CYRILLIC_SUPPLEMENTARY;
-        }
-
-        public boolean isIPA(char c) {
-            return super.isIPA(c) || isCyrillic(c) || c == '/' || c == '(' || c == ')';
-        }
-    };
-
-    private static final DisplayHelper CMN_DISPLAY_HELPER = new DisplayHelper() {
-        public String displayOne(String s) {
-            return Mandarin.display(s, getToneStyle(R.string.pref_key_mandarin_display));
-        }
-    };
-
-    private static final DisplayHelper HK_DISPLAY_HELPER = new DisplayHelper() {
-        public String displayOne(String s) {
-            return Cantonese.display(s, getToneStyle(R.string.pref_key_cantonese_romanization));
-        }
-    };
-
-    private static final DisplayHelper TW_DISPLAY_HELPER = new DisplayHelper() {
-        public String displayOne(String s) {
-            return Minnan.display(s, getToneStyle(R.string.pref_key_minnan_display));
-        }
-    };
-
-    private static final DisplayHelper BA_DISPLAY_HELPER = new DisplayHelper() {
-        public String displayOne(String s) {
-            return s;
-        }
-    };
-
-    private static final DisplayHelper TONE_DISPLAY_HELPER = new DisplayHelper() {
-        public String displayOne(String s) {
-            return Tones.display(s, getLang());
-        }
-    };
-
-    private static final DisplayHelper KOR_DISPLAY_HELPER = new DisplayHelper() {
-        public String displayOne(String s) {
-            return Korean.display(s, getToneStyle(R.string.pref_key_korean_display));
-        }
-    };
-
-    private static final DisplayHelper VI_DISPLAY_HELPER = new DisplayHelper() {
-        public String displayOne(String s) {
-            return Vietnamese.display(s, getToneStyle(R.string.pref_key_vietnamese_tone_position));
-        }
-    };
-
-    private static final DisplayHelper JA_DISPLAY_HELPER = new DisplayHelper() {
-        public String displayOne(String s) {
-            return Japanese.display(s, getToneStyle(R.string.pref_key_japanese_display));
-        }
-    };
-
-    public static CharSequence formatIPA(String lang, String string) {
-        CharSequence cs;
-        if (TextUtils.isEmpty(string)) return "";
-        cs = switch (lang) {
-            case DB.BA -> BA_DISPLAY_HELPER.display(string, lang);
-            case DB.HK -> HK_DISPLAY_HELPER.display(string, lang);
-            case DB.KOR -> KOR_DISPLAY_HELPER.display(string, lang);
-            case DB.VI -> VI_DISPLAY_HELPER.display(string, lang);
-
-            case DB.SG -> SG_DISPLAY_HELPER.displayRich(string, lang);
-            case DB.GY -> GY_DISPLAY_HELPER.displayRich(string, lang);
-            case DB.ZYYY -> ZYYY_DISPLAY_HELPER.displayRich(string, lang);
-            case DB.DGY -> DGY_DISPLAY_HELPER.displayRich(string, lang);
-            case DB.CMN -> CMN_DISPLAY_HELPER.displayRich(string, lang);
-            case DB.TW -> TW_DISPLAY_HELPER.displayRich(string, lang);
-            case DB.JA_GO, DB.JA_KAN, DB.JA_OTHER -> JA_DISPLAY_HELPER.displayRich(string, lang);
-            default -> TONE_DISPLAY_HELPER.displayRich(string, lang);
-        };
-        return cs;
-    }
-
-    public static boolean useFontTone() {
-        return getToneStyle(R.string.pref_key_tone_display) == 5;
-    }
-
-    public static void refreshTypeface() {
-        tfHan = null;
-        tfHanTone = null;
-        tfIPA = null;
-        tfIPATone = null;
-    }
-
-    private static Typeface getHanTypeface() {
-        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
-        try {
-            if (useFontTone()) {
-                if (tfHanTone == null) {
-                    Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.tone).build()).build()
-                    );
-                    if (fontExFirst()) builder.addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p0).build()).build()
-                    );
-                    builder.addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p2).build()).build()
-                    ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p3).build()).build()
-                    ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.pua).build()).build()
-                    );
-                    builder.setSystemFallback(getDefaultFont());
-                    tfHanTone = builder.build();
-                }
-                return tfHanTone;
-            } else {
-                if (tfHan == null) {
-                    Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), fontExFirst() ? R.font.p0 : R.font.ipa).build()).build()
-                    );
-                    builder.addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p2).build()).build()
-                    ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.p3).build()).build()
-                    ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(mApp.getResources(), R.font.pua).build()).build()
-                    );
-                    builder.setSystemFallback(getDefaultFont());
-                    tfHan = builder.build();
-                }
-                return tfHan;
-            }
-        } catch (Exception ignore) {
-        }
-        return null;
-    }
-
-    private static Typeface getDictTypeface() {
-        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
-        if (!enableFontExt()) return getIPATypeface();
-        return getHanTypeface();
-    }
-
-    public static Typeface getIPATypeface() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return null;
-        if (useFontTone()) {
-            if (tfIPATone == null) {
-                tfIPATone = mApp.getResources().getFont(R.font.tone);
-            }
-            return tfIPATone;
-        }
-        if (tfIPA == null) {
-            tfIPA = mApp.getResources().getFont(R.font.ipa);
-        }
-        return tfIPA;
-    }
-
-    public static float getScale() {
-        return mApp.getResources().getDisplayMetrics().density;
-    }
-
-    public static int getDisplayFormat() {
-        return getStrAsInt(R.string.pref_key_format, 1);
-    }
-
-    public static int getFontFormat() {
-        return getStrAsInt(R.string.pref_key_font, 0);
-    }
-
-    public static boolean useSerif() {
-        return getFontFormat() == 1;
-    }
-
-    public static String getDefaultFont() {
-        return useSerif() ? "serif" : "sans";
-    }
-
-    public static boolean fontExFirst() {
-        return getFontFormat() == 2;
-    }
-
-    public static boolean enableFontExt() {
-        return getFontFormat() != 3;
-    }
-
-    private static int getAppTheme() {
-        return switch (getFontFormat()) {
-            case 0 -> R.style.AppThemeSans;
-            case 1, 2 -> R.style.AppThemeSerif;
-            default -> R.style.AppTheme;
-        };
-    }
-
-    public static void setActivityTheme(AppCompatActivity app) {
-        app.setTheme(getAppTheme());
-    }
-
-    public static String getTitle() {
-        return getStr(R.string.pref_key_custom_title, mApp.getString(R.string.app_name));
     }
 
     public static void info(Context context, String lang) {
@@ -380,181 +74,36 @@ public class Utils extends Application {
                 .show();
     }
 
-    public static String getFontFeatureSettings() {
-        String locale = getStr(R.string.pref_key_locale);
-        if (!TextUtils.isEmpty(locale) && locale.contentEquals("zh-cn")) return "";
-        return "ss12";
-    }
-
-    public static void setTypeface(TextView tv) {
-        tv.setTypeface(getDictTypeface());
-        tv.setFontFeatureSettings(getFontFeatureSettings());
-        tv.setElegantTextHeight(true);
-    }
-
     public static void showDict(Context context, int lang, CharSequence s) {
         TextView tv = new TextView(context);
         tv.setPadding(24, 24, 24, 24);
-        setTypeface(tv);
+        FontUtil.setTypeface(tv);
         if (lang == COL_HD) tv.setFontFeatureSettings("ss01"); // zh-cn and pinyin
-        else if (lang == COL_GYHZ) tv.setFontFeatureSettings(String.format("'ss01', '%s'", getFontFeatureSettings())); // zh-cn and pinyin
+        else if (lang == COL_GYHZ) tv.setFontFeatureSettings(String.format("'ss01', '%s'", FontUtil.getFontFeatureSettings())); // zh-cn and pinyin
         tv.setTextIsSelectable(true);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
         tv.setText(s);
         new AlertDialog.Builder(context).setView(tv).show();
     }
 
-    public static void putBool(int key, boolean value) {
-         getPreference().edit().putBoolean(mApp.getString(key), value).apply();
-    }
-
-    public static boolean getBool(int key, boolean defaultValue) {
-        return getPreference().getBoolean(mApp.getString(key), defaultValue);
-    }
-
-    public static void putStr(int key, String value) {
-        getPreference().edit().putString(mApp.getString(key), value).apply();
-    }
-
-    public static String getStr(int key, String defaultValue) {
-        return getPreference().getString(mApp.getString(key), defaultValue);
-    }
-
-    public static Set<String> getStrSet(int key) {
-        return getStrSet(key, new HashSet<>());
-    }
-
-    public static Set<String> getStrSet(int key, Set<String> defaultValue) {
-        return new HashSet<>(getPreference().getStringSet(mApp.getString(key), defaultValue));
-    }
-
-    public static void putStrSet(int key, String value) {
-        Set<String> set = getStrSet(key);
-        if (set.contains(value)) set.remove(value);
-        else set.add(value);
-        getPreference().edit().putStringSet(mApp.getString(key), set).apply();
-    }
-
-    public static void putCustomLanguage(String lang) {
-        putStrSet(R.string.pref_key_custom_languages, lang);
-    }
-
-    public static Set<String> getCustomLanguages() {
-        int key = R.string.pref_key_custom_languages;
-        Set<String> customs = Utils.getStrSet(key);
-        if (customs.isEmpty()) return customs;
-        Set<String> set = new HashSet<>();
-        String[] languages = DB.getLanguages();
-        for (String lang: languages) {
-            if (customs.contains(lang)) {
-                set.add(lang);
-            }
-        }
-        if (set.size() != customs.size()) {
-            getPreference().edit().putStringSet(mApp.getString(key), set).apply();
-        }
-        return set;
-    }
-
     public static boolean isCustomLanguage(String lang) {
-        return getCustomLanguages().contains(lang);
+        return Pref.getCustomLanguages().contains(lang);
     }
 
-    public static String getCustomLanguageSummary()  {
-        Set<String> set = getCustomLanguages();
-        return mApp.getString(R.string.select_custom_language_summary, set.size(), String.join("、", set));
+    public static float getScale() {
+        return getContext().getResources().getDisplayMetrics().density;
     }
 
-    public static String getStr(int key) {
-        return getStr(key, "");
-    }
-
-    public static void putInput(String value) {
-        putStr(R.string.pref_key_input, value);
-    }
-
-    public static String getDict() {
-        String value = getStr(R.string.pref_key_dict);
-        if (value.contentEquals(mApp.getString(R.string.dict))) value = "";
-        return value;
-    }
-
-    public static void putDict(String value) {
-        putStr(R.string.pref_key_dict, value);
-    }
-
-    public static String getShape() {
-        String shape = getStr(R.string.pref_key_shape);
-        if (shape.contentEquals(mApp.getString(R.string.hz_shapes))) shape = "";
-        return shape;
-    }
-
-    public static void putShape(String value) {
-        putStr(R.string.pref_key_shape, value);
-    }
-
-    public static String getProvince() {
-        String value = getStr(R.string.pref_key_province);
-        if (value.contentEquals(mApp.getString(R.string.province))) value = "";
-        return value;
-    }
-
-    public static void putProvince(String value) {
-        putStr(R.string.pref_key_province, value);
-    }
-
-    public static String getDivision() {
-        String value = getStr(R.string.pref_key_division);
-        if (value.contentEquals(mApp.getString(R.string.division))) value = "";
-        return value;
-    }
-
-    public static void putDivision(String value) {
-        putStr(R.string.pref_key_division, value);
-    }
-
-    public static DB.FILTER getFilter() {
-        int i = getInt(R.string.pref_key_filters, 0);
-        return DB.FILTER.values()[i];
-    }
-
-    public static void putFilter(int value) {
-        putInt(R.string.pref_key_filters, value);
-    }
-
-    public static String getInput() {
-        return getStr(R.string.pref_key_input);
-    }
-
-    public static void putLanguage(String value) {
-        putStr(R.string.pref_key_language, value);
-    }
-
-    public static void putLabel(String lang) {
-        String language = DB.getLanguageByLabel(lang);
-        putLanguage(language);
-    }
-
-    public static String getLanguage() {
-        return getStr(R.string.pref_key_language);
-    }
-
-    public static String getLabel() {
-        String language = getStr(R.string.pref_key_language);
-        if (TextUtils.isEmpty(language)) language = DB.HZ;
-        return DB.getLabelByLanguage(language);
-    }
-
-    public static int getInt(int key, int defaultValue) {
-        return getPreference().getInt(mApp.getString(key), defaultValue);
-    }
-
-    public static void putInt(int key, int value) {
-        getPreference().edit().putInt(mApp.getString(key), value).apply();
+    static int getAppTheme() {
+        return switch (FontUtil.getFontFormat()) {
+            case 0 -> R.style.AppThemeSans;
+            case 1, 2 -> R.style.AppThemeSerif;
+            default -> R.style.AppTheme;
+        };
     }
 
     public static void setLocale() {
-        String locale = getStr(R.string.pref_key_locale);
+        String locale = Pref.getStr(R.string.pref_key_locale);
         if (TextUtils.isEmpty(locale)) locale = "ko";
         Locale.setDefault(Locale.forLanguageTag(locale));
     }
@@ -568,5 +117,9 @@ public class Utils extends Application {
             color = arr.getColor(0, color);
         }
         return color;
+    }
+
+    public static void setActivityTheme(AppCompatActivity app) {
+        app.setTheme(getAppTheme());
     }
 }

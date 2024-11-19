@@ -22,7 +22,7 @@ import android.widget.TextView.BufferType;
 
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.RefreshableFragment;
-import com.osfans.mcpdict.Util.UserDatabase;
+import com.osfans.mcpdict.Util.UserDB;
 
 @SuppressLint("UseSparseArrays")
 public class FavoriteFragment extends ListFragment implements RefreshableFragment {
@@ -137,7 +137,7 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
         new AsyncTask<Void, Void, Cursor>() {
             @Override
             protected Cursor doInBackground(Void... params) {
-                return UserDatabase.selectAllFavorites();
+                return UserDB.selectAllFavorites();
             }
 
             @Override

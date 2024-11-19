@@ -5,14 +5,20 @@ import com.osfans.mcpdict.DisplayHelper;
 import com.osfans.mcpdict.Pref;
 import com.osfans.mcpdict.R;
 
-public class ZhongyuanYinyun {
+public class Dungan {
     public static final DisplayHelper displayHelper = new DisplayHelper() {
         public String displayOne(String s) {
-            return ZhongyuanYinyun.display(s, Pref.getToneStyles(R.string.pref_key_zyyy_display));
+            return Dungan.display(s, Pref.getToneStyles(R.string.pref_key_dgy_display));
+        }
+
+        private static boolean isCyrillic(char ch) {
+            Character.UnicodeBlock block = Character.UnicodeBlock.of(ch);
+            return block == Character.UnicodeBlock.CYRILLIC
+                || block == Character.UnicodeBlock.CYRILLIC_SUPPLEMENTARY;
         }
 
         public boolean isIPA(char c) {
-            return super.isIPA(c) || c == '/' || c == '(' || c == ')';
+            return super.isIPA(c) || isCyrillic(c) || c == '/' || c == '(' || c == ')';
         }
     };
 
@@ -20,16 +26,13 @@ public class ZhongyuanYinyun {
         StringBuilder sb = new StringBuilder();
         String[] ss = pys.split("/");
         int n = list.length;
-        String[] names = Pref.getStringArray(R.array.pref_entries_zyyy_display);
         for (String system : list) {
-            int i = Integer.parseInt(system);
+            int i = 1 - Integer.parseInt(system);
             String s = ss[i];
             char tone = s.charAt(s.length() - 1);
             s = s.substring(0, s.length() - 1);
-            s = Orthography.formatTone(s, tone + "", DB.ZYYY);
-            sb.append(s);
-            String name = names[i].replace("（", "{").replace("）", "}");
-            if (n > 1) sb.append(String.format("(%s)", name));
+            s = Orthography.formatTone(s, tone + "", DB.DGY);
+            sb.append(String.format(n > 1 && i == 0 ? "(%s)" : "%s", s));
             sb.append(" ");
         }
         return sb.toString();

@@ -1,10 +1,18 @@
 package com.osfans.mcpdict.Orth;
 
 import com.osfans.mcpdict.DB;
+import com.osfans.mcpdict.DisplayHelper;
+import com.osfans.mcpdict.Pref;
+import com.osfans.mcpdict.R;
 
 public class Minnan {
     private static final int IPA = 0;
     private static final int ROMAN = 1;
+    public static final DisplayHelper displayHelper = new DisplayHelper() {
+        public String displayOne(String s) {
+            return Minnan.display(s, Pref.getToneStyle(R.string.pref_key_minnan_display));
+        }
+    };
 
     public static String display(String s, int system) {
         if (system == ROMAN) return Orthography.formatRoman(s);

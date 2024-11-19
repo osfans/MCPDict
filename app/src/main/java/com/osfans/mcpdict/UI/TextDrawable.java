@@ -15,7 +15,7 @@ import android.graphics.drawable.shapes.OvalShape;
 import android.graphics.drawable.shapes.RectShape;
 import android.graphics.drawable.shapes.RoundRectShape;
 
-import com.osfans.mcpdict.Utils;
+import com.osfans.mcpdict.Util.FontUtil;
 
 /**
  * author amulya
@@ -56,7 +56,7 @@ public class TextDrawable extends ShapeDrawable {
         textPaint.setFakeBoldText(builder.isBold);
         textPaint.setStyle(Paint.Style.FILL);
         textPaint.setTypeface(builder.font);
-        String feat = Utils.getFontFeatureSettings();
+        String feat = FontUtil.getFontFeatureSettings();
         textPaint.setFontFeatureSettings(feat);
         textPaint.setTextAlign(Paint.Align.CENTER);
         textPaint.setStrokeWidth(builder.borderThickness);
@@ -192,7 +192,7 @@ public class TextDrawable extends ShapeDrawable {
             width = -1;
             height = -1;
             shape = new RectShape();
-            font = Utils.useSerif() ? Typeface.SERIF : Typeface.SANS_SERIF;
+            font = FontUtil.useSerif() ? Typeface.SERIF : Typeface.SANS_SERIF;
             fontSize = -1;
             isBold = false;
             toUpperCase = false;

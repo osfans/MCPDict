@@ -8,7 +8,7 @@ import android.graphics.Color;
 import android.text.TextUtils;
 
 import com.osfans.mcpdict.Orth.*;
-import com.osfans.mcpdict.Util.UserDatabase;
+import com.osfans.mcpdict.Util.UserDB;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 import org.json.JSONException;
@@ -121,7 +121,7 @@ public class DB extends SQLiteAssetHelper {
     public static void initialize(Context context) {
         if (db != null) return;
         db = new DB(context).getWritableDatabase();
-        String userDbPath = UserDatabase.getDatabasePath();
+        String userDbPath = UserDB.getDatabasePath();
         db.execSQL("ATTACH DATABASE '" + userDbPath + "' AS user");
         initArrays();
         initFQ();
@@ -139,11 +139,11 @@ public class DB extends SQLiteAssetHelper {
 
     public static Cursor search() {
         // Search for one or more keywords, considering mode and options
-        String input = Utils.getInput();
-        String lang = Utils.getLabel();
-        String shape = Utils.getShape();
-        String dict = Utils.getDict();
-        int type = Utils.getInt(R.string.pref_key_type, 0);
+        String input = Pref.getInput();
+        String lang = Pref.getLabel();
+        String shape = Pref.getShape();
+        String dict = Pref.getDict();
+        int type = Pref.getInt(R.string.pref_key_type);
 
         if (input.startsWith("-")) input = input.substring(1);
 
@@ -154,12 +154,12 @@ public class DB extends SQLiteAssetHelper {
         }
 
         // Get options and settings
-        int charset = Utils.getInt(R.string.pref_key_charset, 0);
+        int charset = Pref.getInt(R.string.pref_key_charset);
         boolean mcOnly = charset == 1;
         boolean kxOnly = charset == 3;
         boolean hdOnly = charset == 4;
         boolean swOnly = charset == 2;
-        int cantoneseSystem = Utils.getStrAsInt(R.string.pref_key_cantonese_romanization, 0);
+        int cantoneseSystem = Pref.getStrAsInt(R.string.pref_key_cantonese_romanization, 0);
 
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
@@ -251,7 +251,7 @@ public class DB extends SQLiteAssetHelper {
         qb.setTables(TABLE_NAME);
         List<String> queries = new ArrayList<>();
         List<String> args = new ArrayList<>();
-        boolean allowVariants = isHzMode(lang) && Utils.getBool(R.string.pref_key_allow_variants, true) && type < 2;
+        boolean allowVariants = isHzMode(lang) && Pref.getBool(R.string.pref_key_allow_variants, true) && type < 2;
         for (int i = 0; i < keywords.size(); i++) {
             String key = keywords.get(i);
             String variant = allowVariants ? ("'" + key + "'") : "null";
@@ -290,7 +290,7 @@ public class DB extends SQLiteAssetHelper {
         } else if (hdOnly) {
             selection += String.format(" AND `%s` IS NOT NULL", HD);
         } else if (charset > 0) {
-            selection += String.format(" AND `%s` MATCH '%s'", FL, Utils.getStringArray(R.array.pref_values_charset)[charset]);
+            selection += String.format(" AND `%s` MATCH '%s'", FL, Pref.getStringArray(R.array.pref_values_charset)[charset]);
         }
         query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", "0,100");
 
@@ -312,7 +312,7 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static void initFQ() {
-        FQ = Utils.getStr(R.string.pref_key_fq, Utils.getStringRes(R.string.default_fq));
+        FQ = Pref.getStr(R.string.pref_key_fq, Pref.getString(R.string.default_fq));
         ORDER = FQ.replace(_FQ, _ORDER);
         COLOR = FQ.replace(_FQ, _COLOR);
         DIVISIONS = getFieldByLabel(HZ, FQ).split(",");
@@ -489,25 +489,25 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static String[] getVisibleColumns(int count) {
-        FILTER filter = Utils.getFilter();
+        FILTER filter = Pref.getFilter();
         if (count > 30) filter = FILTER.HZ;
         else if (count > 10 && filter != FILTER.HZ) filter = FILTER.CURRENT;
-        String label = Utils.getLabel();
+        String label = Pref.getLabel();
         switch (filter) {
             case AREA -> {
-                int level = Utils.getInt(R.string.pref_key_area_level, 0);
-                String province = Utils.getProvince();
+                int level = Pref.getInt(R.string.pref_key_area_level);
+                String province = Pref.getProvince();
                 StringBuilder sb = new StringBuilder();
                 if (!TextUtils.isEmpty(province)) sb.append(String.format("省 = '%s'", province));
                 if (!TextUtils.isEmpty(province) && level > 0) sb.append(" and ");
                 if (level > 0) {
-                    String[] levels = Utils.getStringArray(R.array.entries_area_level);
+                    String[] levels = Pref.getStringArray(R.array.entries_area_level);
                     sb.append(String.format("行政區級別 match '%s'", levels[level]));
                 }
                 if (!TextUtils.isEmpty(sb)) return queryLabel(sb.toString());
             }
             case DIVISION -> {
-                String division = Utils.getDivision();
+                String division = Pref.getDivision();
                 if (!TextUtils.isEmpty(division)) {
                     String[] a = DB.getLabelsByFq(division);
                     if (a != null && a.length > 0) {
@@ -516,7 +516,7 @@ public class DB extends SQLiteAssetHelper {
                 }
             }
             case CUSTOM -> {
-                Set<String> customs = Utils.getCustomLanguages();
+                Set<String> customs = Pref.getCustomLanguages();
                 if (customs.isEmpty()) return new String[]{};
                 ArrayList<String> array = new ArrayList<>();
                 for (String lang: getLanguages()) {
@@ -535,7 +535,7 @@ public class DB extends SQLiteAssetHelper {
             case CURRENT -> {
                 ArrayList<String> array = new ArrayList<>();
                 if (!TextUtils.isEmpty(label) && !label.contentEquals(HZ)) array.add(label);
-                boolean pfg = Utils.getBool(R.string.pref_key_pfg, false);
+                boolean pfg = Pref.getBool(R.string.pref_key_pfg, false);
                 if (pfg) {
                     if(!label.contentEquals(GY)) array.add(GY);
                     if(!label.contentEquals(CMN)) array.add(CMN);
@@ -641,13 +641,13 @@ public class DB extends SQLiteAssetHelper {
     }
 
     private static String _getIntro(String language) {
-        if (TextUtils.isEmpty(language) || Utils.getFilter() == FILTER.HZ) language = HZ;
+        if (TextUtils.isEmpty(language) || Pref.getFilter() == FILTER.HZ) language = HZ;
         String intro = TextUtils.isEmpty(language) ? "" : getFieldByLanguage(language, "說明").replace("\n", "<br>");
         if (language.contentEquals(HZ)) {
-            intro = String.format(Locale.getDefault(), "%s%s<br>%s", Utils.getStringRes(R.string.version), BuildConfig.VERSION_NAME, intro);
+            intro = String.format(Locale.getDefault(), "%s%s<br>%s", Pref.getString(R.string.version), BuildConfig.VERSION_NAME, intro);
         } else {
             StringBuilder sb = new StringBuilder();
-            sb.append(String.format(Locale.getDefault(), "%s%s<br>", Utils.getStringRes(R.string.name), language));
+            sb.append(String.format(Locale.getDefault(), "%s%s<br>", Pref.getString(R.string.name), language));
             ArrayList<String> fields = new ArrayList<>(Arrays.asList("序號","地點","經緯度","維護人","參考資料","文件名","版本","字數","□數", "音節數","不帶調音節數",""));
             fields.addAll(Arrays.asList(FQ_COLUMNS));
             fields.add("");
@@ -670,7 +670,7 @@ public class DB extends SQLiteAssetHelper {
 
     public static String getIntroText(String language) {
         initArrays();
-        if (TextUtils.isEmpty(language)) language = Utils.getLanguage();
+        if (TextUtils.isEmpty(language)) language = Pref.getLanguage();
         String intro = _getIntro(language);
         if (language.contentEquals(HZ)) {
             StringBuilder sb = new StringBuilder();
@@ -700,7 +700,7 @@ public class DB extends SQLiteAssetHelper {
 
     public static String getIntro() {
         initArrays();
-        return _getIntro(Utils.getLanguage());
+        return _getIntro(Pref.getLanguage());
     }
 
     public static JSONObject getToneName(String lang) {

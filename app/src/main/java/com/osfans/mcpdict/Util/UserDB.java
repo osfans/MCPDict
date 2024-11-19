@@ -9,7 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class UserDatabase extends SQLiteOpenHelper {
+public class UserDB extends SQLiteOpenHelper {
 
     // STATIC VARIABLES AND METHODS
 
@@ -27,7 +27,7 @@ public class UserDatabase extends SQLiteOpenHelper {
     public static void initialize(Context context) {
         if (db != null) return;
         mContext = new WeakReference<>(context);
-        db = new UserDatabase(context).getWritableDatabase();
+        db = new UserDB(context).getWritableDatabase();
     }
 
     public static String getDatabasePath() {
@@ -75,7 +75,7 @@ public class UserDatabase extends SQLiteOpenHelper {
     // EXPORTING AND IMPORTING
 
     public static void exportFavorites() throws IOException {
-        FileUtils.copyFile(getDatabasePath(), getBackupPath());
+        ThemeUtil.copyFile(getDatabasePath(), getBackupPath());
     }
 
     public static int selectBackupFavoriteCount() {
@@ -89,7 +89,7 @@ public class UserDatabase extends SQLiteOpenHelper {
     }
 
     public static void importFavoritesOverwrite() throws IOException {
-        FileUtils.copyFile(getBackupPath(), getDatabasePath());
+        ThemeUtil.copyFile(getBackupPath(), getDatabasePath());
     }
 
     public static void importFavoritesMix() {
@@ -108,7 +108,7 @@ public class UserDatabase extends SQLiteOpenHelper {
 
     // NON-STATIC METHODS IMPLEMENTING THOSE OF THE ABSTRACT SUPER-CLASS
 
-    public UserDatabase(Context context) {
+    public UserDB(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
