@@ -3,6 +3,9 @@ package com.osfans.mcpdict.Orth;
 import android.text.TextUtils;
 
 import com.osfans.mcpdict.DB;
+import com.osfans.mcpdict.DisplayHelper;
+import com.osfans.mcpdict.Pref;
+import com.osfans.mcpdict.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +30,11 @@ public class Cantonese {
     public static final List<Map<String, String>> listFinals = new ArrayList<>();
     public static final List<Map<String, String>> listInitialsR = new ArrayList<>();
     public static final List<Map<String, String>> listFinalsR = new ArrayList<>();
+    public static final DisplayHelper displayHelper = new DisplayHelper() {
+        public String displayOne(String s) {
+            return Cantonese.display(s, Pref.getToneStyle(R.string.pref_key_cantonese_romanization));
+        }
+    };
 
     public static String canonicalize(String s, int system) {
         // Convert from given system to Jyutping

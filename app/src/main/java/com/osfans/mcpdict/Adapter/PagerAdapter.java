@@ -1,4 +1,4 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.Adapter;
 
 import androidx.annotation.NonNull;
 
@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import com.osfans.mcpdict.DictFragment;
 import com.osfans.mcpdict.Favorite.FavoriteFragment;
 
 public class PagerAdapter extends FragmentStateAdapter {

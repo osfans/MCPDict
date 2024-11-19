@@ -17,9 +17,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.osfans.mcpdict.DB;
+import com.osfans.mcpdict.Util.FontUtil;
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.ResultFragment;
-import com.osfans.mcpdict.Utils;
 
 @SuppressLint("UseSparseArrays")
 public class FavoriteAdapter extends CursorAdapter {
@@ -67,7 +67,7 @@ public class FavoriteAdapter extends CursorAdapter {
         String hz = cursor.getString(cursor.getColumnIndexOrThrow("hz"));
         textView = view.findViewById(R.id.text_hz);
         textView.setText(hz);
-        Utils.setTypeface(textView);
+        FontUtil.setTypeface(textView);
 
         // Timestamp
         string = cursor.getString(cursor.getColumnIndexOrThrow("local_timestamp"));
@@ -78,7 +78,7 @@ public class FavoriteAdapter extends CursorAdapter {
         string = cursor.getString(cursor.getColumnIndexOrThrow("comment"));
         textView = view.findViewById(R.id.text_comment);
         textView.setText(string);
-        Utils.setTypeface(textView);
+        FontUtil.setTypeface(textView);
 
         // "Edit" button
         final Button buttonEdit = view.findViewById(R.id.button_edit);

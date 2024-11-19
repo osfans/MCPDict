@@ -9,9 +9,8 @@ import androidx.appcompat.app.AlertDialog;
 
 import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.DisplayHelper;
-import com.osfans.mcpdict.Util.FileUtils;
+import com.osfans.mcpdict.Util.ThemeUtil;
 import com.osfans.mcpdict.R;
-import com.osfans.mcpdict.Utils;
 
 import org.osmdroid.bonuspack.kml.KmlDocument;
 import org.osmdroid.bonuspack.kml.Style;
@@ -155,8 +154,8 @@ public class MyMapView extends MapView {
                 int i = DB.getColumnIndex(lang);
                 String string = cursor.getString(i);
                 if (TextUtils.isEmpty(string)) continue;
-                CharSequence yb = Utils.formatIPA(lang, DisplayHelper.getRawText(string));
-                CharSequence js = Utils.formatIPA(lang, string);
+                CharSequence yb = DisplayHelper.formatIPA(lang, DisplayHelper.getRawText(string));
+                CharSequence js = DisplayHelper.formatIPA(lang, string);
                 int size = DB.getSize(lang);
                 MyMarker marker = new MyMarker(this, DB.getColor(lang), DB.getLabel(lang), yb.toString(), js.toString(), size);
                 marker.setPosition(point);
@@ -173,7 +172,7 @@ public class MyMapView extends MapView {
         final KmlDocument kmlDocument = new KmlDocument();
 
         try {
-            kmlDocument.parseGeoJSON(FileUtils.getStringFromAssets(fileName, getContext()));
+            kmlDocument.parseGeoJSON(ThemeUtil.getStringFromAssets(fileName, getContext()));
         } catch (IOException e) {
             //e.printStackTrace();
             return null;

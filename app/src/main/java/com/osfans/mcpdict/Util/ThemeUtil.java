@@ -13,7 +13,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.nio.channels.FileChannel;
 
-public class FileUtils {
+public class ThemeUtil {
 
     public static void copyFile(String srcPath, String dstPath) throws IOException {
         makeParentDirs(dstPath);

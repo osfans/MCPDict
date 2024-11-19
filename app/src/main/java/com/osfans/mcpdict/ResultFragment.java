@@ -61,6 +61,7 @@ import com.osfans.mcpdict.UI.MyMapView;
 import com.osfans.mcpdict.UI.MyWebView;
 import com.osfans.mcpdict.UI.PopupSpan;
 import com.osfans.mcpdict.UI.TextDrawable;
+import com.osfans.mcpdict.Util.FontUtil;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.ref.WeakReference;
@@ -160,15 +161,15 @@ public class ResultFragment extends Fragment {
         registerForContextMenu(mWebView);
         mTextView = new TextView(requireContext());
         mTextView.setTextAppearance(R.style.FontDetail);
-        Utils.setTypeface(mTextView);
+        FontUtil.setTypeface(mTextView);
         mTextView.setTextIsSelectable(true);
         mTextView.setMovementMethod(LinkMovementMethod.getInstance());
         LinearLayout layout = selfView.findViewById(R.id.layout);
         layout.addView(mTextView);
         mTextView.setTag(this);
         registerForContextMenu(mTextView);
-        Orthography.setToneStyle(Utils.getToneStyle(R.string.pref_key_tone_display));
-        Orthography.setToneValueStyle(Utils.getToneStyle(R.string.pref_key_tone_value_display));
+        Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
+        Orthography.setToneValueStyle(Pref.getToneStyle(R.string.pref_key_tone_value_display));
 
         View.OnTouchListener listener = new View.OnTouchListener() {
             private final GestureDetector gestureDetector = new GestureDetector(requireActivity(), new GestureDetector.SimpleOnGestureListener() {
@@ -198,7 +199,7 @@ public class ResultFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        if (Utils.getDisplayFormat() == 2) {
+        if (Pref.getDisplayFormat() == 2) {
             mTextView.setVisibility(View.GONE);
             mWebView.setVisibility(View.VISIBLE);
         } else {
@@ -225,15 +226,11 @@ public class ResultFragment extends Fragment {
     }
 
     public void setEntry(String hz, String lang, String raw, boolean favorite, String comment) {
-        mEntry.hz = hz;
-        mEntry.lang = lang;
-        mEntry.raw = raw;
-        mEntry.favorite = favorite;
-        mEntry.comment = comment;
+        mEntry.set(hz, lang, raw, favorite, comment);
     }
 
     public void setEntry(Entry entry) {
-        setEntry(entry.hz, entry.lang,entry.raw, entry.favorite, entry.comment);
+        mEntry.set(entry);
     }
 
     @Override
@@ -409,14 +406,14 @@ public class ResultFragment extends Fragment {
                       }
                       body {
                 """);
-        String feat = Utils.getFontFeatureSettings();
+        String feat = FontUtil.getFontFeatureSettings();
         if (!feat.isEmpty()) sb.append(String.format("font-feature-settings: %s;\n", feat));
         sb.append("      font-family: ");
-        if (Utils.fontExFirst()) {
-            sb.append(String.format("p0, p2, p3, pua, %s; }\n", Utils.getDefaultFont()));
+        if (FontUtil.fontExFirst()) {
+            sb.append(String.format("p0, p2, p3, pua, %s; }\n", FontUtil.getDefaultFont()));
         } else {
-            sb.append(Utils.useFontTone() ? "tone," : "ipa,");
-            sb.append(String.format("%s, p0, p2, p3, pua; }\n", Utils.getDefaultFont()));
+            sb.append(FontUtil.useFontTone() ? "tone," : "ipa,");
+            sb.append(String.format("%s, p0, p2, p3, pua; }\n", FontUtil.getDefaultFont()));
         }
         sb.append("""
                               .ipa {
@@ -462,7 +459,7 @@ public class ResultFragment extends Fragment {
             StringBuilder ssb = new StringBuilder();
             int n = cursor.getCount();
             String[] cols = DB.getVisibleColumns(n);
-            String lang = Utils.getLabel();
+            String lang = Pref.getLabel();
             boolean isZY = DB.isLang(lang) && query.length() >= 3 && n >= 3
                     && !HanZi.isBS(query)
                     && HanZi.isHz(query);
@@ -471,7 +468,7 @@ public class ResultFragment extends Fragment {
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 int i = cursor.getColumnIndex(lang);
-                CharSequence py = Utils.formatIPA(lang, DisplayHelper.getRawText(cursor.getString(i)));
+                CharSequence py = DisplayHelper.formatIPA(lang, DisplayHelper.getRawText(cursor.getString(i)));
                 if (isZY) {
                     pys.put(hz, py.toString());
                 } else {
@@ -512,7 +509,7 @@ public class ResultFragment extends Fragment {
                 String fqTemp;
                 boolean opened = false;
                 if (HanZi.isUnknown(hz)) {
-                    String col = Utils.getLabel();
+                    String col = Pref.getLabel();
                     if (!DB.isLang(col)) continue;
                     int index = DB.getColumnIndex(col);
                     s = cursor.getString(index);
@@ -539,7 +536,7 @@ public class ResultFragment extends Fragment {
                             ssb.append(String.format("<details open><summary>%s</summary>", fqTemp));
                             opened = true;
                         }
-                        CharSequence ipa = Utils.formatIPA(col, s);
+                        CharSequence ipa = DisplayHelper.formatIPA(col, s);
                         String raw = DisplayHelper.getRawText(s);
                         String label = DB.getLabel(col);
                         ssb.append(String.format(Locale.CHINESE,"<div onclick='mcpdict.onClick(\"%s\", \"%s\", \"%s\", %d, \"%s\",event.pageX, event.pageY)' class=row><div class=place style='background: linear-gradient(to left, %s, %s);'>%s</div><div class=ipa>%s</div></div>",
@@ -603,7 +600,7 @@ public class ResultFragment extends Fragment {
                 sb.append("\n");
                 StringBuilder sb2 = new StringBuilder();
                 if (HanZi.isUnknown(hz)) {
-                    String col = Utils.getLabel();
+                    String col = Pref.getLabel();
                     if (!DB.isLang(col)) continue;
                     int i = cursor.getColumnIndex(col);
                     s = cursor.getString(i);
@@ -619,7 +616,7 @@ public class ResultFragment extends Fragment {
                         if (TextUtils.isEmpty(s)) continue;
                         String label = getLabel(col);
                         sb2.append(String.format("［%s］", label));
-                        sb2.append(HtmlCompat.fromHtml(Utils.formatIPA(col, s).toString(), HtmlCompat.FROM_HTML_MODE_COMPACT));
+                        sb2.append(HtmlCompat.fromHtml(DisplayHelper.formatIPA(col, s).toString(), HtmlCompat.FROM_HTML_MODE_COMPACT));
                         sb2.append("\n");
                     }
                 }
@@ -681,7 +678,7 @@ public class ResultFragment extends Fragment {
                 // yb
                 SpannableStringBuilder ssb2 = new SpannableStringBuilder();
                 if (HanZi.isUnknown(hz)) {
-                    String lang = Utils.getLabel();
+                    String lang = Pref.getLabel();
                     if (!DB.isLang(lang)) continue;
                     int i = getColumnIndex(lang);
                     s = cursor.getString(i);
@@ -703,7 +700,7 @@ public class ResultFragment extends Fragment {
                         int i = getColumnIndex(lang);
                         s = cursor.getString(i);
                         if (TextUtils.isEmpty(s)) continue;
-                        CharSequence cs = HtmlCompat.fromHtml(Utils.formatIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
+                        CharSequence cs = HtmlCompat.fromHtml(DisplayHelper.formatIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
                         n = ssb2.length();
                         String label = getLabel(i);
                         Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
@@ -762,14 +759,14 @@ public class ResultFragment extends Fragment {
 
     public void setData(String query, Cursor cursor) {
         mRaws.clear();
-        int format = Utils.getDisplayFormat();
+        int format = Pref.getDisplayFormat();
         if (format == 2) { //web
             setWebData(query, cursor);
             mWebView.setVisibility(View.VISIBLE);
             if (cursor != null) cursor.close();
             mScroll.setScrollY(0);
         } else {
-            Utils.setTypeface(mTextView);
+            FontUtil.setTypeface(mTextView);
             new AsyncTask<Void, Void, CharSequence>() {
                 @Override
                 protected CharSequence doInBackground(Void... params) {
@@ -789,10 +786,8 @@ public class ResultFragment extends Fragment {
     }
 
     public void setData(Cursor cursor) {
-        final String query = Utils.getInput();
-        setData(query, cursor);
+        setData(Pref.getInput(), cursor);
     }
-
     public void showContextMenu(float x, float y) {
         requireActivity().runOnUiThread(() -> {
             if (!mWebView.isDirty()) {
@@ -814,9 +809,7 @@ public class ResultFragment extends Fragment {
     }
 
     public void showFavorite(String hz, boolean favorite, String comment) {
-        mEntry.hz = hz;
-        mEntry.favorite = favorite;
-        mEntry.comment = comment;
+        mEntry.set(hz, favorite, comment);
         mHandler.sendEmptyMessage(MSG_FAVORITE);
     }
 }

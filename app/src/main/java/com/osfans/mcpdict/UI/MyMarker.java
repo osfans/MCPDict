@@ -5,7 +5,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
 
-import com.osfans.mcpdict.Utils;
+import com.osfans.mcpdict.Util.FontUtil;
 
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.Marker;
@@ -32,7 +32,7 @@ public class MyMarker extends Marker {
         mTextPaint.setTextSize(24);
         mTextPaint.setAntiAlias(true);
         mTextPaint.setTextAlign(Paint.Align.LEFT);
-        mTextPaint.setTypeface(Utils.getIPATypeface());
+        mTextPaint.setTypeface(FontUtil.getIPATypeface());
         mSize = size;
     }
 

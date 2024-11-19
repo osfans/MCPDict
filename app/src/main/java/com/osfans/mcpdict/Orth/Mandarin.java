@@ -3,6 +3,9 @@ package com.osfans.mcpdict.Orth;
 import android.text.TextUtils;
 
 import com.osfans.mcpdict.DB;
+import com.osfans.mcpdict.DisplayHelper;
+import com.osfans.mcpdict.Pref;
+import com.osfans.mcpdict.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,6 +27,11 @@ public class Mandarin {
     public static final Map<String, String> mapToBopomofoPartial = new HashMap<>();
     public static final Map<String, String> mapToBopomofoWhole = new HashMap<>();
     public static final Map<Character, Character> mapToBopomofoTone = new HashMap<>();
+    public static final DisplayHelper displayHelper = new DisplayHelper() {
+        public String displayOne(String s) {
+            return Mandarin.display(s, Pref.getToneStyle(R.string.pref_key_mandarin_display));
+        }
+    };
 
     public static String canonicalize(String s) {
         // Input can be either pinyin or bopomofo

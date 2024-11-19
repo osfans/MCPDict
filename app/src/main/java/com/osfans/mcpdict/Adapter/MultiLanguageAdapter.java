@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckedTextView;
 
-import com.osfans.mcpdict.Utils;
+import com.osfans.mcpdict.Pref;
 
 import java.util.Set;
 
@@ -20,7 +20,7 @@ public class MultiLanguageAdapter extends LanguageAdapter {
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         String language = convertToString(cursor).toString();
-        Set<String> set = Utils.getCustomLanguages();
+        Set<String> set = Pref.getCustomLanguages();
         CheckedTextView tv = (CheckedTextView)view;
         tv.setText(language);
         tv.setChecked(set.contains(language));

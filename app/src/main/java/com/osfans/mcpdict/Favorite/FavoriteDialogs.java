@@ -12,10 +12,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 
 import com.osfans.mcpdict.MainActivity;
+import com.osfans.mcpdict.Pref;
 import com.osfans.mcpdict.R;
-import com.osfans.mcpdict.Util.FileUtils;
-import com.osfans.mcpdict.Util.UserDatabase;
-import com.osfans.mcpdict.Utils;
+import com.osfans.mcpdict.Util.ThemeUtil;
+import com.osfans.mcpdict.Util.UserDB;
 
 import java.io.File;
 import java.io.IOException;
@@ -44,7 +44,7 @@ public class FavoriteDialogs {
             .setView(editText)
             .setPositiveButton(R.string.save, (dialog, which) -> {
                 String comment = editText.getText().toString();
-                UserDatabase.insertFavorite(hz, comment);
+                UserDB.insertFavorite(hz, comment);
                 String message = String.format(activity.getString(R.string.favorite_add_done), hz);
                 Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
                 FavoriteFragment fragment = activity.getFavoriteFragment();
@@ -85,7 +85,7 @@ public class FavoriteDialogs {
                 .setView(editText)
                 .setPositiveButton(R.string.save, (dialog, which) -> {
                     String s = editText.getText().toString();
-                    UserDatabase.updateFavorite(hz, s);
+                    UserDB.updateFavorite(hz, s);
                     String message = String.format(activity.getString(R.string.favorite_edit_done), hz);
                     Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
                     activity.getCurrentFragment().refresh();
@@ -96,7 +96,7 @@ public class FavoriteDialogs {
 
     public static void delete(final String hz, boolean force) {
         if (force) {
-            UserDatabase.deleteFavorite(hz);
+            UserDB.deleteFavorite(hz);
             String message = String.format(activity.getString(R.string.favorite_delete_done), hz);
             Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
             FavoriteFragment fragment = activity.getFavoriteFragment();
@@ -110,7 +110,7 @@ public class FavoriteDialogs {
             return;
         }
 
-        final SharedPreferences sp = Utils.getPreference();
+        final SharedPreferences sp = Pref.get();
         final String prefKey = activity.getString(R.string.pref_key_favorite_delete_no_confirm_expiry);
         long expiry = sp.getLong(prefKey, 0);
         long now = System.currentTimeMillis();
@@ -144,7 +144,7 @@ public class FavoriteDialogs {
             .setTitle(activity.getString(R.string.favorite_clear))
             .setMessage(activity.getString(R.string.favorite_clear_confirm))
             .setPositiveButton(R.string.clear, (dialog, which) -> {
-                UserDatabase.deleteAllFavorites();
+                UserDB.deleteAllFavorites();
                 String message = activity.getString(R.string.favorite_clear_done);
                 Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
                 FavoriteFragment fragment = activity.getFavoriteFragment();
@@ -161,15 +161,15 @@ public class FavoriteDialogs {
     }
 
     public static void export(boolean force) {
-        File backupFile = new File(UserDatabase.getBackupPath());
+        File backupFile = new File(UserDB.getBackupPath());
         if (force || !backupFile.exists()) {
             try {
-                UserDatabase.exportFavorites();
+                UserDB.exportFavorites();
                 new AlertDialog.Builder(activity)
                     .setIcon(android.R.drawable.ic_dialog_info)
                     .setTitle(activity.getString(R.string.favorite_export))
                     .setMessage(String.format(activity.getString(R.string.favorite_export_done),
-                                              UserDatabase.getBackupPath()))
+                                              UserDB.getBackupPath()))
                     .setPositiveButton(R.string.ok, null)
                     .show();
             }
@@ -183,7 +183,7 @@ public class FavoriteDialogs {
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle(activity.getString(R.string.favorite_export))
                 .setMessage(String.format(activity.getString(R.string.favorite_export_overwrite),
-                            UserDatabase.getBackupPath(),
+                            UserDB.getBackupPath(),
                             new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date(timestamp))))
                 .setPositiveButton(R.string.overwrite, (dialog, which) -> export(true))
                 .setNegativeButton(R.string.cancel, null)
@@ -200,13 +200,13 @@ public class FavoriteDialogs {
 
         switch (state) {
         case 0:
-            File backupFile = new File(UserDatabase.getBackupPath());
+            File backupFile = new File(UserDB.getBackupPath());
             if (!backupFile.exists()) {
                 new AlertDialog.Builder(activity)
                     .setIcon(android.R.drawable.ic_delete)
                     .setTitle(activity.getString(R.string.favorite_import))
                     .setMessage(String.format(activity.getString(R.string.favorite_import_file_not_found),
-                                              UserDatabase.getBackupPath()))
+                                              UserDB.getBackupPath()))
                     .setPositiveButton(R.string.ok, null)
                     .show();
                 break;
@@ -214,14 +214,14 @@ public class FavoriteDialogs {
 
             int count;
             try {
-                count = UserDatabase.selectBackupFavoriteCount();
+                count = UserDB.selectBackupFavoriteCount();
             }
             catch (SQLiteException e) {
                 new AlertDialog.Builder(activity)
                     .setIcon(android.R.drawable.ic_delete)
                     .setTitle(activity.getString(R.string.favorite_import))
                     .setMessage(String.format(activity.getString(R.string.favorite_import_read_fail),
-                                              UserDatabase.getBackupPath()))
+                                              UserDB.getBackupPath()))
                     .setPositiveButton(R.string.ok, null)
                     .show();
                 break;
@@ -232,18 +232,18 @@ public class FavoriteDialogs {
                     .setIcon(android.R.drawable.ic_delete)
                     .setTitle(activity.getString(R.string.favorite_import))
                     .setMessage(String.format(activity.getString(R.string.favorite_import_empty_file),
-                                              UserDatabase.getBackupPath()))
+                                              UserDB.getBackupPath()))
                     .setPositiveButton(R.string.ok, null)
                     .show();
                 break;
             }
 
-            if (UserDatabase.selectAllFavorites().getCount() == 0) {
+            if (UserDB.selectAllFavorites().getCount() == 0) {
                 new AlertDialog.Builder(activity)
                 .setIcon(android.R.drawable.ic_dialog_info)
                 .setTitle(activity.getString(R.string.favorite_import))
                 .setMessage(String.format(activity.getString(R.string.favorite_import_detail),
-                                          UserDatabase.getBackupPath(),
+                                          UserDB.getBackupPath(),
                                           count))
                 .setPositiveButton(R.string.import_, (dialog, which) -> {
                     importMode = 0;
@@ -257,7 +257,7 @@ public class FavoriteDialogs {
                     .setIcon(android.R.drawable.ic_dialog_info)
                     .setTitle(activity.getString(R.string.favorite_import))
                     .setMessage(String.format(activity.getString(R.string.favorite_import_detail_select_mode),
-                                              UserDatabase.getBackupPath(),
+                                              UserDB.getBackupPath(),
                                               count))
                     .setPositiveButton(R.string.next, (dialog, which) -> import_(1))
                     .setNegativeButton(R.string.cancel, null)
@@ -281,9 +281,9 @@ public class FavoriteDialogs {
         case 2:
             try {
                 switch (importMode) {
-                    case 0: UserDatabase.importFavoritesOverwrite(); break;
-                    case 1: UserDatabase.importFavoritesMix(); break;
-                    case 2: UserDatabase.importFavoritesAppend(); break;
+                    case 0: UserDB.importFavoritesOverwrite(); break;
+                    case 1: UserDB.importFavoritesMix(); break;
+                    case 2: UserDB.importFavoritesAppend(); break;
                 }
             }
             catch (IOException | SQLiteException e) {
@@ -304,9 +304,9 @@ public class FavoriteDialogs {
                 .setIcon(android.R.drawable.ic_dialog_info)
                 .setTitle(activity.getString(R.string.favorite_import))
                 .setMessage(String.format(activity.getString(R.string.favorite_import_done),
-                        UserDatabase.getBackupPath()))
+                        UserDB.getBackupPath()))
                 .setPositiveButton(R.string.delete, (dialog, which) -> {
-                    File backupFile1 = new File(UserDatabase.getBackupPath());
+                    File backupFile1 = new File(UserDB.getBackupPath());
                     boolean deleted = backupFile1.delete();
                     String message = activity.getString(deleted ?
                                                         R.string.favorite_import_delete_backup_done :
@@ -322,7 +322,7 @@ public class FavoriteDialogs {
     public static void crash(Throwable e) {
         try {
             String logPath = activity.getExternalFilesDir(null) + "/crash.log";
-            FileUtils.dumpException(logPath, e);
+            ThemeUtil.dumpException(logPath, e);
             new AlertDialog.Builder(activity)
                 .setIcon(android.R.drawable.ic_delete)
                 .setTitle(activity.getString(R.string.crash))

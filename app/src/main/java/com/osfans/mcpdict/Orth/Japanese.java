@@ -2,6 +2,10 @@ package com.osfans.mcpdict.Orth;
 
 import android.text.TextUtils;
 
+import com.osfans.mcpdict.DisplayHelper;
+import com.osfans.mcpdict.Pref;
+import com.osfans.mcpdict.R;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,6 +23,11 @@ public class Japanese {
     public static final Map<String, String> mapKatakana = new HashMap<>();
     public static final Map<String, String> mapNippon = new HashMap<>();
     public static final Map<String, String> mapHepburn = new HashMap<>();
+    public static final DisplayHelper displayHelper = new DisplayHelper() {
+        public String displayOne(String s) {
+            return Japanese.display(s, Pref.getToneStyle(R.string.pref_key_japanese_display));
+        }
+    };
 
     public static String convertTo(String s, int system) {
         if (TextUtils.isEmpty(s)) return s;

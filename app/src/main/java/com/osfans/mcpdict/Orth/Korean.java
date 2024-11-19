@@ -2,6 +2,10 @@ package com.osfans.mcpdict.Orth;
 
 import android.text.TextUtils;
 
+import com.osfans.mcpdict.DisplayHelper;
+import com.osfans.mcpdict.Pref;
+import com.osfans.mcpdict.R;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,6 +27,11 @@ public class Korean {
     public static final Map<String, Integer> mapInitials = new HashMap<>();
     public static final Map<String, Integer> mapVowels = new HashMap<>();
     public static final Map<String, Integer> mapFinals = new HashMap<>();
+    public static final DisplayHelper displayHelper = new DisplayHelper() {
+        public String displayOne(String s) {
+            return Korean.display(s, Pref.getToneStyle(R.string.pref_key_korean_display));
+        }
+    };
 
     public static boolean isHangul(char c) {
         return c >= FIRST_HANGUL && c <= LAST_HANGUL;
