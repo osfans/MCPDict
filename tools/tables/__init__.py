@@ -20,8 +20,14 @@ def cjkorder(s):
 	n = ord(s)
 	return n + 0x10000 if n < 0x4E00 else n
 
+def isHZ(c):
+	c = c.strip()
+	if len(c) != 1: return False
+	n = ord(c)
+	return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<=0x323AF
+
 def get_pinyin(word):
-	return pinyin(t2s(word), style=Style.TONE3, heteronym=True)
+	return pinyin(t2s(word), style=Style.TONE3, heteronym=False) if isHZ(word[0]) else [[word.lower()]]
 
 def addAllFq(d, fq, order,ignorePian = False):
 	if order is None or fq is None: return
@@ -75,6 +81,8 @@ def getLangs(dicts, argv=None):
 		mods.extend(形碼)
 	types = [dict(),dict(),dict()]
 	省 = defaultdict(int)
+	推薦人 = defaultdict(int)
+	維護人 = defaultdict(int)
 	keys = None
 	for mod in mods:
 		if mod in infos:
@@ -95,6 +103,14 @@ def getLangs(dicts, argv=None):
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
 			if d["省"]:
 				省[d["省"]] += 1
+			if d["推薦人"]:
+				for i in d["推薦人"].split(","):
+					推薦人[i.strip()] += 1
+			if d["維護人"]:
+				for i in d["維護人"].split(","):
+					i = i.strip()
+					if i:
+						維護人[i.strip()] += 1
 			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
 			if d["聲調"]:
 				toneMaps = dict()
@@ -155,6 +171,8 @@ def getLangs(dicts, argv=None):
 		省表.remove("海外")
 		省表.append("海外")
 	hz.info["省"] = ",".join([f"{i} ({省[i]})" for i in 省表])
+	hz.info["維護人"] = ",".join([f"{i} ({維護人[i]})" for i in sorted(維護人.keys(), key=get_pinyin)])
+	hz.info["推薦人"] = ",".join([f"{i} ({推薦人[i]})" for i in sorted(推薦人.keys(), key=get_pinyin)])
 	hz.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:types[0][x]))
 	hz.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
 	hz.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:types[2][x]))

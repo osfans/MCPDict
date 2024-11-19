@@ -13,11 +13,11 @@ import com.osfans.mcpdict.Utils;
 
 import java.util.Objects;
 
-public class DivisionAdapter extends ArrayAdapter<CharSequence> {
+public class DivisionAdapter extends StringArrayAdapter {
     int mColor, mColorDim;
 
-    public DivisionAdapter(@NonNull Context context, int resource) {
-        super(context, resource);
+    public DivisionAdapter(@NonNull Context context) {
+        super(context);
         mColor = Utils.obtainColor(context, android.R.attr.textColorPrimary);
         mColorDim = context.getResources().getColor(R.color.dim, context.getTheme());
     }

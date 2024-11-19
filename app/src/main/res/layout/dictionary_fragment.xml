@@ -225,13 +225,25 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/layout_preset"
+                android:id="@+id/layout_recommend"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <Spinner
-                    android:id="@+id/spinner_preset"
+                    android:id="@+id/spinner_recommend"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_editor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner_editor"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />

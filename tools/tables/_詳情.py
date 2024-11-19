@@ -99,8 +99,7 @@ def getTones(tones):
 
 def normNames(s):
 	if not s: return ""
-	s = s.replace("、", ",").replace("，",",")
-	return s
+	return re.sub(" ?[、，,&] ?", ",", s)
 
 def load():
 	if not outdated():
