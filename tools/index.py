@@ -48,9 +48,9 @@ for i in KEYS:
 		break
 options_search = "\n".join(options_search)
 
-languages=getStrings("pref_entries_show_languages")
-language_values=getStrings("pref_values_show_languages")
-options_language="\n".join(["<option value=%s>%s</option>"%(language_values[i], j) for i,j in enumerate(languages)])
+languages=getStrings("pref_entries_filters")
+#language_values=getStrings("pref_values_show_languages")
+options_language="\n".join(["<option value=%s>%s</option>"%(languages[i], j) for i,j in enumerate(languages)])
 
 charsets = getStrings("pref_entries_charset")
 charset_values = getStrings("pref_values_charset")

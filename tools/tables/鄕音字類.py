@@ -33,7 +33,7 @@ class 表(_表):
 			js = "(書)%s" % js
 		elif py.endswith("-"):
 			py = py[:-1] + "="
-		js = js.strip().replace("|", "｜")
+		js = js.strip().replace("|", "｜").replace("{", "[").replace("}", "]")
 		if not hz: hz = jt
 		return hz, py, js
 

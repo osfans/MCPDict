@@ -9,6 +9,7 @@ class 表(_表):
 	url = "http://www.shuowen.org/?kaishu=%s"
 	note = "來源：<a href=https://github.com/shuowenjiezi/shuowen/>說文解字網站數據</a>"
 	ybTrimSpace = False
+	dictionary = True
 	
 	def parse(self, fs):
 		fq = fs[1].split(" ")[0]

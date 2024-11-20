@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 
-import re, os, json, glob
+import os, re, json, glob
 from importlib import import_module
 import tables._詳情
 from tables._詳情 import t2s
+from pypinyin import pinyin, Style
+from collections import defaultdict
 
-xing_keys = ["漢字","兩分","字形描述","五筆畫","說文","康熙","匯纂","漢大"]
-xing_keys_len = len(xing_keys)
+辭典 = ["漢字","說文","康熙","匯纂","漢大"]
+辭典數 = len(辭典)
+形碼 = ["異體字","字形變體","字形描述","兩分","總筆畫數","部首餘筆","五筆畫","五筆86版","五筆98版","五筆06版","倉頡三代","倉頡五代","倉頡六代","分類"]
+
 def hex2chr(uni):
 	"把unicode轉換成漢字"
 	if uni.startswith("U+"): uni = uni[2:]
@@ -16,25 +20,40 @@ def cjkorder(s):
 	n = ord(s)
 	return n + 0x10000 if n < 0x4E00 else n
 
+def isHZ(c):
+	c = c.strip()
+	if len(c) != 1: return False
+	n = ord(c)
+	return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<=0x323AF
+
+def get_pinyin(word):
+	return pinyin(t2s(word), style=Style.TONE3, heteronym=False) if isHZ(word[0]) else [[word.lower()]]
+
 def addAllFq(d, fq, order,ignorePian = False):
 	if order is None or fq is None: return
 	fqs = fq.split(",")[0].split("-")
 	for i in range(len(fqs)):
 		name = "-".join(fqs[0:i+1])
-		if not name or name in d: continue
+		if not name: continue
 		if ignorePian and name.endswith("片"): continue
-		d[name] = "-".join(order.split("-")[0:i+1])
+		order = "-".join(order.split("-")[0:i+1])
+		if name in d:
+			if d[name] < order: continue
+		d[name] = order
 
 def addCfFq(d, fq, order):
 	if fq is None: return
-	fqs = fq.split(",")[2:]
-	for i,fq in enumerate(fqs):
-		if not fq: continue
-		if fq not in d:
-			d[fq] = i, order
-		#if i not in d: d[i] = dict()
-		# if fq not in d[i]:
-		# 	d[i][fq] = order
+	fs = fq.split(",")
+	fqs = fs[0].split("-")
+	for i in range(len(fqs)):
+		name = "-".join(fqs[0:i+1])
+		if not name: continue
+		order = "-".join(order.split("-")[0:i+1])
+		if name in d:
+			if d[name] < order: continue
+		d[name] = order
+		if len(fs) >= 2: 
+			d[fs[1]] = ""
 
 def getLangsByArgv(infos, argv):
 	l = []
@@ -57,11 +76,13 @@ def getLangs(dicts, argv=None):
 		mods = ["漢字"]
 		mods.extend(getLangsByArgv(infos, argv))
 	else:
-		mods = xing_keys.copy()
+		mods = 辭典.copy()
 		mods.extend(argv if argv else infos.keys())
-		lb = ["總筆畫數","部首餘筆","倉頡三代","倉頡五代","倉頡六代","五筆86版","五筆98版","五筆06版","異體字","字形變體","分類"]
-		mods.extend(lb)
-	types = [dict(),dict(),dict(),dict(),dict()]
+		mods.extend(形碼)
+	types = [dict(),dict(),dict()]
+	省 = defaultdict(int)
+	推薦人 = defaultdict(int)
+	維護人 = defaultdict(int)
 	keys = None
 	for mod in mods:
 		if mod in infos:
@@ -76,14 +97,10 @@ def getLangs(dicts, argv=None):
 			except Exception as e:
 				print(f"\t\t\t{e} {mod}")
 				continue
-			if d["簡繁"] == "简": lang.simplified = 2
+			if d["繁簡"] == "简": lang.simplified = 2
 			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 			addAllFq(types[0], d["地圖集二分區"], d["地圖集二排序"])
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
-			if d["省"]:
-				addAllFq(types[1], d["省"], "ZZZZ")
-				if not d["音典分區"]: d["音典分區"] = ""
-				d["音典分區"] +=  "," + d["省"]
 			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
 			if d["聲調"]:
 				toneMaps = dict()
@@ -105,6 +122,21 @@ def getLangs(dicts, argv=None):
 			if not len(toneMaps.keys()):
 				print("\t\t\t無調值")
 			lang.info["文件名"] = lang._file
+			if d["省"]:
+				省[d["省"]] += 1
+			if d["推薦人"]:
+				for i in d["推薦人"].split(","):
+					i = i.strip()
+					if i:
+						推薦人[i] += 1
+			editors = [set(d[i].split(",")) for i in ("作者", "錄入人", "維護人") if d[i]]
+			editor = set()
+			for i in editors:
+				editor.update(i)
+			for i in editor:
+				i = re.sub("（.*?）", "", i.strip())
+				if i:
+					維護人[i] += 1
 			count += 1
 		else:
 			lang = import_module(f"tables.{mod}").表()
@@ -139,7 +171,14 @@ def getLangs(dicts, argv=None):
 		if i not in hz.info: hz.info[i] = None
 	hz.info["字數"] = len(dicts)
 	hz.info["說明"] = "字數：%d<br>語言數：%d<br><br>%s"%(len(dicts), count, hz.note)
-	hz.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:(x.count("-"),types[0][x])))
+	省表 = sorted(省.keys(), key=get_pinyin)
+	if "海外" in 省表:
+		省表.remove("海外")
+		省表.append("海外")
+	hz.info["省"] = ",".join([f"{i} ({省[i]})" for i in 省表])
+	hz.info["維護人"] = ",".join([f"{i} ({維護人[i]})" for i in sorted(維護人.keys(), key=get_pinyin)])
+	hz.info["推薦人"] = ",".join([f"{i} ({推薦人[i]})" for i in sorted(推薦人.keys(), key=get_pinyin)])
+	hz.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:types[0][x]))
 	hz.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
 	hz.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:types[2][x]))
 	print("語言數", count)

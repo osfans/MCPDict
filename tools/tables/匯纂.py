@@ -6,6 +6,7 @@ class 表(_表):
 	full = "古音匯纂"
 	_file = "古音匯纂.tsv"
 	note = ""
+	dictionary = True
 	
 	ybTrimSpace = False
 	

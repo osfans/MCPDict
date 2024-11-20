@@ -15,12 +15,19 @@ class 表(_表):
 			line = re.sub(r"^(.*?)［", "\\1	［", line)
 		elif name in ("寶應望直港","羅山周黨","涇縣茂林","沁源", "同江二屯","象山鶴浦","趙縣"):
 			line = re.sub(r"^(.*?) ?\[", "\\1	[", line)
+		elif name in ("萍鄕","平陽","都昌陽峯"):
+			line = line.lstrip("∅︀")
 		elif name in ("宜昌",):
 			line = line.replace('""	"', '"#')
+		elif name in ("遂川",):
+			if "[" in line:
+				line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+			else:
+				line = "#" + line
 		elif name in ("巢湖",):
-			line = line.replace('""	"', '"#').replace("ø","Ø")\
-				.replace("（0）","[0]").replace(")","）").replace("（","｛").replace("）","｝")
-		elif name in ("羅山",):
+			line = line.replace('""	"', '"#').replace("ø","Ø").replace("（0）","[0]")
+			line = self.normS(line, "{\\1}")
+		elif name in ("羅山","贛縣安平"):
 			line = re.sub(r"[:：] ?\[", "	[", line).replace("ø","Ø")
 		elif name in ("介休張蘭",):
 			line = re.sub(r"[\[［](\d)[\]］][）)]","\\1)",line)
@@ -32,22 +39,54 @@ class 表(_表):
 		elif name in ("江山廿八都",):
 			line = re.sub("([&@])(?!{)","{\\1}",line)
 			line = line.replace("&{","{&").replace("@{","{@")
-		elif name in ("樅陽","潛山"):
+		elif name in ("樅陽","潛山","靑陽客籍話"):
 			line = line.replace("*", "□")
+		elif name in ("樅陽東",):
+			line = line.replace("*", "□")
+			line = self.normS(line, "{\\1}")
+			line = re.sub("[가-힣]+[, ]*", "", line).lstrip()
+			if line.startswith("#"):
+				line = re.sub('^(#[^ ]*) .*?	', '\\1', line)
+			elif "[" in line:
+				# line = re.sub('^([^ ]+) .*?	', '\\1', line)
+				# line = re.sub('^([^ ]+)	', '\\1', line)
+				line = re.sub(r'(.*?)[/ ].*?	(\[.+)$', '\\1	\\2', line)
+			else:
+				line = ""
+		elif name in ("臨髙話",):
+			if " " not in line: return "#"
+			line = line.strip()
+			line = re.sub(r"<(.*?)>","\\1{讀書音}",line)
+			line = re.sub(r"\[(.*?)\]","\\1{特殊音}",line)
+			line = re.sub(r"(.)\*","\\1{海口話影響}",line)
+			line = re.sub(r"([1-5])", "[\\1]", line)
+			line = re.sub(r"([ptk]) ", "\\1 [5]", line)
+			line = re.sub(r"^(.*?)\[", "\\1	[", line)
+			line = line.replace(" ", "")
 		elif name in ("浦城觀前",):
 			line = line.replace("", "Ø").replace("", "")
 			line = re.sub("^(.*?)［", "\\1	［", line)
+			line = re.sub(r"‖(.){", "\\1{(連讀音)", line)
+		elif name in ("潼關太要",):
+			if line.startswith("["): line = ""
 		elif name in ("昆明","建水臨安",):
+			if line.startswith("\t\t"): line = ""
 			line = re.sub(r"^.*?\t", "", line)
 			line = line.replace("(", "{").replace("〔", "{").replace("（","{").replace(")", "}").replace("）", "}")
-		elif name in ("丹鳳","商州","嘉定中","嘉定西","嘉定城","嘉定外","寶山","寶山羅店","南皮"):
+		elif name in ("丹鳳","嘉定中","嘉定西","嘉定城","嘉定外","寶山","寶山羅店","南皮"):
 			if line.startswith("#"): line = "#"
+		elif name in ("商州",):
+			if line.startswith("#"): line = "#"
+			line = re.sub(r"\[([^\d]+)\]", "\\1", line)
 		elif name in ("運城", "興縣"):
 			line = line.replace("ø", "")
 		elif name in ("永定", "連城四堡", "上杭古田"):
 			line = line.replace("*", "@")
 		elif name in ("雲霄",):
-			line = line.replace("（","{").replace("）","}").replace("〉","}")
+			line = line.replace("〉","）")
+			line = self.normS(line, "{\\1}")
+		elif name in ("通道菁蕪洲",):
+			line = re.sub("([&])(?!{)","{西官借詞}",line).replace("&{","{(西官借詞)")
 		elif name in ("道縣梅花",):
 			#!西官陰平藉詞@西官陽平藉詞$西官上聲藉詞%西官去聲藉詞
 			line = re.sub("(!)(?!{)","{西官陰平借詞}",line)
@@ -60,10 +99,9 @@ class 表(_表):
 			line = line.replace("%{","{(西官去聲借詞)")
 		elif name in ("連城文保", "長汀"):
 			if line.startswith("#"): return line
-			line = line.replace("(","（").replace(")","）")
 			line = line.replace("[","［").replace("]","］")
 			line = line.replace("*（", "□（")
-			line = regex.sub("（((?>[^（）]+|(?R))*)）", "{\\1}", line)
+			line = self.normS(line, "{\\1}")
 			line = re.sub(r"\*(.)", "\\1?", line)
 			line = re.sub(r"［(.)(.*?)］", "\\1*\\2", line)
 			fs = line.split("\t")
@@ -71,8 +109,19 @@ class 表(_表):
 				if fs[i + 1]:
 					fs[i + 1] = f"[{sd}]" + fs[i + 1]
 			line = "".join(fs)
-		elif name in ("光山",):
+		elif name in ("虔南大吉山",):
+			# for i in self.toneValues.keys():
+			# 	line = line.replace(f"[{i}]",f"[{self.toneValues[i]}]")
+			line = re.sub(r"\[.*?(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+			line = line.replace("<","{").replace(">","}")
+		elif name in ("澄海大新","光山", "南康唐江", "仁化長江", "永豐"):
 			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+		elif name in ("耒陽",):
+			line = line.replace("51", "53")
+			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+		elif name in ("慈利",):
+			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+			line = line.replace("/", "")
 		elif name in ("博白","東莞塘角"):
 			if line.startswith("#"): return "#"
 			find = re.findall(r"\[(.*?)(\d+)\]", line)
@@ -105,6 +154,8 @@ class 表(_表):
 			line = re.sub(r"（(.*?)）", "{\\1}", line)
 			line = re.sub(r"〔(.*?)〕", "{\\1}", line)
 			line = line.replace("}{", "；")
+			line = line.replace("{", "（").replace("}", "）")
+			line = regex.sub("（((?>[^（）]+|(?R))*)）", "{\\1}", line)
 			line = re.sub(r"\t(\d+)", lambda x: "["+ self.dz2dl(ym + x[1]).replace(ym, "") +"]", line)
 			line = line.replace("\t" + ym, ym + "\t")
 			fs = line.split("\t", 1)
@@ -114,6 +165,23 @@ class 表(_表):
 				.replace("(", "（").replace(")", "）").replace("\t", "").rstrip("12345 \t\n")
 			line = re.sub(r"\[([^\d].*?)\]", "（\\1）", line)
 			line = regex.sub("（((?>[^（）]+|(?R))*)）", "{\\1}", line)
+		elif name in ("金壇",):
+			if line.strip().endswith("韻"): line = ""
+		elif name in ("天台城關"):
+			line = re.sub(r"(\d)", "[\\1]", line)
+			line = re.sub(r"^(.*?)(\[)", "\\1	\\2", line)
+			line = self.normS(line, "{\\1}")
+			if "[" not in line: line = ""
+		elif name in ("南昌"):
+			line = line.replace("\t", "")
+			line = re.sub(r"^(.*?)(\[)", "\\1	\\2", line)
+			line = self.normS(line, "{\\1}")
+		elif name in ("南京老派"):
+			line = re.sub("([，。])(（)", "\\2\\1", line)
+			line = line.replace("，", "（又）").replace("。", "（新）")
+			line = self.normS(line, "{\\1}")
+			line = re.sub(r"(\{[^{}]+?)（又）([^{}]*?\})", "\\1，\\2", line)
+			line = re.sub(r"(\{[^{}]+?)（新）([^{}]*?\})", "\\1。\\2", line)
 		elif name in ("句容",):
 			if re.match(".*[①-⑨ⓐⓑ]+", line):
 				for i in range(1,10):
@@ -125,6 +193,16 @@ class 表(_表):
 			line = line.replace("[3ˀ]", "[3]")
 		return line
 
+	def parseYm(self, line):
+		ym = ""
+		if line.startswith("	#"): line = line[2:]
+		elif line.startswith("#"): line = line[1:]
+		elif "［" in line or "］" in line: return ym
+		ym = line.strip()
+		if ym:
+			ym = ym.split("\t")[0].strip().strip("[]")
+		return ym
+	
 	def update(self):
 		d = defaultdict(list)
 		ym = ""
@@ -135,31 +213,35 @@ class 表(_表):
 			if lineno <= skip: continue
 			line = self.format(line)
 			if not line: continue
+			line = line.replace("☐", "□")
 			line = line.strip().replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？").replace("：[", "	[").replace("{：",'{')
 			line = re.sub(r"\[(\d+[a-zA-Z]?)\]", "［\\1］",line)
 			line = re.sub("［([^0-9]+.*?)］", "[\\1]",line)
 			if "{" not in line and "（" in line:
-				line = line.replace("（","{").replace("）","}")
+				line = self.normS(line, "{\\1}")
 			line = line.lstrip(" ")
-			if line.startswith("	#"): line = line[1:]
-			if line.startswith("#"):
-				ym = line[1:]
-				if not ym: continue
-				ym = ym.split("\t")[0].strip().strip("[]")
-				continue
 			if "［" not in line and re.match(".*[①-⑨]", line):
 				for i in range(1,10):
 					sda = chr(ord('①') + (i - 1))
 					sdb = f"［{i}］"
 					line = line.replace(sda, sdb)
+			if s := self.parseYm(line):
+				ym = s
+				continue
 			if "\t" not in line: line = re.sub(r"^(.*?)\［", "\\1	［", line)
 			fs = line.split("\t")[:2]
 			if len(fs) != 2: continue
 			sm = fs[0].strip().strip("[]")
+			pys = set()
 			for sd,hzs in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", fs[1]):
 				py = sm + ym +sd
-				hzs = regex.findall(r"(.)\d?([<+\-/=\\\*？$&r@]?)\d?(\{((?=[^\{\}]*)|(?R))*?\})?", hzs)
-				for hz, c, js, _ in hzs:
+				if py not in pys:
+					pys.add(py)
+				else:
+					print(f"\t\t\t{py} 重複")
+				hzs = self.normG(hzs)
+				hzs = re.findall(r"(.)\d?([<+\-/=\\\*？$&r@]?)\d?(｛.*?｝)?", hzs)
+				for hz, c, js in hzs:
 					if hz == " ": continue
 					p = ""
 					if c:
@@ -183,7 +265,7 @@ class 表(_表):
 								c = ""
 					js = js[1:-1]
 					if js.count("{") != js.count("}"):
-						print("\t\t\tnot paired:", js)
+						print("\t\t\t 大括號未成對:", js)
 						js = js.replace("{", "").replace("}", "")
 					p = py + c + "\t" + p + js
 					if p not in d[hz]:

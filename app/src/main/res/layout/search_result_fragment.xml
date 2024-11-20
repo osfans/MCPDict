@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <com.osfans.mcpdict.MyWebView
+        <com.osfans.mcpdict.UI.MyWebView
             android:id="@+id/map"
             android:visibility="gone"
             android:layout_width="match_parent"
