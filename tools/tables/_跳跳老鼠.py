@@ -25,14 +25,16 @@ class 表(_表):
 				return
 			yb, hzs = fs[:2]
 			yb = yb.strip().replace(" ", "")
-			if yb in "12345678":
+			yb = re.sub("^[無øØ]", "0", yb)
+			digits = "12345678"
+			if yb in digits:
 				yb = self.sy + yb
 			elif self.ym:
-				self.sm = yb.rstrip("12345678")
+				self.sm = yb.rstrip(digits)
 				self.sy = self.sm + self.ym
 				yb = self.sy + yb[-1]
 			else:
-				self.sy = yb.rstrip("12345678")
+				self.sy = yb.rstrip(digits)
 			hzs = hzs.replace("，", "(文)").replace("。", "(白)").replace("！", "(小稱)").replace(".", "(又)").replace("？", "(存疑)").replace(")（", " ")
 			hzs = self.normS(hzs)
 			if yb == "hɔi6":
@@ -62,11 +64,15 @@ class 表(_表):
 			sy, sd, _, _, hzs = fs[:5]
 			hzs = hzs.replace(")(", "；")
 			hzs = self.normS(hzs)
-		elif name in ("崇陽","通城塘湖","沅陵死客子話","宜章東風客家","新田毛里","資興南鄕", "婁底石井", "雙牌官話", "長沙黎圫","吉首", "懷化", "攸縣新市", "長沙星沙", "東安蘆洪市", "宜章東風", "道縣仙子腳", "臨湘白羊田"):
+		elif name in ("崇陽","通城塘湖","沅陵死客子話","宜章東風客家","新田毛里","資興南鄕", "婁底石井", "雙牌官話", "長沙黎圫","吉首", "懷化", "攸縣新市", "長沙星沙", "東安蘆洪市", "宜章東風", "道縣仙子腳", "臨湘白羊田", "蒲圻羊樓洞", "瀏陽永安","麻坪崇陽", "平江", "資源延東", "祁東白地市", "祁陽", "臨武土地", "樂至南沖寺"):
 			sy, sd, _, hzs = fs[:4]
 			hzs = hzs.replace(")(", "；")
 			hzs = self.normS(hzs)
-		elif name in ("江華河路口", "江華粟米塘", "全州黃沙河", "安仁新洲", "1935長沙", "長沙黃花"):
+		elif name in ("通城",):
+			_, sy, sd, hzs = fs[:4]
+			sd = sd.strip("[]")
+			hzs = self.normG(hzs, "[\\1]")
+		elif name in ("江華河路口", "江華粟米塘", "全州黃沙河", "安仁新洲", "1935長沙", "長沙黃花", "瀏陽鎭頭"):
 			sy, sd, hzs = fs[:3]
 			hzs = self.normS(hzs)
 		elif name in ("孝昌小河",):
@@ -87,6 +93,11 @@ class 表(_表):
 			sy, sd, hzs = fs[:3]
 			hzs = self.normG(hzs, "[\\1]")
 			sd = self.toneMaps.get(sd, "0")
+		elif name in ("太原"):
+			sm, ym, sd, hzs = fs[:4]
+			hzs = self.normG(hzs, "[\\1]")
+			sd = self.toneMaps.get(sd[2:], "0")
+			yb = sm + ym + sd
 		elif name in ("汨羅沙溪",):
 			sy, sd, hzs = fs[:3]
 			hzs = self.normS(hzs)
@@ -112,10 +123,22 @@ class 表(_表):
 			self.disorder = False
 			self.simplified = 0
 			yb, hzs = fs[:2]
+			hzs = self.normS(hzs, "（\\1）").replace("?", "？")
 			l = ""
-			hzs = re.sub("(（.*?）)([？！%+，])?", "\\2\\1", hzs)
-			for hz,c,js in re.findall(r"(.)([？！%+，])?(（[^）]*?（.*?）.*?）|（.*?）)?", hzs):
-				if js: js = js[1:-1]
+			if "（" in yb:
+				note = re.search(r"（.*?）", yb).group()
+				yb = yb.replace(note, "")
+				note = note.replace("？", "存疑")
+			else:
+				note = ""
+			marks = "？！%+，。"
+			hzs = re.sub("(（.*?）)([？！%+，。])?", "\\2\\1", hzs)
+			for hz,c,js in re.findall(r"(.)([？！%+，。])?(（[^）]*?（.*?）.*?）|（.*?）)?", hzs):
+				if js:
+					js = js[1:-1]
+					if js[0] in marks and not c:
+						c = js[0]
+						js = js[1:]
 				p = ""
 				if c == '+':
 					p = "書"
@@ -130,9 +153,12 @@ class 表(_表):
 				elif c == '，':
 					p = "外"
 					c = ""
+				elif c == '。':
+					p = "非本字正字"
+					c = ""
 				if p:
 					js = f"({p}){js}"
-				l += f"{hz}{c}[{js}]"
+				l += f"{hz}{c}[{note}{js}]"
 			hzs = l
 		elif len(fs) > 3 and fs[3]:
 			_, sy, sd, hzs = fs[:4]

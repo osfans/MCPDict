@@ -114,7 +114,10 @@ class 表(_表):
 			# 	line = line.replace(f"[{i}]",f"[{self.toneValues[i]}]")
 			line = re.sub(r"\[.*?(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
 			line = line.replace("<","{").replace(">","}")
-		elif name in ("澄海大新","光山", "南康唐江", "仁化長江", "翁源周陂"):
+		elif name in ("澄海大新","光山", "南康唐江", "仁化長江", "永豐"):
+			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+		elif name in ("耒陽",):
+			line = line.replace("51", "53")
 			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
 		elif name in ("慈利",):
 			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
@@ -164,11 +167,21 @@ class 表(_表):
 			line = regex.sub("（((?>[^（）]+|(?R))*)）", "{\\1}", line)
 		elif name in ("金壇",):
 			if line.strip().endswith("韻"): line = ""
-		elif name in ("天台城關",):
+		elif name in ("天台城關"):
 			line = re.sub(r"(\d)", "[\\1]", line)
 			line = re.sub(r"^(.*?)(\[)", "\\1	\\2", line)
 			line = self.normS(line, "{\\1}")
 			if "[" not in line: line = ""
+		elif name in ("南昌"):
+			line = line.replace("\t", "")
+			line = re.sub(r"^(.*?)(\[)", "\\1	\\2", line)
+			line = self.normS(line, "{\\1}")
+		elif name in ("南京老派"):
+			line = re.sub("([，。])(（)", "\\2\\1", line)
+			line = line.replace("，", "（又）").replace("。", "（新）")
+			line = self.normS(line, "{\\1}")
+			line = re.sub(r"(\{[^{}]+?)（又）([^{}]*?\})", "\\1，\\2", line)
+			line = re.sub(r"(\{[^{}]+?)（新）([^{}]*?\})", "\\1。\\2", line)
 		elif name in ("句容",):
 			if re.match(".*[①-⑨ⓐⓑ]+", line):
 				for i in range(1,10):
@@ -200,6 +213,7 @@ class 表(_表):
 			if lineno <= skip: continue
 			line = self.format(line)
 			if not line: continue
+			line = line.replace("☐", "□")
 			line = line.strip().replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？").replace("：[", "	[").replace("{：",'{')
 			line = re.sub(r"\[(\d+[a-zA-Z]?)\]", "［\\1］",line)
 			line = re.sub("［([^0-9]+.*?)］", "[\\1]",line)
