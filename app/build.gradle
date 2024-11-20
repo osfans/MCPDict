@@ -4,11 +4,9 @@ android {
     defaultConfig {
         applicationId "com.osfans.mcpdict"
         minSdkVersion 24
-        targetSdkVersion 33
-        compileSdk 35
-        buildToolsVersion = '35'
-        versionCode 75
-        versionName "5.7 (2024.10.29)"
+        targetSdkVersion 35
+        versionCode 86
+        versionName "5.7 (2024.11.20)"
     }
 
     signingConfigs {
@@ -33,10 +31,12 @@ android {
         def props = new Properties()
         props.load(new FileInputStream(propsFile))
         if (props!=null && props.containsKey('storeFile')) {
-            android.signingConfigs[configName].storeFile = rootProject.file(props['storeFile'])
-            android.signingConfigs[configName].storePassword = props['storePassword']
-            android.signingConfigs[configName].keyAlias = props['keyAlias']
-            android.signingConfigs[configName].keyPassword = props['keyPassword']
+            android.signingConfigs.named(configName) {
+                storeFile = rootProject.file(props['storeFile'])
+                storePassword = props['storePassword']
+                keyAlias = props['keyAlias']
+                keyPassword = props['keyPassword']
+            }
         }
     }
 
@@ -48,6 +48,8 @@ android {
     buildFeatures {
         buildConfig true
     }
+    compileSdk 35
+    buildToolsVersion '35.0.0'
 }
 
 dependencies {
@@ -55,8 +57,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.viewpager2:viewpager2:1.1.0'
     implementation 'androidx.preference:preference:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.webkit:webkit:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    implementation 'androidx.webkit:webkit:1.12.1'
     implementation 'org.osmdroid:osmdroid-android:6.1.11'
     implementation 'com.github.MKergall:osmbonuspack:6.7.0'
     // Fix Duplicate class

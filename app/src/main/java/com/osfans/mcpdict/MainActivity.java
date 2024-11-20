@@ -9,6 +9,12 @@ import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.osfans.mcpdict.Adapter.PagerAdapter;
+import com.osfans.mcpdict.Favorite.FavoriteDialogs;
+import com.osfans.mcpdict.Favorite.FavoriteFragment;
+import com.osfans.mcpdict.Orth.Orthography;
+import com.osfans.mcpdict.Util.UserDB;
+
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager2 mPager;
@@ -50,12 +56,12 @@ public class MainActivity extends AppCompatActivity {
         Utils.setActivityTheme(this);
         DB.initFQ();
         // Initialize the some "static" classes on separate threads
-        new Thread(()->Orthography.initialize(getResources())).start();
+        new Thread(()-> Orthography.initialize(getResources())).start();
 
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
-                UserDatabase.initialize(MainActivity.this);
+                UserDB.initialize(MainActivity.this);
                 DB.initialize(MainActivity.this);
                 return null;
             }
@@ -65,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }.execute();
 
-        new Thread(()->FavoriteDialogs.initialize(MainActivity.this)).start();
+        new Thread(()-> FavoriteDialogs.initialize(MainActivity.this)).start();
 
         // Set up activity layout
         super.onCreate(savedInstanceState);
@@ -88,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRestart() {
         super.onRestart();
-        setTitle(Utils.getTitle());
+        setTitle(Pref.getTitle());
         // Make settings take effect immediately as the user navigates back to the dictionary
         refresh();
     }

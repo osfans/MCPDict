@@ -11,9 +11,9 @@ class 表(_表):
 		yb = ""
 		ipa = ""
 		js = ""
-		if name in ("汝城", "瑞安東山", "新界客家話", "長壽", "宜章巖泉","郴州","樂昌皈塘","嘉禾普滿","尤溪","晉江", "龍門路溪", "詔安", "道縣官话"):
+		if name in ("汝城", "瑞安東山", "新界客家話", "長壽", "宜章巖泉","郴州","樂昌皈塘","嘉禾普滿","尤溪","晉江", "龍門路溪", "詔安", "道縣官话", "重慶", "樂昌三溪"):
 			hz, yb, js = fs[:3]
-		elif name in ("南通金沙",):
+		elif name in ("通州金沙",):
 			yb, hz, js = fs[:3]
 		elif name in ("江陰", "江陰新橋", "江陰申港"):
 			_, hz, js, yb = fs[:4]
@@ -143,6 +143,10 @@ class 表(_表):
 		elif name in ("鶴山雅瑤",):
 			hz, sm, ym, sd, _, _, _, js = fs[:8]
 			ipa = sm + ym + sd
+		elif name in ("開平護龍",):
+			hz, sm, ym, sd, js = fs[:5]
+			ipa = sm + ym + sd
+			yb = self.dz2dl(ipa)
 		elif name in ("揭陽",):
 			hz, _, _, _, _, ipa, yd, js = fs[:8]
 			yb = self.dz2dl(ipa)

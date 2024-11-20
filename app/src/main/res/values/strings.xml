@@ -40,6 +40,11 @@
     <string name="share_readings">分享“%s”字的所有讀音</string>
     <string name="goto_info">查看“%s”的詳細信息</string>
 
+    <string name="add_to_custom_language">把“%s”加入自選語言</string>
+    <string name="add_to_custom_language_done">已加入自選語言</string>
+    <string name="rm_from_custom_language">把“%s”移出自選語言</string>
+    <string name="rm_from_custom_language_done">已从自選語言移出</string>
+
     <string name="all_reading">所有讀音</string>
     <string name="copy_all_reading">複製“%1$s”字的所有讀音</string>
     <string name="copy_done">已複製到剪貼板</string>
@@ -96,27 +101,68 @@
 
     <string name="ipa">音標</string>
 
-    <string name="pref_key_mc_display">MC_DISPLAY</string>
-    <string name="pref_title_mc_display">廣韻擬音</string>
+    <string name="pref_key_mc_display">MC_DISPLAYS</string>
+    <string name="pref_title_mc_display">廣韻拼音、擬音及音韻地位描述格式</string>
     <string-array name="pref_entries_mc_display">
+        <item>切韻拼音</item>
+        <item>白一平轉寫</item>
         <item>古韻羅馬字</item>
-        <item>髙本漢</item>
-        <item>王力</item>
-        <item>李榮</item>
-        <item>邵榮芬</item>
-        <item>鄭張尙芳</item>
-        <item>潘悟雲</item>
-        <item>蒲立本</item>
+        <item>有女羅馬字</item>
+        <item>髙本漢擬音</item>
+        <item>王力（1957）擬音</item>
+        <item>王力（1985）擬音</item>
+        <item>李榮擬音</item>
+        <item>邵榮芬擬音</item>
+        <item>蒲立本擬音</item>
+        <item>鄭張尙芳擬音</item>
+        <item>潘悟雲（2000）擬音</item>
+        <item>潘悟雲（2013）擬音</item>
+        <item>潘悟雲（2023）擬音</item>
+        <item>unt（2020）擬音</item>
+        <item>unt（2022）擬音</item>
+        <item>unt通俗擬音</item>
+        <item>msoeg擬音</item>
+        <item>切韻音系描述</item>
+        <item>攝</item>
+        <item>方音字彙描述</item>
+        <item>廣韻韻目原貌</item>
+        <item>折合平水韻目原貌</item>
+        <item>反切</item>
     </string-array>
     <string-array name="pref_values_mc_display">
-        <item>-1</item>
+        <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
+        <item>100</item>
+        <item>101</item>
+        <item>102</item>
+        <item>103</item>
+        <item>104</item>
+        <item>105</item>
+        <item>106</item>
+        <item>107</item>
+        <item>108</item>
+        <item>109</item>
+        <item>110</item>
+        <item>111</item>
+        <item>112</item>
+        <item>113</item>
+        <item>200</item>
+        <item>201</item>
+        <item>202</item>
+        <item>300</item>
+        <item>301</item>
+        <item>400</item>
+    </string-array>
+    <string-array name="pref_default_values_mc_display">
+        <item>0</item>
+        <item>109</item>
+        <item>111</item>
+        <item>200</item>
+        <item>201</item>
+        <item>300</item>
+        <item>400</item>
     </string-array>
 
     <string name="pref_key_zyyy_display">ZYYY_DISPLAY</string>
@@ -272,26 +318,18 @@
         <item>2</item>
     </string-array>
 
-    <string name="pref_key_show_language_index">SHOW_LANGUAGES</string>
-    <string name="pref_key_show_language_names">SHOW_LANGUAGE_NAMES</string>
+    <string name="pref_key_filters">KEY_FILTERS</string>
     <string name="show_languages">顯示語言：</string>
-    <string-array name="pref_entries_show_languages">
-        <item>全部語言</item>
-        <item>普方古對照</item>
+    <string-array name="pref_entries_filters">
+        <item>顯示全部</item>
+        <item>僅方言島</item>
+        <item>僅漢字</item>
         <item>當前語言</item>
-        <item>@string/pref_title_custom_languages</item>
-        <item>縣級方言</item>
-        <item>代表方言</item>
-        <item>方言島</item>
-    </string-array>
-    <string-array name="pref_values_show_languages">
-        <item>*</item>
-        <item>""</item>
-        <item>""</item>
-        <item>""</item>
-        <item>"3"</item>
-        <item>"5"</item>
-        <item>"1"</item>
+        <item>推薦语言</item>
+        <item>@string/custom_languages</item>
+        <item>方言分區</item>
+        <item>行政區</item>
+        <item>維護人</item>
     </string-array>
 
     <string name="pref_key_charset">SHOW_CHARSET</string>
@@ -321,7 +359,8 @@
         <item>kBigFive</item>
     </string-array>
     <string name="pref_key_custom_languages">CUSTOM_LANGUAGES</string>
-    <string name="pref_title_custom_languages">自選語言</string>
+    <string name="custom_languages">自選語言</string>
+    <string name="select_custom_language_summary">已選%d個語言：%s</string>
     <string name="pref_key_input">INPUT</string>
     <string name="pref_key_language">LANGUAGE</string>
     <string name="custom_title">自定標題</string>
@@ -359,6 +398,12 @@
     <string name="pref_title_font_ext">字體順序</string>
     <string name="pref_key_font">FONT</string>
     <string name="book_format">【%s】</string>
+    <string name="pref_key_shape">KEY_SHAPE</string>
+    <string name="hz_shapes">漢字輸入</string>
+    <string name="hz_range">漢字範圍</string>
+    <string name="hz_option">漢字選項</string>
+    <string name="pref_key_hz_option">KEY_HZ_OPTION</string>
+    <string name="pref_key_fullscreen">KEY_FULLSCREEN</string>
     <string-array name="pref_entries_font">
         <item>系統字體、文津宋體</item>
         <item>系統宋體、文津宋體</item>
@@ -380,5 +425,36 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+    </string-array>
+    <string name="pref_key_type">KEY_TYPE</string>
+    <string name="long_text">長文本注音</string>
+    <string name="output_table">表格</string>
+    <string-array name="pref_entries_type">
+        <item>漢字</item>
+        <item>讀音</item>
+        <item>注釋</item>
+        <item>辭典</item>
+    </string-array>
+    <string name="pref_key_dict">KEY_DICT</string>
+    <string name="dict">全部辭典</string>
+    <string name="pref_key_recommend">KEY_RECOMMEND</string>
+    <string name="recommend">推薦人</string>
+    <string name="pref_key_editor">KEY_EDITOR</string>
+    <string name="editor">作者、錄入人、維護人</string>
+    <string name="pref_key_province">KEY_PROVINCE</string>
+    <string name="province">全部省份</string>
+    <string name="pref_key_division">KEY_DIVISION</string>
+    <string name="division">全部分區</string>
+    <string name="pfg">普方古對照</string>
+    <string name="hz_only">僅漢字</string>
+    <string name="pref_key_pfg">KEY_PFG</string>
+    <string name="pref_key_area_level">KEY_AREA_LEVEL</string>
+    <string-array name="entries_area_level">
+        <item>不限</item>
+        <item>省會</item>
+        <item>地級</item>
+        <item>縣級</item>
+        <item>鄕級</item>
+        <item>村級</item>
     </string-array>
 </resources>
