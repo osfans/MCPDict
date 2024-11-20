@@ -458,7 +458,7 @@ public class ResultFragment extends Fragment {
         } else {
             StringBuilder ssb = new StringBuilder();
             int n = cursor.getCount();
-            String[] cols = DB.getVisibleColumns(n);
+            String[] cols = DB.getVisibleColumns();
             String lang = Pref.getLabel();
             boolean isZY = DB.isLang(lang) && query.length() >= 3 && n >= 3
                     && !HanZi.isBS(query)
@@ -577,7 +577,7 @@ public class ResultFragment extends Fragment {
         } else {
             StringBuilder hzs = new StringBuilder();
             int count = cursor.getCount();
-            String[] cols = DB.getVisibleColumns(count);
+            String[] cols = DB.getVisibleColumns();
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 sb.append(hz);
@@ -653,7 +653,9 @@ public class ResultFragment extends Fragment {
                     .roundRect(5);
             StringBuilder hzs = new StringBuilder();
             int count = cursor.getCount();
-            String[] cols = DB.getVisibleColumns(count);
+            String[] cols = DB.getVisibleColumns();
+            int index = 0;
+            boolean isCurrent = Pref.getFilter() == DB.FILTER.CURRENT;
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 hzs.append(hz);
@@ -677,7 +679,7 @@ public class ResultFragment extends Fragment {
                 raws.append(String.format("%s %s\n", hz, unicode));
                 // yb
                 SpannableStringBuilder ssb2 = new SpannableStringBuilder();
-                if (HanZi.isUnknown(hz)) {
+                if (HanZi.isUnknown(hz) && (cols.length >= 30 || isCurrent)) {
                     String lang = Pref.getLabel();
                     if (!DB.isLang(lang)) continue;
                     int i = getColumnIndex(lang);
@@ -742,6 +744,8 @@ public class ResultFragment extends Fragment {
                     }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 }
                 ssb.append("\n");
+                if (index >= 5 && cols.length >= 30) continue;
+                index++;
                 ssb.append(ssb2);
             }
             if (count > 1) {
