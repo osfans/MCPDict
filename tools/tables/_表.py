@@ -165,7 +165,8 @@ class 表:
 		sname = g[0]
 		self._file = os.path.basename(sname)
 		if isXls(sname):
-			page = 1 if self.short in ("中山石岐", ) else 0
+			page = 1 if self.short in ("中山石岐", "通城") else 0
+			if self.short == "開平護龍": page = 3
 			xls2tsv(sname, page)
 			sname = getTsvName(sname)
 		elif isDocx(sname):

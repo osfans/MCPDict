@@ -143,6 +143,10 @@ class 表(_表):
 		elif name in ("鶴山雅瑤",):
 			hz, sm, ym, sd, _, _, _, js = fs[:8]
 			ipa = sm + ym + sd
+		elif name in ("開平護龍",):
+			hz, sm, ym, sd, js = fs[:5]
+			ipa = sm + ym + sd
+			yb = self.dz2dl(ipa)
 		elif name in ("揭陽",):
 			hz, _, _, _, _, ipa, yd, js = fs[:8]
 			yb = self.dz2dl(ipa)
