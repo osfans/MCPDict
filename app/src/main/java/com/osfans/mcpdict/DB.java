@@ -485,10 +485,8 @@ public class DB extends SQLiteAssetHelper {
         return i < 0 ? "" : COLUMNS[i];
     }
 
-    public static String[] getVisibleColumns(int count) {
+    public static String[] getVisibleColumns() {
         FILTER filter = Pref.getFilter();
-        if (count > 30) filter = FILTER.HZ;
-        else if (count > 10 && filter != FILTER.HZ) filter = FILTER.CURRENT;
         String label = Pref.getLabel();
         switch (filter) {
             case AREA -> {
@@ -549,10 +547,6 @@ public class DB extends SQLiteAssetHelper {
             }
         }
         return LABELS;
-    }
-
-    public static String[] getVisibleColumns() {
-        return getVisibleColumns(1);
     }
 
     public static boolean isHzMode(String lang) {
