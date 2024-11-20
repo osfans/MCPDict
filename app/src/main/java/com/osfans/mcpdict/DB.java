@@ -308,7 +308,7 @@ public class DB extends SQLiteAssetHelper {
         String[] projection = {"v.*", "v.rowid AS _id",
                    "v.漢字 AS 漢字", "NULL AS variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
-        String selection = "v.漢字 match ?";
+        String selection = "v.漢字 MATCH ?";
         String query = qb.buildQuery(projection, selection, null, null, null, "0,100");
         String[] args = {hz};
         return db.rawQuery(query, args);
@@ -495,13 +495,12 @@ public class DB extends SQLiteAssetHelper {
                 int level = Pref.getInt(R.string.pref_key_area_level);
                 String province = Pref.getProvince();
                 StringBuilder sb = new StringBuilder();
-                if (!TextUtils.isEmpty(province)) sb.append(String.format("%s MATCH '%s'", DB.PROVINCE, province));
+                if (!TextUtils.isEmpty(province)) sb.append(String.format("%s:%s", DB.PROVINCE, province));
                 if (level > 0) {
-                    if (!TextUtils.isEmpty(province)) sb.append(" and ");
                     String[] levels = Pref.getStringArray(R.array.entries_area_level);
-                    sb.append(String.format("行政區級別 MATCH '%s'", levels[level]));
+                    sb.append(String.format(" 行政區級別:%s", levels[level]));
                 }
-                if (!TextUtils.isEmpty(sb)) return queryLabel(sb.toString());
+                if (!TextUtils.isEmpty(sb)) return queryLabel(String.format("info MATCH '%s'", sb));
             }
             case RECOMMEND -> {
                 String value = Pref.getStr(R.string.pref_key_recommend, "");
@@ -569,7 +568,7 @@ public class DB extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
         String[] projection = {String.format("\"%s\", \"%s\"", field, selection)};
-        String query = qb.buildQuery(projection, selection + " match ?",  null, null, null, null);
+        String query = qb.buildQuery(projection, selection + " MATCH ?",  null, null, null, null);
         Cursor cursor = db.rawQuery(query, new String[]{String.format("\"%s\"", lang)});
         String s = "";
         int n = cursor.getCount();
