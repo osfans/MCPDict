@@ -16,16 +16,17 @@
             android:layout_height="match_parent"
             android:entries="@array/pref_entries_type"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/search_view"
+            app:layout_constraintEnd_toStartOf="@id/text_query"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.SearchView
+        <com.osfans.mcpdict.UI.SearchView
             android:id="@+id/search_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:queryHint="@string/search_hint" />
+            android:layout_weight="4">
+
+        </com.osfans.mcpdict.UI.SearchView>
 
         <Button
             android:id="@+id/button_fullscreen"

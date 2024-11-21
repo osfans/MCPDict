@@ -22,7 +22,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 
 import com.osfans.mcpdict.Adapter.DivisionAdapter;
@@ -30,6 +29,7 @@ import com.osfans.mcpdict.Adapter.LanguageAdapter;
 import com.osfans.mcpdict.Adapter.MultiLanguageAdapter;
 import com.osfans.mcpdict.Adapter.StringArrayAdapter;
 import com.osfans.mcpdict.DB.FILTER;
+import com.osfans.mcpdict.UI.SearchView;
 
 public class DictFragment extends Fragment implements RefreshableFragment {
 
@@ -59,30 +59,9 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
         // Set up the search view
         searchView = selfView.findViewById(R.id.search_view);
-        searchView.setIconified(false);
-        //searchView.setIconifiedByDefault(false);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                refresh(query);
-                searchView.clearFocus();
-                return true;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                //do something
-                //当没有输入任何内容的时候清除结果，看实际需求
-                //if (TextUtils.isEmpty(newText)) mSearchResult.setVisibility(View.INVISIBLE);
-                if (TextUtils.isEmpty(newText)) {
-                    refresh(newText);
-                }
-                return false;
-            }
+        searchView.setSearchButtonOnClickListener(view -> {
+            refresh();
         });
-
-//        String query = searchView.getQuery();
-//        if (!TextUtils.isEmpty(query)) searchView.setQuery(query);
 
         // Set up the spinner
         layoutSearchOption = selfView.findViewById(R.id.layout_options);
@@ -320,7 +299,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 return false;
             }
         };
-        searchView.findViewById(androidx.appcompat.R.id.search_src_text).setOnTouchListener(listener);
+        searchView.findViewById(R.id.text_query).setOnTouchListener(listener);
         selfView.setClickable(true);
         selfView.setOnTouchListener(listener);
         return selfView;
