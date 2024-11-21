@@ -44,6 +44,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private View layoutSearchOption, layoutHz, layoutSearchLang;
     private LinearLayout layoutFilters;
     private View buttonFullscreen;
+    private boolean initialized = false;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -446,6 +447,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         if (adapterProvince != null) refreshProvince();
         if (adapterShape != null) refreshShape();
         if (adapterDict != null) refreshDict();
+        initialized = true;
     }
 
     public void setFullscreen(boolean full) {
@@ -469,6 +471,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     }
     
     private void search() {
-        searchView.setQuery(searchView.getQuery(), true);
+        if (initialized) searchView.setQuery(searchView.getQuery(), true);
     }
 }
