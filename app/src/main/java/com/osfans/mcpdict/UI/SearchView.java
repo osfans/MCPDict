@@ -8,8 +8,8 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -20,8 +20,7 @@ import com.osfans.mcpdict.Util.FontUtil;
 public class SearchView extends ConstraintLayout {
 
     private final EditText editText;
-    private final Button clearButton;
-    private final Button searchButton;
+    private final View clearButton, searchButton;
 
     public SearchView(Context context) {
         this(context, null);

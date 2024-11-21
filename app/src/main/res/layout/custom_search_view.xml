@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <Button
+    <ImageButton
         android:id="@+id/button_search"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:background="@android:drawable/ic_menu_search"
-        android:backgroundTint="?android:attr/colorForeground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:tint="?android:attr/colorForeground"
+        android:src="@android:drawable/ic_menu_search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,20 +24,21 @@
         android:hint="@string/search_hint"
         android:imeOptions="actionSearch"
         android:inputType="text"
-        android:paddingStart="8dp"
-        android:paddingEnd="32dp"
+        android:paddingStart="@dimen/padding_size"
+        android:paddingEnd="@dimen/button_icon_size"
         android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_search"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button_clear"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:background="@android:drawable/ic_menu_close_clear_cancel"
-        android:backgroundTint="?android:attr/colorForeground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tint="?android:attr/colorForeground"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/text_query"
         app:layout_constraintTop_toTopOf="parent" />
