@@ -6,19 +6,18 @@ import android.content.res.Configuration;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.webkit.WebSettings;
-import android.webkit.WebView;
 
 import androidx.annotation.NonNull;
 import androidx.webkit.WebSettingsCompat;
 import androidx.webkit.WebViewFeature;
 
-public class MyWebView extends WebView {
+public class WebView extends android.webkit.WebView {
     @SuppressLint("SetJavaScriptEnabled")
-    public MyWebView(@NonNull Context context, AttributeSet attrs) {
+    public WebView(@NonNull Context context, AttributeSet attrs) {
         super(context, attrs);
         WebSettings settings = getSettings();
         settings.setJavaScriptEnabled(true);
-        addJavascriptInterface(new MyWeb(this), "mcpdict");
+        addJavascriptInterface(new Web(this), "mcpdict");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S_V2) {
             if (WebViewFeature.isFeatureSupported(WebViewFeature.ALGORITHMIC_DARKENING)) {
                 WebSettingsCompat.setAlgorithmicDarkeningAllowed(settings, true);

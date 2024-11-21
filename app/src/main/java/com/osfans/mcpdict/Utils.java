@@ -18,7 +18,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
-import com.osfans.mcpdict.UI.MyWebView;
+import com.osfans.mcpdict.UI.WebView;
 import com.osfans.mcpdict.Util.FontUtil;
 
 import java.util.Locale;
@@ -35,7 +35,7 @@ public class Utils extends Application {
     }
 
     public static void info(Context context, String lang) {
-        MyWebView webView = new MyWebView(context, null);
+        WebView webView = new WebView(context, null);
         String sb = "<style>\n" +
                 "  @font-face {\n" +
                 "      font-family: ipa;\n" +
@@ -67,7 +67,7 @@ public class Utils extends Application {
     }
 
     public static void help(Context context) {
-        MyWebView webView = new MyWebView(context, null);
+        WebView webView = new WebView(context, null);
         webView.loadUrl("file:///android_asset/help/index.htm");
         new AlertDialog.Builder(context, androidx.appcompat.R.style.Theme_AppCompat_DayNight_NoActionBar)
                 .setView(webView)
