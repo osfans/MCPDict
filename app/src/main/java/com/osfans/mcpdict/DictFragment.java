@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -32,6 +33,7 @@ import com.osfans.mcpdict.UI.SearchView;
 
 public class DictFragment extends Fragment implements RefreshableFragment {
 
+    private static final String TAG = "DictFragment";
     private View selfView;
     private SearchView searchView;
     private Spinner spinnerShape,  spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions, spinnerRecommend, spinnerEditor;
@@ -52,6 +54,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             if (parent != null) parent.removeView(selfView);
             return selfView;
         }
+        Pref.putInput("");
 
         // Inflate the fragment view
         selfView = inflater.inflate(R.layout.dictionary_fragment, container, false);
@@ -323,11 +326,13 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         new AsyncTask<Void, Void, Cursor>() {
             @Override
             protected Cursor doInBackground(Void... params) {
+                Log.d(TAG, "start search " + Pref.getInput());
                 return DB.search();
             }
             @Override
             protected void onPostExecute(Cursor cursor) {
                 if (fragmentResult != null) {
+                    Log.d(TAG, "search finished");
                     fragmentResult.setData(cursor);
                     fragmentResult.scrollToTop();
                 }
@@ -342,7 +347,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     }
 
     private void refreshDict() {
-        String[] columns = DB.getDictColumns();
+        String[] columns = DB.getDictionaryColumns();
         if (columns == null) return;
         adapterDict.clear();
         String head = Pref.getString(R.string.dict);
