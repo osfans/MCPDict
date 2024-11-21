@@ -8,22 +8,21 @@ import android.graphics.Point;
 import com.osfans.mcpdict.Util.FontUtil;
 
 import org.osmdroid.views.MapView;
-import org.osmdroid.views.overlay.Marker;
 
-public class MyMarker extends Marker {
+public class Marker extends org.osmdroid.views.overlay.Marker {
     Paint mTextPaint;
     String mLabel;
     String mCity;
     int mSize;
 
-    public MyMarker(MapView mapView, int color, String city, String yb, String js, int size) {
+    public Marker(MapView mapView, int color, String city, String yb, String js, int size) {
         super(mapView);
         mCity = city;
         setTextLabelForegroundColor(Color.WHITE);
         setTextLabelBackgroundColor(color);
         setTextLabelFontSize(24);
         setTextIcon(mCity);
-        setAnchor(Marker.ANCHOR_LEFT, Marker.ANCHOR_BOTTOM);
+        setAnchor(org.osmdroid.views.overlay.Marker.ANCHOR_LEFT, org.osmdroid.views.overlay.Marker.ANCHOR_BOTTOM);
         setTitle(city);
         setSubDescription(js);
         mLabel = yb;

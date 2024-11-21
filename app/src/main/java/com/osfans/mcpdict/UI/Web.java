@@ -6,10 +6,10 @@ import com.osfans.mcpdict.DisplayHelper;
 import com.osfans.mcpdict.ResultFragment;
 import com.osfans.mcpdict.Utils;
 
-public class MyWeb {
-    MyWebView mWebView;
+public class Web {
+    WebView mWebView;
 
-    public MyWeb(MyWebView view) {
+    public Web(WebView view) {
         mWebView = view;
     }
 

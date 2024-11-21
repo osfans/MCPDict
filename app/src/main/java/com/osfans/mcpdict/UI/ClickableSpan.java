@@ -1,13 +1,12 @@
 package com.osfans.mcpdict.UI;
 
 import android.text.TextPaint;
-import android.text.style.ClickableSpan;
 import android.view.View;
 
 import androidx.annotation.NonNull;
 
-public class MyClickableSpan extends ClickableSpan {
-    public MyClickableSpan() {
+public class ClickableSpan extends android.text.style.ClickableSpan {
+    public ClickableSpan() {
         super();
     }
 

@@ -57,8 +57,8 @@ import com.osfans.mcpdict.Favorite.FavoriteDialogs;
 import com.osfans.mcpdict.Orth.HanZi;
 import com.osfans.mcpdict.Orth.Orthography;
 import com.osfans.mcpdict.UI.MenuSpan;
-import com.osfans.mcpdict.UI.MyMapView;
-import com.osfans.mcpdict.UI.MyWebView;
+import com.osfans.mcpdict.UI.MapView;
+import com.osfans.mcpdict.UI.WebView;
 import com.osfans.mcpdict.UI.PopupSpan;
 import com.osfans.mcpdict.UI.TextDrawable;
 import com.osfans.mcpdict.Util.FontUtil;
@@ -78,7 +78,7 @@ public class ResultFragment extends Fragment {
     private View selfView;
     private View mScroll;
     private TextView mTextView;
-    private MyWebView mWebView;
+    private WebView mWebView;
     private final boolean showFavoriteButton;
     private final Entry mEntry = new Entry();
     private boolean showMenu;
@@ -115,7 +115,7 @@ public class ResultFragment extends Fragment {
                     }
                     break;
                 case MSG_MAP:
-                    new MyMapView(getContext(), mEntry.hz).show();
+                    new MapView(getContext(), mEntry.hz).show();
                     break;
                 case MSG_FULLSCREEN: {
                     removeCallbacksAndMessages(null);

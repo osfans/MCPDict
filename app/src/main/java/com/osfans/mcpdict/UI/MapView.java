@@ -20,7 +20,6 @@ import org.osmdroid.events.ZoomEvent;
 import org.osmdroid.util.BoundingBox;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.CustomZoomButtonsController;
-import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.CopyrightOverlay;
 import org.osmdroid.views.overlay.FolderOverlay;
 import org.osmdroid.views.overlay.Overlay;
@@ -28,15 +27,15 @@ import org.osmdroid.views.overlay.ScaleBarOverlay;
 
 import java.io.IOException;
 
-public class MyMapView extends MapView {
+public class MapView extends org.osmdroid.views.MapView {
     FolderOverlay mHzOverlay;
     boolean mHasProvinces = false;
 
-    public MyMapView(Context context) {
+    public MapView(Context context) {
         super(context);
     }
 
-    public MyMapView(Context context, String hz) {
+    public MapView(Context context, String hz) {
         this(context);
         init(hz);
         new Thread(()->{
@@ -86,7 +85,7 @@ public class MyMapView extends MapView {
                 if (getOverlays().contains(mHzOverlay)) {
                     Double level = event.getZoomLevel();
                     for(Overlay item: mHzOverlay.getItems()) {
-                        ((MyMarker)item).setZoomLevel(level);
+                        ((Marker)item).setZoomLevel(level);
                     }
                 }
                 boolean enabled = event.getZoomLevel() >= 7.5;
@@ -157,7 +156,7 @@ public class MyMapView extends MapView {
                 CharSequence yb = DisplayHelper.formatIPA(lang, DisplayHelper.getRawText(string));
                 CharSequence js = DisplayHelper.formatIPA(lang, string);
                 int size = DB.getSize(lang);
-                MyMarker marker = new MyMarker(this, DB.getColor(lang), DB.getLabel(lang), yb.toString(), js.toString(), size);
+                Marker marker = new Marker(this, DB.getColor(lang), DB.getLabel(lang), yb.toString(), js.toString(), size);
                 marker.setPosition(point);
                 marker.setZoomLevel(level);
                 folderOverlay.add(marker);
