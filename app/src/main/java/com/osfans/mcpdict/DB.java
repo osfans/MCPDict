@@ -117,8 +117,11 @@ public class DB extends SQLiteAssetHelper {
     private static String[] WB_COLUMNS = null;
     private static String[] COLUMNS;
     private static String[] FQ_COLUMNS;
-    private static String[] DICT_COLUMNS;
+    private static String[] DICTIONARY_COLUMNS;
     private static String[] SHAPE_COLUMNS;
+    private static String[] EDITOR_COLUMNS = new String[]{
+            "作者", "錄入人", "維護人"
+    };
     private static SQLiteDatabase db = null;
 
     public static void initialize(Context context) {
@@ -246,33 +249,32 @@ public class DB extends SQLiteAssetHelper {
         if (keywords.isEmpty()) return null;
 
         // Columns to search
-        String[] columns = lang.contentEquals(JA_OTHER) ? JA_COLUMNS : new String[] {lang};
-        if (lang.contentEquals(WBH)) columns = WB_COLUMNS;
+        List<String> columns;
+        if (lang.contentEquals(JA_OTHER))
+            columns = Arrays.asList(JA_COLUMNS);
+        else if (lang.contentEquals(WBH))
+            columns = Arrays.asList(WB_COLUMNS);
+        else {
+            columns = new ArrayList<>();
+            columns.add(lang);
+        }
+        boolean allowVariants = isHzMode(lang) && Pref.getBool(R.string.pref_key_allow_variants, true) && type < 2;
+        if (allowVariants) columns.add(VA);
 
         // Build inner query statement (a union query returning the id's of matching Chinese characters)
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         List<String> queries = new ArrayList<>();
         List<String> args = new ArrayList<>();
-        boolean allowVariants = isHzMode(lang) && Pref.getBool(R.string.pref_key_allow_variants, true) && type < 2;
+
         for (int i = 0; i < keywords.size(); i++) {
             String key = keywords.get(i);
             String variant = allowVariants ? ("'" + key + "'") : "null";
             String[] projection = {"rowid AS _id", i + " AS rank", "offsets(mcpdict) AS vaIndex", variant + " AS variants"};
-            String sel = " MATCH ?";
-            if (key.startsWith("%") && key.endsWith("%")) {
-                sel = " LIKE ?";
-            }
-            for (String column : columns) {
-                String col = "`" + column + "`";
-                queries.add(qb.buildQuery(projection, col + sel, null, null, null, null));
+            String sel = (key.startsWith("%") && key.endsWith("%")) ? "LIKE" : "MATCH";
+            for (String col : columns) {
+                queries.add(qb.buildQuery(projection, String.format("`%s` %s ?", col, sel), null, null, null, null));
                 args.add(key);
-
-                if (allowVariants) {
-                    col = VA;
-                    queries.add(qb.buildQuery(projection, col + sel, null, null, null, null));
-                    args.add(key);
-                }
             }
         }
         String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);
@@ -368,7 +370,7 @@ public class DB extends SQLiteAssetHelper {
         for(int col = COL_FIRST_DICT; col <= COL_LAST_DICT; col++) {
             arrayList.add(getLanguageByLabel(COLUMNS[col]));
         }
-        DICT_COLUMNS = arrayList.toArray(new String[0]);
+        DICTIONARY_COLUMNS = arrayList.toArray(new String[0]);
         arrayList.clear();
         arrayList.addAll(Arrays.asList(COLUMNS).subList(COL_FIRST_SHAPE, COL_LAST_SHAPE + 1));
         SHAPE_COLUMNS = arrayList.toArray(new String[0]);
@@ -385,9 +387,9 @@ public class DB extends SQLiteAssetHelper {
         cursor.close();
     }
 
-    public static String[] getDictColumns() {
+    public static String[] getDictionaryColumns() {
         initArrays();
-        return DICT_COLUMNS;
+        return DICTIONARY_COLUMNS;
     }
 
     public static String[] getShapeColumns() {
@@ -485,6 +487,14 @@ public class DB extends SQLiteAssetHelper {
         return i < 0 ? "" : COLUMNS[i];
     }
 
+    private static String matchColumns(String[] cols, String value) {
+        ArrayList<String> array = new ArrayList<>();
+        for (String s: cols) {
+            array.add(String.format("%s:%s", s, value));
+        }
+        return String.join(" OR ", array);
+    }
+
     public static String[] getVisibleColumns() {
         FILTER filter = Pref.getFilter();
         String label = Pref.getLabel();
@@ -508,7 +518,7 @@ public class DB extends SQLiteAssetHelper {
             case EDITOR -> {
                 String value = Pref.getStr(R.string.pref_key_editor, "");
                 if (TextUtils.isEmpty(value)) break;
-                return queryLabel(String.format("info MATCH '%s'", value));
+                return queryLabel(String.format("info MATCH '%s'", matchColumns(EDITOR_COLUMNS, value)));
             }
             case DIVISION -> {
                 String division = Pref.getDivision();

@@ -34,6 +34,7 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.DrawableMarginSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.GestureDetector;
@@ -75,6 +76,7 @@ import java.util.Objects;
 
 public class ResultFragment extends Fragment {
 
+    private static final String TAG = "ResultFragment";
     private View selfView;
     private View mScroll;
     private TextView mTextView;
@@ -771,6 +773,7 @@ public class ResultFragment extends Fragment {
             mScroll.setScrollY(0);
         } else {
             FontUtil.setTypeface(mTextView);
+            Log.d(TAG, "setData begin");
             new AsyncTask<Void, Void, CharSequence>() {
                 @Override
                 protected CharSequence doInBackground(Void... params) {
@@ -784,6 +787,7 @@ public class ResultFragment extends Fragment {
                     mTextView.setText(text);
                     mTextView.setVisibility(View.VISIBLE);
                     mScroll.setScrollY(0);
+                    Log.d(TAG, "setData finished");
                 }
             }.execute();
         }
