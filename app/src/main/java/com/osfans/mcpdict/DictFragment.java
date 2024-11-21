@@ -13,7 +13,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -42,7 +41,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     DivisionAdapter adapterDivision;
     private View layoutSearchOption, layoutHz, layoutSearchLang;
     private LinearLayout layoutFilters;
-    private Button buttonFullscreen;
+    private View buttonFullscreen;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

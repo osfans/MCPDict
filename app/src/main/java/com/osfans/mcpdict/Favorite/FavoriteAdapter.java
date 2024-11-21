@@ -12,7 +12,6 @@ import android.widget.CursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -81,12 +80,10 @@ public class FavoriteAdapter extends CursorAdapter {
         FontUtil.setTypeface(textView);
 
         // "Edit" button
-        final Button buttonEdit = view.findViewById(R.id.button_edit);
-        buttonEdit.setOnClickListener(v -> FavoriteDialogs.view(hz, view));
+        view.findViewById(R.id.button_edit).setOnClickListener(v -> FavoriteDialogs.view(hz, view));
 
         // "Delete" button
-        final Button buttonDelete = view.findViewById(R.id.button_delete);
-        buttonDelete.setOnClickListener(v -> FavoriteDialogs.delete(hz, false));
+        view.findViewById(R.id.button_delete).setOnClickListener(v -> FavoriteDialogs.delete(hz, false));
 
         // Restore expanded status
         if (expandedItems.contains(hz)) {
