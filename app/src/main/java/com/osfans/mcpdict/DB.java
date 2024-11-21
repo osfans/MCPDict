@@ -671,7 +671,7 @@ public class DB extends SQLiteAssetHelper {
         initArrays();
         if (TextUtils.isEmpty(language)) language = Pref.getLanguage();
         String intro = _getIntro(language);
-        if (language.contentEquals(HZ)) {
+        if (language.contentEquals(HZ) || Pref.getFilter() == FILTER.HZ) {
             StringBuilder sb = new StringBuilder();
             sb.append(intro);
             sb.append("<br><h2>已收錄語言</h2><table border=1 cellspacing=0>");
