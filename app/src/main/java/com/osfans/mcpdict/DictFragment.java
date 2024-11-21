@@ -418,7 +418,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     public void updateCustomLanguage(String lang) {
         Pref.putCustomLanguage(lang);
         acCustomLang.setHint(Pref.getCustomLanguageSummary());
-        search();
+        if (Pref.getFilter() == FILTER.CUSTOM) search();
     }
 
     public void refresh(String query, String label) {
