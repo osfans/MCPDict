@@ -99,6 +99,7 @@ def getTones(tones):
 
 def normNames(s):
 	if not s or s == "Web": return ""
+	s = re.sub(r"([（\(])", " \\1", s)
 	return re.sub(" ?[、，,&] ?", ",", s)
 
 def normJW(s):

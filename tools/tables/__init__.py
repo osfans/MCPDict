@@ -134,7 +134,7 @@ def getLangs(dicts, argv=None):
 			for i in editors:
 				editor.update(i)
 			for i in editor:
-				i = re.sub("（.*?）", "", i.strip())
+				i = re.sub("（.*?）", "", i).strip()
 				if i:
 					維護人[i] += 1
 			count += 1

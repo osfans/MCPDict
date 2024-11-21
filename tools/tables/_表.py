@@ -139,6 +139,12 @@ class 表:
 		if self.__mod: return self.__mod
 		return self.__module__.split(".")[-1]
 
+	def find(self, name):
+		if g := glob(name):
+			return g
+		name = re.sub(".([^.]+)$", "([0-9]).\\1", name)
+		return glob(name)
+
 	@property
 	def spath(self):
 		if self._files:
@@ -150,12 +156,12 @@ class 表:
 		if not sname: sname = f"{self.short}.tsv"
 		if not sname.startswith("/"):
 			sname = self.get_fullname(sname)
-		g = glob(sname)
+		g = self.find(sname)
 		if not g or len(g) != 1:
 			if isXls(sname):
 				self._file = getTsvName(self._file)
 				sname = self.get_fullname(self._file)
-				g = glob(sname)
+				g = self.find(sname)
 				if not g or len(g) != 1:
 					logging.error(f"\t\t\t{sname} {g}")
 					return
