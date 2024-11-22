@@ -375,6 +375,11 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     private void refreshProvince() {
         String[] columns = DB.getArrays(DB.PROVINCE);
+        if (columns.length == 1) {
+            Pref.remove(R.string.pref_key_province);
+            spinnerProvinces.setVisibility(View.GONE);
+            return;
+        }
         adapterProvince.clear();
         String head = Pref.getString(R.string.province);
         adapterProvince.add(head);
@@ -447,6 +452,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         if (adapterProvince != null) refreshProvince();
         if (adapterShape != null) refreshShape();
         if (adapterDict != null) refreshDict();
+        requireActivity().setTitle(Pref.getTitle());
         initialized = true;
     }
 

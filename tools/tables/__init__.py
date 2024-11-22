@@ -68,16 +68,16 @@ def getLangsByArgv(infos, argv):
 					break
 	return l
 
-def getLangs(dicts, argv=None):
-	infos = tables._詳情.load()
+def getLangs(dicts, argv, 省=None):
+	infos = tables._詳情.load(省)
 	langs = []
 	count = 0
-	if argv:
+	if len(argv) == 1:
 		mods = ["漢字"]
 		mods.extend(getLangsByArgv(infos, argv))
 	else:
 		mods = 辭典.copy()
-		mods.extend(argv if argv else infos.keys())
+		mods.extend(getLangsByArgv(infos, argv) if argv else infos.keys())
 		mods.extend(形碼)
 	types = [dict(),dict(),dict()]
 	省 = defaultdict(int)

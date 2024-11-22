@@ -4,15 +4,15 @@ import sqlite3, os, sys
 from collections import defaultdict
 from time import time
 from tables import *
+import argparse
 
+parser = argparse.ArgumentParser(description='Create mcpdict database')
+parser.add_argument('-省', help='province to include', required=False)
+args, argv = parser.parse_known_args()
 start = time()
 
 dicts = defaultdict(dict)
-if len(sys.argv) > 1:
-	argv = sys.argv[1:]
-	langs = getLangs(dicts, argv)
-else:
-	langs = getLangs(dicts)
+langs = getLangs(dicts, argv, 省=args.省)
 keys = [f"{lang}" for lang in langs]
 fields = [f"`{i}`" for i in keys]
 CREATE = 'CREATE VIRTUAL TABLE mcpdict USING fts3 (%s)' % (",".join(fields))

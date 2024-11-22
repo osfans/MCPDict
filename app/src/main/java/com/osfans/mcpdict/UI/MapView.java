@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog;
 
 import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.DisplayHelper;
+import com.osfans.mcpdict.Pref;
 import com.osfans.mcpdict.Util.ThemeUtil;
 import com.osfans.mcpdict.R;
 
@@ -116,7 +117,7 @@ public class MapView extends org.osmdroid.views.MapView {
         CopyrightOverlay copyrightOverlay = new CopyrightOverlay(getContext()) {
             @Override
             public void setCopyrightNotice(String pCopyrightNotice) {
-                super.setCopyrightNotice(getResources().getString(R.string.app_name)+"【"+ hz + "】");
+                super.setCopyrightNotice(Pref.getTitle()+"【"+ hz + "】");
             }
         };
         ScaleBarOverlay scaleBarOverlay = new ScaleBarOverlay(this);
