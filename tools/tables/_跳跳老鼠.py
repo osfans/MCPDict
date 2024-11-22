@@ -92,7 +92,7 @@ class 表(_表):
 		elif name in ("洞口",):
 			yb, hzs = fs[:2]
 			hzs = self.normG(hzs, "[\\1]")
-		elif name in ("欽州正","道縣壽雁"):
+		elif name in ("欽州正","道縣壽雁", "江永桃川"):
 			sy, sd, hzs = fs[:3]
 			hzs = self.normG(hzs, "[\\1]")
 		elif name in ("唐山-開平"):
@@ -175,7 +175,7 @@ class 表(_表):
 		l = list()
 		hzs = self.normM(hzs)
 		hzs = re.sub(r"(〚.*?〛)([-=])", "\\2\\1", hzs)
-		for hz, c, o, js in re.findall(r"(.)([-=*?+]?)([₀-₉0-9]?)(〚.*?〛)?", hzs):
+		for hz, c, o, js in re.findall(r"(.)([-=*?+]?)([₀-₉0-9]?) *(〚.*?〛)?", hzs):
 			if js: js = js[1:-1]
 			js = o + js
 			l.append((hz, yb + c, js))

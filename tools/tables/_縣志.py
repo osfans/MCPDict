@@ -4,6 +4,15 @@ import re, regex
 from collections import defaultdict
 from tables._表 import 表 as _表
 
+def 常熟古裡_repl(match):
+	line = match.group(0)
+	if re.match(".*[①-⑨]+", line):
+		for i in range(1,10):
+			sda = chr(ord('①') + (i - 1))
+			sdb = f"{i}"
+			line = line.replace(sda, sdb)
+	return line
+
 class 表(_表):
 	disorder = True
 	ym = ""
@@ -182,6 +191,8 @@ class 表(_表):
 			line = self.normS(line, "{\\1}")
 			line = re.sub(r"(\{[^{}]+?)（又）([^{}]*?\})", "\\1，\\2", line)
 			line = re.sub(r"(\{[^{}]+?)（新）([^{}]*?\})", "\\1。\\2", line)
+		elif name in ("常熟古裡",):
+			line = re.sub(r"\{[^{}]*?[①-⑨][^{}]*?\}", 常熟古裡_repl, line)
 		elif name in ("句容",):
 			if re.match(".*[①-⑨ⓐⓑ]+", line):
 				for i in range(1,10):
@@ -240,7 +251,7 @@ class 表(_表):
 				else:
 					print(f"\t\t\t{py} 重複")
 				hzs = self.normG(hzs)
-				hzs = re.findall(r"(.)\d?([<+\-/=\\\*？$&r@]?)\d?(｛.*?｝)?", hzs)
+				hzs = re.findall(r"(.)\d?([<+\-/=\\\*？$&r@]?)\d? *(｛.*?｝)?", hzs)
 				for hz, c, js in hzs:
 					if hz == " ": continue
 					p = ""

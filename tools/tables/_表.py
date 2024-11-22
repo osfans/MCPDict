@@ -42,7 +42,7 @@ def getSTVariants(level=2):
 	return d
 
 def getTsvName(xls):
-	return re.sub(r"(\(\d?\))+$", "", xls.rsplit(".", 1)[0]) + ".tsv"
+	return re.sub(r" ?(\(\d{0,3}\))+$", "", xls.rsplit(".", 1)[0]) + ".tsv"
 
 def isXlsx(fname):
 	return fname.endswith("xlsx")
