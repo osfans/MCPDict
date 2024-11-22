@@ -657,7 +657,6 @@ public class ResultFragment extends Fragment {
             int count = cursor.getCount();
             String[] cols = DB.getVisibleColumns();
             int index = 0;
-            boolean isCurrent = Pref.getFilter() == DB.FILTER.CURRENT;
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 hzs.append(hz);
@@ -681,24 +680,26 @@ public class ResultFragment extends Fragment {
                 raws.append(String.format("%s %s\n", hz, unicode));
                 // yb
                 SpannableStringBuilder ssb2 = new SpannableStringBuilder();
-                if (HanZi.isUnknown(hz) && (cols.length >= 30 || isCurrent)) {
-                    String lang = Pref.getLabel();
-                    if (!DB.isLang(lang)) continue;
-                    int i = getColumnIndex(lang);
-                    s = cursor.getString(i);
-                    if (TextUtils.isEmpty(s)) continue;
-                    CharSequence cs = HtmlCompat.fromHtml(DisplayHelper.formatUnknownIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
-                    n = ssb2.length();
-                    String label = getLabel(i);
-                    Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
-                    DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
-                    ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    String raw = DisplayHelper.getRawText(s);
-                    Entry e = new Entry(hz, lang, raw, bFavorite, comment);
-                    ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    ssb2.append(cs);
-                    ssb2.append("\n");
-                    raws.append(formatReading(label, raw));
+                if (HanZi.isUnknown(hz)) {
+                    for (String lang: cols) {
+                        int i = getColumnIndex(lang);
+                        s = cursor.getString(i);
+                        if (TextUtils.isEmpty(s)) continue;
+                        CharSequence html = DisplayHelper.formatUnknownIPA(lang, s);
+                        if (TextUtils.isEmpty(html)) continue;
+                        CharSequence cs = HtmlCompat.fromHtml(html.toString(), HtmlCompat.FROM_HTML_MODE_COMPACT);
+                        n = ssb2.length();
+                        String label = getLabel(i);
+                        Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
+                        DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
+                        ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        String raw = DisplayHelper.getRawText(s);
+                        Entry e = new Entry(hz, lang, raw, bFavorite, comment);
+                        ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        ssb2.append(cs);
+                        ssb2.append("\n");
+                        raws.append(formatReading(label, raw));
+                    }
                 } else {
                     for (String lang : cols) {
                         int i = getColumnIndex(lang);
