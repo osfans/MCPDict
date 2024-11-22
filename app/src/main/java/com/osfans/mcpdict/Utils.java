@@ -57,7 +57,7 @@ public class Utils extends Application {
         Dialog dialog = new AlertDialog.Builder(context)
                 .setIcon(android.R.drawable.ic_dialog_info)
                 .setTitle(R.string.about)
-                .setMessage(HtmlCompat.fromHtml(context.getString(R.string.about_message, BuildConfig.VERSION_NAME), HtmlCompat.FROM_HTML_MODE_COMPACT))
+                .setMessage(HtmlCompat.fromHtml(context.getString(R.string.about_message, Pref.getTitle(), BuildConfig.VERSION_NAME), HtmlCompat.FROM_HTML_MODE_COMPACT))
                 .setPositiveButton(R.string.ok, null)
                 .show();
         TextView messageText = dialog.findViewById(android.R.id.message);

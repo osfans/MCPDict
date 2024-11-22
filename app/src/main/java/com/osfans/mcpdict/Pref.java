@@ -41,6 +41,10 @@ public class Pref {
         return getContext().getResources().getStringArray(id);
     }
 
+    public static void remove(int key) {
+        get().edit().remove(getContext().getString(key)).apply();
+    }
+
     public static void putBool(int key, boolean value) {
          get().edit().putBoolean(getContext().getString(key), value).apply();
     }
@@ -230,6 +234,9 @@ public class Pref {
     }
 
     public static String getTitle() {
-        return getStr(R.string.pref_key_custom_title, getString(R.string.app_name));
+        String defaultName = getString(R.string.app_name);
+        String[] columns = DB.getArrays(DB.PROVINCE);
+        if (columns.length == 1) defaultName = defaultName.replace(DB.HZ, columns[0].split(" ")[0]);
+        return getStr(R.string.pref_key_custom_title, defaultName);
     }
 }

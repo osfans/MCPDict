@@ -28,8 +28,8 @@ def s2t(s):
 	if not s: return ""
 	if type(s) is not str: return s
 	s = opencc_s2t.convert(s)\
-		.replace("樑","梁")\
-		.replace("嶽","岳")\
+		.replace("樑", "梁")\
+		.replace("嶽", "岳")\
 		.replace("慄", "栗")
 	for n, o in n2o_dict.items():
 		s = s.replace(n, o)
@@ -131,8 +131,8 @@ def normSource(books):
 			return books.value
 	return None
 
-def load():
-	if not outdated():
+def load(省):
+	if not 省 and not outdated():
 		return json.load(open(tpath,encoding="U8"))
 	d = dict()
 	wb = load_workbook(spath)
@@ -182,6 +182,10 @@ def load():
 		types[2] = s2t(types[2])
 
 		places = [fs[i] if fs[i] else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
+		if 簡稱 == "普通話" and 省:
+			places = ["", "", "", "", ""]
+		elif 省 and places[0] and places[0] not in 省:
+			continue
 		地點 = ("".join(places)).replace("/", "")
 		行政區級別 = fs["行政區級別"]
 		if not 行政區級別:
