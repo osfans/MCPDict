@@ -145,16 +145,16 @@ public class DB extends SQLiteAssetHelper {
     private static String[] getMatchColumns(String lang, SEARCH_TYPE searchType, boolean allowVariants) {
         List<String> columns = new ArrayList<>();
         if (lang.contentEquals(JA_OTHER))
-            columns = Arrays.asList(JA_COLUMNS);
+            columns.addAll(Arrays.asList(JA_COLUMNS));
         else if (lang.contentEquals(WBH))
-            columns = Arrays.asList(WB_COLUMNS);
+            columns.addAll(Arrays.asList(WB_COLUMNS));
         else {
             if (searchType == SEARCH_TYPE.YI) {
                 String[] cols = getVisibleColumns();
-                if (cols.length <= 10) columns = Arrays.asList(cols);
+                if (cols.length <= 100) columns.addAll(Arrays.asList(cols));
                 else lang = TABLE_NAME;
             }
-            if (!columns.contains(lang)) columns.add(lang);
+            if (!columns.contains(lang) && !lang.contains(TABLE_NAME)) columns.add(lang);
         }
         if (allowVariants) columns.add(VA);
         return columns.toArray(new String[0]);
