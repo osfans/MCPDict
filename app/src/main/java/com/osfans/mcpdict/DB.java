@@ -76,7 +76,6 @@ public class DB extends SQLiteAssetHelper {
     public static final String PROVINCE = "省";
     public static final String RECOMMEND = "推薦人";
     public static final String EDITOR = "維護人";
-    public static final String ORDINAL = "序號";
     private static String[] DIVISIONS = null;
     private static String[] LABELS = null;
     private static String[] LANGUAGES = null;
@@ -432,7 +431,7 @@ public class DB extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
         String[] projection = {LANGUAGE, "rowid as _id"};
-        String query = qb.buildQuery(projection, LANGUAGE + INDEX + " LIKE ? and 序號 is not null",  null, null, ORDER, null);
+        String query = qb.buildQuery(projection, LANGUAGE + INDEX + " LIKE ? and 音節數 is not null",  null, null, ORDER, null);
         Cursor cursor = db.rawQuery(query, new String[]{"%"+constraint+"%"});
         if (cursor.getCount() > 0) return cursor;
         cursor.close();
@@ -442,7 +441,7 @@ public class DB extends SQLiteAssetHelper {
     public static String[] getLanguages() {
         initArrays();
         if (LANGUAGES == null) {
-            LANGUAGES = queryLanguage(ORDINAL + " is not null");
+            LANGUAGES = queryLanguage("音節數 is not null");
         }
         return LANGUAGES;
     }
@@ -657,7 +656,7 @@ public class DB extends SQLiteAssetHelper {
         } else {
             StringBuilder sb = new StringBuilder();
             sb.append(String.format(Locale.getDefault(), "%s%s<br>", Pref.getString(R.string.name), language));
-            ArrayList<String> fields = new ArrayList<>(Arrays.asList(ORDINAL,"地點","經緯度", "作者", "錄入人", "維護人","來源", "參考文獻","文件名","版本","字數","□數", "音節數","不帶調音節數",""));
+            ArrayList<String> fields = new ArrayList<>(Arrays.asList("地點","經緯度", "作者", "錄入人", "維護人","來源", "參考文獻","文件名","版本","字數","□數", "音節數","不帶調音節數",""));
             fields.addAll(Arrays.asList(FQ_COLUMNS));
             fields.add("");
             for (String field: fields) {
