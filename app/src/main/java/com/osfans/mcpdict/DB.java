@@ -118,7 +118,7 @@ public class DB extends SQLiteAssetHelper {
     private static String[] FQ_COLUMNS;
     private static String[] DICTIONARY_COLUMNS;
     private static String[] SHAPE_COLUMNS;
-    private static String[] EDITOR_COLUMNS = new String[]{
+    private static final String[] EDITOR_COLUMNS = new String[]{
             "作者", "錄入人", "維護人"
     };
     private static SQLiteDatabase db = null;
@@ -142,59 +142,91 @@ public class DB extends SQLiteAssetHelper {
         // db = getWritableDatabase();
     }
 
-    public static Cursor search() {
-        // Search for one or more keywords, considering mode and options
-        String input = Pref.getInput();
-        String lang = Pref.getLabel();
-        String shape = Pref.getShape();
-        String dict = Pref.getDict();
-        int type = Pref.getInt(R.string.pref_key_type);
-
-        if (input.startsWith("-")) input = input.substring(1);
-
-        if (!TextUtils.isEmpty(shape) && type < 2) lang = shape;
-        if (type == 3) {
-            type = 2;
-            lang = TextUtils.isEmpty(dict) ? TABLE_NAME : DB.getLabelByLanguage(dict);
+    private static String[] getMatchColumns(String lang, SEARCH_TYPE searchType, boolean allowVariants) {
+        List<String> columns = new ArrayList<>();
+        if (lang.contentEquals(JA_OTHER))
+            columns = Arrays.asList(JA_COLUMNS);
+        else if (lang.contentEquals(WBH))
+            columns = Arrays.asList(WB_COLUMNS);
+        else {
+            if (searchType == SEARCH_TYPE.YI) {
+                String[] cols = getVisibleColumns();
+                if (cols.length <= 10) columns = Arrays.asList(cols);
+                else lang = TABLE_NAME;
+            }
+            if (!columns.contains(lang)) columns.add(lang);
         }
+        if (allowVariants) columns.add(VA);
+        return columns.toArray(new String[0]);
+    }
 
+    private static String getCharsetSelect() {
         // Get options and settings
         int charset = Pref.getInt(R.string.pref_key_charset);
         boolean mcOnly = charset == 1;
         boolean kxOnly = charset == 3;
         boolean hdOnly = charset == 4;
         boolean swOnly = charset == 2;
-        int cantoneseSystem = Pref.getStrAsInt(R.string.pref_key_cantonese_romanization, 0);
+        String selection = "";
+        if (mcOnly) {
+            selection = String.format(" AND `%s` IS NOT NULL", GY);
+        } else if (swOnly) {
+            selection = String.format(" AND `%s` IS NOT NULL", SW);
+        } else if (kxOnly) {
+            selection = String.format(" AND `%s` IS NOT NULL", KX);
+        } else if (hdOnly) {
+            selection = String.format(" AND `%s` IS NOT NULL", HD);
+        } else if (charset > 0) {
+            selection = String.format(" AND `%s` MATCH '%s'", FL, Pref.getStringArray(R.array.pref_values_charset)[charset]);
+        }
+        return selection;
+    }
+
+    public static Cursor search() {
+        // Search for one or more keywords, considering mode and options
+        String input = Pref.getInput();
+        String lang = Pref.getLabel();
+        String shape = Pref.getShape();
+        String dict = Pref.getDict();
+        SEARCH_TYPE searchType = SEARCH_TYPE.values()[Pref.getInt(R.string.pref_key_type)];
+        boolean isAll = Pref.getFilter() == FILTER.ALL;
+
+        if (input.startsWith("-")) input = input.substring(1); //may crash sqlite
+        if (searchType == SEARCH_TYPE.DICTIONARY) {
+            searchType = SEARCH_TYPE.YI;
+            lang = TextUtils.isEmpty(dict) ? TABLE_NAME : DB.getLabelByLanguage(dict);
+        }
 
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
-        if (type == 2){ //yi
+        if (searchType == SEARCH_TYPE.YI){ //yi
             if (HanZi.isHz(input)) {
                 String hzs = DisplayHelper.normInput(input);
                 if (!TextUtils.isEmpty(hzs)) keywords.add(hzs);
             }
+            if (isAll) lang = TABLE_NAME;
         }
         else if (HanZi.isBH(input)) lang = BH;
         else if (HanZi.isBS(input)) {
             lang = BS;
             input = input.replace("-", "f");
-        } else if (!TextUtils.isEmpty(shape)) { //WB, CJ, LF
-            // not search hz
+        } else if (!TextUtils.isEmpty(shape) && searchType == SEARCH_TYPE.HZ) { //WB, CJ, LF
+            lang = shape;
         } else if (HanZi.isHz(input)) {
             lang = HZ;
         } else if (HanZi.isUnicode(input)) {
             input = HanZi.toHz(input);
             lang = HZ;
         } else if (HanZi.isPY(input) && !isLang(lang)) lang = CMN;
-        if (type == 1 && isHzMode(lang)) type = 0;
-        if (isHzMode(lang) && type == 0) {     // Each character is a query
+        if (isHzMode(lang) && searchType == SEARCH_TYPE.YIN) searchType = SEARCH_TYPE.HZ;
+        if (isHzMode(lang) && searchType == SEARCH_TYPE.HZ) {     // Each character is a query
             for (int unicode : input.codePoints().toArray()) {
                 if (!HanZi.isHz(unicode)) continue;
                 String hz = HanZi.toHz(unicode);
                 if (keywords.contains(hz)) continue;
                 keywords.add(hz);
             }
-        } else if (type < 2) {                          // Each contiguous run of non-separator and non-comma characters is a query
+        } else if (searchType == SEARCH_TYPE.YIN) {                          // Each contiguous run of non-separator and non-comma characters is a query
             if (lang.contentEquals(KOR)) { // For Korean, put separators around all hangul
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < input.length(); i++) {
@@ -208,9 +240,9 @@ public class DB extends SQLiteAssetHelper {
                 }
                 input = sb.toString();
             }
+            int cantoneseSystem = Pref.getStrAsInt(R.string.pref_key_cantonese_romanization, 0);
             for (String token : input.split("[\\s,]+")) {
                 if (TextUtils.isEmpty(token)) continue;
-                token = token.toLowerCase(Locale.US);
                 // Canonicalization
                 switch (lang) {
                     case CMN: token = Mandarin.canonicalize(token); break;
@@ -223,6 +255,7 @@ public class DB extends SQLiteAssetHelper {
                     case JA_OTHER:
                         token = Japanese.canonicalize(token); break;
                     default:
+                        token = token.toLowerCase(Locale.US);
                         break;
                 }
                 if (token == null) continue;
@@ -248,17 +281,8 @@ public class DB extends SQLiteAssetHelper {
         if (keywords.isEmpty()) return null;
 
         // Columns to search
-        List<String> columns;
-        if (lang.contentEquals(JA_OTHER))
-            columns = Arrays.asList(JA_COLUMNS);
-        else if (lang.contentEquals(WBH))
-            columns = Arrays.asList(WB_COLUMNS);
-        else {
-            columns = new ArrayList<>();
-            columns.add(lang);
-        }
-        boolean allowVariants = isHzMode(lang) && Pref.getBool(R.string.pref_key_allow_variants, true) && type < 2;
-        if (allowVariants) columns.add(VA);
+        boolean allowVariants = isHzMode(lang) && Pref.getBool(R.string.pref_key_allow_variants, true) && (SEARCH_TYPE.HZ == searchType);
+        String[] columns = getMatchColumns(lang, searchType, allowVariants);
 
         // Build inner query statement (a union query returning the id's of matching Chinese characters)
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
@@ -284,18 +308,7 @@ public class DB extends SQLiteAssetHelper {
         String[] projection = {"v.*", "_id",
                    "v.漢字 AS `漢字`", "variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
-        String selection = "u._id = v.rowid";
-        if (mcOnly) {
-            selection += String.format(" AND `%s` IS NOT NULL", GY);
-        } else if (swOnly) {
-            selection += String.format(" AND `%s` IS NOT NULL", SW);
-        } else if (kxOnly) {
-            selection += String.format(" AND `%s` IS NOT NULL", KX);
-        } else if (hdOnly) {
-            selection += String.format(" AND `%s` IS NOT NULL", HD);
-        } else if (charset > 0) {
-            selection += String.format(" AND `%s` MATCH '%s'", FL, Pref.getStringArray(R.array.pref_values_charset)[charset]);
-        }
+        String selection = "u._id = v.rowid" + getCharsetSelect();
         query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", "0,100");
 
         // Search
