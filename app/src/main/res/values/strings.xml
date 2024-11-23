@@ -441,7 +441,7 @@
     <string name="recommend">推薦人</string>
     <string name="pref_key_editor">KEY_EDITOR</string>
     <string name="editor">作者、錄入人、維護人</string>
-    <string name="pref_key_province">KEY_PROVINCE</string>
+    <string name="pref_key_province">KEY_PROVINCE_INDEX</string>
     <string name="province">全部省份</string>
     <string name="pref_key_division">KEY_DIVISION</string>
     <string name="division">全部分區</string>

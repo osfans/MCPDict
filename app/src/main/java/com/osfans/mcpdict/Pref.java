@@ -116,14 +116,12 @@ public class Pref {
         putStr(R.string.pref_key_shape, value);
     }
 
-    public static String getProvince() {
-        String value = getStr(R.string.pref_key_province);
-        if (value.contentEquals(getString(R.string.province))) value = "";
-        return value;
+    public static int getProvince() {
+        return getInt(R.string.pref_key_province);
     }
 
-    public static void putProvince(String value) {
-        putStr(R.string.pref_key_province, value);
+    public static void putProvince(int value) {
+        putInt(R.string.pref_key_province, value);
     }
 
     public static String getDivision() {
