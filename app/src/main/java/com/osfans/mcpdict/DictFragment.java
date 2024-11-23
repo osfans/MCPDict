@@ -180,8 +180,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         spinnerProvinces.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String value = adapterProvince.getItem(position).toString().split(" ")[0];
-                Pref.putProvince(position == 0 ? "" : value);
+                Pref.putProvince(position);
                 search();
             }
             @Override
@@ -384,8 +383,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         String head = Pref.getString(R.string.province);
         adapterProvince.add(head);
         adapterProvince.addAll(columns);
-        String value = Pref.getProvince();
-        int index = adapterProvince.getPosition(value);
+        int index = Pref.getProvince();
         if (index >= adapterProvince.getCount() || index < 0 ) index = 0;
         spinnerProvinces.setSelection(index);
     }
