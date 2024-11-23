@@ -76,6 +76,10 @@ class 表(_表):
 			line = line.replace("", "Ø").replace("", "")
 			line = re.sub("^(.*?)［", "\\1	［", line)
 			line = re.sub(r"‖(.){", "\\1{(連讀音)", line)
+		elif name in ("建德"):
+			line = re.sub(r"\t2\d.*$", "", line)
+		elif name in ("屯溪船上話"):
+			line = re.sub(r"连读.*$", "", line)
 		elif name in ("潼關太要",):
 			if line.startswith("["): line = ""
 		elif name in ("昆明","建水臨安",):
@@ -228,7 +232,7 @@ class 表(_表):
 			line = line.strip().replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？").replace("：[", "	[").replace("{：",'{')
 			line = re.sub(r"\[(\d+[a-zA-Z]?)\]", "［\\1］",line)
 			line = re.sub("［([^0-9]+.*?)］", "[\\1]",line)
-			if "{" not in line and "（" in line:
+			if ("{" not in line and "｛" not in line) and ("（" in line or "(" in line):
 				line = self.normS(line, "{\\1}")
 			line = line.lstrip(" ")
 			if "［" not in line and re.match(".*[①-⑨]", line):
@@ -239,10 +243,13 @@ class 表(_表):
 			if s := self.parseYm(line):
 				ym = s
 				continue
-			if "\t" not in line: line = re.sub(r"^(.*?)\［", "\\1	［", line)
-			fs = line.split("\t")[:2]
-			if len(fs) != 2: continue
-			sm = fs[0].strip().strip("[]")
+			matches = re.findall("^([^［］]*?)(［.+)$", line)
+			if not matches or len(matches[0]) != 2: continue
+			fs = list(matches[0])
+			fs[0] = fs[0].strip().strip("[]")
+			fs[1] = fs[1].replace("\t", "")
+			fs[1] = re.sub(r" (\d)", "\\1", fs[1])
+			sm, hzs = fs
 			pys = set()
 			for sd,hzs in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", fs[1]):
 				py = sm + ym +sd
