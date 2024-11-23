@@ -336,7 +336,11 @@ class 表:
 				if "\t" in py: py, js = py.split("\t", 1)
 				if js and self.isLang():
 					js = self.normJS(js)
-				yd = getYD(py)
+				try:
+					yd = getYD(py)
+				except:
+					print("\t\t\t", self.short, py, js)
+					exit(1)
 				if yd and py.count("*") <= 1:
 					js = f"({yd}){js}"
 					py = py[:-1]
