@@ -232,9 +232,6 @@ public class Pref {
     }
 
     public static String getTitle() {
-        String defaultName = getString(R.string.app_name);
-        String[] columns = DB.getArrays(DB.PROVINCE);
-        if (columns.length == 1) defaultName = defaultName.replace(DB.HZ, columns[0].split(" ")[0]);
-        return getStr(R.string.pref_key_custom_title, defaultName);
+        return getStr(R.string.pref_key_custom_title, getString(R.string.app_name));
     }
 }
