@@ -5,7 +5,6 @@
 
 ## 下載 
 [<img alt="GitHub Release" src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' height='80px'>](https://github.com/osfans/MCPDict/releases)
-[<img alt='Coolapk' src='https://static.coolapk.com/static/web/v8/img/icon.png' height='60px'/>](https://www.coolapk.com/apk/com.osfans.mcpdict)
 
 ## 版本歷史
 
