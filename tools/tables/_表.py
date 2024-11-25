@@ -10,6 +10,7 @@ import inspect
 from openpyxl import load_workbook
 from xlrd import open_workbook
 from docx import Document
+from docx.enum.text import WD_UNDERLINE
 import regex
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
@@ -101,7 +102,20 @@ def docx2tsv(doc):
 		xtime = os.path.getmtime(doc)
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
-	lines = [line.text + "\n" for line in Document(doc).paragraphs]
+	lines = []
+	for line in Document(doc).paragraphs:
+		for run in line.runs:
+			if run.font.underline == WD_UNDERLINE.SINGLE:
+				for i in run.text:
+					lines.append(i + "-")
+			elif run.font.underline == WD_UNDERLINE.DOUBLE:
+				for i in run.text:
+					lines.append(i + "=")
+			elif run.font.subscript:
+				lines.append(f"{{{run.text}}}")
+			else:
+				lines.append(run.text)
+		lines.append("\n")
 	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.writelines(lines)
 	t.close()
@@ -158,7 +172,7 @@ class 表:
 			sname = self.get_fullname(sname)
 		g = self.find(sname)
 		if not g or len(g) != 1:
-			if isXls(sname):
+			if isXls(sname) or isDocx(sname):
 				self._file = getTsvName(self._file)
 				sname = self.get_fullname(self._file)
 				g = self.find(sname)

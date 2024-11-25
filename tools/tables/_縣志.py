@@ -127,8 +127,8 @@ class 表(_表):
 			# 	line = line.replace(f"[{i}]",f"[{self.toneValues[i]}]")
 			line = re.sub(r"\[.*?(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
 			line = line.replace("<","{").replace(">","}")
-		elif name in ("澄海大新","光山", "南康唐江", "仁化長江", "永豐"):
-			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+		elif name in ("澄海大新","光山", "南康唐江", "仁化長江", "永豐", "南豐"):
+			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps.get(x[1], "0")}]", line)
 		elif name in ("耒陽",):
 			line = line.replace("51", "53")
 			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
@@ -189,6 +189,11 @@ class 表(_表):
 			line = line.replace("\t", "")
 			line = re.sub(r"^(.*?)(\[)", "\\1	\\2", line)
 			line = self.normS(line, "{\\1}")
+		elif name in ("髙郵"):
+			line = line.replace("ⓘ", "①").replace("Ⓘ", "①")
+			line = line.replace("➀", "①").replace("➁", "②").replace("➂","③").replace("➃", "④").replace("➄", "⑤")
+			line = line.lstrip("q")
+			line = line.replace("-", "(新派錯音)")
 		elif name in ("南京老派"):
 			line = re.sub("([，。])(（)", "\\2\\1", line)
 			line = line.replace("，", "（又）").replace("。", "（新）")
