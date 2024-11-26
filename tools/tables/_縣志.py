@@ -132,9 +132,14 @@ class 表(_表):
 		elif name in ("耒陽",):
 			line = line.replace("51", "53")
 			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+		elif name in ("建湖卞港",):
+			line = line.replace("[2]", "[23-2]")
+			line = re.sub(r"\[([\d\-]+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
 		elif name in ("慈利",):
 			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
 			line = line.replace("/", "")
+		elif name in ("海門"):
+			if line.startswith("#"): return "#"
 		elif name in ("博白","東莞塘角"):
 			if line.startswith("#"): return "#"
 			find = re.findall(r"\[(.*?)(\d+)\]", line)

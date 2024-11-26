@@ -53,6 +53,15 @@ public class Orthography {
         return String.format("<i>%s</i>", s);
     }
 
+    private static final String[] toneBars = {"ˀ˩˨˧˦˥ˀ", "ˀ꜖꜕꜔꜓꜒ˀ", "ˀ꜌꜋꜊꜉꜈ˀ", "ˀ꜑꜐꜏꜎꜍ˀ", "⁰¹²³⁴⁵⁶"};
+    private static String formatToneBar(String s, int index) {
+        if (TextUtils.isEmpty(s)) return "";
+        if (s.length() == 2 && s.charAt(0) == s.charAt(1)) s = s.substring(1);
+        for (int i = 0; i <= 6; i++)
+            s = s.replace((char)('0' + i), toneBars[index].charAt(i));
+        return s;
+    }
+
     public static String formatTone(String base, String tone, String lang) {
         if (TextUtils.isEmpty(tone) || tone.contentEquals("_")) return base;
         JSONArray styles = null;
@@ -71,41 +80,18 @@ public class Orthography {
         if (!TextUtils.isEmpty(tv)) {
             if (mToneValueStyle == 0) { //符號
                 if (tv.length() == 2 && tv.charAt(0) == tv.charAt(1)) tv = tv.substring(0, 1);
-                if (tv.startsWith("-")) {
-                    if (tv.length() == 3 && tv.charAt(1) == tv.charAt(2)) tv = tv.substring(0, 2);
-                    tv = tv.replace('1', '꜖')
-                            .replace('2', '꜕')
-                            .replace('3', '꜔')
-                            .replace('4', '꜓')
-                            .replace('5', '꜒')
-                            .replace('6', ' ')
-                            .replace('0', ' ')
-                            .replace("-", "");
+                if (tv.contains("-")) {
+                    String [] tvs = tv.split("-");
+                    tvs[0] = formatToneBar(tvs[0], 0);
+                    tvs[1] = formatToneBar(tvs[1], style1.startsWith("0") ? 3 : 1);
+                    tv = tvs[0] + tvs[1];
                 } else if (style1.startsWith("0") && tv.length() == 1) {
-                    tv = tv.replace('1', '꜌')
-                            .replace('2', '꜋')
-                            .replace('3', '꜊')
-                            .replace('4', '꜉')
-                            .replace('5', '꜈')
-                            .replace('6', ' ')
-                            .replace('0', ' ');
+                    tv = formatToneBar(tv, 2);
                 } else {
-                    tv = tv.replace('1', '˩')
-                            .replace('2', '˨')
-                            .replace('3', '˧')
-                            .replace('4', '˦')
-                            .replace('5', '˥')
-                            .replace('6', ' ')
-                            .replace('0', ' ');
+                    tv = formatToneBar(tv, 0);
                 }
             } else if (mToneValueStyle == 1) { //數字
-                tv = tv.replace('1', '¹')
-                        .replace('2', '²')
-                        .replace('3', '³')
-                        .replace('4', '⁴')
-                        .replace('5', '⁵')
-                        .replace('6', '⁶')
-                        .replace('0', '⁰');
+                tv = formatToneBar(tv, 4).replace('-', '⁻');
             } else tv = "";
         }
         switch (mToneStyle) {

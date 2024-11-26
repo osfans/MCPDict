@@ -57,12 +57,38 @@ def processFs(v):
 	if v is None: return ""
 	return str(v).strip().replace("\t", " ").replace("\n", " ")
 
+def processXlsxFs(v):
+	t = type(v)
+	if t is float or t is int: return "%d" % v
+	if v is None: return ""
+	if t is str: return str(v).strip().replace("\t", " ").replace("\n", " ")
+	cells = []
+	for i in v:
+		if type(i) is str:
+			cells.append(i.strip())
+			continue
+		if type(i) is int or type(i) is float:
+			cells.append("%d" % i)
+			continue
+		text = i.text
+		tag = ""
+		if i.font.underline == "single":
+			tag = "-"
+		elif i.font.underline == "double":
+			tag = "="
+		if tag:
+			text = "".join([j + tag for j in text])
+		if i.font.vertAlign == "subscript":
+			text = f"({text})"
+		cells.append(text)
+	return "".join(cells).replace(")(", "").strip()
+
 def getXlsxLines(xls, page=0):
-	wb = load_workbook(xls, data_only=True)
+	wb = load_workbook(xls, data_only=True, rich_text=True)
 	sheet = wb.worksheets[page]
 	lines = list()
 	for row in sheet.rows:
-		fs = [processFs(j.value) for j in row[:50]]
+		fs = [processXlsxFs(j.value) for j in row[:50]]
 		if any(fs):
 			line = "\t".join(fs) + "\n"
 			lines.append(line)
@@ -92,6 +118,23 @@ def xls2tsv(xls, page=0):
 	t.writelines(lines)
 	t.close()
 
+def run2text(run):
+	tag = ""
+	if run.font.underline == WD_UNDERLINE.SINGLE:
+		tag = "-"
+	elif run.font.underline == WD_UNDERLINE.DOUBLE:
+		tag = "="
+	elif run.font.underline == WD_UNDERLINE.WAVY:
+		tag = chr(0x1AB6)
+	elif run._r.xpath("*/w:em[@w:val='dot']"):
+		tag = chr(0x0323)
+	text = run.text
+	if tag:
+		text = "".join([i + tag for i in text])
+	if run.font.subscript:
+		text = f"{{{text}}}"
+	return text
+
 def isDocx(fname):
 	return fname.endswith("docx")
 	
@@ -103,19 +146,9 @@ def docx2tsv(doc):
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
 	lines = []
-	for line in Document(doc).paragraphs:
-		for run in line.runs:
-			if run.font.underline == WD_UNDERLINE.SINGLE:
-				for i in run.text:
-					lines.append(i + "-")
-			elif run.font.underline == WD_UNDERLINE.DOUBLE:
-				for i in run.text:
-					lines.append(i + "=")
-			elif run.font.subscript:
-				lines.append(f"{{{run.text}}}")
-			else:
-				lines.append(run.text)
-		lines.append("\n")
+	for each in Document(doc).paragraphs:
+		line = "".join(map(run2text, each.runs)).replace("}{", "")
+		lines.append(line + "\n")
 	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.writelines(lines)
 	t.close()

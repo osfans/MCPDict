@@ -48,6 +48,19 @@ class 表(_表):
 		elif name in ("宜章巖泉","望城"):
 			sy, sd, hzs = fs[:3]
 			hzs = hzs.replace("?", "□")
+		elif name in ("天台東鄕",):
+			if not fs[0]: return
+			g = re.findall(r"^(.*?)(\d)(.+)$", fs[0])
+			if not g:
+				ym = fs[0].strip()
+				if ym:
+					self.ym = ym
+				return
+			sm, sd, hzs = g[0]
+			if sm:
+				self.sm = sm
+			yb = (self.sm + self.ym + sd).lstrip("q")
+			hzs = self.normS(hzs)
 		elif name in ("無錫",):
 			yb, hzs = fs[:2]
 			hzs = hzs.replace("？", "?").replace(" ", "")
@@ -83,7 +96,7 @@ class 表(_表):
 		elif name in ("洞口",):
 			yb, hzs = fs[:2]
 			hzs = self.normG(hzs, "[\\1]")
-		elif name in ("欽州正","道縣壽雁", "江永桃川"):
+		elif name in ("欽州正","道縣壽雁", "江永桃川", "桂陽敖泉"):
 			sy, sd, hzs = fs[:3]
 			hzs = self.normG(hzs, "[\\1]")
 		elif name in ("唐山-開平"):
@@ -120,6 +133,12 @@ class 表(_表):
 			sy, sd, hzs = fs[:3]
 			hzs = self.normS(hzs)
 			sd = self.toneMaps[sd]
+		elif name in ("濟南", "西安", "杭州"):
+			sy, sd, hzs = fs[1:4]
+			sd = re.sub(r"^[^\d]+", "", sd)
+			sd = self.toneMaps.get(sd, "")
+			hzs = hzs.replace(", ", "").replace(", ", "")
+			hzs = self.normG(hzs, "〚\\1〛")
 		elif name in ("揚州",):
 			self.disorder = False
 			self.simplified = 0
