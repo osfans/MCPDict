@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from docx import Document
+import docx
 from docx.enum.text import WD_UNDERLINE
 from docx.oxml.ns import qn
 from docx.shared import Pt
@@ -8,7 +8,11 @@ import sys, os
 fname = sys.argv[1]
 tname = os.path.basename(fname.replace(".tsv", ".docx"))
 
-doc = Document()
+doc = docx.Document()
+doc.settings.element.append(
+    docx.oxml.OxmlElement('w:hideSpellingErrors'))
+doc.settings.element.append(
+    docx.oxml.OxmlElement('w:hideGrammaticalErrors'))
 style = doc.styles['Normal']
 font = style.font
 font.name = 'Times New Roman'
