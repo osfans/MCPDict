@@ -657,6 +657,7 @@ public class ResultFragment extends Fragment {
             int count = cursor.getCount();
             String[] cols = DB.getVisibleColumns();
             int index = 0;
+            int linesCount = 0;
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 hzs.append(hz);
@@ -705,6 +706,7 @@ public class ResultFragment extends Fragment {
                         int i = getColumnIndex(lang);
                         s = cursor.getString(i);
                         if (TextUtils.isEmpty(s)) continue;
+                        linesCount++;
                         CharSequence cs = HtmlCompat.fromHtml(DisplayHelper.formatIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
                         n = ssb2.length();
                         String label = getLabel(i);
@@ -747,7 +749,7 @@ public class ResultFragment extends Fragment {
                     }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 }
                 ssb.append("\n");
-                if (index >= 5 && cols.length >= 30) continue;
+                if (linesCount > 1000) continue;
                 index++;
                 ssb.append(ssb2);
             }
