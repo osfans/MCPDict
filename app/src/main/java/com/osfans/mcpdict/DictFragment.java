@@ -102,7 +102,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Pref.putInt(R.string.pref_key_type, position);
-                boolean showDictionary = (position == DB.SEARCH_TYPE.DICTIONARY.ordinal());
+                boolean showDictionary = (position == DB.SEARCH.DICT.ordinal());
                 spinnerDict.setVisibility(showDictionary ? View.VISIBLE : View.GONE);
                 layoutSearchLang.setVisibility(!showDictionary? View.VISIBLE : View.GONE);
                 search();
@@ -133,6 +133,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String shape = adapterShape.getItem(position).toString();
                 Pref.putShape(position == 0 ? "" : shape);
+                search();
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
