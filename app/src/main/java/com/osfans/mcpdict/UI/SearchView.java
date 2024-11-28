@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.ImageButton;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -63,29 +62,24 @@ public class SearchView extends ConstraintLayout {
             editText.clearFocus();
             InputMethodManager imm = (InputMethodManager)v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
-            setQuery();
+            saveQuery(getQuery());
             listener.onClick(v);
         });
     }
 
-    private void clickSearchButton() {
-        searchButton.performClick();
-    }
-
     public String getQuery() {
-        return Pref.getInput();
+        return editText.getText().toString();
     }
 
     public void setQuery(String query, boolean submit) {
         editText.setText(query);
-        setQuery();
+        saveQuery(query);
         if (submit) {
-            clickSearchButton();
+            searchButton.performClick();
         }
     }
 
-    private void setQuery() {
-        String query = editText.getText().toString();
+    private void saveQuery(String query) {
         Pref.putInput(query);
     }
 }
