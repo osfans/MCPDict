@@ -98,8 +98,8 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_FIRST_INFO, COL_LAST_INFO;
     public static int COL_FIRST_SHAPE, COL_LAST_SHAPE;
 
-    public enum SEARCH_TYPE {
-        HZ, YIN, YI, DICTIONARY,
+    public enum SEARCH {
+        HZ, YIN, YI, DICT,
     };
 
     public enum FILTER {
@@ -142,19 +142,19 @@ public class DB extends SQLiteAssetHelper {
         // db = getWritableDatabase();
     }
 
-    private static String[] getMatchColumns(String lang, SEARCH_TYPE searchType, boolean allowVariants) {
+    private static String[] getMatchColumns(String lang, SEARCH searchType, boolean allowVariants) {
         List<String> columns = new ArrayList<>();
         if (lang.contentEquals(JA_OTHER))
             columns.addAll(Arrays.asList(JA_COLUMNS));
         else if (lang.contentEquals(WBH))
             columns.addAll(Arrays.asList(WB_COLUMNS));
         else {
-            if (searchType == SEARCH_TYPE.YI) {
+            if (searchType == SEARCH.YI) {
                 String[] cols = getVisibleColumns();
                 if (cols.length <= 100) columns.addAll(Arrays.asList(cols));
                 else lang = TABLE_NAME;
             }
-            if (!columns.contains(lang) && !lang.contains(TABLE_NAME)) columns.add(lang);
+            if (!columns.contains(lang) && !columns.contains(TABLE_NAME)) columns.add(lang);
         }
         if (allowVariants) columns.add(VA);
         return columns.toArray(new String[0]);
@@ -164,9 +164,9 @@ public class DB extends SQLiteAssetHelper {
         // Get options and settings
         int charset = Pref.getInt(R.string.pref_key_charset);
         boolean mcOnly = charset == 1;
+        boolean swOnly = charset == 2;
         boolean kxOnly = charset == 3;
         boolean hdOnly = charset == 4;
-        boolean swOnly = charset == 2;
         String selection = "";
         if (mcOnly) {
             selection = String.format(" AND `%s` IS NOT NULL", GY);
@@ -188,18 +188,18 @@ public class DB extends SQLiteAssetHelper {
         String lang = Pref.getLabel();
         String shape = Pref.getShape();
         String dict = Pref.getDict();
-        SEARCH_TYPE searchType = SEARCH_TYPE.values()[Pref.getInt(R.string.pref_key_type)];
+        SEARCH searchType = SEARCH.values()[Pref.getInt(R.string.pref_key_type)];
         boolean isAll = Pref.getFilter() == FILTER.ALL;
 
         if (input.startsWith("-")) input = input.substring(1); //may crash sqlite
-        if (searchType == SEARCH_TYPE.DICTIONARY) {
-            searchType = SEARCH_TYPE.YI;
+        if (searchType == SEARCH.DICT) {
+            searchType = SEARCH.YI;
             lang = TextUtils.isEmpty(dict) ? TABLE_NAME : DB.getLabelByLanguage(dict);
         }
 
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
-        if (searchType == SEARCH_TYPE.YI){ //yi
+        if (searchType == SEARCH.YI){ //yi
             if (HanZi.isHz(input)) {
                 String hzs = DisplayHelper.normInput(input);
                 if (!TextUtils.isEmpty(hzs)) keywords.add(hzs);
@@ -210,7 +210,7 @@ public class DB extends SQLiteAssetHelper {
         else if (HanZi.isBS(input)) {
             lang = BS;
             input = input.replace("-", "f");
-        } else if (!TextUtils.isEmpty(shape) && searchType == SEARCH_TYPE.HZ) { //WB, CJ, LF
+        } else if (!TextUtils.isEmpty(shape) && searchType == SEARCH.HZ) { //WB, CJ, LF
             lang = shape;
         } else if (HanZi.isHz(input)) {
             lang = HZ;
@@ -218,15 +218,15 @@ public class DB extends SQLiteAssetHelper {
             input = HanZi.toHz(input);
             lang = HZ;
         } else if (HanZi.isPY(input) && !isLang(lang)) lang = CMN;
-        if (isHzMode(lang) && searchType == SEARCH_TYPE.YIN) searchType = SEARCH_TYPE.HZ;
-        if (isHzMode(lang) && searchType == SEARCH_TYPE.HZ) {     // Each character is a query
+        if (isHzMode(lang) && searchType == SEARCH.YIN) searchType = SEARCH.HZ;
+        if (isHzMode(lang) && searchType == SEARCH.HZ) {     // Each character is a query
             for (int unicode : input.codePoints().toArray()) {
                 if (!HanZi.isHz(unicode)) continue;
                 String hz = HanZi.toHz(unicode);
                 if (keywords.contains(hz)) continue;
                 keywords.add(hz);
             }
-        } else if (searchType == SEARCH_TYPE.YIN) {                          // Each contiguous run of non-separator and non-comma characters is a query
+        } else if (searchType == SEARCH.HZ || searchType == SEARCH.YIN) {                          // Each contiguous run of non-separator and non-comma characters is a query
             if (lang.contentEquals(KOR)) { // For Korean, put separators around all hangul
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < input.length(); i++) {
@@ -281,7 +281,7 @@ public class DB extends SQLiteAssetHelper {
         if (keywords.isEmpty()) return null;
 
         // Columns to search
-        boolean allowVariants = isHzMode(lang) && Pref.getBool(R.string.pref_key_allow_variants, true) && (SEARCH_TYPE.HZ == searchType);
+        boolean allowVariants = isHzMode(lang) && Pref.getBool(R.string.pref_key_allow_variants, true) && (SEARCH.HZ == searchType);
         String[] columns = getMatchColumns(lang, searchType, allowVariants);
 
         // Build inner query statement (a union query returning the id's of matching Chinese characters)
