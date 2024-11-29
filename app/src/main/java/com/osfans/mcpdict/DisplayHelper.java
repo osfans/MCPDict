@@ -125,6 +125,7 @@ public abstract class DisplayHelper {
 
             case DB.SG -> SG_DISPLAY_HELPER.displayRich(string, lang);
             case DB.GY -> MiddleChinese.displayHelper.displayRich(string, lang);
+            case DB.ZT -> Zhongtang.displayHelper.displayRich(string, lang);
             case DB.ZYYY -> ZhongyuanYinyun.displayHelper.displayRich(string, lang);
             case DB.DGY -> Dungan.displayHelper.displayRich(string, lang);
             case DB.CMN -> Mandarin.displayHelper.displayRich(string, lang);

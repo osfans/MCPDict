@@ -165,6 +165,20 @@
         <item>400</item>
     </string-array>
 
+    <string name="pref_key_zt_display">ZT_DISPLAY</string>
+    <string name="pref_title_zt_display">中唐（韻圖）擬音</string>
+    <string-array name="pref_entries_zt_display">
+        <item>unt</item>
+        <item>辛克</item>
+    </string-array>
+    <string-array name="pref_values_zt_display">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="pref_default_values_zyyy_display">
+        <item>0</item>
+    </string-array>
+
     <string name="pref_key_zyyy_display">ZYYY_DISPLAY</string>
     <string name="pref_title_zyyy_display">中原音韻擬音</string>
     <string-array name="pref_entries_zyyy_display">
