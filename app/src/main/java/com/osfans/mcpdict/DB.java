@@ -163,21 +163,12 @@ public class DB extends SQLiteAssetHelper {
     private static String getCharsetSelect() {
         // Get options and settings
         int charset = Pref.getInt(R.string.pref_key_charset);
-        boolean mcOnly = charset == 1;
-        boolean swOnly = charset == 2;
-        boolean kxOnly = charset == 3;
-        boolean hdOnly = charset == 4;
+        String value = Pref.getStringArray(R.array.pref_values_charset)[charset];
         String selection = "";
-        if (mcOnly) {
-            selection = String.format(" AND `%s` IS NOT NULL", GY);
-        } else if (swOnly) {
-            selection = String.format(" AND `%s` IS NOT NULL", SW);
-        } else if (kxOnly) {
-            selection = String.format(" AND `%s` IS NOT NULL", KX);
-        } else if (hdOnly) {
-            selection = String.format(" AND `%s` IS NOT NULL", HD);
-        } else if (charset > 0) {
-            selection = String.format(" AND `%s` MATCH '%s'", FL, Pref.getStringArray(R.array.pref_values_charset)[charset]);
+        if (charset <= 5) {
+            selection = String.format(" AND `%s` IS NOT NULL", value);
+        } else {
+            selection = String.format(" AND `%s` MATCH '%s'", FL, value);
         }
         return selection;
     }

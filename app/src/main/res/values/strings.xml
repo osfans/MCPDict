@@ -336,10 +336,11 @@
     <string name="hz_info">編碼</string>
     <string-array name="pref_entries_charset">
         <item>全部漢字</item>
-        <item>僅廣韻</item>
-        <item>僅說文解字</item>
-        <item>僅康熙字典</item>
-        <item>僅漢語大字典</item>
+        <item>廣韻收錄</item>
+        <item>說文解字收錄</item>
+        <item>康熙字典收錄</item>
+        <item>古音匯纂收錄</item>
+        <item>漢語大字典收錄</item>
         <item>僅方言調查字表</item>
         <item>僅古籍印刷通用字規範字形表</item>
         <item>僅常用字字形表</item>
@@ -347,11 +348,12 @@
         <item>僅大五碼</item>
     </string-array>
     <string-array name="pref_values_charset">
-        <item>hz</item>
-        <item>ltc_mc</item>
-        <item>sw</item>
-        <item>kx</item>
-        <item>hd</item>
+        <item>漢字</item>
+        <item>廣韻</item>
+        <item>說文</item>
+        <item>康熙</item>
+        <item>匯纂</item>
+        <item>漢大</item>
         <item>FD</item>
         <item>GJ</item>
         <item>kHKGlyph</item>
