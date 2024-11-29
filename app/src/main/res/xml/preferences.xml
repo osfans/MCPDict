@@ -63,6 +63,13 @@
             android:defaultValue="@array/pref_default_values_mc_display" />
         <MultiSelectListPreference
             app:useSimpleSummaryProvider="true"
+            android:key="@string/pref_key_zt_display"
+            android:title="@string/pref_title_zt_display"
+            android:entries="@array/pref_entries_zt_display"
+            android:entryValues="@array/pref_values_zt_display"
+            android:defaultValue="@array/pref_default_values_zt_display" />
+        <MultiSelectListPreference
+            app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_zyyy_display"
             android:title="@string/pref_title_zyyy_display"
             android:entries="@array/pref_entries_zyyy_display"
