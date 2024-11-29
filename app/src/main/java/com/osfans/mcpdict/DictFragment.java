@@ -36,10 +36,10 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private static final String TAG = "DictFragment";
     private View selfView;
     private SearchView searchView;
-    private Spinner spinnerShape,  spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions, spinnerRecommend, spinnerEditor;
+    private Spinner spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions, spinnerRecommend, spinnerEditor;
     private AutoCompleteTextView acSearchLang, acCustomLang;
     private ResultFragment fragmentResult;
-    ArrayAdapter<CharSequence> adapterShape, adapterDict, adapterProvince, adapterRecommend, adapterEditor;
+    ArrayAdapter<CharSequence> adapterDict, adapterProvince, adapterRecommend, adapterEditor;
     DivisionAdapter adapterDivision;
     private View layoutSearchOption, layoutHz, layoutSearchLang;
     private LinearLayout layoutFilters;
@@ -125,20 +125,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        spinnerShape = selfView.findViewById(R.id.spinner_shape);
-        adapterShape = new StringArrayAdapter(requireActivity());
-        spinnerShape.setAdapter(adapterShape);
-        spinnerShape.setOnItemSelectedListener(new OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String shape = adapterShape.getItem(position).toString();
-                Pref.putShape(position == 0 ? "" : shape);
-                search();
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
-        });
-
         layoutFilters = selfView.findViewById(R.id.layout_filters);
         selfView.findViewById(R.id.layout_area).setTag(FILTER.AREA);
         selfView.findViewById(R.id.layout_current).setTag(FILTER.CURRENT);
@@ -204,7 +190,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
 
         acSearchLang = selfView.findViewById(R.id.text_search_lang);
-        acSearchLang.setAdapter(new LanguageAdapter(requireContext(), null, true));
+        acSearchLang.setAdapter(new LanguageAdapter(requireContext()));
         acSearchLang.setOnFocusChangeListener((v, b) -> {
             if (b) ((AutoCompleteTextView)v).showDropDown();
         });
@@ -221,7 +207,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
 
         acCustomLang = selfView.findViewById(R.id.text_custom_lang);
-        MultiLanguageAdapter acAdapter = new MultiLanguageAdapter(requireContext(), null, true);
+        MultiLanguageAdapter acAdapter = new MultiLanguageAdapter(requireContext());
         acAdapter.setOnItemClickListener(view -> {
             TextView tv = (TextView) view;
             String lang = tv.getText().toString();
@@ -361,19 +347,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         spinnerDict.setSelection(index);
     }
 
-    private void refreshShape() {
-        String[] columns = DB.getShapeColumns();
-        if (columns == null) return;
-        adapterShape.clear();
-        String head = Pref.getString(R.string.hz_shapes);
-        adapterShape.add(head);
-        adapterShape.addAll(columns);
-        String shape = Pref.getShape();
-        int index = TextUtils.isEmpty(shape) ? -1 : adapterShape.getPosition(shape);
-        if (index >= adapterShape.getCount() || index < 0 ) index = 0;
-        spinnerShape.setSelection(index);
-    }
-
     private void refreshProvince() {
         String[] columns = DB.getArrays(DB.PROVINCE);
         adapterProvince.clear();
@@ -446,7 +419,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         if (adapterRecommend != null) refreshRecommend();
         if (adapterEditor != null) refreshEditor();
         if (adapterProvince != null) refreshProvince();
-        if (adapterShape != null) refreshShape();
         if (adapterDict != null) refreshDict();
         requireActivity().setTitle(Pref.getTitle());
         initialized = true;
