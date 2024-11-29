@@ -504,13 +504,9 @@ public class DB extends SQLiteAssetHelper {
         switch (filter) {
             case AREA -> {
                 int level = Pref.getInt(R.string.pref_key_area_level);
-                int index = Pref.getProvince();
+                String province = Pref.getProvince();
                 StringBuilder sb = new StringBuilder();
-                if (index > 0) {
-                    String[] columns = DB.getArrays(DB.PROVINCE);
-                    String province = columns[index - 1].split(" ")[0];
-                    sb.append(String.format("%s:%s", DB.PROVINCE, province));
-                }
+                if (!TextUtils.isEmpty(province)) sb.append(String.format("%s:%s", DB.PROVINCE, province));
                 if (level > 0) {
                     String[] levels = Pref.getStringArray(R.array.entries_area_level);
                     sb.append(String.format(" 行政區級別:%s", levels[level]));
