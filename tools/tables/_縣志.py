@@ -36,6 +36,8 @@ class 表(_表):
 		elif name in ("巢湖",):
 			line = line.replace('""	"', '"#').replace("ø","Ø").replace("（0）","[0]")
 			line = self.normS(line, "{\\1}")
+		elif name in ("崇仁"):
+			line = self.normS(line, "{\\1}")
 		elif name in ("羅山","贛縣安平"):
 			line = re.sub(r"[:：] ?\[", "	[", line).replace("ø","Ø")
 		elif name in ("介休張蘭",):
@@ -207,6 +209,8 @@ class 表(_表):
 			line = re.sub(r"(\{[^{}]+?)（新）([^{}]*?\})", "\\1。\\2", line)
 		elif name in ("常熟古裡",):
 			line = re.sub(r"\{[^{}]*?[①-⑨][^{}]*?\}", 常熟古裡_repl, line)
+		elif name in ("松江天馬",):
+			line = line.lstrip("ø")
 		elif name in ("句容",):
 			if re.match(".*[①-⑨ⓐⓑ]+", line):
 				for i in range(1,10):
@@ -268,7 +272,7 @@ class 表(_表):
 				else:
 					print(f"\t\t\t{py} 重複")
 				hzs = self.normG(hzs)
-				hzs = re.findall(r"(.)\d?([<+\-/=\\\*？$&r@]?)\d? *(｛.*?｝)?", hzs)
+				hzs = re.findall(r"(.)[\d₁₂₃]?([<+\-/=\\\*？$&r@]?)[\d₁₂₃]? *(｛.*?｝)?", hzs)
 				for hz, c, js in hzs:
 					if hz == " ": continue
 					p = ""
