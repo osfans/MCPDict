@@ -3,6 +3,7 @@ package com.osfans.mcpdict.Adapter;
 import android.content.Context;
 import android.database.Cursor;
 import android.text.Spanned;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +38,7 @@ public class HzAdapter extends CursorAdapter {
 
     @Override
     public Cursor runQueryOnBackgroundThread(CharSequence constraint) {
-        return DB.getShapeCursor(constraint.toString());
+        return DB.getInputCursor(constraint.toString());
     }
 
     @Override
@@ -46,7 +47,9 @@ public class HzAdapter extends CursorAdapter {
     }
 
     private CharSequence getCode(Cursor cursor) {
-        return cursor.getString(1).toString().replaceAll("\\{.*?\\}", "")
+        String value = cursor.getString(1);
+        if (TextUtils.isEmpty(value)) return "";
+        return value.replaceAll("\\{.*?\\}", "")
                 .replace("|", " ")
                 .replaceAll("[\t\r\n ]+", " ");
     }
