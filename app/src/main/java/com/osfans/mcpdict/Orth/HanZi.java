@@ -38,6 +38,22 @@ public class HanZi {
         return isHz(hz.codePointAt(0));
     }
 
+    public static String cp2str(int codePoint) {
+        return String.valueOf(Character.toChars(codePoint));
+    }
+
+    public static String firstHz(String s) {
+        if (TextUtils.isEmpty(s)) return "";
+        int codePoint = s.codePointAt(0);
+        return cp2str(codePoint);
+    }
+
+    public static String lastHz(String s) {
+        if (TextUtils.isEmpty(s)) return "";
+        int codePoint = Character.codePointBefore(s, s.length());
+        return cp2str(codePoint);
+    }
+
     public static boolean isSingleHZ(String hz) {
         if (TextUtils.isEmpty(hz)) return false;
         return hz.codePoints().toArray().length == 1;

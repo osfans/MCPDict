@@ -36,6 +36,7 @@ public class DB extends SQLiteAssetHelper {
     public static final String KX = "康熙";
     public static final String HD = "漢大";
     public static final String ZX = "字形描述";
+    private static final String LF = "兩分";
     public static final String WBH = "五筆畫";
     public static final String VA = "異體字";
     public static final String FL = "分類";
@@ -152,15 +153,18 @@ public class DB extends SQLiteAssetHelper {
         return columns.toArray(new String[0]);
     }
 
-    private static String getCharsetSelect() {
+    private static String getCharsetSelect(boolean match) {
         // Get options and settings
         int charset = Pref.getInt(R.string.pref_key_charset);
+        if (charset == 0) return "";
         String value = Pref.getStringArray(R.array.pref_values_charset)[charset];
         String selection;
         if (charset <= 5) {
             selection = String.format(" AND `%s` IS NOT NULL", value);
-        } else {
+        } else if (match) {
             selection = String.format(" AND `%s` MATCH '%s'", FL, value);
+        } else {
+            selection = String.format(" AND `%s` LIKE '%%%s%%'", FL, value);
         }
         return selection;
     }
@@ -295,7 +299,7 @@ public class DB extends SQLiteAssetHelper {
         String[] projection = {"v.*", "_id",
                    "v.漢字 AS `漢字`", "variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
-        String selection = "u._id = v.rowid" + getCharsetSelect();
+        String selection = "u._id = v.rowid" + getCharsetSelect(true);
         query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", "0,100");
 
         // Search
@@ -315,13 +319,26 @@ public class DB extends SQLiteAssetHelper {
         return db.rawQuery(query, args);
     }
 
-    public static Cursor getShapeCursor(String input) {
+    public static Cursor getInputCursor(String input) {
+        if (TextUtils.isEmpty(input) || isHzInput()) return null;
         String lang = Pref.getShape();
-        if (TextUtils.isEmpty(lang)) return null;
+        boolean isYinPrompt = isYinPrompt();
+        if (isYinInput() || isYinPrompt()) lang = Pref.getLabel();
+        if (TextUtils.isEmpty(lang) || lang.contentEquals(HZ)) lang = CMN;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         String[] projection = {HZ, lang, "rowid as _id"};
-        String selection = String.format("%s MATCH ?", lang);
+        String charset = getCharsetSelect(false);
+        String selection;
+        String field = isYinPrompt ? HZ : lang;
+        if (TextUtils.isEmpty(charset)) {
+            selection = String.format("%s MATCH ?", field);
+        } else if (charset.contains("AND")) {
+            selection = String.format("%s MATCH ?%s", field, charset);
+        } else  {
+            selection = String.format("%s MATCH \"%s:?%s\"", TABLE_NAME, field, charset);
+        }
+        if (isYinPrompt) selection += String.format(" AND %s is not null", lang);
         String query = qb.buildQuery(projection, selection, null, null, lang, "0,100");
         List<String> keywords = normInput(lang, input);
         if (keywords.isEmpty()) return null;
@@ -815,5 +832,23 @@ public class DB extends SQLiteAssetHelper {
             sb.append(String.format("<p>【%s】%s</p>", getColumn(j), s));
         }
         return sb.toString();
+    }
+
+    public static boolean isHzInput() {
+        String shape = Pref.getShape();
+        return TextUtils.isEmpty(shape) || shape.contentEquals(Pref.getString(R.string.hz_input));
+    }
+
+    public static boolean isYinPrompt() {
+        return Pref.getShape().contentEquals(Pref.getString(R.string.yin_prompt));
+    }
+
+    public static boolean isYinInput() {
+        return Pref.getShape().contentEquals(Pref.getString(R.string.yin_input));
+    }
+
+    public static boolean isHzInputCode() {
+        String shape = Pref.getShape();
+        return isHzInput() || isYinPrompt() || shape.contentEquals(LF) || shape.contentEquals(ZX) || shape.contentEquals(BS);
     }
 }

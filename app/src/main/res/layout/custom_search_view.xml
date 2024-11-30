@@ -14,11 +14,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <AutoCompleteTextView
+    <MultiAutoCompleteTextView
         android:id="@+id/text_query"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:autofillHints=""
+        android:completionThreshold="1"
         android:elegantTextHeight="true"
         android:hint="@string/search_hint"
         android:imeOptions="actionSearch"
@@ -26,7 +27,6 @@
         android:paddingStart="@dimen/button_icon_size"
         android:paddingEnd="@dimen/button_icon_size"
         android:singleLine="true"
-        android:completionThreshold="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_search"
         app:layout_constraintStart_toStartOf="parent"

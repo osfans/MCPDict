@@ -415,7 +415,9 @@
     <string name="pref_key_font">FONT</string>
     <string name="book_format">【%s】</string>
     <string name="pref_key_shape">KEY_SHAPE</string>
-    <string name="hz_shapes">漢字輸入</string>
+    <string name="hz_input">漢字輸入</string>
+    <string name="yin_prompt">讀音提示</string>
+    <string name="yin_input">讀音輸入</string>
     <string name="hz_range">漢字範圍</string>
     <string name="hz_option">漢字選項</string>
     <string name="pref_key_hz_option">KEY_HZ_OPTION</string>

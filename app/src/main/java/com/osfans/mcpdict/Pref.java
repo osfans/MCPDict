@@ -107,9 +107,7 @@ public class Pref {
     }
 
     public static String getShape() {
-        String shape = getStr(R.string.pref_key_shape);
-        if (shape.contentEquals(getString(R.string.hz_shapes))) shape = "";
-        return shape;
+        return getStr(R.string.pref_key_shape, getString(R.string.hz_input));
     }
 
     public static void putShape(String value) {
