@@ -179,6 +179,7 @@ public class Pref {
         if (id == R.string.pref_key_zyyy_display) defaultList = getStringArray(R.array.pref_default_values_zyyy_display);
         else if (id == R.string.pref_key_dgy_display) defaultList = getStringArray(R.array.pref_default_values_dgy_display);
         else if (id == R.string.pref_key_mc_display) defaultList = getStringArray(R.array.pref_default_values_mc_display);
+        else if (id == R.string.pref_key_zt_display) defaultList = getStringArray(R.array.pref_default_values_zt_display);
         try {
             Set<String> defaultSet = new HashSet<>(Arrays.asList(defaultList));
             Set<String> set = getStrSet(id, defaultSet);
