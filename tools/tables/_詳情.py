@@ -76,7 +76,7 @@ def getTones(tones):
 				index = t[1:t.index("]")]
 				t = t[t.index("]")+1:]
 			if t[0].isdigit() or t[0] == "-":
-				n = t.lstrip("012345-")
+				n = t.lstrip("012345-/")
 				v = t[:len(t)-len(n)]
 			else:
 				n = t
