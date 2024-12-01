@@ -73,7 +73,7 @@ public class FontUtil {
         return null;
     }
 
-    static Typeface getDictTypeface() {
+    public static Typeface getDictTypeface() {
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
         if (!enableFontExt()) return getIPATypeface();
         return getHanTypeface();
