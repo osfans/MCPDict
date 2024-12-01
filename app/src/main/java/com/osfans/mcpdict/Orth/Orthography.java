@@ -30,8 +30,7 @@ public class Orthography {
 
     private static int mToneStyle = 0;
     private static int mToneValueStyle = 0;
-    public static final Pattern mPattern = Pattern.compile("^(.+?)([0-9]{1,2}[a-z]?)$");
-
+    public static final Pattern mPattern = Pattern.compile("^(.+?)([0-9]{1,2}[a-z=]?)$");
 
     public static void setToneStyle(int style) {
         mToneStyle = style;
@@ -56,7 +55,15 @@ public class Orthography {
     private static final String[] toneBars = {"ˀ˩˨˧˦˥ˀ", "ˀ꜖꜕꜔꜓꜒ˀ", "ˀ꜌꜋꜊꜉꜈ˀ", "ˀ꜑꜐꜏꜎꜍ˀ", "⁰¹²³⁴⁵⁶"};
     private static String formatToneBar(String s, int index) {
         if (TextUtils.isEmpty(s)) return "";
-        if (s.length() == 2 && s.charAt(0) == s.charAt(1)) s = s.substring(1);
+        if (s.contains("/")) {
+            String[] ss = s.split("/");
+            String[] nss = new String[ss.length];
+            for (int i = 0; i < ss.length; i++) {
+                nss[i] = formatToneBar(ss[i], index);
+            }
+            return String.join("/", nss);
+        }
+        if (mToneValueStyle == 0 && s.length() == 2 && s.charAt(0) == s.charAt(1)) s = s.substring(1);
         for (int i = 0; i <= 6; i++)
             s = s.replace((char)('0' + i), toneBars[index].charAt(i));
         return s;
