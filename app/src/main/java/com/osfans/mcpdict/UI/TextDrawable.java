@@ -192,7 +192,7 @@ public class TextDrawable extends ShapeDrawable {
             width = -1;
             height = -1;
             shape = new RectShape();
-            font = FontUtil.useSerif() ? Typeface.SERIF : Typeface.SANS_SERIF;
+            font = FontUtil.getDictTypeface();
             fontSize = -1;
             isBold = false;
             toUpperCase = false;
