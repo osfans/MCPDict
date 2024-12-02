@@ -112,7 +112,6 @@ class 表(_表):
 			sy, sd, hzs = fs[:3]
 			hzs = self.normS(hzs)
 			sd = sd.replace("42", "24")
-			hzs = hzs.replace("☐", "□")
 			sd = self.toneMaps.get(sd, "?")
 		elif name in ("長沙雙江",):
 			sy, sd, _, hzs = fs[:4]

@@ -26,15 +26,13 @@ class 表(_表):
 			line = re.sub(r"^(.*?) ?\[", "\\1	[", line)
 		elif name in ("萍鄕","平陽","都昌陽峯"):
 			line = line.lstrip("∅︀")
-		elif name in ("宜昌",):
-			line = line.replace('""	"', '"#')
 		elif name in ("遂川",):
 			if "[" in line:
 				line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
 			else:
 				line = "#" + line
 		elif name in ("巢湖",):
-			line = line.replace('""	"', '"#').replace("ø","Ø").replace("（0）","[0]")
+			line = line.replace("ø","Ø").replace("（0）","[0]")
 			line = self.normS(line, "{\\1}")
 		elif name in ("崇仁"):
 			line = self.normS(line, "{\\1}")
@@ -59,8 +57,6 @@ class 表(_表):
 			if line.startswith("#"):
 				line = re.sub('^(#[^ ]*) .*?	', '\\1', line)
 			elif "[" in line:
-				# line = re.sub('^([^ ]+) .*?	', '\\1', line)
-				# line = re.sub('^([^ ]+)	', '\\1', line)
 				line = re.sub(r'(.*?)[/ ].*?	(\[.+)$', '\\1	\\2', line)
 			else:
 				line = ""
@@ -185,6 +181,11 @@ class 表(_表):
 				.replace("(", "（").replace(")", "）").replace("\t", "").rstrip("12345 \t\n")
 			line = re.sub(r"\[([^\d].*?)\]", "（\\1）", line)
 			line = regex.sub("（((?>[^（）]+|(?R))*)）", "{\\1}", line)
+		elif name in ("博羅",):
+			if "[" not in line and not line.startswith("#"): line = ""
+			line = re.sub(r"\[(\d+)\]", lambda x: "["+self.dz2dl(x[1])+"]", line)
+			line = self.normS(line, "{\\1}")
+			line = line.lstrip("ø")
 		elif name in ("金壇",):
 			if line.strip().endswith("韻"): line = ""
 		elif name in ("天台城關"):
@@ -242,8 +243,7 @@ class 表(_表):
 			if lineno <= skip: continue
 			line = self.format(line)
 			if not line: continue
-			line = line.replace("☐", "□")
-			line = line.strip().replace('"','').replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？").replace("：[", "	[").replace("{：",'{')
+			line = line.strip().replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？").replace("：[", "	[").replace("{：",'{')
 			line = re.sub(r"\[(\d+[a-zA-Z]?)\]", "［\\1］",line)
 			line = re.sub("［([^0-9]+.*?)］", "[\\1]",line)
 			if ("{" not in line and "｛" not in line) and ("（" in line or "(" in line):
