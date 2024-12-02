@@ -449,7 +449,7 @@ class 表:
 				if lineno <= skip: continue
 				line = self.format(line)
 				if line.startswith('#') : continue
-				fs = [i.strip('" \t') for i in line.strip('\n').split(sep)]
+				fs = [i.strip() for i in line.strip('\n').split(sep)]
 				entries = self.parse(fs)
 				if not entries: continue
 				if type(entries) is tuple: entries = [entries]

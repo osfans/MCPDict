@@ -255,6 +255,6 @@ class 表(_表):
 				yb = self.dz2dl(ipa)
 			if len(hz) != 1 or not yb: return
 			yb = self.normYb(yb)
-			if hz in "?？☐�": hz = "□"
+			if hz in "?？�": hz = "□"
 			return hz, yb, js
 		return

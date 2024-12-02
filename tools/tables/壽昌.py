@@ -7,7 +7,7 @@ class 表(_表):
 	def patch(self, d):
 		for line in open(self.get_fullname("建德寿昌文读.tsv"),encoding="U8"):
 			line = line.strip('\n')
-			fs = [i.strip('" ') for i in line.split('\t')]
+			fs = [i.strip() for i in line.split('\t')]
 			if not fs:
 				continue
 			if fs[0].startswith("#"):
