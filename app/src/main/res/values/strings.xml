@@ -415,9 +415,9 @@
     <string name="pref_key_font">FONT</string>
     <string name="book_format">【%s】</string>
     <string name="pref_key_shape">KEY_SHAPE</string>
-    <string name="hz_input">漢字輸入</string>
-    <string name="yin_prompt">讀音提示</string>
-    <string name="yin_input">讀音輸入</string>
+    <string name="hz_input">系統輸入法</string>
+    <string name="yin_prompt">提示讀音</string>
+    <string name="yin_input">讀音</string>
     <string name="hz_range">漢字範圍</string>
     <string name="hz_option">漢字選項</string>
     <string name="pref_key_hz_option">KEY_HZ_OPTION</string>
@@ -467,6 +467,8 @@
     <string name="hz_only">僅漢字</string>
     <string name="pref_key_pfg">KEY_PFG</string>
     <string name="pref_key_area_level">KEY_AREA_LEVEL</string>
+    <string name="yin_code">音碼</string>
+    <string name="shape_code">形碼</string>
     <string-array name="entries_area_level">
         <item>不限</item>
         <item>省會</item>

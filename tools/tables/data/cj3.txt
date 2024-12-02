@@ -13593,6 +13593,7 @@ nmlpc  骥
 nmlw   鲉
 nmlws  骋
 nmm    彐
+nmm    𫜹
 nmmbb  骊
 nmmbb  鲡
 nmmbc  頙
@@ -18569,6 +18570,7 @@ slwv   屢
 sly    卧
 sm     刁
 sm     彐
+sm     𫜹
 sm     匞
 smamo  翨
 smbjj  翬
@@ -24771,6 +24773,7 @@ xskp   忍
 xslmb  頣
 xslmy  屝
 xsm    彐
+xsm    𫜹
 xsmyt  翋
 xsrbu  覠
 xsrha  鶋

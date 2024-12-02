@@ -357,7 +357,11 @@ class 表:
 	
 	@property
 	def unknownCount(self):
-		return len(self.d.get("□", []))
+		n = len(self.d.get("□", []))
+		if self.isLang():
+			return n
+		else:
+			return 1 if n > 0 else 0
 
 	@property
 	def sydCount(self):
@@ -443,8 +447,8 @@ class 表:
 			for line in open(spath,encoding="U8"):
 				lineno += 1
 				if lineno <= skip: continue
-				if line.startswith('#') or line.startswith('"#') : continue
 				line = self.format(line)
+				if line.startswith('#') : continue
 				fs = [i.strip('" \t') for i in line.strip('\n').split(sep)]
 				entries = self.parse(fs)
 				if not entries: continue

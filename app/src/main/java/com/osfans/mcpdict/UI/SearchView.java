@@ -2,16 +2,15 @@ package com.osfans.mcpdict.UI;
 
 import android.content.Context;
 import android.text.Editable;
-import android.text.SpannableString;
-import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageButton;
 import android.widget.MultiAutoCompleteTextView;
 
 import androidx.appcompat.widget.PopupMenu;
@@ -23,6 +22,9 @@ import com.osfans.mcpdict.Orth.HanZi;
 import com.osfans.mcpdict.Pref;
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.Util.FontUtil;
+import com.osfans.mcpdict.Utils;
+
+import java.util.Objects;
 
 public class SearchView extends ConstraintLayout {
 
@@ -89,6 +91,7 @@ public class SearchView extends ConstraintLayout {
 
     private final MultiAutoCompleteTextView editText;
     private final View clearButton, searchButton;
+    private final ImageButton buttonKeyboard;
 
     public SearchView(Context context) {
         this(context, null);
@@ -126,7 +129,9 @@ public class SearchView extends ConstraintLayout {
         clearButton.setVisibility(View.GONE);
         clearButton.setOnClickListener(v -> editText.setText(""));
 
-        findViewById(R.id.button_keyboard).setOnClickListener(v -> {
+        buttonKeyboard = findViewById(R.id.button_keyboard);
+        updateButtonKeyboard();
+        buttonKeyboard.setOnClickListener(v -> {
             String[] columns = DB.getShapeColumns();
             if (columns == null) return;
             PopupMenu popup = new PopupMenu(context, v);
@@ -135,28 +140,69 @@ public class SearchView extends ConstraintLayout {
             int index = menu.size();
             int head = index;
             String shape = Pref.getShape();
+            String shape_code = Pref.getString(R.string.shape_code);
+            String yin_code = Pref.getString(R.string.yin_code);
             for (String col: columns) {
-                menu.add(0, index++, 0, col);
+                boolean isGray = col.contentEquals(shape_code) || col.contentEquals(yin_code);
+                MenuItem item = menu.add(isGray ? -1 : 0, index++, 0, col);
+                if (isGray) {
+                    item.setEnabled(false);
+                    item.setCheckable(false);
+                }
             }
             menu.setGroupCheckable(0, true, true);
-            if (DB.isHzInput()) menu.getItem(0).setChecked(true);
-            else if (DB.isYinPrompt()) menu.getItem(1).setChecked(true);
-            else if (DB.isYinInput()) menu.getItem(2).setChecked(true);
+            popup.setForceShowIcon(true);
+            boolean selected = false;
+            if (DB.isHzInput()) {
+                menu.getItem(0).setChecked(true);
+                selected = true;
+            }
+            else if (DB.isYinPrompt()) {
+                menu.getItem(1).setChecked(true);
+                selected = true;
+            }
             else {
                 for (int i = head; i < index; i++) {
                     if (shape.contentEquals(columns[i - head])) {
                         menu.getItem(i).setChecked(true);
+                        selected = true;
                         break;
                     }
                 }
             }
+            if (!selected) {
+                menu.getItem(0).setChecked(true);
+                Pref.putShape(Pref.getString(R.string.hz_input));
+            }
             popup.setOnMenuItemClickListener(item -> {
-                Pref.putShape(item.getTitle().toString());
+                String title = Objects.requireNonNull(item.getTitle()).toString();
+                Pref.putShape(title);
                 item.setChecked(true);
+                updateButtonKeyboard();
                 return true;
             });
             popup.show();
         });
+    }
+
+    public void updateButtonKeyboard() {
+        String shape = Pref.getShape();
+        if (shape.contentEquals(Pref.getString(R.string.hz_input))) {
+            buttonKeyboard.setImageResource(R.drawable.ic_keyboard);
+            return;
+        }
+        TextDrawable.IBuilder builder = TextDrawable.builder()
+                .beginConfig()
+                .withBorder(3)
+                .width(buttonKeyboard.getWidth())
+                .height(buttonKeyboard.getHeight())
+                .fontSize(editText.getTextSize() * 0.8f)
+                .textColor(Utils.obtainColor(getContext(), android.R.attr.colorControlNormal))
+                .endConfig()
+                .roundRect(5);
+        String label = shape.substring(0, 1);
+        if (shape.contentEquals(DB.HK)) label = shape.substring(1);
+        buttonKeyboard.setImageDrawable(builder.build(label, android.R.color.transparent));
     }
 
     public void setSearchButtonOnClickListener(final View.OnClickListener listener) {
