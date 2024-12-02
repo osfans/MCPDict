@@ -24,12 +24,12 @@
         android:hint="@string/search_hint"
         android:imeOptions="actionSearch"
         android:inputType="text"
-        android:paddingStart="@dimen/button_icon_size"
+        android:paddingStart="@dimen/padding_size"
         android:paddingEnd="@dimen/button_icon_size"
         android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_search"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_search"
+        app:layout_constraintStart_toEndOf="@id/button_keyboard"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -51,7 +51,7 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_keyboard"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@id/text_query"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

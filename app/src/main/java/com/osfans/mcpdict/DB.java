@@ -29,17 +29,21 @@ public class DB extends SQLiteAssetHelper {
     // Must be the same order as defined in the string array "search_as"
 
     public static final String HZ = "漢字";
-    public static final String BH = "總筆畫數";
-    public static final String BS = "部首餘筆";
+    private static final String BH = "總筆畫數";
+    private static final String BS = "部首餘筆";
     public static final String SW = "說文";
-    public static final String GYHZ = "匯纂";
-    public static final String KX = "康熙";
-    public static final String HD = "漢大";
-    public static final String ZX = "字形描述";
+    private static final String GYHZ = "匯纂";
+    private static final String KX = "康熙";
+    private static final String HD = "漢大";
+    private static final String ZX = "字形描述";
     private static final String LF = "兩分";
-    public static final String WBH = "五筆畫";
-    public static final String VA = "異體字";
-    public static final String FL = "分類";
+    private static final String BJJS = "部件檢索";
+    private static final String WB_ = "五筆";
+    private static final String CJ_ = "倉頡";
+    private static final String SR = "山人碼LTS";
+    private static final String WBH = "五筆畫";
+    private static final String VA = "異體字";
+    private static final String FL = "分類";
 
     public static final String MAP = " \uD83C\uDF0F ";
     public static final String IS_FAVORITE = "is_favorite";
@@ -64,8 +68,6 @@ public class DB extends SQLiteAssetHelper {
     public static final String JA_GO = "日語吳音";
     public static final String JA_KAN = "日語漢音";
     public static final String JA_OTHER = "日語其他";
-    public static final String WB_ = "五筆";
-    public static final String CJ_ = "倉頡";
 
     public static String FQ = null;
     public static String ORDER = null;
@@ -169,10 +171,14 @@ public class DB extends SQLiteAssetHelper {
         return selection;
     }
 
+    private static boolean isMatchBegins(String lang) {
+        return lang.startsWith(CJ_) || (lang.startsWith(WB_) && !lang.contentEquals(WBH)) || lang.contentEquals(SR);
+    }
+
     private static List<String> normInput(String lang, String input) {
         List<String> keywords = new ArrayList<>();
         if (lang.contentEquals(BS)) input = input.replace("-", "f");
-        else if (lang.startsWith(CJ_) || (lang.startsWith(WB_) && !lang.contentEquals(WBH))) input += "*";
+        else if (isMatchBegins(lang)) input += "*";
         else if (lang.contentEquals(KOR)) { // For Korean, put separators around all hangul
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < input.length(); i++) {
@@ -387,6 +393,8 @@ public class DB extends SQLiteAssetHelper {
         }
         DICTIONARY_COLUMNS = arrayList.toArray(new String[0]);
         arrayList.clear();
+        arrayList.add(Pref.getString(R.string.yin_code));
+        arrayList.add(Pref.getString(R.string.yin_input));
         arrayList.add(GY);
         arrayList.add(CMN);
         arrayList.add(HK);
@@ -394,6 +402,7 @@ public class DB extends SQLiteAssetHelper {
         arrayList.add(DGY);
         arrayList.add(KOR);
         arrayList.add(VI);
+        arrayList.add(Pref.getString(R.string.shape_code));
         arrayList.addAll(Arrays.asList(COLUMNS).subList(COL_FIRST_SHAPE, COL_LAST_SHAPE + 1));
         SHAPE_COLUMNS = arrayList.toArray(new String[0]);
     
@@ -849,6 +858,6 @@ public class DB extends SQLiteAssetHelper {
 
     public static boolean isHzInputCode() {
         String shape = Pref.getShape();
-        return isHzInput() || isYinPrompt() || shape.contentEquals(LF) || shape.contentEquals(ZX) || shape.contentEquals(BS);
+        return isHzInput() || isYinPrompt() || shape.contentEquals(BJJS) || shape.contentEquals(LF) || shape.contentEquals(ZX) || shape.contentEquals(BS);
     }
 }

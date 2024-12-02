@@ -421,6 +421,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         if (adapterProvince != null) refreshProvince();
         if (adapterDict != null) refreshDict();
         requireActivity().setTitle(Pref.getTitle());
+        searchView.updateButtonKeyboard();
         initialized = true;
     }
 
