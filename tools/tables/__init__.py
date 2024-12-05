@@ -1,15 +1,50 @@
 #!/usr/bin/env python3
 
+import datetime
 import os, re, json, glob
 from importlib import import_module
 import tables._詳情
-from tables._詳情 import t2s
 from pypinyin import pinyin, Style
 from collections import defaultdict
+from opencc import OpenCC
+
+SOURCE = "data"
+TARGET = "output"
+VARIANT_FILE = f"tables/{SOURCE}/正字.tsv"
 
 辭典 = ["漢字","說文","康熙","匯纂","漢大"]
 辭典數 = len(辭典)
 形碼 = ["異體字","字形變體","字形描述","部件檢索","兩分","總筆畫數","部首餘筆","五筆畫","五筆86版","五筆98版","五筆06版","倉頡三代","倉頡五代","倉頡六代","山人碼LTS","分類"]
+
+n2o_dict = {}
+
+for line in open("tables/data/mulcodechar.dt", encoding="U8"):
+	if not line or line[0] == "#": continue
+	fs = line.strip().split("-")
+	if len(fs) < 2: continue
+	n2o_dict[fs[0]] = fs[1]
+
+opencc_t2s = OpenCC("t2s.json")
+
+def n2o(s):
+	if not s: return ""
+	t = ""
+	for i in s:
+		t += n2o_dict.get(i, i)
+	return t
+
+def o2n(s):
+	if not s: return ""
+	t = ""
+	for i in s:
+		t += n2o_dict.get(i, i)
+	return t
+
+def t2s(s, level=2):
+	s = o2n(s)
+	if level == 1:
+		return s
+	return opencc_t2s.convert(s)
 
 def hex2chr(uni):
 	"把unicode轉換成漢字"
@@ -20,14 +55,43 @@ def cjkorder(s):
 	n = ord(s)
 	return n + 0x10000 if n < 0x4E00 else n
 
+def isCompatible(c):
+	n = ord(c)
+	return (0xF900 <= n < 0xFB00 and c not in '﨎﨏﨑﨓﨔﨟﨡﨣﨤﨧﨨﨩' or 0x2F800 <= n < 0x2FA20)
+
 def isHZ(c):
 	c = c.strip()
 	if len(c) != 1: return False
 	n = ord(c)
-	return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<=0x323AF
+	return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<=0x323AF and not isCompatible(c)
 
 def get_pinyin(word):
 	return pinyin(t2s(word), style=Style.TONE3, heteronym=False) if isHZ(word[0]) else [[word.lower()]]
+
+def getSTVariants(level=2):
+	d = dict()
+	for line in open(VARIANT_FILE,encoding="U8"):
+		if line.startswith("#"): continue
+		fs = line.strip().split("\t")
+		if level == 1 and "#" in line:
+			continue
+		fs[1] = fs[1].split("#")[0].strip()
+		if " " not in fs[1]:
+			d[fs[0]] = fs[1]
+	return d
+
+normVariants = getSTVariants(1)
+stVariants = getSTVariants(2)
+
+def s2t(hzs, level=1):
+	t = ""
+	for hz in hzs:
+		if level == 1:
+			hz = normVariants.get(hz, hz)
+		else:
+			hz = stVariants.get(hz, hz)
+		t += hz
+	return t
 
 def addAllFq(d, fq, order,ignorePian = False):
 	if order is None or fq is None: return
@@ -156,10 +220,10 @@ def getLangs(dicts, argv, 省=None):
 		lang.info["網站"] = lang.site
 		lang.info["網址"] = lang.url
 		lang_t = lang.info["語言"]
-		lang_s = t2s(lang.info["語言"], True)
+		lang_s = t2s(lang.info["語言"], 2)
 		if lang_s not in lang_t:
 			lang_t += f",{lang_s}"
-		lang_s = t2s(lang.info["語言"], False)
+		lang_s = t2s(lang.info["語言"], 1)
 		if lang_s not in lang_t:
 			lang_t += f",{lang_s}"
 		lang.info["語言索引"] = lang_t
@@ -170,7 +234,7 @@ def getLangs(dicts, argv, 省=None):
 	for i in keys:
 		if i not in hz.info: hz.info[i] = None
 	hz.info["字數"] = len(dicts)
-	hz.info["說明"] = "字數：%d<br>語言數：%d<br><br>%s"%(len(dicts), count, hz.note)
+	hz.info["說明"] = "語言數：%d<br><br>%s"%(count, hz.note)
 	省表 = sorted(省.keys(), key=get_pinyin)
 	if "海外" in 省表:
 		省表.remove("海外")
@@ -181,5 +245,6 @@ def getLangs(dicts, argv, 省=None):
 	hz.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:types[0][x]))
 	hz.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
 	hz.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:types[2][x]))
+	hz.info["版本"] = datetime.datetime.now().strftime("%Y-%m-%d")
 	print("語言數", count)
 	return langs

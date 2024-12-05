@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from tables._表 import 表 as _表, getCompatibilityVariants
+from tables._表 import 表 as _表
 from collections import defaultdict
 import re
 
@@ -14,13 +14,12 @@ class 表(_表):
 		d = defaultdict(list)
 		hd = defaultdict(dict)
 		numbers="❶❷❸❹❺❻❼❽❾❿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿"
-		kCompatibilityVariants = getCompatibilityVariants()
 		for line in open(self.spath,encoding="U8"):
 			fs = line.strip('\n').split('\t')
 			if len(fs[0]) <= 2:
 				hzs,py,js,page = fs[:4]
 				hz = hzs[0]
-				if hz in kCompatibilityVariants and js.startswith("同"): continue
+				if hz in self.kCompatibilityVariants and js.startswith("同"): continue
 				if page not in hd[hz]:
 					hd[hz][page] = dict()
 				if py == "None":

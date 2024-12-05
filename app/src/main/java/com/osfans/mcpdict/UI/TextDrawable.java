@@ -82,6 +82,7 @@ public class TextDrawable extends ShapeDrawable {
     }
 
     private int getDarkerShade(int color) {
+        if (color == android.R.color.transparent) color = textPaint.getColor();
         return Color.rgb((int)(SHADE_FACTOR * Color.red(color)),
                 (int)(SHADE_FACTOR * Color.green(color)),
                 (int)(SHADE_FACTOR * Color.blue(color)));

@@ -1,6 +1,7 @@
 package com.osfans.mcpdict.UI;
 
 import android.content.Context;
+import android.os.Build;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -9,10 +10,12 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.accessibility.AccessibilityEvent;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
 import android.widget.MultiAutoCompleteTextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -27,67 +30,6 @@ import com.osfans.mcpdict.Utils;
 import java.util.Objects;
 
 public class SearchView extends ConstraintLayout {
-
-    public static class NullTokenizer implements MultiAutoCompleteTextView.Tokenizer {
-
-        private boolean isEnd(int codePoint) {
-            if (DB.isHzInputCode()) return true;
-            return !HanZi.isHz(codePoint);
-        }
-
-        public int findTokenStart(CharSequence text, int cursor) {
-            if (DB.isHzInput()) return cursor;
-            int i = cursor;
-            boolean isHz = DB.isYinPrompt();
-            if (isHz) {
-                if (i > 1) {
-                    int codePoint = Character.codePointBefore(text, i);
-                    i -= Character.charCount(codePoint);
-                } else {
-                    i = 0;
-                }
-            }
-            else {
-                while (i > 0) {
-                    int codePoint = Character.codePointAt(text, i - 1);
-                    int n = Character.charCount(codePoint);
-                    if (isEnd(codePoint)) {
-                        i -= n;
-                    }
-                    else {
-                        i += n - 1;
-                        break;
-                    }
-                }
-            }
-            if (i < 0) i = 0;
-            while (i < cursor && text.charAt(i) == ' ') {
-                i++;
-            }
-            return i;
-        }
-
-        public int findTokenEnd(CharSequence text, int cursor) {
-            if (DB.isHzInput()) return cursor;
-            int i = cursor;
-            int len = text.length();
-
-            while (i < len) {
-                int codePoint = Character.codePointAt(text, i);
-                if (isEnd(codePoint)) {
-                    return i;
-                } else {
-                    i += Character.charCount(codePoint);
-                }
-            }
-
-            return len;
-        }
-
-        public CharSequence terminateToken(CharSequence text) {
-            return text;
-        }
-    }
 
     private final MultiAutoCompleteTextView editText;
     private final View clearButton, searchButton;
@@ -117,7 +59,7 @@ public class SearchView extends ConstraintLayout {
                 clearButton.setVisibility(TextUtils.isEmpty(s) ? View.GONE : View.VISIBLE);
             }
         });
-        editText.setTokenizer(new NullTokenizer());
+        editText.setTokenizer(new HanZi.Tokenizer());
         editText.setAdapter(new HzAdapter(context));
 
         // Invoke the search button when user hits Enter
@@ -125,6 +67,21 @@ public class SearchView extends ConstraintLayout {
             searchButton.performClick();
             return true;
         });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            editText.setAccessibilityDelegate(new AccessibilityDelegate() {
+                @Override
+                public void sendAccessibilityEvent(@NonNull View host, int eventType) {
+                    super.sendAccessibilityEvent(host, eventType);
+                    if (eventType == AccessibilityEvent.TYPE_VIEW_TEXT_SELECTION_CHANGED) {
+                        editText.refreshAutoCompleteResults();
+                    }
+                }
+            });
+            editText.setOnFocusChangeListener((v, hasFocus) -> {
+                if (hasFocus) editText.refreshAutoCompleteResults();
+            });
+        }
 
         clearButton.setVisibility(View.GONE);
         clearButton.setOnClickListener(v -> editText.setText(""));
@@ -187,7 +144,7 @@ public class SearchView extends ConstraintLayout {
 
     public void updateButtonKeyboard() {
         String shape = Pref.getShape();
-        if (shape.contentEquals(Pref.getString(R.string.hz_input))) {
+        if (TextUtils.isEmpty(shape) || shape.contentEquals(Pref.getString(R.string.hz_input))) {
             buttonKeyboard.setImageResource(R.drawable.ic_keyboard);
             return;
         }
@@ -197,7 +154,7 @@ public class SearchView extends ConstraintLayout {
                 .width(buttonKeyboard.getWidth())
                 .height(buttonKeyboard.getHeight())
                 .fontSize(editText.getTextSize() * 0.8f)
-                .textColor(Utils.obtainColor(getContext(), android.R.attr.colorControlNormal))
+                .textColor(Utils.obtainColor(getContext(), android.R.attr.textColorPrimary))
                 .endConfig()
                 .roundRect(5);
         String label = shape.substring(0, 1);

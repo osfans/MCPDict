@@ -273,7 +273,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
         // Get a reference to the SearchResultFragment
         fragmentResult = (ResultFragment) getChildFragmentManager().findFragmentById(R.id.fragment_search_result);
-        refreshAdapter();
         View.OnTouchListener listener = new View.OnTouchListener() {
             private final GestureDetector gestureDetector = new GestureDetector(requireActivity(), new GestureDetector.SimpleOnGestureListener() {
                 @Override
@@ -411,6 +410,12 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         Pref.putInput(query);
         refreshSearchLang();
         refresh();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        refreshAdapter();
     }
 
     public void refreshAdapter() {

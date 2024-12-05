@@ -372,19 +372,23 @@ public class ResultFragment extends Fragment {
                   }
                   @font-face {
                     font-family: p0;
-                    src: url('file:///android_res/font/p0.otf')format('opentype');
+                    src: url('file:///android_res/font/p0.otf') format('opentype');
                   }
                   @font-face {
                     font-family: p2;
-                    src: url('file:///android_res/font/p2.otf')format('opentype');
+                    src: url('file:///android_res/font/p2.otf') format('opentype');
                   }
                   @font-face {
                     font-family: p3;
-                    src: url('file:///android_res/font/p3.otf')format('opentype');
+                    src: url('file:///android_res/font/p3.otf') format('opentype');
                   }
                   @font-face {
                     font-family: pua;
                     src: url('file:///android_res/font/pua.ttf');
+                  }
+                  @font-face {
+                    font-family: nyushu;
+                    src: url('file:///android_res/font/nyushu.ttf');
                   }
                   details summary::-webkit-details-marker {display: none}
                   details summary::-moz-list-bullet {font-size: 0}
@@ -412,10 +416,10 @@ public class ResultFragment extends Fragment {
         if (!feat.isEmpty()) sb.append(String.format("font-feature-settings: %s;\n", feat));
         sb.append("      font-family: ");
         if (FontUtil.fontExFirst()) {
-            sb.append(String.format("p0, p2, p3, pua, %s; }\n", FontUtil.getDefaultFont()));
+            sb.append(String.format("nyushu, p0, p2, p3, pua, %s; }\n", FontUtil.getDefaultFont()));
         } else {
             sb.append(FontUtil.useFontTone() ? "tone," : "ipa,");
-            sb.append(String.format("%s, p0, p2, p3, pua; }\n", FontUtil.getDefaultFont()));
+            sb.append(String.format("%s, nyushu, p0, p2, p3, pua; }\n", FontUtil.getDefaultFont()));
         }
         sb.append("""
                               .ipa {
@@ -433,7 +437,7 @@ public class ResultFragment extends Fragment {
                               }
                               .ivs {
                                 font-size: 1.8em;
-                                font-family: p0, p2, p3, pua;
+                                font-family: nyushu, p0, p2, p3, pua;
                               }
                               .y {
                                  color: #1E90FF;

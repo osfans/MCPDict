@@ -2,7 +2,7 @@
 
 import json, os, re
 from openpyxl import load_workbook
-from opencc import OpenCC
+from .__init__ import n2o, s2t
 
 curdir = os.path.dirname(__file__)
 spath = os.path.join(curdir, "..", "漢字音典字表檔案（長期更新）.xlsx")
@@ -12,46 +12,6 @@ FeatureCollection = {
   "type": "FeatureCollection",
   "features": []
 }
-
-n2o_dict = {}
-
-for line in open("tables/data/mulcodechar.dt", encoding="U8"):
-	if not line or line[0] == "#": continue
-	fs = line.strip().split("-")
-	if len(fs) < 2: continue
-	n2o_dict[fs[0]] = fs[1]
-
-opencc_s2t = OpenCC("s2t.json")
-opencc_t2s = OpenCC("t2s.json")
-
-def s2t(s):
-	if not s: return ""
-	if type(s) is not str: return s
-	s = opencc_s2t.convert(s)\
-		.replace("樑", "梁")\
-		.replace("嶽", "岳")\
-		.replace("慄", "栗")
-	for n, o in n2o_dict.items():
-		s = s.replace(n, o)
-	return s
-
-def n2o(s):
-	if not s: return ""
-	for n, o in n2o_dict.items():
-		s = s.replace(n, o)
-	return s
-
-def o2n(s):
-	if not s: return ""
-	for n, o in n2o_dict.items():
-		s = s.replace(o, n)
-	return s
-
-def t2s(s, prepare = False):
-	s = o2n(s)
-	if prepare:
-		return s
-	return opencc_t2s.convert(s)
 
 def outdated():
 	if not os.path.exists(tpath): return True
@@ -149,8 +109,8 @@ def load(省):
 		文件名 = fs["文件名"]
 		if not 文件名 or 文件名.startswith("#"):
 			continue
-		語言 = n2o(fs["語言"])
-		簡稱 = n2o(fs["簡稱"])
+		語言 = n2o(s2t(fs["語言"]))
+		簡稱 = n2o(s2t(fs["簡稱"]))
 		音系 = fs["音系"]
 		說明 = fs["說明"]
 		繁簡 = fs["繁簡"]
@@ -177,11 +137,10 @@ def load(省):
 				colors[1] += f",{subcolor}"
 		colors = [re.sub(r"(\w+)", "#\\1", i) for i in colors]
 
-		types = [fs[i] for i in ("地圖集二分區", "音典分區", "下拉1，折疊分区")]
+		types = [s2t(fs[i]) for i in ("地圖集二分區", "音典分區", "下拉1，折疊分区")]
 		if types[2] and fs["下拉2"]: types[2] += "," + fs["下拉2"]
-		types[2] = s2t(types[2])
 
-		places = [fs[i] if fs[i] else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
+		places = [s2t(fs[i]) if fs[i] else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
 		if 簡稱 == "普通話" and 省:
 			places = ["", "", "", "", ""]
 		elif 省 and places[0] and places[0] not in 省:
@@ -220,7 +179,7 @@ def load(省):
 			"陳邡顏色":colors[2],
 			"陳邡分區":types[2],
 			"行政區級別": 行政區級別,
-			"省":s2t(places[0]).strip("*"),
+			"省":places[0].strip("*"),
 			"市":places[1],
 			"縣":places[2],
 			"鎮":places[3],

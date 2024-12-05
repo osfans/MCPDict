@@ -155,7 +155,7 @@ public class DB extends SQLiteAssetHelper {
         return columns.toArray(new String[0]);
     }
 
-    private static String getCharsetSelect(boolean match) {
+    private static String getCharsetSelect(int matchClause) {
         // Get options and settings
         int charset = Pref.getInt(R.string.pref_key_charset);
         if (charset == 0) return "";
@@ -163,8 +163,10 @@ public class DB extends SQLiteAssetHelper {
         String selection;
         if (charset <= 5) {
             selection = String.format(" AND `%s` IS NOT NULL", value);
-        } else if (match) {
+        } else if (matchClause == 1) {
             selection = String.format(" AND `%s` MATCH '%s'", FL, value);
+        } else if (matchClause == 2) {
+            selection = String.format(" %s:%s", FL, value);
         } else {
             selection = String.format(" AND `%s` LIKE '%%%s%%'", FL, value);
         }
@@ -305,7 +307,7 @@ public class DB extends SQLiteAssetHelper {
         String[] projection = {"v.*", "_id",
                    "v.漢字 AS `漢字`", "variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
-        String selection = "u._id = v.rowid" + getCharsetSelect(true);
+        String selection = "u._id = v.rowid" + getCharsetSelect(1);
         query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", "0,100");
 
         // Search
@@ -334,22 +336,35 @@ public class DB extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         String[] projection = {HZ, lang, "rowid as _id"};
-        String charset = getCharsetSelect(false);
-        String selection;
+        String selection = "";
         String field = isYinPrompt ? HZ : lang;
-        if (TextUtils.isEmpty(charset)) {
-            selection = String.format("%s MATCH ?", field);
-        } else if (charset.contains("AND")) {
-            selection = String.format("%s MATCH ?%s", field, charset);
-        } else  {
-            selection = String.format("%s MATCH \"%s:?%s\"", TABLE_NAME, field, charset);
+        if (isYinPrompt) {
+            String charset = getCharsetSelect(2);
+            String va = "";
+            if (Pref.getBool(R.string.pref_key_allow_variants, true)) {
+                va = " OR " + VA + ":"+ input;
+            }
+            if (charset.contains("AND")) {
+                selection = String.format("%s MATCH \"%s:%s %s\" %s", TABLE_NAME, field, input, va, charset);
+            } else  {
+                selection = String.format("%s MATCH \"%s:%s %s%s\"", TABLE_NAME, field, input, va, charset);
+            }
+            selection += String.format(" AND %s is not null", lang);
+            String query = qb.buildQuery(projection, selection, null, null, lang, "0,100");
+            return db.rawQuery(query, null);
+        } else {
+            String charset = getCharsetSelect(0);
+            if (TextUtils.isEmpty(charset)) {
+                selection = String.format("%s MATCH ?", field);
+            } else if (charset.contains("AND")) {
+                selection = String.format("%s MATCH ? %s", field, charset);
+            }
+            String query = qb.buildQuery(projection, selection, null, null, lang, "0,100");
+            List<String> keywords = normInput(field, input);
+            if (keywords.isEmpty()) return null;
+            String arg = String.join(" OR ", keywords);
+            return db.rawQuery(query, new String[]{arg});
         }
-        if (isYinPrompt) selection += String.format(" AND %s is not null", lang);
-        String query = qb.buildQuery(projection, selection, null, null, lang, "0,100");
-        List<String> keywords = normInput(lang, input);
-        if (keywords.isEmpty()) return null;
-        String arg = String.join(" OR ", keywords);
-        return db.rawQuery(query, new String[]{arg});
     }
 
     public static void initFQ() {
@@ -684,7 +699,13 @@ public class DB extends SQLiteAssetHelper {
         if (TextUtils.isEmpty(language) || Pref.getFilter() == FILTER.HZ) language = HZ;
         String intro = TextUtils.isEmpty(language) ? "" : getFieldByLanguage(language, "說明").replace("\n", "<br>");
         if (language.contentEquals(HZ)) {
-            intro = String.format(Locale.getDefault(), "%s%s<br>%s", Pref.getString(R.string.version), BuildConfig.VERSION_NAME, intro);
+            StringBuilder sb = new StringBuilder();
+            String[] fields = new String[] {"版本","字數"};
+            for (String field: fields) {
+                sb.append(String.format(Locale.getDefault(), "%s：%s<br>", field, getFieldByLanguage(language, field)));
+            }
+            sb.append(intro);
+            intro = sb.toString();
         } else {
             StringBuilder sb = new StringBuilder();
             sb.append(String.format(Locale.getDefault(), "%s%s<br>", Pref.getString(R.string.name), language));

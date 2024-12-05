@@ -1,6 +1,9 @@
 package com.osfans.mcpdict.Orth;
 
 import android.text.TextUtils;
+import android.widget.MultiAutoCompleteTextView;
+
+import com.osfans.mcpdict.DB;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -117,5 +120,66 @@ public class HanZi {
         else if (unicode >= 0x2EBF0 && unicode <= 0x2EE5F) ext = "I";
         if (!TextUtils.isEmpty(ext)) ext = "擴" + ext;
         return ext;
+    }
+
+    public static class Tokenizer implements MultiAutoCompleteTextView.Tokenizer {
+
+        private boolean isEnd(int codePoint) {
+            if (DB.isHzInputCode()) return true;
+            return !isHz(codePoint);
+        }
+
+        public int findTokenStart(CharSequence text, int cursor) {
+            if (DB.isHzInput()) return cursor;
+            int i = cursor;
+            boolean isHz = DB.isYinPrompt();
+            if (isHz) {
+                if (i > 1) {
+                    int codePoint = Character.codePointBefore(text, i);
+                    i -= Character.charCount(codePoint);
+                } else {
+                    i = 0;
+                }
+            }
+            else {
+                while (i > 0) {
+                    int codePoint = Character.codePointAt(text, i - 1);
+                    int n = Character.charCount(codePoint);
+                    if (isEnd(codePoint)) {
+                        i -= n;
+                    }
+                    else {
+                        i += n - 1;
+                        break;
+                    }
+                }
+            }
+            if (i < 0) i = 0;
+            while (i < cursor && text.charAt(i) == ' ') {
+                i++;
+            }
+            return i;
+        }
+
+        public int findTokenEnd(CharSequence text, int cursor) {
+            if (DB.isHzInput()) return cursor;
+            int i = cursor;
+            int len = text.length();
+
+            while (i < len) {
+                int codePoint = Character.codePointAt(text, i);
+                if (isEnd(codePoint)) {
+                    return i;
+                } else {
+                    i += Character.charCount(codePoint);
+                }
+            }
+
+            return len;
+        }
+
+        public CharSequence terminateToken(CharSequence text) {
+            return text;
+        }
     }
 }
