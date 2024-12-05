@@ -98,6 +98,11 @@ class 表(_表):
 			line = self.normS(line, "{\\1}")
 		elif name in ("通道菁蕪洲",):
 			line = re.sub("([&])(?!{)","{西官借詞}",line).replace("&{","{(西官借詞)")
+		elif name in ("泰興",):
+			line = line.lstrip("q")
+		elif name in ("壺關樹掌"):
+			line = line.lstrip("q").replace("·", "0")
+			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps.get(x[1], 0)}]", line)
 		elif name in ("道縣梅花",):
 			#!西官陰平藉詞@西官陽平藉詞$西官上聲藉詞%西官去聲藉詞
 			line = re.sub("(!)(?!{)","{西官陰平借詞}",line)
@@ -132,7 +137,7 @@ class 表(_表):
 			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
 		elif name in ("建湖卞港",):
 			line = line.replace("[2]", "[23-2]")
-			line = re.sub(r"\[([\d\-]+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+			line = re.sub(r"\[([\d\-]+)\]", lambda x:f"[{self.toneMaps.get(x[1], "0")}]", line)
 		elif name in ("慈利",):
 			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
 			line = line.replace("/", "")

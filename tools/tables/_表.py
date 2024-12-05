@@ -15,10 +15,6 @@ import regex
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 
-SOURCE = "data"
-TARGET = "output"
-VARIANT_FILE = f"tables/{SOURCE}/正字.tsv"
-
 YDS = {"+":"又", "-":"白", "*":"俗", "/":"書","\\":"語","=":"文","?":"存疑", "@": "訓"}
 def getYD(py):
 	return YDS.get(py[-1], "")
@@ -28,18 +24,6 @@ def getCompatibilityVariants():
 	for line in open("../app/src/main/res/raw/orthography_hz_compatibility.txt",encoding="U8"):
 		hz, val = line.rstrip()
 		d[hz] = val
-	return d
-
-def getSTVariants(level=2):
-	d = dict()
-	for line in open(VARIANT_FILE,encoding="U8"):
-		if line.startswith("#"): continue
-		fs = line.strip().split("\t")
-		if level == 1 and "#" in line:
-			continue
-		fs[1] = fs[1].split("#")[0].strip()
-		if " " not in fs[1]:
-			d[fs[0]] = fs[1]
 	return d
 
 def getTsvName(xls):
@@ -172,8 +156,6 @@ class 表:
 	ybTrimSpace = True
 	kCompatibilityVariants = getCompatibilityVariants()
 	simplified = 1
-	normVariants = getSTVariants(1)
-	stVariants = getSTVariants(2)
 	isYb = True
 	syds = defaultdict(set)
 	d = defaultdict(list)
@@ -322,10 +304,7 @@ class 表:
 			pys = d[hz]
 			hz = self.kCompatibilityVariants.get(hz, hz)
 			if self.isDialect() and self.simplified:
-				if self.simplified == 1:
-					hz = self.normVariants.get(hz, hz)
-				else:
-					hz = self.stVariants.get(hz, hz)
+				hz = s2t(hz, self.simplified)
 			if not isHZ(hz):
 				if self.isDialect():
 					print(f"\t\t\t【{hz}】不是漢字，讀音爲：", ",".join([i.strip() for i in pys]))
