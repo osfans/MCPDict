@@ -29,8 +29,6 @@ class 表(_表):
 		elif name in ("遂川",):
 			if "[" in line:
 				line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
-			else:
-				line = "#" + line
 		elif name in ("巢湖",):
 			line = line.replace("ø","Ø").replace("（0）","[0]")
 			line = self.normS(line, "{\\1}")

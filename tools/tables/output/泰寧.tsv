@@ -20,7 +20,6 @@
 □	tsai1	拳击
 □	sai1	用指甲抓
 □	pʰuai1	漂走
-□	suai1	瘦
 □	au1	委曲
 □	kʰan1	器皿未装满
 □	kuan1	旁边
@@ -31,6 +30,7 @@
 □	miaŋ1	倒下
 □	uaŋ1	双掌持物
 □	sa2	男子～naŋ2 tsɿ sa2：男人；阿娘～aŋ1 nioŋ2 sa2：女人
+□	næ2	～婆：老鹰
 □	pʰo2	鼓起
 □	sio2	～货：劣货
 □	kʰei2	冻结
@@ -77,7 +77,6 @@
 □	tuaŋ3	手覆物
 □	luaŋ3	搂
 □	tuŋ3	拳击
-□	suŋ3	推
 □	pʰia5	打巴掌
 □	tia5	歪歪扭扭地走
 □	hia5	设置障碍
@@ -257,7 +256,7 @@
 令	lən6	
 以	i3	
 仰	nioŋ3	
-件	kʰien5	
+件	kʰien6	
 价	ka5	
 任	lin6	
 份	xun6	
@@ -333,7 +332,7 @@
 俗	siu1	
 保	po3	
 信	sən5	
-儉	kʰien5	
+儉	kʰien6	
 修	siu1	
 俱	kʰy6	
 俺	an1	
@@ -356,7 +355,7 @@
 偏	pʰien1	
 做	tso5	
 停	hin2	
-健	kʰien5	
+健	kʰien6	
 偶	nei3	
 偷	hei1	
 傀	kʰui3	
@@ -634,7 +633,7 @@
 吠	pʰui6-	
 吠	xui6=	
 否	pʰei3	
-含	xuŋ3-	
+含	xuŋ2-	
 含	xaŋ2	
 听	hiaŋ1-	
 听	hin5	任～
@@ -1263,7 +1262,7 @@
 惊	kin1=	
 惜	sei3	
 惠	xui6	
-懼	kʰy1	
+懼	kʰy6	
 慘	tʰaŋ3	
 慚	tʰaŋ3	
 慣	kuan5	
@@ -1371,7 +1370,7 @@
 拍	pʰa3-	
 拍	pʰoi3=	
 拐	kuai3	
-拒	kʰy1	
+拒	kʰy6	
 拓	tsiau1	
 拔	pæ1	
 拖	hai1-	
@@ -1907,7 +1906,7 @@
 洞	hŋ6	
 津	tsən1	
 洩	sie5	
-洪	xuŋ3	
+洪	xuŋ2	
 洲	tsiu1	
 活	xua1	
 派	pʰai5	
@@ -2301,7 +2300,6 @@
 瞧	tʰiau6	
 瞳	hŋ2	
 瞻	tsien1	
-瞿	kʰy1	
 瞿	kʰy6	
 矛	mau2	
 矢	si3	
@@ -2552,7 +2550,7 @@
 緻	tei5	
 纂	tsuan6	
 糾	kiu1	
-紅	xuŋ3	
+紅	xuŋ2	
 約	io3	
 級	ki3	
 紈	uan2	
@@ -2613,7 +2611,7 @@
 縛	pʰio1-	
 縛	xuo6=	
 縫	xuŋ6	～隙
-縫	xuŋ3=	
+縫	xuŋ2=	
 纏	tsʰan2-	
 纏	tsʰien2=	
 纓	in1	
@@ -2924,7 +2922,7 @@
 虫	hŋ5-	
 虫	tsʰuŋ2=	
 虱	soi6	
-虹	xuŋ3	
+虹	xuŋ2	
 雖	sui1	
 蝦	xa2	～蟆
 蝦	xa5	鱼～
@@ -3189,7 +3187,7 @@
 跋	pʰua3=	后～
 跌	tie3	
 跑	pʰau3	
-距	kʰy1	
+距	kʰy6	
 跟	køn1	
 跨	kʰua5	
 跪	kʰui6	
@@ -3417,6 +3415,7 @@
 鏞	yuŋ2	
 鏡	kiaŋ5-	
 鏡	kin5=	
+镢	kio3	～头：锄头
 鐲	tsʰo1	
 镰	lien2	
 長	huaŋ2-	
@@ -3655,7 +3654,7 @@
 鸕	lu1	
 鴨	a3	
 鴦	ioŋ1	
-鴻	xuŋ3	
+鴻	xuŋ2	
 鵑	køn1	
 鵝	no2	
 鷂	iau6	
@@ -3686,3 +3685,5 @@
 龍	lyuŋ2	
 龜	kui1	
 𢫦	ma1	打
+𢱤	suŋ3	推
+𤸬	suai1	瘦

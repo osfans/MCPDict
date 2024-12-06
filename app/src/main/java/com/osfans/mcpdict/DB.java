@@ -85,11 +85,8 @@ public class DB extends SQLiteAssetHelper {
     private static String[] SEARCH_COLUMNS = null;
 
     public static int COL_HZ;
-    public static int COL_SW;
-    public static int COL_KX;
-    public static int COL_GYHZ;
-    public static int COL_HD;
-    public static int COL_ZX;
+    public static int COL_SW, COL_KX, COL_GYHZ, COL_HD;
+    public static int COL_ZX, COL_BJJS;
     public static int COL_VA;
     public static int COL_FIRST_DICT, COL_LAST_DICT;
     public static int COL_FIRST_LANG, COL_LAST_LANG;
@@ -389,6 +386,7 @@ public class DB extends SQLiteAssetHelper {
         COL_HZ = getColumnIndex(HZ);
         COL_SW = getColumnIndex(SW);
         COL_ZX = getColumnIndex(ZX);
+        COL_BJJS = getColumnIndex(BJJS);
         COL_VA = getColumnIndex(VA);
         COL_HD = getColumnIndex(HD);
         COL_GYHZ = getColumnIndex(GYHZ);
@@ -845,7 +843,8 @@ public class DB extends SQLiteAssetHelper {
             .replace("U", "統")
             .replace("S", "大")
             .replace("B", "英")
-            .replace("2003", "UCS2003");
+            .replace("2003", "UCS2003")
+            .replace(" ", "");
         return s;
     }
 
@@ -857,7 +856,7 @@ public class DB extends SQLiteAssetHelper {
         for (int j = DB.COL_FIRST_INFO; j <= DB.COL_LAST_INFO; j++) {
             s = cursor.getString(j);
             if (TextUtils.isEmpty(s)) continue;
-            if (j == COL_ZX) s = formatIDS(s);
+            if (j == COL_ZX || j == COL_BJJS) s = formatIDS(s);
             s = s.replace(",", " ");
             sb.append(String.format("<p>【%s】%s</p>", getColumn(j), s));
         }

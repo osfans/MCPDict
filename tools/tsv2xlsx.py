@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-from openpyxl import load_workbook, Workbook
+from openpyxl import Workbook
 from openpyxl.cell.text import InlineFont 
 from openpyxl.cell.rich_text import TextBlock, CellRichText
 import sys, os
 
 fname = sys.argv[1]
+rich = True if len(sys.argv) > 2 else False
 tname = os.path.basename(fname.replace(".tsv", ".xlsx"))
 
 doc = Workbook()
@@ -12,14 +13,17 @@ for line in open(fname, encoding="utf-8"):
     line = line.strip()
     cells = []
     for j in line.split("\t"):
+        if not rich:
+            cells.append(j)
+            continue
         cell = CellRichText()
         last = ""
         sub = False
         for i in j:
-            if i == "(":
+            if i == "{":
                 sub = True
                 last = ""
-            elif i == ")":
+            elif i == "}":
                 font = InlineFont(vertAlign='subscript')
                 block = TextBlock(font, last)
                 cell.append(block)
