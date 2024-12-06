@@ -159,6 +159,15 @@ public class Orthography {
             }
             reader.close();
 
+            // Character BS compatibility variants
+            inputStream = resources.openRawResource(R.raw.orthography_bs_compatibility);
+            reader = new BufferedReader(new InputStreamReader(inputStream));
+            while ((line = reader.readLine()) != null) {
+                int c = line.codePointAt(0);
+                HanZi.bsCompatibility.put(c, line.codePoints().toArray()[1]);
+            }
+            reader.close();
+
             // Mandarin: Pinyin
             inputStream = resources.openRawResource(R.raw.orthography_pu_pinyin);
             reader = new BufferedReader(new InputStreamReader(inputStream));
