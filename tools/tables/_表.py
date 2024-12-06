@@ -200,7 +200,7 @@ class 表:
 		sname = g[0]
 		self._file = os.path.basename(sname)
 		if isXls(sname):
-			page = 1 if self.short in ("中山石岐", "通城") else 0
+			page = 1 if self.short in ("中山石岐", "通城", "蘇州") else 0
 			if self.short == "開平護龍": page = 3
 			xls2tsv(sname, page)
 			sname = getTsvName(sname)
@@ -288,6 +288,20 @@ class 表:
 		l = list()
 		for i in js:
 			if isHZ(i):
+				if last: l.append(last)
+				last = ""
+				l.append(i)
+			else:
+				last += i
+		if last: l.append(last)
+		return " ".join(l)
+
+	def normPart(self, js):
+		if not js: return ""
+		last = ""
+		l = list()
+		for i in js:
+			if len(i.encode()) > 1:
 				if last: l.append(last)
 				last = ""
 				l.append(i)
@@ -386,6 +400,8 @@ class 表:
 					sep = "▲" if str(self) == "匯纂" else "\t"
 					py2, js = py.split(sep, 1)
 					py = ("\n\n" if self.d[hz] else "") + py2 + sep + self.normJS(js)
+				elif self.short in ("部件檢索","字形描述"):
+					py = self.normPart(py)
 				py = py.replace("\t", "\n")
 			if py not in self.d[hz]:
 				self.d[hz].append(py)

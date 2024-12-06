@@ -19,7 +19,7 @@ font.name = 'Times New Roman'
 font.size = Pt(16)
 style.element.rPr.rFonts.set(qn('w:eastAsia'), '宋体')
 for line in open(fname, encoding="utf-8"):
-    line = line.strip()
+    line = line.rstrip()
     if line.startswith("#") or ("[" not in line):
         h = doc.add_heading("", level=0)
         run = h.add_run(line.lstrip("#"))

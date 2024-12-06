@@ -51,9 +51,9 @@ def hex2chr(uni):
 	if uni.startswith("U+"): uni = uni[2:]
 	return chr(int(uni, 16))
 
+hzorders = dict()
 def cjkorder(s):
-	n = ord(s)
-	return n + 0x10000 if n < 0x4E00 else n
+	return hzorders.get(s, [0x100, ord(s)])
 
 def isCompatible(c):
 	n = ord(c)

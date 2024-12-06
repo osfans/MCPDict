@@ -63,6 +63,9 @@ def normNames(s):
 	s = re.sub(r"([（\(])", " \\1", s)
 	return re.sub(" ?[、，,&] ?", ",", s)
 
+def normLangName(s):
+	return n2o(s2t(s.strip()))
+
 def normJW(s):
 	if s:
 		s = s.replace(" ", "").replace("，",",").strip()
@@ -109,8 +112,8 @@ def load(省):
 		文件名 = fs["文件名"]
 		if not 文件名 or 文件名.startswith("#"):
 			continue
-		語言 = n2o(s2t(fs["語言"]))
-		簡稱 = n2o(s2t(fs["簡稱"]))
+		語言 = normLangName(fs["語言"])
+		簡稱 = normLangName(fs["簡稱"])
 		音系 = fs["音系"]
 		說明 = fs["說明"]
 		繁簡 = fs["繁簡"]
