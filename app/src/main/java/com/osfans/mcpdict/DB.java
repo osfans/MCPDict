@@ -174,9 +174,34 @@ public class DB extends SQLiteAssetHelper {
         return lang.startsWith(CJ_) || (lang.startsWith(WB_) && !lang.contentEquals(WBH)) || lang.contentEquals(SR);
     }
 
+    private static String getInputParts(String input) {
+        List<String> l = new ArrayList<>();
+        List<String> r = new ArrayList<>();
+        int n = 1;
+        for (int unicode: input.codePoints().toArray()) {
+            String s = HanZi.getBSCompatibility(unicode);
+            n *= s.codePoints().count();
+            l.add(s); 
+        }
+        for (int i = 0; i < n; i++) {
+            StringBuilder sb = new StringBuilder();
+            int j = i;
+            for (String s: l) {
+                int[] a = s.codePoints().toArray();
+                int m = a.length;
+                sb.appendCodePoint(a[j % m]);
+                sb.append(" ");
+                j /= m;
+            }
+            r.add(sb.toString());
+        }
+        return String.join(" OR ", r);
+    }
+
     private static List<String> normInput(String lang, String input) {
         List<String> keywords = new ArrayList<>();
         if (lang.contentEquals(BS)) input = input.replace("-", "f");
+        else if (lang.contentEquals(BJJS) || lang.contentEquals(ZX)) input = getInputParts(input);
         else if (isMatchBegins(lang)) input += "*";
         else if (lang.contentEquals(KOR)) { // For Korean, put separators around all hangul
             StringBuilder sb = new StringBuilder();
@@ -339,11 +364,11 @@ public class DB extends SQLiteAssetHelper {
             String charset = getCharsetSelect(2);
             String va = "";
             if (Pref.getBool(R.string.pref_key_allow_variants, true)) {
-                va = " OR " + VA + ":"+ input;
+                va = " OR " + VA + ":" + input;
             }
             if (charset.contains("AND")) {
                 selection = String.format("%s MATCH \"%s:%s %s\" %s", TABLE_NAME, field, input, va, charset);
-            } else  {
+            } else {
                 selection = String.format("%s MATCH \"%s:%s %s%s\"", TABLE_NAME, field, input, va, charset);
             }
             selection += String.format(" AND %s is not null", lang);
