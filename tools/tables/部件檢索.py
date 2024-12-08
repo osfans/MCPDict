@@ -167,11 +167,6 @@ class 表(_表):
 		cont = f.read()
 		f.close()
 		vt = eval(re.findall(r"var vt=(\{.*?\})", cont, re.MULTILINE|re.DOTALL)[0])
-		fc = open("../app/src/main/res/raw/orthography_bs_compatibility.txt", "w", encoding="U8")
-		for k, v in vt.items():
-			if ord(k) < 0xF0000 and ord(v) < 0xF0000 and not isCompatible(k) and not isCompatible(v):
-				fc.write(f"{k}{v}\n")
-		fc.close()
 		self.pua = {}
 		for line in puas.split("\n"):
 			g = re.findall(r" (..)\)", line)

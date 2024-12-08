@@ -13,6 +13,7 @@ import androidx.core.text.HtmlCompat;
 import androidx.cursoradapter.widget.CursorAdapter;
 
 import com.osfans.mcpdict.DB;
+import com.osfans.mcpdict.Pref;
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.Util.FontUtil;
 
@@ -49,6 +50,8 @@ public class HzAdapter extends CursorAdapter {
     private CharSequence getCode(Cursor cursor) {
         String value = cursor.getString(1);
         if (TextUtils.isEmpty(value)) return "";
+        String lang = Pref.getShape();
+        if (DB.isHzParts(lang)) value = value.replaceAll(" ", "");
         return value.replaceAll("\\{.*?\\}", "")
                 .replace("|", " ")
                 .replaceAll("[\t\r\n ]+", " ");

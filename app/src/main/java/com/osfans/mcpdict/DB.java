@@ -174,34 +174,17 @@ public class DB extends SQLiteAssetHelper {
         return lang.startsWith(CJ_) || (lang.startsWith(WB_) && !lang.contentEquals(WBH)) || lang.contentEquals(SR);
     }
 
-    private static String getInputParts(String input) {
-        List<String> l = new ArrayList<>();
-        List<String> r = new ArrayList<>();
-        int n = 1;
-        for (int unicode: input.codePoints().toArray()) {
-            String s = HanZi.getBSCompatibility(unicode);
-            n *= s.codePoints().count();
-            l.add(s); 
-        }
-        for (int i = 0; i < n; i++) {
-            StringBuilder sb = new StringBuilder();
-            int j = i;
-            for (String s: l) {
-                int[] a = s.codePoints().toArray();
-                int m = a.length;
-                sb.appendCodePoint(a[j % m]);
-                sb.append(" ");
-                j /= m;
-            }
-            r.add(sb.toString());
-        }
-        return String.join(" OR ", r);
+    public static boolean isHzParts(String lang) {
+        return lang.contentEquals(BJJS) || lang.contentEquals(ZX);
     }
 
     private static List<String> normInput(String lang, String input) {
         List<String> keywords = new ArrayList<>();
         if (lang.contentEquals(BS)) input = input.replace("-", "f");
-        else if (lang.contentEquals(BJJS) || lang.contentEquals(ZX)) input = getInputParts(input);
+        else if (isHzParts(lang)) {
+            keywords.add(Orthography.normParts(input));
+            return keywords;
+        }
         else if (isMatchBegins(lang)) input += "*";
         else if (lang.contentEquals(KOR)) { // For Korean, put separators around all hangul
             StringBuilder sb = new StringBuilder();
@@ -274,7 +257,7 @@ public class DB extends SQLiteAssetHelper {
         List<String> keywords = new ArrayList<>();
         if (searchType == SEARCH.YI){ //yi
             if (HanZi.isHz(input)) {
-                String hzs = DisplayHelper.normInput(input);
+                String hzs = Orthography.normWords(input);
                 if (!TextUtils.isEmpty(hzs)) keywords.add(hzs);
             }
             if (isAll) lang = TABLE_NAME;
