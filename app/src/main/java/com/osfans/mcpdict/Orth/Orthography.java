@@ -1,5 +1,7 @@
 package com.osfans.mcpdict.Orth;
 
+import static com.osfans.mcpdict.Orth.HanZi.cp2str;
+
 import android.content.res.Resources;
 import android.text.TextUtils;
 
@@ -13,7 +15,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class Orthography {
@@ -163,8 +167,12 @@ public class Orthography {
             inputStream = resources.openRawResource(R.raw.orthography_bs_compatibility);
             reader = new BufferedReader(new InputStreamReader(inputStream));
             while ((line = reader.readLine()) != null) {
-                int c = line.codePointAt(0);
-                HanZi.bsCompatibility.put(c, line.codePoints().toArray()[1]);
+                int [] cs = line.codePoints().toArray();
+                int n = cs.length;
+                String s = cp2str(cs[n - 1]);
+                for (int i = 0; i < n - 1; i++) {
+                    HanZi.bsCompatibility.put(s, HanZi.bsCompatibility.getOrDefault(s, s) + cp2str(cs[i]));
+                }
             }
             reader.close();
 
@@ -275,4 +283,41 @@ public class Orthography {
     }
 
     private static boolean initialized = false;
+
+    public static String normParts(String input) {
+        List<String> l = new ArrayList<>();
+        for (int unicode: input.codePoints().toArray()) {
+            String s = HanZi.getBSCompatibility(cp2str(unicode));
+            l.add(s);
+        }
+        return String.join(" ", l);
+    }
+
+    public static String normWord(String s) {
+        if (TextUtils.isEmpty(s)) return "";
+        StringBuilder sb = new StringBuilder();
+        for (int unicode : s.codePoints().toArray()) {
+            boolean isHZ = HanZi.isHz(unicode);
+            if (isHZ) {
+                sb.append(" ");
+            }
+            sb.appendCodePoint(unicode);
+            if (isHZ) {
+                sb.append(" ");
+            }
+        }
+        return String.format("\"%s\"", sb.toString().trim().replace("  ", " "));
+    }
+
+    public static String normWords(String s) {
+        String[] ss = s.split(" ");
+        String[] newSS = new String[ss.length];
+        int i = 0;
+        for (String word : ss) {
+            String newWord = normWord(word);
+            newSS[i] = newWord;
+            i++;
+        }
+        return String.format("'%s'", String.join(" ", newSS));
+    }
 }

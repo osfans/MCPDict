@@ -5,14 +5,14 @@ import android.widget.MultiAutoCompleteTextView;
 
 import com.osfans.mcpdict.DB;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class HanZi {
     public static final Map<Integer, Integer> compatibility = new HashMap<>();
-    public static final Map<Integer, Integer> bsCompatibility = new HashMap<>();
+    public static final Map<String, String> bsCompatibility = new HashMap<>();
 
     public static boolean isUnknown(int unicode) {
         return unicode == 0x25A1; //□
@@ -89,17 +89,12 @@ public class HanZi {
         return compatibility.getOrDefault(unicode, unicode);
     }
 
-    public static String getBSCompatibility(int unicode) {
-        List<String> l = new ArrayList<>();
-        if (bsCompatibility.containsValue(unicode)) {
-            for (Map.Entry<Integer, Integer> e: bsCompatibility.entrySet()) {
-                if (e.getValue() == unicode) {
-                    l.add(toHz(e.getKey()));
-                }
-            }
+    public static String getBSCompatibility(String s) {
+        Set<String> l = new HashSet<>();
+        for (int i: bsCompatibility.getOrDefault(s, s).codePoints().toArray()) {
+            l.add(cp2str(i));
         }
-        l.add(toHz(bsCompatibility.getOrDefault(unicode, unicode)));
-        return String.join("", l);
+        return String.join(" OR ", l);
     }
 
     public static String toHz(String input) {
@@ -110,7 +105,7 @@ public class HanZi {
 
     public static String toHz(int unicode) {
         unicode = getCompatibility(unicode);
-        return String.valueOf(Character.toChars(unicode));
+        return cp2str(unicode);
     }
 
     public static String toUnicodeHex(String hz) {
