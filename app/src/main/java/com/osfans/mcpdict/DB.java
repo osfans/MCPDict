@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.graphics.Color;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.osfans.mcpdict.Orth.*;
 import com.osfans.mcpdict.Util.UserDB;
@@ -174,34 +175,36 @@ public class DB extends SQLiteAssetHelper {
         return lang.startsWith(CJ_) || (lang.startsWith(WB_) && !lang.contentEquals(WBH)) || lang.contentEquals(SR);
     }
 
-    private static String getInputParts(String input) {
+    private static List<String> combineInputParts(List<String> inputs) {
+        int n = inputs.size();
+        List<String> nl = new ArrayList<>();
+        if (n == 1) {
+            for (int a: inputs.get(0).codePoints().toArray()) {
+                nl.add(String.valueOf(Character.toChars(a)));
+            }
+        } else {
+            List<String> bl = combineInputParts(inputs.subList(1, n));
+            for (int a : inputs.get(0).codePoints().toArray()) {
+                for (String b : bl) {
+                    nl.add(String.valueOf(Character.toChars(a)) + " " + b);
+                }
+            }
+        }
+        return nl;
+    }
+    private static List<String> getInputParts(String input) {
         List<String> l = new ArrayList<>();
-        List<String> r = new ArrayList<>();
-        int n = 1;
         for (int unicode: input.codePoints().toArray()) {
             String s = HanZi.getBSCompatibility(unicode);
-            n *= s.codePoints().count();
-            l.add(s); 
+            l.add(s);
         }
-        for (int i = 0; i < n; i++) {
-            StringBuilder sb = new StringBuilder();
-            int j = i;
-            for (String s: l) {
-                int[] a = s.codePoints().toArray();
-                int m = a.length;
-                sb.appendCodePoint(a[j % m]);
-                sb.append(" ");
-                j /= m;
-            }
-            r.add(sb.toString());
-        }
-        return String.join(" OR ", r);
+        return combineInputParts(l);
     }
 
     private static List<String> normInput(String lang, String input) {
         List<String> keywords = new ArrayList<>();
         if (lang.contentEquals(BS)) input = input.replace("-", "f");
-        else if (lang.contentEquals(BJJS) || lang.contentEquals(ZX)) input = getInputParts(input);
+        else if (lang.contentEquals(BJJS) || lang.contentEquals(ZX)) return getInputParts(input);
         else if (isMatchBegins(lang)) input += "*";
         else if (lang.contentEquals(KOR)) { // For Korean, put separators around all hangul
             StringBuilder sb = new StringBuilder();
