@@ -61,7 +61,7 @@ class 表(_表):
 				self.sm = sm
 			yb = (self.sm + self.ym + sd).lstrip("q")
 			hzs = self.normS(hzs)
-		elif name in ("成都",):
+		elif name in ("成都"):
 			fs = "".join(fs).strip()
 			if not fs: return
 			g = re.findall(r"^(.*?)\[(\d+)\](.+)$", fs)

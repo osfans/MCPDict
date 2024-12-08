@@ -15,6 +15,7 @@ def 常熟古裡_repl(match):
 
 class 表(_表):
 	disorder = True
+	sm = ""
 	ym = ""
 	ym2 = ""
 	
@@ -191,6 +192,13 @@ class 表(_表):
 			line = line.lstrip("ø")
 		elif name in ("金壇",):
 			if line.strip().endswith("韻"): line = ""
+		elif name in ("大豐三龍"):
+			if "\t" in line:
+				if line.startswith("\t"):
+					line = self.sm + line
+				else:
+					self.sm = line.split("\t")[0]
+				line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
 		elif name in ("天台城關"):
 			line = re.sub(r"(\d)", "[\\1]", line)
 			line = re.sub(r"^(.*?)(\[)", "\\1	\\2", line)
