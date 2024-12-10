@@ -199,6 +199,12 @@ class 表(_表):
 				else:
 					self.sm = line.split("\t")[0]
 				line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+		elif name in ("烏魯木齊", "西寧"):
+			line = re.sub(r"(\d+)", "[\\1]", line)
+			if line.startswith("["):
+				line = self.sm + line
+			else:
+				self.sm = line.split("[")[0].lstrip("q")
 		elif name in ("天台城關"):
 			line = re.sub(r"(\d)", "[\\1]", line)
 			line = re.sub(r"^(.*?)(\[)", "\\1	\\2", line)
@@ -213,6 +219,8 @@ class 表(_表):
 			line = line.replace("➀", "①").replace("➁", "②").replace("➂","③").replace("➃", "④").replace("➄", "⑤")
 			line = line.lstrip("q")
 			line = line.replace("-", "(新派錯音)")
+		elif name in ("賀州南鄕"):
+			line = line.lstrip("ø")
 		elif name in ("南京老派"):
 			line = re.sub("([，。])(（)", "\\2\\1", line)
 			line = line.replace("，", "（又）").replace("。", "（新）")
@@ -255,6 +263,7 @@ class 表(_表):
 			line = self.format(line)
 			if not line: continue
 			line = line.strip().replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？").replace("：[", "	[").replace("{：",'{')
+			line = line.replace("[·]", "[0]")
 			line = re.sub(r"\[(\d+[a-zA-Z]?)\]", "［\\1］",line)
 			line = re.sub("［([^0-9]+.*?)］", "[\\1]",line)
 			if ("{" not in line and "｛" not in line) and ("（" in line or "(" in line):

@@ -16,6 +16,8 @@ VARIANT_FILE = f"tables/{SOURCE}/正字.tsv"
 辭典數 = len(辭典)
 形碼 = ["異體字","字形變體","字形描述","部件檢索","兩分","總筆畫數","部首餘筆","五筆畫","五筆86版","五筆98版","五筆06版","倉頡三代","倉頡五代","倉頡六代","山人碼LTS","分類"]
 
+省_set = {'山西', '貴州', '甘肅', '內蒙古', '澳門', '四川', '山東', '臺灣', '雲南', '廣東', '江蘇', '海外', '吉林', '廣西', '香港', '黑龍江', '河南', '河北', '湖南', '上海', '海南', '寧夏', '北京', '遼寧', '新疆', '安徽', '福建', '重慶', '湖北', '浙江', '靑海', '江西', '陝西', '天津', '西藏'}
+
 n2o_dict = {}
 
 for line in open("tables/data/mulcodechar.dt", encoding="U8"):
@@ -116,7 +118,7 @@ def addCfFq(d, fq, order):
 		if name in d:
 			if d[name] < order: continue
 		d[name] = order
-		if len(fs) >= 2: 
+		if len(fs) >= 2:
 			d[fs[1]] = ""
 
 def getLangsByArgv(infos, argv):
@@ -235,7 +237,7 @@ def getLangs(dicts, argv, 省=None):
 		if i not in hz.info: hz.info[i] = None
 	hz.info["字數"] = len(dicts)
 	hz.info["說明"] = "語言數：%d<br><br>%s"%(count, hz.note)
-	省表 = sorted(省.keys(), key=get_pinyin)
+	省表 = sorted(省_set, key=get_pinyin)
 	if "海外" in 省表:
 		省表.remove("海外")
 		省表.append("海外")

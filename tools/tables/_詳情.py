@@ -9,8 +9,8 @@ spath = os.path.join(curdir, "..", "漢字音典字表檔案（長期更新）.x
 tpath = os.path.join(curdir, "output", os.path.basename(__file__).replace(".py", ".json"))
 
 FeatureCollection = {
-  "type": "FeatureCollection",
-  "features": []
+	"type": "FeatureCollection",
+	"features": []
 }
 
 def outdated():
