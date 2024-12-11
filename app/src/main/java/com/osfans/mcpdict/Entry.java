@@ -18,6 +18,10 @@ public class Entry {
         this.comment = comment;
     }
 
+    public String getSingleRaw() {
+        return String.format("[%s] %s %s", lang, hz, raw);
+    }
+
     public void set(String hz, boolean favorite, String comment) {
         this.hz = hz;
         this.favorite = favorite;

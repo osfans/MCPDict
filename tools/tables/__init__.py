@@ -182,11 +182,11 @@ def getLangs(dicts, argv, 省=None):
 			if d["文件名"] != "mcpdict.db":
 				if lang.count == 0: continue
 				if lang.count < 900:
-					print(f"\t\t\t字數太少 {mod}")
+					lang.errors.append(f"字數太少: {lang.count}")
 				elif lang.syCount < 100:
-					print(f"\t\t\t音節太少 {mod}")
-			if not len(toneMaps.keys()):
-				print("\t\t\t無調值")
+					lang.errors.append(f"音節太少: {mod}")
+			# if not len(toneMaps.keys()):
+			# 	lang.errors.append("無調值")
 			lang.info["文件名"] = lang._file
 			if d["省"]:
 				省[d["省"]] += 1
@@ -204,6 +204,11 @@ def getLangs(dicts, argv, 省=None):
 				if i:
 					維護人[i] += 1
 			count += 1
+			if lang.errors:
+				print(f"{lang} - {",".join(editor)}")
+				for i in lang.errors:
+					print(f"\t{i}")
+				lang.errors.clear()
 		else:
 			lang = import_module(f"tables.{mod}").表()
 			d = dict()

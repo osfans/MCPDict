@@ -19,7 +19,6 @@
 □	hɛu1	翹起
 □	kʰɛm1	鵝吃草
 □	ȵɐm1	想
-□	pʰɔn1	爬
 □	mɔn1	扶
 □	jan1	涼、冷
 □	pʰiɛn1	找
@@ -38,6 +37,7 @@
 □	kʰwɛ2	瘸
 □	kʰwɔ2	（雞等動物）扒(土)
 □	jei2	差勁
+□	pʰɔn2	爬
 □	pʰiɛn2	背著手
 □	kʰun2	圓
 □	mɛ3	因擠壓而變形
@@ -280,7 +280,7 @@
 儀	ȵi4	
 儂	nuŋ2	
 億	ɛk7	
-儉	ʃim6	
+儉	kim6	
 儒	ȵui3	
 償	ʃæŋ2	
 優	jau1	
@@ -312,7 +312,7 @@
 其	kʰi2	
 具	kʰui6	
 典	tin3	
-兼	ʃim1	
+兼	kim1	
 冇	mɐu3	
 冉	nim3	
 冊	tʃʰak8	
@@ -379,7 +379,7 @@
 劇	kɛk7	
 劈	pʰɛk7	
 劉	lau2	
-劍	ʃim5	
+劍	kim5	
 劑	tsai1	
 力	lɛk8	
 功	kuŋ1	
@@ -479,7 +479,7 @@
 右	jau6	
 号	hɐu6	
 司	sei1	
-吃	hɛk10	
+吃	hɛk7	
 各	kɔk8	
 合	hap10	
 吉	kat7	
@@ -555,7 +555,7 @@
 啱	ŋam1	
 啼	tʰai2	
 喃	nam1	
-善	ʃin5	
+善	ʃin6	
 喉	hau2	
 喊	ham5	
 喏	nɔk10	
@@ -622,7 +622,7 @@
 坑	haŋ1	
 坡	pʰo1	
 坤	kʰwan1	
-坦	tʰan3	
+坦	tʰɔn3	
 坪	pʰɛŋ2	
 坯	pʰui1	
 坳	au5	
@@ -866,7 +866,7 @@
 屍	ʃi1	
 屎	ʃi3	
 屏	pʰɛŋ2	
-屐	kʰde7	
+屐	kʰɛk8	
 屑	sit7	
 展	tʃin3	
 屙	o1	
@@ -935,7 +935,7 @@
 常	ʃæŋ2	
 帽	mɐu6	
 幅	fuk7	
-幔	mɔn1	
+幔	mɔn6	
 幕	mɔk10	
 幟	tʃɛk7	
 幣	pei6	
@@ -999,7 +999,7 @@
 強	kæŋ6	
 强	kʰæŋ2	
 弼	pʰat10	
-彈	tʰan1	～琴
+彈	tʰɔn1	～琴
 彈	tɔn6	子～
 彎	wɔn1	
 彗	jui6	
@@ -1040,7 +1040,7 @@
 忙	mɔŋ2	
 忠	tʃuŋ1	
 快	wɔi5	
-念	nim2	
+念	nim6	
 忽	wat7	
 忿	fan6	
 怎	tim3	
@@ -1104,7 +1104,7 @@
 慕	mu6	
 慘	tsʰam3	
 慚	tʃim6	
-慢	mɔn1	
+慢	mɔn6	
 慣	kwɔn5	
 慧	jui6	
 慨	kʰɔi5	
@@ -1206,7 +1206,7 @@
 拖	tʰo1	
 拘	kʰui1	
 招	tʃiu1	
-拜	pɔi6	
+拜	pɔi5	
 括	kʰwɔt8	
 拭	ʃɛk7	
 拱	kuŋ3	
@@ -1290,7 +1290,7 @@
 搔	sɐu1	
 搖	jiu2	
 搗	tɐu3	
-搛	ʃim1	～菜
+搛	kim1	～菜
 搜	sau1	
 搞	kau3	
 搢	tan5	
@@ -1307,7 +1307,7 @@
 摸	mo1	
 摹	mu1	
 摺	tʃip7	
-撇	pit7	
+撇	pʰit7	
 撈	lau1	
 撐	tʃʰaŋ1	
 撐	tʃʰaŋ5	又
@@ -1316,13 +1316,13 @@
 撤	tʃʰit7	
 撥	put7	
 撫	fu6	
-撬	kʰɛu5	
+撬	kʰɛu1	
 播	po5	
 撮	tsʰut7	
 撲	pʰɔk8	
 撼	ham3	
 撾	wo1	
-撿	ʃim3	
+撿	kim3	
 擁	juŋ3	
 擂	lui2	
 擅	ʃim6	
@@ -1332,7 +1332,7 @@
 操	tsʰɐu1	
 擒	kʰɐm2	
 擔	tam1	～任
-擔	tam1	挑～
+擔	tam5	挑～
 據	kui3	
 擠	tsai1	
 擤	sæŋ5	
@@ -1347,10 +1347,10 @@
 攏	luŋ4	
 攔	lɔn2	
 攘	ȵæŋ2	
-攜	kʰwei1	
+攜	kʰwei6	
 攝	ʃip7	
 攞	lo3	
-攤	tʰan1	
+攤	tʰɔn1	
 攪	kau3	
 攬	lam3	
 支	tʃi1	
@@ -1466,7 +1466,7 @@
 更	kaŋ5	～加
 書	ʃi1	
 曹	tsʰɐu2	
-曼	mɔn1	
+曼	mɔn6	
 曾	tsaŋ1	
 曾	tsʰaŋ2	～經
 替	tʰai5	
@@ -1586,7 +1586,7 @@
 楞	laŋ2	
 楠	nam2	
 業	ȵɛp10	
-極	kʰde7	
+極	kʰɛk8	
 楷	kʰɔi1	
 概	kʰɔi5	
 榕	juŋ2	
@@ -1620,10 +1620,10 @@
 機	ki1	
 橢	tʰo3	～圓
 橫	waŋ2	
-檀	tʰan1	
+檀	tʰɔn1	
 檎	kʰɐm2	
 檔	tɔŋ3	
-檢	ʃim3	
+檢	kim3	
 檯	tʰɔi2	
 檳	pan1	
 檻	kam5	
@@ -1643,7 +1643,7 @@
 欽	hɐm1	
 款	wun3	
 歌	ko1	
-歎	tʰan5	
+歎	tʰɔn5	
 歐	au1	
 歡	wun1	
 止	tʃi3	
@@ -1679,7 +1679,7 @@
 比	pei3	
 毛	mɐu2	
 毫	hɐu2	
-毯	tʰan3	
+毯	tʰɔn3	
 氈	tʃin1	
 氏	ʃi6	
 民	man2	
@@ -1824,7 +1824,7 @@
 漚	au5	
 漢	hɔn5	
 漦	ʃɔn2	
-漫	mɔn1	
+漫	mɔn6	
 漱	su5	
 漲	tʃæŋ5	
 漸	tʃim6	
@@ -1837,7 +1837,7 @@
 潤	ȵan6	
 潭	tʰam2	
 潮	tʃʰiu2	
-潰	kʰwei1	
+潰	kʰwei6	
 潲	ʃau5	
 潺	tsʰɔn2	
 澄	tʃʰaŋ2	
@@ -1859,7 +1859,7 @@
 瀉	sɛ5	
 瀏	lau2	
 灌	kun5	
-灘	tʰan1	
+灘	tʰɔn1	
 灣	wɔn1	
 火	wo3	
 灰	wui1	
@@ -1871,7 +1871,7 @@
 炎	jim6	
 炒	tʃʰau3	
 炙	tʃɛk7	
-炭	tʰan5	
+炭	tʰɔn5	
 炮	pʰɐu5	
 炸	tʃɔ5	
 爲	wei2	
@@ -2091,12 +2091,12 @@
 癩	lɔi5	
 癬	sin3	
 癮	jan3	
-癱	tʰan1	
+癱	tʰɔn1	
 登	taŋ1	
 發	fɔt8	
 白	pʰak10	
 百	pak8	
-皂	tsʰɐu1	
+皂	tsʰɐu4	
 的	tɛk7	
 皆	kɔi1	
 皇	wɔŋ2	
@@ -2178,7 +2178,7 @@
 硃	tʃi1	
 硫	lau2	
 硬	ŋaŋ6	
-硯	nim2	
+硯	nim6	
 硼	pʰaŋ2	
 碉	tiu1	
 碎	sui5	
@@ -2189,7 +2189,7 @@
 碧	pɛk7	
 碩	fæk10	
 碰	pʰuŋ5	
-碳	tʰan5	
+碳	tʰɔn5	
 確	kʰɔk8	
 碼	mɔ3	
 碾	nin3	
@@ -2274,7 +2274,7 @@
 窺	kʰwei1	
 窿	luŋ1	
 竄	lun5	
-竅	kʰɛu5	
+竅	kʰɛu1	
 竇	tau5	
 立	lɐp9	
 站	tʃam6	
@@ -2435,7 +2435,7 @@
 繡	sau5	
 繩	ʃɛŋ2	
 繪	wui6	
-繭	ʃim3	
+繭	kim3	
 繳	kiu3	
 繼	ki5	
 續	tsʰuk8	
@@ -2579,7 +2579,7 @@
 膨	pʰaŋ2	
 膩	nai5	骯髒的東西
 膩	nai6	油～
-膳	ʃin5	
+膳	ʃin6	
 膽	tam3	
 膿	nuŋ1	
 臂	pei5	
@@ -2679,7 +2679,7 @@
 萄	tʰɐu2	
 萌	maŋ2	
 萍	pʰɛŋ2	
-萬	mɔn1	
+萬	mɔn6	
 落	lɔk10	
 葉	jip10	
 著	tʃæk10	～重
@@ -2816,7 +2816,7 @@
 袈	kɔ1	
 袋	tɔi6	
 袍	pʰɐu2	
-袒	tʰan3	
+袒	tʰɔn3	
 袖	tsʰau6	
 被	pʰei4	～子
 被	pei6	～動
@@ -2921,7 +2921,7 @@
 諗	nɐm3	
 諜	tɛp10	
 諦	tei5	
-諫	ʃim3	
+諫	kim3	
 諱	wei6	
 諷	fuŋ3	
 諸	tʃi1	
@@ -3045,7 +3045,7 @@
 跨	kʰwɔ1	
 跪	kwei6	
 路	lu6	
-跳	tʰiu1	
+跳	tʰiu5	
 踎	mɐu1	蹲
 踏	tap10	
 踐	tin3	
@@ -3140,7 +3140,7 @@
 逼	pɛk7	
 遇	ŋui6	
 遊	jau2	
-運	wan1	
+運	wan6	
 遍	pʰin5	
 過	kwo5	
 道	tʰɐu6	
@@ -3163,7 +3163,7 @@
 遼	liu2	
 避	pei6	
 邀	jiu1	
-邁	mɔn1	
+邁	mɔn6	
 還	wɔn2	～原
 邊	pin1	
 邋	lɔt10	
@@ -3390,7 +3390,7 @@
 韭	tʃiau3	
 音	jɐm1	
 韶	ʃiu6	
-韻	wan1	
+韻	wan6	
 響	haŋ3	
 頁	jip10	
 頂	tɛŋ3	
@@ -3416,7 +3416,7 @@
 顛	tin1	
 類	lui6	
 顧	ku5	
-顫	tʰan1	
+顫	tʰɔn1	
 顯	jin3	
 顴	tsʰin2	
 風	fuŋ1	
@@ -3441,7 +3441,7 @@
 餵	wei5	
 餾	lau6	蒸～水
 餿	sɐu1	
-饅	mɔn1	
+饅	mɔn6	
 饑	ki1	
 饒	ȵiu2	
 饞	tsʰam2	
@@ -3469,7 +3469,7 @@
 騾	lo2	
 驅	kʰui1	
 驕	kiu1	
-驗	nim2	
+驗	nim6	
 驚	kɛŋ1	
 驢	lu2	
 骨	kwat7	
@@ -3507,7 +3507,7 @@
 鰭	kʰi2	
 鰾	pʰɛu5	
 鱉	pit7	
-鱔	ʃin5	
+鱔	ʃin6	
 鱗	lan2	
 鱷	ŋɔk8	
 鱸	lu2	

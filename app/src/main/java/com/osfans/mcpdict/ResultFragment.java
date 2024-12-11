@@ -345,7 +345,7 @@ public class ResultFragment extends Fragment {
 
     private String getCopyText(String col) {
         if (col.contentEquals(HZ)) return mEntry.hz;
-        if (!col.contentEquals(ALL_LANGUAGES)) return mEntry.raw;
+        if (!col.contentEquals(ALL_LANGUAGES)) return mEntry.getSingleRaw();
         return mRaws.get(mEntry.hz);
     }
 

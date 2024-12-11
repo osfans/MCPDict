@@ -37,7 +37,7 @@ class 表(_表):
 			yb, _ = self.splitSySd(yb)
 			yb += sd
 		elif name in ("1926綜合",):
-			hz,_,_,yb,js = fs[:5]
+			hz,_,_,yb,_,js = fs[:6]
 		elif name in ("蒼南錢庫",):
 			sm,ym,sd,hz,js = fs[:5]
 			if sd == "轻声": sd = "0"
@@ -244,6 +244,10 @@ class 表(_表):
 		elif name in ("寧德",):
 			hz,_,yb,sd,js = fs
 			yb += self.dz2dl(sd.split("|")[0])
+		elif name in ("江門荷塘(下)",):
+			hz, ipa, js = fs[:3]
+		elif name in ("汝城延壽",):
+			hz, yb, js = fs[:3]
 		elif len(fs) >= 4:
 			hz, _, ipa, js = fs[:4]
 		elif len(fs) == 2:
