@@ -27,9 +27,11 @@ class 表(_表):
 			line = re.sub(r"^(.*?) ?\[", "\\1	[", line)
 		elif name in ("萍鄕","平陽","都昌陽峯"):
 			line = line.lstrip("∅︀")
-		elif name in ("遂川",):
-			if "[" in line:
-				line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+		elif name in ("遂川","張家界"):
+			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps.get(x[1], '0')}]", line)
+		elif name in ("奉化",):
+			line = re.sub(r"(\d+)(?![：\d])", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+			line = line.lstrip("q")
 		elif name in ("巢湖",):
 			line = line.replace("ø","Ø").replace("（0）","[0]")
 			line = self.normS(line, "{\\1}")
@@ -164,22 +166,6 @@ class 表(_表):
 			sm, sm2, hzs = sms
 			sm = f"{sm2}{self.ym2}/{sm}".replace("Ø", "")
 			return f"{sm}\t{hzs}"
-		elif name in ("江門荷塘(下)",):
-			if line.startswith("#"): return "#"
-			fs = line.split("\t", 2)
-			sm, ym = fs[:2]
-			line = line.replace("(", "（").replace(")", "）").replace("[", "〔").replace("]", "〕")
-			line = re.sub(r"（([^（）]*?)）〔([^〔〕]*?)〕", "{\\1：\\2}", line)
-			line = re.sub(r"〔([^〔〕]*?)〕（([^（）]*?)）", "{\\1：\\2}", line)
-			line = re.sub(r"（(.*?)）", "{\\1}", line)
-			line = re.sub(r"〔(.*?)〕", "{\\1}", line)
-			line = line.replace("}{", "；")
-			line = line.replace("{", "（").replace("}", "）")
-			line = regex.sub("（((?>[^（）]+|(?R))*)）", "{\\1}", line)
-			line = re.sub(r"\t(\d+)", lambda x: "["+ self.dz2dl(ym + x[1]).replace(ym, "") +"]", line)
-			line = line.replace("\t" + ym, ym + "\t")
-			fs = line.split("\t", 1)
-			line = fs[0] + "\t" + fs[1].replace("\t", "")
 		elif name in ("敦煌", "洛陽"):
 			line = re.sub(r"\[(\d+)\]", lambda x: "["+self.dz2dl(x[1])+"]", line)\
 				.replace("(", "（").replace(")", "）").replace("\t", "").rstrip("12345 \t\n")
@@ -290,7 +276,7 @@ class 表(_表):
 				if py not in pys:
 					pys.add(py)
 				else:
-					print(f"\t\t\t{py} 重複")
+					self.errors.append(f"{py} 重複")
 				hzs = self.normG(hzs)
 				hzs = re.findall(r"(.)[\d₁₂₃]?([<+\-/=\\\*？$&r@]?)[\d₁₂₃]? *(｛.*?｝)?", hzs)
 				for hz, c, js in hzs:
@@ -317,7 +303,7 @@ class 表(_表):
 								c = ""
 					js = js[1:-1]
 					if js.count("{") != js.count("}"):
-						print("\t\t\t 大括號未成對:", js)
+						self.errors.append(f"大括號未成對:{js}")
 						js = js.replace("{", "").replace("}", "")
 					p = py + c + "\t" + p + js
 					if p not in d[hz]:

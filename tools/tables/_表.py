@@ -160,6 +160,7 @@ class 表:
 	syds = defaultdict(set)
 	d = defaultdict(list)
 	__mod = None
+	errors = []
 
 	def setmod(self, mod):
 		self.__mod = mod
@@ -274,6 +275,7 @@ class 表:
 				yb = yb.replace("h", "ʰ")
 			if self.ybTrimSpace:
 				yb = yb.replace(" ", "")
+			yb = yb.replace("[", "").replace("]", "")
 		return yb
 
 	def isDialect(self):
@@ -321,7 +323,7 @@ class 表:
 				hz = s2t(hz, self.simplified)
 			if not isHZ(hz):
 				if self.isDialect():
-					print(f"\t\t\t【{hz}】不是漢字，讀音爲：", ",".join([i.strip() for i in pys]))
+					self.errors.append(f"【{hz}】不是漢字，讀音爲：{','.join([i.strip() for i in pys])}")
 				continue
 			if self.disorder:
 				pys = sorted(pys,key=lambda x:x.split("\t", 1)[0][-1])
@@ -405,8 +407,8 @@ class 表:
 				py = py.replace("\t", "\n")
 			if py not in self.d[hz]:
 				self.d[hz].append(py)
-		passed = time() - start
-		logging.info(f"({self.count:5d}({self.unknownCount})-{self.sydCount:4d}-{self.syCount:4d}) {passed:6.3f} {self}")
+		# passed = time() - start
+		# logging.info(f"({self.count:5d}({self.unknownCount})-{self.sydCount:4d}-{self.syCount:4d}) {passed:6.3f} {self}")
 	
 	def load(self, dicts):
 		self.read()

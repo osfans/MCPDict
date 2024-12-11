@@ -8,12 +8,11 @@
 丁	tɛn1	
 七	tsʰit7	
 丈	tŋ6-	
-丈	tiũ6-	～人
+丈	tiũ6-	
 丈	tiaŋ6	
 三	sã1-	
 三	sam1	
 上	tsiũ6-	
-上	tʰou2	
 上	siaŋ3	
 上	siaŋ6	
 下	kɛ6-	
@@ -84,6 +83,8 @@
 亳	pok8	
 亶	tʰan3	
 人	dzin2	
+人	pʰãi3	
+人	tiũ6	
 什	tsap8	
 什	sip8	
 仁	dzin2	
@@ -233,7 +234,7 @@
 偷	tʰau1	
 偷	tʰou1	
 僞	ɡui6	
-傀	kʰui1	
+傀	kʰui3	
 傅	pou5	
 傅	hu6	
 傈	lɛt7	
@@ -424,7 +425,7 @@
 勇	ioŋ3	
 勉	bɛn3	
 勒	lɛt8	
-動	taŋ1-	
+動	taŋ6-	
 動	toŋ6	
 勘	kʰam5	
 務	bu6	
@@ -537,7 +538,7 @@
 吞	tʰun1	
 吟	ɡim2	
 吠	pui6-	
-否	pʰãi3	～人
+否	pʰãi3	
 否	pʰi3	
 吩	hun1	
 含	kam2-	
@@ -759,7 +760,6 @@
 塔	tʰaʔ7-	
 塔	tʰap7	
 塗	tou2	
-塗	tʰou2	
 塗	tʰou2	泥土
 塚	tʰioŋ3	
 塞	sai5	
@@ -833,8 +833,8 @@
 奈	nai6	
 奉	hoŋ6	
 奎	kui1	
-奏	tsau1	
-奏	tsou1	
+奏	tsau5	
+奏	tsou5	
 奐	huan5	
 契	kʰei5	
 奔	pʰun1	
@@ -870,7 +870,7 @@
 妨	hoŋ2	
 妯	tiok8	
 妲	tat7	
-妹	mɛ5	
+妹	m	beɛ5
 妻	tsʰei1	
 妻	tsʰei5	
 妾	tsʰiap7	
@@ -1014,7 +1014,6 @@
 寒	han2	
 察	tsʰat7	
 寡	kuã3	
-寡	kuĩ3	
 寢	tsʰim3	
 寤	ɡou6-	
 寥	liau2	
@@ -1033,8 +1032,9 @@
 封	hoŋ1	
 射	sia6	
 將	tsiaŋ1	
+將	tsiaŋ5	
 專	tsuan1	
-尉	ui1	
+尉	ui5	
 尊	tsun1	
 尋	sim2	
 尋	siam2	兩手量物
@@ -1042,6 +1042,7 @@
 導	to6	
 小	sio3-	
 小	siau3	
+小	tuã5	
 少	tsio3-	
 少	siau3	
 少	siau5	
@@ -1116,7 +1117,7 @@
 嵬	ɡui2	
 嵼	suã2	
 嶄	tsam3	
-嶠	kiau1	
+嶠	kiau6	
 嶸	ɛn2	
 嶺	niã3-	
 嶺	lɛn3	
@@ -1160,7 +1161,7 @@
 席	sɛt8	
 席	tsʰioʔ8	草～
 帳	tiũ5-	
-帳	tiaŋ1	
+帳	tiaŋ5	
 帶	tua5-	
 帶	tai5	
 帷	ui2	
@@ -1263,9 +1264,8 @@
 待	tʰai6	
 很	hin3	
 律	lut8	
-後	au3-	
+後	au6-	
 後	hau6	生～
-徐	tʰou2	
 徐	tsʰi2	
 徑	kɛn5	
 得	tit7-	
@@ -1394,7 +1394,7 @@
 慧	hui6	
 慨	kʰai5	
 慮	li6	
-慰	ui1	
+慰	ui5	
 慵	ioŋ2	
 慶	kʰɛn5	
 慷	kʰoŋ3	
@@ -1474,7 +1474,7 @@
 扶	hu2	
 批	pʰei1	
 批	pi3	
-找	tsau1	
+找	tsau6	
 承	sin2	
 抄	tsʰau1	
 抉	kuat7	
@@ -1740,7 +1740,7 @@
 旖	ĩ3	
 旗	ki2	
 日	dzit8	
-旦	tuã5-	小～
+旦	tuã5-	
 旦	tan5	
 旨	tsi3	
 早	ts3-	
@@ -1748,7 +1748,7 @@
 旬	sun2	
 旭	hiok7	
 旱	uã6-	
-旱	han3	
+旱	han6	
 暘	iaŋ2	
 旺	oŋ6	
 旻	bun2	
@@ -2149,7 +2149,7 @@
 汕	suã5-	
 汕	san5	
 汗	kuã6-	
-汗	han3	
+汗	han6	
 汙	u1	
 汝	li3-	
 汝	dzi3	
@@ -2212,7 +2212,7 @@
 洘	kʰo3	水幹
 洚	kaŋ5	
 洛	lok8	
-洞	taŋ1-	
+洞	taŋ6-	
 洞	toŋ6	
 津	tsin1	
 洪	aŋ2-	姓
@@ -2233,6 +2233,7 @@
 浴	iok8	
 海	hai3	
 浸	tsim5	
+涂	tʰou2	姓
 消	siau1	
 消	siau5	
 涉	siap8	
@@ -2254,7 +2255,7 @@
 淞	sioŋ2	
 淡	tam6	
 淨	tsɛn6	
-淨	tsiã6	烏～
+淨	tsiã6	
 淩	lɛn2	
 淫	im2	
 淮	huai2	
@@ -2283,7 +2284,7 @@
 渾	hun2	
 渾	hun6	
 湃	pʰai5	
-湊	tsʰau1-	
+湊	tsʰau5-	
 湍	tʰuan1	
 湍	tsʰuan1	
 湖	ou2	
@@ -2340,7 +2341,7 @@
 漫	ban2	
 漫	ban6	
 漲	tŋ3-	
-漲	tiaŋ1	
+漲	tiaŋ5	
 漳	tsiũ1-	
 漳	tsiaŋ1	
 漸	tsiam6	
@@ -2387,7 +2388,7 @@
 瀁	iaŋ3	
 瀉	sia5	
 瀑	pʰok8	
-瀚	han3	
+瀚	han6	
 瀟	siau1	
 瀨	lua5	
 瀨	nai6	
@@ -2401,7 +2402,7 @@
 火	hue3-	
 火	hõ3	
 灰	hue1	
-竈	tsau1-	
+竈	tsau5-	
 竈	tso5	
 灸	ku5	
 災	tsai1	
@@ -2422,6 +2423,7 @@
 爲	ui6	
 烈	lɛt7	
 烏	ou1	
+烏	tsiã6	
 烘	haŋ1-	
 烹	pʰɛn1	
 焉	ɛn1	
@@ -2655,7 +2657,7 @@
 界	kai5	
 畎	kʰɛn3	
 畏	uĩ5-	
-畏	ui1	
+畏	ui5	
 留	lau2-	
 留	liu2	
 畚	pun3	
@@ -2711,7 +2713,7 @@
 瘡	tsʰoŋ1	
 瘢	puan2	
 瘧	ɡiak8	
-瘴	tsiaŋ1	
+瘴	tsiaŋ5	
 療	liau2	
 癡	tsʰi1	
 癢	tsiũ6-	
@@ -2886,7 +2888,7 @@
 祈	ki2	
 祉	tsi3	
 祖	tsou3	
-祚	tsou1	
+祚	tsou5	
 祚	tsou6	
 祝	tsiok7	
 神	sin2	
@@ -3099,7 +3101,7 @@
 糖	tʰŋ2-	
 糖	tʰoŋ2	
 糙	tsʰo5	
-糜	mɛ2	稀飯
+糜	m	beɛ2	稀飯
 糝	sam3	
 糞	pun5-	
 糞	hun5	
@@ -3267,7 +3269,7 @@
 翟	tɛt8	
 翠	tsʰui5	
 翩	pʰɛn1	
-翰	han3	
+翰	han6	
 翳	i5	
 翹	kʰiau5	
 翻	huan1	
@@ -3354,7 +3356,7 @@
 脫	tʰuat7	
 脬	pʰ1	～囊
 脹	tiũ5-	
-脹	tiaŋ1	
+脹	tiaŋ5	
 脾	pi2	
 脾	pʰi2	～氣
 腆	tʰɛn3	
@@ -3403,7 +3405,7 @@
 臨	lim2	
 自	dzu6	
 臬	ɡɛt8	
-臭	tsʰau1-	
+臭	tsʰau5-	
 臭	hiu5	
 至	tsi5	
 致	ti5	
@@ -4081,7 +4083,7 @@
 躬	kioŋ1	
 車	ki1	
 車	tsʰia1	
-軌	kʰui1	
+軌	kʰui3	
 軍	kun1	
 軒	hɛn1	
 軟	nuĩ3-	
@@ -4103,7 +4105,7 @@
 輩	pue5	
 輪	lun2	
 輯	tsʰip7	
-輳	tsou1	
+輳	tsou5	
 輸	si1	運～
 輸	su1	
 輻	hok7	
@@ -4114,7 +4116,7 @@
 轉	tsuan3	
 轍	tɛt8	
 轎	kio6-	
-轎	kiau1	
+轎	kiau6	
 轡	pi5	
 辛	sin1	
 辜	kou1	
@@ -4268,7 +4270,7 @@
 醢	hei1	
 醫	i1-	
 醬	tsiũ5-	
-醬	tsiaŋ1	
+醬	tsiaŋ5	
 醮	tsiau6	
 醴	lei3-	
 醴	tʰei3	
@@ -4276,7 +4278,7 @@
 釅	ɡiam2	
 采	tsʰai3	
 釉	iu2	
-重	taŋ1-	
+重	taŋ6-	
 重	tioŋ2	
 重	tioŋ6	
 野	ia3	
@@ -4461,7 +4463,7 @@
 隘	ai5	
 隙	kʰiaʔ7	
 際	tsei5	
-障	tsiaŋ1	
+障	tsiaŋ5	
 隨	sui2	
 險	hiam3	
 隰	sip7	
