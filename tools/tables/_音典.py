@@ -248,6 +248,8 @@ class 表(_表):
 			hz, ipa, js = fs[:3]
 		elif name in ("汝城延壽",):
 			hz, yb, js = fs[:3]
+		elif name in ("建陽連墩",):
+			hz, yb, js = fs[:3]
 		elif len(fs) >= 4:
 			hz, _, ipa, js = fs[:4]
 		elif len(fs) == 2:

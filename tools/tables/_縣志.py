@@ -224,6 +224,8 @@ class 表(_表):
 			line = line.replace("］ⓐ", "a］").replace("］ⓑ", "b］")
 		elif name in ("休寧",):
 			line = line.replace("[3ˀ]", "[3]")
+		elif name in ("光澤寨裏",):
+			line = line.replace("‖", "")
 		return line
 
 	def parseYm(self, line):
