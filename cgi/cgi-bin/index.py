@@ -1,11 +1,12 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-import sys, re
+import sys, re, os
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
 import xml.etree.ElementTree as ET
-xmlname = "strings.xml"
+cur = os.path.abspath(os.path.dirname(__file__))
+xmlname = os.path.join(cur, "strings.xml")
 tree = ET.parse(xmlname)
 root = tree.getroot()
 def getStrings(name):
@@ -17,7 +18,7 @@ def getString(name):
 	return l.text
 
 import sqlite3
-dbname = 'mcpdict.db'
+dbname = os.path.join(cur, 'mcpdict.db')
 conn = sqlite3.connect(dbname)
 conn.row_factory = sqlite3.Row
 c = conn.cursor()
@@ -33,7 +34,7 @@ import cgi
 print("Content-type: text/html; charset=UTF-8\n")
 form = cgi.FieldStorage()
 key = form.getvalue("key")
-if key not in KEYS: key = "hz"
+if key not in KEYS: key = "漢字"
 
 APP = getString("app_name")
 options_search = []
