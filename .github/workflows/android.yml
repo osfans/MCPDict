@@ -30,10 +30,11 @@ jobs:
         keyPassword=${{ secrets.KEY_PASSWORD }}
         EOF
 
-    - name: Setup DB
+    - name: Create DB
       run: |
         pushd tools
         python3 -m pip install -r requirements.txt
+        touch tables/*.py
         python3 make.py
         popd
 
@@ -51,3 +52,4 @@ jobs:
         title: "Nightly Build"
         files: |
           app/build/outputs/apk/release/*.APK
+          tools/warnings.txt

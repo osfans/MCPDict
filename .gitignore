@@ -5,6 +5,7 @@ pretty.py
 .gradle/
 keystore.properties
 local.properties
+warnings.txt
 build/
 *.db
 *.iml
