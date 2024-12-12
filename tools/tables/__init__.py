@@ -150,6 +150,7 @@ def getLangs(dicts, argv, 省=None):
 	推薦人 = defaultdict(int)
 	維護人 = defaultdict(int)
 	keys = None
+	t = open("warnings.txt", "w", encoding="U8")
 	for mod in mods:
 		if mod in infos:
 			d = infos[mod]
@@ -206,9 +207,10 @@ def getLangs(dicts, argv, 省=None):
 			count += 1
 			if lang.errors:
 				all_editors = ",".join(editor)
-				print(f"{lang} - {all_editors}")
+				lang.full = lang.info["語言"]
+				print(f"{lang.full}（{lang}）-{lang._file}-{all_editors}", file=t)
 				for i in lang.errors:
-					print(f"\t{i}")
+					print(f"\t{i}", file=t)
 				lang.errors.clear()
 		else:
 			lang = import_module(f"tables.{mod}").表()
@@ -238,6 +240,7 @@ def getLangs(dicts, argv, 省=None):
 		if lang.note: lang.info["說明"] = lang.note
 		if not keys: keys = lang.info.keys()
 		langs.append(lang)
+	t.close()
 	hz = langs[0]
 	for i in keys:
 		if i not in hz.info: hz.info[i] = None

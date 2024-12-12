@@ -170,10 +170,9 @@ class 表:
 		return self.__module__.split(".")[-1]
 
 	def find(self, name):
-		if g := glob(name):
-			return g
-		name = re.sub(".([^.]+)$", "([0-9]).\\1", name)
-		return glob(name)
+		if g := glob(name): return g
+		if g := glob(re.sub(".([^.]+)$", "([0-9]).\\1", name)): return g
+		return glob(re.sub(".([^.]+)$", " ([0-9]).\\1", name))
 
 	@property
 	def spath(self):
