@@ -205,7 +205,8 @@ def getLangs(dicts, argv, 省=None):
 					維護人[i] += 1
 			count += 1
 			if lang.errors:
-				print(f"{lang} - {",".join(editor)}")
+				all_editors = ",".join(editor)
+				print(f"{lang} - {all_editors}")
 				for i in lang.errors:
 					print(f"\t{i}")
 				lang.errors.clear()

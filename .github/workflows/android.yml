@@ -1,0 +1,53 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: gradle
+
+    - name: Setup keystore
+      run: |
+        echo ${{ secrets.SIGNING_KEY }} | base64 --decode | cat >> $(pwd)/signingkey.jks
+        cat << EOF > keystore.properties
+        storeFile=$(pwd)/signingkey.jks
+        storePassword=${{ secrets.KEY_STORE_PASSWORD }}
+        keyAlias=${{ secrets.ALIAS }}
+        keyPassword=${{ secrets.KEY_PASSWORD }}
+        EOF
+
+    - name: Setup DB
+      run: |
+        pushd tools
+        python3 -m pip install -r requirements.txt
+        python3 make.py
+        popd
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Build with Gradle
+      run: ./gradlew build
+
+    - name: Create Nightly release
+      uses: 'marvinpinto/action-automatic-releases@latest'
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        automatic_release_tag: nightly
+        prerelease: true
+        title: "Nightly Build"
+        files: |
+          app/build/outputs/apk/release/*.APK

@@ -28,9 +28,9 @@ class 表(_表):
 		elif name in ("萍鄕","平陽","都昌陽峯"):
 			line = line.lstrip("∅︀")
 		elif name in ("遂川","張家界"):
-			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps.get(x[1], '0')}]", line)
+			line = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 		elif name in ("奉化",):
-			line = re.sub(r"(\d+)(?![：\d])", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+			line = re.sub(r"(\d+)(?![：\d])", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 			line = line.lstrip("q")
 		elif name in ("巢湖",):
 			line = line.replace("ø","Ø").replace("（0）","[0]")
@@ -103,7 +103,7 @@ class 表(_表):
 			line = line.lstrip("q")
 		elif name in ("壺關樹掌"):
 			line = line.lstrip("q").replace("·", "0")
-			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps.get(x[1], 0)}]", line)
+			line = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 		elif name in ("道縣梅花",):
 			#!西官陰平藉詞@西官陽平藉詞$西官上聲藉詞%西官去聲藉詞
 			line = re.sub("(!)(?!{)","{西官陰平借詞}",line)
@@ -127,20 +127,18 @@ class 表(_表):
 					fs[i + 1] = f"[{sd}]" + fs[i + 1]
 			line = "".join(fs)
 		elif name in ("虔南大吉山",):
-			# for i in self.toneValues.keys():
-			# 	line = line.replace(f"[{i}]",f"[{self.toneValues[i]}]")
-			line = re.sub(r"\[.*?(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+			line = re.sub(r"\[.*?(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 			line = line.replace("<","{").replace(">","}")
 		elif name in ("澄海大新","光山", "南康唐江", "仁化長江", "永豐", "南豐"):
-			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps.get(x[1], "0")}]", line)
+			line = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 		elif name in ("耒陽",):
 			line = line.replace("51", "53")
-			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+			line = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 		elif name in ("建湖卞港",):
 			line = line.replace("[2]", "[23-2]")
-			line = re.sub(r"\[([\d\-]+)\]", lambda x:f"[{self.toneMaps.get(x[1], "0")}]", line)
+			line = re.sub(r"\[([\d\-]+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 		elif name in ("慈利",):
-			line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+			line = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 			line = line.replace("/", "")
 		elif name in ("海門"):
 			if line.startswith("#"): return "#"
@@ -149,7 +147,7 @@ class 表(_表):
 			find = re.findall(r"\[(.*?)(\d+)\]", line)
 			if not find: return
 			sy = find[0][0]
-			line = re.sub(r"\[(.*?)(\d+)\]", lambda x:f"[{self.toneMaps[x[2]]}]", line)
+			line = re.sub(r"\[(.*?)(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[2]), line)
 			line = sy + line
 		elif name in ("小店", "太谷", "祁縣", "壽陽", "楡次", "徐溝"):
 			fs = line.split("\t", 1)
@@ -167,7 +165,7 @@ class 表(_表):
 			sm = f"{sm2}{self.ym2}/{sm}".replace("Ø", "")
 			return f"{sm}\t{hzs}"
 		elif name in ("敦煌", "洛陽"):
-			line = re.sub(r"\[(\d+)\]", lambda x: "["+self.dz2dl(x[1])+"]", line)\
+			line = re.sub(r"\[(\d+)\]", lambda x: "[%s]"%self.dz2dl(x[1]), line)\
 				.replace("(", "（").replace(")", "）").replace("\t", "").rstrip("12345 \t\n")
 			line = re.sub(r"\[([^\d].*?)\]", "（\\1）", line)
 			line = regex.sub("（((?>[^（）]+|(?R))*)）", "{\\1}", line)
@@ -184,7 +182,7 @@ class 表(_表):
 					line = self.sm + line
 				else:
 					self.sm = line.split("\t")[0]
-				line = re.sub(r"\[(\d+)\]", lambda x:f"[{self.toneMaps[x[1]]}]", line)
+				line = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 		elif name in ("烏魯木齊", "西寧"):
 			line = re.sub(r"(\d+)", "[\\1]", line)
 			if line.startswith("["):

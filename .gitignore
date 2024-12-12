@@ -3,7 +3,7 @@ publish
 pretty.py
 .idea/
 .gradle/
-gradle.properties
+keystore.properties
 local.properties
 build/
 *.db
