@@ -472,7 +472,7 @@ class 表:
 			syd = syd.replace(i, str(tonesymbol.index(i)))
 		for i in tonemark:
 			syd = syd.replace(i, str(tonemark.index(i)+1))
-		sy = syd.rstrip("0123456789")
+		sy = syd.rstrip("-0123456789")
 		sd = syd[len(sy):]
 		return sy,sd
 
