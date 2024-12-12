@@ -1,11 +1,12 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-import sys, re
+import sys, re, os
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
 import xml.etree.ElementTree as ET
-xmlname = "strings.xml"
+cur = os.path.abspath(os.path.dirname(__file__))
+xmlname = os.path.join(cur, "strings.xml")
 tree = ET.parse(xmlname)
 root = tree.getroot()
 def getStrings(name):
@@ -17,14 +18,19 @@ def getString(name):
 	return l.text
 
 import sqlite3
-dbname = 'mcpdict.db'
+dbname = os.path.join(cur, 'mcpdict.db')
 conn = sqlite3.connect(dbname)
 conn.row_factory = sqlite3.Row
 c = conn.cursor()
-c.execute("SELECT * FROM mcpdict where rowid<=7")
+c.execute("SELECT * FROM info")
 result = c.fetchall()
-SEARCH_AS_NAMES,NAMES,COLORS,DICT_NAMES,DICT_LINKS,INTROS,TONE_NAMES = map(dict, result)
-KEYS = [i[0] for i in c.description]
+#SEARCH_AS_NAMES,NAMES,COLORS,DICT_NAMES,DICT_LINKS,INTROS,TONE_NAMES = map(dict, result)
+fields = [i[0] for i in c.description]
+KEYS = [i["簡稱"] for i in result]
+NAMES = {i["簡稱"]:i["語言"] for i in result}
+SEARCH_AS_NAMES = {i["簡稱"]:i["語言"] for i in result}
+COLORS = {i["簡稱"]:i["地圖集二顏色"] for i in result}
+INTROS = {i["簡稱"]:i["說明"] for i in result}
 
 import cgitb
 cgitb.enable()
@@ -32,12 +38,12 @@ cgitb.enable()
 import cgi
 print("Content-type: text/html; charset=UTF-8\n")
 form = cgi.FieldStorage()
-key = form.getvalue("key", "hz")
-charset = form.getvalue("charset", "hz")
+key = form.getvalue("key", "漢字")
+charset = form.getvalue("charset", "漢字")
 variant = form.getvalue("variant", False)
 language = form.getvalue("language", ".+")
 tone = form.getvalue("tone", 0)
-hzs = form.getvalue("hz", sys.argv[1] if len(sys.argv) == 2 else "")
+hzs = form.getvalue("漢字", sys.argv[1] if len(sys.argv) == 2 else "")
 
 print("""<html lang=ko>
 <head>
@@ -97,7 +103,7 @@ print("""<html lang=ko>
 """%getString("app_name"))
 
 KEYS_READING = list(filter(lambda k: "_" in k, KEYS))
-KEYS_Y = ("sw", "kx", "hd")
+KEYS_Y = ("說文", "康熙", "漢大", "匯纂")
 
 def rich(r, k):
 	s = r[k]
@@ -136,38 +142,38 @@ def toUnicode(c):
 
 def getCharsetSQL():
 	sql = ""
-	if charset == "hz":
+	if charset == "漢字":
 		pass
 	elif charset in ("ltc_mc", "sw", "kx", "hd"):
 		sql = "AND %s IS NOT NULL" % charset
 	else:
-		sql = "AND fl MATCH '%s'" % charset
+		sql = "AND 分類 MATCH '%s'" % charset
 	return sql
 
 if hzs:
 	hzs = hzs.decode("U8").strip()
 else:
-	print(INTROS.get(key, INTROS["hz"]))
+	print(INTROS.get(key, INTROS["漢字"]))
 	conn.close()
 	exit()
 
 if not language: language = key
 word = "MATCH"
 s = ""
-if (key == "hz" or "_" in key) and isUnicode(hzs):
+if (key == "漢字" or "_" in key) and isUnicode(hzs):
 	hzs = toUnicode(hzs)
-	key = "hz"
+	key = "漢字"
 if "_" in key and isHZ(hzs):
-	key = "hz"
-if key == "hz" and re.match("[a-zA-Zü]+[0-5?]?", hzs):
+	key = "漢字"
+if key == "漢字" and re.match("[a-zA-Zü]+[0-5?]?", hzs):
 	key = "cmn_"
 if key in KEYS_Y:
 	if len(hzs) == 1 and isHZ(hzs):
-		key = "hz"
+		key = "漢字"
 	else:
 		word = "LIKE"
 		hzs = "%%%s%%" % hzs
-if key != "hz":
+if key != "漢字":
 	if not isHZ(hzs):
 		variant = False
 	hzs = (hzs,)
@@ -175,7 +181,7 @@ if key != "hz":
 def getKeys(key):
 	keys = [key]
 	if variant:
-		keys.append("va")
+		keys.append("異體字")
 	elif key == "wbh":
 		keys = list(filter(lambda k: k.startswith("wb"), KEYS))
 	elif key == "ja_any":
@@ -183,7 +189,7 @@ def getKeys(key):
 	return keys
 
 def getSelect(key, value):
-	return 'SELECT *,offsets(mcpdict) AS vaIndex FROM mcpdict where (`%s` %s "%s") AND rowid > 7 %s' % (key, word, value, getCharsetSQL())
+	return 'SELECT *,offsets(mcpdict) AS vaIndex FROM mcpdict where (`%s` %s "%s") %s' % (key, word, value, getCharsetSQL())
 
 regions={
 	'och_':'歷史音',
@@ -242,14 +248,14 @@ for value in hzs:
 	sqls = list(map(lambda x: getSelect(x, value), getKeys(key)))
 	sqls = (' UNION '.join(sqls)) + 'ORDER BY vaIndex LIMIT 10'
 	for r in c.execute(sqls):
-		hz = r["hz"]
+		hz = r["漢字"]
 		s += "<p><div class=hz>%s</div>"%(hz)
 		if hz != value and variant:
 			s += "<div class=variant>（%s）</div>"%(value)
 		s += "<div class=y>U+%04X</div>" % (ord(hz))
 		for k in KEYS_Y:
 			if r[k]:
-				s += "<div class=y>%s</div>" % (NAMES[k])
+				s += "<div class=y>%s</div>" % (NAMES.get(k, k))
 		s += "</div>\n"
 		last = ""
 		for k in KEYS_READING:
