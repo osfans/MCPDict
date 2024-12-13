@@ -17,6 +17,8 @@ def getString(name):
 	l = root.findall("string[@name='%s']" % name)[0]
 	return l.text
 
+HZ = "漢字"
+
 import sqlite3
 dbname = os.path.join(cur, 'mcpdict.db')
 conn = sqlite3.connect(dbname)
@@ -24,13 +26,33 @@ conn.row_factory = sqlite3.Row
 c = conn.cursor()
 c.execute("SELECT * FROM info")
 result = c.fetchall()
-#SEARCH_AS_NAMES,NAMES,COLORS,DICT_NAMES,DICT_LINKS,INTROS,TONE_NAMES = map(dict, result)
-fields = [i[0] for i in c.description]
-KEYS = [i["簡稱"] for i in result]
-NAMES = {i["簡稱"]:i["語言"] for i in result}
-SEARCH_AS_NAMES = {i["簡稱"]:i["語言"] for i in result}
-COLORS = {i["簡稱"]:i["地圖集二顏色"] for i in result}
-INTROS = {i["簡稱"]:i["說明"] for i in result}
+#SEARCH_AS_NAMES,COLORS,DICT_NAMES,DICT_LINKS,INTROS,TONE_NAMES = map(dict, result)
+KEYS = [i["簡稱"].encode() for i in result]
+KEYS_READING = [i["簡稱"].encode() for i in result if i["音節數"]]
+KEYS_Y = ("說文", "康熙", "漢大", "匯纂")
+
+LANGUAGES = {i["簡稱"].encode():i["語言"] for i in result}
+COLORS = {i["簡稱"].encode():i["地圖集二顏色"] for i in result}
+
+def formatIntro(i):
+	s = ""
+	if i["簡稱"].encode() == HZ:
+		for k in ("版本","字數","說明"):
+			if i[k]:
+				s += "%s：%s<br/>" % (k, i[k])
+		# if s: s += "<br/>"
+		# if i["說明"]:
+		# 	s += i["說明"]	
+	else:
+		for k in ("地點","經緯度", "作者", "錄入人", "維護人","來源", "參考文獻","文件名","版本","字數","□數", "音節數","不帶調音節數"):
+			if i[k]:
+				s += "%s：%s<br/>" % (k, i[k])
+		if s: s += "<br/>"
+		if i["說明"]:
+			s += i["說明"]
+	return s
+
+INTROS = {i["簡稱"].encode():formatIntro(i) for i in result}
 
 import cgitb
 cgitb.enable()
@@ -38,12 +60,13 @@ cgitb.enable()
 import cgi
 print("Content-type: text/html; charset=UTF-8\n")
 form = cgi.FieldStorage()
-key = form.getvalue("key", "漢字")
-charset = form.getvalue("charset", "漢字")
+lang = form.getvalue("lang", HZ)
+orgLang = lang
+charset = form.getvalue("charset", HZ)
 variant = form.getvalue("variant", False)
-language = form.getvalue("language", ".+")
+filter = form.getvalue("filter", "顯示全部")
 tone = form.getvalue("tone", 0)
-hzs = form.getvalue("漢字", sys.argv[1] if len(sys.argv) == 2 else "")
+hzs = form.getvalue(HZ, sys.argv[1] if len(sys.argv) == 2 else "")
 
 print("""<html lang=ko>
 <head>
@@ -102,12 +125,10 @@ print("""<html lang=ko>
 </head><body>
 """%getString("app_name"))
 
-KEYS_READING = list(filter(lambda k: "_" in k, KEYS))
-KEYS_Y = ("說文", "康熙", "漢大", "匯纂")
-
 def rich(r, k):
 	s = r[k]
-	if k == "och_ba": return s
+	if k == "白-沙": return s
+	s = s.replace(" ", "")
 	s = re.sub(", ?", ", ", s)
 	s = s.replace("\n", "<br>")
 	s = re.sub("\{(.*?)\}", "<div class=desc>\\1</div>", s)
@@ -142,7 +163,7 @@ def toUnicode(c):
 
 def getCharsetSQL():
 	sql = ""
-	if charset == "漢字":
+	if charset == HZ:
 		pass
 	elif charset in ("ltc_mc", "sw", "kx", "hd"):
 		sql = "AND %s IS NOT NULL" % charset
@@ -153,27 +174,26 @@ def getCharsetSQL():
 if hzs:
 	hzs = hzs.decode("U8").strip()
 else:
-	print(INTROS.get(key, INTROS["漢字"]))
+	print(INTROS.get(lang, INTROS[HZ]))
 	conn.close()
 	exit()
 
-if not language: language = key
+if not filter: filter = lang
 word = "MATCH"
 s = ""
-if (key == "漢字" or "_" in key) and isUnicode(hzs):
+if isUnicode(hzs):
 	hzs = toUnicode(hzs)
-	key = "漢字"
-if "_" in key and isHZ(hzs):
-	key = "漢字"
-if key == "漢字" and re.match("[a-zA-Zü]+[0-5?]?", hzs):
-	key = "cmn_"
-if key in KEYS_Y:
+if isHZ(hzs):
+	lang = HZ
+if lang == HZ and re.match("[a-zA-Zü]+[0-5?]?", hzs):
+	lang = "cmn_"
+if lang in KEYS_Y:
 	if len(hzs) == 1 and isHZ(hzs):
-		key = "漢字"
+		lang = HZ
 	else:
 		word = "LIKE"
 		hzs = "%%%s%%" % hzs
-if key != "漢字":
+if lang != HZ:
 	if not isHZ(hzs):
 		variant = False
 	hzs = (hzs,)
@@ -181,15 +201,19 @@ if key != "漢字":
 def getKeys(key):
 	keys = [key]
 	if variant:
+		keys.append(HZ)
 		keys.append("異體字")
-	elif key == "wbh":
-		keys = list(filter(lambda k: k.startswith("wb"), KEYS))
 	elif key == "ja_any":
 		keys = list(filter(lambda k: k.startswith("ja_"), KEYS))
 	return keys
 
 def getSelect(key, value):
 	return 'SELECT *,offsets(mcpdict) AS vaIndex FROM mcpdict where (`%s` %s "%s") %s' % (key, word, value, getCharsetSQL())
+
+def getVisibleColumns(filter):
+	if filter == "當前語言": return [orgLang]
+	if filter == "僅漢字": return []
+	return KEYS_READING
 
 regions={
 	'och_':'歷史音',
@@ -231,7 +255,7 @@ def getRegionDiff(k, last):
 	return k.count("-") - last.count("-")
 
 def getColorName(k):
-	name = NAMES[k]
+	name = k
 	color = COLORS[k]
 	fmt = "<font color=%s>%s</font>"
 	if "," in color:
@@ -243,23 +267,21 @@ def getColorName(k):
 			s += fmt % (colors[1 - i], names[i])
 		return s
 	return fmt % (color, name)
-
 for value in hzs:
-	sqls = list(map(lambda x: getSelect(x, value), getKeys(key)))
+	sqls = list(map(lambda x: getSelect(x, value), getKeys(lang)))
 	sqls = (' UNION '.join(sqls)) + 'ORDER BY vaIndex LIMIT 10'
 	for r in c.execute(sqls):
-		hz = r["漢字"]
+		hz = r[HZ]
 		s += "<p><div class=hz>%s</div>"%(hz)
 		if hz != value and variant:
 			s += "<div class=variant>（%s）</div>"%(value)
 		s += "<div class=y>U+%04X</div>" % (ord(hz))
 		for k in KEYS_Y:
 			if r[k]:
-				s += "<div class=y>%s</div>" % (NAMES.get(k, k))
+				s += "<div class=y>%s</div>" % (k)
 		s += "</div>\n"
 		last = ""
-		for k in KEYS_READING:
-			if not re.match(language, k): continue
+		for k in getVisibleColumns(filter):
 			if r[k]:
 				region = getRegion(k)
 				if region != last:
