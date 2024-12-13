@@ -102,7 +102,7 @@
 椅	∅i[3]	ʔi[3]	
 已	∅i[3]	ʔi[3]	
 以	∅i[3]	ʔi[3]	
-与	yi[3]	yi[3]	
+与	yi[3]	ji[3]	
 菩	pu[2]	pu[2]	
 葡	pu[2]	pu[2]	~萄
 □	pu[2]	pu[2]	量词，朵
@@ -200,7 +200,7 @@
 汝	nüi[3]	nyi[3]	你
 煮	chüi[3]	tʃyi[3]	
 主	chüi[3]	tʃyi[3]	2~义
-水	chüi[3]	tʃyi[3]	校补，便于匹配
+水	chüi[3]	tʃyi[3]	
 沝	chüi[3]	tʃyi[3]	水。本文中写作“水”
 □	chüi[3]	tʃyi[3]	~娘囝：女儿
 鼠	ch'üi[3]	tʃʰyi[3]	
@@ -231,7 +231,7 @@
 骂	ma[5]	ma[5]	
 爸	ma[6]	ma[6]	郎～：父亲
 □	ta[1]	ta[1]	干燥
-焦	ta[1]	ta[1]	校补，便于匹配：干燥
+焦	ta[1]	ta[1]	干燥
 茶	ta[2]	ta[2]	
 打	ta[3]	ta[3]	
 他	t'a[1]	tʰa[1]	
@@ -248,8 +248,8 @@
 叉	ch'a[1]	tʃʰa[1]	
 差	ch'a[1]	tʃʰa[1]	~不多
 □	ch'a[2]	tʃʰa[2]	柴
-樵	ch'a[2]	tʃʰa[2]	校补，便于匹配柴
-柴	ch'a[2]	tʃʰa[2]	校补，便于匹配：柴
+樵	ch'a[2]	tʃʰa[2]	柴
+柴	ch'a[2]	tʃʰa[2]	柴
 炒	ch'a[3]	tʃʰa[3]	
 纱	sa[1]	sa[1]	
 砂	sa[1]	sa[1]	2
@@ -405,7 +405,7 @@
 头	t'au[2]	tʰau[2]	
 透	t'au[5]	tʰau[5]	
 □	t'au[5]	tʰau[5]	用毒药毒害致死
-毒	t'au[5]	tʰau[5]	校补，便于匹配：用毒药毒害致死
+毒	t'au[5]	tʰau[5]	用毒药毒害致死
 闹	nau[6]	nau[6]	
 □	lau[1]	lau[1]	老虎
 萝	lau[2]	lau[2]	2～卜
@@ -551,13 +551,13 @@
 艾	ngie[5]	ŋiɛ[5]	
 外	ngie[6]	ŋiɛ[6]	1～爿：外边
 蚁	ngie[6]	ŋiɛ[6]	
-爷	yie[2]	yiɛ[2]	
-耶	yie[2]	yiɛ[2]	~稣
-野	yie[3]	yiɛ[3]	
-墅	yie[3]	yiɛ[3]	别~
-也	yie[6]	yiɛ[6]	
-夜	yie[6]	yiɛ[6]	
-□	yie[6]	yiɛ[6]	~种：撒种
+爷	yie[2]	jiɛ[2]	
+耶	yie[2]	jiɛ[2]	~稣
+野	yie[3]	jiɛ[3]	
+墅	yie[3]	jiɛ[3]	别~
+也	yie[6]	jiɛ[6]	
+夜	yie[6]	jiɛ[6]	
+□	yie[6]	jiɛ[6]	~种：撒种
 浮	p'eu[2]	pʰɛu[2]	2轻~
 谋	meu[2]	mɛu[2]	
 牟	meu[2]	mɛu[2]	释迦~尼
@@ -816,7 +816,7 @@
 媚	mei[6]	me[6]	
 寐	mei[6]	me[6]	
 □	mei[6]	me[6]	～水底：潜水
-沕	mei[6]	me[6]	校补，便于匹配：～水底：潜水
+沕	mei[6]	me[6]	～水底：潜水
 知	tei[1]	te[1]	
 蜘	tei[1]	te[1]	
 迟	tei[2]	te[2]	
@@ -926,7 +926,7 @@
 宙	teiu[5]	teu[5]	
 住	teiu[6]	teu[6]	1
 □	teiu[6]	teu[6]	稻子
-粙	teiu[6]	teu[6]	校补，便于匹配：稻子
+粙	teiu[6]	teu[6]	稻子
 抽	t'eiu[1]	tʰeu[1]	
 稠	t'eiu[2]	tʰeu[2]	~密
 绸	t'eiu[2]	tʰeu[2]	
@@ -1240,7 +1240,7 @@
 趋	ch'oui[5]	tʃʰoi[5]	~向
 趣	ch'oui[5]	tʃʰoi[5]	
 □	ch'oui[5]	tʃʰoi[5]	嘴。本文中写作“喙”
-喙	ch'oui[5]	tʃʰoi[5]	校补，便于匹配：嘴
+喙	ch'oui[5]	tʃʰoi[5]	嘴
 𧄔	soui[2]	soi[2]	蕃~：白薯
 殊	soui[2]	soi[2]	
 随	soui[2]	soi[2]	
@@ -1439,9 +1439,9 @@
 嫌	him[2]	him[2]	
 险	him[3]	him[3]	
 饮	∅im[3]	ʔim[3]	2～料
-延	yim[2]	yim[2]	
-掩	yim[3]	yim[3]	
-厌	yim[5]	yim[5]	
+延	yim[2]	jim[2]	
+掩	yim[3]	jim[3]	
+厌	yim[5]	jim[5]	
 碟	tip[8]	tip[8]	
 捏	nip[7]	nip[7]	2
 接	chip[7]	tʃip[7]	
@@ -1460,8 +1460,8 @@
 协	hip[8]	hip[8]	
 侠	hip[8]	hip[8]	
 穴	hip[8]	hip[8]	太阳~
-叶	yip[8]	yip[8]	
-入	yip[8]	yip[8]	2收~
+叶	yip[8]	jip[8]	
+入	yip[8]	jip[8]	2收~
 耽	tam[1]	tam[1]	
 担	tam[1]	tam[1]	动词
 □	tam[1]	tam[1]	□pin3～虮：一种蚂蟥，较大
@@ -1553,7 +1553,7 @@
 巖	ngiam[2]	ŋiam[2]	
 严	ngiam[2]	ŋiam[2]	
 验	ngiam[6]	ŋiam[6]	
-焰	yiam[6]	yiam[6]	
+焰	yiam[6]	jiam[6]	
 □	tiap[7]	tiap[7]	鞋~：拖鞋
 镊	niap[7]	niap[7]	
 湿	siap[7]	siap[7]	1
@@ -1564,7 +1564,7 @@
 夹	kiap[8]	kiap[8]	2～棍
 屐	kiap[8]	kiap[8]	1
 吓	hiap[7]	hiap[7]	
-页	yiap[8]	yiap[8]	
+页	yiap[8]	jiap[8]	
 店	tem[5]	tɛm[5]	
 簟	tem[6]	tɛm[6]	
 垫	tem[6]	tɛm[6]	
@@ -1580,7 +1580,7 @@
 帖	t'ep[7]	tʰɛp[7]	量词，用于药
 叠	t'ep[8]	tʰɛp[8]	
 □	nep[7]	nɛp[7]	凹
-凹	nep[7]	nɛp[7]	校补，便于匹配：凹
+凹	nep[7]	nɛp[7]	凹
 捏	nep[7]	nɛp[7]	1
 汁	chep[7]	tʃɛp[7]	
 □	sep[7]	sɛp[7]	菜肴
@@ -1665,7 +1665,7 @@
 □	tin[6]	tin[6]	～动：动
 天	t'in[1]	tʰin[1]	
 □	t'in[5]	tʰin[5]	缝，动词
-䋎	t'in[5]	tʰin[5]	校补，便于匹配：缝，动词
+䋎	t'in[5]	tʰin[5]	缝，动词
 儿	nin[2]	nin[2]	1～婿：女婿
 年	nin[2]	nin[2]	
 □	nin[6]	nin[6]	绞，拧
@@ -1721,14 +1721,14 @@
 宪	hin[5]	hin[5]	
 现	hin[6]	hin[6]	
 引	∅in[3]	ʔin[3]	
-烟	yin[1]	yin[1]	乌前切
-圆	yin[2]	yin[2]	1地球～
-铅	yin[2]	yin[2]	2~字
-忍	yin[3]	yin[3]	
-允	yin[3]	yin[3]	~许
-燕	yin[5]	yin[5]	鸟名
-演	yin[6]	yin[6]	
-院	yin[6]	yin[6]	
+烟	yin[1]	jin[1]	乌前切
+圆	yin[2]	jin[2]	1地球～
+铅	yin[2]	jin[2]	2~字
+忍	yin[3]	jin[3]	
+允	yin[3]	jin[3]	~许
+燕	yin[5]	jin[5]	鸟名
+演	yin[6]	jin[6]	
+院	yin[6]	jin[6]	
 鳖	pit[7]	pit[7]	
 别	pit[8]	pit[8]	特~
 撇	p'it[7]	pʰit[7]	
@@ -1765,9 +1765,9 @@
 给	kit[7]	kit[7]	2
 怯	k'it[7]	kʰit[7]	
 □	∅it[7]	ʔit[7]	～起身：起身
-谒	yit[7]	yin[7]	
-热	yit[8]	yin[8]	
-阅	yit[8]	yin[8]	
+谒	yit[7]	jit[7]	
+热	yit[8]	jit[8]	
+阅	yit[8]	jit[8]	
 分	pun[1]	pun[1]	1～家
 □	pun[2]	pun[2]	丸
 本	pun[2]	pun[2]	
@@ -1854,16 +1854,16 @@
 佛	hut[7]	hut[7]	仿~
 拂	hut[7]	hut[7]	
 越	hut[8]	hut[8]	超~
-件	küin[6]	kyin[6]	
-言	ngüin[2]	ŋyin[2]	
-砚	ngüin[5]	ŋyin[5]	2
-献	hüin[5]	hyin[5]	
-隐	∅üin[3]	ʔyin[3]	
-然	yüin[2]	jyin[2]	
-缘	yüin[2]	jyin[2]	
-铅	yüin[2]	jyin[2]	1白
-羯	küit[7]	kyin[7]	阉
-歇	hüit[7]	hyin[7]	休息
+件	küin[6]	kjin[6]	
+言	ngüin[2]	ŋjin[2]	
+砚	ngüin[5]	ŋjin[5]	2
+献	hüin[5]	hjin[5]	
+隐	∅üin[3]	ʔjin[3]	
+然	yüin[2]	jjin[2]	
+缘	yüin[2]	jjin[2]	
+铅	yüin[2]	jjin[2]	1白
+羯	küit[7]	kjin[7]	阉
+歇	hüit[7]	hjin[7]	休息
 班	pan[1]	pan[1]	
 扳	pan[3]	pan[3]	~手
 板	pan[3]	pan[3]	2老~
@@ -2236,7 +2236,7 @@
 阈	peit[8]	pet[8]	
 役	peit[8]	pet[8]	劳~
 □	peit[8]	pet[8]	开裂。阳入
-必	peit[8]	pet[8]	校补，便于匹配：开裂。阳入
+必	peit[8]	pet[8]	开裂。阳入
 蜜	meit[8]	met[8]	
 适	teit[7]	tet[7]	2～用
 □	teit[7]	tet[7]	～农惜：可爱
@@ -2475,8 +2475,8 @@
 镜	kiang[5]	kiaŋ[5]	
 迎	ngiang[2]	ŋiaŋ[2]	
 兄	hiang[1]	hiaŋ[1]	1~弟
-赢	yiang[2]	yiaŋ[2]	
-营	yiang[2]	yiaŋ[2]	军队的编制单位
+赢	yiang[2]	jiaŋ[2]	
+营	yiang[2]	jiaŋ[2]	军队的编制单位
 □	tiac[8]	tiak[8]	~蜀下：惊一下
 领	leang[3]	leaŋ[3]	
 岭	leang[3]	leaŋ[3]	
@@ -2692,12 +2692,12 @@
 却	k'ioc[7]	kʰiɔk[7]	
 剧	k'ioc[8]	kʰiɔk[8]	悲~
 虐	ngioc[8]	ŋiɔk[8]	
-约	yioc[7]	yiɔk[7]	
-若	yioc[8]	yiɔk[8]	2～干
-弱	yioc[8]	yiɔk[8]	
-育	yioc[8]	yiɔk[8]	
-辱	yioc[8]	yiɔk[8]	
-欲	yioc[8]	yiɔk[8]	爱~，据INTRɔDUkkIɔN第V页,Ibañɛz修道士原来的“欲”字标音还有jok
+约	yioc[7]	jiɔk[7]	
+若	yioc[8]	jiɔk[8]	2～干
+弱	yioc[8]	jiɔk[8]	
+育	yioc[8]	jiɔk[8]	
+辱	yioc[8]	jiɔk[8]	
+欲	yioc[8]	jiɔk[8]	爱~，据INTRɔDUkkIɔN第V页,Ibañɛz修道士原来的“欲”字标音还有jok
 良	leong[2]	leɔŋ[2]	
 量	leong[2]	leɔŋ[2]	动词
 凉	leong[2]	leɔŋ[2]	
@@ -3106,7 +3106,7 @@
 畜	huec[7]	høk[7]	饲养
 □	∅uec[7]	ʔøk[7]	啼哭时的声音
 □	li[7]	liʔ[7]	助词，相当于“了”或“掉”
-悦	yi[8]	yiʔ[8]	
+悦	yi[8]	jiʔ[8]	
 剥	pu[7]	puʔ[7]	
 缚	pu[8]	puʔ[8]	
 曝	p'u[8]	pʰuʔ[8]	晒
@@ -3126,13 +3126,13 @@
 借	chüi[7]	tʃyiʔ[7]	
 尺	ch'üi[7]	tʃʰyiʔ[7]	
 蓆	ch'üi[8]	tʃʰyiʔ[8]	
-席	ch'üi[8]	tʃʰyiʔ[8]	校补便于匹配
+席	ch'üi[8]	tʃʰyiʔ[8]	
 石	ch'üi[8]	tʃʰyiʔ[8]	
 惜	süi[7]	syiʔ[7]	1爱~；□tet7农~：可爱
 射	süi[8]	syiʔ[8]	食亦切～箭
 □	süi[8]	syiʔ[8]	一。本文中写作“蜀”
-一	süi[8]	syiʔ[8]	一。校补，便于匹配
-蜀	süi[8]	syiʔ[8]	一。校补，便于匹配
+一	süi[8]	syiʔ[8]	一
+蜀	süi[8]	syiʔ[8]	一
 药	yüi[8]	jyiʔ[8]	
 百	pa[7]	paʔ[7]	
 伯	pa[7]	paʔ[7]	
@@ -3172,7 +3172,7 @@
 □	to[7]	tɔʔ[7]	鞋～：脚后跟
 □	to[8]	tɔʔ[8]	挑选
 □	no[7]	nɔʔ[7]	东西。本文中写作“乇”
-乇	no[7]	nɔʔ[7]	东西。校补，便于匹配
+乇	no[7]	nɔʔ[7]	东西。
 □	lo[7]	lɔʔ[7]	套
 □	lo[7]	lɔʔ[7]	□kɔʔ7~下：腋下
 落	lo[8]	lɔʔ[8]	2
