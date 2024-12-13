@@ -229,6 +229,9 @@ class 表(_表):
 			sd = sd.strip("[]")
 			yb = sm + ym + sd
 			js = (js + " " +bz).strip()
+		elif name in ("宜章梅田",):
+			hz,sm,ym,sd,js = fs[:5]
+			yb = sm + ym + sd
 		elif name in ("蒼南宜山",):
 			sm,ym,sd,hz,js = fs[:5]
 			sd = sd.strip("[]")
