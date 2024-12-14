@@ -269,6 +269,7 @@ class 表:
 		if self.isLang() and self.isYb:
 			yb = yb.strip()
 			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("0∅Ø〇零")
+			if yb.startswith("I") or yb.startswith("1"): yb = "l" + yb[1:]
 			yb = yb.lower().replace("g", "ɡ").replace("ʼ", "ʰ")
 			if not yb.startswith("h") and "h" in yb:
 				yb = yb.replace("h", "ʰ")
@@ -278,7 +279,7 @@ class 表:
 		return yb
 
 	def isDialect(self):
-		return self.langType and not self.langType.startswith("歷史音")
+		return self.langType and (not self.langType.startswith("歷史音") or str(self) in ("老國音",))
 
 	def isDictionary(self):
 		return self.dictionary

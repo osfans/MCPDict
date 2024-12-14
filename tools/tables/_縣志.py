@@ -188,7 +188,8 @@ class 表(_表):
 			if line.startswith("["):
 				line = self.sm + line
 			else:
-				self.sm = line.split("[")[0].lstrip("q")
+				self.sm = line.split("[")[0]
+			line = line.lstrip("q")
 		elif name in ("天台城關"):
 			line = re.sub(r"(\d)", "[\\1]", line)
 			line = re.sub(r"^(.*?)(\[)", "\\1	\\2", line)
