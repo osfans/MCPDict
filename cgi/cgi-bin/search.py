@@ -1,129 +1,14 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-import sys, re, os
-reload(sys)
-sys.setdefaultencoding('utf-8')
+from common import *
 
-import xml.etree.ElementTree as ET
-cur = os.path.abspath(os.path.dirname(__file__))
-xmlname = os.path.join(cur, "strings.xml")
-tree = ET.parse(xmlname)
-root = tree.getroot()
-def getStrings(name):
-	l = root.findall("string-array[@name='%s']/*" % name)
-	return [i.text for i in l]
-
-def getString(name):
-	l = root.findall("string[@name='%s']" % name)[0]
-	return l.text
-
-HZ = "漢字"
-
-import sqlite3
-dbname = os.path.join(cur, 'mcpdict.db')
-conn = sqlite3.connect(dbname)
-conn.row_factory = sqlite3.Row
-c = conn.cursor()
-c.execute("SELECT * FROM info")
-result = c.fetchall()
-#SEARCH_AS_NAMES,COLORS,DICT_NAMES,DICT_LINKS,INTROS,TONE_NAMES = map(dict, result)
-KEYS = [i["簡稱"].encode() for i in result]
-KEYS_READING = [i["簡稱"].encode() for i in result if i["音節數"]]
-KEYS_Y = ("說文", "康熙", "漢大", "匯纂")
-
-LANGUAGES = {i["簡稱"].encode():i["語言"] for i in result}
-COLORS = {i["簡稱"].encode():i["地圖集二顏色"] for i in result}
-
-def formatIntro(i):
-	s = ""
-	if i["簡稱"].encode() == HZ:
-		for k in ("版本","字數","說明"):
-			if i[k]:
-				s += "%s：%s<br/>" % (k, i[k])
-		# if s: s += "<br/>"
-		# if i["說明"]:
-		# 	s += i["說明"]	
-	else:
-		for k in ("地點","經緯度", "作者", "錄入人", "維護人","來源", "參考文獻","文件名","版本","字數","□數", "音節數","不帶調音節數"):
-			if i[k]:
-				s += "%s：%s<br/>" % (k, i[k])
-		if s: s += "<br/>"
-		if i["說明"]:
-			s += i["說明"]
-	return s
-
-INTROS = {i["簡稱"].encode():formatIntro(i) for i in result}
-
-import cgitb
-cgitb.enable()
-
-import cgi
-print("Content-type: text/html; charset=UTF-8\n")
-form = cgi.FieldStorage()
-lang = form.getvalue("lang", HZ)
-orgLang = lang
 charset = form.getvalue("charset", HZ)
-variant = form.getvalue("variant", False)
+variant = form.getvalue("variant", False) if searchType == HZ else False
 filter = form.getvalue("filter", "顯示全部")
 tone = form.getvalue("tone", 0)
 hzs = form.getvalue(HZ, sys.argv[1] if len(sys.argv) == 2 else "")
 
-print("""<html lang=ko>
-<head>
-	<title>%s</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
-	<style>
-		@font-face {
-			font-family: ipa;
-			src: url(/ipa.ttf);
-		}
-		div {
-			display:inline-block;
-			align: left;
-		}
-		.place {
-			border: 1px black solid;
-			padding: 0 3px;
-			border-radius: 5px;
-			text-align: center;
-			vertical-align: top;
-			transform-origin: right;
-			font-size: 80%%;
-		}
-		body {
-			font-family: ipa, sans;
-		}
-		.ipa {
-			padding: 0 5px;
-		}
-		.desc {
-			font-size: 70%%;
-		}
-		.hz {
-			font-size: 300%%;
-			color: #9D261D;
-		}
-		.variant {
-			color: #808080;
-		}
-		.y {
-			color: #1E90FF;
-			margin: 0 5px;
-		}
-		p {
-			margin: 0.2em 0;
-		}
-		td {
-			vertical-align: top;
-			align: left;
-		}
-		ul {
-			margin: 1px;
-			padding: 0px 6px;
-		}
-	</style>
-</head><body>
-"""%getString("app_name"))
+print(getStringFromFile("search.html", APP))
 
 def rich(r, k):
 	s = r[k]
@@ -135,23 +20,6 @@ def rich(r, k):
 	s = re.sub("\|(.*?)\|", "<font color='#808080'>\\1</font>", s)
 	s = re.sub("\*(.*?)\*", "<b>\\1</b>", s)
 	return s
-
-def isHZ(c):
-	uni = ord(c[0])
-	return (uni >= 0x4E00 and uni <= 0x9FFF)\
-		 or uni == 0x25A1\
-		 or uni == 0x3007\
-		 or (uni >= 0x3400 and uni <= 0x4DBF)\
-		 or (uni >= 0x20000 and uni <= 0x2A6DF)\
-		 or (uni >= 0x2A700 and uni <= 0x2B73F)\
-		 or (uni >= 0x2B740 and uni <= 0x2B81F)\
-		 or (uni >= 0x2B820 and uni <= 0x2CEAF)\
-		 or (uni >= 0x2CEB0 and uni <= 0x2EBEF)\
-		 or (uni >= 0x30000 and uni <= 0x3134F)\
-		 or (uni >= 0x31350 and uni <= 0x323AF)\
-		 or (uni >= 0x2EBF0 and uni <= 0x2EE5F)\
-		 or (uni >= 0xF900 and uni <= 0xFAFF)\
-		 or (uni >= 0x2F800 and uni <= 0x2FA1F)
 
 def isUnicode(c):
 	return re.match("^(U\\+)?[0-9A-Fa-f]{4,5}$", c) != None
@@ -165,10 +33,10 @@ def getCharsetSQL():
 	sql = ""
 	if charset == HZ:
 		pass
-	elif charset in ("ltc_mc", "sw", "kx", "hd"):
+	elif charset in KEYS_DICT or charset == GY:
 		sql = "AND %s IS NOT NULL" % charset
 	else:
-		sql = "AND 分類 MATCH '%s'" % charset
+		sql = "AND 分類 LIKE '%%%s%%'" % charset
 	return sql
 
 if hzs:
@@ -181,30 +49,33 @@ else:
 if not filter: filter = lang
 word = "MATCH"
 s = ""
-if isUnicode(hzs):
-	hzs = toUnicode(hzs)
-if isHZ(hzs):
-	lang = HZ
-if lang == HZ and re.match("[a-zA-Zü]+[0-5?]?", hzs):
-	lang = "cmn_"
-if lang in KEYS_Y:
-	if len(hzs) == 1 and isHZ(hzs):
+if searchType == HZ or searchType == YIN: 
+	if isUnicode(hzs):
+		hzs = toUnicode(hzs)
+	if isHZ(hzs):
 		lang = HZ
-	else:
-		word = "LIKE"
-		hzs = "%%%s%%" % hzs
-if lang != HZ:
-	if not isHZ(hzs):
-		variant = False
-	hzs = (hzs,)
+	if lang == HZ and re.match("[a-zA-Zü]+[0-5?]?", hzs):
+		lang = "cmn_"
+	if lang in KEYS_DICT:
+		if len(hzs) == 1 and isHZ(hzs):
+			lang = HZ
+		else:
+			word = "LIKE"
+			hzs = "%%%s%%" % hzs
+	if lang != HZ:
+		if not isHZ(hzs):
+			variant = False
+		hzs = (hzs,)
+elif searchType == DICT:
+	lang = dict
+	if lang == DICT_HEAD: lang = TABLE_NAME
 
 def getKeys(key):
 	keys = [key]
 	if variant:
 		keys.append(HZ)
 		keys.append("異體字")
-	elif key == "ja_any":
-		keys = list(filter(lambda k: k.startswith("ja_"), KEYS))
+	elif key in KEYS_JA: keys = KEYS_JA
 	return keys
 
 def getSelect(key, value):
@@ -212,8 +83,9 @@ def getSelect(key, value):
 
 def getVisibleColumns(filter):
 	if filter == "當前語言": return [orgLang]
+	if filter == "僅方言島": return ISLANDS
 	if filter == "僅漢字": return []
-	return KEYS_READING
+	return KEYS
 
 regions={
 	'och_':'歷史音',
@@ -267,40 +139,50 @@ def getColorName(k):
 			s += fmt % (colors[1 - i], names[i])
 		return s
 	return fmt % (color, name)
-for value in hzs:
-	sqls = list(map(lambda x: getSelect(x, value), getKeys(lang)))
-	sqls = (' UNION '.join(sqls)) + 'ORDER BY vaIndex LIMIT 10'
-	for r in c.execute(sqls):
-		hz = r[HZ]
-		s += "<p><div class=hz>%s</div>"%(hz)
-		if hz != value and variant:
-			s += "<div class=variant>（%s）</div>"%(value)
-		s += "<div class=y>U+%04X</div>" % (ord(hz))
-		for k in KEYS_Y:
-			if r[k]:
-				s += "<div class=y>%s</div>" % (k)
-		s += "</div>\n"
-		last = ""
-		for k in getVisibleColumns(filter):
-			if r[k]:
-				region = getRegion(k)
-				if region != last:
-					if last:
-						diff = getRegionDiff(region, last)
-						if diff <= 0:
-							s += "</ul></details>\n" * (1 - diff)
-						else:
-							n = region.count("-")
-							start = 1 if region.startswith(last) else 0
-							for i in range(start, n):
-								if i == 0:
-									s += "</ul></details>\n"
-								s += "<details open><summary>%s</summary><ul>"%region.split("-")[i]
-					s +="<details open><summary>%s</summary><ul>"%region.rsplit("-", 1)[-1]
-					last = region
-				color = COLORS[k].split(",")[0]
-				s += ("<ul><div class=place style='border:1px %s solid;'>%s</div><div class=ipa>%s</div></ul>"%(color,getColorName(k),rich(r, k)))
-		s+="</ul></details>\n"
+def getVariant(hzs, vars):
+	for i in hzs:
+		if i in vars:
+			return i
+	return ""
+if searchType == DICT or searchType == COMMENT:
+	value = "'%s'" % (" ".join(hzs))
+else:
+	value = " OR ".join(hzs)
+sqls = list(map(lambda x: getSelect(x, value), getKeys(lang)))
+sqls = (' UNION '.join(sqls)) + ' ORDER BY vaIndex LIMIT 10'
+#print(sqls)
+for r in c.execute(sqls):
+	hz = r[HZ]
+	s += "<p><div class=hz>%s</div>"%(hz)
+	if variant:
+		va = getVariant(hzs, r[VA])
+		if va: s += "<div class=variant>（%s）</div>"%(va)
+	s += "<div class=y>U+%04X</div>" % (ord(hz))
+	for k in KEYS_DICT:
+		if r[k]:
+			s += "<div class=y>%s</div>" % (k)
+	s += "</div>\n"
+	last = ""
+	for k in getVisibleColumns(filter):
+		if r[k]:
+			region = getRegion(k)
+			if region != last:
+				if last:
+					diff = getRegionDiff(region, last)
+					if diff <= 0:
+						s += "</ul></details>\n" * (1 - diff)
+					else:
+						n = region.count("-")
+						start = 1 if region.startswith(last) else 0
+						for i in range(start, n):
+							if i == 0:
+								s += "</ul></details>\n"
+							s += "<details open><summary>%s</summary><ul>"%region.split("-")[i]
+				s +="<details open><summary>%s</summary><ul>"%region.rsplit("-", 1)[-1]
+				last = region
+			color = COLORS[k].split(",")[0]
+			s += ("<ul><div class=place style='border:1px %s solid;'>%s</div><div class=ipa>%s</div></ul>"%(color,getColorName(k),rich(r, k)))
+	s+="</ul></details>\n"
 if not s:
 	s = getString("no_matches")
 print(s)

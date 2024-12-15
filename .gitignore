@@ -1,6 +1,5 @@
 gen
 publish
-pretty.py
 .idea/
 .gradle/
 keystore.properties
@@ -13,7 +12,8 @@ build/
 *.xls
 *.xlsx
 *.pdf
-__pycache__
 *.doc
 *.docx
+*.pyc
+__pycache__
 yedict/

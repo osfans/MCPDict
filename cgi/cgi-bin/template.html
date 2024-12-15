@@ -1,0 +1,35 @@
+<html lang=ko>
+<head>
+	<title>%s</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+	<style>
+		@font-face {
+			font-family: ipa;
+			src: url(/ipa.ttf);
+		}
+		body, input[type="text"] {
+			font-family: ipa, sans;
+		}
+	</style>
+</head>
+<body>
+	<p><big>%s</big>&nbsp;&nbsp;<a href="/help" target="_blank">幫助</a>&nbsp;&nbsp;安卓離線版<a href="https://github.com/osfans/MCPDict/releases">下載</a></p>
+	<form id=mcp method=post target="receiver" action="/cgi-bin/search.py">
+		<table>
+			<tr><td><select name="type" onclick="if (value == '辭典') {
+				document.getElementById('lang').style.display = 'none';
+				document.getElementById('dict').style.display = 'inline';
+			} else {
+				document.getElementById('lang').style.display = 'inline';
+				document.getElementById('dict').style.display = 'none';
+			}">%s</select>&nbsp;<input type="text" name="漢字" placeholder="%s" size="15"></input>&nbsp;<input type="button" onclick="漢字.value='';" value=%s />&nbsp;<button>%s</button></td></tr>
+			<tr><td><select id="lang" name="lang" style="width: 30%%">%s</select><select id="dict" name="dict" style="width: 30%%; display:none">%s</select>&nbsp;<select name="filter">%s</select>&nbsp;<button onclick="hzOption.style.display=hzOption.style.display == 'none' ? 'block' : 'none';" >%s</button></tr>
+			<tr id="hzOption" name="hzOption" style="display:none"><td><select name="charset">%s</select>&nbsp;<input type="checkbox" name="variant" checked="checked">%s</input></td></tr>
+		</table>
+	</form>
+	<iframe name="receiver" id="receiver" width=100%% height=70%% frameBorder="0"></iframe>
+	<script>
+		document.getElementById('receiver').srcdoc="<html lang=ko>%s";
+	</script>
+</body>
+</html>
