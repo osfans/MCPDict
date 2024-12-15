@@ -27,7 +27,7 @@ class 表(_表):
 			line = re.sub(r"^(.*?) ?\[", "\\1	[", line)
 		elif name in ("萍鄕","平陽","都昌陽峯"):
 			line = line.lstrip("∅︀")
-		elif name in ("遂川","張家界"):
+		elif name in ("遂川","大庸","大庸三眼橋"):
 			line = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 		elif name in ("奉化",):
 			line = re.sub(r"(\d+)(?![：\d])", lambda x:"[%s]"%self.dz2dl(x[1]), line)
