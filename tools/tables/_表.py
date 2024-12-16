@@ -115,7 +115,7 @@ def run2text(run):
 	text = run.text
 	if tag:
 		text = "".join([i + tag for i in text])
-	if run.font.subscript or (run.font.size and run.font.size < 130000):
+	if run.font.subscript or (run.font.size and run.font.size < 114300):
 		text = f"{{{text}}}"
 	return text
 
@@ -142,6 +142,7 @@ class 表:
 	_time = os.path.getmtime(__file__)
 	_file = None
 	_files = None
+	current_file = ""
 	_sep = None
 	color = "#1E90FF"
 	full = ""
@@ -200,7 +201,7 @@ class 表:
 		sname = g[0]
 		self._file = os.path.basename(sname)
 		if isXls(sname):
-			page = 1 if self.short in ("中山石岐", "通城", "蘇州") else 0
+			page = 1 if self.short in ("中山石岐", "通城") else 0
 			if self.short == "開平護龍": page = 3
 			xls2tsv(sname, page)
 			sname = getTsvName(sname)
@@ -270,12 +271,14 @@ class 表:
 			yb = yb.strip()
 			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("0∅Ø〇零")
 			if yb.startswith("I") or yb.startswith("1"): yb = "l" + yb[1:]
-			yb = yb.lower().replace("g", "ɡ").replace("ʼ", "ʰ")
+			yb = yb.lower().replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ")
 			if not yb.startswith("h") and "h" in yb:
 				yb = yb.replace("h", "ʰ")
 			if self.ybTrimSpace:
 				yb = yb.replace(" ", "")
 			yb = yb.replace("[", "").replace("]", "")
+			yb = re.sub(r"^([mnvʋl])(\d+)$", "\\1\u0329\\2", yb)
+			yb = re.sub(r"^([ŋȵʐɱɻʒ])(\d+)$", "\\1\u030D\\2", yb)
 		return yb
 
 	def isDialect(self):
@@ -441,6 +444,7 @@ class 表:
 		lineno = 0
 		files = self._files if self._files else [self.spath]
 		for spath in files:
+			self.current_file = spath
 			for line in open(spath,encoding="U8"):
 				lineno += 1
 				if lineno <= skip: continue

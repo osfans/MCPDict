@@ -17,9 +17,6 @@ class 表(_表):
 			yb, hz, js = fs[:3]
 		elif name in ("江陰", "江陰新橋", "江陰申港"):
 			_, hz, js, yb = fs[:4]
-		elif name in ("蘇州",):
-			_, hz, sm, ym, sd, js = fs[:6]
-			yb = sm + ym + sd
 		elif name in ("東方八所",):
 			_, hz, sy, sd, js = fs[:5]
 			yb = sy + sd
@@ -189,6 +186,34 @@ class 表(_表):
 				for y,j in zip(yb.split(" "), js.split(" ")):
 					l.append((hz, y, j))
 				return l
+		elif name in (names := ("電白龍山", "羅定漳州話")):
+			if len(fs) < 6: return
+			hz = fs[0]
+			index = names.index(name) + 2
+			ybs = fs[index]
+			ybs = ybs.replace("／", "/")
+			if not ybs or ybs.startswith("—"): return
+			_js = hz[1:] if len(hz)>1 else ""
+			_js = _js.strip("（）")
+			hz = hz[0]
+			l = list()
+			for _yb in ybs.split("/"):
+				_yb = _yb.strip()
+				c = ""
+				if "（" in _yb:
+					n = _yb.index("（")
+					c = _yb[n:]
+					_yb = _yb[:n]
+				yb = self.dz2dl(_yb)
+				js = c + _js
+				if js.startswith("（") and js.endswith("）"):
+					js = js[1:-1]
+				l.append((hz, yb, js))
+			return l
+		elif name in (indexes := {'沅陵深溪口': 2, '沅陵麻溪鋪': 5, '沅陵淸水坪': 12, '沅陵棋坪': 15, '古丈髙峯': 18, '瀘溪八什坪': 29, '瀘溪': 32, '沅陵丑溪口': 35, '沅陵渭溪': 38, '漵浦木溪': 41}):
+			index = indexes[name]
+			hz, js = fs[:2]
+			yb = "".join(fs[index:index+3])
 		elif name in ("陽春河口",):
 			hz, sm, ym, sd, js = fs[9], fs[6], fs[7], fs[4].split("\\")[0], fs[10]
 			yb = sm + ym + sd
@@ -247,12 +272,17 @@ class 表(_表):
 		elif name in ("寧德",):
 			hz,_,yb,sd,js = fs
 			yb += self.dz2dl(sd.split("|")[0])
-		elif name in ("江門荷塘(下)",):
+		elif name in ("江門荷塘(上)","江門荷塘(下)"):
 			hz, ipa, js = fs[:3]
 		elif name in ("汝城延壽",):
 			hz, yb, js = fs[:3]
 		elif name in ("建陽連墩",):
 			hz, yb, js = fs[:3]
+		elif name in ("丹陽雲陽", "丹陽訪仙", "丹陽河陽", "丹陽埤城"):
+			hz = fs[0][0]
+			js = fs[0][1:].strip("()（）")
+			yb = fs[1:][("丹陽雲陽", "丹陽訪仙", "丹陽河陽", "丹陽埤城").index(name)]
+			yb = self.dz2dl(yb)
 		elif len(fs) >= 4:
 			hz, _, ipa, js = fs[:4]
 		elif len(fs) == 2:

@@ -227,14 +227,27 @@ class 表(_表):
 			line = line.replace("[3ˀ]", "[3]")
 		elif name in ("光澤寨裏",):
 			line = line.replace("‖", "")
+		elif name in ("泰州",):
+			line = line.replace("'", "ʰ")
+			line = re.sub("([-=])(.)", "\\2\\1", line)
+		elif name in ("吉水金灘", "繁昌"):
+			line = re.sub("([mnvʋl])([\u0329\u030D]+)", "\\1\u0329", line)
+			line = re.sub("([ŋȵʐɱɻʒ])([\u0329\u030D]+)", "\\1\u030D", line)
+		elif name in ("贛楡", "徐州", "銀川", "大同", "儀徵"):
+			line = line.strip().replace(",","，").replace(";","；").replace(":","：").replace("？（", "□（")
+			line = line.lstrip("øq")
+			if line.startswith("#"): return line
+			line = re.sub(r"([？#\-\+])(.)", "\\2\\1", line)
+			line = line.replace("-", "(舊)").replace("+", "/").replace("？", "?").replace("#", "*")
 		return line
 
 	def parseYm(self, line):
-		ym = ""
-		if line.startswith("	#"): line = line[2:]
-		elif line.startswith("#"): line = line[1:]
+		ym = None
+		line = line.strip()
+		if not line: return ym
+		if line.startswith("#"): line = line[1:]
 		elif "［" in line or "］" in line: return ym
-		ym = line.strip()
+		ym = line
 		if ym:
 			ym = ym.split("\t")[0].strip().strip("[]")
 		return ym
@@ -261,7 +274,7 @@ class 表(_表):
 					sda = chr(ord('①') + (i - 1))
 					sdb = f"［{i}］"
 					line = line.replace(sda, sdb)
-			if s := self.parseYm(line):
+			if (s := self.parseYm(line)) is not None:
 				ym = s
 				continue
 			matches = re.findall("^([^［］]*?)(［.+)$", line)
