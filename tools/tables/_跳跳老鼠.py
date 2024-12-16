@@ -160,7 +160,7 @@ class 表(_表):
 			g = re.findall(r"^([^\d]*\d+)(.*?)$", "".join(fs))
 			if g:
 				yb, hzs = g[0]
-				hzs = hzs.replace("？", "{存疑}").strip()
+				hzs = hzs.replace("？", "{存疑}").replace("}{", " ").strip()
 				hzs = self.normG(hzs, "〚\\1〛")
 				yb = self.dz2dl(yb)
 			else:
