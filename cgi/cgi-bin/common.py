@@ -45,7 +45,7 @@ def formatIntro(i):
 			if i[k]:
 				s += "%s：%s<br/>" % (k, i[k])
 		if i["說明"]:
-			s += i["說明"]	
+			s += i["說明"]
 	else:
 		for k in ("地點","經緯度", "作者", "錄入人", "維護人","來源", "參考文獻","文件名","版本","字數","□數", "音節數","不帶調音節數"):
 			if i[k]:
@@ -85,13 +85,25 @@ dbname = "mcpdict.db"
 conn = sqlite3.connect(dbname)
 conn.row_factory = sqlite3.Row
 c = conn.cursor()
-c.execute("SELECT * FROM info")
+c.execute("SELECT * FROM info order by 地圖集二排序")
 info = c.fetchall()
 KEYS_ALL = [i["簡稱"].encode() for i in info]
 KEYS = [i["簡稱"].encode() for i in info if i["音節數"]]
 KEYS_DICT = ("說文", "康熙", "漢大", "匯纂")
 KEYS_JA = [i for i in KEYS if i.startswith("日語")]
 LANGUAGES = {i["簡稱"].encode():i["語言"] for i in info}
-COLORS = {i["簡稱"].encode():i["地圖集二顏色"] for i in info}
-INTROS = {i["簡稱"].encode():formatIntro(i) for i in info}
 ISLANDS = [i["簡稱"].encode() for i in info if i["方言島"]]
+
+INTROS = {i["簡稱"].encode():formatIntro(i) for i in info}
+s = "<br><h2>已收錄語言</h2><table border=1 cellspacing=0>"
+fields = ("語言", "字數", "□數", "音節數", "不帶調音節數")
+s += "<tr><th>%s</th></tr>" % "</th><th>".join(fields)
+for i in info:
+	if not i["音節數"]: continue
+	s += "<tr><td>%s</td></tr>" % "</td><td>".join([str(i[k]) if i[k] else "" for k in fields])
+s += "</table>"
+INTROS[HZ] += s
+
+COLORS = {i["簡稱"].encode():i["地圖集二顏色"] for i in info}
+TYPES = {i["簡稱"].encode():i["地圖集二分區"] for i in info}
+#KEYS.sort(key=lambda x: TYPES.get(x, None))
