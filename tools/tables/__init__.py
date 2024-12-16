@@ -150,7 +150,7 @@ def getLangs(dicts, argv, 省=None):
 	推薦人 = defaultdict(int)
 	維護人 = defaultdict(int)
 	keys = None
-	t = open("warnings.txt", "w", encoding="U8")
+	t = open("warnings.txt", "w", encoding="U16")
 	for mod in mods:
 		if mod in infos:
 			d = infos[mod]
