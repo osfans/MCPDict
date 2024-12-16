@@ -6,7 +6,7 @@
     <string name="help">幫助</string>
     <string name="about">關於</string>
     <string name="info">簡介</string>
-    <string name="about_message"><![CDATA[%s V%s<br/>作者：osfans (waxaca&#64;163.com)<br/><a href="https://github.com/osfans/MCPDict">GitHub</a><br/><br/>漢字古今中外讀音查詢 V3.0<br/>2016.05.03<br/>作者：Maigo<br/>maigoakisame&#64;gmail.com]]></string>
+    <string name="about_message"><![CDATA[%1$s V%2$s<br/>作者：osfans (waxaca&#64;163.com)<br/><a href="https://github.com/osfans/MCPDict">GitHub</a><br/><br/>漢字古今中外讀音查詢 V3.0<br/>2016.05.03<br/>作者：Maigo<br/>maigoakisame&#64;gmail.com]]></string>
 
     <string name="ok">確定</string>
     <string name="cancel">取消</string>
@@ -376,7 +376,7 @@
     </string-array>
     <string name="pref_key_custom_languages">CUSTOM_LANGUAGES</string>
     <string name="custom_languages">自選語言</string>
-    <string name="select_custom_language_summary">已選%d個語言：%s</string>
+    <string name="select_custom_language_summary">已選%1$d個語言：%2$s</string>
     <string name="pref_key_input">INPUT</string>
     <string name="pref_key_language">LANGUAGE</string>
     <string name="custom_title">自定標題</string>
