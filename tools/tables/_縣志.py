@@ -20,6 +20,7 @@ class 表(_表):
 	ym2 = ""
 	
 	def format(self, line):
+		line = _表.format(self, line)
 		name = str(self)
 		if name in ("安澤和川",):
 			line = re.sub(r"^(.*?)［", "\\1	［", line)
@@ -75,12 +76,12 @@ class 表(_表):
 			line = line.replace("", "Ø").replace("", "")
 			while (newline := re.sub(r"(?<=‖)([^［］]*[^‖]){", "\\1‖{", line)) != line:
 				line = newline
-			line = re.sub("‖{", "{(連讀音)", line)
+			line = re.sub("‖{", "{(連讀音)", line).replace("‖", "")
 		elif name in ("福鼎白琳",):
 			line = re.sub(r"(‖)(\[\d+\])", "\\2\\1",line)
 			while (newline := re.sub(r"(?<=‖)([^\[\]]*[^‖]){", "\\1‖{", line)) != line:
 				line = newline
-			line = re.sub("‖{", "{(連讀音)", line)
+			line = re.sub("‖{", "{(連讀音)", line).replace("‖", "")
 		elif name in ("建德"):
 			line = re.sub(r"\t2\d.*$", "", line)
 		elif name in ("屯溪船上話"):
@@ -105,7 +106,7 @@ class 表(_表):
 			line = self.normS(line, "{\\1}")
 		elif name in ("通道菁蕪洲",):
 			line = re.sub("([&])(?!{)","{西官借詞}",line).replace("&{","{(西官借詞)")
-		elif name in ("泰興",):
+		elif name in ("泰興","無爲牛埠"):
 			line = line.lstrip("q")
 		elif name in ("壺關樹掌"):
 			line = line.lstrip("q").replace("·", "0")
@@ -214,7 +215,7 @@ class 表(_表):
 			line = line.lstrip("ø")
 		elif name in ("南京老派"):
 			line = re.sub("([，。])(（)", "\\2\\1", line)
-			line = line.replace("，", "（又）").replace("。", "（新）")
+			line = line.replace("，", "（又）").replace("。", "（新）").replace("）（", " ")
 			line = self.normS(line, "{\\1}")
 			line = re.sub(r"(\{[^{}]+?)（又）([^{}]*?\})", "\\1，\\2", line)
 			line = re.sub(r"(\{[^{}]+?)（新）([^{}]*?\})", "\\1。\\2", line)
@@ -290,13 +291,10 @@ class 表(_表):
 			fs[1] = fs[1].replace("\t", "")
 			fs[1] = re.sub(r" (\d)", "\\1", fs[1])
 			sm, hzs = fs
-			pys = set()
 			for sd,hzs in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", fs[1]):
-				py = sm + ym +sd
-				if py not in pys:
-					pys.add(py)
-				else:
-					self.errors.append(f"{py} 重複")
+				yb = sm + ym + sd
+				yb = self.checkYb(yb)
+
 				hzs = self.normG(hzs)
 				hzs = re.findall(r"(.)[\d₁₂₃]?([<+\-/=\\\*？$&r@]?)[\d₁₂₃]? *(｛.*?｝)?", hzs)
 				for hz, c, js in hzs:
@@ -325,7 +323,7 @@ class 表(_表):
 					if js.count("{") != js.count("}"):
 						self.errors.append(f"大括號未成對:{js}")
 						js = js.replace("{", "").replace("}", "")
-					p = py + c + "\t" + p + js
+					p = yb + c + "\t" + p + js
 					if p not in d[hz]:
 						d[hz].append(p)
 		self.write(d)

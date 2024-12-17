@@ -19,12 +19,14 @@ VARIANT_FILE = f"tables/{SOURCE}/正字.tsv"
 省_set = {'山西', '貴州', '甘肅', '內蒙古', '澳門', '四川', '山東', '臺灣', '雲南', '廣東', '江蘇', '海外', '吉林', '廣西', '香港', '黑龍江', '河南', '河北', '湖南', '上海', '海南', '寧夏', '北京', '遼寧', '新疆', '安徽', '福建', '重慶', '湖北', '浙江', '靑海', '江西', '陝西', '天津', '西藏'}
 
 n2o_dict = {}
+o2n_dict = {}
 
 for line in open("tables/data/mulcodechar.dt", encoding="U8"):
 	if not line or line[0] == "#": continue
 	fs = line.strip().split("-")
 	if len(fs) < 2: continue
 	n2o_dict[fs[0]] = fs[1]
+	o2n_dict[fs[1]] = fs[0]
 
 opencc_t2s = OpenCC("t2s.json")
 
@@ -39,7 +41,7 @@ def o2n(s):
 	if not s: return ""
 	t = ""
 	for i in s:
-		t += n2o_dict.get(i, i)
+		t += o2n_dict.get(i, i)
 	return t
 
 def t2s(s, level=2):
@@ -212,6 +214,8 @@ def getLangs(dicts, argv, 省=None):
 				for i in lang.errors:
 					print(f"\t{i}", file=t)
 				lang.errors.clear()
+			if lang.ybs:
+				lang.ybs.clear()
 		else:
 			lang = import_module(f"tables.{mod}").表()
 			d = dict()
