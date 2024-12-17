@@ -154,7 +154,7 @@ class 表(_表):
 			sy, sd, hzs = fs[1:4]
 			sd = re.sub(r"^[^\d]+", "", sd)
 			sd = self.toneMaps.get(sd, "")
-			hzs = hzs.replace(", ", "").replace(", ", "")
+			hzs = hzs.replace(", ", "")
 			hzs = self.normG(hzs, "〚\\1〛")
 		elif name in ("梅縣", ):
 			g = re.findall(r"^([^\d]*\d+)(.*?)$", "".join(fs))
@@ -214,6 +214,7 @@ class 表(_表):
 		else:
 			sy, sd, hzs = fs[:3]
 		if not yb: yb = sy + sd
+		yb = self.checkYb(yb)
 		l = list()
 		hzs = self.normM(hzs)
 		hzs = re.sub(r"(〚.*?〛)([-=])", "\\2\\1", hzs)

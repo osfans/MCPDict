@@ -162,6 +162,7 @@ class 表:
 	d = defaultdict(list)
 	__mod = None
 	errors = []
+	ybs = set()
 
 	def setmod(self, mod):
 		self.__mod = mod
@@ -279,6 +280,16 @@ class 表:
 			yb = yb.replace("[", "").replace("]", "")
 			yb = re.sub(r"^([mnvʋl])(\d+)$", "\\1\u0329\\2", yb)
 			yb = re.sub(r"^([ŋȵʐɱɻʒ])(\d+)$", "\\1\u030D\\2", yb)
+		return yb
+
+	def checkYb(self, yb):
+		if "\t" in yb or " " in yb:
+			self.errors.append(f"{yb} 音節有空格")
+		yb = self.normYb(yb)
+		if yb not in self.ybs:
+			self.ybs.add(yb)
+		else:
+			self.errors.append(f"{yb} 音節重複")
 		return yb
 
 	def isDialect(self):
@@ -425,6 +436,7 @@ class 表:
 		return tuple(fs[:3])
 
 	def format(self, line):
+		line = line.replace(" ", " ")
 		return line
 	
 	@property
@@ -461,7 +473,8 @@ class 表:
 						js = "\t".join(fs[2:])
 					if not hz or len(hz) != 1: continue
 					if not yb: continue
-					if self.isDialect() and isHZ(yb[0]): continue
+					if self.isDialect():
+						if isHZ(yb[0]): continue
 					p = f"{yb}\t{js}"
 					p = p.strip()
 					if p not in d[hz]:
