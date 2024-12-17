@@ -333,7 +333,7 @@ class 表:
 			for py in pys:
 				if "\t" in py:
 					yb, js = py.split("\t", 1)
-					js = js.strip().replace("~", "～")
+					js = js.strip().replace("~", "～").replace("...", "⋯").replace("∽", "～")
 				else:
 					yb, js = py, ""
 				yb = self.normYb(yb)

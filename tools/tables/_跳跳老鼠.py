@@ -82,7 +82,7 @@ class 表(_表):
 			hzs = self.normS(hzs)
 		elif name in ("思南塘頭",):
 			sy, sd, hzs = fs[:3]
-			hzs = hzs.replace("∽", "~").replace(" ", "")
+			hzs = hzs.replace(" ", "")
 			hzs = self.normS(hzs)
 		elif name in ("桃源薛家沖",):
 			sy, sd, _, _, hzs = fs[:5]

@@ -8,6 +8,10 @@ class 表(_表):
 	_file = "mcpdict.db"
 	isYb = False
 
+	def format(self, line):
+		line = line.replace("|", "`").replace("*", "**")
+		return line
+
 	def update(self):
 		d = defaultdict(list)
 		conn = sqlite3.connect(self.spath)

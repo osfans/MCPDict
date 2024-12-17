@@ -22,7 +22,7 @@ class 表(_表):
 			yb = re.sub("(sʰ?)u([aɑeəɪ])", "\\1ɥ\\2", yb)
 			ybs.append(yb)
 		if len(ybs) > 1:
-			ybs[0] = f"|{ybs[0]}|"
+			ybs[0] = f"`{ybs[0]}`"
 		yb = "/".join(ybs)
 		hzs = hzs.replace("<", "{字彙音}")
 		hzs = re.findall(r"(.)([+-=*?]?)(\{.*?\})?", hzs)

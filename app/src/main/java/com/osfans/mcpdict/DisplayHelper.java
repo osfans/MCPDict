@@ -34,8 +34,8 @@ public abstract class DisplayHelper {
     public static CharSequence getRichText(String richTextString) {
         String s = richTextString
                 .replace("\n", "<br/>")
-                .replaceAll("\\*(.+?)\\*", "<b>$1</b>")
-                .replaceAll("\\|(.+?)\\|", "<span style='color: #808080;'>$1</span>");
+                .replaceAll("\\*\\*(.+?)\\*\\*", "<b>$1</b>")
+                .replaceAll("`(.+?)`", "<span style='color: #808080;'>$1</span>");
         int i = Pref.getDisplayFormat();
         if (i == 1) {
             s = s.replace("{", "<small><small>").replace("}", "</small></small>");
@@ -109,8 +109,9 @@ public abstract class DisplayHelper {
     }
 
     public boolean isIPA(char c) {
-        int type = Character.getType(c);
         if (HanZi.isHz(c)) return false;
+        if (c == '_' || c == '*' || c == '`') return false;
+        int type = Character.getType(c);
         return Character.isLetterOrDigit(c)
                 || type == Character.NON_SPACING_MARK
                 || type == Character.MODIFIER_SYMBOL
