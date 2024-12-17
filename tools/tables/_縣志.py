@@ -27,7 +27,7 @@ class 表(_表):
 			line = re.sub(r"^(.*?) ?\[", "\\1	[", line)
 		elif name in ("萍鄕","平陽","都昌陽峯"):
 			line = line.lstrip("∅︀")
-		elif name in ("遂川","大庸","大庸三眼橋"):
+		elif name in ("遂川","大庸","大庸三眼橋", "婺川"):
 			line = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 		elif name in ("奉化",):
 			line = re.sub(r"(\d+)(?![：\d])", lambda x:"[%s]"%self.dz2dl(x[1]), line)
@@ -73,8 +73,14 @@ class 表(_表):
 			line = line.replace(" ", "")
 		elif name in ("浦城觀前",):
 			line = line.replace("", "Ø").replace("", "")
-			line = re.sub("^(.*?)［", "\\1	［", line)
-			line = re.sub(r"‖(.){", "\\1{(連讀音)", line)
+			while (newline := re.sub(r"(?<=‖)([^［］]*[^‖]){", "\\1‖{", line)) != line:
+				line = newline
+			line = re.sub("‖{", "{(連讀音)", line)
+		elif name in ("福鼎白琳",):
+			line = re.sub(r"(‖)(\[\d+\])", "\\2\\1",line)
+			while (newline := re.sub(r"(?<=‖)([^\[\]]*[^‖]){", "\\1‖{", line)) != line:
+				line = newline
+			line = re.sub("‖{", "{(連讀音)", line)
 		elif name in ("建德"):
 			line = re.sub(r"\t2\d.*$", "", line)
 		elif name in ("屯溪船上話"):
