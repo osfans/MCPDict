@@ -202,7 +202,9 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             search();
         });
         selfView.findViewById(R.id.button_lang_clear).setOnClickListener(v -> {
-            acSearchLang.setText("");
+            String lang = "";
+            acSearchLang.setText(lang);
+            Pref.putLanguage(lang);
             acSearchLang.requestFocus();
         });
 

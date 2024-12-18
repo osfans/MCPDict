@@ -280,6 +280,7 @@ class 表(_表):
 			hz, yb, js = fs[:3]
 		elif name in ("丹陽雲陽", "丹陽訪仙", "丹陽河陽", "丹陽埤城"):
 			hz = fs[0][0]
+			if hz.startswith("["): return
 			js = fs[0][1:].strip("()（）")
 			yb = fs[1:][("丹陽雲陽", "丹陽訪仙", "丹陽河陽", "丹陽埤城").index(name)]
 			yb = self.dz2dl(yb)

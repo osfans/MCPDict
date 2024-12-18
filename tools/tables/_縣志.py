@@ -238,7 +238,7 @@ class 表(_表):
 			line = line.replace("'", "ʰ")
 			line = re.sub("([-=])(.)", "\\2\\1", line)
 		elif name in ("吉水金灘", "繁昌"):
-			line = re.sub("([mnvʋl])([\u0329\u030D]+)", "\\1\u0329", line)
+			line = re.sub("([mnvʋɹl])([\u0329\u030D]+)", "\\1\u0329", line)
 			line = re.sub("([ŋȵʐɱɻʒ])([\u0329\u030D]+)", "\\1\u030D", line)
 		elif name in ("贛楡", "徐州", "銀川", "大同", "儀徵"):
 			line = line.strip().replace(",","，").replace(";","；").replace(":","：").replace("？（", "□（")
@@ -276,11 +276,12 @@ class 表(_表):
 			if ("{" not in line and "｛" not in line) and ("（" in line or "(" in line):
 				line = self.normS(line, "{\\1}")
 			line = line.lstrip(" ")
-			if "［" not in line and re.match(".*[①-⑨]", line):
-				for i in range(1,10):
+			if "［" not in line and re.match(".*[⓪①-⑨]", line):
+				for i in range(1, 10):
 					sda = chr(ord('①') + (i - 1))
 					sdb = f"［{i}］"
 					line = line.replace(sda, sdb)
+				line = line.replace("⓪", "［0］")
 			if (s := self.parseYm(line)) is not None:
 				ym = s
 				continue
