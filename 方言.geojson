@@ -5128,6 +5128,29 @@
         "marker-color": "#5E98EB",
         "marker-size": "small",
         "marker-symbol": "D",
+        "語言": "蕪湖六郞話",
+        "地點": "安徽蕪湖灣沚六郎",
+        "地圖集二分區": "吳語-宣州片-銅涇小片",
+        "音典分區": "長江-北宣",
+        "陳邡分區": "官話-北下江-太平片",
+        "錄入人": "霜浸南湖",
+        "來源": "《安徽芜湖六郎方言语音系统》",
+        "繁簡": "简"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.555554,
+          31.251883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
+        "marker-size": "small",
+        "marker-symbol": "D",
         "語言": "南陵仙坊話",
         "地點": "安徽蕪湖南陵許鎭仙坊",
         "地圖集二分區": "吳語-宣州片-銅涇小片",
@@ -14683,6 +14706,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
+        "marker-size": "small",
+        "marker-symbol": "L",
+        "語言": "電白霞洞黎話",
+        "地點": "廣東茂名電白霞洞",
+        "地圖集二分區": "閩語-雷州片",
+        "音典分區": "閩-閩南",
+        "陳邡分區": "福建-閩南",
+        "版本": "2022-04-24",
+        "錄入人": "林",
+        "來源": "《广东电白黎话语音研究》",
+        "繁簡": "繁"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.118514,
+          21.741698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
         "marker-size": "large",
         "marker-symbol": "L",
         "語言": "海口話",
@@ -15196,7 +15243,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "L",
         "語言": "崇安事",
         "地點": "福建南平武夷山崇安",
@@ -16818,7 +16865,7 @@
         "marker-color": "#5ED154",
         "marker-size": "small",
         "marker-symbol": "J",
-        "語言": "樂昌三溪話",
+        "語言": "樂昌三溪事",
         "地點": "廣東韶關樂昌三溪",
         "地圖集二分區": "平話和土話-粤北片",
         "音典分區": "湘南-郴州羣",

@@ -115,7 +115,7 @@ def run2text(run):
 	text = run.text
 	if tag:
 		text = "".join([i + tag for i in text])
-	if run.font.subscript or (run.font.size and run.font.size < 114300):
+	if run.font.subscript or (run.font.size and run.font.size < 115000):
 		text = f"{{{text}}}"
 	return text
 
