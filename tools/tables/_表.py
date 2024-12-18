@@ -164,6 +164,10 @@ class 表:
 	errors = []
 	ybs = set()
 
+	def __init__(self):
+		self.errors.clear()
+		self.ybs.clear()
+
 	def setmod(self, mod):
 		self.__mod = mod
 
@@ -202,7 +206,7 @@ class 表:
 		sname = g[0]
 		self._file = os.path.basename(sname)
 		if isXls(sname):
-			page = 1 if self.short in ("中山石岐", "通城") else 0
+			page = 1 if self.short in ("中山石岐", "通城", "1796建甌") else 0
 			if self.short == "開平護龍": page = 3
 			xls2tsv(sname, page)
 			sname = getTsvName(sname)
@@ -278,14 +282,17 @@ class 表:
 			if self.ybTrimSpace:
 				yb = yb.replace(" ", "")
 			yb = yb.replace("[", "").replace("]", "")
-			yb = re.sub(r"^([mnvʋl])(\d+)$", "\\1\u0329\\2", yb)
+			yb = re.sub(r"^([mnvʋɹl])(\d+)$", "\\1\u0329\\2", yb)
 			yb = re.sub(r"^([ŋȵʐɱɻʒ])(\d+)$", "\\1\u030D\\2", yb)
 		return yb
 
 	def checkYb(self, yb):
-		if "\t" in yb or " " in yb:
-			self.errors.append(f"{yb} 音節有空格")
 		yb = self.normYb(yb)
+		if "\t" in yb:
+			self.errors.append(f"{yb} 音節有空格")
+			yb = yb.replace("\t", "")
+		if isHZ(yb[0]):
+			self.errors.append(f"{yb} 音節有錯誤")
 		if yb not in self.ybs:
 			self.ybs.add(yb)
 		else:
@@ -406,7 +413,7 @@ class 表:
 					py = py[:-1]
 				if re.match(r"^\([^()]*?\)$", js):
 					js = js[1:-1]
-				syd = re.sub(r"\(.*?\)","",py).strip(" *|")
+				syd = re.sub(r"\(.*?\)","",py).strip(" _`*")
 				if "-" not in syd:
 					self.syds[syd].add(hz)
 				if js:

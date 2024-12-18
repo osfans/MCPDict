@@ -7,6 +7,7 @@ local.properties
 warnings*.txt
 build/
 *.db
+*.db-journal
 *.iml
 *.keystore
 *.xls
@@ -17,3 +18,4 @@ build/
 *.pyc
 __pycache__
 yedict/
+揚州同音字表*.tsv
