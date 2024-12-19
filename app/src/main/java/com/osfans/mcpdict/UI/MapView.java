@@ -15,6 +15,7 @@ import com.osfans.mcpdict.Util.ThemeUtil;
 
 import org.osmdroid.bonuspack.kml.KmlDocument;
 import org.osmdroid.bonuspack.kml.KmlFeature;
+import org.osmdroid.bonuspack.kml.KmlGeometry;
 import org.osmdroid.bonuspack.kml.Style;
 import org.osmdroid.events.MapListener;
 import org.osmdroid.events.ScrollEvent;
@@ -25,6 +26,8 @@ import org.osmdroid.views.CustomZoomButtonsController;
 import org.osmdroid.views.overlay.CopyrightOverlay;
 import org.osmdroid.views.overlay.FolderOverlay;
 import org.osmdroid.views.overlay.Overlay;
+import org.osmdroid.views.overlay.Polygon;
+import org.osmdroid.views.overlay.Polyline;
 import org.osmdroid.views.overlay.ScaleBarOverlay;
 
 import java.io.IOException;
@@ -210,10 +213,16 @@ public class MapView extends org.osmdroid.views.MapView {
             defaultStyle = new Style(null, 0x3F000000, 2f, 0xffffffff);
         }
         FolderOverlay folderOverlay = (FolderOverlay) kmlDocument.mKmlRoot.buildOverlay(this, defaultStyle, null, kmlDocument);
+        for (Overlay o: folderOverlay.getItems()) {
+            if (o instanceof Polygon) ((Polygon) o).setInfoWindow(null);
+            else if (o instanceof FolderOverlay) {
+                for (Overlay o2: ((FolderOverlay) o).getItems()) {
+                    if (o2 instanceof Polygon) ((Polygon) o2).setInfoWindow(null);
+                }
+            }
+        }
         for (KmlFeature mItem : kmlDocument.mKmlRoot.mItems) {
-            GeoPoint point;
-            if (level == 2) point = mItem.getBoundingBox().getCenterWithDateLine();
-            else point = DB.parseLocation(mItem.getExtendedData("cp"));
+            GeoPoint point = DB.parseLocation(mItem.getExtendedData("centroid"));
             if (point == null) continue;
             Marker marker = new Marker(this, 0x3F000000, mItem.mName);
             marker.setPosition(point);
