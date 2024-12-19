@@ -69,8 +69,7 @@ dependencies {
     implementation 'androidx.preference:preference:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
     implementation 'androidx.webkit:webkit:1.12.1'
-    implementation 'org.osmdroid:osmdroid-android:6.1.11'
-    implementation 'com.github.MKergall:osmbonuspack:6.7.0'
+    implementation 'com.github.MKergall:osmbonuspack:6.9.0'
     // Fix Duplicate class
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
 }

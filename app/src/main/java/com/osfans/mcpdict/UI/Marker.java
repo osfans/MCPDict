@@ -15,17 +15,17 @@ public class Marker extends org.osmdroid.views.overlay.Marker {
     String mCity;
     int mSize;
 
-    public Marker(MapView mapView, int color, String city, String yb, String js, int size) {
+    public Marker(MapView mapView, int fore, int color, String city, String yb, String js, int size) {
         super(mapView);
         mCity = city;
-        setTextLabelForegroundColor(Color.WHITE);
+        setTextLabelForegroundColor(fore);
         setTextLabelBackgroundColor(color);
         setTextLabelFontSize(24);
         setTextIcon(mCity);
         setAnchor(org.osmdroid.views.overlay.Marker.ANCHOR_LEFT, org.osmdroid.views.overlay.Marker.ANCHOR_BOTTOM);
         setTitle(city);
         setSubDescription(js);
-        mLabel = yb;
+        mLabel = yb.replaceAll("<.*?>", "");
         mTextPaint = new Paint();
         mTextPaint.setColor(Color.BLACK);
         mTextPaint.setTextSize(24);
@@ -33,6 +33,14 @@ public class Marker extends org.osmdroid.views.overlay.Marker {
         mTextPaint.setTextAlign(Paint.Align.LEFT);
         mTextPaint.setTypeface(FontUtil.getIPATypeface());
         mSize = size;
+    }
+
+    public Marker(MapView mapView, int color, String city, String yb, String js, int size) {
+        this(mapView, Color.WHITE, color, city, yb, js, size);
+    }
+
+    public Marker(MapView mapView, int color, String city) {
+        this(mapView, color, 0, city, "", "", 5);
     }
 
     public void draw(final Canvas c, final MapView mapView) {

@@ -775,29 +775,27 @@ public class DB extends SQLiteAssetHelper {
         if (TextUtils.isEmpty(s)) return null;
         try {
             return new JSONObject(s);
-        } catch (JSONException e) {
-            e.printStackTrace();
+        } catch (JSONException ignored) {
         }
         return null;
     }
 
-    public static Double getLocation(String lang, int pos) {
-        String location = getFieldByLabel(lang, "經緯度");
+    public static GeoPoint parseLocation(String location) {
         if (TextUtils.isEmpty(location)) return null;
-        return Double.parseDouble(location.split(",")[pos]);
-    }
-
-    private static Double getLat(String lang) {
-        return getLocation(lang, 1);
-    }
-
-    private static Double getLong(String lang) {
-        return getLocation(lang, 0);
+        location = location.replace("[", "").replace("]", "").strip();
+        String[] ss = location.split(", ?");
+        if (ss.length != 2) return null;
+        Double[] ds = new Double[2];
+        int i = 0;
+        for (String s: ss) {
+            ds[i++] = Double.parseDouble(s);
+        }
+        return new GeoPoint(ds[1], ds[0]);
     }
 
     public static GeoPoint getPoint(String lang) {
-        if (getLat(lang) == null) return null;
-        return new GeoPoint(getLat(lang), getLong(lang));
+        String location = getFieldByLabel(lang, "經緯度");
+        return parseLocation(location);
     }
 
     public static int getSize(String lang) {
