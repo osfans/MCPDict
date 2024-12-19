@@ -8,7 +8,7 @@ class 表(_表):
 	ybdict = dict()
 
 	def initBroadDict(self):
-		for line in open(self.get_fullname("苏州（记音替换版）1.1.tsv"), encoding="U8"):
+		for line in open(self.fullname("苏州（记音替换版）1.1.tsv"), encoding="U8"):
 			fs = line.split("\t")
 			if len(fs) < 6: continue
 			order, hz, sm, ym, sd, js = fs[:6]

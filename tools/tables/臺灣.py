@@ -17,7 +17,7 @@ class 表(_表):
 		return py
 	
 	def patch(self, d):
-		for line in open(self.get_fullname("豆腐台語詞庫.csv"),encoding="U8"):
+		for line in open(self.fullname("豆腐台語詞庫.csv"),encoding="U8"):
 			fs = line.strip().split(',')
 			hz = fs[0]
 			if len(hz) == 1:

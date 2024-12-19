@@ -27,7 +27,9 @@ def getCompatibilityVariants():
 	return d
 
 def getTsvName(xls):
-	return re.sub(r" ?(\(\d{0,3}\))+$", "", xls.rsplit(".", 1)[0]) + ".tsv"
+	name = os.path.basename(xls)
+	name = re.sub(r" ?(\(\d{0,3}\))+$", "", name.rsplit(".", 1)[0]) + ".tsv"
+	return os.path.join(PATH, SOURCE, name)
 
 def isXlsx(fname):
 	return fname.endswith("xlsx")
@@ -138,11 +140,9 @@ def docx2tsv(doc):
 	t.close()
 
 class 表:
-	path = os.path.dirname(os.path.abspath(__file__))
 	_time = os.path.getmtime(__file__)
 	_file = None
 	_files = None
-	current_file = ""
 	_sep = None
 	color = "#1E90FF"
 	full = ""
@@ -176,33 +176,31 @@ class 表:
 		return self.__module__.split(".")[-1]
 
 	def find(self, name):
+		if os.sep not in name and (isXls(name) or isDocx(name)):
+			name = self.toolname(name)
+			if g := self.find(name): return g
+		if os.sep not in name:
+			name = self.fullname(name)
 		if g := glob(name): return g
 		if g := glob(re.sub(".([^.]+)$", "([0-9]).\\1", name)): return g
-		return glob(re.sub(".([^.]+)$", " ([0-9]).\\1", name))
+		if g := glob(re.sub(".([^.]+)$", " ([0-9]).\\1", name)): return g
+		if isXls(name) or isDocx(name):
+			self._file = getTsvName(self._file)
+			return self.find(self._file)
+		return
 
 	@property
 	def spath(self):
 		if self._files:
-			self._files = [self.get_fullname(f) for f in self._files]
 			self._file = self._files[0]
 		sname = self._file
 		if not self.short: self.short = self.info["簡稱"]
 		if not self.short: self.short = str(self)
 		if not sname: sname = f"{self.short}.tsv"
-		if not sname.startswith("/"):
-			sname = self.get_fullname(sname)
 		g = self.find(sname)
 		if not g or len(g) != 1:
-			if isXls(sname) or isDocx(sname):
-				self._file = getTsvName(self._file)
-				sname = self.get_fullname(self._file)
-				g = self.find(sname)
-				if not g or len(g) != 1:
-					logging.error(f"\t\t\t{sname} {g}")
-					return
-			else:
-				logging.error(f"\t\t\t未找到{sname} {g}")
-				return
+			logging.error(f"\t\t\t{sname}查找結果：{g}")
+			return
 		sname = g[0]
 		self._file = os.path.basename(sname)
 		if isXls(sname):
@@ -215,12 +213,17 @@ class 表:
 			sname = getTsvName(sname)
 		return sname
 
-	def get_fullname(self, name):
-		return os.path.join(self.path, SOURCE, name)
+	def toolname(self, name):
+		name = os.path.basename(name)
+		return os.path.join(PATH, "..", name)
+
+	def fullname(self, name):
+		name = os.path.basename(name)
+		return os.path.join(PATH, SOURCE, name)
 
 	@property
 	def tpath(self):
-		tpath = os.path.join(self.path, TARGET, str(self))
+		tpath = os.path.join(PATH, TARGET, str(self))
 		if not tpath.endswith(".tsv"): tpath += ".tsv"
 		return tpath
 
@@ -463,8 +466,7 @@ class 表:
 		lineno = 0
 		files = self._files if self._files else [self.spath]
 		for spath in files:
-			self.current_file = spath
-			for line in open(spath,encoding="U8"):
+			for line in open(self.fullname(spath),encoding="U8"):
 				lineno += 1
 				if lineno <= skip: continue
 				line = self.format(line)

@@ -5,7 +5,7 @@ import re
 
 class 表(_表):
 	def patch(self, d):
-		for line in open(self.get_fullname("建德寿昌文读.tsv"),encoding="U8"):
+		for line in open(self.fullname("建德寿昌文读.tsv"),encoding="U8"):
 			line = line.strip('\n')
 			fs = [i.strip() for i in line.split('\t')]
 			if not fs:

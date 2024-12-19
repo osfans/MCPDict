@@ -12,7 +12,7 @@ class 表(_表):
 	
 	def __init__(self):
 		_表.__init__(self)
-		for line in open(self.get_fullname("CJKRadicals.txt"),encoding="U8"):
+		for line in open(self.fullname("CJKRadicals.txt"),encoding="U8"):
 			line = line.strip()
 			if not line or line.startswith("#"): continue
 			fields = line.split("; ", 2)

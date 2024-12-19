@@ -12,7 +12,7 @@ class 表(_表):
 		self.note = self.get_note()
 
 	def get_note(self):
-		sname = self.get_fullname(self._file)
+		sname = self.fullname(self._file)
 		if not os.path.exists(sname) or not sname.endswith(".xlsx"): return
 		wb = load_workbook(sname, data_only=True)
 		sheet = wb.worksheets[1]
