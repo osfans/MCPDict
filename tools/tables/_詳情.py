@@ -143,7 +143,7 @@ def load(省):
 		types = [s2t(fs[i]) for i in ("地圖集二分區", "音典分區", "下拉1，折疊分区")]
 		if types[2] and fs["下拉2"]: types[2] += "," + fs["下拉2"]
 
-		places = [s2t(fs[i]) if fs[i] else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點")]
+		places = [s2t(fs[i]) if fs[i] else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點","自然村")]
 		if 簡稱 == "普通話" and 省:
 			places = ["", "", "", "", ""]
 		elif 省 and places[0] and places[0] not in 省:
@@ -153,7 +153,7 @@ def load(省):
 		if not 行政區級別:
 			行政區級別 = "省會,地級" if fs["省會"] == "☑" else ""
 		if not 行政區級別:
-			n = 5 - places.count("")
+			n = 6 - places.count("")
 			if n == 1:
 				行政區級別 = "省級"
 			elif n == 2:
@@ -164,7 +164,8 @@ def load(省):
 				行政區級別 = "鄕級"
 			elif n == 5:
 				行政區級別 = "村級"
-
+			elif n == 6:
+				行政區級別 = "自然村級"
 		d[簡稱] = {
 			"語言":語言,
 			"簡稱":簡稱,
@@ -187,6 +188,7 @@ def load(省):
 			"縣":places[2],
 			"鎮":places[3],
 			"村":places[4],
+			"自然村":places[5],
 			"地點": 地點,
 			"版本":版本,
 			"經緯度":經緯度,

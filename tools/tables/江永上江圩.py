@@ -38,7 +38,7 @@ class 表(_表):
 
 	def patch(self, d):
 		tones = ['33','42','35','13','21','xx','5']
-		for line in open(self.get_fullname("nsbzzzd.csv"),encoding="U8"):
+		for line in open(self.fullname("nsbzzzd.csv"),encoding="U8"):
 			line = line.strip()
 			fs = line.split(",")
 			ns = fs[0]

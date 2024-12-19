@@ -10,7 +10,9 @@ from opencc import OpenCC
 
 SOURCE = "data"
 TARGET = "output"
-VARIANT_FILE = f"tables/{SOURCE}/正字.tsv"
+PATH = os.path.dirname(os.path.abspath(__file__))
+
+VARIANT_FILE = os.path.join(PATH, SOURCE, "正字.tsv")
 
 辭典 = ["漢字","說文","康熙","匯纂","漢大"]
 辭典數 = len(辭典)

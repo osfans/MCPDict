@@ -476,5 +476,6 @@
         <item>縣級</item>
         <item>鄕級</item>
         <item>村級</item>
+        <item>自然村</item>
     </string-array>
 </resources>
