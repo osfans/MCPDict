@@ -158,6 +158,7 @@ class 表:
 	kCompatibilityVariants = getCompatibilityVariants()
 	simplified = 1
 	isYb = True
+	ybIndex = None
 	syds = defaultdict(set)
 	d = defaultdict(list)
 	__mod = None

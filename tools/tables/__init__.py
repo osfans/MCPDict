@@ -170,6 +170,9 @@ def getLangs(dicts, argv, 省=None):
 				continue
 			if d["繁簡"] == "简": lang.simplified = 2
 			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
+			if "聯表列名" in d:
+				a = d["聯表列名"].upper()
+				lang.ybIndex = sum([26**(len(a)-1-i)*(ord(j)-ord('A')+1) for i,j in enumerate(a)]) - 1
 			addAllFq(types[0], d["地圖集二分區"], d["地圖集二排序"])
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
 			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
