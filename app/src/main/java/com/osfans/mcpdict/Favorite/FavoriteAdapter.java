@@ -116,12 +116,13 @@ public class FavoriteAdapter extends CursorAdapter {
                 return DB.directSearch(hz);
             }
             @Override
-            protected void onPostExecute(Cursor data) {
-                fragment.setData(hz, data);
+            protected void onPostExecute(Cursor cursor) {
+                fragment.setData(hz, cursor);
                 container.setVisibility(View.VISIBLE);
                 if (list == null) {
                 }
                 //scrollListToShowItem(list, view);
+                cursor.close();
             }
         }.execute();
     }
