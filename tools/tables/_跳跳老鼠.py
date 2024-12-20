@@ -146,6 +146,9 @@ class 表(_表):
 		elif name in ("邵東斫曹","綏寧武陽","天柱江東"):
 			sy, sd = fs[:2]
 			hzs = "".join(fs[2:]).replace("\t", "").strip()
+		elif name in ("1930淮安",):
+			_, sy, sd, hzs = fs[:4]
+			hzs = self.normS(hzs)
 		elif name in ("吉安雲樓",):
 			sy, sd, hzs = fs[:3]
 			hzs = self.normS(hzs)
