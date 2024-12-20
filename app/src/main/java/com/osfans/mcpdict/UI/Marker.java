@@ -4,6 +4,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.text.TextUtils;
 
 import com.osfans.mcpdict.Util.FontUtil;
 
@@ -43,12 +44,9 @@ public class Marker extends org.osmdroid.views.overlay.Marker {
         this(mapView, color, 0, city, "", "", 5);
     }
 
-    public void draw(final Canvas c, final MapView mapView) {
-        draw(c, mapView, false);
-    }
-
     public void draw( final Canvas c, final MapView mapView, boolean shadow) {
         super.draw(c, mapView, shadow);
+        if (TextUtils.isEmpty(mLabel)) return;
         Point p = this.mPositionPixels;  // already provisioned by Marker
         mTextPaint.setAlpha((int)(getAlpha() * 255));
         c.drawText(mLabel, p.x, p.y+26, mTextPaint);

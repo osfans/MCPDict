@@ -3,7 +3,6 @@ package com.osfans.mcpdict.UI;
 import android.content.Context;
 import android.database.Cursor;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.MotionEvent;
 
 import androidx.appcompat.app.AlertDialog;
@@ -15,7 +14,6 @@ import com.osfans.mcpdict.Util.ThemeUtil;
 
 import org.osmdroid.bonuspack.kml.KmlDocument;
 import org.osmdroid.bonuspack.kml.KmlFeature;
-import org.osmdroid.bonuspack.kml.KmlGeometry;
 import org.osmdroid.bonuspack.kml.Style;
 import org.osmdroid.events.MapListener;
 import org.osmdroid.events.ScrollEvent;
@@ -27,17 +25,13 @@ import org.osmdroid.views.overlay.CopyrightOverlay;
 import org.osmdroid.views.overlay.FolderOverlay;
 import org.osmdroid.views.overlay.Overlay;
 import org.osmdroid.views.overlay.Polygon;
-import org.osmdroid.views.overlay.Polyline;
 import org.osmdroid.views.overlay.ScaleBarOverlay;
 
 import java.io.IOException;
 
 public class MapView extends org.osmdroid.views.MapView {
-    FolderOverlay mHzOverlay;
+    FolderOverlay mHzOverlay, mProvinceOverlay, mSmallCityOverlay;
     boolean mProvinceInitialized = false;
-    boolean mCountyInitialized = false;
-    static String PROVINCE = "p";
-    static String COUNTY = "c";
 
     public MapView(Context context) {
         super(context);
@@ -52,7 +46,6 @@ public class MapView extends org.osmdroid.views.MapView {
         }).start();
         new Thread(()->{
             initProvinces();
-            initCounties();
             postInvalidate();
         }).start();
     }
@@ -71,20 +64,10 @@ public class MapView extends org.osmdroid.views.MapView {
 
     private void initProvinces() {
         if (mProvinceInitialized) return;
-        FolderOverlay overlay = geoJsonifyMap("province.json", 1);
-        overlay.setDescription(PROVINCE);
-        overlay.setEnabled(false);
-        getOverlays().add(overlay);
+        mProvinceOverlay = geoJsonifyMap("province.json", 1);
+        mProvinceOverlay.setEnabled(false);
+        getOverlays().add(mProvinceOverlay);
         mProvinceInitialized = true;
-    }
-
-    private void initCounties() {
-        if (mCountyInitialized) return;
-        FolderOverlay overlay = geoJsonifyMap("county.json", 2);
-        overlay.setDescription(COUNTY);
-        overlay.setEnabled(false);
-        getOverlays().add(overlay);
-        mCountyInitialized = true;
     }
 
     public void init(String hz) {
@@ -97,35 +80,20 @@ public class MapView extends org.osmdroid.views.MapView {
 
             @Override
             public boolean onZoom(ZoomEvent event) {
+                Double zoomLevel = event.getZoomLevel();
                 if (getOverlays().contains(mHzOverlay)) {
-                    Double level = event.getZoomLevel();
-                    for(Overlay item: mHzOverlay.getItems()) {
-                        ((Marker)item).setZoomLevel(level);
+                    for (Overlay item: mHzOverlay.getItems()) {
+                        ((Marker)item).setZoomLevel(zoomLevel);
                     }
                 }
                 int level = 0;
-                if (event.getZoomLevel() >= 10) level = 2;
-                else if (event.getZoomLevel() >= 7.5) level = 1;
+                if (zoomLevel >= 7.5) level = 1;
                 if (mProvinceInitialized) {
-                    for (Overlay overlay : getOverlays()) {
-                        if (overlay instanceof FolderOverlay folderOverlay) {
-                            String desc = folderOverlay.getDescription();
-                            if (!TextUtils.isEmpty(desc) && desc.contentEquals(PROVINCE)) {
-                                folderOverlay.setEnabled(level == 1);
-                            }
-                        }
+                    if (getOverlays().contains(mProvinceOverlay)) {
+                        mProvinceOverlay.setEnabled(level == 1);
+                        mSmallCityOverlay.setEnabled(zoomLevel >= 9.5);
                     }
                 } else if (level == 1) initProvinces();
-                if (mCountyInitialized) {
-                    for (Overlay overlay : getOverlays()) {
-                        if (overlay instanceof FolderOverlay folderOverlay) {
-                            String desc = folderOverlay.getDescription();
-                            if (!TextUtils.isEmpty(desc) && desc.contentEquals(COUNTY)) {
-                                folderOverlay.setEnabled(level == 2);
-                            }
-                        }
-                    }
-                } else if (level == 2) initCounties();
                 invalidate();
                 return true;
             }
@@ -134,11 +102,7 @@ public class MapView extends org.osmdroid.views.MapView {
         getZoomController().setVisibility(CustomZoomButtonsController.Visibility.NEVER);
         setMinZoomLevel(4d);
         setMaxZoomLevel(20d);
-//        GroundOverlay chinaOverlay = new GroundOverlay();
-//        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.china);
-//        chinaOverlay.setImage(bitmap);
-//        chinaOverlay.setPosition(new GeoPoint(57.5d, 67.1d), new GeoPoint(-6.9d, 141.4d));
-//        chinaOverlay.setTransparency(0.5f);
+
         FolderOverlay chinaOverlay = geoJsonifyMap("china.json", 0);
         CopyrightOverlay copyrightOverlay = new CopyrightOverlay(getContext()) {
             @Override
@@ -150,7 +114,6 @@ public class MapView extends org.osmdroid.views.MapView {
         scaleBarOverlay.setAlignBottom(true);
         scaleBarOverlay.setAlignRight(true);
 
-        //getOverlays().add(chinaOverlay);
         getOverlays().add(chinaOverlay);
         getOverlays().add(copyrightOverlay);
         getOverlays().add(scaleBarOverlay);
@@ -192,6 +155,7 @@ public class MapView extends org.osmdroid.views.MapView {
             getOverlays().add(mHzOverlay);
         } catch (Exception ignore) {
         }
+        cursor.close();
     }
 
     public FolderOverlay geoJsonifyMap(String fileName, int level) {
@@ -205,10 +169,8 @@ public class MapView extends org.osmdroid.views.MapView {
         }
 
         Style defaultStyle;
-        if (level == 2) {
+        if (level == 1) {
             defaultStyle = new Style(null, 0x3F000000, 0.5f, 0);
-        } else if (level == 1) {
-            defaultStyle = new Style(null, 0x3F000000, 1f, 0);
         } else {
             defaultStyle = new Style(null, 0x3F000000, 2f, 0xffffffff);
         }
@@ -221,13 +183,21 @@ public class MapView extends org.osmdroid.views.MapView {
                 }
             }
         }
-        for (KmlFeature mItem : kmlDocument.mKmlRoot.mItems) {
-            GeoPoint point = DB.parseLocation(mItem.getExtendedData("centroid"));
-            if (point == null) continue;
-            Marker marker = new Marker(this, 0x3F000000, mItem.mName);
-            marker.setPosition(point);
-            marker.setInfoWindow(null);
-            folderOverlay.add(marker);
+        if (level == 1) {
+            mSmallCityOverlay = new FolderOverlay();
+            for (KmlFeature mItem : kmlDocument.mKmlRoot.mItems) {
+                GeoPoint point = DB.parseLocation(mItem.getExtendedData("cp"));
+                if (point == null) point = mItem.getBoundingBox().getCenterWithDateLine();
+                if (point == null) continue;
+
+                Marker marker = new Marker(this, 0x3F000000, mItem.mName);
+                marker.setPosition(point);
+                marker.setInfoWindow(null);
+                double length = mItem.getBoundingBox().getDiagonalLengthInMeters();
+                if (length <= 60000d) mSmallCityOverlay.add(marker);
+                else folderOverlay.add(marker);
+            }
+            folderOverlay.add(mSmallCityOverlay);
         }
 
         return folderOverlay;
