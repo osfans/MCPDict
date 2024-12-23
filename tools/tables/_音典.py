@@ -34,7 +34,7 @@ class 表(_表):
 			yb, _ = self.splitSySd(yb)
 			yb += sd
 		elif name in ("1926綜合",):
-			hz,_,_,yb,_,js = fs[:6]
+			hz,yb,_,_,_,js = fs[:6]
 		elif name in ("蒼南錢庫",):
 			sm,ym,sd,hz,js = fs[:5]
 			if sd == "轻声": sd = "0"

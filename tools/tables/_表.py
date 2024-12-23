@@ -278,7 +278,7 @@ class 表:
 	def normYb(self, yb):
 		if self.isLang() and self.isYb:
 			yb = yb.strip()
-			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("0∅Ø〇零")
+			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("0∅Ø〇").replace("零", "")
 			if yb.startswith("I") or yb.startswith("1"): yb = "l" + yb[1:]
 			yb = yb.lower().replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ")
 			if not yb.startswith("h") and "h" in yb:
