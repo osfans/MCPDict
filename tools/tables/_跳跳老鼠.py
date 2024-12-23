@@ -48,9 +48,9 @@ class 表(_表):
 		elif name in ("宜章巖泉","望城"):
 			sy, sd, hzs = fs[:3]
 			hzs = hzs.replace("?", "□")
-		elif name in ("天台東鄕",):
+		elif name in ("天台東鄕"):
 			if not fs[0]: return
-			g = re.findall(r"^(.*?)(\d)(.+)$", fs[0])
+			g = re.findall(r"^(.*?)(\d+)(.+)$", fs[0])
 			if not g:
 				ym = fs[0].strip()
 				if ym:
@@ -60,11 +60,11 @@ class 表(_表):
 			if sm:
 				self.sm = sm
 			yb = (self.sm + self.ym + sd).lstrip("q")
-			hzs = self.normS(hzs)
-		elif name in ("成都"):
+			hzs = self.normS(hzs.strip())
+		elif name in ("成都","靑島"):
 			fs = "".join(fs).strip()
 			if not fs: return
-			g = re.findall(r"^(.*?)\[(\d+)\](.+)$", fs)
+			g = re.findall(r"^(.*?)\[?(\d+)\]?(.+)$", fs)
 			if not g:
 				ym = fs
 				if ym:
@@ -75,10 +75,17 @@ class 表(_表):
 			if sm:
 				self.sm = sm
 			yb = (self.sm + self.ym + sd).lstrip("q")
-			hzs = self.normS(hzs)
-		elif name in ("無錫",):
+			hzs = self.normS(hzs.strip())
+		elif name in ("無錫"):
+			if len(fs) < 2: return
 			yb, hzs = fs[:2]
-			hzs = hzs.replace("？", "?").replace(" ", "")
+			hzs = hzs.replace(" ", "")
+			hzs = self.normS(hzs)
+		elif name in ("泉州"):
+			if len(fs) < 2: return
+			yb, hzs = fs[:2]
+			hzs = hzs.replace(" ", "")
+			hzs = re.sub(r"\[(.)\]", "\\1@", hzs)
 			hzs = self.normS(hzs)
 		elif name in ("思南塘頭",):
 			sy, sd, hzs = fs[:3]
@@ -163,7 +170,7 @@ class 表(_表):
 			g = re.findall(r"^([^\d]*\d+)(.*?)$", "".join(fs))
 			if g:
 				yb, hzs = g[0]
-				hzs = hzs.replace("？", "{存疑}").replace("}{", " ").strip()
+				hzs = hzs.replace("}{", " ").strip()
 				hzs = self.normG(hzs, "〚\\1〛")
 				yb = self.dz2dl(yb)
 			else:
@@ -221,8 +228,9 @@ class 表(_表):
 		l = list()
 		hzs = self.normM(hzs)
 		hzs = re.sub(r"(〚.*?〛)([-=])", "\\2\\1", hzs)
-		for hz, c, o, js in re.findall(r"(.)([-=*?+]?)([₀-₉0-9]?) *(〚.*?〛)?", hzs):
+		for hz, c, o, js in re.findall(r"(.)([-=*?@？+]?)([₀-₉0-9]?) *(〚.*?〛)?", hzs):
 			if js: js = js[1:-1]
 			js = o + js
+			if c == '？': c = "?"
 			l.append((hz, yb + c, js))
 		return l
