@@ -190,8 +190,8 @@ class 表(_表):
 				else:
 					self.sm = line.split("\t")[0]
 				line = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
-		elif name in ("烏魯木齊", "西寧"):
-			line = re.sub(r"(\d+)", "[\\1]", line)
+		elif name in ("烏魯木齊", "西寧","蒙山"):
+			line = re.sub(r"(\d+)", "[\\1]", line, count=1)
 			if line.startswith("["):
 				line = self.sm + line
 			else:
