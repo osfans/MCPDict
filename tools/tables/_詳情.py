@@ -213,14 +213,15 @@ def load(省):
 			"properties": {
 				"marker-color": colors[0],
 				"marker-size": getMarkerSize(地圖級別),
-				"marker-symbol": orders[0][0].upper() if orders[0] else "",
+				"marker-symbol": orders[0][0].lower() if orders[0] else "",
+				"title": 簡稱,
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": eval(f"[{經緯度}]")
 			}
 		}
-		for i in ["語言", "地點", "地圖集二分區", "音典分區", "陳邡分區", '方言島', '版本', '作者', '錄入人', '維護人', '來源', '參考文獻', "繁簡"]:
+		for i in ["語言", "地點", "地圖集二分區", "音典分區", "陳邡分區", '方言島', '版本', '作者', '錄入人', '維護人', '來源', '參考文獻']:
 			if d[簡稱][i]:
 				Feature["properties"][i] = d[簡稱][i]
 		FeatureCollection["features"].append(Feature)
