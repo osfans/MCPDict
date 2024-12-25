@@ -28,11 +28,6 @@ class 表(_表):
 		elif name in ("劍川金華",):
 			hz, sy, sd, js = fs[:4]
 			yb = sy + sd
-		elif name in ("泉州",):
-			hz, py, yb, js = fs[:4]
-			py, sd = self.splitSySd(py)
-			yb, _ = self.splitSySd(yb)
-			yb += sd
 		elif name in ("1926綜合",):
 			hz,yb,_,_,_,js = fs[:6]
 		elif name in ("蒼南錢庫",):

@@ -84,7 +84,7 @@ class 表(_表):
 		elif name in ("泉州"):
 			if len(fs) < 2: return
 			yb, hzs = fs[:2]
-			hzs = hzs.replace(" ", "")
+			yb = yb.lstrip("q")
 			hzs = re.sub(r"\[(.)\]", "\\1@", hzs)
 			hzs = self.normS(hzs)
 		elif name in ("思南塘頭",):
