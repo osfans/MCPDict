@@ -95,7 +95,7 @@ LANGUAGES = {i["簡稱"].encode():i["語言"] for i in info}
 ISLANDS = [i["簡稱"].encode() for i in info if i["方言島"]]
 
 INTROS = {i["簡稱"].encode():formatIntro(i) for i in info}
-s = "<br><h2>已收錄語言</h2><table border=1 cellspacing=0>"
+s = "<br><h2>已收錄語言</h2><table border=1 cellSpacing=0>"
 fields = ("語言", "字數", "□數", "音節數", "不帶調音節數")
 s += "<tr><th>%s</th></tr>" % "</th><th>".join(fields)
 for i in info:
