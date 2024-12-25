@@ -8,7 +8,9 @@ android {
         minSdkVersion 24
         targetSdkVersion 34
         versionCode 101
-        versionName "5.7"
+        def date = new SimpleDateFormat ("yyyyMMdd").format(new Date())
+        versionName "5.7 ($date)"
+        buildConfigField "int", "DB_VER", "$date"
     }
 
     signingConfigs {

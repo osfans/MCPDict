@@ -23,8 +23,7 @@ import java.util.Set;
 
 public class DB extends SQLiteAssetHelper {
 
-    private static final String DATABASE_NAME = "mcpdict.db";
-    private static final int DATABASE_VERSION = BuildConfig.VERSION_CODE;
+    private static final String DB_NAME = "mcpdict.db";
 
     // Must be the same order as defined in the string array "search_as"
 
@@ -127,13 +126,8 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public DB(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        super(context, DB_NAME, null, BuildConfig.DB_VER);
         setForcedUpgrade();
-        // Uncomment the following statements to force a database upgrade during development
-        // SQLiteDatabase db = getWritableDatabase();
-        // db.setVersion(-1);
-        // db.close();
-        // db = getWritableDatabase();
     }
 
     private static String[] getMatchColumns(String lang, SEARCH searchType, boolean allowVariants) {
@@ -476,10 +470,6 @@ public class DB extends SQLiteAssetHelper {
         return query(LABEL, String.format("%s and rowid > 1", selection), args);
     }
 
-    private static String[] queryLanguage(String selection) {
-        return query(LANGUAGE, selection, null);
-    }
-
     public static Cursor getLanguageCursor(CharSequence constraint) {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
@@ -494,7 +484,7 @@ public class DB extends SQLiteAssetHelper {
     public static String[] getLanguages() {
         initArrays();
         if (LANGUAGES == null) {
-            LANGUAGES = queryLanguage(SYLLABLES + " is not null");
+            LANGUAGES = query(LANGUAGE, SYLLABLES + " is not null", null);
         }
         return LANGUAGES;
     }
@@ -742,7 +732,7 @@ public class DB extends SQLiteAssetHelper {
         if (TextUtils.isEmpty(language) || language.contentEquals(HZ) || Pref.getFilter() == FILTER.HZ) {
             StringBuilder sb = new StringBuilder();
             sb.append(intro);
-            sb.append("<br><h2>已收錄語言</h2><table border=1 cellspacing=0>");
+            sb.append("<br><h2>已收錄語言</h2><table border=1 cellSpacing=0>");
             sb.append("<tr>");
             String[] fields = new String[]{LANGUAGE, "字數", "□數", SYLLABLES, "不帶調音節數"};
             for (String field: fields) {
