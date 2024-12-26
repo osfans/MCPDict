@@ -4,7 +4,6 @@ from tables._表 import 表 as _表
 import re
 
 class 表(_表):
-	#https://github.com/BYVoid/ytenx/blob/master/ytenx/sync/trngyan
 	site = '韻典網（中原音韻）'
 	url = 'https://ytenx.org/trngyan/dzih/%s'
 	
@@ -45,3 +44,7 @@ class 表(_表):
 		for hz in hzs:
 			l.append((hz, ybs, js))
 		return l
+
+	@property
+	def sydCount(self):
+		return len(set(map(lambda x:x.split("/")[0], self.syds.keys())))
