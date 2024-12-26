@@ -42,13 +42,13 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
-    - name: Create Nightly release
+    - name: Create latest release
       uses: 'marvinpinto/action-automatic-releases@latest'
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        automatic_release_tag: nightly
+        automatic_release_tag: latest
         prerelease: true
-        title: "Nightly Build"
+        title: "Lastest Build"
         files: |
           app/build/outputs/apk/release/*.APK
           tools/warnings.txt

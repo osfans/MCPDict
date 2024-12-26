@@ -288,6 +288,8 @@ class 表:
 			yb = yb.replace("[", "").replace("]", "")
 			yb = re.sub(r"^([mnvʋɹl])(\d+)$", "\\1\u0329\\2", yb)
 			yb = re.sub(r"^([ŋȵʐɱɻʒ])(\d+)$", "\\1\u030D\\2", yb)
+			if self.info["無調"]:
+				yb = yb.rstrip("0123456789")
 		return yb
 
 	def checkYb(self, yb):

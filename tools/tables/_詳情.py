@@ -131,6 +131,7 @@ def load(省):
 		跳過行數 = int(fs["跳過行數"]) if fs["跳過行數"] else 0
 		地圖級別 = fs["地圖級別"].count("★") if fs["地圖級別"] else 0
 
+		無調 = fs["無調"] == "☑"
 		j = fields.index("[1]陰平")
 		聲調 = getTones([fs[fields[i]] for i in range(j, j+10)])
 
@@ -203,6 +204,7 @@ def load(省):
 			"音系":音系,
 			"說明":說明,
 			"繁簡":繁簡,
+			"無調":無調,
 			"聲調":聲調
 		}
 		if 聯表列名:

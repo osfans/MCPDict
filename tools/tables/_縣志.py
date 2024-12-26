@@ -246,6 +246,8 @@ class 表(_表):
 			if line.startswith("#"): return line
 			line = re.sub(r"([？#\-\+])(.)", "\\2\\1", line)
 			line = line.replace("-", "(舊)").replace("+", "/").replace("？", "?").replace("#", "*")
+		elif name in ("黨項",):
+			line = re.sub(r"(.\{)", "[0]\\1", line)
 		return line
 
 	def parseYm(self, line):
