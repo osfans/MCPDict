@@ -208,6 +208,9 @@ class 表(_表):
 		elif name in ("白-沙",):
 			self.isYb = False
 			hz, yb = fs[0], fs[4]
+		elif name in ("中唐",):
+			self.isYb = False
+			hz, yb, js = fs[:3]
 		elif name in ("中世朝鮮"):
 			self.isYb = False
 			hz = fs[0]
