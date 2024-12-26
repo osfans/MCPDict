@@ -45,14 +45,15 @@ def formatIntro(i):
 			if i[k]:
 				s += "%s：%s<br/>" % (k, i[k])
 		if i["說明"]:
-			s += i["說明"].replace("\n", "<br/>")
+			s += i["說明"]
 	else:
 		for k in ("地點","經緯度", "作者", "錄入人", "維護人","來源", "參考文獻","文件名","版本","字數","□數", "音節數","不帶調音節數"):
 			if i[k]:
 				s += "%s：%s<br/>" % (k, i[k])
 		if s: s += "<br/>"
 		if i["說明"]:
-			s += i["說明"].replace("\n", "<br/>")
+			s += i["說明"]
+	s = s.replace("\n", "<br/>").replace("href=", "target='_blank' href=")
 	return s
 
 cur = os.path.abspath(os.path.dirname(__file__))
