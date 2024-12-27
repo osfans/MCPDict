@@ -21,8 +21,9 @@ class 表(_表):
 	def parse(self, fs):
 		order, hz, sm, ym, sd, js = fs[:6]
 		yb = sm + ym + sd
+		yb = yb.lstrip("*")
 		broad = self.broaddict.get(order+hz, self.ybdict.get(yb, ""))
-		if broad and broad != yb.replace("*", ""):
+		if broad and broad != yb:
 			self.ybdict[yb] = broad
 			yb = yb + "/" + broad
 		return hz, yb, js
