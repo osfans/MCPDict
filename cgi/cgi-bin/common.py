@@ -7,6 +7,77 @@ import xml.etree.ElementTree as ET
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
+def rich(r, k):
+	s = r[k]
+	if k == "白-沙": return s
+	s = s.replace(" ", "")
+	s = re.sub(", ?", ", ", s)
+	s = s.replace("\n", "<br>")
+	s = re.sub("\{(.*?)\}", "<div class=desc>\\1</div>", s)
+	s = re.sub("\|(.*?)\|", "<font color='#808080'>\\1</font>", s)
+	s = re.sub("\*(.*?)\*", "<b>\\1</b>", s)
+	return s
+
+def isUnicode(c):
+	return re.match("^(U\\+)?[0-9A-Fa-f]{4,5}$", c) != None
+
+def toUnicode(c):
+	c = c.upper()
+	if c.startswith("U+"): c = c[2:]
+	return unichr(int(c, 16))
+
+def getCharsetSQL(charset):
+	sql = ""
+	if charset == HZ:
+		pass
+	elif charset in KEYS_DICT or charset == GY:
+		sql = "AND %s IS NOT NULL" % charset
+	else:
+		sql = "AND 分類 LIKE '%%%s%%'" % charset
+	return sql
+
+def getKeys(key, variant):
+	keys = [key]
+	if variant:
+		keys.append(HZ)
+		keys.append("異體字")
+	elif key in KEYS_JA: keys = KEYS_JA
+	return keys
+
+def getSelect(key, value, word):
+	return 'SELECT *,offsets(mcpdict) AS vaIndex FROM mcpdict where (`%s` %s "%s") %s' % (key, word, value, getCharsetSQL(charset))
+
+def getSqls(value, word):
+	sqls = list(map(lambda x: getSelect(x, value, word), getKeys(lang, variant)))
+	sqls = (' UNION '.join(sqls)) + ' ORDER BY vaIndex LIMIT 10'
+	return c.execute(sqls)
+
+def getVisibleColumns(filter):
+	if filter == "當前語言": return [orgLang]
+	if filter == "僅方言島": return ISLANDS
+	if filter == "僅漢字": return []
+	return KEYS
+
+def getColorName(k):
+	name = k
+	color = COLORS[k]
+	fmt = "<font color=%s>%s</font>"
+	if "," in color:
+		colors = color.split(",")
+		m = len(name)//2
+		names = name[:m],name[m:]
+		s = ""
+		for i in range(2):
+			s += fmt % (colors[1 - i], names[i])
+		return s
+	return fmt % (color, name)
+
+def getVariant(hzs, vars):
+	for i in hzs:
+		if i in vars:
+			return i
+	return ""
+
 def getString(name):
 	l = root.findall("string[@name='%s']" % name)[0]
 	return l.text
@@ -17,8 +88,10 @@ def getStrings(name):
 
 def getStringFromFile(fname, *args):
 	template = open(fname)
-	s = template.read() % args
+	s = template.read()
 	template.close()
+	s = re.sub(r"(\d+)%", "\\1%%", s)
+	s = s % args
 	return s
 
 def isHZ(c):
@@ -81,6 +154,12 @@ searchType = form.getvalue("type", HZ)
 lang = form.getvalue("lang", "普通話")
 dict = form.getvalue("dict", "")
 orgLang = form.getvalue("lang", HZ)
+charset = form.getvalue("charset", HZ)
+hzOptionChecked = form.getvalue("漢字選項", False)
+variant = form.getvalue("variant", True) if searchType == HZ or searchType == YIN else False
+filter = form.getvalue("filter", "顯示全部")
+tone = form.getvalue("tone", 0)
+hzs = form.getvalue(HZ, sys.argv[1] if len(sys.argv) == 2 else "")
 
 dbname = "mcpdict.db"
 conn = sqlite3.connect(dbname)
