@@ -28,6 +28,10 @@ class 表(_表):
 		elif name in ("劍川金華",):
 			hz, sy, sd, js = fs[:4]
 			yb = sy + sd
+		elif name in ("樂昌黃圃",):
+			hz, sd, sy, js = fs[:4]
+			yb = sy + sd
+			js = js.strip("{}")
 		elif name in ("1926綜合",):
 			hz,yb,_,_,_,js = fs[:6]
 		elif name in ("蒼南錢庫",):
@@ -65,6 +69,11 @@ class 表(_表):
 		elif name in ("遂昌","五華橫陂","蔡家話"):
 			hz, sy, sd, js = fs[:4]
 			ipa = sy + sd
+		elif name in ("雙牌打鼓坪"):
+			sy, sd, _, js = fs[:4]
+			yb = sy + sd
+			hz = js[0]
+			js = js[1:].strip("()（）")
 		elif name in ("開化",):
 			hz, js, sm, ym, sd = fs[:5]
 			yb = sm + ym + sd.strip("[]")
@@ -181,6 +190,18 @@ class 表(_表):
 				for y,j in zip(yb.split(" "), js.split(" ")):
 					l.append((hz, y, j))
 				return l
+		elif name in ("1925鹽城"):
+			hzs, yb, js = fs[:3]
+			l = list()
+			for hz in hzs.split(" "):
+				if len(hz) == 2:
+					js = f"（{hz}）{js}".strip()
+					hz = hz[0]
+				elif len(hz) > 2:
+					js = f"{hz[1:]}{js}".strip()
+					hz = hz[0]
+				l.append((hz, yb, js))
+			return l
 		elif name in ("陽春河口",):
 			hz, sm, ym, sd, js = fs[9], fs[6], fs[7], fs[4].split("\\")[0], fs[10]
 			yb = sm + ym + sd

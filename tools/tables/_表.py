@@ -278,7 +278,7 @@ class 表:
 	def normYb(self, yb):
 		if self.isLang() and self.isYb:
 			yb = yb.strip()
-			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("0∅Ø〇").replace("零", "")
+			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀0∅Ø〇").replace("零", "")
 			if yb.startswith("I") or yb.startswith("1"): yb = "l" + yb[1:]
 			yb = yb.lower().replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ")
 			if not yb.startswith("h") and "h" in yb:
@@ -295,10 +295,12 @@ class 表:
 	def checkYb(self, yb):
 		yb = self.normYb(yb)
 		if "\t" in yb:
-			self.errors.append(f"{yb} 音節有空格")
+			self.errors.append(f"{yb} 音節有TAB空檔")
 			yb = yb.replace("\t", "")
 		if isHZ(yb[0]):
-			self.errors.append(f"{yb} 音節有錯誤")
+			self.errors.append(f"{yb} 音節錯誤")
+		if re.match(r".+\d{3,}", yb):
+			self.errors.append(f"{yb} 調類錯誤")
 		if yb not in self.ybs:
 			self.ybs.add(yb)
 		else:
