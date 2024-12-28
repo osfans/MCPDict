@@ -26,9 +26,9 @@ class 表(_表):
 			line = re.sub(r"^(.*?)［", "\\1	［", line)
 		elif name in ("寶應望直港","羅山周黨","涇縣茂林","沁源", "同江二屯","象山鶴浦","趙縣"):
 			line = re.sub(r"^(.*?) ?\[", "\\1	[", line)
-		elif name in ("萍鄕","平陽","都昌陽峯"):
-			line = line.lstrip("∅︀")
-		elif name in ("遂川","大庸","大庸三眼橋", "婺川", "蒙山程村"):
+		elif name in ("永州嵐角山"):
+			line = line.lstrip("ø")
+		elif name in ("遂川","大庸南","大庸北", "婺川", "蒙山程村"):
 			line = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 		elif name in ("奉化",):
 			line = re.sub(r"(\d+)(?![：\d])", lambda x:"[%s]"%self.dz2dl(x[1]), line)
@@ -106,7 +106,7 @@ class 表(_表):
 			line = self.normS(line, "{\\1}")
 		elif name in ("通道菁蕪洲",):
 			line = re.sub("([&])(?!{)","{西官借詞}",line).replace("&{","{(西官借詞)")
-		elif name in ("泰興","無爲牛埠"):
+		elif name in ("泰興","無爲牛埠","淮陰"):
 			line = line.lstrip("q")
 		elif name in ("壺關樹掌"):
 			line = line.lstrip("q").replace("·", "0")
@@ -136,7 +136,7 @@ class 表(_表):
 		elif name in ("虔南大吉山",):
 			line = re.sub(r"\[.*?(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 			line = line.replace("<","{").replace(">","}")
-		elif name in ("澄海大新","光山", "南康唐江", "仁化長江", "永豐", "南豐"):
+		elif name in ("澄海大新","光山", "南康唐江", "仁化長江", "永豐", "南豐","崇左大新"):
 			line = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 		elif name in ("耒陽",):
 			line = line.replace("51", "53")
@@ -247,7 +247,7 @@ class 表(_表):
 			line = re.sub(r"([？#\-\+])(.)", "\\2\\1", line)
 			line = line.replace("-", "(舊)").replace("+", "/").replace("？", "?").replace("#", "*")
 		elif name in ("黨項",):
-			line = re.sub(r"(.\{)", "[0]\\1", line)
+			line = re.sub(r"(.\{)", "[0]\\1", line, count=1)
 		return line
 
 	def parseYm(self, line):

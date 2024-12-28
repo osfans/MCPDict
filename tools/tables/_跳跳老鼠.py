@@ -104,7 +104,7 @@ class 表(_表):
 			_, sy, sd, hzs = fs[:4]
 			sd = sd.strip("[]")
 			hzs = self.normG(hzs, "[\\1]")
-		elif name in ("灌陽",):
+		elif name in ("灌陽","全州文橋"):
 			sy, sd, hzs = fs[:3]
 			hzs = self.normG(hzs, "[\\1]")
 		elif name in ("江華河路口", "江華粟米塘", "全州黃沙河", "安仁新洲", "1935長沙", "長沙黃花", "瀏陽鎭頭"):

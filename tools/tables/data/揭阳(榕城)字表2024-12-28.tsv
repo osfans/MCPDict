@@ -2352,12 +2352,12 @@
 蚌		p	aŋ	35	paŋ35				
 扮		p	aŋ	213	paŋ213				
 放		p	aŋ	213	paŋ213	白读	~手		
-剥		p	ak	2	pak1				
-北		p	ak	2	pak1				
-幅		p	ak	2	pak1				
-腹		p	ak	2	pak1				
-𧧸		p	ak	2	pak1		认识（对应福州“仈”）		
-别		p	ak	2	pak1		𧧸（认识）的本字		
+剥		p	ak	2	pak2				
+北		p	ak	2	pak2				
+幅		p	ak	2	pak2				
+腹		p	ak	2	pak2				
+𧧸		p	ak	2	pak2		认识（对应福州“仈”）		
+别		p	ak	2	pak2		𧧸（认识）的本字		
 别		p	ak	5	pak5		其他的		
 缚		p	ak	5	pak5				
 攀		pʰ	aŋ	33	pʰaŋ33				
@@ -2373,7 +2373,7 @@
 纺		pʰ	aŋ	42	pʰaŋ42				
 盼		pʰ	aŋ	213	pʰaŋ213				
 缝		pʰ	aŋ	22	pʰaŋ22		缝隙		
-博		pʰ	ak	2	pʰak1				
+博		pʰ	ak	2	pʰak2				
 雹		pʰ	ak	5	pʰak5				
 瀑		pʰ	ak	5	pʰak5				
 曝		pʰ	ak	5	pʰak5		~日：晒太阳		
@@ -2391,7 +2391,7 @@
 网		m	aŋ	35	maŋ35				
 慢		m	aŋ	22	maŋ22				
 梦		m	aŋ	22	maŋ22				
-摸		m	ak	2	mak1		玩		
+摸		m	ak	2	mak2		玩		
 目		m	ak	5	mak5				
 墨		b	ak	5	bak5				
 木		b	ak	5	bak5				
@@ -2440,8 +2440,8 @@
 叹		tʰ	aŋ	213	tʰaŋ213				
 趁		tʰ	aŋ	213	tʰaŋ213	白读	~银：赚钱		
 统		tʰ	aŋ	213	tʰaŋ213		~日：整天；~年：常常，总是		
-踢		tʰ	ak	2	tʰak1				
-塞		tʰ	ak	2	tʰak1		（被）堵塞		
+踢		tʰ	ak	2	tʰak2				
+塞		tʰ	ak	2	tʰak2		（被）堵塞		
 读		tʰ	ak	5	tʰak5				
 难		n	aŋ	55	naŋ55		困~		
 侬		n	aŋ	55	naŋ55	白读	人		
@@ -2462,7 +2462,7 @@
 烂		l	aŋ	35	laŋ35		灿~		
 朗		l	aŋ	35	laŋ35		~读		
 浪		l	aŋ	35	laŋ35				
-落		l	ak	2	lak1		脱		
+落		l	ak	2	lak2		脱		
 乐		l	ak	5	lak5		快~		
 力		l	ak	5	lak5				
 六		l	ak	5	lak5				
@@ -2480,9 +2480,9 @@
 壮		ts	aŋ	213	tsaŋ213		身体好		
 粽		ts	aŋ	213	tsaŋ213				
 赠		ts	aŋ	22	tsaŋ22				
-札		ts	ak	2	tsak1				
-节		ts	ak	2	tsak1		量词		
-作		ts	ak	2	tsak1	文读	工~		
+札		ts	ak	2	tsak2				
+节		ts	ak	2	tsak2		量词		
+作		ts	ak	2	tsak2	文读	工~		
 实		ts	ak	5	tsak5	白读	密		
 族		ts	ak	5	tsak5	白读	种~：用于骂人话		
 餐		tsʰ	aŋ	33	tsʰaŋ33				
@@ -2494,9 +2494,9 @@
 铲		tsʰ	aŋ	42	tsʰaŋ42				
 灿		tsʰ	aŋ	213	tsʰaŋ213				
 创		tsʰ	aŋ	213	tsʰaŋ213				
-擦		tsʰ	ak	2	tsʰak1				
-察		tsʰ	ak	2	tsʰak1				
-漆		tsʰ	ak	2	tsʰak1				
+擦		tsʰ	ak	2	tsʰak2				
+察		tsʰ	ak	2	tsʰak2				
+漆		tsʰ	ak	2	tsʰak2				
 凿		tsʰ	ak	5	tsʰak5				
 贼		tsʰ	ak	5	tsʰak5				
 珊		s	aŋ	33	saŋ33				
@@ -2506,9 +2506,9 @@
 㾪		s	aŋ	42	saŋ42		瘦		
 丧		s	aŋ	213	saŋ213				
 送		s	aŋ	213	saŋ213				
-萨		s	ak	2	sak1				
-虱		s	ak	2	sak1				
-塞		s	ak	2	sak1		动词		
+萨		s	ak	2	sak2				
+虱		s	ak	2	sak2				
+塞		s	ak	2	sak2		动词		
 干		k	aŋ	33	kaŋ33				
 艰		k	aŋ	33	kaŋ33				
 间		k	aŋ	33	kaŋ33	文读	时~		
@@ -2528,10 +2528,10 @@
 干		k	aŋ	213	kaŋ213				
 降		k	aŋ	213	kaŋ213		~落		
 共		k	aŋ	22	kaŋ22				
-觉		k	ak	2	kak1				
-结		k	ak	2	kak1				
-各		k	ak	2	kak1				
-角		k	ak	2	kak1				
+觉		k	ak	2	kak2				
+结		k	ak	2	kak2				
+各		k	ak	2	kak2				
+角		k	ak	2	kak2				
 牵		kʰ	aŋ	33	kʰaŋ33				
 康		kʰ	aŋ	33	kʰaŋ33				
 慷		kʰ	aŋ	33	kʰaŋ33				
@@ -2540,11 +2540,11 @@
 擎		kʰ	aŋ	55	kʰaŋ55	替字	用双手端		
 抗		kʰ	aŋ	213	kʰaŋ213				
 炕		kʰ	aŋ	213	kʰaŋ213				
-霍		kʰ	ak	2	kʰak1				
-藿		kʰ	ak	2	kʰak1				
-确		kʰ	ak	2	kʰak1				
-壳		kʰ	ak	2	kʰak1				
-曲		kʰ	ak	2	kʰak1				
+霍		kʰ	ak	2	kʰak2				
+藿		kʰ	ak	2	kʰak2				
+确		kʰ	ak	2	kʰak2				
+壳		kʰ	ak	2	kʰak2				
+曲		kʰ	ak	2	kʰak2				
 昂		ŋ	aŋ	33	ŋaŋ33				
 颜		ŋ	aŋ	55	ŋaŋ55				
 言		ŋ	aŋ	55	ŋaŋ55				
@@ -2567,9 +2567,9 @@
 项		h	aŋ	35	haŋ35				
 汉		h	aŋ	213	haŋ213				
 巷		h	aŋ	22	haŋ22				
-喝		h	ak	2	hak1				
-辖		h	ak	2	hak1		（张燕芬原表如此）		
-郝		h	ak	2	hak1				
+喝		h	ak	2	hak2				
+辖		h	ak	2	hak2		（张燕芬原表如此）		
+郝		h	ak	2	hak2				
 蓄		h	ak	2	hak2	白读			
 学		h	ak	5	hak5	文读	~习		
 翁		Ø	aŋ	33	aŋ33		丈夫		
@@ -2578,8 +2578,8 @@
 按		Ø	aŋ	213	aŋ213				
 宴		Ø	aŋ	213	aŋ213				
 瓮		Ø	aŋ	213	aŋ213				
-恶		Ø	ak	2	ak1				
-沃		Ø	ak	2	ak1	白读	~水：浇水		
+恶		Ø	ak	2	ak2				
+沃		Ø	ak	2	ak2	白读	~水：浇水		
 鞭		p	iaŋ	33	piaŋ33	文读	~策		
 边		p	iaŋ	33	piaŋ33	文读			
 彬		p	iaŋ	33	piaŋ33				
@@ -2613,19 +2613,19 @@
 电		t	iaŋ	35	tiaŋ35				
 奠		t	iaŋ	35	tiaŋ35				
 垫		t	iaŋ	35	tiaŋ35				
-跌		t	iak	2	tiak1				
-哲		t	iak	2	tiak1				
-蜇		t	iak	2	tiak1				
-秩		t	iak	2	tiak1				
+跌		t	iak	2	tiak2				
+哲		t	iak	2	tiak2				
+蜇		t	iak	2	tiak2				
+秩		t	iak	2	tiak2				
 侄		t	iak	5	tiak5				
 天		tʰ	iaŋ	33	tʰiaŋ33	文读	~桥		
 钿		tʰ	iaŋ	55	tʰiaŋ55		人名		
 田		tʰ	iaŋ	55	tʰiaŋ55		罕用文读，一般换读为“塍”		
 填		tʰ	iaŋ	55	tʰiaŋ55				
 畅		tʰ	iaŋ	213	tʰiaŋ213				
-彻		tʰ	iak	2	tʰiak1				
-撤		tʰ	iak	2	tʰiak1				
-辙		tʰ	iak	2	tʰiak1				
+彻		tʰ	iak	2	tʰiak2				
+撤		tʰ	iak	2	tʰiak2				
+辙		tʰ	iak	2	tʰiak2				
 铃		l	iaŋ	33	liaŋ33				
 连		l	iaŋ	55	liaŋ55				
 联		l	iaŋ	55	liaŋ55				
@@ -2664,9 +2664,9 @@
 涨		ts	iaŋ	213	tsiaŋ213				
 障		ts	iaŋ	213	tsiaŋ213				
 瘴		ts	iaŋ	213	tsiaŋ213				
-浙		ts	iak	2	tsiak1				
-爵		ts	iak	2	tsiak1				
-即		ts	iak	2	tsiak1				
+浙		ts	iak	2	tsiak2				
+爵		ts	iak	2	tsiak2				
+即		ts	iak	2	tsiak2				
 迁		tsʰ	iaŋ	33	tsʰiaŋ33				
 昌		tsʰ	iaŋ	33	tsʰiaŋ33				
 菖		tsʰ	iaŋ	33	tsʰiaŋ33				
@@ -2676,9 +2676,9 @@
 厂		tsʰ	iaŋ	42	tsʰiaŋ42				
 唱		tsʰ	iaŋ	213	tsʰiaŋ213	文读	歌~		
 倡		tsʰ	iaŋ	213	tsʰiaŋ213				
-切		tsʰ	iak	2	tsʰiak1				
-雀		tsʰ	iak	2	tsʰiak1	文读	孔~		
-鹊		tsʰ	iak	2	tsʰiak1				
+切		tsʰ	iak	2	tsʰiak2				
+雀		tsʰ	iak	2	tsʰiak2	文读	孔~		
+鹊		tsʰ	iak	2	tsʰiak2				
 仙		s	iaŋ	33	siaŋ33				
 相		s	iaŋ	33	siaŋ33	文读	~信		
 湘		s	iaŋ	33	siaŋ33				
@@ -2698,7 +2698,7 @@
 尚		s	iaŋ	35	siaŋ35				
 上		s	iaŋ	35	siaŋ35	文读	~好：最好		
 相		s	iaŋ	213	siaŋ213		宰~		
-设		s	iak	2	siak1				
+设		s	iak	2	siak2				
 然		dz	iaŋ	55	dziaŋ55				
 燃		dz	iaŋ	55	dziaŋ55	文读			
 酿		dz	iaŋ	42	dziaŋ42				
@@ -2722,7 +2722,7 @@
 键		k	iaŋ	35	kiaŋ35				
 健		k	iaŋ	35	kiaŋ35				
 见		k	iaŋ	213	kiaŋ213	文读	再~		
-洁		k	iak	2	kiak1				
+洁		k	iak	2	kiak2				
 杰		k	iak	5	kiak5				
 刊		kʰ	iaŋ	33	kʰiaŋ33				
 强		kʰ	iaŋ	55	kʰiaŋ55		富~		
@@ -2730,13 +2730,13 @@
 垦		kʰ	iaŋ	42	kʰiaŋ42				
 遣		kʰ	iaŋ	42	kʰiaŋ42				
 勥		kʰ	iaŋ	213	kʰiaŋ213		厉害		
-却		kʰ	iak	2	kʰiak1				
+却		kʰ	iak	2	kʰiak2				
 蔫		ŋ	iaŋ	33	ŋiaŋ33				
 研		ŋ	iaŋ	55	ŋiaŋ55				
 研		ŋ	iaŋ	55	ŋiaŋ55		细看（本字可能就是研？）		
 仰		ŋ	iaŋ	42	ŋiaŋ42				
 愿	願	ŋ	iaŋ	213	ŋiaŋ213		喜欢		
-喫		ŋ	iak	2	ŋiak1				
+喫		ŋ	iak	2	ŋiak2				
 孽		ŋ	iak	5	ŋiak5				
 虐		ŋ	iak	5	ŋiak5				
 疟		ŋ	iak	5	ŋiak5				
@@ -2751,7 +2751,7 @@
 献		h	iaŋ	213	hiaŋ213				
 饷		h	iaŋ	213	hiaŋ213				
 向		h	iaŋ	213	hiaŋ213				
-蝎		h	iak	2	hiak1				
+蝎		h	iak	2	hiak2				
 燕		Ø	iaŋ	33	iaŋ33		~国		
 渊		Ø	iaŋ	33	iaŋ33				
 央		Ø	iaŋ	33	iaŋ33				
@@ -2767,10 +2767,10 @@
 援		Ø	iaŋ	35	iaŋ35				
 痒		Ø	iaŋ	35	iaŋ35	文读	瘙~		
 映		Ø	iaŋ	213	iaŋ213				
-曰		Ø	iak	2	iak1				
-约		Ø	iak	2	iak1	文读	~掉		
-钥		Ø	iak	2	iak1				
-跃		Ø	iak	2	iak1				
+曰		Ø	iak	2	iak2				
+约		Ø	iak	2	iak2	文读	~掉		
+钥		Ø	iak	2	iak2				
+跃		Ø	iak	2	iak2				
 烨		Ø	iak	5	iak5				
 晔		Ø	iak	5	iak5				
 叛		p	uaŋ	35	puaŋ35				
@@ -2805,7 +2805,7 @@
 鸾		l	uaŋ	55	luaŋ55				
 乱		l	uaŋ	35	luaŋ35				
 恋		l	uaŋ	213	luaŋ213				
-阅		l	uak	2	luak1				
+阅		l	uak	2	luak2				
 专		ts	uaŋ	33	tsuaŋ33				
 装		ts	uaŋ	33	tsuaŋ33				
 桩		ts	uaŋ	33	tsuaŋ33				
@@ -2822,7 +2822,7 @@
 窜		tsʰ	uaŋ	213	tsʰuaŋ213				
 串		tsʰ	uaŋ	213	tsʰuaŋ213				
 闯		tsʰ	uaŋ	213	tsʰuaŋ213				
-撮		tsʰ	uak	2	tsʰuak1	文读	~合		
+撮		tsʰ	uak	2	tsʰuak2	文读	~合		
 宣		s	uaŋ	33	suaŋ33				
 喧		s	uaŋ	33	suaŋ33				
 萱		s	uaŋ	33	suaŋ33				
@@ -2831,8 +2831,8 @@
 漩		s	uaŋ	55	suaŋ55				
 选		s	uaŋ	42	suaŋ42				
 爽		s	uaŋ	42	suaŋ42				
-塑		s	uak	2	suak1				
-朔		s	uak	2	suak1				
+塑		s	uak	2	suak2				
+朔		s	uak	2	suak2				
 纂		dz	uaŋ	42	dzuaŋ42				
 转		dz	uaŋ	42	dzuaŋ42		~螺丝		
 悦		dz	uak	5	dzuak5	文读	喜~		
@@ -2852,9 +2852,9 @@
 冠		k	uaŋ	213	kuaŋ213		~军		
 惯		k	uaŋ	213	kuaŋ213				
 券		k	uaŋ	213	kuaŋ213				
-括		k	uak	2	kuak1				
-决		k	uak	2	kuak1				
-诀		k	uak	2	kuak1				
+括		k	uak	2	kuak2				
+决		k	uak	2	kuak2				
+诀		k	uak	2	kuak2				
 宽		kʰ	uaŋ	33	kʰuaŋ33	文读	~心		
 圈		kʰ	uaŋ	33	kʰuaŋ33				
 眶		kʰ	uaŋ	33	kʰuaŋ33				
@@ -2900,7 +2900,7 @@
 焕		h	uaŋ	213	huaŋ213				
 贩		h	uaŋ	213	huaŋ213				
 放		h	uaŋ	213	huaŋ213	文读	解~		
-发		h	uak	2	huak1				
+发		h	uak	2	huak2				
 伐		h	uak	5	huak5				
 筏		h	uak	5	huak5				
 罚		h	uak	5	huak5				
@@ -2940,10 +2940,10 @@
 殡		p	eŋ	213	peŋ213	白读	出~		
 鬓		p	eŋ	213	peŋ213				
 便		p	eŋ	22	peŋ22	白读	物~：弄好，准备周到		
-笔		p	ek	2	pek1				
-必		p	ek	2	pek1				
-逼		p	ek	2	pek1				
-迫		p	ek	2	pek1				
+笔		p	ek	2	pek2				
+必		p	ek	2	pek2				
+逼		p	ek	2	pek2				
+迫		p	ek	2	pek2				
 烹		pʰ	eŋ	33	pʰeŋ33				
 拼		pʰ	eŋ	33	pʰeŋ33	文读	~写		
 贫		pʰ	eŋ	55	pʰeŋ55				
@@ -2957,11 +2957,11 @@
 品		pʰ	eŋ	42	pʰeŋ42		食~		
 贬		pʰ	eŋ	213	pʰeŋ213				
 聘		pʰ	eŋ	213	pʰeŋ213	文读	~书		
-匹		pʰ	ek	2	pʰek1				
-魄		pʰ	ek	2	pʰek1				
-碧		pʰ	ek	2	pʰek1				
-辟		pʰ	ek	2	pʰek1				
-劈		pʰ	ek	2	pʰek1				
+匹		pʰ	ek	2	pʰek2				
+魄		pʰ	ek	2	pʰek2				
+碧		pʰ	ek	2	pʰek2				
+辟		pʰ	ek	2	pʰek2				
+劈		pʰ	ek	2	pʰek2				
 蜜		b	ek	5	bek5				
 淧		b	ek	5	bek5		~~：满满的		
 眠		m	eŋ	55	meŋ55				
@@ -3001,9 +3001,9 @@
 钉		t	eŋ	213	teŋ213		动词		
 订		t	eŋ	213	teŋ213				
 阵		t	eŋ	22	teŋ22				
-得		t	ek	2	tek1				
-德		t	ek	2	tek1				
-竹		t	ek	2	tek1				
+得		t	ek	2	tek2				
+德		t	ek	2	tek2				
+竹		t	ek	2	tek2				
 特		t	ek	5	tek5				
 直		t	ek	5	tek5				
 值		t	ek	5	tek5	文读	~日		
@@ -3025,7 +3025,7 @@
 惩		tʰ	eŋ	42	tʰeŋ42				
 颖		tʰ	eŋ	42	tʰeŋ42				
 听		tʰ	eŋ	213	tʰeŋ213	文读	看情况，试着；危言耸~		
-秃		tʰ	ek	2	tʰek1				
+秃		tʰ	ek	2	tʰek2				
 能		n	eŋ	55	neŋ55	文读			
 匿		n	ek	5	nek5				
 肉		n	ek	5	nek5				
@@ -3085,11 +3085,11 @@
 症		ts	eŋ	213	tseŋ213				
 政		ts	eŋ	213	tseŋ213				
 种		ts	eŋ	213	tseŋ213		~树		
-则		ts	ek	2	tsek1				
-鲫		ts	ek	2	tsek1				
-脊		ts	ek	2	tsek1	文读			
-叔		ts	ek	2	tsek1				
-烛		ts	ek	2	tsek1				
+则		ts	ek	2	tsek2				
+鲫		ts	ek	2	tsek2				
+脊		ts	ek	2	tsek2	文读			
+叔		ts	ek	2	tsek2				
+烛		ts	ek	2	tsek2				
 疾		ts	ek	5	tsek5				
 泽		ts	ek	5	tsek5				
 蜀		ts	ek	5	tsek5		一， 基数词		
@@ -3105,13 +3105,13 @@
 秤		tsʰ	eŋ	213	tsʰeŋ213				
 凊		tsʰ	eŋ	213	tsʰeŋ213		冷掉的（饭）；~彩：随意		
 铳		tsʰ	eŋ	213	tsʰeŋ213				
-七		tsʰ	ek	2	tsʰek1				
-膝		tsʰ	ek	2	tsʰek1				
-侧		tsʰ	ek	2	tsʰek1				
-测		tsʰ	ek	2	tsʰek1				
-斥		tsʰ	ek	2	tsʰek1				
-戚		tsʰ	ek	2	tsʰek1				
-粟		tsʰ	ek	2	tsʰek1				
+七		tsʰ	ek	2	tsʰek2				
+膝		tsʰ	ek	2	tsʰek2				
+侧		tsʰ	ek	2	tsʰek2				
+测		tsʰ	ek	2	tsʰek2				
+斥		tsʰ	ek	2	tsʰek2				
+戚		tsʰ	ek	2	tsʰek2				
+粟		tsʰ	ek	2	tsʰek2				
 辛		s	eŋ	33	seŋ33				
 新		s	eŋ	33	seŋ33				
 身		s	eŋ	33	seŋ33				
@@ -3137,23 +3137,23 @@
 迅		s	eŋ	213	seŋ213				
 胜		s	eŋ	213	seŋ213				
 剩		s	eŋ	22	seŋ22				
-宿		s	ek	2	sek1	白读	（瓜果）成熟、（人）老到		
-悉		s	ek	2	sek1				
-失		s	ek	2	sek1				
-室		s	ek	2	sek1				
-息		s	ek	2	sek1				
-熄		s	ek	2	sek1				
-媳		s	ek	2	sek1				
-色		s	ek	2	sek1				
-识		s	ek	2	sek1				
-式		s	ek	2	sek1				
-饰		s	ek	2	sek1				
-植		s	ek	2	sek1				
-昔		s	ek	2	sek1				
-夕		s	ek	2	sek1				
-适		s	ek	2	sek1				
-释		s	ek	2	sek1				
-析		s	ek	2	sek1				
+宿		s	ek	2	sek2	白读	（瓜果）成熟、（人）老到		
+悉		s	ek	2	sek2				
+失		s	ek	2	sek2				
+室		s	ek	2	sek2				
+息		s	ek	2	sek2				
+熄		s	ek	2	sek2				
+媳		s	ek	2	sek2				
+色		s	ek	2	sek2				
+识		s	ek	2	sek2				
+式		s	ek	2	sek2				
+饰		s	ek	2	sek2				
+植		s	ek	2	sek2				
+昔		s	ek	2	sek2				
+夕		s	ek	2	sek2				
+适		s	ek	2	sek2				
+释		s	ek	2	sek2				
+析		s	ek	2	sek2				
 实		s	ek	5	sek5				
 翼		s	ek	5	sek5	白读	翅膀		
 熟		s	ek	5	sek5				
@@ -3189,12 +3189,12 @@
 竞		k	eŋ	35	keŋ35		（阳上阴去两可）		
 竞		k	eŋ	213	keŋ213		（阳上阴去两可）		
 敬		k	eŋ	213	keŋ213				
-揭		k	ek	2	kek1		~阳		
-吉		k	ek	2	kek1				
-橘		k	ek	2	kek1				
-革		k	ek	2	kek1				
-激		k	ek	2	kek1				
-菊		k	ek	2	kek1				
+揭		k	ek	2	kek2		~阳		
+吉		k	ek	2	kek2				
+橘		k	ek	2	kek2				
+革		k	ek	2	kek2				
+激		k	ek	2	kek2				
+菊		k	ek	2	kek2				
 极		k	ek	5	kek5				
 局		k	ek	5	kek5				
 筐		kʰ	eŋ	33	kʰeŋ33				
@@ -3209,10 +3209,10 @@
 虹		kʰ	eŋ	35	kʰeŋ35		彩虹		
 庆		kʰ	eŋ	213	kʰeŋ213				
 磬		kʰ	eŋ	213	kʰeŋ213				
-乞		kʰ	ek	2	kʰek1				
-刻		kʰ	ek	2	kʰek1				
-击		kʰ	ek	2	kʰek1				
-曲		kʰ	ek	2	kʰek1	白读	歌~		
+乞		kʰ	ek	2	kʰek2				
+刻		kʰ	ek	2	kʰek2				
+击		kʰ	ek	2	kʰek2				
+曲		kʰ	ek	2	kʰek2	白读	歌~		
 玉		g	ek	5	gek5				
 狱		g	ek	5	gek5				
 龈		ŋ	eŋ	55	ŋeŋ55				
@@ -3239,8 +3239,8 @@
 幸		h	eŋ	35	heŋ35				
 兴		h	eŋ	213	heŋ213		高~		
 现		h	eŋ	22	heŋ22				
-黑		h	ek	2	hek1				
-核	覈	h	ek	2	hek1		审~		
+黑		h	ek	2	hek2				
+核	覈	h	ek	2	hek2		审~		
 乏		h	ek	5	hek5	白读	累		
 烟		Ø	eŋ	33	eŋ33				
 恩		Ø	eŋ	33	eŋ33				
@@ -3266,9 +3266,9 @@
 应		Ø	eŋ	213	eŋ213				
 蕹		Ø	eŋ	213	eŋ213				
 用		Ø	eŋ	22	eŋ22				
-乙		Ø	ek	2	ek1				
-一		Ø	ek	2	ek1				
-忆		Ø	ek	2	ek1				
+乙		Ø	ek	2	ek2				
+一		Ø	ek	2	ek2				
+忆		Ø	ek	2	ek2				
 逸		Ø	ek	5	ek5				
 亿		Ø	ek	5	ek5				
 翼		Ø	ek	5	ek5	文读	羽~		
@@ -3292,15 +3292,15 @@
 域		Ø	uek	5	uek5				
 获		Ø	uek	5	uek5				
 乓		p	oŋ	55	poŋ55				
-卜		p	ok	2	pok1		~卦		
+卜		p	ok	2	pok2		~卦		
 卜	蔔	p	ok	5	pok5		萝~		
 僕		p	ok	5	pok5		埋伏		
 蓬		pʰ	oŋ	55	pʰoŋ55				
 缝		pʰ	oŋ	55	pʰoŋ55		缝纫		
 捧		pʰ	oŋ	42	pʰoŋ42				
-朴		pʰ	ok	2	pʰok1		~素		
-扑		pʰ	ok	2	pʰok1				
-𦢊		pʰ	ok	2	pʰok1		~疱：起水泡		
+朴		pʰ	ok	2	pʰok2		~素		
+扑		pʰ	ok	2	pʰok2				
+𦢊		pʰ	ok	2	pʰok2		~疱：起水泡		
 没		m	ok	5	mok5				
 莫		m	ok	5	mok5				
 寞		m	ok	5	mok5				
@@ -3315,12 +3315,12 @@
 冻		t	oŋ	213	toŋ213				
 栋		t	oŋ	213	toŋ213				
 中		t	oŋ	213	toŋ213		~奖		
-琢		t	ok	2	tok1				
-啄		t	ok	2	tok1				
-笃		t	ok	2	tok1				
-督		t	ok	2	tok1				
-筑		t	ok	2	tok1				
-斲		t	ok	2	tok1		砍		
+琢		t	ok	2	tok2				
+啄		t	ok	2	tok2				
+笃		t	ok	2	tok2				
+督		t	ok	2	tok2				
+筑		t	ok	2	tok2				
+斲		t	ok	2	tok2		砍		
 独		t	ok	5	tok5				
 犊		t	ok	5	tok5				
 逐		t	ok	5	tok5				
@@ -3351,8 +3351,8 @@
 总		ts	oŋ	42	tsoŋ42				
 众		ts	oŋ	213	tsoŋ213				
 纵		ts	oŋ	213	tsoŋ213				
-祝		ts	ok	2	tsok1				
-足		ts	ok	2	tsok1				
+祝		ts	ok	2	tsok2				
+足		ts	ok	2	tsok2				
 族		ts	ok	5	tsok5				
 聪		tsʰ	oŋ	33	tsʰoŋ33				
 匆		tsʰ	oŋ	33	tsʰoŋ33				
@@ -3361,11 +3361,11 @@
 冲		tsʰ	oŋ	33	tsʰoŋ33				
 崇		tsʰ	oŋ	55	tsʰoŋ55				
 从		tsʰ	oŋ	55	tsʰoŋ55				
-捉		tsʰ	ok	2	tsʰok1				
-镯		tsʰ	ok	2	tsʰok1				
-促		tsʰ	ok	2	tsʰok1				
-猝		tsʰ	ok	2	tsʰok1				
-触		tsʰ	ok	2	tsʰok1				
+捉		tsʰ	ok	2	tsʰok2				
+镯		tsʰ	ok	2	tsʰok2				
+促		tsʰ	ok	2	tsʰok2				
+猝		tsʰ	ok	2	tsʰok2				
+触		tsʰ	ok	2	tsʰok2				
 松		s	oŋ	33	soŋ33	文读	~开		
 嵩		s	oŋ	33	soŋ33				
 松		s	oŋ	55	soŋ55		武~		
@@ -3374,12 +3374,12 @@
 颂		s	oŋ	35	soŋ35				
 讼		s	oŋ	35	soŋ35				
 宋		s	oŋ	213	soŋ213				
-寂		s	ok	2	sok1				
-速		s	ok	2	sok1				
-肃		s	ok	2	sok1				
-缩		s	ok	2	sok1				
-淑		s	ok	2	sok1				
-束		s	ok	2	sok1				
+寂		s	ok	2	sok2				
+速		s	ok	2	sok2				
+肃		s	ok	2	sok2				
+缩		s	ok	2	sok2				
+淑		s	ok	2	sok2				
+束		s	ok	2	sok2				
 续		s	ok	5	sok5				
 俗		s	ok	5	sok5				
 赎		s	ok	5	sok5				
@@ -3393,12 +3393,12 @@
 㼦		k	oŋ	42	koŋ42		舀水用的圆柱形容器。《广韵》居悚切，缻也。		
 贡		k	oŋ	213	koŋ213				
 汞		k	oŋ	213	koŋ213				
-国		k	ok	2	kok1				
-谷		k	ok	2	kok1				
+国		k	ok	2	kok2				
+谷		k	ok	2	kok2				
 空		kʰ	oŋ	33	kʰoŋ33	文读	天~		
 孔		kʰ	oŋ	42	kʰoŋ42				
 控		kʰ	oŋ	213	kʰoŋ213				
-酷		kʰ	ok	2	kʰok1				
+酷		kʰ	ok	2	kʰok2				
 轰		h	oŋ	33	hoŋ33				
 丰		h	oŋ	33	hoŋ33				
 封		h	oŋ	33	hoŋ33				
@@ -3416,19 +3416,19 @@
 凤		h	oŋ	35	hoŋ35				
 奉		h	oŋ	35	hoŋ35				
 讽		h	oŋ	213	hoŋ213				
-福		h	ok	2	hok1				
-蝠		h	ok	2	hok1				
-复		h	ok	2	hok1		~习		
+福		h	ok	2	hok2				
+蝠		h	ok	2	hok2				
+复		h	ok	2	hok2		~习		
 复		h	ok	5	hok5		回~		
 覆		h	ok	5	hok5				
 服		h	ok	5	hok5				
 伏		h	ok	5	hok5				
 翁		Ø	oŋ	33	oŋ33	文读	老~		
-握		Ø	ok	2	ok1				
-屋		Ø	ok	2	ok1				
-沃		Ø	ok	2	ok1	文读	肥~		
-畜		tʰ	iok	2	tʰiok1				
-蓄		tʰ	iok	2	tʰiok1				
+握		Ø	ok	2	ok2				
+屋		Ø	ok	2	ok2				
+沃		Ø	ok	2	ok2	文读	肥~		
+畜		tʰ	iok	2	tʰiok2				
+蓄		tʰ	iok	2	tʰiok2				
 仍		dz	ioŋ	55	dzioŋ55				
 戎		dz	ioŋ	55	dzioŋ55				
 绒		dz	ioŋ	55	dzioŋ55				
@@ -3436,12 +3436,12 @@
 躬		k	ioŋ	33	kioŋ33				
 恭		k	ioŋ	33	kioŋ33				
 拱		k	ioŋ	42	kioŋ42				
-掬		k	iok	2	kiok1				
+掬		k	iok	2	kiok2				
 穷		kʰ	ioŋ	55	kʰioŋ55				
 巩		kʰ	ioŋ	42	kʰioŋ42				
 恐		kʰ	ioŋ	42	kʰioŋ42				
-克		kʰ	iok	2	kʰiok1				
-曲		kʰ	iok	2	kʰiok1	文读	~折		
+克		kʰ	iok	2	kʰiok2				
+曲		kʰ	iok	2	kʰiok2	文读	~折		
 凶		h	ioŋ	33	hioŋ33				
 雄		h	ioŋ	55	hioŋ55				
 雍		Ø	ioŋ	33	ioŋ33				
@@ -3459,7 +3459,7 @@
 分		p	uŋ	33	puŋ33	白读	~开		
 笨		p	uŋ	55	puŋ55				
 粪		p	uŋ	213	puŋ213				
-不		p	uk	2	puk1				
+不		p	uk	2	puk2				
 奔		pʰ	uŋ	33	pʰuŋ33				
 潘		pʰ	uŋ	33	pʰuŋ33		淘米水		
 盆		pʰ	uŋ	55	pʰuŋ55				
@@ -3488,7 +3488,7 @@
 屯		tʰ	uŋ	55	tʰuŋ55				
 豚		tʰ	uŋ	55	tʰuŋ55				
 囤		tʰ	uŋ	55	tʰuŋ55				
-脱		tʰ	uk	2	tʰuk1				
+脱		tʰ	uk	2	tʰuk2				
 忍		n	uŋ	42	nuŋ42	白读	~一下		
 嫩		n	uŋ	213	nuŋ213				
 润		n	uŋ	213	nuŋ213	白读	含湿气		
@@ -3505,8 +3505,8 @@
 准		ts	uŋ	42	tsuŋ42				
 捘		ts	uŋ	35	tsuŋ35		拧		
 俊		ts	uŋ	213	tsuŋ213				
-卒		ts	uk	2	tsuk1				
-率		ts	uk	2	tsuk1				
+卒		ts	uk	2	tsuk2				
+率		ts	uk	2	tsuk2				
 秫		ts	uk	5	tsuk5		~米：糯米		
 伸		tsʰ	uŋ	33	tsʰuŋ33	文读	~手		
 村		tsʰ	uŋ	33	tsʰuŋ33				
@@ -3515,7 +3515,7 @@
 存		tsʰ	uŋ	55	tsʰuŋ55				
 蠢		tsʰ	uŋ	42	tsʰuŋ42				
 寸		tsʰ	uŋ	213	tsʰuŋ213				
-出		tsʰ	uk	2	tsʰuk1				
+出		tsʰ	uk	2	tsʰuk2				
 孙		s	uŋ	33	suŋ33	文读	囝~：子孙		
 荀		s	uŋ	55	suŋ55				
 旬		s	uŋ	55	suŋ55				
@@ -3529,7 +3529,7 @@
 榫		s	uŋ	42	suŋ42				
 顺		s	uŋ	35	suŋ35				
 舜		s	uŋ	213	suŋ213				
-戌		s	uk	2	suk1				
+戌		s	uk	2	suk2				
 术		s	uk	5	suk5				
 述		s	uk	5	suk5				
 允		dz	uŋ	42	dzuŋ42				
@@ -3542,7 +3542,7 @@
 滚		k	uŋ	42	kuŋ42				
 郡		k	uŋ	35	kuŋ35				
 棍		k	uŋ	213	kuŋ213				
-骨		k	uk	2	kuk1				
+骨		k	uk	2	kuk2				
 滑		k	uk	5	kuk5				
 猾		k	uk	5	kuk5				
 掘		k	uk	5	kuk5				
@@ -3553,8 +3553,8 @@
 捆		kʰ	uŋ	42	kʰuŋ42				
 菌		kʰ	uŋ	42	kʰuŋ42				
 困		kʰ	uŋ	213	kʰuŋ213				
-窟		kʰ	uk	2	kʰuk1				
-屈		kʰ	uk	2	kʰuk1				
+窟		kʰ	uk	2	kʰuk2				
+屈		kʰ	uk	2	kʰuk2				
 昏		h	uŋ	33	huŋ33				
 婚		h	uŋ	33	huŋ33				
 分		h	uŋ	33	huŋ33	文读	~数		
@@ -3573,8 +3573,8 @@
 忿		h	uŋ	213	huŋ213				
 训		h	uŋ	213	huŋ213				
 份		h	uŋ	22	huŋ22				
-忽		h	uk	2	huk1				
-佛		h	uk	2	huk1		仿~		
+忽		h	uk	2	huk2				
+佛		h	uk	2	huk2		仿~		
 佛		h	uk	5	huk5		~祖		
 核	核	h	uk	5	huk5		桃~		
 温		Ø	uŋ	33	uŋ33				
@@ -3584,8 +3584,8 @@
 稳		Ø	uŋ	42	uŋ42				
 韵		Ø	uŋ	22	uŋ22				
 运		Ø	uŋ	22	uŋ22				
-熨		Ø	uk	2	uk1				
-郁		Ø	uk	2	uk1				
+熨		Ø	uk	2	uk2				
+郁		Ø	uk	2	uk2				
 姆		Ø	m̩	42	m̩42		伯母		
 毋		Ø	m̩	35	m̩35		不		
 方		p	ŋ̍	33	pŋ̍33		姓		
