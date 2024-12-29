@@ -308,7 +308,7 @@ class 表:
 		return yb
 
 	def isDialect(self):
-		return self.langType and (not self.langType.startswith("歷史音") or str(self) in ("老國音",))
+		return str(self) in ("老國音","黨項") or (self.langType and not self.langType.startswith("歷史音"))
 
 	def isDictionary(self):
 		return self.dictionary
@@ -514,6 +514,10 @@ class 表:
 				return "/".join(map(self.dz2dl, sy.split("/")))
 			sy,dz = self.splitSySd(sy)
 		if not dz: return sy
+		dl = self.dz2dlWithYm(dz, sy)
+		return sy + dl
+
+	def dz2dlWithYm(self, dz, sy):
 		dl = ""
 		if dz not in self.toneMaps:
 			if dz == "0":
@@ -528,4 +532,4 @@ class 表:
 			dl = self.toneMaps[dz]
 		if sy and sy[-1] in "ptkʔ̚" and dz + "0" in self.toneMaps:
 			dl = self.toneMaps[dz + "0"]
-		return sy + dl
+		return dl

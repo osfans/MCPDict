@@ -22,14 +22,12 @@ class 表(_表):
 	def format(self, line):
 		line = _表.format(self, line)
 		name = str(self)
-		if name in ("安澤和川",):
-			line = re.sub(r"^(.*?)［", "\\1	［", line)
-		elif name in ("寶應望直港","羅山周黨","涇縣茂林","沁源", "同江二屯","象山鶴浦","趙縣"):
-			line = re.sub(r"^(.*?) ?\[", "\\1	[", line)
-		elif name in ("永州嵐角山"):
+		if name in ("永州嵐角山", "賀州南鄕", "松江天馬", "運城", "興縣","豐城","豐城鐵路","新建","賀州江坪"):
 			line = line.lstrip("ø")
-		elif name in ("遂川","大庸南","大庸北", "婺川", "蒙山程村"):
-			line = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[1]), line)
+		elif name in ("江夏湖泗"):
+			line = line.replace("ø[", "0[")
+		elif name in ("遂川","大庸南","大庸北", "婺川", "蒙山程村","欽州東場"):
+			line = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%self.dz2dlWithYm(x[1], self.ym), line)
 		elif name in ("奉化",):
 			line = re.sub(r"(\d+)(?![：\d])", lambda x:"[%s]"%self.dz2dl(x[1]), line)
 			line = line.lstrip("q")
@@ -97,8 +95,6 @@ class 表(_表):
 		elif name in ("商州",):
 			if line.startswith("#"): line = "#"
 			line = re.sub(r"\[([^\d]+)\]", "\\1", line)
-		elif name in ("運城", "興縣"):
-			line = line.replace("ø", "")
 		elif name in ("永定", "連城四堡", "上杭古田"):
 			line = line.replace("*", "@")
 		elif name in ("雲霄",):
@@ -156,10 +152,6 @@ class 表(_表):
 			sy = find[0][0]
 			line = re.sub(r"\[(.*?)(\d+)\]", lambda x:"[%s]"%self.dz2dl(x[2]), line)
 			line = sy + line
-		elif name in ("小店", "太谷", "祁縣", "壽陽", "楡次", "徐溝"):
-			fs = line.split("\t", 1)
-			fs[1] = fs[1].replace("\t", "")
-			line = "\t".join(fs)
 		elif name in ("東干語",):
 			if line.startswith("#"):
 				yms = line.rstrip().replace("#", "").split("\t")
@@ -211,9 +203,7 @@ class 表(_表):
 			line = line.replace("➀", "①").replace("➁", "②").replace("➂","③").replace("➃", "④").replace("➄", "⑤")
 			line = line.lstrip("q")
 			line = line.replace("-", "(新派錯音)")
-		elif name in ("賀州南鄕"):
-			line = line.lstrip("ø")
-		elif name in ("南京老派"):
+		elif name in ("南京"):
 			line = re.sub("([，。])(（)", "\\2\\1", line)
 			line = line.replace("，", "（又）").replace("。", "（新）").replace("）（", " ")
 			line = self.normS(line, "{\\1}")
@@ -221,8 +211,6 @@ class 表(_表):
 			line = re.sub(r"(\{[^{}]+?)（新）([^{}]*?\})", "\\1。\\2", line)
 		elif name in ("常熟古裡",):
 			line = re.sub(r"\{[^{}]*?[①-⑨][^{}]*?\}", 常熟古裡_repl, line)
-		elif name in ("松江天馬",):
-			line = line.lstrip("ø")
 		elif name in ("句容",):
 			if re.match(".*[①-⑨ⓐⓑ]+", line):
 				for i in range(1,10):
@@ -259,6 +247,7 @@ class 表(_表):
 		ym = line
 		if ym:
 			ym = ym.split("\t")[0].strip().strip("[]")
+		self.ym = ym
 		return ym
 	
 	def update(self):
@@ -297,7 +286,6 @@ class 表(_表):
 			for sd,hzs in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", fs[1]):
 				yb = sm + ym + sd
 				yb = self.checkYb(yb)
-
 				hzs = self.normG(hzs)
 				hzs = re.findall(r"(.)[\d₁₂₃]?([<+\-/=\\\*？$&r@]?)[\d₁₂₃]? *(｛.*?｝)?", hzs)
 				for hz, c, js in hzs:
