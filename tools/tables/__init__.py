@@ -168,7 +168,7 @@ def getLangs(dicts, argv, 省=None):
 			except Exception as e:
 				print(f"\t\t\t{e} {mod}")
 				continue
-			if d["繁簡"] == "简": lang.simplified = 2
+			if "繁" not in d["繁簡"]: lang.simplified = 2
 			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 			if "聯表列名" in d:
 				a = d["聯表列名"].upper()

@@ -5,8 +5,6 @@ import os
 from openpyxl import load_workbook
 
 class 表(_表):
-	note = ""
-
 	def read(self):
 		super().read()
 		self.note = self.get_note()

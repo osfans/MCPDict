@@ -14,7 +14,7 @@ def 常熟古裡_repl(match):
 	return line
 
 class 表(_表):
-	disorder = True
+	orderByJs = True
 	sm = ""
 	ym = ""
 	ym2 = ""
@@ -287,8 +287,8 @@ class 表(_表):
 				yb = sm + ym + sd
 				yb = self.checkYb(yb)
 				hzs = self.normG(hzs)
-				hzs = re.findall(r"(.)[\d₁₂₃]?([<+\-/=\\\*？$&r@]?)[\d₁₂₃]? *(｛.*?｝)?", hzs)
-				for hz, c, js in hzs:
+				hzs = re.findall(r"(.)([\d₀-₉]?)([<+\-/=\\\*？$&r@]?)[\d₀-₉]? *(｛.*?｝)?", hzs)
+				for hz, o, c, js in hzs:
 					if hz == " ": continue
 					p = ""
 					if c:
@@ -314,7 +314,9 @@ class 表(_表):
 					if js.count("{") != js.count("}"):
 						self.errors.append(f"大括號未成對:{js}")
 						js = js.replace("{", "").replace("}", "")
-					p = yb + c + "\t" + p + js
+					if o and ("₀" <= o <= "₉"):
+						o = chr(ord(o) - ord("₀") + ord("0"))
+					p = yb + c + "\t" + o + p + js
 					if p not in d[hz]:
 						d[hz].append(p)
 		self.write(d)

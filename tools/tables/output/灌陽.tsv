@@ -1,42 +1,42 @@
 #漢字	音標	解釋
-□	pa1	黏
-□	a1	張
-□	lai1	耍賴
-□	pei1	虧
-□	ləu1	撓
-□	liau1	～腳
-□	tsua1	點
 □	ui1	
-□	mən1	非常
-□	lən1	髒
-□	ɡa2	量詞
-□	to2	先
-□	tso2	先
-□	tɕy2	塞
-□	kau2	動
-□	tɕʰye2	肏
 □	mən2	
-□	kʰoŋ2	撞擊聲
-□	oŋ2	否定
-□	luan2	圓
-□	kuai3	挂
 □	tɕye3	
-□	tɕʰye3	折
-□	tɕʰien3	～殼:河蚌
-□	pʰaŋ3	變質
 □	poŋ3	
-□	tsʰoŋ3	推
-□	loŋ3	第二人稱複數
 □	loŋ3	
-□	oŋ3	我
-□	pa5	摔
-□	tsə5	這
-□	ə5	迴應聲
 □	lie5	
 □	tɕiəu5	
+□	liau1	～腳
+□	tɕʰien3	～殼:河蚌
+□	to2	先
+□	tso2	先
+□	kau2	動
+□	oŋ2	否定
+□	luan2	圓
+□	tɕy2	塞
+□	a1	張
 □	ye5	彎折
+□	oŋ3	我
+□	tɕʰye3	折
 □	pən5	拉
+□	kuai3	挂
+□	tsʰoŋ3	推
+□	pa5	摔
+□	ləu1	撓
+□	kʰoŋ2	撞擊聲
+□	loŋ3	第二人稱複數
+□	lai1	耍賴
+□	tɕʰye2	肏
+□	pei1	虧
+□	pʰaŋ3	變質
+□	ə5	迴應聲
+□	tsə5	這
+□	ɡa2	量詞
 □	koŋ5	鑽
+□	mən1	非常
+□	lən1	髒
+□	pa1	黏
+□	tsua1	點
 㔶	koŋ3	
 㞎	pie3	
 㸊	la2	
@@ -86,8 +86,8 @@
 仇	dzəu2	
 他	tʰa1	
 他	xa1	
-仗	tsaŋ3	炮～
 仗	dzaŋ5	
+仗	tsaŋ3	炮～
 付	xu5	
 仙	ɕien1	
 以	i3	
@@ -126,8 +126,8 @@
 倈	lɘi3	
 倉	tsʰaŋ1	
 個	ko5	一～;我～
-倍	pei3	一～;兩～
 倍	bei5	
+倍	pei3	一～;兩～
 借	tɕie5	
 假	tɕia3	
 做	tso5	
@@ -147,8 +147,8 @@
 傻	xa3	
 傾	kʰuaŋ3	
 傾	kʰoŋ5	
-像	ɕiaŋ3	好～;石～
 像	ɕiaŋ5	
+像	ɕiaŋ3	好～;石～
 僧	tsən1	
 價	tɕia5	
 儉	tɕien3	
@@ -225,8 +225,8 @@
 努	lu3	
 勉	mien3	
 動	toŋ3	
-動	tʰoŋ3	動風
 動	doŋ5	
+動	tʰoŋ3	動風
 勘	kʰan1	
 務	u5	
 勞	lau2	
@@ -259,8 +259,8 @@
 卷	tɕyen3	試～
 卻	tɕʰio2	
 厄	ə2	
-厚	xəu3	深～
 厚	xəu5	
+厚	xəu3	深～
 原	yen2	
 厭	yen5	
 去	tɕʰy5	
@@ -329,8 +329,8 @@
 啞	ia3	
 啟	tɕʰi3	
 啥	sa3	什麼
-善	san3	偽～
 善	san5	
+善	san3	偽～
 喊	xan3	
 喘	tsʰuan3	
 喜	ɕi3	
@@ -347,8 +347,8 @@
 嘟	tu1	
 嘴	tsui3	
 器	tɕʰi5	
-嚇	xa2	～一跳
 嚇	xie2	
+嚇	xa2	～一跳
 嚏	tɕʰio2	
 嚴	ien2	
 嚼	tɕio2	
@@ -364,8 +364,8 @@
 園	yen2	
 圖	du2	
 土	tʰu3	
-在	tsɘi3	實～
 在	dzɘi5	
+在	tsɘi3	實～
 地	di5	
 均	tɕyn1	
 坎	kʰan3	
@@ -412,8 +412,8 @@
 壯	tsuaŋ5	
 壺	xu2	
 壽	səu5	
-夏	ɕia3	春～
 夏	ɕia5	
+夏	ɕia3	春～
 外	uai5	
 多	to1	
 夜	ie5	
@@ -573,8 +573,8 @@
 幾	tɕi3	
 广	kuaŋ3	
 牀	dzuaŋ2	
-序	ɕy3	秩～
 序	ɕy5	
+序	ɕy3	秩～
 店	tien5	
 府	xu3	
 座	dzuo5	
@@ -591,8 +591,8 @@
 弓	koŋ1	
 弓	koŋ2	
 引	in3	
-弟	ti3	兄～;～兄
 弟	di5	
+弟	ti3	兄～;～兄
 弱	io2	
 張	tsaŋ1	
 彈	dan2	
@@ -603,8 +603,8 @@
 待	tɘi3	期～
 很	xən3	
 律	ly2	
-後	xəu3	背～;以～;～來
 後	xəu5	
+後	xəu3	背～;以～;～來
 徐	dʑy2	
 得	tə2	
 從	dzoŋ2	
@@ -662,8 +662,8 @@
 戲	ɕi5	
 戳	to2	
 戴	tɘi5	
-戶	xu3	客～
 戶	xu5	
+戶	xu3	客～
 所	so3	
 扁	pien3	
 扇	san1	
@@ -691,8 +691,8 @@
 折	tsə2	
 披	pʰi2	
 抬	dɘi2	
-抱	pau3	擁～
 抱	bau5	
+抱	pau3	擁～
 抵	ti3	
 抹	ma1	
 押	a5	
@@ -826,9 +826,9 @@
 斜	dʑie2	
 斢	tʰiau3	
 新	ɕin1	
+斷	tuan5	
 斷	tuan3	決～
 斷	duan5	砍～
-斷	tuan5	
 方	xuaŋ1	
 旁	baŋ2	
 族	tsʰu2	
@@ -940,8 +940,8 @@
 棍	kuən3	木～
 棒	paŋ2	
 棒	paŋ5	
-棧	tsan3	客～
 棧	dzan5	
+棧	tsan3	客～
 椅	i3	
 椏	a1	
 楚	tsʰu3	
@@ -1045,8 +1045,8 @@
 淨	dʑin5	
 深	sən1	
 淳	suən2	
-混	xuən3	～喫
 混	xuən5	
+混	xuən3	～喫
 淺	tɕʰien3	
 清	tɕʰin1	
 減	kan3	
@@ -1258,8 +1258,8 @@
 砰	pʰoŋ2	
 砰	pʰaŋ3	
 破	pʰuo5	
-硬	ən3	～腳
 硬	ən5	
+硬	ən3	～腳
 碎	sui5	
 碎	tsʰui5	
 碑	pei1	
@@ -1273,8 +1273,8 @@
 磨	muo5	
 礦	kʰuaŋ3	
 礦	kʰuaŋ5	
-社	sə3	公～
 社	sə5	
+社	sə3	公～
 祀	sɿ3	祭祀
 神	sən5	
 祠	dzɿ2	
@@ -1346,8 +1346,8 @@
 簫	ɕiau1	
 簸	puo5	
 簽	tɕʰien1	
-簿	pu3	戶口～
 簿	bu5	
+簿	pu3	戶口～
 籃	lan1	
 籃	lan2	
 米	mi3	
@@ -1372,8 +1372,8 @@
 紮	tsa2	
 累	lei3	
 累	lei5	
-紹	sau3	介～
 紹	sau5	
+紹	sau3	介～
 終	tsoŋ1	
 結	tɕie2	
 絕	tɕye2	
@@ -1444,8 +1444,8 @@
 聽	tʰin5	
 聾	loŋ1	
 肉	zu2	
-肚	tu3	～子
 肚	du5	
+肚	tu3	～子
 肛	kaŋ1	
 肝	kan1	
 肥	xui2	
@@ -1528,8 +1528,8 @@
 莫	mo2	別;～得
 莽	maŋ3	
 菊	tɕy2	
-菌	tɕyn3	香～
 菌	dʑyn5	
+菌	tɕyn3	香～
 菜	tsʰɘi5	
 菢	bau5	
 華	xua2	
@@ -1552,8 +1552,8 @@
 蔣	tɕiaŋ3	
 蔥	tsʰoŋ1	
 蕊	lui3	
-蕩	taŋ3	坦～
 蕩	tʰaŋ3	
+蕩	taŋ3	坦～
 薄	bo2	
 薅	xau1	
 薑	tɕiaŋ1	
@@ -1629,8 +1629,8 @@
 要	iau5	
 見	tɕien5	
 規	kui1	
-視	sɿ3	電～
 視	sɿ5	
+視	sɿ3	電～
 親	tɕʰin1	
 覺	tɕio2	
 覺	kau5	
@@ -1670,8 +1670,8 @@
 變	pin5	
 讓	iaŋ5	
 豆	dəu5	
-豎	su3	橫～
 豎	su5	
+豎	su3	橫～
 豐	xoŋ1	
 象	ɕiaŋ5	
 豪	xau2	
@@ -1680,9 +1680,9 @@
 貓	mau1	
 貝	pei5	
 貞	tsən1	
+負	xu5	
 負	pa1	存疑
 負	xu3	背～
-負	xu5	
 貧	bin2	
 貨	xuo5	
 貪	tʰan1	
@@ -1759,15 +1759,15 @@
 辣	la2	
 辦	ban5	
 辨	pien3	～別;分～
-辮	pien3	麻花～
 辮	bien5	
+辮	pien3	麻花～
 辯	pien3	狡～
 辯	bien5	～解
 辰	sən2	
 迎	in2	
 迎	iaŋ2	
-近	tɕin3	接～
 近	dʑin5	
+近	tɕin3	接～
 迸	paŋ5	
 迸	poŋ5	
 追	tsui1	
@@ -1789,9 +1789,9 @@
 運	yen5	
 遍	pʰien5	
 過	kuo5	
-道	tau3	一～;兩～
 道	tau5	
 道	dau5	
+道	tau3	一～;兩～
 達	ta2	
 達	da2	
 遞	di5	
@@ -1806,8 +1806,8 @@
 那	a5	
 邵	sau5	
 郎	laŋ2	
-部	pu3	幹～
 部	bu5	
+部	pu3	幹～
 郭	ko2	
 都	tu1	
 鄉	ɕiaŋ1	
@@ -1825,8 +1825,8 @@
 采	tsʰɘi3	
 里	li3	
 重	dzoŋ2	
-重	tsoŋ3	輕～
 重	dzoŋ5	
+重	tsoŋ3	輕～
 野	ie3	
 量	liaŋ5	
 金	tɕin1	
@@ -1851,8 +1851,8 @@
 錫	ɕi2	
 錯	tsʰo5	
 鍋	kuo1	
-鍵	tɕien3	琴～
 鍵	dʑien5	
+鍵	tɕien3	琴～
 鎖	suo3	
 鎮	tsən5	
 鏟	tsʰan3	
@@ -1950,8 +1950,8 @@
 飆	piau1	
 飛	xui1	
 食	sɿ2	
-飯	xuan3	夜～
 飯	xuan5	喫～
+飯	xuan3	夜～
 飽	pau3	
 餓	o5	
 餡	ɕien5	
