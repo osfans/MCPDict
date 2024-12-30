@@ -139,6 +139,13 @@ def docx2tsv(doc):
 	t.writelines(lines)
 	t.close()
 
+def ybKey(x):
+	if "\t" not in x:
+		return x[-1]
+	yb, js = x.split("\t", 1)
+	if js: js = js[0]
+	return js + yb[-1]
+
 class 表:
 	_time = os.path.getmtime(__file__)
 	_file = None
@@ -152,7 +159,7 @@ class 表:
 	url = ""
 	dictionary = False
 
-	disorder = False
+	orderByJs = False
 	patches = None
 	ybTrimSpace = True
 	kCompatibilityVariants = getCompatibilityVariants()
@@ -205,7 +212,7 @@ class 表:
 		sname = g[0]
 		self._file = os.path.basename(sname)
 		if isXls(sname):
-			page = 1 if self.short in ("中山石岐", "通城", "1796建甌") else 0
+			page = 1 if self.short in ("中山石岐", "通城大坪", "1796建甌") else 0
 			if self.short == "開平護龍": page = 3
 			xls2tsv(sname, page)
 			sname = getTsvName(sname)
@@ -354,8 +361,8 @@ class 表:
 				if self.isDialect():
 					self.errors.append(f"【{hz}】不是漢字，讀音爲：{','.join([i.strip() for i in pys])}")
 				continue
-			if self.disorder:
-				pys = sorted(pys,key=lambda x:x.split("\t", 1)[0][-1])
+			if self.orderByJs:
+				pys = sorted(pys,key=ybKey)
 			for py in pys:
 				if "\t" in py:
 					yb, js = py.split("\t", 1)

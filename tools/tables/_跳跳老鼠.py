@@ -4,7 +4,7 @@ from tables._表 import 表 as _表
 import re, regex
 
 class 表(_表):
-	disorder = True
+	orderByJs = True
 	sm = ""
 	ym = ""
 	sy = ""
@@ -45,7 +45,7 @@ class 表(_表):
 				sy = self.sy
 			yb = sy + sd
 			hzs = self.normS(hzs)
-		elif name in ("宜章巖泉","望城"):
+		elif name in ("望城"):
 			sy, sd, hzs = fs[:3]
 			hzs = hzs.replace("?", "□")
 		elif name in ("天台東鄕"):
@@ -101,10 +101,13 @@ class 表(_表):
 			hzs = re.sub(r"(\d)([-=])", "\\2\\1", hzs)
 			hzs = self.normS(hzs)
 		elif name in ("通城",):
+			_, sy, sd, _, hzs = fs[:5]
+			yb = sy + sd
+		elif name in ("通城大坪",):
 			_, sy, sd, hzs = fs[:4]
 			sd = sd.strip("[]")
 			hzs = self.normG(hzs, "[\\1]")
-		elif name in ("灌陽","全州文橋"):
+		elif name in ("灌陽","全州文橋", "宜章巖泉",):
 			sy, sd, hzs = fs[:3]
 			hzs = self.normG(hzs, "[\\1]")
 		elif name in ("江華河路口", "江華粟米塘", "全州黃沙河", "安仁新洲", "1935長沙", "長沙黃花", "瀏陽鎭頭"):
@@ -175,8 +178,13 @@ class 表(_表):
 				yb = self.dz2dl(yb)
 			else:
 				return
+		elif name in ("江永上江墟",):
+			ns, _, hzs, py = fs[:4]
+			py = re.sub("^h", "x", py)
+			py = py.replace("nj", "ȵ").replace('ng', 'ŋ').replace("c", "ɕ").replace('h', 'ʰ')
+			py = py.replace("oe", "ø").replace('e', 'ə').replace('iə', 'ie').replace('w', 'ɯ')
+			yb = self.dz2dl(py)+ns
 		elif name in ("揚州",):
-			self.disorder = False
 			self.simplified = 0
 			yb, hzs = fs[:2]
 			hzs = self.normS(hzs, "（\\1）").replace("?", "？")

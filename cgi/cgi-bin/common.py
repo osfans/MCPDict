@@ -10,7 +10,7 @@ sys.setdefaultencoding('utf-8')
 def rich(r, k):
 	s = r[k]
 	if k == "白-沙": return s
-	s = s.replace(" ", "")
+	s = s.replace("  ", "　").replace(" ", "").replace("　", " ")
 	s = re.sub(", ?", ", ", s)
 	s = s.replace("\n", "<br>")
 	s = re.sub("\{(.*?)\}", "<div class=desc>\\1</div>", s)
@@ -73,6 +73,7 @@ def getColorName(k):
 	return fmt % (color, name)
 
 def getVariant(hzs, vars):
+	if not vars: return ""
 	for i in hzs:
 		if i in vars:
 			return i

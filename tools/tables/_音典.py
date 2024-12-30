@@ -269,6 +269,20 @@ class 表(_表):
 			hz, yb, js = fs[:3]
 		elif name in ("建陽連墩",):
 			hz, yb, js = fs[:3]
+		elif name in ("塔玆語", "海倫","宜興南",):
+			hz, sy, tv, js = fs[:4]
+			ipa = sy + tv
+		elif name in ("虎林", "吳江菀坪","景寧鄭坑","慈谿觀海衛","當塗霍里", "南陵", "南陵湖南街"):
+			hz, sm, ym, tv, js = fs[:5]
+			ipa = sm + ym + tv
+		elif name in ("滁州",):
+			_, hz, sm, ym, tv, js = fs[:6]
+			ipa = sm + ym + tv
+		elif name in ("宣平",):
+			hz, _, ipa, js = fs[:4]
+		elif name in ("淮南","懷遠","鳳陽","陽新新街","上猶", "南陵仙坊", "武昌", "連州", "連州保安", "連州星子", "連州西岸", "連州豐陽"):
+			_, hz, sm, ym, tv, _, js = fs[:7]
+			ipa = sm + ym + tv
 		elif self._file.startswith("粤西闽语方言字表"):
 			if len(fs) < 6: return
 			hz = fs[0]
