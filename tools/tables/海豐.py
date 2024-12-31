@@ -6,26 +6,26 @@ from tables._表 import 表 as _表
 class 表(_表):
 	toneValues = {'阴平':1,'阳平':2,'阴上':3,'阳上':4,'阴去':5,'阳去':6,'阴入':7,'阳入':8}
 
-	def parse(self, fs):
+	def 析(自, 列):
 		l = list()
-		hz,wds,bds,js = fs[:4]
-		if not hz: return
-		hz = hz[0]
+		字,wds,bds,js = 列[:4]
+		if not 字: return
+		字 = 字[0]
 		yd = len(bds) > 0 and len(wds) > 0
 		if js:
-			for i in self.toneValues:
-				js = js.replace(i, str(self.toneValues[i]))
-		for ybs in (bds, wds):
-			if not ybs: continue
-			for yb in ybs.split("，"):
+			for i in 自.toneValues:
+				js = js.replace(i, str(自.toneValues[i]))
+		for 音集 in (bds, wds):
+			if not 音集: continue
+			for yb in 音集.split("，"):
 				if "（" in yb:
 					ybzs = re.findall("^(.*?)（(.*?)）$", yb)
 					yb = ybzs[0][0]
 					c = ybzs[0][1]
-				for i in self.toneValues:
-					yb = yb.replace(i, str(self.toneValues[i]))
+				for i in 自.toneValues:
+					yb = yb.replace(i, str(自.toneValues[i]))
 				if yd:
-					c = '-' if ybs == bds else '='
+					c = '-' if 音集 == bds else '='
 					yb = yb + c
 				if yb.startswith("["):
 					js += yb[:3]
@@ -33,5 +33,5 @@ class 表(_表):
 				if "训" in yb:
 					yb = yb.replace("训", "")
 					js = "训" + js
-				l.append((hz, yb, js))
+				l.append((字, yb, js))
 		return l

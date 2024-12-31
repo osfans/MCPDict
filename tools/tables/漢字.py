@@ -4,20 +4,19 @@ from tables._表 import 表 as _表
 import re
 
 def get_note():
-	note = open("../README.md", encoding="U8").read()
-	note = re.sub(r"^#.*$", "", note, flags=re.M).strip()
-	note = re.sub(r"\[(.*?)\]\((.*?)\)", "<a href=\\2>\\1</a>", note)
-	note = re.sub(r"^- (.+)$", "<li>\\1</li>", note, flags=re.M)
-	note = note.replace("</li>\n", "</li>")
-	note = re.sub(r"(<li>.+</li>)", "<ul>\\1</ul>", note)
-	return note
+	說明 = open("../README.md", encoding="U8").read()
+	說明 = re.sub(r"^#.*$", "", 說明, flags=re.M).strip()
+	說明 = re.sub(r"\[(.*?)\]\((.*?)\)", "<a href=\\2>\\1</a>", 說明)
+	說明 = re.sub(r"^- (.+)$", "<li>\\1</li>", 說明, flags=re.M)
+	說明 = 說明.replace("</li>\n", "</li>")
+	說明 = re.sub(r"(<li>.+</li>)", "<ul>\\1</ul>", 說明)
+	return 說明
 
 class 表(_表):
-	color = "#9D261D"
-	site = "漢字音典在線版"
-	url = "https://mcpdict.sourceforge.io/cgi-bin/search.py?hz=%s"
-	note = get_note()
+	顏色 = "#9D261D"
+	網站 = "漢字音典在線版"
+	網址 = "https://mcpdict.sourceforge.io/cgi-bin/search.py?字=%s"
+	說明 = get_note()
 
-
-	def read(self):
+	def 讀(自):
 		return dict()

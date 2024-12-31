@@ -6,26 +6,26 @@ from tables._表 import 表 as _表
 
 class 表(_表):
 	_file = "mcpdict.db"
-	isYb = False
+	爲音 = False
 
-	def format(self, line):
-		line = line.replace("|", "`").replace("*", "**")
-		return line
+	def 統(自, 行):
+		行 = 行.replace("|", "`").replace("*", "**")
+		return 行
 
-	def update(self):
+	def 更新(自):
 		d = defaultdict(list)
-		conn = sqlite3.connect(self.spath)
+		conn = sqlite3.connect(自.spath)
 		conn.row_factory = sqlite3.Row
 		c = conn.cursor()
 		for r in c.execute('SELECT * FROM mcpdict'):
-			hz = chr(int(r["unicode"],16))
-			pys = r[self.dbkey]
+			字 = chr(int(r["unicode"],16))
+			pys = r[自.鍵]
 			if not pys: continue
 			pys = re.sub(r"\[\d\]", ",",pys).strip(",")
 			for py in pys.split(","):
 				py = py.strip()
 				if not py: continue
-				yb = self.format(py)
-				d[hz].append(yb)
+				yb = 自.統(py)
+				d[字].append(yb)
 		conn.close()
-		self.write(d)
+		自.寫(d)

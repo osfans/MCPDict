@@ -5,333 +5,331 @@ import re
 
 class 表(_表):
 
-	def parse(self, fs):
-		name = str(self)
-		hz = ""
-		yb = ""
-		ipa = ""
-		js = ""
-		if name in ("汝城", "瑞安東山", "新界客家話", "長壽", "宜章巖泉","郴州","樂昌皈塘","尤溪","晉江", "龍門路溪", "詔安", "道縣官話", "重慶", "樂昌三溪", "南安"):
-			hz, yb, js = fs[:3]
-		elif name in ("通州金沙",):
-			yb, hz, js = fs[:3]
-		elif name in ("江陰", "江陰新橋", "江陰申港"):
-			_, hz, js, yb = fs[:4]
-		elif name in ("東方八所",):
-			_, hz, sy, sd, js = fs[:5]
-			yb = sy + sd
-		elif name in ("龍游",):
-			_, hz, sm, ym, dz, _, js = fs[:7]
-			ipa = sm + ym + dz
-		elif name in ("1900梅惠",):
-			hz,_,_,yb = fs[:4]
-		elif name in ("劍川金華",):
-			hz, sy, sd, js = fs[:4]
-			yb = sy + sd
-		elif name in ("樂昌黃圃",):
-			hz, sd, sy, js = fs[:4]
-			yb = sy + sd
-			js = js.strip("{}")
-		elif name in ("1926綜合",):
-			hz,yb,_,_,_,js = fs[:6]
-		elif name in ("蒼南錢庫",):
-			sm,ym,sd,hz,js = fs[:5]
-			if sd == "轻声": sd = "0"
-			yb = sm + ym + sd
-		elif name in ("1890會城",):
-			hz,_,_,sm,ym,js = fs[:6]
-			yb = sm + ym
-		elif name in ("貴陽",):
-			hz, _, _, ipa, js = fs[:6]
-		elif name in ("樂淸"):
-			_, sm, ym, sd, hz, js = fs[:6]
-			yb = sm + ym + sd
-		elif name in ("淸末溫州",):
-			_,hz,sy,_,_,sd,js = fs[:7]
-			yb = sy + sd
-		elif name in ("眞如南",):
-			_, _, hz, js, sm, ym, sd = fs[:7]
-			yb = sm + ym + sd
-		#ipa
-		elif name in ("五峯", "恩平恩城","台山台城"):
-			hz, ipa = fs[:2]
-		elif name in ("華安髙安","五華"):
-			ipa, hz, js = fs[:3]
-		elif name in ("惠來隆江",):
-			hz, ipa, js = fs[:3]
-		elif name in ("壽寧平溪"):
-			hz, yb, js = fs[:3]
-			hz = hz.replace("", "□")
-		elif name in ("新會會城",):
-			hz, _, _, ipa = fs[:4]
-		elif name in ("廈門","漳州","饒平", "遵義", "犍爲玉津", "綦江古南", "桐梓婁山關"):
-			hz, _, ipa, js = fs[:4]
-		elif name in ("遂昌","五華橫陂","蔡家話"):
-			hz, sy, sd, js = fs[:4]
-			ipa = sy + sd
-		elif name in ("雙牌打鼓坪"):
-			sy, sd, _, js = fs[:4]
-			yb = sy + sd
-			hz = js[0]
-			js = js[1:].strip("()（）")
-		elif name in ("開化",):
-			hz, js, sm, ym, sd = fs[:5]
-			yb = sm + ym + sd.strip("[]")
-			if re.match(r"（.*?）", js): js = js[1:-1]
-		elif name in ("富陽東梓關","新登城陽"):
-			_, hz, js, ipa = fs[:4]
-		elif name in ("新登下港",):
-			hz, ipa, js = fs[0], fs[6], fs[8]
-		elif name in ("嘉善", "上海"):
-			hz, sm, ym, sd, js = fs[:5]
-			yb = sm + ym + sd
-			if hz.endswith("-"):
-				hz = hz[:-1]
-				yb = yb + "-"
-		elif name in ("臨海", "泰順羅陽", "雲和", "仙居"):
-			hz, _, sy, sd, js = fs[:5]
-			ipa = sy + sd
-		elif name in ("松陽",):
-			hz, _, sy, sd = fs[:4]
-			ipa = sy + sd
-		elif name in ("珠海唐家",):
-			hz, sm, ym, sd, js = fs[7], fs[12], fs[13], fs[14], fs[18]
-			ipa = sm + ym + sd
-		elif name in ("江門",):
-			hz, sm, ym, sd, jso, js = fs[7], fs[25], fs[26], fs[27], fs[11], fs[12]
-			ipa = sm + ym + sd
-			if jso: js = jso + "。" + js
-			js = js.strip("。")
-		elif name in ("江門墟頂","江門白沙","江門水南","江門沙仔尾","江門紫萊"):
-			hz, sm, ym, sd, js = fs[0], fs[6], fs[7], fs[4], fs[9]
-			yb = sm + ym + sd
-		elif name in ("江門禮樂","江門潮連"):
-			hz, sm, ym, sd, js = fs[:5]
-			ipa = sm + ym + sd
-		elif name in ("瑞安湖嶺",):
-			_, hz, ipa, _, js = fs[:5]
-		elif name in ("湖州",):
-			hz, _, ipa, _, js = fs[:5]
-		elif name in ("武義",):
-			_, hz, _, ipa, js = fs[:5]
-		elif name in ("鳳凰-新豐",):
-			hz, py, _, ipa, js = fs[:5]
-		elif name in ("潮州","汕頭"):
-			hz, _, _, ipa, js = fs[:5]
-		elif name in ("汕頭市郊"):
-			hz, _, _, ipa, js = fs[:5]
-		elif name in ("雷州",):
-			hz, _, _, _, _, ipa = fs[:6]
-			ipa = ipa.replace("˨˨˩", "˨˩")
-		elif name in ("長泰",):
-			_, sm, ym, sd, hz, js = fs[:6]
-			ipa = sm + ym + sd
-		elif name in ("普寧",):
-			hz,_,js,sm,ym,sd = fs[:6]
-			ipa = sm + ym + sd
-		elif name in ("中山三鄕",):
-			hz,sm,ym,sd, _, js = fs[:6]
-			ipa = sm + ym + sd
-		elif name in ("深圳南頭",):
-			hz, _, _, _, ipa, js = fs[:6]
-		elif name in ("通東餘東",):
-			hz, _, _, sy, _, sd, js = fs[:7]
-			sy = sy.lstrip("ʔ")
-			ipa = sy + sd
-		elif name in ("南寧", "南寧亭子"):
-			_, hz, _, ipa, _, js, c = fs[:7]
-			js = c + js
-		elif name in ("蒼南蒲門",):
-			hz, sy, sd, _, _, _, js = fs[:7]
-			ipa = sy + sd
-		elif name in ("鶴山雅瑤",):
-			hz, sm, ym, sd, _, _, _, js = fs[:8]
-			ipa = sm + ym + sd
-		elif name in ("開平護龍",):
-			hz, sm, ym, sd, js = fs[:5]
-			ipa = sm + ym + sd
-			yb = self.dz2dl(ipa)
-		elif name in ("揭陽",):
-			hz, _, _, _, _, ipa, yd, js = fs[:8]
-			yb = self.dz2dl(ipa)
-			ipa = ""
-			yd = yd.strip("(读)")
-			if yd == "文": yb+="="
-			elif yd == "白": yb+="-"
-		elif name in ("台山斗山墟",):
-			hz, ipa, js = fs[0], fs[12], fs[13]
-		elif name in ("新會天湖",):
-			hz, sm, ym, sd, js = fs[0], fs[11], fs[12], fs[13], fs[14]
-			ipa = sm + ym + sd
-		elif name in ("鶴山沙坪",):
-			hz, sm, jy, ym, sd, js = fs[0], fs[8], fs[9], fs[10], fs[11], fs[14]
+	def 析(自, 列):
+		名 = str(自)
+		字 = ""
+		音 = ""
+		音標 = ""
+		註 = ""
+		if 名 in ("汝城", "瑞安東山", "新界客家話", "長壽", "宜章巖泉","郴州","樂昌皈塘","尤溪","晉江", "龍門路溪", "詔安", "道縣官話", "重慶", "樂昌三溪", "南安"):
+			字, 音, 註 = 列[:3]
+		elif 名 in ("通州金沙",):
+			音, 字, 註 = 列[:3]
+		elif 名 in ("江陰", "江陰新橋", "江陰申港"):
+			_, 字, 註, 音 = 列[:4]
+		elif 名 in ("東方八所",):
+			_, 字, 聲韻, 調, 註 = 列[:5]
+			音 = 聲韻 + 調
+		elif 名 in ("龍游",):
+			_, 字, 聲, 韻, 調值, _, 註 = 列[:7]
+			音標 = 聲 + 韻 + 調值
+		elif 名 in ("1900梅惠",):
+			字,_,_,音 = 列[:4]
+		elif 名 in ("劍川金華",):
+			字, 聲韻, 調, 註 = 列[:4]
+			音 = 聲韻 + 調
+		elif 名 in ("樂昌黃圃",):
+			字, 調, 聲韻, 註 = 列[:4]
+			音 = 聲韻 + 調
+			註 = 註.strip("{}")
+		elif 名 in ("1926綜合",):
+			字,音,_,_,_,註 = 列[:6]
+		elif 名 in ("蒼南錢庫",):
+			聲,韻,調,字,註 = 列[:5]
+			if 調 == "轻声": 調 = "0"
+			音 = 聲 + 韻 + 調
+		elif 名 in ("1890會城",):
+			字,_,_,聲,韻,註 = 列[:6]
+			音 = 聲 + 韻
+		elif 名 in ("貴陽",):
+			字, _, _, 音標, 註 = 列[:6]
+		elif 名 in ("樂淸"):
+			_, 聲, 韻, 調, 字, 註 = 列[:6]
+			音 = 聲 + 韻 + 調
+		elif 名 in ("淸末溫州",):
+			_,字,聲韻,_,_,調,註 = 列[:7]
+			音 = 聲韻 + 調
+		elif 名 in ("眞如南",):
+			_, _, 字, 註, 聲, 韻, 調 = 列[:7]
+			音 = 聲 + 韻 + 調
+		#音標
+		elif 名 in ("五峯", "恩平恩城","台山台城"):
+			字, 音標 = 列[:2]
+		elif 名 in ("華安髙安","五華"):
+			音標, 字, 註 = 列[:3]
+		elif 名 in ("惠來隆江",):
+			字, 音標, 註 = 列[:3]
+		elif 名 in ("壽寧平溪"):
+			字, 音, 註 = 列[:3]
+			字 = 字.replace("", "□")
+		elif 名 in ("新會會城",):
+			字, _, _, 音標 = 列[:4]
+		elif 名 in ("廈門","漳州","饒平", "遵義", "犍爲玉津", "綦江古南", "桐梓婁山關"):
+			字, _, 音標, 註 = 列[:4]
+		elif 名 in ("遂昌","五華橫陂","蔡家話"):
+			字, 聲韻, 調, 註 = 列[:4]
+			音標 = 聲韻 + 調
+		elif 名 in ("雙牌打鼓坪"):
+			聲韻, 調, _, 註 = 列[:4]
+			音 = 聲韻 + 調
+			字 = 註[0]
+			註 = 註[1:].strip("()（）")
+		elif 名 in ("開化",):
+			字, 註, 聲, 韻, 調 = 列[:5]
+			音 = 聲 + 韻 + 調.strip("[]")
+			if re.match(r"（.*?）", 註): 註 = 註[1:-1]
+		elif 名 in ("富陽東梓關","新登城陽"):
+			_, 字, 註, 音標 = 列[:4]
+		elif 名 in ("新登下港",):
+			字, 音標, 註 = 列[0], 列[6], 列[8]
+		elif 名 in ("嘉善", "上海"):
+			字, 聲, 韻, 調, 註 = 列[:5]
+			音 = 聲 + 韻 + 調
+			if 字.endswith("-"):
+				字 = 字[:-1]
+				音 = 音 + "-"
+		elif 名 in ("臨海", "泰順羅陽", "雲和", "仙居"):
+			字, _, 聲韻, 調值, 註 = 列[:5]
+			音標 = 聲韻 + 調值
+		elif 名 in ("松陽",):
+			字, _, 聲韻, 調值 = 列[:4]
+			音標 = 聲韻 + 調值
+		elif 名 in ("珠海唐家",):
+			字, 聲, 韻, 調值, 註 = 列[7], 列[12], 列[13], 列[14], 列[18]
+			音標 = 聲 + 韻 + 調值
+		elif 名 in ("江門",):
+			字, 聲, 韻, 調值, jso, 註 = 列[7], 列[25], 列[26], 列[27], 列[11], 列[12]
+			音標 = 聲 + 韻 + 調值
+			if jso: 註 = jso + "。" + 註
+			註 = 註.strip("。")
+		elif 名 in ("江門墟頂","江門白沙","江門水南","江門沙仔尾","江門紫萊"):
+			字, 聲, 韻, 調, 註 = 列[0], 列[6], 列[7], 列[4], 列[9]
+			音 = 聲 + 韻 + 調
+		elif 名 in ("江門禮樂","江門潮連"):
+			字, 聲, 韻, 調值, 註 = 列[:5]
+			音標 = 聲 + 韻 + 調值
+		elif 名 in ("瑞安湖嶺",):
+			_, 字, 音標, _, 註 = 列[:5]
+		elif 名 in ("湖州",):
+			字, _, 音標, _, 註 = 列[:5]
+		elif 名 in ("武義",):
+			_, 字, _, 音標, 註 = 列[:5]
+		elif 名 in ("鳳凰-新豐",):
+			字, py, _, 音標, 註 = 列[:5]
+		elif 名 in ("潮州","汕頭"):
+			字, _, _, 音標, 註 = 列[:5]
+		elif 名 in ("汕頭市郊"):
+			字, _, _, 音標, 註 = 列[:5]
+		elif 名 in ("雷州",):
+			字, _, _, _, _, 音標 = 列[:6]
+			音標 = 音標.replace("˨˨˩", "˨˩")
+		elif 名 in ("長泰",):
+			_, 聲, 韻, 調值, 字, 註 = 列[:6]
+			音標 = 聲 + 韻 + 調值
+		elif 名 in ("普寧",):
+			字,_,註,聲,韻,調值 = 列[:6]
+			音標 = 聲 + 韻 + 調值
+		elif 名 in ("中山三鄕",):
+			字,聲,韻,調值, _, 註 = 列[:6]
+			音標 = 聲 + 韻 + 調值
+		elif 名 in ("深圳南頭",):
+			字, _, _, _, 音標, 註 = 列[:6]
+		elif 名 in ("通東餘東",):
+			字, _, _, 聲韻, _, 調值, 註 = 列[:7]
+			聲韻 = 聲韻.lstrip("ʔ")
+			音標 = 聲韻 + 調值
+		elif 名 in ("南寧", "南寧亭子"):
+			_, 字, _, 音標, _, 註, c = 列[:7]
+			註 = c + 註
+		elif 名 in ("蒼南蒲門",):
+			字, 聲韻, 調值, _, _, _, 註 = 列[:7]
+			音標 = 聲韻 + 調值
+		elif 名 in ("鶴山雅瑤",):
+			字, 聲, 韻, 調值, _, _, _, 註 = 列[:8]
+			音標 = 聲 + 韻 + 調值
+		elif 名 in ("開平護龍",):
+			字, 聲, 韻, 調值, 註 = 列[:5]
+			音標 = 聲 + 韻 + 調值
+		elif 名 in ("揭陽",):
+			字, _, _, _, _, 音標, 異讀, 註 = 列[:8]
+			音 = 自.dz2dl(音標)
+			音標 = ""
+			異讀 = 異讀.strip("(读)")
+			if 異讀 == "文": 音+="="
+			elif 異讀 == "白": 音+="-"
+		elif 名 in ("台山斗山墟",):
+			字, 音標, 註 = 列[0], 列[12], 列[13]
+		elif 名 in ("新會天湖",):
+			字, 聲, 韻, 調值, 註 = 列[0], 列[11], 列[12], 列[13], 列[14]
+			音標 = 聲 + 韻 + 調值
+		elif 名 in ("鶴山沙坪",):
+			字, 聲, jy, 韻, 調值, 註 = 列[0], 列[8], 列[9], 列[10], 列[11], 列[14]
 			l = list()
-			for i in ym.split("，"):
-				ipa = sm + jy + i + sd
-				yb = self.dz2dl(ipa)
-				l.append((hz, yb, js))
+			for i in 韻.split("，"):
+				音標 = 聲 + jy + i + 調值
+				音 = 自.dz2dl(音標)
+				l.append((字, 音, 註))
 			return l
-		elif name in ("縉雲",):
-			hz, _, _, _, _, js, _, ipa = fs[:8]
-		elif name in ("深圳西鄕","深圳沙井"):
-			hz, _, _, _, _, _, _, ipa, js = fs[:9]
-		elif name in ("新晃凳寨",):
-			hz,ipa,js = fs[0], fs[9], fs[10]
-		elif name in ("如東豐利",):
-			hz,_,sy,_,_,_,sd,_,_,js = fs[:10]
-			yb = sy + sd
-		elif name in ("如東大豫",):
-			hz,_,_,_,sd,js,sm,ym,_ = fs[:9]
-			yb = sm + ym + sd
-		elif name in ("詔安白葉","詔安霞葛"):
-			hz, yb, js = fs[:3]
-			if " " in yb:
+		elif 名 in ("縉雲",):
+			字, _, _, _, _, 註, _, 音標 = 列[:8]
+		elif 名 in ("深圳西鄕","深圳沙井"):
+			字, _, _, _, _, _, _, 音標, 註 = 列[:9]
+		elif 名 in ("新晃凳寨",):
+			字,音標,註 = 列[0], 列[9], 列[10]
+		elif 名 in ("如東豐利",):
+			字,_,聲韻,_,_,_,調,_,_,註 = 列[:10]
+			音 = 聲韻 + 調
+		elif 名 in ("如東大豫",):
+			字,_,_,_,調,註,聲,韻,_ = 列[:9]
+			音 = 聲 + 韻 + 調
+		elif 名 in ("詔安白葉","詔安霞葛"):
+			字, 音, 註 = 列[:3]
+			if " " in 音:
 				l = list()
-				for y,j in zip(yb.split(" "), js.split(" ")):
-					l.append((hz, y, j))
+				for y,j in zip(音.split(" "), 註.split(" ")):
+					l.append((字, y, j))
 				return l
-		elif name in ("1925鹽城"):
-			hzs, yb, js = fs[:3]
+		elif 名 in ("1925鹽城"):
+			字組, 音, 註 = 列[:3]
 			l = list()
-			for hz in hzs.split(" "):
-				if len(hz) == 2:
-					js = f"（{hz}）{js}".strip()
-					hz = hz[0]
-				elif len(hz) > 2:
-					js = f"{hz[1:]}{js}".strip()
-					hz = hz[0]
-				l.append((hz, yb, js))
+			for 字 in 字組.split(" "):
+				if len(字) == 2:
+					註 = f"（{字}）{註}".strip()
+					字 = 字[0]
+				elif len(字) > 2:
+					註 = f"{字[1:]}{註}".strip()
+					字 = 字[0]
+				l.append((字, 音, 註))
 			return l
-		elif name in ("陽春河口",):
-			hz, sm, ym, sd, js = fs[9], fs[6], fs[7], fs[4].split("\\")[0], fs[10]
-			yb = sm + ym + sd
-		elif name in ("中山石岐",):
-			hz, sm, ym, sd, js = fs[7], fs[12], fs[13], fs[14], fs[18]
-			ipa = sm + ym + sd
-		elif name in ("上饒沙溪",):
-			hz, yb, _, js = fs[:4]
-		elif name in ("1818漳州",):
-			hz, yb = fs[0], fs[4]
-		elif name in ("榮縣",):
-			hz,_,_,js,sm,ym,sd = fs[:7]
-			if sm in "ø": sm = ""
+		elif 名 in ("陽春河口",):
+			字, 聲, 韻, 調, 註 = 列[9], 列[6], 列[7], 列[4].split("\\")[0], 列[10]
+			音 = 聲 + 韻 + 調
+		elif 名 in ("中山石岐",):
+			字, 聲, 韻, 調值, 註 = 列[7], 列[12], 列[13], 列[14], 列[18]
+			音標 = 聲 + 韻 + 調值
+		elif 名 in ("上饒沙溪",):
+			字, 音, _, 註 = 列[:4]
+		elif 名 in ("1818漳州",):
+			字, 音 = 列[0], 列[4]
+		elif 名 in ("榮縣",):
+			字,_,_,註,聲,韻,調 = 列[:7]
+			if 聲 in "ø": 聲 = ""
 			l = list()
-			for sd in sd.split("或"):
-				yb = self.dz2dl(sm + ym, sd)
-				l.append((hz, yb, js))
+			for 調 in 調.split("或"):
+				音 = 自.dz2dl(聲 + 韻, 調)
+				l.append((字, 音, 註))
 			return l
-		elif name in ("鄭張",):
-			self.ybTrimSpace = False
-			self.isYb = False
-			hz = fs[0]
-			js = fs[16]
-			yb = ("%s%s (%s%s切 %s聲 %s%s)"%(fs[12], f"/{fs[13]}" if fs[13] else "", fs[7],fs[8],fs[9],fs[10],fs[11]))
-		elif name in ("白-沙",):
-			self.isYb = False
-			hz, yb = fs[0], fs[4]
-		elif name in ("中唐",):
-			self.isYb = False
-			hz, yb, js = fs[:3]
-		elif name in ("中世朝鮮"):
-			self.isYb = False
-			hz = fs[0]
-			yb = "".join(fs[1:4])
-		elif name in ("溫州",):
+		elif 名 in ("鄭張",):
+			自.ybTrimSpace = False
+			自.爲音 = False
+			字 = 列[0]
+			註 = 列[16]
+			音 = ("%s%s (%s%s切 %s聲 %s%s)"%(列[12], f"/{列[13]}" if 列[13] else "", 列[7],列[8],列[9],列[10],列[11]))
+		elif 名 in ("白-沙",):
+			自.爲音 = False
+			字, 音 = 列[0], 列[4]
+		elif 名 in ("中唐",):
+			自.爲音 = False
+			字, 音, 註 = 列[:3]
+		elif 名 in ("中世朝鮮"):
+			自.爲音 = False
+			字 = 列[0]
+			音 = "".join(列[1:4])
+		elif 名 in ("溫州",):
 			toneValues = {'阳入':8,'阴上':3,'阳平':2,'阴入':7,'阳去':6,'阴平':1,'阴去':5,'阳上':4}
-			_,hz,_,sy,_,_,sd,js = fs[:8]
-			yb = sy + str(toneValues[sd])
-		elif name in ("瑞安陶山",):
-			hz, sm, ym, sd, js, bz = fs[:6]
-			sd = sd.strip("[]")
-			yb = sm + ym + sd
-			js = (js + " " +bz).strip()
-		elif name in ("宜章梅田",):
-			hz,sm,ym,sd,js = fs[:5]
-			yb = sm + ym + sd
-		elif name in ("蒼南宜山",):
-			sm,ym,sd,hz,js = fs[:5]
-			sd = sd.strip("[]")
-			yb = sm + ym + sd
-			js = js.strip("{}")
-		elif name in ("南通", ):
-			hz = fs[1]
-			yb = fs[-6] + fs[-4]
-			js = fs[-7].strip()
-			if len(hz) > 1 and len(js) == 0:
-				js = hz[1:].strip()
-				hz = hz[0]
-		elif name in ("寧德",):
-			hz,_,yb,sd,js = fs
-			yb += self.dz2dl(sd.split("|")[0])
-		elif name in ("江門荷塘(上)","江門荷塘(下)"):
-			hz, ipa, js = fs[:3]
-		elif name in ("汝城延壽",):
-			hz, yb, js = fs[:3]
-		elif name in ("建陽連墩",):
-			hz, yb, js = fs[:3]
-		elif name in ("塔玆語", "海倫","宜興南",):
-			hz, sy, tv, js = fs[:4]
-			ipa = sy + tv
-		elif name in ("虎林", "吳江菀坪","景寧鄭坑","慈谿觀海衛","當塗霍里", "南陵", "南陵湖南街"):
-			hz, sm, ym, tv, js = fs[:5]
-			ipa = sm + ym + tv
-		elif name in ("滁州",):
-			_, hz, sm, ym, tv, js = fs[:6]
-			ipa = sm + ym + tv
-		elif name in ("宣平",):
-			hz, _, ipa, js = fs[:4]
-		elif name in ("淮南","懷遠","鳳陽","陽新新街","上猶", "南陵仙坊", "武昌", "連州", "連州保安", "連州星子", "連州西岸", "連州豐陽"):
-			_, hz, sm, ym, tv, _, js = fs[:7]
-			ipa = sm + ym + tv
-		elif self._file.startswith("粤西闽语方言字表"):
-			if len(fs) < 6: return
-			hz = fs[0]
-			ybs = fs[self.ybIndex]
-			ybs = ybs.replace("／", "/")
-			if not ybs or ybs.startswith("—"): return
-			_js = hz[1:] if len(hz)>1 else ""
+			_,字,_,聲韻,_,_,調,註 = 列[:8]
+			音 = 聲韻 + str(toneValues[調])
+		elif 名 in ("瑞安陶山",):
+			字, 聲, 韻, 調, 註, bz = 列[:6]
+			調 = 調.strip("[]")
+			音 = 聲 + 韻 + 調
+			註 = (註 + " " +bz).strip()
+		elif 名 in ("宜章梅田",):
+			字,聲,韻,調,註 = 列[:5]
+			音 = 聲 + 韻 + 調
+		elif 名 in ("蒼南宜山",):
+			聲,韻,調,字,註 = 列[:5]
+			調 = 調.strip("[]")
+			音 = 聲 + 韻 + 調
+			註 = 註.strip("{}")
+		elif 名 in ("南通", ):
+			字 = 列[1]
+			音 = 列[-6] + 列[-4]
+			註 = 列[-7].strip()
+			if len(字) > 1 and len(註) == 0:
+				註 = 字[1:].strip()
+				字 = 字[0]
+		elif 名 in ("寧德",):
+			字,_,音,調,註 = 列
+			音 += 自.dz2dl(調.split("|")[0])
+		elif 名 in ("江門荷塘(上)","江門荷塘(下)"):
+			字, 音標, 註 = 列[:3]
+		elif 名 in ("汝城延壽",):
+			字, 音, 註 = 列[:3]
+		elif 名 in ("建陽連墩",):
+			字, 音, 註 = 列[:3]
+		elif 名 in ("塔玆語", "海倫","宜興南",):
+			字, 聲韻, 調值, 註 = 列[:4]
+			音標 = 聲韻 + 調值
+		elif 名 in ("虎林", "吳江菀坪","景寧鄭坑","慈谿觀海衛","當塗霍里", "南陵", "南陵湖南街"):
+			字, 聲, 韻, 調值, 註 = 列[:5]
+			音標 = 聲 + 韻 + 調值
+		elif 名 in ("滁州",):
+			_, 字, 聲, 韻, 調值, 註 = 列[:6]
+			音標 = 聲 + 韻 + 調值
+		elif 名 in ("宣平",):
+			字, _, 音標, 註 = 列[:4]
+		elif 名 in ("淮南","懷遠","鳳陽","陽新新街","上猶", "南陵仙坊", "武昌", "連州", "連州保安", "連州星子", "連州西岸", "連州豐陽"):
+			_, 字, 聲, 韻, 調值, _, 註 = 列[:7]
+			音標 = 聲 + 韻 + 調值
+		elif 自._file.startswith("粤西闽语方言字表"):
+			if len(列) < 6: return
+			字 = 列[0]
+			音集 = 列[自.音列]
+			音集 = 音集.replace("／", "/")
+			if not 音集 or 音集.startswith("—"): return
+			_js = 字[1:] if len(字)>1 else ""
 			_js = _js.strip("（）")
-			hz = hz[0]
+			字 = 字[0]
 			l = list()
-			for _yb in ybs.split("/"):
+			for _yb in 音集.split("/"):
 				_yb = _yb.strip()
 				c = ""
 				if "（" in _yb:
 					n = _yb.index("（")
 					c = _yb[n:]
 					_yb = _yb[:n]
-				yb = self.dz2dl(_yb)
-				js = c + _js
-				if js.startswith("（") and js.endswith("）"):
-					js = js[1:-1]
-				l.append((hz, yb, js))
+				音 = 自.dz2dl(_yb)
+				註 = c + _js
+				if 註.startswith("（") and 註.endswith("）"):
+					註 = 註[1:-1]
+				l.append((字, 音, 註))
 			return l
-		elif self._file.startswith("鄉話"):
-			index = self.ybIndex
-			hz, js = fs[:2]
-			yb = "".join(fs[index:index+3])
-		elif self._file.startswith("丹陽（雲陽訪仙河陽埤城）"):
-			hz = fs[0][0]
-			if hz.startswith("["): return
-			js = fs[0][1:].strip("()（）")
-			yb = fs[self.ybIndex]
-			yb = self.dz2dl(yb)
-		elif self._file.startswith("广西富川富阳方言21点"):
-			if not fs[0]: return
-			hz = fs[0][0]
-			js = fs[0][1:].strip("()（）")
-			yb = self.dz2dl(fs[self.ybIndex])
-		elif len(fs) >= 4:
-			hz, _, ipa, js = fs[:4]
-		elif len(fs) == 2:
-			hz, yb = fs[:2]
+		elif 自._file.startswith("鄉話"):
+			index = 自.音列
+			字, 註 = 列[:2]
+			音 = "".join(列[index:index+3])
+		elif 自._file.startswith("丹陽（雲陽訪仙河陽埤城）"):
+			字 = 列[0][0]
+			if 字.startswith("["): return
+			註 = 列[0][1:].strip("()（）")
+			音標 = 列[自.音列]
+		elif 自._file.startswith("广西富川富阳方言21点"):
+			if not 列[0]: return
+			字 = 列[0][0]
+			註 = 列[0][1:].strip("()（）")
+			音標 = 列[自.音列]
+		elif len(列) >= 4:
+			字, _, 音標, 註 = 列[:4]
+		elif len(列) == 2:
+			字, 音 = 列[:2]
 		else:
-			hz, yb, js = fs[:3]
-		if hz:
-			if ipa:
-				yb = self.dz2dl(ipa)
-			if len(hz) != 1 or not yb: return
-			yb = self.normYb(yb)
-			if hz in "?？�": hz = "□"
-			return hz, yb, js
+			字, 音, 註 = 列[:3]
+		if 字:
+			if 音標:
+				音 = 自.dz2dl(音標)
+			if len(字) != 1 or not 音: return
+			音 = 自.正音(音)
+			if 字 in "?？�": 字 = "□"
+			return 字, 音, 註
 		return

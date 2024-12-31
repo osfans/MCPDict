@@ -6,10 +6,10 @@ sms = {'p':'p', 'ph':'pʰ', 'b':'b', 'm':'m', 'pf':'pf', 'pfh':'pfʰ', 'bv':'bv'
 yms = {'i':'i', 'u':'u', 'a':'a', 'ia':'ia', 'ua':'ua', 'o':'o', 'io':'io', 'e':'e', 'ue':'ue', 'ui':'ui', 'ai':'ai', 'uai':'uai', 'oi':'oi', 'iu':'iu', 'au':'au', 'iau':'iau', 'ou':'ou', 'im':'im', 'am':'am', 'iam':'iam', 'uam':'uam', 'om':'om', 'ing':'iŋ', 'ung':'uŋ', 'ang':'aŋ', 'iang':'iaŋ', 'uang':'uaŋ', 'ong':'oŋ', 'iong':'ioŋ', 'eng':'eŋ', 'ueng':'ueŋ', 'ip':'ip', 'ap':'ap', 'iap':'iap', 'uap':'uap', 'op':'op', 'ik':'ik', 'uk':'uk', 'ak':'ak', 'iak':'iak', 'uak':'uak', 'ok':'ok', 'iok':'iok', 'ek':'ek', 'uek':'uek', 'inn':'ĩ', 'ann':'ã', 'iann':'iã', 'uann':'uã', 'onn':'õ', 'ionn':'iõ', 'enn':'ẽ', 'uenn':'uẽ', 'uinn':'uĩ', 'ainn':'aĩ', 'uainn':'uaĩ', 'oinn':'oĩ', 'iunn':'iũ', 'aunn':'aũ', 'iaunn':'iaũ', 'ounn':'oũ', 'ih':'iʔ', 'uh':'uʔ', 'ah':'aʔ', 'iah':'iaʔ', 'uah':'uaʔ', 'oh':'oʔ', 'ioh':'ioʔ', 'eh':'eʔ', 'ueh':'ueʔ', 'oih':'oiʔ', 'iuh':'iuʔ', 'auh':'auʔ', 'iauh':'iauʔ', 'annh':'ãʔ', 'uannh':'uãʔ', 'iaunnh':'iaũʔ', 'ɿ':'ɿ', 'm':'m', 'ng':'ŋ', 'ək':'ək', 'aannp':'ãːp', 'annp':'ãp', 'uei':'uei', '':'', 'əŋ': 'əŋ', 'əng': 'əŋ'}
 
 class 表(_表):
-	def parse(self, fs):
-		_,hz,js,yb,sm,ym,sd = fs[:7]
-		if len(hz) != 1: return
+	def 析(自, 列):
+		_,字,js,yb,sm,ym,sd = 列[:7]
+		if len(字) != 1: return
 		ym = ym.rstrip("12345678")
 		sd = sd.strip()
 		yb = sms[sm] + yms[ym] + sd
-		return hz, yb, js
+		return 字, yb, js

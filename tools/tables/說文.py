@@ -3,14 +3,14 @@
 from tables._表 import 表 as _表
 
 class 表(_表):
-	full = "說文解字"
-	short = "說文"
-	site = "說文解字線上搜索"
-	url = "http://www.shuowen.org/?kaishu=%s"
-	note = "來源：<a href=https://github.com/shuowenjiezi/shuowen/>說文解字網站數據</a>"
+	全稱 = "說文解字"
+	簡稱 = "說文"
+	網站 = "說文解字線上搜索"
+	網址 = "http://www.shuowen.org/?kaishu=%s"
+	說明 = "來源：<a href=https://github.com/shuowenjiezi/shuowen/>說文解字網站數據</a>"
 	ybTrimSpace = False
-	dictionary = True
+	字書 = True
 	
-	def parse(self, fs):
-		fq = fs[1].split(" ")[0]
-		return fs[0], fq, "\t".join(fs[2:])
+	def 析(自, 列):
+		fq = 列[1].split(" ")[0]
+		return 列[0], fq, "\t".join(列[2:])
