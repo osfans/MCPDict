@@ -1163,7 +1163,7 @@
         "地點": "山西臨汾古縣舊縣堯店",
         "地圖集二分區": "中原官話-汾河片-平陽小片",
         "音典分區": "西北-汾河-晉州",
-        "陳邡分區": "官話-平陽-晉隰大片-永和片",
+        "陳邡分區": "官話-平陽-晉隰大片-晉州片",
         "版本": "2022-01-07",
         "錄入人": "Skanda,Hynuza",
         "來源": "《古县（尧店）方言音系及其与周边方言声调的比较研究》"
@@ -2543,7 +2543,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "臨武官話",
         "語言": "臨武型官話",
@@ -3734,7 +3734,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "large",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "吉首",
         "語言": "吉首話",
@@ -3758,7 +3758,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "large",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "花垣",
         "語言": "花垣話",
@@ -3782,7 +3782,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "古丈大客話",
         "語言": "古丈大客話",
@@ -4096,7 +4096,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "大庸北",
         "語言": "大庸[張家界]城北話（老城區）",
@@ -4120,7 +4120,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "大庸南",
         "語言": "大庸[張家界]城南話（新城區）",
@@ -4267,7 +4267,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "桃源",
         "語言": "桃源漳江(城關)話",
@@ -9507,7 +9507,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#52CCAD",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "f",
         "title": "平江",
         "語言": "平江漢昌(城關)話",
@@ -9652,7 +9652,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#52CCAD",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "f",
         "title": "醴陵板杉",
         "語言": "醴陵板杉話",
@@ -9873,7 +9873,7 @@
         "marker-size": "medium",
         "marker-symbol": "f",
         "title": "崇陽",
-        "語言": "崇陽事（城關，天城白霓靑山石城大橋腔）",
+        "語言": "崇陽事（城關，天城白霓靑山石城大橋嗰腔）",
         "地點": "湖北咸寧崇陽",
         "地圖集二分區": "贛語-大通片",
         "音典分區": "湘贛-岳州-蒲圻",
@@ -9958,7 +9958,7 @@
         "地圖集二分區": "贛語-大通片",
         "音典分區": "湘贛-岳州-蒲圻",
         "陳邡分區": "湘贛-幕阜-南岳州大片-雋水片",
-        "版本": "2024-12-30",
+        "版本": "2024-12-31",
         "錄入人": "冰糖橙",
         "來源": "語保，《鄂东南方言音汇》《通城方言音系及声韵层次研究》"
       },
@@ -9982,7 +9982,7 @@
         "地圖集二分區": "贛語-大通片",
         "音典分區": "湘贛-岳州-蒲圻",
         "陳邡分區": "湘贛-幕阜-南岳州大片-雋水片",
-        "版本": "2024-12-30",
+        "版本": "2024-12-31",
         "錄入人": "mond",
         "來源": "自調查"
       },
@@ -10166,318 +10166,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#52CCAD",
-        "marker-size": "small",
-        "marker-symbol": "f",
-        "title": "吉安雲樓",
-        "語言": "吉安雲樓話",
-        "地點": "江西吉安靑原富田雲樓",
-        "地圖集二分區": "贛語-吉茶片",
-        "音典分區": "湘贛-羅霄",
-        "陳邡分區": "湘贛-羅霄-吉安大片-吉安片",
-        "版本": "2024-10-22",
-        "來源": "《江西吉安縣雲樓方言同音字彙》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          115.255428,
-          26.824522
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#52CCAD",
-        "marker-size": "medium",
-        "marker-symbol": "f",
-        "title": "遂川",
-        "語言": "遂川話",
-        "地點": "江西吉安遂川",
-        "地圖集二分區": "贛語-吉茶片",
-        "音典分區": "湘贛-羅霄",
-        "陳邡分區": "湘贛-羅霄-吉安大片-吉安片",
-        "版本": "2024-11-10",
-        "錄入人": "汝人",
-        "來源": "《江西遂川贛語本地話語音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          114.526991,
-          26.321589
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#52CCAD",
-        "marker-size": "small",
-        "marker-symbol": "f",
-        "title": "遂川禾源",
-        "語言": "遂川禾源話",
-        "地點": "江西吉安遂川禾源",
-        "地圖集二分區": "贛語-吉茶片",
-        "音典分區": "湘贛-羅霄",
-        "陳邡分區": "湘贛-羅霄-吉安大片-吉安片",
-        "版本": "2024-12-31",
-        "錄入人": "DaiDzao",
-        "來源": "《遂川赣语语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          114.439279,
-          26.187314
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#52CCAD",
-        "marker-size": "small",
-        "marker-symbol": "f",
-        "title": "攸縣皇圖嶺",
-        "語言": "攸縣皇圖嶺話",
-        "地點": "湖南株洲攸縣皇圖嶺",
-        "地圖集二分區": "贛語-吉茶片",
-        "音典分區": "湘贛-羅霄",
-        "陳邡分區": "湘贛-羅霄-吉安大片-攸縣片",
-        "錄入人": "鶩髙赭紗匕",
-        "來源": "《赣语攸县皇图岭话语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.497208,
-          27.357211
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#52CCAD",
-        "marker-size": "small",
-        "marker-symbol": "f",
-        "title": "攸縣新市",
-        "語言": "攸縣新市話",
-        "地點": "湖南株洲攸縣新市",
-        "地圖集二分區": "贛語-吉茶片",
-        "音典分區": "湘贛-羅霄",
-        "陳邡分區": "湘贛-羅霄-吉安大片-攸縣片",
-        "版本": "2024-11-04",
-        "錄入人": "鶩髙赭紗匕",
-        "來源": "《湖南攸县（新市）方言同音字汇》《攸县（新市）方言语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.396641,
-          27.184237
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#52CCAD",
-        "marker-size": "medium",
-        "marker-symbol": "f",
-        "title": "攸縣",
-        "語言": "攸縣城關話",
-        "地點": "湖南株洲攸縣",
-        "地圖集二分區": "贛語-吉茶片",
-        "音典分區": "湘贛-羅霄",
-        "陳邡分區": "湘贛-羅霄-吉安大片-攸縣片",
-        "版本": "2022-05-22",
-        "錄入人": "跳跳老鼠",
-        "來源": "《湖南省志·第二十五卷·方言志·上册》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.403727,
-          27.021421
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#C75EEB",
-        "marker-size": "medium",
-        "marker-symbol": "g",
-        "title": "衡東草市",
-        "語言": "衡東草市話",
-        "地點": "湖南衡陽衡東草市",
-        "地圖集二分區": "湘語-衡州片-衡山小片",
-        "音典分區": "湘贛-羅霄",
-        "陳邡分區": "湘贛-羅霄-茶陵大片-茶陵片",
-        "版本": "2022-04-18",
-        "錄入人": "DaiDzao",
-        "來源": "《湖南衡东草市话语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.187854,
-          26.906271
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#52CCAD",
-        "marker-size": "medium",
-        "marker-symbol": "f",
-        "title": "茶陵",
-        "語言": "茶陵話",
-        "地點": "湖南株洲茶陵",
-        "地圖集二分區": "贛語-吉茶片",
-        "音典分區": "湘贛-羅霄",
-        "陳邡分區": "湘贛-羅霄-茶陵大片-茶陵片",
-        "版本": "2024-12-22",
-        "錄入人": "DaiDzao",
-        "來源": "语保"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.54605,
-          26.784105
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#52CCAD",
-        "marker-size": "small",
-        "marker-symbol": "f",
-        "title": "茶陵下東",
-        "語言": "茶陵下東話",
-        "地點": "湖南株洲茶陵下東",
-        "地圖集二分區": "贛語-吉茶片",
-        "音典分區": "湘贛-羅霄",
-        "陳邡分區": "湘贛-羅霄-茶陵大片-茶陵片",
-        "版本": "2022-07-25",
-        "錄入人": "DaiDzao",
-        "來源": "《湖南省茶陵县下东乡方言的语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.541935,
-          26.776477
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#52CCAD",
-        "marker-size": "medium",
-        "marker-symbol": "f",
-        "title": "酃縣",
-        "語言": "酃縣[炎陵]霞陽(城關)話",
-        "地點": "湖南株洲炎陵",
-        "地圖集二分區": "贛語-吉茶片",
-        "音典分區": "湘贛-羅霄",
-        "陳邡分區": "湘贛-羅霄-茶陵大片-酃縣片",
-        "版本": "2022-07-21",
-        "錄入人": "DaiDzao",
-        "來源": "《湖南炎陵方言同音字汇》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.778846,
-          26.496579
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#A5C24E",
-        "marker-size": "medium",
-        "marker-symbol": "h",
-        "title": "桂東",
-        "語言": "桂東城關話",
-        "地點": "湖南郴州桂東",
-        "地圖集二分區": "客家話-銅桂片",
-        "音典分區": "湘贛-羅霄",
-        "陳邡分區": "湘贛-羅霄-吉安大片-桂東片",
-        "版本": "2022-05-26",
-        "錄入人": "DaiDzao",
-        "來源": "《桂东方言同音字汇》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.939764,
-          26.081447
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#5ED154",
-        "marker-size": "small",
-        "marker-symbol": "j",
-        "title": "宜章栗源",
-        "語言": "宜章栗源俄俚話",
-        "地點": "湖南郴州宜章栗源老王冲",
-        "地圖集二分區": "平話和土話-湘南片",
-        "音典分區": "湘贛-羅霄",
-        "陳邡分區": "湘贛-羅霄-吉安大片-麥市片",
-        "方言島": true,
-        "版本": "2022-05-30",
-        "錄入人": "DaiDzao",
-        "來源": "《湖南省宜章县栗源镇土话语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          112.955594,
-          25.222076
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#5ED154",
-        "marker-size": "small",
-        "marker-symbol": "j",
-        "title": "宜章東風",
-        "語言": "宜章東風俄俚話",
-        "地點": "湖南郴州宜章東風賀家村",
-        "地圖集二分區": "平話和土話-湘南片",
-        "音典分區": "湘贛-羅霄",
-        "陳邡分區": "湘贛-羅霄-吉安大片-麥市片",
-        "方言島": true,
-        "版本": "2024-11-16",
-        "錄入人": "DaiDzao,泉山散人",
-        "來源": "《湖南宜章东风乡客家话与俄俚话的语音接触影响》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          112.754547,
-          25.077988
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "marker-color": "#C75EEB",
         "marker-size": "small",
         "marker-symbol": "g",
@@ -10505,6 +10193,29 @@
         "marker-color": "#C75EEB",
         "marker-size": "small",
         "marker-symbol": "g",
+        "title": "1935長沙",
+        "語言": "長沙話(1935楊時逢-湖南方言調査)",
+        "地點": "湖南長沙",
+        "地圖集二分區": "湘語-長益片-長株潭小片",
+        "音典分區": "湘贛-北湘-長沙",
+        "陳邡分區": "湘贛-羅霄-長沙大片-長沙片",
+        "錄入人": "DaiDzao",
+        "來源": "《湖南方言調查報告》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.002739,
+          28.182768
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#C75EEB",
+        "marker-size": "large",
+        "marker-symbol": "g",
         "title": "湘音檢字",
         "語言": "《湘音檢字》1937長沙讀書音",
         "地點": "湖南長沙",
@@ -10520,29 +10231,6 @@
         "coordinates": [
           113.002739,
           28.272768
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#C75EEB",
-        "marker-size": "small",
-        "marker-symbol": "g",
-        "title": "1935長沙",
-        "語言": "長沙話(1935楊時逢-湖南方言調査)",
-        "地點": "湖南長沙",
-        "地圖集二分區": "湘語-長益片-長株潭小片",
-        "音典分區": "湘贛-北湘-長沙",
-        "陳邡分區": "湘贛-羅霄-長沙大片-長沙片",
-        "錄入人": "DaiDzao",
-        "來源": "《湖南方言調查報告》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.002739,
-          28.182768
         ]
       }
     },
@@ -10622,7 +10310,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "長沙星沙",
         "語言": "長沙星沙(城關)話",
@@ -10670,7 +10358,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "望城",
         "語言": "望城髙塘嶺(城關)話",
@@ -10742,7 +10430,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "南縣",
         "語言": "南縣荷花嘴話",
@@ -10913,7 +10601,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "寧鄕玉潭",
         "語言": "寧鄕城關",
@@ -11079,7 +10767,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "湘潭花石",
         "語言": "湘潭花石話",
@@ -11298,7 +10986,7 @@
         "marker-size": "small",
         "marker-symbol": "g",
         "title": "沅江南大膳",
-        "語言": "沅江南大膳話",
+        "語言": "沅江南大膳本地話（湘陰話）",
         "地點": "湖南益陽沅江南大膳",
         "地圖集二分區": "湘語-長益片-益沅小片",
         "音典分區": "湘贛-北湘-湘汨",
@@ -11319,7 +11007,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "large",
+        "marker-size": "medium",
         "marker-symbol": "g",
         "title": "益陽",
         "語言": "益陽話",
@@ -11367,7 +11055,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "沅江",
         "語言": "沅江城關話",
@@ -11463,7 +11151,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "桃江髙橋",
         "語言": "桃江髙橋話",
@@ -11608,7 +11296,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "寧鄕黃材",
         "語言": "寧鄕黃材話",
@@ -11704,7 +11392,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "安化東坪",
         "語言": "安化東坪(城關)話",
@@ -11752,7 +11440,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "large",
         "marker-symbol": "g",
         "title": "湘鄕",
         "語言": "湘鄕城關話",
@@ -12164,7 +11852,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "黔陽安江",
         "語言": "黔陽安江話",
@@ -12381,7 +12069,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "靖州大堡子",
         "語言": "靖州大堡子酸湯話",
@@ -12504,7 +12192,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "漵浦",
         "語言": "漵浦盧峯(城關)話",
@@ -12577,7 +12265,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "g",
         "title": "古丈死客子話",
         "語言": "古丈死客子話",
@@ -12595,6 +12283,318 @@
         "coordinates": [
           109.94812,
           28.61944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "吉安雲樓",
+        "語言": "吉安雲樓話",
+        "地點": "江西吉安靑原富田雲樓",
+        "地圖集二分區": "贛語-吉茶片",
+        "音典分區": "湘贛-羅霄",
+        "陳邡分區": "湘贛-羅霄-吉安大片-吉安片",
+        "版本": "2024-10-22",
+        "來源": "《江西吉安縣雲樓方言同音字彙》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.255428,
+          26.824522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "medium",
+        "marker-symbol": "f",
+        "title": "遂川",
+        "語言": "遂川話",
+        "地點": "江西吉安遂川",
+        "地圖集二分區": "贛語-吉茶片",
+        "音典分區": "湘贛-羅霄",
+        "陳邡分區": "湘贛-羅霄-吉安大片-吉安片",
+        "版本": "2024-11-10",
+        "錄入人": "汝人",
+        "來源": "《江西遂川贛語本地話語音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.526991,
+          26.321589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "遂川禾源",
+        "語言": "遂川禾源話",
+        "地點": "江西吉安遂川禾源",
+        "地圖集二分區": "贛語-吉茶片",
+        "音典分區": "湘贛-羅霄",
+        "陳邡分區": "湘贛-羅霄-吉安大片-吉安片",
+        "版本": "2024-12-31",
+        "錄入人": "DaiDzao",
+        "來源": "《遂川赣语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.439279,
+          26.187314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "攸縣皇圖嶺",
+        "語言": "攸縣皇圖嶺話",
+        "地點": "湖南株洲攸縣皇圖嶺",
+        "地圖集二分區": "贛語-吉茶片",
+        "音典分區": "湘贛-羅霄",
+        "陳邡分區": "湘贛-羅霄-吉安大片-攸縣片",
+        "錄入人": "鶩髙赭紗匕",
+        "來源": "《赣语攸县皇图岭话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.497208,
+          27.357211
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "攸縣新市",
+        "語言": "攸縣新市話",
+        "地點": "湖南株洲攸縣新市",
+        "地圖集二分區": "贛語-吉茶片",
+        "音典分區": "湘贛-羅霄",
+        "陳邡分區": "湘贛-羅霄-吉安大片-攸縣片",
+        "版本": "2024-11-04",
+        "錄入人": "鶩髙赭紗匕",
+        "來源": "《湖南攸县（新市）方言同音字汇》《攸县（新市）方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.396641,
+          27.184237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "medium",
+        "marker-symbol": "f",
+        "title": "攸縣",
+        "語言": "攸縣城關話",
+        "地點": "湖南株洲攸縣",
+        "地圖集二分區": "贛語-吉茶片",
+        "音典分區": "湘贛-羅霄",
+        "陳邡分區": "湘贛-羅霄-吉安大片-攸縣片",
+        "版本": "2022-05-22",
+        "錄入人": "跳跳老鼠",
+        "來源": "《湖南省志·第二十五卷·方言志·上册》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.403727,
+          27.021421
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#C75EEB",
+        "marker-size": "small",
+        "marker-symbol": "g",
+        "title": "衡東草市",
+        "語言": "衡東草市話",
+        "地點": "湖南衡陽衡東草市",
+        "地圖集二分區": "湘語-衡州片-衡山小片",
+        "音典分區": "湘贛-羅霄",
+        "陳邡分區": "湘贛-羅霄-茶陵大片-茶陵片",
+        "版本": "2022-04-18",
+        "錄入人": "DaiDzao",
+        "來源": "《湖南衡东草市话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.187854,
+          26.906271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "medium",
+        "marker-symbol": "f",
+        "title": "茶陵",
+        "語言": "茶陵話",
+        "地點": "湖南株洲茶陵",
+        "地圖集二分區": "贛語-吉茶片",
+        "音典分區": "湘贛-羅霄",
+        "陳邡分區": "湘贛-羅霄-茶陵大片-茶陵片",
+        "版本": "2024-12-22",
+        "錄入人": "DaiDzao",
+        "來源": "语保"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.54605,
+          26.784105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "茶陵下東",
+        "語言": "茶陵下東話",
+        "地點": "湖南株洲茶陵下東",
+        "地圖集二分區": "贛語-吉茶片",
+        "音典分區": "湘贛-羅霄",
+        "陳邡分區": "湘贛-羅霄-茶陵大片-茶陵片",
+        "版本": "2022-07-25",
+        "錄入人": "DaiDzao",
+        "來源": "《湖南省茶陵县下东乡方言的语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.541935,
+          26.776477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "medium",
+        "marker-symbol": "f",
+        "title": "酃縣",
+        "語言": "酃縣[炎陵]霞陽(城關)話",
+        "地點": "湖南株洲炎陵",
+        "地圖集二分區": "贛語-吉茶片",
+        "音典分區": "湘贛-羅霄",
+        "陳邡分區": "湘贛-羅霄-茶陵大片-酃縣片",
+        "版本": "2022-07-21",
+        "錄入人": "DaiDzao",
+        "來源": "《湖南炎陵方言同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.778846,
+          26.496579
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "medium",
+        "marker-symbol": "h",
+        "title": "桂東",
+        "語言": "桂東城關話",
+        "地點": "湖南郴州桂東",
+        "地圖集二分區": "客家話-銅桂片",
+        "音典分區": "湘贛-羅霄",
+        "陳邡分區": "湘贛-羅霄-吉安大片-桂東片",
+        "版本": "2022-05-26",
+        "錄入人": "DaiDzao",
+        "來源": "《桂东方言同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.939764,
+          26.081447
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5ED154",
+        "marker-size": "small",
+        "marker-symbol": "j",
+        "title": "宜章栗源",
+        "語言": "宜章栗源俄俚話",
+        "地點": "湖南郴州宜章栗源老王冲",
+        "地圖集二分區": "平話和土話-湘南片",
+        "音典分區": "湘贛-羅霄",
+        "陳邡分區": "湘贛-羅霄-吉安大片-麥市片",
+        "方言島": true,
+        "版本": "2022-05-30",
+        "錄入人": "DaiDzao",
+        "來源": "《湖南省宜章县栗源镇土话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.955594,
+          25.222076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5ED154",
+        "marker-size": "small",
+        "marker-symbol": "j",
+        "title": "宜章東風",
+        "語言": "宜章東風俄俚話",
+        "地點": "湖南郴州宜章東風賀家村",
+        "地圖集二分區": "平話和土話-湘南片",
+        "音典分區": "湘贛-羅霄",
+        "陳邡分區": "湘贛-羅霄-吉安大片-麥市片",
+        "方言島": true,
+        "版本": "2024-11-16",
+        "錄入人": "DaiDzao,泉山散人",
+        "來源": "《湖南宜章东风乡客家话与俄俚话的语音接触影响》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.754547,
+          25.077988
         ]
       }
     },
@@ -12793,7 +12793,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "新寧",
         "語言": "新寧金石(城關)話",
@@ -12891,7 +12891,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "隆回",
         "語言": "隆回桃洪(城關)話",
@@ -12938,7 +12938,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#52CCAD",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "f",
         "title": "洞口",
         "語言": "洞口城關話",
@@ -13033,7 +13033,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "漣源橋頭河",
         "語言": "漣源橋頭河話",
@@ -13177,7 +13177,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "衡山",
         "語言": "衡山長江話",
@@ -13201,7 +13201,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "large",
         "marker-symbol": "g",
         "title": "衡東",
         "語言": "衡東話",
@@ -13250,7 +13250,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "衡陽西渡",
         "語言": "衡陽西渡(城關)話",
@@ -13298,7 +13298,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "衡南茅市",
         "語言": "衡南茅市話",
@@ -13490,7 +13490,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "祁東",
         "語言": "祁東過水坪話",
@@ -13515,7 +13515,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "祁東白地市",
         "語言": "祁東白地市話",
@@ -13539,7 +13539,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "祁東步雲橋",
         "語言": "祁東步雲橋話",
@@ -13586,7 +13586,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "large",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "冷水灘",
         "語言": "永州冷水灘官話",
@@ -13612,7 +13612,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "東安蘆洪市",
         "語言": "東安蘆洪市官話",
@@ -13855,7 +13855,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "h",
         "title": "汝城",
         "語言": "汝城話",
@@ -14800,6 +14800,7 @@
         "地點": "廣西欽州欽南東場上寮蘿麻水",
         "地圖集二分區": "粤語-欽廉片",
         "音典分區": "嶺南-廉吳-廉浦",
+        "陳邡分區": "官話-桂南-桂西大片-合浦片",
         "來源": "《钦州钦南区东场镇海察话同音字汇》"
       },
       "geometry": {
@@ -15073,7 +15074,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "江華濤墟",
         "語言": "江華寨山話（濤墟）",
@@ -18251,7 +18252,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5ED154",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "j",
         "title": "通道菁蕪洲",
         "語言": "通道菁蕪洲本地話(四里話)",
@@ -18300,7 +18301,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5ED154",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "j",
         "title": "桂陽歐陽海",
         "語言": "桂陽歐陽海土話",
@@ -18469,7 +18470,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#52CCAD",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "f",
         "title": "資興",
         "語言": "資興事",
@@ -18835,7 +18836,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5ED154",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "j",
         "title": "嘉禾城關",
         "語言": "嘉禾城關土話",
@@ -18997,6 +18998,30 @@
         "coordinates": [
           110.303289,
           25.197746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5ED154",
+        "marker-size": "small",
+        "marker-symbol": "j",
+        "title": "靈川毛村",
+        "語言": "靈川毛村話",
+        "地點": "廣西桂林靈川大圩毛村",
+        "地圖集二分區": "平話和土話-桂北片",
+        "音典分區": "湘南-桂林羣",
+        "陳邡分區": "官話-桂北-賀州片",
+        "版本": "2024-12-31",
+        "錄入人": "泉山散人",
+        "來源": "《灵川县大圩镇毛村话语音》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.404633,
+          25.207077
         ]
       }
     },
@@ -19557,7 +19582,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "g",
         "title": "江永瀟浦",
         "語言": "江永瀟浦(城關)土話",
@@ -19890,7 +19915,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5ED154",
-        "marker-size": "large",
+        "marker-size": "small",
         "marker-symbol": "k",
         "title": "瀘溪梁家潭",
         "語言": "瀘溪梁家潭鄕話",
@@ -19937,7 +19962,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5ED154",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "k",
         "title": "瀘溪",
         "語言": "瀘溪白沙(城關)鄕話",
@@ -20287,7 +20312,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#262626",
-        "marker-size": "small",
+        "marker-size": "large",
         "marker-symbol": "z",
         "title": "巴陵戲",
         "語言": "巴陵戲",
@@ -20318,6 +20343,7 @@
         "地點": "湖南長沙、株洲、湘潭、益陽、婁底",
         "地圖集二分區": "戲劇",
         "音典分區": "戲劇",
+        "陳邡分區": "官話-河北-中州韻",
         "版本": "2024-12-31",
         "錄入人": "登州薛氏",
         "來源": "《长沙湘剧语音研究》（未公开文章）"
