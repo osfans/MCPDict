@@ -8,9 +8,9 @@ class 表(_表):
 	_sep = "\t"
 	patches = {"□": "3", "〇": "1"}
 	
-	def parse(self, fs):
-		if len(fs) < 3: return
-		hz, typ, yb = fs
+	def 析(自, 列):
+		if len(列) < 3: return
+		字, typ, yb = 列
 		if typ != "kTotalStrokes": return
-		hz = hex2chr(hz)
-		return hz, yb
+		字 = hex2chr(字)
+		return 字, yb

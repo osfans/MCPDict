@@ -83,11 +83,11 @@ class 表(_表):
 "":""
 }
 
-	def parse(self, fs):
-		hz, yb, js = fs[0], fs[1], fs[3]
+	def 析(自, 列):
+		字, yb, js = 列[0], 列[1], 列[3]
 		if not yb: return
 		yb = yb.lstrip("又").replace("gv", "gw")
-		yb, sd = self.splitSySd(yb)
+		yb, sd = 自.splitSySd(yb)
 		if sd.isdigit():
 			if yb[-1] in "ptk":
 				if sd == "1": sd = "7"
@@ -95,9 +95,9 @@ class 表(_表):
 				elif sd == "6": sd = "9"
 		else:
 			sd = ""
-		for ym in sorted(self.yms.keys(), key=lambda x:-len(x)):
+		for ym in sorted(自.yms.keys(), key=lambda x:-len(x)):
 			if yb.endswith(ym):
 				sm = yb[:-len(ym)]
 				break
-		yb = self.sms[sm+"#"] + self.yms[ym] + sd
-		return hz, yb, js
+		yb = 自.sms[sm+"#"] + 自.yms[ym] + sd
+		return 字, yb, js

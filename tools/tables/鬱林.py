@@ -89,19 +89,19 @@ class 表(_表):
 韻	m̩	m
 韻	ŋ̍	ng"""
 
-	def __init__(self):
+	def __init__(自):
 		super().__init__()
-		self.smd = dict()
-		self.ymd = dict()
-		for line in self.raw.split("\n"):
-			fs = line.split("\t")
-			if fs[0] == "聲": self.smd[fs[2]] = fs[1]
-			elif fs[0] == "韻": self.ymd[fs[2]] = fs[1]
+		自.smd = dict()
+		自.ymd = dict()
+		for 行 in 自.raw.split("\n"):
+			列 = 行.split("\t")
+			if 列[0] == "聲": 自.smd[列[2]] = 列[1]
+			elif 列[0] == "韻": 自.ymd[列[2]] = 列[1]
 	
-	def parse(self, fs):
-		if len(fs) < 12: return
-		hz = fs[0]
-		if len(hz) != 1: return
-		sm,ym,sd,js = fs[8:12]
-		yb = self.smd.get(sm, sm)+(self.ymd[ym] if ym else "") + sd
-		return hz, yb, js
+	def 析(自, 列):
+		if len(列) < 12: return
+		字 = 列[0]
+		if len(字) != 1: return
+		sm,ym,sd,js = 列[8:12]
+		yb = 自.smd.get(sm, sm)+(自.ymd[ym] if ym else "") + sd
+		return 字, yb, js

@@ -4,10 +4,10 @@ from tables._表 import 表 as _表
 
 class 表(_表):
 	_file = "ShanRenMaLTS.words.dict.yaml"
-	short = "山人"
-	note = "來源：https://github.com/siuze/ShanRenMaLTS"
+	簡稱 = "山人"
+	說明 = "來源：https://github.com/siuze/ShanRenMaLTS"
 	patches = {"□": "ak,akv"}
 
-	def parse(self, fs):
-		if len(fs) < 2: return
-		return fs[0], fs[1]
+	def 析(自, 列):
+		if len(列) < 2: return
+		return 列[0], 列[1]

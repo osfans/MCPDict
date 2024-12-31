@@ -1,208 +1,208 @@
 #!/usr/bin/env python3
 
 from tables._表 import 表 as _表
-import re, regex
+import re
 
 class 表(_表):
-	orderByJs = True
-	sm = ""
-	ym = ""
-	sy = ""
+	註序 = True
+	聲 = ""
+	韻 = ""
+	聲韻 = ""
 
-	def parse(self, fs):
-		name = str(self)
-		yb = ""
-		sd = ""
-		if name in ("臨川","奉新宋埠"):
-			sy, sd, hzs = fs[:3]
-			if sy:
-				self.sy = sy
+	def 析(自, 列):
+		名 = str(自)
+		音 = ""
+		調 = ""
+		if 名 in ("臨川","奉新宋埠"):
+			聲韻, 調, 組 = 列[:3]
+			if 聲韻:
+				自.聲韻 = 聲韻
 			else:
-				sy = self.sy
-		elif name in ("景寧東坑",):
-			if len(fs) == 1 or not fs[1].strip():
-				self.ym = fs[0].strip()
+				聲韻 = 自.聲韻
+		elif 名 in ("景寧東坑",):
+			if len(列) == 1 or not 列[1].strip():
+				自.韻 = 列[0].strip()
 				return
-			yb, hzs = fs[:2]
-			yb = yb.strip().replace(" ", "")
-			yb = re.sub("^[無øØ]", "0", yb)
+			音, 組 = 列[:2]
+			音 = 音.strip().replace(" ", "")
+			音 = re.sub("^[無øØ]", "0", 音)
 			digits = "12345678"
-			if yb in digits:
-				yb = self.sy + yb
-			elif self.ym:
-				self.sm = yb.rstrip(digits)
-				self.sy = self.sm + self.ym
-				yb = self.sy + yb[-1]
+			if 音 in digits:
+				音 = 自.聲韻 + 音
+			elif 自.韻:
+				自.聲 = 音.rstrip(digits)
+				自.聲韻 = 自.聲 + 自.韻
+				音 = 自.聲韻 + 音[-1]
 			else:
-				self.sy = yb.rstrip(digits)
-			hzs = hzs.replace("，", "(文)").replace("。", "(白)").replace("！", "(小稱)").replace(".", "(又)").replace("？", "(存疑)").replace(")（", " ")
-			hzs = self.normS(hzs)
-		elif name in ("平陰東阿",):
-			sy, sd, _, hzs = fs[:4]
-			if sy:
-				self.sy = sy
+				自.聲韻 = 音.rstrip(digits)
+			組 = 組.replace("，", "(文)").replace("。", "(白)").replace("！", "(小稱)").replace(".", "(又)").replace("？", "(存疑)").replace(")（", " ")
+			組 = 自.normS(組)
+		elif 名 in ("平陰東阿",):
+			聲韻, 調, _, 組 = 列[:4]
+			if 聲韻:
+				自.聲韻 = 聲韻
 			else:
-				sy = self.sy
-			yb = sy + sd
-			hzs = self.normS(hzs)
-		elif name in ("望城"):
-			sy, sd, hzs = fs[:3]
-			hzs = hzs.replace("?", "□")
-		elif name in ("天台東鄕"):
-			if not fs[0]: return
-			g = re.findall(r"^(.*?)(\d+)(.+)$", fs[0])
-			if not g:
-				ym = fs[0].strip()
-				if ym:
-					self.ym = ym
+				聲韻 = 自.聲韻
+			音 = 聲韻 + 調
+			組 = 自.normS(組)
+		elif 名 in ("望城"):
+			聲韻, 調, 組 = 列[:3]
+			組 = 組.replace("?", "□")
+		elif 名 in ("天台東鄕"):
+			if not 列[0]: return
+			果 = re.findall(r"^(.*?)(\d+)(.+)$", 列[0])
+			if not 果:
+				韻 = 列[0].strip()
+				if 韻:
+					自.韻 = 韻
 				return
-			sm, sd, hzs = g[0]
-			if sm:
-				self.sm = sm
-			yb = (self.sm + self.ym + sd).lstrip("q")
-			hzs = self.normS(hzs.strip())
-		elif name in ("成都","靑島"):
-			fs = "".join(fs).strip()
-			if not fs: return
-			g = re.findall(r"^(.*?)\[?(\d+)\]?(.+)$", fs)
-			if not g:
-				ym = fs
-				if ym:
-					self.ym = ym
+			聲, 調, 組 = 果[0]
+			if 聲:
+				自.聲 = 聲
+			音 = (自.聲 + 自.韻 + 調).lstrip("q")
+			組 = 自.normS(組.strip())
+		elif 名 in ("成都","靑島"):
+			列 = "".join(列).strip()
+			if not 列: return
+			果 = re.findall(r"^(.*?)\[?(\d+)\]?(.+)$", 列)
+			if not 果:
+				韻 = 列
+				if 韻:
+					自.韻 = 韻
 				return
-			sm, sd, hzs = g[0]
-			sd = self.toneMaps.get(sd, "?")
-			if sm:
-				self.sm = sm
-			yb = (self.sm + self.ym + sd).lstrip("q")
-			hzs = self.normS(hzs.strip())
-		elif name in ("無錫"):
-			if len(fs) < 2: return
-			yb, hzs = fs[:2]
-			hzs = hzs.replace(" ", "")
-			hzs = self.normS(hzs)
-		elif name in ("泉州"):
-			if len(fs) < 2: return
-			yb, hzs = fs[:2]
-			yb = yb.lstrip("q")
-			hzs = re.sub(r"\[(.)\]", "\\1@", hzs)
-			hzs = self.normS(hzs)
-		elif name in ("思南塘頭",):
-			sy, sd, hzs = fs[:3]
-			hzs = hzs.replace(" ", "")
-			hzs = self.normS(hzs)
-		elif name in ("桃源薛家沖",):
-			sy, sd, _, _, hzs = fs[:5]
-			hzs = hzs.replace(")(", "；")
-			hzs = self.normS(hzs)
-		elif name in ("通東呂四"):
-			sy, sd, _, hzs = fs[:4]
-			hzs = hzs.replace(")(", "；")
-			hzs = re.sub(r"(\d)([-=])", "\\2\\1", hzs)
-			hzs = self.normS(hzs)
-		elif name in ("通城",):
-			_, sy, sd, _, hzs = fs[:5]
-			yb = sy + sd
-		elif name in ("通城大坪",):
-			_, sy, sd, hzs = fs[:4]
-			sd = sd.strip("[]")
-			hzs = self.normG(hzs, "[\\1]")
-		elif name in ("灌陽","全州文橋", "宜章巖泉",):
-			sy, sd, hzs = fs[:3]
-			hzs = self.normG(hzs, "[\\1]")
-		elif name in ("江華河路口", "江華粟米塘", "全州黃沙河", "安仁新洲", "1935長沙", "長沙黃花", "瀏陽鎭頭"):
-			sy, sd, hzs = fs[:3]
-			hzs = self.normS(hzs)
-		elif name in ("孝昌小河",):
-			if not fs[0]: return
-			groups = re.findall(r"^(.*?)(\d+) ?(.+)$", fs[0])
+			聲, 調, 組 = 果[0]
+			調 = 自.toneMaps.get(調, "?")
+			if 聲:
+				自.聲 = 聲
+			音 = (自.聲 + 自.韻 + 調).lstrip("q")
+			組 = 自.normS(組.strip())
+		elif 名 in ("無錫"):
+			if len(列) < 2: return
+			音, 組 = 列[:2]
+			組 = 組.replace(" ", "")
+			組 = 自.normS(組)
+		elif 名 in ("泉州"):
+			if len(列) < 2: return
+			音, 組 = 列[:2]
+			音 = 音.lstrip("q")
+			組 = re.sub(r"\[(.)\]", "\\1@", 組)
+			組 = 自.normS(組)
+		elif 名 in ("思南塘頭",):
+			聲韻, 調, 組 = 列[:3]
+			組 = 組.replace(" ", "")
+			組 = 自.normS(組)
+		elif 名 in ("桃源薛家沖",):
+			聲韻, 調, _, _, 組 = 列[:5]
+			組 = 組.replace(")(", "；")
+			組 = 自.normS(組)
+		elif 名 in ("通東呂四"):
+			聲韻, 調, _, 組 = 列[:4]
+			組 = 組.replace(")(", "；")
+			組 = re.sub(r"(\d)([-=])", "\\2\\1", 組)
+			組 = 自.normS(組)
+		elif 名 in ("通城",):
+			_, 聲韻, 調, _, 組 = 列[:5]
+			音 = 聲韻 + 調
+		elif 名 in ("通城大坪",):
+			_, 聲韻, 調, 組 = 列[:4]
+			調 = 調.strip("[]")
+			組 = 自.normG(組, "[\\1]")
+		elif 名 in ("灌陽","全州文橋", "宜章巖泉",):
+			聲韻, 調, 組 = 列[:3]
+			組 = 自.normG(組, "[\\1]")
+		elif 名 in ("江華河路口", "江華粟米塘", "全州黃沙河", "安仁新洲", "1935長沙", "長沙黃花", "瀏陽鎭頭"):
+			聲韻, 調, 組 = 列[:3]
+			組 = 自.normS(組)
+		elif 名 in ("孝昌小河",):
+			if not 列[0]: return
+			groups = re.findall(r"^(.*?)(\d+) ?(.+)$", 列[0])
 			if not groups: return
-			sy, sd, hzs = groups[0]
-			if not sy or not hzs: return
-			sd = self.toneMaps[sd]
-			hzs = hzs.strip().replace("{", "[").replace("}", "]")
-		elif name in ("洞口",):
-			yb, hzs = fs[:2]
-			hzs = self.normG(hzs, "[\\1]")
-		elif name in ("欽州正","道縣壽雁", "江永桃川", "桂陽敖泉"):
-			sy, sd, hzs = fs[:3]
-			hzs = self.normG(hzs, "[\\1]")
-		elif name in ("唐山-開平"):
-			sy, sd, hzs = fs[:3]
-			hzs = self.normG(hzs, "[\\1]")
-			sd = self.toneMaps.get(sd, "0")
-		elif name in ("太原"):
-			sm, ym, sd, hzs = fs[:4]
-			hzs = self.normG(hzs, "[\\1]")
-			sd = self.toneMaps.get(sd[2:], "0")
-			yb = sm + ym + sd
-		elif name in ("汨羅沙溪",):
-			sy, sd, hzs = fs[:3]
-			hzs = self.normS(hzs)
-			sd = sd.replace("42", "24")
-			sd = self.toneMaps.get(sd, "?")
-		elif name in ("長沙雙江",):
-			sy, sd, _, hzs = fs[:4]
-			hzs = hzs.replace("、（", "₁（")
-			hzs = self.normS(hzs)
-		elif name in ("會同髙椅","會同靑朗", "臨武"):
-			sy, _, sd, hzs = fs[:4]
-		elif name in ("1884甯城",):
-			_,_,hzs,sm,ym = fs[:5]
-			yb = sm + ym
-			if not yb: return
-		elif name in ("湘鄕棋梓",):
-			sy, sd, _, hzs = fs[:4]
-		elif name in ("邵東斫曹","綏寧武陽","天柱江東"):
-			sy, sd = fs[:2]
-			hzs = "".join(fs[2:]).replace("\t", "").strip()
-		elif name in ("1930淮安",):
-			_, sy, sd, hzs = fs[:4]
-			hzs = self.normS(hzs)
-		elif name in ("吉安雲樓",):
-			sy, sd, hzs = fs[:3]
-			hzs = self.normS(hzs)
-			sd = self.toneMaps[sd]
-		elif name in ("濟南", "西安", "杭州"):
-			sy, sd, hzs = fs[1:4]
-			sd = re.sub(r"^[^\d]+", "", sd)
-			sd = self.toneMaps.get(sd, "")
-			hzs = hzs.replace(", ", "")
-			hzs = self.normG(hzs, "〚\\1〛")
-		elif name in ("梅縣", ):
-			g = re.findall(r"^([^\d]*\d+)(.*?)$", "".join(fs))
-			if g:
-				yb, hzs = g[0]
-				hzs = hzs.replace("}{", " ").strip()
-				hzs = self.normG(hzs, "〚\\1〛")
-				yb = self.dz2dl(yb)
+			聲韻, 調, 組 = groups[0]
+			if not 聲韻 or not 組: return
+			調 = 自.toneMaps[調]
+			組 = 組.strip().replace("{", "[").replace("}", "]")
+		elif 名 in ("洞口",):
+			音, 組 = 列[:2]
+			組 = 自.normG(組, "[\\1]")
+		elif 名 in ("欽州正","道縣壽雁", "江永桃川", "桂陽敖泉"):
+			聲韻, 調, 組 = 列[:3]
+			組 = 自.normG(組, "[\\1]")
+		elif 名 in ("唐山-開平"):
+			聲韻, 調, 組 = 列[:3]
+			組 = 自.normG(組, "[\\1]")
+			調 = 自.toneMaps.get(調, "0")
+		elif 名 in ("太原"):
+			聲, 韻, 調, 組 = 列[:4]
+			組 = 自.normG(組, "[\\1]")
+			調 = 自.toneMaps.get(調[2:], "0")
+			音 = 聲 + 韻 + 調
+		elif 名 in ("汨羅沙溪",):
+			聲韻, 調, 組 = 列[:3]
+			組 = 自.normS(組)
+			調 = 調.replace("42", "24")
+			調 = 自.toneMaps.get(調, "?")
+		elif 名 in ("長沙雙江",):
+			聲韻, 調, _, 組 = 列[:4]
+			組 = 組.replace("、（", "₁（")
+			組 = 自.normS(組)
+		elif 名 in ("會同髙椅","會同靑朗", "臨武"):
+			聲韻, _, 調, 組 = 列[:4]
+		elif 名 in ("1884甯城",):
+			_,_,組,聲,韻 = 列[:5]
+			音 = 聲 + 韻
+			if not 音: return
+		elif 名 in ("湘鄕棋梓",):
+			聲韻, 調, _, 組 = 列[:4]
+		elif 名 in ("邵東斫曹","綏寧武陽","天柱江東"):
+			聲韻, 調 = 列[:2]
+			組 = "".join(列[2:]).replace("\t", "").strip()
+		elif 名 in ("1930淮安",):
+			_, 聲韻, 調, 組 = 列[:4]
+			組 = 自.normS(組)
+		elif 名 in ("吉安雲樓",):
+			聲韻, 調, 組 = 列[:3]
+			組 = 自.normS(組)
+			調 = 自.toneMaps[調]
+		elif 名 in ("濟南", "西安", "杭州"):
+			聲韻, 調, 組 = 列[1:4]
+			調 = re.sub(r"^[^\d]+", "", 調)
+			調 = 自.toneMaps.get(調, "")
+			組 = 組.replace(", ", "")
+			組 = 自.normG(組, "〚\\1〛")
+		elif 名 in ("梅縣", ):
+			果 = re.findall(r"^([^\d]*\d+)(.*?)$", "".join(列))
+			if 果:
+				音, 組 = 果[0]
+				組 = 組.replace("}{", " ").strip()
+				組 = 自.normG(組, "〚\\1〛")
+				音 = 自.dz2dl(音)
 			else:
 				return
-		elif name in ("江永上江墟",):
-			ns, _, hzs, py = fs[:4]
-			py = re.sub("^h", "x", py)
-			py = py.replace("nj", "ȵ").replace('ng', 'ŋ').replace("c", "ɕ").replace('h', 'ʰ')
-			py = py.replace("oe", "ø").replace('e', 'ə').replace('iə', 'ie').replace('w', 'ɯ')
-			yb = self.dz2dl(py)+ns
-		elif name in ("揚州",):
-			self.simplified = 0
-			yb, hzs = fs[:2]
-			hzs = self.normS(hzs, "（\\1）").replace("?", "？")
+		elif 名 in ("江永上江墟",):
+			女書, _, 組, 拼音 = 列[:4]
+			拼音 = re.sub("^h", "x", 拼音)
+			拼音 = 拼音.replace("nj", "ȵ").replace('ng', 'ŋ').replace("c", "ɕ").replace('h', 'ʰ')
+			拼音 = 拼音.replace("oe", "ø").replace('e', 'ə').replace('iə', 'ie').replace('w', 'ɯ')
+			音 = 自.dz2dl(拼音) + 女書
+		elif 名 in ("揚州",):
+			自.simplified = 0
+			音, 組 = 列[:2]
+			組 = 自.normS(組, "（\\1）").replace("?", "？")
 			l = ""
-			if "（" in yb:
-				note = re.search(r"（.*?）", yb).group()
-				yb = yb.replace(note, "")
-				note = note.replace("？", "存疑")
+			if "（" in 音:
+				說明 = re.search(r"（.*?）", 音).group()
+				音 = 音.replace(說明, "")
+				說明 = 說明.replace("？", "存疑")
 			else:
-				note = ""
+				說明 = ""
 			marks = "？！%+，。"
-			hzs = re.sub("(（.*?）)([？！%+，。])?", "\\2\\1", hzs)
-			for hz,c,js in re.findall(r"(.)([？！%+，。])?(（[^）]*?（.*?）.*?）|（.*?）)?", hzs):
-				if js:
-					js = js[1:-1]
-					if js[0] in marks and not c:
-						c = js[0]
-						js = js[1:]
+			組 = re.sub("(（.*?）)([？！%+，。])?", "\\2\\1", 組)
+			for 字,c,註 in re.findall(r"(.)([？！%+，。])?(（[^）]*?（.*?）.*?）|（.*?）)?", 組):
+				if 註:
+					註 = 註[1:-1]
+					if 註[0] in marks and not c:
+						c = 註[0]
+						註 = 註[1:]
 				p = ""
 				if c == '+':
 					p = "書"
@@ -221,24 +221,24 @@ class 表(_表):
 					p = "非本字正字"
 					c = ""
 				if p:
-					js = f"({p}){js}"
-				l += f"{hz}{c}[{note}{js}]"
-			hzs = l
-		elif len(fs) > 3 and fs[3]:
-			sy, sd, _, hzs = fs[:4]
-			hzs = hzs.replace(")(", "；").replace("）（", "；")
-			hzs = re.sub(r"(\d)([-=])", "\\2\\1", hzs)
-			hzs = self.normS(hzs)
+					註 = f"({p}){註}"
+				l += f"{字}{c}[{說明}{註}]"
+			組 = l
+		elif len(列) > 3 and 列[3]:
+			聲韻, 調, _, 組 = 列[:4]
+			組 = 組.replace(")(", "；").replace("）（", "；")
+			組 = re.sub(r"(\d)([-=])", "\\2\\1", 組)
+			組 = 自.normS(組)
 		else:
-			sy, sd, hzs = fs[:3]
-		if not yb: yb = sy + sd
-		yb = self.checkYb(yb)
+			聲韻, 調, 組 = 列[:3]
+		if not 音: 音 = 聲韻 + 調
+		音 = 自.checkYb(音)
 		l = list()
-		hzs = self.normM(hzs)
-		hzs = re.sub(r"(〚.*?〛)([-=])", "\\2\\1", hzs)
-		for hz, c, o, js in re.findall(r"(.)([-=*?@？+]?)([₀-₉0-9]?) *(〚.*?〛)?", hzs):
-			if js: js = js[1:-1]
-			js = o + js
+		組 = 自.normM(組)
+		組 = re.sub(r"(〚.*?〛)([-=])", "\\2\\1", 組)
+		for 字, c, 號, 註 in re.findall(r"(.)([-=*?@？+]?)([₀-₉0-9]?) *(〚.*?〛)?", 組):
+			if 註: 註 = 註[1:-1]
+			註 = 號 + 註
 			if c == '？': c = "?"
-			l.append((hz, yb + c, js))
+			l.append((字, 音 + c, 註))
 		return l

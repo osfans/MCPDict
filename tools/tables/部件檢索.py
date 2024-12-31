@@ -137,22 +137,22 @@ puas = """#	{1}	bottom of 廌焉舃 (F2A5 󰓰)	⿹⿺㇉一灬
 
 class 表(_表):
 	_file = "部件檢索.htm"
-	short = "部件檢索"
-	note = "來源：https://fgwang.blogspot.com/2023/10/unicode-151.html"
+	簡稱 = "部件檢索"
+	說明 = "來源：https://fgwang.blogspot.com/2023/10/unicode-151.html"
 	patches = {"□": "!冂一", "〇": "@"}
 
-	def normList(self, l, vt, d):
+	def normList(自, l, vt, d):
 		nl = []
 		for t in l:
 			for k in t:
-				t = t.replace(k, self.pua.get(k, k))
+				t = t.replace(k, 自.pua.get(k, k))
 			for k in t:
 				t = t.replace(k, vt.get(k, k))
 			for k in t:
 				if ord(k) >= 0xF0000 and k in d:
 					t = t.replace(k, re.split("[!@]", d[k][0])[1])
 			for k in t:
-				t = t.replace(k, self.pua.get(k, k))
+				t = t.replace(k, 自.pua.get(k, k))
 			for k in t:
 				t = t.replace(k, vt.get(k, k))
 			for k in t:
@@ -161,33 +161,33 @@ class 表(_表):
 			nl.append(t)
 		return nl
 
-	def update(self):
+	def 更新(自):
 		d = defaultdict(list)
-		f = open(self.spath,encoding="U8")
+		f = open(自.spath,encoding="U8")
 		cont = f.read()
 		f.close()
 		vt = eval(re.findall(r"var vt=(\{.*?\})", cont, re.MULTILINE|re.DOTALL)[0])
-		self.pua = {}
-		for line in puas.split("\n"):
-			g = re.findall(r" (..)\)", line)
+		自.pua = {}
+		for 行 in puas.split("\n"):
+			g = re.findall(r" (..)\)", 行)
 			if g:
 				a, b = g[0]
-				self.pua[b] = a
+				自.pua[b] = a
 		vt = {k: v for k, v in vt.items() if ord(k) >= 0xF0000}
-		for hz in self.kCompatibilityVariants:
-			if isCompatible(hz):
-				vt[hz] = self.kCompatibilityVariants[hz]
+		for 字 in 自.kCompatibilityVariants:
+			if isCompatible(字):
+				vt[字] = 自.kCompatibilityVariants[字]
 		vt["󺤈"] = "⺈田儿"
 		vt["󰉻"] = "甶儿"
 		vt["艹"] = "卝"
 		dt = eval(re.findall(r"var dt=(\[.*?\])", cont, re.MULTILINE|re.DOTALL)[0])
-		for line in dt:
-			hz = line[0]
-			js = line[1:]
-			d[hz].append(js)
-		for hz in d.keys():
-			d[hz] = self.normList(d[hz], vt, d)
-		for hz in d.keys():
-			d[hz] = self.normList(d[hz], vt, d)
-		self.write(d)
+		for 行 in dt:
+			字 = 行[0]
+			js = 行[1:]
+			d[字].append(js)
+		for 字 in d.keys():
+			d[字] = 自.normList(d[字], vt, d)
+		for 字 in d.keys():
+			d[字] = 自.normList(d[字], vt, d)
+		自.寫(d)
 

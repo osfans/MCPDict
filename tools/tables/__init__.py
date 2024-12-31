@@ -23,12 +23,12 @@ VARIANT_FILE = os.path.join(PATH, SOURCE, "正字.tsv")
 n2o_dict = {}
 o2n_dict = {}
 
-for line in open("tables/data/mulcodechar.dt", encoding="U8"):
-	if not line or line[0] == "#": continue
-	fs = line.strip().split("-")
-	if len(fs) < 2: continue
-	n2o_dict[fs[0]] = fs[1]
-	o2n_dict[fs[1]] = fs[0]
+for 行 in open("tables/data/mulcodechar.dt", encoding="U8"):
+	if not 行 or 行[0] == "#": continue
+	列 = 行.strip().split("-")
+	if len(列) < 2: continue
+	n2o_dict[列[0]] = 列[1]
+	o2n_dict[列[1]] = 列[0]
 
 opencc_t2s = OpenCC("t2s.json")
 
@@ -76,27 +76,27 @@ def get_pinyin(word):
 
 def getSTVariants(level=2):
 	d = dict()
-	for line in open(VARIANT_FILE,encoding="U8"):
-		if line.startswith("#"): continue
-		fs = line.strip().split("\t")
-		if level == 1 and "#" in line:
+	for 行 in open(VARIANT_FILE,encoding="U8"):
+		if 行.startswith("#"): continue
+		列 = 行.strip().split("\t")
+		if level == 1 and "#" in 行:
 			continue
-		fs[1] = fs[1].split("#")[0].strip()
-		if " " not in fs[1]:
-			d[fs[0]] = fs[1]
+		列[1] = 列[1].split("#")[0].strip()
+		if " " not in 列[1]:
+			d[列[0]] = 列[1]
 	return d
 
 normVariants = getSTVariants(1)
 stVariants = getSTVariants(2)
 
-def s2t(hzs, level=1):
+def s2t(字組, level=1):
 	t = ""
-	for hz in hzs:
+	for 字 in 字組:
 		if level == 1:
-			hz = normVariants.get(hz, hz)
+			字 = normVariants.get(字, 字)
 		else:
-			hz = stVariants.get(hz, hz)
-		t += hz
+			字 = stVariants.get(字, 字)
+		t += 字
 	return t
 
 def addAllFq(d, fq, order,ignorePian = False):
@@ -113,8 +113,8 @@ def addAllFq(d, fq, order,ignorePian = False):
 
 def addCfFq(d, fq, order):
 	if fq is None: return
-	fs = fq.split(",")
-	fqs = fs[0].split("-")
+	列 = fq.split(",")
+	fqs = 列[0].split("-")
 	for i in range(len(fqs)):
 		name = "-".join(fqs[0:i+1])
 		if not name: continue
@@ -122,8 +122,8 @@ def addCfFq(d, fq, order):
 		if name in d:
 			if d[name] < order: continue
 		d[name] = order
-		if len(fs) >= 2:
-			d[fs[1]] = ""
+		if len(列) >= 2:
+			d[列[1]] = ""
 
 def getLangsByArgv(infos, argv):
 	l = []
@@ -160,19 +160,19 @@ def getLangs(dicts, argv, 省=None):
 			d = infos[mod]
 			try:
 				if d["文件格式"]:
-					lang = import_module(f'tables._{d["文件格式"]}').表()
-					lang.setmod(mod)
+					語 = import_module(f'tables._{d["文件格式"]}').表()
+					語.setmod(mod)
 				else:
-					lang = import_module(f"tables.{mod}").表()
-				if not lang._file: lang._file = d["文件名"]
+					語 = import_module(f"tables.{mod}").表()
+				if not 語._file: 語._file = d["文件名"]
 			except Exception as e:
 				print(f"\t\t\t{e} {mod}")
 				continue
-			if "繁" not in d["繁簡"]: lang.simplified = 2
+			if "繁" not in d["繁簡"]: 語.simplified = 2
 			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 			if "聯表列名" in d:
 				a = d["聯表列名"].upper()
-				lang.ybIndex = sum([26**(len(a)-1-i)*(ord(j)-ord('A')+1) for i,j in enumerate(a)]) - 1
+				語.音列 = sum([26**(len(a)-1-i)*(ord(j)-ord('A')+1) for i,j in enumerate(a)]) - 1
 			addAllFq(types[0], d["地圖集二分區"], d["地圖集二排序"])
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
 			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
@@ -180,22 +180,22 @@ def getLangs(dicts, argv, 省=None):
 				toneMaps = dict()
 				sds = json.loads(d["聲調"])
 				for i in sds:
-					tv = sds[i][0]
-					if tv in toneMaps and "入" in sds[i][3]:
-						tv += "0"
-					toneMaps[tv] = i
-				lang.toneMaps = toneMaps
-			lang.info = d
-			lang.load(dicts)
+					dz = sds[i][0]
+					if dz in toneMaps and "入" in sds[i][3]:
+						dz += "0"
+					toneMaps[dz] = i
+				語.toneMaps = toneMaps
+			語.info = d
+			語.load(dicts)
 			if d["文件名"] != "mcpdict.db":
-				if lang.count == 0: continue
-				if lang.count < 900:
-					print(f"{lang} 字數太少: {lang.count}")
-				elif lang.syCount < 100:
-					print(f"{lang} 音節太少: {lang.syCount}")
+				if 語.count == 0: continue
+				if 語.count < 900:
+					print(f"{語} 字數太少: {語.count}")
+				elif 語.聲韻數 < 100:
+					print(f"{語} 音節太少: {語.聲韻數}")
 			if not d["無調"] and not toneMaps:
-				print(f"{lang} 無調值")
-			lang.info["文件名"] = lang._file
+				print(f"{語} 無調值")
+			語.info["文件名"] = 語._file
 			if d["省"]:
 				省[d["省"]] += 1
 			if d["推薦人"]:
@@ -212,56 +212,56 @@ def getLangs(dicts, argv, 省=None):
 				if i:
 					維護人[i] += 1
 			count += 1
-			if lang.errors:
+			if 語.錯誤:
 				all_editors = ",".join(editor)
-				lang.full = lang.info["語言"]
-				print(f"{lang.full}（{lang}）-{lang._file}-{all_editors}", file=t)
-				for i in lang.errors:
+				語.全稱 = 語.info["語言"]
+				print(f"{語.全稱}（{語}）-{語._file}-{all_editors}", file=t)
+				for i in 語.錯誤:
 					print(f"\t{i}", file=t)
 		else:
-			lang = import_module(f"tables.{mod}").表()
+			語 = import_module(f"tables.{mod}").表()
 			d = dict()
-			d["語言"] = lang.full if lang.full else mod
-			d["簡稱"] = lang.short if lang.short else mod
-			d["地圖集二顏色"] = lang.color if count == 0 else None
+			d["語言"] = 語.全稱 if 語.全稱 else mod
+			d["簡稱"] = 語.簡稱 if 語.簡稱 else mod
+			d["地圖集二顏色"] = 語.顏色 if count == 0 else None
 			d["地圖集二分區"] = None
-			lang.info = d
-			lang.load(dicts)
-		lang.info["字數"] = lang.count
-		lang.info["□數"] = lang.unknownCount if lang.unknownCount else None
-		sydCount = lang.sydCount
-		syCount = lang.syCount
-		lang.info["音節數"] = sydCount if sydCount else None
-		lang.info["不帶調音節數"] = syCount if syCount and syCount != sydCount else None
-		lang.info["網站"] = lang.site
-		lang.info["網址"] = lang.url
-		lang_t = lang.info["語言"]
-		lang_s = t2s(lang.info["語言"], 2)
+			語.info = d
+			語.load(dicts)
+		語.info["字數"] = 語.count
+		語.info["□數"] = 語.unknownCount if 語.unknownCount else None
+		聲韻調數 = 語.聲韻調數
+		聲韻數 = 語.聲韻數
+		語.info["音節數"] = 聲韻調數 if 聲韻調數 else None
+		語.info["不帶調音節數"] = 聲韻數 if 聲韻數 and 聲韻數 != 聲韻調數 else None
+		語.info["網站"] = 語.網站
+		語.info["網址"] = 語.網址
+		lang_t = 語.info["語言"]
+		lang_s = t2s(語.info["語言"], 2)
 		if lang_s not in lang_t:
 			lang_t += f",{lang_s}"
-		lang_s = t2s(lang.info["語言"], 1)
+		lang_s = t2s(語.info["語言"], 1)
 		if lang_s not in lang_t:
 			lang_t += f",{lang_s}"
-		lang.info["語言索引"] = lang_t
-		if lang.note: lang.info["說明"] = lang.note
-		if not keys: keys = lang.info.keys()
-		langs.append(lang)
+		語.info["語言索引"] = lang_t
+		if 語.說明: 語.info["說明"] = 語.說明
+		if not keys: keys = 語.info.keys()
+		langs.append(語)
 	t.close()
-	hz = langs[0]
+	字 = langs[0]
 	for i in keys:
-		if i not in hz.info: hz.info[i] = None
-	hz.info["字數"] = len(dicts)
-	hz.info["說明"] = "語言數：%d<br><br>%s"%(count, hz.note)
+		if i not in 字.info: 字.info[i] = None
+	字.info["字數"] = len(dicts)
+	字.info["說明"] = "語言數：%d<br><br>%s"%(count, 字.說明)
 	省表 = sorted(省_set, key=get_pinyin)
 	if "海外" in 省表:
 		省表.remove("海外")
 		省表.append("海外")
-	hz.info["省"] = ",".join([f"{i} ({省[i]})" for i in 省表])
-	hz.info["維護人"] = ",".join([f"{i} ({維護人[i]})" for i in sorted(維護人.keys(), key=get_pinyin)])
-	hz.info["推薦人"] = ",".join([f"{i} ({推薦人[i]})" for i in sorted(推薦人.keys(), key=get_pinyin)])
-	hz.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:types[0][x]))
-	hz.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
-	hz.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:types[2][x]))
-	hz.info["版本"] = datetime.datetime.now().strftime("%Y-%m-%d")
+	字.info["省"] = ",".join([f"{i} ({省[i]})" for i in 省表])
+	字.info["維護人"] = ",".join([f"{i} ({維護人[i]})" for i in sorted(維護人.keys(), key=get_pinyin)])
+	字.info["推薦人"] = ",".join([f"{i} ({推薦人[i]})" for i in sorted(推薦人.keys(), key=get_pinyin)])
+	字.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:types[0][x]))
+	字.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
+	字.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:types[2][x]))
+	字.info["版本"] = datetime.datetime.now().strftime("%Y-%m-%d")
 	print("語言數", count)
 	return langs
