@@ -287,7 +287,7 @@ class 表:
 			音 = 音.strip()
 			音 = 音.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀0∅Ø〇").replace("零", "")
 			if 音.startswith("I") or 音.startswith("1"): 音 = "l" + 音[1:]
-			音 = 音.lower().replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ")
+			音 = 音.lower().replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ").replace("‘", "ʰ")
 			if not 音.startswith("h") and "h" in 音:
 				音 = 音.replace("h", "ʰ")
 			if 自.ybTrimSpace:
