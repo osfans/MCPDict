@@ -5,9 +5,9 @@ from tables import hex2chr
 
 class 表(_表):
 	說明 = ""
-	_file = "Unihan_IRGSources.txt"
+	文件名 = "Unihan_IRGSources.txt"
 	_sep = "\t"
-	patches = {"□": "囗0", "〇": "乙0"}
+	補丁 = {"□": "囗0", "〇": "乙0"}
 	bs = dict()
 	
 	def __init__(自):

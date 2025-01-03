@@ -5,12 +5,12 @@ from tables import hex2chr, hzorders
 
 class 表(_表):
 	說明 = "方言調查字表"
-	_file = "方言調查字表"
+	文件名 = "方言調查字表"
 
 	def 析(自, 列):
 		return 列[0], "FD"
 
-	def patch(自, d):
+	def 修訂(自, d):
 		for 行 in open(自.全路徑("Unihan_OtherMappings.txt"),encoding="U8"):
 			if not 行.startswith("U"): continue
 			字, 類, 值 = 行.strip().split("\t", 2)

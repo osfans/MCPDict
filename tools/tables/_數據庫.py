@@ -5,7 +5,7 @@ from collections import defaultdict
 from tables._表 import 表 as _表
 
 class 表(_表):
-	_file = "mcpdict.db"
+	文件名 = "mcpdict.db"
 	爲音 = False
 
 	def 統(自, 行):

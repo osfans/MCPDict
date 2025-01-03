@@ -4,33 +4,26 @@ import re, regex
 from collections import defaultdict
 from tables._表 import 表 as _表
 
-def 常熟古裡_repl(match):
-	行 = match.group(0)
-	if re.match(".*[①-⑨]+", 行):
-		for i in range(1,10):
-			sda = chr(ord('①') + (i - 1))
-			sdb = f"{i}"
-			行 = 行.replace(sda, sdb)
-	return 行
-
 class 表(_表):
 	註序 = True
 	聲 = ""
 	韻 = ""
-	ym2 = ""
+	韻乙 = ""
+
+	def 行轉調類(自, 行, 格式=r"\[(\d+)\]"):
+		return re.sub(格式, lambda x:"[%s]"%自.僅轉調類(x[1], 自.韻), 行)
 	
 	def 統(自, 行):
 		行 = _表.統(自, 行)
-		名 = str(自)
+		名 = 自.名
 		if 名 in ("永州嵐角山", "賀州南鄕", "松江天馬", "運城", "興縣","豐城","豐城鐵路","新建","賀州江坪"):
 			行 = 行.lstrip("ø")
 		elif 名 in ("江夏湖泗"):
 			行 = 行.replace("ø[", "0[")
 		elif 名 in ("遂川","大庸南","大庸北", "婺川", "蒙山程村","欽州東場", "陽朔鳳樓"):
-			行 = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%自.dz2dlWithYm(x[1], 自.韻), 行)
+			行 = 自.行轉調類(行)
 		elif 名 in ("奉化",):
-			行 = re.sub(r"(\d+)(?![：\d])", lambda x:"[%s]"%自.dz2dl(x[1]), 行)
-			行 = 行.lstrip("q")
+			行 = 自.行轉調類(行, r"(\d+)(?![：\d])")
 		elif 名 in ("巢湖",):
 			行 = 行.replace("ø","Ø").replace("（0）","[0]")
 			行 = 自.normS(行, "{\\1}")
@@ -102,11 +95,9 @@ class 表(_表):
 			行 = 自.normS(行, "{\\1}")
 		elif 名 in ("通道菁蕪洲",):
 			行 = re.sub("([&])(?!{)","{西官借詞}",行).replace("&{","{(西官借詞)")
-		elif 名 in ("泰興","無爲牛埠","淮陰"):
-			行 = 行.lstrip("q")
 		elif 名 in ("壺關樹掌"):
-			行 = 行.lstrip("q").replace("·", "0")
-			行 = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%自.dz2dl(x[1]), 行)
+			行 = 行.replace("·", "0")
+			行 = 自.行轉調類(行)
 		elif 名 in ("道縣梅花",):
 			#!西官陰平藉詞@西官陽平藉詞$西官上聲藉詞%西官去聲藉詞
 			行 = re.sub("(!)(?!{)","{西官陰平借詞}",行)
@@ -125,51 +116,50 @@ class 表(_表):
 			行 = re.sub(r"\*(.)", "\\1?", 行)
 			行 = re.sub(r"［(.)(.*?)］", "\\1*\\2", 行)
 			列 = 行.split("\t")
-			for i,sd in enumerate(自.toneMaps.values()):
+			for i,調 in enumerate(自.調典.values()):
 				if 列[i + 1]:
-					列[i + 1] = f"[{sd}]" + 列[i + 1]
+					列[i + 1] = f"[{調}]" + 列[i + 1]
 			行 = "".join(列)
 		elif 名 in ("虔南大吉山",):
-			行 = re.sub(r"\[.*?(\d+)\]", lambda x:"[%s]"%自.dz2dl(x[1]), 行)
+			行 = 自.行轉調類(行, r"\[.*?(\d+)\]")
 			行 = 行.replace("<","{").replace(">","}")
 		elif 名 in ("澄海大新","光山", "南康唐江", "仁化長江", "永豐", "南豐","崇左大新"):
-			行 = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%自.dz2dl(x[1]), 行)
+			行 = 自.行轉調類(行)
 		elif 名 in ("耒陽",):
 			行 = 行.replace("51", "53")
-			行 = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%自.dz2dl(x[1]), 行)
+			行 = 自.行轉調類(行)
 		elif 名 in ("建湖卞港",):
 			行 = 行.replace("[2]", "[23-2]")
-			行 = re.sub(r"\[([\d\-]+)\]", lambda x:"[%s]"%自.dz2dl(x[1]), 行)
+			行 = 自.行轉調類(行, r"\[([\d\-]+)\]")
 		elif 名 in ("慈利",):
-			行 = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%自.dz2dl(x[1]), 行)
+			行 = 自.行轉調類(行)
 			行 = 行.replace("/", "")
 		elif 名 in ("海門"):
 			if 行.startswith("#"): return "#"
 		elif 名 in ("博白","東莞塘角"):
 			if 行.startswith("#"): return "#"
-			find = re.findall(r"\[(.*?)(\d+)\]", 行)
-			if not find: return
-			sy = find[0][0]
-			行 = re.sub(r"\[(.*?)(\d+)\]", lambda x:"[%s]"%自.dz2dl(x[2]), 行)
-			行 = sy + 行
+			果 = re.findall(r"\[(.*?)(\d+)\]", 行)
+			if not 果: return
+			聲韻 = 果[0][0]
+			行 = 自.行轉調類(行, r"\[.*?(\d+)\]")
+			行 = 聲韻 + 行
 		elif 名 in ("東干語",):
 			if 行.startswith("#"):
-				yms = 行.rstrip().replace("#", "").split("\t")
-				if len(yms) != 2: return
-				韻, ym2 = yms
-				自.ym2 = ym2
+				韻組 = 行.rstrip().replace("#", "").split("\t")
+				if len(韻組) != 2: return
+				韻, 韻乙 = 韻組
+				自.韻乙 = 韻乙
 				return f"#{韻}"
-			聲, sm2, 字組 = 行.split("\t", 2)
-			聲 = f"{sm2}{自.ym2}/{聲}".replace("Ø", "")
+			聲, 聲乙, 字組 = 行.split("\t", 2)
+			聲 = f"{聲乙}{自.韻乙}/{聲}".replace("Ø", "")
 			return f"{聲}\t{字組}"
 		elif 名 in ("敦煌", "洛陽"):
-			行 = re.sub(r"\[(\d+)\]", lambda x: "[%s]"%自.dz2dl(x[1]), 行)\
-				.replace("(", "（").replace(")", "）").replace("\t", "").rstrip("12345 \t\n")
+			行 = 自.行轉調類(行).rstrip("12345 \t\n")
 			行 = re.sub(r"\[([^\d].*?)\]", "（\\1）", 行)
-			行 = regex.sub("（((?>[^（）]+|(?R))*)）", "{\\1}", 行)
+			行 = 自.normS(行, "{\\1}")
 		elif 名 in ("博羅",):
 			if "[" not in 行 and not 行.startswith("#"): 行 = ""
-			行 = re.sub(r"\[(\d+)\]", lambda x: "["+自.dz2dl(x[1])+"]", 行)
+			行 = 自.行轉調類(行)
 			行 = 自.normS(行, "{\\1}")
 			行 = 行.lstrip("ø")
 		elif 名 in ("金壇",):
@@ -180,27 +170,24 @@ class 表(_表):
 					行 = 自.聲 + 行
 				else:
 					自.聲 = 行.split("\t")[0]
-				行 = re.sub(r"\[(\d+)\]", lambda x:"[%s]"%自.dz2dl(x[1]), 行)
+				行 = 自.行轉調類(行)
 		elif 名 in ("烏魯木齊", "西寧","蒙山"):
 			行 = re.sub(r"(\d+)", "[\\1]", 行, count=1)
 			if 行.startswith("["):
 				行 = 自.聲 + 行
 			else:
 				自.聲 = 行.split("[")[0]
-			行 = 行.lstrip("q")
 		elif 名 in ("天台城關"):
 			行 = re.sub(r"(\d)", "[\\1]", 行)
 			行 = re.sub(r"^(.*?)(\[)", "\\1	\\2", 行)
 			行 = 自.normS(行, "{\\1}")
 			if "[" not in 行: 行 = ""
 		elif 名 in ("南昌"):
-			行 = 行.replace("\t", "")
 			行 = re.sub(r"^(.*?)(\[)", "\\1	\\2", 行)
 			行 = 自.normS(行, "{\\1}")
 		elif 名 in ("髙郵"):
 			行 = 行.replace("ⓘ", "①").replace("Ⓘ", "①")
 			行 = 行.replace("➀", "①").replace("➁", "②").replace("➂","③").replace("➃", "④").replace("➄", "⑤")
-			行 = 行.lstrip("q")
 			行 = 行.replace("-", "(新派錯音)")
 		elif 名 in ("南京"):
 			行 = re.sub("([，。])(（)", "\\2\\1", 行)
@@ -208,8 +195,6 @@ class 表(_表):
 			行 = 自.normS(行, "{\\1}")
 			行 = re.sub(r"(\{[^{}]+?)（又）([^{}]*?\})", "\\1，\\2", 行)
 			行 = re.sub(r"(\{[^{}]+?)（新）([^{}]*?\})", "\\1。\\2", 行)
-		elif 名 in ("常熟古裡",):
-			行 = re.sub(r"\{[^{}]*?[①-⑨][^{}]*?\}", 常熟古裡_repl, 行)
 		elif 名 in ("句容",):
 			if re.match(".*[①-⑨ⓐⓑ]+", 行):
 				for i in range(1,10):
@@ -229,11 +214,11 @@ class 表(_表):
 			行 = re.sub("([ŋȵʐɱɻʒ])([\u0329\u030D]+)", "\\1\u030D", 行)
 		elif 名 in ("贛楡", "徐州", "銀川", "大同", "儀徵"):
 			行 = 行.strip().replace(",","，").replace(";","；").replace(":","：").replace("？（", "□（")
-			行 = 行.lstrip("øq")
+			行 = 行.lstrip("ø")
 			if 行.startswith("#"): return 行
 			行 = re.sub(r"([？#\-\+])(.)", "\\2\\1", 行)
 			行 = 行.replace("-", "(舊)").replace("+", "/").replace("？", "?").replace("#", "*")
-		elif 名 in ("黨項",):
+		elif 名 in ("党項",):
 			行 = re.sub(r"(.\{)", "[0]\\1", 行, count=1)
 		return 行
 
@@ -252,11 +237,11 @@ class 表(_表):
 	def 更新(自):
 		典 = defaultdict(list)
 		韻 = ""
-		skip = 自.info.get("跳過行數", 0)
-		lineno = 0
+		跳過行數 = 自.info.get("跳過行數", 0)
+		行號 = 0
 		for 行 in open(自.spath,encoding="U8"):
-			lineno += 1
-			if lineno <= skip: continue
+			行號 += 1
+			if 行號 <= 跳過行數: continue
 			行 = 自.統(行)
 			if not 行: continue
 			行 = 行.strip().replace("＝","=").replace("－", "-").replace("—","-").replace("｛","{").replace("｝","}").replace("?","？").replace("：[", "	[").replace("{：",'{')
@@ -275,47 +260,47 @@ class 表(_表):
 			if (s := 自.析韻(行)) is not None:
 				韻 = s
 				continue
-			matches = re.findall("^([^［］]*?)(［.+)$", 行)
-			if not matches or len(matches[0]) != 2: continue
-			列 = list(matches[0])
+			果 = re.findall("^([^［］]*?)(［.+)$", 行)
+			if not 果 or len(果[0]) != 2: continue
+			列 = list(果[0])
 			列[0] = 列[0].strip().strip("[]")
 			列[1] = 列[1].replace("\t", "")
 			列[1] = re.sub(r" (\d)", "\\1", 列[1])
 			聲, 字組 = 列
-			for sd,字組 in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", 列[1]):
-				音 = 聲 + 韻 + sd
-				音 = 自.checkYb(音)
+			for 調,字組 in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", 列[1]):
+				音 = 聲 + 韻 + 調
+				音 = 自.正音(音, True)
 				字組 = 自.normG(字組)
 				字組 = re.findall(r"(.)([\d₀-₉]?)([<+\-/=\\\*？$&r@]?)[\d₀-₉]? *(｛.*?｝)?", 字組)
-				for 字, o, c, js in 字組:
+				for 字, 序號, 異讀, 註 in 字組:
 					if 字 == " ": continue
-					p = ""
-					if c:
-						if c in "+-*/=@\\":
+					音義 = ""
+					if 異讀:
+						if 異讀 in "+-*/=@\\":
 							pass
 						else:
-							if c == '？':
-								p = ""
-								c = "?"
-							elif c == '$':
-								p = "(单字调)"
-								c = ""
-							elif c == '&':
-								p = "(连读前字调)"
-								c = ""
-							elif c == 'r':
-								p = "(兒化)"
-								c = ""
-							elif c == '<':
-								p = "(爲舊)"
-								c = ""
-					js = js[1:-1]
-					if js.count("{") != js.count("}"):
-						自.錯誤.append(f"大括號未成對:{js}")
-						js = js.replace("{", "").replace("}", "")
-					if o and ("₀" <= o <= "₉"):
-						o = chr(ord(o) - ord("₀") + ord("0"))
-					p = 音 + c + "\t" + o + p + js
-					if p not in 典[字]:
-						典[字].append(p)
+							if 異讀 == '？':
+								音義 = ""
+								異讀 = "?"
+							elif 異讀 == '$':
+								音義 = "(单字调)"
+								異讀 = ""
+							elif 異讀 == '&':
+								音義 = "(连读前字调)"
+								異讀 = ""
+							elif 異讀 == 'r':
+								音義 = "(兒化)"
+								異讀 = ""
+							elif 異讀 == '<':
+								音義 = "(過時)"
+								異讀 = ""
+					註 = 註[1:-1]
+					if 註.count("{") != 註.count("}"):
+						自.誤.append(f"大括號未成對:{註}")
+						註 = 註.replace("{", "").replace("}", "")
+					if 序號 and ("₀" <= 序號 <= "₉"):
+						序號 = chr(ord(序號) - ord("₀") + ord("0"))
+					音義 = 音 + 異讀 + "\t" + 序號 + 音義 + 註
+					if 音義 not in 典[字]:
+						典[字].append(音義)
 		自.寫(典)

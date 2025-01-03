@@ -5,13 +5,11 @@ import re
 
 class 表(_表):
 	全稱 = "康熙字典"
-	簡稱 = "康熙"
-	_file = "kangxizidian-v3f.txt"
+	文件名 = "kangxizidian-v3f.txt"
 	_sep = "\t\t"
 	網站 = "康熙字典網上版"
 	網址 = "https://kangxizidian.com/kxhans/%s"
 	說明 = "來源：<a href=https://github.com/7468696e6b/kangxiDictText/>康熙字典 Kangxi Dictionary TXT</a>"
-	ybTrimSpace = False
 	字書 = True
 	字組 = set()
 	

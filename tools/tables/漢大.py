@@ -6,7 +6,6 @@ import re
 
 class 表(_表):
 	全稱 = "漢語大字典"
-	簡稱 = "漢大"
 	說明 = "來源：<a href=https://github.com/zi-phoenicia/hydzd/>GitHub</a>"
 	字書 = True
 	

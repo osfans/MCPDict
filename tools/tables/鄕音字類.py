@@ -10,7 +10,7 @@ class 表(_表):
 		自.說明 = 自.get_note()
 
 	def get_note(自):
-		sname = 自.全路徑(自._file)
+		sname = 自.全路徑(自.文件名)
 		if not os.path.exists(sname) or not sname.endswith(".xlsx"): return
 		wb = load_workbook(sname, data_only=True)
 		sheet = wb.worksheets[1]

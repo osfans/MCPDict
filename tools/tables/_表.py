@@ -142,13 +142,13 @@ def docx2tsv(doc):
 def ybKey(x):
 	if "\t" not in x:
 		return x[-1]
-	音, js = x.split("\t", 1)
-	if js: js = js[0]
-	return js + 音[-1]
+	音, 註 = x.split("\t", 1)
+	if 註: 註 = 註[0]
+	return 註 + 音[-1]
 
 class 表:
 	_time = os.path.getmtime(__file__)
-	_file = None
+	文件名 = None
 	_files = None
 	_sep = None
 	顏色 = "#1E90FF"
@@ -160,8 +160,7 @@ class 表:
 	字書 = False
 
 	註序 = False
-	patches = None
-	ybTrimSpace = True
+	補丁 = None
 	kCompatibilityVariants = getCompatibilityVariants()
 	simplified = 1
 	爲音 = True
@@ -169,11 +168,11 @@ class 表:
 	音典 = defaultdict(set)
 	d = defaultdict(list)
 	__mod = None
-	錯誤 = []
+	誤 = []
 	音集 = set()
 
 	def __init__(自):
-		自.錯誤.clear()
+		自.誤.clear()
 		自.音集.clear()
 
 	def setmod(自, mod):
@@ -182,6 +181,10 @@ class 表:
 	def __str__(自):
 		if 自.__mod: return 自.__mod
 		return 自.__module__.split(".")[-1]
+	
+	@property
+	def 名(自):
+		return str(自)
 
 	def find(自, name):
 		if os.sep not in name and (isXls(name) or isDocx(name)):
@@ -193,24 +196,24 @@ class 表:
 		if g := glob(re.sub(".([^.]+)$", "([0-9]).\\1", name)): return g
 		if g := glob(re.sub(".([^.]+)$", " ([0-9]).\\1", name)): return g
 		if isXls(name) or isDocx(name):
-			自._file = getTsvName(自._file)
-			return 自.find(自._file)
+			自.文件名 = getTsvName(自.文件名)
+			return 自.find(自.文件名)
 		return
 
 	@property
 	def spath(自):
 		if 自._files:
-			自._file = 自._files[0]
-		sname = 自._file
+			自.文件名 = 自._files[0]
+		sname = 自.文件名
 		if not 自.簡稱: 自.簡稱 = 自.info["簡稱"]
-		if not 自.簡稱: 自.簡稱 = str(自)
+		if not 自.簡稱: 自.簡稱 = 自.名
 		if not sname: sname = f"{自.簡稱}.tsv"
 		g = 自.find(sname)
 		if not g or len(g) != 1:
 			logging.error(f"\t\t\t{sname}查找結果：{g}")
 			return
 		sname = g[0]
-		自._file = os.path.basename(sname)
+		自.文件名 = os.path.basename(sname)
 		if isXls(sname):
 			page = 1 if 自.簡稱 in ("中山石岐", "通城大坪", "1796建甌") else 0
 			if 自.簡稱 == "開平護龍": page = 3
@@ -231,7 +234,7 @@ class 表:
 
 	@property
 	def tpath(自):
-		tpath = os.path.join(PATH, TARGET, str(自))
+		tpath = os.path.join(PATH, TARGET, 自.簡稱)
 		if not tpath.endswith(".tsv"): tpath += ".tsv"
 		return tpath
 
@@ -250,7 +253,7 @@ class 表:
 		s = regex.sub(r"\{((?>[^\{\}]+|(?R))*)\}", rep, s)
 		return s
 
-	def 爲舊(自):
+	def 過時(自):
 		classfile = inspect.getfile(自.__class__)
 		classtime = os.path.getmtime(classfile)
 		varianttime = os.path.getmtime(VARIANT_FILE)
@@ -267,31 +270,31 @@ class 表:
 			return ttime < ftime
 		return True
 
-	def patch(自, d):
-		if not 自.patches: return
-		for 字, py in 自.patches.items():
-			if not py:
+	def 修訂(自, d):
+		if not 自.補丁: return
+		for 字, 音 in 自.補丁.items():
+			if not 音:
 				del d[字]
 				continue
-			d[字] = py.split(",")
+			d[字] = 音.split(",")
 
-	def normAll(自, 音):
+	def 正註(自, 音):
 		音 = 音.replace("᷉", "̃").replace("ⱼ", "ᶽ")\
 			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ")\
 			.replace("ʣ", "dz").replace("ʥ", "dʑ")\
 			.replace("", "ᵑ").replace("", "ᶽ")
 		return 音
 
-	def 正音(自, 音):
+	def _正音(自, 音):
 		if 自.爲語() and 自.爲音:
 			音 = 音.strip()
-			音 = 音.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀0∅Ø〇").replace("零", "")
+			音 = 音.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀∅Ø〇0").replace("零", "")
+			if 自.名 != "盛唐": 音 = 音.lstrip("q")
 			if 音.startswith("I") or 音.startswith("1"): 音 = "l" + 音[1:]
 			音 = 音.lower().replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ").replace("‘", "ʰ")
 			if not 音.startswith("h") and "h" in 音:
 				音 = 音.replace("h", "ʰ")
-			if 自.ybTrimSpace:
-				音 = 音.replace(" ", "")
+			音 = 音.replace(" ", "")
 			音 = 音.replace("[", "").replace("]", "")
 			音 = re.sub(r"^([mnvʋɹl])(\d+)$", "\\1\u0329\\2", 音)
 			音 = re.sub(r"^([ŋȵʐɱɻʒ])(\d+)$", "\\1\u030D\\2", 音)
@@ -299,54 +302,55 @@ class 表:
 				音 = 音.rstrip("0123456789")
 		return 音
 
-	def checkYb(自, 音):
-		音 = 自.正音(音)
+	def 正音(自, 音, 檢查=False):
+		音 = 自._正音(音)
+		if not 檢查: return 音
 		if "\t" in 音:
-			自.錯誤.append(f"{音} 音節有TAB空檔")
+			自.誤.append(f"{音} 音節有TAB空檔")
 			音 = 音.replace("\t", "")
-		if isHZ(音[0]):
-			自.錯誤.append(f"{音} 音節錯誤")
+		if 爲字(音[0]):
+			自.誤.append(f"{音} 音節錯誤")
 		if re.match(r".+\d{3,}", 音):
-			自.錯誤.append(f"{音} 調類錯誤")
+			自.誤.append(f"{音} 調類錯誤")
 		if 音 not in 自.音集:
 			自.音集.add(音)
 		else:
-			自.錯誤.append(f"{音} 音節重複")
+			自.誤.append(f"{音} 音節重複")
 		return 音
 
 	def 爲方言(自):
-		return str(自) in ("老國音","黨項") or (自.langType and not 自.langType.startswith("歷史音"))
+		return 自.名 in ("老國音","党項") or (自.爲語() and not 自.分區.startswith("歷史音"))
 
-	def normJS(自, js):
-		if not js: return ""
-		last = ""
-		l = list()
-		for i in js:
-			if isHZ(i):
-				if last: l.append(last)
-				last = ""
-				l.append(i)
+	def 分註(自, 註):
+		if not 註: return ""
+		上 = ""
+		果 = list()
+		for 字 in 註:
+			if 爲字(字):
+				if 上: 果.append(上)
+				上 = ""
+				果.append(字)
 			else:
-				last += i
-		if last: l.append(last)
-		return " ".join(l)
+				上 += 字
+		if 上: 果.append(上)
+		return " ".join(果)
 
-	def normPart(自, js):
-		if not js: return ""
-		last = ""
-		l = list()
-		for i in js:
-			if len(i.encode()) > 1:
-				if last: l.append(last)
-				last = ""
-				l.append(i)
+	def 正部件(自, 註):
+		if not 註: return ""
+		上 = ""
+		果 = list()
+		for 部件 in 註:
+			if len(部件.encode()) > 1:
+				if 上: 果.append(上)
+				上 = ""
+				果.append(部件)
 			else:
-				last += i
-		if last: l.append(last)
-		return " ".join(l)
+				上 += 部件
+		if 上: 果.append(上)
+		return " ".join(果)
 
 	def 寫(自, d):
-		自.patch(d)
+		自.修訂(d)
 		t = open(自.tpath, "w", encoding="U8", newline="\n")
 		print(f"#漢字\t音標\t解釋", file=t)
 		for 字 in sorted(d.keys()):
@@ -354,9 +358,9 @@ class 表:
 			字 = 自.kCompatibilityVariants.get(字, 字)
 			if 自.爲方言() and 自.simplified:
 				字 = s2t(字, 自.simplified)
-			if not isHZ(字):
+			if not 爲字(字):
 				if 自.爲方言():
-					自.錯誤.append(f"【{字}】不是漢字，讀音爲：{','.join([i.strip() for i in pys])}")
+					自.誤.append(f"【{字}】不是漢字，讀音爲：{','.join([i.strip() for i in pys])}")
 				continue
 			if 自.註序:
 				pys = sorted(pys,key=ybKey)
@@ -368,28 +372,26 @@ class 表:
 					音, js = py, ""
 				音 = 自.正音(音)
 				音 = f"{音}\t{js}"
-				音 = 自.normAll(音)
+				音 = 自.正註(音)
 				print(f"{字}\t{音}", file=t)
 		t.close()
 
 	@property
-	def langType(自):
+	def 分區(自):
 		return 自.info["地圖集二分區"]
 
 	def 爲語(自):
-		return 自.langType != None
+		return 自.分區 != None
 
 	@property
-	def count(自):
-		return len(自.d) + 自.unknownCount - (1 if 自.unknownCount > 0 else 0)
+	def 字數(自):
+		return len(自.d) + 自.框數 - (1 if 自.框數 > 0 else 0)
 	
 	@property
-	def unknownCount(自):
-		n = len(自.d.get("□", []))
-		if 自.爲語():
-			return n
-		else:
-			return 1 if n > 0 else 0
+	def 框數(自):
+		數 = len(自.d.get("□", []))
+		if 自.爲語(): return 數
+		return 1 if 數 > 0 else 0
 
 	@property
 	def 聲韻調數(自):
@@ -401,7 +403,7 @@ class 表:
 
 	def 讀(自):
 		start = time()
-		if 自.爲舊(): 自.更新()
+		if 自.過時(): 自.更新()
 		自.音典.clear()
 		自.d.clear()
 		if not 自.tpath or not os.path.exists(自.tpath): return
@@ -414,7 +416,7 @@ class 表:
 				js = ""
 				if "\t" in py: py, js = py.split("\t", 1)
 				if js and 自.爲語():
-					js = 自.normJS(js)
+					js = 自.分註(js)
 				try:
 					yd = getYD(py)
 				except:
@@ -432,24 +434,24 @@ class 表:
 					py += "{%s}" % js
 			else:
 				if 自.字書:
-					sep = "▲" if str(自) == "匯纂" else "\t"
+					sep = "▲" if 自.名 == "匯纂" else "\t"
 					py2, js = py.split(sep, 1)
-					py = ("\n\n" if 自.d[字] else "") + py2 + sep + 自.normJS(js)
+					py = ("\n\n" if 自.d[字] else "") + py2 + sep + 自.分註(js)
 				elif 自.簡稱 in ("部件檢索","字形描述"):
-					py = 自.normPart(py)
+					py = 自.正部件(py)
 				py = py.replace("\t", "\n")
 			if py not in 自.d[字]:
 				自.d[字].append(py)
 		# passed = time() - start
-		# logging.info(f"({自.count:5d}({自.unknownCount})-{自.聲韻調數:4d}-{自.聲韻數:4d}) {passed:6.3f} {自}")
+		# logging.info(f"({自.count:5d}({自.框數})-{自.聲韻調數:4d}-{自.聲韻數:4d}) {passed:6.3f} {自}")
 	
-	def load(自, dicts):
+	def 加載(自, dicts):
 		自.讀()
 		if not 自.d: return
 		for 字, 音集 in 自.d.items():
 			if 字 not in dicts:
 				dicts[字] = {"漢字": 字}
-			dicts[字][str(自)] = "\t".join(音集)
+			dicts[字][自.名] = "\t".join(音集)
 	
 	def 析(自, 列):
 		return tuple(列[:3])
@@ -492,48 +494,47 @@ class 表:
 					if not 字 or len(字) != 1: continue
 					if not 音: continue
 					if 自.爲方言():
-						if isHZ(音[0]): continue
+						if 爲字(音[0]): continue
 					p = f"{音}\t{js}"
 					p = p.strip()
 					if p not in d[字]:
 						d[字].append(p)
 		自.寫(d)
 
-	def splitSySd(自, syd):
-		if not syd: return "",""
-		tonesymbol = "⁰¹²³⁴⁵⁶"
-		tonemark = "˩˨˧˦˥"
-		for i in tonesymbol:
-			syd = syd.replace(i, str(tonesymbol.index(i)))
-		for i in tonemark:
-			syd = syd.replace(i, str(tonemark.index(i)+1))
-		sy = syd.rstrip("-0123456789")
-		sd = syd[len(sy):]
-		return sy,sd
+	def 分音(自, 音):
+		if not 音: return "",""
+		調值 = "⁰¹²³⁴⁵⁶"
+		調號 = "˩˨˧˦˥"
+		for i in 調值:
+			音 = 音.replace(i, str(調值.index(i)))
+		for i in 調號:
+			音 = 音.replace(i, str(調號.index(i)+1))
+		聲韻 = 音.rstrip("-0123456789")
+		調 = 音[len(聲韻):]
+		return 聲韻,調
 
-	def dz2dl(自, sy, dz=None):
-		sy = sy.strip()
-		if dz is None:
-			if "/" in sy:
-				return "/".join(map(自.dz2dl, sy.split("/")))
-			sy,dz = 自.splitSySd(sy)
-		if not dz: return sy
-		dl = 自.dz2dlWithYm(dz, sy)
-		return sy + dl
+	def 轉調類(自, 聲韻):
+		聲韻 = 聲韻.strip()
+		if "/" in 聲韻:
+			return "/".join(map(自.轉調類, 聲韻.split("/")))
+		聲韻,調值 = 自.分音(聲韻)
+		if not 調值: return 聲韻
+		調類 = 自.僅轉調類(調值, 聲韻)
+		return 聲韻 + 調類
 
-	def dz2dlWithYm(自, dz, sy):
-		dl = ""
-		if dz not in 自.toneMaps:
-			if dz == "0":
-				dl = dz
-			elif len(dz) == 1:
-				dz = dz + dz
-				if dz in 自.toneMaps:
-					dl = 自.toneMaps[dz]
+	def 僅轉調類(自, 調值, 聲韻=""):
+		調類 = ""
+		if 調值 not in 自.調典:
+			if 調值 == "0":
+				調類 = 調值
+			elif len(調值) == 1:
+				調值 = 調值 + 調值
+				if 調值 in 自.調典:
+					調類 = 自.調典[調值]
 			else:
-				dl = "?"
+				調類 = ""
 		else:
-			dl = 自.toneMaps[dz]
-		if sy and sy[-1] in "ptkʔ̚" and dz + "0" in 自.toneMaps:
-			dl = 自.toneMaps[dz + "0"]
-		return dl
+			調類 = 自.調典[調值]
+		if 聲韻 and 聲韻[-1] in "ptkʔ̚" and 調值 + "0" in 自.調典:
+			調類 = 自.調典[調值 + "0"]
+		return 調類

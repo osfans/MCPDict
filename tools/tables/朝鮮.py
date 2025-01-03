@@ -6,4 +6,4 @@ class 表(_表):
 	鍵 = "kr"
 	網站 = "Naver漢字辭典"
 	網址 = "http://hanja.naver.com/hanja?q=%s"
-	patches = {"冇": None}
+	補丁 = {"冇": None}

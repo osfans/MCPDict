@@ -3,14 +3,14 @@
 from tables._表 import 表 as _表
 
 class 表(_表):
-	_file = "liangfen.dict.yaml"
+	文件名 = "liangfen.dict.yaml"
 	說明 = "來源：<a href=http://yedict.com/zslf.htm>兩分查字</a><br>說明：可以輸入“雲龍”或“yunlong”查到“𱁬”"
 	
 	def 析(自, 列):
 		if len(列) < 2: return
 		return 列[0], 列[1]
 
-	def patch(自, d):
+	def 修訂(自, d):
 		for 行 in open(自.全路徑("lfzy.tsv"),encoding="U8"):
 			列 = 行.strip().split("\t")
 			字, lf = 列[:2]

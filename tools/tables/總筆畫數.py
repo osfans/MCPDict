@@ -4,9 +4,9 @@ from tables._表 import 表 as _表
 from tables import hex2chr
 
 class 表(_表):
-	_file = "Unihan_IRGSources.txt"
+	文件名 = "Unihan_IRGSources.txt"
 	_sep = "\t"
-	patches = {"□": "3", "〇": "1"}
+	補丁 = {"□": "3", "〇": "1"}
 	
 	def 析(自, 列):
 		if len(列) < 3: return

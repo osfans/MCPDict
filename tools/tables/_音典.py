@@ -6,7 +6,7 @@ import re
 class 表(_表):
 
 	def 析(自, 列):
-		名 = str(自)
+		名 = 自.名
 		字 = ""
 		音 = ""
 		音標 = ""
@@ -152,7 +152,7 @@ class 表(_表):
 			音標 = 聲 + 韻 + 調值
 		elif 名 in ("揭陽",):
 			字, _, _, _, _, 音標, 異讀, 註 = 列[:8]
-			音 = 自.dz2dl(音標)
+			音 = 自.轉調類(音標)
 			音標 = ""
 			異讀 = 異讀.strip("(读)")
 			if 異讀 == "文": 音+="="
@@ -167,7 +167,7 @@ class 表(_表):
 			l = list()
 			for i in 韻.split("，"):
 				音標 = 聲 + jy + i + 調值
-				音 = 自.dz2dl(音標)
+				音 = 自.轉調類(音標)
 				l.append((字, 音, 註))
 			return l
 		elif 名 in ("縉雲",):
@@ -215,12 +215,12 @@ class 表(_表):
 			字,_,_,註,聲,韻,調 = 列[:7]
 			if 聲 in "ø": 聲 = ""
 			l = list()
+			聲韻 = 聲 + 韻
 			for 調 in 調.split("或"):
-				音 = 自.dz2dl(聲 + 韻, 調)
+				音 = 自.轉調類(聲韻 + 調)
 				l.append((字, 音, 註))
 			return l
 		elif 名 in ("鄭張",):
-			自.ybTrimSpace = False
 			自.爲音 = False
 			字 = 列[0]
 			註 = 列[16]
@@ -240,10 +240,10 @@ class 表(_表):
 			_,字,_,聲韻,_,_,調,註 = 列[:8]
 			音 = 聲韻 + str(toneValues[調])
 		elif 名 in ("瑞安陶山",):
-			字, 聲, 韻, 調, 註, bz = 列[:6]
+			字, 聲, 韻, 調, 註, 備註 = 列[:6]
 			調 = 調.strip("[]")
 			音 = 聲 + 韻 + 調
-			註 = (註 + " " +bz).strip()
+			註 = (註 + " " +備註).strip()
 		elif 名 in ("宜章梅田",):
 			字,聲,韻,調,註 = 列[:5]
 			音 = 聲 + 韻 + 調
@@ -260,8 +260,8 @@ class 表(_表):
 				註 = 字[1:].strip()
 				字 = 字[0]
 		elif 名 in ("寧德",):
-			字,_,音,調,註 = 列
-			音 += 自.dz2dl(調.split("|")[0])
+			字,_,聲韻,調值,註 = 列
+			音標 = 聲韻 + 調值.split("|")[0]
 		elif 名 in ("江門荷塘(上)","江門荷塘(下)"):
 			字, 音標, 註 = 列[:3]
 		elif 名 in ("汝城延壽",):
@@ -282,7 +282,7 @@ class 表(_表):
 		elif 名 in ("淮南","懷遠","鳳陽","陽新新街","上猶", "南陵仙坊", "武昌", "連州", "連州保安", "連州星子", "連州西岸", "連州豐陽"):
 			_, 字, 聲, 韻, 調值, _, 註 = 列[:7]
 			音標 = 聲 + 韻 + 調值
-		elif 自._file.startswith("粤西闽语方言字表"):
+		elif 自.文件名.startswith("粤西闽语方言字表"):
 			if len(列) < 6: return
 			字 = 列[0]
 			音集 = 列[自.音列]
@@ -292,29 +292,29 @@ class 表(_表):
 			_js = _js.strip("（）")
 			字 = 字[0]
 			l = list()
-			for _yb in 音集.split("/"):
-				_yb = _yb.strip()
+			for 音標 in 音集.split("/"):
+				音標 = 音標.strip()
 				c = ""
-				if "（" in _yb:
-					n = _yb.index("（")
-					c = _yb[n:]
-					_yb = _yb[:n]
-				音 = 自.dz2dl(_yb)
+				if "（" in 音標:
+					n = 音標.index("（")
+					c = 音標[n:]
+					音標 = 音標[:n]
+				音 = 自.轉調類(音標)
 				註 = c + _js
 				if 註.startswith("（") and 註.endswith("）"):
 					註 = 註[1:-1]
 				l.append((字, 音, 註))
 			return l
-		elif 自._file.startswith("鄉話"):
+		elif 自.文件名.startswith("鄉話"):
 			index = 自.音列
 			字, 註 = 列[:2]
 			音 = "".join(列[index:index+3])
-		elif 自._file.startswith("丹陽（雲陽訪仙河陽埤城）"):
+		elif 自.文件名.startswith("丹陽（雲陽訪仙河陽埤城）"):
 			字 = 列[0][0]
 			if 字.startswith("["): return
 			註 = 列[0][1:].strip("()（）")
 			音標 = 列[自.音列]
-		elif 自._file.startswith("广西富川富阳方言21点"):
+		elif 自.文件名.startswith("广西富川富阳方言21点"):
 			if not 列[0]: return
 			字 = 列[0][0]
 			註 = 列[0][1:].strip("()（）")
@@ -327,7 +327,7 @@ class 表(_表):
 			字, 音, 註 = 列[:3]
 		if 字:
 			if 音標:
-				音 = 自.dz2dl(音標)
+				音 = 自.轉調類(音標)
 			if len(字) != 1 or not 音: return
 			音 = 自.正音(音)
 			if 字 in "?？�": 字 = "□"
