@@ -1,5 +1,7 @@
 package com.osfans.mcpdict.Orth;
 
+import static com.osfans.mcpdict.Orth.HanZi.cp2str;
+
 import android.content.res.Resources;
 import android.text.TextUtils;
 
@@ -13,7 +15,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class Orthography {
@@ -30,8 +34,7 @@ public class Orthography {
 
     private static int mToneStyle = 0;
     private static int mToneValueStyle = 0;
-    public static final Pattern mPattern = Pattern.compile("^(.+?)([0-9]{1,2}[a-z]?)$");
-
+    public static final Pattern mPattern = Pattern.compile("^(.+?)([0-9]{1,2}[a-z=]?)$");
 
     public static void setToneStyle(int style) {
         mToneStyle = style;
@@ -53,6 +56,23 @@ public class Orthography {
         return String.format("<i>%s</i>", s);
     }
 
+    private static final String[] toneBars = {"ˀ˩˨˧˦˥ˀ", "ˀ꜖꜕꜔꜓꜒ˀ", "ˀ꜌꜋꜊꜉꜈ˀ", "ˀ꜑꜐꜏꜎꜍ˀ", "⁰¹²³⁴⁵⁶"};
+    private static String formatToneBar(String s, int index) {
+        if (TextUtils.isEmpty(s)) return "";
+        if (s.contains("/")) {
+            String[] ss = s.split("/");
+            String[] nss = new String[ss.length];
+            for (int i = 0; i < ss.length; i++) {
+                nss[i] = formatToneBar(ss[i], index);
+            }
+            return String.join("/", nss);
+        }
+        if (mToneValueStyle == 0 && s.length() == 2 && s.charAt(0) == s.charAt(1)) s = s.substring(1);
+        for (int i = 0; i <= 6; i++)
+            s = s.replace((char)('0' + i), toneBars[index].charAt(i));
+        return s;
+    }
+
     public static String formatTone(String base, String tone, String lang) {
         if (TextUtils.isEmpty(tone) || tone.contentEquals("_")) return base;
         JSONArray styles = null;
@@ -71,41 +91,18 @@ public class Orthography {
         if (!TextUtils.isEmpty(tv)) {
             if (mToneValueStyle == 0) { //符號
                 if (tv.length() == 2 && tv.charAt(0) == tv.charAt(1)) tv = tv.substring(0, 1);
-                if (tv.startsWith("-")) {
-                    if (tv.length() == 3 && tv.charAt(1) == tv.charAt(2)) tv = tv.substring(0, 2);
-                    tv = tv.replace('1', '꜖')
-                            .replace('2', '꜕')
-                            .replace('3', '꜔')
-                            .replace('4', '꜓')
-                            .replace('5', '꜒')
-                            .replace('6', ' ')
-                            .replace('0', ' ')
-                            .replace("-", "");
+                if (tv.contains("-")) {
+                    String [] tvs = tv.split("-");
+                    tvs[0] = formatToneBar(tvs[0], 0);
+                    tvs[1] = formatToneBar(tvs[1], style1.startsWith("0") ? 3 : 1);
+                    tv = tvs[0] + tvs[1];
                 } else if (style1.startsWith("0") && tv.length() == 1) {
-                    tv = tv.replace('1', '꜌')
-                            .replace('2', '꜋')
-                            .replace('3', '꜊')
-                            .replace('4', '꜉')
-                            .replace('5', '꜈')
-                            .replace('6', ' ')
-                            .replace('0', ' ');
+                    tv = formatToneBar(tv, 2);
                 } else {
-                    tv = tv.replace('1', '˩')
-                            .replace('2', '˨')
-                            .replace('3', '˧')
-                            .replace('4', '˦')
-                            .replace('5', '˥')
-                            .replace('6', ' ')
-                            .replace('0', ' ');
+                    tv = formatToneBar(tv, 0);
                 }
             } else if (mToneValueStyle == 1) { //數字
-                tv = tv.replace('1', '¹')
-                        .replace('2', '²')
-                        .replace('3', '³')
-                        .replace('4', '⁴')
-                        .replace('5', '⁵')
-                        .replace('6', '⁶')
-                        .replace('0', '⁰');
+                tv = formatToneBar(tv, 4).replace('-', '⁻');
             } else tv = "";
         }
         switch (mToneStyle) {
@@ -163,6 +160,19 @@ public class Orthography {
             while ((line = reader.readLine()) != null) {
                 int c = line.codePointAt(0);
                 HanZi.compatibility.put(c, line.codePoints().toArray()[1]);
+            }
+            reader.close();
+
+            // Character BS compatibility variants
+            inputStream = resources.openRawResource(R.raw.orthography_bs_compatibility);
+            reader = new BufferedReader(new InputStreamReader(inputStream));
+            while ((line = reader.readLine()) != null) {
+                int [] cs = line.codePoints().toArray();
+                int n = cs.length;
+                String s = cp2str(cs[n - 1]);
+                for (int i = 0; i < n - 1; i++) {
+                    HanZi.bsCompatibility.put(s, HanZi.bsCompatibility.getOrDefault(s, s) + cp2str(cs[i]));
+                }
             }
             reader.close();
 
@@ -273,4 +283,41 @@ public class Orthography {
     }
 
     private static boolean initialized = false;
+
+    public static String normParts(String input) {
+        List<String> l = new ArrayList<>();
+        for (int unicode: input.codePoints().toArray()) {
+            String s = HanZi.getBSCompatibility(cp2str(unicode));
+            l.add(s);
+        }
+        return String.join(" ", l);
+    }
+
+    public static String normWord(String s) {
+        if (TextUtils.isEmpty(s)) return "";
+        StringBuilder sb = new StringBuilder();
+        for (int unicode : s.codePoints().toArray()) {
+            boolean isHZ = HanZi.isHz(unicode);
+            if (isHZ) {
+                sb.append(" ");
+            }
+            sb.appendCodePoint(unicode);
+            if (isHZ) {
+                sb.append(" ");
+            }
+        }
+        return String.format("\"%s\"", sb.toString().trim().replace("  ", " "));
+    }
+
+    public static String normWords(String s) {
+        String[] ss = s.split(" ");
+        String[] newSS = new String[ss.length];
+        int i = 0;
+        for (String word : ss) {
+            String newWord = normWord(word);
+            newSS[i] = newWord;
+            i++;
+        }
+        return String.format("'%s'", String.join(" ", newSS));
+    }
 }

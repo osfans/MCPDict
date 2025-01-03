@@ -34,8 +34,8 @@ public abstract class DisplayHelper {
     public static CharSequence getRichText(String richTextString) {
         String s = richTextString
                 .replace("\n", "<br/>")
-                .replaceAll("\\*(.+?)\\*", "<b>$1</b>")
-                .replaceAll("\\|(.+?)\\|", "<span style='color: #808080;'>$1</span>");
+                .replaceAll("\\*\\*(.+?)\\*\\*", "<b>$1</b>")
+                .replaceAll("`(.+?)`", "<span style='color: #808080;'>$1</span>");
         int i = Pref.getDisplayFormat();
         if (i == 1) {
             s = s.replace("{", "<small><small>").replace("}", "</small></small>");
@@ -52,34 +52,6 @@ public abstract class DisplayHelper {
     public static String getRawText(String s) {
         if (TextUtils.isEmpty(s)) return "";
         return s.replaceAll("[|*\\[\\]]", "").replaceAll("\\{.*?\\}", "");
-    }
-
-    public static String normWord(String s) {
-        if (TextUtils.isEmpty(s)) return "";
-        StringBuilder sb = new StringBuilder();
-        for (int unicode : s.codePoints().toArray()) {
-            boolean isHZ = HanZi.isHz(unicode);
-            if (isHZ) {
-                sb.append(" ");
-            }
-            sb.appendCodePoint(unicode);
-            if (isHZ) {
-                sb.append(" ");
-            }
-        }
-        return String.format("\"%s\"", sb.toString().trim().replace("  ", " "));
-    }
-
-    public static String normInput(String s) {
-        String[] ss = s.split(" ");
-        String[] newSS = new String[ss.length];
-        int i = 0;
-        for (String word : ss) {
-            String newWord = normWord(word);
-            newSS[i] = newWord;
-            i++;
-        }
-        return String.format("'%s'", String.join(" ", newSS));
     }
 
     public static CharSequence formatUnknownIPA(String lang, String string) {
@@ -125,6 +97,7 @@ public abstract class DisplayHelper {
 
             case DB.SG -> SG_DISPLAY_HELPER.displayRich(string, lang);
             case DB.GY -> MiddleChinese.displayHelper.displayRich(string, lang);
+            case DB.ZT -> Zhongtang.displayHelper.displayRich(string, lang);
             case DB.ZYYY -> ZhongyuanYinyun.displayHelper.displayRich(string, lang);
             case DB.DGY -> Dungan.displayHelper.displayRich(string, lang);
             case DB.CMN -> Mandarin.displayHelper.displayRich(string, lang);
@@ -136,8 +109,9 @@ public abstract class DisplayHelper {
     }
 
     public boolean isIPA(char c) {
-        int type = Character.getType(c);
         if (HanZi.isHz(c)) return false;
+        if (c == '_' || c == '*' || c == '`') return false;
+        int type = Character.getType(c);
         return Character.isLetterOrDigit(c)
                 || type == Character.NON_SPACING_MARK
                 || type == Character.MODIFIER_SYMBOL

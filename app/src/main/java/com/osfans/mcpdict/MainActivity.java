@@ -94,8 +94,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRestart() {
         super.onRestart();
-        setTitle(Pref.getTitle());
-        // Make settings take effect immediately as the user navigates back to the dictionary
         refresh();
     }
 

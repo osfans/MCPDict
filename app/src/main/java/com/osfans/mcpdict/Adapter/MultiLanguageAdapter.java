@@ -13,8 +13,8 @@ import java.util.Set;
 public class MultiLanguageAdapter extends LanguageAdapter {
     View.OnClickListener onClick = null;
 
-    public MultiLanguageAdapter(Context context, Cursor c, boolean autoRequery) {
-        super(context, c, autoRequery);
+    public MultiLanguageAdapter(Context context) {
+        super(context);
     }
 
     @Override

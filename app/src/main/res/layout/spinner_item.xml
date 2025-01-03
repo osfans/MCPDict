@@ -2,7 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/text1"
     android:singleLine="true"
-    android:padding="4dp"
+    android:padding="@dimen/padding_size"
     android:textSize="16sp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

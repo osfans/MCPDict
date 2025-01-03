@@ -6,8 +6,8 @@ from tables import hex2chr
 class 表(_表):
 	_files = ["uvs0.txt", "uvs2.txt", "uvs3.txt"]
 
-	def parse(self, fs):
-		hz, vs = fs
-		hz = hex2chr(hz)
-		vs = hz + hex2chr(vs.split(";", 1)[0])
-		return hz, vs
+	def 析(自, 列):
+		字, vs = 列
+		字 = hex2chr(字)
+		vs = 字 + hex2chr(vs.split(";", 1)[0])
+		return 字, vs

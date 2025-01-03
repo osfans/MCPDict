@@ -82,6 +82,7 @@ public class TextDrawable extends ShapeDrawable {
     }
 
     private int getDarkerShade(int color) {
+        if (color == android.R.color.transparent) color = textPaint.getColor();
         return Color.rgb((int)(SHADE_FACTOR * Color.red(color)),
                 (int)(SHADE_FACTOR * Color.green(color)),
                 (int)(SHADE_FACTOR * Color.blue(color)));
@@ -192,7 +193,7 @@ public class TextDrawable extends ShapeDrawable {
             width = -1;
             height = -1;
             shape = new RectShape();
-            font = FontUtil.useSerif() ? Typeface.SERIF : Typeface.SANS_SERIF;
+            font = FontUtil.getDictTypeface();
             fontSize = -1;
             isBold = false;
             toUpperCase = false;

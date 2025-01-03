@@ -41,6 +41,8 @@ public class FontUtil {
                             new FontFamily.Builder(new Font.Builder(getResources(), R.font.p0).build()).build()
                     );
                     builder.addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.nyushu).build()).build()
+                    ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(getResources(), R.font.p2).build()).build()
                     ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(getResources(), R.font.p3).build()).build()
@@ -57,6 +59,8 @@ public class FontUtil {
                             new FontFamily.Builder(new Font.Builder(getResources(), fontExFirst() ? R.font.p0 : R.font.ipa).build()).build()
                     );
                     builder.addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.nyushu).build()).build()
+                    ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(getResources(), R.font.p2).build()).build()
                     ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(getResources(), R.font.p3).build()).build()
@@ -73,7 +77,7 @@ public class FontUtil {
         return null;
     }
 
-    static Typeface getDictTypeface() {
+    public static Typeface getDictTypeface() {
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
         if (!enableFontExt()) return getIPATypeface();
         return getHanTypeface();

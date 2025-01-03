@@ -1,9 +1,9 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:descendantFocusability="blocksDescendants" >
+    android:descendantFocusability="blocksDescendants">
 
 <!--
     android:descendantFocusability="blocksDescendants" is necessary to make
@@ -14,17 +14,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="6dp"
-        android:paddingBottom="6dp"
+        android:padding="@dimen/padding_size"
         android:orientation="horizontal"
         android:gravity="center_vertical" >
 
-        <Button
+        <ImageButton
             android:id="@+id/button_delete"
-            android:background="@android:drawable/ic_menu_close_clear_cancel"
-            android:backgroundTint="?android:attr/colorForeground"
-            android:layout_width="32dp"
-            android:layout_height="32dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="?android:attr/colorForeground" />
 
         <TextView
             style="@style/FontDim"
@@ -40,8 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elegantTextHeight="true"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp" />
+            android:padding="@dimen/padding_size" />
 
         <TextView
             style="@style/FontDim"
@@ -54,12 +53,13 @@
             android:singleLine="true"
             android:ellipsize="end" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button_edit"
-            android:background="@android:drawable/ic_menu_edit"
-            android:backgroundTint="?android:attr/colorForeground"
-            android:layout_width="32dp"
-            android:layout_height="32dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_edit"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?android:attr/colorForeground" />
 
     </LinearLayout>
 
@@ -67,8 +67,7 @@
         android:tag="container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
+        android:padding="@dimen/padding_size"
         android:orientation="vertical"
         android:visibility="gone" >
 

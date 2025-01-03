@@ -15,8 +15,8 @@ import com.osfans.mcpdict.R;
 
 public class LanguageAdapter extends CursorAdapter {
 
-    public LanguageAdapter(Context context, Cursor c, boolean autoRequery) {
-        super(context, c, autoRequery);
+    public LanguageAdapter(Context context) {
+        super(context, null, true);
     }
 
     @Override

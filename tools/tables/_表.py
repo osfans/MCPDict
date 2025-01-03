@@ -10,13 +10,10 @@ import inspect
 from openpyxl import load_workbook
 from xlrd import open_workbook
 from docx import Document
+from docx.enum.text import WD_UNDERLINE
 import regex
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
-
-SOURCE = "data"
-TARGET = "output"
-VARIANT_FILE = f"tables/{SOURCE}/正字.tsv"
 
 YDS = {"+":"又", "-":"白", "*":"俗", "/":"書","\\":"語","=":"文","?":"存疑", "@": "訓"}
 def getYD(py):
@@ -24,25 +21,15 @@ def getYD(py):
 
 def getCompatibilityVariants():
 	d = dict()
-	for line in open("../app/src/main/res/raw/orthography_hz_compatibility.txt",encoding="U8"):
-		hz, val = line.rstrip()
-		d[hz] = val
-	return d
-
-def getSTVariants(level=2):
-	d = dict()
-	for line in open(VARIANT_FILE,encoding="U8"):
-		if line.startswith("#"): continue
-		fs = line.strip().split("\t")
-		if level == 1 and "#" in line:
-			continue
-		fs[1] = fs[1].split("#")[0].strip()
-		if " " not in fs[1]:
-			d[fs[0]] = fs[1]
+	for 行 in open("../app/src/main/res/raw/orthography_hz_compatibility.txt",encoding="U8"):
+		字, val = 行.rstrip()
+		d[字] = val
 	return d
 
 def getTsvName(xls):
-	return re.sub(r"(\(\d?\))+$", "", xls.rsplit(".", 1)[0]) + ".tsv"
+	name = os.path.basename(xls)
+	name = re.sub(r" ?(\(\d{0,3}\))+$", "", name.rsplit(".", 1)[0]) + ".tsv"
+	return os.path.join(PATH, SOURCE, name)
 
 def isXlsx(fname):
 	return fname.endswith("xlsx")
@@ -56,15 +43,41 @@ def processFs(v):
 	if v is None: return ""
 	return str(v).strip().replace("\t", " ").replace("\n", " ")
 
+def processXlsxFs(v):
+	t = type(v)
+	if t is float or t is int: return "%d" % v
+	if v is None: return ""
+	if t is str: return str(v).strip().replace("\t", " ").replace("\n", " ")
+	cells = []
+	for i in v:
+		if type(i) is str:
+			cells.append(i.strip())
+			continue
+		if type(i) is int or type(i) is float:
+			cells.append("%d" % i)
+			continue
+		text = i.text
+		tag = ""
+		if i.font.underline == "single":
+			tag = "-"
+		elif i.font.underline == "double":
+			tag = "="
+		if tag:
+			text = "".join([j + tag for j in text])
+		if i.font.vertAlign == "subscript":
+			text = f"({text})"
+		cells.append(text)
+	return "".join(cells).replace(")(", "").strip()
+
 def getXlsxLines(xls, page=0):
-	wb = load_workbook(xls, data_only=True)
+	wb = load_workbook(xls, data_only=True, rich_text=True)
 	sheet = wb.worksheets[page]
 	lines = list()
 	for row in sheet.rows:
-		fs = [processFs(j.value) for j in row[:50]]
-		if any(fs):
-			line = "\t".join(fs) + "\n"
-			lines.append(line)
+		列 = [processXlsxFs(j.value) for j in row[:50]]
+		if any(列):
+			行 = "\t".join(列) + "\n"
+			lines.append(行)
 	return lines
 
 def getXlsLines(xls, page=0):
@@ -72,11 +85,11 @@ def getXlsLines(xls, page=0):
 	sheet = wb.sheet_by_index(page)
 	lines = list()
 	for i in range(sheet.nrows):
-		fs = sheet.row_values(i)
-		fs = [processFs(j) for j in fs]
-		if any(fs):
-			line = "\t".join(fs) + "\n"
-			lines.append(line)
+		列 = sheet.row_values(i)
+		列 = [processFs(j) for j in 列]
+		if any(列):
+			行 = "\t".join(列) + "\n"
+			lines.append(行)
 	return lines
 
 def xls2tsv(xls, page=0):
@@ -91,6 +104,23 @@ def xls2tsv(xls, page=0):
 	t.writelines(lines)
 	t.close()
 
+def run2text(run):
+	tag = ""
+	if run.font.underline == WD_UNDERLINE.SINGLE:
+		tag = "-"
+	elif run.font.underline == WD_UNDERLINE.DOUBLE:
+		tag = "="
+	elif run.font.underline == WD_UNDERLINE.WAVY:
+		tag = chr(0x1AB6)
+	elif run._r.xpath("*/w:em[@w:val='dot']"):
+		tag = chr(0x0323)
+	text = run.text
+	if tag:
+		text = "".join([i + tag for i in text])
+	if run.font.subscript or (run.font.size and run.font.size < 115000):
+		text = f"{{{text}}}"
+	return text
+
 def isDocx(fname):
 	return fname.endswith("docx")
 	
@@ -101,72 +131,92 @@ def docx2tsv(doc):
 		xtime = os.path.getmtime(doc)
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
-	lines = [line.text + "\n" for line in Document(doc).paragraphs]
+	lines = []
+	for each in Document(doc).paragraphs:
+		行 = "".join(map(run2text, each.runs)).replace("}{", "")
+		lines.append(行 + "\n")
 	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.writelines(lines)
 	t.close()
 
+def ybKey(x):
+	if "\t" not in x:
+		return x[-1]
+	音, 註 = x.split("\t", 1)
+	if 註: 註 = 註[0]
+	return 註 + 音[-1]
+
 class 表:
-	path = os.path.dirname(os.path.abspath(__file__))
 	_time = os.path.getmtime(__file__)
-	_file = None
+	文件名 = None
 	_files = None
 	_sep = None
-	color = "#1E90FF"
-	full = ""
-	short = ""
-	note = ""
-	site = ""
-	url = ""
-	dictionary = False
+	顏色 = "#1E90FF"
+	全稱 = ""
+	簡稱 = ""
+	說明 = ""
+	網站 = ""
+	網址 = ""
+	字書 = False
 
-	disorder = False
-	patches = None
-	ybTrimSpace = True
+	註序 = False
+	補丁 = None
 	kCompatibilityVariants = getCompatibilityVariants()
 	simplified = 1
-	normVariants = getSTVariants(1)
-	stVariants = getSTVariants(2)
-	isYb = True
-	syds = defaultdict(set)
+	爲音 = True
+	音列 = None
+	音典 = defaultdict(set)
 	d = defaultdict(list)
 	__mod = None
+	誤 = []
+	音集 = set()
 
-	def setmod(self, mod):
-		self.__mod = mod
+	def __init__(自):
+		自.誤.clear()
+		自.音集.clear()
 
-	def __str__(self):
-		if self.__mod: return self.__mod
-		return self.__module__.split(".")[-1]
+	def setmod(自, mod):
+		自.__mod = mod
+
+	def __str__(自):
+		if 自.__mod: return 自.__mod
+		return 自.__module__.split(".")[-1]
+	
+	@property
+	def 名(自):
+		return str(自)
+
+	def find(自, name):
+		if os.sep not in name and (isXls(name) or isDocx(name)):
+			name = 自.toolname(name)
+			if g := 自.find(name): return g
+		if os.sep not in name:
+			name = 自.全路徑(name)
+		if g := glob(name): return g
+		if g := glob(re.sub(".([^.]+)$", "([0-9]).\\1", name)): return g
+		if g := glob(re.sub(".([^.]+)$", " ([0-9]).\\1", name)): return g
+		if isXls(name) or isDocx(name):
+			自.文件名 = getTsvName(自.文件名)
+			return 自.find(自.文件名)
+		return
 
 	@property
-	def spath(self):
-		if self._files:
-			self._files = [self.get_fullname(f) for f in self._files]
-			self._file = self._files[0]
-		sname = self._file
-		if not self.short: self.short = self.info["簡稱"]
-		if not self.short: self.short = str(self)
-		if not sname: sname = f"{self.short}.tsv"
-		if not sname.startswith("/"):
-			sname = self.get_fullname(sname)
-		g = glob(sname)
+	def spath(自):
+		if 自._files:
+			自.文件名 = 自._files[0]
+		sname = 自.文件名
+		if not 自.簡稱: 自.簡稱 = 自.info["簡稱"]
+		if not 自.簡稱: 自.簡稱 = 自.名
+		if not sname: sname = f"{自.簡稱}.tsv"
+		g = 自.find(sname)
 		if not g or len(g) != 1:
-			if isXls(sname):
-				self._file = getTsvName(self._file)
-				sname = self.get_fullname(self._file)
-				g = glob(sname)
-				if not g or len(g) != 1:
-					logging.error(f"\t\t\t{sname} {g}")
-					return
-			else:
-				logging.error(f"\t\t\t未找到{sname} {g}")
-				return
+			logging.error(f"\t\t\t{sname}查找結果：{g}")
+			return
 		sname = g[0]
-		self._file = os.path.basename(sname)
+		自.文件名 = os.path.basename(sname)
 		if isXls(sname):
-			page = 1 if self.short in ("中山石岐", "通城") else 0
-			if self.short == "開平護龍": page = 3
+			page = 1 if 自.簡稱 in ("中山石岐", "通城大坪", "1796建甌") else 0
+			if 自.簡稱 == "開平護龍": page = 3
 			xls2tsv(sname, page)
 			sname = getTsvName(sname)
 		elif isDocx(sname):
@@ -174,269 +224,317 @@ class 表:
 			sname = getTsvName(sname)
 		return sname
 
-	def get_fullname(self, name):
-		return os.path.join(self.path, SOURCE, name)
+	def toolname(自, name):
+		name = os.path.basename(name)
+		return os.path.join(PATH, "..", name)
+
+	def 全路徑(自, name):
+		name = os.path.basename(name)
+		return os.path.join(PATH, SOURCE, name)
 
 	@property
-	def tpath(self):
-		tpath = os.path.join(self.path, TARGET, str(self))
+	def tpath(自):
+		tpath = os.path.join(PATH, TARGET, 自.簡稱)
 		if not tpath.endswith(".tsv"): tpath += ".tsv"
 		return tpath
 
-	def normS(self, s, rep="[\\1]"):
+	def normS(自, s, rep="[\\1]"):
 		s = s.replace("(", "（").replace(")", "）")
 		s = regex.sub("（((?>[^（）]+|(?R))*)）", rep, s)
 		return s
 
-	def normM(self, s, rep="〚\\1〛"):
+	def normM(自, s, rep="〚\\1〛"):
 		s = s.replace("[", "［").replace("]", "］")
 		s = regex.sub("［((?>[^［］]+|(?R))*)］", rep, s)
 		return s
 
-	def normG(self, s, rep="｛\\1｝"):
+	def normG(自, s, rep="｛\\1｝"):
 		s = s.replace("｛", "{").replace("｝", "}")
 		s = regex.sub(r"\{((?>[^\{\}]+|(?R))*)\}", rep, s)
 		return s
 
-	def outdated(self):
-		classfile = inspect.getfile(self.__class__)
+	def 過時(自):
+		classfile = inspect.getfile(自.__class__)
 		classtime = os.path.getmtime(classfile)
 		varianttime = os.path.getmtime(VARIANT_FILE)
 		if classtime < varianttime:
 			classtime = varianttime
-		spath = self.spath
+		spath = 自.spath
 		if not spath or not os.path.exists(spath):
 			return False
-		if os.path.exists(self.tpath):
+		if os.path.exists(自.tpath):
 			ftime = os.path.getmtime(spath)
-			ttime = os.path.getmtime(self.tpath)
-			if ttime < self._time: return True
+			ttime = os.path.getmtime(自.tpath)
+			if ttime < 自._time: return True
 			if ttime < classtime: return True
 			return ttime < ftime
 		return True
 
-	def patch(self, d):
-		if not self.patches: return
-		for hz, py in self.patches.items():
-			if not py:
-				del d[hz]
+	def 修訂(自, d):
+		if not 自.補丁: return
+		for 字, 音 in 自.補丁.items():
+			if not 音:
+				del d[字]
 				continue
-			d[hz] = py.split(",")
+			d[字] = 音.split(",")
 
-	def normAll(self, yb):
-		yb = yb.replace("᷉", "̃").replace("ⱼ", "ᶽ")\
+	def 正註(自, 音):
+		音 = 音.replace("᷉", "̃").replace("ⱼ", "ᶽ")\
 			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ")\
 			.replace("ʣ", "dz").replace("ʥ", "dʑ")\
 			.replace("", "ᵑ").replace("", "ᶽ")
-		return yb
+		return 音
 
-	def normYb(self, yb):
-		if self.isLang() and self.isYb:
-			yb = yb.strip()
-			yb = yb.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("0∅Ø〇零")
-			yb = yb.lower().replace("g", "ɡ").replace("ʼ", "ʰ")
-			if not yb.startswith("h") and "h" in yb:
-				yb = yb.replace("h", "ʰ")
-			if self.ybTrimSpace:
-				yb = yb.replace(" ", "")
-		return yb
+	def _正音(自, 音):
+		if 自.爲語() and 自.爲音:
+			音 = 音.strip()
+			音 = 音.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀∅Ø〇0").replace("零", "")
+			if 自.名 != "盛唐": 音 = 音.lstrip("q")
+			if 音.startswith("I") or 音.startswith("1"): 音 = "l" + 音[1:]
+			音 = 音.lower().replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ").replace("‘", "ʰ")
+			if not 音.startswith("h") and "h" in 音:
+				音 = 音.replace("h", "ʰ")
+			音 = 音.replace(" ", "")
+			音 = 音.replace("[", "").replace("]", "")
+			音 = re.sub(r"^([mnvʋɹl])(\d+)$", "\\1\u0329\\2", 音)
+			音 = re.sub(r"^([ŋȵʐɱɻʒ])(\d+)$", "\\1\u030D\\2", 音)
+			if 自.info["無調"]:
+				音 = 音.rstrip("0123456789")
+		return 音
 
-	def isDialect(self):
-		return self.langType and not self.langType.startswith("歷史音")
+	def 正音(自, 音, 檢查=False):
+		音 = 自._正音(音)
+		if not 檢查: return 音
+		if "\t" in 音:
+			自.誤.append(f"{音} 音節有TAB空檔")
+			音 = 音.replace("\t", "")
+		if 爲字(音[0]):
+			自.誤.append(f"{音} 音節錯誤")
+		if re.match(r".+\d{3,}", 音):
+			自.誤.append(f"{音} 調類錯誤")
+		if 音 not in 自.音集:
+			自.音集.add(音)
+		else:
+			自.誤.append(f"{音} 音節重複")
+		return 音
 
-	def isDictionary(self):
-		return self.dictionary
+	def 爲方言(自):
+		return 自.名 in ("老國音","党項") or (自.爲語() and not 自.分區.startswith("歷史音"))
 
-	def normJS(self, js):
-		if not js: return ""
-		last = ""
-		l = list()
-		for i in js:
-			if isHZ(i):
-				if last: l.append(last)
-				last = ""
-				l.append(i)
+	def 分註(自, 註):
+		if not 註: return ""
+		上 = ""
+		果 = list()
+		for 字 in 註:
+			if 爲字(字):
+				if 上: 果.append(上)
+				上 = ""
+				果.append(字)
 			else:
-				last += i
-		if last: l.append(last)
-		return " ".join(l)
+				上 += 字
+		if 上: 果.append(上)
+		return " ".join(果)
 
-	def write(self, d):
-		self.patch(d)
-		t = open(self.tpath, "w", encoding="U8", newline="\n")
+	def 正部件(自, 註):
+		if not 註: return ""
+		上 = ""
+		果 = list()
+		for 部件 in 註:
+			if len(部件.encode()) > 1:
+				if 上: 果.append(上)
+				上 = ""
+				果.append(部件)
+			else:
+				上 += 部件
+		if 上: 果.append(上)
+		return " ".join(果)
+
+	def 寫(自, d):
+		自.修訂(d)
+		t = open(自.tpath, "w", encoding="U8", newline="\n")
 		print(f"#漢字\t音標\t解釋", file=t)
-		for hz in sorted(d.keys()):
-			pys = d[hz]
-			hz = self.kCompatibilityVariants.get(hz, hz)
-			if self.isDialect() and self.simplified:
-				if self.simplified == 1:
-					hz = self.normVariants.get(hz, hz)
-				else:
-					hz = self.stVariants.get(hz, hz)
-			if not isHZ(hz):
-				if self.isDialect():
-					print(f"\t\t\t【{hz}】不是漢字，讀音爲：", ",".join([i.strip() for i in pys]))
+		for 字 in sorted(d.keys()):
+			pys = d[字]
+			字 = 自.kCompatibilityVariants.get(字, 字)
+			if 自.爲方言() and 自.simplified:
+				字 = s2t(字, 自.simplified)
+			if not 爲字(字):
+				if 自.爲方言():
+					自.誤.append(f"【{字}】不是漢字，讀音爲：{','.join([i.strip() for i in pys])}")
 				continue
-			if self.disorder:
-				pys = sorted(pys,key=lambda x:x.split("\t", 1)[0][-1])
+			if 自.註序:
+				pys = sorted(pys,key=ybKey)
 			for py in pys:
 				if "\t" in py:
-					yb, js = py.split("\t", 1)
-					js = js.strip().replace("~", "～")
+					音, js = py.split("\t", 1)
+					js = js.strip().replace("~", "～").replace("...", "⋯").replace("∽", "～")
 				else:
-					yb, js = py, ""
-				yb = self.normYb(yb)
-				yb = f"{yb}\t{js}"
-				yb = self.normAll(yb)
-				print(f"{hz}\t{yb}", file=t)
+					音, js = py, ""
+				音 = 自.正音(音)
+				音 = f"{音}\t{js}"
+				音 = 自.正註(音)
+				print(f"{字}\t{音}", file=t)
 		t.close()
 
 	@property
-	def langType(self):
-		return self.info["地圖集二分區"]
+	def 分區(自):
+		return 自.info["地圖集二分區"]
 
-	def isLang(self):
-		return self.langType != None
+	def 爲語(自):
+		return 自.分區 != None
 
 	@property
-	def count(self):
-		return len(self.d) + self.unknownCount - (1 if self.unknownCount > 0 else 0)
+	def 字數(自):
+		return len(自.d) + 自.框數 - (1 if 自.框數 > 0 else 0)
 	
 	@property
-	def unknownCount(self):
-		return len(self.d.get("□", []))
+	def 框數(自):
+		數 = len(自.d.get("□", []))
+		if 自.爲語(): return 數
+		return 1 if 數 > 0 else 0
 
 	@property
-	def sydCount(self):
-		return len(self.syds)
+	def 聲韻調數(自):
+		return len(自.音典)
 
 	@property
-	def syCount(self):
-		return len(set(map(lambda x:x.split("/")[0].rstrip("1234567890"), self.syds.keys())))
+	def 聲韻數(自):
+		return len(set(map(lambda x:x.split("/")[0].rstrip("1234567890"), 自.音典.keys())))
 
-	def read(self):
+	def 讀(自):
 		start = time()
-		if self.outdated(): self.update()
-		self.syds.clear()
-		self.d.clear()
-		if not self.tpath or not os.path.exists(self.tpath): return
-		for line in open(self.tpath,encoding="U8"):
-			line = line.strip()
-			if line.startswith("#"): continue
-			if "\t" not in line: continue
-			hz, py = line.split("\t", 1)
-			if self.isLang():
+		if 自.過時(): 自.更新()
+		自.音典.clear()
+		自.d.clear()
+		if not 自.tpath or not os.path.exists(自.tpath): return
+		for 行 in open(自.tpath,encoding="U8"):
+			行 = 行.strip()
+			if 行.startswith("#"): continue
+			if "\t" not in 行: continue
+			字, py = 行.split("\t", 1)
+			if 自.爲語():
 				js = ""
 				if "\t" in py: py, js = py.split("\t", 1)
-				if js and self.isLang():
-					js = self.normJS(js)
-				yd = getYD(py)
+				if js and 自.爲語():
+					js = 自.分註(js)
+				try:
+					yd = getYD(py)
+				except:
+					print("\t\t\t", 自.簡稱, py, js)
+					exit(1)
 				if yd and py.count("*") <= 1:
 					js = f"({yd}){js}"
 					py = py[:-1]
 				if re.match(r"^\([^()]*?\)$", js):
 					js = js[1:-1]
-				syd = re.sub(r"\(.*?\)","",py).strip(" *|")
+				syd = re.sub(r"\(.*?\)","",py).strip(" _`*")
 				if "-" not in syd:
-					self.syds[syd].add(hz)
+					自.音典[syd].add(字)
 				if js:
 					py += "{%s}" % js
 			else:
-				if self.isDictionary():
-					sep = "▲" if str(self) == "匯纂" else "\t"
+				if 自.字書:
+					sep = "▲" if 自.名 == "匯纂" else "\t"
 					py2, js = py.split(sep, 1)
-					py = ("\n\n" if self.d[hz] else "") + py2 + sep + self.normJS(js)
+					py = ("\n\n" if 自.d[字] else "") + py2 + sep + 自.分註(js)
+				elif 自.簡稱 in ("部件檢索","字形描述"):
+					py = 自.正部件(py)
 				py = py.replace("\t", "\n")
-			if py not in self.d[hz]:
-				self.d[hz].append(py)
-		passed = time() - start
-		logging.info(f"({self.count:5d}({self.unknownCount})-{self.sydCount:4d}-{self.syCount:4d}) {passed:6.3f} {self}")
+			if py not in 自.d[字]:
+				自.d[字].append(py)
+		# passed = time() - start
+		# logging.info(f"({自.count:5d}({自.框數})-{自.聲韻調數:4d}-{自.聲韻數:4d}) {passed:6.3f} {自}")
 	
-	def load(self, dicts):
-		self.read()
-		if not self.d: return
-		for hz, ybs in self.d.items():
-			if hz not in dicts:
-				dicts[hz] = {"漢字": hz}
-			dicts[hz][str(self)] = "\t".join(ybs)
+	def 加載(自, dicts):
+		自.讀()
+		if not 自.d: return
+		for 字, 音集 in 自.d.items():
+			if 字 not in dicts:
+				dicts[字] = {"漢字": 字}
+			dicts[字][自.名] = "\t".join(音集)
 	
-	def parse(self, fs):
-		return tuple(fs[:3])
+	def 析(自, 列):
+		return tuple(列[:3])
 
-	def format(self, line):
-		return line
+	def 統(自, 行):
+		行 = 行.replace(" ", " ")
+		return 行
 	
 	@property
-	def sep(self):
-		if self._sep: return self._sep
+	def sep(自):
+		if 自._sep: return 自._sep
 		sep = "\t"
-		spath = self.spath
+		spath = 自.spath
 		if spath.endswith(".csv"): sep = ","
 		elif spath.endswith(".tsv"): sep = "\t"
 		elif spath.endswith(".txt"): sep = " "
 		return sep
 
-	def update(self):
+	def 更新(自):
 		d = defaultdict(list)
-		sep = self.sep
-		skip = self.info.get("跳過行數", 0)
+		sep = 自.sep
+		skip = 自.info.get("跳過行數", 0)
 		lineno = 0
-		files = self._files if self._files else [self.spath]
+		files = 自._files if 自._files else [自.spath]
 		for spath in files:
-			for line in open(spath,encoding="U8"):
+			for 行 in open(自.全路徑(spath),encoding="U8"):
 				lineno += 1
 				if lineno <= skip: continue
-				if line.startswith('#') or line.startswith('"#') : continue
-				line = self.format(line)
-				fs = [i.strip('" \t') for i in line.strip('\n').split(sep)]
-				entries = self.parse(fs)
+				行 = 自.統(行)
+				if 行.startswith('#') : continue
+				列 = [i.strip() for i in 行.strip('\n').split(sep)]
+				entries = 自.析(列)
 				if not entries: continue
 				if type(entries) is tuple: entries = [entries]
-				for fs in entries:
-					if len(fs) <= 1: continue
-					if len(fs) >= 2:
-						hz, yb = fs[:2]
-						js = "\t".join(fs[2:])
-					if not hz or len(hz) != 1: continue
-					if not yb: continue
-					if self.isDialect() and isHZ(yb[0]): continue
-					p = f"{yb}\t{js}"
+				for 列 in entries:
+					if len(列) <= 1: continue
+					if len(列) >= 2:
+						字, 音 = 列[:2]
+						js = "\t".join(列[2:])
+					if not 字 or len(字) != 1: continue
+					if not 音: continue
+					if 自.爲方言():
+						if 爲字(音[0]): continue
+					p = f"{音}\t{js}"
 					p = p.strip()
-					if p not in d[hz]:
-						d[hz].append(p)
-		self.write(d)
+					if p not in d[字]:
+						d[字].append(p)
+		自.寫(d)
 
-	def splitSySd(self, syd):
-		if not syd: return "",""
-		tonesymbol = "⁰¹²³⁴⁵⁶"
-		tonemark = "˩˨˧˦˥"
-		for i in tonesymbol:
-			syd = syd.replace(i, str(tonesymbol.index(i)))
-		for i in tonemark:
-			syd = syd.replace(i, str(tonemark.index(i)+1))
-		sy = syd.rstrip("0123456789")
-		sd = syd[len(sy):]
-		return sy,sd
+	def 分音(自, 音):
+		if not 音: return "",""
+		調值 = "⁰¹²³⁴⁵⁶"
+		調號 = "˩˨˧˦˥"
+		for i in 調值:
+			音 = 音.replace(i, str(調值.index(i)))
+		for i in 調號:
+			音 = 音.replace(i, str(調號.index(i)+1))
+		聲韻 = 音.rstrip("-0123456789")
+		調 = 音[len(聲韻):]
+		return 聲韻,調
 
-	def dz2dl(self, sy, dz=None):
-		sy = sy.strip()
-		if dz is None:
-			if "/" in sy:
-				return "/".join(map(self.dz2dl, sy.split("/")))
-			sy,dz = self.splitSySd(sy)
-		if not dz: return sy
-		dl = ""
-		if dz not in self.toneMaps:
-			if dz == "0":
-				dl = dz
-			elif len(dz) == 1:
-				dz = dz + dz
-				if dz in self.toneMaps:
-					dl = self.toneMaps[dz]
+	def 轉調類(自, 聲韻):
+		聲韻 = 聲韻.strip()
+		if "/" in 聲韻:
+			return "/".join(map(自.轉調類, 聲韻.split("/")))
+		聲韻,調值 = 自.分音(聲韻)
+		if not 調值: return 聲韻
+		調類 = 自.僅轉調類(調值, 聲韻)
+		return 聲韻 + 調類
+
+	def 僅轉調類(自, 調值, 聲韻=""):
+		調類 = ""
+		if 調值 not in 自.調典:
+			if 調值 == "0":
+				調類 = 調值
+			elif len(調值) == 1:
+				調值 = 調值 + 調值
+				if 調值 in 自.調典:
+					調類 = 自.調典[調值]
 			else:
-				dl = "?"
+				調類 = ""
 		else:
-			dl = self.toneMaps[dz]
-		if sy and sy[-1] in "ptkʔ̚" and dz + "0" in self.toneMaps:
-			dl = self.toneMaps[dz + "0"]
-		return sy + dl
+			調類 = 自.調典[調值]
+		if 聲韻 and 聲韻[-1] in "ptkʔ̚" and 調值 + "0" in 自.調典:
+			調類 = 自.調典[調值 + "0"]
+		return 調類

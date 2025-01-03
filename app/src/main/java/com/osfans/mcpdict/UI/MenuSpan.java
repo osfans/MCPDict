@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import com.osfans.mcpdict.Entry;
 import com.osfans.mcpdict.ResultFragment;
 
-public class MenuSpan extends MyClickableSpan {
+public class MenuSpan extends ClickableSpan {
     Entry entry;
     public MenuSpan(Entry e) {
         super();

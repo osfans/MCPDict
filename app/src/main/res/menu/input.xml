@@ -1,0 +1,8 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:icon="@drawable/ic_keyboard"
+        android:title="@string/hz_input" />
+    <item
+        android:title="@string/yin_prompt" />
+</menu>

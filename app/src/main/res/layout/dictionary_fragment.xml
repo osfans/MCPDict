@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="6dp">
+    android:padding="@dimen/padding_size">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,23 +16,25 @@
             android:layout_height="match_parent"
             android:entries="@array/pref_entries_type"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/search_view"
+            app:layout_constraintEnd_toStartOf="@id/text_query"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.SearchView
+        <com.osfans.mcpdict.UI.SearchView
             android:id="@+id/search_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:queryHint="@string/search_hint" />
+            android:layout_weight="4">
 
-        <Button
+        </com.osfans.mcpdict.UI.SearchView>
+
+        <ImageButton
             android:id="@+id/button_fullscreen"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:background="@android:drawable/ic_menu_more"
-            android:backgroundTint="?android:attr/colorForeground" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_more"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?android:attr/colorForeground" />
     </LinearLayout>
 
     <LinearLayout
@@ -60,15 +62,18 @@
                     android:hint="@string/search_lang_hint"
                     android:singleLine="true"
                     android:textSize="16sp"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="@dimen/button_icon_size"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/button_lang_clear"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:background="@drawable/ic_spinner_caret"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_spinner_caret"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/text_search_lang"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -101,12 +106,6 @@
             android:id="@+id/layout_hz"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <Spinner
-                android:id="@+id/spinner_shape"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3" />
 
             <Spinner
                 android:id="@+id/spinner_charset"
@@ -184,16 +183,19 @@
                     android:hint="@string/custom_languages"
                     android:singleLine="true"
                     android:textSize="16sp"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="@dimen/button_icon_size"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/checkBox_output_table"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/button_custom_lang_clear"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:background="@drawable/ic_spinner_caret"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_spinner_caret"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/text_custom_lang"
                     app:layout_constraintTop_toTopOf="parent" />

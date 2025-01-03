@@ -1,12 +1,18 @@
 package com.osfans.mcpdict.Orth;
 
 import android.text.TextUtils;
+import android.widget.MultiAutoCompleteTextView;
+
+import com.osfans.mcpdict.DB;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class HanZi {
     public static final Map<Integer, Integer> compatibility = new HashMap<>();
+    public static final Map<String, String> bsCompatibility = new HashMap<>();
 
     public static boolean isUnknown(int unicode) {
         return unicode == 0x25A1; //□
@@ -38,6 +44,22 @@ public class HanZi {
         return isHz(hz.codePointAt(0));
     }
 
+    public static String cp2str(int codePoint) {
+        return String.valueOf(Character.toChars(codePoint));
+    }
+
+    public static String firstHz(String s) {
+        if (TextUtils.isEmpty(s)) return "";
+        int codePoint = s.codePointAt(0);
+        return cp2str(codePoint);
+    }
+
+    public static String lastHz(String s) {
+        if (TextUtils.isEmpty(s)) return "";
+        int codePoint = Character.codePointBefore(s, s.length());
+        return cp2str(codePoint);
+    }
+
     public static boolean isSingleHZ(String hz) {
         if (TextUtils.isEmpty(hz)) return false;
         return hz.codePoints().toArray().length == 1;
@@ -67,6 +89,14 @@ public class HanZi {
         return compatibility.getOrDefault(unicode, unicode);
     }
 
+    public static String getBSCompatibility(String s) {
+        Set<String> l = new HashSet<>();
+        for (int i: bsCompatibility.getOrDefault(s, s).codePoints().toArray()) {
+            l.add(cp2str(i));
+        }
+        return String.join(" OR ", l);
+    }
+
     public static String toHz(String input) {
         if (input.toUpperCase().startsWith("U+")) input = input.substring(2);
         int unicode = Integer.parseInt(input, 16);
@@ -75,7 +105,7 @@ public class HanZi {
 
     public static String toHz(int unicode) {
         unicode = getCompatibility(unicode);
-        return String.valueOf(Character.toChars(unicode));
+        return cp2str(unicode);
     }
 
     public static String toUnicodeHex(String hz) {
@@ -101,5 +131,66 @@ public class HanZi {
         else if (unicode >= 0x2EBF0 && unicode <= 0x2EE5F) ext = "I";
         if (!TextUtils.isEmpty(ext)) ext = "擴" + ext;
         return ext;
+    }
+
+    public static class Tokenizer implements MultiAutoCompleteTextView.Tokenizer {
+
+        private boolean isEnd(int codePoint) {
+            if (DB.isHzInputCode()) return true;
+            return !isHz(codePoint);
+        }
+
+        public int findTokenStart(CharSequence text, int cursor) {
+            if (DB.isHzInput()) return cursor;
+            int i = cursor;
+            boolean isHz = DB.isYinPrompt();
+            if (isHz) {
+                if (i > 1) {
+                    int codePoint = Character.codePointBefore(text, i);
+                    i -= Character.charCount(codePoint);
+                } else {
+                    i = 0;
+                }
+            }
+            else {
+                while (i > 0) {
+                    int codePoint = Character.codePointAt(text, i - 1);
+                    int n = Character.charCount(codePoint);
+                    if (isEnd(codePoint)) {
+                        i -= n;
+                    }
+                    else {
+                        i += n - 1;
+                        break;
+                    }
+                }
+            }
+            if (i < 0) i = 0;
+            while (i < cursor && text.charAt(i) == ' ') {
+                i++;
+            }
+            return i;
+        }
+
+        public int findTokenEnd(CharSequence text, int cursor) {
+            if (DB.isHzInput()) return cursor;
+            int i = cursor;
+            int len = text.length();
+
+            while (i < len) {
+                int codePoint = Character.codePointAt(text, i);
+                if (isEnd(codePoint)) {
+                    return i;
+                } else {
+                    i += Character.charCount(codePoint);
+                }
+            }
+
+            return len;
+        }
+
+        public CharSequence terminateToken(CharSequence text) {
+            return text;
+        }
     }
 }

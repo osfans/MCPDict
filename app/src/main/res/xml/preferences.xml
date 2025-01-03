@@ -1,9 +1,7 @@
-<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory android:title="@string/appearance">
         <EditTextPreference
-            android:defaultValue="@string/app_name"
             android:key="@string/pref_key_custom_title"
             android:title="@string/custom_title"
             app:useSimpleSummaryProvider="true" />
@@ -62,6 +60,13 @@
             android:entries="@array/pref_entries_mc_display"
             android:entryValues="@array/pref_values_mc_display"
             android:defaultValue="@array/pref_default_values_mc_display" />
+        <MultiSelectListPreference
+            app:useSimpleSummaryProvider="true"
+            android:key="@string/pref_key_zt_display"
+            android:title="@string/pref_title_zt_display"
+            android:entries="@array/pref_entries_zt_display"
+            android:entryValues="@array/pref_values_zt_display"
+            android:defaultValue="@array/pref_default_values_zt_display" />
         <MultiSelectListPreference
             app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_zyyy_display"

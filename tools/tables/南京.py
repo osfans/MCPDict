@@ -8,7 +8,7 @@ ljsm = {'g': 'k', 'd': 't', '': '', 'sh': 'ʂ', 'c': 'tsʰ', 'b': 'p', 'l': 'l',
 def py2yb(py):
 	py = re.sub("r([1-5])$", "ʅ\\1", py)
 	if py.startswith("ʅ"): py = "r" + py
-	#fs = re.findall(r"^([^aäüeiouyʅ1-9]+)?(.*)(\d)?$", py)
+	#列 = re.findall(r"^([^aäüeiouyʅ1-9]+)?(.*)(\d)?$", py)
 	sm = py[:2]
 	if sm not in ljsm: sm = py[0]
 	if sm not in ljsm: sm = ""
@@ -25,9 +25,9 @@ def py2yb(py):
 
 class 表(_表):
 
-	def parse(self, fs):
-		if len(fs) < 2: return
-		hz, py = fs[:2]
-		if len(hz)!=1 or py in "vw": return
+	def 析(自, 列):
+		if len(列) < 2: return
+		字, py = 列[:2]
+		if len(字)!=1 or py in "vw": return
 		yb = py2yb(py)
-		return hz, yb
+		return 字, yb

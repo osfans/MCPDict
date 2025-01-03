@@ -23,24 +23,26 @@ import java.util.Set;
 
 public class DB extends SQLiteAssetHelper {
 
-    private static final String DATABASE_NAME = "mcpdict.db";
-    private static final int DATABASE_VERSION = BuildConfig.VERSION_CODE;
+    private static final String DB_NAME = "mcpdict.db";
 
     // Must be the same order as defined in the string array "search_as"
 
     public static final String HZ = "漢字";
-    public static final String BH = "總筆畫數";
-    public static final String BS = "部首餘筆";
+    private static final String BH = "總筆畫數";
+    private static final String BS = "部首餘筆";
     public static final String SW = "說文";
-    public static final String GYHZ = "匯纂";
-    public static final String KX = "康熙";
-    public static final String HD = "漢大";
-    public static final String LF = "兩分";
-    public static final String ZX = "字形描述";
-    public static final String WBH = "五筆畫";
-    public static final String VA = "異體字";
-    public static final String VS = "字形變體";
-    public static final String FL = "分類";
+    private static final String GYHZ = "匯纂";
+    private static final String KX = "康熙";
+    private static final String HD = "漢大";
+    private static final String ZX = "字形描述";
+    private static final String LF = "兩分";
+    private static final String BJJS = "部件檢索";
+    private static final String WB_ = "五筆";
+    private static final String CJ_ = "倉頡";
+    private static final String SR = "山人碼LTS";
+    private static final String WBH = "五筆畫";
+    private static final String VA = "異體字";
+    private static final String FL = "分類";
 
     public static final String MAP = " \uD83C\uDF0F ";
     public static final String IS_FAVORITE = "is_favorite";
@@ -49,10 +51,12 @@ public class DB extends SQLiteAssetHelper {
     public static final String INDEX = "索引";
     public static final String LANGUAGE = "語言";
     public static final String LABEL = "簡稱";
+    public static final String SYLLABLES = "音節數";
 
     public static final String SG = "鄭張";
     public static final String BA = "白-沙";
     public static final String GY = "廣韻";
+    public static final String ZT = "中唐";
     public static final String ZYYY = "中原音韻";
     public static final String DGY = "東干語";
     public static final String CMN = "普通話";
@@ -63,8 +67,6 @@ public class DB extends SQLiteAssetHelper {
     public static final String JA_GO = "日語吳音";
     public static final String JA_KAN = "日語漢音";
     public static final String JA_OTHER = "日語其他";
-    public static final String JA_ = "日語";
-    public static final String WB_ = "五筆";
 
     public static String FQ = null;
     public static String ORDER = null;
@@ -76,32 +78,23 @@ public class DB extends SQLiteAssetHelper {
     public static final String PROVINCE = "省";
     public static final String RECOMMEND = "推薦人";
     public static final String EDITOR = "維護人";
-    public static final String ORDINAL = "序號";
     private static String[] DIVISIONS = null;
     private static String[] LABELS = null;
     private static String[] LANGUAGES = null;
     private static String[] SEARCH_COLUMNS = null;
 
     public static int COL_HZ;
-    public static int COL_BH;
-    public static int COL_BS;
-    public static int COL_SW;
-    public static int COL_KX;
-    public static int COL_GYHZ;
-    public static int COL_HD;
-    public static int COL_LF;
-    public static int COL_ZX;
-    public static int COL_WBH;
+    public static int COL_SW, COL_KX, COL_GYHZ, COL_HD;
+    public static int COL_ZX, COL_BJJS;
     public static int COL_VA;
-    public static int COL_VS;
     public static int COL_FIRST_DICT, COL_LAST_DICT;
     public static int COL_FIRST_LANG, COL_LAST_LANG;
     public static int COL_FIRST_INFO, COL_LAST_INFO;
     public static int COL_FIRST_SHAPE, COL_LAST_SHAPE;
 
-    public enum SEARCH_TYPE {
-        HZ, YIN, YI, DICTIONARY,
-    };
+    public enum SEARCH {
+        HZ, YIN, YI, DICT,
+    }
 
     public enum FILTER {
         ALL, ISLAND, HZ, CURRENT, RECOMMEND, CUSTOM, DIVISION, AREA, EDITOR
@@ -113,12 +106,14 @@ public class DB extends SQLiteAssetHelper {
     private static final String TABLE_NAME = "mcpdict";
     private static final String TABLE_INFO = "info";
 
-    private static String[] JA_COLUMNS = null;
-    private static String[] WB_COLUMNS = null;
+    private final static String[] JA_COLUMNS = new String[] {JA_KAN, JA_GO, JA_OTHER};
     private static String[] COLUMNS;
     private static String[] FQ_COLUMNS;
-    private static String[] DICT_COLUMNS;
+    private static String[] DICTIONARY_COLUMNS;
     private static String[] SHAPE_COLUMNS;
+    private static final String[] EDITOR_COLUMNS = new String[]{
+            "作者", "錄入人", "維護人"
+    };
     private static SQLiteDatabase db = null;
 
     public static void initialize(Context context) {
@@ -131,148 +126,176 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public DB(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        super(context, DB_NAME, null, BuildConfig.DB_VER);
         setForcedUpgrade();
-        // Uncomment the following statements to force a database upgrade during development
-        // SQLiteDatabase db = getWritableDatabase();
-        // db.setVersion(-1);
-        // db.close();
-        // db = getWritableDatabase();
+    }
+
+    private static String[] getMatchColumns(String lang, SEARCH searchType, boolean allowVariants) {
+        List<String> columns = new ArrayList<>();
+        if (lang.contentEquals(JA_OTHER))
+            columns.addAll(Arrays.asList(JA_COLUMNS));
+        else {
+            if (searchType == SEARCH.YI) {
+                String[] cols = getVisibleColumns();
+                if (cols.length <= 100) columns.addAll(Arrays.asList(cols));
+                else lang = TABLE_NAME;
+            }
+            if (!columns.contains(lang) && !columns.contains(TABLE_NAME)) columns.add(lang);
+        }
+        if (allowVariants) columns.add(VA);
+        return columns.toArray(new String[0]);
+    }
+
+    private static String getCharsetSelect(int matchClause) {
+        // Get options and settings
+        int charset = Pref.getInt(R.string.pref_key_charset);
+        if (charset == 0) return "";
+        String value = Pref.getStringArray(R.array.pref_values_charset)[charset];
+        String selection;
+        if (charset <= 5) {
+            selection = String.format(" AND `%s` IS NOT NULL", value);
+        } else if (matchClause == 1) {
+            selection = String.format(" AND `%s` MATCH '%s'", FL, value);
+        } else if (matchClause == 2) {
+            selection = String.format(" %s:%s", FL, value);
+        } else {
+            selection = String.format(" AND `%s` LIKE '%%%s%%'", FL, value);
+        }
+        return selection;
+    }
+
+    private static boolean isMatchBegins(String lang) {
+        return lang.startsWith(CJ_) || (lang.startsWith(WB_) && !lang.contentEquals(WBH)) || lang.contentEquals(SR);
+    }
+
+    public static boolean isHzParts(String lang) {
+        return lang.contentEquals(BJJS) || lang.contentEquals(ZX);
+    }
+
+    private static List<String> normInput(String lang, String input) {
+        List<String> keywords = new ArrayList<>();
+        if (lang.contentEquals(BS)) input = input.replace("-", "f");
+        else if (isHzParts(lang)) {
+            keywords.add(Orthography.normParts(input));
+            return keywords;
+        }
+        else if (isMatchBegins(lang)) input += "*";
+        else if (lang.contentEquals(KOR)) { // For Korean, put separators around all hangul
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < input.length(); i++) {
+                char c = input.charAt(i);
+                if (Korean.isHangul(c)) {
+                    sb.append(" ").append(c).append(" ");
+                }
+                else {
+                    sb.append(c);
+                }
+            }
+            input = sb.toString();
+        }
+        int cantoneseSystem = Pref.getStrAsInt(R.string.pref_key_cantonese_romanization, 0);
+        for (String token : input.split("[\\s,]+")) {
+            if (TextUtils.isEmpty(token)) continue;
+            // Canonicalization
+            switch (lang) {
+                case CMN: token = Mandarin.canonicalize(token); break;
+                case HK: token = Cantonese.canonicalize(token, cantoneseSystem); break;
+                case KOR:
+                    token = Korean.canonicalize(token); break;
+                case VI: token = Vietnamese.canonicalize(token); break;
+                case JA_KAN:
+                case JA_GO:
+                case JA_OTHER:
+                    token = Japanese.canonicalize(token); break;
+                default:
+                    token = token.toLowerCase(Locale.US);
+                    break;
+            }
+            if (token == null) continue;
+            List<String> allTones = null;
+            if ((token.endsWith("?") || !Tones.hasTone(token)) && hasTone(lang)) {
+                if (token.endsWith("?")) token = token.substring(0, token.length()-1);
+                allTones = switch (lang) {
+                    case GY -> MiddleChinese.getAllTones(token);
+                    case CMN -> Mandarin.getAllTones(token);
+                    case HK -> Cantonese.getAllTones(token);
+                    case VI -> Vietnamese.getAllTones(token);
+                    default -> Tones.getAllTones(token, lang);
+                };
+            }
+            if (allTones != null) {
+                keywords.addAll(allTones);
+            }
+            else {
+                keywords.add(token);
+            }
+        }
+        return keywords;
     }
 
     public static Cursor search() {
         // Search for one or more keywords, considering mode and options
         String input = Pref.getInput();
         String lang = Pref.getLabel();
-        String shape = Pref.getShape();
         String dict = Pref.getDict();
-        int type = Pref.getInt(R.string.pref_key_type);
+        SEARCH searchType = SEARCH.values()[Pref.getInt(R.string.pref_key_type)];
+        boolean isAll = Pref.getFilter() == FILTER.ALL;
 
-        if (input.startsWith("-")) input = input.substring(1);
-
-        if (!TextUtils.isEmpty(shape) && type < 2) lang = shape;
-        if (type == 3) {
-            type = 2;
+        if (input.startsWith("-")) input = input.substring(1); //may crash sqlite
+        if (searchType == SEARCH.DICT) {
+            searchType = SEARCH.YI;
             lang = TextUtils.isEmpty(dict) ? TABLE_NAME : DB.getLabelByLanguage(dict);
         }
 
-        // Get options and settings
-        int charset = Pref.getInt(R.string.pref_key_charset);
-        boolean mcOnly = charset == 1;
-        boolean kxOnly = charset == 3;
-        boolean hdOnly = charset == 4;
-        boolean swOnly = charset == 2;
-        int cantoneseSystem = Pref.getStrAsInt(R.string.pref_key_cantonese_romanization, 0);
-
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
-        if (type == 2){ //yi
+        if (searchType == SEARCH.YI){ //yi
             if (HanZi.isHz(input)) {
-                String hzs = DisplayHelper.normInput(input);
+                String hzs = Orthography.normWords(input);
                 if (!TextUtils.isEmpty(hzs)) keywords.add(hzs);
             }
+            if (isAll) lang = TABLE_NAME;
         }
         else if (HanZi.isBH(input)) lang = BH;
         else if (HanZi.isBS(input)) {
             lang = BS;
-            input = input.replace("-", "f");
-        } else if (!TextUtils.isEmpty(shape)) { //WB, CJ, LF
-            // not search hz
         } else if (HanZi.isHz(input)) {
             lang = HZ;
         } else if (HanZi.isUnicode(input)) {
             input = HanZi.toHz(input);
             lang = HZ;
         } else if (HanZi.isPY(input) && !isLang(lang)) lang = CMN;
-        if (type == 1 && isHzMode(lang)) type = 0;
-        if (isHzMode(lang) && type == 0) {     // Each character is a query
+        if (isHzMode(lang) && searchType == SEARCH.YIN) searchType = SEARCH.HZ;
+        if (isHzMode(lang) && searchType == SEARCH.HZ) {     // Each character is a query
             for (int unicode : input.codePoints().toArray()) {
                 if (!HanZi.isHz(unicode)) continue;
                 String hz = HanZi.toHz(unicode);
                 if (keywords.contains(hz)) continue;
                 keywords.add(hz);
             }
-        } else if (type < 2) {                          // Each contiguous run of non-separator and non-comma characters is a query
-            if (lang.contentEquals(KOR)) { // For Korean, put separators around all hangul
-                StringBuilder sb = new StringBuilder();
-                for (int i = 0; i < input.length(); i++) {
-                    char c = input.charAt(i);
-                    if (Korean.isHangul(c)) {
-                        sb.append(" ").append(c).append(" ");
-                    }
-                    else {
-                        sb.append(c);
-                    }
-                }
-                input = sb.toString();
-            }
-            for (String token : input.split("[\\s,]+")) {
-                if (TextUtils.isEmpty(token)) continue;
-                token = token.toLowerCase(Locale.US);
-                // Canonicalization
-                switch (lang) {
-                    case CMN: token = Mandarin.canonicalize(token); break;
-                    case HK: token = Cantonese.canonicalize(token, cantoneseSystem); break;
-                    case KOR:
-                        token = Korean.canonicalize(token); break;
-                    case VI: token = Vietnamese.canonicalize(token); break;
-                    case JA_KAN:
-                    case JA_GO:
-                    case JA_OTHER:
-                        token = Japanese.canonicalize(token); break;
-                    default:
-                        break;
-                }
-                if (token == null) continue;
-                List<String> allTones = null;
-                if ((token.endsWith("?") || !Tones.hasTone(token)) && hasTone(lang)) {
-                    if (token.endsWith("?")) token = token.substring(0, token.length()-1);
-                    allTones = switch (lang) {
-                        case GY -> MiddleChinese.getAllTones(token);
-                        case CMN -> Mandarin.getAllTones(token);
-                        case HK -> Cantonese.getAllTones(token);
-                        case VI -> Vietnamese.getAllTones(token);
-                        default -> Tones.getAllTones(token, lang);
-                    };
-                }
-                if (allTones != null) {
-                    keywords.addAll(allTones);
-                }
-                else {
-                    keywords.add(token);
-                }
-            }
+        } else if (searchType == SEARCH.HZ || searchType == SEARCH.YIN) {                          // Each contiguous run of non-separator and non-comma characters is a query
+            keywords.addAll(normInput(lang, input));
         }
         if (keywords.isEmpty()) return null;
 
         // Columns to search
-        String[] columns = lang.contentEquals(JA_OTHER) ? JA_COLUMNS : new String[] {lang};
-        if (lang.contentEquals(WBH)) columns = WB_COLUMNS;
+        boolean allowVariants = isHzMode(lang) && Pref.getBool(R.string.pref_key_allow_variants, true) && (SEARCH.HZ == searchType);
+        String[] columns = getMatchColumns(lang, searchType, allowVariants);
 
         // Build inner query statement (a union query returning the id's of matching Chinese characters)
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         List<String> queries = new ArrayList<>();
         List<String> args = new ArrayList<>();
-        boolean allowVariants = isHzMode(lang) && Pref.getBool(R.string.pref_key_allow_variants, true) && type < 2;
+
         for (int i = 0; i < keywords.size(); i++) {
             String key = keywords.get(i);
             String variant = allowVariants ? ("'" + key + "'") : "null";
             String[] projection = {"rowid AS _id", i + " AS rank", "offsets(mcpdict) AS vaIndex", variant + " AS variants"};
-            String sel = " MATCH ?";
-            if (key.startsWith("%") && key.endsWith("%")) {
-                sel = " LIKE ?";
-            }
-            for (String column : columns) {
-                String col = "`" + column + "`";
-                queries.add(qb.buildQuery(projection, col + sel, null, null, null, null));
+            String sel = (key.startsWith("%") && key.endsWith("%")) ? "LIKE" : "MATCH";
+            for (String col : columns) {
+                queries.add(qb.buildQuery(projection, String.format("`%s` %s ?", col, sel), null, null, null, null));
                 args.add(key);
-
-                if (allowVariants) {
-                    col = VA;
-                    queries.add(qb.buildQuery(projection, col + sel, null, null, null, null));
-                    args.add(key);
-                }
             }
         }
         String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);
@@ -283,18 +306,7 @@ public class DB extends SQLiteAssetHelper {
         String[] projection = {"v.*", "_id",
                    "v.漢字 AS `漢字`", "variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
-        String selection = "u._id = v.rowid";
-        if (mcOnly) {
-            selection += String.format(" AND `%s` IS NOT NULL", GY);
-        } else if (swOnly) {
-            selection += String.format(" AND `%s` IS NOT NULL", SW);
-        } else if (kxOnly) {
-            selection += String.format(" AND `%s` IS NOT NULL", KX);
-        } else if (hdOnly) {
-            selection += String.format(" AND `%s` IS NOT NULL", HD);
-        } else if (charset > 0) {
-            selection += String.format(" AND `%s` MATCH '%s'", FL, Pref.getStringArray(R.array.pref_values_charset)[charset]);
-        }
+        String selection = "u._id = v.rowid" + getCharsetSelect(1);
         query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", "0,100");
 
         // Search
@@ -312,6 +324,46 @@ public class DB extends SQLiteAssetHelper {
         String query = qb.buildQuery(projection, selection, null, null, null, "0,100");
         String[] args = {hz};
         return db.rawQuery(query, args);
+    }
+
+    public static Cursor getInputCursor(String input) {
+        if (TextUtils.isEmpty(input) || isHzInput()) return null;
+        String lang = Pref.getShape();
+        boolean isYinPrompt = isYinPrompt();
+        if (isYinInput() || isYinPrompt()) lang = Pref.getLabel();
+        if (TextUtils.isEmpty(lang) || lang.contentEquals(HZ)) lang = CMN;
+        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+        qb.setTables(TABLE_NAME);
+        String[] projection = {HZ, lang, "rowid as _id"};
+        String selection = "";
+        String field = isYinPrompt ? HZ : lang;
+        if (isYinPrompt) {
+            String charset = getCharsetSelect(2);
+            String va = "";
+            if (Pref.getBool(R.string.pref_key_allow_variants, true)) {
+                va = " OR " + VA + ":" + input;
+            }
+            if (charset.contains("AND")) {
+                selection = String.format("%s MATCH \"%s:%s %s\" %s", TABLE_NAME, field, input, va, charset);
+            } else {
+                selection = String.format("%s MATCH \"%s:%s %s%s\"", TABLE_NAME, field, input, va, charset);
+            }
+            selection += String.format(" AND %s is not null", lang);
+            String query = qb.buildQuery(projection, selection, null, null, lang, "0,100");
+            return db.rawQuery(query, null);
+        } else {
+            String charset = getCharsetSelect(0);
+            if (TextUtils.isEmpty(charset)) {
+                selection = String.format("%s MATCH ?", field);
+            } else if (charset.contains("AND")) {
+                selection = String.format("%s MATCH ? %s", field, charset);
+            }
+            String query = qb.buildQuery(projection, selection, null, null, lang, "0,100");
+            List<String> keywords = normInput(field, input);
+            if (keywords.isEmpty()) return null;
+            String arg = String.join(" OR ", keywords);
+            return db.rawQuery(query, new String[]{arg});
+        }
     }
 
     public static void initFQ() {
@@ -333,28 +385,14 @@ public class DB extends SQLiteAssetHelper {
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
         COLUMNS = cursor.getColumnNames();
-        ArrayList<String> arrayList = new ArrayList<>();
-        for(String s: COLUMNS) {
-            if (s.startsWith(JA_)) arrayList.add(s);
-        }
-        JA_COLUMNS = arrayList.toArray(new String[0]);
-        arrayList.clear();
-        for(String s: COLUMNS) {
-            if (s.startsWith(WB_)) arrayList.add(s);
-        }
-        WB_COLUMNS = arrayList.toArray(new String[0]);
         COL_HZ = getColumnIndex(HZ);
-        COL_BH = getColumnIndex(BH);
-        COL_BS = getColumnIndex(BS);
         COL_SW = getColumnIndex(SW);
-        COL_LF = getColumnIndex(LF);
         COL_ZX = getColumnIndex(ZX);
+        COL_BJJS = getColumnIndex(BJJS);
         COL_VA = getColumnIndex(VA);
-        COL_VS = getColumnIndex(VS);
         COL_HD = getColumnIndex(HD);
         COL_GYHZ = getColumnIndex(GYHZ);
         COL_KX = getColumnIndex(KX);
-        COL_WBH = getColumnIndex(WBH);
         COL_FIRST_DICT = COL_SW;
         COL_LAST_DICT = COL_HD;
         COL_FIRST_LANG = COL_LAST_DICT + 1;
@@ -364,12 +402,22 @@ public class DB extends SQLiteAssetHelper {
         COL_FIRST_SHAPE = COL_VA + 2;
         COL_LAST_SHAPE = COL_LAST_INFO;
         cursor.close();
-        arrayList.clear();
+        ArrayList<String> arrayList = new ArrayList<>();
         for(int col = COL_FIRST_DICT; col <= COL_LAST_DICT; col++) {
             arrayList.add(getLanguageByLabel(COLUMNS[col]));
         }
-        DICT_COLUMNS = arrayList.toArray(new String[0]);
+        DICTIONARY_COLUMNS = arrayList.toArray(new String[0]);
         arrayList.clear();
+        arrayList.add(Pref.getString(R.string.yin_code));
+        arrayList.add(Pref.getString(R.string.yin_input));
+        arrayList.add(GY);
+        arrayList.add(CMN);
+        arrayList.add(HK);
+        arrayList.add(TW);
+        arrayList.add(DGY);
+        arrayList.add(KOR);
+        arrayList.add(VI);
+        arrayList.add(Pref.getString(R.string.shape_code));
         arrayList.addAll(Arrays.asList(COLUMNS).subList(COL_FIRST_SHAPE, COL_LAST_SHAPE + 1));
         SHAPE_COLUMNS = arrayList.toArray(new String[0]);
     
@@ -385,9 +433,9 @@ public class DB extends SQLiteAssetHelper {
         cursor.close();
     }
 
-    public static String[] getDictColumns() {
+    public static String[] getDictionaryColumns() {
         initArrays();
-        return DICT_COLUMNS;
+        return DICTIONARY_COLUMNS;
     }
 
     public static String[] getShapeColumns() {
@@ -422,15 +470,11 @@ public class DB extends SQLiteAssetHelper {
         return query(LABEL, String.format("%s and rowid > 1", selection), args);
     }
 
-    private static String[] queryLanguage(String selection) {
-        return query(LANGUAGE, selection, null);
-    }
-
     public static Cursor getLanguageCursor(CharSequence constraint) {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
         String[] projection = {LANGUAGE, "rowid as _id"};
-        String query = qb.buildQuery(projection, LANGUAGE + INDEX + " LIKE ? and 序號 is not null",  null, null, ORDER, null);
+        String query = qb.buildQuery(projection, LANGUAGE + INDEX + " LIKE ? and 音節數 is not null",  null, null, ORDER, null);
         Cursor cursor = db.rawQuery(query, new String[]{"%"+constraint+"%"});
         if (cursor.getCount() > 0) return cursor;
         cursor.close();
@@ -440,7 +484,7 @@ public class DB extends SQLiteAssetHelper {
     public static String[] getLanguages() {
         initArrays();
         if (LANGUAGES == null) {
-            LANGUAGES = queryLanguage(ORDINAL + " is not null");
+            LANGUAGES = query(LANGUAGE, SYLLABLES + " is not null", null);
         }
         return LANGUAGES;
     }
@@ -485,6 +529,14 @@ public class DB extends SQLiteAssetHelper {
         return i < 0 ? "" : COLUMNS[i];
     }
 
+    private static String matchColumns(String[] cols, String value) {
+        ArrayList<String> array = new ArrayList<>();
+        for (String s: cols) {
+            array.add(String.format("%s:%s", s, value));
+        }
+        return String.join(" OR ", array);
+    }
+
     public static String[] getVisibleColumns() {
         FILTER filter = Pref.getFilter();
         String label = Pref.getLabel();
@@ -508,7 +560,7 @@ public class DB extends SQLiteAssetHelper {
             case EDITOR -> {
                 String value = Pref.getStr(R.string.pref_key_editor, "");
                 if (TextUtils.isEmpty(value)) break;
-                return queryLabel(String.format("info MATCH '%s'", value));
+                return queryLabel(String.format("info MATCH '%s'", matchColumns(EDITOR_COLUMNS, value)));
             }
             case DIVISION -> {
                 String division = Pref.getDivision();
@@ -643,11 +695,17 @@ public class DB extends SQLiteAssetHelper {
         if (TextUtils.isEmpty(language) || Pref.getFilter() == FILTER.HZ) language = HZ;
         String intro = TextUtils.isEmpty(language) ? "" : getFieldByLanguage(language, "說明").replace("\n", "<br>");
         if (language.contentEquals(HZ)) {
-            intro = String.format(Locale.getDefault(), "%s%s<br>%s", Pref.getString(R.string.version), BuildConfig.VERSION_NAME, intro);
+            StringBuilder sb = new StringBuilder();
+            String[] fields = new String[] {"版本","字數"};
+            for (String field: fields) {
+                sb.append(String.format(Locale.getDefault(), "%s：%s<br>", field, getFieldByLanguage(language, field)));
+            }
+            sb.append(intro);
+            intro = sb.toString();
         } else {
             StringBuilder sb = new StringBuilder();
             sb.append(String.format(Locale.getDefault(), "%s%s<br>", Pref.getString(R.string.name), language));
-            ArrayList<String> fields = new ArrayList<>(Arrays.asList(ORDINAL,"地點","經緯度", "作者", "錄入人", "維護人","來源", "參考文獻","文件名","版本","字數","□數", "音節數","不帶調音節數",""));
+            ArrayList<String> fields = new ArrayList<>(Arrays.asList("地點","經緯度", "作者", "錄入人", "維護人","來源", "參考文獻","文件名","版本","字數","□數", SYLLABLES,"不帶調音節數",""));
             fields.addAll(Arrays.asList(FQ_COLUMNS));
             fields.add("");
             for (String field: fields) {
@@ -671,12 +729,12 @@ public class DB extends SQLiteAssetHelper {
         initArrays();
         if (TextUtils.isEmpty(language)) language = Pref.getLanguage();
         String intro = _getIntro(language);
-        if (language.contentEquals(HZ)) {
+        if (TextUtils.isEmpty(language) || language.contentEquals(HZ) || Pref.getFilter() == FILTER.HZ) {
             StringBuilder sb = new StringBuilder();
             sb.append(intro);
-            sb.append("<br><h2>已收錄語言</h2><table border=1 cellspacing=0>");
+            sb.append("<br><h2>已收錄語言</h2><table border=1 cellSpacing=0>");
             sb.append("<tr>");
-            String[] fields = new String[]{LANGUAGE, "字數", "□數", "音節數", "不帶調音節數"};
+            String[] fields = new String[]{LANGUAGE, "字數", "□數", SYLLABLES, "不帶調音節數"};
             for (String field: fields) {
                 sb.append(String.format("<th>%s</th>", field));
             }
@@ -707,29 +765,27 @@ public class DB extends SQLiteAssetHelper {
         if (TextUtils.isEmpty(s)) return null;
         try {
             return new JSONObject(s);
-        } catch (JSONException e) {
-            e.printStackTrace();
+        } catch (JSONException ignored) {
         }
         return null;
     }
 
-    public static Double getLocation(String lang, int pos) {
-        String location = getFieldByLabel(lang, "經緯度");
+    public static GeoPoint parseLocation(String location) {
         if (TextUtils.isEmpty(location)) return null;
-        return Double.parseDouble(location.split(",")[pos]);
-    }
-
-    private static Double getLat(String lang) {
-        return getLocation(lang, 1);
-    }
-
-    private static Double getLong(String lang) {
-        return getLocation(lang, 0);
+        location = location.replace("[", "").replace("]", "").strip();
+        String[] ss = location.split(", ?");
+        if (ss.length != 2) return null;
+        Double[] ds = new Double[2];
+        int i = 0;
+        for (String s: ss) {
+            ds[i++] = Double.parseDouble(s);
+        }
+        return new GeoPoint(ds[1], ds[0]);
     }
 
     public static GeoPoint getPoint(String lang) {
-        if (getLat(lang) == null) return null;
-        return new GeoPoint(getLat(lang), getLong(lang));
+        String location = getFieldByLabel(lang, "經緯度");
+        return parseLocation(location);
     }
 
     public static int getSize(String lang) {
@@ -783,7 +839,8 @@ public class DB extends SQLiteAssetHelper {
             .replace("U", "統")
             .replace("S", "大")
             .replace("B", "英")
-            .replace("2003", "UCS2003");
+            .replace("2003", "UCS2003")
+            .replace(" ", "");
         return s;
     }
 
@@ -795,10 +852,28 @@ public class DB extends SQLiteAssetHelper {
         for (int j = DB.COL_FIRST_INFO; j <= DB.COL_LAST_INFO; j++) {
             s = cursor.getString(j);
             if (TextUtils.isEmpty(s)) continue;
-            if (j == COL_ZX) s = formatIDS(s);
+            if (j == COL_ZX || j == COL_BJJS) s = formatIDS(s);
             s = s.replace(",", " ");
             sb.append(String.format("<p>【%s】%s</p>", getColumn(j), s));
         }
         return sb.toString();
+    }
+
+    public static boolean isHzInput() {
+        String shape = Pref.getShape();
+        return TextUtils.isEmpty(shape) || shape.contentEquals(Pref.getString(R.string.hz_input));
+    }
+
+    public static boolean isYinPrompt() {
+        return Pref.getShape().contentEquals(Pref.getString(R.string.yin_prompt));
+    }
+
+    public static boolean isYinInput() {
+        return Pref.getShape().contentEquals(Pref.getString(R.string.yin_input));
+    }
+
+    public static boolean isHzInputCode() {
+        String shape = Pref.getShape();
+        return isHzInput() || isYinPrompt() || shape.contentEquals(BJJS) || shape.contentEquals(LF) || shape.contentEquals(ZX) || shape.contentEquals(BS);
     }
 }

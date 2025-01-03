@@ -41,6 +41,10 @@ public class Pref {
         return getContext().getResources().getStringArray(id);
     }
 
+    public static void remove(int key) {
+        get().edit().remove(getContext().getString(key)).apply();
+    }
+
     public static void putBool(int key, boolean value) {
          get().edit().putBoolean(getContext().getString(key), value).apply();
     }
@@ -103,9 +107,7 @@ public class Pref {
     }
 
     public static String getShape() {
-        String shape = getStr(R.string.pref_key_shape);
-        if (shape.contentEquals(getString(R.string.hz_shapes))) shape = "";
-        return shape;
+        return getStr(R.string.pref_key_shape, getString(R.string.hz_input));
     }
 
     public static void putShape(String value) {
@@ -175,6 +177,7 @@ public class Pref {
         if (id == R.string.pref_key_zyyy_display) defaultList = getStringArray(R.array.pref_default_values_zyyy_display);
         else if (id == R.string.pref_key_dgy_display) defaultList = getStringArray(R.array.pref_default_values_dgy_display);
         else if (id == R.string.pref_key_mc_display) defaultList = getStringArray(R.array.pref_default_values_mc_display);
+        else if (id == R.string.pref_key_zt_display) defaultList = getStringArray(R.array.pref_default_values_zt_display);
         try {
             Set<String> defaultSet = new HashSet<>(Arrays.asList(defaultList));
             Set<String> set = getStrSet(id, defaultSet);

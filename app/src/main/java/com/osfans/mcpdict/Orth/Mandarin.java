@@ -152,14 +152,15 @@ public class Mandarin {
                 .replaceFirst("([zcs])i", "$1ɿ").replaceFirst("([zcs]h|r)i", "$1ʅ")
                 .replace("w", "u").replace("uu", "u")
                 .replace("un", "uen").replace("ui", "uei").replace("iu", "iou")
-                .replaceFirst("([iy])e$", "$1ɛ").replace("ea", "ɛ").replaceFirst("e$", "ɤ").replaceFirst("e(ng)$", "ɤ$1").replace("er", "ɚ").replace("en", "ən")
-                .replace("ao", "au").replaceFirst("([iy])an$", "$1ɛn")
+                .replaceFirst("([iy])e$", "$1ɛ").replace("ea", "ɛ").replaceFirst("e$", "ɤ").replace("er", "ɚ").replace("en", "ən")
+                .replace("ao", "au").replaceFirst("ian$", "iɛn")
                 .replace("ong", "uŋ").replace("ng", "ŋ");
         s = s.replace("p", "pʰ").replace("t", "tʰ").replace("k", "kʰ")
                 .replace("b", "p").replace("d", "t").replace("g", "k")
                 .replace("zh", "tʂ").replace("ch", "tʂʰ").replace("sh", "ʂ").replace("r", "ɻ")
                 .replace("z", "ts").replace("c", "tsʰ")
                 .replace("j", "tɕ").replace("q", "tɕʰ").replace("x", "ɕ").replace("h", "x");
+        s = s.replaceFirst("^x([mnŋ])$", "h$1").replaceFirst("^h?[mn]$", "$0\u0329").replaceFirst("^h?ŋ$", "$0\u030D"); // 成音節鼻音
         return Orthography.formatTone(s, tone + "", DB.CMN);
     }
 

@@ -4,13 +4,13 @@ from tables._表 import 表 as _表
 import re
 
 class 表(_表):
-	def __init__(self):
-		self.hzs_to_skip = 'ˉˊˇˋ˙·'
-		self.hz_repls = {
+	def __init__(自):
+		自.hzs_to_skip = 'ˉˊˇˋ˙·'
+		自.hz_repls = {
 			'⿱宀⿰⿱土示又': '㝮',
 			'〈忄柬〉': '𱞫',
 		}
-		self.py_repls = [
+		自.py_repls = [
 			('·(.*)', r'\g<1>0'),  # 輕聲
 			('ˊ', '2'), ('ˇ', '3'), ('ˋ', '4'), ('˙', '5'),
 			('(?<![0-5])$', '1'),
@@ -36,11 +36,11 @@ class 表(_表):
 			('0', ''),  # 輕聲
 		]
 
-	def parse(self, fs):
-		if len(fs) < 2: return
-		hz, py = fs[:2]
-		if hz in self.hzs_to_skip: return
-		hz = self.hz_repls.get(hz, hz)
-		for pattern, repl in self.py_repls:
+	def 析(自, 列):
+		if len(列) < 2: return
+		字, py = 列[:2]
+		if 字 in 自.hzs_to_skip: return
+		字 = 自.hz_repls.get(字, 字)
+		for pattern, repl in 自.py_repls:
 			py = re.sub(pattern, repl, py)
-		return hz, py
+		return 字, py

@@ -34,6 +34,7 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.DrawableMarginSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.GestureDetector;
@@ -57,8 +58,8 @@ import com.osfans.mcpdict.Favorite.FavoriteDialogs;
 import com.osfans.mcpdict.Orth.HanZi;
 import com.osfans.mcpdict.Orth.Orthography;
 import com.osfans.mcpdict.UI.MenuSpan;
-import com.osfans.mcpdict.UI.MyMapView;
-import com.osfans.mcpdict.UI.MyWebView;
+import com.osfans.mcpdict.UI.MapView;
+import com.osfans.mcpdict.UI.WebView;
 import com.osfans.mcpdict.UI.PopupSpan;
 import com.osfans.mcpdict.UI.TextDrawable;
 import com.osfans.mcpdict.Util.FontUtil;
@@ -75,10 +76,11 @@ import java.util.Objects;
 
 public class ResultFragment extends Fragment {
 
+    private static final String TAG = "ResultFragment";
     private View selfView;
     private View mScroll;
     private TextView mTextView;
-    private MyWebView mWebView;
+    private WebView mWebView;
     private final boolean showFavoriteButton;
     private final Entry mEntry = new Entry();
     private boolean showMenu;
@@ -115,7 +117,7 @@ public class ResultFragment extends Fragment {
                     }
                     break;
                 case MSG_MAP:
-                    new MyMapView(getContext(), mEntry.hz).show();
+                    new MapView(getContext(), mEntry.hz).show();
                     break;
                 case MSG_FULLSCREEN: {
                     removeCallbacksAndMessages(null);
@@ -343,7 +345,7 @@ public class ResultFragment extends Fragment {
 
     private String getCopyText(String col) {
         if (col.contentEquals(HZ)) return mEntry.hz;
-        if (!col.contentEquals(ALL_LANGUAGES)) return mEntry.raw;
+        if (!col.contentEquals(ALL_LANGUAGES)) return mEntry.getSingleRaw();
         return mRaws.get(mEntry.hz);
     }
 
@@ -370,19 +372,23 @@ public class ResultFragment extends Fragment {
                   }
                   @font-face {
                     font-family: p0;
-                    src: url('file:///android_res/font/p0.otf')format('opentype');
+                    src: url('file:///android_res/font/p0.otf') format('opentype');
                   }
                   @font-face {
                     font-family: p2;
-                    src: url('file:///android_res/font/p2.otf')format('opentype');
+                    src: url('file:///android_res/font/p2.otf') format('opentype');
                   }
                   @font-face {
                     font-family: p3;
-                    src: url('file:///android_res/font/p3.otf')format('opentype');
+                    src: url('file:///android_res/font/p3.otf') format('opentype');
                   }
                   @font-face {
                     font-family: pua;
                     src: url('file:///android_res/font/pua.ttf');
+                  }
+                  @font-face {
+                    font-family: nyushu;
+                    src: url('file:///android_res/font/nyushu.ttf');
                   }
                   details summary::-webkit-details-marker {display: none}
                   details summary::-moz-list-bullet {font-size: 0}
@@ -410,10 +416,10 @@ public class ResultFragment extends Fragment {
         if (!feat.isEmpty()) sb.append(String.format("font-feature-settings: %s;\n", feat));
         sb.append("      font-family: ");
         if (FontUtil.fontExFirst()) {
-            sb.append(String.format("p0, p2, p3, pua, %s; }\n", FontUtil.getDefaultFont()));
+            sb.append(String.format("nyushu, p0, p2, p3, pua, %s; }\n", FontUtil.getDefaultFont()));
         } else {
             sb.append(FontUtil.useFontTone() ? "tone," : "ipa,");
-            sb.append(String.format("%s, p0, p2, p3, pua; }\n", FontUtil.getDefaultFont()));
+            sb.append(String.format("%s, nyushu, p0, p2, p3, pua; }\n", FontUtil.getDefaultFont()));
         }
         sb.append("""
                               .ipa {
@@ -431,7 +437,7 @@ public class ResultFragment extends Fragment {
                               }
                               .ivs {
                                 font-size: 1.8em;
-                                font-family: p0, p2, p3, pua;
+                                font-family: nyushu, p0, p2, p3, pua;
                               }
                               .y {
                                  color: #1E90FF;
@@ -655,7 +661,7 @@ public class ResultFragment extends Fragment {
             int count = cursor.getCount();
             String[] cols = DB.getVisibleColumns();
             int index = 0;
-            boolean isCurrent = Pref.getFilter() == DB.FILTER.CURRENT;
+            int linesCount = 0;
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 hzs.append(hz);
@@ -679,29 +685,32 @@ public class ResultFragment extends Fragment {
                 raws.append(String.format("%s %s\n", hz, unicode));
                 // yb
                 SpannableStringBuilder ssb2 = new SpannableStringBuilder();
-                if (HanZi.isUnknown(hz) && (cols.length >= 30 || isCurrent)) {
-                    String lang = Pref.getLabel();
-                    if (!DB.isLang(lang)) continue;
-                    int i = getColumnIndex(lang);
-                    s = cursor.getString(i);
-                    if (TextUtils.isEmpty(s)) continue;
-                    CharSequence cs = HtmlCompat.fromHtml(DisplayHelper.formatUnknownIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
-                    n = ssb2.length();
-                    String label = getLabel(i);
-                    Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
-                    DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
-                    ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    String raw = DisplayHelper.getRawText(s);
-                    Entry e = new Entry(hz, lang, raw, bFavorite, comment);
-                    ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    ssb2.append(cs);
-                    ssb2.append("\n");
-                    raws.append(formatReading(label, raw));
+                if (HanZi.isUnknown(hz)) {
+                    for (String lang: cols) {
+                        int i = getColumnIndex(lang);
+                        s = cursor.getString(i);
+                        if (TextUtils.isEmpty(s)) continue;
+                        CharSequence html = DisplayHelper.formatUnknownIPA(lang, s);
+                        if (TextUtils.isEmpty(html)) continue;
+                        CharSequence cs = HtmlCompat.fromHtml(html.toString(), HtmlCompat.FROM_HTML_MODE_COMPACT);
+                        n = ssb2.length();
+                        String label = getLabel(i);
+                        Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
+                        DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
+                        ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        String raw = DisplayHelper.getRawText(s);
+                        Entry e = new Entry(hz, lang, raw, bFavorite, comment);
+                        ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        ssb2.append(cs);
+                        ssb2.append("\n");
+                        raws.append(formatReading(label, raw));
+                    }
                 } else {
                     for (String lang : cols) {
                         int i = getColumnIndex(lang);
                         s = cursor.getString(i);
                         if (TextUtils.isEmpty(s)) continue;
+                        linesCount++;
                         CharSequence cs = HtmlCompat.fromHtml(DisplayHelper.formatIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
                         n = ssb2.length();
                         String label = getLabel(i);
@@ -744,7 +753,7 @@ public class ResultFragment extends Fragment {
                     }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 }
                 ssb.append("\n");
-                if (index >= 5 && cols.length >= 30) continue;
+                if (linesCount > 1000) continue;
                 index++;
                 ssb.append(ssb2);
             }
@@ -771,6 +780,7 @@ public class ResultFragment extends Fragment {
             mScroll.setScrollY(0);
         } else {
             FontUtil.setTypeface(mTextView);
+            Log.d(TAG, "setData begin");
             new AsyncTask<Void, Void, CharSequence>() {
                 @Override
                 protected CharSequence doInBackground(Void... params) {
@@ -784,6 +794,7 @@ public class ResultFragment extends Fragment {
                     mTextView.setText(text);
                     mTextView.setVisibility(View.VISIBLE);
                     mScroll.setScrollY(0);
+                    Log.d(TAG, "setData finished");
                 }
             }.execute();
         }

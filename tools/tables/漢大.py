@@ -1,47 +1,45 @@
 #!/usr/bin/env python3
 
-from tables._表 import 表 as _表, getCompatibilityVariants
+from tables._表 import 表 as _表
 from collections import defaultdict
 import re
 
 class 表(_表):
-	full = "漢語大字典"
-	short = "漢大"
-	note = "來源：<a href=https://github.com/zi-phoenicia/hydzd/>GitHub</a>"
-	dictionary = True
+	全稱 = "漢語大字典"
+	說明 = "來源：<a href=https://github.com/zi-phoenicia/hydzd/>GitHub</a>"
+	字書 = True
 	
-	def update(self):
+	def 更新(自):
 		d = defaultdict(list)
 		hd = defaultdict(dict)
 		numbers="❶❷❸❹❺❻❼❽❾❿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿"
-		kCompatibilityVariants = getCompatibilityVariants()
-		for line in open(self.spath,encoding="U8"):
-			fs = line.strip('\n').split('\t')
-			if len(fs[0]) <= 2:
-				hzs,py,js,page = fs[:4]
-				hz = hzs[0]
-				if hz in kCompatibilityVariants and js.startswith("同"): continue
-				if page not in hd[hz]:
-					hd[hz][page] = dict()
+		for 行 in open(自.spath,encoding="U8"):
+			列 = 行.strip('\n').split('\t')
+			if len(列[0]) <= 2:
+				字組,py,js,page = 列[:4]
+				字 = 字組[0]
+				if 字 in 自.kCompatibilityVariants and js.startswith("同"): continue
+				if page not in hd[字]:
+					hd[字][page] = dict()
 				if py == "None":
 					py = ""
 				py = py.rstrip("5")
-				if len(hzs) > 1:
-					py = f"{py} ({hzs})"
-				if py in hd[hz][page]:
-					hd[hz][page][py].append(js)
+				if len(字組) > 1:
+					py = f"{py} ({字組})"
+				if py in hd[字][page]:
+					hd[字][page][py].append(js)
 				else:
-					hd[hz][page][py] = [js]
-		for hz in hd:
-			for page in hd[hz]:
-				for py in hd[hz][page]:
-					if len(hd[hz][page][py])!=1:
-						hd[hz][page][py] = [numbers[count]+js for count,js in enumerate(hd[hz][page][py])]
-		for hz in hd:
-			for page in hd[hz]:
-				js = "\t\t".join(["%s\t%s" % (py, "\t".join(hd[hz][page][py])) for py in hd[hz][page]])
+					hd[字][page][py] = [js]
+		for 字 in hd:
+			for page in hd[字]:
+				for py in hd[字][page]:
+					if len(hd[字][page][py])!=1:
+						hd[字][page][py] = [numbers[count]+js for count,js in enumerate(hd[字][page][py])]
+		for 字 in hd:
+			for page in hd[字]:
+				js = "\t\t".join(["%s\t%s" % (py, "\t".join(hd[字][page][py])) for py in hd[字][page]])
 				js = re.sub("=(.[GTJKUXV]?)", "“\\1”", js).strip()
-				if hz not in d:
-					d[hz] = []
-				d[hz].append("%s\t%s"%(page, js))
-		self.write(d)
+				if 字 not in d:
+					d[字] = []
+				d[字].append("%s\t%s"%(page, js))
+		自.寫(d)
