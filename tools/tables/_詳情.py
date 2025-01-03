@@ -13,7 +13,7 @@ FeatureCollection = {
 	"features": []
 }
 
-def 爲舊():
+def 過時():
 	if not os.path.exists(tpath): return True
 	classtime = os.path.getmtime(__file__)
 	stime = os.path.getmtime(spath)
@@ -94,8 +94,8 @@ def normSource(books):
 			return books.value
 	return None
 
-def load(省):
-	if not 省 and not 爲舊():
+def 加載(省):
+	if not 省 and not 過時():
 		return json.load(open(tpath,encoding="U8"))
 	d = dict()
 	wb = load_workbook(spath)

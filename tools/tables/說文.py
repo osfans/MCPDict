@@ -4,11 +4,9 @@ from tables._表 import 表 as _表
 
 class 表(_表):
 	全稱 = "說文解字"
-	簡稱 = "說文"
 	網站 = "說文解字線上搜索"
 	網址 = "http://www.shuowen.org/?kaishu=%s"
 	說明 = "來源：<a href=https://github.com/shuowenjiezi/shuowen/>說文解字網站數據</a>"
-	ybTrimSpace = False
 	字書 = True
 	
 	def 析(自, 列):

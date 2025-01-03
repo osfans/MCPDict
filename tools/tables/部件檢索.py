@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from tables._表 import 表 as _表
-from tables.__init__ import isHZ, isCompatible
+from tables.__init__ import 爲字, 爲兼容字
 from collections import defaultdict
 import re, os
 
@@ -136,10 +136,9 @@ puas = """#	{1}	bottom of 廌焉舃 (F2A5 󰓰)	⿹⿺㇉一灬
 """
 
 class 表(_表):
-	_file = "部件檢索.htm"
-	簡稱 = "部件檢索"
+	文件名 = "部件檢索.htm"
 	說明 = "來源：https://fgwang.blogspot.com/2023/10/unicode-151.html"
-	patches = {"□": "!冂一", "〇": "@"}
+	補丁 = {"□": "!冂一", "〇": "@"}
 
 	def normList(自, l, vt, d):
 		nl = []
@@ -175,7 +174,7 @@ class 表(_表):
 				自.pua[b] = a
 		vt = {k: v for k, v in vt.items() if ord(k) >= 0xF0000}
 		for 字 in 自.kCompatibilityVariants:
-			if isCompatible(字):
+			if 爲兼容字(字):
 				vt[字] = 自.kCompatibilityVariants[字]
 		vt["󺤈"] = "⺈田儿"
 		vt["󰉻"] = "甶儿"

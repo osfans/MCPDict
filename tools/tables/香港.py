@@ -6,7 +6,7 @@ from tables import hex2chr
 class 表(_表):
 	網站 = "粵語審音配詞字庫"
 	網址 = "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s"
-	patches = {"㛟": "wun6", "𡃜": "kok3", "鿽": "zaa3"}
+	補丁 = {"㛟": "wun6", "𡃜": "kok3", "鿽": "zaa3"}
 	爲音 = False
 
 	def 析(自, 列):
@@ -15,7 +15,7 @@ class 表(_表):
 		py = py.replace(" ", "-")
 		return 字, py
 
-	def patch(自, d):
+	def 修訂(自, d):
 		for 行 in open(自.全路徑("Unihan_Readings.txt"),encoding="U8"):
 			行 = 行.strip()
 			if not 行.startswith("U"): continue
@@ -27,4 +27,4 @@ class 表(_表):
 				for y in yin:
 					if y not in d[字]:
 						d[字].append(y)
-		_表.patch(自, d)
+		_表.修訂(自, d)

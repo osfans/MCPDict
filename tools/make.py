@@ -13,7 +13,7 @@ start = time()
 
 dicts = defaultdict(dict)
 langs = getLangs(dicts, argv, 省=args.省)
-keys = [f"{lang}" for lang in langs]
+keys = [f"{lang.簡稱}" for lang in langs]
 fields = [f"`{i}`" for i in keys]
 CREATE = 'CREATE VIRTUAL TABLE mcpdict USING fts3 (%s)' % (",".join(fields))
 INSERT = 'INSERT INTO mcpdict VALUES (%s)'% (','.join('?' * len(keys)))

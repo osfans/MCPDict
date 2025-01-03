@@ -4,7 +4,7 @@ from tables._縣志 import 表 as _表
 import re
 
 class 表(_表):
-	def patch(自, d):
+	def 修訂(自, d):
 		for 行 in open(自.全路徑("建德寿昌文读.tsv"),encoding="U8"):
 			行 = 行.strip('\n')
 			列 = [i.strip() for i in 行.split('\t')]

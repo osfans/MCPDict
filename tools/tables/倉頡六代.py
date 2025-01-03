@@ -3,10 +3,10 @@
 from tables._表 import 表 as _表
 
 class 表(_表):
-	_file = "cangjie6.dict.yaml"
+	文件名 = "cangjie6.dict.yaml"
 	簡稱 = "倉六"
 	說明 = "來源：https://github.com/LEOYoon-Tsaw/Cangjie6"
-	patches = {"□": "bu"}
+	補丁 = {"□": "bu"}
 
 	def 統(自, 行):
 		if 行.startswith("#") and "\t" in 行: return 行[1:]

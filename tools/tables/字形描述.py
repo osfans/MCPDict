@@ -5,7 +5,7 @@ import re
 
 class 表(_表):
 	tones = None
-	_file = "IDS.txt"
+	文件名 = "IDS.txt"
 	sep = "\t"
 	說明 = """IDS描述字符: ⿰⿱⿲⿳⿴⿵⿶⿷⿸⿹⿺⿻⿼⿽㇯⿾⿿〾？
 來源: https://babelstone.co.uk/CJK/IDS.TXT
