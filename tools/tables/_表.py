@@ -318,8 +318,11 @@ class 表:
 			自.誤.append(f"{音} 音節重複")
 		return 音
 
+	def 檢查同音字(自):
+		return 自.分區 and 自.簡稱 not in ("普通話",) and not 自.分區.startswith("歷史音") and not 自.分區.startswith("域外方音")
+
 	def 爲方言(自):
-		return 自.名 in ("老國音","党項") or (自.爲語() and not 自.分區.startswith("歷史音"))
+		return 自.簡稱 in ("老國音","党項") or (自.爲語() and not 自.分區.startswith("歷史音"))
 
 	def 分註(自, 註):
 		if not 註: return ""
@@ -394,15 +397,14 @@ class 表:
 		return 1 if 數 > 0 else 0
 
 	@property
-	def 聲韻調數(自):
+	def 音節數(自):
 		return len(自.音典)
 
 	@property
 	def 聲韻數(自):
-		return len(set(map(lambda x:x.split("/")[0].rstrip("1234567890"), 自.音典.keys())))
+		return len(set(map(lambda x:x.rstrip("1234567890"), 自.音典.keys())))
 
 	def 讀(自):
-		start = time()
 		if 自.過時(): 自.更新()
 		自.音典.clear()
 		自.d.clear()
@@ -413,37 +415,35 @@ class 表:
 			if "\t" not in 行: continue
 			字, py = 行.split("\t", 1)
 			if 自.爲語():
-				js = ""
-				if "\t" in py: py, js = py.split("\t", 1)
-				if js and 自.爲語():
-					js = 自.分註(js)
+				註 = ""
+				if "\t" in py: py, 註 = py.split("\t", 1)
+				if 註 and 自.爲語():
+					註 = 自.分註(註)
 				try:
 					yd = getYD(py)
 				except:
-					print("\t\t\t", 自.簡稱, py, js)
+					print("\t\t\t", 自.簡稱, py, 註)
 					exit(1)
 				if yd and py.count("*") <= 1:
-					js = f"({yd}){js}"
+					註 = f"({yd}){註}"
 					py = py[:-1]
-				if re.match(r"^\([^()]*?\)$", js):
-					js = js[1:-1]
-				syd = re.sub(r"\(.*?\)","",py).strip(" _`*")
-				if "-" not in syd:
-					自.音典[syd].add(字)
-				if js:
-					py += "{%s}" % js
+				if re.match(r"^\([^()]*?\)$", 註):
+					註 = 註[1:-1]
+				音 = re.sub(r"\(.*?\)","",py).strip(" _`*")
+				if "-" not in 音:
+					自.音典[音.split("/", 1)[0]].add(字)
+				if 註:
+					py += "{%s}" % 註
 			else:
 				if 自.字書:
 					sep = "▲" if 自.名 == "匯纂" else "\t"
-					py2, js = py.split(sep, 1)
-					py = ("\n\n" if 自.d[字] else "") + py2 + sep + 自.分註(js)
+					py2, 註 = py.split(sep, 1)
+					py = ("\n\n" if 自.d[字] else "") + py2 + sep + 自.分註(註)
 				elif 自.簡稱 in ("部件檢索","字形描述"):
 					py = 自.正部件(py)
 				py = py.replace("\t", "\n")
 			if py not in 自.d[字]:
 				自.d[字].append(py)
-		# passed = time() - start
-		# logging.info(f"({自.count:5d}({自.框數})-{自.聲韻調數:4d}-{自.聲韻數:4d}) {passed:6.3f} {自}")
 	
 	def 加載(自, dicts):
 		自.讀()

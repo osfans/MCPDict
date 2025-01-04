@@ -6,6 +6,7 @@ from importlib import import_module
 import tables._詳情
 from pypinyin import pinyin, Style
 from collections import defaultdict
+from itertools import combinations
 from opencc import OpenCC
 
 SOURCE = "data"
@@ -154,6 +155,14 @@ def getLangs(dicts, 參數, 省=None):
 	推薦人 = defaultdict(int)
 	維護人 = defaultdict(int)
 	keys = None
+	同音字頻 = defaultdict(int)
+	同音字頻表 = os.path.exists("同音字頻.tsv")
+	if 同音字頻表:
+		t = open("同音字頻.tsv", "r", encoding="U8")
+		for line in t:
+			字, 頻 = line.strip().split("\t")
+			同音字頻[字] = int(頻)
+		t.close()
 	t = open("warnings.txt", "w", encoding="U16")
 	for mod in mods:
 		if mod in 詳情:
@@ -214,12 +223,33 @@ def getLangs(dicts, 參數, 省=None):
 				if 人:
 					維護人[人] += 1
 			數 += 1
+			if 語.檢查同音字():
+				if 同音字頻表:
+					for 音, 字組 in 語.音典.items():
+						if "□" in 字組: 字組.remove("□")
+						for 字甲 in 字組:
+							字頻 = 0
+							字組乙 = set(字組)
+							字組乙.remove(字甲)
+							n = len(字組乙)
+							if n < 2: continue
+							for 字乙 in 字組乙:
+								字頻 += 同音字頻["".join(sorted((字甲, 字乙)))]
+							if 字頻 < n:
+								語.誤.append(f"{字甲}可能不讀{音}")
+				else:
+					for 字組 in 語.音典.values():
+						if "□" in 字組: 字組.remove("□")
+						if len(字組) < 2: continue
+						for 項 in combinations(字組, 2):
+							雙字 = "".join(sorted(項))
+							同音字頻[雙字] += 1
 			if 語.誤:
 				all_editors = ",".join(editor)
 				語.全稱 = 語.info["語言"]
 				print(f"{語.全稱}（{語}）-{語.文件名}-{all_editors}", file=t)
-				for 調 in 語.誤:
-					print(f"\t{調}", file=t)
+				for 誤 in 語.誤:
+					print(f"\t{誤}", file=t)
 		else:
 			語 = import_module(f"tables.{mod}").表()
 			d = dict()
@@ -231,10 +261,10 @@ def getLangs(dicts, 參數, 省=None):
 			語.加載(dicts)
 		語.info["字數"] = 語.字數
 		語.info["□數"] = 語.框數 if 語.框數 else None
-		聲韻調數 = 語.聲韻調數
+		音節數 = 語.音節數
 		聲韻數 = 語.聲韻數
-		語.info["音節數"] = 聲韻調數 if 聲韻調數 else None
-		語.info["不帶調音節數"] = 聲韻數 if 聲韻數 and 聲韻數 != 聲韻調數 else None
+		語.info["音節數"] = 音節數 if 音節數 else None
+		語.info["不帶調音節數"] = 聲韻數 if 聲韻數 and 聲韻數 != 音節數 else None
 		語.info["網站"] = 語.網站
 		語.info["網址"] = 語.網址
 		lang_t = 語.info["語言"]
@@ -249,6 +279,12 @@ def getLangs(dicts, 參數, 省=None):
 		if not keys: keys = 語.info.keys()
 		語組.append(語)
 	t.close()
+	if not 同音字頻表:
+		t = open("同音字頻.tsv", "w", encoding="U8")
+		for i, j in 同音字頻.items():
+			if j > 1:
+				t.write(f"{i}\t{j}\n")
+		t.close()
 	字 = 語組[0]
 	for 項 in keys:
 		if 項 not in 字.info: 字.info[項] = None

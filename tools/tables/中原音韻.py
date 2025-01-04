@@ -44,7 +44,3 @@ class 表(_表):
 		for 字 in 字組:
 			l.append((字, 音組, js))
 		return l
-
-	@property
-	def 聲韻調數(自):
-		return len(set(map(lambda x:x.split("/")[0], 自.音典.keys())))

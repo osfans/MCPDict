@@ -16,9 +16,5 @@ class 表(_表):
 		return 字, 音, 註
 
 	@property
-	def 聲韻調數(自):
-		return len(set(map(lambda x:x.split("/")[0], 自.音典.keys())))
-
-	@property
 	def 聲韻數(自):
-		return len(set(map(lambda x:x.split("/")[0].rstrip("qh"), 自.音典.keys())))
+		return len(set(map(lambda x:x.rstrip("qh"), 自.音典.keys())))
