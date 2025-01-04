@@ -794,12 +794,8 @@ public class DB extends SQLiteAssetHelper {
         return Integer.parseInt(s);
     }
 
-    private static String getLangType(String lang) {
-        return getFieldByLabel(lang, FIRST_FQ);
-    }
-
     public static boolean isLang(String lang) {
-        return !TextUtils.isEmpty(getLangType(lang)) && !lang.contentEquals(HZ);
+        return !TextUtils.isEmpty(getFieldByLabel(lang, "方言島")) && !lang.contentEquals(HZ);
     }
 
     public static String[] getFqColumns() {
