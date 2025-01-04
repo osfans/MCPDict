@@ -168,6 +168,8 @@ def getLangs(dicts, 參數, 省=None):
 			except Exception as e:
 				print(f"\t\t\t{e} {mod}")
 				continue
+			if d.pop("是否有人在做") != "已做":
+				print(f"{語} 不是已做")
 			if "繁" not in d["繁簡"]: 語.simplified = 2
 			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 			if "聯表列名" in d:

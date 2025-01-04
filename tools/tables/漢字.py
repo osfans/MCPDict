@@ -17,6 +17,7 @@ class 表(_表):
 	網站 = "漢字音典在線版"
 	網址 = "https://mcpdict.sourceforge.io/cgi-bin/search.py?字=%s"
 	說明 = get_note()
+	簡稱 = "漢字"
 
 	def 讀(自):
 		return dict()
