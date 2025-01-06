@@ -6,8 +6,8 @@
 丈	tsaŋ6	
 三	san1	
 上	saŋ6	
-下	xa3	白
-下	ɕia6	白
+下	xa3-	
+下	ɕia6-	
 不	pu7	
 与	y3	
 丐	kai5	
@@ -28,7 +28,7 @@
 喪	saŋ1	
 个	ko5	
 丫	ŋa1	
-丫	ia1	文
+丫	ia1=	
 中	tsoŋ1	
 丰	xoŋ1	
 串	tɕʰyan5	
@@ -114,7 +114,7 @@
 以	i3	
 儀	i2	
 們	mp5	
-仰	iaŋ2	文
+仰	iaŋ2=	
 仰	ŋaŋ3	訓讀
 仲	tsoŋ5	
 件	tɕiɛn6	
@@ -152,7 +152,7 @@
 佃	tiɛn6	
 但	tan6	
 位	uei6	
-低	ti1	文
+低	ti1=	
 住	tɕy6	
 佐	tso3	
 佑	iəu6	
@@ -227,8 +227,8 @@
 催	tsʰei1	
 傲	ŋau5	
 傻	sa3	
-像	ɕiaŋ6	文
-像	tɕiaŋ6	白
+像	tɕiaŋ6-	
+像	ɕiaŋ6=	
 僚	liau2	
 僧	sp1	
 僵	tɕiaŋ1	
@@ -297,8 +297,8 @@
 凉	liaŋ2	
 凋	tiau1	
 凌	lin2	
-減	tɕiɛn3	文
-減	kan3	白
+減	kan3-	
+減	tɕiɛn3=	
 湊	tsʰəu5	
 凝	lin2	
 几	tɕi3	
@@ -433,8 +433,8 @@
 廳	tʰin1	
 历	li7	
 厲	li7	
-壓	ia7	文
-壓	ŋa7	白
+壓	ŋa7-	
+壓	ia7=	
 厭	iɛn5	
 廁	tsʰe7	
 厘	li2	
@@ -536,8 +536,8 @@
 咕	ku3	
 咨	tsɿ1	
 咩	mie6	
+咬	ŋau3-	
 咬	iau3	
-咬	ŋau3	白
 咯	kʰa3	
 咳	kʰe1	
 咸	xan2	
@@ -549,8 +549,8 @@
 哆	to1	
 哈	xa1	
 響	ɕiaŋ3	
-啞	ia3	文
-啞	ŋa3	白
+啞	ŋa3-	
+啞	ia3=	
 哥	ko1	
 哪	la3	
 哭	kʰu7	
@@ -641,8 +641,8 @@
 坤	kʰuən1	
 坦	tʰaŋ3	
 坪	pʰin2	
-坯	pʰi1	文
-坯	pʰei1	白
+坯	pʰei1-	
+坯	pʰi1=	
 坳	iəu1	
 垂	tɕʰyei2	
 垃	la1	
@@ -909,8 +909,8 @@
 峯	xoŋ1	
 崇	tsʰoŋ2	
 崔	tsʰei1	
-崖	ia2	文
-崖	ŋa2	白
+崖	ŋa2-	
+崖	ia2=	
 崩	poŋ5	
 崽	tsai3	
 嵩	soŋ1	
@@ -1176,8 +1176,8 @@
 擾	ŋau3	
 扳	pan3	
 扶	fu6	
-批	pʰi1	文
-批	pʰei1	白
+批	pʰei1-	
+批	pʰi1=	
 找	tsau3	
 技	tɕi6	
 抄	tsʰau1	
@@ -1198,8 +1198,8 @@
 搶	tɕʰiaŋ3	
 護	fu6	
 報	pau5	
-披	pʰi1	文
-披	pʰei1	白
+披	pʰei1-	
+披	pʰi1=	
 抬	tʰai2	
 抱	pau6	
 抵	ti3	
@@ -1364,8 +1364,8 @@
 敦	tp1	
 敬	tɕin5	
 數	səu3	
-敲	tɕʰiau1	文
-敲	kʰau1	白
+敲	kʰau1-	
+敲	tɕʰiau1=	
 整	tsp3	
 敷	fu1	
 文	uən2	
@@ -1510,7 +1510,7 @@
 枯	kʰu1	
 架	tɕia5	
 枷	ka1	
-枷	tɕia1	文
+枷	tɕia1=	
 枸	kəu3	
 柄	pin3	
 柏	pe7	
@@ -1551,8 +1551,8 @@
 桌	tso7	
 桐	tʰoŋ2	
 桑	saŋ1	
-椏	ia1	文
-椏	ŋa1	白
+椏	ŋa1-	
+椏	ia1=	
 橋	tɕʰiau2	
 樺	xua2	
 槳	tɕiaŋ3	
@@ -1754,7 +1754,7 @@
 濤	tʰau1	
 澇	lau1	
 潤	yn6	
-澗	tɕiɛn7	
+澗	tɕiɛn7=	
 漲	tsaŋ3	
 澀	se7	
 涮	ɕyan5	
@@ -1897,8 +1897,8 @@
 版	pan3	
 牌	pʰai2	
 牒	tie6	
-牙	ia2	文
-牙	ŋa2	白
+牙	ŋa2-	
+牙	ia2=	
 牛	liəu2	
 牡	mau3	
 牢	lau1	
@@ -2079,17 +2079,18 @@
 眨	tsa3	
 眶	kʰuaŋ1	
 眷	tɕyan6	
-眼	iɛn3	文
-眼	ŋan3	白
+眼	ŋan3-	
+眼	iɛn3=	
 着	tso6	
 着	tɕy5	显～
 睜	tsp1	
-睛	tɕin6	
+睛	tɕin1	
+睛	tɕin6	变读
 睡	ɕyei5	
 督	təu1	
 睬	tsʰai3	
-瞎	ɕia7	文
-瞎	xa7	白
+瞎	xa7-	
+瞎	ɕia7=	
 瞑	min2	
 瞒	man2	
 瞧	tɕʰiau2	
@@ -2377,7 +2378,7 @@
 羣	tɕʰyn2	
 羹	kp1	
 羽	y3	
-翁	ŋoŋ7	
+翁	ŋoŋ1	
 翅	tsʰɿ5	
 翹	tɕʰiau1	
 翠	tsʰei5	
@@ -2529,8 +2530,8 @@
 花	xua1	
 芳	faŋ1	
 芹	tɕʰin2	
-芽	ia2	文
-芽	ŋa2	白
+芽	ŋa2-	
+芽	ia2=	
 葦	uei3	
 莧	xan6	
 蒼	in1	
@@ -2691,8 +2692,8 @@
 行	ɕin2	
 行	xaŋ2	
 銜	ɕiɛn2	
-街	tɕie1	文
-街	kai1	白
+街	kai1-	
+街	tɕie1=	
 衙	ia2	
 衡	xp5	
 衣	i1	
@@ -2763,8 +2764,8 @@
 議	i6	
 訊	tɕʰyn5	
 記	tɕi5	
-講	tɕiaŋ3	文
-講	kaŋ3	白
+講	kaŋ3-	
+講	tɕiaŋ3=	
 許	ɕy3	
 訛	uo2	
 論	lp1	
@@ -2810,12 +2811,12 @@
 誼	i2	
 諜	tie6	
 謊	xuaŋ3	
-諫	tɕiɛn7	
+諫	tɕiɛn7=	
 謂	uei7	
 讒	tsʰan2	
 諺	iɛn2	
-謎	mi2	文
-謎	mei2	白
+謎	mei2-	
+謎	mi2=	
 謝	ɕie6	
 謠	iau2	
 謗	paŋ6	
@@ -2946,7 +2947,7 @@
 輯	tɕi7	
 輸	ɕy1	
 轅	yan2	
-轄	ɕia7	文
+轄	ɕia7=	
 轍	tsʰe7	
 辛	ɕin1	
 辭	tsʰɿ2	
@@ -2967,7 +2968,7 @@
 近	tɕin6	
 還	xai2	
 還	fan2	～原
-進	tɕin6	
+進	tɕin5	
 遠	yan3	
 違	uei2	
 連	liɛn2	
@@ -2976,8 +2977,8 @@
 迥	tɕyn3	
 迫	pʰe7	
 述	ɕy5	
-迷	mi2	文
-迷	mei2	白
+迷	mei2-	
+迷	mi2=	
 迹	tɕi7	
 追	tɕyei1	
 退	tʰei5	
@@ -3133,15 +3134,15 @@
 門	mp5	
 閂	ɕyan1	
 閃	san3	
+閉	pei5-	
 閉	pi7	
-閉	pei5	白
 問	uən6	
 闖	tɕʰyaŋ3	
 閏	yn6	
 闲	ɕiɛn2	
-間	tɕiɛn7	文
-間	kan1	白
-間	tɕiɛn1	～断
+間	kan1-	
+間	tɕiɛn7=	
+間	tɕiɛn1=	～断
 悶	mp6	
 閘	tsa5	
 鬧	lau6	
@@ -3339,8 +3340,8 @@
 鴉	ŋa1	
 鴉	ia1	
 鸕	ləu2	
-鴨	ia7	文
-鴨	ŋa7	白
+鴨	ŋa7-	
+鴨	ia7=	
 鴦	iaŋ1	
 鴰	ua1	
 鴿	ko7	

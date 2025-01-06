@@ -223,8 +223,8 @@ def getLangs(dicts, 參數, 省=None):
 				if 人:
 					維護人[人] += 1
 			數 += 1
-			if 語.檢查同音字():
-				if 同音字頻表:
+			if 同音字頻表:
+				if 語.檢查同音字() and 語.字數 < 10000:
 					for 音, 字組 in 語.音典.items():
 						if "□" in 字組: 字組.remove("□")
 						for 字甲 in 字組:
@@ -235,15 +235,15 @@ def getLangs(dicts, 參數, 省=None):
 							if n < 2: continue
 							for 字乙 in 字組乙:
 								字頻 += 同音字頻["".join(sorted((字甲, 字乙)))]
-							if 字頻 < n:
+							if 字頻 <= n * 2:
 								語.誤.append(f"{字甲}可能不讀{音}")
-				else:
-					for 字組 in 語.音典.values():
-						if "□" in 字組: 字組.remove("□")
-						if len(字組) < 2: continue
-						for 項 in combinations(字組, 2):
-							雙字 = "".join(sorted(項))
-							同音字頻[雙字] += 1
+			elif 語.音節數 > 0:
+				for 字組 in 語.音典.values():
+					if "□" in 字組: 字組.remove("□")
+					if len(字組) < 2: continue
+					for 項 in combinations(字組, 2):
+						雙字 = "".join(sorted(項))
+						同音字頻[雙字] += 1
 			if 語.誤:
 				all_editors = ",".join(editor)
 				語.全稱 = 語.info["語言"]
