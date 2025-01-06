@@ -166,6 +166,7 @@ class 表:
 	爲音 = True
 	音列 = None
 	音典 = defaultdict(set)
+	聲韻典 = defaultdict(set)
 	d = defaultdict(list)
 	__mod = None
 	誤 = []
@@ -402,11 +403,12 @@ class 表:
 
 	@property
 	def 聲韻數(自):
-		return len(set(map(lambda x:x.rstrip("1234567890"), 自.音典.keys())))
+		return len(自.聲韻典)
 
 	def 讀(自):
 		if 自.過時(): 自.更新()
 		自.音典.clear()
+		自.聲韻典.clear()
 		自.d.clear()
 		if not 自.tpath or not os.path.exists(自.tpath): return
 		for 行 in open(自.tpath,encoding="U8"):
@@ -420,18 +422,23 @@ class 表:
 				if 註 and 自.爲語():
 					註 = 自.分註(註)
 				try:
-					yd = getYD(py)
+					異讀 = getYD(py)
 				except:
 					print("\t\t\t", 自.簡稱, py, 註)
 					exit(1)
-				if yd and py.count("*") <= 1:
-					註 = f"({yd}){註}"
+				if 異讀 and py.count("*") <= 1:
+					註 = f"({異讀}){註}"
 					py = py[:-1]
 				if re.match(r"^\([^()]*?\)$", 註):
 					註 = 註[1:-1]
 				音 = re.sub(r"\(.*?\)","",py).strip(" _`*")
+				音 = 音.split("/", 1)[0]
 				if "-" not in 音:
-					自.音典[音.split("/", 1)[0]].add(字)
+					自.音典[音].add(字)
+					繁註 = s2t(註.replace(" ", ""))
+					if "訓" not in 繁註 and "(又)" not in 繁註 and "口語" not in 繁註 and "合音" not in 繁註 and "語流" not in 繁註 and "音變" not in 繁註 and "連讀" not in 繁註 and "存疑" not in 繁註 and "地方字" not in 繁註 and "地名" not in 繁註 and "俗" not in 繁註 and 字 != "□":
+						音 = re.split(r"\d", 音)[0]
+						自.聲韻典[音].add(字)
 				if 註:
 					py += "{%s}" % 註
 			else:

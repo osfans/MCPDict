@@ -225,21 +225,19 @@ def getLangs(dicts, 參數, 省=None):
 			數 += 1
 			if 同音字頻表:
 				if 語.檢查同音字() and 語.字數 < 10000:
-					for 音, 字組 in 語.音典.items():
-						if "□" in 字組: 字組.remove("□")
+					for 音, 字組 in 語.聲韻典.items():
+						if len(字組) < 2: continue
 						for 字甲 in 字組:
 							字頻 = 0
 							字組乙 = set(字組)
 							字組乙.remove(字甲)
 							n = len(字組乙)
-							if n < 2: continue
 							for 字乙 in 字組乙:
 								字頻 += 同音字頻["".join(sorted((字甲, 字乙)))]
-							if 字頻 <= n * 2:
+							if 字頻 < 1.8 * n:
 								語.誤.append(f"{字甲}可能不讀{音}")
 			elif 語.音節數 > 0:
-				for 字組 in 語.音典.values():
-					if "□" in 字組: 字組.remove("□")
+				for 字組 in 語.聲韻典.values():
 					if len(字組) < 2: continue
 					for 項 in combinations(字組, 2):
 						雙字 = "".join(sorted(項))
