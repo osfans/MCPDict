@@ -257,9 +257,13 @@ def getLangs(dicts, 參數, 省=None):
 				for 音, 字組 in 語.音表.items():
 					if "□" in 字組: 字組.remove("□")
 					聲韻, 調 = 語.分音(音)
-					if 上聲韻 == 聲韻: 音 = 調
-					上聲韻 = 聲韻
-					同音字表 += f"{音}\t{''.join(字組[:4])}\n"
+					if 上聲韻 == 聲韻:
+						音 = 調
+						同音字表 += "\t"
+					else: 
+						同音字表 += "\n"
+						上聲韻 = 聲韻
+					同音字表 += f"[{音}]{''.join(字組[:4])}"
 				語.info["同音字表"] = 同音字表
 		else:
 			語 = import_module(f"tables.{mod}").表()
