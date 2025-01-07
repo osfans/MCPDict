@@ -235,19 +235,32 @@ def getLangs(dicts, 參數, 省=None):
 							for 字乙 in 字組乙:
 								字頻 += 同音字頻["".join(sorted((字甲, 字乙)))]
 							if 字頻 < 1.8 * n:
-								語.誤.append(f"{字甲}可能不讀{音}")
+								語.誤.append(f"{字甲} 可能不讀 [{音}] {"".join(字組乙)[:4]}")
 			elif 語.音節數 > 0:
 				for 字組 in 語.聲韻典.values():
 					if len(字組) < 2: continue
 					for 項 in combinations(字組, 2):
 						雙字 = "".join(sorted(項))
 						同音字頻[雙字] += 1
+			語.info["解析日志"] = None
+			語.info["同音字表"] = None
 			if 語.誤:
+				語.info["解析日志"] = "\n".join(語.誤)
 				all_editors = ",".join(editor)
 				語.全稱 = 語.info["語言"]
 				print(f"{語.全稱}（{語}）-{語.文件名}-{all_editors}", file=t)
 				for 誤 in 語.誤:
 					print(f"\t{誤}", file=t)
+			if 語.音表:
+				同音字表 = ""
+				上聲韻 = ""
+				for 音, 字組 in 語.音表.items():
+					if "□" in 字組: 字組.remove("□")
+					聲韻, 調 = 語.分音(音)
+					if 上聲韻 == 聲韻: 音 = 調
+					上聲韻 = 聲韻
+					同音字表 += f"{音}\t{''.join(字組[:4])}\n"
+				語.info["同音字表"] = 同音字表
 		else:
 			語 = import_module(f"tables.{mod}").表()
 			d = dict()

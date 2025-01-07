@@ -749,8 +749,16 @@ public class DB extends SQLiteAssetHelper {
             sb.append("</table>");
             intro = sb.toString();
         } else {
-            String phonology = getFieldByLanguage(language, "音系").replace("\n", "<br>");
-            intro = String.format(Locale.getDefault(), "<h1>%s</h1>%s<h2>音系說明</h2>%s<h2>同音字表</h2>", language, intro, phonology);
+            StringBuilder sb = new StringBuilder();
+            sb.append(String.format("<h1>%s</h1>", language));
+            sb.append(intro);
+            String[] fields = new String[]{"音系說明", "解析日志", "同音字表"};
+            for (String field: fields) {
+                String text = getFieldByLanguage(language, field).replace("\n", "<br>");
+                if (TextUtils.isEmpty(text)) continue;
+                sb.append(String.format("<h2>%s</h2>%s", field, text));
+            }
+            intro = sb.toString();
         }
         return intro;
     }

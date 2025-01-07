@@ -127,6 +127,9 @@ def formatIntro(i):
 		if s: s += "<br/>"
 		if i["說明"]:
 			s += i["說明"]
+		for k in ("音系說明", "解析日志", "同音字表"):
+			if k in i and i[k]:
+				s += "<h2>%s</h2>%s" % (k, i[k])
 	s = s.replace("\n", "<br/>").replace("href=", "target='_blank' href=")
 	return s
 
