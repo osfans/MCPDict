@@ -235,7 +235,7 @@ def getLangs(dicts, 參數, 省=None):
 							for 字乙 in 字組乙:
 								字頻 += 同音字頻["".join(sorted((字甲, 字乙)))]
 							if 字頻 < 1.8 * n:
-								語.誤.append(f"{字甲} 可能不讀 [{音}] {"".join(字組乙)[:4]}")
+								語.誤.append("%s 可能不讀 [%s]%s"%(字甲, 音, "".join(字組乙)[:4]))
 			elif 語.音節數 > 0:
 				for 字組 in 語.聲韻典.values():
 					if len(字組) < 2: continue
