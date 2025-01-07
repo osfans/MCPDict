@@ -4,7 +4,7 @@ from tables import *
 import os, re
 import logging
 from time import time
-from collections import defaultdict
+from collections import defaultdict, OrderedDict
 from glob import glob
 import inspect
 from openpyxl import load_workbook
@@ -166,6 +166,7 @@ class 表:
 	爲音 = True
 	音列 = None
 	音典 = defaultdict(set)
+	音表 = OrderedDict()
 	聲韻典 = defaultdict(set)
 	d = defaultdict(list)
 	__mod = None
@@ -406,6 +407,7 @@ class 表:
 		return len(自.聲韻典)
 
 	def 讀(自):
+		自.音表.clear()
 		if 自.過時(): 自.更新()
 		自.音典.clear()
 		自.聲韻典.clear()
@@ -437,8 +439,8 @@ class 表:
 					自.音典[音].add(字)
 					繁註 = s2t(註.replace(" ", ""))
 					if "訓" not in 繁註 and "(又)" not in 繁註 and "口語" not in 繁註 and "合音" not in 繁註 and "語流" not in 繁註 and "音變" not in 繁註 and "連讀" not in 繁註 and "存疑" not in 繁註 and "地方字" not in 繁註 and "地名" not in 繁註 and "俗" not in 繁註 and 字 != "□":
-						音 = re.split(r"\d", 音)[0]
-						自.聲韻典[音].add(字)
+						聲韻 = 自.分音(音)[0]
+						自.聲韻典[聲韻].add(字)
 				if 註:
 					py += "{%s}" % 註
 			else:
@@ -516,15 +518,17 @@ class 表:
 			音 = 音.replace(i, str(調值.index(i)))
 		for i in 調號:
 			音 = 音.replace(i, str(調號.index(i)+1))
-		聲韻 = 音.rstrip("-0123456789")
+		聲韻 = re.split(r"\d", 音, maxsplit=1)[0]
 		調 = 音[len(聲韻):]
 		return 聲韻,調
 
-	def 轉調類(自, 聲韻):
-		聲韻 = 聲韻.strip()
-		if "/" in 聲韻:
-			return "/".join(map(自.轉調類, 聲韻.split("/")))
-		聲韻,調值 = 自.分音(聲韻)
+	def 轉調類(自, 音):
+		音 = 音.strip()
+		if "/" in 音:
+			return "/".join(map(自.轉調類, 音.split("/")))
+		if "-" in 音:
+			return "-".join(map(自.轉調類, 音.split("-")))
+		聲韻,調值 = 自.分音(音)
 		if not 調值: return 聲韻
 		調類 = 自.僅轉調類(調值, 聲韻)
 		return 聲韻 + 調類

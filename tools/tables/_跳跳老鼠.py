@@ -244,4 +244,6 @@ class 表(_表):
 			註 = 號 + 註
 			if c == '？': c = "?"
 			l.append((字, 音 + c, 註))
+			if 音 not in 自.音表: 自.音表[音] = list()
+			自.音表[音].append(字)
 		return l
