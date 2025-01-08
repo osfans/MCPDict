@@ -31,7 +31,7 @@ class 表(_表):
 			js = "(書)%s" % js
 		elif py.endswith("-"):
 			py = py[:-1] + "="
-		js = js.strip().replace("|", "｜").replace("{", "[").replace("}", "]")
+		js = js.strip().replace("{", "[").replace("}", "]")
 		if not 字: 字 = jt
 		return 字, py, js
 

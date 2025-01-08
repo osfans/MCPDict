@@ -116,20 +116,15 @@ def formatIntro(i):
 	s = ""
 	if i["簡稱"].encode() == HZ:
 		for k in ("版本","字數"):
-			if i[k]:
-				s += "%s：%s<br/>" % (k, i[k])
-		if i["說明"]:
-			s += i["說明"]
+			if i[k]: s += "%s：%s<br/>" % (k, i[k])
+		if i["說明"]: s += i["說明"]
 	else:
 		for k in ("地點","經緯度", "作者", "錄入人", "維護人","來源", "參考文獻","文件名","版本","字數","□數", "音節數","不帶調音節數"):
-			if i[k]:
-				s += "%s：%s<br/>" % (k, i[k])
+			if i[k]: s += "%s：%s<br/>" % (k, i[k])
 		if s: s += "<br/>"
-		if i["說明"]:
-			s += i["說明"]
+		if i["說明"]: s += i["說明"]
 		for k in ("音系說明", "解析日志", "同音字表"):
-			if k in i and i[k]:
-				s += "<h2>%s</h2>%s" % (k, i[k])
+			if i[k]: s += "<h2>%s</h2>%s" % (k, i[k])
 	s = s.replace("\n", "<br/>").replace("href=", "target='_blank' href=")
 	return s
 

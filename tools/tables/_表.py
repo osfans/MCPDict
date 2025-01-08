@@ -3,7 +3,6 @@
 from tables import *
 import os, re
 import logging
-from time import time
 from collections import defaultdict, OrderedDict
 from glob import glob
 import inspect
@@ -240,18 +239,15 @@ class 表:
 		if not tpath.endswith(".tsv"): tpath += ".tsv"
 		return tpath
 
-	def normS(自, s, rep="[\\1]"):
-		s = s.replace("(", "（").replace(")", "）")
-		s = regex.sub("（((?>[^（）]+|(?R))*)）", rep, s)
+	def normS(自, s, rep="｛\\1｝"):
+		s = regex.sub(r"\(((?>[^\(\)]+|(?R))*)\)", rep, s)
 		return s
 
-	def normM(自, s, rep="〚\\1〛"):
-		s = s.replace("[", "［").replace("]", "］")
-		s = regex.sub("［((?>[^［］]+|(?R))*)］", rep, s)
+	def normM(自, s, rep="｛\\1｝"):
+		s = regex.sub(r"\[((?>[^\[\]]+|(?R))*)\]", rep, s)
 		return s
 
 	def normG(自, s, rep="｛\\1｝"):
-		s = s.replace("｛", "{").replace("｝", "}")
 		s = regex.sub(r"\{((?>[^\{\}]+|(?R))*)\}", rep, s)
 		return s
 
@@ -279,13 +275,6 @@ class 表:
 				del d[字]
 				continue
 			d[字] = 音.split(",")
-
-	def 正註(自, 音):
-		音 = 音.replace("᷉", "̃").replace("ⱼ", "ᶽ")\
-			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ")\
-			.replace("ʣ", "dz").replace("ʥ", "dʑ")\
-			.replace("", "ᵑ").replace("", "ᶽ")
-		return 音
 
 	def _正音(自, 音):
 		if 自.爲語() and 自.爲音:
@@ -365,19 +354,20 @@ class 表:
 				字 = s2t(字, 自.simplified)
 			if not 爲字(字):
 				if 自.爲方言():
-					自.誤.append(f"【{字}】不是漢字，讀音爲：{','.join([i.strip() for i in pys])}")
+					自.誤.append(f"【{字}】[{','.join([i.strip() for i in pys])}]不是漢字")
 				continue
 			if 自.註序:
 				pys = sorted(pys,key=ybKey)
 			for py in pys:
 				if "\t" in py:
-					音, js = py.split("\t", 1)
-					js = js.strip().replace("~", "～").replace("...", "⋯").replace("∽", "～")
+					音, 註 = py.split("\t", 1)
+					註 = 註.strip()
 				else:
-					音, js = py, ""
+					音, 註 = py, ""
 				音 = 自.正音(音)
-				音 = f"{音}\t{js}"
-				音 = 自.正註(音)
+				if 字 == "□" and not 註:
+					自.誤.append(f"□[{音}]没有注释")
+				音 = f"{音}\t{註}"
 				print(f"{字}\t{音}", file=t)
 		t.close()
 
@@ -466,7 +456,27 @@ class 表:
 		return tuple(列[:3])
 
 	def 統(自, 行):
-		行 = 行.replace(" ", " ")
+		if not 自.爲方言(): return 行
+		for i in range(1, 10):
+			sda = chr(ord('➀') + (i - 1))
+			sdb = chr(ord('①') + (i - 1))
+			行 = 行.replace(sda, sdb)
+		for i in range(0, 10):
+			sda = chr(ord('₀') + (i - 1))
+			sdb = chr(ord('0') + (i - 1))
+			行 = 行.replace(sda, sdb)
+			sda = chr(ord('０') + (i - 1))
+			行 = 行.replace(sda, sdb)
+		行 = 行.replace(" ", " ")\
+			.replace("（", "(").replace("）", ")")\
+			.replace("［", "[").replace("］", "]")\
+			.replace("｛", "{").replace("｝", "}")\
+			.replace("／", "/").replace("？", "?").replace("！", "!").replace("：", ":").replace("；",";").replace("...", "⋯").replace("｜", "|")\
+			.replace("∽", "～")
+		行 = 行.replace("\u1dc9", "\u0303")\
+			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ")\
+			.replace("ʣ", "dz").replace("ʥ", "dʑ")\
+			.replace("", "ᵑ").replace("", "ᶽ")#.replace("ⱼ", "ᶽ")
 		return 行
 	
 	@property
