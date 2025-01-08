@@ -138,7 +138,6 @@ class 表(_表):
 			字, _, _, _, 音標, 註 = 列[:6]
 		elif 名 in ("通東餘東",):
 			字, _, _, 聲韻, _, 調值, 註 = 列[:7]
-			聲韻 = 聲韻.lstrip("ʔ")
 			音標 = 聲韻 + 調值
 		elif 名 in ("南寧", "南寧亭子"):
 			_, 字, _, 音標, _, 註, c = 列[:7]
@@ -288,7 +287,6 @@ class 表(_表):
 			if len(列) < 6: return
 			字 = 列[0]
 			音集 = 列[自.音列]
-			音集 = 音集.replace("／", "/")
 			if not 音集 or 音集.startswith("—"): return
 			_js = 字[1:] if len(字)>1 else ""
 			_js = _js.strip("（）")
@@ -351,6 +349,6 @@ class 表(_表):
 				音 = 自.轉調類(音標)
 			if len(字) != 1 or not 音: return
 			音 = 自.正音(音)
-			if 字 in "?？�": 字 = "□"
+			if 字 in "?�": 字 = "□"
 			return 字, 音, 註
 		return

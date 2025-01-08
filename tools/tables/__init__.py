@@ -72,6 +72,9 @@ def 爲字(c):
 	n = ord(c)
 	return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<=0x323AF and not 爲兼容字(c)
 
+def 有字(字組):
+	return any(map(爲字, 字組))
+
 def 普拼(word):
 	return pinyin(t2s(word), style=Style.TONE3, heteronym=False) if 爲字(word[0]) else [[word.lower()]]
 
@@ -235,7 +238,7 @@ def getLangs(dicts, 參數, 省=None):
 							for 字乙 in 字組乙:
 								字頻 += 同音字頻["".join(sorted((字甲, 字乙)))]
 							if 字頻 < 1.8 * n:
-								語.誤.append("%s 可能不讀 [%s]%s"%(字甲, 音, "".join(字組乙)[:4]))
+								語.誤.append(f"{字甲}可能不讀[{音}]{''.join(字組乙)[:4]}")
 			elif 語.音節數 > 0:
 				for 字組 in 語.聲韻典.values():
 					if len(字組) < 2: continue
@@ -255,16 +258,14 @@ def getLangs(dicts, 參數, 省=None):
 				同音字表 = ""
 				上聲韻 = ""
 				for 音, 字組 in 語.音表.items():
-					if "□" in 字組: 字組.remove("□")
 					聲韻, 調 = 語.分音(音)
 					if 上聲韻 == 聲韻:
-						音 = 調
 						同音字表 += "\t"
 					else: 
-						同音字表 += "\n"
+						同音字表 += "\n" + 聲韻
 						上聲韻 = 聲韻
-					同音字表 += f"[{音}]{''.join(字組[:4])}"
-				語.info["同音字表"] = 同音字表
+					同音字表 += f"[{調}]{''.join(字組[:4])}"
+				語.info["同音字表"] = 同音字表.strip()
 		else:
 			語 = import_module(f"tables.{mod}").表()
 			d = dict()
@@ -304,7 +305,7 @@ def getLangs(dicts, 參數, 省=None):
 	for 項 in keys:
 		if 項 not in 字.info: 字.info[項] = None
 	字.info["字數"] = len(dicts)
-	字.info["說明"] = "語言數：%d<br><br>%s"%(數, 字.說明)
+	字.info["說明"] = "語言數：%d\n\n%s"%(數, 字.說明)
 	省表 = sorted(省_set, key=普拼)
 	if "海外" in 省表:
 		省表.remove("海外")
