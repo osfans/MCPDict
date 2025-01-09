@@ -142,7 +142,47 @@ def getLangsByArgv(infos, argv):
 					break
 	return l
 
-def getLangs(dicts, 參數, 省=None):
+def 獲取同音字頻(get=False):
+	if not get: return
+	同音字頻 = defaultdict(int)
+	詳情 = tables._詳情.加載()
+	for mod,d in 詳情.items():
+		try:
+			if d["文件格式"]:
+				語 = import_module(f'tables._{d["文件格式"]}').表()
+				語.setmod(mod)
+			else:
+				語 = import_module(f"tables.{mod}").表()
+			if not 語.文件名: 語.文件名 = d["文件名"]
+		except:
+			continue
+		if "繁" not in d["繁簡"]: 語.simplified = 2
+		if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
+		if "聯表列名" in d:
+			a = d["聯表列名"].upper()
+			語.音列 = sum([26**(len(a)-1-i)*(ord(j)-ord('A')+1) for i,j in enumerate(a)]) - 1
+		if d["聲調"]:
+			調典 = dict()
+			調組 = json.loads(d["聲調"])
+			for 調 in 調組:
+				調值 = 調組[調][0]
+				if 調值 in 調典 and "入" in 調組[調][3]:
+					調值 += "0"
+				調典[調值] = 調
+			語.調典 = 調典
+		語.info = d
+		語.加載()
+		if 語.音節數 > 0:
+			for 字組 in 語.聲韻典.values():
+				if len(字組) < 2: continue
+				for 項 in combinations(字組, 2):
+					雙字 = "".join(sorted(項))
+					同音字頻[雙字] += 1
+	return 同音字頻
+
+def getLangs(dicts, 參數, args):
+	省 = args.省
+	同音字頻 = 獲取同音字頻(args.c)
 	詳情 = tables._詳情.加載(省)
 	語組 = []
 	數 = 0
@@ -158,14 +198,6 @@ def getLangs(dicts, 參數, 省=None):
 	推薦人 = defaultdict(int)
 	維護人 = defaultdict(int)
 	keys = None
-	同音字頻 = defaultdict(int)
-	同音字頻表 = os.path.exists("同音字頻.tsv")
-	if 同音字頻表:
-		t = open("同音字頻.tsv", "r", encoding="U8")
-		for line in t:
-			字, 頻 = line.strip().split("\t")
-			同音字頻[字] = int(頻)
-		t.close()
 	t = open("warnings.txt", "w", encoding="U16")
 	for mod in mods:
 		if mod in 詳情:
@@ -200,7 +232,7 @@ def getLangs(dicts, 參數, 省=None):
 					調典[調值] = 調
 				語.調典 = 調典
 			語.info = d
-			語.加載(dicts)
+			語.加載(dicts, 更新=args.c)
 			if d["文件名"] != "mcpdict.db":
 				if 語.字數 == 0: continue
 				if 語.字數 < 900:
@@ -226,7 +258,7 @@ def getLangs(dicts, 參數, 省=None):
 				if 人:
 					維護人[人] += 1
 			數 += 1
-			if 同音字頻表:
+			if 同音字頻:
 				if 語.檢查同音字() and 語.字數 < 10000:
 					for 音, 字組 in 語.聲韻典.items():
 						if len(字組) < 2: continue
@@ -239,12 +271,6 @@ def getLangs(dicts, 參數, 省=None):
 								字頻 += 同音字頻["".join(sorted((字甲, 字乙)))]
 							if 字頻 < 1.8 * n:
 								語.誤.append(f"{字甲}可能不讀[{音}]{''.join(字組乙)[:4]}")
-			elif 語.音節數 > 0:
-				for 字組 in 語.聲韻典.values():
-					if len(字組) < 2: continue
-					for 項 in combinations(字組, 2):
-						雙字 = "".join(sorted(項))
-						同音字頻[雙字] += 1
 			語.info["解析日志"] = None
 			語.info["同音字表"] = None
 			if 語.誤:
@@ -295,12 +321,6 @@ def getLangs(dicts, 參數, 省=None):
 		if not keys: keys = 語.info.keys()
 		語組.append(語)
 	t.close()
-	if not 同音字頻表:
-		t = open("同音字頻.tsv", "w", encoding="U8")
-		for i, j in 同音字頻.items():
-			if j > 1:
-				t.write(f"{i}\t{j}\n")
-		t.close()
 	字 = 語組[0]
 	for 項 in keys:
 		if 項 not in 字.info: 字.info[項] = None

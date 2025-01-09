@@ -19,5 +19,5 @@ class 表(_表):
 	說明 = get_note()
 	簡稱 = "漢字"
 
-	def 讀(自):
+	def 讀(自, 更新=False):
 		return dict()
