@@ -7,12 +7,13 @@ from tables import *
 import argparse
 
 parser = argparse.ArgumentParser(description='Create mcpdict database')
+parser.add_argument('-c', action='store_true', help='check 同音字頻', required=False)
 parser.add_argument('-省', help='province to include', required=False)
 args, argv = parser.parse_known_args()
 start = time()
 
 dicts = defaultdict(dict)
-langs = getLangs(dicts, argv, 省=args.省)
+langs = getLangs(dicts, argv, args)
 keys = [f"{lang.簡稱}" for lang in langs]
 fields = [f"`{i}`" for i in keys]
 CREATE = 'CREATE VIRTUAL TABLE mcpdict USING fts3 (%s)' % (",".join(fields))

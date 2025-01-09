@@ -94,7 +94,7 @@ def normSource(books):
 			return books.value
 	return None
 
-def 加載(省):
+def 加載(省=None):
 	if not 省 and not 過時():
 		return json.load(open(tpath,encoding="U8"))
 	d = dict()

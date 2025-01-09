@@ -133,9 +133,10 @@ def docx2tsv(doc):
 	lines = []
 	for each in Document(doc).paragraphs:
 		行 = "".join(map(run2text, each.runs)).replace("}{", "")
-		lines.append(行 + "\n")
+		lines.append(行)
+	行 = "\n".join(lines).replace("}\n{", "")
 	t = open(tsv, "w", encoding="U8", newline="\n")
-	t.writelines(lines)
+	t.write(行)
 	t.close()
 
 def ybKey(x):
@@ -297,16 +298,16 @@ class 表:
 		音 = 自._正音(音)
 		if not 檢查: return 音
 		if "\t" in 音:
-			自.誤.append(f"{音} 音節有TAB空檔")
+			自.誤.append(f"[{音}]音節含TAB字符")
 			音 = 音.replace("\t", "")
-		if 爲字(音[0]):
-			自.誤.append(f"{音} 音節錯誤")
-		if re.match(r".+\d{3,}", 音):
-			自.誤.append(f"{音} 調類錯誤")
+		if not re.match(r".+\d{0,2}[a-z\-=]?", 音):
+			自.誤.append(f"[{音}]音節錯誤")
+		elif 有字(音):
+			自.誤.append(f"[{音}]音節包含漢字")
 		if 音 not in 自.音集:
 			自.音集.add(音)
 		else:
-			自.誤.append(f"{音} 音節重複")
+			自.誤.append(f"[{音}]音節重複")
 		return 音
 
 	def 檢查同音字(自):
@@ -354,7 +355,7 @@ class 表:
 				字 = s2t(字, 自.simplified)
 			if not 爲字(字):
 				if 自.爲方言():
-					自.誤.append(f"【{字}】[{','.join([i.strip() for i in pys])}]不是漢字")
+					自.誤.append(f"【{字}】({','.join([i.strip() for i in pys])})不是漢字")
 				continue
 			if 自.註序:
 				pys = sorted(pys,key=ybKey)
@@ -366,7 +367,7 @@ class 表:
 					音, 註 = py, ""
 				音 = 自.正音(音)
 				if 字 == "□" and not 註:
-					自.誤.append(f"□[{音}]没有注释")
+					自.誤.append(f"【□】({音})無註釋")
 				音 = f"{音}\t{註}"
 				print(f"{字}\t{音}", file=t)
 		t.close()
@@ -396,9 +397,9 @@ class 表:
 	def 聲韻數(自):
 		return len(自.聲韻典)
 
-	def 讀(自):
+	def 讀(自, 更新=False):
 		自.音表.clear()
-		if 自.過時(): 自.更新()
+		if 自.過時() or 更新 and 自.spath: 自.更新()
 		自.音典.clear()
 		自.聲韻典.clear()
 		自.d.clear()
@@ -428,7 +429,7 @@ class 表:
 				if "-" not in 音:
 					自.音典[音].add(字)
 					繁註 = s2t(註.replace(" ", ""))
-					if "訓" not in 繁註 and "(又)" not in 繁註 and "口語" not in 繁註 and "合音" not in 繁註 and "語流" not in 繁註 and "音變" not in 繁註 and "連讀" not in 繁註 and "存疑" not in 繁註 and "地方字" not in 繁註 and "地名" not in 繁註 and "俗" not in 繁註 and 字 != "□":
+					if "訓" not in 繁註 and "替" not in 繁註 and "口語" not in 繁註 and "合音" not in 繁註 and "語流" not in 繁註 and "音變" not in 繁註 and "連讀" not in 繁註 and "存疑" not in 繁註 and "地方字" not in 繁註 and "地名" not in 繁註 and "俗" not in 繁註 and 字 != "□":
 						聲韻 = 自.分音(音)[0]
 						自.聲韻典[聲韻].add(字)
 				if 註:
@@ -444,9 +445,10 @@ class 表:
 			if py not in 自.d[字]:
 				自.d[字].append(py)
 	
-	def 加載(自, dicts):
-		自.讀()
+	def 加載(自, dicts=None, 更新=False):
+		自.讀(更新)
 		if not 自.d: return
+		if dicts is None: return
 		for 字, 音集 in 自.d.items():
 			if 字 not in dicts:
 				dicts[字] = {"漢字": 字}

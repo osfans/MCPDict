@@ -5,8 +5,8 @@ import os
 from openpyxl import load_workbook
 
 class 表(_表):
-	def 讀(自):
-		super().讀()
+	def 讀(自, 更新=False):
+		super().讀(更新)
 		自.說明 = 自.get_note()
 
 	def get_note(自):
