@@ -464,10 +464,10 @@ class 表:
 			sdb = chr(ord('①') + (i - 1))
 			行 = 行.replace(sda, sdb)
 		for i in range(0, 10):
-			sda = chr(ord('₀') + (i - 1))
-			sdb = chr(ord('0') + (i - 1))
+			sda = chr(ord('₀') + i)
+			sdb = chr(ord('0') + i)
 			行 = 行.replace(sda, sdb)
-			sda = chr(ord('０') + (i - 1))
+			sda = chr(ord('０') + i)
 			行 = 行.replace(sda, sdb)
 		行 = 行.replace(" ", " ")\
 			.replace("（", "(").replace("）", ")")\
