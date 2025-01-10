@@ -17,7 +17,7 @@ class 表(_表):
 	
 	def 統(自, 行):
 		行 = _表.統(自, 行)
-		名 = 自.名
+		名 = 自.簡稱
 		if 名 in ("永州嵐角山", "賀州南鄕", "松江天馬", "運城", "興縣","豐城","豐城鐵路","新建","賀州江坪"):
 			行 = 行.lstrip("ø")
 		elif 名 in ("江夏湖泗"):
@@ -140,6 +140,8 @@ class 表(_表):
 			行 = 自.行轉調類(行)
 			行 = 行.replace("/", "")
 		elif 名 in ("海門"):
+			if 行.startswith("#"): return "#"
+		elif 名 in ("長治"):
 			if 行.startswith("#"): return "#"
 		elif 名 in ("博白","東莞塘角"):
 			if 行.startswith("#"): return "#"

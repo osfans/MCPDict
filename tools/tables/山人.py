@@ -4,7 +4,7 @@ from tables._表 import 表 as _表
 
 class 表(_表):
 	文件名 = "ShanRenMaLTS.words.dict.yaml"
-	簡稱 = "山人"
+	全稱 = "山人碼LTS"
 	說明 = "來源：https://github.com/siuze/ShanRenMaLTS"
 	補丁 = {"□": "ak,akv"}
 
