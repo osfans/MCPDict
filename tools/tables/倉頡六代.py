@@ -4,7 +4,7 @@ from tables._表 import 表 as _表
 
 class 表(_表):
 	文件名 = "cangjie6.dict.yaml"
-	簡稱 = "倉六"
+	全稱 = "倉頡六代"
 	說明 = "來源：https://github.com/LEOYoon-Tsaw/Cangjie6"
 	補丁 = {"□": "bu"}
 

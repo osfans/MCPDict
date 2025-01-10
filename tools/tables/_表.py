@@ -117,7 +117,12 @@ def run2text(run):
 	if tag:
 		text = "".join([i + tag for i in text])
 	if run.font.subscript or (run.font.size and run.font.size < 115000):
-		text = f"{{{text}}}"
+		if text.startswith("{") and text.endswith("}"):
+			pass
+		elif text.startswith("[") and text.endswith("]"):
+			pass
+		else:
+			text = f"{{{text}}}"
 	return text
 
 def isDocx(fname):
@@ -183,10 +188,6 @@ class 表:
 	def __str__(自):
 		if 自.__mod: return 自.__mod
 		return 自.__module__.split(".")[-1]
-	
-	@property
-	def 名(自):
-		return str(自)
 
 	def find(自, name):
 		if os.sep not in name and (isXls(name) or isDocx(name)):
@@ -208,7 +209,7 @@ class 表:
 			自.文件名 = 自._files[0]
 		sname = 自.文件名
 		if not 自.簡稱: 自.簡稱 = 自.info["簡稱"]
-		if not 自.簡稱: 自.簡稱 = 自.名
+		if not 自.簡稱: 自.簡稱 = str(自)
 		if not sname: sname = f"{自.簡稱}.tsv"
 		g = 自.find(sname)
 		if not g or len(g) != 1:
@@ -281,7 +282,7 @@ class 表:
 		if 自.爲語() and 自.爲音:
 			音 = 音.strip()
 			音 = 音.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀∅Ø〇0").replace("零", "")
-			if 自.名 != "盛唐": 音 = 音.lstrip("q")
+			if 自.簡稱 != "盛唐": 音 = 音.lstrip("q")
 			if 音.startswith("I") or 音.startswith("1"): 音 = "l" + 音[1:]
 			音 = 音.lower().replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ").replace("‘", "ʰ")
 			if not 音.startswith("h") and "h" in 音:
@@ -399,10 +400,10 @@ class 表:
 
 	def 讀(自, 更新=False):
 		自.音表.clear()
-		if 自.過時() or 更新 and 自.spath: 自.更新()
 		自.音典.clear()
 		自.聲韻典.clear()
 		自.d.clear()
+		if 自.過時() or 更新 and 自.spath: 自.更新()
 		if not 自.tpath or not os.path.exists(自.tpath): return
 		for 行 in open(自.tpath,encoding="U8"):
 			行 = 行.strip()
@@ -436,7 +437,7 @@ class 表:
 					py += "{%s}" % 註
 			else:
 				if 自.字書:
-					sep = "▲" if 自.名 == "匯纂" else "\t"
+					sep = "▲" if 自.簡稱 == "匯纂" else "\t"
 					py2, 註 = py.split(sep, 1)
 					py = ("\n\n" if 自.d[字] else "") + py2 + sep + 自.分註(註)
 				elif 自.簡稱 in ("部件檢索","字形描述"):
@@ -445,14 +446,13 @@ class 表:
 			if py not in 自.d[字]:
 				自.d[字].append(py)
 	
-	def 加載(自, dicts=None, 更新=False):
+	def 加載(自, dicts, 更新=False):
 		自.讀(更新)
 		if not 自.d: return
-		if dicts is None: return
 		for 字, 音集 in 自.d.items():
 			if 字 not in dicts:
 				dicts[字] = {"漢字": 字}
-			dicts[字][自.名] = "\t".join(音集)
+			dicts[字][自.簡稱] = "\t".join(音集)
 	
 	def 析(自, 列):
 		return tuple(列[:3])

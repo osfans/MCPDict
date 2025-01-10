@@ -3,5 +3,5 @@
 from tables._五筆 import 表 as _表
 
 class 表(_表):
-	簡稱 = "五筆06"
-	index = 4
+	全稱 = "五筆86版"
+	index = 2
