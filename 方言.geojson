@@ -871,6 +871,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#926EF8",
+        "marker-size": "medium",
+        "marker-symbol": "c",
+        "title": "長子",
+        "語言": "長子話",
+        "地點": "山西長治長子",
+        "地圖集二分區": "晉語-上黨片-長治小片",
+        "音典分區": "華北-上黨",
+        "陳邡分區": "官話-山東-魯西大片-潞州片",
+        "版本": "2025-01-10",
+        "錄入人": "鶩髙赭紗匕",
+        "來源": "《山西长子方言声韵调特点分析》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.885142,
+          36.128933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
         "marker-size": "small",
         "marker-symbol": "c",
         "title": "壺關樹掌",
@@ -1140,7 +1164,7 @@
         "marker-symbol": "b",
         "title": "銅川",
         "語言": "銅川話",
-        "地點": "陝西銅川",
+        "地點": "陝西銅川王益",
         "地圖集二分區": "中原官話-關中片",
         "音典分區": "西北-關隴",
         "陳邡分區": "官話-關中-關中大片-耀州片",
@@ -15767,6 +15791,29 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-color": "#5ED154",
+        "marker-size": "small",
+        "marker-symbol": "j",
+        "title": "富川莫家",
+        "語言": "富川梧州話（福利莫家）",
+        "地點": "廣西賀州富川福利莫家",
+        "地圖集二分區": "平話和土話-桂北片",
+        "音典分區": "嶺南-蒼梧-梧賀",
+        "陳邡分區": "官話-桂北-賀州片",
+        "錄入人": "DaiDzao",
+        "來源": "《广西富川富阳话研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.351242,
+          24.815049
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-color": "#C75EEB",
         "marker-size": "small",
         "marker-symbol": "g",
@@ -15786,29 +15833,6 @@
         "coordinates": [
           111.51707,
           24.832907
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#5ED154",
-        "marker-size": "small",
-        "marker-symbol": "j",
-        "title": "富川莫家",
-        "語言": "富川梧州話（福利莫家）",
-        "地點": "廣西賀州富川福利莫家",
-        "地圖集二分區": "平話和土話-桂北片",
-        "音典分區": "嶺南-蒼梧-梧賀",
-        "陳邡分區": "官話-桂北-賀州片",
-        "錄入人": "DaiDzao",
-        "來源": "《广西富川富阳话研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          111.351242,
-          24.815049
         ]
       }
     },
@@ -18275,8 +18299,8 @@
         "marker-color": "#A5C24E",
         "marker-size": "medium",
         "marker-symbol": "h",
-        "title": "萬安松洋",
-        "語言": "萬安松洋話",
+        "title": "龍岩松洋",
+        "語言": "龍岩萬安松洋話",
         "地點": "福建龍巖新羅萬安松洋",
         "地圖集二分區": "客家話-汀州片",
         "音典分區": "閩-閩西-東",
@@ -18299,8 +18323,8 @@
         "marker-color": "#A5C24E",
         "marker-size": "medium",
         "marker-symbol": "h",
-        "title": "萬安梧宅",
-        "語言": "萬安梧宅話",
+        "title": "龍岩梧宅",
+        "語言": "龍岩萬安梧宅話",
         "地點": "福建龍巖新羅萬安梧宅",
         "地圖集二分區": "客家話-汀州片",
         "音典分區": "閩-閩西-東",
