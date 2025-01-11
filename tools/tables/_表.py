@@ -474,7 +474,7 @@ class 表:
 			.replace("［", "[").replace("］", "]")\
 			.replace("｛", "{").replace("｝", "}")\
 			.replace("／", "/").replace("？", "?").replace("！", "!").replace("：", ":").replace("；",";").replace("...", "⋯").replace("｜", "|")\
-			.replace("∽", "～")
+			.replace("∽", "~").replace("～", "~")
 		行 = 行.replace("\u1dc9", "\u0303")\
 			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ")\
 			.replace("ʣ", "dz").replace("ʥ", "dʑ")\
