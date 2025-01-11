@@ -49,6 +49,8 @@ class 表(_表):
 			行 = 行.replace("&{","{&").replace("@{","{@")
 		elif 名 in ("樅陽","潛山","靑陽客籍話"):
 			行 = 行.replace("*", "□")
+		elif 名 in ("寶雞"):
+			行 = 行.replace("{Ø}", "Ø").replace("{h}", "h")
 		elif 名 in ("樅陽東",):
 			行 = 行.replace("*", "□")
 			行 = 自.normS(行)
