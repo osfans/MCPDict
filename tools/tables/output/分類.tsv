@@ -40,6 +40,7 @@
 㔨	GJ	
 㔩	GJ	
 㔮	GJ	
+㔶	FD	
 㔶	GJ	
 㔹	GJ	
 㕉	GJ	
@@ -130,6 +131,7 @@
 㞐	GJ	
 㞚	GJ	
 㞜	GJ	
+㞞	FD	
 㞦	GJ	
 㞹	GJ	
 㞼	GJ	
@@ -204,6 +206,7 @@
 㦗	GJ	
 㦬	GJ	
 㦼	GJ	
+㦿	FD	
 㧊	GJ	
 㧌	GJ	
 㧎	GJ	
@@ -241,6 +244,7 @@
 㩼	GJ	
 㪇	GJ	
 㪍	GJ	
+㪕	FD	
 㪯	GJ	
 㪶	GJ	
 㪺	GJ	
@@ -253,6 +257,7 @@
 㬜	GJ	
 㬠	GJ	
 㬣	GJ	
+㬤	FD	
 㬭	GJ	
 㬻	GJ	
 㭈	GJ	
@@ -343,6 +348,7 @@
 㶳	GJ	
 㶿	GJ	
 㷏	GJ	
+㷟	FD	
 㷠	GJ	
 㷮	GJ	
 㸅	GJ	
@@ -388,6 +394,7 @@
 㻾	GJ	
 㼎	GJ	
 㼐	GJ	
+㼑	FD	
 㼖	GJ	
 㼚	GJ	
 㼜	GJ	
@@ -407,6 +414,7 @@
 㽟	GJ	
 㽨	GJ	
 㽷	GJ	
+㽹	FD	
 㽻	GJ	
 㽽	GJ	
 㾈	GJ	
@@ -426,6 +434,7 @@
 㿊	GJ	
 㿗	GJ	
 㿥	GJ	
+㿭	FD	
 㿱	GJ	
 㿺	GJ	
 䀉	GJ	
@@ -460,6 +469,7 @@
 䂬	GJ	
 䂮	GJ	
 䂺	GJ	
+䂻	FD	
 䃁	GJ	
 䃂	GJ	
 䃋	GJ	
@@ -559,6 +569,7 @@
 䌪	GJ	
 䌰	GJ	
 䍃	GJ	
+䍉	FD	
 䍘	GJ	
 䍚	GJ	
 䍡	GJ	
@@ -584,6 +595,7 @@
 䏏	GJ	
 䏔	GJ	
 䏖	GJ	
+䏘	FD	
 䏙	GJ	
 䏚	GJ	
 䏧	GJ	
@@ -668,6 +680,7 @@
 䖦	GJ	
 䖪	GJ	
 䖭	GJ	
+䖳	FD	
 䖳	GJ	
 䖶	GJ	
 䖹	GJ	
@@ -693,6 +706,7 @@
 䗿	GJ	
 䘀	GJ	
 䘃	GJ	
+䘆	FD	
 䘆	GJ	
 䘇	GJ	
 䘎	GJ	
@@ -708,6 +722,7 @@
 䘯	GJ	
 䘳	GJ	
 䘺	GJ	
+䘼	FD	
 䘽	GJ	
 䘿	GJ	
 䙅	GJ	
@@ -737,13 +752,16 @@
 䜭	GJ	
 䜱	GJ	
 䜶	GJ	
+䜺	FD	
 䝁	GJ	
 䝏	GJ	
 䝚	GJ	
 䝟	GJ	
 䝤	GJ	
 䝻	GJ	
+䝼	FD	
 䞀	GJ	
+䞁	FD	
 䞈	GJ	
 䞋	GJ	
 䞓	GJ	
@@ -817,6 +835,7 @@
 䥕	GJ	
 䥖	GJ	
 䥗	GJ	
+䥛	FD	
 䥝	GJ	
 䥨	GJ	
 䥫	GJ	
@@ -1320,7 +1339,6 @@
 井	kHKGlyph	
 井	T1	
 井	GJ	
-亘	FD	
 亘	GJ	
 亙	kBigFive	
 亙	kHKGlyph	
@@ -1420,10 +1438,12 @@
 仃	kHKGlyph	
 仃	T1	
 仃	GJ	
+仄	FD	
 仄	kBigFive	
 仄	kHKGlyph	
 仄	T1	
 仄	GJ	
+仆	FD	
 仆	kBigFive	
 仆	kHKGlyph	
 仆	T1	
@@ -1456,6 +1476,7 @@
 仔	kHKGlyph	
 仔	T1	
 仔	GJ	
+仕	FD	
 仕	kBigFive	
 仕	kHKGlyph	
 仕	T1	
@@ -1617,6 +1638,7 @@
 伙	GJ	
 伝	kBigFive	
 伝	GJ	
+伢	FD	
 伢	kBigFive	
 伢	GJ	
 伬	kBigFive	
@@ -1742,6 +1764,7 @@
 佗	kHKGlyph	
 佗	T1	
 佗	GJ	
+佘	FD	
 佘	kBigFive	
 佘	GJ	
 余	FD	
@@ -1793,10 +1816,12 @@
 佪	kBigFive	
 佪	GJ	
 佫	kBigFive	
+佬	FD	
 佬	kBigFive	
 佬	kHKGlyph	
 佬	T1	
 佬	GJ	
+佮	FD	
 佮	kBigFive	
 佯	kBigFive	
 佯	kHKGlyph	
@@ -1850,12 +1875,10 @@
 侁	GJ	
 侂	kBigFive	
 侂	GJ	
-侃	FD	
 侃	kBigFive	
 侃	kHKGlyph	
 侃	T1	
 侃	GJ	
-侄	FD	
 侄	kBigFive	
 侄	GJ	
 侅	kBigFive	
@@ -1872,6 +1895,7 @@
 侈	kHKGlyph	
 侈	T1	
 侈	GJ	
+侉	FD	
 侉	kBigFive	
 侉	GJ	
 侊	GJ	
@@ -1944,7 +1968,6 @@
 侵	kHKGlyph	
 侵	T1	
 侵	GJ	
-侶	FD	
 侶	kBigFive	
 侶	kHKGlyph	
 侶	T1	
@@ -2049,6 +2072,7 @@
 保	kHKGlyph	
 保	T1	
 保	GJ	
+俞	FD	
 俞	kBigFive	
 俞	kHKGlyph	
 俞	T1	
@@ -2113,6 +2137,7 @@
 倀	kHKGlyph	
 倀	T1	
 倀	GJ	
+倂	FD	
 倃	GJ	
 倄	GJ	
 倅	kBigFive	
@@ -2181,6 +2206,7 @@
 候	kHKGlyph	
 候	T1	
 候	GJ	
+倚	FD	
 倚	kBigFive	
 倚	kHKGlyph	
 倚	T1	
@@ -2205,10 +2231,12 @@
 倡	GJ	
 倢	kBigFive	
 倢	GJ	
+倣	FD	
 倣	kBigFive	
 倣	kHKGlyph	
 倣	T1	
 倣	GJ	
+値	FD	
 倥	kBigFive	
 倥	kHKGlyph	
 倥	T1	
@@ -2259,7 +2287,6 @@
 倶	kHKGlyph	
 倷	kBigFive	
 倻	GJ	
-值	FD	
 值	kBigFive	
 值	kHKGlyph	
 值	T1	
@@ -2338,6 +2365,7 @@
 偠	GJ	
 偡	kBigFive	
 偡	GJ	
+偢	FD	
 偢	kBigFive	
 偢	GJ	
 偣	kBigFive	
@@ -2538,6 +2566,7 @@
 僅	kHKGlyph	
 僅	T1	
 僅	GJ	
+僆	FD	
 僆	kBigFive	
 僆	GJ	
 僇	kBigFive	
@@ -2545,7 +2574,6 @@
 僇	GJ	
 僈	kBigFive	
 僈	GJ	
-僉	FD	
 僉	kBigFive	
 僉	GJ	
 僊	kBigFive	
@@ -2560,6 +2588,7 @@
 像	kHKGlyph	
 像	T1	
 像	GJ	
+僑	FD	
 僑	kBigFive	
 僑	kHKGlyph	
 僑	T1	
@@ -2580,6 +2609,7 @@
 僖	GJ	
 僗	kBigFive	
 僗	GJ	
+僚	FD	
 僚	kBigFive	
 僚	kHKGlyph	
 僚	T1	
@@ -2597,6 +2627,7 @@
 僣	kBigFive	
 僤	kBigFive	
 僤	GJ	
+僥	FD	
 僥	kBigFive	
 僥	kHKGlyph	
 僥	T1	
@@ -2617,7 +2648,6 @@
 僪	GJ	
 僬	kBigFive	
 僬	GJ	
-僭	FD	
 僭	kBigFive	
 僭	kHKGlyph	
 僭	T1	
@@ -2666,6 +2696,7 @@
 儀	T1	
 儀	GJ	
 儁	GJ	
+儂	FD	
 儂	kBigFive	
 儂	kHKGlyph	
 儂	T1	
@@ -2682,6 +2713,7 @@
 儅	GJ	
 儆	kBigFive	
 儆	GJ	
+儇	FD	
 儇	kBigFive	
 儇	GJ	
 儈	kBigFive	
@@ -2720,6 +2752,7 @@
 儕	GJ	
 儗	kBigFive	
 儗	GJ	
+儘	FD	
 儘	kBigFive	
 儘	kHKGlyph	
 儘	T1	
@@ -2848,6 +2881,7 @@
 克	kHKGlyph	
 克	T1	
 克	GJ	
+兌	FD	
 兌	kBigFive	
 兌	kHKGlyph	
 兌	T1	
@@ -2856,7 +2890,6 @@
 免	kHKGlyph	
 免	T1	
 免	GJ	
-兑	FD	
 兑	kHKGlyph	
 兑	GJ	
 兒	FD	
@@ -2873,7 +2906,7 @@
 兕	kHKGlyph	
 兕	T1	
 兕	GJ	
-兖	FD	
+兗	FD	
 兗	kBigFive	
 兗	kHKGlyph	
 兗	T1	
@@ -2897,7 +2930,6 @@
 兟	GJ	
 兡	kBigFive	
 兡	T1	
-兢	FD	
 兢	kBigFive	
 兢	kHKGlyph	
 兢	T1	
@@ -2909,6 +2941,7 @@
 入	kHKGlyph	
 入	T1	
 入	GJ	
+內	FD	
 內	kBigFive	
 內	kHKGlyph	
 內	T1	
@@ -2967,8 +3000,8 @@
 典	kHKGlyph	
 典	T1	
 典	GJ	
-兹	FD	
 兹	GJ	
+兼	FD	
 兼	kBigFive	
 兼	kHKGlyph	
 兼	T1	
@@ -2979,7 +3012,6 @@
 冀	T1	
 冀	GJ	
 冂	GJ	
-内	FD	
 内	GJ	
 冇	kBigFive	
 冉	FD	
@@ -3044,7 +3076,6 @@
 冤	kHKGlyph	
 冤	T1	
 冤	GJ	
-冥	FD	
 冥	kBigFive	
 冥	kHKGlyph	
 冥	T1	
@@ -3067,7 +3098,6 @@
 冱	GJ	
 冲	GJ	
 况	GJ	
-冶	FD	
 冶	kBigFive	
 冶	kHKGlyph	
 冶	T1	
@@ -3084,8 +3114,6 @@
 冽	T1	
 冽	GJ	
 冾	kBigFive	
-净	FD	
-凄	FD	
 凄	kBigFive	
 凄	GJ	
 凅	kBigFive	
@@ -3097,9 +3125,9 @@
 凇	GJ	
 凈	kBigFive	
 凈	GJ	
-凉	FD	
 凊	kBigFive	
 凊	GJ	
+凋	FD	
 凋	kBigFive	
 凋	kHKGlyph	
 凋	T1	
@@ -3116,7 +3144,6 @@
 凍	GJ	
 凎	kBigFive	
 凐	kBigFive	
-凑	FD	
 凓	GJ	
 凔	kBigFive	
 凔	GJ	
@@ -3124,7 +3151,8 @@
 凗	GJ	
 凘	kBigFive	
 凘	GJ	
-凛	FD	
+凙	FD	
+凜	FD	
 凜	kBigFive	
 凜	kHKGlyph	
 凜	T1	
@@ -3146,6 +3174,7 @@
 凡	T1	
 凡	GJ	
 凥	GJ	
+凰	FD	
 凰	kBigFive	
 凰	kHKGlyph	
 凰	T1	
@@ -3168,10 +3197,12 @@
 凶	T1	
 凶	GJ	
 凷	GJ	
+凸	FD	
 凸	kBigFive	
 凸	kHKGlyph	
 凸	T1	
 凸	GJ	
+凹	FD	
 凹	kBigFive	
 凹	kHKGlyph	
 凹	T1	
@@ -3236,6 +3267,7 @@
 刑	kHKGlyph	
 刑	T1	
 刑	GJ	
+划	FD	
 划	kBigFive	
 划	kHKGlyph	
 划	T1	
@@ -3301,6 +3333,7 @@
 刲	GJ	
 刳	kBigFive	
 刳	GJ	
+刴	FD	
 刴	GJ	
 刵	kBigFive	
 刵	GJ	
@@ -3331,7 +3364,6 @@
 刻	T1	
 刻	GJ	
 刼	GJ	
-剁	FD	
 剁	kBigFive	
 剁	kHKGlyph	
 剁	T1	
@@ -3391,6 +3423,7 @@
 剛	kHKGlyph	
 剛	T1	
 剛	GJ	
+剜	FD	
 剜	kBigFive	
 剜	kHKGlyph	
 剜	T1	
@@ -3512,7 +3545,9 @@
 劍	kHKGlyph	
 劍	T1	
 劍	GJ	
+劐	FD	
 劐	GJ	
+劑	FD	
 劑	kBigFive	
 劑	kHKGlyph	
 劑	T1	
@@ -3551,6 +3586,7 @@
 劣	GJ	
 劦	kBigFive	
 劦	GJ	
+助	FD	
 助	kBigFive	
 助	kHKGlyph	
 助	T1	
@@ -3636,7 +3672,6 @@
 務	kHKGlyph	
 務	T1	
 務	GJ	
-勛	FD	
 勛	kBigFive	
 勛	kHKGlyph	
 勛	T1	
@@ -3685,6 +3720,7 @@
 勰	GJ	
 勱	kBigFive	
 勱	GJ	
+勳	FD	
 勳	kBigFive	
 勳	kHKGlyph	
 勳	T1	
@@ -3707,6 +3743,7 @@
 勺	kBigFive	
 勺	T1	
 勺	GJ	
+勻	FD	
 勻	kBigFive	
 勻	kHKGlyph	
 勻	T1	
@@ -3722,7 +3759,6 @@
 勿	kHKGlyph	
 勿	T1	
 勿	GJ	
-匀	FD	
 匀	kHKGlyph	
 匀	GJ	
 匄	GJ	
@@ -3731,11 +3767,11 @@
 包	kHKGlyph	
 包	T1	
 包	GJ	
-匆	FD	
 匆	kBigFive	
 匆	kHKGlyph	
 匆	T1	
 匆	GJ	
+匈	FD	
 匈	kBigFive	
 匈	kHKGlyph	
 匈	T1	
@@ -3752,6 +3788,7 @@
 匍	T1	
 匍	GJ	
 匎	kBigFive	
+匏	FD	
 匏	kBigFive	
 匏	kHKGlyph	
 匏	T1	
@@ -3867,7 +3904,6 @@
 千	kHKGlyph	
 千	T1	
 千	GJ	
-卅	FD	
 卅	kBigFive	
 卅	kHKGlyph	
 卅	T1	
@@ -3931,6 +3967,7 @@
 卜	T1	
 卜	GJ	
 卝	GJ	
+卞	FD	
 卞	kBigFive	
 卞	kHKGlyph	
 卞	T1	
@@ -3976,7 +4013,6 @@
 危	T1	
 危	GJ	
 卲	kBigFive	
-即	FD	
 即	kBigFive	
 即	kHKGlyph	
 即	T1	
@@ -4007,6 +4043,7 @@
 卻	GJ	
 卼	kBigFive	
 卼	GJ	
+卽	FD	
 卽	GJ	
 卿	FD	
 卿	kBigFive	
@@ -4032,7 +4069,6 @@
 厖	GJ	
 厗	kBigFive	
 厗	GJ	
-厘	FD	
 厘	kBigFive	
 厙	kBigFive	
 厙	GJ	
@@ -4054,7 +4090,6 @@
 原	T1	
 原	GJ	
 厠	GJ	
-厢	FD	
 厤	kBigFive	
 厤	GJ	
 厥	FD	
@@ -4064,7 +4099,6 @@
 厥	GJ	
 厦	GJ	
 厧	kBigFive	
-厨	FD	
 厩	GJ	
 厪	GJ	
 厬	kBigFive	
@@ -4074,7 +4108,6 @@
 厭	kHKGlyph	
 厭	T1	
 厭	GJ	
-厮	FD	
 厮	GJ	
 厱	GJ	
 厲	FD	
@@ -4082,6 +4115,7 @@
 厲	kHKGlyph	
 厲	T1	
 厲	GJ	
+厴	FD	
 厴	kBigFive	
 厴	GJ	
 厶	GJ	
@@ -4142,7 +4176,6 @@
 受	kHKGlyph	
 受	T1	
 受	GJ	
-叙	FD	
 叙	kHKGlyph	
 叚	GJ	
 叛	FD	
@@ -4209,6 +4242,7 @@
 叭	kHKGlyph	
 叭	T1	
 叭	GJ	
+叮	FD	
 叮	kBigFive	
 叮	kHKGlyph	
 叮	T1	
@@ -4260,6 +4294,7 @@
 吁	T1	
 吁	GJ	
 吂	GJ	
+吃	FD	
 吃	kBigFive	
 吃	kHKGlyph	
 吃	T1	
@@ -4269,6 +4304,7 @@
 各	kHKGlyph	
 各	T1	
 各	GJ	
+吆	FD	
 吆	kBigFive	
 吆	kHKGlyph	
 吆	T1	
@@ -4356,6 +4392,7 @@
 吠	T1	
 吠	GJ	
 吡	GJ	
+吣	FD	
 吤	kBigFive	
 吥	kBigFive	
 否	FD	
@@ -4368,6 +4405,7 @@
 吧	T1	
 吧	GJ	
 吨	kBigFive	
+吩	FD	
 吩	kBigFive	
 吩	kHKGlyph	
 吩	T1	
@@ -4386,6 +4424,7 @@
 吭	kHKGlyph	
 吭	T1	
 吭	GJ	
+吮	FD	
 吮	kBigFive	
 吮	kHKGlyph	
 吮	T1	
@@ -4592,8 +4631,8 @@
 咎	kHKGlyph	
 咎	T1	
 咎	GJ	
-咏	FD	
 咏	GJ	
+咐	FD	
 咐	kBigFive	
 咐	kHKGlyph	
 咐	T1	
@@ -4673,7 +4712,6 @@
 咳	kHKGlyph	
 咳	T1	
 咳	GJ	
-咵	FD	
 咶	kBigFive	
 咶	GJ	
 咷	kBigFive	
@@ -4766,6 +4804,7 @@
 哦	GJ	
 哧	kBigFive	
 哧	GJ	
+哨	FD	
 哨	kBigFive	
 哨	kHKGlyph	
 哨	T1	
@@ -4774,6 +4813,7 @@
 哩	kHKGlyph	
 哩	T1	
 哩	GJ	
+哪	FD	
 哪	kBigFive	
 哪	kHKGlyph	
 哪	T1	
@@ -4785,6 +4825,7 @@
 哭	kHKGlyph	
 哭	T1	
 哭	GJ	
+哮	FD	
 哮	kBigFive	
 哮	kHKGlyph	
 哮	T1	
@@ -4803,11 +4844,13 @@
 哶	GJ	
 哷	kBigFive	
 哸	kBigFive	
+哺	FD	
 哺	kBigFive	
 哺	kHKGlyph	
 哺	T1	
 哺	GJ	
 哻	kBigFive	
+哼	FD	
 哼	kBigFive	
 哼	kHKGlyph	
 哼	T1	
@@ -4832,7 +4875,6 @@
 唆	kHKGlyph	
 唆	T1	
 唆	GJ	
-唇	FD	
 唇	kBigFive	
 唇	kHKGlyph	
 唇	T1	
@@ -5031,7 +5073,6 @@
 啶	kBigFive	
 啷	kBigFive	
 啷	GJ	
-啻	FD	
 啻	kBigFive	
 啻	kHKGlyph	
 啻	T1	
@@ -5055,7 +5096,6 @@
 喀	GJ	
 喁	kBigFive	
 喁	GJ	
-喂	FD	
 喂	kBigFive	
 喂	kHKGlyph	
 喂	T1	
@@ -5113,6 +5153,7 @@
 喘	kHKGlyph	
 喘	T1	
 喘	GJ	
+喙	FD	
 喙	kBigFive	
 喙	T1	
 喙	GJ	
@@ -5157,7 +5198,6 @@
 喪	kHKGlyph	
 喪	T1	
 喪	GJ	
-喫	FD	
 喫	kBigFive	
 喫	T1	
 喫	GJ	
@@ -5205,10 +5245,12 @@
 嗅	kHKGlyph	
 嗅	T1	
 嗅	GJ	
+嗆	FD	
 嗆	kBigFive	
 嗆	kHKGlyph	
 嗆	T1	
 嗆	GJ	
+嗇	FD	
 嗇	kBigFive	
 嗇	kHKGlyph	
 嗇	T1	
@@ -5266,10 +5308,10 @@
 嗜	kHKGlyph	
 嗜	T1	
 嗜	GJ	
+嗝	FD	
 嗝	kBigFive	
 嗝	GJ	
 嗞	GJ	
-嗟	FD	
 嗟	kBigFive	
 嗟	kHKGlyph	
 嗟	T1	
@@ -5303,6 +5345,7 @@
 嗨	kHKGlyph	
 嗨	T1	
 嗨	GJ	
+嗩	FD	
 嗩	kBigFive	
 嗩	GJ	
 嗯	kBigFive	
@@ -5343,7 +5386,6 @@
 嘄	kBigFive	
 嘄	GJ	
 嘅	GJ	
-嘆	FD	
 嘆	kBigFive	
 嘆	kHKGlyph	
 嘆	T1	
@@ -5420,7 +5462,6 @@
 嘮	kHKGlyph	
 嘮	T1	
 嘮	GJ	
-嘯	FD	
 嘯	kBigFive	
 嘯	kHKGlyph	
 嘯	T1	
@@ -5429,6 +5470,7 @@
 嘰	kHKGlyph	
 嘰	T1	
 嘰	GJ	
+嘲	FD	
 嘲	kBigFive	
 嘲	kHKGlyph	
 嘲	T1	
@@ -5475,6 +5517,7 @@
 噅	GJ	
 噆	kBigFive	
 噆	GJ	
+噇	FD	
 噇	GJ	
 噈	kBigFive	
 噈	GJ	
@@ -5483,6 +5526,7 @@
 噊	kBigFive	
 噌	kBigFive	
 噌	GJ	
+噍	FD	
 噍	GJ	
 噎	FD	
 噎	kBigFive	
@@ -5616,6 +5660,7 @@
 嚎	kHKGlyph	
 嚎	T1	
 嚎	GJ	
+嚏	FD	
 嚏	kBigFive	
 嚏	kHKGlyph	
 嚏	T1	
@@ -5651,6 +5696,7 @@
 嚦	GJ	
 嚧	kBigFive	
 嚧	GJ	
+嚨	FD	
 嚨	kBigFive	
 嚨	kHKGlyph	
 嚨	T1	
@@ -5714,7 +5760,6 @@
 囅	GJ	
 囆	kBigFive	
 囇	GJ	
-囈	FD	
 囈	kBigFive	
 囈	kHKGlyph	
 囈	T1	
@@ -5756,6 +5801,7 @@
 四	kHKGlyph	
 四	T1	
 四	GJ	
+囝	FD	
 囝	kBigFive	
 囝	T1	
 囝	GJ	
@@ -5778,6 +5824,7 @@
 囤	kHKGlyph	
 囤	T1	
 囤	GJ	
+囥	FD	
 囥	kBigFive	
 囦	GJ	
 囧	kBigFive	
@@ -5915,6 +5962,7 @@
 地	kHKGlyph	
 地	T1	
 地	GJ	
+圳	FD	
 圳	kBigFive	
 圳	kHKGlyph	
 圳	T1	
@@ -5947,6 +5995,7 @@
 坈	GJ	
 坉	kBigFive	
 坉	GJ	
+坊	FD	
 坊	kBigFive	
 坊	kHKGlyph	
 坊	T1	
@@ -6002,6 +6051,7 @@
 坩	kHKGlyph	
 坩	T1	
 坩	GJ	
+坪	FD	
 坪	kBigFive	
 坪	kHKGlyph	
 坪	T1	
@@ -6034,6 +6084,7 @@
 坺	GJ	
 坻	kBigFive	
 坻	GJ	
+坼	FD	
 坼	kBigFive	
 坼	kHKGlyph	
 坼	T1	
@@ -6050,6 +6101,7 @@
 垂	kHKGlyph	
 垂	T1	
 垂	GJ	
+垃	FD	
 垃	kBigFive	
 垃	kHKGlyph	
 垃	T1	
@@ -6098,7 +6150,6 @@
 垢	kHKGlyph	
 垢	T1	
 垢	GJ	
-垣	FD	
 垣	kBigFive	
 垣	kHKGlyph	
 垣	T1	
@@ -6130,6 +6181,7 @@
 垿	kBigFive	
 垿	GJ	
 埁	kBigFive	
+埂	FD	
 埂	kBigFive	
 埂	T1	
 埂	GJ	
@@ -6166,6 +6218,7 @@
 埔	kHKGlyph	
 埔	T1	
 埔	GJ	
+埕	FD	
 埕	kBigFive	
 埕	GJ	
 埛	GJ	
@@ -6196,13 +6249,16 @@
 埩	kBigFive	
 埪	GJ	
 埬	kBigFive	
+埭	FD	
 埭	kBigFive	
 埭	GJ	
 埮	kBigFive	
+埯	FD	
 埯	GJ	
 埰	kBigFive	
 埰	GJ	
 埱	kBigFive	
+埲	FD	
 埲	kBigFive	
 埲	GJ	
 埳	kBigFive	
@@ -6385,6 +6441,7 @@
 塌	kHKGlyph	
 塌	T1	
 塌	GJ	
+塍	FD	
 塍	kBigFive	
 塍	GJ	
 塎	kBigFive	
@@ -6405,8 +6462,10 @@
 塔	kHKGlyph	
 塔	T1	
 塔	GJ	
+塕	FD	
 塕	kBigFive	
 塕	GJ	
+塗	FD	
 塗	kBigFive	
 塗	kHKGlyph	
 塗	T1	
@@ -6428,6 +6487,7 @@
 塞	T1	
 塞	GJ	
 塠	GJ	
+塡	FD	
 塢	FD	
 塢	kBigFive	
 塢	kHKGlyph	
@@ -6439,7 +6499,6 @@
 塥	kBigFive	
 塥	GJ	
 塨	kBigFive	
-填	FD	
 填	kBigFive	
 填	kHKGlyph	
 填	T1	
@@ -6601,6 +6660,7 @@
 壁	GJ	
 壂	kBigFive	
 壃	GJ	
+壅	FD	
 壅	kBigFive	
 壅	kHKGlyph	
 壅	T1	
@@ -6636,6 +6696,7 @@
 壓	GJ	
 壔	kBigFive	
 壔	GJ	
+壕	FD	
 壕	kBigFive	
 壕	kHKGlyph	
 壕	T1	
@@ -6646,6 +6707,7 @@
 壘	kHKGlyph	
 壘	T1	
 壘	GJ	
+壙	FD	
 壙	kBigFive	
 壙	kHKGlyph	
 壙	T1	
@@ -6662,11 +6724,11 @@
 壞	kHKGlyph	
 壞	T1	
 壞	GJ	
-壟	FD	
 壟	kBigFive	
 壟	kHKGlyph	
 壟	T1	
 壟	GJ	
+壠	FD	
 壢	kBigFive	
 壢	T1	
 壣	kBigFive	
@@ -6734,7 +6796,6 @@
 夏	GJ	
 夐	GJ	
 夒	kBigFive	
-夔	FD	
 夔	kBigFive	
 夔	T1	
 夔	GJ	
@@ -6750,7 +6811,6 @@
 外	GJ	
 夗	kBigFive	
 夘	GJ	
-夙	FD	
 夙	kBigFive	
 夙	kHKGlyph	
 夙	T1	
@@ -6765,9 +6825,9 @@
 夜	kHKGlyph	
 夜	T1	
 夜	GJ	
+够	FD	
 够	kHKGlyph	
 够	GJ	
-夠	FD	
 夠	kBigFive	
 夠	T1	
 夢	FD	
@@ -6816,6 +6876,7 @@
 央	kHKGlyph	
 央	T1	
 央	GJ	
+夯	FD	
 夯	kBigFive	
 夯	GJ	
 失	FD	
@@ -6923,13 +6984,13 @@
 奢	T1	
 奢	GJ	
 奣	GJ	
+奤	FD	
 奤	GJ	
-奥	FD	
+奧	FD	
 奧	kBigFive	
 奧	kHKGlyph	
 奧	T1	
 奧	GJ	
-奩	FD	
 奩	kBigFive	
 奩	kHKGlyph	
 奩	T1	
@@ -7012,7 +7073,6 @@
 妄	GJ	
 妅	kBigFive	
 妉	GJ	
-妊	FD	
 妊	kBigFive	
 妊	kHKGlyph	
 妊	T1	
@@ -7026,7 +7086,6 @@
 妏	kBigFive	
 妐	kBigFive	
 妐	GJ	
-妒	FD	
 妒	kBigFive	
 妒	kHKGlyph	
 妒	T1	
@@ -7041,6 +7100,7 @@
 妖	kHKGlyph	
 妖	T1	
 妖	GJ	
+妗	FD	
 妗	kBigFive	
 妗	GJ	
 妘	kBigFive	
@@ -7083,6 +7143,7 @@
 妨	kHKGlyph	
 妨	T1	
 妨	GJ	
+妬	FD	
 妭	GJ	
 妮	kBigFive	
 妮	kHKGlyph	
@@ -7211,11 +7272,11 @@
 姣	GJ	
 姤	kBigFive	
 姤	GJ	
+姥	FD	
 姥	kBigFive	
 姥	kHKGlyph	
 姥	T1	
 姥	GJ	
-姦	FD	
 姦	kBigFive	
 姦	kHKGlyph	
 姦	T1	
@@ -7226,6 +7287,7 @@
 姨	T1	
 姨	GJ	
 姩	kBigFive	
+姪	FD	
 姪	kBigFive	
 姪	kHKGlyph	
 姪	T1	
@@ -7292,7 +7354,6 @@
 娑	kHKGlyph	
 娑	T1	
 娑	GJ	
-娒	FD	
 娒	GJ	
 娓	kBigFive	
 娓	kHKGlyph	
@@ -7320,6 +7381,7 @@
 娜	T1	
 娜	GJ	
 娞	kBigFive	
+娟	FD	
 娟	kBigFive	
 娟	kHKGlyph	
 娟	T1	
@@ -7333,6 +7395,7 @@
 娣	kHKGlyph	
 娣	T1	
 娣	GJ	
+娥	FD	
 娥	kBigFive	
 娥	kHKGlyph	
 娥	T1	
@@ -7358,6 +7421,7 @@
 娸	kBigFive	
 娸	GJ	
 娹	kBigFive	
+娼	FD	
 娼	kBigFive	
 娼	kHKGlyph	
 娼	T1	
@@ -7367,6 +7431,7 @@
 婀	kHKGlyph	
 婀	T1	
 婀	GJ	
+婁	FD	
 婁	kBigFive	
 婁	kHKGlyph	
 婁	T1	
@@ -7382,11 +7447,11 @@
 婇	kBigFive	
 婇	GJ	
 婈	kBigFive	
-婉	FD	
 婉	kBigFive	
 婉	kHKGlyph	
 婉	T1	
 婉	GJ	
+婊	FD	
 婊	kBigFive	
 婊	kHKGlyph	
 婊	T1	
@@ -7449,6 +7514,7 @@
 婭	kBigFive	
 婭	GJ	
 婰	kBigFive	
+婷	FD	
 婷	kBigFive	
 婷	kHKGlyph	
 婷	T1	
@@ -7553,7 +7619,6 @@
 媽	kHKGlyph	
 媽	T1	
 媽	GJ	
-媾	FD	
 媾	kBigFive	
 媾	kHKGlyph	
 媾	T1	
@@ -7633,6 +7698,7 @@
 嫣	GJ	
 嫥	kBigFive	
 嫥	GJ	
+嫦	FD	
 嫦	kBigFive	
 嫦	kHKGlyph	
 嫦	T1	
@@ -7704,6 +7770,7 @@
 嬒	GJ	
 嬓	kBigFive	
 嬓	GJ	
+嬔	FD	
 嬔	kBigFive	
 嬖	kBigFive	
 嬖	GJ	
@@ -7792,12 +7859,10 @@
 子	kHKGlyph	
 子	T1	
 子	GJ	
-孑	FD	
 孑	kBigFive	
 孑	kHKGlyph	
 孑	T1	
 孑	GJ	
-孓	FD	
 孓	kBigFive	
 孓	kHKGlyph	
 孓	T1	
@@ -7886,6 +7951,7 @@
 孳	T1	
 孳	GJ	
 孴	GJ	
+孵	FD	
 孵	kBigFive	
 孵	kHKGlyph	
 孵	T1	
@@ -7908,6 +7974,7 @@
 孽	kHKGlyph	
 孽	T1	
 孽	GJ	
+孿	FD	
 孿	kBigFive	
 孿	kHKGlyph	
 孿	T1	
@@ -8009,7 +8076,6 @@
 室	kHKGlyph	
 室	T1	
 室	GJ	
-宥	FD	
 宥	kBigFive	
 宥	kHKGlyph	
 宥	T1	
@@ -8253,6 +8319,7 @@
 專	kHKGlyph	
 專	T1	
 專	GJ	
+尉	FD	
 尉	kBigFive	
 尉	kHKGlyph	
 尉	T1	
@@ -8316,6 +8383,7 @@
 尤	kHKGlyph	
 尤	T1	
 尤	GJ	
+尥	FD	
 尥	kBigFive	
 尥	GJ	
 尨	kBigFive	
@@ -8384,12 +8452,14 @@
 屁	kHKGlyph	
 屁	T1	
 屁	GJ	
+屄	FD	
 屄	kBigFive	
 居	FD	
 居	kBigFive	
 居	kHKGlyph	
 居	T1	
 居	GJ	
+屆	FD	
 屆	kBigFive	
 屆	kHKGlyph	
 屆	T1	
@@ -8401,7 +8471,6 @@
 屈	T1	
 屈	GJ	
 屉	GJ	
-届	FD	
 届	GJ	
 屋	FD	
 屋	kBigFive	
@@ -8410,6 +8479,7 @@
 屋	GJ	
 屌	kBigFive	
 屌	GJ	
+屍	FD	
 屍	kBigFive	
 屍	kHKGlyph	
 屍	T1	
@@ -8446,6 +8516,7 @@
 屘	T1	
 屙	kBigFive	
 屙	GJ	
+屜	FD	
 屜	kBigFive	
 屜	kHKGlyph	
 屜	T1	
@@ -8676,8 +8747,8 @@
 峭	GJ	
 峮	kBigFive	
 峮	GJ	
+峯	FD	
 峯	kHKGlyph	
-峰	FD	
 峰	kBigFive	
 峰	kHKGlyph	
 峰	T1	
@@ -8697,6 +8768,7 @@
 峷	GJ	
 峸	kBigFive	
 峹	kBigFive	
+峻	FD	
 峻	kBigFive	
 峻	kHKGlyph	
 峻	T1	
@@ -8729,6 +8801,7 @@
 崌	GJ	
 崍	kBigFive	
 崍	GJ	
+崎	FD	
 崎	kBigFive	
 崎	kHKGlyph	
 崎	T1	
@@ -8787,7 +8860,6 @@
 崤	GJ	
 崥	kBigFive	
 崥	GJ	
-崦	FD	
 崦	kBigFive	
 崦	GJ	
 崧	kBigFive	
@@ -8841,6 +8913,7 @@
 嵇	GJ	
 嵉	kBigFive	
 嵉	GJ	
+嵊	FD	
 嵊	kBigFive	
 嵊	GJ	
 嵋	kBigFive	
@@ -8922,6 +8995,7 @@
 嶅	GJ	
 嶆	kBigFive	
 嶆	GJ	
+嶇	FD	
 嶇	kBigFive	
 嶇	kHKGlyph	
 嶇	T1	
@@ -9002,6 +9076,7 @@
 嶺	T1	
 嶺	GJ	
 嶻	GJ	
+嶼	FD	
 嶼	kBigFive	
 嶼	kHKGlyph	
 嶼	T1	
@@ -9036,6 +9111,7 @@
 巏	GJ	
 巑	kBigFive	
 巑	GJ	
+巒	FD	
 巒	kBigFive	
 巒	kHKGlyph	
 巒	T1	
@@ -9181,6 +9257,7 @@
 帓	GJ	
 帔	kBigFive	
 帔	GJ	
+帕	FD	
 帕	kBigFive	
 帕	kHKGlyph	
 帕	T1	
@@ -9393,7 +9470,6 @@
 年	GJ	
 幵	kBigFive	
 幵	GJ	
-并	FD	
 并	kBigFive	
 并	kHKGlyph	
 并	T1	
@@ -9403,6 +9479,7 @@
 幸	kHKGlyph	
 幸	T1	
 幸	GJ	
+幹	FD	
 幹	kBigFive	
 幹	kHKGlyph	
 幹	T1	
@@ -9450,6 +9527,7 @@
 庌	kBigFive	
 庌	GJ	
 庍	kBigFive	
+庎	FD	
 序	FD	
 序	kBigFive	
 序	kHKGlyph	
@@ -9565,6 +9643,7 @@
 廁	kHKGlyph	
 廁	T1	
 廁	GJ	
+廂	FD	
 廂	kBigFive	
 廂	kHKGlyph	
 廂	T1	
@@ -9619,6 +9698,7 @@
 廘	kBigFive	
 廙	kBigFive	
 廙	GJ	
+廚	FD	
 廚	kBigFive	
 廚	kHKGlyph	
 廚	T1	
@@ -9627,6 +9707,7 @@
 廛	GJ	
 廜	kBigFive	
 廜	GJ	
+廝	FD	
 廝	kBigFive	
 廝	kHKGlyph	
 廝	T1	
@@ -9664,7 +9745,6 @@
 廨	GJ	
 廩	kBigFive	
 廩	GJ	
-廪	FD	
 廫	GJ	
 廬	FD	
 廬	kBigFive	
@@ -9699,6 +9779,7 @@
 建	GJ	
 廾	kBigFive	
 廾	T1	
+廿	FD	
 廿	kBigFive	
 廿	kHKGlyph	
 廿	T1	
@@ -9730,7 +9811,6 @@
 弊	kHKGlyph	
 弊	T1	
 弊	GJ	
-弋	FD	
 弋	kBigFive	
 弋	T1	
 弋	GJ	
@@ -9748,6 +9828,7 @@
 弓	kHKGlyph	
 弓	T1	
 弓	GJ	
+弔	FD	
 弔	kBigFive	
 弔	kHKGlyph	
 弔	T1	
@@ -9875,13 +9956,13 @@
 彔	kBigFive	
 彖	kBigFive	
 彖	GJ	
-彗	FD	
 彗	kBigFive	
 彗	kHKGlyph	
 彗	T1	
 彗	GJ	
 彘	kBigFive	
 彘	GJ	
+彙	FD	
 彙	kBigFive	
 彙	kHKGlyph	
 彙	T1	
@@ -9934,6 +10015,7 @@
 彭	GJ	
 彯	kBigFive	
 彯	GJ	
+彰	FD	
 彰	kBigFive	
 彰	kHKGlyph	
 彰	T1	
@@ -9968,6 +10050,7 @@
 彼	GJ	
 彽	kBigFive	
 彾	kBigFive	
+彿	FD	
 彿	kBigFive	
 彿	kHKGlyph	
 彿	T1	
@@ -10002,6 +10085,7 @@
 徉	kBigFive	
 徉	T1	
 徉	GJ	
+徊	FD	
 徊	kBigFive	
 徊	kHKGlyph	
 徊	T1	
@@ -10046,6 +10130,7 @@
 徙	kHKGlyph	
 徙	T1	
 徙	GJ	
+徛	FD	
 徛	kBigFive	
 徛	GJ	
 徜	kBigFive	
@@ -10201,6 +10286,7 @@
 忡	GJ	
 忣	kBigFive	
 忣	GJ	
+忤	FD	
 忤	kBigFive	
 忤	GJ	
 忥	kBigFive	
@@ -10263,6 +10349,7 @@
 怌	kBigFive	
 怍	kBigFive	
 怍	GJ	
+怎	FD	
 怎	kBigFive	
 怎	kHKGlyph	
 怎	T1	
@@ -10366,6 +10453,7 @@
 怯	kHKGlyph	
 怯	T1	
 怯	GJ	
+怱	FD	
 怱	kHKGlyph	
 怲	kBigFive	
 怲	GJ	
@@ -10407,7 +10495,6 @@
 恊	GJ	
 恌	kBigFive	
 恌	GJ	
-恍	FD	
 恍	kBigFive	
 恍	kHKGlyph	
 恍	T1	
@@ -10428,7 +10515,6 @@
 恕	T1	
 恕	GJ	
 恘	kBigFive	
-恙	FD	
 恙	kBigFive	
 恙	kHKGlyph	
 恙	T1	
@@ -10459,6 +10545,7 @@
 恤	kHKGlyph	
 恤	T1	
 恤	GJ	
+恥	FD	
 恥	kBigFive	
 恥	kHKGlyph	
 恥	T1	
@@ -10506,6 +10593,7 @@
 恲	kBigFive	
 恲	GJ	
 恾	GJ	
+恿	FD	
 恿	kBigFive	
 恿	kHKGlyph	
 恿	T1	
@@ -10642,6 +10730,7 @@
 悼	kHKGlyph	
 悼	T1	
 悼	GJ	
+悽	FD	
 悽	kBigFive	
 悽	kHKGlyph	
 悽	T1	
@@ -10673,6 +10762,7 @@
 惉	kBigFive	
 惉	GJ	
 惊	kBigFive	
+惋	FD	
 惋	kBigFive	
 惋	kHKGlyph	
 惋	T1	
@@ -10763,6 +10853,7 @@
 惴	GJ	
 惵	kBigFive	
 惵	GJ	
+惶	FD	
 惶	kBigFive	
 惶	kHKGlyph	
 惶	T1	
@@ -10839,6 +10930,7 @@
 愓	GJ	
 愔	kBigFive	
 愔	GJ	
+愕	FD	
 愕	kBigFive	
 愕	kHKGlyph	
 愕	T1	
@@ -10902,12 +10994,12 @@
 愵	GJ	
 愶	kBigFive	
 愶	GJ	
-愷	FD	
 愷	kBigFive	
 愷	T1	
 愷	GJ	
 愺	GJ	
 愻	kBigFive	
+愼	FD	
 愾	kBigFive	
 愾	kHKGlyph	
 愾	T1	
@@ -10954,7 +11046,6 @@
 慍	kHKGlyph	
 慍	T1	
 慍	GJ	
-慎	FD	
 慎	kBigFive	
 慎	kHKGlyph	
 慎	T1	
@@ -11086,6 +11177,7 @@
 憃	kBigFive	
 憃	GJ	
 憉	kBigFive	
+憊	FD	
 憊	kBigFive	
 憊	kHKGlyph	
 憊	T1	
@@ -11115,6 +11207,7 @@
 憒	kBigFive	
 憒	GJ	
 憓	kBigFive	
+憔	FD	
 憔	kBigFive	
 憔	kHKGlyph	
 憔	T1	
@@ -11124,7 +11217,6 @@
 憖	GJ	
 憘	GJ	
 憙	GJ	
-憚	FD	
 憚	kBigFive	
 憚	kHKGlyph	
 憚	T1	
@@ -11135,6 +11227,7 @@
 憝	GJ	
 憞	GJ	
 憟	kBigFive	
+憠	FD	
 憡	kBigFive	
 憢	kBigFive	
 憢	GJ	
@@ -11149,6 +11242,7 @@
 憧	kHKGlyph	
 憧	T1	
 憧	GJ	
+憨	FD	
 憨	kBigFive	
 憨	GJ	
 憩	kBigFive	
@@ -11270,6 +11364,7 @@
 懤	GJ	
 懥	kBigFive	
 懥	GJ	
+懦	FD	
 懦	kBigFive	
 懦	kHKGlyph	
 懦	T1	
@@ -11400,7 +11495,6 @@
 戒	GJ	
 戔	kBigFive	
 戔	GJ	
-戕	FD	
 戕	kBigFive	
 戕	kHKGlyph	
 戕	T1	
@@ -11439,6 +11533,7 @@
 戣	GJ	
 戤	kBigFive	
 戤	GJ	
+戥	FD	
 戥	kBigFive	
 戥	GJ	
 戧	kBigFive	
@@ -11454,7 +11549,6 @@
 戫	GJ	
 戭	kBigFive	
 戭	GJ	
-戮	FD	
 戮	kBigFive	
 戮	kHKGlyph	
 戮	T1	
@@ -11479,9 +11573,9 @@
 戴	kHKGlyph	
 戴	T1	
 戴	GJ	
-戶	FD	
 戶	kBigFive	
 戶	T1	
+户	FD	
 户	kHKGlyph	
 户	GJ	
 戹	GJ	
@@ -11541,7 +11635,6 @@
 才	kHKGlyph	
 才	T1	
 才	GJ	
-扎	FD	
 扎	kBigFive	
 扎	kHKGlyph	
 扎	T1	
@@ -11597,6 +11690,7 @@
 扤	kBigFive	
 扤	GJ	
 扥	kBigFive	
+扦	FD	
 扦	kBigFive	
 扦	GJ	
 扭	FD	
@@ -11645,6 +11739,7 @@
 扼	kHKGlyph	
 扼	T1	
 扼	GJ	
+扽	FD	
 扽	kBigFive	
 找	FD	
 找	kBigFive	
@@ -11792,15 +11887,16 @@
 抽	GJ	
 抾	kBigFive	
 抾	GJ	
+抿	FD	
 抿	kBigFive	
 抿	kHKGlyph	
 抿	T1	
 抿	GJ	
-拂	FD	
 拂	kBigFive	
 拂	kHKGlyph	
 拂	T1	
 拂	GJ	
+拄	FD	
 拄	kBigFive	
 拄	kHKGlyph	
 拄	T1	
@@ -11831,6 +11927,7 @@
 拋	kBigFive	
 拋	kHKGlyph	
 拋	T1	
+拌	FD	
 拌	kBigFive	
 拌	kHKGlyph	
 拌	T1	
@@ -11846,7 +11943,6 @@
 拎	GJ	
 拏	kBigFive	
 拏	GJ	
-拐	FD	
 拐	kBigFive	
 拐	kHKGlyph	
 拐	T1	
@@ -11858,6 +11954,7 @@
 拒	kHKGlyph	
 拒	T1	
 拒	GJ	
+拓	FD	
 拓	kBigFive	
 拓	kHKGlyph	
 拓	T1	
@@ -11910,6 +12007,7 @@
 括	kHKGlyph	
 括	T1	
 括	GJ	
+拭	FD	
 拭	kBigFive	
 拭	kHKGlyph	
 拭	T1	
@@ -11944,6 +12042,7 @@
 拵	kBigFive	
 拶	kBigFive	
 拶	GJ	
+拷	FD	
 拷	kBigFive	
 拷	kHKGlyph	
 拷	T1	
@@ -11958,6 +12057,7 @@
 拼	kHKGlyph	
 拼	T1	
 拼	GJ	
+拽	FD	
 拽	kBigFive	
 拽	kHKGlyph	
 拽	T1	
@@ -12066,6 +12166,7 @@
 挺	GJ	
 挻	kBigFive	
 挻	GJ	
+挼	FD	
 挼	kBigFive	
 挼	GJ	
 挽	FD	
@@ -12093,7 +12194,6 @@
 捅	FD	
 捅	kBigFive	
 捅	GJ	
-捆	FD	
 捆	kBigFive	
 捆	kHKGlyph	
 捆	T1	
@@ -12115,6 +12215,7 @@
 捌	kBigFive	
 捌	T1	
 捌	GJ	
+捍	FD	
 捍	kBigFive	
 捍	T1	
 捍	GJ	
@@ -12162,6 +12263,7 @@
 捨	kHKGlyph	
 捨	T1	
 捨	GJ	
+捩	FD	
 捩	kBigFive	
 捩	kHKGlyph	
 捩	T1	
@@ -12177,6 +12279,7 @@
 据	GJ	
 捯	kBigFive	
 捰	kBigFive	
+捱	FD	
 捱	kBigFive	
 捱	kHKGlyph	
 捱	T1	
@@ -12303,6 +12406,7 @@
 掠	kHKGlyph	
 掠	T1	
 掠	GJ	
+採	FD	
 採	kBigFive	
 採	kHKGlyph	
 採	T1	
@@ -12344,14 +12448,18 @@
 措	kHKGlyph	
 措	T1	
 措	GJ	
+掫	FD	
 掫	kBigFive	
 掫	GJ	
+掬	FD	
 掬	kBigFive	
 掬	kHKGlyph	
 掬	T1	
 掬	GJ	
+掭	FD	
 掭	kBigFive	
 掭	GJ	
+掮	FD	
 掮	kBigFive	
 掮	GJ	
 掯	kBigFive	
@@ -12376,12 +12484,13 @@
 揄	kBigFive	
 揄	GJ	
 揅	kBigFive	
-揆	FD	
 揆	kBigFive	
 揆	kHKGlyph	
 揆	T1	
 揆	GJ	
+揇	FD	
 揇	kBigFive	
+揈	FD	
 揈	kBigFive	
 揉	FD	
 揉	kBigFive	
@@ -12439,6 +12548,7 @@
 揜	kBigFive	
 揝	kBigFive	
 揝	GJ	
+揞	FD	
 揞	GJ	
 揟	kBigFive	
 揟	GJ	
@@ -12449,6 +12559,7 @@
 握	kHKGlyph	
 握	T1	
 握	GJ	
+揢	FD	
 揢	GJ	
 揣	FD	
 揣	kBigFive	
@@ -12467,11 +12578,11 @@
 揩	kHKGlyph	
 揩	T1	
 揩	GJ	
-揪	FD	
 揪	kBigFive	
 揪	kHKGlyph	
 揪	T1	
 揪	GJ	
+揫	FD	
 揫	kBigFive	
 揫	GJ	
 揬	GJ	
@@ -12509,10 +12620,13 @@
 搆	kBigFive	
 搆	T1	
 搆	GJ	
+搉	FD	
 搉	kBigFive	
 搉	GJ	
+搊	FD	
 搊	kBigFive	
 搊	GJ	
+搋	FD	
 搋	kBigFive	
 搋	GJ	
 搌	kBigFive	
@@ -12524,6 +12638,7 @@
 損	GJ	
 搎	kBigFive	
 搎	GJ	
+搏	FD	
 搏	kBigFive	
 搏	kHKGlyph	
 搏	T1	
@@ -12547,6 +12662,7 @@
 搖	kBigFive	
 搖	kHKGlyph	
 搖	T1	
+搗	FD	
 搗	kBigFive	
 搗	kHKGlyph	
 搗	T1	
@@ -12555,6 +12671,7 @@
 搘	GJ	
 搚	kBigFive	
 搚	GJ	
+搛	FD	
 搛	kBigFive	
 搛	GJ	
 搜	FD	
@@ -12570,10 +12687,12 @@
 搟	kBigFive	
 搠	kBigFive	
 搠	GJ	
+搡	FD	
 搡	kBigFive	
 搡	GJ	
 搢	kBigFive	
 搢	GJ	
+搣	FD	
 搣	kBigFive	
 搣	GJ	
 搤	kBigFive	
@@ -12582,10 +12701,13 @@
 搥	GJ	
 搦	kBigFive	
 搦	GJ	
+搧	FD	
 搧	kBigFive	
 搧	GJ	
+搨	FD	
 搨	kBigFive	
 搨	GJ	
+搩	FD	
 搩	GJ	
 搪	kBigFive	
 搪	kHKGlyph	
@@ -12624,7 +12746,6 @@
 搷	GJ	
 搹	kBigFive	
 搹	GJ	
-携	FD	
 携	kHKGlyph	
 搽	FD	
 搽	kBigFive	
@@ -12648,6 +12769,7 @@
 摏	GJ	
 摐	kBigFive	
 摐	GJ	
+摑	FD	
 摑	kBigFive	
 摑	kHKGlyph	
 摑	T1	
@@ -12675,6 +12797,7 @@
 摚	GJ	
 摛	kBigFive	
 摛	GJ	
+摜	FD	
 摜	kBigFive	
 摜	GJ	
 摝	kBigFive	
@@ -12693,6 +12816,7 @@
 摥	kBigFive	
 摦	kBigFive	
 摦	GJ	
+摧	FD	
 摧	kBigFive	
 摧	kHKGlyph	
 摧	T1	
@@ -12735,6 +12859,7 @@
 摸	kHKGlyph	
 摸	T1	
 摸	GJ	
+摹	FD	
 摹	kBigFive	
 摹	kHKGlyph	
 摹	T1	
@@ -12744,6 +12869,7 @@
 摺	kHKGlyph	
 摺	T1	
 摺	GJ	
+摻	FD	
 摻	kBigFive	
 摻	T1	
 摻	GJ	
@@ -12798,6 +12924,7 @@
 撖	kBigFive	
 撗	kBigFive	
 撘	kBigFive	
+撙	FD	
 撙	kBigFive	
 撙	T1	
 撙	GJ	
@@ -12821,6 +12948,7 @@
 撢	kBigFive	
 撢	T1	
 撢	GJ	
+撣	FD	
 撣	kBigFive	
 撣	GJ	
 撤	FD	
@@ -12845,11 +12973,11 @@
 撫	kHKGlyph	
 撫	T1	
 撫	GJ	
+撬	FD	
 撬	kBigFive	
 撬	kHKGlyph	
 撬	T1	
 撬	GJ	
-播	FD	
 播	kBigFive	
 播	kHKGlyph	
 播	T1	
@@ -12871,6 +12999,7 @@
 撲	kHKGlyph	
 撲	T1	
 撲	GJ	
+撳	FD	
 撳	kBigFive	
 撳	T1	
 撳	GJ	
@@ -12899,6 +13028,7 @@
 擁	kHKGlyph	
 擁	T1	
 擁	GJ	
+擂	FD	
 擂	kBigFive	
 擂	kHKGlyph	
 擂	T1	
@@ -12908,7 +13038,6 @@
 擄	kHKGlyph	
 擄	T1	
 擄	GJ	
-擅	FD	
 擅	kBigFive	
 擅	kHKGlyph	
 擅	T1	
@@ -12954,10 +13083,12 @@
 擔	kHKGlyph	
 擔	T1	
 擔	GJ	
+擖	FD	
 擖	kBigFive	
 擖	GJ	
 擗	kBigFive	
 擗	GJ	
+擘	FD	
 擘	kBigFive	
 擘	kHKGlyph	
 擘	T1	
@@ -12976,6 +13107,7 @@
 擠	GJ	
 擡	kHKGlyph	
 擡	GJ	
+擢	FD	
 擢	kBigFive	
 擢	T1	
 擢	GJ	
@@ -12989,10 +13121,12 @@
 擦	kHKGlyph	
 擦	T1	
 擦	GJ	
+擧	FD	
 擧	kHKGlyph	
 擧	GJ	
 擨	kBigFive	
 擨	GJ	
+擩	FD	
 擩	kBigFive	
 擩	GJ	
 擫	kBigFive	
@@ -13007,10 +13141,12 @@
 擭	GJ	
 擯	kBigFive	
 擯	GJ	
+擰	FD	
 擰	kBigFive	
 擰	kHKGlyph	
 擰	T1	
 擰	GJ	
+擱	FD	
 擱	kBigFive	
 擱	kHKGlyph	
 擱	T1	
@@ -13048,6 +13184,7 @@
 擾	kHKGlyph	
 擾	T1	
 擾	GJ	
+擿	FD	
 擿	kBigFive	
 擿	GJ	
 攀	FD	
@@ -13070,6 +13207,7 @@
 攈	GJ	
 攉	kBigFive	
 攉	GJ	
+攋	FD	
 攋	GJ	
 攌	kBigFive	
 攌	GJ	
@@ -13107,6 +13245,7 @@
 攙	GJ	
 攛	kBigFive	
 攛	GJ	
+攜	FD	
 攜	kBigFive	
 攜	kHKGlyph	
 攜	T1	
@@ -13121,6 +13260,7 @@
 攠	kBigFive	
 攠	GJ	
 攡	kBigFive	
+攢	FD	
 攢	kBigFive	
 攢	GJ	
 攣	kBigFive	
@@ -13144,6 +13284,7 @@
 攪	kHKGlyph	
 攪	T1	
 攪	GJ	
+攫	FD	
 攫	kBigFive	
 攫	kHKGlyph	
 攫	T1	
@@ -13155,6 +13296,7 @@
 攬	GJ	
 攭	kBigFive	
 攭	GJ	
+攮	FD	
 攮	kBigFive	
 攮	GJ	
 支	FD	
@@ -13220,6 +13362,7 @@
 敉	T1	
 敉	GJ	
 敊	kBigFive	
+敍	FD	
 敍	kHKGlyph	
 敏	FD	
 敏	kBigFive	
@@ -13238,6 +13381,7 @@
 敕	kBigFive	
 敕	T1	
 敕	GJ	
+敖	FD	
 敖	kBigFive	
 敖	kHKGlyph	
 敖	T1	
@@ -13264,6 +13408,7 @@
 敝	kHKGlyph	
 敝	T1	
 敝	GJ	
+敞	FD	
 敞	kBigFive	
 敞	kHKGlyph	
 敞	T1	
@@ -13290,6 +13435,7 @@
 敦	GJ	
 敧	kBigFive	
 敧	GJ	
+敨	FD	
 敨	kBigFive	
 敪	kBigFive	
 敫	GJ	
@@ -13357,6 +13503,7 @@
 文	kHKGlyph	
 文	T1	
 文	GJ	
+斌	FD	
 斌	kBigFive	
 斌	GJ	
 斍	GJ	
@@ -13364,6 +13511,7 @@
 斐	kHKGlyph	
 斐	T1	
 斐	GJ	
+斑	FD	
 斑	kBigFive	
 斑	kHKGlyph	
 斑	T1	
@@ -13406,7 +13554,6 @@
 斟	GJ	
 斠	kBigFive	
 斠	GJ	
-斡	FD	
 斡	kBigFive	
 斡	kHKGlyph	
 斡	T1	
@@ -13430,6 +13577,7 @@
 斨	kBigFive	
 斨	GJ	
 斪	kBigFive	
+斫	FD	
 斫	kBigFive	
 斫	kHKGlyph	
 斫	T1	
@@ -13505,7 +13653,6 @@
 旋	kHKGlyph	
 旋	T1	
 旋	GJ	
-旌	FD	
 旌	kBigFive	
 旌	kHKGlyph	
 旌	T1	
@@ -13580,7 +13727,6 @@
 旬	kHKGlyph	
 旬	T1	
 旬	GJ	
-旭	FD	
 旭	kBigFive	
 旭	kHKGlyph	
 旭	T1	
@@ -13741,7 +13887,6 @@
 昳	GJ	
 昴	kBigFive	
 昴	GJ	
-昵	FD	
 昵	kBigFive	
 昵	GJ	
 昶	kBigFive	
@@ -13756,6 +13901,7 @@
 時	kHKGlyph	
 時	T1	
 時	GJ	
+晃	FD	
 晃	kBigFive	
 晃	kHKGlyph	
 晃	T1	
@@ -13773,6 +13919,7 @@
 晊	kBigFive	
 晊	GJ	
 晋	GJ	
+晌	FD	
 晌	kBigFive	
 晌	kHKGlyph	
 晌	T1	
@@ -13841,6 +13988,7 @@
 景	kHKGlyph	
 景	T1	
 景	GJ	
+晰	FD	
 晰	kBigFive	
 晰	kHKGlyph	
 晰	T1	
@@ -13858,7 +14006,6 @@
 晶	kHKGlyph	
 晶	T1	
 晶	GJ	
-晷	FD	
 晷	kBigFive	
 晷	T1	
 晷	GJ	
@@ -13875,6 +14022,7 @@
 晼	kBigFive	
 晼	GJ	
 晽	GJ	
+晾	FD	
 晾	kBigFive	
 晾	T1	
 晾	GJ	
@@ -13932,6 +14080,7 @@
 暘	T1	
 暘	GJ	
 暙	kBigFive	
+暝	FD	
 暝	kBigFive	
 暝	T1	
 暝	GJ	
@@ -13989,6 +14138,7 @@
 暻	kBigFive	
 暻	GJ	
 暽	kBigFive	
+暾	FD	
 暾	kBigFive	
 暾	GJ	
 暿	GJ	
@@ -14098,7 +14248,6 @@
 更	GJ	
 曶	kBigFive	
 曶	GJ	
-曷	FD	
 曷	kBigFive	
 曷	kHKGlyph	
 曷	T1	
@@ -14179,7 +14328,6 @@
 朔	kHKGlyph	
 朔	T1	
 朔	GJ	
-朕	FD	
 朕	kBigFive	
 朕	kHKGlyph	
 朕	T1	
@@ -14245,6 +14393,7 @@
 札	kHKGlyph	
 札	T1	
 札	GJ	
+朮	FD	
 朮	kBigFive	
 朮	kHKGlyph	
 朮	T1	
@@ -14256,14 +14405,15 @@
 朱	GJ	
 朳	kBigFive	
 朳	GJ	
+朴	FD	
 朴	kBigFive	
 朴	kHKGlyph	
 朴	T1	
 朴	GJ	
-朵	FD	
 朵	kBigFive	
 朵	kHKGlyph	
 朵	T1	
+朶	FD	
 朶	GJ	
 朸	kBigFive	
 朸	GJ	
@@ -14299,6 +14449,7 @@
 杉	T1	
 杉	GJ	
 杋	kBigFive	
+杌	FD	
 杌	kBigFive	
 杌	GJ	
 杍	kBigFive	
@@ -14356,6 +14507,7 @@
 束	kHKGlyph	
 束	T1	
 束	GJ	
+杠	FD	
 杠	kBigFive	
 杠	T1	
 杠	GJ	
@@ -14370,6 +14522,7 @@
 杭	kHKGlyph	
 杭	T1	
 杭	GJ	
+杮	FD	
 杮	GJ	
 杯	FD	
 杯	kBigFive	
@@ -14393,14 +14546,17 @@
 杳	kHKGlyph	
 杳	T1	
 杳	GJ	
+杴	FD	
 杴	kBigFive	
 杴	GJ	
+杵	FD	
 杵	kBigFive	
 杵	kHKGlyph	
 杵	T1	
 杵	GJ	
 杶	kBigFive	
 杶	GJ	
+杷	FD	
 杷	kBigFive	
 杷	kHKGlyph	
 杷	T1	
@@ -14433,6 +14589,7 @@
 枅	kBigFive	
 枅	GJ	
 枆	kBigFive	
+枇	FD	
 枇	kBigFive	
 枇	kHKGlyph	
 枇	T1	
@@ -14510,6 +14667,7 @@
 枲	GJ	
 枳	kBigFive	
 枳	GJ	
+枴	FD	
 枴	kBigFive	
 枴	T1	
 枵	FD	
@@ -14520,6 +14678,7 @@
 架	kHKGlyph	
 架	T1	
 架	GJ	
+枷	FD	
 枷	kBigFive	
 枷	GJ	
 枸	kBigFive	
@@ -14607,6 +14766,7 @@
 柝	kBigFive	
 柝	T1	
 柝	GJ	
+柞	FD	
 柞	kBigFive	
 柞	T1	
 柞	GJ	
@@ -14643,6 +14803,7 @@
 柭	GJ	
 柮	kBigFive	
 柮	GJ	
+柯	FD	
 柯	kBigFive	
 柯	kHKGlyph	
 柯	T1	
@@ -14679,6 +14840,7 @@
 柺	kHKGlyph	
 柺	GJ	
 柼	kBigFive	
+柿	FD	
 柿	kBigFive	
 柿	kHKGlyph	
 柿	T1	
@@ -14777,6 +14939,7 @@
 栽	kHKGlyph	
 栽	T1	
 栽	GJ	
+栿	FD	
 栿	GJ	
 桀	kBigFive	
 桀	kHKGlyph	
@@ -14795,6 +14958,7 @@
 桃	kHKGlyph	
 桃	T1	
 桃	GJ	
+桄	FD	
 桄	kBigFive	
 桄	GJ	
 桅	FD	
@@ -14802,6 +14966,7 @@
 桅	kHKGlyph	
 桅	T1	
 桅	GJ	
+框	FD	
 框	kBigFive	
 框	kHKGlyph	
 框	T1	
@@ -14870,6 +15035,7 @@
 桶	GJ	
 桷	kBigFive	
 桷	GJ	
+桸	FD	
 桸	kBigFive	
 桹	kBigFive	
 桹	GJ	
@@ -14904,6 +15070,7 @@
 梅	kHKGlyph	
 梅	T1	
 梅	GJ	
+梆	FD	
 梆	kBigFive	
 梆	kHKGlyph	
 梆	T1	
@@ -14927,11 +15094,13 @@
 梓	kHKGlyph	
 梓	T1	
 梓	GJ	
+梔	FD	
 梔	kBigFive	
 梔	T1	
 梔	GJ	
 梖	kBigFive	
 梖	GJ	
+梗	FD	
 梗	kBigFive	
 梗	kHKGlyph	
 梗	T1	
@@ -15022,6 +15191,7 @@
 棆	GJ	
 棇	kBigFive	
 棈	kBigFive	
+棉	FD	
 棉	kBigFive	
 棉	kHKGlyph	
 棉	T1	
@@ -15031,6 +15201,7 @@
 棋	kHKGlyph	
 棋	T1	
 棋	GJ	
+棌	FD	
 棌	kBigFive	
 棌	GJ	
 棍	FD	
@@ -15052,7 +15223,6 @@
 棓	GJ	
 棔	kBigFive	
 棔	GJ	
-棕	FD	
 棕	kBigFive	
 棕	kHKGlyph	
 棕	T1	
@@ -15084,6 +15254,7 @@
 棟	kHKGlyph	
 棟	T1	
 棟	GJ	
+棠	FD	
 棠	kBigFive	
 棠	kHKGlyph	
 棠	T1	
@@ -15120,6 +15291,7 @@
 棯	kBigFive	
 棰	kBigFive	
 棰	GJ	
+棱	FD	
 棱	kBigFive	
 棱	GJ	
 棲	FD	
@@ -15144,6 +15316,7 @@
 棹	kHKGlyph	
 棹	T1	
 棹	GJ	
+棺	FD	
 棺	kBigFive	
 棺	kHKGlyph	
 棺	T1	
@@ -15181,10 +15354,12 @@
 植	kHKGlyph	
 植	T1	
 植	GJ	
+椎	FD	
 椎	kBigFive	
 椎	kHKGlyph	
 椎	T1	
 椎	GJ	
+椏	FD	
 椏	kBigFive	
 椏	GJ	
 椐	kBigFive	
@@ -15216,10 +15391,12 @@
 椲	GJ	
 椳	kBigFive	
 椳	GJ	
+椴	FD	
 椴	kBigFive	
 椴	GJ	
 椵	kBigFive	
 椵	GJ	
+椶	FD	
 椷	kBigFive	
 椷	GJ	
 椸	kBigFive	
@@ -15260,10 +15437,12 @@
 楏	kBigFive	
 楑	kBigFive	
 楒	kBigFive	
+楓	FD	
 楓	kBigFive	
 楓	kHKGlyph	
 楓	T1	
 楓	GJ	
+楔	FD	
 楔	kBigFive	
 楔	kHKGlyph	
 楔	T1	
@@ -15285,6 +15464,7 @@
 楛	T1	
 楛	GJ	
 楜	kBigFive	
+楝	FD	
 楝	kBigFive	
 楝	T1	
 楝	GJ	
@@ -15378,6 +15558,7 @@
 榑	kBigFive	
 榒	GJ	
 榓	kBigFive	
+榔	FD	
 榔	kBigFive	
 榔	kHKGlyph	
 榔	T1	
@@ -15420,6 +15601,7 @@
 榦	kBigFive	
 榦	kHKGlyph	
 榦	T1	
+榧	FD	
 榧	kBigFive	
 榧	GJ	
 榨	FD	
@@ -15431,6 +15613,7 @@
 榩	GJ	
 榪	kBigFive	
 榪	GJ	
+榫	FD	
 榫	kBigFive	
 榫	T1	
 榫	GJ	
@@ -15570,12 +15753,14 @@
 槻	kBigFive	
 槻	GJ	
 槼	kBigFive	
+槽	FD	
 槽	kBigFive	
 槽	kHKGlyph	
 槽	T1	
 槽	GJ	
 槾	kBigFive	
 槾	GJ	
+槿	FD	
 槿	kBigFive	
 槿	GJ	
 樀	kBigFive	
@@ -15600,6 +15785,7 @@
 樇	kBigFive	
 樈	kBigFive	
 樉	kBigFive	
+樊	FD	
 樊	kBigFive	
 樊	kHKGlyph	
 樊	T1	
@@ -15676,6 +15862,7 @@
 樵	T1	
 樵	GJ	
 樶	GJ	
+樸	FD	
 樸	kBigFive	
 樸	kHKGlyph	
 樸	T1	
@@ -15685,6 +15872,7 @@
 樹	kHKGlyph	
 樹	T1	
 樹	GJ	
+樺	FD	
 樺	kBigFive	
 樺	kHKGlyph	
 樺	T1	
@@ -15714,6 +15902,7 @@
 橇	kHKGlyph	
 橇	T1	
 橇	GJ	
+橈	FD	
 橈	kBigFive	
 橈	T1	
 橈	GJ	
@@ -15763,10 +15952,12 @@
 機	T1	
 機	GJ	
 橠	kBigFive	
+橡	FD	
 橡	kBigFive	
 橡	kHKGlyph	
 橡	T1	
 橡	GJ	
+橢	FD	
 橢	kBigFive	
 橢	kHKGlyph	
 橢	T1	
@@ -15800,6 +15991,7 @@
 檀	kHKGlyph	
 檀	T1	
 檀	GJ	
+檁	FD	
 檁	kBigFive	
 檁	GJ	
 檃	kBigFive	
@@ -15818,7 +16010,6 @@
 檍	GJ	
 檎	kBigFive	
 檎	GJ	
-檐	FD	
 檐	kBigFive	
 檐	T1	
 檐	GJ	
@@ -15827,6 +16018,7 @@
 檒	kBigFive	
 檓	kBigFive	
 檓	GJ	
+檔	FD	
 檔	kBigFive	
 檔	kHKGlyph	
 檔	T1	
@@ -15835,12 +16027,14 @@
 檕	GJ	
 檖	kBigFive	
 檖	GJ	
+檗	FD	
 檗	kBigFive	
 檗	T1	
 檗	GJ	
 檚	kBigFive	
 檛	kBigFive	
 檛	GJ	
+檜	FD	
 檜	kBigFive	
 檜	kHKGlyph	
 檜	T1	
@@ -15898,6 +16092,7 @@
 檹	kBigFive	
 檹	GJ	
 檺	kBigFive	
+檻	FD	
 檻	kBigFive	
 檻	kHKGlyph	
 檻	T1	
@@ -15905,7 +16100,9 @@
 檼	GJ	
 檽	kBigFive	
 檽	GJ	
+檾	FD	
 檿	GJ	
+櫂	FD	
 櫂	kBigFive	
 櫂	kHKGlyph	
 櫂	T1	
@@ -15941,6 +16138,7 @@
 櫔	GJ	
 櫙	kBigFive	
 櫙	GJ	
+櫚	FD	
 櫚	kBigFive	
 櫚	kHKGlyph	
 櫚	T1	
@@ -15963,10 +16161,12 @@
 櫡	kBigFive	
 櫡	GJ	
 櫢	GJ	
+櫥	FD	
 櫥	kBigFive	
 櫥	kHKGlyph	
 櫥	T1	
 櫥	GJ	
+櫧	FD	
 櫧	kBigFive	
 櫧	GJ	
 櫨	kBigFive	
@@ -16145,6 +16345,7 @@
 歌	GJ	
 歍	kBigFive	
 歍	GJ	
+歎	FD	
 歎	kBigFive	
 歎	kHKGlyph	
 歎	T1	
@@ -16285,6 +16486,7 @@
 殑	GJ	
 殔	kBigFive	
 殔	GJ	
+殕	FD	
 殕	kBigFive	
 殕	GJ	
 殖	FD	
@@ -16380,10 +16582,10 @@
 殿	kHKGlyph	
 殿	T1	
 殿	GJ	
+毀	FD	
 毀	kBigFive	
 毀	kHKGlyph	
 毀	T1	
-毁	FD	
 毁	GJ	
 毃	kBigFive	
 毄	kBigFive	
@@ -16404,7 +16606,6 @@
 毉	kBigFive	
 毊	kBigFive	
 毊	GJ	
-毋	FD	
 毋	kBigFive	
 毋	kHKGlyph	
 毋	T1	
@@ -16511,6 +16712,7 @@
 氂	GJ	
 氃	kBigFive	
 氃	GJ	
+氄	FD	
 氄	kBigFive	
 氄	GJ	
 氅	kBigFive	
@@ -16546,6 +16748,7 @@
 民	T1	
 民	GJ	
 氒	GJ	
+氓	FD	
 氓	kBigFive	
 氓	kHKGlyph	
 氓	T1	
@@ -16597,7 +16800,6 @@
 氮	kBigFive	
 氮	kHKGlyph	
 氮	T1	
-氯	FD	
 氯	kBigFive	
 氯	kHKGlyph	
 氯	T1	
@@ -16619,6 +16821,7 @@
 永	GJ	
 氻	kBigFive	
 氼	GJ	
+氽	FD	
 氽	GJ	
 氾	kBigFive	
 氾	kHKGlyph	
@@ -16643,9 +16846,9 @@
 求	GJ	
 汃	kBigFive	
 汃	GJ	
+汆	FD	
 汆	kBigFive	
 汆	GJ	
-汊	FD	
 汊	kBigFive	
 汊	GJ	
 汋	kBigFive	
@@ -16667,6 +16870,7 @@
 汒	GJ	
 汔	kBigFive	
 汔	GJ	
+汕	FD	
 汕	kBigFive	
 汕	kHKGlyph	
 汕	T1	
@@ -16793,6 +16997,7 @@
 沆	GJ	
 沇	kBigFive	
 沇	GJ	
+沈	FD	
 沈	kBigFive	
 沈	kHKGlyph	
 沈	T1	
@@ -16812,6 +17017,7 @@
 沍	kBigFive	
 沍	T1	
 沎	kBigFive	
+沏	FD	
 沏	kBigFive	
 沏	GJ	
 沐	FD	
@@ -16820,10 +17026,10 @@
 沐	T1	
 沐	GJ	
 沑	GJ	
-沒	FD	
 沒	kBigFive	
 沒	kHKGlyph	
 沒	T1	
+沓	FD	
 沓	kBigFive	
 沓	GJ	
 沔	kBigFive	
@@ -16854,6 +17060,7 @@
 沜	GJ	
 沝	kBigFive	
 沝	GJ	
+没	FD	
 没	GJ	
 沫	FD	
 沫	kBigFive	
@@ -16871,6 +17078,7 @@
 沮	GJ	
 沰	kBigFive	
 沰	GJ	
+沱	FD	
 沱	kBigFive	
 沱	kHKGlyph	
 沱	T1	
@@ -16936,6 +17144,7 @@
 泄	kHKGlyph	
 泄	T1	
 泄	GJ	
+泅	FD	
 泅	kBigFive	
 泅	kHKGlyph	
 泅	T1	
@@ -17074,6 +17283,7 @@
 洃	kBigFive	
 洄	kBigFive	
 洄	GJ	
+洇	FD	
 洇	kBigFive	
 洇	GJ	
 洈	kBigFive	
@@ -17198,7 +17408,6 @@
 活	kHKGlyph	
 活	T1	
 活	GJ	
-洼	FD	
 洼	kBigFive	
 洼	GJ	
 洽	FD	
@@ -17226,7 +17435,6 @@
 浙	kHKGlyph	
 浙	T1	
 浙	GJ	
-浚	FD	
 浚	kBigFive	
 浚	kHKGlyph	
 浚	T1	
@@ -17235,6 +17443,7 @@
 浜	FD	
 浜	GJ	
 浝	GJ	
+浞	FD	
 浞	kBigFive	
 浞	GJ	
 浟	kBigFive	
@@ -17364,7 +17573,6 @@
 涑	GJ	
 涒	kBigFive	
 涒	GJ	
-涓	FD	
 涓	kBigFive	
 涓	kHKGlyph	
 涓	T1	
@@ -17409,6 +17617,7 @@
 涴	FD	
 涴	kBigFive	
 涴	GJ	
+涵	FD	
 涵	kBigFive	
 涵	kHKGlyph	
 涵	T1	
@@ -17424,6 +17633,7 @@
 涺	kBigFive	
 涺	GJ	
 涻	kBigFive	
+涼	FD	
 涼	kBigFive	
 涼	kHKGlyph	
 涼	T1	
@@ -17432,13 +17642,16 @@
 涽	GJ	
 涾	kBigFive	
 涾	GJ	
+涿	FD	
 涿	kBigFive	
 涿	T1	
 涿	GJ	
+淀	FD	
 淀	kBigFive	
 淀	GJ	
 淂	kBigFive	
 淃	GJ	
+淄	FD	
 淄	kBigFive	
 淄	kHKGlyph	
 淄	T1	
@@ -17479,6 +17692,7 @@
 淑	kHKGlyph	
 淑	T1	
 淑	GJ	
+淒	FD	
 淒	kBigFive	
 淒	kHKGlyph	
 淒	T1	
@@ -17490,6 +17704,7 @@
 淖	kBigFive	
 淖	GJ	
 淗	kBigFive	
+淘	FD	
 淘	kBigFive	
 淘	kHKGlyph	
 淘	T1	
@@ -17534,6 +17749,7 @@
 淦	kBigFive	
 淦	T1	
 淦	GJ	
+淨	FD	
 淨	kBigFive	
 淨	kHKGlyph	
 淨	T1	
@@ -17570,6 +17786,7 @@
 深	GJ	
 淲	kBigFive	
 淲	GJ	
+淳	FD	
 淳	kBigFive	
 淳	kHKGlyph	
 淳	T1	
@@ -17619,6 +17836,7 @@
 渙	kHKGlyph	
 渙	T1	
 渙	GJ	
+渚	FD	
 渚	kBigFive	
 渚	kHKGlyph	
 渚	T1	
@@ -17662,6 +17880,7 @@
 渥	kHKGlyph	
 渥	T1	
 渥	GJ	
+渦	FD	
 渦	kBigFive	
 渦	kHKGlyph	
 渦	T1	
@@ -17671,7 +17890,6 @@
 渧	GJ	
 渨	kBigFive	
 渨	GJ	
-温	FD	
 温	kHKGlyph	
 渫	kBigFive	
 渫	GJ	
@@ -17680,6 +17898,7 @@
 測	kHKGlyph	
 測	T1	
 測	GJ	
+渭	FD	
 渭	kBigFive	
 渭	kHKGlyph	
 渭	T1	
@@ -17752,6 +17971,7 @@
 湇	GJ	
 湉	kBigFive	
 湉	GJ	
+湊	FD	
 湊	kBigFive	
 湊	kHKGlyph	
 湊	T1	
@@ -17782,6 +18002,7 @@
 湖	kHKGlyph	
 湖	T1	
 湖	GJ	
+湘	FD	
 湘	kBigFive	
 湘	kHKGlyph	
 湘	T1	
@@ -17898,6 +18119,7 @@
 溠	kBigFive	
 溠	GJ	
 溡	kBigFive	
+溢	FD	
 溢	kBigFive	
 溢	kHKGlyph	
 溢	T1	
@@ -17918,6 +18140,7 @@
 溪	kHKGlyph	
 溪	T1	
 溪	GJ	
+溫	FD	
 溫	kBigFive	
 溫	T1	
 溫	GJ	
@@ -17940,6 +18163,7 @@
 溴	T1	
 溴	GJ	
 溵	GJ	
+溶	FD	
 溶	kBigFive	
 溶	kHKGlyph	
 溶	T1	
@@ -17953,6 +18177,7 @@
 溺	kHKGlyph	
 溺	T1	
 溺	GJ	
+溻	FD	
 溼	kBigFive	
 溼	kHKGlyph	
 溼	T1	
@@ -17973,6 +18198,7 @@
 滂	GJ	
 滃	kBigFive	
 滃	GJ	
+滄	FD	
 滄	kBigFive	
 滄	kHKGlyph	
 滄	T1	
@@ -17998,12 +18224,14 @@
 滋	kHKGlyph	
 滋	T1	
 滋	GJ	
+滌	FD	
 滌	kBigFive	
 滌	kHKGlyph	
 滌	T1	
 滌	GJ	
 滍	kBigFive	
 滍	GJ	
+滎	FD	
 滎	kBigFive	
 滎	GJ	
 滏	kBigFive	
@@ -18017,6 +18245,7 @@
 滑	GJ	
 滒	kBigFive	
 滒	GJ	
+滓	FD	
 滓	kBigFive	
 滓	kHKGlyph	
 滓	T1	
@@ -18070,6 +18299,7 @@
 滵	GJ	
 滶	kBigFive	
 滶	GJ	
+滷	FD	
 滷	kBigFive	
 滷	T1	
 滷	GJ	
@@ -18115,10 +18345,12 @@
 漆	GJ	
 漇	kBigFive	
 漇	GJ	
+漈	FD	
 漈	kBigFive	
 漈	GJ	
 漉	kBigFive	
 漉	GJ	
+漊	FD	
 漊	kBigFive	
 漊	GJ	
 漋	GJ	
@@ -18133,6 +18365,7 @@
 漏	GJ	
 漑	GJ	
 漒	kBigFive	
+漓	FD	
 漓	kBigFive	
 漓	kHKGlyph	
 漓	T1	
@@ -18157,6 +18390,7 @@
 漞	kBigFive	
 漞	GJ	
 漟	kBigFive	
+漠	FD	
 漠	kBigFive	
 漠	kHKGlyph	
 漠	T1	
@@ -18171,6 +18405,7 @@
 漣	kHKGlyph	
 漣	T1	
 漣	GJ	
+漤	FD	
 漥	kBigFive	
 漦	kBigFive	
 漦	GJ	
@@ -18212,6 +18447,7 @@
 漲	kHKGlyph	
 漲	T1	
 漲	GJ	
+漳	FD	
 漳	kBigFive	
 漳	kHKGlyph	
 漳	T1	
@@ -18235,6 +18471,7 @@
 漻	GJ	
 漼	kBigFive	
 漼	GJ	
+漾	FD	
 漾	kBigFive	
 漾	kHKGlyph	
 漾	T1	
@@ -18305,6 +18542,7 @@
 潤	kHKGlyph	
 潤	T1	
 潤	GJ	
+潦	FD	
 潦	kBigFive	
 潦	kHKGlyph	
 潦	T1	
@@ -18344,13 +18582,13 @@
 潳	GJ	
 潵	GJ	
 潶	kBigFive	
+潷	FD	
 潷	kBigFive	
 潷	GJ	
 潸	kBigFive	
 潸	kHKGlyph	
 潸	T1	
 潸	GJ	
-潺	FD	
 潺	kBigFive	
 潺	kHKGlyph	
 潺	T1	
@@ -18384,8 +18622,10 @@
 澆	kHKGlyph	
 澆	T1	
 澆	GJ	
+澇	FD	
 澇	kBigFive	
 澇	GJ	
+澈	FD	
 澈	kBigFive	
 澈	kHKGlyph	
 澈	T1	
@@ -18413,12 +18653,14 @@
 澕	kBigFive	
 澖	kBigFive	
 澖	GJ	
+澗	FD	
 澗	kBigFive	
 澗	kHKGlyph	
 澗	T1	
 澗	GJ	
 澞	kBigFive	
 澞	GJ	
+澠	FD	
 澠	kBigFive	
 澠	T1	
 澠	GJ	
@@ -18464,6 +18706,7 @@
 澱	T1	
 澱	GJ	
 澲	kBigFive	
+澳	FD	
 澳	kBigFive	
 澳	kHKGlyph	
 澳	T1	
@@ -18523,6 +18766,7 @@
 濌	kBigFive	
 濌	GJ	
 濍	kBigFive	
+濎	FD	
 濎	kBigFive	
 濎	GJ	
 濏	kBigFive	
@@ -18582,6 +18826,7 @@
 濫	kHKGlyph	
 濫	T1	
 濫	GJ	
+濬	FD	
 濬	kBigFive	
 濬	kHKGlyph	
 濬	T1	
@@ -18591,14 +18836,15 @@
 濮	kBigFive	
 濮	T1	
 濮	GJ	
-濯	FD	
 濯	kBigFive	
 濯	kHKGlyph	
 濯	T1	
 濯	GJ	
+濰	FD	
 濰	kBigFive	
 濰	T1	
 濰	GJ	
+濱	FD	
 濱	kBigFive	
 濱	kHKGlyph	
 濱	T1	
@@ -18644,7 +18890,6 @@
 瀉	T1	
 瀉	GJ	
 瀊	kBigFive	
-瀋	FD	
 瀋	kBigFive	
 瀋	kHKGlyph	
 瀋	T1	
@@ -18694,6 +18939,7 @@
 瀝	T1	
 瀝	GJ	
 瀞	GJ	
+瀟	FD	
 瀟	kBigFive	
 瀟	kHKGlyph	
 瀟	T1	
@@ -18783,6 +19029,7 @@
 灑	kHKGlyph	
 灑	T1	
 灑	GJ	
+灒	FD	
 灒	kBigFive	
 灒	GJ	
 灓	GJ	
@@ -18842,7 +19089,6 @@
 灰	GJ	
 灱	kBigFive	
 灴	kBigFive	
-灶	FD	
 灶	kBigFive	
 灶	kHKGlyph	
 灶	T1	
@@ -18933,6 +19179,7 @@
 炮	kHKGlyph	
 炮	T1	
 炮	GJ	
+炯	FD	
 炯	kBigFive	
 炯	kHKGlyph	
 炯	T1	
@@ -18941,6 +19188,7 @@
 炱	kBigFive	
 炱	GJ	
 炲	GJ	
+炳	FD	
 炳	kBigFive	
 炳	kHKGlyph	
 炳	T1	
@@ -18969,6 +19217,7 @@
 烈	kHKGlyph	
 烈	T1	
 烈	GJ	
+烊	FD	
 烊	kBigFive	
 烊	kHKGlyph	
 烊	T1	
@@ -19064,6 +19313,7 @@
 焊	T1	
 焊	GJ	
 焋	kBigFive	
+焌	FD	
 焌	kBigFive	
 焌	GJ	
 焍	kBigFive	
@@ -19073,6 +19323,7 @@
 焐	GJ	
 焓	kBigFive	
 焗	kBigFive	
+焙	FD	
 焙	kBigFive	
 焙	kHKGlyph	
 焙	T1	
@@ -19109,6 +19360,7 @@
 焬	GJ	
 焮	kBigFive	
 焮	GJ	
+焯	FD	
 焯	kBigFive	
 焯	GJ	
 焰	FD	
@@ -19195,6 +19447,7 @@
 煢	GJ	
 煣	kBigFive	
 煣	GJ	
+煤	FD	
 煤	kBigFive	
 煤	kHKGlyph	
 煤	T1	
@@ -19272,10 +19525,10 @@
 熏	GJ	
 熐	kBigFive	
 熑	GJ	
+熒	FD	
 熒	kBigFive	
 熒	T1	
 熒	GJ	
-熔	FD	
 熔	kBigFive	
 熔	kHKGlyph	
 熔	T1	
@@ -19307,6 +19560,7 @@
 熢	GJ	
 熤	kBigFive	
 熤	GJ	
+熥	FD	
 熥	kBigFive	
 熥	GJ	
 熧	kBigFive	
@@ -19324,6 +19578,7 @@
 熬	GJ	
 熭	GJ	
 熮	GJ	
+熯	FD	
 熯	kBigFive	
 熯	GJ	
 熰	kBigFive	
@@ -19341,6 +19596,7 @@
 熷	GJ	
 熸	kBigFive	
 熸	GJ	
+熹	FD	
 熹	kBigFive	
 熹	kHKGlyph	
 熹	T1	
@@ -19393,6 +19649,7 @@
 燎	GJ	
 燏	kBigFive	
 燏	GJ	
+燐	FD	
 燐	kBigFive	
 燐	kHKGlyph	
 燐	T1	
@@ -19437,6 +19694,7 @@
 燡	GJ	
 燢	kBigFive	
 燤	kBigFive	
+燥	FD	
 燥	kBigFive	
 燥	kHKGlyph	
 燥	T1	
@@ -19468,6 +19726,7 @@
 燰	kBigFive	
 燱	kBigFive	
 燲	kBigFive	
+燴	FD	
 燴	kBigFive	
 燴	kHKGlyph	
 燴	T1	
@@ -19605,6 +19864,7 @@
 爾	kHKGlyph	
 爾	T1	
 爾	GJ	
+爿	FD	
 爿	kBigFive	
 爿	GJ	
 牀	FD	
@@ -19664,13 +19924,13 @@
 牙	kHKGlyph	
 牙	T1	
 牙	GJ	
+牚	FD	
 牚	kBigFive	
 牛	FD	
 牛	kBigFive	
 牛	kHKGlyph	
 牛	T1	
 牛	GJ	
-牝	FD	
 牝	kBigFive	
 牝	kHKGlyph	
 牝	T1	
@@ -19714,6 +19974,7 @@
 牭	GJ	
 牮	kBigFive	
 牮	GJ	
+牯	FD	
 牯	kBigFive	
 牯	kHKGlyph	
 牯	T1	
@@ -19733,6 +19994,7 @@
 牶	kBigFive	
 牷	kBigFive	
 牷	GJ	
+牸	FD	
 牸	kBigFive	
 牸	GJ	
 特	FD	
@@ -19779,6 +20041,7 @@
 犋	GJ	
 犌	kBigFive	
 犌	GJ	
+犍	FD	
 犍	kBigFive	
 犍	GJ	
 犎	kBigFive	
@@ -19813,6 +20076,7 @@
 犞	kBigFive	
 犞	GJ	
 犡	kBigFive	
+犢	FD	
 犢	kBigFive	
 犢	kHKGlyph	
 犢	T1	
@@ -19887,7 +20151,6 @@
 狋	GJ	
 狌	kBigFive	
 狍	GJ	
-狎	FD	
 狎	kBigFive	
 狎	kHKGlyph	
 狎	T1	
@@ -19925,6 +20188,7 @@
 狜	GJ	
 狟	kBigFive	
 狟	GJ	
+狠	FD	
 狠	kBigFive	
 狠	kHKGlyph	
 狠	T1	
@@ -19962,6 +20226,7 @@
 狷	kHKGlyph	
 狷	T1	
 狷	GJ	
+狸	FD	
 狸	kBigFive	
 狸	kHKGlyph	
 狸	T1	
@@ -19980,6 +20245,7 @@
 狼	kHKGlyph	
 狼	T1	
 狼	GJ	
+狽	FD	
 狽	kBigFive	
 狽	kHKGlyph	
 狽	T1	
@@ -20010,6 +20276,7 @@
 猓	kBigFive	
 猓	T1	
 猓	GJ	
+猖	FD	
 猖	kBigFive	
 猖	kHKGlyph	
 猖	T1	
@@ -20051,13 +20318,13 @@
 猧	kBigFive	
 猧	GJ	
 猨	GJ	
+猩	FD	
 猩	kBigFive	
 猩	kHKGlyph	
 猩	T1	
 猩	GJ	
 猪	GJ	
 猫	GJ	
-猬	FD	
 猬	GJ	
 猭	kBigFive	
 猭	GJ	
@@ -20097,6 +20364,7 @@
 猾	kHKGlyph	
 猾	T1	
 猾	GJ	
+猿	FD	
 猿	kBigFive	
 猿	kHKGlyph	
 猿	T1	
@@ -20132,6 +20400,7 @@
 獎	T1	
 獎	GJ	
 獏	GJ	
+獐	FD	
 獐	kBigFive	
 獐	kHKGlyph	
 獐	T1	
@@ -20323,10 +20592,12 @@
 玬	kBigFive	
 玭	kBigFive	
 玭	GJ	
+玲	FD	
 玲	kBigFive	
 玲	kHKGlyph	
 玲	T1	
 玲	GJ	
+玳	FD	
 玳	kBigFive	
 玳	kHKGlyph	
 玳	T1	
@@ -20385,6 +20656,7 @@
 珏	GJ	
 珒	kBigFive	
 珒	GJ	
+珓	FD	
 珓	kBigFive	
 珓	GJ	
 珔	kBigFive	
@@ -20497,7 +20769,6 @@
 琙	GJ	
 琚	kBigFive	
 琚	GJ	
-琛	FD	
 琛	kBigFive	
 琛	T1	
 琛	GJ	
@@ -20618,6 +20889,7 @@
 瑙	kHKGlyph	
 瑙	T1	
 瑙	GJ	
+瑚	FD	
 瑚	kBigFive	
 瑚	kHKGlyph	
 瑚	T1	
@@ -20647,6 +20919,7 @@
 瑣	kHKGlyph	
 瑣	T1	
 瑣	GJ	
+瑤	FD	
 瑤	kBigFive	
 瑤	kHKGlyph	
 瑤	T1	
@@ -20746,7 +21019,6 @@
 璜	kHKGlyph	
 璜	T1	
 璜	GJ	
-璞	FD	
 璞	kBigFive	
 璞	T1	
 璞	GJ	
@@ -20801,6 +21073,7 @@
 璷	kBigFive	
 璸	kBigFive	
 璸	GJ	
+璺	FD	
 璺	kBigFive	
 璺	GJ	
 璻	kBigFive	
@@ -20896,7 +21169,6 @@
 瓪	GJ	
 瓬	kBigFive	
 瓬	GJ	
-瓮	FD	
 瓮	kBigFive	
 瓮	GJ	
 瓴	kBigFive	
@@ -20937,6 +21209,7 @@
 甊	GJ	
 甋	kBigFive	
 甋	GJ	
+甌	FD	
 甌	kBigFive	
 甌	kHKGlyph	
 甌	T1	
@@ -20948,6 +21221,7 @@
 甏	GJ	
 甐	kBigFive	
 甐	GJ	
+甑	FD	
 甑	kBigFive	
 甑	GJ	
 甒	kBigFive	
@@ -20956,6 +21230,7 @@
 甓	GJ	
 甔	kBigFive	
 甔	GJ	
+甕	FD	
 甕	kBigFive	
 甕	kHKGlyph	
 甕	T1	
@@ -20987,10 +21262,10 @@
 生	GJ	
 甡	kBigFive	
 甡	GJ	
-產	FD	
 產	kBigFive	
 產	kHKGlyph	
 產	T1	
+産	FD	
 産	GJ	
 甥	FD	
 甥	kBigFive	
@@ -21070,6 +21345,7 @@
 畀	GJ	
 畇	kBigFive	
 畇	GJ	
+畈	FD	
 畈	kBigFive	
 畈	GJ	
 畋	kBigFive	
@@ -21090,6 +21366,7 @@
 畏	T1	
 畏	GJ	
 畐	GJ	
+畔	FD	
 畔	kBigFive	
 畔	kHKGlyph	
 畔	T1	
@@ -21100,6 +21377,7 @@
 留	kHKGlyph	
 留	T1	
 留	GJ	
+畚	FD	
 畚	kBigFive	
 畚	kHKGlyph	
 畚	T1	
@@ -21131,6 +21409,7 @@
 略	kHKGlyph	
 略	T1	
 略	GJ	
+畦	FD	
 畦	kBigFive	
 畦	kHKGlyph	
 畦	T1	
@@ -21155,6 +21434,7 @@
 異	kHKGlyph	
 異	T1	
 異	GJ	
+畲	FD	
 畲	GJ	
 當	FD	
 當	kBigFive	
@@ -21178,7 +21458,9 @@
 畿	GJ	
 疀	kBigFive	
 疁	GJ	
+疃	FD	
 疃	GJ	
+疄	FD	
 疄	kBigFive	
 疄	GJ	
 疆	FD	
@@ -21215,6 +21497,7 @@
 疑	T1	
 疑	GJ	
 疒	GJ	
+疔	FD	
 疔	kBigFive	
 疔	GJ	
 疕	kBigFive	
@@ -21224,6 +21507,7 @@
 疙	kHKGlyph	
 疙	T1	
 疙	GJ	
+疚	FD	
 疚	kBigFive	
 疚	kHKGlyph	
 疚	T1	
@@ -21259,6 +21543,7 @@
 疫	kHKGlyph	
 疫	T1	
 疫	GJ	
+疰	FD	
 疰	kBigFive	
 疰	GJ	
 疱	GJ	
@@ -21278,6 +21563,7 @@
 疵	T1	
 疵	GJ	
 疶	kBigFive	
+疸	FD	
 疸	kBigFive	
 疸	T1	
 疸	GJ	
@@ -21295,7 +21581,6 @@
 疼	kHKGlyph	
 疼	T1	
 疼	GJ	
-疽	FD	
 疽	kBigFive	
 疽	kHKGlyph	
 疽	T1	
@@ -21305,12 +21590,14 @@
 疾	kHKGlyph	
 疾	T1	
 疾	GJ	
+疿	FD	
 疿	kBigFive	
 疿	GJ	
 痀	kBigFive	
 痀	GJ	
 痁	kBigFive	
 痁	GJ	
+痂	FD	
 痂	kBigFive	
 痂	T1	
 痂	GJ	
@@ -21328,7 +21615,6 @@
 症	kHKGlyph	
 症	T1	
 症	GJ	
-痊	FD	
 痊	kBigFive	
 痊	kHKGlyph	
 痊	T1	
@@ -21362,6 +21648,7 @@
 痕	GJ	
 痗	kBigFive	
 痗	GJ	
+痘	FD	
 痘	kBigFive	
 痘	kHKGlyph	
 痘	T1	
@@ -21379,6 +21666,7 @@
 痛	GJ	
 痝	kBigFive	
 痝	GJ	
+痞	FD	
 痞	kBigFive	
 痞	kHKGlyph	
 痞	T1	
@@ -21403,6 +21691,7 @@
 痤	kBigFive	
 痤	GJ	
 痦	kBigFive	
+痧	FD	
 痧	kBigFive	
 痧	GJ	
 痬	GJ	
@@ -21414,18 +21703,17 @@
 痰	kHKGlyph	
 痰	T1	
 痰	GJ	
-痱	FD	
 痱	kBigFive	
 痱	kHKGlyph	
 痱	T1	
 痱	GJ	
+痲	FD	
 痲	kBigFive	
 痲	T1	
 痳	kBigFive	
 痳	kHKGlyph	
 痳	T1	
 痳	GJ	
-痴	FD	
 痴	kBigFive	
 痴	kHKGlyph	
 痴	T1	
@@ -21474,14 +21762,17 @@
 瘉	kHKGlyph	
 瘉	T1	
 瘉	GJ	
+瘊	FD	
 瘊	kBigFive	
 瘋	FD	
 瘋	kBigFive	
 瘋	kHKGlyph	
 瘋	T1	
 瘋	GJ	
+瘌	FD	
 瘌	kBigFive	
 瘌	GJ	
+瘍	FD	
 瘍	kBigFive	
 瘍	kHKGlyph	
 瘍	T1	
@@ -21492,6 +21783,7 @@
 瘐	GJ	
 瘑	kBigFive	
 瘑	GJ	
+瘓	FD	
 瘓	kBigFive	
 瘓	kHKGlyph	
 瘓	T1	
@@ -21531,6 +21823,7 @@
 瘢	GJ	
 瘣	kBigFive	
 瘣	GJ	
+瘤	FD	
 瘤	kBigFive	
 瘤	kHKGlyph	
 瘤	T1	
@@ -21557,6 +21850,7 @@
 瘮	GJ	
 瘯	kBigFive	
 瘯	GJ	
+瘰	FD	
 瘰	kBigFive	
 瘰	GJ	
 瘱	kBigFive	
@@ -21564,6 +21858,7 @@
 瘲	GJ	
 瘳	kBigFive	
 瘳	GJ	
+瘴	FD	
 瘴	kBigFive	
 瘴	kHKGlyph	
 瘴	T1	
@@ -21583,12 +21878,14 @@
 瘼	GJ	
 瘽	kBigFive	
 瘽	GJ	
+療	FD	
 療	kBigFive	
 療	kHKGlyph	
 療	T1	
 療	GJ	
 癃	kBigFive	
 癃	GJ	
+癆	FD	
 癆	kBigFive	
 癆	kHKGlyph	
 癆	T1	
@@ -21612,6 +21909,7 @@
 癓	kBigFive	
 癓	GJ	
 癔	GJ	
+癖	FD	
 癖	kBigFive	
 癖	kHKGlyph	
 癖	T1	
@@ -21627,11 +21925,13 @@
 癚	kBigFive	
 癜	kBigFive	
 癜	GJ	
+癟	FD	
 癟	kBigFive	
 癟	T1	
 癟	GJ	
 癠	kBigFive	
 癠	GJ	
+癡	FD	
 癡	kBigFive	
 癡	kHKGlyph	
 癡	T1	
@@ -21641,6 +21941,7 @@
 癢	kHKGlyph	
 癢	T1	
 癢	GJ	
+癤	FD	
 癤	kBigFive	
 癤	GJ	
 癥	kBigFive	
@@ -21661,17 +21962,21 @@
 癬	GJ	
 癭	kBigFive	
 癭	GJ	
+癮	FD	
 癮	kBigFive	
 癮	kHKGlyph	
 癮	T1	
 癮	GJ	
 癯	GJ	
+癰	FD	
 癰	kBigFive	
 癰	GJ	
+癱	FD	
 癱	kBigFive	
 癱	kHKGlyph	
 癱	T1	
 癱	GJ	
+癲	FD	
 癲	kBigFive	
 癲	kHKGlyph	
 癲	T1	
@@ -21802,6 +22107,7 @@
 皴	GJ	
 皵	kBigFive	
 皵	GJ	
+皸	FD	
 皸	kBigFive	
 皸	GJ	
 皺	FD	
@@ -21852,7 +22158,6 @@
 益	T1	
 益	GJ	
 盌	GJ	
-盍	FD	
 盍	kBigFive	
 盍	kHKGlyph	
 盍	T1	
@@ -21872,13 +22177,13 @@
 盔	kHKGlyph	
 盔	T1	
 盔	GJ	
-盗	FD	
 盚	kBigFive	
 盛	FD	
 盛	kBigFive	
 盛	kHKGlyph	
 盛	T1	
 盛	GJ	
+盜	FD	
 盜	kBigFive	
 盜	kHKGlyph	
 盜	T1	
@@ -21925,10 +22230,12 @@
 盧	GJ	
 盩	kBigFive	
 盩	GJ	
+盪	FD	
 盪	kBigFive	
 盪	kHKGlyph	
 盪	T1	
 盪	GJ	
+盬	FD	
 盬	kBigFive	
 盬	GJ	
 盭	kBigFive	
@@ -21937,6 +22244,7 @@
 目	kHKGlyph	
 目	T1	
 目	GJ	
+盯	FD	
 盯	kBigFive	
 盯	kHKGlyph	
 盯	T1	
@@ -22024,6 +22332,7 @@
 眗	GJ	
 眙	kBigFive	
 眙	GJ	
+眚	FD	
 眚	kBigFive	
 眚	GJ	
 眛	kBigFive	
@@ -22069,8 +22378,10 @@
 眳	GJ	
 眴	kBigFive	
 眴	GJ	
+眵	FD	
 眵	kBigFive	
 眵	GJ	
+眶	FD	
 眶	kBigFive	
 眶	kHKGlyph	
 眶	T1	
@@ -22080,7 +22391,6 @@
 眷	kHKGlyph	
 眷	T1	
 眷	GJ	
-眸	FD	
 眸	kBigFive	
 眸	kHKGlyph	
 眸	T1	
@@ -22099,10 +22409,10 @@
 眼	GJ	
 眽	kBigFive	
 眽	GJ	
-眾	FD	
 眾	kBigFive	
 眾	kHKGlyph	
 眾	T1	
+着	FD	
 着	kHKGlyph	
 着	GJ	
 睃	GJ	
@@ -22123,6 +22433,7 @@
 睍	GJ	
 睎	kBigFive	
 睎	GJ	
+睏	FD	
 睏	kBigFive	
 睏	kHKGlyph	
 睏	T1	
@@ -22173,6 +22484,7 @@
 睥	kHKGlyph	
 睥	T1	
 睥	GJ	
+睦	FD	
 睦	kBigFive	
 睦	kHKGlyph	
 睦	T1	
@@ -22187,6 +22499,7 @@
 睪	kBigFive	
 睪	T1	
 睪	GJ	
+睫	FD	
 睫	kBigFive	
 睫	kHKGlyph	
 睫	T1	
@@ -22201,6 +22514,7 @@
 睮	kBigFive	
 睮	GJ	
 睯	kBigFive	
+睹	FD	
 睹	kBigFive	
 睹	kHKGlyph	
 睹	T1	
@@ -22262,6 +22576,7 @@
 瞖	FD	
 瞖	GJ	
 瞗	kBigFive	
+瞘	FD	
 瞘	GJ	
 瞙	kBigFive	
 瞙	GJ	
@@ -22308,7 +22623,6 @@
 瞪	GJ	
 瞫	kBigFive	
 瞫	GJ	
-瞬	FD	
 瞬	kBigFive	
 瞬	kHKGlyph	
 瞬	T1	
@@ -22318,7 +22632,6 @@
 瞭	kHKGlyph	
 瞭	T1	
 瞭	GJ	
-瞰	FD	
 瞰	kBigFive	
 瞰	kHKGlyph	
 瞰	T1	
@@ -22358,6 +22671,7 @@
 瞿	kHKGlyph	
 瞿	T1	
 瞿	GJ	
+矁	FD	
 矂	kBigFive	
 矂	GJ	
 矄	kBigFive	
@@ -22483,6 +22797,7 @@
 矽	kBigFive	
 矽	kHKGlyph	
 矽	T1	
+砂	FD	
 砂	kBigFive	
 砂	kHKGlyph	
 砂	T1	
@@ -22511,8 +22826,10 @@
 砏	GJ	
 砐	kBigFive	
 砐	GJ	
+砑	FD	
 砑	kBigFive	
 砑	GJ	
+砒	FD	
 砒	kBigFive	
 砒	GJ	
 砓	kBigFive	
@@ -22541,6 +22858,7 @@
 砥	T1	
 砥	GJ	
 砦	kBigFive	
+砧	FD	
 砧	kBigFive	
 砧	kHKGlyph	
 砧	T1	
@@ -22570,6 +22888,7 @@
 砲	T1	
 砲	GJ	
 砳	kBigFive	
+破	FD	
 破	kBigFive	
 破	kHKGlyph	
 破	T1	
@@ -22582,6 +22901,7 @@
 砸	kHKGlyph	
 砸	T1	
 砸	GJ	
+硃	FD	
 硃	kBigFive	
 硃	kHKGlyph	
 硃	T1	
@@ -22694,6 +23014,7 @@
 碑	kHKGlyph	
 碑	T1	
 碑	GJ	
+碓	FD	
 碓	kBigFive	
 碓	T1	
 碓	GJ	
@@ -22708,6 +23029,7 @@
 碗	kHKGlyph	
 碗	T1	
 碗	GJ	
+碘	FD	
 碘	kBigFive	
 碘	kHKGlyph	
 碘	T1	
@@ -22717,6 +23039,7 @@
 碚	GJ	
 碞	kBigFive	
 碞	GJ	
+碟	FD	
 碟	kBigFive	
 碟	kHKGlyph	
 碟	T1	
@@ -22751,6 +23074,7 @@
 碬	GJ	
 碭	kBigFive	
 碭	GJ	
+碰	FD	
 碰	kBigFive	
 碰	kHKGlyph	
 碰	T1	
@@ -22795,6 +23119,7 @@
 磅	GJ	
 磈	kBigFive	
 磈	GJ	
+磉	FD	
 磉	kBigFive	
 磉	GJ	
 磊	kBigFive	
@@ -22812,10 +23137,12 @@
 磎	kBigFive	
 磏	kBigFive	
 磏	GJ	
+磐	FD	
 磐	kBigFive	
 磐	kHKGlyph	
 磐	T1	
 磐	GJ	
+磑	FD	
 磑	kBigFive	
 磑	GJ	
 磓	GJ	
@@ -22833,6 +23160,7 @@
 磚	GJ	
 磛	kBigFive	
 磛	GJ	
+磜	FD	
 磜	GJ	
 磝	kBigFive	
 磝	GJ	
@@ -22841,6 +23169,7 @@
 磟	kBigFive	
 磟	GJ	
 磠	kBigFive	
+磡	FD	
 磡	kBigFive	
 磡	GJ	
 磢	kBigFive	
@@ -22881,7 +23210,6 @@
 磴	GJ	
 磵	GJ	
 磶	GJ	
-磷	FD	
 磷	kBigFive	
 磷	kHKGlyph	
 磷	T1	
@@ -22902,6 +23230,7 @@
 磾	GJ	
 磿	kBigFive	
 磿	GJ	
+礁	FD	
 礁	kBigFive	
 礁	kHKGlyph	
 礁	T1	
@@ -22916,6 +23245,7 @@
 礋	GJ	
 礌	kBigFive	
 礌	GJ	
+礎	FD	
 礎	kBigFive	
 礎	kHKGlyph	
 礎	T1	
@@ -22926,6 +23256,7 @@
 礑	kBigFive	
 礒	kBigFive	
 礒	GJ	
+礓	FD	
 礓	kBigFive	
 礓	GJ	
 礔	kBigFive	
@@ -22964,6 +23295,7 @@
 礪	kHKGlyph	
 礪	T1	
 礪	GJ	
+礫	FD	
 礫	kBigFive	
 礫	kHKGlyph	
 礫	T1	
@@ -22977,6 +23309,7 @@
 礮	GJ	
 礯	kBigFive	
 礰	GJ	
+礱	FD	
 礱	kBigFive	
 礱	GJ	
 礳	GJ	
@@ -23003,6 +23336,7 @@
 祀	kHKGlyph	
 祀	T1	
 祀	GJ	
+祁	FD	
 祁	kBigFive	
 祁	kHKGlyph	
 祁	T1	
@@ -23132,11 +23466,11 @@
 祼	GJ	
 祽	kBigFive	
 祾	GJ	
+祿	FD	
 祿	kBigFive	
 祿	kHKGlyph	
 祿	T1	
 祿	GJ	
-禀	FD	
 禁	FD	
 禁	kBigFive	
 禁	kHKGlyph	
@@ -23145,7 +23479,6 @@
 禂	kBigFive	
 禂	GJ	
 禃	GJ	
-禄	FD	
 禈	kBigFive	
 禊	kBigFive	
 禊	GJ	
@@ -23156,6 +23489,7 @@
 禍	kHKGlyph	
 禍	T1	
 禍	GJ	
+禎	FD	
 禎	kBigFive	
 禎	kHKGlyph	
 禎	T1	
@@ -23291,7 +23625,6 @@
 秋	kHKGlyph	
 秋	T1	
 秋	GJ	
-种	FD	
 种	kBigFive	
 种	GJ	
 秎	kBigFive	
@@ -23307,10 +23640,10 @@
 秒	T1	
 秒	GJ	
 秔	GJ	
+秕	FD	
 秕	kBigFive	
 秕	GJ	
 秖	kBigFive	
-秘	FD	
 秘	kBigFive	
 秘	T1	
 秘	GJ	
@@ -23382,9 +23715,11 @@
 稃	kBigFive	
 稃	GJ	
 稄	kBigFive	
+稅	FD	
 稅	kBigFive	
 稅	kHKGlyph	
 稅	T1	
+稆	FD	
 稆	GJ	
 稈	FD	
 稈	kBigFive	
@@ -23406,7 +23741,6 @@
 稍	kHKGlyph	
 稍	T1	
 稍	GJ	
-税	FD	
 税	kHKGlyph	
 税	GJ	
 稏	GJ	
@@ -23427,6 +23761,7 @@
 稗	GJ	
 稘	kBigFive	
 稘	GJ	
+稙	FD	
 稙	kBigFive	
 稙	GJ	
 稚	FD	
@@ -23442,6 +23777,7 @@
 稜	GJ	
 稞	kBigFive	
 稞	T1	
+稟	FD	
 稟	kBigFive	
 稟	kHKGlyph	
 稟	T1	
@@ -23473,7 +23809,6 @@
 稱	T1	
 稱	GJ	
 稴	GJ	
-稷	FD	
 稷	kBigFive	
 稷	kHKGlyph	
 稷	T1	
@@ -23582,6 +23917,7 @@
 穭	kBigFive	
 穮	kBigFive	
 穮	GJ	
+穰	FD	
 穰	kBigFive	
 穰	GJ	
 穱	kBigFive	
@@ -23599,7 +23935,6 @@
 究	GJ	
 穸	kBigFive	
 穸	GJ	
-穹	FD	
 穹	kBigFive	
 穹	kHKGlyph	
 穹	T1	
@@ -23652,7 +23987,6 @@
 窐	kBigFive	
 窐	GJ	
 窑	GJ	
-窒	FD	
 窒	kBigFive	
 窒	kHKGlyph	
 窒	T1	
@@ -23705,6 +24039,7 @@
 窩	kHKGlyph	
 窩	T1	
 窩	GJ	
+窪	FD	
 窪	kBigFive	
 窪	kHKGlyph	
 窪	T1	
@@ -23718,10 +24053,10 @@
 窮	kHKGlyph	
 窮	T1	
 窮	GJ	
-窯	FD	
 窯	kBigFive	
 窯	kHKGlyph	
 窯	T1	
+窰	FD	
 窱	kBigFive	
 窱	GJ	
 窲	kBigFive	
@@ -23745,6 +24080,7 @@
 窼	GJ	
 窾	kBigFive	
 窾	GJ	
+窿	FD	
 窿	kBigFive	
 窿	T1	
 窿	GJ	
@@ -23766,9 +24102,11 @@
 竇	kHKGlyph	
 竇	T1	
 竇	GJ	
+竈	FD	
 竈	kHKGlyph	
 竈	GJ	
 竉	GJ	
+竊	FD	
 竊	kBigFive	
 竊	kHKGlyph	
 竊	T1	
@@ -23800,7 +24138,6 @@
 章	T1	
 章	GJ	
 竢	GJ	
-竣	FD	
 竣	kBigFive	
 竣	kHKGlyph	
 竣	T1	
@@ -23865,6 +24202,7 @@
 笄	kBigFive	
 笄	GJ	
 笅	kBigFive	
+笆	FD	
 笆	kBigFive	
 笆	kHKGlyph	
 笆	T1	
@@ -23879,6 +24217,7 @@
 笎	kBigFive	
 笏	kBigFive	
 笏	GJ	
+笐	FD	
 笐	kBigFive	
 笐	GJ	
 笑	FD	
@@ -23907,13 +24246,16 @@
 笞	kHKGlyph	
 笞	T1	
 笞	GJ	
+笠	FD	
 笠	kBigFive	
 笠	kHKGlyph	
 笠	T1	
 笠	GJ	
+笡	FD	
 笢	kBigFive	
 笢	GJ	
 笣	kBigFive	
+笤	FD	
 笤	kBigFive	
 笤	GJ	
 笥	kBigFive	
@@ -23962,6 +24304,7 @@
 筀	GJ	
 筄	kBigFive	
 筄	GJ	
+筅	FD	
 筅	kBigFive	
 筅	GJ	
 筆	FD	
@@ -24039,6 +24382,7 @@
 筥	GJ	
 筦	kBigFive	
 筦	GJ	
+筧	FD	
 筧	kBigFive	
 筧	T1	
 筧	GJ	
@@ -24055,6 +24399,7 @@
 筰	GJ	
 筱	kBigFive	
 筱	GJ	
+筲	FD	
 筲	kBigFive	
 筲	GJ	
 筳	kBigFive	
@@ -24108,10 +24453,12 @@
 箐	GJ	
 箑	kBigFive	
 箑	GJ	
+箔	FD	
 箔	kBigFive	
 箔	kHKGlyph	
 箔	T1	
 箔	GJ	
+箕	FD	
 箕	kBigFive	
 箕	kHKGlyph	
 箕	T1	
@@ -24146,6 +24493,7 @@
 管	T1	
 管	GJ	
 箤	kBigFive	
+箬	FD	
 箬	kBigFive	
 箬	GJ	
 箭	FD	
@@ -24162,6 +24510,7 @@
 箱	T1	
 箱	GJ	
 箲	GJ	
+箴	FD	
 箴	kBigFive	
 箴	kHKGlyph	
 箴	T1	
@@ -24193,6 +24542,7 @@
 範	kHKGlyph	
 範	T1	
 範	GJ	
+篅	FD	
 篅	GJ	
 篆	FD	
 篆	kBigFive	
@@ -24226,6 +24576,7 @@
 篗	GJ	
 篘	kBigFive	
 篘	GJ	
+篙	FD	
 篙	kBigFive	
 篙	kHKGlyph	
 篙	T1	
@@ -24241,6 +24592,7 @@
 篞	kBigFive	
 篞	GJ	
 篟	kBigFive	
+篠	FD	
 篠	kBigFive	
 篠	T1	
 篡	FD	
@@ -24352,6 +24704,7 @@
 簞	kHKGlyph	
 簞	T1	
 簞	GJ	
+簟	FD	
 簟	kBigFive	
 簟	GJ	
 簠	kBigFive	
@@ -24371,6 +24724,7 @@
 簥	GJ	
 簦	kBigFive	
 簦	GJ	
+簧	FD	
 簧	kBigFive	
 簧	kHKGlyph	
 簧	T1	
@@ -24392,11 +24746,13 @@
 簬	kBigFive	
 簬	GJ	
 簭	kBigFive	
+簰	FD	
 簰	kBigFive	
 簰	GJ	
 簳	kBigFive	
 簳	GJ	
 簴	GJ	
+簷	FD	
 簷	kBigFive	
 簷	kHKGlyph	
 簷	T1	
@@ -24442,6 +24798,7 @@
 籉	GJ	
 籊	kBigFive	
 籊	GJ	
+籋	FD	
 籌	FD	
 籌	kBigFive	
 籌	kHKGlyph	
@@ -24468,6 +24825,7 @@
 籚	GJ	
 籛	kBigFive	
 籛	GJ	
+籜	FD	
 籜	kBigFive	
 籜	GJ	
 籞	GJ	
@@ -24513,6 +24871,7 @@
 籮	GJ	
 籯	kBigFive	
 籯	GJ	
+籰	FD	
 籲	kBigFive	
 籲	kHKGlyph	
 籲	T1	
@@ -24561,6 +24920,7 @@
 粒	GJ	
 粔	kBigFive	
 粔	GJ	
+粕	FD	
 粕	kBigFive	
 粕	kHKGlyph	
 粕	T1	
@@ -24574,6 +24934,7 @@
 粘	FD	
 粘	kBigFive	
 粘	GJ	
+粞	FD	
 粞	kBigFive	
 粞	GJ	
 粟	FD	
@@ -24603,6 +24964,7 @@
 粱	GJ	
 粲	kBigFive	
 粲	GJ	
+粳	FD	
 粳	kBigFive	
 粳	kHKGlyph	
 粳	T1	
@@ -24623,7 +24985,6 @@
 粻	GJ	
 粼	kBigFive	
 粼	GJ	
-粽	FD	
 粽	kBigFive	
 粽	kHKGlyph	
 粽	T1	
@@ -24640,7 +25001,9 @@
 糇	GJ	
 糈	kBigFive	
 糈	GJ	
+糉	FD	
 糉	kHKGlyph	
+糊	FD	
 糊	kBigFive	
 糊	kHKGlyph	
 糊	T1	
@@ -24648,7 +25011,6 @@
 糋	kBigFive	
 糌	kBigFive	
 糌	GJ	
-糍	FD	
 糍	GJ	
 糎	kBigFive	
 糎	T1	
@@ -24668,8 +25030,10 @@
 糖	kHKGlyph	
 糖	T1	
 糖	GJ	
+糗	FD	
 糗	kBigFive	
 糗	GJ	
+糙	FD	
 糙	kBigFive	
 糙	kHKGlyph	
 糙	T1	
@@ -24717,6 +25081,7 @@
 糯	kHKGlyph	
 糯	T1	
 糯	GJ	
+糰	FD	
 糰	kBigFive	
 糰	T1	
 糰	GJ	
@@ -24852,6 +25217,7 @@
 紜	kHKGlyph	
 紜	T1	
 紜	GJ	
+紝	FD	
 紝	kBigFive	
 紝	GJ	
 紞	kBigFive	
@@ -24904,6 +25270,7 @@
 紲	kBigFive	
 紲	T1	
 紲	GJ	
+紳	FD	
 紳	kBigFive	
 紳	kHKGlyph	
 紳	T1	
@@ -24932,9 +25299,9 @@
 紽	GJ	
 紾	kBigFive	
 紾	GJ	
+紿	FD	
 紿	kBigFive	
 紿	GJ	
-絀	FD	
 絀	kBigFive	
 絀	kHKGlyph	
 絀	T1	
@@ -25102,6 +25469,7 @@
 綏	kHKGlyph	
 綏	T1	
 綏	GJ	
+綑	FD	
 綑	kBigFive	
 綑	kHKGlyph	
 綑	T1	
@@ -25118,6 +25486,7 @@
 綖	GJ	
 綗	GJ	
 綛	GJ	
+綜	FD	
 綜	kBigFive	
 綜	kHKGlyph	
 綜	T1	
@@ -25189,6 +25558,7 @@
 綵	GJ	
 綷	kBigFive	
 綷	GJ	
+綸	FD	
 綸	kBigFive	
 綸	kHKGlyph	
 綸	T1	
@@ -25257,6 +25627,7 @@
 緒	GJ	
 緗	kBigFive	
 緗	GJ	
+緘	FD	
 緘	kBigFive	
 緘	kHKGlyph	
 緘	T1	
@@ -25453,6 +25824,7 @@
 縲	GJ	
 縳	kBigFive	
 縳	GJ	
+縴	FD	
 縴	kBigFive	
 縴	T1	
 縴	GJ	
@@ -25499,6 +25871,7 @@
 繁	GJ	
 繂	kBigFive	
 繂	GJ	
+繃	FD	
 繃	kBigFive	
 繃	kHKGlyph	
 繃	T1	
@@ -25509,6 +25882,7 @@
 繅	kHKGlyph	
 繅	T1	
 繅	GJ	
+繆	FD	
 繆	kBigFive	
 繆	kHKGlyph	
 繆	T1	
@@ -25593,6 +25967,7 @@
 繭	kHKGlyph	
 繭	T1	
 繭	GJ	
+繮	FD	
 繮	GJ	
 繯	kBigFive	
 繯	GJ	
@@ -25713,7 +26088,6 @@
 缺	kHKGlyph	
 缺	T1	
 缺	GJ	
-缽	FD	
 缽	kBigFive	
 缽	kHKGlyph	
 缽	T1	
@@ -25728,6 +26102,7 @@
 罄	GJ	
 罅	kBigFive	
 罅	GJ	
+罈	FD	
 罈	kBigFive	
 罈	kHKGlyph	
 罈	T1	
@@ -25812,6 +26187,7 @@
 罰	kHKGlyph	
 罰	T1	
 罰	GJ	
+罱	FD	
 罱	GJ	
 署	FD	
 署	kBigFive	
@@ -25820,7 +26196,6 @@
 署	GJ	
 罳	kBigFive	
 罳	GJ	
-罵	FD	
 罵	kBigFive	
 罵	kHKGlyph	
 罵	T1	
@@ -25843,6 +26218,7 @@
 罼	GJ	
 罽	kBigFive	
 罽	GJ	
+罾	FD	
 罾	kBigFive	
 罾	GJ	
 罿	kBigFive	
@@ -25899,6 +26275,7 @@
 羕	GJ	
 羖	kBigFive	
 羖	GJ	
+羚	FD	
 羚	kBigFive	
 羚	kHKGlyph	
 羚	T1	
@@ -25918,8 +26295,8 @@
 羠	GJ	
 羡	kBigFive	
 羢	kBigFive	
+羣	FD	
 羣	kHKGlyph	
-群	FD	
 群	kBigFive	
 群	kHKGlyph	
 群	T1	
@@ -25957,6 +26334,7 @@
 羳	GJ	
 羵	kBigFive	
 羵	GJ	
+羶	FD	
 羶	kBigFive	
 羶	kHKGlyph	
 羶	T1	
@@ -26017,6 +26395,7 @@
 翌	GJ	
 翍	kBigFive	
 翍	GJ	
+翎	FD	
 翎	kBigFive	
 翎	kHKGlyph	
 翎	T1	
@@ -26031,6 +26410,7 @@
 習	kHKGlyph	
 習	T1	
 習	GJ	
+翔	FD	
 翔	kBigFive	
 翔	kHKGlyph	
 翔	T1	
@@ -26055,6 +26435,7 @@
 翠	kHKGlyph	
 翠	T1	
 翠	GJ	
+翡	FD	
 翡	kBigFive	
 翡	kHKGlyph	
 翡	T1	
@@ -26105,6 +26486,7 @@
 翷	kBigFive	
 翷	GJ	
 翸	kBigFive	
+翹	FD	
 翹	kBigFive	
 翹	kHKGlyph	
 翹	T1	
@@ -26149,7 +26531,6 @@
 者	kHKGlyph	
 者	T1	
 者	GJ	
-耆	FD	
 耆	kBigFive	
 耆	kHKGlyph	
 耆	T1	
@@ -26200,10 +26581,12 @@
 耗	kHKGlyph	
 耗	T1	
 耗	GJ	
+耘	FD	
 耘	kBigFive	
 耘	kHKGlyph	
 耘	T1	
 耘	GJ	
+耙	FD	
 耙	kBigFive	
 耙	kHKGlyph	
 耙	T1	
@@ -26225,7 +26608,6 @@
 耦	kBigFive	
 耦	T1	
 耦	GJ	
-耨	FD	
 耨	kBigFive	
 耨	T1	
 耨	GJ	
@@ -26233,6 +26615,7 @@
 耩	kBigFive	
 耩	GJ	
 耪	kBigFive	
+耬	FD	
 耬	kBigFive	
 耬	GJ	
 耮	GJ	
@@ -26257,7 +26640,6 @@
 耷	GJ	
 耹	kBigFive	
 耹	GJ	
-耻	FD	
 耻	GJ	
 耽	FD	
 耽	kBigFive	
@@ -26290,6 +26672,7 @@
 聐	GJ	
 聑	kBigFive	
 聑	GJ	
+聒	FD	
 聒	kBigFive	
 聒	T1	
 聒	GJ	
@@ -26388,7 +26771,6 @@
 肆	kHKGlyph	
 肆	T1	
 肆	GJ	
-肇	FD	
 肇	kBigFive	
 肇	kHKGlyph	
 肇	T1	
@@ -26420,6 +26802,7 @@
 肓	T1	
 肓	GJ	
 肕	kBigFive	
+肖	FD	
 肖	kBigFive	
 肖	kHKGlyph	
 肖	T1	
@@ -26464,6 +26847,7 @@
 肥	kHKGlyph	
 肥	T1	
 肥	GJ	
+肨	FD	
 肩	FD	
 肩	kBigFive	
 肩	kHKGlyph	
@@ -26572,12 +26956,14 @@
 胚	kHKGlyph	
 胚	T1	
 胚	GJ	
+胛	FD	
 胛	kBigFive	
 胛	kHKGlyph	
 胛	T1	
 胛	GJ	
 胜	kBigFive	
 胜	GJ	
+胝	FD	
 胝	kBigFive	
 胝	T1	
 胝	GJ	
@@ -26606,6 +26992,7 @@
 胥	GJ	
 胦	kBigFive	
 胦	GJ	
+胭	FD	
 胭	kBigFive	
 胭	kHKGlyph	
 胭	T1	
@@ -26614,6 +27001,7 @@
 胯	kBigFive	
 胯	T1	
 胯	GJ	
+胰	FD	
 胰	kBigFive	
 胰	kHKGlyph	
 胰	T1	
@@ -26696,6 +27084,7 @@
 脘	GJ	
 脙	kBigFive	
 脙	GJ	
+脚	FD	
 脚	GJ	
 脛	kBigFive	
 脛	GJ	
@@ -26710,6 +27099,7 @@
 脡	GJ	
 脢	kBigFive	
 脢	GJ	
+脣	FD	
 脣	kBigFive	
 脣	kHKGlyph	
 脣	T1	
@@ -26720,6 +27110,7 @@
 脥	kBigFive	
 脥	GJ	
 脦	GJ	
+脧	FD	
 脧	kBigFive	
 脩	kBigFive	
 脩	kHKGlyph	
@@ -26729,6 +27120,7 @@
 脫	kBigFive	
 脫	kHKGlyph	
 脫	T1	
+脬	FD	
 脬	kBigFive	
 脬	GJ	
 脭	kBigFive	
@@ -26739,6 +27131,7 @@
 脯	kHKGlyph	
 脯	T1	
 脯	GJ	
+脰	FD	
 脰	kBigFive	
 脰	T1	
 脰	GJ	
@@ -26762,6 +27155,7 @@
 腃	GJ	
 腄	kBigFive	
 腄	GJ	
+腆	FD	
 腆	kBigFive	
 腆	kHKGlyph	
 腆	T1	
@@ -26775,6 +27169,7 @@
 腋	kHKGlyph	
 腋	T1	
 腋	GJ	
+腌	FD	
 腌	kBigFive	
 腌	T1	
 腌	GJ	
@@ -26867,7 +27262,6 @@
 腱	GJ	
 腲	kBigFive	
 腲	GJ	
-腳	FD	
 腳	kBigFive	
 腳	kHKGlyph	
 腳	T1	
@@ -26900,6 +27294,7 @@
 腿	kHKGlyph	
 腿	T1	
 腿	GJ	
+膀	FD	
 膀	kBigFive	
 膀	kHKGlyph	
 膀	T1	
@@ -26920,6 +27315,7 @@
 膈	GJ	
 膉	kBigFive	
 膉	GJ	
+膊	FD	
 膊	kBigFive	
 膊	kHKGlyph	
 膊	T1	
@@ -26949,6 +27345,7 @@
 膚	kHKGlyph	
 膚	T1	
 膚	GJ	
+膛	FD	
 膛	kBigFive	
 膛	kHKGlyph	
 膛	T1	
@@ -26963,6 +27360,7 @@
 膝	kHKGlyph	
 膝	T1	
 膝	GJ	
+膞	FD	
 膞	kBigFive	
 膞	GJ	
 膟	kBigFive	
@@ -27013,7 +27411,6 @@
 膺	kHKGlyph	
 膺	T1	
 膺	GJ	
-膻	FD	
 膻	kBigFive	
 膻	GJ	
 膼	kBigFive	
@@ -27081,7 +27478,7 @@
 臑	kBigFive	
 臑	GJ	
 臒	kBigFive	
-臓	FD	
+臕	FD	
 臕	kBigFive	
 臗	kBigFive	
 臗	GJ	
@@ -27099,6 +27496,7 @@
 臝	kBigFive	
 臞	kBigFive	
 臞	GJ	
+臟	FD	
 臟	kBigFive	
 臟	kHKGlyph	
 臟	T1	
@@ -27121,7 +27519,6 @@
 臥	T1	
 臥	GJ	
 臦	kBigFive	
-臧	FD	
 臧	kBigFive	
 臧	kHKGlyph	
 臧	T1	
@@ -27191,6 +27588,7 @@
 舀	kHKGlyph	
 舀	T1	
 舀	GJ	
+舁	FD	
 舁	kBigFive	
 舁	GJ	
 舂	FD	
@@ -27215,7 +27613,6 @@
 興	kHKGlyph	
 興	T1	
 興	GJ	
-舉	FD	
 舉	kBigFive	
 舉	kHKGlyph	
 舉	T1	
@@ -27237,6 +27634,7 @@
 舍	kHKGlyph	
 舍	T1	
 舍	GJ	
+舐	FD	
 舐	kBigFive	
 舐	kHKGlyph	
 舐	T1	
@@ -27258,7 +27656,6 @@
 舖	kBigFive	
 舖	GJ	
 舚	GJ	
-舛	FD	
 舛	kBigFive	
 舛	kHKGlyph	
 舛	T1	
@@ -27323,6 +27720,7 @@
 舶	kHKGlyph	
 舶	T1	
 舶	GJ	
+舷	FD	
 舷	kBigFive	
 舷	kHKGlyph	
 舷	T1	
@@ -27377,6 +27775,7 @@
 艘	kHKGlyph	
 艘	T1	
 艘	GJ	
+艙	FD	
 艙	kBigFive	
 艙	kHKGlyph	
 艙	T1	
@@ -27489,6 +27888,7 @@
 芔	kBigFive	
 芘	kBigFive	
 芘	GJ	
+芙	FD	
 芙	kBigFive	
 芙	kHKGlyph	
 芙	T1	
@@ -27510,6 +27910,7 @@
 芟	GJ	
 芠	kBigFive	
 芠	GJ	
+芡	FD	
 芡	kBigFive	
 芡	GJ	
 芢	kBigFive	
@@ -27542,8 +27943,10 @@
 芭	kHKGlyph	
 芭	T1	
 芭	GJ	
+芮	FD	
 芮	kBigFive	
 芮	GJ	
+芯	FD	
 芯	kBigFive	
 芯	T1	
 芯	GJ	
@@ -27578,7 +27981,6 @@
 芹	GJ	
 芺	kBigFive	
 芺	GJ	
-芻	FD	
 芻	kBigFive	
 芻	kHKGlyph	
 芻	T1	
@@ -27598,6 +28000,7 @@
 苀	GJ	
 苂	kBigFive	
 苃	kBigFive	
+苑	FD	
 苑	kBigFive	
 苑	kHKGlyph	
 苑	T1	
@@ -27615,6 +28018,7 @@
 苔	kHKGlyph	
 苔	T1	
 苔	GJ	
+苕	FD	
 苕	kBigFive	
 苕	GJ	
 苖	kBigFive	
@@ -27627,7 +28031,6 @@
 苘	GJ	
 苙	kBigFive	
 苙	GJ	
-苛	FD	
 苛	kBigFive	
 苛	kHKGlyph	
 苛	T1	
@@ -27635,6 +28038,7 @@
 苜	kBigFive	
 苜	T1	
 苜	GJ	
+苞	FD	
 苞	kBigFive	
 苞	kHKGlyph	
 苞	T1	
@@ -27672,6 +28076,7 @@
 苨	kBigFive	
 苨	GJ	
 苪	kBigFive	
+苫	FD	
 苫	kBigFive	
 苫	GJ	
 苬	kBigFive	
@@ -27692,6 +28097,7 @@
 苴	kBigFive	
 苴	GJ	
 苵	kBigFive	
+苶	FD	
 苶	kBigFive	
 苶	GJ	
 苹	kBigFive	
@@ -27736,6 +28142,7 @@
 茇	GJ	
 茈	kBigFive	
 茈	GJ	
+茉	FD	
 茉	kBigFive	
 茉	kHKGlyph	
 茉	T1	
@@ -27775,8 +28182,10 @@
 茫	kHKGlyph	
 茫	T1	
 茫	GJ	
+茬	FD	
 茬	kBigFive	
 茬	GJ	
+茭	FD	
 茭	kBigFive	
 茭	GJ	
 茮	GJ	
@@ -27786,11 +28195,13 @@
 茱	kHKGlyph	
 茱	T1	
 茱	GJ	
+茲	FD	
 茲	kBigFive	
 茲	kHKGlyph	
 茲	T1	
 茳	kBigFive	
 茳	GJ	
+茴	FD	
 茴	kBigFive	
 茴	kHKGlyph	
 茴	T1	
@@ -27921,12 +28332,14 @@
 莃	kBigFive	
 莃	GJ	
 莅	GJ	
+莆	FD	
 莆	kBigFive	
 莆	T1	
 莆	GJ	
 莇	kBigFive	
 莇	GJ	
 莈	kBigFive	
+莉	FD	
 莉	kBigFive	
 莉	kHKGlyph	
 莉	T1	
@@ -27941,6 +28354,7 @@
 莌	kBigFive	
 莌	GJ	
 莍	kBigFive	
+莎	FD	
 莎	kBigFive	
 莎	kHKGlyph	
 莎	T1	
@@ -27953,6 +28367,7 @@
 莒	kHKGlyph	
 莒	T1	
 莒	GJ	
+莓	FD	
 莓	kBigFive	
 莓	kHKGlyph	
 莓	T1	
@@ -27977,6 +28392,7 @@
 莛	kBigFive	
 莛	GJ	
 莜	GJ	
+莝	FD	
 莝	kBigFive	
 莝	GJ	
 莞	kBigFive	
@@ -27988,6 +28404,7 @@
 莠	kHKGlyph	
 莠	T1	
 莠	GJ	
+莢	FD	
 莢	kBigFive	
 莢	kHKGlyph	
 莢	T1	
@@ -28036,12 +28453,14 @@
 菂	GJ	
 菃	kBigFive	
 菄	kBigFive	
+菅	FD	
 菅	kBigFive	
 菅	kHKGlyph	
 菅	T1	
 菅	GJ	
 菆	kBigFive	
 菆	GJ	
+菇	FD	
 菇	kBigFive	
 菈	kBigFive	
 菈	GJ	
@@ -28070,6 +28489,7 @@
 菔	T1	
 菔	GJ	
 菕	kBigFive	
+菖	FD	
 菖	kBigFive	
 菖	GJ	
 菗	kBigFive	
@@ -28089,12 +28509,14 @@
 菟	kBigFive	
 菟	T1	
 菟	GJ	
+菠	FD	
 菠	kBigFive	
 菠	kHKGlyph	
 菠	T1	
 菠	GJ	
 菡	kBigFive	
 菡	GJ	
+菢	FD	
 菢	kBigFive	
 菢	GJ	
 菣	kBigFive	
@@ -28166,6 +28588,7 @@
 菾	GJ	
 菿	kBigFive	
 菿	GJ	
+萁	FD	
 萁	kBigFive	
 萁	GJ	
 萃	kBigFive	
@@ -28198,10 +28621,12 @@
 萌	kHKGlyph	
 萌	T1	
 萌	GJ	
+萍	FD	
 萍	kBigFive	
 萍	kHKGlyph	
 萍	T1	
 萍	GJ	
+萎	FD	
 萎	kBigFive	
 萎	kHKGlyph	
 萎	T1	
@@ -28240,6 +28665,7 @@
 萳	kBigFive	
 萴	kBigFive	
 萴	GJ	
+萵	FD	
 萵	kBigFive	
 萵	kHKGlyph	
 萵	T1	
@@ -28326,6 +28752,7 @@
 葟	kBigFive	
 葟	GJ	
 葠	kBigFive	
+葡	FD	
 葡	kBigFive	
 葡	kHKGlyph	
 葡	T1	
@@ -28395,6 +28822,7 @@
 葽	kBigFive	
 葽	GJ	
 葾	kBigFive	
+蒂	FD	
 蒂	kBigFive	
 蒂	kHKGlyph	
 蒂	T1	
@@ -28484,7 +28912,6 @@
 蒸	kHKGlyph	
 蒸	T1	
 蒸	GJ	
-蒹	FD	
 蒹	kBigFive	
 蒹	GJ	
 蒺	kBigFive	
@@ -28522,6 +28949,7 @@
 蓇	kBigFive	
 蓇	GJ	
 蓈	GJ	
+蓉	FD	
 蓉	kBigFive	
 蓉	kHKGlyph	
 蓉	T1	
@@ -28554,6 +28982,7 @@
 蓓	T1	
 蓓	GJ	
 蓔	kBigFive	
+蓖	FD	
 蓖	kBigFive	
 蓖	GJ	
 蓗	kBigFive	
@@ -28632,11 +29061,13 @@
 蔎	kBigFive	
 蔎	GJ	
 蔏	kBigFive	
+蔑	FD	
 蔑	kBigFive	
 蔑	kHKGlyph	
 蔑	T1	
 蔑	GJ	
 蔒	kBigFive	
+蔓	FD	
 蔓	kBigFive	
 蔓	kHKGlyph	
 蔓	T1	
@@ -28712,7 +29143,6 @@
 蔰	kBigFive	
 蔰	GJ	
 蔱	kBigFive	
-蔻	FD	
 蔻	kBigFive	
 蔻	GJ	
 蔽	FD	
@@ -28742,17 +29172,18 @@
 蕈	kBigFive	
 蕈	T1	
 蕈	GJ	
+蕉	FD	
 蕉	kBigFive	
 蕉	kHKGlyph	
 蕉	T1	
 蕉	GJ	
-蕊	FD	
 蕊	kBigFive	
 蕊	kHKGlyph	
 蕊	T1	
 蕊	GJ	
 蕍	kBigFive	
 蕍	GJ	
+蕎	FD	
 蕎	kBigFive	
 蕎	GJ	
 蕑	kBigFive	
@@ -28794,6 +29225,7 @@
 蕦	GJ	
 蕧	kBigFive	
 蕧	GJ	
+蕨	FD	
 蕨	kBigFive	
 蕨	kHKGlyph	
 蕨	T1	
@@ -28803,6 +29235,7 @@
 蕩	kHKGlyph	
 蕩	T1	
 蕩	GJ	
+蕪	FD	
 蕪	kBigFive	
 蕪	kHKGlyph	
 蕪	T1	
@@ -28830,10 +29263,12 @@
 蕹	GJ	
 蕺	kBigFive	
 蕺	GJ	
+蕻	FD	
 蕻	kBigFive	
 蕻	GJ	
 蕼	kBigFive	
 蕼	GJ	
+蕾	FD	
 蕾	kBigFive	
 蕾	kHKGlyph	
 蕾	T1	
@@ -28884,6 +29319,7 @@
 薑	kHKGlyph	
 薑	T1	
 薑	GJ	
+薔	FD	
 薔	kBigFive	
 薔	kHKGlyph	
 薔	T1	
@@ -28963,6 +29399,7 @@
 薶	GJ	
 薷	kBigFive	
 薷	GJ	
+薸	FD	
 薸	kBigFive	
 薸	GJ	
 薹	kBigFive	
@@ -28997,6 +29434,7 @@
 藉	T1	
 藉	GJ	
 藊	GJ	
+藋	FD	
 藋	kBigFive	
 藋	GJ	
 藍	FD	
@@ -29052,6 +29490,7 @@
 藤	kHKGlyph	
 藤	T1	
 藤	GJ	
+藥	FD	
 藥	kBigFive	
 藥	kHKGlyph	
 藥	T1	
@@ -29096,6 +29535,7 @@
 藺	kHKGlyph	
 藺	T1	
 藺	GJ	
+藻	FD	
 藻	kBigFive	
 藻	kHKGlyph	
 藻	T1	
@@ -29110,10 +29550,12 @@
 蘀	GJ	
 蘁	kBigFive	
 蘁	GJ	
+蘂	FD	
 蘄	kBigFive	
 蘄	GJ	
 蘅	kBigFive	
 蘅	GJ	
+蘆	FD	
 蘆	kBigFive	
 蘆	kHKGlyph	
 蘆	T1	
@@ -29130,12 +29572,14 @@
 蘊	kHKGlyph	
 蘊	T1	
 蘊	GJ	
+蘋	FD	
 蘋	kBigFive	
 蘋	kHKGlyph	
 蘋	T1	
 蘋	GJ	
 蘌	kBigFive	
 蘌	GJ	
+蘑	FD	
 蘑	kBigFive	
 蘑	kHKGlyph	
 蘑	T1	
@@ -29213,6 +29657,7 @@
 蘼	GJ	
 蘽	GJ	
 蘾	kBigFive	
+蘿	FD	
 蘿	kBigFive	
 蘿	kHKGlyph	
 蘿	T1	
@@ -29257,7 +29702,6 @@
 虖	GJ	
 虙	kBigFive	
 虙	GJ	
-虚	FD	
 虚	GJ	
 虛	FD	
 虛	kBigFive	
@@ -29311,7 +29755,6 @@
 虯	kHKGlyph	
 虰	kBigFive	
 虰	GJ	
-虱	FD	
 虱	kBigFive	
 虱	kHKGlyph	
 虱	T1	
@@ -29331,6 +29774,7 @@
 虺	kBigFive	
 虺	T1	
 虺	GJ	
+虻	FD	
 虻	kBigFive	
 虻	T1	
 虻	GJ	
@@ -29381,6 +29825,7 @@
 蚚	kBigFive	
 蚚	GJ	
 蚛	GJ	
+蚜	FD	
 蚜	kBigFive	
 蚜	T1	
 蚜	GJ	
@@ -29394,6 +29839,7 @@
 蚡	GJ	
 蚢	kBigFive	
 蚢	GJ	
+蚣	FD	
 蚣	kBigFive	
 蚣	kHKGlyph	
 蚣	T1	
@@ -29457,6 +29903,7 @@
 蚾	GJ	
 蚿	kBigFive	
 蚿	GJ	
+蛀	FD	
 蛀	kBigFive	
 蛀	kHKGlyph	
 蛀	T1	
@@ -29501,6 +29948,7 @@
 蛒	GJ	
 蛓	kBigFive	
 蛓	GJ	
+蛔	FD	
 蛔	kBigFive	
 蛔	kHKGlyph	
 蛔	T1	
@@ -29508,6 +29956,7 @@
 蛖	kBigFive	
 蛖	GJ	
 蛗	kBigFive	
+蛘	FD	
 蛘	kBigFive	
 蛘	GJ	
 蛙	FD	
@@ -29529,6 +29978,7 @@
 蛞	kBigFive	
 蛞	T1	
 蛞	GJ	
+蛟	FD	
 蛟	kBigFive	
 蛟	kHKGlyph	
 蛟	T1	
@@ -29568,12 +30018,14 @@
 蛷	GJ	
 蛸	kBigFive	
 蛸	GJ	
+蛹	FD	
 蛹	kBigFive	
 蛹	kHKGlyph	
 蛹	T1	
 蛹	GJ	
 蛺	kBigFive	
 蛺	GJ	
+蛻	FD	
 蛻	kBigFive	
 蛻	kHKGlyph	
 蛻	T1	
@@ -29604,10 +30056,12 @@
 蜆	kBigFive	
 蜆	T1	
 蜆	GJ	
+蜇	FD	
 蜇	kBigFive	
 蜇	kHKGlyph	
 蜇	T1	
 蜇	GJ	
+蜈	FD	
 蜈	kBigFive	
 蜈	kHKGlyph	
 蜈	T1	
@@ -29617,6 +30071,7 @@
 蜊	kBigFive	
 蜊	T1	
 蜊	GJ	
+蜋	FD	
 蜋	kBigFive	
 蜋	GJ	
 蜌	kBigFive	
@@ -29629,6 +30084,7 @@
 蜐	GJ	
 蜑	kBigFive	
 蜑	GJ	
+蜒	FD	
 蜒	kBigFive	
 蜒	GJ	
 蜓	FD	
@@ -29639,6 +30095,7 @@
 蜔	GJ	
 蜕	kHKGlyph	
 蜕	GJ	
+蜘	FD	
 蜘	kBigFive	
 蜘	kHKGlyph	
 蜘	T1	
@@ -29662,6 +30119,7 @@
 蜠	GJ	
 蜡	kBigFive	
 蜡	GJ	
+蜢	FD	
 蜢	kBigFive	
 蜢	kHKGlyph	
 蜢	T1	
@@ -29740,7 +30198,6 @@
 蝌	GJ	
 蝍	kBigFive	
 蝍	GJ	
-蝎	FD	
 蝎	kBigFive	
 蝎	GJ	
 蝏	kBigFive	
@@ -29785,6 +30242,7 @@
 蝝	GJ	
 蝞	kBigFive	
 蝞	GJ	
+蝟	FD	
 蝟	kBigFive	
 蝟	GJ	
 蝠	FD	
@@ -29807,6 +30265,7 @@
 蝦	T1	
 蝦	GJ	
 蝧	kBigFive	
+蝨	FD	
 蝨	kBigFive	
 蝨	kHKGlyph	
 蝨	T1	
@@ -29820,6 +30279,7 @@
 蝬	GJ	
 蝭	kBigFive	
 蝭	GJ	
+蝮	FD	
 蝮	kBigFive	
 蝮	GJ	
 蝯	kBigFive	
@@ -29827,6 +30287,7 @@
 蝲	GJ	
 蝳	kBigFive	
 蝳	GJ	
+蝴	FD	
 蝴	kBigFive	
 蝴	kHKGlyph	
 蝴	T1	
@@ -29850,15 +30311,16 @@
 蝻	kBigFive	
 蝻	GJ	
 螁	kBigFive	
-螂	FD	
 螂	kBigFive	
 螂	kHKGlyph	
 螂	T1	
 螂	GJ	
+螃	FD	
 螃	kBigFive	
 螃	kHKGlyph	
 螃	T1	
 螃	GJ	
+螄	FD	
 螄	kBigFive	
 螄	GJ	
 螅	kBigFive	
@@ -29901,6 +30363,7 @@
 螜	kBigFive	
 螝	kBigFive	
 螝	GJ	
+螞	FD	
 螞	kBigFive	
 螞	kHKGlyph	
 螞	T1	
@@ -29988,6 +30451,7 @@
 蟆	kHKGlyph	
 蟆	T1	
 蟆	GJ	
+蟈	FD	
 蟈	kBigFive	
 蟈	kHKGlyph	
 蟈	T1	
@@ -29996,6 +30460,7 @@
 蟉	GJ	
 蟊	kBigFive	
 蟊	GJ	
+蟋	FD	
 蟋	kBigFive	
 蟋	kHKGlyph	
 蟋	T1	
@@ -30003,13 +30468,16 @@
 蟌	kBigFive	
 蟌	GJ	
 蟎	GJ	
+蟑	FD	
 蟑	kBigFive	
 蟑	kHKGlyph	
 蟑	T1	
+蟒	FD	
 蟒	kBigFive	
 蟒	kHKGlyph	
 蟒	T1	
 蟒	GJ	
+蟓	FD	
 蟓	kBigFive	
 蟓	GJ	
 蟔	kBigFive	
@@ -30036,12 +30504,14 @@
 蟠	GJ	
 蟡	kBigFive	
 蟡	GJ	
+蟢	FD	
 蟢	kBigFive	
 蟢	GJ	
 蟣	kBigFive	
 蟣	GJ	
 蟤	kBigFive	
 蟤	GJ	
+蟥	FD	
 蟥	kBigFive	
 蟥	GJ	
 蟦	kBigFive	
@@ -30062,6 +30532,7 @@
 蟬	GJ	
 蟭	kBigFive	
 蟭	GJ	
+蟮	FD	
 蟯	kBigFive	
 蟯	kHKGlyph	
 蟯	T1	
@@ -30072,6 +30543,7 @@
 蟲	kHKGlyph	
 蟲	T1	
 蟲	GJ	
+蟳	FD	
 蟳	kBigFive	
 蟳	GJ	
 蟴	kBigFive	
@@ -30093,6 +30565,7 @@
 蟼	kBigFive	
 蟼	GJ	
 蟽	GJ	
+蟾	FD	
 蟾	kBigFive	
 蟾	T1	
 蟾	GJ	
@@ -30122,6 +30595,7 @@
 蠋	GJ	
 蠌	kBigFive	
 蠌	GJ	
+蠍	FD	
 蠍	kBigFive	
 蠍	kHKGlyph	
 蠍	T1	
@@ -30131,8 +30605,10 @@
 蠑	kBigFive	
 蠑	GJ	
 蠒	GJ	
+蠓	FD	
 蠓	kBigFive	
 蠓	GJ	
+蠔	FD	
 蠔	kBigFive	
 蠔	kHKGlyph	
 蠔	T1	
@@ -30141,12 +30617,14 @@
 蠕	kHKGlyph	
 蠕	T1	
 蠕	GJ	
+蠖	FD	
 蠖	kBigFive	
 蠖	GJ	
 蠗	kBigFive	
 蠗	GJ	
 蠘	GJ	
 蠙	kBigFive	
+蠚	FD	
 蠚	GJ	
 蠛	kBigFive	
 蠛	GJ	
@@ -30212,7 +30690,6 @@
 蠷	GJ	
 蠸	kBigFive	
 蠸	GJ	
-蠹	FD	
 蠹	kBigFive	
 蠹	kHKGlyph	
 蠹	T1	
@@ -30242,6 +30719,7 @@
 衄	kBigFive	
 衄	GJ	
 衅	GJ	
+衆	FD	
 衆	GJ	
 衈	kBigFive	
 衈	GJ	
@@ -30255,6 +30733,7 @@
 行	kHKGlyph	
 行	T1	
 行	GJ	
+衍	FD	
 衍	kBigFive	
 衍	kHKGlyph	
 衍	T1	
@@ -30301,6 +30780,7 @@
 衡	kHKGlyph	
 衡	T1	
 衡	GJ	
+衢	FD	
 衢	kBigFive	
 衢	kHKGlyph	
 衢	T1	
@@ -30337,6 +30817,7 @@
 衰	GJ	
 衱	kBigFive	
 衱	GJ	
+衲	FD	
 衲	kBigFive	
 衲	GJ	
 衳	GJ	
@@ -30345,6 +30826,7 @@
 衵	GJ	
 衶	kBigFive	
 衶	GJ	
+衷	FD	
 衷	kBigFive	
 衷	kHKGlyph	
 衷	T1	
@@ -30377,6 +30859,7 @@
 袃	kBigFive	
 袄	GJ	
 袇	GJ	
+袈	FD	
 袈	kBigFive	
 袈	kHKGlyph	
 袈	T1	
@@ -30397,8 +30880,10 @@
 袍	GJ	
 袎	kBigFive	
 袎	GJ	
+袐	FD	
 袑	kBigFive	
 袑	GJ	
+袒	FD	
 袒	kBigFive	
 袒	kHKGlyph	
 袒	T1	
@@ -30457,7 +30942,6 @@
 袴	GJ	
 袶	kBigFive	
 袶	GJ	
-袷	FD	
 袷	kBigFive	
 袷	GJ	
 袸	kBigFive	
@@ -30492,6 +30976,7 @@
 裊	GJ	
 裋	kBigFive	
 裋	GJ	
+裌	FD	
 裌	kBigFive	
 裌	GJ	
 裍	kBigFive	
@@ -30543,6 +31028,7 @@
 裝	GJ	
 裞	kBigFive	
 裞	GJ	
+裟	FD	
 裟	kBigFive	
 裟	kHKGlyph	
 裟	T1	
@@ -30552,7 +31038,6 @@
 裡	T1	
 裧	kBigFive	
 裧	GJ	
-裨	FD	
 裨	kBigFive	
 裨	kHKGlyph	
 裨	T1	
@@ -30573,6 +31058,7 @@
 裳	kHKGlyph	
 裳	T1	
 裳	GJ	
+裴	FD	
 裴	kBigFive	
 裴	kHKGlyph	
 裴	T1	
@@ -30602,9 +31088,11 @@
 製	kHKGlyph	
 製	T1	
 製	GJ	
+裾	FD	
 裾	kBigFive	
 裾	GJ	
 褁	kBigFive	
+褂	FD	
 褂	kBigFive	
 褂	kHKGlyph	
 褂	T1	
@@ -30613,6 +31101,7 @@
 褅	kBigFive	
 褆	kBigFive	
 褆	GJ	
+複	FD	
 複	kBigFive	
 複	kHKGlyph	
 複	T1	
@@ -30655,6 +31144,7 @@
 褗	GJ	
 褘	kBigFive	
 褘	GJ	
+褙	FD	
 褙	kBigFive	
 褙	GJ	
 褚	FD	
@@ -30710,6 +31200,7 @@
 褳	kBigFive	
 褳	GJ	
 褵	kBigFive	
+褶	FD	
 褶	kBigFive	
 褶	T1	
 褶	GJ	
@@ -30720,7 +31211,6 @@
 褸	T1	
 褸	GJ	
 褺	GJ	
-褻	FD	
 褻	kBigFive	
 褻	kHKGlyph	
 褻	T1	
@@ -30745,6 +31235,7 @@
 襄	GJ	
 襆	kBigFive	
 襆	GJ	
+襇	FD	
 襇	GJ	
 襈	GJ	
 襉	kBigFive	
@@ -30787,6 +31278,7 @@
 襟	kHKGlyph	
 襟	T1	
 襟	GJ	
+襠	FD	
 襠	kBigFive	
 襠	kHKGlyph	
 襠	T1	
@@ -31096,7 +31588,6 @@
 訓	T1	
 訓	GJ	
 訔	GJ	
-訕	FD	
 訕	kBigFive	
 訕	kHKGlyph	
 訕	T1	
@@ -31121,7 +31612,6 @@
 訛	kHKGlyph	
 訛	T1	
 訛	GJ	
-訝	FD	
 訝	kBigFive	
 訝	kHKGlyph	
 訝	T1	
@@ -31181,6 +31671,7 @@
 診	kHKGlyph	
 診	T1	
 診	GJ	
+註	FD	
 註	kBigFive	
 註	kHKGlyph	
 註	T1	
@@ -31256,6 +31747,7 @@
 詞	kHKGlyph	
 詞	T1	
 詞	GJ	
+詠	FD	
 詠	kBigFive	
 詠	kHKGlyph	
 詠	T1	
@@ -31284,7 +31776,6 @@
 詩	kHKGlyph	
 詩	T1	
 詩	GJ	
-詫	FD	
 詫	kBigFive	
 詫	kHKGlyph	
 詫	T1	
@@ -31302,7 +31793,6 @@
 詮	kHKGlyph	
 詮	T1	
 詮	GJ	
-詰	FD	
 詰	kBigFive	
 詰	kHKGlyph	
 詰	T1	
@@ -31329,6 +31819,7 @@
 詶	GJ	
 詷	kBigFive	
 詷	GJ	
+詹	FD	
 詹	kBigFive	
 詹	kHKGlyph	
 詹	T1	
@@ -31360,6 +31851,7 @@
 誅	GJ	
 誆	kBigFive	
 誆	GJ	
+誇	FD	
 誇	kBigFive	
 誇	kHKGlyph	
 誇	T1	
@@ -31453,7 +31945,6 @@
 說	kHKGlyph	
 說	T1	
 誫	kBigFive	
-説	FD	
 説	kHKGlyph	
 説	GJ	
 誰	FD	
@@ -31500,7 +31991,6 @@
 諂	T1	
 諂	GJ	
 諃	kBigFive	
-諄	FD	
 諄	kBigFive	
 諄	kHKGlyph	
 諄	T1	
@@ -31607,7 +32097,6 @@
 諱	GJ	
 諲	kBigFive	
 諲	GJ	
-諳	FD	
 諳	kBigFive	
 諳	T1	
 諳	GJ	
@@ -31649,7 +32138,6 @@
 謀	kHKGlyph	
 謀	T1	
 謀	GJ	
-謁	FD	
 謁	kBigFive	
 謁	kHKGlyph	
 謁	T1	
@@ -31729,10 +32217,10 @@
 謞	kBigFive	
 謞	GJ	
 謟	GJ	
-謠	FD	
 謠	kBigFive	
 謠	kHKGlyph	
 謠	T1	
+謡	FD	
 謡	GJ	
 謢	kBigFive	
 謣	kBigFive	
@@ -31937,7 +32425,6 @@
 讋	GJ	
 讌	kBigFive	
 讌	GJ	
-讎	FD	
 讎	kBigFive	
 讎	GJ	
 讒	FD	
@@ -32008,6 +32495,7 @@
 豆	kHKGlyph	
 豆	T1	
 豆	GJ	
+豇	FD	
 豇	kBigFive	
 豇	GJ	
 豈	FD	
@@ -32112,8 +32600,10 @@
 豳	kBigFive	
 豳	T1	
 豳	GJ	
+豵	FD	
 豵	kBigFive	
 豵	GJ	
+豶	FD	
 豶	kBigFive	
 豶	GJ	
 豷	kBigFive	
@@ -32251,10 +32741,12 @@
 責	kHKGlyph	
 責	T1	
 責	GJ	
+貯	FD	
 貯	kBigFive	
 貯	kHKGlyph	
 貯	T1	
 貯	GJ	
+貰	FD	
 貰	kBigFive	
 貰	GJ	
 貱	GJ	
@@ -32504,7 +32996,6 @@
 贊	GJ	
 贋	kHKGlyph	
 贋	GJ	
-贍	FD	
 贍	kBigFive	
 贍	kHKGlyph	
 贍	T1	
@@ -32534,6 +33025,7 @@
 贗	T1	
 贙	kBigFive	
 贙	GJ	
+贛	FD	
 贛	kBigFive	
 贛	kHKGlyph	
 贛	T1	
@@ -32706,6 +33198,7 @@
 趺	T1	
 趺	GJ	
 趻	GJ	
+趼	FD	
 趼	kBigFive	
 趼	GJ	
 趽	GJ	
@@ -32732,7 +33225,6 @@
 跈	kBigFive	
 跈	GJ	
 跉	GJ	
-跋	FD	
 跋	kBigFive	
 跋	kHKGlyph	
 跋	T1	
@@ -32759,11 +33251,13 @@
 跒	GJ	
 跓	kBigFive	
 跓	GJ	
+跔	FD	
 跔	GJ	
 跕	kBigFive	
 跕	GJ	
 跖	kBigFive	
 跖	GJ	
+跗	FD	
 跗	kBigFive	
 跗	GJ	
 跘	kBigFive	
@@ -32874,6 +33368,7 @@
 踇	GJ	
 踉	kBigFive	
 踉	GJ	
+踊	FD	
 踊	kBigFive	
 踊	GJ	
 踍	kBigFive	
@@ -32889,6 +33384,7 @@
 踐	GJ	
 踑	kBigFive	
 踑	GJ	
+踒	FD	
 踒	kBigFive	
 踒	GJ	
 踓	kBigFive	
@@ -32937,6 +33433,7 @@
 踦	GJ	
 踧	kBigFive	
 踧	GJ	
+踩	FD	
 踩	kBigFive	
 踩	kHKGlyph	
 踩	T1	
@@ -32946,6 +33443,8 @@
 踫	kBigFive	
 踫	kHKGlyph	
 踫	T1	
+踭	FD	
+踮	FD	
 踮	kBigFive	
 踮	GJ	
 踰	kBigFive	
@@ -32996,6 +33495,7 @@
 蹅	GJ	
 蹇	kBigFive	
 蹇	GJ	
+蹈	FD	
 蹈	kBigFive	
 蹈	kHKGlyph	
 蹈	T1	
@@ -33008,6 +33508,7 @@
 蹊	kHKGlyph	
 蹊	T1	
 蹊	GJ	
+蹋	FD	
 蹋	kBigFive	
 蹋	kHKGlyph	
 蹋	T1	
@@ -33068,6 +33569,7 @@
 蹦	kHKGlyph	
 蹦	T1	
 蹧	kBigFive	
+蹩	FD	
 蹩	kBigFive	
 蹩	GJ	
 蹪	kBigFive	
@@ -33076,6 +33578,7 @@
 蹬	kHKGlyph	
 蹬	T1	
 蹬	GJ	
+蹭	FD	
 蹭	kBigFive	
 蹭	GJ	
 蹯	kBigFive	
@@ -33180,6 +33683,7 @@
 躟	GJ	
 躠	kBigFive	
 躠	GJ	
+躡	FD	
 躡	kBigFive	
 躡	kHKGlyph	
 躡	T1	
@@ -33188,6 +33692,7 @@
 躣	kBigFive	
 躣	GJ	
 躤	kBigFive	
+躥	FD	
 躥	kBigFive	
 躦	kBigFive	
 躧	GJ	
@@ -33212,8 +33717,8 @@
 躭	kHKGlyph	
 躭	GJ	
 躰	GJ	
+躱	FD	
 躱	GJ	
-躲	FD	
 躲	kBigFive	
 躲	kHKGlyph	
 躲	T1	
@@ -33223,6 +33728,7 @@
 躺	T1	
 躺	GJ	
 躽	kBigFive	
+軀	FD	
 軀	kBigFive	
 軀	kHKGlyph	
 軀	T1	
@@ -33323,7 +33829,6 @@
 軹	GJ	
 軺	kBigFive	
 軺	GJ	
-軻	FD	
 軻	kBigFive	
 軻	kHKGlyph	
 軻	T1	
@@ -33374,7 +33879,6 @@
 輐	GJ	
 輑	kBigFive	
 輑	GJ	
-輒	FD	
 輒	kBigFive	
 輒	kHKGlyph	
 輒	T1	
@@ -33415,10 +33919,10 @@
 輝	kHKGlyph	
 輝	T1	
 輝	GJ	
+輞	FD	
 輞	kBigFive	
 輞	T1	
 輞	GJ	
-輟	FD	
 輟	kBigFive	
 輟	kHKGlyph	
 輟	T1	
@@ -33478,6 +33982,7 @@
 輸	GJ	
 輹	kBigFive	
 輹	GJ	
+輻	FD	
 輻	kBigFive	
 輻	kHKGlyph	
 輻	T1	
@@ -33504,6 +34009,7 @@
 轄	kHKGlyph	
 轄	T1	
 轄	GJ	
+轅	FD	
 轅	kBigFive	
 轅	kHKGlyph	
 轅	T1	
@@ -33654,7 +34160,6 @@
 迂	kHKGlyph	
 迂	T1	
 迂	GJ	
-迄	FD	
 迄	kBigFive	
 迄	kHKGlyph	
 迄	T1	
@@ -33684,9 +34189,9 @@
 近	GJ	
 迒	kBigFive	
 迒	GJ	
-迓	FD	
 迓	kBigFive	
 迓	GJ	
+返	FD	
 返	kBigFive	
 返	kHKGlyph	
 返	T1	
@@ -33697,6 +34202,7 @@
 迗	kBigFive	
 迠	kBigFive	
 迡	kBigFive	
+迢	FD	
 迢	kBigFive	
 迢	kHKGlyph	
 迢	T1	
@@ -33728,7 +34234,6 @@
 迫	kHKGlyph	
 迫	T1	
 迫	GJ	
-迭	FD	
 迭	kBigFive	
 迭	kHKGlyph	
 迭	T1	
@@ -33809,6 +34314,7 @@
 逋	GJ	
 逌	kBigFive	
 逌	GJ	
+逍	FD	
 逍	kBigFive	
 逍	kHKGlyph	
 逍	T1	
@@ -33895,8 +34401,10 @@
 連	GJ	
 逤	kBigFive	
 逤	GJ	
+逩	FD	
 逭	kBigFive	
 逭	GJ	
+逮	FD	
 逮	kBigFive	
 逮	kHKGlyph	
 逮	T1	
@@ -34014,6 +34522,7 @@
 遘	kHKGlyph	
 遘	T1	
 遘	GJ	
+遙	FD	
 遙	kBigFive	
 遙	kHKGlyph	
 遙	T1	
@@ -34040,6 +34549,7 @@
 遠	T1	
 遠	GJ	
 遡	GJ	
+遢	FD	
 遢	kBigFive	
 遢	T1	
 遢	GJ	
@@ -34117,7 +34627,6 @@
 遼	kHKGlyph	
 遼	T1	
 遼	GJ	
-遽	FD	
 遽	kBigFive	
 遽	kHKGlyph	
 遽	T1	
@@ -34166,11 +34675,13 @@
 邊	kHKGlyph	
 邊	T1	
 邊	GJ	
+邋	FD	
 邋	kBigFive	
 邋	T1	
 邋	GJ	
 邍	kBigFive	
 邍	GJ	
+邏	FD	
 邏	kBigFive	
 邏	kHKGlyph	
 邏	T1	
@@ -34205,10 +34716,12 @@
 邠	GJ	
 邡	kBigFive	
 邡	GJ	
+邢	FD	
 邢	kBigFive	
 邢	kHKGlyph	
 邢	T1	
 邢	GJ	
+那	FD	
 那	kBigFive	
 那	kHKGlyph	
 那	T1	
@@ -34229,11 +34742,11 @@
 邪	T1	
 邪	GJ	
 邭	GJ	
-邯	FD	
 邯	kBigFive	
 邯	GJ	
 邰	kBigFive	
 邰	GJ	
+邱	FD	
 邱	kBigFive	
 邱	kHKGlyph	
 邱	T1	
@@ -34306,6 +34819,7 @@
 郛	GJ	
 郜	kBigFive	
 郜	GJ	
+郝	FD	
 郝	kBigFive	
 郝	T1	
 郝	GJ	
@@ -34647,6 +35161,7 @@
 醁	GJ	
 醂	kBigFive	
 醂	GJ	
+醃	FD	
 醃	kBigFive	
 醃	kHKGlyph	
 醃	T1	
@@ -34734,8 +35249,10 @@
 醬	kHKGlyph	
 醬	T1	
 醬	GJ	
+醭	FD	
 醭	kBigFive	
 醭	GJ	
+醮	FD	
 醮	kBigFive	
 醮	T1	
 醮	GJ	
@@ -34791,7 +35308,6 @@
 釆	kBigFive	
 釆	T1	
 釆	GJ	
-采	FD	
 采	kBigFive	
 采	kHKGlyph	
 采	T1	
@@ -34826,6 +35342,7 @@
 量	kHKGlyph	
 量	T1	
 量	GJ	
+釐	FD	
 釐	kBigFive	
 釐	kHKGlyph	
 釐	T1	
@@ -34868,6 +35385,7 @@
 釣	kHKGlyph	
 釣	T1	
 釣	GJ	
+釤	FD	
 釤	kBigFive	
 釤	GJ	
 釦	kBigFive	
@@ -34911,6 +35429,7 @@
 釾	GJ	
 釿	kBigFive	
 釿	GJ	
+鈀	FD	
 鈀	kBigFive	
 鈀	GJ	
 鈁	kBigFive	
@@ -34943,7 +35462,6 @@
 鈐	kHKGlyph	
 鈐	T1	
 鈐	GJ	
-鈑	FD	
 鈑	kBigFive	
 鈑	T1	
 鈑	GJ	
@@ -34982,7 +35500,6 @@
 鈭	kBigFive	
 鈭	GJ	
 鈮	kBigFive	
-鈰	FD	
 鈰	kBigFive	
 鈱	kBigFive	
 鈲	kBigFive	
@@ -35009,7 +35526,6 @@
 鈹	GJ	
 鈺	kBigFive	
 鈺	GJ	
-鈽	FD	
 鈽	kBigFive	
 鈽	T1	
 鈾	kBigFive	
@@ -35035,6 +35551,7 @@
 鉉	GJ	
 鉊	kBigFive	
 鉊	GJ	
+鉋	FD	
 鉋	kBigFive	
 鉋	kHKGlyph	
 鉋	T1	
@@ -35078,6 +35595,7 @@
 鉠	kBigFive	
 鉠	GJ	
 鉡	kBigFive	
+鉢	FD	
 鉢	kHKGlyph	
 鉢	GJ	
 鉣	kBigFive	
@@ -35107,7 +35625,6 @@
 鉹	GJ	
 鉺	kBigFive	
 鉺	GJ	
-鉻	FD	
 鉻	kBigFive	
 鉻	T1	
 鉻	GJ	
@@ -35117,7 +35634,6 @@
 鉽	kBigFive	
 鉾	kBigFive	
 鉾	GJ	
-鉿	FD	
 鉿	kBigFive	
 鉿	GJ	
 銀	FD	
@@ -35173,6 +35689,7 @@
 銙	GJ	
 銚	kBigFive	
 銚	GJ	
+銛	FD	
 銛	kBigFive	
 銛	GJ	
 銜	FD	
@@ -35196,11 +35713,13 @@
 銩	kBigFive	
 銪	kBigFive	
 銫	kBigFive	
+銬	FD	
 銬	kBigFive	
 銬	kHKGlyph	
 銬	T1	
 銬	GJ	
 銱	GJ	
+銲	FD	
 銲	kBigFive	
 銲	T1	
 銲	GJ	
@@ -35218,6 +35737,7 @@
 銷	T1	
 銷	GJ	
 銸	GJ	
+銹	FD	
 銹	kHKGlyph	
 銹	GJ	
 銻	kBigFive	
@@ -35292,6 +35812,7 @@
 鋤	kHKGlyph	
 鋤	T1	
 鋤	GJ	
+鋥	FD	
 鋥	GJ	
 鋦	FD	
 鋦	kBigFive	
@@ -35339,7 +35860,6 @@
 錁	GJ	
 錂	kBigFive	
 錂	GJ	
-錄	FD	
 錄	kBigFive	
 錄	kHKGlyph	
 錄	T1	
@@ -35383,6 +35903,7 @@
 錚	kHKGlyph	
 錚	T1	
 錚	GJ	
+錛	FD	
 錛	kBigFive	
 錛	GJ	
 錜	GJ	
@@ -35418,6 +35939,7 @@
 錦	GJ	
 錧	kBigFive	
 錧	GJ	
+錨	FD	
 錨	kBigFive	
 錨	kHKGlyph	
 錨	T1	
@@ -35431,6 +35953,7 @@
 錫	GJ	
 錭	kBigFive	
 錭	GJ	
+錮	FD	
 錮	kBigFive	
 錮	T1	
 錮	GJ	
@@ -35439,6 +35962,7 @@
 錯	kHKGlyph	
 錯	T1	
 錯	GJ	
+録	FD	
 錳	kBigFive	
 錳	kHKGlyph	
 錳	T1	
@@ -35453,13 +35977,13 @@
 錹	kBigFive	
 錼	kBigFive	
 錽	GJ	
-鍁	FD	
 鍁	GJ	
 鍆	kBigFive	
 鍇	kBigFive	
 鍇	GJ	
 鍉	kBigFive	
 鍉	GJ	
+鍊	FD	
 鍊	kBigFive	
 鍊	kHKGlyph	
 鍊	T1	
@@ -35547,6 +36071,7 @@
 鍻	kBigFive	
 鍼	kBigFive	
 鍼	GJ	
+鍾	FD	
 鍾	kBigFive	
 鍾	kHKGlyph	
 鍾	T1	
@@ -35571,6 +36096,7 @@
 鎏	GJ	
 鎑	kBigFive	
 鎒	kBigFive	
+鎔	FD	
 鎔	kBigFive	
 鎔	kHKGlyph	
 鎔	T1	
@@ -35601,7 +36127,6 @@
 鎟	kBigFive	
 鎡	kBigFive	
 鎡	GJ	
-鎢	FD	
 鎢	kBigFive	
 鎢	kHKGlyph	
 鎢	T1	
@@ -35658,6 +36183,7 @@
 鏈	T1	
 鏈	GJ	
 鏉	GJ	
+鏊	FD	
 鏊	kBigFive	
 鏊	GJ	
 鏌	kBigFive	
@@ -35726,12 +36252,14 @@
 鏦	kBigFive	
 鏦	GJ	
 鏧	kBigFive	
+鏨	FD	
 鏨	kBigFive	
 鏨	T1	
 鏨	GJ	
 鏩	GJ	
 鏬	kBigFive	
 鏮	kBigFive	
+鏵	FD	
 鏵	kBigFive	
 鏵	GJ	
 鏶	kBigFive	
@@ -35747,7 +36275,6 @@
 鏻	kBigFive	
 鏻	GJ	
 鏼	kBigFive	
-鏽	FD	
 鏽	kBigFive	
 鏽	kHKGlyph	
 鏽	T1	
@@ -35776,6 +36303,7 @@
 鐎	GJ	
 鐏	kBigFive	
 鐏	GJ	
+鐐	FD	
 鐐	kBigFive	
 鐐	GJ	
 鐑	kBigFive	
@@ -35793,10 +36321,12 @@
 鐘	kHKGlyph	
 鐘	T1	
 鐘	GJ	
+鐙	FD	
 鐙	kBigFive	
 鐙	GJ	
 鐝	GJ	
 鐠	kBigFive	
+鐧	FD	
 鐧	GJ	
 鐨	kBigFive	
 鐩	kBigFive	
@@ -35847,6 +36377,7 @@
 鐻	GJ	
 鐼	kBigFive	
 鐽	kBigFive	
+鐾	FD	
 鐿	kBigFive	
 鑀	kBigFive	
 鑄	FD	
@@ -35869,15 +36400,16 @@
 鑏	kBigFive	
 鑐	kBigFive	
 鑐	GJ	
+鑑	FD	
 鑑	kBigFive	
 鑑	kHKGlyph	
 鑑	T1	
 鑑	GJ	
-鑒	FD	
 鑒	kBigFive	
 鑒	kHKGlyph	
 鑒	T1	
 鑒	GJ	
+鑔	FD	
 鑔	GJ	
 鑕	kBigFive	
 鑕	GJ	
@@ -35946,6 +36478,7 @@
 鑽	kHKGlyph	
 鑽	T1	
 鑽	GJ	
+鑾	FD	
 鑾	kBigFive	
 鑾	kHKGlyph	
 鑾	T1	
@@ -35963,7 +36496,7 @@
 钂	kBigFive	
 钃	kBigFive	
 钃	GJ	
-锉	FD	
+铞	FD	
 長	FD	
 長	kBigFive	
 長	kHKGlyph	
@@ -36017,11 +36550,11 @@
 閏	T1	
 閏	GJ	
 閐	kBigFive	
+閑	FD	
 閑	kBigFive	
 閑	kHKGlyph	
 閑	T1	
 閑	GJ	
-閒	FD	
 閒	kBigFive	
 閒	kHKGlyph	
 閒	T1	
@@ -36087,10 +36620,10 @@
 閭	GJ	
 閮	kBigFive	
 閰	kBigFive	
+閱	FD	
 閱	kBigFive	
 閱	kHKGlyph	
 閱	T1	
-閲	FD	
 閲	kHKGlyph	
 閲	GJ	
 閵	kBigFive	
@@ -36161,10 +36694,10 @@
 闔	kHKGlyph	
 闔	T1	
 闔	GJ	
-闕	FD	
 闕	kBigFive	
 闕	T1	
 闕	GJ	
+闖	FD	
 闖	kBigFive	
 闖	kHKGlyph	
 闖	T1	
@@ -36312,6 +36845,7 @@
 陔	kBigFive	
 陔	GJ	
 陖	GJ	
+陘	FD	
 陘	kBigFive	
 陘	T1	
 陘	GJ	
@@ -36439,6 +36973,7 @@
 隊	kHKGlyph	
 隊	T1	
 隊	GJ	
+隋	FD	
 隋	kBigFive	
 隋	kHKGlyph	
 隋	T1	
@@ -36462,7 +36997,6 @@
 隔	kHKGlyph	
 隔	T1	
 隔	GJ	
-隕	FD	
 隕	kBigFive	
 隕	kHKGlyph	
 隕	T1	
@@ -36750,7 +37284,6 @@
 震	GJ	
 霈	kBigFive	
 霈	GJ	
-霉	FD	
 霉	kBigFive	
 霉	kHKGlyph	
 霉	T1	
@@ -36762,7 +37295,6 @@
 霍	kHKGlyph	
 霍	T1	
 霍	GJ	
-霎	FD	
 霎	kBigFive	
 霎	kHKGlyph	
 霎	T1	
@@ -36866,13 +37398,13 @@
 霾	GJ	
 霿	kBigFive	
 霿	GJ	
+靂	FD	
 靂	kBigFive	
 靂	kHKGlyph	
 靂	T1	
 靂	GJ	
 靃	kBigFive	
 靃	GJ	
-靄	FD	
 靄	kBigFive	
 靄	kHKGlyph	
 靄	T1	
@@ -36889,11 +37421,12 @@
 靉	kBigFive	
 靉	GJ	
 靋	kBigFive	
-青	FD	
+靑	FD	
 青	kBigFive	
 青	kHKGlyph	
 青	T1	
 青	GJ	
+靖	FD	
 靖	kBigFive	
 靖	kHKGlyph	
 靖	T1	
@@ -36947,11 +37480,13 @@
 革	kHKGlyph	
 革	T1	
 革	GJ	
+靪	FD	
 靪	kBigFive	
 靪	GJ	
 靫	GJ	
 靬	kBigFive	
 靬	GJ	
+靭	FD	
 靭	kHKGlyph	
 靮	kBigFive	
 靮	GJ	
@@ -36965,6 +37500,7 @@
 靴	kHKGlyph	
 靴	T1	
 靴	GJ	
+靶	FD	
 靶	kBigFive	
 靶	kHKGlyph	
 靶	T1	
@@ -36985,6 +37521,7 @@
 靽	GJ	
 靾	kBigFive	
 靾	GJ	
+靿	FD	
 靿	kBigFive	
 靿	GJ	
 鞀	kBigFive	
@@ -37042,6 +37579,7 @@
 鞝	kBigFive	
 鞞	kBigFive	
 鞞	GJ	
+鞠	FD	
 鞠	kBigFive	
 鞠	kHKGlyph	
 鞠	T1	
@@ -37055,6 +37593,7 @@
 鞣	GJ	
 鞤	kBigFive	
 鞥	kBigFive	
+鞦	FD	
 鞦	kBigFive	
 鞦	kHKGlyph	
 鞦	T1	
@@ -37115,6 +37654,7 @@
 韉	kBigFive	
 韉	T1	
 韉	GJ	
+韋	FD	
 韋	kBigFive	
 韋	kHKGlyph	
 韋	T1	
@@ -37145,6 +37685,7 @@
 韘	GJ	
 韙	kBigFive	
 韙	GJ	
+韛	FD	
 韛	GJ	
 韜	kBigFive	
 韜	kHKGlyph	
@@ -37203,6 +37744,7 @@
 響	T1	
 響	GJ	
 頀	kBigFive	
+頁	FD	
 頁	kBigFive	
 頁	kHKGlyph	
 頁	T1	
@@ -37318,6 +37860,7 @@
 頮	GJ	
 頯	kBigFive	
 頯	GJ	
+頰	FD	
 頰	kBigFive	
 頰	kHKGlyph	
 頰	T1	
@@ -37336,6 +37879,7 @@
 頸	kHKGlyph	
 頸	T1	
 頸	GJ	
+頹	FD	
 頹	kBigFive	
 頹	kHKGlyph	
 頹	T1	
@@ -37345,7 +37889,6 @@
 頻	kHKGlyph	
 頻	T1	
 頻	GJ	
-頽	FD	
 頽	GJ	
 顀	GJ	
 顁	kBigFive	
@@ -37456,6 +37999,7 @@
 顰	kHKGlyph	
 顰	T1	
 顰	GJ	
+顱	FD	
 顱	kBigFive	
 顱	kHKGlyph	
 顱	T1	
@@ -37463,9 +38007,9 @@
 顲	kBigFive	
 顳	kBigFive	
 顳	GJ	
+顴	FD	
 顴	kBigFive	
 顴	GJ	
-额	FD	
 風	FD	
 風	kBigFive	
 風	kHKGlyph	
@@ -37529,7 +38073,6 @@
 飄	GJ	
 飆	kBigFive	
 飆	GJ	
-飈	FD	
 飉	kBigFive	
 飉	GJ	
 飋	kBigFive	
@@ -37589,6 +38132,7 @@
 飲	kHKGlyph	
 飲	T1	
 飲	GJ	
+飴	FD	
 飴	kBigFive	
 飴	kHKGlyph	
 飴	T1	
@@ -37630,6 +38174,7 @@
 餅	T1	
 餅	GJ	
 餇	kBigFive	
+餈	FD	
 餈	kBigFive	
 餈	GJ	
 餉	FD	
@@ -37653,6 +38198,7 @@
 餐	kHKGlyph	
 餐	T1	
 餐	GJ	
+餑	FD	
 餑	kBigFive	
 餑	GJ	
 餒	FD	
@@ -37685,12 +38231,15 @@
 餛	kHKGlyph	
 餛	T1	
 餛	GJ	
+餜	FD	
+餞	FD	
 餞	kBigFive	
 餞	kHKGlyph	
 餞	T1	
 餞	GJ	
 餟	kBigFive	
 餟	GJ	
+餡	FD	
 餡	kBigFive	
 餡	kHKGlyph	
 餡	T1	
@@ -37701,6 +38250,7 @@
 餤	GJ	
 餥	kBigFive	
 餦	GJ	
+餧	FD	
 餧	kBigFive	
 餧	GJ	
 館	FD	
@@ -37743,6 +38293,7 @@
 餽	kHKGlyph	
 餽	T1	
 餽	GJ	
+餾	FD	
 餾	kBigFive	
 餾	kHKGlyph	
 餾	T1	
@@ -37755,6 +38306,7 @@
 饀	GJ	
 饁	kBigFive	
 饁	GJ	
+饃	FD	
 饃	kBigFive	
 饃	GJ	
 饅	FD	
@@ -37771,6 +38323,7 @@
 饉	T1	
 饉	GJ	
 饊	GJ	
+饋	FD	
 饋	kBigFive	
 饋	GJ	
 饌	kBigFive	
@@ -37801,6 +38354,7 @@
 饗	GJ	
 饘	kBigFive	
 饘	GJ	
+饙	FD	
 饙	kBigFive	
 饙	GJ	
 饛	kBigFive	
@@ -37889,6 +38443,7 @@
 馳	kHKGlyph	
 馳	T1	
 馳	GJ	
+馴	FD	
 馴	kBigFive	
 馴	kHKGlyph	
 馴	T1	
@@ -37976,8 +38531,8 @@
 駟	kHKGlyph	
 駟	T1	
 駟	GJ	
+駡	FD	
 駡	GJ	
-駢	FD	
 駢	kBigFive	
 駢	kHKGlyph	
 駢	T1	
@@ -38030,6 +38585,7 @@
 駽	GJ	
 駾	kBigFive	
 駾	GJ	
+駿	FD	
 駿	kBigFive	
 駿	kHKGlyph	
 駿	T1	
@@ -38048,6 +38604,7 @@
 騅	kBigFive	
 騅	GJ	
 騆	kBigFive	
+騇	FD	
 騇	kBigFive	
 騇	GJ	
 騉	kBigFive	
@@ -38122,6 +38679,7 @@
 騰	GJ	
 騱	kBigFive	
 騱	GJ	
+騲	FD	
 騲	kBigFive	
 騲	GJ	
 騴	kBigFive	
@@ -38265,6 +38823,7 @@
 骯	kHKGlyph	
 骯	T1	
 骯	GJ	
+骰	FD	
 骰	kBigFive	
 骰	kHKGlyph	
 骰	T1	
@@ -38285,10 +38844,12 @@
 骸	kHKGlyph	
 骸	T1	
 骸	GJ	
+骹	FD	
 骹	kBigFive	
 骹	GJ	
 骻	kBigFive	
 骻	GJ	
+骼	FD	
 骼	kBigFive	
 骼	kHKGlyph	
 骼	T1	
@@ -38395,12 +38956,14 @@
 髹	GJ	
 髺	kBigFive	
 髺	GJ	
+髻	FD	
 髻	kBigFive	
 髻	kHKGlyph	
 髻	T1	
 髻	GJ	
 髼	kBigFive	
 髼	GJ	
+髽	FD	
 髽	kBigFive	
 髽	GJ	
 髾	kBigFive	
@@ -38423,7 +38986,6 @@
 鬆	T1	
 鬆	GJ	
 鬇	GJ	
-鬈	FD	
 鬈	kBigFive	
 鬈	GJ	
 鬊	kBigFive	
@@ -38432,11 +38994,13 @@
 鬋	GJ	
 鬌	kBigFive	
 鬌	GJ	
+鬍	FD	
 鬍	kBigFive	
 鬍	kHKGlyph	
 鬍	T1	
 鬍	GJ	
 鬎	kBigFive	
+鬏	FD	
 鬐	kBigFive	
 鬐	GJ	
 鬑	kBigFive	
@@ -38454,6 +39018,7 @@
 鬘	GJ	
 鬙	kBigFive	
 鬙	GJ	
+鬚	FD	
 鬚	kBigFive	
 鬚	kHKGlyph	
 鬚	T1	
@@ -38465,6 +39030,7 @@
 鬠	kBigFive	
 鬠	GJ	
 鬡	GJ	
+鬢	FD	
 鬢	kBigFive	
 鬢	kHKGlyph	
 鬢	T1	
@@ -38578,6 +39144,7 @@
 魖	kBigFive	
 魖	GJ	
 魗	GJ	
+魘	FD	
 魘	kBigFive	
 魘	kHKGlyph	
 魘	T1	
@@ -38741,6 +39308,7 @@
 鯉	kHKGlyph	
 鯉	T1	
 鯉	GJ	
+鯊	FD	
 鯊	kBigFive	
 鯊	kHKGlyph	
 鯊	T1	
@@ -38778,6 +39346,7 @@
 鯥	GJ	
 鯦	kBigFive	
 鯦	GJ	
+鯧	FD	
 鯧	kBigFive	
 鯧	T1	
 鯧	GJ	
@@ -38807,6 +39376,7 @@
 鯽	kHKGlyph	
 鯽	T1	
 鯽	GJ	
+鯿	FD	
 鯿	GJ	
 鰁	GJ	
 鰂	GJ	
@@ -38824,6 +39394,7 @@
 鰋	kBigFive	
 鰋	GJ	
 鰌	GJ	
+鰍	FD	
 鰍	kBigFive	
 鰍	kHKGlyph	
 鰍	T1	
@@ -38832,6 +39403,7 @@
 鰐	GJ	
 鰒	kBigFive	
 鰒	GJ	
+鰓	FD	
 鰓	kBigFive	
 鰓	kHKGlyph	
 鰓	T1	
@@ -38892,6 +39464,7 @@
 鰸	GJ	
 鰹	kBigFive	
 鰹	GJ	
+鰻	FD	
 鰻	kBigFive	
 鰻	kHKGlyph	
 鰻	T1	
@@ -38915,11 +39488,11 @@
 鱃	GJ	
 鱄	kBigFive	
 鱄	GJ	
+鱅	FD	
 鱅	GJ	
 鱆	kBigFive	
 鱇	GJ	
 鱈	kBigFive	
-鱉	FD	
 鱉	kBigFive	
 鱉	T1	
 鱉	GJ	
@@ -38939,6 +39512,7 @@
 鱑	GJ	
 鱒	kBigFive	
 鱒	GJ	
+鱔	FD	
 鱔	kBigFive	
 鱔	kHKGlyph	
 鱔	T1	
@@ -38960,6 +39534,7 @@
 鱝	GJ	
 鱞	kBigFive	
 鱞	GJ	
+鱟	FD	
 鱟	kBigFive	
 鱟	T1	
 鱟	GJ	
@@ -39083,6 +39658,7 @@
 鴒	GJ	
 鴓	GJ	
 鴔	kBigFive	
+鴕	FD	
 鴕	kBigFive	
 鴕	kHKGlyph	
 鴕	T1	
@@ -39093,6 +39669,7 @@
 鴘	GJ	
 鴙	kBigFive	
 鴚	GJ	
+鴛	FD	
 鴛	kBigFive	
 鴛	kHKGlyph	
 鴛	T1	
@@ -39102,7 +39679,6 @@
 鴝	GJ	
 鴞	kBigFive	
 鴞	GJ	
-鴟	FD	
 鴟	kBigFive	
 鴟	GJ	
 鴠	kBigFive	
@@ -39116,6 +39692,7 @@
 鴣	GJ	
 鴥	kBigFive	
 鴥	GJ	
+鴦	FD	
 鴦	kBigFive	
 鴦	kHKGlyph	
 鴦	T1	
@@ -39177,6 +39754,7 @@
 鵍	GJ	
 鵏	kBigFive	
 鵐	GJ	
+鵑	FD	
 鵑	kBigFive	
 鵑	kHKGlyph	
 鵑	T1	
@@ -39222,16 +39800,19 @@
 鵨	kBigFive	
 鵩	kBigFive	
 鵩	GJ	
+鵪	FD	
 鵪	kBigFive	
 鵪	kHKGlyph	
 鵪	T1	
 鵪	GJ	
 鵫	kBigFive	
 鵫	GJ	
+鵬	FD	
 鵬	kBigFive	
 鵬	kHKGlyph	
 鵬	T1	
 鵬	GJ	
+鵮	FD	
 鵮	GJ	
 鵯	kBigFive	
 鵯	GJ	
@@ -39277,6 +39858,7 @@
 鶆	GJ	
 鶇	kBigFive	
 鶈	kBigFive	
+鶉	FD	
 鶉	kBigFive	
 鶉	kHKGlyph	
 鶉	T1	
@@ -39363,9 +39945,11 @@
 鶼	GJ	
 鶾	kBigFive	
 鶿	kBigFive	
+鷀	FD	
 鷀	GJ	
 鷁	kBigFive	
 鷁	GJ	
+鷂	FD	
 鷂	kBigFive	
 鷂	kHKGlyph	
 鷂	T1	
@@ -39402,6 +39986,7 @@
 鷕	GJ	
 鷖	kBigFive	
 鷖	GJ	
+鷗	FD	
 鷗	kBigFive	
 鷗	kHKGlyph	
 鷗	T1	
@@ -39463,6 +40048,7 @@
 鷹	kHKGlyph	
 鷹	T1	
 鷹	GJ	
+鷺	FD	
 鷺	kBigFive	
 鷺	kHKGlyph	
 鷺	T1	
@@ -39509,6 +40095,7 @@
 鸓	kBigFive	
 鸓	GJ	
 鸔	kBigFive	
+鸕	FD	
 鸕	kBigFive	
 鸕	GJ	
 鸗	kBigFive	
@@ -39532,7 +40119,6 @@
 鸞	kHKGlyph	
 鸞	T1	
 鸞	GJ	
-鹵	FD	
 鹵	kBigFive	
 鹵	kHKGlyph	
 鹵	T1	
@@ -39563,11 +40149,13 @@
 鹿	GJ	
 麀	kBigFive	
 麀	GJ	
+麂	FD	
 麂	kBigFive	
 麂	T1	
 麂	GJ	
 麃	kBigFive	
 麃	GJ	
+麅	FD	
 麅	GJ	
 麆	kBigFive	
 麆	GJ	
@@ -39615,6 +40203,7 @@
 麛	GJ	
 麜	kBigFive	
 麜	GJ	
+麝	FD	
 麝	kBigFive	
 麝	kHKGlyph	
 麝	T1	
@@ -39638,6 +40227,7 @@
 麧	kBigFive	
 麧	GJ	
 麨	GJ	
+麩	FD	
 麩	kBigFive	
 麩	kHKGlyph	
 麩	T1	
@@ -39647,7 +40237,6 @@
 麭	kBigFive	
 麮	kBigFive	
 麮	GJ	
-麯	FD	
 麯	GJ	
 麰	kBigFive	
 麰	GJ	
@@ -39736,6 +40325,7 @@
 默	GJ	
 黚	kBigFive	
 黚	GJ	
+黛	FD	
 黛	kBigFive	
 黛	kHKGlyph	
 黛	T1	
@@ -39759,6 +40349,7 @@
 黠	kHKGlyph	
 黠	T1	
 黠	GJ	
+黢	FD	
 黢	GJ	
 黣	GJ	
 黤	kBigFive	
@@ -39791,6 +40382,7 @@
 黲	GJ	
 黳	kBigFive	
 黳	GJ	
+黴	FD	
 黴	kBigFive	
 黴	kHKGlyph	
 黴	T1	
@@ -39804,6 +40396,7 @@
 黷	T1	
 黷	GJ	
 黸	GJ	
+黹	FD	
 黹	kBigFive	
 黹	GJ	
 黺	kBigFive	
@@ -39828,6 +40421,7 @@
 鼇	kHKGlyph	
 鼇	T1	
 鼇	GJ	
+鼈	FD	
 鼈	kHKGlyph	
 鼈	GJ	
 鼉	kBigFive	
@@ -39894,6 +40488,7 @@
 鼪	GJ	
 鼫	kBigFive	
 鼫	GJ	
+鼬	FD	
 鼬	kBigFive	
 鼬	kHKGlyph	
 鼬	T1	
@@ -39944,10 +40539,12 @@
 齃	kBigFive	
 齃	GJ	
 齅	GJ	
+齆	FD	
 齆	kBigFive	
 齆	GJ	
 齇	kBigFive	
 齇	GJ	
+齈	FD	
 齈	kBigFive	
 齈	GJ	
 齉	kBigFive	
@@ -39988,6 +40585,7 @@
 齙	GJ	
 齛	kBigFive	
 齛	GJ	
+齜	FD	
 齜	kBigFive	
 齜	T1	
 齜	GJ	
@@ -40001,6 +40599,7 @@
 齟	GJ	
 齠	kBigFive	
 齠	GJ	
+齡	FD	
 齡	kBigFive	
 齡	kHKGlyph	
 齡	T1	
@@ -40022,6 +40621,7 @@
 齧	T1	
 齧	GJ	
 齨	GJ	
+齪	FD	
 齪	kBigFive	
 齪	kHKGlyph	
 齪	T1	
@@ -40048,8 +40648,10 @@
 齴	GJ	
 齵	kBigFive	
 齵	GJ	
+齶	FD	
 齶	kBigFive	
 齶	GJ	
+齷	FD	
 齷	kBigFive	
 齷	kHKGlyph	
 齷	T1	
@@ -40064,6 +40666,7 @@
 齻	GJ	
 齼	GJ	
 齽	GJ	
+齾	FD	
 齾	kBigFive	
 齾	GJ	
 龍	FD	
@@ -40080,6 +40683,7 @@
 龑	GJ	
 龒	kBigFive	
 龓	GJ	
+龔	FD	
 龔	kBigFive	
 龔	kHKGlyph	
 龔	T1	
@@ -40114,6 +40718,7 @@
 𠋤	GJ	
 𠌖	GJ	
 𠌯	GJ	
+𠍲	FD	
 𠎮	GJ	
 𠎷	GJ	
 𠏀	GJ	
@@ -40179,6 +40784,7 @@
 𡇼	GJ	
 𡉄	GJ	
 𡉥	GJ	
+𡋯	FD	
 𡍪	GJ	
 𡍵	GJ	
 𡐨	GJ	
@@ -40287,6 +40893,7 @@
 𢩁	GJ	
 𢪇	GJ	
 𢪘	GJ	
+𢫦	FD	
 𢯲	GJ	
 𢯹	GJ	
 𢯺	GJ	
@@ -40296,6 +40903,7 @@
 𢳍	GJ	
 𢳚	GJ	
 𢴲	GJ	
+𢶀	FD	
 𢶉	GJ	
 𢶍	GJ	
 𢶒	GJ	
@@ -40339,6 +40947,7 @@
 𣜬	GJ	
 𣝉	GJ	
 𣝋	GJ	
+𣝗	FD	
 𣝛	GJ	
 𣝣	GJ	
 𣟄	GJ	
@@ -40540,6 +41149,7 @@
 𥻿	GJ	
 𥼚	GJ	
 𥼤	GJ	
+𥽸	FD	
 𥾝	GJ	
 𥿉	GJ	
 𥿊	GJ	
@@ -40580,6 +41190,7 @@
 𦙷	GJ	
 𦚐	GJ	
 𦚟	GJ	
+𦚢	FD	
 𦝢	GJ	
 𦝩	GJ	
 𦞂	GJ	
@@ -40638,6 +41249,7 @@
 𧁾	GJ	
 𧂇	GJ	
 𧃒	GJ	
+𧄔	FD	
 𧄛	GJ	
 𧄸	GJ	
 𧄹	GJ	
@@ -40741,6 +41353,7 @@
 𧶊	GJ	
 𧶠	GJ	
 𧶺	GJ	
+𧸖	FD	
 𧸘	GJ	
 𧹞	GJ	
 𧻞	GJ	
@@ -40754,6 +41367,7 @@
 𨁏	GJ	
 𨁗	GJ	
 𨁝	GJ	
+𨂝	FD	
 𨃞	GJ	
 𨃟	GJ	
 𨄌	GJ	
@@ -40764,6 +41378,7 @@
 𨈁	GJ	
 𨈐	GJ	
 𨉖	GJ	
+𨉣	FD	
 𨊻	GJ	
 𨋰	GJ	
 𨌈	GJ	

@@ -103,6 +103,14 @@ def s2t(字組, level=1):
 		t += 字
 	return t
 
+方言調查字表 = set()
+for 行 in open("tables/data/方言調查字表.tsv", encoding="U8"):
+	if not 行 or 行[0] == "#": continue
+	列 = 行.strip().split("\t")
+	字 = 列[1]
+	if len(字) != 1: continue
+	方言調查字表.add(字)
+
 def addAllFq(d, fq, order,不加片 = False):
 	if order is None or fq is None: return
 	fqs = fq.split(",")[0].split("-")
@@ -271,6 +279,8 @@ def getLangs(dicts, 參數, args):
 								字頻 += 同音字頻["".join(sorted((字甲, 字乙)))]
 							if 字頻 < 1.8 * n:
 								語.誤.append(f"【{字甲}】可能不讀[{音}]{''.join(字組乙)[:4]}")
+			if 方言調查字表 and 語.字數 >= 2500:
+				語.誤.append(f"待調查漢字：{''.join(方言調查字表 - 語.d.keys())}")
 			語.info["解析日志"] = None
 			語.info["同音字表"] = None
 			if 語.誤:

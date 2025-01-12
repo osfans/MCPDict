@@ -478,6 +478,7 @@ class 表:
 		行 = 行.replace("\u1dc9", "\u0303")\
 			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ")\
 			.replace("ʣ", "dz").replace("ʥ", "dʑ")\
+			.replace("", "䝼")\
 			.replace("", "ᵑ").replace("", "ᶽ")#.replace("ⱼ", "ᶽ")
 		return 行
 	
