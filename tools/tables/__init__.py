@@ -266,21 +266,26 @@ def getLangs(dicts, 參數, args):
 				if 人:
 					維護人[人] += 1
 			數 += 1
-			if 同音字頻:
-				if 語.檢查同音字() and 語.字數 < 10000:
-					for 音, 字組 in 語.聲韻典.items():
-						if len(字組) < 2: continue
-						for 字甲 in 字組:
-							字頻 = 0
-							字組乙 = set(字組)
-							字組乙.remove(字甲)
-							n = len(字組乙)
-							for 字乙 in 字組乙:
-								字頻 += 同音字頻["".join(sorted((字甲, 字乙)))]
-							if 字頻 < 1.8 * n:
-								語.誤.append(f"【{字甲}】可能不讀[{音}]{''.join(字組乙)[:4]}")
-			if 方言調查字表 and 語.字數 >= 2500:
-				語.誤.append(f"待調查漢字：{''.join(方言調查字表 - 語.d.keys())}")
+			if 同音字頻 and 語.檢查同音字() and 語.字數 < 10000:
+				for 音, 字組 in 語.聲韻典.items():
+					if len(字組) < 2: continue
+					for 字甲 in 字組:
+						字頻 = 0
+						字組乙 = set(字組)
+						字組乙.remove(字甲)
+						n = len(字組乙)
+						for 字乙 in 字組乙:
+							字頻 += 同音字頻["".join(sorted((字甲, 字乙)))]
+						if 字頻 < 1.8 * n:
+							語.誤.append(f"【{字甲}】可能不讀[{音}]{''.join(字組乙)[:4]}")
+			if 方言調查字表 and 語.檢查同音字() and 語.字數 >= 3000:
+				已調查漢字 = 語.d.keys()
+				待調查漢字 = 方言調查字表 - 已調查漢字
+				for 字 in list(待調查漢字):
+					if n2o(字) in 已調查漢字 or o2n(字) in 已調查漢字 or s2t(字, 1) in 已調查漢字 or s2t(字, 2) in 已調查漢字 or t2s(字) in 已調查漢字:
+						待調查漢字.remove(字)
+				if 待調查漢字:
+					語.誤.append(f"待調查漢字：{''.join(待調查漢字)}")
 			語.info["解析日志"] = None
 			語.info["同音字表"] = None
 			if 語.誤:

@@ -155,7 +155,6 @@ class 表(_表):
 		elif 名 in ("揭陽",):
 			字, _, _, _, _, 音標, 異讀, 註 = 列[:8]
 			音 = 自.轉調類(音標)
-			音標 = ""
 			異讀 = 異讀.strip("(读)")
 			if 異讀 == "文": 音+="="
 			elif 異讀 == "白": 音+="-"
@@ -310,6 +309,17 @@ class 表(_表):
 			index = 自.音列
 			字, 註 = 列[:2]
 			音 = "".join(列[index:index+3])
+		elif 自.文件名.startswith("东莞20"):
+			字 = 列[0]
+			音標 = 列[自.音列]
+			訓 = 音標.startswith("(")
+			音標 = 音標.strip("()")
+			l = list()
+			for 音 in 音標.split("|"):
+				音 = 自.轉調類(音)
+				if 訓: 音 += "@"
+				l.append((字, 音))
+			return l
 		elif 自.文件名.startswith("丹陽（雲陽訪仙河陽埤城）"):
 			字 = 列[0][0]
 			if 字.startswith("["): return
@@ -346,7 +356,7 @@ class 表(_表):
 		else:
 			字, 音, 註 = 列[:3]
 		if 字:
-			if 音標:
+			if 音標 and not 音:
 				音 = 自.轉調類(音標)
 			if len(字) != 1 or not 音: return
 			音 = 自.正音(音)
