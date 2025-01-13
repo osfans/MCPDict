@@ -32,9 +32,11 @@ public abstract class DisplayHelper {
     public String mLang;
 
     public static CharSequence getRichText(String richTextString) {
-        String s = richTextString
-                .replace("\n", "<br/>")
+        String s = richTextString.replace("<", "&lt;").replace(">", "&gt;")
+                .replace("?", "？").replace("!", "！").replace(":", "：").replace(";", "；").replace("~", "～")
+                .replace("\n", "<br>")
                 .replaceAll("\\*\\*(.+?)\\*\\*", "<b>$1</b>")
+                .replaceAll("\\*(.+?)\\*", "<i>$1</i>")
                 .replaceAll("`(.+?)`", "<span style='color: #808080;'>$1</span>");
         int i = Pref.getDisplayFormat();
         if (i == 1) {
@@ -82,7 +84,7 @@ public abstract class DisplayHelper {
         else if (i == COL_GYHZ) s = Pref.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceFirst(PAGE_FORMAT, "第$1頁第$2字");
         else if (i == COL_HD) s = Pref.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceAll(PAGE_FORMAT, "<a href=https://homeinmists.ilotus.org/hd/png/$1.png>第$1頁</a>第$2字").replace("lv", "lü").replace("nv", "nü");
         String[] fs = (s + "\n").split("\n", 2);
-        String text = String.format("<p><big><big><big>%s</big></big></big> %s</p><br><p>%s</p>", hz, fs[0], fs[1].replace("\n", "<br/>"));
+        String text = String.format("<p><big><big><big>%s</big></big></big> %s</p><br><p>%s</p>", hz, fs[0], fs[1].replace("\n", "<br>"));
         return HtmlCompat.fromHtml(text, HtmlCompat.FROM_HTML_MODE_COMPACT);
     }
 

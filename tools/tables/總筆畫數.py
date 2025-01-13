@@ -4,13 +4,13 @@ from tables._表 import 表 as _表
 from tables import hex2chr
 
 class 表(_表):
-	_file = "Unihan_IRGSources.txt"
+	文件名 = "Unihan_IRGSources.txt"
 	_sep = "\t"
-	patches = {"□": "3", "〇": "1"}
+	補丁 = {"□": "3", "〇": "1"}
 	
-	def parse(self, fs):
-		if len(fs) < 3: return
-		hz, typ, yb = fs
+	def 析(自, 列):
+		if len(列) < 3: return
+		字, typ, yb = 列
 		if typ != "kTotalStrokes": return
-		hz = hex2chr(hz)
-		return hz, yb
+		字 = hex2chr(字)
+		return 字, yb

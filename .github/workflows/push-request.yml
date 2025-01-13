@@ -22,5 +22,5 @@ jobs:
         pushd tools
         python3 -m pip install -r requirements.txt
         touch tables/*.py
-        python3 make.py
+        python3 make.py -c
         popd

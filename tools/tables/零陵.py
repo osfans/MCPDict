@@ -5,8 +5,8 @@ import re
 
 class 表(_表):
 
-	def parse(self, fs):
-		hz,jt,py,js = fs
+	def 析(自, 列):
+		字,jt,py,js = 列
 		sd = py[-1]
 		py = py[:-1]
 		py = py.replace("w","u").replace("uu", "u")
@@ -18,4 +18,4 @@ class 表(_表):
 		yb = re.sub("^h", "x", yb).replace("gh", "ɣ")
 		yb = re.sub("^sh", "ɕ", yb).replace("zh", "ʑ").replace("h", "ʰ").replace("c", "tɕ").replace("ng", "ŋ")
 		yb = yb + sd
-		return hz, yb, js
+		return 字, yb, js

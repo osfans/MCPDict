@@ -53,7 +53,7 @@ public class Orthography {
     }
 
     public static String formatRoman(String s) {
-        return String.format("<i>%s</i>", s);
+        return String.format("*%s*", s); // 斜體
     }
 
     private static final String[] toneBars = {"ˀ˩˨˧˦˥ˀ", "ˀ꜖꜕꜔꜓꜒ˀ", "ˀ꜌꜋꜊꜉꜈ˀ", "ˀ꜑꜐꜏꜎꜍ˀ", "⁰¹²³⁴⁵⁶"};

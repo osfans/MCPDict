@@ -36,17 +36,35 @@ public class Utils extends Application {
 
     public static void info(Context context, String lang) {
         WebView webView = new WebView(context, null);
-        String sb = "<style>\n" +
-                "  @font-face {\n" +
-                "      font-family: ipa;\n" +
-                "      src: url(\"file:///android_res/font/ipa.ttf\")\n" +
-                "  }\n" +
-                "  body {font-size: 16px}\n" +
-                "  h1 {font-size: 24px; color: #9D261D}\n" +
-                "  h2 {font-size: 20px; color: #000080; text-indent: 10px}\n" +
-                " </style>" +
-                DB.getIntroText(DB.getLanguageByLabel(lang));
-        webView.loadDataWithBaseURL(null, sb, "text/html", "utf-8", null);
+        StringBuilder sb = new StringBuilder();
+        sb.append("<html><head><style>\n")
+          .append("                  @font-face {\n")
+          .append("                    font-family: ipa;\n")
+          .append("                    src: url('file:///android_res/font/ipa.ttf');\n")
+          .append("                  }\n")
+          .append("                  @font-face {\n")
+          .append("                    font-family: p0;\n")
+          .append("                    src: url('file:///android_res/font/p0.otf') format('opentype');\n")
+          .append("                  }\n")
+          .append("                  @font-face {\n")
+          .append("                    font-family: p2;\n")
+          .append("                    src: url('file:///android_res/font/p2.otf') format('opentype');\n")
+          .append("                  }\n")
+          .append("                  @font-face {\n")
+          .append("                    font-family: p3;\n")
+          .append("                    src: url('file:///android_res/font/p3.otf') format('opentype');\n")
+          .append("                  }\n")
+          .append("  h1 {font-size: 1.8em; color: #9D261D}\n")
+          .append("  h2 {font-size: 1.2em; color: #000080;}\n")
+          .append("  body {font-family: ipa, ");
+        if (FontUtil.fontExFirst()) {
+            sb.append(String.format("p0, p2, p3, %s;}", FontUtil.getDefaultFont()));
+        } else {
+            sb.append(String.format("%s, p2, p3;}", FontUtil.getDefaultFont()));
+        }
+        sb.append("</style></head><body>");
+        sb.append(DB.getIntroText(DB.getLanguageByLabel(lang)));
+        webView.loadDataWithBaseURL(null, sb.toString(), "text/html; charset=utf-8", "utf-8", null);
 
         new AlertDialog.Builder(context)
                 .setView(webView)

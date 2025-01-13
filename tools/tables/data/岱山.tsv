@@ -668,6 +668,7 @@
 溉	溉	ke44		k	e	44
 蓋	盖	ke44		k	e	44
 丐	丐	ke44		k	e	44
+開	开	kʰe53		kʰ	e	53
 凱	凯	kʰe433		kʰ	e	433
 慨	慨	kʰe44		kʰ	e	44
 海	海	he433		h	e	433
@@ -937,6 +938,17 @@
 啥	啥	sau53		s	au	53
 梭	梭	sau433	文	s	au	433
 鎖	锁	sau433		s	au	433
+歌	歌	kau53		k	au	53
+哥	哥	kau53		k	au	53
+過	过	kau53	走〜	k	au	53
+鍋	锅	kau53		k	au	53
+戈	戈	kau53		k	au	53
+果	果	kau53		k	au	53
+裹	裹	kau433		k	au	433
+錁	锞	kau433		k	au	433
+果	果	kau433		k	au	433
+個	个	kau44		k	au	44
+過	过	kau44		k	au	44
 可	可	kʰau53		kʰ	au	53
 科	科	kʰau53		kʰ	au	53
 棵	棵	kʰau53		kʰ	au	53
@@ -2311,9 +2323,9 @@
 柩	柩	dʑiʏ13		dʑ	iʏ	13
 宙	宙	dʑiʏ13		dʑ	iʏ	13
 就	就	dʑiʏ13		dʑ	iʏ	13
-牛	牛	ȵiʏ223	文	ȵ	iʏ	223
-紐	纽	ȵiʏ223		ȵ	iʏ	223
-扭	扭	ȵiʏ223		ȵ	iʏ	223
+牛	牛	ȵiʏ13	文	ȵ	iʏ	13
+紐	纽	ȵiʏ13		ȵ	iʏ	13
+扭	扭	ȵiʏ13		ȵ	iʏ	13
 尤	尤	ɦiʏ223		ɦ	iʏ	223
 郵	邮	ɦiʏ223		ɦ	iʏ	223
 由	由	ɦiʏ223		ɦ	iʏ	223
@@ -2728,15 +2740,19 @@
 富	富	fu44		f	u	44
 副	副	fu44		f	u	44
 都	都	tu53		t	u	53
-土	土	tu433		t	u	433
-吐	吐	tu433	～痰	t	u	433
-吐	吐	tu44		t	u	44
-兔	兔	tu44		t	u	44
-唾	唾	tu44		t	u	44
-粗	粗	tsu53	文	ts	u	53
+賭	赌	tu433		t	u	433
+肚	肚	tu433	鱼～	t	u	433
+妒	妒	tu44		t	u	44
+土	土	tʰu433		tʰ	u	433
+吐	吐	tʰu433	～痰	tʰ	u	433
+吐	吐	tʰu44		tʰ	u	44
+兔	兔	tʰu44		tʰ	u	44
+唾	唾	tʰu44		tʰ	u	44
+租	租	tsu53	文	ts	u	53
 祖	祖	tsu433		ts	u	433
 組	组	tsu433		ts	u	433
-楚	楚	tsu44	文	ts	u	44
+粗	粗	tsʰu53	文	tsʰ	u	53
+楚	楚	tsʰu44	文	tsʰ	u	44
 蘇	苏	su53	文	s	u	53
 酥	酥	su53	文	s	u	53
 素	素	su44	文	s	u	44

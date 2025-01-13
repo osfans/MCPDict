@@ -13,7 +13,7 @@ FeatureCollection = {
 	"features": []
 }
 
-def outdated():
+def 過時():
 	if not os.path.exists(tpath): return True
 	classtime = os.path.getmtime(__file__)
 	stime = os.path.getmtime(spath)
@@ -94,8 +94,8 @@ def normSource(books):
 			return books.value
 	return None
 
-def load(省):
-	if not 省 and not outdated():
+def 加載(省=None):
+	if not 省 and not 過時():
 		return json.load(open(tpath,encoding="U8"))
 	d = dict()
 	wb = load_workbook(spath)
@@ -104,56 +104,57 @@ def load(省):
 	fields = []
 	for row in sheet.rows:
 		lineCount += 1
-		line = [j.value if j.value else "" for j in row]
-		if lineCount == 1: fields = line
+		行 = [j.value if j.value else "" for j in row]
+		if lineCount == 1: fields = 行
 		if lineCount <= 2:
 			continue
-		fs = dict(zip(fields, line))
-		文件名 = fs["文件名"]
+		列 = dict(zip(fields, 行))
+		文件名 = 列["文件名"]
 		if not 文件名 or 文件名.startswith("#"):
 			continue
-		語言 = normLangName(fs["語言"])
-		簡稱 = normLangName(fs["簡稱"])
-		音系 = fs["音系"]
-		說明 = fs["說明"]
-		繁簡 = fs["繁簡"]
-		聯表列名 = fs["聯表列名"]
-		字表格式 = fs["字表格式"]
-		經緯度 = normJW(fs["經緯度"])
-		方言島 = fs["方言島"] == "☑"
-		作者 = normNames(fs["作者"])
-		錄入人 = normNames(fs["錄入人"])
-		維護人 = normNames(fs["維護人"])
-		推薦人 = normNames(fs["推薦人"])
+		語言 = normLangName(列["語言"])
+		簡稱 = normLangName(列["簡稱"])
+		音系說明 = 列["音系"]
+		說明 = 列["說明"]
+		繁簡 = 列["繁簡"]
+		聯表列名 = 列["聯表列名"]
+		字表格式 = 列["字表格式"]
+		經緯度 = normJW(列["經緯度"])
+		方言島 = 列["方言島"] == "☑"
+		作者 = normNames(列["作者"])
+		錄入人 = normNames(列["錄入人"])
+		維護人 = normNames(列["維護人"])
+		推薦人 = normNames(列["推薦人"])
+		是否有人在做 = 列["是否有人在做"]
 		來源 = normSource(row[fields.index("來源")])
-		參考文獻 = fs["參考文獻"]
-		版本 = normVer(fs["版本/更新時間"])
-		跳過行數 = int(fs["跳過行數"]) if fs["跳過行數"] else 0
-		地圖級別 = fs["地圖級別"].count("★") if fs["地圖級別"] else 0
+		參考文獻 = 列["參考文獻"]
+		版本 = normVer(列["版本/更新時間"])
+		跳過行數 = int(列["跳過行數"]) if 列["跳過行數"] else 0
+		地圖級別 = 列["地圖級別"].count("★") if 列["地圖級別"] else 0
 
-		無調 = fs["無調"] == "☑"
+		無調 = 列["無調"] == "☑"
 		j = fields.index("[1]陰平")
-		聲調 = getTones([fs[fields[i]] for i in range(j, j+10)])
+		聲調 = getTones([列[fields[i]] for i in range(j, j+10)])
 
-		orders = [fs[i] for i in ("地圖集二排序", "音典排序", "陳邡排序")]
+		orders = [列[i] for i in ("地圖集二排序", "音典排序", "陳邡排序")]
 		colors = [row[fields.index(i)].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典顏色","陳邡顏色")]
 		subcolor = row[fields.index("音典過渡色")].fill.fgColor.value[2:]
 		if subcolor and subcolor != "000000" and subcolor != colors[1]:
 				colors[1] += f",{subcolor}"
 		colors = [re.sub(r"(\w+)", "#\\1", i) for i in colors]
 
-		types = [s2t(fs[i]) for i in ("地圖集二分區", "音典分區", "下拉1，折疊分区")]
-		if types[2] and fs["下拉2"]: types[2] += "," + fs["下拉2"]
+		types = [s2t(列[i]) for i in ("地圖集二分區", "音典分區", "下拉1，折疊分区")]
+		if types[2] and 列["下拉2"]: types[2] += "," + 列["下拉2"]
 
-		places = [s2t(fs[i]) if fs[i] else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點","自然村")]
+		places = [s2t(列[i]) if 列[i] else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點","自然村")]
 		if 簡稱 == "普通話" and 省:
 			places = ["", "", "", "", ""]
 		elif 省 and places[0] and places[0] not in 省:
 			continue
 		地點 = ("".join(places)).replace("/", "")
-		行政區級別 = fs["行政區級別"]
+		行政區級別 = 列["行政區級別"]
 		if not 行政區級別:
-			行政區級別 = "省會,地級" if fs["省會"] == "☑" else ""
+			行政區級別 = "省會,地級" if 列["省會"] == "☑" else ""
 		if not 行政區級別:
 			n = 6 - places.count("")
 			if n == 1:
@@ -199,9 +200,10 @@ def load(省):
 			"錄入人":錄入人,
 			"維護人":維護人,
 			"推薦人":推薦人,
+			"是否有人在做":是否有人在做,
 			"來源": 來源,
 			"參考文獻":參考文獻,
-			"音系":音系,
+			"音系說明":音系說明,
 			"說明":說明,
 			"繁簡":繁簡,
 			"無調":無調,

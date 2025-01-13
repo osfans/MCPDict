@@ -419,44 +419,44 @@ public class ResultFragment extends Fragment {
             sb.append(String.format("nyushu, p0, p2, p3, pua, %s; }\n", FontUtil.getDefaultFont()));
         } else {
             sb.append(FontUtil.useFontTone() ? "tone," : "ipa,");
-            sb.append(String.format("%s, nyushu, p0, p2, p3, pua; }\n", FontUtil.getDefaultFont()));
+            sb.append(String.format("%s, nyushu, p2, p3, pua; }\n", FontUtil.getDefaultFont()));
         }
         sb.append("""
-                              .ipa {
-                                 padding: 0 5px;
-                              }
-                              .desc {
-                                 font-size: 0.6em;
-                              }
-                              .hz {
-                                 font-size: 1.8em;
-                                 color: #9D261D;
-                              }
-                              .variant {
-                                 color: #808080;
-                              }
-                              .ivs {
-                                font-size: 1.8em;
-                                font-family: nyushu, p0, p2, p3, pua;
-                              }
-                              .y {
-                                 color: #1E90FF;
-                                 margin: 0 5px;
-                              }
-                              p {
-                                 margin: 0.2em 0;
-                              }
-                              td {
-                                 vertical-align: top;
-                                 align: left;
-                              }
-                              ul {
-                                 margin: 1px;
-                                 padding: 0px 6px;
-                              }
-                              rt {font-size: 0.9em; background-color: #F0FFF0;}
-                          </style></head><body>
-                        """);
+                .ipa {
+                    padding: 0 5px;
+                }
+                .desc {
+                    font-size: 0.6em;
+                }
+                .hz {
+                    font-size: 1.8em;
+                    color: #9D261D;
+                }
+                .variant {
+                    color: #808080;
+                }
+                .ivs {
+                font-size: 1.8em;
+                font-family: nyushu, p0, p2, p3, pua;
+                }
+                .y {
+                    color: #1E90FF;
+                    margin: 0 5px;
+                }
+                p {
+                    margin: 0.2em 0;
+                }
+                td {
+                    vertical-align: top;
+                    align: left;
+                }
+                ul {
+                    margin: 1px;
+                    padding: 0px 6px;
+                }
+                rt {font-size: 0.9em; background-color: #F0FFF0;}
+            </style></head><body>
+        """);
         if (TextUtils.isEmpty(query)) {
             sb.append(DB.getIntro());
         } else if (cursor == null || cursor.getCount() == 0) {
@@ -571,7 +571,7 @@ public class ResultFragment extends Fragment {
             }
             sb.append(ssb);
         }
-        mWebView.loadDataWithBaseURL(null, sb.toString(), "text/html", "utf-8", null);
+        mWebView.loadDataWithBaseURL(null, sb.toString(), "text/html; charset=utf-8", "utf-8", null);
     }
 
     private CharSequence setTextData(String query, Cursor cursor) {

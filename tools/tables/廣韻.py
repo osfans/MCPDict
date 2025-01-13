@@ -3,22 +3,18 @@
 from tables._表 import 表 as _表
 
 class 表(_表):
-	site = '韻典網（廣韻）'
-	url = 'http://ytenx.org/zim?kyonh=1&dzih=%s'
-	isYb = False
+	網站 = '韻典網（廣韻）'
+	網址 = 'http://ytenx.org/zim?kyonh=1&dzih=%s'
+	爲音 = False
 
-	def parse(self, fs):
-		if fs[0] not in ('1919', '3177'):
-			fs[7] += '切'
-		hz = fs[1]
-		yb = '/'.join(fs[8:-1] + fs[2:8])
-		js = fs[-1]
-		return hz, yb, js
-
-	@property
-	def sydCount(self):
-		return len(set(map(lambda x:x.split("/")[0], self.syds.keys())))
+	def 析(自, 列):
+		if 列[0] not in ('1919', '3177'):
+			列[7] += '切'
+		字 = 列[1]
+		音 = '/'.join(列[8:-1] + 列[2:8])
+		註 = 列[-1]
+		return 字, 音, 註
 
 	@property
-	def syCount(self):
-		return len(set(map(lambda x:x.split("/")[0].rstrip("qh"), self.syds.keys())))
+	def 聲韻數(自):
+		return len(set(map(lambda x:x.rstrip("qh"), 自.音典.keys())))

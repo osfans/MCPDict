@@ -7,24 +7,24 @@ class 表(_表):
 	broaddict = dict()
 	ybdict = dict()
 
-	def initBroadDict(self):
-		for line in open(self.fullname("苏州（记音替换版）1.1.tsv"), encoding="U8"):
-			fs = line.split("\t")
-			if len(fs) < 6: continue
-			order, hz, sm, ym, sd, js = fs[:6]
-			self.broaddict[order + hz] = sm + ym + sd
+	def initBroadDict(自):
+		for 行 in open(自.全路徑("苏州（记音替换版）1.1.tsv"), encoding="U8"):
+			列 = 行.split("\t")
+			if len(列) < 6: continue
+			order, 字, sm, ym, sd, js = 列[:6]
+			自.broaddict[order + 字] = sm + ym + sd
 
-	def __init__(self):
+	def __init__(自):
 		super().__init__()
-		self.initBroadDict()
+		自.initBroadDict()
 
-	def parse(self, fs):
-		order, hz, sm, ym, sd, js = fs[:6]
+	def 析(自, 列):
+		order, 字, sm, ym, sd, js = 列[:6]
 		yb = sm + ym + sd
 		yb = yb.lstrip("*")
-		broad = self.broaddict.get(order+hz, self.ybdict.get(yb, ""))
+		broad = 自.broaddict.get(order+字, 自.ybdict.get(yb, ""))
 		if broad and broad != yb:
-			self.ybdict[yb] = broad
+			自.ybdict[yb] = broad
 			yb = yb + "/" + broad
-		return hz, yb, js
+		return 字, yb, js
 
