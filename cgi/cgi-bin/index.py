@@ -43,7 +43,7 @@ options_tone = "\n".join(["<option value=%s>%s</option>"%(i, j) for i,j in enume
 tvs = getStrings("pref_entries_tone_value_display")
 options_tv = "\n".join(["<option value=%s>%s</option>"%(i, j) for i,j in enumerate(tvs)])
 
-print(getStringFromFile("template.html",APP,APP,
+print(getStringFromFile("template.htm",APP,APP,
 options_types,
 getString("search_hint"),hzs,getString("clear"),"查詢",
 options_search,options_dict,options_filters,getString("hz_option"),
@@ -87,7 +87,7 @@ output = ""
 for r in getSqls(value, word):
 	hz = r[HZ]
 	output += "<p><div class=hz>%s</div>"%(hz)
-	if variant:
+	if variant and r[VA]:
 		va = getVariant(hzs, r[VA])
 		if va: output += "<div class=variant>（%s）</div>"%(va)
 	output += "<div class=y>U+%04X</div>" % (ord(hz))

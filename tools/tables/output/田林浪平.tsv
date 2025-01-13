@@ -16,12 +16,13 @@
 丕	pʰi1	
 世	ʃɿ5	
 丘	tʃʰiɐu1	
+丙	pin3	
 業	ȵiɛ2	
 叢	tsʰuŋ2	
 東	tuŋ1	
 絲	sɿ1	
 丞	tʃʰən2	
-丟	tiɐu1	
+丢	tiɐu1	
 兩	liaŋ3	
 喪	saŋ5	
 个	kɔ5	
@@ -56,7 +57,7 @@
 亂	luan5	
 乳	ʒu3	
 乾	tʃʰiɛn2	
-了	liau2	～结
+了	liau2	~结
 爭	tʃən1	
 事	sɿ5	
 二	ɔ5	
@@ -81,8 +82,8 @@
 親	tsʰin1	
 人	ʒən2	
 億	i5	
-什	ʃɿ2	～物
 什	ʃən2	
+什	ʃɿ2	~物
 仁	ʒən2	
 僅	tʃin5	
 仆	pʰu2	
@@ -207,7 +208,6 @@
 儒	ʒu2	
 儡	luəi3	
 允	in3	
-元	u2	
 元	yɛn2	
 兄	ʃiuŋ1	
 充	tsʰuŋ1	
@@ -239,7 +239,6 @@
 兼	tʃiɛn1	
 獸	sɐu5	
 冀	i5	
-內	pin3	
 內	luəi5	
 岡	kaŋ1	
 冉	ʒan3	
@@ -250,21 +249,21 @@
 寫	sɛ3	
 軍	tʃyn1	
 農	luŋ2	
-冠	kuan1	衣～
-冠	kuan5	～军
+冠	kuan5	~军
+冠	kuan1	衣~
 冢	tsuŋ3	
 冤	yɛn1	
 冬	tuŋ1	
 馮	fuŋ2	
 冰	pin1	
 冲	tsʰuŋ1	
-决	tʃʰyɛ2	
-况	kʰuaŋ5	
+決	tʃʰyɛ2	
+況	kʰuaŋ5	
 冷	lən3	
 凍	tuŋ5	
 淨	tsin5	
 準	tʃyn3	正
-凉	liaŋ2	
+涼	liaŋ2	
 凌	lin2	
 減	kan3	
 湊	tsʰɐu5	
@@ -343,13 +342,13 @@
 勃	pɔ2	
 勇	iuŋ3	
 勉	mɛn3	
-勋	ʃyn1	
+勳	ʃyn1	
 勒	lɛ2	
 勘	kʰan1	
 募	mu5	
 勺	tʃɔ2	
 勾	kɐu1	
-勾	kɐu5	～当
+勾	kɐu5	~当
 勿	vu2	
 勻	yn2	
 包	pau1	
@@ -375,7 +374,7 @@
 卑	pei1	
 卒	tsɐu2	
 卓	tʃɔ2	
-單	tan1	～子
+單	tan1	~子
 賣	mai5	
 南	lan2	
 博	pɔ2	
@@ -422,7 +421,7 @@
 取	tsʰi3	
 受	sɐu5	
 變	pɛn5	
-敘	syi5	
+敍	syi5	
 叛	pʰan5	
 叟	sɐu3	
 疊	tɛ2	
@@ -639,6 +638,7 @@
 够	kɐu5	
 大	ta5	
 天	tʰɛn1	
+天	mɛ2	
 太	tʰai5	
 夫	fu1	
 央	iaŋ1	
@@ -666,8 +666,8 @@
 奴	lɐu2	
 奶	lai3	
 奸	tʃiɛn1	
-好	hau3	～坏
-好	hau5	喜～
+好	hau3	~坏
+好	hau5	喜~
 妃	fei1	
 妄	vaŋ2	
 婦	fu5	
@@ -779,11 +779,11 @@
 壽	sɐu5	
 封	fuŋ1	
 射	sɛ5	
-將	tsiaŋ1	～来
-將	tsiaŋ5	大～
+將	tsiaŋ1	~来
+將	tsiaŋ5	大~
 小	siau3	
-少	ʃau3	多～
-少	ʃau5	～年
+少	ʃau5	~年
+少	ʃau3	多~
 尔	ɔ3	
 尖	tsiɛn1	
 尘	tʃʰən2	
@@ -880,7 +880,7 @@
 干	kan1	
 平	pʰin2	
 并	pin5	
-并	pʰin5	合～
+并	pʰin5	合~
 幸	tʃʰin5	
 幹	kan5	
 幺	iau1	
@@ -931,8 +931,8 @@
 弦	ʃiɛn2	
 彎	uan1	
 弱	ʒɔ2	
-彈	tʰan2	～琴
 彈	tan5	
+彈	tʰan2	~琴
 强	tʃʰiaŋ2	
 弼	pi2	
 歸	kuəi1	
@@ -1049,7 +1049,7 @@
 慨	kʰai5	
 慰	vei5	
 慷	kʰaŋ3	
-憋	ʒu2	
+慾	ʒu2	
 憋	pi5	
 憎	tsən1	
 憠	tʃyɛ2	
@@ -1125,8 +1125,8 @@
 抽	tsʰɐu1	
 抿	min3	
 拄	tʃu3	
-擔	tan1	～任
-擔	tan5	挑～
+擔	tan1	~任
+擔	tan5	挑~
 拆	tʃʰɛ2	
 拇	mu3	
 拉	la1	
@@ -1274,9 +1274,8 @@
 散	san5	
 敦	tən1	
 敬	tʃin5	
-數	sɐu3	动词
-數	uəi5	
 數	sɐu5	
+數	sɐu3	动词
 敲	kʰau1	
 整	tʃən3	
 敷	fu1	
@@ -1303,6 +1302,7 @@
 旋	sɛn2	
 族	tsʰɐu2	
 旗	tʃʰi2	
+無	u2	
 既	tʃi5	
 日	ʒɿ2	
 旦	tan5	
@@ -1440,7 +1440,7 @@
 棟	tuŋ5	
 欄	lan2	
 栗	li2	
-校	ʃiau5	学～
+校	ʃiau5	学~
 株	tʃu1	
 樣	iaŋ5	
 核	hɛ2	
@@ -1717,7 +1717,7 @@
 滴	ti2	
 滷	lɐu2	
 漂	pʰiau1	
-漂	pʰiau5	～亮
+漂	pʰiau5	~亮
 漆	tsʰi2	
 漏	lɐu5	
 演	iɛn3	
@@ -1735,7 +1735,6 @@
 瀑	pau5	
 灌	kuan5	
 火	hɔ3	
-滅	mɛ2	
 燈	tən1	
 靈	lin2	
 竈	tsau5	
@@ -1784,7 +1783,7 @@
 熬	ŋau2	
 燃	ʒan2	
 燎	liau2	
-燒	lin2	
+燐	lin2	
 燕	iɛn5	
 爆	pau5	
 爪	tsau3	
@@ -1965,8 +1964,8 @@
 目	mu2	
 盲	maŋ2	
 直	tʃɿ2	
-相	siaŋ1	互～
-相	siaŋ5	～貌
+相	siaŋ5	~貌
+相	siaŋ1	互~
 盼	pʰan5	
 盾	tən5	
 省	sən3	
@@ -2051,8 +2050,8 @@
 禿	tʰɐu2	
 秉	pin3	
 秋	tsʰiɐu1	
-種	tsuŋ3	～类
-種	tsuŋ5	～树
+種	tsuŋ3	~类
+種	tsuŋ5	~树
 科	kʰɔ1	
 秒	miau3	
 秕	pi5	
@@ -2089,7 +2088,7 @@
 穿	tʃʰuan1	
 突	tʰu2	
 竅	tsʰiau5	
-窑	iau2	
+窯	iau2	
 窖	tsiau5	
 窗	tʃʰaŋ1	
 窘	tʃuŋ5	
@@ -2179,14 +2178,14 @@
 素	su5	
 索	sɔ2	
 緊	tʃin3	
-紫	tʃa2	
 紫	tsɿ3	
+紮	tʃa2	
 累	luəi5	
 絮	syi5	
 繁	fan2	
 纂	tsuan5	
-糾	tʃiɐu1	～缠
-糾	tʃiɐu3	～正
+糾	tʃiɐu1	~缠
+糾	tʃiɐu3	~正
 紅	huŋ2	
 紂	tsɐu5	
 約	iɔ2	
@@ -2213,7 +2212,7 @@
 絆	pʰan5	
 紹	ʃau5	
 經	tʃin1	
-經	tʃin5	～纬
+經	tʃin5	~纬
 綁	paŋ3	
 絨	iuŋ2	
 結	tʃiɛ2	
@@ -2558,6 +2557,7 @@
 蜻	tsʰin1	
 蠅	in1	
 蟬	tʃʰan2	
+蝗	faŋ2	
 蝙	pʰɛn1	
 蝟	vei5	
 蝠	fu2	
@@ -2569,7 +2569,6 @@
 螳	tʰaŋ2	
 螺	lɔ2	
 蟀	ʃɔ2	
-蟀	faŋ2	
 蟆	mɔ2	
 蟒	maŋ3	
 蟢	ʃi3	
@@ -2622,7 +2621,7 @@
 覆	fu2	
 見	tʃɛn5	
 觀	kuan1	
-觀	kuan5	寺～
+觀	kuan5	寺~
 視	ʃɿ5	
 覽	lan3	
 覺	tʃiɔ2	
@@ -2687,8 +2686,8 @@
 讀	tɐu2	
 課	kʰɔ5	
 誰	suəi2	
-調	tʰiau2	～和
-調	tiau5	～动
+調	tʰiau2	~和
+調	tiau5	~动
 諒	liaŋ5	
 談	tʰan2	
 誼	ȵi2	
@@ -2795,7 +2794,7 @@
 蹤	tsuŋ1	
 踱	tɐu5	
 蹄	tʰi2	
-蹑	ȵiɛ2	
+躡	ȵiɛ2	
 蹭	tsʰən5	
 躁	tsʰau5	
 身	ʃən1	
@@ -2835,8 +2834,8 @@
 辱	ʒu2	
 邊	pɛn1	
 遼	liau2	
-达	ta2	
-迁	tsʰɛn1	
+達	ta2	
+遷	tsʰɛn1	
 迂	yi5	
 迅	sin5	
 過	kɔ5	
@@ -2888,7 +2887,7 @@
 遮	tʃɛ1	
 避	pi5	
 邀	iau1	
-邓	tən5	
+鄧	tən5	
 那	la5	
 邦	paŋ1	
 邪	sɛ2	
@@ -2902,6 +2901,7 @@
 郝	hau5	
 郡	tʃyn5	
 部	pu5	
+郭	kɔ2	
 都	tɐu1	
 鄂	ŋɔ2	
 鄙	pi3	
@@ -2925,8 +2925,8 @@
 釉	iɐu5	
 釋	si2	
 里	li3	
-重	tsʰuŋ2	～复
 重	tsuŋ5	
+重	tsʰuŋ2	~复
 野	iɛ3	
 量	liaŋ5	
 金	tʃin1	
@@ -2935,9 +2935,9 @@
 銘	min2	
 鋦	tʃyi5	
 錶	piau3	
-针	tʃən1	
-釘	tin1	～子
-釘	tin5	～住
+針	tʃən1	
+釘	tin1	~子
+釘	tin5	~住
 釣	tiau5	
 釵	tsʰai1	
 鈍	tən5	
@@ -2961,11 +2961,11 @@
 銅	tʰuŋ2	
 鏵	fa2	
 鉸	tsiau3	
-铲	tʃʰuan3	
+鏟	tʃʰuan3	
 銃	tsʰuŋ3	
 銀	in2	
 鋪	pʰu1	
-链	lɛn5	
+鏈	lɛn5	
 銷	siau1	
 鎖	sɔ3	
 鋤	tsʰɐu2	
@@ -2995,7 +2995,7 @@
 鏡	tʃin5	
 鐙	tən5	
 鐲	tsɐu2	
-镰	lɛn2	
+鐮	lɛn2	
 鑲	siaŋ1	
 長	tʃʰaŋ2	
 長	tʃaŋ3	
@@ -3036,8 +3036,8 @@
 陳	tʃʰən2	
 陋	lɐu5	
 陌	mɔ2	
-降	ʃiaŋ2	投～
 降	tʃiaŋ5	
+降	ʃiaŋ2	投~
 限	han5	
 陝	ʃan3	
 陛	pi5	
@@ -3057,7 +3057,7 @@
 隧	suəi5	
 隶	ti5	
 難	lan2	
-難	lan5	患～
+難	lan5	患~
 雀	tʃʰɔ2	
 雁	iɛn5	
 雄	ʃuŋ2	
@@ -3112,7 +3112,7 @@
 頌	suŋ5	
 領	lin3	
 頗	pʰɔ1	
-頸	tʃin3	～正
+頸	tʃin3	~正
 頻	pʰin2	
 穎	yn3	
 顆	kʰɔ3	
@@ -3163,7 +3163,7 @@
 駒	tʃyi1	
 駝	tʰɔ2	
 駕	tsia5	
-罵	ma5	
+駡	ma5	
 驕	tʃiau1	
 駱	lɔ2	
 駭	hɛ2	
@@ -3181,6 +3181,7 @@
 鬼	kuəi3	
 魁	kʰuəi2	
 魄	pʰɛ2	
+魏	uəi5	
 魔	mɔ1	
 鱖	kuəi5	
 魚	yi2	
@@ -3193,7 +3194,6 @@
 鰭	tʃʰi2	
 鰾	piau1	
 鱗	lin2	
-鶉	kɔ2	
 鳥	ȵiau3	
 鳩	tʃiɐu1	
 雞	tʃi1	

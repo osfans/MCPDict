@@ -7,20 +7,20 @@ class 表(_表):
 	sms = None
 	ym = None
 
-	def format(self, line):
-		return line.lstrip("#")
+	def 統(自, 行):
+		return 行.lstrip("#")
 
-	def parse(self, fs):
-		if not self.sms:
-			self.sms = fs
+	def 析(自, 列):
+		if not 自.sms:
+			自.sms = 列
 			return
-		if fs[0]:
-			self.ym = fs[0]
-		sd = fs[1]
+		if 列[0]:
+			自.ym = 列[0]
+		sd = 列[1]
 		l = list()
-		for i,sm in enumerate(self.sms):
+		for i,sm in enumerate(自.sms):
 			if not sm: continue
-			yb = sm + self.ym + sd
-			for hz in fs[i]:
-				l.append((hz, yb))
+			yb = sm + 自.ym + sd
+			for 字 in 列[i]:
+				l.append((字, yb))
 		return l

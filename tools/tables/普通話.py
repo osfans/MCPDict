@@ -3,20 +3,20 @@
 from tables._表 import 表 as _表
 
 class 表(_表):
-	site = "字海"
-	url = "http://yedict.com/zscontent.asp?uni=%2$s"
-	isYb = False
+	網站 = "字海"
+	網址 = "http://yedict.com/zscontent.asp?uni=%2$s"
+	爲音 = False
 
-	def parse(self, fs):
-		if fs[0].startswith("#"): return
+	def 析(自, 列):
+		if 列[0].startswith("#"): return
 		l = list()
-		hzs,py = fs[:2]
-		for hz in hzs:
+		字組,py = 列[:2]
+		for 字 in 字組:
 			for yb in py.split(","):
 				js = ""
 				if "{" in yb:
 					yb, js = yb.split("{")
 					js = js[:-1]
-				l.append((hz, yb, js))
+				l.append((字, yb, js))
 		return l
 
