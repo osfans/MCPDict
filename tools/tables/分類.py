@@ -4,8 +4,7 @@ from tables._表 import 表 as _表
 from tables import hex2chr, hzorders
 
 class 表(_表):
-	說明 = "方言調查字表"
-	文件名 = "方言調查字表"
+	文件名 = "方言調查字表.tsv"
 
 	def 析(自, 列):
 		return 列[0], "FD"
