@@ -87,7 +87,7 @@ class 表(_表):
 			行 = re.sub(r"连读.*$", "", 行)
 		elif 名 in ("潼關太要",):
 			if 行.startswith("["): 行 = ""
-		elif 名 in ("昆明","建水臨安",):
+		elif 名 in ("昆明","建水",):
 			if 行.startswith("\t\t"): 行 = ""
 			行 = re.sub(r"^.*?\t", "", 行)
 			行 = 行.replace("(", "{").replace("〔", "{").replace(")", "}")

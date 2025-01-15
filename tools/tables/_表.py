@@ -9,6 +9,7 @@ import inspect
 from openpyxl import load_workbook
 from xlrd import open_workbook
 from docx import Document
+from docx.shared import Pt
 from docx.enum.text import WD_UNDERLINE
 import regex
 
@@ -63,7 +64,7 @@ def processXlsxFs(v):
 			tag = "="
 		if tag:
 			text = "".join([j + tag for j in text])
-		if i.font.vertAlign == "subscript":
+		if i.font.vertAlign == "subscript" or (i.font.size and i.font.size < 10.0):
 			text = f"({text})"
 		cells.append(text)
 	return "".join(cells).replace(")(", "").strip()
@@ -116,7 +117,7 @@ def run2text(run):
 	text = run.text
 	if tag:
 		text = "".join([i + tag for i in text])
-	if run.font.subscript or (run.font.size and run.font.size < 115000):
+	if run.font.subscript or (run.font.size and run.font.size < Pt(9)):
 		if text.startswith("{") and text.endswith("}"):
 			pass
 		elif text.startswith("[") and text.endswith("]"):
@@ -212,8 +213,11 @@ class 表:
 		if not 自.簡稱: 自.簡稱 = str(自)
 		if not sname: sname = f"{自.簡稱}.tsv"
 		g = 自.find(sname)
-		if not g or len(g) != 1:
-			logging.error(f"\t\t\t{sname}查找結果：{g}")
+		if not g:
+			logging.error(f"\t\t未找到 {sname}")
+			return
+		if len(g) != 1:
+			logging.error(f"\t\t找到多个 {sname}：{g}")
 			return
 		sname = g[0]
 		自.文件名 = os.path.basename(sname)
