@@ -292,7 +292,7 @@ class 表:
 			if not 音.startswith("h") and "h" in 音:
 				音 = 音.replace("h", "ʰ")
 			音 = 音.replace(" ", "")
-			音 = 音.replace("[", "").replace("]", "")
+			音 = 音.replace("[", "").replace("]", "").replace("{", "").replace("}", "")
 			音 = re.sub(r"^([mnvʋɹl])(\d+)$", "\\1\u0329\\2", 音)
 			音 = re.sub(r"^([ŋȵʐɱɻʒ])(\d+)$", "\\1\u030D\\2", 音)
 			if 自.info["無調"]:
