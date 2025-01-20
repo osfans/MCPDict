@@ -92,34 +92,37 @@
 糍		ts	i	55	tsi55			
 紫		ts	i	42	tsi42			
 只	衹	ts	i	42	tsi42			
-姊		ts	i	42	tsi42			
-旨		ts	i	42	tsi42			
-止		ts	i	42	tsi42			
-趾		ts	i	42	tsi42			
-址		ts	i	42	tsi42			
-籽		ts	i	42	tsi42		种子	
-子		ts	i	42	tsi42		铳~：子弹	
-舐		ts	i	35	tsi35			
-巳		ts	i	35	tsi35			
-祭		ts	i	213	tsi213			
-际		ts	i	213	tsi213			
-制		ts	i	213	tsi213			
-济		ts	i	213	tsi213			
-剂		ts	i	213	tsi213			
-至		ts	i	213	tsi213			
-志		ts	i	213	tsi213			
-接		ts	iʔ	2	tsiʔ2	白读	~过来	
-折		ts	iʔ	2	tsiʔ2		叠	
-折		ts	iʔ	5	tsiʔ5		断	
-舌		ts	iʔ	5	tsiʔ5			
-妻		tsʰ	i	33	tsʰi33			
-栖		tsʰ	i	33	tsʰi33			
-痴		tsʰ	i	33	tsʰi33			
-鳃		tsʰ	i	33	tsʰi33		鱼~	
-齐		tsʰ	i	55	tsʰi55	文读	~全	
-驰		tsʰ	i	55	tsʰi55			
-迟		tsʰ	i	55	tsʰi55			
-侈		tsʰ	i	42	tsʰi42			
+姊	姊	ts	i	42	tsi42			
+旨	旨	ts	i	42	tsi42			
+止	止	ts	i	42	tsi42			
+趾	趾	ts	i	42	tsi42			
+址	址	ts	i	42	tsi42			
+籽	籽	ts	i	42	tsi42		种子	
+子	子	ts	i	42	tsi42		铳~：子弹	
+咫	咫	ts	i	42	tsi42			
+舐	舐	ts	i	35	tsi35			
+巳	巳	ts	i	35	tsi35			
+祭	祭	ts	i	213	tsi213			
+际	際	ts	i	213	tsi213			
+制	製	ts	i	213	tsi213			
+制	制	ts	i	213	tsi213			
+济	濟	ts	i	213	tsi213			
+剂	劑	ts	i	213	tsi213			
+至	至	ts	i	213	tsi213			
+志	志	ts	i	213	tsi213			
+志	誌	ts	i	213	tsi213			
+接	接	ts	iʔ	2	tsiʔ2	白读	~过来	
+折	摺	ts	iʔ	2	tsiʔ2		叠	
+折	折	ts	iʔ	5	tsiʔ5		断	
+舌	舌	ts	iʔ	5	tsiʔ5			
+妻	妻	tsʰ	i	33	tsʰi33			
+栖	棲	tsʰ	i	33	tsʰi33			
+痴	癡	tsʰ	i	33	tsʰi33			
+鳃	鰓	tsʰ	i	33	tsʰi33		鱼~	
+齐	齊	tsʰ	i	55	tsʰi55	文读	~全	
+驰	馳	tsʰ	i	55	tsʰi55			
+迟	遲	tsʰ	i	55	tsʰi55			
+侈	侈	tsʰ	i	42	tsʰi42			
 耻	恥	tsʰ	i	42	tsʰi42			
 市	市	tsʰ	i	35	tsʰi35			
 刺	刺	tsʰ	i	213	tsʰi213		名词	
@@ -827,7 +830,7 @@
 作		ts	oʔ	2	tsoʔ2	白读	~工	
 绝		ts	oʔ	5	tsoʔ5			
 初		tsʰ	o	33	tsʰo33	文读	当~	
-臊		tsʰ	o	33	tsʰo33		腥臭	
+臊		tsʰ	o	33	tsʰo33	白读	腥臭	
 锄		tsʰ	o	55	tsʰo55	文读	~禾	
 楚		tsʰ	o	42	tsʰo42			
 础		tsʰ	o	42	tsʰo42			
@@ -1109,9 +1112,10 @@
 隘		Ø	ai	42	ai42			
 乖		k	uai	33	kuai33			
 拐		k	uai	42	kuai42			
-会		k	uai	213	kuai213			
-桧		k	uai	213	kuai213			
+会		k	uai	213	kuai213		~计	
+荟	薈	k	uai	213	kuai213			
 怪		k	uai	213	kuai213			
+桧		k	uai	213	kuai213			
 快		kʰ	uai	213	kʰuai213			
 筷		kʰ	uai	213	kʰuai213			
 怀		h	uai	55	huai55			
@@ -1630,6 +1634,7 @@
 轨		kʰ	ui	42	kʰui42			
 愧		kʰ	ui	35	kʰui35			
 季		kʰ	ui	213	kʰui213			
+气		kʰ	ui	213	kʰui213	白读	敨~：透气、呼吸	
 魏		g	ui	22	gui22			
 非		h	ui	33	hui33			
 飞		h	ui	33	hui33	文读	高~	
@@ -1701,7 +1706,7 @@
 箭		ts	ĩ	213	tsĩ213			
 鲜		tsʰ	ĩ	33	tsʰĩ33		新~	
 扇		s	ĩ	213	sĩ213			
-沿		k	ĩ	33	kĩ33		边，边缘（俗写墘）	
+沿		k	ĩ	33	kĩ33	替字	边，边缘（俗写墘）	
 舷		k	ĩ	33	kĩ33		墘的本字	
 见		k	ĩ	213	kĩ213	白读	~面	
 捦		kʰ	ĩ	55	kʰĩ55		蚊虫萦绕	
@@ -1999,7 +2004,7 @@
 爿	爿	p	ãĩ	55	pãĩ55		口~：外边	
 板		p	ãĩ	42	pãĩ42	白读	黑~	
 版		p	ãĩ	42	pãĩ42	白读	第三~	
-反		p	ãĩ	42	pãĩ42	白读	~过来	
+反		p	ãĩ	42	pãĩ42	白读	翻面	
 办		p	ãĩ	22	pãĩ22			
 埋		m	ãĩ	55	mãĩ55			
 迈		m	ãĩ	35	mãĩ35			
@@ -2022,8 +2027,8 @@
 彩		tsʰ	ãĩ	42	tsʰãĩ42		~色	
 采		tsʰ	ãĩ	42	tsʰãĩ42			
 睬		tsʰ	ãĩ	42	tsʰãĩ42			
-筅		tsʰ	ãĩ	42	tsʰãĩ42		刷	
-先		s	ãĩ	33	sãĩ33			
+筅		tsʰ	ãĩ	42	tsʰãĩ42	白读	刷	
+先		s	ãĩ	33	sãĩ33	白读	~慢：早晚	
 间		k	ãĩ	33	kãĩ33	白读	量词，如两~房	
 肩		k	ãĩ	33	kãĩ33			
 拣		k	ãĩ	42	kãĩ42			
@@ -3042,8 +3047,9 @@
 听		tʰ	eŋ	213	tʰeŋ213	文读	看情况，试着；危言耸~	
 秃		tʰ	ek	2	tʰek2			
 能		n	eŋ	55	neŋ55	文读		
-匿		n	ek	5	nek5			
 肉		n	ek	5	nek5			
+匿		n	ek	5	nek5			
+昵	暱	n	ek	5	nek5			
 铃		l	eŋ	33	leŋ33			
 邻		l	eŋ	55	leŋ55			
 鳞		l	eŋ	55	leŋ55			
@@ -3084,7 +3090,7 @@
 钟		ts	eŋ	33	tseŋ33			
 盅		ts	eŋ	33	tseŋ33			
 舂		ts	eŋ	33	tseŋ33			
-曾		ts	eŋ	55	tseŋ55			
+曾		ts	eŋ	55	tseŋ55		~经	
 振		ts	eŋ	42	tseŋ42			
 震		ts	eŋ	42	tseŋ42			
 拯		ts	eŋ	42	tseŋ42			
@@ -3134,6 +3140,7 @@
 新		s	eŋ	33	seŋ33			
 身		s	eŋ	33	seŋ33			
 申		s	eŋ	33	seŋ33			
+先		s	eŋ	33	seŋ33		~生	
 伸		s	eŋ	33	seŋ33	文读	~冤	
 升		s	eŋ	33	seŋ33			
 甥		s	eŋ	33	seŋ33			
