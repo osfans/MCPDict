@@ -118,7 +118,7 @@ public class DB extends SQLiteAssetHelper {
 
     public static void initialize(Context context) {
         if (db != null) return;
-        db = new DB(context).getWritableDatabase();
+        db = new DB(context).getReadableDatabase();
         String userDbPath = UserDB.getDatabasePath();
         db.execSQL("ATTACH DATABASE '" + userDbPath + "' AS user");
         initArrays();
