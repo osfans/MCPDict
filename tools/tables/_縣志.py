@@ -76,11 +76,19 @@ class 表(_表):
 			while (newline := re.sub(r"(?<=‖)([^\[\]]*[^‖]){", "\\1‖{", 行)) != 行:
 				行 = newline
 			行 = re.sub("‖{", "{(連讀音)", 行).replace("‖", "")
-		elif 名 in ("福鼎白琳","泰順莒江"):
+		elif 名 in ("泰順莒江",):
 			行 = re.sub(r"(‖)(\[\d+\])", "\\2\\1",行)
 			while (newline := re.sub(r"(?<=‖)([^\[\]]*[^‖]){", "\\1‖{", 行)) != 行:
 				行 = newline
 			行 = re.sub("‖{", "{(連讀音)", 行).replace("‖", "")
+		elif 名 in ("福鼎白琳","福淸"):
+			行 = re.sub(r"([\|‖])(\[\d+\])", "\\2\\1",行)
+			while (newline := re.sub(r"(?<=‖)([^\[\]]*[^‖]){", "\\1‖{", 行)) != 行:
+				行 = newline
+			while (newline := re.sub(r"(?<=\|)([^\[\]]*[^\|]){", "\\1|{", 行)) != 行:
+				行 = newline
+			行 = re.sub(r"\|{", "{(連讀音Ⅰ)", 行).replace("|", "")
+			行 = re.sub("‖{", "{(連讀音Ⅱ)", 行).replace("‖", "")
 		elif 名 in ("建德"):
 			行 = re.sub(r"\t2\d.*$", "", 行)
 		elif 名 in ("屯溪船上話"):

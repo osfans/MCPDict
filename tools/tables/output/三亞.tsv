@@ -46,6 +46,7 @@
 □	ᵐbi6	哨子
 □	kaŋ5	噪音~耳
 □	hat8	困累
+□	kua4	孕
 □	at7	容器滿了仍往裏塞
 □	niau6	小
 □	siu5	屋
@@ -78,8 +79,10 @@
 □	pʰe6	紙牌
 □	me6	背，~囝
 □	pʰoŋ6	膨脹出
+□	ɗe5	處
 □	koi2	蝦~
 □	ɗoŋ1	褲~
+□	ɗiaŋ4	誰
 □	pʰun1	豬~
 □	lat7	豬~
 □	nəŋ2	跟著
@@ -167,7 +170,6 @@
 什	ta2	通~
 仁	zin2	
 仁	zin3	
-仃	ɗiaŋ4	誰
 仃	niaŋ4	誰
 仇	siu2	
 今	kin1	
@@ -277,6 +279,7 @@
 傀	kui3	
 傑	kək7	
 傘	tua5	
+備	ɓi4	
 傢	ke1	
 催	sui1	
 傲	ŋau4	
@@ -361,6 +364,7 @@
 凍	ɗoŋ6	
 几	ki1	茶~
 凡	pʰan2	
+凱	kʰai3	
 凳	ɗəŋ5	
 凶	hioŋ1	
 出	sut7	
@@ -514,7 +518,6 @@
 右	ziu4	
 司	si1	
 吃	kʰai3	
-各	ɓi4	
 各	ko6	
 吆	iau1	
 合	kat7	~唱
@@ -557,7 +560,7 @@
 咨	tsi1	
 咪	mi1	
 咬	ka4	
-咱	nan3	我們
+咱	nan3	訓，我們
 咳	ka1	
 咸	han2	
 咽	in1	
@@ -568,7 +571,6 @@
 員	zuan2	
 哥	ko1	
 哥	ko6	
-哨	kʰin3	
 哩	le1	
 哪	na3	~吒
 哲	tsək7	
@@ -577,9 +579,10 @@
 唇	ɗun2	~紅齒白
 唐	tʰaŋ2	
 售	tiu4	
-唯	ui32	
+唯	ui2	
 唱	saŋ5	
 唾	tʰo5	
+啃	kʰin3	
 啄	ɗok7	
 商	tiaŋ1	
 問	mui1	
@@ -610,7 +613,6 @@
 嗓	saŋ3	
 嗣	si2	
 嗽	tau5	
-嘉	io6	
 嘔	ou3	
 嘗	tiaŋ2	
 嘥	sai4	浪費、可惜，本字“㩄”
@@ -640,7 +642,7 @@
 固	ku5	
 圈	kʰuan1	
 國	kok7	
-圍	ui32	
+圍	ui2	
 園	hui2	
 圓	i2	
 圓	zuan2	
@@ -725,7 +727,6 @@
 夏	hia6	姓
 夕	tsək7	
 外	ua1	
-多	hio1	
 多	toi1	訓
 夜	ze4	
 夠	kau5	
@@ -816,7 +817,7 @@
 孃	niaŋ2	
 子	tsi3	~彈
 孔	kʰoŋ3	
-孕	kua4	
+孕	kua4	訓
 字	tu1	訓“書”
 存	sun2	
 孝	hiau5	
@@ -967,7 +968,7 @@
 席	tia4	
 帳	ɗio5	
 帶	ɗua5	
-帷	ui32	
+帷	ui2	
 常	tiaŋ2	
 帽	mau5	
 幅	ɓak7	
@@ -992,6 +993,7 @@
 底	ɗoi3	
 店	ɗəŋ5	
 庚	kəŋ1	
+府	pʰu3	
 度	ɗou1	
 度	ɗu6	
 度	ɗu5	~過
@@ -1117,7 +1119,7 @@
 惋	uan3	
 惑	hok7	
 惜	se6	
-惟	ui32	
+惟	ui2	
 惠	hui6	
 惡	ok7	
 惰	ɗua4	
@@ -1243,7 +1245,7 @@
 拋	pʰau1	
 拋	pʰa1	~船，泊船
 拌	ɓuan4	
-拍	pʰai1	~手
+拍	pʰai1	~手板
 拍	pʰa6	~手板
 拐	kuai3	
 拒	ki6	
@@ -1416,7 +1418,6 @@
 斃	ɓi6	
 文	vun2	
 斌	ɓin1	
-斐	lui4	
 斑	ɓan1	
 料	liau1	
 料	liau4	
@@ -1456,7 +1457,6 @@
 昌	saŋ1	
 昌	siaŋ1	
 明	məŋ2	
-明	pʰoŋ2	
 昏	hun1	
 易	zi6	交~
 易	zək7	交~
@@ -1516,8 +1516,8 @@
 會	hui4	開~
 月	voi4	
 月	zuat7	
-有	pʰu3	
 有	u4	
+朋	pʰoŋ2	
 服	pʰok8	
 朔	tok7	
 朗	laŋ3	
@@ -1549,7 +1549,6 @@
 東	ɗoŋ1	
 杷	pʰa2	
 松	toŋ1	~樹
-板	pʰai1	
 板	ɓai3	
 枇	pʰi2	
 枉	uaŋ3	
@@ -1961,7 +1960,7 @@
 炰	ɓu2	~番薯
 炳	ɓəŋ3	
 炸	tsa5	
-爲	ui32	
+爲	ui2	
 烈	lək7	
 烏	ou1	
 烘	haŋ1	
@@ -2009,7 +2008,6 @@
 營	ia2	
 燥	sau5	
 燦	san6	
-爆	kəŋ1	
 爆	ɓau4	
 爐	lou2	
 爐	ɗu6	
@@ -2192,7 +2190,7 @@
 的	ɗək7	
 的	ɗək8	
 皆	kai1	
-皇	ui32	
+皇	ui2	
 皇	uaŋ2	
 皖	uan3	
 皮	pʰoi2	
@@ -2236,13 +2234,11 @@
 睇	tʰoi3	
 睛	tsəŋ1	
 睜	tsəŋ1	
-睡	tsi5	
 督	ɗok7	
 睬	sai3	
 瞄	miau2	
 瞞	mua2	
 瞻	tsəŋ1	
-瞻	pʰu3	
 矛	mau2	
 矢	ti3	
 知	tsi1	
@@ -2504,7 +2500,7 @@
 綜	toŋ1	
 綠	liak8	
 綢	ɗiu2	
-維	ui32	
+維	ui2	
 綱	kaŋ1	
 網	maŋ4	
 綴	tui4	
@@ -2520,7 +2516,7 @@
 編	ɓin1	
 緩	huan3	
 緬	min3	
-緯	ui32	
+緯	ui2	
 練	ləŋ4	
 縛	ɓak8	
 縣	kuai1	
@@ -2645,6 +2641,7 @@
 腎	tin5	
 腐	pʰu1	
 腐	pʰu3	
+腑	pʰu3	
 腔	kʰiaŋ1	
 腕	uan3	
 腡	le2	
@@ -2719,7 +2716,6 @@
 芭	ɓa1	
 芮	zui4	
 花	hoi1	
-芳	su1	
 芳	pʰaŋ1	
 芹	kʰin2	
 芽	ŋe2	
@@ -2742,8 +2738,8 @@
 荊	kəŋ1	
 荒	huaŋ1	
 荔	lai1	
-荷	o1	
 荷	ho2	
+荷	o1	薄~
 莊	ɗuaŋ1	
 莖	kəŋ6	
 莞	kuan3	東~
@@ -2752,6 +2748,7 @@
 菊	kiak7	
 菌	kʰun3	
 菜	sai5	
+菠	ɓo1	
 菩	pʰo2	
 華	hua1	
 華	hua2	
@@ -2769,7 +2766,7 @@
 著	ɗio4	~當，適當
 葛	kua6	
 董	ɗoŋ3	
-葦	ui32	
+葦	ui2	
 葩	pʰa1	一~花
 葫	hu2	
 葬	taŋ5	
@@ -2804,7 +2801,6 @@
 蕭	tiau1	
 蕹	aŋ5	
 蕾	lui3	
-薄	o1	
 薄	ɓo4	
 薅	hau1	
 薇	ᵐbui2	
@@ -2828,6 +2824,7 @@
 藻	sau6	
 藿	hak7	~香
 蘆	lu2	
+蘇	su1	
 蘊	un5	
 蘋	pʰəŋ2	
 蘖	ŋe6	
@@ -2836,9 +2833,9 @@
 蘿	lo2	
 虎	hou3	
 虐	niok8	
-處	ɗe5	
 處	si3	~理
 處	su6	~分
+處	ɗe5	訓
 虛	hi1	
 虜	lu3	
 虞	zi2	
@@ -2851,12 +2848,12 @@
 蚤	tau3	
 蚱	tsa5	
 蚶	han1	
+蛀	tu5	
 蛆	si1	
 蛇	tua2	
 蛋	ɗan6	
 蛔	hui2	
 蛙	ua1	
-蛙	tu5	
 蛛	tu1	
 蛤	kat7	
 蛻	tʰui5	
@@ -2944,6 +2941,7 @@
 襪	ᵐbat8	
 襲	tək7	
 西	tai1	
+要	io6	
 要	iau1	~求
 要	iau5	重~
 見	ki5	
@@ -2953,6 +2951,7 @@
 親	sin1	
 覺	kʰiok7	
 覺	kiak7	~察
+覽	lan3	
 觀	kuan1	
 角	kak7	
 解	koi3	
@@ -3229,7 +3228,7 @@
 道	ɗau4	
 道	ɗau6	
 達	ɗat7	
-違	ui32	
+違	ui2	
 遜	tun5	
 遞	ɗoi4	
 遠	zuan3	
@@ -3262,6 +3261,7 @@
 都	ɗu1	
 都	ɗou1	
 鄂	ŋaŋ7	
+鄉	hio1	
 鄒	tou1	
 鄖	zun2	
 鄙	ɓi3	
@@ -3422,6 +3422,7 @@
 隊	ɗui6	
 階	kai1	
 隔	ke6	
+際	tsi5	
 障	tsiaŋ6	
 隧	tui4	
 隧	tui6	
@@ -3514,12 +3515,12 @@
 顏	ŋan2	
 願	zuan4	
 顛	ɗəŋ1	
+類	lui4	
 顧	ku5	
 顯	hin3	
 顴	kʰəŋ2	
 風	huaŋ1	
 飄	pʰiau1	
-飄	kʰai3	
 飛	ɓoi1	
 食	tsia4	
 飢	ki1	
@@ -3563,6 +3564,7 @@
 驕	kiau1	
 驗	ŋəŋ4	
 驚	kia1	
+驚	kəŋ1	
 驟	tou5	
 驟	sou5	
 驢	lu2	
@@ -3630,11 +3632,10 @@
 麝	tia4	
 麥	ve4	
 麵	mi1	
-麻	ɓo1	
 麻	ma2	
 麻	mua2	
 麼	mo5	
-黃	ui32	
+黃	ui2	
 黃	huaŋ2	
 黎	loi2	
 黑	hək7	
@@ -3658,7 +3659,6 @@
 龍	liaŋ2	
 龍	loŋ2	
 龐	pʰaŋ2	
-龐	lan3	
 龜	ku1	
 龜	kui1	
 𬖔	tut8	~米
