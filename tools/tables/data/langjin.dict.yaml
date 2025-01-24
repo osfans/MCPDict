@@ -1,21 +1,6 @@
-# Rime dictionary
-# encoding: UTF-8 w/o BOM
-#
-# 南京官話拼音〔南京〕
-#
-# 來源：《南京官話審音大字典》
-# - 柳漫據音序檢字表錄入，並按OpenCC的用字習慣調整字頭
-#
-
----
-name: langjin
-version: "2025.01.01"
-sort: by_weight
-use_preset_vocabulary: true
-...
 啊	a1
 啊	a2
-啊	o1
+啊	o1	讀書音、文讀音
 阿	a5
 阿	o1
 錒	a5
@@ -43,7 +28,7 @@ use_preset_vocabulary: true
 媕	iän3
 媕	o5
 庵	ang1
-庵	o5
+庵	o5	讀書音、文讀音
 腤	ang1
 𦝡	ang1
 菴	ang1
@@ -148,9 +133,9 @@ use_preset_vocabulary: true
 儑	o5
 䫜	ao1
 㕭	ao1
-咬	ao1
+咬	ao1	讀書音、文讀音
 咬	iao3
-咬	jao1
+咬	jao1	讀書音、文讀音
 坳	ao1
 眑	ao1
 眑	iou3
@@ -166,8 +151,8 @@ use_preset_vocabulary: true
 䥝	ao1
 凹	ao1
 噢	ao1
-噢	ü3
-噢	ü5
+噢	ü3	讀書音、文讀音
+噢	ü5	讀書音、文讀音
 敖	ao2
 遨	ao2
 翺	ao2
@@ -253,7 +238,7 @@ use_preset_vocabulary: true
 奧	ao4
 𩟇	ao4
 澳	ao4
-澳	ü5
+澳	ü5	讀書音、文讀音
 墺	ao4
 墺	ü5
 隩	ao4
@@ -270,7 +255,7 @@ use_preset_vocabulary: true
 唉	ä3
 欸	ä1
 欸	ä3
-欸	xä4
+欸	xä4	讀書音、文讀音
 毐	ä1
 毐	ä3
 㶼	ä1
@@ -289,10 +274,10 @@ use_preset_vocabulary: true
 呆	ä2
 呆	dä1
 崖	iä2
-崖	i2
+崖	i2	讀書音、文讀音
 厓	iä2
 涯	iä2
-涯	i2
+涯	i2	讀書音、文讀音
 猚	iä2
 猚	luei3
 啀	iä2
@@ -317,7 +302,7 @@ use_preset_vocabulary: true
 馤	ä4
 壒	ä4
 靄	ä4
-靄	o5
+靄	o5	讀書音、文讀音
 曖	ä4
 𣋞	ä4
 𣩱	ä4
@@ -340,7 +325,7 @@ use_preset_vocabulary: true
 餲	o5
 嗄	ä4
 嗄	sha4
-喝	ä4
+喝	ä4	讀書音、文讀音
 喝	ho5
 礙	ä4
 硋	ä4
@@ -384,9 +369,9 @@ use_preset_vocabulary: true
 峉	ä5
 詻	ä5
 䩹	ä5
-啞	ä5
+啞	ä5	讀書音、文讀音
 啞	ia3
-啞	ia4
+啞	ia4	讀書音、文讀音
 𩚬	ä5
 𩚚	ä5
 𩜄	ä5
@@ -431,12 +416,12 @@ use_preset_vocabulary: true
 蚆	ba1
 蚆	pa1
 吧	ba1
-吧	pa1
+吧	pa1	讀書音、文讀音
 疤	ba1
 扒	ba1
 扒	ba5
-扒	bä4
-扒	bie5
+扒	bä4	讀書音、文讀音
+扒	bie5	讀書音、文讀音
 把	ba3
 𢃳	ba3
 靶	ba3
@@ -452,10 +437,10 @@ use_preset_vocabulary: true
 垻	ba4
 壩	ba4
 爸	ba4
-爸	bo4
+爸	bo4	讀書音、文讀音
 𤝡	ba4
 杷	ba4
-杷	bä4
+杷	bä4	讀書音、文讀音
 杷	pa2
 耙	ba4
 𦫙	ba4
@@ -463,8 +448,8 @@ use_preset_vocabulary: true
 𩹏	ba4
 罷	ba4
 罷	bä4
-罷	bei4
-罷	pi2
+罷	bei4	讀書音、文讀音
+罷	pi2	讀書音、文讀音
 𥎱	ba5
 八	ba5
 𩡩	ba5
@@ -502,7 +487,7 @@ use_preset_vocabulary: true
 班	bang1
 𤦦	bang1
 頒	bang1
-頒	fen2
+頒	fen2	讀書音、文讀音
 朌	bang1
 朌	fen2
 鳻	bang1
@@ -529,9 +514,9 @@ use_preset_vocabulary: true
 𨢐	bang1
 浜	bang1
 浜	ben1
-浜	ben3
+浜	ben3	讀書音、文讀音
 瘢	bang1
-瘢	pang2
+瘢	pang2	讀書音、文讀音
 板	bang3
 版	bang3
 鈑	bang3
@@ -541,12 +526,12 @@ use_preset_vocabulary: true
 舨	bang3
 阪	bang3
 阪	bang4
-阪	fang3
+阪	fang3	讀書音、文讀音
 坂	bang3
-坂	fang3
+坂	fang3	讀書音、文讀音
 榜	bang3
-榜	ben4
-榜	pen2
+榜	ben4	讀書音、文讀音
+榜	pen2	讀書音、文讀音
 牓	bang3
 螃	bang3
 螃	bang4
@@ -600,8 +585,8 @@ use_preset_vocabulary: true
 釆	bang4
 扮	bang4
 扮	fen1
-扮	fen3
-扮	fen4
+扮	fen3	讀書音、文讀音
+扮	fen4	讀書音、文讀音
 傍	bang4
 傍	pang2
 徬	bang4
@@ -667,7 +652,7 @@ use_preset_vocabulary: true
 𢖔	bao4
 儤	bao4
 爆	bao4
-爆	bo5
+爆	bo5	讀書音、文讀音
 䶂	bao4
 䶂	di5
 䶂	zho5
@@ -687,9 +672,9 @@ use_preset_vocabulary: true
 虣	bao4
 曝	bao4
 曝	bu5
-瀑	bao4
+瀑	bao4	讀書音、文讀音
 瀑	pu5
-瀑	bu5
+瀑	bu5	讀書音、文讀音
 勽	bao4
 勽	uen3
 菢	bao4
@@ -706,9 +691,9 @@ use_preset_vocabulary: true
 矲	bä4
 猈	bä4
 猈	pä2
-憊	bä4
+憊	bä4	讀書音、文讀音
 憊	bei4
-𢟡	bä4
+𢟡	bä4	讀書音、文讀音
 𢟡	bei4
 䥯	bä4
 㔥	bä4
@@ -774,7 +759,7 @@ use_preset_vocabulary: true
 欂	bo5
 北	bä5
 𧉥	bä5
-蔔	bä5
+蔔	bä5	讀書音、文讀音
 蔔	bo1
 菔	bä5
 菔	fu5
@@ -788,12 +773,12 @@ use_preset_vocabulary: true
 匐	bä5
 匐	fu5
 𠣵	bä5
-仆	bä5
+仆	bä5	讀書音、文讀音
 仆	fu4
-仆	pou4
-菩	bä5
+仆	pou4	讀書音、文讀音
+菩	bä5	讀書音、文讀音
 菩	bei4
-菩	fu4
+菩	fu4	讀書音、文讀音
 菩	pu2
 垘	bä5
 䵗	bä5
@@ -807,11 +792,11 @@ use_preset_vocabulary: true
 𨰟	bei1
 碑	bei1
 卑	bei1
-卑	bi1
+卑	bi1	讀書音、文讀音
 彼	bei3
 彼	bi3
 㗗	bei3
-㗗	bi1
+㗗	bi1	讀書音、文讀音
 琲	bei4
 㻗	bei4
 痱	bei4
@@ -820,11 +805,11 @@ use_preset_vocabulary: true
 𢳁	bei4
 倍	bei4
 蓓	bei4
-倍	bä4
-蓓	bä4
+倍	bä4	讀書音、文讀音
+蓓	bä4	讀書音、文讀音
 貝	bei4
 𨙶	bei4
-沛	bei4
+沛	bei4	讀書音、文讀音
 沛	pei4
 㸬	bei4
 䟺	bei4
@@ -845,9 +830,9 @@ use_preset_vocabulary: true
 旆	bei4
 軷	bei4
 軷	bo5
-佩	bei4
+佩	bei4	讀書音、文讀音
 佩	pei4
-珮	bei4
+珮	bei4	讀書音、文讀音
 珮	pei4
 孛	bei4
 孛	bo5
@@ -876,8 +861,8 @@ use_preset_vocabulary: true
 𢍃	ben1
 犇	ben1
 賁	ben1
-賁	bei4
-賁	fei2
+賁	bei4	讀書音、文讀音
+賁	fei2	讀書音、文讀音
 賁	fen2
 䴅	ben1
 䴅	fen2
@@ -897,7 +882,7 @@ use_preset_vocabulary: true
 繃	ben1
 絣	ben1
 𢆸	ben1
-拼	ben1
+拼	ben1	讀書音、文讀音
 拼	pin1
 䑫	ben1
 崩	ben1
@@ -914,9 +899,9 @@ use_preset_vocabulary: true
 夲	tao1
 畚	ben3
 𤲙	ben3
-笨	ben3
+笨	ben3	讀書音、文讀音
 笨	ben4
-体	ben4
+体	ben4	讀書音、文讀音
 㡷	ben3
 苯	ben3
 㑟	ben3
@@ -932,7 +917,7 @@ use_preset_vocabulary: true
 𠊧	ben4
 䨻	ben4
 傡	ben4
-併	ben4
+併	ben4	讀書音、文讀音
 併	bin3
 併	bin4
 𩶁	ben4
@@ -962,7 +947,7 @@ use_preset_vocabulary: true
 陂	bei4
 詖	bei4
 詖	bei1
-羆	bei1
+羆	bei1	讀書音、文讀音
 羆	pi2
 𥀍	bei1
 𥀍	pi2
@@ -994,7 +979,7 @@ use_preset_vocabulary: true
 裨	pi2
 鞞	bi1
 鞞	bi3
-鞞	bin3
+鞞	bin3	讀書音、文讀音
 鞞	pi2
 𩔹	bi1
 渒	bi1
@@ -1043,10 +1028,10 @@ use_preset_vocabulary: true
 痞	fu3
 比	bi3
 比	bi4
-比	bi5
-比	pi2
+比	bi5	讀書音、文讀音
+比	pi2	讀書音、文讀音
 匕	bi3
-匕	hua4
+匕	hua4	讀書音、文讀音
 妣	bi3
 秕	bi3
 䃾	bi3
@@ -1055,7 +1040,7 @@ use_preset_vocabulary: true
 沘	pi2
 朼	bi3
 枇	bi3
-枇	bi4
+枇	bi4	讀書音、文讀音
 枇	pi2
 疕	bi3
 疕	pei3
@@ -1084,7 +1069,7 @@ use_preset_vocabulary: true
 𢻹	pei3
 𢁦	bei4
 㠲	bei4
-殍	bei4
+殍	bei4	讀書音、文讀音
 殍	biao4
 陛	bi4
 㙄	bi4
@@ -1140,7 +1125,7 @@ use_preset_vocabulary: true
 畀	bi4
 庇	bi4
 閉	bi4
-閉	bie5
+閉	bie5	讀書音、文讀音
 閇	bi4
 嬖	bi4
 箅	bi4
@@ -1430,7 +1415,7 @@ use_preset_vocabulary: true
 𥣰	biän1
 𥣰	biän3
 編	biän1
-編	biän3
+編	biän3	讀書音、文讀音
 萹	biän1
 萹	biän3
 萹	piän1
@@ -1533,7 +1518,7 @@ use_preset_vocabulary: true
 𩴱	pin2
 彬	bin1
 斌	bin1
-份	bin1
+份	bin1	讀書音、文讀音
 份	fen4
 玢	bin1
 豳	bin1
@@ -1552,7 +1537,7 @@ use_preset_vocabulary: true
 并	bin1
 并	bin4
 栟	bin1
-屏	bin1
+屏	bin1	讀書音、文讀音
 屏	bin3
 屏	pin2
 箳	bin1
@@ -1629,9 +1614,9 @@ use_preset_vocabulary: true
 播	bo4
 𢿥	bo4
 譒	bo4
-縛	bo4
+縛	bo4	讀書音、文讀音
 縛	fu4
-縛	fo5
+縛	fo5	讀書音、文讀音
 剝	bo5
 剥	bo5
 駮	bo5
@@ -1757,8 +1742,8 @@ use_preset_vocabulary: true
 簙	bo5
 髆	bo5
 搏	bo5
-搏	fu4
-搏	po5
+搏	fu4	讀書音、文讀音
+搏	po5	讀書音、文讀音
 㗘	bo5
 𪙍	bo5
 襮	bo5
@@ -1768,7 +1753,7 @@ use_preset_vocabulary: true
 䍸	bo5
 𩌏	bo5
 𩌏	bou4
-溥	bo5
+溥	bo5	讀書音、文讀音
 溥	pu3
 䶈	bo5
 餺	bo5
@@ -1776,14 +1761,14 @@ use_preset_vocabulary: true
 𥴮	bo5
 𥴮	po5
 㨐	bou3
-掊	bou3
-掊	fu2
-掊	pao2
+掊	bou3	讀書音、文讀音
+掊	fu2	讀書音、文讀音
+掊	pao2	讀書音、文讀音
 掊	pou2
-部	bou4
+部	bou4	讀書音、文讀音
 部	bu4
 㟝	bou4
-培	bou4
+培	bou4	讀書音、文讀音
 咅	bou4
 培	pei2
 犃	bou4
@@ -1842,7 +1827,7 @@ use_preset_vocabulary: true
 𠜙	bu4
 𧉩	bu4
 怖	bu4
-怖	pu4
+怖	pu4	讀書音、文讀音
 𤸵	bu4
 𤸵	pu4
 步	bu4
@@ -1862,11 +1847,11 @@ use_preset_vocabulary: true
 轐	bu5
 𡡐	bu5
 樸	bu5
-樸	po5
-樸	pu2
+樸	po5	讀書音、文讀音
+樸	pu2	讀書音、文讀音
 樸	pu5
 獛	bu5
-蹼	bu5
+蹼	bu5	讀書音、文讀音
 蹼	pu5
 纀	bu5
 襆	bu5
@@ -1883,11 +1868,11 @@ use_preset_vocabulary: true
 䴆	bu5
 䴆	pu5
 不	bu5
-不	bo5
-不	fu1
-不	fu5
+不	bo5	讀書音、文讀音
+不	fu1	讀書音、文讀音
+不	fu5	讀書音、文讀音
 㲫	bu5
-僕	bu5
+僕	bu5	讀書音、文讀音
 䑑	bu5
 𥐁	bu5
 𡕡	bu5
@@ -1925,7 +1910,7 @@ use_preset_vocabulary: true
 參	cang1
 參	cang4
 參	cen1
-參	sang1
+參	sang1	讀書音、文讀音
 參	sen1
 驂	cang1
 傪	cang1
@@ -2009,7 +1994,7 @@ use_preset_vocabulary: true
 曹	cao2
 𣍘	cao2
 槽	cao2
-槽	zao1
+槽	zao1	讀書音、文讀音
 螬	cao2
 嘈	cao2
 䏆	cao2
@@ -2022,7 +2007,7 @@ use_preset_vocabulary: true
 䐬	cao2
 蓸	cao2
 漕	cao2
-漕	zao4
+漕	zao4	讀書音、文讀音
 褿	cao2
 草	cao3
 艸	cao3
@@ -2033,7 +2018,7 @@ use_preset_vocabulary: true
 騲	cao3
 𠹊	cao3
 愺	cao3
-造	cao4
+造	cao4	讀書音、文讀音
 造	zao4
 艁	cao4
 艁	zao4
@@ -2052,9 +2037,9 @@ use_preset_vocabulary: true
 䞗	cä1
 䞗	chä1
 裁	cä2
-裁	zä4
+裁	zä4	讀書音、文讀音
 纔	cä2
-纔	shang1
+纔	shang1	讀書音、文讀音
 纔	zä4
 財	cä2
 才	cä2
@@ -2127,7 +2112,7 @@ use_preset_vocabulary: true
 𠞩	cä5
 𪘧	cä5
 䜉	cä5
-沏	cä5
+沏	cä5	讀書音、文讀音
 𡍪	cä5
 䙄	cä5
 䙄	zha5
@@ -2179,7 +2164,7 @@ use_preset_vocabulary: true
 棖	cen2
 盯	cen2
 盯	din1
-盯	zen3
+盯	zen3	讀書音、文讀音
 澄	cen2
 澄	chen2
 掁	cen2
@@ -2207,8 +2192,8 @@ use_preset_vocabulary: true
 虰	cen2
 虰	chen1
 虰	din1
-瞪	cen2
-瞪	chen2
+瞪	cen2	讀書音、文讀音
+瞪	chen2	讀書音、文讀音
 瞪	den4
 瞪	zhen4
 䆵	cen2
@@ -2221,7 +2206,7 @@ use_preset_vocabulary: true
 曾	zen1
 䁬	cen2
 岑	cen2
-岑	cin2
+岑	cin2	讀書音、文讀音
 涔	cen2
 㞥	cen2
 梣	cen2
@@ -2265,7 +2250,7 @@ use_preset_vocabulary: true
 𠟂	cen4
 讖	cen4
 叉	cha1
-叉	chä1
+叉	chä1	讀書音、文讀音
 杈	cha1
 杈	chä4
 差	chä4
@@ -2295,13 +2280,13 @@ use_preset_vocabulary: true
 𤵾	cha1
 𡖹	cha1
 𡨀	cha2
-塗	cha2
+塗	cha2	讀書音、文讀音
 塗	tu2
 茶	cha2
 𣘻	cha2
 𣘻	tu2
-荼	cha2
-荼	she2
+荼	cha2	讀書音、文讀音
+荼	she2	讀書音、文讀音
 荼	tu2
 秅	cha2
 秅	du4
@@ -2321,10 +2306,10 @@ use_preset_vocabulary: true
 䅊	zha4
 𦛝	cha2
 搽	cha2
-楂	cha2
+楂	cha2	讀書音、文讀音
 楂	zha1
 查	cha2
-查	chä2
+查	chä2	讀書音、文讀音
 查	zha1
 槎	cha2
 槎	zha4
@@ -3182,11 +3167,11 @@ use_preset_vocabulary: true
 𥉍	chr1
 匙	chr2
 𦑡	chr2
-提	chr2
+提	chr2	讀書音、文讀音
 提	ti2
 㖷	chr2
 䈕	chr2
-堤	chr2
+堤	chr2	讀書音、文讀音
 堤	di1
 堤	di3
 禔	chr2
@@ -3222,7 +3207,7 @@ use_preset_vocabulary: true
 䞾	chr2
 遲	chr2
 遟	chr2
-遟	zhr4
+遟	zhr4	讀書音、文讀音
 墀	chr2
 𡎰	chr2
 坻	chr2
@@ -3240,7 +3225,7 @@ use_preset_vocabulary: true
 菭	tä2
 謘	chr2
 謘	zhr4
-莉	chr2
+莉	chr2	讀書音、文讀音
 莉	li2
 貾	chr2
 治	chr2
@@ -3790,7 +3775,7 @@ use_preset_vocabulary: true
 皵	ci5
 皵	cio5
 磧	ci5
-刺	ci5
+刺	ci5	讀書音、文讀音
 刺	cy4
 𧻕	ci5
 洓	ci5
@@ -4057,9 +4042,9 @@ use_preset_vocabulary: true
 情	cin2
 晴	cin2
 夝	cin2
-請	cin2
+請	cin2	讀書音、文讀音
 請	cin3
-請	zin4
+請	zin4	讀書音、文讀音
 䝼	cin2
 䝼	zin4
 𩷒	cin2
@@ -4417,9 +4402,9 @@ use_preset_vocabulary: true
 猝	cu5
 卒	cu5
 卒	zu5
-卒	zü5
+卒	zü5	讀書音、文讀音
 𣨛	cu5
-𣨛	zü5
+𣨛	zü5	讀書音、文讀音
 𢪃	cu5
 𥾛	cu5
 攛	cuang1
@@ -4518,7 +4503,7 @@ use_preset_vocabulary: true
 䃀	cuei4
 逡	cüin1
 竣	cüin1
-皴	cüin1
+皴	cüin1	讀書音、文讀音
 皴	cuen1
 㕙	cüin1
 㕙	züin4
@@ -4533,7 +4518,7 @@ use_preset_vocabulary: true
 夋	cüin1
 村	cuen1
 存	cuen2
-蹲	cuen2
+蹲	cuen2	讀書音、文讀音
 蹲	duen1
 拵	cuen2
 𨚲	cuen2
@@ -5150,8 +5135,8 @@ use_preset_vocabulary: true
 䔲	den1
 㽅	den1
 䳾	den1
-打	zen3
-打	din3
+打	zen3	讀書音、文讀音
+打	din3	讀書音、文讀音
 戥	den3
 嶝	den4
 鐙	den4
@@ -5425,7 +5410,7 @@ use_preset_vocabulary: true
 銚	tiao1
 調	diao4
 調	tiao2
-調	zhou1
+調	zhou1	讀書音、文讀音
 𥁮	diao4
 莜	diao4
 爹	die1
@@ -6755,7 +6740,7 @@ use_preset_vocabulary: true
 荂	xü1
 䓏	fu1
 孵	fu1
-殍	fu1
+殍	fu1	讀書音、文讀音
 𣨈	fu1
 豧	fu1
 豧	fu4
@@ -6974,7 +6959,7 @@ use_preset_vocabulary: true
 副	pi5
 𩯅	fu4
 𩯅	fu5
-覆	fu4
+覆	fu4	讀書音、文讀音
 覆	fu5
 覆	pä5
 𤸑	fu4
@@ -6988,7 +6973,7 @@ use_preset_vocabulary: true
 鍑	fu5
 䔰	fu4
 䔰	fu5
-復	fu4
+復	fu4	讀書音、文讀音
 復	fu5
 𢕒	fu4
 伏	fu4
@@ -6996,7 +6981,7 @@ use_preset_vocabulary: true
 椱	fu4
 椱	fu5
 𨺅	fu4
-複	fu4
+複	fu4	讀書音、文讀音
 複	fu5
 腹	fu5
 葍	fu5
@@ -7403,7 +7388,7 @@ use_preset_vocabulary: true
 𥔂	gen4
 歌	go1
 謌	go1
-柯	go1
+柯	go1	讀書音、文讀音
 柯	ko1
 妿	go1
 妿	o1
@@ -7587,6 +7572,10 @@ use_preset_vocabulary: true
 蛬	qong2
 孓	gong3
 孓	jüe5
+孓	jü5
+孒	gong3
+孒	jüe5
+孒	jü5
 㤨	gong3
 𢸁	gong3
 㼦	gong3
@@ -7629,8 +7618,8 @@ use_preset_vocabulary: true
 軥	gou1
 軥	gou4
 軥	qü2
-夠	gou1
-夠	kou1
+夠	gou1	讀書音、文讀音
+夠	kou1	讀書音、文讀音
 夠	gou4
 鴝	gou1
 鴝	qü2
@@ -7804,7 +7793,7 @@ use_preset_vocabulary: true
 䧼	gu5
 鵠	gu5
 䅵	gu5
-告	gu5
+告	gu5	讀書音、文讀音
 郜	gu5
 祰	gu5
 䧊	gu5
@@ -7902,9 +7891,9 @@ use_preset_vocabulary: true
 垙	guang1
 𨎩	guang1
 輄	guang1
-橫	guang1
+橫	guang1	讀書音、文讀音
 橫	huen2
-橫	hong2
+橫	hong2	讀書音、文讀音
 橫	hong4
 𩧉	guang1
 恍	guang1
@@ -8004,7 +7993,7 @@ use_preset_vocabulary: true
 括	guä5
 𣽅	guä5
 𣽅	ho5
-活	guä5
+活	guä5	讀書音、文讀音
 活	ho5
 髺	guä5
 栝	guä5
@@ -8238,7 +8227,7 @@ use_preset_vocabulary: true
 𡬄	guei4
 痵	guei4
 痵	ji4
-季	guei4
+季	guei4	讀書音、文讀音
 季	ji4
 貴	guei4
 瞶	guei4
@@ -8293,7 +8282,7 @@ use_preset_vocabulary: true
 䵋	uei3
 䈐	guei4
 𪏤	guei4
-昆	guen1
+昆	guen1	讀書音、文讀音
 昆	kuen1 
 晜	guen1 
 𥊽	guen1 
@@ -8449,6 +8438,7 @@ use_preset_vocabulary: true
 䗣	hang2
 䗣	hang4
 魽	hang2
+𤊼	hang2
 炶	hang2
 煔	hang2
 煔	shang4
@@ -8466,8 +8456,8 @@ use_preset_vocabulary: true
 熯	hang3
 熯	hang4
 熯	rang3
-灘	hang3
-灘	lang4
+灘	hang3	讀書音、文讀音
+灘	lang4	讀書音、文讀音
 灘	tang1
 汻	hang3
 酐	hang3
@@ -8795,7 +8785,7 @@ use_preset_vocabulary: true
 暍	ho5
 暍	ie5
 𩡔	ho5
-越	ho5
+越	ho5	讀書音、文讀音
 越	üe5
 秳	ho5
 姡	ho5
@@ -8967,8 +8957,8 @@ use_preset_vocabulary: true
 哄	hong4
 哄	hong3
 哄	hong1
-港	hong4
-港	jang3
+港	hong4	讀書音、文讀音
+港	jang3	讀書音、文讀音
 港	gang3
 鬨	hong4
 蕻	hong4
@@ -9367,8 +9357,8 @@ use_preset_vocabulary: true
 徨	huang2
 篁	huang2
 蝗	huang2
-蝗	hong2
-蝗	hong4
+蝗	hong2	讀書音、文讀音
+蝗	hong4	讀書音、文讀音
 凰	huang2
 偟	huang2
 媓	huang2
@@ -9430,7 +9420,7 @@ use_preset_vocabulary: true
 鯇	huang4
 䴷	huang4
 䴷	huen2
-皖	huang4
+皖	huang4	讀書音、文讀音
 皖	uang3
 換	huang4
 逭	huang4
@@ -10211,8 +10201,8 @@ use_preset_vocabulary: true
 𦨇	i5
 𠡝	i5
 疙	gi5
-疙	i5
-疙	ji5
+疙	i5	讀書音、文讀音
+疙	ji5	讀書音、文讀音
 虼	gi5
 虼	je5
 屹	i5
@@ -10430,7 +10420,7 @@ use_preset_vocabulary: true
 鴨	ia5
 壓	ia5
 押	ia5
-押	ja5
+押	ja5	讀書音、文讀音
 庘	ia5
 䆘	ia5
 胦	ang1
@@ -12076,8 +12066,8 @@ use_preset_vocabulary: true
 犗	jä4
 𧜅	jä4
 揭	je5
-揭	qe5
-揭	qi4
+揭	qe5	讀書音、文讀音
+揭	qi4	讀書音、文讀音
 𢶆	je5
 搩	je5
 訐	je5
@@ -12119,7 +12109,7 @@ use_preset_vocabulary: true
 桀	je5
 桀	je5
 榤	je5
-渴	je5
+渴	je5	讀書音、文讀音
 渴	ko5
 嵥	je5
 滐	je5
@@ -13006,6 +12996,7 @@ use_preset_vocabulary: true
 挶	jü5
 絭	jüän4
 絭	qüän4
+絭	jü5
 梮	jü5
 䡞	jü5
 㮂	jü5
@@ -13027,8 +13018,6 @@ use_preset_vocabulary: true
 𦙮	jü5
 𣎛	jü5
 𠀔	jü5
-孒	jü5
-孒	jüe5
 𦁐	jü5
 𦁐	qüe5
 厥	jü5
@@ -13076,6 +13065,7 @@ use_preset_vocabulary: true
 欮	jüe5
 撅	jüe5
 𠄌	jüe5
+亅	jüe5
 獗	jüe5
 𧤼	jüe5
 鷢	jüe5
@@ -13142,6 +13132,7 @@ use_preset_vocabulary: true
 勬	jüän1
 勬	jüän4
 畎	jüän3
+畎	qüän3
 𡿨	jüän3
 𤰝	jüän3
 甽	jüän3
@@ -14030,7 +14021,7 @@ use_preset_vocabulary: true
 𥻂	lang3
 𥽭	lang3
 灡	lang3
-攤	lang3
+攤	lang3	讀書音、文讀音
 攤	lang4
 攤	tang1
 赧	lang3
@@ -14242,10 +14233,10 @@ use_preset_vocabulary: true
 𪎂	lä2
 𤲓	lä2
 𪑚	lä2
-能	lä2
-能	lä4
+能	lä2	讀書音、文讀音
+能	lä4	讀書音、文讀音
 能	len2
-能	len3
+能	len3	讀書音、文讀音
 㾍	lä2
 奶	lä3
 嬭	lä3
@@ -14901,7 +14892,7 @@ use_preset_vocabulary: true
 夨	zä5
 𥃎	lie5
 列	lie5
-列	zhu1
+列	zhu1	讀書音、文讀音
 𠛱	lie5
 𠛱	za5
 迾	lie5
@@ -16229,7 +16220,7 @@ use_preset_vocabulary: true
 𠷈	lü5
 率	lü5
 率	shuä4
-率	so5
+率	so5	讀書音、文讀音
 𦣛	lüe2
 劣	lüe5
 𢚃	lüe5
@@ -18172,8 +18163,8 @@ use_preset_vocabulary: true
 㾀	qe5
 𤴼	qe5
 揩	kä1
-揩	qä1
-揩	qä4
+揩	qä1	讀書音、文讀音
+揩	qä4	讀書音、文讀音
 𦂄	qä1
 𢔡	qä1
 𥻄	qä1
@@ -18564,9 +18555,9 @@ use_preset_vocabulary: true
 殼	ko5
 㱿	ko5
 㲉	ko5
-殼	qo5
-㱿	qo5
-㲉	qo5
+殼	qo5	讀書音、文讀音
+㱿	qo5	讀書音、文讀音
+㲉	qo5	讀書音、文讀音
 毃	qo5
 愨	qo5
 確	qo5
@@ -18909,7 +18900,7 @@ use_preset_vocabulary: true
 𥬕	rang3
 苒	rang3
 染	rang3
-染	rang4
+染	rang4	讀書音、文讀音
 𩃵	rang3
 䎃	rang3
 䣸	rang3
@@ -18918,7 +18909,7 @@ use_preset_vocabulary: true
 欀	siang1
 懹	rang4
 饒	rao2
-饒	rao4
+饒	rao4	讀書音、文讀音
 襓	rao2
 㹛	rao2
 蕘	rao2
@@ -18936,8 +18927,8 @@ use_preset_vocabulary: true
 囁	zhä5
 喦	rä5
 顳	rä5
-若	re2
-若	re3
+若	re2	讀書音、文讀音
+若	re3	讀書音、文讀音
 若	ro5
 惹	re3
 喏	re3
@@ -19068,9 +19059,9 @@ use_preset_vocabulary: true
 韖	rou3
 粈	rou3
 肉	rou4
-肉	ru5
+肉	ru5	讀書音、文讀音
 如	ru2
-如	ru4
+如	ru4	讀書音、文讀音
 洳	ru2
 洳	ru4
 茹	ru2
@@ -19651,7 +19642,7 @@ use_preset_vocabulary: true
 𦉕	shang4
 騸	shang4
 餉	shang4
-向	shang4
+向	shang4	讀書音、文讀音
 向	xang4
 蟓	shang4
 蟓	siang4
@@ -19753,8 +19744,8 @@ use_preset_vocabulary: true
 𨢦	shä4
 洒	shä4
 洒	si3
-汛	shä4
-汛	siän4
+汛	shä4	讀書音、文讀音
+汛	siän4	讀書音、文讀音
 汛	sin4
 汛	süin4
 閷	shä4
@@ -20002,14 +19993,14 @@ use_preset_vocabulary: true
 矢	shr3
 𠂕	shr3
 始	shr3
-史	sy3
+史	sy3	讀書音、文讀音
 史	shr3
-使	sy3
+使	sy3	讀書音、文讀音
 使	shr3
-使	sy4
-駛	sy3
+使	sy4	讀書音、文讀音
+駛	sy3	讀書音、文讀音
 駛	shr3
-駛	sy4
+駛	sy4	讀書音、文讀音
 𩰢	sy3
 𩰢	sy4
 是	shr4
@@ -20190,9 +20181,9 @@ use_preset_vocabulary: true
 欘	shu5
 欘	zhu5
 屬	shu5
-屬	zhu5
+屬	zhu5	讀書音、文讀音
 属	shu5
-属	zhu5
+属	zhu5	讀書音、文讀音
 㻿	shu5
 䙱	shu5
 襩	shu5
@@ -20344,9 +20335,9 @@ use_preset_vocabulary: true
 徙	si3
 璽	si3
 壐	si3
-徙	sy3
-璽	sy3
-壐	sy3
+徙	sy3	讀書音、文讀音
+璽	sy3	讀書音、文讀音
+壐	sy3	讀書音、文讀音
 𢇌	si3
 洗	si3
 洗	siän3
@@ -20355,8 +20346,8 @@ use_preset_vocabulary: true
 些	si4
 些	sie1
 些	so4
-婿	si4
-壻	si4
+婿	si4	讀書音、文讀音
+壻	si4	讀書音、文讀音
 婿	sü4
 壻	sü4
 悉	si5
@@ -21214,12 +21205,12 @@ use_preset_vocabulary: true
 𪀠	süin2
 㽦	süin2
 䖲	süin2
-筍	süin3
-笋	süin3
-箰	süin3
+筍	süin3	讀書音、文讀音
+笋	süin3	讀書音、文讀音
+箰	süin3	讀書音、文讀音
 𠣬	süin3
-隼	süin3
-鵻	süin3
+隼	süin3	讀書音、文讀音
+鵻	süin3	讀書音、文讀音
 簨	süin3
 𥯗	süin3
 𣕍	süin3
@@ -24042,9 +24033,9 @@ use_preset_vocabulary: true
 𧵣	xong1
 雄	xong2
 熊	xong2
-熒	xong2
+熒	xong2	讀書音、文讀音
 褮	xong2
-螢	xong2
+螢	xong2	讀書音、文讀音
 滎	xong2
 䁝	xong2
 覮	xong2
@@ -26010,9 +26001,9 @@ use_preset_vocabulary: true
 坐	zo4
 𡋲	zo4
 𠡃	zo4
-作	zo4
+作	zo4	讀書音、文讀音
 作	zo5
-作	zu4
+作	zu4	讀書音、文讀音
 袏	zo4
 侳	zo4
 侳	züe1
@@ -26239,7 +26230,7 @@ use_preset_vocabulary: true
 晬	zuei4
 祽	zuei4
 遵	zuen1
-遵	züin1
+遵	züin1	讀書音、文讀音
 嶟	zuen1
 嶟	züin1
 尊	zuen1
@@ -26794,12 +26785,12 @@ use_preset_vocabulary: true
 惓	jüän4
 塬	üän2
 桓	huang2
-完	huang2
+完	huang2	讀書音、文讀音
 䴟	huang2
 𩾞	huang2
-丸	huang2
+丸	huang2	讀書音、文讀音
 瓛	huang2
-紈	huang2
+紈	huang2	讀書音、文讀音
 𦼉	huang2
 雚	huang2
 雈	huang2
@@ -26810,7 +26801,7 @@ use_preset_vocabulary: true
 豲	huang2
 梡	huang2
 荁	huang2
-莞	huang2
+莞	huang2	讀書音、文讀音
 莞	uang3
 綄	huang2
 𦏊	huang2
@@ -26952,12 +26943,6 @@ use_preset_vocabulary: true
 氕	pie5
 氘	dao1
 氚	chuang1
-#半邊音
-嶼	ü3
-鯨	jin1
-恢	huei1
-#南京話字母
-ä	w
-Ä	w
-ü	v
-Ü	v
+嶼	ü3	白讀音
+鯨	jin1	白讀音
+恢	huei1	白讀音
