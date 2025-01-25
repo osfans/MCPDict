@@ -320,6 +320,7 @@
 冒	mo6	
 冕	bɛn3	
 冠	kuan1	
+冢	tʰioŋ3	
 冤	uan1	
 冥	bɛn2	
 冬	taŋ1-	
@@ -453,6 +454,7 @@
 匣	aʔ8	
 匪	hui3	
 匹	pʰit7	
+匾	pɛn3	
 區	kʰi1	
 十	tsap8-	
 十	sip8	
@@ -786,7 +788,6 @@
 壇	tʰan2	
 壑	hak7	
 壓	ap7	
-壕	tʰioŋ3	
 壘	lui3	
 壞	huai6	
 壟	laŋ1-	
@@ -882,6 +883,7 @@
 姓	sɛn5	
 委	ui3	
 姚	iau2	
+姨	i2	
 姪	tit8	
 姬	ki1	
 姻	in1	
@@ -1021,8 +1023,8 @@
 審	sim3	
 寫	sia3	
 寬	kʰuan1	
+寬	kʰuã1-	~行
 寬	kʰuĩ1-	~一行
-寬	kʰuã1	~行
 寵	tʰioŋ3	
 寶	po3	
 寸	tsʰun5	
@@ -1120,7 +1122,6 @@
 嶺	lɛn3	
 嶽	ɡak8	
 巉	tsʰam2	
-巍	kiaŋ1	
 巍	ɡui2	
 巔	tɛn1	
 川	tsʰuan1	
@@ -1146,7 +1147,6 @@
 布	pou5	
 希	hi1	
 帔	pʰi1	
-帔	tsɛt7	
 帕	pʰa5-	
 帕	pʰɛ5	
 帖	tʰiap7	
@@ -1165,12 +1165,13 @@
 帷	ui2	
 常	siaŋ2	
 帽	bo6-	
-帽	kok7	
 幄	ak7	
 幅	pak7-	
 幔	muã1-	
 幔	ban6	
 幕	bou6	
+幗	kok7	
+幘	tsɛt7	
 幟	tsi5	
 幣	pi6	
 幫	paŋ1	
@@ -1754,6 +1755,7 @@
 旺	oŋ6	
 旻	bun2	
 昂	ɡaŋ2	
+昃	tsɛt7	
 昆	kʰun1	
 昌	tsʰiaŋ1	
 明	bɛn2	
@@ -1904,7 +1906,6 @@
 柘	tsia5	
 柚	iu6	
 查	tsɛ1	
-查	kʰuã5	
 查	tsʰɛ2-	~戶口
 查	tsa1	~埠，男;~畝，女
 柩	kiu6	
@@ -1933,7 +1934,6 @@
 案	an5	
 桌	to6	
 桐	toŋ2	
-桐	tiu2	
 桐	tʰaŋ2-	~子
 桑	sŋ1-	
 桑	soŋ1	
@@ -2415,7 +2415,6 @@
 炙	tsia5	
 炭	tʰuã3-	
 炭	tʰan5	
-炭	tsɛt7	
 炮	pʰau5	
 炯	kɛn3	
 炳	pɛn3	
@@ -2528,6 +2527,7 @@
 犀	sai1-	
 犀	sei1	
 犁	lei2	
+犟	kiaŋ6	
 犢	tok8	
 犧	hi1	
 犬	kʰɛn3	
@@ -2579,6 +2579,7 @@
 珊	san1	
 珍	tin1	
 珍	tsin3	
+珙	kioŋ3	
 珠	tsiu1-	
 珠	tsu1	
 珢	ɡin2	
@@ -2591,7 +2592,6 @@
 琉	liu2	
 琛	tʰim1	
 琢	tok7	
-琪	kioŋ3	
 琯	kuan3	
 琰	tam6	
 琳	lim2	
@@ -2677,6 +2677,7 @@
 當	toŋ1	
 當	toŋ5	
 畿	ki1	
+疆	kiaŋ1	
 疊	tʰiap8	
 疊	tʰaʔ8-	重~
 疋	pʰit7	
@@ -2735,7 +2736,6 @@
 皂	laʔ8	訓
 的	tɛt7	
 皆	kai1	
-皆	hiau1	
 皇	hoŋ2	
 皈	kui1	
 皋	ko1	
@@ -2781,6 +2781,7 @@
 眇	biau3	
 眉	bai2-	
 眉	bi2	
+看	kʰuã5-	
 看	kʰan1	
 看	kʰan5	
 真	tsin1	
@@ -2864,7 +2865,6 @@
 磅	poŋ6	
 磋	tsʰo1	
 磐	puan2	
-磐	dziak8	
 磔	kak8	
 磕	kʰap8	
 磚	tsuĩ1-	
@@ -2946,13 +2946,13 @@
 稗	pʰei6-	
 稚	ti6	
 稟	pin3	
+稠	tiu2	
 種	tsioŋ3	
 種	tsioŋ5	
 稱	tsʰɛn1	
 稱	tsʰɛn5	
 稱	tsʰin5	
 稷	tsɛt7	
-稻	tiu6-	
 稻	to6	
 稽	kei1	
 稽	kʰei1	
@@ -3037,6 +3037,8 @@
 算	suan5	
 箝	kʰiam2	
 管	kuan3	
+箬	dziak8	
+箬	hioʔ8	葉
 箭	tsĩ5-	
 箭	tsɛn5	
 箱	siũ1-	
@@ -3091,6 +3093,7 @@
 粒	liap8	
 粕	pʰo6-	
 粗	tsʰou1	
+粙	tiu6	稻
 粵	uat8	
 粼	lin2	
 糉	tsaŋ5-	
@@ -3185,7 +3188,6 @@
 線	suã5-	
 線	san5	
 線	sɛn5	
-緝	kiaŋ1	
 緝	tsʰip7	
 緞	tuan6	
 締	tei5	
@@ -3222,6 +3224,7 @@
 繚	liau3	
 繞	dziau3	
 繡	siu5	
+繮	kiaŋ1	
 繳	kiau3	
 繼	kei5	
 繽	pʰin1	
@@ -3231,6 +3234,7 @@
 纏	tɛn2	
 纓	ɛn1	
 纘	tsan5	
+纛	tok8	
 缸	koŋ1	
 缺	kʰueʔ7-	
 缺	kʰuat7	
@@ -3266,7 +3270,6 @@
 翁	aŋ1-	~婆
 翅	tsʰi5	
 翊	ɛt8	
-翎	tok8	
 習	sip8	
 翔	siaŋ2	
 翗	ko2	
@@ -3446,7 +3449,6 @@
 舶	pɛt8	
 船	tsun2-	
 船	tsʰuan2	
-艇	pɛn3	
 艇	tʰɛn3	
 艙	tsʰŋ1-	
 艦	lam6	
@@ -3544,8 +3546,8 @@
 落	loʔ8-	
 落	lau5-	
 落	lok8	
-葉	hioʔ8-	
 葉	iap8	姓
+葉	hioʔ8	訓“箬”
 著	tioʔ8-	
 著	ti5	
 著	tsiak8	
@@ -3687,7 +3689,6 @@
 蝦	hɛ2	
 蝶	tiap8	
 蝶	iaʔ8	尾~
-螃	i2	
 融	ioŋ2	
 螞	ma3	
 螢	ɛn2	
@@ -3745,7 +3746,6 @@
 袍	pʰau5	
 袖	siu5	
 被	pi6	
-被	dziok8	
 被	pʰi6	~席
 被	pʰue6-	棉~
 袱	hok8	
@@ -3962,9 +3962,8 @@
 貪	tʰam1	
 貫	kuan5	
 貫	kuĩ5-	錢~
-責	pʰun1	
+責	tsɛt7	
 貴	kui5	
-貴	tsɛt7	
 貶	pɛn3	
 買	mai3	
 買	bei3	
@@ -3974,6 +3973,7 @@
 貼	tʰiap7	
 貿	bou6	
 賀	ho6	
+賁	pʰun1	
 賂	lou6	
 賃	dzim6	
 賄	hue3	
@@ -4138,6 +4138,7 @@
 辮	pɛn6	
 辯	pɛn6	
 辰	sin2	
+辱	dziok8	
 農	loŋ2	
 迂	u1	
 迄	ɡit8	
@@ -4350,6 +4351,7 @@
 鍪	mau2	
 鍬	tsʰiau1	
 鍵	kɛn6	
+鍾	tsioŋ1	
 鎖	so3	
 鎮	tin5	
 鏖	o1	
@@ -4366,6 +4368,7 @@
 鐘	tsioŋ1	
 鐙	tɛn5	
 鐲	soʔ8-	
+鐲	tok8	
 鐳	lui1	
 鐵	tʰiʔ7-	
 鐵	tʰɛt7	
@@ -4640,7 +4643,6 @@
 馗	kui2	
 香	hiũ1-	
 香	hiaŋ1	
-香	tok8	
 馥	hiok7	
 馨	hɛn1	
 馬	bɛ3-	
@@ -4742,7 +4744,7 @@
 鳴	bɛn2	
 鴉	a1	
 鴛	uan1	
-鴛	kiaŋ6	
+鴞	hiau1	
 鴣	kou1	
 鴦	iũ1-	
 鴦	iaŋ1	
