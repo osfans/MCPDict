@@ -366,6 +366,16 @@ class 表(_表):
 						音標 = 音標組[1]
 					l.append((字, 自.轉調類(音標), 註))
 				return l
+		elif 自.文件名.startswith("白語_袁明軍"):
+			if not 列[0]: return
+			字 = 列[0]
+			註 = 列[1]
+			if 註 == 字: 註 = ""
+			音 = 列[自.音列]
+			if not 音: return
+			上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
+			for i in 上標:
+				音 = 音.replace(i, str(上標.index(i)))
 		elif len(列) >= 4:
 			字, _, 音標, 註 = 列[:4]
 		elif len(列) == 2:

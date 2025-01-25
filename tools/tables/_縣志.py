@@ -51,6 +51,8 @@ class 表(_表):
 			行 = 行.replace("*", "□")
 		elif 名 in ("寶雞"):
 			行 = 行.replace("{Ø}", "Ø").replace("{h}", "h")
+		elif 名 in ("南雄珠璣巷"):
+			行 = re.sub(r"(\d+)", "[\\1]", 行)
 		elif 名 in ("樅陽東",):
 			行 = 行.replace("*", "□")
 			行 = 自.normS(行)
@@ -222,6 +224,8 @@ class 表(_表):
 			行 = 行.replace("[3ˀ]", "[3]")
 		elif 名 in ("光澤寨裏",):
 			行 = 行.replace("‖", "")
+		elif 名 in ("1935醴陵",):
+			行 = 行.replace("/", "")
 		elif 名 in ("泰州",):
 			行 = 行.replace("'", "ʰ")
 			行 = re.sub("([-=])(.)", "\\2\\1", 行)
