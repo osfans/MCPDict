@@ -302,7 +302,7 @@ class 表(_表):
 				return l
 		elif 自.文件名.startswith("粤西闽语方言字表"):
 			if len(列) < 6: return
-			字 = 列[0]
+			字 = 列[0].strip("()")
 			音集 = 列[自.音列]
 			if not 音集 or 音集.startswith("—"): return
 			_js = 字[1:] if len(字)>1 else ""
