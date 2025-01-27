@@ -229,6 +229,12 @@ class 表(_表):
 		elif 名 in ("泰州",):
 			行 = 行.replace("'", "ʰ")
 			行 = re.sub("([-=])(.)", "\\2\\1", 行)
+		elif 名 in ("大冶金牛"):
+			if not 行.startswith("#"):
+				列 = 行.split("\t")
+				if 有字(列[0]): return
+				行 = "\t".join((f"[{序}]" if 序 else "") + 項 for 序,項 in enumerate(列))
+				行 = 行.replace("（", "(").replace("）", ")").replace("(", "{").replace(")", "}").replace("{{", "{").replace("}}", "}")
 		elif 名 in ("吉水金灘", "繁昌"):
 			行 = re.sub("([mnvʋɹl])([\u0329\u030D]+)", "\\1\u0329", 行)
 			行 = re.sub("([ŋȵʐɱɻʒ])([\u0329\u030D]+)", "\\1\u030D", 行)
