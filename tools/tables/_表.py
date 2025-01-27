@@ -8,7 +8,10 @@ from glob import glob
 import inspect
 from openpyxl import load_workbook
 from xlrd import open_workbook
+import docx
 from docx import Document
+from docx.table import Table
+from docx.text.paragraph import Paragraph
 from docx.shared import Pt
 from docx.enum.text import WD_UNDERLINE
 import regex
@@ -137,9 +140,22 @@ def docx2tsv(doc):
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
 	lines = []
-	for each in Document(doc).paragraphs:
-		行 = "".join(map(run2text, each.runs)).replace("}{", "")
-		lines.append(行)
+	Doc = Document(doc)
+	Doc.paragraphs
+	for each in Doc._body._element:
+		if isinstance(each, docx.oxml.table.CT_Tbl):
+			t = Table(each, Doc)
+			for row in t.rows:
+				行 = ""
+				for cell in row.cells:
+					for p in cell.paragraphs:
+						行 += "".join(map(run2text, p.runs)).replace("\t", "").replace("\n", "")
+					行 += "\t"
+				lines.append(行.replace("}{", "").strip())
+		elif isinstance(each, docx.oxml.text.paragraph.CT_P):
+			element = Paragraph(each, Doc)
+			行 = "".join(map(run2text, element.runs)).replace("}{", "")
+			lines.append(行)
 	行 = "\n".join(lines).replace("}\n{", "")
 	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.write(行)
