@@ -366,6 +366,21 @@ class 表(_表):
 						音標 = 音標組[1]
 					l.append((字, 自.轉調類(音標), 註))
 				return l
+		elif 自.文件名.startswith("贵州六盘水八点联表"):
+			字 = 列[0][0]
+			註 = 列[0][1:].strip("()（）")
+			音 = 列[自.音列]
+			if "/" in 音:
+				音組 = 音.split("/")
+				l = list()
+				for 項 in 音組:
+					if "(" in 項:
+						項, 註 = 項.split("(", 1)
+						註 = 註[:-1]
+					else:
+						註 = 列[0][1:].strip("()（）")
+					l.append((字, 項, 註))
+				return l
 		elif 自.文件名.startswith("白語_袁明軍"):
 			if not 列[0]: return
 			字 = 列[0]
