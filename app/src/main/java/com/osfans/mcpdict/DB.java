@@ -100,7 +100,7 @@ public class DB extends SQLiteAssetHelper {
         ALL, ISLAND, HZ, CURRENT, RECOMMEND, CUSTOM, DIVISION, AREA, EDITOR
     }
 
-    public static int COL_ALL_LANGUAGES = 1000;
+    public static int COL_ALL_LANGUAGES = 1500;
     public static final String ALL_LANGUAGES = "*";
 
     private static final String TABLE_NAME = "mcpdict";

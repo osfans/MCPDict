@@ -753,7 +753,7 @@ public class ResultFragment extends Fragment {
                     }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 }
                 ssb.append("\n");
-                if (linesCount > 1000) continue;
+                if (linesCount > COL_ALL_LANGUAGES) continue;
                 index++;
                 ssb.append(ssb2);
             }
