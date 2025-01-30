@@ -28,7 +28,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F58499",
-        "marker-size": "small",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "錦州",
         "語言": "錦州話",
@@ -52,7 +52,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F58499",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "海倫",
         "語言": "海倫話",
@@ -101,7 +101,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "容城",
         "語言": "容城話",
@@ -149,7 +149,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "玉田",
         "語言": "玉田話",
@@ -173,7 +173,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "無極",
         "語言": "無極話",
@@ -221,7 +221,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "深澤",
         "語言": "深澤話",
@@ -245,7 +245,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#916FF7",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "c",
         "title": "平山",
         "語言": "平山話",
@@ -270,7 +270,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#916FF7",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "c",
         "title": "靈壽",
         "語言": "靈壽話",
@@ -295,7 +295,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "隆堯",
         "語言": "隆堯話",
@@ -320,7 +320,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "平鄕",
+        "語言": "平鄕話",
+        "地點": "河北邢臺平鄕",
+        "地圖集二分區": "冀魯官話-石濟片-邢衡小片",
+        "音典分區": "華北-河北",
+        "陳邡分區": "官話-河北-冀南片",
+        "版本": "2025-01-30",
+        "錄入人": "DaiDzao",
+        "來源": "《河北平乡方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.038881,
+          37.069559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5A4B6",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "內丘",
         "語言": "內丘話",
@@ -345,7 +369,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "南皮",
         "語言": "南皮話",
@@ -368,7 +392,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "臨西",
         "語言": "臨西話",
@@ -392,7 +416,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "冠縣",
         "語言": "冠縣話",
@@ -417,7 +441,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "武城",
         "語言": "武城話",
@@ -442,7 +466,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "平原",
         "語言": "平原話",
@@ -466,7 +490,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "樂陵",
         "語言": "樂陵話",
@@ -491,7 +515,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "陽信",
         "語言": "陽信話",
@@ -516,7 +540,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "濟陽",
         "語言": "濟陽話",
@@ -541,7 +565,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "濱州",
         "語言": "濱州話",
@@ -589,7 +613,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "平陰東阿",
         "語言": "平陰東阿話",
@@ -636,7 +660,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "張店馬尙",
         "語言": "淄博張店馬尙話",
@@ -684,7 +708,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "濰坊",
         "語言": "濰坊話",
@@ -709,7 +733,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5C4D0",
-        "marker-size": "large",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "榮成人和",
         "語言": "榮成人和話",
@@ -733,7 +757,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5C4D0",
-        "marker-size": "medium",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "煙臺",
         "語言": "煙臺話",
@@ -757,7 +781,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5C4D0",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "棲霞",
         "語言": "棲霞話",
@@ -781,7 +805,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5C4D0",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "萊西",
         "語言": "萊西話",
@@ -805,7 +829,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5C4D0",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "長島",
         "語言": "長島話",
@@ -976,7 +1000,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "曹縣",
         "語言": "曹縣話",
@@ -1000,7 +1024,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "費縣",
         "語言": "費縣話",
@@ -1169,7 +1193,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "東明",
         "語言": "東明話",
@@ -1217,7 +1241,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "濮陽",
         "語言": "濮陽話",
@@ -1241,7 +1265,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "登封",
         "語言": "登封話",
@@ -1265,7 +1289,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "洛陽",
         "語言": "洛陽話",
@@ -1313,7 +1337,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "汝州",
         "語言": "汝州話",
@@ -1337,7 +1361,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "淅川",
         "語言": "淅川話",
@@ -1361,7 +1385,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "項城",
         "語言": "項城話",
@@ -1385,7 +1409,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "阜南",
         "語言": "阜南話",
@@ -1409,7 +1433,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "潁上",
         "語言": "潁上話",
@@ -1433,7 +1457,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#916FF7",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "c",
         "title": "永年",
         "語言": "永年話",
@@ -1442,7 +1466,6 @@
         "音典分區": "華北-河南",
         "陳邡分區": "官話-山東-魯西大片-大名片",
         "版本": "2025-01-26",
-        "作者": "Resound",
         "錄入人": "Resound",
         "來源": "《河北永年方言语音研究》"
       },
@@ -1451,6 +1474,30 @@
         "coordinates": [
           114.502045,
           36.767693
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "安澤和川",
+        "語言": "安澤和川武安話",
+        "地點": "山西臨汾安澤和川和川",
+        "地圖集二分區": "晉語-邯新片-磁漳小片",
+        "音典分區": "華北-河南",
+        "方言島": true,
+        "版本": "2025-01-28",
+        "錄入人": "Resound",
+        "來源": "《山西安泽境内河北武安移民方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.243668,
+          36.268748
         ]
       }
     },
@@ -1556,7 +1603,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#926EF8",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "c",
         "title": "新鄕郞公廟",
         "語言": "新鄕郞公廟話",
@@ -1750,7 +1797,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#916FF7",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "c",
         "title": "陽原化稍營",
         "語言": "陽原化稍營話",
@@ -2060,7 +2107,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "西寧",
         "語言": "西寧話",
@@ -2180,7 +2227,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "汾城",
         "語言": "汾城話",
@@ -2228,7 +2275,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "安邑",
         "語言": "安邑話",
@@ -2552,8 +2599,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          112.242731,
-          36.144126
+          112.280394,
+          36.259234
         ]
       }
     },
@@ -3498,7 +3545,7 @@
         "title": "靖州",
         "語言": "靖州話",
         "地點": "湖南懷化靖州",
-        "地圖集二分區": "西南官話-湖廣片-靖晃小片",
+        "地圖集二分區": "西南官話-湖廣片-黎靖小片",
         "音典分區": "官話-岑江",
         "陳邡分區": "官話-長江-西南大片-靖州片",
         "版本": "2025-01-01",
@@ -3517,13 +3564,13 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#C75EEB",
+        "marker-color": "#E54E5D",
         "marker-size": "medium",
-        "marker-symbol": "g",
+        "marker-symbol": "b",
         "title": "通道雙江",
         "語言": "通道雙江縣溪話",
         "地點": "湖南懷化通道",
-        "地圖集二分區": "湘語-辰漵片",
+        "地圖集二分區": "西南官話-湖廣片-黎靖小片",
         "音典分區": "官話-岑江",
         "陳邡分區": "官話-長江-西南大片-靖州片",
         "版本": "2025-01-01",
@@ -3548,7 +3595,7 @@
         "title": "城步長安營",
         "語言": "城步長安營軍話",
         "地點": "湖南邵陽城步長安營",
-        "地圖集二分區": "西南官話-湖廣片-靖晃小片",
+        "地圖集二分區": "西南官話-湖廣片-黎靖小片",
         "音典分區": "官話-岑江",
         "陳邡分區": "官話-湘南-湘南大片-郴道片",
         "方言島": true,
@@ -3966,7 +4013,8 @@
         "地圖集二分區": "西南官話-桂柳片-桂北小片",
         "音典分區": "官話-桂北",
         "陳邡分區": "官話-狹義官話-滇桂大片-軍話一片",
-        "錄入人": "DaiDzao"
+        "錄入人": "DaiDzao",
+        "來源": "《广西富川富阳话研究》"
       },
       "geometry": {
         "type": "Point",
@@ -4257,11 +4305,34 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "曲靖茨營",
+        "語言": "曲靖茨營漢話",
+        "地點": "貴州曲靖麒麟茨營海三凹",
+        "地圖集二分區": "西南官話-雲南片-滇中小片",
+        "音典分區": "官話-雲南",
+        "版本": "2025-01-28",
+        "錄入人": "Resound",
+        "來源": "《曲靖麒麟区茨营镇（海三凹）方言音系调查》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.943747,
+          25.342436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "large",
         "marker-symbol": "b",
         "title": "昆明",
         "語言": "昆明漢話",
-        "地點": "雲南昆明五華華山街道",
+        "地點": "貴州昆明五華華山街道",
         "地圖集二分區": "西南官話-雲南片-滇中小片",
         "音典分區": "官話-雲南",
         "陳邡分區": "官話-狹義官話-滇桂大片-雲南片",
@@ -4274,6 +4345,52 @@
         "coordinates": [
           102.709372,
           25.046432
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "富民",
+        "語言": "富民漢話",
+        "地點": "貴州昆明富民",
+        "地圖集二分區": "西南官話-雲南片-滇中小片",
+        "音典分區": "官話-雲南",
+        "版本": "2025-01-28",
+        "錄入人": "Resound",
+        "來源": "《云南富民汉语方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.509936,
+          25.228869
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "富民款莊",
+        "語言": "富民款莊漢話",
+        "地點": "貴州昆明富民款莊",
+        "地圖集二分區": "西南官話-雲南片-滇中小片",
+        "音典分區": "官話-雲南",
+        "版本": "2025-01-28",
+        "錄入人": "Resound",
+        "來源": "《云南富民汉语方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.681404,
+          25.455093
         ]
       }
     },
@@ -4298,6 +4415,705 @@
         "coordinates": [
           102.821784,
           23.618999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "康定",
+        "語言": "康定漢話",
+        "地點": "四川甘孜康定",
+        "地圖集二分區": "西南官話-川西片-康藏小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2022-05-14",
+        "錄入人": "鶩髙赭紗匕",
+        "來源": "《康定汉语方言音系调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.963055,
+          30.004495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "犍爲",
+        "語言": "犍爲話",
+        "地點": "四川樂山犍爲玉津",
+        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川南片",
+        "版本": "2022-01-21",
+        "錄入人": "是的 我是一個玩家",
+        "來源": "《岷江流域方音字汇》《四川乐山等六县市方言调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.951011,
+          29.201101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "榮縣",
+        "語言": "榮縣話",
+        "地點": "四川自貢榮縣",
+        "地圖集二分區": "西南官話-西蜀片-江貢小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2022-05-18",
+        "錄入人": "月中尋桂",
+        "來源": "《四川荣县方言音系及其内部差异研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.419167,
+          29.456111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "綦江",
+        "語言": "綦江話",
+        "地點": "重慶綦江古南",
+        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2022-02-04",
+        "錄入人": "播州東條希",
+        "來源": "《綦江方言音系调查研究》《重庆永川等六区县方言语音调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.656389,
+          29.018056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "桐梓",
+        "語言": "桐梓話",
+        "地點": "貴州遵義桐梓婁山關",
+        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2022-02-04",
+        "錄入人": "播州東條希",
+        "來源": "《桐梓方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.837232,
+          28.114953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "遵義",
+        "語言": "遵義話",
+        "地點": "貴州遵義紅花崗",
+        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2022-02-04",
+        "錄入人": "播州東條希",
+        "來源": "《遵义方言的语音特点和新老差异》《‹遵义方言音系的特点›读后感》《遵义方言音系的特点》《遵义市志 方言》《遵义方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.941389,
+          27.709444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "思南",
+        "語言": "思南話",
+        "地點": "貴州銅仁思南",
+        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "錄入人": "2019212",
+        "來源": "自调查",
+        "參考文獻": "《思南县志》《贵州省志 汉语方言志》《思南方言语音的年龄差异研究》《贵州汉语方言概况》《贵州方言的内部分区问题》《贵州汉语方言分区》《贵州汉语方言调查》《贵州汉语方言概要》 中国语保平台"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.253236,
+          27.938463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "思南塘頭",
+        "語言": "思南塘頭話",
+        "地點": "貴州銅仁思南塘頭",
+        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "作者": "2019212",
+        "錄入人": "2019212",
+        "來源": "/",
+        "參考文獻": "《思南县志》《贵州省志 汉语方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.194969,
+          27.73367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "沿河",
+        "語言": "沿河縣城話",
+        "地點": "貴州銅仁沿河",
+        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "錄入人": "2019212",
+        "來源": "《铜仁方言与文化研究》《沿河土家族自治县志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.509332,
+          28.570862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "婺川",
+        "語言": "婺川話",
+        "地點": "貴州遵義婺川",
+        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2024-12-17",
+        "錄入人": "2019212",
+        "來源": "《务川方言志》《贵州务川方言音系特点》《贵州省志 汉语方言志》《贵州方言的内部分区问题》《遵义人学普通话指南》",
+        "參考文獻": "《贵州汉语方言特色词语汇编》《务川苗族仡佬族县志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.899128,
+          28.56336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "道眞",
+        "語言": "道眞話",
+        "地點": "貴州遵義道真",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2025-01-06",
+        "錄入人": "2019212",
+        "來源": "《道真方言语音研究》《贵州省志·汉语方言志》《道真仡佬族苗族自治县志》",
+        "參考文獻": "《遵义人学普通话指南》《贵州汉语方言调查》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.614305,
+          28.87194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "金沙",
+        "語言": "金沙漢話",
+        "地點": "貴州畢節金沙",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2025-01-29",
+        "錄入人": "Resound",
+        "來源": "《金沙汉语方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.227016,
+          27.466636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "水城",
+        "語言": "六盤水市區話",
+        "地點": "貴州六盤水鐘山",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "來源": "《六盘水乡镇方言语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.854558,
+          26.590009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "水城陡菁",
+        "語言": "水城陡菁話",
+        "地點": "貴州六盤水水城陡菁",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "來源": "《六盘水乡镇方言语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.135445,
+          26.481316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "水城玉舍",
+        "語言": "水城玉舍話",
+        "地點": "貴州六盤水水城玉舍",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "來源": "《六盘水乡镇方言语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.785839,
+          26.498391
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "貴陽",
+        "語言": "貴陽漢話",
+        "地點": "貴州貴陽雲巖毓秀路街道團結巷社區",
+        "地圖集二分區": "西南官話-川黔片-黔中小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2024-10-26",
+        "錄入人": "筑城燈神",
+        "來源": "《现代汉语方言音库·贵阳话音档》《現代漢語方言大詞典·分卷 貴陽方言詞典》《贵州省汉语方言特色词语汇编》《新修支那省別志全志·第4卷 貴州省上》《書適·黔語》《贵州省志·汉语方言志》复旦大学中华文明数据中心、中国语言资源保护工程采录展示平台"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.717428,
+          26.591639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "六枝朗岱",
+        "語言": "六枝郞岱話",
+        "地點": "貴州六盤水六枝郎岱",
+        "地圖集二分區": "西南官話-川黔片-黔中小片",
+        "音典分區": "長江-川黔",
+        "來源": "《六盘水乡镇方言语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.355188,
+          26.092166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "六枝岩脚",
+        "語言": "六枝岩脚話",
+        "地點": "貴州六盤水六枝岩脚",
+        "地圖集二分區": "西南官話-川黔片-黔中小片",
+        "音典分區": "長江-川黔",
+        "來源": "《六盘水乡镇方言语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.412072,
+          26.355872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "水城營盤",
+        "語言": "水城營盤話",
+        "地點": "貴州六盤水水城營盤",
+        "地圖集二分區": "西南官話-川黔片-黔中小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "作者": "耿碧艳,吴伟军",
+        "錄入人": "DaiDzao",
+        "維護人": "2019212",
+        "來源": "《贵州水城营盘乡方言音系》《六盘水乡镇方言语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.730908,
+          26.171704
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "盤縣響水",
+        "語言": "盤縣響水話",
+        "地點": "貴州六盤水盤州響水",
+        "地圖集二分區": "西南官話-川黔片-黔中小片",
+        "音典分區": "長江-川黔",
+        "來源": "《六盘水乡镇方言语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.593087,
+          25.473767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "盤縣鷄場坪",
+        "語言": "盤縣鷄場坪話",
+        "地點": "貴州六盤水盤州鷄場坪",
+        "地圖集二分區": "西南官話-川黔片-黔中小片",
+        "音典分區": "長江-川黔",
+        "來源": "《六盘水乡镇方言语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.645266,
+          25.971227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "成都",
+        "語言": "成都話",
+        "地點": "四川成都",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "錄入人": "慕禃",
+        "來源": "《四川成都话音系词汇调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.071595,
+          30.671974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "資中",
+        "語言": "資中話",
+        "地點": "四川內江資中",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2024-12-09",
+        "錄入人": "DaiDzao",
+        "來源": "《四川资中话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.861079,
+          29.772994
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "遂寧觀音",
+        "語言": "遂寧觀音話",
+        "地點": "四川遂寧安居觀音",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "錄入人": "DaiDzao",
+        "來源": "《四川遂宁地区方言语音系统研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.362618,
+          30.484019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "南充",
+        "語言": "南充話",
+        "地點": "四川南充",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2025-01-22",
+        "錄入人": "DaiDzao",
+        "來源": "《南充市辖区西河沿岸方言语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.110698,
+          30.837793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "西充仁和",
+        "語言": "西充話",
+        "地點": "四川南充仁和",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2025-01-17",
+        "錄入人": "DaiDzao",
+        "來源": "《西充方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.76629,
+          31.04699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "萬源",
+        "語言": "萬源話",
+        "地點": "四川達州萬源",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川北片",
+        "版本": "2022-05-14",
+        "錄入人": "鶩髙赭紗匕",
+        "來源": "《四川万源(城关)方言同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.041032,
+          32.087656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "忠縣石寶",
+        "語言": "忠縣石寶話",
+        "地點": "重慶忠縣石寶",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "錄入人": "DaiDzao",
+        "來源": "《湖南汨罗大荆三峡移民和当地居民方言接触初期的语音》《重庆忠县石宝方言的同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.203694,
+          30.427014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "長壽",
+        "語言": "長壽話",
+        "地點": "重慶長壽",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2022-01-09",
+        "錄入人": "改放碑靚仔",
+        "來源": "自製"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.077912,
+          29.860567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "重慶",
+        "語言": "重慶話",
+        "地點": "重慶",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2024-11-10",
+        "錄入人": "改放碑靚仔",
+        "來源": "《重庆方言志》《重庆市志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.560162,
+          29.564472
         ]
       }
     },
@@ -4376,533 +5192,6 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "small",
-        "marker-symbol": "b",
-        "title": "忠縣石寶",
-        "語言": "忠縣石寶話",
-        "地點": "重慶忠縣石寶",
-        "地圖集二分區": "西南官話-川黔片-成渝小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "錄入人": "DaiDzao",
-        "來源": "《湖南汨罗大荆三峡移民和当地居民方言接触初期的语音》《重庆忠县石宝方言的同音字汇》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          108.203694,
-          30.427014
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "長壽",
-        "語言": "重慶長壽話",
-        "地點": "重慶長壽",
-        "地圖集二分區": "西南官話-川黔片-成渝小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "版本": "2022-01-09",
-        "錄入人": "改放碑靚仔"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          107.077912,
-          29.860567
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "large",
-        "marker-symbol": "b",
-        "title": "重慶",
-        "語言": "重慶話",
-        "地點": "重慶",
-        "地圖集二分區": "西南官話-川黔片-成渝小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "版本": "2024-11-10",
-        "錄入人": "改放碑靚仔",
-        "來源": "《重庆方言志》《重庆市志》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          106.560162,
-          29.564472
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "large",
-        "marker-symbol": "b",
-        "title": "康定",
-        "語言": "康定漢話",
-        "地點": "四川甘孜康定",
-        "地圖集二分區": "西南官話-川西片-康藏小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "版本": "2022-05-14",
-        "錄入人": "鶩髙赭紗匕",
-        "來源": "《康定汉语方言音系调查研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          101.963055,
-          30.004495
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "large",
-        "marker-symbol": "b",
-        "title": "成都",
-        "語言": "成都話",
-        "地點": "四川成都",
-        "地圖集二分區": "西南官話-川黔片-成渝小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "錄入人": "慕禃",
-        "來源": "《四川成都话音系词汇调查研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          104.071595,
-          30.671974
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "犍爲",
-        "語言": "犍爲玉津話",
-        "地點": "四川樂山犍爲玉津",
-        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川南片",
-        "版本": "2022-01-21",
-        "錄入人": "是的 我是一個玩家",
-        "來源": "《犍为方言单字声调声学语音实验分析》《四川方言调查报告》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          103.951011,
-          29.201101
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "萬源",
-        "語言": "萬源話",
-        "地點": "四川達州萬源",
-        "地圖集二分區": "西南官話-川黔片-成渝小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川北片",
-        "版本": "2022-05-14",
-        "錄入人": "鶩髙赭紗匕",
-        "來源": "《四川万源(城关)方言同音字汇》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          108.041032,
-          32.087656
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "榮縣",
-        "語言": "榮縣話",
-        "地點": "四川自貢榮縣",
-        "地圖集二分區": "西南官話-西蜀片-江貢小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "版本": "2022-05-18",
-        "錄入人": "月中尋桂",
-        "來源": "《四川方言调查报告》《四川荣县方言音系及其内部差异研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          104.419167,
-          29.456111
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "綦江",
-        "語言": "綦江話",
-        "地點": "重慶綦江古南",
-        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "版本": "2022-02-04",
-        "錄入人": "播州東條希",
-        "來源": "《綦江方言音系调查研究》《重庆永川等六区县方言语音调查研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          106.656389,
-          29.018056
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "桐梓",
-        "語言": "桐梓話",
-        "地點": "貴州遵義桐梓婁山關",
-        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "版本": "2022-02-04",
-        "錄入人": "播州東條希",
-        "來源": "《桐梓方言志》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          106.837232,
-          28.114953
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "large",
-        "marker-symbol": "b",
-        "title": "遵義",
-        "語言": "遵義話",
-        "地點": "貴州遵義紅花崗",
-        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "版本": "2022-02-04",
-        "錄入人": "播州東條希",
-        "來源": "《遵义方言的语音特点和新老差异》《‹遵义方言音系的特点›读后感》《遵义方言音系的特点》《遵义市志 方言》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          106.941389,
-          27.709444
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "思南",
-        "語言": "思南話",
-        "地點": "貴州銅仁思南",
-        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "錄入人": "2019212",
-        "來源": "自调查",
-        "參考文獻": "《思南县志》《贵州省志 汉语方言志》《思南方言语音的年龄差异研究》《贵州汉语方言概况》《贵州方言的内部分区问题》《贵州汉语方言分区》《贵州汉语方言调查》《贵州汉语方言概要》 中国语保平台"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          108.253236,
-          27.938463
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "small",
-        "marker-symbol": "b",
-        "title": "思南塘頭",
-        "語言": "思南話（塘頭）",
-        "地點": "貴州銅仁思南塘頭",
-        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "作者": "2019212",
-        "錄入人": "2019212",
-        "來源": "/",
-        "參考文獻": "《思南县志》《贵州省志 汉语方言志》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          108.194969,
-          27.73367
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "沿河",
-        "語言": "沿河縣城話",
-        "地點": "貴州銅仁沿河",
-        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "錄入人": "2019212",
-        "來源": "《铜仁方言与文化研究》《沿河土家族自治县志》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          108.509332,
-          28.570862
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "婺川",
-        "語言": "婺川話",
-        "地點": "貴州遵義婺川",
-        "地圖集二分區": "西南官話-西蜀片-岷赤小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "版本": "2024-12-17",
-        "錄入人": "2019212",
-        "來源": "《务川方言志》《贵州务川方言音系特点》《贵州省志 汉语方言志》《贵州方言的内部分区问题》《遵义人学普通话指南》",
-        "參考文獻": "《贵州汉语方言特色词语汇编》《务川苗族仡佬族县志》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          107.899128,
-          28.56336
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "large",
-        "marker-symbol": "b",
-        "title": "貴陽",
-        "語言": "貴陽漢話",
-        "地點": "貴州貴陽雲巖毓秀路街道團結巷社區",
-        "地圖集二分區": "西南官話-川黔片-黔中小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "版本": "2024-10-26",
-        "錄入人": "筑城燈神",
-        "來源": "《现代汉语方言音库·贵阳话音档》《現代漢語方言大詞典·分卷 貴陽方言詞典》《贵州省汉语方言特色词语汇编》《新修支那省別志全志·第4卷 貴州省上》《書適·黔語》《贵州省志·汉语方言志》复旦大学中华文明数据中心、中国语言资源保护工程采录展示平台"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          106.717428,
-          26.591639
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "small",
-        "marker-symbol": "b",
-        "title": "水城營盤",
-        "語言": "水城營盤話",
-        "地點": "貴州六盤水水城營盤",
-        "地圖集二分區": "西南官話-川黔片-黔中小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "作者": "耿碧艳,吴伟军",
-        "錄入人": "DaiDzao",
-        "維護人": "2019212",
-        "來源": "《贵州水城营盘乡方言音系》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          104.730908,
-          26.171704
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "道眞",
-        "語言": "道眞話",
-        "地點": "貴州遵義道真",
-        "地圖集二分區": "西南官話-川黔片-成渝小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "版本": "2025-01-06",
-        "錄入人": "2019212",
-        "來源": "《道真方言语音研究》《贵州省志·汉语方言志》《道真仡佬族苗族自治县志》",
-        "參考文獻": "《遵义人学普通话指南》《贵州汉语方言调查》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          107.614305,
-          28.87194
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "資中",
-        "語言": "資中話",
-        "地點": "四川內江資中",
-        "地圖集二分區": "西南官話-西蜀片-江貢小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "版本": "2024-12-09",
-        "錄入人": "DaiDzao",
-        "來源": "《四川资中话语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          104.861079,
-          29.772994
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "遂寧",
-        "語言": "遂寧話",
-        "地點": "四川遂寧安居觀音鄉",
-        "地圖集二分區": "西南官話-川黔片-成渝小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "錄入人": "DaiDzao",
-        "來源": "《四川遂宁地区方言语音系统研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.362618,
-          30.484019
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "西充仁和",
-        "語言": "西充話",
-        "地點": "四川南充仁和",
-        "地圖集二分區": "西南官話-川黔片-成渝小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "版本": "2025-01-17",
-        "錄入人": "DaiDzao",
-        "來源": "《西充方言语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.76629,
-          31.04699
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "large",
-        "marker-symbol": "b",
-        "title": "南充",
-        "語言": "南充話",
-        "地點": "四川南充",
-        "地圖集二分區": "西南官話-川黔片-成渝小片",
-        "音典分區": "長江-川黔",
-        "陳邡分區": "官話-長江-西南大片-川中片",
-        "版本": "2025-01-22",
-        "錄入人": "DaiDzao",
-        "來源": "《南充市辖区西河沿岸方言语音比较研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          106.110698,
-          30.837793
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "荊州觀音壋",
@@ -4928,30 +5217,6 @@
         "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
-        "title": "江陵",
-        "語言": "江陵話",
-        "地點": "湖北荊州江陵",
-        "地圖集二分區": "西南官話-湖廣片-鄂中小片",
-        "音典分區": "長江-上湖廣",
-        "陳邡分區": "官話-長江-西南大片-荊湖片",
-        "版本": "2025-01-26",
-        "錄入人": "DaiDzao",
-        "來源": "《湖北江陵方言语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          112.424664,
-          30.041822
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
         "title": "宜城",
         "語言": "宜城話",
         "地點": "湖北襄陽宜城鄢城",
@@ -4967,30 +5232,6 @@
         "coordinates": [
           112.264033,
           31.722521
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "隨州淅河",
-        "語言": "隨州淅河話",
-        "地點": "湖北隨州淅河",
-        "地圖集二分區": "西南官話-湖廣片-鄂北小片",
-        "音典分區": "長江-上湖廣",
-        "陳邡分區": "官話-長江-西南大片-江漢片",
-        "版本": "2025-01-26",
-        "錄入人": "DaiDzao",
-        "來源": "《随州市曾都区淅河镇方言语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.480738,
-          31.68302
         ]
       }
     },
@@ -5191,6 +5432,54 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "江陵",
+        "語言": "江陵話",
+        "地點": "湖北荊州江陵",
+        "地圖集二分區": "西南官話-湖廣片-鄂中小片",
+        "音典分區": "長江-上湖廣",
+        "陳邡分區": "官話-長江-西南大片-荊湖片",
+        "版本": "2025-01-26",
+        "錄入人": "DaiDzao",
+        "來源": "《湖北江陵方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.424664,
+          30.041822
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "隨州淅河",
+        "語言": "隨州淅河話",
+        "地點": "湖北隨州淅河",
+        "地圖集二分區": "西南官話-湖廣片-鄂北小片",
+        "音典分區": "長江-上湖廣",
+        "陳邡分區": "官話-長江-西南大片-江漢片",
+        "版本": "2025-01-26",
+        "錄入人": "DaiDzao",
+        "來源": "《随州市曾都区淅河镇方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.480738,
+          31.68302
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "large",
         "marker-symbol": "b",
         "title": "武昌",
@@ -5307,6 +5596,30 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "洪湖",
+        "語言": "洪湖話",
+        "地點": "湖北荊州洪湖",
+        "地圖集二分區": "西南官話-湖廣片-鄂中小片",
+        "音典分區": "長江-下湖廣",
+        "陳邡分區": "官話-長江-西南大片-江漢片",
+        "版本": "2025-01-29",
+        "錄入人": "DaiDzao",
+        "來源": "《湖北洪湖方言语音特点研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.480824,
+          29.834274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-color": "#EB6E77",
         "marker-size": "small",
         "marker-symbol": "b",
@@ -5373,6 +5686,30 @@
         "coordinates": [
           114.625582,
           31.293309
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "新洲",
+        "語言": "新洲話",
+        "地點": "湖北武漢新洲",
+        "地圖集二分區": "江淮官話-黃孝片",
+        "音典分區": "長江-下湖廣",
+        "陳邡分區": "官話-長江-西南大片-江漢片",
+        "版本": "2025-01-29",
+        "錄入人": "DaiDzao",
+        "來源": "《新洲方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.810989,
+          30.846748
         ]
       }
     },
@@ -5673,7 +6010,7 @@
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "龍山",
-        "語言": "湘西龍山話",
+        "語言": "龍山話",
         "地點": "湖南湘西龍山",
         "地圖集二分區": "西南官話-湖廣片-湘西小片",
         "音典分區": "長江-下湖廣",
@@ -5700,7 +6037,7 @@
         "title": "新晃凳寨",
         "語言": "新晃凳寨話",
         "地點": "湖南懷化新晃凳寨",
-        "地圖集二分區": "西南官話-湖廣片-靖晃小片",
+        "地圖集二分區": "西南官話-湖廣片-懷玉小片",
         "音典分區": "長江-下湖廣",
         "陳邡分區": "官話-長江-西南大片-新晃片",
         "版本": "2022-06-16",
@@ -5712,6 +6049,30 @@
         "coordinates": [
           108.892042,
           27.038238
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "鄖西上津",
+        "語言": "鄖西上津話",
+        "地點": "湖北十堰鄖西上津",
+        "地圖集二分區": "西南官話-湖廣片-鄂北小片",
+        "音典分區": "長江-下湖廣",
+        "陳邡分區": "官話-長江-西南大片-鄖州片",
+        "版本": "2025-01-28",
+        "錄入人": "DaiDzao",
+        "來源": "《湖北郧西(上津)方言音系研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.0433,
+          33.14234
         ]
       }
     },
@@ -6055,6 +6416,30 @@
         "coordinates": [
           115.946061,
           30.078707
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "九江",
+        "語言": "九江話",
+        "地點": "江西九江",
+        "地圖集二分區": "江淮官話-黃孝片",
+        "音典分區": "長江-北鄱陽-黃九",
+        "陳邡分區": "官話-長江-西南大片-九江片",
+        "版本": "2025-01-30",
+        "錄入人": "DaiDzao",
+        "來源": "《江淮九江方言音系研究》《九江市浔阳区方言中的赣方言成分研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.982506,
+          29.708831
         ]
       }
     },
@@ -7760,7 +8145,7 @@
         "地點": "江蘇鹽城鹽都馬溝徐馬莊",
         "地圖集二分區": "江淮官話-洪巢片",
         "音典分區": "長江-通泰-鹽城",
-        "陳邡分區": "官話-長江-揚州大片-揚州片",
+        "陳邡分區": "官話-北下江-通泰大片-通泰片",
         "版本": "2024-12-30",
         "錄入人": "osfans",
         "來源": "《類音字彙》"
@@ -7784,7 +8169,7 @@
         "地點": "江蘇鹽城亭湖",
         "地圖集二分區": "江淮官話-洪巢片",
         "音典分區": "長江-通泰-鹽城",
-        "陳邡分區": "官話-長江-揚州大片-揚州片",
+        "陳邡分區": "官話-北下江-通泰大片-通泰片",
         "版本": "2025-01-02",
         "錄入人": "osfans",
         "來源": "《盐城市志2019》",
@@ -7833,7 +8218,7 @@
         "地點": "江蘇鹽城鹽都西鄕",
         "地圖集二分區": "江淮官話-洪巢片",
         "音典分區": "長江-通泰-鹽城",
-        "陳邡分區": "官話-長江-揚州大片-揚州片",
+        "陳邡分區": "官話-北下江-通泰大片-通泰片",
         "版本": "2025-01-12",
         "作者": "osfans",
         "來源": "/"
@@ -9555,7 +9940,7 @@
         "地點": "浙江金華蘭谿*散居",
         "地圖集二分區": "徽語-嚴州片",
         "音典分區": "浙西南-杭嚴",
-        "陳邡分區": "江東-蘇浙-寧紹大片-新桐片",
+        "陳邡分區": "江東-蘇浙-寧紹大片-九姓漁民片",
         "版本": "2025-01-09",
         "錄入人": "Resound",
         "來源": "《九姓渔民方言研究》"
@@ -15723,6 +16108,30 @@
         "marker-color": "#52CCAD",
         "marker-size": "small",
         "marker-symbol": "f",
+        "title": "安仁禾市",
+        "語言": "安仁禾市話",
+        "地點": "湖南郴州安仁永樂江禾市",
+        "地圖集二分區": "贛語-耒資片",
+        "音典分區": "湘贛-南湘-衡州",
+        "陳邡分區": "湘贛-衡邵-雪峯大片-安仁片",
+        "作者": "陈满华",
+        "錄入人": "登州薛氏",
+        "來源": "《安仁方言》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.206493,
+          26.750729
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
         "title": "安仁新渡",
         "語言": "安仁新渡話",
         "地點": "湖南郴州安仁永樂江新渡",
@@ -18994,7 +19403,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "l",
         "title": "漳平",
         "語言": "漳平話",
@@ -20715,7 +21124,7 @@
         "title": "石城小松",
         "語言": "石城小松話",
         "地點": "江西贛州石城小松",
-        "地圖集二分區": "客家話-雩信片",
+        "地圖集二分區": "客家話-寧龍片",
         "音典分區": "閩-閩西-北",
         "陳邡分區": "客家-貢水-貢水大片-寧都片",
         "版本": "2025-01-06",
@@ -23934,7 +24343,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#8FCCA3",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "m",
         "title": "大理周城",
         "語言": "大理周城白語",
@@ -23958,7 +24367,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#8FCCA3",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "m",
         "title": "劍川金華",
         "語言": "劍川金華白語",
