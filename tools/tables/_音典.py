@@ -25,9 +25,6 @@ class 表(_表):
 			音標 = 聲 + 韻 + 調值
 		elif 名 in ("1900梅惠",):
 			字,_,_,音 = 列[:4]
-		elif 名 in ("劍川金華",):
-			字, 聲韻, 調, 註 = 列[:4]
-			音 = 聲韻 + 調
 		elif 名 in ("樂昌黃圃",):
 			字, 調, 聲韻, 註 = 列[:4]
 			音 = 聲韻 + 調
@@ -304,6 +301,7 @@ class 表(_表):
 			if len(列) < 6: return
 			字 = 列[0].strip("()")
 			音集 = 列[自.音列]
+			if 音集.startswith("(") and 音集.endswith(")"): 音集 = 音集[1:-1]
 			if not 音集 or 音集.startswith("—"): return
 			_js = 字[1:] if len(字)>1 else ""
 			_js = _js.strip("（）")
@@ -312,13 +310,13 @@ class 表(_表):
 			for 音標 in 音集.split("/"):
 				音標 = 音標.strip()
 				c = ""
-				if "（" in 音標:
-					n = 音標.index("（")
+				if "(" in 音標:
+					n = 音標.index("(")
 					c = 音標[n:]
 					音標 = 音標[:n]
 				音 = 自.轉調類(音標)
 				註 = c + _js
-				if 註.startswith("（") and 註.endswith("）"):
+				if 註.startswith("(") and 註.endswith(")"):
 					註 = 註[1:-1]
 				l.append((字, 音, 註))
 			return l
