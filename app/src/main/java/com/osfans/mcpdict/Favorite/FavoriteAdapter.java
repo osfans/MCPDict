@@ -122,7 +122,7 @@ public class FavoriteAdapter extends CursorAdapter {
                 if (list == null) {
                 }
                 //scrollListToShowItem(list, view);
-                cursor.close();
+                //cursor.close();
             }
         }.execute();
     }
