@@ -110,7 +110,7 @@ def 加載(省=None):
 			continue
 		列 = dict(zip(fields, 行))
 		文件名 = 列["文件名"]
-		if not 文件名 or 文件名.startswith("#"):
+		if not 文件名 or 文件名.startswith("#") or 列["是否有人在做"] != "已做":
 			continue
 		語言 = normLangName(列["語言"])
 		簡稱 = normLangName(列["簡稱"])
@@ -125,7 +125,6 @@ def 加載(省=None):
 		錄入人 = normNames(列["錄入人"])
 		維護人 = normNames(列["維護人"])
 		推薦人 = normNames(列["推薦人"])
-		是否有人在做 = 列["是否有人在做"]
 		來源 = normSource(row[fields.index("來源")])
 		參考文獻 = 列["參考文獻"]
 		版本 = normVer(列["版本/更新時間"])
@@ -200,7 +199,6 @@ def 加載(省=None):
 			"錄入人":錄入人,
 			"維護人":維護人,
 			"推薦人":推薦人,
-			"是否有人在做":是否有人在做,
 			"來源": 來源,
 			"參考文獻":參考文獻,
 			"音系說明":音系說明,
