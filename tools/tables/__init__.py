@@ -220,8 +220,6 @@ def getLangs(dicts, 參數, args):
 			except Exception as e:
 				print(f"\t\t\t{e} {mod}")
 				continue
-			if d.pop("是否有人在做") != "已做":
-				print(f"{語} 不是已做")
 			if "繁" not in d["繁簡"]: 語.simplified = 2
 			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 			if "聯表列名" in d:
@@ -242,7 +240,9 @@ def getLangs(dicts, 參數, args):
 			語.info = d
 			語.加載(dicts, 更新=args.c)
 			if d["文件名"] != "mcpdict.db":
-				if 語.字數 == 0: continue
+				if 語.字數 == 0:
+					if 語.spath: print(f"{語} 未成功解析")
+					continue
 				if 語.字數 < 900:
 					print(f"{語} 字數太少: {語.字數}")
 				elif 語.聲韻數 < 100:
