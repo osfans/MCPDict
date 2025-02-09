@@ -135,7 +135,7 @@ def 加載(省=None):
 		j = fields.index("[1]陰平")
 		聲調 = getTones([列[fields[i]] for i in range(j, j+10)])
 
-		orders = [列[i] for i in ("地圖集二排序", "音典排序", "陳邡排序")]
+		orders = [列[i].strip() for i in ("地圖集二排序", "音典排序", "陳邡排序")]
 		colors = [row[fields.index(i)].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典顏色","陳邡顏色")]
 		subcolor = row[fields.index("音典過渡色")].fill.fgColor.value[2:]
 		if subcolor and subcolor != "000000" and subcolor != colors[1]:
