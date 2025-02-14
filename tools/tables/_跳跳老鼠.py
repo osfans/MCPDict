@@ -20,6 +20,7 @@ class 表(_表):
 			else:
 				聲韻 = 自.聲韻
 		elif 名 in ("先秦"):
+			自.爲音 = False
 			音, _, 組 = 列[:3]
 		elif 名 in ("景寧東坑",):
 			if len(列) == 1 or not 列[1].strip():
