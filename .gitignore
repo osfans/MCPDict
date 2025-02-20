@@ -16,6 +16,7 @@ build/
 *.doc
 *.docx
 *.pyc
+*.zip
 __pycache__
 yedict/
 揚州同音字表*.tsv
