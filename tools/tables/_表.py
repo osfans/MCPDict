@@ -151,10 +151,10 @@ def docx2tsv(doc):
 					for p in cell.paragraphs:
 						行 += "".join(map(run2text, p.runs)).replace("\t", "").replace("\n", "")
 					行 += "\t"
-				lines.append(行.replace("}~", "~}").replace("~{", "{~").replace("}{", "").strip())
+				lines.append(行.replace("}~", "~}").replace("~{", "{~").replace("}{", "").replace("{h}", "h").strip())
 		elif isinstance(each, docx.oxml.text.paragraph.CT_P):
 			element = Paragraph(each, Doc)
-			行 = "".join(map(run2text, element.runs)).replace("}~", "~}").replace("~{", "{~").replace("}{", "")
+			行 = "".join(map(run2text, element.runs)).replace("}~", "~}").replace("~{", "{~").replace("}{", "").replace("{h}", "h")
 			lines.append(行)
 	行 = "\n".join(lines).replace("}\n{", "")
 	t = open(tsv, "w", encoding="U8", newline="\n")
@@ -238,7 +238,7 @@ class 表:
 		sname = g[0]
 		自.文件名 = os.path.basename(sname)
 		if isXls(sname):
-			page = 1 if 自.簡稱 in ("中山石岐", "通城大坪", "1796建甌") else 0
+			page = 1 if 自.簡稱 in ("中山石岐", "通城大坪", "1796建甌", "中山南蓢") else 0
 			if 自.簡稱 == "開平護龍": page = 3
 			xls2tsv(sname, page)
 			sname = getTsvName(sname)
