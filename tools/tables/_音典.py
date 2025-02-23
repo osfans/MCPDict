@@ -406,8 +406,10 @@ class 表(_表):
 			字, _, 音標, 註 = 列[:4]
 		elif len(列) == 2:
 			字, 音 = 列[:2]
-		else:
+		elif len(列) >= 3:
 			字, 音, 註 = 列[:3]
+		else:
+			return
 		if 字:
 			if 音標 and not 音:
 				音 = 自.轉調類(音標)

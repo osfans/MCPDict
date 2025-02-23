@@ -1,6 +1,10 @@
 #漢字	音標	解釋
 □	fo6	丢
+□	poŋ5	凍
+□	tʰia3	巨
+□	pʰaŋ3	旋
 □	se2	發
+□	kʰiau1	窮
 □	mak8	肉
 一	ik7	
 一	ik8	
@@ -64,7 +68,6 @@
 催	tsʰui1	
 傳	tsʰoŋ2	
 傷	sio1	
-傻	siau1	
 傾	kʰeŋ1	
 像	tsʰioŋ5	
 儀	i5	
@@ -98,7 +101,6 @@
 冰	peŋ1	
 冷	neŋ3	
 涼	liaŋ2	
-凍	poŋ5	
 凡	faŋ2	
 出	tsʰuk7	
 刀	to1	
@@ -234,7 +236,6 @@
 壽	siu4	
 外	ua6	
 多	to1	
-夜	me2	
 夠	kau5	
 夢	moŋ6	
 大	tua6	
@@ -253,7 +254,6 @@
 姐	tse3	小~
 姑	kou1	
 姓	se1	
-姓	niŋ2	
 委	ui1	
 姨	i2	
 姪	tsʰik7	
@@ -319,7 +319,6 @@
 嶺	nia3	
 巖	ŋaŋ2	
 左	to5	
-巨	tʰia3	
 巴	pa1	
 巷	haŋ6	
 布	pou5	
@@ -494,7 +493,6 @@
 散	sa3	藥~
 敬	kiŋ5	
 敵	tʰik8	
-文	pi1	
 文	muŋ2	
 斗	tau3	
 料	niau6	
@@ -507,7 +505,6 @@
 方	foŋ1	
 方	hoŋ1	
 旁	pʰia2	
-旋	pʰaŋ3	
 族	tsʰuk8	
 日	ŋik8	
 旦	taŋ4	
@@ -524,13 +521,13 @@
 景	kiŋ3	
 晴	tsʰiŋ2	
 暗	aŋ5	
+暝	me2	夜
 暫	tsʰaŋ2	
 暴	pau5	~雨
 暴	pʰau2	殘~
 曆	lak8	
 曉	hiau3	
 更	kiŋ4	
-書	pʰou4	
 曾	tseŋ1	
 最	tsʰui5	
 會	fue4	
@@ -555,7 +552,7 @@
 板	pai3	
 枉	puaŋ3	
 枕	tsiŋ3	
-林	niŋ2	
+林	niŋ2	姓
 林	naŋ2	樹~
 果	kue3	
 枵	iau1	餓
@@ -763,6 +760,7 @@
 疾	tsʰik8	
 病	pe5	
 痛	tʰia5	
+痟	siau1	傻
 痣	ki5	
 痰	tʰaŋ2	
 療	niau2	
@@ -824,7 +822,6 @@
 穿	tsʰeŋ5	
 突	tak7	
 窗	tsʰoŋ1	
-窮	kʰiau1	
 窮	kʰioŋ1	
 竅	kʰiau5	
 竈	tsau5	
@@ -843,6 +840,7 @@
 節	tsek7	
 篇	pʰeŋ1	
 篷	pʰuŋ2	
+簿	pʰou4	書
 籃	la2	
 籤	tsʰiaŋ1	
 米	mi3	
@@ -926,10 +924,10 @@
 脹	tio5	
 腎	siŋ5	
 腔	tsʰiaŋ1	
+腥	tsʰe1	臊
 膜	moʔ8	
 膝	tsʰik7	
 膽	ta3	
-臊	tsʰe1	
 臘	laʔ7	
 自	su2	
 臭	tsʰau5	

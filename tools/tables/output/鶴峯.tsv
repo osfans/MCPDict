@@ -1,5 +1,5 @@
 #漢字	音標	解釋
-□	tan3	
+□	tʂʰua2	~雨
 □	tʂʰoŋ5	~苔，~起来
 □	tʰia3	东西软粘住又掉下来
 □	tsʰoŋ3	从中作梗破坏，~事
@@ -20,6 +20,8 @@
 □	ka3	肉的意思
 □	pai1	脚跛
 □	pʰie3	脚~了
+□	tan3	蔬菜焯水
+□	taŋ3	蔬菜焯水
 □	pa1	贴
 □	tʂua2	踢
 □	tʂuai1	蹲着
@@ -255,7 +257,6 @@
 興	ɕin5	~旺
 興	ɕin5	高~
 兵	pin1	
-兵	ɕiaŋ3	
 其	tɕʰi2	
 具	tɕy5	
 典	tian3	
@@ -603,7 +604,7 @@
 塔	tʰa2	
 塘	tʰaŋ2	
 塞	se2	
-填	tian2	
+填	tʰian2	
 塾	ʂou5	
 境	tɕin3	
 墈	kʰan1	镶
@@ -631,7 +632,7 @@
 够	kou5	
 大	ta5	~小
 大	ta5	~夫，~黄
-天	tian1	
+天	tʰian1	
 太	tʰai5	
 夫	fu1	
 央	iaŋ1	
@@ -939,13 +940,13 @@
 往	uaŋ3	
 征	tʂən1	
 徑	tɕin1	
-待	tɕi5	
 待	tai5	
 很	xən3	
-律	ly1	
+律	ly5	
 徐	tɕʰy2	
 徒	tʰou2	
 得	te2	
+徛	tɕi5	站
 循	ɕyn2	
 微	uei2	
 徽	xuei1	
@@ -1175,7 +1176,6 @@
 控	kʰoŋ5	
 推	tʰei1	
 撣	tan2	
-撣	taŋ3	蔬菜焯水
 揉	ʐou2	
 描	miau2	
 提	tʰi2	
@@ -1276,8 +1276,8 @@
 舊	tɕiou5	
 旨	tʂʅ3	
 早	tsau3	
-早	xan5	
 旬	ɕyn2	
+旱	xan5	
 時	ʂʅ2	
 曠	kʰuaŋ2	~课
 曠	kʰuaŋ5	~野
@@ -1477,6 +1477,7 @@
 槐	xuai2	
 檳	pin1	
 槽	tsʰau2	
+樁	tʂʰoŋ1	
 樟	tʂaŋ1	
 模	mo2	~子
 模	mo2	~范
@@ -1537,7 +1538,6 @@
 民	min2	
 气	tɕʰi5	
 水	ʂuei3	
-水	tan3	
 永	yn3	
 永	ioŋ3	
 汁	tʂʅ2	
@@ -1621,7 +1621,6 @@
 涎	ɕian2	
 濤	tʰau1	
 澇	nau2	
-渦	no2	
 潤	ʐuən5	
 漲	tʂaŋ3	
 澀	se2	
@@ -1638,7 +1637,7 @@
 混	xuən5	
 淹	ŋan1	
 淹	ian1	
-添	tian1	
+添	tʰian1	
 清	tɕʰin1	
 淵	yan1	
 漸	tɕian5	
@@ -1666,7 +1665,7 @@
 滗	pi1	
 滾	kuən3	
 滿	man3	
-濾	ly1	
+濾	ly5	
 濾	nou5	
 濫	nan5	
 灘	tʰan1	
@@ -1730,7 +1729,6 @@
 焌	tɕʰy1	
 焚	xuən2	
 焦	tɕiau1	
-焯	tan3	
 焰	ian5	
 然	ʐan2	
 煎	tɕian1	
@@ -1805,11 +1803,10 @@
 獻	ɕian5	
 猴	xou2	
 猾	xua2	
-獄	ɕi2	
 獄	y5=	
 獺	tʰa2	
 玄	ɕyan2	
-率	ly1	
+率	ly5	
 率	ʂuai5	
 玉	y5	
 王	uaŋ2	
@@ -1844,13 +1841,13 @@
 甑	tsən5	
 甘	kan1	
 甚	ʂən5	
-甜	tian2	
+甜	tʰian2	
 生	sən1	
 甥	sən1	
 用	ioŋ5	
 甩	ʂuai3	
 甫	fu3	
-田	tian2	
+田	tʰian2	
 由	iou2	
 甲	ka2-	
 甲	tɕia2=	
@@ -1878,7 +1875,6 @@
 疫	y5=	
 瘡	tʂʰuaŋ1	
 瘋	xoŋ1	
-瘋	ma2	
 疹	tʂən3	
 疾	tɕi2	
 痂	tɕia1	
@@ -1895,6 +1891,7 @@
 痣	tʂʅ5	
 癆	nau5	
 痰	tʰan2	
+痳	ma2	
 癡	tʂʰʅ1	
 痹	pi3	
 瘟	uən1	
@@ -2289,6 +2286,7 @@
 勝	ʂən5	
 胞	pau1	
 胡	fu2	
+胯	kʰua1	蜕
 胳	kə1	
 胳	ke2	
 膠	tɕiau1	
@@ -2303,6 +2301,7 @@
 膿	noŋ2	
 脚	tɕio2	
 脫	tʰo2	
+腡	no2	
 臉	nian3	
 脾	pʰi2	
 臘	na2	
@@ -2334,7 +2333,7 @@
 舌	ʂe2	
 舍	ʂe3	
 舒	ʂu1	
-舔	tian3	
+舔	tʰian3	
 舜	ʂuən5	
 舞	vu3	
 航	xaŋ2	
@@ -2401,7 +2400,6 @@
 菊	tɕy2	
 菌	tɕyn5	
 菖	tʂʰaŋ1	
-菜	tan3	
 菜	tsʰai5	
 菠	po1	
 菢	pau5	孵小鸡
@@ -2436,7 +2434,6 @@
 蔗	tʂe3	
 蔡	tsʰai5	
 蔬	sou1	
-蔬	tan3	
 蔸	tou1	
 蕉	tɕiau1	
 蕙	ɕyn1	
@@ -2455,7 +2452,7 @@
 蘸	tʂan3	
 虎	fu3	
 虐	nio2	
-虑	ly1	
+虑	ly5	
 虔	tɕʰian2	
 虛	ɕy1	
 蟲	tʂʰoŋ2	
@@ -2486,7 +2483,6 @@
 蜇	ʂe5	
 蜈	vu2	
 蜓	tʰin2	
-蛻	kʰua1	
 蛻	tʰo2	
 蝸	o1	
 蜜	mi2	
@@ -2970,7 +2966,6 @@
 雇	ku5	
 雌	tsʰɿ2	
 雕	tiau1	
-雨	tʂʰua2	
 雨	y3	
 雪	ɕye2	
 零	nin2	
