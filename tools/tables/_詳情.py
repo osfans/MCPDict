@@ -60,6 +60,7 @@ def getTones(tones):
 def normNames(s):
 	if not s or s == "Web": return ""
 	if type(s) is float: s = str(int(s))
+	if type(s) is not str: s = str(s)
 	s = re.sub(r"([（\(])", " \\1", s)
 	return re.sub(" ?[、，,&] ?", ",", s)
 
