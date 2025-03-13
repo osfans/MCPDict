@@ -100,7 +100,7 @@ public class DB extends SQLiteAssetHelper {
         ALL, ISLAND, HZ, CURRENT, RECOMMEND, CUSTOM, DIVISION, AREA, EDITOR
     }
 
-    public static int COL_ALL_LANGUAGES = 1500;
+    public static int COL_ALL_LANGUAGES = 0;
     public static final String ALL_LANGUAGES = "*";
 
     private static final String TABLE_NAME = "mcpdict";
@@ -401,6 +401,7 @@ public class DB extends SQLiteAssetHelper {
         COL_LAST_INFO = COLUMNS.length - 2;
         COL_FIRST_SHAPE = COL_VA + 2;
         COL_LAST_SHAPE = COL_LAST_INFO;
+        COL_ALL_LANGUAGES = COLUMNS.length + 100;
         cursor.close();
         ArrayList<String> arrayList = new ArrayList<>();
         for(int col = COL_FIRST_DICT; col <= COL_LAST_DICT; col++) {
