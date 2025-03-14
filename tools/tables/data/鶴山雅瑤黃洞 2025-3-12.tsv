@@ -27,10 +27,10 @@
 麻	m	a	12	m	aa	4	
 媽	m	a	55	m	aa	2	
 馬	ᵐb	a	21	mb	aa	5	
-牙	nk	a	12	ng	aa	4	
-鴉	nk	a	23	ng	aa	1	
-亞	nk	a	23	ng	aa	1	
-瓦	nk	a	55	ng	aa	2	
+牙	ŋ	a	12	ng	aa	4	
+鴉	ŋ	a	23	ng	aa	1	
+亞	ŋ	a	23	ng	aa	1	
+瓦	ŋ	a	55	ng	aa	2	
 地		ai	32		aai	6	
 碑	v	ai	23	v	aai	1	
 臂	v	ai	32	v	aai	6	
@@ -82,7 +82,7 @@
 埋	m	ai	12	m	aai	4	
 尼	n	ai	12	n	aai	4	
 你	n	ai	21	n	aai	5	
-毅	nk	ai	32	ng	aai	6	
+毅	ŋ	ai	32	ng	aai	6	
 籬	l	ai	12	l	aai	4	
 荔	l	ai	32	l	aai	6	
 梨	l	ai	12	l	aai	4	
@@ -224,9 +224,9 @@
 文	ᵐb	an	12	mb	aan	4	
 蚊	ᵐb	an	12	mb	aan	4	
 難	n	an	12	n	aan	4	難易
-雁	nk	an	32	ng	aan	6	
-碾	nk	an	21	ng	aan	5	
-銀	nk	an	12	ng	aan	4	
+雁	ŋ	an	32	ng	aan	6	
+碾	ŋ	an	21	ng	aan	5	
+銀	ŋ	an	12	ng	aan	4	
 欄	l	an	12	l	aan	4	
 人	j	an	12	j	aan	4	
 忍	j	an	21	j	aan	5	
@@ -308,7 +308,7 @@
 墨	m	ak	22	m	aak	6+	
 陌	ᵐb	ak	22	mb	aak	6+	
 脈	ᵐb	ak	22	mb	aak	6+	
-扼	nk	ak	55	ng	aak	2+	
+扼	ŋ	ak	55	ng	aak	2+	
 肋	l	ak	22	l	aak	6+	
 額	j	ak	22	j	aak	6+	
 暗		am	23		aam	1	
@@ -579,7 +579,7 @@
 別	v	it	22	v	it	6+	區別
 別	v	it	22	v	it	6+	離別
 必	v	it	55	v	it	2+	
-逼	v	it	3+	v	it	3+	
+逼	v	it	55	v	it	2+	
 碧	v	it	12	v	it	4+	
 壁	v	it	21	v	it	5+	
 滑	v	it	22	v	it	6+	
@@ -827,13 +827,13 @@
 鎖	ɬ	u	55	sl	u	2	
 姑	k	u	23	g	u	1	
 古	k	u	55	g	u	2	
-故	k	u	3	g	u	3	
+故	k	u	33	g	u	1	
 摸	ᵐb	u	55	mb	u	2	
 魔	m	u	23	m	u	1	
 那	n	u	32	n	u	6	
 糯	n	u	32	n	u	6	
-蛾	nk	u	12	ng	u	4	
-餓	nk	u	32	ng	u	6	
+蛾	ŋ	u	12	ng	u	4	
+餓	ŋ	u	32	ng	u	6	
 羅	l	u	12	l	u	4	
 囉	l	u	12	l	u	4	
 縷	l	u	21	l	u	5	絲縷
@@ -884,7 +884,7 @@
 闊	f	ut	23	f	ut	1+	
 佛	f	ut	22	f	ut	6+	
 出	ʦʰ	ut	55	c	ut	2+	
-術	s	ut	66+	s	ut	66+	
+術	s	ut	22	s	ut	6+	
 掘	k	ut	22	g	ut	6+	
 骨	k	ut	55	g	ut	2+	
 括	kʰ	ut	23	k	ut	1+	
@@ -930,7 +930,7 @@
 掌	ʦ	uŋ	55	z	uung	2	
 椿	ʦ	uŋ	23	z	uung	1	
 誦	ʦ	uŋ	32	z	uung	6	
-鐘	ʦ	uŋ	11	z	uung	11	
+鐘	ʦ	uŋ	33	z	uung	1	
 舂	ʦ	uŋ	23	z	uung	1	舂米
 蒼	ʦʰ	uŋ	23	c	uung	1	
 從	ʦʰ	uŋ	12	c	uung	4	
@@ -1088,7 +1088,7 @@
 努	n	ɛ	21	n	e	5	
 腦	n	ɛ	55	n	e	2	
 鬧	n	ɛ	32	n	e	6	
-咬	nk	ɛ	55	ng	e	2	
+咬	ŋ	ɛ	55	ng	e	2	
 勞	l	ɛ	12	l	e	4	
 老	l	ɛ	55	l	e	2	
 孩	h	ei	12	h	ei	4	
@@ -1135,7 +1135,7 @@
 梅	ᵐb	ə	12	mb	ea	4	
 妹	m	ə	32	m	ea	6	
 內	n	ə	32	n	ea	6	
-外	nk	ə	32	ng	ea	6	
+外	ŋ	ə	32	ng	ea	6	
 膽		em	55		eem	2	
 淡		em	21		eem	5	
 貪	h	em	23	h	eem	1	
@@ -1257,16 +1257,16 @@
 米	m	ɔ	55	m	o	2	
 母	m	ɔ	21	m	o	5	
 鈕	n	ɔ	55	n	o	2	鈕扣
-鉤	nk	ɔ	23	ng	o	1	
-我	nk	ɔ	32	ng	o	6	
-臥	nk	ɔ	32	ng	o	6	
-挨	nk	ɔ	23	ng	o	1	挨住
-涯	nk	ɔ	12	ng	o	4	
-藝	nk	ɔ	32	ng	o	6	
-蟻	nk	ɔ	55	ng	o	2	
-危	nk	ɔ	12	ng	o	4	
-魏	nk	ɔ	32	ng	o	6	
-牛	nk	ɔ	12	ng	o	4	
+鉤	ŋ	ɔ	23	ng	o	1	
+我	ŋ	ɔ	32	ng	o	6	
+臥	ŋ	ɔ	32	ng	o	6	
+挨	ŋ	ɔ	23	ng	o	1	挨住
+涯	ŋ	ɔ	12	ng	o	4	
+藝	ŋ	ɔ	32	ng	o	6	
+蟻	ŋ	ɔ	55	ng	o	2	
+危	ŋ	ɔ	12	ng	o	4	
+魏	ŋ	ɔ	32	ng	o	6	
+牛	ŋ	ɔ	12	ng	o	4	
 騾	l	ɔ	12	l	o	4	
 賴	l	ɔ	32	l	o	6	
 勵	l	ɔ	32	l	o	6	
@@ -1293,8 +1293,8 @@
 耐	n	ɔi	32	n	oi	6	
 奈	n	ɔi	32	n	oi	6	
 奶	n	ɔi	21	n	oi	5	
-艾	nk	ɔi	32	ng	oi	6	
-桅	nk	ɔi	12	ng	oi	4	桅杆
+艾	ŋ	ɔi	32	ng	oi	6	
+桅	ŋ	ɔi	12	ng	oi	4	桅杆
 短		ɔn	55		on	2	
 緞		ɔn	32		on	6	
 墩		ɔn	23		on	1	
@@ -1324,7 +1324,7 @@
 殉	ɬ	ɔn	32	sl	on	6	
 乾	k	ɔn	23	g	on	1	乾濕
 滿	m	ɔn	55	m	on	2	
-岸	nk	ɔn	32	ng	on	6	
+岸	ŋ	ɔn	32	ng	on	6	
 缽	v	ɔt	22	v	ot	6+	
 勃	v	ɔt	22	v	ot	6+	
 奪	v	ɔt	22	v	ot	6+	
@@ -1370,7 +1370,7 @@
 屬	s	ɔk	22	s	ok	6+	
 局	k	ɔk	22	g	ok	6+	
 蟆	m	ɔk	12	m	ok	4+	蛤蟆
-惡	nk	ɔk	23	ng	ok	1+	可惡
+惡	ŋ	ɔk	23	ng	ok	1+	可惡
 樂	l	ɔk	22	l	ok	6+	
 鹿	l	ɔk	22	l	ok	6+	
 錄	l	ɔk	22	l	ok	6+	
