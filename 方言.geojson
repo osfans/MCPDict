@@ -2032,6 +2032,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "南召白土崗",
+        "語言": "南召白土崗話",
+        "地點": "河南南陽南召白土崗",
+        "地圖集二分區": "中原官話-南魯片",
+        "音典分區": "華北-河南",
+        "陳邡分區": "官話-河南-河南大片-豫西片",
+        "版本": "2025-03-15",
+        "錄入人": "DaiDzao",
+        "來源": "《南召方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.37099,
+          33.44549
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "淅川",
@@ -2121,6 +2145,30 @@
         "coordinates": [
           116.265203,
           32.658299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "靈寶陽平",
+        "語言": "靈寶陽平話",
+        "地點": "河南三門峽靈寶陽平",
+        "地圖集二分區": "中原官話-關中片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-關中-關中大片-閿鄉片",
+        "版本": "2025-03-14",
+        "錄入人": "DaiDzao",
+        "來源": "《灵宝阳平镇方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.682246,
+          34.522757
         ]
       }
     },
@@ -18953,6 +19001,54 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-color": "#5ED154",
+        "marker-size": "small",
+        "marker-symbol": "j",
+        "title": "韶關向陽",
+        "語言": "韶關武江西河向陽土話(虱婆聲)",
+        "地點": "廣東韶關武江區西河向陽",
+        "地圖集二分區": "平話和土話-粵北片",
+        "音典分區": "廣中-韶州",
+        "陳邡分區": "嶺東-韶州-韶州大片-韶州片",
+        "版本": "2025-03-15",
+        "錄入人": "Resound",
+        "來源": "《韶关土语调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.596817,
+          24.805014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5ED154",
+        "marker-size": "small",
+        "marker-symbol": "j",
+        "title": "韶關大村",
+        "語言": "韶關曲江大村土話(虱婆聲)",
+        "地點": "廣東韶關曲江區白土大村",
+        "地圖集二分區": "平話和土話-粵北片",
+        "音典分區": "廣中-韶州",
+        "陳邡分區": "嶺東-韶州-韶州大片-韶州片",
+        "版本": "2025-03-14",
+        "錄入人": "Resound",
+        "來源": "《韶关土语调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.525359,
+          24.627112
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-color": "#A5C24E",
         "marker-size": "small",
         "marker-symbol": "h",
@@ -20915,7 +21011,7 @@
         "marker-color": "#5ED154",
         "marker-size": "small",
         "marker-symbol": "j",
-        "title": "富川莫家",
+        "title": "富川莫家梧州話",
         "語言": "富川梧州話（福利莫家）",
         "地點": "廣西賀州富川福利莫家",
         "地圖集二分區": "平話和土話-桂北片",
@@ -20938,7 +21034,7 @@
         "marker-color": "#C75EEB",
         "marker-size": "small",
         "marker-symbol": "g",
-        "title": "江華濤墟",
+        "title": "江華濤墟寨山話",
         "語言": "江華寨山話（濤墟）",
         "地點": "湖南永州江華濤墟",
         "地圖集二分區": "湘語-永全片-道江小片",
@@ -26539,7 +26635,7 @@
         "marker-color": "#C75EEB",
         "marker-size": "small",
         "marker-symbol": "g",
-        "title": "江華粟米塘",
+        "title": "江華粟米塘七都話",
         "語言": "江華粟米塘七都話",
         "地點": "湖南永州江華大路鋪粟米塘粟米塘",
         "地圖集二分區": "湘語-永全片-道江小片",
@@ -26563,7 +26659,7 @@
         "marker-color": "#C75EEB",
         "marker-size": "small",
         "marker-symbol": "g",
-        "title": "江華河路口",
+        "title": "江華河路口七都話",
         "語言": "江華河路口平地瑤七都話",
         "地點": "湖南永州江華河路口拔干頭、老車",
         "地圖集二分區": "湘語-永全片-道江小片",
