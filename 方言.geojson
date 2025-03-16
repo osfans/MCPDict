@@ -5778,6 +5778,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "鎭坪鍾寶",
+        "語言": "鎭坪鍾寶話",
+        "地點": "陝西安康鎭坪鍾寶",
+        "地圖集二分區": "西南官話-川黔片-陝南小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-江漢片",
+        "版本": "2025-03-16",
+        "錄入人": "DaiDzao",
+        "來源": "《镇坪钟宝方言同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.543454,
+          31.830913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "large",
         "marker-symbol": "b",
         "title": "康定",
@@ -19004,6 +19028,30 @@
         "marker-color": "#5ED154",
         "marker-size": "small",
         "marker-symbol": "j",
+        "title": "韶關犁市",
+        "語言": "韶關湞江犁市土話(虱婆聲)",
+        "地點": "廣東韶關湞江區犁市",
+        "地圖集二分區": "平話和土話-粵北片",
+        "音典分區": "廣中-韶州",
+        "陳邡分區": "嶺東-韶州-韶州大片-韶州片",
+        "版本": "2025-03-16",
+        "錄入人": "Resound",
+        "來源": "《韶关犁市土话研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.537534,
+          24.899986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5ED154",
+        "marker-size": "small",
+        "marker-symbol": "j",
         "title": "韶關向陽",
         "語言": "韶關武江西河向陽土話(虱婆聲)",
         "地點": "廣東韶關武江區西河向陽",
@@ -20672,6 +20720,31 @@
         "coordinates": [
           113.397905,
           22.542931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EBC75E",
+        "marker-size": "small",
+        "marker-symbol": "i",
+        "title": "南海沙頭",
+        "語言": "南海沙頭話",
+        "地點": "廣東佛山南海沙頭南畔南金英明",
+        "地圖集二分區": "粵語-廣府片",
+        "音典分區": "嶺南-珠江-南海",
+        "陳邡分區": "廣東-南粵-西江大片-三邑片",
+        "版本": "2025-03-16",
+        "錄入人": "Kwíngiem Chan",
+        "維護人": "Kwíngiem Chan",
+        "來源": "《广东南海沙头方言同音字汇》、《广东南海方言音韵研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.044497,
+          22.899364
         ]
       }
     },
