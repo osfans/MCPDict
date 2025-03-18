@@ -200,7 +200,7 @@
     </string-array>
 
     <string name="pref_key_dgy_display">DGY_DISPLAY</string>
-    <string name="pref_title_dgy_display">東干語</string>
+    <string name="pref_title_dgy_display">東干甘肅話</string>
     <string-array name="pref_entries_dgy_display">
         <item>音標</item>
         <item>西里爾字母</item>
