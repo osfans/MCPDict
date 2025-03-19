@@ -4437,6 +4437,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#916FF7",
+        "marker-size": "medium",
+        "marker-symbol": "c",
+        "title": "右玉",
+        "語言": "右玉話",
+        "地點": "山西朔州右玉",
+        "地圖集二分區": "晉語-大包片",
+        "音典分區": "西北-雁北",
+        "陳邡分區": "官話-晉北-雁北大片-朔州片",
+        "版本": "2025-03-19",
+        "錄入人": "DaiDzao",
+        "來源": "《山西右玉方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.471775,
+          39.996408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
         "marker-size": "large",
         "marker-symbol": "c",
         "title": "大同",
@@ -19260,6 +19284,30 @@
         "coordinates": [
           114.284892,
           23.175536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "large",
+        "marker-symbol": "h",
+        "title": "河源",
+        "語言": "河源水源音",
+        "地點": "廣東河源",
+        "地圖集二分區": "客家話-粵臺片-龍華小片",
+        "音典分區": "廣中-東江",
+        "陳邡分區": "客家-貢水-貢水大片-東江片",
+        "版本": "2025-03-19",
+        "錄入人": "林",
+        "來源": "《客家古邑方言》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.695448,
+          23.746777
         ]
       }
     },
