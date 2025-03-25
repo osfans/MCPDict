@@ -4,9 +4,6 @@ from tables._表 import 表 as _表
 import re
 
 class 表(_表):
-	網站 = '韻典網（中原音韻）'
-	網址 = 'https://ytenx.org/trngyan/dzih/%s'
-	
 	def __init__(自):
 		自.sds = {
 			'陰': '1',

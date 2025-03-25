@@ -108,6 +108,8 @@ def xls2tsv(xls, page=0):
 	t.close()
 
 def run2text(run):
+	if isinstance(run, docx.text.hyperlink.Hyperlink):
+		return "".join(map(run2text, run.runs))
 	tag = ""
 	if run.font.underline == WD_UNDERLINE.SINGLE:
 		tag = "-"
@@ -147,14 +149,16 @@ def docx2tsv(doc):
 			t = Table(each, Doc)
 			for row in t.rows:
 				行 = ""
-				for cell in row.cells:
+				cells = row.cells
+				for i, cell in enumerate(cells):
+					if cell in cells[:i]: continue
 					for p in cell.paragraphs:
-						行 += "".join(map(run2text, p.runs)).replace("\t", "").replace("\n", "")
+						行 += "".join(map(run2text, p.iter_inner_content())).replace("\t", "").replace("\n", "")
 					行 += "\t"
 				lines.append(行.replace("}~", "~}").replace("~{", "{~").replace("}{", "").replace("{h}", "h").strip())
 		elif isinstance(each, docx.oxml.text.paragraph.CT_P):
 			element = Paragraph(each, Doc)
-			行 = "".join(map(run2text, element.runs)).replace("}~", "~}").replace("~{", "{~").replace("}{", "").replace("{h}", "h")
+			行 = "".join(map(run2text, element.iter_inner_content())).replace("}~", "~}").replace("~{", "{~").replace("}{", "").replace("{h}", "h")
 			lines.append(行)
 	行 = "\n".join(lines).replace("}\n{", "")
 	t = open(tsv, "w", encoding="U8", newline="\n")
@@ -478,6 +482,7 @@ class 表:
 		return tuple(列[:3])
 
 	def 統(自, 行):
+		行 = 行.rstrip('\n')
 		if not 自.爲方言(): return 行
 		for i in range(1, 10):
 			sda = chr(ord('➀') + (i - 1))
@@ -496,10 +501,11 @@ class 表:
 			.replace("／", "/").replace("？", "?").replace("！", "!").replace("：", ":").replace("；",";").replace("...", "⋯").replace("｜", "|")\
 			.replace("∽", "~").replace("～", "~")
 		行 = 行.replace("\u1dc9", "\u0303")\
-			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ")\
-			.replace("ʣ", "dz").replace("ʥ", "dʑ")\
-			.replace("", "䝼")\
-			.replace("", "ᵑ").replace("", "ᶽ")#.replace("ⱼ", "ᶽ")
+			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ").replace("ꭧ", "tʂ")\
+			.replace("ʣ", "dz").replace("ʥ", "dʑ").replace("ʤ", "dʒ").replace("ꭦ", "dʐ")\
+			.replace("ʔb", "ɓ").replace("ʔd", "ɗ")\
+			.replace("ɷ", "ʊ")\
+			.replace("", "䝼").replace("", "ᵑ").replace("", "ᶽ")
 		return 行
 	
 	@property
@@ -524,7 +530,7 @@ class 表:
 				if lineno <= skip: continue
 				行 = 自.統(行)
 				if 行.startswith('#') : continue
-				列 = [i.strip() for i in 行.strip('\n').split(sep)]
+				列 = [i.strip() for i in 行.split(sep)]
 				entries = 自.析(列)
 				if not entries: continue
 				if type(entries) is tuple: entries = [entries]

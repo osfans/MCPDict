@@ -58,8 +58,9 @@ public class DB extends SQLiteAssetHelper {
     public static final String GY = "廣韻";
     public static final String ZT = "中唐";
     public static final String ZYYY = "中原音韻";
-    public static final String DGY = "東干語";
+    public static final String DGY = "東干甘肅話";
     public static final String CMN = "普通話";
+    public static final String CMN_TW = "國語";
     public static final String HK = "香港";
     public static final String TW = "臺灣";
     public static final String KOR = "朝鮮";
@@ -100,7 +101,7 @@ public class DB extends SQLiteAssetHelper {
         ALL, ISLAND, HZ, CURRENT, RECOMMEND, CUSTOM, DIVISION, AREA, EDITOR
     }
 
-    public static int COL_ALL_LANGUAGES = 1500;
+    public static int COL_ALL_LANGUAGES = 0;
     public static final String ALL_LANGUAGES = "*";
 
     private static final String TABLE_NAME = "mcpdict";
@@ -198,7 +199,9 @@ public class DB extends SQLiteAssetHelper {
             if (TextUtils.isEmpty(token)) continue;
             // Canonicalization
             switch (lang) {
-                case CMN: token = Mandarin.canonicalize(token); break;
+                case CMN:
+                case CMN_TW:
+                    token = Mandarin.canonicalize(token); break;
                 case HK: token = Cantonese.canonicalize(token, cantoneseSystem); break;
                 case KOR:
                     token = Korean.canonicalize(token); break;
@@ -218,6 +221,7 @@ public class DB extends SQLiteAssetHelper {
                 allTones = switch (lang) {
                     case GY -> MiddleChinese.getAllTones(token);
                     case CMN -> Mandarin.getAllTones(token);
+                    case CMN_TW -> Mandarin.getAllTones(token);
                     case HK -> Cantonese.getAllTones(token);
                     case VI -> Vietnamese.getAllTones(token);
                     default -> Tones.getAllTones(token, lang);
@@ -401,6 +405,7 @@ public class DB extends SQLiteAssetHelper {
         COL_LAST_INFO = COLUMNS.length - 2;
         COL_FIRST_SHAPE = COL_VA + 2;
         COL_LAST_SHAPE = COL_LAST_INFO;
+        COL_ALL_LANGUAGES = COLUMNS.length + 100;
         cursor.close();
         ArrayList<String> arrayList = new ArrayList<>();
         for(int col = COL_FIRST_DICT; col <= COL_LAST_DICT; col++) {
@@ -594,6 +599,7 @@ public class DB extends SQLiteAssetHelper {
                 if (pfg) {
                     if(!label.contentEquals(GY)) array.add(GY);
                     if(!label.contentEquals(CMN)) array.add(CMN);
+                    if(!label.contentEquals(CMN_TW)) array.add(CMN_TW);
                 }
                 return array.toArray(new String[0]);
             }
