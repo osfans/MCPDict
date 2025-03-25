@@ -324,8 +324,6 @@ def getLangs(dicts, 參數, args):
 		聲韻數 = 語.聲韻數
 		語.info["音節數"] = 音節數 if 音節數 else None
 		語.info["不帶調音節數"] = 聲韻數 if 聲韻數 and 聲韻數 != 音節數 else None
-		語.info["網站"] = 語.網站
-		語.info["網址"] = 語.網址
 		lang_t = 語.info["語言"]
 		lang_s = t2s(語.info["語言"], 2)
 		if lang_s not in lang_t:

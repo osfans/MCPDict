@@ -6,8 +6,6 @@ from tables._表 import 表 as _表
 
 class 表(_表):
 	#https://github.com/g0v/moedict-data-hakka/blob/master/dict-hakka.json
-	網站 = "客語萌典"
-	網址 = "https://www.moedict.tw/:%s"
 	def py2yb(自, s):
 		c = s[-1]
 		if c in "文白":

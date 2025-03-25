@@ -3,8 +3,6 @@
 from tables._表 import 表 as _表
 
 class 表(_表):
-	網站 = "字海"
-	網址 = "http://yedict.com/zscontent.asp?uni=%2$s"
 	爲音 = False
 
 	def 析(自, 列):

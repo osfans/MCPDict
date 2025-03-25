@@ -3,8 +3,6 @@
 from tables._表 import 表 as _表
 
 class 表(_表):
-	網站 = '韻典網（廣韻）'
-	網址 = 'http://ytenx.org/zim?kyonh=1&dzih=%s'
 	爲音 = False
 
 	def 析(自, 列):

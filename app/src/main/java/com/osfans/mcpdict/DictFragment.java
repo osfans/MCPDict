@@ -31,6 +31,8 @@ import com.osfans.mcpdict.Adapter.StringArrayAdapter;
 import com.osfans.mcpdict.DB.FILTER;
 import com.osfans.mcpdict.UI.SearchView;
 
+import java.util.Objects;
+
 public class DictFragment extends Fragment implements RefreshableFragment {
 
     private static final String TAG = "DictFragment";
@@ -62,9 +64,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
         // Set up the search view
         searchView = selfView.findViewById(R.id.search_view);
-        searchView.setSearchButtonOnClickListener(view -> {
-            refresh();
-        });
+        searchView.setSearchButtonOnClickListener(view -> refresh());
 
         // Set up the spinner
         layoutSearchOption = selfView.findViewById(R.id.layout_options);
@@ -117,7 +117,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         spinnerDict.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String value = adapterDict.getItem(position).toString();
+                String value = Objects.toString(adapterDict.getItem(position));
                 Pref.putDict(value);
                 search();
             }
@@ -139,7 +139,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         spinnerRecommend.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String value = adapterRecommend.getItem(position).toString().split(" ")[0];
+                String value = Objects.toString(adapterRecommend.getItem(position)).split(" ")[0];
                 Pref.putStr(R.string.pref_key_recommend, position == 0 ? "" : value);
                 search();
             }
@@ -153,7 +153,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         spinnerEditor.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String value = adapterEditor.getItem(position).toString().split(" ")[0];
+                String value = Objects.toString(adapterEditor.getItem(position)).split(" ")[0];
                 Pref.putStr(R.string.pref_key_editor, position == 0 ? "" : value);
                 search();
             }
@@ -167,7 +167,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         spinnerProvinces.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String value = adapterProvince.getItem(position).toString().split(" ")[0];
+                String value = Objects.toString(adapterProvince.getItem(position)).split(" ")[0];
                 Pref.putProvince(position == 0 ? "" : value);
                 search();
             }
@@ -181,7 +181,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         spinnerDivisions.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String value = adapterDivision.getItem(position).toString();
+                String value = Objects.toString(adapterDivision.getItem(position));
                 Pref.putDivision(position == 0 ? "" : value);
                 search();
             }
@@ -278,7 +278,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         View.OnTouchListener listener = new View.OnTouchListener() {
             private final GestureDetector gestureDetector = new GestureDetector(requireActivity(), new GestureDetector.SimpleOnGestureListener() {
                 @Override
-                public boolean onDoubleTap(MotionEvent e) {
+                public boolean onDoubleTap(@NonNull MotionEvent e) {
                     toggleFullscreen();
                     return true;
                 }

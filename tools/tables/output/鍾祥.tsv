@@ -418,7 +418,6 @@
 别	pie2	区~:离~
 刮	kua2	
 到	tau5	
-制	tɕʰiau1	
 制	tʂʅ5	
 刷	ʂua2	
 券	tɕyen5	
@@ -443,6 +442,7 @@
 割	kuo2	
 剽	pʰiau2	
 剿	tɕiau3	
+劁	tɕʰiau1	
 劈	pʰi1	
 力	ni2	
 勸	tɕʰyen5	
@@ -609,6 +609,7 @@
 吕	ny3	
 君	tɕyn1	
 吝	nin5	
+吞	tʰən1-	
 吞	tʰuən1=	
 吟	in2	
 吠	fəi5	
@@ -665,7 +666,6 @@
 品	pʰin3	
 哄	xoŋ3	~骗
 哄	xoŋ5	内~
-哇	tɕʰi2	
 哇	ua3	
 哈	xa1	
 哉	tʂai1	
@@ -771,7 +771,7 @@
 場	tʂʰaŋ3	
 址	tʂʅ3	
 均	tɕyn1	
-坊	faŋ3	
+坊	faŋ2	
 坍	tʰan1	
 坎	kʰan3	
 壞	xuai5	
@@ -913,7 +913,7 @@
 妖	iau1	
 妙	miau5	
 妥	tʰuo3	
-妨	faŋ3	~害
+妨	faŋ2	~害
 妯	tʂu2	~娌
 妲	ta2	
 妹	məi5	
@@ -1006,7 +1006,7 @@
 寧	nin2	
 它	tʰa1	
 宅	tʂə2-	
-宅	tʂai3=	
+宅	tʂai2=	
 宇	y3	
 守	ʂəu3	
 安	an1	
@@ -1470,7 +1470,7 @@
 戴	tai5	
 戶	xu5	
 戾	ni5	
-房	faŋ3	
+房	faŋ2	
 所	ʂuo3	
 扁	pien3	
 扇	ʂan5	
@@ -1763,7 +1763,6 @@
 旎	ni2	
 族	tʂʰu2	
 旗	tɕʰi2	
-無	tʂʰʅ2	
 無	u2	
 既	tɕi5	
 日	ʐʅ2	
@@ -2351,12 +2350,12 @@
 燈	tən1	
 灰	xuəi1	
 靈	nin2	
-靈	tɕioŋ3	
 竈	tʂau5	
 灸	tɕiəu1	
 灼	tʂuo2	
 災	tʂai1	
 燦	tʂʰan5	
+炅	tɕioŋ3	
 爐	nu2	
 炊	tʂʰuəi1	
 炎	ien2	
@@ -2594,6 +2593,7 @@
 畜	tʂʰu5	~生
 畜	ɕy5	~牧
 略	nio2	
+畦	tɕʰi2	
 番	fan1	
 疇	tʂʰəu2	
 畸	tɕi1	
@@ -2937,6 +2937,7 @@
 策	tʂʰə2	
 篩	ʂai1	
 箏	tʂən1	
+筲	ʂau1	
 筵	ien2	
 筷	kʰuai5	
 籌	tʂʰəu2	
@@ -2947,7 +2948,6 @@
 箔	po2	
 箕	tɕi1	
 算	ʂuan5	
-管	ʂau1	
 管	kuan3	
 籮	nuo2	
 簫	ɕiau1	
@@ -3044,7 +3044,6 @@
 繹	i5	
 經	tɕin1	
 綁	paŋ3	
-絨	tɕien1	
 絨	ʐoŋ2	
 結	tɕie2	
 繞	ʐau5	
@@ -3079,6 +3078,7 @@
 綰	uan3	~头发
 綠	nu2	
 綴	tʂuəi5	
+緘	tɕien1	
 緬	mien3	
 纜	nan3	
 緝	tɕi2	
@@ -3136,7 +3136,7 @@
 翎	nin2	
 翔	ɕiaŋ2	
 翹	tɕʰiau5	
-翟	tʂai3	
+翟	tʂai2	
 翠	tʂʰuəi5	
 翡	fəi3	
 翩	pʰien1	
@@ -3190,7 +3190,7 @@
 肤	fu1	
 肥	fəi2	
 肩	tɕien1	
-肪	faŋ3	脂~
+肪	faŋ2	脂~
 骯	aŋ1	
 肯	kʰən3	
 育	y5	
@@ -3219,7 +3219,6 @@
 胳	kə2	
 膠	tɕiau1	
 胸	ɕioŋ1	
-胸	məi2	
 能	nən2	
 脂	tʂʅ3	
 脆	tʂʰuəi5	
@@ -3233,6 +3232,7 @@
 膿	noŋ2	
 脖	po2	
 脚	tɕio2	
+脢	məi2	
 脯	pʰu3	
 脫	tʰuo2	
 腡	nuo2	
@@ -3535,7 +3535,6 @@
 蚌	paŋ5	
 蚓	in3	
 蠶	tʂʰuan2-	
-蠶	tʰən1	
 蠶	tʂʰan2=	
 蚜	ia2	
 蚣	koŋ1	
@@ -3585,7 +3584,6 @@
 蝠	fu2	
 蝴	xu2	
 蝶	tie2	
-蝶	moŋ3	
 螂	naŋ2	
 螃	pʰaŋ2	
 融	ʐoŋ2	
@@ -3600,6 +3598,7 @@
 蟹	xai2	
 蟹	ɕie5=	
 蟾	tʂʰan2	
+蠓	moŋ3	
 蠕	ʐu2	
 蠢	tʂʰuən3	
 血	ɕie2	
@@ -4116,10 +4115,10 @@
 酵	tɕiau5	
 酷	kʰu5	
 酸	ʂuan1	
+釅	ien5	
 釀	niaŋ5	
 醇	tʂʰuən2	
 醉	tʂuəi5	
-醉	ien5	
 醋	tʂʰu5	
 醍	tʰi2	~醐灌顶
 醐	xu2	
@@ -4263,7 +4262,7 @@
 隊	tuəi5=	
 阡	tɕʰien1	
 阮	ʐuan3	
-防	faŋ3	
+防	faŋ2	
 陽	iaŋ2	
 陰	in1	
 陣	tʂən5	

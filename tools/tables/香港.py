@@ -4,8 +4,6 @@ from tables._表 import 表 as _表
 from tables import hex2chr
 
 class 表(_表):
-	網站 = "粵語審音配詞字庫"
-	網址 = "http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=%3$s"
 	補丁 = {"㛟": "wun6", "𡃜": "kok3", "鿽": "zaa3"}
 	爲音 = False
 

@@ -5,8 +5,6 @@ from tables._數據庫 import 表 as _表
 
 class 表(_表):
 	鍵 = "mn"
-	網站 = "臺灣閩南語常用詞辭典"
-	網址 = "http://twblg.dict.edu.tw/holodict_new/result.jsp?querytarget=1&radiobutton=0&limit=20&sample=%s"
 	補丁 = {"檔": "tong2,tong3"}
 
 	def 統(自, py):
