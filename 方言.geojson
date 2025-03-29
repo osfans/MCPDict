@@ -21444,7 +21444,6 @@
         "地圖集二分區": "粵語-廣府片",
         "音典分區": "嶺南-珠江-香山",
         "陳邡分區": "廣東-南粵-西江大片-廣州片",
-        "版本": "2023-10-01",
         "錄入人": "Kwíngiem Chan",
         "維護人": "Kwíngiem Chan,亘古二六亖",
         "來源": "自製、《澳门粤语音系的历史变迁及其成因》"
@@ -21770,6 +21769,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EBC75E",
+        "marker-size": "large",
+        "marker-symbol": "i",
+        "title": "懷集上坊",
+        "語言": "懷集上坊話",
+        "地點": "廣東肇慶懷集冷坑",
+        "地圖集二分區": "粵語-勾漏片",
+        "音典分區": "嶺南-蒼梧-梧賀",
+        "陳邡分區": "廣東-北粵-賀綏大片-綏江片",
+        "錄入人": "周俊涛",
+        "來源": "《怀集白话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.054337,
+          24.040686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EBC75E",
         "marker-size": "medium",
         "marker-symbol": "i",
         "title": "蒙山",
@@ -21865,6 +21887,29 @@
         "marker-color": "#5ED154",
         "marker-size": "small",
         "marker-symbol": "j",
+        "title": "賀州秉塘",
+        "語言": "賀州沙田秉塘話",
+        "地點": "廣西賀州平桂沙田秉塘寨",
+        "地圖集二分區": "平話和土話-桂北片",
+        "音典分區": "嶺南-蒼梧-梧賀",
+        "版本": "2025-03-29",
+        "錄入人": "DaiDzao",
+        "來源": "《贺州秉塘话音系》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.459418,
+          24.395653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5ED154",
+        "marker-size": "small",
+        "marker-symbol": "j",
         "title": "鐘山董家垌",
         "語言": "鐘山董家垌話",
         "地點": "廣西賀州鐘山董家垌",
@@ -21928,6 +21973,29 @@
         "coordinates": [
           111.51707,
           24.832907
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#C75EEB",
+        "marker-size": "small",
+        "marker-symbol": "g",
+        "title": "江華橋市",
+        "語言": "江華寨山話（橋市）",
+        "地點": "湖南永州江華橋市",
+        "地圖集二分區": "湘語-永全片-道江小片",
+        "音典分區": "嶺南-蒼梧-梧賀",
+        "版本": "2025-03-28",
+        "錄入人": "DaiDzao",
+        "來源": "《永州南部土话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.601846,
+          25.066964
         ]
       }
     },
@@ -23344,7 +23412,7 @@
         "marker-symbol": "l",
         "title": "陵水三才",
         "語言": "陵水三才話",
-        "地點": "海南陵水",
+        "地點": "海南陵水三才大園",
         "地圖集二分區": "閩語-瓊文片-萬甯小片",
         "音典分區": "閩-閩南",
         "陳邡分區": "福建-閩南",
@@ -23354,8 +23422,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          110.01437,
-          19.746255
+          110.011629,
+          18.50077
         ]
       }
     },
@@ -27890,6 +27958,30 @@
         "marker-color": "#C75EEB",
         "marker-size": "small",
         "marker-symbol": "g",
+        "title": "江永允山",
+        "語言": "江永允山土話",
+        "地點": "湖南永州江永允山",
+        "地圖集二分區": "湘語-永全片-道江小片",
+        "音典分區": "道州",
+        "陳邡分區": "南嶺",
+        "版本": "2025-03-29",
+        "錄入人": "DaiDzao",
+        "來源": "《湖南江永允山土话的地理和社会研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.296514,
+          25.276387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#C75EEB",
+        "marker-size": "small",
+        "marker-symbol": "g",
         "title": "江永回龍圩",
         "語言": "江永回龍圩土話",
         "地點": "湖南永州江永回龍圩",
@@ -27905,26 +27997,6 @@
         "coordinates": [
           111.355884,
           25.194272
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#C75EEB",
-        "marker-size": "small",
-        "marker-symbol": "",
-        "title": "江華橋市",
-        "語言": "江華橋市土話",
-        "地點": "湖南永州江華橋市",
-        "版本": "2025-03-28",
-        "錄入人": "DaiDzao"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          111.601846,
-          25.066964
         ]
       }
     },
