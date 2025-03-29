@@ -242,7 +242,8 @@ class 表:
 		sname = g[0]
 		自.文件名 = os.path.basename(sname)
 		if isXls(sname):
-			page = 1 if 自.簡稱 in ("中山石岐", "通城大坪", "1796建甌", "中山南蓢") else 0
+			page = 1 if 自.簡稱 in ("通城大坪", "1796建甌") else 0
+			if 自.文件名.startswith("香山話綜合"): page = 1
 			if 自.簡稱 == "開平護龍": page = 3
 			xls2tsv(sname, page)
 			sname = getTsvName(sname)
