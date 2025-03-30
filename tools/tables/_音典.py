@@ -369,7 +369,7 @@ class 表(_表):
 						音標 = 音標組[1]
 					l.append((字, 自.轉調類(音標), 註))
 				return l
-		elif 自.文件名.startswith("贵州六盘水八点联表") or 自.文件名.startswith("永州南部土話聯表"):
+		elif 自.文件名.startswith("贵州六盘水八点联表") or 自.文件名.startswith("永州南部土話聯表")  or 自.文件名.startswith("广元剑阁5点联表"):
 			if not 列[0]: return
 			字 = 列[0][0]
 			註 = 列[0][1:].strip("()（）")
