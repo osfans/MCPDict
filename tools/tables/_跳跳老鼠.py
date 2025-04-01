@@ -245,7 +245,11 @@ class 表(_表):
 			組 = 自.normS(組)
 		else:
 			聲韻, 調, 組 = 列[:3]
-		if not 音: 音 = 聲韻 + 調
+		if not 音:
+			if "/" in 聲韻:
+				音 = 聲韻.replace("/", 調 + "/") + 調
+			else:
+				音 = 聲韻 + 調
 		音 = 自.正音(音, True)
 		l = list()
 		if "｛" not in 組:
