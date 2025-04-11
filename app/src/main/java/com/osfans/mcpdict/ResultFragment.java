@@ -758,6 +758,7 @@ public class ResultFragment extends Fragment {
                 ssb.append(ssb2);
             }
             if (count > 1) {
+                if (count == 100) hzs.append("…");
                 hzs.append("\n");
                 ssb.insert(0, hzs);
             }
