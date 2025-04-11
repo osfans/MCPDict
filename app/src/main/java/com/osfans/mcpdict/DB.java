@@ -264,7 +264,8 @@ public class DB extends SQLiteAssetHelper {
         else if (HanZi.isBS(input)) {
             lang = BS;
         } else if (HanZi.isHz(input)) {
-            lang = HZ;
+            if (lang.contentEquals(GY) && searchType == SEARCH.YIN) input = input + "*"; //音韻地位
+            else lang = HZ;
         } else if (HanZi.isUnicode(input)) {
             input = HanZi.toHz(input);
             lang = HZ;
@@ -299,6 +300,7 @@ public class DB extends SQLiteAssetHelper {
             String sel = (key.startsWith("%") && key.endsWith("%")) ? "LIKE" : "MATCH";
             for (String col : columns) {
                 queries.add(qb.buildQuery(projection, String.format("`%s` %s ?", col, sel), null, null, null, null));
+                if (lang.contentEquals(GY) && !HanZi.isHz(input)) key = String.format("\"^%s\"", key); //僅匹配第一個拼音
                 args.add(key);
             }
         }
