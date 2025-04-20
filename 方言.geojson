@@ -800,6 +800,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "萊蕪",
+        "語言": "萊蕪話",
+        "地點": "山東濟南萊芜",
+        "地圖集二分區": "冀魯官話-石濟片-聊泰小片",
+        "音典分區": "華北-山東-魯中",
+        "陳邡分區": "官話-山東-魯中片",
+        "版本": "2025-04-18",
+        "錄入人": "DaiDzao",
+        "來源": "《山东莱芜方言语音研究》《山东莱芜方言语音调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.670612,
+          36.218626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5A4B6",
         "marker-size": "small",
         "marker-symbol": "b",
         "title": "安澤大黃",
@@ -913,6 +937,30 @@
         "coordinates": [
           117.968238,
           36.651458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5A4B6",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "髙靑",
+        "語言": "髙靑話",
+        "地點": "山東淄博髙靑",
+        "地圖集二分區": "冀魯官話-滄惠片-陽壽小片",
+        "音典分區": "華北-山東-魯中",
+        "陳邡分區": "官話-山東-魯東大片-膠萊片",
+        "版本": "2025-04-15",
+        "錄入人": "DaiDzao",
+        "來源": "《山东高青方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.838567,
+          37.174968
         ]
       }
     },
@@ -1934,6 +1982,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "長垣方里",
+        "語言": "長垣方里話",
+        "地點": "河南新鄉長垣方里",
+        "地圖集二分區": "中原官話-鄭開片",
+        "音典分區": "華北-河南",
+        "陳邡分區": "官話-山東-魯西大片-大名片",
+        "版本": "2025-04-17",
+        "錄入人": "DaiDzao",
+        "來源": "《长垣县方里镇方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.846201,
+          35.283504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "登封",
@@ -2382,6 +2454,30 @@
         "coordinates": [
           110.338382,
           34.510372
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "華陰夫水",
+        "語言": "華陰夫水話",
+        "地點": "陝西渭南華陰夫水",
+        "地圖集二分區": "中原官話-關中片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-關中-關中大片-華山片",
+        "版本": "2025-04-17",
+        "錄入人": "DaiDzao",
+        "來源": "《华阴夫水镇方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.964261,
+          34.545183
         ]
       }
     },
@@ -6354,6 +6450,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "漢源大田",
+        "語言": "漢源大田話",
+        "地點": "四川雅安漢源大田",
+        "地圖集二分區": "西南官話-西蜀片-雅甘小片",
+        "音典分區": "長江-川黔",
+        "版本": "2025-04-17",
+        "錄入人": "DaiDzao",
+        "來源": "《汉源方言语音调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.611964,
+          29.510634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "榮縣",
@@ -7495,6 +7614,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "靑川關莊",
+        "語言": "靑川關莊話",
+        "地點": "四川廣元青川關莊",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川北片",
+        "版本": "2025-04-19",
+        "錄入人": "DaiDzao",
+        "來源": "《四川青川方言语音调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.158099,
+          32.396361
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "南江",
@@ -7559,6 +7702,30 @@
         "coordinates": [
           108.041032,
           32.087656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "大竹",
+        "語言": "大竹話",
+        "地點": "四川達州大竹",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川中片",
+        "版本": "2025-04-18",
+        "錄入人": "DaiDzao",
+        "來源": "《四川大竹方言音系研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.212727,
+          30.742324
         ]
       }
     },
@@ -19139,6 +19306,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#52CCAD",
+        "marker-size": "medium",
+        "marker-symbol": "f",
+        "title": "常寧",
+        "語言": "常寧宜陽(城關)話",
+        "地點": "湖南衡陽常寧",
+        "地圖集二分區": "贛語-耒資片",
+        "音典分區": "湘贛-南湘-衡州",
+        "陳邡分區": "湘贛-衡邵-衡州大片-常寧片",
+        "版本": "2025-04-19",
+        "錄入人": "DaiDzao",
+        "來源": "《常宁方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.197837,
+          26.478191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
         "marker-size": "small",
         "marker-symbol": "f",
         "title": "常寧官嶺",
@@ -24642,6 +24833,29 @@
         "marker-color": "#F08460",
         "marker-size": "medium",
         "marker-symbol": "l",
+        "title": "周寧",
+        "語言": "周寧話",
+        "地點": "福建寧德周寧",
+        "地圖集二分區": "閩語-閩東片-福寧小片",
+        "音典分區": "閩-閩東",
+        "陳邡分區": "福建-閩東",
+        "錄入人": "林",
+        "來源": "《周宁县志·方言》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.341683,
+          27.109853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
+        "marker-size": "medium",
+        "marker-symbol": "l",
         "title": "1893福安",
         "語言": "1893年福安話（班華字典）",
         "地點": "福建寧德福安",
@@ -25196,6 +25410,30 @@
         "coordinates": [
           118.144007,
           27.144332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
+        "marker-size": "medium",
+        "marker-symbol": "l",
+        "title": "南平洋頭",
+        "語言": "南平洋頭話",
+        "地點": "福建南平延平夏道洋頭",
+        "地圖集二分區": "閩語-閩北片-建甌小片",
+        "音典分區": "閩-閩中",
+        "陳邡分區": "福建-閩中",
+        "錄入人": "大発UINN,林",
+        "維護人": "林",
+        "來源": "《延平洋头方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.250723,
+          26.501428
         ]
       }
     },

@@ -9,7 +9,7 @@
 㔻	pʰrə	
 㕄	tiʔ	
 㕒	ŋoj	
-㕟	kʰˤrus	
+㕟	kʰwrəs	
 㕮	paʔ	
 㕹	bat	
 㖧	mənʔ	
@@ -36,7 +36,7 @@
 㝱	məŋh	
 㞒	hˤris	
 㞓	kʰis	
-㞶	mrin	
+㞶	mrun	
 㠯	ləʔ	
 㠲	briʔ	
 㠷	kˤəp	
@@ -59,7 +59,6 @@
 㨉	mrun	
 㨊	lojʔ	
 㨎	noh	
-㨨	r̥u	
 㪉	kˤəp	
 㪋	gˤanh	
 㪨	danh	
@@ -101,6 +100,8 @@
 㺿	ɫə	
 㻬	tʰra	
 㼜	ʔˤaŋh	
+㼤	kʰˤet	
+㼰	bˤe	
 㼱	no	
 㽀	dreŋh	
 㾁	l̥rut	
@@ -122,6 +123,7 @@
 䃤	siwk	
 䃤	sˤiwʔ	
 䃾	pih	
+䄷	dak	
 䅀	ras	
 䅌	kwˤen	
 䅵	kˤuk	
@@ -181,7 +183,7 @@
 䘟	tˤiw	
 䘩	win	
 䘺	dˤreŋh	
-䘽	ŋˤe	
+䘽	ŋˤeʔ	
 䚦	lreʔ	
 䚫	gˤewk	
 䛟	kˤep	
@@ -214,6 +216,7 @@
 䡢	benʔ	
 䡩	tənʔ	
 䡬	manh	
+䢋	kəh	
 䢑	tˤi	
 䢱	lˤok	
 䢵	wən	
@@ -305,8 +308,10 @@
 万	manh	
 丈	draŋʔ	
 三	sˤum	
-上	daŋʔ	
-下	gˤraʔ	
+上	daŋh	~下
+上	daŋʔ	~升；凌駕；施加
+下	gˤrah	~降；離開；攻克；發佈
+下	gˤraʔ	上~
 不	pə	
 丐	kˤas	
 丑	n̥ruʔ	
@@ -361,7 +366,7 @@
 亡	ma	
 亡	maŋ	
 亢	kˤaŋ	
-交	kˤraw	
+交	kˤrew	
 亥	gˤəʔ	
 亦	ɫak	
 亨	pʰˤraŋ	
@@ -410,6 +415,7 @@
 伃	la	
 伉	kʰˤaŋ	
 伊	li	
+伊	ʔə	代詞；助詞
 伋	kəp	思考敏捷
 伍	ŋˤaʔ	
 伎	ge	
@@ -513,6 +519,7 @@
 俑	loŋʔ	
 俓	kˤeŋh	
 俔	kʰˤenh	
+俔	gˤenʔ	間諜
 俗	mɫok	
 俘	pʰu	
 俚	rəʔ	
@@ -641,7 +648,7 @@
 僚	rˤew	
 僚	rewʔ	美好
 僛	kʰə	
-僝	dzran	
+僝	dzranʔ	
 僞	ŋwaj	
 僤	tʰanʔ	地名
 僤	tˤanʔ	盛大；疾速
@@ -686,6 +693,7 @@
 儵	l̥iwk	
 儷	rˤeh	
 儺	nˤarʔ	
+儺	nˤajʔ	猗~，柔美、柔順
 儻	tʰˤaŋʔ	
 儼	ŋamʔ	
 儽	ruj	
@@ -903,7 +911,7 @@
 化	ẘˤraj	
 北	pˤək	
 匘	nˤuʔ	
-匜	lajʔ	
+匜	le	
 匠	dzaŋh	
 匡	kʰwaŋ	
 匣	gˤrap	
@@ -951,12 +959,13 @@
 即	tsik	
 却	kʰak	
 卵	C.rˤonʔ	
-卷	kronʔ	
+卷	kronʔ	~耳
+卷	konʔ	
 卷	kʰron	冠~，帽緣
 卷	gron	彎曲；柔弱
 卷	gwren	美好
 卹	ẘit	
-卺	kənʔ	
+卺	dəŋ	
 卻	kʰak	
 卼	ŋˤut	臲~，動搖不安
 卽	tsik	
@@ -986,6 +995,7 @@
 又	wəh	
 及	grəp	
 友	wəʔ	
+反	bˤranʔ	~~，慎重、和善
 反	panʔ	
 叔	stiwk	
 叔	stuk	拾取
@@ -1035,7 +1045,7 @@
 否	pəʔ	不
 否	brəʔ	閉塞、困厄
 吪	ŋwˤaj	
-含	gˤəm	
+含	gˤum	
 吮	mlunʔ	
 启	kʰˤeʔ	
 吳	ŋwˤa	
@@ -1113,6 +1123,7 @@
 哿	kˤajʔ	
 唁	ŋranh	
 唅	gˤəmh	
+唅	gˤumh	
 唇	dən	
 唈	ʔˤəp	
 唉	ʔˤə	
@@ -1132,7 +1143,8 @@
 啁	tˤriw	
 啄	tˤrok	
 商	staŋ	
-啍	tʰˤun	~~，車行聲
+啍	tʰˤuj	~~，車行聲
+啍	tʰˤun	~~，重遲貌，猶慢吞吞
 啎	ŋˤah	
 問	munh	
 啐	tsʰˤus	
@@ -1213,11 +1225,12 @@
 嘩	wˤra	
 嘬	tsʰˤros	
 嘯	sˤiwh	
-嘳	kʰˤrus	
+嘳	kʰwrəs	
 嘵	ŋ̊ˤew	
 嘶	sˤe	
 嘻	hə	
-嘽	tʰˤar	
+嘽	tʰˤaj	~~，車馬聲
+嘽	tʰˤar	~~，盛大
 嘽	tʰanʔ	舒緩
 嘿	mˤək	
 噂	tsˤunʔ	
@@ -1285,12 +1298,15 @@
 圂	gˤunh	
 圃	pˤaʔ	
 圄	ŋaʔ	
-圈	gonʔ	
+圈	gonʔ	獸~
+圈	kʰon	飲酒器
 圉	ŋaʔ	
 國	kwˤək	
+圌	don	
 圍	wəj	
 園	wan	
 圓	wran	
+圓	wən	
 圖	dˤa	
 團	dˤon	
 圜	wˤren	
@@ -1317,7 +1333,7 @@
 坤	kʰˤun	
 坦	tʰˤanʔ	
 坫	tˤemh	
-坯	pʰˤə	
+坯	brə	土丘
 坰	kwˤeŋ	
 坱	ʔˤaŋʔ	
 坳	ʔˤriw	
@@ -1376,7 +1392,7 @@
 堧	non	
 堨	ʔˤat	
 堩	kˤəŋh	
-堪	kʰˤəm	
+堪	kʰˤum	
 堯	ŋˤew	
 報	pˤuh	
 堲	tsik	
@@ -1430,6 +1446,7 @@
 墮	l̥oj	毀壞；輸送
 墯	lˤojʔ	
 墳	bən	
+墳	bənʔ	土質肥沃
 墼	kˤek	
 墾	kʰˤənʔ	
 壁	pˤek	
@@ -1461,7 +1478,7 @@
 壼	kʰˤunʔ	
 壽	duʔ	
 壿	tsʰun	
-夆	boŋ	
+夆	pʰoŋ	
 夊	n̥uj	
 夏	gˤraʔ	
 夒	nˤu	
@@ -1592,7 +1609,7 @@
 娠	stən	
 娣	lˤəjʔ	
 娥	ŋˤaj	
-娩	manʔ	
+娩	manʔ	柔順、美好
 娭	həʔ	
 娵	tso	
 娶	tsʰoh	
@@ -1620,7 +1637,7 @@
 媒	mˤə	
 媓	wˤaŋ	
 媔	men	
-媚	mrih	
+媚	mrəjh	
 媛	wan	
 媞	dˤe	
 媢	mˤuh	
@@ -1686,7 +1703,7 @@
 孌	ronʔ	
 孌	C.ronʔ	
 子	tsəʔ	
-孑	kret	
+孑	ket	
 孔	kʰˤoŋʔ	
 孕	ɫəŋ	
 字	dzəh	
@@ -1728,6 +1745,7 @@
 官	kwˤan	
 宙	lruh	
 定	dˤeŋ	
+宛	ʔwarʔ	~丘
 宛	ʔonʔ	
 宛	ʔon	楚地
 宜	ŋaj	
@@ -1756,7 +1774,7 @@
 寅	liŋ	
 密	mrik	
 寇	kʰˤoh	
-寋	ganʔ	
+寋	kanʔ	
 富	pəh	
 寍	nˤeŋ	
 寎	praŋh	
@@ -1775,7 +1793,7 @@
 實	dik	
 實	kɫˤonh	見《易·象傳》
 寧	nˤeŋ	
-審	l̥əmʔ	
+審	stumʔ	
 寪	wajʔ	
 寫	slaʔ	
 寬	kʰwˤan	
@@ -1860,9 +1878,9 @@
 岱	lˤəh	
 岳	ŋˤrok	
 岵	gˤaʔ	
-岷	mrin	
+岷	mrun	
 岸	ŋˤanh	
-峐	kˤə	
+峐	kʰəʔ	
 峒	lˤoŋ	
 峗	ŋoj	
 峘	wˤan	
@@ -1885,7 +1903,7 @@
 崌	ka	
 崍	rˤə	
 崎	kʰaj	
-崏	mrin	
+崏	mrun	
 崐	kˤun	
 崑	kˤun	
 崒	dzut	
@@ -1951,7 +1969,7 @@
 巴	pˤra	
 巵	ke	
 巷	gˤroŋh	
-巹	kənʔ	
+巹	dəŋ	
 巽	sˤonh	
 巾	krən	
 巿	put	
@@ -2139,7 +2157,7 @@
 彭	bˤraŋ	~~，強壯
 彰	taŋ	
 影	ʔraŋʔ	
-彴	tewk	
+彴	bˤrewk	
 彷	bˤaŋ	~徉、~徨
 彷	pʰaŋʔ	~彿，隱約
 役	wek	
@@ -2200,7 +2218,7 @@
 忡	tʰruŋ	
 忤	ŋˤah	
 忥	həs	
-忨	ŋˤon	
+忨	ŋˤonh	
 快	kʰwˤres	
 忮	keh	
 忯	dˤeʔ	
@@ -2280,8 +2298,9 @@
 悆	lah	
 悈	kək	
 悉	sik	
-悌	lˤəjʔ	
-悍	gˤanh	
+悌	lˤəjh	孝~
+悌	lˤəjʔ	愷~，和樂平易
+悍	gˤarʔ	
 悐	l̥ˤek	
 悒	ʔəp	
 悔	m̥ˤəʔ	
@@ -2442,7 +2461,7 @@
 憰	kwˤik	
 憱	tsʰruh	
 憲	har	
-憴	mləŋ	
+憴	mɫəŋ	
 憶	ʔək	
 憸	sem	
 憺	dˤamʔ	
@@ -2467,6 +2486,7 @@
 懞	mˤoŋh	
 懟	drəps	
 懠	dzˤi	
+懢	rˤamh	
 懣	mˤənʔ	
 懥	tris	
 懦	no	
@@ -2503,8 +2523,9 @@
 戚	tsʰuk	憂愁；親密
 戚	tsʰˤiwk	斧；~施，駝背
 戛	kˤrit	
+戜	lˤik	
 戟	krak	
-戡	kʰˤəm	
+戡	kʰˤum	
 戢	tsrəp	
 戣	gwri	
 戩	tsenʔ	
@@ -2615,7 +2636,8 @@
 拳	gron	
 拸	ɫajʔ	
 拼	pˤreŋ	
-拾	gip	
+拾	gap	
+拾	gip	~取
 持	drə	
 挃	trik	
 指	kiʔ	
@@ -2752,7 +2774,8 @@
 搶	tsʰaŋ	
 搷	dˤiŋ	
 搹	kˤrek	
-摎	riw	
+摎	riw	交結
+摎	ru	尋求；擇取
 摘	tˤrek	
 摝	rˤok	
 摟	ro	
@@ -2814,7 +2837,7 @@
 擪	ʔep	
 擫	ʔep	
 擬	ŋəʔ	
-擭	gwˤah	
+擭	gwˤrah	
 擯	pinh	
 擲	drek	
 擴	gwˤaŋh	
@@ -2830,7 +2853,7 @@
 攐	kʰran	
 攓	kanʔ	
 攖	ʔeŋ	
-攗	mri	
+攗	kunh	
 攘	naŋ	
 攜	wˤe	
 攝	n̥ep	
@@ -3113,8 +3136,8 @@
 末	mˤat	
 本	pˤunʔ	
 札	tsˤret	
-朮	lrut	
-术	mlut	
+术	mlut	同“秫”
+术	lrut	草名
 朱	to	
 朴	pʰˤrok	
 朵	tˤorʔ	~頤
@@ -3122,7 +3145,7 @@
 朸	C.rək	
 朹	gu	
 机	krəj	
-朻	kriw	
+朻	kru	
 朼	piʔ	
 朽	hɫuʔ	
 朾	tˤreŋ	
@@ -3134,7 +3157,7 @@
 杏	gˤraŋʔ	
 材	dzˤə	
 杓	tˤewk	
-杕	dˤes	
+杕	lˤes	
 杖	draŋʔ	
 杗	maŋ	
 杘	n̥rih	
@@ -3217,6 +3240,7 @@
 柤	tsˤra	
 柩	gwəh	
 柬	kˤrenʔ	
+柭	bˤot	
 柯	kˤaj	
 柰	nˤas	
 柱	droʔ	
@@ -3272,7 +3296,7 @@
 桶	lˤoŋʔ	
 桷	kˤrok	
 桼	tsʰik	
-梀	tʰrok	
+梀	sˤrek	
 梁	raŋ	
 梂	gu	
 梃	lˤeŋʔ	
@@ -3314,8 +3338,9 @@
 棟	tˤoŋh	
 棠	dˤaŋ	
 棣	lˤəps	
-棤	sak	
-棧	dzranʔ	
+棤	tsʰˤak	
+棧	dzˤranʔ	
+棧	tsˤranʔ	小鐘
 棨	kʰˤeʔ	
 棪	lamʔ	
 棫	wrək	
@@ -3329,7 +3354,7 @@
 棸	tsˤro	
 棺	kˤon	
 棻	bən	
-棼	bən	
+棼	bun	
 椀	ʔwˤanʔ	
 椁	kwˤak	
 椄	tsap	
@@ -3371,7 +3396,7 @@
 楔	ŋ̊ˤet	~子
 楗	ganʔ	
 楘	mˤok	
-楙	muʔ	
+楙	muh	
 楚	tsʰraʔ	
 楛	gˤaʔ	
 楝	rˤenh	
@@ -3379,7 +3404,7 @@
 楠	nˤəm	
 楢	ɫu	
 楣	mri	
-楥	ẘanh	
+楥	wanh	
 楨	treŋ	
 楩	ben	
 楩	benʔ	
@@ -3458,7 +3483,7 @@
 樕	sˤok	
 樗	tʰra	
 標	pew	
-樛	kriw	
+樛	kru	
 樝	tsˤra	
 樞	ʔˤo	刺榆
 樞	tʰo	門的轉軸；~紐
@@ -3530,6 +3555,7 @@
 櫓	rˤaʔ	
 櫔	ras	
 櫕	dzˤon	
+櫙	ʔˤo	
 櫛	tsrik	
 櫜	kˤu	
 櫝	lˤok	
@@ -3548,7 +3574,8 @@
 櫾	liw	
 欃	tsʰˤram	
 欄	C.rˤan	
-欇	nrap	
+欇	tap	楓
+欇	dap	紫藤
 權	gwran	
 欐	rˤeʔ	
 欑	dzˤon	
@@ -3586,6 +3613,7 @@
 歎	n̥ˤar	
 歐	ʔˤo	
 歔	ha	
+歕	pʰˤən	
 歗	sˤiwh	
 歙	həp	
 歛	hˤam	
@@ -3719,7 +3747,7 @@
 決	kwˤet	
 決	ẘˤet	迅疾
 汽	hət	
-汾	bən	
+汾	bun	
 沁	tsʰəmh	
 沂	ŋən	
 沃	ʔˤawk	
@@ -3740,7 +3768,8 @@
 沖	druŋ	
 沙	sˤraj	
 沚	təʔ	
-沛	pˤos	
+沛	pʰˤos	豐~
+沛	pˤas	顛~；疾行
 沫	mˤat	
 沬	məs	
 沭	mlut	
@@ -3751,7 +3780,8 @@
 河	gˤaj	
 沴	dˤənʔ	
 沶	drəj	
-沸	pəs	
+沸	pus	~騰
+沸	put	觱~，泉水湧出貌
 油	liw	
 治	lrə	
 沼	kewʔ	
@@ -3861,7 +3891,7 @@
 涂	lˤa	
 涅	nˤik	
 涇	kˤeŋ	
-消	sew	
+消	saw	
 涉	dap	
 涊	nənʔ	水名
 涌	loŋʔ	
@@ -3958,7 +3988,8 @@
 湓	pʰˤənh	
 湔	tsˤen	
 湖	gˤa	
-湘	saŋ	
+湘	saŋ	~江
+湘	slaŋ	煮
 湛	tˤəm	喜樂
 湛	dəm	河名
 湛	dˤrum	（水）深、積水；河名
@@ -4106,7 +4137,7 @@
 澤	lˤrak	
 澧	rˤiʔ	
 澨	das	
-澩	gˤruk	
+澩	hˤuk	
 澭	ʔoŋ	
 澮	kˤos	
 澱	dˤənh	
@@ -4185,7 +4216,7 @@
 灘	n̥ˤar	
 灛	tʰanʔ	
 灟	tok	
-灡	rˤanh	
+灡	ran	
 火	m̥ˤəjʔ	《詩》“火”在此，或作“𤈦”
 火	ẘˤajʔ	中古、《管子》“火”在此，或作“燬”“㷄”
 灰	ẘˤə	
@@ -4301,7 +4332,7 @@
 燧	slus	
 燬	ẘajʔ	
 燭	tok	
-燮	sˤep	
+燮	slˤip	
 燻	ẘən	
 燼	dzinʔ	
 燾	dˤu	
@@ -4401,7 +4432,7 @@
 狃	nruʔ	
 狄	l̥ˤek	
 狄	lˤewk	戎~
-狊	ẘˤek	
+狊	kwˤek	
 狋	ŋi	
 狌	sreŋ	
 狍	bˤru	
@@ -4439,6 +4470,8 @@
 猒	ʔep	
 猖	tʰaŋ	
 猗	ʔaj	
+猗	ʔˤajʔ	~儺，柔順、柔美
+猗	ʔajʔ	超越
 猘	kres	
 猙	tsreŋ	
 猛	mˤraŋʔ	
@@ -4521,7 +4554,7 @@
 玷	tˤemʔ	
 玼	tsʰˤeʔ	
 珈	kˤraj	
-珉	mrin	
+珉	mrən	
 珊	sˤan	
 珌	pik	
 珍	trən	
@@ -4549,7 +4582,7 @@
 琇	luʔ	
 琈	bu	
 琊	ɫa	
-琌	rəŋ	
+琌	ŋəm	
 琖	tsranʔ	
 琚	ka	
 琛	l̥rəm	
@@ -4574,7 +4607,7 @@
 瑋	wəjʔ	
 瑑	lronʔ	
 瑕	gˤra	
-瑗	wranh	
+瑗	wanh	
 瑘	ɫa	
 瑚	gˤa	
 瑜	lo	
@@ -4591,7 +4624,7 @@
 瑴	kˤrok	
 瑾	grənh	
 璂	gə	
-璅	tsˤawʔ	
+璅	sˤojʔ	通“鎖”
 璆	griw	
 璇	wen	
 璉	C.ranʔ	
@@ -4646,7 +4679,7 @@
 甓	bˤek	
 甔	tˤam	
 甕	ʔˤoŋh	
-甗	ŋanʔ	
+甗	ŋarʔ	
 甘	kˤam	
 甚	dumʔ	
 甜	lˤem	
@@ -4672,6 +4705,7 @@
 甹	pʰˤeŋ	~蜂，牽挽、扶持
 町	tʰˤeŋ	
 甽	kwˤinʔ	
+甾	tsrə	
 甿	mˤraŋ	
 畀	pis	
 畇	win	
@@ -4738,7 +4772,6 @@
 疲	braj	
 疴	kʰˤrajh	
 疵	dze	
-疷	trəj	
 疸	tˤanʔ	
 疹	tənʔ	
 疻	ke	
@@ -4764,7 +4797,7 @@
 痤	dzˤoj	
 痥	lˤot	
 痯	kwˤanʔ	~~，疲勞
-痱	bəjʔ	
+痱	bəj	中風
 痸	kʰes	
 痹	pis	
 痺	pis	
@@ -4802,7 +4835,7 @@
 瘹	tˤewh	
 瘻	rˤoh	
 瘼	mˤak	
-瘽	gənʔ	
+瘽	gən	
 療	rewh	
 癃	ruŋ	
 癇	gˤren	
@@ -4858,6 +4891,7 @@
 盆	bˤən	
 盈	leŋ	
 益	ʔek	
+盌	ʔwˤanʔ	
 盍	gˤap	
 盎	ʔˤaŋʔ	
 盛	deŋh	
@@ -4976,7 +5010,7 @@
 矖	sreʔ	
 矙	gˤamh	
 矚	tok	
-矛	mˤu	
+矛	mu	
 矜	kriŋ	
 矜	C.rˤiŋ	同情
 矜	grən	威勢；矛柄
@@ -5102,6 +5136,7 @@
 祫	gˤrəp	
 祭	tses	~祀
 祭	tsres	~伯
+祰	kˤuk	
 祱	l̥os	
 祲	tsəm	
 祴	kˤə	
@@ -5127,7 +5162,7 @@
 禦	ŋaʔ	
 禧	hə	
 禨	kəj	
-禪	dan	
+禪	danh	
 禫	lˤəmʔ	
 禬	kwˤas	
 禭	slus	
@@ -5307,6 +5342,7 @@
 笑	l̥awh	
 笓	bˤi	
 笙	sreŋ	
+笛	lˤiwk	
 笞	l̥rə	
 笠	C.rəp	
 笥	l̥əh	
@@ -5376,11 +5412,13 @@
 節	tsˤik	
 篁	wˤaŋ	
 範	bamʔ	
+篅	don	
 篆	lronʔ	
 篇	pʰen	
 築	truk	
 篋	kʰˤep	
 篌	gˤo	
+篍	tsʰiw	
 篎	mewʔ	
 篚	pəjʔ	
 篝	kˤro	
@@ -5484,10 +5522,10 @@
 糴	lˤewk	
 糵	ŋrat	
 糶	l̥ˤewh	
-糷	rˤanh	
-糺	kriwʔ	
+糷	rˤanʔ	
+糺	kiwʔ	
 系	gˤeh	
-糾	kriwʔ	
+糾	kiwʔ	
 紀	kəʔ	
 紂	druʔ	
 紃	mɫun	
@@ -5509,8 +5547,8 @@
 紖	lrənʔ	
 紘	gwˤrəŋ	
 級	kəp	
-紛	pʰən	
-紛	pʰun	盛多；繽~
+紛	pʰun	盛多；雜亂；繽~
+紛	pʰən	絲帶；爭執
 紜	wən	
 紝	nəm	
 紞	tˤamʔ	
@@ -5533,7 +5571,7 @@
 紹	dewʔ	
 紹	tʰew	緩慢
 紺	kˤumh	
-紼	pət	
+紼	put	
 紽	lˤaj	
 紾	tranʔ	
 紾	dranʔ	
@@ -5581,7 +5619,7 @@
 綆	kˤraŋʔ	
 綈	lˤi	
 綌	kʰrak	
-綍	pət	
+綍	put	
 綏	n̥uj	
 綏	nuj	旗
 綏	l̥oj	祭
@@ -5727,7 +5765,7 @@
 繰	tsˤawʔ	
 繲	kˤreh	
 繳	kewk	
-繴	pˤek	
+繴	pˤrek	
 繶	ʔək	
 繸	slus	
 繹	lak	
@@ -5811,6 +5849,7 @@
 羜	draʔ	
 羝	tˤi	
 羞	n̥u	
+羞	l̥u	進獻；珍饈
 羣	gun	
 群	gun	
 羨	slanh	
@@ -5841,7 +5880,7 @@
 翔	mɫaŋ	
 翕	həp	
 翛	slˤiw	
-翜	srəp	
+翜	sˤrap	
 翟	lˤewk	
 翠	tsʰus	
 翡	bəjh	
@@ -5939,8 +5978,9 @@
 肝	kˤan	
 股	kˤaʔ	
 肢	ke	
+肣	gum	占卜時甲上向內斂收的裂紋
 肥	bəj	
-肦	pˤran	
+肦	pˤran	同“頒”
 肦	bən	大頭
 肩	kˤen	
 肩	gˤen	~~，瘦小細長
@@ -6186,7 +6226,7 @@
 芘	bi	
 芙	ba	
 芚	dˤun	
-芛	ɫut	
+芛	ẘinʔ	
 芝	tə	
 芞	kʰət	
 芟	sˤram	
@@ -6197,7 +6237,7 @@
 芨	kəp	
 芩	gəm	
 芫	ŋon	
-芬	pʰun	
+芬	pʰən	
 芭	pˤra	
 芮	nəps	
 芰	greh	
@@ -6327,7 +6367,7 @@
 莠	luʔ	
 莢	kˤep	
 莣	maŋ	
-莤	sruk	
+莤	ɫu	
 莥	nruʔ	
 莧	gˤrenh	
 莩	pʰu	
@@ -6397,7 +6437,7 @@
 萭	kaʔ	
 萯	bəʔ	
 萰	rˤenh	
-萲	wˤanʔ	
+萲	ẘan	
 萴	tsrək	
 萷	sˤew	
 萸	ɫo	茱~
@@ -6415,6 +6455,7 @@
 葐	bˤən	
 葑	poŋ	
 葖	lˤut	
+葖	l̥ˤut	
 著	trak	接觸；殷商酒器
 著	trah	顯著；成就；記載
 葚	dəm	
@@ -6526,14 +6567,15 @@
 蔞	rˤo	
 蔟	tsʰˤok	
 蔠	tuŋ	
-蔡	tsʰˤras	
+蔡	tsʰˤas	
 蔡	sˤat	減少；流放
+蔡	tsʰˤes	野草
 蔣	tsaŋ	
 蔤	mrik	
 蔥	tsʰˤoŋ	
 蔦	tˤiwʔ	
 蔧	wis	
-蔨	gronʔ	
+蔨	gonʔ	
 蔩	liŋ	
 蔪	dzamʔ	
 蔫	ʔan	
@@ -6561,7 +6603,7 @@
 蕛	lˤi	
 蕝	tsot	
 蕞	dzˤos	
-蕡	bən	
+蕡	bun	
 蕢	kʰˤus	
 蕤	nuj	
 蕧	buk	
@@ -6649,14 +6691,13 @@
 藟	ruj	
 藣	praj	
 藥	lawk	
-藨	bawʔ	
+藨	brawʔ	
 藩	par	
 藪	sroʔ	
 藫	lˤəm	
 藬	l̥ˤuj	
 藭	guŋ	
 藱	gˤujʔ	
-藲	ʔˤo	
 藴	ʔun	
 藶	rˤek	
 藷	dah	
@@ -6818,7 +6859,7 @@
 蜘	tre	
 蜙	soŋ	
 蜚	bəjh	
-蜜	mik	
+蜜	mit	
 蜠	kʰrun	
 蜠	grunʔ	
 蜡	dzˤrak	
@@ -6828,7 +6869,7 @@
 蜩	dˤiw	
 蜪	lˤu	
 蜬	kˤəm	
-蜭	gˤəm	
+蜭	gˤəmʔ	
 蜮	wˤək	
 蜰	pəjʔ	
 蜱	be	
@@ -6904,7 +6945,7 @@
 螳	dˤaŋ	
 螴	tʰrənʔ	
 螷	bˤre	
-螸	lo	
+螸	ɫo	
 螻	rˤoʔ	
 螼	kʰənʔ	
 螽	tuŋ	
@@ -7076,10 +7117,10 @@
 裸	rˤojʔ	
 裹	kˤojʔ	
 裻	tˤuk	
+裼	tʰˤeh	
 裼	slˤek	
 製	tes	
 裾	ka	
-褅	tʰˤeh	
 複	pək	
 褊	penʔ	
 褋	lˤep	
@@ -7160,9 +7201,10 @@
 角	kˤrok	
 觓	gru	
 觕	tʰok	
+觗	teh	
 觙	kəp	
 觚	kwˤa	
-觛	tˤarʔ	
+觛	tˤanʔ	
 觜	tse	
 觠	gwran	
 觡	kˤrak	
@@ -7182,7 +7224,7 @@
 觳	gˤok	同“斛”
 觴	l̥aŋ	
 觵	kwˤraŋ	
-觶	tar	
+觶	tanh	
 觷	gˤruk	
 觸	tʰok	
 觺	ŋə	
@@ -7240,7 +7282,7 @@
 詑	lˤaj	
 詒	lə	
 詒	l̥ˤəh	誒~
-詔	tewh	
+詔	tawh	
 評	breŋ	
 詖	pajh	
 詗	ẘeŋh	
@@ -7276,6 +7318,7 @@
 誋	gəh	
 誌	təh	
 認	niŋh	
+誐	ŋˤaj	
 誑	kwaŋh	
 誒	ʔˤəh	~詒
 誒	hə	
@@ -7318,8 +7361,8 @@
 諒	C.raŋh	
 諓	dzanʔ	
 諔	tʰiwk	
-論	rˤunh	
-論	run	
+論	rˤunh	定罪；研究
+論	run	議~，評定；敘說；推知；考慮；相貌
 諗	n̥imʔ	
 諛	ɫo	
 諜	lˤep	
@@ -7485,7 +7528,7 @@
 貊	mˤrak	
 貌	mˤrewh	
 貍	C.rə	
-貐	loʔ	
+貐	ɫoʔ	
 貒	tʰˤor	
 貓	mˤraw	
 貔	bi	
@@ -7595,6 +7638,7 @@
 趡	tsʰujʔ	
 趣	tsʰoh	
 趨	tsʰo	
+趩	ɫək	
 趫	kʰaw	
 趬	kʰew	
 趮	tsˤawh	
@@ -7628,7 +7672,6 @@
 跰	bˤen	
 跱	drəʔ	
 跲	kap	
-跲	gap	
 跳	lˤew	
 跼	grok	
 跽	griʔ	
@@ -7683,7 +7726,8 @@
 蹟	tsek	
 蹠	tak	
 蹢	tˤek	
-蹣	bˤan	
+蹣	bˤan	~跚
+蹣	mˤan	越過
 蹤	tsoŋ	
 蹨	nanʔ	
 蹩	bˤet	
@@ -7728,6 +7772,7 @@
 軋	ʔˤrit	
 軌	kruʔ	
 軍	kwən	
+軎	wres	
 軏	ŋot	
 軑	lˤas	
 軒	han	
@@ -7768,7 +7813,7 @@
 載	tsˤəʔ	年；祀；助詞
 載	tsˤək	筑牆長版
 載	tsˤəh	記~；開始；成功；施行
-輊	trih	
+輊	tris	
 輐	ŋˤonʔ	~斷，圓轉無棱角
 輒	trep	
 輓	mon	
@@ -7806,13 +7851,14 @@
 轄	gˤrat	
 轅	wan	
 轉	tronʔ	
+轊	wres	
 轍	lret	
 轎	gaw	
 轏	dzˤranʔ	
 轐	pˤok	
 轑	rˤew	~陽，地名
 轑	rˤawʔ	
-轒	bən	
+轒	bun	
 轓	par	
 轔	rən	
 轘	wˤren	
@@ -8058,7 +8104,7 @@
 鄞	ŋrən	
 鄟	donʔ	國名
 鄟	ton	鄭國城門名
-鄢	ʔranʔ	
+鄢	ʔanʔ	
 鄣	taŋ	
 鄤	mˤan	
 鄦	m̥aʔ	
@@ -8210,7 +8256,7 @@
 銜	gˤram	
 銳	los	
 銶	gu	
-銷	sew	
+銷	saw	
 鋂	mˤə	
 鋈	ʔˤawk	
 鋊	ɫok	
@@ -8218,6 +8264,8 @@
 鋌	lˤeŋʔ	
 鋏	kˤep	
 鋒	pʰoŋ	
+鋗	ẘˤen	
+鋘	ŋwˤa	
 鋙	ŋaʔ	
 鋚	lˤiw	
 鋝	rot	
@@ -8289,7 +8337,7 @@
 鏖	ʔˤu	
 鏗	kʰˤrin	
 鏘	tsʰaŋ	
-鏚	tsʰˤiwk	
+鏚	tsʰuk	
 鏜	tʰˤaŋ	
 鏝	mˤan	
 鏞	loŋ	
@@ -8322,7 +8370,7 @@
 鑊	gwˤak	
 鑋	kʰeŋh	
 鑐	n̥o	
-鑑	kˤram	
+鑑	kˤramh	
 鑒	kˤramh	
 鑕	tik	
 鑠	l̥awk	
@@ -8346,8 +8394,8 @@
 镻	lˤik	
 門	mˤən	
 閈	gˤanh	
-閉	pˤit	封~，形容詞
-閉	pˤis	關~，動詞
+閉	pˤik	封~，形容詞
+閉	pˤih	關~，動詞
 開	kʰˤəj	
 閌	kʰˤaŋh	
 閍	pˤraŋ	
@@ -8358,7 +8406,7 @@
 閒	gˤren	
 間	kˤren	
 閔	mrənʔ	
-閞	branh	
+閞	bronh	
 閟	prih	
 閡	ŋˤəʔ	
 閣	kˤak	
@@ -8373,7 +8421,7 @@
 閷	sras	
 閹	ʔam	
 閹	ʔamʔ	~茂
-閻	gˤrəmh	
+閻	lam	
 閼	ʔran	~逢
 閼	ʔˤat	遏制；單~
 閽	m̥ˤən	
@@ -8639,7 +8687,7 @@
 韌	nənh	
 韍	put	
 韎	mˤat	
-韏	kronh	
+韏	konh	
 韐	kˤəp	
 韓	gˤar	
 韔	tʰraŋh	
@@ -8873,7 +8921,7 @@
 騃	mɫəʔ	
 騄	rok	
 騅	tuj	
-騇	l̥aʔ	
+騇	l̥ah	
 騉	kˤun	
 騊	lˤu	
 騋	rˤə	
@@ -8919,7 +8967,7 @@
 驚	kreŋ	
 驛	lak	
 驟	dzˤroh	
-驠	ʔˤen	
+驠	ʔˤenh	
 驢	ra	
 驤	n̥aŋ	
 驥	krəjh	
@@ -8982,7 +9030,7 @@
 鬩	ŋ̊ˤek	
 鬬	tˤoh	
 鬭	tˤoh	
-鬯	l̥raŋh	
+鬯	tʰraŋh	
 鬱	ʔut	
 鬲	C.rˤek	
 鬴	baʔ	
@@ -9008,13 +9056,13 @@
 魗	tʰuʔ	
 魚	ŋa	
 魡	tˤewk	
-魧	kˤaŋ	
+魧	gˤaŋ	
 魭	gˤonʔ	
 魮	bi	
 魯	rˤaʔ	
 魱	gˤa	
 魴	baŋ	
-魵	bənʔ	
+魵	pʰənʔ	
 魼	kʰa	
 魾	brə	
 鮀	lˤaj	
@@ -9045,7 +9093,7 @@
 鮵	lˤot	
 鯀	kˤunʔ	
 鯁	kˤraŋʔ	
-鯇	gˤronʔ	
+鯇	gˤonʔ	
 鯈	liw	
 鯉	rəʔ	
 鯊	sˤraj	
@@ -9122,8 +9170,9 @@
 鳶	lon	
 鳸	gwˤaʔ	
 鳺	pa	
-鳻	bən	
+鳻	bun	
 鳼	mən	
+鳽	kˤen	
 鳽	ŋˤen	
 鴀	pə	
 鴂	kwˤik	
@@ -9187,7 +9236,7 @@
 鵪	ʔˤəm	
 鵫	tˤrawh	
 鵬	bˤəŋ	
-鵯	pe	
+鵯	pʰik	
 鵰	tˤiw	
 鵱	ruk	
 鵲	tsʰak	
@@ -9198,7 +9247,7 @@
 鵹	ri	
 鵺	ɫah	
 鵻	tuj	
-鵽	tˤot	
+鵽	tˤrot	
 鵾	kˤun	
 鶀	gə	
 鶂	ŋˤek	
@@ -9276,7 +9325,8 @@
 鷻	dˤon	
 鷽	ʔˤruk	
 鷾	ʔəh	
-鸀	dˤok	
+鸀	tʰok	傳說怪鳥，見山海經
+鸀	dˤok	山鳥
 鸁	rˤoj	
 鸂	kʰˤe	
 鸃	ŋaj	
@@ -9285,7 +9335,7 @@
 鸇	tan	
 鸉	laŋ	
 鸋	nˤeŋ	
-鸍	n̥e	
+鸍	me	
 鸐	lˤrewk	
 鸑	ŋˤrok	
 鸒	ɫah	~斯，鳥名
@@ -9474,6 +9524,7 @@
 𠟍	tʰoŋ	
 𠢕	ŋ̊ˤaw	
 𠣗	ʔˤes	
+𠥦	ɫək	
 𠧩	m̥ˤəʔ	
 𠬢	l̥ˤaw	
 𠴫	dzˤiwk	
@@ -9493,9 +9544,11 @@
 𡢕	ẘajʔ	
 𡧯	tsiw	
 𡧽	m̥ˤaŋʔ	
+𡭐	dorʔ	
 𡰾	tsʰi	
 𡹤	grunʔ	
 𡺯	law	
+𢀄	ʔoŋ	
 𢁥	pʰən	
 𢅏	rem	
 𢆞	kˤenʔ	
@@ -9514,6 +9567,7 @@
 𢜭	kʰrak	
 𢜮	maʔ	
 𢜳	pʰəʔ	
+𢟤	rə	
 𢢈	kʰran	
 𢤂	ri	
 𢥞	lˤuŋ	
@@ -9521,12 +9575,11 @@
 𢫕	wraŋʔ	一説疑即“拥”
 𢫦	mˤrak	
 𢵣	ʔˤra	
-𢿠	bən	
 𣂁	l̥ˤew	
 𣃈	trak	
 𣊓	ŋ̊et	
 𣍘	dzˤu	
-𣎜	mləŋh	
+𣎜	ɫəŋ	
 𣖼	ẘin	
 𣖾	brəh	
 𣚣	kˤreŋ	
@@ -9568,12 +9621,14 @@
 𥂕	lriw	
 𥇛	kwa	
 𥈉	ẘˤanh	
+𥍹	karʔ	
 𥘯	mrəs	
 𥙐	tuk	
 𥝋	bəs	
 𥥌	lˤik	
-𥦋	bən	
+𥦋	bun	
 𥩵	peŋ	
+𥭳	tsʰiw	
 𥮐	tˤiw	
 𥯕	lˤaŋʔ	
 𥯤	wəjʔ	
@@ -9590,6 +9645,7 @@
 𦂗	sˤrewk	
 𦆽	rut	
 𦇙	bak	
+𦉢	rˤeŋ	
 𦉾	maŋʔ	
 𦊟	kˤaʔ	
 𦍙	mɫaŋ	
@@ -9607,7 +9663,6 @@
 𦥊	tʰrih	
 𦥑	kuk	
 𦧇	mleʔ	
-𦨃	wˤaŋ	
 𦫶	kˤriw	
 𦬸	lrut	
 𦮼	kə	
@@ -9626,6 +9681,7 @@
 𧅙	ŋəs	
 𧆐	kˤəmʔ	
 𧆑	ẘˤak	
+𧇼	gˤawʔ	
 𧈫	gˤoŋ	
 𧊔	lanʔ	
 𧊧	kˤəp	
@@ -9641,6 +9697,7 @@
 𧕛	dˤaj	
 𧗴	loŋʔ	
 𧢦	gruj	
+𧣨	tənh	
 𧤕	dzu	
 𧥺	kwinh	
 𧪜	ŋ̊ˤah	
@@ -9648,6 +9705,7 @@
 𧬊	sˤeʔ	
 𧭉	drən	
 𧯡	ʔot	
+𧯦	konʔ	
 𧰙	gəj	
 𧲂	rən	
 𧳅	srəh	
@@ -9736,7 +9794,6 @@
 𪄀	bˤan	
 𪄶	sləp	
 𪆻	tˤamʔ	
-𪇆	dˤok	
 𪇱	rˤawk	
 𪈘	m̥ˤəŋ	
 𪈚	pˤrawk	
