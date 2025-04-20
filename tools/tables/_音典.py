@@ -329,6 +329,17 @@ class 表(_表):
 			序 = 自.音列
 			音標 = "".join(列[序:序+3])
 			音 = 自.轉調類(音標)
+		elif 自.文件名.startswith("东莞20"):
+			字 = 列[0]
+			音標 = 列[自.音列]
+			訓 = 音標.startswith("(")
+			音標 = 音標.strip("()")
+			l = list()
+			for 音 in 音標.split("|"):
+				音 = 自.轉調類(音)
+				if 訓: 音 += "@"
+				l.append((字, 音))
+			return l
 		elif 自.文件名.startswith("東莞語料合輯"):
 			字 = 列[8]
 			音標 = 列[自.音列]
