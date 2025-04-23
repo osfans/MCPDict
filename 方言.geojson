@@ -1098,7 +1098,7 @@
         "陳邡分區": "官話-山東-魯東大片-登州片",
         "錄入人": "DaiDzao",
         "維護人": "ResoundYB",
-        "來源": "《长岛方言志》"
+        "來源": "《长岛方言志》《长山列岛的语言及民俗文化研究》"
       },
       "geometry": {
         "type": "Point",
@@ -7326,6 +7326,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "南充龍蟠",
+        "語言": "南充龍蟠話",
+        "地點": "四川南充嘉陵龍蟠",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "版本": "2025-04-22",
+        "錄入人": "DaiDzao",
+        "來源": "《四川南充市龙蟠镇话音系》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.893916,
+          30.805664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "西充",
@@ -7655,6 +7678,30 @@
         "coordinates": [
           106.837361,
           32.351312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "平昌五木",
+        "語言": "平昌五木話",
+        "地點": "四川巴中平昌五木",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "長江-川黔",
+        "陳邡分區": "官話-長江-西南大片-川北片",
+        "版本": "2025-04-22",
+        "錄入人": "DaiDzao",
+        "來源": "《四川平昌县五木镇话音系》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.148344,
+          31.746497
         ]
       }
     },
@@ -15130,6 +15177,31 @@
         "marker-color": "#52CCAD",
         "marker-size": "medium",
         "marker-symbol": "f",
+        "title": "武寧",
+        "語言": "武寧本地聲",
+        "地點": "江西九江武寧新寧",
+        "地圖集二分區": "贛語-昌都片",
+        "音典分區": "湘贛-贛江-洪州",
+        "陳邡分區": "湘贛-幕阜-洪州大片-南昌片",
+        "版本": "2025-04-22",
+        "錄入人": "DaiDzao",
+        "維護人": "冰糖橙YB",
+        "來源": "YB《赣方言浊音走廊语音研究》《江西省方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.108592,
+          29.263864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "medium",
+        "marker-symbol": "f",
         "title": "武寧澧溪",
         "語言": "武寧澧溪話",
         "地點": "江西九江武寧澧溪",
@@ -15167,6 +15239,31 @@
         "coordinates": [
           115.031882,
           29.492402
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "medium",
+        "marker-symbol": "f",
+        "title": "修水",
+        "語言": "修水話",
+        "地點": "江西九江修水義寧",
+        "地圖集二分區": "贛語-昌都片",
+        "音典分區": "湘贛-贛江-洪州",
+        "陳邡分區": "湘贛-幕阜-洪州大片-南昌片",
+        "版本": "2025-04-22",
+        "錄入人": "DaiDzao",
+        "維護人": "冰糖橙YB",
+        "來源": "YB《赣方言浊音走廊语音研究》《客赣方言调查报告》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.553156,
+          29.031876
         ]
       }
     },
@@ -18795,6 +18892,30 @@
         "coordinates": [
           105.522232,
           29.881733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "潼南龍形",
+        "語言": "潼南龍形話",
+        "地點": "重慶潼南龍形",
+        "地圖集二分區": "西南官話-川黔片-成渝小片",
+        "音典分區": "湘贛-北湘-辰州",
+        "版本": "2025-04-22",
+        "錄入人": "DaiDzao",
+        "維護人": "冰糖橙YB",
+        "來源": "语保"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.848551,
+          30.195567
         ]
       }
     },
