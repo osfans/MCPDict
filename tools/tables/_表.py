@@ -160,7 +160,7 @@ def docx2tsv(doc):
 			element = Paragraph(each, Doc)
 			行 = "".join(map(run2text, element.iter_inner_content())).replace("}~", "~}").replace("~{", "{~").replace("}{", "").replace("{h}", "h")
 			lines.append(行)
-	行 = "\n".join(lines).replace("}\n{", "")
+	行 = "\n".join(lines).replace("}\n{", "").replace("\n}", "}\n")
 	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.write(行)
 	t.close()
@@ -198,6 +198,7 @@ class 表:
 	__mod = None
 	誤 = []
 	音集 = set()
+	調號 = "˩˨˧˦˥"
 
 	def __init__(自):
 		自.誤.clear()
@@ -482,6 +483,12 @@ class 表:
 	def 析(自, 列):
 		return tuple(列[:3])
 
+	def 統調(自, m):
+		g = m.group(1)
+		l = [str(自.調號.index(i) + 1) for i in g]
+		g = "".join(l)
+		return "[" + g + "]"
+
 	def 統(自, 行):
 		行 = 行.rstrip('\n')
 		if not 自.爲方言(): return 行
@@ -507,6 +514,7 @@ class 表:
 			.replace("ʔb", "ɓ").replace("ʔd", "ɗ")\
 			.replace("ɷ", "ʊ")\
 			.replace("", "䝼").replace("", "ᵑ").replace("", "ᶽ")
+		行 = re.sub(fr"\[([{自.調號}]+)\]", 自.統調, 行)
 		return 行
 	
 	@property
@@ -553,11 +561,10 @@ class 表:
 	def 分音(自, 音):
 		if not 音: return "",""
 		調值 = "⁰¹²³⁴⁵⁶"
-		調號 = "˩˨˧˦˥"
 		for i in 調值:
 			音 = 音.replace(i, str(調值.index(i)))
-		for i in 調號:
-			音 = 音.replace(i, str(調號.index(i)+1))
+		for i in 自.調號:
+			音 = 音.replace(i, str(自.調號.index(i)+1))
 		聲韻 = re.split(r"\d", 音, maxsplit=1)[0]
 		調 = 音[len(聲韻):]
 		return 聲韻,調

@@ -22,6 +22,10 @@ class 表(_表):
 		elif 名 in ("知乎新派"):
 			自.爲音 = False
 			音, _, 組 = 列[:3]
+		elif 名 in ("代縣東首"):
+			if 列[0].count(" ") < 2: return
+			聲韻, 調值, 組 = 列[0].split(" ")
+			調 = 自.僅轉調類(調值)
 		elif 名 in ("景寧東坑",):
 			if len(列) == 1 or not 列[1].strip():
 				自.韻 = 列[0].strip()
