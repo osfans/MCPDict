@@ -147,6 +147,30 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-color": "#F5647A",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "赤峯",
+        "語言": "赤峯話",
+        "地點": "內蒙古赤峯",
+        "地圖集二分區": "北京官話-朝峯片",
+        "音典分區": "華北-河北-東北",
+        "陳邡分區": "官話-河北-東北片",
+        "版本": "2025-05-08",
+        "錄入人": "DaiDzao",
+        "來源": "《普通话基础方言基本词汇集》《赤峰方言音系及同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.96135,
+          42.274392
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-color": "#F5A4B6",
         "marker-size": "large",
         "marker-symbol": "b",
@@ -5895,6 +5919,30 @@
         "coordinates": [
           107.525165,
           26.265692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "平塘",
+        "語言": "平塘漢話",
+        "地點": "貴州黔南平塘",
+        "地圖集二分區": "西南官話-桂柳片-黔南小片",
+        "音典分區": "官話-黔南",
+        "陳邡分區": "官話-長江-西南大片-黔南片",
+        "版本": "2025-05-09",
+        "錄入人": "DaiDzao",
+        "來源": "《贵州平塘方言的同音字汇》、语保"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.329315,
+          25.828193
         ]
       }
     },
@@ -21825,6 +21873,31 @@
         "coordinates": [
           114.320681,
           22.772543
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EBC75E",
+        "marker-size": "small",
+        "marker-symbol": "i",
+        "title": "深圳坪山",
+        "語言": "深圳坪山占米話",
+        "地點": "廣東深圳坪山坪山田頭、田心",
+        "地圖集二分區": "粵語-廣府片",
+        "音典分區": "廣中-粘米",
+        "陳邡分區": "客家-嘉應-九連片",
+        "方言島": true,
+        "版本": "2025-05-09",
+        "錄入人": "Resound",
+        "來源": "《深圳坪山占米话研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.408441,
+          22.697337
         ]
       }
     },
