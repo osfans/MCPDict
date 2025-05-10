@@ -9,7 +9,7 @@ sys.setdefaultencoding('utf-8')
 
 def rich(r, k):
 	s = r[k]
-	if k == "白-沙": return s
+	if k == "白-沙上古": return s
 	s = s.replace("  ", "　").replace(" ", "").replace("　", " ")
 	s = re.sub(", ?", ", ", s)
 	s = s.replace("\n", "<br>")
