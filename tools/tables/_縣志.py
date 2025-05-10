@@ -158,13 +158,19 @@ class 表(_表):
 			if 行.startswith("#"): return "#"
 		elif 名 in ("長治"):
 			if 行.startswith("#"): return "#"
-		elif 名 in ("博白","東莞塘角"):
+		elif 名 in ("博白"):
 			if 行.startswith("#"): return "#"
 			果 = re.findall(r"\[(.*?)(\d+)\]", 行)
 			if not 果: return
 			聲韻 = 果[0][0]
 			行 = 自.行轉調類(行, r"\[.*?(\d+)\]")
 			行 = 聲韻 + 行
+		elif 名 in ("東莞塘角"):
+			if 行.startswith("#"): return "#"
+			果 = re.findall(r"\[(.*?)(\d+)[ab]?\]", 行)
+			if not 果: return
+			聲韻 = 果[0][0]
+			行 = 聲韻 + 行.replace("["+聲韻, "[")
 		elif 名 in ("東干甘肅話",):
 			if 行.startswith("#"):
 				韻組 = 行.rstrip().replace("#", "").split("\t")
