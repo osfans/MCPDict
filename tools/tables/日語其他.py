@@ -5,6 +5,7 @@ from collections import defaultdict
 from tables._數據庫 import 表 as _表
 
 class 表(_表):
+	補丁 = {"貞": "zyou(dyau)\t慣"}
 	def 更新(自):
 		d = defaultdict(list)
 		conn = sqlite3.connect(自.spath)
