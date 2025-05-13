@@ -156,8 +156,8 @@ def 獲取同音字頻(get=False):
 	詳情 = tables._詳情.加載()
 	for mod,d in 詳情.items():
 		try:
-			if d["文件格式"]:
-				語 = import_module(f'tables._{d["文件格式"]}').表()
+			if d["字表格式"]:
+				語 = import_module(f'tables._{d["字表格式"]}').表()
 				語.setmod(mod)
 			else:
 				語 = import_module(f"tables.{mod}").表()
@@ -211,8 +211,8 @@ def getLangs(dicts, 參數, args):
 		if mod in 詳情:
 			d = 詳情[mod]
 			try:
-				if d["文件格式"]:
-					語 = import_module(f'tables._{d["文件格式"]}').表()
+				if d["字表格式"]:
+					語 = import_module(f'tables._{d["字表格式"]}').表()
 					語.setmod(mod)
 				else:
 					語 = import_module(f"tables.{mod}").表()

@@ -37,8 +37,9 @@ for i in sorted(dicts.keys(), key=cjkorder):
 
 #info
 keys = list(langs[辭典數 if len(keys) > 辭典數 else 1].info.keys())
-keys.remove("文件格式")
+keys.remove("字表格式")
 keys.remove("跳過行數")
+keys.remove("字表使用調值")
 CREATE = 'CREATE VIRTUAL TABLE info USING fts3 (%s)' % (",".join(keys))
 INSERT = 'INSERT INTO info VALUES (%s)'% (','.join('?' * len(keys)))
 c.execute(CREATE)
