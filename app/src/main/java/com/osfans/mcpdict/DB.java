@@ -713,7 +713,7 @@ public class DB extends SQLiteAssetHelper {
         } else {
             StringBuilder sb = new StringBuilder();
             sb.append(String.format(Locale.getDefault(), "%s%s<br>", Pref.getString(R.string.name), language));
-            ArrayList<String> fields = new ArrayList<>(Arrays.asList("地點","經緯度", "作者", "錄入人", "維護人","來源", "參考文獻","文件名","版本","字數","□數", SYLLABLES,"不帶調音節數",""));
+            ArrayList<String> fields = new ArrayList<>(Arrays.asList("地點","經緯度", "作者", "錄入人", "維護人", "字表來源","參考文獻","補充閲讀","文件名","版本","字數","□數", SYLLABLES,"不帶調音節數",""));
             fields.addAll(Arrays.asList(FQ_COLUMNS));
             fields.add("");
             for (String field: fields) {
