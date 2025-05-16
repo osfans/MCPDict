@@ -191,6 +191,7 @@ class 表:
 	simplified = 1
 	爲音 = True
 	音列 = None
+	音典列序 = None
 	音典 = defaultdict(set)
 	音表 = OrderedDict()
 	聲韻典 = defaultdict(set)
@@ -570,7 +571,7 @@ class 表:
 		return 聲韻,調
 
 	def 轉調類(自, 音):
-		音 = 音.strip()
+		音 = 音.strip().lstrip("0")
 		if "/" in 音:
 			return "/".join(map(自.轉調類, 音.split("/")))
 		if "-" in 音:

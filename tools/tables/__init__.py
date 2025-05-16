@@ -150,6 +150,9 @@ def getLangsByArgv(infos, argv):
 					break
 	return l
 
+def 列序(a):
+	return sum([26**(len(a)-1-i)*(ord(j)-ord('A')+1) for i,j in enumerate(a)]) - 1
+
 def 獲取同音字頻(get=False):
 	if not get: return
 	同音字頻 = defaultdict(int)
@@ -167,8 +170,12 @@ def 獲取同音字頻(get=False):
 		if "繁" not in d["繁簡"]: 語.simplified = 2
 		if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 		if "聯表列名" in d:
-			a = d["聯表列名"].upper()
-			語.音列 = sum([26**(len(a)-1-i)*(ord(j)-ord('A')+1) for i,j in enumerate(a)]) - 1
+			列 = d["聯表列名"].upper()
+			語.音列 = 列序(列)
+		if d["字聲韻調註列名"]:
+			字聲韻調註列名 = d["字聲韻調註列名"].upper()
+			列名 = 字聲韻調註列名.split(",") if "," in 字聲韻調註列名 else list(字聲韻調註列名)
+			語.音典列序 = [列序(i) for i in 列名]
 		if d["聲調"]:
 			調典 = dict()
 			調組 = json.loads(d["聲調"])
@@ -223,8 +230,12 @@ def getLangs(dicts, 參數, args):
 			if "繁" not in d["繁簡"]: 語.simplified = 2
 			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 			if "聯表列名" in d:
-				a = d["聯表列名"].upper()
-				語.音列 = sum([26**(len(a)-1-i)*(ord(j)-ord('A')+1) for i,j in enumerate(a)]) - 1
+				列 = d["聯表列名"].upper()
+				語.音列 = 列序(列)
+			if d["字聲韻調註列名"]:
+				字聲韻調註列名 = d["字聲韻調註列名"].upper()
+				列名 = 字聲韻調註列名.split(",") if "," in 字聲韻調註列名 else list(字聲韻調註列名)
+				語.音典列序 = [列序(i) for i in 列名]
 			addAllFq(types[0], d["地圖集二分區"], d["地圖集二排序"])
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
 			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
