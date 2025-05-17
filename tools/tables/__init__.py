@@ -12,6 +12,7 @@ from opencc import OpenCC
 SOURCE = "data"
 TARGET = "output"
 PATH = os.path.dirname(os.path.abspath(__file__))
+if PATH.endswith("__init__"): PATH = PATH[:-8]
 
 VARIANT_FILE = os.path.join(PATH, SOURCE, "正字.tsv")
 
@@ -175,7 +176,7 @@ def 獲取同音字頻(get=False):
 		if d["字聲韻調註列名"]:
 			字聲韻調註列名 = d["字聲韻調註列名"].upper()
 			列名 = 字聲韻調註列名.split(",") if "," in 字聲韻調註列名 else list(字聲韻調註列名)
-			語.音典列序 = [列序(i) for i in 列名]
+			語.列序 = [列序(i) for i in 列名]
 		if d["聲調"]:
 			調典 = dict()
 			調組 = json.loads(d["聲調"])
@@ -235,7 +236,7 @@ def getLangs(dicts, 參數, args):
 			if d["字聲韻調註列名"]:
 				字聲韻調註列名 = d["字聲韻調註列名"].upper()
 				列名 = 字聲韻調註列名.split(",") if "," in 字聲韻調註列名 else list(字聲韻調註列名)
-				語.音典列序 = [列序(i) for i in 列名]
+				語.列序 = [列序(i) for i in 列名]
 			addAllFq(types[0], d["地圖集二分區"], d["地圖集二排序"])
 			addAllFq(types[1], d["音典分區"], d["音典排序"])
 			addCfFq(types[2], d["陳邡分區"], d["陳邡排序"])
@@ -249,6 +250,7 @@ def getLangs(dicts, 參數, args):
 					調典[調值] = 調
 				語.調典 = 調典
 			語.info = d
+			# print(d["文件名"])
 			語.加載(dicts, 更新=args.c)
 			if d["文件名"] != "mcpdict.db":
 				if 語.字數 == 0:

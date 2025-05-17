@@ -6,6 +6,7 @@ keystore.properties
 local.properties
 warnings*.txt
 build/
+dist/
 *.db
 *.db-journal
 *.iml

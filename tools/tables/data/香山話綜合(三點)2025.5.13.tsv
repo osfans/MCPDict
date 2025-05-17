@@ -351,8 +351,7 @@
 	只		ts	i	213	ts	i	21	ts	i	21										
 	枝		ts	i	55	ts	i	45	ts	i	55										
 	枝		k	i	55	k	i	45	k	i	55	荔枝									
-	氏		s	i	33	s	i	33	s	i	22	姓氏									
-	氏		ts	i	55	ts	i	45	ts	i	55	大月氏									
+	氏		s	i	33	s	i	33	s	i	22										
 	炊		tsʰ	ɵy	55	tsʰ	ɐi	45	tsʰ	ui	55										
 	吹		tsʰ	ɵy	55	tsʰ	ɐi	45	tsʰ	ui	55										
 	提		tʰ	ɐi	51	tʰ	ɐi	51	tʰ	ɐi	51										
@@ -365,7 +364,7 @@
 	規		kʷʰ	ɐi	55	kʷʰ	ɐi	45	kʰ	ɐi	55										
 	窺		kʷʰ	ɐi	55	kʷʰ	ɐi	45	kʰ	ɐi	55										
 	墮		t	ɔ	33	t	ɔ	33	t	ɔ	22										
-	蛇		s	ɛ	51	s	ia	51	s	ɛ	51	毒蛇									
+	蛇		s	ɛ	51	s	ia	51	s	ɛ	51										
 	蠵																				
 	移			i	51		i	51		i	51										
 	卑		p	i	55	p	i	45	p	i	55										
@@ -1647,7 +1646,7 @@
 	民		m	ɐn	51	m	ɐn	51	m	ɐn	51										
 	繽		p	ɐn	55	p	ɐn	45	p	ɐn	55										
 	盡		ts	ɐn	33	ts	ɐn	33	ts	ɐn	22										
-	筍		s	ɐn	213	s	ɐn	21	s	ɐn	51										
+	筍		s	ɐn	213	s	ɐn	21	s	ɐn	21										
 	疹		tsʰ	ɐn	213	tsʰ	ɐn	21	tsʰ	ɐn	21										
 	診		tsʰ	ɐn	213	tsʰ	ɐn	21	tsʰ	ɐn	21										
 	准		ts	ɵn	213	ts	ɐn	21	ts	ɐn	21										
@@ -1811,7 +1810,7 @@
 	穩		w	ɐn	213	w	ɐn	21	w	ɐn	21										
 	本		p	un	213	p	un	21	p	un	21										
 	笨		p	ɐn	33	p	ɐn	33	p	ɐn	22										
-	笨		pʰ	ɐn	213	pʰ	ɐn	21	pʰ	ɐn	21	口語，厚									
+	笨		pʰ	ɐn	213	pʰ	ɐn	21	pʰ	ɐn	21	厚									
 	畚		f	ɐn	33	f	ɐn	33	f	ɐn	22	畚箕篸									
 	畚		p	un	213	p	un	21	p	un	21										
 	頓		t	ɵn	33	t	ɐn	33	t	ɐn	22										
@@ -1916,7 +1915,6 @@
 	崛		kʷ	ɐt	3	kʷ	at	2	k	ɐt	2										
 	端		t	yn	55	t	in	45	t	yn	55										
 	單		t	an	55	t	an	45	t	an	55	單純									
-	單		s	in	51	s	in	51	s	in	51	單于									
 	單		s	in	33	s	in	33	s	in	22	姓單									
 	殫																				
 	丹		t	an	55	t	an	45	t	an	55										
@@ -1966,8 +1964,8 @@
 	看		h	ɔn	33	h	ɔn	33	h	ɔn	22	看待									
 	歡		h	un	55	h	un	45	h	un	55										
 	鼾		h	ɔn	51	h	ɔn	51	h	ɔn	51										
-	汗		h	ɔn	33	h	ɔn	33	h	ɔn	22	流汗									
-	汗		h	ɔn	51	h	ɔn	51	h	ɔn	51	可汗									
+	汗		h	ɔn	33	h	ɔn	33	h	ɔn	22										
+	汗		h	ɔn	51							可汗									
 	桓		h	un	51	h	un	51	h	un	51										
 	翰		h	ɔn	33	h	ɔn	33	h	ɔn	22										
 	院			yn	33		in	33		yn	22										
@@ -4258,7 +4256,7 @@
 	插		tsʰ	ap	3	tsʰ	ap	2	tsʰ	ap	5										
 	夾		k	ap	3	k	ap	2	k	ap	5										
 	夾		k	ɛp	3							白讀									
-	夾		k	ip	3							夾子									
+	夾		k	ip	3	k	ip	2	k	ip	2	夾子									
 	掐		h	ɐp	5	h	ɐp	5	h	ɐp	5										
 	恰		h	ɐp	5	h	ɐp	5	h	ɐp	5										
 	洽		h	ɐp	5	h	ɐp	5	h	ɐp	5										
@@ -4271,7 +4269,6 @@
 	簾		l	im	51	l	im	51	l	im	51										
 	尖		ts	im	55	ts	im	45	ts	im	55										
 	漸		ts	im	33	ts	im	33	ts	im	22										
-	漸																				
 	鹼		k	an	213	k	an	21	k	an	21										
 	臉		l	im	213	l	im	21	l	im	21										
 	籤		tsʰ	im	55	tsʰ	im	45	tsʰ	im	55										
@@ -4377,7 +4374,7 @@
 	蠶		tsʰ	am	51	tsʰ	am	51	tsʰ	am	51										
 	弇			im	213		im	21		im	21										
 	堪		kʰ	ɔm	55	kʰ	am	45	kʰ	ɐm	55										
-	龕			ɔm	55		am	45	kʰ	ɐm	55										
+	龕			ɔm	55		am	45		ɐm	55										
 	函		h	ɔm	51	h	am	51	h	ɐm	51										
 	涵		h	ɔm	51	h	am	51	h	ɐm	51										
 	含		h	ɔm	51	h	am	51	h	ɐm	51										
@@ -4835,7 +4832,7 @@
 	鸕																				
 	鹵		l	u	213	l	u	21	l	u	21										
 	嗉																				
-	牯		k	u	213	k	u	21	k	u	21	狗牯									
+	牯		k	u	213	k	u	21	k	u	21										
 	蠱		k	u	213	k	u	21	k	u	21										
 	戽																				
 	疽																				
@@ -5134,7 +5131,6 @@
 	訖		ŋ	ɐt	5	ŋ	ɐt	2	ŋ	ɐt	2										
 	錛																				
 	逩																				
-	𡋯																				
 	餑																				
 	扽		t	ɐn	33	t	ɐn	33	t	ɐn	22										
 	飩		tʰ	ɐn	55	tʰ	ɐn	45	tʰ	ɐn	55										
@@ -5210,7 +5206,6 @@
 	虻		m	ɔŋ	51	m	ɔŋ	51	m	ɔŋ	51										
 	牚		tsʰ	aŋ	33	tsʰ	aŋ	33	tsʰ	aŋ	22										
 	㿭		tsʰ	ak	3	tsʰ	ak	2	tsʰ	ak	2										
-	𨨌																				
 	䂻																				
 	粳		k	ɐŋ	55	k	ɐŋ	45	k	ɐŋ	55										
 	浜																				
