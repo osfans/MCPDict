@@ -191,7 +191,7 @@ class 表:
 	simplified = 1
 	爲音 = True
 	音列 = None
-	音典列序 = None
+	列序 = None
 	音典 = defaultdict(set)
 	音表 = OrderedDict()
 	聲韻典 = defaultdict(set)
