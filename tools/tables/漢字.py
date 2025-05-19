@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
 from tables._表 import 表 as _表
-import re
+from tables.__init__ import WORKSPACE
+import re, os
 
 def get_note():
-	說明 = open("../README.md", encoding="U8").read()
+	fname = os.path.join(WORKSPACE, "..", "README.md")
+	if not os.path.exists(fname): return ""
+	說明 = open(fname, encoding="U8").read()
 	說明 = re.sub(r"^#.*$", "", 說明, flags=re.M).strip()
 	說明 = re.sub(r"\[(.*?)\]\((.*?)\)", "<a href=\\2>\\1</a>", 說明)
 	說明 = re.sub(r"^- (.+)$", "<li>\\1</li>", 說明, flags=re.M)
