@@ -84,20 +84,20 @@ class 表(_表):
 }
 
 	def 析(自, 列):
-		字, yb, js = 列[0], 列[自.音列], 列[3]
-		if not yb: return
-		yb = yb.lstrip("又").replace("gv", "gw")
-		yb, sd = 自.分音(yb)
+		字, 音, 註 = 列[自.列序[0]], 列[自.列序[1]], 列[自.列序[2]]
+		if not 音: return
+		音 = 音.lstrip("又").replace("gv", "gw")
+		音, sd = 自.分音(音)
 		if sd.isdigit():
-			if yb[-1] in "ptk":
+			if 音[-1] in "ptk":
 				if sd == "1": sd = "7"
 				elif sd == "3": sd = "8"
 				elif sd == "6": sd = "9"
 		else:
 			sd = ""
 		for ym in sorted(自.yms.keys(), key=lambda x:-len(x)):
-			if yb.endswith(ym):
-				sm = yb[:-len(ym)]
+			if 音.endswith(ym):
+				sm = 音[:-len(ym)]
 				break
-		yb = 自.sms[sm+"#"] + 自.yms[ym] + sd
-		return 字, yb, js
+		音 = 自.sms[sm+"#"] + 自.yms[ym] + sd
+		return 字, 音, 註

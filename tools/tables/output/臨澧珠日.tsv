@@ -4,6 +4,7 @@
 □	ka1	~~:外婆
 □	xa1	~他不住:管束、镇住
 □	ʐua1	~好远:绕道:绕远儿
+□	tɕiɛ1	~湿的:前加成分，透湿的
 □	maŋ1	~~:儿语，饭
 □	ŋaŋ1	~声都不~:出声，说
 □	n̩1	~娘
@@ -22,7 +23,6 @@
 □	tʰoŋ3	~水:踩
 □	tʂua5	~他一脚:踢
 □	tʰiɛ5	~带了:捆，系
-□	tɕiɛ5	~湿的:前加成分，透湿的
 □	sau5	~马:动作迅速，做事干练
 □	noŋ5	~腿:蜷缩
 □	nau6	~药:毒药
@@ -56,11 +56,13 @@
 □	uən5	水淹没
 □	naŋ3	液体因晃动而溢出
 □	tʂʰua3	淋雨
+□	pʰa1	溻
 □	nei1	滚动
 □	ɕi6	火~人
 □	tʰan3	烙毛
 □	iaŋ1	焉了
 □	tsʰɿ3	理睬
+□	ʐua2	甩，扔掉
 □	tsei5	硬塞，堵
 □	paŋ6	碰撞
 □	ɕia1	神气:爱出风头
@@ -460,7 +462,7 @@
 凶	o5	
 凸	tʰəu5	
 凹	ŋau5	
-凹	kʰuei5-	小坑
+凹	kʰuei5	训读，小坑，
 出	tʂʰʯ5	
 擊	tɕi1	
 函	xan2	
@@ -485,7 +487,7 @@
 删	san1	
 删	ʂuan1	
 判	pʰan5	
-刨	pʰau3	
+刨	pʰau2	
 刨	pau6	
 利	ni6	
 别	piɛ1	~针
@@ -522,7 +524,7 @@
 割	ko5	
 剽	pʰiau2	
 剿	tɕiau3	
-劈	pʰi3=	
+劈	pʰi1=	
 劈	pʰiɛ5	~柴
 力	ni5	
 勸	tʂʰuan5	
@@ -534,7 +536,7 @@
 劣	niɛ5	
 動	toŋ6	
 助	tsəu6	
-努	nəu2	
+努	nəu3	
 劫	tɕiɛ5	
 勵	ni5	
 勁	tɕin5	
@@ -594,7 +596,7 @@
 占	tsan5	
 卡	kʰa3	
 盧	nəu2	
-卤	nəu2	
+卤	nəu3	
 卦	kua5	
 臥	o6	
 衛	uei6	
@@ -728,7 +730,7 @@
 呼	fu1	
 命	min6	
 咀	tʂʯ3	
-咆	pʰau3	
+咆	pʰau2	
 和	xo2	
 咎	tɕiəu1	
 咏	ioŋ3	
@@ -1079,7 +1081,7 @@
 娶	tɕʰi3	
 娶	tʂʰʯ3	
 娼	tsʰaŋ1	
-婆	pʰo3	
+婆	pʰo2	
 婉	uan3	
 婊	piau3	
 婚	xuən1	
@@ -1088,7 +1090,7 @@
 婧	tɕin6	
 婪	nan2	
 嬰	in1	
-嬋	tsʰan3	
+嬋	tsʰan2	
 嬸	sən3	
 婷	tʰin2	
 婿	ɕi6	
@@ -1187,7 +1189,7 @@
 寡	kua3	
 寥	niau2	
 寨	tsai6	
-寰	xuan3	
+寰	xuan2	
 寸	tsʰən5	
 對	tei5	
 寺	sɿ6	
@@ -1227,7 +1229,7 @@
 局	tʂʯ5	
 屁	pʰi5	
 層	tsʰən2	
-屄	pʰi3	
+屄	pʰi1	
 居	tʂʯ1	
 屈	tʂʰʯ1	
 屉	tʰi5	
@@ -1538,7 +1540,7 @@
 懼	tʂʯ5	
 慘	tsʰan3	
 懲	tsʰən3	
-慚	tsʰan3	
+慚	tsʰan2	
 慣	kuan5	
 惰	to6	
 想	ɕiaŋ3	
@@ -1628,7 +1630,7 @@
 扳	pan1	
 扶	fu2	
 批	pʰei1-	
-批	pʰi3=	
+批	pʰi1=	
 扼	ŋɛ5	
 找	tsau3	
 承	tsʰən2	
@@ -1657,7 +1659,7 @@
 報	pau5	
 抨	pʰən1	
 披	pʰei1-	
-披	pʰi3=	
+披	pʰi1=	
 抬	tʰai2	
 抱	pau6	
 抵	ti3	
@@ -1798,9 +1800,9 @@
 援	ʐuan2	
 揻	uei5	使细长的东西弯曲
 攬	nan3	
-攙	tsʰan3	
+攙	tsʰan2	
 擱	ko5	
-摟	nəu2	
+摟	nəu3	
 攪	tɕiau3	
 搏	po5	
 搓	tsʰo1	
@@ -2237,8 +2239,9 @@
 殤	saŋ1	
 殉	ʂuən6	
 殊	ʂʯ1	
-殘	tsʰan3	
+殘	tsʰan2	
 殮	nian3	
+殕	pʰu3	发霉
 殖	tsɿ6	
 殯	pin1	
 毆	ŋəu1	
@@ -2336,7 +2339,7 @@
 法	fa5	
 泛	fan6	
 濘	nin2	
-泡	pʰau3	~桐
+泡	pʰau2	~桐
 泡	pʰau5	~茶
 泡	pʰau1	灯~
 波	po1	
@@ -2388,7 +2391,7 @@
 浦	pʰu3	
 浩	xau1	
 浪	naŋ6	
-浮	pʰau3-	
+浮	pʰau2-	
 浮	fu2=	
 浴	iəu5-	
 浴	ʐʯ5=	
@@ -2465,7 +2468,6 @@
 溪	tɕʰi1	
 溶	ʐoŋ2	
 溺	ni5	
-溻	pʰa1	
 滂	pʰaŋ2	
 滇	tian1	
 滋	tsɿ1	
@@ -2503,7 +2505,7 @@
 潮	tsʰau2	
 潲	sau5	
 潸	san1	
-潺	tsʰan3	
+潺	tsʰan2	
 潼	tʰoŋ2	
 潽	pʰu3	液休沸腾溢出
 澄	tsʰən2	~清
@@ -2652,7 +2654,7 @@
 狂	kʰuaŋ2	
 狄	ti5	
 狽	pei5	
-狍	pʰau3	
+狍	pʰau2	
 狐	fu2	
 狗	kəu3	
 狠	xən3	
@@ -2691,7 +2693,7 @@
 瑪	ma3	
 玩	uan2	
 玫	mei2	
-環	xuan3	
+環	xuan2	
 現	ɕian6	
 璽	ɕi3	
 玻	po1	
@@ -2753,7 +2755,6 @@
 甥	sən1	
 用	ioŋ6	
 甩	ʂuai3	
-甩	ʐua2	扔掉
 甫	pʰu3	
 甫	fu3	
 甬	ioŋ3	
@@ -2845,7 +2846,6 @@
 皓	xau1	
 皖	uan3	
 皙	ɕi5	
-皮	nai1	
 皮	pʰi2	
 皺	tsəu5	
 皴	tsʰən1	
@@ -2941,7 +2941,7 @@
 砌	tsʰɿ5	
 砍	kʰan3	
 砑	ŋa6	
-砒	pʰi3	
+砒	pʰi1	
 研	nian1-	
 研	ian2=	
 磚	tʂuan1	
@@ -3016,7 +3016,7 @@
 禁	tɕin1	~不起
 禁	tɕin5	~止
 禄	nəu5	
-禪	tsʰan3	
+禪	tsʰan2	
 禪	san6	
 福	fu5	
 禧	ɕi3	
@@ -3146,7 +3146,7 @@
 箱	ɕiaŋ1	
 篆	tʂuan6	
 篇	pʰian1	
-簍	nəu2	
+簍	nəu3	
 篙	kau1	
 篝	kəu1	
 篡	tʂʰuan5	
@@ -3299,7 +3299,7 @@
 縛	fu6	
 縫	foŋ2	~补
 縫	foŋ6	门~
-纏	tsʰan3	
+纏	tsʰan2	
 縊	i5	
 繽	pin1	
 縹	pʰiau1	
@@ -3712,7 +3712,7 @@
 蘑	mo2	
 蘸	tsan1	
 虎	fu3	
-虜	nəu2	
+虜	nəu3	
 虐	nio5	
 虑	ʐʯ6	
 虔	tɕʰian2	
@@ -3732,7 +3732,7 @@
 蚊	uən2	
 蚌	paŋ6	
 蚓	in3	
-蠶	tsʰan3	
+蠶	tsʰan2	
 蚣	koŋ1	
 蚤	tsau3	
 蚪	təu3	
@@ -3764,7 +3764,7 @@
 蜢	moŋ3	
 蜻	tɕʰin1	
 蠅	in1	
-蟬	tsʰan3	
+蟬	tsʰan2	
 蝌	kʰo1	
 蠍	tɕiɛ5	
 蠍	ɕiɛ5	
@@ -3787,7 +3787,7 @@
 蟥	xuaŋ2	
 蟹	ka6-	
 蟹	ɕiɛ6	
-蟾	tsʰan3	
+蟾	tsʰan2	
 蠚	xo5	
 蠡	ni2	
 蠢	tʂʰuən3	
@@ -3816,7 +3816,7 @@
 襖	ŋau3	
 袈	tɕia1	
 袋	tai6	
-袍	pʰau3	
+袍	pʰau2	
 袒	tʰan3	
 袖	ɕiəu6	
 袜	ua5	
@@ -3966,7 +3966,7 @@
 諧	ɕiɛ2	
 謂	uei6	
 諭	ʐʯ6	
-讒	tsʰan3	
+讒	tsʰan2	
 諺	ian6	
 諦	ti6	
 謎	mi2	
@@ -4036,8 +4036,7 @@
 賜	tsʰɿ5	
 賡	kən1	
 賠	pʰei2	
-賠	pʰu3	
-賴	nai1	
+賴	nai1	~皮
 賴	nai6	依~
 贅	tʂuei5	
 賺	tʂuan6	
@@ -4185,7 +4184,7 @@
 近	tɕin6	
 返	fan3	
 還	xai2	~有
-還	xuan3	~原
+還	xuan2	~原
 進	tɕin5	
 進	tɕiaŋ3=	
 遠	ʐuan3	
@@ -4278,7 +4277,7 @@
 鄙	pʰi3	
 鄙	pi3=	
 鄢	ian1	
-鄱	pʰo3	
+鄱	pʰo2	
 酉	iəu3	
 酋	tɕʰiəu2	
 酌	tso5	
@@ -4353,7 +4352,6 @@
 鐃	nau2	
 鐺	taŋ1	
 銅	tʰoŋ2	
-銅	tʂʯ5	
 鎧	kʰai3	
 鍘	tsa6	
 銖	tʂʯ1	
@@ -4379,6 +4377,7 @@
 鋅	ɕin1	
 銳	ʐuei5	
 鋃	naŋ2	
+鋦	tʂʯ5	
 錯	tsʰo5	
 錨	mau2	
 錛	pən1	
@@ -4529,7 +4528,7 @@
 靄	ŋai3	
 露	nəu6	
 霸	pa5	
-霹	pʰi3	
+霹	pʰi1	
 霾	mai2	
 青	tɕʰin1	
 靚	niaŋ6	
@@ -4616,7 +4615,7 @@
 館	kuan3	
 饋	kʰuei5	
 餿	sɿ1	
-饞	tsʰan3	
+饞	tsʰan2	
 饃	mo2	
 餾	niəu2	
 饅	man2	
@@ -4675,7 +4674,7 @@
 魔	mo2	
 魚	ʐʯ2	
 魷	iəu2	
-魯	nəu2	
+魯	nəu3	
 鮎	nian2	
 鮑	pau6	
 鮮	ɕian1	

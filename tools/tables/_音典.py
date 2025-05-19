@@ -59,6 +59,104 @@ class 表(_表):
 			elif 名 in ("瑞安陶山",):
 				備註 = 列[5]
 				註 = (註 + " " +備註).strip()
+			elif 名 in ("詔安白葉","詔安霞葛"):
+				if " " in 音:
+					l = list()
+					for y,j in zip(音.split(" "), 註.split(" ")):
+						l.append((字, y, j))
+					return l
+			elif 自.文件名.startswith("丹陽（雲陽訪仙河陽埤城）"):
+				註 = 字[1:].strip("()（）")
+				字 = 字[0]
+				if 字 == "[": return
+				音標 = 音
+				if "、" in 音標:
+					音標組 = 音標.split("、")
+					l = list()
+					for 音標 in 音標組:
+						音標, 音註 = re.findall(r"^(.*\d+)([^\d]*?)$", 音標)[0]
+						音 = 自.轉調類(音標)
+						l.append((字, 音, 音註 if 音註 else 註))
+					return l
+			elif 自.文件名.startswith("东莞20"):
+				訓 = 音.startswith("(")
+				音標 = 音.strip("()")
+				l = list()
+				for 音 in 音標.split("|"):
+					音 = 自.轉調類(音)
+					if 訓: 音 += "@"
+					l.append((字, 音))
+				return l
+			elif 自.文件名.startswith("白語_袁明軍"):
+				if not 字 or not 音: return
+				if 註 == 字: 註 = ""
+				上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
+				for i in 上標:
+					音 = 音.replace(i, str(上標.index(i)))
+			elif 自.文件名.startswith("贵州六盘水八点联表") or 自.文件名.startswith("永州南部土話聯表") or 自.文件名.startswith("广元剑阁5点联表") or 自.文件名.startswith("自贡富顺4点联表"):
+				if not 字: return
+				註 = 字[1:].strip("()（）")
+				字 = 字[0]
+				轉調類 = 自.info.get("字表使用調值", False)
+				if "/" in 音:
+					音組 = 音.split("/")
+					l = list()
+					for 項 in 音組:
+						if "(" in 項:
+							項, 註 = 項.split("(", 1)
+							註 = 註[:-1]
+						else:
+							註 = 列[0][1:].strip("()（）")
+						if 轉調類: 項 = 自.轉調類(項)
+						l.append((字, 項, 註))
+					return l
+			elif 自.文件名.startswith("粤西闽语方言字表"):
+				if len(列) < 6: return
+				字 = 字.strip("()")
+				音集 = 音
+				if 音集.startswith("(") and 音集.endswith(")"): 音集 = 音集[1:-1]
+				if not 音集 or 音集.startswith("—"): return
+				_js = 字[1:] if len(字)>1 else ""
+				_js = _js.strip("（）")
+				字 = 字[0]
+				l = list()
+				for 音標 in 音集.split("/"):
+					音標 = 音標.strip()
+					c = ""
+					if "(" in 音標:
+						n = 音標.index("(")
+						c = 音標[n:]
+						音標 = 音標[:n]
+					音 = 自.轉調類(音標)
+					註 = c + _js
+					if 註.startswith("(") and 註.endswith(")"):
+						註 = 註[1:-1]
+					l.append((字, 音, 註))
+				return l
+			elif 自.文件名.startswith("广西富川富阳方言21点"):
+				if not 字: return
+				註 = 字[1:].strip("()（）")
+				字 = 字[0]
+				if "/" in 音:
+					音標組 = 音.split("/")
+					l = list()
+					l.append((字, 自.轉調類(音標組[0]), 註))
+					if len(音標組) > 1:
+						if "(" in 音標組[1]:
+							音標, 註 = re.findall(r"([^()]*)\((.*)\)", 音標組[1])[0]
+						else:
+							音標 = 音標組[1]
+						l.append((字, 自.轉調類(音標), 註))
+					return l
+			elif 自.文件名.startswith("東莞語料合輯"):
+				訓 = 音.startswith("(")
+				音標 = 音.strip("()")
+				l = list()
+				for 音 in 音標.split("|"):
+					音 = 自.轉調類(音)
+					if 訓: 音 += "@"
+					l.append((字, 音))
+				return l
 		elif 名 in ("南通", ):
 			字 = 列[1]
 			音 = 列[-6] + 列[-4]
@@ -74,13 +172,6 @@ class 表(_表):
 				音 = 自.轉調類(音標)
 				l.append((字, 音, 註))
 			return l
-		elif 名 in ("詔安白葉","詔安霞葛"):
-			字, 音, 註 = 列[:3]
-			if " " in 音:
-				l = list()
-				for y,j in zip(音.split(" "), 註.split(" ")):
-					l.append((字, y, j))
-				return l
 		elif 名 in ("1925鹽城"):
 			字組, 音, 註 = 列[:3]
 			l = list()
@@ -118,121 +209,6 @@ class 表(_表):
 				for 項 in 音.split("/"):
 					l.append((字, 項, 註))
 				return l
-		elif 自.文件名.startswith("粤西闽语方言字表"):
-			if len(列) < 6: return
-			字 = 列[0].strip("()")
-			音集 = 列[自.音列]
-			if 音集.startswith("(") and 音集.endswith(")"): 音集 = 音集[1:-1]
-			if not 音集 or 音集.startswith("—"): return
-			_js = 字[1:] if len(字)>1 else ""
-			_js = _js.strip("（）")
-			字 = 字[0]
-			l = list()
-			for 音標 in 音集.split("/"):
-				音標 = 音標.strip()
-				c = ""
-				if "(" in 音標:
-					n = 音標.index("(")
-					c = 音標[n:]
-					音標 = 音標[:n]
-				音 = 自.轉調類(音標)
-				註 = c + _js
-				if 註.startswith("(") and 註.endswith(")"):
-					註 = 註[1:-1]
-				l.append((字, 音, 註))
-			return l
-		elif 自.文件名.startswith("东莞20"):
-			字 = 列[0]
-			音標 = 列[自.音列]
-			訓 = 音標.startswith("(")
-			音標 = 音標.strip("()")
-			l = list()
-			for 音 in 音標.split("|"):
-				音 = 自.轉調類(音)
-				if 訓: 音 += "@"
-				l.append((字, 音))
-			return l
-		elif 自.文件名.startswith("東莞語料合輯"):
-			字 = 列[8]
-			音標 = 列[自.音列]
-			訓 = 音標.startswith("(")
-			音標 = 音標.strip("()")
-			l = list()
-			for 音 in 音標.split("|"):
-				音 = 自.轉調類(音)
-				if 訓: 音 += "@"
-				l.append((字, 音))
-			return l
-		elif 自.文件名.startswith("丹陽（雲陽訪仙河陽埤城）"):
-			字 = 列[0][0]
-			if 字.startswith("["): return
-			註 = 列[0][1:].strip("()（）")
-			音標 = 列[自.音列]
-			if "、" in 音標:
-				音標組 = 音標.split("、")
-				l = list()
-				for 音標 in 音標組:
-					音標, 音註 = re.findall(r"^(.*\d+)([^\d]*?)$", 音標)[0]
-					音 = 自.轉調類(音標)
-					l.append((字, 音, 音註 if 音註 else 註))
-				return l
-		elif 自.文件名.startswith("广西富川富阳方言21点"):
-			if not 列[0]: return
-			字 = 列[0][0]
-			註 = 列[0][1:].strip("()（）")
-			音標 = 列[自.音列]
-			if "/" in 音標:
-				音標組 = 音標.split("/")
-				l = list()
-				l.append((字, 自.轉調類(音標組[0]), 註))
-				if len(音標組) > 1:
-					if "(" in 音標組[1]:
-						音標, 註 = re.findall(r"([^()]*)\((.*)\)", 音標組[1])[0]
-					else:
-						音標 = 音標組[1]
-					l.append((字, 自.轉調類(音標), 註))
-				return l
-		elif 自.文件名.startswith("贵州六盘水八点联表") or 自.文件名.startswith("永州南部土話聯表")  or 自.文件名.startswith("广元剑阁5点联表"):
-			if not 列[0]: return
-			字 = 列[0][0]
-			註 = 列[0][1:].strip("()（）")
-			音 = 列[自.音列]
-			if "/" in 音:
-				音組 = 音.split("/")
-				l = list()
-				for 項 in 音組:
-					if "(" in 項:
-						項, 註 = 項.split("(", 1)
-						註 = 註[:-1]
-					else:
-						註 = 列[0][1:].strip("()（）")
-					l.append((字, 項, 註))
-				return l
-		elif 自.文件名.startswith("自贡富顺4点联表"):
-			字 = 列[0][0]
-			註 = 列[0][1:].strip("()（）")
-			音標 = 列[自.音列]
-			if "/" in 音標:
-				音組 = 音標.split("/")
-				l = list()
-				for 項 in 音組:
-					if "(" in 項:
-						項, 註 = 項.split("(", 1)
-						註 = 註[:-1]
-					else:
-						註 = 列[0][1:].strip("()（）")
-					l.append((字, 自.轉調類(項), 註))
-				return l
-		elif 自.文件名.startswith("白語_袁明軍"):
-			if not 列[0]: return
-			字 = 列[0]
-			註 = 列[1]
-			if 註 == 字: 註 = ""
-			音 = 列[自.音列]
-			if not 音: return
-			上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
-			for i in 上標:
-				音 = 音.replace(i, str(上標.index(i)))
 		elif len(列) == 2:
 			字, 音 = 列[:2]
 		elif len(列) >= 3:
