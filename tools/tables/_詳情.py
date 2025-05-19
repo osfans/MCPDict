@@ -5,8 +5,10 @@ from openpyxl import load_workbook
 from .__init__ import n2o, s2t
 
 curdir = os.path.dirname(__file__)
-spath = os.path.join(curdir, "..", "漢字音典字表檔案（長期更新）.xlsx")
-tpath = os.path.join(curdir, "output", os.path.basename(__file__).replace(".py", ".json"))
+spath = "漢字音典字表檔案（長期更新）.xlsx"
+if not os.path.exists(spath):
+	spath = os.path.join(curdir, "..", spath)
+tpath = os.path.join(curdir, "output", os.path.basename(__file__).rstrip("c").replace(".py", ".json"))
 
 FeatureCollection = {
 	"type": "FeatureCollection",
@@ -15,7 +17,7 @@ FeatureCollection = {
 
 def 過時():
 	if not os.path.exists(tpath): return True
-	classtime = os.path.getmtime(__file__)
+	classtime = os.path.getmtime(__file__.rstrip("c"))
 	stime = os.path.getmtime(spath)
 	if classtime > stime: stime = classtime
 	ttime = os.path.getmtime(tpath)
@@ -238,6 +240,8 @@ def 加載(省=None):
 			if d[簡稱][i]:
 				Feature["properties"][i] = d[簡稱][i]
 		FeatureCollection["features"].append(Feature)
-	json.dump(FeatureCollection, fp=open("../方言.geojson","w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
-	json.dump(d, fp=open(tpath,"w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
+	geojsonpath = os.path.join(curdir, "../..", "方言.geojson")
+	if os.path.exists(geojsonpath):
+		json.dump(FeatureCollection, fp=open(geojsonpath, "w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
+		json.dump(d, fp=open(tpath,"w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
 	return d

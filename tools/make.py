@@ -20,7 +20,8 @@ CREATE = 'CREATE VIRTUAL TABLE mcpdict USING fts3 (%s)' % (",".join(fields))
 INSERT = 'INSERT INTO mcpdict VALUES (%s)'% (','.join('?' * len(keys)))
 
 #db
-NAME = '../app/src/main/assets/databases/mcpdict.db'
+NAME = os.path.join(WORKSPACE, '..', 'app/src/main/assets/databases/mcpdict.db')
+if not os.path.exists(NAME): sys.exit(0)
 DIR = os.path.dirname(NAME)
 if os.path.exists(NAME): os.remove(NAME)
 if not os.path.exists(DIR): os.mkdir(DIR)
@@ -29,7 +30,7 @@ c = conn.cursor()
 for i in keys:
 	if keys.count(i) > 1:
 		print(f"{i}重名")
-		exit()
+		sys.exit(1)
 c.execute(CREATE)
 for i in sorted(dicts.keys(), key=cjkorder):
 	v = list(map(dicts[i].get, keys))

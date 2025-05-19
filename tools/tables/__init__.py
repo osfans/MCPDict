@@ -13,6 +13,7 @@ SOURCE = "data"
 TARGET = "output"
 PATH = os.path.dirname(os.path.abspath(__file__))
 if PATH.endswith("__init__"): PATH = PATH[:-8]
+WORKSPACE = os.path.join(PATH, "..")
 
 VARIANT_FILE = os.path.join(PATH, SOURCE, "正字.tsv")
 
@@ -25,7 +26,7 @@ VARIANT_FILE = os.path.join(PATH, SOURCE, "正字.tsv")
 n2o_dict = {}
 o2n_dict = {}
 
-for 行 in open("tables/data/mulcodechar.dt", encoding="U8"):
+for 行 in open(os.path.join(PATH, SOURCE, "mulcodechar.dt"), encoding="U8"):
 	if not 行 or 行[0] == "#": continue
 	列 = 行.strip().split("-")
 	if len(列) < 2: continue
@@ -105,7 +106,7 @@ def s2t(字組, level=1):
 	return t
 
 方言調查字表 = set()
-for 行 in open("tables/data/方言調查字表.tsv", encoding="U8"):
+for 行 in open(os.path.join(PATH, SOURCE, "方言調查字表.tsv"), encoding="U8"):
 	if not 行 or 行[0] == "#": continue
 	列 = 行.strip().split("\t")
 	字 = 列[1]

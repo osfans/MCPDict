@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from tables import *
-import os, re
+import os, re, sys
 import logging
 from collections import defaultdict, OrderedDict
 from glob import glob
@@ -24,7 +24,10 @@ def getYD(py):
 
 def getCompatibilityVariants():
 	d = dict()
-	for 行 in open("../app/src/main/res/raw/orthography_hz_compatibility.txt",encoding="U8"):
+	fname = os.path.join(WORKSPACE, "..", "app/src/main/res/raw/orthography_hz_compatibility.txt")
+	if not os.path.exists(fname):
+		fname = os.path.join(WORKSPACE, "orthography_hz_compatibility.txt")
+	for 行 in open(fname, encoding="U8"):
 		字, val = 行.rstrip()
 		d[字] = val
 	return d
@@ -446,7 +449,7 @@ class 表:
 					異讀 = getYD(py)
 				except:
 					print("\t\t\t", 自.簡稱, py, 註)
-					exit(1)
+					sys.exit(1)
 				if 異讀 and py.count("*") <= 1:
 					註 = f"({異讀}){註}"
 					py = py[:-1]
