@@ -48,7 +48,7 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         automatic_release_tag: latest
         prerelease: false
-        title: "Lastest Build"
+        title: 'Latest Release'
         files: |
           app/build/outputs/apk/release/*.APK
           tools/warnings.txt

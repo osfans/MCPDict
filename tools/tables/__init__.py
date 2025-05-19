@@ -171,9 +171,6 @@ def 獲取同音字頻(get=False):
 			continue
 		if "繁" not in d["繁簡"]: 語.simplified = 2
 		if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
-		if "聯表列名" in d:
-			列 = d["聯表列名"].upper()
-			語.音列 = 列序(列)
 		if d["字聲韻調註列名"]:
 			字聲韻調註列名 = d["字聲韻調註列名"].upper()
 			列名 = 字聲韻調註列名.split(",") if "," in 字聲韻調註列名 else list(字聲韻調註列名)
@@ -231,9 +228,6 @@ def getLangs(dicts, 參數, args):
 				continue
 			if "繁" not in d["繁簡"]: 語.simplified = 2
 			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
-			if "聯表列名" in d:
-				列 = d["聯表列名"].upper()
-				語.音列 = 列序(列)
 			if d["字聲韻調註列名"]:
 				字聲韻調註列名 = d["字聲韻調註列名"].upper()
 				列名 = 字聲韻調註列名.split(",") if "," in 字聲韻調註列名 else list(字聲韻調註列名)
