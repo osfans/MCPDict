@@ -258,12 +258,6 @@ class 表(_表):
 					else:
 						行 = "\t".join((f"[{序 if 序 <= 3 else 序 + 1}]" if 序 else "") + 項 for 序,項 in enumerate(列))
 					行 = 行.replace("（", "(").replace("）", ")").replace("(", "{").replace(")", "}").replace("{{", "{").replace("}}", "}").replace("ø", "")
-		elif 名 in ("大冶金牛"):
-			if not 行.startswith("#"):
-				列 = 行.split("\t")
-				if 有字(列[0]): return
-				行 = "\t".join((f"[{序 if 序 <= 3 else 序 + 1}]" if 序 else "") + 項 for 序,項 in enumerate(列))
-				行 = 行.replace("（", "(").replace("）", ")").replace("(", "{").replace(")", "}").replace("{{", "{").replace("}}", "}")
 		elif 名 in ("左雲"):
 			列 = 行.split("\t")
 			列數 = len(列)

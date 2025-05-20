@@ -13,6 +13,7 @@ class 表(_表):
 		註 = ""
 		if 自.列序:
 			列序 = 自.列序
+			if len(列) <= 列序[0]: return
 			字 = 列[列序[0]]
 			if (len(列序) == 5 or len(列序) == 3) and 0 <= 列序[-1] < len(列):
 				註 = 列[列序[-1]].strip("{}")
@@ -157,42 +158,30 @@ class 表(_表):
 					if 訓: 音 += "@"
 					l.append((字, 音))
 				return l
-		elif 名 in ("南通", ):
-			字 = 列[1]
-			音 = 列[-6] + 列[-4]
-			註 = 列[-7].strip()
-			if len(字) > 1 and len(註) == 0:
-				註 = 字[1:].strip()
-				字 = 字[0]
-		elif 名 in ("鶴山沙坪",):
-			字, 聲, jy, 韻, 調值, 註 = 列[0], 列[8], 列[9], 列[10], 列[11], 列[14]
-			l = list()
-			for i in 韻.split("，"):
-				音標 = 聲 + jy + i + 調值
-				音 = 自.轉調類(音標)
-				l.append((字, 音, 註))
-			return l
-		elif 名 in ("1925鹽城"):
-			字組, 音, 註 = 列[:3]
-			l = list()
-			for 字 in 字組.split(" "):
-				if len(字) == 2:
-					註 = f"（{字}）{註}".strip()
+			elif 名 in ("南通", ):
+				if len(字) > 1 and len(註) == 0:
+					註 = 字[1:].strip()
 					字 = 字[0]
-				elif len(字) > 2:
-					註 = f"{字[1:]}{註}".strip()
-					字 = 字[0]
-				l.append((字, 音, 註))
-			return l
-		elif 名 in ("榮縣",):
-			字,_,_,註,聲,韻,調 = 列[:7]
-			if 聲 in "ø": 聲 = ""
-			l = list()
-			聲韻 = 聲 + 韻
-			for 調 in 調.split("或"):
-				音 = 自.轉調類(聲韻 + 調)
-				l.append((字, 音, 註))
-			return l
+			elif 名 in ("鶴山沙坪",):
+				韻, 調值 = 列[10], 列[11]
+				l = list()
+				for i in 韻.split("，"):
+					音標 = 音 + i + 調值
+					l.append((字, 自.轉調類(音標), 註))
+				return l
+			elif 名 in ("1925鹽城"):
+				l = list()
+				for 項 in 字.split(" "):
+					if len(項) == 2:
+						註 = f"（{項}）{註}".strip()
+						項 = 項[0]
+					elif len(項) > 2:
+						註 = f"{項[1:]}{註}".strip()
+						項 = 項[0]
+					l.append((項, 音, 註))
+				return l
+			elif 名 in ("榮縣",):
+				音 = 音.lstrip("ø").replace("或", "/")
 		elif 自.文件名.startswith("榕江侗"):
 			列[0] = 列[0].strip().replace(" /", "/").replace(" [", "[")
 			if not 列[0]: return
