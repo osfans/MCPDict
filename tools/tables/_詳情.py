@@ -113,7 +113,7 @@ def 加載(省=None):
 			continue
 		列 = dict(zip(fields, 行))
 		文件名 = 列["文件名"]
-		if not 文件名 or 文件名.startswith("#") or 列["是否有人在做"] != "已做":
+		if not 文件名 or 文件名.startswith("#") or 列["是否有人在做"] not in ("已做", "重做"):
 			continue
 		語言 = normLangName(列["語言"])
 		簡稱 = normLangName(列["簡稱"])
