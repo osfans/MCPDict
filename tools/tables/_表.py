@@ -19,6 +19,10 @@ import regex
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 
 YDS = {"+":"又", "-":"白", "*":"俗", "/":"書","\\":"語","=":"文","?":"存疑", "@": "訓"}
+
+def getYDMark(py):
+	return py[-1] if py[-1] in YDS else ""
+
 def getYD(py):
 	return YDS.get(py[-1], "")
 
@@ -574,6 +578,10 @@ class 表:
 
 	def 轉調類(自, 音):
 		音 = 音.strip().lstrip("0")
+		if not 音: return 音
+		異讀 = getYDMark(音)
+		if 異讀:
+			音 = 音[:-1]
 		if "/" in 音:
 			return "/".join(map(自.轉調類, 音.split("/")))
 		if "-" in 音:
@@ -581,7 +589,7 @@ class 表:
 		聲韻,調值 = 自.分音(音)
 		if not 調值: return 聲韻
 		調類 = 自.僅轉調類(調值, 聲韻)
-		return 聲韻 + 調類
+		return 聲韻 + 調類 + 異讀
 
 	def 僅轉調類(自, 調值, 聲韻=""):
 		調類 = ""
