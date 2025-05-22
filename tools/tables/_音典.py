@@ -9,7 +9,7 @@ class 表(_表):
 		名 = 自.簡稱
 		字 = ""
 		音 = ""
-		音標 = ""
+		音組 = []
 		註 = ""
 		if 自.列序:
 			列序 = 自.列序
@@ -28,6 +28,7 @@ class 表(_表):
 			if 字.endswith("-") or 字.endswith("="):
 				音 += 字[-1]
 				字 = 字[:-1]
+			if not 字 or not 音: return
 			if 名 in ("信宜新寶",):
 				if 字 == 註: 註 = ""
 			elif 名 in ("國語",):
@@ -79,23 +80,18 @@ class 表(_表):
 						音 = 自.轉調類(音標)
 						l.append((字, 音, 音註 if 音註 else 註))
 					return l
-			elif 自.文件名.startswith("东莞20"):
+			elif 自.文件名.startswith("东莞20") or 自.文件名.startswith("東莞語料合輯"):
 				訓 = 音.startswith("(")
 				音標 = 音.strip("()")
-				l = list()
 				for 音 in 音標.split("|"):
-					音 = 自.轉調類(音)
 					if 訓: 音 += "@"
-					l.append((字, 音))
-				return l
+					音組.append(音)
 			elif 自.文件名.startswith("白語_袁明軍"):
-				if not 字 or not 音: return
 				if 註 == 字: 註 = ""
 				上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
 				for i in 上標:
 					音 = 音.replace(i, str(上標.index(i)))
 			elif 自.文件名.startswith("贵州六盘水八点联表") or 自.文件名.startswith("永州南部土話聯表") or 自.文件名.startswith("广元剑阁5点联表") or 自.文件名.startswith("自贡富顺4点联表"):
-				if not 字: return
 				註 = 字[1:].strip("()（）")
 				字 = 字[0]
 				轉調類 = 自.info.get("字表使用調值", False)
@@ -135,7 +131,6 @@ class 表(_表):
 					l.append((字, 音, 註))
 				return l
 			elif 自.文件名.startswith("广西富川富阳方言21点"):
-				if not 字: return
 				註 = 字[1:].strip("()（）")
 				字 = 字[0]
 				if "/" in 音:
@@ -149,26 +144,10 @@ class 表(_表):
 							音標 = 音標組[1]
 						l.append((字, 自.轉調類(音標), 註))
 					return l
-			elif 自.文件名.startswith("東莞語料合輯"):
-				訓 = 音.startswith("(")
-				音標 = 音.strip("()")
-				l = list()
-				for 音 in 音標.split("|"):
-					音 = 自.轉調類(音)
-					if 訓: 音 += "@"
-					l.append((字, 音))
-				return l
-			elif 名 in ("南通", ):
-				if len(字) > 1 and len(註) == 0:
-					註 = 字[1:].strip()
-					字 = 字[0]
 			elif 名 in ("鶴山沙坪",):
 				韻, 調值 = 列[10], 列[11]
-				l = list()
 				for i in 韻.split("，"):
-					音標 = 音 + i + 調值
-					l.append((字, 自.轉調類(音標), 註))
-				return l
+					音組.append(音 + i + 調值)
 			elif 名 in ("1925鹽城"):
 				l = list()
 				for 項 in 字.split(" "):
@@ -195,23 +174,19 @@ class 表(_表):
 				註 = 註.strip("{}")
 			if "/" in 音:
 				l = list()
-				for 項 in 音.split("/"):
-					l.append((字, 項, 註))
-				return l
+				音組 = 音.split("/")
 		elif len(列) == 2:
 			字, 音 = 列[:2]
 		elif len(列) >= 3:
 			字, 音, 註 = 列[:3]
-		else:
-			return
+		if len(字) != 1 or not 音: return
 		if 名 in ("白-沙上古", "鄭張上古", "中唐", "中世朝鮮","國語"):
 			自.爲音 = False
-		if 字:
-			if 音標 and not 音:
-				音 = 自.轉調類(音標)
-			elif 自.info.get("字表使用調值", False):
+		if not 音組: 音組.append(音)
+		l = list()
+		for 音 in 音組:
+			if 自.info.get("字表使用調值", False):
 				音 = 自.轉調類(音)
-			if len(字) != 1 or not 音: return
 			音 = 自.正音(音)
-			if 字 in "?�": 字 = "□"
-			return 字, 音, 註
+			l.append((字, 音, 註))
+		return l
