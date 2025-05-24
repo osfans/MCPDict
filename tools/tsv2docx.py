@@ -22,7 +22,7 @@ for line in open(fname, encoding="utf-8"):
     line = line.rstrip()
     if line.startswith("#") or re.match(r"^[^\d]+$", line):
         h = doc.add_heading("", level=0)
-        run = h.add_run(line.lstrip("#"))
+        run = h.add_run(line)
         run.font.name = "Times New Roman"
         run.font.size = Pt(20)
         run._element.rPr.rFonts.set(qn('w:eastAsia'), '微软雅黑')

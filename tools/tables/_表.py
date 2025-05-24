@@ -162,10 +162,10 @@ def docx2tsv(doc):
 					for p in cell.paragraphs:
 						行 += "".join(map(run2text, p.iter_inner_content())).replace("\t", "").replace("\n", "")
 					行 += "\t"
-				lines.append(行.replace("}~", "~}").replace("[}", "}[").replace("~{", "{~").replace("}{", "").replace("{h}", "h").strip())
+				lines.append(行.replace("}~", "~}").replace("~{", "{~").replace("}{", "").replace("[}", "}[").replace("{h}", "h").strip())
 		elif isinstance(each, docx.oxml.text.paragraph.CT_P):
 			element = Paragraph(each, Doc)
-			行 = "".join(map(run2text, element.iter_inner_content())).replace("}~", "~}").replace("[}", "}[").replace("~{", "{~").replace("}{", "").replace("{h}", "h")
+			行 = "".join(map(run2text, element.iter_inner_content())).replace("}~", "~}").replace("~{", "{~").replace("}{", "").replace("[}", "}[").replace("{h}", "h")
 			lines.append(行)
 	行 = "\n".join(lines).replace("}\n{", "").replace("\n}", "}\n")
 	t = open(tsv, "w", encoding="U8", newline="\n")
