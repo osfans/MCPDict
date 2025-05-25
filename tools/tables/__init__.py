@@ -201,7 +201,8 @@ def getLangs(dicts, 參數, args):
 	語組 = []
 	數 = 0
 	if len(參數) == 1:
-		mods = ["漢字"]
+		mods = []
+		if not args.output: mods.append("漢字")
 		mods.extend(getLangsByArgv(詳情, 參數))
 	else:
 		mods = 辭典.copy()
@@ -342,6 +343,8 @@ def getLangs(dicts, 參數, args):
 		語.info["語言索引"] = lang_t
 		if 語.說明: 語.info["說明"] = 語.說明
 		if not keys: keys = 語.info.keys()
+		if args.output:
+			語.存(args.output)
 		語組.append(語)
 	t.close()
 	字 = 語組[0]
@@ -360,5 +363,5 @@ def getLangs(dicts, 參數, args):
 	字.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
 	字.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:types[2][x]))
 	字.info["版本"] = datetime.datetime.now().strftime("%Y-%m-%d")
-	print("語言數", 數)
+	if not args.output: print("語言數", 數)
 	return 語組

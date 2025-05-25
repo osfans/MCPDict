@@ -350,7 +350,7 @@ class 表:
 	def 爲方言(自):
 		return 自.簡稱 in ("老國音","党項") or (自.爲語() and not 自.分區.startswith("歷史音"))
 
-	def 分註(自, 註):
+	def 正註(自, 註):
 		if not 註: return ""
 		上 = ""
 		果 = list()
@@ -363,6 +363,9 @@ class 表:
 				上 += 字
 		if 上: 果.append(上)
 		return " ".join(果)
+
+	def 合註(自, 註):
+		return 註.replace("  ", "　").replace(" ", "").replace("　", " ")
 
 	def 正部件(自, 註):
 		if not 註: return ""
@@ -447,7 +450,7 @@ class 表:
 				註 = ""
 				if "\t" in py: py, 註 = py.split("\t", 1)
 				if 註 and 自.爲語():
-					註 = 自.分註(註)
+					註 = 自.正註(註)
 				try:
 					異讀 = getYD(py)
 				except:
@@ -472,7 +475,7 @@ class 表:
 				if 自.字書:
 					sep = "▲" if 自.簡稱 == "匯纂" else "\t"
 					py2, 註 = py.split(sep, 1)
-					py = ("\n\n" if 自.d[字] else "") + py2 + sep + 自.分註(註)
+					py = ("\n\n" if 自.d[字] else "") + py2 + sep + 自.正註(註)
 				elif 自.簡稱 in ("部件檢索","字形描述"):
 					py = 自.正部件(py)
 				py = py.replace("\t", "\n")
@@ -486,7 +489,15 @@ class 表:
 			if 字 not in dicts:
 				dicts[字] = {"漢字": 字}
 			dicts[字][自.簡稱] = "\t".join(音集)
-	
+
+	def 存(自, output):
+		t = open(output, "w", encoding="U8", newline="\n")
+		for 字, 音集 in 自.d.items():
+			for 音 in 音集:
+				註 = 自.合註(re.sub(r"\{([^{}]*?)\}$", "\t\\1", 音))
+				t.write(f'{字}\t{註}\n')
+		t.close()
+
 	def 析(自, 列):
 		return tuple(列[:3])
 
