@@ -8,6 +8,7 @@ from pypinyin import pinyin, Style
 from collections import defaultdict
 from itertools import combinations
 from opencc import OpenCC
+import sqlite3
 
 SOURCE = "data"
 TARGET = "output"
@@ -156,8 +157,18 @@ def 列序(a):
 	return sum([26**(len(a)-1-i)*(ord(j)-ord('A')+1) for i,j in enumerate(a)]) - 1
 
 def 獲取同音字頻(get=False):
-	if not get: return
-	同音字頻 = defaultdict(int)
+	if not get: return False
+	同音字頻 = defaultdict(set)
+	同音字頻表 = "同音字頻"
+	if os.path.exists(f"{同音字頻表}.db"):
+		conn = sqlite3.connect(f"{同音字頻表}.db")
+		c = conn.cursor()
+		c.execute(f"select 漢字, 頻率 from {同音字頻表}")
+		for result in c.fetchall():
+			同音字頻[result[0]] = (result[1].count(",") + 1) * " "
+		conn.commit()
+		conn.close()
+		return 同音字頻
 	詳情 = tables._詳情.加載()
 	for mod,d in 詳情.items():
 		try:
@@ -191,7 +202,16 @@ def 獲取同音字頻(get=False):
 				if len(字組) < 2: continue
 				for 項 in combinations(字組, 2):
 					雙字 = "".join(sorted(項))
-					同音字頻[雙字] += 1
+					同音字頻[雙字].add(語.簡稱)
+	fields = ["漢字", "頻率"]
+	CREATE = 'CREATE VIRTUAL TABLE %s USING fts3 (%s)' % (同音字頻表, ",".join(fields))
+	INSERT = 'INSERT INTO %s VALUES (%s)'% (同音字頻表, ','.join('?' * len(fields)))
+	conn = sqlite3.connect(f"{同音字頻表}.db")
+	c = conn.cursor()
+	c.execute(CREATE)
+	c.executemany(INSERT, [(i, ",".join(j)) for i,j in 同音字頻.items()])
+	conn.commit()
+	conn.close()
 	return 同音字頻
 
 def getLangs(dicts, 參數, args):
@@ -286,7 +306,7 @@ def getLangs(dicts, 參數, args):
 						字組乙.remove(字甲)
 						n = len(字組乙)
 						for 字乙 in 字組乙:
-							字頻 += 同音字頻["".join(sorted((字甲, 字乙)))]
+							字頻 += len(同音字頻["".join(sorted((字甲, 字乙)))])
 						if 字頻 < 1.8 * n:
 							語.誤.append(f"【{字甲}】可能不讀[{音}]{''.join(字組乙)[:4]}")
 			if False and 方言調查字表 and 語.檢查同音字() and 3000 <= 語.字數 <= 6000:
