@@ -319,12 +319,17 @@ class 表:
 			if 自.簡稱 in ("鹽池花馬池","九江沙河","瀘溪武溪"): 音 = 音.lstrip("ø")
 			if 音.startswith("I") or 音.startswith("1"): 音 = "l" + 音[1:]
 			音 = 音.lower().replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ").replace("‘", "ʰ").replace(":","ː")
+			音 = re.sub("([ʂʐ]ʰ?)ʮ", "\\1ʯ", 音)
+			音 = re.sub("([sz]ʰ?)ʯ", "\\1ʮ", 音)
+			音 = re.sub("([ʂʐ]ʰ?)ɿ", "\\1ʅ", 音)
+			音 = re.sub("([sz]ʰ?)ʅ", "\\1ɿ", 音)
 			if not 音.startswith("h") and "h" in 音:
 				音 = 音.replace("h", "ʰ")
 			音 = 音.replace(" ", "")
 			音 = 音.replace("[", "").replace("]", "").replace("{", "").replace("}", "")
 			音 = re.sub(r"^([mnvʋɹl])(\d+)$", "\\1\u0329\\2", 音)
 			音 = re.sub(r"^([ŋȵʐɱɻʒ])(\d+)$", "\\1\u030D\\2", 音)
+			音 = re.sub("^([^*])\\1([^\u0303])", "\\1\\2", 音)
 			if 自.info["無調"]:
 				音 = 音.rstrip("0123456789")
 		return 音
