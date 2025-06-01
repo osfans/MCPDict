@@ -166,6 +166,7 @@
 例	li6	
 侍	tsʰɿ6	
 供	kuoŋ1	
+供	kuoŋ5	
 依	i1	
 俠	ɕia5	
 僥	tɕiɑu3	
@@ -489,7 +490,7 @@
 吟	ȵin2	
 含	xan2	
 含	xon2	
-听	tʰin2	
+听	tʰin5	
 启	tɕʰi3	
 吴	u2	
 吵	tsʰɑu3	
@@ -558,7 +559,6 @@
 喉	xiəu2	
 喊	xan3	
 喘	tɕʰyɛn3	
-喜	xon1	
 喜	ɕi3	
 喝	xo5	
 喧	ɕiɛn1	
@@ -982,7 +982,6 @@
 廖	liɑu6	
 延	iɛn2	
 廷	tʰin2	
-建	tsəu5	
 建	tɕiɛn5	
 開	kʰai1	
 開	kʰei1	
@@ -1143,14 +1142,12 @@
 所	so3	
 扁	piɛn3	
 扇	san5	
-手	sən1	
 手	səu3	
 才	tsʰai2	
 才	tsʰei2	
 扎	tsa5	
 扑	pʰu5	
 扒	pa1	
-打	tɕin1	
 打	ta3	
 扔	zən2	
 托	tʰo5	
@@ -1219,7 +1216,6 @@
 拘	tɕy1	
 招	tsɑu1	
 拜	pai5	
-擬	tsən1	
 擬	ȵi3	
 攏	loŋ3	
 揀	tɕiɛn3	
@@ -1375,13 +1371,12 @@
 敲	kʰɑu1	
 整	tsən3	
 敷	fu1	
+文	ɕy1	
 文	uən2	
 斋	tsai1	
 斌	pin1	
 斑	pan1	
 斗	təu5	
-料	tsən1	
-料	tso5	
 斜	sa2	
 斜	ɕie2	
 斟	tsən1	
@@ -1539,7 +1534,7 @@
 柴	tsʰai2	
 柿	tsʰɿ6	
 標	piɑu1	
-棧	tsan6	
+棧	tsan5	
 棟	toŋ5	
 欄	lan1	
 樹	tsʰən5	
@@ -1657,7 +1652,6 @@
 殷	in1	
 毁	xuei3	
 毅	ȵi6	
-母	tsən1	
 母	mu3	
 每	mei3	
 毒	tʰəu6	
@@ -1799,7 +1793,6 @@
 湖	xu2	
 湘	ɕiɑŋ1	
 灣	uan1	
-溼	kon1	
 溼	sɿ5	
 潰	kʰuei5	
 溉	kai5	
@@ -1838,7 +1831,7 @@
 澳	ŋɑu5	
 激	tɕi5	
 瀑	pʰu5	
-灌	kon6	
+灌	kon5	
 火	xu3	
 滅	mie5	
 燈	tən1	
@@ -1869,7 +1862,6 @@
 烤	kʰɑu3	
 煩	fan2	
 燒	sɑu1	
-燴	ȵiɛn3	
 燙	tʰɑŋ5	
 熱	zæ5	
 烹	pʰən1	
@@ -2102,7 +2094,7 @@
 着	tsʰo6	~火
 睜	tsən1	
 睛	tɕin1	
-睡	ɕyei2	
+睡	ɕyei5	
 睬	tsʰai3	
 睿	yei6	
 瞄	miɑu1	
@@ -2160,7 +2152,6 @@
 祀	tsʰɿ6	
 祁	tɕʰi2	
 祈	tɕʰi2	
-祈	to6	
 祖	tsəu3	
 祝	tsəu5	
 神	sən2	
@@ -2202,7 +2193,7 @@
 稀	ɕi1	
 程	tsʰən2	
 稍	sɑu1	
-稅	ɕyei2	
+稅	ɕyei5	
 稗	pʰa6	
 稚	tsʰɿ5	
 稠	tsʰəu2	
@@ -2236,6 +2227,8 @@
 立	li5	
 豎	ɕy6	
 站	tsan5	
+站	tsan5	~立
+站	tsʰan6	车~
 競	tɕin1	
 竟	tɕin5	
 章	tsɑŋ1	
@@ -2360,7 +2353,6 @@
 統	tʰoŋ3	
 繡	ɕiəu5	
 繼	tɕi6	
-繼	səu6	
 績	tɕi5	
 緒	ɕi6	
 續	səu6	
@@ -2392,7 +2384,7 @@
 缸	kɑŋ1	
 缺	tɕʰyæ5	
 罐	xon1	
-罐	kon6	
+罐	kon5	
 网	uɑŋ3	
 罕	xan3	
 羅	lo2	
@@ -2689,7 +2681,6 @@
 蛤	kʰa2	
 蠻	man2	
 蟄	tsɿ5	
-蟄	tso5	
 蛾	ŋo2	
 蜀	ɕy3	
 蜀	səu3	
@@ -2868,7 +2859,7 @@
 貝	pei5	
 貞	tsən1	
 負	fu6	
-貢	kuoŋ1	
+貢	kuoŋ5	
 財	tsʰai2	
 責	tsæ5	
 賢	ɕiɛn2	
@@ -2881,7 +2872,7 @@
 貧	pʰin2	
 貶	piɛn3	
 購	kiəu5	
-貫	kon6	
+貫	kon5	
 賤	tɕʰiɛn6	
 貼	tʰie5	
 貴	kuei5	
@@ -2936,7 +2927,6 @@
 踐	tɕiɛn5	
 踐	tɕʰiɛn5	
 踏	tʰa5	
-踞	tiɛn5	
 踢	tʰi5	
 踩	tsʰai3	
 蹤	tsoŋ1	
@@ -3356,7 +3346,6 @@
 魏	uei6	
 魔	mo2	
 魚	ȵy2	
-魷	ȵiɛn2	
 魯	ləu3	
 鮑	pʰɑu6	
 鮮	ɕiɛn1	
@@ -3369,7 +3358,7 @@
 鱗	lin2	
 鳥	ȵiɑu3	
 鳩	tɕiəu1	
-雞	tɕi1	篮球
+雞	tɕi1	
 鳴	min2	
 鷗	ŋiəu1	
 鴉	ia1	
