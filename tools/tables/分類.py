@@ -2,12 +2,13 @@
 
 from tables._表 import 表 as _表
 from tables import hex2chr, hzorders
+import re
 
 class 表(_表):
 	文件名 = "方言調查字表.tsv"
 
 	def 析(自, 列):
-		return 列[0], "FD"
+		return re.sub("\\d", "", 列[1].lstrip("·*⌈⌊[")[0]), "FD"
 
 	def 修訂(自, d):
 		for 行 in open(自.全路徑("Unihan_OtherMappings.txt"),encoding="U8"):
