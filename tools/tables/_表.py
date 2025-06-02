@@ -252,6 +252,7 @@ class 表:
 		if isXls(sname):
 			page = 0
 			if 自.文件名.startswith("香山話綜合"): page = 1
+			elif 自.簡稱 == "普寧占隴西": page = 1
 			elif 自.簡稱 == "開平護龍": page = 3
 			xls2tsv(sname, page)
 			sname = getTsvName(sname)

@@ -67,6 +67,14 @@ class 表(_表):
 					for y,j in zip(音.split(" "), 註.split(" ")):
 						l.append((字, y, j))
 					return l
+			elif 名 in ("隆都沙溪話"):
+				if " " in 音:
+					l = list()
+					備註 = 註
+					if 列[3]: 註 = 列[3]
+					for y,j in zip(音.split(" "), 註.split(" ")):
+						l.append((字, y,(備註.lstrip(y+"為") if 備註.startswith(y) else "") + j.lstrip(y)))
+					return l
 			elif 自.文件名.startswith("丹陽（雲陽訪仙河陽埤城）"):
 				註 = 字[1:].strip("()（）")
 				字 = 字[0]
