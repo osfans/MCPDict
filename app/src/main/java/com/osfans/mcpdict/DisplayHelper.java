@@ -32,9 +32,9 @@ public abstract class DisplayHelper {
     public String mLang;
 
     public static CharSequence getRichText(String richTextString) {
-        String s = richTextString.replace("<", "&lt;").replace(">", "&gt;")
+        String s = richTextString
                 .replace("?", "？").replace("!", "！").replace(":", "：").replace(";", "；").replace("~", "～")
-                .replace("\n", "<br>")
+                .replace("\n", "<br>").replace("<", "&lt;").replace(">", "&gt;")
                 .replaceAll("\\*\\*(.+?)\\*\\*", "<b>$1</b>")
                 .replaceAll("\\*(.+?)\\*", "<i>$1</i>")
                 .replaceAll("`(.+?)`", "<span style='color: #808080;'>$1</span>");

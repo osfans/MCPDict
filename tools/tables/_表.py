@@ -226,7 +226,9 @@ class 表:
 			name = 自.全路徑(name)
 		if g := glob(name): return g
 		if g := glob(re.sub(".([^.]+)$", "([0-9]).\\1", name)): return g
+		if g := glob(re.sub(".([^.]+)$", "([0-9][0-9]).\\1", name)): return g
 		if g := glob(re.sub(".([^.]+)$", " ([0-9]).\\1", name)): return g
+		if g := glob(re.sub(".([^.]+)$", " ([0-9][0-9]).\\1", name)): return g
 		if isXls(name) or isDocx(name):
 			自.文件名 = getTsvName(自.文件名)
 			return 自.find(自.文件名)
