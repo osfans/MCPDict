@@ -286,7 +286,7 @@
 佰	`hyaku`	
 佱	**hou(hohu)**	
 佳	`ke`	
-併	`hyou(hyau)`	
+倂	`hyou(hyau)`	
 佶	`giti`	
 佷	`gou`	
 佷	`gon`	
@@ -386,7 +386,7 @@
 修	`su`	
 俯	hu	
 俰	`ga(gwa)`	
-俱	`ku`	
+倶	`ku`	
 俲	`gyou(geu)`	
 俳	`be`	
 俵	**hyou(heu)**	
@@ -716,7 +716,7 @@
 冉	`nen(nemu)`	
 冊	`syaku`	
 冋	`kyou(kyau)`	
-册	`syaku`	
+冊	`syaku`	
 再	**sai**	
 冎	`ke(kwe)`	
 冏	`kyou(kyau)`	
@@ -783,7 +783,7 @@
 凖	`syun`	
 凖	`seti`	
 凘	si	
-凛	rin(rimu)	
+凜	rin(rimu)	
 凜	rin(rimu)	
 凝	**gyou**	
 凞	ki	
@@ -849,7 +849,7 @@
 制	`se`	
 刷	`seti`	
 券	`kon`	
-刹	`seti`	
+剎	`seti`	
 刺	**si**	
 刺	`syaku`	
 刻	**koku**	
@@ -1267,7 +1267,7 @@
 吮	`zyun`	
 启	`ke`	
 吱	si	
-吴	`gu`	
+吳	`gu`	
 吵	`syou(seu)`	
 吵	`myou(meu)`	
 吶	`noti`	
@@ -1288,9 +1288,9 @@
 呆	`gai`	
 呈	`zyou(dyau)`	
 吳	`gu`	
-告	**koku**	
-告	kou(kau)	
-呑	`ton`	
+吿	**koku**	
+吿	kou(kau)	
+吞	`ton`	
 嘔	`u`	
 嘔	ku	
 呞	si	
@@ -1726,7 +1726,7 @@
 园	gan(gwan)	
 囮	`ga(gwa)`	
 困	**kon**	
-囱	`su`	
+囪	`su`	
 圍	`e(we)`	
 圖	**zu(du)**	
 囶	**koku**	
@@ -1956,8 +1956,8 @@
 塤	`kon`	
 塤	kun	
 鹽	**en(emu)**	
-填	`den`	
-填	tin	
+塡	`den`	
+塡	tin	
 塲	**zyou(dyau)**	
 塵	zin(din)	
 塸	`u`	
@@ -2180,7 +2180,7 @@
 妋	hu	
 妋	`u`	
 妌	`zyou(zyau)`	
-妍	`gen`	
+姸	`gen`	
 妎	`gai`	
 妒	`tu`	
 妓	gi	
@@ -2597,7 +2597,7 @@
 尓	`ni`	
 尖	sen(semu)	
 尗	`suku`	
-尚	`zyou(zyau)`	
+尙	`zyou(zyau)`	
 尞	ryou(reu)	
 尟	sen	
 尠	sen	
@@ -2637,8 +2637,8 @@
 屋	**oku(woku)**	
 屍	si	
 屎	si	
-屏	`byou(byau)`	
-屏	`hyou(hyau)`	
+屛	`byou(byau)`	
+屛	`hyou(hyau)`	
 屐	`gyaku`	
 屑	`seti`	
 屓	ki	
@@ -2961,7 +2961,7 @@
 平	`ben`	
 年	**nen**	
 幵	ken	
-并	`hyou(hyau)`	
+幷	`hyou(hyau)`	
 幷	`hyou(hyau)`	
 幸	`gyou(gyau)`	
 幹	**kan**	
@@ -3078,7 +3078,7 @@
 弎	**san(samu)**	
 式	**siki**	
 貳	**ni**	
-弑	`si`	
+弒	`si`	
 弓	`ku`	
 弓	`kuu`	
 弔	**tyou(teu)**	
@@ -3545,7 +3545,7 @@
 態	**tai**	
 慌	**kou(kwau)**	
 慍	un	
-慎	`zin`	
+愼	`zin`	
 慓	hyou(heu)	
 慕	`mo`	
 慘	`son(somu)`	
@@ -3797,7 +3797,7 @@
 抗	`gou(gau)`	
 折	`seti`	
 抙	`bu`	
-抛	`hyou(heu)`	
+拋	`hyou(heu)`	
 拔	`bati`	
 擇	`zyaku(dyaku)`	
 抦	`hyou(hyau)`	
@@ -4290,7 +4290,7 @@
 敖	gou(gau)	
 敗	`he`	
 敘	**zyo**	
-教	**kyou(keu)**	
+敎	**kyou(keu)**	
 敝	`be`	
 敞	syou(syau)	
 敟	ten	
@@ -4462,7 +4462,7 @@
 昵	`ne`	
 昵	`nei`	
 昶	tyou(tyau)	
-昷	on(won)	
+𥁕	on(won)	
 昺	`hyou(hyau)`	
 晝	**tyuu(tiu)**	
 昿	kou(kwau)	
@@ -4815,8 +4815,8 @@
 柶	si	
 柷	syuku	
 柹	`zi`	
-查	`zya`	
-查	`sya`	
+査	`zya`	
+査	`sya`	
 柿	`zi`	
 栁	`ru`	
 榮	`you(yau)`	
@@ -5168,8 +5168,8 @@
 槗	**kyou(keu)**	
 樣	**you(yau)**	
 樣	**zou(zau)**	
-槙	ten	
-槙	sin	
+槇	ten	
+槇	sin	
 槞	`ru`	
 槢	`zyuu(zihu)`	
 槣	ki	
@@ -5460,7 +5460,7 @@
 歾	`mon`	
 歿	`moti`	
 殀	you(eu)	
-殁	`moti`	
+歿	`moti`	
 殂	`zo`	
 殃	ou(au)	
 殄	`den`	
@@ -5653,8 +5653,8 @@
 沚	si	
 沛	hai	
 沜	han	
-没	`moti`	
-没	`motu`	
+沒	`moti`	
+沒	`motu`	
 澤	`zyaku(dyaku)`	
 滬	ro	
 沫	matu	
@@ -5918,8 +5918,8 @@
 淺	**sen**	
 添	**ten(temu)**	
 淼	`myou(meu)`	
-清	**syou(syau)**	
-清	**syou(syau)**	
+淸	**syou(syau)**	
+淸	**syou(syau)**	
 渴	`kati`	
 渴	`geti`	
 濟	**sai**	
@@ -6478,7 +6478,7 @@
 熏	kun	
 熒	`gyou(gyau)`	
 熖	en(emu)	
-熙	ki	
+煕	ki	
 熚	`hiti`	
 熛	hyou(heu)	
 熟	**zyuku**	
@@ -7021,7 +7021,7 @@
 瓮	`u`	
 甌	`u`	
 瓴	`ryou(ryau)`	
-瓶	`byou(byau)`	
+甁	`byou(byau)`	
 瓷	`zi`	
 瓺	`zyou(dyau)`	
 瓻	ti	
@@ -7048,7 +7048,7 @@
 生	**syou(syau)**	
 甠	`zyou(zyau)`	
 甡	sin	
-産	`sen`	
+產	`sen`	
 甤	`nui`	
 甥	`syou(syau)`	
 甦	`su`	
@@ -7457,7 +7457,7 @@
 眜	`mati`	
 眜	`meti`	
 眞	**sin**	
-真	**sin**	
+眞	**sin**	
 眠	`men`	
 眢	wan	
 眢	`on(won)`	
@@ -7618,7 +7618,7 @@
 砎	`ke`	
 砑	`ge`	
 砒	`hai`	
-研	`gen`	
+硏	`gen`	
 碎	**sai**	
 砝	`kou(kohu)`	
 砠	`so`	
@@ -7830,10 +7830,10 @@
 祼	kan(kwan)	
 祾	ryou	
 祿	roku	
-禀	hin(himu)	
-禀	rin(rimu)	
+稟	hin(himu)	
+稟	rin(rimu)	
 禁	`kon(komu)`	
-禄	roku	
+祿	roku	
 禪	**zen**	
 禊	`ge`	
 禋	in	
@@ -8380,8 +8380,8 @@
 粢	si	
 粢	`zi`	
 粢	`zai`	
-粤	`oti(woti)`	
-粤	`eti(weti)`	
+粵	`oti(woti)`	
+粵	`eti(weti)`	
 粥	syuku	
 粥	iku	
 粦	rin	
@@ -9101,7 +9101,7 @@
 胹	`ni`	
 胺	`ati`	
 胻	`gyou(gyau)`	
-胼	`ben`	
+腁	`ben`	
 能	**nou**	
 能	`no`	
 能	`nai`	
@@ -11751,7 +11751,7 @@
 迴	`e(we)`	
 迵	`zuu(duu)`	
 迷	`mai`	
-迸	`hyou(hyau)`	
+逬	`hyou(hyau)`	
 迹	`syaku`	
 迺	nai	
 迻	i	
@@ -11836,7 +11836,7 @@
 達	`tati`	
 違	**i(wi)**	
 遘	`ku`	
-遥	you(eu)	
+遙	you(eu)	
 遛	`ru`	
 遜	**son**	
 遝	`dou(dohu)`	
@@ -11845,7 +11845,7 @@
 遡	`su`	
 遢	tou(tahu)	
 遣	**ken**	
-遥	you(eu)	
+遙	you(eu)	
 遦	kan(kwan)	
 遧	syou(syau)	
 遨	gou(gau)	
@@ -11897,7 +11897,7 @@
 邛	`gu`	
 邠	hin	
 邡	hou(hau)	
-邢	`gyou(gyau)`	
+郉	`gyou(gyau)`	
 那	**na**	
 邥	sin(simu)	
 邦	**hou**	
@@ -11923,7 +11923,7 @@
 郈	`gu`	
 郊	`kyou(keu)`	
 郌	`ke(kwe)`	
-郎	**rou(rau)**	
+郞	**rou(rau)**	
 郒	**rou(rau)**	
 郕	`zyou(zyau)`	
 郗	ti	
@@ -11949,8 +11949,8 @@
 郵	`u`	
 郶	**bu**	
 郶	**bu**	
-鄉	`kou(kau)`	
-鄉	`kou(kau)`	
+鄕	`kou(kau)`	
+鄕	`kou(kau)`	
 都	**tu**	
 郾	`on`	
 郿	`mi`	
@@ -12312,8 +12312,8 @@
 鋩	`mou(mau)`	
 鋪	`hu`	
 鋬	`hen`	
-鋭	**ei**	
-鋭	`dai`	
+銳	**ei**	
+銳	`dai`	
 鑄	`su`	
 鋸	`ko`	
 鋹	tyou(tyau)	
@@ -12432,8 +12432,8 @@
 鎬	`gou(gau)`	
 鎭	**tin**	
 鎭	`den`	
-鎮	**tin**	
-鎮	`den`	
+鎭	**tin**	
+鎭	`den`	
 鎰	`iti`	
 鏁	**sa**	
 鏃	`soku`	
@@ -12893,7 +12893,7 @@
 靉	`ai`	
 靊	`hu`	
 靑	**syou(syau)**	
-青	**syou(syau)**	
+靑	**syou(syau)**	
 靖	`zyou(zyau)`	
 靗	`tyou(tyau)`	
 靘	`syou(syau)`	
@@ -13083,8 +13083,8 @@
 頸	`gyou(gyau)`	
 頻	`bin`	
 賴	**rai**	
-頽	`de`	
-頽	`dai`	
+頹	`de`	
+頹	`dai`	
 頾	si	
 顄	`gon(gomu)`	
 顆	ka(kwa)	
@@ -13107,8 +13107,8 @@
 顙	sou(sau)	
 顚	ten	
 顚	`den`	
-顛	ten	
-顛	`den`	
+顚	ten	
+顚	`den`	
 類	**rui**	
 顢	`man`	
 顣	`suku`	
@@ -13172,7 +13172,7 @@
 飯	`bon`	
 飰	`bon`	
 飱	son	
-飲	`on(omu)`	
+飮	`on(omu)`	
 飳	`tu`	
 飳	syu	
 飴	i	
@@ -13183,7 +13183,7 @@
 飾	`siki`	
 餂	ten(temu)	
 餃	`kyou(keu)`	
-餅	`hyou(hyau)`	
+餠	`hyou(hyau)`	
 餈	`zi`	
 餉	syou(syau)	
 養	**you(yau)**	
@@ -13313,7 +13313,7 @@
 駝	da	
 駞	da	
 駟	si	
-駢	`ben`	
+騈	`ben`	
 駧	`zuu(duu)`	
 駪	sin	
 駫	`kyou(kyau)`	
@@ -13449,7 +13449,7 @@
 髖	kan(kwan)	
 髖	kon	
 髗	`ru`	
-高	**kou(kau)**	
+髙	**kou(kau)**	
 髜	kyou(keu)	
 髞	sou(sau)	
 髟	hyou(heu)	
@@ -13696,7 +13696,7 @@
 鰔	`kon(komu)`	
 鰕	`ge`	
 鰖	ta	
-鰛	on(won)	
+鰮	on(won)	
 鰜	ken(kemu)	
 鰝	`gou(gau)`	
 鰞	`u`	
@@ -13904,7 +13904,7 @@
 鷇	`ku`	
 鷉	`tai`	
 鷊	`gyaku`	
-鷏	`den`	
+鷆	`den`	
 鷓	sya	
 鷔	gou(gau)	
 鷕	you(eu)	
@@ -14013,7 +14013,7 @@
 麪	**men**	
 麻	`me`	
 麼	ma	
-麽	ma	
+麼	ma	
 麾	ki(kwi)	
 黃	**ou(wau)**	
 黃	**ou(wau)**	

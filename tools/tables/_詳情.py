@@ -116,6 +116,7 @@ def 加載(省=None):
 		if not 文件名 or 文件名.startswith("#") or 列["是否有人在做"] not in ("已做", "重做"):
 			continue
 		語言 = normLangName(列["語言"])
+		語言別名 = normLangName(列["語言別名"])
 		簡稱 = normLangName(列["簡稱"])
 		音系說明 = 列["音系"]
 		說明 = 列["說明"]
@@ -219,6 +220,8 @@ def 加載(省=None):
 			"無調":無調,
 			"聲調":聲調
 		}
+		if 語言別名:
+			d[簡稱]["語言別名"] = 語言別名
 		if not 經緯度: continue
 		Feature = {
 			"type": "Feature",
