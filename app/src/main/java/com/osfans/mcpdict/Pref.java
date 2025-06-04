@@ -216,6 +216,7 @@ public class Pref {
         if (customs.isEmpty()) return customs;
         Set<String> set = new HashSet<>();
         String[] languages = DB.getLanguages();
+        if (languages == null) return set;
         for (String lang: languages) {
             if (customs.contains(lang)) {
                 set.add(lang);

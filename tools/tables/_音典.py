@@ -67,7 +67,12 @@ class 表(_表):
 					for y,j in zip(音.split(" "), 註.split(" ")):
 						l.append((字, y, j))
 					return l
-			elif 名 in ("隆都沙溪話"):
+			elif 名 in ("普寧占隴西",):
+				l = list()
+				for z in 字:
+					l.append((z,音,註))
+				return l
+			elif 名 in ("隆都沙溪話",):
 				if " " in 音:
 					l = list()
 					備註 = 註
