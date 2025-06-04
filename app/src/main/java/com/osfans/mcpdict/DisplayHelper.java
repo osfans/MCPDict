@@ -34,7 +34,7 @@ public abstract class DisplayHelper {
     public static CharSequence getRichText(String richTextString) {
         String s = richTextString
                 .replace("?", "？").replace("!", "！").replace(":", "：").replace(";", "；").replace("~", "～")
-                .replace("\n", "<br>").replace("<", "&lt;").replace(">", "&gt;")
+                .replace("<", "&lt;").replace(">", "&gt;").replace("\n", "<br>")
                 .replaceAll("\\*\\*(.+?)\\*\\*", "<b>$1</b>")
                 .replaceAll("\\*(.+?)\\*", "<i>$1</i>")
                 .replaceAll("`(.+?)`", "<span style='color: #808080;'>$1</span>");

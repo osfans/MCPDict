@@ -26,6 +26,7 @@ VARIANT_FILE = os.path.join(PATH, SOURCE, "正字.tsv")
 
 n2o_dict = {}
 o2n_dict = {}
+t2s_more_dict = {"谿": "溪"}
 
 for 行 in open(os.path.join(PATH, SOURCE, "mulcodechar.dt"), encoding="U8"):
 	if not 行 or 行[0] == "#": continue
@@ -50,10 +51,18 @@ def o2n(s):
 		t += o2n_dict.get(i, i)
 	return t
 
+def t2s_more(s):
+	if not s: return ""
+	t = ""
+	for i in s:
+		t += t2s_more_dict.get(i, i)
+	return t
+
 def t2s(s, level=2):
 	s = o2n(s)
 	if level == 1:
 		return s
+	s = t2s_more(s)
 	return opencc_t2s.convert(s)
 
 def hex2chr(uni):
@@ -103,6 +112,7 @@ def s2t(字組, level=1):
 			字 = normVariants.get(字, 字)
 		else:
 			字 = stVariants.get(字, 字)
+		字 = n2o(字)
 		t += 字
 	return t
 
@@ -353,14 +363,19 @@ def getLangs(dicts, 參數, args):
 		聲韻數 = 語.聲韻數
 		語.info["音節數"] = 音節數 if 音節數 else None
 		語.info["不帶調音節數"] = 聲韻數 if 聲韻數 and 聲韻數 != 音節數 else None
-		lang_t = 語.info["語言"]
+		lang_ts = set()
+		lang_ts.add(語.info["語言"])
 		lang_s = t2s(語.info["語言"], 2)
-		if lang_s not in lang_t:
-			lang_t += f",{lang_s}"
+		lang_ts.add(lang_s)
 		lang_s = t2s(語.info["語言"], 1)
-		if lang_s not in lang_t:
-			lang_t += f",{lang_s}"
-		語.info["語言索引"] = lang_t
+		lang_ts.add(lang_s)
+		if 語.info.get("語言別名", ""):
+			lang_ts.add(語.info["語言別名"])
+			lang_s = t2s(語.info["語言別名"], 2)
+			lang_ts.add(lang_s)
+			lang_s = t2s(語.info["語言別名"], 1)
+			lang_ts.add(lang_s)
+		語.info["語言索引"] = ",".join(lang_ts)
 		if 語.說明: 語.info["說明"] = 語.說明
 		if not keys: keys = 語.info.keys()
 		if args.output:
