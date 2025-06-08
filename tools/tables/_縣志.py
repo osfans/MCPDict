@@ -275,6 +275,10 @@ class 表(_表):
 			if 行.startswith("#"): return 行
 			行 = re.sub(r"([\?#\-\+])(.)", "\\2\\1", 行)
 			行 = 行.replace("-", "(舊)").replace("+", "/").replace("#", "*")
+		elif 名 in ("檳城閩南話",):
+			if 行.startswith("#"): pass
+			elif 行.startswith("*"): 行 = 行.replace("*", "#")
+			elif "[" not in 行: 行 = ""
 		elif 名 in ("党項",):
 			行 = re.sub(r"(.\{)", "[0]\\1", 行, count=1)
 		elif 名 in ("淮劇",):
@@ -335,6 +339,7 @@ class 表(_表):
 				列[1] = 列[1].replace("\t", "")
 				列[1] = re.sub(r" (\d)", "\\1", 列[1])
 				聲, 字組 = 列
+				if 聲 == "ø": 聲 = "" 
 				for 調,字組 in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", 列[1]):
 					音 = 聲 + 韻 + 調
 					音 = 自.正音(音, True)
