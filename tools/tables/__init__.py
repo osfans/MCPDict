@@ -190,7 +190,12 @@ def 獲取同音字頻(get=False):
 			if not 語.文件名: 語.文件名 = d["文件名"]
 		except:
 			continue
-		if "繁" not in d["繁簡"]: 語.simplified = 2
+		if "正" in d["繁簡"]:
+			語.simplified = 0
+		elif "繁" in d["繁簡"]:
+			語.simplified = 1
+		else:
+			語.simplified = 2
 		if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 		if d["字聲韻調註列名"]:
 			字聲韻調註列名 = d["字聲韻調註列名"].upper()
@@ -257,7 +262,12 @@ def getLangs(dicts, 參數, args):
 			except Exception as e:
 				print(f"\t\t\t{e} {mod}")
 				continue
-			if "繁" not in d["繁簡"]: 語.simplified = 2
+			if "正" in d["繁簡"]:
+				語.simplified = 0
+			elif "繁" in d["繁簡"]:
+				語.simplified = 1
+			else:
+				語.simplified = 2
 			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 			if d["字聲韻調註列名"]:
 				字聲韻調註列名 = d["字聲韻調註列名"].upper()
