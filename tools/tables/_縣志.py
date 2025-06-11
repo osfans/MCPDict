@@ -228,12 +228,17 @@ class 表(_表):
 		elif 名 in ("泰州",):
 			行 = 行.replace("'", "ʰ")
 			行 = re.sub("([-=])(.)", "\\2\\1", 行)
-		elif 名 in ("江永夏層舖", "江永回龍圩", "江永粗石江", "江永蘭溪", "江永允山","如皋白蒲"):
+		elif 名 in ("江永夏層舖", "江永回龍圩", "江永粗石江", "江永蘭溪", "江永允山"):
 			if not 行.startswith("#"):
 				列 = 行.split("\t")
 				if 有字(列[0]): return
 				行 = "\t".join((f"[{序 + 1 if ("江永粗石江" == 名 and 序 > 3) or ("江永蘭溪" == 名 and 序 > 5) else 序}]" if 序 else "") + 項 for 序,項 in enumerate(列))
 				行 = 行.replace("（", "(").replace("）", ")").replace("(", "{").replace(")", "}").replace("{{", "{").replace("}}", "}")
+		elif 名 in ("如皋白蒲","如皋石莊"):
+			列 = 行.split("\t")
+			if 有字(列[0]): return
+			行 = "\t".join((f"[{序}]" if 序 else "") + 項 for 序,項 in enumerate(列))
+			行 = 自.normS(行.replace(")(", "："))
 		elif 名 in ("安澤英寨"):
 			if 行:
 				列 = 行.split("\t")
