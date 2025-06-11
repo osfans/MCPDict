@@ -312,16 +312,16 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     @Override
     public void refresh() {
+        long start = System.currentTimeMillis();
         new AsyncTask<Void, Void, Cursor>() {
             @Override
             protected Cursor doInBackground(Void... params) {
-                Log.d(TAG, "start search " + Pref.getInput());
                 return DB.search();
             }
             @Override
             protected void onPostExecute(Cursor cursor) {
                 if (fragmentResult != null) {
-                    Log.d(TAG, "search finished");
+                    Log.d(TAG, String.format("search %s cost %d ms",  Pref.getInput(), (System.currentTimeMillis() - start)));
                     fragmentResult.setData(cursor);
                     fragmentResult.scrollToTop();
                 }

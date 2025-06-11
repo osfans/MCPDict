@@ -33,13 +33,9 @@ if not args.output:
 			print(f"{i}重名")
 			sys.exit(1)
 	c.execute(CREATE)
-	字頻表 = dict()
-	for i in sorted(dicts.keys(), key=cjkorder):
+	for i in sorted(dicts.keys(), key=lambda x:(-len(dicts[x]),cjkorder(x))):
 		v = list(map(dicts[i].get, keys))
 		c.execute(INSERT, v)
-		字頻表[i] = len(dicts[i])
-	#print("".join(sorted(字頻表.keys(), key=lambda x:字頻表[x], reverse=True)[:5000]))
-	#info
 	keys = list(langs[辭典數 if len(keys) > 辭典數 else 1].info.keys())
 	keys.remove("字表格式")
 	keys.remove("跳過行數")

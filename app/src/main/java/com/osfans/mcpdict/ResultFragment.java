@@ -169,6 +169,7 @@ public class ResultFragment extends Fragment {
         LinearLayout layout = selfView.findViewById(R.id.layout);
         layout.addView(mTextView);
         mTextView.setTag(this);
+        mTextView.setHyphenationFrequency(android.text.Layout.HYPHENATION_FREQUENCY_NONE);
         registerForContextMenu(mTextView);
         Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(Pref.getToneStyle(R.string.pref_key_tone_value_display));
@@ -781,7 +782,7 @@ public class ResultFragment extends Fragment {
             mScroll.setScrollY(0);
         } else {
             FontUtil.setTypeface(mTextView);
-            Log.d(TAG, "setData begin");
+            long startTime = System.currentTimeMillis();
             new AsyncTask<Void, Void, CharSequence>() {
                 @Override
                 protected CharSequence doInBackground(Void... params) {
@@ -795,7 +796,7 @@ public class ResultFragment extends Fragment {
                     mTextView.setText(text);
                     mTextView.setVisibility(View.VISIBLE);
                     mScroll.setScrollY(0);
-                    Log.d(TAG, "setData finished");
+                    Log.d(TAG, String.format("setData %s cost %d ms", query, (System.currentTimeMillis() - startTime)));
                 }
             }.execute();
         }
