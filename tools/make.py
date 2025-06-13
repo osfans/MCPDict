@@ -33,9 +33,7 @@ if not args.output:
 			print(f"{i}重名")
 			sys.exit(1)
 	c.execute(CREATE)
-	for i in sorted(dicts.keys(), key=lambda x:(-len(dicts[x]),cjkorder(x))):
-		v = list(map(dicts[i].get, keys))
-		c.execute(INSERT, v)
+	c.executemany(INSERT, (list(map(dicts[i].get, keys)) for i in sorted(dicts.keys(), key=lambda x:(-len(dicts[x]),cjkorder(x)))))
 	keys = list(langs[辭典數 if len(keys) > 辭典數 else 1].info.keys())
 	keys.remove("字表格式")
 	keys.remove("跳過行數")
@@ -44,9 +42,7 @@ if not args.output:
 	CREATE = 'CREATE VIRTUAL TABLE info USING fts3 (%s)' % (",".join(keys))
 	INSERT = 'INSERT INTO info VALUES (%s)'% (','.join('?' * len(keys)))
 	c.execute(CREATE)
-	for lang in langs:
-		v = list(map(lang.info.get, keys))
-		c.execute(INSERT, v)
+	c.executemany(INSERT, (list(map(lang.info.get, keys)) for lang in langs))
 
 	conn.commit()
 	conn.close()
