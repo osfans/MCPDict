@@ -167,18 +167,25 @@ def 列序(a):
 	return sum([26**(len(a)-1-i)*(ord(j)-ord('A')+1) for i,j in enumerate(a)]) - 1
 
 def 獲取同音字頻(get=False):
-	if not get: return False
+	if not get: return False, False
 	同音字頻 = defaultdict(set)
+	高頻字 = list()
 	同音字頻表 = "同音字頻"
 	if os.path.exists(f"{同音字頻表}.db"):
 		conn = sqlite3.connect(f"{同音字頻表}.db")
 		c = conn.cursor()
 		c.execute(f"select 漢字, 頻率 from {同音字頻表}")
 		for result in c.fetchall():
-			同音字頻[result[0]] = (result[1].count(",") + 1) * " "
+			字 = result[0]
+			頻率 = result[1]
+			if len(字) == 1:
+				高頻字.append(字)
+			else:
+				同音字頻[字] = set(頻率.split(","))
 		conn.commit()
 		conn.close()
-		return 同音字頻
+		return 同音字頻, 高頻字
+	高頻字表 = defaultdict(int)
 	詳情 = tables._詳情.加載()
 	for mod,d in 詳情.items():
 		try:
@@ -214,40 +221,61 @@ def 獲取同音字頻(get=False):
 		語.讀()
 		if 語.音節數 > 0:
 			for 字組 in 語.聲韻典.values():
+				for 字 in 字組:
+					if not 爲字(字): continue
+					高頻字表[字] += 1
 				if len(字組) < 2: continue
 				for 項 in combinations(字組, 2):
 					雙字 = "".join(sorted(項))
 					同音字頻[雙字].add(語.簡稱)
+	高頻字 = sorted(高頻字表.keys(), key=lambda x:高頻字表[x], reverse=True)[:2000]
+	for i in set(同音字頻.keys()):
+		if len(同音字頻[i]) <= 1:
+			del 同音字頻[i]
 	fields = ["漢字", "頻率"]
 	CREATE = 'CREATE VIRTUAL TABLE %s USING fts3 (%s)' % (同音字頻表, ",".join(fields))
 	INSERT = 'INSERT INTO %s VALUES (%s)'% (同音字頻表, ','.join('?' * len(fields)))
 	conn = sqlite3.connect(f"{同音字頻表}.db")
 	c = conn.cursor()
 	c.execute(CREATE)
-	c.executemany(INSERT, [(i, ",".join(j)) for i,j in 同音字頻.items()])
+	c.executemany(INSERT, ((i, ",".join(j)) for i,j in 同音字頻.items()))
+	c.executemany(INSERT, ((i, "1") for i in 高頻字))
 	conn.commit()
 	conn.close()
-	return 同音字頻
+	return 同音字頻, 高頻字
 
 def getLangs(dicts, 參數, args):
 	省 = args.省
-	同音字頻 = 獲取同音字頻(args.c)
+	同音字頻, 高頻字 = 獲取同音字頻(args.c)
 	詳情 = tables._詳情.加載(省)
 	語組 = []
+	語言組 = []
 	數 = 0
 	if len(參數) == 1:
 		mods = []
 		if not args.output: mods.append("漢字")
-		mods.extend(getLangsByArgv(詳情, 參數))
+		語言組 = getLangsByArgv(詳情, 參數)
+		mods.extend(語言組)
 	else:
 		mods = 辭典.copy()
-		mods.extend(getLangsByArgv(詳情, 參數) if 參數 else 詳情.keys())
+		語言組 = getLangsByArgv(詳情, 參數) if 參數 else 詳情.keys()
+		mods.extend(語言組)
 		mods.extend(形碼)
 	types = [dict(),dict(),dict()]
 	省 = defaultdict(int)
 	推薦人 = defaultdict(int)
 	維護人 = defaultdict(int)
 	keys = None
+	相似度 = defaultdict(dict)
+	if 同音字頻:
+		for 語甲, 語乙 in combinations(語言組, 2):
+			n = 0
+			for 字甲, 字乙 in combinations(高頻字, 2):
+				雙字 = "".join(sorted((字甲, 字乙)))
+				同音 = 同音字頻.get(雙字, set())
+				if (語甲 in 同音 and 語乙 in 同音) or (語甲 not in 同音 and 語乙 not in 同音):
+					n += 1
+			相似度[語甲][語乙] = 相似度[語乙][語甲] = n
 	t = open("warnings.txt", "w", encoding="U16")
 	for mod in mods:
 		if mod in 詳情:
