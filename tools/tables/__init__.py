@@ -9,7 +9,9 @@ from collections import defaultdict
 from itertools import combinations
 from opencc import OpenCC
 import sqlite3
+import logging
 
+logging.basicConfig(format='[%(asctime)s,%(msecs)03d] %(message)s', level=logging.INFO, datefmt='%H:%M:%S',)
 SOURCE = "data"
 TARGET = "output"
 PATH = os.path.dirname(os.path.abspath(__file__))
@@ -175,13 +177,15 @@ def 獲取同音字頻(get=False):
 		conn = sqlite3.connect(f"{同音字頻表}.db")
 		c = conn.cursor()
 		c.execute(f"select 漢字, 頻率 from {同音字頻表}")
+		n = 0
 		for result in c.fetchall():
 			字 = result[0]
 			頻率 = result[1]
-			if len(字) == 1:
-				高頻字.append(字)
+			if n == 0:
+				高頻字 = 頻率
 			else:
 				同音字頻[字] = set(頻率.split(","))
+			n += 1
 		conn.commit()
 		conn.close()
 		return 同音字頻, 高頻字
@@ -228,7 +232,7 @@ def 獲取同音字頻(get=False):
 				for 項 in combinations(字組, 2):
 					雙字 = "".join(sorted(項))
 					同音字頻[雙字].add(語.簡稱)
-	高頻字 = sorted(高頻字表.keys(), key=lambda x:高頻字表[x], reverse=True)[:2000]
+	高頻字 = "".join(sorted(高頻字表.keys(), key=高頻字表.get, reverse=True)[:3000])
 	for i in set(同音字頻.keys()):
 		if len(同音字頻[i]) <= 1:
 			del 同音字頻[i]
@@ -238,15 +242,17 @@ def 獲取同音字頻(get=False):
 	conn = sqlite3.connect(f"{同音字頻表}.db")
 	c = conn.cursor()
 	c.execute(CREATE)
+	c.execute(INSERT, ("", 高頻字))
 	c.executemany(INSERT, ((i, ",".join(j)) for i,j in 同音字頻.items()))
-	c.executemany(INSERT, ((i, "1") for i in 高頻字))
 	conn.commit()
 	conn.close()
 	return 同音字頻, 高頻字
 
 def getLangs(dicts, 參數, args):
 	省 = args.省
-	同音字頻, 高頻字 = 獲取同音字頻(args.c)
+	if args.s: args.c = True
+	同音字頻, 高頻字 = 獲取同音字頻(args.s)
+	計算相似度 = args.s
 	詳情 = tables._詳情.加載(省)
 	語組 = []
 	語言組 = []
@@ -261,21 +267,18 @@ def getLangs(dicts, 參數, args):
 		語言組 = getLangsByArgv(詳情, 參數) if 參數 else 詳情.keys()
 		mods.extend(語言組)
 		mods.extend(形碼)
+	語言組 = set(語言組)
 	types = [dict(),dict(),dict()]
 	省 = defaultdict(int)
 	推薦人 = defaultdict(int)
 	維護人 = defaultdict(int)
 	keys = None
-	相似度 = defaultdict(dict)
-	if 同音字頻:
-		for 語甲, 語乙 in combinations(語言組, 2):
-			n = 0
-			for 字甲, 字乙 in combinations(高頻字, 2):
-				雙字 = "".join(sorted((字甲, 字乙)))
-				同音 = 同音字頻.get(雙字, set())
-				if (語甲 in 同音 and 語乙 in 同音) or (語甲 not in 同音 and 語乙 not in 同音):
-					n += 1
-			相似度[語甲][語乙] = 相似度[語乙][語甲] = n
+	if 計算相似度:
+		高頻雙字 = []
+		for 字甲, 字乙 in combinations(高頻字[:800], 2):
+			雙字 = sorted((字甲, 字乙))
+			if "".join(雙字) in 同音字頻:
+				高頻雙字.append(雙字)
 	t = open("warnings.txt", "w", encoding="U16")
 	for mod in mods:
 		if mod in 詳情:
@@ -322,6 +325,7 @@ def getLangs(dicts, 參數, args):
 					continue
 				if 語.字數 < 900:
 					print(f"{語} 字數太少: {語.字數}")
+					if mod in 語言組: 語言組.remove(mod)
 				elif 語.聲韻數 < 100:
 					print(f"{語} 音節太少: {語.聲韻數}")
 				elif "一" in 語.d and len(語.d["一"]) > 4:
@@ -357,6 +361,25 @@ def getLangs(dicts, 參數, args):
 							字頻 += len(同音字頻["".join(sorted((字甲, 字乙)))])
 						if 字頻 < 1.8 * n:
 							語.誤.append(f"【{字甲}】可能不讀[{音}]{''.join(字組乙)[:4]}")
+			if 計算相似度 and mod in 語言組:
+				相似度 = defaultdict(int)
+				雙字數 = 0
+				for 字甲, 字乙 in 高頻雙字:
+					if 字甲 not in 語.d or 字乙 not in 語.d: continue
+					同音 = 同音字頻.get(字甲 + 字乙)
+					if mod in 同音:
+						同音.remove(mod)
+						for 語乙 in 同音:
+							相似度[語乙] += 1
+					else:
+						補集 = 語言組 - 同音
+						補集.remove(mod)
+						# if len(同音) < 10: continue
+						for 語乙 in 補集:
+							相似度[語乙] += 1
+					雙字數 += 1
+				語.info["相似度"] = ",".join(map(lambda x:f"{x}({相似度[x] * 100 / 雙字數:.2f}%)", sorted((i for i in 相似度), key=相似度.get, reverse=True)[:10]))
+				logging.info(f"{語.簡稱}:{語.info['相似度']}")
 			if False and 方言調查字表 and 語.檢查同音字() and 3000 <= 語.字數 <= 6000:
 				已調查漢字 = 語.d.keys()
 				待調查漢字 = 方言調查字表 - 已調查漢字
@@ -423,6 +446,8 @@ def getLangs(dicts, 參數, args):
 	字 = 語組[0]
 	for 項 in keys:
 		if 項 not in 字.info: 字.info[項] = None
+	if 計算相似度:
+		字.info["相似度"] = None
 	字.info["字數"] = len(dicts)
 	字.info["說明"] = "語言數：%d\n\n%s"%(數, 字.說明)
 	省表 = sorted(省集, key=普拼)
@@ -432,9 +457,9 @@ def getLangs(dicts, 參數, args):
 	字.info["省"] = ",".join([f"{i} ({省[i]})" for i in 省表])
 	字.info["維護人"] = ",".join([f"{i} ({維護人[i]})" for i in sorted(維護人.keys(), key=普拼)])
 	字.info["推薦人"] = ",".join([f"{i} ({推薦人[i]})" for i in sorted(推薦人.keys(), key=普拼)])
-	字.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=lambda x:types[0][x]))
-	字.info["音典分區"] = ",".join(sorted(types[1].keys(),key=lambda x:types[1][x]))
-	字.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=lambda x:types[2][x]))
+	字.info["地圖集二分區"] = ",".join(sorted(types[0].keys(),key=types[0].get))
+	字.info["音典分區"] = ",".join(sorted(types[1].keys(),key=types[1].get))
+	字.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=types[2].get))
 	字.info["版本"] = datetime.datetime.now().strftime("%Y-%m-%d")
 	if not args.output: print("語言數", 數)
 	return 語組

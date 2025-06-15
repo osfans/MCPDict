@@ -16,7 +16,7 @@ from docx.shared import Pt
 from docx.enum.text import WD_UNDERLINE
 import regex
 
-logging.basicConfig(format='%(message)s', level=logging.INFO)
+logging.basicConfig(format='[%(asctime)s,%(msecs)03d] %(message)s', level=logging.INFO, datefmt='%H:%M:%S',)
 
 YDS = {"+":"又", "-":"白", "*":"俗", "/":"書","\\":"語","=":"文","?":"存疑", "@": "訓"}
 
