@@ -234,10 +234,9 @@ class 表(_表):
 				if 有字(列[0]): return
 				行 = "\t".join((f"[{序 + 1 if ("江永粗石江" == 名 and 序 > 3) or ("江永蘭溪" == 名 and 序 > 5) else 序}]" if 序 else "") + 項 for 序,項 in enumerate(列))
 				行 = 行.replace("（", "(").replace("）", ")").replace("(", "{").replace(")", "}").replace("{{", "{").replace("}}", "}")
-		elif 名 in ("如皋白蒲","如皋石莊"):
+		elif 名 in ("如皋白蒲","如皋石莊","南通唐閘",):
 			列 = 行.split("\t")
-			if 有字(列[0]): return
-			行 = "\t".join((f"[{序}]" if 序 else "") + 項 for 序,項 in enumerate(列))
+			行 = "\t".join((f"[{序 + (2 if 名.startswith("如皋") and 序 > 4 else 1) if 序 > 3 else 序}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
 			行 = 自.normS(行.replace(")(", "："))
 		elif 名 in ("安澤英寨"):
 			if 行:
