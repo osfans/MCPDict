@@ -251,7 +251,7 @@ def 獲取同音字頻(get=False):
 def getLangs(dicts, 參數, args):
 	省 = args.省
 	if args.s: args.c = True
-	同音字頻, 高頻字 = 獲取同音字頻(args.s)
+	同音字頻, 高頻字 = 獲取同音字頻(args.c)
 	計算相似度 = args.s
 	詳情 = tables._詳情.加載(省)
 	語組 = []
