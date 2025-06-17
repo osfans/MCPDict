@@ -225,14 +225,14 @@ def 獲取同音字頻(get=False):
 		語.讀()
 		if 語.音節數 > 0:
 			for 字組 in 語.聲韻典.values():
+				字組 = list(filter(爲字, 字組))
 				for 字 in 字組:
-					if not 爲字(字): continue
 					高頻字表[字] += 1
 				if len(字組) < 2: continue
 				for 項 in combinations(字組, 2):
 					雙字 = "".join(sorted(項))
 					同音字頻[雙字].add(語.簡稱)
-	高頻字 = "".join(sorted(高頻字表.keys(), key=高頻字表.get, reverse=True)[:3000])
+	高頻字 = "".join(sorted(高頻字表.keys(), key=高頻字表.get, reverse=True)[:5000])
 	for i in set(同音字頻.keys()):
 		if len(同音字頻[i]) <= 1:
 			del 同音字頻[i]
@@ -250,24 +250,20 @@ def 獲取同音字頻(get=False):
 
 def getLangs(dicts, 參數, args):
 	省 = args.省
-	if args.s: args.c = True
-	同音字頻, 高頻字 = 獲取同音字頻(args.c)
+	同音字頻, 高頻字 = 獲取同音字頻(args.s or args.c)
 	計算相似度 = args.s
 	詳情 = tables._詳情.加載(省)
 	語組 = []
-	語言組 = []
 	數 = 0
 	if len(參數) == 1:
 		mods = []
 		if not args.output: mods.append("漢字")
-		語言組 = getLangsByArgv(詳情, 參數)
-		mods.extend(語言組)
+		mods.extend(getLangsByArgv(詳情, 參數))
 	else:
 		mods = 辭典.copy()
-		語言組 = getLangsByArgv(詳情, 參數) if 參數 else 詳情.keys()
-		mods.extend(語言組)
+		mods.extend(getLangsByArgv(詳情, 參數) if 參數 else 詳情.keys())
 		mods.extend(形碼)
-	語言組 = set(語言組)
+	語言組 = set(詳情.keys())
 	types = [dict(),dict(),dict()]
 	省 = defaultdict(int)
 	推薦人 = defaultdict(int)
@@ -275,7 +271,7 @@ def getLangs(dicts, 參數, args):
 	keys = None
 	if 計算相似度:
 		高頻雙字 = []
-		for 字甲, 字乙 in combinations(高頻字[:800], 2):
+		for 字甲, 字乙 in combinations(高頻字, 2):
 			雙字 = sorted((字甲, 字乙))
 			if "".join(雙字) in 同音字頻:
 				高頻雙字.append(雙字)
@@ -349,8 +345,9 @@ def getLangs(dicts, 參數, args):
 				if 人:
 					維護人[人] += 1
 			數 += 1
-			if 同音字頻 and 語.檢查同音字() and 語.字數 < 10000:
+			if 同音字頻 and args.c and 語.檢查同音字() and 語.字數 < 10000:
 				for 音, 字組 in 語.聲韻典.items():
+					字組 = list(filter(爲字, 字組))
 					if len(字組) < 2: continue
 					for 字甲 in 字組:
 						字頻 = 0
@@ -359,7 +356,7 @@ def getLangs(dicts, 參數, args):
 						n = len(字組乙)
 						for 字乙 in 字組乙:
 							字頻 += len(同音字頻["".join(sorted((字甲, 字乙)))])
-						if 字頻 < 1.8 * n:
+						if 字頻 == 0:
 							語.誤.append(f"【{字甲}】可能不讀[{音}]{''.join(字組乙)[:4]}")
 			if 計算相似度 and mod in 語言組:
 				相似度 = defaultdict(int)
