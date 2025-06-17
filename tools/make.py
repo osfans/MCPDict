@@ -7,7 +7,7 @@ from tables import *
 import argparse
 
 parser = argparse.ArgumentParser(description='Create mcpdict database')
-parser.add_argument('-c', action='store_true', help='check 同音字頻', required=False)
+parser.add_argument('-c', action='store_true', help='檢查同音字', required=False)
 parser.add_argument('-s', action='store_true', help='計算相似度', required=False)
 parser.add_argument('-省', help='province to include', required=False)
 parser.add_argument('-o', '--output', help='output tsv', required=False)
