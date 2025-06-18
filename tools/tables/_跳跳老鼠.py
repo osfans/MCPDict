@@ -106,7 +106,7 @@ class 表(_表):
 			if not 果: return
 			聲韻, 調, 組 = 果[0]
 			組 = 組.replace("*", "")
-		elif 名 in ("孝昌小河",):
+		elif 名 in ("孝昌小河","賀州鋪門"):
 			果 = re.findall(r"^(.+?)(\d+) ?(.+)$", 列[0])
 			if not 果: return
 			聲韻, 調, 組 = 果[0]

@@ -391,7 +391,7 @@ def getLangs(dicts, 參數, args):
 				語.info["解析日志"] = "\n".join(語.誤)
 				all_editors = ",".join(editor)
 				語.全稱 = 語.info["語言"]
-				print(f"{語.全稱}（{語}）-{語.文件名}-{all_editors}", file=t)
+				print(f"{語.全稱}（{語}）-{語.文件名}-{all_editors} *{len(語.誤)}", file=t)
 				for 誤 in 語.誤:
 					print(f"\t{誤}", file=t)
 			if 語.音表:
