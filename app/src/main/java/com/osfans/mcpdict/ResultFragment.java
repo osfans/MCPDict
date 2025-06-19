@@ -51,9 +51,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.text.HtmlCompat;
-import androidx.core.text.PrecomputedTextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.osfans.mcpdict.Favorite.FavoriteDialogs;
@@ -75,14 +73,13 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
-import java.util.concurrent.Future;
 
 public class ResultFragment extends Fragment {
 
     private static final String TAG = "ResultFragment";
     private View selfView;
     private View mScroll;
-    private AppCompatTextView mTextView;
+    private TextView mTextView;
     private WebView mWebView;
     private final boolean showFavoriteButton;
     private final Entry mEntry = new Entry();
@@ -164,11 +161,15 @@ public class ResultFragment extends Fragment {
         mWebView = selfView.findViewById(R.id.map);
         mWebView.setTag(this);
         registerForContextMenu(mWebView);
-        mTextView = selfView.findViewById(R.id.text);
+        mTextView = new TextView(requireContext());
         mTextView.setTextAppearance(R.style.FontDetail);
         FontUtil.setTypeface(mTextView);
+        mTextView.setTextIsSelectable(true);
         mTextView.setMovementMethod(LinkMovementMethod.getInstance());
+        LinearLayout layout = selfView.findViewById(R.id.layout);
+        layout.addView(mTextView);
         mTextView.setTag(this);
+        mTextView.setHyphenationFrequency(android.text.Layout.HYPHENATION_FREQUENCY_NONE);
         registerForContextMenu(mTextView);
         Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(Pref.getToneStyle(R.string.pref_key_tone_value_display));
@@ -792,10 +793,7 @@ public class ResultFragment extends Fragment {
 
                 @Override
                 protected void onPostExecute(CharSequence text) {
-                    Future<PrecomputedTextCompat> future = PrecomputedTextCompat.getTextFuture(text,
-                            mTextView.getTextMetricsParamsCompat(), null);
-                    mTextView.setTextFuture(future);
-                    // mTextView.setText(text);
+                    mTextView.setText(text);
                     mTextView.setVisibility(View.VISIBLE);
                     mScroll.setScrollY(0);
                     Log.d(TAG, String.format("setData %s cost %d ms", query, (System.currentTimeMillis() - startTime)));
