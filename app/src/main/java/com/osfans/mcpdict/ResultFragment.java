@@ -623,7 +623,9 @@ public class ResultFragment extends Fragment {
                         if (TextUtils.isEmpty(s)) continue;
                         String label = getLabel(col);
                         sb2.append(String.format("［%s］", label));
-                        sb2.append(HtmlCompat.fromHtml(DisplayHelper.formatIPA(col, s).toString(), HtmlCompat.FROM_HTML_MODE_COMPACT));
+                        String ipa = DisplayHelper.formatIPA(col, s).toString();
+                        if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
+                        sb2.append(HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT));
                         sb2.append("\n");
                     }
                 }
@@ -712,7 +714,9 @@ public class ResultFragment extends Fragment {
                         s = cursor.getString(i);
                         if (TextUtils.isEmpty(s)) continue;
                         linesCount++;
-                        CharSequence cs = HtmlCompat.fromHtml(DisplayHelper.formatIPA(lang, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT);
+                        String ipa = DisplayHelper.formatIPA(lang, s).toString();
+                        if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
+                        CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
                         n = ssb2.length();
                         String label = getLabel(i);
                         Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));

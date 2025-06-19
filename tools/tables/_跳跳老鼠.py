@@ -6,8 +6,6 @@ import re
 class 表(_表):
 	註序 = True
 	註符 = None
-	聲 = ""
-	韻 = ""
 	聲韻 = ""
 
 	def 析(自, 列):
@@ -15,11 +13,18 @@ class 表(_表):
 		音 = None
 		調 = ""
 		反切 = ""
+		if 列[0].startswith("#") or (len(列) == 0 and not 列[0]): return
 		if 自.列序:
 			列序 = 自.列序
-			if len(列) < 列序[0]: return
+			if len(列) <= 列序[0]: return
 			組 = 列[列序[0]]
-			if len(列序) == 2 or len(列序) == 3 or 列序[1] == 列序[2] == 列序[3]:
+			if len(列序) == 1:
+				try:
+					音, 組 = re.findall(r"^(.*?\d+) ?(.*)$", 組)[0]
+				except:
+					print("無聲調或無漢字：", 組)
+					return
+			elif len(列序) == 2 or len(列序) == 3 or 列序[1] == 列序[2] == 列序[3]:
 				if 列序[1] < len(列): 音= 列[列序[1]]
 			elif 列序[1] == 列序[2] != 列序[3]:
 				音= 列[列序[1]] + 列[列序[3]]
@@ -44,72 +49,15 @@ class 表(_表):
 				自.聲韻 = 聲韻
 			else:
 				聲韻 = 自.聲韻
-		elif 名 in ("代縣東首"):
-			if 列[0].count(" ") < 2: return
-			聲韻, 調, 組 = 列[0].split(" ")
-		elif 名 in ("景寧東坑",):
-			if len(列) == 1 or not 列[1].strip():
-				自.韻 = 列[0].strip()
-				return
-			音, 組 = 列[:2]
-			音 = 音.strip().replace(" ", "")
-			音 = re.sub("^[無øØ]", "0", 音)
-			digits = "12345678"
-			if 音 in digits:
-				音 = 自.聲韻 + 音
-			elif 自.韻:
-				自.聲 = 音.rstrip(digits)
-				自.聲韻 = 自.聲 + 自.韻
-				音 = 自.聲韻 + 音[-1]
-			else:
-				自.聲韻 = 音.rstrip(digits)
-			組 = 組.replace("，", "(文)").replace("。", "(白)").replace("!", "(小稱)").replace(".", "(又)").replace("?", "(存疑)").replace(")(", " ")
 		elif 名 in ("平陰東阿",):
 			聲韻, 調, _, 組 = 列[:4]
 			if 聲韻:
 				自.聲韻 = 聲韻
 			else:
 				聲韻 = 自.聲韻
-			音 = 聲韻 + 調
-		elif 名 in ("天台東鄕"):
-			if not 列[0]: return
-			果 = re.findall(r"^(.*?)(\d+)(.+)$", 列[0])
-			if not 果:
-				韻 = 列[0].strip()
-				if 韻:
-					自.韻 = 韻
-				return
-			聲, 調, 組 = 果[0]
-			if 聲:
-				自.聲 = 聲
-			音 = 自.聲 + 自.韻 + 調
-		elif 名 in ("平樂船上話"):
-			if not 列[0]: return
-			果 = re.findall(r"^(.*?\d+)(.+)$", "".join(列))
-			if not 果: return
-			音, 組 = 果[0]
-		elif 名 in ("成都","靑島"):
-			列 = "".join(列).strip()
-			if not 列: return
-			果 = re.findall(r"^(.*?)\[?(\d+)\]?(.+)$", 列)
-			if not 果:
-				韻 = 列
-				if 韻:
-					自.韻 = 韻
-				return
-			聲, 調, 組 = 果[0]
-			if 聲:
-				自.聲 = 聲
-			音 = 自.聲 + 自.韻 + 調
-		elif 名 in ("東海",):
-			果 = re.findall(r"^(.+?)\[(\d+)\][ ]*?(.+)$", "".join(列))
-			if not 果: return
-			聲韻, 調, 組 = 果[0]
-			組 = 組.replace("*", "")
-		elif 名 in ("孝昌小河","賀州鋪門"):
-			果 = re.findall(r"^(.+?)(\d+) ?(.+)$", 列[0])
-			if not 果: return
-			聲韻, 調, 組 = 果[0]
+		elif 名 in ("代縣東首"):
+			if 列[0].count(" ") < 2: return
+			聲韻, 調, 組 = 列[0].split(" ")
 		elif 名 in ("太原"):
 			聲, 韻, 調, 組 = 列[:4]
 			音 = 聲 + 韻 + 調[2:]

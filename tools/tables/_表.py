@@ -252,10 +252,7 @@ class 表:
 		sname = g[0]
 		自.文件名 = os.path.basename(sname)
 		if isXls(sname):
-			page = 0
-			if 自.文件名.startswith("香山話綜合"): page = 1
-			elif 自.簡稱 == "開平護龍": page = 3
-			xls2tsv(sname, page)
+			xls2tsv(sname)
 			sname = getTsvName(sname)
 		elif isDocx(sname):
 			docx2tsv(sname)
@@ -347,7 +344,7 @@ class 表:
 			自.誤.append(f"[{音}]音節包含漢字")
 		if 音 not in 自.音集:
 			自.音集.add(音)
-		elif 自.簡稱 not in ("長沙星沙", "長沙金井", "雙牌打鼓坪", "湘劇", "蘇州評彈"):
+		elif 自.簡稱 not in ("長沙星沙", "長沙金井", "雙牌打鼓坪", "湘劇", "蘇州評彈", "溧陽河南話", "南京"):
 			自.誤.append(f"[{音}]音節重複")
 		return 音
 

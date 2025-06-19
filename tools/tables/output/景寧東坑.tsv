@@ -1,5 +1,4 @@
 #漢字	音標	解釋
-□	ɕiaʔ8	(又) 匍
 □	tiɛʔ7	tsoʔ~ 古話
 □	nɒm2	~ky1 織布機
 □	hɒm2	~晡 後日
@@ -8,6 +7,7 @@
 □	ȵie2	乳子
 □	ki2	倚也
 □	uad8	匍也
+□	uaʔ8	匍
 □	tun6	咳嗽
 □	kʰam2	基~ 吝嗇鬼
 □	kʰɔ1	外~邊
@@ -15,15 +15,15 @@
 □	kiɛn2	岸也
 □	mɔŋ1	拔 ~艸
 □	pieʔ8	拖
-□	pʰi	漏~ 笊籬也
+□	pʰi1	漏~ 笊籬也
 □	nɔ2	物件
-□	ɕiɔŋɕ	畦也
+□	ɕiɔŋ0	畦也
 □	ɕiai6	疾也
 □	kʰio1	老~ 䵹鼄也
 □	tsʰɒm2	袌
 □	kai1	頑皮
 □	iɔb8	飛禽
-䁐	ȵian1	
+䁐	ŋian1	看
 䘙	uei6	
 䳘	ŋo2	
 䳘	ŋɑu2	
@@ -34,7 +34,7 @@
 三	sɒm1	
 上	ɕiɔŋ1	
 下	hɔ6	
-不	pub7	文
+不	pub7=	
 世	ɕie1	
 丘	hiu1	
 丙	piŋ3	
@@ -51,16 +51,16 @@
 乘	ɕiŋ2	~涼
 乙	id7	
 九	kiu3	
-乾	kɔn1	存疑
+乾	kɔn1?	
 亂	lon6	
-事	su6	白
+事	su6-	
 二	ȵi6	
 五	ŋiɛn3	
-五	miu	
+五	miu6	
 井	tsiaŋ3	
 交	kau1	
-京	kiŋ1	文
-京	kiaŋ1	白
+京	kiaŋ1-	
+京	kiŋ1=	
 亭	tʰiaŋ2	
 亮	liɔŋ2	
 人	ȵin2	
@@ -73,7 +73,7 @@
 仙	ɕian1	
 代	tʰoi6	
 令	liaŋ6	
-以	i3	文
+以	i3=	
 仰	ŋaŋ1	視也
 件	kiɛn6	
 任	ȵim2	氏也
@@ -135,7 +135,7 @@
 允	yn2	
 元	ȵyon2	
 兄	hiaŋ1	
-先	ɕiɛn1	(又)~走
+先	ɕiɛn1+	~走
 先	ɕin1	~生
 光	kɔŋ1	
 克	kʰieʔ7	
@@ -155,7 +155,7 @@
 共	koŋ6	
 兵	piŋ1	
 其	kʰi2	
-具	tɕy1	文
+具	tɕy1=	
 典	tan3	
 冀	ki1	
 冊	tsʰaʔ7	
@@ -172,10 +172,10 @@
 函	hɒm2	
 刀	tɑu1	
 刁	tiau1	
-分	pun1	(白)與也 撥也
-分	fən1	文
+分	fən1=	
+分	pun1-	與也 撥也
+切	tɕʰiad7+	
 切	tsʰad7	
-切	tɕʰiad7	又
 刊	kʰɔn1	
 刑	iŋ2	
 列	liɛd8	
@@ -191,12 +191,12 @@
 剃	tʰai1	
 則	tɕieʔ7	
 削	ɕiad7	
-前	ɕiɛm2	又
-前	ɕiɛn2	又
-前	tsʰan2	白
+前	ɕiɛm2+	
+前	ɕiɛn2+	
+前	tsʰan2-	
 剔	tʰieʔ7	
-剖	pʰo3	文
-剖	pʰieu3	白
+剖	pʰieu3-	
+剖	pʰo3=	
 剛	kɔŋ1	
 剝	poʔ7	
 割	kɔd7	
@@ -224,7 +224,7 @@
 勺	ɕioʔ8	水~
 勻	yn2	
 包	pau1	
-匍	pʰɔ2	文
+匍	pʰɔ2=	
 化	fɔ1	
 化	ho1	
 北	pieʔ7	
@@ -238,7 +238,7 @@
 半	pɔn1	
 卒	tɕid7	
 卓	toʔ7	
-協	ɕia2	文
+協	ɕia2=	
 南	nɒm2	
 博	poʔ7	
 占	tɕiɛm1	
@@ -257,14 +257,13 @@
 友	iu3	
 反	fɔn3	
 叔	ɕyʔ7	
-取	tɕy3	文
+取	tɕy3=	
 受	ɕiu6	
 叛	pʰɔn6	
-口	kieu3	
+口	kʰieu3	
 古	ku3	
 句	ky1	
 叫	kieu1	
-叫	uo2	喔
 右	iu6	
 合	hɔb8	
 吉	kid8	
@@ -272,11 +271,11 @@
 名	miaŋ2	
 吐	tʰu1	
 君	kun1	
+吞	tʰun1+	
 吞	tʰon1	
-吞	tʰun1	又
 否	fieu3	
+含	kɒm2+	
 含	hɒm2	
-含	kɒm2	又
 吳	u2	
 吹	tɕʰoi1	
 呂	lu3	
@@ -297,6 +296,7 @@
 啄	toʔ7	
 商	ɕiɔŋ1	
 問	mən6	
+喔	uo2	叫
 喜	hi3	
 喝	hɔb8	
 喪	sɔŋ1	
@@ -304,7 +304,7 @@
 嗣	sɿ6	
 嘉	kɔ1	
 嘴	tɕyoioi3	
-嘴	tsuei1	文
+嘴	tsuei1=	
 嘿	mieʔ8	
 噎	iɛd7	
 器	kʰi1	
@@ -335,7 +335,7 @@
 坌	pʰən6	腳~頭 膝也
 坐	tsʰo1	
 坤	kʰun1	
-坼	kʰam2	存疑
+坼	kʰam2?	
 垛	tʰo6	柴~
 城	ɕiaŋ2	
 域	yʔ8	
@@ -358,8 +358,8 @@
 壯	tsɔŋ1	
 壺	fu2	
 壽	tɕʰiu6	
+外	uai1=	
 外	ŋɔ6	~甥
-外	uai1	文
 多	to1	
 夜	ia6	
 夢	moŋ6	
@@ -376,7 +376,7 @@
 奧	ɑu1	
 奪	tʰɔd8	
 女	ȵy3	
-奸	kan1	存疑
+奸	kan1?	
 好	hɑu3	~差
 妓	ki6	
 妖	ieu1	
@@ -387,13 +387,13 @@
 姓	siaŋ1	
 委	uei1	
 姚	ieu2	
-姦	kan1	存疑
+姦	kan1?	
 姨	i2	
 姪	tsɿd8	
 姿	tsɿ1	
 威	uei1	
+娘	ȵɔŋ2+	
 娘	iɔŋ2	
-娘	ȵɔŋ2	又
 娛	ȵy2	
 婆	pʰo2	
 婚	hun1	
@@ -402,16 +402,16 @@
 媒	moi2	
 媚	mi6	
 嫁	kɔ1	
+嫂	sau3+	
 嫂	sɑu3	
-嫂	sau3	又
 嫌	ham2	
 嫌	hɒm2	
 嫡	tieʔ7	
 嫩	non6	
+嫬	tɕia1	嬭
 嫽	lau2	
 嬤	mo2	
-嬭	niɛn6	(又)~娘
-嬭	tɕia1	嫬
+嬭	niɛn6+	~娘
 嬸	sai1	
 嬾	lɔn3	
 子	tsɿ3	
@@ -419,9 +419,9 @@
 孔	kʰoŋ3	
 字	tsʰi6	
 孝	hau1	
-季	ki1	文
-季	kie1	文
-季	kiai1	白
+季	kiai1-	
+季	ki1=	
+季	kie1=	
 孤	ku1	
 孫	sun1	
 孬	mɑu2	
@@ -440,7 +440,7 @@
 室	ɕid7	
 宮	kyŋ1	
 害	ha1	
-害	hai1	文
+害	hai1=	
 家	kɔ1	~具
 容	yŋ2	
 宿	saʔ7	~夜
@@ -489,7 +489,7 @@
 峽	ab8	
 崇	soŋ2	
 崗	kɔŋ1	
-崝	tsaŋ1	存疑 瘦也
+崝	tsaŋ1?	瘦也
 崽	tsoi3	
 嶺	liaŋ1	
 嶽	ŋoʔ8	
@@ -514,16 +514,16 @@
 希	hi1	
 帖	tʰab7	
 帚	tɕiu3	
-帥	sa1	文
+帥	sa1=	
 師	su1	
+席	ɕiʔ8+	
+席	ɕiaʔ8+	
 席	saʔ8	
-席	ɕiʔ8	又
-席	ɕiaʔ8	又
 帳	tiɔŋ1	
 帶	tɔi6	
 帽	mɑu6	
 幔	mɔn6	
-幣	pi6	文
+幣	pi6=	
 幫	pɔŋ1	
 平	pʰiaŋ1	
 年	nan2	
@@ -573,7 +573,7 @@
 徐	ɕy2	
 徛	tɕʰi6	
 從	tɕyŋ2	
-徽	huei1	文
+徽	huei1=	
 心	ɕim1	
 必	pid7	
 志	ki1	
@@ -585,8 +585,8 @@
 念	ȵiam6	
 忽	fub7	
 怒	nu6	
-思	sɿ1	文
-思	su1	白
+思	su1-	
+思	sɿ1=	
 急	kid8	
 性	siaŋ1	
 怪	kuai1	
@@ -594,7 +594,7 @@
 恥	tsʰɿ3	
 恨	hon6	
 恩	ɔn1	
-息	ɕiʔ7	文
+息	ɕiʔ7=	
 悅	yod8	
 悉	ɕid7	
 悶	mən6	
@@ -606,38 +606,38 @@
 惶	hɔŋ1	
 愁	ɕieu2	
 愉	y2	
-意	i6	文
+意	i6=	
 愛	oi6	
 感	kɒm3	
 態	tʰoi1	
 慢	man6	
-慰	uei6	文
+慰	uei6=	
 慶	kʰiŋ1	
 憋	piɛd7	
+憑	pin2+	
+憑	pʰiŋ2+	
 憑	pʰieŋ2	
-憑	pin2	又
-憑	pʰiŋ2	又
 憶	iʔ8	
 憾	hɒm6	
 懂	toŋ3	
-應	iŋ1	文
+應	iŋ1=	
 懊	ɑu1	
+懷	huai2=	
 懷	hɔi2	~孕
-懷	huai2	文
-戀	liɛn6	又
+戀	liɛn6+	
 戊	mieu6	
 戌	ɕyd7	
 成	ɕiaŋ2	
 我	ŋɔi1	
-戒	kai1	文
-戒	kiai1	白
+戒	kiai1-	
+戒	kai1=	
 或	kʰub8	
-或	hod8	文
+或	hod8=	
 戥	tieŋ3	
 戮	lɔd8	
 戲	hie1	
+戳	tsʰuʔ7+	
 戳	tɕʰioʔ7	
-戳	tsʰuʔ7	又
 所	səu3	
 扇	ɕiɛn1	
 手	səu3	
@@ -664,7 +664,7 @@
 拒	kʰy6	
 拔	pau2	
 拔	pad8	
-拔	paʔ8	文
+拔	paʔ8=	
 拖	tʰo1	
 拖	toi3	曳也
 拘	ky1	
@@ -697,7 +697,7 @@
 掩	iɛn3	
 插	tsʰab7	~秧
 揚	iɔŋ2	
-換	hon6	文
+換	hon6=	
 握	uʔ8	
 揭	tɕiɛd8	
 損	sun3	
@@ -723,11 +723,11 @@
 據	ky1	
 擤	ɕieŋ1	
 擦	tsʰab7	
-擧	tɕy3	文
-擧	ki3	白
+擧	ki3-	
+擧	tɕy3=	
 擱	koʔ7	
+擲	tsʰaʔ8+	
 擲	hiʔ8	
-擲	tsʰaʔ8	又
 擴	kʰoʔ7	
 擺	pai3	
 攙	tsʰɒm2	
@@ -735,9 +735,9 @@
 支	tɕi1	
 收	ɕiu1	
 攷	kʰau3	
-改	kai3	文
-放	fɔŋ1	文
-放	piɔŋ1	白
+改	kai3=	
+放	piɔŋ1-	
+放	fɔŋ1=	
 政	tɕiaŋ1	
 救	kiu1	
 敗	pai6	
@@ -749,7 +749,7 @@
 敵	tʰieʔ8	
 數	su1	所矩切
 數	su3	色句切
-斃	pi6	文
+斃	pi6=	
 斑	pan1	
 斗	tieu3	
 料	lieu6	
@@ -775,8 +775,8 @@
 昆	kun1	
 昆	kʰun1	
 昌	tɕʰiɔŋ1	
+明	miŋ2=	
 明	maŋ2	~年
-明	miŋ2	文
 昏	hun1	
 易	i6	
 星	siaŋ1	
@@ -785,7 +785,7 @@
 時	sɿ2	
 時	ɕi2	眼頭~
 晏	ɔn1	
-晚	uon3	文
+晚	uon3=	
 晝	tɕiu1	
 晡	pu1	今~
 普	pʰu3	
@@ -801,13 +801,13 @@
 書	ɕy1	
 曹	tsʰɑu2	
 曾	tɕʰieŋ2	
-最	tsai1	文
+最	tsai1=	
 會	kʰoi1	~計
 會	foi6	開~
 月	ȵyod8	
-有	yon2	又
+有	yon2+	
+朋	pʰaŋ2+	
 朋	pʰieŋ2	
-朋	pʰaŋ2	又
 服	huʔ8	
 望	mɔŋ6	
 朝	tɕʰieu2	
@@ -842,7 +842,7 @@
 査	tsʰɔ2	
 柱	tɕy6	
 柳	liu3	
-柴	tsʰai2	文
+柴	tsʰai2=	
 柵	tsʰaʔ7	
 柺	kuai3	
 柿	kʰi6	
@@ -853,8 +853,8 @@
 格	kad7	
 桂	kuei1	
 桃	tʰɑu2	
+案	uon6-	
 案	ɔn6	
-案	uon6	白
 桑	sɔŋ1	
 桶	tʰoŋ3	
 桿	kɔn3	
@@ -866,8 +866,8 @@
 梳	ɕio1	
 棃	loi2	
 棄	kʰi1	
+棚	poŋ2+	
 棚	paŋ2	
-棚	poŋ2	又
 森	ɕin1	
 棺	kon1	
 植	tɕʰiʔ8	
@@ -875,28 +875,28 @@
 楚	tsʰo3	
 楣	moi2	
 業	ȵiɛb8	
-極	tɕiʔ8	文
+極	tɕiʔ8=	
 楷	kʰiai1	
 榜	pɔŋ3	
 榮	yŋ2	
 榴	liu2	
+槍	tɕʰiɔŋ1+	
 槍	tɕʰyŋ1	
-槍	tɕʰiɔŋ1	又
 樁	tiɔŋ1	
 樂	loʔ8	
 樂	ioʔ8	
 標	pieu1	
 樟	tɕiɔŋ1	
-樸	pʰoʔ7	存疑
+樸	pʰoʔ7?	
 樹	ɕy6	
 橄	kɒm3	
-橋	kieu2	
+橋	kʰieu2	
 橘	kid8	
 機	ki1	
 橢	tʰo3	
 橫	ɔŋ2	
 橫	foŋ2	
-檢	tɕiɛn3	文
+檢	tɕiɛn3=	
 欄	lɔŋ2	
 欠	kʰiɛm1	
 次	tsu1	
@@ -910,11 +910,11 @@
 歡	hon1	
 正	tɕiaŋ1	~月
 步	pʰu6	
-武	miu	
-歬	tsʰan2	白
+武	miu6	
+歬	tsʰan2-	
 歲	soi1	
 歷	lie6	
-歷	lieʔ8	存疑
+歷	lieʔ8?	
 死	ɕi3	
 殖	tɕʰiʔ8	
 段	tʰɔn6	
@@ -939,7 +939,7 @@
 決	tɕyod8	
 汽	kʰi1	
 沈	tʰim2	
-沈	ɕin3	存疑
+沈	ɕin3?	
 沓	tɔb8	
 沫	mɔd8	
 沸	poi1	
@@ -1002,7 +1002,7 @@
 滾	kun3	
 滿	mon3	
 漆	tɕʰid7	
-漏	lieu6	文 ~斗
+漏	lieu6=	~斗
 漫	mɔn6	
 漿	tɕiɔŋ1	
 潑	pʰɔd7	
@@ -1038,7 +1038,7 @@
 烤	kʰau3	
 焙	pʰoi6	
 無	miu2	
-無	mɑu2	存疑
+無	mɑu2?	
 然	ɕiɛn2	
 煎	tsan1	
 煗	nɔn3	
@@ -1050,7 +1050,7 @@
 煩	fɔn2	
 煬	iɔŋ2	
 煮	tɕy3	
-熄	ɕiʔ7	文
+熄	ɕiʔ7=	
 熊	yŋ2	
 熏	ɕyn1	
 熏	hyn1	
@@ -1069,10 +1069,10 @@
 爐	lu2	
 爛	lɔn6	
 爪	tɕiau1	番薯~
-爬	pʰɔ2	文
+爬	pʰɔ2=	
 爭	tsaŋ1	
 父	pa1	
-父	fu1	文
+父	fu1=	
 爹	tia1	
 爾	ȵi1	小稱
 牀	tsʰɔŋ2	
@@ -1086,7 +1086,7 @@
 物	kʰub8	
 牯	ku3	
 特	tiʔ8	
-牽	tɕʰiɛn1	文
+牽	tɕʰiɛn1=	
 犧	hi1	
 犬	tɕʰyon3	
 犯	fɔn6	
@@ -1105,7 +1105,7 @@
 獃	ŋoi2	
 獅	su1	
 獎	tɕiɔŋ3	
-獲	ɕiaʔ8	
+獲	uaʔ8	
 獵	liɛb8	
 獵	liɛd8	
 獺	tɔd7	
@@ -1124,7 +1124,7 @@
 璃	li2	
 璧	piʔ7	
 環	kʰɔn2	
-環	huan2	文
+環	huan2=	
 瓊	kʰyŋ2	
 瓦	ŋɔ3	小稱
 甁	pʰieŋ2	
@@ -1134,21 +1134,21 @@
 生	saŋ1	
 產	tsʰɒm2	
 甥	saŋ1	
-用	yŋ6	文
+用	yŋ6=	
 田	tʰan2	
-由	kiai1	
 甲	kab7	
 申	ɕin1	
 男	nɒm2	
 界	kai1	
+界	kiai1	
 畚	pun3	
 畢	pid7	
 略	liaʔ8	
 番	fɔn1	
 畫	uɔ6	
-畫	ɕiaʔ8	
+畫	uaʔ8	
 畬	ɕia2	
-異	i6	文
+異	i6=	
 當	tɔŋ1	
 疏	sɔ1	
 疑	ȵi2	
@@ -1182,7 +1182,7 @@
 皮	pʰi2	
 皺	tsieu1	
 皺	kiu3	~水
-盆	pʰan2	文
+盆	pʰan2=	
 盆	puan3	面~
 盉	ho2	~氣
 益	iʔ8	
@@ -1193,8 +1193,8 @@
 盞	tsam3	
 盡	tɕin1	
 盤	pʰɔn2	
-相	soŋ1	(白) ~打
-相	ɕiɔŋ1	文
+相	soŋ1-	~打
+相	ɕiɔŋ1=	
 省	saŋ3	
 眉	mi2	
 眞	tɕin1	
@@ -1203,13 +1203,13 @@
 睛	tɕiŋ1	
 督	tyʔ7	
 瞌	kʰub7	
-瞎	hɔd7	文
+瞎	hɔd7=	
 瞪	tiŋ6	
 瞻	tɕiɛm1	
 瞿	kʰy2	
 矢	ɕi3	
 知	tɕi1	, 知識
-知	ti1	白
+知	ti1-	
 矩	tɕy3	
 短	tɔn3	
 矮	ai3	
@@ -1217,7 +1217,7 @@
 砂	sɔ1	
 硏	ȵiɛm2	
 砧	tim1	~子 礩也
-破	pʰo1	文
+破	pʰo1=	
 硬	ŋaŋ6	
 碌	lai2	
 碌	luʔ8	拔~ 抽屜
@@ -1252,11 +1252,11 @@
 禮	lie3	
 禱	tɑu3	
 禾	ho2	, ~苗
-禾	uo2	白
+禾	uo2-	
 禿	tʰod7	
 秀	hiu1	
+私	su1-	
 私	sɿ1	
-私	su1	白
 秉	piŋ3	
 秋	tɕʰiu1	
 租	tsu1	
@@ -1271,7 +1271,7 @@
 稬	nu6	
 種	tɕyŋ3	~植
 種	tɕyŋ6	~田
-稱	tɕʰiŋ1	(又)尺升反
+稱	tɕʰiŋ1+	尺升反
 積	tɕiʔ7	
 穩	un3	
 穴	iad8	
@@ -1284,7 +1284,7 @@
 窠	kʰo1	
 窮	kʰyŋ2	
 立	lib7	
-站	tsan6	(文)驛也
+站	tsan6=	驛也
 章	tɕiɔŋ1	
 端	tɔn1	
 竵	uai1	
@@ -1294,8 +1294,8 @@
 笛	tʰieʔ8	
 笠	lid8	
 符	fu2	
-第	tie1	文
-笵	fɔn6	存疑
+第	tie1=	
+笵	fɔn6?	
 筆	pid7	
 等	tieŋ3	
 筋	kyn1	
@@ -1348,7 +1348,7 @@
 紛	fən1	
 索	soʔ7	
 紫	tsu3	
-紫	tɕi3	文
+紫	tɕi3=	
 細	sai1	
 紹	ɕieu2	
 終	tɕyŋ1	
@@ -1362,8 +1362,8 @@
 絲	su1	
 經	kiŋ1	
 綠	lioʔ8	
+綢	tɕʰiu2+	
 綢	kʰiu2	
-綢	tɕʰiu2	又
 維	uei2	
 網	mɔŋ3	
 緊	kin3	
@@ -1376,12 +1376,12 @@
 縣	hiɛn6	
 縮	ɕiuʔ7	
 總	tsoŋ3	
-總	tɕyŋ3	文
+總	tɕyŋ3=	
 績	tɕieʔ7	
 繁	fɔn2	
 織	tɕiʔ7	
 繞	niau6	~線
-繩	ɕiŋ2	文
+繩	ɕiŋ2=	
 繼	kie1	
 續	ɕioʔ8	
 纏	tɕʰiɛn2	
@@ -1393,8 +1393,8 @@
 罰	fuad8	
 罵	mɔ6	
 羊	iɔŋ2	
-美	mai3	文
-美	mi3	白
+美	mi3-	
+美	mai3=	
 羣	kʰun1	
 義	ȵi6	
 羹	kaŋ1	
@@ -1420,8 +1420,8 @@
 聽	tʰiaŋ1	
 肄	i6	
 肅	ɕiuʔ7	
+肉	ȵyʔ8+	
 肉	pi3	
-肉	ȵyʔ8	又
 肚	tu6	~~ɕi 肚子
 肝	kɔn1	
 股	ku3	
@@ -1438,7 +1438,7 @@
 胷	hyŋ1	
 能	nieŋ2	
 能	noi6	
-能	nai6	文
+能	nai6=	
 脂	tsɿ1	
 脅	ɕiɛb7	
 脣	tɕʰyn2	
@@ -1451,7 +1451,7 @@
 腔	kʰɔŋ1	
 腕	uon6	
 腦	nɑu3	
-腦	nau3	文
+腦	nau3=	
 腰	ieu1	
 腳	kioʔ7	
 腸	tɕʰiɔŋ2	
@@ -1497,14 +1497,14 @@
 茅	mau1	
 茲	tsɿ1	
 茴	foi2	
-茶	hɔd8	(又)與小兒言
 茶	tsʰɔ2	
-荀	sun2	文
+茶	ɔd8+	與小兒言
+荀	sun2=	
 荔	li6	
 荷	ho1	
 莧	hian1	
+菊	tɕyʔ7+	
 菊	tɕiuʔ7	人名
-菊	tɕyʔ7	又
 菌	kyn6	
 菔	puʔ7	
 菜	tsʰoi1	
@@ -1516,9 +1516,9 @@
 萬	mɔn1	
 落	loʔ8	
 葉	iɛb8	
-著	tɕio2	(又)碰~
-著	tɕyod7	(又)~衫
 著	tɕʰioʔ8	
+著	tɕyod7+	~衫
+著	tɕio2+	碰~
 葛	kɔd7	
 董	toŋ3	
 葬	tsɔŋ1	
@@ -1538,19 +1538,19 @@
 蔣	tɕiɔŋ3	
 蔥	tsʰoŋ1	
 蔬	ɕio1	
-蕉	tsau1	存疑
+蕉	tsau1?	
 蕭	ɕieu1	
+薄	po1+	
 薄	poʔ8	
-薄	po1	又
 薅	hɑu1	
-薑	kiɔŋ1	存疑
+薑	kiɔŋ1?	
 薩	sad7	細也
 薪	ɕin1	
 薯	ɕy1	
 藍	lɒm2	
 藏	tsʰɔŋ6	
-藕	ɑu3	文
-藕	ŋəu3	白
+藕	ŋəu3-	
+藕	ɑu3=	
 藝	ȵi6	
 藥	ioʔ8	
 蘇	su1	
@@ -1578,8 +1578,8 @@
 蠭	pʰiŋ1	
 蠶	tsʰɒm2	
 血	hiɛd7	
-行	hɔŋ2	(又)趕~ 趕集也
 行	haŋ2	戶庚切
+行	hɔŋ2+	趕~ 趕集也
 術	tɕʰyd7	
 街	kiai1	
 衣	i1	
@@ -1589,33 +1589,33 @@
 衿	kim1	
 袋	tʰoi6	
 袍	pʰɑu2	
-袖	ɕiu6	文
+袖	ɕiu6=	
 被	pʰi2	
+裂	liaʔ8+	
 裂	liad8	
 裂	laʔ8	
-裂	liaʔ8	又
 裏	li3	
-裏	loi6	存疑
+裏	loi6?	
 裕	y6	
 裙	kʰun1	
-褎	ɕiu6	文
+褎	ɕiu6=	
 褥	ȵioʔ8	
 褲	fu1	
 襖	ɑu3	
 襟	kim1	
 襯	tɕʰin1	
 西	sai1	
+要	ieu6+	
 要	io6	
-要	ieu6	又
 見	kian1	
 規	kuei1	
 視	sɿ6	
-視	su6	文
+視	su6=	
 視	tɕʰi6	近~
 親	tɕʰin1	
 角	koʔ7	
 解	kiai3	
-解	hai1	存疑
+解	hai1?	
 觸	tsʰoʔ7	
 言	ȵiɛn2	
 計	kie1	
@@ -1655,11 +1655,11 @@
 變	piɛn1	
 讎	tɕʰiu1	
 讓	ȵiɔŋ6	
-谷	kuʔ7	存疑
+谷	kuʔ7?	
 豆	tʰieu6	
 豈	tsʰɿ3	
 豎	tɕy3	
-豐	foŋ1	存疑
+豐	foŋ1?	
 象	iɔŋ6	
 豪	ɑu2	
 豬	tɕy1	
@@ -1672,24 +1672,24 @@
 貨	ho1	
 貪	tʰɔn1	
 責	tsaʔ7	
-貴	kuei1	文
+貴	kuei1=	
 買	uon6	
-買	mai6	文
+買	mai6=	
 費	pueioi1	
 貼	tʰab7	
 貿	mieu6	
+資	tsu1-	
 資	tsɿ1	
-資	tsu1	白
 賊	tɕʰieʔ8	
 賓	pin1	
 賞	ɕiɔŋ1	
 賠	pʰoi2	
 賢	hiɛn3	
 賣	uon6	
-賣	mai6	文
+賣	mai6=	
 賭	tu3	
 賴	lɔi6	
-賴	lɔn6	文
+賴	lɔn6=	
 賽	soi1	
 贈	tɕʰieŋ1	
 贏	iaŋ2	
@@ -1704,7 +1704,7 @@
 趙	tɕʰieu6	
 趟	tʰɔŋ1	
 趣	tɕʰy1	
-足	tɕioʔ7	文
+足	tɕioʔ7=	
 跌	tab7	
 跌	tieʔ7	
 跛	pai1	
@@ -1715,12 +1715,12 @@
 踏	tʰɔb7	
 踢	tʰieʔ7	
 身	ɕin1	
-躬	kyŋ1	存疑
+躬	kyŋ1?	
 躺	tʰɔŋ3	
 車	tɕʰia1	
 軌	kuei3	
-軍	kun1	文
-軍	tɕyn1	白
+軍	tɕyn1-	
+軍	kun1=	
 輕	kʰiaŋ1	
 輩	poi1	
 輪	lon2	
@@ -1735,11 +1735,11 @@
 辭	tɕʰi2	
 農	noŋ2	
 迅	sun1	
-迎	iaŋ2	白
+迎	iaŋ2-	
 近	kʰyon1	
 迻	i2	
 迻	ie2	
-追	tɕy1	文
+追	tɕy1=	
 退	tʰoi1	
 送	soŋ1	
 逆	ȵiʔ8	
@@ -1755,14 +1755,14 @@
 運	yn6	
 運	yŋ6	
 過	ku1	
-道	tɑu6	文
-道	tʰɑu6	白
+道	tʰɑu6-	
+道	tɑu6=	
 達	tɔd8	
 違	uei2	
 遞	tie6	
 遠	yon3	
 遮	tɕia1	
-遲	tsʰi2	文
+遲	tsʰi2=	
 遵	tsun1	
 遷	tsʰan1	
 選	ɕyon3	
@@ -1787,7 +1787,7 @@
 酸	sɔn1	
 醉	tsuei1	
 醒	saŋ3	
-醜	tɕʰiu3	存疑
+醜	tɕʰiu3?	
 醡	tsɔ6	~油
 醫	i1	
 醬	tɕiɔŋ1	
@@ -1828,7 +1828,7 @@
 鎭	tɕin1	
 鏈	liɛn6	
 鏽	hiu1	
-鐘	tɕyŋ1	存疑
+鐘	tɕyŋ1?	
 鐵	tʰad7	
 鑊	uoʔioʔ8	
 鑯	tɕiam1	
@@ -1837,24 +1837,23 @@
 鑽	tsɔn1	
 鑿	tsʰoʔ8	
 長	tɕʰiɔŋ2	
-門	mun2	文
+門	mun2=	
 閂	ɕieu1	
-閉	pi1	文
+閉	pi1=	
 開	kʰai1	,~會
-開	un1	
 開	kʰuei1	清理
 閏	yn6	
+閒	kiɛn1+	
 閒	kian1	
 閒	hian1	
-閒	kiɛn1	又
 閣	koʔ7	
 閱	yod8	
 閹	iɛm1	
 闊	kʰuad7	
 關	uon1	
-關	kuan1	文
+關	kuan1=	
 阮	nyon3	
-防	faŋ2	文
+防	faŋ2=	
 阿	ai1	
 阿	a1	又
 限	ɔn6	
@@ -1880,10 +1879,10 @@
 雕	tiau1	
 雙	soŋ1	
 雞	kiai1	
-離	lie6	(白) ~開
-離	li2	文
+離	lie6-	~開
+離	li2=	
 難	nɔn2	
-雨	y3	(文)~衣
+雨	y3=	~衣
 雪	sɔd7	
 雲	un2	
 零	liŋ2	
@@ -1900,8 +1899,8 @@
 靑	tsʰaŋ1	
 靜	tɕiŋ6	
 靠	kʰau1	
-靠	kieu1	
-面	miɛn6	存疑
+靠	kʰieu1	
+面	miɛn6?	
 革	kaʔ7	
 鞭	piɛn1	
 鞵	hai2	
@@ -1916,8 +1915,8 @@
 頂	tiaŋ3	
 順	sun6	
 頓	ton1	
-領	liŋ3	文
-領	liaŋ1	白
+領	liaŋ1-	
+領	liŋ3=	
 頭	tʰieu2	
 頸	kiaŋ3	
 顋	sai1	
@@ -1932,13 +1931,13 @@
 食	ɕiʔ8	
 飩	tʰɔn2	
 飯	pʰɔn6	
-飮	im	米~ 米汁
+飮	im3	米~ 米汁
 飴	i2	
 飼	sɿ6	
 飾	ɕiʔ7	
 養	iɔŋ6	
 餓	ky1	飢~
-餘	y1	存疑
+餘	y1?	
 餜	kuʔ7	
 餠	piaŋ3	
 館	kon3	
@@ -1946,7 +1945,7 @@
 饒	niau2	
 首	ɕiu3	
 香	hiɔŋ1	
-馬	mɔ	小稱
+馬	mɔ1	小稱
 馮	foŋ2	
 駕	kɔ1	
 騎	ki2	
@@ -1954,8 +1953,8 @@
 驅	kʰy1	
 驕	kieu1	
 驗	ȵiɛn6	
-驚	kiŋ1	文
-驚	kiaŋ1	白
+驚	kiaŋ1-	
+驚	kiŋ1=	
 骨	kub7	
 髒	tsɔŋ1	
 體	tʰi3	
@@ -1971,7 +1970,7 @@
 魚	ȵy2	
 魯	lu3	
 鮮	san1	
-鮳	kieu1	
+鮳	kʰieu1	
 鯽	tɕiʔ7	
 鱗	lin2	
 鳥	tau1	小稱
@@ -1980,7 +1979,7 @@
 鶴	ŋoʔ8	
 鷂	ieu6	
 鷹	iŋ1	
-鹹	am2	存疑
+鹹	am2?	
 鹽	iɛm2	
 鹿	luʔ8	
 麝	ɕia6	
@@ -1995,8 +1994,8 @@
 鼓	ku3	
 鼠	ɕy1	
 鼻	pʰi6	
-齊	tɕie1	文
-齊	tsʰai2	白
+齊	tsʰai2-	
+齊	tɕie1=	
 齋	tsai1	
 齒	tsʰi3	
 齧	ȵiaʔ8	
