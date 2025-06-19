@@ -252,10 +252,7 @@ class 表:
 		sname = g[0]
 		自.文件名 = os.path.basename(sname)
 		if isXls(sname):
-			page = 0
-			if 自.文件名.startswith("香山話綜合"): page = 1
-			elif 自.簡稱 == "開平護龍": page = 3
-			xls2tsv(sname, page)
+			xls2tsv(sname)
 			sname = getTsvName(sname)
 		elif isDocx(sname):
 			docx2tsv(sname)
@@ -319,7 +316,7 @@ class 表:
 			音 = 音.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀∅Ø〇0").replace("零", "")
 			if 自.簡稱 not in ("盛唐", "榕江侗上古借詞", "榕江侗中古借詞") and not 自.文件名.startswith("白語"): 音 = 音.lstrip("q")
 			if 音.startswith("I") or 音.startswith("1"): 音 = "l" + 音[1:]
-			音 = 音.lower().replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ").replace("‘", "ʰ").replace(":","ː")
+			音 = 音.lower().replace("ε", "ɛ").replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ").replace("‘", "ʰ").replace(":","ː")
 			音 = re.sub("([ʂʐ]ʰ?)ʮ", "\\1ʯ", 音)
 			音 = re.sub("([sz]ʰ?)ʯ", "\\1ʮ", 音)
 			音 = re.sub("([ʂʐ]ʰ?)ɿ", "\\1ʅ", 音)
@@ -330,6 +327,8 @@ class 表:
 			音 = 音.replace("[", "").replace("]", "").replace("{", "").replace("}", "")
 			音 = re.sub(r"^([mnvʋɹl])(\d+)$", "\\1\u0329\\2", 音)
 			音 = re.sub(r"^([ŋȵʐɱɻʒ])(\d+)$", "\\1\u030D\\2", 音)
+			音 = re.sub("([mnvʋɹl])([\u0329\u030D]+)", "\\1\u0329", 音)
+			音 = re.sub("([ŋȵʐɱɻʒ])([\u0329\u030D]+)", "\\1\u030D", 音)
 			音 = re.sub("^([^*])\\1([^\u0303])", "\\1\\2", 音)
 			if 自.info["無調"]:
 				音 = 音.rstrip("0123456789")
@@ -347,7 +346,7 @@ class 表:
 			自.誤.append(f"[{音}]音節包含漢字")
 		if 音 not in 自.音集:
 			自.音集.add(音)
-		elif 自.簡稱 not in ("長沙星沙", "長沙金井", "雙牌打鼓坪", "湘劇", "蘇州評彈"):
+		elif 自.簡稱 not in ("長沙星沙", "長沙金井", "雙牌打鼓坪", "湘劇", "蘇州評彈", "溧陽河南話", "南京"):
 			自.誤.append(f"[{音}]音節重複")
 		return 音
 

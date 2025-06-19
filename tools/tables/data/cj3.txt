@@ -25712,7 +25712,7 @@ zf     Α
 zf     Β
 zf     Γ
 zf     Δ
-zf     Ε
+zf     ɛ
 zf     Ζ
 zf     Η
 zf     Θ
@@ -25736,7 +25736,7 @@ zf     α
 zf     β
 zf     γ
 zf     δ
-zf     ε
+zf     ɛ
 zf     ζ
 zf     η
 zf     θ
