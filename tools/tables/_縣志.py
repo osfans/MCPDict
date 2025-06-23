@@ -46,10 +46,10 @@ class 表(_表):
 		elif 名 in ("臨髙話",):
 			if " " not in 行: return "#"
 			行 = 行.strip()
-			行 = re.sub(r"<(.*?)>","\\1{讀書音}",行)
+			行 = re.sub(r"<(.*?)>","\\1{讀書音聲調}",行)
 			行 = re.sub(r"\[(.*?)\]","\\1{特殊音}",行)
 			行 = re.sub(r"(.)\*","\\1{海口話影響}",行)
-			行 = re.sub(r"([1-5])", "[\\1]", 行)
+			行 = re.sub(r"( [1-5])", " [\\1]", 行)
 			行 = re.sub(r"([ptk]) ", "\\1 [5]", 行)
 			行 = re.sub(r"^(.*?)\[", "\\1	[", 行)
 			行 = 行.replace(" ", "")
@@ -196,16 +196,16 @@ class 表(_表):
 		elif 名 in ("南海沙頭"):
 			行 = re.sub(r"^(\d+)(\()", "\\1□\\2", 行)
 			行 = re.sub(r"^(\d+)", "[\\1]", 行)
-		elif 名 in ("泰州",):
-			行 = 行.replace("'", "ʰ")
-			行 = re.sub("([-=])(.)", "\\2\\1", 行)
 		elif 名 in ("衡山望峯",):
 			列 = 行.split("\t")
 			if 有字(列[0]):
 				if len(列) == 2:
 					行 = "#" + 列[1]
+				else:
+					自.調值表 = [re.findall(r"^([^\d]+)(\d*)$", i)[0][1] for i in 列]
+					return
 			else:
-				行 = "\t".join((f"[{序 + 1 if (序 > 3) else 序}]" if 序 else "") + 項 for 序,項 in enumerate(列))
+				行 = "\t".join((f"[{自.調值表[序]}]" if 序 else "") + 項 for 序,項 in enumerate(列) if 項)
 		elif 名 in ("江永夏層舖", "江永回龍圩", "江永粗石江", "江永蘭溪", "江永允山"):
 			if not 行.startswith("#"):
 				列 = 行.split("\t")

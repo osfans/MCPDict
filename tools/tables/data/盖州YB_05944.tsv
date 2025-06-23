@@ -132,10 +132,11 @@ cid	character	initial	final	tone	note
 130	贝	p	ei	51	
 131	带	t	ai	51	
 132	盖	k	ai	51	
-133	害	x	ai	51	
+133	害	x	ai	51	又
+	害	x	ai	412	又：～怕
 134	拜	p	ai	51	
 135	排	ph	ai	24	
-136	埋	m	ai	24	
+136	埋	m	ei	24	
 137	戒	tɕ	iɛ	51	
 138	摆	p	ai	213	
 139	派	ph	ai	51	
@@ -178,7 +179,7 @@ cid	character	initial	final	tone	note
 172	背	p	ei	51	
 173	煤	m	ei	24	
 174	妹	m	ei	51	
-175	对	t	uei	51	
+175	对	t	ei	51	
 176	雷	l	ei	24	
 177	罪	ts	uei	51	
 178	碎	s	uei	51	
@@ -197,7 +198,8 @@ cid	character	initial	final	tone	note
 191	快	kh	uai	51	
 192	话	x	ua	51	
 193	岁	s	uei	51	
-194	卫	∅	uei	51	
+194	卫	∅	uei	51	白
+	卫	∅	uei	213	文
 195	肺	f	ei	51	
 196	桂	k	uei	51	
 197	碑	p	ei	412	
@@ -308,7 +310,7 @@ cid	character	initial	final	tone	note
 300	猫	m	au	412	
 301	闹	n	au	51	
 302	罩	ts	au	51	
-303	抓	ts	ua	412	
+303	抓	ts	ua	213	
 304	找	ts	au	213	
 305	抄	tsh	au	412	
 306	交	tɕ	iau	412	
@@ -385,7 +387,7 @@ cid	character	initial	final	tone	note
 378	感	k	an	213	
 379	含	x	an	24	
 380	暗	∅	an	51	
-381	搭	t	a	412	
+381	搭	t	a	213	
 382	踏	th	a	51	
 383	拉	l	a	412	
 384	杂	ts	a	24	
@@ -437,7 +439,7 @@ cid	character	initial	final	tone	note
 430	甜	th	ian	24	
 431	念	ȵ	ian	51	
 432	嫌	ɕ	ian	24	
-433	跌	t	iɛ	24	
+433	跌	t	iɛ	213	
 434	贴	th	iɛ	213	
 435	碟	t	iɛ	24	
 436	协	ɕ	iɛ	24	
@@ -445,7 +447,7 @@ cid	character	initial	final	tone	note
 438	法	f	a	213	
 439	品	ph	in	213	
 440	林	l	in	24	
-441	浸	tɕ	in	51	
+441	浸	tɕh	in	213	
 442	心	ɕ	in	412	
 443	寻	ɕ	yn	24	
 444	沉	tsh	ən	24	
@@ -505,8 +507,7 @@ cid	character	initial	final	tone	note
 497	变	p	ian	51	
 498	骗	ph	ian	51	
 499	便	p	ian	51	
-500	棉	ȵ	iau	24	白
-500	棉	m	ian	24	文
+500	棉	m	ian	24	
 501	面	m	ian	51	
 502	连	l	ian	24	
 503	剪	tɕ	ian	213	
@@ -519,8 +520,8 @@ cid	character	initial	final	tone	note
 510	扇	s	an	51	
 511	善	s	an	51	
 512	件	tɕ	ian	51	
-513	延	∅	ian	24	
-514	别	p	iɛ	24	
+513	延	∅	ian	51	
+514	别	p	ai	51	
 515	灭	m	iɛ	51	
 516	列	l	iɛ	51	
 517	撤	tsh	ɤ	51	
@@ -532,7 +533,7 @@ cid	character	initial	final	tone	note
 523	建	tɕ	ian	51	
 524	健	tɕ	ian	51	
 525	言	∅	ian	24	
-526	歇	ɕ	iɛ	412	
+526	歇	ɕ	iɛ	213	
 527	扁	p	ian	213	
 528	片	ph	ian	51	
 529	面	m	ian	51	
@@ -566,9 +567,7 @@ cid	character	initial	final	tone	note
 557	端	t	uan	412	
 558	短	t	uan	213	
 559	断	t	uan	51	
-560	暖	n	au	213	老
-560	暖	n	uan	213	新
-560	暖	n	an	213	新
+560	暖	n	an	213	
 561	乱	l	uan	51	
 562	酸	s	uan	412	
 563	算	s	uan	51	
@@ -578,8 +577,8 @@ cid	character	initial	final	tone	note
 567	完	∅	uan	24	
 568	换	x	uan	51	
 569	碗	∅	uan	213	
-570	拨	p	ɤ	24	
-571	泼	ph	ɤ	412	
+570	拨	p	ɤ	213	
+571	泼	ph	ɤ	213	
 572	末	m	ɤ	51	
 573	脱	th	uɤ	213	
 574	夺	t	uɤ	24	
@@ -587,7 +586,7 @@ cid	character	initial	final	tone	note
 576	活	x	uɤ	24	
 577	顽	∅	uan	24	
 578	滑	x	ua	24	
-579	挖	∅	ua	412	
+579	挖	∅	ua	213	
 580	闩	s	uan	412	
 581	关	k	uan	412	
 582	惯	k	uan	51	
@@ -622,7 +621,7 @@ cid	character	initial	final	tone	note
 611	冤	∅	yan	412	
 612	园	∅	yan	24	
 613	远	∅	yan	213	
-614	发	f	a	51	
+614	发	f	a	213	
 615	罚	f	a	24	
 616	袜	∅	ua	51	
 617	月	∅	yɛ	51	
@@ -655,16 +654,17 @@ cid	character	initial	final	tone	note
 643	印	∅	in	51	
 644	引	∅	in	213	
 645	笔	p	i	213	
-646	匹	ph	i	412	
+646	匹	ph	i	213	
 647	密	m	i	51	
 648	栗	l	i	51	
 649	七	tɕh	i	213	
 650	侄	ts	ɿ	24	
 651	虱	s	ɿ	213	
 652	实	s	ɿ	24	
-653	失	s	ɿ	24	
+653	失	s	ɿ	213	
 654	日	∅	i	51	
 655	吉	tɕ	i	24	
+	吉	tɕ	i	412	又：～林
 656	一	∅	i	213	
 657	筋	tɕ	in	412	
 658	劲	tɕ	in	51	
@@ -679,7 +679,7 @@ cid	character	initial	final	tone	note
 666	嫩	n	ən	51	又
 667	村	tsh	uən	412	
 668	寸	tsh	uən	51	
-669	蹲	t	uən	412	
+669	蹲	t	ən	412	
 670	孙	s	uən	412	
 671	滚	k	uən	213	
 672	困	kh	uən	51	
@@ -700,7 +700,7 @@ cid	character	initial	final	tone	note
 687	均	tɕ	yn	412	
 688	匀	∅	yn	24	
 689	律	l	y	51	
-690	出	tsh	u	24	
+690	出	tsh	u	213	
 691	橘	tɕ	y	213	
 692	分	f	ən	412	
 693	粉	f	ən	213	
@@ -732,7 +732,8 @@ cid	character	initial	final	tone	note
 719	索	s	uɤ	213	
 720	各	k	ɤ	51	
 721	鹤	x	ɤ	51	
-722	恶	∅	ɤ	51	
+722	恶	∅	ɤ	51	又：～人
+	恶	∅	ɤ	213	又：～心
 723	娘	ȵ	iaŋ	24	
 724	两	l	iaŋ	213	
 725	亮	l	iaŋ	51	
@@ -761,14 +762,17 @@ cid	character	initial	final	tone	note
 748	秧	∅	iaŋ	412	
 749	痒	∅	iaŋ	213	
 750	样	∅	iaŋ	51	
-751	雀	tɕh	yɛ	51	
+751	雀	tɕh	iau	213	
 752	削	ɕ	yɛ	213	
 753	着	ts	au	24	
 754	勺	s	au	24	
 755	弱	∅	yɛ	51	
-756	脚	tɕ	iau	213	
-757	约	∅	yɛ	412	
-758	药	∅	iau	51	
+756	脚	tɕ	iau	213	文
+	脚	tɕ	yɛ	213	白
+757	约	∅	yɛ	412	白
+	约	∅	iau	412	文
+758	药	∅	yɛ	51	白
+	药	∅	iau	51	文
 759	光	k	uaŋ	412	
 760	慌	x	uaŋ	412	
 761	黄	x	uaŋ	24	
@@ -797,13 +801,13 @@ cid	character	initial	final	tone	note
 783	讲	tɕ	iaŋ	213	
 784	降	ɕ	iaŋ	24	
 785	项	ɕ	iaŋ	51	
-786	剥	p	ɤ	24	
+786	剥	p	ɤ	412	
 787	桌	ts	uɤ	213	
 788	镯	ts	uɤ	24	
 789	角	tɕ	yɛ	24	白
 789	角	tɕ	iau	213	文
-791	学	ɕ	iau	24	白
-791	学	ɕ	yɛ	24	文
+791	学	ɕ	iau	24	文
+791	学	ɕ	yɛ	24	白
 792	握	∅	uɤ	51	
 793	朋	ph	əŋ	24	
 794	灯	t	əŋ	412	
@@ -815,16 +819,16 @@ cid	character	initial	final	tone	note
 800	僧	s	əŋ	412	
 801	肯	kh	ən	213	
 802	北	p	ei	213	
-803	墨	m	ɤ	51	
+803	墨	m	i	51	
 804	得	t	ɤ	24	又：～到
 804	得	t	ei	213	又：非～
 805	特	th	ɤ	51	
 806	贼	ts	ei	24	
-807	塞	s	ai	24	白
-807	塞	s	ɤ	51	文
+807	塞	s	ai	24	
 808	刻	kh	ɤ	213	又：～字
 808	刻	kh	ɤ	51	又：顷～
-809	黑	x	ei	412	
+809	黑	x	ei	412	又
+	黑	x	ɤ	213	又
 810	冰	p	iŋ	412	
 811	证	ts	əŋ	51	
 812	秤	tsh	əŋ	51	
@@ -839,8 +843,7 @@ cid	character	initial	final	tone	note
 821	直	ts	ɿ	24	
 822	侧	tsh	ɤ	51	
 823	测	tsh	ɤ	51	
-824	色	s	ai	213	白
-824	色	s	ɤ	51	文
+824	色	s	ai	213	
 825	织	ts	ɿ	213	
 826	食	s	ɿ	24	
 827	式	s	ɿ	51	
@@ -864,14 +867,14 @@ cid	character	initial	final	tone	note
 845	择	ts	ɤ	24	
 846	窄	ts	ai	213	
 847	格	k	ɤ	24	
-848	客	kh	ɤ	51	
+848	客	kh	ɤ	213	
 849	额	∅	ɤ	24	
 850	棚	ph	əŋ	24	
 851	争	ts	əŋ	412	
 852	耕	k	əŋ	412	
 853	麦	m	ai	51	
-854	摘	ts	ɤ	24	又
-854	摘	ts	ai	24	又
+854	摘	ts	ɤ	213	白
+854	摘	ts	ai	24	文
 855	策	tsh	ɤ	51	
 856	隔	k	ɤ	24	
 857	兵	p	iŋ	412	
@@ -921,7 +924,8 @@ cid	character	initial	final	tone	note
 901	形	ɕ	iŋ	24	
 902	壁	p	i	51	
 903	劈	ph	i	213	
-904	踢	th	i	24	
+904	踢	th	i	24	新
+		th	i	213	老
 905	笛	t	i	24	
 906	历	l	i	51	
 907	锡	ɕ	i	213	
@@ -944,7 +948,7 @@ cid	character	initial	final	tone	note
 924	动	t	uŋ	51	
 925	洞	t	uŋ	51	
 926	聋	l	uŋ	24	
-927	弄	n	uŋ	51	
+927	弄	n	əŋ	51	
 928	粽	ts	əŋ	51	
 929	葱	tsh	uŋ	412	
 930	送	s	uŋ	51	
@@ -958,8 +962,10 @@ cid	character	initial	final	tone	note
 938	鹿	l	u	51	
 939	族	ts	u	24	
 940	谷	k	u	213	
+	谷	k	u	24	又：～子
 941	哭	kh	u	213	
-942	屋	∅	u	412	
+942	屋	∅	u	412	又
+	屋	∅	u	24	又
 943	冬	t	uŋ	412	
 944	统	th	uŋ	213	
 945	脓	n	əŋ	24	
@@ -983,9 +989,10 @@ cid	character	initial	final	tone	note
 963	目	m	u	51	
 964	六	l	iəu	51	
 965	宿	ɕ	y	213	白
-965	宿	s	u	51	文
+965	宿	ɕ	iəu	213	文
 966	竹	ts	u	24	
-967	畜	tsh	u	51	
+967	畜	tsh	u	51	又：～生
+	畜	ɕ	y	51	又：～牧
 968	缩	s	uɤ	51	
 969	粥	ts	əu	412	
 970	叔	s	u	213	
