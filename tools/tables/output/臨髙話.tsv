@@ -26,7 +26,7 @@
 臨	lim2	
 丸	juan2	
 丹	dan1	
-爲	vui2	
+爲	vui2	行~
 主	tsi3	
 麗	li4	
 舉	ki3	
@@ -400,7 +400,7 @@
 塔	dap5	特殊音
 塡	hian2	
 境	kiŋ3	
-墅	su2	
+墅	su4	
 牆	siaŋ2	
 增	tsəŋ4	
 士	sə4	
@@ -408,9 +408,9 @@
 聲	siŋ1	
 殼	xiak5	
 壺	hu2	
+處	si4	1
+處	su4	2
 處	si3	
-處	si4	
-處	su4	
 備	bi4	
 复	fuk5	
 夏	hia4	
@@ -468,8 +468,8 @@
 孝	hiau4	
 季	ki4	
 孤	ku1	
-學	hɔk5	
-學	hiak5	
+學	hiak5	1
+學	hɔk5	2
 孽	niat5	
 宇	ji3	
 守	siu3	
@@ -579,8 +579,8 @@
 庇	bi4	
 牀	suaŋ2	
 序	si4	
-庫	fu4	
-庫	xu4	
+庫	fu4	1
+庫	xu4	2
 應	iŋ1	
 應	iŋ4	
 底	di3	
@@ -600,7 +600,7 @@
 弃	hi4	
 弄	luŋ4	
 弊	bi4	
-式	tik5	讀書音
+式	tik5	讀書音聲調
 引	jin3	
 弟	di4	
 張	tsiaŋ1	
@@ -674,7 +674,7 @@
 憤	fən4	
 願	juan4	
 愼	sin4	
-慢	mɔn4	讀書音
+慢	mɔn4	讀書音聲調
 慰	ui4	
 懂	duŋ3	
 懶	lan3	
@@ -838,8 +838,8 @@
 晶	tsiŋ1	
 智	tsi4	
 暫	tsiam4	
-暑	si3	
-暑	su3	
+暑	si3	1
+暑	su3	2
 暖	nuan3	
 暗	am4	
 暴	bɔu4	
@@ -957,7 +957,7 @@
 汇	hui4	
 漢	han4	
 江	kiaŋ1	
-池	si1	海口話影響
+池	si3	海口話影響
 污	u1	
 湯	haŋ1	
 汪	uaŋ1	
@@ -1031,9 +1031,9 @@
 濫	lam4	
 滴	dik5	
 漏	ləu4	
-演	jin3	讀書音
+演	jin3	讀書音聲調
 漠	mɔk5	
-漫	mɔn4	讀書音
+漫	mɔn4	讀書音聲調
 瀟	siau1	
 潛	siam2	
 潢	huaŋ2	
@@ -1281,8 +1281,8 @@
 緊	kin3	
 紫	tsə3	
 累	ləi3	
-糾	kiu1	
-糾	xiu1	
+糾	kiu1	1
+糾	xiu1	2
 紅	huŋ2	
 約	iak5	
 級	kip5	
@@ -1410,8 +1410,8 @@
 芽	ja2	
 苏	so1	
 苗	miau2	
-若	jɔk5	
-若	jiak5	
+若	jiak5	1
+若	jɔk5	2
 苦	xu3	
 英	iŋ1	
 蘋	fiŋ2	
@@ -1453,7 +1453,7 @@
 薄	bɔk5	
 薇	mi2	
 薛	siat5	
-薯	su2	
+薯	su3	
 藏	tsaŋ4	
 蘚	sian3	
 虎	hu3	
@@ -1476,7 +1476,7 @@
 衣	i1	
 補	bu3	
 表	biau3	
-襯	son4	讀書音
+襯	son4	讀書音聲調
 衰	suai1	
 袖	tsiu4	
 袜	vat5	
@@ -1488,7 +1488,7 @@
 裝	tsuaŋ1	
 裔	jui4	
 裕	ji4	
-褲	xu2	
+褲	xu4	
 裱	biau3	
 西	si1	
 要	iau1	
@@ -1741,7 +1741,7 @@
 降	kiaŋ4	
 限	han4	
 院	juan4	
-除	sə2	讀書音
+除	sə2	讀書音聲調
 險	hiam3	
 陪	fəi2	
 陷	ham4	
