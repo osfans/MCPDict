@@ -17,7 +17,7 @@ class 表(_表):
 		名 = 自.簡稱
 		if 名 in ("黃梅小池","光山南郊"):
 			行 = 自.normM(行)
-		elif 名 in ("巢湖","石城小松"):
+		elif 名 in ("巢湖",):
 			行 = 自.normS(行)
 		elif 名 in ("奉化",):
 			行 = re.sub(r"(\d+)(?![:\d])", "[\\1]", 行)
@@ -153,7 +153,7 @@ class 表(_表):
 			if "[" not in 行 and not 行.startswith("#"): 行 = ""
 		elif 名 in ("金壇",):
 			if 行.strip().endswith("韻"): 行 = ""
-		elif 名 in ("成都",):
+		elif 名 in ("成都", "響水"):
 			行 = 行.strip()
 			if 行.startswith("["):
 				行 = 自.聲 + 行
@@ -216,6 +216,15 @@ class 表(_表):
 			列 = 行.split("\t")
 			行 = "\t".join((f"[{序 + (2 if 名.startswith("如皋") and 序 > 4 else 1) if 序 > 3 else 序}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
 			行 = 自.normS(行.replace(")(", "："))
+		elif 名 in ("葛洲壩",):
+			if 行.startswith("["): return
+			列 = 行.split("\t")
+			if len(列) <= 1: return 行
+			行 = "\t".join((f"[{序 + 1 if 序 > 3 else 序}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
+		elif 名 in ("臨江",):
+			if "[" in 行:
+				列 = 行.split("\t")
+				行 = 列[0] + 列[2] + 列[1]
 		elif 名 in ("安澤英寨"):
 			if 行:
 				列 = 行.split("\t")
