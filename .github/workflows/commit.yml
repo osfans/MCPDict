@@ -55,5 +55,5 @@ jobs:
 
     - name: Deploy to SF
       run: |
-        sshpass -p '${{ secrets.SF_PASSWORD }}' scp -o StrictHostKeyChecking=no cgi/cgi-bin/*.* ${{ secrets.SF_USERNAME }}@web.sourceforge.net:/home/project-web/mcpdict/cgi-bin
+        # sshpass -p '${{ secrets.SF_PASSWORD }}' scp -o StrictHostKeyChecking=no cgi/cgi-bin/*.* ${{ secrets.SF_USERNAME }}@web.sourceforge.net:/home/project-web/mcpdict/cgi-bin
         sshpass -p '${{ secrets.SF_PASSWORD }}' scp -o StrictHostKeyChecking=no tools/warnings.txt app/build/reports/lint-results-debug.html ${{ secrets.SF_USERNAME }}@web.sourceforge.net:/home/project-web/mcpdict/htdocs

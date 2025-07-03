@@ -49,9 +49,8 @@ class 表(_表):
 			elif 名 in ("南寧", "南寧亭子"):
 				音 = 音.replace(" ", "-")
 				註 = 列[6] + 註
-			elif 名 in ("揭陽",):
-				異讀 = 列[6].strip("(读)")
-				if 異讀 in ("文","白"): 註 = f"({異讀})" + 註
+			elif 名 in ("陽春潭水",):
+				音 = 音.replace("或", "/").replace("42/31", "42")
 			elif 名 in ("鄭張上古",):
 				音 = ("%s%s (%s%s切 %s聲 %s%s)"%(列[12], f"/{列[13]}" if 列[13] else "", 列[7],列[8],列[9],列[10],列[11]))
 			elif 名 in ("溫州",):
@@ -143,6 +142,30 @@ class 表(_表):
 						註 = 註[1:-1]
 					l.append((字, 音, 註))
 				return l
+			elif 自.文件名.startswith("闽西清流，宁化客家话比较研究"):
+				if 音 == "─": return
+				if ";" in 音:
+					音標組 = 音.split(";")
+					l = list()
+					for 音標 in 音標組:
+						if re.match("^.*[¹²³⁴⁵]+$", 音標):
+							l.append((字, 自.轉調類(音標), 註))
+							continue
+						音標, 註2 = re.findall("^(.*?[¹²³⁴⁵]+)(.*?)$", 音標)[0]
+						l.append((字, 自.轉調類(音標), 註2))
+					return l
+			elif 自.文件名.startswith("语言接触与湘西南苗瑶平话调查研究"):
+				if 音 == "/": return
+				if ";" in 音:
+					音標組 = 音.split(";")
+					l = list()
+					for 音標 in 音標組:
+						if re.match(r"^.*[¹²³⁴⁵]+[\-=]?$", 音標):
+							l.append((字, 自.轉調類(音標), 註))
+							continue
+						音標, 註2 = re.findall(r"^(.*?[¹²³⁴⁵]+[\-=]?)(.*?)$", 音標)[0]
+						l.append((字, 自.轉調類(音標), 註2))
+					return l
 			elif 自.文件名.startswith("广西富川富阳方言21点"):
 				註 = 字[1:].strip("()（）")
 				字 = 字[0]
@@ -198,6 +221,8 @@ class 表(_表):
 		if not 音組: 音組.append(音)
 		l = list()
 		for 音 in 音組:
+			if 自.爲音:
+				音 = 音.replace(";", "/")
 			if 自.info.get("字表使用調值", False):
 				音 = 自.轉調類(音)
 			音 = 自.正音(音)

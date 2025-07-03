@@ -311,6 +311,9 @@ def getLangs(dicts, 參數, args):
 					if 調值 in 調典 and "入" in 調組[調][3]:
 						調值 += "0"
 					調典[調值] = 調
+					if "/" in 調值:
+						for i in 調值.split("/"):
+							調典[i] = 調
 				語.調典 = 調典
 			語.info = d
 			# print(d["文件名"])

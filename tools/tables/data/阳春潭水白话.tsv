@@ -1,0 +1,3648 @@
+	单字	潭水1_粤拼	潭水1_IPA	注释		潭水2_粤拼	潭水2_ipa	注释		整合IPA	issame	test	注释
+1	恒	hang4？	hɐŋ42/31	=恆？	1	?		?	1	hɐŋ42/31	False		
+2	唬	fu2？	fu21	？	1	\			0	fu21	False		发音人对该音存疑
+3	鴉	aa1	ʔa35		0	aa1	ʔa35		0	ʔa35	1		
+4	啞	aa2	ʔa21		0	aa2	ʔa21		0	ʔa21	1		
+5	啊	aa3	ʔa33		0	aa3	ʔa33		0	ʔa33	1		
+6	亞	aa3	ʔa33		0	aa3	ʔa33		0	ʔa33	1		
+7	訝	aa3?	ʔa33	?	1	aa3?	ʔa33	?	1	ʔa33	1		发音人对该音存疑
+8	阿	aa3或o1	ʔa33或ʔɔ35		0	aa3或o1	ʔa33或ʔɔ35		0	ʔa33或ʔɔ35	1		
+9	呀	aa5或aa3	ʔa21或ʔa33		0	aa5或aa3	ʔa21或ʔa33		0	ʔa21或ʔa33	1		
+10	埃	aai1	ʔai35		0	aai1	ʔai35		0	ʔai35	1		
+11	挨	aai1或ai1	ʔai35或ʔɐi35		0	aai1或ai1	ʔai35或ʔɐi35		0	ʔai35或ʔɐi35	1		
+12	隘	aai3或jɪk7?	ʔai33或jɪk35	?	1	aai3或jeat7?	ʔai33或jət35	?	1	ʔai33	False		
+12	隘									jɪk35或jət35			发音人对该音存疑
+13	鴨	aap8	ʔap3		0	aap8	ʔap3		0	ʔap3	1		
+14	押	aat8	ʔat3		0	aat8	ʔat3		0	ʔat3	1		
+15	壓	aat8	ʔat3		0	aat8	ʔat3		0	ʔat3	1		
+16	拗	aau3	ʔau33		0	aau3	ʔau33		0	ʔau33	1		
+17	矮	ai2	ʔɐi21		0	ai2	ʔɐi21		0	ʔɐi21	1		
+18	握	ak1	ʔɐk35		0	ak1	ʔɐk35		0	ʔɐk35	1		
+19	庵	am1	ʔɐm35		0	am1	ʔɐm35		0	ʔɐm35	1		
+20	捂	am2訓讀	ʔɐm21	訓讀	0	am2訓讀	ʔɐm21	訓讀	0	ʔɐm21	1		訓讀
+21	暗	am3	ʔɐm33		0	am3	ʔɐm33		0	ʔɐm33	1		
+22	歐	au1	ʔɐu35		0	au1	ʔɐu35		0	ʔɐu35	1		
+23	鷗	au1	ʔɐu35		0	au1	ʔɐu35		0	ʔɐu35	1		
+24	嘔	au2	ʔɐu21		0	au2	ʔɐu21		0	ʔɐu21	1		
+25	叭	baa1	pa35		0	baa1	pa35		0	pa35	1		
+26	芭	baa1	pa35		0	baa1	pa35		0	pa35	1		
+27	笆	baa1	pa35		0	baa1	pa35		0	pa35	1		
+28	巴	baa1	pa35		0	baa1	pa35		0	pa35	1		
+29	爸	baa1	pa35		0	baa1	pa35		0	pa35	1		
+30	疤	baa1	pa35		0	baa1	pa35		0	pa35	1		
+31	靶	baa2	pa21		0	baa2	pa21		0	pa21	1		
+32	把	baa2	pa21		0	baa2	pa21		0	pa21	1		
+33	吧	baa2或paa6	pa21或pʰa53		0	baa2或paa6	pa21或pʰa53		0	pa21或pʰa53	1		
+34	壩	baa3	pa33		0	baa3	pa33		0	pa33	1		
+35	霸	baa3	pa33		0	baa3	pa33		0	pa33	1		
+36	垻	baa3	pa33		0	baa3	pa33		0	pa33	1		
+37	罷	baa6	pa53		0	baa6	pa53		0	pa53	1		
+38	擺	baai2	pai21		0	baai2	pai21		0	pai21	1		
+39	湃	baai3	pai33		0	baai3	pai33		0	pai33	1		
+40	拜	baai3	pai33		0	baai3	pai33		0	pai33	1		
+41	敗	baai6	pai53		0	baai6	pai53		0	pai53	1		
+42	頒	baan1	pan35		0	baan1	pan35		0	pan35	1		
+43	班	baan1	pan35		0	baan1	pan35		0	pan35	1		
+44	斑	baan1	pan35		0	baan1	pan35		0	pan35	1		
+45	扳	baan1?	pan35	?	1	baan1?	pan35	?	1	pan35	1		发音人对该音存疑
+46	板	baan2	pan21		0	baan2	pan21		0	pan21	1		
+47	版	baan2	pan21		0	baan2	pan21		0	pan21	1		
+48	辦	baan6	pan53		0	baan6	pan53		0	pan53	1		
+49	瓣	baan6	pan53		0	baan6	pan53		0	pan53	1		
+50	扮	baan6	pan53		0	baan6	pan53		0	pan53	1		
+51	八	baat8	pat3		0	baat8	pat3		0	pat3	1		
+52	拔	baat8	pat3		0	baat8	pat3		0	pat3	1		
+53	捌	baat8	pat3		0	baat8	pat3		0	pat3	1		
+54	跋	baat9	pat53		0	baat9	pat53		0	pat53	1		
+55	苞	baau1	pau35		0	baau1	pau35		0	pau35	1		
+56	包	baau1	pau35		0	baau1	pau35		0	pau35	1		
+57	胞	baau1	pau35		0	baau1	pau35		0	pau35	1		
+58	雹	baau1或bok9	pau35或pɔk53		0	baau1或bok9	pau35或pɔk53		0	pau35或pɔk53	1		
+59	飽	baau2	pau21		0	baau2	pau21		0	pau21	1		
+60	爆	baau3	pau33		0	baau3	pau33		0	pau33	1		
+61	豹	baau3	pau33		0	baau3	pau33		0	pau33	1		
+62	閉	bai3	pɐi33		0	bai3	pɐi33		0	pɐi33	1		
+63	蔽	bai3	pɐi33		0	bai3	pɐi33		0	pɐi33	1		
+64	幣	bai6	pɐi53		0	bai6	pɐi53		0	pɐi53	1		
+65	斃	bai6	pɐi53		0	bai6	pɐi53		0	pɐi53	1		
+66	弊	bai6	pɐi53		0	bai6	pɐi53		0	pɐi53	1		
+67	百	bak7	pɐk35		0	bak7	pɐk35		0	pɐk35	1		
+68	伯	bak7	pɐk35		0	bak7	pɐk35		0	pɐk35	1		
+69	北	bak7	pɐk35		0	bak7	pɐk35		0	pɐk35	1		
+70	泊	bak9	pɐk53		0	bak9	pɐk53		0	pɐk53	1		
+71	舶	bak9	pɐk53		0	bak9	pɐk53		0	pɐk53	1		
+72	白	bak9	pɐk53		0	bak9	pɐk53		0	pɐk53	1		
+73	泵	bam1	pɐm35		0	bam1	pɐm35		0	pɐm35	1		
+74	奔	ban1	pɐn35		0	ban1	pɐn35		0	pɐn35	1		
+75	彬	ban1	pɐn35		0	ban1	pɐn35		0	pɐn35	1		
+76	繽	ban1	pɐn35		0	ban1	pɐn35		0	pɐn35	1		
+77	賓	ban1	pɐn35		0	ban1	pɐn35		0	pɐn35	1		
+78	濱	ban1	pɐn35		0	ban1	pɐn35		0	pɐn35	1		
+79	稟	ban2或lam5	pɐn21或lɐm21		0	ban2或lam5	pɐn21或lɐm21		0	pɐn21或lɐm21	1		
+80	鬢	ban3	pɐn33		0	ban3	pɐn33		0	pɐn33	1		
+81	品	ban5?	pɐn21	?	1	ban5?	pɐn21		1	pɐn21	1		
+82	笨	ban6	pɐn53		0	ban6	pɐn53		0	pɐn53	1		
+83	乓	bang1	pɐŋ35		0	bang1	pɐŋ35		0	pɐŋ35	1		
+84	崩	bang1	pɐŋ35		0	bang1	pɐŋ35		0	pɐŋ35	1		
+85	繃	bang1	pɐŋ35		0	bang1	pɐŋ35		0	pɐŋ35	1		
+86	蹦	bang3?	pɐŋ33	?	1	bang3?	pɐŋ33	?	1	pɐŋ33	1		发音人对该音存疑
+87	畢	bat7	pɐt35		0	bat7	pɐt35		0	pɐt35	1		
+88	不	bat7	pɐt35		0	bat7	pɐt35		0	pɐt35	1		
+89	筆	bat7	pɐt35		0	bat7	pɐt35		0	pɐt35	1		
+90	啤	be1	pɛ35		0	be1	pɛ35		0	pɛ35	1		
+91	卑	bei1	pei35		0	bei1	pei35		0	pei35	1		
+92	碑	bei1	pei35		0	bei1	pei35		0	pei35	1		
+93	悲	bei1	pei35		0	bei1	pei35		0	pei35	1		
+94	比	bei2	pei21		0	bei2	pei21		0	pei21	1		
+95	秕	bei2	pei21		0	bei2	pei21		0	pei21	1		
+96	彼	bei2	pei21		0	bei2	pei21		0	pei21	1		
+97	匕	bei2?或bei3?	pei21或pei33	??	2	bei2?或bei3?	pei21或pei33	??	2	pei21或pei33	1		二者似皆可，发音人存疑
+98	蓖	bei3	pei33		0	bei3	pei33		0	pei33	1		
+99	庇	bei3	pei33		0	bei3	pei33		0	pei33	1		
+100	泌	bei3	pei33		0	bei3	pei33		0	pei33	1		
+101	秘	bei3	pei33		0	bei3	pei33		0	pei33	1		
+102	痹	bei3	pei33		0	bei3	pei33		0	pei33	1		
+103	臂	bei3	pei33		0	bei3	pei33		0	pei33	1		
+104	憊	bei6	pei53		0	bei6	pei53		0	pei53	1		
+105	備	bei6	pei53		0	bei6	pei53		0	pei53	1		
+106	鼻	bei6	pei53		0	bei6	pei53		0	pei53	1		
+107	避	bei6	pei53		0	bei6	pei53		0	pei53	1		
+108	冰	bing1	pɪŋ35		0	bean1	pən35		0	pɪŋ35或pən35	False		
+109	乒	bing1	pɪŋ35		0	bean1	pən35		0	pɪŋ35或pən35	False		
+110	兵	bing1	pɪŋ35		0	bean1	pən35		0	pɪŋ35或pən35	False		
+111	丙	bing2	pɪŋ21		0	bean2	pən21		0	pɪŋ21或pən21	False		
+112	秉	bing2	pɪŋ21		0	bean2	pən21		0	pɪŋ21或pən21	False		
+113	餅	bing2	pɪŋ21		0	bean2	pən21		0	pɪŋ21或pən21	False		
+114	屏	bing2或ping4	pɪŋ21或pʰɪŋ42/31		0	bean2或pean4	pən21或pʰən42/31		0	pɪŋ21或pʰɪŋ42/31或pən21或pʰən42/31	False		
+115	柄	bing3	pɪŋ33		0	bean3	pən33		0	pɪŋ33或pən33	False		
+116	並	bing3?	pɪŋ33	?	1	bean3?	pən33		1	pɪŋ33或pən33	False		
+117	併	bing3或ping3?	pɪŋ33或pʰɪŋ33	?	1	bean3或pean3?	pən33或pʰən33		1	pɪŋ33或pʰɪŋ33或pən33或pʰən33	False		发音人对该音存疑
+118	病	bing6	pɪŋ53		0	bean6	pən53		0	pɪŋ53或pən53	False		
+119	碧	bɪk7	pɪk35		0	beat7	pət35		0	pɪk35或pət35	False		
+120	逼	bɪk7	pɪk35		0	beat7	pət35		0	pɪk35或pət35	False		
+121	璧	bɪk7	pɪk35		0	beat7	pət35		0	pɪk35或pət35	False		
+122	壁	bɪk7	pɪk35		0	beat7	pət35		0	pɪk35或pət35	False		
+123	迫	bɪk7或bak9	pɪk35或pɐk53		0	beat7或bak9	pət35或pɐk53		0	pɪk35或pət35或pɐk53	False		
+124	辮	bien1？或bin1?或bin6	piɛn35或pin35或pin53	？?	2	bien1？或bin1?或bin6	piɛn35或pin35或pin53	？?	2	pin53	1		
+124	辮									piɛn35或pin35			二者似皆可，发音人存疑
+125	扁	bien2	piɛn21		0	bien2	piɛn21		0	piɛn21	1		
+126	貶	bien2？或bin2?	piɛn21或pin21	？?	2	bien2？或bin2?	piɛn21或pin21	？?	2	piɛn21或pin21	1		二者似皆可，发音人存疑
+127	邊	bin1	pin35		0	bin1	pin35		0	pin35	1		
+128	鞭	bin1	pin35		0	bin1	pin35		0	pin35	1		
+129	匾	bin2？或bien2	pin21或piɛn21	？	1	bin2？或bien2	pin21或piɛn21	？	1	piɛn21	1		
+129	匾									pin21			发音人对该音存疑
+130	變	bin3	pin33		0	bin3	pin33		0	pin33	1		
+131	便	bin6	pin53		0	bin6	pin53		0	pin53	1		
+132	辨	bin6	pin53		0	bin6	pin53		0	pin53	1		
+133	辯	bin6	pin53		0	bin6	pin53		0	pin53	1		
+134	必	bit8	pit3		0	bit8	pit3		0	pit3	1		
+135	憋	bit8	pit3		0	bit8	pit3		0	pit3	1		
+136	鱉	bit8	pit3		0	bit8	pit3		0	pit3	1		
+137	癟	bit8	pit3		0	bit8	pit3		0	pit3	1		
+138	別	bit9	pit53		0	bit9	pit53		0	pit53	1		
+139	彪	biu1	piu35		0	biu1	piu35		0	piu35	1		
+140	錶	biu1	piu35		0	biu1	piu35		0	piu35	1		
+141	標	biu1	piu35		0	biu1	piu35		0	piu35	1		
+142	膘	biu1?	piu35	?	1	biu1?	piu35	?	1	piu35	1		发音人对该音存疑
+143	表	biu2	piu21		0	biu2	piu21		0	piu21	1		
+144	波	bo1	pɔ35		0	bo1	pɔ35		0	pɔ35	1		
+145	菠	bo1	pɔ35		0	bo1	pɔ35		0	pɔ35	1		
+146	玻	bo1	pɔ35		0	bo1	pɔ35		0	pɔ35	1		
+147	簸	bo2?或bo3?	pɔ21或pɔ33	??	2	bo2?或bo3?	pɔ21或pɔ33	??	2	pɔ21或pɔ33	1		二者似皆可，发音人存疑
+148	播	bo3	pɔ33		0	bo3	pɔ33		0	pɔ33	1		
+149	駁	bok8	pɔk3		0	bok8	pɔk3		0	pɔk3	1		
+150	縛	bok8?或bok7?	pɔk3或pɔk35	??	2	bok8?或bok7?	pɔk3或pɔk35	??	2	pɔk3或pɔk35	1		二者似皆可，发音人存疑
+151	邦	bong1	pᵘɔŋ35		0	bong1	pᵘɔŋ35		0	pᵘɔŋ35	1		
+152	梆	bong1	pᵘɔŋ35		0	bong1	pᵘɔŋ35		0	pᵘɔŋ35	1		
+153	綁	bong2	pᵘɔŋ21		0	bong2	pᵘɔŋ21		0	pᵘɔŋ21	1		
+154	謗	bong3?或pong3?	pᵘɔŋ33或pʰᵘɔŋ33	??	2	bong3?或pong3?	pᵘɔŋ33或pʰᵘɔŋ33	??	2	pᵘɔŋ33或pʰᵘɔŋ33	1		二者似皆可，发音人存疑
+155	褒	bou1	pou35		0	bou1	pou35		0	pou35	1		
+156	保	bou2	pou21		0	bou2	pou21		0	pou21	1		
+157	堡	bou2	pou21		0	bou2	pou21		0	pou21	1		
+158	寶	bou2	pou21		0	bou2	pou21		0	pou21	1		
+159	補	bou2	pou21		0	bou2	pou21		0	pou21	1		
+160	布	bou3	pou33		0	bou3	pou33		0	pou33	1		
+161	怖	bou3	pou33		0	bou3	pou33		0	pou33	1		
+162	報	bou3	pou33		0	bou3	pou33		0	pou33	1		
+163	暴	bou6	pou53		0	bou6	pou53		0	pou53	1		
+164	步	bou6	pou53		0	bou6	pou53		0	pou53	1		
+165	簿	bou6	pou53		0	bou6	pou53		0	pou53	1		
+166	哺	bou6	pou53		0	bou6	pou53		0	pou53	1		
+167	捕	bou6	pou53		0	bou6	pou53		0	pou53	1		
+168	埠	bou6	pou53		0	bou6	pou53		0	pou53	1		
+169	部	bou6	pou53		0	bou6	pou53		0	pou53	1		
+170	杯	bui1	pui35		0	bui1	pui35		0	pui35	1		
+171	背	bui3	pui33		0	bui3	pui33		0	pui33	1		
+172	狽	bui3	pui33		0	bui3	pui33		0	pui33	1		
+173	貝	bui3	pui33		0	bui3	pui33		0	pui33	1		
+174	輩	bui3	pui33		0	bui3	pui33		0	pui33	1		
+175	焙	bui6	pui53		0	bui6	pui53		0	pui53	1		
+176	瀑	bʊk9	pʊk53		0	bʊk9	pʊk53		0	pʊk53	1		
+177	僕	bʊk9	pʊk53		0	bʊk9	pʊk53		0	pʊk53	1		
+178	僕	bʊk9	pʊk53		0	bʊk9	pʊk53		0	pʊk53	1		
+179	浦	bʊk9或pou2	pʊk53或pʰou21		0	bʊk9或pou2	pʊk53或pʰou21		0	pʊk53或pʰou21	1		
+180	般	bun1	pun35		0	bun1	pun35		0	pun35	1		
+181	搬	bun1	pun35		0	bun1	pun35		0	pun35	1		
+182	本	bun2	pun21		0	bun2	pun21		0	pun21	1		
+183	半	bun3	pun33		0	bun3	pun33		0	pun33	1		
+184	絆	bun6	pun53		0	bun6	pun53		0	pun53	1		
+185	畔	bun6	pun53		0	bun6	pun53		0	pun53	1		
+186	拌	bun6	pun53		0	bun6	pun53		0	pun53	1		
+187	胖	bun6	pun53		0	bun6	pun53		0	pun53	1		
+188	叛	bun6	pun53		0	bun6	pun53		0	pun53	1		
+189	伴	bun6或pun5	pun53或pʰun21		0	bun6或pun5	pun53或pʰun21		0	pun53或pʰun21	1		
+190	捧	bung2	pʊŋ21		0	bung2	pʊŋ21		0	pʊŋ21	1		
+191	剝	bok7	pɔk35		0	bok7	pɔk35		0	pɔk35	1		
+192	博	bok8	pɔk3		0	bok8	pɔk3		0	pɔk3	1		
+193	搏	bok8	pɔk3		0	bok8	pɔk3		0	pɔk3	1		
+194	膊	bok8	pɔk3		0	bok8	pɔk3		0	pɔk3	1		
+195	薄	bok9	pɔk53		0	bok9	pɔk53		0	pɔk53	1		
+196	幫	bong1	pᵘɔŋ35		0	bong1	pᵘɔŋ35		0	pᵘɔŋ35	1		
+197	榜	bong2	pᵘɔŋ21		0	bong2	pᵘɔŋ21		0	pᵘɔŋ21	1		
+198	膀	bong2	pᵘɔŋ21		0	bong2	pᵘɔŋ21		0	pᵘɔŋ21	1		
+199	渤	but9	put53		0	but9	put53		0	put53	1		
+200	勃	but9	put53		0	but9	put53		0	put53	1		
+201	荸	but9	put53		0	but9	put53		0	put53	1		
+202	脖	but9	put53		0	but9	put53		0	put53	1		
+203	撥	but9或put8	put53或pʰut3		0	but9或put8	put53或pʰut3		0	put53或pʰut3	1		
+204	打	daa2	ta21		0	daa2	ta21		0	ta21	1		
+205	歹	daai2	tai21		0	daai2	tai21		0	tai21	1		
+206	帶	daai3	tai33		0	daai3	tai33		0	tai33	1		
+207	戴	daai3	tai33		0	daai3	tai33		0	tai33	1		
+208	大	daai6	tai53		0	daai6	tai53		0	tai53	1		
+209	耽	daam1	tam35		0	daam1	tam35		0	tam35	1		
+210	擔	daam1或daam3	tam35或tam33		0	daam1或daam3	tam35或tam33		0	tam35或tam33	1		
+211	膽	daam2	tam21		0	daam2	tam21		0	tam21	1		
+212	氮	daam6	tam53		0	daam6	tam53		0	tam53	1		
+213	丹	daan1	tan35		0	daan1	tan35		0	tan35	1		
+214	單	daan1或sin6或sin6	tan35或sin53或sin53		0	daan1或sin6或sin6	tan35或sin53或sin53		0	tan35或sin53或sin53	1		
+215	撣	daan2?	tan21	?	1	daan2?	tan21	?	1	tan21	1		发音人对该音存疑
+216	旦	daan3	tan33		0	daan3	tan33		0	tan33	1		
+217	誕	daan3	tan33		0	daan3	tan33		0	tan33	1		
+218	但	daan6	tan53		0	daan6	tan53		0	tan53	1		
+219	蛋	daan6	tan53		0	daan6	tan53		0	tan53	1		
+220	答	daap8	tap3		0	daap8	tap3		0	tap3	1		
+221	瘩	daap8	tap3		0	daap8	tap3		0	tap3	1		
+222	搭	daap8	tap3		0	daap8	tap3		0	tap3	1		
+223	踏	daap9	tap53		0	daap9	tap53		0	tap53	1		
+224	達	daat8	tat3		0	daat8	tat3		0	tat3	1		
+225	低	dai1	tɐi35		0	dai1	tɐi35		0	tɐi35	1		
+226	抵	dai2	tɐi21		0	dai2	tɐi21		0	tɐi21	1		
+227	底	dai2	tɐi21		0	dai2	tɐi21		0	tɐi21	1		
+228	蒂	dai3	tɐi33		0	dai3	tɐi33		0	tɐi33	1		
+229	帝	dai3	tɐi33		0	dai3	tɐi33		0	tɐi33	1		
+230	弟	dai6	tɐi53		0	dai6	tɐi53		0	tɐi53	1		
+231	第	dai6	tɐi53		0	dai6	tɐi53		0	tɐi53	1		
+232	逮	dai6	tɐi53		0	dai6	tɐi53		0	tɐi53	1		
+233	隸	dai6	tɐi53		0	dai6	tɐi53		0	tɐi53	1		
+234	遞	dai6	tɐi53		0	dai6	tɐi53		0	tɐi53	1		
+235	得	dak7	tɐk35		0	dak7	tɐk35		0	tɐk35	1		
+236	德	dak7	tɐk35		0	dak7	tɐk35		0	tɐk35	1		
+237	特	dak9	tɐk53		0	dak9	tɐk53		0	tɐk53	1		
+238	蘸	dam2?	tɐm21	?	1	dam2?	tɐm21	?	1	tɐm21	1		发音人对该音存疑
+239	噸	dan1	tɐn35		0	dan1	tɐn35		0	tɐn35	1		
+240	敦	dan1	tɐn35		0	dan1	tɐn35		0	tɐn35	1		
+241	盹	dan2	tɐn21		0	dan2	tɐn21		0	tɐn21	1		
+242	墩	dan2或dan1	tɐn21或tɐn35		0	dan2或dan1	tɐn21或tɐn35		0	tɐn21或tɐn35	1		
+243	燈	dang1	tɐŋ35		0	dang1	tɐŋ35		0	tɐŋ35	1		
+244	登	dang1	tɐŋ35		0	dang1	tɐŋ35		0	tɐŋ35	1		
+245	瞪	dang1?	tɐŋ35	?	1	dang1?	tɐŋ35	?	1	tɐŋ35	1		发音人对该音存疑
+246	蹬	dang1?	tɐŋ35	?	1	dang1?	tɐŋ35	?	1	tɐŋ35	1		发音人对该音存疑
+247	等	dang2	tɐŋ21		0	dang2	tɐŋ21		0	tɐŋ21	1		
+248	凳	dang3	tɐŋ33		0	dang3	tɐŋ33		0	tɐŋ33	1		
+249	鄧	dang6	tɐŋ53		0	dang6	tɐŋ53		0	tɐŋ53	1		
+250	凸	dat9	tɐt53		0	dat9	tɐt53		0	tɐt53	1		
+251	突	dat9	tɐt53		0	dat9	tɐt53		0	tɐt53	1		
+252	兜	dau1	tɐu35		0	dau1	tɐu35		0	tɐu35	1		
+253	蚪	dau2	tɐu21		0	dau2	tɐu21		0	tɐu21	1		
+254	抖	dau2	tɐu21		0	dau2	tɐu21		0	tɐu21	1		
+255	斗	dau2	tɐu21		0	dau2	tɐu21		0	tɐu21	1		
+256	陡	dau2	tɐu21		0	dau2	tɐu21		0	tɐu21	1		
+257	鬥	dau3	tɐu33		0	dau3	tɐu33		0	tɐu33	1		
+258	痘	dau6	tɐu53		0	dau6	tɐu53		0	tɐu53	1		
+259	豆	dau6	tɐu53		0	dau6	tɐu53		0	tɐu53	1		
+260	爹	de1	tɛ35		0	de1	tɛ35		0	tɛ35	1		
+261	地	dei6	tei53		0	dei6	tei53		0	tei53	1		
+262	丁	ding1	tɪŋ35		0	dean1	tən35		0	tɪŋ35或tən35	False		
+263	叮	ding1	tɪŋ35		0	dean1	tən35		0	tɪŋ35或tən35	False		
+264	盯	ding1	tɪŋ35		0	dean1	tən35		0	tɪŋ35或tən35	False		
+265	釘	ding1	tɪŋ35		0	dean1	tən35		0	tɪŋ35或tən35	False		
+266	頂	ding2	tɪŋ21		0	dean2	tən21		0	tɪŋ21或tən21	False		
+267	鼎	ding2	tɪŋ21		0	dean2	tən21		0	tɪŋ21或tən21	False		
+268	訂	ding6	tɪŋ53		0	dean6	tən53		0	tɪŋ53或tən53	False		
+269	錠	ding6	tɪŋ53		0	dean6	tən53		0	tɪŋ53或tən53	False		
+270	定	ding6	tɪŋ53		0	dean6	tən53		0	tɪŋ53或tən53	False		
+271	嘀	dɪk7	tɪk35		0	deat7	tət35		0	tɪk35或tət35	False		
+272	嫡	dɪk7	tɪk35		0	deat7	tət35		0	tɪk35或tət35	False		
+273	滴	dɪk7	tɪk35		0	deat7	tət35		0	tɪk35或tət35	False		
+274	的	dɪk7	tɪk35		0	deat7	tət35		0	tɪk35或tət35	False		
+275	敵	dɪk9	tɪk53		0	deat9	tət53		0	tɪk53或tət53	False		
+276	滌	dɪk9	tɪk53		0	deat9	tət53		0	tɪk53或tət53	False		
+277	笛	dɪk9	tɪk53		0	deat9	tət53		0	tɪk53或tət53	False		
+278	琢	diek8	tiɛk3		0	diek8	tiɛk3		0	tiɛk3	1		
+279	啄	diek8或dieng1	tiɛk3或tiɛŋ35		0	diek8或dieng1	tiɛk3或tiɛŋ35		0	tiɛk3或tiɛŋ35	1		
+280	諜	diep9	tiɛp53		0	diep9	tiɛp53		0	tiɛp53	1		
+281	碟	diep9	tiɛp53		0	diep9	tiɛp53		0	tiɛp53	1		
+282	蝶	diep9	tiɛp53		0	diep9	tiɛp53		0	tiɛp53	1		
+283	鳥	dieu1或nieu5	tiɛu35或niɛu21		0	dieu1或nieu5	tiɛu35或niɛu21		0	tiɛu35或niɛu21	1		
+284	點	dim2	tim21		0	dim2	tim21		0	tim21	1		
+285	碘	dim2？或din2？	tim21或tin21	？？	2	dim2？或din2？	tim21或tin21	？？	2	tim21或tin21	1		二者似皆可，发音人存疑
+286	典	dim2？或din2？	tim21或tin21	？？	2	dim2？或din2？	tim21或tin21	？？	2	tim21或tin21	1		二者似皆可，发音人存疑
+287	玷	dim3	tim33		0	dim3	tim33		0	tim33	1		
+288	惦	dim3	tim33		0	dim3	tim33		0	tim33	1		
+289	店	dim3	tim33		0	dim3	tim33		0	tim33	1		
+290	掂	dim3或dim6	tim33或tim53		0	dim3或dim6	tim33或tim53		0	tim33或tim53	1		
+291	顛	din1	tin35		0	din1	tin35		0	tin35	1		
+292	甸	din1?	tin35	?	1	din1?	tin35	?	1	tin35	1		发音人对该音存疑
+293	墊	din3	tin33		0	din3	tin33		0	tin33	1		
+294	奠	din6	tin53		0	din6	tin53		0	tin53	1		
+295	澱	din6	tin53		0	din6	tin53		0	tin53	1		
+296	殿	din6	tin53		0	din6	tin53		0	tin53	1		
+297	電	din6	tin53		0	din6	tin53		0	tin53	1		
+298	跌	dit8	tit3		0	dit8	tit3		0	tit3	1		
+299	秩	dit9	tit53		0	dit9	tit53		0	tit53	1		
+300	刁	diu1	tiu35		0	diu1	tiu35		0	tiu35	1		
+301	叼	diu1	tiu35		0	diu1	tiu35		0	tiu35	1		
+302	丟	diu1	tiu35		0	diu1	tiu35		0	tiu35	1		
+303	碉	diu1	tiu35		0	diu1	tiu35		0	tiu35	1		
+304	雕	diu1	tiu35		0	diu1	tiu35		0	tiu35	1		
+305	釣	diu3	tiu33		0	diu3	tiu33		0	tiu33	1		
+306	吊	diu3或dieu3	tiu33或tiɛu33		0	diu3或dieu3	tiu33或tiɛu33		0	tiu33或tiɛu33	1		
+307	掉	diu6	tiu53		0	diu6	tiu53		0	tiu53	1		
+308	調	diu6或tiu4	tiu53或tʰiu42/31		0	diu6或tiu4	tiu53或tʰiu42/31		0	tiu53或tʰiu42/31	1		
+309	多	do1	tɔ35		0	do1	tɔ35		0	tɔ35	1		
+310	哆	do1或tsi2	tɔ35或ʦʰi21		0	do1或tsi2	tɔ35或ʦʰi21		0	tɔ35或ʦʰi21	1		
+311	垛	do2	tɔ21		0	do2	tɔ21		0	tɔ21	1		
+312	朵	do2	tɔ21		0	do2	tɔ21		0	tɔ21	1		
+313	躲	do2	tɔ21		0	do2	tɔ21		0	tɔ21	1		
+314	跺	do2?	tɔ21	?	1	do2?	tɔ21	?	1	tɔ21	1		发音人对该音存疑
+315	惰	do6	tɔ53		0	do6	tɔ53		0	tɔ53	1		
+316	墮	do6	tɔ53		0	do6	tɔ53		0	tɔ53	1		
+317	刀	dou1	tou35		0	dou1	tou35		0	tou35	1		
+318	叨	dou1	tou35		0	dou1	tou35		0	tou35	1		
+319	都	dou1	tou35		0	dou1	tou35		0	tou35	1		
+320	搗	dou2	tou21		0	dou2	tou21		0	tou21	1		
+321	島	dou2	tou21		0	dou2	tou21		0	tou21	1		
+322	倒	dou2	tou21		0	dou2	tou21		0	tou21	1		
+323	睹	dou2	tou21		0	dou2	tou21		0	tou21	1		
+324	堵	dou2	tou21		0	dou2	tou21		0	tou21	1		
+325	賭	dou2	tou21		0	dou2	tou21		0	tou21	1		
+326	禱	dou2?或tou2?	tou21或tʰou21	??	2	dou2?或tou2?	tou21或tʰou21	??	2	tou21或tʰou21	1		二者似皆可，发音人存疑
+327	到	dou3	tou33		0	dou3	tou33		0	tou33	1		
+328	盜	dou6	tou53		0	dou6	tou53		0	tou53	1		
+329	逗	dou6	tou53		0	dou6	tou53		0	tou53	1		
+330	鍍	dou6	tou53		0	dou6	tou53		0	tou53	1		
+331	度	dou6	tou53		0	dou6	tou53		0	tou53	1		
+332	渡	dou6	tou53		0	dou6	tou53		0	tou53	1		
+333	妒	dou6	tou53		0	dou6	tou53		0	tou53	1		
+334	導	dou6	tou53		0	dou6	tou53		0	tou53	1		
+335	道	dou6	tou53		0	dou6	tou53		0	tou53	1		
+336	杜	dou6	tou53		0	dou6	tou53		0	tou53	1		
+337	稻	dou6	tou53		0	dou6	tou53		0	tou53	1		
+338	蹈	dou6	tou53		0	dou6	tou53		0	tou53	1		
+339	悼	dou6?	tou53	?	1	dou6?	tou53	?	1	tou53	1		发音人对该音存疑
+340	堆	dui1	tui35		0	dui1	tui35		0	tui35	1		
+341	兌	dui3	tui33		0	dui3	tui33		0	tui33	1		
+342	對	dui3	tui33		0	dui3	tui33		0	tui33	1		
+343	隊	dui6	tui53		0	dui6	tui53		0	tui53	1		
+344	督	dʊk7	tʊk35		0	dʊk7	tʊk35		0	tʊk35	1		
+345	牘	dʊk9	tʊk53		0	dʊk9	tʊk53		0	tʊk53	1		
+346	讀	dʊk9	tʊk53		0	dʊk9	tʊk53		0	tʊk53	1		
+347	獨	dʊk9	tʊk53		0	dʊk9	tʊk53		0	tʊk53	1		
+348	毒	dʊk9或dou6	tʊk53或tou53		0	dʊk9或dou6	tʊk53或tou53		0	tʊk53或tou53	1		
+349	端	dun1	tun35		0	dun1	tun35		0	tun35	1		
+350	短	dun2	tun21		0	dun2	tun21		0	tun21	1		
+351	段	dun6	tun53		0	dun6	tun53		0	tun53	1		
+352	緞	dun6	tun53		0	dun6	tun53		0	tun53	1		
+353	鍛	dun6	tun53		0	dun6	tun53		0	tun53	1		
+354	頓	dun6	tun53		0	dun6	tun53		0	tun53	1		
+355	冬	dung1	tʊŋ35		0	dung1	tʊŋ35		0	tʊŋ35	1		
+356	東	dung1	tʊŋ35		0	dung1	tʊŋ35		0	tʊŋ35	1		
+357	董	dung2	tʊŋ21		0	dung2	tʊŋ21		0	tʊŋ21	1		
+358	懂	dung2	tʊŋ21		0	dung2	tʊŋ21		0	tʊŋ21	1		
+359	凍	dung3	tʊŋ33		0	dung3	tʊŋ33		0	tʊŋ33	1		
+360	棟	dung3	tʊŋ33		0	dung3	tʊŋ33		0	tʊŋ33	1		
+361	洞	dung6	tʊŋ53		0	dung6	tʊŋ53		0	tʊŋ53	1		
+362	幢	dung6	tʊŋ53		0	dung6	tʊŋ53		0	tʊŋ53	1		
+363	動	dung6	tʊŋ53		0	dung6	tʊŋ53		0	tʊŋ53	1		
+364	待	doi6	tɔi53		0	doi6	tɔi53		0	tɔi53	1		
+365	怠	doi6	tɔi53		0	doi6	tɔi53		0	tɔi53	1		
+366	袋	doi6	tɔi53		0	doi6	tɔi53		0	tɔi53	1		
+367	代	doi6	tɔi53		0	doi6	tɔi53		0	tɔi53	1		
+368	踱	dok9	tɔk53		0	dok9	tɔk53		0	tɔk53	1		
+369	當	dong1	tᵘɔŋ35		0	dong1	tᵘɔŋ35		0	tᵘɔŋ35	1		
+370	鐺	dong1?	tᵘɔŋ35	?	1	dong1?	tᵘɔŋ35	?	1	tᵘɔŋ35	1		发音人对该音存疑
+371	擋	dong2	tᵘɔŋ21		0	dong2	tᵘɔŋ21		0	tᵘɔŋ21	1		
+372	檔	dong3	tᵘɔŋ33		0	dong3	tᵘɔŋ33		0	tᵘɔŋ33	1		
+373	黨	dong5	tᵘɔŋ21		0	dong5	tᵘɔŋ21		0	tᵘɔŋ21	1		
+374	蕩	dong6	tᵘɔŋ53		0	dong6	tᵘɔŋ53		0	tᵘɔŋ53	1		
+375	奪	dut9	tut53		0	dut9	tut53		0	tut53	1		
+376	花	faa1	fa35		0	faa1	fa35		0	fa35	1		
+377	化	faa3	fa33		0	faa3	fa33		0	fa33	1		
+378	塊	faai3	fai33		0	faai3	fai33		0	fai33	1		
+379	快	faai3	fai33		0	faai3	fai33		0	fai33	1		
+380	傀	faai3?	fai33	?	1	faai3?	fai33	?	1	fai33	1		发音人对该音存疑
+381	翻	faan1	fan35		0	faan1	fan35		0	fan35	1		
+382	反	faan2	fan21		0	faan2	fan21		0	fan21	1		
+383	返	faan2	fan21		0	faan2	fan21		0	fan21	1		
+384	販	faan3	fan33		0	faan3	fan33		0	fan33	1		
+385	凡	faan4	fan42/31		0	faan4	fan42/31		0	fan42/31	1		
+386	帆	faan4	fan42/31		0	faan4	fan42/31		0	fan42/31	1		
+387	煩	faan4	fan42/31		0	faan4	fan42/31		0	fan42/31	1		
+388	繁	faan4	fan42/31		0	faan4	fan42/31		0	fan42/31	1		
+389	礬	faan4?	fan42/31	?	1	faan4?	fan42/31	?	1	fan42/31	1		发音人对该音存疑
+390	樊	faan4?	fan42/31	?	1	faan4?	fan42/31	?	1	fan42/31	1		发音人对该音存疑
+391	泛	faan6	fan53		0	faan6	fan53		0	fan53	1		
+392	飯	faan6	fan53		0	faan6	fan53		0	fan53	1		
+393	犯	faan6	fan53		0	faan6	fan53		0	fan53	1		
+394	範	faan6	fan53		0	faan6	fan53		0	fan53	1		
+395	范	faan6	fan53		0	faan6	fan53		0	fan53	1		
+396	髮	faat8	fat3		0	faat8	fat3		0	fat3	1		
+397	發	faat8	fat3		0	faat8	fat3		0	fat3	1		
+398	法	faat8	fat3		0	faat8	fat3		0	fat3	1		
+399	灋	faat8	fat3		0	faat8	fat3		0	fat3	1		
+400	乏	faat9	fat53		0	faat9	fat53		0	fat53	1		
+401	筏	faat9	fat53		0	faat9	fat53		0	fat53	1		
+402	伐	faat9	fat53		0	faat9	fat53		0	fat53	1		
+403	閥	faat9	fat53		0	faat9	fat53		0	fat53	1		
+404	罰	faat9	fat53		0	faat9	fat53		0	fat53	1		
+405	徽	fai1	fɐi35		0	fai1	fɐi35		0	fɐi35	1		
+406	揮	fai1	fɐi35		0	fai1	fɐi35		0	fɐi35	1		
+407	輝	fai1	fɐi35		0	fai1	fɐi35		0	fɐi35	1		
+408	毀	fai2	fɐi21		0	fai2	fɐi21		0	fɐi21	1		
+409	廢	fai3	fɐi33		0	fai3	fɐi33		0	fɐi33	1		
+410	肺	fai3	fɐi33		0	fai3	fɐi33		0	fɐi33	1		
+411	費	fai3	fɐi33		0	fai3	fɐi33		0	fɐi33	1		
+412	吠	fai6	fɐi53		0	fai6	fɐi53		0	fɐi53	1		
+413	氛	fan1	fɐn35		0	fan1	fɐn35		0	fɐn35	1		
+414	芬	fan1	fɐn35		0	fan1	fɐn35		0	fɐn35	1		
+415	吩	fan1	fɐn35		0	fan1	fɐn35		0	fɐn35	1		
+416	紛	fan1	fɐn35		0	fan1	fɐn35		0	fɐn35	1		
+417	昏	fan1	fɐn35		0	fan1	fɐn35		0	fɐn35	1		
+418	婚	fan1	fɐn35		0	fan1	fɐn35		0	fɐn35	1		
+419	葷	fan1	fɐn35		0	fan1	fɐn35		0	fɐn35	1		
+420	勳	fan1	fɐn35		0	fan1	fɐn35		0	fɐn35	1		
+421	熏	fan1	fɐn35		0	fan1	fɐn35		0	fɐn35	1		
+422	分	fan1或fan6	fɐn35或fɐn53		0	fan1或fan6	fɐn35或fɐn53		0	fɐn35或fɐn53	1		
+423	粉	fan2	fɐn21		0	fan2	fɐn21		0	fɐn21	1		
+424	訓	fan3	fɐn33		0	fan3	fɐn33		0	fɐn33	1		
+425	糞	fan3	fɐn33		0	fan3	fɐn33		0	fɐn33	1		
+426	墳	fan4	fɐn42/31		0	fan4	fɐn42/31		0	fɐn42/31	1		
+427	焚	fan4	fɐn42/31		0	fan4	fɐn42/31		0	fɐn42/31	1		
+428	憤	fan5	fɐn21		0	fan5	fɐn21		0	fɐn21	1		
+429	奮	fan5	fɐn21		0	fan5	fɐn21		0	fɐn21	1		
+430	忿	fan6	fɐn53		0	fan6	fɐn53		0	fɐn53	1		
+431	份	fan6	fɐn53		0	fan6	fɐn53		0	fɐn53	1		
+432	宏	fang4	fɐŋ42/31		0	fang4	fɐŋ42/31		0	fɐŋ42/31	1		
+433	忽	fat7	fɐt35		0	fat7	fɐt35		0	fɐt35	1		
+434	佛	fat9	fɐt53		0	fat9	fɐt53		0	fɐt53	1		
+435	沸	fat9或fai3	fɐt53或fɐi33		0	fat9或fai3	fɐt53或fɐi33		0	fɐt53或fɐi33	1		
+436	拂	fat9或pat9	fɐt53或pʰɐt53		0	fat9或pat9	fɐt53或pʰɐt53		0	fɐt53或pʰɐt53	1		
+437	否	fau2	fɐu21		0	fau2	fɐu21		0	fɐu21	1		
+438	浮	fau4或pou4	fɐu42/31或pʰou42/31		0	fau4或pou4	fɐu42/31或pʰou42/31		0	fɐu42/31或pʰou42/31	1		
+439	菲	fei1	fei35		0	fei1	fei35		0	fei35	1		
+440	非	fei1	fei35		0	fei1	fei35		0	fei35	1		
+441	飛	fei1	fei35		0	fei1	fei35		0	fei35	1		
+442	誹	fei1?	fei35	?	1	fei1?	fei35	?	1	fei35	1		发音人对该音存疑
+443	啡	fei1或fe1	fei35或fɛ35		0	fei1或fe1	fei35或fɛ35		0	fei35或fɛ35	1		
+444	匪	fei2?	fei21	?	1	fei2?	fei21	?	1	fei21	1		发音人对该音存疑
+445	肥	fei4	fei42/31		0	fei4	fei42/31		0	fei42/31	1		
+446	科	fo1	fɔ35		0	fo1	fɔ35		0	fɔ35	1		
+447	夥	fo2	fɔ21		0	fo2	fɔ21		0	fɔ21	1		
+448	火	fo2	fɔ21		0	fo2	fɔ21		0	fɔ21	1		
+449	貨	fo3	fɔ33		0	fo3	fɔ33		0	fɔ33	1		
+450	霍	fok8或kok8?	fɔk3或kʰɔk3	?	1	fok8或kok8?	fɔk3或kʰɔk3	?	1	fɔk3	1		
+450	霍									kʰɔk3			发音人对该音存疑
+451	幌	fong2?	fᵘɔŋ21	?	1	fong2?	fᵘɔŋ21	?	1	fᵘɔŋ21	1		发音人对该音存疑
+452	晃	fong2?	fᵘɔŋ21	?	1	fong2?	fᵘɔŋ21	?	1	fᵘɔŋ21	1		发音人对该音存疑
+453	恍	fong2?	fᵘɔŋ21	?	1	fong2?	fᵘɔŋ21	?	1	fᵘɔŋ21	1		发音人对该音存疑
+454	夫	fu1	fu35		0	fu1	fu35		0	fu35	1		
+455	膚	fu1	fu35		0	fu1	fu35		0	fu35	1		
+456	俘	fu1	fu35		0	fu1	fu35		0	fu35	1		
+457	敷	fu1	fu35		0	fu1	fu35		0	fu35	1		
+458	呼	fu1	fu35		0	fu1	fu35		0	fu35	1		
+459	麩	fu1？	fu35	？	1	fu1？	fu35	？	1	fu35	1		发音人对该音存疑
+460	孵	fu1或bou6？	fu35或pou53	？	1	fu1或bou6？	fu35或pou53		1	fu35	1		
+460	孵									pou53			白读
+461	甫	fu2	fu21		0	fu2	fu21		0	fu21	1		
+462	圃	fu2	fu21		0	fu2	fu21		0	fu21	1		
+463	府	fu2	fu21		0	fu2	fu21		0	fu21	1		
+464	俯	fu2	fu21		0	fu2	fu21		0	fu21	1		
+465	苦	fu2	fu21		0	fu2	fu21		0	fu21	1		
+466	虎	fu2	fu21		0	fu2	fu21		0	fu21	1		
+467	斧	fu2或pou2	fu21或pʰou21		0	fu2或pou2	fu21或pʰou21		0	fu21或pʰou21	1		
+468	脯	fu2或pou2?	fu21或pʰou21	?	1	fu2或pou2?	fu21或pʰou21	?	1	fu21	1		
+468	脯									pʰou21			发音人对该音存疑
+469	副	fu3	fu33		0	fu3	fu33		0	fu33	1		
+470	富	fu3	fu33		0	fu3	fu33		0	fu33	1		
+471	庫	fu3	fu33		0	fu3	fu33		0	fu33	1		
+472	褲	fu3	fu33		0	fu3	fu33		0	fu33	1		
+473	賦	fu3	fu33		0	fu3	fu33		0	fu33	1		
+474	芙	fu4	fu42/31		0	fu4	fu42/31		0	fu42/31	1		
+475	扶	fu4	fu42/31		0	fu4	fu42/31		0	fu42/31	1		
+476	符	fu4	fu42/31		0	fu4	fu42/31		0	fu42/31	1		
+477	乎	fu4	fu42/31		0	fu4	fu42/31		0	fu42/31	1		
+478	鳧	fu4?	fu42/31	?	1	fu4?	fu42/31	?	1	fu42/31	1		发音人对该音存疑
+479	婦	fu5	fu21		0	fu5	fu21		0	fu21	1		
+480	赴	fu6	fu53		0	fu6	fu53		0	fu53	1		
+481	付	fu6	fu53		0	fu6	fu53		0	fu53	1		
+482	傅	fu6	fu53		0	fu6	fu53		0	fu53	1		
+483	輔	fu6	fu53		0	fu6	fu53		0	fu53	1		
+484	父	fu6	fu53		0	fu6	fu53		0	fu53	1		
+485	附	fu6	fu53		0	fu6	fu53		0	fu53	1		
+486	咐	fu6	fu53		0	fu6	fu53		0	fu53	1		
+487	腐	fu6	fu53		0	fu6	fu53		0	fu53	1		
+488	負	fu6	fu53		0	fu6	fu53		0	fu53	1		
+489	魁	fui1	fui35		0	fui1	fui35		0	fui35	1		
+490	灰	fui1	fui35		0	fui1	fui35		0	fui35	1		
+491	恢	fui1	fui35		0	fui1	fui35		0	fui35	1		
+492	誨	fui3	fui33		0	fui3	fui33		0	fui33	1		
+493	晦	fui3	fui33		0	fui3	fui33		0	fui33	1		
+494	悔	fui3	fui33		0	fui3	fui33		0	fui33	1		
+495	輻	fʊk7	fʊk35		0	fʊk7	fʊk35		0	fʊk35	1		
+496	蝠	fʊk7	fʊk35		0	fʊk7	fʊk35		0	fʊk35	1		
+497	幅	fʊk7	fʊk35		0	fʊk7	fʊk35		0	fʊk35	1		
+498	福	fʊk7	fʊk35		0	fʊk7	fʊk35		0	fʊk35	1		
+499	腹	fʊk7	fʊk35		0	fʊk7	fʊk35		0	fʊk35	1		
+500	複	fʊk7	fʊk35		0	fʊk7	fʊk35		0	fʊk35	1		
+501	覆	fʊk7或mʊk7	fʊk35或mʊk35		0	fʊk7或mʊk7	fʊk35或mʊk35		0	fʊk35或mʊk35	1		
+502	服	fʊk9	fʊk53		0	fʊk9	fʊk53		0	fʊk53	1		
+503	袱	fʊk9	fʊk53		0	fʊk9	fʊk53		0	fʊk53	1		
+504	復	fʊk9	fʊk53		0	fʊk9	fʊk53		0	fʊk53	1		
+505	伏	fʊk9或pʊk7	fʊk53或pʰʊk35		0	fʊk9或pʊk7	fʊk53或pʰʊk35		0	fʊk53或pʰʊk35	1		
+506	歡	fun1	fun35		0	fun1	fun35		0	fun35	1		
+507	寬	fun1	fun35		0	fun1	fun35		0	fun35	1		
+508	款	fun2	fun21		0	fun2	fun21		0	fun21	1		
+509	緩	fun6	fun53		0	fun6	fun53		0	fun53	1		
+510	豐	fung1	fʊŋ35		0	fung1	fʊŋ35		0	fʊŋ35	1		
+511	封	fung1	fʊŋ35		0	fung1	fʊŋ35		0	fʊŋ35	1		
+512	楓	fung1	fʊŋ35		0	fung1	fʊŋ35		0	fʊŋ35	1		
+513	風	fung1	fʊŋ35		0	fung1	fʊŋ35		0	fʊŋ35	1		
+514	瘋	fung1	fʊŋ35		0	fung1	fʊŋ35		0	fʊŋ35	1		
+515	峰	fung1	fʊŋ35		0	fung1	fʊŋ35		0	fʊŋ35	1		
+516	鋒	fung1	fʊŋ35		0	fung1	fʊŋ35		0	fʊŋ35	1		
+517	蜂	fung1	fʊŋ35		0	fung1	fʊŋ35		0	fʊŋ35	1		
+518	棒	fung2	fʊŋ21		0	fung2	fʊŋ21		0	fʊŋ21	1		
+519	諷	fung3或fung1?	fʊŋ33或fʊŋ35	?	1	fung3或fung1?	fʊŋ33或fʊŋ35	?	1	fʊŋ33	1		
+519	諷									fʊŋ35			发音人对该音存疑
+520	逢	fung4	fʊŋ42/31		0	fung4	fʊŋ42/31		0	fʊŋ42/31	1		
+521	縫	fung4	fʊŋ42/31		0	fung4	fʊŋ42/31		0	fʊŋ42/31	1		
+522	馮	fung4	fʊŋ42/31		0	fung4	fʊŋ42/31		0	fʊŋ42/31	1		
+523	奉	fung6	fʊŋ53		0	fung6	fʊŋ53		0	fʊŋ53	1		
+524	鳳	fung6	fʊŋ53		0	fung6	fʊŋ53		0	fʊŋ53	1		
+525	肪	fong1	fᵘɔŋ35		0	fong1	fᵘɔŋ35		0	fᵘɔŋ35	1		
+526	方	fong1	fᵘɔŋ35		0	fong1	fᵘɔŋ35		0	fᵘɔŋ35	1		
+527	坊	fong1	fᵘɔŋ35		0	fong1	fᵘɔŋ35		0	fᵘɔŋ35	1		
+528	芳	fong1	fᵘɔŋ35		0	fong1	fᵘɔŋ35		0	fᵘɔŋ35	1		
+529	仿	fong2	fᵘɔŋ21		0	fong2	fᵘɔŋ21		0	fᵘɔŋ21	1		
+530	訪	fong2	fᵘɔŋ21		0	fong2	fᵘɔŋ21		0	fᵘɔŋ21	1		
+531	紡	fong2	fᵘɔŋ21		0	fong2	fᵘɔŋ21		0	fᵘɔŋ21	1		
+532	放	fong3	fᵘɔŋ33		0	fong3	fᵘɔŋ33		0	fᵘɔŋ33	1		
+533	防	fong4	fᵘɔŋ42/31		0	fong4	fᵘɔŋ42/31		0	fᵘɔŋ42/31	1		
+534	妨	fong4	fᵘɔŋ42/31		0	fong4	fᵘɔŋ42/31		0	fᵘɔŋ42/31	1		
+535	房	fong4	fᵘɔŋ42/31		0	fong4	fᵘɔŋ42/31		0	fᵘɔŋ42/31	1		
+536	闊	fut8	fut3		0	fut8	fut3		0	fut3	1		
+537	瓜	gaa1	ka35		0	gaa1	ka35		0	ka35	1		
+538	枷	gaa1	ka35		0	gaa1	ka35		0	ka35	1		
+539	加	gaa1	ka35		0	gaa1	ka35		0	ka35	1		
+540	嘉	gaa1	ka35		0	gaa1	ka35		0	ka35	1		
+541	家	gaa1	ka35		0	gaa1	ka35		0	ka35	1		
+542	咖	gaa1？或kaa1?	ka35或kʰa35	？?	2	gaa1？或kaa1?	ka35或kʰa35	？?	2	ka35或kʰa35	1		二者似皆可，发音人存疑
+543	寡	gaa2	ka21		0	gaa2	ka21		0	ka21	1		
+544	假	gaa2	ka21		0	gaa2	ka21		0	ka21	1		
+545	賈	gaa2	ka21		0	gaa2	ka21		0	ka21	1		
+546	卦	gaa3	ka33		0	gaa3	ka33		0	ka33	1		
+547	駕	gaa3	ka33		0	gaa3	ka33		0	ka33	1		
+548	架	gaa3	ka33		0	gaa3	ka33		0	ka33	1		
+549	嫁	gaa3	ka33		0	gaa3	ka33		0	ka33	1		
+550	稼	gaa3	ka33		0	gaa3	ka33		0	ka33	1		
+551	價	gaa3	ka33		0	gaa3	ka33		0	ka33	1		
+552	乖	gaai1	kai35		0	gaai1	kai35		0	kai35	1		
+553	佳	gaai1	kai35		0	gaai1	kai35		0	kai35	1		
+554	街	gaai1	kai35		0	gaai1	kai35		0	kai35	1		
+555	階	gaai1	kai35		0	gaai1	kai35		0	kai35	1		
+556	皆	gaai1	kai35		0	gaai1	kai35		0	kai35	1		
+557	拐	gaai2	kai21		0	gaai2	kai21		0	kai21	1		
+558	解	gaai2或gai2？	kai21或kɐi21	？	1	gaai2或gai2？	kai21或kɐi21	？	1	kai21	1		
+558	解									kɐi21			发音人对该音存疑
+559	芥	gaai3	kai33		0	gaai3	kai33		0	kai33	1		
+560	介	gaai3	kai33		0	gaai3	kai33		0	kai33	1		
+561	界	gaai3	kai33		0	gaai3	kai33		0	kai33	1		
+562	戒	gaai3	kai33		0	gaai3	kai33		0	kai33	1		
+563	屆	gaai3	kai33		0	gaai3	kai33		0	kai33	1		
+564	怪	gaai3	kai33		0	gaai3	kai33		0	kai33	1		
+565	監	gaam1	kam35		0	gaam1	kam35		0	kam35	1		
+566	橄	gaam2	kam21		0	gaam2	kam21		0	kam21	1		
+567	感	gaam2	kam21		0	gaam2	kam21		0	kam21	1		
+568	鑒	gaam3	kam33		0	gaam3	kam33		0	kam33	1		
+569	減	gaam6	kam53		0	gaam6	kam53		0	kam53	1		
+570	奸	gaan1	kan35		0	gaan1	kan35		0	kan35	1		
+571	艱	gaan1	kan35		0	gaan1	kan35		0	kan35	1		
+572	關	gaan1	kan35		0	gaan1	kan35		0	kan35	1		
+573	簡	gaan2	kan21		0	gaan2	kan21		0	kan21	1		
+574	揀	gaan2	kan21		0	gaan2	kan21		0	kan21	1		
+575	柬	gaan2	kan21		0	gaan2	kan21		0	kan21	1		
+576	繭	gaan2	kan21		0	gaan2	kan21		0	kan21	1		
+577	慣	gaan3	kan33		0	gaan3	kan33		0	kan33	1		
+578	澗	gaan3	kan33		0	gaan3	kan33		0	kan33	1		
+579	間	gaan3	kan33		0	gaan3	kan33		0	kan33	1		
+580	鴿	gaap8	kap3		0	gaap8	kap3		0	kap3	1		
+581	莢	gaap8	kap3		0	gaap8	kap3		0	kap3	1		
+582	頰	gaap8	kap3		0	gaap8	kap3		0	kap3	1		
+583	鉀	gaap8	kap3		0	gaap8	kap3		0	kap3	1		
+584	甲	gaap8	kap3		0	gaap8	kap3		0	kap3	1		
+585	夾	gaap8或gaap9	kap3或kap53		0	gaap8或gaap9	kap3或kap53		0	kap3或kap53	1		
+586	刮	gaat8	kat3		0	gaat8	kat3		0	kat3	1		
+587	颳	gaat8	kat3		0	gaat8	kat3		0	kat3	1		
+588	交	gaau1	kau35		0	gaau1	kau35		0	kau35	1		
+589	郊	gaau1	kau35		0	gaau1	kau35		0	kau35	1		
+590	膠	gaau1	kau35		0	gaau1	kau35		0	kau35	1		
+591	搞	gaau2	kau21		0	gaau2	kau21		0	kau21	1		
+592	狡	gaau2	kau21		0	gaau2	kau21		0	kau21	1		
+593	餃	gaau2	kau21		0	gaau2	kau21		0	kau21	1		
+594	絞	gaau2	kau21		0	gaau2	kau21		0	kau21	1		
+595	攪	gaau2	kau21		0	gaau2	kau21		0	kau21	1		
+596	窖	gaau3	kau33		0	gaau3	kau33		0	kau33	1		
+597	教	gaau3	kau33		0	gaau3	kau33		0	kau33	1		
+598	較	gaau3或gau3或haau2	kau33或kɐu33或hau21		0	gaau3或gau3或haau2	kau33或kɐu33或hau21		0	kau33或kɐu33或hau21	1		
+599	閨	gai1	kɐi35		0	gai1	kɐi35		0	kɐi35	1		
+600	硅	gai1	kɐi35		0	gai1	kɐi35		0	kɐi35	1		
+601	龜	gai1	kɐi35		0	gai1	kɐi35		0	kɐi35	1		
+602	歸	gai1	kɐi35		0	gai1	kɐi35		0	kɐi35	1		
+603	雞	gai1	kɐi35		0	gai1	kɐi35		0	kɐi35	1		
+604	畦	gai1?	kɐi35	?	1	gai1?	kɐi35	?	1	kɐi35	1		发音人对该音存疑
+605	鬼	gai2	kɐi21		0	gai2	kɐi21		0	kɐi21	1		
+606	軌	gai2	kɐi21		0	gai2	kɐi21		0	kɐi21	1		
+607	詭	gai2	kɐi21		0	gai2	kɐi21		0	kɐi21	1		
+608	桂	gai3	kɐi33		0	gai3	kɐi33		0	kɐi33	1		
+609	瑰	gai3	kɐi33		0	gai3	kɐi33		0	kɐi33	1		
+610	貴	gai3	kɐi33		0	gai3	kɐi33		0	kɐi33	1		
+611	季	gai3	kɐi33		0	gai3	kɐi33		0	kɐi33	1		
+612	計	gai3	kɐi33		0	gai3	kɐi33		0	kɐi33	1		
+613	繼	gai3	kɐi33		0	gai3	kɐi33		0	kɐi33	1		
+614	櫃	gai6	kɐi53		0	gai6	kɐi53		0	kɐi53	1		
+615	跪	gai6	kɐi53		0	gai6	kɐi53		0	kɐi53	1		
+616	革	gak7	kɐk35		0	gak7	kɐk35		0	kɐk35	1		
+617	隔	gak7	kɐk35		0	gak7	kɐk35		0	kɐk35	1		
+618	格	gak7	kɐk35		0	gak7	kɐk35		0	kɐk35	1		
+619	胳	gak7?	kɐk35	?	1	gak7?	kɐk35	?	1	kɐk35	1		发音人对该音存疑
+620	柑	gam1	kɐm35		0	gam1	kɐm35		0	kɐm35	1		
+621	酣	gam1	kɐm35		0	gam1	kɐm35		0	kɐm35	1		
+622	甘	gam1	kɐm35		0	gam1	kɐm35		0	kɐm35	1		
+623	敢	gam2或gaam2?	kɐm21或kam21	?	1	gam2或gaam2?	kɐm21或kam21	?	1	kɐm21	1		
+623	敢									kam21			发音人对该音存疑
+624	根	gan1	kɐn35		0	gan1	kɐn35		0	kɐn35	1		
+625	跟	gan1	kɐn35		0	gan1	kɐn35		0	kɐn35	1		
+626	巾	gan1	kɐn35		0	gan1	kɐn35		0	kɐn35	1		
+627	斤	gan1	kɐn35		0	gan1	kɐn35		0	kɐn35	1		
+628	筋	gan1	kɐn35		0	gan1	kɐn35		0	kɐn35	1		
+629	君	gan1	kɐn35		0	gan1	kɐn35		0	kɐn35	1		
+630	軍	gan1	kɐn35		0	gan1	kɐn35		0	kɐn35	1		
+631	緊	gan2	kɐn21		0	gan2	kɐn21		0	kɐn21	1		
+632	滾	gan2	kɐn21		0	gan2	kɐn21		0	kɐn21	1		
+633	僅	gan2	kɐn21		0	gan2	kɐn21		0	kɐn21	1		
+634	謹	gan2	kɐn21		0	gan2	kɐn21		0	kɐn21	1		
+635	棍	gan3	kɐn33		0	gan3	kɐn33		0	kɐn33	1		
+636	羹	gang1	kɐŋ35		0	gang1	kɐŋ35		0	kɐŋ35	1		
+637	更	gang1	kɐŋ35		0	gang1	kɐŋ35		0	kɐŋ35	1		
+638	耕	gang1	kɐŋ35		0	gang1	kɐŋ35		0	kɐŋ35	1		
+639	轟	gang1?	kɐŋ35	?	1	gang1?	kɐŋ35	?	1	kɐŋ35	1		发音人对该音存疑
+640	埂	gang2	kɐŋ21		0	gang2	kɐŋ21		0	kɐŋ21	1		
+641	梗	gang2	kɐŋ21		0	gang2	kɐŋ21		0	kɐŋ21	1		
+642	耿	gang2	kɐŋ21		0	gang2	kɐŋ21		0	kɐŋ21	1		
+643	蛤	gap7或gaap8?	kɐp35或kap3	?	1	gap7或gaap8?	kɐp35或kap3	?	1	kɐp35	1		
+643	蛤									kap3			发音人对该音存疑
+644	骨	gat7	kɐt35		0	gat7	kɐt35		0	kɐt35	1		
+645	吉	gat7	kɐt35		0	gat7	kɐt35		0	kɐt35	1		
+646	橘	gat7	kɐt35		0	gat7	kɐt35		0	kɐt35	1		
+647	倔	gat9	kɐt53		0	gat9	kɐt53		0	kɐt53	1		
+648	掘	gat9	kɐt53		0	gat9	kɐt53		0	kɐt53	1		
+649	苟	gau2	kɐu21		0	gau2	kɐu21		0	kɐu21	1		
+650	狗	gau2	kɐu21		0	gau2	kɐu21		0	kɐu21	1		
+651	夠	gau3	kɐu33		0	gau3	kɐu33		0	kɐu33	1		
+652	居	gei1	kei35		0	gei1	kei35		0	kei35	1		
+653	飢	gei1	kei35		0	gei1	kei35		0	kei35	1		
+654	肌	gei1	kei35		0	gei1	kei35		0	kei35	1		
+655	譏	gei1	kei35		0	gei1	kei35		0	kei35	1		
+656	嘰	gei1	kei35		0	gei1	kei35		0	kei35	1		
+657	饑	gei1	kei35		0	gei1	kei35		0	kei35	1		
+658	機	gei1	kei35		0	gei1	kei35		0	kei35	1		
+659	基	gei1	kei35		0	gei1	kei35		0	kei35	1		
+660	幾	gei1或gei2	kei35或kei21		0	gei1或gei2	kei35或kei21		0	kei35或kei21	1		
+661	箕	gei1或lei1	kei35或lei35		0	gei1或lei1	kei35或lei35		0	kei35或lei35	1		
+662	紀	gei2	kei21		0	gei2	kei21		0	kei21	1		
+663	矩	gei2	kei21		0	gei2	kei21		0	kei21	1		
+664	舉	gei2	kei21		0	gei2	kei21		0	kei21	1		
+665	己	gei2或gei1	kei21或kei35		0	gei2或gei1	kei21或kei35		0	kei21或kei35	1		
+666	鋸	gei3	kei33		0	gei3	kei33		0	kei33	1		
+667	記	gei3	kei33		0	gei3	kei33		0	kei33	1		
+668	既	gei3	kei33		0	gei3	kei33		0	kei33	1		
+669	句	gei3	kei33		0	gei3	kei33		0	kei33	1		
+670	寄	gei3	kei33		0	gei3	kei33		0	kei33	1		
+671	忌	gei6	kei53		0	gei6	kei53		0	kei53	1		
+672	炬	gei6	kei53		0	gei6	kei53		0	kei53	1		
+673	巨	gei6	kei53		0	gei6	kei53		0	kei53	1		
+674	具	gei6	kei53		0	gei6	kei53		0	kei53	1		
+675	俱	gei6	kei53		0	gei6	kei53		0	kei53	1		
+676	懼	gei6	kei53		0	gei6	kei53		0	kei53	1		
+677	妓	gei6	kei53		0	gei6	kei53		0	kei53	1		
+678	技	gei6	kei53		0	gei6	kei53		0	kei53	1		
+679	經	ging1	kɪŋ35		0	gean1	kən35		0	kɪŋ35或kən35	False		
+680	京	ging1	kɪŋ35		0	gean1	kən35		0	kɪŋ35或kən35	False		
+681	驚	ging1	kɪŋ35		0	gean1	kən35		0	kɪŋ35或kən35	False		
+682	荆	ging1	kɪŋ35		0	gean1	kən35		0	kɪŋ35或kən35	False		
+683	兢	ging1	kɪŋ35		0	gean1	kən35		0	kɪŋ35或kən35	False		
+684	頸	ging2	kɪŋ21		0	gean2	kən21		0	kɪŋ21或kən21	False		
+685	景	ging2	kɪŋ21		0	gean2	kən21		0	kɪŋ21或kən21	False		
+686	境	ging2	kɪŋ21		0	gean2	kən21		0	kɪŋ21或kən21	False		
+687	警	ging2	kɪŋ21		0	gean2	kən21		0	kɪŋ21或kən21	False		
+688	鏡	ging3	kɪŋ33		0	gean3	kən33		0	kɪŋ33或kən33	False		
+689	敬	ging3	kɪŋ33		0	gean3	kən33		0	kɪŋ33或kən33	False		
+690	莖	ging3?	kɪŋ33	?	1	gean3?	kən33	?	1	kɪŋ33或kən33	False		
+691	徑	ging3?	kɪŋ33	?	1	gean3?	kən33	?	1	kɪŋ33或kən33	False		
+692	競	ging3?	kɪŋ33	?	1	gean3?	kən33	?	1	kɪŋ33或kən33	False		
+693	竟	ging3?或ging2?	kɪŋ33或kɪŋ21	??	2	gean3?或gean2?	kən33或kən21	??	2	kɪŋ33或kɪŋ21或kən33或kən21	False		二者似皆可，发音人存疑
+694	勁	ging6或ging3?	kɪŋ53或kɪŋ33	?	1	gean6或gean3?	kən53或kən33	?	1	kɪŋ53或kən53	False		
+694	勁									kɪŋ33或kən33			发音人对该音存疑
+695	棘	gɪk7	kɪk35		0	geat7	kət35		0	kɪk35或kət35	False		
+696	擊	gɪk7	kɪk35		0	geat7	kət35		0	kɪk35或kət35	False		
+697	激	gɪk7	kɪk35		0	geat7	kət35		0	kɪk35或kət35	False		
+698	極	gɪk9	kɪk53		0	geat9	kət53		0	kɪk53或kət53	False		
+699	腳	giek8	kiɛk3		0	giek8	kiɛk3		0	kiɛk3	1		
+700	今	giem1	kiɛm35		0	giem1	kiɛm35		0	kiɛm35	1		
+701	金	giem1	kiɛm35		0	giem1	kiɛm35		0	kiɛm35	1		
+702	錦	giem2	kiɛm21		0	giem2	kiɛm21		0	kiɛm21	1		
+703	韁	gieng1	kiɛŋ35		0	gieng1	kiɛŋ35		0	kiɛŋ35	1		
+704	薑	gieng1	kiɛŋ35		0	gieng1	kiɛŋ35		0	kiɛŋ35	1		
+705	僵	gieng1	kiɛŋ35		0	gieng1	kiɛŋ35		0	kiɛŋ35	1		
+706	疆	gieng1	kiɛŋ35		0	gieng1	kiɛŋ35		0	kiɛŋ35	1		
+707	姜	gieng1	kiɛŋ35		0	gieng1	kiɛŋ35		0	kiɛŋ35	1		
+708	急	giep7	kiɛp35		0	giep7	kiɛp35		0	kiɛp35	1		
+709	及	giep9	kiɛp53		0	giep9	kiɛp53		0	kiɛp53	1		
+710	鳩	gieu1?	kiɛu35	?	1	gieu1?	kiɛu35	?	1	kiɛu35	1		发音人对该音存疑
+711	九	gieu2	kiɛu21		0	gieu2	kiɛu21		0	kiɛu21	1		
+712	玖	gieu2	kiɛu21		0	gieu2	kiɛu21		0	kiɛu21	1		
+713	久	gieu2	kiɛu21		0	gieu2	kiɛu21		0	kiɛu21	1		
+714	韭	gieu2	kiɛu21		0	gieu2	kiɛu21		0	kiɛu21	1		
+715	究	gieu3	kiɛu33		0	gieu3	kiɛu33		0	kiɛu33	1		
+716	灸	gieu3	kiɛu33		0	gieu3	kiɛu33		0	kiɛu33	1		
+717	疚	gieu3	kiɛu33		0	gieu3	kiɛu33		0	kiɛu33	1		
+718	救	gieu3	kiɛu33		0	gieu3	kiɛu33		0	kiɛu33	1		
+719	舊	gieu6	kiɛu53		0	gieu6	kiɛu53		0	kiɛu53	1		
+720	兼	gim1	kim35		0	gim1	kim35		0	kim35	1		
+721	撿	gim2	kim21		0	gim2	kim21		0	kim21	1		
+722	檢	gim2	kim21		0	gim2	kim21		0	kim21	1		
+723	劍	gim3	kim33		0	gim3	kim33		0	kim33	1		
+724	儉	gim6	kim53		0	gim6	kim53		0	kim53	1		
+725	堅	gin1	kin35		0	gin1	kin35		0	kin35	1		
+726	肩	gin1	kin35		0	gin1	kin35		0	kin35	1		
+727	鵑	gin1	kin35		0	gin1	kin35		0	kin35	1		
+728	捐	gin1	kin35		0	gin1	kin35		0	kin35	1		
+729	絹	gin1?	kin35	?	1	gin1?	kin35	?	1	kin35	1		发音人对该音存疑
+730	卷	gin2或gien2	kin21或kiɛn21		0	gin2或gien2	kin21或kiɛn21		0	kin21或kiɛn21	1		
+731	捲	gin2或gien2	kin21或kiɛn21		0	gin2或gien2	kin21或kiɛn21		0	kin21或kiɛn21	1		
+732	眷	gin3	kin33		0	gin3	kin33		0	kin33	1		
+733	見	gin3	kin33		0	gin3	kin33		0	kin33	1		
+734	建	gin3	kin33		0	gin3	kin33		0	kin33	1		
+735	券	gin3或hin3？或kin3？	kin33或hin33或kʰin33	？？	2	gin3或hin3？或kin3？	kin33或hin33或kʰin33	？？	2	kin33	1		
+735	券									hin33或kʰin33			二者似皆可，发音人存疑
+736	倦	gin6	kin53		0	gin6	kin53		0	kin53	1		
+737	件	gin6	kin53		0	gin6	kin53		0	kin53	1		
+738	健	gin6	kin53		0	gin6	kin53		0	kin53	1		
+739	鍵	gin6	kin53		0	gin6	kin53		0	kin53	1		
+740	劫	gip8	kip3		0	gip8	kip3		0	kip3	1		
+741	秸	git7?	kit35	?	1	git7?	kit35	?	1	kit35	1		发音人对该音存疑
+742	結	git8	kit3		0	git8	kit3		0	kit3	1		
+743	潔	git8	kit3		0	git8	kit3		0	kit3	1		
+744	傑	git9	kit53		0	git9	kit53		0	kit53	1		
+745	嬌	giu1	kiu35		0	giu1	kiu35		0	kiu35	1		
+746	驕	giu1	kiu35		0	giu1	kiu35		0	kiu35	1		
+747	澆	giu1?	kiu35	?	1	giu1?	kiu35	?	1	kiu35	1		发音人对该音存疑
+748	繳	giu2	kiu21		0	giu2	kiu21		0	kiu21	1		
+749	矯	giu2	kiu21		0	giu2	kiu21		0	kiu21	1		
+750	糾	giu2或dau2	kiu21或tɐu21		0	giu2或dau2	kiu21或tɐu21		0	kiu21或tɐu21	1		
+751	叫	giu3	kiu33		0	giu3	kiu33		0	kiu33	1		
+752	轎	giu6	kiu53		0	giu6	kiu53		0	kiu53	1		
+753	撬	giu6或iu6	kiu53或ʔiu53		0	giu6或iu6	kiu53或ʔiu53		0	kiu53或ʔiu53	1		
+754	哥	go1	kɔ35		0	go1	kɔ35		0	kɔ35	1		
+755	歌	go1	kɔ35		0	go1	kɔ35		0	kɔ35	1		
+756	箇	go2	kɔ21		0	go2	kɔ21		0	kɔ21	1		
+757	個	go2	kɔ21		0	go2	kɔ21		0	kɔ21	1		
+758	果	go2	kɔ21		0	go2	kɔ21		0	kɔ21	1		
+759	個	go3	kɔ33		0	go3	kɔ33		0	kɔ33	1		
+760	過	go3	kɔ33		0	go3	kɔ33		0	kɔ33	1		
+761	蓋	goi3或koi3	kɔi33或kʰɔi33		0	goi3或koi3	kɔi33或kʰɔi33		0	kɔi33或kʰɔi33	1		
+762	乾	gon1或kin4	kᵘɔn35或kʰin42/31		0	gon1或kin4	kᵘɔn35或kʰin42/31		0	kᵘɔn35或kʰin42/31	1		
+763	降	gong3或hong4	kᵘɔŋ33或hᵘɔŋ42/31		0	gong3或hong4	kᵘɔŋ33或hᵘɔŋ42/31		0	kᵘɔŋ33或hᵘɔŋ42/31	1		
+764	篙	gou1	kou35		0	gou1	kou35		0	kou35	1		
+765	高	gou1	kou35		0	gou1	kou35		0	kou35	1		
+766	膏	gou1	kou35		0	gou1	kou35		0	kou35	1		
+767	羔	gou1	kou35		0	gou1	kou35		0	kou35	1		
+768	糕	gou1	kou35		0	gou1	kou35		0	kou35	1		
+769	稿	gou2	kou21		0	gou2	kou21		0	kou21	1		
+770	告	gou3	kou33		0	gou3	kou33		0	kou33	1		
+771	菇	gu1	ku35		0	gu1	ku35		0	ku35	1		
+772	姑	gu1	ku35		0	gu1	ku35		0	ku35	1		
+773	咕	gu1	ku35		0	gu1	ku35		0	ku35	1		
+774	沽	gu1	ku35		0	gu1	ku35		0	ku35	1		
+775	枯	gu1	ku35		0	gu1	ku35		0	ku35	1		
+776	辜	gu1	ku35		0	gu1	ku35		0	ku35	1		
+777	孤	gu1	ku35		0	gu1	ku35		0	ku35	1		
+778	古	gu2	ku21		0	gu2	ku21		0	ku21	1		
+779	估	gu2	ku21		0	gu2	ku21		0	ku21	1		
+780	股	gu2	ku21		0	gu2	ku21		0	ku21	1		
+781	鼓	gu2	ku21		0	gu2	ku21		0	ku21	1		
+782	固	gu3	ku33		0	gu3	ku33		0	ku33	1		
+783	故	gu3	ku33		0	gu3	ku33		0	ku33	1		
+784	雇	gu3	ku33		0	gu3	ku33		0	ku33	1		
+785	顧	gu3	ku33		0	gu3	ku33		0	ku33	1		
+786	僱	gu3	ku33		0	gu3	ku33		0	ku33	1		
+787	菊	gʊk7	kʊk35		0	gʊk7	kʊk35		0	kʊk35	1		
+788	鞠	gʊk7	kʊk35		0	gʊk7	kʊk35		0	kʊk35	1		
+789	局	gʊk9	kʊk53		0	gʊk9	kʊk53		0	kʊk53	1		
+790	管	gun1	kun35		0	gun1	kun35		0	kun35	1		
+791	棺	gun1	kun35		0	gun1	kun35		0	kun35	1		
+792	官	gun1	kun35		0	gun1	kun35		0	kun35	1		
+793	觀	gun1	kun35		0	gun1	kun35		0	kun35	1		
+794	館	gun2	kun21		0	gun2	kun21		0	kun21	1		
+795	貫	gun3	kun33		0	gun3	kun33		0	kun33	1		
+796	灌	gun3	kun33		0	gun3	kun33		0	kun33	1		
+797	罐	gun3	kun33		0	gun3	kun33		0	kun33	1		
+798	冠	gun3或gun1或gaan1	kun33或kun35或kan35		0	gun3或gun1或gaan1	kun33或kun35或kan35		0	kun33或kun35或kan35	1		
+799	工	gung1	kʊŋ35		0	gung1	kʊŋ35		0	kʊŋ35	1		
+800	功	gung1	kʊŋ35		0	gung1	kʊŋ35		0	kʊŋ35	1		
+801	攻	gung1	kʊŋ35		0	gung1	kʊŋ35		0	kʊŋ35	1		
+802	躬	gung1	kʊŋ35		0	gung1	kʊŋ35		0	kʊŋ35	1		
+803	弓	gung1	kʊŋ35		0	gung1	kʊŋ35		0	kʊŋ35	1		
+804	蚣	gung1	kʊŋ35		0	gung1	kʊŋ35		0	kʊŋ35	1		
+805	公	gung1	kʊŋ35		0	gung1	kʊŋ35		0	kʊŋ35	1		
+806	宮	gung1	kʊŋ35		0	gung1	kʊŋ35		0	kʊŋ35	1		
+807	恭	gung1	kʊŋ35		0	gung1	kʊŋ35		0	kʊŋ35	1		
+808	供	gung1或gung6	kʊŋ35或kʊŋ53		0	gung1或gung6	kʊŋ35或kʊŋ53		0	kʊŋ35或kʊŋ53	1		
+809	鞏	gung2	kʊŋ21		0	gung2	kʊŋ21		0	kʊŋ21	1		
+810	拱	gung2	kʊŋ21		0	gung2	kʊŋ21		0	kʊŋ21	1		
+811	汞	gung2|?	kʊŋ21	?	1	gung2|?	kʊŋ21	?	1	kʊŋ21	1		发音人对该音存疑
+812	貢	gung3	kʊŋ33		0	gung3	kʊŋ33		0	kʊŋ33	1		
+813	共	gung3	kʊŋ33		0	gung3	kʊŋ33		0	kʊŋ33	1		
+814	該	goi1	kɔi35		0	goi1	kɔi35		0	kɔi35	1		
+815	改	goi2	kɔi21		0	goi2	kɔi21		0	kɔi21	1		
+816	閣	gok8	kɔk3		0	gok8	kɔk3		0	kɔk3	1		
+817	擱	gok8	kɔk3		0	gok8	kɔk3		0	kɔk3	1		
+818	各	gok8	kɔk3		0	gok8	kɔk3		0	kɔk3	1		
+819	國	gok8	kɔk3		0	gok8	kɔk3		0	kɔk3	1		
+820	角	gok8	kɔk3		0	gok8	kɔk3		0	kɔk3	1		
+821	覺	gok8	kɔk3		0	gok8	kɔk3		0	kɔk3	1		
+822	郭	gok8	kɔk3		0	gok8	kɔk3		0	kɔk3	1		
+823	桿	gon1	kᵘɔn35		0	gon1	kᵘɔn35		0	kᵘɔn35	1		
+824	稈	gon1	kᵘɔn35		0	gon1	kᵘɔn35		0	kᵘɔn35	1		
+825	杆	gon1	kᵘɔn35		0	gon1	kᵘɔn35		0	kᵘɔn35	1		
+826	肝	gon1	kᵘɔn35		0	gon1	kᵘɔn35		0	kᵘɔn35	1		
+827	竿	gon1	kᵘɔn35		0	gon1	kᵘɔn35		0	kᵘɔn35	1		
+828	趕	gon2	kᵘɔn21		0	gon2	kᵘɔn21		0	kᵘɔn21	1		
+829	赶	gon2	kᵘɔn21		0	gon2	kᵘɔn21		0	kᵘɔn21	1		
+830	幹	gon3	kᵘɔn33		0	gon3	kᵘɔn33		0	kᵘɔn33	1		
+831	岡	gong1	kᵘɔŋ35		0	gong1	kᵘɔŋ35		0	kᵘɔŋ35	1		
+832	剛	gong1	kᵘɔŋ35		0	gong1	kᵘɔŋ35		0	kᵘɔŋ35	1		
+833	崗	gong1	kᵘɔŋ35		0	gong1	kᵘɔŋ35		0	kᵘɔŋ35	1		
+834	綱	gong1	kᵘɔŋ35		0	gong1	kᵘɔŋ35		0	kᵘɔŋ35	1		
+835	肛	gong1	kᵘɔŋ35		0	gong1	kᵘɔŋ35		0	kᵘɔŋ35	1		
+836	江	gong1	kᵘɔŋ35		0	gong1	kᵘɔŋ35		0	kᵘɔŋ35	1		
+837	缸	gong1	kᵘɔŋ35		0	gong1	kᵘɔŋ35		0	kᵘɔŋ35	1		
+838	講	gong1	kᵘɔŋ35		0	gong1	kᵘɔŋ35		0	kᵘɔŋ35	1		
+839	光	gong1	kᵘɔŋ35		0	gong1	kᵘɔŋ35		0	kᵘɔŋ35	1		
+840	廣	gong2	kᵘɔŋ21		0	gong2	kᵘɔŋ21		0	kᵘɔŋ21	1		
+841	港	gong2	kᵘɔŋ21		0	gong2	kᵘɔŋ21		0	kᵘɔŋ21	1		
+842	鋼	gong3	kᵘɔŋ33		0	gong3	kᵘɔŋ33		0	kᵘɔŋ33	1		
+843	槓	gong3	kᵘɔŋ33		0	gong3	kᵘɔŋ33		0	kᵘɔŋ33	1		
+844	杠	gong3	kᵘɔŋ33		0	gong3	kᵘɔŋ33		0	kᵘɔŋ33	1		
+845	割	got8	kɔt3		0	got8	kɔt3		0	kɔt3	1		
+846	葛	got8	kɔt3		0	got8	kɔt3		0	kɔt3	1		
+847	哈	haa1	ha35		0	haa1	ha35		0	ha35	1		
+848	蝦	haa1	ha35		0	haa1	ha35		0	ha35	1		
+849	暇	haa4	ha42/31		0	haa4	ha42/31		0	ha42/31	1		
+850	霞	haa4	ha42/31		0	haa4	ha42/31		0	ha42/31	1		
+851	下	haa5或haa6	ha21或ha53		0	haa5或haa6	ha21或ha53		0	ha21或ha53	1		
+852	夏	haa6	ha53		0	haa6	ha53		0	ha53	1		
+853	廈	haa6	ha53		0	haa6	ha53		0	ha53	1		
+854	揩	haai1	hai35		0	haai1	hai35		0	hai35	1		
+855	鞋	haai4	hai42/31		0	haai4	hai42/31		0	hai42/31	1		
+856	孩	haai4	hai42/31		0	haai4	hai42/31		0	hai42/31	1		
+857	諧	haai4	hai42/31		0	haai4	hai42/31		0	hai42/31	1		
+858	唉	haai4	hai42/31		0	haai4	hai42/31		0	hai42/31	1		
+859	哎	haai4	hai42/31		0	haai4	hai42/31		0	hai42/31	1		
+860	蟹	haai5	hai21		0	haai5	hai21		0	hai21	1		
+861	懈	haai6	hai53		0	haai6	hai53		0	hai53	1		
+862	誡	haai6	hai53		0	haai6	hai53		0	hai53	1		
+863	械	haai6	hai53		0	haai6	hai53		0	hai53	1		
+864	喊	haam3	ham33		0	haam3	ham33		0	ham33	1		
+865	鹹	haam4	ham42/31		0	haam4	ham42/31		0	ham42/31	1		
+866	堿	haam4	ham42/31		0	haam4	ham42/31		0	ham42/31	1		
+867	銜	haam4?	ham42/31	?	1	haam4?	ham42/31	?	1	ham42/31	1		发音人对该音存疑
+868	餡	haam6?	ham53	?	1	haam6?	ham53	?	1	ham53	1		发音人对该音存疑
+869	閑	haan4	han42/31		0	haan4	han42/31		0	han42/31	1		
+870	俠	haap9?	hap53	?	1	haap9?	hap53	?	1	hap53	1		发音人对该音存疑
+871	峽	haap9?	hap53	?	1	haap9?	hap53	?	1	hap53	1		发音人对该音存疑
+872	敲	haau1	hau35		0	haau1	hau35		0	hau35	1		
+873	吼	haau1	hau35		0	haau1	hau35		0	hau35	1		
+874	哮	haau1	hau35		0	haau1	hau35		0	hau35	1		
+875	酵	haau1或gaau3？	hau35或kau33	？	1	haau1或gaau3？	hau35或kau33	？	1	hau35	1		
+875	酵									kau33			发音人对该音存疑
+876	烤	haau1或haau2?	hau35或hau21	?	1	haau1或haau2?	hau35或hau21	?	1	hau35	1		
+876	烤									hau21			发音人对该音存疑
+877	拷	haau2	hau21		0	haau2	hau21		0	hau21	1		
+878	考	haau2	hau21		0	haau2	hau21		0	hau21	1		
+879	巧	haau2	hau21		0	haau2	hau21		0	hau21	1		
+880	孝	haau3	hau33		0	haau3	hau33		0	hau33	1		
+881	效	haau6	hau53		0	haau6	hau53		0	hau53	1		
+882	校	haau6或gaau3	hau53或kau33		0	haau6或gaau3	hau53或kau33		0	hau53或kau33	1		
+883	係	hai6	hɐi53		0	hai6	hɐi53		0	hɐi53	1		
+884	繫	hai6	hɐi53		0	hai6	hɐi53		0	hɐi53	1		
+885	系	hai6或gai1	hɐi53或kɐi35		0	hai6或gai1	hɐi53或kɐi35		0	hɐi53或kɐi35	1		
+886	客	hak7	hɐk35		0	hak7	hɐk35		0	hɐk35	1		
+887	赫	hak7	hɐk35		0	hak7	hɐk35		0	hɐk35	1		
+888	嚇	hak7	hɐk35		0	hak7	hɐk35		0	hɐk35	1		
+889	嘿	hak7	hɐk35		0	hak7	hɐk35		0	hɐk35	1		
+890	黑	hak7	hɐk35		0	hak7	hɐk35		0	hɐk35	1		
+891	砍	ham2	hɐm21		0	ham2	hɐm21		0	hɐm21	1		
+892	磕	ham2	hɐm21		0	ham2	hɐm21		0	hɐm21	1		
+893	嵌	ham3	hɐm33		0	ham3	hɐm33		0	hɐm33	1		
+894	坎	ham3或ham1	hɐm33或hɐm35		0	ham3或ham1	hɐm33或hɐm35		0	hɐm33或hɐm35	1		
+895	含	ham4	hɐm42/31		0	ham4	hɐm42/31		0	hɐm42/31	1		
+896	函	ham4或haam4?	hɐm42/31或ham42/31	?	1	ham4或haam4?	hɐm42/31或ham42/31	?	1	hɐm42/31	1		
+896	函									ham42/31			发音人对该音存疑
+897	涵	ham4或haam4?	hɐm42/31或ham42/31	?	1	ham4或haam4?	hɐm42/31或ham42/31	?	1	hɐm42/31	1		
+897	涵									ham42/31			发音人对该音存疑
+898	撼	ham6?	hɐm53	?	1	ham6?	hɐm53	?	1	hɐm53	1		发音人对该音存疑
+899	憾	ham6?	hɐm53	?	1	ham6?	hɐm53	?	1	hɐm53	1		发音人对该音存疑
+900	陷	ham6?	hɐm53	?	1	ham6?	hɐm53	?	1	hɐm53	1		发音人对该音存疑
+901	欣	han1	hɐn35		0	han1	hɐn35		0	hɐn35	1		
+902	很	han2	hɐn21		0	han2	hɐn21		0	hɐn21	1		
+903	狠	han2	hɐn21		0	han2	hɐn21		0	hɐn21	1		
+904	墾	han2	hɐn21		0	han2	hɐn21		0	hɐn21	1		
+905	懇	han2	hɐn21		0	han2	hɐn21		0	hɐn21	1		
+906	痕	han4	hɐn42/31		0	han4	hɐn42/31		0	hɐn42/31	1		
+907	恨	han6	hɐn53		0	han6	hɐn53		0	hɐn53	1		
+908	限	han6或haan6	hɐn53或han53		0	han6或haan6	hɐn53或han53		0	hɐn53或han53	1		
+909	夯	hang1	hɐŋ35		0	hang1	hɐŋ35		0	hɐŋ35	1		
+910	哼	hang1	hɐŋ35		0	hang1	hɐŋ35		0	hɐŋ35	1		
+911	坑	hang1	hɐŋ35		0	hang1	hɐŋ35		0	hɐŋ35	1		
+912	吭	hang1?	hɐŋ35	?	1	hang1?	hɐŋ35	?	1	hɐŋ35	1		发音人对该音存疑
+913	肯	hang2	hɐŋ21		0	hang2	hɐŋ21		0	hɐŋ21	1		
+914	恆	hang4	hɐŋ42/31		0	hang4	hɐŋ42/31		0	hɐŋ42/31	1		
+915	衡	hang4	hɐŋ42/31		0	hang4	hɐŋ42/31		0	hɐŋ42/31	1		
+916	行	hang4或hong4	hɐŋ42/31或hᵘɔŋ42/31		0	hang4或hong4	hɐŋ42/31或hᵘɔŋ42/31		0	hɐŋ42/31或hᵘɔŋ42/31	1		
+917	杏	hang6	hɐŋ53		0	hang6	hɐŋ53		0	hɐŋ53	1		
+918	幸	hang6	hɐŋ53		0	hang6	hɐŋ53		0	hɐŋ53	1		
+919	洽	hap7	hɐp35		0	hap7	hɐp35		0	hɐp35	1		
+920	恰	hap7	hɐp35		0	hap7	hɐp35		0	hɐp35	1		
+921	掐	hap7	hɐp35		0	hap7	hɐp35		0	hɐp35	1		
+922	合	hap9	hɐp53		0	hap9	hɐp53		0	hɐp53	1		
+923	盒	hap9	hɐp53		0	hap9	hɐp53		0	hɐp53	1		
+924	匣	hap9?	hɐp53	?	1	hap9?	hɐp53	?	1	hɐp53	1		发音人对该音存疑
+925	狹	hap9或iep9	hɐp53或ʔiɛp53		0	hap9或iep9	hɐp53或ʔiɛp53		0	hɐp53或ʔiɛp53	1		
+926	瞎	hat7	hɐt35		0	hat7	hɐt35		0	hɐt35	1		
+927	吃	hat7	hɐt35		0	hat7	hɐt35		0	hɐt35	1		
+928	乞	hat7或ngat7	hɐt35或ŋɐt35		0	hat7或ngat7	hɐt35或ŋɐt35		0	hɐt35或ŋɐt35	1		
+929	轄	hat9	hɐt53		0	hat9	hɐt53		0	hɐt53	1		
+930	口	hau2	hɐu21		0	hau2	hɐu21		0	hɐu21	1		
+931	喉	hau4	hɐu42/31		0	hau4	hɐu42/31		0	hɐu42/31	1		
+932	猴	hau4	hɐu42/31		0	hau4	hɐu42/31		0	hɐu42/31	1		
+933	候	hau4	hɐu42/31		0	hau4	hɐu42/31		0	hɐu42/31	1		
+934	侯	hau4	hɐu42/31		0	hau4	hɐu42/31		0	hɐu42/31	1		
+935	厚	hau5	hɐu21		0	hau5	hɐu21		0	hɐu21	1		
+936	后	hau6	hɐu53		0	hau6	hɐu53		0	hɐu53	1		
+937	後	hau6	hɐu53		0	hau6	hɐu53		0	hɐu53	1		
+938	靴	he1	hɛ35		0	he1	hɛ35		0	hɛ35	1		
+939	欺	hei1	hei35		0	hei1	hei35		0	hei35	1		
+940	希	hei1	hei35		0	hei1	hei35		0	hei35	1		
+941	稀	hei1	hei35		0	hei1	hei35		0	hei35	1		
+942	犧	hei1	hei35		0	hei1	hei35		0	hei35	1		
+943	嬉	hei1	hei35		0	hei1	hei35		0	hei35	1		
+944	虛	hei1	hei35		0	hei1	hei35		0	hei35	1		
+945	熙	hei1	hei35		0	hei1	hei35		0	hei35	1		
+946	許	hei2	hei21		0	hei2	hei21		0	hei21	1		
+947	起	hei2	hei21		0	hei2	hei21		0	hei21	1		
+948	豈	hei2	hei21		0	hei2	hei21		0	hei21	1		
+949	喜	hei2	hei21		0	hei2	hei21		0	hei21	1		
+950	氣	hei3	hei33		0	hei3	hei33		0	hei33	1		
+951	汽	hei3	hei33		0	hei3	hei33		0	hei33	1		
+952	器	hei3	hei33		0	hei3	hei33		0	hei33	1		
+953	去	hei3	hei33		0	hei3	hei33		0	hei33	1		
+954	戲	hei3	hei33		0	hei3	hei33		0	hei33	1		
+955	棄	hei3	hei33		0	hei3	hei33		0	hei33	1		
+956	氫	hing1	hɪŋ35		0	hean1	hən35		0	hɪŋ35或hən35	False		
+957	卿	hing1	hɪŋ35		0	hean1	hən35		0	hɪŋ35或hən35	False		
+958	輕	hing1	hɪŋ35		0	hean1	hən35		0	hɪŋ35或hən35	False		
+959	兄	hing1	hɪŋ35		0	hean1	hən35		0	hɪŋ35或hən35	False		
+960	慶	hing3	hɪŋ33		0	hean3	hən33		0	hɪŋ33或hən33	False		
+961	興	hing3	hɪŋ33		0	hean3	hən33		0	hɪŋ33或hən33	False		
+962	欽	hiem1	hiɛm35		0	hiem1	hiɛm35		0	hiɛm35	1		
+963	香	hieng1	hiɛŋ35		0	hieng1	hiɛŋ35		0	hiɛŋ35	1		
+964	鄉	hieng1	hiɛŋ35		0	hieng1	hiɛŋ35		0	hiɛŋ35	1		
+965	響	hieng2	hiɛŋ21		0	hieng2	hiɛŋ21		0	hiɛŋ21	1		
+966	享	hieng2	hiɛŋ21		0	hieng2	hiɛŋ21		0	hiɛŋ21	1		
+967	晌	hieng2	hiɛŋ21		0	hieng2	hiɛŋ21		0	hiɛŋ21	1		
+968	嚮	hieng3	hiɛŋ33		0	hieng3	hiɛŋ33		0	hiɛŋ33	1		
+969	向	hieng3	hiɛŋ33		0	hieng3	hiɛŋ33		0	hiɛŋ33	1		
+970	丘	hieu1	hiɛu35		0	hieu1	hiɛu35		0	hiɛu35	1		
+971	休	hieu1	hiɛu35		0	hieu1	hiɛu35		0	hiɛu35	1		
+972	謙	him1	him35		0	him1	him35		0	him35	1		
+973	險	him2	him21		0	him2	him21		0	him21	1		
+974	欠	him3	him33		0	him3	him33		0	him33	1		
+975	歉	him3	him33		0	him3	him33		0	him33	1		
+976	嫌	him4	him42/31		0	him4	him42/31		0	him42/31	1		
+977	軒	hin1	hin35		0	hin1	hin35		0	hin35	1		
+978	掀	hin1	hin35		0	hin1	hin35		0	hin35	1		
+979	牽	hin1	hin35		0	hin1	hin35		0	hin35	1		
+980	喧	hin1	hin35		0	hin1	hin35		0	hin35	1		
+981	鍁	hin1?	hin35	?	1	hin1?	hin35	?	1	hin35	1		发音人对该音存疑
+982	圈	hin1或kien1	hin35或kʰiɛn35		0	hin1或kien1	hin35或kʰiɛn35		0	hin35或kʰiɛn35	1		
+983	譴	hin2	hin21		0	hin2	hin21		0	hin21	1		
+984	遣	hin2	hin21		0	hin2	hin21		0	hin21	1		
+985	犬	hin2	hin21		0	hin2	hin21		0	hin21	1		
+986	顯	hin2	hin21		0	hin2	hin21		0	hin21	1		
+987	衍	hin2	hin21		0	hin2	hin21		0	hin21	1		
+988	勸	hin3	hin33		0	hin3	hin33		0	hin33	1		
+989	憲	hin3	hin33		0	hin3	hin33		0	hin33	1		
+990	獻	hin3	hin33		0	hin3	hin33		0	hin33	1		
+991	怯	hip8?	hip3	?	1	hip8?	hip3	?	1	hip3	1		发音人对该音存疑
+992	協	hip9	hip53		0	hip9	hip53		0	hip53	1		
+993	脅	hip9	hip53		0	hip9	hip53		0	hip53	1		
+994	挾	hip9?	hip53	?	1	hip9?	hip53	?	1	hip53	1		发音人对该音存疑
+995	歇	hit8	hit3		0	hit8	hit3		0	hit3	1		
+996	血	hit8	hit3		0	hit8	hit3		0	hit3	1		
+997	穴	hit9?或jit9?	hit53或jit53	??	2	hit9?或jit9?	hit53或jit53	??	2	hit53或jit53	1		二者似皆可，发音人存疑
+998	囂	hiu1	hiu35		0	hiu1	hiu35		0	hiu35	1		
+999	僥	hiu1	hiu35		0	hiu1	hiu35		0	hiu35	1		
+1000	曉	hiu2	hiu21		0	hiu2	hiu21		0	hiu21	1		
+1001	竅	hiu3	hiu33		0	hiu3	hiu33		0	hiu33	1		
+1002	苛	ho1	hɔ35		0	ho1	hɔ35		0	hɔ35	1		
+1003	呵	ho1	hɔ35		0	ho1	hɔ35		0	hɔ35	1		
+1004	可	ho2	hɔ21		0	ho2	hɔ21		0	hɔ21	1		
+1005	坷	ho2?或ho1	hɔ21或hɔ35	?	1	ho2?或ho1	hɔ21或hɔ35	?	1	hɔ21或hɔ35	1		
+1006	何	ho4	hɔ42/31		0	ho4	hɔ42/31		0	hɔ42/31	1		
+1007	河	ho4	hɔ42/31		0	ho4	hɔ42/31		0	hɔ42/31	1		
+1008	荷	ho4	hɔ42/31		0	ho4	hɔ42/31		0	hɔ42/31	1		
+1009	賀	ho6	hɔ53		0	ho6	hɔ53		0	hɔ53	1		
+1010	凱	hoi2?或oi2	hɔi21或ʔɔi21	?	1	hoi2?或oi2	hɔi21或ʔɔi21	?	1	hɔi21或ʔɔi21	1		
+1011	捍	hon5或hon6	hᵘɔn21或hᵘɔn53		0	hon5或hon6	hᵘɔn21或hᵘɔn53		0	hᵘɔn21或hᵘɔn53	1		
+1012	悍	hon5或hon6	hᵘɔn21或hᵘɔn53		0	hon5或hon6	hᵘɔn21或hᵘɔn53		0	hᵘɔn21或hᵘɔn53	1		
+1013	框	hong1或kang1	hᵘɔŋ35或kʰɐŋ35		0	hong1或kang1	hᵘɔŋ35或kʰɐŋ35		0	hᵘɔŋ35或kʰɐŋ35	1		
+1014	筐	hong1或kang1	hᵘɔŋ35或kʰɐŋ35		0	hong1或kang1	hᵘɔŋ35或kʰɐŋ35		0	hᵘɔŋ35或kʰɐŋ35	1		
+1015	蒿	hou1	hou35		0	hou1	hou35		0	hou35	1		
+1016	好	hou2	hou21		0	hou2	hou21		0	hou21	1		
+1017	耗	hou3	hou33		0	hou3	hou33		0	hou33	1		
+1018	壕	hou4	hou42/31		0	hou4	hou42/31		0	hou42/31	1		
+1019	嚎	hou4	hou42/31		0	hou4	hou42/31		0	hou42/31	1		
+1020	豪	hou4	hou42/31		0	hou4	hou42/31		0	hou42/31	1		
+1021	毫	hou4	hou42/31		0	hou4	hou42/31		0	hou42/31	1		
+1022	浩	hou6	hou53		0	hou6	hou53		0	hou53	1		
+1023	號	hou6	hou53		0	hou6	hou53		0	hou53	1		
+1024	鎬	hou6?	hou53	?	1	hou6?	hou53	?	1	hou53	1		发音人对该音存疑
+1025	哭	hʊk7	hʊk35		0	hʊk7	hʊk35		0	hʊk35	1		
+1026	酷	hʊk9	hʊk53		0	hʊk9	hʊk53		0	hʊk53	1		
+1027	空	hung1	hʊŋ35		0	hung1	hʊŋ35		0	hʊŋ35	1		
+1028	匈	hung1	hʊŋ35		0	hung1	hʊŋ35		0	hʊŋ35	1		
+1029	洶	hung1	hʊŋ35		0	hung1	hʊŋ35		0	hʊŋ35	1		
+1030	兇	hung1	hʊŋ35		0	hung1	hʊŋ35		0	hʊŋ35	1		
+1031	胸	hung1	hʊŋ35		0	hung1	hʊŋ35		0	hʊŋ35	1		
+1032	恐	hung2或kung2	hʊŋ21或kʰʊŋ21		0	hung2或kung2	hʊŋ21或kʰʊŋ21		0	hʊŋ21或kʰʊŋ21	1		
+1033	控	hung3	hʊŋ33		0	hung3	hʊŋ33		0	hʊŋ33	1		
+1034	烘	hung3	hʊŋ33		0	hung3	hʊŋ33		0	hʊŋ33	1		
+1035	哄	hung3?	hʊŋ33	?	1	hung3?	hʊŋ33	?	1	hʊŋ33	1		发音人对该音存疑
+1036	鴻	hung4	hʊŋ42/31		0	hung4	hʊŋ42/31		0	hʊŋ42/31	1		
+1037	紅	hung4	hʊŋ42/31		0	hung4	hʊŋ42/31		0	hʊŋ42/31	1		
+1038	虹	hung4	hʊŋ42/31		0	hung4	hʊŋ42/31		0	hʊŋ42/31	1		
+1039	雄	hung4	hʊŋ42/31		0	hung4	hʊŋ42/31		0	hʊŋ42/31	1		
+1040	洪	hung4	hʊŋ42/31		0	hung4	hʊŋ42/31		0	hʊŋ42/31	1		
+1041	開	hoi1	hɔi35		0	hoi1	hɔi35		0	hɔi35	1		
+1042	海	hoi2	hɔi21		0	hoi2	hɔi21		0	hɔi21	1		
+1043	亥	hoi6	hɔi53		0	hoi6	hɔi53		0	hɔi53	1		
+1044	駭	hoi6	hɔi53		0	hoi6	hɔi53		0	hɔi53	1		
+1045	害	hoi6	hɔi53		0	hoi6	hɔi53		0	hɔi53	1		
+1046	殼	hok8	hɔk3		0	hok8	hɔk3		0	hɔk3	1		
+1047	穀	hok8	hɔk3		0	hok8	hɔk3		0	hɔk3	1		
+1048	鶴	hok9	hɔk53		0	hok9	hɔk53		0	hɔk53	1		
+1049	學	hok9	hɔk53		0	hok9	hɔk53		0	hɔk53	1		
+1050	刊	hon1?或hon2?	hᵘɔn35或hᵘɔn21	??	2	hon1?或hon2?	hᵘɔn35或hᵘɔn21	??	2	hᵘɔn35或hᵘɔn21	1		二者似皆可，发音人存疑
+1051	漢	hon3	hᵘɔn33		0	hon3	hᵘɔn33		0	hᵘɔn33	1		
+1052	看	hon3	hᵘɔn33		0	hon3	hᵘɔn33		0	hᵘɔn33	1		
+1053	寒	hon4	hᵘɔn42/31		0	hon4	hᵘɔn42/31		0	hᵘɔn42/31	1		
+1054	韓	hon4	hᵘɔn42/31		0	hon4	hᵘɔn42/31		0	hᵘɔn42/31	1		
+1055	旱	hon5	hᵘɔn21		0	hon5	hᵘɔn21		0	hᵘɔn21	1		
+1056	罕	hon5	hᵘɔn21		0	hon5	hᵘɔn21		0	hᵘɔn21	1		
+1057	焊	hon6	hᵘɔn53		0	hon6	hᵘɔn53		0	hᵘɔn53	1		
+1058	汗	hon6	hᵘɔn53		0	hon6	hᵘɔn53		0	hᵘɔn53	1		
+1059	翰	hon6?	hᵘɔn53	?	1	hon6?	hᵘɔn53	?	1	hᵘɔn53	1		
+1060	腔	hong1	hᵘɔŋ35		0	hong1	hᵘɔŋ35		0	hᵘɔŋ35	1		
+1061	慷	hong1	hᵘɔŋ35		0	hong1	hᵘɔŋ35		0	hᵘɔŋ35	1		
+1062	康	hong1	hᵘɔŋ35		0	hong1	hᵘɔŋ35		0	hᵘɔŋ35	1		
+1063	糠	hong1	hᵘɔŋ35		0	hong1	hᵘɔŋ35		0	hᵘɔŋ35	1		
+1064	荒	hong1	hᵘɔŋ35		0	hong1	hᵘɔŋ35		0	hᵘɔŋ35	1		
+1065	謊	hong1	hᵘɔŋ35		0	hong1	hᵘɔŋ35		0	hᵘɔŋ35	1		
+1066	慌	hong1	hᵘɔŋ35		0	hong1	hᵘɔŋ35		0	hᵘɔŋ35	1		
+1067	眶	hong1?或kang1?	hᵘɔŋ35或kʰɐŋ35	??	2	hong1?或kang1?	hᵘɔŋ35或kʰɐŋ35	??	2	hᵘɔŋ35或kʰɐŋ35	1		二者似皆可，发音人存疑
+1068	杭	hong4	hᵘɔŋ42/31		0	hong4	hᵘɔŋ42/31		0	hᵘɔŋ42/31	1		
+1069	航	hong4	hᵘɔŋ42/31		0	hong4	hᵘɔŋ42/31		0	hᵘɔŋ42/31	1		
+1070	項	hong6	hᵘɔŋ53		0	hong6	hᵘɔŋ53		0	hᵘɔŋ53	1		
+1071	巷	hong6	hᵘɔŋ53		0	hong6	hᵘɔŋ53		0	hᵘɔŋ53	1		
+1072	喝	hot8	hɔt3		0	hot8	hɔt3		0	hɔt3	1		
+1073	渴	hot8	hɔt3		0	hot8	hɔt3		0	hɔt3	1		
+1074	褐	hot9?	hɔt53	?	1	hot9?	hɔt53	?	1	hɔt53	1		发音人对该音存疑
+1075	陰	jam1	jɐm35		0	jam1	jɐm35		0	jɐm35	1		
+1076	音	jam1	jɐm35		0	jam1	jɐm35		0	jɐm35	1		
+1077	吟	jam4或ngam4	jɐm42/31或ŋɐm42/31		0	jam4或ngam4	jɐm42/31或ŋɐm42/31		0	jɐm42/31或ŋɐm42/31	1		
+1078	茵	jan1	jɐn35		0	jan1	jɐn35		0	jɐn35	1		
+1079	因	jan1	jɐn35		0	jan1	jɐn35		0	jɐn35	1		
+1080	姻	jan1	jɐn35		0	jan1	jɐn35		0	jɐn35	1		
+1081	恩	jan1	jɐn35		0	jan1	jɐn35		0	jɐn35	1		
+1082	殷	jan1	jɐn35		0	jan1	jɐn35		0	jɐn35	1		
+1083	引	jan2	jɐn21		0	jan2	jɐn21		0	jɐn21	1		
+1084	印	jan3	jɐn33		0	jan3	jɐn33		0	jɐn33	1		
+1085	癮	jan5?或njan5?	jɐn21或ȵɐn21	??	2	jan5?或njan5?	jɐn21或ȵɐn21	??	2	jɐn21或ȵɐn21	1		二者似皆可，发音人存疑
+1086	隱	jan5?或njan5?	jɐn21或ȵɐn21	??	2	jan5?或njan5?	jɐn21或ȵɐn21	??	2	jɐn21或ȵɐn21	1		二者似皆可，发音人存疑
+1087	蚓	jan5?或訓讀han2或hien2	jɐn21或hɐn21或hiɛn21	訓讀?	1	jan5?或訓讀han2或hien2	jɐn21或hɐn21或hiɛn21	訓讀?	1	hɐn21或hiɛn21	1		訓讀
+1087	蚓									jɐn21			发音人对该音存疑
+1088	釁	jan6?	jɐn53	?	1	jan6?	jɐn53	?	1	jɐn53	1		发音人对该音存疑
+1089	孕	jan6或nam3	jɐn53或nɐm33		0	jan6或nam3	jɐn53或nɐm33		0	jɐn53或nɐm33	1		
+1090	泣	jap7	jɐp35		0	jap7	jɐp35		0	jɐp35	1		
+1091	邑	jap7	jɐp35		0	jap7	jɐp35		0	jɐp35	1		
+1092	揖	jap7？	jɐp35	？	1	jap7？	jɐp35	？	1	jɐp35	1		发音人对该音存疑
+1093	入	jap9	jɐp53		0	jap9	jɐp53		0	jɐp53	1		
+1094	一	jat7	jɐt35		0	jat7	jɐt35		0	jɐt35	1		
+1095	壹	jat7	jɐt35		0	jat7	jɐt35		0	jɐt35	1		
+1096	逸	jat9	jɐt53		0	jat9	jɐt53		0	jɐt53	1		
+1097	肄	jat9?	jɐt53	?	1	jat9?	jɐt53	?	1	jɐt53	1		发音人对该音存疑
+1098	幽	jau1	jɐu35		0	jau1	jɐu35		0	jɐu35	1		
+1099	優	jau1	jɐu35		0	jau1	jɐu35		0	jɐu35	1		
+1100	憂	jau1	jɐu35		0	jau1	jɐu35		0	jɐu35	1		
+1101	幼	jau3	jɐu33		0	jau3	jɐu33		0	jɐu33	1		
+1102	誘	jau3？	jɐu33	？	1	jau3？	jɐu33	？	1	jɐu33	1		
+1103	悠	jau4	jɐu42/31		0	jau4	jɐu42/31		0	jɐu42/31	1		
+1104	尤	jau4	jɐu42/31		0	jau4	jɐu42/31		0	jɐu42/31	1		
+1105	由	jau4	jɐu42/31		0	jau4	jɐu42/31		0	jɐu42/31	1		
+1106	油	jau4	jɐu42/31		0	jau4	jɐu42/31		0	jɐu42/31	1		
+1107	遊	jau4	jɐu42/31		0	jau4	jɐu42/31		0	jɐu42/31	1		
+1108	郵	jau4	jɐu42/31		0	jau4	jɐu42/31		0	jɐu42/31	1		
+1109	猶	jau4	jɐu42/31		0	jau4	jɐu42/31		0	jɐu42/31	1		
+1110	蹂	jau4?或njau4?	jɐu42/31或ȵɐu42/31	??	2	jau4?或njau4?	jɐu42/31或ȵɐu42/31	??	2	jɐu42/31或ȵɐu42/31	1		二者似皆可，发音人存疑
+1111	柔	jau4?或njau4?	jɐu42/31或ȵɐu42/31	??	2	jau4?或njau4?	jɐu42/31或ȵɐu42/31	??	2	jɐu42/31或ȵɐu42/31	1		二者似皆可，发音人存疑
+1112	揉	jau4?或njau4?	jɐu42/31或ȵɐu42/31	??	2	jau4?或njau4?	jɐu42/31或ȵɐu42/31	??	2	jɐu42/31或ȵɐu42/31	1		二者似皆可，发音人存疑
+1113	友	jau5	jɐu21		0	jau5	jɐu21		0	jɐu21	1		
+1114	有	jau5	jɐu21		0	jau5	jɐu21		0	jɐu21	1		
+1115	又	jau6	jɐu53		0	jau6	jɐu53		0	jɐu53	1		
+1116	佑	jau6	jɐu53		0	jau6	jɐu53		0	jɐu53	1		
+1117	右	jau6	jɐu53		0	jau6	jɐu53		0	jɐu53	1		
+1118	椰	je4	jɛ42/31		0	je4	jɛ42/31		0	jɛ42/31	1		
+1119	爺	je4	jɛ42/31		0	je4	jɛ42/31		0	jɛ42/31	1		
+1120	冶	je5	jɛ21		0	je5	jɛ21		0	jɛ21	1		
+1121	也	je5	jɛ21		0	je5	jɛ21		0	jɛ21	1		
+1122	野	je5	jɛ21		0	je5	jɛ21		0	jɛ21	1		
+1123	惹	je5或nje5？	jɛ21或ȵɛ21	？	1	je5或nje5？	jɛ21或ȵɛ21	？	1	jɛ21	1		
+1123	惹									ȵɛ21			发音人对该音存疑
+1124	夜	je6	jɛ53		0	je6	jɛ53		0	jɛ53	1		
+1125	英	jing1	jɪŋ35		0	jean1	jən35		0	jɪŋ35或jən35	False		
+1126	嬰	jing1	jɪŋ35		0	jean1	jən35		0	jɪŋ35或jən35	False		
+1127	纓	jing1	jɪŋ35		0	jean1	jən35		0	jɪŋ35或jən35	False		
+1128	鸚	jing1	jɪŋ35		0	jean1	jən35		0	jɪŋ35或jən35	False		
+1129	櫻	jing1	jɪŋ35		0	jean1	jən35		0	jɪŋ35或jən35	False		
+1130	鷹	jing1	jɪŋ35		0	jean1	jən35		0	jɪŋ35或jən35	False		
+1131	鶯	jing1？或ang1	jɪŋ35或ʔɐŋ35	？	1	jean1？或ang1	jən35或ʔɐŋ35	？	1	ʔɐŋ35	False		
+1131	鶯									jɪŋ35或jən35			发音人对该音存疑
+1132	應	jing1或jing3或ing3	jɪŋ35或jɪŋ33或ʔɪŋ33		0	jean1或jean3或ean3	jən35或jən33或ʔən33		0	jɪŋ35或jɪŋ33或ʔɪŋ33或jən35或jən33或ʔən33	False		
+1133	影	jing2	jɪŋ21		0	jean2	jən21		0	jɪŋ21或jən21	False		
+1134	映	jing2	jɪŋ21		0	jean2	jən21		0	jɪŋ21或jən21	False		
+1135	刑	jing4	jɪŋ42/31		0	jean4	jən42/31		0	jɪŋ42/31或jən42/31	False		
+1136	型	jing4	jɪŋ42/31		0	jean4	jən42/31		0	jɪŋ42/31或jən42/31	False		
+1137	邢	jing4	jɪŋ42/31		0	jean4	jən42/31		0	jɪŋ42/31或jən42/31	False		
+1138	形	jing4	jɪŋ42/31		0	jean4	jən42/31		0	jɪŋ42/31或jən42/31	False		
+1139	瑩	jing4	jɪŋ42/31		0	jean4	jən42/31		0	jɪŋ42/31或jən42/31	False		
+1140	螢	jing4	jɪŋ42/31		0	jean4	jən42/31		0	jɪŋ42/31或jən42/31	False		
+1141	營	jing4	jɪŋ42/31		0	jean4	jən42/31		0	jɪŋ42/31或jən42/31	False		
+1142	熒	jing4	jɪŋ42/31		0	jean4	jən42/31		0	jɪŋ42/31或jən42/31	False		
+1143	蠅	jing4	jɪŋ42/31		0	jean4	jən42/31		0	jɪŋ42/31或jən42/31	False		
+1144	迎	jing4	jɪŋ42/31		0	jean4	jən42/31		0	jɪŋ42/31或jən42/31	False		
+1145	盈	jing4	jɪŋ42/31		0	jean4	jən42/31		0	jɪŋ42/31或jən42/31	False		
+1146	贏	jing4	jɪŋ42/31		0	jean4	jən42/31		0	jɪŋ42/31或jən42/31	False		
+1147	抑	jɪk7	jɪk35		0	jeat7	jət35		0	jɪk35或jət35	False		
+1148	益	jɪk7	jɪk35		0	jeat7	jət35		0	jɪk35或jət35	False		
+1149	億	jɪk7	jɪk35		0	jeat7	jət35		0	jɪk35或jət35	False		
+1150	憶	jɪk7	jɪk35		0	jeat7	jət35		0	jɪk35或jət35	False		
+1151	繹	jɪk9	jɪk53		0	jeat9	jət53		0	jɪk53或jət53	False		
+1152	譯	jɪk9	jɪk53		0	jeat9	jət53		0	jɪk53或jət53	False		
+1153	液	jɪk9	jɪk53		0	jeat9	jət53		0	jɪk53或jət53	False		
+1154	奕	jɪk9	jɪk53		0	jeat9	jət53		0	jɪk53或jət53	False		
+1155	亦	jɪk9	jɪk53		0	jeat9	jət53		0	jɪk53或jət53	False		
+1156	翼	jɪk9	jɪk53		0	jeat9	jət53		0	jɪk53或jət53	False		
+1157	掖	jɪk9?	jɪk53	?	1	jeat9?	jət53	?	1	jɪk53或jət53	False		发音人对该音存疑
+1158	腋	jɪk9?	jɪk53	?	1	jeat9?	jət53	?	1	jɪk53或jət53	False		发音人对该音存疑
+1159	溢	jɪk9?	jɪk53	?	1	jeat9?	jət53	?	1	jɪk53或jət53	False		发音人对该音存疑
+1160	伊	ji1	ji35		0	ji1	ji35		0	ji35	1		
+1161	衣	ji1	ji35		0	ji1	ji35		0	ji35	1		
+1162	依	ji1	ji35		0	ji1	ji35		0	ji35	1		
+1163	醫	ji1	ji35		0	ji1	ji35		0	ji35	1		
+1164	於	ji1	ji35		0	ji1	ji35		0	ji35	1		
+1165	于	ji1	ji35		0	ji1	ji35		0	ji35	1		
+1166	迂	ji1	ji35		0	ji1	ji35		0	ji35	1		
+1167	淤	ji2	ji21		0	ji2	ji21		0	ji21	1		
+1168	意	ji3	ji33		0	ji3	ji33		0	ji33	1		
+1169	移	ji4	ji42/31		0	ji4	ji42/31		0	ji42/31	1		
+1170	姨	ji4	ji42/31		0	ji4	ji42/31		0	ji42/31	1		
+1171	餘	ji4	ji42/31		0	ji4	ji42/31		0	ji42/31	1		
+1172	輿	ji4	ji42/31		0	ji4	ji42/31		0	ji42/31	1		
+1173	夷	ji4?	ji42/31	?	1	ji4?	ji42/31	?	1	ji42/31	1		
+1174	胰	ji4?	ji42/31	?	1	ji4?	ji42/31	?	1	ji42/31	1		
+1175	予	ji4或ji5	ji42/31或ji21		0	ji4或ji5	ji42/31或ji21		0	ji42/31或ji21	1		
+1176	倚	ji5	ji21		0	ji5	ji21		0	ji21	1		
+1177	椅	ji5	ji21		0	ji5	ji21		0	ji21	1		
+1178	已	ji5	ji21		0	ji5	ji21		0	ji21	1		
+1179	以	ji5	ji21		0	ji5	ji21		0	ji21	1		
+1180	宇	ji5	ji21		0	ji5	ji21		0	ji21	1		
+1181	羽	ji5	ji21		0	ji5	ji21		0	ji21	1		
+1182	雨	ji5	ji21		0	ji5	ji21		0	ji21	1		
+1183	與	ji5	ji21		0	ji5	ji21		0	ji21	1		
+1184	裕	ji6	ji53		0	ji6	ji53		0	ji53	1		
+1185	異	ji6	ji53		0	ji6	ji53		0	ji53	1		
+1186	吁	ji6	ji53		0	ji6	ji53		0	ji53	1		
+1187	愈	ji6	ji53		0	ji6	ji53		0	ji53	1		
+1188	豫	ji6	ji53		0	ji6	ji53		0	ji53	1		
+1189	預	ji6	ji53		0	ji6	ji53		0	ji53	1		
+1190	譽	ji6	ji53		0	ji6	ji53		0	ji53	1		
+1191	禦	ji6	ji53		0	ji6	ji53		0	ji53	1		
+1192	籲	ji6	ji53		0	ji6	ji53		0	ji53	1		
+1193	酗	ji6？	ji53	？	1	ji6？	ji53	？	1	ji53	1		发音人对该音存疑
+1194	易	ji6或jɪk9	ji53或jɪk53		0	ji6或jeat9	ji53或jət53		0	ji53或jɪk53或jət53	False		
+1195	癒	ji7	ji35		0	ji7	ji35		0	ji35	1		
+1196	約	jiek8	jiɛk3		0	jiek8	jiɛk3		0	jiɛk3	1		
+1197	躍	jiek8	jiɛk3		0	jiek8	jiɛk3		0	jiɛk3	1		
+1198	葯	jiek9	jiɛk53		0	jiek9	jiɛk53		0	jiɛk53	1		
+1199	藥	jiek9	jiɛk53		0	jiek9	jiɛk53		0	jiɛk53	1		
+1200	鑰	jiek9	jiɛk53		0	jiek9	jiɛk53		0	jiɛk53	1		
+1201	鴦	jieng1	jiɛŋ35		0	jieng1	jiɛŋ35		0	jiɛŋ35	1		
+1202	央	jieng1	jiɛŋ35		0	jieng1	jiɛŋ35		0	jiɛŋ35	1		
+1203	秧	jieng1	jiɛŋ35		0	jieng1	jiɛŋ35		0	jiɛŋ35	1		
+1204	殃	jieng1	jiɛŋ35		0	jieng1	jiɛŋ35		0	jiɛŋ35	1		
+1205	羊	jieng4	jiɛŋ42/31		0	jieng4	jiɛŋ42/31		0	jiɛŋ42/31	1		
+1206	洋	jieng4	jiɛŋ42/31		0	jieng4	jiɛŋ42/31		0	jiɛŋ42/31	1		
+1207	揚	jieng4	jiɛŋ42/31		0	jieng4	jiɛŋ42/31		0	jiɛŋ42/31	1		
+1208	陽	jieng4	jiɛŋ42/31		0	jieng4	jiɛŋ42/31		0	jiɛŋ42/31	1		
+1209	楊	jieng4	jiɛŋ42/31		0	jieng4	jiɛŋ42/31		0	jiɛŋ42/31	1		
+1210	養	jieng5	jiɛŋ21		0	jieng5	jiɛŋ21		0	jiɛŋ21	1		
+1211	氧	jieng5	jiɛŋ21		0	jieng5	jiɛŋ21		0	jiɛŋ21	1		
+1212	癢	jieng5	jiɛŋ21		0	jieng5	jiɛŋ21		0	jiɛŋ21	1		
+1213	仰	jieng5或ngong5	jiɛŋ21或ŋᵘɔŋ21		0	jieng5或ngong5	jiɛŋ21或ŋᵘɔŋ21		0	jiɛŋ21或ŋᵘɔŋ21	1		
+1214	樣	jieng6	jiɛŋ53		0	jieng6	jiɛŋ53		0	jiɛŋ53	1		
+1215	漾	jieng6?	jiɛŋ53	?	1	jieng6?	jiɛŋ53	?	1	jiɛŋ53	1		发音人对该音存疑
+1216	奄	jim1	jim35		0	jim1	jim35		0	jim35	1		
+1217	淹	jim1	jim35		0	jim1	jim35		0	jim35	1		
+1218	俺	jim1?	jim35	?	1	jim1?	jim35	?	1	jim35	1		发音人对该音存疑
+1219	厭	jim3	jim33		0	jim3	jim33		0	jim33	1		
+1220	鹽	jim4	jim42/31		0	jim4	jim42/31		0	jim42/31	1		
+1221	閻	jim4	jim42/31		0	jim4	jim42/31		0	jim42/31	1		
+1222	炎	jim4	jim42/31		0	jim4	jim42/31		0	jim42/31	1		
+1223	簷	jim4	jim42/31		0	jim4	jim42/31		0	jim42/31	1		
+1224	掩	jim5	jim21		0	jim5	jim21		0	jim21	1		
+1225	豔	jim6	jim53		0	jim6	jim53		0	jim53	1		
+1226	焰	jim6	jim53		0	jim6	jim53		0	jim53	1		
+1227	广	jin1	jin35		0	jin1	jin35		0	jin35	1		
+1228	咽	jin1	jin35		0	jin1	jin35		0	jin35	1		
+1229	煙	jin1	jin35		0	jin1	jin35		0	jin35	1		
+1230	冤	jin1	jin35		0	jin1	jin35		0	jin35	1		
+1231	淵	jin1	jin35		0	jin1	jin35		0	jin35	1		
+1232	鴛	jin1	jin35		0	jin1	jin35		0	jin35	1		
+1233	蔫	jin1?或lien1?	jin35或liɛn35	??	2	jin1?或lien1?	jin35或liɛn35	??	2	jin35或liɛn35	1		二者似皆可，发音人存疑
+1234	燕	jin3	jin33		0	jin3	jin33		0	jin33	1		
+1235	怨	jin3	jin33		0	jin3	jin33		0	jin33	1		
+1236	堰	jin3?	jin33	?	1	jin3?	jin33	?	1	jin33	1		发音人对该音存疑
+1237	緣	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1238	賢	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1239	丸	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1240	懸	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1241	玄	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1242	炫	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1243	弦	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1244	沿	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1245	鉛	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1246	完	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1247	元	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1248	袁	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1249	猿	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1250	轅	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1251	園	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1252	員	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1253	圓	jin4	jin42/31		0	jin4	jin42/31		0	jin42/31	1		
+1254	舷	jin4?	jin42/31	?	1	jin4?	jin42/31	?	1	jin42/31	1		发音人对该音存疑
+1255	涎	jin4？	jin42/31	？	1	jin4？	jin42/31	？	1	jin42/31	1		发音人对该音存疑
+1256	蜒	jin4？	jin42/31	？	1	jin4？	jin42/31	？	1	jin42/31	1		发音人对该音存疑
+1257	延	jin4？	jin42/31	？	1	jin4？	jin42/31	？	1	jin42/31	1		
+1258	援	jin4或vun4?	jin42/31或vun42/31	?	1	jin4或vun4?	jin42/31或vun42/31	?	1	jin42/31	1		
+1258	援									vun42/31			发音人对该音存疑
+1259	演	jin5	jin21		0	jin5	jin21		0	jin21	1		
+1260	遠	jin5	jin21		0	jin5	jin21		0	jin21	1		
+1261	現	jin6	jin53		0	jin6	jin53		0	jin53	1		
+1262	縣	jin6	jin53		0	jin6	jin53		0	jin53	1		
+1263	宴	jin6	jin53		0	jin6	jin53		0	jin53	1		
+1264	院	jin6	jin53		0	jin6	jin53		0	jin53	1		
+1265	硯	jin6?	jin53	?	1	jin6?	jin53	?	1	jin53	1		发音人对该音存疑
+1266	腌	jip8	jip3		0	jip8	jip3		0	jip3	1		
+1267	醃	jip8	jip3		0	jip8	jip3		0	jip3	1		
+1268	葉	jip9	jip53		0	jip9	jip53		0	jip53	1		
+1269	頁	jip9?或njip9?	jip53或ȵip53	??	2	jip9?或njip9?	jip53或ȵip53	??	2	jip53或ȵip53	1		二者似皆可，发音人存疑
+1270	業	jip9?或njip9?	jip53或ȵip53	??	2	jip9?或njip9?	jip53或ȵip53	??	2	jip53或ȵip53	1		二者似皆可，发音人存疑
+1271	乙	jit8	jit3		0	jit8	jit3		0	jit3	1		
+1272	閱	jit9	jit53		0	jit9	jit53		0	jit53	1		
+1273	悅	jit9	jit53		0	jit9	jit53		0	jit53	1		
+1274	謁	jit9	jit53		0	jit9	jit53		0	jit53	1		
+1275	越	jit9	jit53		0	jit9	jit53		0	jit53	1		
+1276	粵	jit9	jit53		0	jit9	jit53		0	jit53	1		
+1277	邀	jiu1	jiu35		0	jiu1	jiu35		0	jiu35	1		
+1278	吆	jiu1	jiu35		0	jiu1	jiu35		0	jiu35	1		
+1279	夭	jiu1	jiu35		0	jiu1	jiu35		0	jiu35	1		
+1280	妖	jiu1	jiu35		0	jiu1	jiu35		0	jiu35	1		
+1281	腰	jiu1	jiu35		0	jiu1	jiu35		0	jiu35	1		
+1282	要	jiu3	jiu33		0	jiu3	jiu33		0	jiu33	1		
+1283	窯	jiu4	jiu42/31		0	jiu4	jiu42/31		0	jiu42/31	1		
+1284	謠	jiu4	jiu42/31		0	jiu4	jiu42/31		0	jiu42/31	1		
+1285	遙	jiu4	jiu42/31		0	jiu4	jiu42/31		0	jiu42/31	1		
+1286	姚	jiu4	jiu42/31		0	jiu4	jiu42/31		0	jiu42/31	1		
+1287	饒	jiu4?或njiu4?	jiu42/31或ȵiu42/31	??	2	jiu4?或njiu4?	jiu42/31或ȵiu42/31	??	2	jiu42/31或ȵiu42/31	1		二者似皆可，发音人存疑
+1288	搖	jiu4或ngiu4	jiu42/31或ŋiu42/31		0	jiu4或ngiu4	jiu42/31或ŋiu42/31		0	jiu42/31或ŋiu42/31	1		
+1289	舀	jiu5	jiu21		0	jiu5	jiu21		0	jiu21	1		
+1290	耀	jiu6	jiu53		0	jiu6	jiu53		0	jiu53	1		
+1291	喲	jo5	jɔ21		0	jo5	jɔ21		0	jɔ21	1		
+1292	銳	jui6	jui53		0	jui6	jui53		0	jui53	1		
+1293	旭	jʊk7	jʊk35		0	jʊk7	jʊk35		0	jʊk35	1		
+1294	沃	jʊk7	jʊk35		0	jʊk7	jʊk35		0	jʊk35	1		
+1295	郁	jʊk7	jʊk35		0	jʊk7	jʊk35		0	jʊk35	1		
+1296	浴	jʊk9	jʊk53		0	jʊk9	jʊk53		0	jʊk53	1		
+1297	欲	jʊk9	jʊk53		0	jʊk9	jʊk53		0	jʊk53	1		
+1298	育	jʊk9	jʊk53		0	jʊk9	jʊk53		0	jʊk53	1		
+1299	褥	jʊk9?或njʊk9？	jʊk53或ȵʊk53	?？	2	jʊk9?或njʊk9？	jʊk53或ȵʊk53	?？	2	jʊk53或ȵʊk53	1		二者似皆可，发音人存疑
+1300	辱	jʊk9?或njʊk9？	jʊk53或ȵʊk53	?？	2	jʊk9?或njʊk9？	jʊk53或ȵʊk53	?？	2	jʊk53或ȵʊk53	1		二者似皆可，发音人存疑
+1301	嗡	jung1	jʊŋ35		0	jung1	jʊŋ35		0	jʊŋ35	1		
+1302	翁	jung1	jʊŋ35		0	jung1	jʊŋ35		0	jʊŋ35	1		
+1303	庸	jung1?	jʊŋ35	?	1	jung1?	jʊŋ35	?	1	jʊŋ35	1		发音人对该音存疑
+1304	擁	jung2?	jʊŋ21	?	1	jung2?	jʊŋ21	?	1	jʊŋ21	1		
+1305	踴	jung2?	jʊŋ21	?	1	jung2?	jʊŋ21	?	1	jʊŋ21	1		
+1306	勇	jung2?	jʊŋ21	?	1	jung2?	jʊŋ21	?	1	jʊŋ21	1		
+1307	湧	jung2?	jʊŋ21	?	1	jung2?	jʊŋ21	?	1	jʊŋ21	1		
+1308	蛹	jung2?	jʊŋ21	?	1	jung2?	jʊŋ21	?	1	jʊŋ21	1		
+1309	絨	jung4	jʊŋ42/31		0	jung4	jʊŋ42/31		0	jʊŋ42/31	1		
+1310	蓉	jung4	jʊŋ42/31		0	jung4	jʊŋ42/31		0	jʊŋ42/31	1		
+1311	溶	jung4	jʊŋ42/31		0	jung4	jʊŋ42/31		0	jʊŋ42/31	1		
+1312	榕	jung4	jʊŋ42/31		0	jung4	jʊŋ42/31		0	jʊŋ42/31	1		
+1313	容	jung4	jʊŋ42/31		0	jung4	jʊŋ42/31		0	jʊŋ42/31	1		
+1314	熔	jung4	jʊŋ42/31		0	jung4	jʊŋ42/31		0	jʊŋ42/31	1		
+1315	融	jung4	jʊŋ42/31		0	jung4	jʊŋ42/31		0	jʊŋ42/31	1		
+1316	熊	jung4	jʊŋ42/31		0	jung4	jʊŋ42/31		0	jʊŋ42/31	1		
+1317	傭	jung4?	jʊŋ42/31	?	1	jung4?	jʊŋ42/31	?	1	jʊŋ42/31	1		发音人对该音存疑
+1318	茸	jung4?或njung4?	jʊŋ42/31或ȵʊŋ42/31	??	2	jung4?或njung4?	jʊŋ42/31或ȵʊŋ42/31	??	2	jʊŋ42/31或ȵʊŋ42/31	1		二者似皆可，发音人存疑
+1319	冗	jung5	jʊŋ21		0	jung5	jʊŋ21		0	jʊŋ21	1		
+1320	用	jung6	jʊŋ53		0	jung6	jʊŋ53		0	jʊŋ53	1		
+1321	卡	kaa1	kʰa35		0	kaa1	kʰa35		0	kʰa35	1		
+1322	誇	kaa1	kʰa35		0	kaa1	kʰa35		0	kʰa35	1		
+1323	跨	kaa1?	kʰa35	?	1	kaa1?	kʰa35	?	1	kʰa35	1		发音人对该音存疑
+1324	垮	kaa1?	kʰa35	?	1	kaa1?	kʰa35	?	1	kʰa35	1		发音人对该音存疑
+1325	褂	kaa3	kʰa33		0	kaa3	kʰa33		0	kʰa33	1		
+1326	掛	kaa3	kʰa33		0	kaa3	kʰa33		0	kʰa33	1		
+1327	挎	kaa3	kʰa33		0	kaa3	kʰa33		0	kʰa33	1		
+1328	胯	kaa3?	kʰa33	?	1	kaa3?	kʰa33	?	1	kʰa33	1		发音人对该音存疑
+1329	楷	kaai2或gaai1?	kʰai21或kai35	?	1	kaai2或gaai1?	kʰai21或kai35	?	1	kʰai21	1		
+1329	楷									kai35			发音人对该音存疑
+1330	筷	kaai3	kʰai33		0	kaai3	kʰai33		0	kʰai33	1		
+1331	銬	kaau3?	kʰau33	?	1	kaau3?	kʰau33	?	1	kʰau33	1		发音人对该音存疑
+1332	窺	kai1	kʰɐi35		0	kai1	kʰɐi35		0	kʰɐi35	1		
+1333	規	kai1	kʰɐi35		0	kai1	kʰɐi35		0	kʰɐi35	1		
+1334	稽	kai1	kʰɐi35		0	kai1	kʰɐi35		0	kʰɐi35	1		
+1335	虧	kai1	kʰɐi35		0	kai1	kʰɐi35		0	kʰɐi35	1		
+1336	溪	kai1	kʰɐi35		0	kai1	kʰɐi35		0	kʰɐi35	1		
+1337	啟	kai2	kʰɐi21		0	kai2	kʰɐi21		0	kʰɐi21	1		
+1338	愧	kai3	kʰɐi33		0	kai3	kʰɐi33		0	kʰɐi33	1		
+1339	契	kai3	kʰɐi33		0	kai3	kʰɐi33		0	kʰɐi33	1		
+1340	葵	kai4	kʰɐi42/31		0	kai4	kʰɐi42/31		0	kʰɐi42/31	1		
+1341	攜	kai4	kʰɐi42/31		0	kai4	kʰɐi42/31		0	kʰɐi42/31	1		
+1342	刻	kak7或hak7	kʰɐk35或hɐk35		0	kak7或hak7	kʰɐk35或hɐk35		0	kʰɐk35或hɐk35	1		
+1343	克	kak7或hak7	kʰɐk35或hɐk35		0	kak7或hak7	kʰɐk35或hɐk35		0	kʰɐk35或hɐk35	1		
+1344	堪	kam1	kʰɐm35		0	kam1	kʰɐm35		0	kʰɐm35	1		
+1345	勘	kam3	kʰɐm33		0	kam3	kʰɐm33		0	kʰɐm33	1		
+1346	昆	kan1	kʰɐn35		0	kan1	kʰɐn35		0	kʰɐn35	1		
+1347	坤	kan1	kʰɐn35		0	kan1	kʰɐn35		0	kʰɐn35	1		
+1348	鈞	kan1	kʰɐn35		0	kan1	kʰɐn35		0	kʰɐn35	1		
+1349	均	kan1	kʰɐn35		0	kan1	kʰɐn35		0	kʰɐn35	1		
+1350	捆	kan2	kʰɐn21		0	kan2	kʰɐn21		0	kʰɐn21	1		
+1351	窘	kan3	kʰɐn33		0	kan3	kʰɐn33		0	kʰɐn33	1		
+1352	睏	kan3	kʰɐn33		0	kan3	kʰɐn33		0	kʰɐn33	1		
+1353	困	kan3或van3	kʰɐn33或vɐn33		0	kan3或van3	kʰɐn33或vɐn33		0	kʰɐn33或vɐn33	1		
+1354	芹	kan4	kʰɐn42/31		0	kan4	kʰɐn42/31		0	kʰɐn42/31	1		
+1355	勤	kan4	kʰɐn42/31		0	kan4	kʰɐn42/31		0	kʰɐn42/31	1		
+1356	裙	kan4	kʰɐn42/31		0	kan4	kʰɐn42/31		0	kʰɐn42/31	1		
+1357	群	kan4	kʰɐn42/31		0	kan4	kʰɐn42/31		0	kʰɐn42/31	1		
+1358	菌	kan5	kʰɐn21		0	kan5	kʰɐn21		0	kʰɐn21	1		
+1359	近	kan5或gan6	kʰɐn21或kɐn53		0	kan5或gan6	kʰɐn21或kɐn53		0	kʰɐn21或kɐn53	1		
+1360	啃	kang2	kʰɐŋ21		0	kang2	kʰɐŋ21		0	kʰɐŋ21	1		
+1361	逛	kang3?	kʰɐŋ33	?	1	kang3?	kʰɐŋ33	?	1	kʰɐŋ33	1		发音人对该音存疑
+1362	咳	kat7	kʰɐt35		0	kat7	kʰɐt35		0	kʰɐt35	1		
+1363	窟	kat7?或fat7	kʰɐt35或fɐt35	?	1	kat7?或fat7	kʰɐt35或fɐt35	?	1	fɐt35	1		
+1363	窟									kʰɐt35			发音人对该音存疑
+1364	溝	kau1或gau1?	kʰɐu35或kɐu35	?	1	kau1或gau1?	kʰɐu35或kɐu35	?	1	kʰɐu35	1		
+1364	溝									kɐu35			发音人对该音存疑
+1365	扣	kau3	kʰɐu33		0	kau3	kʰɐu33		0	kʰɐu33	1		
+1366	寇	kau3	kʰɐu33		0	kau3	kʰɐu33		0	kʰɐu33	1		
+1367	垢	kau3?	kʰɐu33	?	1	kau3?	kʰɐu33	?	1	kʰɐu33	1		发音人对该音存疑
+1368	構	kau3或gau3?	kʰɐu33或kɐu33	?	1	kau3或gau3?	kʰɐu33或kɐu33	?	1	kʰɐu33	1		
+1368	構									kɐu33			发音人对该音存疑
+1369	購	kau3或gau3?	kʰɐu33或kɐu33	?	1	kau3或gau3?	kʰɐu33或kɐu33	?	1	kʰɐu33	1		
+1369	購									kɐu33			发音人对该音存疑
+1370	蚯	kau4	kʰɐu42/31		0	kau4	kʰɐu42/31		0	kʰɐu42/31	1		
+1371	摳	kau4	kʰɐu42/31		0	kau4	kʰɐu42/31		0	kʰɐu42/31	1		
+1372	瘸	ke4?	kʰɛ42/31	?	1	ke4?	kʰɛ42/31	?	1	kʰɛ42/31	1		发音人对该音存疑
+1373	茄	ke4或gaa1	kʰɛ42/31或ka35		0	ke4或gaa1	kʰɛ42/31或ka35		0	kʰɛ42/31或ka35	1		
+1374	駒	kei1	kʰei35		0	kei1	kʰei35		0	kʰei35	1		
+1375	拘	kei1	kʰei35		0	kei1	kʰei35		0	kʰei35	1		
+1376	崎	kei1	kʰei35		0	kei1	kʰei35		0	kʰei35	1		
+1377	畸	kei1	kʰei35		0	kei1	kʰei35		0	kʰei35	1		
+1378	嶇	kei1	kʰei35		0	kei1	kʰei35		0	kʰei35	1		
+1379	軀	kei1	kʰei35		0	kei1	kʰei35		0	kʰei35	1		
+1380	驅	kei1	kʰei35		0	kei1	kʰei35		0	kʰei35	1		
+1381	區	kei1或au1	kʰei35或ʔɐu35		0	kei1或au1	kʰei35或ʔɐu35		0	kʰei35或ʔɐu35	1		
+1382	企	kei2	kʰei21		0	kei2	kʰei21		0	kʰei21	1		
+1383	冀	kei3	kʰei33		0	kei3	kʰei33		0	kʰei33	1		
+1384	據	kei3或gei3?	kʰei33或kei33	?	1	kei3或gei3?	kʰei33或kei33	?	1	kʰei33	1		
+1384	據									kei33			发音人对该音存疑
+1385	祈	kei4	kʰei42/31		0	kei4	kʰei42/31		0	kʰei42/31	1		
+1386	渠	kei4	kʰei42/31		0	kei4	kʰei42/31		0	kʰei42/31	1		
+1387	奇	kei4	kʰei42/31		0	kei4	kʰei42/31		0	kʰei42/31	1		
+1388	其	kei4	kʰei42/31		0	kei4	kʰei42/31		0	kʰei42/31	1		
+1389	期	kei4	kʰei42/31		0	kei4	kʰei42/31		0	kʰei42/31	1		
+1390	棋	kei4	kʰei42/31		0	kei4	kʰei42/31		0	kʰei42/31	1		
+1391	旗	kei4	kʰei42/31		0	kei4	kʰei42/31		0	kʰei42/31	1		
+1392	鰭	kei4	kʰei42/31		0	kei4	kʰei42/31		0	kʰei42/31	1		
+1393	歧	kei4	kʰei42/31		0	kei4	kʰei42/31		0	kʰei42/31	1		
+1394	騎	kei4或ke4	kʰei42/31或kʰɛ42/31		0	kei4或ke4	kʰei42/31或kʰɛ42/31		0	kʰei42/31或kʰɛ42/31	1		
+1395	拒	kei5	kʰei21		0	kei5	kʰei21		0	kʰei21	1		
+1396	距	kei5	kʰei21		0	kei5	kʰei21		0	kʰei21	1		
+1397	傾	king1	kʰɪŋ35		0	kean1	kʰən35		0	kʰɪŋ35或kʰən35	False		
+1398	頃	king2	kʰɪŋ21		0	kean2	kʰən21		0	kʰɪŋ21或kʰən21	False		
+1399	鯨	king4	kʰɪŋ42/31		0	kean4	kʰən42/31		0	kʰɪŋ42/31或kʰən42/31	False		
+1400	擎	king4	kʰɪŋ42/31		0	kean4	kʰən42/31		0	kʰɪŋ42/31或kʰən42/31	False		
+1401	瓊	king4	kʰɪŋ42/31		0	kean4	kʰən42/31		0	kʰɪŋ42/31或kʰən42/31	False		
+1402	隙	kɪk7	kʰɪk35		0	keat7	kʰət35		0	kʰɪk35或kʰət35	False		
+1403	卻	kiek8	kʰiɛk3		0	kiek8	kʰiɛk3		0	kʰiɛk3	1		
+1404	劇	kiek8或kiek9?	kʰiɛk3或kʰiɛk53	?	1	kiek8或kiek9?	kʰiɛk3或kʰiɛk53	?	1	kʰiɛk3	1		
+1404	劇									kʰiɛk53			发音人对该音存疑
+1405	襟	kiem1?	kʰiɛm35	?	1	kiem1?	kʰiɛm35	?	1	kʰiɛm35	1		发音人对该音存疑
+1406	禁	kiem1或giem3	kʰiɛm35或kiɛm33		0	kiem1或giem3	kʰiɛm35或kiɛm33		0	kʰiɛm35或kiɛm33	1		
+1407	鉗	kiem4	kʰiɛm42/31		0	kiem4	kʰiɛm42/31		0	kʰiɛm42/31	1		
+1408	琴	kiem4	kʰiɛm42/31		0	kiem4	kʰiɛm42/31		0	kʰiɛm42/31	1		
+1409	擒	kiem4	kʰiɛm42/31		0	kiem4	kʰiɛm42/31		0	kʰiɛm42/31	1		
+1410	禽	kiem4	kʰiɛm42/31		0	kiem4	kʰiɛm42/31		0	kʰiɛm42/31	1		
+1411	強	kieng4	kʰiɛŋ42/31		0	kieng4	kʰiɛŋ42/31		0	kʰiɛŋ42/31	1		
+1412	給	kiep7	kʰiɛp35		0	kiep7	kʰiɛp35		0	kʰiɛp35	1		
+1413	吸	kiep7	kʰiɛp35		0	kiep7	kʰiɛp35		0	kʰiɛp35	1		
+1414	級	kiep7	kʰiɛp35		0	kiep7	kʰiɛp35		0	kʰiɛp35	1		
+1415	求	kieu4	kʰiɛu42/31		0	kieu4	kʰiɛu42/31		0	kʰiɛu42/31	1		
+1416	球	kieu4	kʰiɛu42/31		0	kieu4	kʰiɛu42/31		0	kʰiɛu42/31	1		
+1417	臼	kieu5	kʰiɛu21		0	kieu5	kʰiɛu21		0	kʰiɛu21	1		
+1418	舅	kieu5	kʰiɛu21		0	kieu5	kʰiɛu21		0	kʰiɛu21	1		
+1419	黔	kim4?	kʰim42/31	?	1	kim4?	kʰim42/31	?	1	kʰim42/31	1		发音人对该音存疑
+1420	拳	kin4	kʰin42/31		0	kin4	kʰin42/31		0	kʰin42/31	1		
+1421	權	kin4	kʰin42/31		0	kin4	kʰin42/31		0	kʰin42/31	1		
+1422	蠍	kit8	kʰit3		0	kit8	kʰit3		0	kʰit3	1		
+1423	揭	kit8	kʰit3		0	kit8	kʰit3		0	kʰit3	1		
+1424	竭	kit8	kʰit3		0	kit8	kʰit3		0	kʰit3	1		
+1425	訣	kit8	kʰit3		0	kit8	kʰit3		0	kʰit3	1		
+1426	決	kit8	kʰit3		0	kit8	kʰit3		0	kʰit3	1		
+1427	缺	kit8	kʰit3		0	kit8	kʰit3		0	kʰit3	1		
+1428	楔	kit8?	kʰit3	?	1	kit8?	kʰit3	?	1	kʰit3	1		发音人对该音存疑
+1429	蹺	kiu3	kʰiu33		0	kiu3	kʰiu33		0	kʰiu33	1		
+1430	翹	kiu3或kiu4	kʰiu33或kʰiu42/31		0	kiu3或kiu4	kʰiu33或kʰiu42/31		0	kʰiu33或kʰiu42/31	1		
+1431	蕎	kiu4	kʰiu42/31		0	kiu4	kʰiu42/31		0	kʰiu42/31	1		
+1432	喬	kiu4	kʰiu42/31		0	kiu4	kʰiu42/31		0	kʰiu42/31	1		
+1433	僑	kiu4	kʰiu42/31		0	kiu4	kʰiu42/31		0	kʰiu42/31	1		
+1434	橋	kiu4	kʰiu42/31		0	kiu4	kʰiu42/31		0	kʰiu42/31	1		
+1435	棵	ko1?	kʰɔ35	?	1	ko1?	kʰɔ35	?	1	kʰɔ35	1		发音人对该音存疑
+1436	顆	ko1?	kʰɔ35	?	1	ko1?	kʰɔ35	?	1	kʰɔ35	1		发音人对该音存疑
+1437	蝌	ko1?或fo1?	kʰɔ35或fɔ35	??	2	ko1?或fo1?	kʰɔ35或fɔ35	??	2	kʰɔ35或fɔ35	1		二者似皆可，发音人存疑
+1438	戈	ko1?或go1?	kʰɔ35或kɔ35	??	2	ko1?或go1?	kʰɔ35或kɔ35	??	2	kʰɔ35或kɔ35	1		二者似皆可，发音人存疑
+1439	課	ko3	kʰɔ33		0	ko3	kʰɔ33		0	kʰɔ33	1		
+1440	炕	kong3?	kʰᵘɔŋ33	?	1	kong3?	kʰᵘɔŋ33	?	1	kʰᵘɔŋ33	1		发音人对该音存疑
+1441	擴	kong3或kok8	kʰᵘɔŋ33或kʰɔk3		0	kong3或kok8	kʰᵘɔŋ33或kʰɔk3		0	kʰᵘɔŋ33或kʰɔk3	1		
+1442	扛	kong4?或gong1?	kʰᵘɔŋ42/31或kᵘɔŋ35	??	2	kong4?或gong1?	kʰᵘɔŋ42/31或kᵘɔŋ35	??	2	kʰᵘɔŋ42/31或kᵘɔŋ35	1		二者似皆可，发音人存疑
+1443	靠	kou3	kʰou33		0	kou3	kʰou33		0	kʰou33	1		
+1444	箍	ku1	kʰu35		0	ku1	kʰu35		0	kʰu35	1		
+1445	盔	kui1或kai1	kʰui35或kʰɐi35		0	kui1或kai1	kʰui35或kʰɐi35		0	kʰui35或kʰɐi35	1		
+1446	潰	kui5	kʰui21		0	kui5	kʰui21		0	kʰui21	1		
+1447	劊	kui5?	kʰui21	?	1	kui5?	kʰui21	?	1	kʰui21	1		发音人对该音存疑
+1448	賄	kui5?	kʰui21	?	1	kui5?	kʰui21	?	1	kʰui21	1		发音人对该音存疑
+1449	曲	kʊk7	kʰʊk35		0	kʊk7	kʰʊk35		0	kʰʊk35	1		
+1450	孔	kung2或hung2	kʰʊŋ21或hʊŋ21		0	kung2或hung2	kʰʊŋ21或hʊŋ21		0	kʰʊŋ21或hʊŋ21	1		
+1451	窮	kung4	kʰʊŋ42/31		0	kung4	kʰʊŋ42/31		0	kʰʊŋ42/31	1		
+1452	丐	koi3	kʰɔi33		0	koi3	kʰɔi33		0	kʰɔi33	1		
+1453	鈣	koi3	kʰɔi33		0	koi3	kʰɔi33		0	kʰɔi33	1		
+1454	溉	koi3	kʰɔi33		0	koi3	kʰɔi33		0	kʰɔi33	1		
+1455	慨	koi3	kʰɔi33		0	koi3	kʰɔi33		0	kʰɔi33	1		
+1456	概	koi3	kʰɔi33		0	koi3	kʰɔi33		0	kʰɔi33	1		
+1457	確	kok8	kʰɔk3		0	kok8	kʰɔk3		0	kʰɔk3	1		
+1458	廓	kok8	kʰɔk3		0	kok8	kʰɔk3		0	kʰɔk3	1		
+1459	曠	kong3	kʰᵘɔŋ33		0	kong3	kʰᵘɔŋ33		0	kʰᵘɔŋ33	1		
+1460	礦	kong3	kʰᵘɔŋ33		0	kong3	kʰᵘɔŋ33		0	kʰᵘɔŋ33	1		
+1461	抗	kong3	kʰᵘɔŋ33		0	kong3	kʰᵘɔŋ33		0	kʰᵘɔŋ33	1		
+1462	況	kong3	kʰᵘɔŋ33		0	kong3	kʰᵘɔŋ33		0	kʰᵘɔŋ33	1		
+1463	狂	kong4	kʰᵘɔŋ42/31		0	kong4	kʰᵘɔŋ42/31		0	kʰᵘɔŋ42/31	1		
+1464	豁	kut8	kʰut3		0	kut8	kʰut3		0	kʰut3	1		
+1465	括	kut8	kʰut3		0	kut8	kʰut3		0	kʰut3	1		
+1466	喇	laa1	la35		0	laa1	la35		0	la35	1		
+1467	拉	laai1	lai35		0	laai1	lai35		0	lai35	1		
+1468	啦	laai1或laa6	lai35或la53		0	laai1或laa6	lai35或la53		0	lai35或la53	1		
+1469	癩	laai6	lai53		0	laai6	lai53		0	lai53	1		
+1470	賴	laai6	lai53		0	laai6	lai53		0	lai53	1		
+1471	荔	laai6	lai53		0	laai6	lai53		0	lai53	1		
+1472	籃	laam4	lam42/31		0	laam4	lam42/31		0	lam42/31	1		
+1473	藍	laam4	lam42/31		0	laam4	lam42/31		0	lam42/31	1		
+1474	攬	laam5	lam21		0	laam5	lam21		0	lam21	1		
+1475	欖	laam5	lam21		0	laam5	lam21		0	lam21	1		
+1476	覽	laam5	lam21		0	laam5	lam21		0	lam21	1		
+1477	纜	laam6	lam53		0	laam6	lam53		0	lam53	1		
+1478	艦	laam6	lam53		0	laam6	lam53		0	lam53	1		
+1479	濫	laam6	lam53		0	laam6	lam53		0	lam53	1		
+1480	瀾	laan4	lan42/31		0	laan4	lan42/31		0	lan42/31	1		
+1481	蘭	laan4	lan42/31		0	laan4	lan42/31		0	lan42/31	1		
+1482	欄	laan4	lan42/31		0	laan4	lan42/31		0	lan42/31	1		
+1483	懶	laan5	lan21		0	laan5	lan21		0	lan21	1		
+1484	爛	laan6	lan53		0	laan6	lan53		0	lan53	1		
+1485	攔	laan6	lan53		0	laan6	lan53		0	lan53	1		
+1486	臘	laap9	lap53		0	laap9	lap53		0	lap53	1		
+1487	蠟	laap9	lap53		0	laap9	lap53		0	lap53	1		
+1488	辣	laat9	lat53		0	laat9	lat53		0	lat53	1		
+1489	撈	laau1或laau4	lau35或lau42/31		0	laau1或laau4	lau35或lau42/31		0	lau35或lau42/31	1		
+1490	黎	lai4	lɐi42/31		0	lai4	lɐi42/31		0	lɐi42/31	1		
+1491	犁	lai4	lɐi42/31		0	lai4	lɐi42/31		0	lɐi42/31	1		
+1492	禮	lai5	lɐi21		0	lai5	lɐi21		0	lɐi21	1		
+1493	勵	lai6	lɐi53		0	lai6	lɐi53		0	lɐi53	1		
+1494	麗	lai6	lɐi53		0	lai6	lɐi53		0	lɐi53	1		
+1495	例	lai6	lɐi53		0	lai6	lɐi53		0	lɐi53	1		
+1496	勒	lak9	lɐk53		0	lak9	lɐk53		0	lɐk53	1		
+1497	肋	lak9	lɐk53		0	lak9	lɐk53		0	lɐk53	1		
+1498	琳	lam4	lɐm42/31		0	lam4	lɐm42/31		0	lɐm42/31	1		
+1499	林	lam4	lɐm42/31		0	lam4	lɐm42/31		0	lɐm42/31	1		
+1500	淋	lam4	lɐm42/31		0	lam4	lɐm42/31		0	lɐm42/31	1		
+1501	臨	lam4	lɐm42/31		0	lam4	lɐm42/31		0	lɐm42/31	1		
+1502	凜	lam5	lɐm21		0	lam5	lɐm21		0	lɐm21	1		
+1503	檁	lam5	lɐm21		0	lam5	lɐm21		0	lɐm21	1		
+1504	磷	lan4	lɐn42/31		0	lan4	lɐn42/31		0	lɐn42/31	1		
+1505	鱗	lan4	lɐn42/31		0	lan4	lɐn42/31		0	lɐn42/31	1		
+1506	鄰	lan4	lɐn42/31		0	lan4	lɐn42/31		0	lɐn42/31	1		
+1507	侖	lan4	lɐn42/31		0	lan4	lɐn42/31		0	lɐn42/31	1		
+1508	倫	lan4	lɐn42/31		0	lan4	lɐn42/31		0	lɐn42/31	1		
+1509	淪	lan4	lɐn42/31		0	lan4	lɐn42/31		0	lɐn42/31	1		
+1510	論	lan4	lɐn42/31		0	lan4	lɐn42/31		0	lɐn42/31	1		
+1511	輪	lan4	lɐn42/31		0	lan4	lɐn42/31		0	lɐn42/31	1		
+1512	掄	lan4?	lɐn42/31	?	1	lan4?	lɐn42/31	?	1	lɐn42/31	1		发音人对该音存疑
+1513	吝	lan6	lɐn53		0	lan6	lɐn53		0	lɐn53	1		
+1514	躪	lan6	lɐn53		0	lan6	lɐn53		0	lɐn53	1		
+1515	楞	lang4?	lɐŋ42/31	?	1	lang4?	lɐŋ42/31	?	1	lɐŋ42/31	1		发音人对该音存疑
+1516	冷	lang5	lɐŋ21		0	lang5	lɐŋ21		0	lɐŋ21	1		
+1517	立	lap9	lɐp53		0	lap9	lɐp53		0	lɐp53	1		
+1518	垃	lap9	lɐp53		0	lap9	lɐp53		0	lɐp53	1		
+1519	甩	lat7	lɐt35		0	lat7	lɐt35		0	lɐt35	1		
+1520	栗	lat9	lɐt53		0	lat9	lɐt53		0	lɐt53	1		
+1521	律	lat9	lɐt53		0	lat9	lɐt53		0	lɐt53	1		
+1522	溜	lau1	lɐu35		0	lau1	lɐu35		0	lɐu35	1		
+1523	朽	lau2?或njau2?或hau2?或hiu2?	lɐu21或ȵɐu21或hɐu21或hiu21	????	4	lau2?或njau2?或hau2?或hiu2?	lɐu21或ȵɐu21或hɐu21或hiu21	????	4	lɐu21或ȵɐu21或hɐu21或hiu21	1		二者似皆可，发音人存疑
+1524	流	lau4	lɐu42/31		0	lau4	lɐu42/31		0	lɐu42/31	1		
+1525	琉	lau4	lɐu42/31		0	lau4	lɐu42/31		0	lɐu42/31	1		
+1526	硫	lau4	lɐu42/31		0	lau4	lɐu42/31		0	lɐu42/31	1		
+1527	婁	lau4	lɐu42/31		0	lau4	lɐu42/31		0	lɐu42/31	1		
+1528	樓	lau4	lɐu42/31		0	lau4	lɐu42/31		0	lɐu42/31	1		
+1529	劉	lau4	lɐu42/31		0	lau4	lɐu42/31		0	lɐu42/31	1		
+1530	榴	lau4	lɐu42/31		0	lau4	lɐu42/31		0	lɐu42/31	1		
+1531	瘤	lau4	lɐu42/31		0	lau4	lɐu42/31		0	lɐu42/31	1		
+1532	留	lau4	lɐu42/31		0	lau4	lɐu42/31		0	lɐu42/31	1		
+1533	柳	lau5	lɐu21		0	lau5	lɐu21		0	lɐu21	1		
+1534	摟	lau5?	lɐu21	?	1	lau5?	lɐu21	?	1	lɐu21	1		发音人对该音存疑
+1535	縷	lau5?或lui5?	lɐu21或lui21	??	2	lau5?或lui5?	lɐu21或lui21	??	2	lɐu21或lui21	1		二者似皆可，发音人存疑
+1536	陋	lau6	lɐu53		0	lau6	lɐu53		0	lɐu53	1		
+1537	漏	lau6	lɐu53		0	lau6	lɐu53		0	lɐu53	1		
+1538	餾	lau6或lau4?	lɐu53或lɐu42/31	?	1	lau6或lau4?	lɐu53或lɐu42/31	?	1	lɐu53	1		
+1538	餾									lɐu42/31			发音人对该音存疑
+1539	咧	le5	lɛ21		0	le5	lɛ21		0	lɛ21	1		
+1540	籬	lei4	lei42/31		0	lei4	lei42/31		0	lei42/31	1		
+1541	離	lei4	lei42/31		0	lei4	lei42/31		0	lei42/31	1		
+1542	釐	lei4	lei42/31		0	lei4	lei42/31		0	lei42/31	1		
+1543	厘	lei4	lei42/31		0	lei4	lei42/31		0	lei42/31	1		
+1544	狸	lei4	lei42/31		0	lei4	lei42/31		0	lei42/31	1		
+1545	梨	lei4	lei42/31		0	lei4	lei42/31		0	lei42/31	1		
+1546	灕	lei4?	lei42/31	?	1	lei4?	lei42/31	?	1	lei42/31	1		发音人对该音存疑
+1547	璃	lei4或lei1	lei42/31或lei35		0	lei4或lei1	lei42/31或lei35		0	lei42/31或lei35	1		
+1548	李	lei5	lei21		0	lei5	lei21		0	lei21	1		
+1549	哩	lei5	lei21		0	lei5	lei21		0	lei21	1		
+1550	鯉	lei5	lei21		0	lei5	lei21		0	lei21	1		
+1551	理	lei5	lei21		0	lei5	lei21		0	lei21	1		
+1552	裏	lei5	lei21		0	lei5	lei21		0	lei21	1		
+1553	旅	lei5	lei21		0	lei5	lei21		0	lei21	1		
+1554	履	lei5	lei21		0	lei5	lei21		0	lei21	1		
+1555	吏	lei6	lei53		0	lei6	lei53		0	lei53	1		
+1556	俐	lei6	lei53		0	lei6	lei53		0	lei53	1		
+1557	莉	lei6	lei53		0	lei6	lei53		0	lei53	1		
+1558	利	lei6	lei53		0	lei6	lei53		0	lei53	1		
+1559	厲	lei6	lei53		0	lei6	lei53		0	lei53	1		
+1560	慮	lei6	lei53		0	lei6	lei53		0	lei53	1		
+1561	濾	lei6	lei53		0	lei6	lei53		0	lei53	1		
+1562	痢	lei6或lei1？	lei53或lei35	？	1	lei6或lei1？	lei53或lei35	？	1	lei53	1		
+1562	痢									lei35			发音人对该音存疑
+1563	餌	lei6或nei5?	lei53或nei21	?	1	lei6或nei5?	lei53或nei21	?	1	lei53	1		
+1563	餌									nei21			发音人对该音存疑
+1564	淩	ling4	lɪŋ42/31		0	lean4	lən42/31		0	lɪŋ42/31或lən42/31	False		
+1565	菱	ling4	lɪŋ42/31		0	lean4	lən42/31		0	lɪŋ42/31或lən42/31	False		
+1566	棱	ling4	lɪŋ42/31		0	lean4	lən42/31		0	lɪŋ42/31或lən42/31	False		
+1567	陵	ling4	lɪŋ42/31		0	lean4	lən42/31		0	lɪŋ42/31或lən42/31	False		
+1568	靈	ling4	lɪŋ42/31		0	lean4	lən42/31		0	lɪŋ42/31或lən42/31	False		
+1569	玲	ling4	lɪŋ42/31		0	lean4	lən42/31		0	lɪŋ42/31或lən42/31	False		
+1570	蛉	ling4	lɪŋ42/31		0	lean4	lən42/31		0	lɪŋ42/31或lən42/31	False		
+1571	翎	ling4	lɪŋ42/31		0	lean4	lən42/31		0	lɪŋ42/31或lən42/31	False		
+1572	伶	ling4	lɪŋ42/31		0	lean4	lən42/31		0	lɪŋ42/31或lən42/31	False		
+1573	零	ling4	lɪŋ42/31		0	lean4	lən42/31		0	lɪŋ42/31或lən42/31	False		
+1574	齡	ling4	lɪŋ42/31		0	lean4	lən42/31		0	lɪŋ42/31或lən42/31	False		
+1575	嶺	ling5	lɪŋ21		0	lean5	lən21		0	lɪŋ21或lən21	False		
+1576	鈴	ling5	lɪŋ21		0	lean5	lən21		0	lɪŋ21或lən21	False		
+1577	領	ling5	lɪŋ21		0	lean5	lən21		0	lɪŋ21或lən21	False		
+1578	另	ling6	lɪŋ53		0	lean6	lən53		0	lɪŋ53或lən53	False		
+1579	令	ling6	lɪŋ53		0	lean6	lən53		0	lɪŋ53或lən53	False		
+1580	靂	lɪk7	lɪk35		0	leat7	lət35		0	lɪk35或lət35	False		
+1581	瀝	lɪk7	lɪk35		0	leat7	lət35		0	lɪk35或lət35	False		
+1582	礫	lɪk7?	lɪk35	?	1	leat7?	lət35	?	1	lɪk35或lət35	False		
+1583	力	lɪk9	lɪk53		0	leat9	lət53		0	lɪk53或lət53	False		
+1584	歷	lɪk9	lɪk53		0	leat9	lət53		0	lɪk53或lət53	False		
+1585	曆	lɪk9	lɪk53		0	leat9	lət53		0	lɪk53或lət53	False		
+1586	略	liek9	liɛk53		0	liek9	liɛk53		0	liɛk53	1		
+1587	掠	liek9	liɛk53		0	liek9	liɛk53		0	liɛk53	1		
+1588	涼	lieng4	liɛŋ42/31		0	lieng4	liɛŋ42/31		0	liɛŋ42/31	1		
+1589	良	lieng4	liɛŋ42/31		0	lieng4	liɛŋ42/31		0	liɛŋ42/31	1		
+1590	梁	lieng4	liɛŋ42/31		0	lieng4	liɛŋ42/31		0	liɛŋ42/31	1		
+1591	樑	lieng4	liɛŋ42/31		0	lieng4	liɛŋ42/31		0	liɛŋ42/31	1		
+1592	粱	lieng4	liɛŋ42/31		0	lieng4	liɛŋ42/31		0	liɛŋ42/31	1		
+1593	糧	lieng4	liɛŋ42/31		0	lieng4	liɛŋ42/31		0	liɛŋ42/31	1		
+1594	量	lieng4或lieng6	liɛŋ42/31或liɛŋ53		0	lieng4或lieng6	liɛŋ42/31或liɛŋ53		0	liɛŋ42/31或liɛŋ53	1		
+1595	倆	lieng5	liɛŋ21		0	lieng5	liɛŋ21		0	liɛŋ21	1		
+1596	輛	lieng5	liɛŋ21		0	lieng5	liɛŋ21		0	liɛŋ21	1		
+1597	兩	lieng5或nieng5	liɛŋ21或niɛŋ21		0	lieng5或nieng5	liɛŋ21或niɛŋ21		0	liɛŋ21或niɛŋ21	1		
+1598	諒	lieng6	liɛŋ53		0	lieng6	liɛŋ53		0	liɛŋ53	1		
+1599	亮	lieng6	liɛŋ53		0	lieng6	liɛŋ53		0	liɛŋ53	1		
+1600	獵	liep9	liɛp53		0	liep9	liɛp53		0	liɛp53	1		
+1601	潦	lieu5或liu4?或lou4?或lou5?	liɛu21或liu42/31或lou42/31或lou21	???	3	lieu5或liu4?或lou4?或lou5?	liɛu21或liu42/31或lou42/31或lou21	???	3	liɛu21	1		
+1601	潦									liu42/31或lou42/31或lou21			二者似皆可，发音人存疑
+1602	簾	lim4	lim42/31		0	lim4	lim42/31		0	lim42/31	1		
+1603	廉	lim4	lim42/31		0	lim4	lim42/31		0	lim42/31	1		
+1604	鐮	lim4	lim42/31		0	lim4	lim42/31		0	lim42/31	1		
+1605	斂	lim5	lim21		0	lim5	lim21		0	lim21	1		
+1606	臉	lim5	lim21		0	lim5	lim21		0	lim21	1		
+1607	連	lin4	lin42/31		0	lin4	lin42/31		0	lin42/31	1		
+1608	蓮	lin4	lin42/31		0	lin4	lin42/31		0	lin42/31	1		
+1609	聯	lin4	lin42/31		0	lin4	lin42/31		0	lin42/31	1		
+1610	憐	lin4	lin42/31		0	lin4	lin42/31		0	lin42/31	1		
+1611	戀	lin5	lin21		0	lin5	lin21		0	lin21	1		
+1612	練	lin6	lin53		0	lin6	lin53		0	lin53	1		
+1613	煉	lin6	lin53		0	lin6	lin53		0	lin53	1		
+1614	鏈	lin6	lin53		0	lin6	lin53		0	lin53	1		
+1615	列	lit9	lit53		0	lit9	lit53		0	lit53	1		
+1616	烈	lit9	lit53		0	lit9	lit53		0	lit53	1		
+1617	裂	lit9	lit53		0	lit9	lit53		0	lit53	1		
+1618	劣	lit9	lit53		0	lit9	lit53		0	lit53	1		
+1619	撩	liu4	liu42/31		0	liu4	liu42/31		0	liu42/31	1		
+1620	嘹	liu4	liu42/31		0	liu4	liu42/31		0	liu42/31	1		
+1621	繚	liu4	liu42/31		0	liu4	liu42/31		0	liu42/31	1		
+1622	燎	liu4	liu42/31		0	liu4	liu42/31		0	liu42/31	1		
+1623	瞭	liu4	liu42/31		0	liu4	liu42/31		0	liu42/31	1		
+1624	鐐	liu4	liu42/31		0	liu4	liu42/31		0	liu42/31	1		
+1625	遼	liu4	liu42/31		0	liu4	liu42/31		0	liu42/31	1		
+1626	療	liu4	liu42/31		0	liu4	liu42/31		0	liu42/31	1		
+1627	寥	liu4	liu42/31		0	liu4	liu42/31		0	liu42/31	1		
+1628	聊	liu4	liu42/31		0	liu4	liu42/31		0	liu42/31	1		
+1629	僚	liu4或lou4?	liu42/31或lou42/31	?	1	liu4或lou4?	liu42/31或lou42/31	?	1	liu42/31	1		
+1629	僚									lou42/31			发音人对该音存疑
+1630	了	liu5	liu21		0	liu5	liu21		0	liu21	1		
+1631	料	liu6	liu53		0	liu6	liu53		0	liu53	1		
+1632	騾	lo4	lɔ42/31		0	lo4	lɔ42/31		0	lɔ42/31	1		
+1633	囉	lo4	lɔ42/31		0	lo4	lɔ42/31		0	lɔ42/31	1		
+1634	羅	lo4	lɔ42/31		0	lo4	lɔ42/31		0	lɔ42/31	1		
+1635	蘿	lo4	lɔ42/31		0	lo4	lɔ42/31		0	lɔ42/31	1		
+1636	鑼	lo4	lɔ42/31		0	lo4	lɔ42/31		0	lɔ42/31	1		
+1637	籮	lo4	lɔ42/31		0	lo4	lɔ42/31		0	lɔ42/31	1		
+1638	邏	lo4或lo6?	lɔ42/31或lɔ53	?	1	lo4或lo6?	lɔ42/31或lɔ53	?	1	lɔ42/31	1		
+1638	邏									lɔ53			发音人对该音存疑
+1639	裸	lo5	lɔ21		0	lo5	lɔ21		0	lɔ21	1		
+1640	裹	lo5	lɔ21		0	lo5	lɔ21		0	lɔ21	1		
+1641	烙	lok9或lok8?	lɔk53或lɔk3	?	1	lok9或lok8?	lɔk53或lɔk3	?	1	lɔk53	1		
+1641	烙									lɔk3			发音人对该音存疑
+1642	酪	lok9或lok8?	lɔk53或lɔk3	?	1	lok9或lok8?	lɔk53或lɔk3	?	1	lɔk53	1		
+1642	酪									lɔk3			发音人对该音存疑
+1643	牢	lou4	lou42/31		0	lou4	lou42/31		0	lou42/31	1		
+1644	嘮	lou4	lou42/31		0	lou4	lou42/31		0	lou42/31	1		
+1645	勞	lou4	lou42/31		0	lou4	lou42/31		0	lou42/31	1		
+1646	盧	lou4	lou42/31		0	lou4	lou42/31		0	lou42/31	1		
+1647	廬	lou4	lou42/31		0	lou4	lou42/31		0	lou42/31	1		
+1648	顱	lou4	lou42/31		0	lou4	lou42/31		0	lou42/31	1		
+1649	蘆	lou4	lou42/31		0	lou4	lou42/31		0	lou42/31	1		
+1650	驢	lou4	lou42/31		0	lou4	lou42/31		0	lou42/31	1		
+1651	爐	lou4	lou42/31		0	lou4	lou42/31		0	lou42/31	1		
+1652	澇	lou4或lou6?	lou42/31或lou53	?	1	lou4或lou6?	lou42/31或lou53	?	1	lou42/31	1		
+1653	老	lou5	lou21		0	lou5	lou21		0	lou21	1		
+1654	姥	lou5	lou21		0	lou5	lou21		0	lou21	1		
+1655	鹵	lou5	lou21		0	lou5	lou21		0	lou21	1		
+1656	虜	lou5	lou21		0	lou5	lou21		0	lou21	1		
+1657	魯	lou5	lou21		0	lou5	lou21		0	lou21	1		
+1658	露	lou6	lou53		0	lou6	lou53		0	lou53	1		
+1659	路	lou6	lou53		0	lou6	lou53		0	lou53	1		
+1660	賂	lou6?	lou53	?	1	lou6?	lou53	?	1	lou53	1		发音人对该音存疑
+1661	簍	lui1?	lui35	?	1	lui1?	lui35	?	1	lui35	1		发音人对该音存疑
+1662	擂	lui4	lui42/31		0	lui4	lui42/31		0	lui42/31	1		
+1663	蕾	lui4	lui42/31		0	lui4	lui42/31		0	lui42/31	1		
+1664	雷	lui4	lui42/31		0	lui4	lui42/31		0	lui42/31	1		
+1665	壘	lui5	lui21		0	lui5	lui21		0	lui21	1		
+1666	呂	lui5	lui21		0	lui5	lui21		0	lui21	1		
+1667	侶	lui5	lui21		0	lui5	lui21		0	lui21	1		
+1668	鋁	lui5	lui21		0	lui5	lui21		0	lui21	1		
+1669	儡	lui5?	lui21	?	1	lui5?	lui21	?	1	lui21	1		发音人对该音存疑
+1670	屢	lui5?	lui21	?	1	lui5?	lui21	?	1	lui21	1		发音人对该音存疑
+1671	累	lui6	lui53		0	lui6	lui53		0	lui53	1		
+1672	類	lui6	lui53		0	lui6	lui53		0	lui53	1		
+1673	淚	lui6	lui53		0	lui6	lui53		0	lui53	1		
+1674	碌	lʊk7	lʊk35		0	lʊk7	lʊk35		0	lʊk35	1		
+1675	六	lʊk9	lʊk53		0	lʊk9	lʊk53		0	lʊk53	1		
+1676	陸	lʊk9	lʊk53		0	lʊk9	lʊk53		0	lʊk53	1		
+1677	氯	lʊk9	lʊk53		0	lʊk9	lʊk53		0	lʊk53	1		
+1678	綠	lʊk9	lʊk53		0	lʊk9	lʊk53		0	lʊk53	1		
+1679	錄	lʊk9	lʊk53		0	lʊk9	lʊk53		0	lʊk53	1		
+1680	鹿	lʊk9	lʊk53		0	lʊk9	lʊk53		0	lʊk53	1		
+1681	巒	lun4	lun42/31		0	lun4	lun42/31		0	lun42/31	1		
+1682	卵	lun5	lun21		0	lun5	lun21		0	lun21	1		
+1683	亂	lun6	lun53		0	lun6	lun53		0	lun53	1		
+1684	窿	lung1	lʊŋ35		0	lung1	lʊŋ35		0	lʊŋ35	1		
+1685	隆	lung4	lʊŋ42/31		0	lung4	lʊŋ42/31		0	lʊŋ42/31	1		
+1686	嚨	lung4	lʊŋ42/31		0	lung4	lʊŋ42/31		0	lʊŋ42/31	1		
+1687	龍	lung4	lʊŋ42/31		0	lung4	lʊŋ42/31		0	lʊŋ42/31	1		
+1688	聾	lung4	lʊŋ42/31		0	lung4	lʊŋ42/31		0	lʊŋ42/31	1		
+1689	籠	lung4	lʊŋ42/31		0	lung4	lʊŋ42/31		0	lʊŋ42/31	1		
+1690	朧	lung4	lʊŋ42/31		0	lung4	lʊŋ42/31		0	lʊŋ42/31	1		
+1691	攏	lung5	lʊŋ21		0	lung5	lʊŋ21		0	lʊŋ21	1		
+1692	壟	lung5	lʊŋ21		0	lung5	lʊŋ21		0	lʊŋ21	1		
+1693	弄	lung6?或nung6?	lʊŋ53或nʊŋ53	??	2	lung6?或nung6?	lʊŋ53或nʊŋ53	??	2	lʊŋ53或nʊŋ53	1		二者似皆可，发音人存疑
+1694	萊	loi4	lɔi42/31		0	loi4	lɔi42/31		0	lɔi42/31	1		
+1695	來	loi4	lɔi42/31		0	loi4	lɔi42/31		0	lɔi42/31	1		
+1696	洛	lok9	lɔk53		0	lok9	lɔk53		0	lɔk53	1		
+1697	絡	lok9	lɔk53		0	lok9	lɔk53		0	lɔk53	1		
+1698	駱	lok9	lɔk53		0	lok9	lɔk53		0	lɔk53	1		
+1699	落	lok9	lɔk53		0	lok9	lɔk53		0	lɔk53	1		
+1700	樂	lok9	lɔk53		0	lok9	lɔk53		0	lɔk53	1		
+1701	郎	long4	lᵘɔŋ42/31		0	long4	lᵘɔŋ42/31		0	lᵘɔŋ42/31	1		
+1702	榔	long4	lᵘɔŋ42/31		0	long4	lᵘɔŋ42/31		0	lᵘɔŋ42/31	1		
+1703	廊	long4	lᵘɔŋ42/31		0	long4	lᵘɔŋ42/31		0	lᵘɔŋ42/31	1		
+1704	琅	long4	lᵘɔŋ42/31		0	long4	lᵘɔŋ42/31		0	lᵘɔŋ42/31	1		
+1705	狼	long4	lᵘɔŋ42/31		0	long4	lᵘɔŋ42/31		0	lᵘɔŋ42/31	1		
+1706	朗	long5	lᵘɔŋ21		0	long5	lᵘɔŋ21		0	lᵘɔŋ21	1		
+1707	晾	long6	lᵘɔŋ53		0	long6	lᵘɔŋ53		0	lᵘɔŋ53	1		
+1708	浪	long6	lᵘɔŋ53		0	long6	lᵘɔŋ53		0	lᵘɔŋ53	1		
+1709	嗎	maa1	ma35		0	maa1	ma35		0	ma35	1		
+1710	媽	maa1	ma35		0	maa1	ma35		0	ma35	1		
+1711	麻	maa4	ma42/31		0	maa4	ma42/31		0	ma42/31	1		
+1712	瑪	maa5	ma21		0	maa5	ma21		0	ma21	1		
+1713	馬	maa5	ma21		0	maa5	ma21		0	ma21	1		
+1714	碼	maa5	ma21		0	maa5	ma21		0	ma21	1		
+1715	螞	maa5	ma21		0	maa5	ma21		0	ma21	1		
+1716	罵	maa6	ma53		0	maa6	ma53		0	ma53	1		
+1717	埋	maai4	mai42/31		0	maai4	mai42/31		0	mai42/31	1		
+1718	買	maai5	mai21		0	maai5	mai21		0	mai21	1		
+1719	賣	maai6	mai53		0	maai6	mai53		0	mai53	1		
+1720	邁	maai6	mai53		0	maai6	mai53		0	mai53	1		
+1721	蠻	maan4	man42/31		0	maan4	man42/31		0	man42/31	1		
+1722	晚	maan5	man21		0	maan5	man21		0	man21	1		
+1723	挽	maan5?	man21	?	1	maan5?	man21	?	1	man21	1		发音人对该音存疑
+1724	曼	maan6	man53		0	maan6	man53		0	man53	1		
+1725	饅	maan6	man53		0	maan6	man53		0	man53	1		
+1726	漫	maan6	man53		0	maan6	man53		0	man53	1		
+1727	慢	maan6	man53		0	maan6	man53		0	man53	1		
+1728	萬	maan6	man53		0	maan6	man53		0	man53	1		
+1729	蔓	maan6?	man53	?	1	maan6?	man53	?	1	man53	1		发音人对该音存疑
+1730	幔	maan6?	man53	?	1	maan6?	man53	?	1	man53	1		发音人对该音存疑
+1731	抹	maat8或mut8?	mat3或mut3	?	1	maat8或mut8?	mat3或mut3	?	1	mat3	1		
+1731	抹									mut3			发音人对该音存疑
+1732	襪	maat9	mat53		0	maat9	mat53		0	mat53	1		
+1733	錨	maau4	mau42/31		0	maau4	mau42/31		0	mau42/31	1		
+1734	鉚	maau5	mau21		0	maau5	mau21		0	mau21	1		
+1735	牡	maau5	mau21		0	maau5	mau21		0	mau21	1		
+1736	貌	maau6	mau53		0	maau6	mau53		0	mau53	1		
+1737	咪	mai1	mɐi35		0	mai1	mɐi35		0	mɐi35	1		
+1738	眯	mai3或mi1	mɐi33或mi35		0	mai3或mi1	mɐi33或mi35		0	mɐi33或mi35	1		
+1739	糜	mai4	mɐi42/31		0	mai4	mɐi42/31		0	mɐi42/31	1		
+1740	迷	mai4	mɐi42/31		0	mai4	mɐi42/31		0	mɐi42/31	1		
+1741	謎	mai4	mɐi42/31		0	mai4	mɐi42/31		0	mɐi42/31	1		
+1742	米	mai5	mɐi21		0	mai5	mɐi21		0	mɐi21	1		
+1743	掰	mak7	mɐk35		0	mak7	mɐk35		0	mɐk35	1		
+1744	陌	mak9	mɐk53		0	mak9	mɐk53		0	mɐk53	1		
+1745	墨	mak9	mɐk53		0	mak9	mɐk53		0	mɐk53	1		
+1746	默	mak9	mɐk53		0	mak9	mɐk53		0	mɐk53	1		
+1747	脈	mak9	mɐk53		0	mak9	mɐk53		0	mɐk53	1		
+1748	麥	mak9	mɐk53		0	mak9	mɐk53		0	mɐk53	1		
+1749	万	mak9	mɐk53		0	mak9	mɐk53		0	mɐk53	1		
+1750	聞	man4	mɐn42/31		0	man4	mɐn42/31		0	mɐn42/31	1		
+1751	民	man4	mɐn42/31		0	man4	mɐn42/31		0	mɐn42/31	1		
+1752	文	man4	mɐn42/31		0	man4	mɐn42/31		0	mɐn42/31	1		
+1753	紋	man4	mɐn42/31		0	man4	mɐn42/31		0	mɐn42/31	1		
+1754	蚊	man4	mɐn42/31		0	man4	mɐn42/31		0	mɐn42/31	1		
+1755	閩	man5	mɐn21		0	man5	mɐn21		0	mɐn21	1		
+1756	敏	man5	mɐn21		0	man5	mɐn21		0	mɐn21	1		
+1757	紊	man5	mɐn21		0	man5	mɐn21		0	mɐn21	1		
+1758	憫	man5	mɐn21		0	man5	mɐn21		0	mɐn21	1		
+1759	吻	man5	mɐn21		0	man5	mɐn21		0	mɐn21	1		
+1760	問	man6	mɐn53		0	man6	mɐn53		0	mɐn53	1		
+1761	萌	mang4	mɐŋ42/31		0	mang4	mɐŋ42/31		0	mɐŋ42/31	1		
+1762	盟	mang4	mɐŋ42/31		0	mang4	mɐŋ42/31		0	mɐŋ42/31	1		
+1763	氓	mang4	mɐŋ42/31		0	mang4	mɐŋ42/31		0	mɐŋ42/31	1		
+1764	盲	mang4	mɐŋ42/31		0	mang4	mɐŋ42/31		0	mɐŋ42/31	1		
+1765	錳	mang5	mɐŋ21		0	mang5	mɐŋ21		0	mɐŋ21	1		
+1766	猛	mang5	mɐŋ21		0	mang5	mɐŋ21		0	mɐŋ21	1		
+1767	孟	mang6	mɐŋ53		0	mang6	mɐŋ53		0	mɐŋ53	1		
+1768	密	mat9	mɐt53		0	mat9	mɐt53		0	mɐt53	1		
+1769	蜜	mat9	mɐt53		0	mat9	mɐt53		0	mɐt53	1		
+1770	勿	mat9	mɐt53		0	mat9	mɐt53		0	mɐt53	1		
+1771	物	mat9	mɐt53		0	mat9	mɐt53		0	mɐt53	1		
+1772	蟆	mau1或mou1?	mɐu35或mou35	?	1	mau1或mou1?	mɐu35或mou35	?	1	mɐu35	1		
+1772	蟆									mou35			发音人对该音存疑
+1773	矛	mau4	mɐu42/31		0	mau4	mɐu42/31		0	mɐu42/31	1		
+1774	茅	mau4	mɐu42/31		0	mau4	mɐu42/31		0	mɐu42/31	1		
+1775	謀	mau4	mɐu42/31		0	mau4	mɐu42/31		0	mɐu42/31	1		
+1776	某	mau5	mɐu21		0	mau5	mɐu21		0	mɐu21	1		
+1777	畝	mau5	mɐu21		0	mau5	mɐu21		0	mɐu21	1		
+1778	謬	mau6	mɐu53		0	mau6	mɐu53		0	mɐu53	1		
+1779	貿	mau6	mɐu53		0	mau6	mɐu53		0	mɐu53	1		
+1780	茂	mau6	mɐu53		0	mau6	mɐu53		0	mɐu53	1		
+1781	楣	mei4	mei42/31		0	mei4	mei42/31		0	mei42/31	1		
+1782	眉	mei4	mei42/31		0	mei4	mei42/31		0	mei42/31	1		
+1783	薇	mei4	mei42/31		0	mei4	mei42/31		0	mei42/31	1		
+1784	微	mei4	mei42/31		0	mei4	mei42/31		0	mei42/31	1		
+1785	媚	mei4?或mei6?	mei42/31或mei53	??	2	mei4?或mei6?	mei42/31或mei53	??	2	mei42/31或mei53	1		二者似皆可，发音人存疑
+1786	彌	mei4或nei4?	mei42/31或nei42/31	?	1	mei4或nei4?	mei42/31或nei42/31	?	1	mei42/31	1		
+1786	彌									nei42/31			发音人对该音存疑
+1787	美	mei5	mei21		0	mei5	mei21		0	mei21	1		
+1788	尾	mei5	mei21		0	mei5	mei21		0	mei21	1		
+1789	靡	mei5?	mei21	?	1	mei5?	mei21	?	1	mei21	1		发音人对该音存疑
+1790	未	mei6	mei53		0	mei6	mei53		0	mei53	1		
+1791	味	mei6	mei53		0	mei6	mei53		0	mei53	1		
+1792	妹	mei6	mei53		0	mei6	mei53		0	mei53	1		
+1793	銘	ming4	mɪŋ42/31		0	mean4	mən42/31		0	mɪŋ42/31或mən42/31	False		
+1794	名	ming4	mɪŋ42/31		0	mean4	mən42/31		0	mɪŋ42/31或mən42/31	False		
+1795	明	ming4	mɪŋ42/31		0	mean4	mən42/31		0	mɪŋ42/31或mən42/31	False		
+1796	螟	ming4	mɪŋ42/31		0	mean4	mən42/31		0	mɪŋ42/31或mən42/31	False		
+1797	鳴	ming4	mɪŋ42/31		0	mean4	mən42/31		0	mɪŋ42/31或mən42/31	False		
+1798	皿	ming5	mɪŋ21		0	mean5	mən21		0	mɪŋ21或mən21	False		
+1799	命	ming6	mɪŋ53		0	mean6	mən53		0	mɪŋ53或mən53	False		
+1800	覓	mɪk9	mɪk53		0	meat9	mət53		0	mɪk53或mət53	False		
+1801	娩	mian5?或min5?	miɐn21或min21	??	2	mian5?或min5?	miɐn21或min21	??	2	miɐn21或min21	1		二者似皆可，发音人存疑
+1802	免	mien5	miɛn21		0	mien5	miɛn21		0	miɛn21	1		
+1803	貓	mieu1	miɛu35		0	mieu1	miɛu35		0	miɛu35	1		
+1804	瞄	mieu1?	miɛu35	?	1	mieu1?	miɛu35	?	1	miɛu35	1		发音人对该音存疑
+1805	綿	min4	min42/31		0	min4	min42/31		0	min42/31	1		
+1806	棉	min4	min42/31		0	min4	min42/31		0	min42/31	1		
+1807	眠	min4	min42/31		0	min4	min42/31		0	min42/31	1		
+1808	冕	min5	min21		0	min5	min21		0	min21	1		
+1809	勉	min5	min21		0	min5	min21		0	min21	1		
+1810	緬	min5	min21		0	min5	min21		0	min21	1		
+1811	面	min6	min53		0	min6	min53		0	min53	1		
+1812	麵	min6	min53		0	min6	min53		0	min53	1		
+1813	滅	mit9	mit53		0	mit9	mit53		0	mit53	1		
+1814	蔑	mit9	mit53		0	mit9	mit53		0	mit53	1		
+1815	苗	miu4	miu42/31		0	miu4	miu42/31		0	miu42/31	1		
+1816	描	miu4	miu42/31		0	miu4	miu42/31		0	miu42/31	1		
+1817	藐	miu5	miu21		0	miu5	miu21		0	miu21	1		
+1818	渺	miu5	miu21		0	miu5	miu21		0	miu21	1		
+1819	秒	miu5	miu21		0	miu5	miu21		0	miu21	1		
+1820	妙	miu6	miu53		0	miu6	miu53		0	miu53	1		
+1821	廟	miu6	miu53		0	miu6	miu53		0	miu53	1		
+1822	魔	mo1	mɔ35		0	mo1	mɔ35		0	mɔ35	1		
+1823	麼	mo1	mɔ35		0	mo1	mɔ35		0	mɔ35	1		
+1824	摸	mo1	mɔ35		0	mo1	mɔ35		0	mɔ35	1		
+1825	蘑	mo4	mɔ42/31		0	mo4	mɔ42/31		0	mɔ42/31	1		
+1826	磨	mo4	mɔ42/31		0	mo4	mɔ42/31		0	mɔ42/31	1		
+1827	摩	mo4?或mo1	mɔ42/31或mɔ35	?	1	mo4?或mo1	mɔ42/31或mɔ35	?	1	mɔ35	1		
+1827	摩									mɔ42/31			发音人对该音存疑
+1828	幕	mok8或mok9?	mɔk3或mɔk53	?	1	mok8或mok9?	mɔk3或mɔk53	?	1	mɔk3	1		
+1828	幕									mɔk53			发音人对该音存疑
+1829	芒	mong4或mong1	mᵘɔŋ42/31或mᵘɔŋ35		0	mong4或mong1	mᵘɔŋ42/31或mᵘɔŋ35		0	mᵘɔŋ42/31或mᵘɔŋ35	1		
+1830	摹	mou4	mou42/31		0	mou4	mou42/31		0	mou42/31	1		
+1831	模	mou4	mou42/31		0	mou4	mou42/31		0	mou42/31	1		
+1832	巫	mou4	mou42/31		0	mou4	mou42/31		0	mou42/31	1		
+1833	誣	mou4	mou42/31		0	mou4	mou42/31		0	mou42/31	1		
+1834	蕪	mou4	mou42/31		0	mou4	mou42/31		0	mou42/31	1		
+1835	毛	mou4或mau1	mou42/31或mɐu35		0	mou4或mau1	mou42/31或mɐu35		0	mou42/31或mɐu35	1		
+1836	無	mou4或mou5	mou42/31或mou21		0	mou4或mou5	mou42/31或mou21		0	mou42/31或mou21	1		
+1837	侮	mou5	mou21		0	mou5	mou21		0	mou21	1		
+1838	拇	mou5	mou21		0	mou5	mou21		0	mou21	1		
+1839	母	mou5	mou21		0	mou5	mou21		0	mou21	1		
+1840	舞	mou5	mou21		0	mou5	mou21		0	mou21	1		
+1841	鵡	mou5	mou21		0	mou5	mou21		0	mou21	1		
+1842	武	mou5	mou21		0	mou5	mou21		0	mou21	1		
+1843	撫	mou5?或fu2?	mou21或fu21	??	2	mou5?或fu2?	mou21或fu21	??	2	mou21或fu21	1		二者似皆可，发音人存疑
+1844	姆	mou5或mou1	mou21或mou35		0	mou5或mou1	mou21或mou35		0	mou21或mou35	1		
+1845	務	mou6	mou53		0	mou6	mou53		0	mou53	1		
+1846	霧	mou6	mou53		0	mou6	mou53		0	mou53	1		
+1847	帽	mou6	mou53		0	mou6	mou53		0	mou53	1		
+1848	募	mou6	mou53		0	mou6	mou53		0	mou53	1		
+1849	墓	mou6	mou53		0	mou6	mou53		0	mou53	1		
+1850	慕	mou6	mou53		0	mou6	mou53		0	mou53	1		
+1851	暮	mou6	mou53		0	mou6	mou53		0	mou53	1		
+1852	冒	mou6或mau6	mou53或mɐu53		0	mou6或mau6	mou53或mɐu53		0	mou53或mɐu53	1		
+1853	玫	mui4	mui42/31		0	mui4	mui42/31		0	mui42/31	1		
+1854	枚	mui4	mui42/31		0	mui4	mui42/31		0	mui42/31	1		
+1855	黴	mui4	mui42/31		0	mui4	mui42/31		0	mui42/31	1		
+1856	媒	mui4	mui42/31		0	mui4	mui42/31		0	mui42/31	1		
+1857	煤	mui4	mui42/31		0	mui4	mui42/31		0	mui42/31	1		
+1858	梅	mui4	mui42/31		0	mui4	mui42/31		0	mui42/31	1		
+1859	每	mui5	mui21		0	mui5	mui21		0	mui21	1		
+1860	昧	mui6	mui53		0	mui6	mui53		0	mui53	1		
+1861	睦	mʊk9	mʊk53		0	mʊk9	mʊk53		0	mʊk53	1		
+1862	沐	mʊk9	mʊk53		0	mʊk9	mʊk53		0	mʊk53	1		
+1863	木	mʊk9	mʊk53		0	mʊk9	mʊk53		0	mʊk53	1		
+1864	目	mʊk9	mʊk53		0	mʊk9	mʊk53		0	mʊk53	1		
+1865	牧	mʊk9	mʊk53		0	mʊk9	mʊk53		0	mʊk53	1		
+1866	穆	mʊk9	mʊk53		0	mʊk9	mʊk53		0	mʊk53	1		
+1867	瞞	mun4	mun42/31		0	mun4	mun42/31		0	mun42/31	1		
+1868	門	mun4	mun42/31		0	mun4	mun42/31		0	mun42/31	1		
+1869	們	mun4	mun42/31		0	mun4	mun42/31		0	mun42/31	1		
+1870	滿	mun5	mun21		0	mun5	mun21		0	mun21	1		
+1871	悶	mun6	mun53		0	mun6	mun53		0	mun53	1		
+1872	檬	mung1或mung4	mʊŋ35或mʊŋ42/31		0	mung1或mung4	mʊŋ35或mʊŋ42/31		0	mʊŋ35或mʊŋ42/31	1		
+1873	朦	mung4	mʊŋ42/31		0	mung4	mʊŋ42/31		0	mʊŋ42/31	1		
+1874	蒙	mung4	mʊŋ42/31		0	mung4	mʊŋ42/31		0	mʊŋ42/31	1		
+1875	夢	mung6	mʊŋ53		0	mung6	mʊŋ53		0	mʊŋ53	1		
+1876	饃	mok8	mɔk3		0	mok8	mɔk3		0	mɔk3	1		
+1877	膜	mok8	mɔk3		0	mok8	mɔk3		0	mɔk3	1		
+1878	寞	mok9	mɔk53		0	mok9	mɔk53		0	mɔk53	1		
+1879	莫	mok9	mɔk53		0	mok9	mɔk53		0	mɔk53	1		
+1880	漠	mok9	mɔk53		0	mok9	mɔk53		0	mɔk53	1		
+1881	亡	mong4	mᵘɔŋ42/31		0	mong4	mᵘɔŋ42/31		0	mᵘɔŋ42/31	1		
+1882	忙	mong4	mᵘɔŋ42/31		0	mong4	mᵘɔŋ42/31		0	mᵘɔŋ42/31	1		
+1883	忘	mong4	mᵘɔŋ42/31		0	mong4	mᵘɔŋ42/31		0	mᵘɔŋ42/31	1		
+1884	茫	mong4	mᵘɔŋ42/31		0	mong4	mᵘɔŋ42/31		0	mᵘɔŋ42/31	1		
+1885	莽	mong5	mᵘɔŋ21		0	mong5	mᵘɔŋ21		0	mᵘɔŋ21	1		
+1886	網	mong5	mᵘɔŋ21		0	mong5	mᵘɔŋ21		0	mᵘɔŋ21	1		
+1887	妄	mong5	mᵘɔŋ21		0	mong5	mᵘɔŋ21		0	mᵘɔŋ21	1		
+1888	望	mong6	mᵘɔŋ53		0	mong6	mᵘɔŋ53		0	mᵘɔŋ53	1		
+1889	沒	mut9	mut53		0	mut9	mut53		0	mut53	1		
+1890	茉	mut9	mut53		0	mut9	mut53		0	mut53	1		
+1891	末	mut9	mut53		0	mut9	mut53		0	mut53	1		
+1892	沫	mut9	mut53		0	mut9	mut53		0	mut53	1		
+1893	拿	naa4	na42/31		0	naa4	na42/31		0	na42/31	1		
+1894	哪	naa5	na21		0	naa5	na21		0	na21	1		
+1895	乃	naai5	nai21		0	naai5	nai21		0	nai21	1		
+1896	奶	naai5或naai1	nai21或nai35		0	naai5或naai1	nai21或nai35		0	nai21或nai35	1		
+1897	男	naam4	nam42/31		0	naam4	nam42/31		0	nam42/31	1		
+1898	南	naam4	nam42/31		0	naam4	nam42/31		0	nam42/31	1		
+1899	難	naan4	nan42/31		0	naan4	nan42/31		0	nan42/31	1		
+1900	呐	naap9	nap53		0	naap9	nap53		0	nap53	1		
+1901	納	naap9	nap53		0	naap9	nap53		0	nap53	1		
+1902	鈉	naap9	nap53		0	naap9	nap53		0	nap53	1		
+1903	捺	naat9或naap9?	nat53或nap53	?	1	naat9或naap9?	nat53或nap53	?	1	nat53	1		
+1903	捺									nap53			发音人对该音存疑
+1904	鬧	naau6	nau53		0	naau6	nau53		0	nau53	1		
+1905	尼	nai4	nɐi42/31		0	nai4	nɐi42/31		0	nɐi42/31	1		
+1906	泥	nai4	nɐi42/31		0	nai4	nɐi42/31		0	nɐi42/31	1		
+1907	昵	nai4	nɐi42/31		0	nai4	nɐi42/31		0	nɐi42/31	1		
+1908	膩	nai6	nɐi53		0	nai6	nɐi53		0	nɐi53	1		
+1909	撚	nan5	nɐn21		0	nan5	nɐn21		0	nɐn21	1		
+1910	擰	nan5或ning6	nɐn21或nɪŋ53		0	nan5或nean6	nɐn21或nən53		0	nɐn21或nɪŋ53或nən53	False		
+1911	能	nang4	nɐŋ42/31		0	nang4	nɐŋ42/31		0	nɐŋ42/31	1		
+1912	粒	nap7	nɐp35		0	nap7	nɐp35		0	nɐp35	1		
+1913	扭	nau5	nɐu21		0	nau5	nɐu21		0	nɐu21	1		
+1914	紐	nau5	nɐu21		0	nau5	nɐu21		0	nɐu21	1		
+1915	鈕	nau5	nɐu21		0	nau5	nɐu21		0	nɐu21	1		
+1916	呢	ne3或ni6	nɛ33或ni53		0	ne3或ni6	nɛ33或ni53		0	nɛ33或ni53	1		
+1917	您	nei5	nei21		0	nei5	nei21		0	nei21	1		
+1918	你	nei5	nei21		0	nei5	nei21		0	nei21	1		
+1919	女	nei5	nei21		0	nei5	nei21		0	nei21	1		
+1920	檸	ning4	nɪŋ42/31		0	nean4	nən42/31		0	nɪŋ42/31或nən42/31	False		
+1921	獰	ning4	nɪŋ42/31		0	nean4	nən42/31		0	nɪŋ42/31或nən42/31	False		
+1922	濘	ning4	nɪŋ42/31		0	nean4	nən42/31		0	nɪŋ42/31或nən42/31	False		
+1923	寧	ning4	nɪŋ42/31		0	nean4	nən42/31		0	nɪŋ42/31或nən42/31	False		
+1924	匿	nɪk7	nɪk35		0	neat7	nət35		0	nɪk35或nət35	False		
+1925	溺	nɪk7	nɪk35		0	neat7	nət35		0	nɪk35或nət35	False		
+1926	衙	ngaa4	ŋa42/31		0	ngaa4	ŋa42/31		0	ŋa42/31	1		
+1927	蚜	ngaa4	ŋa42/31		0	ngaa4	ŋa42/31		0	ŋa42/31	1		
+1928	牙	ngaa4	ŋa42/31		0	ngaa4	ŋa42/31		0	ŋa42/31	1		
+1929	芽	ngaa4	ŋa42/31		0	ngaa4	ŋa42/31		0	ŋa42/31	1		
+1930	瓦	ngaa5	ŋa21		0	ngaa5	ŋa21		0	ŋa21	1		
+1931	雅	ngaa5	ŋa21		0	ngaa5	ŋa21		0	ŋa21	1		
+1932	涯	ngaai4	ŋai42/31		0	ngaai4	ŋai42/31		0	ŋai42/31	1		
+1933	崖	ngaai4	ŋai42/31		0	ngaai4	ŋai42/31		0	ŋai42/31	1		
+1934	巖	ngaam4	ŋam42/31		0	ngaam4	ŋam42/31		0	ŋam42/31	1		
+1935	癌	ngaam4	ŋam42/31		0	ngaam4	ŋam42/31		0	ŋam42/31	1		
+1936	顏	ngaan4	ŋan42/31		0	ngaan4	ŋan42/31		0	ŋan42/31	1		
+1937	眼	ngaan5	ŋan21		0	ngaan5	ŋan21		0	ŋan21	1		
+1938	軋	ngaan5?	ŋan21	?	1	ngaan5?	ŋan21	?	1	ŋan21	1		发音人对该音存疑
+1939	雁	ngaan6	ŋan53		0	ngaan6	ŋan53		0	ŋan53	1		
+1940	肴	ngaau4	ŋau42/31		0	ngaau4	ŋau42/31		0	ŋau42/31	1		
+1941	淆	ngaau4	ŋau42/31		0	ngaau4	ŋau42/31		0	ŋau42/31	1		
+1942	咬	ngaau5	ŋau21		0	ngaau5	ŋau21		0	ŋau21	1		
+1943	巍	ngai4	ŋɐi42/31		0	ngai4	ŋɐi42/31		0	ŋɐi42/31	1		
+1944	桅	ngai4	ŋɐi42/31		0	ngai4	ŋɐi42/31		0	ŋɐi42/31	1		
+1945	危	ngai4	ŋɐi42/31		0	ngai4	ŋɐi42/31		0	ŋɐi42/31	1		
+1946	蟻	ngai5	ŋɐi21		0	ngai5	ŋɐi21		0	ŋɐi21	1		
+1947	魏	ngai6	ŋɐi53		0	ngai6	ŋɐi53		0	ŋɐi53	1		
+1948	偽	ngai6	ŋɐi53		0	ngai6	ŋɐi53		0	ŋɐi53	1		
+1949	藝	ngai6	ŋɐi53		0	ngai6	ŋɐi53		0	ŋɐi53	1		
+1950	毅	ngai6	ŋɐi53		0	ngai6	ŋɐi53		0	ŋɐi53	1		
+1951	扼	ngak7	ŋɐk35		0	ngak7	ŋɐk35		0	ŋɐk35	1		
+1952	額	ngak9	ŋɐk53		0	ngak9	ŋɐk53		0	ŋɐk53	1		
+1953	銀	ngan4	ŋɐn42/31		0	ngan4	ŋɐn42/31		0	ŋɐn42/31	1		
+1954	硬	ngang6	ŋɐŋ53		0	ngang6	ŋɐŋ53		0	ŋɐŋ53	1		
+1955	屹	ngat9	ŋɐt53		0	ngat9	ŋɐt53		0	ŋɐt53	1		
+1956	迄	ngat9	ŋɐt53		0	ngat9	ŋɐt53		0	ŋɐt53	1		
+1957	疙	ngat9	ŋɐt53		0	ngat9	ŋɐt53		0	ŋɐt53	1		
+1958	遏	ngat9?	ŋɐt53	?	1	ngat9?	ŋɐt53	?	1	ŋɐt53	1		发音人对该音存疑
+1959	勾	ngau1	ŋɐu35		0	ngau1	ŋɐu35		0	ŋɐu35	1		
+1960	鉤	ngau1	ŋɐu35		0	ngau1	ŋɐu35		0	ŋɐu35	1		
+1961	牛	ngau4	ŋɐu42/31		0	ngau4	ŋɐu42/31		0	ŋɐu42/31	1		
+1962	訛	ngo4	ŋɔ42/31		0	ngo4	ŋɔ42/31		0	ŋɔ42/31	1		
+1963	俄	ngo4	ŋɔ42/31		0	ngo4	ŋɔ42/31		0	ŋɔ42/31	1		
+1964	鵝	ngo4	ŋɔ42/31		0	ngo4	ŋɔ42/31		0	ŋɔ42/31	1		
+1965	蛾	ngo4	ŋɔ42/31		0	ngo4	ŋɔ42/31		0	ŋɔ42/31	1		
+1966	我	ngo5	ŋɔ21		0	ngo5	ŋɔ21		0	ŋɔ21	1		
+1967	餓	ngo6	ŋɔ53		0	ngo6	ŋɔ53		0	ŋɔ53	1		
+1968	臥	ngo6	ŋɔ53		0	ngo6	ŋɔ53		0	ŋɔ53	1		
+1969	呆	ngoi4	ŋɔi42/31		0	ngoi4	ŋɔi42/31		0	ŋɔi42/31	1		
+1970	咱	ngok7訓讀	ŋɔk35	訓讀	0	ngok7訓讀	ŋɔk35	訓讀	0	ŋɔk35	1		訓讀
+1971	憨	ngong6或ham1	ŋᵘɔŋ53或hɐm35		0	ngong6或ham1	ŋᵘɔŋ53或hɐm35		0	ŋᵘɔŋ53或hɐm35	1		
+1972	襖	ngou4	ŋou42/31		0	ngou4	ŋou42/31		0	ŋou42/31	1		
+1973	藕	ngou5	ŋou21		0	ngou5	ŋou21		0	ŋou21	1		
+1974	偶	ngou5	ŋou21		0	ngou5	ŋou21		0	ŋou21	1		
+1975	熬	ngou6	ŋou53		0	ngou6	ŋou53		0	ŋou53	1		
+1976	傲	ngou6	ŋou53		0	ngou6	ŋou53		0	ŋou53	1		
+1977	外	ngoi6	ŋɔi53		0	ngoi6	ŋɔi53		0	ŋɔi53	1		
+1978	礙	ngoi6	ŋɔi53		0	ngoi6	ŋɔi53		0	ŋɔi53	1		
+1979	艾	ngoi6	ŋɔi53		0	ngoi6	ŋɔi53		0	ŋɔi53	1		
+1980	愕	ngok9	ŋɔk53		0	ngok9	ŋɔk53		0	ŋɔk53	1		
+1981	鱷	ngok9	ŋɔk53		0	ngok9	ŋɔk53		0	ŋɔk53	1		
+1982	嶽	ngok9	ŋɔk53		0	ngok9	ŋɔk53		0	ŋɔk53	1		
+1983	岳	ngok9	ŋɔk53		0	ngok9	ŋɔk53		0	ŋɔk53	1		
+1984	岸	ngon6	ŋᵘɔn53		0	ngon6	ŋᵘɔn53		0	ŋᵘɔn53	1		
+1985	昂	ngong4	ŋᵘɔŋ42/31		0	ngong4	ŋᵘɔŋ42/31		0	ŋᵘɔŋ42/31	1		
+1986	攆	nien5?	niɛn21	?	1	nien5?	niɛn21	?	1	niɛn21	1		发音人对该音存疑
+1987	碾	nien5?	niɛn21	?	1	nien5?	niɛn21	?	1	niɛn21	1		发音人对该音存疑
+1988	娘	nieng4	niɛŋ42/31		0	nieng4	niɛŋ42/31		0	niɛŋ42/31	1		
+1989	凹	niep8或nap7	niɛp3或nɐp35		0	niep8或nap7	niɛp3或nɐp35		0	niɛp3或nɐp35	1		
+1990	鑷	niep9	niɛp53		0	niep9	niɛp53		0	niɛp53	1		
+1991	捏	niet9或niep9?或nip9?	niɛt53或niɛp53或nip53	??	2	niet9或niep9?或nip9?	niɛt53或niɛp53或nip53	??	2	niɛt53	1		
+1991	捏									niɛp53或nip53			二者似皆可，发音人存疑
+1992	尿	nieu6	niɛu53		0	nieu6	niɛu53		0	niɛu53	1		
+1993	念	nim6	nim53		0	nim6	nim53		0	nim53	1		
+1994	驗	nim6或njim6?	nim53或ȵim53	?	1	nim6或njim6?	nim53或ȵim53	?	1	nim53	1		
+1994	驗									ȵim53			发音人对该音存疑
+1995	年	nin4	nin42/31		0	nin4	nin42/31		0	nin42/31	1		
+1996	聶	nip9	nip53		0	nip9	nip53		0	nip53	1		
+1997	淫	njam4?	ȵɐm42/31	?	1	njam4?	ȵɐm42/31	?	1	ȵɐm42/31	1		发音人对该音存疑
+1998	飲	njam5	ȵɐm21		0	njam5	ȵɐm21		0	ȵɐm21	1		
+1999	任	njam6	ȵɐm53		0	njam6	ȵɐm53		0	ȵɐm53	1		
+2000	賃	njam6	ȵɐm53		0	njam6	ȵɐm53		0	ȵɐm53	1		
+2001	人	njan4	ȵɐn42/31		0	njan4	ȵɐn42/31		0	ȵɐn42/31	1		
+2002	仁	njan4或jan4?	ȵɐn42/31或jɐn42/31	?	1	njan4或jan4?	ȵɐn42/31或jɐn42/31	?	1	ȵɐn42/31	1		
+2002	仁									jɐn42/31			发音人对该音存疑
+2003	忍	njan5	ȵɐn21		0	njan5	ȵɐn21		0	ȵɐn21	1		
+2004	認	njan6	ȵɐn53		0	njan6	ȵɐn53		0	ȵɐn53	1		
+2005	紉	njan6	ȵɐn53		0	njan6	ȵɐn53		0	ȵɐn53	1		
+2006	刃	njan6	ȵɐn53		0	njan6	ȵɐn53		0	ȵɐn53	1		
+2007	閏	njan6	ȵɐn53		0	njan6	ȵɐn53		0	ȵɐn53	1		
+2008	潤	njan6	ȵɐn53		0	njan6	ȵɐn53		0	ȵɐn53	1		
+2009	韌	njan6或訓讀njang5	ȵɐn53或ȵɐŋ21	訓讀	0	njan6或訓讀njang5	ȵɐn53或ȵɐŋ21	訓讀	0	ȵɐn53或ȵɐŋ21	1		訓讀
+2010	日	njat9	ȵɐt53		0	njat9	ȵɐt53		0	ȵɐt53	1		
+2011	撓	njau1或ngaau4	ȵɐu35或ŋau42/31		0	njau1或ngaau4	ȵɐu35或ŋau42/31		0	ȵɐu35或ŋau42/31	1		
+2012	仍	njing4	ȵɪŋ42/31		0	njean4	ȵən42/31		0	ȵɪŋ42/31或ȵən42/31	False		
+2013	扔	njing4	ȵɪŋ42/31		0	njean4	ȵən42/31		0	ȵɪŋ42/31或ȵən42/31	False		
+2014	凝	njing4或king4	ȵɪŋ42/31或kʰɪŋ42/31		0	njean4或kean4	ȵən42/31或kʰən42/31		0	ȵɪŋ42/31或kʰɪŋ42/31或ȵən42/31或kʰən42/31	False		
+2015	逆	njɪk9	ȵɪk53		0	njeat9	ȵət53		0	ȵɪk53或ȵət53	False		
+2016	儒	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2017	蠕	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2018	而	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2019	兒	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2020	如	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2021	娛	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2022	宜	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2023	誼	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2024	疑	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2025	儀	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2026	隅	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2027	愚	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2028	喻	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2029	逾	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2030	愉	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2031	榆	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2032	魚	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2033	漁	nji4	ȵi42/31		0	nji4	ȵi42/31		0	ȵi42/31	1		
+2034	耳	nji5	ȵi21		0	nji5	ȵi21		0	ȵi21	1		
+2035	爾	nji5	ȵi21		0	nji5	ȵi21		0	ȵi21	1		
+2036	語	nji5	ȵi21		0	nji5	ȵi21		0	ȵi21	1		
+2037	擬	nji5	ȵi21		0	nji5	ȵi21		0	ȵi21	1		
+2038	二	nji6	ȵi53		0	nji6	ȵi53		0	ȵi53	1		
+2039	貳	nji6	ȵi53		0	nji6	ȵi53		0	ȵi53	1		
+2040	義	nji6	ȵi53		0	nji6	ȵi53		0	ȵi53	1		
+2041	議	nji6	ȵi53		0	nji6	ȵi53		0	ȵi53	1		
+2042	寓	nji6	ȵi53		0	nji6	ȵi53		0	ȵi53	1		
+2043	遇	nji6	ȵi53		0	nji6	ȵi53		0	ȵi53	1		
+2044	若	njiek9	ȵiɛk53		0	njiek9	ȵiɛk53		0	ȵiɛk53	1		
+2045	弱	njiek9	ȵiɛk53		0	njiek9	ȵiɛk53		0	ȵiɛk53	1		
+2046	瘧	njiek9?	ȵiɛk53	?	1	njiek9?	ȵiɛk53	?	1	ȵiɛk53	1		发音人对该音存疑
+2047	虐	njiek9?	ȵiɛk53	?	1	njiek9?	ȵiɛk53	?	1	ȵiɛk53	1		发音人对该音存疑
+2048	攘	njieng5	ȵiɛŋ21		0	njieng5	ȵiɛŋ21		0	ȵiɛŋ21	1		
+2049	壤	njieng5	ȵiɛŋ21		0	njieng5	ȵiɛŋ21		0	ȵiɛŋ21	1		
+2050	嚷	njieng5?	ȵiɛŋ21	?	1	njieng5?	ȵiɛŋ21	?	1	ȵiɛŋ21	1		发音人对该音存疑
+2051	讓	njieng6	ȵiɛŋ53		0	njieng6	ȵiɛŋ53		0	ȵiɛŋ53	1		
+2052	釀	njieng6?	ȵiɛŋ53	?	1	njieng6?	ȵiɛŋ53	?	1	ȵiɛŋ53	1		发音人对该音存疑
+2053	嚴	njim4	ȵim42/31		0	njim4	ȵim42/31		0	ȵim42/31	1		
+2054	染	njim5	ȵim21		0	njim5	ȵim21		0	ȵim21	1		
+2055	然	njin4	ȵin42/31		0	njin4	ȵin42/31		0	ȵin42/31	1		
+2056	燃	njin4	ȵin42/31		0	njin4	ȵin42/31		0	ȵin42/31	1		
+2057	原	njin4	ȵin42/31		0	njin4	ȵin42/31		0	ȵin42/31	1		
+2058	源	njin4	ȵin42/31		0	njin4	ȵin42/31		0	ȵin42/31	1		
+2059	研	njin4或ngaan4?	ȵin42/31或ŋan42/31	?	1	njin4或ngaan4?	ȵin42/31或ŋan42/31	?	1	ȵin42/31或ŋan42/31	1		二者似皆可，发音人存疑
+2060	軟	njin5	ȵin21		0	njin5	ȵin21		0	ȵin21	1		
+2061	言	njin6	ȵin53		0	njin6	ȵin53		0	ȵin53	1		
+2062	願	njin6	ȵin53		0	njin6	ȵin53		0	ȵin53	1		
+2063	唁	njin6?	ȵin53	?	1	njin6?	ȵin53	?	1	ȵin53	1		发音人对该音存疑
+2064	諺	njin6?	ȵin53	?	1	njin6?	ȵin53	?	1	ȵin53	1		发音人对该音存疑
+2065	孽	njip9?	ȵip53	?	1	njip9?	ȵip53	?	1	ȵip53	1		发音人对该音存疑
+2066	熱	njit9	ȵit53		0	njit9	ȵit53		0	ȵit53	1		
+2067	月	njit9	ȵit53		0	njit9	ȵit53		0	ȵit53	1		
+2068	擾	njiu5	ȵiu21		0	njiu5	ȵiu21		0	ȵiu21	1		
+2069	繞	njiu5?	ȵiu21	?	1	njiu5?	ȵiu21	?	1	ȵiu21	1		发音人对该音存疑
+2070	乳	njui5	ȵui21		0	njui5	ȵui21		0	ȵui21	1		
+2071	蕊	njui5?	ȵui21	?	1	njui5?	ȵui21	?	1	ȵui21	1		发音人对该音存疑
+2072	肉	njʊk9	ȵʊk53		0	njʊk9	ȵʊk53		0	ȵʊk53	1		
+2073	玉	njʊk9	ȵʊk53		0	njʊk9	ȵʊk53		0	ȵʊk53	1		
+2074	獄	njʊk9或jʊk9?	ȵʊk53或jʊk53	?	1	njʊk9或jʊk9?	ȵʊk53或jʊk53	?	1	ȵʊk53	1		
+2074	獄									jʊk53			发音人对该音存疑
+2075	娜	no4	nɔ42/31		0	no4	nɔ42/31		0	nɔ42/31	1		
+2076	挪	no4	nɔ42/31		0	no4	nɔ42/31		0	nɔ42/31	1		
+2077	螺	no4或lo4	nɔ42/31或lɔ42/31		0	no4或lo4	nɔ42/31或lɔ42/31		0	nɔ42/31或lɔ42/31	1		
+2078	那	no5或naa5	nɔ21或na21		0	no5或naa5	nɔ21或na21		0	nɔ21或na21	1		
+2079	懦	no6	nɔ53		0	no6	nɔ53		0	nɔ53	1		
+2080	糯	no6	nɔ53		0	no6	nɔ53		0	nɔ53	1		
+2081	襠	nong6?或dong1?	nᵘɔŋ53或tᵘɔŋ35	??	2	nong6?或dong1?	nᵘɔŋ53或tᵘɔŋ35	??	2	nᵘɔŋ53或tᵘɔŋ35	1		二者似皆可，发音人存疑
+2082	奴	nou4	nou42/31		0	nou4	nou42/31		0	nou42/31	1		
+2083	惱	nou5	nou21		0	nou5	nou21		0	nou21	1		
+2084	腦	nou5	nou21		0	nou5	nou21		0	nou21	1		
+2085	努	nou5	nou21		0	nou5	nou21		0	nou21	1		
+2086	怒	nou6	nou53		0	nou6	nou53		0	nou53	1		
+2087	餒	nui5?	nui21	?	1	nui5?	nui21	?	1	nui21	1		发音人对该音存疑
+2088	暖	nun5	nun21		0	nun5	nun21		0	nun21	1		
+2089	嫩	nun6	nun53		0	nun6	nun53		0	nun53	1		
+2090	膿	nung4	nʊŋ42/31		0	nung4	nʊŋ42/31		0	nʊŋ42/31	1		
+2091	農	nung4	nʊŋ42/31		0	nung4	nʊŋ42/31		0	nʊŋ42/31	1		
+2092	濃	nung4	nʊŋ42/31		0	nung4	nʊŋ42/31		0	nʊŋ42/31	1		
+2093	奈	noi6	nɔi53		0	noi6	nɔi53		0	nɔi53	1		
+2094	耐	noi6	nɔi53		0	noi6	nɔi53		0	nɔi53	1		
+2095	內	noi6	nɔi53		0	noi6	nɔi53		0	nɔi53	1		
+2096	諾	nok9	nɔk53		0	nok9	nɔk53		0	nɔk53	1		
+2097	囊	nong4	nᵘɔŋ42/31		0	nong4	nᵘɔŋ42/31		0	nᵘɔŋ42/31	1		
+2098	瓤	nong4	nᵘɔŋ42/31		0	nong4	nᵘɔŋ42/31		0	nᵘɔŋ42/31	1		
+2099	哀	oi1	ʔɔi35		0	oi1	ʔɔi35		0	ʔɔi35	1		
+2100	愛	oi3	ʔɔi33		0	oi3	ʔɔi33		0	ʔɔi33	1		
+2101	氨	on1	ʔᵘɔn35		0	on1	ʔᵘɔn35		0	ʔᵘɔn35	1		
+2102	鞍	on1	ʔᵘɔn35		0	on1	ʔᵘɔn35		0	ʔᵘɔn35	1		
+2103	安	on1	ʔᵘɔn35		0	on1	ʔᵘɔn35		0	ʔᵘɔn35	1		
+2104	按	on3	ʔᵘɔn33		0	on3	ʔᵘɔn33		0	ʔᵘɔn33	1		
+2105	案	on3	ʔᵘɔn33		0	on3	ʔᵘɔn33		0	ʔᵘɔn33	1		
+2106	毆	ou1	ʔou35		0	ou1	ʔou35		0	ʔou35	1		
+2107	澳	ou3	ʔou33		0	ou3	ʔou33		0	ʔou33	1		
+2108	懊	ou3	ʔou33		0	ou3	ʔou33		0	ʔou33	1		
+2109	奧	ou3	ʔou33		0	ou3	ʔou33		0	ʔou33	1		
+2110	趴	paa1	pʰa35		0	paa1	pʰa35		0	pʰa35	1		
+2111	怕	paa3	pʰa33		0	paa3	pʰa33		0	pʰa33	1		
+2112	扒	paa4	pʰa42/31		0	paa4	pʰa42/31		0	pʰa42/31	1		
+2113	耙	paa4	pʰa42/31		0	paa4	pʰa42/31		0	pʰa42/31	1		
+2114	爬	paa4	pʰa42/31		0	paa4	pʰa42/31		0	pʰa42/31	1		
+2115	派	paai3	pʰai33		0	paai3	pʰai33		0	pʰai33	1		
+2116	牌	paai4	pʰai42/31		0	paai4	pʰai42/31		0	pʰai42/31	1		
+2117	排	paai4	pʰai42/31		0	paai4	pʰai42/31		0	pʰai42/31	1		
+2118	攀	paan1	pʰan35		0	paan1	pʰan35		0	pʰan35	1		
+2119	盼	paan3	pʰan33		0	paan3	pʰan33		0	pʰan33	1		
+2120	拋	paau1	pʰau35		0	paau1	pʰau35		0	pʰau35	1		
+2121	跑	paau2	pʰau21		0	paau2	pʰau21		0	pʰau21	1		
+2122	炮	paau3	pʰau33		0	paau3	pʰau33		0	pʰau33	1		
+2123	泡	paau3或paau1	pʰau33或pʰau35		0	paau3或paau1	pʰau33或pʰau35		0	pʰau33或pʰau35	1		
+2124	刨	paau4	pʰau42/31		0	paau4	pʰau42/31		0	pʰau42/31	1		
+2125	咆	paau4	pʰau42/31		0	paau4	pʰau42/31		0	pʰau42/31	1		
+2126	批	pai1	pʰɐi35		0	pai1	pʰɐi35		0	pʰɐi35	1		
+2127	拍	pak7	pʰɐk35		0	pak7	pʰɐk35		0	pʰɐk35	1		
+2128	帕	pak7	pʰɐk35		0	pak7	pʰɐk35		0	pʰɐk35	1		
+2129	柏	pak7	pʰɐk35		0	pak7	pʰɐk35		0	pʰɐk35	1		
+2130	魄	pak7	pʰɐk35		0	pak7	pʰɐk35		0	pʰɐk35	1		
+2131	噴	pan3	pʰɐn33		0	pan3	pʰɐn33		0	pʰɐn33	1		
+2132	貧	pan4	pʰɐn42/31		0	pan4	pʰɐn42/31		0	pʰɐn42/31	1		
+2133	頻	pan4	pʰɐn42/31		0	pan4	pʰɐn42/31		0	pʰɐn42/31	1		
+2134	瀕	pan4	pʰɐn42/31		0	pan4	pʰɐn42/31		0	pʰɐn42/31	1		
+2135	蘋	pan4或ping4	pʰɐn42/31或pʰɪŋ42/31		0	pan4或pean4	pʰɐn42/31或pʰən42/31		0	pʰɐn42/31或pʰɪŋ42/31或pʰən42/31	False		
+2136	烹	pang1	pʰɐŋ35		0	pang1	pʰɐŋ35		0	pʰɐŋ35	1		
+2137	憑	pang4	pʰɐŋ42/31		0	pang4	pʰɐŋ42/31		0	pʰɐŋ42/31	1		
+2138	硼	pang4	pʰɐŋ42/31		0	pang4	pʰɐŋ42/31		0	pʰɐŋ42/31	1		
+2139	鵬	pang4	pʰɐŋ42/31		0	pang4	pʰɐŋ42/31		0	pʰɐŋ42/31	1		
+2140	朋	pang4	pʰɐŋ42/31		0	pang4	pʰɐŋ42/31		0	pʰɐŋ42/31	1		
+2141	棚	pang4	pʰɐŋ42/31		0	pang4	pʰɐŋ42/31		0	pʰɐŋ42/31	1		
+2142	彭	pang4	pʰɐŋ42/31		0	pang4	pʰɐŋ42/31		0	pʰɐŋ42/31	1		
+2143	澎	pang4	pʰɐŋ42/31		0	pang4	pʰɐŋ42/31		0	pʰɐŋ42/31	1		
+2144	膨	pang4	pʰɐŋ42/31		0	pang4	pʰɐŋ42/31		0	pʰɐŋ42/31	1		
+2145	匹	pat7	pʰɐt35		0	pat7	pʰɐt35		0	pʰɐt35	1		
+2146	剖	pau2	pʰɐu21		0	pau2	pʰɐu21		0	pʰɐu21	1		
+2147	披	pei1	pʰei35		0	pei1	pʰei35		0	pʰei35	1		
+2148	被	pei1或pei5	pʰei35或pʰei21		0	pei1或pei5	pʰei35或pʰei21		0	pʰei35或pʰei21	1		
+2149	鄙	pei2	pʰei21		0	pei2	pʰei21		0	pʰei21	1		
+2150	屁	pei3	pʰei33		0	pei3	pʰei33		0	pʰei33	1		
+2151	譬	pei3	pʰei33		0	pei3	pʰei33		0	pʰei33	1		
+2152	皮	pei4	pʰei42/31		0	pei4	pʰei42/31		0	pʰei42/31	1		
+2153	疲	pei4	pʰei42/31		0	pei4	pʰei42/31		0	pʰei42/31	1		
+2154	脾	pei4或pei5~虛	pʰei42/31或pʰei~21	虛	0	pei4或pei5~虛	pʰei42/31或pʰei~21	虛	0	pʰei42/31	1		
+2154	脾									pʰei21			~虛
+2155	拼	ping3	pʰɪŋ33		0	pean3	pʰən33		0	pʰɪŋ33或pʰən33	False		
+2156	聘	ping3	pʰɪŋ33		0	pean3	pʰən33		0	pʰɪŋ33或pʰən33	False		
+2157	瓶	ping4	pʰɪŋ42/31		0	pean4	pʰən42/31		0	pʰɪŋ42/31或pʰən42/31	False		
+2158	坪	ping4	pʰɪŋ42/31		0	pean4	pʰən42/31		0	pʰɪŋ42/31或pʰən42/31	False		
+2159	平	ping4	pʰɪŋ42/31		0	pean4	pʰən42/31		0	pʰɪŋ42/31或pʰən42/31	False		
+2160	評	ping4	pʰɪŋ42/31		0	pean4	pʰən42/31		0	pʰɪŋ42/31或pʰən42/31	False		
+2161	萍	ping4	pʰɪŋ42/31		0	pean4	pʰən42/31		0	pʰɪŋ42/31或pʰən42/31	False		
+2162	砰	ping4？	pʰɪŋ42/31	？	1	pean4？	pʰən42/31	？	1	pʰɪŋ42/31或pʰən42/31	False		发音人对该音存疑
+2163	霹	pɪk7	pʰɪk35		0	peat7	pʰət35		0	pʰɪk35或pʰət35	False		
+2164	辟	pɪk7	pʰɪk35		0	peat7	pʰət35		0	pʰɪk35或pʰət35	False		
+2165	僻	pɪk7	pʰɪk35		0	peat7	pʰət35		0	pʰɪk35或pʰət35	False		
+2166	劈	pɪk7	pʰɪk35		0	peat7	pʰət35		0	pʰɪk35或pʰət35	False		
+2167	蝙	pin1	pʰin35		0	pin1	pʰin35		0	pʰin35	1		
+2168	翩	pin1	pʰin35		0	pin1	pʰin35		0	pʰin35	1		
+2169	偏	pin1	pʰin35		0	pin1	pʰin35		0	pʰin35	1		
+2170	編	pin1	pʰin35		0	pin1	pʰin35		0	pʰin35	1		
+2171	篇	pin1	pʰin35		0	pin1	pʰin35		0	pʰin35	1		
+2172	遍	pin3	pʰin33		0	pin3	pʰin33		0	pʰin33	1		
+2173	騙	pin3	pʰin33		0	pin3	pʰin33		0	pʰin33	1		
+2174	片	pin3	pʰin33		0	pin3	pʰin33		0	pʰin33	1		
+2175	撇	pit8	pʰit3		0	pit8	pʰit3		0	pʰit3	1		
+2176	飄	piu1	pʰiu35		0	piu1	pʰiu35		0	pʰiu35	1		
+2177	漂	piu1或piu3?	pʰiu35或pʰiu33	?	1	piu1或piu3?	pʰiu35或pʰiu33	?	1	pʰiu35	1		
+2177	漂									pʰiu33			发音人对该音存疑
+2178	票	piu3	pʰiu33		0	piu3	pʰiu33		0	pʰiu33	1		
+2179	瓢	piu4	pʰiu42/31		0	piu4	pʰiu42/31		0	pʰiu42/31	1		
+2180	坡	po1?	pʰɔ35	?	1	po1?	pʰɔ35	?	1	pʰɔ35	1		发音人对该音存疑
+2181	頗	po2	pʰɔ21		0	po2	pʰɔ21		0	pʰɔ21	1		
+2182	跛	po2?或bo2?或bai1	pʰɔ21或pɔ21或pɐi35	??	2	po2?或bo2?或bai1	pʰɔ21或pɔ21或pɐi35	??	2	pʰɔ21或pɔ21	1		二者似皆可，发音人存疑
+2182	跛									pɐi35			
+2183	破	po3	pʰɔ33		0	po3	pʰɔ33		0	pʰɔ33	1		
+2184	婆	po4	pʰɔ42/31		0	po4	pʰɔ42/31		0	pʰɔ42/31	1		
+2185	朴	pok8	pʰɔk3		0	pok8	pʰɔk3		0	pʰɔk3	1		
+2186	磅	pong1?或bong6?	pʰᵘɔŋ35或pᵘɔŋ53	??	2	pong1?或bong6?	pʰᵘɔŋ35或pᵘɔŋ53	??	2	pʰᵘɔŋ35或pᵘɔŋ53	1		二者似皆可，发音人存疑
+2187	傍	pong4？或bong6或bang6	pʰᵘɔŋ42/31或pᵘɔŋ53或pɐŋ53	？	1	pong4？或bong6或bang6	pʰᵘɔŋ42/31或pᵘɔŋ53或pɐŋ53	？	1	pʰᵘɔŋ42/31或pᵘɔŋ53或pɐŋ53	1		
+2188	鋪	pou1或pou3	pʰou35或pʰou33		0	pou1或pou3	pʰou35或pʰou33		0	pʰou35或pʰou33	1		
+2189	普	pou2	pʰou21		0	pou2	pʰou21		0	pʰou21	1		
+2190	譜	pou2	pʰou21		0	pou2	pʰou21		0	pʰou21	1		
+2191	袍	pou4	pʰou42/31		0	pou4	pʰou42/31		0	pʰou42/31	1		
+2192	蔔	pou4	pʰou42/31		0	pou4	pʰou42/31		0	pʰou42/31	1		
+2193	蔔	pou4	pʰou42/31		0	pou4	pʰou42/31		0	pʰou42/31	1		
+2194	葡	pou4	pʰou42/31		0	pou4	pʰou42/31		0	pʰou42/31	1		
+2195	蒲	pou4	pʰou42/31		0	pou4	pʰou42/31		0	pʰou42/31	1		
+2196	菩	pou4	pʰou42/31		0	pou4	pʰou42/31		0	pʰou42/31	1		
+2197	抱	pou5	pʰou21		0	pou5	pʰou21		0	pʰou21	1		
+2198	胚	pui1或pei1?	pʰui35或pʰei35	?	1	pui1或pei1?	pʰui35或pʰei35	?	1	pʰui35	1		
+2198	胚									pʰei35			发音人对该音存疑
+2199	坯	pui1或pei1?	pʰui35或pʰei35	?	1	pui1或pei1?	pʰui35或pʰei35	?	1	pʰui35	1		
+2199	坯									pʰei35			发音人对该音存疑
+2200	沛	pui3	pʰui33		0	pui3	pʰui33		0	pʰui33	1		
+2201	配	pui3	pʰui33		0	pui3	pʰui33		0	pʰui33	1		
+2202	佩	pui3	pʰui33		0	pui3	pʰui33		0	pʰui33	1		
+2203	徘	pui4	pʰui42/31		0	pui4	pʰui42/31		0	pʰui42/31	1		
+2204	陪	pui4	pʰui42/31		0	pui4	pʰui42/31		0	pʰui42/31	1		
+2205	培	pui4	pʰui42/31		0	pui4	pʰui42/31		0	pʰui42/31	1		
+2206	賠	pui4	pʰui42/31		0	pui4	pʰui42/31		0	pʰui42/31	1		
+2207	倍	pui5	pʰui21		0	pui5	pʰui21		0	pʰui21	1		
+2208	扑	pʊk7	pʰʊk35		0	pʊk7	pʰʊk35		0	pʰʊk35	1		
+2209	潘	pun1	pʰun35		0	pun1	pʰun35		0	pʰun35	1		
+2210	番	pun1或faan1	pʰun35或fan35		0	pun1或faan1	pʰun35或fan35		0	pʰun35或fan35	1		
+2211	判	pun3	pʰun33		0	pun3	pʰun33		0	pʰun33	1		
+2212	盤	pun4	pʰun42/31		0	pun4	pʰun42/31		0	pʰun42/31	1		
+2213	盆	pun4	pʰun42/31		0	pun4	pʰun42/31		0	pʰun42/31	1		
+2214	碰	pung3	pʰʊŋ33		0	pung3	pʰʊŋ33		0	pʰʊŋ33	1		
+2215	篷	pung4	pʰʊŋ42/31		0	pung4	pʰʊŋ42/31		0	pʰʊŋ42/31	1		
+2216	蓬	pung4	pʰʊŋ42/31		0	pung4	pʰʊŋ42/31		0	pʰʊŋ42/31	1		
+2217	撲	pok8	pʰɔk3		0	pok8	pʰɔk3		0	pʰɔk3	1		
+2218	樸	pok8	pʰɔk3		0	pok8	pʰɔk3		0	pʰɔk3	1		
+2219	螃	pong4	pʰᵘɔŋ42/31		0	pong4	pʰᵘɔŋ42/31		0	pʰᵘɔŋ42/31	1		
+2220	旁	pong4	pʰᵘɔŋ42/31		0	pong4	pʰᵘɔŋ42/31		0	pʰᵘɔŋ42/31	1		
+2221	龐	pong4	pʰᵘɔŋ42/31		0	pong4	pʰᵘɔŋ42/31		0	pʰᵘɔŋ42/31	1		
+2222	蚌	pong5	pʰᵘɔŋ21		0	pong5	pʰᵘɔŋ21		0	pʰᵘɔŋ21	1		
+2223	潑	put8	pʰut3		0	put8	pʰut3		0	pʰut3	1		
+2224	沙	saa1	sa35		0	saa1	sa35		0	sa35	1		
+2225	砂	saa1	sa35		0	saa1	sa35		0	sa35	1		
+2226	紗	saa1	sa35		0	saa1	sa35		0	sa35	1		
+2227	灑	saa2	sa21		0	saa2	sa21		0	sa21	1		
+2228	耍	saa2	sa21		0	saa2	sa21		0	sa21	1		
+2229	曬	saai3	sai33		0	saai3	sai33		0	sai33	1		
+2230	衫	saam1	sam35		0	saam1	sam35		0	sam35	1		
+2231	珊	saan1	san35		0	saan1	san35		0	san35	1		
+2232	栓	saan1	san35		0	saan1	san35		0	san35	1		
+2233	拴	saan1	san35		0	saan1	san35		0	san35	1		
+2234	山	saan1	san35		0	saan1	san35		0	san35	1		
+2235	柵	saan1?或tsak7?	san35或ʦʰɐk35	??	2	saan1?或tsak7?	san35或ʦʰɐk35	??	2	san35或ʦʰɐk35	1		二者似皆可，发音人存疑
+2236	刪	saan1或tsak7	san35或ʦʰɐk35		0	saan1或tsak7	san35或ʦʰɐk35		0	san35或ʦʰɐk35	1		
+2237	涮	saan3?	san33	?	1	saan3?	san33	?	1	san33	1		发音人对该音存疑
+2238	霎	saap8	sap3		0	saap8	sap3		0	sap3	1		
+2239	刹	saat8	sat3		0	saat8	sat3		0	sat3	1		
+2240	殺	saat8	sat3		0	saat8	sat3		0	sat3	1		
+2241	煞	saat8	sat3		0	saat8	sat3		0	sat3	1		
+2242	梢	saau1	sau35		0	saau1	sau35		0	sau35	1		
+2243	捎	saau1?	sau35	?	1	saau1?	sau35	?	1	sau35	1		发音人对该音存疑
+2244	稍	saau2?	sau21	?	1	saau2?	sau21	?	1	sau21	1		发音人对该音存疑
+2245	哨	saau3	sau33		0	saau3	sau33		0	sau33	1		
+2246	篩	sai1	sɐi35		0	sai1	sɐi35		0	sɐi35	1		
+2247	使	sai2	sɐi21		0	sai2	sɐi21		0	sɐi21	1		
+2248	駛	sai2	sɐi21		0	sai2	sɐi21		0	sɐi21	1		
+2249	世	sai3	sɐi33		0	sai3	sɐi33		0	sɐi33	1		
+2250	勢	sai3	sɐi33		0	sai3	sɐi33		0	sɐi33	1		
+2251	逝	sai6	sɐi53		0	sai6	sɐi53		0	sɐi53	1		
+2252	誓	sai6	sɐi53		0	sai6	sɐi53		0	sɐi53	1		
+2253	森	sam1	sɐm35		0	sam1	sɐm35		0	sɐm35	1		
+2254	深	sam1	sɐm35		0	sam1	sɐm35		0	sɐm35	1		
+2255	瀋	sam2	sɐm21		0	sam2	sɐm21		0	sɐm21	1		
+2256	審	sam2	sɐm21		0	sam2	sɐm21		0	sɐm21	1		
+2257	嬸	sam2	sɐm21		0	sam2	sɐm21		0	sɐm21	1		
+2258	滲	sam3	sɐm33		0	sam3	sɐm33		0	sɐm33	1		
+2259	甚	sam6	sɐm53		0	sam6	sɐm53		0	sɐm53	1		
+2260	紳	san1	sɐn35		0	san1	sɐn35		0	sɐn35	1		
+2261	申	san1	sɐn35		0	san1	sɐn35		0	sɐn35	1		
+2262	伸	san1	sɐn35		0	san1	sɐn35		0	sɐn35	1		
+2263	身	san1	sɐn35		0	san1	sɐn35		0	sɐn35	1		
+2264	呻	san3	sɐn33		0	san3	sɐn33		0	sɐn33	1		
+2265	臣	san4	sɐn42/31		0	san4	sɐn42/31		0	sɐn42/31	1		
+2266	辰	san4	sɐn42/31		0	san4	sɐn42/31		0	sɐn42/31	1		
+2267	唇	san4	sɐn42/31		0	san4	sɐn42/31		0	sɐn42/31	1		
+2268	晨	san4	sɐn42/31		0	san4	sɐn42/31		0	sɐn42/31	1		
+2269	神	san4	sɐn42/31		0	san4	sɐn42/31		0	sɐn42/31	1		
+2270	純	san4	sɐn42/31		0	san4	sɐn42/31		0	sɐn42/31	1		
+2271	淳	san4	sɐn42/31		0	san4	sɐn42/31		0	sɐn42/31	1		
+2272	醇	san4	sɐn42/31		0	san4	sɐn42/31		0	sɐn42/31	1		
+2273	馴	san4?或slan4?或tsan4?	sɐn42/31或ɬɐn42/31或ʦʰɐn42/31	???	3	san4?或slan4?或tsan4?	sɐn42/31或ɬɐn42/31或ʦʰɐn42/31	???	3	sɐn42/31或ɬɐn42/31或ʦʰɐn42/31	1		二者似皆可，发音人存疑
+2274	腎	san5或king1	sɐn21或kʰɪŋ35		0	san5或kean1	sɐn21或kʰən35		0	sɐn21或kʰɪŋ35或kʰən35	False		
+2275	順	san6	sɐn53		0	san6	sɐn53		0	sɐn53	1		
+2276	瞬	san6	sɐn53		0	san6	sɐn53		0	sɐn53	1		
+2277	慎	san6	sɐn53		0	san6	sɐn53		0	sɐn53	1		
+2278	笙	sang1	sɐŋ35		0	sang1	sɐŋ35		0	sɐŋ35	1		
+2279	甥	sang1	sɐŋ35		0	sang1	sɐŋ35		0	sɐŋ35	1		
+2280	生	sang1	sɐŋ35		0	sang1	sɐŋ35		0	sɐŋ35	1		
+2281	牲	sang1	sɐŋ35		0	sang1	sɐŋ35		0	sɐŋ35	1		
+2282	蹭	sang3?	sɐŋ33	?	1	sang3?	sɐŋ33	?	1	sɐŋ33	1		发音人对该音存疑
+2283	省	sang5或sling2?	sɐŋ21或ɬɪŋ21	?	1	sang5或slean2?	sɐŋ21或ɬən21	?	1	sɐŋ21或ɬɪŋ21或ɬən21	False		
+2284	濕	sap7	sɐp35		0	sap7	sɐp35		0	sɐp35	1		
+2285	拾	sap9	sɐp53		0	sap9	sɐp53		0	sɐp53	1		
+2286	十	sap9	sɐp53		0	sap9	sɐp53		0	sɐp53	1		
+2287	什	sap9或zaap8	sɐp53或ʦap3		0	sap9或zaap8	sɐp53或ʦap3		0	sɐp53或ʦap3	1		
+2288	失	sat7	sɐt35		0	sat7	sɐt35		0	sɐt35	1		
+2289	虱	sat7	sɐt35		0	sat7	sɐt35		0	sɐt35	1		
+2290	蝨	sat7	sɐt35		0	sat7	sɐt35		0	sɐt35	1		
+2291	室	sat7	sɐt35		0	sat7	sɐt35		0	sɐt35	1		
+2292	實	sat9	sɐt53		0	sat9	sɐt53		0	sɐt53	1		
+2293	術	sat9	sɐt53		0	sat9	sɐt53		0	sɐt53	1		
+2294	述	sat9	sɐt53		0	sat9	sɐt53		0	sɐt53	1		
+2295	秫	sat9?	sɐt53	?	1	sat9?	sɐt53	?	1	sɐt53	1		发音人对该音存疑
+2296	收	sau1	sɐu35		0	sau1	sɐu35		0	sɐu35	1		
+2297	守	sau2	sɐu21		0	sau2	sɐu21		0	sɐu21	1		
+2298	手	sau2	sɐu21		0	sau2	sɐu21		0	sɐu21	1		
+2299	首	sau2	sɐu21		0	sau2	sɐu21		0	sɐu21	1		
+2300	受	sau2	sɐu21		0	sau2	sɐu21		0	sɐu21	1		
+2301	獸	sau3	sɐu33		0	sau3	sɐu33		0	sɐu33	1		
+2302	瘦	sau3	sɐu33		0	sau3	sɐu33		0	sɐu33	1		
+2303	愁	sau4	sɐu42/31		0	sau4	sɐu42/31		0	sɐu42/31	1		
+2304	仇	sau4或kieu4？	sɐu42/31或kʰiɛu42/31	？	1	sau4或kieu4？	sɐu42/31或kʰiɛu42/31	？	1	sɐu42/31或kʰiɛu42/31	1		
+2305	授	sau6	sɐu53		0	sau6	sɐu53		0	sɐu53	1		
+2306	售	sau6	sɐu53		0	sau6	sɐu53		0	sɐu53	1		
+2307	壽	sau6	sɐu53		0	sau6	sɐu53		0	sɐu53	1		
+2308	賒	se1	sɛ35		0	se1	sɛ35		0	sɛ35	1		
+2309	捨	se2	sɛ21		0	se2	sɛ21		0	sɛ21	1		
+2310	赦	se3	sɛ33		0	se3	sɛ33		0	sɛ33	1		
+2311	啥	se3	sɛ33		0	se3	sɛ33		0	sɛ33	1		
+2312	舍	se3	sɛ33		0	se3	sɛ33		0	sɛ33	1		
+2313	蛇	se4	sɛ42/31		0	se4	sɛ42/31		0	sɛ42/31	1		
+2314	社	se5	sɛ21		0	se5	sɛ21		0	sɛ21	1		
+2315	射	se6	sɛ53		0	se6	sɛ53		0	sɛ53	1		
+2316	聲	sing1	sɪŋ35		0	sean1	sən35		0	sɪŋ35或sən35	False		
+2317	升	sing1	sɪŋ35		0	sean1	sən35		0	sɪŋ35或sən35	False		
+2318	昇	sing1	sɪŋ35		0	sean1	sən35		0	sɪŋ35或sən35	False		
+2319	聖	sing3	sɪŋ33		0	sean3	sən33		0	sɪŋ33或sən33	False		
+2320	勝	sing3	sɪŋ33		0	sean3	sən33		0	sɪŋ33或sən33	False		
+2321	成	sing4	sɪŋ42/31		0	sean4	sən42/31		0	sɪŋ42/31或sən42/31	False		
+2322	誠	sing4	sɪŋ42/31		0	sean4	sən42/31		0	sɪŋ42/31或sən42/31	False		
+2323	城	sing4	sɪŋ42/31		0	sean4	sən42/31		0	sɪŋ42/31或sən42/31	False		
+2324	承	sing4	sɪŋ42/31		0	sean4	sən42/31		0	sɪŋ42/31或sən42/31	False		
+2325	繩	sing4	sɪŋ42/31		0	sean4	sən42/31		0	sɪŋ42/31或sən42/31	False		
+2326	乘	sing4或sing6	sɪŋ42/31或sɪŋ53		0	sean4或sean6	sən42/31或sən53		0	sɪŋ42/31或sɪŋ53或sən42/31或sən53	False		
+2327	盛	sing6	sɪŋ53		0	sean6	sən53		0	sɪŋ53或sən53	False		
+2328	剩	sing6	sɪŋ53		0	sean6	sən53		0	sɪŋ53或sən53	False		
+2329	適	sɪk7	sɪk35		0	seat7	sət35		0	sɪk35或sət35	False		
+2330	色	sɪk7	sɪk35		0	seat7	sət35		0	sɪk35或sət35	False		
+2331	拭	sɪk7	sɪk35		0	seat7	sət35		0	sɪk35或sət35	False		
+2332	式	sɪk7	sɪk35		0	seat7	sət35		0	sɪk35或sət35	False		
+2333	識	sɪk7	sɪk35		0	seat7	sət35		0	sɪk35或sət35	False		
+2334	石	sɪk9	sɪk53		0	seat9	sət53		0	sɪk53或sət53	False		
+2335	食	sɪk9	sɪk53		0	seat9	sət53		0	sɪk53或sət53	False		
+2336	蝕	sɪk9或sit9	sɪk53或sit53		0	seat9或sit9	sət53或sit53		0	sɪk53或sət53或sit53	False		
+2337	樞	si1	si35		0	si1	si35		0	si35	1		
+2338	書	si1	si35		0	si1	si35		0	si35	1		
+2339	屍	si1	si35		0	si1	si35		0	si35	1		
+2340	詩	si1	si35		0	si1	si35		0	si35	1		
+2341	施	si1	si35		0	si1	si35		0	si35	1		
+2342	輸	si1	si35		0	si1	si35		0	si35	1		
+2343	抒	si1	si35		0	si1	si35		0	si35	1		
+2344	舒	si1	si35		0	si1	si35		0	si35	1		
+2345	史	si2	si21		0	si2	si21		0	si21	1		
+2346	屎	si2	si21		0	si2	si21		0	si21	1		
+2347	黍	si2	si21		0	si2	si21		0	si21	1		
+2348	鼠	si2	si21		0	si2	si21		0	si21	1		
+2349	暑	si2	si21		0	si2	si21		0	si21	1		
+2350	恕	si3	si33		0	si3	si33		0	si33	1		
+2351	嗜	si3	si33		0	si3	si33		0	si33	1		
+2352	試	si3	si33		0	si3	si33		0	si33	1		
+2353	庶	si3?	si33	?	1	si3?	si33	?	1	si33	1		发音人对该音存疑
+2354	匙	si4	si42/31		0	si4	si42/31		0	si42/31	1		
+2355	時	si4	si42/31		0	si4	si42/31		0	si42/31	1		
+2356	薯	si4	si42/31		0	si4	si42/31		0	si42/31	1		
+2357	殊	si4	si42/31		0	si4	si42/31		0	si42/31	1		
+2358	市	si5	si21		0	si5	si21		0	si21	1		
+2359	樹	si6	si53		0	si6	si53		0	si53	1		
+2360	士	si6	si53		0	si6	si53		0	si53	1		
+2361	氏	si6	si53		0	si6	si53		0	si53	1		
+2362	示	si6	si53		0	si6	si53		0	si53	1		
+2363	視	si6	si53		0	si6	si53		0	si53	1		
+2364	柿	si6	si53		0	si6	si53		0	si53	1		
+2365	事	si6	si53		0	si6	si53		0	si53	1		
+2366	是	si6	si53		0	si6	si53		0	si53	1		
+2367	豎	si6	si53		0	si6	si53		0	si53	1		
+2368	侍	si6	si53		0	si6	si53		0	si53	1		
+2369	爍	siek8?或lɪk7?	siɛk3或lɪk35	??	2	siek8?或leat7?	siɛk3或lət35	??	2	siɛk3或lɪk35或lət35	False		二者似皆可，发音人存疑
+2370	勺	siek9?或ziek8?或tsiek8?	siɛk53或ʦʰiɛk3或ʦʰiɛk3	???	3	siek9?或ziek8?或tsiek8?	siɛk53或ʦʰiɛk3或ʦʰiɛk3	???	3	siɛk53或ʦiɛk3或ʦʰiɛk3	1		二者似皆可，发音人存疑
+2371	商	sieng1	siɛŋ35		0	sieng1	siɛŋ35		0	siɛŋ35	1		
+2372	傷	sieng1	siɛŋ35		0	sieng1	siɛŋ35		0	siɛŋ35	1		
+2373	償	sieng4	siɛŋ42/31		0	sieng4	siɛŋ42/31		0	siɛŋ42/31	1		
+2374	嘗	sieng4	siɛŋ42/31		0	sieng4	siɛŋ42/31		0	siɛŋ42/31	1		
+2375	常	sieng4	siɛŋ42/31		0	sieng4	siɛŋ42/31		0	siɛŋ42/31	1		
+2376	裳	sieng4	siɛŋ42/31		0	sieng4	siɛŋ42/31		0	siɛŋ42/31	1		
+2377	上	sieng5	siɛŋ21		0	sieng5	siɛŋ21		0	siɛŋ21	1		
+2378	賞	sieng5	siɛŋ21		0	sieng5	siɛŋ21		0	siɛŋ21	1		
+2379	尚	sieng6	siɛŋ53		0	sieng6	siɛŋ53		0	siɛŋ53	1		
+2380	碩	siet8或siet9?	siɛt3或siɛt53	?	1	siet8或siet9?	siɛt3或siɛt53	?	1	siɛt3	1		
+2380	碩									siɛt53			发音人对该音存疑
+2381	苫	sim1或sim3?	sim35或sim33	?	1	sim1或sim3?	sim35或sim33	?	1	sim35	1		
+2381	苫									sim33			发音人对该音存疑
+2382	陝	sim2	sim21		0	sim2	sim21		0	sim21	1		
+2383	閃	sim2	sim21		0	sim2	sim21		0	sim21	1		
+2384	蟬	sim4	sim42/31		0	sim4	sim42/31		0	sim42/31	1		
+2385	贍	sim6?或sin6?	sim53或sin53	??	2	sim6?或sin6?	sim53或sin53	??	2	sim53或sin53	1		二者似皆可，发音人存疑
+2386	扇	sin3	sin33		0	sin3	sin33		0	sin33	1		
+2387	船	sin4	sin42/31		0	sin4	sin42/31		0	sin42/31	1		
+2388	擅	sin6	sin53		0	sin6	sin53		0	sin53	1		
+2389	膳	sin6	sin53		0	sin6	sin53		0	sin53	1		
+2390	善	sin6	sin53		0	sin6	sin53		0	sin53	1		
+2391	涉	sip8	sip3		0	sip8	sip3		0	sip3	1		
+2392	攝	sip8	sip3		0	sip8	sip3		0	sip3	1		
+2393	燒	siu1	siu35		0	siu1	siu35		0	siu35	1		
+2394	少	siu2	siu21		0	siu2	siu21		0	siu21	1		
+2395	紹	siu6	siu53		0	siu6	siu53		0	siu53	1		
+2396	兆	siu6	siu53		0	siu6	siu53		0	siu53	1		
+2397	徙	slaai2	ɬai21		0	slaai2	ɬai21		0	ɬai21	1		
+2398	三	slaam1	ɬam35		0	slaam1	ɬam35		0	ɬam35	1		
+2399	叁	slaam1	ɬam35		0	slaam1	ɬam35		0	ɬam35	1		
+2400	傘	slaan3	ɬan33		0	slaan3	ɬan33		0	ɬan33	1		
+2401	篡	slaan3?	ɬan33	?	1	slaan3?	ɬan33	?	1	ɬan33	1		发音人对该音存疑
+2402	散	slaan3或slaan2	ɬan33或ɬan21		0	slaan3或slaan2	ɬan33或ɬan21		0	ɬan33或ɬan21	1		
+2403	颯	slaap8?	ɬap3	?	1	slaap8?	ɬap3	?	1	ɬap3	1		发音人对该音存疑
+2404	澀	slaap8?或slap7?或giep8	ɬap3或ɬɐp35或kiɛp3	??	2	slaap8?或slap7?或giep8	ɬap3或ɬɐp35或kiɛp3	??	2	ɬap3或ɬɐp35	1		二者似皆可，发音人存疑
+2404	澀									kiɛp3			发音人对该音存疑
+2405	薩	slaat8	ɬat3		0	slaat8	ɬat3		0	ɬat3	1		
+2406	撒	slaat8	ɬat3		0	slaat8	ɬat3		0	ɬat3	1		
+2407	嘶	slai1	ɬɐi35		0	slai1	ɬɐi35		0	ɬɐi35	1		
+2408	西	slai1	ɬɐi35		0	slai1	ɬɐi35		0	ɬɐi35	1		
+2409	犀	slai1	ɬɐi35		0	slai1	ɬɐi35		0	ɬɐi35	1		
+2410	洗	slai2	ɬɐi21		0	slai2	ɬɐi21		0	ɬɐi21	1		
+2411	細	slai3	ɬɐi33		0	slai3	ɬɐi33		0	ɬɐi33	1		
+2412	婿	slai3	ɬɐi33		0	slai3	ɬɐi33		0	ɬɐi33	1		
+2413	芯	slam1	ɬɐm35		0	slam1	ɬɐm35		0	ɬɐm35	1		
+2414	心	slam1	ɬɐm35		0	slam1	ɬɐm35		0	ɬɐm35	1		
+2415	尋	slam4	ɬɐm42/31		0	slam4	ɬɐm42/31		0	ɬɐm42/31	1		
+2416	薪	slan1	ɬɐn35		0	slan1	ɬɐn35		0	ɬɐn35	1		
+2417	新	slan1	ɬɐn35		0	slan1	ɬɐn35		0	ɬɐn35	1		
+2418	鋅	slan1	ɬɐn35		0	slan1	ɬɐn35		0	ɬɐn35	1		
+2419	辛	slan1	ɬɐn35		0	slan1	ɬɐn35		0	ɬɐn35	1		
+2420	筍	slan2	ɬɐn21		0	slan2	ɬɐn21		0	ɬɐn21	1		
+2421	遜	slan3	ɬɐn33		0	slan3	ɬɐn33		0	ɬɐn33	1		
+2422	汛	slan3	ɬɐn33		0	slan3	ɬɐn33		0	ɬɐn33	1		
+2423	訊	slan3	ɬɐn33		0	slan3	ɬɐn33		0	ɬɐn33	1		
+2424	迅	slan3	ɬɐn33		0	slan3	ɬɐn33		0	ɬɐn33	1		
+2425	信	slan3	ɬɐn33		0	slan3	ɬɐn33		0	ɬɐn33	1		
+2426	殉	slan3?	ɬɐn33	?	1	slan3?	ɬɐn33	?	1	ɬɐn33	1		发音人对该音存疑
+2427	圾	slap7	ɬɐp35		0	slap7	ɬɐp35		0	ɬɐp35	1		
+2428	蟀	slat7	ɬɐt35		0	slat7	ɬɐt35		0	ɬɐt35	1		
+2429	率	slat7	ɬɐt35		0	slat7	ɬɐt35		0	ɬɐt35	1		
+2430	摔	slat7	ɬɐt35		0	slat7	ɬɐt35		0	ɬɐt35	1		
+2431	膝	slat7	ɬɐt35		0	slat7	ɬɐt35		0	ɬɐt35	1		
+2432	瑟	slat7	ɬɐt35		0	slat7	ɬɐt35		0	ɬɐt35	1		
+2433	恤	slat7?	ɬɐt35	?	1	slat7?	ɬɐt35	?	1	ɬɐt35	1		发音人对该音存疑
+2434	羞	slau1	ɬɐu35		0	slau1	ɬɐu35		0	ɬɐu35	1		
+2435	修	slau1	ɬɐu35		0	slau1	ɬɐu35		0	ɬɐu35	1		
+2436	搜	slau2	ɬɐu21		0	slau2	ɬɐu21		0	ɬɐu21	1		
+2437	艘	slau2	ɬɐu21		0	slau2	ɬɐu21		0	ɬɐu21	1		
+2438	繡	slau3	ɬɐu33		0	slau3	ɬɐu33		0	ɬɐu33	1		
+2439	鏽	slau3	ɬɐu33		0	slau3	ɬɐu33		0	ɬɐu33	1		
+2440	秀	slau3	ɬɐu33		0	slau3	ɬɐu33		0	ɬɐu33	1		
+2441	漱	slau3?	ɬɐu33	?	1	slau3?	ɬɐu33	?	1	ɬɐu33	1		发音人对该音存疑
+2442	嗽	slau3?	ɬɐu33	?	1	slau3?	ɬɐu33	?	1	ɬɐu33	1		发音人对该音存疑
+2443	些	sle1	ɬɛ35		0	sle1	ɬɛ35		0	ɬɛ35	1		
+2444	寫	sle2	ɬɛ21		0	sle2	ɬɛ21		0	ɬɛ21	1		
+2445	瀉	sle3	ɬɛ33		0	sle3	ɬɛ33		0	ɬɛ33	1		
+2446	卸	sle3	ɬɛ33		0	sle3	ɬɛ33		0	ɬɛ33	1		
+2447	師	slei1	ɬei35		0	slei1	ɬei35		0	ɬei35	1		
+2448	獅	slei1	ɬei35		0	slei1	ɬei35		0	ɬei35	1		
+2449	司	slei1	ɬei35		0	slei1	ɬei35		0	ɬei35	1		
+2450	私	slei1	ɬei35		0	slei1	ɬei35		0	ɬei35	1		
+2451	思	slei1	ɬei35		0	slei1	ɬei35		0	ɬei35	1		
+2452	斯	slei1	ɬei35		0	slei1	ɬei35		0	ɬei35	1		
+2453	撕	slei1	ɬei35		0	slei1	ɬei35		0	ɬei35	1		
+2454	絲	slei1	ɬei35		0	slei1	ɬei35		0	ɬei35	1		
+2455	須	slei1	ɬei35		0	slei1	ɬei35		0	ɬei35	1		
+2456	需	slei1	ɬei35		0	slei1	ɬei35		0	ɬei35	1		
+2457	絮	slei1?	ɬei35	?	1	slei1?	ɬei35	?	1	ɬei35	1		发音人对该音存疑
+2458	死	slei2	ɬei21		0	slei2	ɬei21		0	ɬei21	1		
+2459	緒	slei2?或slui2?	ɬei21或ɬui21	??	2	slei2?或slui2?	ɬei21或ɬui21	??	2	ɬei21或ɬui21	1		二者似皆可，发音人存疑
+2460	四	slei3	ɬei33		0	slei3	ɬei33		0	ɬei33	1		
+2461	肆	slei3	ɬei33		0	slei3	ɬei33		0	ɬei33	1		
+2462	猩	sling1	ɬɪŋ35		0	slean1	ɬən35		0	ɬɪŋ35或ɬən35	False		
+2463	星	sling1	ɬɪŋ35		0	slean1	ɬən35		0	ɬɪŋ35或ɬən35	False		
+2464	腥	sling1	ɬɪŋ35		0	slean1	ɬən35		0	ɬɪŋ35或ɬən35	False		
+2465	醒	sling2	ɬɪŋ21		0	slean2	ɬən21		0	ɬɪŋ21或ɬən21	False		
+2466	性	sling3	ɬɪŋ33		0	slean3	ɬən33		0	ɬɪŋ33或ɬən33	False		
+2467	姓	sling3	ɬɪŋ33		0	slean3	ɬən33		0	ɬɪŋ33或ɬən33	False		
+2468	釋	slɪk7	ɬɪk35		0	sleat7	ɬət35		0	ɬɪk35或ɬət35	False		
+2469	晰	slɪk7	ɬɪk35		0	sleat7	ɬət35		0	ɬɪk35或ɬət35	False		
+2470	飾	slɪk7	ɬɪk35		0	sleat7	ɬət35		0	ɬɪk35或ɬət35	False		
+2471	惜	slɪk7	ɬɪk35		0	sleat7	ɬət35		0	ɬɪk35或ɬət35	False		
+2472	析	slɪk7	ɬɪk35		0	sleat7	ɬət35		0	ɬɪk35或ɬət35	False		
+2473	媳	slɪk7	ɬɪk35		0	sleat7	ɬət35		0	ɬɪk35或ɬət35	False		
+2474	息	slɪk7	ɬɪk35		0	sleat7	ɬət35		0	ɬɪk35或ɬət35	False		
+2475	熄	slɪk7	ɬɪk35		0	sleat7	ɬət35		0	ɬɪk35或ɬət35	False		
+2476	蟋	slɪk7	ɬɪk35		0	sleat7	ɬət35		0	ɬɪk35或ɬət35	False		
+2477	悉	slɪk7	ɬɪk35		0	sleat7	ɬət35		0	ɬɪk35或ɬət35	False		
+2478	錫	slɪk7	ɬɪk35		0	sleat7	ɬət35		0	ɬɪk35或ɬət35	False		
+2479	削	sliek8	ɬiɛk3		0	sliek8	ɬiɛk3		0	ɬiɛk3	1		
+2480	廂	slieng1	ɬiɛŋ35		0	slieng1	ɬiɛŋ35		0	ɬiɛŋ35	1		
+2481	湘	slieng1	ɬiɛŋ35		0	slieng1	ɬiɛŋ35		0	ɬiɛŋ35	1		
+2482	箱	slieng1	ɬiɛŋ35		0	slieng1	ɬiɛŋ35		0	ɬiɛŋ35	1		
+2483	鑲	slieng1	ɬiɛŋ35		0	slieng1	ɬiɛŋ35		0	ɬiɛŋ35	1		
+2484	相	slieng1或slieng3	ɬiɛŋ35或ɬiɛŋ33		0	slieng1或slieng3	ɬiɛŋ35或ɬiɛŋ33		0	ɬiɛŋ35或ɬiɛŋ33	1		
+2485	想	slieng2	ɬiɛŋ21		0	slieng2	ɬiɛŋ21		0	ɬiɛŋ21	1		
+2486	仙	slin1	ɬin35		0	slin1	ɬin35		0	ɬin35	1		
+2487	先	slin1	ɬin35		0	slin1	ɬin35		0	ɬin35	1		
+2488	鮮	slin1	ɬin35		0	slin1	ɬin35		0	ɬin35	1		
+2489	宣	slin1	ɬin35		0	slin1	ɬin35		0	ɬin35	1		
+2490	銑	slin2	ɬin21		0	slin2	ɬin21		0	ɬin21	1		
+2491	癬	slin2	ɬin21		0	slin2	ɬin21		0	ɬin21	1		
+2492	選	slin2	ɬin21		0	slin2	ɬin21		0	ɬin21	1		
+2493	綫	slin3	ɬin33		0	slin3	ɬin33		0	ɬin33	1		
+2494	腺	slin3	ɬin33		0	slin3	ɬin33		0	ɬin33	1		
+2495	線	slin3	ɬin33		0	slin3	ɬin33		0	ɬin33	1		
+2496	漩	slin4	ɬin42/31		0	slin4	ɬin42/31		0	ɬin42/31	1		
+2497	旋	slin4或zin6	ɬin42/31或ʦin53		0	slin4或zin6	ɬin42/31或ʦin53		0	ɬin42/31或ʦin53	1		
+2498	羨	slin6	ɬin53		0	slin6	ɬin53		0	ɬin53	1		
+2499	撰	slin6?	ɬin53	?	1	slin6?	ɬin53	?	1	ɬin53	1		发音人对该音存疑
+2500	泄	slit8	ɬit3		0	slit8	ɬit3		0	ɬit3	1		
+2501	屑	slit8	ɬit3		0	slit8	ɬit3		0	ɬit3	1		
+2502	薛	slit8	ɬit3		0	slit8	ɬit3		0	ɬit3	1		
+2503	雪	slit8	ɬit3		0	slit8	ɬit3		0	ɬit3	1		
+2504	舌	slit9	ɬit53		0	slit9	ɬit53		0	ɬit53	1		
+2505	蕭	sliu1	ɬiu35		0	sliu1	ɬiu35		0	ɬiu35	1		
+2506	簫	sliu1	ɬiu35		0	sliu1	ɬiu35		0	ɬiu35	1		
+2507	硝	sliu1	ɬiu35		0	sliu1	ɬiu35		0	ɬiu35	1		
+2508	消	sliu1	ɬiu35		0	sliu1	ɬiu35		0	ɬiu35	1		
+2509	宵	sliu1	ɬiu35		0	sliu1	ɬiu35		0	ɬiu35	1		
+2510	銷	sliu1	ɬiu35		0	sliu1	ɬiu35		0	ɬiu35	1		
+2511	小	sliu2	ɬiu21		0	sliu2	ɬiu21		0	ɬiu21	1		
+2512	笑	sliu3	ɬiu33		0	sliu3	ɬiu33		0	ɬiu33	1		
+2513	嘯	sliu6	ɬiu53		0	sliu6	ɬiu53		0	ɬiu53	1		
+2514	唆	slo1	ɬɔ35		0	slo1	ɬɔ35		0	ɬɔ35	1		
+2515	梭	slo1	ɬɔ35		0	slo1	ɬɔ35		0	ɬɔ35	1		
+2516	嗦	slo1	ɬɔ35		0	slo1	ɬɔ35		0	ɬɔ35	1		
+2517	瑣	slo2	ɬɔ21		0	slo2	ɬɔ21		0	ɬɔ21	1		
+2518	鎖	slo2	ɬɔ21		0	slo2	ɬɔ21		0	ɬɔ21	1		
+2519	髓	sloi2	ɬɔi21		0	sloi2	ɬɔi21		0	ɬɔi21	1		
+2520	溯	slok8或slou3？	ɬɔk3或ɬou33	？	1	slok8或slou3？	ɬɔk3或ɬou33	？	1	ɬɔk3	1		
+2520	溯									ɬou33			发音人对该音存疑
+2521	塑	slok8或slou3？	ɬɔk3或ɬou33	？	1	slok8或slou3？	ɬɔk3或ɬou33	？	1	ɬɔk3	1		
+2521	塑									ɬou33			发音人对该音存疑
+2522	桑	slong1?或song1?	ɬᵘɔŋ35或sᵘɔŋ35	??	2	slong1?或song1?	ɬᵘɔŋ35或sᵘɔŋ35	??	2	ɬᵘɔŋ35或sᵘɔŋ35	1		二者似皆可，发音人存疑
+2523	嗓	slong1?或song1?	ɬᵘɔŋ35或sᵘɔŋ35	??	2	slong1?或song1?	ɬᵘɔŋ35或sᵘɔŋ35	??	2	ɬᵘɔŋ35或sᵘɔŋ35	1		二者似皆可，发音人存疑
+2524	喪	slong1?或song1?	ɬᵘɔŋ35或sᵘɔŋ35	??	2	slong1?或song1?	ɬᵘɔŋ35或sᵘɔŋ35	??	2	ɬᵘɔŋ35或sᵘɔŋ35	1		二者似皆可，发音人存疑
+2525	酥	slou1	ɬou35		0	slou1	ɬou35		0	ɬou35	1		
+2526	蘇	slou1	ɬou35		0	slou1	ɬou35		0	ɬou35	1		
+2527	鬚	slou1	ɬou35		0	slou1	ɬou35		0	ɬou35	1		
+2528	搔	slou1	ɬou35		0	slou1	ɬou35		0	ɬou35	1		
+2529	騷	slou1	ɬou35		0	slou1	ɬou35		0	ɬou35	1		
+2530	嫂	slou2	ɬou21		0	slou2	ɬou21		0	ɬou21	1		
+2531	數	slou2或slou3	ɬou21或ɬou33		0	slou2或slou3	ɬou21或ɬou33		0	ɬou21或ɬou33	1		
+2532	素	slou3	ɬou33		0	slou3	ɬou33		0	ɬou33	1		
+2533	訴	slou3	ɬou33		0	slou3	ɬou33		0	ɬou33	1		
+2534	掃	slou3	ɬou33		0	slou3	ɬou33		0	ɬou33	1		
+2535	衰	slui1	ɬui35		0	slui1	ɬui35		0	ɬui35	1		
+2536	雖	slui1	ɬui35		0	slui1	ɬui35		0	ɬui35	1		
+2537	帥	slui3	ɬui33		0	slui3	ɬui33		0	ɬui33	1		
+2538	歲	slui3	ɬui33		0	slui3	ɬui33		0	ɬui33	1		
+2539	碎	slui3	ɬui33		0	slui3	ɬui33		0	ɬui33	1		
+2540	粹	slui3或slui6?	ɬui33或ɬui53	?	1	slui3或slui6?	ɬui33或ɬui53	?	1	ɬui33	1		
+2540	粹									ɬui53			发音人对该音存疑
+2541	悴	slui5?或slui6?	ɬui21或ɬui53	??	2	slui5?或slui6?	ɬui21或ɬui53	??	2	ɬui21或ɬui53	1		二者似皆可，发音人存疑
+2542	穗	slui6	ɬui53		0	slui6	ɬui53		0	ɬui53	1		
+2543	遂	slui6	ɬui53		0	slui6	ɬui53		0	ɬui53	1		
+2544	隧	slui6	ɬui53		0	slui6	ɬui53		0	ɬui53	1		
+2545	墅	slui6	ɬui53		0	slui6	ɬui53		0	ɬui53	1		
+2546	瑞	slui6	ɬui53		0	slui6	ɬui53		0	ɬui53	1		
+2547	粟	slʊk7	ɬʊk35		0	slʊk7	ɬʊk35		0	ɬʊk35	1		
+2548	肅	slʊk7	ɬʊk35		0	slʊk7	ɬʊk35		0	ɬʊk35	1		
+2549	宿	slʊk7	ɬʊk35		0	slʊk7	ɬʊk35		0	ɬʊk35	1		
+2550	縮	slʊk7	ɬʊk35		0	slʊk7	ɬʊk35		0	ɬʊk35	1		
+2551	酸	slun1	ɬun35		0	slun1	ɬun35		0	ɬun35	1		
+2552	孫	slun1	ɬun35		0	slun1	ɬun35		0	ɬun35	1		
+2553	損	slun2	ɬun21		0	slun2	ɬun21		0	ɬun21	1		
+2554	吮	slun2	ɬun21		0	slun2	ɬun21		0	ɬun21	1		
+2555	蒜	slun3	ɬun33		0	slun3	ɬun33		0	ɬun33	1		
+2556	算	slun3	ɬun33		0	slun3	ɬun33		0	ɬun33	1		
+2557	鬆	slung1	ɬʊŋ35		0	slung1	ɬʊŋ35		0	ɬʊŋ35	1		
+2558	聳	slung2?	ɬʊŋ21	?	1	slung2?	ɬʊŋ21	?	1	ɬʊŋ21	1		发音人对该音存疑
+2559	宋	slung3	ɬʊŋ33		0	slung3	ɬʊŋ33		0	ɬʊŋ33	1		
+2560	送	slung3	ɬʊŋ33		0	slung3	ɬʊŋ33		0	ɬʊŋ33	1		
+2561	腮	sloi1	ɬɔi35		0	sloi1	ɬɔi35		0	ɬɔi35	1		
+2562	索	slok8	ɬɔk3		0	slok8	ɬɔk3		0	ɬɔk3	1		
+2563	梳	so1	sɔ35		0	so1	sɔ35		0	sɔ35	1		
+2564	疏	so1	sɔ35		0	so1	sɔ35		0	sɔ35	1		
+2565	蔬	so1	sɔ35		0	so1	sɔ35		0	sɔ35	1		
+2566	所	so2	sɔ21		0	so2	sɔ21		0	sɔ21	1		
+2567	傻	so4	sɔ42/31		0	so4	sɔ42/31		0	sɔ42/31	1		
+2568	水	sui2	sui21		0	sui2	sui21		0	sui21	1		
+2569	稅	sui3	sui33		0	sui3	sui33		0	sui33	1		
+2570	說	sui3或sit8	sui33或sit3		0	sui3或sit8	sui33或sit3		0	sui33或sit3	1		
+2571	誰	sui4	sui42/31		0	sui4	sui42/31		0	sui42/31	1		
+2572	睡	sui6	sui53		0	sui6	sui53		0	sui53	1		
+2573	叔	sʊk7	sʊk35		0	sʊk7	sʊk35		0	sʊk35	1		
+2574	贖	sʊk9	sʊk53		0	sʊk9	sʊk53		0	sʊk53	1		
+2575	淑	sʊk9	sʊk53		0	sʊk9	sʊk53		0	sʊk53	1		
+2576	熟	sʊk9	sʊk53		0	sʊk9	sʊk53		0	sʊk53	1		
+2577	屬	sʊk9	sʊk53		0	sʊk9	sʊk53		0	sʊk53	1		
+2578	蜀	sʊk9	sʊk53		0	sʊk9	sʊk53		0	sʊk53	1		
+2579	祟	sung4	sʊŋ42/31		0	sung4	sʊŋ42/31		0	sʊŋ42/31	1		
+2580	崇	sung4	sʊŋ42/31		0	sung4	sʊŋ42/31		0	sʊŋ42/31	1		
+2581	雙	song1	sᵘɔŋ35		0	song1	sᵘɔŋ35		0	sᵘɔŋ35	1		
+2582	爽	song1	sᵘɔŋ35		0	song1	sᵘɔŋ35		0	sᵘɔŋ35	1		
+2583	霜	song1	sᵘɔŋ35		0	song1	sᵘɔŋ35		0	sᵘɔŋ35	1		
+2584	它	taa1	tʰa35		0	taa1	tʰa35		0	tʰa35	1		
+2585	他	taa1	tʰa35		0	taa1	tʰa35		0	tʰa35	1		
+2586	牠	taa1	tʰa35		0	taa1	tʰa35		0	tʰa35	1		
+2587	她	taa1	tʰa35		0	taa1	tʰa35		0	tʰa35	1		
+2588	態	taai3	tʰai33		0	taai3	tʰai33		0	tʰai33	1		
+2589	汰	taai3	tʰai33		0	taai3	tʰai33		0	tʰai33	1		
+2590	太	taai3	tʰai33		0	taai3	tʰai33		0	tʰai33	1		
+2591	泰	taai3	tʰai33		0	taai3	tʰai33		0	tʰai33	1		
+2592	貪	taam1	tʰam35		0	taam1	tʰam35		0	tʰam35	1		
+2593	毯	taam2	tʰam21		0	taam2	tʰam21		0	tʰam21	1		
+2594	探	taam3	tʰam33		0	taam3	tʰam33		0	tʰam33	1		
+2595	譚	taam4	tʰam42/31		0	taam4	tʰam42/31		0	tʰam42/31	1		
+2596	潭	taam4	tʰam42/31		0	taam4	tʰam42/31		0	tʰam42/31	1		
+2597	曇	taam4	tʰam42/31		0	taam4	tʰam42/31		0	tʰam42/31	1		
+2598	壜	taam4	tʰam42/31		0	taam4	tʰam42/31		0	tʰam42/31	1		
+2599	談	taam4	tʰam42/31		0	taam4	tʰam42/31		0	tʰam42/31	1		
+2600	痰	taam4	tʰam42/31		0	taam4	tʰam42/31		0	tʰam42/31	1		
+2601	淡	taam5或daam6	tʰam21或tam53		0	taam5或daam6	tʰam21或tam53		0	tʰam21或tam53	1		
+2602	癱	taan1	tʰan35		0	taan1	tʰan35		0	tʰan35	1		
+2603	灘	taan1	tʰan35		0	taan1	tʰan35		0	tʰan35	1		
+2604	攤	taan1	tʰan35		0	taan1	tʰan35		0	tʰan35	1		
+2605	袒	taan2	tʰan21		0	taan2	tʰan21		0	tʰan21	1		
+2606	坦	taan2	tʰan21		0	taan2	tʰan21		0	tʰan21	1		
+2607	歎	taan3	tʰan33		0	taan3	tʰan33		0	tʰan33	1		
+2608	碳	taan3	tʰan33		0	taan3	tʰan33		0	tʰan33	1		
+2609	炭	taan3	tʰan33		0	taan3	tʰan33		0	tʰan33	1		
+2610	壇	taan4	tʰan42/31		0	taan4	tʰan42/31		0	tʰan42/31	1		
+2611	彈	taan4或daan6	tʰan42/31或tan53		0	taan4或daan6	tʰan42/31或tan53		0	tʰan42/31或tan53	1		
+2612	檀	taan4或taam4？	tʰan42/31或tʰam42/31	？	1	taan4或taam4？	tʰan42/31或tʰam42/31	？	1	tʰan42/31	1		
+2612	檀									tʰam42/31			发音人对该音存疑
+2613	塔	taap8	tʰap3		0	taap8	tʰap3		0	tʰap3	1		
+2614	塌	taap8	tʰap3		0	taap8	tʰap3		0	tʰap3	1		
+2615	蹋	taap8	tʰap3		0	taap8	tʰap3		0	tʰap3	1		
+2616	梯	tai1	tʰɐi35		0	tai1	tʰɐi35		0	tʰɐi35	1		
+2617	體	tai2	tʰɐi21		0	tai2	tʰɐi21		0	tʰɐi21	1		
+2618	涕	tai3	tʰɐi33		0	tai3	tʰɐi33		0	tʰɐi33	1		
+2619	剃	tai3	tʰɐi33		0	tai3	tʰɐi33		0	tʰɐi33	1		
+2620	締	tai3	tʰɐi33		0	tai3	tʰɐi33		0	tʰɐi33	1		
+2621	屜	tai3	tʰɐi33		0	tai3	tʰɐi33		0	tʰɐi33	1		
+2622	替	tai3	tʰɐi33		0	tai3	tʰɐi33		0	tʰɐi33	1		
+2623	貸	tai3	tʰɐi33		0	tai3	tʰɐi33		0	tʰɐi33	1		
+2624	啼	tai4	tʰɐi42/31		0	tai4	tʰɐi42/31		0	tʰɐi42/31	1		
+2625	蹄	tai4	tʰɐi42/31		0	tai4	tʰɐi42/31		0	tʰɐi42/31	1		
+2626	提	tai4	tʰɐi42/31		0	tai4	tʰɐi42/31		0	tʰɐi42/31	1		
+2627	堤	tai4	tʰɐi42/31		0	tai4	tʰɐi42/31		0	tʰɐi42/31	1		
+2628	題	tai4	tʰɐi42/31		0	tai4	tʰɐi42/31		0	tʰɐi42/31	1		
+2629	吞	tan1	tʰɐn35		0	tan1	tʰɐn35		0	tʰɐn35	1		
+2630	褪	tan3或tui3	tʰɐn33或tʰui33		0	tan3或tui3	tʰɐn33或tʰui33		0	tʰɐn33或tʰui33	1		
+2631	臀	tan4	tʰɐn42/31		0	tan4	tʰɐn42/31		0	tʰɐn42/31	1		
+2632	囤	tan4?或tun4?	tʰɐn42/31或tʰun42/31	??	2	tan4?或tun4?	tʰɐn42/31或tʰun42/31	??	2	tʰɐn42/31或tʰun42/31	1		二者似皆可，发音人存疑
+2633	屯	tan4?或tun4?	tʰɐn42/31或tʰun42/31	??	2	tan4?或tun4?	tʰɐn42/31或tʰun42/31	??	2	tʰɐn42/31或tʰun42/31	1		二者似皆可，发音人存疑
+2634	鈍	tan5	tʰɐn21		0	tan5	tʰɐn21		0	tʰɐn21	1		
+2635	盾	tan5或dan6	tʰɐn21或tɐn53		0	tan5或dan6	tʰɐn21或tɐn53		0	tʰɐn21或tɐn53	1		
+2636	藤	tang4	tʰɐŋ42/31		0	tang4	tʰɐŋ42/31		0	tʰɐŋ42/31	1		
+2637	謄	tang4	tʰɐŋ42/31		0	tang4	tʰɐŋ42/31		0	tʰɐŋ42/31	1		
+2638	騰	tang4	tʰɐŋ42/31		0	tang4	tʰɐŋ42/31		0	tʰɐŋ42/31	1		
+2639	偷	tau1	tʰɐu35		0	tau1	tʰɐu35		0	tʰɐu35	1		
+2640	透	tau3	tʰɐu33		0	tau3	tʰɐu33		0	tʰɐu33	1		
+2641	頭	tau4	tʰɐu42/31		0	tau4	tʰɐu42/31		0	tʰɐu42/31	1		
+2642	投	tau4	tʰɐu42/31		0	tau4	tʰɐu42/31		0	tʰɐu42/31	1		
+2643	廳	ting1	tʰɪŋ35		0	tean1	tʰən35		0	tʰɪŋ35或tʰən35	False		
+2644	挺	ting2	tʰɪŋ21		0	tean2	tʰən21		0	tʰɪŋ21或tʰən21	False		
+2645	艇	ting2	tʰɪŋ21		0	tean2	tʰən21		0	tʰɪŋ21或tʰən21	False		
+2646	聽	ting3	tʰɪŋ33		0	tean3	tʰən33		0	tʰɪŋ33或tʰən33	False		
+2647	廷	ting4	tʰɪŋ42/31		0	tean4	tʰən42/31		0	tʰɪŋ42/31或tʰən42/31	False		
+2648	庭	ting4	tʰɪŋ42/31		0	tean4	tʰən42/31		0	tʰɪŋ42/31或tʰən42/31	False		
+2649	蜓	ting4	tʰɪŋ42/31		0	tean4	tʰən42/31		0	tʰɪŋ42/31或tʰən42/31	False		
+2650	亭	ting4	tʰɪŋ42/31		0	tean4	tʰən42/31		0	tʰɪŋ42/31或tʰən42/31	False		
+2651	停	ting4	tʰɪŋ42/31		0	tean4	tʰən42/31		0	tʰɪŋ42/31或tʰən42/31	False		
+2652	剔	tɪk7	tʰɪk35		0	teat7	tʰət35		0	tʰɪk35或tʰət35	False		
+2653	惕	tɪk7	tʰɪk35		0	teat7	tʰət35		0	tʰɪk35或tʰət35	False		
+2654	踢	tɪk7	tʰɪk35		0	teat7	tʰət35		0	tʰɪk35或tʰət35	False		
+2655	舔	tiem2	tʰiɛm21		0	tiem2	tʰiɛm21		0	tʰiɛm21	1		
+2656	挑	tieu1	tʰiɛu35		0	tieu1	tʰiɛu35		0	tʰiɛu35	1		
+2657	添	tim1	tʰim35		0	tim1	tʰim35		0	tʰim35	1		
+2658	恬	tim4	tʰim42/31		0	tim4	tʰim42/31		0	tʰim42/31	1		
+2659	甜	tim4	tʰim42/31		0	tim4	tʰim42/31		0	tʰim42/31	1		
+2660	天	tin1	tʰin35		0	tin1	tʰin35		0	tʰin35	1		
+2661	田	tin4	tʰin42/31		0	tin4	tʰin42/31		0	tʰin42/31	1		
+2662	填	tin4	tʰin42/31		0	tin4	tʰin42/31		0	tʰin42/31	1		
+2663	佃	tin4?	tʰin42/31	?	1	tin4?	tʰin42/31	?	1	tʰin42/31	1		发音人对该音存疑
+2664	帖	tip8	tʰip3		0	tip8	tʰip3		0	tʰip3	1		
+2665	貼	tip8	tʰip3		0	tip8	tʰip3		0	tʰip3	1		
+2666	疊	tip9	tʰip53		0	tip9	tʰip53		0	tʰip53	1		
+2667	鐵	tit8	tʰit3		0	tit8	tʰit3		0	tʰit3	1		
+2668	笤	tiu2?	tʰiu21	?	1	tiu2?	tʰiu21	?	1	tʰiu21	1		发音人对该音存疑
+2669	跳	tiu3	tʰiu33		0	tiu3	tʰiu33		0	tʰiu33	1		
+2670	條	tiu4	tʰiu42/31		0	tiu4	tʰiu42/31		0	tʰiu42/31	1		
+2671	拖	to1	tʰɔ35		0	to1	tʰɔ35		0	tʰɔ35	1		
+2672	妥	to2	tʰɔ21		0	to2	tʰɔ21		0	tʰɔ21	1		
+2673	橢	to2	tʰɔ21		0	to2	tʰɔ21		0	tʰɔ21	1		
+2674	唾	to3	tʰɔ33		0	to3	tʰɔ33		0	tʰɔ33	1		
+2675	馱	to4	tʰɔ42/31		0	to4	tʰɔ42/31		0	tʰɔ42/31	1		
+2676	鴕	to4	tʰɔ42/31		0	to4	tʰɔ42/31		0	tʰɔ42/31	1		
+2677	駝	to4	tʰɔ42/31		0	to4	tʰɔ42/31		0	tʰɔ42/31	1		
+2678	舵	to4?	tʰɔ42/31	?	1	to4?	tʰɔ42/31	?	1	tʰɔ42/31	1		发音人对该音存疑
+2679	苔	toi4或toi1?	tʰɔi42/31或tʰɔi35	?	1	toi4或toi1?	tʰɔi42/31或tʰɔi35	?	1	tʰɔi42/31	1		
+2679	苔									tʰɔi35			发音人对该音存疑
+2680	滔	tou1	tʰou35		0	tou1	tʰou35		0	tʰou35	1		
+2681	討	tou2	tʰou21		0	tou2	tʰou21		0	tʰou21	1		
+2682	土	tou2	tʰou21		0	tou2	tʰou21		0	tʰou21	1		
+2683	套	tou3	tʰou33		0	tou3	tʰou33		0	tʰou33	1		
+2684	吐	tou3	tʰou33		0	tou3	tʰou33		0	tʰou33	1		
+2685	兔	tou3	tʰou33		0	tou3	tʰou33		0	tʰou33	1		
+2686	濤	tou4	tʰou42/31		0	tou4	tʰou42/31		0	tʰou42/31	1		
+2687	陶	tou4	tʰou42/31		0	tou4	tʰou42/31		0	tʰou42/31	1		
+2688	掏	tou4	tʰou42/31		0	tou4	tʰou42/31		0	tʰou42/31	1		
+2689	萄	tou4	tʰou42/31		0	tou4	tʰou42/31		0	tʰou42/31	1		
+2690	淘	tou4	tʰou42/31		0	tou4	tʰou42/31		0	tʰou42/31	1		
+2691	圖	tou4	tʰou42/31		0	tou4	tʰou42/31		0	tʰou42/31	1		
+2692	途	tou4	tʰou42/31		0	tou4	tʰou42/31		0	tʰou42/31	1		
+2693	塗	tou4	tʰou42/31		0	tou4	tʰou42/31		0	tʰou42/31	1		
+2694	逃	tou4	tʰou42/31		0	tou4	tʰou42/31		0	tʰou42/31	1		
+2695	桃	tou4	tʰou42/31		0	tou4	tʰou42/31		0	tʰou42/31	1		
+2696	屠	tou4	tʰou42/31		0	tou4	tʰou42/31		0	tʰou42/31	1		
+2697	徒	tou4	tʰou42/31		0	tou4	tʰou42/31		0	tʰou42/31	1		
+2698	肚	tou5?	tʰou21	?	1	tou5?	tʰou21	?	1	tʰou21	1		
+2699	杈	tsaa1	ʦʰa35		0	tsaa1	ʦʰa35		0	ʦʰa35	1		
+2700	衩	tsaa1	ʦʰa35		0	tsaa1	ʦʰa35		0	ʦʰa35	1		
+2701	叉	tsaa1	ʦʰa35		0	tsaa1	ʦʰa35		0	ʦʰa35	1		
+2702	差	tsaa1或tsaai1	ʦʰa35或ʦʰai35		0	tsaa1或tsaai1	ʦʰa35或ʦʰai35		0	ʦʰa35或ʦʰai35	1		
+2703	岔	tsaa3	ʦʰa33		0	tsaa3	ʦʰa33		0	ʦʰa33	1		
+2704	茶	tsaa4	ʦʰa42/31		0	tsaa4	ʦʰa42/31		0	ʦʰa42/31	1		
+2705	猜	tsaai1	ʦʰai35		0	tsaai1	ʦʰai35		0	ʦʰai35	1		
+2706	踩	tsaai2或njaai2	ʦʰai21或ȵai21		0	tsaai2或njaai2	ʦʰai21或ȵai21		0	ʦʰai21或ȵai21	1		
+2707	豺	tsaai4	ʦʰai42/31		0	tsaai4	ʦʰai42/31		0	ʦʰai42/31	1		
+2708	柴	tsaai4	ʦʰai42/31		0	tsaai4	ʦʰai42/31		0	ʦʰai42/31	1		
+2709	參	tsaam1	ʦʰam35		0	tsaam1	ʦʰam35		0	ʦʰam35	1		
+2710	攙	tsaam1?	ʦʰam35	?	1	tsaam1?	ʦʰam35	?	1	ʦʰam35	1		发音人对该音存疑
+2711	摻	tsaam1?或tsam1?	ʦʰam35或ʦʰɐm35	??	2	tsaam1?或tsam1?	ʦʰam35或ʦʰɐm35	??	2	ʦʰam35或ʦʰɐm35	1		二者似皆可，发音人存疑
+2712	慘	tsaam2	ʦʰam21		0	tsaam2	ʦʰam21		0	ʦʰam21	1		
+2713	杉	tsaam3	ʦʰam33		0	tsaam3	ʦʰam33		0	ʦʰam33	1		
+2714	饞	tsaam4	ʦʰam42/31		0	tsaam4	ʦʰam42/31		0	ʦʰam42/31	1		
+2715	蠶	tsaam4	ʦʰam42/31		0	tsaam4	ʦʰam42/31		0	ʦʰam42/31	1		
+2716	慚	tsaam4	ʦʰam42/31		0	tsaam4	ʦʰam42/31		0	ʦʰam42/31	1		
+2717	餐	tsaan1	ʦʰan35		0	tsaan1	ʦʰan35		0	ʦʰan35	1		
+2718	產	tsaan2	ʦʰan21		0	tsaan2	ʦʰan21		0	ʦʰan21	1		
+2719	鏟	tsaan2	ʦʰan21		0	tsaan2	ʦʰan21		0	ʦʰan21	1		
+2720	燦	tsaan3	ʦʰan33		0	tsaan3	ʦʰan33		0	ʦʰan33	1		
+2721	殘	tsaan4	ʦʰan42/31		0	tsaan4	ʦʰan42/31		0	ʦʰan42/31	1		
+2722	插	tsaap8	ʦʰap3		0	tsaap8	ʦʰap3		0	ʦʰap3	1		
+2723	察	tsaat8	ʦʰat3		0	tsaat8	ʦʰat3		0	ʦʰat3	1		
+2724	擦	tsaat8	ʦʰat3		0	tsaat8	ʦʰat3		0	ʦʰat3	1		
+2725	刷	tsaat8	ʦʰat3		0	tsaat8	ʦʰat3		0	ʦʰat3	1		
+2726	抄	tsaau1	ʦʰau35		0	tsaau1	ʦʰau35		0	ʦʰau35	1		
+2727	鈔	tsaau1	ʦʰau35		0	tsaau1	ʦʰau35		0	ʦʰau35	1		
+2728	吵	tsaau2	ʦʰau21		0	tsaau2	ʦʰau21		0	ʦʰau21	1		
+2729	炒	tsaau2	ʦʰau21		0	tsaau2	ʦʰau21		0	ʦʰau21	1		
+2730	巢	tsaau4	ʦʰau42/31		0	tsaau4	ʦʰau42/31		0	ʦʰau42/31	1		
+2731	棲	tsai1	ʦʰɐi35		0	tsai1	ʦʰɐi35		0	ʦʰɐi35	1		
+2732	淒	tsai1	ʦʰɐi35		0	tsai1	ʦʰɐi35		0	ʦʰɐi35	1		
+2733	妻	tsai1	ʦʰɐi35		0	tsai1	ʦʰɐi35		0	ʦʰɐi35	1		
+2734	砌	tsai3	ʦʰɐi33		0	tsai3	ʦʰɐi33		0	ʦʰɐi33	1		
+2735	齊	tsai4	ʦʰɐi42/31		0	tsai4	ʦʰɐi42/31		0	ʦʰɐi42/31	1		
+2736	薺	tsai4?或tsai5?	ʦʰɐi42/31或ʦʰɐi21	??	2	tsai4?或tsai5?	ʦʰɐi42/31或ʦʰɐi21	??	2	ʦʰɐi42/31或ʦʰɐi21	1		二者似皆可，发音人存疑
+2737	冊	tsak7	ʦʰɐk35		0	tsak7	ʦʰɐk35		0	ʦʰɐk35	1		
+2738	拆	tsak7	ʦʰɐk35		0	tsak7	ʦʰɐk35		0	ʦʰɐk35	1		
+2739	策	tsak7	ʦʰɐk35		0	tsak7	ʦʰɐk35		0	ʦʰɐk35	1		
+2740	測	tsak7	ʦʰɐk35		0	tsak7	ʦʰɐk35		0	ʦʰɐk35	1		
+2741	賊	tsak9	ʦʰɐk53		0	tsak9	ʦʰɐk53		0	ʦʰɐk53	1		
+2742	侵	tsam1	ʦʰɐm35		0	tsam1	ʦʰɐm35		0	ʦʰɐm35	1		
+2743	寢	tsam2	ʦʰɐm21		0	tsam2	ʦʰɐm21		0	ʦʰɐm21	1		
+2744	沈	tsam4	ʦʰɐm42/31		0	tsam4	ʦʰɐm42/31		0	ʦʰɐm42/31	1		
+2745	忱	tsam4?或sam4?	ʦʰɐm42/31或sɐm42/31	??	2	tsam4?或sam4?	ʦʰɐm42/31或sɐm42/31	??	2	ʦʰɐm42/31或sɐm42/31	1		二者似皆可，发音人存疑
+2746	椿	tsan1	ʦʰɐn35		0	tsan1	ʦʰɐn35		0	ʦʰɐn35	1		
+2747	春	tsan1	ʦʰɐn35		0	tsan1	ʦʰɐn35		0	ʦʰɐn35	1		
+2748	親	tsan1	ʦʰɐn35		0	tsan1	ʦʰɐn35		0	ʦʰɐn35	1		
+2749	蠢	tsan2	ʦʰɐn21		0	tsan2	ʦʰɐn21		0	ʦʰɐn21	1		
+2750	疹	tsan2	ʦʰɐn21		0	tsan2	ʦʰɐn21		0	ʦʰɐn21	1		
+2751	診	tsan2	ʦʰɐn21		0	tsan2	ʦʰɐn21		0	ʦʰɐn21	1		
+2752	襯	tsan3	ʦʰɐn33		0	tsan3	ʦʰɐn33		0	ʦʰɐn33	1		
+2753	趁	tsan3	ʦʰɐn33		0	tsan3	ʦʰɐn33		0	ʦʰɐn33	1		
+2754	陳	tsan4	ʦʰɐn42/31		0	tsan4	ʦʰɐn42/31		0	ʦʰɐn42/31	1		
+2755	塵	tsan4	ʦʰɐn42/31		0	tsan4	ʦʰɐn42/31		0	ʦʰɐn42/31	1		
+2756	循	tsan4	ʦʰɐn42/31		0	tsan4	ʦʰɐn42/31		0	ʦʰɐn42/31	1		
+2757	秦	tsan4	ʦʰɐn42/31		0	tsan4	ʦʰɐn42/31		0	ʦʰɐn42/31	1		
+2758	旬	tsan4	ʦʰɐn42/31		0	tsan4	ʦʰɐn42/31		0	ʦʰɐn42/31	1		
+2759	詢	tsan4	ʦʰɐn42/31		0	tsan4	ʦʰɐn42/31		0	ʦʰɐn42/31	1		
+2760	巡	tsan4	ʦʰɐn42/31		0	tsan4	ʦʰɐn42/31		0	ʦʰɐn42/31	1		
+2761	榛	tsan4?	ʦʰɐn42/31	?	1	tsan4?	ʦʰɐn42/31	?	1	ʦʰɐn42/31	1		发音人对该音存疑
+2762	撐	tsang3	ʦʰɐŋ33		0	tsang3	ʦʰɐŋ33		0	ʦʰɐŋ33	1		
+2763	睜	tsang3	ʦʰɐŋ33		0	tsang3	ʦʰɐŋ33		0	ʦʰɐŋ33	1		
+2764	層	tsang4	ʦʰɐŋ42/31		0	tsang4	ʦʰɐŋ42/31		0	ʦʰɐŋ42/31	1		
+2765	橙	tsang4	ʦʰɐŋ42/31		0	tsang4	ʦʰɐŋ42/31		0	ʦʰɐŋ42/31	1		
+2766	曾	tsang4或zang1	ʦʰɐŋ42/31或ʦʰɐŋ35		0	tsang4或zang1	ʦʰɐŋ42/31或ʦʰɐŋ35		0	ʦʰɐŋ42/31或ʦɐŋ35	1		
+2767	輯	tsap7	ʦʰɐp35		0	tsap7	ʦʰɐp35		0	ʦʰɐp35	1		
+2768	出	tsat7	ʦʰɐt35		0	tsat7	ʦʰɐt35		0	ʦʰɐt35	1		
+2769	柒	tsat7	ʦʰɐt35		0	tsat7	ʦʰɐt35		0	ʦʰɐt35	1		
+2770	七	tsat7	ʦʰɐt35		0	tsat7	ʦʰɐt35		0	ʦʰɐt35	1		
+2771	漆	tsat7	ʦʰɐt35		0	tsat7	ʦʰɐt35		0	ʦʰɐt35	1		
+2772	秋	tsau1	ʦʰɐu35		0	tsau1	ʦʰɐu35		0	ʦʰɐu35	1		
+2773	抽	tsau1	ʦʰɐu35		0	tsau1	ʦʰɐu35		0	ʦʰɐu35	1		
+2774	揪	tsau1?	ʦʰɐu35	?	1	tsau1?	ʦʰɐu35	?	1	ʦʰɐu35	1		发音人对该音存疑
+2775	丑	tsau2	ʦʰɐu21		0	tsau2	ʦʰɐu21		0	ʦʰɐu21	1		
+2776	醜	tsau2	ʦʰɐu21		0	tsau2	ʦʰɐu21		0	ʦʰɐu21	1		
+2777	嗅	tsau3	ʦʰɐu33		0	tsau3	ʦʰɐu33		0	ʦʰɐu33	1		
+2778	臭	tsau3	ʦʰɐu33		0	tsau3	ʦʰɐu33		0	ʦʰɐu33	1		
+2779	湊	tsau3	ʦʰɐu33		0	tsau3	ʦʰɐu33		0	ʦʰɐu33	1		
+2780	囚	tsau4	ʦʰɐu42/31		0	tsau4	ʦʰɐu42/31		0	ʦʰɐu42/31	1		
+2781	疇	tsau4	ʦʰɐu42/31		0	tsau4	ʦʰɐu42/31		0	ʦʰɐu42/31	1		
+2782	籌	tsau4	ʦʰɐu42/31		0	tsau4	ʦʰɐu42/31		0	ʦʰɐu42/31	1		
+2783	酬	tsau4	ʦʰɐu42/31		0	tsau4	ʦʰɐu42/31		0	ʦʰɐu42/31	1		
+2784	綢	tsau4	ʦʰɐu42/31		0	tsau4	ʦʰɐu42/31		0	ʦʰɐu42/31	1		
+2785	稠	tsau4	ʦʰɐu42/31		0	tsau4	ʦʰɐu42/31		0	ʦʰɐu42/31	1		
+2786	奢	tse1	ʦʰɛ35		0	tse1	ʦʰɛ35		0	ʦʰɛ35	1		
+2787	車	tse1或gei1	ʦʰɛ35或kei35		0	tse1或gei1	ʦʰɛ35或kei35		0	ʦʰɛ35或kei35	1		
+2788	且	tse2	ʦʰɛ21		0	tse2	ʦʰɛ21		0	ʦʰɛ21	1		
+2789	扯	tse2	ʦʰɛ21		0	tse2	ʦʰɛ21		0	ʦʰɛ21	1		
+2790	邪	tse4	ʦʰɛ42/31		0	tse4	ʦʰɛ42/31		0	ʦʰɛ42/31	1		
+2791	斜	tse4	ʦʰɛ42/31		0	tse4	ʦʰɛ42/31		0	ʦʰɛ42/31	1		
+2792	趨	tsei1	ʦʰei35		0	tsei1	ʦʰei35		0	ʦʰei35	1		
+2793	雌	tsei1	ʦʰei35		0	tsei1	ʦʰei35		0	ʦʰei35	1		
+2794	蛆	tsei1	ʦʰei35		0	tsei1	ʦʰei35		0	ʦʰei35	1		
+2795	此	tsei2	ʦʰei21		0	tsei2	ʦʰei21		0	ʦʰei21	1		
+2796	娶	tsei2	ʦʰei21		0	tsei2	ʦʰei21		0	ʦʰei21	1		
+2797	取	tsei2	ʦʰei21		0	tsei2	ʦʰei21		0	ʦʰei21	1		
+2798	次	tsei3	ʦʰei33		0	tsei3	ʦʰei33		0	ʦʰei33	1		
+2799	趣	tsei3	ʦʰei33		0	tsei3	ʦʰei33		0	ʦʰei33	1		
+2800	賜	tsei3	ʦʰei33		0	tsei3	ʦʰei33		0	ʦʰei33	1		
+2801	臍	tsei4	ʦʰei42/31		0	tsei4	ʦʰei42/31		0	ʦʰei42/31	1		
+2802	祠	tsei4	ʦʰei42/31		0	tsei4	ʦʰei42/31		0	ʦʰei42/31	1		
+2803	詞	tsei4	ʦʰei42/31		0	tsei4	ʦʰei42/31		0	ʦʰei42/31	1		
+2804	辭	tsei4	ʦʰei42/31		0	tsei4	ʦʰei42/31		0	ʦʰei42/31	1		
+2805	徐	tsei4	ʦʰei42/31		0	tsei4	ʦʰei42/31		0	ʦʰei42/31	1		
+2806	慈	tsei4	ʦʰei42/31		0	tsei4	ʦʰei42/31		0	ʦʰei42/31	1		
+2807	磁	tsei4	ʦʰei42/31		0	tsei4	ʦʰei42/31		0	ʦʰei42/31	1		
+2808	似	tsei5或tsei3?	ʦʰei21或ʦʰei33	?	1	tsei5或tsei3?	ʦʰei21或ʦʰei33	?	1	ʦʰei21	1		
+2808	似									ʦei33			发音人对该音存疑
+2809	稱	tsing1	ʦʰɪŋ35		0	tsean1	ʦʰən35		0	ʦʰɪŋ35或ʦʰən35	False		
+2810	青	tsing1	ʦʰɪŋ35		0	tsean1	ʦʰən35		0	ʦʰɪŋ35或ʦʰən35	False		
+2811	清	tsing1	ʦʰɪŋ35		0	tsean1	ʦʰən35		0	ʦʰɪŋ35或ʦʰən35	False		
+2812	蜻	tsing1	ʦʰɪŋ35		0	tsean1	ʦʰən35		0	ʦʰɪŋ35或ʦʰən35	False		
+2813	拯	tsing2	ʦʰɪŋ21		0	tsean2	ʦʰən21		0	ʦʰɪŋ21或ʦʰən21	False		
+2814	逞	tsing2	ʦʰɪŋ21		0	tsean2	ʦʰən21		0	ʦʰɪŋ21或ʦʰən21	False		
+2815	請	tsing2	ʦʰɪŋ21		0	tsean2	ʦʰən21		0	ʦʰɪŋ21或ʦʰən21	False		
+2816	證	tsing3	ʦʰɪŋ33		0	tsean3	ʦʰən33		0	ʦʰɪŋ33或ʦʰən33	False		
+2817	秤	tsing3	ʦʰɪŋ33		0	tsean3	ʦʰən33		0	ʦʰɪŋ33或ʦʰən33	False		
+2818	呈	tsing4	ʦʰɪŋ42/31		0	tsean4	ʦʰən42/31		0	ʦʰɪŋ42/31或ʦʰən42/31	False		
+2819	程	tsing4	ʦʰɪŋ42/31		0	tsean4	ʦʰən42/31		0	ʦʰɪŋ42/31或ʦʰən42/31	False		
+2820	情	tsing4	ʦʰɪŋ42/31		0	tsean4	ʦʰən42/31		0	ʦʰɪŋ42/31或ʦʰən42/31	False		
+2821	晴	tsing4	ʦʰɪŋ42/31		0	tsean4	ʦʰən42/31		0	ʦʰɪŋ42/31或ʦʰən42/31	False		
+2822	懲	tsing4	ʦʰɪŋ42/31		0	tsean4	ʦʰən42/31		0	ʦʰɪŋ42/31或ʦʰən42/31	False		
+2823	澄	tsing4或king4	ʦʰɪŋ42/31或kʰɪŋ42/31		0	tsean4或kean4	ʦʰən42/31或kʰən42/31		0	ʦʰɪŋ42/31或kʰɪŋ42/31或ʦʰən42/31或kʰən42/31	False		
+2824	尺	tsɪk7	ʦʰɪk35		0	tseat7	ʦʰət35		0	ʦʰɪk35或ʦʰət35	False		
+2825	斥	tsɪk7	ʦʰɪk35		0	tseat7	ʦʰət35		0	ʦʰɪk35或ʦʰət35	False		
+2826	赤	tsɪk7	ʦʰɪk35		0	tseat7	ʦʰət35		0	ʦʰɪk35或ʦʰət35	False		
+2827	嘁	tsɪk7	ʦʰɪk35		0	tseat7	ʦʰət35		0	ʦʰɪk35或ʦʰət35	False		
+2828	戚	tsɪk7	ʦʰɪk35		0	tseat7	ʦʰət35		0	ʦʰɪk35或ʦʰət35	False		
+2829	刺	tsɪk7或tsei3	ʦʰɪk35或ʦʰei33		0	tseat7或tsei3	ʦʰət35或ʦʰei33		0	ʦʰɪk35或ʦʰei33或ʦʰət35或ʦʰei33	False		
+2830	嗤	tsi1	ʦʰi35		0	tsi1	ʦʰi35		0	ʦʰi35	1		
+2831	癡	tsi1	ʦʰi35		0	tsi1	ʦʰi35		0	ʦʰi35	1		
+2832	恥	tsi2	ʦʰi21		0	tsi2	ʦʰi21		0	ʦʰi21	1		
+2833	齒	tsi2	ʦʰi21		0	tsi2	ʦʰi21		0	ʦʰi21	1		
+2834	侈	tsi2	ʦʰi21		0	tsi2	ʦʰi21		0	ʦʰi21	1		
+2835	矢	tsi2	ʦʰi21		0	tsi2	ʦʰi21		0	ʦʰi21	1		
+2836	始	tsi2	ʦʰi21		0	tsi2	ʦʰi21		0	ʦʰi21	1		
+2837	儲	tsi2	ʦʰi21		0	tsi2	ʦʰi21		0	ʦʰi21	1		
+2838	曙	tsi2	ʦʰi21		0	tsi2	ʦʰi21		0	ʦʰi21	1		
+2839	署	tsi2	ʦʰi21		0	tsi2	ʦʰi21		0	ʦʰi21	1		
+2840	處	tsi2或tsi3或si3	ʦʰi21或ʦʰi33或si33		0	tsi2或tsi3或si3	ʦʰi21或ʦʰi33或si33		0	ʦʰi21或ʦʰi33或si33	1		
+2841	廁	tsi3	ʦʰi33		0	tsi3	ʦʰi33		0	ʦʰi33	1		
+2842	翅	tsi3	ʦʰi33		0	tsi3	ʦʰi33		0	ʦʰi33	1		
+2843	幟	tsi3	ʦʰi33		0	tsi3	ʦʰi33		0	ʦʰi33	1		
+2844	櫥	tsi4	ʦʰi42/31		0	tsi4	ʦʰi42/31		0	ʦʰi42/31	1		
+2845	廚	tsi4	ʦʰi42/31		0	tsi4	ʦʰi42/31		0	ʦʰi42/31	1		
+2846	持	tsi4	ʦʰi42/31		0	tsi4	ʦʰi42/31		0	ʦʰi42/31	1		
+2847	遲	tsi4	ʦʰi42/31		0	tsi4	ʦʰi42/31		0	ʦʰi42/31	1		
+2848	弛	tsi4	ʦʰi42/31		0	tsi4	ʦʰi42/31		0	ʦʰi42/31	1		
+2849	池	tsi4	ʦʰi42/31		0	tsi4	ʦʰi42/31		0	ʦʰi42/31	1		
+2850	馳	tsi4	ʦʰi42/31		0	tsi4	ʦʰi42/31		0	ʦʰi42/31	1		
+2851	除	tsi4	ʦʰi42/31		0	tsi4	ʦʰi42/31		0	ʦʰi42/31	1		
+2852	貯	tsi5	ʦʰi21		0	tsi5	ʦʰi21		0	ʦʰi21	1		
+2853	泞	tsi5	ʦʰi21		0	tsi5	ʦʰi21		0	ʦʰi21	1		
+2854	柠	tsi5	ʦʰi21		0	tsi5	ʦʰi21		0	ʦʰi21	1		
+2855	宁	tsi5	ʦʰi21		0	tsi5	ʦʰi21		0	ʦʰi21	1		
+2856	柱	tsi5	ʦʰi21		0	tsi5	ʦʰi21		0	ʦʰi21	1		
+2857	恃	tsi5?	ʦʰi21	?	1	tsi5?	ʦʰi21	?	1	ʦʰi21	1		发音人对该音存疑
+2858	雀	tsiek8	ʦʰiɛk3		0	tsiek8	ʦʰiɛk3		0	ʦʰiɛk3	1		
+2859	芍	tsiek8	ʦʰiɛk3		0	tsiek8	ʦʰiɛk3		0	ʦʰiɛk3	1		
+2860	灼	tsiek8	ʦʰiɛk3		0	tsiek8	ʦʰiɛk3		0	ʦʰiɛk3	1		
+2861	酌	tsiek8	ʦʰiɛk3		0	tsiek8	ʦʰiɛk3		0	ʦʰiɛk3	1		
+2862	淺	tsien2	ʦʰiɛn21		0	tsien2	ʦʰiɛn21		0	ʦʰiɛn21	1		
+2863	槍	tsieng1	ʦʰiɛŋ35		0	tsieng1	ʦʰiɛŋ35		0	ʦʰiɛŋ35	1		
+2864	猖	tsieng1	ʦʰiɛŋ35		0	tsieng1	ʦʰiɛŋ35		0	ʦʰiɛŋ35	1		
+2865	昌	tsieng1	ʦʰiɛŋ35		0	tsieng1	ʦʰiɛŋ35		0	ʦʰiɛŋ35	1		
+2866	搶	tsieng2	ʦʰiɛŋ21		0	tsieng2	ʦʰiɛŋ21		0	ʦʰiɛŋ21	1		
+2867	倡	tsieng3	ʦʰiɛŋ33		0	tsieng3	ʦʰiɛŋ33		0	ʦʰiɛŋ33	1		
+2868	唱	tsieng3	ʦʰiɛŋ33		0	tsieng3	ʦʰiɛŋ33		0	ʦʰiɛŋ33	1		
+2869	暢	tsieng3	ʦʰiɛŋ33		0	tsieng3	ʦʰiɛŋ33		0	ʦʰiɛŋ33	1		
+2870	牆	tsieng4	ʦʰiɛŋ42/31		0	tsieng4	ʦʰiɛŋ42/31		0	ʦʰiɛŋ42/31	1		
+2871	翔	tsieng4	ʦʰiɛŋ42/31		0	tsieng4	ʦʰiɛŋ42/31		0	ʦʰiɛŋ42/31	1		
+2872	詳	tsieng4	ʦʰiɛŋ42/31		0	tsieng4	ʦʰiɛŋ42/31		0	ʦʰiɛŋ42/31	1		
+2873	祥	tsieng4	ʦʰiɛŋ42/31		0	tsieng4	ʦʰiɛŋ42/31		0	ʦʰiɛŋ42/31	1		
+2874	場	tsieng4	ʦʰiɛŋ42/31		0	tsieng4	ʦʰiɛŋ42/31		0	ʦʰiɛŋ42/31	1		
+2875	腸	tsieng4	ʦʰiɛŋ42/31		0	tsieng4	ʦʰiɛŋ42/31		0	ʦʰiɛŋ42/31	1		
+2876	簽	tsim1	ʦʰim35		0	tsim1	ʦʰim35		0	ʦʰim35	1		
+2877	纖	tsim1	ʦʰim35		0	tsim1	ʦʰim35		0	ʦʰim35	1		
+2878	殲	tsim1	ʦʰim35		0	tsim1	ʦʰim35		0	ʦʰim35	1		
+2879	潛	tsim4	ʦʰim42/31		0	tsim4	ʦʰim42/31		0	ʦʰim42/31	1		
+2880	川	tsin1	ʦʰin35		0	tsin1	ʦʰin35		0	ʦʰin35	1		
+2881	穿	tsin1	ʦʰin35		0	tsin1	ʦʰin35		0	ʦʰin35	1		
+2882	千	tsin1	ʦʰin35		0	tsin1	ʦʰin35		0	ʦʰin35	1		
+2883	遷	tsin1	ʦʰin35		0	tsin1	ʦʰin35		0	ʦʰin35	1		
+2884	闡	tsin2?	ʦʰin21	?	1	tsin2?	ʦʰin21	?	1	ʦʰin21	1		发音人对该音存疑
+2885	揣	tsin2?	ʦʰin21	?	1	tsin2?	ʦʰin21	?	1	ʦʰin21	1		发音人对该音存疑
+2886	串	tsin3	ʦʰin33		0	tsin3	ʦʰin33		0	ʦʰin33	1		
+2887	竄	tsin3	ʦʰin33		0	tsin3	ʦʰin33		0	ʦʰin33	1		
+2888	纏	tsin4	ʦʰin42/31		0	tsin4	ʦʰin42/31		0	ʦʰin42/31	1		
+2889	錢	tsin4	ʦʰin42/31		0	tsin4	ʦʰin42/31		0	ʦʰin42/31	1		
+2890	前	tsin4	ʦʰin42/31		0	tsin4	ʦʰin42/31		0	ʦʰin42/31	1		
+2891	痊	tsin4	ʦʰin42/31		0	tsin4	ʦʰin42/31		0	ʦʰin42/31	1		
+2892	全	tsin4	ʦʰin42/31		0	tsin4	ʦʰin42/31		0	ʦʰin42/31	1		
+2893	泉	tsin4	ʦʰin42/31		0	tsin4	ʦʰin42/31		0	ʦʰin42/31	1		
+2894	攢	tsin4？	ʦʰin42/31	？	1	tsin4？	ʦʰin42/31	？	1	ʦʰin42/31	1		发音人对该音存疑
+2895	踐	tsin5或zin6?	ʦʰin21或ʦʰin53	?	1	tsin5或zin6?	ʦʰin21或ʦʰin53	?	1	ʦʰin21	1		
+2895	踐									ʦin53			发音人对该音存疑
+2896	切	tsit7	ʦʰit35		0	tsit7	ʦʰit35		0	ʦʰit35	1		
+2897	澈	tsit8	ʦʰit3		0	tsit8	ʦʰit3		0	ʦʰit3	1		
+2898	轍	tsit8	ʦʰit3		0	tsit8	ʦʰit3		0	ʦʰit3	1		
+2899	徹	tsit8	ʦʰit3		0	tsit8	ʦʰit3		0	ʦʰit3	1		
+2900	撤	tsit8	ʦʰit3		0	tsit8	ʦʰit3		0	ʦʰit3	1		
+2901	拙	tsit8	ʦʰit3		0	tsit8	ʦʰit3		0	ʦʰit3	1		
+2902	竊	tsit8	ʦʰit3		0	tsit8	ʦʰit3		0	ʦʰit3	1		
+2903	撮	tsit8	ʦʰit3		0	tsit8	ʦʰit3		0	ʦʰit3	1		
+2904	設	tsit8	ʦʰit3		0	tsit8	ʦʰit3		0	ʦʰit3	1		
+2905	悄	tsiu1	ʦʰiu35		0	tsiu1	ʦʰiu35		0	ʦʰiu35	1		
+2906	超	tsiu1	ʦʰiu35		0	tsiu1	ʦʰiu35		0	ʦʰiu35	1		
+2907	鍬	tsiu3	ʦʰiu33		0	tsiu3	ʦʰiu33		0	ʦʰiu33	1		
+2908	俏	tsiu3	ʦʰiu33		0	tsiu3	ʦʰiu33		0	ʦʰiu33	1		
+2909	峭	tsiu3	ʦʰiu33		0	tsiu3	ʦʰiu33		0	ʦʰiu33	1		
+2910	肖	tsiu3或sliu1	ʦʰiu33或ɬiu35		0	tsiu3或sliu1	ʦʰiu33或ɬiu35		0	ʦʰiu33或ɬiu35	1		
+2911	潮	tsiu4	ʦʰiu42/31		0	tsiu4	ʦʰiu42/31		0	ʦʰiu42/31	1		
+2912	憔	tsiu4?	ʦʰiu42/31	?	1	tsiu4?	ʦʰiu42/31	?	1	ʦʰiu42/31	1		发音人对该音存疑
+2913	瞧	tsiu4?	ʦʰiu42/31	?	1	tsiu4?	ʦʰiu42/31	?	1	ʦʰiu42/31	1		发音人对该音存疑
+2914	雛	tso1	ʦʰɔ35		0	tso1	ʦʰɔ35		0	ʦʰɔ35	1		
+2915	初	tso1	ʦʰɔ35		0	tso1	ʦʰɔ35		0	ʦʰɔ35	1		
+2916	搓	tso1或no1	ʦʰɔ35或nɔ35		0	tso1或no1	ʦʰɔ35或nɔ35		0	ʦʰɔ35或nɔ35	1		
+2917	礎	tso2	ʦʰɔ21		0	tso2	ʦʰɔ21		0	ʦʰɔ21	1		
+2918	楚	tso2	ʦʰɔ21		0	tso2	ʦʰɔ21		0	ʦʰɔ21	1		
+2919	錯	tso3	ʦʰɔ33		0	tso3	ʦʰɔ33		0	ʦʰɔ33	1		
+2920	挫	tso3	ʦʰɔ33		0	tso3	ʦʰɔ33		0	ʦʰɔ33	1		
+2921	銼	tso3	ʦʰɔ33		0	tso3	ʦʰɔ33		0	ʦʰɔ33	1		
+2922	鋤	tso4	ʦʰɔ42/31		0	tso4	ʦʰɔ42/31		0	ʦʰɔ42/31	1		
+2923	坐	tso5或zo6	ʦʰɔ21或ʦʰɔ53		0	tso5或zo6	ʦʰɔ21或ʦʰɔ53		0	ʦʰɔ21或ʦɔ53	1		
+2924	采	tsoi2	ʦʰɔi21		0	tsoi2	ʦʰɔi21		0	ʦʰɔi21	1		
+2925	採	tsoi2	ʦʰɔi21		0	tsoi2	ʦʰɔi21		0	ʦʰɔi21	1		
+2926	彩	tsoi2	ʦʰɔi21		0	tsoi2	ʦʰɔi21		0	ʦʰɔi21	1		
+2927	睬	tsoi2	ʦʰɔi21		0	tsoi2	ʦʰɔi21		0	ʦʰɔi21	1		
+2928	菜	tsoi3	ʦʰɔi33		0	tsoi3	ʦʰɔi33		0	ʦʰɔi33	1		
+2929	塞	tsoi3或slak7	ʦʰɔi33或ɬɐk35		0	tsoi3或slak7	ʦʰɔi33或ɬɐk35		0	ʦʰɔi33或ɬɐk35	1		
+2930	才	tsoi4	ʦʰɔi42/31		0	tsoi4	ʦʰɔi42/31		0	ʦʰɔi42/31	1		
+2931	材	tsoi4	ʦʰɔi42/31		0	tsoi4	ʦʰɔi42/31		0	ʦʰɔi42/31	1		
+2932	財	tsoi4	ʦʰɔi42/31		0	tsoi4	ʦʰɔi42/31		0	ʦʰɔi42/31	1		
+2933	纔	tsoi4	ʦʰɔi42/31		0	tsoi4	ʦʰɔi42/31		0	ʦʰɔi42/31	1		
+2934	綽	tsok8或tsiek8	ʦʰɔk3或ʦʰiɛk3		0	tsok8或tsiek8	ʦʰɔk3或ʦʰiɛk3		0	ʦʰɔk3或ʦʰiɛk3	1		
+2935	嗆	tsong1	ʦʰᵘɔŋ35		0	tsong1	ʦʰᵘɔŋ35		0	ʦʰᵘɔŋ35	1		
+2936	滄	tsong1	ʦʰᵘɔŋ35		0	tsong1	ʦʰᵘɔŋ35		0	ʦʰᵘɔŋ35	1		
+2937	倉	tsong1	ʦʰᵘɔŋ35		0	tsong1	ʦʰᵘɔŋ35		0	ʦʰᵘɔŋ35	1		
+2938	蒼	tsong1	ʦʰᵘɔŋ35		0	tsong1	ʦʰᵘɔŋ35		0	ʦʰᵘɔŋ35	1		
+2939	瘡	tsong1	ʦʰᵘɔŋ35		0	tsong1	ʦʰᵘɔŋ35		0	ʦʰᵘɔŋ35	1		
+2940	艙	tsong1	ʦʰᵘɔŋ35		0	tsong1	ʦʰᵘɔŋ35		0	ʦʰᵘɔŋ35	1		
+2941	窗	tsong1	ʦʰᵘɔŋ35		0	tsong1	ʦʰᵘɔŋ35		0	ʦʰᵘɔŋ35	1		
+2942	闖	tsong2	ʦʰᵘɔŋ21		0	tsong2	ʦʰᵘɔŋ21		0	ʦʰᵘɔŋ21	1		
+2943	創	tsong3	ʦʰᵘɔŋ33		0	tsong3	ʦʰᵘɔŋ33		0	ʦʰᵘɔŋ33	1		
+2944	粗	tsou1	ʦʰou35		0	tsou1	ʦʰou35		0	ʦʰou35	1		
+2945	草	tsou2	ʦʰou21		0	tsou2	ʦʰou21		0	ʦʰou21	1		
+2946	措	tsou3	ʦʰou33		0	tsou3	ʦʰou33		0	ʦʰou33	1		
+2947	醋	tsou3	ʦʰou33		0	tsou3	ʦʰou33		0	ʦʰou33	1		
+2948	噪	tsou3	ʦʰou33		0	tsou3	ʦʰou33		0	ʦʰou33	1		
+2949	燥	tsou3	ʦʰou33		0	tsou3	ʦʰou33		0	ʦʰou33	1		
+2950	躁	tsou3	ʦʰou33		0	tsou3	ʦʰou33		0	ʦʰou33	1		
+2951	糙	tsou3?	ʦʰou33	?	1	tsou3?	ʦʰou33	?	1	ʦʰou33	1		发音人对该音存疑
+2952	皂	tsou3?	ʦʰou33	?	1	tsou3?	ʦʰou33	?	1	ʦʰou33	1		发音人对该音存疑
+2953	臊	tsou3?	ʦʰou33	?	1	tsou3?	ʦʰou33	?	1	ʦʰou33	1		发音人对该音存疑
+2954	藻	tsou3?	ʦʰou33	?	1	tsou3?	ʦʰou33	?	1	ʦʰou33	1		发音人对该音存疑
+2955	澡	tsou3?	ʦʰou33	?	1	tsou3?	ʦʰou33	?	1	ʦʰou33	1		发音人对该音存疑
+2956	操	tsou3?或tsou1	ʦʰou33或ʦʰou35	?	1	tsou3?或tsou1	ʦʰou33或ʦʰou35	?	1	ʦʰou35	1		
+2956	操									ʦou33			发音人对该音存疑
+2957	曹	tsou4	ʦʰou42/31		0	tsou4	ʦʰou42/31		0	ʦʰou42/31	1		
+2958	槽	tsou4	ʦʰou42/31		0	tsou4	ʦʰou42/31		0	ʦʰou42/31	1		
+2959	吹	tsui1	ʦʰui35		0	tsui1	ʦʰui35		0	ʦʰui35	1		
+2960	炊	tsui1	ʦʰui35		0	tsui1	ʦʰui35		0	ʦʰui35	1		
+2961	崔	tsui1	ʦʰui35		0	tsui1	ʦʰui35		0	ʦʰui35	1		
+2962	催	tsui1	ʦʰui35		0	tsui1	ʦʰui35		0	ʦʰui35	1		
+2963	摧	tsui1	ʦʰui35		0	tsui1	ʦʰui35		0	ʦʰui35	1		
+2964	沮	tsui2	ʦʰui21		0	tsui2	ʦʰui21		0	ʦʰui21	1		
+2965	脆	tsui3	ʦʰui33		0	tsui3	ʦʰui33		0	ʦʰui33	1		
+2966	翠	tsui3	ʦʰui33		0	tsui3	ʦʰui33		0	ʦʰui33	1		
+2967	捶	tsui4	ʦʰui42/31		0	tsui4	ʦʰui42/31		0	ʦʰui42/31	1		
+2968	垂	tsui4	ʦʰui42/31		0	tsui4	ʦʰui42/31		0	ʦʰui42/31	1		
+2969	錘	tsui4	ʦʰui42/31		0	tsui4	ʦʰui42/31		0	ʦʰui42/31	1		
+2970	隨	tsui4	ʦʰui42/31		0	tsui4	ʦʰui42/31		0	ʦʰui42/31	1		
+2971	畜	tsʊk7	ʦʰʊk35		0	tsʊk7	ʦʰʊk35		0	ʦʰʊk35	1		
+2972	蓄	tsʊk7	ʦʰʊk35		0	tsʊk7	ʦʰʊk35		0	ʦʰʊk35	1		
+2973	觸	tsʊk7	ʦʰʊk35		0	tsʊk7	ʦʰʊk35		0	ʦʰʊk35	1		
+2974	束	tsʊk7	ʦʰʊk35		0	tsʊk7	ʦʰʊk35		0	ʦʰʊk35	1		
+2975	速	tsʊk7	ʦʰʊk35		0	tsʊk7	ʦʰʊk35		0	ʦʰʊk35	1		
+2976	促	tsʊk7	ʦʰʊk35		0	tsʊk7	ʦʰʊk35		0	ʦʰʊk35	1		
+2977	簇	tsʊk7	ʦʰʊk35		0	tsʊk7	ʦʰʊk35		0	ʦʰʊk35	1		
+2978	矗	tsʊk7?	ʦʰʊk35	?	1	tsʊk7?	ʦʰʊk35	?	1	ʦʰʊk35	1		发音人对该音存疑
+2979	村	tsun1	ʦʰun35		0	tsun1	ʦʰun35		0	ʦʰun35	1		
+2980	喘	tsun2	ʦʰun21		0	tsun2	ʦʰun21		0	ʦʰun21	1		
+2981	寸	tsun3	ʦʰun33		0	tsun3	ʦʰun33		0	ʦʰun33	1		
+2982	存	tsun4	ʦʰun42/31		0	tsun4	ʦʰun42/31		0	ʦʰun42/31	1		
+2983	充	tsung1	ʦʰʊŋ35		0	tsung1	ʦʰʊŋ35		0	ʦʰʊŋ35	1		
+2984	匆	tsung1	ʦʰʊŋ35		0	tsung1	ʦʰʊŋ35		0	ʦʰʊŋ35	1		
+2985	蔥	tsung1	ʦʰʊŋ35		0	tsung1	ʦʰʊŋ35		0	ʦʰʊŋ35	1		
+2986	聰	tsung1	ʦʰʊŋ35		0	tsung1	ʦʰʊŋ35		0	ʦʰʊŋ35	1		
+2987	囪	tsung1	ʦʰʊŋ35		0	tsung1	ʦʰʊŋ35		0	ʦʰʊŋ35	1		
+2988	沖	tsung1	ʦʰʊŋ35		0	tsung1	ʦʰʊŋ35		0	ʦʰʊŋ35	1		
+2989	衝	tsung1	ʦʰʊŋ35		0	tsung1	ʦʰʊŋ35		0	ʦʰʊŋ35	1		
+2990	寵	tsung2	ʦʰʊŋ21		0	tsung2	ʦʰʊŋ21		0	ʦʰʊŋ21	1		
+2991	蟲	tsung4	ʦʰʊŋ42/31		0	tsung4	ʦʰʊŋ42/31		0	ʦʰʊŋ42/31	1		
+2992	從	tsung4	ʦʰʊŋ42/31		0	tsung4	ʦʰʊŋ42/31		0	ʦʰʊŋ42/31	1		
+2993	叢	tsung4	ʦʰʊŋ42/31		0	tsung4	ʦʰʊŋ42/31		0	ʦʰʊŋ42/31	1		
+2994	松	tsung4	ʦʰʊŋ42/31		0	tsung4	ʦʰʊŋ42/31		0	ʦʰʊŋ42/31	1		
+2995	重	tsung5或zung6	ʦʰʊŋ21或ʦʰʊŋ53		0	tsung5或zung6	ʦʰʊŋ21或ʦʰʊŋ53		0	ʦʰʊŋ21或ʦʊŋ53	1		
+2996	賽	tsoi3	ʦʰɔi33		0	tsoi3	ʦʰɔi33		0	ʦʰɔi33	1		
+2997	裁	tsoi4	ʦʰɔi42/31		0	tsoi4	ʦʰɔi42/31		0	ʦʰɔi42/31	1		
+2998	戳	tsok8	ʦʰɔk3		0	tsok8	ʦʰɔk3		0	ʦʰɔk3	1		
+2999	莊	tsong1	ʦʰᵘɔŋ35		0	tsong1	ʦʰᵘɔŋ35		0	ʦʰᵘɔŋ35	1		
+3000	裝	tsong1	ʦʰᵘɔŋ35		0	tsong1	ʦʰᵘɔŋ35		0	ʦʰᵘɔŋ35	1		
+3001	妝	tsong1	ʦʰᵘɔŋ35		0	tsong1	ʦʰᵘɔŋ35		0	ʦʰᵘɔŋ35	1		
+3002	廠	tsong2	ʦʰᵘɔŋ21		0	tsong2	ʦʰᵘɔŋ21		0	ʦʰᵘɔŋ21	1		
+3003	敞	tsong2	ʦʰᵘɔŋ21		0	tsong2	ʦʰᵘɔŋ21		0	ʦʰᵘɔŋ21	1		
+3004	淌	tsong2	ʦʰᵘɔŋ21		0	tsong2	ʦʰᵘɔŋ21		0	ʦʰᵘɔŋ21	1		
+3005	倘	tsong2	ʦʰᵘɔŋ21		0	tsong2	ʦʰᵘɔŋ21		0	ʦʰᵘɔŋ21	1		
+3006	躺	tsong2	ʦʰᵘɔŋ21		0	tsong2	ʦʰᵘɔŋ21		0	ʦʰᵘɔŋ21	1		
+3007	棠	tsong2	ʦʰᵘɔŋ21		0	tsong2	ʦʰᵘɔŋ21		0	ʦʰᵘɔŋ21	1		
+3008	趟	tsong3	ʦʰᵘɔŋ33		0	tsong3	ʦʰᵘɔŋ33		0	ʦʰᵘɔŋ33	1		
+3009	床	tsong4	ʦʰᵘɔŋ42/31		0	tsong4	ʦʰᵘɔŋ42/31		0	ʦʰᵘɔŋ42/31	1		
+3010	牀	tsong4	ʦʰᵘɔŋ42/31		0	tsong4	ʦʰᵘɔŋ42/31		0	ʦʰᵘɔŋ42/31	1		
+3011	狀	tsong6	ʦʰᵘɔŋ53		0	tsong6	ʦʰᵘɔŋ53		0	ʦʰᵘɔŋ53	1		
+3012	推	tui1	tʰui35		0	tui1	tʰui35		0	tʰui35	1		
+3013	腿	tui2	tʰui21		0	tui2	tʰui21		0	tʰui21	1		
+3014	蛻	tui3或loi3	tʰui33或lɔi33		0	tui3或loi3	tʰui33或lɔi33		0	tʰui33或lɔi33	1		
+3015	退	tui3或tan3	tʰui33或tʰɐn33		0	tui3或tan3	tʰui33或tʰɐn33		0	tʰui33或tʰɐn33	1		
+3016	頹	tui4	tʰui42/31		0	tui4	tʰui42/31		0	tʰui42/31	1		
+3017	禿	tʊk7	tʰʊk35		0	tʊk7	tʰʊk35		0	tʰʊk35	1		
+3018	團	tun4	tʰun42/31		0	tun4	tʰun42/31		0	tʰun42/31	1		
+3019	斷	tun5或dun6	tʰun21或tun53		0	tun5或dun6	tʰun21或tun53		0	tʰun21或tun53	1		
+3020	通	tung1	tʰʊŋ35		0	tung1	tʰʊŋ35		0	tʰʊŋ35	1		
+3021	統	tung2	tʰʊŋ21		0	tung2	tʰʊŋ21		0	tʰʊŋ21	1		
+3022	捅	tung2	tʰʊŋ21		0	tung2	tʰʊŋ21		0	tʰʊŋ21	1		
+3023	桶	tung2	tʰʊŋ21		0	tung2	tʰʊŋ21		0	tʰʊŋ21	1		
+3024	疼	tung3	tʰʊŋ33		0	tung3	tʰʊŋ33		0	tʰʊŋ33	1		
+3025	痛	tung3	tʰʊŋ33		0	tung3	tʰʊŋ33		0	tʰʊŋ33	1		
+3026	同	tung4	tʰʊŋ42/31		0	tung4	tʰʊŋ42/31		0	tʰʊŋ42/31	1		
+3027	桐	tung4	tʰʊŋ42/31		0	tung4	tʰʊŋ42/31		0	tʰʊŋ42/31	1		
+3028	銅	tung4	tʰʊŋ42/31		0	tung4	tʰʊŋ42/31		0	tʰʊŋ42/31	1		
+3029	筒	tung4	tʰʊŋ42/31		0	tung4	tʰʊŋ42/31		0	tʰʊŋ42/31	1		
+3030	彤	tung4	tʰʊŋ42/31		0	tung4	tʰʊŋ42/31		0	tʰʊŋ42/31	1		
+3031	瞳	tung4	tʰʊŋ42/31		0	tung4	tʰʊŋ42/31		0	tʰʊŋ42/31	1		
+3032	童	tung4	tʰʊŋ42/31		0	tung4	tʰʊŋ42/31		0	tʰʊŋ42/31	1		
+3033	胎	toi1	tʰɔi35		0	toi1	tʰɔi35		0	tʰɔi35	1		
+3034	台	toi1	tʰɔi35		0	toi1	tʰɔi35		0	tʰɔi35	1		
+3035	抬	toi4	tʰɔi42/31		0	toi4	tʰɔi42/31		0	tʰɔi42/31	1		
+3036	臺	toi4	tʰɔi42/31		0	toi4	tʰɔi42/31		0	tʰɔi42/31	1		
+3037	拓	tok8	tʰɔk3		0	tok8	tʰɔk3		0	tʰɔk3	1		
+3038	托	tok8	tʰɔk3		0	tok8	tʰɔk3		0	tʰɔk3	1		
+3039	湯	tong1	tʰᵘɔŋ35		0	tong1	tʰᵘɔŋ35		0	tʰᵘɔŋ35	1		
+3040	燙	tong3	tʰᵘɔŋ33		0	tong3	tʰᵘɔŋ33		0	tʰᵘɔŋ33	1		
+3041	堂	tong4	tʰᵘɔŋ42/31		0	tong4	tʰᵘɔŋ42/31		0	tʰᵘɔŋ42/31	1		
+3042	膛	tong4	tʰᵘɔŋ42/31		0	tong4	tʰᵘɔŋ42/31		0	tʰᵘɔŋ42/31	1		
+3043	搪	tong4	tʰᵘɔŋ42/31		0	tong4	tʰᵘɔŋ42/31		0	tʰᵘɔŋ42/31	1		
+3044	唐	tong4	tʰᵘɔŋ42/31		0	tong4	tʰᵘɔŋ42/31		0	tʰᵘɔŋ42/31	1		
+3045	塘	tong4	tʰᵘɔŋ42/31		0	tong4	tʰᵘɔŋ42/31		0	tʰᵘɔŋ42/31	1		
+3046	糖	tong4	tʰᵘɔŋ42/31		0	tong4	tʰᵘɔŋ42/31		0	tʰᵘɔŋ42/31	1		
+3047	脫	tut8	tʰut3		0	tut8	tʰut3		0	tʰut3	1		
+3048	屋	ʊk1	ʔʊk35		0	ʊk1	ʔʊk35		0	ʔʊk35	1		
+3049	瓮	ung3	ʔʊŋ33		0	ung3	ʔʊŋ33		0	ʔʊŋ33	1		
+3050	甕	ung3	ʔʊŋ33		0	ung3	ʔʊŋ33		0	ʔʊŋ33	1		
+3051	蜈	ung4	ʔʊŋ42/31		0	ung4	ʔʊŋ42/31		0	ʔʊŋ42/31	1		
+3052	吳	ung4	ʔʊŋ42/31		0	ung4	ʔʊŋ42/31		0	ʔʊŋ42/31	1		
+3053	梧	ung4	ʔʊŋ42/31		0	ung4	ʔʊŋ42/31		0	ʔʊŋ42/31	1		
+3054	五	ung5	ʔʊŋ21		0	ung5	ʔʊŋ21		0	ʔʊŋ21	1		
+3055	伍	ung5	ʔʊŋ21		0	ung5	ʔʊŋ21		0	ʔʊŋ21	1		
+3056	午	ung5	ʔʊŋ21		0	ung5	ʔʊŋ21		0	ʔʊŋ21	1		
+3057	誤	ung6	ʔʊŋ53		0	ung6	ʔʊŋ53		0	ʔʊŋ53	1		
+3058	晤	ung6?	ʔʊŋ53	?	1	ung6?	ʔʊŋ53	?	1	ʔʊŋ53	1		发音人对该音存疑
+3059	悟	ung6或nu4?	ʔʊŋ53或nu42/31	?	1	ung6或nu4?	ʔʊŋ53或nu42/31	?	1	ʔʊŋ53	1		
+3059	悟									nu42/31			发音人对该音存疑
+3060	藹	oi2?	ʔɔi21	?	1	oi2?	ʔɔi21	?	1	ʔɔi21	1		发音人对该音存疑
+3061	噩	ok8	ʔɔk3		0	ok8	ʔɔk3		0	ʔɔk3	1		
+3062	惡	ok8	ʔɔk3		0	ok8	ʔɔk3		0	ʔɔk3	1		
+3063	肮	ong1	ʔᵘɔŋ35		0	ong1	ʔᵘɔŋ35		0	ʔᵘɔŋ35	1		
+3064	骯	ong1	ʔᵘɔŋ35		0	ong1	ʔᵘɔŋ35		0	ʔᵘɔŋ35	1		
+3065	娃	vaa1	va35		0	vaa1	va35		0	va35	1		
+3066	蛙	vaa1	va35		0	vaa1	va35		0	va35	1		
+3067	嘩	vaa1	va35		0	vaa1	va35		0	va35	1		
+3068	窪	vaa1?	va35	?	1	vaa1?	va35	?	1	va35	1		发音人对该音存疑
+3069	樺	vaa4	va42/31		0	vaa4	va42/31		0	va42/31	1		
+3070	華	vaa4	va42/31		0	vaa4	va42/31		0	va42/31	1		
+3071	話	vaa6	va53		0	vaa6	va53		0	va53	1		
+3072	歪	vaai1	vai35		0	vaai1	vai35		0	vai35	1		
+3073	威	vaai1	vai35		0	vaai1	vai35		0	vai35	1		
+3074	槐	vaai4	vai42/31		0	vaai4	vai42/31		0	vai42/31	1		
+3075	淮	vaai4	vai42/31		0	vaai4	vai42/31		0	vai42/31	1		
+3076	懷	vaai4	vai42/31		0	vaai4	vai42/31		0	vai42/31	1		
+3077	壞	vaai6	vai53		0	vaai6	vai53		0	vai53	1		
+3078	彎	vaan1	van35		0	vaan1	van35		0	van35	1		
+3079	灣	vaan1	van35		0	vaan1	van35		0	van35	1		
+3080	環	vaan4	van42/31		0	vaan4	van42/31		0	van42/31	1		
+3081	頑	vaan4?或ngaan4?	van42/31或ŋan42/31	??	2	vaan4?或ngaan4?	van42/31或ŋan42/31	??	2	van42/31或ŋan42/31	1		二者似皆可，发音人存疑
+3082	還	vaan4或vaai4	van42/31或vai42/31		0	vaan4或vaai4	van42/31或vai42/31		0	van42/31或vai42/31	1		
+3083	宦	vaan6	van53		0	vaan6	van53		0	van53	1		
+3084	幻	vaan6	van53		0	vaan6	van53		0	van53	1		
+3085	患	vaan6	van53		0	vaan6	van53		0	van53	1		
+3086	挖	vaat8	vat3		0	vaat8	vat3		0	vat3	1		
+3087	猾	vaat9	vat53		0	vaat9	vat53		0	vat53	1		
+3088	滑	vaat9	vat53		0	vaat9	vat53		0	vat53	1		
+3089	緯	vai2	vɐi21		0	vai2	vɐi21		0	vɐi21	1		
+3090	偉	vai2	vɐi21		0	vai2	vɐi21		0	vɐi21	1		
+3091	萎	vai2	vɐi21		0	vai2	vɐi21		0	vɐi21	1		
+3092	委	vai2	vɐi21		0	vai2	vɐi21		0	vɐi21	1		
+3093	穢	vai3	vɐi33		0	vai3	vɐi33		0	vɐi33	1		
+3094	喂	vai3	vɐi33		0	vai3	vɐi33		0	vɐi33	1		
+3095	蔚	vai3?	vɐi33	?	1	vai3?	vɐi33	?	1	vɐi33	1		发音人对该音存疑
+3096	慰	vai3?	vɐi33	?	1	vai3?	vɐi33	?	1	vɐi33	1		发音人对该音存疑
+3097	遺	vai4	vɐi42/31		0	vai4	vɐi42/31		0	vɐi42/31	1		
+3098	為	vai4	vɐi42/31		0	vai4	vɐi42/31		0	vɐi42/31	1		
+3099	違	vai4	vɐi42/31		0	vai4	vɐi42/31		0	vɐi42/31	1		
+3100	圍	vai4	vɐi42/31		0	vai4	vɐi42/31		0	vɐi42/31	1		
+3101	維	vai4	vɐi42/31		0	vai4	vɐi42/31		0	vɐi42/31	1		
+3102	唯	vai4	vɐi42/31		0	vai4	vɐi42/31		0	vɐi42/31	1		
+3103	慧	vai6	vɐi53		0	vai6	vɐi53		0	vɐi53	1		
+3104	惠	vai6	vɐi53		0	vai6	vɐi53		0	vɐi53	1		
+3105	位	vai6	vɐi53		0	vai6	vɐi53		0	vɐi53	1		
+3106	衛	vai6	vɐi53		0	vai6	vɐi53		0	vɐi53	1		
+3107	畏	vai6	vɐi53		0	vai6	vɐi53		0	vɐi53	1		
+3108	謂	vai6	vɐi53		0	vai6	vɐi53		0	vɐi53	1		
+3109	蝟	vai6	vɐi53		0	vai6	vɐi53		0	vɐi53	1		
+3110	胃	vai6	vɐi53		0	vai6	vɐi53		0	vɐi53	1		
+3111	諱	vai6?	vɐi53	?	1	vai6?	vɐi53	?	1	vɐi53	1		发音人对该音存疑
+3112	劃	vak9	vɐk53		0	vak9	vɐk53		0	vɐk53	1		
+3113	或	vak9	vɐk53		0	vak9	vɐk53		0	vɐk53	1		
+3114	域	vak9	vɐk53		0	vak9	vɐk53		0	vɐk53	1		
+3115	惑	vak9	vɐk53		0	vak9	vɐk53		0	vɐk53	1		
+3116	獲	vak9	vɐk53		0	vak9	vɐk53		0	vɐk53	1		
+3117	畫	vak9或vaa6	vɐk53或va53		0	vak9或vaa6	vɐk53或va53		0	vɐk53或va53	1		
+3118	瘟	van1	vɐn35		0	van1	vɐn35		0	vɐn35	1		
+3119	溫	van1	vɐn35		0	van1	vɐn35		0	vɐn35	1		
+3120	醞	van1?	vɐn35	?	1	van1?	vɐn35	?	1	vɐn35	1		发音人对该音存疑
+3121	穩	van2	vɐn21		0	van2	vɐn21		0	vɐn21	1		
+3122	隕	van2	vɐn21		0	van2	vɐn21		0	vɐn21	1		
+3123	允	van2	vɐn21		0	van2	vɐn21		0	vɐn21	1		
+3124	渾	van4	vɐn42/31		0	van4	vɐn42/31		0	vɐn42/31	1		
+3125	暈	van4	vɐn42/31		0	van4	vɐn42/31		0	vɐn42/31	1		
+3126	耘	van4	vɐn42/31		0	van4	vɐn42/31		0	vɐn42/31	1		
+3127	魂	van4	vɐn42/31		0	van4	vɐn42/31		0	vɐn42/31	1		
+3128	雲	van4	vɐn42/31		0	van4	vɐn42/31		0	vɐn42/31	1		
+3129	云	van4	vɐn42/31		0	van4	vɐn42/31		0	vɐn42/31	1		
+3130	勻	van4或jan4?	vɐn42/31或jɐn42/31	?	1	van4或jan4?	vɐn42/31或jɐn42/31	?	1	vɐn42/31或jɐn42/31	1		
+3131	運	van6	vɐn53		0	van6	vɐn53		0	vɐn53	1		
+3132	混	van6	vɐn53		0	van6	vɐn53		0	vɐn53	1		
+3133	韻	van6	vɐn53		0	van6	vɐn53		0	vɐn53	1		
+3134	蘊	van6?	vɐn53	?	1	van6?	vɐn53	?	1	vɐn53	1		发音人对该音存疑
+3135	橫	vang4	vɐŋ42/31		0	vang4	vɐŋ42/31		0	vɐŋ42/31	1		
+3136	尉	vat7	vɐt35		0	vat7	vɐt35		0	vɐt35	1		
+3137	鬱	vat7	vɐt35		0	vat7	vɐt35		0	vɐt35	1		
+3138	屈	vat7或kat7?	vɐt35或kʰɐt35	?	1	vat7或kat7?	vɐt35或kʰɐt35	?	1	vɐt35	1		
+3138	屈									kʰɐt35			发音人对该音存疑
+3139	核	vat9或hat9	vɐt53或hɐt53		0	vat9或hat9	vɐt53或hɐt53		0	vɐt53或hɐt53	1		
+3140	永	ving2	vɪŋ21		0	vean2	vən21		0	vɪŋ21或vən21	False		
+3141	榮	ving4	vɪŋ42/31		0	vean4	vən42/31		0	vɪŋ42/31或vən42/31	False		
+3142	穎	ving6	vɪŋ53		0	vean6	vən53		0	vɪŋ53或vən53	False		
+3143	泳	ving6	vɪŋ53		0	vean6	vən53		0	vɪŋ53或vən53	False		
+3144	詠	ving6或ving2?	vɪŋ53或vɪŋ21	?	1	vean6或vean2?	vən53或vən21	?	1	vɪŋ53或vən53	False		
+3144	詠									vɪŋ21或vən21			发音人对该音存疑
+3145	役	vɪk9	vɪk53		0	veat9	vət53		0	vɪk53或vət53	False		
+3146	疫	vɪk9	vɪk53		0	veat9	vət53		0	vɪk53或vət53	False		
+3147	渦	vo1	vɔ35		0	vo1	vɔ35		0	vɔ35	1		
+3148	蝸	vo1	vɔ35		0	vo1	vɔ35		0	vɔ35	1		
+3149	鍋	vo1	vɔ35		0	vo1	vɔ35		0	vɔ35	1		
+3150	窩	vo1	vɔ35		0	vo1	vɔ35		0	vɔ35	1		
+3151	禾	vo4	vɔ42/31		0	vo4	vɔ42/31		0	vɔ42/31	1		
+3152	和	vo4	vɔ42/31		0	vo4	vɔ42/31		0	vɔ42/31	1		
+3153	禍	vo6	vɔ53		0	vo6	vɔ53		0	vɔ53	1		
+3154	烏	vu1	vu35		0	vu1	vu35		0	vu35	1		
+3155	嗚	vu1	vu35		0	vu1	vu35		0	vu35	1		
+3156	汙	vu1	vu35		0	vu1	vu35		0	vu35	1		
+3157	塢	vu1?	vu35	?	1	vu1?	vu35	?	1	vu35	1		发音人对该音存疑
+3158	胡	vu4	vu42/31		0	vu4	vu42/31		0	vu42/31	1		
+3159	湖	vu4	vu42/31		0	vu4	vu42/31		0	vu42/31	1		
+3160	蝴	vu4	vu42/31		0	vu4	vu42/31		0	vu42/31	1		
+3161	糊	vu4	vu42/31		0	vu4	vu42/31		0	vu42/31	1		
+3162	葫	vu4	vu42/31		0	vu4	vu42/31		0	vu42/31	1		
+3163	弧	vu4	vu42/31		0	vu4	vu42/31		0	vu42/31	1		
+3164	狐	vu4	vu42/31		0	vu4	vu42/31		0	vu42/31	1		
+3165	壺	vu4	vu42/31		0	vu4	vu42/31		0	vu42/31	1		
+3166	互	vu6	vu53		0	vu6	vu53		0	vu53	1		
+3167	滬	vu6	vu53		0	vu6	vu53		0	vu53	1		
+3168	戶	vu6	vu53		0	vu6	vu53		0	vu53	1		
+3169	護	vu6	vu53		0	vu6	vu53		0	vu53	1		
+3170	芋	vu6	vu53		0	vu6	vu53		0	vu53	1		
+3171	偎	vui1	vui35		0	vui1	vui35		0	vui35	1		
+3172	茴	vui4	vui42/31		0	vui4	vui42/31		0	vui42/31	1		
+3173	蛔	vui4	vui42/31		0	vui4	vui42/31		0	vui42/31	1		
+3174	回	vui4	vui42/31		0	vui4	vui42/31		0	vui42/31	1		
+3175	徊	vui4	vui42/31		0	vui4	vui42/31		0	vui42/31	1		
+3176	彙	vui6	vui53		0	vui6	vui53		0	vui53	1		
+3177	匯	vui6	vui53		0	vui6	vui53		0	vui53	1		
+3178	會	vui6	vui53		0	vui6	vui53		0	vui53	1		
+3179	繪	vui6	vui53		0	vui6	vui53		0	vui53	1		
+3180	葦	vui6	vui53		0	vui6	vui53		0	vui53	1		
+3181	碗	vun2	vun21		0	vun2	vun21		0	vun21	1		
+3182	宛	vun2?	vun21	?	1	vun2?	vun21	?	1	vun21	1		发音人对该音存疑
+3183	惋	vun2?	vun21	?	1	vun2?	vun21	?	1	vun21	1		发音人对该音存疑
+3184	腕	vun2?	vun21	?	1	vun2?	vun21	?	1	vun21	1		发音人对该音存疑
+3185	豌	vun2?	vun21	?	1	vun2?	vun21	?	1	vun21	1		发音人对该音存疑
+3186	婉	vun2?或jin2?	vun21或jin21	??	2	vun2?或jin2?	vun21或jin21	??	2	vun21或jin21	1		二者似皆可，发音人存疑
+3187	渙	vun6	vun53		0	vun6	vun53		0	vun53	1		
+3188	煥	vun6	vun53		0	vun6	vun53		0	vun53	1		
+3189	換	vun6	vun53		0	vun6	vun53		0	vun53	1		
+3190	喚	vun6	vun53		0	vun6	vun53		0	vun53	1		
+3191	玩	vun6或vaan2	vun53或van21		0	vun6或vaan2	vun53或van21		0	vun53或van21	1		
+3192	瘓	vun6或vaan6?	vun53或van53	?	1	vun6或vaan6?	vun53或van53	?	1	vun53	1		
+3192	瘓									van53			发音人对该音存疑
+3193	汪	vong1	vᵘɔŋ35		0	vong1	vᵘɔŋ35		0	vᵘɔŋ35	1		
+3194	蟥	vong4	vᵘɔŋ42/31		0	vong4	vᵘɔŋ42/31		0	vᵘɔŋ42/31	1		
+3195	黃	vong4	vᵘɔŋ42/31		0	vong4	vᵘɔŋ42/31		0	vᵘɔŋ42/31	1		
+3196	皇	vong4	vᵘɔŋ42/31		0	vong4	vᵘɔŋ42/31		0	vᵘɔŋ42/31	1		
+3197	煌	vong4	vᵘɔŋ42/31		0	vong4	vᵘɔŋ42/31		0	vᵘɔŋ42/31	1		
+3198	凰	vong4	vᵘɔŋ42/31		0	vong4	vᵘɔŋ42/31		0	vᵘɔŋ42/31	1		
+3199	惶	vong4	vᵘɔŋ42/31		0	vong4	vᵘɔŋ42/31		0	vᵘɔŋ42/31	1		
+3200	蝗	vong4	vᵘɔŋ42/31		0	vong4	vᵘɔŋ42/31		0	vᵘɔŋ42/31	1		
+3201	王	vong4	vᵘɔŋ42/31		0	vong4	vᵘɔŋ42/31		0	vᵘɔŋ42/31	1		
+3202	往	vong5	vᵘɔŋ21		0	vong5	vᵘɔŋ21		0	vᵘɔŋ21	1		
+3203	枉	vong5	vᵘɔŋ21		0	vong5	vᵘɔŋ21		0	vᵘɔŋ21	1		
+3204	旺	vong6	vᵘɔŋ53		0	vong6	vᵘɔŋ53		0	vᵘɔŋ53	1		
+3205	活	vut9	vut53		0	vut9	vut53		0	vut53	1		
+3206	喳	zaa1	ʦa35		0	zaa1	ʦa35		0	ʦa35	1		
+3207	碴	zaa1	ʦa35		0	zaa1	ʦa35		0	ʦa35	1		
+3208	渣	zaa1	ʦa35		0	zaa1	ʦa35		0	ʦa35	1		
+3209	查	zaa1或tsaa4	ʦʰa35或ʦʰa42/31		0	zaa1或tsaa4	ʦʰa35或ʦʰa42/31		0	ʦʰa35或ʦʰa42/31	1		
+3210	榨	zaa3	ʦa33		0	zaa3	ʦa33		0	ʦa33	1		
+3211	乍	zaa3	ʦa33		0	zaa3	ʦa33		0	ʦa33	1		
+3212	詐	zaa3	ʦa33		0	zaa3	ʦa33		0	ʦa33	1		
+3213	炸	zaa3	ʦa33		0	zaa3	ʦa33		0	ʦa33	1		
+3214	債	zaai3	ʦai33		0	zaai3	ʦai33		0	ʦai33	1		
+3215	寨	zaai6	ʦai53		0	zaai6	ʦai53		0	ʦai53	1		
+3216	斬	zaam2	ʦam21		0	zaam2	ʦam21		0	ʦam21	1		
+3217	眨	zaam2或njaap8	ʦam21或ȵap3		0	zaam2或njaap8	ʦam21或ȵap3		0	ʦam21或ȵap3	1		
+3218	嶄	zaam3	ʦam33		0	zaam3	ʦam33		0	ʦam33	1		
+3219	暫	zaam6	ʦam53		0	zaam6	ʦam53		0	ʦam53	1		
+3220	站	zaam6	ʦam53		0	zaam6	ʦam53		0	ʦam53	1		
+3221	盞	zaan2	ʦan21		0	zaan2	ʦan21		0	ʦan21	1		
+3222	綻	zaan3	ʦan33		0	zaan3	ʦan33		0	ʦan33	1		
+3223	贊	zaan3	ʦan33		0	zaan3	ʦan33		0	ʦan33	1		
+3224	讚	zaan3	ʦan33		0	zaan3	ʦan33		0	ʦan33	1		
+3225	棧	zaan6	ʦan53		0	zaan6	ʦan53		0	ʦan53	1		
+3226	賺	zaan6	ʦan53		0	zaan6	ʦan53		0	ʦan53	1		
+3227	閘	zaap9	ʦap53		0	zaap9	ʦap53		0	ʦap53	1		
+3228	雜	zaap9	ʦap53		0	zaap9	ʦap53		0	ʦap53	1		
+3229	砸	zaap9?	ʦap53	?	1	zaap9?	ʦap53	?	1	ʦap53	1		发音人对该音存疑
+3230	紮	zaat8	ʦat3		0	zaat8	ʦat3		0	ʦat3	1		
+3231	嘲	zaau1	ʦau35		0	zaau1	ʦau35		0	ʦau35	1		
+3232	抓	zaau2	ʦau21		0	zaau2	ʦau21		0	ʦau21	1		
+3233	找	zaau2	ʦau21		0	zaau2	ʦau21		0	ʦau21	1		
+3234	爪	zaau2或njaau2	ʦau21或ȵau21		0	zaau2或njaau2	ʦau21或ȵau21		0	ʦau21或ȵau21	1		
+3235	罩	zaau3	ʦau33		0	zaau3	ʦau33		0	ʦau33	1		
+3236	驟	zaau6	ʦau53		0	zaau6	ʦau53		0	ʦau53	1		
+3237	齋	zai1	ʦɐi35		0	zai1	ʦɐi35		0	ʦɐi35	1		
+3238	劑	zai1	ʦɐi35		0	zai1	ʦɐi35		0	ʦɐi35	1		
+3239	擠	zai1	ʦɐi35		0	zai1	ʦɐi35		0	ʦɐi35	1		
+3240	祭	zai3	ʦɐi33		0	zai3	ʦɐi33		0	ʦɐi33	1		
+3241	際	zai3	ʦɐi33		0	zai3	ʦɐi33		0	ʦɐi33	1		
+3242	濟	zai3	ʦɐi33		0	zai3	ʦɐi33		0	ʦɐi33	1		
+3243	制	zai3	ʦɐi33		0	zai3	ʦɐi33		0	ʦɐi33	1		
+3244	製	zai3	ʦɐi33		0	zai3	ʦɐi33		0	ʦɐi33	1		
+3245	滯	zai6	ʦɐi53		0	zai6	ʦɐi53		0	ʦɐi53	1		
+3246	摘	zak7	ʦɐk35		0	zak7	ʦɐk35		0	ʦɐk35	1		
+3247	鯽	zak7	ʦɐk35		0	zak7	ʦɐk35		0	ʦɐk35	1		
+3248	則	zak7	ʦɐk35		0	zak7	ʦɐk35		0	ʦɐk35	1		
+3249	側	zak7	ʦɐk35		0	zak7	ʦɐk35		0	ʦɐk35	1		
+3250	責	zak7	ʦɐk35		0	zak7	ʦɐk35		0	ʦɐk35	1		
+3251	窄	zak7	ʦɐk35		0	zak7	ʦɐk35		0	ʦɐk35	1		
+3252	擲	zak9	ʦɐk53		0	zak9	ʦɐk53		0	ʦɐk53	1		
+3253	澤	zak9	ʦɐk53		0	zak9	ʦɐk53		0	ʦɐk53	1		
+3254	宅	zak9	ʦɐk53		0	zak9	ʦɐk53		0	ʦɐk53	1		
+3255	鍘	zak9	ʦɐk53		0	zak9	ʦɐk53		0	ʦɐk53	1		
+3256	擇	zak9或dok9	ʦɐk53或tɔk53		0	zak9或dok9	ʦɐk53或tɔk53		0	ʦɐk53或tɔk53	1		
+3257	斟	zam1	ʦɐm35		0	zam1	ʦɐm35		0	ʦɐm35	1		
+3258	針	zam1	ʦɐm35		0	zam1	ʦɐm35		0	ʦɐm35	1		
+3259	枕	zam2	ʦɐm21		0	zam2	ʦɐm21		0	ʦɐm21	1		
+3260	怎	zam2	ʦɐm21		0	zam2	ʦɐm21		0	ʦɐm21	1		
+3261	浸	zam3或zam6	ʦɐm33或ʦɐm53		0	zam3或zam6	ʦɐm33或ʦɐm53		0	ʦɐm33或ʦɐm53	1		
+3262	諄	zan1	ʦɐn35		0	zan1	ʦɐn35		0	ʦɐn35	1		
+3263	津	zan1	ʦɐn35		0	zan1	ʦɐn35		0	ʦɐn35	1		
+3264	真	zan1	ʦɐn35		0	zan1	ʦɐn35		0	ʦɐn35	1		
+3265	珍	zan1	ʦɐn35		0	zan1	ʦɐn35		0	ʦɐn35	1		
+3266	准	zan2	ʦɐn21		0	zan2	ʦɐn21		0	ʦɐn21	1		
+3267	準	zan2	ʦɐn21		0	zan2	ʦɐn21		0	ʦɐn21	1		
+3268	振	zan3	ʦɐn33		0	zan3	ʦɐn33		0	ʦɐn33	1		
+3269	震	zan3	ʦɐn33		0	zan3	ʦɐn33		0	ʦɐn33	1		
+3270	晉	zan3	ʦɐn33		0	zan3	ʦɐn33		0	ʦɐn33	1		
+3271	峻	zan3	ʦɐn33		0	zan3	ʦɐn33		0	ʦɐn33	1		
+3272	駿	zan3	ʦɐn33		0	zan3	ʦɐn33		0	ʦɐn33	1		
+3273	竣	zan3	ʦɐn33		0	zan3	ʦɐn33		0	ʦɐn33	1		
+3274	俊	zan3	ʦɐn33		0	zan3	ʦɐn33		0	ʦɐn33	1		
+3275	鎮	zan3	ʦɐn33		0	zan3	ʦɐn33		0	ʦɐn33	1		
+3276	進	zan3	ʦɐn33		0	zan3	ʦɐn33		0	ʦɐn33	1		
+3277	盡	zan6	ʦɐn53		0	zan6	ʦɐn53		0	ʦɐn53	1		
+3278	儘	zan6	ʦɐn53		0	zan6	ʦɐn53		0	ʦɐn53	1		
+3279	陣	zan6	ʦɐn53		0	zan6	ʦɐn53		0	ʦɐn53	1		
+3280	僧	zang1	ʦɐŋ35		0	zang1	ʦɐŋ35		0	ʦɐŋ35	1		
+3281	憎	zang1	ʦɐŋ35		0	zang1	ʦɐŋ35		0	ʦɐŋ35	1		
+3282	增	zang1	ʦɐŋ35		0	zang1	ʦɐŋ35		0	ʦɐŋ35	1		
+3283	猙	zang1	ʦɐŋ35		0	zang1	ʦɐŋ35		0	ʦɐŋ35	1		
+3284	爭	zang1	ʦɐŋ35		0	zang1	ʦɐŋ35		0	ʦɐŋ35	1		
+3285	箏	zang1	ʦɐŋ35		0	zang1	ʦɐŋ35		0	ʦɐŋ35	1		
+3286	贈	zang6	ʦɐŋ53		0	zang6	ʦɐŋ53		0	ʦɐŋ53	1		
+3287	掙	zang6	ʦɐŋ53		0	zang6	ʦɐŋ53		0	ʦɐŋ53	1		
+3288	汁	zap7	ʦɐp35		0	zap7	ʦɐp35		0	ʦɐp35	1		
+3289	執	zap7	ʦɐp35		0	zap7	ʦɐp35		0	ʦɐp35	1		
+3290	集	zap9	ʦɐp53		0	zap9	ʦɐp53		0	ʦɐp53	1		
+3291	習	zap9	ʦɐp53		0	zap9	ʦɐp53		0	ʦɐp53	1		
+3292	襲	zap9	ʦɐp53		0	zap9	ʦɐp53		0	ʦɐp53	1		
+3293	質	zat7	ʦɐt35		0	zat7	ʦɐt35		0	ʦɐt35	1		
+3294	卒	zat7	ʦɐt35		0	zat7	ʦɐt35		0	ʦɐt35	1		
+3295	嫉	zat9	ʦɐt53		0	zat9	ʦɐt53		0	ʦɐt53	1		
+3296	疾	zat9	ʦɐt53		0	zat9	ʦɐt53		0	ʦɐt53	1		
+3297	窒	zat9	ʦɐt53		0	zat9	ʦɐt53		0	ʦɐt53	1		
+3298	侄	zat9	ʦɐt53		0	zat9	ʦɐt53		0	ʦɐt53	1		
+3299	舟	zau1	ʦɐu35		0	zau1	ʦɐu35		0	ʦɐu35	1		
+3300	州	zau1	ʦɐu35		0	zau1	ʦɐu35		0	ʦɐu35	1		
+3301	洲	zau1	ʦɐu35		0	zau1	ʦɐu35		0	ʦɐu35	1		
+3302	周	zau1	ʦɐu35		0	zau1	ʦɐu35		0	ʦɐu35	1		
+3303	肘	zau2	ʦɐu21		0	zau2	ʦɐu21		0	ʦɐu21	1		
+3304	酒	zau2	ʦɐu21		0	zau2	ʦɐu21		0	ʦɐu21	1		
+3305	帚	zau2	ʦɐu21		0	zau2	ʦɐu21		0	ʦɐu21	1		
+3306	走	zau2	ʦɐu21		0	zau2	ʦɐu21		0	ʦɐu21	1		
+3307	咒	zau3	ʦɐu33		0	zau3	ʦɐu33		0	ʦɐu33	1		
+3308	晝	zau3	ʦɐu33		0	zau3	ʦɐu33		0	ʦɐu33	1		
+3309	揍	zau3	ʦɐu33		0	zau3	ʦɐu33		0	ʦɐu33	1		
+3310	奏	zau3	ʦɐu33		0	zau3	ʦɐu33		0	ʦɐu33	1		
+3311	皺	zau3或njau3	ʦɐu33或ȵɐu33		0	zau3或njau3	ʦɐu33或ȵɐu33		0	ʦɐu33或ȵɐu33	1		
+3312	就	zau6	ʦɐu53		0	zau6	ʦɐu53		0	ʦɐu53	1		
+3313	袖	zau6	ʦɐu53		0	zau6	ʦɐu53		0	ʦɐu53	1		
+3314	宙	zau6	ʦɐu53		0	zau6	ʦɐu53		0	ʦɐu53	1		
+3315	遮	ze1	ʦɛ35		0	ze1	ʦɛ35		0	ʦɛ35	1		
+3316	姐	ze2	ʦɛ21		0	ze2	ʦɛ21		0	ʦɛ21	1		
+3317	這	ze2	ʦɛ21		0	ze2	ʦɛ21		0	ʦɛ21	1		
+3318	者	ze2	ʦɛ21		0	ze2	ʦɛ21		0	ʦɛ21	1		
+3319	蔗	ze3	ʦɛ33		0	ze3	ʦɛ33		0	ʦɛ33	1		
+3320	借	ze3	ʦɛ33		0	ze3	ʦɛ33		0	ʦɛ33	1		
+3321	謝	ze6	ʦɛ53		0	ze6	ʦɛ53		0	ʦɛ53	1		
+3322	姿	zei1	ʦei35		0	zei1	ʦei35		0	ʦei35	1		
+3323	資	zei1	ʦei35		0	zei1	ʦei35		0	ʦei35	1		
+3324	咨	zei1	ʦei35		0	zei1	ʦei35		0	ʦei35	1		
+3325	諮	zei1	ʦei35		0	zei1	ʦei35		0	ʦei35	1		
+3326	瓷	zei1	ʦei35		0	zei1	ʦei35		0	ʦei35	1		
+3327	滋	zei1	ʦei35		0	zei1	ʦei35		0	ʦei35	1		
+3328	紫	zei2	ʦei21		0	zei2	ʦei21		0	ʦei21	1		
+3329	籽	zei2	ʦei21		0	zei2	ʦei21		0	ʦei21	1		
+3330	子	zei2	ʦei21		0	zei2	ʦei21		0	ʦei21	1		
+3331	姊	zei2	ʦei21		0	zei2	ʦei21		0	ʦei21	1		
+3332	仔	zei2或zai2	ʦei21或ʦɐi21		0	zei2或zai2	ʦei21或ʦɐi21		0	ʦei21或ʦɐi21	1		
+3333	聚	zei6	ʦei53		0	zei6	ʦei53		0	ʦei53	1		
+3334	伺	zei6	ʦei53		0	zei6	ʦei53		0	ʦei53	1		
+3335	飼	zei6	ʦei53		0	zei6	ʦei53		0	ʦei53	1		
+3336	寺	zei6	ʦei53		0	zei6	ʦei53		0	ʦei53	1		
+3337	敘	zei6	ʦei53		0	zei6	ʦei53		0	ʦei53	1		
+3338	序	zei6	ʦei53		0	zei6	ʦei53		0	ʦei53	1		
+3339	嶼	zei6	ʦei53		0	zei6	ʦei53		0	ʦei53	1		
+3340	字	zei6	ʦei53		0	zei6	ʦei53		0	ʦei53	1		
+3341	自	zei6或gei6	ʦei53或kei53		0	zei6或gei6	ʦei53或kei53		0	ʦei53或kei53	1		
+3342	蒸	zing1	ʦɪŋ35		0	zean1	ʦən35		0	ʦɪŋ35或ʦən35	False		
+3343	晶	zing1	ʦɪŋ35		0	zean1	ʦən35		0	ʦɪŋ35或ʦən35	False		
+3344	睛	zing1	ʦɪŋ35		0	zean1	ʦən35		0	ʦɪŋ35或ʦən35	False		
+3345	精	zing1	ʦɪŋ35		0	zean1	ʦən35		0	ʦɪŋ35或ʦən35	False		
+3346	貞	zing1	ʦɪŋ35		0	zean1	ʦən35		0	ʦɪŋ35或ʦən35	False		
+3347	偵	zing1	ʦɪŋ35		0	zean1	ʦən35		0	ʦɪŋ35或ʦən35	False		
+3348	征	zing1	ʦɪŋ35		0	zean1	ʦən35		0	ʦɪŋ35或ʦən35	False		
+3349	怔	zing1?	ʦɪŋ35	?	1	zean1?	ʦən35	?	1	ʦɪŋ35或ʦən35	False		发音人对该音存疑
+3350	正	zing1或zing3	ʦɪŋ35或ʦɪŋ33		0	zean1或zean3	ʦən35或ʦən33		0	ʦɪŋ35或ʦɪŋ33或ʦən35或ʦən33	False		
+3351	井	zing2	ʦɪŋ21		0	zean2	ʦən21		0	ʦɪŋ21或ʦən21	False		
+3352	整	zing2	ʦɪŋ21		0	zean2	ʦən21		0	ʦɪŋ21或ʦən21	False		
+3353	政	zing3	ʦɪŋ33		0	zean3	ʦən33		0	ʦɪŋ33或ʦən33	False		
+3354	症	zing3	ʦɪŋ33		0	zean3	ʦən33		0	ʦɪŋ33或ʦən33	False		
+3355	鄭	zing6	ʦɪŋ53		0	zean6	ʦən53		0	ʦɪŋ53或ʦən53	False		
+3356	靖	zing6	ʦɪŋ53		0	zean6	ʦən53		0	ʦɪŋ53或ʦən53	False		
+3357	淨	zing6	ʦɪŋ53		0	zean6	ʦən53		0	ʦɪŋ53或ʦən53	False		
+3358	靜	zing6	ʦɪŋ53		0	zean6	ʦən53		0	ʦɪŋ53或ʦən53	False		
+3359	阱	zing6?或zing2?	ʦɪŋ53或ʦɪŋ21	??	2	zean6?或zean2?	ʦən53或ʦən21	??	2	ʦɪŋ53或ʦɪŋ21或ʦən53或ʦən21	False		二者似皆可，发音人存疑
+3360	即	zɪk7	ʦɪk35		0	zeat7	ʦət35		0	ʦɪk35或ʦət35	False		
+3361	脊	zɪk7	ʦɪk35		0	zeat7	ʦət35		0	ʦɪk35或ʦət35	False		
+3362	跡	zɪk7	ʦɪk35		0	zeat7	ʦət35		0	ʦɪk35或ʦət35	False		
+3363	蹟	zɪk7	ʦɪk35		0	zeat7	ʦət35		0	ʦɪk35或ʦət35	False		
+3364	積	zɪk7	ʦɪk35		0	zeat7	ʦət35		0	ʦɪk35或ʦət35	False		
+3365	績	zɪk7	ʦɪk35		0	zeat7	ʦət35		0	ʦɪk35或ʦət35	False		
+3366	隻	zɪk7	ʦɪk35		0	zeat7	ʦət35		0	ʦɪk35或ʦət35	False		
+3367	織	zɪk7	ʦɪk35		0	zeat7	ʦət35		0	ʦɪk35或ʦət35	False		
+3368	職	zɪk7	ʦɪk35		0	zeat7	ʦət35		0	ʦɪk35或ʦət35	False		
+3369	寂	zɪk9	ʦɪk53		0	zeat9	ʦət53		0	ʦɪk53或ʦət53	False		
+3370	夕	zɪk9	ʦɪk53		0	zeat9	ʦət53		0	ʦɪk53或ʦət53	False		
+3371	昔	zɪk9	ʦɪk53		0	zeat9	ʦət53		0	ʦɪk53或ʦət53	False		
+3372	籍	zɪk9	ʦɪk53		0	zeat9	ʦət53		0	ʦɪk53或ʦət53	False		
+3373	席	zɪk9	ʦɪk53		0	zeat9	ʦət53		0	ʦɪk53或ʦət53	False		
+3374	直	zɪk9	ʦɪk53		0	zeat9	ʦət53		0	ʦɪk53或ʦət53	False		
+3375	值	zɪk9	ʦɪk53		0	zeat9	ʦət53		0	ʦɪk53或ʦət53	False		
+3376	植	zɪk9	ʦɪk53		0	zeat9	ʦət53		0	ʦɪk53或ʦət53	False		
+3377	殖	zɪk9	ʦɪk53		0	zeat9	ʦət53		0	ʦɪk53或ʦət53	False		
+3378	知	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3379	諸	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3380	豬	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3381	之	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3382	芝	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3383	吱	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3384	支	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3385	枝	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3386	肢	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3387	蜘	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3388	脂	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3389	朱	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3390	珠	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3391	株	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3392	蛛	zi1	ʦi35		0	zi1	ʦi35		0	ʦi35	1		
+3393	祇	zi2	ʦi21		0	zi2	ʦi21		0	ʦi21	1		
+3394	衹	zi2	ʦi21		0	zi2	ʦi21		0	ʦi21	1		
+3395	紙	zi2	ʦi21		0	zi2	ʦi21		0	ʦi21	1		
+3396	煮	zi2	ʦi21		0	zi2	ʦi21		0	ʦi21	1		
+3397	只	zi2	ʦi21		0	zi2	ʦi21		0	ʦi21	1		
+3398	趾	zi2	ʦi21		0	zi2	ʦi21		0	ʦi21	1		
+3399	止	zi2	ʦi21		0	zi2	ʦi21		0	ʦi21	1		
+3400	址	zi2	ʦi21		0	zi2	ʦi21		0	ʦi21	1		
+3401	旨	zi2	ʦi21		0	zi2	ʦi21		0	ʦi21	1		
+3402	指	zi2	ʦi21		0	zi2	ʦi21		0	ʦi21	1		
+3403	主	zi2	ʦi21		0	zi2	ʦi21		0	ʦi21	1		
+3404	拄	zi2?	ʦi21	?	1	zi2?	ʦi21	?	1	ʦi21	1		发音人对该音存疑
+3405	志	zi3	ʦi33		0	zi3	ʦi33		0	ʦi33	1		
+3406	鑄	zi3	ʦi33		0	zi3	ʦi33		0	ʦi33	1		
+3407	著	zi3	ʦi33		0	zi3	ʦi33		0	ʦi33	1		
+3408	智	zi3	ʦi33		0	zi3	ʦi33		0	ʦi33	1		
+3409	置	zi3	ʦi33		0	zi3	ʦi33		0	ʦi33	1		
+3410	摯	zi3	ʦi33		0	zi3	ʦi33		0	ʦi33	1		
+3411	至	zi3	ʦi33		0	zi3	ʦi33		0	ʦi33	1		
+3412	致	zi3	ʦi33		0	zi3	ʦi33		0	ʦi33	1		
+3413	蛀	zi3	ʦi33		0	zi3	ʦi33		0	ʦi33	1		
+3414	注	zi3	ʦi33		0	zi3	ʦi33		0	ʦi33	1		
+3415	駐	zi3	ʦi33		0	zi3	ʦi33		0	ʦi33	1		
+3416	治	zi6	ʦi53		0	zi6	ʦi53		0	ʦi53	1		
+3417	箸	zi6	ʦi53		0	zi6	ʦi53		0	ʦi53	1		
+3418	住	zi6	ʦi53		0	zi6	ʦi53		0	ʦi53	1		
+3419	稚	zi6	ʦi53		0	zi6	ʦi53		0	ʦi53	1		
+3420	鵲	ziek8	ʦiɛk3		0	ziek8	ʦiɛk3		0	ʦiɛk3	1		
+3421	爵	ziek8	ʦiɛk3		0	ziek8	ʦiɛk3		0	ʦiɛk3	1		
+3422	嚼	ziek8或ziek9?	ʦiɛk3或ʦiɛk53	?	1	ziek8或ziek9?	ʦiɛk3或ʦiɛk53	?	1	ʦiɛk3	1		
+3422	嚼									ʦiɛk53			发音人对该音存疑
+3423	張	zieng1	ʦiɛŋ35		0	zieng1	ʦiɛŋ35		0	ʦiɛŋ35	1		
+3424	漿	zieng1	ʦiɛŋ35		0	zieng1	ʦiɛŋ35		0	ʦiɛŋ35	1		
+3425	彰	zieng1	ʦiɛŋ35		0	zieng1	ʦiɛŋ35		0	ʦiɛŋ35	1		
+3426	樟	zieng1	ʦiɛŋ35		0	zieng1	ʦiɛŋ35		0	ʦiɛŋ35	1		
+3427	章	zieng1	ʦiɛŋ35		0	zieng1	ʦiɛŋ35		0	ʦiɛŋ35	1		
+3428	將	zieng1或zieng3	ʦiɛŋ35或ʦiɛŋ33		0	zieng1或zieng3	ʦiɛŋ35或ʦiɛŋ33		0	ʦiɛŋ35或ʦiɛŋ33	1		
+3429	蔣	zieng2	ʦiɛŋ21		0	zieng2	ʦiɛŋ21		0	ʦiɛŋ21	1		
+3430	獎	zieng2	ʦiɛŋ21		0	zieng2	ʦiɛŋ21		0	ʦiɛŋ21	1		
+3431	槳	zieng2	ʦiɛŋ21		0	zieng2	ʦiɛŋ21		0	ʦiɛŋ21	1		
+3432	掌	zieng2	ʦiɛŋ21		0	zieng2	ʦiɛŋ21		0	ʦiɛŋ21	1		
+3433	長	zieng2或tsieng4	ʦʰiɛŋ21或ʦʰiɛŋ42/31		0	zieng2或tsieng4	ʦʰiɛŋ21或ʦʰiɛŋ42/31		0	ʦiɛŋ21或ʦʰiɛŋ42/31	1		
+3434	賬	zieng3	ʦiɛŋ33		0	zieng3	ʦiɛŋ33		0	ʦiɛŋ33	1		
+3435	帳	zieng3	ʦiɛŋ33		0	zieng3	ʦiɛŋ33		0	ʦiɛŋ33	1		
+3436	脹	zieng3	ʦiɛŋ33		0	zieng3	ʦiɛŋ33		0	ʦiɛŋ33	1		
+3437	漲	zieng3	ʦiɛŋ33		0	zieng3	ʦiɛŋ33		0	ʦiɛŋ33	1		
+3438	醬	zieng3	ʦiɛŋ33		0	zieng3	ʦiɛŋ33		0	ʦiɛŋ33	1		
+3439	障	zieng3	ʦiɛŋ33		0	zieng3	ʦiɛŋ33		0	ʦiɛŋ33	1		
+3440	仗	zieng3	ʦiɛŋ33		0	zieng3	ʦiɛŋ33		0	ʦiɛŋ33	1		
+3441	匠	zieng6	ʦiɛŋ53		0	zieng6	ʦiɛŋ53		0	ʦiɛŋ53	1		
+3442	象	zieng6	ʦiɛŋ53		0	zieng6	ʦiɛŋ53		0	ʦiɛŋ53	1		
+3443	像	zieng6	ʦiɛŋ53		0	zieng6	ʦiɛŋ53		0	ʦiɛŋ53	1		
+3444	橡	zieng6	ʦiɛŋ53		0	zieng6	ʦiɛŋ53		0	ʦiɛŋ53	1		
+3445	杖	zieng6	ʦiɛŋ53		0	zieng6	ʦiɛŋ53		0	ʦiɛŋ53	1		
+3446	丈	zieng6	ʦiɛŋ53		0	zieng6	ʦiɛŋ53		0	ʦiɛŋ53	1		
+3447	尖	zim1	ʦim35		0	zim1	ʦim35		0	ʦim35	1		
+3448	瞻	zim1	ʦim35		0	zim1	ʦim35		0	ʦim35	1		
+3449	占	zim1	ʦim35		0	zim1	ʦim35		0	ʦim35	1		
+3450	沾	zim1	ʦim35		0	zim1	ʦim35		0	ʦim35	1		
+3451	粘	zim1	ʦim35		0	zim1	ʦim35		0	ʦim35	1		
+3452	佔	zim3	ʦim33		0	zim3	ʦim33		0	ʦim33	1		
+3453	漸	zim6	ʦim53		0	zim6	ʦim53		0	ʦim53	1		
+3454	氈	zin1	ʦin35		0	zin1	ʦin35		0	ʦin35	1		
+3455	煎	zin1	ʦin35		0	zin1	ʦin35		0	ʦin35	1		
+3456	專	zin1	ʦin35		0	zin1	ʦin35		0	ʦin35	1		
+3457	磚	zin1	ʦin35		0	zin1	ʦin35		0	ʦin35	1		
+3458	剪	zin2	ʦin21		0	zin2	ʦin21		0	ʦin21	1		
+3459	展	zin2或zaan2?	ʦin21或ʦan21	?	1	zin2或zaan2?	ʦin21或ʦan21	?	1	ʦin21	1		
+3459	展									ʦan21			发音人对该音存疑
+3460	戰	zin3	ʦin33		0	zin3	ʦin33		0	ʦin33	1		
+3461	顫	zin3	ʦin33		0	zin3	ʦin33		0	ʦin33	1		
+3462	薦	zin3	ʦin33		0	zin3	ʦin33		0	ʦin33	1		
+3463	箭	zin3	ʦin33		0	zin3	ʦin33		0	ʦin33	1		
+3464	轉	zin3	ʦin33		0	zin3	ʦin33		0	ʦin33	1		
+3465	賤	zin6	ʦin53		0	zin6	ʦin53		0	ʦin53	1		
+3466	濺	zin6?或zin1?	ʦin53或ʦin35	??	2	zin6?或zin1?	ʦin53或ʦin35	??	2	ʦin53或ʦin35	1		二者似皆可，发音人存疑
+3467	傳	zin6或tsin4	ʦʰin53或ʦʰin42/31		0	zin6或tsin4	ʦʰin53或ʦʰin42/31		0	ʦin53或ʦʰin42/31	1		
+3468	接	zip8	ʦip3		0	zip8	ʦip3		0	ʦip3	1		
+3469	摺	zip8	ʦip3		0	zip8	ʦip3		0	ʦip3	1		
+3470	捷	zip9	ʦip53		0	zip9	ʦip53		0	ʦip53	1		
+3471	唧	zit7?	ʦit35	?	1	zit7?	ʦit35	?	1	ʦit35	1		发音人对该音存疑
+3472	茁	zit8	ʦit3		0	zit8	ʦit3		0	ʦit3	1		
+3473	節	zit8	ʦit3		0	zit8	ʦit3		0	ʦit3	1		
+3474	折	zit8	ʦit3		0	zit8	ʦit3		0	ʦit3	1		
+3475	哲	zit8	ʦit3		0	zit8	ʦit3		0	ʦit3	1		
+3476	浙	zit8	ʦit3		0	zit8	ʦit3		0	ʦit3	1		
+3477	絕	zit9	ʦit53		0	zit9	ʦit53		0	ʦit53	1		
+3478	截	zit9或ziet9	ʦit53或ʦiɛt53		0	zit9或ziet9	ʦit53或ʦiɛt53		0	ʦit53或ʦiɛt53	1		
+3479	焦	ziu1	ʦiu35		0	ziu1	ʦiu35		0	ʦiu35	1		
+3480	蕉	ziu1	ʦiu35		0	ziu1	ʦiu35		0	ʦiu35	1		
+3481	椒	ziu1	ʦiu35		0	ziu1	ʦiu35		0	ʦiu35	1		
+3482	招	ziu1	ʦiu35		0	ziu1	ʦiu35		0	ʦiu35	1		
+3483	礁	ziu1?	ʦiu35	?	1	ziu1?	ʦiu35	?	1	ʦiu35	1		发音人对该音存疑
+3484	昭	ziu1?或tsiu1?	ʦʰiu35或ʦʰiu35	??	2	ziu1?或tsiu1?	ʦʰiu35或ʦʰiu35		2	ʦʰiu35	1		
+3485	朝	ziu1或tsiu4	ʦʰiu35或ʦʰiu42/31		0	ziu1或tsiu4	ʦʰiu35或ʦʰiu42/31		0	ʦiu35或ʦʰiu42/31	1		
+3486	剿	ziu2	ʦiu21		0	ziu2	ʦiu21		0	ʦiu21	1		
+3487	沼	ziu2	ʦiu21		0	ziu2	ʦiu21		0	ʦiu21	1		
+3488	照	ziu3	ʦiu33		0	ziu3	ʦiu33		0	ʦiu33	1		
+3489	趙	ziu6	ʦiu53		0	ziu6	ʦiu53		0	ʦiu53	1		
+3490	召	ziu6	ʦiu53		0	ziu6	ʦiu53		0	ʦiu53	1		
+3491	阻	zo2	ʦɔ21		0	zo2	ʦɔ21		0	ʦɔ21	1		
+3492	左	zo2	ʦɔ21		0	zo2	ʦɔ21		0	ʦɔ21	1		
+3493	詛	zo2或zui2?	ʦɔ21或ʦui21	?	1	zo2或zui2?	ʦɔ21或ʦui21	?	1	ʦɔ21	1		
+3493	詛									ʦui21			发音人对该音存疑
+3494	助	zo6	ʦɔ53		0	zo6	ʦɔ53		0	ʦɔ53	1		
+3495	座	zo6	ʦɔ53		0	zo6	ʦɔ53		0	ʦɔ53	1		
+3496	載	zoi3或zoi2	ʦɔi33或ʦɔi21		0	zoi3或zoi2	ʦɔi33或ʦɔi21		0	ʦɔi33或ʦɔi21	1		
+3497	卓	zok8或tsiek8	ʦʰɔk3或ʦʰiɛk3		0	zok8或tsiek8	ʦʰɔk3或ʦʰiɛk3		0	ʦɔk3或ʦʰiɛk3	1		
+3498	桌	zok8或tsiek8	ʦʰɔk3或ʦʰiɛk3		0	zok8或tsiek8	ʦʰɔk3或ʦʰiɛk3		0	ʦɔk3或ʦʰiɛk3	1		
+3499	壯	zong3	ʦᵘɔŋ33		0	zong3	ʦᵘɔŋ33		0	ʦᵘɔŋ33	1		
+3500	藏	zong6或tsong4	ʦʰᵘɔŋ53或ʦʰᵘɔŋ42/31		0	zong6或tsong4	ʦʰᵘɔŋ53或ʦʰᵘɔŋ42/31		0	ʦᵘɔŋ53或ʦʰᵘɔŋ42/31	1		
+3501	遭	zou1	ʦou35		0	zou1	ʦou35		0	ʦou35	1		
+3502	糟	zou1	ʦou35		0	zou1	ʦou35		0	ʦou35	1		
+3503	租	zou1	ʦou35		0	zou1	ʦou35		0	ʦou35	1		
+3504	祖	zou2	ʦou21		0	zou2	ʦou21		0	ʦou21	1		
+3505	組	zou2	ʦou21		0	zou2	ʦou21		0	ʦou21	1		
+3506	早	zou2	ʦou21		0	zou2	ʦou21		0	ʦou21	1		
+3507	棗	zou2	ʦou21		0	zou2	ʦou21		0	ʦou21	1		
+3508	蚤	zou2?	ʦou21	?	1	zou2?	ʦou21	?	1	ʦou21	1		发音人对该音存疑
+3509	做	zou3	ʦou33		0	zou3	ʦou33		0	ʦou33	1		
+3510	灶	zou3	ʦou33		0	zou3	ʦou33		0	ʦou33	1		
+3511	竈	zou3	ʦou33		0	zou3	ʦou33		0	ʦou33	1		
+3512	造	zou6或tsou3？	ʦʰou53或ʦʰou33	？	1	zou6或tsou3？	ʦʰou53或ʦʰou33	？	1	ʦʰou53	1		
+3512	造									ʦou33			发音人对该音存疑
+3513	椎	zui1	ʦui35		0	zui1	ʦui35		0	ʦui35	1		
+3514	追	zui1	ʦui35		0	zui1	ʦui35		0	ʦui35	1		
+3515	錐	zui1或njui1	ʦui35或ȵui35		0	zui1或njui1	ʦui35或ȵui35		0	ʦui35或ȵui35	1		
+3516	嘴	zui2	ʦui21		0	zui2	ʦui21		0	ʦui21	1		
+3517	最	zui3	ʦui33		0	zui3	ʦui33		0	ʦui33	1		
+3518	醉	zui3	ʦui33		0	zui3	ʦui33		0	ʦui33	1		
+3519	贅	zui6	ʦui53		0	zui6	ʦui53		0	ʦui53	1		
+3520	墜	zui6	ʦui53		0	zui6	ʦui53		0	ʦui53	1		
+3521	綴	zui6	ʦui53		0	zui6	ʦui53		0	ʦui53	1		
+3522	罪	zui6	ʦui53		0	zui6	ʦui53		0	ʦui53	1		
+3523	囑	zʊk7	ʦʊk35		0	zʊk7	ʦʊk35		0	ʦʊk35	1		
+3524	燭	zʊk7	ʦʊk35		0	zʊk7	ʦʊk35		0	ʦʊk35	1		
+3525	祝	zʊk7	ʦʊk35		0	zʊk7	ʦʊk35		0	ʦʊk35	1		
+3526	粥	zʊk7	ʦʊk35		0	zʊk7	ʦʊk35		0	ʦʊk35	1		
+3527	竹	zʊk7	ʦʊk35		0	zʊk7	ʦʊk35		0	ʦʊk35	1		
+3528	築	zʊk7	ʦʊk35		0	zʊk7	ʦʊk35		0	ʦʊk35	1		
+3529	足	zʊk7	ʦʊk35		0	zʊk7	ʦʊk35		0	ʦʊk35	1		
+3530	俗	zʊk9	ʦʊk53		0	zʊk9	ʦʊk53		0	ʦʊk53	1		
+3531	續	zʊk9	ʦʊk53		0	zʊk9	ʦʊk53		0	ʦʊk53	1		
+3532	軸	zʊk9	ʦʊk53		0	zʊk9	ʦʊk53		0	ʦʊk53	1		
+3533	逐	zʊk9	ʦʊk53		0	zʊk9	ʦʊk53		0	ʦʊk53	1		
+3534	族	zʊk9	ʦʊk53		0	zʊk9	ʦʊk53		0	ʦʊk53	1		
+3535	尊	zun1	ʦun35		0	zun1	ʦun35		0	ʦun35	1		
+3536	遵	zun1	ʦun35		0	zun1	ʦun35		0	ʦun35	1		
+3537	蹲	zun1	ʦun35		0	zun1	ʦun35		0	ʦun35	1		
+3538	鑽	zun3	ʦun33		0	zun3	ʦun33		0	ʦun33	1		
+3539	蹤	zung1	ʦʊŋ35		0	zung1	ʦʊŋ35		0	ʦʊŋ35	1		
+3540	終	zung1	ʦʊŋ35		0	zung1	ʦʊŋ35		0	ʦʊŋ35	1		
+3541	鐘	zung1	ʦʊŋ35		0	zung1	ʦʊŋ35		0	ʦʊŋ35	1		
+3542	盅	zung1	ʦʊŋ35		0	zung1	ʦʊŋ35		0	ʦʊŋ35	1		
+3543	中	zung1	ʦʊŋ35		0	zung1	ʦʊŋ35		0	ʦʊŋ35	1		
+3544	忠	zung1	ʦʊŋ35		0	zung1	ʦʊŋ35		0	ʦʊŋ35	1		
+3545	鍾	zung1	ʦʊŋ35		0	zung1	ʦʊŋ35		0	ʦʊŋ35	1		
+3546	宗	zung1	ʦʊŋ35		0	zung1	ʦʊŋ35		0	ʦʊŋ35	1		
+3547	棕	zung1	ʦʊŋ35		0	zung1	ʦʊŋ35		0	ʦʊŋ35	1		
+3548	樁	zung1?	ʦʊŋ35	?	1	zung1?	ʦʊŋ35	?	1	ʦʊŋ35	1		
+3549	衷	zung1？或tsung1？	ʦʰʊŋ35或ʦʰʊŋ35	？？	2	zung1？或tsung1？	ʦʰʊŋ35或ʦʰʊŋ35		2	ʦʰʊŋ35	1		
+3550	縱	zung1?或zung3?	ʦʊŋ35或ʦʊŋ33	??	2	zung1?或zung3?	ʦʊŋ35或ʦʊŋ33	??	2	ʦʊŋ35或ʦʊŋ33	1		二者似皆可，发音人存疑
+3551	綜	zung1或zung3?	ʦʊŋ35或ʦʊŋ33	?	1	zung1或zung3?	ʦʊŋ35或ʦʊŋ33	?	1	ʦʊŋ35	1		
+3551	綜									ʦʊŋ33			发音人对该音存疑
+3552	總	zung2	ʦʊŋ21		0	zung2	ʦʊŋ21		0	ʦʊŋ21	1		
+3553	腫	zung2	ʦʊŋ21		0	zung2	ʦʊŋ21		0	ʦʊŋ21	1		
+3554	種	zung2或zung3	ʦʊŋ21或ʦʊŋ33		0	zung2或zung3	ʦʊŋ21或ʦʊŋ33		0	ʦʊŋ21或ʦʊŋ33	1		
+3555	眾	zung3	ʦʊŋ33		0	zung3	ʦʊŋ33		0	ʦʊŋ33	1		
+3556	訟	zung6	ʦʊŋ53		0	zung6	ʦʊŋ53		0	ʦʊŋ53	1		
+3557	頌	zung6	ʦʊŋ53		0	zung6	ʦʊŋ53		0	ʦʊŋ53	1		
+3558	誦	zung6	ʦʊŋ53		0	zung6	ʦʊŋ53		0	ʦʊŋ53	1		
+3559	仲	zung6	ʦʊŋ53		0	zung6	ʦʊŋ53		0	ʦʊŋ53	1		
+3560	栽	zoi1	ʦɔi35		0	zoi1	ʦɔi35		0	ʦɔi35	1		
+3561	災	zoi1	ʦɔi35		0	zoi1	ʦɔi35		0	ʦɔi35	1		
+3562	滓	zoi2	ʦɔi21		0	zoi2	ʦɔi21		0	ʦɔi21	1		
+3563	宰	zoi2	ʦɔi21		0	zoi2	ʦɔi21		0	ʦɔi21	1		
+3564	再	zoi3	ʦɔi33		0	zoi3	ʦɔi33		0	ʦɔi33	1		
+3565	茬	zoi6	ʦɔi53		0	zoi6	ʦɔi53		0	ʦɔi53	1		
+3566	在	zoi6	ʦɔi53		0	zoi6	ʦɔi53		0	ʦɔi53	1		
+3567	作	zok8	ʦɔk3		0	zok8	ʦɔk3		0	ʦɔk3	1		
+3568	捉	zok8	ʦɔk3		0	zok8	ʦɔk3		0	ʦɔk3	1		
+3569	濁	zok9	ʦɔk53		0	zok9	ʦɔk53		0	ʦɔk53	1		
+3570	鑿	zok9	ʦɔk53		0	zok9	ʦɔk53		0	ʦɔk53	1		
+3571	昨	zok9	ʦɔk53		0	zok9	ʦɔk53		0	ʦɔk53	1		
+3572	贓	zong1	ʦᵘɔŋ35		0	zong1	ʦᵘɔŋ35		0	ʦᵘɔŋ35	1		
+3573	髒	zong1	ʦᵘɔŋ35		0	zong1	ʦᵘɔŋ35		0	ʦᵘɔŋ35	1		
+3574	葬	zong3	ʦᵘɔŋ33		0	zong3	ʦᵘɔŋ33		0	ʦᵘɔŋ33	1		
+3575	撞	zong6	ʦᵘɔŋ53		0	zong6	ʦᵘɔŋ53		0	ʦᵘɔŋ53	1		
+3576	僮	zong6	ʦᵘɔŋ53		0	zong6	ʦᵘɔŋ53		0	ʦᵘɔŋ53	1		
+										lou53			发音人对该音存疑

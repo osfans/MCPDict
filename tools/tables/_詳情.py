@@ -32,7 +32,7 @@ def getTones(tones):
 		i = i + 1
 		index = i
 		if not ts: continue
-		ts = ts.lower()
+		ts = str(ts).lower()
 		for j,t in enumerate(ts.split(",")):
 			if t.startswith("["):
 				index = t[1:t.index("]")]
