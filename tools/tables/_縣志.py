@@ -279,7 +279,7 @@ class 表(_表):
 	def 析韻(自, 行):
 		行 = 行.strip()
 		if not 行: return
-		if 行.startswith("#"): 行 = 行[1:]
+		if 行.startswith("#") or 行.startswith("＃"): 行 = 行[1:]
 		elif "［" in 行 or "］" in 行: return
 		韻 = 行
 		if 韻: 韻 = 韻.split("\t")[0].strip().strip("[]")
