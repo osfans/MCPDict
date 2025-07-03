@@ -56,6 +56,7 @@ def processFs(v):
 def processXlsxFs(v):
 	t = type(v)
 	if t is float or t is int: return "%d" % v
+	if t is bool: return str(v)
 	if v is None: return ""
 	if t is str: return str(v).strip().replace("\t", " ").replace("\n", " ")
 	cells = []
@@ -312,6 +313,12 @@ class 表:
 
 	def _正音(自, 音):
 		if 自.爲語() and 自.爲音:
+			if re.match(".*[⓪①-⑨ⓐⓑ]+", 音):
+				for i in range(0,10):
+					sda = "⓪" if i == 0 else chr(ord('①') + (i - 1))
+					sdb = f"{i}"
+					音 = 音.replace(sda, sdb)
+				音 = 音.replace("ⓐ", "a").replace("ⓑ", "b")
 			音 = 音.strip("[]")
 			音 = 音.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀∅Ø〇0").replace("零", "")
 			if 自.簡稱 not in ("盛唐", "榕江侗上古借詞", "榕江侗中古借詞") and not 自.文件名.startswith("白語"): 音 = 音.lstrip("q")
@@ -614,7 +621,11 @@ class 表:
 			if 調值 == "0":
 				調類 = 調值
 			elif len(調值) == 1:
-				調值 = 調值 + 調值
+				調值 = 調值 * 2
+				if 調值 in 自.調典:
+					調類 = 自.調典[調值]
+			elif len(調值) == 2 and 調值[0] == 調值[1]:
+				調值 = 調值[0]
 				if 調值 in 自.調典:
 					調類 = 自.調典[調值]
 			else:

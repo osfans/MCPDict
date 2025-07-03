@@ -2107,7 +2107,7 @@
 	撰		ts	an	3	ts	an	3	ts	an	3	ts	an	3										
 	板		p	an	2	p	an	2	p	an	2	p	an	2										
 	版		p	an	2	p	an	2	p	an	2	p	an	2										
-	柵		tsʰ	ak	6	tsʰ	ak	6	tsʰ	ak	6	tsʰ	ak	5	木柵									
+	柵		tsʰ	ak	6	tsʰ	ak	6	tsʰ	ak	6	tsʰ	ak	6	木柵									
 	柵		s	an	1	s	an	1	s	an	1	s	an	1	柵極									
 	慣		kʷ	an	3	kʷ	an	3	kʷ	an	3	k	an	3										
 	澗		k	an	3	k	an	3	k	an	3	k	an	3										
@@ -2330,9 +2330,8 @@
 	燕			in	3		in	3		in	3		in	3	燕子									
 	燕			in	1		in	1		in	1		in	1	燕國									
 	淵			yn	1		in	1		in	1		yn	1										
-	咽			in	1		in	1		in	1		in	1	咽喉									
-	咽			in	3		in	3		in	3		in	3	狼吞虎咽									
-	咽			it	6		it	6		it	6		it	5	哽咽									
+	咽			in	1		in	1		in	1		in	1										
+	咽			in	3		in	3		in	3		in	3										
 	煙			in	1		in	1		in	1		in	1										
 	邊		p	in	1	p	in	1	p	in	1	p	in	1										
 	蝙		pʰ	in	1	pʰ	in	1	pʰ	in	1	pʰ	in	1										
@@ -2381,7 +2380,6 @@
 	截		ts	it	6	ts	it	6	ts	it	6	ts	it	6										
 	訣		kʰ	yt	6	kʰ	it	6	kʰ	it	6	kʰ	yt	5										
 	桔		k	ɐt	5	k	ɐt	5	k	ɐt	5	k	ɐt	5										
-	桔																							
 	結		k	it	6	k	it	6	k	it	6	k	it	5										
 	鍥		kʰ	it	6	kʰ	it	6	kʰ	it	6	kʰ	it	5										
 	抉		kʰ	yt	6	kʰ	it	6	kʰ	it	6	kʰ	yt	5										
@@ -2493,15 +2491,14 @@
 	奧			ou	3		ɐu	3		ɐu	3		ɐu	3										
 	澳			ou	3		ɐu	3		ɐu	3		ɐu	3										
 	報		p	ou	3	p	ɐu	3	p	ɐu	3	p	ɐu	3										
-	暴		p	ou	3	p	ɐu	3	p	ɐu	3	p	ɐu	3	凶暴									
-	暴		p	ʊk	6	p	ʊk	6	p	ʊk	6	p	ʊk	6	一暴十寒									
+	暴		p	ou	3	p	ɐu	3	p	ɐu	3	p	ɐu	3										
 	曝		p	ʊk	6	p	ʊk	6	p	ʊk	6	p	ʊk	6										
 	瀑		p	ʊk	6	p	ʊk	6	p	ʊk	6	p	ʊk	6										
 	帽		m	ou	3	m	ɐu	3	m	ɐu	3	m	ɐu	3										
 	冒		m	ou	3	m	ɐu	3	m	ɐu	3	m	ɐu	3										
 	嘲		ts	au	1	ts	au	1	ts	au	1	ts	au	1										
-	啁		ts	ɐu	1	ts	ɐu	1	ts	ɐu	1	ts	ɐu	1										
-	嘮		l	ou	4	l	ɐu	4	l	ɐu	4	l	ɐu	4										
+	啁		ts	ɐu	1																			
+	嘮		l	ou	4																			
 	抓		ts	au	2	ts	au	2	ts	au	2	ts	au	2										
 	鈔		tsʰ	au	1	tsʰ	au	1	tsʰ	au	1	tsʰ	au	1										
 	抄		tsʰ	au	1	tsʰ	au	1	tsʰ	au	1	tsʰ	au	1										
@@ -2866,7 +2863,8 @@
 	琶		pʰ	a	4	pʰ	a	4	pʰ	a	4	pʰ	a	4										
 	爬		pʰ	a	4	pʰ	a	4	pʰ	a	4	pʰ	a	4										
 	麻		m	a	4	m	a	4	m	a	4	m	a	4										
-	蟆		m	a	4																			
+	蟆		m	ɔk	6																			
+	蟆		m	ou	1																			
 	吧		p	a	1	p	a	1	p	a	1	p	a	1										
 	姐		ts	ɛ	2	ts	ia	2	ts	ia	2	ts	ɛ	2										
 	瀉		s	ɛ	3	s	ia	3	s	ia	3	s	ɛ	3										
@@ -4123,7 +4121,7 @@
 	銜		h	ɔm	4	h	ɐm	4	h	am	4	h	ɐm	4										
 	艦		l	am	3	l	am	3	l	am	3	l	am	3										
 	檻		kʰ	am	2	kʰ	am	2	kʰ	am	2	kʰ	am	2										
-	濫		l	am	3	l	am	3	l	am	3	l	am	2										
+	濫		l	am	3	l	am	3	l	am	3	l	am	3										
 	甲		k	ap	6	k	ap	6	k	ap	6	k	ap	5										
 	匣		h	ap	6	h	ap	6	h	ap	6	h	ap	6										
 	鴨			ap	6		ap	6		ap	6		ap	5										
@@ -4289,16 +4287,12 @@
 	雜		ts	ap	6	ts	ap	6	ts	ap	6	ts	ap	6										
 	卅		s	a	4																			
 	鴿		k	ɔp	6	k	ɐp	6	k	ap	6	k	ɐp	5										
-	閤																							
-	閤																							
-	閤																							
 	蛤		k	ap	6	k	ap	6	k	ap	6	k	ap	5	蛤拐									
 	蛤		k	ɔp	6	k	ɐp	6				k	ɐp	5	蛤蚧									
-	蛤		h	a	1	h	a	1	h	a	1	h	a	1	蛤蟆									
+	蛤		h	a	1										蛤蟆									
 	哈		h	a	1	h	a	1	h	a	1	h	a	1										
 	盒		h	ɔp	6	h	ɐp	6	h	ap	6	h	ɐp	6										
 	合		h	ɔp	6	h	ɐp	6	h	ap	6	h	ɐp	6										
-	合		k	ɔp	6										一合									
 	圇		l	ɵn	4	l	ɐn	4	l	ɐn	4	l	ɐn	4										
 	圾		s	ap	6	s	ap	6	s	ap	6	s	ap	5										
 	歹		t	ai	2	t	ai	2	t	ai	2	t	ai	2										

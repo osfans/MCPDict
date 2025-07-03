@@ -15,7 +15,7 @@ class 表(_表):
 	def 統(自, 行):
 		行 = _表.統(自, 行)
 		名 = 自.簡稱
-		if 名 in ("黃梅小池","光山南郊"):
+		if 名 in ("黃梅小池","光山南郊", "信陽東雙河"):
 			行 = 自.normM(行)
 		elif 名 in ("巢湖",):
 			行 = 自.normS(行)
@@ -178,10 +178,10 @@ class 表(_表):
 			行 = 自.normS(行)
 			行 = re.sub(r"(\{[^{}]+?)\(又\)([^{}]*?\})", "\\1，\\2", 行)
 			行 = re.sub(r"(\{[^{}]+?)\(新\)([^{}]*?\})", "\\1。\\2", 行)
-		elif 名 in ("句容",):
-			if re.match(".*[①-⑨ⓐⓑ]+", 行):
-				for i in range(1,10):
-					sda = chr(ord('①') + (i - 1))
+		elif 名 in ("句容", "蘭谿諸葛"):
+			if re.match(".*[⓪①-⑨ⓐⓑ]+", 行):
+				for i in range(0,10):
+					sda = "⓪" if i == 0 else chr(ord('①') + (i - 1))
 					sdb = f"[{i}]"
 					行 = 行.replace(sda, sdb)
 			行 = 行.replace("]ⓐ", "a]").replace("]ⓑ", "b]")
@@ -196,6 +196,15 @@ class 表(_表):
 		elif 名 in ("南海沙頭"):
 			行 = re.sub(r"^(\d+)(\()", "\\1□\\2", 行)
 			行 = re.sub(r"^(\d+)", "[\\1]", 行)
+		elif 名 in ("大埔百候",):
+			列 = 行.split("\t")
+			if 列[0] == "#a":
+				自.調值表 = 列
+				行 = 列[0]
+			elif 列[0].startswith("#"):
+				行 = 列[0]
+			else:
+				行 = "\t".join((f"[{自.調值表[序]}]" if 序 else "") + 項 for 序,項 in enumerate(列) if 項)
 		elif 名 in ("衡山望峯",):
 			列 = 行.split("\t")
 			if 有字(列[0]):
@@ -212,9 +221,24 @@ class 表(_表):
 				if 有字(列[0]): return
 				行 = "\t".join((f"[{序 + 1 if ("江永粗石江" == 名 and 序 > 3) or ("江永蘭溪" == 名 and 序 > 5) else 序}]" if 序 else "") + 項 for 序,項 in enumerate(列))
 				行 = 行.replace("（", "(").replace("）", ")").replace("(", "{").replace(")", "}").replace("{{", "{").replace("}}", "}")
-		elif 名 in ("如皋白蒲","如皋石莊","南通唐閘",):
+		elif 名 in ("岳陽張谷英",):
 			列 = 行.split("\t")
-			行 = "\t".join((f"[{序 + (2 if 名.startswith("如皋") and 序 > 4 else 1) if 序 > 3 else 序}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
+			if 列[0] == "音节":
+				列 = 行.rstrip().split("\t")
+				if len(列) == 2:
+					return 列[1]
+				自.調值表 = [i[-2:] for i in 列]
+				return
+			行 = "\t".join((f"[{自.調值表[序]}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
+		elif 名 in ("通州五接","如皋白蒲","如皋石莊","南通唐閘",):
+			列 = 行.split("\t")
+			if 列[0] == "":
+				列 = 行.rstrip().split("\t")
+				if 列.count(列[-2]) == 2: 列[-2] += "0"
+				if 列.count(列[-1]) == 2: 列[-1] += "0"
+				自.調值表 = 列
+				return
+			行 = "\t".join((f"[{自.調值表[序]}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
 			行 = 自.normS(行.replace(")(", "："))
 		elif 名 in ("葛洲壩",):
 			if 行.startswith("["): return
@@ -279,7 +303,7 @@ class 表(_表):
 	def 析韻(自, 行):
 		行 = 行.strip()
 		if not 行: return
-		if 行.startswith("#"): 行 = 行[1:]
+		if 行.startswith("#") or 行.startswith("＃"): 行 = 行[1:]
 		elif "［" in 行 or "］" in 行: return
 		韻 = 行
 		if 韻: 韻 = 韻.split("\t")[0].strip().strip("[]")
@@ -312,11 +336,10 @@ class 表(_表):
 					行 = 自.normS(行)
 				行 = 行.lstrip(" ")
 				if "［" not in 行 and re.match(".*[⓪①-⑨]", 行):
-					for i in range(1, 10):
-						sda = chr(ord('①') + (i - 1))
+					for i in range(0, 10):
+						sda = "⓪" if i == 0 else chr(ord('①') + (i - 1))
 						sdb = f"［{i}］"
 						行 = 行.replace(sda, sdb)
-					行 = 行.replace("⓪", "［0］")
 				if (s := 自.析韻(行)) is not None:
 					韻 = s
 					continue
