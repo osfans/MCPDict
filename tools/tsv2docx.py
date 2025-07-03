@@ -20,7 +20,7 @@ font.size = Pt(16)
 style.element.rPr.rFonts.set(qn('w:eastAsia'), '宋体')
 for line in open(fname, encoding="utf-8"):
     line = line.rstrip()
-    if line.startswith("#") or re.match(r"^[^\d①-⑨]+$", line):
+    if line.startswith("#") or re.match(r"^[^\d⓪①-⑨ⓐⓑ]+$", line):
         h = doc.add_heading("", level=0)
         run = h.add_run(line)
         run.font.name = "Times New Roman"

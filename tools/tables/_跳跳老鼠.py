@@ -20,8 +20,13 @@ class 表(_表):
 			if len(列) <= 列序[0]: return
 			組 = 列[列序[0]]
 			if len(列序) == 1:
+				if not 組.strip(): return
 				try:
-					音, 組 = re.findall(r"^(.*?[\d¹²³⁴⁵]+) ?(.*)$", 組)[0]
+					音, 組 = re.findall(r"^(.*?[\d⁰¹²³⁴⁵⁶⁷⁸⁹]+) ?(.*)$", 組)[0]
+					if re.match(".*[⁰¹²³⁴⁵⁶⁷⁸⁹]", 音):
+						上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
+						for i in 上標:
+							音 = 音.replace(i, str(上標.index(i)))
 				except:
 					自.誤.append(f"無聲調或無漢字：{組}")
 					return
@@ -61,9 +66,16 @@ class 表(_表):
 		elif 名 in ("代縣東首"):
 			if 列[0].count(" ") < 2: return
 			聲韻, 調, 組 = 列[0].split(" ")
-		elif 名 in ("太原"):
+		elif 名 in ("太原",):
 			聲, 韻, 調, 組 = 列[:4]
 			音 = 聲 + 韻 + 調[2:]
+		elif 名 in ("文登",):
+			聲, 韻, 調, 組 = 列[:4]
+			聲韻 = 聲 + 韻
+			if 聲韻:
+				自.聲韻 = 聲韻
+			else:
+				聲韻 = 自.聲韻
 		elif 名 in ("邵東斫曹","綏寧武陽","天柱江東"):
 			聲韻, 調 = 列[:2]
 			組 = "".join(列[2:]).replace("\t", "").strip()
@@ -120,7 +132,11 @@ class 表(_表):
 			組 = 組.replace(")(", ";")
 			組 = re.sub(r"(\d)([-=])", "\\2\\1", 組)
 		else:
-			聲韻, 調, 組 = 列[:3]
+			try:
+				聲韻, 調, 組 = 列[:3]
+			except:
+				print(名)
+				raise
 		if 名 in ("新最小上古"):
 			自.爲音 = False
 		if 音 is None and 聲韻:
