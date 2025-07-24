@@ -5,7 +5,7 @@ import os, re, sys
 import logging
 from collections import defaultdict, OrderedDict
 from glob import glob
-import inspect
+import inspect, time
 from openpyxl import load_workbook
 from xlrd import open_workbook
 import docx
@@ -15,6 +15,7 @@ from docx.text.paragraph import Paragraph
 from docx.shared import Pt
 from docx.enum.text import WD_UNDERLINE
 import regex
+import subprocess
 
 logging.basicConfig(format='[%(asctime)s,%(msecs)03d] %(message)s', level=logging.INFO, datefmt='%H:%M:%S',)
 
@@ -295,6 +296,13 @@ class 表:
 		spath = 自.spath
 		if not spath or not os.path.exists(spath):
 			return False
+		if "版本" in 自.info and not 自.info["版本"]:
+			result = subprocess.run(["git", "log", "-1", "--format=%cd", "--date=short", spath], stdout=subprocess.PIPE, text=True)
+			if result.returncode == 0:
+				版本 = result.stdout.strip()
+			else:
+				版本 = time.strftime("%Y-%m-%d", time.localtime(os.path.getmtime(spath)))
+			自.info["版本"] = 版本
 		if os.path.exists(自.tpath):
 			ftime = os.path.getmtime(spath)
 			ttime = os.path.getmtime(自.tpath)
