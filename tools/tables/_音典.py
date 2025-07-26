@@ -166,6 +166,14 @@ class 表(_表):
 						音標, 註2 = re.findall(r"^(.*?[¹²³⁴⁵]+[\-=]?)(.*?)$", 音標)[0]
 						l.append((字, 自.轉調類(音標), 註2))
 					return l
+			elif 自.文件名.startswith("安徽淮河流域方言语音比较研究"):
+				markers = list(map(chr, range(0xa700,0xa708)))
+				l = list()
+				for i in 音.split("/"):
+					if i[0] in markers: i = i[1:] + str(markers.index(i[0]) + 1)
+					elif i[-1] in markers: i = i[:-1] + str(markers.index(i[-1]) + 1)
+					l.append((字,i,註))
+				return l
 			elif 自.文件名.startswith("广西富川富阳方言21点"):
 				註 = 字[1:].strip("()（）")
 				字 = 字[0]
