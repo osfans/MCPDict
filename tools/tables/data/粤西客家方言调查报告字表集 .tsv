@@ -145,7 +145,7 @@ P31	142	车	～马炮	ki35	ki35	ky45	ky34	ky44	ki34	ki55	ki45	ki55
 P31	143	锯		ki52	ki42	ky51	ky52	ky41	ki54	ki33	ki44	ki33
 P31	144	去		hi52	hi42	hi51	kʰi52;hi52	kʰy41;si41	hi54	hi33	kʰi44	hi33
 P31	145	鱼		ʔŋ24	ʔŋ12	ȵy24	ȵy23	ȵy24	ȵi213	ʔŋ35	ʔn12	ʔŋ24
-P31	146	语		j21	ȵi35	ȵy31	ȵy34;ȵy52	ȵy44	ȵ	ȵi31	ȵi31	ni55
+P31	146	语		ji21	ȵi35	ȵy31	ȵy34;ȵy52	ȵy44	ȵi	ȵi31	ȵi31	ni55
 P31	147	虚		hi35	hi35	hy45	hy34	sy44	hi34	hi55	su45	hi55
 P31	148	许		hi21	hi31	hy31	hy31	sy31	hi31	hi31	su31	hi31
 P31	149	余		ji24	ji12	jy24	jy23	jy24	zi213	ji35	ji12	ji24
@@ -171,7 +171,7 @@ P32	168	树		su21	su31	sy31	sy31	sy31	si31	si33	su44	su33
 P32	169	句		ki52	ki42	ky51	ki52;ky52	ky41	ki54	ki33	ki44	ki33
 P32	170	区		kʰi35	kʰi35	kʰy45	kʰy34	kʰy44	kʰi34	kʰi55	kʰi45	kʰi55
 P32	171	具		kʰi21	kʰi31	kʰy31	kʰy31	kʰy31	kʰi31	kʰi33	kʰi44	kʰi33
-P32	172	雨		j21	j31	jy31	jy31	jy31	zi31	j31	j31	j31
+P32	172	雨		ji21	ji31	jy31	jy31	jy31	zi31	ji31	ji31	ji31
 P32	173	芋		vu52	ʔu42	ʔu51	ʔu52	vu41	vu54	ʔu33	vu44	ʔu33
 P32	174	戴		tai52	tai42	tai51	tai52	tai41	tai54	dai33	tai44	tai33
 P32	175	台		tʰɔi24	tʰɔi12	tʰuai24	tʰuai23	tʰɔi24	tʰɔi213	tʰɔi35	tʰɔi12	tʰɔi24
@@ -296,15 +296,15 @@ P37	293	池		tsʰi24	tsʰi12	tsʰi24	tsʰi23	tsʰi24	tsʰi213	tsʰi35	tsʰi12	ts
 P37	294	支		tsi35	tsi35	tsi45	tsi34	tsi44	tsi34	tsi55	tsi45	tsɿ55
 P37	295	纸		tsi21	tsi31	tsi31	tsi31	tsi31	tsi31	tsi31	tsi31	tsɿ31
 P37	296	是			si31	si31	si31	si31	si31	si31	si44	sɿ33
-P37	297	儿		j24	ȵi12	ȵi24	ȵi23	ȵi24	zi213	ȵi55;ȵi35	j12	ni24
+P37	297	儿		ji24	ȵi12	ȵi24	ȵi23	ȵi24	zi213	ȵi55;ȵi35	ji12	ni24
 P37	298	寄		ki52	ki42	ki51	ki52	ki41	ki54	ki33	ki44	ki33
 P37	299	骑		kʰɛ24	kʰi12	kʰɛ24	kʰi23	kʰi24	kʰi213	kʰi35	kʰi12	kʰi24
-P38	300	义		j21	ȵi31	ȵi31	ȵi31	ȵi31	ȵi31	ȵi33	ȵi44	ni31
-P38	301	议		j21	ȵi31	ȵi51	ȵi52	ȵi41	ȵi54	ȵi31	ȵi31	ni31
+P38	300	义		ji21	ȵi31	ȵi31	ȵi31	ȵi31	ȵi31	ȵi33	ȵi44	ni31
+P38	301	议		ji21	ȵi31	ȵi51	ȵi52	ȵi41	ȵi54	ȵi31	ȵi31	ni31
 P38	302	戏		hi52	hi42	hi51	hi52;kʰi52	si41	hi54	hi33	si44	hi33
-P38	303	椅		j21	j31	j31	j31	j31	zi31	j31	j31	j31
-P38	304	移		j24	j12	j24	j23	j24	zi213	j35	j12	j24
-P38	305	易	容～	j21	j31	j31	j31	j41	zi54	j33	j44	j33
+P38	303	椅		ji21	ji31	ji31	ji31	ji31	zi31	ji31	ji31	ji31
+P38	304	移		ji24	ji12	ji24	ji23	ji24	zi213	ji35	ji12	ji24
+P38	305	易	容～	ji21	ji31	ji31	ji31	ji41	zi54	ji33	ji44	ji33
 P38	306	悲		pɛi35	pi35	pi45	puei34	pei44	pei34	bi55	pui45	pui55
 P38	307	比		pi21	pi31	pi31	pi31	pi31	pi31	bi31	pi31	pi31
 P38	308	备		pʰi21	pʰi31	pʰi31	pʰi31	pʰi31	pʰi31	pʰi31	pʰi44	pʰi31
@@ -354,22 +354,22 @@ P40	351	始		tsʰi21	tsʰi31	tsʰi31	tsʰi31	tsʰi31	tsʰi31	tsʰi31	tsʰi31	ts�
 P40	352	试		si52	si42	si51	si52	si41	si54	si33	si44	sɿ33
 P40	353	时		si24	si12	si24	si23	si24	si213	si35	si12	sɿ24
 P40	354	市		si21	si42	si24	si52	si31	si54	si33	si44	sɿ33
-P40	355	而		j24	ȵi12	ȵi24	ȵi23	ȵi24	ȵi213	ȵi35	lu12	lu24
-P40	356	耳		j21;ȵi21	ȵi31	ȵi31	ȵi31	ȵi31	ȵi31	ȵi31	ȵi31	ni31
+P40	355	而		ji24	ȵi12	ȵi24	ȵi23	ȵi24	ȵi213	ȵi35	lu12	lu24
+P40	356	耳		ji21;ȵi21	ȵi31	ȵi31	ȵi31	ȵi31	ȵi31	ȵi31	ȵi31	ni31
 P40	357	基		ki35	ki35	ki45	ki34	ki44	ki34	ki55	ki45	ki55
 P40	358	欺		hi35	hi35	hi45	kʰi34	hi44	hi34	hi55	kʰi45	kʰi55
 P40	359	起		hi21	hi31	hi31	hi31;kʰi31	hi31	hi31	hi31	kʰi31	hi31
 P40	360	旗		kʰi24	kʰi12	kʰi24	kʰi23	kʰi24	kʰi213	kʰi35	kʰi12	kʰi24
 P40	361	记		ki52	ki42	ki51	ki52	ki41	ki54	ki33	ki44	ki33
-P40	362	疑		j24	ȵi12	ȵi24	ȵi23	ȵi24	ȵi213	ȵi35	ȵi12	ni24
+P40	362	疑		ji24	ȵi12	ȵi24	ȵi23	ȵi24	ȵi213	ȵi35	ȵi12	ni24
 P40	363	喜		hi21	hi31	hi31	hi31	hi31	hi31	hi31	kʰi31	hi31
-P40	364	医		j35	j35	j45	j34	j44	zi34	j55	j45	j55
-P40	365	意		j52	j42	j51	j52	j41	zi54	j33	j44	j33
-P40	366	以		j21	j42	j24	j52	j31	zi54	j31	j31	j31
+P40	364	医		ji35	ji35	ji45	ji34	ji44	zi34	ji55	ji45	ji55
+P40	365	意		ji52	ji42	ji51	ji52	ji41	zi54	ji33	ji44	ji33
+P40	366	以		ji21	ji42	ji24	ji52	ji31	zi54	ji31	ji31	ji31
 P40	367	机		ki35	ki35	ki45	ki34	ki44	ki34	ki55	ki45	ki55
 P40	368	几	～个	ki21	ki31	ki31	ki31	ki31	ki31	ki31	ki31	ki31
 P41	369	气		hi52	hi42	hi51	hi52;kʰi52	si41	hi54	hi33	kʰi44	hi33
-P41	370	衣		j35	j35	j45	j34	j44	zi34	j55	j45	j55
+P41	370	衣		ji35	ji35	ji45	ji34	ji44	zi34	ji55	ji45	ji55
 P41	371	随		tsʰui24	tsʰui12	tsʰui24	tsʰuei23	tsʰuei24	tsʰei213	tsʰui35	tsʰui12	tsʰui24
 P41	372	吹		tsʰui35	tsʰui35	tsʰui45	tsʰuei34	tsʰuei44	tsʰei34	tsʰɔi55	tsʰɔi45	tsʰɔi55
 P41	373	规		kʰui35	kʰui35	kʰui45	kʰuei34	kʰuei44	kʰuei34	kʰui55	kʰui45	kʰui55
