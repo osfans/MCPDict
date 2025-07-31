@@ -154,6 +154,12 @@ class 表(_表):
 						音標, 註2 = re.findall("^(.*?[¹²³⁴⁵]+)(.*?)$", 音標)[0]
 						l.append((字, 自.轉調類(音標), 註2))
 					return l
+			elif 自.文件名.startswith("湖南洞绥片赣方言语音调查研究"):
+				if "/" in 音:
+					l = list()
+					for i, 音標 in enumerate(音.split("/")):
+						l.append((字, 自.轉調類(音標) + ("-" if i == 0 else "="), 註))
+					return l
 			elif 自.文件名.startswith("语言接触与湘西南苗瑶平话调查研究"):
 				if 音 == "/": return
 				if ";" in 音:
