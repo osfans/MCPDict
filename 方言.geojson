@@ -2911,7 +2911,7 @@
         "陳邡分區": "官話-山東-昆嵛大片-榮登片",
         "錄入人": "teixun",
         "字表來源": "《文登话》",
-        "補充閲讀": "《威海方言总揽》"
+        "補充閲讀": "《文登地名志》"
       },
       "geometry": {
         "type": "Point",
@@ -6785,6 +6785,246 @@
         "marker-color": "#F5B3B3",
         "marker-size": "small",
         "marker-symbol": "b",
+        "title": "環縣甜水",
+        "語言": "環縣甜水話",
+        "地點": "甘肅慶陽環縣甜水",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-寧夏與淮河-北方大片-寧夏片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.79482,
+          37.154792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "環縣車道",
+        "語言": "環縣車道話",
+        "地點": "甘肅慶陽環縣車道",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-秦隴大片-慶陽片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.745206,
+          36.406977
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "慶城",
+        "語言": "慶城話",
+        "地點": "甘肅慶陽慶城慶城",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-秦隴大片-慶陽片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.888532,
+          36.009364
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "慶城桐川",
+        "語言": "慶城桐川話",
+        "地點": "甘肅慶陽慶城桐川",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-秦隴大片-慶陽片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.529416,
+          36.019943
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "慶城太白梁",
+        "語言": "慶城太白梁話",
+        "地點": "甘肅慶陽慶城太白梁",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-秦隴大片-慶陽片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.384313,
+          36.046754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "華池",
+        "語言": "華池話",
+        "地點": "甘肅慶陽華池柔遠",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-秦隴大片-慶陽片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.005104,
+          36.464807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "華池喬川",
+        "語言": "華池喬川話",
+        "地點": "甘肅慶陽華池喬川",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-秦隴大片-慶陽片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.682277,
+          36.769299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "合水",
+        "語言": "合水話",
+        "地點": "甘肅慶陽合水西華池",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-秦隴大片-慶陽片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.028032,
+          35.838734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "合水段家集",
+        "語言": "合水段家集話",
+        "地點": "甘肅慶陽合水段家集",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-關中-關中大片-邠乾片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.142751,
+          35.735096
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "慶陽",
+        "語言": "慶陽話",
+        "地點": "甘肅慶陽西峯西街",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-秦隴大片-慶陽片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.640434,
+          35.736193
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
         "title": "慶陽董志",
         "語言": "慶陽董志話",
         "地點": "甘肅慶陽西峯董志",
@@ -6800,6 +7040,102 @@
         "coordinates": [
           107.656856,
           35.668802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "慶陽肖金",
+        "語言": "慶陽肖金話",
+        "地點": "甘肅慶陽西峯肖金",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.657426,
+          35.591019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "鎭原",
+        "語言": "鎭原話",
+        "地點": "甘肅慶陽鎭原城關",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.208729,
+          35.680885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "鎭原新城",
+        "語言": "鎭原新城話",
+        "地點": "甘肅慶陽鎭原新城",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.938638,
+          35.639535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "鎭原三岔",
+        "語言": "鎭原三岔話",
+        "地點": "甘肅慶陽鎭原三岔",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.055523,
+          36.056998
         ]
       }
     },
@@ -6832,6 +7168,54 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "寧縣早勝",
+        "語言": "寧縣早勝話",
+        "地點": "甘肅慶陽寧縣早勝",
+        "地圖集二分區": "中原官話-關中片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-關中-關中大片-邠乾片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.012283,
+          35.41066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "寧縣盤客",
+        "語言": "寧縣盤客話",
+        "地點": "甘肅慶陽寧縣盤客",
+        "地圖集二分區": "中原官話-關中片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-關中-關中大片-邠乾片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.256415,
+          35.752967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "正寧",
@@ -6850,6 +7234,414 @@
         "coordinates": [
           108.365226,
           35.493518
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "正寧宮河",
+        "語言": "正寧宮河話",
+        "地點": "甘肅慶陽正寧宮河",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-關中-關中大片-耀州片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.101712,
+          35.335101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "正寧五頃原回民",
+        "語言": "正寧五頃原回民話",
+        "地點": "甘肅慶陽正寧五頃原",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-關中-關中大片-耀州片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.471176,
+          35.406027
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "正寧三嘉",
+        "語言": "正寧三嘉話",
+        "地點": "甘肅慶陽正寧三嘉",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-關中-關中大片-耀州片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.441351,
+          35.291219
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "涇川涇明",
+        "語言": "涇川涇明話",
+        "地點": "甘肅平涼涇川涇明",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.640302,
+          35.368661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "涇川",
+        "語言": "涇川話",
+        "地點": "甘肅平涼涇川城關",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.373427,
+          35.349539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "涇川玉都",
+        "語言": "涇川玉都話",
+        "地點": "甘肅平涼涇川玉都",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.313944,
+          35.458055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "靈臺",
+        "語言": "靈臺話",
+        "地點": "甘肅平涼靈臺中臺",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.621163,
+          35.072944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "靈臺邵寨",
+        "語言": "靈臺邵寨話",
+        "地點": "甘肅平涼靈臺邵寨",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.81561,
+          34.994426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "華亭",
+        "語言": "華亭話",
+        "地點": "甘肅平涼華亭東華",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.645648,
+          35.21479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "華亭神峪",
+        "語言": "華亭神峪話",
+        "地點": "甘肅平涼華亭神峪",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.814956,
+          35.138542
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "崇信",
+        "語言": "崇信話",
+        "地點": "甘肅平涼崇信錦屛",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.031809,
+          35.303916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "崇信木林",
+        "語言": "崇信木林話",
+        "地點": "甘肅平涼崇信木林",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.150319,
+          35.253811
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "崇信新窯",
+        "語言": "崇信新窯話",
+        "地點": "甘肅平涼崇信新窯",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.981461,
+          35.16522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "平涼柳湖",
+        "語言": "平涼柳湖漢民話",
+        "地點": "甘肅平涼崆峒柳湖",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.690507,
+          35.550314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "平涼柳湖回民",
+        "語言": "平涼柳湖回民話",
+        "地點": "甘肅平涼崆峒柳湖",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.670723,
+          35.55677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "平涼香蓮",
+        "語言": "平涼香蓮話",
+        "地點": "甘肅平涼崆峒香蓮",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.834161,
+          35.570414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "平涼大秦回民",
+        "語言": "平涼大秦回民話",
+        "地點": "甘肅平涼崆峒大秦",
+        "地圖集二分區": "中原官話-秦隴片",
+        "音典分區": "西北-關隴",
+        "陳邡分區": "官話-秦晉-隴中大片-隴中片",
+        "版本": "2025-08-01",
+        "錄入人": "Resound",
+        "字表來源": "《陇东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.627644,
+          35.620728
         ]
       }
     },
@@ -24039,6 +24831,30 @@
         "marker-color": "#5E98EB",
         "marker-size": "medium",
         "marker-symbol": "d",
+        "title": "磐安",
+        "語言": "磐安話",
+        "地點": "浙江金華磐安",
+        "地圖集二分區": "吳語-金衢片",
+        "音典分區": "浙南-婺州-東婺",
+        "陳邡分區": "婺州",
+        "版本": "2025-08-01",
+        "錄入人": "青墩塘泊,Resound",
+        "字表來源": "《吴语婺州方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.454505,
+          29.059851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
+        "marker-size": "medium",
+        "marker-symbol": "d",
         "title": "永康",
         "語言": "永康話",
         "地點": "浙江金華永康",
@@ -36931,6 +37747,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EBC75E",
+        "marker-size": "small",
+        "marker-symbol": "i",
+        "title": "梧州倒水",
+        "語言": "梧州倒水話",
+        "地點": "廣西梧州長洲倒水",
+        "地圖集二分區": "粵語-勾漏片",
+        "音典分區": "嶺南-蒼梧-廣信",
+        "陳邡分區": "廣東-南粵-髙涼大片-髙涼片",
+        "版本": "2025-07-31",
+        "錄入人": "Resound",
+        "字表來源": "《梧州倒水白话（老派）同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.142882,
+          23.577859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EBC75E",
         "marker-size": "medium",
         "marker-symbol": "i",
         "title": "昭平",
@@ -36995,6 +37835,54 @@
         "coordinates": [
           112.054337,
           24.040686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EBC75E",
+        "marker-size": "small",
+        "marker-symbol": "i",
+        "title": "蒼梧木雙",
+        "語言": "蒼梧木雙天平話",
+        "地點": "廣西梧州蒼梧木雙天平",
+        "地圖集二分區": "粵語-勾漏片",
+        "音典分區": "嶺南-蒼梧-賀州",
+        "陳邡分區": "廣東-南粵-西江大片-西江片",
+        "版本": "2025-07-31",
+        "錄入人": "Resound",
+        "字表來源": "《广西苍梧勾漏粤语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.514502,
+          23.679544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EBC75E",
+        "marker-size": "small",
+        "marker-symbol": "i",
+        "title": "蒼梧六堡",
+        "語言": "蒼梧六堡話",
+        "地點": "廣西梧州蒼梧六堡",
+        "地圖集二分區": "粵語-勾漏片",
+        "音典分區": "嶺南-蒼梧-賀州",
+        "陳邡分區": "廣東-南粵-西江大片-西江片",
+        "版本": "2025-07-31",
+        "錄入人": "Resound",
+        "字表來源": "《苍梧县六堡白话研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.387385,
+          23.818705
         ]
       }
     },
