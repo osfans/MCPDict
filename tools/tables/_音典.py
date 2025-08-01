@@ -158,8 +158,20 @@ class 表(_表):
 				if "/" in 音:
 					l = list()
 					for i, 音標 in enumerate(音.split("/")):
-						l.append((字, 自.轉調類(音標) + ("-" if i == 0 else "="), 註))
+						l.append((字, 自.轉調類(音標) + ("-" if i == 1 else "="), 註))
 					return l
+			elif 自.文件名.startswith("陇东方言语音研究"):
+				markers = list(map(chr, range(0xa700,0xa708)))
+				l = list()
+				異讀 = "/" in 音
+				for i,音標 in enumerate(音.split("/")):
+					if not 音標: continue
+					if 音標[0] in markers: 音標 = 音標[1:] + str(markers.index(音標[0]) + 1)
+					elif 音標[-1] in markers: 音標 = 音標[:-1] + str(markers.index(音標[-1]) + 1)
+					if 異讀:
+						音標 = 音標 + ("-" if i == 1 else "=")
+					l.append((字,音標,註))
+				return l
 			elif 自.文件名.startswith("语言接触与湘西南苗瑶平话调查研究"):
 				if 音 == "/": return
 				if ";" in 音:
