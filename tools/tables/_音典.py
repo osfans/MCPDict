@@ -24,6 +24,8 @@ class 表(_表):
 			elif 列序[1] != 列序[2] and 列序[3] < 0:
 				音= 列[列序[1]] + 列[列序[2]]
 			elif 列序[1] != 列序[2] != 列序[3]:
+				if len(列) <= 列序[3]:
+					print(名, 列, 列序)
 				音= 列[列序[1]] + 列[列序[2]] + 列[列序[3]]
 			if 字.endswith("-") or 字.endswith("="):
 				音 += 字[-1]
@@ -89,6 +91,16 @@ class 表(_表):
 					l = list()
 					for 音標 in 音標組:
 						音標, 音註 = re.findall(r"^(.*\d+)([^\d]*?)$", 音標)[0]
+						音 = 自.轉調類(音標)
+						l.append((字, 音, 音註 if 音註 else 註))
+					return l
+			elif 自.文件名.startswith("洪洞方言语音比较研究"):
+				音標 = 音
+				if "/" in 音標:
+					音標組 = 音標.split("/")
+					l = list()
+					for 音標 in 音標組:
+						音標, 音註 = re.findall(r"^(.*\d+[-=]?)([^\d]*?)$", 音標)[0]
 						音 = 自.轉調類(音標)
 						l.append((字, 音, 音註 if 音註 else 註))
 					return l
@@ -160,6 +172,19 @@ class 表(_表):
 					for i, 音標 in enumerate(音.split("/")):
 						l.append((字, 自.轉調類(音標) + ("-" if i == 1 else "="), 註))
 					return l
+			elif 自.文件名.startswith("晋陕蒙交界地区晋方言语音研究"):
+				markers = list(map(chr, range(0xa700,0xa708)))
+				l = list()
+				異讀 = "/" in 音
+				n = len(音.split("/"))
+				for i,音標 in enumerate(re.split(r"[/\|]", 音)):
+					if not 音標: continue
+					if 音標[0] in markers: 音標 = 音標[1:] + str(markers.index(音標[0]) + 1)
+					elif 音標[-1] in markers: 音標 = 音標[:-1] + str(markers.index(音標[-1]) + 1)
+					if 異讀:
+						音標 = 音標 + ("=" if i == n - 1 else "-")
+					l.append((字,音標,註))
+				return l
 			elif 自.文件名.startswith("陇东方言语音研究"):
 				markers = list(map(chr, range(0xa700,0xa708)))
 				l = list()
