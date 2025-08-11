@@ -20,9 +20,7 @@ WORKSPACE = os.path.join(PATH, "..")
 
 VARIANT_FILE = os.path.join(PATH, SOURCE, "正字.tsv")
 
-辭典 = ["漢字","說文","康熙","匯纂","漢大"]
-辭典數 = len(辭典)
-形碼 = ["異體字","字形變體","字形描述","部件檢索","兩分","總筆畫數","部首餘筆","五筆畫","五筆86","五筆98","五筆06","倉頡三代","倉頡五代","倉頡六代","山人","分類"]
+辭典 = ["漢字","說文","康熙","匯纂","漢大", "異體字","字形變體","字形描述","部件檢索","兩分","總筆畫數","部首餘筆","五筆畫","五筆86","五筆98","五筆06","倉頡三代","倉頡五代","倉頡六代","山人","分類"]
 
 省集 = {'山西', '貴州', '甘肅', '內蒙古', '澳門', '四川', '山東', '臺灣', '雲南', '廣東', '江蘇', '海外', '吉林', '廣西', '香港', '黑龍江', '河南', '河北', '湖南', '上海', '海南', '寧夏', '北京', '遼寧', '新疆', '安徽', '福建', '重慶', '湖北', '浙江', '靑海', '江西', '陝西', '天津', '西藏'}
 
@@ -168,6 +166,18 @@ def getLangsByArgv(infos, argv):
 def 列序(a):
 	return sum([26**(len(a)-1-i)*(ord(j)-ord('A')+1) for i,j in enumerate(a)]) - 1
 
+def getDicts(dicts):
+	for mod in 辭典:
+		語 = import_module(f"tables.{mod}").表()
+		d = dict()
+		d["語言"] = 語.全稱 if 語.全稱 else mod
+		d["簡稱"] = 語.簡稱 if 語.簡稱 else mod
+		d["地圖集二顏色"] = None
+		d["地圖集二分區"] = None
+		語.info = d
+		語.加載(dicts)
+	return 辭典
+
 def 獲取同音字頻(get=False):
 	if not get: return False, False
 	同音字頻 = defaultdict(set)
@@ -248,21 +258,16 @@ def 獲取同音字頻(get=False):
 	conn.close()
 	return 同音字頻, 高頻字
 
-def getLangs(dicts, 參數, args):
+def getLangs(items, 參數, args):
 	省 = args.省
 	同音字頻, 高頻字 = 獲取同音字頻(args.s or args.c)
 	計算相似度 = args.s
 	詳情 = tables._詳情.加載(省)
 	語組 = []
 	數 = 0
-	if len(參數) == 1:
-		mods = []
-		if not args.output: mods.append("漢字")
-		mods.extend(getLangsByArgv(詳情, 參數))
-	else:
-		mods = 辭典.copy()
-		mods.extend(getLangsByArgv(詳情, 參數) if 參數 else 詳情.keys())
-		mods.extend(形碼)
+	mods = []
+	if not args.output: mods.append("漢字")
+	mods.extend(getLangsByArgv(詳情, 參數) if 參數 else 詳情.keys())
 	語言組 = set(詳情.keys())
 	types = [dict(),dict(),dict()]
 	省 = defaultdict(int)
@@ -317,7 +322,7 @@ def getLangs(dicts, 參數, args):
 				語.調典 = 調典
 			語.info = d
 			# print(d["文件名"])
-			語.加載(dicts, 更新=args.c)
+			語.加載條目(items, 更新=args.c)
 			if d["文件名"] != "mcpdict.db":
 				if 語.字數 == 0:
 					if 語.spath: print(f"{語} 未成功解析")
@@ -417,7 +422,7 @@ def getLangs(dicts, 參數, args):
 			d["地圖集二顏色"] = 語.顏色 if 數 == 0 else None
 			d["地圖集二分區"] = None
 			語.info = d
-			語.加載(dicts)
+			語.加載條目(items)
 		語.info["字數"] = 語.字數
 		語.info["□數"] = 語.框數 if 語.框數 else None
 		音節數 = 語.音節數
@@ -448,7 +453,6 @@ def getLangs(dicts, 參數, args):
 		if 項 not in 字.info: 字.info[項] = None
 	if 計算相似度:
 		字.info["相似度"] = None
-	字.info["字數"] = len(dicts)
 	字.info["說明"] = "語言數：%d\n\n%s"%(數, 字.說明)
 	省表 = sorted(省集, key=普拼)
 	if "海外" in 省表:
