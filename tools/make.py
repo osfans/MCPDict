@@ -24,14 +24,15 @@ if not args.output:
 	if not os.path.exists(DIR): os.mkdir(DIR)
 	conn = sqlite3.connect(NAME)
 	c = conn.cursor()
-	dicts = defaultdict(dict)
-	fields = getDicts(dicts)
-	CREATE = 'CREATE VIRTUAL TABLE dicts USING fts3 (%s)' % (",".join(fields))
-	INSERT = 'INSERT INTO dicts VALUES (%s)'% (','.join('?' * len(fields)))
-	c.execute(CREATE)
-	c.executemany(INSERT, (list(map(dicts[i].get, fields)) for i in sorted(dicts.keys(), key=lambda x:(-len(dicts[x]),cjkorder(x)))))
-	字數 = len(dicts)
-	del dicts
+	if len(argv) != 1:
+		dicts = defaultdict(dict)
+		fields = getDicts(dicts)
+		CREATE = 'CREATE VIRTUAL TABLE dicts USING fts3 (%s)' % (",".join(fields))
+		INSERT = 'INSERT INTO dicts VALUES (%s)'% (','.join('?' * len(fields)))
+		c.execute(CREATE)
+		c.executemany(INSERT, (list(map(dicts[i].get, fields)) for i in sorted(dicts.keys(), key=lambda x:(-len(dicts[x]),cjkorder(x)))))
+		字數 = len(dicts)
+		del dicts
 	items = list()
 	langs = getLangs(items, argv, args)
 	keys = [f"{lang.簡稱}" for lang in langs]
