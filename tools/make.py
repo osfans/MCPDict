@@ -14,28 +14,39 @@ parser.add_argument('-o', '--output', help='output tsv', required=False)
 args, argv = parser.parse_known_args()
 start = time()
 
-dicts = defaultdict(dict)
-langs = getLangs(dicts, argv, args)
+字數 = 0
 
 #db
 if not args.output:
-	keys = [f"{lang.簡稱}" for lang in langs]
-	fields = [f"`{i}`" for i in keys]
-	CREATE = 'CREATE VIRTUAL TABLE mcpdict USING fts3 (%s)' % (",".join(fields))
-	INSERT = 'INSERT INTO mcpdict VALUES (%s)'% (','.join('?' * len(keys)))
 	NAME = os.path.join(WORKSPACE, '..', 'app/src/main/assets/databases/mcpdict.db')
 	DIR = os.path.dirname(NAME)
 	if os.path.exists(NAME): os.remove(NAME)
 	if not os.path.exists(DIR): os.mkdir(DIR)
 	conn = sqlite3.connect(NAME)
 	c = conn.cursor()
+	dicts = defaultdict(dict)
+	fields = getDicts(dicts)
+	CREATE = 'CREATE VIRTUAL TABLE dicts USING fts3 (%s)' % (",".join(fields))
+	INSERT = 'INSERT INTO dicts VALUES (%s)'% (','.join('?' * len(fields)))
+	c.execute(CREATE)
+	c.executemany(INSERT, (list(map(dicts[i].get, fields)) for i in sorted(dicts.keys(), key=lambda x:(-len(dicts[x]),cjkorder(x)))))
+	字數 = len(dicts)
+	del dicts
+	items = list()
+	langs = getLangs(items, argv, args)
+	keys = [f"{lang.簡稱}" for lang in langs]
 	for i in keys:
 		if keys.count(i) > 1:
 			print(f"{i}重名")
 			sys.exit(1)
+	fields = ["語言", "漢字", "讀音", "註釋"]
+	CREATE = 'CREATE VIRTUAL TABLE langs USING fts3 (%s)' % (",".join(fields))
+	INSERT = 'INSERT INTO langs VALUES (%s)'% (','.join('?' * len(fields)))
 	c.execute(CREATE)
-	c.executemany(INSERT, (list(map(dicts[i].get, keys)) for i in sorted(dicts.keys(), key=lambda x:(-len(dicts[x]),cjkorder(x)))))
-	keys = list(langs[辭典數 if len(keys) > 辭典數 else 1].info.keys())
+	c.executemany(INSERT, items)
+	del items
+	langs[0].info["字數"] = 字數
+	keys = list(langs[1].info.keys())
 	keys.remove("字表格式")
 	keys.remove("跳過行數")
 	keys.remove("字表使用調值")
@@ -49,4 +60,4 @@ if not args.output:
 	conn.close()
 
 passed = time() - start
-print(f"({len(dicts):5d}) {passed:6.3f} 保存")
+print(f"({字數:5d}) {passed:6.3f} 保存")

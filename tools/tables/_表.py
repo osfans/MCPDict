@@ -502,7 +502,7 @@ class 表:
 				py = py.replace("\t", "\n")
 			if py not in 自.d[字]:
 				自.d[字].append(py)
-	
+
 	def 加載(自, dicts, 更新=False):
 		自.讀(更新)
 		if not 自.d: return
@@ -510,6 +510,16 @@ class 表:
 			if 字 not in dicts:
 				dicts[字] = {"漢字": 字}
 			dicts[字][自.簡稱] = "\t".join(音集)
+
+	def 加載條目(自, items, 更新=False):
+		自.讀(更新)
+		if not 自.d: return
+		for 字, 音集 in 自.d.items():
+			for 音 in 音集:
+				註 = 自.合註(re.sub(r"\{([^{}]*?)\}$", "\t\\1", 音))
+				if "\t" not in 註:
+					註 += "\t"
+				items.append((自.簡稱, 字, *註.split("\t", 1)))
 
 	def 存(自, output):
 		t = open(output, "w", encoding="U8", newline="\n")
