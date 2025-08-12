@@ -112,12 +112,18 @@ def 加載(省=None):
 		if lineCount <= 2:
 			continue
 		列 = dict(zip(fields, 行))
-		文件名 = 列["文件名"]
-		if not 文件名 or 文件名.startswith("#") or 列["是否有人在做"] not in ("已做", "重做"):
-			continue
 		語言 = normLangName(列["語言"])
 		語言別名 = normLangName(列["語言別名"])
 		簡稱 = normLangName(列["簡稱"])
+		文件名 = 列["文件名"]
+		if 列["是否有人在做"].strip() not in ("已做", "重做"):
+			continue
+		if not 文件名 or 文件名.startswith("#"):
+			print(f"{語言} 沒有字表文件: {文件名}")
+			continue
+		if 簡稱 in d:
+			print(f"{語言} 的簡稱 {簡稱} 重複")
+			continue
 		音系說明 = 列["音系"]
 		說明 = 列["說明"]
 		繁簡 = 列["繁簡"]
@@ -157,6 +163,7 @@ def 加載(省=None):
 		if 簡稱 == "普通話" and 省:
 			places = ["", "", "", "", ""]
 		elif 省 and places[0] and places[0] not in 省:
+			print(f"{語言} 省份 {places[0]} 不在指定省份 {省}")
 			continue
 		地點 = ("".join(places)).replace("/", "")
 		行政區級別 = 列["行政區級別"]
