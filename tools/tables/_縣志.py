@@ -246,6 +246,7 @@ class 表(_表):
 				if 列.count(列[-2]) == 2: 列[-2] += "0"
 				if 列.count(列[-1]) == 2: 列[-1] += "0"
 				自.調值表 = 列
+				自.調值表.append("0")
 				return
 			行 = "\t".join((f"[{自.調值表[序]}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
 			行 = 自.normS(行.replace(")(", "："))
