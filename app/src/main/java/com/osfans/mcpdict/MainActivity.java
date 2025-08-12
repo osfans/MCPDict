@@ -1,8 +1,6 @@
 package com.osfans.mcpdict;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.database.CursorWindow;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
@@ -16,8 +14,6 @@ import com.osfans.mcpdict.Favorite.FavoriteDialogs;
 import com.osfans.mcpdict.Favorite.FavoriteFragment;
 import com.osfans.mcpdict.Orth.Orthography;
 import com.osfans.mcpdict.Util.UserDB;
-
-import java.lang.reflect.Field;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,21 +50,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressLint("DiscouragedPrivateApi")
-    private void tryCursorWindow() {
-        try {
-            Field field = CursorWindow.class.getDeclaredField("sCursorWindowSize");
-            field.setAccessible(true);
-            field.set(null, 5 * 1024 * 1024); //960 languages:2MB
-        } catch (Exception ignored) {
-        }
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Utils.setLocale();
         Utils.setActivityTheme(this);
-        tryCursorWindow();
         DB.initFQ();
         // Initialize the some "static" classes on separate threads
         new Thread(()-> Orthography.initialize(getResources())).start();
