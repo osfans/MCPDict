@@ -27,8 +27,8 @@ if not args.output:
 	if len(argv) != 1:
 		dicts = defaultdict(dict)
 		fields = getDicts(dicts)
-		CREATE = 'CREATE VIRTUAL TABLE dicts USING fts3 (%s)' % (",".join(fields))
-		INSERT = 'INSERT INTO dicts VALUES (%s)'% (','.join('?' * len(fields)))
+		CREATE = 'CREATE VIRTUAL TABLE mcpdict USING fts3 (%s)' % (",".join(fields))
+		INSERT = 'INSERT INTO mcpdict VALUES (%s)'% (','.join('?' * len(fields)))
 		c.execute(CREATE)
 		c.executemany(INSERT, (list(map(dicts[i].get, fields)) for i in sorted(dicts.keys(), key=lambda x:(-len(dicts[x]),cjkorder(x)))))
 		字數 = len(dicts)

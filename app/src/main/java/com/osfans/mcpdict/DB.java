@@ -89,7 +89,6 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_ZX, COL_BJJS;
     public static int COL_VA;
     public static int COL_FIRST_DICT, COL_LAST_DICT;
-    public static int COL_FIRST_LANG, COL_LAST_LANG;
     public static int COL_FIRST_INFO, COL_LAST_INFO;
     public static int COL_FIRST_SHAPE, COL_LAST_SHAPE;
 
@@ -105,6 +104,7 @@ public class DB extends SQLiteAssetHelper {
     public static final String ALL_LANGUAGES = "*";
 
     private static final String TABLE_NAME = "mcpdict";
+    private static final String TABLE_LANG = "langs";
     private static final String TABLE_INFO = "info";
 
     private final static String[] JA_COLUMNS = new String[] {JA_KAN, JA_GO, JA_OTHER};
@@ -248,7 +248,7 @@ public class DB extends SQLiteAssetHelper {
         if (input.startsWith("-")) input = input.substring(1); //may crash sqlite
         if (searchType == SEARCH.DICT) {
             searchType = SEARCH.YI;
-            lang = TextUtils.isEmpty(dict) ? TABLE_NAME : DB.getLabelByLanguage(dict);
+            lang = TextUtils.isEmpty(dict) ? "" : DB.getLabelByLanguage(dict);
         }
 
         // Split the input string into keywords and canonicalize them
@@ -258,7 +258,7 @@ public class DB extends SQLiteAssetHelper {
                 String hzs = Orthography.normWords(input);
                 if (!TextUtils.isEmpty(hzs)) keywords.add(hzs);
             }
-            if (isAll) lang = TABLE_NAME;
+            if (isAll) lang = "";
         }
         else if (HanZi.isBH(input)) lang = BH;
         else if (HanZi.isBS(input)) {
@@ -289,14 +289,14 @@ public class DB extends SQLiteAssetHelper {
 
         // Build inner query statement (a union query returning the id's of matching Chinese characters)
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-        qb.setTables(TABLE_NAME);
+        qb.setTables(TABLE_LANG);
         List<String> queries = new ArrayList<>();
         List<String> args = new ArrayList<>();
 
         for (int i = 0; i < keywords.size(); i++) {
             String key = keywords.get(i);
             String variant = allowVariants ? ("'" + key + "'") : "null";
-            String[] projection = {"rowid AS _id", i + " AS rank", "offsets(mcpdict) AS vaIndex", variant + " AS variants"};
+            String[] projection = {"rowid AS _id", i + " AS rank", "offsets(langs) AS vaIndex", variant + " AS variants"};
             String sel = (key.startsWith("%") && key.endsWith("%")) ? "LIKE" : "MATCH";
             for (String col : columns) {
                 queries.add(qb.buildQuery(projection, String.format("`%s` %s ?", col, sel), null, null, null, null));
@@ -307,7 +307,7 @@ public class DB extends SQLiteAssetHelper {
         String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);
 
         // Build outer query statement (returning all information about the matching Chinese characters)
-        qb.setTables("(" + query + ") AS u, mcpdict AS v LEFT JOIN user.favorite AS w ON v.漢字 = w.hz");
+        qb.setTables("(" + query + ") AS u, langs AS v LEFT JOIN user.favorite AS w ON v.漢字 = w.hz");
         qb.setDistinct(true);
         String[] projection = {"v.*", "_id",
                    "v.漢字 AS `漢字`", "variants",
@@ -322,7 +322,7 @@ public class DB extends SQLiteAssetHelper {
     public static Cursor directSearch(String hz) {
         // Search for a single Chinese character without any conversions
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-        qb.setTables("mcpdict AS v LEFT JOIN user.favorite AS w ON v.漢字 = w.hz");
+        qb.setTables("langs AS v LEFT JOIN user.favorite AS w ON v.漢字 = w.hz");
         String[] projection = {"v.*", "v.rowid AS _id",
                    "v.漢字 AS 漢字", "NULL AS variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
@@ -401,13 +401,11 @@ public class DB extends SQLiteAssetHelper {
         COL_KX = getColumnIndex(KX);
         COL_FIRST_DICT = COL_SW;
         COL_LAST_DICT = COL_HD;
-        COL_FIRST_LANG = COL_LAST_DICT + 1;
-        COL_LAST_LANG = COL_VA - 1;
         COL_FIRST_INFO = COL_VA;
         COL_LAST_INFO = COLUMNS.length - 2;
         COL_FIRST_SHAPE = COL_VA + 2;
         COL_LAST_SHAPE = COL_LAST_INFO;
-        COL_ALL_LANGUAGES = COLUMNS.length + 100;
+        COL_ALL_LANGUAGES = 3000; //TODO: not hardcoded
         cursor.close();
         ArrayList<String> arrayList = new ArrayList<>();
         for(int col = COL_FIRST_DICT; col <= COL_LAST_DICT; col++) {
