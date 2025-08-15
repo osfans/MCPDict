@@ -435,12 +435,6 @@ def getLangs(items, 參數, args):
 		lang_ts.add(lang_s)
 		lang_s = t2s(語.info["語言"], 1)
 		lang_ts.add(lang_s)
-		if 語.info.get("語言別名", ""):
-			lang_ts.add(語.info["語言別名"])
-			lang_s = t2s(語.info["語言別名"], 2)
-			lang_ts.add(lang_s)
-			lang_s = t2s(語.info["語言別名"], 1)
-			lang_ts.add(lang_s)
 		語.info["語言索引"] = ",".join(lang_ts)
 		if 語.說明: 語.info["說明"] = 語.說明
 		if not keys: keys = 語.info.keys()

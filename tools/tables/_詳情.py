@@ -113,7 +113,6 @@ def 加載(省=None):
 			continue
 		列 = dict(zip(fields, 行))
 		語言 = normLangName(列["語言"])
-		語言別名 = normLangName(列["語言別名"])
 		簡稱 = normLangName(列["簡稱"])
 		文件名 = 列["文件名"]
 		if 列["是否有人在做"].strip() not in ("已做", "重做"):
@@ -227,8 +226,6 @@ def 加載(省=None):
 			"無調":無調,
 			"聲調":聲調
 		}
-		if 語言別名:
-			d[簡稱]["語言別名"] = 語言別名
 		if not 經緯度: continue
 		Feature = {
 			"type": "Feature",
