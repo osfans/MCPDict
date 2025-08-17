@@ -450,7 +450,7 @@
     <string-array name="pref_entries_type">
         <item>漢字</item>
         <item>讀音</item>
-        <item>注釋</item>
+        <item>註釋</item>
         <item>辭典</item>
     </string-array>
     <string name="pref_key_dict">KEY_DICT</string>
