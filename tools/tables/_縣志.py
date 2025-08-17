@@ -262,6 +262,9 @@ class 表(_表):
 			列 = 行.split("\t")
 			if len(列) <= 1: return 行
 			行 = "\t".join((f"[{序 + 1 if 序 > 3 else 序}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
+		elif 名 in ("仙遊蓋尾",):
+			if "[" not in 行:
+				行 = 行.replace("-", "").strip()
 		elif 名 in ("臨江",):
 			if "[" in 行:
 				列 = 行.split("\t")

@@ -139,7 +139,7 @@ GY = "廣韻"
 VA = "異體字"
 YIN = "讀音"
 DICT = "辭典"
-COMMENT = "注釋"
+COMMENT = "註釋"
 DICT_HEAD = getString("dict")
 TABLE_NAME = "mcpdict"
 
