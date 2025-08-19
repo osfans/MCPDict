@@ -167,16 +167,19 @@ def 列序(a):
 	return sum([26**(len(a)-1-i)*(ord(j)-ord('A')+1) for i,j in enumerate(a)]) - 1
 
 def getDicts(dicts):
+	字書 = list()
 	for mod in 辭典:
 		語 = import_module(f"tables.{mod}").表()
 		d = dict()
 		d["語言"] = 語.全稱 if 語.全稱 else mod
 		d["簡稱"] = 語.簡稱 if 語.簡稱 else mod
-		d["地圖集二顏色"] = None
+		d["地圖集二顏色"] = 語.顏色 if 語.顏色 else None
 		d["地圖集二分區"] = None
 		語.info = d
 		語.加載(dicts)
-	return 辭典
+		if 語.字書:
+			字書.append(語)
+	return 辭典, 字書
 
 def 獲取同音字頻(get=False):
 	if not get: return False, False

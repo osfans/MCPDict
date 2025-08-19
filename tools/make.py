@@ -24,9 +24,10 @@ if not args.output:
 	if not os.path.exists(DIR): os.mkdir(DIR)
 	conn = sqlite3.connect(NAME)
 	c = conn.cursor()
+	字書 = None
 	if len(argv) != 1:
 		dicts = defaultdict(dict)
-		fields = getDicts(dicts)
+		fields, 字書 = getDicts(dicts)
 		CREATE = 'CREATE VIRTUAL TABLE mcpdict USING fts3 (%s)' % (",".join(fields))
 		INSERT = 'INSERT INTO mcpdict VALUES (%s)'% (','.join('?' * len(fields)))
 		c.execute(CREATE)
@@ -47,6 +48,8 @@ if not args.output:
 	c.executemany(INSERT, items)
 	del items
 	langs[0].info["字數"] = 字數
+	if 字書:
+		langs.extend(字書)
 	keys = list(langs[1].info.keys())
 	keys.remove("字表格式")
 	keys.remove("跳過行數")
