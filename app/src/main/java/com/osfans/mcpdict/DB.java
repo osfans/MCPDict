@@ -44,7 +44,7 @@ public class DB extends SQLiteAssetHelper {
     private static final String VA = "異體字";
     private static final String FL = "分類";
 
-    public static final String MAP = " \uD83C\uDF0F ";
+    public static final String MAP = " 🌏 ";
     public static final String IS_FAVORITE = "is_favorite";
     public static final String VARIANTS = "variants";
     public static final String COMMENT = "comment";
@@ -84,7 +84,7 @@ public class DB extends SQLiteAssetHelper {
     private static String[] LANGUAGES = null;
     private static String[] SEARCH_COLUMNS = null;
 
-    public static int COL_HZ;
+    public static int COL_HZ = 0, COL_IPA = 1, COL_ZS = 2, COL_LANG = 3;
     public static int COL_SW, COL_KX, COL_GYHZ, COL_HD;
     public static int COL_ZX, COL_BJJS;
     public static int COL_VA;
@@ -259,10 +259,6 @@ public class DB extends SQLiteAssetHelper {
                 if (!TextUtils.isEmpty(hzs)) keywords.add(hzs);
             }
             if (isAll) lang = "";
-        }
-        else if (HanZi.isBH(input)) lang = BH;
-        else if (HanZi.isBS(input)) {
-            lang = BS;
         } else if (HanZi.isHz(input)) {
             if (lang.contentEquals(GY) && searchType == SEARCH.YIN) input = input + "*"; //音韻地位
             else lang = HZ;
@@ -296,24 +292,18 @@ public class DB extends SQLiteAssetHelper {
         for (int i = 0; i < keywords.size(); i++) {
             String key = keywords.get(i);
             String variant = allowVariants ? ("'" + key + "'") : "null";
+            String matchClause = allowVariants ? getResult(String.format("SELECT group_concat(漢字, \" OR \") from mcpdict where mcpdict MATCH \"異體字: %s OR 漢字: %s\"", key, key)) : key;
             String[] projection = {"rowid AS _id", i + " AS rank", "offsets(langs) AS vaIndex", variant + " AS variants"};
-            String sel = (key.startsWith("%") && key.endsWith("%")) ? "LIKE" : "MATCH";
-            for (String col : columns) {
-                queries.add(qb.buildQuery(projection, String.format("`%s` %s ?", col, sel), null, null, null, null));
-                if (lang.contentEquals(GY) && !HanZi.isHz(input)) key = String.format("\"^%s\"", key); //僅匹配第一個拼音
-                args.add(key);
-            }
+            queries.add(qb.buildQuery(projection, String.format("langs MATCH \"漢字: %s\"", matchClause), null, null, null, null));
         }
         String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);
 
         // Build outer query statement (returning all information about the matching Chinese characters)
         qb.setTables("(" + query + ") AS u, langs AS v LEFT JOIN user.favorite AS w ON v.漢字 = w.hz");
         qb.setDistinct(true);
-        String[] projection = {"v.*", "_id",
-                   "v.漢字 AS `漢字`", "variants",
-                   "timestamp IS NOT NULL AS is_favorite", "comment"};
+        String[] projection = {"v.*", "_id", "variants", "timestamp IS NOT NULL AS is_favorite", "comment"};
         String selection = "u._id = v.rowid" + getCharsetSelect(1);
-        query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", "0,100");
+        query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", String.valueOf(COL_ALL_LANGUAGES));
 
         // Search
         return db.rawQuery(query, args.toArray(new String[0]));
@@ -327,7 +317,17 @@ public class DB extends SQLiteAssetHelper {
                    "v.漢字 AS 漢字", "NULL AS variants",
                    "timestamp IS NOT NULL AS is_favorite", "comment"};
         String selection = "v.漢字 MATCH ?";
-        String query = qb.buildQuery(projection, selection, null, null, null, "0,100");
+        String query = qb.buildQuery(projection, selection, null, null, null, String.valueOf(COL_ALL_LANGUAGES));
+        String[] args = {hz};
+        return db.rawQuery(query, args);
+    }
+
+    public static Cursor getDictCursor(String hz) {
+        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+        qb.setTables(TABLE_NAME);
+        String[] projection = {"*"};
+        String selection = "漢字 MATCH ?";
+        String query = qb.buildQuery(projection, selection, null, null, null, null);
         String[] args = {hz};
         return db.rawQuery(query, args);
     }
@@ -613,6 +613,17 @@ public class DB extends SQLiteAssetHelper {
 
     public static boolean hasTone(String lang) {
         return getToneName(lang) != null;
+    }
+
+    public static String getResult(String sql) {
+        if (db == null) return "";
+        Cursor cursor = db.rawQuery(sql, null);
+        StringBuilder sb = new StringBuilder();
+        while (cursor.moveToNext()) {
+            sb.append(cursor.getString(0));
+        }
+        cursor.close();
+        return sb.toString();
     }
 
     public static String getField(String selection, String lang, String field) {

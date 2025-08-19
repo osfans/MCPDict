@@ -2,9 +2,12 @@ package com.osfans.mcpdict;
 
 import static com.osfans.mcpdict.DB.ALL_LANGUAGES;
 import static com.osfans.mcpdict.DB.COL_ALL_LANGUAGES;
+import static com.osfans.mcpdict.DB.COL_IPA;
+import static com.osfans.mcpdict.DB.COL_LANG;
 import static com.osfans.mcpdict.DB.COL_LAST_DICT;
 import static com.osfans.mcpdict.DB.COL_HZ;
 import static com.osfans.mcpdict.DB.COL_FIRST_DICT;
+import static com.osfans.mcpdict.DB.COL_ZS;
 import static com.osfans.mcpdict.DB.COMMENT;
 import static com.osfans.mcpdict.DB.HZ;
 import static com.osfans.mcpdict.DB.SW;
@@ -665,27 +668,39 @@ public class ResultFragment extends Fragment {
             String[] cols = DB.getVisibleColumns();
             int index = 0;
             int linesCount = 0;
+            int n = 0;
+            StringBuilder raws = new StringBuilder();
+            String lastHz = "", lastLang = "";
+            boolean bNewHz, bNewLang;
+            Cursor dictCursor = null;
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
-                hzs.append(hz);
-
                 String comment = cursor.getString(cursor.getColumnIndexOrThrow(COMMENT));
                 boolean bFavorite = cursor.getInt(cursor.getColumnIndexOrThrow(DB.IS_FAVORITE)) == 1;
-                int n = ssb.length();
-                ssb.append(hz, new ForegroundColorSpan(getColor(HZ)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                ssb.setSpan(new RelativeSizeSpan(1.8f), n, ssb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                // Variants
-                s = cursor.getString(cursor.getColumnIndexOrThrow(VARIANTS));
-                if (!TextUtils.isEmpty(s) && !s.contentEquals(hz)) {
-                    s = String.format("(%s)", s);
-                    ssb.append(s, new ForegroundColorSpan(getResources().getColor(R.color.dim)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                int color = getResources().getColor(R.color.accent, requireContext().getTheme());
+                bNewHz = !hz.contentEquals(lastHz);
+                if (bNewHz) {
+                    if (!lastHz.isEmpty()) {
+                        ssb.append("\n");
+                    }
+                    hzs.append(hz);
+                    n = ssb.length();
+                    ssb.append(hz, new ForegroundColorSpan(getColor(HZ)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    ssb.setSpan(new RelativeSizeSpan(1.8f), n, ssb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    // Variants
+                    s = cursor.getString(cursor.getColumnIndexOrThrow(VARIANTS));
+                    if (!TextUtils.isEmpty(s) && !s.contentEquals(hz)) {
+                        s = String.format("(%s)", s);
+                        ssb.append(s, new ForegroundColorSpan(getResources().getColor(R.color.dim, requireContext().getTheme())), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    }
+                    // Unicode
+                    String unicode = HanZi.toUnicode(hz);
+                    dictCursor = DB.getDictCursor(hz);
+                    if (dictCursor.getCount() == 1) dictCursor.moveToNext();
+                    ssb.append(" " + unicode + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, COL_HZ, getUnicode(dictCursor)), COL_HZ, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    raws.setLength(0);
+                    raws.append(String.format("%s %s\n", hz, unicode));
                 }
-                // Unicode
-                String unicode = HanZi.toUnicode(hz);
-                int color = getColor(SW);
-                ssb.append(" " + unicode + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, COL_HZ, getUnicode(cursor)), COL_HZ, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                StringBuilder raws = new StringBuilder();
-                raws.append(String.format("%s %s\n", hz, unicode));
                 // yb
                 SpannableStringBuilder ssb2 = new SpannableStringBuilder();
                 if (HanZi.isUnknown(hz)) {
@@ -709,55 +724,66 @@ public class ResultFragment extends Fragment {
                         raws.append(formatReading(label, raw));
                     }
                 } else {
-                    for (String lang : cols) {
-                        int i = getColumnIndex(lang);
-                        s = cursor.getString(i);
-                        if (TextUtils.isEmpty(s)) continue;
-                        linesCount++;
-                        String ipa = DisplayHelper.formatIPA(lang, s).toString();
-                        if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
-                        CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
-                        n = ssb2.length();
-                        String label = getLabel(i);
-                        Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
+                    String lang = cursor.getString(COL_LANG);
+                    s = cursor.getString(COL_IPA);
+                    String zs = cursor.getString(COL_ZS);
+                    if (!zs.isEmpty()) s = String.format("%s{%s}", s, zs);
+                    if (TextUtils.isEmpty(s)) continue;
+                    linesCount++;
+                    String ipa = DisplayHelper.formatIPA(lang, s).toString();
+                    if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
+                    CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
+                    n = ssb2.length();
+                    if (bNewHz) lastLang = "";
+                    bNewLang = !lang.contentEquals(lastLang);
+                    String raw = DisplayHelper.getRawText(s);
+                    if (bNewLang) {
+                        if (!lastLang.isEmpty()) ssb2.append("\n");
+                        Drawable drawable = builder.build(lang, getColor(lang), getSubColor(lang));
                         DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
                         ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                        String raw = DisplayHelper.getRawText(s);
-                        Entry e = new Entry(hz, lang, raw, bFavorite, comment);
-                        ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                        ssb2.append(cs);
-                        ssb2.append("\n");
-                        raws.append(formatReading(label, raw));
                     }
+                    Entry e = new Entry(hz, lang, raw, bFavorite, comment);
+                    ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    ssb2.append(cs);
+                    ssb2.append(" ");
+                    raws.append(formatReading(lang, raw));
+                    lastLang = lang;
                 }
                 mRaws.put(hz, raws.toString());
-                // DICTS
-                for (int i = COL_FIRST_DICT; i <= COL_LAST_DICT; i++) {
-                    s = cursor.getString(i);
-                    if (!TextUtils.isEmpty(s)) {
-                        ssb.append(" " + getLabel(i) + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, i, s), i, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                if (bNewHz) {
+                    // DICTS
+                    if (dictCursor.getCount() == 1) {
+                        for (int i = COL_FIRST_DICT; i <= COL_LAST_DICT; i++) {
+                            s = dictCursor.getString(i);
+                            if (!TextUtils.isEmpty(s)) {
+                                ssb.append(" " + getLabel(i) + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, i, s), i, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                            }
+                        }
                     }
+                    dictCursor.close();
+                    // Map
+                    if (!TextUtils.isEmpty(ssb2)) {
+                        ssb.append(DB.MAP + " ", new PopupSpan(hz, 0, color) {
+                            @Override
+                            public void onClick(@NonNull View view) {
+                                view.post(() -> showMap(hz));
+                            }
+                        }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    }
+                    // Favorite
+                    if (showFavoriteButton) {
+                        String label = bFavorite ? "⭐":"⛤";
+                        ssb.append(" " + label + " ", new PopupSpan(hz, 0, color) {
+                            @Override
+                            public void onClick(@NonNull View view) {
+                                showFavorite(hz, bFavorite, comment);
+                            }
+                        }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    }
+                    ssb.append("\n");
                 }
-                // Map
-                if (!TextUtils.isEmpty(ssb2)) {
-                    ssb.append(DB.MAP + " ", new PopupSpan(hz, 0, color) {
-                        @Override
-                        public void onClick(@NonNull View view) {
-                            view.post(() -> showMap(hz));
-                        }
-                    }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                }
-                // Favorite
-                if (showFavoriteButton) {
-                    String label = bFavorite ? "⭐":"⛤";
-                    ssb.append(" " + label + " ", new PopupSpan(hz, 0, color) {
-                        @Override
-                        public void onClick(@NonNull View view) {
-                            showFavorite(hz, bFavorite, comment);
-                        }
-                    }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                }
-                ssb.append("\n");
+                lastHz = hz;
                 if (linesCount > COL_ALL_LANGUAGES) continue;
                 index++;
                 ssb.append(ssb2);
