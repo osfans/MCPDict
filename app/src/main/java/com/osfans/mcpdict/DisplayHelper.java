@@ -35,6 +35,7 @@ public abstract class DisplayHelper {
         String s = richTextString
                 .replace("?", "？").replace("!", "！").replace(":", "：").replace(";", "；").replace("~", "～")
                 .replace("<", "&lt;").replace(">", "&gt;").replace("\n", "<br>")
+                .replaceAll("\\*\\*\\*(.+?)\\*\\*\\*", "<font color='red'>$1</font>")
                 .replaceAll("\\*\\*(.+?)\\*\\*", "<b>$1</b>")
                 .replaceAll("\\*(.+?)\\*", "<i>$1</i>")
                 .replaceAll("`(.+?)`", "<span style='color: #808080;'>$1</span>");
