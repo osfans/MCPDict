@@ -514,12 +514,15 @@ class 表:
 	def 加載條目(自, items, 更新=False):
 		自.讀(更新)
 		if not 自.d: return
+		d = defaultdict(list)
 		for 字, 音集 in 自.d.items():
 			for 音 in 音集:
-				註 = 自.合註(re.sub(r"\{([^{}]*?)\}$", "\t\\1", 音))
-				if "\t" not in 註:
-					註 += "\t"
-				items.append((字, *註.split("\t", 1), 自.簡稱))
+				d[音].append(字)
+		for 音, 字 in d.items():
+			註 = 自.合註(re.sub(r"\{([^{}]*?)\}$", "\t\\1", 音))
+			if "\t" not in 註:
+				註 += "\t"
+			items.append((" ".join(字), *註.split("\t", 1), 自.簡稱))
 
 	def 存(自, output):
 		t = open(output, "w", encoding="U8", newline="\n")

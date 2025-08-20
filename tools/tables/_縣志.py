@@ -226,7 +226,7 @@ class 表(_表):
 					return
 			else:
 				行 = "\t".join((f"[{自.調值表[序]}]" if 序 else "") + 項 for 序,項 in enumerate(列) if 項)
-		elif 名 in ("自貢",):
+		elif 名 in ("自貢","漢源","達州"):
 			if not 行.startswith("#"):
 				列 = 行.split("\t")
 				if 有字(列[0]): return
