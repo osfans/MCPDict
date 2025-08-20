@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.graphics.Color;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.osfans.mcpdict.Orth.*;
 import com.osfans.mcpdict.Util.UserDB;
@@ -100,7 +101,7 @@ public class DB extends SQLiteAssetHelper {
         ALL, ISLAND, HZ, CURRENT, RECOMMEND, CUSTOM, DIVISION, AREA, EDITOR
     }
 
-    public static int COL_ALL_LANGUAGES = 0;
+    public static int COL_ALL_LANGUAGES = 5000;
     public static final String ALL_LANGUAGES = "*";
 
     private static final String TABLE_NAME = "mcpdict";
@@ -292,18 +293,25 @@ public class DB extends SQLiteAssetHelper {
         for (int i = 0; i < keywords.size(); i++) {
             String key = keywords.get(i);
             String variant = allowVariants ? ("'" + key + "'") : "null";
-            String matchClause = allowVariants ? getResult(String.format("SELECT group_concat(漢字, \" OR \") from mcpdict where mcpdict MATCH \"異體字: %s OR 漢字: %s\"", key, key)) : key;
-            String[] projection = {"rowid AS _id", i + " AS rank", "offsets(langs) AS vaIndex", variant + " AS variants"};
-            queries.add(qb.buildQuery(projection, String.format("langs MATCH \"漢字: %s\"", matchClause), null, null, null, null));
+            String[] projection = {"rowid AS _id", i + " AS rank", "0 AS vaIndex", variant + " AS variants", "*", "trim(substr(snippet(langs, \"\", \" \", \" \", 0, 1), 0, 3)) AS 漢字"};
+            queries.add(qb.buildQuery(projection, String.format("langs MATCH \"字組:%s\"", key), null, null, null, null));
+            if (allowVariants) {
+                projection[2] = "1 AS vaIndex";
+                String matchClause = getResult(String.format("SELECT group_concat(漢字, \" OR 字組:\") from mcpdict where mcpdict MATCH \"異體字: %s\"", key));
+                if (!matchClause.isEmpty()) {
+                    queries.add(qb.buildQuery(projection, String.format("langs MATCH \"字組:%s\"", matchClause), null, null, null, null));
+                }
+            }
         }
         String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);
+        Log.e("query", query);
 
         // Build outer query statement (returning all information about the matching Chinese characters)
-        qb.setTables("(" + query + ") AS u, langs AS v LEFT JOIN user.favorite AS w ON v.漢字 = w.hz");
-        qb.setDistinct(true);
-        String[] projection = {"v.*", "_id", "variants", "timestamp IS NOT NULL AS is_favorite", "comment"};
-        String selection = "u._id = v.rowid" + getCharsetSelect(1);
-        query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex", String.valueOf(COL_ALL_LANGUAGES));
+        qb.setTables("(" + query + ") AS u LEFT JOIN user.favorite AS w ON u.漢字 = w.hz");
+//        qb.setDistinct(true);
+        String[] projection = {"漢字", "讀音", "註釋", "語言", "_id", "variants", "timestamp IS NOT NULL AS is_favorite", "comment"};
+        String selection = getCharsetSelect(1);
+        query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex,漢字", String.valueOf(COL_ALL_LANGUAGES));
 
         // Search
         return db.rawQuery(query, args.toArray(new String[0]));
@@ -312,11 +320,9 @@ public class DB extends SQLiteAssetHelper {
     public static Cursor directSearch(String hz) {
         // Search for a single Chinese character without any conversions
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-        qb.setTables("langs AS v LEFT JOIN user.favorite AS w ON v.漢字 = w.hz");
-        String[] projection = {"v.*", "v.rowid AS _id",
-                   "v.漢字 AS 漢字", "NULL AS variants",
-                   "timestamp IS NOT NULL AS is_favorite", "comment"};
-        String selection = "v.漢字 MATCH ?";
+        qb.setTables("langs AS v, user.favorite AS w");
+        String[] projection = {"'" + hz + "' AS 漢字", "讀音", "註釋", "語言", "v.rowid AS _id", "NULL AS variants", "timestamp IS NOT NULL AS is_favorite", "comment"};
+        String selection = "字組 MATCH ? and w.hz = '" + hz + "'";
         String query = qb.buildQuery(projection, selection, null, null, null, String.valueOf(COL_ALL_LANGUAGES));
         String[] args = {hz};
         return db.rawQuery(query, args);
@@ -405,7 +411,7 @@ public class DB extends SQLiteAssetHelper {
         COL_LAST_INFO = COLUMNS.length - 2;
         COL_FIRST_SHAPE = COL_VA + 2;
         COL_LAST_SHAPE = COL_LAST_INFO;
-        COL_ALL_LANGUAGES = 3000; //TODO: not hardcoded
+        // COL_ALL_LANGUAGES = 5000; //TODO: not hardcoded
         cursor.close();
         ArrayList<String> arrayList = new ArrayList<>();
         for(int col = COL_FIRST_DICT; col <= COL_LAST_DICT; col++) {
