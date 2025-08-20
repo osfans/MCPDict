@@ -94,7 +94,7 @@ public class DB extends SQLiteAssetHelper {
     public static int COL_FIRST_SHAPE, COL_LAST_SHAPE;
 
     public enum SEARCH {
-        HZ, YIN, YI, DICT,
+        HZ, YIN, COMMENT, DICT,
     }
 
     public enum FILTER {
@@ -137,7 +137,7 @@ public class DB extends SQLiteAssetHelper {
         if (lang.contentEquals(JA_OTHER))
             columns.addAll(Arrays.asList(JA_COLUMNS));
         else {
-            if (searchType == SEARCH.YI) {
+            if (searchType == SEARCH.COMMENT) {
                 String[] cols = getVisibleColumns();
                 if (cols.length <= 100) columns.addAll(Arrays.asList(cols));
                 else lang = TABLE_NAME;
@@ -248,18 +248,17 @@ public class DB extends SQLiteAssetHelper {
 
         if (input.startsWith("-")) input = input.substring(1); //may crash sqlite
         if (searchType == SEARCH.DICT) {
-            searchType = SEARCH.YI;
             lang = TextUtils.isEmpty(dict) ? "" : DB.getLabelByLanguage(dict);
         }
 
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
-        if (searchType == SEARCH.YI){ //yi
+        if (searchType == SEARCH.COMMENT){
             if (HanZi.isHz(input)) {
-                String hzs = Orthography.normWords(input);
-                if (!TextUtils.isEmpty(hzs)) keywords.add(hzs);
+                String[] hzs = Orthography.normWords(input);
+                if (hzs.length > 0) keywords = Arrays.asList(hzs);
+                if (isAll) lang = "*";
             }
-            if (isAll) lang = "";
         } else if (HanZi.isHz(input)) {
             if (lang.contentEquals(GY) && searchType == SEARCH.YIN) input = input + "*"; //音韻地位
             else lang = HZ;
@@ -290,21 +289,30 @@ public class DB extends SQLiteAssetHelper {
         List<String> queries = new ArrayList<>();
         List<String> args = new ArrayList<>();
 
-        for (int i = 0; i < keywords.size(); i++) {
-            String key = keywords.get(i);
-            String variant = allowVariants ? ("'" + key + "'") : "null";
-            String[] projection = {"rowid AS _id", i + " AS rank", "0 AS vaIndex", variant + " AS variants", "*", "trim(substr(snippet(langs, \"\", \" \", \" \", 0, 1), 0, 3)) AS 漢字"};
-            queries.add(qb.buildQuery(projection, String.format("langs MATCH \"字組:%s\"", key), null, null, null, null));
-            if (allowVariants) {
-                projection[2] = "1 AS vaIndex";
-                String matchClause = getResult(String.format("SELECT group_concat(漢字, \" OR 字組:\") from mcpdict where mcpdict MATCH \"異體字: %s\"", key));
-                if (!matchClause.isEmpty()) {
-                    queries.add(qb.buildQuery(projection, String.format("langs MATCH \"字組:%s\"", matchClause), null, null, null, null));
+        if (searchType == SEARCH.COMMENT) {
+            String[] projection = {"rowid AS _id", 0 + " AS rank", "0 AS vaIndex", "null AS variants", "snippet(langs, '***', '***', 2) AS 註釋", "讀音", "語言", "trim(substr(字組, 0, 3)) AS 漢字"};
+            queries.add(qb.buildQuery(projection, String.format("langs MATCH '註釋:%s 語言:%s'", String.join(" 註釋:", keywords), lang), null, null, null, null));
+        } else {
+            if (searchType == SEARCH.YIN && !lang.contentEquals(HZ)) {
+                String hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where langs MATCH '語言: %s 讀音: %s'", lang, String.join(" OR 讀音:", keywords)));
+                keywords = Arrays.asList(hzs.split(" "));
+            }
+
+            for (int i = 0; i < keywords.size(); i++) {
+                String key = keywords.get(i);
+                String variant = allowVariants ? ("'" + key + "'") : "null";
+                String[] projection = {"rowid AS _id", i + " AS rank", "0 AS vaIndex", variant + " AS variants", "*", "trim(substr(snippet(langs, '', ' ', ' ', 0, 1), 0, 3)) AS 漢字"};
+                queries.add(qb.buildQuery(projection, String.format("langs MATCH '字組:%s'", key), null, null, null, null));
+                if (allowVariants) {
+                    projection[2] = "1 AS vaIndex";
+                    String matchClause = getResult(String.format("SELECT group_concat(漢字, ' OR 字組:') from mcpdict where mcpdict MATCH '異體字: %s'", key));
+                    if (!matchClause.isEmpty()) {
+                        queries.add(qb.buildQuery(projection, String.format("langs MATCH '字組:%s'", matchClause), null, null, null, null));
+                    }
                 }
             }
         }
         String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);
-        Log.e("query", query);
 
         // Build outer query statement (returning all information about the matching Chinese characters)
         qb.setTables("(" + query + ") AS u LEFT JOIN user.favorite AS w ON u.漢字 = w.hz");

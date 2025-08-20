@@ -519,7 +519,7 @@ class 表:
 			for 音 in 音集:
 				d[音].append(字)
 		for 音, 字 in d.items():
-			註 = 自.合註(re.sub(r"\{([^{}]*?)\}$", "\t\\1", 音))
+			註 = re.sub(r"\{([^{}]*?)\}$", "\t\\1", 音)
 			if "\t" not in 註:
 				註 += "\t"
 			items.append((" ".join(字), *註.split("\t", 1), 自.簡稱))

@@ -306,10 +306,10 @@ public class Orthography {
                 sb.append(" ");
             }
         }
-        return String.format("\"%s\"", sb.toString().trim().replace("  ", " "));
+        return String.format("\\\"%s\\\"", sb.toString().trim().replace("  ", " "));
     }
 
-    public static String normWords(String s) {
+    public static String[] normWords(String s) {
         String[] ss = s.split(" ");
         String[] newSS = new String[ss.length];
         int i = 0;
@@ -318,6 +318,6 @@ public class Orthography {
             newSS[i] = newWord;
             i++;
         }
-        return String.format("'%s'", String.join(" ", newSS));
+        return newSS;
     }
 }
