@@ -664,7 +664,7 @@ public class ResultFragment extends Fragment {
                     .endConfig()
                     .roundRect(5);
             StringBuilder hzs = new StringBuilder();
-            int count = cursor.getCount();
+            int hzCount = 0;
             String[] cols = DB.getVisibleColumns();
             int index = 0;
             int linesCount = 0;
@@ -684,6 +684,7 @@ public class ResultFragment extends Fragment {
                         ssb.append("\n");
                     }
                     hzs.append(hz);
+                    hzCount++;
                     n = ssb.length();
                     ssb.append(hz, new ForegroundColorSpan(getColor(HZ)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                     ssb.setSpan(new RelativeSizeSpan(1.8f), n, ssb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -703,7 +704,7 @@ public class ResultFragment extends Fragment {
                 }
                 // yb
                 SpannableStringBuilder ssb2 = new SpannableStringBuilder();
-                if (HanZi.isUnknown(hz)) {
+                if (HanZi.isUnknown(hz) && false) {
                     for (String lang: cols) {
                         int i = getColumnIndex(lang);
                         s = cursor.getString(i);
@@ -788,8 +789,8 @@ public class ResultFragment extends Fragment {
                 index++;
                 ssb.append(ssb2);
             }
-            if (count > 1) {
-                if (count == 100) hzs.append("…");
+            if (hzCount > 1) {
+                if (hzCount == 100) hzs.append("…");
                 hzs.append("\n");
                 ssb.insert(0, hzs);
             }
