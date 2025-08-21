@@ -137,7 +137,7 @@ public class MapView extends org.osmdroid.views.MapView {
         FolderOverlay folderOverlay = new FolderOverlay();
         double level = getZoomLevelDouble();
         try {
-            for (String lang : DB.getVisibleColumns()) {
+            for (String lang : DB.getVisibleLanguages()) {
                 GeoPoint point = DB.getPoint(lang);
                 if (point == null) continue;
                 int i = DB.getColumnIndex(lang);

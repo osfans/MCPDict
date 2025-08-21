@@ -10,7 +10,6 @@ import static com.osfans.mcpdict.DB.COL_FIRST_DICT;
 import static com.osfans.mcpdict.DB.COL_ZS;
 import static com.osfans.mcpdict.DB.COMMENT;
 import static com.osfans.mcpdict.DB.HZ;
-import static com.osfans.mcpdict.DB.SW;
 import static com.osfans.mcpdict.DB.VARIANTS;
 import static com.osfans.mcpdict.DB.getColor;
 import static com.osfans.mcpdict.DB.getColumn;
@@ -259,7 +258,7 @@ public class ResultFragment extends Fragment {
         MenuItem itemDict = menu.findItem(R.id.menu_item_dict_links);
         SubMenu menuDictLinks = itemDict.getSubMenu();
         MenuItem item;
-        List<String> cols = Arrays.asList(DB.getVisibleColumns());
+        List<String> cols = Arrays.asList(DB.getVisibleLanguages());
 
         if (TextUtils.isEmpty(col)) {
             if (cols.size() > 2)
@@ -468,7 +467,7 @@ public class ResultFragment extends Fragment {
         } else {
             StringBuilder ssb = new StringBuilder();
             int n = cursor.getCount();
-            String[] cols = DB.getVisibleColumns();
+            String[] cols = DB.getVisibleLanguages();
             String lang = Pref.getLabel();
             boolean isZY = DB.isLang(lang) && query.length() >= 3 && n >= 3
                     && !HanZi.isBS(query)
@@ -587,7 +586,7 @@ public class ResultFragment extends Fragment {
         } else {
             StringBuilder hzs = new StringBuilder();
             int count = cursor.getCount();
-            String[] cols = DB.getVisibleColumns();
+            String[] cols = DB.getVisibleLanguages();
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 sb.append(hz);
@@ -665,7 +664,6 @@ public class ResultFragment extends Fragment {
                     .roundRect(5);
             StringBuilder hzs = new StringBuilder();
             int hzCount = 0;
-            String[] cols = DB.getVisibleColumns();
             int index = 0;
             int linesCount = 0;
             int n = 0;
@@ -704,53 +702,31 @@ public class ResultFragment extends Fragment {
                 }
                 // yb
                 SpannableStringBuilder ssb2 = new SpannableStringBuilder();
-                if (HanZi.isUnknown(hz) && false) {
-                    for (String lang: cols) {
-                        int i = getColumnIndex(lang);
-                        s = cursor.getString(i);
-                        if (TextUtils.isEmpty(s)) continue;
-                        CharSequence html = DisplayHelper.formatUnknownIPA(lang, s);
-                        if (TextUtils.isEmpty(html)) continue;
-                        CharSequence cs = HtmlCompat.fromHtml(html.toString(), HtmlCompat.FROM_HTML_MODE_COMPACT);
-                        n = ssb2.length();
-                        String label = getLabel(i);
-                        Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
-                        DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
-                        ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                        String raw = DisplayHelper.getRawText(s);
-                        Entry e = new Entry(hz, lang, raw, bFavorite, comment);
-                        ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                        ssb2.append(cs);
-                        ssb2.append("\n");
-                        raws.append(formatReading(label, raw));
-                    }
-                } else {
-                    String lang = cursor.getString(COL_LANG);
-                    s = cursor.getString(COL_IPA);
-                    String zs = cursor.getString(COL_ZS);
-                    if (!zs.isEmpty()) s = String.format("%s{%s}", s, zs);
-                    if (TextUtils.isEmpty(s)) continue;
-                    linesCount++;
-                    String ipa = DisplayHelper.formatIPA(lang, s).toString();
-                    if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
-                    CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
-                    n = ssb2.length();
-                    if (bNewHz) lastLang = "";
-                    bNewLang = !lang.contentEquals(lastLang);
-                    String raw = DisplayHelper.getRawText(s);
-                    if (bNewLang) {
-                        if (!lastLang.isEmpty()) ssb2.append("\n");
-                        Drawable drawable = builder.build(lang, getColor(lang), getSubColor(lang));
-                        DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
-                        ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    }
-                    Entry e = new Entry(hz, lang, raw, bFavorite, comment);
-                    ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    ssb2.append(cs);
-                    ssb2.append(" ");
-                    raws.append(formatReading(lang, raw));
-                    lastLang = lang;
+                String lang = cursor.getString(COL_LANG);
+                s = cursor.getString(COL_IPA);
+                String zs = cursor.getString(COL_ZS);
+                if (!zs.isEmpty()) s = String.format("%s{%s}", s, zs);
+                if (TextUtils.isEmpty(s)) continue;
+                linesCount++;
+                String ipa = DisplayHelper.formatIPA(lang, s).toString();
+                if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
+                CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
+                n = ssb2.length();
+                if (bNewHz) lastLang = "";
+                bNewLang = !lang.contentEquals(lastLang);
+                String raw = DisplayHelper.getRawText(s);
+                if (bNewLang) {
+                    if (!lastLang.isEmpty()) ssb2.append("\n");
+                    Drawable drawable = builder.build(lang, getColor(lang), getSubColor(lang));
+                    DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
+                    ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 }
+                Entry e = new Entry(hz, lang, raw, bFavorite, comment);
+                ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ssb2.append(cs);
+                ssb2.append(" ");
+                raws.append(formatReading(lang, raw));
+                lastLang = lang;
                 mRaws.put(hz, raws.toString());
                 if (bNewHz) {
                     // DICTS
