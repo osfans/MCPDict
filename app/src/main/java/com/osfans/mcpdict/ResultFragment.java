@@ -17,6 +17,7 @@ import static com.osfans.mcpdict.DB.getColumnIndex;
 import static com.osfans.mcpdict.DB.getLabel;
 import static com.osfans.mcpdict.DB.getSubColor;
 import static com.osfans.mcpdict.DB.getUnicode;
+import static com.osfans.mcpdict.DB.inCharset;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -71,10 +72,12 @@ import java.lang.ref.WeakReference;
 import java.net.URLEncoder;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 
 public class ResultFragment extends Fragment {
 
@@ -663,6 +666,7 @@ public class ResultFragment extends Fragment {
                     .endConfig()
                     .roundRect(5);
             StringBuilder hzs = new StringBuilder();
+            Set<String> uniqueHanzi = new HashSet<>();
             int hzCount = 0;
             int index = 0;
             int linesCount = 0;
@@ -673,13 +677,20 @@ public class ResultFragment extends Fragment {
             Cursor dictCursor = null;
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
+                bNewHz = !hz.contentEquals(lastHz);
+                if (bNewHz && !inCharset(hz)) {
+                    uniqueHanzi.add(lastHz);
+                    uniqueHanzi.add(hz);
+                    continue;
+                }
+                if (!bNewHz && uniqueHanzi.contains(hz)) continue; // Skip duplicate hz
                 String comment = cursor.getString(cursor.getColumnIndexOrThrow(COMMENT));
                 boolean bFavorite = cursor.getInt(cursor.getColumnIndexOrThrow(DB.IS_FAVORITE)) == 1;
                 int color = getResources().getColor(R.color.accent, requireContext().getTheme());
-                bNewHz = !hz.contentEquals(lastHz);
                 if (bNewHz) {
                     if (!lastHz.isEmpty()) {
                         ssb.append("\n");
+                        uniqueHanzi.add(lastHz);
                     }
                     hzs.append(hz);
                     hzCount++;
@@ -766,7 +777,7 @@ public class ResultFragment extends Fragment {
                 ssb.append(ssb2);
             }
             if (hzCount > 1) {
-                if (hzCount == 100) hzs.append("…");
+                if (hzCount > 100) hzs.append("…");
                 hzs.append("\n");
                 ssb.insert(0, hzs);
             }

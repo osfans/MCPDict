@@ -363,11 +363,11 @@
     </string-array>
     <string-array name="pref_values_charset">
         <item>漢字</item>
-        <item>廣韻</item>
-        <item>說文</item>
-        <item>康熙</item>
-        <item>匯纂</item>
-        <item>漢大</item>
+        <item>GY</item>
+        <item>SW</item>
+        <item>KX</item>
+        <item>HZ</item>
+        <item>HD</item>
         <item>FD</item>
         <item>GJ</item>
         <item>kHKGlyph</item>
