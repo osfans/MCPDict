@@ -154,9 +154,7 @@ public class DB extends SQLiteAssetHelper {
         if (charset == 0) return "";
         String value = Pref.getStringArray(R.array.pref_values_charset)[charset];
         String selection;
-        if (charset <= 5) {
-            selection = String.format(" AND `%s` IS NOT NULL", value);
-        } else if (matchClause == 1) {
+        if (matchClause == 1) {
             selection = String.format(" AND `%s` MATCH '%s'", FL, value);
         } else if (matchClause == 2) {
             selection = String.format(" %s:%s", FL, value);
@@ -164,6 +162,17 @@ public class DB extends SQLiteAssetHelper {
             selection = String.format(" AND `%s` LIKE '%%%s%%'", FL, value);
         }
         return selection;
+    }
+
+    public static boolean inCharset(String hz) {
+        if (db == null) return false;
+        if (HanZi.isUnknown(hz)) return true;
+        String charset = getCharsetSelect(2);
+        if (TextUtils.isEmpty(charset)) return true;
+        Cursor cursor = db.rawQuery(String.format("select * from mcpdict where mcpdict MATCH '漢字:%s %s'", hz, charset), null);
+        int count = cursor.getCount();
+        cursor.close();
+        return count == 1;
     }
 
     private static boolean isMatchBegins(String lang) {

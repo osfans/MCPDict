@@ -179,6 +179,11 @@ def getDicts(dicts):
 		語.加載(dicts)
 		if 語.字書:
 			字書.append(語)
+	fls = ["SW","KX","HZ","HD"]
+	for _, d in dicts.items():
+		for i, k in enumerate(辭典[1:5]):
+			if k in d:
+				d["分類"] = (d["分類"] + "\t" + fls[i]) if "分類" in d else fls[i]
 	return 辭典, 字書
 
 def 獲取同音字頻(get=False):

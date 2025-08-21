@@ -35,3 +35,7 @@ class 表(_表):
 			if 行.startswith("#"): continue
 			index, uni, 字組 = 行.strip().split(" ")
 			d[字組[0]].append("GJ")
+		for 行 in open(自.全路徑("廣韻.tsv"),encoding="U8"):
+			字 = 行.strip().split("\t")[1]
+			if len(字) == 1:
+				d[字].append("GY")
