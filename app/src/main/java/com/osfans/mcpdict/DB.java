@@ -132,13 +132,13 @@ public class DB extends SQLiteAssetHelper {
         setForcedUpgrade();
     }
 
-    private static String[] getMatchColumns(String lang, SEARCH searchType, boolean allowVariants) {
+    private static String[] getMatchLanguages(String lang, SEARCH searchType, boolean allowVariants) {
         List<String> columns = new ArrayList<>();
         if (lang.contentEquals(JA_OTHER))
             columns.addAll(Arrays.asList(JA_COLUMNS));
         else {
             if (searchType == SEARCH.COMMENT) {
-                String[] cols = getVisibleColumns();
+                String[] cols = getVisibleLanguages();
                 if (cols.length <= 100) columns.addAll(Arrays.asList(cols));
                 else lang = TABLE_NAME;
             }
@@ -241,19 +241,16 @@ public class DB extends SQLiteAssetHelper {
     public static Cursor search() {
         // Search for one or more keywords, considering mode and options
         String input = Pref.getInput();
+        if (input.startsWith("-")) input = input.substring(1); //may crash sqlite
+        input = input.strip();
+
         String lang = Pref.getLabel();
-        String dict = Pref.getDict();
         SEARCH searchType = SEARCH.values()[Pref.getInt(R.string.pref_key_type)];
         boolean isAll = Pref.getFilter() == FILTER.ALL;
 
-        if (input.startsWith("-")) input = input.substring(1); //may crash sqlite
-        if (searchType == SEARCH.DICT) {
-            lang = TextUtils.isEmpty(dict) ? "" : DB.getLabelByLanguage(dict);
-        }
-
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
-        if (searchType == SEARCH.COMMENT){
+        if (searchType == SEARCH.COMMENT || searchType == SEARCH.DICT) {
             if (HanZi.isHz(input)) {
                 String[] hzs = Orthography.normWords(input);
                 if (hzs.length > 0) keywords = Arrays.asList(hzs);
@@ -281,20 +278,26 @@ public class DB extends SQLiteAssetHelper {
 
         // Columns to search
         boolean allowVariants = isHzMode(lang) && Pref.getBool(R.string.pref_key_allow_variants, true) && (SEARCH.HZ == searchType);
-        String[] columns = getMatchColumns(lang, searchType, allowVariants);
 
         // Build inner query statement (a union query returning the id's of matching Chinese characters)
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_LANG);
         List<String> queries = new ArrayList<>();
-        List<String> args = new ArrayList<>();
+        String[] languages = getVisibleLanguages();
+        String languageClause = (isAll || languages.length == 0)? "" : ("語言:" + String.join(" OR 語言:", languages));
 
         if (searchType == SEARCH.COMMENT) {
-            String[] projection = {"rowid AS _id", 0 + " AS rank", "0 AS vaIndex", "null AS variants", "snippet(langs, '***', '***', 2) AS 註釋", "讀音", "語言", "trim(substr(字組, 0, 3)) AS 漢字"};
-            queries.add(qb.buildQuery(projection, String.format("langs MATCH '註釋:%s 語言:%s'", String.join(" 註釋:", keywords), lang), null, null, null, null));
+            String[] projection = {"rowid AS _id", "0 AS rank", "0 AS vaIndex", "null AS variants", "*", "trim(substr(字組, 0, 3)) AS 漢字"};
+            String sql = String.format("langs MATCH '註釋:%s %s'", String.join(" 註釋:", keywords), languageClause);
+            queries.add(qb.buildQuery(projection, sql, null, null, null, null));
         } else {
             if (searchType == SEARCH.YIN && !lang.contentEquals(HZ)) {
                 String hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where langs MATCH '語言: %s 讀音: %s'", lang, String.join(" OR 讀音:", keywords)));
+                keywords = Arrays.asList(hzs.split(" "));
+            } else if (searchType == SEARCH.DICT && !lang.contentEquals(HZ)) {
+                String dict = Pref.getDict();
+                String match = TextUtils.isEmpty(dict) ? "mcpdict" : DB.getLabelByLanguage(dict);
+                String hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where %s MATCH '%s'", match, String.join(" ", keywords)));
                 keywords = Arrays.asList(hzs.split(" "));
             }
 
@@ -302,12 +305,13 @@ public class DB extends SQLiteAssetHelper {
                 String key = keywords.get(i);
                 String variant = allowVariants ? ("'" + key + "'") : "null";
                 String[] projection = {"rowid AS _id", i + " AS rank", "0 AS vaIndex", variant + " AS variants", "*", "trim(substr(snippet(langs, '', ' ', ' ', 0, 1), 0, 3)) AS 漢字"};
-                queries.add(qb.buildQuery(projection, String.format("langs MATCH '字組:%s'", key), null, null, null, null));
+                String sql = String.format("langs MATCH '字組:%s %s'", key, languageClause);
+                queries.add(qb.buildQuery(projection, sql, null, null, null, null));
                 if (allowVariants) {
                     projection[2] = "1 AS vaIndex";
                     String matchClause = getResult(String.format("SELECT group_concat(漢字, ' OR 字組:') from mcpdict where mcpdict MATCH '異體字: %s'", key));
                     if (!matchClause.isEmpty()) {
-                        queries.add(qb.buildQuery(projection, String.format("langs MATCH '字組:%s'", matchClause), null, null, null, null));
+                        queries.add(qb.buildQuery(projection, String.format("langs MATCH '字組:%s %s'", matchClause, languageClause), null, null, null, null));
                     }
                 }
             }
@@ -318,11 +322,10 @@ public class DB extends SQLiteAssetHelper {
         qb.setTables("(" + query + ") AS u LEFT JOIN user.favorite AS w ON u.漢字 = w.hz");
 //        qb.setDistinct(true);
         String[] projection = {"漢字", "讀音", "註釋", "語言", "_id", "variants", "timestamp IS NOT NULL AS is_favorite", "comment"};
-        String selection = getCharsetSelect(1);
-        query = qb.buildQuery(projection, selection, null, null, "rank,vaIndex,漢字", String.valueOf(COL_ALL_LANGUAGES));
+        query = qb.buildQuery(projection, null, null, null, "rank,vaIndex,漢字", String.valueOf(COL_ALL_LANGUAGES));
 
         // Search
-        return db.rawQuery(query, args.toArray(new String[0]));
+        return db.rawQuery(query, null);
     }
 
     public static Cursor directSearch(String hz) {
@@ -556,7 +559,7 @@ public class DB extends SQLiteAssetHelper {
         return String.join(" OR ", array);
     }
 
-    public static String[] getVisibleColumns() {
+    public static String[] getVisibleLanguages() {
         FILTER filter = Pref.getFilter();
         String label = Pref.getLabel();
         switch (filter) {
