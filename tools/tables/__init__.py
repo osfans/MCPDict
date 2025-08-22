@@ -84,6 +84,14 @@ def 爲字(c):
 	n = ord(c)
 	return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<=0x323AF and not 爲兼容字(c)
 
+def 找字(字組):
+	index = len(字組)
+	for i, c in enumerate(字組):
+		if 爲字(c):
+			index = i
+			break
+	return index
+
 def 有字(字組):
 	return any(map(爲字, 字組))
 

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from tables._表 import 表 as _表
+from tables.__init__ import 找字
 import re
 from pypinyin.contrib.tone_convert import to_tone3
 
@@ -190,12 +191,16 @@ class 表(_表):
 				l = list()
 				異讀 = "/" in 音
 				for i,音標 in enumerate(音.split("/")):
+					n = 找字(音標)
+					本註 = 音標[n:]
+					音標 = 音標[:n]
 					if not 音標: continue
+					if not 本註: 本註 = 註
 					if 音標[0] in markers: 音標 = 音標[1:] + str(markers.index(音標[0]) + 1)
 					elif 音標[-1] in markers: 音標 = 音標[:-1] + str(markers.index(音標[-1]) + 1)
 					if 異讀:
 						音標 = 音標 + ("-" if i == 1 else "=")
-					l.append((字,音標,註))
+					l.append((字,音標,本註))
 				return l
 			elif 自.文件名.startswith("语言接触与湘西南苗瑶平话调查研究"):
 				if 音 == "/": return
