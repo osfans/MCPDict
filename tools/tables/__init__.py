@@ -276,7 +276,7 @@ def 獲取同音字頻(get=False):
 
 def getLangs(items, 參數, args):
 	省 = args.省
-	同音字頻, 高頻字 = 獲取同音字頻(args.s or args.c)
+	同音字頻, 高頻字 = 獲取同音字頻(True or args.s or args.c)
 	計算相似度 = args.s
 	詳情 = tables._詳情.加載(省)
 	語組 = []
@@ -476,4 +476,4 @@ def getLangs(items, 參數, args):
 	字.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=types[2].get))
 	字.info["版本"] = datetime.datetime.now().strftime("%Y-%m-%d")
 	if not args.output: print("語言數", 數)
-	return 語組
+	return 語組, 高頻字

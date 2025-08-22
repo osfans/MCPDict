@@ -24,18 +24,8 @@ if not args.output:
 	if not os.path.exists(DIR): os.mkdir(DIR)
 	conn = sqlite3.connect(NAME)
 	c = conn.cursor()
-	字書 = None
-	if len(argv) != 1:
-		dicts = defaultdict(dict)
-		fields, 字書 = getDicts(dicts)
-		CREATE = 'CREATE VIRTUAL TABLE mcpdict USING fts3 (%s)' % (",".join(fields))
-		INSERT = 'INSERT INTO mcpdict VALUES (%s)'% (','.join('?' * len(fields)))
-		c.execute(CREATE)
-		c.executemany(INSERT, (list(map(dicts[i].get, fields)) for i in sorted(dicts.keys(), key=lambda x:(-len(dicts[x]),cjkorder(x)))))
-		字數 = len(dicts)
-		del dicts
 	items = list()
-	langs = getLangs(items, argv, args)
+	langs, 高頻字 = getLangs(items, argv, args)
 	keys = [f"{lang.簡稱}" for lang in langs]
 	for i in keys:
 		if keys.count(i) > 1:
@@ -47,6 +37,16 @@ if not args.output:
 	c.execute(CREATE)
 	c.executemany(INSERT, items)
 	del items
+	字書 = None
+	if len(argv) != 1:
+		dicts = defaultdict(dict)
+		fields, 字書 = getDicts(dicts)
+		CREATE = 'CREATE VIRTUAL TABLE mcpdict USING fts3 (%s)' % (",".join(fields))
+		INSERT = 'INSERT INTO mcpdict VALUES (%s)'% (','.join('?' * len(fields)))
+		c.execute(CREATE)
+		c.executemany(INSERT, (list(map(dicts[i].get, fields)) for i in sorted(dicts.keys(), key=lambda x:((高頻字.index(x) if x in 高頻字 else 0xffff),-len(dicts[x]),cjkorder(x)))))
+		字數 = len(dicts)
+		del dicts
 	langs[0].info["字數"] = 字數
 	if 字書:
 		langs.extend(字書)
