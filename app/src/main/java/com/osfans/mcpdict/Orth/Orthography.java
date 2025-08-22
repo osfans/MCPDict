@@ -78,7 +78,9 @@ public class Orthography {
         JSONArray styles = null;
         try {
             JSONObject jsonObject = DB.getToneName(lang);
-            styles = jsonObject.getJSONArray(tone);
+            if (jsonObject != null) {
+                styles = jsonObject.getJSONArray(tone);
+            }
         } catch (Exception ignored) {
         }
         if (styles == null || styles.length() != 5) {

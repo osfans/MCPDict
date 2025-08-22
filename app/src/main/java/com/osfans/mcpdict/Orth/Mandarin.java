@@ -173,7 +173,7 @@ public class Mandarin {
         } else {
             tone = '_';
         }
-        if (base.isEmpty()) return null;               // Fail
+        if (TextUtils.isEmpty(base)) return null;               // Fail
 
         List<String> result = new ArrayList<>();
         result.add(s);

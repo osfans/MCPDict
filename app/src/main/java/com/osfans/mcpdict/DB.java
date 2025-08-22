@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.graphics.Color;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.osfans.mcpdict.Orth.*;
 import com.osfans.mcpdict.Util.UserDB;
@@ -29,7 +28,6 @@ public class DB extends SQLiteAssetHelper {
     // Must be the same order as defined in the string array "search_as"
 
     public static final String HZ = "漢字";
-    private static final String BH = "總筆畫數";
     private static final String BS = "部首餘筆";
     public static final String SW = "說文";
     private static final String GYHZ = "匯纂";
@@ -46,9 +44,7 @@ public class DB extends SQLiteAssetHelper {
     private static final String FL = "分類";
 
     public static final String MAP = " 🌏 ";
-    public static final String IS_FAVORITE = "is_favorite";
     public static final String VARIANTS = "variants";
-    public static final String COMMENT = "comment";
     public static final String INDEX = "索引";
     public static final String LANGUAGE = "語言";
     public static final String LABEL = "簡稱";
@@ -130,22 +126,6 @@ public class DB extends SQLiteAssetHelper {
     public DB(Context context) {
         super(context, DB_NAME, null, BuildConfig.DB_VER);
         setForcedUpgrade();
-    }
-
-    private static String[] getMatchLanguages(String lang, SEARCH searchType, boolean allowVariants) {
-        List<String> columns = new ArrayList<>();
-        if (lang.contentEquals(JA_OTHER))
-            columns.addAll(Arrays.asList(JA_COLUMNS));
-        else {
-            if (searchType == SEARCH.COMMENT) {
-                String[] cols = getVisibleLanguages();
-                if (cols.length <= 100) columns.addAll(Arrays.asList(cols));
-                else lang = TABLE_NAME;
-            }
-            if (!columns.contains(lang) && !columns.contains(TABLE_NAME)) columns.add(lang);
-        }
-        if (allowVariants) columns.add(VA);
-        return columns.toArray(new String[0]);
     }
 
     private static String getCharsetSelect(int matchClause) {
@@ -230,8 +210,7 @@ public class DB extends SQLiteAssetHelper {
                 if (token.endsWith("?")) token = token.substring(0, token.length()-1);
                 allTones = switch (lang) {
                     case GY -> MiddleChinese.getAllTones(token);
-                    case CMN -> Mandarin.getAllTones(token);
-                    case CMN_TW -> Mandarin.getAllTones(token);
+                    case CMN, CMN_TW -> Mandarin.getAllTones(token);
                     case HK -> Cantonese.getAllTones(token);
                     case VI -> Vietnamese.getAllTones(token);
                     default -> Tones.getAllTones(token, lang);
@@ -317,7 +296,7 @@ public class DB extends SQLiteAssetHelper {
                 if (allowVariants) {
                     projection[2] = "1 AS vaIndex";
                     String matchClause = getResult(String.format("SELECT group_concat(漢字, ' OR 字組:') from mcpdict where mcpdict MATCH '異體字: %s'", key));
-                    if (!matchClause.isEmpty()) {
+                    if (!TextUtils.isEmpty(matchClause)) {
                         queries.add(qb.buildQuery(projection, String.format("langs MATCH '字組:%s %s'", matchClause, languageClause), null, null, null, null));
                     }
                 }
@@ -326,9 +305,9 @@ public class DB extends SQLiteAssetHelper {
         String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);
 
         // Build outer query statement (returning all information about the matching Chinese characters)
-        qb.setTables("(" + query + ") AS u LEFT JOIN user.favorite AS w ON u.漢字 = w.hz");
+        qb.setTables("(" + query + ") AS u");
 //        qb.setDistinct(true);
-        String[] projection = {"漢字", "讀音", "註釋", "語言", "_id", "variants", "timestamp IS NOT NULL AS is_favorite", "comment"};
+        String[] projection = {"漢字", "讀音", "註釋", "語言", "_id", "variants"};
         query = qb.buildQuery(projection, null, null, null, "rank,vaIndex,漢字", String.valueOf(COL_ALL_LANGUAGES));
 
         // Search
@@ -338,12 +317,12 @@ public class DB extends SQLiteAssetHelper {
     public static Cursor directSearch(String hz) {
         // Search for a single Chinese character without any conversions
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-        qb.setTables("langs AS v, user.favorite AS w");
-        String[] projection = {"'" + hz + "' AS 漢字", "讀音", "註釋", "語言", "v.rowid AS _id", "NULL AS variants", "timestamp IS NOT NULL AS is_favorite", "comment"};
+        qb.setTables(TABLE_LANG);
+        String[] projection = {"'" + hz + "' AS 漢字", "讀音", "註釋", "語言", "rowid AS _id", "NULL AS variants"};
         String[] languages = getVisibleLanguages();
         String languageClause = (languages.length == 0)? "" : ("語言:" + String.join(" OR 語言:", languages));
-        String selection = String.format("langs MATCH '字組:%s %s' and w.hz = '%s'", hz, languageClause, hz);
-        String query = qb.buildQuery(projection, selection, null, null, null, String.valueOf(COL_ALL_LANGUAGES));
+        String selection = String.format("langs MATCH '字組:%s %s'", hz, languageClause);
+        String query = qb.buildQuery(projection, selection, null, null, null, null);
         return db.rawQuery(query, null);
     }
 
@@ -638,8 +617,12 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static String getResult(String sql) {
-        if (db == null) return "";
+        if (db == null) return null;
         Cursor cursor = db.rawQuery(sql, null);
+        if (cursor.getCount() == 0) {
+            cursor.close();
+            return null;
+        }
         StringBuilder sb = new StringBuilder();
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             sb.append(cursor.getString(0));

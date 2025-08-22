@@ -152,7 +152,7 @@ public class Vietnamese {
         } else {
             tone = '_';
         }
-        if (base.isEmpty()) return null;               // Fail
+        if (TextUtils.isEmpty(base)) return null;               // Fail
 
         boolean isEnteringTone = "ptc".indexOf(base.charAt(base.length() - 1)) >= 0 ||
                 base.endsWith("ch");
