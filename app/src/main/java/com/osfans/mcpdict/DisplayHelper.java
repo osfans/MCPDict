@@ -103,8 +103,7 @@ public abstract class DisplayHelper {
             case DB.ZT -> Zhongtang.displayHelper.displayRich(string, lang);
             case DB.ZYYY -> ZhongyuanYinyun.displayHelper.displayRich(string, lang);
             case DB.DGY -> Dungan.displayHelper.displayRich(string, lang);
-            case DB.CMN -> Mandarin.displayHelper.displayRich(string, lang);
-            case DB.CMN_TW -> Mandarin.displayHelper.displayRich(string, lang);
+            case DB.CMN, DB.CMN_TW -> Mandarin.displayHelper.displayRich(string, lang);
             case DB.TW -> Minnan.displayHelper.displayRich(string, lang);
             case DB.JA_GO, DB.JA_KAN, DB.JA_OTHER -> Japanese.displayHelper.displayRich(string, lang);
             default -> Tones.displayHelper.displayRich(string, lang);

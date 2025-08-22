@@ -8,13 +8,13 @@ import static com.osfans.mcpdict.DB.COL_LAST_DICT;
 import static com.osfans.mcpdict.DB.COL_HZ;
 import static com.osfans.mcpdict.DB.COL_FIRST_DICT;
 import static com.osfans.mcpdict.DB.COL_ZS;
-import static com.osfans.mcpdict.DB.COMMENT;
 import static com.osfans.mcpdict.DB.HZ;
 import static com.osfans.mcpdict.DB.VARIANTS;
 import static com.osfans.mcpdict.DB.getColor;
 import static com.osfans.mcpdict.DB.getColumn;
 import static com.osfans.mcpdict.DB.getColumnIndex;
 import static com.osfans.mcpdict.DB.getLabel;
+import static com.osfans.mcpdict.DB.getResult;
 import static com.osfans.mcpdict.DB.getSubColor;
 import static com.osfans.mcpdict.DB.getUnicode;
 import static com.osfans.mcpdict.DB.inCharset;
@@ -419,7 +419,7 @@ public class ResultFragment extends Fragment {
                       body {
                 """);
         String feat = FontUtil.getFontFeatureSettings();
-        if (!feat.isEmpty()) sb.append(String.format("font-feature-settings: %s;\n", feat));
+        if (!TextUtils.isEmpty(feat)) sb.append(String.format("font-feature-settings: %s;\n", feat));
         sb.append("      font-family: ");
         if (FontUtil.fontExFirst()) {
             sb.append(String.format("nyushu, p0, p2, p3, pua, %s; }\n", FontUtil.getDefaultFont()));
@@ -509,8 +509,8 @@ public class ResultFragment extends Fragment {
                 }
                 ssb.append(String.format("<div class=y onclick='mcpdict.showMap(\"%s\")'>%s</div>", hz, DB.MAP));
                 // "Favorite" button
-                String comment = cursor.getString(cursor.getColumnIndexOrThrow(COMMENT));
-                boolean bFavorite = cursor.getInt(cursor.getColumnIndexOrThrow(DB.IS_FAVORITE)) == 1;
+                String comment = getResult(String.format("select comment from user.favorite where hz = '%s'", hz));
+                boolean bFavorite = (comment != null);
                 int favorite = bFavorite ? 1 : 0;
                 if (showFavoriteButton) {
                     String label = bFavorite ? "⭐":"⛤";
@@ -675,6 +675,8 @@ public class ResultFragment extends Fragment {
             String lastHz = "", lastLang = "";
             boolean bNewHz, bNewLang;
             Cursor dictCursor = null;
+            DB.FILTER filter = Pref.getFilter();
+            SpannableStringBuilder ssb2 = new SpannableStringBuilder();
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 bNewHz = !hz.contentEquals(lastHz);
@@ -684,11 +686,11 @@ public class ResultFragment extends Fragment {
                     continue;
                 }
                 if (!bNewHz && uniqueHanzi.contains(hz)) continue; // Skip duplicate hz
-                String comment = cursor.getString(cursor.getColumnIndexOrThrow(COMMENT));
-                boolean bFavorite = cursor.getInt(cursor.getColumnIndexOrThrow(DB.IS_FAVORITE)) == 1;
+                String comment = getResult(String.format("select comment from user.favorite where hz = '%s'", hz));
+                boolean bFavorite = (comment != null);
                 int color = getResources().getColor(R.color.accent, requireContext().getTheme());
                 if (bNewHz) {
-                    if (!lastHz.isEmpty()) {
+                    if (!TextUtils.isEmpty(lastHz)) {
                         ssb.append("\n");
                         uniqueHanzi.add(lastHz);
                     }
@@ -711,42 +713,41 @@ public class ResultFragment extends Fragment {
                     raws.setLength(0);
                     raws.append(String.format("%s %s\n", hz, unicode));
                 }
-                // yb
-                SpannableStringBuilder ssb2 = new SpannableStringBuilder();
-                String lang = cursor.getString(COL_LANG);
-                s = cursor.getString(COL_IPA);
-                String zs = cursor.getString(COL_ZS);
-                if (!zs.isEmpty()) s = String.format("%s{%s}", s, zs);
-                if (TextUtils.isEmpty(s)) continue;
-                linesCount++;
-                String ipa = DisplayHelper.formatIPA(lang, s).toString();
-                if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
-                CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
-                n = ssb2.length();
-                if (bNewHz) lastLang = "";
-                bNewLang = !lang.contentEquals(lastLang);
-                String raw = DisplayHelper.getRawText(s);
-                if (bNewLang) {
-                    if (!lastLang.isEmpty()) ssb2.append("\n");
-                    Drawable drawable = builder.build(lang, getColor(lang), getSubColor(lang));
-                    DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
-                    ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                if (filter != DB.FILTER.HZ) {
+                    // yb
+                    String lang = cursor.getString(COL_LANG);
+                    s = cursor.getString(COL_IPA);
+                    String zs = cursor.getString(COL_ZS);
+                    if (!TextUtils.isEmpty(zs)) s = String.format("%s{%s}", s, zs);
+                    if (TextUtils.isEmpty(s)) continue;
+                    linesCount++;
+                    String ipa = DisplayHelper.formatIPA(lang, s).toString();
+                    if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
+                    CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
+                    n = ssb2.length();
+                    if (bNewHz) lastLang = "";
+                    bNewLang = !lang.contentEquals(lastLang);
+                    String raw = DisplayHelper.getRawText(s);
+                    if (bNewLang) {
+                        if (!TextUtils.isEmpty(lastLang)) ssb2.append("\n");
+                        Drawable drawable = builder.build(lang, getColor(lang), getSubColor(lang));
+                        DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
+                        ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    }
+                    Entry e = new Entry(hz, lang, raw, bFavorite, comment);
+                    ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    ssb2.append(cs);
+                    ssb2.append(" ");
+                    raws.append(formatReading(lang, raw));
+                    lastLang = lang;
+                    mRaws.put(hz, raws.toString());
                 }
-                Entry e = new Entry(hz, lang, raw, bFavorite, comment);
-                ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                ssb2.append(cs);
-                ssb2.append(" ");
-                raws.append(formatReading(lang, raw));
-                lastLang = lang;
-                mRaws.put(hz, raws.toString());
                 if (bNewHz) {
                     // DICTS
-                    if (dictCursor.getCount() == 1) {
-                        for (int i = COL_FIRST_DICT; i <= COL_LAST_DICT; i++) {
-                            s = dictCursor.getString(i);
-                            if (!TextUtils.isEmpty(s)) {
-                                ssb.append(" " + getLabel(i) + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, i, s), i, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                            }
+                    for (int i = COL_FIRST_DICT; i <= COL_LAST_DICT; i++) {
+                        s = dictCursor.getString(i);
+                        if (!TextUtils.isEmpty(s)) {
+                            ssb.append(" " + getLabel(i) + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, i, s), i, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                         }
                     }
                     dictCursor.close();
@@ -772,12 +773,12 @@ public class ResultFragment extends Fragment {
                     ssb.append("\n");
                 }
                 lastHz = hz;
-                if (linesCount > COL_ALL_LANGUAGES) continue;
                 index++;
                 ssb.append(ssb2);
+                ssb2.clear();
             }
             if (hzCount > 1) {
-                if (hzCount > 100) hzs.append("…");
+                if (hzCount > 10) hzs.append("…");
                 hzs.append("\n");
                 ssb.insert(0, hzs);
             }

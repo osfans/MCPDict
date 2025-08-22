@@ -176,7 +176,7 @@ public class Cantonese {
         } else {
             tone = '_';
         }
-        if (base.isEmpty()) return null;               // Fail
+        if (TextUtils.isEmpty(base)) return null;               // Fail
 
         boolean isEnteringTone = "ptk".indexOf(base.charAt(base.length() - 1)) >= 0;
         List<String> result = new ArrayList<>();

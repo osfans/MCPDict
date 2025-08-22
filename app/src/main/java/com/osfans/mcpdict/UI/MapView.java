@@ -1,5 +1,9 @@
 package com.osfans.mcpdict.UI;
 
+import static com.osfans.mcpdict.DB.COL_IPA;
+import static com.osfans.mcpdict.DB.COL_LANG;
+import static com.osfans.mcpdict.DB.COL_ZS;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.text.TextUtils;
@@ -28,6 +32,8 @@ import org.osmdroid.views.overlay.Polygon;
 import org.osmdroid.views.overlay.ScaleBarOverlay;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MapView extends org.osmdroid.views.MapView {
     FolderOverlay mHzOverlay, mProvinceOverlay, mSmallCityOverlay;
@@ -133,23 +139,47 @@ public class MapView extends org.osmdroid.views.MapView {
 
     private void initHZ(String hz) {
         Cursor cursor = DB.directSearch(hz);
-        cursor.moveToFirst();
         FolderOverlay folderOverlay = new FolderOverlay();
         double level = getZoomLevelDouble();
         try {
-            for (String lang : DB.getVisibleLanguages()) {
-                GeoPoint point = DB.getPoint(lang);
-                if (point == null) continue;
-                int i = DB.getColumnIndex(lang);
-                String string = cursor.getString(i);
-                if (TextUtils.isEmpty(string)) continue;
-                CharSequence yb = DisplayHelper.formatIPA(lang, DisplayHelper.getRawText(string));
-                CharSequence js = DisplayHelper.formatIPA(lang, string);
-                int size = DB.getSize(lang);
-                Marker marker = new Marker(this, DB.getColor(lang), DB.getLabel(lang), yb.toString(), js.toString(), size);
-                marker.setPosition(point);
-                marker.setZoomLevel(level);
-                folderOverlay.add(marker);
+            String lastLang = "";
+            List<CharSequence> IPAs = new ArrayList<>(), comments = new ArrayList<>();
+            for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+                String lang = cursor.getString(COL_LANG);
+                if (!lastLang.contentEquals(lang)) {
+                    if (!TextUtils.isEmpty(lastLang)) {
+                        GeoPoint point = DB.getPoint(lastLang);
+                        if (point == null) {
+                            IPAs.clear();
+                            comments.clear();
+                            lastLang = lang;
+                            continue;
+                        }
+                        int size = DB.getSize(lastLang);
+                        Marker marker = new Marker(this, DB.getColor(lastLang), lastLang, String.join(" ", IPAs), String.join("\n", comments), size);
+                        marker.setPosition(point);
+                        marker.setZoomLevel(level);
+                        folderOverlay.add(marker);
+                        IPAs.clear();
+                        comments.clear();
+                    }
+                }
+                lastLang = lang;
+                CharSequence ipa = DisplayHelper.formatIPA(lang, cursor.getString(COL_IPA));
+                IPAs.add(ipa);
+                comments.add(ipa);
+                CharSequence comment = DisplayHelper.formatIPA(lang, cursor.getString(COL_ZS));
+                if (!TextUtils.isEmpty(comment)) comments.add(comment);
+            }
+            if (!TextUtils.isEmpty(lastLang)) {
+                GeoPoint point = DB.getPoint(lastLang);
+                if (point != null) {
+                    int size = DB.getSize(lastLang);
+                    Marker marker = new Marker(this, DB.getColor(lastLang), lastLang, String.join(" ", IPAs), String.join("\n", comments), size);
+                    marker.setPosition(point);
+                    marker.setZoomLevel(level);
+                    folderOverlay.add(marker);
+                }
             }
             mHzOverlay = folderOverlay;
             getOverlays().add(mHzOverlay);
