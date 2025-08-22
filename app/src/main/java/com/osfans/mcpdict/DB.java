@@ -305,10 +305,10 @@ public class DB extends SQLiteAssetHelper {
         String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);
 
         // Build outer query statement (returning all information about the matching Chinese characters)
-        qb.setTables("(" + query + ") AS u");
+        qb.setTables("(" + query + ") AS u, info");
 //        qb.setDistinct(true);
-        String[] projection = {"漢字", "讀音", "註釋", "語言", "_id", "variants"};
-        query = qb.buildQuery(projection, null, null, null, "rank,vaIndex,漢字", String.valueOf(COL_ALL_LANGUAGES));
+        String[] projection = {"漢字", "讀音", "註釋", "u.語言 AS 語言", "_id", "variants"};
+        query = qb.buildQuery(projection, "u.語言 = info.簡稱", null, null, "rank,vaIndex,漢字,"+ORDER, String.valueOf(COL_ALL_LANGUAGES));
 
         // Search
         return db.rawQuery(query, null);
