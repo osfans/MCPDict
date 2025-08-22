@@ -706,7 +706,7 @@ public class ResultFragment extends Fragment {
                     // Unicode
                     String unicode = HanZi.toUnicode(hz);
                     dictCursor = DB.getDictCursor(hz);
-                    if (dictCursor.getCount() == 1) dictCursor.moveToNext();
+                    dictCursor.moveToFirst();
                     ssb.append(" " + unicode + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, COL_HZ, getUnicode(dictCursor)), COL_HZ, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                     raws.setLength(0);
                     raws.append(String.format("%s %s\n", hz, unicode));
