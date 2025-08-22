@@ -287,7 +287,10 @@ public class DB extends SQLiteAssetHelper {
                 keywords = Arrays.asList(hzs.split(" "));
             }
 
-            for (int i = 0; i < keywords.size(); i++) {
+            int max_size = keywords.size();
+            if (max_size > 100) max_size = 100;
+
+            for (int i = 0; i < max_size; i++) {
                 String key = keywords.get(i);
                 String variant = allowVariants ? ("'" + key + "'") : "null";
                 String[] projection = {"rowid AS _id", i + " AS rank", "0 AS vaIndex", variant + " AS variants", "*", "trim(substr(snippet(langs, '', ' ', ' ', 0, 1), 0, 3)) AS 漢字"};
