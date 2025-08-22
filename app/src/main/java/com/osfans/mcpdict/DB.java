@@ -255,7 +255,6 @@ public class DB extends SQLiteAssetHelper {
 
         String lang = Pref.getLabel();
         SEARCH searchType = SEARCH.values()[Pref.getInt(R.string.pref_key_type)];
-        boolean isAll = Pref.getFilter() == FILTER.ALL;
 
         // Split the input string into keywords and canonicalize them
         List<String> keywords = new ArrayList<>();
@@ -263,7 +262,6 @@ public class DB extends SQLiteAssetHelper {
             if (HanZi.isHz(input)) {
                 String[] hzs = Orthography.normWords(input);
                 if (hzs.length > 0) keywords = Arrays.asList(hzs);
-                if (isAll) lang = "*";
             }
         } else if (HanZi.isHz(input)) {
             if (lang.contentEquals(GY) && searchType == SEARCH.YIN) input = input + "*"; //音韻地位
@@ -293,7 +291,7 @@ public class DB extends SQLiteAssetHelper {
         qb.setTables(TABLE_LANG);
         List<String> queries = new ArrayList<>();
         String[] languages = getVisibleLanguages();
-        String languageClause = (isAll || languages.length == 0)? "" : ("語言:" + String.join(" OR 語言:", languages));
+        String languageClause = (languages.length == 0)? "" : ("語言:" + String.join(" OR 語言:", languages));
 
         if (searchType == SEARCH.COMMENT) {
             String[] projection = {"rowid AS _id", "0 AS rank", "0 AS vaIndex", "null AS variants", "*", "trim(substr(字組, 0, 3)) AS 漢字"};
@@ -342,10 +340,11 @@ public class DB extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables("langs AS v, user.favorite AS w");
         String[] projection = {"'" + hz + "' AS 漢字", "讀音", "註釋", "語言", "v.rowid AS _id", "NULL AS variants", "timestamp IS NOT NULL AS is_favorite", "comment"};
-        String selection = "字組 MATCH ? and w.hz = '" + hz + "'";
+        String[] languages = getVisibleLanguages();
+        String languageClause = (languages.length == 0)? "" : ("語言:" + String.join(" OR 語言:", languages));
+        String selection = String.format("langs MATCH '字組:%s %s' and w.hz = '%s'", hz, languageClause, hz);
         String query = qb.buildQuery(projection, selection, null, null, null, String.valueOf(COL_ALL_LANGUAGES));
-        String[] args = {hz};
-        return db.rawQuery(query, args);
+        return db.rawQuery(query, null);
     }
 
     public static Cursor getDictCursor(String hz) {
@@ -615,9 +614,6 @@ public class DB extends SQLiteAssetHelper {
             case ISLAND -> {
                 return queryLabel("方言島");
             }
-            case HZ -> {
-                return new String[]{};
-            }
             case CURRENT -> {
                 ArrayList<String> array = new ArrayList<>();
                 if (!TextUtils.isEmpty(label) && !label.contentEquals(HZ)) array.add(label);
@@ -630,7 +626,7 @@ public class DB extends SQLiteAssetHelper {
                 return array.toArray(new String[0]);
             }
         }
-        return LABELS;
+        return new String[]{};
     }
 
     public static boolean isHzMode(String lang) {
@@ -645,7 +641,7 @@ public class DB extends SQLiteAssetHelper {
         if (db == null) return "";
         Cursor cursor = db.rawQuery(sql, null);
         StringBuilder sb = new StringBuilder();
-        while (cursor.moveToNext()) {
+        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             sb.append(cursor.getString(0));
         }
         cursor.close();
