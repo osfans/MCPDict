@@ -195,9 +195,9 @@ def getDicts(dicts):
 	return 辭典, 字書
 
 def 獲取同音字頻(get=False):
-	if not get: return False, False
 	同音字頻 = defaultdict(set)
 	高頻字 = list()
+	if not get: return 同音字頻, 高頻字
 	同音字頻表 = "同音字頻"
 	if os.path.exists(f"{同音字頻表}.db"):
 		conn = sqlite3.connect(f"{同音字頻表}.db")
@@ -276,7 +276,7 @@ def 獲取同音字頻(get=False):
 
 def getLangs(items, 參數, args):
 	省 = args.省
-	同音字頻, 高頻字 = 獲取同音字頻(True or args.s or args.c)
+	同音字頻, 高頻字 = 獲取同音字頻(args.s or args.c)
 	計算相似度 = args.s
 	詳情 = tables._詳情.加載(省)
 	語組 = []
