@@ -33,7 +33,6 @@ import android.os.Message;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextUtils;
-import android.text.method.LinkMovementMethod;
 import android.text.style.DrawableMarginSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
@@ -48,7 +47,6 @@ import android.view.MotionEvent;
 import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -56,13 +54,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.osfans.mcpdict.Adapter.ResultAdapter;
 import com.osfans.mcpdict.Favorite.FavoriteDialogs;
 import com.osfans.mcpdict.Orth.HanZi;
 import com.osfans.mcpdict.Orth.Orthography;
 import com.osfans.mcpdict.UI.MenuSpan;
 import com.osfans.mcpdict.UI.MapView;
-import com.osfans.mcpdict.UI.WebView;
 import com.osfans.mcpdict.UI.PopupSpan;
 import com.osfans.mcpdict.UI.TextDrawable;
 import com.osfans.mcpdict.Util.FontUtil;
@@ -74,8 +74,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Locale;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
@@ -83,9 +81,8 @@ public class ResultFragment extends Fragment {
 
     private static final String TAG = "ResultFragment";
     private View selfView;
-    private View mScroll;
     private TextView mTextView;
-    private WebView mWebView;
+    private RecyclerView mRecyclerView;
     private final boolean showFavoriteButton;
     private final Entry mEntry = new Entry();
     private boolean showMenu;
@@ -162,20 +159,8 @@ public class ResultFragment extends Fragment {
 
         // Inflate the fragment view
         selfView = inflater.inflate(R.layout.search_result_fragment, container, false);
-        mScroll = selfView.findViewById(R.id.scroll);
-        mWebView = selfView.findViewById(R.id.map);
-        mWebView.setTag(this);
-        registerForContextMenu(mWebView);
-        mTextView = new TextView(requireContext());
-        mTextView.setTextAppearance(R.style.FontDetail);
-        FontUtil.setTypeface(mTextView);
-        mTextView.setTextIsSelectable(true);
-        mTextView.setMovementMethod(LinkMovementMethod.getInstance());
-        LinearLayout layout = selfView.findViewById(R.id.layout);
-        layout.addView(mTextView);
-        mTextView.setTag(this);
-        mTextView.setHyphenationFrequency(android.text.Layout.HYPHENATION_FREQUENCY_NONE);
-        registerForContextMenu(mTextView);
+        mRecyclerView = selfView.findViewById(R.id.recycler_view);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(Pref.getToneStyle(R.string.pref_key_tone_value_display));
 
@@ -194,27 +179,13 @@ public class ResultFragment extends Fragment {
                 return false;
             }
         };
-        mTextView.setOnTouchListener(listener);
-        mWebView.setOnTouchListener(listener);
+        selfView.setOnTouchListener(listener);
         return selfView;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (Pref.getDisplayFormat() == 2) {
-            mTextView.setVisibility(View.GONE);
-            mWebView.setVisibility(View.VISIBLE);
-        } else {
-            mTextView.setVisibility(View.VISIBLE);
-            mWebView.setVisibility(View.GONE);
-        }
-
     }
 
     private Intent getDictIntent(String lang, String hz) {
@@ -362,222 +333,6 @@ public class ResultFragment extends Fragment {
 
     public void scrollToTop() {
         //listView.setSelectionAfterHeaderView();
-    }
-
-    private void setWebData(String query, Cursor cursor) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("""
-                <html><head><style>
-                  @font-face {
-                    font-family: tone;
-                    src: url('file:///android_res/font/tone.ttf');
-                  }
-                  @font-face {
-                    font-family: ipa;
-                    src: url('file:///android_res/font/ipa.ttf');
-                  }
-                  @font-face {
-                    font-family: p0;
-                    src: url('file:///android_res/font/p0.otf') format('opentype');
-                  }
-                  @font-face {
-                    font-family: p2;
-                    src: url('file:///android_res/font/p2.otf') format('opentype');
-                  }
-                  @font-face {
-                    font-family: p3;
-                    src: url('file:///android_res/font/p3.otf') format('opentype');
-                  }
-                  @font-face {
-                    font-family: pua;
-                    src: url('file:///android_res/font/pua.ttf');
-                  }
-                  @font-face {
-                    font-family: nyushu;
-                    src: url('file:///android_res/font/nyushu.ttf');
-                  }
-                  details summary::-webkit-details-marker {display: none}
-                  details summary::-moz-list-bullet {font-size: 0}
-                  summary {color: #808080}
-                  div {
-                         display:inline-block;
-                         align: left;
-                      }
-                      .block{display:none;}
-                      .row{display:block}
-                      .place,.dict {
-                         border: 1px black solid;
-                         padding: 0 3px;
-                         border-radius: 5px;
-                         color: white;\
-                         background: #1E90FF;
-                         text-align: center;
-                         vertical-align: top;
-                         transform-origin: right;
-                         font-size: 0.8em;
-                      }
-                      body {
-                """);
-        String feat = FontUtil.getFontFeatureSettings();
-        if (!TextUtils.isEmpty(feat)) sb.append(String.format("font-feature-settings: %s;\n", feat));
-        sb.append("      font-family: ");
-        if (FontUtil.fontExFirst()) {
-            sb.append(String.format("nyushu, p0, p2, p3, pua, %s; }\n", FontUtil.getDefaultFont()));
-        } else {
-            sb.append(FontUtil.useFontTone() ? "tone," : "ipa,");
-            sb.append(String.format("%s, nyushu, p2, p3, pua; }\n", FontUtil.getDefaultFont()));
-        }
-        sb.append("""
-                .ipa {
-                    padding: 0 5px;
-                }
-                .desc {
-                    font-size: 0.6em;
-                }
-                .hz {
-                    font-size: 1.8em;
-                    color: #9D261D;
-                }
-                .variant {
-                    color: #808080;
-                }
-                .ivs {
-                font-size: 1.8em;
-                font-family: nyushu, p0, p2, p3, pua;
-                }
-                .y {
-                    color: #1E90FF;
-                    margin: 0 5px;
-                }
-                p {
-                    margin: 0.2em 0;
-                }
-                td {
-                    vertical-align: top;
-                    align: left;
-                }
-                ul {
-                    margin: 1px;
-                    padding: 0px 6px;
-                }
-                rt {font-size: 0.9em; background-color: #F0FFF0;}
-            </style></head><body>
-        """);
-        if (TextUtils.isEmpty(query)) {
-            sb.append(DB.getIntro());
-        } else if (cursor == null || cursor.getCount() == 0) {
-            sb.append(getString(R.string.no_matches));
-        } else {
-            StringBuilder ssb = new StringBuilder();
-            int n = cursor.getCount();
-            String[] cols = DB.getVisibleLanguages();
-            String lang = Pref.getLabel();
-            boolean isZY = DB.isLang(lang) && query.length() >= 3 && n >= 3
-                    && !HanZi.isBS(query)
-                    && HanZi.isHz(query);
-            Map<String, String> pys = new HashMap<>();
-            StringBuilder hzs = new StringBuilder();
-            for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-                String hz = cursor.getString(COL_HZ);
-                int i = cursor.getColumnIndex(lang);
-                CharSequence py = DisplayHelper.formatIPA(lang, DisplayHelper.getRawText(cursor.getString(i)));
-                if (isZY) {
-                    pys.put(hz, py.toString());
-                } else {
-                    //hzs.append(String.format("<a href=\"#%s\">%s</a>&nbsp;", hz, hz));
-                    hzs.append(hz);
-                }
-                String s = cursor.getString(cursor.getColumnIndexOrThrow(VARIANTS));
-                if (!TextUtils.isEmpty(s) && !s.contentEquals(hz)) {
-                    s = String.format("(%s)", s);
-                } else s = "";
-                int current = cursor.getPosition();
-                boolean openDetails = current < 3 && !HanZi.isUnknown(hz);
-                ssb.append(String.format("<details %s><summary>" +
-                        "<div class=hz>%s</div><div class=variant>%s</div></summary>", openDetails ? "open" : "", hz, s));
-                ssb.append("<div style='display: block; float:right; margin-top: -2em;'>");
-                String unicode = HanZi.toUnicode(hz);
-                ssb.append(String.format("<div class=y onclick='mcpdict.showDict(\"%s\", %s, \"%s\")'>%s</div>", hz, COL_HZ, getUnicode(cursor), unicode));
-                StringBuilder raws = new StringBuilder();
-                raws.append(String.format("%s %s\n", hz, s));
-                for (int j = COL_FIRST_DICT; j <= COL_LAST_DICT; j++) {
-                    s = cursor.getString(j);
-                    if (TextUtils.isEmpty(s)) continue;
-                    String col = getColumn(j);
-                    s = s.replace("\n", "<br>");
-                    ssb.append(String.format(Locale.CHINESE,"<div class=y onclick='mcpdict.showDict(\"%s\", %d, \"%s\")'>%s</div>", hz, j, s, col));
-                }
-                ssb.append(String.format("<div class=y onclick='mcpdict.showMap(\"%s\")'>%s</div>", hz, DB.MAP));
-                // "Favorite" button
-                String comment = getResult(String.format("select comment from user.favorite where hz = '%s'", hz));
-                boolean bFavorite = (comment != null);
-                int favorite = bFavorite ? 1 : 0;
-                if (showFavoriteButton) {
-                    String label = bFavorite ? "⭐":"⛤";
-                    ssb.append(String.format(Locale.CHINESE,"<div class=y onclick='mcpdict.showFavorite(\"%s\", %d, \"%s\")'>&nbsp;%s&nbsp;</div>", hz, favorite, comment, label));
-                }
-                ssb.append("</div>");
-                String fq = "";
-                String fqTemp;
-                boolean opened = false;
-                if (HanZi.isUnknown(hz)) {
-                    String col = Pref.getLabel();
-                    if (!DB.isLang(col)) continue;
-                    int index = DB.getColumnIndex(col);
-                    s = cursor.getString(index);
-                    if (TextUtils.isEmpty(s)) continue;
-                    fqTemp = DB.getWebFq(col);
-                    if (!fqTemp.contentEquals(fq)) {
-                        ssb.append(String.format("<details open><summary>%s</summary>", fqTemp));
-                    }
-                    CharSequence ipa = DisplayHelper.formatUnknownIPA(col, s);
-                    String raw = DisplayHelper.getRawText(s);
-                    String label = DB.getLabel(col);
-                    ssb.append(String.format(Locale.CHINESE,"<div onclick='mcpdict.onClick(\"%s\", \"%s\", \"%s\", %d, \"%s\",event.pageX, event.pageY)' class=row><div class=place style='background: linear-gradient(to left, %s, %s);'>%s</div><br><div class=ipa>%s</div></div>",
-                            hz, col, raw, favorite, comment,
-                            DB.getHexColor(col), DB.getHexSubColor(col), label, ipa));
-                    raws.append(formatReading(label, raw));
-                } else {
-                    for (String col : cols) {
-                        int index = DB.getColumnIndex(col);
-                        s = cursor.getString(index);
-                        if (TextUtils.isEmpty(s)) continue;
-                        fqTemp = DB.getWebFq(col);
-                        if (!fqTemp.contentEquals(fq)) {
-                            if (opened) ssb.append("</details>");
-                            ssb.append(String.format("<details open><summary>%s</summary>", fqTemp));
-                            opened = true;
-                        }
-                        CharSequence ipa = DisplayHelper.formatIPA(col, s);
-                        String raw = DisplayHelper.getRawText(s);
-                        String label = DB.getLabel(col);
-                        ssb.append(String.format(Locale.CHINESE,"<div onclick='mcpdict.onClick(\"%s\", \"%s\", \"%s\", %d, \"%s\",event.pageX, event.pageY)' class=row><div class=place style='background: linear-gradient(to left, %s, %s);'>%s</div><div class=ipa>%s</div></div>",
-                                hz, col, raw, favorite, comment,
-                                DB.getHexColor(col), DB.getHexSubColor(col), label, ipa));
-                        fq = fqTemp;
-                        raws.append(formatReading(label, raw));
-                    }
-                }
-                mRaws.put(hz, raws.toString());
-                if (opened) ssb.append("</details>");
-                ssb.append("</details>");
-            }
-            if (isZY) {
-                sb.append("<nav>");
-                for (int unicode : query.codePoints().toArray()) {
-                    if (!HanZi.isHz(unicode)) continue;
-                    String hz = HanZi.toHz(unicode);
-                    sb.append(String.format("<ruby>%s<rt>%s</rt></ruby>&nbsp;&nbsp;&nbsp;&nbsp;", hz, pys.getOrDefault(hz, "")));
-                }
-                sb.append("</nav>");
-            } else if (n >= 2){
-                sb.append("<nav>");
-                sb.append(hzs);
-                sb.append("</nav>");
-            }
-            sb.append(ssb);
-        }
-        mWebView.loadDataWithBaseURL(null, sb.toString(), "text/html; charset=utf-8", "utf-8", null);
     }
 
     private CharSequence setTextData(String query, Cursor cursor) {
@@ -786,26 +541,21 @@ public class ResultFragment extends Fragment {
         return ssb;
     }
 
-    private CharSequence getTextData(String query, Cursor cursor, int format) {
-        if (format == 0) return setTextData(query, cursor);
+    private CharSequence getTextData(String query, Cursor cursor) {
         return setTableData(query, cursor);
     }
 
     public void setData(String query, Cursor cursor) {
         mRaws.clear();
-        int format = Pref.getDisplayFormat();
-        if (format == 2) { //web
-            setWebData(query, cursor);
-            mWebView.setVisibility(View.VISIBLE);
-            if (cursor != null) cursor.close();
-            mScroll.setScrollY(0);
+        if (true) {
+            mRecyclerView.setAdapter(new ResultAdapter(cursor));
         } else {
             FontUtil.setTypeface(mTextView);
             long startTime = System.currentTimeMillis();
             new AsyncTask<Void, Void, CharSequence>() {
                 @Override
                 protected CharSequence doInBackground(Void... params) {
-                    CharSequence ssb = getTextData(query, cursor, format);
+                    CharSequence ssb = getTextData(query, cursor);
                     if (cursor != null) cursor.close();
                     return ssb;
                 }
@@ -814,7 +564,7 @@ public class ResultFragment extends Fragment {
                 protected void onPostExecute(CharSequence text) {
                     mTextView.setText(text);
                     mTextView.setVisibility(View.VISIBLE);
-                    mScroll.setScrollY(0);
+                    mRecyclerView.setScrollY(0);
                     Log.d(TAG, String.format("setData %s cost %d ms", query, (System.currentTimeMillis() - startTime)));
                 }
             }.execute();
@@ -823,15 +573,6 @@ public class ResultFragment extends Fragment {
 
     public void setData(Cursor cursor) {
         setData(Pref.getInput(), cursor);
-    }
-    public void showContextMenu(float x, float y) {
-        requireActivity().runOnUiThread(() -> {
-            if (!mWebView.isDirty()) {
-                showMenu = true;
-                mWebView.showContextMenu(x, y);
-                //openContextMenu(mWebView);
-            }
-        });
     }
 
     public void openContextMenu(View v) {

@@ -20,13 +20,6 @@
             android:entries="@array/pref_entries_locale"
             android:entryValues="@array/pref_values_locale"
             android:defaultValue="" />
-        <ListPreference
-            app:useSimpleSummaryProvider="true"
-            android:key="@string/pref_key_format"
-            android:title="@string/pref_title_format"
-            android:entries="@array/pref_entries_format"
-            android:entryValues="@array/pref_values_format"
-            android:defaultValue="1" />
         <!-- <SwitchPreference
             android:defaultValue="true"
             android:key="@string/pref_key_font_ext"
