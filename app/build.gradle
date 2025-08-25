@@ -75,4 +75,5 @@ dependencies {
     implementation 'com.github.MKergall:osmbonuspack:6.9.0'
     // Fix Duplicate class
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
 }

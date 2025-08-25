@@ -36,7 +36,7 @@ public class Web {
     public void onClick(String hz, String lang, String raw, int favorite, String comment, int x, int y) {
         ResultFragment resultFragment = getFragment();
         resultFragment.setEntry(hz, lang, raw, favorite==1, comment);
-        resultFragment.showContextMenu(x* Utils.getScale(), y* Utils.getScale());
+//        resultFragment.showContextMenu(x* Utils.getScale(), y* Utils.getScale());
     }
 
 }
