@@ -315,7 +315,7 @@ public class DB extends SQLiteAssetHelper {
         qb.setTables("(" + query + ") AS u, info");
 //        qb.setDistinct(true);
         String[] projection = {"漢字", "讀音", "註釋", "u.語言 AS 語言", "_id", "variants"};
-        query = qb.buildQuery(projection, "u.語言 = info.簡稱", null, null, "rank,vaIndex,漢字,"+ORDER, String.valueOf(COL_ALL_LANGUAGES));
+        query = qb.buildQuery(projection, "u.語言 = info.簡稱", null, null, "rank,vaIndex,漢字,"+ORDER, null);
 
         // Search
         return db.rawQuery(query, null);

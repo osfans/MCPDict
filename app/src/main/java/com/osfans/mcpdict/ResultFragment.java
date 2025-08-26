@@ -54,9 +54,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.osfans.mcpdict.Adapter.IndexAdapter;
 import com.osfans.mcpdict.Adapter.ResultAdapter;
 import com.osfans.mcpdict.Favorite.FavoriteDialogs;
 import com.osfans.mcpdict.Orth.HanZi;
@@ -82,7 +84,7 @@ public class ResultFragment extends Fragment {
     private static final String TAG = "ResultFragment";
     private View selfView;
     private TextView mTextView;
-    private RecyclerView mRecyclerView;
+    private RecyclerView mIndexView, mRecyclerView;
     private final boolean showFavoriteButton;
     private final Entry mEntry = new Entry();
     private boolean showMenu;
@@ -158,7 +160,11 @@ public class ResultFragment extends Fragment {
         }
 
         // Inflate the fragment view
-        selfView = inflater.inflate(R.layout.search_result_fragment, container, false);
+        selfView = inflater.inflate(R.layout.search_result, container, false);
+        mIndexView = selfView.findViewById(R.id.index_view);
+        mIndexView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(mIndexView.getContext(), LinearLayoutManager.HORIZONTAL);
+        mIndexView.addItemDecoration(dividerItemDecoration);
         mRecyclerView = selfView.findViewById(R.id.recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
@@ -549,6 +555,7 @@ public class ResultFragment extends Fragment {
         mRaws.clear();
         if (true) {
             mRecyclerView.setAdapter(new ResultAdapter(cursor));
+            mIndexView.setAdapter(new IndexAdapter(cursor, mRecyclerView));
         } else {
             FontUtil.setTypeface(mTextView);
             long startTime = System.currentTimeMillis();
