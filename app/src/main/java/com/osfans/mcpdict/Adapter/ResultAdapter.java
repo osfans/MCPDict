@@ -211,9 +211,6 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
                 ssb.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             }
-
-            Entry e = new Entry(hz, lang, raw, bFavorite, comment);
-            ssb.setSpan(new MenuSpan(e), n, ssb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             ssb.append(cs);
             mTextView.setText(ssb);
         }
