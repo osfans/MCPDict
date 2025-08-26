@@ -226,11 +226,11 @@ class 表(_表):
 					return
 			else:
 				行 = "\t".join((f"[{自.調值表[序]}]" if 序 else "") + 項 for 序,項 in enumerate(列) if 項)
-		elif 名 in ("自貢","漢源","達州"):
+		elif 名 in ("自貢","漢源","達州","峨眉"):
 			if not 行.startswith("#"):
 				列 = 行.split("\t")
-				if 有字(列[0]): return
-				行 = "\t".join((f"[{序 + 1 if (序 > 3)  else 序}]" if 序 else "") + 項 for 序,項 in enumerate(列))
+				if not 列[0] or 有字(列[0]): return
+				行 = "\t".join((f"[{(序 + 2 if (序 >= 5) else 序 + 1) if (序 >= 4)  else 序}]" if 序 else "") + 項 for 序,項 in enumerate(列))
 		elif 名 in ("江永夏層舖", "江永回龍圩", "江永粗石江", "江永蘭溪", "江永允山"):
 			if not 行.startswith("#"):
 				列 = 行.split("\t")

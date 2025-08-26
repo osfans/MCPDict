@@ -276,15 +276,19 @@ public class DB extends SQLiteAssetHelper {
             String[] projection = {"rowid AS _id", "0 AS rank", "0 AS vaIndex", "null AS variants", "*", "trim(substr(字組, 0, 3)) AS 漢字"};
             String sql = String.format("langs MATCH '註釋:%s %s'", String.join(" 註釋:", keywords), languageClause);
             queries.add(qb.buildQuery(projection, sql, null, null, null, null));
+            keywords.clear();
         } else {
             if (searchType == SEARCH.YIN && !lang.contentEquals(HZ)) {
-                String hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where langs MATCH '語言: %s 讀音: %s'", lang, String.join(" OR 讀音:", keywords)));
+                String hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where langs MATCH '語言:%s 讀音:%s'", lang, String.join(" OR 讀音:", keywords)));
+                if (TextUtils.isEmpty(hzs)) hzs = "";
+                hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where 漢字 MATCH '%s'", hzs.replaceAll(" ", " OR ")));
+                if (TextUtils.isEmpty(hzs)) hzs = "";
                 keywords = Arrays.asList(hzs.split(" "));
             } else if (searchType == SEARCH.DICT && !lang.contentEquals(HZ)) {
                 String dict = Pref.getDict();
                 String match = TextUtils.isEmpty(dict) ? "mcpdict" : DB.getLabelByLanguage(dict);
                 String hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where %s MATCH '%s'", match, String.join(" ", keywords)));
-                keywords = Arrays.asList(hzs.split(" "));
+                keywords = Arrays.asList((TextUtils.isEmpty(hzs) ? "" : hzs).split(" "));
             }
 
             int max_size = keywords.size();
