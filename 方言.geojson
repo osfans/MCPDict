@@ -46114,31 +46114,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#52CCAD",
-        "marker-size": "medium",
-        "marker-symbol": "f",
-        "title": "建寧",
-        "語言": "建寧話",
-        "地點": "福建三明建寧",
-        "地圖集二分區": "贛語-撫廣片",
-        "音典分區": "類閩-建寧",
-        "陳邡分區": "嶺東-建寧",
-        "版本": "2025-07-08",
-        "錄入人": "Resound",
-        "字表來源": "《建宁县方言志》",
-        "補充閲讀": "《客赣方言调查报告》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          116.853656,
-          26.838888
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "marker-color": "#A5C24E",
         "marker-size": "medium",
         "marker-symbol": "h",
@@ -48777,6 +48752,31 @@
         "coordinates": [
           109.306831,
           33.148418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "medium",
+        "marker-symbol": "f",
+        "title": "建寧",
+        "語言": "建寧話",
+        "地點": "福建三明建寧",
+        "地圖集二分區": "贛語-撫廣片",
+        "音典分區": "類閩-建寧",
+        "陳邡分區": "嶺東-建寧",
+        "版本": "2025-07-08",
+        "錄入人": "Resound",
+        "字表來源": "《建宁县方言志》",
+        "補充閲讀": "《客赣方言调查报告》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.853656,
+          26.838888
         ]
       }
     },
