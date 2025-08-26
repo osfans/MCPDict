@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="button_icon_size">24dp</dimen>
-    <dimen name="padding_size">6dp</dimen>
+    <dimen name="padding_size">3dp</dimen>
+    <dimen name="min_width">24sp</dimen>
 </resources>

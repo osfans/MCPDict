@@ -27,7 +27,6 @@ import android.text.style.DrawableMarginSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.LeadingMarginSpan;
 import android.text.style.RelativeSizeSpan;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,13 +38,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.DisplayHelper;
-import com.osfans.mcpdict.Entry;
 import com.osfans.mcpdict.Favorite.FavoriteDialogs;
 import com.osfans.mcpdict.Orth.HanZi;
 import com.osfans.mcpdict.Pref;
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.UI.MapView;
-import com.osfans.mcpdict.UI.MenuSpan;
 import com.osfans.mcpdict.UI.PopupSpan;
 import com.osfans.mcpdict.UI.TextDrawable;
 import com.osfans.mcpdict.Util.FontUtil;
@@ -233,7 +230,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.text_row_item, viewGroup, false);
+                .inflate(R.layout.result_item, viewGroup, false);
 
         return new ViewHolder(view);
     }
