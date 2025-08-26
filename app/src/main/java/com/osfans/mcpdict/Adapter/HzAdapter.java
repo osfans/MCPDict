@@ -39,7 +39,7 @@ public class HzAdapter extends CursorAdapter {
 
     @Override
     public Cursor runQueryOnBackgroundThread(CharSequence constraint) {
-        return DB.getInputCursor(constraint.toString());
+        return DB.getInputCursor(constraint == null ? null : constraint.toString());
     }
 
     @Override

@@ -179,7 +179,7 @@ public class ResultFragment extends Fragment {
                 return false;
             }
         };
-        selfView.setOnTouchListener(listener);
+        // selfView.setOnTouchListener(listener);
         return selfView;
     }
 
