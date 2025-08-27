@@ -163,8 +163,10 @@ public class MapView extends org.osmdroid.views.MapView {
             CharSequence ipa = DisplayHelper.formatIPA(lang, cursor.getString(COL_IPA));
             IPAs.add(ipa);
             comments.add(ipa);
-            CharSequence comment = DisplayHelper.formatIPA(lang, cursor.getString(COL_ZS));
-            comments.add(comment);
+            String zs = cursor.getString(COL_ZS);
+            if (!TextUtils.isEmpty(zs)) {
+                comments.add(DisplayHelper.formatZS(zs));
+            }
         }
         if (!TextUtils.isEmpty(lastLang)) {
             GeoPoint point = DB.getPoint(lastLang);
