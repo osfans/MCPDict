@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.graphics.Color;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.osfans.mcpdict.Orth.*;
 import com.osfans.mcpdict.Util.UserDB;
@@ -171,7 +172,9 @@ public class DB extends SQLiteAssetHelper {
             return keywords;
         }
         else if (isMatchBegins(lang)) input += "*";
-        else if (lang.contentEquals(KOR)) { // For Korean, put separators around all hangul
+        else if (lang.contentEquals(GY) && HanZi.isHz(input)) {
+            input += "*";
+        } else if (lang.contentEquals(KOR)) { // For Korean, put separators around all hangul
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < input.length(); i++) {
                 char c = input.charAt(i);
@@ -183,6 +186,10 @@ public class DB extends SQLiteAssetHelper {
                 }
             }
             input = sb.toString();
+        }
+        if (HanZi.isHz(input)) {
+            keywords.add(input);
+            return keywords;
         }
         int cantoneseSystem = Pref.getStrAsInt(R.string.pref_key_cantonese_romanization, 0);
         for (String token : input.split("[\\s,]+")) {
@@ -243,8 +250,7 @@ public class DB extends SQLiteAssetHelper {
                 if (hzs.length > 0) keywords = Arrays.asList(hzs);
             }
         } else if (HanZi.isHz(input)) {
-            if (lang.contentEquals(GY) && searchType == SEARCH.YIN) input = input + "*"; //音韻地位
-            else lang = HZ;
+            if (!lang.contentEquals(GY) || searchType != SEARCH.YIN) lang = HZ;
         } else if (HanZi.isUnicode(input)) {
             input = HanZi.toHz(input);
             lang = HZ;
@@ -277,13 +283,13 @@ public class DB extends SQLiteAssetHelper {
             String sql = String.format("langs MATCH '註釋:%s %s'", String.join(" 註釋:", keywords), languageClause);
             queries.add(qb.buildQuery(projection, sql, null, null, null, null));
         } else {
-            if (searchType == SEARCH.YIN && !lang.contentEquals(HZ)) {
+            if (searchType == SEARCH.YIN) {
                 String hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where langs MATCH '語言:%s 讀音:%s'", lang, String.join(" OR 讀音:", keywords)));
                 if (TextUtils.isEmpty(hzs)) hzs = "";
                 hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where 漢字 MATCH '%s'", hzs.replaceAll(" ", " OR ")));
                 if (TextUtils.isEmpty(hzs)) hzs = "";
                 keywords = Arrays.asList(hzs.split(" "));
-            } else if (searchType == SEARCH.DICT && !lang.contentEquals(HZ)) {
+            } else if (searchType == SEARCH.DICT) {
                 String dict = Pref.getDict();
                 String match = TextUtils.isEmpty(dict) ? "mcpdict" : DB.getLabelByLanguage(dict);
                 String hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where %s MATCH '%s'", match, String.join(" ", keywords)));
