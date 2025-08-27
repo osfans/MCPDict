@@ -175,15 +175,12 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 ssb.append("\n");
             }
             String lang = cursor.getString(COL_LANG);
-            String s = cursor.getString(COL_IPA);
-            String zs = cursor.getString(COL_ZS);
-            if (!TextUtils.isEmpty(zs)) s = String.format("%s{%s}", s, zs);
-            if (TextUtils.isEmpty(s)) return;
-            String ipa = DisplayHelper.formatIPA(lang, s).toString();
+            String ipa = cursor.getString(COL_IPA);
+            if (TextUtils.isEmpty(ipa)) return;
+            ipa = DisplayHelper.formatIPA(lang, ipa).toString();
             if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
-            CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
             int n = ssb.length();
-            String raw = DisplayHelper.getRawText(s);
+            String raw = DisplayHelper.getRawText(ipa);
 
             if (lang.contentEquals(lastLang)) {
                 LeadingMarginSpan.LeadingMarginSpan2 span = new LeadingMarginSpan.LeadingMarginSpan2() {
@@ -199,16 +196,23 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
 
                     @Override
                     public int getLeadingMargin(boolean first) {
-                        return marginSize + 10;
+                        return marginSize + 5;
                     }
                 };
                 ssb.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             } else {
                 Drawable drawable = builder.build(lang, getColor(lang), getSubColor(lang));
-                DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
+                DrawableMarginSpan span = new DrawableMarginSpan(drawable, 5);
                 ssb.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             }
+            CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
             ssb.append(cs);
+            String zs = cursor.getString(COL_ZS);
+            if (!TextUtils.isEmpty(zs)) {
+                zs = DisplayHelper.formatZS(zs);
+                cs = HtmlCompat.fromHtml(zs, HtmlCompat.FROM_HTML_MODE_COMPACT);
+                ssb.append(cs);
+            }
             mTextView.setText(ssb);
         }
     }

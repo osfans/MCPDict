@@ -202,10 +202,6 @@ public class Pref {
         return index;
     }
 
-    public static int getDisplayFormat() {
-        return getStrAsInt(R.string.pref_key_format, 1);
-    }
-
     public static void putCustomLanguage(String lang) {
         putStrSet(R.string.pref_key_custom_languages, lang);
     }

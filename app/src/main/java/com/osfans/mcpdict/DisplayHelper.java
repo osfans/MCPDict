@@ -39,17 +39,16 @@ public abstract class DisplayHelper {
                 .replaceAll("\\*\\*(.+?)\\*\\*", "<b>$1</b>")
                 .replaceAll("\\*(.+?)\\*", "<i>$1</i>")
                 .replaceAll("`(.+?)`", "<span style='color: #808080;'>$1</span>");
-        int i = Pref.getDisplayFormat();
-        if (i == 1) {
-            s = s.replace("{", "<small><small>").replace("}", "</small></small>");
-        } else if (i == 2) {
-            s = s.replace("{", "<div class=desc>").replace("}", "</div>");
-        }
+        s = s.replace("{", "<small><small>").replace("}", "</small></small>");
         return s;
     }
 
     public static String formatJS(String s) {
         return s.replace("  ", "　").replace(" ", "").replace("　", " ");
+    }
+
+    public static String formatZS(String s) {
+        return String.format("<small><small>%s</small></small>", formatJS(s));
     }
 
     public static String getRawText(String s) {
@@ -123,12 +122,9 @@ public abstract class DisplayHelper {
 
     public String display(String s) {
         if (s == null) return NULL_STRING;
-        s = lineBreak(s);
         // Find all regions of [a-z0-9]+ in s, and apply display helper to each of them
         StringBuilder sb = new StringBuilder();
         int L = s.length(), p = 0;
-        boolean isMeaning;
-        boolean isLang = DB.isLang(mLang);
         String js;
         while (p < L) {
             int q = p;
@@ -139,14 +135,10 @@ public abstract class DisplayHelper {
                 sb.append(TextUtils.isEmpty(t2) ? t1 : t2);
                 p = q;
             }
-            isMeaning = false;
-            while (p < L && (isMeaning || !isIPA(s.charAt(p)))) {
-                if (s.charAt(p) == '{') isMeaning = true;
-                else if (s.charAt(p) == '}') isMeaning = false;
+            while (p < L && !isIPA(s.charAt(p))) {
                 p++; //
             }
             js = s.substring(q, p);
-            if (isLang) js = formatJS(js);
             sb.append(js);
         }
         // Add spaces as hints for line wrapping
@@ -168,10 +160,6 @@ public abstract class DisplayHelper {
 
     public String getLang() {
         return mLang;
-    }
-
-    public String lineBreak(String s) {
-        return s;
     }
 
     public abstract String displayOne(String s);
