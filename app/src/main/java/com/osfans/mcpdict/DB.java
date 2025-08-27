@@ -276,7 +276,6 @@ public class DB extends SQLiteAssetHelper {
             String[] projection = {"rowid AS _id", "0 AS rank", "0 AS vaIndex", "null AS variants", "*", "trim(substr(字組, 0, 3)) AS 漢字"};
             String sql = String.format("langs MATCH '註釋:%s %s'", String.join(" 註釋:", keywords), languageClause);
             queries.add(qb.buildQuery(projection, sql, null, null, null, null));
-            keywords.clear();
         } else {
             if (searchType == SEARCH.YIN && !lang.contentEquals(HZ)) {
                 String hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where langs MATCH '語言:%s 讀音:%s'", lang, String.join(" OR 讀音:", keywords)));
