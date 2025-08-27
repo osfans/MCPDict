@@ -15,6 +15,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
+import android.widget.Filter;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -181,9 +182,10 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         spinnerDivisions.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String value = Objects.toString(adapterDivision.getItem(position));
-                Pref.putDivision(position == 0 ? "" : value);
+                String value = (position == 0) ? "" : Objects.toString(adapterDivision.getItem(position));
+                Pref.putDivision(value);
                 search();
+                adapterDivision.getFilter().filter(value, count -> spinnerDivisions.setSelection(adapterDivision.getPosition(value)));
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
@@ -391,9 +393,11 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         String[] fqs = DB.getDivisions();
         adapterDivision.addAll(fqs);
         String value = Pref.getDivision();
-        int index = TextUtils.isEmpty(value) ? -1 : adapterDivision.getPosition(value);
-        if (index >= adapterDivision.getCount() || index < 0 ) index = 0;
-        spinnerDivisions.setSelection(index);
+        adapterDivision.getFilter().filter(value, count -> {
+            int index = TextUtils.isEmpty(value) ? -1 : adapterDivision.getPosition(value);
+            if (index >= adapterDivision.getCount() || index < 0 ) index = 0;
+            spinnerDivisions.setSelection(index);
+        });
     }
 
     public void updateCustomLanguage(String lang) {
