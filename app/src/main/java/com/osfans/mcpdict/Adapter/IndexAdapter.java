@@ -3,6 +3,7 @@ package com.osfans.mcpdict.Adapter;
 import static com.osfans.mcpdict.DB.COL_HZ;
 import static com.osfans.mcpdict.DB.COL_IPA;
 import static com.osfans.mcpdict.DB.COL_LANG;
+import static com.osfans.mcpdict.DB.isHzMode;
 
 import android.database.Cursor;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.DisplayHelper;
 import com.osfans.mcpdict.Pref;
 import com.osfans.mcpdict.R;
@@ -31,6 +33,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
     public final static List<Integer> mPositions = new ArrayList<>();
     public static RecyclerView mRecyclerView;
     public static String mCurrentLanguage;
+    public static boolean isFilterHZ = false;
 
     /**
      * Provide a reference to the type of views that you are using
@@ -45,10 +48,11 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
             mView = view;
             // Define click listener for the ViewHolder's View
             tvIPA = view.findViewById(R.id.ipa);
+            FontUtil.setTypeface(tvIPA);
+            tvIPA.setVisibility(isFilterHZ ? View.GONE : View.VISIBLE);
             tvHZ = view.findViewById(R.id.hz);
             tvHZ.setTextAppearance(R.style.FontDetail);
             FontUtil.setTypeface(tvHZ);
-            FontUtil.setTypeface(tvIPA);
             mView.setClickable(true);
             mView.setOnClickListener(v -> {
                 int index = getBindingAdapterPosition();
@@ -60,8 +64,10 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
         public void set(int position) {
             String hz = mHZs.get(position);
             tvHZ.setText(hz);
-            String ipa = mIPAs.getOrDefault(hz, "");
-            tvIPA.setText(DisplayHelper.formatIPA(mCurrentLanguage, ipa));
+            if (!isFilterHZ) {
+                String ipa = mIPAs.getOrDefault(hz, "");
+                tvIPA.setText(DisplayHelper.formatIPA(mCurrentLanguage, ipa));
+            }
         }
     }
 
@@ -79,6 +85,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
         if (cursor == null) return;
         String lastHz = "";
         mCurrentLanguage = Pref.getLabel();
+        isFilterHZ = (Pref.getFilter() == DB.FILTER.HZ) || isHzMode(mCurrentLanguage);
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             String hz = cursor.getString(COL_HZ);
             if (!hz.contentEquals(lastHz)) {
