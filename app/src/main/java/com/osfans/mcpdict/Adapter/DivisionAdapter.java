@@ -1,23 +1,24 @@
 package com.osfans.mcpdict.Adapter;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.Utils;
 
 import java.util.Objects;
 
-public class DivisionAdapter extends StringArrayAdapter {
+public class DivisionAdapter extends ArrayAdapter<CharSequence> {
     int mColor, mColorDim;
 
     public DivisionAdapter(@NonNull Context context) {
-        super(context);
+        super(context, R.layout.spinner_item);
         mColor = Utils.obtainColor(context, android.R.attr.textColorPrimary);
         mColorDim = context.getResources().getColor(R.color.dim, context.getTheme());
     }
@@ -37,5 +38,17 @@ public class DivisionAdapter extends StringArrayAdapter {
         textView.setText(last);
         textView.setTextColor(count > 0 ? mColorDim : mColor);
         return  textView;
+    }
+
+    @Override
+    public int getPosition(@Nullable CharSequence item) {
+        if (TextUtils.isEmpty(item)) return 0;
+        int index = super.getPosition(item);
+        if (index >= 0) return index;
+        for (int i = 0; i < getCount(); i++) {
+            CharSequence cs = getItem(i);
+            if (Objects.requireNonNull(cs).toString().startsWith(item + " ")) return i;
+        }
+        return index;
     }
 }
