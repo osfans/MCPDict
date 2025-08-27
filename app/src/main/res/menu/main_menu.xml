@@ -6,6 +6,11 @@
         android:icon="@android:drawable/ic_menu_preferences"
         android:title="@string/settings" />
     <item
+        android:id="@+id/menu_item_home"
+        app:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="@string/home" />
+    <item
         android:id="@+id/menu_item_info"
         app:showAsAction="ifRoom"
         android:icon="@android:drawable/ic_menu_info_details"

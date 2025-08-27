@@ -47,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
             Utils.about(this);
             return true;
         }
+        if (id == R.id.menu_item_home) {
+            if (getDictionaryFragment()!=null) {
+                getDictionaryFragment().refresh("", "");
+            }
+        }
         return super.onOptionsItemSelected(item);
     }
 
