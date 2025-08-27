@@ -116,7 +116,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             if (TextUtils.isEmpty(Pref.getInput())) {
                 mTextView.setText(HtmlCompat.fromHtml(DB.getIntro(), HtmlCompat.FROM_HTML_MODE_COMPACT));
                 return;
-            } else if (cursor == null) {
+            } else if (cursor == null || cursor.getCount() == 0) {
                 mTextView.setText(R.string.no_matches);
                 return;
             }
@@ -248,7 +248,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        if (mCursor == null) return 1;
+        if (mCursor == null || mCursor.getCount() == 0) return 1;
         return mCursor.getCount();
     }
 }
