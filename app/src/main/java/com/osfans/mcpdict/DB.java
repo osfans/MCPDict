@@ -98,7 +98,7 @@ public class DB extends SQLiteAssetHelper {
         ALL, ISLAND, HZ, CURRENT, RECOMMEND, CUSTOM, DIVISION, AREA, EDITOR
     }
 
-    public static int COL_ALL_LANGUAGES = 5000;
+    public static int COL_ALL_LANGUAGES = 10000;
     public static final String ALL_LANGUAGES = "*";
 
     private static final String TABLE_NAME = "mcpdict";
@@ -239,7 +239,8 @@ public class DB extends SQLiteAssetHelper {
         if (input.startsWith("-")) input = input.substring(1); //may crash sqlite
         input = input.strip();
 
-        String lang = Pref.getLabel();
+        String label = Pref.getLabel();
+        String lang = label;
         SEARCH searchType = SEARCH.values()[Pref.getInt(R.string.pref_key_type)];
 
         // Split the input string into keywords and canonicalize them
@@ -323,6 +324,13 @@ public class DB extends SQLiteAssetHelper {
 
             for (int i = 0; i < max_size; i++) {
                 String key = keywords.get(i);
+                if (HanZi.isUnknown(key)) {
+                    String variant = allowVariants ? ("'" + key + "'") : "''";
+                    String[] projection = {"rowid AS _id", i + " AS rank", "0 AS vaIndex", variant + " AS variants", "*", "'" + key + "' AS 漢字"};
+                    String sql = String.format("langs MATCH '字組:%s 語言:%s'", key, label);
+                    queries.add(qb.buildQuery(projection, sql, null, null, null, null));
+                    continue;
+                }
                 String variant = allowVariants ? ("'" + key + "'") : "null";
                 String[] projection = {"rowid AS _id", i + " AS rank", "0 AS vaIndex", variant + " AS variants", "*", "trim(substr(snippet(langs, '', ' ', ' ', 0, 1), 0, 3)) AS 漢字"};
                 String sql = String.format("langs MATCH '字組:%s %s'", key, languageClause);
@@ -336,7 +344,7 @@ public class DB extends SQLiteAssetHelper {
                 }
             }
         }
-        String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);
+        String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, String.valueOf(COL_ALL_LANGUAGES));
 
         // Build outer query statement (returning all information about the matching Chinese characters)
         qb.setTables("(" + query + ") AS u, info");
