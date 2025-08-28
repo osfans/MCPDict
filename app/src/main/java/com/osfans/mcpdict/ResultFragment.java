@@ -18,6 +18,7 @@ import static com.osfans.mcpdict.DB.getResult;
 import static com.osfans.mcpdict.DB.getSubColor;
 import static com.osfans.mcpdict.DB.getUnicode;
 import static com.osfans.mcpdict.DB.inCharset;
+import static com.osfans.mcpdict.DB.isLanguageHZ;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -326,9 +327,9 @@ public class ResultFragment extends Fragment {
         return false;
     }
 
-    private String getCopyText(String col) {
-        if (col.contentEquals(HZ)) return mEntry.hz;
-        if (!col.contentEquals(ALL_LANGUAGES)) return mEntry.getSingleRaw();
+    private String getCopyText(String language) {
+        if (isLanguageHZ(language)) return mEntry.hz;
+        if (!language.contentEquals(ALL_LANGUAGES)) return mEntry.getSingleRaw();
         return mRaws.get(mEntry.hz);
     }
 
