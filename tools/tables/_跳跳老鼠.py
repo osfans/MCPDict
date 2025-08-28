@@ -19,18 +19,7 @@ class 表(_表):
 			列序 = 自.列序
 			if len(列) <= 列序[0]: return
 			組 = 列[列序[0]]
-			if len(列序) == 1:
-				if not 組.strip(): return
-				try:
-					音, 組 = re.findall(r"^(.*?[\d⁰¹²³⁴⁵⁶⁷⁸⁹]+) ?(.*)$", 組)[0]
-					if re.match(".*[⁰¹²³⁴⁵⁶⁷⁸⁹]", 音):
-						上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
-						for i in 上標:
-							音 = 音.replace(i, str(上標.index(i)))
-				except:
-					自.誤.append(f"無聲調或無漢字：{組}")
-					return
-			elif len(列序) == 2 or len(列序) == 3 or 列序[1] == 列序[2] == 列序[3]:
+			if len(列序) == 2 or len(列序) == 3 or 列序[1] == 列序[2] == 列序[3]:
 				if 列序[1] < len(列): 音= 列[列序[1]]
 			elif 列序[1] == 列序[2] != 列序[3]:
 				音= 列[列序[1]] + 列[列序[3]]
