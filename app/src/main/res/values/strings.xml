@@ -460,6 +460,7 @@
     <string name="pfg">普方古對照</string>
     <string name="hz_only">僅漢字</string>
     <string name="pref_key_pfg">KEY_PFG</string>
+    <string name="pref_key_show_ipa">KEY_SHOW_IPA</string>
     <string name="pref_key_area_level">KEY_AREA_LEVEL</string>
     <string name="yin_code">音碼</string>
     <string name="shape_code">形碼</string>
