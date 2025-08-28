@@ -255,8 +255,8 @@ public class DB extends SQLiteAssetHelper {
             input = HanZi.toHz(input);
             lang = HZ;
         } else if (HanZi.isPY(input) && !isLang(lang)) lang = CMN;
-        if (isHzMode(lang) && searchType == SEARCH.YIN) searchType = SEARCH.HZ;
-        if (isHzMode(lang) && searchType == SEARCH.HZ) {     // Each character is a query
+        if (isLanguageHZ(lang) && searchType == SEARCH.YIN) searchType = SEARCH.HZ;
+        if (isLanguageHZ(lang) && searchType == SEARCH.HZ) {     // Each character is a query
             for (int unicode : input.codePoints().toArray()) {
                 if (!HanZi.isHz(unicode)) continue;
                 String hz = HanZi.toHz(unicode);
@@ -269,7 +269,7 @@ public class DB extends SQLiteAssetHelper {
         if (keywords.isEmpty()) return null;
 
         // Columns to search
-        boolean allowVariants = isHzMode(lang) && Pref.getBool(R.string.pref_key_allow_variants, true) && (SEARCH.HZ == searchType);
+        boolean allowVariants = isLanguageHZ(lang) && Pref.getBool(R.string.pref_key_allow_variants, true) && (SEARCH.HZ == searchType);
 
         // Build inner query statement (a union query returning the id's of matching Chinese characters)
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
@@ -352,7 +352,7 @@ public class DB extends SQLiteAssetHelper {
         String lang = Pref.getShape();
         boolean isYinPrompt = isYinPrompt();
         if (isYinInput() || isYinPrompt()) lang = Pref.getLabel();
-        if (TextUtils.isEmpty(lang) || lang.contentEquals(HZ)) lang = CMN;
+        if (TextUtils.isEmpty(lang) || isLanguageHZ(lang)) lang = CMN;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_NAME);
         String[] projection = {HZ, lang, "rowid as _id"};
@@ -606,7 +606,7 @@ public class DB extends SQLiteAssetHelper {
             }
             case CURRENT -> {
                 ArrayList<String> array = new ArrayList<>();
-                if (!TextUtils.isEmpty(label) && !label.contentEquals(HZ)) array.add(label);
+                if (!TextUtils.isEmpty(label) && !isLanguageHZ(label)) array.add(label);
                 boolean pfg = Pref.getBool(R.string.pref_key_pfg, false);
                 if (pfg) {
                     if(!label.contentEquals(GY)) array.add(GY);
@@ -619,7 +619,7 @@ public class DB extends SQLiteAssetHelper {
         return new String[]{};
     }
 
-    public static boolean isHzMode(String lang) {
+    public static boolean isLanguageHZ(String lang) {
         return lang.contentEquals(HZ);
     }
 
@@ -727,7 +727,7 @@ public class DB extends SQLiteAssetHelper {
     private static String _getIntro(String language) {
         if (TextUtils.isEmpty(language) || Pref.getFilter() == FILTER.HZ) language = HZ;
         String intro = TextUtils.isEmpty(language) ? "" : getFieldByLanguage(language, "說明").replace("\n", "<br>");
-        if (language.contentEquals(HZ)) {
+        if (isLanguageHZ(language)) {
             StringBuilder sb = new StringBuilder();
             String[] fields = new String[] {"版本","字數"};
             for (String field: fields) {
@@ -762,7 +762,7 @@ public class DB extends SQLiteAssetHelper {
         initArrays();
         if (TextUtils.isEmpty(language)) language = Pref.getLanguage();
         String intro = _getIntro(language);
-        if (TextUtils.isEmpty(language) || language.contentEquals(HZ) || Pref.getFilter() == FILTER.HZ) {
+        if (TextUtils.isEmpty(language) || isLanguageHZ(language) || Pref.getFilter() == FILTER.HZ) {
             StringBuilder sb = new StringBuilder();
             sb.append(intro);
             sb.append("<br><h2>已收錄語言</h2><table border=1 cellSpacing=0>");
@@ -836,7 +836,7 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static boolean isLang(String lang) {
-        return !TextUtils.isEmpty(getFieldByLabel(lang, "方言島")) && !lang.contentEquals(HZ);
+        return !TextUtils.isEmpty(getFieldByLabel(lang, "方言島")) && !isLanguageHZ(lang);
     }
 
     public static String[] getFqColumns() {
