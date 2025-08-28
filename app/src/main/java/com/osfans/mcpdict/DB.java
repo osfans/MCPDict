@@ -270,11 +270,33 @@ public class DB extends SQLiteAssetHelper {
 
         // Columns to search
         boolean allowVariants = isLanguageHZ(lang) && Pref.getBool(R.string.pref_key_allow_variants, true) && (SEARCH.HZ == searchType);
-
         // Build inner query statement (a union query returning the id's of matching Chinese characters)
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_LANG);
         List<String> queries = new ArrayList<>();
+
+        FILTER filter = Pref.getFilter();
+        if (filter == FILTER.HZ && SEARCH.HZ == searchType) {
+            qb.setTables(TABLE_NAME);
+            for (int i = 0; i < keywords.size(); i++) {
+                String key = keywords.get(i);
+                String variant = allowVariants ? ("'" + key + "'") : "''";
+                String[] projection = {"rowid AS _id", i + " AS rank", "0 AS vaIndex", variant + " AS variants", "*"};
+                String sql = String.format("漢字 MATCH '%s'", key);
+                queries.add(qb.buildQuery(projection, sql, null, null, null, null));
+                if (allowVariants) {
+                    projection[2] = "1 AS vaIndex";
+                    sql = String.format("異體字 MATCH '%s'", key);
+                    queries.add(qb.buildQuery(projection, sql, null, null, null, null));
+                }
+            }
+            String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);
+            qb.setTables("(" + query + ")");
+            String[] projection = {"漢字", "'' AS 讀音", "'' AS 註釋", "'' AS 語言", "_id", "variants"};
+            query = qb.buildQuery(projection, null, null, null, "rank,vaIndex,_id", null);
+            return db.rawQuery(query, null);
+        }
+
         String[] languages = getVisibleLanguages();
         String languageClause = (languages.length == 0)? "" : ("語言:" + String.join(" OR 語言:", languages));
 

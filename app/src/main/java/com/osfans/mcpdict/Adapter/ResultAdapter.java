@@ -172,46 +172,47 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                         }
                     }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 }
-                ssb.append("\n");
             }
             String lang = cursor.getString(COL_LANG);
             String ipa = cursor.getString(COL_IPA);
-            if (TextUtils.isEmpty(ipa)) return;
-            ipa = DisplayHelper.formatIPA(lang, ipa).toString();
-            if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
-            int n = ssb.length();
-            String raw = DisplayHelper.getRawText(ipa);
+            if (!TextUtils.isEmpty(lang) && !TextUtils.isEmpty(ipa)) {
+                if (bNewHz) ssb.append("\n");
+                ipa = DisplayHelper.formatIPA(lang, ipa).toString();
+                if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
+                int n = ssb.length();
+                String raw = DisplayHelper.getRawText(ipa);
 
-            if (lang.contentEquals(lastLang)) {
-                LeadingMarginSpan.LeadingMarginSpan2 span = new LeadingMarginSpan.LeadingMarginSpan2() {
-                    @Override
-                    public int getLeadingMarginLineCount() {
-                        return 0;
-                    }
+                if (lang.contentEquals(lastLang)) {
+                    LeadingMarginSpan.LeadingMarginSpan2 span = new LeadingMarginSpan.LeadingMarginSpan2() {
+                        @Override
+                        public int getLeadingMarginLineCount() {
+                            return 0;
+                        }
 
-                    @Override
-                    public void drawLeadingMargin(Canvas c, Paint p, int x, int dir, int top, int baseline, int bottom, CharSequence text, int start, int end, boolean first, Layout layout) {
+                        @Override
+                        public void drawLeadingMargin(Canvas c, Paint p, int x, int dir, int top, int baseline, int bottom, CharSequence text, int start, int end, boolean first, Layout layout) {
 
-                    }
+                        }
 
-                    @Override
-                    public int getLeadingMargin(boolean first) {
-                        return marginSize + 5;
-                    }
-                };
-                ssb.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            } else {
-                Drawable drawable = builder.build(lang, getColor(lang), getSubColor(lang));
-                DrawableMarginSpan span = new DrawableMarginSpan(drawable, 5);
-                ssb.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            }
-            CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
-            ssb.append(cs);
-            String zs = cursor.getString(COL_ZS);
-            if (!TextUtils.isEmpty(zs)) {
-                zs = DisplayHelper.formatZS(zs);
-                cs = HtmlCompat.fromHtml(zs, HtmlCompat.FROM_HTML_MODE_COMPACT);
+                        @Override
+                        public int getLeadingMargin(boolean first) {
+                            return marginSize + 5;
+                        }
+                    };
+                    ssb.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                } else {
+                    Drawable drawable = builder.build(lang, getColor(lang), getSubColor(lang));
+                    DrawableMarginSpan span = new DrawableMarginSpan(drawable, 5);
+                    ssb.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                }
+                CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
                 ssb.append(cs);
+                String zs = cursor.getString(COL_ZS);
+                if (!TextUtils.isEmpty(zs)) {
+                    zs = DisplayHelper.formatZS(zs);
+                    cs = HtmlCompat.fromHtml(zs, HtmlCompat.FROM_HTML_MODE_COMPACT);
+                    ssb.append(cs);
+                }
             }
             mTextView.setText(ssb);
         }
