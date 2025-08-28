@@ -162,11 +162,10 @@
                     android:text="@string/pfg" />
 
                 <CheckBox
-                    android:id="@+id/checkBox_output_long"
+                    android:id="@+id/checkBox_show_ipa"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:enabled="false"
                     android:text="@string/long_text" />
             </LinearLayout>
 

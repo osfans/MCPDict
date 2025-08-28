@@ -3,10 +3,8 @@ package com.osfans.mcpdict.Adapter;
 import static com.osfans.mcpdict.DB.COL_HZ;
 import static com.osfans.mcpdict.DB.COL_IPA;
 import static com.osfans.mcpdict.DB.COL_LANG;
-import static com.osfans.mcpdict.DB.isHzMode;
 
 import android.database.Cursor;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +31,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
     public final static List<Integer> mPositions = new ArrayList<>();
     public static RecyclerView mRecyclerView;
     public static String mCurrentLanguage;
-    public static boolean isFilterHZ = false;
+    public static boolean showIPA = false;
 
     /**
      * Provide a reference to the type of views that you are using
@@ -49,7 +47,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
             // Define click listener for the ViewHolder's View
             tvIPA = view.findViewById(R.id.ipa);
             FontUtil.setTypeface(tvIPA);
-            tvIPA.setVisibility(isFilterHZ ? View.GONE : View.VISIBLE);
+            tvIPA.setVisibility(showIPA ? View.VISIBLE : View.GONE);
             tvHZ = view.findViewById(R.id.hz);
             tvHZ.setTextAppearance(R.style.FontDetail);
             FontUtil.setTypeface(tvHZ);
@@ -64,7 +62,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
         public void set(int position) {
             String hz = mHZs.get(position);
             tvHZ.setText(hz);
-            if (!isFilterHZ) {
+            if (showIPA) {
                 String ipa = mIPAs.getOrDefault(hz, "");
                 tvIPA.setText(DisplayHelper.formatIPA(mCurrentLanguage, ipa));
             }
@@ -85,7 +83,8 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
         if (cursor == null) return;
         String lastHz = "";
         mCurrentLanguage = Pref.getLabel();
-        isFilterHZ = (Pref.getFilter() == DB.FILTER.HZ) || isHzMode(mCurrentLanguage);
+        DB.FILTER filter = Pref.getFilter();
+        showIPA = (filter == DB.FILTER.CURRENT && Pref.getBool(R.string.pref_key_show_ipa, false));
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             String hz = cursor.getString(COL_HZ);
             if (!hz.contentEquals(lastHz)) {

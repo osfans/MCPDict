@@ -15,7 +15,6 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
-import android.widget.Filter;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -258,6 +257,13 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         checkPfg.setChecked(Pref.getBool(R.string.pref_key_pfg, false));
         checkPfg.setOnCheckedChangeListener((buttonView, isChecked) -> {
             Pref.putBool(R.string.pref_key_pfg, isChecked);
+            search();
+        });
+
+        CheckBox checkIpa = selfView.findViewById(R.id.checkBox_show_ipa);
+        checkIpa.setChecked(Pref.getBool(R.string.pref_key_show_ipa, false));
+        checkIpa.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Pref.putBool(R.string.pref_key_show_ipa, isChecked);
             search();
         });
 
