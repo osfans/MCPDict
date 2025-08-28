@@ -150,9 +150,11 @@ def 加載(省=None):
 
 		orders = [列[i].strip() for i in ("地圖集二排序", "音典排序", "陳邡排序")]
 		colors = [row[fields.index(i)].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典顏色","陳邡顏色")]
-		subcolor = row[fields.index("音典過渡色")].fill.fgColor.value[2:]
-		if subcolor and subcolor != "000000" and subcolor != colors[1]:
-				colors[1] += f",{subcolor}"
+		subfgColor = row[fields.index("音典過渡色")].fill.fgColor
+		if subfgColor.type == "rgb":
+			subcolor = subfgColor.rgb[2:]
+			if subcolor and subcolor != "000000" and subcolor != colors[1]:
+					colors[1] += f",{subcolor}"
 		colors = [re.sub(r"(\w+)", "#\\1", i) for i in colors]
 
 		types = [s2t(列[i]) for i in ("地圖集二分區", "音典分區", "下拉1，折疊分区")]
