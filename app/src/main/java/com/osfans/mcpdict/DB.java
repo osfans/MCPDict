@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.graphics.Color;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.osfans.mcpdict.Orth.*;
 import com.osfans.mcpdict.Util.UserDB;
@@ -82,7 +81,7 @@ public class DB extends SQLiteAssetHelper {
     private static String[] LANGUAGES = null;
     private static String[] SEARCH_COLUMNS = null;
 
-    public static int COL_HZ = 0, COL_IPA = 1, COL_ZS = 2, COL_LANG = 3;
+    public static int COL_HZ = 0, COL_LANG = 1, COL_IPA = 2, COL_ZS = 3;
     public static int COL_SW, COL_KX, COL_GYHZ, COL_HD;
     public static int COL_ZX, COL_BJJS;
     public static int COL_VA;
@@ -105,7 +104,6 @@ public class DB extends SQLiteAssetHelper {
     private static final String TABLE_LANG = "langs";
     private static final String TABLE_INFO = "info";
 
-    private final static String[] JA_COLUMNS = new String[] {JA_KAN, JA_GO, JA_OTHER};
     private static String[] COLUMNS;
     private static String[] FQ_COLUMNS;
     private static String[] DICTIONARY_COLUMNS;
@@ -293,7 +291,7 @@ public class DB extends SQLiteAssetHelper {
             }
             String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, null);
             qb.setTables("(" + query + ")");
-            String[] projection = {"漢字", "'' AS 讀音", "'' AS 註釋", "'' AS 語言", "_id", "variants"};
+            String[] projection = {"漢字", "'' AS 語言", "'' AS 讀音", "'' AS 註釋", "_id", "variants"};
             query = qb.buildQuery(projection, null, null, null, "rank,vaIndex,_id", null);
             return db.rawQuery(query, null);
         }
@@ -349,7 +347,7 @@ public class DB extends SQLiteAssetHelper {
         // Build outer query statement (returning all information about the matching Chinese characters)
         qb.setTables("(" + query + ") AS u, info");
 //        qb.setDistinct(true);
-        String[] projection = {"漢字", "讀音", "註釋", "u.語言 AS 語言", "_id", "variants"};
+        String[] projection = {"漢字", "u.語言 AS 語言", "讀音", "註釋", "_id", "variants"};
         query = qb.buildQuery(projection, "info.簡稱 MATCH u.語言", null, null, "rank,vaIndex,漢字,"+ORDER, null);
         // Search
         return db.rawQuery(query, null);
@@ -359,7 +357,7 @@ public class DB extends SQLiteAssetHelper {
         // Search for a single Chinese character without any conversions
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_LANG);
-        String[] projection = {"'" + hz + "' AS 漢字", "讀音", "註釋", "語言", "rowid AS _id", "NULL AS variants"};
+        String[] projection = {"'" + hz + "' AS 漢字", "語言", "讀音", "註釋", "rowid AS _id", "NULL AS variants"};
         String[] languages = getVisibleLanguages();
         String languageClause = (languages.length == 0)? "" : ("語言:" + String.join(" OR 語言:", languages));
         String selection = String.format("langs MATCH '字組:%s %s'", hz, languageClause);
@@ -450,7 +448,6 @@ public class DB extends SQLiteAssetHelper {
         COL_LAST_INFO = COLUMNS.length - 2;
         COL_FIRST_SHAPE = COL_VA + 2;
         COL_LAST_SHAPE = COL_LAST_INFO;
-        // COL_ALL_LANGUAGES = 5000; //TODO: not hardcoded
         cursor.close();
         ArrayList<String> arrayList = new ArrayList<>();
         for(int col = COL_FIRST_DICT; col <= COL_LAST_DICT; col++) {
@@ -579,9 +576,9 @@ public class DB extends SQLiteAssetHelper {
         return i < 0 ? "" : COLUMNS[i];
     }
 
-    private static String matchColumns(String[] cols, String value) {
+    private static String matchEditors(String value) {
         ArrayList<String> array = new ArrayList<>();
-        for (String s: cols) {
+        for (String s: DB.EDITOR_COLUMNS) {
             array.add(String.format("%s:%s", s, value));
         }
         return String.join(" OR ", array);
@@ -610,7 +607,7 @@ public class DB extends SQLiteAssetHelper {
             case EDITOR -> {
                 String value = Pref.getStr(R.string.pref_key_editor, "");
                 if (TextUtils.isEmpty(value)) break;
-                return queryLabel(String.format("info MATCH '%s'", matchColumns(EDITOR_COLUMNS, value)));
+                return queryLabel(String.format("info MATCH '%s'", matchEditors(value)));
             }
             case DIVISION -> {
                 String division = Pref.getDivision();
@@ -732,14 +729,6 @@ public class DB extends SQLiteAssetHelper {
 
     public static int getSubColor(String lang) {
         return getColor(lang, 1);
-    }
-
-    public static String getHexColor(String lang) {
-        return String.format("#%06X", getColor(lang) & 0xFFFFFF);
-    }
-
-    public static String getHexSubColor(String lang) {
-        return String.format("#%06X", getSubColor(lang) & 0xFFFFFF);
     }
 
     public static String getDictName(String lang) {
@@ -878,19 +867,6 @@ public class DB extends SQLiteAssetHelper {
         initArrays();
         if (DIVISIONS == null) DIVISIONS = getFieldByLabel(HZ, FQ).split(",");
         return DIVISIONS;
-    }
-
-    public static String getWebFq(String lang) {
-        initArrays();
-        String s = getFieldByLabel(lang, FQ);
-        if (TextUtils.isEmpty(s)) return "";
-        if (s.contains(",")) {
-            s = s.replace(",", " ,");
-            String[] fs = s.split(",");
-            if (fs.length < 2 || TextUtils.isEmpty(fs[1].trim())) return fs[0].trim();
-            return fs[1].trim();
-        }
-        return s;
     }
 
     private static String formatIDS(String s) {
