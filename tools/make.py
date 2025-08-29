@@ -31,7 +31,7 @@ if not args.output:
 		if keys.count(i) > 1:
 			print(f"{i}重名")
 			sys.exit(1)
-	fields = ["字組", "讀音", "註釋", "語言"]
+	fields = ["字組", "語言", "讀音", "註釋"]
 	CREATE = 'CREATE VIRTUAL TABLE langs USING fts3 (%s)' % (",".join(fields))
 	INSERT = 'INSERT INTO langs VALUES (%s)'% (','.join('?' * len(fields)))
 	c.execute(CREATE)
