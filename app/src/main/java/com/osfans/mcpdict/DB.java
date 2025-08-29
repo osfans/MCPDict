@@ -273,14 +273,15 @@ public class DB extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_LANG);
         List<String> queries = new ArrayList<>();
+        String selection;
 
         String[] languages = getVisibleLanguages();
         String languageClause = (languages.length == 0)? "" : ("語言:" + String.join(" OR 語言:", languages));
 
         if (searchType == SEARCH.COMMENT) {
             String[] projection = {"0 AS rank", "0 AS vaIndex", "'' AS variants", "*", "trim(substr(字組, 0, 3)) AS 漢字"};
-            String sql = String.format("langs MATCH '註釋:%s %s'", String.join(" 註釋:", keywords), languageClause);
-            queries.add(qb.buildQuery(projection, sql, null, null, null, null));
+            selection = String.format("langs MATCH '註釋:%s %s'", String.join(" 註釋:", keywords), languageClause);
+            queries.add(qb.buildQuery(projection, selection, null, null, null, null));
         } else {
             if (searchType == SEARCH.YIN) {
                 String hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where langs MATCH '語言:%s 讀音:%s'", lang, String.join(" OR 讀音:", keywords)));
@@ -299,23 +300,25 @@ public class DB extends SQLiteAssetHelper {
             if (max_size > 100) max_size = 100;
 
             for (int i = 0; i < max_size; i++) {
-                String key = keywords.get(i);
-                if (HanZi.isUnknown(key)) {
-                    String variant = allowVariants ? ("'" + key + "'") : "''";
-                    String[] projection = {i + " AS rank", "0 AS vaIndex", variant + " AS variants", "*", "'" + key + "' AS 漢字"};
-                    String sql = String.format("langs MATCH '字組:%s 語言:%s'", key, label);
-                    queries.add(qb.buildQuery(projection, sql, null, null, null, null));
+                String hz = keywords.get(i);
+                if (HanZi.isUnknown(hz)) {
+                    String[] projection = {i + " AS rank", "0 AS vaIndex", "'' AS variants", "*", "'" + hz + "' AS 漢字"};
+                    selection = String.format("langs MATCH '字組:%s 語言:%s'", hz, label);
+                    queries.add(qb.buildQuery(projection, selection, null, null, null, null));
                     continue;
                 }
-                String variant = allowVariants ? ("'" + key + "'") : "''";
+                String variant = allowVariants ? ("'" + hz + "'") : "''";
                 String[] projection = {i + " AS rank", "0 AS vaIndex", variant + " AS variants", "*", "trim(substr(snippet(langs, '', ' ', ' ', 0, 1), 0, 3)) AS 漢字"};
-                String sql = String.format("langs MATCH '字組:%s %s'", key, languageClause);
-                queries.add(qb.buildQuery(projection, sql, null, null, null, null));
+                if (inCharset(hz)) {
+                    selection = String.format("langs MATCH '字組:%s %s'", hz, languageClause);
+                    queries.add(qb.buildQuery(projection, selection, null, null, null, null));
+                }
                 if (allowVariants) {
                     projection[1] = "1 AS vaIndex";
-                    String matchClause = getResult(String.format("SELECT group_concat(漢字, ' OR 字組:') from mcpdict where mcpdict MATCH '異體字: %s'", key));
+                    String matchClause = getResult(String.format("SELECT group_concat(漢字, ' OR 字組:') from mcpdict where mcpdict MATCH '異體字: %s %s'", hz, getCharsetSelect(2)));
                     if (!TextUtils.isEmpty(matchClause)) {
-                        queries.add(qb.buildQuery(projection, String.format("langs MATCH '字組:%s %s'", matchClause, languageClause), null, null, null, null));
+                        selection = String.format("langs MATCH '字組:%s %s'", matchClause, languageClause);
+                        queries.add(qb.buildQuery(projection, selection, null, null, null, null));
                     }
                 }
             }
