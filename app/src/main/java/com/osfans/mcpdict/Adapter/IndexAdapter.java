@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.DisplayHelper;
+import com.osfans.mcpdict.Orth.HanZi;
 import com.osfans.mcpdict.Pref;
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.Util.FontUtil;
@@ -62,7 +63,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
         public void set(int position) {
             String hz = mHZs.get(position);
             tvHZ.setText(hz);
-            if (showIPA) {
+            if (showIPA && !HanZi.isUnknown(hz)) {
                 String ipa = mIPAs.getOrDefault(hz, "");
                 tvIPA.setText(DisplayHelper.formatIPA(mCurrentLanguage, ipa));
             }
