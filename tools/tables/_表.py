@@ -134,8 +134,8 @@ def run2text(run):
 	if run.font.subscript or (run.font.size and run.font.size < Pt(9)):
 		if text.startswith("{") and text.endswith("}"):
 			pass
-		elif text.startswith("[") and text.endswith("]"):
-			pass
+		# elif text.startswith("[") and text.endswith("]"):
+		# 	pass
 		else:
 			text = f"{{{text}}}"
 	return text

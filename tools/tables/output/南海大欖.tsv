@@ -1,6 +1,5 @@
 #漢字	音標	解釋
 □	tou6	(蚊虫)蛰、叮
-□	paŋ2	
 □	lœ3	
 □	hɐi6	
 □	tœŋ6	
@@ -44,6 +43,7 @@
 □	jœŋ3	抖动
 □	ŋɔk8	抬头
 □	jɛp8	招(手)
+□	paŋ2	拟声词
 □	kɐm6	按下
 □	tɐp8	捶打
 □	ŋɐm2	掏(口袋)
@@ -104,8 +104,8 @@
 万	man6	
 丈	tsœŋ6	
 三	sam6	
-上	sœŋ6	
-上	sœŋ4	~山[动词]
+上	sœŋ6	[方位]
+上	sœŋ4	~山，动词
 下	ha6	
 不	pɐt7a	
 与	jy4	
@@ -244,7 +244,6 @@
 似	tsʰy4	
 但	tan6	
 位	wɐi6	
-位	sœŋ6	
 位	wɐi0c	
 低	tɐi6	
 住	tsy6	
@@ -403,7 +402,7 @@
 切	tsʰit7b	
 刎	mɐn4	
 刑	jeŋ2	
-划	wak8	画[动词]
+划	wak8	画，动词
 列	lit8	
 劉	lɐu2	
 則	tsɐk7a	
@@ -447,19 +446,8 @@
 務	mou6	
 劣	lyt7b	
 劥	kʰɐŋ5	酒或烟味道浓烈
-動	sou3	
-動	san5	
-動	køy5	
-動	tsoŋ5	
-動	tam6	
-動	wan6	
 動	sɐi6	
-動	ŋɐu6	
-動	tsɛ6	
-動	tøy6	
-動	sɔ6	
 動	toŋ6	
-動	kɛp8	
 助	tsɔ6	
 努	lou4	
 劫	kip7b	
@@ -573,16 +561,7 @@
 吉	kɐt7a	
 吊	tɛu5	
 同	tʰoŋ2	
-名	sou5	
 名	meŋ2=	
-名	wan0a	
-名	ŋɐu0a	
-名	wa0c	
-名	jɐu0c	
-名	tsʰeŋ0c	
-名	sɔ0c	
-名	tɔi0c	
-名	tʰɔi0c	
 名	mɛŋ0c-	名字
 后	hɐu6	
 吏	lei6	
@@ -751,8 +730,8 @@
 基	kei6	
 堂	tʰɔŋ2	
 堂	tʰɔŋ0c	祠~
-堆	tøy6	
-堆	tøy0c	
+堆	tøy6	动词
+堆	tøy0c	量词
 堡	pau3	
 堤	tʰɐi2	
 堪	hɐm1=	
@@ -780,7 +759,6 @@
 壬	jɐm6	
 壯	tsɔŋ5	
 聲	sɛŋ6-	
-聲	paŋ2	
 聲	seŋ6=	~音
 殼	hɔk7b	
 壺	wu2	
@@ -806,8 +784,8 @@
 頭	tʰɐu2	
 夷	ji2	
 夸	kʷʰa1=	
-夾	kɛp8	
 夾	kap7b	
+夾	kɛp8	动词
 夾	kɛp0c	夹子
 奪	tyt8	
 奀	ŋɐn6	瘦小
@@ -935,7 +913,6 @@
 宵	siu6	
 家	ka6	
 容	joŋ2	
-容	san3	
 寬	fun6	
 賓	pɐn1=	
 宿	sok7a	
@@ -1120,8 +1097,8 @@
 弟	tɐi6	
 張	tsœŋ6	
 弥	mei2	
-彎	wan6	
-彎	wan0a	
+彎	wan6	动词
+彎	wan0a	名词
 弱	jœk8	
 彈	tʰan2	~琴
 彈	tan0c	子~
@@ -1133,7 +1110,6 @@
 當	tɔŋ5	~铺
 录	lok8	
 形	jeŋ2	
-形	san3	
 彩	tsʰɔi3	
 彪	piu1=	
 彬	pɐn1=	
@@ -1320,8 +1296,8 @@
 抹	mat7b	
 押	ŋat7b	
 抽	tsʰɐu6	
-擔	tam6	
-擔	tam5	~竿[名词]
+擔	tam5	~竿，名词
+擔	tam6	动词
 拆	tsʰak7b	
 拇	mou4	
 拉	lai6	
@@ -1337,7 +1313,6 @@
 拙	tsyt8	
 招	tsiu6	
 拜	pai5	
-擬	paŋ2	
 擬	ji4	
 攏	loŋ3	
 揀	kɛn3	
@@ -1473,13 +1448,13 @@
 斂	lim4	
 斂	lɛm3	舔
 敢	kam3	
-散	san3	
-散	san5	
+散	san5	动词
+散	san3	形容词
 敦	tøn1=	
 㪗	tʰɐu3	~气:呼吸
 敬	keŋ5	
-數	sou3	
-數	sou5	
+數	sou3	动词
+數	sou5	名词
 敲	hɛu6	
 整	tseŋ3	
 文	mɐn2	
@@ -1500,7 +1475,6 @@
 斷	tyn6=	
 斯	sy1=	
 新	sɐn6	
-方	sœŋ6	
 方	fɔŋ1=	
 施	si1=	
 旁	pʰɔŋ2	
@@ -1621,8 +1595,8 @@
 枉	wɔŋ3	
 析	sek7a	
 枒	ŋa6	霸占
-枕	tsɐm5	[动词]
-枕	tsɐm3	~头[名词]
+枕	tsɐm3	~头，名词
+枕	tsɐm5	动词
 林	lɐm2	
 枚	mui2	
 果	kɔ3	
@@ -1683,10 +1657,10 @@
 梨	lei2	
 梯	tʰai6	
 械	hai6	
-梳	sɔ6	
-梳	sɔ0c	
+梳	sɔ6	[动]
+梳	sɔ0c	名词
 檢	kʰim3	
-檢	tʰɔi0c	
+檢	tʰɔi0c	名词
 棉	min2	
 棋	kʰei2	
 棍	kʷɐn0c	
@@ -1803,7 +1777,7 @@
 沈	sɐm3	
 沉	tsʰɐm2	
 沌	tøn6	
-沓	tap8	摞起;[量词]一~
+沓	tap8	摞起;量词，一~
 沙	sa6	
 沙	sa0c	沙子
 沛	pʰui5	
@@ -1816,7 +1790,7 @@
 河	hɔ2	
 沸	fɐi5	
 油	jɐu2	
-油	jɐu0c	
+油	jɐu0c	名词
 治	tsi6	
 沼	tsiu3	
 沾	tsim1=	
@@ -2111,7 +2085,7 @@
 甴	tsɐt0c	曱~:蟑螂
 電	tin6	
 男	lam2	
-畫	wa0c	
+畫	wa0c	名词
 畀	pei3	给
 暢	tsʰœŋ5	
 界	kai5	
@@ -2181,7 +2155,7 @@
 監	kɛm6	强迫
 盔	kw?ɐi1	
 盖	kɔi5	
-盖	kɔi0c	[名词]
+盖	kɔi0c	名词
 盜	tou6	
 盤	pʰun2	
 盛	seŋ6	
@@ -2286,12 +2260,12 @@
 秉	peŋ3	
 秋	tsʰɐu1=	
 種	tsoŋ3	
-種	tsoŋ5	
+種	tsoŋ5	动词
 科	fɔ1=	
 秒	miu4	
 秘	pei5	
 租	tsou6	
-秤	tsʰeŋ0c	
+秤	tsʰeŋ0c	[名]
 秦	tsʰøn2	
 秧	jœŋ6	
 秩	tit8	
@@ -2829,7 +2803,7 @@
 衰	søy6	
 衲	lap8	棉~:棉袄
 袁	jyn2	
-袋	tɔi0c	
+袋	tɔi0c	名词;量词
 袖	tsɐu6	
 袜	mɐt8	
 被	pei6	~动
@@ -2895,28 +2869,8 @@
 詐	tsa5	
 訴	sou5	
 診	tsʰɐn3	
-詞	paŋ2	
 詞	tsʰy2	
-詞	san3	
-詞	sou3	
-詞	san5	
-詞	køy5	
-詞	sou5	
-詞	tsoŋ5	
-詞	tam6	
-詞	wan6	
 詞	sɐi6	
-詞	ŋɐu6	
-詞	tøy6	
-詞	kɛp8	
-詞	wan0a	
-詞	ŋɐu0a	
-詞	wa0c	
-詞	jɐu0c	
-詞	tøy0c	
-詞	sɔ0c	
-詞	tɔi0c	
-詞	tʰɔi0c	
 譯	jek8	
 試	si5	
 詩	si1=	
@@ -3141,7 +3095,7 @@
 遺	wɐi2	
 遣	hin3	
 遙	jiu2	
-遮	tsɛ6	
+遮	tsɛ6	[动]
 遮	tsɛ0a	伞
 遵	tsøn1=	
 避	pei6	
@@ -3190,13 +3144,11 @@
 野	jɛ4	
 量	lœŋ2	
 量	lœŋ6	
-量	tøy0c	
-量	tɔi0c	
 金	kɐm6	
 金	kɐm0a	礼~
 釜	fu3	
 鑑	kam5	
-錔	tʰap0c	[名词]笔~:笔帽儿
+錔	tʰap0c	名词，笔~:笔帽儿
 錔	tʰap7b	套上，锁上
 針	tsɐm6	
 釘	tɛŋ6	
@@ -3208,8 +3160,8 @@
 钟	tsoŋ0a	
 鋼	kɔŋ5	
 鈞	kʷɐn1=	
-鉤	ŋɐu6	
-鉤	ŋɐu0a	
+鉤	ŋɐu6	动词
+鉤	ŋɐu0a	名词
 錢	tsʰin2	
 鉗	kʰim2	
 鉢	put0c	
@@ -3244,7 +3196,7 @@
 錐	jøy0a	锥子
 錦	kɐm3	
 鍵	kin6	
-鋸	køy5	
+鋸	køy5	动词
 鋸	køy0c	锯子
 鍬	tsʰiu6	
 鍛	tyn6	

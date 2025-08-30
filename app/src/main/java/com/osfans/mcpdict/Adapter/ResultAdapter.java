@@ -201,7 +201,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                     };
                     ssb.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 } else {
-                    Drawable drawable = builder.build(lang, getColor(lang), getSubColor(lang));
+                    Drawable drawable = builder.build(lang.replace("－", "-").replace("（", "(").replace("）", ")"), getColor(lang), getSubColor(lang));
                     DrawableMarginSpan span = new DrawableMarginSpan(drawable, 5);
                     ssb.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 }
