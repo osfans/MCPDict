@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.graphics.Color;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.osfans.mcpdict.Orth.*;
 import com.osfans.mcpdict.Util.UserDB;
@@ -283,17 +284,19 @@ public class DB extends SQLiteAssetHelper {
             selection = String.format("langs MATCH '註釋:%s %s'", String.join(" 註釋:", keywords), languageClause);
             queries.add(qb.buildQuery(projection, selection, null, null, null, null));
         } else {
+            String hzs = "";
             if (searchType == SEARCH.YIN) {
-                String hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where langs MATCH '語言:%s 讀音:%s'", lang, String.join(" OR 讀音:", keywords)));
+                hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where langs MATCH '語言:%s 讀音:%s'", lang, String.join(" OR 讀音:", keywords)));
                 if (TextUtils.isEmpty(hzs)) hzs = "";
                 hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where 漢字 MATCH '%s'", hzs.replaceAll(" ", " OR ")));
-                if (TextUtils.isEmpty(hzs)) hzs = "";
+                if (TextUtils.isEmpty(hzs)) return null;
                 keywords = Arrays.asList(hzs.split(" "));
             } else if (searchType == SEARCH.DICT) {
                 String dict = Pref.getDict();
                 String match = TextUtils.isEmpty(dict) ? "mcpdict" : DB.getLabelByLanguage(dict);
-                String hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where %s MATCH '%s'", match, String.join(" ", keywords)));
-                keywords = Arrays.asList((TextUtils.isEmpty(hzs) ? "" : hzs).split(" "));
+                hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where %s MATCH '%s'", match, String.join(" ", keywords)));
+                if (TextUtils.isEmpty(hzs)) return null;
+                keywords = Arrays.asList(hzs.split(" "));
             }
 
             int max_size = keywords.size();
@@ -323,6 +326,7 @@ public class DB extends SQLiteAssetHelper {
                 }
             }
         }
+        if (queries.isEmpty()) return null;
         String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, "10000");
 
         if (FILTER.HZ == Pref.getFilter()) {
@@ -338,6 +342,7 @@ public class DB extends SQLiteAssetHelper {
             query = qb.buildQuery(projection, "info.簡稱 MATCH u.語言", null, null, "rank,vaIndex,漢字," + ORDER, null);
         }
         // Search
+        Log.e("DB", query);
         return db.rawQuery(query, null);
     }
 
@@ -651,6 +656,7 @@ public class DB extends SQLiteAssetHelper {
         }
         StringBuilder sb = new StringBuilder();
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+            if (cursor.isNull(0)) continue;
             sb.append(cursor.getString(0));
         }
         cursor.close();
