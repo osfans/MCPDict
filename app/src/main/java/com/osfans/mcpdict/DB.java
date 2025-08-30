@@ -52,7 +52,7 @@ public class DB extends SQLiteAssetHelper {
     public static final String SYLLABLES = "音節數";
 
     public static final String SG = "鄭張上古";
-    public static final String BA = "白-沙上古";
+    public static final String BA = "白－沙上古";
     public static final String GY = "廣韻";
     public static final String ZT = "中唐";
     public static final String ZYYY = "中原音韻";
