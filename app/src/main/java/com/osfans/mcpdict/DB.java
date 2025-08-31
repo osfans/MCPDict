@@ -276,8 +276,7 @@ public class DB extends SQLiteAssetHelper {
         List<String> queries = new ArrayList<>();
         String selection;
 
-        String[] languages = getVisibleLanguages();
-        String languageClause = (languages.length == 0)? "" : ("語言:" + String.join(" OR 語言:", languages));
+        String languageClause = getLanguageClause();
 
         if (searchType == SEARCH.COMMENT) {
             String[] projection = {"0 AS rank", "0 AS vaIndex", "'' AS variants", "*", "trim(substr(字組, 0, 3)) AS 漢字"};
@@ -351,8 +350,7 @@ public class DB extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_LANG);
         String[] projection = {"'" + hz + "' AS 漢字", "語言", "讀音", "註釋", "'' AS variants"};
-        String[] languages = getVisibleLanguages();
-        String languageClause = (languages.length == 0)? "" : ("語言:" + String.join(" OR 語言:", languages));
+        String languageClause = getLanguageClause();
         String selection = String.format("langs MATCH '字組:%s %s'", hz, languageClause);
         String query = qb.buildQuery(projection, selection, null, null, null, null);
         return db.rawQuery(query, null);
@@ -637,6 +635,11 @@ public class DB extends SQLiteAssetHelper {
             }
         }
         return new String[]{};
+    }
+
+    public static String getLanguageClause() {
+        String[] languages = getVisibleLanguages();
+        return (languages.length == 0)? "" : ("語言:(" + String.join(" OR ", languages) + ")");
     }
 
     public static boolean isLanguageHZ(String lang) {
