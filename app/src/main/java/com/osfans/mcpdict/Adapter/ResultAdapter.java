@@ -58,7 +58,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView mTextView;
         float fontSize;
-        int marginSize;
+        int mWidth, mHeight;
         TextDrawable.IBuilder builder;
         SpannableStringBuilder ssb = new SpannableStringBuilder();
         String lastLang, lastHz;
@@ -75,14 +75,15 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             mTextView.setMovementMethod(LinkMovementMethod.getInstance());
             mTextView.setTag(this);
             mTextView.setHyphenationFrequency(android.text.Layout.HYPHENATION_FREQUENCY_NONE);
-            fontSize = mTextView.getTextSize() * 0.8f;
-            marginSize = (int) (fontSize * 3.4f);
+            fontSize = mTextView.getTextSize();
+            mWidth = (int) (fontSize * 3.0f);
+            mHeight = (int) (fontSize * 1.6f);
             builder = TextDrawable.builder()
                     .beginConfig()
                     .withBorder(3)
-                    .width(marginSize)  // width in px
-                    .height((int) (fontSize * 1.6f)) // height in px
-                    .fontSize(fontSize)
+                    .width(mWidth)  // width in px
+                    .height(mHeight) // height in px
+                    .fontSize(fontSize * 0.85f)
                     .endConfig()
                     .roundRect(5);
         }
@@ -198,13 +199,13 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
 
                         @Override
                         public int getLeadingMargin(boolean first) {
-                            return marginSize + 5;
+                            return mWidth + 3;
                         }
                     };
                     ssb.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 } else {
                     Drawable drawable = builder.build(lang.replace("－", "-").replace("（", "(").replace("）", ")"), getColor(lang), getSubColor(lang));
-                    DrawableMarginSpan span = new DrawableMarginSpan(drawable, 5);
+                    DrawableMarginSpan span = new DrawableMarginSpan(drawable, 3);
                     ssb.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 }
                 CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
