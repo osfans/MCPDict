@@ -86,6 +86,8 @@ public class ResultFragment extends Fragment {
     private View selfView;
     private TextView mTextView;
     private RecyclerView mIndexView, mRecyclerView;
+    private IndexAdapter mIndexAdapter;
+    private ResultAdapter mResultAdapter;
     private final boolean showFavoriteButton;
     private final Entry mEntry = new Entry();
     private boolean showMenu;
@@ -168,6 +170,10 @@ public class ResultFragment extends Fragment {
         mIndexView.addItemDecoration(dividerItemDecoration);
         mRecyclerView = selfView.findViewById(R.id.recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mIndexAdapter = new IndexAdapter(mRecyclerView);
+        mIndexView.setAdapter(mIndexAdapter);
+        mResultAdapter = new ResultAdapter();
+        mRecyclerView.setAdapter(mResultAdapter);
         Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(Pref.getToneStyle(R.string.pref_key_tone_value_display));
 
@@ -555,8 +561,8 @@ public class ResultFragment extends Fragment {
     public void setData(String query, Cursor cursor) {
         mRaws.clear();
         if (true) {
-            mRecyclerView.setAdapter(new ResultAdapter(cursor));
-            mIndexView.setAdapter(new IndexAdapter(cursor, mRecyclerView));
+            mIndexAdapter.changeCursor(cursor);
+            mResultAdapter.changeCursor(cursor);
         } else {
             FontUtil.setTypeface(mTextView);
             long startTime = System.currentTimeMillis();
