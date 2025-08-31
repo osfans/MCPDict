@@ -49,7 +49,7 @@ import com.osfans.mcpdict.Util.FontUtil;
 
 public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder> {
 
-    private final Cursor mCursor;
+    private Cursor mCursor = null;
 
     /**
      * Provide a reference to the type of views that you are using
@@ -218,15 +218,15 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         }
     }
 
-    /**
-     * Initialize the dataset of the Adapter
-     *
-     * @param cursor String[] containing the data to populate views to be used
-     * by RecyclerView
-     */
-    public ResultAdapter(Cursor cursor) {
+    public ResultAdapter() {
+        super();
+    }
+
+    public void changeCursor(Cursor cursor) {
+        if (mCursor != null) mCursor.close();
         if (cursor != null) cursor.moveToFirst();
         mCursor = cursor;
+        notifyDataSetChanged();
     }
 
     // Create new views (invoked by the layout manager)

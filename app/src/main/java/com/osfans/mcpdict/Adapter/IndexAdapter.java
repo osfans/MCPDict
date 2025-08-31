@@ -32,7 +32,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
     public final static List<Integer> mPositions = new ArrayList<>();
     public static RecyclerView mRecyclerView;
     public static String mCurrentLanguage;
-    public static boolean showIPA = false;
+    public static boolean mShowIPA = false;
 
     /**
      * Provide a reference to the type of views that you are using
@@ -48,7 +48,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
             // Define click listener for the ViewHolder's View
             tvIPA = view.findViewById(R.id.ipa);
             FontUtil.setTypeface(tvIPA);
-            tvIPA.setVisibility(showIPA ? View.VISIBLE : View.GONE);
+            tvIPA.setVisibility(mShowIPA ? View.VISIBLE : View.GONE);
             tvHZ = view.findViewById(R.id.hz);
             tvHZ.setTextAppearance(R.style.FontDetail);
             FontUtil.setTypeface(tvHZ);
@@ -63,7 +63,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
         public void set(int position) {
             String hz = mHZs.get(position);
             tvHZ.setText(hz);
-            if (showIPA && !HanZi.isUnknown(hz)) {
+            if (mShowIPA && !HanZi.isUnknown(hz)) {
                 String ipa = mIPAs.getOrDefault(hz, "");
                 tvIPA.setText(DisplayHelper.formatIPA(mCurrentLanguage, ipa));
             }
@@ -77,29 +77,39 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
      * by RecyclerView
      */
     public IndexAdapter(Cursor cursor, RecyclerView recyclerView) {
+        mRecyclerView = recyclerView;
+        changeCursor(cursor);
+    }
+
+    public void changeCursor(Cursor cursor) {
         mHZs.clear();
         mIPAs.clear();
         mPositions.clear();
-        mRecyclerView = recyclerView;
-        if (cursor == null) return;
         String lastHz = "";
         mCurrentLanguage = Pref.getLabel();
         DB.FILTER filter = Pref.getFilter();
-        showIPA = (filter == DB.FILTER.CURRENT && Pref.getBool(R.string.pref_key_show_ipa, false));
-        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-            String hz = cursor.getString(COL_HZ);
-            if (!hz.contentEquals(lastHz)) {
-                mHZs.add(hz);
-                mPositions.add(cursor.getPosition());
+        if (cursor != null) {
+            mShowIPA = (filter == DB.FILTER.CURRENT && Pref.getBool(R.string.pref_key_show_ipa, false));
+            for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+                String hz = cursor.getString(COL_HZ);
+                if (!hz.contentEquals(lastHz)) {
+                    mHZs.add(hz);
+                    mPositions.add(cursor.getPosition());
+                }
+                String lang = cursor.getString(COL_LANG);
+                if (lang.contentEquals(mCurrentLanguage)) {
+                    String ipa = cursor.getString(COL_IPA);
+                    String lastIpa = mIPAs.getOrDefault(hz, "") + " ";
+                    mIPAs.put(hz, (lastIpa + ipa).trim());
+                }
+                lastHz = hz;
             }
-            String lang = cursor.getString(COL_LANG);
-            if (lang.contentEquals(mCurrentLanguage)) {
-                String ipa = cursor.getString(COL_IPA);
-                String lastIpa = mIPAs.getOrDefault(hz, "") + " ";
-                mIPAs.put(hz, (lastIpa + ipa).trim());
-            }
-            lastHz = hz;
         }
+        notifyDataSetChanged();
+    }
+
+    public IndexAdapter(RecyclerView recyclerView) {
+        this(null, recyclerView);
     }
 
     // Create new views (invoked by the layout manager)
