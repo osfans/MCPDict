@@ -284,8 +284,10 @@ public class DB extends SQLiteAssetHelper {
             queries.add(qb.buildQuery(projection, selection, null, null, null, null));
         } else {
             String hzs = "";
+            String IPAs = "";
             if (searchType == SEARCH.YIN) {
-                hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where langs MATCH '語言:%s 讀音:%s'", lang, String.join(" OR 讀音:", keywords)));
+                IPAs = "讀音:" + String.join(" OR 讀音:", keywords);
+                hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where langs MATCH '語言:%s %s'", lang, IPAs));
                 if (TextUtils.isEmpty(hzs)) hzs = "";
                 hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where 漢字 MATCH '%s'", hzs.replaceAll(" ", " OR ")));
                 if (TextUtils.isEmpty(hzs)) return null;
@@ -305,7 +307,7 @@ public class DB extends SQLiteAssetHelper {
                 String hz = keywords.get(i);
                 if (HanZi.isUnknown(hz)) {
                     String[] projection = {i + " AS rank", "0 AS vaIndex", "'' AS variants", "*", "'" + hz + "' AS 漢字"};
-                    selection = String.format("langs MATCH '字組:%s 語言:%s'", hz, label);
+                    selection = String.format("langs MATCH '字組:%s 語言:%s %s'", hz, label, IPAs);
                     queries.add(qb.buildQuery(projection, selection, null, null, null, null));
                     continue;
                 }
