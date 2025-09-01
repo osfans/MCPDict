@@ -16,6 +16,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.osmdroid.util.GeoPoint;
 
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -767,7 +768,14 @@ public class DB extends SQLiteAssetHelper {
                         value = value.replace(","," ,").split(",")[0].trim();
                         if (TextUtils.isEmpty(value)) continue;
                     }
-                    sb.append(String.format(Locale.getDefault(), "%s：%s<br>", field, value));
+                    String s = value;
+                    if (field.contentEquals("文件名")) {
+                        try {
+                            s = String.format("<a href=\"https://github.com/osfans/MCPDict/blob/master/tools/tables/data/%s\">%s</a>", URLEncoder.encode(value, "utf8"), value);
+                        } catch (Exception ignore) {
+                        }
+                    }
+                    sb.append(String.format(Locale.getDefault(), "%s：%s<br>", field, s));
                 }
             }
             sb.append(intro);
