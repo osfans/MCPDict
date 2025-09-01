@@ -247,6 +247,7 @@ class 表:
 		g = 自.find(sname)
 		if not g:
 			logging.error(f"\t\t未找到 {sname}")
+			自.文件名 = None
 			return
 		if len(g) != 1:
 			logging.error(f"\t\t找到多个 {sname}：{g}")
