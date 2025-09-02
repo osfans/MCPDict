@@ -2,8 +2,8 @@ package com.osfans.mcpdict;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteQueryBuilder;
+import io.requery.android.database.sqlite.SQLiteDatabase;
+import io.requery.android.database.sqlite.SQLiteQueryBuilder;
 import android.graphics.Color;
 import android.text.TextUtils;
 import android.util.Log;
@@ -136,11 +136,11 @@ public class DB extends SQLiteAssetHelper {
         String value = Pref.getStringArray(R.array.pref_values_charset)[charset];
         String selection;
         if (matchClause == 1) {
-            selection = String.format(" AND `%s` MATCH '%s'", FL, value);
+            selection = String.format(" AND %s MATCH '%s'", FL, value);
         } else if (matchClause == 2) {
-            selection = String.format(" %s:%s", FL, value);
+            selection = String.format(" AND %s:%s", FL, value);
         } else {
-            selection = String.format(" AND `%s` LIKE '%%%s%%'", FL, value);
+            selection = String.format(" AND %s LIKE '%%%s%%'", FL, value);
         }
         return selection;
     }
@@ -280,26 +280,26 @@ public class DB extends SQLiteAssetHelper {
         String languageClause = getLanguageClause();
 
         if (searchType == SEARCH.COMMENT) {
-            String[] projection = {"0 AS rank", "0 AS vaIndex", "'' AS variants", "*", "trim(substr(字組, 0, 3)) AS 漢字"};
-            selection = String.format("langs MATCH '註釋:%s %s'", String.join(" 註釋:", keywords), languageClause);
+            String[] projection = {"0 AS rank", "0 AS vaIndex", "'' AS variants", "*", "trim(substr(字組, 1, 1)) AS 漢字"};
+            selection = String.format("註釋 MATCH '\"%s\"' %s", String.join(" ", keywords), languageClause);
             queries.add(qb.buildQuery(projection, selection, null, null, null, null));
         } else {
-            String hzs = "";
+            String hzs;
             String IPAs = "";
             if (searchType == SEARCH.YIN) {
-                IPAs = "讀音:" + String.join(" OR 讀音:", keywords);
-                hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where langs MATCH '語言:%s %s'", lang, IPAs));
-                if (TextUtils.isEmpty(hzs)) hzs = "";
-                hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where 漢字 MATCH '%s'", hzs.replaceAll(" ", " OR ")));
+                IPAs = String.format("AND 讀音 MATCH '%s'", String.join(" OR ", keywords));
+                hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where 語言 MATCH '%s' %s", lang, IPAs));
                 if (TextUtils.isEmpty(hzs)) return null;
-                keywords = Arrays.asList(hzs.split(" "));
+                hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where 漢字 MATCH '%s'", hzs.replaceAll(" ", " OR ")));
             } else if (searchType == SEARCH.DICT) {
                 String dict = Pref.getDict();
                 String match = TextUtils.isEmpty(dict) ? "mcpdict" : DB.getLabelByLanguage(dict);
                 hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where %s MATCH '%s'", match, String.join(" ", keywords)));
-                if (TextUtils.isEmpty(hzs)) return null;
-                keywords = Arrays.asList(hzs.split(" "));
+            } else {
+                hzs = String.join(" ", keywords);
             }
+            if (TextUtils.isEmpty(hzs)) return null;
+            keywords = Arrays.asList(hzs.split(" "));
 
             int max_size = keywords.size();
             if (max_size > 100) max_size = 100;
@@ -308,21 +308,21 @@ public class DB extends SQLiteAssetHelper {
                 String hz = keywords.get(i);
                 if (HanZi.isUnknown(hz)) {
                     String[] projection = {i + " AS rank", "0 AS vaIndex", "'' AS variants", "*", "'" + hz + "' AS 漢字"};
-                    selection = String.format("langs MATCH '字組:%s 語言:%s %s'", hz, label, IPAs);
+                    selection = String.format("字組 MATCH '%s' AND 語言 MATCH '%s' %s", hz, label, IPAs);
                     queries.add(qb.buildQuery(projection, selection, null, null, null, null));
                     continue;
                 }
                 String variant = allowVariants ? ("'" + hz + "'") : "''";
-                String[] projection = {i + " AS rank", "0 AS vaIndex", variant + " AS variants", "*", "trim(substr(snippet(langs, '', ' ', ' ', 0, 1), 0, 3)) AS 漢字"};
+                String[] projection = {i + " AS rank", "0 AS vaIndex", variant + " AS variants", "*", "snippet(langs, '', '', '', '', 1) AS 漢字"};
                 if (inCharset(hz)) {
-                    selection = String.format("langs MATCH '字組:%s %s'", hz, languageClause);
+                    selection = String.format("字組 MATCH '%s' %s", hz, languageClause);
                     queries.add(qb.buildQuery(projection, selection, null, null, null, null));
                 }
                 if (allowVariants) {
                     projection[1] = "1 AS vaIndex";
-                    String matchClause = getResult(String.format("SELECT group_concat(漢字, ' OR 字組:') from mcpdict where mcpdict MATCH '異體字: %s %s'", hz, getCharsetSelect(2)));
+                    String matchClause = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where 異體字 MATCH '%s' %s", hz, getCharsetSelect(1)));
                     if (!TextUtils.isEmpty(matchClause)) {
-                        selection = String.format("langs MATCH '字組:%s %s'", matchClause, languageClause);
+                        selection = String.format("字組 MATCH '%s' %s", matchClause, languageClause);
                         queries.add(qb.buildQuery(projection, selection, null, null, null, null));
                     }
                 }
@@ -332,16 +332,16 @@ public class DB extends SQLiteAssetHelper {
         String query = qb.buildUnionQuery(queries.toArray(new String[0]), null, "10000");
 
         if (FILTER.HZ == Pref.getFilter()) {
-            qb.setTables("(" + query + ")");
+            qb.setTables("(" + query + ") as u");
             qb.setDistinct(true);
             String[] projection = {"漢字", "'' AS 語言", "'' AS 讀音", "'' AS 註釋", "variants"};
-            query = qb.buildQuery(projection, null, null, null, "rank,vaIndex,漢字", null);
+            query = qb.buildQuery(projection, null, null, null, "u.rank,vaIndex,漢字", null);
         } else {
             // Build outer query statement (returning all information about the matching Chinese characters)
             qb.setTables("(" + query + ") AS u, info");
 //          qb.setDistinct(true);
             String[] projection = {"漢字", "u.語言 AS 語言", "讀音", "註釋", "variants"};
-            query = qb.buildQuery(projection, "info.簡稱 MATCH u.語言", null, null, "rank,vaIndex,漢字," + ORDER, null);
+            query = qb.buildQuery(projection, "簡稱 MATCH u.語言", null, null, "u.rank,vaIndex,漢字," + ORDER, null);
         }
         // Search
         Log.e("DB", query);
@@ -354,7 +354,7 @@ public class DB extends SQLiteAssetHelper {
         qb.setTables(TABLE_LANG);
         String[] projection = {"'" + hz + "' AS 漢字", "語言", "讀音", "註釋", "'' AS variants"};
         String languageClause = getLanguageClause();
-        String selection = String.format("langs MATCH '字組:%s %s'", hz, languageClause);
+        String selection = String.format("字組 MATCH '%s' %s", hz, languageClause);
         String query = qb.buildQuery(projection, selection, null, null, null, null);
         return db.rawQuery(query, null);
     }
@@ -642,7 +642,7 @@ public class DB extends SQLiteAssetHelper {
 
     public static String getLanguageClause() {
         String[] languages = getVisibleLanguages();
-        return (languages.length == 0)? "" : ("語言:(" + String.join(" OR ", languages) + ")");
+        return (languages.length == 0)? "" : String.format("AND 語言 MATCH '%s'", String.join(" OR ", languages));
     }
 
     public static boolean isLanguageHZ(String lang) {

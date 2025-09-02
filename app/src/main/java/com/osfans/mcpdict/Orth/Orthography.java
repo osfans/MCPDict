@@ -308,7 +308,7 @@ public class Orthography {
                 sb.append(" ");
             }
         }
-        return String.format("\\\"%s\\\"", sb.toString().trim().replace("  ", " "));
+        return sb.toString().trim().replace("  ", " ");
     }
 
     public static String[] normWords(String s) {
