@@ -142,15 +142,17 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 // Unicode
                 String unicode = HanZi.toUnicode(hz);
                 Cursor dictCursor = DB.getDictCursor(hz);
-                dictCursor.moveToFirst();
-                ssb.append(" " + unicode + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, COL_HZ, getUnicode(dictCursor)), COL_HZ, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                raws.setLength(0);
-                raws.append(String.format("%s %s\n", hz, unicode));
-                // DICTS
-                for (int i = COL_FIRST_DICT; i <= COL_LAST_DICT; i++) {
-                    s = dictCursor.getString(i);
-                    if (!TextUtils.isEmpty(s)) {
-                        ssb.append(" " + getLabel(i) + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, i, s), i, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                if (dictCursor.getCount() == 1) {
+                    dictCursor.moveToFirst();
+                    ssb.append(" " + unicode + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, COL_HZ, getUnicode(dictCursor)), COL_HZ, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    raws.setLength(0);
+                    raws.append(String.format("%s %s\n", hz, unicode));
+                    // DICTS
+                    for (int i = COL_FIRST_DICT; i <= COL_LAST_DICT; i++) {
+                        s = dictCursor.getString(i);
+                        if (!TextUtils.isEmpty(s)) {
+                            ssb.append(" " + getLabel(i) + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, i, s), i, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        }
                     }
                 }
                 dictCursor.close();
