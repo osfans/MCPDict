@@ -28146,6 +28146,31 @@
         "marker-color": "#52CCAD",
         "marker-size": "small",
         "marker-symbol": "f",
+        "title": "柞水馬臺",
+        "語言": "柞水馬臺江南話",
+        "地點": "陝西商洛柞水瓦房口馬家臺",
+        "地圖集二分區": "贛語-大通片",
+        "音典分區": "湘贛-鄂州",
+        "陳邡分區": "湘贛-咸寧-咸寧大片-馬臺片",
+        "方言島": true,
+        "版本": "2025-09-02",
+        "錄入人": "DaiDzao",
+        "字表來源": "《陕南客伙话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.433415,
+          33.704691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
         "title": "瑞昌肇陳",
         "語言": "瑞昌肇陳話",
         "地點": "江西九江瑞昌肇陳",
