@@ -44,7 +44,7 @@ public abstract class DisplayHelper {
     }
 
     public static String formatJS(String s) {
-        return s.replace("  ", "　").replace(" ", "").replace("　", " ");
+        return s.replace("  ", "　").replace(" ", "").replace("　", " ").replace("?", "？").replace("!", "！").replace(",", "，").replace(":", "：").replace(";", "；").replace("~", "～");
     }
 
     public static String formatZS(String s) {
@@ -88,26 +88,25 @@ public abstract class DisplayHelper {
         return HtmlCompat.fromHtml(text, HtmlCompat.FROM_HTML_MODE_COMPACT);
     }
 
-    public static CharSequence formatIPA(String lang, String string) {
-        CharSequence cs;
-        if (TextUtils.isEmpty(string)) return "";
-        cs = switch (lang) {
-            case DB.HK -> Cantonese.displayHelper.display(string, lang);
-            case DB.KOR -> Korean.displayHelper.display(string, lang);
-            case DB.VI -> Vietnamese.displayHelper.display(string, lang);
-            case DB.BA -> BA_DISPLAY_HELPER.display(string, lang);
+    public static CharSequence formatIPA(String lang, String s) {
+        if (TextUtils.isEmpty(s)) return "";
+        s = s.replaceAll("-(/)|-(/?)$", "{(白)}$1").replaceAll("=(/)|=(/?)$", "{(文)}$1");
+        return switch (lang) {
+            case DB.HK -> Cantonese.displayHelper.display(s, lang);
+            case DB.KOR -> Korean.displayHelper.display(s, lang);
+            case DB.VI -> Vietnamese.displayHelper.display(s, lang);
+            case DB.BA -> BA_DISPLAY_HELPER.display(s, lang);
 
-            case DB.SG -> SG_DISPLAY_HELPER.displayRich(string, lang);
-            case DB.GY -> MiddleChinese.displayHelper.displayRich(string, lang);
-            case DB.ZT -> Zhongtang.displayHelper.displayRich(string, lang);
-            case DB.ZYYY -> ZhongyuanYinyun.displayHelper.displayRich(string, lang);
-            case DB.DGY -> Dungan.displayHelper.displayRich(string, lang);
-            case DB.CMN, DB.CMN_TW -> Mandarin.displayHelper.displayRich(string, lang);
-            case DB.TW -> Minnan.displayHelper.displayRich(string, lang);
-            case DB.JA_GO, DB.JA_KAN, DB.JA_OTHER -> Japanese.displayHelper.displayRich(string, lang);
-            default -> Tones.displayHelper.displayRich(string, lang);
+            case DB.SG -> SG_DISPLAY_HELPER.displayRich(s, lang);
+            case DB.GY -> MiddleChinese.displayHelper.displayRich(s, lang);
+            case DB.ZT -> Zhongtang.displayHelper.displayRich(s, lang);
+            case DB.ZYYY -> ZhongyuanYinyun.displayHelper.displayRich(s, lang);
+            case DB.DGY -> Dungan.displayHelper.displayRich(s, lang);
+            case DB.CMN, DB.CMN_TW -> Mandarin.displayHelper.displayRich(s, lang);
+            case DB.TW -> Minnan.displayHelper.displayRich(s, lang);
+            case DB.JA_GO, DB.JA_KAN, DB.JA_OTHER -> Japanese.displayHelper.displayRich(s, lang);
+            default -> Tones.displayHelper.displayRich(s, lang);
         };
-        return cs;
     }
 
     public boolean isIPA(char c) {
