@@ -7,7 +7,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
-import android.os.AsyncTask;
 import android.widget.CursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -105,26 +104,14 @@ public class FavoriteAdapter extends CursorAdapter {
     // Mark a Chinese character as expanded
     // If a view is provided, expand that view, too
     // If a list is provided, scroll the list so that the view is entirely visible
-    public void expandItem(final String hz, final View view, final ListView list) {
+    public void expandItem(final String hz, final View view, final ListView ignore) {
         expandedItems.add(hz);
         if (view == null) return;
         final View container = view.findViewWithTag("container");
         final ResultFragment fragment = (ResultFragment) view.getTag();
-        new AsyncTask<Void, Void, Cursor>() {
-            @Override
-            protected Cursor doInBackground(Void... params) {
-                return DB.directSearch(hz);
-            }
-            @Override
-            protected void onPostExecute(Cursor cursor) {
-                fragment.setData(hz, cursor);
-                container.setVisibility(View.VISIBLE);
-                if (list == null) {
-                }
-                //scrollListToShowItem(list, view);
-                //cursor.close();
-            }
-        }.execute();
+        Cursor cursor = DB.directSearch(hz);
+        fragment.setData(cursor);
+        container.setVisibility(View.VISIBLE);
     }
 
     public void collapseItem(String hz) {

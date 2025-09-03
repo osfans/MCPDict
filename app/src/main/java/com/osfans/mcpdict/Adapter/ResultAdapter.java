@@ -50,6 +50,7 @@ import com.osfans.mcpdict.Util.FontUtil;
 public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder> {
 
     private Cursor mCursor = null;
+    boolean isMainPage;
 
     /**
      * Provide a reference to the type of views that you are using
@@ -113,7 +114,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             new MapView(mView.getContext(), hz).show();
         }
 
-        public void set(Cursor cursor) {
+        public void set(Cursor cursor, boolean isMainPage) {
             if (TextUtils.isEmpty(Pref.getInput())) {
                 mTextView.setText(HtmlCompat.fromHtml(DB.getIntro(), HtmlCompat.FROM_HTML_MODE_COMPACT));
                 return;
@@ -165,8 +166,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                     }
                 }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 // Favorite
-                boolean showFavoriteButton = true;
-                if (showFavoriteButton) {
+                if (isMainPage) {
                     String label = bFavorite ? "⭐":"⛤";
                     ssb.append(" " + label + " ", new PopupSpan(hz, 0, color) {
                         @Override
@@ -221,8 +221,9 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         }
     }
 
-    public ResultAdapter() {
+    public ResultAdapter(boolean isMainPage) {
         super();
+        this.isMainPage = isMainPage;
     }
 
     public void changeCursor(Cursor cursor) {
@@ -250,7 +251,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         if (mCursor != null) mCursor.moveToPosition(position);
-        viewHolder.set(mCursor);
+        viewHolder.set(mCursor, isMainPage);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
