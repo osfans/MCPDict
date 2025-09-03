@@ -56,7 +56,7 @@ public class Orthography {
         return String.format("*%s*", s); // 斜體
     }
 
-    private static final String[] toneBars = {"ˀ˩˨˧˦˥ˀ", "ˀ꜖꜕꜔꜓꜒ˀ", "ˀ꜌꜋꜊꜉꜈ˀ", "ˀ꜑꜐꜏꜎꜍ˀ", "⁰¹²³⁴⁵⁶"};
+    private static final String[] toneBars = {"ʔ˩˨˧˦˥ˀ", "ʔ꜖꜕꜔꜓꜒ˀ", "ʔ꜌꜋꜊꜉꜈ˀ", "ʔ꜑꜐꜏꜎꜍ˀ", "⁰¹²³⁴⁵⁶"};
     private static String formatToneBar(String s, int index) {
         if (TextUtils.isEmpty(s)) return "";
         if (s.contains("/")) {
