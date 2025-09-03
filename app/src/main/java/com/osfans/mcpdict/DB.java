@@ -291,15 +291,15 @@ public class DB extends SQLiteAssetHelper {
                 hzs = getResult(String.format("SELECT group_concat(字組, ' ') from langs where 語言 MATCH '%s' %s", lang, IPAs));
                 if (TextUtils.isEmpty(hzs)) return null;
                 hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where 漢字 MATCH '%s'", hzs.replaceAll(" ", " OR ")));
+                if (TextUtils.isEmpty(hzs)) return null;
+                keywords = Arrays.asList(hzs.split(" "));
             } else if (searchType == SEARCH.DICT) {
                 String dict = Pref.getDict();
                 String match = TextUtils.isEmpty(dict) ? "mcpdict" : DB.getLabelByLanguage(dict);
                 hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where %s MATCH '%s'", match, String.join(" ", keywords)));
-            } else {
-                hzs = String.join(" ", keywords);
+                if (TextUtils.isEmpty(hzs)) return null;
+                keywords = Arrays.asList(hzs.split(" "));
             }
-            if (TextUtils.isEmpty(hzs)) return null;
-            keywords = Arrays.asList(hzs.split(" "));
 
             int max_size = keywords.size();
             if (max_size > 100) max_size = 100;
@@ -320,7 +320,7 @@ public class DB extends SQLiteAssetHelper {
                 }
                 if (allowVariants) {
                     projection[1] = "1 AS vaIndex";
-                    String matchClause = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where 異體字 MATCH '%s' %s", hz, getCharsetSelect(1)));
+                    String matchClause = getResult(String.format("SELECT group_concat(漢字, ' OR ') from mcpdict where 異體字 MATCH '%s' %s", hz, getCharsetSelect(1)));
                     if (!TextUtils.isEmpty(matchClause)) {
                         selection = String.format("字組 MATCH '%s' %s", matchClause, languageClause);
                         queries.add(qb.buildQuery(projection, selection, null, null, null, null));
