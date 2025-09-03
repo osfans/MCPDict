@@ -102,7 +102,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             cursor.moveToNext();
         }
 
-        public void showFavorite(String hz, boolean favorite, String comment) {
+        public void showFavorite(String hz, String comment) {
             if (comment != null) {
                 FavoriteDialogs.view(hz, comment);
             } else {
@@ -171,7 +171,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                     ssb.append(" " + label + " ", new PopupSpan(hz, 0, color) {
                         @Override
                         public void onClick(@NonNull View view) {
-                            showFavorite(hz, bFavorite, comment);
+                            showFavorite(hz, comment);
                         }
                     }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 }

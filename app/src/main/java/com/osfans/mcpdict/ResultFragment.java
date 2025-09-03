@@ -2,22 +2,9 @@ package com.osfans.mcpdict;
 
 import static com.osfans.mcpdict.DB.ALL_LANGUAGES;
 import static com.osfans.mcpdict.DB.COL_ALL_LANGUAGES;
-import static com.osfans.mcpdict.DB.COL_IPA;
-import static com.osfans.mcpdict.DB.COL_LANG;
-import static com.osfans.mcpdict.DB.COL_LAST_DICT;
 import static com.osfans.mcpdict.DB.COL_HZ;
-import static com.osfans.mcpdict.DB.COL_FIRST_DICT;
-import static com.osfans.mcpdict.DB.COL_ZS;
-import static com.osfans.mcpdict.DB.HZ;
-import static com.osfans.mcpdict.DB.VARIANTS;
-import static com.osfans.mcpdict.DB.getColor;
 import static com.osfans.mcpdict.DB.getColumn;
 import static com.osfans.mcpdict.DB.getColumnIndex;
-import static com.osfans.mcpdict.DB.getLabel;
-import static com.osfans.mcpdict.DB.getResult;
-import static com.osfans.mcpdict.DB.getSubColor;
-import static com.osfans.mcpdict.DB.getUnicode;
-import static com.osfans.mcpdict.DB.inCharset;
 import static com.osfans.mcpdict.DB.isLanguageHZ;
 
 import android.content.ClipData;
@@ -25,33 +12,23 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.text.SpannableStringBuilder;
-import android.text.Spanned;
 import android.text.TextUtils;
-import android.text.style.DrawableMarginSpan;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.RelativeSizeSpan;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
-import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -61,27 +38,21 @@ import com.osfans.mcpdict.Adapter.ResultAdapter;
 import com.osfans.mcpdict.Favorite.FavoriteDialogs;
 import com.osfans.mcpdict.Orth.HanZi;
 import com.osfans.mcpdict.Orth.Orthography;
-import com.osfans.mcpdict.UI.MenuSpan;
 import com.osfans.mcpdict.UI.MapView;
-import com.osfans.mcpdict.UI.PopupSpan;
-import com.osfans.mcpdict.UI.TextDrawable;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.ref.WeakReference;
 import java.net.URLEncoder;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 public class ResultFragment extends Fragment {
 
     private static final String TAG = "ResultFragment";
     private View selfView;
-    private TextView mTextView;
-    private RecyclerView mIndexView, mRecyclerView;
+    private RecyclerView mIndexView;
     private IndexAdapter mIndexAdapter;
     private ResultAdapter mResultAdapter;
     private final boolean isMainPage;
@@ -161,31 +132,15 @@ public class ResultFragment extends Fragment {
         // Inflate the fragment view
         selfView = inflater.inflate(R.layout.search_result, container, false);
         mIndexView = selfView.findViewById(R.id.index_view);
-        mRecyclerView = selfView.findViewById(R.id.recycler_view);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        mIndexAdapter = new IndexAdapter(mRecyclerView);
+        RecyclerView recyclerView = selfView.findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mIndexAdapter = new IndexAdapter(recyclerView);
         mIndexView.setAdapter(mIndexAdapter);
         mResultAdapter = new ResultAdapter(isMainPage);
-        mRecyclerView.setAdapter(mResultAdapter);
+        recyclerView.setAdapter(mResultAdapter);
         Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(Pref.getToneStyle(R.string.pref_key_tone_value_display));
 
-        View.OnTouchListener listener = new View.OnTouchListener() {
-            private final GestureDetector gestureDetector = new GestureDetector(requireActivity(), new GestureDetector.SimpleOnGestureListener() {
-                @Override
-                public boolean onDoubleTap(@NonNull MotionEvent e) {
-                    mHandler.sendEmptyMessage(MSG_FULLSCREEN);
-                    return true;
-                }
-            });
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                gestureDetector.onTouchEvent(event);
-                return false;
-            }
-        };
-        // selfView.setOnTouchListener(listener);
         return selfView;
     }
 
@@ -339,216 +294,6 @@ public class ResultFragment extends Fragment {
 
     public void scrollToTop() {
         //listView.setSelectionAfterHeaderView();
-    }
-
-    private CharSequence setTextData(String query, Cursor cursor) {
-        SpannableStringBuilder sb = new SpannableStringBuilder();
-        if (TextUtils.isEmpty(query)) {
-            sb.append(HtmlCompat.fromHtml(DB.getIntro(), HtmlCompat.FROM_HTML_MODE_COMPACT));
-        } else if (cursor == null || cursor.getCount() == 0) {
-            sb.append(getString(R.string.no_matches));
-        } else {
-            StringBuilder hzs = new StringBuilder();
-            int count = cursor.getCount();
-            String[] cols = DB.getVisibleLanguages();
-            for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-                String hz = cursor.getString(COL_HZ);
-                sb.append(hz);
-                hzs.append(hz);
-                // Variants
-                String s = cursor.getString(cursor.getColumnIndexOrThrow(VARIANTS));
-                if (!TextUtils.isEmpty(s) && !s.contentEquals(hz)) {
-                    s = String.format("(%s)", s);
-                    sb.append(s);
-                }
-                String unicode = HanZi.toUnicode(hz);
-                sb.append(" ").append(unicode);
-                // DICTS
-                for (int i = COL_FIRST_DICT; i <= COL_LAST_DICT; i++) {
-                    s = cursor.getString(i);
-                    if (!TextUtils.isEmpty(s)) {
-                        sb.append(" ").append(getLabel(i));
-                    }
-                }
-                sb.append("\n");
-                StringBuilder sb2 = new StringBuilder();
-                if (HanZi.isUnknown(hz)) {
-                    String col = Pref.getLabel();
-                    if (!DB.isLang(col)) continue;
-                    int i = cursor.getColumnIndex(col);
-                    s = cursor.getString(i);
-                    if (TextUtils.isEmpty(s)) continue;
-                    String label = getLabel(col);
-                    sb2.append(String.format("［%s］", label));
-                    sb2.append(HtmlCompat.fromHtml(DisplayHelper.formatUnknownIPA(col, s).toString(),HtmlCompat.FROM_HTML_MODE_COMPACT));
-                    sb2.append("\n");
-                } else {
-                    for (String col : cols) {
-                        int i = cursor.getColumnIndex(col);
-                        s = cursor.getString(i);
-                        if (TextUtils.isEmpty(s)) continue;
-                        String label = getLabel(col);
-                        sb2.append(String.format("［%s］", label));
-                        String ipa = DisplayHelper.formatIPA(col, s).toString();
-                        if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
-                        sb2.append(HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT));
-                        sb2.append("\n");
-                    }
-                }
-                if (!TextUtils.isEmpty(sb2)) {
-                    sb.append("──────────\n");
-                    sb.append(sb2);
-                }
-                if (!cursor.isLast()) sb.append("══════════\n");
-            }
-            if (count > 1) {
-                hzs.append("\n══════════\n");
-                sb.insert(0, hzs);
-            }
-        }
-        return sb.toString();
-    }
-
-    private SpannableStringBuilder setTableData(String query, Cursor cursor) {
-        SpannableStringBuilder ssb = new SpannableStringBuilder();
-        if (TextUtils.isEmpty(query)) {
-            ssb.append(HtmlCompat.fromHtml(DB.getIntro(), HtmlCompat.FROM_HTML_MODE_COMPACT));
-        } else if (cursor == null || cursor.getCount() == 0) {
-            ssb.append(getString(R.string.no_matches));
-        } else {
-            String s;
-            float fontSize = mTextView.getTextSize() * 0.8f;
-            TextDrawable.IBuilder builder = TextDrawable.builder()
-                    .beginConfig()
-                    .withBorder(3)
-                    .width((int) (fontSize * 3.4f))  // width in px
-                    .height((int) (fontSize * 1.6f)) // height in px
-                    .fontSize(fontSize)
-                    .endConfig()
-                    .roundRect(5);
-            StringBuilder hzs = new StringBuilder();
-            Set<String> uniqueHanzi = new HashSet<>();
-            int hzCount = 0;
-            int index = 0;
-            int linesCount = 0;
-            int n = 0;
-            StringBuilder raws = new StringBuilder();
-            String lastHz = "", lastLang = "";
-            boolean bNewHz, bNewLang;
-            Cursor dictCursor = null;
-            DB.FILTER filter = Pref.getFilter();
-            SpannableStringBuilder ssb2 = new SpannableStringBuilder();
-            for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-                String hz = cursor.getString(COL_HZ);
-                bNewHz = !hz.contentEquals(lastHz);
-                if (bNewHz && !inCharset(hz)) {
-                    uniqueHanzi.add(lastHz);
-                    uniqueHanzi.add(hz);
-                    continue;
-                }
-                if (!bNewHz && uniqueHanzi.contains(hz)) continue; // Skip duplicate hz
-                String comment = getResult(String.format("select comment from user.favorite where hz = '%s'", hz));
-                boolean bFavorite = (comment != null);
-                int color = getResources().getColor(R.color.accent, requireContext().getTheme());
-                if (bNewHz) {
-                    if (!TextUtils.isEmpty(lastHz)) {
-                        ssb.append("\n");
-                        uniqueHanzi.add(lastHz);
-                    }
-                    hzs.append(hz);
-                    hzCount++;
-                    n = ssb.length();
-                    ssb.append(hz, new ForegroundColorSpan(getColor(HZ)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    ssb.setSpan(new RelativeSizeSpan(1.8f), n, ssb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    // Variants
-                    s = cursor.getString(cursor.getColumnIndexOrThrow(VARIANTS));
-                    if (!TextUtils.isEmpty(s) && !s.contentEquals(hz)) {
-                        s = String.format("(%s)", s);
-                        ssb.append(s, new ForegroundColorSpan(getResources().getColor(R.color.dim, requireContext().getTheme())), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    }
-                    // Unicode
-                    String unicode = HanZi.toUnicode(hz);
-                    dictCursor = DB.getDictCursor(hz);
-                    dictCursor.moveToFirst();
-                    ssb.append(" " + unicode + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, COL_HZ, getUnicode(dictCursor)), COL_HZ, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    raws.setLength(0);
-                    raws.append(String.format("%s %s\n", hz, unicode));
-                }
-                if (filter != DB.FILTER.HZ) {
-                    // yb
-                    String lang = cursor.getString(COL_LANG);
-                    s = cursor.getString(COL_IPA);
-                    String zs = cursor.getString(COL_ZS);
-                    if (!TextUtils.isEmpty(zs)) s = String.format("%s{%s}", s, zs);
-                    if (TextUtils.isEmpty(s)) continue;
-                    linesCount++;
-                    String ipa = DisplayHelper.formatIPA(lang, s).toString();
-                    if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
-                    CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
-                    n = ssb2.length();
-                    if (bNewHz) lastLang = "";
-                    bNewLang = !lang.contentEquals(lastLang);
-                    String raw = DisplayHelper.getRawText(s);
-                    if (bNewLang) {
-                        if (!TextUtils.isEmpty(lastLang)) ssb2.append("\n");
-                        Drawable drawable = builder.build(lang, getColor(lang), getSubColor(lang));
-                        DrawableMarginSpan span = new DrawableMarginSpan(drawable, 10);
-                        ssb2.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    }
-                    Entry e = new Entry(hz, lang, raw, bFavorite, comment);
-                    ssb2.setSpan(new MenuSpan(e), n, ssb2.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    ssb2.append(cs);
-                    ssb2.append(" ");
-                    raws.append(formatReading(lang, raw));
-                    lastLang = lang;
-                    mRaws.put(hz, raws.toString());
-                }
-                if (bNewHz) {
-                    // DICTS
-                    for (int i = COL_FIRST_DICT; i <= COL_LAST_DICT; i++) {
-                        s = dictCursor.getString(i);
-                        if (!TextUtils.isEmpty(s)) {
-                            ssb.append(" " + getLabel(i) + " ", new PopupSpan(DisplayHelper.formatPopUp(hz, i, s), i, color), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                        }
-                    }
-                    dictCursor.close();
-                    // Map
-                    if (!TextUtils.isEmpty(ssb2)) {
-                        ssb.append(DB.MAP + " ", new PopupSpan(hz, 0, color) {
-                            @Override
-                            public void onClick(@NonNull View view) {
-                                view.post(() -> showMap(hz));
-                            }
-                        }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    }
-                    // Favorite
-                    if (isMainPage) {
-                        String label = bFavorite ? "⭐":"⛤";
-                        ssb.append(" " + label + " ", new PopupSpan(hz, 0, color) {
-                            @Override
-                            public void onClick(@NonNull View view) {
-                                showFavorite(hz, bFavorite, comment);
-                            }
-                        }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                    }
-                    ssb.append("\n");
-                }
-                lastHz = hz;
-                index++;
-                ssb.append(ssb2);
-                ssb2.clear();
-            }
-            if (hzCount > 1) {
-                if (hzCount > 10) hzs.append("…");
-                hzs.append("\n");
-                ssb.insert(0, hzs);
-            }
-        }
-        return ssb;
-    }
-
-    private CharSequence getTextData(String query, Cursor cursor) {
-        return setTableData(query, cursor);
     }
 
     public void setData(Cursor cursor) {
