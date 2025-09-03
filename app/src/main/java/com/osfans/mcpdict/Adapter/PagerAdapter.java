@@ -10,7 +10,7 @@ import com.osfans.mcpdict.DictFragment;
 import com.osfans.mcpdict.Favorite.FavoriteFragment;
 
 public class PagerAdapter extends FragmentStateAdapter {
-    private static final int NUM_PAGES = 1;
+    private static final int NUM_PAGES = 2;
     public static final int PAGE_DICTIONARY = 0;
     public static final int PAGE_FAVORITE = 1;
 

@@ -27,7 +27,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -37,7 +36,6 @@ import android.text.TextUtils;
 import android.text.style.DrawableMarginSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.GestureDetector;
@@ -55,7 +53,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -68,7 +65,6 @@ import com.osfans.mcpdict.UI.MenuSpan;
 import com.osfans.mcpdict.UI.MapView;
 import com.osfans.mcpdict.UI.PopupSpan;
 import com.osfans.mcpdict.UI.TextDrawable;
-import com.osfans.mcpdict.Util.FontUtil;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.ref.WeakReference;
@@ -88,7 +84,7 @@ public class ResultFragment extends Fragment {
     private RecyclerView mIndexView, mRecyclerView;
     private IndexAdapter mIndexAdapter;
     private ResultAdapter mResultAdapter;
-    private final boolean showFavoriteButton;
+    private final boolean isMainPage;
     private final Entry mEntry = new Entry();
     private boolean showMenu;
     private final HashMap<String, String> mRaws = new HashMap<>();
@@ -147,9 +143,9 @@ public class ResultFragment extends Fragment {
         this(true);
     }
 
-    public ResultFragment(boolean showFavoriteButton) {
+    public ResultFragment(boolean isMainPage) {
         super();
-        this.showFavoriteButton = showFavoriteButton;
+        this.isMainPage = isMainPage;
     }
 
     @Override
@@ -165,14 +161,11 @@ public class ResultFragment extends Fragment {
         // Inflate the fragment view
         selfView = inflater.inflate(R.layout.search_result, container, false);
         mIndexView = selfView.findViewById(R.id.index_view);
-        mIndexView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(mIndexView.getContext(), LinearLayoutManager.HORIZONTAL);
-        mIndexView.addItemDecoration(dividerItemDecoration);
         mRecyclerView = selfView.findViewById(R.id.recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mIndexAdapter = new IndexAdapter(mRecyclerView);
         mIndexView.setAdapter(mIndexAdapter);
-        mResultAdapter = new ResultAdapter();
+        mResultAdapter = new ResultAdapter(isMainPage);
         mRecyclerView.setAdapter(mResultAdapter);
         Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(Pref.getToneStyle(R.string.pref_key_tone_value_display));
@@ -529,7 +522,7 @@ public class ResultFragment extends Fragment {
                         }, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                     }
                     // Favorite
-                    if (showFavoriteButton) {
+                    if (isMainPage) {
                         String label = bFavorite ? "⭐":"⛤";
                         ssb.append(" " + label + " ", new PopupSpan(hz, 0, color) {
                             @Override
@@ -558,35 +551,11 @@ public class ResultFragment extends Fragment {
         return setTableData(query, cursor);
     }
 
-    public void setData(String query, Cursor cursor) {
-        mRaws.clear();
-        if (true) {
-            mIndexAdapter.changeCursor(cursor);
-            mResultAdapter.changeCursor(cursor);
-        } else {
-            FontUtil.setTypeface(mTextView);
-            long startTime = System.currentTimeMillis();
-            new AsyncTask<Void, Void, CharSequence>() {
-                @Override
-                protected CharSequence doInBackground(Void... params) {
-                    CharSequence ssb = getTextData(query, cursor);
-                    if (cursor != null) cursor.close();
-                    return ssb;
-                }
-
-                @Override
-                protected void onPostExecute(CharSequence text) {
-                    mTextView.setText(text);
-                    mTextView.setVisibility(View.VISIBLE);
-                    mRecyclerView.setScrollY(0);
-                    Log.d(TAG, String.format("setData %s cost %d ms", query, (System.currentTimeMillis() - startTime)));
-                }
-            }.execute();
-        }
-    }
-
     public void setData(Cursor cursor) {
-        setData(Pref.getInput(), cursor);
+        mRaws.clear();
+        mIndexView.setVisibility(isMainPage ? View.VISIBLE : View.GONE);
+        mIndexAdapter.changeCursor(cursor);
+        mResultAdapter.changeCursor(cursor);
     }
 
     public void openContextMenu(View v) {

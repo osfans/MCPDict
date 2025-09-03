@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
         mPager = findViewById(R.id.pager);
-        mPager.setUserInputEnabled(false);
+        mPager.setUserInputEnabled(true);
         initAdapter();
     }
 
