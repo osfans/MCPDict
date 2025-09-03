@@ -258,7 +258,7 @@ def 獲取同音字頻(get=False):
 				for 項 in combinations(字組, 2):
 					雙字 = "".join(sorted(項))
 					同音字頻[雙字].add(語.簡稱)
-	高頻字 = "".join(sorted(高頻字表.keys(), key=高頻字表.get, reverse=True)[:5000])
+	高頻字 = "□" + ("".join(sorted(高頻字表.keys(), key=高頻字表.get, reverse=True)[:5000]))
 	for i in set(同音字頻.keys()):
 		if len(同音字頻[i]) <= 1:
 			del 同音字頻[i]
