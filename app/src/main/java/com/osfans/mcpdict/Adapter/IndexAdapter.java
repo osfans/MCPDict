@@ -32,7 +32,6 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
     public final static List<Integer> mPositions = new ArrayList<>();
     public static RecyclerView mRecyclerView;
     public static String mCurrentLanguage;
-    public static boolean mShowIPA = false;
 
     /**
      * Provide a reference to the type of views that you are using
@@ -48,7 +47,6 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
             // Define click listener for the ViewHolder's View
             tvIPA = view.findViewById(R.id.ipa);
             FontUtil.setTypeface(tvIPA);
-            tvIPA.setVisibility(mShowIPA ? View.VISIBLE : View.GONE);
             tvHZ = view.findViewById(R.id.hz);
             tvHZ.setTextAppearance(R.style.FontDetail);
             FontUtil.setTypeface(tvHZ);
@@ -63,9 +61,12 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
         public void set(int position) {
             String hz = mHZs.get(position);
             tvHZ.setText(hz);
-            if (mShowIPA && !HanZi.isUnknown(hz)) {
+
+            boolean showIPA = (Pref.getFilter() == DB.FILTER.CURRENT && Pref.getBool(R.string.pref_key_show_ipa, false));
+            tvIPA.setVisibility(showIPA ? View.VISIBLE : View.GONE);
+            if (showIPA && !HanZi.isUnknown(hz)) {
                 String ipa = mIPAs.getOrDefault(hz, "");
-                tvIPA.setText(DisplayHelper.formatIPA(mCurrentLanguage, ipa));
+                tvIPA.setText(DisplayHelper.getIPA(mCurrentLanguage, ipa));
             }
         }
     }
@@ -87,9 +88,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
         mPositions.clear();
         String lastHz = "";
         mCurrentLanguage = Pref.getLabel();
-        DB.FILTER filter = Pref.getFilter();
         if (cursor != null) {
-            mShowIPA = (filter == DB.FILTER.CURRENT && Pref.getBool(R.string.pref_key_show_ipa, false));
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 String hz = cursor.getString(COL_HZ);
                 if (!hz.contentEquals(lastHz)) {

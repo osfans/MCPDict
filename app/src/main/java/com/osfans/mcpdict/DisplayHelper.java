@@ -55,27 +55,7 @@ public abstract class DisplayHelper {
         if (TextUtils.isEmpty(s)) return "";
         return s.replaceAll("[|*\\[\\]]", "").replaceAll("\\{.*?\\}", "");
     }
-
-    public static CharSequence formatUnknownIPA(String lang, String string) {
-        StringBuilder sb = new StringBuilder();
-        String s = string.replace("}\t", "}\n");
-        String input = Pref.getInput();
-        if (HanZi.isUnknown(input)) sb.append(s);
-        else {
-            String[] inputs = input.split("[, ]+");
-            for (String i : s.split("\n")) {
-                String i2 = i.replace(" ", "");
-                for (String j: inputs) {
-                    if (i2.contains(j)) {
-                        sb.append(i).append("\n");
-                        break;
-                    }
-                }
-            }
-        }
-        return formatIPA(lang, sb.toString());
-    }
-
+    
     public static CharSequence formatPopUp(String hz, int i, String s) {
         if (TextUtils.isEmpty(s)) return "";
         if (i != COL_HZ) s = formatJS(s);
@@ -107,6 +87,10 @@ public abstract class DisplayHelper {
             case DB.JA_GO, DB.JA_KAN, DB.JA_OTHER -> Japanese.displayHelper.displayRich(s, lang);
             default -> Tones.displayHelper.displayRich(s, lang);
         };
+    }
+
+    public static CharSequence getIPA(String lang, String s) {
+        return HtmlCompat.fromHtml(formatIPA(lang, s).toString(), HtmlCompat.FROM_HTML_MODE_LEGACY).toString();
     }
 
     public boolean isIPA(char c) {
