@@ -19129,6 +19129,30 @@
         "marker-color": "#EB6E77",
         "marker-size": "medium",
         "marker-symbol": "b",
+        "title": "英山",
+        "語言": "英山話",
+        "地點": "湖北黃岡英山",
+        "地圖集二分區": "江淮官話-黃孝片",
+        "音典分區": "中上江-荆益-黃孝",
+        "陳邡分區": "官話-長江-西南大片-孝感片",
+        "版本": "2025-09-04",
+        "錄入人": "DaiDzao",
+        "字表來源": "《湖北英山方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.688284,
+          30.741103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "黃州",
         "語言": "黃州話",
         "地點": "湖北黃岡",

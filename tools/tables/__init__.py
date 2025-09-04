@@ -235,7 +235,7 @@ def 獲取同音字頻(get=False):
 			語.simplified = 2
 		if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 		if d["字聲韻調註列名"]:
-			字聲韻調註列名 = d["字聲韻調註列名"].upper()
+			字聲韻調註列名 = d["字聲韻調註列名"]
 			列名 = 字聲韻調註列名.split(",") if "," in 字聲韻調註列名 else list(字聲韻調註列名)
 			語.列序 = [列序(i) for i in 列名]
 		if d["聲調"]:
@@ -318,7 +318,7 @@ def getLangs(items, 參數, args):
 				語.simplified = 2
 			if d["地圖集二分區"] == None: d["地圖集二分區"] = ""
 			if d["字聲韻調註列名"]:
-				字聲韻調註列名 = d["字聲韻調註列名"].upper().replace("[", ",").replace("]", ",")
+				字聲韻調註列名 = d["字聲韻調註列名"]
 				列名 = 字聲韻調註列名.split(",") if "," in 字聲韻調註列名 else list(字聲韻調註列名)
 				語.列序 = [列序(i) for i in 列名]
 			addAllFq(types[0], d["地圖集二分區"], d["地圖集二排序"])
