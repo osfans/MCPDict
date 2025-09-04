@@ -17,7 +17,5 @@ public class MenuSpan extends ClickableSpan {
     @Override
     public void onClick(@NonNull View v) {
         ResultFragment resultFragment = (ResultFragment) v.getTag();
-        resultFragment.setEntry(entry);
-        resultFragment.openContextMenu(v);
     }
 }

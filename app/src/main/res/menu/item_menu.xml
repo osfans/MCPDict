@@ -1,0 +1,34 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:id="@+id/lang">
+        <item
+            android:id="@+id/menu_item_goto_info"
+            android:title="@string/goto_info" >
+        </item>
+        <item
+            android:id="@+id/menu_item_custom_language"
+            android:title="@string/add_to_custom_language" >
+        </item>
+    </group>
+    <group android:id="@+id/ipa">
+        <item
+            android:id="@+id/menu_item_copy_readings"
+            android:title="@string/copy_one_reading" />
+        <item
+            android:id="@+id/menu_item_search_homophone"
+            android:title="@string/search_homophone" />
+    </group>
+    <group android:id="@+id/hz">
+        <item
+            android:id="@+id/menu_item_copy_hz"
+            android:title="@string/copy_hz" >
+        </item>
+        <item
+            android:id="@+id/menu_item_dict_links"
+            android:title="@string/one_dict_links" />
+        <item
+            android:id="@+id/menu_item_favorite"
+            android:title="@string/favorite_add" />
+    </group>
+
+</menu>

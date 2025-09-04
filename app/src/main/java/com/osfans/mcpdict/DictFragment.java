@@ -331,7 +331,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 if (fragmentResult != null) {
                     Log.d(TAG, String.format("search %s cost %d ms",  Pref.getInput(), (System.currentTimeMillis() - start)));
                     fragmentResult.setData(cursor);
-                    fragmentResult.scrollToTop();
                 }
             }
         }.execute();

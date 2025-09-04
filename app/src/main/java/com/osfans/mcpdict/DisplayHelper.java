@@ -44,6 +44,7 @@ public abstract class DisplayHelper {
     }
 
     public static String formatJS(String s) {
+        if (TextUtils.isEmpty(s)) return "";
         return s.replace("  ", "　").replace(" ", "").replace("　", " ").replace("?", "？").replace("!", "！").replace(",", "，").replace(":", "：").replace(";", "；").replace("~", "～");
     }
 
