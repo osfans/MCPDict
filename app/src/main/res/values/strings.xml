@@ -33,18 +33,18 @@
     <string name="pref_key_allow_variants">ALLOW_VARIANTS</string>
 
     <string name="copy_readings">複製“%s”字或其讀音</string>
-    <string name="copy_one_reading">複製“%1$s”字的“%2$s”讀音</string>
+    <string name="copy_one_reading">複製“%2$s”中“%1$s”字的讀音</string>
     <string name="copy_hz">複製“%s”字</string>
     <string name="dict_links">去在線詞典查詢“%s”字</string>
     <string name="one_dict_links">去“%2$s”查詢“%1$s”字</string>
-    <string name="search_homophone">查詢“%1$s”字的“%2$s”同音字</string>
+    <string name="search_homophone">查詢“%2$s”中讀“%1$s”的同音字</string>
     <string name="share_readings">分享“%s”字的所有讀音</string>
     <string name="goto_info">查看“%s”的詳細信息</string>
 
     <string name="add_to_custom_language">把“%s”加入自選語言</string>
-    <string name="add_to_custom_language_done">已加入自選語言</string>
+    <string name="add_to_custom_language_done">“%s”已加入自選語言</string>
     <string name="rm_from_custom_language">把“%s”移出自選語言</string>
-    <string name="rm_from_custom_language_done">已从自選語言移出</string>
+    <string name="rm_from_custom_language_done">“%s”已从自選語言移出</string>
 
     <string name="all_reading">所有讀音</string>
     <string name="copy_all_reading">複製“%1$s”字的所有讀音</string>
@@ -61,7 +61,7 @@
     <string name="favorite_view">查看“%s”字的筆記</string>
     <string name="favorite_edit">編輯“%s”字的筆記</string>
     <string name="favorite_edit_2lines">編輯“%s”字\n的筆記</string>
-    <string name="favorite_view_or_edit">查看或編輯“%s”字的筆記</string>
+    <string name="favorite_view_or_edit">查看“%s”字的筆記</string>
     <string name="favorite_edit_done">已保存“%s”字的筆記</string>
 
     <string name="favorite_delete">把“%s”字從生字本中刪除</string>
