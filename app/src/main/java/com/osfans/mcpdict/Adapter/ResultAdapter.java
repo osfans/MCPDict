@@ -1,5 +1,6 @@
 package com.osfans.mcpdict.Adapter;
 
+import static com.osfans.mcpdict.DB.BA;
 import static com.osfans.mcpdict.DB.COL_FIRST_DICT;
 import static com.osfans.mcpdict.DB.COL_HZ;
 import static com.osfans.mcpdict.DB.COL_IPA;
@@ -51,6 +52,7 @@ import com.osfans.mcpdict.DictFragment;
 import com.osfans.mcpdict.DisplayHelper;
 import com.osfans.mcpdict.Favorite.FavoriteDialogs;
 import com.osfans.mcpdict.MainActivity;
+import com.osfans.mcpdict.Orth.BaiSha;
 import com.osfans.mcpdict.Orth.HanZi;
 import com.osfans.mcpdict.Pref;
 import com.osfans.mcpdict.R;
@@ -316,9 +318,11 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             item = menu.findItem(R.id.menu_item_search_homophone);
             item.setTitle(Pref.getString(R.string.search_homophone, DisplayHelper.getIPA(lang, ipa).toString().replaceAll("[ /].*$",""), lang));
             item.setOnMenuItemClickListener(i->{
+                String query = ipa.replaceAll("/.*$","");
+                if (lang.contentEquals(BA)) query = BaiSha.display(ipa);
                 DictFragment dictFragment = ((MainActivity) v.getContext()).getDictionaryFragment();
                 dictFragment.setType(1);
-                dictFragment.refresh(ipa.replaceAll("/.*$",""), lang);
+                dictFragment.refresh(query, lang);
                 return true;
             });
             item = menu.findItem(R.id.menu_item_copy_hz);
