@@ -375,11 +375,12 @@ public class DB extends SQLiteAssetHelper {
         if (TextUtils.isEmpty(input) || isHzInput()) return null;
         String lang = Pref.getShape();
         boolean isYinPrompt = isYinPrompt();
-        if (isYinInput() || isYinPrompt()) lang = Pref.getLabel();
+        boolean isYinInput = isYinInput();
+        boolean isYinLang = isYinLang();
+        if (isYinInput || isYinPrompt) lang = Pref.getLabel();
         if (TextUtils.isEmpty(lang) || isLanguageHZ(lang)) lang = CMN;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-        qb.setTables(TABLE_NAME);
-        String[] projection = {HZ, lang, "rowid as _id"};
+        String[] projection = {HZ, (isYinInput || isYinPrompt || isYinLang) ? "讀音" : lang, "rowid as _id"};
         String selection = "";
         String field = isYinPrompt ? HZ : lang;
         if (isYinPrompt) {
@@ -393,21 +394,30 @@ public class DB extends SQLiteAssetHelper {
             } else {
                 selection = String.format("%s MATCH \"%s:%s %s%s\"", TABLE_NAME, field, input, va, charset);
             }
-            selection += String.format(" AND %s is not null", lang);
-            String query = qb.buildQuery(projection, selection, null, null, lang, "0,100");
+            qb.setTables("mcpdict, langs");
+            selection += String.format(" AND 語言 match '%s' AND 字組 MATCH 漢字", lang);
+            String[] projection2 = {HZ, "讀音", "langs.rowid as _id"};
+            String query = qb.buildQuery(projection2, selection, null, null, "讀音", "0,100");
+            return db.rawQuery(query, null);
+        }
+        List<String> keywords = normInput(field, input);
+        if (keywords.isEmpty()) return null;
+        String inputs = String.join(" OR ", keywords);
+        if (isYinInput || isYinLang) {
+            qb.setTables(String.format("mcpdict, (select 字組, 讀音 from langs where 語言 match '%s' and 讀音 match '%s')", lang, inputs));
+            selection = String.format("漢字 match replace(字組, ' ', ' OR ') AND 讀音 match '%s'", inputs);
+            String query = qb.buildQuery(projection, selection, null, null, null, "0,100");
             return db.rawQuery(query, null);
         } else {
+            qb.setTables(TABLE_NAME);
             String charset = getCharsetSelect(0);
             if (TextUtils.isEmpty(charset)) {
                 selection = String.format("%s MATCH ?", field);
             } else if (charset.contains("AND")) {
                 selection = String.format("%s MATCH ? %s", field, charset);
             }
-            String query = qb.buildQuery(projection, selection, null, null, lang, "0,100");
-            List<String> keywords = normInput(field, input);
-            if (keywords.isEmpty()) return null;
-            String arg = String.join(" OR ", keywords);
-            return db.rawQuery(query, new String[]{arg});
+            String query = qb.buildQuery(projection, selection, null, null, field, "0,100");
+            return db.rawQuery(query, new String[]{inputs});
         }
     }
 
@@ -923,6 +933,11 @@ public class DB extends SQLiteAssetHelper {
 
     public static boolean isYinInput() {
         return Pref.getShape().contentEquals(Pref.getString(R.string.yin_input));
+    }
+
+    public static boolean isYinLang() {
+        String shape = Pref.getShape();
+        return shape.contentEquals(GY) || shape.contentEquals(CMN) || shape.contentEquals(HK) || shape.contentEquals(TW) || shape.contentEquals(DGY) || shape.contentEquals(KOR) || shape.contentEquals(VI);
     }
 
     public static boolean isHzInputCode() {
