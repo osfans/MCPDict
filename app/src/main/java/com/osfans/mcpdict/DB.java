@@ -744,6 +744,7 @@ public class DB extends SQLiteAssetHelper {
     }
 
     private static String _getIntro(String language) {
+        if (db == null) return "";
         if (TextUtils.isEmpty(language) || Pref.getFilter() == FILTER.HZ) language = HZ;
         String intro = TextUtils.isEmpty(language) ? "" : getFieldByLanguage(language, "說明").replace("\n", "<br>");
         if (isLanguageHZ(language)) {

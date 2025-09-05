@@ -132,7 +132,6 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         }
 
         public void set(Cursor cursor, boolean isMainPage) {
-            mTvHead.setText("");
             mTvHead.setVisibility(View.GONE);
             mTextView.setVisibility(View.GONE);
             if (isMainPage && TextUtils.isEmpty(Pref.getInput())) {
