@@ -8,14 +8,15 @@
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface
 # class:
--keepclassmembers class **.MyWeb { public *; }
+#-keepclassmembers class **.Web { public *; }
 
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
--keepattributes SourceFile,LineNumberTable, EnclosingMethod
+#-keepattributes SourceFile,LineNumberTable
+-keepattributes EnclosingMethod
 
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
--renamesourcefileattribute SourceFile
+#-renamesourcefileattribute SourceFile
 
 -keep class **.R$font { public *; }
