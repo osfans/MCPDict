@@ -196,6 +196,8 @@ public class DB extends SQLiteAssetHelper {
             if (TextUtils.isEmpty(token)) continue;
             // Canonicalization
             switch (lang) {
+                case BA:
+                    token = BaiSha.canonicalize(token); break;
                 case CMN:
                 case CMN_TW:
                     token = Mandarin.canonicalize(token); break;

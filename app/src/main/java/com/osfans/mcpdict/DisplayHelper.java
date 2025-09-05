@@ -24,11 +24,6 @@ public abstract class DisplayHelper {
             return c != '{';
         }
     };
-    private static final DisplayHelper BA_DISPLAY_HELPER = new DisplayHelper() {
-        public String displayOne(String s) {
-            return s;
-        }
-    };
     public String mLang;
 
     public static CharSequence getRichText(String richTextString) {
@@ -76,7 +71,7 @@ public abstract class DisplayHelper {
             case DB.HK -> Cantonese.displayHelper.display(s, lang);
             case DB.KOR -> Korean.displayHelper.display(s, lang);
             case DB.VI -> Vietnamese.displayHelper.display(s, lang);
-            case DB.BA -> BA_DISPLAY_HELPER.display(s, lang);
+            case DB.BA -> BaiSha.displayHelper.display(s, lang);
 
             case DB.SG -> SG_DISPLAY_HELPER.displayRich(s, lang);
             case DB.GY -> MiddleChinese.displayHelper.displayRich(s, lang);

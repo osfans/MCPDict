@@ -32,7 +32,8 @@ if not args.output:
 			print(f"{i}重名")
 			sys.exit(1)
 	fields = ["字組", "語言", "讀音", "註釋"]
-	CREATE = 'CREATE VIRTUAL TABLE langs USING fts5 (%s, columnsize=0, tokenize="unicode61 tokenchars \'□\'")' % (",".join(fields))
+	tokens = "□〈〉［］（）"
+	CREATE = 'CREATE VIRTUAL TABLE langs USING fts5 (%s, columnsize=0, tokenize="unicode61 tokenchars \'%s\'")' % (",".join(fields), tokens)
 	INSERT = 'INSERT INTO langs VALUES (%s)'% (','.join('?' * len(fields)))
 	c.execute(CREATE)
 	c.executemany(INSERT, items)
@@ -41,7 +42,7 @@ if not args.output:
 	if len(argv) != 1:
 		dicts = defaultdict(dict)
 		fields, 字書 = getDicts(dicts)
-		CREATE = 'CREATE VIRTUAL TABLE mcpdict USING fts5 (%s, columnsize=0, tokenize="unicode61 tokenchars \'□\'")' % (",".join(fields))
+		CREATE = 'CREATE VIRTUAL TABLE mcpdict USING fts5 (%s, columnsize=0, tokenize="unicode61 tokenchars \'%s\'")' % (",".join(fields), tokens)
 		INSERT = 'INSERT INTO mcpdict VALUES (%s)'% (','.join('?' * len(fields)))
 		c.execute(CREATE)
 		c.executemany(INSERT, (list(map(dicts[i].get, fields)) for i in sorted(dicts.keys(), key=lambda x:((高頻字.index(x) if x in 高頻字 else 0xffff),-len(dicts[x]),cjkorder(x)))))
