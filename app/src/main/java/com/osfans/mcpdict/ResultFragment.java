@@ -19,7 +19,7 @@ import com.osfans.mcpdict.Orth.Orthography;
 public class ResultFragment extends Fragment {
 
     private View selfView;
-    private RecyclerView mIndexView;
+    private RecyclerView mIndexView, mRecyclerView;
     private IndexAdapter mIndexAdapter;
     private ResultAdapter mResultAdapter;
     private final boolean isMainPage;
@@ -46,12 +46,12 @@ public class ResultFragment extends Fragment {
         // Inflate the fragment view
         selfView = inflater.inflate(R.layout.search_result, container, false);
         mIndexView = selfView.findViewById(R.id.index_view);
-        RecyclerView recyclerView = selfView.findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        mIndexAdapter = new IndexAdapter(recyclerView);
+        mRecyclerView = selfView.findViewById(R.id.recycler_view);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mIndexAdapter = new IndexAdapter(mRecyclerView);
         mIndexView.setAdapter(mIndexAdapter);
         mResultAdapter = new ResultAdapter(isMainPage);
-        recyclerView.setAdapter(mResultAdapter);
+        mRecyclerView.setAdapter(mResultAdapter);
         Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(Pref.getToneStyle(R.string.pref_key_tone_value_display));
 
@@ -65,7 +65,7 @@ public class ResultFragment extends Fragment {
 
     public void setData(Cursor cursor) {
         mIndexView.setVisibility(isMainPage ? View.VISIBLE : View.GONE);
-        mIndexAdapter.changeCursor(cursor);
+        mIndexAdapter.changeCursor(cursor, mRecyclerView);
         mResultAdapter.changeCursor(cursor);
     }
 

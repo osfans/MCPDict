@@ -1,7 +1,6 @@
 package com.osfans.mcpdict;
 
 import android.database.Cursor;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -294,8 +293,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                gestureDetector.onTouchEvent(event);
-                return false;
+                return gestureDetector.onTouchEvent(event);
             }
         };
         searchView.findViewById(R.id.text_query).setOnTouchListener(listener);
@@ -321,19 +319,17 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     @Override
     public void refresh() {
         long start = System.currentTimeMillis();
-        new AsyncTask<Void, Void, Cursor>() {
-            @Override
-            protected Cursor doInBackground(Void... params) {
-                return DB.search();
-            }
-            @Override
-            protected void onPostExecute(Cursor cursor) {
-                if (fragmentResult != null) {
-                    Log.d(TAG, String.format("search %s cost %d ms",  Pref.getInput(), (System.currentTimeMillis() - start)));
-                    fragmentResult.setData(cursor);
-                }
-            }
-        }.execute();
+        Cursor cursor = DB.search();
+        if (fragmentResult != null) {
+            Log.d(TAG, String.format("search %s cost %d ms",  Pref.getInput(), (System.currentTimeMillis() - start)));
+            fragmentResult.setData(cursor);
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        refresh();
     }
 
     private void refreshSearchLang() {

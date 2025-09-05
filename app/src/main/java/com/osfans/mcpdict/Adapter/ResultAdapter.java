@@ -134,11 +134,15 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         public void set(Cursor cursor, boolean isMainPage) {
             mTvHead.setText("");
             mTvHead.setVisibility(View.GONE);
-            if (TextUtils.isEmpty(Pref.getInput())) {
-                mTextView.setText(HtmlCompat.fromHtml(DB.getIntro(), HtmlCompat.FROM_HTML_MODE_COMPACT));
+            mTextView.setVisibility(View.GONE);
+            if (isMainPage && TextUtils.isEmpty(Pref.getInput())) {
+                mTvHead.setText(HtmlCompat.fromHtml(DB.getIntro(), HtmlCompat.FROM_HTML_MODE_COMPACT));
+                mTvHead.setVisibility(View.VISIBLE);
                 return;
-            } else if (cursor == null || cursor.getCount() == 0) {
-                mTextView.setText(R.string.no_matches);
+            }
+            if (cursor == null || cursor.getCount() == 0) {
+                mTvHead.setText(R.string.no_matches);
+                mTvHead.setVisibility(View.VISIBLE);
                 return;
             }
             checkLast(cursor);
@@ -149,8 +153,10 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             SpannableStringBuilder ssb = new SpannableStringBuilder();
             if (bNewHz) {
                 lastLang = "";
-                ssb.append(hz, new ForegroundColorSpan(getColor(HZ)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                ssb.setSpan(new RelativeSizeSpan(1.8f), 0, ssb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                if (isMainPage) {
+                    ssb.append(hz, new ForegroundColorSpan(getColor(HZ)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    ssb.setSpan(new RelativeSizeSpan(1.8f), 0, ssb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                }
                 // Variants
                 String s = cursor.getString(cursor.getColumnIndexOrThrow(VARIANTS));
                 if (!TextUtils.isEmpty(s) && !s.contentEquals(hz)) {
@@ -232,8 +238,6 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 }
                 mTextView.setText(ssb);
                 mTextView.setVisibility(View.VISIBLE);
-            } else {
-                mTextView.setVisibility(View.GONE);
             }
         }
 
@@ -246,11 +250,13 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         }
 
         public Cursor getCursor() {
-            int position = getBindingAdapterPosition();
             ResultAdapter adapter = (ResultAdapter) getBindingAdapter();
             if (adapter != null) {
                 Cursor cursor = adapter.getCursor();
-                cursor.moveToPosition(position);
+                if (cursor != null) {
+                    int position = getBindingAdapterPosition();
+                    if (position >= 0 && position < cursor.getCount()) cursor.moveToPosition(position);
+                }
                 return cursor;
             }
             return null;
@@ -274,12 +280,13 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
 
         @Override
         public void onClick(View v) {
+            Cursor cursor = getCursor();
+            if (cursor == null) return;
             PopupMenu popupMenu = new PopupMenu(v.getContext(), v);
             Menu menu = popupMenu.getMenu();
             popupMenu.getMenuInflater().inflate(R.menu.item_menu, menu);
             MenuCompat.setGroupDividerEnabled(menu, true);
             MenuItem item;
-            Cursor cursor = getCursor();
             String hz = cursor.getString(COL_HZ);
             String lang = cursor.getString(COL_LANG);
             String language = DB.getLanguageByLabel(lang);
@@ -291,7 +298,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             });
             item = menu.findItem(R.id.menu_item_custom_language);
             boolean isCustom = Utils.isCustomLanguage(language);
-            item.setTitle(Pref.getString(isCustom ? R.string.rm_from_custom_language : R.string.add_to_custom_language, language));
+            item.setTitle(Pref.getString(isCustom ? R.string.rm_from_custom_language : R.string.add_to_custom_language, lang));
             item.setOnMenuItemClickListener(i -> {
                 DictFragment dictFragment = ((MainActivity) v.getContext()).getDictionaryFragment();
                 dictFragment.updateCustomLanguage(language);

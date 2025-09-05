@@ -78,11 +78,11 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
      * by RecyclerView
      */
     public IndexAdapter(Cursor cursor, RecyclerView recyclerView) {
-        mRecyclerView = recyclerView;
-        changeCursor(cursor);
+        changeCursor(cursor, recyclerView);
     }
 
-    public void changeCursor(Cursor cursor) {
+    public void changeCursor(Cursor cursor, RecyclerView recyclerView) {
+        mRecyclerView = recyclerView;
         mHZs.clear();
         mIPAs.clear();
         mPositions.clear();

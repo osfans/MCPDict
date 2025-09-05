@@ -17,7 +17,6 @@ public class WebView extends android.webkit.WebView {
         super(context, attrs);
         WebSettings settings = getSettings();
         settings.setJavaScriptEnabled(true);
-        addJavascriptInterface(new Web(this), "mcpdict");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S_V2) {
             if (WebViewFeature.isFeatureSupported(WebViewFeature.ALGORITHMIC_DARKENING)) {
                 WebSettingsCompat.setAlgorithmicDarkeningAllowed(settings, true);
