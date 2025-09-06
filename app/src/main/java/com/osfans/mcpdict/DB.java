@@ -238,8 +238,7 @@ public class DB extends SQLiteAssetHelper {
     public static Cursor search() {
         // Search for one or more keywords, considering mode and options
         String input = Pref.getInput();
-        if (input.startsWith("-")) input = input.substring(1); //may crash sqlite
-        input = input.strip();
+        input = input.replace("-", " ").replace("=", " ").replace("/", " ").strip();
 
         String label = Pref.getLabel();
         String lang = label;
