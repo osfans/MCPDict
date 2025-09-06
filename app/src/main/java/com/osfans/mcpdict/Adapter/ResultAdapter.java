@@ -318,7 +318,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             item = menu.findItem(R.id.menu_item_search_homophone);
             item.setTitle(Pref.getString(R.string.search_homophone, DisplayHelper.getIPA(lang, ipa).toString().replaceAll("[ /].*$",""), lang));
             item.setOnMenuItemClickListener(i->{
-                String query = ipa.replaceAll("/.*$","");
+                String query = ipa.replaceAll("/.*$","").replace("-", " ").replace("=", " ").trim();
                 if (lang.contentEquals(BA)) query = BaiSha.display(ipa);
                 DictFragment dictFragment = ((MainActivity) v.getContext()).getDictionaryFragment();
                 dictFragment.setType(1);
