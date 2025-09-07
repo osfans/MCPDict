@@ -32,11 +32,15 @@ def getTones(tones):
 		i = i + 1
 		index = i
 		if not ts: continue
-		ts = str(ts).lower().replace("ˀ", "6").replace("ʔ", "0")
+		ts = str(ts).lower().replace("ˀ", "6").replace("ʔ", "0").replace("，", ",").replace(" ", "")
+		tsn = ts.count(",") + 1
 		for j,t in enumerate(ts.split(",")):
 			if t.startswith("["):
 				index = t[1:t.index("]")]
 				t = t[t.index("]")+1:]
+			elif t and tsn > 1:
+				index2 = chr(ord('a') + j)
+				index = f"{i}{index2}"
 			if t[0].isdigit() or t[0] == "-":
 				n = t.lstrip("0123456-/")
 				v = t[:len(t)-len(n)]
