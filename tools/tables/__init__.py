@@ -148,11 +148,12 @@ def addAllFq(d, fq, order,不加片 = False):
 def addCfFq(d, fq, order):
 	if fq is None: return
 	列 = fq.split(",")
-	fqs = 列[0].split("-")
+	FS = "－"
+	fqs = 列[0].split(FS)
 	for i in range(len(fqs)):
-		name = "-".join(fqs[0:i+1])
+		name = FS.join(fqs[0:i+1])
 		if not name: continue
-		order = "-".join(order.split("-")[0:i+1])
+		order = FS.join(order.split(FS)[0:i+1])
 		if name in d:
 			if d[name] < order: continue
 		d[name] = order
