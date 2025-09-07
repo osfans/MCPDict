@@ -299,7 +299,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             });
             item = menu.findItem(R.id.menu_item_custom_language);
             boolean isCustom = Utils.isCustomLanguage(language);
-            item.setTitle(Pref.getString(isCustom ? R.string.rm_from_custom_language : R.string.add_to_custom_language, lang));
+            item.setTitle(Pref.getString(isCustom ? R.string.rm_from_custom_language : R.string.add_to_custom_language, language));
             item.setOnMenuItemClickListener(i -> {
                 DictFragment dictFragment = ((MainActivity) v.getContext()).getDictionaryFragment();
                 dictFragment.updateCustomLanguage(language);
@@ -307,7 +307,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 return true;
             });
             item = menu.findItem(R.id.menu_item_copy_readings);
-            item.setTitle(Pref.getString(R.string.copy_one_reading, hz, lang));
+            item.setTitle(Pref.getString(R.string.copy_one_reading, hz, language));
             String ipa = cursor.getString(COL_IPA);
             item.setOnMenuItemClickListener(i -> {
                 String zs = cursor.getString(COL_ZS);
@@ -316,7 +316,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 return true;
             });
             item = menu.findItem(R.id.menu_item_search_homophone);
-            item.setTitle(Pref.getString(R.string.search_homophone, DisplayHelper.getIPA(lang, ipa).toString().replaceAll("[ /].*$",""), lang));
+            item.setTitle(Pref.getString(R.string.search_homophone, DisplayHelper.getIPA(lang, ipa).toString().replaceAll("[ /].*$",""), language));
             item.setOnMenuItemClickListener(i->{
                 String query = ipa.replaceAll("/.*$","").replace("-", " ").replace("=", " ").trim();
                 if (lang.contentEquals(BA)) query = BaiSha.display(ipa);
