@@ -134,12 +134,13 @@ for 行 in open(os.path.join(PATH, SOURCE, "方言調查字表.tsv"), encoding="
 
 def addAllFq(d, fq, order,不加片 = False):
 	if order is None or fq is None: return
-	fqs = fq.split(",")[0].split("-")
+	FS = "－"
+	fqs = fq.split(",")[0].split(FS)
 	for i in range(len(fqs)):
-		名 = "-".join(fqs[0:i+1])
+		名 = FS.join(fqs[0:i+1])
 		if not 名: continue
 		if 不加片 and 名.endswith("片"): continue
-		order = "-".join(order.split("-")[0:i+1])
+		order = FS.join(order.split(FS)[0:i+1])
 		if 名 in d:
 			if d[名] < order: continue
 		d[名] = order

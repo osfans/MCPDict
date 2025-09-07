@@ -777,7 +777,8 @@ public class DB extends SQLiteAssetHelper {
                 String value = getFieldByLanguage(language, field);
                 if (!TextUtils.isEmpty(value) && !value.contentEquals("/")) {
                     if (field.endsWith(_FQ)) {
-                        value = value.replace(","," ,").split(",")[0].trim();
+                        value = value.replace(","," ,").trim();
+                        if (!field.contentEquals("音典分區")) value = value.split(",")[0].trim();
                         if (TextUtils.isEmpty(value)) continue;
                     }
                     String s = value;
