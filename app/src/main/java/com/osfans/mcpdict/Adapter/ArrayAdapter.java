@@ -90,6 +90,7 @@ public class ArrayAdapter<T> extends BaseAdapter implements Filterable, ThemedSp
     private final LayoutInflater mInflater;
 
     private final Context mContext;
+    public final String FS = "－";
 
     /**
      * The resource indicating what views to inflate to display the content of this
@@ -576,7 +577,7 @@ public class ArrayAdapter<T> extends BaseAdapter implements Filterable, ThemedSp
                 }
             }
 
-            final String prefixString = prefix.toString().split("-")[0] + "-";
+            final String prefixString = prefix.toString().split(FS)[0] + FS;
 
             final ArrayList<T> values;
             synchronized (mLock) {
@@ -591,7 +592,7 @@ public class ArrayAdapter<T> extends BaseAdapter implements Filterable, ThemedSp
                 final String valueText = value.toString().toLowerCase();
 
                 // First match against the whole, non-splitted value
-                if (valueText.startsWith(prefixString) || !valueText.contains("-")) {
+                if (valueText.startsWith(prefixString) || !valueText.contains(FS)) {
                     newValues.add(value);
                 }
             }

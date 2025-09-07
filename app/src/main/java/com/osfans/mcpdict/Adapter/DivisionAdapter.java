@@ -32,8 +32,8 @@ public class DivisionAdapter extends ArrayAdapter<CharSequence> {
             return textView;
         }
         String s = Objects.requireNonNull(getItem(position)).toString();
-        String last = s.replaceAll("([^-]+)-", "   ");
-        int count = s.replaceAll("[^-]", "").length();
+        String last = s.replaceAll(String.format("([^%s]+)%s", FS, FS), "   ");
+        int count = s.length() - s.replace(FS, "").length();
         textView.setTextSize(16f - count * 1.0f);
         textView.setText(last);
         textView.setTextColor(count > 0 ? mColorDim : mColor);

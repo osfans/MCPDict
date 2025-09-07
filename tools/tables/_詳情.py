@@ -105,6 +105,7 @@ def 加載(省=None):
 	sheet = wb.worksheets[0]
 	lineCount = 0
 	fields = []
+	音典顔色分區 = dict()
 	for row in sheet.rows:
 		lineCount += 1
 		行 = [j.value if j.value else "" for j in row]
@@ -148,17 +149,20 @@ def 加載(省=None):
 		j = fields.index("[1]陰平")
 		聲調 = getTones([列[fields[i]] for i in range(j, j+10)])
 
+		types = [s2t(列[i]).replace("-", "－") for i in ("地圖集二分區", "音典分區", "下拉1，折疊分区")]
+		if types[2] and 列["下拉2"]: types[2] += "," + 列["下拉2"]
+
 		orders = [列[i].strip() for i in ("地圖集二排序", "音典排序", "陳邡排序")]
 		colors = [row[fields.index(i)].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典顏色","陳邡顏色")]
+		音典顔色分區[colors[1]] = types[1]
 		subfgColor = row[fields.index("音典過渡色")].fill.fgColor
 		if subfgColor.type == "rgb":
 			subcolor = subfgColor.rgb[2:]
-			if subcolor and subcolor != "000000" and subcolor != colors[1]:
+			if subcolor and subcolor != "000000" and subcolor != "FFFFFF" and subcolor != colors[1]:
 					colors[1] += f",{subcolor}"
+			else:
+				subcolor = ""
 		colors = [re.sub(r"(\w+)", "#\\1", i) for i in colors]
-
-		types = [s2t(列[i]) for i in ("地圖集二分區", "音典分區", "下拉1，折疊分区")]
-		if types[2] and 列["下拉2"]: types[2] += "," + 列["下拉2"]
 
 		places = [s2t(列[i]) if 列[i] else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點","自然村")]
 		if 簡稱 == "普通話" and 省:
@@ -246,6 +250,13 @@ def 加載(省=None):
 			if d[簡稱][i]:
 				Feature["properties"][i] = d[簡稱][i]
 		FeatureCollection["features"].append(Feature)
+	for k, v in d.items():
+		if "," in v["音典顏色"]:
+			subcolor = v["音典顏色"].split(",")[-1][1:]
+			if subcolor in 音典顔色分區:
+				v["音典分區"] += "," + 音典顔色分區[subcolor]
+			else:
+				print(k, "音典过渡色無對應分區")
 	geojsonpath = os.path.join(curdir, "../..", "方言.geojson")
 	if os.path.exists(geojsonpath):
 		json.dump(FeatureCollection, fp=open(geojsonpath, "w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)

@@ -32,7 +32,7 @@ if not args.output:
 			print(f"{i}重名")
 			sys.exit(1)
 	fields = ["字組", "語言", "讀音", "註釋"]
-	tokens = "□〈〉［］（）"
+	tokens = "□－〈〉［］（）"
 	CREATE = 'CREATE VIRTUAL TABLE langs USING fts5 (%s, columnsize=0, tokenize="unicode61 tokenchars \'%s\'")' % (",".join(fields), tokens)
 	INSERT = 'INSERT INTO langs VALUES (%s)'% (','.join('?' * len(fields)))
 	c.execute(CREATE)
