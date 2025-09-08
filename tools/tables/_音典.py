@@ -274,7 +274,7 @@ class 表(_表):
 		if len(字) != 1 or not 音: return
 		if 名 in ("白－沙上古"):
 			音乙 = 音.split(" ", 1)
-			音乙[0] = 音乙[0].replace("*", "＊").replace(".", "．").replace("-", "－").replace("(", "（").replace(")", "）").replace("[", "［").replace("]", "］").replace("<", "〈").replace(">", "〉")
+			音乙[0] = 音乙[0].lstrip("*").replace(".", "．").replace("-", "－").replace("(", "（").replace(")", "）").replace("[", "［").replace("]", "］").replace("<", "〈").replace(">", "〉")
 			音 = " ".join(音乙)
 		if 名 in ("白－沙上古", "鄭張上古", "中唐", "中世朝鮮","國語"):
 			自.爲音 = False
