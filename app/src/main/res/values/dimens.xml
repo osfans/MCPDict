@@ -3,4 +3,6 @@
     <dimen name="button_icon_size">24dp</dimen>
     <dimen name="padding_size">3dp</dimen>
     <dimen name="min_width">24sp</dimen>
+    <dimen name="label_width">48sp</dimen>
+    <dimen name="label_height">24sp</dimen>
 </resources>

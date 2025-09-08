@@ -103,11 +103,11 @@ public class TextDrawable extends ShapeDrawable {
         canvas.translate(r.left, r.top);
 
         // draw text
-        float fontSize = this.fontSize < 0 ? Math.min(width, height) / 2.0f : this.fontSize;
+        float fontSize = this.fontSize < 0 ? Math.min(width, height) * 0.54f : this.fontSize;
         int width = this.width < 0 ? r.width() : this.width;
         int height = this.height < 0 ? r.height() : this.height;
         textPaint.setTextSize(fontSize);
-        float ratio = 3.3f * 4f / (text.length() + text.getBytes().length) ;
+        float ratio = 13.2f / (text.length() + text.getBytes().length) ;
         if (ratio < 1f) textPaint.setTextScaleX(ratio);
         canvas.drawText(text, width / 2.0f, height / 2.0f - ((textPaint.descent() + textPaint.ascent()) / 2), textPaint);
 
