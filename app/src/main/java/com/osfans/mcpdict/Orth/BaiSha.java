@@ -17,10 +17,10 @@ public class BaiSha {
     };
 
     public static String display(String s) {
-        return s.replace("＊", "*").replace("．", ".").replace("－", "-").replace("（", "(").replace("）", ")").replace("［", "[").replace("］", "]").replace("〈", "<").replace("〉", ">");
+        return s.replace("．", ".").replace("－", "-").replace("（", "(").replace("）", ")").replace("［", "[").replace("］", "]").replace("〈", "<").replace("〉", ">");
     }
 
     public static String canonicalize(String s) {
-        return s.replace("*", "＊").replace(".", "．").replace("-", "－").replace("(", "（").replace(")", "）").replace("[", "［").replace("]", "］").replace("<", "〈").replace(">", "〉").replaceAll(" .*$", "");
+        return s.replaceAll("[*~]", "").replace(".", "．").replace("-", "－").replace("(", "（").replace(")", "）").replace("[", "［").replace("]", "］").replace("<", "〈").replace(">", "〉").replaceAll(" .*$", "").replaceAll("（[^（）]*?）$", "");
     }
 }
