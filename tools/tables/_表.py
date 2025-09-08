@@ -379,14 +379,14 @@ class 表:
 		上 = ""
 		果 = list()
 		for 字 in 註:
-			if 爲字(字):
+			if 爲字(字) or 字 == "~":
 				if 上: 果.append(上)
 				上 = ""
 				果.append(字)
 			else:
 				上 += 字
 		if 上: 果.append(上)
-		return " ".join(果)
+		return " ".join(果).replace("   ", "  ")
 
 	def 合註(自, 註):
 		return 註.replace("  ", "　").replace(" ", "").replace("　", " ")
