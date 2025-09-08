@@ -25,7 +25,7 @@ class 表(_表):
 			上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
 			行 = re.sub(r"([⁰¹²³⁴⁵⁶⁷⁸⁹]+)", lambda x:"".join([str(上標.index(i)) for i in x.group(1)]), 行)
 			行 = re.sub(r"\{(\d+)\}", "\\1", 行)
-			行 = re.sub(r"(\d+)", "[\\1]", 行, 1)
+			行 = re.sub(r"(\d+[ab]?)", "[\\1]", 行, 1)
 			if "[" not in 行: 行 = ""
 		elif 名 in ("羅山","贛縣安平"):
 			行 = re.sub(r"[:] ?\[", "	[", 行)
