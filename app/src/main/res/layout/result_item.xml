@@ -15,16 +15,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:id="@+id/textLang"
+        android:layout_width="@dimen/label_width"
+        android:layout_height="@dimen/label_height"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/head" />
+
     <TextView
         android:id="@+id/text"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:singleLine="false"
         android:focusable="true"
         android:clickable="true"
+        android:textIsSelectable="true"
         android:background="@drawable/list_selector"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/padding_size"
+        app:layout_constraintStart_toEndOf="@id/textLang"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/head" />
 

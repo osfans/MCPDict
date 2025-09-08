@@ -20,22 +20,18 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Canvas;
-import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.text.Layout;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
-import android.text.style.DrawableMarginSpan;
 import android.text.style.ForegroundColorSpan;
-import android.text.style.LeadingMarginSpan;
 import android.text.style.RelativeSizeSpan;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -76,11 +72,9 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
      */
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private final TextView mTextView, mTvHead;
-        float fontSize;
-        int mWidth, mHeight;
         TextDrawable.IBuilder builder;
         String lastLang, lastHz;
-        View mView;
+        View mView, mViewLang;
 
         public ViewHolder(View view) {
             super(view);
@@ -91,19 +85,25 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             FontUtil.setTypeface(mTvHead);
             mTvHead.setMovementMethod(LinkMovementMethod.getInstance());
             mTvHead.setHyphenationFrequency(android.text.Layout.HYPHENATION_FREQUENCY_NONE);
+            mViewLang = view.findViewById(R.id.textLang);
+            mViewLang.setOnClickListener(this);
             mTextView = view.findViewById(R.id.text);
             mTextView.setTextAppearance(R.style.FontDetail);
             FontUtil.setTypeface(mTextView);
-            mTextView.setOnClickListener(this);
-            fontSize = mTextView.getTextSize();
-            mWidth = (int) (fontSize * 3.0f);
-            mHeight = (int) (fontSize * 1.6f);
+            mTextView.setOnTouchListener((v, event) -> {
+                if (event.getAction() == MotionEvent.ACTION_UP && !((TextView) v).hasSelection()) {
+                    onClick(v);
+                    v.performClick();
+                }
+                return false;
+            });
+            int width = view.getResources().getDimensionPixelOffset(R.dimen.label_width);
+            int height = view.getResources().getDimensionPixelOffset(R.dimen.label_height);
             builder = TextDrawable.builder()
                     .beginConfig()
                     .withBorder(3)
-                    .width(mWidth)  // width in px
-                    .height(mHeight) // height in px
-                    .fontSize(fontSize * 0.85f)
+                    .width(width)  // width in px
+                    .height(height) // height in px
                     .endConfig()
                     .roundRect(5);
         }
@@ -135,6 +135,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
 
         public void set(Cursor cursor, boolean isMainPage) {
             mTvHead.setVisibility(View.GONE);
+            mViewLang.setVisibility(View.GONE);
             mTextView.setVisibility(View.GONE);
             if (isMainPage && TextUtils.isEmpty(Pref.getInput())) {
                 mTvHead.setText(HtmlCompat.fromHtml(DB.getIntro(), HtmlCompat.FROM_HTML_MODE_COMPACT));
@@ -206,28 +207,13 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 ipa = DisplayHelper.formatIPA(lang, ipa).toString();
                 if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
                 if (lang.contentEquals(lastLang)) {
-                    LeadingMarginSpan.LeadingMarginSpan2 span = new LeadingMarginSpan.LeadingMarginSpan2() {
-                        @Override
-                        public int getLeadingMarginLineCount() {
-                            return 0;
-                        }
-
-                        @Override
-                        public void drawLeadingMargin(Canvas c, Paint p, int x, int dir, int top, int baseline, int bottom, CharSequence text, int start, int end, boolean first, Layout layout) {
-
-                        }
-
-                        @Override
-                        public int getLeadingMargin(boolean first) {
-                            return mWidth + 3;
-                        }
-                    };
-                    ssb.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    mViewLang.setVisibility(View.INVISIBLE);
                 } else {
                     String label = lang.replace("－", "-").replace("（", "(").replace("）", ")");
                     Drawable drawable = builder.build(label, getColor(lang), getSubColor(lang));
-                    DrawableMarginSpan span = new DrawableMarginSpan(drawable, 3);
-                    ssb.append(" ", span, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
+                    mViewLang.setBackground(drawable);
+                    mViewLang.setVisibility(View.VISIBLE);
                 }
                 CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
                 ssb.append(cs);
