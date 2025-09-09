@@ -337,7 +337,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     private void refreshSearchLang() {
         String language = Pref.getLanguage();
-        if (!DB.isLang(Pref.getLabel())) language = "";
+        if (DB.isNotLang(Pref.getLabel())) language = "";
         acSearchLang.setText(language);
     }
 
