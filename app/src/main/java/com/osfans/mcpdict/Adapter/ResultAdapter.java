@@ -228,7 +228,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 ssb.append(cs);
                 String zs = cursor.getString(COL_ZS);
                 if (!TextUtils.isEmpty(zs)) {
-                    zs = DisplayHelper.formatZS(zs);
+                    zs = DisplayHelper.formatZS(hz, zs);
                     cs = HtmlCompat.fromHtml(zs, HtmlCompat.FROM_HTML_MODE_COMPACT);
                     ssb.append(cs);
                 }
@@ -310,7 +310,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             String ipa = cursor.getString(COL_IPA);
             item.setOnMenuItemClickListener(i -> {
                 String zs = cursor.getString(COL_ZS);
-                String reading = String.format("[%s] %s %s%s", lang, hz, DisplayHelper.getIPA(lang, ipa), DisplayHelper.formatJS(zs));
+                String reading = String.format("[%s] %s %s%s", lang, hz, DisplayHelper.getIPA(lang, ipa), DisplayHelper.formatJS(hz, zs));
                 copyText(reading);
                 return true;
             });

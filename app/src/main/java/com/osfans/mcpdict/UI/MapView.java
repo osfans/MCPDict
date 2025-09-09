@@ -165,7 +165,7 @@ public class MapView extends org.osmdroid.views.MapView {
             comments.add(ipa);
             String zs = cursor.getString(COL_ZS);
             if (!TextUtils.isEmpty(zs)) {
-                comments.add(DisplayHelper.formatZS(zs));
+                comments.add(DisplayHelper.formatZS(hz, zs));
             }
         }
         if (!TextUtils.isEmpty(lastLang)) {
