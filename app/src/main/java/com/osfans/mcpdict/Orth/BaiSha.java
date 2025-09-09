@@ -1,10 +1,5 @@
 package com.osfans.mcpdict.Orth;
 
-import com.osfans.mcpdict.DB;
-import com.osfans.mcpdict.DisplayHelper;
-import com.osfans.mcpdict.Pref;
-import com.osfans.mcpdict.R;
-
 public class BaiSha {
     public static final DisplayHelper displayHelper = new DisplayHelper() {
         public String displayOne(String s) {

@@ -1,4 +1,4 @@
-package com.osfans.mcpdict.Util;
+package com.osfans.mcpdict.Favorite;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
@@ -6,6 +6,9 @@ import java.lang.ref.WeakReference;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+
+import com.osfans.mcpdict.Util.FileUtil;
+
 import io.requery.android.database.sqlite.SQLiteDatabase;
 import io.requery.android.database.sqlite.SQLiteOpenHelper;
 
@@ -75,7 +78,7 @@ public class UserDB extends SQLiteOpenHelper {
     // EXPORTING AND IMPORTING
 
     public static void exportFavorites() throws IOException {
-        ThemeUtil.copyFile(getDatabasePath(), getBackupPath());
+        FileUtil.copyFile(getDatabasePath(), getBackupPath());
     }
 
     public static int selectBackupFavoriteCount() {
@@ -89,7 +92,7 @@ public class UserDB extends SQLiteOpenHelper {
     }
 
     public static void importFavoritesOverwrite() throws IOException {
-        ThemeUtil.copyFile(getBackupPath(), getDatabasePath());
+        FileUtil.copyFile(getBackupPath(), getDatabasePath());
     }
 
     public static void importFavoritesMix() {

@@ -12,9 +12,9 @@ import android.view.MotionEvent;
 import androidx.appcompat.app.AlertDialog;
 
 import com.osfans.mcpdict.DB;
-import com.osfans.mcpdict.DisplayHelper;
-import com.osfans.mcpdict.Pref;
-import com.osfans.mcpdict.Util.ThemeUtil;
+import com.osfans.mcpdict.Orth.DisplayHelper;
+import com.osfans.mcpdict.Util.Pref;
+import com.osfans.mcpdict.Util.FileUtil;
 
 import org.osmdroid.bonuspack.kml.KmlDocument;
 import org.osmdroid.bonuspack.kml.KmlFeature;
@@ -189,7 +189,7 @@ public class MapView extends org.osmdroid.views.MapView {
         final KmlDocument kmlDocument = new KmlDocument();
 
         try {
-            kmlDocument.parseGeoJSON(ThemeUtil.getStringFromAssets(fileName, getContext()));
+            kmlDocument.parseGeoJSON(FileUtil.getStringFromAssets(fileName, getContext()));
         } catch (IOException e) {
             //e.printStackTrace();
             return null;

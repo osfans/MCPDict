@@ -4,7 +4,7 @@ import android.text.TextPaint;
 import android.text.style.ClickableSpan;
 import android.view.View;
 
-import com.osfans.mcpdict.Utils;
+import com.osfans.mcpdict.Util.App;
 
 public class PopupSpan extends ClickableSpan {
     CharSequence text;
@@ -19,7 +19,7 @@ public class PopupSpan extends ClickableSpan {
 
     @Override
     public void onClick(View v) {
-        Utils.showDict(v.getContext(), lang, text);
+        App.showDict(v.getContext(), lang, text);
     }
 
     @Override

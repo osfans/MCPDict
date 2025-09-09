@@ -1,4 +1,4 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.UI;
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.osfans.mcpdict.Adapter.IndexAdapter;
 import com.osfans.mcpdict.Adapter.ResultAdapter;
 import com.osfans.mcpdict.Orth.Orthography;
+import com.osfans.mcpdict.R;
+import com.osfans.mcpdict.Util.Pref;
 
 import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 

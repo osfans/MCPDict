@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.Util.FontUtil;
 import com.osfans.mcpdict.R;
-import com.osfans.mcpdict.ResultFragment;
+import com.osfans.mcpdict.UI.ResultFragment;
 
 @SuppressLint("UseSparseArrays")
 public class FavoriteAdapter extends CursorAdapter {

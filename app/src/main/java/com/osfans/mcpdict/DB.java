@@ -9,7 +9,8 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.osfans.mcpdict.Orth.*;
-import com.osfans.mcpdict.Util.UserDB;
+import com.osfans.mcpdict.Util.Pref;
+import com.osfans.mcpdict.Favorite.UserDB;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 import org.json.JSONException;

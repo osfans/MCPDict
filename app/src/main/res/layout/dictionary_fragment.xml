@@ -260,7 +260,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_search_result"
-        android:name="com.osfans.mcpdict.ResultFragment"
+        android:name="com.osfans.mcpdict.UI.ResultFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

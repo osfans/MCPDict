@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.osfans.mcpdict.R;
-import com.osfans.mcpdict.Utils;
+import com.osfans.mcpdict.Util.App;
 
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public class DivisionAdapter extends ArrayAdapter<CharSequence> {
 
     public DivisionAdapter(@NonNull Context context) {
         super(context, R.layout.spinner_item);
-        mColor = Utils.obtainColor(context, android.R.attr.textColorPrimary);
+        mColor = App.obtainColor(context, android.R.attr.textColorPrimary);
         mColorDim = context.getResources().getColor(R.color.dim, context.getTheme());
     }
 

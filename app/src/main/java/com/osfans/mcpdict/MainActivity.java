@@ -13,7 +13,9 @@ import com.osfans.mcpdict.Adapter.PagerAdapter;
 import com.osfans.mcpdict.Favorite.FavoriteDialogs;
 import com.osfans.mcpdict.Favorite.FavoriteFragment;
 import com.osfans.mcpdict.Orth.Orthography;
-import com.osfans.mcpdict.Util.UserDB;
+import com.osfans.mcpdict.UI.RefreshableFragment;
+import com.osfans.mcpdict.Favorite.UserDB;
+import com.osfans.mcpdict.Util.App;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,15 +38,15 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         if (id == R.id.menu_item_info) {
-            Utils.info(this, "");
+            App.info(this, "");
             return true;
         }
         if (id == R.id.menu_item_help) {
-            Utils.help(this);
+            App.help(this);
             return true;
         }
         if (id == R.id.menu_item_about) {
-            Utils.about(this);
+            App.about(this);
             return true;
         }
         if (id == R.id.menu_item_home) {
@@ -57,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Utils.setLocale();
-        Utils.setActivityTheme(this);
+        App.setLocale();
+        App.setActivityTheme(this);
         DB.initFQ();
         // Initialize the some "static" classes on separate threads
         new Thread(()-> Orthography.initialize(getResources())).start();

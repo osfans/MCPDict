@@ -11,14 +11,16 @@ import androidx.preference.PreferenceFragmentCompat;
 
 import com.osfans.mcpdict.Orth.Orthography;
 import com.osfans.mcpdict.Util.FontUtil;
+import com.osfans.mcpdict.Util.Pref;
+import com.osfans.mcpdict.Util.App;
 
 import java.util.Objects;
 
 public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Utils.setLocale();
-        Utils.setActivityTheme(this);
+        App.setLocale();
+        App.setActivityTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
         getSupportFragmentManager()

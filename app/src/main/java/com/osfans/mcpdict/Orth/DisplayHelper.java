@@ -1,4 +1,4 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.Orth;
 
 import static com.osfans.mcpdict.DB.COL_GYHZ;
 import static com.osfans.mcpdict.DB.COL_HD;
@@ -10,7 +10,9 @@ import android.text.TextUtils;
 
 import androidx.core.text.HtmlCompat;
 
-import com.osfans.mcpdict.Orth.*;
+import com.osfans.mcpdict.DB;
+import com.osfans.mcpdict.Util.Pref;
+import com.osfans.mcpdict.R;
 
 public abstract class DisplayHelper {
     protected static final String NULL_STRING = "-";

@@ -1,7 +1,6 @@
 package com.osfans.mcpdict.Util;
 
 import android.content.Context;
-import android.net.Uri;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,7 +12,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.nio.channels.FileChannel;
 
-public class ThemeUtil {
+public class FileUtil {
 
     public static void copyFile(String srcPath, String dstPath) throws IOException {
         makeParentDirs(dstPath);
@@ -31,7 +30,7 @@ public class ThemeUtil {
     public static void makeParentDirs(String path) {
         File parent = new File(path).getParentFile();
         if (parent != null && !parent.exists()) {
-            parent.mkdirs();
+            boolean ignore = parent.mkdirs();
         }
     }
 
@@ -50,16 +49,6 @@ public class ThemeUtil {
         }
         reader.close();
         return sb.toString();
-    }
-
-    public static String getStringFromFile(Uri fileUri, Context context) throws IOException {
-        InputStream fin = context.getContentResolver().openInputStream(fileUri);
-        String ret = convertStreamToString(fin);
-        //Make sure you close all streams.
-        if (fin != null) {
-            fin.close();
-        }
-        return ret;
     }
 
     public static String getStringFromAssets(String fileName, Context context) throws IOException {

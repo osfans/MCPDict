@@ -12,10 +12,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 
 import com.osfans.mcpdict.MainActivity;
-import com.osfans.mcpdict.Pref;
+import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.R;
-import com.osfans.mcpdict.Util.ThemeUtil;
-import com.osfans.mcpdict.Util.UserDB;
+import com.osfans.mcpdict.Util.FileUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -322,7 +321,7 @@ public class FavoriteDialogs {
     public static void crash(Throwable e) {
         try {
             String logPath = activity.getExternalFilesDir(null) + "/crash.log";
-            ThemeUtil.dumpException(logPath, e);
+            FileUtil.dumpException(logPath, e);
             new AlertDialog.Builder(activity)
                 .setIcon(android.R.drawable.ic_delete)
                 .setTitle(activity.getString(R.string.crash))
