@@ -81,7 +81,7 @@ def processXlsxFs(v):
 		if i.font.vertAlign == "subscript" or (i.font.size and i.font.size < 10.0):
 			text = f"({text})"
 		cells.append(text)
-	return "".join(cells).replace(")(", "").strip()
+	return "".join(cells).replace(")(", "").strip().replace("\n", "\\n")
 
 def getXlsxLines(xls, page=0):
 	wb = load_workbook(xls, data_only=True, rich_text=True)

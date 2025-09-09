@@ -109,7 +109,7 @@ def 加載(省=None):
 	sheet = wb.worksheets[0]
 	lineCount = 0
 	fields = []
-	音典顔色分區 = dict()
+	# 音典顔色分區 = dict()
 	for row in sheet.rows:
 		lineCount += 1
 		行 = [j.value if j.value else "" for j in row]
@@ -139,7 +139,7 @@ def 加載(省=None):
 		錄入人 = normNames(列["錄入人"])
 		維護人 = normNames(列["維護人"])
 		推薦人 = normNames(列["推薦人"])
-		網站 = 列["在線查詢"]
+		網站 = "" if 列["在線查詢"].startswith("#") else 列["在線查詢"]
 		網址 = 列["網址"]
 		字表來源 = normSource(row[fields.index("字表來源（母本）")])
 		參考文獻 = 列["參考文獻（母本補充材料）"]
@@ -158,7 +158,7 @@ def 加載(省=None):
 
 		orders = [列[i].strip() for i in ("地圖集二排序", "音典排序", "陳邡排序")]
 		colors = [row[fields.index(i)].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典顏色","陳邡顏色")]
-		音典顔色分區[colors[1]] = types[1]
+		# 音典顔色分區[colors[1]] = types[1]
 		subfgColor = row[fields.index("音典過渡色")].fill.fgColor
 		if subfgColor.type == "rgb":
 			subcolor = subfgColor.rgb[2:]
@@ -260,7 +260,7 @@ def 加載(省=None):
 	# 		if subcolor in 音典顔色分區:
 	# 			v["音典分區"] += "," + 音典顔色分區[subcolor]
 	# 		else:
-	# 			print(k, "音典过渡色無對應分區")
+	# 			print(k, "音典過渡色無對應分區")
 	geojsonpath = os.path.join(curdir, "../..", "方言.geojson")
 	if os.path.exists(geojsonpath):
 		json.dump(FeatureCollection, fp=open(geojsonpath, "w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)

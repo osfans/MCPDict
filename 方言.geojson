@@ -23755,7 +23755,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "髙港",
         "語言": "髙港話",
@@ -23843,6 +23843,30 @@
         "coordinates": [
           120.053429,
           32.172584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "泰興曲霞印达",
+        "語言": "泰興曲霞印達話",
+        "地點": "江蘇泰州泰興曲霞印達",
+        "地圖集二分區": "江淮官話－泰如片",
+        "音典分區": "下江－通泰－南泰",
+        "陳邡分區": "官話－北下江－通泰大片－通泰片",
+        "版本": "2025-09-09",
+        "錄入人": "quasad",
+        "字表來源": "《江淮官话与吴语边界的方言地理学研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.173481,
+          32.090634
         ]
       }
     },
@@ -27219,6 +27243,29 @@
         "coordinates": [
           118.419734,
           29.139655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
+        "marker-size": "medium",
+        "marker-symbol": "d",
+        "title": "常山",
+        "語言": "常山腔",
+        "地點": "浙江衢州常山",
+        "地圖集二分區": "吳語－上麗片－上山小片",
+        "音典分區": "浙南－處衢－三山",
+        "陳邡分區": "信衢",
+        "錄入人": "林",
+        "字表來源": "《吴语处衢方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.529633,
+          28.908012
         ]
       }
     },
@@ -35701,29 +35748,6 @@
         "marker-color": "#C75EEB",
         "marker-size": "small",
         "marker-symbol": "g",
-        "title": "金堂竹篙",
-        "語言": "金堂竹篙老湖廣話",
-        "地點": "四川成都金堂竹篙",
-        "地圖集二分區": "湘語－婁邵片－方言島",
-        "音典分區": "湘贛－南湘－寶慶",
-        "方言島": true,
-        "維護人": "冰糖橙",
-        "字表來源": "《四川金堂湘语语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          104.73457,
-          30.62568
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#C75EEB",
-        "marker-size": "small",
-        "marker-symbol": "g",
         "title": "晴隆長流",
         "語言": "晴隆長流喇叭苗土話",
         "地點": "貴州黔西南晴隆長流",
@@ -35817,6 +35841,32 @@
         "coordinates": [
           111.208429,
           25.682782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "零陵",
+        "語言": "永州零陵官話",
+        "地點": "湖南永州零陵區",
+        "地圖集二分區": "西南官話－桂柳片－湘南小片",
+        "音典分區": "湘贛－南湘－永全",
+        "陳邡分區": "官話－湘南－湘南大片－永州片",
+        "版本": "2025-09-09",
+        "錄入人": "shinzoqchiuq",
+        "維護人": "杭之",
+        "字表來源": "#永州官话同音字表#《湖南省志·方言志》",
+        "補充閲讀": "《湘方言調查報告·下冊》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.631122,
+          26.222552
         ]
       }
     },
@@ -36204,6 +36254,29 @@
         "coordinates": [
           100.771679,
           22.000143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#C75EEB",
+        "marker-size": "small",
+        "marker-symbol": "g",
+        "title": "金堂竹篙",
+        "語言": "金堂竹篙老湖廣話",
+        "地點": "四川成都金堂竹篙",
+        "地圖集二分區": "湘語－婁邵片－方言島",
+        "音典分區": "湘贛－南湘－兩祁",
+        "方言島": true,
+        "維護人": "冰糖橙",
+        "字表來源": "《四川金堂湘语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.73457,
+          30.62568
         ]
       }
     },
