@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <com.osfans.mcpdict.UI.HorizontalRecyclerView
+    <com.osfans.mcpdict.UI.RecyclerView
         android:id="@+id/index_view"
         android:clipToPadding="false"
         android:scrollbars="horizontal"
@@ -12,10 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="?android:attr/listDivider" />
-    <androidx.recyclerview.widget.RecyclerView
+    <com.osfans.mcpdict.UI.RecyclerView
         android:id="@+id/recycler_view"
         android:clipToPadding="false"
-        android:scrollbars="vertical"
+        android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

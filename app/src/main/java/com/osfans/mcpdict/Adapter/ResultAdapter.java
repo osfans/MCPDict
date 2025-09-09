@@ -61,10 +61,19 @@ import com.osfans.mcpdict.Utils;
 import java.net.URLEncoder;
 import java.util.Objects;
 
-public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder> {
+import me.zhanghai.android.fastscroll.PopupTextProvider;
+
+public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder> implements PopupTextProvider {
 
     private Cursor mCursor = null;
     boolean isMainPage;
+
+    @NonNull
+    @Override
+    public CharSequence getPopupText(@NonNull View view, int position) {
+        if (mCursor == null || position == 0) return "";
+        return mCursor.getString(COL_HZ);
+    }
 
     /**
      * Provide a reference to the type of views that you are using
