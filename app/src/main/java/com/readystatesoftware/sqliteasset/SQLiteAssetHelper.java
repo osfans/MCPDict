@@ -23,6 +23,8 @@ import android.database.sqlite.SQLiteException;
 import io.requery.android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -143,6 +145,7 @@ public class SQLiteAssetHelper extends SQLiteOpenHelper {
      * @throws SQLiteException if the database cannot be opened for writing
      * @return a read/write database object valid until {@link #close} is called
      */
+    @NonNull
     @Override
     public synchronized SQLiteDatabase getWritableDatabase() {
         if (mDatabase != null && mDatabase.isOpen() && !mDatabase.isReadOnly()) {
@@ -231,6 +234,7 @@ public class SQLiteAssetHelper extends SQLiteOpenHelper {
      * @return a database object valid until {@link #getWritableDatabase}
      *     or {@link #close} is called.
      */
+    @NonNull
     @Override
     public synchronized SQLiteDatabase getReadableDatabase() {
         if (mDatabase != null && mDatabase.isOpen()) {

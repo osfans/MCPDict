@@ -17,7 +17,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.osmdroid.util.GeoPoint;
 
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -82,7 +81,6 @@ public class DB extends SQLiteAssetHelper {
     private static String[] DIVISIONS = null;
     private static String[] LABELS = null;
     private static String[] LANGUAGES = null;
-    private static String[] SEARCH_COLUMNS = null;
 
     public static int COL_HZ = 0, COL_LANG = 1, COL_IPA = 2, COL_ZS = 3;
     public static int COL_SW, COL_KX, COL_GYHZ, COL_HD;
@@ -99,9 +97,6 @@ public class DB extends SQLiteAssetHelper {
     public enum FILTER {
         ALL, ISLAND, HZ, CURRENT, RECOMMEND, CUSTOM, DIVISION, AREA, EDITOR
     }
-
-    public static int COL_ALL_LANGUAGES = 10000;
-    public static final String ALL_LANGUAGES = "*";
 
     private static final String TABLE_NAME = "mcpdict";
     private static final String TABLE_LANG = "langs";
@@ -257,7 +252,7 @@ public class DB extends SQLiteAssetHelper {
         } else if (HanZi.isUnicode(input)) {
             input = HanZi.toHz(input);
             lang = HZ;
-        } else if (HanZi.isPY(input) && !isLang(lang)) lang = CMN;
+        } else if (HanZi.isPY(input) && isNotLang(lang)) lang = CMN;
         if (isLanguageHZ(lang) && searchType == SEARCH.YIN) searchType = SEARCH.HZ;
         if (isLanguageHZ(lang) && searchType == SEARCH.HZ) {     // Each character is a query
             for (int unicode : input.codePoints().toArray()) {
@@ -426,7 +421,6 @@ public class DB extends SQLiteAssetHelper {
         ORDER = FQ.replace(_FQ, _ORDER);
         COLOR = FQ.replace(_FQ, _COLOR);
         DIVISIONS = getFieldByLabel(HZ, FQ).split(",");
-        SEARCH_COLUMNS = queryLabel(FIRST_FQ.replace(_FQ, _COLOR) + " is not null");
         LABELS = queryLabel(FQ + " is not null");
     }
 
@@ -559,14 +553,6 @@ public class DB extends SQLiteAssetHelper {
         if (type.contentEquals("*")) return getLabels();
         if (TextUtils.isEmpty(type)) return null;
         return queryLabel(String.format("%s MATCH ?", FQ), type);
-    }
-
-    public static String[] getSearchColumns() {
-        initArrays();
-        if (SEARCH_COLUMNS == null) {
-            SEARCH_COLUMNS = queryLabel(COLOR + " is not null");
-        }
-        return SEARCH_COLUMNS;
     }
 
     public static int getColumnIndex(String lang) {
@@ -785,7 +771,7 @@ public class DB extends SQLiteAssetHelper {
                     String s = value;
                     if (field.contentEquals("文件名")) {
                         try {
-                            s = String.format("<a href=\"https://github.com/osfans/MCPDict/blob/master/tools/tables/data/%s\">%s</a>", URLEncoder.encode(value, "utf8"), value);
+                            s = String.format("<a href=\"https://github.com/osfans/MCPDict/blob/master/tools/tables/data/%s\">%s</a>", value, value);
                         } catch (Exception ignore) {
                         }
                     }
@@ -875,8 +861,8 @@ public class DB extends SQLiteAssetHelper {
         return Integer.parseInt(s);
     }
 
-    public static boolean isLang(String lang) {
-        return !TextUtils.isEmpty(getFieldByLabel(lang, "方言島")) && !isLanguageHZ(lang);
+    public static boolean isNotLang(String lang) {
+        return TextUtils.isEmpty(getFieldByLabel(lang, "方言島")) || isLanguageHZ(lang);
     }
 
     public static String[] getFqColumns() {

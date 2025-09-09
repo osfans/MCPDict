@@ -1,8 +1,9 @@
 package com.osfans.mcpdict;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -17,9 +18,13 @@ import com.osfans.mcpdict.UI.RefreshableFragment;
 import com.osfans.mcpdict.Favorite.UserDB;
 import com.osfans.mcpdict.Util.App;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager2 mPager;
+    ExecutorService mExecutorService;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -50,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         if (id == R.id.menu_item_home) {
-            if (getDictionaryFragment()!=null) {
+            if (getDictionaryFragment() != null) {
                 getDictionaryFragment().refresh("", "");
             }
         }
@@ -61,24 +66,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         App.setLocale();
         App.setActivityTheme(this);
-        DB.initFQ();
-        // Initialize the some "static" classes on separate threads
-        new Thread(()-> Orthography.initialize(getResources())).start();
+        mExecutorService = Executors.newSingleThreadExecutor();
+        Handler handler = new Handler(Looper.getMainLooper());
 
-        new AsyncTask<Void, Void, Void>() {
-            @Override
-            protected Void doInBackground(Void... params) {
-                UserDB.initialize(MainActivity.this);
-                DB.initialize(MainActivity.this);
-                return null;
-            }
-            protected void onPostExecute(Void result) {
-                if (getDictionaryFragment()!=null)
-                    getDictionaryFragment().refreshAdapter();
-            }
-        }.execute();
-
-        new Thread(()-> FavoriteDialogs.initialize(MainActivity.this)).start();
+        mExecutorService.execute(() -> {
+            //Background work here
+            Orthography.initialize(getResources());
+            UserDB.initialize(this);
+            DB.initialize(this);
+            DB.initFQ();
+            FavoriteDialogs.initialize(this);
+            handler.post(() -> {
+                //UI Thread work here
+                if (getDictionaryFragment() != null) getDictionaryFragment().refreshAdapter();
+            });
+        });
 
         // Set up activity layout
         super.onCreate(savedInstanceState);
@@ -86,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
         mPager = findViewById(R.id.pager);
         mPager.setUserInputEnabled(true);
         initAdapter();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mExecutorService.close();
     }
 
     private void initAdapter() {

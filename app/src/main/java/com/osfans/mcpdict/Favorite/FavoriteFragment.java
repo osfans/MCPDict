@@ -2,11 +2,13 @@ package com.osfans.mcpdict.Favorite;
 
 import android.annotation.SuppressLint;
 import android.database.Cursor;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.ListFragment;
+
+import android.os.Handler;
+import android.os.Looper;
 import android.text.Spannable;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
@@ -23,6 +25,9 @@ import android.widget.TextView.BufferType;
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.UI.RefreshableFragment;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 @SuppressLint("UseSparseArrays")
 public class FavoriteFragment extends ListFragment implements RefreshableFragment {
 
@@ -32,11 +37,14 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
     private ListView listView;
     private FavoriteAdapter adapter;
     private boolean hasNewItem;
+    ExecutorService mExecutorService;
+    Cursor mCursor = null;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // A hack to avoid nested fragments from being inflated twice
         // Reference: http://stackoverflow.com/a/14695397
+        mExecutorService = Executors.newSingleThreadExecutor();
         if (selfView != null) {
             ViewGroup parent = (ViewGroup) selfView.getParent();
             if (parent != null) parent.removeView(selfView);
@@ -96,6 +104,12 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
     }
 
     @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        mExecutorService.close();
+    }
+
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
@@ -133,23 +147,22 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
     @Override
     public void refresh() {
         if (adapter == null) return;
-        new AsyncTask<Void, Void, Cursor>() {
-            @Override
-            protected Cursor doInBackground(Void... params) {
-                return UserDB.selectAllFavorites();
-            }
+        Handler handler = new Handler(Looper.getMainLooper());
 
-            @Override
-            protected void onPostExecute(Cursor data) {
-                adapter.changeCursor(data);
-                if (data.getCount() == 0) {
+        mExecutorService.execute(() -> {
+            //Background work here
+            mCursor = UserDB.selectAllFavorites();
+            handler.post(() -> {
+                //UI Thread work here
+                adapter.changeCursor(mCursor);
+                if (mCursor == null || mCursor.getCount() == 0) {
                     header.setVisibility(View.GONE);
                 } else {
                     header.setVisibility(View.VISIBLE);
-                    textTotal.setText(String.format(getString(R.string.favorite_total), data.getCount()));
+                    textTotal.setText(String.format(getString(R.string.favorite_total), mCursor.getCount()));
                 }
-            }
-        }.execute();
+            });
+        });
         if (hasNewItem) {
             listView.setSelectionAfterHeaderView();
             hasNewItem = false;
