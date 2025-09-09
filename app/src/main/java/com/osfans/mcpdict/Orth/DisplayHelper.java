@@ -40,13 +40,13 @@ public abstract class DisplayHelper {
         return s;
     }
 
-    public static String formatJS(String s) {
+    public static String formatJS(String hz, String s) {
         if (TextUtils.isEmpty(s)) return "";
-        return s.replace("  ", "　").replace(" ", "").replace("　", " ").replace("?", "？").replace("!", "！").replace(",", "，").replace(":", "：").replace(";", "；").replace("~", "～");
+        return s.replace("*" + hz + "*", "～").replace("  ", "　").replace(" ", "").replace("　", " ").replace("?", "？").replace("!", "！").replace(",", "，").replace(":", "：").replace(";", "；").replace("~", "～");
     }
 
-    public static String formatZS(String s) {
-        return String.format("<small><small>%s</small></small>", formatJS(s));
+    public static String formatZS(String hz, String s) {
+        return String.format("<small><small>%s</small></small>", formatJS(hz, s));
     }
 
     public static String getRawText(String s) {
@@ -56,7 +56,7 @@ public abstract class DisplayHelper {
     
     public static CharSequence formatPopUp(String hz, int i, String s) {
         if (TextUtils.isEmpty(s)) return "";
-        if (i != COL_HZ) s = formatJS(s);
+        if (i != COL_HZ) s = formatJS(hz, s);
         if (i == COL_SW) s = s.replace("{", "<small>").replace("}", "</small>");
         else if (i == COL_KX) s = s.replaceAll(PAGE_FORMAT, "<a href=https://www.kangxizidian.com/v1/index.php?page=$1>第$1頁</a>第$2字");
         else if (i == COL_GYHZ) s = Pref.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceFirst(PAGE_FORMAT, "第$1頁第$2字");

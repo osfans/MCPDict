@@ -386,7 +386,7 @@ class 表:
 			else:
 				上 += 字
 		if 上: 果.append(上)
-		return " ".join(果).replace("   ", "  ")
+		return re.sub(r" ?([,:;?!()]) ?", "\\1", " ".join(果).replace("   ", "  "))
 
 	def 合註(自, 註):
 		return 註.replace("  ", "　").replace(" ", "").replace("　", " ")
@@ -525,11 +525,17 @@ class 表:
 		for 音, 字組 in d.items():
 			註 = re.sub(r"\{([^{}]*?)\}$", "\t\\1", 音)
 			if "\t" not in 註:
-				註 += "\t"
-				items.append((" ".join(字組), 自.簡稱, *註.split("\t", 1)))
+				讀音, 註釋 = 註, ""
+				items.append((" ".join(字組), 自.簡稱, 讀音, 註釋))
 			else:
+				讀音, 註釋 = 註.split("\t", 1)
 				for 字 in 字組:
-					items.append((字, 自.簡稱, *註.split("\t", 1)))
+					註釋乙 = 註釋
+					if 自.爲語() and 自.爲音 and "~" in 註釋 and 字 != "□":
+						註釋乙 = 註釋.replace("~", f"*{字}*")
+						註釋乙 = re.sub(r"(\*) ([^* ])", "\\1\\2", 註釋乙)
+						註釋乙 = re.sub(r"([^* ]) (\*)", "\\1\\2", 註釋乙)
+					items.append((字, 自.簡稱, 讀音, 註釋乙))
 
 	def 存(自, output):
 		t = open(output, "w", encoding="U8", newline="\n")
