@@ -258,8 +258,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             return null;
         }
 
-        private Intent getDictIntent(String lang, String hz) {
-            String link = DB.getDictLink(lang);
+        private Intent getLinkIntent(String link, String hz) {
             if (TextUtils.isEmpty(link)) return null;
             String big5 = null;
             String hex = HanZi.toUnicodeHex(hz);
@@ -272,6 +271,11 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             return intent;
+        }
+
+        private Intent getDictIntent(String lang, String hz) {
+            String link = DB.getDictLink(lang);
+            return getLinkIntent(link, hz);
         }
 
         @Override
@@ -294,7 +298,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             });
             item = menu.findItem(R.id.menu_item_custom_language);
             boolean isCustom = Utils.isCustomLanguage(language);
-            item.setTitle(Pref.getString(isCustom ? R.string.rm_from_custom_language : R.string.add_to_custom_language, language));
+            item.setTitle(Pref.getString(isCustom ? R.string.rm_from_custom_language : R.string.add_to_custom_language));
             item.setOnMenuItemClickListener(i -> {
                 DictFragment dictFragment = ((MainActivity) v.getContext()).getDictionaryFragment();
                 dictFragment.updateCustomLanguage(language);
@@ -302,7 +306,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 return true;
             });
             item = menu.findItem(R.id.menu_item_copy_readings);
-            item.setTitle(Pref.getString(R.string.copy_one_reading, hz, language));
+            item.setTitle(Pref.getString(R.string.copy_one_reading, hz));
             String ipa = cursor.getString(COL_IPA);
             item.setOnMenuItemClickListener(i -> {
                 String zs = cursor.getString(COL_ZS);
@@ -311,7 +315,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 return true;
             });
             item = menu.findItem(R.id.menu_item_search_homophone);
-            item.setTitle(Pref.getString(R.string.search_homophone, DisplayHelper.getIPA(lang, ipa).toString().replaceAll("[ /].*$",""), language));
+            item.setTitle(Pref.getString(R.string.search_homophone, DisplayHelper.getIPA(lang, ipa).toString().replaceAll("[ /].*$","")));
             item.setOnMenuItemClickListener(i->{
                 String query = ipa.replaceAll("/.*$","").replace("-", " ").replace("=", " ").trim();
                 if (lang.contentEquals(BA)) query = BaiSha.display(ipa.replaceAll("\\([^()]*?\\)$", "").trim());
@@ -329,12 +333,26 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             String dict = DB.getDictName(lang);
             item = menu.findItem(R.id.menu_item_dict_links);
             if (!TextUtils.isEmpty(dict)) {
-                item.setTitle(Pref.getString(R.string.one_dict_links, hz, dict));
+                item.setTitle(dict);
                 item.setIntent(getDictIntent(lang, hz));
                 item.setVisible(true);
             } else {
                 item.setVisible(false);
             }
+            item = menu.findItem(R.id.menu_item_dict_zdic);
+            item.setIntent(getLinkIntent("https://zdic.net/hans/%s", hz));
+            item = menu.findItem(R.id.menu_item_dict_zisea);
+            item.setIntent(getLinkIntent("http://zisea.com/zscontent.asp?uni=%2$s", hz));
+            item = menu.findItem(R.id.menu_item_dict_moedict);
+            item.setIntent(getLinkIntent("https://www.moedict.tw/%s", hz));
+            item = menu.findItem(R.id.menu_item_dict_zitools);
+            item.setIntent(getLinkIntent("https://zi.tools/zi/%s", hz));
+            item = menu.findItem(R.id.menu_item_dict_unihan);
+            item.setIntent(getLinkIntent("https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%s", hz));
+            item = menu.findItem(R.id.menu_item_dict_chise);
+            item.setIntent(getLinkIntent("https://www.chise.org/est/view/character/%s", hz));
+            item = menu.findItem(R.id.menu_item_dict_kangxi);
+            item.setIntent(getLinkIntent("https://kangxizidian.com/kxhans/%s", hz));
             String comment = getResult(String.format("select comment from user.favorite where hz = '%s'", hz));
             item = menu.findItem(R.id.menu_item_favorite);
             if (comment != null) {

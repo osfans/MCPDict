@@ -9,8 +9,6 @@
             android:id="@+id/menu_item_custom_language"
             android:title="@string/add_to_custom_language" >
         </item>
-    </group>
-    <group android:id="@+id/ipa">
         <item
             android:id="@+id/menu_item_copy_readings"
             android:title="@string/copy_one_reading" />
@@ -19,16 +17,39 @@
             android:title="@string/search_homophone" />
     </group>
     <group android:id="@+id/hz">
+        <item android:title="@string/online_dict">
+            <menu>
+                <item
+                    android:id="@+id/menu_item_dict_links"
+                    android:title="@string/one_dict_links" />
+                <item
+                    android:id="@+id/menu_item_dict_zdic"
+                    android:title="@string/zdic" />
+                <item
+                    android:id="@+id/menu_item_dict_zisea"
+                    android:title="@string/zisea" />
+                <item
+                    android:id="@+id/menu_item_dict_moedict"
+                    android:title="@string/moedict" />
+                <item
+                    android:id="@+id/menu_item_dict_zitools"
+                    android:title="@string/zitools" />
+                <item android:id="@+id/menu_item_dict_kangxi"
+                    android:title="@string/kangxi" />
+                <item
+                    android:id="@+id/menu_item_dict_unihan"
+                    android:title="@string/unihan" />
+                <item
+                    android:id="@+id/menu_item_dict_chise"
+                    android:title="@string/chise" />
+            </menu>
+        </item>
         <item
             android:id="@+id/menu_item_copy_hz"
             android:title="@string/copy_hz" >
         </item>
         <item
-            android:id="@+id/menu_item_dict_links"
-            android:title="@string/one_dict_links" />
-        <item
             android:id="@+id/menu_item_favorite"
             android:title="@string/favorite_add" />
     </group>
-
 </menu>
