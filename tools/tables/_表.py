@@ -522,11 +522,14 @@ class 表:
 		for 字, 音集 in 自.d.items():
 			for 音 in 音集:
 				d[音].append(字)
-		for 音, 字 in d.items():
+		for 音, 字組 in d.items():
 			註 = re.sub(r"\{([^{}]*?)\}$", "\t\\1", 音)
 			if "\t" not in 註:
 				註 += "\t"
-			items.append((" ".join(字), 自.簡稱, *註.split("\t", 1)))
+				items.append((" ".join(字組), 自.簡稱, *註.split("\t", 1)))
+			else:
+				for 字 in 字組:
+					items.append((字, 自.簡稱, *註.split("\t", 1)))
 
 	def 存(自, output):
 		t = open(output, "w", encoding="U8", newline="\n")
