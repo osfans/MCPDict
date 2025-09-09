@@ -9,12 +9,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.osfans.mcpdict.Adapter.IndexAdapter;
 import com.osfans.mcpdict.Adapter.ResultAdapter;
 import com.osfans.mcpdict.Orth.Orthography;
+
+import me.zhanghai.android.fastscroll.FastScrollerBuilder;
 
 public class ResultFragment extends Fragment {
 
@@ -46,12 +49,16 @@ public class ResultFragment extends Fragment {
         // Inflate the fragment view
         selfView = inflater.inflate(R.layout.search_result, container, false);
         mIndexView = selfView.findViewById(R.id.index_view);
+        mIndexView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(requireContext(), LinearLayoutManager.HORIZONTAL);
+        mIndexView.addItemDecoration(dividerItemDecoration);
         mRecyclerView = selfView.findViewById(R.id.recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mIndexAdapter = new IndexAdapter(mRecyclerView);
         mIndexView.setAdapter(mIndexAdapter);
         mResultAdapter = new ResultAdapter(isMainPage);
         mRecyclerView.setAdapter(mResultAdapter);
+        new FastScrollerBuilder(mRecyclerView).build();
         Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(Pref.getToneStyle(R.string.pref_key_tone_value_display));
 
