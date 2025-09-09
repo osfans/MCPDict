@@ -28,7 +28,10 @@ import com.osfans.mcpdict.Adapter.LanguageAdapter;
 import com.osfans.mcpdict.Adapter.MultiLanguageAdapter;
 import com.osfans.mcpdict.Adapter.StringArrayAdapter;
 import com.osfans.mcpdict.DB.FILTER;
+import com.osfans.mcpdict.UI.RefreshableFragment;
+import com.osfans.mcpdict.UI.ResultFragment;
 import com.osfans.mcpdict.UI.SearchView;
+import com.osfans.mcpdict.Util.Pref;
 
 import java.util.Objects;
 

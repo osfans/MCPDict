@@ -14,9 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.osfans.mcpdict.DB;
-import com.osfans.mcpdict.DisplayHelper;
+import com.osfans.mcpdict.Orth.DisplayHelper;
 import com.osfans.mcpdict.Orth.HanZi;
-import com.osfans.mcpdict.Pref;
+import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.Util.FontUtil;
 

@@ -8,9 +8,7 @@ import android.os.Build;
 import android.text.TextUtils;
 import android.widget.TextView;
 
-import com.osfans.mcpdict.Pref;
 import com.osfans.mcpdict.R;
-import com.osfans.mcpdict.Utils;
 
 public class FontUtil {
     static Typeface tfHan;
@@ -98,7 +96,7 @@ public class FontUtil {
     }
 
     private static Resources getResources() {
-        return Utils.getContext().getResources();
+        return App.getContext().getResources();
     }
 
     public static int getFontFormat() {

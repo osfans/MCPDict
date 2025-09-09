@@ -13,7 +13,7 @@ import androidx.core.text.HtmlCompat;
 import androidx.cursoradapter.widget.CursorAdapter;
 
 import com.osfans.mcpdict.DB;
-import com.osfans.mcpdict.Pref;
+import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.Util.FontUtil;
 

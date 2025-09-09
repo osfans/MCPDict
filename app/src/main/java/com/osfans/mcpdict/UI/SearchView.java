@@ -22,10 +22,10 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.osfans.mcpdict.Adapter.HzAdapter;
 import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.Orth.HanZi;
-import com.osfans.mcpdict.Pref;
+import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.Util.FontUtil;
-import com.osfans.mcpdict.Utils;
+import com.osfans.mcpdict.Util.App;
 
 import java.util.Objects;
 
@@ -154,7 +154,7 @@ public class SearchView extends ConstraintLayout {
                 .width(buttonKeyboard.getWidth())
                 .height(buttonKeyboard.getHeight())
                 .fontSize(editText.getTextSize() * 0.8f)
-                .textColor(Utils.obtainColor(getContext(), android.R.attr.textColorPrimary))
+                .textColor(App.obtainColor(getContext(), android.R.attr.textColorPrimary))
                 .endConfig()
                 .roundRect(5);
         String label = shape.substring(0, 1);

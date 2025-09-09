@@ -45,18 +45,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.DictFragment;
-import com.osfans.mcpdict.DisplayHelper;
+import com.osfans.mcpdict.Orth.DisplayHelper;
 import com.osfans.mcpdict.Favorite.FavoriteDialogs;
 import com.osfans.mcpdict.MainActivity;
 import com.osfans.mcpdict.Orth.BaiSha;
 import com.osfans.mcpdict.Orth.HanZi;
-import com.osfans.mcpdict.Pref;
+import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.UI.MapView;
 import com.osfans.mcpdict.UI.PopupSpan;
 import com.osfans.mcpdict.UI.TextDrawable;
 import com.osfans.mcpdict.Util.FontUtil;
-import com.osfans.mcpdict.Utils;
+import com.osfans.mcpdict.Util.App;
 
 import java.net.URLEncoder;
 import java.util.Objects;
@@ -238,7 +238,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         }
 
         public void copyText(String text) {
-            Context context = Utils.getContext();
+            Context context = App.getContext();
             ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData clip = ClipData.newPlainText("item", text);
             clipboard.setPrimaryClip(clip);
@@ -293,16 +293,16 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             item = menu.findItem(R.id.menu_item_goto_info);
             item.setTitle(String.format(Objects.requireNonNull(item.getTitle()).toString(), language));
             item.setOnMenuItemClickListener(i -> {
-                Utils.info(v.getContext(), lang);
+                App.info(v.getContext(), lang);
                 return true;
             });
             item = menu.findItem(R.id.menu_item_custom_language);
-            boolean isCustom = Utils.isCustomLanguage(language);
+            boolean isCustom = App.isCustomLanguage(language);
             item.setTitle(Pref.getString(isCustom ? R.string.rm_from_custom_language : R.string.add_to_custom_language));
             item.setOnMenuItemClickListener(i -> {
                 DictFragment dictFragment = ((MainActivity) v.getContext()).getDictionaryFragment();
                 dictFragment.updateCustomLanguage(language);
-                Toast.makeText(v.getContext(), Pref.getString(Utils.isCustomLanguage(language) ? R.string.add_to_custom_language_done : R.string.rm_from_custom_language_done, language), Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(), Pref.getString(App.isCustomLanguage(language) ? R.string.add_to_custom_language_done : R.string.rm_from_custom_language_done, language), Toast.LENGTH_SHORT).show();
                 return true;
             });
             item = menu.findItem(R.id.menu_item_copy_readings);

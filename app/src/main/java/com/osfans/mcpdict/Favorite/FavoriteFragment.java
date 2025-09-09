@@ -21,8 +21,7 @@ import android.widget.TextView;
 import android.widget.TextView.BufferType;
 
 import com.osfans.mcpdict.R;
-import com.osfans.mcpdict.RefreshableFragment;
-import com.osfans.mcpdict.Util.UserDB;
+import com.osfans.mcpdict.UI.RefreshableFragment;
 
 @SuppressLint("UseSparseArrays")
 public class FavoriteFragment extends ListFragment implements RefreshableFragment {

@@ -3,7 +3,6 @@ package com.osfans.mcpdict.Orth;
 import android.text.TextUtils;
 
 import com.osfans.mcpdict.DB;
-import com.osfans.mcpdict.DisplayHelper;
 
 import org.json.JSONObject;
 

@@ -3,8 +3,7 @@ package com.osfans.mcpdict.Orth;
 import android.text.TextUtils;
 
 import com.osfans.mcpdict.DB;
-import com.osfans.mcpdict.DisplayHelper;
-import com.osfans.mcpdict.Pref;
+import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.R;
 
 import java.util.ArrayList;

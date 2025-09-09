@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckedTextView;
 
-import com.osfans.mcpdict.Pref;
+import com.osfans.mcpdict.Util.Pref;
 
 import java.util.Set;
 

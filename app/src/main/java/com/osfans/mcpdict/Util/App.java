@@ -1,4 +1,4 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.Util;
 
 import static com.osfans.mcpdict.DB.COL_GYHZ;
 import static com.osfans.mcpdict.DB.COL_HD;
@@ -18,15 +18,17 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
+import com.osfans.mcpdict.BuildConfig;
+import com.osfans.mcpdict.DB;
+import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.UI.WebView;
-import com.osfans.mcpdict.Util.FontUtil;
 
 import java.util.Locale;
 
-public class Utils extends Application {
-    private static Utils mApp;
+public class App extends Application {
+    private static App mApp;
 
-    public Utils() {
+    public App() {
         mApp = this;
     }
 
@@ -106,10 +108,6 @@ public class Utils extends Application {
 
     public static boolean isCustomLanguage(String lang) {
         return Pref.getCustomLanguages().contains(lang);
-    }
-
-    public static float getScale() {
-        return getContext().getResources().getDisplayMetrics().density;
     }
 
     static int getAppTheme() {

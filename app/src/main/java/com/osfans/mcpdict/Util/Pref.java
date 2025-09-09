@@ -1,9 +1,12 @@
-package com.osfans.mcpdict;
+package com.osfans.mcpdict.Util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
+
+import com.osfans.mcpdict.DB;
+import com.osfans.mcpdict.R;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -12,7 +15,7 @@ import java.util.Set;
 
 public class Pref {
     private static Context getContext() {
-        return Utils.getContext();
+        return App.getContext();
     }
 
     public static SharedPreferences get() {
@@ -39,10 +42,6 @@ public class Pref {
 
     public static String[] getStringArray(int id) {
         return getContext().getResources().getStringArray(id);
-    }
-
-    public static void remove(int key) {
-        get().edit().remove(getContext().getString(key)).apply();
     }
 
     public static void putBool(int key, boolean value) {
