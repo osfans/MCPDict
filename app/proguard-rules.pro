@@ -20,3 +20,4 @@
 #-renamesourcefileattribute SourceFile
 
 -keep class **.R$font { public *; }
+-keep class **.OpenCC { public *; }

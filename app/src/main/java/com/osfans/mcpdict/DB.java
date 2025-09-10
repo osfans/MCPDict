@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.osfans.mcpdict.Orth.*;
+import com.osfans.mcpdict.Util.OpenCC;
 import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.Favorite.UserDB;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
@@ -278,7 +279,7 @@ public class DB extends SQLiteAssetHelper {
 
         if (searchType == SEARCH.COMMENT) {
             String[] projection = {"0 AS rank", "0 AS vaIndex", "'' AS variants", "*", "trim(substr(字組, 1, 1)) AS 漢字"};
-            selection = String.format("註釋 MATCH '\"%s\"' %s", String.join(" ", keywords), languageClause);
+            selection = String.format("註釋 MATCH '%s' %s", String.join(" OR ", keywords), languageClause);
             queries.add(qb.buildQuery(projection, selection, null, null, null, null));
         } else {
             String hzs;
@@ -293,7 +294,7 @@ public class DB extends SQLiteAssetHelper {
             } else if (searchType == SEARCH.DICT) {
                 String dict = Pref.getDict();
                 String match = TextUtils.isEmpty(dict) ? "mcpdict" : DB.getLabelByLanguage(dict);
-                hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where %s MATCH '%s'", match, String.join(" ", keywords)));
+                hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where %s MATCH '%s'", match, String.join(" OR ", keywords)));
                 if (TextUtils.isEmpty(hzs)) return null;
                 keywords = Arrays.asList(hzs.split(" "));
             }
@@ -931,4 +932,11 @@ public class DB extends SQLiteAssetHelper {
         String shape = Pref.getShape();
         return isHzInput() || isYinPrompt() || shape.contentEquals(BJJS) || shape.contentEquals(LF) || shape.contentEquals(ZX) || shape.contentEquals(BS);
     }
+
+    @Override
+    public void copyDatabaseFromAssets() throws SQLiteAssetException {
+        super.copyDatabaseFromAssets();
+        OpenCC.initOpenCC();
+    }
+
 }
