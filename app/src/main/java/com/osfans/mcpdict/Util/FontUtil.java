@@ -45,6 +45,8 @@ public class FontUtil {
                     ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(getResources(), R.font.p3).build()).build()
                     ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.u17).build()).build()
+                    ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(getResources(), R.font.pua).build()).build()
                     );
                     builder.setSystemFallback(getDefaultFont());
@@ -62,6 +64,8 @@ public class FontUtil {
                             new FontFamily.Builder(new Font.Builder(getResources(), R.font.p2).build()).build()
                     ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(getResources(), R.font.p3).build()).build()
+                    ).addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.u17).build()).build()
                     ).addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(getResources(), R.font.pua).build()).build()
                     );
