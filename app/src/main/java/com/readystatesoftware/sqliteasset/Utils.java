@@ -12,7 +12,7 @@ import java.util.Scanner;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-class Utils {
+public class Utils {
 
     private static final String TAG = SQLiteAssetHelper.class.getSimpleName();
 

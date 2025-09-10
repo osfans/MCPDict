@@ -408,7 +408,7 @@ public class SQLiteAssetHelper extends SQLiteOpenHelper {
         }
     }
 
-    private void copyDatabaseFromAssets() throws SQLiteAssetException {
+    public void copyDatabaseFromAssets() throws SQLiteAssetException {
         Log.w(TAG, "copying database from assets...");
 
         String path = mAssetPath;

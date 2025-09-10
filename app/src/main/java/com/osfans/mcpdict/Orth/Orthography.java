@@ -7,6 +7,7 @@ import android.text.TextUtils;
 
 import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.R;
+import com.osfans.mcpdict.Util.OpenCC;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -312,12 +313,13 @@ public class Orthography {
     }
 
     public static String[] normWords(String s) {
-        String[] ss = s.split(" ");
+        s = s.replace(" ", "");
+        String[] ss = OpenCC.convertAll(s);
         String[] newSS = new String[ss.length];
         int i = 0;
         for (String word : ss) {
             String newWord = normWord(word);
-            newSS[i] = newWord;
+            newSS[i] = String.format("\"%s\"", newWord);
             i++;
         }
         return newSS;

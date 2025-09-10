@@ -1,0 +1,8 @@
+LIBRARY   opencc
+EXPORTS
+    opencc_init_converter
+    opencc_delete_converter
+    opencc_convert
+    opencc_convert_list
+    opencc_free_string
+    opencc_free_string_array
