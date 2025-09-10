@@ -35,6 +35,7 @@ public class HanZi {
                 || (unicode >= 0x30000 && unicode <= 0x3134F) // CJK Extension G
                 || (unicode >= 0x31350 && unicode <= 0x323AF) // CJK Extension H
                 || (unicode >= 0x2EBF0 && unicode <= 0x2EE5F) // CJK Extension I
+                || (unicode >= 0x323B0 && unicode <= 0x33479) // CJK Extension J
                 || (unicode >= 0xF900 && unicode <= 0xFAFF)   // CJK Compatibility Ideographs
                 || (unicode >= 0x2F800 && unicode <= 0x2FA1F); // CJK Compatibility Ideographs Supplement
     }
@@ -129,6 +130,7 @@ public class HanZi {
         else if (unicode >= 0x30000 && unicode <= 0x3134F) ext = "G";
         else if (unicode >= 0x31350 && unicode <= 0x323AF) ext = "H";
         else if (unicode >= 0x2EBF0 && unicode <= 0x2EE5F) ext = "I";
+        else if (unicode >= 0x323B0 && unicode <= 0x33479) ext = "J";
         if (!TextUtils.isEmpty(ext)) ext = "擴" + ext;
         return ext;
     }
