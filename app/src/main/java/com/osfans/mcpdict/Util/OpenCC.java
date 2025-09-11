@@ -1,6 +1,7 @@
 package com.osfans.mcpdict.Util;
 
 import android.content.res.AssetManager;
+import android.text.TextUtils;
 
 import com.readystatesoftware.sqliteasset.Utils;
 
@@ -17,19 +18,29 @@ public class OpenCC {
     private static final String[] CONFIGS = new String[] {
             "hk2s","hk2t","s2hk","s2t","s2tw","s2twp","t2hk","t2s","t2tw","tw2s","tw2sp","tw2t"
     };
+    private static final String CONFIG_N2O = "n2o";
 
     public static native String openCCLineConv(String input, String configFullPath);
 
     public static String convert(String input, String configFileName) {
+        if (TextUtils.isEmpty(input)) return "";
         File openccDir = new File(App.getContext().getDataDir(), FOLDER);
-        return openCCLineConv(input, new File(openccDir, configFileName + ".json").getAbsolutePath());
+        File file = new File(openccDir, configFileName + ".json");
+        if (file.exists()) return openCCLineConv(input, file.getAbsolutePath());
+        return input;
+    }
+
+    public static String convertToOld(String input) {
+        return convert(input, CONFIG_N2O);
     }
 
     public static String[] convertAll(String input) {
         Set<String> set = new HashSet<>();
+        if (TextUtils.isEmpty(input)) input = "";
         set.add(input);
         for (String config: CONFIGS) {
-            set.add(convert(input, config));
+            String s = convert(input, config);
+            set.add(s);
         }
         return set.toArray(new String[0]);
     }

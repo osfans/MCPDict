@@ -4,16 +4,9 @@ import android.text.TextUtils;
 import android.widget.MultiAutoCompleteTextView;
 
 import com.osfans.mcpdict.DB;
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import com.osfans.mcpdict.Util.OpenCC;
 
 public class HanZi {
-    public static final Map<Integer, Integer> compatibility = new HashMap<>();
-    public static final Map<String, String> bsCompatibility = new HashMap<>();
-
     public static boolean isUnknown(int unicode) {
         return unicode == 0x25A1; //□
     }
@@ -61,11 +54,6 @@ public class HanZi {
         return cp2str(codePoint);
     }
 
-    public static boolean isSingleHZ(String hz) {
-        if (TextUtils.isEmpty(hz)) return false;
-        return hz.codePoints().toArray().length == 1;
-    }
-
     public static boolean isUnicode(String input) {
         if (TextUtils.isEmpty(input)) return false;
         return input.toUpperCase().matches("(U\\+)?[0-9A-F]{4,5}");
@@ -86,18 +74,6 @@ public class HanZi {
         return s.matches("[a-z]+[0-5?]?");
     }
 
-    public static int getCompatibility(int unicode) {
-        return compatibility.getOrDefault(unicode, unicode);
-    }
-
-    public static String getBSCompatibility(String s) {
-        Set<String> l = new HashSet<>();
-        for (int i: bsCompatibility.getOrDefault(s, s).codePoints().toArray()) {
-            l.add(cp2str(i));
-        }
-        return String.join(" OR ", l);
-    }
-
     public static String toHz(String input) {
         if (input.toUpperCase().startsWith("U+")) input = input.substring(2);
         int unicode = Integer.parseInt(input, 16);
@@ -105,8 +81,8 @@ public class HanZi {
     }
 
     public static String toHz(int unicode) {
-        unicode = getCompatibility(unicode);
-        return cp2str(unicode);
+        String hz = cp2str(unicode);
+        return OpenCC.convert(hz, "c2u");
     }
 
     public static String toUnicodeHex(String hz) {
@@ -128,7 +104,7 @@ public class HanZi {
         else if (unicode >= 0x2A6DE && unicode <= 0x2A6DF) ext = "擴展B 14.0";
         else if (unicode >= 0x2A700 && unicode <= 0x2B734) ext = "擴展C 5.2";
         else if (unicode >= 0x2A735 && unicode <= 0x2B738) ext = "擴展C 14.0";
-        else if (unicode >= 0x2B739 && unicode <= 0x2B739) ext = "擴展C 15.0";
+        else if (unicode == 0x2B739) ext = "擴展C 15.0";
         else if (unicode >= 0x2B73A && unicode <= 0x2B73F) ext = "擴展C 17.0";
         else if (unicode >= 0x2B740 && unicode <= 0x2B81F) ext = "擴展D 6.0";
         else if (unicode >= 0x2B820 && unicode <= 0x2CEA1) ext = "擴展E 8.0";
@@ -142,7 +118,7 @@ public class HanZi {
         else if (unicode >= 0x9FA6 && unicode <= 0x9FBB) ext = "基本 4.1";
         else if (unicode >= 0x9FBC && unicode <= 0x9FC3) ext = "基本 5.1";
         else if (unicode >= 0x9FC4 && unicode <= 0x9FCB) ext = "基本 5.2";
-        else if (unicode >= 0x9FCC && unicode <= 0x9FCC) ext = "基本 6.1";
+        else if (unicode == 0x9FCC) ext = "基本 6.1";
         else if (unicode >= 0x9FCD && unicode <= 0x9FD5) ext = "基本 8.0";
         else if (unicode >= 0x9FD6 && unicode <= 0x9FEA) ext = "基本 10.0";
         else if (unicode >= 0x9FEB && unicode <= 0x9FEF) ext = "基本 11.0";

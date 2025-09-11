@@ -48,7 +48,6 @@ public class DB extends SQLiteAssetHelper {
 
     public static final String MAP = " 🌏 ";
     public static final String VARIANTS = "variants";
-    public static final String INDEX = "索引";
     public static final String LANGUAGE = "語言";
     public static final String LABEL = "簡稱";
     public static final String SYLLABLES = "音節數";
@@ -522,8 +521,10 @@ public class DB extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
         String[] projection = {LANGUAGE, "rowid as _id"};
-        String query = qb.buildQuery(projection, LANGUAGE + INDEX + " LIKE ? and 音節數 is not null",  null, null, ORDER, null);
-        Cursor cursor = db.rawQuery(query, new String[]{"%"+constraint+"%"});
+        String[] inputs = OpenCC.convertAll("LANGUAGE LIKE '%"+constraint+"%'");
+        String input = String.join(" OR ", inputs).replace("LANGUAGE", LANGUAGE);
+        String query = qb.buildQuery(projection, String.format("%s and 音節數 is not null", input),  null, null, ORDER, null);
+        Cursor cursor = db.rawQuery(query, null);
         if (cursor.getCount() > 0) return cursor;
         cursor.close();
         return getLanguageCursor("");

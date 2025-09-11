@@ -157,28 +157,6 @@ public class Orthography {
         String[] fields;
 
         try {
-            // Character compatibility variants
-            inputStream = resources.openRawResource(R.raw.orthography_hz_compatibility);
-            reader = new BufferedReader(new InputStreamReader(inputStream));
-            while ((line = reader.readLine()) != null) {
-                int c = line.codePointAt(0);
-                HanZi.compatibility.put(c, line.codePoints().toArray()[1]);
-            }
-            reader.close();
-
-            // Character BS compatibility variants
-            inputStream = resources.openRawResource(R.raw.orthography_bs_compatibility);
-            reader = new BufferedReader(new InputStreamReader(inputStream));
-            while ((line = reader.readLine()) != null) {
-                int [] cs = line.codePoints().toArray();
-                int n = cs.length;
-                String s = cp2str(cs[n - 1]);
-                for (int i = 0; i < n - 1; i++) {
-                    HanZi.bsCompatibility.put(s, HanZi.bsCompatibility.getOrDefault(s, s) + cp2str(cs[i]));
-                }
-            }
-            reader.close();
-
             // Mandarin: Pinyin
             inputStream = resources.openRawResource(R.raw.orthography_pu_pinyin);
             reader = new BufferedReader(new InputStreamReader(inputStream));
@@ -289,8 +267,9 @@ public class Orthography {
 
     public static String normParts(String input) {
         List<String> l = new ArrayList<>();
+        input = OpenCC.convert(input, "bs2u");
         for (int unicode: input.codePoints().toArray()) {
-            String s = HanZi.getBSCompatibility(cp2str(unicode));
+            String s = cp2str(unicode);
             l.add(s);
         }
         return String.join(" ", l);

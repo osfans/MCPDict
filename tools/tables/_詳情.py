@@ -2,7 +2,7 @@
 
 import json, os, re
 from openpyxl import load_workbook
-from .__init__ import n2o, s2t
+from .__init__ import s2t
 
 curdir = os.path.dirname(__file__)
 spath = "漢字音典字表檔案（長期更新）.xlsx"
@@ -71,7 +71,7 @@ def normNames(s):
 	return re.sub(" ?[、，,&] ?", ",", s)
 
 def normLangName(s):
-	return n2o(s2t(s.strip()))
+	return s2t(s.strip())
 
 def normJW(s):
 	if s:
@@ -167,7 +167,8 @@ def 加載(省=None):
 				subcolor = ""
 		colors = [re.sub(r"(\w+)", "#\\1", i) for i in colors]
 
-		places = [s2t(列[i]) if 列[i] else "" for i in ("省/自治區/直轄市","地區/市/州","縣/市/區","鄕/鎭/街道","村/社區/居民點","自然村")]
+		j = fields.index("省/自治區/直轄市")
+		places = [s2t(列[fields[i]]) if 列[fields[i]] else "" for i in range(j, j+6)]
 		if 簡稱 == "普通話" and 省:
 			places = ["", "", "", "", ""]
 		elif 省 and places[0] and places[0] not in 省:
@@ -186,7 +187,7 @@ def 加載(省=None):
 			elif n == 3:
 				行政區級別 = "縣級"
 			elif n == 4:
-				行政區級別 = "鄕級"
+				行政區級別 = "鄉級"
 			elif n == 5:
 				行政區級別 = "村級"
 			elif n == 6:
