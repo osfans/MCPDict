@@ -66,7 +66,7 @@
 丙	ping2	文
 丞	sin5	
 丞	sing5	
-丟	tiu1	
+丢	tiu1	
 並	phing7	白
 並	ping7	文
 个	e5	
@@ -235,7 +235,7 @@
 佮	kap4	文
 佯	tenn3/tinn3	替
 佳	ka1	
-倂	ping3	
+併	ping3	
 佶	kiat8	
 佼	kau2	
 佾	it8	
@@ -282,13 +282,13 @@
 俘	hu1	
 俚	li2	
 保	po2	
-兪	ju5/lu5	
+俞	ju5/lu5	
 俟	su7	
 俠	kiap4	
 信	sin3	
 修	siu1	
 俯	hu2	
-倶	khu7	
+俱	khu7	
 俳	pai1	替
 俳	pai5	
 俸	hong7	
@@ -327,8 +327,8 @@
 倬	tok4	
 倭	e1	
 倯	song5	替
-値	tat8	白
-値	tit8	文
+值	tat8	白
+值	tit8	文
 偃	ian2	替
 假	ka2	文
 假	ke2	白
@@ -349,7 +349,7 @@
 側	tshik4	
 偵	tsing1	
 偶	ngoo2	
-偸	thau1	
+偷	thau1	
 僞	gui7	
 傀	ka1	替
 傀	khui2	
@@ -426,16 +426,16 @@
 光	kng1	白
 光	kong1	文
 克	khik4	
-兌	tue7	文
-兌	tui7	白
+兑	tue7	文
+兑	tui7	白
 免	bian2	
 兒	ji5/li5	
 兔	thoo3	
 兜	tau1	
 兢	king1	
 入	jip8/lip8	
-內	lai7	白
-內	lue7	文
+内	lai7	白
+内	lue7	文
 全	tsuan5	文
 全	tsng5	白
 兩	liong2	文
@@ -461,7 +461,7 @@
 冀	ki3	
 冇	phann3	替
 冉	jiam2	
-冊	tsheh4	
+册	tsheh4	
 再	tsai3	
 冑	tiu7	
 冒	moo7	
@@ -521,11 +521,11 @@
 初	tshoo1	文
 刣	thai5	替
 判	phuann3	
-別	pat8	白
-別	piat8	文
+别	pat8	白
+别	piat8	文
 利	lai7	白
 利	li7	文
-刪	san1	
+删	san1	
 刮	khe1	替
 刮	kueh4/kuih4	替
 刮	kuat4	
@@ -539,7 +539,7 @@
 刺	tshi3	
 刺	tshiah4	
 刻	khik4	
-剁	tok4	替
+刴	tok4	替
 剃	thi3	
 則	tsik4	
 剉	tsho3	替
@@ -550,7 +550,7 @@
 前	tsian5	文
 前	tsing5	白
 前	tsun5	替
-剎	tshat4	
+刹	tshat4	
 剔	thak4	白
 剔	thik4	文
 剖	phoo2	
@@ -626,7 +626,7 @@
 勸	khng3	白
 勸	khuan3	文
 勺	siah8	
-勻	un5	替
+匀	un5	替
 勼	kiu1	白
 勾	kau1	
 勿	but8	
@@ -806,7 +806,7 @@
 吳	ngoo5	
 吵	tsha2	白
 吵	tshau2	文
-吶	na7	替
+呐	na7	替
 吸	khip4	
 吹	tshue1/tshe1	白
 吹	tshui1	文
@@ -818,7 +818,7 @@
 呃	eh4	
 呆	tai1	
 呈	thing5	
-吿	ko3	
+告	ko3	
 呔	thai3	
 呢	neh	替
 呢	nih	替
@@ -998,7 +998,7 @@
 喵	miau1	
 喵	ngiau1	
 喵	niau1	
-喩	ju7/lu7	
+喻	ju7/lu7	
 嗄	sa3	
 嗅	hiu3	
 嗇	siah4	白
@@ -1053,7 +1053,7 @@
 噁	onn3	替
 噍	ta1	
 噎	uh4	替
-噓	si1	替
+嘘	si1	替
 噗	phok4	替
 噗	phok8	
 噗	pok4	替
@@ -1110,7 +1110,7 @@
 囡	gin2	替
 囤	tun2	
 囥	khng3	
-囪	tshong1	
+囱	tshong1	
 囫	hut4	替
 囮	bue5	
 困	khun3	
@@ -1227,7 +1227,7 @@
 塞	sat4	替
 塞	sai3	
 塢	oo1	
-塡	thiam7	
+填	thiam7	
 塭	un3	
 塵	tin5	
 塹	tsam7	
@@ -1289,7 +1289,7 @@
 夙	siok4	
 多	to1	
 夜	ia7	
-夠	kau3	
+够	kau3	
 夢	bang7	白
 夢	bong7	文
 夤	in5	
@@ -1344,7 +1344,7 @@
 妃	hui1	
 妄	bong7	
 妊	jim7	
-姸	gian2	
+妍	gian2	
 妒	too3	
 妓	ki1	
 妖	iau1	
@@ -1369,7 +1369,7 @@
 姊	tsi2	
 始	si2	白
 始	su2	文
-姍	san1	
+姗	san1	
 姐	tsia2	
 姑	koo1	
 姒	sai7	
@@ -1598,9 +1598,9 @@
 少	siau2	文
 少	siau3	
 尖	tsiam1	
-尙	siong2	俗
-尙	siong7	文
-尙	siunn7	白
+尚	siong2	俗
+尚	siong7	文
+尚	siunn7	白
 尤	iu5	
 尪	ang1	替
 就	to7	替
@@ -1625,8 +1625,8 @@
 屍	si1	
 屎	sai2	白
 屎	su2	文
-屛	pin5	白
-屛	ping5	文
+屏	pin5	白
+屏	ping5	文
 屐	kiah8	
 屑	sut4	替
 屑	sap4	
@@ -1663,7 +1663,7 @@
 峙	ti7	
 峨	ngoo5	
 峭	tshiau3	
-峯	hong1	
+峰	hong1	
 島	to2/too2	
 峻	tsun3	
 峽	kiap4	
@@ -1774,7 +1774,7 @@
 平	ping5	文
 年	lian5	文
 年	ni5	白
-幷	ping3	
+并	ping3	
 幸	hing7	
 幹	kan3	
 幻	huan3	
@@ -1812,8 +1812,8 @@
 庾	ju2/lu2	
 廁	tshe3	
 廂	siunn1	
-廈	e7	
-廈	ha7	
+厦	e7	
+厦	ha7	
 廉	liam5	
 廊	long5	
 廍	phoo7	替
@@ -1843,7 +1843,7 @@
 弊	piah4	俗
 式	sik4	文
 式	sit4	白
-弒	si3	
+弑	si3	
 弓	king1	白
 弓	kiong1	文
 弔	tiau3	
@@ -1879,8 +1879,8 @@
 彝	i5	
 形	hing5	
 彤	tong5	
-彥	gan7	
-彥	gian7	
+彦	gan7	
+彦	gian7	
 彧	ik4	
 彩	tshai2	
 彪	piu1	
@@ -1992,7 +1992,7 @@
 恢	khue1	
 恣	tsu3	
 恤	sut4	
-恥	thi2	
+耻	thi2	
 恨	hun7	文
 恨	hin7/hun7	白
 恩	in1/un1	白
@@ -2003,8 +2003,8 @@
 息	sik4	文
 息	sit4	白
 恰	khap4	
-悅	iat8	
-悅	uat8	
+悦	iat8	
+悦	uat8	
 悉	sik4	
 悌	te7	
 悍	han7	
@@ -2079,7 +2079,7 @@
 態	thai7	
 慌	hong1	
 慍	un3	
-愼	sin7	
+慎	sin7	
 慒	tso1	替
 慕	boo7	
 慘	tsham2	
@@ -2173,7 +2173,7 @@
 戴	ti3	白
 戴	tai3	文
 戴	te3	白
-戶	hoo7	
+户	hoo7	
 戽	hoo3	
 戾	le7	
 房	pang5	白
@@ -2266,8 +2266,8 @@
 拉	la1	替
 拉	la2	替
 拊	hu2	替
-拋	pha1	白
-拋	phau1	文
+抛	pha1	白
+抛	phau1	文
 拌	puann7	替
 拍	phah4	白
 拍	phik4	文
@@ -2326,7 +2326,7 @@
 挖	oo2/ue2	替
 挨	e1	白
 挨	ai1	文
-挩	thuah4	
+捝	thuah4	
 挪	noo5	
 挫	tsho3	
 振	tin2	白
@@ -2454,8 +2454,8 @@
 搐	tiuh4	替
 搓	tsho1	
 搔	so1	
-搖	io5	白
-搖	iau5	文
+摇	io5	白
+摇	iau5	文
 搙	jiok8/liok8	替
 搜	tshiau1	替
 搜	soo1	
@@ -2505,7 +2505,7 @@
 撈	hoo5	替
 撋	nua2	替
 撏	jim5/lim5	
-撐	the1	
+撑	the1	
 撒	suah4	白
 撒	sat4	文
 撓	ngiau2	替
@@ -2605,8 +2605,8 @@
 敖	go5	
 敗	pai7	
 敘	su7	
-敎	ka3	白
-敎	kau3	文
+教	ka3	白
+教	kau3	文
 敝	pe3	
 敝	pe7	
 敢	kam2	文
@@ -2899,9 +2899,9 @@
 柙	kah4	替
 柚	iu7	
 柢	te2	
-査	tsha5	
-査	tsa1	替
-査	tsa1	俗
+查	tsha5	
+查	tsa1	替
+查	tsa1	俗
 柩	kiu7	
 柫	put4	替
 柬	kan2	
@@ -2911,8 +2911,8 @@
 柱	tsu7	文
 柳	liu2	
 柴	tsha5	
-柵	sa1	俗
-柵	tshik4	
+栅	sa1	俗
+栅	tshik4	
 柺	kuai2	
 柺	kuainn2	
 柿	khi7	
@@ -3042,7 +3042,7 @@
 楹	ing5	文
 概	kai3	
 概	khai3	
-楡	jiu5/liu5	
+榆	jiu5/liu5	
 榔	long5	文
 榔	nng5	白
 榕	tshing5	白
@@ -3063,7 +3063,7 @@
 槌	thui5	
 槍	tshiunn1	
 槐	huai5	
-槓	kng3	
+杠	kng3	
 槔	oo1	替
 槤	lian5	
 槳	tsiunn2	
@@ -3184,7 +3184,7 @@
 歹	tai2	
 死	si2	白
 死	su2	文
-歿	but8	
+殁	but8	
 殃	iong1	
 殆	tai7	
 殉	sun5	
@@ -3212,7 +3212,7 @@
 殼	khak4	白
 殼	khok4	文
 殿	tian7	
-毀	hui2	
+毁	hui2	
 毃	khiak8	
 毅	ge7	
 毅	gi7	
@@ -3287,7 +3287,7 @@
 沌	tun7	
 沐	bak4	替
 沐	bok8	
-沒	but8	
+没	but8	
 沓	tauh8	替
 沓	tap8	
 沕	bit8	替
@@ -3310,7 +3310,7 @@
 沽	koo1	
 沾	tsam1	替
 沿	ian5	
-況	hong2	
+况	hong2	
 泄	tshua7	替
 泄	siat4	
 泅	siu5	
@@ -3396,7 +3396,7 @@
 涓	kuan1	
 涔	tshim5	
 涕	the3	
-涗	sue3/se3	替
+涚	sue3/se3	替
 涮	suan3	
 涯	gai5	
 液	sioh8	替
@@ -3437,8 +3437,8 @@
 添	thiam1	文
 添	thinn1	白
 淼	biau2	
-淸	tshing1	文
-淸	tshinn1	白
+清	tshing1	文
+清	tshinn1	白
 渙	huan3	
 減	kiam2	
 渝	ju5/lu5	
@@ -3510,7 +3510,7 @@
 滴	tik4	文
 滷	loo2	
 滸	hoo2	
-滾	kun2	
+滚	kun2	
 滿	buan2	文
 滿	mua2	白
 漁	gu5	文
@@ -3716,7 +3716,7 @@
 熔	iunn5	白
 熔	iong5	文
 熗	tshing3	替
-煕	hi1	
+熙	hi1	
 熟	sik8	白
 熟	siok8	文
 熥	thng7	替
@@ -3845,7 +3845,7 @@
 猝	tshut4	
 猥	ui2	
 猩	sing1	
-貓	ba5	替
+猫	ba5	替
 猴	kau5	
 猶	iau2	替
 猶	iu1	
@@ -3935,7 +3935,7 @@
 瑟	sik4	
 瑟	sit4	
 瑣	so2	
-瑤	iau5	
+瑶	iau5	
 瑩	ing5	
 瑪	be2	白
 瑪	ma2	文
@@ -3977,7 +3977,7 @@
 瓤	jiong5/liong5	文
 瓦	hia7	白
 瓦	ua2	文
-甁	pan5	
+瓶	pan5	
 瓷	hui5	替
 甄	tsin1	
 甌	au1	
@@ -3991,7 +3991,7 @@
 生	senn1/sinn1	白
 生	sing1	文
 生	tshenn1/tshinn1	白
-產	san2	
+産	san2	
 甥	sing1	
 甦	soo1	
 用	ing7	白
@@ -4216,7 +4216,7 @@
 看	khan3	文
 看	khuann3	白
 眛	mai7	
-眞	tsin1	
+真	tsin1	
 眠	bin5	白
 眠	bian5	文
 眨	tshap8	替
@@ -4292,8 +4292,8 @@
 砌	kih4	
 砍	kham2	
 砒	phi1	替
-硏	ging2	白
-硏	gian2	文
+研	ging2	白
+研	gian2	文
 砛	gim5	替
 砣	tho5	
 砣	to5	
@@ -4409,8 +4409,8 @@
 禹	u2	
 禽	khim5	
 禾	ho5	
-禿	thuh4	白
-禿	thut4	文
+秃	thuh4	白
+秃	thut4	文
 秀	siu3	
 私	su1	文
 私	sai1	白
@@ -4434,7 +4434,7 @@
 秮	tai1	替
 移	i5	
 稀	hi1	
-稅	sue3/se3	
+税	sue3/se3	
 稈	kuainn2	
 程	thiann5	白
 程	thing5	文
@@ -4663,7 +4663,7 @@
 粧	tsong1	文
 粩	lau2	替
 粱	liang5	
-粵	uat8	
+粤	uat8	
 粹	tshui3	
 糉	tsang3	
 精	tsiann1	白
@@ -4737,8 +4737,8 @@
 絆	puan3	文
 結	kat4	白
 結	kiat4	文
-絕	tseh8	白
-絕	tsuat8	文
+絶	tseh8	白
+絶	tsuat8	文
 絚	an5	
 絜	hiat8	
 絞	ka2	白
@@ -4899,7 +4899,7 @@
 羚	ling5	
 羞	tshiu1	替
 羞	siu1	
-羣	kun5	
+群	kun5	
 羨	sian7	
 義	gi7	
 羯	kiat4	
@@ -5034,7 +5034,7 @@
 胴	tang5	替
 胸	hing1	白
 胸	hiong1	文
-腁	pian5	
+胼	pian5	
 能	ling5	
 胿	kui1	
 胿	kuai1	
@@ -5042,17 +5042,17 @@
 脅	hiap8	
 脆	tshe3	白
 脆	tshui3	文
-脈	meh8	白
-脈	bik8	文
+脉	meh8	白
+脉	bik8	文
 脊	tsiah4	白
 脊	tsik4	文
 脊	tsit4	白
 脣	tun5	
 脩	siu1	
-脫	thuat4	文
-脫	thut8	替
-脫	thuah4	白
-脫	thut4	替
+脱	thuat4	文
+脱	thut8	替
+脱	thuah4	白
+脱	thut4	替
 脬	pha1	
 脯	poo2	
 脰	tau7	
@@ -5087,8 +5087,8 @@
 腰	iau1	文
 腱	kian3	白
 腱	kian7	文
-腳	kioh4	白
-腳	kiok4	文
+脚	kioh4	白
+脚	kiok4	文
 腸	tng5	白
 腸	tiong5	文
 腸	tshian5	俗
@@ -5277,7 +5277,7 @@
 茭	kha1	
 茯	hok8	
 茱	tsu1	
-茲	tsu1	
+兹	tsu1	
 茵	in1	
 茶	te5	
 茸	jiong5/liong5	
@@ -5287,7 +5287,7 @@
 荇	hing7	
 草	tshau2	白
 草	tsho2	文
-荊	king1	
+荆	king1	
 荍	sio5	替
 荏	lam2	
 荐	tsian3	
@@ -5428,7 +5428,7 @@
 蔚	ui3	
 蔡	tshua3	
 蔣	tsiunn2	
-蔥	tshang1	
+葱	tshang1	
 蔫	lian1	替
 蔬	se1	白
 蔬	soo1	文
@@ -5516,8 +5516,8 @@
 虔	khian5	
 處	tshu2	
 處	tshu3	
-虛	hi1	
-虛	hu1	文
+虚	hi1	
+虚	hu1	文
 虜	loo2	
 虞	gu5	
 號	ho7	
@@ -5555,7 +5555,7 @@
 蛤	kap4	
 蛹	iong2	
 蛺	kiap4	
-蛻	thui3	
+蜕	thui3	
 蛾	iah8	替
 蜀	siok8	
 蜂	phang1	白
@@ -5585,7 +5585,7 @@
 蝠	hok4	
 蝣	iu5	
 蝦	he5	
-蝨	sat4	
+虱	sat4	
 蝴	hoo5	文
 蝴	oo5	白
 蝶	iah8	白
@@ -5685,7 +5685,7 @@
 袒	than2	
 袖	siu3	
 袚	phuah8	替
-袞	kun2	
+衮	kun2	
 被	phue7/phe7	白
 被	pi7	文
 袱	hok8	
@@ -5842,9 +5842,9 @@
 誥	ko3	
 誦	siong7	
 誨	hue3	
-說	suat4	文
-說	sue3	文
-說	sueh4/seh4	白
+説	suat4	文
+説	sue3	文
+説	sueh4/seh4	白
 誰	tsui5	白
 誰	sui5	文
 課	kho3	文
@@ -5869,7 +5869,7 @@
 諛	u5	
 諜	tiap8	
 諞	pian2	替
-諡	si7	
+謚	si7	
 諦	te3	
 諧	hai5	
 諫	kan3	
@@ -5899,7 +5899,7 @@
 講	kong2	白
 謝	sia7	文
 謝	tsia7	白
-謠	iau5	
+謡	iau5	
 謨	boo5	
 謫	tik4	
 謬	biu7	
@@ -5963,8 +5963,8 @@
 貉	ho5	
 貌	mau7	
 貍	li5	
-貓	niau1	
-貓	ba5	
+猫	niau1	
+猫	ba5	
 貝	pue3	
 貞	tsing1	
 負	hu7	
@@ -6231,7 +6231,7 @@
 迴	hue5	
 迵	thang3	替
 迷	be5	
-逬	piang3	
+迸	piang3	
 迺	nai2	
 追	tui1	
 退	the3	
@@ -6290,7 +6290,7 @@
 道	to7	
 達	tat8	
 違	ui5	
-遙	iau5	
+遥	iau5	
 遛	liu3	替
 遜	sun3	
 遞	te7	
@@ -6331,7 +6331,7 @@
 邊	pinn1	白
 邏	lo5	
 邑	ip4	
-郉	hing5	
+邢	hing5	
 那	na2	替
 邦	pang1	
 邪	sia5	
@@ -6342,9 +6342,9 @@
 邸	ti2	
 郁	hiok4	
 郊	kau1	
-郞	long5	文
-郞	lang1	
-郞	nng5	白
+郎	long5	文
+郎	lang1	
+郎	nng5	白
 郜	ko3	
 郝	hok4	
 郡	kun7	
@@ -6357,8 +6357,8 @@
 都	to1	白
 都	too1	文
 鄂	gok8	
-鄕	hiong1	文
-鄕	hiunn1	白
+鄉	hiong1	文
+鄉	hiunn1	白
 鄒	tsau1	
 鄔	oo1	
 鄙	phi2	
@@ -6462,7 +6462,7 @@
 銜	ham5	
 銬	khau3	
 銲	huann7	
-銳	jue7/lue7	
+鋭	jue7/lue7	
 銷	siau1	
 銹	siu3	
 銼	tsho3	
@@ -6531,7 +6531,7 @@
 鎢	oo1	
 鎧	khai2	
 鎬	ho7	
-鎭	tin3	
+鎮	tin3	
 鎰	it8	
 鏃	tsok8	
 鏗	khing1	
@@ -6607,8 +6607,8 @@
 閬	lang3	替
 閬	long3	
 閭	lu5	
-閱	iat8	白
-閱	uat8	文
+閲	iat8	白
+閲	uat8	文
 閶	tshiong1	
 閹	iam1	
 閻	giam5	
@@ -6764,8 +6764,8 @@
 靂	lik8	
 靄	ai3	
 靈	ling5	
-靑	tshenn1/tshinn1	白
-靑	tshing1	文
+青	tshenn1/tshinn1	白
+青	tshing1	文
 靖	tsing7	
 靘	tshinn2	
 靚	tsing7	
@@ -6839,18 +6839,18 @@
 頷	am7	
 頸	king2	
 頸	kun2	替
-頹	tue5	
+頽	tue5	
 頻	pin5	
 題	te5/tue5	
 額	giah8	白
 額	hiah8	白
 額	gik8	文
 顎	kok4	替
-顏	gan5	
+顔	gan5	
 顓	tsuan1	
 願	guan7	
-顚	thian1	替
-顚	tian1	
+顛	thian1	替
+顛	tian1	
 類	lui7	
 顢	ban7	替
 顥	ho7	
@@ -6878,14 +6878,14 @@
 飭	thik4	
 飯	png7	白
 飯	huan7	文
-飮	im2	
+飲	im2	
 飴	i5	
 飼	tshi7	
 飽	pa2	白
 飽	pau2	文
 飾	sik4	
 餃	kiau2	
-餠	piann2	
+餅	piann2	
 餉	hiong3	
 養	iong2	文
 養	iunn2	白
@@ -6940,7 +6940,7 @@
 駛	su2	文
 駝	to5	
 駟	su3	
-騈	pian5	
+駢	pian5	
 駭	hai7	
 駱	lok8	
 駱	loh8	
@@ -6983,8 +6983,8 @@
 體	the2	文
 體	thai2	白
 髕	pin5	
-髙	ko1	
-髙	kau1	
+高	ko1	
+高	kau1	
 髡	khun1	
 髦	moo5	
 髮	huat4	

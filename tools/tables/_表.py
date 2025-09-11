@@ -31,11 +31,9 @@ def getYD(py):
 
 def getCompatibilityVariants():
 	d = dict()
-	fname = os.path.join(WORKSPACE, "..", "app/src/main/res/raw/orthography_hz_compatibility.txt")
-	if not os.path.exists(fname):
-		fname = os.path.join(WORKSPACE, "orthography_hz_compatibility.txt")
+	fname = os.path.join(WORKSPACE, "..", "app/src/main/assets/opencc/HZUnified.txt")
 	for 行 in open(fname, encoding="U8"):
-		字, val = 行.rstrip()
+		字, val = 行.rstrip().split("\t")
 		d[字] = val
 	return d
 
@@ -323,7 +321,7 @@ class 表:
 			d[字] = 音.split(",")
 
 	def 無調(自):
-		return 自.簡稱.endswith("上古") or 自.簡稱.endswith("朝鮮") or 自.簡稱.startswith("日語") or 自.簡稱 in ("淸末寧波", "党項")
+		return 自.簡稱.endswith("上古") or 自.簡稱.endswith("朝鮮") or 自.簡稱.startswith("日語") or 自.簡稱 in ("清末寧波", "党項")
 	
 	def 無q聲(自):
 		return 自.簡稱 not in ("盛唐", "榕江侗上古借詞", "榕江侗中古借詞") and not 自.文件名.startswith("白語")

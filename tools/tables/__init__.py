@@ -22,45 +22,11 @@ VARIANT_FILE = os.path.join(PATH, SOURCE, "正字.tsv")
 
 辭典 = ["漢字","說文","康熙","匯纂","漢大", "異體字","字形變體","字形描述","部件檢索","兩分","總筆畫數","部首餘筆","五筆畫","五筆86","五筆98","五筆06","倉頡三代","倉頡五代","倉頡六代","山人","分類"]
 
-n2o_dict = {}
-o2n_dict = {}
-t2s_more_dict = {"谿": "溪"}
-
-for 行 in open(os.path.join(PATH, SOURCE, "mulcodechar.dt"), encoding="U8"):
-	if not 行 or 行[0] == "#": continue
-	列 = 行.strip().split("-")
-	if len(列) < 2: continue
-	n2o_dict[列[0]] = 列[1]
-	o2n_dict[列[1]] = 列[0]
-
 opencc_t2s = OpenCC("t2s.json")
 
-def n2o(s):
-	if not s: return ""
-	t = ""
-	for i in s:
-		t += n2o_dict.get(i, i)
-	return t
-
-def o2n(s):
-	if not s: return ""
-	t = ""
-	for i in s:
-		t += o2n_dict.get(i, i)
-	return t
-
-def t2s_more(s):
-	if not s: return ""
-	t = ""
-	for i in s:
-		t += t2s_more_dict.get(i, i)
-	return t
-
 def t2s(s, level=2):
-	s = o2n(s)
 	if level == 1:
 		return s
-	s = t2s_more(s)
 	return opencc_t2s.convert(s)
 
 def hex2chr(uni):
@@ -118,7 +84,6 @@ def s2t(字組, level=1):
 			字 = normVariants.get(字, 字)
 		else:
 			字 = stVariants.get(字, 字)
-		字 = n2o(字)
 		t += 字
 	return t
 
@@ -401,14 +366,6 @@ def getLangs(items, 參數, args):
 					雙字數 += 1
 				語.info["相似度"] = ",".join(map(lambda x:f"{x}({相似度[x] * 100 / 雙字數:.2f}%)", sorted((i for i in 相似度), key=相似度.get, reverse=True)[:10]))
 				logging.info(f"{語.簡稱}:{語.info['相似度']}")
-			if False and 方言調查字表 and 語.檢查同音字() and 3000 <= 語.字數 <= 6000:
-				已調查漢字 = 語.d.keys()
-				待調查漢字 = 方言調查字表 - 已調查漢字
-				for 字 in list(待調查漢字):
-					if n2o(字) in 已調查漢字 or o2n(字) in 已調查漢字 or s2t(字, 1) in 已調查漢字 or s2t(字, 2) in 已調查漢字 or t2s(字) in 已調查漢字:
-						待調查漢字.remove(字)
-				if 待調查漢字:
-					語.誤.append(f"待調查漢字：{''.join(待調查漢字)}")
 			語.info["解析日志"] = None
 			語.info["同音字表"] = None
 			if 語.誤:
@@ -445,13 +402,6 @@ def getLangs(items, 參數, args):
 		聲韻數 = 語.聲韻數
 		語.info["音節數"] = 音節數 if 音節數 else None
 		語.info["不帶調音節數"] = 聲韻數 if 聲韻數 and 聲韻數 != 音節數 else None
-		lang_ts = set()
-		lang_ts.add(語.info["語言"])
-		lang_s = t2s(語.info["語言"], 2)
-		lang_ts.add(lang_s)
-		lang_s = t2s(語.info["語言"], 1)
-		lang_ts.add(lang_s)
-		語.info["語言索引"] = ",".join(lang_ts)
 		if 語.說明: 語.info["說明"] = 語.說明
 		if not keys: keys = 語.info.keys()
 		if args.output:
