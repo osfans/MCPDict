@@ -83,9 +83,9 @@ def processXlsxFs(v):
 		cells.append(text)
 	return "".join(cells).replace(")(", "").strip().replace("\n", "\\n")
 
-def getXlsxLines(xls, page=0):
+def getXlsxLines(xls):
 	wb = load_workbook(xls, data_only=True, rich_text=True)
-	sheet = wb.worksheets[page]
+	sheet = wb.active
 	lines = list()
 	for row in sheet.rows:
 		列 = [processXlsxFs(j.value) for j in row[:50]]
@@ -106,14 +106,14 @@ def getXlsLines(xls, page=0):
 			lines.append(行)
 	return lines
 
-def xls2tsv(xls, page=0):
+def xls2tsv(xls):
 	tsv = getTsvName(xls)
 	if not os.path.exists(xls): return
 	if os.path.exists(tsv):
 		xtime = os.path.getmtime(xls)
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
-	lines = getXlsxLines(xls, page) if isXlsx(xls) else getXlsLines(xls, page)
+	lines = getXlsxLines(xls) if isXlsx(xls) else getXlsLines(xls)
 	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.writelines(lines)
 	t.close()
@@ -322,6 +322,12 @@ class 表:
 				continue
 			d[字] = 音.split(",")
 
+	def 無調(自):
+		return 自.簡稱.endswith("上古") or 自.簡稱.endswith("朝鮮") or 自.簡稱.startswith("日語") or 自.簡稱 in ("淸末寧波", "党項")
+	
+	def 無q聲(自):
+		return 自.簡稱 not in ("盛唐", "榕江侗上古借詞", "榕江侗中古借詞") and not 自.文件名.startswith("白語")
+
 	def _正音(自, 音):
 		if 自.爲語() and 自.爲音:
 			if re.match(".*[⓪①-⑨ⓐⓑ]+", 音):
@@ -332,7 +338,7 @@ class 表:
 				音 = 音.replace("ⓐ", "a").replace("ⓑ", "b")
 			音 = 音.strip("[]")
 			音 = 音.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀∅Ø〇0").replace("零", "")
-			if 自.簡稱 not in ("盛唐", "榕江侗上古借詞", "榕江侗中古借詞") and not 自.文件名.startswith("白語"): 音 = 音.lstrip("q")
+			if 自.無q聲(): 音 = 音.lstrip("q")
 			if 音.startswith("I") or 音.startswith("1"): 音 = "l" + 音[1:]
 			音 = 音.lower().replace("ε", "ɛ").replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ").replace("‘", "ʰ").replace(":","ː")
 			音 = re.sub("([ʂʐ]ʰ?)ʮ", "\\1ʯ", 音)
@@ -348,7 +354,7 @@ class 表:
 			音 = re.sub("([mnvʋɹl])([\u0329\u030D]+)", "\\1\u0329", 音)
 			音 = re.sub("([ŋȵʐɱɻʒ])([\u0329\u030D]+)", "\\1\u030D", 音)
 			音 = re.sub("^([^*])\\1([^\u0303])", "\\1\\2", 音)
-			if 自.info["無調"]:
+			if 自.無調():
 				音 = 音.rstrip("0123456789")
 		return 音
 
