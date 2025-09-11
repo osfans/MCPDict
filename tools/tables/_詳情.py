@@ -64,7 +64,7 @@ def getTones(tones):
 	return json.dumps(l, ensure_ascii=False).lower()
 
 def normNames(s):
-	if not s or s == "Web": return ""
+	if not s: return ""
 	if type(s) is float: s = str(int(s))
 	if type(s) is not str: s = str(s)
 	s = re.sub(r"([（\(])", " \\1", s)
@@ -149,7 +149,6 @@ def 加載(省=None):
 		字表使用調值 = 列["字表使用調值"] == "☑"
 		地圖級別 = 列["地圖級別"].count("★") if 列["地圖級別"] else 0
 
-		無調 = 列["無調"] == "☑"
 		j = fields.index("[1]陰平")
 		聲調 = getTones([列[fields[i]] for i in range(j, j+10)])
 
@@ -233,7 +232,6 @@ def 加載(省=None):
 			"音系說明":音系說明,
 			"說明":說明,
 			"繁簡":繁簡,
-			"無調":無調,
 			"聲調":聲調
 		}
 		if not 經緯度: continue

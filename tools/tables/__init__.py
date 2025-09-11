@@ -352,7 +352,7 @@ def getLangs(items, 參數, args):
 					print(f"{語} 音節太少: {語.聲韻數}")
 				elif "一" in 語.d and len(語.d["一"]) > 4:
 					print(f"{語} 格式可能有誤：{語.d['一']}")
-			if not d["無調"] and not 調典:
+			if not 語.無調() and not 調典:
 				print(f"{語} 無調值")
 			語.info["文件名"] = 語.文件名
 			if d["省"]:
