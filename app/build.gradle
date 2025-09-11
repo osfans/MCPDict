@@ -23,7 +23,7 @@ android {
         externalNativeBuild {
             cmake {
                 targets "libopencc"
-                arguments "-DCMAKE_BUILD_TYPE=Release"
+                arguments "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON", "-DCMAKE_BUILD_TYPE=Release"
             }
         }
     }
