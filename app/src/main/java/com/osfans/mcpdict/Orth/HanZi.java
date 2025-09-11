@@ -35,7 +35,7 @@ public class HanZi {
                 || (unicode >= 0x30000 && unicode <= 0x3134F) // CJK Extension G
                 || (unicode >= 0x31350 && unicode <= 0x323AF) // CJK Extension H
                 || (unicode >= 0x2EBF0 && unicode <= 0x2EE5F) // CJK Extension I
-                || (unicode >= 0x323B0 && unicode <= 0x33479) // CJK Extension J
+                || (unicode >= 0x323B0 && unicode <= 0x3347F) // CJK Extension J
                 || (unicode >= 0xF900 && unicode <= 0xFAFF)   // CJK Compatibility Ideographs
                 || (unicode >= 0x2F800 && unicode <= 0x2FA1F); // CJK Compatibility Ideographs Supplement
     }
@@ -121,17 +121,39 @@ public class HanZi {
     public static String getUnicodeExt(String hz) {
         int unicode = hz.codePointAt(0);
         String ext = "";
-        if (unicode >= 0x3400 && unicode <= 0x4DBF) ext = "A";
-        else if (unicode >= 0x20000 && unicode <= 0x2A6DF) ext = "B";
-        else if (unicode >= 0x2A700 && unicode <= 0x2B73F) ext = "C";
-        else if (unicode >= 0x2B740 && unicode <= 0x2B81F) ext = "D";
-        else if (unicode >= 0x2B820 && unicode <= 0x2CEAF) ext = "E";
-        else if (unicode >= 0x2CEB0 && unicode <= 0x2EBEF) ext = "F";
-        else if (unicode >= 0x30000 && unicode <= 0x3134F) ext = "G";
-        else if (unicode >= 0x31350 && unicode <= 0x323AF) ext = "H";
-        else if (unicode >= 0x2EBF0 && unicode <= 0x2EE5F) ext = "I";
-        else if (unicode >= 0x323B0 && unicode <= 0x33479) ext = "J";
-        if (!TextUtils.isEmpty(ext)) ext = "擴" + ext;
+        if (unicode >= 0x3400 && unicode <= 0x4DB5) ext = "擴展A 3.0";
+        else if (unicode >= 0x4DB6 && unicode <= 0x4DBF) ext = "擴展A 13.0";
+        else if (unicode >= 0x20000 && unicode <= 0x2A6D6) ext = "擴展B 3.1";
+        else if (unicode >= 0x2A6D7 && unicode <= 0x2A6DD) ext = "擴展B 13.0";
+        else if (unicode >= 0x2A6DE && unicode <= 0x2A6DF) ext = "擴展B 14.0";
+        else if (unicode >= 0x2A700 && unicode <= 0x2B734) ext = "擴展C 5.2";
+        else if (unicode >= 0x2A735 && unicode <= 0x2B738) ext = "擴展C 14.0";
+        else if (unicode >= 0x2B739 && unicode <= 0x2B739) ext = "擴展C 15.0";
+        else if (unicode >= 0x2B73A && unicode <= 0x2B73F) ext = "擴展C 17.0";
+        else if (unicode >= 0x2B740 && unicode <= 0x2B81F) ext = "擴展D 6.0";
+        else if (unicode >= 0x2B820 && unicode <= 0x2CEA1) ext = "擴展E 8.0";
+        else if (unicode >= 0x2CEA2 && unicode <= 0x2CEAF) ext = "擴展E 17.0";
+        else if (unicode >= 0x2CEB0 && unicode <= 0x2EBEF) ext = "擴展F 10.0";
+        else if (unicode >= 0x30000 && unicode <= 0x3134F) ext = "擴展G 13.0";
+        else if (unicode >= 0x31350 && unicode <= 0x323AF) ext = "擴展H 15.0";
+        else if (unicode >= 0x2EBF0 && unicode <= 0x2EE5F) ext = "擴展I 15.1";
+        else if (unicode >= 0x323B0 && unicode <= 0x3347F) ext = "擴展J 17.0";
+        else if (unicode >= 0x4E00 && unicode <= 0x9FA5) ext = "基本 1.1";
+        else if (unicode >= 0x9FA6 && unicode <= 0x9FBB) ext = "基本 4.1";
+        else if (unicode >= 0x9FBC && unicode <= 0x9FC3) ext = "基本 5.1";
+        else if (unicode >= 0x9FC4 && unicode <= 0x9FCB) ext = "基本 5.2";
+        else if (unicode >= 0x9FCC && unicode <= 0x9FCC) ext = "基本 6.1";
+        else if (unicode >= 0x9FCD && unicode <= 0x9FD5) ext = "基本 8.0";
+        else if (unicode >= 0x9FD6 && unicode <= 0x9FEA) ext = "基本 10.0";
+        else if (unicode >= 0x9FEB && unicode <= 0x9FEF) ext = "基本 11.0";
+        else if (unicode >= 0x9FF0 && unicode <= 0x9FFC) ext = "基本 13.0";
+        else if (unicode >= 0x9FFD && unicode <= 0x9FFF) ext = "基本 14.0";
+        else if (unicode >= 0xF900 && unicode <= 0xFA2D) ext = "兼容 1.1";
+        else if (unicode >= 0xFA2E && unicode <= 0xFA2F) ext = "兼容 6.1";
+        else if (unicode >= 0xFA30 && unicode <= 0xFA6A) ext = "兼容 3.2";
+        else if (unicode >= 0xFA6B && unicode <= 0xFA6D) ext = "兼容 5.2";
+        else if (unicode >= 0xFA70 && unicode <= 0xFAD9) ext = "兼容 4.1";
+        else if (unicode >= 0x2F800 && unicode <= 0x2FA1D) ext = "兼容補充 3.1";
         return ext;
     }
 

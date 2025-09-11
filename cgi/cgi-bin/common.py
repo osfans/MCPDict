@@ -109,7 +109,7 @@ def isHZ(c):
 		 or (uni >= 0x30000 and uni <= 0x3134F)\
 		 or (uni >= 0x31350 and uni <= 0x323AF)\
 		 or (uni >= 0x2EBF0 and uni <= 0x2EE5F)\
-		 or (uni >= 0x323B0 and uni <= 0x33479)\
+		 or (uni >= 0x323B0 and uni <= 0x3347F)\
 		 or (uni >= 0xF900 and uni <= 0xFAFF)\
 		 or (uni >= 0x2F800 and uni <= 0x2FA1F)
 

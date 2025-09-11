@@ -82,7 +82,7 @@ def 爲字(c):
 	c = c.strip()
 	if len(c) != 1: return False
 	n = ord(c)
-	return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<=0x33479 and not 爲兼容字(c)
+	return 0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<=0x3347F and not 爲兼容字(c)
 
 def 找字(字組):
 	index = len(字組)
