@@ -47,6 +47,7 @@ def getTones(tones):
 			else:
 				n = t
 				v = ""
+			if v == "0": v = ""
 			#334 1 1a 陰平 ꜀
 			t8 = i
 			t4 = (i+1)//2
