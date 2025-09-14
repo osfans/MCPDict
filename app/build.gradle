@@ -12,7 +12,7 @@ android {
         targetSdkVersion 34
         versionCode 101
         def date = new SimpleDateFormat ("yyyyMMdd").format(new Date())
-        versionName "5.7 ($date)"
+        versionName "6.0 ($date)"
         buildConfigField "int", "DB_VER", "$date"
 
         ndk {
