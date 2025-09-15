@@ -206,7 +206,18 @@ class 表(_表):
 		elif 名 in ("南海沙頭"):
 			行 = re.sub(r"^(\d+)(\()", "\\1□\\2", 行)
 			行 = re.sub(r"^(\d+)", "[\\1]", 行)
-		elif 名 in ("筠連","瀘縣福集"):
+		elif 名 in ("筠連",):
+			列 = 行.split("\t")
+			if 列[0] == "" and 列[1].startswith("阴平"):
+				自.調值表 = 列
+				return
+			elif 列[0] == "":
+				行 = "#" + 列[1]
+			elif "".join(列[1:]).strip() == "":
+				行 = ""
+			else:
+				行 = "\t".join((f"[{自.調值表[序][-2:]}]" if 序 else "") + 項 for 序,項 in enumerate(列) if 項)
+		elif 名 in ("瀘縣福集",):
 			列 = 行.split("\t")
 			if 列[0] == "" and 列[1].startswith("阴平"):
 				自.調值表 = 列
@@ -263,7 +274,6 @@ class 表(_表):
 				return
 			行 = "\t".join((f"[{自.調值表[序]}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
 			行 = 行.replace("【", "{").replace("】", "}")
-			if "蛆" in 行: print(行)
 		elif 名 in ("通州五接","如皋白蒲","如皋石莊","南通唐閘",):
 			列 = 行.split("\t")
 			if 列[0] == "":

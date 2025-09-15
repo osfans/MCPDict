@@ -134,18 +134,11 @@
 𭅼	xiang1
 乢	gai4
 乣	jiu3
-乤	xia4
 书	shu1
 𰭽	shu1
-乧	dou3
 乨	shi3
 乩	ji1
 乪	nang2
-乫	jia1
-乬	ju4
-乭	shi2
-乮	mao3
-乯	hu1
 买	mai3
 乱	luan4
 𰠉	luan4
@@ -156,14 +149,8 @@
 乳	ru3
 乴	xue2
 乵	yan3
-乶	fu3
-乷	sha1
 乸	na3
 乹	qian2,gan1
-乺	suo3
-乻	yu2
-乼	zhu4,cui
-乽	zhe3
 乾	qian2,gan1
 𭅓	qian2,gan1
 𭑙	qian2,gan1
@@ -282,6 +269,8 @@
 𰫙	sun1,zi3	仔
 仕	shi4
 他	ta1,tuo2
+𲰼	ta1
+𲎿	ta1
 仗	zhang4
 付	fu4
 仙	xian1,xian3
@@ -46820,31 +46809,6 @@
 𰻝	biang2
 𰻞	biang2
 㐂	xi3
-㐇	jiu3
-㐈	ru4
-㐉	ding1
-㐊	shi4
-㐋	tu3
-㐍	zhao3
-㐎	wen2
-㐏	wu3
-㐐	nu2
-㐑	dong1
-㐒	zhao4
-㐓	ke3
-㐔	xiang3
-㐗	lao3
-㐘	mi3
-㐙	dou4
-㐚	wu2
-㐛	you4
-㐝	ju1
-㐞	qi2
-㐟	fei1
-㐢	fu2
-㐣	ku4
-㐥	chu2
-㐦	ju3
 㐾	ruan3,yuan4
 㑀	tai4
 㑑	lan3,ji4
@@ -46858,7 +46822,6 @@
 㕘	can1
 㕾	xiao3
 㖄	zhou1,zhu4
-㖜	xiang3
 㘃	ruo4
 㚸	si1
 㚼	niu1,hao4
@@ -48591,8 +48554,6 @@
 鿐	jiu3
 䲤	jiu3
 㐃	ma1	亇
-㐕	you2
-㐠	ru3
 㐧	di4	第
 㐪	hai4	亥
 㐶	si4	似
@@ -48660,37 +48621,18 @@
 䎛	lao3
 㖉	qi3
 𭇔	qi3
-㖋	jie4
-㖎	jie4
-㖌	qiu2
-㖍	dou3
-㖙	jia1
-㖚	fu4
-㖛	gu3
-㖝	wei4
 㖬	sou1	嗖
-㖯	tong2
-㖰	tong2
-㖱	ye4
-㖲	ru2
-㖳	ru3
 㖴	wen3	𦮶
 㗍	zhai1	𪘨
 㗎	jia4
 㗐	ke1	嗑
 㗝	gao1
 㗞	po4
-㗟	zhu4
-㗠	shi3
-㗡	reng2
 㗪	pi1	𠹦
 㗮	geng1
-㗯	zhe3
 㗸	xian2	銜
 㗹	jiao4	噍?
 㗺	sa4	𠿓
-㘏	dao4
-㘒	zhong4
 㘘	pei4	辔
 㘟	chuang1	𡆪
 㘮	yi4	墿
@@ -48757,7 +48699,6 @@
 𰎾	zheng1
 㠤	rang3
 㠩	huang1	巟
-㠰	jia1
 㠳	mu4	幕
 㠻	xi1	希
 㡍	ma3	马
@@ -48835,12 +48776,8 @@
 㪅	geng1,geng4	更
 㪟	dun1	敦
 㪰	zhai1	斋
-㪲	dou3
-㪳	dou3
 㪸	zhen1	斟
 㫆	mi2	弥
-㫇	yu1
-㫈	yu1
 㫉	ni3
 㫋	zhan1	旃
 㫌	jing1	旌
@@ -52737,7 +52674,6 @@
 𠌫	bi4	跸
 𡁘	bi4	跸
 𠏹	fo2	佛
-𠑊	yan3	俨
 𠖱	hu4	沍冱
 𠘨	ming2	明
 𠝏	jian4	剑
@@ -55839,7 +55775,6 @@
 𪝥	ru2	儒
 𪝧	shan3
 𪝨	jie2	傑?
-𪝫	yan3	儼
 𪝭	yu2
 𪝰	ma3
 𪝲	qiu1	䨂
@@ -79168,7 +79103,7 @@
 𩿶	yang1	鸯
 𩿸	qiao3	䲾
 𩿾	peng2	鹏
-𪀋	ya1	鸭
+𪀋	ya1,nia4	鸭
 𪀙	yu4	𪃪
 𪀜	chi4,lai4	鵣
 𪀢	fu2	鵬
@@ -79587,6 +79522,7 @@
 𱎚	ren2	仁
 𱎫	ya4	俹
 𱎶	kua3	侉
+𲐹	zhao3
 𱎺	meng3
 𱎼	ge2
 𱎽	quan2
@@ -80044,3 +79980,15 @@
 𬺬	li4	㼖
 𬺭	gan4
 𲎺	duo3
+𲐁	liao3
+𲐇	bao1
+𲐌	jiao1
+𲐍	bao1
+𲐔	ba4
+𲐘	qi4
+𲐙	mu4
+𲐜	qian4,you1
+𲐨	shu1,kan3
+𲐲	geng1
+𲐸	wei4
+𲐻	huan4
