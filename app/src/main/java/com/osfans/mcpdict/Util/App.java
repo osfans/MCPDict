@@ -59,7 +59,7 @@ public class App extends Application {
           .append("  h1 {font-size: 1.8em; color: #9D261D}\n")
           .append("  h2 {font-size: 1.2em; color: #000080;}\n")
           .append("  body {font-family: ipa, ");
-        if (FontUtil.fontExFirst()) {
+        if (FontUtil.fontWenJinFirst()) {
             sb.append(String.format("p0, p2, p3, %s;}", FontUtil.getDefaultFont()));
         } else {
             sb.append(String.format("%s, p2, p3;}", FontUtil.getDefaultFont()));

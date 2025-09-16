@@ -7,6 +7,6 @@
 - [唯二網頁版](https://mcpdict.vear.vip/)（[前端](https://github.com/vearvip/mcpdict-frontend)、[後端](https://github.com/vearvip/mcpdict-backend)）：提供了字音查詢、長文注音、語言地圖、設置等功能。  
 - [nk2028網頁版](https://nk2028.shn.hk/hdqt/)（[前端](https://github.com/nk2028/hdqt)、[後端](https://github.com/nk2028/hdqt-server)）：提供了字音查詢等功能。  
 
-本程序收錄了[統一碼17.0](https://www.unicode.org/reports/tr38/tr38-39.html)全部漢字（不含部首及兼容區）、〇（同“星”或“零”）、□（有音無字、本字不明），可使用[文津宋體](https://github.com/takushun-wu/WenJinMincho)顯示所有漢字。支持形音義等多種查詢方式：可輸入𰻞（漢字）、30EDE（統一碼）、biang2（普通話拼音）、43（總筆畫數）、辵39（部首餘筆），查到“𰻞”字。也可使用兩分、五筆、倉頡等形碼進行查詢，亦可選擇辞典、註釋等通過釋義搜索到相應的漢字。
+本程序收錄了[統一碼17.0](https://www.unicode.org/reports/tr38/tr38-39.html)全部漢字（不含部首及兼容區）、〇（同“星”或“零”）、□（有音無字、本字不明），可使用[遍黑體](https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project)、[文津宋體](https://github.com/takushun-wu/WenJinMincho)顯示所有漢字。支持形音義等多種查詢方式：可輸入𰻞（漢字）、30EDE（統一碼）、biang2（普通話拼音）、43（總筆畫數）、辵39（部首餘筆），查到“𰻞”字。也可使用兩分、五筆、倉頡等形碼進行查詢，亦可選擇辞典、註釋等通過釋義搜索到相應的漢字。
 
 

@@ -35,16 +35,25 @@ public class FontUtil {
                     Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
                             new FontFamily.Builder(new Font.Builder(getResources(), R.font.tone).build()).build()
                     );
-                    if (fontExFirst()) builder.addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.p0).build()).build()
+                    if (fontWenJinFirst()) builder.addCustomFallback(
+                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.wenjinmincho_p0).build()).build()
                     );
                     builder.addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(getResources(), R.font.nyushu).build()).build()
-                    ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.p2).build()).build()
-                    ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.p3).build()).build()
                     );
+                    if (usePlanGothic()) {
+                        builder.addCustomFallback(
+                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.plangothic_p1).build()).build()
+                        ).addCustomFallback(
+                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.plangothic_p2).build()).build()
+                        );
+                    } else {
+                        builder.addCustomFallback(
+                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.wenjinmincho_p2).build()).build()
+                        ).addCustomFallback(
+                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.wenjinmincho_p3).build()).build()
+                        );
+                    }
                     builder.setSystemFallback(getDefaultFont());
                     tfHanTone = builder.build();
                 }
@@ -52,15 +61,24 @@ public class FontUtil {
             } else {
                 if (tfHan == null) {
                     Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
-                            new FontFamily.Builder(new Font.Builder(getResources(), fontExFirst() ? R.font.p0 : R.font.ipa).build()).build()
+                            new FontFamily.Builder(new Font.Builder(getResources(), fontWenJinFirst() ? R.font.wenjinmincho_p0 : R.font.ipa).build()).build()
                     );
                     builder.addCustomFallback(
                             new FontFamily.Builder(new Font.Builder(getResources(), R.font.nyushu).build()).build()
-                    ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.p2).build()).build()
-                    ).addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.p3).build()).build()
                     );
+                    if (usePlanGothic()) {
+                        builder.addCustomFallback(
+                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.plangothic_p1).build()).build()
+                        ).addCustomFallback(
+                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.plangothic_p2).build()).build()
+                        );
+                    } else {
+                        builder.addCustomFallback(
+                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.wenjinmincho_p2).build()).build()
+                        ).addCustomFallback(
+                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.wenjinmincho_p3).build()).build()
+                        );
+                    }
                     builder.setSystemFallback(getDefaultFont());
                     tfHan = builder.build();
                 }
@@ -103,11 +121,15 @@ public class FontUtil {
         return getFontFormat() == 1;
     }
 
+    public static boolean usePlanGothic() {
+        return getFontFormat() == 0;
+    }
+
     public static String getDefaultFont() {
         return useSerif() ? "serif" : "sans";
     }
 
-    public static boolean fontExFirst() {
+    public static boolean fontWenJinFirst() {
         return getFontFormat() == 2;
     }
 

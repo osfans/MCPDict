@@ -422,7 +422,7 @@
     <string name="pref_key_hz_option">KEY_HZ_OPTION</string>
     <string name="pref_key_fullscreen">KEY_FULLSCREEN</string>
     <string-array name="pref_entries_font">
-        <item>系統字體、文津宋體</item>
+        <item>系統字體、遍黑體</item>
         <item>系統宋體、文津宋體</item>
         <item>僅文津宋體</item>
         <item>僅系統字體</item>
