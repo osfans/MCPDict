@@ -22,7 +22,10 @@
     <string name="clear">淸空</string>
     <string name="overwrite">覆蓋</string>
 
-    <string name="search_hint">輸入字或音</string>
+    <string name="search_hz_hint">輸入一個或多個漢字</string>
+    <string name="search_ipa_hint">輸入當前語言中的音節</string>
+    <string name="search_dict_hint">輸入繁體或簡體正文</string>
+    <string name="search_comment_hint">輸入繁體或簡體註釋</string>
     <string name="search_lang_hint">輸入或選擇語言</string>
     <string name="search_for">查詢內容：</string>
     <string name="search_as">查詢條件：</string>

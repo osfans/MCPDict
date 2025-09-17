@@ -107,6 +107,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 boolean showDictionary = (position == DB.SEARCH.DICT.ordinal());
                 spinnerDict.setVisibility(showDictionary ? View.VISIBLE : View.GONE);
                 layoutSearchLang.setVisibility(!showDictionary? View.VISIBLE : View.GONE);
+                searchView.setHint(position);
                 search();
             }
             @Override

@@ -188,4 +188,15 @@ public class SearchView extends ConstraintLayout {
     private void saveQuery(String query) {
         Pref.putInput(query);
     }
+
+    public void setHint(int position) {
+        editText.setHint(
+            switch (DB.SEARCH.values()[position]) {
+                case YIN -> R.string.search_ipa_hint;
+                case COMMENT -> R.string.search_comment_hint;
+                case DICT -> R.string.search_dict_hint;
+                default -> R.string.search_hz_hint;
+            }
+        );
+    }
 }
