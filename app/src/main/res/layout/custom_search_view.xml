@@ -21,7 +21,7 @@
         android:autofillHints=""
         android:completionThreshold="1"
         android:elegantTextHeight="true"
-        android:hint="@string/search_hint"
+        android:hint="@string/search_hz_hint"
         android:imeOptions="actionSearch"
         android:inputType="text"
         android:paddingStart="@dimen/padding_size"
