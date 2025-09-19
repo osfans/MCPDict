@@ -86938,6 +86938,7 @@ cmg    𬫃
 cmks   𬫂
 cmls   𫤫
 cmmm   𬫖
+cmu    𬺧
 cmui   𬫿
 cmvr   𬫷
 cmwg   𬫭
@@ -88114,6 +88115,7 @@ honl   𬪍
 hook   𫿘
 hook   𬔼
 hoorn  𬡀
+hoorn  𬺭
 horc   𬋦
 horgl  𫹟
 horhu  𬎢
@@ -89017,6 +89019,7 @@ khsmf  𬌴
 khthu  𬍃
 khtqu  𬍃
 khvd   𬏤
+khwli  𬺪
 khxb   𬏹
 khybs  𬌿
 khyjj  𬍁
@@ -89417,6 +89420,7 @@ mbylb  𬯻
 mbylm  𬅹
 mbyvb  𬰏
 mbyyr  𬰊
+mc     𬺢
 mcf    𬊪
 mchaf  𬷢
 mci    𫶫
@@ -89852,6 +89856,7 @@ myta   𫨏
 myum   𫡴
 myvf   𬉻
 myyt   𬔗
+na     𬺨
 napf   𬊟
 nappw  𬪹
 naye   𫸸
@@ -91071,6 +91076,7 @@ rln    𫫅
 rlsx   𫫦
 rlws   𫪆
 rlyv   𫬍
+rm     𬺣
 rmapp  𬦸
 rmbb   𫪃
 rmbbq  𬧓
@@ -91871,6 +91877,7 @@ uwp    𫵯
 uyce   𫶄
 uyhc   𫶡
 uypt   𫶢
+uyre   𬺫
 vaam   𫲞
 vahaf  𬷳
 vahu   𫤗
@@ -92004,6 +92011,7 @@ viev   𫱹
 vifd   𫲁
 vifu   𫰣
 vihaf  𬷭
+vihvo  𬺬
 viiv   𫷣
 vij    𫧠
 vijks  𫷟
@@ -92310,9 +92318,11 @@ wytu   𬏑
 wytv   𬏑
 wyyfe  𬆷
 wyywf  𬆸
+ya     𬺩
 yabtc  𫤶
 yae    𫩂
 yahd   𬰻
+yaj    𬺥
 yaln   𫦊
 yalw   𬰹
 yaomb  𬰾
@@ -92348,6 +92358,7 @@ ybypn  𫦞
 yca    𬁢
 ychaf  𬷛
 yche   𫯌
+yci    𬺤
 yck    𫰁
 yckk   𬨫
 ycmmf  𬒵
@@ -92595,6 +92606,7 @@ yrp    𬢛
 yrpbc  𬢻
 yrqki  𬢪
 yrrr   𬩨
+yrrr   𬺦
 yrrv   𬡫
 yrshr  𫫌
 yrsmg  𬣑
