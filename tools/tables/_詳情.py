@@ -74,10 +74,13 @@ def normNames(s):
 def normLangName(s):
 	return s2t(s.strip())
 
-def normJW(s):
+def normJW(語言, s):
 	if s:
 		s = s.replace(" ", "").replace("，",",").strip()
 		jd, wd = map(float, s.split(","))
+		if not (-180 <= jd <= 180 and -90 <= wd <= 90):
+			print(f"{語言} 經緯度錯誤: {s}")
+			return ""
 		s = f"{jd:.6f},{wd:.6f}"
 	return s
 
@@ -134,7 +137,7 @@ def 加載(省=None):
 		繁簡 = 列["繁簡"]
 		字聲韻調註列名 = 列["字聲韻調註列名"].upper().replace("[", ",").replace("]", ",")
 		字表格式 = 列["字表格式"]
-		經緯度 = normJW(列["經緯度"])
+		經緯度 = normJW(語言, 列["經緯度"])
 		方言島 = 列["方言島"] == "☑"
 		作者 = normNames(列["作者"])
 		錄入人 = normNames(列["錄入人"])
