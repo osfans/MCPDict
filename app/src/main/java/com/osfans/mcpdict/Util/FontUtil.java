@@ -1,14 +1,27 @@
 package com.osfans.mcpdict.Util;
 
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.graphics.fonts.Font;
 import android.graphics.fonts.FontFamily;
+import android.graphics.fonts.SystemFonts;
 import android.os.Build;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.osfans.mcpdict.R;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Locale;
+import java.util.Objects;
+import java.util.Set;
 
 public class FontUtil {
     static Typeface tfHan;
@@ -27,85 +40,140 @@ public class FontUtil {
         tfIPATone = null;
     }
 
-    private static Typeface getHanTypeface() {
+    public static List<String> getFontPackages() {
+        List<String> l = new ArrayList<>();
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return l;
+        PackageManager pm = App.getContext().getPackageManager();
+        List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
+        for (ApplicationInfo info: packages) {
+            if (info.packageName.startsWith("com.osfans.font.")) l.add(info.packageName);
+        }
+        return l;
+    }
+
+    public static List<String> getFontNames(List<String> packages, boolean isFontValues) {
+        List<String> l = new ArrayList<>();
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return l;
+        String name = isFontValues ? "fonts" : "names";
+        try {
+            for (String packageName: packages) {
+                Context context = App.getContext().createPackageContext(packageName, Context.CONTEXT_IGNORE_SECURITY);
+                Resources res = context.getResources();
+                int id = res.getIdentifier(name, "array", packageName);
+                String[] array = res.getStringArray(id);
+                if (array.length == 0) continue;
+                if (isFontValues) {
+                    for (String a: array) {
+                        l.add(String.format("%s:%s", a, packageName));
+                    }
+                } else l.addAll(Arrays.asList(array));
+            }
+        } catch (Exception ignore) {
+        }
+        return l;
+    }
+
+    private static FontFamily getSystemFamily(String name) {
+        Locale locale = Locale.getDefault();
+        String defaultName = name.toLowerCase();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            for (Font f: SystemFonts.getAvailableFonts()) {
+                Locale l = f.getLocaleList().getFirstMatch(new String[]{locale.toLanguageTag()});
+                if (l == null || TextUtils.isEmpty(l.toString())) continue;
+                if (!l.toLanguageTag().contentEquals(locale.toLanguageTag())) continue;
+                File file = f.getFile();
+                if (file == null) continue;
+                String path = file.getAbsolutePath();
+                if (path.contains("CJK") && path.toLowerCase().contains(defaultName)) {
+                    return new FontFamily.Builder(f).build();
+                }
+            }
+        }
+        return null;
+    }
+
+    private static Typeface getTypeface(boolean useFontTone) {
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
         try {
-            if (useFontTone()) {
-                if (tfHanTone == null) {
-                    Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
-                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.tone).build()).build()
-                    );
-                    if (fontWenJinFirst()) builder.addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.wenjinmincho_p0).build()).build()
-                    );
-                    builder.addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.nyushu).build()).build()
-                    );
-                    if (usePlanGothic()) {
-                        builder.addCustomFallback(
-                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.plangothic_p1).build()).build()
-                        ).addCustomFallback(
-                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.plangothic_p2).build()).build()
-                        );
-                    } else {
-                        builder.addCustomFallback(
-                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.wenjinmincho_p2).build()).build()
-                        ).addCustomFallback(
-                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.wenjinmincho_p3).build()).build()
-                        );
-                    }
-                    builder.setSystemFallback(getDefaultFont());
-                    tfHanTone = builder.build();
+            String ids = getFontFamily();
+            if (!ids.contains(":")) return null;
+            String[] a = ids.split(":");
+            String packageName = a[1];
+            Context context = App.getContext().createPackageContext(packageName, Context.CONTEXT_IGNORE_SECURITY);
+            Resources res = context.getResources();
+            String[] fonts = a[0].split(",");
+            Typeface.CustomFallbackBuilder builder = null;
+
+            FontFamily familyIPA = new FontFamily.Builder(new Font.Builder(getResources(), useFontTone ? R.font.tone : R.font.ipa).build()).build();
+            for (String font: fonts) {
+                FontFamily family;
+                if (font.contentEquals("sans") || font.contentEquals("serif")) {
+                    if (fonts[fonts.length - 1].contentEquals(font)) continue;
+                    family = getSystemFamily(font);
+                } else if (font.contentEquals("ipa")) {
+                    family = familyIPA;
+                } else {
+                    int resId = res.getIdentifier(font, "font", packageName);
+                    family = new FontFamily.Builder(new Font.Builder(res, resId).build()).build();
                 }
-                return tfHanTone;
-            } else {
-                if (tfHan == null) {
-                    Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
-                            new FontFamily.Builder(new Font.Builder(getResources(), fontWenJinFirst() ? R.font.wenjinmincho_p0 : R.font.ipa).build()).build()
-                    );
-                    builder.addCustomFallback(
-                            new FontFamily.Builder(new Font.Builder(getResources(), R.font.nyushu).build()).build()
-                    );
-                    if (usePlanGothic()) {
-                        builder.addCustomFallback(
-                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.plangothic_p1).build()).build()
-                        ).addCustomFallback(
-                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.plangothic_p2).build()).build()
-                        );
-                    } else {
-                        builder.addCustomFallback(
-                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.wenjinmincho_p2).build()).build()
-                        ).addCustomFallback(
-                                new FontFamily.Builder(new Font.Builder(getResources(), R.font.wenjinmincho_p3).build()).build()
-                        );
-                    }
-                    builder.setSystemFallback(getDefaultFont());
-                    tfHan = builder.build();
+                if (family == null) continue;
+                if (builder == null) {
+                    builder = new Typeface.CustomFallbackBuilder(family);
+                } else {
+                    builder.addCustomFallback(family);
                 }
-                return tfHan;
             }
+            if (builder == null) builder = new Typeface.CustomFallbackBuilder(familyIPA);
+            else builder.addCustomFallback(familyIPA);
+            builder.addCustomFallback(
+                        new FontFamily.Builder(new Font.Builder(getResources(), R.font.charis).build()).build())
+                    .addCustomFallback(
+                        new FontFamily.Builder(new Font.Builder(getResources(), R.font.nyushu).build()).build());
+            if (!getSystemFallbackFont().contains("default")) builder.setSystemFallback(getSystemFallbackFont());
+            return builder.build();
         } catch (Exception ignore) {
         }
         return null;
     }
 
+    private static Typeface getHanTypeface() {
+        if (useFontTone()) {
+            if (tfHanTone == null) tfHanTone = getTypeface(true);
+            return tfHanTone;
+        } else {
+            if (tfHan == null) tfHan = getTypeface(false);
+            return tfHan;
+        }
+    }
+
     public static Typeface getDictTypeface() {
-        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
         if (!enableFontExt()) return getIPATypeface();
         return getHanTypeface();
     }
 
+    private static Typeface getLocalTypeface(int id) {
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
+        try {
+            Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
+                    new FontFamily.Builder(new Font.Builder(getResources(), id).build()).build()
+            ).addCustomFallback(
+                    new FontFamily.Builder(new Font.Builder(getResources(), R.font.charis).build()).build()
+            ).addCustomFallback(
+                    new FontFamily.Builder(new Font.Builder(getResources(), R.font.nyushu).build()).build()
+            );
+            if (!getSystemFallbackFont().contains("default")) builder.setSystemFallback(getSystemFallbackFont());
+            return builder.build();
+        } catch (Exception ignore) {
+        }
+        return null;
+    }
+
     public static Typeface getIPATypeface() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return null;
         if (useFontTone()) {
-            if (tfIPATone == null) {
-                tfIPATone = getResources().getFont(R.font.tone);
-            }
+            if (tfIPATone == null) tfIPATone = getLocalTypeface(R.font.tone);
             return tfIPATone;
         }
-        if (tfIPA == null) {
-            tfIPA = getResources().getFont(R.font.ipa);
-        }
+        if (tfIPA == null) tfIPA = getLocalTypeface(R.font.ipa);
         return tfIPA;
     }
 
@@ -113,28 +181,19 @@ public class FontUtil {
         return App.getContext().getResources();
     }
 
-    public static int getFontFormat() {
-        return Pref.getStrAsInt(R.string.pref_key_font, 0);
+    public static String getFontFamily() {
+        return Pref.getStr(R.string.pref_key_font);
     }
 
-    public static boolean useSerif() {
-        return getFontFormat() == 1;
-    }
-
-    public static boolean usePlanGothic() {
-        return getFontFormat() == 0;
-    }
-
-    public static String getDefaultFont() {
-        return useSerif() ? "serif" : "sans";
-    }
-
-    public static boolean fontWenJinFirst() {
-        return getFontFormat() == 2;
+    public static String getSystemFallbackFont() {
+        String family = getFontFamily();
+        if (family.contains("serif")) return "serif";
+        if (family.contains("sans")) return "sans";
+        return "default";
     }
 
     public static boolean enableFontExt() {
-        return getFontFormat() != 3;
+        return getFontFamily().contains(":");
     }
 
     public static String getFontFeatureSettings() {

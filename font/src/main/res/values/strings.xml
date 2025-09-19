@@ -1,0 +1,13 @@
+<resources>
+    <string name="font_app_name">漢字音典字體(遍黑體、文津宋體)</string>
+    <string-array name="names">
+        <item>遍黑體</item>
+        <item>系統宋體、文津宋體</item>
+        <item>僅文津宋體</item>
+    </string-array>
+    <string-array name="fonts">
+        <item>sans,plangothicp1,plangothicp2</item>
+        <item>serif,wenjinminchop2,wenjinminchop3</item>
+        <item>wenjinminchop0,wenjinminchop2,wenjinminchop3,serif</item>
+    </string-array>
+</resources>

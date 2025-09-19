@@ -59,10 +59,10 @@ public class App extends Application {
           .append("  h1 {font-size: 1.8em; color: #9D261D}\n")
           .append("  h2 {font-size: 1.2em; color: #000080;}\n")
           .append("  body {font-family: ipa, ");
-        if (FontUtil.fontWenJinFirst()) {
-            sb.append(String.format("p0, p2, p3, %s;}", FontUtil.getDefaultFont()));
+        if (FontUtil.enableFontExt()) {
+            sb.append(String.format("p0, p2, p3, %s;}", FontUtil.getSystemFallbackFont()));
         } else {
-            sb.append(String.format("%s, p2, p3;}", FontUtil.getDefaultFont()));
+            sb.append(String.format("%s, p2, p3;}", FontUtil.getSystemFallbackFont()));
         }
         sb.append("</style></head><body>");
         sb.append(DB.getIntroText(DB.getLanguageByLabel(lang)));
@@ -111,16 +111,15 @@ public class App extends Application {
     }
 
     static int getAppTheme() {
-        return switch (FontUtil.getFontFormat()) {
-            case 0 -> R.style.AppThemeSans;
-            case 1, 2 -> R.style.AppThemeSerif;
-            default -> R.style.AppTheme;
-        };
+        String family = FontUtil.getFontFamily();
+        if (family.contains("sans")) return R.style.AppThemeSans;
+        if (family.contains("serif")) return R.style.AppThemeSerif;
+        return R.style.AppTheme;
     }
 
     public static void setLocale() {
         String locale = Pref.getStr(R.string.pref_key_locale);
-        if (TextUtils.isEmpty(locale)) locale = "ko";
+        if (TextUtils.isEmpty(locale)) locale = Pref.getString(R.string.default_locale);
         Locale.setDefault(Locale.forLanguageTag(locale));
     }
 
