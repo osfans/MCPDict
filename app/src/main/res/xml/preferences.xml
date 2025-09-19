@@ -8,23 +8,18 @@
         <ListPreference
             app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_font"
-            android:title="@string/pref_title_font_ext"
-            android:summary="@string/font_ext_warning"
+            android:title="@string/pref_title_font"
+            android:summary="@string/font_warning"
             android:entries="@array/pref_entries_font"
             android:entryValues="@array/pref_values_font"
-            android:defaultValue="0" />
+            android:defaultValue="sans" />
         <ListPreference
             app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_locale"
-            android:title="@string/pref_title_font"
+            android:title="@string/pref_title_locale"
             android:entries="@array/pref_entries_locale"
             android:entryValues="@array/pref_values_locale"
             android:defaultValue="" />
-        <!-- <SwitchPreference
-            android:defaultValue="true"
-            android:key="@string/pref_key_font_ext"
-            android:summary="@string/font_ext_warning"
-            android:title="@string/pref_title_font_ext" /> -->
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/language">
         <ListPreference

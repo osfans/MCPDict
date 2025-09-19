@@ -1,0 +1,35 @@
+android {
+    signingConfigs {
+        release {
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    namespace 'com.osfans.mcpdict'
+    compileSdk 36
+    buildToolsVersion '36.0.0'
+
+    def propsFile = rootProject.file('keystore.properties')
+    //store release config in local.properties
+    def configName = 'release'
+
+    if (propsFile.exists() && android.signingConfigs.hasProperty(configName)) {
+        def props = new Properties()
+        props.load(new FileInputStream(propsFile))
+        if (props != null && props.containsKey('storeFile')) {
+            android.signingConfigs.named(configName) {
+                storeFile = rootProject.file(props['storeFile'])
+                storePassword = props['storePassword']
+                keyAlias = props['keyAlias']
+                keyPassword = props['keyPassword']
+            }
+        }
+    }
+}

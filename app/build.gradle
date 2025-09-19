@@ -1,11 +1,10 @@
+apply plugin: 'com.android.application'
+apply from: '../config.gradle'
+
 import java.text.SimpleDateFormat
 import groovy.xml.XmlParser
 
-apply plugin: 'com.android.application'
-
 android {
-    compileSdk = 36
-    buildToolsVersion '36.0.0'
     defaultConfig {
         applicationId "com.osfans.mcpdict"
         minSdkVersion 24 //SQLite 3.9.2
@@ -14,6 +13,9 @@ android {
         def date = new SimpleDateFormat ("yyyyMMdd").format(new Date())
         versionName "6.0 ($date)"
         buildConfigField "int", "DB_VER", "$date"
+        buildFeatures {
+            buildConfig true
+        }
 
         ndk {
             abiFilters "arm64-v8a"
@@ -35,17 +37,10 @@ android {
         }
     }
 
-    signingConfigs {
-        release {
-        }
-    }
-
     buildTypes {
         release {
             minifyEnabled true
-            shrinkResources false
             proguardFiles 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
     }
 
@@ -57,30 +52,10 @@ android {
             outputFileName = "${appName}${versionName}.APK"
         }
     }
-    
-    def propsFile = rootProject.file('keystore.properties') //store release config in local.properties
-    def configName = 'release'
-
-    if (propsFile.exists() && android.signingConfigs.hasProperty(configName)) {
-        def props = new Properties()
-        props.load(new FileInputStream(propsFile))
-        if (props!=null && props.containsKey('storeFile')) {
-            android.signingConfigs.named(configName) {
-                storeFile = rootProject.file(props['storeFile'])
-                storePassword = props['storePassword']
-                keyAlias = props['keyAlias']
-                keyPassword = props['keyPassword']
-            }
-        }
-    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_21
         targetCompatibility JavaVersion.VERSION_21
-    }
-    namespace 'com.osfans.mcpdict'
-    buildFeatures {
-        buildConfig true
     }
 }
 

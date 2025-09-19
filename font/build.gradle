@@ -1,0 +1,18 @@
+apply plugin: 'com.android.application'
+apply from: '../config.gradle'
+
+android {
+    defaultConfig {
+        applicationId "com.osfans.font.unicode17"
+        minSdk 29
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+    }
+
+    applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach {
+            outputFileName = "${applicationId}-${versionName}.APK"
+        }
+    }
+}

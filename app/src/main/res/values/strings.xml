@@ -7,7 +7,7 @@
     <string name="about">關於</string>
     <string name="info">簡介</string>
     <string name="home">主頁</string>
-    <string name="about_message"><![CDATA[%1$s V%2$s<br/>作者：osfans (waxaca&#64;163.com)<br/><a href="https://github.com/osfans/MCPDict/releases/tag/latest">最新安卓版</a><br/><br/>漢字古今中外讀音查詢 V3.0<br/>2016.05.03<br/>作者：Maigo<br/>maigoakisame&#64;gmail.com]]></string>
+    <string name="about_message"><![CDATA[%1$s V%2$s<br/>作者：osfans (waxaca&#64;163.com)<br/><a href="https://github.com/osfans/MCPDict/releases/tag/latest">最新安卓版</a> <a href="https://github.com/osfans/MCPDict/releases/tag/fonts">字體包</a><br/><br/>漢字古今中外讀音查詢 V3.0<br/>2016.05.03<br/>作者：Maigo<br/>maigoakisame&#64;gmail.com]]></string>
 
     <string name="ok">確定</string>
     <string name="cancel">取消</string>
@@ -387,7 +387,7 @@
     <string name="pref_key_custom_title">CUSTOM_TITLE</string>
     <string name="language">語言</string>
     <string name="appearance">外觀</string>
-    <string name="pref_title_font">字形標準</string>
+    <string name="pref_title_locale">字形標準</string>
     <string name="pref_key_locale">LOCALE</string>
     <string-array name="pref_entries_locale">
         <item>默認</item>
@@ -397,13 +397,14 @@
         <item>日本</item>
         <item>韓國</item>
     </string-array>
+    <string name="default_locale">ko-Kore-KR</string>
     <string-array name="pref_values_locale">
-        <item>""</item>
-        <item>zh-cn</item>
-        <item>zh-hk</item>
-        <item>zh-tw</item>
-        <item>ja</item>
-        <item>ko</item>
+        <item>@string/default_locale</item>
+        <item>zh-Hans-CN</item>
+        <item>zh-Hant-HK</item>
+        <item>zh-Hant-TW</item>
+        <item>ja-Jpan-JP</item>
+        <item>@string/default_locale</item>
     </string-array>
     <string name="name">名稱：</string>
     <string name="version">版本：</string>
@@ -411,9 +412,8 @@
     <string name="pref_key_fq">FQ</string>
     <string name="default_fq">地圖集二分區</string>
     <string name="pref_title_fq">分區方案</string>
-    <string name="pref_key_font_ext">FONT_EXT</string>
-    <string name="font_ext_warning">文字版、表格版如出現卡頓，則建議關閉大字庫字體。</string>
-    <string name="pref_title_font_ext">字體順序</string>
+    <string name="font_warning">文字版、表格版如出現卡頓，則建議關閉大字庫字體。</string>
+    <string name="pref_title_font">字體</string>
     <string name="pref_key_font">FONT</string>
     <string name="book_format">【%s】</string>
     <string name="pref_key_shape">KEY_SHAPE</string>
@@ -425,16 +425,12 @@
     <string name="pref_key_hz_option">KEY_HZ_OPTION</string>
     <string name="pref_key_fullscreen">KEY_FULLSCREEN</string>
     <string-array name="pref_entries_font">
-        <item>系統字體、遍黑體</item>
-        <item>系統宋體、文津宋體</item>
-        <item>僅文津宋體</item>
-        <item>僅系統字體</item>
+        <item>默認</item>
+        <item>系統宋體</item>
     </string-array>
     <string-array name="pref_values_font">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
+        <item>default</item>
+        <item>serif</item>
     </string-array>
     <string-array name="pref_values_format">
         <item>0</item>
