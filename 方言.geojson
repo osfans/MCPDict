@@ -2894,6 +2894,29 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-color": "#F5A4B6",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "章丘",
+        "語言": "章丘話",
+        "地點": "山東濟南章丘",
+        "地圖集二分區": "冀魯官話－滄惠片－章桓小片",
+        "音典分區": "華北－魯中",
+        "陳邡分區": "官話－山東－魯中片",
+        "錄入人": "DaiDzao",
+        "字表來源": "《章丘方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.531418,
+          36.686459
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-color": "#F5C4D0",
         "marker-size": "large",
         "marker-symbol": "b",
@@ -9403,6 +9426,30 @@
         "marker-color": "#F5B3B3",
         "marker-size": "small",
         "marker-symbol": "b",
+        "title": "萬泉解店",
+        "語言": "萬泉解店話",
+        "地點": "山西運城萬榮解店",
+        "地圖集二分區": "中原官話－汾河片－絳州小片",
+        "音典分區": "西北－汾河－蒲解",
+        "陳邡分區": "官話－平陽－解北大片－萬泉片",
+        "版本": "2025-09-20",
+        "錄入人": "DaiDzao",
+        "字表來源": "《万荣方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.842738,
+          35.428565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
         "title": "朝邑兩宜",
         "語言": "朝邑[現大荔]兩宜話",
         "地點": "陝西渭南大荔兩宜",
@@ -9418,6 +9465,31 @@
         "coordinates": [
           110.122408,
           34.963192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "大荔",
+        "語言": "大荔話",
+        "地點": "陝西渭南大荔",
+        "地圖集二分區": "中原官話－汾河片－解州小片",
+        "音典分區": "西北－汾河－蒲解",
+        "陳邡分區": "官話－關中－河西大片－大荔片",
+        "版本": "2025-09-20",
+        "錄入人": "DaiDzao",
+        "字表來源": "《大荔方言语音研究》",
+        "補充閲讀": "《大荔方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.947016,
+          34.802544
         ]
       }
     },
