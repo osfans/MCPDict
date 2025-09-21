@@ -375,7 +375,7 @@ class 表(_表):
 			if not 統行: continue
 			for 行 in 統行.split("\n"):
 				if 字表使用調值:
-					行 = re.sub(r"\[([\d-]+)\]", lambda x:"[%s]"%自.僅轉調類(x[1], 韻), 行)
+					行 = re.sub(r"\[([\d\-\/]+)\]", lambda x:"[%s]"%自.僅轉調類(x[1], 韻), 行)
 				行 = 行.strip().replace(":[", "	[").replace("{:",'{')
 				行 = 行.replace("[·]", "[0]")
 				行 = re.sub(r"\[(\d+[a-zA-Z]?)\]", "［\\1］",行)
