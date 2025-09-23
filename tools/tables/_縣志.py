@@ -380,7 +380,7 @@ class 表(_表):
 				行 = 行.replace("[·]", "[0]")
 				行 = re.sub(r"\[(\d+[a-zA-Z]?)\]", "［\\1］",行)
 				行 = re.sub(r"［([^\d]+.*?)］", "[\\1]",行)
-				if ("｛" not in 行 and "{" not in 行) and ("(" in 行):
+				if ("｛" not in 行 and "{" not in 行) and ("(" in 行) and 有字(行):
 					行 = 自.normS(行)
 				行 = 行.lstrip(" ")
 				if "［" not in 行 and re.match(".*[⓪①-⑨]", 行):
