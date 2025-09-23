@@ -137,6 +137,7 @@ public class Orthography {
                         char b = sTone.charAt(1);
                         sTone = sTone.replace(b, (char)(b - 'a' + 'ⓐ'));
                     }
+                    tv = tv.replace('/', ' ');
                     return base + sTone + tv;
                 }
                 return base + tv + sTone;
