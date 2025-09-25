@@ -12,7 +12,7 @@
             android:summary="@string/font_warning"
             android:entries="@array/pref_entries_font"
             android:entryValues="@array/pref_values_font"
-            android:defaultValue="sans" />
+            android:defaultValue="default" />
         <ListPreference
             app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_locale"
