@@ -399,12 +399,12 @@
     </string-array>
     <string name="default_locale">ko-Kore-KR</string>
     <string-array name="pref_values_locale">
-        <item>@string/default_locale</item>
+        <item>""</item>
         <item>zh-Hans-CN</item>
         <item>zh-Hant-HK</item>
         <item>zh-Hant-TW</item>
         <item>ja-Jpan-JP</item>
-        <item>@string/default_locale</item>
+        <item>ko-Kore-KR</item>
     </string-array>
     <string name="name">名稱：</string>
     <string name="version">版本：</string>
