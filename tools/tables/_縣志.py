@@ -285,6 +285,12 @@ class 表(_表):
 				return
 			行 = "\t".join((f"[{自.調值表[序]}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
 			行 = 自.normS(行.replace(")(", "："))
+		elif 名 in ("如皋圩裏港上話",):
+			列 = 行.split("\t")
+			if 列[0] == "":
+				return
+			行 = "\t".join((f"[{序 + 1 if 序 > 3 else 序}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
+			行 = 自.normS(行.replace(")(", "："))
 		elif 名 in ("葛洲壩",):
 			if 行.startswith("["): return
 			列 = 行.split("\t")
