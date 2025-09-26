@@ -10,7 +10,6 @@ import android.graphics.fonts.FontFamily;
 import android.graphics.fonts.SystemFonts;
 import android.os.Build;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.osfans.mcpdict.R;
@@ -20,8 +19,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
-import java.util.Objects;
-import java.util.Set;
 
 public class FontUtil {
     static Typeface tfHan;
@@ -74,20 +71,34 @@ public class FontUtil {
     }
 
     private static FontFamily getSystemFamily(String name) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) return null;
         Locale locale = Locale.getDefault();
         String defaultName = name.toLowerCase();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            for (Font f: SystemFonts.getAvailableFonts()) {
-                Locale l = f.getLocaleList().getFirstMatch(new String[]{locale.toLanguageTag()});
-                if (l == null || TextUtils.isEmpty(l.toString())) continue;
-                if (!l.toLanguageTag().contentEquals(locale.toLanguageTag())) continue;
-                File file = f.getFile();
-                if (file == null) continue;
-                String path = file.getAbsolutePath();
-                if (path.contains("CJK") && path.toLowerCase().contains(defaultName)) {
-                    return new FontFamily.Builder(f).build();
-                }
+        FontFamily family = null;
+        for (Font f: SystemFonts.getAvailableFonts()) {
+            Locale l = f.getLocaleList().getFirstMatch(new String[]{locale.toLanguageTag()});
+            if (l == null || TextUtils.isEmpty(l.toString())) continue;
+            if (!l.toLanguageTag().contentEquals(locale.toLanguageTag())) continue;
+            File file = f.getFile();
+            if (file == null) continue;
+            String path = file.getAbsolutePath();
+            if (path.contains("CJK") && path.toLowerCase().contains(defaultName)) {
+                family = new FontFamily.Builder(f).build();
+                break;
             }
+        }
+        return family;
+    }
+
+    private static FontFamily getUnicode17Family(String font) {
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
+        try {
+            String packageName = "com.osfans.font.unicode17";
+            Context context = App.getContext().createPackageContext(packageName, Context.CONTEXT_IGNORE_SECURITY);
+            Resources res = context.getResources();
+            int resId = res.getIdentifier(font, "font", packageName);
+            return new FontFamily.Builder(new Font.Builder(res, resId).build()).build();
+        } catch (Exception ignore) {
         }
         return null;
     }
@@ -108,8 +119,23 @@ public class FontUtil {
             for (String font: fonts) {
                 FontFamily family;
                 if (font.contentEquals("sans") || font.contentEquals("serif")) {
-                    if (fonts[fonts.length - 1].contentEquals(font)) continue;
-                    family = getSystemFamily(font);
+                    if (fonts[fonts.length - 1].contentEquals(font)) {
+                        if (fonts.length == 2 && builder != null) {
+                            if (font.contentEquals("sans")) {
+                                family = getUnicode17Family("plangothicp1");
+                                if (family == null) continue;
+                                builder.addCustomFallback(family);
+                                family = getUnicode17Family("plangothicp2");
+                            } else {
+                                family = getUnicode17Family("wenjinminchop2");
+                                if (family == null) continue;
+                                builder.addCustomFallback(family);
+                                family = getUnicode17Family("wenjinminchop3");
+                            }
+                        } else continue;
+                    } else {
+                        family = getSystemFamily(font);
+                    }
                 } else if (font.contentEquals("ipa")) {
                     family = familyIPA;
                 } else {

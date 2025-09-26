@@ -45,27 +45,18 @@ public class App extends Application {
           .append("                    src: url('file:///android_res/font/ipa.ttf');\n")
           .append("                  }\n")
           .append("                  @font-face {\n")
-          .append("                    font-family: p0;\n")
-          .append("                    src: url('file:///android_res/font/p0.otf') format('opentype');\n")
+          .append("                    font-family: charis;\n")
+          .append("                    src: url('file:///android_res/font/charis.ttf');\n")
           .append("                  }\n")
           .append("                  @font-face {\n")
-          .append("                    font-family: p2;\n")
-          .append("                    src: url('file:///android_res/font/p2.otf') format('opentype');\n")
-          .append("                  }\n")
-          .append("                  @font-face {\n")
-          .append("                    font-family: p3;\n")
-          .append("                    src: url('file:///android_res/font/p3.otf') format('opentype');\n")
+          .append("                    font-family: nyushu;\n")
+          .append("                    src: url('file:///android_res/font/nyushu.ttf');\n")
           .append("                  }\n")
           .append("  h1 {font-size: 1.8em; color: #9D261D}\n")
           .append("  h2 {font-size: 1.2em; color: #000080;}\n")
-          .append("  body {font-family: ipa, ");
-        if (FontUtil.enableFontExt()) {
-            sb.append(String.format("p0, p2, p3, %s;}", FontUtil.getSystemFallbackFont()));
-        } else {
-            sb.append(String.format("%s, p2, p3;}", FontUtil.getSystemFallbackFont()));
-        }
-        sb.append("</style></head><body>");
-        sb.append(DB.getIntroText(DB.getLanguageByLabel(lang)));
+          .append(String.format("  body {font-family: ipa, %s, charis, nyushu;}", FontUtil.getSystemFallbackFont()))
+          .append("</style></head><body>")
+          .append(DB.getIntroText(DB.getLanguageByLabel(lang)));
         webView.loadDataWithBaseURL(null, sb.toString(), "text/html; charset=utf-8", "utf-8", null);
 
         new AlertDialog.Builder(context)
