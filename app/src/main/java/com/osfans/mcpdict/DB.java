@@ -234,7 +234,7 @@ public class DB extends SQLiteAssetHelper {
     public static Cursor search() {
         // Search for one or more keywords, considering mode and options
         String input = Pref.getInput();
-        input = input.replace("-", " ").replace("=", " ").replace("/", " ").strip();
+        input = input.replaceAll("[-=/*]", " ").strip();
 
         String label = Pref.getLabel();
         String lang = label;

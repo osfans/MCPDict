@@ -324,6 +324,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             item.setOnMenuItemClickListener(i->{
                 String query = ipa.replaceAll("/.*$","").replace("-", " ").replace("=", " ").trim();
                 if (lang.contentEquals(BA)) query = BaiSha.display(ipa.replaceAll("\\([^()]*?\\)$", "").trim());
+                else query = query.replace("*", "");
                 DictFragment dictFragment = ((MainActivity) v.getContext()).getDictionaryFragment();
                 dictFragment.setType(1);
                 dictFragment.refresh(query, lang);
