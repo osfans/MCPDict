@@ -274,7 +274,7 @@ class 表(_表):
 				return
 			行 = "\t".join((f"[{自.調值表[序]}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
 			行 = 行.replace("【", "{").replace("】", "}")
-		elif 名 in ("通州五接","如皋白蒲","如皋石莊","南通唐閘",):
+		elif 名 in ("通州五接","南通唐閘","如皋白蒲","如皋石莊","如皋永安沙"):
 			列 = 行.split("\t")
 			if 列[0] == "":
 				列 = 行.rstrip().split("\t")
