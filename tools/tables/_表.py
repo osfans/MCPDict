@@ -37,9 +37,10 @@ def getCompatibilityVariants():
 		d[字] = val
 	return d
 
-def getTsvName(xls):
+def getTsvName(xls, 頁名=""):
 	name = os.path.basename(xls)
-	name = re.sub(r" ?(\(\d{0,3}\))+$", "", name.rsplit(".", 1)[0]) + ".tsv"
+	if 頁名: 頁名 = "-" + 頁名
+	name = re.sub(r" ?(\(\d{0,3}\))+$", "", name.rsplit(".", 1)[0]) + 頁名 + ".tsv"
 	return os.path.join(PATH, SOURCE, name)
 
 def isXlsx(fname):
@@ -81,9 +82,9 @@ def processXlsxFs(v):
 		cells.append(text)
 	return "".join(cells).replace(")(", "").strip().replace("\n", "\\n")
 
-def getXlsxLines(xls):
+def getXlsxLines(xls, 頁名):
 	wb = load_workbook(xls, data_only=True, rich_text=True)
-	sheet = wb.active
+	sheet = wb[頁名] if 頁名 else wb.active
 	lines = list()
 	for row in sheet.rows:
 		列 = [processXlsxFs(j.value) for j in row[:50]]
@@ -104,14 +105,14 @@ def getXlsLines(xls, page=0):
 			lines.append(行)
 	return lines
 
-def xls2tsv(xls):
-	tsv = getTsvName(xls)
+def xls2tsv(xls, 頁名):
+	tsv = getTsvName(xls, 頁名)
 	if not os.path.exists(xls): return
 	if os.path.exists(tsv):
 		xtime = os.path.getmtime(xls)
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
-	lines = getXlsxLines(xls) if isXlsx(xls) else getXlsLines(xls)
+	lines = getXlsxLines(xls, 頁名) if isXlsx(xls) else getXlsLines(xls)
 	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.writelines(lines)
 	t.close()
@@ -184,6 +185,7 @@ def ybKey(x):
 class 表:
 	_time = os.path.getmtime(__file__)
 	文件名 = None
+	頁名 = ""
 	_files = None
 	_sep = None
 	顏色 = "#1E90FF"
@@ -232,7 +234,7 @@ class 表:
 		if g := glob(re.sub(".([^.]+)$", " ([0-9]).\\1", name)): return g
 		if g := glob(re.sub(".([^.]+)$", " ([0-9][0-9]).\\1", name)): return g
 		if isXls(name) or isDocx(name):
-			自.文件名 = getTsvName(自.文件名)
+			自.文件名 = getTsvName(自.文件名, 自.頁名)
 			return 自.find(自.文件名)
 		return
 
@@ -240,6 +242,8 @@ class 表:
 	def spath(自):
 		if 自._files:
 			自.文件名 = 自._files[0]
+		if 自.文件名 and "/" in 自.文件名:
+			自.文件名, 自.頁名 = 自.文件名.rsplit("/", 1)
 		sname = 自.文件名
 		if not 自.簡稱: 自.簡稱 = 自.info["簡稱"]
 		if not 自.簡稱: 自.簡稱 = str(自)
@@ -255,8 +259,8 @@ class 表:
 		sname = g[0]
 		自.文件名 = os.path.basename(sname)
 		if isXls(sname):
-			xls2tsv(sname)
-			sname = getTsvName(sname)
+			xls2tsv(sname, 自.頁名)
+			sname = getTsvName(sname, 自.頁名)
 		elif isDocx(sname):
 			docx2tsv(sname)
 			sname = getTsvName(sname)
