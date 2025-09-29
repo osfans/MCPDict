@@ -115,7 +115,7 @@ public class FontUtil {
             String[] fonts = a[0].split(",");
             Typeface.CustomFallbackBuilder builder = null;
 
-            FontFamily familyIPA = new FontFamily.Builder(new Font.Builder(getResources(), useFontTone ? R.font.tone : R.font.ipa).build()).build();
+            FontFamily familyIPA = new FontFamily.Builder(new Font.Builder(getResources(), useFontTone ? R.font.tone : getIpaFontId()).build()).build();
             for (String font: fonts) {
                 FontFamily family;
                 if (font.contentEquals("sans") || font.contentEquals("serif")) {
@@ -177,14 +177,22 @@ public class FontUtil {
         return getHanTypeface();
     }
 
-    private static Typeface getLocalTypeface(int id) {
+    private static Typeface getLocalTypeface() {
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return null;
         try {
-            Typeface.CustomFallbackBuilder builder = new Typeface.CustomFallbackBuilder(
-                    new FontFamily.Builder(new Font.Builder(getResources(), id).build()).build()
-            ).addCustomFallback(
-                    new FontFamily.Builder(new Font.Builder(getResources(), R.font.charis).build()).build()
-            ).addCustomFallback(
+            boolean useFontTone = useFontTone();
+            Typeface.CustomFallbackBuilder builder;
+            if (useFontTone) {
+                builder = new Typeface.CustomFallbackBuilder(
+                        new FontFamily.Builder(new Font.Builder(getResources(), R.font.tone).build()).build());
+                builder.addCustomFallback(
+                        new FontFamily.Builder(new Font.Builder(getResources(), getIpaFontId()).build()).build()
+                );
+            } else {
+                builder = new Typeface.CustomFallbackBuilder(
+                        new FontFamily.Builder(new Font.Builder(getResources(), getIpaFontId()).build()).build());
+            }
+            builder.addCustomFallback(
                     new FontFamily.Builder(new Font.Builder(getResources(), R.font.nyushu).build()).build()
             );
             if (!getSystemFallbackFont().contains("default")) builder.setSystemFallback(getSystemFallbackFont());
@@ -196,10 +204,10 @@ public class FontUtil {
 
     public static Typeface getIPATypeface() {
         if (useFontTone()) {
-            if (tfIPATone == null) tfIPATone = getLocalTypeface(R.font.tone);
+            if (tfIPATone == null) tfIPATone = getLocalTypeface();
             return tfIPATone;
         }
-        if (tfIPA == null) tfIPA = getLocalTypeface(R.font.ipa);
+        if (tfIPA == null) tfIPA = getLocalTypeface();
         return tfIPA;
     }
 
@@ -209,6 +217,14 @@ public class FontUtil {
 
     public static String getFontFamily() {
         return Pref.getStr(R.string.pref_key_font);
+    }
+
+    private static boolean isSerif() {
+        return getSystemFallbackFont().contains("serif");
+    }
+
+    public static int getIpaFontId() {
+        return isSerif() ? R.font.charis: R.font.voces;
     }
 
     public static String getSystemFallbackFont() {
