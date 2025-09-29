@@ -3,7 +3,7 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.DayNight">
         <item name="colorAccent">@color/accent</item>
-        <item name="fontFamily">@font/ipa</item>
+        <item name="fontFamily">@font/voces</item>
         <item name="android:navigationBarColor">?android:colorBackground</item>
     </style>
     <style name="AppThemeSans" parent="AppTheme">
