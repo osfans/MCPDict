@@ -648,7 +648,7 @@ class 表:
 		異讀 = getYDMark(音)
 		if 異讀:
 			音 = 音[:-1]
-		if "/" in 音:
+		if re.findall(r"/[^\d]", 音):
 			return "/".join(map(自.轉調類, 音.split("/")))
 		if "-" in 音:
 			return "-".join(map(自.轉調類, 音.split("-")))

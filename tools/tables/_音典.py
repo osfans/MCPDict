@@ -252,7 +252,9 @@ class 表(_表):
 					l.append((項, 音, 註))
 				return l
 			elif 名 in ("榮縣",):
-				音 = 音.lstrip("ø").replace("或", "/")
+				音 = 音.lstrip("Øø")
+				if "或" in 音:
+					音 = re.sub(r"(.*?)(\d+)或(\d+)", r"\1\2/\1\3", 音)
 		elif 自.文件名.startswith("榕江侗"):
 			列[0] = 列[0].strip().replace(" /", "/").replace(" [", "[")
 			if not 列[0]: return

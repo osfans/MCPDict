@@ -15013,7 +15013,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "樂山",
         "語言": "樂山話",
@@ -15087,7 +15087,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "雅安",
         "語言": "雅安話",
@@ -15207,7 +15207,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "新内江",
         "語言": "新内江話",
@@ -15255,7 +15255,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "自貢",
         "語言": "自貢話",
@@ -15545,7 +15545,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "瀘州",
         "語言": "瀘州話",
@@ -16622,7 +16622,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "綿陽",
         "語言": "綿陽話",
@@ -16670,7 +16670,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "資陽",
         "語言": "資陽話",
@@ -17580,7 +17580,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "large",
         "marker-symbol": "b",
         "title": "達州",
         "語言": "達州話",
@@ -39449,7 +39449,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EBC75E",
-        "marker-size": "large",
+        "marker-size": "small",
         "marker-symbol": "i",
         "title": "東莞莞城",
         "語言": "東莞莞城話",
@@ -40545,7 +40545,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EBC75E",
-        "marker-size": "large",
+        "marker-size": "medium",
         "marker-symbol": "i",
         "title": "中山石岐",
         "語言": "中山石岐話(上方話)",
