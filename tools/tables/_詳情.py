@@ -264,7 +264,7 @@ def 加載(省=None):
 	# 			v["音典分區"] += "," + 音典顔色分區[subcolor]
 	# 		else:
 	# 			print(k, "音典過渡色無對應分區")
-	geojsonpath = os.path.join(curdir, "../..", "方言.geojson")
+	geojsonpath = os.path.join(curdir, "..", "方言.geojson")
 	if os.path.exists(geojsonpath):
 		json.dump(FeatureCollection, fp=open(geojsonpath, "w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
 		json.dump(d, fp=open(tpath,"w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
