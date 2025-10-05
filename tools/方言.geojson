@@ -3450,6 +3450,30 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-color": "#F5A4B6",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "博山",
+        "語言": "博山話",
+        "地點": "山東淄博博山",
+        "地圖集二分區": "冀魯官話－石濟片－聊泰小片",
+        "音典分區": "華北－膠東－東濰",
+        "陳邡分區": "官話－山東－魯東大片－膠萊片",
+        "版本": "2025-10-05",
+        "錄入人": "DaiDzao",
+        "字表來源": "《博山方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.870197,
+          36.501313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-color": "#F5C4D0",
         "marker-size": "medium",
         "marker-symbol": "b",
@@ -12621,7 +12645,7 @@
         "版本": "2025-06-07",
         "錄入人": "ResoundYB",
         "維護人": "2019212",
-        "字表來源": "语保"
+        "字表來源": "语保 《铜仁方言与文化研究》"
       },
       "geometry": {
         "type": "Point",
@@ -15360,8 +15384,10 @@
         "地圖集二分區": "西南官話－西蜀片－江貢小片",
         "音典分區": "中上江－荆益－川黔",
         "陳邡分區": "官話－長江－西南大片－川中片",
-        "錄入人": "DaiDzao",
-        "字表來源": "《四川富顺方言语音调查研究》《岷江流域方音字汇》"
+        "錄入人": "DaiDzao,2019212",
+        "維護人": "2019212",
+        "字表來源": "《四川富顺方言语音调查研究》《岷江流域方音字汇》",
+        "參考文獻": "语保平台"
       },
       "geometry": {
         "type": "Point",
@@ -15472,7 +15498,7 @@
       "properties": {
         "marker-color": "#E54E5D",
         "marker-size": "small",
-        "marker-symbol": "",
+        "marker-symbol": "b",
         "title": "隆昌周興",
         "語言": "隆昌周興官話",
         "地點": "四川内江隆昌周興",
@@ -15982,7 +16008,7 @@
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "沿河",
-        "語言": "沿河話（城關片）",
+        "語言": "沿河話[城關片]",
         "地點": "貴州銅仁沿河",
         "地圖集二分區": "西南官話－西蜀片－岷赤小片",
         "音典分區": "中上江－荆益－川黔",
@@ -20857,30 +20883,6 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "small",
-        "marker-symbol": "b",
-        "title": "保靖",
-        "語言": "保靖話",
-        "地點": "湖南湘西保靖",
-        "地圖集二分區": "西南官話－湖廣片－湘西小片",
-        "音典分區": "中上江－荆益－湘西北",
-        "陳邡分區": "官話－長江－西南大片－荆湖片",
-        "版本": "2025-08-30",
-        "錄入人": "DaiDzao",
-        "字表來源": "《保靖方言语音和词汇研究》YB"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          109.660577,
-          28.699774
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "大庸北",
@@ -20995,6 +20997,30 @@
         "coordinates": [
           110.412546,
           28.461129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "保靖",
+        "語言": "保靖話",
+        "地點": "湖南湘西保靖",
+        "地圖集二分區": "西南官話－湖廣片－湘西小片",
+        "音典分區": "中上江－荆益－湘西",
+        "陳邡分區": "官話－長江－西南大片－荆湖片",
+        "版本": "2025-08-30",
+        "錄入人": "DaiDzao",
+        "字表來源": "《保靖方言语音和词汇研究》YB"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.660577,
+          28.699774
         ]
       }
     },
@@ -23051,7 +23077,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "丹徒大港",
         "語言": "丹徒大港話",
@@ -23075,7 +23101,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "丹徒姚橋",
         "語言": "丹徒姚橋話",
@@ -24801,7 +24827,7 @@
         "marker-color": "#EB6E77",
         "marker-size": "medium",
         "marker-symbol": "b",
-        "title": "如皋如城",
+        "title": "如皋",
         "語言": "如皋如城話",
         "地點": "江蘇南通如皋如城",
         "地圖集二分區": "江淮官話－泰如片",
@@ -41122,54 +41148,6 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EBC75E",
-        "marker-size": "small",
-        "marker-symbol": "i",
-        "title": "浦北白石水",
-        "語言": "浦北白石水麻佬話",
-        "地點": "廣西欽州浦北白石水",
-        "地圖集二分區": "粤語－欽廉片",
-        "音典分區": "嶺南－廉吳－廉浦",
-        "陳邡分區": "官話－桂南－桂西大片－浦北片",
-        "版本": "2025-08-18",
-        "錄入人": "白朔",
-        "字表來源": "《浦北县白石水麻佬话同音字汇》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          109.292566,
-          22.099395
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#EBC75E",
-        "marker-size": "small",
-        "marker-symbol": "i",
-        "title": "浦北福旺",
-        "語言": "浦北福旺背山話",
-        "地點": "廣西欽州浦北福旺",
-        "地圖集二分區": "粤語－欽廉片",
-        "音典分區": "嶺南－廉吳－廉浦",
-        "陳邡分區": "官話－桂南－桂西大片－浦北片",
-        "版本": "2025-08-18",
-        "錄入人": "白朔",
-        "字表來源": "《浦北福旺背山话概说》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          109.565213,
-          22.416164
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#EBC75E",
         "marker-size": "medium",
         "marker-symbol": "i",
         "title": "吳川吳陽",
@@ -41236,6 +41214,54 @@
         "coordinates": [
           110.635287,
           21.666932
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EBC75E",
+        "marker-size": "small",
+        "marker-symbol": "i",
+        "title": "浦北白石水",
+        "語言": "浦北白石水麻佬話",
+        "地點": "廣西欽州浦北白石水",
+        "地圖集二分區": "粤語－欽廉片",
+        "音典分區": "嶺南－廉吳－廉浦",
+        "陳邡分區": "官話－桂南－桂西大片－浦北片",
+        "版本": "2025-08-18",
+        "錄入人": "白朔",
+        "字表來源": "《浦北县白石水麻佬话同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.292566,
+          22.099395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EBC75E",
+        "marker-size": "small",
+        "marker-symbol": "i",
+        "title": "浦北福旺",
+        "語言": "浦北福旺背山話",
+        "地點": "廣西欽州浦北福旺",
+        "地圖集二分區": "粤語－欽廉片",
+        "音典分區": "嶺南－廉吳－廉浦",
+        "陳邡分區": "官話－桂南－桂西大片－浦北片",
+        "版本": "2025-08-18",
+        "錄入人": "白朔",
+        "字表來源": "《浦北福旺背山话概说》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.565213,
+          22.416164
         ]
       }
     },
@@ -43477,6 +43503,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5ED154",
+        "marker-size": "small",
+        "marker-symbol": "j",
+        "title": "富寧歸朝",
+        "語言": "富寧歸朝蔗園話",
+        "地點": "雲南文山富寧歸朝",
+        "地圖集二分區": "平話和土話－桂南片",
+        "音典分區": "嶺南－邕賓－邕州",
+        "陳邡分區": "官話－桂南－桂西大片－邕江片",
+        "版本": "2025-06-07",
+        "錄入人": "ResoundYB",
+        "字表來源": "语保"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.861942,
+          23.657931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5ED154",
         "marker-size": "medium",
         "marker-symbol": "j",
         "title": "賓陽",
@@ -43519,30 +43569,6 @@
         "coordinates": [
           108.682233,
           23.114566
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#5ED154",
-        "marker-size": "small",
-        "marker-symbol": "j",
-        "title": "富寧歸朝",
-        "語言": "富寧歸朝蔗園話",
-        "地點": "雲南文山富寧歸朝",
-        "地圖集二分區": "平話和土話－桂南片",
-        "音典分區": "嶺南－邕賓－邕州",
-        "陳邡分區": "官話－桂南－桂西大片－邕江片",
-        "版本": "2025-06-07",
-        "錄入人": "ResoundYB",
-        "字表來源": "语保"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.861942,
-          23.657931
         ]
       }
     },
@@ -46569,7 +46595,6 @@
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
         "陳邡分區": "福建－閩東",
-        "版本": "2025-09-30",
         "錄入人": "林",
         "字表來源": "《福建闽清(塔庄)方言同音字汇》"
       },
