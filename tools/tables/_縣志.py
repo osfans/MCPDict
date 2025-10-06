@@ -260,12 +260,7 @@ class 表(_表):
 			行 = "\t".join((f"[{自.調值表[序]}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
 		elif 名 in ("南通",):
 			列 = 行.split("\t")
-			if 列[0] == "文=读= 白-读-":
-				列 = (行.rstrip()+"0").split("\t")
-				列 = [re.sub(r"^(.*?)(\d*)$", "\\2", i) for i in 列]
-				自.調值表 = 列
-				return
-			行 = "\t".join((f"[{自.調值表[序]}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
+			行 = "\t".join((f"[{序 + 1 if 序 > 3 else 序}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
 			行 = 行.replace("【", "{").replace("】", "}")
 		elif 名 in ("通州五接","南通唐閘","如皋白蒲","如皋石莊","如皋永安沙","如皋曹埭", "如皋丁堰"):
 			列 = 行.split("\t")
