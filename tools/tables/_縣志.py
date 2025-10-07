@@ -262,7 +262,7 @@ class 表(_表):
 			列 = 行.split("\t")
 			行 = "\t".join((f"[{序 + 1 if 序 > 3 else 序}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
 			行 = 行.replace("【", "{").replace("】", "}")
-		elif 名 in ("通州五接","南通唐閘","如皋白蒲","如皋石莊","如皋永安沙","如皋曹埭", "如皋丁堰"):
+		elif 名 in ("通州五接","南通唐閘","如皋白蒲","如皋石莊","如皋永安沙","如皋曹埭", "如皋丁堰","如皋車馬湖","如皋袁橋柴灣"):
 			列 = 行.split("\t")
 			if 列[0] == "":
 				列 = 行.rstrip().split("\t")
@@ -342,15 +342,24 @@ class 表(_表):
 			行 = 行.replace(")(", ",")
 		return 行
 
+	@staticmethod
+	def 非韻(韻):
+		return 韻 and 韻[0] in "pkftʈʦɕbdgrɽsʂʃɬȵc"
+
 	def 析韻(自, 行):
 		行 = 行.strip()
 		if not 行: return
-		if 行.startswith("#") or 行.startswith("＃"): 行 = 行[1:]
+		sharp = False
+		if 行.startswith("#") or 行.startswith("＃"):
+			sharp = True
+			行 = 行[1:]
 		elif "［" in 行 or "］" in 行: return
 		韻 = 行
 		if 韻: 韻 = 韻.split("\t")[0].strip().strip("[]")
 		if 有字(韻):
 			if 自.韻: 自.誤.append(f"[{韻}]前不應斷行，或不是合法韻母")
+			return 自.韻
+		if not sharp and 自.簡稱 not in ("南海沙頭",) and 自.非韻(韻):
 			return 自.韻
 		自.韻 = 韻
 		if 韻: 自.韻組.append(韻)
