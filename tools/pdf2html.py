@@ -1,9 +1,9 @@
 import re, sys, os
 from io import StringIO
 from pdfminer.high_level import extract_text_to_fp
-from pdfminer.layout import LAParams
+# from pdfminer.layout import LAParams
 
-os.system("del /f /q Im*.jpg")
+os.system("del /f /q Im*.jpg Im*.bmp")
 laparams=None#LAParams(char_margin=2.0, line_margin=0.5, word_margin=0.1)
 with StringIO() as out:
     extract_text_to_fp(inf=open(sys.argv[1], "rb"), output_type="html", outfp=out, codec=None, output_dir=".", laparams=None)
@@ -24,12 +24,16 @@ html = re.sub(r'(<span style="font-family: [^"]+7px">)(.*?)(</span>)', "{\\2}", 
 html = re.sub(r'style="position:absolute;.*?"', "", html, flags=re.M|re.S)
 html = html.replace("--", "=")
 d = {
-    "■2F":"1",
-    "■30":"2",
-    "■46":"3",
-    "■58":"4",
-    "■22":"5",
-    "■21": "ʰ",
+    "■23":"33",
+    "■52":"52",
+    "■35":"44",
+    "■4B":"213",
+    "|":"3",
+    "■45": "tʂ",
+    "■28": "ɐ",
+    "■4D3": "ɭ\u0329",
+    "":"钁",
+    "":"䝼",
 
 }
 for i,j in d.items():
