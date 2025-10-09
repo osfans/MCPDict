@@ -325,7 +325,7 @@ class 表:
 			d[字] = 音.split(",")
 
 	def 無調(自):
-		return 自.簡稱.endswith("上古") or 自.簡稱.endswith("朝鮮") or 自.簡稱.startswith("日語") or 自.簡稱 in ("清末寧波", "党項")
+		return 自.簡稱.endswith("上古") or 自.簡稱.endswith("朝鮮") or 自.簡稱.startswith("日語") or 自.簡稱 in ("1851寧波", "党項")
 	
 	def 無q聲(自):
 		return 自.簡稱 not in ("盛唐", "榕江侗上古借詞", "榕江侗中古借詞") and not 自.文件名.startswith("白語")
@@ -351,7 +351,7 @@ class 表:
 				音 = 音.replace("h", "ʰ")
 			音 = 音.replace(" ", "")
 			音 = 音.replace("[", "").replace("]", "").replace("{", "").replace("}", "")
-			音 = re.sub(r"^([mnvʋɹl])(\d+)$", "\\1\u0329\\2", 音)
+			音 = re.sub(r"^([mnvʋɹlɭ])(\d+)$", "\\1\u0329\\2", 音)
 			音 = re.sub(r"^([ŋȵʐɱɻʒ])(\d+)$", "\\1\u030D\\2", 音)
 			音 = re.sub("([mnvʋɹl])([\u0329\u030D]+)", "\\1\u0329", 音)
 			音 = re.sub("([ŋȵʐɱɻʒ])([\u0329\u030D]+)", "\\1\u030D", 音)
