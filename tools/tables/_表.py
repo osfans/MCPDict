@@ -186,7 +186,6 @@ class 表:
 	_time = os.path.getmtime(__file__)
 	文件名 = None
 	頁名 = ""
-	_files = None
 	_sep = None
 	顏色 = "#1E90FF"
 	全稱 = ""
@@ -240,8 +239,6 @@ class 表:
 
 	@property
 	def spath(自):
-		if 自._files:
-			自.文件名 = 自._files[0]
 		if 自.文件名 and "/" in 自.文件名:
 			自.文件名, 自.頁名 = 自.文件名.rsplit("/", 1)
 		sname = 自.文件名
@@ -605,7 +602,7 @@ class 表:
 		sep = 自.sep
 		skip = 自.info.get("跳過行數", 0)
 		lineno = 0
-		files = 自._files if 自._files else [自.spath]
+		files = [自.spath]
 		for spath in files:
 			for 行 in open(自.全路徑(spath),encoding="U8"):
 				lineno += 1

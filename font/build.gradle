@@ -7,7 +7,7 @@ android {
         minSdk 29
         targetSdk 36
         versionCode 1
-        versionName "1.0"
+        versionName "Plangothic2.9.5787 (2025.9.11) & WenJin2.001(2025.10.3)"
     }
 
     applicationVariants.configureEach { variant ->
