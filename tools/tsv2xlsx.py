@@ -19,6 +19,8 @@ for line in open(fname, encoding="utf-8"):
         cell = CellRichText()
         last = ""
         sub = False
+        gray = False
+        stars = 0
         for i in j:
             if i == "{":
                 sub = True
@@ -32,7 +34,26 @@ for line in open(fname, encoding="utf-8"):
                 cell[-1].font.underline = "single"
             elif i == "=":
                 cell[-1].font.underline = "double"
-            elif sub:
+            elif i == "`":
+                if gray:
+                    gray = False
+                    if last:
+                        cell.append(TextBlock(InlineFont(color="808080"), last))
+                        last = ""
+                    continue
+                if not gray:
+                    gray = True
+                    last = ""
+            elif i == "*":
+                stars += 1
+                if stars <= 2:
+                    last = ""
+                if stars == 4:
+                    if last:
+                        cell.append(TextBlock(InlineFont(b=True), last))
+                        last = ""
+                    stars = 0
+            elif sub or gray or stars:
                 last += i
             else:
                 cell.append(TextBlock(InlineFont(), i))
