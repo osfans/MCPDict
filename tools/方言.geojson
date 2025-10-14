@@ -510,6 +510,31 @@
         "marker-color": "#F58499",
         "marker-size": "large",
         "marker-symbol": "b",
+        "title": "哈爾濱",
+        "語言": "哈爾濱話",
+        "地點": "黑龍江哈爾濱",
+        "地圖集二分區": "東北官話－哈阜片－肇撫小片",
+        "音典分區": "華北－東北－關外",
+        "陳邡分區": "官話－河北－東北片",
+        "版本": "2025-10-13",
+        "錄入人": "DaiDzao",
+        "字表來源": "《哈尔滨市志》",
+        "補充閲讀": "《哈尔滨话音档》《普通话基础方言基本词汇集》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.629286,
+          45.761559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F58499",
+        "marker-size": "large",
+        "marker-symbol": "b",
         "title": "烏蘭浩特",
         "語言": "烏蘭浩特話",
         "地點": "内蒙古興安烏蘭浩特",
@@ -4275,7 +4300,7 @@
       "properties": {
         "marker-color": "#F5C4D0",
         "marker-size": "medium",
-        "marker-symbol": "",
+        "marker-symbol": "b",
         "title": "海陽二十里店",
         "語言": "海陽二十里店話",
         "地點": "山東煙臺海陽二十里店",
@@ -13534,6 +13559,30 @@
         "coordinates": [
           109.336769,
           24.262894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "忻城",
+        "語言": "忻城官話",
+        "地點": "廣西來賓忻城",
+        "地圖集二分區": "西南官話－桂柳片－桂北小片",
+        "音典分區": "藍青－桂北",
+        "陳邡分區": "官話－狹義官話－滇桂大片－桂柳片－4",
+        "版本": "2025-10-14",
+        "錄入人": "DaiDzao",
+        "字表來源": "《忻城方言音系及其临近方言调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.672563,
+          24.072946
         ]
       }
     },
@@ -25190,6 +25239,30 @@
         "marker-color": "#EB6E77",
         "marker-size": "small",
         "marker-symbol": "b",
+        "title": "如皋新姚雙高橋",
+        "語言": "如皋新姚雙高橋話",
+        "地點": "江蘇南通如皋新姚雙高橋",
+        "地圖集二分區": "江淮官話－泰如片",
+        "音典分區": "下江－通泰－南泰",
+        "陳邡分區": "官話－北下江－通泰大片－通泰片",
+        "錄入人": "Tsuru",
+        "字表來源": "《如皋方言的音韵地理研究》",
+        "參考文獻": "《江苏如皋东南边界方言的卷舌音声母》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.82,
+          32.25
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
         "title": "如皋車馬湖",
         "語言": "如皋車馬湖話",
         "地點": "江蘇南通如皋長江車馬湖",
@@ -25284,6 +25357,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "如皋營房宋夾",
+        "語言": "如皋營房宋夾話",
+        "地點": "江蘇南通如皋營房宋夾",
+        "地圖集二分區": "江淮官話－泰如片",
+        "音典分區": "下江－通泰－南泰",
+        "陳邡分區": "官話－北下江－通泰大片－通泰片",
+        "錄入人": "Tsuru",
+        "字表來源": "《如皋方言的音韵地理研究》",
+        "參考文獻": "《江苏通州及其毗邻地区方言接触研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.68,
+          32.11
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "如東",
@@ -25357,7 +25454,55 @@
         "marker-color": "#EB6E77",
         "marker-size": "small",
         "marker-symbol": "b",
-        "title": "如皋曹埭",
+        "title": "如皋勇敢朱窯",
+        "語言": "如皋勇敢朱窯話",
+        "地點": "江蘇南通如皋勇敢朱窯",
+        "地圖集二分區": "江淮官話－泰如片",
+        "音典分區": "下江－通泰－南通",
+        "陳邡分區": "官話－北下江－通泰大片－通泰片",
+        "錄入人": "Tsuru",
+        "字表來源": "《如皋方言的音韵地理研究》",
+        "參考文獻": "《江苏如皋东南边界方言的卷舌音声母》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.78,
+          32.23
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "如皋龍舌瓦車蓬",
+        "語言": "如皋龍舌瓦車蓬話",
+        "地點": "江蘇南通如皋龍舌瓦車蓬",
+        "地圖集二分區": "江淮官話－泰如片",
+        "音典分區": "下江－通泰－南通",
+        "陳邡分區": "官話－北下江－通泰大片－通泰片",
+        "錄入人": "Tsuru",
+        "字表來源": "《如皋方言的音韵地理研究》",
+        "參考文獻": "《江苏如皋东南边界方言的卷舌音声母》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.73,
+          32.17
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "如皋九華曹埭",
         "語言": "如皋九華曹埭話",
         "地點": "江蘇南通如皋九華曹埭",
         "地圖集二分區": "江淮官話－泰如片",
@@ -54383,8 +54528,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          139.703632,
-          35.693763
+          129.286189,
+          34.202982
         ]
       }
     },
@@ -54405,8 +54550,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          139.703632,
-          35.683763
+          135.782432,
+          35.015982
         ]
       }
     },
@@ -54414,7 +54559,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#8FC2CC",
-        "marker-size": "small",
+        "marker-size": "large",
         "marker-symbol": "y",
         "title": "日語其他",
         "語言": "日語其他讀音",
@@ -54422,13 +54567,13 @@
         "地圖集二分區": "域外方音",
         "音典分區": "域外方音",
         "陳邡分區": "官話－日本",
-        "版本": "2022-03-29"
+        "維護人": "NaruDora"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          139.703632,
-          35.653763
+          139.769052,
+          35.680413
         ]
       }
     },
