@@ -3,6 +3,7 @@ package com.osfans.mcpdict.Favorite;
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteException;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -33,17 +34,17 @@ public class FavoriteDialogs {
        FavoriteDialogs.activity = activity;
     }
 
-    public static void add(final String hz) {
+    public static void add(final String hz, String comment) {
         final EditText editText = new EditText(activity);
         editText.setHint(R.string.favorite_add_hint);
+        if (!TextUtils.isEmpty(comment)) editText.setText(comment);
         editText.setSingleLine(false);
         new AlertDialog.Builder(activity)
             .setIcon(android.R.drawable.btn_star_big_on)
             .setTitle(String.format(activity.getString(R.string.favorite_add), hz))
             .setView(editText)
             .setPositiveButton(R.string.save, (dialog, which) -> {
-                String comment = editText.getText().toString();
-                UserDB.insertFavorite(hz, comment);
+                UserDB.insertFavorite(hz, editText.getText().toString());
                 String message = String.format(activity.getString(R.string.favorite_add_done), hz);
                 Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
                 FavoriteFragment fragment = activity.getFavoriteFragment();
@@ -55,6 +56,10 @@ public class FavoriteDialogs {
             })
             .setNegativeButton(R.string.cancel, null)
             .show();
+    }
+
+    public static void add(final String hz) {
+        add(hz, null);
     }
 
     public static void view(final String hz, String comment) {
