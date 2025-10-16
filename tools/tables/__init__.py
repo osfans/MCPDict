@@ -292,15 +292,20 @@ def getLangs(items, 參數, args):
 			if d["聲調"]:
 				調典 = dict()
 				調組 = json.loads(d["聲調"])
+				不計入調 = set()
 				for 調 in 調組:
 					調值 = 調組[調][0]
-					if 調值 in 調典 and "入" in 調組[調][3]:
+					調名 = 調組[調][3]
+					if 調值 in 調典 and "入" in 調名:
 						調值 += "0"
 					調典[調值] = 調
 					if "/" in 調值:
 						for i in 調值.split("/"):
 							調典[i] = 調
+					if "變調" in 調名 or "輕聲" in 調名 or "小" in 調名 or 調.startswith("0"):
+						不計入調.add(調)
 				語.調典 = 調典
+				語.不計入調 = 不計入調
 			語.info = d
 			# print(d["文件名"])
 			語.加載條目(items, 更新=args.c)

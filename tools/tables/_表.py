@@ -212,6 +212,7 @@ class 表:
 	__mod = None
 	誤 = []
 	音集 = set()
+	不計入調 = set()
 	調號 = "˩˨˧˦˥"
 
 	def __init__(自):
@@ -497,12 +498,14 @@ class 表:
 				音 = re.sub(r"\(.*?\)","",py).strip(" _`*")
 				音 = 音.split("/", 1)[0]
 				if "-" not in 音.rstrip("+-*/=?@\\"):
-					音乙 = 音.rstrip("+-*/=?@\\")
-					自.音典[音乙].add(字)
 					繁註 = s2t(註.replace(" ", ""))
-					if "訓" not in 繁註 and "替" not in 繁註 and "口語" not in 繁註 and "合音" not in 繁註 and "語流" not in 繁註 and "音變" not in 繁註 and "連讀" not in 繁註 and "存疑" not in 繁註 and "地方字" not in 繁註 and "地名" not in 繁註 and "俗" not in 繁註 and 字 != "□":
-						聲韻 = 自.分音(音乙)[0]
-						自.聲韻典[聲韻].add(字)
+					if "儿化" not in 繁註 and "兒化" not in 繁註 and "連讀" not in 繁註 and "語流" not in 繁註:
+						音乙 = 音.rstrip("+-*/=?@\\")
+						聲韻, 調 = 自.分音(音乙)
+						if not 調.startswith("0") and 調 not in 自.不計入調:
+							自.音典[音乙].add(字)
+						if "訓" not in 繁註 and "替" not in 繁註 and "口語" not in 繁註 and "合音" not in 繁註 and "語流" not in 繁註 and "音變" not in 繁註 and "連讀" not in 繁註 and "存疑" not in 繁註 and "地方字" not in 繁註 and "地名" not in 繁註 and "俗" not in 繁註 and 字 != "□":
+							自.聲韻典[聲韻].add(字)
 				if 註:
 					py += "{%s}" % 註
 			else:
