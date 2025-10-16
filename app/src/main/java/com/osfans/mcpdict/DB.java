@@ -317,10 +317,12 @@ public class DB extends SQLiteAssetHelper {
                 }
                 if (allowVariants) {
                     projection[1] = "1 AS vaIndex";
-                    String matchClause = getResult(String.format("SELECT group_concat(漢字, ' OR ') from mcpdict where 異體字 MATCH '%s' %s", hz, getCharsetSelect(1)));
+                    String matchClause = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where 異體字 MATCH '%s' %s", hz, getCharsetSelect(1)));
                     if (!TextUtils.isEmpty(matchClause)) {
-                        selection = String.format("字組 MATCH '%s' %s", matchClause, languageClause);
-                        queries.add(qb.buildQuery(projection, selection, null, null, null, null));
+                        for (String v : matchClause.split(" ")) {
+                            selection = String.format("字組 MATCH '%s' %s", v, languageClause);
+                            queries.add(qb.buildQuery(projection, selection, null, null, null, null));
+                        }
                     }
                 }
             }
