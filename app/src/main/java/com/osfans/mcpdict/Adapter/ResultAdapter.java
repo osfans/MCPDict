@@ -374,7 +374,11 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             }
             item.setTitle(String.format(Objects.requireNonNull(item.getTitle()).toString(), hz));
             item.setOnMenuItemClickListener(i -> {
-                showFavorite(hz, comment);
+                if (TextUtils.isEmpty(comment)) {
+                    FavoriteDialogs.add(hz, lang + ":");
+                } else {
+                    FavoriteDialogs.view(hz, comment);
+                }
                 return true;
             });
             popupMenu.show();
