@@ -4637,6 +4637,30 @@
         "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
+        "title": "汶上",
+        "語言": "汶上話",
+        "地點": "山東濟寧汶上",
+        "地圖集二分區": "中原官話－兗菏片",
+        "音典分區": "華北－西魯",
+        "陳邡分區": "官話－山東－魯西大片－兗州片",
+        "版本": "2025-10-16",
+        "錄入人": "DaiDzao",
+        "字表來源": "《汶上方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.510036,
+          35.724557
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "魚臺",
         "語言": "魚臺話",
         "地點": "山東濟寧魚臺",
@@ -47479,7 +47503,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "l",
         "title": "柘榮富溪",
         "語言": "柘榮富溪話",
@@ -48076,7 +48100,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "l",
         "title": "壽寧平溪",
         "語言": "壽寧平溪事",

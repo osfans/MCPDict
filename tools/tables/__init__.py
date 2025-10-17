@@ -22,12 +22,16 @@ VARIANT_FILE = os.path.join(PATH, SOURCE, "正字.tsv")
 
 辭典 = ["漢字","說文","康熙","匯纂","漢大", "異體字","字形變體","字形描述","部件檢索","兩分","總筆畫數","部首餘筆","五筆畫","五筆86","五筆98","五筆06","倉頡三代","倉頡五代","倉頡六代","山人","分類"]
 
-opencc_t2s = OpenCC("t2s.json")
+_t2s = OpenCC("t2s.json")
+_s2t = OpenCC("s2t.json")
+
+def opencc_s2t(s):
+	return _s2t.convert(s)
 
 def t2s(s, level=2):
 	if level == 1:
 		return s
-	return opencc_t2s.convert(s)
+	return _t2s.convert(s)
 
 def hex2chr(uni):
 	"把unicode轉換成漢字"
