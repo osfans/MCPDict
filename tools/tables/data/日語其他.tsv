@@ -16,7 +16,7 @@
 乵	en	
 亂	`ron`	唐
 亊	**zu**	慣
-事	**zu**	慣
+事	**zu**	唐
 亠	tou	
 京	`kin`	唐
 亭	`tin`	唐
@@ -345,7 +345,7 @@
 壟	rou	慣
 壠	rou	慣
 売	`mai`	唐
-外	`ui`	唐
+外	ui	唐
 太	**ta**	慣
 太	`da`	慣
 夫	**huu**	慣
@@ -354,7 +354,7 @@
 夸	ko	慣
 奆	ken	
 奆	`gon`	
-奘	`zyou(zyau)`	慣
+奘	zyou(zyau)	慣
 奛	kou(kwau)	
 奥	`oku(woku)`	慣
 奧	`oku(woku)`	慣
@@ -714,7 +714,7 @@
 椦	ken	
 椪	pon	
 椶	syu	慣
-椿	tin	慣
+椿	tin	唐
 楕	da	慣
 楜	ko	
 楞	`ryou`	慣
@@ -796,7 +796,7 @@
 沮	so	慣
 沸	**hutu**	慣
 泏	syou(sehu)	
-法	**haq**	慣
+法	**haq**	唐
 法	**hoq**	慣
 注	**tyuu**	慣
 洀	han	
@@ -967,7 +967,7 @@
 甪	roku	
 甫	ho	慣
 由	**yui**	慣
-甲	**kan**	慣
+甲	**kan**	唐
 甾	sai	
 畃	syun	
 畆	ho	慣
@@ -1097,7 +1097,7 @@
 竬	ku	
 競	**kyou(kyau)**	慣
 竸	**kyou(kyau)**	慣
-竹	`situ`	唐
+竹	siq	唐
 竺	ziku(diku)	慣
 竻	kin	
 竾	ti	
@@ -1147,7 +1147,7 @@
 紊	`bin`	慣
 納	**na**	唐
 納	**naq**	慣
-納	**nan**	慣
+納	**nan**	唐
 納	**tou(tahu)**	慣
 紐	tyuu(tiu)	慣
 紡	**bou(bau)**	慣
@@ -1284,7 +1284,7 @@
 茄	`ka`	慣
 茇	batu	慣
 茎	**kei**	慣
-茴	`ui`	唐
+茴	ui	唐
 茶	**sa**	唐
 茶	**tya**	慣
 茷	batu	慣
@@ -1741,7 +1741,7 @@
 頓	totu	
 頙	saku	
 頡	`kitu`	慣
-頭	tyuu	唐
+頭	tyuu(tiu)	唐
 頭	**to**	慣
 頷	gan	慣
 願	**gan(gwan)**	慣
@@ -1854,10 +1854,9 @@
 龞	betu	慣
 龢	**o(wo)**	唐
 子	za	
-子	tsu	中国語語源
+子	tsu	唐
 子	zu	唐
 餃	tyao	中国語語源
-湯	tan	中国語語源
 盤	pan	中国語語源
 飛	pee	閩南語語源
 划	pee	閩南語語源
@@ -1905,7 +1904,6 @@
 炒	tyaa	中国語語源
 瓣	ban	中国語語源
 醤	zyan	中国語語源
-東	ton	中国語語源
 坡	poo	中国語語源
 肉	roo	中国語語源
 青	tin	中国語語源
@@ -1913,7 +1911,7 @@
 汕	suwa	潮州語語源
 廈	a	閩南語語源
 門	moi	閩南語語源
-廣	kan	中国語語源
+廣	kan	唐
 排	pai	中国語語源
 骨	kuu	中国語語源
 包	pao	中国語語源
@@ -1925,7 +1923,7 @@
 魚	yui	中国語語源
 翅	tii	中国語語源
 辣	raa	中国語語源
-臘	ra	中国語語源
+臘	ra	唐
 米	bii	閩南語語源
 粉	fun	閩南語語源
 叉	tyaa	広東語語源
@@ -1960,12 +1958,12 @@
 黃	wan	上海語語源
 包	poo	上海語語源
 車	tsu	上海語語源
-一	ii	中国語語源
+一	ii	唐
 二	aru	中国語語源
 三	san	中国語語源
 四	suu	中国語語源
 五	uu	中国語語源
-六		中国語語源
+十	sin	中国語語源
 七	tii	中国語語源
 八	paa	中国語語源
 九	tyuu	中国語語源
@@ -1990,7 +1988,7 @@
 數	syuu	中国語語源
 牌	pai	中国語語源
 順	syun	中国語語源
-風	hon	中国語語源
+風	hon	唐
 索	soo	中国語語源
 大	taa	中国語語源
 喜	sii	中国語語源
@@ -2005,8 +2003,8 @@
 和	hoo	中国語語源
 全	tyan	中国語語源
 帶	ta	中国語語源
-香	tyan	中国語語源
-椿	tin	中国語語源
+香	tyan	唐
+香	hyan	唐
 香	hon	広東語語源
 港	kon	広東語語源
 連	ren	中国語語源
@@ -2033,7 +2031,7 @@
 紅	hon	中国語語源
 馬	maa	中国語語源
 車	tyo	中国語語源
-錢	tin	中国語語源
+榻	ton	唐
 滿	man	中国語語源
 貫	gan	中国語語源
 梅	mei	中国語語源
@@ -2056,8 +2054,8 @@
 西	sii	中国語語源
 雙	san	中国語語源
 版	pan	中国語語源
-納	na	中国語語源
-塔	tatu	唐
+綠	rou	中国語語源
+塔	taq	唐
 下	a	唐
 灯	don	唐
 銀	in	唐
@@ -2069,11 +2067,11 @@
 俠	kyan	唐
 行	hin	唐
 南	nan	唐
-磬	kin	唐
-石	situ	唐
-卓	situ	唐
+東	ton	唐
+石	siq	唐
+卓	siq	唐
 袱	hoku	唐
-直	situ	唐
+直	siq	唐
 歲	sui	唐
 聖	sin	唐
 金	kin	唐
@@ -2103,10 +2101,48 @@
 陪	hoi	唐
 焙	hoi	唐
 菠	hou(hau)	唐
-黃	hotu	唐
+黃	hoq	唐
 麼	mo	唐
 梅	moi	唐
 兩	ryan	唐
 釐	rei	唐
 薐	ren	唐
 還	wan	唐
+應	in	唐
+急	kibi	唐
+香	kyan	唐
+香	hyan	唐
+九	kai(kwai)	唐
+卓	syoku	唐
+卓	sin	唐
+相	syan	唐
+詳	syon	唐
+思	su	唐
+狆	tin	唐
+燈	tin	唐
+錢	tin	唐
+楪	tya	唐
+七	tyee	唐
+纎	tyen	唐
+桶	tuu	唐
+平	hi	唐
+江	go	唐
+帽	mou	唐
+六	ryuu(riu)	唐
+龍	rin	唐
+膽	dou	唐
+礬	ha	唐
+檯	dai	唐
+楪	tyatu	唐
+毯	dan	唐
+燒	syo	唐
+飯	ban	唐
+溲	syu	唐
+出	sui	唐
+蘿	rou	唐
+蔔	po	唐
+錢	tyan	唐
+聽	tin	唐
+回	ui	唐
+八	pama	唐
+被	hii	唐
