@@ -4,7 +4,7 @@ from tables import *
 import os, re, sys
 import logging
 from collections import defaultdict, OrderedDict
-from glob import glob
+import glob
 import inspect, time
 from openpyxl import load_workbook
 from xlrd import open_workbook
@@ -232,11 +232,12 @@ class 表:
 			if g := 自.find(name): return g
 		if os.sep not in name:
 			name = 自.全路徑(name)
-		if g := glob(name): return g
-		if g := glob(re.sub(".([^.]+)$", "([0-9]).\\1", name)): return g
-		if g := glob(re.sub(".([^.]+)$", "([0-9][0-9]).\\1", name)): return g
-		if g := glob(re.sub(".([^.]+)$", " ([0-9]).\\1", name)): return g
-		if g := glob(re.sub(".([^.]+)$", " ([0-9][0-9]).\\1", name)): return g
+		if g := glob.glob(name): return g
+		if g := glob.glob(glob.escape(name)): return g
+		if g := glob.glob(re.sub(".([^.]+)$", "([0-9]).\\1", name)): return g
+		if g := glob.glob(re.sub(".([^.]+)$", "([0-9][0-9]).\\1", name)): return g
+		if g := glob.glob(re.sub(".([^.]+)$", " ([0-9]).\\1", name)): return g
+		if g := glob.glob(re.sub(".([^.]+)$", " ([0-9][0-9]).\\1", name)): return g
 		if isXls(name) or isDocx(name):
 			自.文件名 = getTsvName(自.文件名, 自.頁名)
 			return 自.find(自.文件名)
@@ -473,7 +474,7 @@ class 表:
 		自.音典.clear()
 		自.聲韻典.clear()
 		自.d.clear()
-		if 自.過時() or 更新 and 自.spath: 自.更新()
+		if (自.過時() or 更新) and 自.spath: 自.更新()
 		if not 自.tpath or not os.path.exists(自.tpath): return
 		for 行 in open(自.tpath,encoding="U8"):
 			行 = 行.strip()
