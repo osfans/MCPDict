@@ -232,11 +232,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                     mViewLang.setVisibility(View.VISIBLE);
                 }
                 CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                    ssb.append(cs, new TypefaceSpan(FontUtil.getIPATypeface()), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-                } else {
-                    ssb.append(cs);
-                }
+                ssb.append(cs);
                 String zs = cursor.getString(COL_ZS);
                 if (!TextUtils.isEmpty(zs)) {
                     zs = DisplayHelper.formatZS(hz, zs);

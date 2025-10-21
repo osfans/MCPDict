@@ -112,7 +112,7 @@ public class FontUtil {
             String packageName = a[1];
             Context context = App.getContext().createPackageContext(packageName, Context.CONTEXT_IGNORE_SECURITY);
             Resources res = context.getResources();
-            String[] fonts = a[0].split(",");
+            String[] fonts = ("ipa," + a[0]).split(",");
             Typeface.CustomFallbackBuilder builder = null;
 
             FontFamily familyIPA = new FontFamily.Builder(new Font.Builder(getResources(), useFontTone ? R.font.tone : getIpaFontId()).build()).build();
