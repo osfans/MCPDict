@@ -303,9 +303,6 @@ def getLangs(items, 參數, args):
 					if 調值 in 調典 and "入" in 調名:
 						調值 += "0"
 					調典[調值] = 調
-					if "/" in 調值:
-						for i in 調值.split("/"):
-							調典[i] = 調
 					if "變調" in 調名 or "輕聲" in 調名 or "小" in 調名 or 調.startswith("0"):
 						不計入調.add(調)
 				語.調典 = 調典

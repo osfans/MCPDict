@@ -653,7 +653,7 @@ class 表:
 		if 異讀:
 			音 = 音[:-1]
 		if re.findall(r"/[^\d]", 音):
-			return "/".join(map(自.轉調類, 音.split("/")))
+			return "/".join(map(自.轉調類, re.split("/(?=[^\\d])", 音)))
 		if "-" in 音:
 			return "-".join(map(自.轉調類, 音.split("-")))
 		聲韻,調值 = 自.分音(音)
@@ -681,3 +681,10 @@ class 表:
 		if 聲韻 and 聲韻[-1] in "ptkʔ̚" and 調值 + "0" in 自.調典:
 			調類 = 自.調典[調值 + "0"]
 		return 調類
+	
+	def 增加調類(自, 行):
+		字表使用調值 = 自.info.get("字表使用調值", False)
+		調序 = list(自.調典.keys() if 字表使用調值 else 自.調典.values())
+		調數 = len(調序)
+		行 = "\t".join((f"[{調序[序-1]}]" if 0 < 序 <= 調數 else "") + 項 for 序,項 in enumerate(行.split("\t")))
+		return 行

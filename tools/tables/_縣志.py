@@ -117,11 +117,7 @@ class 表(_表):
 			行 = 自.normS(行)
 			行 = re.sub(r"\*(.)", "\\1?", 行)
 			行 = re.sub(r"\[(.)(.*?)\]", "\\1*\\2", 行)
-			列 = 行.split("\t")
-			for i,調 in enumerate(自.調典.values()):
-				if 列[i + 1]:
-					列[i + 1] = f"[{調}]" + 列[i + 1]
-			行 = "".join(列)
+			行 = 自.增加調類(行)
 		elif 名 in ("虔南大吉山",):
 			行 = re.sub(r"(\[)(.*?)(\d+\])", "\\1\\3", 行)
 			行 = 行.replace("<","{").replace(">","}")
@@ -209,43 +205,36 @@ class 表(_表):
 		elif 名 in ("筠連",):
 			列 = 行.split("\t")
 			if 列[0] == "" and 列[1].startswith("阴平"):
-				自.調值表 = 列
 				return
 			elif 列[0] == "":
 				行 = "#" + 列[1]
 			elif "".join(列[1:]).strip() == "":
 				行 = ""
 			else:
-				行 = "\t".join((f"[{自.調值表[序][-2:]}]" if 序 else "") + 項 for 序,項 in enumerate(列) if 項)
-		elif 名 in ("大埔百候",):
-			列 = 行.split("\t")
-			if 列[0] == "#a":
-				自.調值表 = 列
-				行 = 列[0]
-			elif 列[0].startswith("#"):
-				行 = 列[0]
-			else:
-				行 = "\t".join((f"[{自.調值表[序]}]" if 序 else "") + 項 for 序,項 in enumerate(列) if 項)
+				行 = 自.增加調類(行)
+		elif 名 in ("大埔百候","霞浦"):
+			if 行.startswith("#"):
+				return 行.split("\t")[0]
+			行 = 自.增加調類(行)
 		elif 名 in ("衡山望峰",):
 			列 = 行.split("\t")
 			if 有字(列[0]):
 				if len(列) == 2:
 					行 = "#" + 列[1]
 				else:
-					自.調值表 = [re.findall(r"^([^\d]+)(\d*)$", i)[0][1] for i in 列]
 					return
 			else:
-				行 = "\t".join((f"[{自.調值表[序]}]" if 序 else "") + 項 for 序,項 in enumerate(列) if 項)
+				行 = 自.增加調類(行)
 		elif 名 in ("自貢","漢源","達州","峨眉"):
 			if not 行.startswith("#"):
 				列 = 行.split("\t")
 				if not 列[0] or 有字(列[0]): return
-				行 = "\t".join((f"[{(序 + 2 if (序 >= 5) else 序 + 1) if (序 >= 4)  else 序}]" if 序 else "") + 項 for 序,項 in enumerate(列))
+				行 = 自.增加調類(行)
 		elif 名 in ("江永夏層舖", "江永回龍圩", "江永粗石江", "江永蘭溪", "江永允山"):
 			if not 行.startswith("#"):
 				列 = 行.split("\t")
 				if 有字(列[0]): return
-				行 = "\t".join((f"[{序 + 1 if ("江永粗石江" == 名 and 序 > 3) or ("江永蘭溪" == 名 and 序 > 5) else 序}]" if 序 else "") + 項 for 序,項 in enumerate(列))
+				行 = 自.增加調類(行)
 				行 = 行.replace("（", "(").replace("）", ")").replace("(", "{").replace(")", "}").replace("{{", "{").replace("}}", "}")
 		elif 名 in ("岳陽張谷英",):
 			列 = 行.split("\t")
@@ -253,35 +242,19 @@ class 表(_表):
 				列 = 行.rstrip().split("\t")
 				if len(列) == 2:
 					return 列[1]
-				自.調值表 = [i[-2:] for i in 列]
 				return
-			行 = "\t".join((f"[{自.調值表[序]}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
+			行 = 自.增加調類(行)
 		elif 名 in ("南通",):
-			列 = 行.split("\t")
-			行 = "\t".join((f"[{序 + 1 if 序 > 3 else 序}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
+			行 = 自.增加調類(行)
 			行 = 行.replace("【", "{").replace("】", "}")
-		elif 名 in ("通州五接","南通唐閘","如皋白蒲","如皋石莊","如皋永安沙","如皋曹埭", "如皋丁堰","如皋車馬湖","如皋袁橋－柴灣","如皋朱窯","如皋瓦車蓬","如皋雙高橋","如皋宋夾","如皋搬經"):
-			列 = 行.split("\t")
-			if 列[0] == "":
-				列 = 行.rstrip().replace(" ", "/").split("\t")
-				if 列.count(列[-2]) == 2: 列[-2] += "0"
-				if 列.count(列[-1]) == 2: 列[-1] += "0"
-				自.調值表 = 列
-				自.調值表.append("0")
+		elif 名 in ("通州五接","南通唐閘","如皋白蒲","如皋石莊","如皋永安沙","如皋曹埭", "如皋丁堰","如皋車馬湖","如皋袁橋－柴灣","如皋朱窯","如皋瓦車蓬","如皋雙高橋","如皋宋夾","如皋搬經","如皋江安","如皋圩裏港上話"):
+			if 行.startswith("\t"):
 				return
-			行 = "\t".join((f"[{自.調值表[序]}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
-			行 = 自.normS(行.replace(")(", "："))
-		elif 名 in ("如皋圩裏港上話",):
-			列 = 行.split("\t")
-			if 列[0] == "":
-				return
-			行 = "\t".join((f"[{序 + 1 if 序 > 3 else 序}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
+			行 = 自.增加調類(行)
 			行 = 自.normS(行.replace(")(", "："))
 		elif 名 in ("葛洲壩",):
 			if 行.startswith("["): return
-			列 = 行.split("\t")
-			if len(列) <= 1: return 行
-			行 = "\t".join((f"[{序 + 1 if 序 > 3 else 序}]" if 序 and 項 else "") + 項 for 序,項 in enumerate(列))
+			行 = 自.增加調類(行)
 		elif 名 in ("仙遊蓋尾",):
 			if "[" not in 行:
 				行 = 行.replace("-", "").strip()
@@ -312,15 +285,17 @@ class 表(_表):
 							行 += "\n" + 自.韻乙
 							行 += "\n" + 列[0] + "\t" + "[7]" + 列[2]
 					else:
-						行 = "\t".join((f"[{序 if 序 <= 3 else 序 + 1}]" if 序 else "") + 項 for 序,項 in enumerate(列))
+						行 = 自.增加調類(行)
 					行 = 行.replace("（", "(").replace("）", ")").replace("(", "{").replace(")", "}").replace("{{", "{").replace("}}", "}").replace("ø", "")
 		elif 名 in ("左雲"):
 			列 = 行.split("\t")
 			列數 = len(列)
 			if 有字(列[0]): return
-			if 列數 == 2 and 列[1] == "入声4":
-				return 列[0]
-			行 = "\t".join((f"[{7 if 列數 == 2 and 序 == 1 else (5 if 序 == 4 else 序)}]" if 序 else "") + 項 for 序,項 in enumerate(列))
+			if 列數 == 2:
+				if 列[1] == "入声4": return 列[0]
+				列[1:1] = [""] * 4
+				行 = "\t".join(列)
+			行 = 自.增加調類(行)
 			行 = 行.replace("（", "(").replace("）", ")").replace("(", "{").replace(")", "}").replace("{{", "{").replace("}}", "}")
 		elif 名 in ("贛榆", "徐州", "銀川", "大同", "儀徵"):
 			行 = 行.strip().replace(",","，").replace("?(", "□(")

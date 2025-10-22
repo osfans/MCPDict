@@ -3185,7 +3185,7 @@
         "marker-color": "#F5A4B6",
         "marker-size": "large",
         "marker-symbol": "b",
-        "title": "淄博張店",
+        "title": "淄博",
         "語言": "淄博張店馬尚話",
         "地點": "山東淄博張店馬尚",
         "地圖集二分區": "冀魯官話－石濟片－聊泰小片",
@@ -15960,6 +15960,31 @@
         "marker-color": "#E54E5D",
         "marker-size": "small",
         "marker-symbol": "b",
+        "title": "綏江",
+        "語言": "綏江話",
+        "地點": "雲南昭通綏江",
+        "地圖集二分區": "西南官話－西蜀片－岷赤小片",
+        "音典分區": "中上江－荆益－川黔",
+        "陳邡分區": "官話－長江－西南大片－川南片",
+        "作者": "道人",
+        "錄入人": "2019212",
+        "字表來源": "自調查",
+        "參考文獻": "《绥江话的声调-杨加柱》《昭通方言的语音特征及其演变规律研究-周梅》《云南方言調查報告》《云南省志 方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.958166,
+          28.598957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
         "title": "宜賓趙場",
         "語言": "宜賓趙場話",
         "地點": "四川宜賓敘州趙場",
@@ -16548,8 +16573,7 @@
         "地圖集二分區": "西南官話－川黔片－成渝小片",
         "音典分區": "中上江－荆益－川黔",
         "陳邡分區": "官話－長江－西南大片－川中片",
-        "版本": "2025-06-07",
-        "錄入人": "ResoundYB",
+        "錄入人": "2019212",
         "字表來源": "语保 《重庆彭水话语音调查研究》《四川方言調查報告》《彭水县志》",
         "補充閲讀": "《重庆彭水话语音调查研究》"
       },
@@ -16597,8 +16621,8 @@
         "地圖集二分區": "西南官話－川黔片－成渝小片",
         "音典分區": "中上江－荆益－川黔",
         "陳邡分區": "官話－長江－西南大片－川中片",
-        "版本": "2025-06-07",
-        "錄入人": "ResoundYB",
+        "錄入人": "ResoundYB,2019212",
+        "維護人": "2019212",
         "字表來源": "语保"
       },
       "geometry": {
@@ -25502,6 +25526,30 @@
         "marker-color": "#EB6E77",
         "marker-size": "small",
         "marker-symbol": "b",
+        "title": "如皋江安",
+        "語言": "如皋江安話",
+        "地點": "江蘇南通如皋江安",
+        "地圖集二分區": "江淮官話－泰如片",
+        "音典分區": "下江－通泰－南泰",
+        "陳邡分區": "官話－北下江－通泰大片－通泰片",
+        "錄入人": "Tsuru",
+        "字表來源": "《如皋方言的音韵地理研究》",
+        "參考文獻": "《如皋方言研究》、抖音"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.415968,
+          32.168449
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
         "title": "如皋石莊",
         "語言": "如皋石莊話",
         "地點": "江蘇南通如皋石莊",
@@ -31648,7 +31696,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#52CCAD",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "f",
         "title": "武平軍家話",
         "語言": "武平中山軍家話",
@@ -35602,7 +35650,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "潼南龍形",
         "語言": "潼南龍形話",
@@ -45801,7 +45849,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "l",
         "title": "華安高安",
         "語言": "華安高安話",
@@ -46165,7 +46213,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "l",
         "title": "龍巖適中",
         "語言": "龍巖適中話",
@@ -46188,7 +46236,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "l",
         "title": "漳平",
         "語言": "漳平話",
@@ -46710,7 +46758,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "l",
         "title": "電白龍山",
         "語言": "電白龍山海話",
@@ -47035,7 +47083,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "l",
         "title": "東方感城",
         "語言": "東方感城話",
@@ -47238,6 +47286,31 @@
         "coordinates": [
           119.379537,
           25.723732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
+        "marker-size": "small",
+        "marker-symbol": "l",
+        "title": "羅源",
+        "語言": "羅源話",
+        "地點": "福建福州羅源",
+        "地圖集二分區": "閩語－閩東片－侯官小片",
+        "音典分區": "閩－閩東",
+        "陳邡分區": "福建－閩東",
+        "版本": "2025-10-22",
+        "錄入人": "NaruDora",
+        "維護人": "NaruDora",
+        "字表來源": "《罗源县志·方言》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.558777,
+          26.494461
         ]
       }
     },
@@ -47635,7 +47708,6 @@
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
         "陳邡分區": "福建－閩東",
-        "版本": "2025-10-20",
         "錄入人": "NaruDora",
         "維護人": "NaruDora",
         "字表來源": "《闽东区霞浦方言语音研究》《霞浦县志·方言》"
@@ -48390,7 +48462,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "l",
         "title": "南平洋頭",
         "語言": "南平洋頭話",
@@ -49058,7 +49130,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "h",
         "title": "連城四堡",
         "語言": "連城四堡話",
@@ -49107,7 +49179,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "h",
         "title": "清流李家",
         "語言": "清流李家話",
@@ -49154,7 +49226,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "h",
         "title": "連城賴源",
         "語言": "連城賴源話",
@@ -49178,7 +49250,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "h",
         "title": "龍巖松洋",
         "語言": "龍巖萬安松洋話",
@@ -49202,7 +49274,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "h",
         "title": "龍巖梧宅",
         "語言": "龍巖萬安梧宅話",
@@ -49226,7 +49298,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "h",
         "title": "上杭梨嶺",
         "語言": "上杭梨嶺話",
@@ -49250,7 +49322,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "h",
         "title": "上杭古田",
         "語言": "上杭古田話",
@@ -49348,7 +49420,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "h",
         "title": "龍巖大池",
         "語言": "龍巖大池話",
@@ -49495,7 +49567,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "h",
         "title": "武平",
         "語言": "武平平川話",
@@ -49520,7 +49592,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "h",
         "title": "武平上四鄉",
         "語言": "武平上四鄉話",
@@ -49616,7 +49688,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "h",
         "title": "詔安秀篆",
         "語言": "詔安秀篆客話",
