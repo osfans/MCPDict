@@ -13,7 +13,7 @@ class 表(_表):
 		s = s.replace("eu", "ɤɯ").replace("e", "ə").replace("v", "uᵝ")
 		s = re.sub("u(h?\\d)$", "ʊ\\1", s)
 		s = re.sub("z(\\d)$", "ɿ\\1", s)
-		s = re.sub("^([^aeiouy]?)i(\\d)$", "\\1iᶽ\\2", s)
+		s = re.sub("^([^aeɛiouy]?)i(\\d)$", "\\1iᶽ\\2", s)
 		s = re.sub("y(\\d)$", "yᶽ\\1", s)
 		s = s.replace("p", "pʰ").replace("t", "tʰ").replace("k", "kʰ")
 		s = s.replace("b", "p").replace("d", "t").replace("ng", "ŋ").replace("g", "k")
