@@ -1,7 +1,5 @@
 #漢字	音標	解釋
 □	ma1	(抓)一药
-□	kiu1	
-□	tʰo5	
 □	ni1	~夥:多少
 □	pi2	~□puo212:蝙蝠
 □	pu2	~蝇:苍蝇
@@ -98,6 +96,7 @@
 □	tsioʔ8	涂抹
 □	kaʔ7	混合
 □	kʰau1	渣饼
+□	tsiaʔ7	溅
 □	pʰuaʔ8	溢水
 □	tʰie1	滑
 □	lieŋ3	滚
@@ -108,6 +107,7 @@
 □	liu5	猾头
 □	tsʰaʔ7	理睬
 □	tsiau5	用指甲抓
+□	niŋ2	田~
 □	sua3	略移动
 □	tʰiaŋ5	痛
 □	hɛ3	白眼
@@ -133,10 +133,12 @@
 □	ŋiau6	调皮
 □	tsʰiu3	赎
 □	tiaŋ2	走不稳
+□	tʰo5	趟
 □	tsouŋ5	跳
 □	liʔ8	跳
 □	paʔ7	蹦
 □	ku1	蹲
+□	kiu1	蹲
 □	u5	躲
 □	ua9	这~:这里，这些
 □	uʔ7	连读音，骹~头:膝盖
@@ -739,7 +741,6 @@
 命	miaŋ6-	
 命	miŋ6=	
 和	huo2	
-和	nuaŋ6	
 咎	kiu5	
 咒	tsiu5	
 嚨	leiŋ2	
@@ -857,7 +858,6 @@
 墊	teiŋ6	
 垮	kʰua3	
 埃	ai1	
-埄	niŋ2	田~
 埋	tai2-	
 埋	mai2=	
 城	siaŋ2	
@@ -1715,8 +1715,8 @@
 晾	louŋ5	
 暫	tsaŋ6	
 暑	si3	
-暖	nouŋ3	
-暖	nuaŋ6	
+暖	nouŋ3-	
+暖	nuaŋ6=	
 暗	aŋ5	
 暝	maŋ2	
 暝	miŋ2	
@@ -1761,7 +1761,6 @@
 權	kuoŋ2	
 杉	saŋ1	
 李	li3	
-杏	iou3	
 杏	heiŋ5	
 材	tsai2	
 村	tsʰouŋ1	
@@ -1778,6 +1777,7 @@
 杯	puoi1	
 杰	kieʔ8	
 杰	kiʔ8	稠
+杳	iou3	
 杷	pa2	
 杼	tʰie3	鼎~
 松	suŋ1	
@@ -2192,11 +2192,9 @@
 燙	tʰouŋ5=	
 熱	ieʔ8	
 烹	pʰeiŋ1-	
-烺	puŋ2	吹火
 焊	aŋ6	
 煥	huaŋ5	
 燜	muŋ6	
-焗	tsiaʔ7	溅
 焙	puoi6	
 焚	huŋ2	
 焦	tsiou1	
@@ -2461,7 +2459,7 @@
 眼	ŋaŋ3	
 着	tieʔ8	
 着	tsioʔ8	
-睏	kʰuŋ5	
+睏	kʰuŋ5	睡
 睛	tsiŋ1	
 睡	sui2	
 督	tuʔ7	
@@ -2471,7 +2469,6 @@
 睽	kʰui2	
 瞎	haʔ7	
 瞞	maŋ2-	
-瞧	kʰiʔ8	
 瞿	ki6	
 矛	mau2	
 知	ti1	
@@ -3360,7 +3357,6 @@
 超	tsʰiou1	
 越	uoʔ8	
 趨	kʰi1	
-趟	tʰo5	
 趣	tsʰi5	
 足	tsuʔ7	
 趾	tsi3	
@@ -3383,7 +3379,6 @@
 蹄	tɛ2	
 躡	ŋiaʔ7	
 蹭	tseiŋ1	
-蹲	kiu1	
 躁	tsʰo5	
 身	siŋ1	
 躬	kiuŋ1	
@@ -3909,7 +3904,6 @@
 𢶀	tsʰoi5	找
 𣍐	mɛ6	不会
 𣏫	pʰau1	柚子
-𥻵	pʰaŋ5	松，不饱满
 𦆆	nɛ3	母亲
 𦛊	tsouŋ6	心~
 𩟗	tsiaŋ3	味淡
