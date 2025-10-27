@@ -4079,6 +4079,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5C4D0",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "青島紅島",
+        "語言": "青島紅島話",
+        "地點": "山東青島城陽紅島",
+        "地圖集二分區": "膠遼官話－青萊片－膠蓮小片",
+        "音典分區": "華北－膠東－東膠",
+        "陳邡分區": "官話－山東－魯東大片－膠萊片",
+        "版本": "2025-10-27",
+        "錄入人": "DaiDzao",
+        "字表來源": "《红岛话调查报告》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.269937,
+          36.233955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5C4D0",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "棲霞",
@@ -14757,6 +14781,30 @@
         "coordinates": [
           102.681404,
           25.455093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "楚雄宜就",
+        "語言": "楚雄宜就話",
+        "地點": "雲南楚雄永仁宜就",
+        "地圖集二分區": "西南官話－雲南片－滇中小片",
+        "音典分區": "藍青－雲南",
+        "陳邡分區": "官話－長江－西南大片－雲南片",
+        "版本": "2025-10-27",
+        "錄入人": "DaiDzao",
+        "字表來源": "《宜就镇彝语方音与汉语方音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5475,
+          25.9775
         ]
       }
     },
@@ -38362,7 +38410,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "h",
         "title": "興國",
         "語言": "興國瀲江本地話",
@@ -46258,7 +46306,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "l",
         "title": "漳平",
         "語言": "漳平話",
@@ -50337,7 +50385,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "h",
         "title": "尋鄔",
         "語言": "尋鄔話",
