@@ -14326,7 +14326,7 @@
         "marker-color": "#EA3131",
         "marker-size": "large",
         "marker-symbol": "b",
-        "title": "儋州",
+        "title": "儋州文讀",
         "語言": "儋州話（文讀音）",
         "地點": "海南儋州",
         "地圖集二分區": "官話－方言島",
@@ -22886,7 +22886,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "青陽客籍話",
         "語言": "青陽客籍話",
@@ -23558,7 +23558,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "六合",
         "語言": "六合話",
@@ -23680,7 +23680,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "d",
         "title": "郎溪定埠",
         "語言": "郎溪定埠話",
@@ -23751,7 +23751,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "d",
         "title": "高淳古柏",
         "語言": "高淳古柏話",
@@ -26504,6 +26504,52 @@
         "marker-color": "#5E98EB",
         "marker-size": "large",
         "marker-symbol": "d",
+        "title": "南通小海",
+        "語言": "南通小海沙裏話",
+        "地點": "江蘇南通崇川小海",
+        "地圖集二分區": "吳語－太湖片－上海小片",
+        "音典分區": "兩浙－浙北－崇明",
+        "陳邡分區": "江東－蘇浙－太湖大片－嘉崇片",
+        "錄入人": "Tsuru",
+        "字表來源": "《启海话和南通话的语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.982219,
+          31.98731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
+        "marker-size": "large",
+        "marker-symbol": "d",
+        "title": "通州先鋒",
+        "語言": "通州先鋒話",
+        "地點": "江蘇南通通州先鋒",
+        "地圖集二分區": "吳語－太湖片－上海小片",
+        "音典分區": "兩浙－浙北－崇明",
+        "陳邡分區": "江東－蘇浙－太湖大片－嘉崇片",
+        "錄入人": "Tsuru",
+        "字表來源": "《启海话和南通话的语音比较研究》、《江苏南通方言的研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.963793,
+          32.005848
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
+        "marker-size": "large",
+        "marker-symbol": "d",
         "title": "海門",
         "語言": "海門説話",
         "地點": "江蘇南通海門",
@@ -27413,7 +27459,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "d",
         "title": "仙居橫溪",
         "語言": "仙居橫溪話",
@@ -27461,7 +27507,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "d",
         "title": "天台東鄉",
         "語言": "天台東鄉話",
@@ -28162,7 +28208,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E35BC1",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "e",
         "title": "遂安",
         "語言": "遂安獅城白話",
@@ -28186,7 +28232,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E35BC1",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "e",
         "title": "遂安汾口",
         "語言": "遂安汾口白話",
@@ -30646,6 +30692,30 @@
         "coordinates": [
           116.106503,
           28.508471
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "南昌麻丘",
+        "語言": "南昌麻丘話",
+        "地點": "江西南昌南昌縣麻丘",
+        "地圖集二分區": "贛語－昌都片",
+        "音典分區": "湘贛－豫章－洪州",
+        "陳邡分區": "湘贛－幕阜－洪州大片－南昌片",
+        "版本": "2025-10-29",
+        "錄入人": "DaiDzao",
+        "字表來源": "《江西省南昌县麻丘方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.2207,
+          28.7397
         ]
       }
     },
@@ -45453,6 +45523,27 @@
         "coordinates": [
           110.515258,
           24.735068
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5ED154",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "陽朔楓林",
+        "語言": "陽朔福利楓林土話",
+        "地點": "廣西桂林陽朔福利楓林",
+        "版本": "2025-10-29",
+        "錄入人": "DaiDzao",
+        "字表來源": "《阳朔福利镇枫林村土话语音词汇研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.594562,
+          24.786269
         ]
       }
     },
