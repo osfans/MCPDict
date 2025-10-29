@@ -457,9 +457,9 @@
 幢	幢	ch	uan	6		tʂʰ	uã	33	chuan6	
 狀	状	ch	uan	6		tʂʰ	uã	33	chuan6	
 撞	撞	ch	uan	6		tʂʰ	uã	33	chuan6	
-出	出	ch	ueh	7		tʂʰ	uə?	4	chueh7	
-齣	出	ch	ueh	7		tʂʰ	uə?	4	chueh7	
-朮	朮	ch	ueh	8		tʂʰ	uə?	3	chueh8	
+出	出	ch	ueh	7		tʂʰ	uəʔ	4	chueh7	
+齣	出	ch	ueh	7		tʂʰ	uəʔ	4	chueh7	
+朮	朮	ch	ueh	8		tʂʰ	uəʔ	3	chueh8	
 吹	吹	ch	uei	1		tʂʰ	uəi	21	chuei1	
 炊	炊	ch	uei	1		tʂʰ	uəi	21	chuei1	
 捶	捶	ch	uei	2		tʂʰ	uəi	24	chuei2	
@@ -540,7 +540,7 @@
 唑	唑	c	u	6		tsʰ	ʊ	33	cu6	
 座	座	c	u	6		tsʰ	ʊ	33	cu6	
 啐	啐	c	uae	5		tsʰ	uɛ	44	cuae5	
-猝	猝	c	ueh	7		tsʰ	uə?	4	cueh7	
+猝	猝	c	ueh	7		tsʰ	uəʔ	4	cueh7	
 崔	崔	c	uei	1		tsʰ	uəi	21	cuei1	
 催	催	c	uei	1		tsʰ	uəi	21	cuei1	
 摧	摧	c	uei	1		tsʰ	uəi	21	cuei1	
@@ -1091,7 +1091,7 @@
 胱	胱	g	uan	1		k	uã	21	guan1	
 廣	广	g	uan	3		k	uã	31	guan3	
 逛	逛	g	uan	5		k	uã	44	guan5	
-骨	骨	g	ueh	7		k	uə?	4	gueh7	
+骨	骨	g	ueh	7		k	uəʔ	4	gueh7	
 歸	归	g	uei	1		k	uəi	21	guei1	
 圭	圭	g	uei	1		k	uəi	21	guei1	
 龜	龟	g	uei	1		k	uəi	21	guei1	
@@ -1342,11 +1342,11 @@
 謊	谎	h	uan	3		x	uã	31	huan3	
 幌	幌	h	uan	3		x	uã	31	huan3	
 晃	晃	h	uan	5		x	uã	44	huan5	
-忽	忽	h	ueh	7		x	uə?	4	hueh7	
-惚	惚	h	ueh	7		x	uə?	4	hueh7	
-□	□	h	ueh	7	差，坏	x	uə?	4	hueh7	
-𣝗	核	h	ueh	8	果𣝗，𣝗子	x	uə?	3	hueh8	
-囫	囫	h	ueh	8		x	uə?	3	hueh8	
+忽	忽	h	ueh	7		x	uəʔ	4	hueh7	
+惚	惚	h	ueh	7		x	uəʔ	4	hueh7	
+□	□	h	ueh	7	差，坏	x	uəʔ	4	hueh7	
+𣝗	核	h	ueh	8	果𣝗，𣝗子	x	uəʔ	3	hueh8	
+囫	囫	h	ueh	8		x	uəʔ	3	hueh8	
 灰	灰	h	uei	1		x	uəi	21	huei1	
 揮	挥	h	uei	1		x	uəi	21	huei1	
 恢	恢	h	uei	1		x	uəi	21	huei1	
@@ -1711,13 +1711,13 @@
 佣	佣		ion	6	佣人		iɔŋ	33	ion6	
 傭	佣		ion	6	雇傭		iɔŋ	33	ion6	
 用	用		ion	6			iɔŋ	33	ion6	
-曰	曰		iuh	8			iʊ?	3	iuh8	
-月	月		iuh	8			iʊ?	3	iuh8	
-玥	玥		iuh	8			iʊ?	3	iuh8	
-閱	阅		iuh	8			iʊ?	3	iuh8	
-悅	悦		iuh	8			iʊ?	3	iuh8	
-越	越		iuh	8			iʊ?	3	iuh8	
-粵	粤		iuh	8			iʊ?	3	iuh8	
+曰	曰		iuh	8			iʊʔ	3	iuh8	
+月	月		iuh	8			iʊʔ	3	iuh8	
+玥	玥		iuh	8			iʊʔ	3	iuh8	
+閱	阅		iuh	8			iʊʔ	3	iuh8	
+悅	悦		iuh	8			iʊʔ	3	iuh8	
+越	越		iuh	8			iʊʔ	3	iuh8	
+粵	粤		iuh	8			iʊʔ	3	iuh8	
 鴛	鸳		iun	1			iʊ̃	21	iun1	
 冤	冤		iun	1			iʊ̃	21	iun1	
 淵	渊		iun	1			iʊ̃	21	iun1	
@@ -1976,14 +1976,14 @@
 鞠	鞠	j	ioh	7		tɕ	iɔʔ	4	jioh7	
 鞫	鞫	j	ioh	7		tɕ	iɔʔ	4	jioh7	
 菊	菊	j	ioh	7		tɕ	iɔʔ	4	jioh7	
-撅	撅	j	iuh	7		tɕ	iʊ?	4	jiuh7	
-噘	噘	j	iuh	7		tɕ	iʊ?	4	jiuh7	
-決	决	j	iuh	7		tɕ	iʊ?	4	jiuh7	
-訣	诀	j	iuh	7		tɕ	iʊ?	4	jiuh7	
-抉	抉	j	iuh	7		tɕ	iʊ?	4	jiuh7	
-厥	厥	j	iuh	7		tɕ	iʊ?	4	jiuh7	
-蕨	蕨	j	iuh	7		tɕ	iʊ?	4	jiuh7	
-獗	獗	j	iuh	7		tɕ	iʊ?	4	jiuh7	
+撅	撅	j	iuh	7		tɕ	iʊʔ	4	jiuh7	
+噘	噘	j	iuh	7		tɕ	iʊʔ	4	jiuh7	
+決	决	j	iuh	7		tɕ	iʊʔ	4	jiuh7	
+訣	诀	j	iuh	7		tɕ	iʊʔ	4	jiuh7	
+抉	抉	j	iuh	7		tɕ	iʊʔ	4	jiuh7	
+厥	厥	j	iuh	7		tɕ	iʊʔ	4	jiuh7	
+蕨	蕨	j	iuh	7		tɕ	iʊʔ	4	jiuh7	
+獗	獗	j	iuh	7		tɕ	iʊʔ	4	jiuh7	
 捐	捐	j	iun	1		tɕ	iʊ̃	21	jiun1	
 涓	涓	j	iun	1		tɕ	iʊ̃	21	jiun1	
 娟	娟	j	iun	1		tɕ	iʊ̃	21	jiun1	
@@ -2130,7 +2130,7 @@
 曠	旷	k	uan	5		kʰ	uã	44	kuan5	
 況	况	k	uan	5		kʰ	uã	44	kuan5	
 礦	矿	k	uan	5		kʰ	uã	44	kuan5	
-窟	窟	k	ueh	7		kʰ	uə?	4	kueh7	
+窟	窟	k	ueh	7		kʰ	uəʔ	4	kueh7	
 虧	亏	k	uei	1		kʰ	uəi	21	kuei1	
 盔	盔	k	uei	1		kʰ	uəi	21	kuei1	
 窺	窥	k	uei	1		kʰ	uəi	21	kuei1	
@@ -3422,11 +3422,11 @@
 穹	穹	q	ion	2		tɕʰ	iɔŋ	24	qion2	
 瓊	琼	q	ion	2		tɕʰ	iɔŋ	24	qion2	
 傾	倾	q	ion	3		tɕʰ	iɔŋ	31	qion3	
-炔	炔	q	iuh	7		tɕʰ	iʊ?	4	qiuh7	
-缺	缺	q	iuh	7		tɕʰ	iʊ?	4	qiuh7	
-闕	阙	q	iuh	7		tɕʰ	iʊ?	4	qiuh7	
-絕	绝	q	iuh	8		tɕʰ	iʊ?	3	qiuh8	
-掘	掘	q	iuh	8	掘港	tɕʰ	iʊ?	3	qiuh8	
+炔	炔	q	iuh	7		tɕʰ	iʊʔ	4	qiuh7	
+缺	缺	q	iuh	7		tɕʰ	iʊʔ	4	qiuh7	
+闕	阙	q	iuh	7		tɕʰ	iʊʔ	4	qiuh7	
+絕	绝	q	iuh	8		tɕʰ	iʊʔ	3	qiuh8	
+掘	掘	q	iuh	8	掘港	tɕʰ	iʊʔ	3	qiuh8	
 圈	圈	q	iun	1	圓圈	tɕʰ	iʊ̃	21	qiun1	
 權	权	q	iun	2		tɕʰ	iʊ̃	24	qiun2	
 全	全	q	iun	2		tɕʰ	iʊ̃	24	qiun2	
@@ -3813,9 +3813,9 @@
 雙	双	sh	uan	1		ʂ	uã	21	shuan1	
 霜	霜	sh	uan	1		ʂ	uã	21	shuan1	
 爽	爽	sh	uan	3		ʂ	uã	31	shuan3	
-率	率	sh	ueh	7	率領	ʂ	uə?	4	shueh7	
-術	术	sh	ueh	8		ʂ	uə?	3	shueh8	
-述	述	sh	ueh	8		ʂ	uə?	3	shueh8	
+率	率	sh	ueh	7	率領	ʂ	uəʔ	4	shueh7	
+術	术	sh	ueh	8		ʂ	uəʔ	3	shueh8	
+述	述	sh	ueh	8		ʂ	uəʔ	3	shueh8	
 垂	垂	sh	uei	2		ʂ	uəi	24	shuei2	
 誰	谁	sh	uei	2		ʂ	uəi	24	shuei2	
 水	水	sh	uei	3		ʂ	uəi	31	shuei3	
@@ -3893,7 +3893,7 @@
 嗩	唢	s	u	3		s	ʊ	31	su3	
 瑣	琐	s	u	3		s	ʊ	31	su3	
 鎖	锁	s	u	3		s	ʊ	31	su3	
-窣	窣	s	ueh	7		s	uə?	4	sueh7	
+窣	窣	s	ueh	7		s	uəʔ	4	sueh7	
 雖	虽	s	uei	1		s	uəi	21	suei1	
 髓	髓	s	uei	3	骨髓	s	uəi	31	suei3	
 歲	岁	s	uei	5		s	uəi	44	suei5	
@@ -4628,9 +4628,9 @@
 胸	胸	x	ion	1		ɕ	iɔŋ	21	xion1	
 雄	雄	x	ion	2	英雄	ɕ	iɔŋ	24	xion2	
 熊	熊	x	ion	2		ɕ	iɔŋ	24	xion2	
-薛	薛	x	iuh	7		ɕ	iʊ?	4	xiuh7	
-血	血	x	iuh	7		ɕ	iʊ?	4	xiuh7	
-穴	穴	x	iuh	8		ɕ	iʊ?	3	xiuh8	
+薛	薛	x	iuh	7		ɕ	iʊʔ	4	xiuh7	
+血	血	x	iuh	7		ɕ	iʊʔ	4	xiuh7	
+穴	穴	x	iuh	8		ɕ	iʊʔ	3	xiuh8	
 軒	轩	x	iun	1		ɕ	iʊ̃	21	xiun1	
 宣	宣	x	iun	1		ɕ	iʊ̃	21	xiun1	
 揎	揎	x	iun	1		ɕ	iʊ̃	21	xiun1	
@@ -4671,7 +4671,7 @@
 糏	糏	x	yeh	7		ɕ	yəʔ	4	xyeh7	
 戌	戌	x	yeh	7		ɕ	yəʔ	4	xyeh7	
 恤	恤	x	yeh	7		ɕ	yəʔ	4	xyeh7	
-訹	訹	x	yeh	7	迷惑，引誘	ɕ	yə?	4	xyeh7	
+訹	訹	x	yeh	7	迷惑，引誘	ɕ	yəʔ	4	xyeh7	
 雪	雪	x	yeh	7		ɕ	yəʔ	4	xyeh7	
 勳	勋	x	yen	1		ɕ	yəŋ	21	xyen1	
 熏	熏	x	yen	1		ɕ	yəŋ	21	xyen1	
@@ -5161,7 +5161,7 @@
 刷	刷	sh	uaeh	8	刷洗	ʂ	yaʔ	3	shuaeh8	
 抐	抐	n	eh	8	捏	n	əʔ	3	neh8	
 捥	捥	v	eh	7	肢体受伤	ʋ	əʔ	4	veh7	
-卒	卒	z	ueh	7		ts	uə?	4	zueh7	
+卒	卒	z	ueh	7		ts	uəʔ	4	zueh7	
 砉	砉	h	oh	7	~動	x	ɔʔ	4	hoh7	
 趜	趜	j	ioh	7		tɕ	iɔʔ	4	jioh7	
 蛼	蛼	ch	ei	1	口語音	tʂʰ	əi	21	chei1	

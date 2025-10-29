@@ -14,9 +14,8 @@ class 表(_表):
 	字組 = set()
 	
 	def 析(自, 列):
-		字, js = 列
-		js = js.replace("", "\t").strip()[6:]
-		js = re.sub(r"頁(\d+)第(\d+)\t", lambda x: "%d.%d"%(int(x[1]),int(x[2])), js)
+		字 = 列[0]
+		js = "\t".join(列[1:])
 		if len(字) > 1:
 			js = js.replace("\t", f"\t({字})", 1)
 			字 = 字[0]
