@@ -4055,6 +4055,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5C4D0",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "即墨",
+        "語言": "即墨話",
+        "地點": "山東青島即墨",
+        "地圖集二分區": "膠遼官話－青萊片－膠蓮小片",
+        "音典分區": "華北－膠東－東膠",
+        "陳邡分區": "官話－山東－魯東大片－膠萊片",
+        "版本": "2025-10-30",
+        "錄入人": "DaiDzao",
+        "字表來源": "《即墨方言志》",
+        "補充閲讀": "《即墨方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.448362,
+          36.393819
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5C4D0",
         "marker-size": "small",
         "marker-symbol": "b",
         "title": "青島嶗山",
@@ -5087,6 +5112,30 @@
         "coordinates": [
           116.58578,
           34.699193
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "碭山",
+        "語言": "碭山話",
+        "地點": "安徽宿州碭山",
+        "地圖集二分區": "中原官話－徐淮片",
+        "音典分區": "華北－河南－徐西",
+        "陳邡分區": "官話－山東－魯西大片－兗州片",
+        "版本": "2025-10-30",
+        "錄入人": "DaiDzao",
+        "字表來源": "《砀山县城话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.369648,
+          34.443666
         ]
       }
     },
@@ -14959,7 +15008,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "large",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "美斯樂騰衝話",
         "語言": "泰國美斯樂騰衝話",
@@ -15033,7 +15082,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "large",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "美斯樂瀾滄話",
         "語言": "泰國美斯樂瀾滄話",
@@ -24725,8 +24774,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          119.584446,
-          34.205405
+          118.85,
+          33.28
         ]
       }
     },
@@ -45460,6 +45509,31 @@
         "marker-color": "#5ED154",
         "marker-size": "small",
         "marker-symbol": "j",
+        "title": "陽朔忠南",
+        "語言": "陽朔忠南平聲",
+        "地點": "廣西桂林陽朔楊堤忠南",
+        "地圖集二分區": "平話和土話－桂北片",
+        "音典分區": "嶺西－類粤－平聲",
+        "陳邡分區": "官話－桂北－賀州片",
+        "版本": "2025-10-29",
+        "錄入人": "DaiDzao",
+        "字表來源": "《阳朔杨堤乡中南村土话语音词汇研究》",
+        "補充閲讀": "《阳朔忠南村方言的语音特点及其系属》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.422974,
+          24.997788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5ED154",
+        "marker-size": "small",
+        "marker-symbol": "j",
         "title": "陽朔葡萄",
         "語言": "陽朔葡萄平聲",
         "地點": "廣西桂林陽朔葡萄",
@@ -45531,10 +45605,13 @@
       "properties": {
         "marker-color": "#5ED154",
         "marker-size": "small",
-        "marker-symbol": "",
+        "marker-symbol": "j",
         "title": "陽朔楓林",
         "語言": "陽朔福利楓林土話",
         "地點": "廣西桂林陽朔福利楓林",
+        "地圖集二分區": "平話和土話－桂北片",
+        "音典分區": "嶺西－類粤－陽朔",
+        "陳邡分區": "官話－桂北－賀州片",
         "版本": "2025-10-29",
         "錄入人": "DaiDzao",
         "字表來源": "《阳朔福利镇枫林村土话语音词汇研究》"
@@ -47551,6 +47628,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
+        "marker-size": "small",
+        "marker-symbol": "l",
+        "title": "屏南黛溪",
+        "語言": "屏南黛溪本村話",
+        "地點": "福建寧德屏南黛溪",
+        "地圖集二分區": "閩語－閩東片－侯官小片",
+        "音典分區": "閩－閩東",
+        "陳邡分區": "福建－閩東",
+        "版本": "2025-10-31",
+        "錄入人": "NaruDora",
+        "維護人": "NaruDora",
+        "字表來源": "《屏南代溪话音系》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.124974,
+          26.817638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "閩清",
@@ -47665,6 +47767,30 @@
         "coordinates": [
           119.526232,
           26.660221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
+        "marker-size": "small",
+        "marker-symbol": "l",
+        "title": "寧德霍童",
+        "語言": "寧德霍童話",
+        "地點": "福建寧德蕉城霍童",
+        "地圖集二分區": "閩語－閩東片－福寧小片",
+        "音典分區": "閩－閩東",
+        "陳邡分區": "福建－閩東",
+        "版本": "2025-10-29",
+        "錄入人": "NaruDora",
+        "字表來源": "《北片闽东方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.427675,
+          26.855428
         ]
       }
     },
