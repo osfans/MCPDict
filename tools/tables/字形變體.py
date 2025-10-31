@@ -11,3 +11,15 @@ class 表(_表):
 		字 = hex2chr(字)
 		變體 = 字 + hex2chr(變體.rstrip(";"))
 		return 字, 變體
+
+	def 修訂(自, d):
+		for 行 in open(自.全路徑("StandardizedVariants.txt"),encoding="U8"):
+			行 = 行.strip()
+			if 行.startswith("#"): continue
+			if "CJK" not in 行: continue
+			fields = 行.strip().split("; ")
+			a, b = fields[0].split(" ")
+			字 = hex2chr(a)
+			變體 = hex2chr(a) + hex2chr(b)
+			d[字].append(變體)
+		_表.修訂(自, d)
