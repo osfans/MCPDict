@@ -33,7 +33,7 @@ if not args.output:
 			sys.exit(1)
 	fields = ["字組", "語言", "讀音", "註釋"]
 	tokens = "□－〈〉［］（）"
-	CREATE = 'CREATE VIRTUAL TABLE langs USING fts5 (%s, columnsize=0, tokenize="unicode61 tokenchars \'%s\'")' % (",".join(fields), tokens)
+	CREATE = 'CREATE VIRTUAL TABLE langs USING fts5 (%s, columnsize=0, tokenize="unicode61 remove_diacritics 0 tokenchars \'%s\' ")' % (",".join(fields), tokens)
 	INSERT = 'INSERT INTO langs VALUES (%s)'% (','.join('?' * len(fields)))
 	c.execute(CREATE)
 	c.executemany(INSERT, items)
