@@ -2052,7 +2052,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "滄縣舊州",
         "語言": "滄縣舊州話",
@@ -2605,7 +2605,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#916FF7",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "c",
         "title": "沙河橋西",
         "語言": "沙河橋西話",
@@ -2871,7 +2871,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#926EF8",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "c",
         "title": "衛輝梨園",
         "語言": "衛輝梨園話",
@@ -2967,7 +2967,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#926EF8",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "c",
         "title": "新鄉郎公廟",
         "語言": "新鄉郎公廟話",
@@ -3572,7 +3572,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5C4D0",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "同江二屯",
         "語言": "同江二屯話",
@@ -4389,6 +4389,30 @@
         "coordinates": [
           121.09178,
           36.729308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5C4D0",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "title": "龍口",
+        "語言": "龍口話",
+        "地點": "山東煙臺龍口",
+        "地圖集二分區": "膠遼官話－登連片－蓬龍小片",
+        "音典分區": "華北－膠東－東牟",
+        "版本": "2025-11-04",
+        "錄入人": "茉莉",
+        "維護人": "teixun",
+        "字表來源": "《龙口方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.491156,
+          37.657269
         ]
       }
     },
@@ -6669,7 +6693,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "靈寶",
         "語言": "靈寶陽店話",
@@ -8494,7 +8518,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "large",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "平涼柳湖",
         "語言": "平涼柳湖漢民話",
@@ -8941,8 +8965,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          102.839839,
-          36.331143
+          104.8882,
+          34.721469
         ]
       }
     },
@@ -9942,7 +9966,7 @@
         "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
-        "title": "垣曲新城",
+        "title": "垣曲",
         "語言": "垣曲新城話",
         "地點": "山西運城垣曲新城",
         "地圖集二分區": "中原官話－汾河片－絳州小片",
@@ -9964,7 +9988,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "垣曲古城",
         "語言": "垣曲古城話",
@@ -11618,7 +11642,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#916FF7",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "c",
         "title": "延安老户話",
         "語言": "延安老户話",
@@ -11931,7 +11955,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#916FF7",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "c",
         "title": "伊金霍洛巴日圖塔",
         "語言": "伊金霍洛旗巴日圖塔話",
@@ -11979,7 +12003,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#916FF7",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "c",
         "title": "和林格爾大紅城",
         "語言": "和林格爾大紅城話",
@@ -13444,7 +13468,7 @@
         "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
-        "title": "寧遠官話",
+        "title": "寧遠",
         "語言": "寧遠舜陵(城關)官話",
         "地點": "湖南永州寧遠",
         "地圖集二分區": "西南官話－桂柳片－湘南小片",
@@ -13468,7 +13492,7 @@
         "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
-        "title": "藍山官話",
+        "title": "藍山",
         "語言": "藍山塔峰(城關)官話",
         "地點": "湖南永州藍山",
         "地圖集二分區": "西南官話－桂柳片－湘南小片",
@@ -14169,6 +14193,30 @@
         "coordinates": [
           105.360232,
           24.778882
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "西林",
+        "語言": "西林漢話",
+        "地點": "廣西百色西林",
+        "地圖集二分區": "西南官話－雲南片－滇南小片",
+        "音典分區": "藍青－桂北",
+        "陳邡分區": "官話－長江－西南大片－桂柳片",
+        "版本": "2025-06-07",
+        "錄入人": "ResoundYB",
+        "字表來源": "语保"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.102221,
+          24.496982
         ]
       }
     },
@@ -15302,30 +15350,6 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "西林",
-        "語言": "西林漢話",
-        "地點": "廣西百色西林",
-        "地圖集二分區": "西南官話－雲南片－滇南小片",
-        "音典分區": "藍青－雲南",
-        "陳邡分區": "官話－長江－西南大片－桂柳片",
-        "版本": "2025-06-07",
-        "錄入人": "ResoundYB",
-        "字表來源": "语保"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.102221,
-          24.496982
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
         "marker-size": "large",
         "marker-symbol": "b",
         "title": "拉薩",
@@ -15886,7 +15910,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "井研馬踏",
         "語言": "井研馬踏話",
@@ -16031,7 +16055,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "富順長灘",
         "語言": "富順長灘話",
@@ -16300,7 +16324,7 @@
         "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
-        "title": "瀘縣福集",
+        "title": "瀘縣",
         "語言": "瀘縣[福集]話",
         "地點": "四川瀘州瀘縣",
         "地圖集二分區": "西南官話－西蜀片－岷赤小片",
@@ -16880,7 +16904,7 @@
         "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
-        "title": "大方響水",
+        "title": "大方",
         "語言": "大方響水漢話",
         "地點": "貴州畢節大方",
         "地圖集二分區": "西南官話－川黔片－成渝小片",
@@ -19814,7 +19838,7 @@
         "marker-color": "#E54E5D",
         "marker-size": "large",
         "marker-symbol": "b",
-        "title": "沔陽仙桃",
+        "title": "仙桃",
         "語言": "沔陽仙桃話",
         "地點": "湖北仙桃",
         "地圖集二分區": "西南官話－湖廣片－鄂中小片",
@@ -19837,7 +19861,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "沔陽曹市",
         "語言": "沔陽曹市話",
@@ -20196,7 +20220,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "鄖西上津",
         "語言": "鄖西上津話",
@@ -20268,7 +20292,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "江夏紙坊",
         "語言": "江夏紙坊話",
@@ -20413,7 +20437,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "廣水",
         "語言": "[應山]廣水話",
@@ -24253,7 +24277,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "d",
         "title": "南陵",
         "語言": "南陵話",
@@ -24770,7 +24794,7 @@
         "音典分區": "下江－淮揚",
         "陳邡分區": "官話－長江－揚州大片－揚州片",
         "版本": "2025-07-13",
-        "錄入人": "Soyo,Resound",
+        "錄入人": "Resound,Soyo",
         "字表來源": "《宝应县志》"
       },
       "geometry": {
@@ -26122,7 +26146,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "d",
         "title": "通州金沙",
         "語言": "通州金沙話",
@@ -30384,7 +30408,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#52CCAD",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "f",
         "title": "大冶金牛",
         "語言": "大冶金牛話",
@@ -32709,7 +32733,7 @@
         "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
-        "title": "岳陽君山",
+        "title": "君山",
         "語言": "岳陽君山話",
         "地點": "湖南岳陽君山區",
         "地圖集二分區": "西南官話－湖廣片－湘北小片",
@@ -32805,7 +32829,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#52CCAD",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "f",
         "title": "蒲圻羊樓洞",
         "語言": "蒲圻[赤壁]羊樓洞話",
@@ -33122,7 +33146,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "岳陽榮家灣",
         "語言": "岳陽榮家灣(城關)話",
@@ -35295,7 +35319,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "g",
         "title": "漵浦",
         "語言": "漵浦盧峰(城關)話",
@@ -37317,7 +37341,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "g",
         "title": "資源瓜里官話",
         "語言": "資源瓜里官話",
@@ -38454,7 +38478,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "g",
         "title": "祁東",
         "語言": "祁東過水坪話",
@@ -39916,7 +39940,7 @@
         "marker-color": "#EBC75E",
         "marker-size": "small",
         "marker-symbol": "i",
-        "title": "1884甯城",
+        "title": "1884新甯",
         "語言": "1884新甯甯城話",
         "地點": "廣東廣州新甯甯城",
         "地圖集二分區": "粤語－四邑片",
@@ -40236,7 +40260,7 @@
         "marker-color": "#EBC75E",
         "marker-size": "small",
         "marker-symbol": "i",
-        "title": "1890會城",
+        "title": "1890新會",
         "語言": "1890新會會城話",
         "地點": "廣東廣州新會會城",
         "地圖集二分區": "粤語－四邑片",
@@ -41775,7 +41799,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EBC75E",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "i",
         "title": "河口",
         "語言": "河口廣話",
@@ -43753,6 +43777,30 @@
         "coordinates": [
           110.818723,
           24.176425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EBC75E",
+        "marker-size": "small",
+        "marker-symbol": "i",
+        "title": "昭平疍家話",
+        "語言": "昭平疍家話",
+        "地點": "廣西賀州昭平*散居",
+        "地圖集二分區": "粤語－勾漏片",
+        "音典分區": "嶺南－蒼梧－廣信",
+        "陳邡分區": "廣東－南粤－西江大片－西江片",
+        "版本": "2025-11-05",
+        "錄入人": "DaiDzao",
+        "字表來源": "《贺州昭平疍家话研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.839382,
+          24.208519
         ]
       }
     },
@@ -46133,7 +46181,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "l",
         "title": "金門金沙",
         "語言": "金門金沙話",
@@ -46829,7 +46877,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "l",
         "title": "大埔元洲仔",
         "語言": "大埔元洲仔福佬話",
@@ -47493,7 +47541,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "l",
         "title": "樂東黃流",
         "語言": "樂東黃流話",
@@ -47677,6 +47725,32 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
+        "marker-size": "small",
+        "marker-symbol": "l",
+        "title": "福鼎澳腰",
+        "語言": "福鼎澳腰莆田話",
+        "地點": "福建寧德福鼎沙埕澳腰",
+        "地圖集二分區": "閩語－莆仙片",
+        "音典分區": "閩－莆仙",
+        "陳邡分區": "福建－莆仙",
+        "方言島": true,
+        "錄入人": "NaruDora",
+        "維護人": "NaruDora",
+        "字表來源": "《澳腰莆田方言岛记略》《闽语研究》",
+        "參考文獻": "《福鼎澳腰莆田方言岛再调查》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.407485,
+          27.172002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "尤溪",
@@ -47726,7 +47800,7 @@
         "marker-size": "large",
         "marker-symbol": "l",
         "title": "福州",
-        "語言": "福州話",
+        "語言": "福州平話",
         "地點": "福建福州",
         "地圖集二分區": "閩語－閩東片－侯官小片",
         "音典分區": "閩－閩東",
@@ -47751,7 +47825,7 @@
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "福清",
-        "語言": "福清話",
+        "語言": "福清平話",
         "地點": "福建福州福清",
         "地圖集二分區": "閩語－閩東片－侯官小片",
         "音典分區": "閩－閩東",
@@ -47775,7 +47849,7 @@
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "羅源",
-        "語言": "羅源話",
+        "語言": "羅源平話",
         "地點": "福建福州羅源",
         "地圖集二分區": "閩語－閩東片－侯官小片",
         "音典分區": "閩－閩東",
@@ -47800,7 +47874,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "古田大橋",
-        "語言": "古田大橋話",
+        "語言": "古田大橋平話",
         "地點": "福建寧德古田大橋",
         "地圖集二分區": "閩語－閩東片－侯官小片",
         "音典分區": "閩－閩東",
@@ -47824,7 +47898,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "古田杉洋",
-        "語言": "古田杉洋話",
+        "語言": "古田杉洋平話",
         "地點": "福建寧德古田杉洋",
         "地圖集二分區": "閩語－閩東片－侯官小片",
         "音典分區": "閩－閩東",
@@ -47848,7 +47922,7 @@
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "屏南",
-        "語言": "屏南話",
+        "語言": "屏南平話",
         "地點": "福建寧德屏南",
         "地圖集二分區": "閩語－閩東片－侯官小片",
         "音典分區": "閩－閩東",
@@ -47897,7 +47971,7 @@
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "閩清",
-        "語言": "閩清話",
+        "語言": "閩清平話",
         "地點": "福建福州閩清",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -47922,7 +47996,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "閩清坂東",
-        "語言": "閩清坂東話",
+        "語言": "閩清坂東平話",
         "地點": "福建福州閩清坂東",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -47947,7 +48021,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "閩清塔莊",
-        "語言": "閩清塔莊話",
+        "語言": "閩清塔莊平話",
         "地點": "福建福州閩清塔莊",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -47970,7 +48044,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "寧德洋中",
-        "語言": "寧德洋中話",
+        "語言": "寧德洋中平話",
         "地點": "福建寧德蕉城洋中",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -47995,7 +48069,7 @@
         "marker-size": "large",
         "marker-symbol": "l",
         "title": "寧德",
-        "語言": "寧德話",
+        "語言": "寧德平話",
         "地點": "福建寧德蕉城",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48018,7 +48092,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "寧德虎浿",
-        "語言": "寧德虎浿話",
+        "語言": "寧德虎浿平話",
         "地點": "福建寧德蕉城虎浿",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48042,7 +48116,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "寧德九都",
-        "語言": "寧德九都話",
+        "語言": "寧德九都平話",
         "地點": "福建寧德蕉城九都",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48066,7 +48140,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "寧德霍童",
-        "語言": "寧德霍童話",
+        "語言": "寧德霍童平話",
         "地點": "福建寧德蕉城霍童",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48090,7 +48164,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "周寧咸村",
-        "語言": "周寧咸村話",
+        "語言": "周寧咸村平話",
         "地點": "福建寧德周寧咸村",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48114,7 +48188,7 @@
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "周寧",
-        "語言": "周寧話",
+        "語言": "周寧平話",
         "地點": "福建寧德周寧",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48137,7 +48211,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "周寧貢川",
-        "語言": "周寧禮門貢川話",
+        "語言": "周寧禮門貢川平話",
         "地點": "福建寧德周寧禮門貢川",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48161,7 +48235,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "1893福安",
-        "語言": "1893年福安話（班華字典）",
+        "語言": "1893年福安平話（班華字典）",
         "地點": "福建寧德福安",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48185,7 +48259,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "福安穆陽",
-        "語言": "福安穆陽話",
+        "語言": "福安穆陽平話",
         "地點": "福建寧德福安穆陽",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48208,7 +48282,7 @@
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "福安",
-        "語言": "福安話",
+        "語言": "福安平話",
         "地點": "福建寧德福安",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48231,7 +48305,7 @@
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "霞浦",
-        "語言": "霞浦話",
+        "語言": "霞浦平話",
         "地點": "福建寧德霞浦",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48255,7 +48329,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "霞浦長春",
-        "語言": "霞浦長春話",
+        "語言": "霞浦長春平話",
         "地點": "福建寧德霞浦長春",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48279,7 +48353,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "柘榮富溪",
-        "語言": "柘榮富溪話",
+        "語言": "柘榮富溪平話",
         "地點": "福建寧德柘榮富溪",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48303,7 +48377,7 @@
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "福鼎",
-        "語言": "福鼎話",
+        "語言": "福鼎平話",
         "地點": "福建寧德福鼎",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48328,7 +48402,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "福鼎白琳",
-        "語言": "福鼎白琳話",
+        "語言": "福鼎白琳平話",
         "地點": "福建寧德福鼎白琳",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48352,7 +48426,7 @@
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "壽寧",
-        "語言": "壽寧話",
+        "語言": "壽寧平話",
         "地點": "福建寧德壽寧",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48375,7 +48449,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "壽寧斜灘",
-        "語言": "壽寧斜灘話",
+        "語言": "壽寧斜灘平話",
         "地點": "福建寧德壽寧斜灘",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -48399,7 +48473,7 @@
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "壽寧南陽",
-        "語言": "壽寧南陽話",
+        "語言": "壽寧南陽平話",
         "地點": "福建寧德壽寧南陽",
         "地圖集二分區": "閩語－閩東片－福寧小片",
         "音典分區": "閩－閩東",
@@ -52492,7 +52566,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5ED154",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "j",
         "title": "樂昌黃圃",
         "語言": "樂昌黃圃聲",
@@ -55176,7 +55250,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#8FCCA3",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "m",
         "title": "大理周城白語",
         "語言": "大理周城白語",
