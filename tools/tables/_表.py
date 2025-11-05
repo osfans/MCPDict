@@ -585,7 +585,7 @@ class 表:
 			.replace("｛", "{").replace("｝", "}")\
 			.replace("／", "/").replace("？", "?").replace("！", "!").replace("：", ":").replace("；",";").replace("...", "⋯").replace("｜", "|")\
 			.replace("∽", "~").replace("～", "~")
-		行 = 行.replace("\u1dc9", "\u0303")\
+		行 = 行.replace("\u1dc9", "\u0303").replace("\u0342", "\u0303")\
 			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ").replace("ꭧ", "tʂ")\
 			.replace("ʣ", "dz").replace("ʥ", "dʑ").replace("ʤ", "dʒ").replace("ꭦ", "dʐ")\
 			.replace("ʔb", "ɓ").replace("ʔd", "ɗ")\
