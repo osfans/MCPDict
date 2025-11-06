@@ -4397,7 +4397,7 @@
       "properties": {
         "marker-color": "#F5C4D0",
         "marker-size": "medium",
-        "marker-symbol": "",
+        "marker-symbol": "b",
         "title": "龍口",
         "語言": "龍口話",
         "地點": "山東煙臺龍口",
@@ -12315,6 +12315,30 @@
         "marker-color": "#916FF7",
         "marker-size": "medium",
         "marker-symbol": "c",
+        "title": "山陰",
+        "語言": "山陰話",
+        "地點": "山西朔州山陰",
+        "地圖集二分區": "晉語－大包片",
+        "音典分區": "西北－雁北",
+        "陳邡分區": "官話－晉北－雁北大片－大同片",
+        "版本": "2025-11-05",
+        "錄入人": "DaiDzao",
+        "字表來源": "《山阴方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.824729,
+          39.532026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "medium",
+        "marker-symbol": "c",
         "title": "右玉",
         "語言": "右玉話",
         "地點": "山西朔州右玉",
@@ -13088,30 +13112,6 @@
         "coordinates": [
           119.220007,
           29.362124
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#EA3131",
-        "marker-size": "small",
-        "marker-symbol": "b",
-        "title": "開化龍門",
-        "語言": "開化龍門徽語",
-        "地點": "浙江衢州開化齊溪龍門村",
-        "地圖集二分區": "官話－方言島",
-        "音典分區": "藍青－浙江",
-        "陳邡分區": "官話－杭州",
-        "版本": "2025-10-31",
-        "錄入人": "DaiDzao",
-        "字表來源": "《浙江开化龙门徽语研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          118.328509,
-          29.45171
         ]
       }
     },
@@ -14101,81 +14101,6 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "small",
-        "marker-symbol": "b",
-        "title": "田林浪平",
-        "語言": "田林浪平高山漢話",
-        "地點": "廣西百色田林浪平",
-        "地圖集二分區": "西南官話－桂柳片－桂北小片",
-        "音典分區": "藍青－桂北",
-        "陳邡分區": "官話－長江－西南大片－桂柳片",
-        "方言島": true,
-        "版本": "2025-01-06",
-        "錄入人": "Resound",
-        "字表來源": "《一个西南官话方言岛——浪平高山汉话研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          106.368537,
-          24.489414
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "凌雲",
-        "語言": "凌雲高山漢話",
-        "地點": "廣西百色凌雲泗城",
-        "地圖集二分區": "西南官話－桂柳片－桂北小片",
-        "音典分區": "藍青－桂北",
-        "陳邡分區": "官話－長江－西南大片－桂柳片",
-        "方言島": true,
-        "版本": "2025-06-07",
-        "錄入人": "ResoundYB",
-        "字表來源": "语保"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          106.575387,
-          24.351166
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
-        "marker-size": "medium",
-        "marker-symbol": "b",
-        "title": "樂業",
-        "語言": "樂業高山漢話",
-        "地點": "廣西百色樂業同樂",
-        "地圖集二分區": "西南官話－桂柳片－桂北小片",
-        "音典分區": "藍青－桂北",
-        "陳邡分區": "官話－長江－西南大片－桂柳片",
-        "方言島": true,
-        "版本": "2025-06-07",
-        "錄入人": "ResoundYB",
-        "字表來源": "语保"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          106.56691,
-          24.786285
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "隆林",
@@ -14467,6 +14392,81 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "田林浪平",
+        "語言": "田林浪平高山漢話",
+        "地點": "廣西百色田林浪平",
+        "地圖集二分區": "西南官話－桂柳片－桂北小片",
+        "音典分區": "藍青－高山漢",
+        "陳邡分區": "官話－長江－西南大片－桂柳片",
+        "方言島": true,
+        "版本": "2025-01-06",
+        "錄入人": "Resound",
+        "字表來源": "《一个西南官话方言岛——浪平高山汉话研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.368537,
+          24.489414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "凌雲",
+        "語言": "凌雲高山漢話",
+        "地點": "廣西百色凌雲泗城",
+        "地圖集二分區": "西南官話－桂柳片－桂北小片",
+        "音典分區": "藍青－高山漢",
+        "陳邡分區": "官話－長江－西南大片－桂柳片",
+        "方言島": true,
+        "版本": "2025-06-07",
+        "錄入人": "ResoundYB",
+        "字表來源": "语保"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.575387,
+          24.351166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "樂業",
+        "語言": "樂業高山漢話",
+        "地點": "廣西百色樂業同樂",
+        "地圖集二分區": "西南官話－桂柳片－桂北小片",
+        "音典分區": "藍青－高山漢",
+        "陳邡分區": "官話－長江－西南大片－桂柳片",
+        "方言島": true,
+        "版本": "2025-06-07",
+        "錄入人": "ResoundYB",
+        "字表來源": "语保"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.56691,
+          24.786285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-color": "#EA3131",
         "marker-size": "small",
         "marker-symbol": "b",
@@ -14647,7 +14647,7 @@
         "marker-symbol": "b",
         "title": "長樂洋嶼",
         "語言": "長樂洋嶼旗下話",
-        "地點": "福建福州長樂航城街道洋嶼",
+        "地點": "福建福州長樂航城洋嶼",
         "地圖集二分區": "官話－方言島",
         "音典分區": "藍青－不分類",
         "陳邡分區": "官話－寧夏與淮河－北方大片－洋嶼片",
@@ -29921,6 +29921,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E35BC1",
+        "marker-size": "small",
+        "marker-symbol": "e",
+        "title": "開化龍門",
+        "語言": "開化龍門徽語",
+        "地點": "浙江衢州開化齊溪龍門村",
+        "地圖集二分區": "徽語－休黟片",
+        "音典分區": "湘贛－西徽",
+        "版本": "2025-10-31",
+        "錄入人": "DaiDzao",
+        "字表來源": "《浙江开化龙门徽语研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.328509,
+          29.45171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E35BC1",
         "marker-size": "medium",
         "marker-symbol": "e",
         "title": "黟縣",
@@ -44317,7 +44340,7 @@
         "marker-symbol": "j",
         "title": "南寧鷓鴣淥",
         "語言": "南寧鷓鴣淥村平話",
-        "地點": "廣西南寧西鄉塘鷓鴣淥",
+        "地點": "廣西南寧西鄉塘安吉鷓鴣淥",
         "地圖集二分區": "平話和土話－桂南片",
         "音典分區": "嶺南－邕賓－邕州",
         "陳邡分區": "官話－桂南－桂西大片－邕江片",
@@ -44479,7 +44502,7 @@
         "marker-symbol": "j",
         "title": "南寧葛家園",
         "語言": "南寧葛家園平話",
-        "地點": "廣西南寧青秀中山葛家園",
+        "地點": "廣西南寧青秀中山七星路葛家园",
         "地圖集二分區": "平話和土話－桂南片",
         "音典分區": "嶺南－邕賓－邕州",
         "陳邡分區": "官話－桂南－桂西大片－邕江片",
