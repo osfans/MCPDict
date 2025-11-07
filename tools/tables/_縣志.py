@@ -124,7 +124,7 @@ class 表(_表):
 			行 = 行.replace("<","{").replace(">","}")
 		elif 名 in ("慈利",):
 			行 = 行.replace("/", "")
-		elif 名 in ("東莞塘角"):
+		elif 名 in ("茶山塘角"):
 			if 行.startswith("#"): return "#"
 			果 = re.findall(r"\[(.*?)(\d+)[ab]?\]", 行)
 			if not 果: return
