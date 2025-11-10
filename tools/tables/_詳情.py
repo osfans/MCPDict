@@ -33,6 +33,7 @@ def getTones(tones):
 		index = i
 		if not ts: continue
 		ts = str(ts).lower().replace("ˀ", "6").replace("ʔ", "0").replace("，", ",").replace(" ", "")
+		ts = re.sub(r"([^,])(\[)", r"\1,\2", ts)
 		tsn = ts.count(",") + 1
 		for j,t in enumerate(ts.split(",")):
 			if t.startswith("["):
