@@ -262,7 +262,14 @@ public class DB extends SQLiteAssetHelper {
                 keywords.add(hz);
             }
         } else if (searchType == SEARCH.HZ || searchType == SEARCH.YIN) {                          // Each contiguous run of non-separator and non-comma characters is a query
-            keywords.addAll(normInput(lang, input));
+            List<String> normInputs = normInput(lang, input);
+            keywords.addAll(normInputs);
+            if (searchType == SEARCH.YIN && !normInputs.isEmpty()) {
+                for (String s : normInputs) {
+                    if (s.contains("g")) keywords.add(s.replace("g", "ɡ"));
+                    else if (s.contains("ɡ")) keywords.add(s.replace("ɡ", "g"));
+                }
+            }
         }
         if (keywords.isEmpty()) return null;
 
