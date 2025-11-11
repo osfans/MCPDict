@@ -140,6 +140,7 @@ class 表(_表):
 				音 = 聲韻 + 調
 		if not 音: return
 		音 = 自.正音(音, True)
+		if not 音: return
 		if 自.info.get("字表使用調值", False):
 			音 = 自.轉調類(音)
 		l = list()
