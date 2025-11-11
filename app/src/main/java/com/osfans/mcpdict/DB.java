@@ -802,13 +802,13 @@ public class DB extends SQLiteAssetHelper {
         if (TextUtils.isEmpty(language) || isLanguageHZ(language) || Pref.getFilter() == FILTER.HZ) {
             StringBuilder sb = new StringBuilder();
             sb.append(intro);
-            sb.append("<br><h2>已收錄語言</h2><table border=1 cellSpacing=0>");
+            sb.append("<br><h2>已收錄語言</h2><table id=\"sortable-table\" border=\"1\" cellspacing=\"0\" cellpadding=\"5\"><thead>");
             sb.append("<tr>");
             String[] fields = new String[]{LANGUAGE, "字數", "□數", SYLLABLES, "不帶調音節數"};
             for (String field: fields) {
-                sb.append(String.format("<th>%s</th>", field));
+                sb.append(String.format("<th onclick='sortTableByColumn(%d)'>%s</th>", Arrays.asList(fields).indexOf(field), field));
             }
-            sb.append("</tr>");
+            sb.append("</tr></thead><tbody>");
             for (String l : LABELS) {
                 sb.append("<tr>");
                 for (String field: fields) {
@@ -816,7 +816,7 @@ public class DB extends SQLiteAssetHelper {
                 }
                 sb.append("</tr>");
             }
-            sb.append("</table>");
+            sb.append("</tbody></table>");
             intro = sb.toString();
         } else {
             StringBuilder sb = new StringBuilder();
