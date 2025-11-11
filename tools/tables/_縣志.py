@@ -382,6 +382,7 @@ class 表(_表):
 				if 韻 != "" and 聲 == "ø": 聲 = ""
 				for 調,字組 in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", 列[1]):
 					音 = 自.正音(聲 + 韻 + 調, True)
+					if not 音: continue
 					if "/" in 音 and 自.簡稱 != "東干甘肅話":
 						音 = []
 						for i in 聲.split("/"):
