@@ -69,7 +69,7 @@ public class App extends Application {
 
                         function sortTableByColumn(column) {
                             const table = document.getElementById('sortable-table');
-                            const isAsc = currentSort.column === column ? !currentSort.asc : true;
+                            const isAsc = currentSort.column === column ? !currentSort.asc : false;
 
                             sortTable(table, column, isAsc);
 
@@ -109,8 +109,9 @@ public class App extends Application {
         sb.append("                  }\n");
         sb.append("  h1 {font-size: 1.8em; color: #9D261D}\n");
         sb.append("  h2 {font-size: 1.2em; color: #000080;}\n");
+        sb.append("  td {font-size: 0.8em;}\n");
         sb.append(String.format("  body {font-family: ipa, %s, charis, nyushu;}", FontUtil.getSystemFallbackFont()));
-        sb.append("</style></head><body>");
+        sb.append("</style></head><body onload='sortTableByColumn(1);'>");
         sb.append(DB.getIntroText(DB.getLanguageByLabel(lang)));
         webView.loadDataWithBaseURL(null, sb.toString(), "text/html; charset=utf-8", "utf-8", null);
 

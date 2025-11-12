@@ -33,7 +33,7 @@ def dumpJson(langs):
 		Feature = {
 			"type": "Feature",
 			"properties": {
-				"marker-color": lang.info["音典顏色"],
+				"marker-color": lang.info["音典顏色"].split(",")[0],
 				"marker-size": getMarkerSize(int(lang.info["地圖級別"])),
 				"marker-symbol": lang.info["音典排序"][0].lower() if lang.info["音典排序"] else "",
 				"title": lang.info["簡稱"],
@@ -48,7 +48,7 @@ def dumpJson(langs):
 				Feature["properties"][i] = lang.info[i]
 		FeatureCollection["features"].append(Feature)
 	curdir = os.path.dirname(__file__)
-	geojsonpath = os.path.join(curdir, "方言.geojson")
+	geojsonpath = os.path.join(curdir, "info.geojson")
 	if os.path.exists(geojsonpath):
 		json.dump(FeatureCollection, fp=open(geojsonpath, "w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
 
@@ -86,7 +86,7 @@ def dumpHtml(langs):
 
 			function sortTableByColumn(column) {
 				const table = document.getElementById('sortable-table');
-				const isAsc = currentSort.column === column ? !currentSort.asc : true;
+				const isAsc = currentSort.column === column ? !currentSort.asc : false;
 				
 				sortTable(table, column, isAsc);
 				
@@ -113,7 +113,7 @@ def dumpHtml(langs):
 			th.sorted-desc::after { content: " ↓"; }
 		</style>
 	</head>
-	<body>
+	<body onload="sortTableByColumn(8);">
 		<table id="sortable-table" border="1" cellspacing="0" cellpadding="5">
 			<thead>
 				<tr>
