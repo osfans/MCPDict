@@ -235,7 +235,6 @@ def 加載(省=None):
 			"繁簡":繁簡,
 			"聲調":聲調
 		}
-	geojsonpath = os.path.join(curdir, "..", "方言.geojson")
-	if os.path.exists(geojsonpath):
+	if os.path.exists(tpath):
 		json.dump(d, fp=open(tpath,"w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
 	return d
