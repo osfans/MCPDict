@@ -23,35 +23,6 @@ def getMarkerSize(size):
 	if size == 3: return "medium"
 	return "small"
 
-def dumpJson(langs):
-	FeatureCollection = {
-		"type": "FeatureCollection",
-		"features": []
-	}
-	for lang in langs:
-		if not lang.info.get("經緯度", ""): continue
-		Feature = {
-			"type": "Feature",
-			"properties": {
-				"marker-color": lang.info["音典顏色"].split(",")[0],
-				"marker-size": getMarkerSize(int(lang.info["地圖級別"])),
-				"marker-symbol": lang.info["音典排序"][0].lower() if lang.info["音典排序"] else "",
-				"title": lang.info["簡稱"],
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": eval(lang.info["經緯度"])
-			}
-		}
-		for i in ["語言", "地點", "地圖集二分區", "音典分區", "陳邡分區", '方言島', '版本', '作者', '錄入人', '維護人', '字表來源', '參考文獻', '補充閲讀', '字數', '□數', '音節數', '不帶調音節數']:
-			if lang.info[i]:
-				Feature["properties"][i] = lang.info[i]
-		FeatureCollection["features"].append(Feature)
-	curdir = os.path.dirname(__file__)
-	geojsonpath = os.path.join(curdir, "info.geojson")
-	if os.path.exists(geojsonpath):
-		json.dump(FeatureCollection, fp=open(geojsonpath, "w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
-
 def dumpHtml(langs):
 	lines = list()
 	lines.append("""<html lang="ko">
@@ -186,9 +157,6 @@ if not args.output:
 
 	conn.commit()
 	conn.close()
-
-if args.json:
-	dumpJson(langs)
 
 if args.html:
 	dumpHtml(langs)

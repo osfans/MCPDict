@@ -37,7 +37,7 @@ jobs:
         pushd tools
         python3 -m pip install -r requirements.txt
         touch tables/*.py
-        python3 make.py -c -j -l
+        python3 make.py -c -l
         popd
 
     - name: Grant execute permission for gradlew
