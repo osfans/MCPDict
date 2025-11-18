@@ -10,6 +10,11 @@ if not os.path.exists(spath):
 	spath = os.path.join(curdir, "..", spath)
 tpath = os.path.join(curdir, "output", os.path.basename(__file__).rstrip("c").replace(".py", ".json"))
 
+FeatureCollection = {
+	"type": "FeatureCollection",
+	"features": []
+}
+
 def 過時():
 	if not os.path.exists(tpath): return True
 	classtime = os.path.getmtime(__file__.rstrip("c"))
@@ -235,6 +240,26 @@ def 加載(省=None):
 			"繁簡":繁簡,
 			"聲調":聲調
 		}
-	if os.path.exists(tpath):
+		if not 經緯度: continue
+		Feature = {
+			"type": "Feature",
+			"properties": {
+				"marker-color": colors[0],
+				"marker-size": getMarkerSize(地圖級別),
+				"marker-symbol": orders[0][0].lower() if orders[0] else "",
+				"title": 簡稱,
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": eval(f"[{經緯度}]")
+			}
+		}
+		for i in ["語言", "地點", "地圖集二分區", "音典分區", "陳邡分區", '方言島', '版本', '作者', '錄入人', '維護人', '字表來源', '參考文獻', '補充閲讀']:
+			if d[簡稱][i]:
+				Feature["properties"][i] = d[簡稱][i]
+		FeatureCollection["features"].append(Feature)
+	geojsonpath = os.path.join(curdir, "..", "info.geojson")
+	if os.path.exists(geojsonpath):
+		json.dump(FeatureCollection, fp=open(geojsonpath, "w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
 		json.dump(d, fp=open(tpath,"w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
 	return d

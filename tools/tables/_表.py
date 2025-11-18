@@ -25,8 +25,8 @@ def getYDMark(py):
 	return py[-1] if py[-1] in YDS else ""
 
 def getYD(py):
-	if py[-1] in ("-", "="):
-		return ""
+	# if py[-1] in ("-", "="):
+	# 	return ""
 	return YDS.get(py[-1], "")
 
 def getCompatibilityVariants():

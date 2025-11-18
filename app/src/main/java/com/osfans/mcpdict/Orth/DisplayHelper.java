@@ -68,7 +68,6 @@ public abstract class DisplayHelper {
 
     public static CharSequence formatIPA(String lang, String s) {
         if (TextUtils.isEmpty(s)) return "";
-        if (!lang.contentEquals(DB.BA)) s = s.replaceAll("-([/ ])|-(/?)$", "{(白)}$1").replaceAll("=([/ ])|=(/?)$", "{(文)}$1");
         return switch (lang) {
             case DB.HK -> Cantonese.displayHelper.display(s, lang);
             case DB.KOR -> Korean.displayHelper.display(s, lang);
