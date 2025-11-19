@@ -183,10 +183,10 @@ class 表(_表):
 		for 行 in dt:
 			字 = 行[0]
 			js = 行[1:]
+			if js == "@╳": continue
 			d[字].append(js)
 		for 字 in d.keys():
 			d[字] = 自.normList(d[字], vt, d)
 		for 字 in d.keys():
 			d[字] = 自.normList(d[字], vt, d)
 		自.寫(d)
-

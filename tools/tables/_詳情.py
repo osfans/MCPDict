@@ -33,6 +33,7 @@ def getTones(tones):
 		index = i
 		if not ts: continue
 		ts = str(ts).lower().replace("ˀ", "6").replace("ʔ", "0").replace("，", ",").replace(" ", "")
+		ts = re.sub(r"([^,])(\[)", r"\1,\2", ts)
 		tsn = ts.count(",") + 1
 		for j,t in enumerate(ts.split(",")):
 			if t.startswith("["):
@@ -257,14 +258,7 @@ def 加載(省=None):
 			if d[簡稱][i]:
 				Feature["properties"][i] = d[簡稱][i]
 		FeatureCollection["features"].append(Feature)
-	# for k, v in d.items():
-	# 	if "," in v["音典顏色"]:
-	# 		subcolor = v["音典顏色"].split(",")[-1][1:]
-	# 		if subcolor in 音典顔色分區:
-	# 			v["音典分區"] += "," + 音典顔色分區[subcolor]
-	# 		else:
-	# 			print(k, "音典過渡色無對應分區")
-	geojsonpath = os.path.join(curdir, "..", "方言.geojson")
+	geojsonpath = os.path.join(curdir, "..", "info.geojson")
 	if os.path.exists(geojsonpath):
 		json.dump(FeatureCollection, fp=open(geojsonpath, "w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
 		json.dump(d, fp=open(tpath,"w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)

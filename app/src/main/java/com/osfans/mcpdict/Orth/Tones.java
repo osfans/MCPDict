@@ -28,6 +28,9 @@ public class Tones {
             String tone = it.next();
             result.add(s + tone);
         }
+        if (!result.contains(s + "0")) {
+            result.add(s + "0");
+        }
         return result;
     }
 

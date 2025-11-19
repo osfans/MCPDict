@@ -39,24 +39,80 @@ public class App extends Application {
     public static void info(Context context, String lang) {
         WebView webView = new WebView(context, null);
         StringBuilder sb = new StringBuilder();
-        sb.append("<html><head><style>\n")
-          .append("                  @font-face {\n")
-          .append("                    font-family: ipa;\n")
-          .append("                    src: url('file:///android_res/font/ipa.ttf');\n")
-          .append("                  }\n")
-          .append("                  @font-face {\n")
-          .append("                    font-family: charis;\n")
-          .append("                    src: url('file:///android_res/font/charis.ttf');\n")
-          .append("                  }\n")
-          .append("                  @font-face {\n")
-          .append("                    font-family: nyushu;\n")
-          .append("                    src: url('file:///android_res/font/nyushu.ttf');\n")
-          .append("                  }\n")
-          .append("  h1 {font-size: 1.8em; color: #9D261D}\n")
-          .append("  h2 {font-size: 1.2em; color: #000080;}\n")
-          .append(String.format("  body {font-family: ipa, %s, charis, nyushu;}", FontUtil.getSystemFallbackFont()))
-          .append("</style></head><body>")
-          .append(DB.getIntroText(DB.getLanguageByLabel(lang)));
+        sb.append("""
+        <html>
+        <head>
+            <script>
+                        let currentSort = { column: null, asc: true };
+
+                        function sortTable(table, column, asc = true) {
+                            const tbody = table.querySelector('tbody');
+                            const rows = Array.from(tbody.querySelectorAll('tr'));
+
+                            // 排序规则
+                            const sortedRows = rows.sort((a, b) => {
+                                const aText = a.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+                                const bText = b.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+
+                                // 数字排序
+                                if (!isNaN(aText) && !isNaN(bText)) {
+                                    return asc ? aText - bText : bText - aText;
+                                }
+
+                                // 文本排序
+                                return asc ? aText.localeCompare(bText) : bText.localeCompare(aText);
+                            });
+
+                            // 重新插入排序后的行
+                            sortedRows.forEach(row => tbody.appendChild(row));
+                        }
+
+                        function sortTableByColumn(column) {
+                            const table = document.getElementById('sortable-table');
+                            const isAsc = currentSort.column === column ? !currentSort.asc : false;
+
+                            sortTable(table, column, isAsc);
+
+                            // 更新排序状态
+                            currentSort = { column, asc: isAsc };
+
+                            // 更新表头样式
+                            updateHeaderStyles(column, isAsc);
+                        }
+
+                        function updateHeaderStyles(column, asc) {
+                            const headers = document.querySelectorAll('th');
+                            headers.forEach((header, index) => {
+                                header.classList.remove('sorted-asc', 'sorted-desc');
+                                if (index === column) {
+                                    header.classList.add(asc ? 'sorted-asc' : 'sorted-desc');
+                                }
+                            });
+                        }
+                    </script>
+                    <style>
+                        th { cursor: pointer; }
+                        th.sorted-asc::after { content: " ↑"; }
+                        th.sorted-desc::after { content: " ↓"; }
+                """);
+        sb.append("                  @font-face {\n");
+        sb.append("                    font-family: ipa;\n");
+        sb.append("                    src: url('file:///android_res/font/ipa.ttf');\n");
+        sb.append("                  }\n");
+        sb.append("                  @font-face {\n");
+        sb.append("                    font-family: charis;\n");
+        sb.append("                    src: url('file:///android_res/font/charis.ttf');\n");
+        sb.append("                  }\n");
+        sb.append("                  @font-face {\n");
+        sb.append("                    font-family: nyushu;\n");
+        sb.append("                    src: url('file:///android_res/font/nyushu.ttf');\n");
+        sb.append("                  }\n");
+        sb.append("  h1 {font-size: 1.8em; color: #9D261D}\n");
+        sb.append("  h2 {font-size: 1.2em; color: #000080;}\n");
+        sb.append("  td {font-size: 0.8em;}\n");
+        sb.append(String.format("  body {font-family: ipa, %s, charis, nyushu;}", FontUtil.getSystemFallbackFont()));
+        sb.append("</style></head><body onload='sortTableByColumn(1);'>");
+        sb.append(DB.getIntroText(DB.getLanguageByLabel(lang)));
         webView.loadDataWithBaseURL(null, sb.toString(), "text/html; charset=utf-8", "utf-8", null);
 
         new AlertDialog.Builder(context)

@@ -25,8 +25,8 @@ def getYDMark(py):
 	return py[-1] if py[-1] in YDS else ""
 
 def getYD(py):
-	if py[-1] in ("-", "="):
-		return ""
+	# if py[-1] in ("-", "="):
+	# 	return ""
 	return YDS.get(py[-1], "")
 
 def getCompatibilityVariants():
@@ -333,6 +333,10 @@ class 表:
 	def 無q聲(自):
 		return 自.簡稱 not in ("盛唐", "榕江侗上古借詞", "榕江侗中古借詞") and not 自.文件名.startswith("白語")
 
+	def 無音(自, 音):
+		音 = 音.strip(" /-—－")
+		return 自.爲語() and 自.爲音 and (音.isdigit() or 音 == "")
+
 	def _正音(自, 音):
 		if 自.爲語() and 自.爲音:
 			if re.match(".*[⓪①-⑨ⓐⓑ]+", 音):
@@ -345,7 +349,7 @@ class 表:
 			音 = 音.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀∅Ø〇0").replace("零", "")
 			if 自.無q聲(): 音 = 音.lstrip("q")
 			if 音.startswith("I") or 音.startswith("1"): 音 = "l" + 音[1:]
-			音 = 音.lower().replace("ε", "ɛ").replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ").replace("‘", "ʰ").replace(":","ː")
+			音 = 音.lower().replace("ε", "ɛ").replace("g", "ɡ").replace("ʼ", "ʰ").replace("'", "ʰ").replace("‘", "ʰ").replace(":","ː").replace("—", "-").replace("－", "-")
 			音 = re.sub("([ʂʐ]ʰ?)ʮ", "\\1ʯ", 音)
 			音 = re.sub("([sz]ʰ?)ʯ", "\\1ʮ", 音)
 			音 = re.sub("([ʂʐ]ʰ?)ɿ", "\\1ʅ", 音)
@@ -364,6 +368,7 @@ class 表:
 		return 音
 
 	def 正音(自, 音, 檢查=False):
+		if 自.無音(音): return ""
 		音 = 自._正音(音)
 		if not 檢查: return 音
 		if "\t" in 音:
@@ -438,6 +443,7 @@ class 表:
 				else:
 					音, 註 = py, ""
 				音 = 自.正音(音)
+				if not 音: continue
 				if 字 == "□" and not 註:
 					自.誤.append(f"【□】({音})無註釋")
 				音 = f"{音}\t{註}"
@@ -585,7 +591,7 @@ class 表:
 			.replace("｛", "{").replace("｝", "}")\
 			.replace("／", "/").replace("？", "?").replace("！", "!").replace("：", ":").replace("；",";").replace("...", "⋯").replace("｜", "|")\
 			.replace("∽", "~").replace("～", "~")
-		行 = 行.replace("\u1dc9", "\u0303")\
+		行 = 行.replace("\u1dc9", "\u0303").replace("\u0342", "\u0303")\
 			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ").replace("ꭧ", "tʂ")\
 			.replace("ʣ", "dz").replace("ʥ", "dʑ").replace("ʤ", "dʒ").replace("ꭦ", "dʐ")\
 			.replace("ʔb", "ɓ").replace("ʔd", "ɗ")\
