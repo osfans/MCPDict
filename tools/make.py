@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import sqlite3, os, sys
+import sqlite3, os, sys, json
 from collections import defaultdict
 from time import time
 from tables import *
@@ -11,10 +11,104 @@ parser.add_argument('-c', action='store_true', help='檢查同音字', required=
 parser.add_argument('-s', action='store_true', help='計算相似度', required=False)
 parser.add_argument('-省', help='province to include', required=False)
 parser.add_argument('-o', '--output', help='output tsv', required=False)
+parser.add_argument('-j', '--json', action='store_true', help='output json', required=False, default=False)
+parser.add_argument('-l', '--html', action='store_true', help='output html', required=False, default=False)
 args, argv = parser.parse_known_args()
 start = time()
 
 字數 = 0
+
+def getMarkerSize(size):
+	if size >= 4: return "large"
+	if size == 3: return "medium"
+	return "small"
+
+def dumpHtml(langs):
+	lines = list()
+	lines.append("""<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>漢字音典已收錄語言</title>
+		<script>
+			let currentSort = { column: null, asc: true };
+
+			function sortTable(table, column, asc = true) {
+				const tbody = table.querySelector('tbody');
+				const rows = Array.from(tbody.querySelectorAll('tr'));
+				
+				// 排序规则
+				const sortedRows = rows.sort((a, b) => {
+					const aText = a.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+					const bText = b.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+					
+					// 数字排序
+					if (!isNaN(aText) && !isNaN(bText)) {
+						return asc ? aText - bText : bText - aText;
+					}
+					
+					// 文本排序
+					return asc ? aText.localeCompare(bText) : bText.localeCompare(aText);
+				});
+				
+				// 重新插入排序后的行
+				sortedRows.forEach(row => tbody.appendChild(row));
+			}
+
+			function sortTableByColumn(column) {
+				const table = document.getElementById('sortable-table');
+				const isAsc = currentSort.column === column ? !currentSort.asc : false;
+				
+				sortTable(table, column, isAsc);
+				
+				// 更新排序状态
+				currentSort = { column, asc: isAsc };
+				
+				// 更新表头样式
+				updateHeaderStyles(column, isAsc);
+			}
+
+			function updateHeaderStyles(column, asc) {
+				const headers = document.querySelectorAll('th');
+				headers.forEach((header, index) => {
+					header.classList.remove('sorted-asc', 'sorted-desc');
+					if (index === column) {
+						header.classList.add(asc ? 'sorted-asc' : 'sorted-desc');
+					}
+				});
+			}
+		</script>
+		<style>
+			th { cursor: pointer; }
+			th.sorted-asc::after { content: " ↑"; }
+			th.sorted-desc::after { content: " ↓"; }
+		</style>
+	</head>
+	<body onload="sortTableByColumn(8);">
+		<table id="sortable-table" border="1" cellspacing="0" cellpadding="5">
+			<thead>
+				<tr>
+""")
+	headers = ["序號","語言", "簡稱", "地點", "經緯度", "地圖集二分區", "音典分區", "陳邡分區", "版本","字表來源", "參考文獻", "補充閲讀", "字數", "□數", "音節數", "不帶調音節數"]
+	for header in headers:
+		lines.append(f"\t\t\t\t\t<th onclick='sortTableByColumn({headers.index(header)})'>{header}</th>\n")
+	lines.append("\t\t\t\t</tr>\n\t\t\t</thead>\n\t\t\t<tbody>\n")
+	count = 0
+	for lang in langs[1:]:
+		if not lang.info.get("地圖集二分區", ""): continue
+		lines.append("\t\t\t\t<tr>\n")
+		for i in headers:
+			v = lang.info.get(i, "")
+			if i == "序號":
+				count += 1
+				v = str(count)
+			if v is None: v = ""
+			lines.append(f"\t\t\t\t\t<td>{v}</td>\n")
+		lines.append("\t\t\t\t</tr>\n")
+	lines.append("\t\t\t</tbody>\n\t\t</table>\n\t</body>\n</html>")
+	curdir = os.path.dirname(__file__)
+	curpath = os.path.join(curdir, "info.html")
+	open(curpath, "w",encoding="U8",newline="\n").writelines(lines)
 
 #db
 if not args.output:
@@ -33,7 +127,7 @@ if not args.output:
 			sys.exit(1)
 	fields = ["字組", "語言", "讀音", "註釋"]
 	tokens = "□－〈〉［］（）"
-	CREATE = 'CREATE VIRTUAL TABLE langs USING fts5 (%s, columnsize=0, tokenize="unicode61 tokenchars \'%s\'")' % (",".join(fields), tokens)
+	CREATE = 'CREATE VIRTUAL TABLE langs USING fts5 (%s, columnsize=0, tokenize="unicode61 remove_diacritics 0 tokenchars \'%s\' ")' % (",".join(fields), tokens)
 	INSERT = 'INSERT INTO langs VALUES (%s)'% (','.join('?' * len(fields)))
 	c.execute(CREATE)
 	c.executemany(INSERT, items)
@@ -63,6 +157,9 @@ if not args.output:
 
 	conn.commit()
 	conn.close()
+
+if args.html:
+	dumpHtml(langs)
 
 passed = time() - start
 print(f"({字數:5d}) {passed:6.3f} 保存")

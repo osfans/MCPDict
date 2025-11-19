@@ -43,6 +43,8 @@ class 表(_表):
 				字 = 字[0]
 			elif 名 in ("雷州",):
 				音 = 音.replace("˨˨˩", "˨˩")
+			elif 名 in ("東莞東坑",):
+				音 = re.sub(r"^(.*?)(\d+)/(\d+)$", r"\1\2/\1\3", 音)
 			elif 名 in ("開化",):
 				if re.match(r"（.*?）", 註): 註 = 註[1:-1]
 			elif 名 in ("江門",):
@@ -168,8 +170,10 @@ class 表(_表):
 						l.append((字, 自.轉調類(音標), 註2))
 					return l
 			elif 自.文件名.startswith("湖南洞绥片赣方言语音调查研究"):
+				if 自.無音(音): return
 				if "/" in 音:
 					l = list()
+					音 = re.sub(r"^(.*?)(\d+)/(\d+)$", r"\1\2/\1\3", 音)
 					for i, 音標 in enumerate(音.split("/")):
 						l.append((字, 自.轉調類(音標) + ("-" if i == 1 else "="), 註))
 					return l
@@ -203,11 +207,12 @@ class 表(_表):
 					l.append((字,音標,本註))
 				return l
 			elif 自.文件名.startswith("语言接触与湘西南苗瑶平话调查研究"):
-				if 音 == "/": return
+				if 自.無音(音): return
 				if ";" in 音:
 					音標組 = 音.split(";")
 					l = list()
 					for 音標 in 音標組:
+						音標 = 自.正音(音標)
 						if re.match(r"^.*[¹²³⁴⁵]+[\-=]?$", 音標):
 							l.append((字, 自.轉調類(音標), 註))
 							continue
@@ -288,5 +293,6 @@ class 表(_表):
 			if 自.info.get("字表使用調值", False):
 				音 = 自.轉調類(音)
 			音 = 自.正音(音)
+			if not 音: continue
 			l.append((字, 音, 註))
 		return l

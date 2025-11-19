@@ -221,7 +221,6 @@
 □	tʰyø2	鼎~
 㔶	kam3	~被:盖被子
 㖹	pʊn2	吹
-㡳	ty3	~爿:里面
 㪠	kʰem5	盖子
 㾪	seiŋ3	~肉:瘦肉
 䋎	tʰien5	缝补
@@ -232,6 +231,7 @@
 丁	tiŋ1	
 七	tsʰit7	
 万	wuon6	
+丈	tøŋ5	
 丈	tɔuŋ6	~夫:男人
 丈	tuoŋ6	~夫
 丈	tyøŋ6	~奶:丈母娘
@@ -264,7 +264,7 @@
 个	kɔ5	分~:分家
 丫	ʔa1	~头
 中	tyŋ1=	
-中	tøŋ5	射~丈
+中	tøŋ5	射~
 中	touŋ1-	当~:中间
 丰	xuŋ1	
 串	tsʰɔn5	
@@ -636,7 +636,7 @@
 劍	kien5	
 剔	tʰit7	
 剔	tʰik7	
-剜	wŋ1	
+剜	wuan1	
 剝	puoʔ7-	
 劇	kʰøk8	
 剪	tsen3	
@@ -754,7 +754,7 @@
 友	jiu3	
 雙	søŋ1	
 反	pen3-	
-反	xŋ3	
+反	xuan3	
 叔	tsyk7	
 取	tsʰy3	
 受	seu6	
@@ -862,7 +862,7 @@
 唉	ʔai1	
 唐	tɔuŋ2	
 嗩	sɔ6	
-喚	xŋ5	
+喚	xuan5	
 喚	xuon5	
 售	seu6	
 唱	tsʰyøŋ5	
@@ -1110,7 +1110,7 @@
 娶	tsʰy3	
 娶	tsʰiu3	迎娶:~奶娘
 婆	pɔ2	
-婉	wŋ3	
+婉	wuan3	
 婚	xuon1	
 婞	xɛiŋ5	偏不
 嬰	ʔeiŋ1	
@@ -1168,7 +1168,7 @@
 宙	teu6	
 定	tien6	
 定	tieŋ6	
-宛	wŋ3	
+宛	wuan3	
 宛	wuon3	
 宜	ŋie2	
 寶	pɔ3	
@@ -1390,7 +1390,7 @@
 弥	mi2	~勒佛
 弦	xien2	
 彎	wuon2-	
-彎	wŋ1	
+彎	wuan1	
 弱	yøk8	
 彈	tan6	子~
 强	kyøŋ2	
@@ -1506,7 +1506,7 @@
 驚	kiŋ1=	
 驚	kiaŋ1-	怕
 驚	kieŋ1-	怕
-惋	wŋ3	
+惋	wuan3	
 惕	tʰit7	
 惕	tʰik7	
 惜	sik7-	
@@ -1699,7 +1699,7 @@
 挨	ʔɛ1	
 振	tsin3	
 挺	tʰiŋ3	
-挽	wŋ3	
+挽	wuan3	
 捅	tʰuŋ3	
 捆	kʰun3	
 捉	tsuo1	
@@ -1905,7 +1905,7 @@
 晏	ʔan5	晚
 曉	xiou3	
 暈	xʊn2-	
-晚	wŋ3	
+晚	wuan3	
 晡	puo1	螟~
 晦	øy5	
 晦	wuoi5	
@@ -2156,7 +2156,7 @@
 櫼	tsiem1	名词;楔子※动词;塞入
 欠	kʰiem5	
 次	tsʰo5	
-歡	xŋ1	
+歡	xuan1	
 欣	xyn1	
 歐	ʔeu1	
 欲	syk8	
@@ -2343,7 +2343,7 @@
 涓	kyøŋ1	
 涔	kʰɔ6	干涸
 澇	lɔ6	
-渙	xŋ5	
+渙	xuan5	
 滌	tit8	
 潤	non5	
 潤	øn6	
@@ -2393,7 +2393,7 @@
 湖	xʊ2=	~南省
 湘	souŋ1	
 灣	wuon2-	
-灣	wŋ1	
+灣	wuan1	
 溼	sip7	
 溉	kai5	
 源	ŋuon2	
@@ -2502,7 +2502,7 @@
 烹	pʰeiŋ1	
 烽	xuŋ1	
 焊	ʔan6	
-煥	xŋ5	
+煥	xuan5	
 燜	mun1	
 焙	pʰʊ2	
 焙	pøy6	番薯母~:育红薯苗的苗圃
@@ -2678,7 +2678,7 @@
 畜	xyk7=	~牧
 略	lok8	
 畦	wuo1	
-番	xŋ1	~茄:辣椒
+番	xuan1	~茄:辣椒
 番	xuon1	~豆:玉米
 番	xuon5	~豆:玉米
 番	puon1	几~:几次
@@ -2844,7 +2844,7 @@
 礙	ŋai6	
 碎	tsʰɔi5	食~:零食
 碑	pi1	
-碗	wŋ3	
+碗	wuan3	
 碘	tien3	
 碟	tep8	
 碧	pʰik7-	
@@ -3178,7 +3178,7 @@
 翰	xam6	
 翰	xan6	
 翳	jie5	
-翻	xŋ1	
+翻	xuan1	
 翼	jit8=	
 翼	sip8-	翅膀
 耀	jiou6=	
@@ -3278,7 +3278,7 @@
 腐	pou6-	
 腐	xu3=	
 腔	kʰøŋ1	
-腕	wŋ3	
+腕	wuan3	
 腭	ŋok7	
 腮	sai1	
 腰	jiou1	
@@ -3456,7 +3456,7 @@
 蔡	tsʰai5	
 蔫	yøn1	食物变坏
 蔸	tau1	
-蕃	xŋ1	
+蕃	xuan1	
 蕉	tsiou1	
 蕙	xie6	
 蕨	kot7	
@@ -3479,7 +3479,7 @@
 藐	miou3	
 藕	ŋau6	
 藤	tɪn2	
-藩	xŋ1=	
+藩	xuan1=	
 藿	xuok7	~香
 蘖	ŋiep8	
 虎	xu3	
@@ -3587,8 +3587,7 @@
 裂	let8	
 裂	lɛt8	
 裝	tsouŋ1	
-裏	køy3-	袄~:衣兜
-裏	kuoi3-	袄~:衣兜
+裏	ty3	~爿:里面
 裔	ŋyø6	
 裕	y3	
 裙	kun2	
@@ -3600,6 +3599,8 @@
 裴	pøy2	
 裴	puoi2	
 裸	luo6	
+裹	køy3-	袄~:衣兜
+裹	kuoi3-	袄~:衣兜
 製	tsie5	
 褂	kuo5	
 褒	pɔ1	
@@ -3719,10 +3720,10 @@
 豆	tau6	
 豇	kouŋ1	~豆
 豉	tie6	豆~
-豌	wŋ1	
+豌	wuan1	
 豕	tsʰie6	
 象	tsʰyøŋ6	
-豢	xŋ5	
+豢	xuan5	
 豪	xɔ2	
 豹	pau5	
 貂	tiou1	
@@ -3738,7 +3739,7 @@
 敗	pai6	
 貨	xuo5	
 質	tsit7	
-販	xŋ5	
+販	xuan5	
 販	xuon5	
 貪	tʰam1	
 貧	pɪn2	
@@ -3875,7 +3876,7 @@
 迎	ŋieŋ2-	
 迎	ŋɪŋ2=	
 運	ʔon6=	
-返	xŋ3	
+返	xuan3	
 還	xɛn2-	~书
 進	tsen5	
 遠	xuon6-	
