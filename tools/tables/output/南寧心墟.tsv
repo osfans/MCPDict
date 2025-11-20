@@ -64,6 +64,7 @@
 □	jɐm5a	~水:渗水
 □	lin5a	~船:研船
 □	laŋ5a	~街:逛街
+□	kʰɐŋ5a	~陡:态度变化
 □	ŋjɐŋ5a	~雨:毛毛雨
 □	peŋ5a	~交:吵架
 □	luŋ5a	~路:迷路
@@ -75,7 +76,6 @@
 □	mot9a	~水:打水
 □	tsak9a	~头:锄头
 □	kʰuak9a	~lak35:范围
-□	kʰɐŋ5b	~陡:态度变化
 □	kep8b	~蛇:壁虎
 □	pɐp9b	~子筒:一种简易的自制玩具
 □	tɐp9b	~头出来:探头出来
@@ -112,16 +112,16 @@
 □	θam5a	冷
 □	jœn1	凉:~水
 □	ŋɐn5a	切割
-□	tsʰɐm5b	刘海儿
+□	tsʰɐm5a	刘海儿
 □	mɐi5a	别。“冇使”的合音
 □	lɐk9b	削竹节
 □	kue3	割:~草
 □	kuet7	割掉
 □	ke5a	割、锯:~柴
+□	tsʰeu5a	动词，锹
 □	pap9a	动词，糊:~牛粪
-□	tsʰeu5b	动词，锹
 □	ka2	卡:~颈
-□	hɐu5b	双线~:一种蛇
+□	hɐu5a	双线~:一种蛇
 □	la5a	发~:发瘟
 □	le4	口水~:流口水的样子
 □	pʰet9b	吐:~口水
@@ -172,8 +172,8 @@
 □	ŋjɐp9b	拈(起来)
 □	βɐk8b	招(手)
 □	tse5a	拥挤:车~
-□	pʰe5b	拨拉，找
-□	kʰue5b	拨拉:~火
+□	pʰe5a	拨拉，找
+□	kʰue5a	拨拉:~火
 □	ŋjɐu1	拿:~过来
 □	kon2	挑(起来)
 □	tɐm3	挨~:被抢劫
@@ -186,7 +186,7 @@
 □	nuk9b	推(醒)
 □	mɐk7	掰
 □	tʰeu3	提:~篮
-□	tʰɐm5b	插入口袋
+□	tʰɐm5a	插入口袋
 □	kau2	搅动
 □	βɐt9a	搅:~浆糊
 □	tim1	搬(起来)
@@ -201,7 +201,7 @@
 □	θak9a	新~~:很新
 □	kuɐŋ6	月~:月晕
 □	pʰuk9b	木头腐烂
-□	tʰeu5b	条
+□	tʰeu5a	条
 □	neu2	柔韧
 □	lep7	栏，圈:鸡~，鸭~
 □	θep7	楔入
@@ -228,7 +228,7 @@
 □	teu5a	男生殖器
 □	kʰɐp9b	盖
 □	tʰep9a	盯梢
-□	tʰɐŋ5b	相~:相连
+□	tʰɐŋ5a	相~:相连
 □	lɐi3	看
 □	ŋjœy3	看，心圩村用词
 □	tem5a	看
@@ -244,7 +244,7 @@
 □	ŋjan1	粗糙
 □	ne1	粘贴
 □	niu1	粘
-□	hɐu5b	粥~:粥上凝结的一层皮
+□	hɐu5a	粥~:粥上凝结的一层皮
 □	θɐi2	精神不好，身体不舒服
 □	lɐn1	索~:绳子结实
 □	ŋjɐn5a	累
@@ -314,8 +314,8 @@
 下	ha6	底~。又ja22
 不	pɐt7	
 与	hi4	
-与	hɐi5b	给予
-丐	kʰai5b	
+与	hɐi5a	给予
+丐	kʰai5a	
 丑	tsʰɐu3	
 專	tsin1	
 且	tsʰe3	
@@ -335,11 +335,10 @@
 个	kɯ5a	
 丫	ja1	
 中	tsuŋ1	
-中	tsi6	
+中	hen5a	
 中	tsuŋ5a	
-中	hit9a	
 丰	fuŋ1	
-串	tsʰun5b	
+串	tsʰun5a	
 臨	lɐm2	
 丹	tan1	
 爲	βɐi6	~哪门:为什么
@@ -374,7 +373,7 @@
 乾	kin2	~坤
 了	liu4	
 爭	tseŋ1	
-事	ɐi6	
+事	θɐi6	
 二	ŋi6	
 于	ʔi1	
 虧	kʰuɐi1	
@@ -396,7 +395,7 @@
 亭	tœn2	
 亮	leŋ6	
 親	tsʰɐn1	
-親	tsʰɐn5b	
+親	tsʰɐn5a	
 人	ŋjɐn2	
 億	ʔœt7	
 什	θɐp8b	
@@ -410,7 +409,7 @@
 从	tsuŋ2	
 仑	lɐn2	
 倉	tsʰaŋ1	
-仕	ɐi6	
+仕	θɐi6	
 他	tʰa1	
 仗	tseŋ6	
 付	fu6	
@@ -435,7 +434,6 @@
 衆	tsuŋ5a	
 優	jɐu1	
 伙	hu3	
-伙	kap7	
 會	hoi6	~冇~:会不会
 會	βɐi6	开~
 傘	θan5a	
@@ -451,7 +449,7 @@
 伶	lœn2	
 伸	θɐn1	
 伸	tsʰɐn1	~腰
-似	tsʰi5b	
+似	tsʰi5a	
 佃	tin6	
 但	tan6	
 位	βɐi6	
@@ -466,8 +464,8 @@
 作	tsak7	
 你	nœy4	
 佢	kœy4	第三人称单数
-佩	pʰoi5b	
-佮	kap7	
+佩	pʰoi5a	
+佮	kap7	~伙:合伙
 佳	kai1	
 使	θɐi3	
 侄	tsɐt8b	
@@ -489,7 +487,7 @@
 促	tsʰuk7	
 俄	ŋo2	
 俊	tsɐn5a	
-俏	tsʰiu5b	
+俏	tsʰiu5a	
 俗	θuk8b	
 保	pau3	
 信	θɐn5a	
@@ -509,7 +507,7 @@
 傾	kʰœn1	
 假	ka3	
 偏	pʰin1	
-偏	pʰin5b	
+偏	pʰin5a	
 做	tso5a	
 停	tœn2	
 健	kim6	
@@ -542,7 +540,7 @@
 克	kʰɐk7	
 免	min4	
 兑	toi6	
-兔	tʰo5b	
+兔	tʰo5a	
 黨	taŋ3	
 兜	tɐu1	
 入	ŋjɐp9a	
@@ -554,7 +552,7 @@
 共	kuŋ6	
 關	kuan1	
 興	hœn1	
-興	hœn5b	
+興	hœn5a	
 兵	pœn1	
 其	ki2	
 具	kœy6	
@@ -578,7 +576,7 @@
 馮	fuŋ2	
 冲	tsʰuŋ1	
 決	kʰwit7	
-况	kʰuaŋ5b	
+况	kʰuaŋ5a	
 冷	leŋ4	
 凍	tuŋ5a	
 淨	tsœn6	
@@ -586,7 +584,7 @@
 涼	leŋ2	
 凌	lœn2	
 減	kam3	
-湊	tsʰɐu5b	
+湊	tsʰɐu5a	
 几	kœy3	
 凡	fan2	
 鳳	fuŋ6	
@@ -611,10 +609,10 @@
 劉	lɐu2	
 則	tsɐk7	
 剛	kaŋ1	
-創	tsʰaŋ5b	
+創	tsʰaŋ5a	
 初	tsʰo1	
 删	θan1	
-判	pʰun5b	
+判	pʰun5a	
 刨	pau2	
 刨	peu2	~瓜，~皮
 利	lœy6	
@@ -624,10 +622,10 @@
 制	tsɐi5a	
 刷	tsʰat7	
 券	kwin5a	
-刺	tsʰi5b	
+刺	tsʰi5a	
 刻	kʰɐk7	
 劑	tsɐi1	
-剃	tʰɐi5b	
+剃	tʰɐi5a	
 削	θek7	
 前	tsin2	
 劍	kim5a	
@@ -644,7 +642,7 @@
 劈	pʰœt7	
 劘	mɐi1	削
 力	lœt9a	
-勸	kʰwin5b	
+勸	kʰwin5a	
 辦	pan6	
 功	kuŋ1	
 加	ka1	
@@ -726,7 +724,7 @@
 原	βin2	
 廂	θeŋ1	
 廚	tsœy2	
-去	hœy5b	
+去	hœy5a	
 縣	βin6	
 参	tsʰam1	
 参	θɐm1	人~
@@ -743,7 +741,7 @@
 受	θɐu6	
 變	pin5a	
 敍	tsi6	
-叛	pʰun5b	
+叛	pʰun5a	
 疊	tip8b	
 口	hɐu3	
 古	ko3	
@@ -760,20 +758,19 @@
 葉	hip9a	
 號	hau6	
 司	θi1	
-嘆	tʰan5b	
+嘆	tʰan5a	
 吁	ʔi1	
 吃	hɐt7	
 各	kak7	
 吆	ʔiu1	
 吆	ʔeu1	
-合	kap7	
 合	hap8b	
 吉	kɐt7	
 吊	tiu5a	
 同	tuŋ2	
 名	mœn2	
 后	hɐu6	
-吐	tʰu5b	~痰，呕~
+吐	tʰu5a	~痰，呕~
 向	jɐŋ5a	
 呂	li4	
 君	kuɐn1	
@@ -783,7 +780,7 @@
 吠	fœy6	
 否	fɐu4	
 含	ham2	
-聽	tʰœn5b	
+聽	tʰœn5a	
 啓	hœy3	
 吳	ŋo2	
 吵	tsʰau3	
@@ -821,7 +818,7 @@
 喚	βɐn6	
 售	θɐu6	
 唯	βɐi2	
-唱	tsʰeŋ5b	
+唱	tsʰeŋ5a	
 啄	tuk9b	
 啄	tuk7	~木雀:啄木鸟
 商	θeŋ1	
@@ -832,14 +829,14 @@
 喃	nam1	自言自语
 善	θin6	
 喉	hɐu2	
-喊	hem5b	
-喊	hen5b	
+喊	hem5a	
+喊	hen5a	
 喏	ŋam1	
 喐	ŋjuk9b	动
 喜	hœy3	
 喝	hat7	
 喧	θin1	
-噴	pʰɐn5b	
+噴	pʰɐn5a	
 喻	hi2	
 嗅	ŋjɐu5a	
 嗉	θœy5a	
@@ -853,7 +850,7 @@
 嘢	ŋe5a	肉:牛~
 嘴	tsui3	
 噏	ŋɐp9b	胡说
-器	hœy5b	
+器	hœy5a	
 嚇	hek7	
 囂	hiu1	
 囊	naŋ2	
@@ -863,8 +860,8 @@
 囟	θœn5a	
 团	tun2	
 園	βin2	
-困	kʰuɐn5b	又βɐn35
-困	βɐn5a	累。又kʰuɐn24
+困	kʰuɐn5a	又βɐn35
+困	βɐn5a	累。又kʰuɐn35
 圍	βɐi2	
 固	ku5a	
 國	kuk7	
@@ -915,7 +912,7 @@
 堆	toi1	
 堡	pau3	
 堤	tɐi2	
-堪	ham5b	
+堪	ham5a	
 堵	to3	
 塌	tʰat7	~方
 塑	θo5a	
@@ -936,13 +933,13 @@
 壕	hau2	
 壤	ŋjeŋ6	
 壩	pa5a	
-士	ɐi6	
+士	θɐi6	
 壬	ŋjɐm2	
 壯	tsaŋ5a	
 聲	θœn1	
 殼	hak7	
 壺	ho2	
-處	tsʰœy5b	
+處	tsʰœy5a	
 備	pœy6	
 复	fuk7	
 夏	ja6	
@@ -954,7 +951,7 @@
 够	kɐu5a	
 大	tai6	
 天	tʰin1	
-太	tʰai5b	
+太	tʰai5a	
 夫	fɐu1	轿~头
 央	jɐŋ1	
 夯	hɐŋ1	
@@ -971,11 +968,11 @@
 奉	fuŋ6	
 奮	fɐn5a	
 奏	tsɐu5a	
-契	kʰɐi5b	~爷:干爹
-契	kʰœy5b	老~婆:姘头
+契	kʰɐi5a	~爷:干爹
+契	kʰœy5a	老~婆:姘头
 奔	pɐn1	
 獎	tseŋ3	
-套	tʰau5b	
+套	tʰau5a	
 奚	kʰɐi1	
 奠	tin6	
 奧	ʔau5a	
@@ -984,7 +981,7 @@
 奶	nai4	
 奸	kan1	
 好	hau3	
-好	hau5b	
+好	hau5a	
 如	hi2	
 妃	fœy1	
 妄	muŋ4	
@@ -1038,7 +1035,7 @@
 字	tsi6	
 存	tson2	~款
 孫	θon1	
-孝	hau5b	
+孝	hau5a	
 孟	meŋ6	
 季	kœy5a	
 孤	ko1	
@@ -1064,7 +1061,7 @@
 客	hek7	
 宣	θin1	
 室	θɐt7	
-宪	hin5b	
+宪	hin5a	
 宮	kuŋ1	
 宰	tsai3	
 害	hai6	
@@ -1075,7 +1072,7 @@
 賓	pɐn1	
 寄	kœy5a	
 密	mɐt9a	
-寇	kʰɐu5b	
+寇	kʰɐu5a	
 富	fu5a	
 寒	han2	
 寓	ŋjœy6	
@@ -1085,7 +1082,7 @@
 寡	kua3	
 寥	liu2	
 寨	tsai6	
-寸	tsʰon5b	
+寸	tsʰon5a	
 對	toi5a	
 寺	tsi6	
 尋	tsɐm2	
@@ -1115,7 +1112,7 @@
 尾	mœy4	
 尿	niu6	
 局	kuk8b	
-屁	pʰœy5b	
+屁	pʰœy5a	
 層	tsɐŋ2	
 居	kœy1	
 屈	βɐt7	委~
@@ -1194,10 +1191,10 @@
 幽	jɐu1	
 廣	kuŋ3	
 莊	tsaŋ1	
-慶	hœn5b	
+慶	hœn5a	
 牀	θaŋ2	
 序	tsi6	
-庫	ho5b	
+庫	ho5a	
 應	ʔœn1	~当
 應	ʔœn5a	~付
 底	tɐi3	
@@ -1221,7 +1218,7 @@
 建	kim5a	
 開	hai1	
 异	ʔi5a	
-弃	hœy5b	
+弃	hœy5a	
 弄	luŋ6	
 弊	pɐi6	
 式	θœt7	
@@ -1278,9 +1275,9 @@
 憂	jɐu1	
 快	βai5a	
 懷	βai2	
-態	tʰai5b	
+態	tʰai5a	
 怒	no6	
-怕	pʰa5b	
+怕	pʰa5a	
 怖	pɐu5a	
 憐	lin2	
 思	θi1	
@@ -1327,14 +1324,14 @@
 愚	ŋjœy2	
 感	kam3	
 憤	fɐn4	
-愧	kʰuɐi5b	
+愧	kʰuɐi5a	
 願	βin6	
 慈	tsi2	
 慌	huŋ1	
 慎	θœn6	
 慕	mu6	
 慢	man6	
-慨	kʰai5b	
+慨	kʰai5a	
 慷	kʰaŋ1	
 憎	tsɐŋ1	
 懂	tuŋ3	
@@ -1345,7 +1342,7 @@
 戊	mɐu6	
 戌	θɐt7	
 戎	juŋ2	
-戲	hœy5b	
+戲	hœy5a	
 成	θœn2	
 我	ŋa4	
 戒	kai5a	
@@ -1365,7 +1362,7 @@
 打	ta3	
 托	tʰak7	委~
 扛	kʰaŋ2	抬
-扣	kʰɐu5b	
+扣	kʰɐu5a	
 執	tsɐp7	
 執	tsɐp9b	一~毛:一撮毛
 擴	kʰuk7	
@@ -1388,7 +1385,7 @@
 抓	ŋjau1	
 投	tɐu2	
 抖	tɐu3	
-抗	kʰaŋ5b	
+抗	kʰaŋ5a	
 折	tsit7	
 折	θit8b	
 抛	pʰau1	
@@ -1430,7 +1427,7 @@
 拱	kuŋ3	
 拳	kwin2	
 拴	θan1	
-拼	pʰœn5b	
+拼	pʰœn5a	
 拾	θɐp8b	
 拿	na2	
 持	tsi2	
@@ -1473,12 +1470,12 @@
 排	pai2	
 掘	βɐt7	
 掠	lek9a	
-探	tʰam5b	
+探	tʰam5a	
 接	tsip7	
-控	huŋ5b	
+控	huŋ5a	
 推	tʰoi1	
 掩	ʔim3	
-措	tsʰo5b	
+措	tsʰo5a	
 掰	mak7	~开。又mek33
 掰	mek7	又mak33
 掹	mɐŋ1	攀拉
@@ -1512,7 +1509,7 @@
 摺	tsip7	
 撇	pʰit7	
 撑	tsʰeŋ1	
-撑	tsʰeŋ5b	
+撑	tsʰeŋ5a	
 撕	θi1	
 撚	nɐn3	~人:整人
 撞	tsuŋ6	
@@ -1533,7 +1530,7 @@
 放	fuŋ5a	
 政	tsœn5a	
 故	ku5a	
-效	hau6	~率。又jau24
+效	hau6	~率。又jau35
 效	jau5a	~果，有~，见~。hau22
 敵	tœt8b	
 敏	mɐn4	
@@ -1545,7 +1542,7 @@
 散	θan3	
 散	θan5a	
 敦	tɐn1	
-㪗	tʰɐu5b	
+㪗	tʰɐu5a	
 敬	kœn5a	
 數	θo3	
 數	θo5a	
@@ -1585,7 +1582,7 @@
 旬	θœn2	
 旱	han4	
 時	θi2	
-曠	kʰuaŋ5b	
+曠	kʰuaŋ5a	
 旺	huŋ6	
 昂	ŋaŋ2	
 昆	kʰuɐn1	
@@ -1626,7 +1623,7 @@
 曹	tsau2	
 曾	tsɐŋ1	
 曾	tsɐŋ2	
-替	tʰɐi5b	
+替	tʰɐi5a	
 最	tsui5a	
 月	βit9a	
 有	jɐu4	
@@ -1654,9 +1651,9 @@
 權	kwin2	
 杆	kan1	
 杆	kan3	
-杉	tsʰam5b	
+杉	tsʰam5a	
 李	lœy4	
-杏	hœn5b	
+杏	hœn5a	
 材	tsai2	
 村	tsʰon1	
 杖	tseŋ6	
@@ -1675,7 +1672,7 @@
 松	θuŋ1	~柏，轻~
 板	pan3	
 極	kœt8b	
-構	kʰɐu5b	
+構	kʰɐu5a	
 枇	pœy2	
 枉	ʔuŋ3	
 析	θœt7	
@@ -1689,7 +1686,7 @@
 槍	tsʰeŋ1	
 楓	fuŋ1	
 枯	ho1	
-架	kʰa5b	
+架	kʰa5a	
 枸	kɐu3	~杞
 柄	pœn5a	
 某	mɐu4	
@@ -1702,7 +1699,7 @@
 柱	tsœy4	
 柳	lɐu4	
 柴	θai2	
-柿	ɐi6	
+柿	θɐi6	
 標	piu1	
 棧	tsan6	
 棟	tuŋ6	
@@ -1763,7 +1760,7 @@
 楣	mœy2	
 楷	kai1	
 樓	lɐu2	
-概	kʰai5b	
+概	kʰai5a	
 欖	lam3	
 榜	puŋ3	
 榨	tsa5a	
@@ -1786,8 +1783,8 @@
 櫥	tsœy2	
 檀	tan2	
 檐	hin2	
-欠	him5b	
-次	tsʰi5b	
+欠	him5a	
+次	tsʰi5a	
 歡	hun1	
 欣	hɐn1	
 歐	ʔɐu1	
@@ -1830,26 +1827,26 @@
 毯	tʰan3	
 氏	θi6	
 民	mɐn2	
-气	hœy5b	
+气	hœy5a	
 水	θui3	
 永	βɐn4	
 汀	tʰœn1	
 汁	tsɐp7	
 求	kɐu2	
 汇	βɐi6	
-漢	han5b	
+漢	han5a	
 汗	han6	
 江	kaŋ1	
 池	tsi2	
 污	ʔu1	
 湯	tʰaŋ1	
-汽	hœy5b	
+汽	hœy5a	
 沈	θɐm3	
 沉	tsɐm2	
 沓	tap8b	一~纸
 沕	mœy6	~水:潜水
 沙	θa1	
-沛	pʰoi5b	
+沛	pʰoi5a	
 溝	kɐu1	
 没	mut9a	
 漚	ʔɐu5a	
@@ -1862,12 +1859,12 @@
 泉	tsin2	
 法	fap7	
 泛	fam5a	
-泡	pʰau5b	
+泡	pʰau5a	
 波	po1	
 泥	nɐi2	
 注	tsœy5a	
 淚	lui6	
-泰	tʰai5b	
+泰	tʰai5a	
 泳	βɐn4	
 泵	pɐm1	
 瀉	θe5a	
@@ -1886,7 +1883,7 @@
 活	ʔut8b	
 活	βɐt8b	
 洽	hap8b	
-派	pʰai5b	
+派	pʰai5a	
 流	lɐu2	
 淺	tsʰun3	
 漿	tseŋ1	
@@ -1911,7 +1908,7 @@
 涉	θit8b	
 涌	juŋ4	
 涎	θan2	
-涕	tʰɐi5b	鼻~
+涕	tʰɐi5a	鼻~
 濤	tʰau1	
 澇	lau6	~水:洪水
 潤	ŋjɐn6	
@@ -1932,7 +1929,7 @@
 淵	βin1	
 漸	tsim6	
 漁	ŋjœy2	
-滲	tsʰam5b	
+滲	tsʰam5a	
 渠	kœy2	
 渡	to6	
 渣	tsa1	
@@ -1946,8 +1943,8 @@
 湴	pam6	烂~田:烂泥田
 灣	βan1	
 溼	θɐp7	
-潰	kʰuɐi5b	
-溉	kʰai5b	
+潰	kʰuɐi5a	
+溉	kʰai5a	
 源	βin2	
 準	tsœn3	
 溜	liu1	
@@ -1965,7 +1962,7 @@
 灘	tʰan1	
 滴	tœt7	
 漂	pʰiu1	
-漂	pʰiu5b	
+漂	pʰiu5a	
 漆	tsʰɐt7	
 漏	lɐu6	
 演	ʔim3	
@@ -1984,16 +1981,16 @@
 靈	lœn2	
 竈	tsau5a	
 災	tsai1	
-燦	tsʰan5b	
+燦	tsʰan5a	
 爐	lo2	
 炊	tsʰui1	
 炎	ŋim2	
 炒	tsʰau3	
 炒	tsʰeu3	少量地炒
-炕	kʰaŋ5b	
-炕	hɐŋ5b	
-炭	tʰan5b	
-炮	pʰau5b	
+炕	kʰaŋ5a	
+炕	hɐŋ5a	
+炭	tʰan5a	
+炮	pʰau5a	
 炸	tsa5a	
 點	tim3	~名
 煉	lin6	
@@ -2006,7 +2003,7 @@
 烤	kʰau3	
 煩	fan2	
 燒	θiu1	
-燙	tʰaŋ5b	
+燙	tʰaŋ5a	
 熱	ŋit9a	
 烹	pʰɐŋ1	
 焊	han6	
@@ -2044,7 +2041,7 @@
 爹	te1	
 爽	θaŋ3	
 片	pʰin3	
-片	pʰin5b	
+片	pʰin5a	
 版	pan3	
 牌	pai2	
 牙	ŋja2	
@@ -2080,7 +2077,7 @@
 猜	tsʰai1	
 豬	tsœy1	
 猫	meu5a	
-獻	hin5b	
+獻	hin5a	
 猴	hɐu2	
 猾	βat8b	
 獃	tai1	
@@ -2133,7 +2130,7 @@
 男	nam2	
 畫	βa6	
 畫	βe6	~图
-暢	tsʰeŋ5b	
+暢	tsʰeŋ5a	
 界	kai5a	
 留	lɐu2	
 畜	tsʰuk7	
@@ -2161,7 +2158,7 @@
 痒	jɐŋ4	
 痔	tsi6	
 痕	hɐn2	
-痛	tʰuŋ5b	
+痛	tʰuŋ5a	
 痢	lœy6	
 痣	tsi5a	
 痰	tam2	
@@ -2206,11 +2203,11 @@
 直	tsœt8b	
 相	θeŋ1	
 相	θeŋ5a	
-盼	pʰan5b	
+盼	pʰan5a	
 盾	tɐn6	
 省	θœn3	~长，节~
 眉	mœy2	
-看	han5b	
+看	han5a	
 真	tsɐn1	
 眠	min2	
 眨	tsap7	
@@ -2236,13 +2233,13 @@
 短	tun3	
 矮	ʔɐi3	
 石	θœt8b	
-礦	kʰuaŋ5b	
+礦	kʰuaŋ5a	
 碼	ma4	
-砌	tsʰɐi5b	
+砌	tsʰɐi5a	
 砍	kʰam3	
 研	ŋen2	水~:水碾
 磚	tsin1	
-破	pʰu5b	
+破	pʰu5a	
 礎	tsʰo3	
 硝	θiu1	
 硫	lɐu2	
@@ -2255,7 +2252,7 @@
 碗	ʔun3	
 碟	tip8b	
 碧	pœt7	
-碰	pʰuŋ5b	
+碰	pʰuŋ5a	
 磁	tsi2	
 磑	ŋɐi1	缠磨:人怕~，马怕嘶
 磨	mu2	
@@ -2263,15 +2260,14 @@
 磷	lɐn2	
 示	θi6	
 禮	lɐi4	
-祀	ɐi6	
+祀	θɐi6	祭~
 祁	ki2	
 祖	tso3	
 祝	tsuk7	
 神	θɐn2	
 祠	tsi2	
 祥	tseŋ2	
-票	pʰiu5b	
-祭	ɐi6	
+票	pʰiu5a	
 祭	tsɐi5a	
 禍	hu6	
 禁	kʰɐm1	
@@ -2291,7 +2287,7 @@
 科	hu1	
 秒	miu4	
 租	tso1	
-秤	tsʰœn5b	
+秤	tsʰœn5a	
 秦	tsɐn2	
 秧	jɐŋ1	
 積	tsœt7	
@@ -2317,14 +2313,14 @@
 究	kɐu5a	
 窮	kuŋ2	
 空	huŋ1	
-空	huŋ5b	
+空	huŋ5a	
 穿	tsʰun1	
 突	tɐt8b	
 窄	tsek7	
-竅	kʰeu5b	
+竅	kʰeu5a	
 窯	hiu2	
 窗	tsʰaŋ1	
-竄	tsʰun5b	
+竄	tsʰun5a	
 窩	βo1	打~:用诱饵诱鱼集中
 窟	βat7	屎~:肛门
 窺	kʰuɐi1	
@@ -2343,7 +2339,7 @@
 笙	θeŋ1	
 笛	tœt8b	
 笠	lɐp9b	
-笡	tsʰe5b	
+笡	tsʰe5a	
 符	fu2	
 笨	pɐn6	
 笪	tat7	洞~:踅子
@@ -2358,7 +2354,7 @@
 策	tsʰek7	
 篩	θɐi1	
 箏	tsɐŋ1	
-筷	kʰuai5b	~箸:筷子
+筷	kʰuai5a	~箸:筷子
 籌	tsɐu2	
 签	tsʰim1	
 簡	kan3	
@@ -2374,7 +2370,7 @@
 篇	pʰin1	
 簍	lɐu4	
 篙	kau1	
-篡	tsʰon5b	
+篡	tsʰon5a	
 籃	lam2	
 籬	lœy2	
 篷	puŋ2	
@@ -2399,18 +2395,18 @@
 糞	fɐn5a	
 糧	leŋ2	
 粱	leŋ2	
-粹	tsʰui5b	
+粹	tsʰui5a	
 糉	tsuŋ5a	
 精	tsœn1	
 糝	θam3	
 糍	tsi2	
 糕	kau1	
 糖	taŋ2	
-糙	tsʰau5b	
+糙	tsʰau5a	
 糟	tsau1	酒~
 糠	haŋ1	
 糯	nu6	~米
-系	hœy5b	
+系	hœy5a	
 素	θo5a	
 索	θak7	
 緊	kɐn3	
@@ -2421,7 +2417,7 @@
 紅	huŋ2	
 約	jek7	~定
 級	kʰɐp7	
-纊	kʰuɐŋ5b	
+纊	kʰuɐŋ5a	
 紀	kœy3	
 純	θœn2	
 紕	pʰœy1	
@@ -2479,8 +2475,8 @@
 繳	kiu3	
 缸	kaŋ1	
 缺	kʰwit7	
-罅	ha5b	手指~:手指缝。又he24
-罅	he5b	缝儿。又ha24
+罅	ha5a	手指~:手指缝。又he35
+罅	he5a	缝儿。又ha35
 罐	kun5a	
 网	muŋ4	
 罕	hen3	
@@ -2500,8 +2496,8 @@
 羹	keŋ1	
 羽	hi4	
 翁	ʔuŋ1	
-翅	tsʰi5b	
-翠	tsʰui5b	
+翅	tsʰi5a	
+翠	tsʰui5a	
 翻	fan1	
 翼	jœt9a	
 耀	hiu6	
@@ -2511,7 +2507,7 @@
 而	lɯ2	~且
 耐	nai6	
 耕	keŋ1	
-耗	hau5b	
+耗	hau5a	
 耙	pa2	
 耳	ŋi4	
 耶	je2	
@@ -2523,7 +2519,7 @@
 聾	luŋ2	
 職	tsœt7	
 聯	lim2	
-聘	pʰœn5b	
+聘	pʰœn5a	
 聚	tsʰi3	
 聰	tsʰuŋ1	
 肄	ʔi5a	
@@ -2559,7 +2555,7 @@
 胸	huŋ1	
 能	tʰɐŋ2	
 脂	tsi1	
-脆	tsʰui5b	
+脆	tsʰui5a	
 脉	mek9a	
 脊	tsœt7	
 脏	tsaŋ6	
@@ -2597,7 +2593,7 @@
 臊	θau1	
 臣	tsɐn2	
 自	tsi6	
-臭	tsʰɐu5b	
+臭	tsʰɐu5a	
 至	tsi5a	
 致	tsi5a	
 臻	tsɐn1	
@@ -2672,8 +2668,8 @@
 莽	maŋ4	
 菊	kuk7	
 菌	kuɐn4	
-菏	ho5b	薄~
-菜	tsʰai5b	
+菏	ho5a	薄~
+菜	tsʰai5a	
 菠	po1	
 菢	pau6	
 菩	pu2	
@@ -2707,7 +2703,7 @@
 蓬	puŋ2	
 蔔	pɐk8b	蘿~
 蔗	tsi5a	
-蔡	tsʰai5b	
+蔡	tsʰai5a	
 蔬	θo1	
 蔸	tɐu1	
 蕉	tsiu1	
@@ -2780,7 +2776,7 @@
 補	pɐu3	
 表	piu3	
 衫	θam1	
-襯	tsʰɐn5b	
+襯	tsʰɐn5a	
 衷	tsuŋ1	
 袁	βin2	
 袋	tai6	
@@ -2796,13 +2792,13 @@
 襠	taŋ1	裤~
 裕	hi6	
 裙	kuɐn2	
-褲	ho5b	
+褲	ho5a	
 裳	θeŋ2	
 褒	pau1	
-褪	tʰɐn5b	
+褪	tʰɐn5a	
 襄	θeŋ1	
 襟	kʰɐm1	
-襻	pʰan5b	
+襻	pʰan5a	
 西	θɐi1	
 要	ʔiu1	
 要	ʔiu5a	~紧，重~
@@ -2866,7 +2862,7 @@
 請	tsʰœn3	
 諸	tsœy1	
 讀	tuk8b	
-課	kʰo5b	
+課	kʰo5a	
 誰	θui2	
 諗	nɐm4	想，考虑
 調	tiu2	
@@ -2908,13 +2904,13 @@
 賢	hin2	
 敗	pai6	
 賬	tseŋ5a	
-貨	hu5b	
+貨	hu5a	
 質	tsɐt7	
 販	fan5a	
 貪	tʰam1	
 貧	pɐn2	
 貶	pen3	
-購	kʰɐu5b	
+購	kʰɐu5a	
 貫	kun5a	
 貳	ŋi6	
 賤	tsin6	
@@ -2934,7 +2930,7 @@
 賭	to3	
 贖	θuk8b	
 賞	θeŋ3	
-賜	tsʰi5b	
+賜	tsʰi5a	
 賠	poi2	
 賴	lai6	
 賴	lai5a	打~死:耍赖
@@ -2949,31 +2945,31 @@
 趙	tsiu6	
 趕	kan3	
 起	hœy3	
-趁	tsʰɐn5b	
+趁	tsʰɐn5a	
 超	tsʰiu1	
 越	hit9a	
 趨	tsʰi1	
-趟	tʰaŋ5b	
-趣	tsʰi5b	
+趟	tʰaŋ5a	
+趣	tsʰi5a	
 足	tsuk7	
 趴	pʰa1	
 趾	tsi3	
 跌	tit7	
-跑	pʰau5b	
+跑	pʰau5a	
 距	kœy5a	
 跟	kɐn1	
 跨	kʰua1	
 跪	kuɐi6	
 路	lo6	
 跳	tiu2	
-跳	tʰiu5b	
+跳	tʰiu5a	
 踐	tsʰin3	
 踎	mɐu1	蹲
 踏	tʰap7	~实
 踢	tʰœt7	
 蹤	tsuŋ1	
 蹄	tɐi2	
-躁	tsʰau5b	
+躁	tsʰau5a	
 身	θɐn1	
 躬	kuŋ1	
 躺	tʰaŋ3	
@@ -3029,20 +3025,20 @@
 迷	mɐi2	
 迹	tsœt7	
 追	tsui1	
-退	tʰoi5b	
-退	tʰɐn5b	
+退	tʰoi5a	
+退	tʰɐn5a	
 送	θuŋ5a	
 適	θœt7	
 逃	tau2	
 逆	nœt9a	
 選	θin3	
-透	tʰɐu5b	
+透	tʰɐu5a	
 遞	tɐi6	
 途	to2	
 逗	tɐu6	
 通	tʰuŋ1	
 逛	kuaŋ6	
-逝	ɐi6	
+逝	θɐi6	
 逞	tsœn2	
 速	tsʰuk7	
 造	tsau4	又tsau22
@@ -3052,7 +3048,7 @@
 逸	jat7	
 逸	jat9a	逃走
 遇	ŋjœy6	
-遍	pʰin5b	
+遍	pʰin5a	
 道	tau6	
 遺	βɐi2	
 遣	hin3	
@@ -3076,7 +3072,7 @@
 都	tu1	
 鄂	ŋak9a	
 酉	jɐu4	
-配	pʰoi5b	
+配	pʰoi5a	
 酒	tsɐu3	
 酥	θo1	
 酬	tsɐu2	
@@ -3085,7 +3081,7 @@
 酸	θun1	
 醃	him6	
 醉	tsui5a	
-醋	tsʰo5b	
+醋	tsʰo5a	
 醒	θœn3	
 醜	tsʰɐu3	
 采	tsʰai3	
@@ -3131,11 +3127,11 @@
 鏵	βa2	
 銘	mœn2	
 鏟	tsʰan3	
-銃	tsʰuŋ5b	~子:鸟枪
+銃	tsʰuŋ5a	~子:鸟枪
 銀	ŋɐn2	
 鑄	tsœy5a	
 鋪	pʰɐu1	床~
-鋪	pʰɐu5b	店~，~头
+鋪	pʰɐu5a	店~，~头
 銷	θiu1	
 鎖	θu3	
 鋤	tso2	
@@ -3143,7 +3139,7 @@
 鏽	θɐu5a	
 鋒	fuŋ1	
 銳	ŋjui5a	
-錯	tsʰo5b	
+錯	tsʰo5a	
 錨	mau2	
 錫	θœt7	
 鑼	la2	
@@ -3251,7 +3247,7 @@
 靖	tsœn6	
 靜	tsœn6	
 非	fœy1	
-靠	kʰau5b	~背，~山
+靠	kʰau5a	~背，~山
 面	min6	
 革	kek7	
 靴	βe1	
@@ -3315,14 +3311,14 @@
 駛	θɐi3	
 駐	tsœy5a	
 駝	to2	
-駕	kʰa5b	
+駕	kʰa5a	
 駡	ma6	
 驕	kiu1	
 駱	lak9a	
 駭	hai6	
 驗	nim6	
 騎	kœy2	
-騙	pʰin5b	
+騙	pʰin5a	
 騷	θau1	
 騾	lo2	
 骨	kuɐt7	
@@ -3334,7 +3330,7 @@
 鬢	pɐn1	
 鬚	θœy1	
 鬼	kuɐi3	
-魁	kʰuɐi5b	
+魁	kʰuɐi5a	
 魂	βɐn2	
 魄	pʰek7	
 魏	ŋɐi6	
