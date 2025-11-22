@@ -11,5 +11,6 @@ t = open(f"{field}.txt", "w", encoding="U8", newline="\n")
 for row in rows:
 	if not all(row):
 		continue
-	t.write(row[0] + "\t" + row[1] + "\n")
+	for j in row[1].split("\t"):
+		t.write(row[0] + "\t" + j + "\n")
 t.close()
