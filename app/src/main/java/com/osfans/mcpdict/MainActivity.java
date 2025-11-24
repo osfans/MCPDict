@@ -1,6 +1,7 @@
 package com.osfans.mcpdict;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -56,8 +57,20 @@ public class MainActivity extends AppCompatActivity {
         }
         if (id == R.id.menu_item_home) {
             if (getDictionaryFragment() != null) {
+                mPager.setCurrentItem(0);
                 getDictionaryFragment().refresh("", "");
             }
+            return true;
+        }
+        if (id == R.id.menu_item_favorite) {
+            if (getDictionaryFragment() != null) mPager.setCurrentItem(1);
+            return true;
+        }
+        if (id == R.id.menu_item_sim) {
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mcpdict.sourceforge.io/sim.html"));
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
