@@ -255,6 +255,12 @@ class 表(_表):
 				return
 			行 = 自.增加調類(行)
 			行 = 自.normS(行.replace(")(", "："))
+		elif 名 in ("溧水在城",):
+			if 行.startswith("\t"):
+				return
+			行 = "\t".join(行.split("\t")[1:])
+			行 = 自.增加調類(行)
+			行 = 自.normS(行.replace(")(", "："))
 		elif 名 in ("葛洲壩",):
 			if 行.startswith("["): return
 			行 = 自.增加調類(行)

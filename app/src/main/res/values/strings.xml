@@ -7,6 +7,7 @@
     <string name="about">關於</string>
     <string name="info">簡介</string>
     <string name="home">主頁</string>
+    <string name="favorite">生字本</string>
     <string name="about_message"><![CDATA[%1$s V%2$s<br/>作者：osfans (waxaca&#64;163.com)<br/><a href="https://github.com/osfans/MCPDict/releases/tag/latest">最新安卓版</a> <a href="https://github.com/osfans/MCPDict/releases/tag/fonts">字體包</a><br/><br/>漢字古今中外讀音查詢 V3.0<br/>2016.05.03<br/>作者：Maigo<br/>maigoakisame&#64;gmail.com]]></string>
 
     <string name="ok">確定</string>
@@ -471,6 +472,7 @@
     <string name="moedict">萌典</string>
     <string name="kangxi">康熙字典</string>
     <string name="chise">CHISE</string>
+    <string name="similarity">方言音系相似度</string>
     <string-array name="entries_area_level">
         <item>不限</item>
         <item>省會</item>

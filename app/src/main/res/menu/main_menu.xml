@@ -7,14 +7,22 @@
         android:title="@string/settings" />
     <item
         android:id="@+id/menu_item_home"
-        app:showAsAction="ifRoom"
         android:icon="@android:drawable/ic_menu_revert"
-        android:title="@string/home" />
+        android:title="@string/home"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/menu_item_info"
         app:showAsAction="ifRoom"
         android:icon="@android:drawable/ic_menu_info_details"
         android:title="@string/info" />
+    <item
+        android:id="@+id/menu_item_favorite"
+        android:title="@string/favorite"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_item_sim"
+        android:title="@string/similarity"
+        app:showAsAction="never" />
     <item
         android:id="@+id/menu_item_help"
         app:showAsAction="never"
