@@ -62,6 +62,9 @@
   }
 
   var pagetitle = "方言音系相似度測試";
+  var methods = new Array(
+    "方言音系相似度", "地圖集二分區", "音典分區"
+  );
   var dialects = new Array(
 {{DIALECTS}}
   );
@@ -71,10 +74,11 @@
 
   var nc = 30, nv = 60, nt = 10;
   var nw = words.length;
-  var nd = dialects.length;
+  var nd = dialects[0].length;
+  var nm = methods.length;
   var i;
   document.title = pagetitle;
-  appendElement("h3", pagetitle + " V40." + nd + "{{DATE}}");
+  appendElement("h3", pagetitle + " V41." + nd + "{{DATE}}");
   appendElement("p", "<a href=https://github.com/osfans/MCPDict>漢字音典</a> &copy; 2021-2025 <span style='color:lightgray'>江淮漢韻 2011-2020</span>");
   document.write("請用你熟悉的口音讀題作答，或在");
   var selElement = document.createElement("select");
@@ -82,11 +86,12 @@
   selElement.onchange = preset;
   for (i = 0; i < nd; i++) {
     var optionElement = document.createElement("option");
+    var item = dialects[0][i];
     selElement.appendChild(optionElement);
-    optionElement.innerHTML = '[' + i + ']' + dialects[i][0] + (dialects[i][1] ? ' - ' + dialects[i][1] : '');
+    optionElement.innerHTML = '[' + i + ']' + item[0] + (item[1] ? ' - ' + item[1] : '');
   }
   document.body.appendChild(selElement);
-  document.write("的基礎上作答，交卷即可查看與各音系的相似度。<br>");
+  document.write("的基礎上作答，交卷即可查看與各音系的相似度或查看方言分片。<br>");
   appendElement("hr", "");
 
 
@@ -110,6 +115,17 @@
     document.body.appendChild(createDiv);
     document.write((i + 1) % 5 == 0 ? '<br>' : '');
   }
+  document.write('<br>測試項目：');
+  var selElement = document.createElement("select");
+  selElement.id = "methods";
+  selElement.onchange = getResult;
+  for (i = 0; i < nm; i++) {
+    var optionElement = document.createElement("option");
+    if (i == 0) optionElement.selected = true;
+    selElement.appendChild(optionElement);
+    optionElement.innerHTML = methods[i];
+  }
+  document.body.appendChild(selElement);
   document.write('<br><form method="POST"><input type="text" name="textresult" value="" style="display:none"><p><input type="button" value="交卷" onclick="getResult();">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="重做" onclick="clearStatus();"></p><p></p></form>');
   document.write('<span id=msgfield style="color:blue"></span>');
   function cmp(a, b) {
@@ -117,7 +133,9 @@
   }
 
   function getResult() {
-    var retn = new Array(nd);
+    var selectedIndex = document.getElementById("methods").selectedIndex;
+    var num = dialects[selectedIndex].length;
+    var retn = new Array(num);
     var ee = document.getElementsByName("checkbox");
     var choices = "";
     var i, j;
@@ -129,12 +147,13 @@
       }
     }
     document.getElementsByName("textresult")[0].value = choices;
-    for (j = 2; j < nd; j++) {
+    var start = selectedIndex == 0 ? 2 : 0;
+    for (j = start; j < num; j++) {
       var tmp = 0;
       var valid = nw;
       for (i = 0; i < nw; i++) {
         var a = choices.charAt(i);
-        var b = dialects[j][2].charAt(i);
+        var b = dialects[selectedIndex][j][2].charAt(i);
         if (a == "-" || b == "-") {
           valid--;
           continue;
@@ -146,14 +165,20 @@
     }
     retn.sort(cmp);
 
+    var itemCount = 50;
     var msg = '<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body>';
-    msg += "<p style=\"word-break: break-all;\">你的答案爲“" + choices + "”。</p>"; msg += "<p>客官，你的口音聽起來最接近" + dialects[retn[0] & 4095][0] + '，與各音系的相似度依次爲：</p>';
-    var mnd = Math.min(nd, 50);
+    if (selectedIndex == 0) {
+      msg += "<p style=\"word-break: break-all;\">你的答案是“" + choices + "”。</p>"; msg += "<p>你的方言最接近" + dialects[selectedIndex][retn[0] & 4095][0] + '，與各音系的相似度依次爲：</p>';
+    } else {
+      msg += "<p style=\"word-break: break-all;\">你的答案是“" + choices + "”。</p>"; msg += "<p>你的方言可能屬于“" + dialects[selectedIndex][retn[0] & 4095][0] + '”，還可能屬於如下方言片：</p>';
+      itemCount = 20;
+    }
+    var mnd = Math.min(num, itemCount);
     for (i = 0; i < mnd; i++) {
       j = retn[i] & 4095;
       var percent = Math.round((retn[i] >> 12) * 1000 / nw) / 10;
       if (percent < 60 && i >= 20) break;
-      msg += '<div class="percents"><div class="percent_name">' + dialects[j][0] + percent + '%</div><div class="percent_box"><div class="percent_current' + (percent < 60 ? '1' : (percent < 75 ? '2' : '3')) + '" style="width:' + percent + '%;">' + percent + '% ' + dialects[j][0] + '</div>' + '</div></div>';
+      msg += '<div class="percents"><div class="percent_name">' + dialects[selectedIndex][j][0] + percent + '%</div><div class="percent_box"><div class="percent_current' + (percent < 60 ? '1' : (percent < 75 ? '2' : '3')) + '" style="width:' + percent + '%;">' + percent + '% ' + dialects[selectedIndex][j][0] + '</div>' + '</div></div>';
     }
     document.getElementById("msgfield").innerHTML = msg;
   }
@@ -162,8 +187,8 @@
     var ee = document.getElementsByName("checkbox");
     var dd = document.getElementsByTagName("div");
     for (var i = 0; i < ee.length; i++) {
-      var tmp = Boolean(dialects[n][2].charAt(i) == "1");
-      var indeterminate = Boolean(dialects[n][2].charAt(i) == "-");
+      var tmp = Boolean(dialects[0][n][2].charAt(i) == "1");
+      var indeterminate = Boolean(dialects[0][n][2].charAt(i) == "-");
       if (indeterminate) {
         dd[i].style.backgroundColor = "#CACACA";
         ee[i].indeterminate = true;
