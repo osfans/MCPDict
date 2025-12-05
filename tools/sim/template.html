@@ -63,7 +63,7 @@
 
   var pagetitle = "方言音系相似度測試";
   var methods = new Array(
-    "方言音系相似度", "地圖集二分區", "音典分區"
+    "方言音系相似度", {{METHODS}}
   );
   var dialects = new Array(
 {{DIALECTS}}
@@ -80,38 +80,65 @@
   document.title = pagetitle;
   appendElement("h3", pagetitle + " V41." + nd + "{{DATE}}");
   appendElement("p", "<a href=https://github.com/osfans/MCPDict>漢字音典</a> &copy; 2021-2025 <span style='color:lightgray'>江淮漢韻 2011-2020</span>");
-  document.write("請用你熟悉的口音讀題作答，或在");
+  document.write("請用你熟悉的口音讀題作答，也可參考 <input type=\"text\" id=\"searchFilter\" name=\"searchFilter\" placeholder=\"輸入篩選\" size=\"5\" onkeyup=\"filterItems(this);\">");
   var selElement = document.createElement("select");
   selElement.id = "dialects";
   selElement.onchange = preset;
+  var optionsCache = [];
   for (i = 0; i < nd; i++) {
     var optionElement = document.createElement("option");
     var item = dialects[0][i];
-    selElement.appendChild(optionElement);
+    optionElement.id = "o" + i;
     optionElement.innerHTML = '[' + i + ']' + item[0] + (item[1] ? ' - ' + item[1] : '');
+    selElement.appendChild(optionElement);
+    optionsCache.push(optionElement.cloneNode(true));
   }
   document.body.appendChild(selElement);
-  document.write("的基礎上作答，交卷即可查看與各音系的相似度或查看方言分片。<br>");
+  document.write("的答案，如不確定可單擊兩次變成<input type='checkbox' name='test' id='test'/>跳過此題。交卷後可查看與各音系或各方言片的相似度，數值僅供參考。<br>");
   appendElement("hr", "");
+  document.getElementById("test").indeterminate = true;
 
-
-  function ondivout() {
-    this.style.backgroundColor = document.getElementById('c' + this.id).checked ? "#8AD0FB" : "#EFEFEF";
+  function filterItems(el) {
+    var value = el.value.toLowerCase();
+    var opt, sel = document.getElementById('dialects');
+    sel.options.length = 0;
+    for (var i=0, iLen=optionsCache.length; i<iLen; i++) {
+      opt = optionsCache[i];
+      if (value == '' || opt.text.toLowerCase().indexOf(value) != -1) {
+        sel.appendChild(opt.cloneNode(true));
+      }
+    }
+    preset();
   }
-  function ondivover() {
-    this.style.backgroundColor = document.getElementById('c' + this.id).checked ? "#58A0EC" : "#CACACA";
+
+  function onupdate() {
+    var id = this.id.substring(1);
+    var cb = document.getElementById('c' + id);
+    var div = document.getElementById('d' + id);
+    if (div.style.backgroundColor == "rgb(239, 239, 239)") {
+      cb.checked = true;
+      cb.indeterminate = false;
+      div.style.backgroundColor = "#8AD0FB";
+    } else if (div.style.backgroundColor == "rgb(138, 208, 251)") {
+      cb.checked = false;
+      cb.indeterminate = true;
+      div.style.backgroundColor = "#CACACA";
+    } else {//if (div.style.backgroundColor == "#CACACA") {
+      cb.checked = false;
+      cb.indeterminate = false;
+      div.style.backgroundColor = "#EFEFEF";
+    }
   }
   for (i = 0; i < nw; i++) {
     if (i == 0) appendElement("h4", "甲、請勾選出聲母相同的字對(" + Math.round(nc * 100 / nw) + "%)");
     else if (i == nc) appendElement("h4", "乙、請勾選出韻母相同的字對(" + Math.round(nv * 100 / nw) + "%)");
     else if (i == nc + nv) appendElement("h4", "丙、請勾選出聲調相同的字對(" + Math.round(nt * 100 / nw) + "%)");
     var createDiv = document.createElement('div');
-    createDiv.id = i;
+    createDiv.id = "d" + i;
     createDiv.className = "words";
-    createDiv.onmouseout = ondivout;
-    createDiv.onmouseover = ondivover;
-    createDiv.onclick = ondivover;
-    createDiv.innerHTML = '<input type="checkbox" name="checkbox" id=c' + i + '>' + words[i] + '&nbsp;&nbsp;</input>';
+    createDiv.onclick = onupdate;
+    createDiv.style.backgroundColor = "#EFEFEF";
+    createDiv.innerHTML = '<input type="checkbox" name="checkbox" onclick="onupdate(this)" id=c' + i + '>' + words[i] + '&nbsp;&nbsp;</input>';
     document.body.appendChild(createDiv);
     document.write((i + 1) % 5 == 0 ? '<br>' : '');
   }
@@ -132,8 +159,7 @@
     return b - a;
   }
 
-  function getResult() {
-    var selectedIndex = document.getElementById("methods").selectedIndex;
+  function getOneResult(selectedIndex, itemCount) {
     var num = dialects[selectedIndex].length;
     var retn = new Array(num);
     var ee = document.getElementsByName("checkbox");
@@ -165,25 +191,46 @@
     }
     retn.sort(cmp);
 
-    var itemCount = 50;
     var msg = '<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body>';
     if (selectedIndex == 0) {
-      msg += "<p style=\"word-break: break-all;\">你的答案是“" + choices + "”。</p>"; msg += "<p>你的方言最接近" + dialects[selectedIndex][retn[0] & 4095][0] + '，與各音系的相似度依次爲：</p>';
+      msg += "<p style=\"word-break: break-all;\">你的答案是“" + choices + "”。</p>"; msg += "<p>你的方言最接近“<b>" + dialects[selectedIndex][retn[0] & 4095][0] + "</b>”，";
+    } else if (selectedIndex == 5) {
+      msg += "可能是<b>" + dialects[selectedIndex][retn[0] & 4095][0] + '</b>人，';
     } else {
-      msg += "<p style=\"word-break: break-all;\">你的答案是“" + choices + "”。</p>"; msg += "<p>你的方言可能屬于“" + dialects[selectedIndex][retn[0] & 4095][0] + '”，還可能屬於如下方言片：</p>';
-      itemCount = 20;
+      msg += "可能屬“<b>" + dialects[selectedIndex][retn[0] & 4095][0] + '</b>”，';
     }
-    var mnd = Math.min(num, itemCount);
-    for (i = 0; i < mnd; i++) {
-      j = retn[i] & 4095;
-      var percent = Math.round((retn[i] >> 12) * 1000 / nw) / 10;
-      if (percent < 60 && i >= 20) break;
-      msg += '<div class="percents"><div class="percent_name">' + dialects[selectedIndex][j][0] + percent + '%</div><div class="percent_box"><div class="percent_current' + (percent < 60 ? '1' : (percent < 75 ? '2' : '3')) + '" style="width:' + percent + '%;">' + percent + '% ' + dialects[selectedIndex][j][0] + '</div>' + '</div></div>';
+    if (itemCount > 1) {
+      if (selectedIndex == 0) {
+        msg += "與各音系的相似度依次爲：</p>";
+      } else if (selectedIndex == 5) {
+        msg += "來自各市的可能性依次爲：</p>";
+      } else {
+        msg += "屬各片的可能性依次爲：</p>";
+      }
+      var mnd = Math.min(num, itemCount);
+      for (i = 0; i < mnd; i++) {
+        j = retn[i] & 4095;
+        var percent = Math.round((retn[i] >> 12) * 1000 / nw) / 10;
+        if (percent < 60 && i >= 20) break;
+        msg += '<div class="percents"><div class="percent_name">' + dialects[selectedIndex][j][0] + percent + '%</div><div class="percent_box"><div class="percent_current' + (percent < 60 ? '1' : (percent < 75 ? '2' : '3')) + '" style="width:' + percent + '%;">' + percent + '% ' + dialects[selectedIndex][j][0] + '</div>' + '</div></div>';
+      }
+    }
+    return msg;
+  }
+
+  function getResult() {
+    var i = document.getElementById("methods").selectedIndex;
+    var msg = getOneResult(0, i > 0 ? 1 : 50);
+    if (i > 0) {
+      msg += getOneResult(i, 20);
     }
     document.getElementById("msgfield").innerHTML = msg;
   }
+
   function preset() {
-    var n = document.getElementById("dialects").selectedIndex;
+    document.getElementById("test").indeterminate = true;
+    var i = document.getElementById("dialects").selectedIndex;
+    var n = document.getElementById("dialects").options[i].id.substring(1);
     var ee = document.getElementsByName("checkbox");
     var dd = document.getElementsByTagName("div");
     for (var i = 0; i < ee.length; i++) {
@@ -201,6 +248,10 @@
     }
   }
   function clearStatus() {
+    var filter = document.getElementById("searchFilter");
+    filter.value = "";
+    filterItems(filter);
+    document.getElementById("msgfield").innerHTML = "";
     document.getElementById("dialects").options[0].selected = "selected";
     preset();
   }

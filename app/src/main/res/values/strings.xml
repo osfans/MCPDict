@@ -472,7 +472,7 @@
     <string name="moedict">萌典</string>
     <string name="kangxi">康熙字典</string>
     <string name="chise">CHISE</string>
-    <string name="similarity">方言音系相似度</string>
+    <string name="similarity">方言相似度測試</string>
     <string-array name="entries_area_level">
         <item>不限</item>
         <item>省會</item>
