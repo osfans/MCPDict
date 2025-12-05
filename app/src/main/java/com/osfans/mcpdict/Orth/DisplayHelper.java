@@ -81,7 +81,7 @@ public abstract class DisplayHelper {
             case DB.DGY -> Dungan.displayHelper.displayRich(s, lang);
             case DB.CMN, DB.CMN_TW -> Mandarin.displayHelper.displayRich(s, lang);
             case DB.TW -> Minnan.displayHelper.displayRich(s, lang);
-            case DB.JA_GO, DB.JA_KAN, DB.JA_OTHER -> Japanese.displayHelper.displayRich(s, lang);
+            case DB.JA_GO, DB.JA_KAN, DB.JA_TOU, DB.JA_KAN_YOU, DB.JA_UNCLASSIFIED -> Japanese.displayHelper.displayRich(s, lang);
             default -> Tones.displayHelper.displayRich(s, lang);
         };
     }

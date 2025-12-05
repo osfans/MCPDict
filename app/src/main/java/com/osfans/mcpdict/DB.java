@@ -66,7 +66,9 @@ public class DB extends SQLiteAssetHelper {
     public static final String VI = "越南";
     public static final String JA_GO = "日語吳音";
     public static final String JA_KAN = "日語漢音";
-    public static final String JA_OTHER = "日語其他";
+    public static final String JA_TOU = "日語唐音";
+    public static final String JA_KAN_YOU = "日語慣用音";
+    public static final String JA_UNCLASSIFIED = "日語未歸類字音";
 
     public static String FQ = null;
     public static String ORDER = null;
@@ -203,7 +205,9 @@ public class DB extends SQLiteAssetHelper {
                 case VI: token = Vietnamese.canonicalize(token); break;
                 case JA_KAN:
                 case JA_GO:
-                case JA_OTHER:
+                case JA_TOU:
+                case JA_KAN_YOU:
+                case JA_UNCLASSIFIED:
                     token = Japanese.canonicalize(token); break;
                 default:
                     token = token.toLowerCase(Locale.US);

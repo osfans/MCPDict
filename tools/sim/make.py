@@ -10,11 +10,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-t', '--test', action='store_true', help='測試模式', required=False)
 args, argv = parser.parse_known_args()
 
-IPA_PATTERN = re.compile("^([ʔʡˀʕʢbɓɸβʙpmɰɱfʩɟdɗɖᶑʣʤʥꭦðtʈʦʧʨꭧθnŋɲɳȵɴlɬɭʟ𝼄ɮ𝼅ʪʫgɡɠɢʛkʞhħɦɧʰʜzʐʑʒʓcʗçɕsʂrɹɻɺ𝼈ɾɽʀʁʃʄʆjʝʲqxχvʋⱱɣwʍʷʎ𝼆ʼ'ʘǀǃǁǂ𝼊\u0300-\u0362]*)([^\\d]+)?([\\d]+[a-z]?)?$")
+IPA_PATTERN = re.compile("^([ʔʡˀʕʢˤbɓᵇɸβʙpmɰɱᵐfᶠʩɟdɗɖȡᶑᵈʣʤʥꭦðtʈȶᵗʦʧʨꭧθnŋᵑɲɳȵɴlɬɭʟ𝼄ɮ𝼅ʪʫgɡɠᶢɢʛkʞhħɦʱɧʰʜzʐʑʒʓcʗçɕsʂşȿrɹɻɺ𝼈ɾɽʀʁʃʄʆjʝʲqxχˣvʋⱱɣwʍʷʎ𝼆ʼ'~ʘǀǃǁǂ𝼊\u0300-\u0362]*)([^\\d]+)?([\\d]+[a-z]?)?$")
 
 #30/60/10
 WORDS = ['丙炳秉柄餅', '病被', '甫', '浦普', '斧府腑', '虎呼', '黃黄皇煌凰', '王', '同童', '洞動', '研硯', '年念', '良梁粱', '娘孃釀', '若弱箬', '落洛駱', '角覺豇', '脚腳姜薑', '去', '口開', '環', '還華淮懷', '鹹咸', '喊', '雞計繼', '資次恣姊', '雞計繼', '低底', '九玖久韭灸', '酒尖井', '詳翔像', '牆墻薔', '乞迄契起欺', '喫吃', '訓熏薰燻勳', '順吮', '照招昭沼釗', '趙兆', '早澡', '找笊渣榨爭争', '詩試始書舒', '師獅', '純醇淳鶉', '順吮', '書舒', '虛虚', '扇煽羶', '線綫', '然燃', '言', '文聞蚊雯紋', '完丸', '眼', '安案按晏', '我', '鵝娥俄餓', '容溶蓉鎔', '用勇踊蛹俑浴', '姐借', '子仔兹滋', '井精青清', '進津盡儘尽晋晉', '朋鵬', '盆笨噴本奔', '噸頓敦墩屯鈍', '燈登凳', '孫損存尊', '森', '困睏坤', '孔空控', '人仁', '然燃', '令零鈴玲領拎', '憐蓮練', '刪删', '拴閂', '染冉', '軟', '賴奈', '懶蘭攔爛', '梅每莓煤媒妹', '棉綿緜', '多馱拖舵', '端團团', '關慣摜', '光廣王黃黄皇煌凰', '關慣摜', '官管館冠灌觀', '汗寒旱捍悍翰韓', '換喚完歡寬煥', '奸姦', '姜薑', '奸姦澗諫', '肩堅賢', '戰', '站', '姐借', '賈價假', '野夜耶椰', '以已異', '社射車舍扯撦蛇', '曬', '車舍扯撦蛇社射', '哥歌可珂河何', '內内雷', '貝狽䟺鋇沛', '最', '肥費非飛妃', '車舍扯撦蛇社射', '費肥飛非妃', '飛非妃肥', '梯體涕替', '瘸靴', '茄斜', '靴瘸', '耍抓', '靴瘸', '雖醉翠', '圍韋偉葦胃謂渭蝟', '圓員援媛', '雷內内', '驢旅呂吕侶侣慮', '雨羽宇禹', '五伍', '書恕處', '梳初', '湖胡瑚猢狐孤姑古', '河何哥歌可珂', '哥歌可珂河何', '鍋果過', '哥哥歌可珂何河', '溝構勾購夠够彀', '個箇个', '夠够彀溝構購', '貿茂', '墓募慕暮', '母畝亩拇牡', '某', '某', '媒煤妹梅每莓', '米謎迷', '美眉', '耳二而', '馬碼罵駡', '二耳而', '奧懊襖袄澳', '也', '矮隘', '甲胛鉀', '脚腳藥葯約', '八捌拔', '剝剥駁雹', '莫漠摸幕寞', '末沫茉', '落洛駱', '六陸', '木沐鹿讀目', '麥脉脈', '木沐鹿讀目', '默墨', '百柏', '北', '粥熟軸', '竹竺筑', '竹竺筑', '骨忽', '縮', '說説悅悦閲閱', '盒合', '活闊', '喝渴葛褐', '黑肋勒得', '赤尺石', '色嗇', '則測側', '哲折徹澈', '日', '熱', '鐵跌', '踢剔惕滴迪笛狄', '蟹', '海開', '花瓜天', '話會', '販半報變放', '飯壞', '救半報變放', '舅', '劇', '據鋸去', '瘦湊臭夠够彀', '肉', '測側', '廁', '式拭軾𢂑飾', '試瘦湊臭夠够彀', '失溼濕', '釋適', '溼濕失', '石']
-PART_METHODS = ['地圖集二分區', '音典分區']
+PART_METHODS = ['地圖集二分區', '地圖集二分區(小片)', '音典分區', '音典分區(小片)', "市"]
 WORKSPACE = os.path.dirname(os.path.abspath(__file__))
 os.chdir(WORKSPACE)
 
@@ -37,16 +37,19 @@ def get_mcpdict():
 					d = dicts.setdefault(item[1], dict())
 					d.setdefault(lang, set()).add((item[2], item[3]))
 	infos = dict()
-	c.execute(f"select 簡稱,{','.join(PART_METHODS)} from info where 音節數 is NOT NULL;")
+	c.execute(f"select 簡稱,{','.join((i for i in PART_METHODS if "(" not in i))},省 from info where 音節數 is NOT NULL;")
 	for item in c.fetchall():
-		part = item[1:]
-		infos[item[0]] = part
+		city = item[4] + item[3].strip("/")
+		if city == "江蘇" or city.startswith("海外"): city = ""
+		part = item[1].replace("－", "-"), item[2].replace("－", "-"), city
+		infos[item[0]] = part[0].split("-")[0], part[0], part[1].split("-")[0], part[1], part[2]
 	conn.close()
 	return dicts, infos
 
+s = set()
 def split_ipa(ipa):
 	l = ipa.strip("`*\\?\\+")
-	l = re.sub("\\(.*?\\)", "", l)
+	l = re.sub("\\(.*?\\)", "", l).strip()
 	if not l:
 		return None
 	m = IPA_PATTERN.findall(l)
@@ -59,6 +62,7 @@ def split_ipa(ipa):
 			p[0] = p[0][:-1]
 		elif len(p[0]) > 2:
 			p[0] = p[0][:-2]
+	s.add(p[1])
 	return tuple(p)
 
 def get_part(lang, item, hzs, index=0):
@@ -100,8 +104,8 @@ def get_part(lang, item, hzs, index=0):
 					if not p: continue
 					ret.add(p[index])
 			break
-	if args.test and len(ret) > 1:
-		print(hz, ret)
+	# if args.test and len(ret) > 1:
+	# 	print(hz, ret)
 	return ret
 
 def get_result(start, end, lang, item, index=0):
@@ -133,7 +137,7 @@ def dump_html(answers):
 		results.append("new Array(%s)" % ",\n".join(result))
 	answer = ",\n".join(results)
 	# print(answer)
-	html = open("template.html", "r", encoding="U8").read().replace("{{DIALECTS}}", answer).replace("{{DATE}}", " (" + now.strftime("%Y-%m-%d") + ")")
+	html = open("template.html", "r", encoding="U8").read().replace("{{DIALECTS}}", answer).replace("{{DATE}}", " (" + now.strftime("%Y-%m-%d") + ")").replace("{{METHODS}}", ", ".join([f'"{method}"' for method in PART_METHODS]))
 	f = open("sim.html", "w", encoding="U8")
 	f.write(html)
 	f.close()
@@ -189,6 +193,8 @@ def main():
 			parts.setdefault(method, dict()).setdefault(part, list()).append(value)
 	part_results = dict()
 	for method, items in parts.items():
+		delta = 30
+		# if method in ("市",): delta = 30
 		method_results = dict()
 		for part, values in items.items():
 			results = []
@@ -200,7 +206,6 @@ def main():
 					results.append(b)
 					continue
 				score = bs.count('1') * 100 / valid
-				delta = 30
 				if score >= 50 + delta:
 					b = '1'
 				elif score <= 50 - delta:
@@ -217,7 +222,6 @@ def main():
 					results.append(b)
 					continue
 				score = bs.count('1') * 100 / valid
-				delta = 30
 				if score >= 50 + delta:
 					b = '1'
 				elif score <= 50 - delta:
@@ -228,7 +232,8 @@ def main():
 		for skip in skips:
 			method_results.pop(skip, None)
 		part_results[method] = method_results
-	part_answers = []
+	test_method = PART_METHODS[3]
+	test_answers = []
 	answers = []
 	dialects.sort(key=lambda x: 普拼(x[0]))
 	answers.append(dialects)
@@ -236,21 +241,24 @@ def main():
 		results = [(k, method, v) for k, v in results.items()]
 		results.sort(key=lambda x: 普拼(x[0]))
 		answers.append(results)
+		if method == test_method:
+			test_answers = results
 	dump_html(answers)
 	if args.test:
 		count, wrong = 0, 0
-		method = PART_METHODS[1]
+		method = test_method
 		for _name, author, value in dialects:
 			name = _name.split("(")[0]
 			if author != "音典" or name not in infos:
 				continue
 			count += 1
 			part = infos[name][PART_METHODS.index(method)]
-			results = find_nearest(value, part_answers, method=method, max=1)
-			if part not in results and part not in skips:
+			results = find_nearest(value, test_answers, method=method, max=3)
+			if part and part not in results and part not in skips:
 				wrong += 1
 				# print(f"{_name} 實際分區 {part}，最接近分區 {results}")
-		print(f"分區比對錯誤率：{wrong * 100 / count:.2f}% ({wrong}/{count})")
+		print(f"delta={delta}, {method}比對錯誤率：{wrong * 100 / count:.2f}% ({wrong}/{count})")
 
 if __name__ == "__main__":
 	main()
+	print(",".join(sorted(s)))
