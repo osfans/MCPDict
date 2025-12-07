@@ -87,8 +87,15 @@ def get_part(lang, item, hzs, index=0):
 					if info.startswith("存疑") or info.startswith("(存疑)"):
 						continue
 				ipas = ipa.split("/")
-				if lang in ("中原音韻",):
+				if lang in ("東干甘肅話", ):
+					ipas = ipas[1:2]
+				elif lang in ("中原音韻",):
 					ipas = ipas[0:1]
+				elif lang in ("普通話",):
+					ipas[0] = ipas[0].replace("w", "u").replace("uu", "u").replace("uen", "un").replace("uei", "ui")
+					ipas[0] = ipas[0].replace("yi", "i").replace("you", "iu").replace("ye", "ie").replace("ya", "ia").replace("yo", "io")
+					ipas[0] = re.sub("([jqx])u", "\\1yu", ipas[0])
+					ipas[0] = re.sub("([nl])v", "\\1yu", ipas[0])
 				if lang in ("廣韻",):
 					ipas[0] = re.sub("q$", "3", ipas[0])
 					ipas[0] = re.sub("h$", "5", ipas[0])

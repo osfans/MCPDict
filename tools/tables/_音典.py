@@ -193,6 +193,7 @@ class 表(_表):
 			elif 自.文件名.startswith("陇东方言语音研究"):
 				markers = list(map(chr, range(0xa700,0xa708)))
 				l = list()
+				音 = 音.replace("∣", "/")
 				異讀 = "/" in 音
 				for i,音標 in enumerate(音.split("/")):
 					n = 找字(音標)
@@ -265,6 +266,10 @@ class 表(_表):
 				調值 = sorted(自.調典.values())
 				調表 = dict(zip(調名, 調值))
 				音 = re.sub("([陰陽平上去入中下]+)(\\d*?)$", lambda x:調表.get(x.group(1)), 音)
+			elif 名 in ("博白柑子園", "博白岐山坡"):
+				音 = 音.replace("自稱音節", "\u030D")
+			elif 名 in ("仙居",):
+				音 = 音.replace("~", "\u0303")
 		elif 自.文件名.startswith("榕江侗"):
 			列[0] = 列[0].strip().replace(" /", "/").replace(" [", "[")
 			if not 列[0]: return
