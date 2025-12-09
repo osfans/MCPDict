@@ -25,7 +25,6 @@ class 表(_表):
 			if 音.startswith("["):
 				註 += 音[:3]
 				音 = 音[3:]
-			if "训" in 音:
-				音 = 音.replace("训", "@")
+			音 = 音.replace("训", "@").replace("訓", "@")
 			l.append((字, 音, 註))
 		return l

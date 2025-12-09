@@ -1,0 +1,63 @@
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>漢字音典已收錄語言</title>
+		<script>
+			let currentSort = { column: null, asc: true };
+
+			function sortTable(table, column, asc = true) {
+				const tbody = table.querySelector('tbody');
+				const rows = Array.from(tbody.querySelectorAll('tr'));
+				
+				// 排序规则
+				const sortedRows = rows.sort((a, b) => {
+					const aText = a.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+					const bText = b.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+					
+					// 数字排序
+					if (!isNaN(aText) && !isNaN(bText)) {
+						return asc ? aText - bText : bText - aText;
+					}
+					
+					// 文本排序
+					return asc ? aText.localeCompare(bText) : bText.localeCompare(aText);
+				});
+				
+				// 重新插入排序后的行
+				sortedRows.forEach(row => tbody.appendChild(row));
+			}
+
+			function sortTableByColumn(column) {
+				const table = document.getElementById('sortable-table');
+				const isAsc = currentSort.column === column ? !currentSort.asc : false;
+				
+				sortTable(table, column, isAsc);
+				
+				// 更新排序状态
+				currentSort = { column, asc: isAsc };
+				
+				// 更新表头样式
+				updateHeaderStyles(column, isAsc);
+			}
+
+			function updateHeaderStyles(column, asc) {
+				const headers = document.querySelectorAll('th');
+				headers.forEach((header, index) => {
+					header.classList.remove('sorted-asc', 'sorted-desc');
+					if (index === column) {
+						header.classList.add(asc ? 'sorted-asc' : 'sorted-desc');
+					}
+				});
+			}
+		</script>
+		<style>
+			th { cursor: pointer; }
+			th.sorted-asc::after { content: " ↑"; }
+			th.sorted-desc::after { content: " ↓"; }
+		</style>
+	</head>
+	<body onload="sortTableByColumn(8);">
+		<table id="sortable-table" border="1" cellspacing="0" cellpadding="5">
+			<thead>
+				<tr>

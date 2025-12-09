@@ -293,15 +293,18 @@ public class Orthography {
     }
 
     public static String[] normWords(String s) {
-        s = s.replace(" ", "");
-        String[] ss = OpenCC.convertAll(s);
-        String[] newSS = new String[ss.length];
-        int i = 0;
-        for (String word : ss) {
-            String newWord = normWord(word);
-            newSS[i] = String.format("\"%s\"", newWord);
-            i++;
+        String[] as = s.trim().split("\\s+");
+        String[] ret = new String[as.length];
+        for (int i = 0; i < as.length; i++) {
+            if (TextUtils.isEmpty(as[i])) continue;
+            String[] ss = OpenCC.convertAll(as[i]);
+            String[] newSS = new String[ss.length];
+            for (int j = 0; j < ss.length; j++) {
+                String newWord = normWord(ss[j]);
+                newSS[j] = String.format("\"%s\"", newWord);
+            }
+            ret[i] = "(" + String.join(" OR ", newSS) + ")";
         }
-        return newSS;
+        return ret;
     }
 }

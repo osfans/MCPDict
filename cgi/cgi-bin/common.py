@@ -48,7 +48,7 @@ def getSelect(key, value, word):
 	return 'SELECT *,offsets(mcpdict) AS vaIndex FROM mcpdict where (`%s` %s "%s") %s' % (key, word, value, getCharsetSQL(charset))
 
 def getSqls(value, word):
-	sqls = list(map(lambda x: getSelect(x, value, word), getKeys(lang, variant)))
+	sqls = tuple(map(lambda x: getSelect(x, value, word), getKeys(lang, variant)))
 	sqls = (' UNION '.join(sqls)) + ' ORDER BY vaIndex LIMIT 10'
 	return c.execute(sqls)
 

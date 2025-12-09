@@ -48,6 +48,12 @@ class 表(_表):
 					聲韻 = 自.聲韻
 				聲韻 = 聲韻.replace("~", "\u0303")
 				音 = None
+			elif 名 in ("江永上江墟",):
+				音 = re.sub("^h", "x", 音).replace("nj", "ȵ").replace('ng', 'ŋ').replace("c", "ɕ").replace('h', 'ʰ')
+				音 = 音.replace("oe", "ø").replace('e', 'ə').replace('iə', 'ie').replace('w', 'ɯ')
+				組 = re.sub("(.)", f"\\1{{{列[0]}}}", 組)
+			elif 名 in ("天籟字彙",):
+				if 音.endswith("韻"): return
 		elif 名 in ("平陰東阿",):
 			聲韻, 調, _, 組 = 列[:4]
 			if 聲韻:
@@ -77,12 +83,6 @@ class 表(_表):
 			聲韻, 調, 組 = 列[1:4]
 			調 = re.sub(r"^[^\d]+", "", 調)
 			組 = 組.replace(", ", "")
-		elif 名 in ("江永上江墟",):
-			女書, _, 組, 拼音 = 列[:4]
-			拼音 = re.sub("^h", "x", 拼音)
-			拼音 = 拼音.replace("nj", "ȵ").replace('ng', 'ŋ').replace("c", "ɕ").replace('h', 'ʰ')
-			拼音 = 拼音.replace("oe", "ø").replace('e', 'ə').replace('iə', 'ie').replace('w', 'ɯ')
-			音 = 自.轉調類(拼音) + 女書
 		elif 名 in ("揚州",):
 			自.simplified = 0
 			音, 組 = 列[:2]
