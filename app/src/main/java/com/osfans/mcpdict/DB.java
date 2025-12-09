@@ -289,7 +289,7 @@ public class DB extends SQLiteAssetHelper {
 
         if (searchType == SEARCH.COMMENT) {
             String[] projection = {"0 AS rank", "0 AS vaIndex", "'' AS variants", "*", "trim(substr(字組, 1, 1)) AS 漢字"};
-            selection = String.format("註釋 MATCH '%s' %s", String.join(" OR ", keywords), languageClause);
+            selection = String.format("註釋 MATCH '%s' %s", String.join(" AND ", keywords), languageClause);
             queries.add(qb.buildQuery(projection, selection, null, null, null, null));
         } else {
             String hzs;
@@ -304,7 +304,7 @@ public class DB extends SQLiteAssetHelper {
             } else if (searchType == SEARCH.DICT) {
                 String dict = Pref.getDict();
                 String match = TextUtils.isEmpty(dict) ? "mcpdict" : DB.getLabelByLanguage(dict);
-                hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where %s MATCH '%s'", match, String.join(" OR ", keywords)));
+                hzs = getResult(String.format("SELECT group_concat(漢字, ' ') from mcpdict where %s MATCH '%s'", match, String.join(" AND ", keywords)));
                 if (TextUtils.isEmpty(hzs)) return null;
                 keywords = Arrays.asList(hzs.split(" "));
             }

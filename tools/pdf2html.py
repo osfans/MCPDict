@@ -49,4 +49,3 @@ for i in puas:
 for i in sorted(puad.keys(), key=lambda x: puad[x], reverse=True):
     print(f'\t"{i}":"",')
 open(sys.argv[2], "w", encoding="U8").write(html)
-#([dtʈsʰ‘bpmfvɕtØkɡnȵŋhxl]+［)

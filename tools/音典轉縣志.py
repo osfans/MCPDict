@@ -6,6 +6,7 @@ if len(sys.argv) != 3:
 	sys.exit(1)
 input, output = sys.argv[1:3]
 
+from tables._表 import IPA_PATTERN
 音典 = dict()
 
 聲母表 = ["b", "p", "pʰ", "m", "f", "v",
@@ -13,12 +14,12 @@ input, output = sys.argv[1:3]
 	"dʑ", "tɕ", "tɕʰ", "ʑ", "ɕ", "ȵ", "ɲ", "dz", "ts", "tsʰ", "z", "s", "dʐ", "tʂ", "tʂʰ", "ɻ", "ʐ", "ʂ", "ɖ", "ʈ","ȵ", "j", "c", "q", "w", "0", ""]
 
 def split(yb):
-	syd = re.findall("^([bpmfdtnlgkhzcsjqxvɕʈɖʂɻʐɡɣŋɲȵʰ\u030D\u0329]*)(.*?)([0-9]?)$", yb)
+	syd = IPA_PATTERN.findall(yb)
 	syd = syd[0]
 	return syd[1], syd[0], syd[2]
 
 def index(yb):
-	syd = re.findall("^([bpmfdtnlgkhzcsjqxvɕʈɖʂɻʐɡɣŋɲȵʰ\u030D\u0329]*)(.*?)([0-9]?)$", yb)
+	syd = IPA_PATTERN.findall(yb)
 	syd = syd[0]
 	return syd[1], 聲母表.index(syd[0]) if syd[0] in 聲母表 else 100, syd[2]
 

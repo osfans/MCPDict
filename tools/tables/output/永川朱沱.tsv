@@ -1,10 +1,8 @@
 #漢字	音標	解釋
-□	tiau1	
 □	pʰən1	
 □	tɕʰiəu2	
 □	mia3	
 □	pei3	
-□	tɕiəu3	
 □	tuan3	
 □	tɕia7	
 □	tʰəu2	tsʰən~:穿着整齐;事情清楚明晰
@@ -25,6 +23,7 @@
 □	taŋ5	~~:坑洼地
 □	ŋən3	不平硌人
 □	ŋa1	倾轧
+□	tiau1	剔除细碎杂物
 □	so1	动词，爬，引申为悄悄溜走
 □	xuei2	受潮
 □	tɕiau2	口齿伶俐，说话厉害
@@ -34,6 +33,7 @@
 □	tʰɵ7	戳捅
 □	tɕʰyɛn1	房~:房间
 □	tən5	把底部平坦的东西平置
+□	tɕiəu3	拧，扭转
 □	luei1	滚落
 □	tsa3	潮湿发霉
 □	lən1	用手指搓捏
@@ -210,10 +210,8 @@
 低	ti1	
 住	tuan3	
 住	tsu5	
-佐	tso2	1
-佐	tso2	
-佐	tso3	
-佐	tso3	3
+佐	tso2	1佐料
+佐	tso3	辅佐3
 佑	iəu5	
 體	tʰi3	
 何	xo2	
@@ -307,7 +305,7 @@
 光	kuaŋ1	
 克	kʰɛ7	
 免	miɛn3	
-兑	t碓堆uei5	
+兑	tuei5	
 兔	tʰu5	
 黨	taŋ3	
 兜	təu1	
@@ -375,6 +373,7 @@
 凹	o1	
 出	tsʰʉ7	
 擊	tɕi1	
+擊	tɕi7	
 函	xan2	
 鑿	tsʰɵ7	
 刀	tau1	
@@ -413,7 +412,6 @@
 削	ɕyɛ7	
 剮	kua3	
 劍	tɕiɛn5	
-剔	tiau1	
 剔	tʰi2	
 剜	uan1	
 剝	pɵ7	
@@ -492,6 +490,7 @@
 卯	mau3	
 印	in5	
 危	uei1	
+即	tɕi7	
 卻	tɕʰiɵ7	
 卵	luan3	
 卷	tɕyɛn3	~起来
@@ -510,12 +509,14 @@
 原	yɛn2	
 廚	tsʰu2	
 厮	sɿ1	
+去	tɕi7	1~赶场
 去	tɕʰiɛ5	2~处
 参	sən1	
 参	tsʰan1	~加
 参	tsʰan1	~差
 又	iəu5	
 叉	tsʰa1	
+及	tɕi7	
 友	iəu3	
 雙	suaŋ1	
 反	fan3	
@@ -554,6 +555,7 @@
 吆	iau1	
 合	xɵ7	~作
 合	xɵ7	十~一升
+吉	tɕi7	
 吊	tiau5	
 同	tʰoŋ2	
 名	min2	
@@ -734,6 +736,7 @@
 培	pʰei2	
 基	tɕi1	
 堂	tʰaŋ2	
+堆	tuei1	
 堡	pau3	
 堤	tʰi2	1
 堤	ti1	2
@@ -913,6 +916,7 @@
 賓	pin1	
 宿	ɕiʉ7	1住~
 宿	su5	2归~
+寂	tɕi7	
 寄	tɕi5	
 寅	in3	
 密	mi7	
@@ -928,7 +932,7 @@
 寥	liau2	
 寨	tsai5	
 寸	tsʰuən5	
-對	t碓堆uei5	
+對	tuei5	
 寺	sɿ5	
 導	tʰau5	1领~
 導	tau3	2~致
@@ -1165,6 +1169,7 @@
 思	sɿ1	
 怠	tai5	
 怡	i2	
+急	tɕi7	
 性	ɕin5	
 怨	yɛn5	
 怪	kuai5	
@@ -1276,7 +1281,6 @@
 掃	sau3	~帚
 揚	iaŋ2	
 扭	liəu3	
-扭	tɕiəu3	
 扮	pan5	
 扯	tsʰei3	
 擾	zau3	
@@ -1344,7 +1348,6 @@
 擁	ioŋ1	
 攔	lan2	
 攔	tuan3	
-擰	tɕiəu3	
 撥	pɵ7	
 擇	tsʰɛ7	1选择
 擇	tsɛ2	2择菜
@@ -1498,7 +1501,6 @@
 斑	pan1	
 斗	təu5	~争
 斗	təu3	十升为~
-料	tso2	
 料	liau5	
 斜	ɕiɛ2	
 斟	tsən1	
@@ -1601,7 +1603,6 @@
 機	tɕi1	
 朽	ɕiəu3	
 殺	sa7	
-雜	tiau1	
 雜	tsa7	
 權	tɕʰyɛn2	
 杆	kan1	
@@ -2060,7 +2061,6 @@
 牛	ȵiəu2	
 牡	mau3	
 牢	lau2	
-物	tiau1	
 物	vʉ7	
 牲	sən1	
 特	tʰɛ7	
@@ -2172,6 +2172,7 @@
 疲	pʰi2	
 疵	tsʰɿ1	
 疹	tsən3	
+疾	tɕi7	
 痂	tɕia1	
 病	pin5	
 症	tsən5	
@@ -2292,9 +2293,9 @@
 硬	in5	2~件
 確	tɕʰiɵ7	
 礙	ŋai5	
-碎	tiau1	
 碎	suei5	
 碑	pei1	
+碓	tuei1	
 碗	uan3	
 碟	tʰiɛ7	
 碧	pi7	
@@ -2349,6 +2350,7 @@
 秦	tɕʰin2	
 秧	iaŋ1	
 秩	tsɘ7	
+積	tɕi7	
 稱	tsʰən1	
 稱	tsʰən5	
 移	i2	
@@ -2436,6 +2438,7 @@
 簪	tsan1	
 簸	po3	
 簿	pʉ7	
+籍	tɕi7	
 米	mi3	
 類	lei5	
 粉	fən3	
@@ -2475,6 +2478,7 @@
 纤	tɕʰiɛn1	
 約	iɵ7	1~定
 約	yɛ7	2~会
+級	tɕi7	
 紈	uan2	
 紀	tɕi5	
 緯	uei3	
@@ -2492,7 +2496,6 @@
 線	ɕiɛn5	
 練	liɛn5	
 組	tsu3	
-細	tiau1	
 細	ɕi5	
 織	tsɘ7	
 終	tsoŋ1	
@@ -2513,6 +2516,7 @@
 絹	tɕyɛn5	
 繡	ɕiəu5	
 繼	tɕi5	
+績	tɕi7	
 續	ɕy5	
 續	ɕiʉ7	
 綽	tsʰo5	
@@ -2527,6 +2531,7 @@
 綴	tsuei5	
 緬	miɛn5	
 纜	lan3	
+緝	tɕi7	
 緞	tuan5	
 緩	xuan3	
 縷	ly3	
@@ -2643,6 +2648,7 @@
 脂	tsɿ1	
 脆	tsʰuei5	
 脉	mɛ7	
+脊	tɕi7	
 脏	tsaŋ1	~污
 脏	tsaŋ5	内~
 臍	tɕʰi2	
@@ -2825,6 +2831,7 @@
 薯	su3	
 薰	ɕyn1	
 薸	pʰiau1	
+藉	tɕi7	
 藏	tsaŋ5	
 藏	tsʰaŋ2	隐藏
 藐	miau3	
@@ -3155,7 +3162,6 @@
 軋	tsa7	
 軌	kuei3	
 軒	ɕyɛn1	
-轉	tɕiəu3	
 轉	tsuan3	~学
 轉	tsuan5	~圈
 輪	lən2	
@@ -3169,11 +3175,11 @@
 轎	tɕiau5	
 較	tɕiau5	
 輔	fu3	
-輔	tso3	
 輛	liaŋ3	
 輩	pei5	
 輝	xuei1	
 輻	fʉ7	
+輯	tɕi7	
 輸	su1	
 轅	yɛn2	
 轄	ɕia7	
@@ -3209,6 +3215,7 @@
 述	sʉ7	
 迴	xuei2	
 迷	mi2	
+迹	tɕi7	
 追	tsuei1	
 退	tʰuei5	
 適	sɘ7	
@@ -3383,7 +3390,7 @@
 閹	iɛn1	
 閻	iɛn2	
 闊	kʰuɛ7	
-隊	t碓堆uei5	
+隊	tuei5	
 阮	zuan3	
 防	faŋ2	
 陽	iaŋ2	
@@ -3404,7 +3411,6 @@
 陝	san3	
 陡	təu3	
 院	yɛn5	
-除	tiau1	
 除	tsʰu2	
 險	ɕiɛn3	
 陪	pʰei2	
@@ -3428,6 +3434,7 @@
 雁	iɛn5	
 雄	ɕioŋ2	
 雅	ia3	
+集	tɕi7	
 雌	tsʰɿ2	
 雍	ioŋ1	
 雛	tsʰu2	
@@ -3564,6 +3571,7 @@
 鮑	pau5	
 鮮	ɕyɛn1	新~
 鮮	ɕyɛn1	朝~
+鯽	tɕi7	
 鰓	sai1	
 鱷	ŋɵ7	
 鰍	tɕʰiəu1	

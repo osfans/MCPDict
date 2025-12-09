@@ -118,6 +118,7 @@ class 表(_表):
 				上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
 				for i in 上標:
 					音 = 音.replace(i, str(上標.index(i)))
+				音 = 音.strip("()")
 			elif 自.文件名.startswith("贵州六盘水八点联表") or 自.文件名.startswith("永州南部土話聯表") or 自.文件名.startswith("广元剑阁5点联表") or 自.文件名.startswith("自贡富顺4点联表"):
 				註 = 字[1:].strip("()（）")
 				字 = 字[0]
@@ -178,7 +179,7 @@ class 表(_表):
 						l.append((字, 自.轉調類(音標) + ("-" if i == 1 else "="), 註))
 					return l
 			elif 自.文件名.startswith("晋陕蒙交界地区晋方言语音研究"):
-				markers = list(map(chr, range(0xa700,0xa708)))
+				markers = tuple(map(chr, range(0xa700,0xa708)))
 				l = list()
 				異讀 = "/" in 音
 				n = len(音.split("/"))
@@ -191,7 +192,7 @@ class 表(_表):
 					l.append((字,音標,註))
 				return l
 			elif 自.文件名.startswith("陇东方言语音研究"):
-				markers = list(map(chr, range(0xa700,0xa708)))
+				markers = tuple(map(chr, range(0xa700,0xa708)))
 				l = list()
 				音 = 音.replace("∣", "/")
 				異讀 = "/" in 音
@@ -213,15 +214,16 @@ class 表(_表):
 					音標組 = 音.split(";")
 					l = list()
 					for 音標 in 音標組:
+						音標, 註2 = re.findall(r"^(.*?[¹²³⁴⁵]+[\-=]?)(.*?)$", 音標)[0]
 						音標 = 自.正音(音標)
 						if re.match(r"^.*[¹²³⁴⁵]+[\-=]?$", 音標):
 							l.append((字, 自.轉調類(音標), 註))
 							continue
-						音標, 註2 = re.findall(r"^(.*?[¹²³⁴⁵]+[\-=]?)(.*?)$", 音標)[0]
+						print(音標, 註2)
 						l.append((字, 自.轉調類(音標), 註2))
 					return l
 			elif 自.文件名.startswith("安徽淮河流域方言语音比较研究"):
-				markers = list(map(chr, range(0xa700,0xa708)))
+				markers = tuple(map(chr, range(0xa700,0xa708)))
 				l = list()
 				for i in 音.split("/"):
 					if i[0] in markers: i = i[1:] + str(markers.index(i[0]) + 1)
@@ -270,6 +272,8 @@ class 表(_表):
 				音 = 音.replace("自稱音節", "\u030D")
 			elif 名 in ("仙居",):
 				音 = 音.replace("~", "\u0303")
+			elif 名 in ("通東餘東",):
+				音 = 音.replace("輕聲", "0")
 		elif 自.文件名.startswith("榕江侗"):
 			列[0] = 列[0].strip().replace(" /", "/").replace(" [", "[")
 			if not 列[0]: return

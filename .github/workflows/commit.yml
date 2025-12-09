@@ -15,6 +15,7 @@ jobs:
       with:
         submodules: recursive
         fetch-depth: 0
+
     - name: set up JDK 21
       uses: actions/setup-java@v4
       with:
@@ -37,14 +38,19 @@ jobs:
         pushd tools
         python3 -m pip install -r requirements.txt
         touch tables/*.py
-        python3 make.py -c -l
+        python3 make.py -c -i
+        popd
+
+    - name: Calculate similarity
+      run: |
+        pushd tools
         python3 sim/make.py
         popd
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew build
+      run: |
+        chmod +x gradlew
+        ./gradlew build
 
     - name: Create latest release
       uses: 'marvinpinto/action-automatic-releases@latest'

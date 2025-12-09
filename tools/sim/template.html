@@ -173,7 +173,7 @@
       }
     }
     document.getElementsByName("textresult")[0].value = choices;
-    var start = selectedIndex == 0 ? 2 : 0;
+    var start = selectedIndex == 0 ? 3 : 0;
     for (j = start; j < num; j++) {
       var tmp = 0;
       var valid = nw;
@@ -197,7 +197,7 @@
     } else if (selectedIndex == 5) {
       msg += "可能是<b>" + dialects[selectedIndex][retn[0] & 4095][0] + '</b>人，';
     } else {
-      msg += "可能屬“<b>" + dialects[selectedIndex][retn[0] & 4095][0] + '</b>”，';
+      msg += "可能屬“<b>" + dialects[selectedIndex][retn[0] & 4095][0] + '</b>”方言片，';
     }
     if (itemCount > 1) {
       if (selectedIndex == 0) {
