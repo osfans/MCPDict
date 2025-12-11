@@ -65,18 +65,19 @@ public class Vietnamese {
     private static String getIPA(String s, char tone) {
         boolean isEnteringTone = "ptc".indexOf(s.charAt(s.length() - 1)) >= 0 ||
                 s.endsWith("ch");
-        s = s.replace("b", "ɓ").replace("dd", "ɗ").replace("d", "j")
+        s = s.replace("b", "ɓ").replace("dd", "ɗ").replace("d", "z")
                 .replace("ph", "f").replace("gi", "z").replaceFirst("^gh?", "ɣ")
-                .replace("s", "ʂ").replace("x", "s").replace("kh", "kʰ").replaceFirst("^[cq]([^h])", "k$1")
+                .replace("x", "s").replace("kh", "x").replaceFirst("^[cq]([^h])", "k$1")
                 .replaceFirst("^nh", "ɲ").replace("ngh", "ŋ").replace("ng", "ŋ").replace("th", "tʰ")
-                .replaceFirst("^ch", "c").replace("tr", "ʈ");
+                .replaceFirst("^ch", "tɕ").replace("tr", "tɕ")
+                .replaceFirst("^r", "z").replace("gi", "z").replace("ʂ", "s");
         s = s.replace("nh", "ŋ̟").replaceFirst("c$", "k").replaceFirst("ch$", "k̟");
         s = s.replace("y", "i").replaceFirst("o([ae])", "u$1")
                 .replace("aa", "ə").replace("aw", "ă").replace("a", "aː").replace("ă", "a")
                 .replace("ee", "ê").replace("e", "ɛ").replace("ê", "e")
                 .replace("uw", "ɨ").replace("ow", "əː").replace("oo", "ô").replace("o", "ɔ").replace("ô", "o")
                 .replace("ie", "iə").replaceFirst("([iuɨ])a$", "$1ə")
-                .replace("ɨəː", "ɨə").replace("uo", "uə").replaceFirst("([aːəeɛiɨ])[uɔ]$", "$1w");
+                .replace("ɨəː", "ɨə").replace("uo", "uə").replaceFirst("([aːəeɛiɨ])[uɔ]$", "$1w").replaceFirst("([uoɔ]k)", "$1p");
         int index;
         if (isEnteringTone) {
             index = tone == 's' ? 7 : 8;
