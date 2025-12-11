@@ -355,7 +355,7 @@ class 表(_表):
 				自.誤.append(f"[{韻}]前不應斷行，或不是合法韻母")
 				print(f"{自.簡稱} \"{自.spath}\" [{韻}]前不應斷行，或不是合法韻母")
 			return 自.韻
-		if not sharp and 自.簡稱 in ("平樂石龍廠","揭西灰寨","福鼎"):
+		if not sharp and 自.簡稱 in ("平樂石龍廠","揭西灰寨","福鼎","巫山"):
 			return 自.韻
 		if not sharp and 自.簡稱 not in ("南海沙頭",) and 自.非韻(韻):
 			return 自.韻

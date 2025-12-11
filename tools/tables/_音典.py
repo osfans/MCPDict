@@ -259,6 +259,13 @@ class 表(_表):
 						項 = 項[0]
 					l.append((項, 音, 註))
 				return l
+			elif 名 in ("北流", "梧州夏郢", "岑溪", "蒙山"):
+				if 音.startswith("ø"):
+					音 = 音[1:]
+			elif 名 in ("容縣",):
+				if 音.startswith("ø"):
+					音 = 音[1:]
+				音 = re.sub("^(.*?)(ɔ.*)\\((.*?)\\)(.+?)$", r"\1\2\4/\1\3\4", 音)
 			elif 名 in ("榮縣",):
 				音 = 音.lstrip("Øø")
 				if "或" in 音:
@@ -267,13 +274,19 @@ class 表(_表):
 				調名 = ("陰平","陽平","陰上","陽上","陰去","陽去","上","中","下")
 				調值 = sorted(自.調典.values())
 				調表 = dict(zip(調名, 調值))
+				if 音.startswith("ø"):
+					音 = 音[1:]
 				音 = re.sub("([陰陽平上去入中下]+)(\\d*?)$", lambda x:調表.get(x.group(1)), 音)
 			elif 名 in ("博白柑子園", "博白岐山坡"):
 				音 = 音.replace("自稱音節", "\u030D")
+				if 音.startswith("ø"): 音 = 音[1:]
 			elif 名 in ("仙居",):
 				音 = 音.replace("~", "\u0303")
 			elif 名 in ("通東餘東",):
 				音 = 音.replace("輕聲", "0")
+			elif 名 in ("藤縣",):
+				音 = 音.replace(".ŋ", "ŋ̍")
+				if 音.startswith("ø"): 音 = 音[1:]
 		elif 自.文件名.startswith("榕江侗"):
 			列[0] = 列[0].strip().replace(" /", "/").replace(" [", "[")
 			if not 列[0]: return

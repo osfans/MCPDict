@@ -431,5 +431,7 @@ def getLangs(items, 參數, args):
 	字.info["音典分區"] = ",".join(sorted(types[1].keys(),key=types[1].get))
 	字.info["陳邡分區"] = ",".join(sorted(types[2].keys(),key=types[2].get))
 	字.info["版本"] = datetime.datetime.now().strftime("%Y-%m-%d")
-	if not args.output: print("語言數", 數)
+	if not args.output: print("語言數", 數)	
+	print("韻母表", ",".join(sorted(語組[-1].韻母集)))
+	print("聲母表", ",".join(sorted(語組[-1].聲母集)))
 	return 語組, 高頻字

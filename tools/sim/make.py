@@ -47,7 +47,6 @@ def get_mcpdict():
 	conn.close()
 	return dicts, infos
 
-s = set()
 def split_ipa(ipa):
 	l = ipa.strip("`*\\?\\+")
 	l = re.sub("\\(.*?\\)", "", l).strip()
@@ -63,7 +62,6 @@ def split_ipa(ipa):
 			p[0] = p[0][:-1]
 		elif len(p[0]) > 2:
 			p[0] = p[0][:-2]
-	s.add(p[1])
 	return tuple(p)
 
 def get_part(lang, item, hzs, index=0):
@@ -103,6 +101,16 @@ def get_part(lang, item, hzs, index=0):
 					ipaindex = 9
 					ipas[ipaindex] = ipas[ipaindex] + ipas[0][-1]
 					ipas = ipas[ipaindex:ipaindex+1]
+				if lang == "越南":
+					tones = "_zrsfxj"
+					last = ipas[0][-1]
+					tone = 1
+					base = ipas[0].rstrip(tones)
+					if last in tones:
+						tone = tones.index(last)
+					if base.endswith("p") or base.endswith("t") or base.endswith("c") or base.endswith("ch"):
+						tone += 6
+					ipas[0] = base + str(tone)
 				if lang in ("白－沙上古",):
 					continue
 				for ipa in ipas:
@@ -267,4 +275,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-	print(",".join(sorted(s)))
