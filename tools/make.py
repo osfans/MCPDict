@@ -64,7 +64,9 @@ if not args.output:
 	c.executemany(INSERT, items)
 	del items
 	字書 = None
-	if len(argv) != 1:
+	if len(argv) == 1:
+		字數 = langs[-1].info["字數"]
+	else:
 		dicts = defaultdict(dict)
 		fields, 字書 = getDicts(dicts)
 		CREATE = 'CREATE VIRTUAL TABLE mcpdict USING fts5 (%s, columnsize=0, tokenize="unicode61 tokenchars \'%s\'")' % (",".join(fields), tokens)
