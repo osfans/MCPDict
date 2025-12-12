@@ -253,7 +253,25 @@ class 表(_表):
 		elif 名 in ("南通",):
 			行 = 自.增加調類(行)
 			行 = 行.replace("【", "{").replace("】", "}")
-		elif 名 in ("通州五接","南通唐閘","如皋白蒲","如皋石莊","如皋永安沙","如皋曹埭", "如皋丁堰","如皋車馬湖","如皋袁橋－柴灣","如皋朱窯","如皋瓦車蓬","如皋雙高橋","如皋宋夾","如皋搬經","如皋江安","如皋下原","如皋圩裏港上話","南通小海","通州先鋒","南通新開","興化戴南","啟東", "廣陵", "新南京"):
+		elif 名 in ("三門頭岙",):
+			行 = re.sub(" +?\\{.+?\\}", "", 行)
+			行 = re.sub(" +?\\{", "{", 行)
+			行 = re.sub(" +?\\}", "}", 行)
+			行 = 行.replace(" 0", " ⓪")
+			行 = re.sub("([-=]\\d)[-=]", "\\1", 行).replace("\u1ab6", "")
+			行 = re.sub("(\\d)(\\{)", "\\2\\1", 行)
+			行 = re.sub("([a-zØ`]) +([^⓪①②③④⑤ ])", "\\1    ④\\2", 行)
+			行 = 行.replace("u=i=", "ui")
+			行 = 行.replace("`", "ʔ").replace("ng", "ŋ").replace("zh", "ʑ").replace("c", "ʨ").replace("j", "ʥ").replace("ts", "ʦ").replace("dz", "ʣ").replace("sh", "ɕ").replace("gh", "ɦ")
+			行 = 行.replace("ae", "ɛ").replace("ao", "ɔ").replace("yu", "ʮ").replace("y","ɿ").replace("iui", "y").replace("iu", "y").replace("eu", "ɤɯ").replace("oe", "ø").replace("ou", "ʊ").replace("en", "əŋ").replace("ueh", "uəʔ")
+			行 = re.sub("([aəɔoiy])n", "\\1ŋ", 行)
+			行 = re.sub("i([oøɔ])", "y\\1", 行)
+			行 = re.sub("h$", "ʔ", 行)
+			if 自.韻.startswith("ʔ") or (行 and 行[0] in "fhkpstʦʨɕʔØ"):
+				行 = 行.replace("⓪", "[0a]").replace("①", "[1]").replace("②", "[3]").replace("③", "[5]").replace("④", "[7]").replace("⑤", "[9a]")
+			else:
+				行 = 行.replace("⓪", "[0b]").replace("①", "[2]").replace("②", "[4]").replace("③", "[6]").replace("④", "[8]").replace("⑤", "[9b]")
+		elif 名 in ("南通唐閘","如皋白蒲","南通小海","南通新開","興化戴南","啟東", "廣陵", "新南京"):
 			if 行.startswith("\t"):
 				return
 			行 = 自.增加調類(行)
