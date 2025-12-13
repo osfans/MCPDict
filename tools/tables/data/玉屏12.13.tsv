@@ -138,7 +138,8 @@ cid	cʰaracter	initian	finan	tone	note
 84	猪	tɕ	y	24	
 85	除	tɕʰ	y	212	
 86	初	tsʰ	əu	24	
-87	锄	tɕʰ	y	212	
+	丑	tsʰ	əu	42	
+	锄	tsʰ	əu	212	
 88	所	s	o	42	
 89	书	ɕ	y	24	
 90	鼠	tɕʰ	y	42	
@@ -442,12 +443,31 @@ cid	cʰaracter	initian	finan	tone	note
 305	抄	tsʰ	ao	24	
 306	交	tɕ	iao	24	
 307	敲	kʰ	ao	24	
+	狡	tɕ	iao	212	口语
+	缴	tɕ	iao	42	
 308	孝	ɕ	iao	455	
 309	校	ɕ	iao	455	
+	标	p	iao	24	
 310	表	p	iao	42	
+	鳔	p	iao	455	
+	飘	pʰ	iao	24	
+	瓢	pʰ	iao	212	
+	螵	pʰ	iao	42	
 311	票	pʰ	iao	455	
+	喵	m	iao	24	
+	苗	m	iao	212	
+	秒	m	iao	42	
+	妙	m	iao	455	
 312	庙	m	iao	455	
+	刁	t	iao	24	
+	鸟	t	iao	42	
+	掉	t	iao	455	
+	挑	tʰ	iao	24	
+	条	tʰ	iao	212	
+	跳	tʰ	iao	455	
 313	焦	tɕ	iao	24	
+	消	ɕ	iao	24	
+	肴	ɕ	iao	212	
 314	小	ɕ	iao	42	
 315	笑	ɕ	iao	455	
 316	朝	tsʰ	ao	212	
@@ -457,14 +477,18 @@ cid	cʰaracter	initian	finan	tone	note
 	挠	z	ao	42	
 319	绕	z	ao	42	
 	绕	z	ao	455	
+	悄	tɕʰ	iao	24	
 320	桥	tɕʰ	iao	212	
+	巧	tɕʰ	iao	42	
+	翘	tɕʰ	iao	455	
 3212	轿	tɕ	iao	455	
 322	腰	∅	iao	24	
 323	要	∅	iao	455	
 324	摇	∅	iao	212	
+	跃	∅	iao	455	
+	辽	n	iao	212	
 325	鸟	n	iao	42	
 326	钓	t	iao	455	
-327	条	tʰ	iao	212	
 328	料	n	iao	455	
 329	箫	ɕ	iao	24	
 330	叫	tɕ	iao	455	
@@ -473,18 +497,33 @@ cid	cʰaracter	initian	finan	tone	note
 	幕	m	uᶹ	455	
 332	抖	tʰ	əu	42	
 333	偷	tʰ	əu	24	
+	透	tʰ	əu	455	
 334	头	tʰ	əu	212	
 3455	豆	t	əu	455	
 336	楼	n	əu	212	
+	篓	n	əu	42	
+	周	ts	əu	24	
 337	走	ts	əu	42	
+	咒	ts	əu	455	
+	柔	z	əu	212	
 338	凑	t	əu	455	白
 338	凑	tsʰ	əu	455	文
 339	钩	k	əu	24	
+	沟	k	əu	24	
 340	狗	k	əu	42	
+	构	k	əu	455	
 341	够	k	əu	455	
+	抠	kʰ	əu	24	
 342	口	kʰ	əu	42	
+	寇	kʰ	əu	455	
+	欧	ŋ	əu	24	
 343	藕	ŋ	əu	42	
+	呕	ŋ	əu	42	
+	怄	ŋ	əu	455	
 344	后	x	əu	455	
+	瘊	x	əu	24	
+	侯	x	əu	212	
+	吼	x	əu	42	
 345	厚	x	əu	455	
 346	富	f	uᶹ	455	
 347	副	f	uᶹ	455	
@@ -940,7 +979,7 @@ cid	cʰaracter	initian	finan	tone	note
 771	狂	kʰ	uaŋ	42	
 772	王	∅	uaŋ	212	
 773	旺	∅	uaŋ	455	
-774	缚	f	uᶹ	455	
+774	缚	p	o	212	
 775	绑	p	aŋ	42	
 776	胖	pʰ	aŋ	455	
 777	棒	p	aŋ	455	
@@ -1088,7 +1127,6 @@ cid	cʰaracter	initian	finan	tone	note
 911	划	f	a	455	
 912	兄	ɕ	ioŋ	24	
 913	荣	∅	ioŋ	212	
-914	永	∅	ioŋ	42	
 915	营	∅	yn	212	
 916	蓬	pʰ	oŋ	212	
 917	东	t	oŋ	24	
@@ -1144,7 +1182,10 @@ cid	cʰaracter	initian	finan	tone	note
 967	畜	tsʰ	əu	212	
 968	缩	s	o	212	
 969	粥	ts	əu	24	
+	收	s	əu	24	
 970	叔	s	əu	212	
+	首	s	əu	42	
+	受	s	əu	455	
 971	熟	s	əu	212	
 972	肉	z	əu	212	
 973	菊	tɕ	y	212	
@@ -1173,13 +1214,13 @@ cid	cʰaracter	initian	finan	tone	note
 993	烛	ts	əu	212	
 994	赎	s	əu	212	
 995	属	s	əu	212	
-996	褥	z	uᶹ	42	
+996	褥	z	əu	212	
 997	曲	tɕʰ	y	212	
 998	局	tɕ	y	212	
 	迂	∅	y	24	
 	与	∅	y	42	
 999	玉	∅	y	455	
-1000	浴	∅	y	455	存疑
+1000	狱	∅	iəu	212	
 1001	我	ŋ	o	42	
 1002	彭	pʰ	ən	212	
 1003	扯	tsʰ	e̞	42	
