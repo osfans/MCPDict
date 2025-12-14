@@ -38,6 +38,7 @@ jobs:
         pushd tools
         python3 -m pip install -r requirements.txt
         touch tables/*.py
+        touch tables/output/_詳情.json
         python3 make.py -c -i
         popd
 
