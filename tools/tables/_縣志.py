@@ -196,6 +196,8 @@ class 表(_表):
 			行 = 行.replace("]ⓐ", "a]").replace("]ⓑ", "b]")
 		elif 名 in ("休寧",):
 			行 = 行.replace("[3ˀ]", "[3]")
+		elif 名 in ("泗水",):
+			行 = re.sub("‖(.)", "\\1{(连读音)}", 行).replace("}{", "")
 		elif 名 in ("光澤寨裏",):
 			行 = 行.replace("‖", "")
 		elif 名 in ("1935醴陵",):
@@ -276,6 +278,9 @@ class 表(_表):
 				return
 			行 = 自.增加調類(行)
 			行 = 自.normS(行.replace(")(", "："))
+		elif 名 in ("靖江東興"):
+			行 = re.sub("(\\d)", "[\\1]", 行)
+			行 = 自.normS(行)
 		elif 名 in ("溧水在城",):
 			if 行.startswith("\t"):
 				return
