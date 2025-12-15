@@ -16,6 +16,7 @@ FeatureCollection = {
 }
 
 def 過時():
+	if not os.path.exists(spath): return False
 	if not os.path.exists(tpath): return True
 	classtime = os.path.getmtime(__file__.rstrip("c"))
 	stime = os.path.getmtime(spath)
