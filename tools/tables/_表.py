@@ -39,6 +39,14 @@ def getCompatibilityVariants():
 		d[字] = val
 	return d
 
+def maketrans(path):
+	fname = os.path.join(WORKSPACE, "tables", "data", path)
+	d = dict()
+	for 行 in open(fname, encoding="U8"):
+		字, val = 行.rstrip("\n").split("\t")
+		d[字] = val
+	return str.maketrans(d)
+
 def getTsvName(xls, 頁名=""):
 	name = os.path.basename(xls)
 	if 頁名: 頁名 = "-" + 頁名
@@ -188,19 +196,6 @@ def ybKey(x):
 	if 註: 註 = 註[0]
 	return 註 + 音[-1]
 
-def fullwidth_to_halfwidth(s):
-	"""将字符串中的全角标点转换为半角标点"""
-	result = []
-	for char in s:
-		# 检查是否为全角标点
-		if "Ａ" <= char <= "ｚ":
-			# 转换为半角标点
-			halfwidth_char = chr(ord(char) - 0xFEE0)
-			result.append(halfwidth_char)
-		else:
-			result.append(char)
-	return ''.join(result)
-
 class 表:
 	_time = os.path.getmtime(__file__)
 	文件名 = None
@@ -217,6 +212,10 @@ class 表:
 	註序 = False
 	補丁 = None
 	kCompatibilityVariants = getCompatibilityVariants()
+	kPUAs = maketrans("私用字.tsv")
+	kShapes = maketrans("正形.tsv")
+	kIPAs = maketrans("正音.tsv")
+	kTones = maketrans("正調.tsv")
 	simplified = 1
 	爲音 = True
 	列序 = None
@@ -228,9 +227,10 @@ class 表:
 	誤 = []
 	音集 = set()
 	不計入調 = set()
-	調號 = "˩˨˧˦˥"
+	調號 = "˩˨˧˦˥⁰¹²³⁴⁵⁶⁷⁸⁹⓪①②③④⑤⑥⑦⑧⑨ⓐⓑⓒⓓ"
 	韻母集 = set()
 	聲母集 = set()
+	聲調典 = defaultdict(set)
 
 	def __init__(自):
 		自.誤.clear()
@@ -372,6 +372,7 @@ class 表:
 					sm = sm[:-2]
 					if not ym: ym = sm[-2:]
 				自.聲母集.add(sm)
+				if m.group(3): 自.聲調典[自.簡稱].add(m.group(3))
 			else:
 				自.誤.append(f"[{音}]音節含有非法字符")
 				print(f"{自.簡稱} \"{自.spath}\" [{音}:{i}]音節含有非法字符")
@@ -386,25 +387,22 @@ class 表:
 					sdb = f"{i}"
 					音 = 音.replace(sda, sdb)
 				音 = 音.replace("ⓐ", "a").replace("ⓑ", "b")
-			音 = fullwidth_to_halfwidth(音)
 			音 = 音.strip("[] ")
 			音 = 音.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀∅Ø〇0").replace("零", "").replace("◌", "")
 			if 自.無q聲(): 音 = 音.lstrip("q")
-			if 音.startswith("I") or 音.startswith("1"): 音 = "l" + 音[1:]
-			音 = 音.lower().replace("ε", "ɛ").replace("α", "ɑ").replace("g", "ɡ").replace("х", "x").replace("р", "p").replace("ο", "o").replace("у", "y").replace("ј", "j").replace("∫", "ʃ").replace("ʼ", "ʰ").replace("'", "ʰ").replace("‘", "ʰ").replace("′", "ʰ").replace("ʻ", "ʰ").replace(":","ː").replace("—", "-").replace("－", "-")
+			音 = re.sub("^[I1]", "l", 音)
+			音 = 音.lower().translate(自.kIPAs).replace("tc", "tɕ")
 			音 = re.sub("([ʂʐ]ʰ?)ʮ", "\\1ʯ", 音)
 			音 = re.sub("([sz]ʰ?)ʯ", "\\1ʮ", 音)
 			音 = re.sub("([ʂʐ]ʰ?)ɿ", "\\1ʅ", 音)
 			音 = re.sub("([sz]ʰ?)ʅ", "\\1ɿ", 音)
-			if not 音.startswith("h") and "h" in 音:
-				音 = 音.replace("h", "ʰ")
 			音 = re.sub(r"[\[\]\{\} ]","", 音)
-			#()
+			#(i)e-> ie/e
 			if "(" in 音 and ")" in 音:
 				音甲 = 音.replace("(", "").replace(")", "")
 				音乙 = re.sub(r"\(.*?\)", "", 音)
 				音 = f"{音甲}/{音乙}"
-			音 = 音.replace("ṃ", "m").replace("ḷ", "l").replace("ṇ", "n")
+			音 = re.sub("([^/])h", "\\1ʰ", 音)
 			音 = re.sub(fr"^{IPA_SM}([mnvʋzʑrɹɻlɭβŋȵʐɱʒ])(\d+)$", "\\1\\2\u0329\\3", 音)
 			音 = re.sub("([mnvʋzʑrɹɻlɭ])([\u0329\u030Dˌˈ]+)", "\\1\u0329", 音)
 			音 = re.sub("([βŋȵʐɱʒ])([\u0329\u030Dˌˈ]+)", "\\1\u030D", 音)
@@ -423,7 +421,7 @@ class 表:
 			音 = 音.replace("\t", "")
 		if 音 not in 自.音集:
 			自.音集.add(音)
-		elif 自.簡稱 not in ("長沙星沙", "長沙金井", "雙牌打鼓坪", "湘劇", "蘇州評彈", "溧陽河南話", "南京", "新洲"):
+		elif 自.簡稱 not in ("長沙星沙", "長沙金井", "雙牌打鼓坪", "湘劇", "蘇州評彈", "溧陽河南話", "南京", "新洲", "1800長沙", "鹽城西鄉"):
 			自.誤.append(f"[{音}]音節重複")
 		return 音
 
@@ -610,39 +608,14 @@ class 表:
 		return tuple(列[:3])
 
 	def 統調(自, m):
-		g = m.group(1)
-		l = [str(自.調號.index(i) + 1) for i in g]
-		g = "".join(l)
-		return "[" + g + "]"
+		return m.group(0).translate(自.kTones)
 
 	def 統(自, 行):
 		行 = 行.rstrip('\n')
 		if not 自.爲方言(): return 行
-		for i in range(1, 10):
-			sda = chr(ord('➀') + (i - 1))
-			sdb = chr(ord('①') + (i - 1))
-			行 = 行.replace(sda, sdb)
-		for i in range(0, 10):
-			sda = chr(ord('₀') + i)
-			sdb = chr(ord('0') + i)
-			行 = 行.replace(sda, sdb)
-			sda = chr(ord('０') + i)
-			行 = 行.replace(sda, sdb)
-		行 = 行.replace(" ", " ")\
-			.replace("（", "(").replace("）", ")")\
-			.replace("［", "[").replace("］", "]")\
-			.replace("｛", "{").replace("｝", "}")\
-			.replace("／", "/").replace("？", "?").replace("！", "!").replace("：", ":").replace("；",";").replace("...", "⋯").replace("｜", "|")\
-			.replace("∽", "~").replace("～", "~")
-		行 = 行.replace("\u1dc9", "\u0303").replace("\u0342", "\u0303")\
-			.replace("ʦ", "ts").replace("ʨ", "tɕ").replace("ʧ", "tʃ").replace("ꭧ", "tʂ")\
-			.replace("ʣ", "dz").replace("ʥ", "dʑ").replace("ʤ", "dʒ").replace("ꭦ", "dʐ")\
-			.replace("ʔb", "ɓ").replace("ʔd", "ɗ")\
-			.replace("ɷ", "ʊ")\
-			.replace("ã", "ã").replace("ẽ", "ẽ").replace("ĩ", "ĩ").replace("õ", "õ").replace("ũ", "ũ")\
-			.replace("ỹ", "ỹ").replace("ṽ", "ṽ")\
-			.replace("", "䝼").replace("", "ᵑ").replace("", "ᶽ")
-		行 = re.sub(fr"\[([{自.調號}]+)\]", 自.統調, 行)
+		行 = 行.translate(自.kPUAs)
+		行 = 行.translate(自.kShapes).replace("...", "⋯").replace("ʔb", "ɓ").replace("ʔd", "ɗ")
+		行 = re.sub(fr"\[[{自.調號}]+\]", 自.統調, 行)
 		return 行
 	
 	@property
@@ -688,11 +661,7 @@ class 表:
 
 	def 分音(自, 音):
 		if not 音: return "",""
-		調值 = "⁰¹²³⁴⁵⁶"
-		for i in 調值:
-			音 = 音.replace(i, str(調值.index(i)))
-		for i in 自.調號:
-			音 = 音.replace(i, str(自.調號.index(i)+1))
+		音 = 音.translate(自.kTones)
 		聲韻 = re.split(r"\d", 音, maxsplit=1)[0]
 		調 = 音[len(聲韻):]
 		return 聲韻,調

@@ -29,6 +29,8 @@ class 表(_表):
 				音 = 列[列序[1]] + 列[列序[2]] + 列[列序[3]]
 			if 名 in ("新望城",):
 				組 = 組.replace("?", "□")
+			elif 名 in ("賀州賀街",):
+				音 = 音.strip("[]")
 			elif 名 in ("湘潭易俗河",):
 				自.註符 = "[]"
 			elif 名 in ("資源","宜章東風"):
@@ -142,10 +144,10 @@ class 表(_表):
 			else:
 				音 = 聲韻 + 調
 		if not 音: return
-		音 = 自.正音(音, True)
 		if not 音: return
 		if 自.info.get("字表使用調值", False):
 			音 = 自.轉調類(音)
+		音 = 自.正音(音, True)
 		l = list()
 		if 自.註符:
 			if 自.註符 == "{}":

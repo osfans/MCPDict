@@ -76,20 +76,16 @@ def getSTVariants(level=2):
 		列[1] = 列[1].split("#")[0].strip()
 		if " " not in 列[1]:
 			d[列[0]] = 列[1]
-	return d
+	return str.maketrans(d)
 
 normVariants = getSTVariants(1)
 stVariants = getSTVariants(2)
 
 def s2t(字組, level=1):
-	t = ""
-	for 字 in 字組:
-		if level == 1:
-			字 = normVariants.get(字, 字)
-		else:
-			字 = stVariants.get(字, 字)
-		t += 字
-	return t
+	if level == 1:
+		return 字組.translate(normVariants)
+	else:
+		return 字組.translate(stVariants)
 
 方言調查字表 = set()
 for 行 in open(os.path.join(PATH, SOURCE, "方言調查字表.tsv"), encoding="U8"):
@@ -314,15 +310,23 @@ def getLangs(items, 參數, args):
 				if 語.字數 == 0:
 					if 語.spath: print(f"{語} 未成功解析")
 					continue
-				if 語.字數 < 900:
+				if 語.字數 < 500:
 					print(f"{語} 字數太少: {語.字數}")
 					if mod in 語言組: 語言組.remove(mod)
 				elif 語.聲韻數 < 100:
 					print(f"{語} 音節太少: {語.聲韻數}")
 				elif "一" in 語.d and len(語.d["一"]) > 4:
 					print(f"{語} 格式可能有誤：{語.d['一']}")
-			if not 語.無調() and not 調典:
-				print(f"{語} 無調值")
+			if not 語.無調():
+				if 調典:
+					差異 = 語.聲調典[語.簡稱] - 調組.keys()
+					if '0' in 差異: 差異.remove('0')
+					if 差異:
+						誤 = f"未登記調值：{','.join(差異)}"
+						print(f"{語} {誤}")
+						語.誤.append(誤)
+				else:
+					print(f"{語} 無調值")
 			語.info["文件名"] = 語.文件名
 			if d["省"]:
 				省[d["省"]] += 1

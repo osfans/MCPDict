@@ -29,6 +29,8 @@ class 表(_表):
 			行 = re.sub(r"\{(\d+)\}", "\\1", 行)
 			行 = re.sub(r"(\d+[ab]?)", "[\\1]", 行, 1)
 			if "[" not in 行: 行 = ""
+		elif 名 in ("東海",):
+			if "[" not in 行: return ""
 		elif 名 in ("羅山","贛縣安平"):
 			行 = re.sub(r"[:] ?\[", "	[", 行)
 		elif 名 in ("介休張蘭",):
@@ -278,7 +280,7 @@ class 表(_表):
 				return
 			行 = 自.增加調類(行)
 			行 = 自.normS(行.replace(")(", "："))
-		elif 名 in ("靖江東興"):
+		elif 名 in ("靖江東興",):
 			行 = re.sub("(\\d)", "[\\1]", 行)
 			行 = 自.normS(行)
 		elif 名 in ("溧水在城",):
