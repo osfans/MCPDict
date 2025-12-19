@@ -3695,6 +3695,30 @@
         "marker-color": "#F5A4B6",
         "marker-size": "medium",
         "marker-symbol": "b",
+        "title": "壽光",
+        "語言": "壽光話",
+        "地點": "山東濰坊壽光",
+        "地圖集二分區": "冀魯官話－滄惠片－陽壽小片",
+        "音典分區": "華北－膠東－東濰",
+        "陳邡分區": "官話－山東－魯東大片－膠萊片",
+        "版本": "2025-12-19",
+        "錄入人": "DaiDzao",
+        "字表來源": "《寿光方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.795693,
+          36.871622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5A4B6",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "濰城",
         "語言": "濰城話",
         "地點": "山東濰坊濰城",

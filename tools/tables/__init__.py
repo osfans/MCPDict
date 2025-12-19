@@ -322,7 +322,7 @@ def getLangs(items, 參數, args):
 					差異 = 語.聲調典[語.簡稱] - 調組.keys()
 					if '0' in 差異: 差異.remove('0')
 					if 差異:
-						誤 = f"未登記調值：{','.join(差異)}"
+						誤 = f"未登記聲調：{','.join(差異)}"
 						print(f"{語} {誤}")
 						語.誤.append(誤)
 				else:
