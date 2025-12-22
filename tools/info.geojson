@@ -16848,7 +16848,7 @@
       "properties": {
         "marker-color": "#E54E5D",
         "marker-size": "small",
-        "marker-symbol": "",
+        "marker-symbol": "b",
         "title": "宜賓樟海",
         "語言": "宜賓樟海話",
         "地點": "四川宜賓敍州樟海",
@@ -16872,7 +16872,7 @@
       "properties": {
         "marker-color": "#E54E5D",
         "marker-size": "small",
-        "marker-symbol": "",
+        "marker-symbol": "b",
         "title": "宜賓永興",
         "語言": "宜賓永興話",
         "地點": "四川宜賓敍州永興",
@@ -51021,6 +51021,55 @@
         "marker-color": "#A5C24E",
         "marker-size": "small",
         "marker-symbol": "h",
+        "title": "博羅郭前",
+        "語言": "博羅橫河郭前平婆話",
+        "地點": "廣東惠州博羅橫河郭前",
+        "地圖集二分區": "客家話－汀州片",
+        "音典分區": "閩－閩西－西南",
+        "陳邡分區": "客家－汀州－汀州片",
+        "方言島": true,
+        "版本": "2025-12-22",
+        "錄入人": "林",
+        "字表來源": "《广东博罗平婆话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.109293,
+          23.299472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "南靖磜頭",
+        "語言": "南靖磜頭客話",
+        "地點": "福建漳州南靖梅林磜頭",
+        "地圖集二分區": "客家話－汀州片",
+        "音典分區": "閩－閩西－西南",
+        "陳邡分區": "客家－汀州－汀州片",
+        "版本": "2025-11-21",
+        "錄入人": "DaiDzao",
+        "字表來源": "《南靖梅林（磜头）客家话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.967294,
+          24.145764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
         "title": "詔安官陂",
         "語言": "詔安官陂客話",
         "地點": "福建漳州詔安官陂",
@@ -51060,30 +51109,6 @@
         "coordinates": [
           116.963376,
           24.099561
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#A5C24E",
-        "marker-size": "small",
-        "marker-symbol": "h",
-        "title": "詔安梅林",
-        "語言": "詔安磜頭客話",
-        "地點": "福建漳州詔安梅林磜頭",
-        "地圖集二分區": "客家話－汀州片",
-        "音典分區": "閩－閩西－西南",
-        "陳邡分區": "客家－汀州－汀州片",
-        "版本": "2025-11-21",
-        "錄入人": "DaiDzao",
-        "字表來源": "《南靖梅林（磜头）客家话语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          116.967294,
-          24.145764
         ]
       }
     },
