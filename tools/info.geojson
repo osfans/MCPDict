@@ -5483,6 +5483,30 @@
         "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
+        "title": "沛縣",
+        "語言": "沛縣話",
+        "地點": "江蘇徐州沛縣",
+        "地圖集二分區": "中原官話－徐淮片",
+        "音典分區": "華北－河南－徐西",
+        "陳邡分區": "官話－山東－魯西大片－兗州片",
+        "版本": "2025-12-23",
+        "錄入人": "DaiDzao",
+        "字表來源": "《沛县方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.943069,
+          34.766672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "碭山",
         "語言": "碭山話",
         "地點": "安徽宿州碭山",
