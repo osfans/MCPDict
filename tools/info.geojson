@@ -5384,6 +5384,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "新沂",
+        "語言": "新沂話",
+        "地點": "江蘇徐州新沂新安",
+        "地圖集二分區": "中原官話－徐淮片",
+        "音典分區": "華北－西魯",
+        "陳邡分區": "官話－山東－魯西大片－徐州片",
+        "版本": "2025-12-23",
+        "錄入人": "DaiDzao",
+        "字表來源": "《新沂县志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.361022,
+          34.374656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "large",
         "marker-symbol": "b",
         "title": "宿迁",
