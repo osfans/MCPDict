@@ -357,7 +357,6 @@ class 表:
 	def 校音(自, 音):
 		名 = 自.簡稱
 		if 名 in ("南寧", "南寧亭子"): 音 = 音.replace("-", "/")
-		elif 名 in ("1792宜興",): 音 = 音.split("/")[0]
 		if 有字(音):
 			自.誤.append(f"[{音}]音節含有漢字")
 			print(f"{自.簡稱} \"{自.spath}\" [{音}]音節含有漢字")
@@ -613,9 +612,9 @@ class 表:
 
 	def 統(自, 行):
 		行 = 行.rstrip('\n')
+		行 = 行.translate(自.kPUAs).translate(自.kShapes)
 		if not 自.爲方言(): return 行
-		行 = 行.translate(自.kPUAs)
-		行 = 行.translate(自.kShapes).replace("...", "⋯").replace("ʔb", "ɓ").replace("ʔd", "ɗ")
+		行 = 行.replace("...", "⋯").replace("ʔb", "ɓ").replace("ʔd", "ɗ")
 		行 = re.sub(fr"\[[{自.調號}]+\]", 自.統調, 行)
 		return 行
 	

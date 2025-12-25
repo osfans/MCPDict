@@ -54,10 +54,13 @@ class 表(_表):
 		return 音標, 反切
 
 	def 統(自, 行):
-		行 = re.sub("\\(.*?\\)", "", 行)
+		行 = _表.統(自, 行)
+		# 行 = re.sub("\\(.*?\\)", "", 行)
 		行 = re.sub("\\[.*?\\]", "", 行)
 		行 = re.sub("<.*?>", "", 行)
-		if 行.startswith("#"): 行 = 行.strip()
+		if 行.startswith("#"):
+			行 = re.sub("\\(.*?\\)", "", 行)
+			行 = 行.strip()
 		if 行.startswith("## "):
 			自.呼序.clear()
 			自.韻 = 行[3:][-1]
@@ -77,12 +80,11 @@ class 表(_表):
 
 	def 析(自, 列):
 		if "⮚" not in 列[0]: return
-		fs = 列[0].split("⮚")
 		l = list()
 		音標, 反切 = 自.擬音()
-		for i in fs[0]:
-			if i == fs[0][-1]:
-				l.append((i, 音標, f"〔{反切}〕{fs[1]}"))
-			else:
-				l.append((i, 音標, f"〔{反切}〕"))
+		for i, j, k in re.findall("(.)(\\(.*?\\))?(⮚.+)?", 列[0]):
+			k = k.replace("⮚", "")
+			註 = f"{j}〔{反切}〕{k}"
+			註 = re.sub(r"〔(.*?)〕(.*?)○", r"〔\1 \2〕", 註)
+			l.append((i, 音標, 註))
 		return l

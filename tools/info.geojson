@@ -17951,6 +17951,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "銅仁漾頭",
+        "語言": "銅仁漾頭話",
+        "地點": "貴州銅仁碧江漾頭",
+        "地圖集二分區": "西南官話－川黔片－成渝小片",
+        "音典分區": "中上江－荆益－川黔",
+        "版本": "2025-12-24",
+        "錄入人": "DaiDzao",
+        "字表來源": "《贵州铜仁漾头方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.42276,
+          27.69415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "甕安",
@@ -46618,6 +46641,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
+        "marker-size": "small",
+        "marker-symbol": "l",
+        "title": "安溪安美",
+        "語言": "安溪龍涓安美話",
+        "地點": "福建泉州安溪龍涓安美",
+        "地圖集二分區": "閩語－閩南片－泉漳小片",
+        "音典分區": "閩－閩南",
+        "陳邡分區": "福建－閩南",
+        "版本": "2025-12-25",
+        "錄入人": "林",
+        "字表來源": "《泉厦方言音韵比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.802748,
+          24.954582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "永春",
@@ -49795,29 +49842,6 @@
         "marker-color": "#F08460",
         "marker-size": "small",
         "marker-symbol": "l",
-        "title": "建甌迪口",
-        "語言": "建甌迪口事",
-        "地點": "福建南平建甌迪口",
-        "地圖集二分區": "閩語－閩北片－建甌小片",
-        "音典分區": "閩－閩北",
-        "陳邡分區": "福建－閩北",
-        "錄入人": "林",
-        "字表來源": "《閩北區三縣市方言研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          118.475824,
-          26.751859
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#F08460",
-        "marker-size": "small",
-        "marker-symbol": "l",
         "title": "建甌吉陽",
         "語言": "建甌吉陽事",
         "地點": "福建南平建甌吉陽",
@@ -49832,6 +49856,29 @@
         "coordinates": [
           118.144007,
           27.144332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
+        "marker-size": "small",
+        "marker-symbol": "l",
+        "title": "建甌迪口",
+        "語言": "建甌迪口事",
+        "地點": "福建南平建甌迪口",
+        "地圖集二分區": "閩語－閩北片－建甌小片",
+        "音典分區": "閩－閩北",
+        "陳邡分區": "福建－閩北",
+        "錄入人": "林",
+        "字表來源": "《閩北區三縣市方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.475824,
+          26.751859
         ]
       }
     },
@@ -52207,6 +52254,7 @@
         "音典分區": "閩－閩西－方言島",
         "陳邡分區": "客家－汀州－汀州片",
         "方言島": true,
+        "版本": "2025-12-25",
         "錄入人": "林",
         "字表來源": "《广东博罗平婆话语音研究》"
       },
