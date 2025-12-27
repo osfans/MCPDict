@@ -113,6 +113,8 @@ class 表(_表):
 				for 音 in 音標.split("|"):
 					if 訓: 音 += "@"
 					音組.append(音)
+			elif 自.文件名.startswith("鄂州赣语语音研究"):
+				音組 = 音.split("ǀ")
 			elif 自.文件名.startswith("白語_袁明軍"):
 				if 註 == 字: 註 = ""
 				上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
