@@ -27705,6 +27705,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
+        "marker-size": "small",
+        "marker-symbol": "d",
+        "title": "寶山月浦",
+        "語言": "寶山月浦閒話",
+        "地點": "上海寶山月浦",
+        "地圖集二分區": "吳語－太湖片－上海小片",
+        "音典分區": "兩浙－浙北－蘇州",
+        "陳邡分區": "江東－蘇浙－太湖大片－嘉崇片",
+        "錄入人": "祖如",
+        "字表來源": "《中国语言资源集 上海》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.427991,
+          31.416165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
         "marker-size": "medium",
         "marker-symbol": "d",
         "title": "啟東",
@@ -49896,6 +49919,30 @@
         "marker-color": "#F08460",
         "marker-size": "small",
         "marker-symbol": "l",
+        "title": "建陽莒口",
+        "語言": "建陽莒口事",
+        "地點": "福建南平建陽莒口社州魏墩",
+        "地圖集二分區": "閩語－閩北片－建陽小片",
+        "音典分區": "閩－閩北",
+        "陳邡分區": "福建－閩北",
+        "版本": "2025-12-27",
+        "錄入人": "林",
+        "字表來源": "《闽北区三方言历史音韵研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.93664,
+          27.270363
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
+        "marker-size": "small",
+        "marker-symbol": "l",
         "title": "建陽黃坑",
         "語言": "建陽黃坑事",
         "地點": "福建南平建陽黃坑",
@@ -51419,8 +51466,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          116.967294,
-          24.145764
+          117.035927,
+          24.721974
         ]
       }
     },

@@ -244,6 +244,7 @@
 	種		ts	ʊŋ	3	ts	ʊŋ	3	ts	ʊŋ	3	ts	ʊŋ	3	種植									
 	鞏		k	ʊŋ	2	k	ʊŋ	2	k	ʊŋ	2	k	ʊŋ	2										
 	拱		k	ʊŋ	2	k	ʊŋ	2	k	ʊŋ	2	k	ʊŋ	2										
+	拱		kʰ	ʊŋ	2	kʰ	ʊŋ	2	kʰ	ʊŋ	2	kʰ	ʊŋ	2										
 	恐		kʰ	ʊŋ	2	kʰ	ʊŋ	2	kʰ	ʊŋ	2	kʰ	ʊŋ	2										
 	擁		j	ʊŋ	2	j	ʊŋ	2	j	ʊŋ	2	j	ʊŋ	2										
 	恿		j	ʊŋ	2	j	ʊŋ	2	j	ʊŋ	2	j	ʊŋ	2										
@@ -498,7 +499,7 @@
 	葵		kʷʰ	ɐi	4	kʷʰ	ɐi	4	kʷʰ	ɐi	4	kʰ	ɐi	4										
 	壘		l	ui	2	l	ui	2	l	ui	2	l	ui	2										
 	履		l	y	2	l	i	2	l	i	2	l	y	2										
-	耒		l	ɔi	3	l	ɔi	3	l	ɔi	3	l	ui	3										
+	耒		l	ɔi	3																			
 	姊		ts	i	2	ts	i	2	ts	i	2	ts	i	2										
 	死		s	i	2	s	i	2	s	i	2	s	i	2										
 	指		ts	i	2	ts	i	2	ts	i	2	ts	i	2										
@@ -595,7 +596,7 @@
 	喟		w	ɐi	3	w	ɐi	3	w	ɐi	3	w	ɐi	3										
 	懿			i	3		i	3		i	3		i	3										
 	位		w	ɐi	3	w	ɐi	3	w	ɐi	3	w	ɐi	3										
-	祕		p	i	3	p	i	3	p	i	3	p	i	3										
+	祕		p	i	3																			
 	費		f	ɐi	3	f	ɐi	3	f	ɐi	3	f	ɐi	3										
 	泌		p	i	3	p	i	3	p	i	3	p	i	3										
 	備		p	i	3	p	i	3	p	i	3	p	i	3										
@@ -1505,7 +1506,7 @@
 	罪		ts	ui	3	ts	ui	3	ts	ui	3	ts	ui	3										
 	悔		h	ui	3	h	ui	3	h	ui	3	h	ui	3										
 	賄		h	ui	2	h	ui	2	h	ui	2	h	ui	2										
-	蓓		pʰ	ui	2	pʰ	ui	2	pʰ	ui	2	pʰ	ui	2										
+	蓓		pʰ	ui	2																			
 	蓓		pʰ	ui	4																			
 	倍		pʰ	ui	2	pʰ	ui	2	pʰ	ui	2	pʰ	ui	2										
 	每		m	ui	2	m	ui	2	m	ui	2	m	ui	2										
@@ -1632,7 +1633,7 @@
 	認		ŋ	ɪŋ	3	ŋ	ɐŋ	3	ŋ	ɐŋ	3	ŋ	ɐŋ	3										
 	認		j	ɐn	3	j	ɐn	3	j	ɐn	3	j	ɐn	3										
 	潤		j	ɐn	3	j	ɐn	3	j	ɐn	3	j	ɐn	3										
-	膶		j	ɐn	2																			
+	膶		j	ɐn	3																			
 	韌		j	ɐn	3	j	ɐn	3	j	ɐn	3	j	ɐn	3	文讀									
 	韌		ŋ	ɐn	3	ŋ	ɐn	3	ŋ	ɐn	3	ŋ	ɐn	3	白讀									
 	印		j	ɐn	3	j	ɐn	3	j	ɐn	3	j	ɐn	3										
@@ -3191,8 +3192,8 @@
 	賞		s	œŋ	2	s	iɔŋ	2	s	iɔŋ	2	s	œŋ	2										
 	壤		j	ɔŋ	3	j	ɔŋ	3	j	ɔŋ	3	j	œŋ	3										
 	壤		j	ɔŋ	2	j	ɔŋ	2	j	ɔŋ	2	j	œŋ	2										
-	逛		kʷʰ	aŋ	3	kʷʰ	aŋ	3	kʷʰ	aŋ	3	kʰ	aŋ	3										
-	逛		kʰ	ɔŋ	4	kʰ	ɔŋ	4	kʷʰ	ɔŋ	4	kʰ	ɔŋ	4	文讀									
+	逛		kʷʰ	aŋ	3																			
+	逛		kʰ	ɔŋ	4										文讀									
 	襁		kʰ	œŋ	2	kʰ	iɔŋ	2	kʰ	iɔŋ	2	kʰ	œŋ	2										
 	獷		k	ɔŋ	2	k	ɔŋ	2	kʷ	ɔŋ	2	k	ɔŋ	2										
 	仰		j	ɔŋ	2	j	ɔŋ	2	j	ɔŋ	2	j	œŋ	2	信仰									
@@ -3940,13 +3941,11 @@
 	透		tʰ	ɐu	3	tʰ	ɐu	3	tʰ	ɐu	3	tʰ	ɐu	3										
 	豆		t	ɐu	3	t	ɐu	3	t	ɐu	3	t	ɐu	3										
 	竇		t	ɐu	3	t	ɐu	3	t	ɐu	3	t	ɐu	3										
-	荳																							
 	陋		l	ɐu	3	l	ɐu	3	l	ɐu	3	l	ɐu	3										
 	漏		l	ɐu	3	l	ɐu	3	l	ɐu	3	l	ɐu	3										
 	奏		ts	ɐu	3	ts	ɐu	3	ts	ɐu	3	ts	ɐu	3										
 	湊		tsʰ	ɐu	3	tsʰ	ɐu	3	tsʰ	ɐu	3	tsʰ	ɐu	3										
 	嗽		s	ɐu	3	s	ɐu	3	s	ɐu	3	s	ɐu	3										
-	搆																							
 	構		k	ɐu	3	k	ɐu	3	k	ɐu	3	k	ɐu	3										
 	購		k	ɐu	3	k	ɐu	3	k	ɐu	3	k	ɐu	3										
 	寇		kʰ	ɐu	3	kʰ	ɐu	3	kʰ	ɐu	3	kʰ	ɐu	3										
@@ -3981,14 +3980,12 @@
 	任		j	ɐm	4	j	ɐm	4	j	ɐm	4	j	ɐm	4	姓任									
 	壬		j	ɐm	4	j	ɐm	4	j	ɐm	4	j	ɐm	4										
 	淫		j	ɐm	4	j	ɐm	4	j	ɐm	4	j	ɐm	4										
-	撢																							
 	霪		j	ɐm	4	j	ɐm	4	j	ɐm	4	j	ɐm	4										
 	寢		tsʰ	ɐm	2	tsʰ	ɐm	2	tsʰ	ɐm	2	tsʰ	ɐm	2										
 	甚		s	ɐm	3	s	ɐm	3	s	ɐm	3	s	ɐm	3										
 	審		s	ɐm	2	s	ɐm	2	s	ɐm	2	s	ɐm	2										
 	葚		s	ɐm	3	s	ɐm	3	s	ɐm	3	s	ɐm	3										
 	飪		j	ɐm	3	j	ɐm	3	j	ɐm	3	j	ɐm	3										
-	稔		n	ɐm	2	n	ɐm	2	n	ɐm	2	n	ɐm	2										
 	沁		s	ɐm	3	s	ɐm	3	s	ɐm	3	s	ɐm	3										
 	笠		l	ɐp	5	l	ɐp	5	l	ɐp	5	l	ɐp	5										
 	粒		n	ɐp	5	n	ɐp	5	n	ɐp	5	n	ɐp	5										
@@ -4021,7 +4018,6 @@
 	參		s	ɐm	1	s	ɐm	1	s	ɐm	1	s	ɐm	1	人參									
 	參		tsʰ	am	1	tsʰ	am	1	tsʰ	am	1	tsʰ	am	1	參加									
 	參		tsʰ	ɐm	1	tsʰ	ɐm	1	tsʰ	ɐm	1	tsʰ	ɐm	1	參差									
-	參																							
 	金		k	ɐm	1	k	ɐm	1	k	ɐm	1	k	ɐm	1										
 	襟		kʰ	ɐm	1	kʰ	ɐm	1	kʰ	ɐm	1	kʰ	ɐm	1										
 	今		k	ɐm	1	k	ɐm	1	k	ɐm	1	k	ɐm	1										
@@ -4030,7 +4026,6 @@
 	欽		kʰ	ɐm	1	kʰ	ɐm	1	kʰ	ɐm	1	kʰ	ɐm	1										
 	吟		j	ɐm	4	j	ɐm	4	j	ɐm	4	j	ɐm	4										
 	陰		j	ɐm	1	j	ɐm	1	j	ɐm	1	j	ɐm	1										
-	瘖																							
 	音		j	ɐm	1	j	ɐm	1	j	ɐm	1	j	ɐm	1										
 	擒		kʰ	ɐm	4	kʰ	ɐm	4	kʰ	ɐm	4	kʰ	ɐm	4										
 	琴		kʰ	ɐm	4	kʰ	ɐm	4	kʰ	ɐm	4	kʰ	ɐm	4										
@@ -5245,7 +5240,6 @@
 	擰		n	ɪŋ	3	n	ɐŋ	3	n	ɐŋ	3	n	ɐŋ	3	擰轉									
 	儽		l	ai	3										勞累									
 	儽		n	ai	3																			
-	靚		ts	ɪŋ	3	ts	ɐŋ	3	ts	ɐŋ	3	ts	ɐŋ	3										
 	靚		l	iaŋ	3	l	iaŋ	3	l	iaŋ	3	l	ɛŋ	3	漂亮									
 	揞			ɐm	2																			
 	隼		s	ɵn	2																			
@@ -5260,6 +5254,8 @@
 	孿		l	yn	3																			
 	嘢		j	a	2	j	a	2	j	a	2	j	ɛ	2										
 	棯		n	im	1										冬棯									
+	稔		n	ɐm	2																			
+	稔		n	im	3										三稔									
 	銬		kʰ	ɐu	3																			
 	鴞		h	iu	1	h	iu	1	h	iu	1	h	iu	1										
 	梟		h	iu	1	h	iu	1	h	iu	1	h	iu	1										
@@ -5267,8 +5263,7 @@
 	陬		ts	ɐu	1																			
 	倀		tsʰ	aŋ	4																			
 	倀		tsʰ	aŋ	3																			
-	涌		tsʰ	ʊŋ	1	tsʰ	ʊŋ	1	tsʰ	ʊŋ	1	tsʰ	ʊŋ	1	河涌									
-	涌		j	ʊŋ	2	j	ʊŋ	2	j	ʊŋ	2	j	ʊŋ	2										
+	涌		tsʰ	ʊŋ	1	tsʰ	ʊŋ	1	tsʰ	ʊŋ	1	tsʰ	ʊŋ	1										
 	嗍		s	ɔk	6																			
 	踎		p	ɐu	1										蹲									
 	踎		m	ɐu	1																			
@@ -5276,6 +5271,7 @@
 	佢		kʰ	i	4																			
 	嗲		t	ɛ	2																			
 	戡		h	ɔm	1																			
+	滘		k	au	3																			
 	乜		m	ɐt	5																			
 	鈪			ak	6																			
 	銻		tʰ	ɐi	1																			
