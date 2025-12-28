@@ -167,7 +167,6 @@ def docx2tsv(doc):
 		if ttime >= xtime: return
 	lines = []
 	Doc = Document(doc)
-	Doc.paragraphs
 	for each in Doc._body._element:
 		if isinstance(each, docx.oxml.table.CT_Tbl):
 			t = Table(each, Doc)
