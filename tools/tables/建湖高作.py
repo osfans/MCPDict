@@ -43,7 +43,7 @@ class 表(_表):
 		else:
 			zs = ''
 		l = list()
-		cy = cy.replace("，", "")
+		cy = cy.replace(",", "")
 		for i,z in enumerate(re.findall('.[0-9=+*-]?', cy)):
 			yb = 自.py2yb(pys[i])
 			if z[0] + yb in 自.sets:

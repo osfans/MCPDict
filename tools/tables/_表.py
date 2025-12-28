@@ -7,7 +7,6 @@ from collections import defaultdict, OrderedDict
 import glob
 import inspect, time
 from openpyxl import load_workbook
-from xlrd import open_workbook
 import docx
 from docx import Document
 from docx.table import Table
@@ -47,17 +46,14 @@ def maketrans(path):
 		d[字] = val
 	return str.maketrans(d)
 
-def getTsvName(xls, 頁名=""):
-	name = os.path.basename(xls)
+def getTsvName(fname, 頁名=""):
+	name = os.path.basename(fname)
 	if 頁名: 頁名 = "-" + 頁名
 	name = re.sub(r" ?(\(\d{0,3}\))+$", "", name.rsplit(".", 1)[0]) + 頁名 + ".tsv"
 	return os.path.join(PATH, SOURCE, name)
 
 def isXlsx(fname):
-	return fname.endswith("xlsx")
-
-def isXls(fname):
-	return fname.endswith("xls") or fname.endswith("xlsx")
+	return fname.endswith(".xlsx") or fname.endswith(".xls")
 
 def processFs(v):
 	t = type(v)
@@ -96,8 +92,8 @@ def processXlsxFs(v):
 		cells.append(text)
 	return "".join(cells).replace(")(", "").strip().replace("\n", "\\n")
 
-def getXlsxLines(xls, 頁名):
-	wb = load_workbook(xls, data_only=True, rich_text=True)
+def getXlsxLines(xlsx, 頁名):
+	wb = load_workbook(xlsx, data_only=True, rich_text=True)
 	sheet = wb[頁名] if 頁名 else wb.active
 	lines = list()
 	for row in sheet.rows:
@@ -107,26 +103,14 @@ def getXlsxLines(xls, 頁名):
 			lines.append(行)
 	return lines
 
-def getXlsLines(xls, page=0):
-	wb = open_workbook(xls)
-	sheet = wb.sheet_by_index(page)
-	lines = list()
-	for i in range(sheet.nrows):
-		列 = sheet.row_values(i)
-		列 = [processFs(j) for j in 列]
-		if any(列):
-			行 = "\t".join(列) + "\n"
-			lines.append(行)
-	return lines
-
-def xls2tsv(xls, 頁名):
-	tsv = getTsvName(xls, 頁名)
-	if not os.path.exists(xls): return
+def xlsx2tsv(xlsx, 頁名):
+	tsv = getTsvName(xlsx, 頁名)
+	if not os.path.exists(xlsx): return
 	if os.path.exists(tsv):
-		xtime = os.path.getmtime(xls)
+		xtime = os.path.getmtime(xlsx)
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
-	lines = getXlsxLines(xls, 頁名) if isXlsx(xls) else getXlsLines(xls)
+	lines = getXlsxLines(xlsx, 頁名)
 	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.writelines(lines)
 	t.close()
@@ -156,17 +140,17 @@ def run2text(run):
 	return text
 
 def isDocx(fname):
-	return fname.endswith("docx")
+	return fname.endswith(".docx") or fname.endswith(".doc")
 	
-def docx2tsv(doc):
-	tsv = getTsvName(doc)
-	if not os.path.exists(doc): return
+def docx2tsv(fname):
+	tsv = getTsvName(fname)
+	if not os.path.exists(fname): return
 	if os.path.exists(tsv):
-		xtime = os.path.getmtime(doc)
+		xtime = os.path.getmtime(fname)
 		ttime = os.path.getmtime(tsv)
 		if ttime >= xtime: return
 	lines = []
-	Doc = Document(doc)
+	Doc = Document(fname)
 	for each in Doc._body._element:
 		if isinstance(each, docx.oxml.table.CT_Tbl):
 			t = Table(each, Doc)
@@ -243,7 +227,7 @@ class 表:
 		return 自.__module__.split(".")[-1]
 
 	def find(自, name):
-		if os.sep not in name and (isXls(name) or isDocx(name)):
+		if os.sep not in name and (isXlsx(name) or isDocx(name)):
 			name = 自.toolname(name)
 			if g := 自.find(name): return g
 		if os.sep not in name:
@@ -254,7 +238,7 @@ class 表:
 		if g := glob.glob(re.sub(".([^.]+)$", "([0-9][0-9]).\\1", name)): return g
 		if g := glob.glob(re.sub(".([^.]+)$", " ([0-9]).\\1", name)): return g
 		if g := glob.glob(re.sub(".([^.]+)$", " ([0-9][0-9]).\\1", name)): return g
-		if isXls(name) or isDocx(name):
+		if isXlsx(name) or isDocx(name):
 			自.文件名 = getTsvName(自.文件名, 自.頁名)
 			return 自.find(自.文件名)
 		return
@@ -277,8 +261,8 @@ class 表:
 			return
 		sname = g[0]
 		自.文件名 = os.path.basename(sname)
-		if isXls(sname):
-			xls2tsv(sname, 自.頁名)
+		if isXlsx(sname):
+			xlsx2tsv(sname, 自.頁名)
 			sname = getTsvName(sname, 自.頁名)
 		elif isDocx(sname):
 			docx2tsv(sname)
@@ -380,12 +364,6 @@ class 表:
 		if 自.爲語() and 自.爲音:
 			if 音 in ("", "-", "—", "－", "一", "/", "误", "∅"):
 				return ""
-			if re.match(".*[⓪①-⑨ⓐⓑ]+", 音):
-				for i in range(0,10):
-					sda = "⓪" if i == 0 else chr(ord('①') + (i - 1))
-					sdb = f"{i}"
-					音 = 音.replace(sda, sdb)
-				音 = 音.replace("ⓐ", "a").replace("ⓑ", "b")
 			音 = 音.strip("[] ")
 			音 = 音.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀∅Ø〇0").replace("零", "").replace("◌", "")
 			if 自.無q聲(): 音 = 音.lstrip("q")

@@ -46,10 +46,8 @@ android {
 
     applicationVariants.configureEach { variant ->
         variant.outputs.configureEach {
-            def stringsFile = android.sourceSets.main.res.sourceFiles.find { it.name.equals 'strings.xml' }
-            def appName = new XmlParser().parse(stringsFile).string.find { it.@name.equals 'app_name' }.text()
             def versionName = new SimpleDateFormat ("yyyyMMdd").format(new Date())
-            outputFileName = "${appName}${versionName}.APK"
+            outputFileName = "${versionName}.APK"
         }
     }
 

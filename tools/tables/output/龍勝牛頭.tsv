@@ -68,7 +68,7 @@
 仙	ɬie1	
 令	lin5b	
 仰	ȵiaŋ3	
-件	tɑ	
+件	tɑ1	训读
 任	in5b	责任
 份	fen5b	
 伏	fu7	
@@ -276,14 +276,14 @@
 品	pin3	
 啞	ɑ3	
 哥	ko1	
-哭	tɕiɑ	
+哭	tɕiɑ3	训读
 哽	kʰai3	
 唐	daŋ2	
 唱	tɕʰio5a	
 啄	tie2	
 商	saŋ5a	
 善	san5b	
-喊	kai	
+喊	kai3	训读
 噴	pʰoŋ5a	
 器	tɕʰi5b	
 四	ɬi	
@@ -354,12 +354,12 @@
 女	ny3=	
 奶	ȵia6	
 奸	tɕian5a	
-好	fu3-	好坏
-好	hao3=	好坏
+好	fu3-	~人
+好	hao3=	讨~
 好	hao5b	喜好
 婦	bu3	
 妹	mei	
-姐	tɑ	
+姐	tɑ6	训读大,姐姐义
 姑	ku1	
 姓	ɬie5a	
 姜	tɕio1	生姜
@@ -426,7 +426,7 @@
 層	ɮaŋ2	
 屋	vu2	
 屎	ɬʅ3	
-屎	kai2	
+屎	kai2	训读
 展	tsan3	
 山	ɬai1	
 歲	ɬei5a	
@@ -434,7 +434,7 @@
 嶺	lin3	
 岳	io2	
 岸	ŋan5b	
-巡	daŋ	
+巡	daŋ2	地名
 工	koŋ5a	
 左	tɬo3	
 巴	pɑ1	
@@ -470,8 +470,8 @@
 廉	lian2	
 廷	din2	
 建	tɕian5b	
-開	fe1-	
-開	kʰai5a=	
+開	fe1-	~门
+開	kʰai5a=	~门
 弄	loŋ5b	
 式	ɕi5b	
 弓	koŋ5a	
@@ -485,8 +485,8 @@
 强	tɕʰiaŋ2	坚强
 强	tɕʰiaŋ3	勉强
 歸	kvi1	
-當	to1-	应当
-當	taŋ5a=	应当
+當	to1-	~兵
+當	taŋ5a=	应~
 形	ɕin2	
 彭	pʰen2	
 影	ie3	
@@ -564,8 +564,8 @@
 抗	kʰaŋ5b	
 折	tɕie2	折叠
 搶	tɕʰio3	
-報	pu5a-	
-報	pao5b=	
+報	pu5a-	~信
+報	pao5b=	~道
 披	pʰi1	
 抹	mɑ	
 抽	tʰiu1	
@@ -586,7 +586,7 @@
 擇	tsə2	择菜
 括	kuɑ2	包括
 拳	ɡye2	
-拿	tɑ	
+拿	tɑ1	担训读
 挂	kuɑ5a	
 挖	ya2	
 揮	fei5a	
@@ -647,8 +647,8 @@
 斬	tsan3	
 斷	do3	断绝
 新	ɬin1	
-方	ho1	
-方	faŋ5a	
+方	ho1	门~
+方	faŋ5a	地~
 旁	baŋ2	
 旋	tɬai6	头旋
 族	ɬaŋ5a	
@@ -917,8 +917,8 @@
 玉	y5b	
 王	vaŋ2	
 玩	van2	
-現	ɕie6-	
-現	ɕian5b=	
+現	ɕie6-	~饭
+現	ɕian5b=	-在
 珍	tsin5a	
 班	pan1	
 理	li3	
@@ -997,8 +997,8 @@
 碾	nie3	
 磨	mo2	动
 磨	mo6	名
-社	dʑiɑ3-	
-社	ɕie5b=	
+社	dʑiɑ3-	公
+社	ɕie5b=	~会
 祖	tɬu3	
 祝	tsu2	
 神	ɕin2	
@@ -1108,8 +1108,8 @@
 缺	kʰye2	
 网	mo3	
 罰	fia7	
-罩	to5a-	
-罩	tsao5b=	
+罩	to5a-	~哩
+罩	tsao5b=	雾~子
 罪	ɮei3	
 羊	io2	
 美	mei3	
@@ -1125,7 +1125,7 @@
 聘	pʰin5b	
 聰	tʰoŋ1	
 肅	su2	
-肉	nai	
+肉	nai5a	训读
 肋	lə7	
 肚	tu3	猪肚
 肚	tu3	腹肚
@@ -1177,10 +1177,10 @@
 芹	dʑin2	
 莧	hai6	
 苧	tɕy5b	
-苗	miu2-	
-苗	miao2=	
-苦	fu3-	
-苦	kʰu3=	
+苗	miu2-	禾~
+苗	miao2=	~族
+苦	fu3-	药~
+苦	kʰu3=	~难
 英	in5a	
 范	fan5b	
 茄	dʑio2	
@@ -1264,16 +1264,16 @@
 西	ɬi1	
 覆	fu2	反履
 見	tɕie5a	
-觀	ko1-	
-觀	kuan5a=	
+觀	ko1-	~音
+觀	kuan5a=	参~
 規	kvi1	
 覺	tɕio2	知觉
 角	ko2	
 解	tɕia3	解开
 警	tɕin3	
 訂	tie5a	订约
-討	tʰu3-	
-討	tʰao3=	
+討	tʰu3-	~亲
+討	tʰao3=	~嫌
 讓	ȵio6	
 訓	ɕyn5b	
 講	tɕiao3	
@@ -1440,8 +1440,8 @@
 間	kai1	中间
 悶	men5b	
 閘	tɕia7	
-鬧	no5a-	
-鬧	nao5a=	
+鬧	no5a-	~热
+鬧	nao5a=	~家
 鬮	kao1	
 閻	ȵie2	
 闊	ho2	
@@ -1498,7 +1498,7 @@
 風	poŋ1	
 飄	pʰiao5a	
 飛	pi1-	
-飛	fei5a=	
+飛	fei5a=	~机
 食	iu7	
 餐	tsʰan5a	
 饥	tɕi1	

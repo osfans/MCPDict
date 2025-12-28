@@ -212,18 +212,13 @@ class 表(_表):
 				return l
 			elif 自.文件名.startswith("语言接触与湘西南苗瑶平话调查研究"):
 				if 自.無音(音): return
-				if ";" in 音:
-					音標組 = 音.split(";")
-					l = list()
-					for 音標 in 音標組:
-						音標, 註2 = re.findall(r"^(.*?[¹²³⁴⁵]+[\-=]?)(.*?)$", 音標)[0]
-						音標 = 自.正音(音標)
-						if re.match(r"^.*[¹²³⁴⁵]+[\-=]?$", 音標):
-							l.append((字, 自.轉調類(音標), 註))
-							continue
-						print(音標, 註2)
-						l.append((字, 自.轉調類(音標), 註2))
-					return l
+				音標組 = 音.split(";")
+				l = list()
+				for i in 音標組:
+					音標, 註2 = re.findall(r"^([^¹²³⁴⁵]+[¹²³⁴⁵]*?[\-=]?)([^¹²³⁴⁵]*?)$", i)[0]
+					# 音標 = 自.正音(音標)
+					l.append((字, 自.轉調類(音標), 註2 if 註2 else 註))
+				return l
 			elif 自.文件名.startswith("安徽淮河流域方言语音比较研究"):
 				markers = tuple(map(chr, range(0xa700,0xa708)))
 				l = list()
