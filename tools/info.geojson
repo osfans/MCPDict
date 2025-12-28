@@ -31050,6 +31050,30 @@
         "marker-color": "#E35BC1",
         "marker-size": "small",
         "marker-symbol": "e",
+        "title": "休寧溪口",
+        "語言": "休寧溪口話",
+        "地點": "安徽黃山休寧溪口",
+        "地圖集二分區": "徽語－休黟片",
+        "音典分區": "湘贛－西徽",
+        "陳邡分區": "官話－休黟",
+        "版本": "2025-12-28",
+        "錄入人": "Resound",
+        "字表來源": "《休宁（溪口）方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.019045,
+          29.692006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E35BC1",
+        "marker-size": "small",
+        "marker-symbol": "e",
         "title": "休寧流口",
         "語言": "休寧流口話",
         "地點": "安徽黃山休寧流口",
