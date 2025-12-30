@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.osfans.mcpdict.Orth.*;
+import com.osfans.mcpdict.Util.FontUtil;
 import com.osfans.mcpdict.Util.OpenCC;
 import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.Favorite.UserDB;
@@ -770,7 +771,7 @@ public class DB extends SQLiteAssetHelper {
             intro = sb.toString();
         } else {
             StringBuilder sb = new StringBuilder();
-            sb.append(String.format(Locale.getDefault(), "%s%s<br>", Pref.getString(R.string.name), language));
+            sb.append(String.format(Locale.getDefault(), "<b>%s</b>：%s<br>", Pref.getString(R.string.name), language));
             ArrayList<String> fields = new ArrayList<>(Arrays.asList("地點","經緯度", "作者", "錄入人", "維護人", "字表來源","參考文獻","補充閲讀","文件名","版本","字數","□數", SYLLABLES,"不帶調音節數","")); //,"相似度"
             fields.addAll(Arrays.asList(FQ_COLUMNS));
             fields.add("");
@@ -790,7 +791,7 @@ public class DB extends SQLiteAssetHelper {
                         } catch (Exception ignore) {
                         }
                     }
-                    sb.append(String.format(Locale.getDefault(), "%s：%s<br>", field, s));
+                    sb.append(String.format(Locale.getDefault(), "<b>%s</b>：%s<br>", field, s));
                 }
             }
             sb.append(intro);
@@ -799,42 +800,113 @@ public class DB extends SQLiteAssetHelper {
         return intro;
     }
 
-    public static String getIntroText(String language) {
+    public static boolean isMainPage(String language) {
+        return (TextUtils.isEmpty(language) || isLanguageHZ(language) || Pref.getFilter() == FILTER.HZ);
+    }
+
+    public static String getMainIntro() {
+        initArrays();
+        StringBuilder sb = new StringBuilder();
+        sb.append("""
+            <html>
+            <head>
+                <script>
+                            let currentSort = { column: null, asc: true };
+            
+                            function sortTable(table, column, asc = true) {
+                                const tbody = table.querySelector('tbody');
+                                const rows = Array.from(tbody.querySelectorAll('tr'));
+            
+                                // 排序规则
+                                const sortedRows = rows.sort((a, b) => {
+                                    const aText = a.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+                                    const bText = b.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+            
+                                    // 数字排序
+                                    if (!isNaN(aText) && !isNaN(bText)) {
+                                        return asc ? aText - bText : bText - aText;
+                                    }
+            
+                                    // 文本排序
+                                    return asc ? aText.localeCompare(bText) : bText.localeCompare(aText);
+                                });
+            
+                                // 重新插入排序后的行
+                                sortedRows.forEach(row => tbody.appendChild(row));
+                            }
+            
+                            function sortTableByColumn(column) {
+                                const table = document.getElementById('sortable-table');
+                                const isAsc = currentSort.column === column ? !currentSort.asc : false;
+            
+                                sortTable(table, column, isAsc);
+            
+                                // 更新排序状态
+                                currentSort = { column, asc: isAsc };
+            
+                                // 更新表头样式
+                                updateHeaderStyles(column, isAsc);
+                            }
+            
+                            function updateHeaderStyles(column, asc) {
+                                const headers = document.querySelectorAll('th');
+                                headers.forEach((header, index) => {
+                                    header.classList.remove('sorted-asc', 'sorted-desc');
+                                    if (index === column) {
+                                        header.classList.add(asc ? 'sorted-asc' : 'sorted-desc');
+                                    }
+                                });
+                            }
+                        </script>
+                        <style>
+                            th { cursor: pointer; }
+                            th.sorted-asc::after { content: " ↑"; }
+                            th.sorted-desc::after { content: " ↓"; }
+            """);
+        sb.append("                  @font-face {\n");
+        sb.append("                    font-family: ipa;\n");
+        sb.append("                    src: url('file:///android_res/font/ipa.ttf');\n");
+        sb.append("                  }\n");
+        sb.append("                  @font-face {\n");
+        sb.append("                    font-family: charis;\n");
+        sb.append("                    src: url('file:///android_res/font/charis.ttf');\n");
+        sb.append("                  }\n");
+        sb.append("  h1 {font-size: 1.8em; color: #9D261D}\n");
+        sb.append("  h2 {font-size: 1.2em; color: #000080;}\n");
+        sb.append("  td {font-size: 0.8em;}\n");
+        sb.append(String.format("  body {font-family: ipa, %s, charis;}", FontUtil.getSystemFallbackFont()));
+        sb.append("</style></head><body onload='sortTableByColumn(1);'>");
+        sb.append(_getIntro(null));
+        sb.append("<br><h2>已收錄語言</h2><table id=\"sortable-table\" border=\"1\" cellspacing=\"0\" cellpadding=\"5\"><thead>");
+        sb.append("<tr>");
+        String[] fields = new String[]{LANGUAGE, "版本", "字數", "□數", SYLLABLES, "不帶調音節數"};
+        for (String field : fields) {
+            sb.append(String.format(Locale.getDefault(), "<th onclick='sortTableByColumn(%d)'>%s</th>", Arrays.asList(fields).indexOf(field), field));
+        }
+        sb.append("</tr></thead><tbody>");
+        for (String l : LABELS) {
+            sb.append("<tr>");
+            for (String field : fields) {
+                sb.append(String.format("<td>%s</td>", getFieldByLabel(l, field)));
+            }
+            sb.append("</tr>");
+        }
+        sb.append("</tbody></table>");
+        return sb.toString();
+    }
+
+    public static String getLanguageIntro(String language) {
         initArrays();
         if (TextUtils.isEmpty(language)) language = Pref.getLanguage();
         String intro = _getIntro(language);
-        if (TextUtils.isEmpty(language) || isLanguageHZ(language) || Pref.getFilter() == FILTER.HZ) {
-            StringBuilder sb = new StringBuilder();
-            sb.append(intro);
-            sb.append("<br><h2>已收錄語言</h2><table id=\"sortable-table\" border=\"1\" cellspacing=\"0\" cellpadding=\"5\"><thead>");
-            sb.append("<tr>");
-            String[] fields = new String[]{LANGUAGE, "版本", "字數", "□數", SYLLABLES, "不帶調音節數"};
-            for (String field: fields) {
-                sb.append(String.format("<th onclick='sortTableByColumn(%d)'>%s</th>", Arrays.asList(fields).indexOf(field), field));
-            }
-            sb.append("</tr></thead><tbody>");
-            for (String l : LABELS) {
-                sb.append("<tr>");
-                for (String field: fields) {
-                    sb.append(String.format("<td>%s</td>", getFieldByLabel(l, field)));
-                }
-                sb.append("</tr>");
-            }
-            sb.append("</tbody></table>");
-            intro = sb.toString();
-        } else {
-            StringBuilder sb = new StringBuilder();
-            sb.append(String.format("<h1>%s</h1>", language));
-            sb.append(intro);
-            String[] fields = new String[]{"音系說明", "解析日志", "同音字表"};
-            for (String field: fields) {
-                String text = getFieldByLanguage(language, field).replace("\n", "<br>");
-                if (TextUtils.isEmpty(text)) continue;
-                sb.append(String.format("<h2>%s</h2>%s", field, text));
-            }
-            intro = sb.toString();
+        StringBuilder sb = new StringBuilder().append(intro);
+        String[] fields = new String[]{"音系說明", "解析日志", "同音字表"};
+        for (String field: fields) {
+            String text = getFieldByLanguage(language, field).replace("\n", "<br>");
+            if (TextUtils.isEmpty(text)) continue;
+            sb.append(String.format("<h2>%s</h2>%s", field, text));
         }
-        return intro;
+        return sb.toString();
     }
 
     public static String getIntro() {

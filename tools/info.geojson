@@ -16917,6 +16917,28 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "水富",
+        "語言": "水富話",
+        "地點": "雲南昭通水富",
+        "地圖集二分區": "西南官話－西蜀片－岷赤小片",
+        "音典分區": "中上江－荆益－川黔",
+        "陳邡分區": "官話－長江－西南大片－川南片",
+        "字表來源": "《水富方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.422433,
+          28.634332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "small",
         "marker-symbol": "b",
         "title": "綏江",
@@ -17755,6 +17777,30 @@
         "coordinates": [
           109.016278,
           28.452038
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "大關",
+        "語言": "大關話",
+        "地點": "雲南昭通大關",
+        "地圖集二分區": "西南官話－川黔片－成渝小片",
+        "音典分區": "中上江－荆益－川黔",
+        "陳邡分區": "官話－長江－西南大片－雲南片",
+        "版本": "2025-12-29",
+        "錄入人": "DaiDzao",
+        "字表來源": "《大关方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.89868,
+          27.753382
         ]
       }
     },
@@ -28567,6 +28613,30 @@
         "marker-color": "#5E98EB",
         "marker-size": "medium",
         "marker-symbol": "d",
+        "title": "鎮海",
+        "語言": "鎮海閒話",
+        "地點": "浙江寧波鎮海招寶山",
+        "地圖集二分區": "吳語－太湖片－甬江小片",
+        "音典分區": "兩浙－明台－明北",
+        "陳邡分區": "江東－蘇浙－寧紹大片－寧波片",
+        "版本": "2021-12-25",
+        "錄入人": "shinzoqchiuq",
+        "字表來源": "<a href=https://github.com/ionkaon/dictionary>甬江話字詞表《鎭海縣誌·方言》</a>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.714033,
+          29.956157
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
+        "marker-size": "medium",
+        "marker-symbol": "d",
         "title": "北侖",
         "語言": "北侖閒話",
         "地點": "浙江寧波北侖",
@@ -28702,30 +28772,6 @@
         "coordinates": [
           121.528868,
           29.570791
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#5E98EB",
-        "marker-size": "medium",
-        "marker-symbol": "d",
-        "title": "鎮海",
-        "語言": "鎮海閒話",
-        "地點": "浙江寧波鎮海",
-        "地圖集二分區": "吳語－太湖片－甬江小片",
-        "音典分區": "兩浙－明台－明北",
-        "陳邡分區": "江東－蘇浙－寧紹大片－寧波片",
-        "版本": "2021-12-25",
-        "錄入人": "shinzoqchiuq",
-        "字表來源": "<a href=https://github.com/ionkaon/dictionary>甬江話字詞表《鎭海縣誌·方言》</a>"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          121.714033,
-          29.956157
         ]
       }
     },
@@ -57149,7 +57195,7 @@
         "陳邡分區": "官話－長江－揚州大片－揚州片",
         "版本": "2025-01-01",
         "錄入人": "Resound,osfans",
-        "字表來源": "《淮剧韵折1976》"
+        "字表來源": "<a href=https://github.com/osfans/huaejihyencih>《韵辙》(1976)</a>"
       },
       "geometry": {
         "type": "Point",

@@ -3,7 +3,11 @@ package com.osfans.mcpdict.Favorite;
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteException;
+import android.os.Build;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.TextUtils;
+import android.text.style.TypefaceSpan;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -13,6 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 
 import com.osfans.mcpdict.MainActivity;
+import com.osfans.mcpdict.Util.FontUtil;
 import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.Util.FileUtil;
@@ -39,9 +44,13 @@ public class FavoriteDialogs {
         editText.setHint(R.string.favorite_add_hint);
         if (!TextUtils.isEmpty(comment)) editText.setText(comment);
         editText.setSingleLine(false);
+        SpannableString span = new SpannableString(String.format(activity.getString(R.string.favorite_add), hz));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            span.setSpan(new TypefaceSpan(FontUtil.getDictTypeface()), 0, span.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
         new AlertDialog.Builder(activity)
             .setIcon(android.R.drawable.btn_star_big_on)
-            .setTitle(String.format(activity.getString(R.string.favorite_add), hz))
+            .setTitle(span)
             .setView(editText)
             .setPositiveButton(R.string.save, (dialog, which) -> {
                 UserDB.insertFavorite(hz, editText.getText().toString());

@@ -37,87 +37,26 @@ public class App extends Application {
     }
 
     public static void info(Context context, String lang) {
-        WebView webView = new WebView(context, null);
-        StringBuilder sb = new StringBuilder();
-        sb.append("""
-        <html>
-        <head>
-            <script>
-                        let currentSort = { column: null, asc: true };
-
-                        function sortTable(table, column, asc = true) {
-                            const tbody = table.querySelector('tbody');
-                            const rows = Array.from(tbody.querySelectorAll('tr'));
-
-                            // 排序规则
-                            const sortedRows = rows.sort((a, b) => {
-                                const aText = a.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
-                                const bText = b.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
-
-                                // 数字排序
-                                if (!isNaN(aText) && !isNaN(bText)) {
-                                    return asc ? aText - bText : bText - aText;
-                                }
-
-                                // 文本排序
-                                return asc ? aText.localeCompare(bText) : bText.localeCompare(aText);
-                            });
-
-                            // 重新插入排序后的行
-                            sortedRows.forEach(row => tbody.appendChild(row));
-                        }
-
-                        function sortTableByColumn(column) {
-                            const table = document.getElementById('sortable-table');
-                            const isAsc = currentSort.column === column ? !currentSort.asc : false;
-
-                            sortTable(table, column, isAsc);
-
-                            // 更新排序状态
-                            currentSort = { column, asc: isAsc };
-
-                            // 更新表头样式
-                            updateHeaderStyles(column, isAsc);
-                        }
-
-                        function updateHeaderStyles(column, asc) {
-                            const headers = document.querySelectorAll('th');
-                            headers.forEach((header, index) => {
-                                header.classList.remove('sorted-asc', 'sorted-desc');
-                                if (index === column) {
-                                    header.classList.add(asc ? 'sorted-asc' : 'sorted-desc');
-                                }
-                            });
-                        }
-                    </script>
-                    <style>
-                        th { cursor: pointer; }
-                        th.sorted-asc::after { content: " ↑"; }
-                        th.sorted-desc::after { content: " ↓"; }
-                """);
-        sb.append("                  @font-face {\n");
-        sb.append("                    font-family: ipa;\n");
-        sb.append("                    src: url('file:///android_res/font/ipa.ttf');\n");
-        sb.append("                  }\n");
-        sb.append("                  @font-face {\n");
-        sb.append("                    font-family: charis;\n");
-        sb.append("                    src: url('file:///android_res/font/charis.ttf');\n");
-        sb.append("                  }\n");
-        sb.append("                  @font-face {\n");
-        sb.append("                    font-family: nyushu;\n");
-        sb.append("                    src: url('file:///android_res/font/nyushu.ttf');\n");
-        sb.append("                  }\n");
-        sb.append("  h1 {font-size: 1.8em; color: #9D261D}\n");
-        sb.append("  h2 {font-size: 1.2em; color: #000080;}\n");
-        sb.append("  td {font-size: 0.8em;}\n");
-        sb.append(String.format("  body {font-family: ipa, %s, charis, nyushu;}", FontUtil.getSystemFallbackFont()));
-        sb.append("</style></head><body onload='sortTableByColumn(1);'>");
-        sb.append(DB.getIntroText(DB.getLanguageByLabel(lang)));
-        webView.loadDataWithBaseURL(null, sb.toString(), "text/html; charset=utf-8", "utf-8", null);
-
-        new AlertDialog.Builder(context)
-                .setView(webView)
-                .show();
+        String language = DB.getLanguageByLabel(lang);
+        if (TextUtils.isEmpty(language)) language = Pref.getLanguage();
+        if (DB.isMainPage(language)) {
+            WebView webView = new WebView(context, null);
+            webView.loadDataWithBaseURL(null, DB.getMainIntro(), "text/html; charset=utf-8", "utf-8", null);
+            new AlertDialog.Builder(context)
+                    .setView(webView)
+                    .show();
+        } else {
+            Dialog dialog = new AlertDialog.Builder(context)
+                    .setMessage(HtmlCompat.fromHtml(DB.getLanguageIntro(language), HtmlCompat.FROM_HTML_MODE_COMPACT))
+                    .setTitle(language)
+                    .show();
+            TextView textView = dialog.findViewById(android.R.id.message);
+            if (textView != null) {
+                textView.setTextIsSelectable(true);
+                textView.setMovementMethod(LinkMovementMethod.getInstance());
+                FontUtil.setTypeface(textView);
+            }
+        }
     }
 
     public static void about(Context context) {
@@ -128,15 +67,16 @@ public class App extends Application {
                 .setPositiveButton(R.string.ok, null)
                 .show();
         TextView messageText = dialog.findViewById(android.R.id.message);
-        assert messageText != null;
-        messageText.setGravity(Gravity.CENTER);
-        messageText.setMovementMethod(LinkMovementMethod.getInstance());
+        if (messageText != null) {
+            messageText.setGravity(Gravity.CENTER);
+            messageText.setMovementMethod(LinkMovementMethod.getInstance());
+        }
     }
 
     public static void help(Context context) {
         WebView webView = new WebView(context, null);
         webView.loadUrl("file:///android_asset/help/index.htm");
-        new AlertDialog.Builder(context, androidx.appcompat.R.style.Theme_AppCompat_DayNight_NoActionBar)
+        new AlertDialog.Builder(context)
                 .setView(webView)
                 .show();
     }

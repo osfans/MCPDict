@@ -38,6 +38,7 @@ class 表(_表):
 		for 字 in hd:
 			for page in hd[字]:
 				js = "\t\t".join(["%s\t%s" % (py, "\t".join(hd[字][page][py])) for py in hd[字][page]])
+				js = js.replace("“=", "“")
 				js = re.sub("=(.[GTJKUXV]?)", "“\\1”", js).strip()
 				if 字 not in d:
 					d[字] = []

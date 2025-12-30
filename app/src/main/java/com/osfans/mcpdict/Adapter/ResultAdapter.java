@@ -23,6 +23,7 @@ import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
+import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextUtils;
@@ -377,6 +378,17 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 }
                 return true;
             });
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                for (int i = 0; i < menu.size(); i++) {
+                    MenuItem item1 = menu.getItem(i);
+                    CharSequence title = item1.getTitle();
+                    if (!TextUtils.isEmpty(title)) {
+                        SpannableString span = new SpannableString(title);
+                        span.setSpan(new TypefaceSpan(FontUtil.getDictTypeface()), 0, title.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        item1.setTitle(span);
+                    }
+                }
+            }
             popupMenu.show();
         }
     }

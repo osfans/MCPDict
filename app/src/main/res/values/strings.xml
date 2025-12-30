@@ -407,7 +407,7 @@
         <item>ja-Jpan-JP</item>
         <item>ko-Kore-KR</item>
     </string-array>
-    <string name="name">名稱：</string>
+    <string name="name">名稱</string>
     <string name="version">版本：</string>
     <string name="map">地圖</string>
     <string name="pref_key_fq">FQ</string>
