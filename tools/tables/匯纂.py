@@ -10,4 +10,4 @@ class 表(_表):
 	字書 = True
 
 	def 析(自, 列):
-		return 列[0], 列[1], re.sub("｜.*?\t", "\t", "\t".join(列[2:]).replace("▲", "\t▲"))
+		return 列[0], 列[1], re.sub("\\|.*?\t", "\t", "\t".join(列[2:]).replace("▲", "\t▲"))
