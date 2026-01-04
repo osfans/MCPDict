@@ -55,7 +55,7 @@ class 表(_表):
 				音 = 音.replace("oe", "ø").replace('e', 'ə').replace('iə', 'ie').replace('w', 'ɯ')
 				組 = re.sub("(.)", f"\\1{{{列[0]}}}", 組)
 			elif 名 in ("天籟字彙",):
-				if 音.endswith("韻"): return
+				if 音.endswith("韵") or 音.endswith("韻"): return
 		elif 名 in ("瀘溪武溪",):
 			聲韻, 調, _, 組 = 列[:4]
 			聲韻 = 聲韻.lstrip("ø")

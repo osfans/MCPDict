@@ -527,7 +527,7 @@ class 表:
 					if "兒化" not in 繁註 and "連讀" not in 繁註 and "語流" not in 繁註 and "變調" not in 繁註 and "合音" not in 繁註:
 						音乙 = 音.rstrip("+-*/=?@\\")
 						聲韻, 調 = 自.分音(音乙)
-						if not 調.startswith("0") and 調 not in 自.不計入調:
+						if not 調.startswith("0") and (自.無調() or 調) and 調 not in 自.不計入調:
 							自.音典[音乙].add(字)
 							自.聲韻典[聲韻].add(字)
 				if 註:

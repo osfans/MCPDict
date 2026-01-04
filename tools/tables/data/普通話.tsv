@@ -590,7 +590,6 @@
 㖷	ti2
 㖸	jue2
 㖸	nia1
-㖸	xue2
 㖹	pen1
 㖹	fen4
 㖺	chun3
@@ -2314,9 +2313,7 @@
 㩒	qin2
 㩓	hui3
 㩔	tun2
-㩕	lin1
 㩖	qiang2
-㩖	tiao2
 㩗	xi2
 㩗	xie2
 㩘	ni3
@@ -3159,7 +3156,7 @@
 㲋	chuo4
 㲋	zhuo2
 㲋	zu2
-㲌	neng4
+㲌	neng4	𣰜~
 㲍	zhi1
 㲎	lou2
 㲏	pao1
@@ -3197,7 +3194,6 @@
 㲤	shuai1
 㲥	tang2
 㲦	han4
-㲦	he3
 㲧	sao4
 㲧	zao4
 㲨	rong2
@@ -3589,9 +3585,7 @@
 㷁	yong3
 㷂	shu4
 㷃	chui3
-㷃	cui3
 㷄	hui3
-㷄	hui4
 㷅	chao3
 㷅	miao3
 㷆	fu4
@@ -3938,7 +3932,7 @@
 㺲	niu3
 㺳	mei2
 㺴	ba1
-㺵	jiu2
+㺵	jiu3
 㺶	jiu1
 㺷	xu4
 㺸	ping2
@@ -4633,7 +4627,6 @@
 䁷	jue2
 䁷	wu4
 䁷	wo4
-䁸	nong1
 䁸	nong2
 䁸	nang2
 䁹	bi4
@@ -5281,6 +5274,7 @@
 䈞	du3
 䈟	ce4
 䈟	zha3
+䈟	ze1	地名用字。廣東省茂名市化州縣有三~
 䈠	huan3
 䈠	yuan4
 䈡	cong1
@@ -5957,7 +5951,6 @@
 䏪	er3
 䏪	er4
 䏫	xiu1
-䏬	mou3
 䏬	mou2
 䏭	zhu1
 䏭	chu2
@@ -7372,8 +7365,6 @@
 䞬	tou4
 䞭	cun1
 䞭	qiu4
-䞭	qiu3
-䞭	qun1
 䞮	tu2
 䞮	tu1
 䞯	fu4
@@ -7430,7 +7421,6 @@
 䟌	jie2
 䟍	bian1
 䟍	dian1
-䟍	dian2
 䟎	zan3
 䟏	li4
 䟐	li4
@@ -7977,9 +7967,6 @@
 䤫	chan2
 䤬	sha1
 䤭	shi4
-䤭	kuan4
-䤭	sui4
-䤭	yi2
 䤮	she4
 䤯	xing2
 䤰	ying2
@@ -8091,11 +8078,6 @@
 䦇	ji4
 䦈	jie1
 䦈	zuo3
-䦈	fang3
-䦈	han3
-䦈	ji2
-䦈	mou3
-䦈	za2
 䦉	si4
 䦊	niao3
 䦋	ao2
@@ -8110,9 +8092,8 @@
 䦑	xie4
 䦒	dang4
 䦒	qiao1
-䦓	zhan3
-䦓	chan1
 䦓	zhan1
+䦓	chan1
 䦔	tan3
 䦔	dan3
 䦕	peng1
@@ -8418,10 +8399,6 @@
 䩝	pao2
 䩞	tie4
 䩞	die1
-䩞	tie2
-䩞	nian2
-䩞	tian3
-䩞	wei3
 䩟	yi2
 䩟	ti4
 䩠	ting1
@@ -8994,9 +8971,7 @@
 䯒	heng2
 䯓	kui1
 䯓	kui2
-䯔	ze3
 䯔	ze2
-䯔	cen2
 䯕	ting1
 䯖	lang2
 䯗	bi4
@@ -9629,7 +9604,6 @@
 䵱	he4
 䵲	qiao1
 䵲	diao4
-䵳	hei4
 䵳	wei4
 䵳	hui4
 䵴	ying4
@@ -10997,7 +10971,6 @@
 典	tian3
 兹	zi1
 兹	ci2
-兺	bun1
 兺	fen1
 兼	jian1
 兾	ji4
@@ -11739,8 +11712,6 @@
 友	you3
 反	fan3
 反	fan4
-叏	guai2
-叏	guai4
 叐	ba2
 发	fa1
 发	fa4
@@ -12360,7 +12331,6 @@
 唚	qin1
 唚	qin4
 唜	mo4
-唞	dou2
 唞	dou3
 唟	qu4
 唣	zao4
@@ -12721,7 +12691,7 @@
 嗥	hao2
 嗦	suo1
 嗦	suo
-嗧	jia1 lun2
+嗧	jia1-lun2
 嗨	hai1
 嗨	hei1
 嗩	suo3
@@ -13012,7 +12982,6 @@
 嚏	ti4
 嚐	chang2
 嚑	xun1
-嚒	me1
 嚓	ca1
 嚓	cha1
 嚔	ti4
@@ -18078,7 +18047,6 @@
 擊	xi2
 擋	dang3
 擋	dang4
-擌	se2
 擌	se4
 操	cao1
 操	cao4
@@ -24716,8 +24684,7 @@
 瞝	chi1
 瞞	man2
 瞞	men2
-瞞	men1
-瞞	men3
+瞞	men4
 瞟	piao3
 瞟	piao4
 瞟	piao2
@@ -25426,7 +25393,6 @@
 禗	si1
 禘	di4
 禙	bei4
-禚	zhua2
 禚	zhuo2
 禛	zhen1
 禜	yong3
@@ -25608,7 +25574,7 @@
 稟	lin3
 稠	chou2
 稠	tiao2
-稠	diao2
+稠	diao4
 稡	zui4
 稡	zu2
 稡	su1
@@ -25645,8 +25611,8 @@
 稷	ji4
 稷	ze4
 稸	xu4
+稹	zhen3
 稹	zhen1
-稹	zhen2
 稹	bian1
 稹	zhen3
 稺	zhi4
@@ -27823,8 +27789,8 @@
 脊	ji3
 脊	ji2
 脋	xie2
-脌	nian2
-脌	nin1
+脌	nian2	“年月”的合字
+脌	nin1	乳房。粵語
 脎	sa4
 脏	zang4
 脒	mi3
@@ -28505,7 +28471,6 @@
 苫	tian1
 苫	chan1
 苬	qiu2
-苬	xiu2
 苭	yao3
 苮	xian1
 苯	ben3
@@ -28622,7 +28587,6 @@
 茷	ba2
 茸	rong2
 茸	rong3
-茸	rong1
 茹	ru2
 茺	chong1
 茻	mang3
@@ -29125,7 +29089,7 @@
 蒺	ji2
 蒻	ruo4
 蒼	cang1
-蒼	cang3
+蒼	cang3	莽~
 蒽	en1
 蒾	mi2
 蒿	hao1
@@ -31564,7 +31528,6 @@
 讜	dang3
 讜	dang4
 讝	zhan1
-讝	zhan2
 讞	yan4
 讟	du2
 证	zheng4
@@ -32584,7 +32547,7 @@
 輞	wang3
 輟	chuo4
 輠	guo3
-輠	hua3
+輠	hua4
 輠	hui4
 輡	kan3
 輢	yi3
@@ -33824,7 +33787,6 @@
 鋆	jun1
 鋇	bei4
 鋈	wu4
-鋉	su3
 鋉	su4
 鋊	yu4
 鋋	chan2
@@ -34550,7 +34512,7 @@
 閧	xiang4
 閨	gui1
 閩	min3
-閪	se1
+閪	hai1
 閪	xi1
 閫	kun3
 閬	lang4
@@ -35425,7 +35387,6 @@
 顇	zu2
 顈	jiong3
 顈	xian4
-顈	xuan3
 顉	qin1
 顊	yi2
 顋	sai1
@@ -37130,7 +37091,7 @@
 麿	mi2
 麿	mo3
 黀	zou1
-黁	nun2
+黁	nun2	溫~
 黂	fen2
 黃	huang2
 黅	jin1
@@ -38455,7 +38416,7 @@
 𠏂	di4
 𠏃	yue1
 𠏄	zhen1
-𠏅	kua2
+𠏅	kua1
 𠏆	bei4
 𠏇	jian3
 𠏈	yao2
@@ -38703,7 +38664,6 @@
 𠓃	yao4
 𠓄	ma3
 𠓆	jing1
-𠓇	sang2
 𠓉	guang1
 𠓊	hui1
 𠓊	dan1
@@ -40975,8 +40935,6 @@
 𠵦	wu2
 𠵦	wu3
 𠵧	zhen1
-𠵧	chun2
-𠵧	zhen2
 𠵨	de
 𠵩	he1
 𠵪	ning2
@@ -41036,7 +40994,7 @@
 𠶾	he4
 𠶿	nie4
 𠶿	za2
-𠷀	run3
+𠷀	run3	吮
 𠷁	qian2
 𠷁	jian1
 𠷂	dai4
@@ -41503,7 +41461,6 @@
 𠿙	pao2
 𠿚	zha2
 𠿛	lu3
-𠿜	hua3
 𠿜	hua4
 𠿝	chu1
 𠿞	shan3
@@ -43739,8 +43696,6 @@
 𡢘	ying2
 𡢙	hu4
 𡢚	man4
-𡢛	luan2
-𡢛	lvan3
 𡢜	mo3
 𡢝	hui3
 𡢞	ying1
@@ -43885,15 +43840,11 @@
 𡤡	quan2
 𡤡	juan4
 𡤢	luo2
-𡤣	luan2
-𡤣	lvan3
 𡤤	zhuan1
 𡤥	shu1
 𡤥	tiao2
 𡤦	yi4
 𡤧	bao3
-𡤨	luan2
-𡤨	lvan3
 𡤩	yan4
 𡤪	qian1
 𡤫	qia1
@@ -44459,7 +44410,7 @@
 𡬖	han1
 𡬗	ni4
 𡬘	lao4
-𡬙	seng4
+𡬙	seng4	~𡬌:睡醒
 𡬚	ji3
 𡬛	ning2
 𡬛	ning4
@@ -46408,7 +46359,7 @@
 𢈻	jie2
 𢈼	sui4
 𢈽	zhan4
-𢈾	cou1
+𢈾	cou1	崩聲
 𢈿	huo4
 𢉀	lou4
 𢉁	beng1
@@ -46768,8 +46719,6 @@
 𢍴	jiong1
 𢍵	yi2
 𢍶	juan4
-𢍶	lvan2
-𢍶	lian4
 𢍷	li4
 𢍸	qing2
 𢍹	qian1
@@ -47960,7 +47909,6 @@
 𢞙	nao2
 𢞙	niu2
 𢞚	geng3
-𢞛	xun3
 𢞜	xie4
 𢞝	han2
 𢞝	se4
@@ -51850,7 +51798,6 @@
 𣗎	quan2
 𣗏	feng1
 𣗐	reng3
-𣗐	reng2
 𣗔	tui4
 𣗕	zhuan4
 𣗖	li4
@@ -51914,7 +51861,6 @@
 𣘘	shen1
 𣘘	zhen1
 𣘙	bang4
-𣘚	shuai2
 𣘚	shuai4
 𣘛	dou1
 𣘜	chi1
@@ -54079,7 +54025,6 @@
 𣷊	dou3
 𣷋	shi1
 𣷌	yu3
-𣷍	mei1
 𣷎	yue4
 𣷏	yin2
 𣷏	qin2
@@ -58116,7 +58061,6 @@
 𤲴	quan2
 𤲵	zhi4
 𤲶	luan2
-𤲶	niao2
 𤲶	niao3
 𤲷	se4
 𤲸	xu4
@@ -58141,7 +58085,6 @@
 𤳋	se4
 𤳌	zhu4
 𤳍	min3
-𤳎	j1
 𤳎	ji1
 𤳏	lei2
 𤳐	zhu4
@@ -58547,7 +58490,7 @@
 𤹌	shi1
 𤹍	yan4
 𤹎	ya3
-𤹏	lvan2
+𤹏	luan2
 𤹐	lie4
 𤹛	chen2
 𤹜	ying2
@@ -63673,7 +63616,6 @@
 𦅎	ru2
 𦅎	xu1
 𦅏	xu1
-𦅐	qiong3
 𦅑	xun2
 𦅒	sao1
 𦅒	zao3
@@ -63729,10 +63671,8 @@
 𦆅	man4
 𦆆	lian2
 𦆇	shan4
-𦆈	zuan4
-𦆈	zui1
 𦆈	zuan3
-𦆈	zui2
+𦆈	zui1
 𦆉	jian1
 𦆊	jiang1
 𦆋	lai4
@@ -64322,7 +64262,6 @@
 𦎺	qian1
 𦎺	qiang3
 𦎻	huan2
-𦎼	gou2
 𦎼	gou4
 𲹏	gou4
 𦎽	huan2
@@ -64634,7 +64573,7 @@
 𦓓	lie4
 𦓔	er2
 𦓔	xu1
-𦓕	nv2
+𦓕	nv2	尼于切。《龍龕》
 𦓖	nv4
 𦓗	fu2
 𦓘	nai4
@@ -64694,7 +64633,6 @@
 𦔋	rong3
 𦔌	qi2
 𦔌	shi4
-𦔌	si2
 𦔍	fu4
 𦔎	ce4
 𦔏	huo1
@@ -66406,7 +66344,7 @@
 𦬟	ji1
 𦬠	ju3
 𦬡	cui4
-𦬢	pu2 ti2	普提
+𦬢	pu2-ti2	普提
 𦬣	wang3
 𦬤	hu4
 𦬥	jiu1
@@ -69165,7 +69103,6 @@
 𧓎	pi2
 𧓎	bi1
 𧓏	cong2
-𧓐	lie2
 𧓐	lie4
 𧓑	qi2
 𧓒	yin3
@@ -70201,7 +70138,6 @@
 𧡡	yun4
 𧡢	xuan3
 𧡣	chou2
-𧡣	cou2
 𧡤	pian1
 𧡥	chuang1
 𧡥	chuang4
@@ -70646,9 +70582,6 @@
 𧧖	jiu4
 𧧖	gao1
 𧧗	xiong1
-𧧘	shuo1
-𧧘	shui1
-𧧘	yue4
 𧧙	gao4
 𧧚	shan4
 𧧛	nan2
@@ -70769,6 +70702,8 @@
 𧨼	xun4
 𧨽	fu4
 𧨾	shan2
+𧨾	tan4
+𧨾	chan2
 𧨿	zha3
 𧩀	yi2
 𧩁	yan4
@@ -71025,7 +70960,6 @@
 𧬉	pao2
 𧬊	xi4
 𧬊	si1
-𧬊	si2
 𧬋	fa1
 𧬋	fa4
 𧬌	yan2
@@ -73043,7 +72977,6 @@
 𨈔	dan1
 𨈕	wai3
 𨈖	zhen4
-𨈖	din4
 𨈗	nen4
 𨈘	shao3
 𨈙	xie4
@@ -73771,7 +73704,6 @@
 𨑾	xun2
 𨑾	yan2
 𨑾	shun4
-𨑿	zou2
 𨑿	zou3
 𨒀	cong2
 𨒁	cong1
@@ -78429,8 +78361,7 @@
 𩒑	kuang4
 𩒒	e3
 𩒓	hong3
-𩒔	nou1
-𩒔	nou2
+𩒔	nou2	𩔸~
 𩒕	nie4
 𩒕	po4
 𩒕	e4
@@ -79507,7 +79438,6 @@
 𩡽	zhuang4
 𩡽	zhuang1
 𩡾	suo1
-𩡾	suo2
 𩡿	ma4
 𩢀	tun2
 𩢀	dun3
@@ -79956,7 +79886,6 @@
 𩨬	gun3
 𩨭	que1
 𩨮	e4
-𩨯	qiong3
 𩨯	qiong2
 𩨰	die2
 𩨱	ci1
@@ -82031,7 +81960,6 @@
 𪇚	yang2
 𪇛	yong1
 𪇜	gua1
-𪇜	gua2
 𪇝	yu2
 𪇞	zhou3
 𪇞	zhou4
@@ -82422,7 +82350,6 @@
 𪍉	chao3
 𪍊	biao3
 𪍋	yi4
-𪍌	suo2
 𪍌	suo4
 𪍍	tou3
 𪍎	ke1
@@ -82650,9 +82577,6 @@
 𪐕	xing1
 𪐕	xin1
 𪐖	long3
-𪐗	he4
-𪐗	hei1
-𪐗	hei3
 𪐘	yi4
 𪐘	yan1
 𪐙	pu1
@@ -84249,7 +84173,7 @@
 𪮛	shi2
 𪮜	chui2
 𪮝	hai3
-𪮟	dia1
+𪮟	dia1	提：~包包、~籃子。《成都话方言词典》
 𪮟	die1
 𪮠	lian4
 𪮡	lang3
@@ -84839,7 +84763,7 @@
 𪻄	mei3
 𪻅	yuan2
 𪻆	mei4
-𪻎	jun2
+𪻎	jun1
 𪻏	ji2
 𪻏	e4
 𪻑	keng1
@@ -86112,7 +86036,6 @@
 𫞼	zai4
 𫞽	suo1
 𫞾	bi4
-𫞿	liang1
 𫟀	ling2
 𫟁	duan4
 𫟂	han2
@@ -86438,7 +86361,7 @@
 𫦟	qian1
 𫦡	die2
 𫦡	zhi2
-𫦧	lia2
+𫦧	lia2	疲倦；渾身無力。“力乏”二字的合音。湘語
 𫦨	fen3
 𫦩	liang3
 𫦪	juan1
@@ -86580,7 +86503,7 @@
 𫩗	cha1
 𫩘	cong3
 𫩙	guan4
-𫩜	zhua4
+𫩜	zhua4	北京方言。嬰兒啼哭聲。他打~一聲起就沒離開過他媽。
 𫩜	gu1
 𫩞	yi3
 𫩞	chi4
@@ -86807,7 +86730,7 @@
 𫮨	dun3
 𫮩	tan1
 𫮪	wo1
-𫮫	ten4
+𫮫	teng4	~~：條狀凸出物。西南官話
 𫮮	wan4
 𫮯	zhuan1
 𫮯	tuan2
@@ -87270,7 +87193,7 @@
 𫸭	chang4
 𫸰	chao1
 𫸳	fei4
-𫸴	fe3
+𫸴	fei3	鳥類用腳抓東西
 𫸵	ze2
 𫸹	yi2
 𫸺	bi4
@@ -87561,8 +87484,6 @@
 𫾂	qin1
 𫾃	xiao1
 𫾇	zhao4
-𫾈	nia2
-𫾈	nia3
 𫾈	lia3
 𫾉	hui1
 𫾊	wan3
@@ -89487,8 +89408,6 @@
 𬤀	xia4
 𬤀	hao2
 𬤁	tao2
-𬤂	tan4
-𬤂	chan2
 𬤃	juan3
 𬤄	can4
 𬤅	ji2
@@ -89602,7 +89521,7 @@
 𬦇	zou3
 𬦈	tu1
 𬦈	tu4
-𬦌	ue4
+𬦌	yue4
 𬦍	chen4
 𬦎	xi1
 𬦐	gua1
@@ -90014,8 +89933,6 @@
 𬮤	he2
 𬮤	ge2
 𬮥	chu4
-𬮦	guan1
-𬮧	bo1
 𬮨	huo4
 𬮩	qi4
 𬮪	sha1
@@ -91465,10 +91382,7 @@
 𭔜	yi4
 𭔞	nie4
 𭔟	bao3
-𭔤	nun3
-𭔬	jiang1
-𭔬	jiang4
-𭔬	qiang1
+𭔤	nun4	寧孕反。佛教音譯用字
 𭔰	duan3
 𭔱	ru3
 𭔸	dui4
@@ -91807,7 +91721,6 @@
 𭢚	zai1
 𭢛	ru3
 𭢞	bu4
-𭢟	ne3
 𭢢	jiu1
 𭢢	liu2
 𭢢	liao2
@@ -92467,9 +92380,6 @@
 𭻘	di4
 𭻜	lin2
 𭻝	mao4
-𭻞	he4
-𭻞	hei1
-𭻞	hei3
 𭻢	si4
 𭻥	bao4
 𭻥	pu4
@@ -95248,8 +95158,6 @@
 𰝺	jiu3
 𰝼	guang1
 𰝼	xie4
-𰝾	chui3
-𰝾	cui3
 𰞁	bing3
 𰞆	guang1
 𰞆	zhuan1
@@ -95991,8 +95899,6 @@
 𰬶	qie4
 𰬶	qu3
 𰬷	san3
-𰬹	zuan3
-𰬹	zui2
 𰬺	zun1
 𰬺	zun3
 𰬻	ju2
@@ -96428,8 +96334,6 @@
 𰵥	chi4
 𰵦	xiao4
 𰵧	zhi4
-𰵨	zhan2
-𰵨	zhan1
 𰵩	bu1
 𰵪	xiong4
 𰵫	dou4
@@ -97865,7 +97769,7 @@
 𱍉	xiao1
 𱍊	chang4
 𱍐	qi2
-𱍒	diang1
+𱍒	diang1	敲小鼓的聲音
 𱍛	ao2
 𱍛	mei2
 𱎂	lu4
@@ -97901,7 +97805,7 @@
 𱑝	sa3
 𱑟	cha2
 𱒐	wu4
-𱒓	tin2
+𱒓	tin2	雪飄落的情狀。香港新界客家話
 𱒓	tin4
 𱒖	pu1
 𱒞	sha1
@@ -98016,7 +97920,7 @@
 𱛧	hao1
 𱛰	hong4
 𱛴	san3
-𱛶	yo3
+𱛶	yo3	山脊。地名用字。浙江省天台市有茅~、長~丁
 𱛹	ye1
 𱛾	wan1
 𱜇	ling3
@@ -98042,7 +97946,7 @@
 𱟪	niu1
 𱟫	chan4
 𱠫	lin2
-𱡇	kao2
+𱡇	kao2	攪動，動手。《成都话方言词典》
 𱡌	li4
 𱡗	ju1
 𱡼	wei3
@@ -98131,7 +98035,7 @@
 𱰾	nu2
 𱱚	xi1
 𱱺	bu3
-𱲁	piang1
+𱲁	piang1	敲小鑼的聲音
 𱲆	ce4
 𱲋	pan2
 𱲎	ying4
@@ -98181,7 +98085,6 @@
 𱶶	nuo4
 𱶻	tuo2
 𱷈	bei1
-𱷸	ze1
 𱸃	xi1
 𱸖	yang2
 𱸛	ben1
@@ -98232,7 +98135,7 @@
 𲀃	bang1
 𲀊	wai1
 𲁇	hu4
-𲁓	biang4
+𲁓	biang4	把人或物藏起，使之看不見。江西省信豐縣有~面山。
 𲁣	wang4
 𲁣	huang3
 𲁣	mang2
@@ -98246,7 +98149,7 @@
 𲂎	zha3
 𲂯	zhu3
 𲃇	man3
-𲃕	zuai3
+𲃕	zhuai3
 𲄚	lao4
 𲄠	ci1
 𲄨	qian2
@@ -98901,7 +98804,6 @@
 𲰫	xia4
 𲰬	cun2
 𲰶	huang2	田土量詞。義爲塊。《江西省修水縣地名志》第673頁
-𲰹	lia4
 𲰻	fan4
 𲱂	zhuan4
 𲱆	luo2
@@ -99103,7 +99005,7 @@
 𲺆	huang1
 𲺉	lun2
 𲺋	tuo3
-𲺟	rua3
+𲺟	rua3	不認真。潼南方言
 𲺤	long2
 𲺦	yan3
 𲺴	wen1
