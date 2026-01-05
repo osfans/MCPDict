@@ -7,4 +7,4 @@ class 表(_表):
 
 	@property
 	def 聲韻數(自):
-		return len(set(map(lambda x:x.rstrip("zrsfxj"), 自.音典.keys())))
+		return len(set(map(lambda x:x.rstrip("zrsfxj"), 自.音節典.keys())))

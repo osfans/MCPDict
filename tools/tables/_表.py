@@ -202,7 +202,7 @@ class 表:
 	simplified = 1
 	爲音 = True
 	列序 = None
-	音典 = defaultdict(set)
+	音節典 = defaultdict(set)
 	音表 = OrderedDict()
 	聲韻典 = defaultdict(set)
 	d = defaultdict(list)
@@ -487,7 +487,7 @@ class 表:
 
 	@property
 	def 音節數(自):
-		return len(自.音典)
+		return len(自.音節典)
 
 	@property
 	def 聲韻數(自):
@@ -495,7 +495,7 @@ class 表:
 
 	def 讀(自, 更新=False):
 		自.音表.clear()
-		自.音典.clear()
+		自.音節典.clear()
 		自.聲韻典.clear()
 		自.d.clear()
 		if (自.過時() or 更新) and 自.spath: 自.更新()
@@ -528,7 +528,7 @@ class 表:
 						音乙 = 音.rstrip("+-*/=?@\\")
 						聲韻, 調 = 自.分音(音乙)
 						if not 調.startswith("0") and (自.無調() or 調) and 調 not in 自.不計入調:
-							自.音典[音乙].add(字)
+							自.音節典[音乙].add(字)
 							自.聲韻典[聲韻].add(字)
 				if 註:
 					py += "{%s}" % 註

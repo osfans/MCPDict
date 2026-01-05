@@ -24,7 +24,7 @@ class 表(_表):
 
 	def 讀(自, 更新=False):
 		自.音表.clear()
-		自.音典.clear()
+		自.音節典.clear()
 		自.聲韻典.clear()
 		自.d.clear()
 		return dict()

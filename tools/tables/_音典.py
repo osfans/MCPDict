@@ -84,6 +84,8 @@ class 表(_表):
 					for y,j in zip(音.split(" "), 註.split(" ")):
 						l.append((字, y,(備註.lstrip(y+"為") if 備註.startswith(y) else "") + j.lstrip(y)))
 					return l
+			elif 名 in ("平江南江",):
+				音組 = 音.split("/")
 			elif 自.文件名.startswith("丹陽（雲陽訪仙河陽埤城）"):
 				註 = 字[1:].strip("()（）")
 				字 = 字[0]
@@ -296,7 +298,6 @@ class 表(_表):
 				字, 音, 註 = 果
 				註 = 註.strip("{}")
 			if "/" in 音:
-				l = list()
 				音組 = 音.split("/")
 		elif len(列) == 2:
 			字, 音 = 列[:2]
