@@ -87,8 +87,8 @@ def processXlsxFs(v):
 			text = f"**{text}**"
 		elif i.font.color and i.font.color.rgb == "FF808080":
 			text = f"`{text}`"
-		if i.font.vertAlign == "subscript" or (i.font.size and i.font.size < 10.0):
-			text = f"({text})"
+		# if i.font.vertAlign == "subscript" or (i.font.size and i.font.size < 10.0):
+		# 	text = f"({text})"
 		cells.append(text)
 	return "".join(cells).replace(")(", "").strip().replace("\n", "\\n")
 
