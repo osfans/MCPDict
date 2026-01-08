@@ -36,22 +36,20 @@
 
     <string name="pref_key_allow_variants">ALLOW_VARIANTS</string>
 
-    <string name="copy_readings">複製“%s”字或其讀音</string>
-    <string name="copy_one_reading">複製該語言中“%s”字的讀音</string>
+    <string name="copy_readings">複製“%s”字的所有讀音</string>
+    <string name="copy_lang_current_reading">複製該語言中“%s”字的讀音</string>
+    <string name="copy_lang_all_readings">複製該語言中“%s”字的所有讀音</string>
     <string name="copy_hz">複製“%s”字</string>
     <string name="dict_links">去在線詞典查詢“%s”字</string>
     <string name="one_dict_links">去“%2$s”查詢“%1$s”字</string>
     <string name="search_homophone">查詢該語言中“%s”的同音字</string>
     <string name="share_readings">分享“%s”字的所有讀音</string>
     <string name="goto_info">查看“%s”的詳細信息</string>
-
     <string name="add_to_custom_language">將該語言加入自選語言</string>
     <string name="add_to_custom_language_done">“%s”已加入自選語言</string>
     <string name="rm_from_custom_language">將該語言移出自選語言</string>
     <string name="rm_from_custom_language_done">“%s”已从自選語言移出</string>
 
-    <string name="all_reading">所有讀音</string>
-    <string name="copy_all_reading">複製“%1$s”字的所有讀音</string>
     <string name="copy_done">已複製到剪貼板</string>
     <string name="search_as_ja_any">日語（任意讀音）</string>
 

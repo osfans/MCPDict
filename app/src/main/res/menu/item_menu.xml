@@ -10,8 +10,11 @@
             android:title="@string/add_to_custom_language" >
         </item>
         <item
-            android:id="@+id/menu_item_copy_readings"
-            android:title="@string/copy_one_reading" />
+            android:id="@+id/menu_item_copy_lang_current_reading"
+            android:title="@string/copy_lang_current_reading" />
+        <item
+            android:id="@+id/menu_item_copy_lang_all_readings"
+            android:title="@string/copy_lang_all_readings" />
         <item
             android:id="@+id/menu_item_search_homophone"
             android:title="@string/search_homophone" />
@@ -48,6 +51,9 @@
             android:id="@+id/menu_item_copy_hz"
             android:title="@string/copy_hz" >
         </item>
+        <item
+            android:id="@+id/menu_item_copy_readings"
+            android:title="@string/copy_readings" />
         <item
             android:id="@+id/menu_item_favorite"
             android:title="@string/favorite_add" />

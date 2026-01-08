@@ -253,6 +253,14 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             Toast.makeText(context, R.string.copy_done, Toast.LENGTH_SHORT).show();
         }
 
+        public void copyHTML(String text, String html) {
+            Context context = App.getContext();
+            ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newHtmlText("html", text, html);
+            clipboard.setPrimaryClip(clip);
+            Toast.makeText(context, R.string.copy_done, Toast.LENGTH_SHORT).show();
+        }
+
         public Cursor getCursor() {
             ResultAdapter adapter = (ResultAdapter) getBindingAdapter();
             if (adapter != null) {
@@ -313,13 +321,67 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 Toast.makeText(v.getContext(), Pref.getString(App.isCustomLanguage(language) ? R.string.add_to_custom_language_done : R.string.rm_from_custom_language_done, language), Toast.LENGTH_SHORT).show();
                 return true;
             });
-            item = menu.findItem(R.id.menu_item_copy_readings);
-            item.setTitle(Pref.getString(R.string.copy_one_reading, hz));
+            item = menu.findItem(R.id.menu_item_copy_lang_current_reading);
+            item.setTitle(Pref.getString(R.string.copy_lang_current_reading, hz));
             String ipa = cursor.getString(COL_IPA);
             item.setOnMenuItemClickListener(i -> {
                 String zs = cursor.getString(COL_ZS);
-                String reading = String.format("[%s] %s %s%s", lang, hz, DisplayHelper.getIPA(lang, ipa), DisplayHelper.formatJS(hz, zs));
+                if (!TextUtils.isEmpty(zs)) zs = DisplayHelper.formatJS(hz, zs);
+                String reading = String.format("[%s] %s %s%s", lang, hz, DisplayHelper.getIPA(lang, ipa), zs);
                 copyText(reading);
+                return true;
+            });
+            item = menu.findItem(R.id.menu_item_copy_lang_all_readings);
+            item.setTitle(Pref.getString(R.string.copy_lang_all_readings, hz));
+            item.setOnMenuItemClickListener(i -> {
+                int pos = cursor.getPosition();
+                StringBuilder reading = new StringBuilder();
+                reading.append(String.format("%s [%s]\n", hz, lang));
+                for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+                    String hz1 = cursor.getString(COL_HZ);
+                    String lang1 = cursor.getString(COL_LANG);
+                    if (!hz1.contentEquals(hz) || !lang1.contentEquals(lang)) continue;
+                    String ipa1 = cursor.getString(COL_IPA);
+                    String zs1 = cursor.getString(COL_ZS);
+                    if (!TextUtils.isEmpty(zs1)) zs1 = DisplayHelper.formatJS(hz, zs1);
+                    reading.append(String.format("%s%s\n", DisplayHelper.getIPA(lang1, ipa1), zs1));
+                }
+                copyText(reading.toString().trim());
+                cursor.moveToPosition(pos);
+                return true;
+            });
+            item = menu.findItem(R.id.menu_item_copy_readings);
+            item.setTitle(Pref.getString(R.string.copy_readings, hz));
+            item.setOnMenuItemClickListener(i -> {
+                StringBuilder books = new StringBuilder("<br><h2>參考資料</h2>");
+                String lang0 = "";
+                int pos = cursor.getPosition();
+                StringBuilder reading = new StringBuilder();
+                reading.append(String.format("<table><caption>%s的讀音</caption><thead><tr><th>方言點</th><th>讀音</th><th>註釋</th></tr></thead><tbody>", hz));
+                StringBuilder readingText = new StringBuilder();
+                readingText.append(String.format("%s的讀音\n", hz));
+                for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+                    String hz1 = cursor.getString(COL_HZ);
+                    if (!hz1.contentEquals(hz)) continue;
+                    String lang1 = cursor.getString(COL_LANG);
+                    String ipa1 = cursor.getString(COL_IPA);
+                    String zs1 = cursor.getString(COL_ZS);
+                    if (!TextUtils.isEmpty(zs1)) zs1 = DisplayHelper.formatJS(hz, zs1);
+                    reading.append(String.format("<tr><td>%s</td><td>%s</td><td>%s</td></tr>", lang1.contentEquals(lang0) ? "" : lang1, DisplayHelper.getIPA(lang1, ipa1), zs1));
+                    readingText.append(String.format("%s %s%s\n", lang1.contentEquals(lang0) ? "" : "[" + lang1 + "]", DisplayHelper.getIPA(lang1, ipa1), zs1));
+                    if (!lang1.contentEquals(lang0)) {
+                        String book = DB.getFieldByLabel(lang1, "字表來源");
+                        if (!TextUtils.isEmpty(book)) {
+                            books.append(book).append("<br>");
+                        }
+                    }
+                    lang0 = lang1;
+                }
+                reading.append("</tbody></table>");
+                reading.append(books);
+                readingText.append(HtmlCompat.fromHtml(books.toString(), HtmlCompat.FROM_HTML_MODE_COMPACT).toString());
+                copyHTML(readingText.toString().trim(), reading.toString().trim());
+                cursor.moveToPosition(pos);
                 return true;
             });
             item = menu.findItem(R.id.menu_item_search_homophone);
