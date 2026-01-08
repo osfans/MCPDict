@@ -2436,6 +2436,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "德州",
+        "語言": "德州話",
+        "地點": "山東德州",
+        "地圖集二分區": "冀魯官話－石濟片－聊泰小片",
+        "音典分區": "華北－魯北－德州",
+        "陳邡分區": "官話－山東－冀魯片",
+        "版本": "2026-01-08",
+        "錄入人": "DaiDzao",
+        "字表來源": "《德州方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.367278,
+          37.444058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5A4B6",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "武城",
