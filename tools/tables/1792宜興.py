@@ -82,7 +82,7 @@ class 表(_表):
 		if "⮚" not in 列[0]: return
 		l = list()
 		音標, 反切 = 自.擬音()
-		for i, j, k in re.findall("(.)(\\(.*?\\))?(⮚.+)?", 列[0]):
+		for i, j, k in re.findall("(.)(\\(.*?\\))?(⮚.*)?", 列[0]):
 			k = k.replace("⮚", "")
 			註 = f"{j}〔{反切}〕{k}"
 			註 = re.sub(r"〔(.*?)〕(.*?)○", r"〔\1 \2〕", 註)

@@ -13,6 +13,11 @@ class 表(_表):
 		註 = 列[-1]
 		return 字, 音, 註
 
-	@property
-	def 聲韻數(自):
-		return len(set(map(lambda x:x.rstrip("qh"), 自.音節典.keys())))
+	def 分音(自, 音):
+		if 音[-1] in "qh":
+			調 = 音[-1]
+			聲韻 = 音[:-1]
+		else:
+			調 = "1"
+			聲韻 = 音
+		return 聲韻,調

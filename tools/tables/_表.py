@@ -328,7 +328,7 @@ class 表:
 			d[字] = 音.split(",")
 
 	def 無調(自):
-		return 自.簡稱.endswith("上古") or 自.簡稱.endswith("朝鮮") or 自.簡稱.startswith("日語") or 自.簡稱 in ("1851寧波", "党項")
+		return 自.簡稱.endswith("上古") or 自.簡稱.endswith("朝鮮") or 自.簡稱.startswith("日語") or 自.簡稱 in ("1851寧波", "1884新甯", "1890新會", "党項")
 	
 	def 無q聲(自):
 		return 自.簡稱 not in ("盛唐", "榕江侗上古借詞", "榕江侗中古借詞") and not 自.文件名.startswith("白語")
@@ -368,7 +368,7 @@ class 表:
 			音 = 音.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀∅Ø〇0").replace("零", "").replace("◌", "")
 			if 自.無q聲(): 音 = 音.lstrip("q")
 			音 = re.sub("^[I1]", "l", 音)
-			音 = 音.lower().translate(自.kIPAs).replace("tc", "tɕ")
+			音 = 音.lower().translate(自.kIPAs).replace("tc", "tɕ").translate(自.kTones)
 			音 = re.sub("([ʂʐ]ʰ?)ʮ", "\\1ʯ", 音)
 			音 = re.sub("([sz]ʰ?)ʯ", "\\1ʮ", 音)
 			音 = re.sub("([ʂʐ]ʰ?)ɿ", "\\1ʅ", 音)
@@ -527,7 +527,7 @@ class 表:
 					if "兒化" not in 繁註 and "連讀" not in 繁註 and "語流" not in 繁註 and "變調" not in 繁註 and "合音" not in 繁註:
 						音乙 = 音.rstrip("+-*/=?@\\")
 						聲韻, 調 = 自.分音(音乙)
-						if not 調.startswith("0") and (自.無調() or 調) and 調 not in 自.不計入調:
+						if 自.無調() or (調 and not 調.startswith("0") and 調 not in 自.不計入調):
 							自.音節典[音乙].add(字)
 							自.聲韻典[聲韻].add(字)
 				if 註:
