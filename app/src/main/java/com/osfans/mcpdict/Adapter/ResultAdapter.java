@@ -357,7 +357,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 String lang0 = "";
                 int pos = cursor.getPosition();
                 StringBuilder reading = new StringBuilder();
-                reading.append(String.format("<table><caption>%s的讀音</caption><thead><tr><th>方言點</th><th>讀音</th><th>註釋</th></tr></thead><tbody>", hz));
+                reading.append(String.format("<h2>%s的讀音</h2><table><thead><tr><th>方言點</th><th>讀音</th><th>註釋</th></tr></thead><tbody>", hz));
                 StringBuilder readingText = new StringBuilder();
                 readingText.append(String.format("%s的讀音\n", hz));
                 for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {

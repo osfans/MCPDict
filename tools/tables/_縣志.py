@@ -262,6 +262,9 @@ class 表(_表):
 					return 列[1]
 				return
 			行 = 自.增加調類(行)
+		elif 名 in ("沙市",):
+			if 行.startswith("声调"): return ""
+			行 = 自.增加調類(行)
 		elif 名 in ("石首",):
 			行 = 自.增加調類(行)
 		elif 名 in ("南通",):
