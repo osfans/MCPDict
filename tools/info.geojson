@@ -3981,6 +3981,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5C4D0",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "諸城",
+        "語言": "諸城話",
+        "地點": "山東濰坊諸城",
+        "地圖集二分區": "膠遼官話－青萊片－膠蓮小片",
+        "音典分區": "華北－膠東－東濰",
+        "陳邡分區": "官話－山東－魯東大片－膠萊片",
+        "版本": "2026-01-10",
+        "錄入人": "DaiDzao",
+        "字表來源": "《诸城方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.417555,
+          36.002945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5C4D0",
         "marker-size": "large",
         "marker-symbol": "b",
         "title": "青島",
