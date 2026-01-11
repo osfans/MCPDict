@@ -57,13 +57,17 @@ public class MainActivity extends AppCompatActivity {
         }
         if (id == R.id.menu_item_home) {
             if (getDictionaryFragment() != null) {
-                mPager.setCurrentItem(0);
+                mPager.setCurrentItem(PagerAdapter.PAGE.DICTIONARY.ordinal());
                 getDictionaryFragment().refresh("", "");
             }
             return true;
         }
         if (id == R.id.menu_item_favorite) {
-            if (getDictionaryFragment() != null) mPager.setCurrentItem(1);
+            if (mPager.getCurrentItem() != PagerAdapter.PAGE.FAVORITE.ordinal()) mPager.setCurrentItem(PagerAdapter.PAGE.FAVORITE.ordinal());
+            return true;
+        }
+        if (id == R.id.menu_item_guess_hz) {
+            if (mPager.getCurrentItem() != PagerAdapter.PAGE.GUESS_HZ.ordinal()) mPager.setCurrentItem(PagerAdapter.PAGE.GUESS_HZ.ordinal());
             return true;
         }
         if (id == R.id.menu_item_sim) {
@@ -111,8 +115,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void initAdapter() {
         PagerAdapter mAdapter = new PagerAdapter(this);
-        mAdapter.createFragment(PagerAdapter.PAGE_DICTIONARY);
-        mAdapter.createFragment(PagerAdapter.PAGE_FAVORITE);
         mPager.setAdapter(mAdapter);
     }
 
@@ -131,11 +133,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public DictFragment getDictionaryFragment() {
-        return (DictFragment) getFragment(PagerAdapter.PAGE_DICTIONARY);
+        return (DictFragment) getFragment(PagerAdapter.PAGE.DICTIONARY.ordinal());
     }
 
     public FavoriteFragment getFavoriteFragment() {
-        return (FavoriteFragment) getFragment(PagerAdapter.PAGE_FAVORITE);
+        return (FavoriteFragment) getFragment(PagerAdapter.PAGE.FAVORITE.ordinal());
     }
 
     public void refresh() {

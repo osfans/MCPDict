@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_entries_hint">
+        <item>提示字形</item>
+        <item>總筆畫數</item>
+        <item>首筆</item>
+        <item>末筆</item>
+        <item>部首</item>
+        <item>結構</item>
+    </string-array>
+    <string-array name="pref_entries_level">
+        <item>難度</item>
+        <item>簡單</item>
+        <item>普通</item>
+        <item>困難</item>
+    </string-array>
+</resources>

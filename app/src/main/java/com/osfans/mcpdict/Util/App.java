@@ -61,7 +61,6 @@ public class App extends Application {
 
     public static void about(Context context) {
         Dialog dialog = new AlertDialog.Builder(context)
-                .setIcon(android.R.drawable.ic_dialog_info)
                 .setTitle(R.string.about)
                 .setMessage(HtmlCompat.fromHtml(context.getString(R.string.about_message, Pref.getTitle(), BuildConfig.VERSION_NAME), HtmlCompat.FROM_HTML_MODE_COMPACT))
                 .setPositiveButton(R.string.ok, null)

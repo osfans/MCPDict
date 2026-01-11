@@ -678,9 +678,27 @@ public class DB extends SQLiteAssetHelper {
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             if (cursor.isNull(0)) continue;
             sb.append(cursor.getString(0));
+            sb.append(" ");
         }
         cursor.close();
-        return sb.toString();
+        return sb.toString().trim();
+    }
+
+    public static String[] getResults(String sql) {
+        if (db == null) return null;
+        Cursor cursor = db.rawQuery(sql, null);
+        if (cursor.getCount() == 0) {
+            cursor.close();
+            return null;
+        }
+        int n = cursor.getColumnCount();
+        String[] results = new String[n];
+        cursor.moveToFirst();
+        for (int i = 0; i < n; i++) {
+            results[i] = cursor.getString(i);
+        }
+        cursor.close();
+        return results;
     }
 
     public static String getField(String selection, String lang, String field) {

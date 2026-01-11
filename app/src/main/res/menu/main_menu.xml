@@ -7,17 +7,19 @@
         android:title="@string/settings" />
     <item
         android:id="@+id/menu_item_home"
-        android:icon="@android:drawable/ic_menu_revert"
         android:title="@string/home"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/menu_item_info"
-        app:showAsAction="ifRoom"
-        android:icon="@android:drawable/ic_menu_info_details"
-        android:title="@string/info" />
+        android:title="@string/info"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/menu_item_favorite"
         android:title="@string/favorite"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_item_guess_hz"
+        android:title="@string/guess_hz"
         app:showAsAction="never" />
     <item
         android:id="@+id/menu_item_sim"

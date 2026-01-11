@@ -2,12 +2,14 @@
 <resources>
 
     <string name="app_name">漢字音典</string>
-    <string name="settings">設置</string>
-    <string name="help">幫助</string>
-    <string name="about">關於</string>
-    <string name="info">簡介</string>
-    <string name="home">主頁</string>
-    <string name="favorite">生字本</string>
+    <string name="settings">⚙️設置</string>
+    <string name="help">❔幫助</string>
+    <string name="about">❕關於</string>
+    <string name="info">ℹ️</string>
+    <string name="home">🏠</string>
+    <string name="favorite">📖生字本</string>
+    <string name="similarity">🔗方言相似度</string>
+    <string name="guess_hz">🀄猜字</string>
     <string name="about_message"><![CDATA[%1$s V%2$s<br/>作者：osfans (waxaca&#64;163.com)<br/><a href="https://github.com/osfans/MCPDict/releases/tag/latest">最新安卓版</a> <a href="https://github.com/osfans/MCPDict/releases/tag/fonts">字體包</a><br/><br/>漢字古今中外讀音查詢 V3.0<br/>2016.05.03<br/>作者：Maigo<br/>maigoakisame&#64;gmail.com]]></string>
 
     <string name="ok">確定</string>
@@ -470,7 +472,16 @@
     <string name="moedict">萌典</string>
     <string name="kangxi">康熙字典</string>
     <string name="chise">CHISE</string>
-    <string name="similarity">方言相似度測試</string>
+    <string name="guess_hz_lang_hint">輸入或選擇語言提示字音</string>
+    <string name="guess_hz_hint">請輸入你猜的字</string>
+    <string name="guess_hz_commit">提交</string>
+    <string name="guess_hz_answer">答案</string>
+    <string name="guess_hz_instructions">請出題後根据提示開始猜字</string>
+    <string name="random">隨機</string>
+    <string name="easy">簡單</string>
+    <string name="normal">普通</string>
+    <string name="hard">困難</string>
+    <string name="new_guess_hz_game">出題</string>
     <string-array name="entries_area_level">
         <item>不限</item>
         <item>省會</item>
