@@ -22,6 +22,10 @@
         android:title="@string/guess_hz"
         app:showAsAction="never" />
     <item
+        android:id="@+id/menu_item_guess_lang"
+        android:title="@string/guess_lang"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/menu_item_sim"
         android:title="@string/similarity"
         app:showAsAction="never" />

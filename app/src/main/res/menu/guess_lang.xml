@@ -1,0 +1,13 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group>
+        <item android:id="@+id/menu_item_guess_lang"
+            android:title="@string/guess_lang" />
+        <item android:id="@+id/menu_item_guess_part"
+            android:enabled="false"
+            android:title="@string/guess_part" />
+    </group>
+    <item android:id="@+id/menu_item_answer"
+        android:title="@string/guess_hz_answer" />
+
+</menu>

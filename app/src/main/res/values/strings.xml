@@ -483,9 +483,11 @@
     <string name="normal">普通</string>
     <string name="hard">困難</string>
     <string name="new_guess_game">出題</string>
-    <string name="guess_lang_lang_hint">請選擇或輸入猜測的語言</string>
+    <string name="guess_lang_lang_hint">選擇或輸入猜測的語言</string>
     <string name="guess_lang_hint">請輸入漢字</string>
-    <string name="guess_lang_instructions">根据漢字的讀音和地理位置猜一個方言</string>
+    <string name="guess_lang_instructions">根据指定漢字的讀音或相對地理位置猜方言</string>
+    <string name="guess_lang">🌏猜方言</string>
+    <string name="guess_part">猜分區</string>
 
     <string-array name="entries_area_level">
         <item>不限</item>

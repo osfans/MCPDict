@@ -70,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
             if (mPager.getCurrentItem() != PagerAdapter.PAGE.GUESS_HZ.ordinal()) mPager.setCurrentItem(PagerAdapter.PAGE.GUESS_HZ.ordinal());
             return true;
         }
+        if (id == R.id.menu_item_guess_lang) {
+            if (mPager.getCurrentItem() != PagerAdapter.PAGE.GUESS_LANG.ordinal()) mPager.setCurrentItem(PagerAdapter.PAGE.GUESS_LANG.ordinal());
+            return true;
+        }
         if (id == R.id.menu_item_sim) {
             intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mcpdict.sourceforge.io/sim.html"));
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

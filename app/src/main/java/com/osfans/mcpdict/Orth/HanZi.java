@@ -39,7 +39,7 @@ public class HanZi {
     }
 
     public static String cp2str(int codePoint) {
-        return String.valueOf(Character.toChars(codePoint));
+        return Character.toString(codePoint);
     }
 
     public static String firstHz(String s) {

@@ -537,6 +537,11 @@ public class DB extends SQLiteAssetHelper {
         String[] projection = {LANGUAGE, "rowid as _id"};
         String[] inputs = OpenCC.convertAll("LANGUAGE LIKE '%"+constraint+"%'");
         String input = String.join(" OR ", inputs).replace("LANGUAGE", LANGUAGE);
+        if (constraint.length() >= 2) {
+            String[] locations = OpenCC.convertAll("LOCATION LIKE '%"+constraint+"%'");
+            String location = String.join(" OR ", locations).replace("LOCATION", "地點");
+            input += " OR " + location;
+        }
         String query = qb.buildQuery(projection, String.format("%s and 音節數 is not null", input),  null, null, ORDER, null);
         Cursor cursor = db.rawQuery(query, null);
         if (cursor.getCount() > 0) return cursor;
