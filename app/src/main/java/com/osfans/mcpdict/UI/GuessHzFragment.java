@@ -33,7 +33,7 @@ public class GuessHzFragment extends Fragment implements RefreshableFragment {
     private View selfView;
     private TextView mTextView, mTextInput;
     private ScrollView mScrollView;
-    private AutoCompleteTextView acSearchLang;
+    private AutoCompleteTextView mAcSearchLang;
 
     private String mAnswer = "", mLast = "";
     private Spinner mSpinnerHint;
@@ -89,6 +89,7 @@ public class GuessHzFragment extends Fragment implements RefreshableFragment {
         mTextView.setText("");
         String hint = String.format("請猜一個在<b>%s</b>中可以讀<b>%s</b>的字", lang, ipa);
         append(hint);
+        hintLang();
     }
 
     @Override
@@ -123,29 +124,15 @@ public class GuessHzFragment extends Fragment implements RefreshableFragment {
         FontUtil.setTypeface(mTextView);
         mScrollView = selfView.findViewById(R.id.scrollView);
         mSpinnerHint = selfView.findViewById(R.id.spinner_hints);
-        acSearchLang = selfView.findViewById(R.id.text_search_lang);
-        acSearchLang.setAdapter(new LanguageAdapter(requireContext()));
-        acSearchLang.setOnFocusChangeListener((v, b) -> {
+        mAcSearchLang = selfView.findViewById(R.id.text_search_lang);
+        mAcSearchLang.setAdapter(new LanguageAdapter(requireContext()));
+        mAcSearchLang.setOnFocusChangeListener((v, b) -> {
             if (b) ((AutoCompleteTextView)v).showDropDown();
         });
-        acSearchLang.setOnItemClickListener((adapterView, view, i, l) -> {
-            String lang = acSearchLang.getText().toString();
-            String label = DB.getLabelByLanguage(lang);
-            if (TextUtils.isEmpty(label)) return;
-            if (TextUtils.isEmpty(mAnswer)) return;
-            String sql = "select 讀音 from langs where 語言 match '%s' and 字組 match '%s'";
-            sql = String.format(sql, label, mAnswer);
-            String result = DB.getResult(sql);
-            if (TextUtils.isEmpty(result)) {
-                append(String.format("不知道這個字的<b>%s</b>讀音", lang));
-            } else {
-                String ipa = DisplayHelper.formatIPA(label, result).toString();
-                append(String.format("這個字的%s讀音是<b>%s</b>", lang, ipa));
-            }
-        });
+        mAcSearchLang.setOnItemClickListener((adapterView, view, i, l) -> hintLang());
         selfView.findViewById(R.id.button_lang_clear).setOnClickListener(v -> {
-            acSearchLang.setText("");
-            acSearchLang.requestFocus();
+            mAcSearchLang.setText("");
+            mAcSearchLang.requestFocus();
         });
         Button buttonNew = selfView.findViewById(R.id.buttonNew);
         buttonNew.setOnClickListener(v -> {
@@ -230,5 +217,22 @@ public class GuessHzFragment extends Fragment implements RefreshableFragment {
         });
 
         return selfView;
+    }
+
+    private void hintLang() {
+        String lang = mAcSearchLang.getText().toString();
+        if (TextUtils.isEmpty(lang)) return;
+        String label = DB.getLabelByLanguage(lang);
+        if (TextUtils.isEmpty(label)) return;
+        if (TextUtils.isEmpty(mAnswer)) return;
+        String sql = "select 讀音 from langs where 語言 match '%s' and 字組 match '%s'";
+        sql = String.format(sql, label, mAnswer);
+        String result = DB.getResult(sql);
+        if (TextUtils.isEmpty(result)) {
+            append(String.format("不知道這個字的<b>%s</b>讀音", lang));
+        } else {
+            String ipa = DisplayHelper.formatIPA(label, result).toString();
+            append(String.format("這個字的%s讀音是<b>%s</b>", lang, ipa));
+        }
     }
 }

@@ -472,16 +472,21 @@
     <string name="moedict">萌典</string>
     <string name="kangxi">康熙字典</string>
     <string name="chise">CHISE</string>
+
     <string name="guess_hz_lang_hint">輸入或選擇語言提示字音</string>
-    <string name="guess_hz_hint">請輸入你猜的字</string>
+    <string name="guess_hz_hint">請輸入猜測的漢字</string>
     <string name="guess_hz_commit">提交</string>
     <string name="guess_hz_answer">答案</string>
-    <string name="guess_hz_instructions">請出題後根据提示開始猜字</string>
+    <string name="guess_hz_instructions">根據字形提示或各方言中的讀音猜一個漢字</string>
     <string name="random">隨機</string>
     <string name="easy">簡單</string>
     <string name="normal">普通</string>
     <string name="hard">困難</string>
-    <string name="new_guess_hz_game">出題</string>
+    <string name="new_guess_game">出題</string>
+    <string name="guess_lang_lang_hint">請選擇或輸入猜測的語言</string>
+    <string name="guess_lang_hint">請輸入漢字</string>
+    <string name="guess_lang_instructions">根据漢字的讀音和地理位置猜一個方言</string>
+
     <string-array name="entries_area_level">
         <item>不限</item>
         <item>省會</item>

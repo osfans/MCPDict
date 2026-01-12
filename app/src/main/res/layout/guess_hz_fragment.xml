@@ -14,7 +14,7 @@
             android:id="@+id/buttonNew"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/new_guess_hz_game" />
+            android:text="@string/new_guess_game" />
 
         <EditText
             android:id="@+id/editTextInput"
