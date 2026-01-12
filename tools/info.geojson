@@ -15492,6 +15492,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EA3131",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "崖州",
+        "語言": "崖州崖城軍話",
+        "地點": "海南三亞崖州",
+        "地圖集二分區": "官話－方言島",
+        "音典分區": "藍青－不分類",
+        "陳邡分區": "官話－長江－西南大片－閩瓊片",
+        "方言島": true,
+        "版本": "2026-01-12",
+        "錄入人": "DaiDzao",
+        "字表來源": "《海南三亚崖城军话源流研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.518562,
+          18.259835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EA3131",
         "marker-size": "small",
         "marker-symbol": "b",
         "title": "安順屯堡話",
