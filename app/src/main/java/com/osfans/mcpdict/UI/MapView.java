@@ -16,8 +16,8 @@ import com.osfans.mcpdict.Orth.DisplayHelper;
 import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.Util.FileUtil;
 
+import org.json.JSONArray;
 import org.osmdroid.bonuspack.kml.KmlDocument;
-import org.osmdroid.bonuspack.kml.KmlFeature;
 import org.osmdroid.bonuspack.kml.Style;
 import org.osmdroid.events.MapListener;
 import org.osmdroid.events.ScrollEvent;
@@ -33,11 +33,17 @@ import org.osmdroid.views.overlay.ScaleBarOverlay;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
+import org.json.JSONObject;
+
 public class MapView extends org.osmdroid.views.MapView {
-    FolderOverlay mHzOverlay, mProvinceOverlay, mSmallCityOverlay;
-    boolean mProvinceInitialized = false;
+    FolderOverlay mHzOverlay, mBorderOverlay;
+    List<String> levels = Arrays.asList("province", "city", "district");
+    FolderOverlay[] mInfoMarkers;
+    boolean mProvinceInitialized = false, mInfoInitialized = false;
 
     public MapView(Context context) {
         super(context);
@@ -45,6 +51,8 @@ public class MapView extends org.osmdroid.views.MapView {
 
     public MapView(Context context, String hz) {
         this(context);
+        setUseDataConnection(false);
+//        Configuration.getInstance().setUserAgentValue(BuildConfig.APPLICATION_ID);
         init(hz);
         new Thread(()->{
             initHZ(hz);
@@ -52,6 +60,7 @@ public class MapView extends org.osmdroid.views.MapView {
         }).start();
         new Thread(()->{
             initProvinces();
+            initInfo();
             postInvalidate();
         }).start();
     }
@@ -70,10 +79,16 @@ public class MapView extends org.osmdroid.views.MapView {
 
     private void initProvinces() {
         if (mProvinceInitialized) return;
-        mProvinceOverlay = geoJsonifyMap("province.json", 1);
-        mProvinceOverlay.setEnabled(false);
-        getOverlays().add(mProvinceOverlay);
+        mBorderOverlay = geoJsonifyMap("province.json", 1);
+        mBorderOverlay.setEnabled(false);
+        getOverlays().add(mBorderOverlay);
         mProvinceInitialized = true;
+    }
+
+    private void initInfo() {
+        if (mInfoInitialized) return;
+        getOverlays().add(geoJsonifyInfo());
+        mInfoInitialized = true;
     }
 
     public void init(String hz) {
@@ -95,11 +110,15 @@ public class MapView extends org.osmdroid.views.MapView {
                 int level = 0;
                 if (zoomLevel >= 7.5) level = 1;
                 if (mProvinceInitialized) {
-                    if (getOverlays().contains(mProvinceOverlay)) {
-                        mProvinceOverlay.setEnabled(level == 1);
-                        mSmallCityOverlay.setEnabled(zoomLevel >= 9.5);
+                    if (getOverlays().contains(mBorderOverlay)) {
+                        mBorderOverlay.setEnabled(level == 1);
                     }
                 } else if (level == 1) initProvinces();
+                if (mInfoInitialized) {
+                    mInfoMarkers[0].setEnabled(zoomLevel >= 5 && zoomLevel < 7.5);
+                    mInfoMarkers[1].setEnabled(zoomLevel >= 7.5 && zoomLevel < 10);
+                    mInfoMarkers[2].setEnabled(zoomLevel >= 10);
+                } else initInfo();
                 invalidate();
                 return true;
             }
@@ -185,6 +204,54 @@ public class MapView extends org.osmdroid.views.MapView {
         cursor.close();
     }
 
+    private Marker createMarker(JSONObject o) {
+        String name = o.optString("name", "");
+        if (TextUtils.isEmpty(name)) return null;
+        GeoPoint point = DB.parseLocation(o.optString("centroid", o.optString("center")));
+        if (point == null) return null;
+        Marker marker = new Marker(this, 0x3F000000, name);
+        marker.setPosition(point);
+        marker.setInfoWindow(null);
+        return marker;
+    }
+
+    private FolderOverlay geoJsonifyInfo() {
+        FolderOverlay folderOverlay = new FolderOverlay();
+        mInfoMarkers = new FolderOverlay[levels.size()];
+        for (int i = 0; i < levels.size(); i++) {
+            FolderOverlay overlay = new FolderOverlay();
+            overlay.setName(levels.get(i));
+            overlay.setEnabled(false);
+            folderOverlay.add(overlay);
+            mInfoMarkers[i] = overlay;
+        }
+        try {
+            String jsonString = FileUtil.getStringFromAssets("info.json", getContext());
+            JSONObject jsonObjects = new JSONObject(jsonString);
+            for (Iterator<String> it = jsonObjects.keys(); it.hasNext(); ) {
+                String key = it.next();
+                JSONObject o = jsonObjects.getJSONObject(key);
+                String level = o.optString("level", "");
+                int index = levels.indexOf(level);
+                if (index == -1) continue;
+                Marker marker = createMarker(o);
+                if (marker == null) continue;
+                mInfoMarkers[index].add(marker);
+                int childrenNum = o.optInt("childrenNum");
+                if (childrenNum == 0 && index + 1 < levels.size() ) {
+                    mInfoMarkers[index + 1].add(marker);
+                }
+                if (index == 0) {
+                    String fullName = o.optString("fullname");
+                    if (fullName.endsWith("市") || fullName.endsWith("行政區")) mInfoMarkers[index + 1].add(marker);
+                }
+            }
+        } catch (Exception ignored) {
+        }
+        folderOverlay.setEnabled(true);
+        return folderOverlay;
+    }
+
     public FolderOverlay geoJsonifyMap(String fileName, int level) {
         final KmlDocument kmlDocument = new KmlDocument();
 
@@ -209,22 +276,6 @@ public class MapView extends org.osmdroid.views.MapView {
                     if (o2 instanceof Polygon) ((Polygon) o2).setInfoWindow(null);
                 }
             }
-        }
-        if (level == 1) {
-            mSmallCityOverlay = new FolderOverlay();
-            for (KmlFeature mItem : kmlDocument.mKmlRoot.mItems) {
-                GeoPoint point = DB.parseLocation(mItem.getExtendedData("cp"));
-                if (point == null) point = mItem.getBoundingBox().getCenterWithDateLine();
-                if (point == null) continue;
-
-                Marker marker = new Marker(this, 0x3F000000, mItem.mName);
-                marker.setPosition(point);
-                marker.setInfoWindow(null);
-                double length = mItem.getBoundingBox().getDiagonalLengthInMeters();
-                if (length <= 60000d) mSmallCityOverlay.add(marker);
-                else folderOverlay.add(marker);
-            }
-            folderOverlay.add(mSmallCityOverlay);
         }
 
         return folderOverlay;
