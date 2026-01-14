@@ -8,10 +8,13 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.PopupMenu;
 import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,14 +22,19 @@ import androidx.core.text.HtmlCompat;
 import androidx.core.view.MenuCompat;
 import androidx.fragment.app.Fragment;
 
+import com.osfans.mcpdict.Adapter.DivisionAdapter;
 import com.osfans.mcpdict.Adapter.LanguageAdapter;
+import com.osfans.mcpdict.Adapter.StringArrayAdapter;
 import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.Orth.DisplayHelper;
 import com.osfans.mcpdict.Orth.HanZi;
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.Util.FontUtil;
+import com.osfans.mcpdict.Util.Pref;
 
 import org.osmdroid.util.GeoPoint;
+
+import java.util.Objects;
 
 public class GuessLangFragment extends Fragment implements RefreshableFragment {
     private View selfView;
@@ -36,6 +44,9 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
     private ScrollView mScrollView, mScrollViewIPA;
     private AutoCompleteTextView mAcSearchLang;
     private LanguageAdapter mLanguageAdapter;
+    private Spinner spinnerProvinces, spinnerDivisions;
+    ArrayAdapter<CharSequence> adapterProvince;
+    DivisionAdapter adapterDivision;
 
     private String mAnswer = "";
     private GeoPoint mLocation = null;
@@ -53,11 +64,22 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
     }
 
     private void newGuess(String level) {
-        String hint = String.format("請猜一個%s方言", level);
+        String province = (spinnerProvinces.getSelectedItemPosition() == 0) ? "" : spinnerProvinces.getSelectedItem().toString().split(" ")[0];
+        int position = spinnerDivisions.getSelectedItemPosition();
+        String division = (position == 0) ? "" : Objects.requireNonNull(adapterDivision.getItem(position)).toString();
+        if (!TextUtils.isEmpty(province)) division = "";
+        String hint = String.format("請猜一個%s%s<b>%s</b>方言", province, division, level);
         mLanguageAdapter.setLevel(level);
         if (!TextUtils.isEmpty(level)) level = String.format("行政區級別 MATCH '%s' AND ", level);
-        String sql = String.format("select 語言,經緯度 from info where %s length(經緯度) order by random() limit 1", level);
+        if (!TextUtils.isEmpty(province)) province = String.format("省 MATCH '%s' AND ", province);
+        if (!TextUtils.isEmpty(division)) division = String.format("%s MATCH '%s' AND ", DB.FQ, division);
+        String sql = String.format("select 語言,經緯度 from info where %s %s %s length(經緯度) order by random() limit 1", province, division, level);
         String[] results = DB.getResults(sql);
+        if (results == null || results.length < 2) {
+            sql = String.format("select 語言,經緯度 from info where %s %s length(經緯度) order by random() limit 1", province, division);
+            results = DB.getResults(sql);
+            hint = hint.replaceFirst("<b>.*?</b>", "");
+        }
         if (results == null || results.length < 2) return;
         mAnswer = results[0];
         mLocation = GeoPoint.fromInvertedDoubleString(results[1], ',');
@@ -106,6 +128,29 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
             mAcSearchLang.setText("");
             mAcSearchLang.requestFocus();
         });
+
+        spinnerProvinces = selfView.findViewById(R.id.spinner_provinces);
+        adapterProvince = new StringArrayAdapter(requireActivity());
+        adapterProvince.add(Pref.getString(R.string.province));
+        adapterProvince.addAll(DB.getArrays(DB.PROVINCE));
+        spinnerProvinces.setAdapter(adapterProvince);
+
+        spinnerDivisions = selfView.findViewById(R.id.spinner_divisions);
+        adapterDivision = new DivisionAdapter(requireActivity());
+        adapterDivision.add(Pref.getString(R.string.division));
+        adapterDivision.addAll(DB.getDivisions());
+        spinnerDivisions.setAdapter(adapterDivision);
+        spinnerDivisions.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String value = (position == 0) ? "" : Objects.toString(adapterDivision.getItem(position));
+                adapterDivision.getFilter().filter(value, count -> spinnerDivisions.setSelection(adapterDivision.getPosition(value)));
+                spinnerProvinces.setSelection(0);
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
         Button buttonNew = selfView.findViewById(R.id.buttonNew);
         buttonNew.setOnClickListener(v -> {
             PopupMenu popupMenu = new PopupMenu(requireContext(), v);

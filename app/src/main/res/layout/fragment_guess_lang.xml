@@ -8,13 +8,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
-
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/spinner_provinces"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+        <Spinner
+            android:id="@+id/spinner_divisions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" />
         <Button
             android:id="@+id/buttonNew"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/new_guess_game" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
         <EditText
             android:id="@+id/editTextInput"
@@ -31,7 +46,7 @@
             android:id="@+id/layout_search_lang"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="2">
 
             <AutoCompleteTextView
                 android:id="@+id/text_search_lang"
@@ -40,7 +55,6 @@
                 android:completionThreshold="0"
                 android:hint="@string/guess_lang_lang_hint"
                 android:singleLine="true"
-                android:textSize="16sp"
                 android:paddingStart="0dp"
                 android:paddingEnd="@dimen/button_icon_size"
                 app:layout_constraintBottom_toBottomOf="parent"
