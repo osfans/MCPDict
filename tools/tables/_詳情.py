@@ -116,6 +116,7 @@ def 加載(省=None):
 	lineCount = 0
 	fields = []
 	# 音典顔色分區 = dict()
+	經緯度典 = dict()
 	for row in sheet.rows:
 		lineCount += 1
 		行 = [j.value if j.value else "" for j in row]
@@ -242,6 +243,11 @@ def 加載(省=None):
 			"聲調":聲調
 		}
 		if not 經緯度: continue
+		if 經緯度 in 經緯度典:
+			print(f"{語言} 經緯度 {經緯度} 與 {經緯度典[經緯度]} {','.join(經緯度.split(',')[::-1])} 重複")
+			continue
+		else:
+			經緯度典[經緯度] = 語言
 		Feature = {
 			"type": "Feature",
 			"properties": {
