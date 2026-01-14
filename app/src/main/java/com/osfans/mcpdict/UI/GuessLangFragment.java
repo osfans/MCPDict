@@ -34,6 +34,7 @@ import com.osfans.mcpdict.Util.Pref;
 
 import org.osmdroid.util.GeoPoint;
 
+import java.util.Locale;
 import java.util.Objects;
 
 public class GuessLangFragment extends Fragment implements RefreshableFragment {
@@ -50,6 +51,7 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
 
     private String mAnswer = "";
     private GeoPoint mLocation = null;
+    private int mType = 0;
 
     @Override
     public void refresh() {
@@ -69,6 +71,7 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         String division = (position == 0) ? "" : Objects.requireNonNull(adapterDivision.getItem(position)).toString();
         if (!TextUtils.isEmpty(province)) division = "";
         String hint = String.format("請猜一個%s%s<b>%s</b>方言", province, division, level);
+        if (mType == 1) hint += "，距離一百公里内就算猜對。";
         mLanguageAdapter.setLevel(level);
         if (!TextUtils.isEmpty(level)) level = String.format("行政區級別 MATCH '%s' AND ", level);
         if (!TextUtils.isEmpty(province)) province = String.format("省 MATCH '%s' AND ", province);
@@ -164,8 +167,13 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
                         mAnswer = "";
                     }
                 } else if (id == R.id.menu_item_random) {
+                    mType = 0;
+                    newGuess("");
+                } else if (id == R.id.menu_item_guess_area) {
+                    mType = 1;
                     newGuess("");
                 } else {
+                    mType = 0;
                     String title = "";
                     if (item.getTitle() != null) title = item.getTitle().toString();
                     newGuess(title);
@@ -214,7 +222,7 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         String lang = mAcSearchLang.getText().toString();
         if (TextUtils.isEmpty(lang)) return;
         if (lang.contentEquals(mAnswer)) {
-            append("答對了！恭喜！");
+            append("恭喜你，答對了！");
             mAnswer = "";
             mLocation = null;
             return;
@@ -227,8 +235,17 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         double angle = location.bearingTo(mLocation);
         int direction = (int)Math.round(((angle + 360) % 360) / 45) % 8;
         String directions = "⬆️↗️➡️↘️⬇️↙️⬅️↖️";
-        String mono = String.format("%7.2fkm %5.2f%%", distance, 100 - distance / 52d).replace(" ", "&nbsp;");
-        String hint = String.format("%s<font face=\"monospace\">%s</font> 不是%s", directions.substring(direction * 2, direction * 2 + 2), mono, lang);
+        String arrow = directions.substring(direction * 2, direction * 2 + 2);
+        String hint;
+        String mono = String.format(Locale.getDefault(), "%7.2fkm %5.2f%%", distance, 100 - distance / 52d).replace(" ", "&nbsp;");
+        hint = String.format("%s<font face=\"monospace\">%s</font> 不是%s", arrow, mono, lang);
         append(hint);
+        if (mType == 1 && distance <= 100d) {
+            hint = String.format(Locale.getDefault(), "恭喜你，過關了！<br>與<b>%s</b>直綫距離已不足一百公里", mAnswer);
+            append(hint);
+            mAnswer = "";
+            mLocation = null;
+            return;
+        }
     }
 }

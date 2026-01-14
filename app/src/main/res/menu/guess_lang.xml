@@ -9,6 +9,8 @@
             android:title="@string/area_prefecture" />
         <item android:id="@+id/menu_item_area_county"
             android:title="@string/area_county" />
+        <item android:id="@+id/menu_item_guess_area"
+            android:title="@string/guess_area" />
     </group>
     <item
         android:id="@+id/menu_item_answer"

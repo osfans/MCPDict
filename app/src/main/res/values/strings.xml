@@ -491,4 +491,5 @@
     <string name="area_capital">省會</string>
     <string name="area_prefecture">地級</string>
     <string name="area_county">縣級</string>
+    <string name="guess_area">猜區域</string>
 </resources>
