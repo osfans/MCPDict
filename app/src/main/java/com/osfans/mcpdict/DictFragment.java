@@ -62,7 +62,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         Pref.putInput("");
 
         // Inflate the fragment view
-        selfView = inflater.inflate(R.layout.dictionary_fragment, container, false);
+        selfView = inflater.inflate(R.layout.fragment_dictionary, container, false);
 
         // Set up the search view
         searchView = selfView.findViewById(R.id.search_view);

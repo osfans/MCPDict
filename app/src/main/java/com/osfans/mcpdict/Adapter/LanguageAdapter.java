@@ -15,6 +15,7 @@ import com.osfans.mcpdict.R;
 
 public class LanguageAdapter extends CursorAdapter {
 
+    String mLevel = "";
     public LanguageAdapter(Context context) {
         super(context, null, true);
     }
@@ -33,9 +34,13 @@ public class LanguageAdapter extends CursorAdapter {
         tv.setTextColor(Color.WHITE);
     }
 
+    public void setLevel(String level) {
+        mLevel = level;
+    }
+
     @Override
     public Cursor runQueryOnBackgroundThread(CharSequence constraint) {
-        return DB.getLanguageCursor(constraint);
+        return DB.getLanguageCursor(constraint, mLevel);
     }
 
     @Override

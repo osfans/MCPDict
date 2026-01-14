@@ -13,7 +13,7 @@ import com.osfans.mcpdict.UI.GuessLangFragment;
 
 public class PagerAdapter extends FragmentStateAdapter {
     public enum PAGE {
-        DICTIONARY, FAVORITE, GUESS_HZ, GUESS_LANG
+        DICTIONARY, FAVORITE, GUESS_LANG, GUESS_HZ
     }
 
     public PagerAdapter(FragmentActivity fa) {

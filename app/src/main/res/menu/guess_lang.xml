@@ -1,13 +1,17 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android" >
     <group>
-        <item android:id="@+id/menu_item_guess_lang"
-            android:title="@string/guess_lang" />
-        <item android:id="@+id/menu_item_guess_part"
-            android:enabled="false"
-            android:title="@string/guess_part" />
+        <item android:id="@+id/menu_item_random"
+            android:title="@string/random" />
+        <item android:id="@+id/menu_item_area_capital"
+            android:title="@string/area_capital" />
+        <item android:id="@+id/menu_item_area_prefecture"
+            android:title="@string/area_prefecture" />
+        <item android:id="@+id/menu_item_area_county"
+            android:title="@string/area_county" />
     </group>
-    <item android:id="@+id/menu_item_answer"
+    <item
+        android:id="@+id/menu_item_answer"
         android:title="@string/guess_hz_answer" />
 
 </menu>

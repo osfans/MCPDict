@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Set up activity layout
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
+        setContentView(R.layout.main);
         mPager = findViewById(R.id.pager);
         mPager.setUserInputEnabled(true);
         initAdapter();

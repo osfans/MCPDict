@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.core.text.HtmlCompat;
+import androidx.core.view.MenuCompat;
 import androidx.fragment.app.Fragment;
 
 import com.osfans.mcpdict.Adapter.LanguageAdapter;
@@ -34,6 +35,7 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
     private TextView mTextInput;
     private ScrollView mScrollView, mScrollViewIPA;
     private AutoCompleteTextView mAcSearchLang;
+    private LanguageAdapter mLanguageAdapter;
 
     private String mAnswer = "";
     private GeoPoint mLocation = null;
@@ -50,14 +52,16 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         mScrollView.fullScroll(View.FOCUS_UP);
     }
 
-    private void newGuess(int type) {
-        String sql = "select 語言,經緯度 from info where length(經緯度) order by random() limit 1";
+    private void newGuess(String level) {
+        String hint = String.format("請猜一個%s方言", level);
+        mLanguageAdapter.setLevel(level);
+        if (!TextUtils.isEmpty(level)) level = String.format("行政區級別 MATCH '%s' AND ", level);
+        String sql = String.format("select 語言,經緯度 from info where %s length(經緯度) order by random() limit 1", level);
         String[] results = DB.getResults(sql);
         if (results == null || results.length < 2) return;
         mAnswer = results[0];
         mLocation = GeoPoint.fromInvertedDoubleString(results[1], ',');
         mTextView.setText("");
-        String hint = "請開始猜方言";
         append(hint);
         hintHz(mTextInput.getText().toString());
     }
@@ -73,7 +77,7 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         }
 
         // Inflate the fragment view
-        selfView = inflater.inflate(R.layout.guess_lang_fragment, container, false);
+        selfView = inflater.inflate(R.layout.fragment_guess_lang, container, false);
 
         mTextInput = selfView.findViewById(R.id.editTextInput);
         FontUtil.setTypeface(mTextInput);
@@ -92,7 +96,8 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         mScrollView = selfView.findViewById(R.id.scrollView);
         mScrollViewIPA = selfView.findViewById(R.id.scrollViewIPA);
         mAcSearchLang = selfView.findViewById(R.id.text_search_lang);
-        mAcSearchLang.setAdapter(new LanguageAdapter(requireContext()));
+        mLanguageAdapter = new LanguageAdapter(requireContext());
+        mAcSearchLang.setAdapter(mLanguageAdapter);
         mAcSearchLang.setOnFocusChangeListener((v, b) -> {
             if (b) ((AutoCompleteTextView)v).showDropDown();
         });
@@ -105,6 +110,7 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         buttonNew.setOnClickListener(v -> {
             PopupMenu popupMenu = new PopupMenu(requireContext(), v);
             popupMenu.getMenuInflater().inflate(R.menu.guess_lang, popupMenu.getMenu());
+            MenuCompat.setGroupDividerEnabled(popupMenu.getMenu(), true);
             popupMenu.setOnMenuItemClickListener(item -> {
                 int id = item.getItemId();
                 if (id == R.id.menu_item_answer) {
@@ -112,8 +118,12 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
                         append(String.format("這個方言是<b>%s</b>", mAnswer));
                         mAnswer = "";
                     }
-                } else if (id == R.id.menu_item_guess_lang) {
-                    newGuess(0);
+                } else if (id == R.id.menu_item_random) {
+                    newGuess("");
+                } else {
+                    String title = "";
+                    if (item.getTitle() != null) title = item.getTitle().toString();
+                    newGuess(title);
                 }
                 return true;
             });
@@ -137,6 +147,14 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
             String hz = HanZi.toHz(codePoint);
             String sql = String.format("select 讀音 from langs where 語言 MATCH '%s' and 字組 MATCH '%s'", label, hz);
             String result = DB.getResult(sql);
+            if (TextUtils.isEmpty(result)) {
+                sql = String.format("SELECT group_concat(漢字, ' OR ') from mcpdict where 異體字 MATCH '%s'", hz);
+                String hzs = DB.getResult(sql);
+                if (!TextUtils.isEmpty(hzs)) {
+                    sql = String.format("select DISTINCT 讀音 from langs where 語言 MATCH '%s' and 字組 MATCH '%s'", label, hzs);
+                    result = DB.getResult(sql);
+                }
+            }
             mTextViewIPA.append(hz);
             mTextViewIPA.append(" ");
             if (TextUtils.isEmpty(result)) mTextViewIPA.append("-");

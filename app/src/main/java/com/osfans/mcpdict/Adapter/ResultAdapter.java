@@ -300,7 +300,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             if (cursor == null) return;
             PopupMenu popupMenu = new PopupMenu(v.getContext(), v);
             Menu menu = popupMenu.getMenu();
-            popupMenu.getMenuInflater().inflate(R.menu.item_menu, menu);
+            popupMenu.getMenuInflater().inflate(R.menu.hz, menu);
             MenuCompat.setGroupDividerEnabled(menu, true);
             MenuItem item;
             String hz = cursor.getString(COL_HZ);

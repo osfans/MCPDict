@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.core.text.HtmlCompat;
+import androidx.core.view.MenuCompat;
 import androidx.fragment.app.Fragment;
 
 import com.osfans.mcpdict.Adapter.LanguageAdapter;
@@ -103,7 +104,7 @@ public class GuessHzFragment extends Fragment implements RefreshableFragment {
         }
 
         // Inflate the fragment view
-        selfView = inflater.inflate(R.layout.guess_hz_fragment, container, false);
+        selfView = inflater.inflate(R.layout.fragment_guess_hz, container, false);
 
         mTextInput = selfView.findViewById(R.id.editTextInput);
         FontUtil.setTypeface(mTextInput);
@@ -138,6 +139,7 @@ public class GuessHzFragment extends Fragment implements RefreshableFragment {
         buttonNew.setOnClickListener(v -> {
             PopupMenu popupMenu = new PopupMenu(requireContext(), v);
             popupMenu.getMenuInflater().inflate(R.menu.guess_hz, popupMenu.getMenu());
+            MenuCompat.setGroupDividerEnabled(popupMenu.getMenu(), true);
             popupMenu.setOnMenuItemClickListener(item -> {
                 int id = item.getItemId();
                 if (id == R.id.menu_item_answer) {

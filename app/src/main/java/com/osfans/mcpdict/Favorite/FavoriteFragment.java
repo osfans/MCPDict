@@ -52,7 +52,7 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
         }
 
         // Inflate the fragment view
-        selfView = inflater.inflate(R.layout.favorite_fragment, container, false);
+        selfView = inflater.inflate(R.layout.fragment_favorite, container, false);
 
         // Get references to some child views
         header = selfView.findViewById(R.id.favorite_header);
@@ -63,7 +63,7 @@ public class FavoriteFragment extends ListFragment implements RefreshableFragmen
         Button buttonManage = selfView.findViewById(R.id.button_favorite_manage);
         buttonManage.setOnClickListener(v -> {
             PopupMenu popup = new PopupMenu(getActivity(), v);
-            popup.inflate(R.menu.favorite_manage_popup_menu);
+            popup.inflate(R.menu.favorite);
             popup.setOnMenuItemClickListener(item -> {
                 int id = item.getItemId();
                 if  (id == R.id.menu_item_export) {

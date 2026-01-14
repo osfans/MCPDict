@@ -488,14 +488,7 @@
     <string name="guess_lang_instructions">根据指定漢字的讀音或相對地理位置猜方言</string>
     <string name="guess_lang">🌏猜方言</string>
     <string name="guess_part">猜分區</string>
-
-    <string-array name="entries_area_level">
-        <item>不限</item>
-        <item>省會</item>
-        <item>地級</item>
-        <item>縣級</item>
-        <item>鄕級</item>
-        <item>村級</item>
-        <item>自然村</item>
-    </string-array>
+    <string name="area_capital">省會</string>
+    <string name="area_prefecture">地級</string>
+    <string name="area_county">縣級</string>
 </resources>

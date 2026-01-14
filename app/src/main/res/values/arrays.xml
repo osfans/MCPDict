@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="entries_area_level">
+        <item>不限</item>
+        <item>@string/area_capital</item>
+        <item>@string/area_prefecture</item>
+        <item>@string/area_county</item>
+        <item>鄕級</item>
+        <item>村級</item>
+        <item>自然村</item>
+    </string-array>
     <string-array name="pref_entries_hint">
         <item>提示字形</item>
         <item>總筆畫數</item>

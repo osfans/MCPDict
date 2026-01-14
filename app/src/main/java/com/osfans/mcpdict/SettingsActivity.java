@@ -25,7 +25,7 @@ public class SettingsActivity extends AppCompatActivity {
         App.setLocale();
         App.setActivityTheme(this);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings_activity);
+        setContentView(R.layout.settings);
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.settings_container, new SettingsFragment())

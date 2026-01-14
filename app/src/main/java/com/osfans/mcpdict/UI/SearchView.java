@@ -44,7 +44,7 @@ public class SearchView extends ConstraintLayout {
 
         LayoutInflater inflater = (LayoutInflater)
             context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.custom_search_view, this, true);
+        inflater.inflate(R.layout.custom_search, this, true);
 
         editText = findViewById(R.id.text_query);
         FontUtil.setTypeface(editText);

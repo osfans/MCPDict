@@ -18,12 +18,12 @@
         android:title="@string/favorite"
         app:showAsAction="never" />
     <item
-        android:id="@+id/menu_item_guess_hz"
-        android:title="@string/guess_hz"
-        app:showAsAction="never" />
-    <item
         android:id="@+id/menu_item_guess_lang"
         android:title="@string/guess_lang"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_item_guess_hz"
+        android:title="@string/guess_hz"
         app:showAsAction="never" />
     <item
         android:id="@+id/menu_item_sim"
