@@ -237,15 +237,14 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         String directions = "⬆️↗️➡️↘️⬇️↙️⬅️↖️";
         String arrow = directions.substring(direction * 2, direction * 2 + 2);
         String hint;
-        String mono = String.format(Locale.getDefault(), "%7.2fkm %5.2f%%", distance, 100 - distance / 52d).replace(" ", "&nbsp;");
-        hint = String.format("%s<font face=\"monospace\">%s</font> 不是%s", arrow, mono, lang);
+        String mono = String.format(Locale.getDefault(), "%s%7.2fkm %5.2f%%", arrow,distance, 100 - distance / 52d).replace(" ", "&nbsp;");
+        hint = String.format("<font face=\"monospace\">%s</font> 不是%s", mono, lang);
         append(hint);
         if (mType == 1 && distance <= 100d) {
             hint = String.format(Locale.getDefault(), "恭喜你，過關了！<br>與<b>%s</b>直綫距離已不足一百公里", mAnswer);
             append(hint);
             mAnswer = "";
             mLocation = null;
-            return;
         }
     }
 }
