@@ -4,79 +4,91 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.graphics.drawable.Drawable;
+import android.text.TextPaint;
 import android.text.TextUtils;
+
+import androidx.core.graphics.ColorUtils;
 
 import com.osfans.mcpdict.Util.FontUtil;
 
 import org.osmdroid.views.MapView;
 
 public class Marker extends org.osmdroid.views.overlay.Marker {
-    Paint mTextPaint;
-    String mLabel;
-    String mCity;
+    TextPaint mIPAPaint, mCityPaint;
+    String mIPA;
     int mSize;
+    Drawable mIconDot, mIconName;
 
-    public Marker(MapView mapView, int fore, int color, String city, String yb, String js, int size) {
+    public Marker(MapView mapView, int color, String city, String yb, String js, int size) {
         super(mapView);
-        mCity = city;
-        setTextLabelForegroundColor(fore);
+
+        setAnchor(org.osmdroid.views.overlay.Marker.ANCHOR_CENTER, org.osmdroid.views.overlay.Marker.ANCHOR_CENTER);
+        int fontSize = getTextLabelFontSize() * 4 / 3;
+        setTextLabelFontSize(fontSize);
+
         setTextLabelBackgroundColor(color);
-        setTextLabelFontSize(24);
-        setTextIcon(mCity);
-        setAnchor(org.osmdroid.views.overlay.Marker.ANCHOR_LEFT, org.osmdroid.views.overlay.Marker.ANCHOR_BOTTOM);
+        setTextLabelForegroundColor(Color.WHITE);
+        setTextIcon(city);
+        mIconName = getIcon();
+
+        int newColorWithAlpha =  ColorUtils.setAlphaComponent(color, 0xFF);
+        setTextLabelForegroundColor(newColorWithAlpha);
+        setTextLabelBackgroundColor(Color.TRANSPARENT);
+        setTextIcon("▪");
+        mIconDot = getIcon();
+
         setTitle(city);
         setSubDescription(js);
-        mLabel = yb.replaceAll("<.*?>", "");
-        mTextPaint = new Paint();
-        mTextPaint.setColor(Color.BLACK);
-        mTextPaint.setTextSize(24);
-        mTextPaint.setAntiAlias(true);
-        mTextPaint.setTextAlign(Paint.Align.LEFT);
-        mTextPaint.setTypeface(FontUtil.getIPATypeface());
+        mIPA = yb.replaceAll("<.*?>", "");
+
+        mIPAPaint = new TextPaint();
+        mIPAPaint.setColor(Color.BLACK);
+        mIPAPaint.setTextSize(fontSize);
+        mIPAPaint.setAntiAlias(true);
+        mIPAPaint.setTextAlign(Paint.Align.CENTER);
+        mIPAPaint.setTypeface(FontUtil.getIPATypeface());
+
+        mCityPaint = new TextPaint();
+        mCityPaint.setColor(color);
+        mCityPaint.setTextSize(fontSize);
+        mCityPaint.setAntiAlias(true);
+        mCityPaint.setTextAlign(Paint.Align.CENTER);
+        mCityPaint.setTypeface(FontUtil.getDictTypeface());
         mSize = size;
     }
 
-    public Marker(MapView mapView, int color, String city, String yb, String js, int size) {
-        this(mapView, Color.WHITE, color, city, yb, js, size);
-    }
-
-    public Marker(MapView mapView, int color, String city) {
-        this(mapView, color, 0, city, "", "", 5);
-    }
-
-    public void draw( final Canvas c, final MapView mapView, boolean shadow) {
-        super.draw(c, mapView, shadow);
-        if (TextUtils.isEmpty(mLabel)) return;
-        Point p = this.mPositionPixels;  // already provisioned by Marker
-        mTextPaint.setAlpha((int)(getAlpha() * 255));
-        c.drawText(mLabel, p.x, p.y+26, mTextPaint);
-    }
-
-    public void setZoomLevel(Double d) {
+    private boolean isIPAVisible(double d) {
         boolean enabled = true;
-        float alpha = 0f;
         switch (mSize) {
             case 5:
                 break;
             case 4:
                 enabled = (d >= 6);
-                if (d > 5) alpha = 0.05f ;
                 break;
             case 3:
                 enabled = (d >= 7.5);
-                if (d > 7) alpha = 0.05f ;
                 break;
             case 2:
                 enabled = (d >= 8.5);
-                if (d > 8) alpha = 0.05f ;
                 break;
             default:
                 enabled = (d >= 9.5);
-                if (d > 9) alpha = 0.05f ;
                 break;
         }
-        setAlpha(enabled ? 1f : alpha);
-        //setEnabled(enabled);
+        return enabled;
+    }
+
+    public void draw(final Canvas c, final MapView mapView, boolean shadow) {
+        super.draw(c, mapView, shadow);
+        Point p = this.mPositionPixels;  // already provisioned by Marker
+        double level = mapView.getZoomLevelDouble();
+        Drawable newIcon = (level >= 10 - mSize * mSize / 7d) ?  mIconName : mIconDot;
+        if (newIcon != getIcon()) setIcon(newIcon);
+        if (TextUtils.isEmpty(mIPA)) return;
+        if (isIPAVisible(level)) {
+            c.drawText(mIPA, p.x, p.y + getTextLabelFontSize() * 3f / 2, mIPAPaint);
+        }
     }
 }
 

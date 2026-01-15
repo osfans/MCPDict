@@ -14,6 +14,10 @@
         android:title="@string/info"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/menu_item_map"
+        android:title="@string/map"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/menu_item_favorite"
         android:title="@string/favorite"
         app:showAsAction="never" />

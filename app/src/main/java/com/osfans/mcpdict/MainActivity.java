@@ -15,6 +15,7 @@ import com.osfans.mcpdict.Adapter.PagerAdapter;
 import com.osfans.mcpdict.Favorite.FavoriteDialogs;
 import com.osfans.mcpdict.Favorite.FavoriteFragment;
 import com.osfans.mcpdict.Orth.Orthography;
+import com.osfans.mcpdict.UI.MapView;
 import com.osfans.mcpdict.UI.RefreshableFragment;
 import com.osfans.mcpdict.Favorite.UserDB;
 import com.osfans.mcpdict.Util.App;
@@ -61,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
                 getDictionaryFragment().refresh("", "");
             }
             return true;
+        }
+        if (id == R.id.menu_item_map) {
+            new MapView(this, "").show();
         }
         if (id == R.id.menu_item_favorite) {
             if (mPager.getCurrentItem() != PagerAdapter.PAGE.FAVORITE.ordinal()) mPager.setCurrentItem(PagerAdapter.PAGE.FAVORITE.ordinal());

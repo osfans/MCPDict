@@ -409,7 +409,7 @@
     </string-array>
     <string name="name">名稱</string>
     <string name="version">版本：</string>
-    <string name="map">地圖</string>
+    <string name="map">🌏地圖</string>
     <string name="pref_key_fq">FQ</string>
     <string name="default_fq">地圖集二分區</string>
     <string name="pref_title_fq">分區方案</string>
@@ -486,7 +486,7 @@
     <string name="guess_lang_lang_hint">選擇或輸入猜測的語言</string>
     <string name="guess_lang_hint">請輸入漢字</string>
     <string name="guess_lang_instructions">根据指定漢字的讀音或相對地理位置猜方言</string>
-    <string name="guess_lang">🌏猜方言</string>
+    <string name="guess_lang">🕹️猜方言</string>
     <string name="guess_part">猜分區</string>
     <string name="area_capital">省會</string>
     <string name="area_prefecture">地級</string>

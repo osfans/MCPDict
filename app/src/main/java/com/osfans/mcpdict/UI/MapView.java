@@ -6,6 +6,7 @@ import static com.osfans.mcpdict.DB.COL_ZS;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 
@@ -16,7 +17,6 @@ import com.osfans.mcpdict.Orth.DisplayHelper;
 import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.Util.FileUtil;
 
-import org.json.JSONArray;
 import org.osmdroid.bonuspack.kml.KmlDocument;
 import org.osmdroid.bonuspack.kml.Style;
 import org.osmdroid.events.MapListener;
@@ -40,8 +40,8 @@ import java.util.List;
 import org.json.JSONObject;
 
 public class MapView extends org.osmdroid.views.MapView {
-    FolderOverlay mHzOverlay, mBorderOverlay;
-    List<String> levels = Arrays.asList("province", "city", "district");
+    FolderOverlay mHzOverlay, mBorderOverlay, mInfoOverlay;
+    List<String> levels = Arrays.asList("province", "city"); //"district"
     FolderOverlay[] mInfoMarkers;
     boolean mProvinceInitialized = false, mInfoInitialized = false;
 
@@ -81,13 +81,12 @@ public class MapView extends org.osmdroid.views.MapView {
         if (mProvinceInitialized) return;
         mBorderOverlay = geoJsonifyMap("province.json", 1);
         mBorderOverlay.setEnabled(false);
-        getOverlays().add(mBorderOverlay);
         mProvinceInitialized = true;
     }
 
     private void initInfo() {
         if (mInfoInitialized) return;
-        getOverlays().add(geoJsonifyInfo());
+        geoJsonifyInfo();
         mInfoInitialized = true;
     }
 
@@ -101,23 +100,22 @@ public class MapView extends org.osmdroid.views.MapView {
 
             @Override
             public boolean onZoom(ZoomEvent event) {
-                Double zoomLevel = event.getZoomLevel();
-                if (getOverlays().contains(mHzOverlay)) {
-                    for (Overlay item: mHzOverlay.getItems()) {
-                        ((Marker)item).setZoomLevel(zoomLevel);
-                    }
-                }
+                double zoomLevel = event.getZoomLevel();
                 int level = 0;
-                if (zoomLevel >= 7.5) level = 1;
+                if (zoomLevel >= 7) level = 1;
                 if (mProvinceInitialized) {
                     if (getOverlays().contains(mBorderOverlay)) {
                         mBorderOverlay.setEnabled(level == 1);
                     }
                 } else if (level == 1) initProvinces();
                 if (mInfoInitialized) {
-                    mInfoMarkers[0].setEnabled(zoomLevel >= 5 && zoomLevel < 7.5);
-                    mInfoMarkers[1].setEnabled(zoomLevel >= 7.5 && zoomLevel < 10);
-                    mInfoMarkers[2].setEnabled(zoomLevel >= 10);
+                    if (TextUtils.isEmpty(hz)) mInfoOverlay.setEnabled(false);
+                    else {
+                        mInfoOverlay.setEnabled(true);
+                        mInfoMarkers[0].setEnabled(zoomLevel >= 5);
+                        mInfoMarkers[1].setEnabled(level == 1);
+//                        mInfoMarkers[2].setEnabled(zoomLevel >= 9);
+                    }
                 } else initInfo();
                 invalidate();
                 return true;
@@ -126,22 +124,24 @@ public class MapView extends org.osmdroid.views.MapView {
         setMultiTouchControls(true);
         getZoomController().setVisibility(CustomZoomButtonsController.Visibility.NEVER);
         setMinZoomLevel(4d);
-        setMaxZoomLevel(20d);
+        setMaxZoomLevel(15.7d);
 
         FolderOverlay chinaOverlay = geoJsonifyMap("china.json", 0);
         CopyrightOverlay copyrightOverlay = new CopyrightOverlay(getContext()) {
             @Override
             public void setCopyrightNotice(String pCopyrightNotice) {
-                super.setCopyrightNotice(Pref.getTitle()+"【"+ hz + "】");
+                String title = Pref.getTitle();
+                if (!TextUtils.isEmpty(hz)) title += "【"+ hz + "】";
+                super.setCopyrightNotice(title);
             }
         };
+        getOverlays().add(copyrightOverlay);
+
         ScaleBarOverlay scaleBarOverlay = new ScaleBarOverlay(this);
         scaleBarOverlay.setAlignBottom(true);
         scaleBarOverlay.setAlignRight(true);
-
-        getOverlays().add(chinaOverlay);
-        getOverlays().add(copyrightOverlay);
         getOverlays().add(scaleBarOverlay);
+
         invalidate();
 
         // Workaround for osmdroid issue
@@ -157,9 +157,26 @@ public class MapView extends org.osmdroid.views.MapView {
     }
 
     private void initHZ(String hz) {
-        Cursor cursor = DB.directSearch(hz);
         FolderOverlay folderOverlay = new FolderOverlay();
-        double level = getZoomLevelDouble();
+        mHzOverlay = folderOverlay;
+        getOverlays().add(mHzOverlay);
+        if (TextUtils.isEmpty(hz)) {
+            Cursor cursor = DB.getLanguageCursor("", "");
+            for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+                String language = cursor.getString(0);
+                String lang = DB.getLabelByLanguage(language);
+                GeoPoint point = DB.getPoint(lang);
+                if (point == null) continue;
+                int size = DB.getSize(lang);
+                String info = DB.getIntro(language);
+                Marker marker = new Marker(this, DB.getColor(lang), lang, "", info, size);
+                marker.setPosition(point);
+                folderOverlay.add(marker);
+            }
+            cursor.close();
+            return;
+        }
+        Cursor cursor = DB.directSearch(hz);
         String lastLang = "";
         List<CharSequence> IPAs = new ArrayList<>(), comments = new ArrayList<>();
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
@@ -170,7 +187,6 @@ public class MapView extends org.osmdroid.views.MapView {
                     int size = DB.getSize(lastLang);
                     Marker marker = new Marker(this, DB.getColor(lastLang), lastLang, String.join(" ", IPAs), String.join(" ", comments), size);
                     marker.setPosition(point);
-                    marker.setZoomLevel(level);
                     folderOverlay.add(marker);
                 }
                 IPAs.clear();
@@ -193,29 +209,33 @@ public class MapView extends org.osmdroid.views.MapView {
                 int size = DB.getSize(lastLang);
                 Marker marker = new Marker(this, DB.getColor(lastLang), lastLang, String.join(" ", IPAs), String.join(" ", comments), size);
                 marker.setPosition(point);
-                marker.setZoomLevel(level);
                 folderOverlay.add(marker);
             }
             IPAs.clear();
             comments.clear();
         }
-        mHzOverlay = folderOverlay;
-        getOverlays().add(mHzOverlay);
         cursor.close();
     }
 
-    private Marker createMarker(JSONObject o) {
+    private void createMarker(JSONObject o) {
+        String level = o.optString("level", "");
+        int index = levels.indexOf(level);
+        if (index == -1) return;
         String name = o.optString("name", "");
-        if (TextUtils.isEmpty(name)) return null;
+        if (TextUtils.isEmpty(name)) return;
         GeoPoint point = DB.parseLocation(o.optString("centroid", o.optString("center")));
-        if (point == null) return null;
-        Marker marker = new Marker(this, 0x3F000000, name);
+        if (point == null) return;
+        org.osmdroid.views.overlay.Marker marker = new org.osmdroid.views.overlay.Marker(this);
+        marker.setTextLabelBackgroundColor(Color.TRANSPARENT);
+        marker.setTextLabelForegroundColor(0xC000000 * (2 + index));
+        marker.setTextLabelFontSize(marker.getTextLabelFontSize() * 4 / 3);
+        marker.setTextIcon(name);
         marker.setPosition(point);
         marker.setInfoWindow(null);
-        return marker;
+        mInfoMarkers[index].add(marker);
     }
 
-    private FolderOverlay geoJsonifyInfo() {
+    private void geoJsonifyInfo() {
         FolderOverlay folderOverlay = new FolderOverlay();
         mInfoMarkers = new FolderOverlay[levels.size()];
         for (int i = 0; i < levels.size(); i++) {
@@ -225,31 +245,18 @@ public class MapView extends org.osmdroid.views.MapView {
             folderOverlay.add(overlay);
             mInfoMarkers[i] = overlay;
         }
+        folderOverlay.setEnabled(true);
+        mInfoOverlay = folderOverlay;
+        getOverlays().add(folderOverlay);
         try {
             String jsonString = FileUtil.getStringFromAssets("info.json", getContext());
             JSONObject jsonObjects = new JSONObject(jsonString);
             for (Iterator<String> it = jsonObjects.keys(); it.hasNext(); ) {
                 String key = it.next();
-                JSONObject o = jsonObjects.getJSONObject(key);
-                String level = o.optString("level", "");
-                int index = levels.indexOf(level);
-                if (index == -1) continue;
-                Marker marker = createMarker(o);
-                if (marker == null) continue;
-                mInfoMarkers[index].add(marker);
-                int childrenNum = o.optInt("childrenNum");
-                if (childrenNum == 0 && index + 1 < levels.size() ) {
-                    mInfoMarkers[index + 1].add(marker);
-                }
-                if (index == 0) {
-                    String fullName = o.optString("fullname");
-                    if (fullName.endsWith("市") || fullName.endsWith("行政區")) mInfoMarkers[index + 1].add(marker);
-                }
+                createMarker(jsonObjects.getJSONObject(key));
             }
         } catch (Exception ignored) {
         }
-        folderOverlay.setEnabled(true);
-        return folderOverlay;
     }
 
     public FolderOverlay geoJsonifyMap(String fileName, int level) {
@@ -269,6 +276,7 @@ public class MapView extends org.osmdroid.views.MapView {
             defaultStyle = new Style(null, 0x3F000000, 2f, 0xffffffff);
         }
         FolderOverlay folderOverlay = (FolderOverlay) kmlDocument.mKmlRoot.buildOverlay(this, defaultStyle, null, kmlDocument);
+        getOverlays().add(folderOverlay);
         for (Overlay o: folderOverlay.getItems()) {
             if (o instanceof Polygon) ((Polygon) o).setInfoWindow(null);
             else if (o instanceof FolderOverlay) {

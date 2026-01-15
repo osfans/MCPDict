@@ -535,15 +535,19 @@ public class DB extends SQLiteAssetHelper {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
         String[] projection = {LANGUAGE, "rowid as _id"};
-        String[] inputs = OpenCC.convertAll("LANGUAGE LIKE '%"+constraint+"%'");
-        String input = String.join(" OR ", inputs).replace("LANGUAGE", LANGUAGE);
+        String input = "";
+        if (!TextUtils.isEmpty(constraint)) {
+            String[] inputs = OpenCC.convertAll("LANGUAGE LIKE '%"+constraint+"%'");
+            input = String.join(" OR ", inputs).replace("LANGUAGE", LANGUAGE);
+        }
         if (constraint.length() >= 2) {
             String[] locations = OpenCC.convertAll("LOCATION LIKE '%"+constraint+"%'");
             String location = String.join(" OR ", locations).replace("LOCATION", "地點");
             input += " OR " + location;
         }
+        if (!TextUtils.isEmpty(input)) input = String.format(" AND (%s)", input);
         if (!TextUtils.isEmpty(level)) level = String.format(" AND 行政區級別 MATCH '%s'", level);
-        String query = qb.buildQuery(projection, String.format("(%s) AND 音節數 is not null %s", input, level),  null, null, ORDER, null);
+        String query = qb.buildQuery(projection, String.format("音節數 is not null %s %s", input, level),  null, null, ORDER, null);
         Cursor cursor = db.rawQuery(query, null);
         if (cursor.getCount() > 0) return cursor;
         cursor.close();
@@ -673,13 +677,19 @@ public class DB extends SQLiteAssetHelper {
         return getToneName(lang) != null;
     }
 
-    public static String getResult(String sql) {
+    public static Cursor getCursor(String sql) {
         if (db == null) return null;
         Cursor cursor = db.rawQuery(sql, null);
         if (cursor.getCount() == 0) {
             cursor.close();
             return null;
         }
+        return cursor;
+    }
+
+    public static String getResult(String sql) {
+        Cursor cursor = getCursor(sql);
+        if (cursor == null) return null;
         StringBuilder sb = new StringBuilder();
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             if (cursor.isNull(0)) continue;
@@ -691,12 +701,8 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static String[] getResults(String sql) {
-        if (db == null) return null;
-        Cursor cursor = db.rawQuery(sql, null);
-        if (cursor.getCount() == 0) {
-            cursor.close();
-            return null;
-        }
+        Cursor cursor = getCursor(sql);
+        if (cursor == null) return null;
         int n = cursor.getColumnCount();
         String[] results = new String[n];
         cursor.moveToFirst();
@@ -781,7 +787,7 @@ public class DB extends SQLiteAssetHelper {
         return getFieldByLabel(label, LANGUAGE);
     }
 
-    private static String _getIntro(String language) {
+    public static String getIntro(String language) {
         if (db == null) return "";
         if (TextUtils.isEmpty(language) || Pref.getFilter() == FILTER.HZ) language = HZ;
         String intro = TextUtils.isEmpty(language) ? "" : getFieldByLanguage(language, "說明").replace("\n", "<br>");
@@ -900,7 +906,7 @@ public class DB extends SQLiteAssetHelper {
         sb.append("  td {font-size: 0.8em;}\n");
         sb.append(String.format("  body {font-family: ipa, %s, charis;}", FontUtil.getSystemFallbackFont()));
         sb.append("</style></head><body onload='sortTableByColumn(1);'>");
-        sb.append(_getIntro(null));
+        sb.append(getIntro(null));
         sb.append("<br><h2>已收錄語言</h2><table id=\"sortable-table\" border=\"1\" cellspacing=\"0\" cellpadding=\"5\"><thead>");
         sb.append("<tr>");
         String[] fields = new String[]{LANGUAGE, "版本", "字數", "□數", SYLLABLES, "不帶調音節數"};
@@ -922,7 +928,7 @@ public class DB extends SQLiteAssetHelper {
     public static String getLanguageIntro(String language) {
         initArrays();
         if (TextUtils.isEmpty(language)) language = Pref.getLanguage();
-        String intro = _getIntro(language);
+        String intro = getIntro(language);
         StringBuilder sb = new StringBuilder().append(intro);
         String[] fields = new String[]{"音系說明", "解析日志", "同音字表"};
         for (String field: fields) {
@@ -935,7 +941,7 @@ public class DB extends SQLiteAssetHelper {
 
     public static String getIntro() {
         initArrays();
-        return _getIntro(Pref.getLanguage());
+        return getIntro(Pref.getLanguage());
     }
 
     public static JSONObject getToneName(String lang) {
