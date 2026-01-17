@@ -31,17 +31,17 @@ public class TextDrawable extends ShapeDrawable {
     private final RectShape shape;
     private final int height;
     private final int width;
+    private final int baseline;
     private final float fontSize;
     private final float radius;
     private final int borderThickness;
+    private boolean wrapContent;
 
     private TextDrawable(Builder builder) {
         super(builder.shape);
 
         // shape properties
         shape = builder.shape;
-        height = builder.height;
-        width = builder.width;
         radius = builder.radius;
 
         // text and color
@@ -53,6 +53,7 @@ public class TextDrawable extends ShapeDrawable {
         textPaint = new Paint();
         textPaint.setColor(builder.textColor);
         textPaint.setAntiAlias(true);
+        textPaint.setTextSize(fontSize);
         textPaint.setFakeBoldText(builder.isBold);
         textPaint.setStyle(Paint.Style.FILL);
         textPaint.setTypeface(builder.font);
@@ -60,6 +61,16 @@ public class TextDrawable extends ShapeDrawable {
         textPaint.setFontFeatureSettings(feat);
         textPaint.setTextAlign(Paint.Align.CENTER);
         textPaint.setStrokeWidth(builder.borderThickness);
+        wrapContent = builder.wrapContent;
+        if (wrapContent) {
+            baseline = (int) (-textPaint.ascent() + 0.5f);
+            width = (int) (textPaint.measureText(text) + 0.5f);
+            height = (int) (baseline + textPaint.descent() + 0.5f);
+        } else {
+            baseline = 0;
+            height = builder.height;
+            width = builder.width;
+        }
 
         // border paint settings
         borderThickness = builder.borderThickness;
@@ -73,10 +84,10 @@ public class TextDrawable extends ShapeDrawable {
         paint.setColor(color);
         int subColor = builder.subColor;
         if (subColor != color && subColor != -1) {
-            Shader textShader = new LinearGradient(0, 0, width, 0,
-                    new int[]{subColor, color},
-                    new float[]{0, 1}, Shader.TileMode.CLAMP);
-            paint.setShader(textShader);
+            Shader shader = new LinearGradient(0, 0, width, 0,
+                    new int[]{color, color, subColor},
+                    new float[]{0, 0.4f, 1}, Shader.TileMode.CLAMP);
+            paint.setShader(shader);
         }
 
     }
@@ -93,7 +104,6 @@ public class TextDrawable extends ShapeDrawable {
         super.draw(canvas);
         Rect r = getBounds();
 
-
         // draw border
         if (borderThickness > 0) {
             drawBorder(canvas);
@@ -103,13 +113,17 @@ public class TextDrawable extends ShapeDrawable {
         canvas.translate(r.left, r.top);
 
         // draw text
-        float fontSize = this.fontSize < 0 ? Math.min(width, height) * 0.54f : this.fontSize;
-        int width = this.width < 0 ? r.width() : this.width;
-        int height = this.height < 0 ? r.height() : this.height;
-        textPaint.setTextSize(fontSize);
-        float ratio = 13.2f / (text.length() + text.getBytes().length) ;
-        if (ratio < 1f) textPaint.setTextScaleX(ratio);
-        canvas.drawText(text, width / 2.0f, height / 2.0f - ((textPaint.descent() + textPaint.ascent()) / 2), textPaint);
+        if (wrapContent) {
+            canvas.drawText(text, width / 2.0f, height / 2.0f - ((textPaint.descent() + textPaint.ascent()) / 2), textPaint);
+        } else {
+            float fontSize = this.fontSize < 0 ? Math.min(width, height) * 0.54f : this.fontSize;
+            int width = this.width < 0 ? r.width() : this.width;
+            int height = this.height < 0 ? r.height() : this.height;
+            textPaint.setTextSize(fontSize);
+            float ratio = 13.2f / (text.length() + text.getBytes().length);
+            if (ratio < 1f) textPaint.setTextScaleX(ratio);
+            canvas.drawText(text, width / 2.0f, height / 2.0f - ((textPaint.descent() + textPaint.ascent()) / 2), textPaint);
+        }
 
         canvas.restoreToCount(count);
 
@@ -184,12 +198,14 @@ public class TextDrawable extends ShapeDrawable {
         private boolean toUpperCase;
 
         public float radius;
+        private boolean wrapContent;
 
         private Builder() {
             text = "";
             color = Color.GRAY;
             textColor = Color.WHITE;
             borderThickness = 0;
+            wrapContent = false;
             width = -1;
             height = -1;
             shape = new RectShape();
@@ -206,6 +222,11 @@ public class TextDrawable extends ShapeDrawable {
 
         public IConfigBuilder height(int height) {
             this.height = height;
+            return this;
+        }
+
+        public IConfigBuilder wrapContent(boolean wrapContent) {
+            this.wrapContent = wrapContent;
             return this;
         }
 
@@ -305,6 +326,7 @@ public class TextDrawable extends ShapeDrawable {
         IConfigBuilder width(int width);
 
         IConfigBuilder height(int height);
+        IConfigBuilder wrapContent(boolean wrapContent);
 
         IConfigBuilder textColor(int color);
 

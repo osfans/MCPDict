@@ -684,6 +684,7 @@ public class DB extends SQLiteAssetHelper {
             cursor.close();
             return null;
         }
+        cursor.moveToFirst();
         return cursor;
     }
 
@@ -705,7 +706,6 @@ public class DB extends SQLiteAssetHelper {
         if (cursor == null) return null;
         int n = cursor.getColumnCount();
         String[] results = new String[n];
-        cursor.moveToFirst();
         for (int i = 0; i < n; i++) {
             results[i] = cursor.getString(i);
         }
@@ -758,13 +758,16 @@ public class DB extends SQLiteAssetHelper {
         return getColumn(i);
     }
 
+    public static int parseColor(String c, int i) {
+        if (TextUtils.isEmpty(c)) return Color.BLACK;
+        if (c.contains(",")) c = c.split(",")[i];
+        return Color.parseColor(c);
+    }
     public static int getColor(String lang, int i) {
         initArrays();
         String c = getFieldByLabel(lang, COLOR);
         if (TextUtils.isEmpty(c)) c = getFieldByLabel(lang, FIRST_FQ.replace(_FQ, _COLOR));
-        if (TextUtils.isEmpty(c)) return Color.BLACK;
-        if (c.contains(",")) c = c.split(",")[i];
-        return Color.parseColor(c);
+        return parseColor(c, i);
     }
 
     public static int getColor(String lang) {

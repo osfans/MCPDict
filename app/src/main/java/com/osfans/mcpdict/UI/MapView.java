@@ -14,6 +14,7 @@ import androidx.appcompat.app.AlertDialog;
 
 import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.Orth.DisplayHelper;
+import com.osfans.mcpdict.Util.App;
 import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.Util.FileUtil;
 
@@ -40,11 +41,9 @@ import java.util.List;
 import org.json.JSONObject;
 
 public class MapView extends org.osmdroid.views.MapView {
-    FolderOverlay mHzOverlay, mBorderOverlay, mInfoOverlay;
+    FolderOverlay mHzOverlay, mProvinceOverlay, mInfoOverlay;
     List<String> levels = Arrays.asList("province", "city"); //"district"
     FolderOverlay[] mInfoMarkers;
-    boolean mProvinceInitialized = false, mInfoInitialized = false;
-
     public MapView(Context context) {
         super(context);
     }
@@ -55,12 +54,15 @@ public class MapView extends org.osmdroid.views.MapView {
 //        Configuration.getInstance().setUserAgentValue(BuildConfig.APPLICATION_ID);
         init(hz);
         new Thread(()->{
-            initHZ(hz);
+            initProvinces();
             postInvalidate();
         }).start();
         new Thread(()->{
-            initProvinces();
             initInfo();
+            postInvalidate();
+        }).start();
+        new Thread(()->{
+            initHZ(hz);
             postInvalidate();
         }).start();
     }
@@ -78,16 +80,14 @@ public class MapView extends org.osmdroid.views.MapView {
     }
 
     private void initProvinces() {
-        if (mProvinceInitialized) return;
-        mBorderOverlay = geoJsonifyMap("province.json", 1);
-        mBorderOverlay.setEnabled(false);
-        mProvinceInitialized = true;
+        if (getOverlays().contains(mProvinceOverlay)) return;
+        mProvinceOverlay = geoJsonifyMap("province.json", 1);
+        mProvinceOverlay.setEnabled(false);
     }
 
     private void initInfo() {
-        if (mInfoInitialized) return;
+        if (getOverlays().contains(mInfoOverlay)) return;
         geoJsonifyInfo();
-        mInfoInitialized = true;
     }
 
     public void init(String hz) {
@@ -103,20 +103,18 @@ public class MapView extends org.osmdroid.views.MapView {
                 double zoomLevel = event.getZoomLevel();
                 int level = 0;
                 if (zoomLevel >= 7) level = 1;
-                if (mProvinceInitialized) {
-                    if (getOverlays().contains(mBorderOverlay)) {
-                        mBorderOverlay.setEnabled(level == 1);
-                    }
-                } else if (level == 1) initProvinces();
-                if (mInfoInitialized) {
+                if (getOverlays().contains(mProvinceOverlay)) {
+                    mProvinceOverlay.setEnabled(level == 1);
+                }
+                if (getOverlays().contains(mInfoOverlay)) {
                     if (TextUtils.isEmpty(hz)) mInfoOverlay.setEnabled(false);
                     else {
                         mInfoOverlay.setEnabled(true);
                         mInfoMarkers[0].setEnabled(zoomLevel >= 5);
-                        mInfoMarkers[1].setEnabled(level == 1);
+                        mInfoMarkers[1].setEnabled(zoomLevel >= 8);
 //                        mInfoMarkers[2].setEnabled(zoomLevel >= 9);
                     }
-                } else initInfo();
+                }
                 invalidate();
                 return true;
             }
@@ -161,16 +159,14 @@ public class MapView extends org.osmdroid.views.MapView {
         mHzOverlay = folderOverlay;
         getOverlays().add(mHzOverlay);
         if (TextUtils.isEmpty(hz)) {
-            Cursor cursor = DB.getLanguageCursor("", "");
+            Cursor cursor = DB.getCursor(String.format("select 簡稱,經緯度,地圖級別,%s from info where length(經緯度)", DB.COLOR));
+            if (cursor == null) return;
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-                String language = cursor.getString(0);
-                String lang = DB.getLabelByLanguage(language);
-                GeoPoint point = DB.getPoint(lang);
-                if (point == null) continue;
-                int size = DB.getSize(lang);
-                String info = DB.getIntro(language);
-                Marker marker = new Marker(this, DB.getColor(lang), lang, "", info, size);
-                marker.setPosition(point);
+                Marker marker = new Marker(this, cursor, "", "");
+                marker.setOnMarkerClickListener((marker1, mapView) -> {
+                    App.info(getContext(), marker1.getTitle());
+                    return true;
+                });
                 folderOverlay.add(marker);
             }
             cursor.close();
@@ -182,12 +178,11 @@ public class MapView extends org.osmdroid.views.MapView {
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             String lang = cursor.getString(COL_LANG);
             if (!lastLang.contentEquals(lang) && !TextUtils.isEmpty(lastLang)) {
-                GeoPoint point = DB.getPoint(lastLang);
-                if (point != null) {
-                    int size = DB.getSize(lastLang);
-                    Marker marker = new Marker(this, DB.getColor(lastLang), lastLang, String.join(" ", IPAs), String.join(" ", comments), size);
-                    marker.setPosition(point);
+                Cursor c = DB.getCursor(String.format("select 簡稱,經緯度,地圖級別,%s from info where 簡稱 MATCH '%s' and length(經緯度) > 0", DB.COLOR, lastLang));
+                if (c != null) {
+                    Marker marker = new Marker(this, c, String.join(" ", IPAs), String.join(" ", comments));
                     folderOverlay.add(marker);
+                    c.close();
                 }
                 IPAs.clear();
                 comments.clear();
@@ -204,12 +199,11 @@ public class MapView extends org.osmdroid.views.MapView {
             }
         }
         if (!TextUtils.isEmpty(lastLang)) {
-            GeoPoint point = DB.getPoint(lastLang);
-            if (point != null) {
-                int size = DB.getSize(lastLang);
-                Marker marker = new Marker(this, DB.getColor(lastLang), lastLang, String.join(" ", IPAs), String.join(" ", comments), size);
-                marker.setPosition(point);
+            Cursor c = DB.getCursor(String.format("select 簡稱,經緯度,地圖級別,%s from info where 簡稱 MATCH '%s' and length(經緯度) > 0", DB.COLOR, lastLang));
+            if (c != null) {
+                Marker marker = new Marker(this, c, String.join(" ", IPAs), String.join(" ", comments));
                 folderOverlay.add(marker);
+                c.close();
             }
             IPAs.clear();
             comments.clear();
@@ -247,7 +241,8 @@ public class MapView extends org.osmdroid.views.MapView {
         }
         folderOverlay.setEnabled(true);
         mInfoOverlay = folderOverlay;
-        getOverlays().add(folderOverlay);
+        int size = getOverlays().size();
+        getOverlays().add(Math.min(size, 3), folderOverlay);
         try {
             String jsonString = FileUtil.getStringFromAssets("info.json", getContext());
             JSONObject jsonObjects = new JSONObject(jsonString);
@@ -276,7 +271,8 @@ public class MapView extends org.osmdroid.views.MapView {
             defaultStyle = new Style(null, 0x3F000000, 2f, 0xffffffff);
         }
         FolderOverlay folderOverlay = (FolderOverlay) kmlDocument.mKmlRoot.buildOverlay(this, defaultStyle, null, kmlDocument);
-        getOverlays().add(folderOverlay);
+        int size = getOverlays().size();
+        getOverlays().add(Math.min(size, 3), folderOverlay);
         for (Overlay o: folderOverlay.getItems()) {
             if (o instanceof Polygon) ((Polygon) o).setInfoWindow(null);
             else if (o instanceof FolderOverlay) {
