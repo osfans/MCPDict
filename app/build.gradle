@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply from: '../config.gradle'
 
 import java.text.SimpleDateFormat
-import groovy.xml.XmlParser
 
 android {
     defaultConfig {

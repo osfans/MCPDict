@@ -51,7 +51,7 @@ jobs:
     - name: Build with Gradle
       run: |
         chmod +x gradlew
-        ./gradlew build
+        ./gradlew :app:build
 
     - name: Create latest release
       uses: 'marvinpinto/action-automatic-releases@latest'
