@@ -33860,6 +33860,30 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "東方付馬",
+        "語言": "東方四更付馬話",
+        "地點": "海南東方四更付馬",
+        "地圖集二分區": "贛語－未分片",
+        "音典分區": "湘贛－豫章－未分類",
+        "陳邡分區": "官話－桂南－桂東大片－鬱林片",
+        "版本": "2026-01-17",
+        "錄入人": "DaiDzao",
+        "字表來源": "《海南东方市四更镇付马话同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.707283,
+          19.220436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-color": "#EB6E77",
         "marker-size": "small",
         "marker-symbol": "b",
