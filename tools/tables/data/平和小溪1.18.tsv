@@ -411,6 +411,7 @@
 菇	kou1	kou˧˧	生菇:发霉																
 估	kou1	kou˧˧																	
 古	kou2	kou˥˨																	
+牯	kou2	kou˥˨	石牯:石头																
 股	kou2	kou˥˨																	
 鼓	kou2	kou˥˨																	
 故	kou3	kou˨˩																	
@@ -664,6 +665,7 @@
 枸	kou2	kou˥˨																	
 佝	ku1	ku˧˧	𤸫痀un3 ku1, 蹺痀kʰiau1 ku1, 厾痀tok4 ku1																
 痀	ku1	ku˧˧	𤸫痀un3 ku1, 蹺痀kʰiau1 ku1, 厾痀tok4 ku1																
+跔	khu5	kʰu˩˨	蹲下																
 區	khi1	kʰi˧˧																	
 驅	khi1	kʰi˧˧																	
 軀	su1	su˧˧	浑躯hin1 su1																
@@ -852,7 +854,7 @@
 蔽	pi3	pi˨˩																	
 斃	pi3	pi˨˩																	
 敝	pi7	pi˨˨																	
-幣	pi3	pi˨˩																	
+幣	pi7	pi˨˨																	
 弊	pi7	pi˨˨																	
 厲	li7	li˨˨																	
 勵	le7	le˨˨																	
@@ -960,7 +962,7 @@
 輩	pue3	pue˨˩																	
 背	pue3	pue˨˩	背身																
 背	pue7	pue˨˨	背诵																
-背	phainn7	pʰaĩ˨˨	(训)背金斗:形容人运气差,金斗瓮仔落地不能随便迁移,动了风水会给逝者家庭带来坏运																
+背	phainn7	pʰaĩ˨˨	(训)背金斗:形容人运气差,金斗瓮仔落地不可随便迁移,动了风水会带来厄运																
 背	ainn7	aĩ˨˨	(训)背起																
 褙	pue3	pue˨˩	涂褙																
 坯	phue1	pʰue˧˧	粗坯仔																
@@ -1351,7 +1353,9 @@
 廁	tsheh4	tsʰeʔ˦˨																	
 士	su7	su˨˨																	
 事	su7	su˨˨																	
-事	tai7	tai˨˨	事志																
+事	tai7	tai˨˨	事事tai7 tsi3																
+事	thai7	tʰai˨˨	事先																
+事	tsi3	tsi˨˩	事事tai7 tsi3																
 史	su2	su˥˨																	
 使	sai2	sai˥˨	1.可以:解使, 2.耍脾气:使性, 3.使唤																
 使	sainn1	saĩ˧˧	使昵:撒娇																
@@ -1380,7 +1384,7 @@
 侍	tshi7	tsʰi˨˨	(白)侍者公tsʰi7 tsia2 kong1/tsʰi7 ia2 kong1:喜欢吃米的神明,文峰流传有蛇的形象																
 而	ji5	dzi˩˨																	
 耳	hinn7	hĩ˨˨	(白)																
-耳	dzi7	dzi˨˨	(文)木耳																
+耳	dzi2	dzi˥˨	(文)木耳																
 餌	dzi7	dzi˨˨																	
 基	ki1	ki˧˧																	
 姬	ki1	ki˧˧																	
@@ -1524,7 +1528,7 @@
 遺	ui5	ui˩˨																	
 遺	i5	i˩˨																	
 唯	ui5	ui˩˨																	
-飛	pue1	pue˧˧	(白)																
+飛	pue1	pue˧˧	(白)飞丝																
 飛	hui1	hui˧˧	(文)飞机																
 非	hui1	hui˧˧																	
 匪	hui2	hui˥˨	土匪仔话:也称蛇话,平和建国前匪患严重,土匪内部使用一种反切密语,将一句话中前后字声母韵母互相倒装,在整句话中变换复杂晦涩难懂,如今可能已失传																
@@ -1601,7 +1605,8 @@
 討	tʰou2	tʰou˥˨																	
 套	tʰo3	tʰo˨˩																	
 桃	tʰo5	tʰo˩˨																	
-桃	tʰou5	tʰou˩˨																	
+桃	tʰou5	tʰou˩˨	牵桃乩																
+桃	to5	to˩˨	杨桃																
 逃	to5	to˩˨																	
 逃	tou5	tou˩˨																	
 陶	tʰau5	tʰau˩˨																	
@@ -2201,6 +2206,7 @@
 蠶	tshan5	tsʰan˩˨																	
 蠶	tsheng5	tsʰeŋ˩˨	蚕仔树																
 感	kam2	kam˥˨																	
+𠖫	kam2	kam˥˨	遮:𠖫雨伞																
 堪	kham1	kʰam˧˧	承受:解堪,(无解)堪																
 龕	kham1	kʰam˧˧																	
 坎	kham2	kʰam˥˨																	
@@ -2628,6 +2634,7 @@
 彈	tuann7	tuã˨˨	(白)臭弹,弹走,弹线:木工线																
 彈	tuann5	tuã˩˨	(白)弹琴																
 彈	tan5	tan˩˨	(文)子弹																
+𦗀	tan5	tan˩˨	大响声:𦗀雷公																
 誕	tan3	tan˨˩																	
 但	tan7	tan˨˨																	
 蛋	tan3	tan˨˩																	
@@ -2721,8 +2728,9 @@
 產	san2	san˥˨	(文)																
 艱	kan1	kan˧˧																	
 艱	keng1	keŋ˧˧																	
-間	kan1	kan˧˧																	
-間	keng1	keŋ˧˧																	
+間	kan1	kan˧˧	空间																
+間	keng1	keŋ˧˧	房间																
+間	kan3	kan˨˩	离间																
 簡	kan2	kan˥˨																	
 簡	keng2	keŋ˥˨																	
 揀	keng2	keŋ˥˨																	
@@ -2731,7 +2739,8 @@
 眼	gan2	gan˥˨																	
 眼	kan2	kan˥˨	厚字眼																
 眼	keng2	keŋ˥˨	龙眼leŋ5 keŋ2																
-閒	eng5	eŋ˩˨																	
+闲	eng5	eŋ˩˨	(白)																
+闲	han5	han˩˨	(文)清闲																
 限	an7	an˨˨	(白)有限:不可能, "望伊创只项事志亦是有限"																
 限	han7	han˨˨	(文)限制																
 莧	heng7	heŋ˨˨	红苋菜																
@@ -3540,9 +3549,10 @@
 趁	tʰam2	tʰam˥˨	趁较早																
 陳	tan5	tan˩˨																	
 塵	tʰun5	tʰun˩˨	筅尘: 年前打扫家里																
-塵	tsun5	tsun˩˨	特殊音变,只出现在筅尘tsʰeŋ2 tsun5																
+塵	tsun5	tsun˩˨	筅尘,尘扫:年尾打扫用的长扫帚																
 塵	tin5	tin˩˨	(文)																
 塵	teng5	teŋ˩˨																	
+塵	sam5	sam˩˨	(替)lah4 sam5:肮脏																
 陣	tsun7	tsun˨˨	一阵仔																
 陣	tin7	tin˨˨	大阵																
 陣	teng7	teŋ˨˨																	
@@ -4154,10 +4164,11 @@
 響	tan5	tan˩˨	巨大声响:tan5雷公																
 向	hiang3	hiaŋ˨˩																	
 向	heng3	heŋ˨˩																	
-向	hng3	hŋ˨˩	(白)向着:向前向后																
+向	hing3	hiŋ˨˩	向爿:那里																
+向	hiunn3	hiũ˨˩	(白)向爿:那里																
+向	hng3	hŋ˨˩	(白)向爿:那里,向着:向前向后																
 向	ng3	ŋ˨˩	(白)向着:向前向后																
 向	ann3	ã˨˩	(训)朝向某处某方向																
-向	annh4	ãʔ˦˨	(训)偏袒,包揽"ãh4 kiau2":原指赌博时耍暗招,后也引申做胡搅蛮缠																
 餡	ann7	ã˨˨	馅料																
 央	hng1	hŋ˧˧	(白)																
 央	iang1	iaŋ˧˧	(文)																
@@ -4197,9 +4208,10 @@
 托	tʰuh8	tʰuʔ˩˧	(训)tʰiʔ8 tʰuʔ8:拖延																
 諾	hioh8	hioʔ˩˧	允诺语气词																
 諾	lok8	lok˩˧																	
-落	loh8	loʔ˩˧	落九:赌博时出暗招,后引申做胡搅蛮缠																
+落	loh8	loʔ˩˧	落九:胡搅蛮缠																
 落	lauh8	lauʔ˩˧	掉落																
 落	lak4	lak˦˨	掉落																
+落	lah4	laʔ˦˨	落凉																
 落	lau3	lau˨˩	雨落母水:房屋滴水																
 落	lok8	lok˩˧	(文)落kʰok8																
 丼	tom5	tom˩˨	落水声																
@@ -4269,7 +4281,7 @@
 蝗	hong5	hoŋ˩˨																	
 皇	hong5	hoŋ˩˨	皇鸡仔,皇神坯																
 皇	heng5	heŋ˩˨																	
-癀	hong5	hoŋ˩˨	片仔癀																
+癀	hong5	hoŋ˩˨	手癀																
 汪	ong1	oŋ˧˧																	
 方	puinn1	puĩ˧˧	(白)小溪船民姓																
 方	pang1	paŋ˧˧	(白)四方大:国字脸																
@@ -4540,8 +4552,8 @@
 膨	phong7	pʰoŋ˨˨	鼓起来:膨皮																
 膨	phong3	pʰoŋ˨˩	(替)																
 膨	hang3	haŋ˨˩	(训)浮肿:haŋ3浮,haŋ3肿,haŋ3haŋ3																
-盲	me5	me˩˨																	
-盲	bong5	boŋ˩˨																	
+盲	me5	me˩˨	(白)青盲																
+盲	bong5	boŋ˩˨	(文)盲肠																
 猛	me2	me˥˨	较猛:赶紧																
 猛	beng2	beŋ˥˨																	
 孟	beng7	beŋ˨˨																	
@@ -4914,7 +4926,7 @@
 礦	khong3	kʰoŋ˨˩																	
 橫	huɛnn5	huɛ̃˩˨	横樵举入灶:做事死板																
 橫	huainn5	huaĩ˩˨	横横横:形容拖拖拉拉																
-轟	eng1	eŋ˧˧																	
+轟	eng1	eŋ˧˧	轰涂粉,轰埃																
 轟	hong1	hoŋ˧˧																	
 宏	hong5	hoŋ˩˨																	
 兄	hiann1	hiã˧˧																	
@@ -4959,6 +4971,8 @@
 桶	tʰang2	tʰaŋ˥˨																	
 捅	tʰong2	tʰoŋ˥˨	(文)																
 捅	tʰng2	tʰŋ˥˨	(白)																
+痛	tʰang3	tʰaŋ˨˩	(白)痛痛:长记性																
+痛	tʰiong3	tʰioŋ˨˩	痛痛:长记性																
 痛	tʰong3	tʰoŋ˨˩																	
 同	tang5	taŋ˩˨	(白)同名:称呼与自己同名的人																
 同	tong5	toŋ˩˨	(文)																
@@ -5170,8 +5184,9 @@
 祿	lok8	lok˩˧	王禄仔:江湖骗子																
 族	tsok8	tsok˩˧																	
 速	sok4	sok˦˨																	
-穀	kok4	kok˦˨	五谷丰登																
-谷	kok4	kok˦˨																	
+穀	kok4	kok˦˨																	
+穀	kak4	kak˦˨	(白)五谷做力																
+谷	kok4	kok˦˨	谷雨																
 哭	khau3	kʰau˨˩																	
 斛	hak4	hak˦˨	石斛																
 屋	ok4	ok˦˨	船屋:疍民船上的小屋																
@@ -5184,6 +5199,8 @@
 沃	ak4	ak˦˨	浇																
 福	hok4	hok˦˨																	
 幅	pak4	pak˦˨	(白)																
+幅	hok4	hok˦˨	(文)																
+蝠	bit8	bit˩˧	(白)蝠婆:蝙蝠																
 蝠	hok4	hok˦˨	(文)																
 復	hok4	hok˦˨																	
 腹	pak4	pak˦˨																	
@@ -5580,3 +5597,6 @@
 □	gai3	gai˨˩	gai3胃:寒性食物冷胃伤胃																
 □	khang3	kʰaŋ˨˩	1.用手指抠,2.齿状物咬住																
 □	tha2	tʰa˥˨	穿衣搭配:长衫tʰa2马褂"外短内长"																
+□	tshi3	tsʰi˨˩	低头,俯身																
+□	lɛ3	lɛ˨˩	放置:和尚头顶lee3橄榄核																
+□	sam5	sam˩˨	lah4 sam5:肮脏																
