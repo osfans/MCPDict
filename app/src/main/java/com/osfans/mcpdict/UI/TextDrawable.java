@@ -16,6 +16,7 @@ import android.graphics.drawable.shapes.RectShape;
 import android.graphics.drawable.shapes.RoundRectShape;
 
 import com.osfans.mcpdict.Util.FontUtil;
+import com.osfans.mcpdict.Util.OpenCC;
 
 /**
  * author amulya
@@ -35,7 +36,12 @@ public class TextDrawable extends ShapeDrawable {
     private final float fontSize;
     private final float radius;
     private final int borderThickness;
-    private boolean wrapContent;
+    private final boolean wrapContent;
+
+    public String normLabel(String text) {
+        String label = text.replace("－", "-").replace("（", "(").replace("）", ")");
+        return OpenCC.convertToOld(label);
+    }
 
     private TextDrawable(Builder builder) {
         super(builder.shape);
@@ -45,7 +51,7 @@ public class TextDrawable extends ShapeDrawable {
         radius = builder.radius;
 
         // text and color
-        text = builder.toUpperCase ? builder.text.toUpperCase() : builder.text;
+        text = normLabel(builder.toUpperCase ? builder.text.toUpperCase() : builder.text);
         color = builder.color;
 
         // text paint settings

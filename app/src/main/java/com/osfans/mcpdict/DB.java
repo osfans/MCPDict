@@ -17,7 +17,6 @@ import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.osmdroid.util.GeoPoint;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -701,18 +700,6 @@ public class DB extends SQLiteAssetHelper {
         return sb.toString().trim();
     }
 
-    public static String[] getResults(String sql) {
-        Cursor cursor = getCursor(sql);
-        if (cursor == null) return null;
-        int n = cursor.getColumnCount();
-        String[] results = new String[n];
-        for (int i = 0; i < n; i++) {
-            results[i] = cursor.getString(i);
-        }
-        cursor.close();
-        return results;
-    }
-
     public static String getField(String selection, String lang, String field) {
         if (db == null) return "";
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
@@ -955,30 +942,6 @@ public class DB extends SQLiteAssetHelper {
         } catch (JSONException ignored) {
         }
         return null;
-    }
-
-    public static GeoPoint parseLocation(String location) {
-        if (TextUtils.isEmpty(location)) return null;
-        location = location.replace("[", "").replace("]", "").strip();
-        String[] ss = location.split(", ?");
-        if (ss.length != 2) return null;
-        Double[] ds = new Double[2];
-        int i = 0;
-        for (String s: ss) {
-            ds[i++] = Double.parseDouble(s);
-        }
-        return new GeoPoint(ds[1], ds[0]);
-    }
-
-    public static GeoPoint getPoint(String lang) {
-        String location = getFieldByLabel(lang, "經緯度");
-        return parseLocation(location);
-    }
-
-    public static int getSize(String lang) {
-        String s = getFieldByLabel(lang, "地圖級別");
-        if (TextUtils.isEmpty(s)) return 0;
-        return Integer.parseInt(s);
     }
 
     public static boolean isNotLang(String lang) {

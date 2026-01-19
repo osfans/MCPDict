@@ -1,5 +1,6 @@
 package com.osfans.mcpdict.UI;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.SpannableStringBuilder;
@@ -77,15 +78,16 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         if (!TextUtils.isEmpty(province)) province = String.format("省 MATCH '%s' AND ", province);
         if (!TextUtils.isEmpty(division)) division = String.format("%s MATCH '%s' AND ", DB.FQ, division);
         String sql = String.format("select 語言,經緯度 from info where %s %s %s length(經緯度) order by random() limit 1", province, division, level);
-        String[] results = DB.getResults(sql);
-        if (results == null || results.length < 2) {
+        Cursor cursor = DB.getCursor(sql);
+        if (cursor == null || cursor.getCount() == 0) {
             sql = String.format("select 語言,經緯度 from info where %s %s length(經緯度) order by random() limit 1", province, division);
-            results = DB.getResults(sql);
+            cursor = DB.getCursor(sql);
             hint = hint.replaceFirst("<b>.*?</b>", "");
         }
-        if (results == null || results.length < 2) return;
-        mAnswer = results[0];
-        mLocation = GeoPoint.fromInvertedDoubleString(results[1], ',');
+        if (cursor == null || cursor.getCount() == 0) return;
+        mAnswer = cursor.getString(0);
+        mLocation = GeoPoint.fromInvertedDoubleString(cursor.getString(1), ',');
+        cursor.close();
         mTextView.setText("");
         append(hint);
         hintHz(mTextInput.getText().toString());
@@ -227,10 +229,9 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
             mLocation = null;
             return;
         }
-        String label = DB.getLabelByLanguage(lang);
-        if (TextUtils.isEmpty(label)) return;
-        GeoPoint location = DB.getPoint(label);
-        if (location == null) return;
+        String point = DB.getResult(String.format("select 經緯度 from info where 語言 MATCH '%s'", lang));
+        if (TextUtils.isEmpty(point)) return;
+        GeoPoint location = GeoPoint.fromInvertedDoubleString(point, ',');
         double distance = location.distanceToAsDouble(mLocation) / 1000d;
         double angle = location.bearingTo(mLocation);
         int direction = (int)Math.round(((angle + 360) % 360) / 45) % 8;

@@ -297,12 +297,13 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                return gestureDetector.onTouchEvent(event);
+                boolean ret = gestureDetector.onTouchEvent(event);
+                if (!ret) v.performClick();
+                return false;
             }
         };
         searchView.findViewById(R.id.text_query).setOnTouchListener(listener);
         selfView.setClickable(true);
-        selfView.setOnTouchListener(listener);
         return selfView;
     }
 

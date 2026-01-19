@@ -1,5 +1,6 @@
 package com.osfans.mcpdict.UI;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.SpannableStringBuilder;
@@ -82,10 +83,11 @@ public class GuessHzFragment extends Fragment implements RefreshableFragment {
 
         sql = "select 語言,讀音 from langs where 字組 match '%s' order by random() limit 1";
         sql = String.format(sql, mAnswer);
-        String[] results = DB.getResults(sql);
-        if (results == null || results.length < 2) return;
-        String label = results[0];
-        String ipa = DisplayHelper.formatIPA(label, results[1]).toString();
+        Cursor cursor = DB.getCursor(sql);
+        if (cursor == null || cursor.getCount() == 0) return;
+        String label = cursor.getString(0);
+        String ipa = DisplayHelper.formatIPA(label, cursor.getString(1)).toString();
+        cursor.close();
         String lang = DB.getLanguageByLabel(label);
         mTextView.setText("");
         String hint = String.format("請猜一個在<b>%s</b>中可以讀<b>%s</b>的字", lang, ipa);

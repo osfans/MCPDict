@@ -18,6 +18,7 @@ import com.osfans.mcpdict.Util.App;
 import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.Util.FileUtil;
 
+import org.json.JSONArray;
 import org.osmdroid.bonuspack.kml.KmlDocument;
 import org.osmdroid.bonuspack.kml.Style;
 import org.osmdroid.events.MapListener;
@@ -44,6 +45,7 @@ public class MapView extends org.osmdroid.views.MapView {
     FolderOverlay mHzOverlay, mProvinceOverlay, mInfoOverlay;
     List<String> levels = Arrays.asList("province", "city"); //"district"
     FolderOverlay[] mInfoMarkers;
+    final transient Object lock = new Object();
     public MapView(Context context) {
         super(context);
     }
@@ -62,8 +64,10 @@ public class MapView extends org.osmdroid.views.MapView {
             postInvalidate();
         }).start();
         new Thread(()->{
-            initHZ(hz);
-            postInvalidate();
+            synchronized (lock) {
+                initHZ(hz);
+                postInvalidate();
+            }
         }).start();
     }
 
@@ -159,7 +163,7 @@ public class MapView extends org.osmdroid.views.MapView {
         mHzOverlay = folderOverlay;
         getOverlays().add(mHzOverlay);
         if (TextUtils.isEmpty(hz)) {
-            Cursor cursor = DB.getCursor(String.format("select 簡稱,經緯度,地圖級別,%s from info where length(經緯度)", DB.COLOR));
+            Cursor cursor = DB.getCursor(String.format("select 簡稱,經緯度,地圖級別,%s from info where length(經緯度) order by 地圖級別", DB.COLOR));
             if (cursor == null) return;
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 Marker marker = new Marker(this, cursor, "", "");
@@ -188,8 +192,6 @@ public class MapView extends org.osmdroid.views.MapView {
                 comments.clear();
             }
             lastLang = lang;
-            GeoPoint point = DB.getPoint(lastLang);
-            if (point == null) continue;
             CharSequence ipa = DisplayHelper.formatIPA(lang, cursor.getString(COL_IPA));
             IPAs.add(ipa);
             comments.add(ipa);
@@ -217,8 +219,10 @@ public class MapView extends org.osmdroid.views.MapView {
         if (index == -1) return;
         String name = o.optString("name", "");
         if (TextUtils.isEmpty(name)) return;
-        GeoPoint point = DB.parseLocation(o.optString("centroid", o.optString("center")));
-        if (point == null) return;
+        JSONArray centroids = o.optJSONArray("centroid");
+        if (centroids == null) centroids = o.optJSONArray("center");
+        if (centroids == null || centroids.length() != 2) return;
+        GeoPoint point = new GeoPoint(centroids.optDouble(1), centroids.optDouble(0));
         org.osmdroid.views.overlay.Marker marker = new org.osmdroid.views.overlay.Marker(this);
         marker.setTextLabelBackgroundColor(Color.TRANSPARENT);
         marker.setTextLabelForegroundColor(0xC000000 * (2 + index));
@@ -283,5 +287,12 @@ public class MapView extends org.osmdroid.views.MapView {
         }
 
         return folderOverlay;
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        synchronized (lock) {
+            super.onDetachedFromWindow();
+        }
     }
 }

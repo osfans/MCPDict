@@ -146,11 +146,6 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             new MapView(mView.getContext(), hz).show();
         }
 
-        public String normLabel(String lang) {
-            String label = lang.replace("－", "-").replace("（", "(").replace("）", ")");
-            return OpenCC.convertToOld(label);
-        }
-
         public void set(Cursor cursor, boolean isMainPage) {
             mTvHead.setVisibility(View.GONE);
             mViewLang.setVisibility(View.GONE);
@@ -227,7 +222,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 if (lang.contentEquals(lastLang)) {
                     mViewLang.setVisibility(View.INVISIBLE);
                 } else {
-                    Drawable drawable = builder.build(normLabel(lang), getColor(lang), getSubColor(lang));
+                    Drawable drawable = builder.build(lang, getColor(lang), getSubColor(lang));
                     drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
                     mViewLang.setBackground(drawable);
                     mViewLang.setVisibility(View.VISIBLE);
