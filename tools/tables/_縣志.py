@@ -178,6 +178,13 @@ class 表(_表):
 				行 = 自.聲 + 行
 			else:
 				自.聲 = 行.split("[")[0]
+		elif 名 in ("臨海",):
+			if 行.startswith("#"):
+				return 行
+			if "[" not in 行:
+				自.聲 = 行.strip()
+				return
+			行 = 自.聲 + 行
 		elif 名 in ("威海",):
 			行 = 行.replace("/", "", 2)
 		elif 名 in ("烏魯木齊","西寧","蒙山新圩","青島","天台東鄉","景寧東坑"):
