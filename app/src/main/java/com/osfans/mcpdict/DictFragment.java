@@ -319,11 +319,13 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     private void toggleLayoutFilters(FILTER filter) {
         int n = layoutFilters.getChildCount();
+        layoutFilters.setVisibility(View.GONE);
         for(int i = 0; i < n; i++) {
             View v = layoutFilters.getChildAt(i);
             FILTER f = (FILTER) v.getTag();
             v.setVisibility(f.compareTo(filter) == 0 ? View.VISIBLE : View.GONE);
         }
+        layoutFilters.setVisibility(View.VISIBLE);
     }
 
     public void setType(int value) {

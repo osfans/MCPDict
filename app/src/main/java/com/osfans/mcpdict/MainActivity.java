@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -103,7 +104,14 @@ public class MainActivity extends AppCompatActivity {
             FavoriteDialogs.initialize(this);
             handler.post(() -> {
                 //UI Thread work here
-                if (getDictionaryFragment() != null) getDictionaryFragment().refreshAdapter();
+                if (getDictionaryFragment() != null) {
+                    CharSequence query = getIntent().getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT);
+                    if (!TextUtils.isEmpty(query)) {
+                        getDictionaryFragment().refresh(query.toString(), "");
+                    } else {
+                        getDictionaryFragment().refreshAdapter();
+                    }
+                }
             });
         });
 
