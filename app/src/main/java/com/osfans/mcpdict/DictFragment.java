@@ -84,6 +84,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             Menu menu = popup.getMenu();
             MenuItem item = menu.findItem(R.id.menu_item_allow_variants);
             item.setChecked(Pref.getBool(R.string.pref_key_allow_variants, true));
+            item = menu.findItem(R.id.menu_item_long_text_ipa);
+            item.setChecked(Pref.getBool(R.string.pref_key_show_ipa, false));
             item = menu.findItem(R.id.menu_group_hz_range);
             SubMenu subMenu = item.getSubMenu();
             if (subMenu != null) {
@@ -106,6 +108,9 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 else if (id == R.id.menu_item_fullscreen) toggleFullscreen();
                 else if (id == R.id.menu_item_allow_variants) {
                     Pref.putBool(R.string.pref_key_allow_variants, !item1.isChecked());
+                    search();
+                } else if (id == R.id.menu_item_long_text_ipa) {
+                    Pref.putBool(R.string.pref_key_show_ipa, !item1.isChecked());
                     search();
                 }
                 return true;
@@ -270,13 +275,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         checkPfg.setChecked(Pref.getBool(R.string.pref_key_pfg, false));
         checkPfg.setOnCheckedChangeListener((buttonView, isChecked) -> {
             Pref.putBool(R.string.pref_key_pfg, isChecked);
-            search();
-        });
-
-        CheckBox checkIpa = selfView.findViewById(R.id.checkBox_show_ipa);
-        checkIpa.setChecked(Pref.getBool(R.string.pref_key_show_ipa, false));
-        checkIpa.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            Pref.putBool(R.string.pref_key_show_ipa, isChecked);
             search();
         });
 

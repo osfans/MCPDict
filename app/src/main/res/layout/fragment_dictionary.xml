@@ -144,13 +144,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/pfg" />
-
-                <CheckBox
-                    android:id="@+id/checkBox_show_ipa"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/long_text" />
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout

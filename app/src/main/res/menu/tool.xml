@@ -10,6 +10,10 @@
         android:checkable="true"
         android:title="@string/option_allow_variants" />
     <item
+        android:id="@+id/menu_item_long_text_ipa"
+        android:checkable="true"
+        android:title="@string/long_text_ipa" />
+    <item
         android:id="@+id/menu_item_fullscreen"
         android:title="@string/toggle_fullscreen" />
 </menu>

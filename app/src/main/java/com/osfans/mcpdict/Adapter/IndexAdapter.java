@@ -62,7 +62,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
             String hz = mHZs.get(position);
             tvHZ.setText(hz);
 
-            boolean showIPA = (Pref.getFilter() == DB.FILTER.CURRENT && Pref.getBool(R.string.pref_key_show_ipa, false));
+            boolean showIPA = !mIPAs.isEmpty() && Pref.getBool(R.string.pref_key_show_ipa, false);
             tvIPA.setVisibility(showIPA ? View.VISIBLE : View.GONE);
             if (showIPA && !HanZi.isUnknown(hz)) {
                 String ipa = mIPAs.getOrDefault(hz, "");
@@ -99,7 +99,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
                 if (lang.contentEquals(mCurrentLanguage)) {
                     String ipa = cursor.getString(COL_IPA);
                     String lastIpa = mIPAs.getOrDefault(hz, "") + " ";
-                    mIPAs.put(hz, (lastIpa + ipa).trim());
+                    mIPAs.put(hz, (lastIpa + ipa).replaceAll("\\(.*?\\)", "").trim());
                 }
                 lastHz = hz;
             }
