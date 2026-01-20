@@ -96,29 +96,12 @@
 
             <Button
                 android:id="@+id/button_hz_option"
+                style="@style/Widget.AppCompat.Button.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
                 android:text="@string/hz_option" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_hz"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Spinner
-                android:id="@+id/spinner_charset"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:entries="@array/pref_entries_charset" />
-
-            <CheckBox
-                android:id="@+id/check_box_allow_variants"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/option_allow_variants" />
         </LinearLayout>
 
         <LinearLayout

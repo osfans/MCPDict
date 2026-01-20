@@ -84,7 +84,7 @@ public class GuessHzFragment extends Fragment implements RefreshableFragment {
         sql = "select 語言,讀音 from langs where 字組 match '%s' order by random() limit 1";
         sql = String.format(sql, mAnswer);
         Cursor cursor = DB.getCursor(sql);
-        if (cursor == null || cursor.getCount() == 0) return;
+        if (cursor == null) return;
         String label = cursor.getString(0);
         String ipa = DisplayHelper.formatIPA(label, cursor.getString(1)).toString();
         cursor.close();

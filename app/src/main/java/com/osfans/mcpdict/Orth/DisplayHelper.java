@@ -48,11 +48,6 @@ public abstract class DisplayHelper {
     public static String formatZS(String hz, String s) {
         return String.format("<small><small>%s</small></small>", formatJS(hz, s));
     }
-
-    public static String getRawText(String s) {
-        if (TextUtils.isEmpty(s)) return "";
-        return s.replaceAll("[|*\\[\\]]", "").replaceAll("\\{.*?\\}", "");
-    }
     
     public static CharSequence formatPopUp(String hz, int i, String s) {
         if (TextUtils.isEmpty(s)) return "";

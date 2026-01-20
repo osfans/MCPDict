@@ -53,7 +53,6 @@ import com.osfans.mcpdict.Favorite.FavoriteDialogs;
 import com.osfans.mcpdict.MainActivity;
 import com.osfans.mcpdict.Orth.BaiSha;
 import com.osfans.mcpdict.Orth.HanZi;
-import com.osfans.mcpdict.Util.OpenCC;
 import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.UI.MapView;
@@ -240,20 +239,22 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             }
         }
 
-        public void copyText(String text) {
+        public boolean copyText(String text) {
             Context context = App.getContext();
             ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData clip = ClipData.newPlainText("item", text);
             clipboard.setPrimaryClip(clip);
             Toast.makeText(context, R.string.copy_done, Toast.LENGTH_SHORT).show();
+            return true;
         }
 
-        public void copyHTML(String text, String html) {
+        public boolean copyHTML(String text, String html) {
             Context context = App.getContext();
             ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData clip = ClipData.newHtmlText("html", text, html);
             clipboard.setPrimaryClip(clip);
             Toast.makeText(context, R.string.copy_done, Toast.LENGTH_SHORT).show();
+            return true;
         }
 
         public Cursor getCursor() {
@@ -295,7 +296,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             if (cursor == null) return;
             PopupMenu popupMenu = new PopupMenu(v.getContext(), v);
             Menu menu = popupMenu.getMenu();
-            popupMenu.getMenuInflater().inflate(R.menu.hz, menu);
+            popupMenu.getMenuInflater().inflate(R.menu.item, menu);
             MenuCompat.setGroupDividerEnabled(menu, true);
             MenuItem item;
             String hz = cursor.getString(COL_HZ);
@@ -323,8 +324,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 String zs = cursor.getString(COL_ZS);
                 if (!TextUtils.isEmpty(zs)) zs = DisplayHelper.formatJS(hz, zs);
                 String reading = String.format("[%s] %s %s%s", lang, hz, DisplayHelper.getIPA(lang, ipa), zs);
-                copyText(reading);
-                return true;
+                return copyText(reading);
             });
             item = menu.findItem(R.id.menu_item_copy_lang_all_readings);
             item.setTitle(Pref.getString(R.string.copy_lang_all_readings, hz));
@@ -341,9 +341,8 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                     if (!TextUtils.isEmpty(zs1)) zs1 = DisplayHelper.formatJS(hz, zs1);
                     reading.append(String.format("%s%s\n", DisplayHelper.getIPA(lang1, ipa1), zs1));
                 }
-                copyText(reading.toString().trim());
                 cursor.moveToPosition(pos);
-                return true;
+                return copyText(reading.toString().trim());
             });
             item = menu.findItem(R.id.menu_item_copy_readings);
             item.setTitle(Pref.getString(R.string.copy_readings, hz));
@@ -374,28 +373,24 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 }
                 reading.append("</tbody></table>");
                 reading.append(books);
-                readingText.append(HtmlCompat.fromHtml(books.toString(), HtmlCompat.FROM_HTML_MODE_COMPACT).toString());
-                copyHTML(readingText.toString().trim(), reading.toString().trim());
+                readingText.append(HtmlCompat.fromHtml(books.toString(), HtmlCompat.FROM_HTML_MODE_COMPACT));
                 cursor.moveToPosition(pos);
-                return true;
+                return copyHTML(readingText.toString().trim(), reading.toString().trim());
             });
             item = menu.findItem(R.id.menu_item_search_homophone);
-            item.setTitle(Pref.getString(R.string.search_homophone, DisplayHelper.getIPA(lang, ipa).toString().replaceAll("[ /].*$","")));
+            final String menu_ipa;
+            if (lang.contentEquals(BA)) menu_ipa = BaiSha.display(ipa.replaceAll("\\([^()]*?\\)$", "").trim());
+            else menu_ipa = ipa.replaceAll("\\([^()]*?\\)", "").replaceAll("/.*$","").replace("*", "").trim();
+            item.setTitle(Pref.getString(R.string.search_homophone, menu_ipa));
             item.setOnMenuItemClickListener(i->{
-                String query = ipa.replaceAll("/.*$","").replace("-", " ").replace("=", " ").trim();
-                if (lang.contentEquals(BA)) query = BaiSha.display(ipa.replaceAll("\\([^()]*?\\)$", "").trim());
-                else query = query.replace("*", "");
                 DictFragment dictFragment = ((MainActivity) v.getContext()).getDictionaryFragment();
                 dictFragment.setType(1);
-                dictFragment.refresh(query, lang);
+                dictFragment.refresh(menu_ipa, lang);
                 return true;
             });
             item = menu.findItem(R.id.menu_item_copy_hz);
             item.setTitle(Pref.getString(R.string.copy_hz, hz));
-            item.setOnMenuItemClickListener(i -> {
-                copyText(hz);
-                return true;
-            });
+            item.setOnMenuItemClickListener(i -> copyText(hz));
             String dict = DB.getDictName(lang);
             item = menu.findItem(R.id.menu_item_dict_links);
             if (!TextUtils.isEmpty(dict)) {

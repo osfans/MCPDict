@@ -309,9 +309,7 @@ public class DB extends SQLiteAssetHelper {
                 keywords = Arrays.asList(hzs.split(" "));
             }
 
-            int max_size = keywords.size();
-            if (max_size > 100) max_size = 100;
-
+            int max_size = Math.min(keywords.size(), 100);
             for (int i = 0; i < max_size; i++) {
                 String hz = keywords.get(i);
                 if (HanZi.isUnknown(hz)) {

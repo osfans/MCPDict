@@ -38,35 +38,15 @@ public class HanZi {
         return isHz(hz.codePointAt(0));
     }
 
-    public static String cp2str(int codePoint) {
-        return Character.toString(codePoint);
-    }
-
-    public static String firstHz(String s) {
-        if (TextUtils.isEmpty(s)) return "";
-        int codePoint = s.codePointAt(0);
-        return cp2str(codePoint);
-    }
-
     public static String lastHz(String s) {
         if (TextUtils.isEmpty(s)) return "";
         int codePoint = Character.codePointBefore(s, s.length());
-        return cp2str(codePoint);
+        return Character.toString(codePoint);
     }
 
     public static boolean isUnicode(String input) {
         if (TextUtils.isEmpty(input)) return false;
         return input.toUpperCase().matches("(U\\+)?[0-9A-F]{4,5}");
-    }
-
-    public static boolean isBH(String s) {
-        if (TextUtils.isEmpty(s)) return false;
-        return s.matches("[1-9][0-9]?");
-    }
-
-    public static boolean isBS(String s) {
-        if (TextUtils.isEmpty(s)) return false;
-        return isHz(s.codePointAt(0)) && s.substring(1).matches("-?[0-9]{1,2}");
     }
 
     public static boolean isPY(String s) {
@@ -81,7 +61,7 @@ public class HanZi {
     }
 
     public static String toHz(int unicode) {
-        String hz = cp2str(unicode);
+        String hz = Character.toString(unicode);
         return OpenCC.convert(hz, "c2u");
     }
 

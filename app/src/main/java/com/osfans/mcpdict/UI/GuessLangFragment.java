@@ -79,12 +79,12 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         if (!TextUtils.isEmpty(division)) division = String.format("%s MATCH '%s' AND ", DB.FQ, division);
         String sql = String.format("select 語言,經緯度 from info where %s %s %s length(經緯度) order by random() limit 1", province, division, level);
         Cursor cursor = DB.getCursor(sql);
-        if (cursor == null || cursor.getCount() == 0) {
+        if (cursor == null) {
             sql = String.format("select 語言,經緯度 from info where %s %s length(經緯度) order by random() limit 1", province, division);
             cursor = DB.getCursor(sql);
             hint = hint.replaceFirst("<b>.*?</b>", "");
         }
-        if (cursor == null || cursor.getCount() == 0) return;
+        if (cursor == null) return;
         mAnswer = cursor.getString(0);
         mLocation = GeoPoint.fromInvertedDoubleString(cursor.getString(1), ',');
         cursor.close();

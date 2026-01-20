@@ -42,9 +42,9 @@ import java.util.List;
 import org.json.JSONObject;
 
 public class MapView extends org.osmdroid.views.MapView {
-    FolderOverlay mHzOverlay, mProvinceOverlay, mInfoOverlay;
-    List<String> levels = Arrays.asList("province", "city"); //"district"
+    FolderOverlay mProvinceOverlay, mInfoOverlay;
     FolderOverlay[] mInfoMarkers;
+    List<String> levels = Arrays.asList("province", "city"); //"district"
     final transient Object lock = new Object();
     public MapView(Context context) {
         super(context);
@@ -62,12 +62,6 @@ public class MapView extends org.osmdroid.views.MapView {
         new Thread(()->{
             initInfo();
             postInvalidate();
-        }).start();
-        new Thread(()->{
-            synchronized (lock) {
-                initHZ(hz);
-                postInvalidate();
-            }
         }).start();
     }
 
@@ -156,14 +150,23 @@ public class MapView extends org.osmdroid.views.MapView {
             zoomToBoundingBox(boundingBox, false);
             invalidate();
         });
+        new Thread(()->{
+            synchronized (lock) {
+                initHZ(hz);
+                postInvalidate();
+            }
+        }).start();
     }
 
     private void initHZ(String hz) {
-        FolderOverlay folderOverlay = new FolderOverlay();
-        mHzOverlay = folderOverlay;
-        getOverlays().add(mHzOverlay);
+        FolderOverlay[] hzMarkers = new FolderOverlay[6];
+        for (int i = 0; i < 6; i++) {
+            FolderOverlay overlay = new FolderOverlay();
+            getOverlays().add(overlay);
+            hzMarkers[i] = overlay;
+        }
         if (TextUtils.isEmpty(hz)) {
-            Cursor cursor = DB.getCursor(String.format("select 簡稱,經緯度,地圖級別,%s from info where length(經緯度) order by 地圖級別", DB.COLOR));
+            Cursor cursor = DB.getCursor(String.format("select 簡稱,經緯度,地圖級別,%s from info where length(經緯度) > 0", DB.COLOR));
             if (cursor == null) return;
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
                 Marker marker = new Marker(this, cursor, "", "");
@@ -171,7 +174,8 @@ public class MapView extends org.osmdroid.views.MapView {
                     App.info(getContext(), marker1.getTitle());
                     return true;
                 });
-                folderOverlay.add(marker);
+                int size = marker.getSize();
+                hzMarkers[size].add(marker);
             }
             cursor.close();
             return;
@@ -185,7 +189,8 @@ public class MapView extends org.osmdroid.views.MapView {
                 Cursor c = DB.getCursor(String.format("select 簡稱,經緯度,地圖級別,%s from info where 簡稱 MATCH '%s' and length(經緯度) > 0", DB.COLOR, lastLang));
                 if (c != null) {
                     Marker marker = new Marker(this, c, String.join(" ", IPAs), String.join(" ", comments));
-                    folderOverlay.add(marker);
+                    int size = marker.getSize();
+                    hzMarkers[size].add(marker);
                     c.close();
                 }
                 IPAs.clear();
@@ -204,7 +209,8 @@ public class MapView extends org.osmdroid.views.MapView {
             Cursor c = DB.getCursor(String.format("select 簡稱,經緯度,地圖級別,%s from info where 簡稱 MATCH '%s' and length(經緯度) > 0", DB.COLOR, lastLang));
             if (c != null) {
                 Marker marker = new Marker(this, c, String.join(" ", IPAs), String.join(" ", comments));
-                folderOverlay.add(marker);
+                int size = marker.getSize();
+                hzMarkers[size].add(marker);
                 c.close();
             }
             IPAs.clear();

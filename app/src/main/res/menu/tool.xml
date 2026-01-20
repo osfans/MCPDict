@@ -1,0 +1,15 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:title="@string/hz_range" android:id="@+id/menu_group_hz_range">
+        <menu>
+            <group android:id="@+id/group_hz_range" android:enabled="true" android:checkableBehavior="single"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_item_allow_variants"
+        android:checkable="true"
+        android:title="@string/option_allow_variants" />
+    <item
+        android:id="@+id/menu_item_fullscreen"
+        android:title="@string/toggle_fullscreen" />
+</menu>

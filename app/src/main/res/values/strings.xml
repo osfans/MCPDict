@@ -33,7 +33,7 @@
     <string name="search_for">查詢內容：</string>
     <string name="search_as">查詢條件：</string>
     <string name="search_options">查詢選項：</string>
-    <string name="option_allow_variants">異體字</string>
+    <string name="option_allow_variants">顯示異體字</string>
     <string name="no_matches">未找到符合條件的漢字。</string>
 
     <string name="pref_key_allow_variants">ALLOW_VARIANTS</string>
@@ -352,33 +352,6 @@
     </string-array>
 
     <string name="pref_key_charset">SHOW_CHARSET</string>
-    <string name="hz_info">編碼</string>
-    <string-array name="pref_entries_charset">
-        <item>全部漢字</item>
-        <item>廣韻收錄</item>
-        <item>說文解字收錄</item>
-        <item>康熙字典收錄</item>
-        <item>古音匯纂收錄</item>
-        <item>漢語大字典收錄</item>
-        <item>僅方言調查字表</item>
-        <item>僅古籍印刷通用字規範字形表</item>
-        <item>僅常用字字形表</item>
-        <item>僅常用國字標準字體表</item>
-        <item>僅大五碼</item>
-    </string-array>
-    <string-array name="pref_values_charset">
-        <item>漢字</item>
-        <item>GY</item>
-        <item>SW</item>
-        <item>KX</item>
-        <item>HZ</item>
-        <item>HD</item>
-        <item>FD</item>
-        <item>GJ</item>
-        <item>kHKGlyph</item>
-        <item>T1</item>
-        <item>kBigFive</item>
-    </string-array>
     <string name="pref_key_custom_languages">CUSTOM_LANGUAGES</string>
     <string name="custom_languages">自選語言</string>
     <string name="select_custom_language_summary">已選%1$d個語言：%2$s</string>
@@ -421,8 +394,8 @@
     <string name="hz_input">系統輸入法</string>
     <string name="yin_prompt">提示讀音</string>
     <string name="yin_input">讀音</string>
-    <string name="hz_range">漢字範圍</string>
-    <string name="hz_option">漢字選項</string>
+    <string name="hz_range">漢字檢索範圍</string>
+    <string name="hz_option">…</string>
     <string name="pref_key_hz_option">KEY_HZ_OPTION</string>
     <string name="pref_key_fullscreen">KEY_FULLSCREEN</string>
     <string-array name="pref_entries_font">
@@ -492,4 +465,5 @@
     <string name="area_prefecture">地級</string>
     <string name="area_county">縣級</string>
     <string name="guess_area">猜區域</string>
+    <string name="toggle_fullscreen">切換到精簡界面</string>
 </resources>

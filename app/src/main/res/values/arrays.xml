@@ -23,4 +23,30 @@
         <item>普通</item>
         <item>困難</item>
     </string-array>
+    <string-array name="pref_entries_charset">
+        <item>不限</item>
+        <item>廣韻</item>
+        <item>說文解字</item>
+        <item>康熙字典</item>
+        <item>古音匯纂</item>
+        <item>漢語大字典</item>
+        <item>方言調查字表</item>
+        <item>古籍印刷通用字規範字形表</item>
+        <item>常用字字形表</item>
+        <item>常用國字標準字體表</item>
+        <item>大五碼</item>
+    </string-array>
+    <string-array name="pref_values_charset">
+        <item>漢字</item>
+        <item>GY</item>
+        <item>SW</item>
+        <item>KX</item>
+        <item>HZ</item>
+        <item>HD</item>
+        <item>FD</item>
+        <item>GJ</item>
+        <item>kHKGlyph</item>
+        <item>T1</item>
+        <item>kBigFive</item>
+    </string-array>
 </resources>

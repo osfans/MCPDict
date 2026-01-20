@@ -6,7 +6,10 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -21,6 +24,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.fragment.app.Fragment;
 
 import com.osfans.mcpdict.Adapter.DivisionAdapter;
@@ -45,7 +49,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private ResultFragment fragmentResult;
     ArrayAdapter<CharSequence> adapterDict, adapterProvince, adapterRecommend, adapterEditor;
     DivisionAdapter adapterDivision;
-    private View layoutSearchOption, layoutHz, layoutSearchLang;
+    private View layoutSearchOption, layoutSearchLang;
     private LinearLayout layoutFilters;
     private View buttonFullscreen;
     private boolean mInitialized = false;
@@ -74,29 +78,43 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         buttonFullscreen.setOnClickListener(v -> toggleFullscreen());
         setFullscreen(Pref.getBool(R.string.pref_key_fullscreen, false));
 
-        layoutHz = selfView.findViewById(R.id.layout_hz);
-        boolean showHzOption = Pref.getBool(R.string.pref_key_hz_option, false);
-        layoutHz.setVisibility(showHzOption ? View.VISIBLE : View.GONE);
         selfView.findViewById(R.id.button_hz_option).setOnClickListener(v -> {
-            boolean show = !Pref.getBool(R.string.pref_key_hz_option, false);
-            Pref.putBool(R.string.pref_key_hz_option, show);
-            layoutHz.setVisibility(show ? View.VISIBLE : View.GONE);
+            PopupMenu popup = new PopupMenu(v.getContext(), v);
+            popup.inflate(R.menu.tool);
+            Menu menu = popup.getMenu();
+            MenuItem item = menu.findItem(R.id.menu_item_allow_variants);
+            item.setChecked(Pref.getBool(R.string.pref_key_allow_variants, true));
+            item = menu.findItem(R.id.menu_group_hz_range);
+            SubMenu subMenu = item.getSubMenu();
+            if (subMenu != null) {
+                String[] charsets = Pref.getStringArray(R.array.pref_entries_charset);
+                MenuItem subItem;
+                int charsetIndex = Pref.getInt(R.string.pref_key_charset);
+                for (int i = 0; i < charsets.length; i ++) {
+                    subItem = subMenu.add(R.id.group_hz_range, i, i, charsets[i]);
+                    if (charsetIndex == i) subItem.setChecked(true);
+                }
+                subMenu.setGroupCheckable(R.id.group_hz_range, true, true);
+            }
+            popup.setOnMenuItemClickListener(item1 -> {
+                int id = item1.getItemId();
+                int gid = item1.getGroupId();
+                if (gid == R.id.group_hz_range) {
+                    Pref.putInt(R.string.pref_key_charset, id);
+                    search();
+                }
+                else if (id == R.id.menu_item_fullscreen) toggleFullscreen();
+                else if (id == R.id.menu_item_allow_variants) {
+                    Pref.putBool(R.string.pref_key_allow_variants, !item1.isChecked());
+                    search();
+                }
+                return true;
+            });
+            popup.show();
         });
 
         layoutSearchLang = selfView.findViewById(R.id.layout_search_lang);
 
-        Spinner spinnerCharset = selfView.findViewById(R.id.spinner_charset);
-        ((ArrayAdapter<?>)spinnerCharset.getAdapter()).setDropDownViewResource(R.layout.spinner_item);
-        spinnerCharset.setSelection(Pref.getInt(R.string.pref_key_charset));
-        spinnerCharset.setOnItemSelectedListener(new OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Pref.putInt(R.string.pref_key_charset, position);
-                search();
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
-        });
         spinnerType = selfView.findViewById(R.id.spinner_type);
         ((ArrayAdapter<?>)spinnerType.getAdapter()).setDropDownViewResource(R.layout.spinner_item);
         spinnerType.setSelection(Pref.getInt(R.string.pref_key_type));
@@ -232,14 +250,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         });
 
         // Set up the checkboxes
-        CheckBox checkBoxAllowVariants = selfView.findViewById(R.id.check_box_allow_variants);
-        checkBoxAllowVariants.setChecked(Pref.getBool(R.string.pref_key_allow_variants, true));
-
-        checkBoxAllowVariants.setOnCheckedChangeListener((view, isChecked) -> {
-            Pref.putBool(R.string.pref_key_allow_variants, isChecked);
-            search();
-        });
-
         Spinner spinnerFilters = selfView.findViewById(R.id.spinner_filters);
         ((ArrayAdapter<?>)spinnerFilters.getAdapter()).setDropDownViewResource(R.layout.spinner_item);
         spinnerFilters.setOnItemSelectedListener(new OnItemSelectedListener() {

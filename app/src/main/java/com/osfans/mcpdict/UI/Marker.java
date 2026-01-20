@@ -74,7 +74,7 @@ public class Marker extends org.osmdroid.views.overlay.Marker {
         String label = cursor.getString(0);
         GeoPoint point = GeoPoint.fromInvertedDoubleString(cursor.getString(1), ',');
         setPosition(point);
-        int size = Integer.parseInt(cursor.getString(2));
+        int size = cursor.getInt(2);
         String colors = cursor.getString(3);
         int color = DB.parseColor(colors, 0);
         int subColor = DB.parseColor(colors, 1);
@@ -92,6 +92,10 @@ public class Marker extends org.osmdroid.views.overlay.Marker {
 
     private boolean isIPAVisible(double d) {
         return d >= 11 - mSize * mSize / 7d;
+    }
+
+    public int getSize() {
+        return mSize;
     }
 
     public void draw(final Canvas c, final MapView mapView, boolean shadow) {

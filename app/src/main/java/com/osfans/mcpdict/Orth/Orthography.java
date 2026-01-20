@@ -1,7 +1,5 @@
 package com.osfans.mcpdict.Orth;
 
-import static com.osfans.mcpdict.Orth.HanZi.cp2str;
-
 import android.content.res.Resources;
 import android.text.TextUtils;
 
@@ -270,7 +268,7 @@ public class Orthography {
         List<String> l = new ArrayList<>();
         input = OpenCC.convert(input, "bs2u");
         for (int unicode: input.codePoints().toArray()) {
-            String s = cp2str(unicode);
+            String s = Character.toString(unicode);
             l.add(s);
         }
         return String.join(" ", l);
