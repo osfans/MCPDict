@@ -9913,6 +9913,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "武都外納",
+        "語言": "武都外納話",
+        "地點": "甘肅隴南武都外納",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－秦晉－隴中大片－隴中片",
+        "版本": "2026-01-21",
+        "錄入人": "DaiDzao",
+        "字表來源": "《武都（外纳镇）方言音系研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.062708,
+          33.211417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "九寨溝",
