@@ -13085,6 +13085,30 @@
         "marker-color": "#916FF7",
         "marker-size": "medium",
         "marker-symbol": "c",
+        "title": "平魯",
+        "語言": "平魯話",
+        "地點": "山西朔州平魯",
+        "地圖集二分區": "晉語－五臺片",
+        "音典分區": "西北－雁北",
+        "陳邡分區": "官話－晉北－雁北大片－朔州片",
+        "版本": "2026-01-21",
+        "錄入人": "DaiDzao",
+        "字表來源": "《平鲁方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.297828,
+          39.517611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "medium",
+        "marker-symbol": "c",
         "title": "山陰",
         "語言": "山陰話",
         "地點": "山西朔州山陰",
