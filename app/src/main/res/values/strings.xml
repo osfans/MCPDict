@@ -386,7 +386,6 @@
     <string name="pref_key_fq">FQ</string>
     <string name="default_fq">地圖集二分區</string>
     <string name="pref_title_fq">分區方案</string>
-    <string name="font_warning">文字版、表格版如出現卡頓，則建議關閉大字庫字體。</string>
     <string name="pref_title_font">字體</string>
     <string name="pref_key_font">FONT</string>
     <string name="book_format">【%s】</string>

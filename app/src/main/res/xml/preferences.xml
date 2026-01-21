@@ -9,7 +9,6 @@
             app:useSimpleSummaryProvider="true"
             android:key="@string/pref_key_font"
             android:title="@string/pref_title_font"
-            android:summary="@string/font_warning"
             android:entries="@array/pref_entries_font"
             android:entryValues="@array/pref_values_font"
             android:defaultValue="default" />
