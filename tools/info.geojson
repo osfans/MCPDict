@@ -48762,29 +48762,6 @@
         "marker-color": "#F08460",
         "marker-size": "medium",
         "marker-symbol": "l",
-        "title": "惠安",
-        "語言": "惠安話",
-        "地點": "福建泉州惠安",
-        "地圖集二分區": "閩語－閩南片－泉漳小片",
-        "音典分區": "閩－閩南",
-        "陳邡分區": "福建－閩南",
-        "錄入人": "林",
-        "字表來源": "《惠安县志·方言》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          118.800832,
-          25.030142
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#F08460",
-        "marker-size": "medium",
-        "marker-symbol": "l",
         "title": "南安",
         "語言": "南安話",
         "地點": "福建泉州南安",
@@ -48872,6 +48849,29 @@
         "coordinates": [
           118.238107,
           25.495432
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
+        "marker-size": "medium",
+        "marker-symbol": "l",
+        "title": "惠安",
+        "語言": "惠安話",
+        "地點": "福建泉州惠安",
+        "地圖集二分區": "閩語－閩南片－泉漳小片",
+        "音典分區": "閩－閩南",
+        "陳邡分區": "福建－閩南",
+        "錄入人": "林",
+        "字表來源": "《惠安县志·方言》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.800832,
+          25.030142
         ]
       }
     },
