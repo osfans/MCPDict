@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.osfans.mcpdict.Adapter.PagerAdapter;
@@ -118,6 +119,8 @@ public class MainActivity extends AppCompatActivity {
         // Set up activity layout
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
         mPager = findViewById(R.id.pager);
         mPager.setUserInputEnabled(true);
         initAdapter();

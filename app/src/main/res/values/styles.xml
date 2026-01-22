@@ -1,9 +1,8 @@
 <resources
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="colorAccent">@color/accent</item>
-        <item name="fontFamily">@font/voces</item>
         <item name="android:navigationBarColor">?android:colorBackground</item>
     </style>
     <style name="AppThemeSans" parent="AppTheme">
