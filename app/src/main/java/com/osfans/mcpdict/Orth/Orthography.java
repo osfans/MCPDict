@@ -66,7 +66,7 @@ public class Orthography {
             }
             return String.join("/", nss);
         }
-        if (mToneValueStyle == 0 && s.length() == 2 && s.charAt(0) == s.charAt(1)) s = s.substring(1);
+//        if (mToneValueStyle == 0 && s.length() == 2 && s.charAt(0) == s.charAt(1)) s = s.substring(1);
         for (int i = 0; i <= 6; i++)
             s = s.replace((char)('0' + i), toneBars[index].charAt(i));
         return s;
@@ -91,7 +91,7 @@ public class Orthography {
         if (mToneStyle == 5) mToneValueStyle = 1;
         if (!TextUtils.isEmpty(tv)) {
             if (mToneValueStyle == 0) { //符號
-                if (tv.length() == 2 && tv.charAt(0) == tv.charAt(1)) tv = tv.substring(0, 1);
+//                if (tv.length() == 2 && tv.charAt(0) == tv.charAt(1)) tv = tv.substring(0, 1);
                 if (tv.contains("-")) {
                     String [] tvs = tv.split("-");
                     tvs[0] = formatToneBar(tvs[0], 0);

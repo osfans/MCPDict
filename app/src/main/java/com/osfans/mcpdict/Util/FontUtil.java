@@ -224,7 +224,7 @@ public class FontUtil {
     }
 
     public static int getIpaFontId() {
-        return isSerif() ? R.font.charis: R.font.voces;
+        return R.font.charis; //isSerif() ? R.font.charis: R.font.voces;
     }
 
     public static String getSystemFallbackFont() {
