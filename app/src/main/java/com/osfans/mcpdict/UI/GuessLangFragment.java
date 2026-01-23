@@ -1,27 +1,35 @@
 package com.osfans.mcpdict.UI;
 
+import android.content.Context;
 import android.database.Cursor;
+import android.icu.text.NumberFormat;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.PopupMenu;
 import android.widget.ScrollView;
+import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.core.text.HtmlCompat;
 import androidx.core.view.MenuCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 import com.osfans.mcpdict.Adapter.DivisionAdapter;
 import com.osfans.mcpdict.Adapter.LanguageAdapter;
@@ -30,6 +38,7 @@ import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.Orth.DisplayHelper;
 import com.osfans.mcpdict.Orth.HanZi;
 import com.osfans.mcpdict.R;
+import com.osfans.mcpdict.Util.App;
 import com.osfans.mcpdict.Util.FontUtil;
 import com.osfans.mcpdict.Util.Pref;
 
@@ -52,7 +61,9 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
 
     private String mAnswer = "";
     private GeoPoint mLocation = null;
-    private int mType = 0;
+    private int mDiameter = 0;
+    private final int MIN_DIAMETER = 10;
+    private final int MAX_DIAMETER = 200;
 
     @Override
     public void refresh() {
@@ -66,13 +77,66 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         mScrollView.fullScroll(View.FOCUS_UP);
     }
 
+    private String formatDiameterMessage(int d) {
+        Locale chineseNumbers = new Locale("en_US@numbers=hant");
+        NumberFormat formatter = NumberFormat.getInstance(chineseNumbers);
+        return String.format("%s里", formatter.format(d));
+    }
+
+    private void alertArea() {
+        FragmentActivity activity = requireActivity();
+        LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View layout = inflater.inflate(R.layout.guess_area, activity.findViewById(R.id.root));
+        final SeekBar seekBar = layout.findViewById(R.id.seekbar);
+        final TextView sbValue = layout.findViewById(R.id.seekbar_value);
+        int diameter = Pref.getInt(R.string.pref_key_guess_area_diameter, MAX_DIAMETER);
+        diameter = Math.max(diameter, MIN_DIAMETER);
+        diameter = Math.min(diameter, MAX_DIAMETER);
+        seekBar.setMax(MAX_DIAMETER / 10);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            seekBar.setMin(MIN_DIAMETER / 10);
+        }
+        seekBar.setProgress(diameter / 10);
+        sbValue.setText(formatDiameterMessage(diameter));
+
+        new AlertDialog.Builder(activity)
+                .setTitle(R.string.guess_area)
+                .setMessage(R.string.guess_lang_area_instructions)
+                .setView(layout)
+                .setPositiveButton(R.string.ok,
+                        (dialog, which) -> {
+                    mDiameter = seekBar.getProgress() * 10;
+                    mDiameter = Math.max(mDiameter, MIN_DIAMETER);
+                    mDiameter = Math.min(mDiameter, MAX_DIAMETER);
+                    Pref.putInt(R.string.pref_key_guess_area_diameter, mDiameter);
+                    newGuess("");
+                })
+                .setNegativeButton(R.string.cancel, null)
+                .show();
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar1, int progress, boolean fromUser) {
+                sbValue.setText(formatDiameterMessage(progress * 10));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar1) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar1) {
+            }
+        });
+    }
+
     private void newGuess(String level) {
         String province = (spinnerProvinces.getSelectedItemPosition() == 0) ? "" : spinnerProvinces.getSelectedItem().toString().split(" ")[0];
         int position = spinnerDivisions.getSelectedItemPosition();
         String division = (position == 0) ? "" : Objects.requireNonNull(adapterDivision.getItem(position)).toString();
         if (!TextUtils.isEmpty(province)) division = "";
         String hint = String.format("請猜一個%s%s<b>%s</b>方言", province, division, level);
-        if (mType == 1) hint += "，距離一百公里内就算猜對。";
+        if (mDiameter > 0) hint += String.format(Locale.getDefault(), "，距離%s之内均可通關。", formatDiameterMessage(mDiameter));
         mLanguageAdapter.setLevel(level);
         if (!TextUtils.isEmpty(level)) level = String.format("行政區級別 MATCH '%s' AND ", level);
         if (!TextUtils.isEmpty(province)) province = String.format("省 MATCH '%s' AND ", province);
@@ -159,8 +223,13 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         Button buttonNew = selfView.findViewById(R.id.buttonNew);
         buttonNew.setOnClickListener(v -> {
             PopupMenu popupMenu = new PopupMenu(requireContext(), v);
-            popupMenu.getMenuInflater().inflate(R.menu.guess_lang, popupMenu.getMenu());
-            MenuCompat.setGroupDividerEnabled(popupMenu.getMenu(), true);
+            Menu menu = popupMenu.getMenu();
+            popupMenu.getMenuInflater().inflate(R.menu.guess_lang, menu);
+            MenuCompat.setGroupDividerEnabled(menu, true);
+            MenuItem menuItem = menu.findItem(R.id.menu_item_answer);
+            menuItem.setEnabled(!TextUtils.isEmpty(mAnswer));
+            menuItem = menu.findItem(R.id.menu_item_guess_copy);
+            menuItem.setEnabled(!TextUtils.isEmpty(getCopyGuess()));
             popupMenu.setOnMenuItemClickListener(item -> {
                 int id = item.getItemId();
                 if (id == R.id.menu_item_answer) {
@@ -168,14 +237,15 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
                         append(String.format("這個方言是<b>%s</b>", mAnswer));
                         mAnswer = "";
                     }
+                } else if (id == R.id.menu_item_guess_copy) {
+                    copyGuess();
                 } else if (id == R.id.menu_item_random) {
-                    mType = 0;
+                    mDiameter = 0;
                     newGuess("");
                 } else if (id == R.id.menu_item_guess_area) {
-                    mType = 1;
-                    newGuess("");
+                    alertArea();
                 } else {
-                    mType = 0;
+                    mDiameter = 0;
                     String title = "";
                     if (item.getTitle() != null) title = item.getTitle().toString();
                     newGuess(title);
@@ -188,15 +258,35 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         return selfView;
     }
 
+    private String getCopyGuess() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(mTextViewIPA.getText());
+        sb.append("\n");
+        String s = mTextView.getText().toString();
+        String[] lines = s.split("\n");
+        for (int i = lines.length - 1; i >= 0; i--) {
+            sb.append(lines[i]);
+            sb.append("\n");
+        }
+        s = sb.toString().trim();
+        if (!s.contains("\n")) s = "";
+        return s;
+    }
+
+    private void copyGuess() {
+        String s = getCopyGuess();
+        if (!TextUtils.isEmpty(s)) App.copyText(s);
+    }
+
     private void hintHz(String input) {
+        mTextViewIPA.setText("");
         if (TextUtils.isEmpty(mAnswer)) return;
         if (TextUtils.isEmpty(input)) {
             mScrollViewIPA.setVisibility(View.GONE);
             return;
         }
-        String label = DB.getLabelByLanguage(mAnswer);
-        mTextViewIPA.setText("");
         mScrollViewIPA.setVisibility(View.VISIBLE);
+        String label = DB.getLabelByLanguage(mAnswer);
         for (int codePoint : input.codePoints().toArray()) {
             if (!HanZi.isHz(codePoint)) continue;
             String hz = HanZi.toHz(codePoint);
@@ -238,11 +328,11 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         String directions = "⬆️↗️➡️↘️⬇️↙️⬅️↖️";
         String arrow = directions.substring(direction * 2, direction * 2 + 2);
         String hint;
-        String mono = String.format(Locale.getDefault(), "%s%7.2fkm %5.2f%%", arrow,distance, 100 - distance / 52d).replace(" ", "&nbsp;");
+        String mono = String.format(Locale.getDefault(), "%s%6.1f里 (%4.1f%%)", arrow, distance * 2, 100 - distance / 52d).replace(" ", "&nbsp;");
         hint = String.format("<font face=\"monospace\">%s</font> 不是%s", mono, lang);
         append(hint);
-        if (mType == 1 && distance <= 100d) {
-            hint = String.format(Locale.getDefault(), "恭喜你，過關了！<br>與<b>%s</b>直綫距離已不足一百公里", mAnswer);
+        if (mDiameter > 0 && distance * 2 < mDiameter) {
+            hint = String.format(Locale.getDefault(), "恭喜你，過關了！<br>與<b>%s</b>距離已不足%s", mAnswer, formatDiameterMessage(mDiameter));
             append(hint);
             mAnswer = "";
             mLocation = null;

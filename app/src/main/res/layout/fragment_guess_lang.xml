@@ -28,8 +28,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+        android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/editTextInput"
@@ -38,6 +37,7 @@
             android:layout_weight="1"
             android:ems="5"
             android:hint="@string/guess_lang_hint"
+            android:importantForAutofill="no"
             android:inputType="text"
             android:imeOptions="actionDone"
             android:singleLine="true" />
@@ -52,6 +52,7 @@
                 android:id="@+id/text_search_lang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:elegantTextHeight="true"
                 android:completionThreshold="0"
                 android:hint="@string/guess_lang_lang_hint"
                 android:singleLine="true"
@@ -67,9 +68,10 @@
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_spinner_caret"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:importantForAccessibility="no"
+                app:layout_constraintBottom_toBottomOf="@id/text_search_lang"
                 app:layout_constraintEnd_toEndOf="@id/text_search_lang"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@id/text_search_lang" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
     <ScrollView

@@ -7,17 +7,19 @@ import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.PopupMenu;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.core.text.HtmlCompat;
 import androidx.core.view.MenuCompat;
 import androidx.fragment.app.Fragment;
@@ -27,7 +29,9 @@ import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.Orth.DisplayHelper;
 import com.osfans.mcpdict.Orth.HanZi;
 import com.osfans.mcpdict.R;
+import com.osfans.mcpdict.Util.App;
 import com.osfans.mcpdict.Util.FontUtil;
+import com.osfans.mcpdict.Util.Pref;
 
 import java.util.Locale;
 
@@ -140,8 +144,13 @@ public class GuessHzFragment extends Fragment implements RefreshableFragment {
         Button buttonNew = selfView.findViewById(R.id.buttonNew);
         buttonNew.setOnClickListener(v -> {
             PopupMenu popupMenu = new PopupMenu(requireContext(), v);
-            popupMenu.getMenuInflater().inflate(R.menu.guess_hz, popupMenu.getMenu());
-            MenuCompat.setGroupDividerEnabled(popupMenu.getMenu(), true);
+            Menu menu = popupMenu.getMenu();
+            popupMenu.getMenuInflater().inflate(R.menu.guess_hz, menu);
+            MenuCompat.setGroupDividerEnabled(menu, true);
+            MenuItem menuItem = menu.findItem(R.id.menu_item_answer);
+            menuItem.setEnabled(!TextUtils.isEmpty(mAnswer));
+            menuItem = menu.findItem(R.id.menu_item_guess_copy);
+            menuItem.setEnabled(!TextUtils.isEmpty(getCopyGuess()));
             popupMenu.setOnMenuItemClickListener(item -> {
                 int id = item.getItemId();
                 if (id == R.id.menu_item_answer) {
@@ -150,6 +159,8 @@ public class GuessHzFragment extends Fragment implements RefreshableFragment {
                         mAnswer = "";
                         mLast = "";
                     }
+                } else if (id == R.id.menu_item_guess_copy) {
+                    copyGuess();
                 } else if (id == R.id.menu_item_random) {
                     newGuess(0);
                 } else if (id == R.id.menu_item_easy) {
@@ -221,6 +232,24 @@ public class GuessHzFragment extends Fragment implements RefreshableFragment {
         });
 
         return selfView;
+    }
+
+    private String getCopyGuess() {
+        String s = mTextView.getText().toString();
+        if (s.contentEquals(Pref.getString(R.string.guess_hz_instructions))) return "";
+        StringBuilder sb = new StringBuilder();
+        String[] lines = s.split("\n");
+        for (int i = lines.length - 1; i >= 0; i--) {
+            sb.append(lines[i]);
+            sb.append("\n");
+        }
+        s = sb.toString().trim();
+        return s;
+    }
+
+    private void copyGuess() {
+        String s = getCopyGuess();
+        if (!TextUtils.isEmpty(s)) App.copyText(s);
     }
 
     private void hintLang() {

@@ -3,7 +3,7 @@
     android:id="@android:id/text1"
     android:singleLine="true"
     android:padding="@dimen/padding_size"
-    android:textSize="16sp"
+    android:textSize="@dimen/text_size"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:ellipsize="marquee"

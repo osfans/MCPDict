@@ -448,7 +448,7 @@
     <string name="guess_hz_lang_hint">輸入或選擇語言提示字音</string>
     <string name="guess_hz_hint">請輸入猜測的漢字</string>
     <string name="guess_hz_commit">提交</string>
-    <string name="guess_hz_answer">答案</string>
+    <string name="guess_hz_answer">💡答案</string>
     <string name="guess_hz_instructions">根據字形提示或各方言中的讀音猜一個漢字</string>
     <string name="random">隨機</string>
     <string name="easy">簡單</string>
@@ -457,12 +457,15 @@
     <string name="new_guess_game">出題</string>
     <string name="guess_lang_lang_hint">選擇或輸入猜測的語言</string>
     <string name="guess_lang_hint">請輸入漢字</string>
-    <string name="guess_lang_instructions">根据指定漢字的讀音或相對地理位置猜方言</string>
+    <string name="guess_lang_instructions">根據指定漢字的讀音或相對地理位置猜方言</string>
     <string name="guess_lang">🕹️猜方言</string>
     <string name="guess_part">猜分區</string>
     <string name="area_capital">省會</string>
     <string name="area_prefecture">地級</string>
     <string name="area_county">縣級</string>
-    <string name="guess_area">猜區域</string>
+    <string name="guess_area">十里不同音</string>
+    <string name="guess_lang_area_instructions">與答案的距離小於此里數即可通關。\n你認爲幾里不同音？</string>
+    <string name="pref_key_guess_area_diameter">KEY_GUESS_AREA_DIAMETER</string>
+    <string name="guess_copy">📋分享</string>
     <string name="toggle_fullscreen">切換到精簡界面</string>
 </resources>

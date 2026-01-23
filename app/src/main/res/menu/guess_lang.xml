@@ -1,6 +1,6 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android" >
-    <group>
+    <group android:id="@+id/group_level">
         <item android:id="@+id/menu_item_random"
             android:title="@string/random" />
         <item android:id="@+id/menu_item_area_capital"
@@ -12,8 +12,13 @@
         <item android:id="@+id/menu_item_guess_area"
             android:title="@string/guess_area" />
     </group>
-    <item
-        android:id="@+id/menu_item_answer"
-        android:title="@string/guess_hz_answer" />
+    <group android:id="@+id/group_other">
+        <item
+            android:id="@+id/menu_item_guess_copy"
+            android:title="@string/guess_copy" />
+        <item
+            android:id="@+id/menu_item_answer"
+            android:title="@string/guess_hz_answer" />
+    </group>
 
 </menu>

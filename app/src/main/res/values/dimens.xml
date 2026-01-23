@@ -5,4 +5,5 @@
     <dimen name="min_width">24sp</dimen>
     <dimen name="label_width">48sp</dimen>
     <dimen name="label_height">24sp</dimen>
+    <dimen name="text_size">16sp</dimen>
 </resources>
