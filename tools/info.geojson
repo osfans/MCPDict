@@ -40743,6 +40743,30 @@
         "marker-color": "#C75EEB",
         "marker-size": "small",
         "marker-symbol": "g",
+        "title": "全州才灣",
+        "語言": "全州才灣官話",
+        "地點": "廣西桂林全州才灣",
+        "地圖集二分區": "湘語－永全片－全資小片",
+        "音典分區": "湘贛－南湘－永全",
+        "陳邡分區": "官話－湘南－湘南大片－全州片",
+        "版本": "2026-01-23",
+        "錄入人": "DaiDzao",
+        "字表來源": "《广西全州县（才湾镇）湘语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.962397,
+          25.941519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#C75EEB",
+        "marker-size": "small",
+        "marker-symbol": "g",
         "title": "全州石塘",
         "語言": "全州石塘土話",
         "地點": "廣西桂林全州石塘",
