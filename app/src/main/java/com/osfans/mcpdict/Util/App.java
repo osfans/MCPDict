@@ -5,6 +5,8 @@ import static com.osfans.mcpdict.DB.COL_HD;
 
 import android.app.Application;
 import android.app.Dialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -13,6 +15,7 @@ import android.text.method.LinkMovementMethod;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -122,5 +125,23 @@ public class App extends Application {
 
     public static void setActivityTheme(AppCompatActivity app) {
         app.setTheme(getAppTheme());
+    }
+
+    public static boolean copyText(String text) {
+        Context context = getContext();
+        ClipboardManager clipboard = (ClipboardManager) context.getSystemService(CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText("item", text);
+        clipboard.setPrimaryClip(clip);
+        Toast.makeText(context, R.string.copy_done, Toast.LENGTH_SHORT).show();
+        return true;
+    }
+
+    public static  boolean copyHTML(String text, String html) {
+        Context context = getContext();
+        ClipboardManager clipboard = (ClipboardManager) context.getSystemService(CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newHtmlText("html", text, html);
+        clipboard.setPrimaryClip(clip);
+        Toast.makeText(context, R.string.copy_done, Toast.LENGTH_SHORT).show();
+        return true;
     }
 }

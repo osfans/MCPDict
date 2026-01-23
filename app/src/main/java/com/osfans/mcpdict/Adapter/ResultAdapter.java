@@ -15,9 +15,6 @@ import static com.osfans.mcpdict.DB.getResult;
 import static com.osfans.mcpdict.DB.getSubColor;
 import static com.osfans.mcpdict.DB.getUnicode;
 
-import android.content.ClipData;
-import android.content.ClipboardManager;
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
@@ -239,24 +236,6 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             }
         }
 
-        public boolean copyText(String text) {
-            Context context = App.getContext();
-            ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-            ClipData clip = ClipData.newPlainText("item", text);
-            clipboard.setPrimaryClip(clip);
-            Toast.makeText(context, R.string.copy_done, Toast.LENGTH_SHORT).show();
-            return true;
-        }
-
-        public boolean copyHTML(String text, String html) {
-            Context context = App.getContext();
-            ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-            ClipData clip = ClipData.newHtmlText("html", text, html);
-            clipboard.setPrimaryClip(clip);
-            Toast.makeText(context, R.string.copy_done, Toast.LENGTH_SHORT).show();
-            return true;
-        }
-
         public Cursor getCursor() {
             ResultAdapter adapter = (ResultAdapter) getBindingAdapter();
             if (adapter != null) {
@@ -324,7 +303,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 String zs = cursor.getString(COL_ZS);
                 if (!TextUtils.isEmpty(zs)) zs = DisplayHelper.formatJS(hz, zs);
                 String reading = String.format("[%s] %s %s%s", lang, hz, DisplayHelper.getIPA(lang, ipa), zs);
-                return copyText(reading);
+                return App.copyText(reading);
             });
             item = menu.findItem(R.id.menu_item_copy_lang_all_readings);
             item.setTitle(Pref.getString(R.string.copy_lang_all_readings, hz));
@@ -342,7 +321,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                     reading.append(String.format("%s%s\n", DisplayHelper.getIPA(lang1, ipa1), zs1));
                 }
                 cursor.moveToPosition(pos);
-                return copyText(reading.toString().trim());
+                return App.copyText(reading.toString().trim());
             });
             item = menu.findItem(R.id.menu_item_copy_readings);
             item.setTitle(Pref.getString(R.string.copy_readings, hz));
@@ -375,7 +354,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 reading.append(books);
                 readingText.append(HtmlCompat.fromHtml(books.toString(), HtmlCompat.FROM_HTML_MODE_COMPACT));
                 cursor.moveToPosition(pos);
-                return copyHTML(readingText.toString().trim(), reading.toString().trim());
+                return App.copyHTML(readingText.toString().trim(), reading.toString().trim());
             });
             item = menu.findItem(R.id.menu_item_search_homophone);
             final String menu_ipa;
@@ -390,7 +369,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             });
             item = menu.findItem(R.id.menu_item_copy_hz);
             item.setTitle(Pref.getString(R.string.copy_hz, hz));
-            item.setOnMenuItemClickListener(i -> copyText(hz));
+            item.setOnMenuItemClickListener(i -> App.copyText(hz));
             String dict = DB.getDictName(lang);
             item = menu.findItem(R.id.menu_item_dict_links);
             if (!TextUtils.isEmpty(dict)) {
