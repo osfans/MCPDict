@@ -3838,6 +3838,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5C4D0",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "昌樂",
+        "語言": "昌樂話",
+        "地點": "山東濰坊昌樂",
+        "地圖集二分區": "膠遼官話－青萊片－萊昌小片",
+        "音典分區": "華北－膠東－東濰",
+        "陳邡分區": "官話－山東－魯東大片－膠萊片",
+        "版本": "2026-01-25",
+        "錄入人": "DaiDzao",
+        "字表來源": "《山东昌乐方言语音调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.83017,
+          36.7078
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5C4D0",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "臨朐",
@@ -23999,6 +24023,29 @@
         "marker-color": "#EB6E77",
         "marker-size": "small",
         "marker-symbol": "b",
+        "title": "九江江洲",
+        "語言": "九江江洲話",
+        "地點": "江西九江柴桑江洲",
+        "地圖集二分區": "江淮官話－黃孝片",
+        "音典分區": "中上江－潯皖－梅九",
+        "陳邡分區": "官話－長江－九江大片－九江片",
+        "錄入人": "DaiDzao",
+        "字表來源": "《江西九江（江洲）方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.125029,
+          29.787463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
         "title": "九江新塘",
         "語言": "九江新塘話",
         "地點": "江西九江柴桑新塘",
@@ -32378,6 +32425,30 @@
         "coordinates": [
           117.250249,
           28.304332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "橫峰葛源",
+        "語言": "橫峰葛源話",
+        "地點": "江西上饒橫峰葛源",
+        "地圖集二分區": "贛語－鷹弋片",
+        "音典分區": "湘贛－信州",
+        "陳邡分區": "官話－信江",
+        "版本": "2026-01-25",
+        "錄入人": "DaiDzao",
+        "字表來源": "《江西横峰（葛源）方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.669595,
+          28.600736
         ]
       }
     },
