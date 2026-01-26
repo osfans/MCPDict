@@ -41029,6 +41029,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#C75EEB",
+        "marker-size": "small",
+        "marker-symbol": "g",
+        "title": "安岳大平",
+        "語言": "安岳大平話",
+        "地點": "四川内江安岳大平",
+        "地圖集二分區": "湘語－永全片－方言島",
+        "音典分區": "湘贛－南湘－永全",
+        "陳邡分區": "官話－湘南－湘南大片－永州片",
+        "方言島": true,
+        "錄入人": "DaiDzao",
+        "字表來源": "《四川安岳大平话音系研究 》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.258401,
+          29.90121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#C75EEB",
         "marker-size": "medium",
         "marker-symbol": "g",
         "title": "祁陽",
