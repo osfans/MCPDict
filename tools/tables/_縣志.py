@@ -11,7 +11,6 @@ class 表(_表):
 	韻 = ""
 	韻組 = list()
 	韻乙 = ""
-	又读 = False
 
 	def normMD(自, 行):
 		if 行.startswith(">"): return ""
@@ -137,12 +136,64 @@ class 表(_表):
 			行 = 行.replace("<","{").replace(">","}")
 		elif 名 in ("慈利",):
 			行 = 行.replace("/", "")
-		elif 名 in ("茶山塘角"):
-			if 行.startswith("#"): return "#"
-			果 = re.findall(r"\[(.*?)(\d+)[ab]?\]", 行)
-			if not 果: return
-			聲韻 = 果[0][0]
-			行 = 聲韻 + 行.replace("["+聲韻, "[")
+		elif 名 in ("博白","梧州","茶山塘角",):
+			if 行.startswith("#"): return
+			行 = re.sub(r"\[(.*?)(\d+[ab]?)\]", "\n\\1[\\2]", 行)
+		elif 名 in ("1795建甌",):
+			列 = 行.split("\t")
+			if not hasattr(自, "建甌聲") or len(自.建甌聲) == 0:
+				自.建甌聲 = 列
+				return
+			行 = ""
+			if 列[0].startswith("#"):
+				行 += 列[0] + "\n"
+			調 = 列[1]
+			for i in range(2, len(列)):
+				if 列[i].strip() == "": continue
+				行 += f"{自.建甌聲[i]}[{調}]{列[i]}\n"
+		elif 名 in ("宜春",):
+			列 = 行.split("\t")
+			if 列[0] == "韵尾":
+				自.宜春聲 = 列[3:]
+				return
+			韻 = 列[2].replace("零", "")
+			行 = "#" + 韻 + "\n"
+			for i, cell  in enumerate(列[3:]):
+				if cell == "": continue
+				if "【" not in cell: cell += "【5】"
+				for 字組, sd in re.findall(r"(.*?)【(.*?)】", cell):
+					yb = 自.宜春聲[i] + f"[{sd}]"
+					yb = yb.strip("零")
+					行 += f"{yb}{字組}\n"
+		elif 名 in ("澳門","新澳門",):
+			列 = 行.split("\t")
+			if not hasattr(自, "澳門韻") or len(自.澳門韻) == 0:
+				自.澳門韻 = list()
+				for i, v in enumerate(列):
+					if i == 0:
+						自.澳門韻.append("")
+					elif v.isdigit():
+						自.澳門韻.append(列[i + 1])
+					elif v == "" and len(列) > i + 2 and 列[i + 1].isdigit():
+						自.澳門韻.append(列[i + 2])
+					elif v:
+						自.澳門韻.append(v)
+					else:
+						自.澳門韻.append(自.澳門韻[-1])
+				return
+			if not hasattr(自, "澳門調") or len(自.澳門調) == 0:
+				聲調典 = {v[3]:k for k,v in eval(自.info["聲調"]).items()}
+				自.澳門調 = [聲調典.get(調, "") for 調 in 列]
+				return
+			行 = ""
+			for i in range(1, len(列)):
+				if 列[i].strip() == "": continue
+				調 = 自.澳門調[i]
+				if 調 == "": continue
+				韻 = 自.澳門韻[i]
+				字組 = 列[i].replace("/", "")
+				聲韻 = 列[0] + 韻
+				行 += f"{聲韻}[{調}]{字組}\n"
 		elif 名 in ("東干甘肅話",):
 			自.爲音 = False
 			if 行.startswith("#"):
@@ -158,16 +209,6 @@ class 表(_表):
 			行 = 行.rstrip("12345 \t\n")
 			行 = re.sub(r"\[([^\d].*?)\]", "(\\1)", 行)
 			行 = 自.normS(行)
-		elif 名 in ("梧州",):
-			if 行.startswith("#"): return
-			行 = re.sub(r"\[(.*?)(\d+)\]", "\n\\1[\\2]", 行)
-		elif 名 in ("博白"):
-			if 行.startswith("#"): return "#"
-			果 = re.findall(r"\[(.*?)(\d+)\]", 行)
-			if not 果: return
-			聲韻 = 果[0][0]
-			行 = re.sub(r"\[(.*?)(\d+)\]", "[\\2]", 行)
-			行 = 聲韻 + 行
 		elif 名 in ("博羅",):
 			if "[" not in 行 and not 行.startswith("#"): 行 = ""
 		elif 名 in ("金壇",):
@@ -374,12 +415,14 @@ class 表(_表):
 			行 = re.sub(r"3(?!\])", "=", 行)
 			行 = 行.replace("}{", ",")
 		elif 名 in ("崑山",):
+			if not hasattr(自, "又讀"):
+				自.又讀 = False
 			if "(又读)" in 行:
-				自.又读 = True
+				自.又讀 = True
 				行 = 行.replace("(又读)", "")
 			elif not 行:
-				自.又读 = False
-			elif 自.又读:
+				自.又讀 = False
+			elif 自.又讀:
 				行 = "".join((i + "+" if 爲字(i) else i for i in 行))
 				行 = 行.replace("=", "{(文)}").replace("+}", "}")
 		return 行
