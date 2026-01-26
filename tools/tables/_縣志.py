@@ -183,6 +183,7 @@ class 表(_表):
 				return
 			if not hasattr(自, "澳門調") or len(自.澳門調) == 0:
 				聲調典 = {v[3]:k for k,v in eval(自.info["聲調"]).items()}
+				聲調典["上聲"] = "3"
 				自.澳門調 = [聲調典.get(調, "") for 調 in 列]
 				return
 			行 = ""
