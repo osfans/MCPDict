@@ -28535,6 +28535,30 @@
         "marker-color": "#5E98EB",
         "marker-size": "medium",
         "marker-symbol": "d",
+        "title": "寶山",
+        "語言": "寶山閒話",
+        "地點": "上海寶山寶山鎮",
+        "地圖集二分區": "吳語－太湖片－上海小片",
+        "音典分區": "兩浙－浙北－蘇州",
+        "陳邡分區": "江東－蘇浙－太湖大片－嘉崇片",
+        "錄入人": "祖如",
+        "字表來源": "《上海地区方言调查研究》《上海市志方言卷》",
+        "參考文獻": "《宝山县志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.500175,
+          31.414406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
+        "marker-size": "medium",
+        "marker-symbol": "d",
         "title": "啟東",
         "語言": "啟東説話",
         "地點": "江蘇南通啟東匯龍",
@@ -59356,72 +59380,6 @@
         "coordinates": [
           135.782432,
           35.015982
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#8FC2CC",
-        "marker-size": "large",
-        "marker-symbol": "y",
-        "title": "日語唐音",
-        "語言": "日語唐音",
-        "地點": "海外*日本",
-        "地圖集二分區": "域外方音",
-        "音典分區": "域外方音",
-        "陳邡分區": "官話－日本,域外音",
-        "維護人": "NaruDora"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          129.877703,
-          32.750527
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#8FC2CC",
-        "marker-size": "large",
-        "marker-symbol": "y",
-        "title": "日語慣用音",
-        "語言": "日語慣用音",
-        "地點": "海外*日本",
-        "地圖集二分區": "域外方音",
-        "音典分區": "域外方音",
-        "陳邡分區": "官話－日本,域外音",
-        "維護人": "NaruDora"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          139.769052,
-          35.680413
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#8FC2CC",
-        "marker-size": "large",
-        "marker-symbol": "y",
-        "title": "日語未歸類字音",
-        "語言": "日語未歸類字音",
-        "地點": "海外*日本",
-        "地圖集二分區": "域外方音",
-        "音典分區": "域外方音",
-        "陳邡分區": "官話－日本,域外音",
-        "維護人": "NaruDora"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          139.778723,
-          35.683996
         ]
       }
     },
