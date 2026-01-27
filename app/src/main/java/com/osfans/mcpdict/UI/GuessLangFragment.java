@@ -11,7 +11,6 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -62,6 +61,14 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
     private String mAnswer = "";
     private GeoPoint mLocation = null;
     private int mDiameter = 0;
+    private String mDivision = "";
+    private String mArea = "";
+    private final static String FS = "－";
+    private enum GUESS {
+        LANGUAGE, DISTANCE, AREA_PROVINCE, AREA_CITY, AREA_COUNTY, DIVISION, SUBDIVISION,
+    }
+    private GUESS mType = GUESS.LANGUAGE;
+    boolean hintDirection, hintDistance;
     private final int MIN_DIAMETER = 10;
     private final int MAX_DIAMETER = 200;
 
@@ -77,7 +84,7 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         mScrollView.fullScroll(View.FOCUS_UP);
     }
 
-    private String formatDiameterMessage(int d) {
+    private String formatDistanceMessage(int d) {
         Locale chineseNumbers = new Locale("en_US@numbers=hant");
         NumberFormat formatter = NumberFormat.getInstance(chineseNumbers);
         return String.format("%s里", formatter.format(d));
@@ -97,11 +104,11 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
             seekBar.setMin(MIN_DIAMETER / 10);
         }
         seekBar.setProgress(diameter / 10);
-        sbValue.setText(formatDiameterMessage(diameter));
+        sbValue.setText(formatDistanceMessage(diameter));
 
         new AlertDialog.Builder(activity)
                 .setTitle(R.string.guess_area)
-                .setMessage(R.string.guess_lang_area_instructions)
+                .setMessage(R.string.guess_diameter_help)
                 .setView(layout)
                 .setPositiveButton(R.string.ok,
                         (dialog, which) -> {
@@ -109,6 +116,7 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
                     mDiameter = Math.max(mDiameter, MIN_DIAMETER);
                     mDiameter = Math.min(mDiameter, MAX_DIAMETER);
                     Pref.putInt(R.string.pref_key_guess_area_diameter, mDiameter);
+                    mType = GUESS.DISTANCE;
                     newGuess("");
                 })
                 .setNegativeButton(R.string.cancel, null)
@@ -117,7 +125,7 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar1, int progress, boolean fromUser) {
-                sbValue.setText(formatDiameterMessage(progress * 10));
+                sbValue.setText(formatDistanceMessage(progress * 10));
             }
 
             @Override
@@ -136,7 +144,7 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         String division = (position == 0) ? "" : Objects.requireNonNull(adapterDivision.getItem(position)).toString();
         if (!TextUtils.isEmpty(province)) division = "";
         String hint = String.format("請猜一個%s%s<b>%s</b>方言", province, division, level);
-        if (mDiameter > 0) hint += String.format(Locale.getDefault(), "，距離%s之内均可通關。", formatDiameterMessage(mDiameter));
+        if (mType == GUESS.DISTANCE) hint += String.format(Locale.getDefault(), "，距離%s之内即可通關。", formatDistanceMessage(mDiameter));
         mLanguageAdapter.setLevel(level);
         if (!TextUtils.isEmpty(level)) level = String.format("行政區級別 MATCH '%s' AND ", level);
         if (!TextUtils.isEmpty(province)) province = String.format("省 MATCH '%s' AND ", province);
@@ -154,6 +162,41 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         cursor.close();
         mTextView.setText("");
         append(hint);
+        hintHz(mTextInput.getText().toString());
+    }
+
+    private void newGuessDivision(String title) {
+        String sql = String.format("select 語言,經緯度,%s from info where length(經緯度) and length(%s) order by random() limit 1", DB.FQ, DB.FQ);
+        Cursor cursor = DB.getCursor(sql);
+        if (cursor == null) return;
+        mAnswer = cursor.getString(0);
+        mLocation = GeoPoint.fromInvertedDoubleString(cursor.getString(1), ',');
+        mDivision = cursor.getString(2);
+        if (mType == GUESS.DIVISION) mDivision = mDivision.split(FS)[0];
+        cursor.close();
+        mTextView.setText("");
+        append(Pref.getString(R.string.guess_area_division_hint, title));
+        hintHz(mTextInput.getText().toString());
+    }
+
+    private void newGuessArea(String title) {
+        String sql = "select 語言,經緯度,省,市,縣 from info where length(經緯度) and 省 != '海外' order by random() limit 1";
+        Cursor cursor = DB.getCursor(sql);
+        if (cursor == null) return;
+        mAnswer = cursor.getString(0);
+        mLocation = GeoPoint.fromInvertedDoubleString(cursor.getString(1), ',');
+        mArea = cursor.getString(2);
+        if (mType == GUESS.AREA_CITY || mType == GUESS.AREA_COUNTY) {
+            String city = cursor.getString(3).replace("/", "").strip();
+            if (!TextUtils.isEmpty(city)) mArea += FS + city;
+            if (mType == GUESS.AREA_COUNTY) {
+                String county = cursor.getString(4).replace("/", "").strip();
+                if (!TextUtils.isEmpty(city)) mArea += FS + county;
+            }
+        }
+        cursor.close();
+        mTextView.setText("");
+        append(Pref.getString(R.string.guess_area_hint, title));
         hintHz(mTextInput.getText().toString());
     }
 
@@ -220,35 +263,68 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
+        hintDirection = Pref.getBool(R.string.pref_key_hint_direction, true);
+        hintDistance = Pref.getBool(R.string.pref_key_hint_distance, true);
+
         Button buttonNew = selfView.findViewById(R.id.buttonNew);
         buttonNew.setOnClickListener(v -> {
             PopupMenu popupMenu = new PopupMenu(requireContext(), v);
             Menu menu = popupMenu.getMenu();
             popupMenu.getMenuInflater().inflate(R.menu.guess_lang, menu);
             MenuCompat.setGroupDividerEnabled(menu, true);
-            MenuItem menuItem = menu.findItem(R.id.menu_item_answer);
-            menuItem.setEnabled(!TextUtils.isEmpty(mAnswer));
-            menuItem = menu.findItem(R.id.menu_item_guess_copy);
-            menuItem.setEnabled(!TextUtils.isEmpty(getCopyGuess()));
+            menu.findItem(R.id.menu_item_answer).setEnabled(!TextUtils.isEmpty(mAnswer));
+            menu.findItem(R.id.menu_item_guess_copy).setEnabled(!TextUtils.isEmpty(getCopyGuess()));
+            menu.findItem(R.id.menu_item_hint_direction).setChecked(hintDirection);
+            menu.findItem(R.id.menu_item_hint_distance).setChecked(hintDistance);
+
             popupMenu.setOnMenuItemClickListener(item -> {
+                int gid = item.getGroupId();
                 int id = item.getItemId();
                 if (id == R.id.menu_item_answer) {
                     if (!TextUtils.isEmpty(mAnswer)) {
-                        append(String.format("這個方言是<b>%s</b>", mAnswer));
+                        String hint = String.format("這個方言是<b>%s</b>", mAnswer);
+                        if (mType == GUESS.DIVISION || mType == GUESS.SUBDIVISION) {
+                            hint += String.format("(%s)", mDivision);
+                        }
+                        if (mType == GUESS.AREA_PROVINCE || mType == GUESS.AREA_CITY || mType == GUESS.AREA_COUNTY) {
+                            hint += String.format("(%s)", mArea);
+                        }
+                        append(hint);
                         mAnswer = "";
                     }
                 } else if (id == R.id.menu_item_guess_copy) {
                     copyGuess();
-                } else if (id == R.id.menu_item_random) {
+                } else if (gid == R.id.group_level){
+                    mType = GUESS.LANGUAGE;
                     mDiameter = 0;
-                    newGuess("");
+                    if (id == R.id.menu_item_random) {
+                        newGuess("");
+                    } else {
+                        newGuess(Objects.requireNonNull(item.getTitle()).toString());
+                    }
                 } else if (id == R.id.menu_item_guess_area) {
                     alertArea();
-                } else {
-                    mDiameter = 0;
-                    String title = "";
-                    if (item.getTitle() != null) title = item.getTitle().toString();
-                    newGuess(title);
+                } else if (id == R.id.menu_item_hint_direction) {
+                    hintDirection = !hintDirection;
+                    Pref.putBool(R.string.pref_key_hint_direction, hintDirection);
+                } else if (id == R.id.menu_item_hint_distance) {
+                    hintDistance = !hintDistance;
+                    Pref.putBool(R.string.pref_key_hint_distance, hintDistance);
+                } else if (id == R.id.menu_item_guess_division) {
+                    mType = GUESS.DIVISION;
+                    newGuessDivision(Objects.requireNonNull(item.getTitle()).toString());
+                } else if (id == R.id.menu_item_guess_sub_division) {
+                    mType = GUESS.SUBDIVISION;
+                    newGuessDivision(Objects.requireNonNull(item.getTitle()).toString());
+                } else if (id == R.id.menu_item_area_province) {
+                    mType = GUESS.AREA_PROVINCE;
+                    newGuessArea(Objects.requireNonNull(item.getTitle()).toString());
+                } else if (id == R.id.menu_item_area_city) {
+                    mType = GUESS.AREA_CITY;
+                    newGuessArea(Objects.requireNonNull(item.getTitle()).toString());
+                } else if (id == R.id.menu_item_area_county) {
+                    mType = GUESS.AREA_COUNTY;
+                    newGuessArea(Objects.requireNonNull(item.getTitle()).toString());
                 }
                 return true;
             });
@@ -328,14 +404,56 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         String directions = "⬆️↗️➡️↘️⬇️↙️⬅️↖️";
         String arrow = directions.substring(direction * 2, direction * 2 + 2);
         String hint;
-        String mono = String.format(Locale.getDefault(), "%s%6.1f里 (%4.1f%%)", arrow, distance * 2, 100 - distance / 52d).replace(" ", "&nbsp;");
+        String mono = "";
+        if (hintDirection) mono += arrow;
+        if (hintDistance) mono += String.format(Locale.getDefault(), "%6.1f里 (%4.1f%%)", distance * 2, 100 - distance / 52d);
+        mono = mono.replace(" ", "&nbsp;");
         hint = String.format("<font face=\"monospace\">%s</font> 不是%s", mono, lang);
+        String division = "";
+        if (mType == GUESS.DIVISION || mType == GUESS.SUBDIVISION) {
+            division = DB.getResult(String.format("select %s from info where 語言 MATCH '%s'", DB.FQ, lang));
+            if (TextUtils.isEmpty(division)) return;
+            if (mType == GUESS.DIVISION) division = division.split(FS)[0];
+            hint += String.format("(%s)", division);
+        }
+        String area = "";
+        if (mType == GUESS.AREA_PROVINCE || mType == GUESS.AREA_CITY || mType == GUESS.AREA_COUNTY) {
+            String sql = String.format("select 省,市,縣 from info where 語言 MATCH '%s'", lang);
+            Cursor cursor = DB.getCursor(sql);
+            if (cursor == null) return;
+            area = cursor.getString(0);
+            if (mType == GUESS.AREA_CITY || mType == GUESS.AREA_COUNTY) {
+                String city = cursor.getString(1).replace("/", "").strip();
+                if (!TextUtils.isEmpty(city)) area += FS + city;
+                if (mType == GUESS.AREA_COUNTY) {
+                    String county = cursor.getString(2).replace("/", "").strip();
+                    if (!TextUtils.isEmpty(city)) area += FS + county;
+                }
+            }
+            hint += String.format("(%s)", area);
+        }
         append(hint);
-        if (mDiameter > 0 && distance * 2 < mDiameter) {
-            hint = String.format(Locale.getDefault(), "恭喜你，過關了！<br>與<b>%s</b>距離已不足%s", mAnswer, formatDiameterMessage(mDiameter));
-            append(hint);
-            mAnswer = "";
-            mLocation = null;
+        if (mType == GUESS.DISTANCE) {
+            if (mDiameter > 0 && distance * 2 < mDiameter) {
+                hint = String.format(Locale.getDefault(), "恭喜你，過關了！<br>距<b>%s</b>已不足%s", mAnswer, formatDistanceMessage(mDiameter));
+                append(hint);
+                mAnswer = "";
+                mLocation = null;
+            }
+        } else if ((mType == GUESS.DIVISION || mType == GUESS.SUBDIVISION)) {
+            if (division.contentEquals(mDivision)) {
+                hint = String.format(Locale.getDefault(), "恭喜你，過關了！<br>與<b>%s</b>同屬<b>%s</b>", mAnswer, mDivision);
+                append(hint);
+                mAnswer = "";
+                mDivision = "";
+            }
+        } else if (mType == GUESS.AREA_PROVINCE || mType == GUESS.AREA_CITY || mType == GUESS.AREA_COUNTY) {
+            if (area.contentEquals(mArea)) {
+                hint = String.format(Locale.getDefault(), "恭喜你，過關了！<br>與<b>%s</b>同屬<b>%s</b>", mAnswer, mArea);
+                append(hint);
+                mAnswer = "";
+                mArea = "";
+            }
         }
     }
 }

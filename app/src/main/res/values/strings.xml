@@ -35,6 +35,7 @@
     <string name="search_options">查詢選項：</string>
     <string name="option_allow_variants">顯示異體字</string>
     <string name="no_matches">未找到符合條件的漢字。</string>
+    <string name="toggle_fullscreen">切換到精簡界面</string>
 
     <string name="pref_key_allow_variants">ALLOW_VARIANTS</string>
 
@@ -461,11 +462,20 @@
     <string name="guess_lang">🕹️猜方言</string>
     <string name="guess_part">猜分區</string>
     <string name="area_capital">省會</string>
-    <string name="area_prefecture">地級</string>
+    <string name="area_province">省級</string>
+    <string name="area_city">地級</string>
     <string name="area_county">縣級</string>
-    <string name="guess_area">十里不同音</string>
-    <string name="guess_lang_area_instructions">與答案的距離小於此里數即可通關。\n你認爲幾里不同音？</string>
+    <string name="guess_diameter">距離</string>
+    <string name="guess_area_hint"><![CDATA[請猜一個方言，答對所屬<b>%s</b>行政區即可通關。]]></string>
+    <string name="guess_area_division_hint"><![CDATA[請猜一個方言，答對所屬<b>%s</b>即可通關。]]></string>
+    <string name="guess_diameter_help">與答案的距離小於此里數即可通關。\n你認爲幾里不同音？</string>
     <string name="pref_key_guess_area_diameter">KEY_GUESS_AREA_DIAMETER</string>
     <string name="guess_copy">📋分享</string>
-    <string name="toggle_fullscreen">切換到精簡界面</string>
+    <string name="guess_area">🌏猜區域</string>
+    <string name="hint_direction">↗️提示方向</string>
+    <string name="hint_distance">🔢提示里數</string>
+    <string name="pref_key_hint_distance">HINT_DISTANCE</string>
+    <string name="pref_key_hint_direction">HINT_DIRECTION</string>
+    <string name="guess_division">方言片</string>
+    <string name="guess_sub_division">方言小片</string>
 </resources>

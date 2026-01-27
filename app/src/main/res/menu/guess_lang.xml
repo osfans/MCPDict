@@ -1,18 +1,56 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android" >
-    <group android:id="@+id/group_level">
-        <item android:id="@+id/menu_item_random"
-            android:title="@string/random" />
-        <item android:id="@+id/menu_item_area_capital"
-            android:title="@string/area_capital" />
-        <item android:id="@+id/menu_item_area_prefecture"
-            android:title="@string/area_prefecture" />
-        <item android:id="@+id/menu_item_area_county"
-            android:title="@string/area_county" />
-        <item android:id="@+id/menu_item_guess_area"
-            android:title="@string/guess_area" />
-    </group>
+    <item android:title="@string/guess_lang" >
+        <menu >
+            <group android:id="@+id/group_level">
+                <item
+                    android:id="@+id/menu_item_random"
+                    android:title="@string/random" />
+                <item
+                    android:id="@+id/menu_item_area_capital"
+                    android:title="@string/area_capital" />
+                <item
+                    android:id="@+id/menu_item_area_city"
+                    android:title="@string/area_city" />
+                <item
+                    android:id="@+id/menu_item_area_county"
+                    android:title="@string/area_county" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/guess_area" >
+        <menu >
+            <group android:id="@+id/group_area">
+                <item
+                    android:id="@+id/menu_item_guess_area"
+                    android:title="@string/guess_diameter" />
+                <item
+                    android:id="@+id/menu_item_area_province"
+                    android:title="@string/area_province" />
+                <item
+                    android:id="@id/menu_item_area_city"
+                    android:title="@string/area_city" />
+                <item
+                    android:id="@id/menu_item_area_county"
+                    android:title="@string/area_county" />
+                <item
+                    android:id="@+id/menu_item_guess_division"
+                    android:title="@string/guess_division" />
+                <item
+                    android:id="@+id/menu_item_guess_sub_division"
+                    android:title="@string/guess_sub_division" />
+            </group>
+        </menu>
+    </item>
     <group android:id="@+id/group_other">
+        <item
+            android:checkable="true"
+            android:id="@+id/menu_item_hint_direction"
+            android:title="@string/hint_direction" />
+        <item
+            android:checkable="true"
+            android:id="@+id/menu_item_hint_distance"
+            android:title="@string/hint_distance" />
         <item
             android:id="@+id/menu_item_guess_copy"
             android:title="@string/guess_copy" />
