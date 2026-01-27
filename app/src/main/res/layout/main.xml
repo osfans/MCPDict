@@ -7,11 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:labelFor="@id/pager"
-        android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"
-        app:menu="@menu/main"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.DayNight" />
+        app:menu="@menu/main" />
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager"
         android:layout_width="match_parent"
