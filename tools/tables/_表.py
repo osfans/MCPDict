@@ -136,7 +136,7 @@ def run2text(run):
 		# elif text.startswith("[") and text.endswith("]"):
 		# 	pass
 		else:
-			text = f"{{{text}}}"
+			text = f"{{{text}}}".replace("-", "").replace("=", "")
 	return text
 
 def isDocx(fname):
