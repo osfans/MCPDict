@@ -778,10 +778,10 @@ public class DB extends SQLiteAssetHelper {
     public static String getIntro(String language) {
         if (db == null) return "";
         if (TextUtils.isEmpty(language) || Pref.getFilter() == FILTER.HZ) language = HZ;
-        String intro = TextUtils.isEmpty(language) ? "" : getFieldByLanguage(language, "說明").replace("\n", "<br>");
+        String intro = TextUtils.isEmpty(language) ? "" : getFieldByLanguage(language, "說明");
         if (isLanguageHZ(language)) {
             StringBuilder sb = new StringBuilder();
-            String[] fields = new String[] {"版本","字數"};
+            String[] fields = new String[] {"版本"};
             for (String field: fields) {
                 sb.append(String.format(Locale.getDefault(), "%s：%s<br>", field, getFieldByLanguage(language, field)));
             }
@@ -812,7 +812,7 @@ public class DB extends SQLiteAssetHelper {
                     sb.append(String.format(Locale.getDefault(), "<b>%s</b>：%s<br>", field, s));
                 }
             }
-            sb.append(intro);
+            sb.append(intro.replace("\n", "<br>"));
             intro = sb.toString();
         }
         return intro;
@@ -877,6 +877,7 @@ public class DB extends SQLiteAssetHelper {
                             }
                         </script>
                         <style>
+                            ul { padding-left: 1em; }
                             th { cursor: pointer; }
                             th.sorted-asc::after { content: " ↑"; }
                             th.sorted-desc::after { content: " ↓"; }

@@ -8,6 +8,7 @@ def get_note():
 	fname = os.path.join(WORKSPACE, "..", "README.md")
 	if not os.path.exists(fname): return ""
 	說明 = open(fname, encoding="U8").read()
+	說明 = re.sub(r"^## (.*)$", "<h2>\\1</h2>", 說明, flags=re.M).strip()
 	說明 = re.sub(r"^#.*$", "", 說明, flags=re.M).strip()
 	說明 = re.sub(r"\[(.*?)\]\((.*?)\)", "<a href=\\2>\\1</a>", 說明)
 	說明 = re.sub(r"^- (.+)$", "<li>\\1</li>", 說明, flags=re.M)
