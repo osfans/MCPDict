@@ -103,5 +103,6 @@ class 表(_表):
 		字 = 列[0]
 		if len(字) != 1: return
 		sm,ym,sd,js = 列[8:12]
+		sd = sd.lstrip("0")
 		yb = 自.smd.get(sm, sm)+(自.ymd[ym] if ym else "") + sd
 		return 字, yb, js
