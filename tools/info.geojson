@@ -54388,6 +54388,30 @@
         "marker-color": "#A5C24E",
         "marker-size": "medium",
         "marker-symbol": "h",
+        "title": "蕉嶺",
+        "語言": "蕉嶺蕉城話",
+        "地點": "廣東梅州蕉嶺蕉城",
+        "地圖集二分區": "客家話－粤臺片－梅惠小片",
+        "音典分區": "閩－閩西－嘉應",
+        "陳邡分區": "客家－嘉應－嘉應片",
+        "版本": "2026-01-27",
+        "錄入人": "林",
+        "字表來源": "《梅州蕉岭客家方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.172266,
+          24.660054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "medium",
+        "marker-symbol": "h",
         "title": "平遠",
         "語言": "平遠大柘話",
         "地點": "廣東梅州平遠大柘嶺下",
