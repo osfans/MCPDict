@@ -43,6 +43,7 @@ import com.osfans.mcpdict.Util.Pref;
 
 import org.osmdroid.util.GeoPoint;
 
+import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -166,13 +167,12 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
     }
 
     private void newGuessDivision(String title) {
-        String sql = String.format("select 語言,經緯度,%s from info where length(經緯度) and length(%s) order by random() limit 1", DB.FQ, DB.FQ);
+        String sql = String.format("select 語言,經緯度,省,市,縣,%s from info where length(經緯度) and length(%s) order by random() limit 1", DB.FQ, DB.FQ);
         Cursor cursor = DB.getCursor(sql);
         if (cursor == null) return;
         mAnswer = cursor.getString(0);
         mLocation = GeoPoint.fromInvertedDoubleString(cursor.getString(1), ',');
-        mDivision = cursor.getString(2);
-        if (mType == GUESS.DIVISION) mDivision = mDivision.split(FS)[0];
+        mDivision = getDivision(cursor);
         cursor.close();
         mTextView.setText("");
         append(Pref.getString(R.string.guess_area_division_hint, title));
@@ -185,15 +185,7 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         if (cursor == null) return;
         mAnswer = cursor.getString(0);
         mLocation = GeoPoint.fromInvertedDoubleString(cursor.getString(1), ',');
-        mArea = cursor.getString(2);
-        if (mType == GUESS.AREA_CITY || mType == GUESS.AREA_COUNTY) {
-            String city = cursor.getString(3).replace("/", "").strip();
-            if (!TextUtils.isEmpty(city)) mArea += FS + city;
-            if (mType == GUESS.AREA_COUNTY) {
-                String county = cursor.getString(4).replace("/", "").strip();
-                if (!TextUtils.isEmpty(city)) mArea += FS + county;
-            }
-        }
+        mArea = getArea(cursor);
         cursor.close();
         mTextView.setText("");
         append(Pref.getString(R.string.guess_area_hint, title));
@@ -385,6 +377,31 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         mScrollViewIPA.fullScroll(View.FOCUS_DOWN);
     }
 
+    private String getDivision(Cursor cursor) {
+        String division = "";
+        if (mType == GUESS.DIVISION || mType == GUESS.SUBDIVISION) {
+            division = cursor.getString(5);
+            if (TextUtils.isEmpty(division)) return "";
+            if (mType == GUESS.DIVISION) division = division.split(FS)[0];
+        }
+        return division;
+    }
+
+    private String getArea(Cursor cursor) {
+        String area = cursor.getString(2);
+        if (area.contentEquals("海外")) return "";
+        if (mType == GUESS.AREA_CITY || mType == GUESS.AREA_COUNTY) {
+            String city = cursor.getString(3).replace("/", "").strip();
+            if (!TextUtils.isEmpty(city)) area += FS + city;
+            List<String> municipalities = List.of("北京", "天津", "上海", "重慶");
+            if (mType == GUESS.AREA_COUNTY || (TextUtils.isEmpty(city) && mType == GUESS.AREA_CITY && !municipalities.contains(area))) {
+                String county = cursor.getString(4).replace("/", "").strip();
+                if (!TextUtils.isEmpty(county)) area += FS + county;
+            }
+        }
+        return area;
+    }
+
     private void checkLang() {
         if (TextUtils.isEmpty(mAnswer)) return;
         String lang = mAcSearchLang.getText().toString();
@@ -395,8 +412,14 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
             mLocation = null;
             return;
         }
-        String point = DB.getResult(String.format("select 經緯度 from info where 語言 MATCH '%s'", lang));
-        if (TextUtils.isEmpty(point)) return;
+        String sql = String.format("select 語言,經緯度,省,市,縣,%s from info where 語言 MATCH '\"%s\"'", DB.FQ, lang);
+        Cursor cursor = DB.getCursor(sql);
+        if (cursor == null) return;
+        String point = cursor.getString(1);
+        if (TextUtils.isEmpty(point)) {
+            cursor.close();
+            return;
+        }
         GeoPoint location = GeoPoint.fromInvertedDoubleString(point, ',');
         double distance = location.distanceToAsDouble(mLocation) / 1000d;
         double angle = location.bearingTo(mLocation);
@@ -409,29 +432,10 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         if (hintDistance) mono += String.format(Locale.getDefault(), "%6.1f里 (%4.1f%%)", distance * 2, 100 - distance / 52d);
         mono = mono.replace(" ", "&nbsp;");
         hint = String.format("<font face=\"monospace\">%s</font> 不是%s", mono, lang);
-        String division = "";
-        if (mType == GUESS.DIVISION || mType == GUESS.SUBDIVISION) {
-            division = DB.getResult(String.format("select %s from info where 語言 MATCH '%s'", DB.FQ, lang));
-            if (TextUtils.isEmpty(division)) return;
-            if (mType == GUESS.DIVISION) division = division.split(FS)[0];
-            hint += String.format("(%s)", division);
-        }
-        String area = "";
-        if (mType == GUESS.AREA_PROVINCE || mType == GUESS.AREA_CITY || mType == GUESS.AREA_COUNTY) {
-            String sql = String.format("select 省,市,縣 from info where 語言 MATCH '%s'", lang);
-            Cursor cursor = DB.getCursor(sql);
-            if (cursor == null) return;
-            area = cursor.getString(0);
-            if (mType == GUESS.AREA_CITY || mType == GUESS.AREA_COUNTY) {
-                String city = cursor.getString(1).replace("/", "").strip();
-                if (!TextUtils.isEmpty(city)) area += FS + city;
-                if (mType == GUESS.AREA_COUNTY) {
-                    String county = cursor.getString(2).replace("/", "").strip();
-                    if (!TextUtils.isEmpty(city)) area += FS + county;
-                }
-            }
-            hint += String.format("(%s)", area);
-        }
+        String division = getDivision(cursor);
+        if (!TextUtils.isEmpty(division)) hint += String.format("(%s)", division);
+        String area = getArea(cursor);
+        if (!TextUtils.isEmpty(area)) hint += String.format("(%s)", area);
         append(hint);
         if (mType == GUESS.DISTANCE) {
             if (mDiameter > 0 && distance * 2 < mDiameter) {
