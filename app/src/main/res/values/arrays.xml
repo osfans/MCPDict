@@ -3,7 +3,7 @@
     <string-array name="entries_area_level">
         <item>不限</item>
         <item>@string/area_capital</item>
-        <item>@string/area_prefecture</item>
+        <item>@string/area_city</item>
         <item>@string/area_county</item>
         <item>鄕級</item>
         <item>村級</item>
