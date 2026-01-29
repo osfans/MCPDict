@@ -14,7 +14,7 @@ android {
 
     namespace 'com.osfans.mcpdict'
     compileSdk 36
-    buildToolsVersion '36.0.0'
+    buildToolsVersion '36.1.0'
 
     def propsFile = rootProject.file('keystore.properties')
     //store release config in local.properties

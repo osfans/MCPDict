@@ -14,6 +14,7 @@ import androidx.appcompat.app.AlertDialog;
 
 import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.Orth.DisplayHelper;
+import com.osfans.mcpdict.R;
 import com.osfans.mcpdict.Util.App;
 import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.Util.FileUtil;
@@ -66,7 +67,7 @@ public class MapView extends org.osmdroid.views.MapView {
     }
 
     public void show() {
-        new AlertDialog.Builder(getContext(), androidx.appcompat.R.style.Theme_AppCompat_DayNight_NoActionBar)
+        new AlertDialog.Builder(getContext(), R.style.AppTheme)
                 .setView(this)
                 .show();
     }

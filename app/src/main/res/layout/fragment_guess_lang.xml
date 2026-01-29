@@ -51,8 +51,7 @@
             <AutoCompleteTextView
                 android:id="@+id/text_search_lang"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elegantTextHeight="true"
+                android:layout_height="match_parent"
                 android:completionThreshold="0"
                 android:hint="@string/guess_lang_lang_hint"
                 android:singleLine="true"

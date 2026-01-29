@@ -3,7 +3,8 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="colorAccent">@color/accent</item>
-        <item name="android:navigationBarColor">?android:colorBackground</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
     </style>
     <style name="AppThemeSans" parent="AppTheme">
         <item name="fontFamily">sans</item>
