@@ -21352,6 +21352,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "荆門",
+        "語言": "荆門話",
+        "地點": "湖北荆門",
+        "地圖集二分區": "西南官話－湖廣片－鄂中小片",
+        "音典分區": "中上江－荆益－荆峽",
+        "陳邡分區": "官話－長江－西南大片－江漢片",
+        "版本": "2026-01-30",
+        "錄入人": "DaiDzao",
+        "字表來源": "《荆门方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.212426,
+          31.038515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "石首",
@@ -28283,8 +28307,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          119.986371,
-          31.789036
+          119.963644,
+          31.782743
         ]
       }
     },
