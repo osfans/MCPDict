@@ -28629,6 +28629,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
+        "marker-size": "small",
+        "marker-symbol": "d",
+        "title": "上海江灣",
+        "語言": "上海江灣閒話",
+        "地點": "上海虹口江灣",
+        "地圖集二分區": "吳語－太湖片－上海小片",
+        "音典分區": "兩浙－浙北－蘇州",
+        "陳邡分區": "江東－蘇浙－太湖大片－嘉崇片",
+        "錄入人": "祖如",
+        "字表來源": "《上海地区方言调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.482622,
+          31.306009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
         "marker-size": "medium",
         "marker-symbol": "d",
         "title": "啟東",
