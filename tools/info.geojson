@@ -39138,6 +39138,30 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-color": "#C75EEB",
+        "marker-size": "small",
+        "marker-symbol": "g",
+        "title": "衡東高湖",
+        "語言": "衡東高湖話",
+        "地點": "湖南衡陽衡東高湖",
+        "地圖集二分區": "湘語－衡州片－衡山小片",
+        "音典分區": "湘贛－羅霄",
+        "陳邡分區": "湘贛－羅霄－茶陵大片－茶陵片",
+        "版本": "2026-01-30",
+        "錄入人": "DaiDzao",
+        "字表來源": "《湖南衡东高湖话同音字汇(上)》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.17821,
+          26.96083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-color": "#52CCAD",
         "marker-size": "medium",
         "marker-symbol": "f",
