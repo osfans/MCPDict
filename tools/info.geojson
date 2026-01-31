@@ -39162,6 +39162,30 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-color": "#C75EEB",
+        "marker-size": "small",
+        "marker-symbol": "g",
+        "title": "衡東大浦",
+        "語言": "衡東大浦話",
+        "地點": "湖南衡陽衡東大浦",
+        "地圖集二分區": "湘語－衡州片－衡山小片",
+        "音典分區": "湘贛－羅霄",
+        "陳邡分區": "湘贛－羅霄－茶陵大片－茶陵片",
+        "版本": "2026-01-31",
+        "錄入人": "DaiDzao",
+        "字表來源": "《衡东县大浦话音韵研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.788178,
+          26.994268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-color": "#52CCAD",
         "marker-size": "medium",
         "marker-symbol": "f",
