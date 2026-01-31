@@ -25288,6 +25288,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "岳西頭陀",
+        "語言": "岳西頭陀話",
+        "地點": "安徽安慶岳西頭陀",
+        "地圖集二分區": "江淮官話－洪巢片",
+        "音典分區": "下江－淮西－巢北",
+        "陳邡分區": "官話－南京－南京大片－合肥片",
+        "版本": "2026-01-31",
+        "錄入人": "quasad",
+        "字表來源": "《岳西方言语音及对比研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.423518,
+          31.089988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "霍山",
