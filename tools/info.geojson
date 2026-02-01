@@ -4586,6 +4586,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5C4D0",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "萊西店埠",
+        "語言": "萊西店埠話",
+        "地點": "山東青島萊西店埠",
+        "地圖集二分區": "膠遼官話－登連片－煙威小片",
+        "音典分區": "華北－膠東－東萊",
+        "陳邡分區": "官話－山東－魯東大片－登州片",
+        "錄入人": "osfans",
+        "字表來源": "《莱西店埠方言与切语研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.34325,
+          36.698989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5C4D0",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "文登",
