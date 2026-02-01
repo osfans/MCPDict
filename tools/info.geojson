@@ -23156,6 +23156,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "蘄春",
+        "語言": "蘄春話",
+        "地點": "湖北黃岡蘄春",
+        "地圖集二分區": "江淮官話－黃孝片",
+        "音典分區": "中上江－荆益－蘄州",
+        "陳邡分區": "官話－長江－西南大片－江漢片",
+        "版本": "2026-02-01",
+        "錄入人": "DaiDzao",
+        "字表來源": "《湖北蕲春方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.447574,
+          30.232535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
         "marker-size": "small",
         "marker-symbol": "b",
         "title": "蘄春青石",
