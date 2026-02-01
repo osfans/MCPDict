@@ -3216,9 +3216,9 @@
         "地圖集二分區": "晉語－邯新片－獲濟小片",
         "音典分區": "華北－懷慶",
         "陳邡分區": "官話－河南－河南大片－豫西片",
-        "版本": "2025-06-07",
-        "錄入人": "ResoundYB",
-        "字表來源": "语保"
+        "版本": "2026-01-31",
+        "錄入人": "Resound",
+        "字表來源": "《温县方言（晋语）同音字汇》"
       },
       "geometry": {
         "type": "Point",
@@ -3248,6 +3248,29 @@
         "coordinates": [
           112.950617,
           35.092132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "孟州",
+        "語言": "孟州話",
+        "地點": "河南焦作孟州",
+        "地圖集二分區": "中原官話－洛嵩片",
+        "音典分區": "華北－懷慶",
+        "版本": "2026-02-01",
+        "錄入人": "Resound",
+        "字表來源": "《河南省黄河沿岸方言语音的比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.797393,
+          34.913598
         ]
       }
     },
@@ -4979,6 +5002,29 @@
         "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
+        "title": "臺前",
+        "語言": "臺前縣",
+        "地點": "河南濮陽臺前",
+        "地圖集二分區": "中原官話－兗菏片",
+        "音典分區": "華北－西魯",
+        "版本": "2026-02-01",
+        "錄入人": "Resound",
+        "字表來源": "《河南省黄河沿岸方言语音的比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.878572,
+          35.975012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "范縣",
         "語言": "范縣話",
         "地點": "河南濮陽范縣",
@@ -6109,6 +6155,29 @@
         "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
+        "title": "封丘",
+        "語言": "封丘話",
+        "地點": "河南新鄉封丘",
+        "地圖集二分區": "中原官話－鄭開片",
+        "音典分區": "華北－河南－豫東",
+        "版本": "2026-02-01",
+        "錄入人": "Resound",
+        "字表來源": "《河南省黄河沿岸方言语音的比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.425608,
+          35.046857
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "開封縣",
         "語言": "開封縣話",
         "地點": "河南開封祥符區城關",
@@ -6148,6 +6217,29 @@
         "coordinates": [
           114.200708,
           34.417228
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "蘭封",
+        "語言": "蘭封話",
+        "地點": "河南開封蘭考蘭陽",
+        "地圖集二分區": "中原官話－鄭開片",
+        "音典分區": "華北－河南－豫東",
+        "版本": "2026-02-01",
+        "錄入人": "Resound",
+        "字表來源": "《河南省黄河沿岸方言语音的比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.825237,
+          34.862211
         ]
       }
     },
@@ -6616,6 +6708,29 @@
         "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
+        "title": "中牟",
+        "語言": "中牟話",
+        "地點": "河南鄭州中牟",
+        "地圖集二分區": "中原官話－鄭開片",
+        "音典分區": "華北－河南－豫西",
+        "版本": "2026-02-01",
+        "錄入人": "Resound",
+        "字表來源": "《洛阳方言词典》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.982483,
+          34.725011
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "登封",
         "語言": "登封話",
         "地點": "河南鄭州登封",
@@ -6663,7 +6778,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
-        "marker-size": "small",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "新安",
+        "語言": "新安話",
+        "地點": "河南洛陽新安",
+        "地圖集二分區": "中原官話－洛嵩片",
+        "音典分區": "華北－河南－豫西",
+        "版本": "2026-02-01",
+        "錄入人": "Resound",
+        "字表來源": "《河南省黄河沿岸方言语音的比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.140606,
+          34.734384
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "澠池仰韶",
         "語言": "澠池仰韶話",
@@ -7171,9 +7309,32 @@
         "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
+        "title": "濮陽縣",
+        "語言": "濮陽縣",
+        "地點": "河南濮陽濮陽",
+        "地圖集二分區": "中原官話－鄭開片",
+        "音典分區": "華北－河南－大名",
+        "版本": "2026-02-01",
+        "錄入人": "Resound",
+        "字表來源": "《河南省黄河沿岸方言语音的比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.035584,
+          35.71789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "濮陽子岸",
         "語言": "濮陽子岸話",
-        "地點": "河南濮陽子岸",
+        "地點": "河南濮陽濮陽子岸",
         "地圖集二分區": "中原官話－鄭開片",
         "音典分區": "華北－河南－大名",
         "陳邡分區": "官話－山東－魯西大片－大名片",
@@ -7455,6 +7616,29 @@
         "coordinates": [
           111.176347,
           34.783544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "靈寶豫靈",
+        "語言": "靈寶豫靈話",
+        "地點": "河南三門峽靈寶豫靈",
+        "地圖集二分區": "中原官話－關中片",
+        "音典分區": "西北－關隴",
+        "版本": "2026-02-01",
+        "錄入人": "Resound",
+        "字表來源": "《河南省黄河沿岸方言语音的比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.407061,
+          34.524236
         ]
       }
     },
