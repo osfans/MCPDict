@@ -64,8 +64,8 @@ public abstract class DisplayHelper {
     public static CharSequence formatIPA(String lang, String s) {
         if (TextUtils.isEmpty(s)) return "";
         return switch (lang) {
-            case DB.HK -> Cantonese.displayHelper.display(s, lang);
-            case DB.KOR -> Korean.displayHelper.display(s, lang);
+            case DB.HK -> Cantonese.displayHelper.displayRich(s, lang);
+            case DB.KOR -> Korean.displayHelper.displayRich(s, lang);
             case DB.VI -> Vietnamese.displayHelper.display(s, lang);
             case DB.BA -> BaiSha.displayHelper.display(s, lang);
 
