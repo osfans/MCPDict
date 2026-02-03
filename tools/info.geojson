@@ -55412,6 +55412,30 @@
         "marker-color": "#A5C24E",
         "marker-size": "medium",
         "marker-symbol": "h",
+        "title": "紫金烏石",
+        "語言": "紫金烏石紫城腔",
+        "地點": "廣東河源紫金紫城烏石",
+        "地圖集二分區": "客家話－粤臺片－龍華小片",
+        "音典分區": "閩－閩西－嘉應",
+        "陳邡分區": "客家－嘉應－嘉應片",
+        "版本": "2026-02-03",
+        "錄入人": "Resound,林",
+        "字表來源": "《紫金客家方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.202665,
+          23.635512
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "medium",
+        "marker-symbol": "h",
         "title": "尋鄔",
         "語言": "尋鄔話",
         "地點": "江西贛州尋鄔",
