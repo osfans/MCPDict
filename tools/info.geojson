@@ -15979,6 +15979,30 @@
         "marker-color": "#E54E5D",
         "marker-size": "small",
         "marker-symbol": "b",
+        "title": "百色隆或",
+        "語言": "百色隆或高山漢話",
+        "地點": "廣西百色隆林隆或",
+        "地圖集二分區": "西南官話－桂柳片－桂北小片",
+        "音典分區": "藍青－高山漢",
+        "陳邡分區": "官話－長江－西南大片－桂柳片",
+        "版本": "2026-02-05",
+        "錄入人": "DaiDzao",
+        "字表來源": "《广西百色隆或话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.577112,
+          24.589522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
         "title": "鳳山袍里",
         "語言": "鳳山高山漢話",
         "地點": "廣西河池鳳山袍里",

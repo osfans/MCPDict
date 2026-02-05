@@ -242,7 +242,13 @@ class 表(_表):
 			行 = 行.strip()
 			if 行.startswith("["):
 				行 = 自.聲 + 行
-			else:
+			elif "[" in 行:
+				自.聲 = 行.split("[")[0]
+		elif 名 in ("百色隆或",):
+			行 = 行.strip()
+			if 行.startswith("["):
+				行 = 自.聲 + 行
+			elif "[" in 行:
 				自.聲 = 行.split("[")[0]
 		elif 名 in ("臨海",):
 			if 行.startswith("#"):
