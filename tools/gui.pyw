@@ -11,14 +11,7 @@ WORKSPACE = os.path.dirname(os.path.abspath(__file__))
 os.chdir(WORKSPACE)
 output_file = ""
 
-# Create a STARTUPINFO object
-startupinfo = subprocess.STARTUPINFO()
-
-# Set the dwFlags and wShowWindow attributes to hide the window
-# STARTF_USESHOWWINDOW tells Windows to use the wShowWindow flag
-startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-# SW_HIDE tells Windows to hide the window
-startupinfo.wShowWindow = subprocess.SW_HIDE
+is_windows = sys.platform == 'win32'
 
 def enable_windows_hdpi():
     """启用Windows HDPI支持"""
@@ -34,12 +27,21 @@ def enable_windows_hdpi():
             print("无法启用HDPI支持")
 
 # 在创建主窗口前调用
-enable_windows_hdpi()
+if is_windows:
+    # Create a STARTUPINFO object
+    startupinfo = subprocess.STARTUPINFO()
+
+    # Set the dwFlags and wShowWindow attributes to hide the window
+    # STARTF_USESHOWWINDOW tells Windows to use the wShowWindow flag
+    startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+    # SW_HIDE tells Windows to hide the window
+    startupinfo.wShowWindow = subprocess.SW_HIDE
+    enable_windows_hdpi()
 
 def select_file():
     file_path = filedialog.askopenfilename(
         title="選擇字表文件",
-        filetypes=[("所有文件", "*.docx;*.xlsx;*.txt;*.tsv;*.csv;*.md"),("Word文檔", "*.docx"),("Excel表格", "*.xlsx"),("文本文件", "*.txt;*.tsv;*.csv;*.md")]
+        filetypes=[("所有文件", "*.docx;*.xlsx;*.txt;*.tsv;*.csv;*.md".split(";")),("Word文檔", "*.docx"),("Excel表格", "*.xlsx"),("文本文件", "*.txt;*.tsv;*.csv;*.md".split(";"))]
     )
     if file_path:
         labelInfo["text"] = file_path
@@ -57,15 +59,25 @@ def select_file():
                 os.remove("warnings.txt")
             output_file = spath + ".tsv"
             # Run a command and capture its output
-            result = subprocess.run(
-                ["python", os.path.join(WORKSPACE, "make.py"), spath, "-o", output_file],           # Command and arguments as a list
-                cwd=WORKSPACE,
-                startupinfo=startupinfo,
-                capture_output=True,    # Capture stdout and stderr
-                text=True,              # Return output as string (Python 3.7+)
-                encoding='utf-8',
-                check=False              # Raise an exception if the command fails
-            )
+            if is_windows:
+                result = subprocess.run(
+                    ["python", os.path.join(WORKSPACE, "make.py"), spath, "-o", output_file],           # Command and arguments as a list
+                    cwd=WORKSPACE,
+                    startupinfo=startupinfo,
+                    capture_output=True,    # Capture stdout and stderr
+                    text=True,              # Return output as string (Python 3.7+)
+                    encoding='utf-8',
+                    check=False              # Raise an exception if the command fails
+                )
+            else:
+                result = subprocess.run(
+                    ["python", os.path.join(WORKSPACE, "make.py"), spath, "-o", output_file],           # Command and arguments as a list
+                    cwd=WORKSPACE,
+                    capture_output=True,    # Capture stdout and stderr
+                    text=True,              # Return output as string (Python 3.7+)
+                    encoding='utf-8',
+                    check=False              # Raise an exception if the command fails
+                )
             output = result.stdout + result.stderr
             text_widget.delete('1.0', tk.END)
             # Insert the output into the ScrolledText widget at the 'end'
@@ -104,7 +116,6 @@ root.master.title("漢字音典字表工具")
 def install_pip():
     if not (is_installed("openpyxl") and is_installed("docx")):
         os.system("pip install -r requirements.txt")
-    is_windows = sys.platform == 'win32'
     if is_windows and not is_installed("win32com"):
         os.system("pip install pywin32")
 
