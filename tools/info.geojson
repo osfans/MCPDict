@@ -56767,6 +56767,31 @@
         "marker-color": "#A5C24E",
         "marker-size": "small",
         "marker-symbol": "h",
+        "title": "來賓鳳凰",
+        "語言": "來賓鳳凰何氏客家話",
+        "地點": "廣西來賓興賓鳳凰",
+        "地圖集二分區": "客家話－方言島",
+        "音典分區": "閩－閩西－方言島",
+        "陳邡分區": "客家－嘉應－嘉應片",
+        "方言島": true,
+        "版本": "2026-02-04",
+        "錄入人": "DaiDzao",
+        "字表來源": "《来宾市凤凰镇客家话研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.292543,
+          23.922266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
         "title": "來賓高安",
         "語言": "來賓高安客家話",
         "地點": "廣西來賓興賓高安",
