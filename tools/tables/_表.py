@@ -307,7 +307,7 @@ class 表:
 		if not spath or not os.path.exists(spath):
 			return False
 		if "版本" in 自.info and not 自.info["版本"]:
-			result = subprocess.run(["git", "log", "-1", "--format=%cd", "--date=short", spath], stdout=subprocess.PIPE, text=True)
+			result = subprocess.run(["git", "log", "-1", "--format=%cd", "--date=short", spath], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True)
 			if result.returncode == 0:
 				版本 = result.stdout.strip()
 			else:
