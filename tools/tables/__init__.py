@@ -87,14 +87,6 @@ def s2t(字組, level=1):
 	else:
 		return 字組.translate(stVariants)
 
-方言調查字表 = set()
-for 行 in open(os.path.join(PATH, SOURCE, "方言調查字表.tsv"), encoding="U8"):
-	if not 行 or 行[0] == "#": continue
-	列 = 行.strip().split("\t")
-	字 = 列[1]
-	if len(字) != 1: continue
-	方言調查字表.add(字)
-
 def addAllFq(d, fq, order,不加片 = False):
 	if order is None or fq is None: return
 	FS = "－"
@@ -251,8 +243,10 @@ def getLangs(items, 參數, args):
 	語組 = []
 	數 = 0
 	mods = []
-	if not args.output: mods.append("漢字")
 	mods.extend(getLangsByArgv(詳情, 參數) if 參數 else 詳情.keys())
+	if not mods:
+		exit(f"{參數} 未登記")
+	if not args.output: mods.insert(0, "漢字")
 	語言組 = set(詳情.keys())
 	types = [dict(),dict(),dict()]
 	省 = defaultdict(int)

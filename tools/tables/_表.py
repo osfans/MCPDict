@@ -32,7 +32,9 @@ def getYD(py):
 
 def getCompatibilityVariants():
 	d = dict()
-	fname = os.path.join(WORKSPACE, "..", "app/src/main/assets/opencc/HZUnified.txt")
+	fname = os.path.join(WORKSPACE, "tables", "data", "HZUnified.txt")
+	if not os.path.exists(fname):
+		fname = os.path.join(WORKSPACE, "..", "app/src/main/assets/opencc/HZUnified.txt")
 	for 行 in open(fname, encoding="U8"):
 		字, val = 行.rstrip().split("\t")
 		d[字] = val

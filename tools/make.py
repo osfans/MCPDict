@@ -42,7 +42,10 @@ def dumpInfo(langs):
 	open(curpath, "w",encoding="U8",newline="\n").writelines(lines)
 
 #db
-if not args.output:
+if args.output:
+	langs, 高頻字 = getLangs(list(), argv, args)
+	字數 = langs[-1].info["字數"]
+else:
 	NAME = os.path.join(WORKSPACE, '..', 'app/src/main/assets/databases/mcpdict.db')
 	DIR = os.path.dirname(NAME)
 	if os.path.exists(NAME): os.remove(NAME)
