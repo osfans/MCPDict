@@ -45,8 +45,13 @@ def select_file():
         labelInfo["text"] = file_path
         # 在这里处理文件
         spath = os.path.join(WORKSPACE, os.path.basename(file_path))
-        if spath != file_path:
+        try:
             shutil.copyfile(file_path, spath)
+        except:
+            # samefile
+            pass
+        path = Path(spath)
+        path.touch(exist_ok=True)
         try:
             if os.path.exists("warnings.txt"):
                 os.remove("warnings.txt")
