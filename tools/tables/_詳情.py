@@ -107,10 +107,26 @@ def normSource(books):
 			return books.value
 	return None
 
+
+def reSaveXlsx(filename):
+	import win32com.client as win32
+	# 1. 启动 Excel 应用
+	excel = win32.Dispatch('Excel.Application')
+	excel.Visible = True  # 设置为 True 可见，False 为后台运行
+
+	# 2. 打开指定工作簿 (需使用绝对路径)
+	file_path = os.path.abspath(filename)
+	workbook = excel.Workbooks.Open(file_path)
+
+	# 3. 操作完成后建议保存并关闭
+	workbook.Save()
+	excel.Quit()
+
 def 加載(省=None):
 	if not 省 and not 過時():
 		return json.load(open(tpath,encoding="U8"))
 	d = dict()
+	reSaveXlsx(spath)
 	wb = load_workbook(spath)
 	sheet = wb.worksheets[0]
 	lineCount = 0
