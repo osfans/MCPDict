@@ -2893,6 +2893,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#926EF8",
+        "marker-size": "medium",
+        "marker-symbol": "c",
+        "title": "林州",
+        "語言": "林州話",
+        "地點": "河南安陽林州",
+        "地圖集二分區": "晉語－邯新片－獲濟小片",
+        "音典分區": "華北－漳衛",
+        "陳邡分區": "官話－山東－魯西大片－彰德片",
+        "版本": "2026-02-04",
+        "錄入人": "DaiDzao",
+        "字表來源": "《林州方言志》",
+        "補充閲讀": "《林州方言语音调查研究》《林州方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.834218,
+          36.079053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
         "marker-size": "small",
         "marker-symbol": "c",
         "title": "安澤秦壁",
@@ -26461,7 +26486,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "b",
         "title": "溧水在城",
         "語言": "溧水街上話（在城）",
