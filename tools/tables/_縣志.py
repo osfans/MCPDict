@@ -341,7 +341,11 @@ class 表(_表):
 		elif 名 in ("石首",):
 			行 = 自.增加調類(行)
 		elif 名 in ("衡東大浦",):
-			if 行.startswith("阴平"): return
+			if 行.lstrip().startswith("阴平"): return
+			行 = 行.strip()
+			行 = 自.增加調類(行)
+		elif 名 in ("林州",):
+			if 行.lstrip().startswith("阴平"): return
 			行 = 自.增加調類(行)
 		elif 名 in ("南通",):
 			行 = 自.增加調類(行)
