@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import datetime
-import os, re, json, glob, fnmatch
+import os, re, json, fnmatch
 from importlib import import_module
 import tables._詳情
 from pypinyin import pinyin, Style
@@ -131,11 +131,11 @@ def getLangsByArgv(infos, argv):
 		elif os.path.isfile(a):
 			ba = os.path.basename(a)
 			ba2 = re.sub(r"( ?\(\d\d?\))(.[^.]*)$", "\\2", ba)
+			ba3 = ba2.replace(".tsv", ".docx")
+			ba4 = ba2.replace(".tsv", ".xlsx")
+			bas = [ba, ba2, ba3, ba4]
 			for i in infos:
-				if fnmatch.fnmatch(ba, infos[i]["文件名"]):
-					l.append(i)
-					break
-				elif fnmatch.fnmatch(ba2, infos[i]["文件名"]):
+				if fnmatch.filter(bas, infos[i]["文件名"]):
 					l.append(i)
 					break
 	return l
