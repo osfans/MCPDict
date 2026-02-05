@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import json, os, re
+import json, os, re, sys
 from openpyxl import load_workbook
 from .__init__ import s2t
 
@@ -109,6 +109,8 @@ def normSource(books):
 
 
 def reSaveXlsx(filename):
+	is_windows = sys.platform == 'win32'
+	if not is_windows: return
 	import win32com.client as win32
 	# 1. 启动 Excel 应用
 	excel = win32.Dispatch('Excel.Application')
