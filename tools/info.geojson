@@ -2412,6 +2412,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "聊城",
+        "語言": "聊城話",
+        "地點": "山東聊城",
+        "地圖集二分區": "冀魯官話－石濟片－聊泰小片",
+        "音典分區": "華北－魯北－東昌",
+        "陳邡分區": "官話－山東－魯西大片－東昌片",
+        "版本": "2026-02-03",
+        "錄入人": "DaiDzao",
+        "字表來源": "《聊城方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.996187,
+          36.462759
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5A4B6",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "茌平",
@@ -2742,6 +2766,30 @@
         "coordinates": [
           114.500064,
           36.875281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "medium",
+        "marker-symbol": "c",
+        "title": "成安",
+        "語言": "成安話",
+        "地點": "河北邯鄲成安",
+        "地圖集二分區": "晉語－邯新片－磁漳小片",
+        "音典分區": "華北－漳衛",
+        "陳邡分區": "官話－山東－魯西大片－大名片",
+        "版本": "2026-02-03",
+        "錄入人": "DaiDzao",
+        "字表來源": "《河北成安方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.694398,
+          36.448869
         ]
       }
     },
@@ -55047,6 +55095,31 @@
         "marker-color": "#A5C24E",
         "marker-size": "small",
         "marker-symbol": "h",
+        "title": "平陽溪南",
+        "語言": "平陽溪南畬話",
+        "地點": "浙江溫州平陽順溪溪南",
+        "地圖集二分區": "客家話－畲話",
+        "音典分區": "閩－閩西－嘉應",
+        "陳邡分區": "客家－閩西－畬話片",
+        "方言島": true,
+        "版本": "2026-02-03",
+        "錄入人": "林",
+        "字表來源": "《浙江平阳溪南畲话研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.259626,
+          27.603178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
         "title": "景寧鄭坑",
         "語言": "景寧鄭坑畲話",
         "地點": "浙江麗水景寧鄭坑",
@@ -55113,6 +55186,31 @@
         "coordinates": [
           119.409048,
           28.855928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "安吉郎村",
+        "語言": "安吉郎村畬話",
+        "地點": "浙江湖州安吉章村郎村",
+        "地圖集二分區": "客家話－畲話",
+        "音典分區": "閩－閩西－嘉應",
+        "陳邡分區": "客家－閩西－畬話片",
+        "方言島": true,
+        "版本": "2026-02-04",
+        "錄入人": "林",
+        "字表來源": "《浙江安吉郎村畲话研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.38901,
+          30.450741
         ]
       }
     },
@@ -56312,6 +56410,29 @@
         "coordinates": [
           110.324046,
           21.888757
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "肇慶大旺",
+        "語言": "肇慶大旺華僑農場客家話",
+        "地點": "廣東肇慶高新大旺",
+        "地圖集二分區": "客家話－粤西片",
+        "音典分區": "閩－閩西－方言島",
+        "方言島": true,
+        "錄入人": "林",
+        "字表來源": "《肇庆大旺华侨农场越南归侨客家话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.85019,
+          23.320557
         ]
       }
     },
