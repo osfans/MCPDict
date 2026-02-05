@@ -7644,6 +7644,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#926EF8",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "壺關店上",
+        "語言": "長治壺關店上話",
+        "地點": "山西長治壺關店上",
+        "地圖集二分區": "晉語－上黨片－長治小片",
+        "音典分區": "華北－上黨－潞州",
+        "陳邡分區": "官話－山東－魯西大片－潞州片",
+        "錄入人": "osfans",
+        "字表來源": "《长治壶关店上镇音系研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.281568,
+          35.992367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
         "marker-size": "medium",
         "marker-symbol": "c",
         "title": "長子",
