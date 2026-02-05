@@ -115,9 +115,9 @@ root.master.title("漢字音典字表工具")
 
 def install_pip():
     if not (is_installed("openpyxl") and is_installed("docx")):
-        os.system("pip install -r requirements.txt")
+        os.system("pip install -r requirements.txt -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple")
     if is_windows and not is_installed("win32com"):
-        os.system("pip install pywin32")
+        os.system("pip install pywin32 -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple")
 
 ttk.Label(root, text="歡迎使用漢字音典字表工具").pack()
 document = "漢字音典字表檔案（長期更新）.xlsx"
