@@ -2436,6 +2436,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "大張家鎮",
+        "語言": "大張家鎮話",
+        "地點": "山東聊城莘縣大張家鎮",
+        "地圖集二分區": "冀魯官話－石濟片－聊泰小片",
+        "音典分區": "華北－魯北－東昌",
+        "陳邡分區": "官話－山東－魯西大片－東昌片",
+        "版本": "2026-02-05",
+        "錄入人": "DaiDzao",
+        "字表來源": "《山东莘县大张家镇方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.400299,
+          35.886449
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5A4B6",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "茌平",
