@@ -1,6 +1,6 @@
 import re, sys
 
-sim = set("参")
+sim = set("与")
 l = set()
 for line in open("IDS.txt", encoding="utf-8"):
 	fs = line.split("\t")
@@ -20,6 +20,7 @@ lines2 = list()
 lines = list()
 for line in open("異體字.tsv", encoding="U8"):
 	line = line.strip()
+	if not line: continue
 	a, b = line.split("\t")
 	if len(a) == 1 and len(b) == 1 and a in l:
 		lines2.append(line + "\n")
