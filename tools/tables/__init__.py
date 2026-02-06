@@ -7,7 +7,6 @@ import tables._詳情
 from pypinyin import pinyin, Style
 from collections import defaultdict
 from itertools import combinations
-from opencc import OpenCC
 import sqlite3
 import logging
 
@@ -21,17 +20,6 @@ WORKSPACE = os.path.join(PATH, "..")
 VARIANT_FILE = os.path.join(PATH, SOURCE, "正字.tsv")
 
 辭典 = ["漢字","說文","康熙","匯纂","漢大", "異體字","字形變體","字形描述","部件檢索","兩分","總筆畫數","部首餘筆","五筆畫","五筆86","五筆98","五筆06","倉頡三代","倉頡五代","倉頡六代","山人","分類"]
-
-_t2s = OpenCC("t2s.json")
-_s2t = OpenCC("s2t.json")
-
-def opencc_s2t(s):
-	return _s2t.convert(s)
-
-def t2s(s, level=2):
-	if level == 1:
-		return s
-	return _t2s.convert(s)
 
 def hex2chr(uni):
 	"把unicode轉換成漢字"
@@ -63,9 +51,6 @@ def 找字(字組):
 def 有字(字組):
 	return any(map(爲字, 字組))
 
-def 普拼(word):
-	return pinyin(t2s(word), style=Style.TONE3, heteronym=False) if 爲字(word[0]) else [[word.lower()]]
-
 def getSTVariants(level=2):
 	d = dict()
 	for 行 in open(VARIANT_FILE,encoding="U8"):
@@ -86,6 +71,21 @@ def s2t(字組, level=1):
 		return 字組.translate(normVariants)
 	else:
 		return 字組.translate(stVariants)
+
+def getTSVariants():
+	d = dict()
+	for 行 in open(VARIANT_FILE,encoding="U8"):
+		if "#" in 行: continue
+		列 = 行.strip().split("\t")
+		列[1] = 列[1].strip()
+		if " " not in 列[1]:
+			d[列[1]] = 列[0]
+	return str.maketrans(d)
+
+tsVariants = getTSVariants()
+
+def 普拼(word):
+	return pinyin(word.translate(tsVariants), style=Style.TONE3, heteronym=False) if 爲字(word[0]) else [[word.lower()]]
 
 def addAllFq(d, fq, order,不加片 = False):
 	if order is None or fq is None: return

@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import ttk, filedialog, font, scrolledtext
 import tkinter as tk
-import importlib.util
 import os, sys, ctypes, shutil
 from pathlib import Path
 import subprocess
@@ -11,7 +10,12 @@ WORKSPACE = os.path.dirname(os.path.abspath(__file__))
 os.chdir(WORKSPACE)
 output_file = ""
 
-is_windows = sys.platform == 'win32'
+try:
+    import msvcrt
+except ModuleNotFoundError:
+    is_windows = False
+else:
+    is_windows = True
 
 def enable_windows_hdpi():
     """启用Windows HDPI支持"""
@@ -37,6 +41,21 @@ if is_windows:
     # SW_HIDE tells Windows to hide the window
     startupinfo.wShowWindow = subprocess.SW_HIDE
     enable_windows_hdpi()
+else:
+    startupinfo = None
+
+import importlib.util
+def is_installed(package_name):
+    spec = importlib.util.find_spec(package_name)
+    return spec is not None
+
+def install_pip():
+    if not (is_installed("openpyxl") and is_installed("docx")):
+        os.system("pip install -r requirements.txt -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple")
+    if is_windows and not is_installed("win32com"):
+        os.system("pip install pywin32 -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple")
+
+install_pip()
 
 def select_file():
     file_path = filedialog.askopenfilename(
@@ -59,25 +78,15 @@ def select_file():
                 os.remove("warnings.txt")
             output_file = spath + ".tsv"
             # Run a command and capture its output
-            if is_windows:
-                result = subprocess.run(
-                    ["python", os.path.join(WORKSPACE, "make.py"), spath, "-o", output_file],           # Command and arguments as a list
-                    cwd=WORKSPACE,
-                    startupinfo=startupinfo,
-                    capture_output=True,    # Capture stdout and stderr
-                    text=True,              # Return output as string (Python 3.7+)
-                    encoding='utf-8',
-                    check=False              # Raise an exception if the command fails
-                )
-            else:
-                result = subprocess.run(
-                    ["python", os.path.join(WORKSPACE, "make.py"), spath, "-o", output_file],           # Command and arguments as a list
-                    cwd=WORKSPACE,
-                    capture_output=True,    # Capture stdout and stderr
-                    text=True,              # Return output as string (Python 3.7+)
-                    encoding='utf-8',
-                    check=False              # Raise an exception if the command fails
-                )
+            result = subprocess.run(
+                ["python", os.path.join(WORKSPACE, "make.py"), spath, "-o", output_file],           # Command and arguments as a list
+                cwd=WORKSPACE,
+                startupinfo=startupinfo,
+                capture_output=True,    # Capture stdout and stderr
+                text=True,              # Return output as string (Python 3.7+)
+                encoding='utf-8',
+                check=False              # Raise an exception if the command fails
+            )
             output = result.stdout + result.stderr
             text_widget.delete('1.0', tk.END)
             # Insert the output into the ScrolledText widget at the 'end'
@@ -90,45 +99,24 @@ def select_file():
         except:
             pass
 
-def is_installed(package_name):
-    spec = importlib.util.find_spec(package_name)
-    return spec is not None
-
-class App(tk.Frame):
-    def __init__(self, master=None):
-        super().__init__(master)
-        self.pack()
-        self.contents = tk.StringVar()
+class App(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title("漢字音典字表工具")
+        #self.maxsize(1000, 400)
+        font.nametofont("TkDefaultFont")["size"]=12
+        ttk.Label(self, text="歡迎使用漢字音典字表工具").pack()
+        document = "漢字音典字表檔案（長期更新）.xlsx"
+        if not os.path.exists(document):
+            ttk.Label(self, text=f"如需修改檔案，請將“{document}”放在當前目錄：{WORKSPACE}").pack()
+        ttk.Button(self, text="選擇字表", command=select_file).pack()
 
 # create the application
 root = App()
 
-default_font = font.nametofont("TkDefaultFont")
-# print(default_font.actual()["size"])
-default_font["size"]=12
-
-#
-# here are method calls to the window manager class
-#
-root.master.title("漢字音典字表工具")
-# root.master.maxsize(1000, 400)
-
-def install_pip():
-    if not (is_installed("openpyxl") and is_installed("docx")):
-        os.system("pip install -r requirements.txt -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple")
-    if is_windows and not is_installed("win32com"):
-        os.system("pip install pywin32 -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple")
-
-ttk.Label(root, text="歡迎使用漢字音典字表工具").pack()
-document = "漢字音典字表檔案（長期更新）.xlsx"
-if not os.path.exists(document):
-    ttk.Label(root, text=f"如需修改檔案，請將“{document}”放在當前目錄：{WORKSPACE}").pack()
-install_pip()
-ttk.Button(root, text="選擇字表", command=select_file).pack()
 labelInfo = ttk.Label(root)
 labelInfo.pack()
 text_widget = scrolledtext.ScrolledText(root)
-text_widget.pack()
+text_widget.pack(fill=BOTH, expand=True, padx=2, pady=2)
 
-# start the program
 root.mainloop()

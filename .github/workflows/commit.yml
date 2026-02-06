@@ -44,6 +44,7 @@ jobs:
 
     - name: Calculate similarity
       run: |
+        python3 -m pip install OpenCC
         pushd tools
         python3 sim/make.py
         popd

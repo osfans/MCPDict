@@ -108,13 +108,12 @@ def normSource(books):
 	return None
 
 
-def reSaveXlsx(filename):
-	is_windows = sys.platform == 'win32'
-	if not is_windows: return
+def refreshXlsx(filename):
+	if sys.platform != 'win32': return
 	import win32com.client as win32
 	# 1. 启动 Excel 应用
 	excel = win32.Dispatch('Excel.Application')
-	excel.Visible = True  # 设置为 True 可见，False 为后台运行
+	excel.Visible = False  # 设置为 True 可见，False 为后台运行
 
 	# 2. 打开指定工作簿 (需使用绝对路径)
 	file_path = os.path.abspath(filename)
@@ -128,7 +127,7 @@ def 加載(省=None):
 	if not 省 and not 過時():
 		return json.load(open(tpath,encoding="U8"))
 	d = dict()
-	reSaveXlsx(spath)
+	refreshXlsx(spath)
 	wb = load_workbook(spath)
 	sheet = wb.worksheets[0]
 	lineCount = 0
@@ -286,5 +285,5 @@ def 加載(省=None):
 	geojsonpath = os.path.join(curdir, "..", "info.geojson")
 	if os.path.exists(geojsonpath):
 		json.dump(FeatureCollection, fp=open(geojsonpath, "w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
-		json.dump(d, fp=open(tpath,"w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
+	json.dump(d, fp=open(tpath,"w",encoding="U8",newline="\n"),ensure_ascii=False,indent=2)
 	return d

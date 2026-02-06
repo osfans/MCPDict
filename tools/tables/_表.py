@@ -525,7 +525,7 @@ class 表:
 				音 = re.sub(r"\(.*?\)","",py).strip(" _`*")
 				音 = 音.split("/", 1)[0]
 				if "-" not in 音.rstrip("+-*/=?@\\"):
-					繁註 = opencc_s2t(註.replace(" ", ""))
+					繁註 = s2t(註.replace(" ", ""))
 					if "兒化" not in 繁註 and "連讀" not in 繁註 and "語流" not in 繁註 and "變調" not in 繁註 and "合音" not in 繁註:
 						音乙 = 音.rstrip("+-*/=?@\\")
 						聲韻, 調 = 自.分音(音乙)
