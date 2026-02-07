@@ -51,9 +51,9 @@ def is_installed(package_name):
 
 def install_pip():
     if not (is_installed("openpyxl") and is_installed("docx")):
-        os.system("pip install -r requirements.txt -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple")
+        os.system(f"{sys.executable} -m pip install -r requirements.txt -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple")
     if is_windows and not is_installed("win32com"):
-        os.system("pip install pywin32 -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple")
+        os.system(f"{sys.executable} -m pip install pywin32 -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple")
 
 install_pip()
 
@@ -79,7 +79,7 @@ def select_file():
             output_file = spath + ".tsv"
             # Run a command and capture its output
             result = subprocess.run(
-                ["python", os.path.join(WORKSPACE, "make.py"), spath, "-o", output_file],           # Command and arguments as a list
+                [sys.executable, os.path.join(WORKSPACE, "make.py"), spath, "-o", output_file],           # Command and arguments as a list
                 cwd=WORKSPACE,
                 startupinfo=startupinfo,
                 capture_output=True,    # Capture stdout and stderr
