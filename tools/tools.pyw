@@ -5,6 +5,7 @@ import os, sys, ctypes, shutil
 from pathlib import Path
 import subprocess
 
+VERSION = 20260207
 os.environ['PYTHONIOENCODING'] = 'utf-8'
 WORKSPACE = os.path.dirname(os.path.abspath(__file__))
 os.chdir(WORKSPACE)
@@ -102,10 +103,9 @@ def select_file():
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("漢字音典字表工具")
+        self.title(f"漢字音典字表工具 {VERSION}")
         #self.maxsize(1000, 400)
         font.nametofont("TkDefaultFont")["size"]=12
-        ttk.Label(self, text="歡迎使用漢字音典字表工具").pack()
         document = "漢字音典字表檔案（長期更新）.xlsx"
         if not os.path.exists(document):
             ttk.Label(self, text=f"如需修改檔案，請將“{document}”放在當前目錄：{WORKSPACE}").pack()
