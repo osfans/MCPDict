@@ -6320,6 +6320,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "開封",
+        "語言": "開封話",
+        "地點": "河南開封",
+        "地圖集二分區": "中原官話－鄭開片",
+        "音典分區": "華北－河南－豫東",
+        "陳邡分區": "官話－河南－河南大片－鄭開片",
+        "版本": "2022-04-10",
+        "字表來源": "《河南开封方言语音研究》",
+        "補充閲讀": "《河南省黄河沿岸方言语音的比较研究》《开封市志  第6册 方言部分》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.347203,
+          34.796112
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "開封縣",
