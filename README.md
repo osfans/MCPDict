@@ -16,7 +16,7 @@
 
 ## 相關項目
 - [唯二](https://github.com/vearvip)開發的[網頁版](https://mcpdict.vear.vip/)（[前端](https://github.com/vearvip/mcpdict-frontend)、[後端](https://github.com/vearvip/mcpdict-backend)）：提供了字音查詢、長文注音、語言地圖、設置等功能。
-- [nk2028](https://github.com/nk2028)開發的[網頁版](https://nk2028.shn.hk/hdqt/)（[前端](https://github.com/nk2028/hdqt)、[後端](https://github.com/nk2028/hdqt-server)）：提供了字音查詢等功能。
+- [綾香](https://github.com/ayaka14732)開發的[音典網頁版](https://nk2028.shn.hk/yindian/)（[前端](https://github.com/nk2028/yindian)、[後端](https://github.com/nk2028/yindian-server)）：提供了字音查詢等功能。
 - [不覊](https://github.com/jengzang)開發的[方音圖鑑](https://dialects.yzup.top)（[前端](https://github.com/jengzang/dialects-js-frontend)、[後端](https://github.com/jengzang/dialects-backend)）：提供了查中古、查音位、查調、查字、分區繪圖、自定義繪圖等功能。
 
 ## 參考項目
