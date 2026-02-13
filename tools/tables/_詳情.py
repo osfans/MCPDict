@@ -127,7 +127,7 @@ def 加載(省=None):
 	if not 省 and not 過時():
 		return json.load(open(tpath,encoding="U8"))
 	d = dict()
-	refreshXlsx(spath)
+	# refreshXlsx(spath)
 	wb = load_workbook(spath)
 	sheet = wb.worksheets[0]
 	lineCount = 0
