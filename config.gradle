@@ -6,15 +6,15 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
-            shrinkResources false
-            signingConfig signingConfigs.release
+            minifyEnabled = false
+            shrinkResources = false
+            signingConfig = signingConfigs.release
         }
     }
 
-    namespace 'com.osfans.mcpdict'
-    compileSdk 36
-    buildToolsVersion '36.1.0'
+    namespace = 'com.osfans.mcpdict'
+    compileSdk = 36
+    buildToolsVersion = '36.1.0'
 
     def propsFile = rootProject.file('keystore.properties')
     //store release config in local.properties

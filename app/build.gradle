@@ -13,7 +13,7 @@ android {
         versionName "6.0 ($date)"
         buildConfigField "int", "DB_VER", "$date"
         buildFeatures {
-            buildConfig true
+            buildConfig = true
         }
 
         ndk {
