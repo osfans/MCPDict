@@ -139,57 +139,64 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
         });
     }
 
+    private String getFilter() {
+        String province = (spinnerProvinces.getSelectedItemPosition() == 0) ? "" : spinnerProvinces.getSelectedItem().toString().split(" ")[0];
+        int position = spinnerDivisions.getSelectedItemPosition();
+        String division = (position == 0) ? "" : Objects.requireNonNull(adapterDivision.getItem(position)).toString();
+        String filter = " AND length(經緯度) ";
+        if (!TextUtils.isEmpty(province)) {
+            filter += String.format(" AND 省 MATCH '%s' ", province);
+        }
+        if (!TextUtils.isEmpty(division)) {
+            filter += String.format(" AND %s MATCH '%s' ", DB.FQ, division);
+        }
+        return filter;
+    }
+
+    private void newGuess(String filter, String hint) {
+        String sql = String.format("select 語言,經緯度,省,市,縣,%s from info where length(經緯度) %s order by random() limit 1", DB.FQ, filter);
+        Cursor cursor = DB.getCursor(sql);
+        if (cursor == null) {
+            hint = Pref.getString(R.string.guess_lang_error);
+        } else {
+            mLanguageAdapter.setFilter(filter);
+            mAnswer = cursor.getString(0);
+            mLocation = GeoPoint.fromInvertedDoubleString(cursor.getString(1), ',');
+            mDivision = getDivision(cursor);
+            mArea = getArea(cursor);
+            cursor.close();
+            hintHz(mTextInput.getText().toString());
+        }
+        mTextView.setText("");
+        append(hint);
+    }
+
     private void newGuess(String level) {
         String province = (spinnerProvinces.getSelectedItemPosition() == 0) ? "" : spinnerProvinces.getSelectedItem().toString().split(" ")[0];
         int position = spinnerDivisions.getSelectedItemPosition();
         String division = (position == 0) ? "" : Objects.requireNonNull(adapterDivision.getItem(position)).toString();
-        if (!TextUtils.isEmpty(province)) division = "";
-        String hint = String.format("請猜一個%s%s<b>%s</b>方言", province, division, level);
+        String hint = String.format("請猜一個<b>%s</b> %s <b>%s</b>方言", province, division, level);
         if (mType == GUESS.DISTANCE) hint += String.format(Locale.getDefault(), "，距離%s之内即可通關。", formatDistanceMessage(mDiameter));
-        mLanguageAdapter.setLevel(level);
-        if (!TextUtils.isEmpty(level)) level = String.format("行政區級別 MATCH '%s' AND ", level);
-        if (!TextUtils.isEmpty(province)) province = String.format("省 MATCH '%s' AND ", province);
-        if (!TextUtils.isEmpty(division)) division = String.format("%s MATCH '%s' AND ", DB.FQ, division);
-        String sql = String.format("select 語言,經緯度 from info where %s %s %s length(經緯度) order by random() limit 1", province, division, level);
-        Cursor cursor = DB.getCursor(sql);
-        if (cursor == null) {
-            sql = String.format("select 語言,經緯度 from info where %s %s length(經緯度) order by random() limit 1", province, division);
-            cursor = DB.getCursor(sql);
-            hint = hint.replaceFirst("<b>.*?</b>", "");
+        String filter = getFilter();
+        if (level.contentEquals("縣級")) level = "縣級 OR 地級";
+        if (!TextUtils.isEmpty(level)) {
+            filter += String.format(" AND 行政區級別 MATCH '%s' ", level);
         }
-        if (cursor == null) return;
-        mAnswer = cursor.getString(0);
-        mLocation = GeoPoint.fromInvertedDoubleString(cursor.getString(1), ',');
-        cursor.close();
-        mTextView.setText("");
-        append(hint);
-        hintHz(mTextInput.getText().toString());
+        newGuess(filter, hint);
     }
 
     private void newGuessDivision(String title) {
-        String sql = String.format("select 語言,經緯度,省,市,縣,%s from info where length(經緯度) and length(%s) order by random() limit 1", DB.FQ, DB.FQ);
-        Cursor cursor = DB.getCursor(sql);
-        if (cursor == null) return;
-        mAnswer = cursor.getString(0);
-        mLocation = GeoPoint.fromInvertedDoubleString(cursor.getString(1), ',');
-        mDivision = getDivision(cursor);
-        cursor.close();
-        mTextView.setText("");
-        append(Pref.getString(R.string.guess_area_division_hint, title));
-        hintHz(mTextInput.getText().toString());
+        String filter = getFilter();
+        filter = String.format(" AND length(%s) %s ", DB.FQ, filter);
+        String hint = Pref.getString(R.string.guess_area_division_hint, title);
+        newGuess(filter, hint);
     }
 
     private void newGuessArea(String title) {
-        String sql = "select 語言,經緯度,省,市,縣 from info where length(經緯度) and 省 != '海外' order by random() limit 1";
-        Cursor cursor = DB.getCursor(sql);
-        if (cursor == null) return;
-        mAnswer = cursor.getString(0);
-        mLocation = GeoPoint.fromInvertedDoubleString(cursor.getString(1), ',');
-        mArea = getArea(cursor);
-        cursor.close();
-        mTextView.setText("");
-        append(Pref.getString(R.string.guess_area_hint, title));
-        hintHz(mTextInput.getText().toString());
+        String filter = getFilter();
+        filter = String.format(" AND 省 != '海外' %s ", filter);
+        String hint = Pref.getString(R.string.guess_area_hint, title);
+        newGuess(filter, hint);
     }
 
     @Override
@@ -249,7 +256,6 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String value = (position == 0) ? "" : Objects.toString(adapterDivision.getItem(position));
                 adapterDivision.getFilter().filter(value, count -> spinnerDivisions.setSelection(adapterDivision.getPosition(value)));
-                spinnerProvinces.setSelection(0);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
@@ -449,6 +455,7 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
                 hint = String.format(Locale.getDefault(), "恭喜你，過關了！<br>與<b>%s</b>同屬<b>%s</b>", mAnswer, mDivision);
                 append(hint);
                 mAnswer = "";
+                mArea = "";
                 mDivision = "";
             }
         } else if (mType == GUESS.AREA_PROVINCE || mType == GUESS.AREA_CITY || mType == GUESS.AREA_COUNTY) {
@@ -457,6 +464,7 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
                 append(hint);
                 mAnswer = "";
                 mArea = "";
+                mDivision = "";
             }
         }
     }

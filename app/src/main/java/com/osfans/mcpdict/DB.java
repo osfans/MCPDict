@@ -528,7 +528,7 @@ public class DB extends SQLiteAssetHelper {
         return query(LABEL, String.format("%s and rowid > 1", selection), args);
     }
 
-    public static Cursor getLanguageCursor(CharSequence constraint, String level) {
+    public static Cursor getLanguageCursor(CharSequence constraint, String filter) {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
         String[] projection = {LANGUAGE, "rowid as _id"};
@@ -543,12 +543,11 @@ public class DB extends SQLiteAssetHelper {
             input += " OR " + location;
         }
         if (!TextUtils.isEmpty(input)) input = String.format(" AND (%s)", input);
-        if (!TextUtils.isEmpty(level)) level = String.format(" AND 行政區級別 MATCH '%s'", level);
-        String query = qb.buildQuery(projection, String.format("音節數 is not null %s %s", input, level),  null, null, ORDER, null);
+        String query = qb.buildQuery(projection, String.format("音節數 is not null %s %s", input, filter),  null, null, ORDER, null);
         Cursor cursor = db.rawQuery(query, null);
         if (cursor.getCount() > 0) return cursor;
         cursor.close();
-        return getLanguageCursor("", level);
+        return getLanguageCursor("", filter);
     }
 
     public static String[] getLanguages() {
