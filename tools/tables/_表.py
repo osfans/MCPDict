@@ -89,8 +89,8 @@ def processXlsxFs(v):
 			text = f"**{text}**"
 		elif i.font.color and i.font.color.rgb == "FF808080":
 			text = f"`{text}`"
-		# if i.font.vertAlign == "subscript" or (i.font.size and i.font.size < 10.0):
-		# 	text = f"({text})"
+		if i.font.vertAlign == "subscript" or (i.font.size and i.font.size < 10.0):
+			text = f"({text})"
 		cells.append(text)
 	return "".join(cells).replace(")(", "").strip().replace("\n", "\\n")
 
@@ -410,8 +410,17 @@ class 表:
 	def 爲方言(自):
 		return 自.簡稱 in ("老國音","党項") or (自.爲語() and not 自.分區.startswith("歷史音"))
 
+	def 去括號(自, 註):
+		if not 註: return ""
+		if 註[0] == '{' and 註[-1] == '}' and "{" not in 註[1:-1]:
+			註 = 註[1:-1]
+		elif 註[0] == '(' and 註[-1] == ')' and "(" not in 註[1:-1]:
+			註 = 註[1:-1]
+		return 註.strip()
+
 	def 正註(自, 註):
 		if not 註: return ""
+		註 = 自.去括號(註)
 		上 = ""
 		果 = list()
 		for 字 in 註:

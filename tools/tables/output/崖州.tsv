@@ -1,12 +1,12 @@
 #漢字	音標	解釋
-□	sɐn3	(〜鸡,未下蛋的小母鸡)
-□	læ3	(蹄)
-□	læ3	(~舌,伸出舌头)
-□	xai5	(疲劳)
-□	ŋɐn5	(~~:刚好)
-□	mi5	(ni)
-□	vun5	(蘸)
-□	miu5	(不,没)
+□	mi5	ni
+□	læ3	~舌,伸出舌头
+□	ŋɐn5	~~:刚好
+□	sɐn3	〜鸡,未下蛋的小母鸡
+□	miu5	不,没
+□	xai5	疲劳
+□	vun5	蘸
+□	læ3	蹄
 一	ji7	
 丁	tein1	
 七	tɕʰi7	
@@ -48,8 +48,8 @@
 舉	ki3	
 乃	nai3	
 久	kiu3	
-麽	mo1	(〜子,怎么)
 麽	mi5	
+麽	mo1	〜子,怎么
 義	ji5	
 之	tɕi1	
 烏	vu1	
@@ -105,7 +105,7 @@
 倉	tsʰæn1	
 仕	sɿ5	
 他	xæ1	
-仗	tsæn5	(炮仗)
+仗	tsæn5	炮仗
 付	vu5	
 仙	ɕin1	
 代	tai5	
@@ -171,8 +171,8 @@
 侮	vu3	
 侯	xɐu2	
 侵	tsein1	
-便	pʰin2	(便宜)
-便	pin5	(随便)
+便	pʰin2	便宜
+便	pin5	随便
 促	tsu7	
 俄	ŋo2	
 俊	tsɐn1	
@@ -201,8 +201,8 @@
 倪	mi2	
 債	tsai5	
 值	tɕi7	
-假	kia3	(不真)
-假	kia5	(放〜)
+假	kia3	不真
+假	kia5	放〜
 偏	pʰin1	
 做	tso5	
 停	tʰein2	
@@ -243,8 +243,8 @@
 蘭	lan2	
 共	koŋ5	
 關	kun1	
-興	xein1	(兴旺)
 興	xein5	
+興	xein1	兴旺
 兵	pein1	
 其	kʰi2	
 具	ki5	
@@ -389,7 +389,7 @@
 賣	mai5	
 南	nan2	
 博	po7	
-卜	pʰu7	(〜卦)
+卜	pʰu7	〜卦
 占	tɕin1	
 盧	lu2	
 卤	lu3	
@@ -408,7 +408,7 @@
 历	ni7	
 厲	li5	
 壓	jia7	
-厭	jin5	(讨厌)
+厭	jin5	讨厌
 廁	tsʰɐi7	
 厘	li2	
 厚	xɐu5	
@@ -435,8 +435,8 @@
 叛	pʰun5	
 叟	sɐu5	
 疊	tie7	
-口	kʰiu1	(翘起来)
 口	kʰɐu3	
+口	kʰiu1	翘起来
 句	ki5	
 另	lein5	
 叨	tau1	
@@ -530,8 +530,8 @@
 喜	xi3	
 喝	xo7	
 喧	ɕin1	
-噴	pʰɐn5	(喷嚏)
-噴	vɐn5	(喷嚏)
+噴	pʰɐn5	喷嚏
+噴	vɐn5	喷嚏
 喻	ji5	
 嗓	sæn3	
 嗜	ɕi5	
@@ -570,7 +570,7 @@
 址	tɕi3	
 壞	xuai5	
 坐	tso5	
-坑	kʰɐŋ1	(挖/坑)
+坑	kʰɐŋ1	挖/坑
 塊	kʰuai5	
 堅	kin1	
 坛	tʰan2	
@@ -635,8 +635,8 @@
 多	to1	
 夜	jie5	
 够	kɐu5	
-大	tai5	(~夫)
 大	ta5	
+大	tai5	~夫
 天	tʰin1	
 太	tʰai5	
 夫	vu1	
@@ -693,8 +693,8 @@
 威	vui1	
 嬌	kiau1	
 娘	niaŋ2	
-娛	vu2	(〜蚣)
 娛	ji2	
+娛	vu2	〜蚣
 娶	tɕʰi3	
 婆	pʰo2	
 婚	xun1	
@@ -728,7 +728,7 @@
 寧	nein2	
 宇	ji3	
 守	sɐu3	
-安	ŋan1	(放)
+安	ŋan1	放
 宋	soŋ5	
 完	van2	
 宏	xoŋ2	
@@ -787,7 +787,7 @@
 尔	ʔɯ3	
 尖	tɕin1	
 塵	tsʰein2	
-尚	sæn5	(和尚)
+尚	sæn5	和尚
 嘗	sæn2	
 尤	jiu2	
 堯	zau2	
@@ -843,8 +843,8 @@
 巨	ki5	
 鞏	kʰoŋ3	
 巫	mu2	
-差	tsʰai1	(出~)
 差	tsʰa1	
+差	tsʰai1	出~
 己	ki3	
 已	ji3	
 巳	sɿ5	
@@ -884,8 +884,8 @@
 序	ɕi5	
 廬	lu2	
 庫	kʰu5	
-應	zein5	(答应)
 應	zein1	
+應	zein5	答应
 底	ti3	
 店	tin5	
 廟	miau5	
@@ -925,8 +925,8 @@
 强	kʰiaŋ2	
 弼	pi7	
 歸	kui1	
-當	tæn5	(〜铺)
 當	tæn1	
+當	tæn5	〜铺
 录	lu7	
 形	xein2	
 彩	tsʰai3	
@@ -1084,8 +1084,8 @@
 承	tsʰɐŋ2	
 技	ki5	
 抄	tsʰau1	
-把	pa5	(柄)
 把	pa3	
+把	pa5	柄
 投	tʰɐu2	
 抖	tɐu3	
 抗	kʰæn5	
@@ -1141,7 +1141,7 @@
 擋	tæn3	
 擠	tɕi3	
 揮	xui1	
-挨	ʔai1	(~骂;~近)
+挨	ʔai1	~骂;~近
 挪	no2	
 振	tsɐn5	
 挺	tʰein3	
@@ -1160,7 +1160,7 @@
 換	xun5	
 捧	pʰoŋ3	
 据	ki5	
-捱	zai2	(捱夜)
+捱	zai2	捱夜
 捶	tsʰui2	
 捷	tɕie7	
 捻	nin5	
@@ -1168,8 +1168,8 @@
 掂	tin1	
 授	sɐu5	
 掉	tiau5	
-掌	tsæn3	(撑腰;脚掌)
-掌	tsæn3	(脚掌)
+掌	tsæn3	撑腰;脚掌
+掌	tsæn3	脚掌
 掏	tʰau2	
 掐	kʰia7	
 排	pʰai2	
@@ -1211,7 +1211,7 @@
 摸	mo1	
 摹	mu2	
 撇	pʰie7	
-撑	tsʰɐŋ1	(撑腰)
+撑	tsʰɐŋ1	撑腰
 撒	sa3	
 撕	sɿ1	
 撤	tɕʰie7	
@@ -1223,7 +1223,7 @@
 操	tsʰau1	
 操	sæn3	
 擎	kein5	
-擘	po7	(掰)
+擘	po7	掰
 擦	tsʰa7	
 攀	pʰan1	
 攢	tsun5	
@@ -1252,8 +1252,8 @@
 文	vɐn2	
 齋	tsai1	
 斑	pan1	
-斗	tɐu3	(一〜米)
 斗	tɐu5	
+斗	tɐu3	一〜米
 料	liau5	
 斜	ɕie2	
 斟	tsɐn1	
@@ -1299,14 +1299,14 @@
 顯	xin3	
 晃	xuaŋ5	
 晉	tsein5	
-晏	ŋan5	(晚)
+晏	ŋan5	晚
 曬	sai5	
-曉	xiau3	(常用)
 曉	ɕiau3	
-暈	zein5	(晕车)
+曉	xiau3	常用
+暈	zein5	晕车
 晚	van3	
-晨	tsʰɐn2	(文读⑵)
-晨	sɐn2	(白读)
+晨	tsʰɐn2	文读⑵
+晨	sɐn2	白读
 普	pʰu3	
 景	kein3	
 晴	tsʰein2	
@@ -1374,7 +1374,7 @@
 極	ki7	
 構	kɐu5	
 枇	pʰi2	
-枉	væn3	(冤〜)
+枉	væn3	冤〜
 析	ɕi7	
 枕	tsɐn3	
 林	lein2	
@@ -1457,7 +1457,7 @@
 棺	kun1	
 椅	ji3	
 植	tɕi7	
-椒	jiau1	(胡〜)
+椒	jiau1	胡〜
 橢	to5	
 椴	tun5	
 椿	tsʰun1	
@@ -1480,8 +1480,8 @@
 槐	xuai2	
 檳	pein1	
 槽	tsʰau2	
-模	mo2	(〜糊,〜样)
 模	mu2	
+模	mo2	〜糊,〜样
 橫	xun2	
 橫	xuaŋ2	
 櫻	zein1	
@@ -1507,8 +1507,8 @@
 歉	kʰin5	
 歌	ko1	
 止	tɕi3	
-正	tsɐŋ1	(正月)
 正	tsɐŋ5	
+正	tsɐŋ1	正月
 此	tsʰɿ3	
 步	pu5	
 武	vu3	
@@ -1555,7 +1555,7 @@
 污	ʔu1	
 湯	tʰæn1	
 汪	væn1	
-汴	tin5	(~京)
+汴	tin5	~京
 汽	kʰi5	
 沂	kʰi2	
 沈	sɐn3	
@@ -1800,7 +1800,7 @@
 猫	miau1	
 獻	xin5	
 猴	xɐu2	
-猾	xua2	(狡〜)
+猾	xua2	狡〜
 玄	xin2	
 率	li7	
 玉	ji5	
@@ -1810,8 +1810,8 @@
 現	xin5	
 璽	ɕi3	
 玻	po1	
-珊	san3	(〜瑚)
 珊	san1	
+珊	san3	〜瑚
 珍	tsɐn1	
 珠	tɕi1	
 班	pan1	
@@ -1823,8 +1823,8 @@
 琵	pʰi2	
 琶	pʰa2	
 瑕	xia2	
-瑞	sui5	(白读)
-瑞	zui5	(文读)
+瑞	zui5	文读
+瑞	sui5	白读
 璃	li2	
 璧	pʰi7	
 瓜	kua1	
@@ -1905,8 +1905,8 @@
 白	pɐi7	
 百	pɐi7	
 皂	tsau3	
-的	ti1	(打〜)
-的	ni1	(助词)
+的	ni1	助词
+的	ti1	打〜
 皆	kai1	
 皇	xuaŋ2	
 皮	pʰi2	
@@ -1930,11 +1930,11 @@
 目	mu7	
 盲	mæn2	
 直	tɕi7	
-相	ɕiaŋ1	(〜信)
-相	ɕiaŋ5	(〜貌)
+相	ɕiaŋ1	〜信
+相	ɕiaŋ5	〜貌
 盼	pʰan5	
 盾	tɐn5	
-省	sɐŋ3	(海南省)
+省	sɐŋ3	海南省
 眉	mi2	
 看	kʰan5	
 真	tsɐn1	
@@ -1947,7 +1947,7 @@
 眼	jin3	
 着	tso7	
 睜	tsɐŋ1	
-睛	tsein1	(眼〜)
+睛	tsein1	眼〜
 睡	sui5	
 督	tu7	
 睬	tsʰai3	
@@ -1973,7 +1973,7 @@
 研	jin2	
 磚	tsun1	
 硯	zun5	
-砣	tʰo2	(秤〜)
+砣	tʰo2	秤〜
 砧	tɕin1	
 破	pʰo5	
 礎	tsʰu3	
@@ -1992,8 +1992,8 @@
 鹼	kin3	
 碾	nin3	
 磁	tsʰɿ2	
-磨	mo5	(〜房)
 磨	mo2	
+磨	mo5	〜房
 磷	lein2	
 示	ɕi5	
 禮	li3	
@@ -2024,8 +2024,8 @@
 秃	tʰu7	
 秉	pein3	
 秋	tɕʰiu1	
-種	tsoŋ3	(〜子)
-種	tsoŋ5	(〜花)
+種	tsoŋ3	〜子
+種	tsoŋ5	〜花
 科	kʰuo1	
 秒	miau3	
 秘	mi5	
@@ -2035,8 +2035,8 @@
 秧	zæn1	
 秩	ɕi7	
 積	tɕi7	
-稱	tsʰɐŋ1	(称一称)
-稱	tsʰɐŋ5	(称心)
+稱	tsʰɐŋ1	称一称
+稱	tsʰɐŋ5	称心
 移	ji2	
 穢	vui5	
 稀	xi1	
@@ -2121,7 +2121,7 @@
 篷	voŋ2	
 簧	xuaŋ2	
 簪	tsan1	
-簸	po5	(〜箕)
+簸	po5	〜箕
 簿	pu5	
 籍	tɕi7	
 米	mi3	
@@ -2283,7 +2283,7 @@
 肪	væn2	
 骯	ʔæn1	
 育	zu7	
-肴	jiau2	(祭祀用)
+肴	jiau2	祭祀用
 肺	vɐi5	
 腎	sɐn5	
 腫	tsoŋ3	
@@ -2333,7 +2333,7 @@
 腺	ɕin5	
 騰	tʰɐŋ2	
 腿	tʰɐi3	
-膀	pæn3	(肩膀)
+膀	pæn3	肩膀
 膊	po7	
 膏	kau1	
 膘	pʰiau1	
@@ -2358,7 +2358,7 @@
 舔	tʰin3	
 舜	sun5	
 舞	vu3	
-航	xæn2	(〜行)
+航	xæn2	〜行
 般	pun1	
 舵	to5	
 船	tsʰun2	
@@ -2371,10 +2371,10 @@
 節	tɕie7	
 芋	ji2	
 芍	so7	
-芒	moŋ1	(〜果)
-芒	mæn2	(〜种)
+芒	moŋ1	〜果
+芒	mæn2	〜种
 芙	vu2	
-芝	tɕi1	(芝麻)
+芝	tɕi1	芝麻
 芥	kai5	
 蘆	lu2	
 芬	vɐn1	
@@ -2405,7 +2405,7 @@
 薦	tɕin5	
 荒	xuaŋ1	
 荔	li5	
-蕎	kʰiau2	(〜麦)
+蕎	kʰiau2	〜麦
 薺	tɕʰi3	
 榮	zoŋ2	
 葷	xun1	
@@ -2453,8 +2453,8 @@
 蓑	so1	
 蓖	pi5	
 藍	lan2	
-蓬	pʰoŋ2	(帆船)
 蓬	voŋ2	
+蓬	pʰoŋ2	帆船
 蔑	mie7	
 蔓	man5	
 蔗	tɕie5	
@@ -2470,7 +2470,7 @@
 薯	ɕi2	
 薰	xun1	
 藉	tɕi7	
-藏	tsʰæn2	(藏起来)
+藏	tsʰæn2	藏起来
 藐	miau5	
 藕	ʔɐu3	
 藤	tʰɐŋ2	
@@ -2497,7 +2497,7 @@
 蚌	pʰɐŋ5	
 蠶	tsʰan2	
 蚣	koŋ1	
-蚯	kʰiu1	(〜蚓)
+蚯	kʰiu1	〜蚓
 蛆	tɕʰi1	
 蛇	ɕie2	
 蛋	tan5	
@@ -2511,37 +2511,37 @@
 蜂	voŋ1	
 蜓	tʰein2	
 蜕	tʰɐi5	
-蝸	vo1	(〜牛)
+蝸	vo1	〜牛
 蜜	mi7	
 蠟	la7	
 蜻	tsein1	
 蠅	zein1	
 蟬	tsʰan2	
-蝌	kʰuo1	(〜蚪)
+蝌	kʰuo1	〜蚪
 蠍	kie7	
 蝗	xuaŋ2	
 蝙	pin3	
 蝠	vu7	
 蝴	xu2	
 蝶	tʰie7	
-螂	læn2	(蟑螂)
+螂	læn2	蟑螂
 螃	pʰæn2	
 融	zoŋ2	
 螳	tʰæn2	
 螺	lo2	
 蟀	ɕi7	
-蟆	ma2	(蛤~)
+蟆	ma2	蛤~
 蟋	ɕi7	
-蟑	tsæn1	(蟑螂)
+蟑	tsæn1	蟑螂
 蟒	mæn3	
-蟥	xuaŋ2	(蚂〜)
+蟥	xuaŋ2	蚂〜
 蟹	xai3	
 蟾	tsan1	
 蠢	tsʰun3	
 血	xie7	
-行	xæn2	(一行字)
-銜	xan2	(又in,军〜)
+行	xæn2	一行字
 銜	xin2	
+銜	xan2	又in,军〜
 街	kai1	
 衙	za2	
 衡	xɐŋ2	
@@ -2549,7 +2549,7 @@
 補	pu3	
 表	piau3	
 衫	san1	
-襯	tsʰɐn5	(帮衬)
+襯	tsʰɐn5	帮衬
 袋	tai5	
 袍	pʰau2	
 袖	ɕiu5	
@@ -2570,16 +2570,16 @@
 襄	ɕiaŋ1	
 襟	kein5	
 西	ɕi1	
-要	zau1	(〜求)
-要	zau5	(重〜)
+要	zau1	〜求
+要	zau5	重〜
 覆	vu7	
 見	kin5	
 觀	kun1	
 規	kui1	
 視	ɕi5	
 覽	lan3	
-覺	kiau5	(睡〜)
-覺	kʰio7	(〜得)
+覺	kʰio7	〜得
+覺	kiau5	睡〜
 角	ko7	
 解	kai3	
 觸	tsu7	
@@ -2665,7 +2665,7 @@
 豁	xo7	
 豆	tɐu5	
 豇	kæn1	
-豉	ɕi5	(豉油)
+豉	ɕi5	豉油
 豌	vun2	
 豚	tʰɐn2	
 象	ɕiaŋ5	
@@ -2732,7 +2732,7 @@
 趾	tɕi3	
 跌	tie7	
 跑	pʰau2	
-跛	pʰæ5	(瘸)
+跛	pʰæ5	瘸
 距	ki5	
 跟	kɐn1	
 跨	kʰia5	
@@ -2752,8 +2752,8 @@
 躬	koŋ1	
 躱	to3	
 躺	tʰæn3	
-車	ki1	(象棋)
 車	tsʰæ1	
+車	ki1	象棋
 軋	tsa7	
 軌	kui3	
 轉	tsun3	
@@ -2789,7 +2789,7 @@
 迂	ji2	
 過	ko5	
 過	kuo5	
-邁	mai5	(~话)
+邁	mai5	~话
 迎	zein2	
 運	zein5	
 近	kein5	
@@ -2881,9 +2881,9 @@
 釜	vu3	
 鑑	kin5	
 鏨	tsan3	
-鏾	ɕin5	(阉)
+鏾	ɕin5	阉
 針	tsɐn1	
-釘	tein1	(〜耙)
+釘	tein1	〜耙
 釣	tiau5	
 釵	tsʰa1	
 鈍	tɐn5	
@@ -2911,8 +2911,8 @@
 鏟	tsʰan3	
 銃	tʰoŋ3	
 銀	zein2	
-鋪	pʰu1	(〜床)
-鋪	pʰu5	(店〜)
+鋪	pʰu1	〜床
+鋪	pʰu5	店〜
 鏈	lin5	
 銷	tɕʰiau1	
 銷	ɕiau1	
@@ -2939,8 +2939,8 @@
 鐲	tsu7	
 鐮	lin2	
 鑲	ɕiaŋ1	
-長	tsʰæn2	(长工)
-長	tsæn3	(长辈)
+長	tsʰæn2	长工
+長	tsæn3	长辈
 門	mɐn2	
 閂	sun1	
 閃	sɐn3	
@@ -2969,8 +2969,8 @@
 陣	tsɐn5	
 階	kai1	
 阻	tsu3	
-阿	ʔa1	(~哥)
 阿	ʔa5	
+阿	ʔa1	~哥
 附	vu5	
 際	tɕi5	
 陸	lu7	
@@ -2978,7 +2978,7 @@
 陳	tsʰɐn2	
 陋	lɐu5	
 陌	po7	
-降	kiaŋ5	(〜落)
+降	kiaŋ5	〜落
 限	xɐn5	
 陝	san3	
 陡	tɐu3	
@@ -3169,7 +3169,7 @@
 齒	tɕʰi3	
 齡	lein2	
 齪	tso7	
-齷	vu7	(〜龊)
 齷	vuo5	
+齷	vu7	〜龊
 龍	loŋ2	
 龜	kui1	
