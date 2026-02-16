@@ -7647,6 +7647,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#926EF8",
+        "marker-size": "medium",
+        "marker-symbol": "c",
+        "title": "高平",
+        "語言": "高平話",
+        "地點": "山西晉城高平",
+        "地圖集二分區": "晉語－上黨片－晉城小片",
+        "音典分區": "華北－上黨－澤州",
+        "陳邡分區": "官話－河南－河南大片－澤州片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《山西高平方言语音研究》",
+        "補充閲讀": "《高平方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.935588,
+          35.804338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
         "marker-size": "large",
         "marker-symbol": "c",
         "title": "長治",
@@ -9850,6 +9874,29 @@
         "coordinates": [
           106.627644,
           35.620728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "景泰",
+        "語言": "景泰話",
+        "地點": "甘肅白銀景泰",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－秦晉－隴中大片－南疆片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《甘肃景泰方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.072897,
+          37.189706
         ]
       }
     },
@@ -24904,6 +24951,31 @@
         "marker-color": "#52CCAD",
         "marker-size": "small",
         "marker-symbol": "f",
+        "title": "山陽寬坪",
+        "語言": "山陽寬坪江南話",
+        "地點": "陝西商洛山陽南寬坪寬坪",
+        "地圖集二分區": "贛語－懷岳片",
+        "音典分區": "中上江－潯皖－西安慶",
+        "陳邡分區": "官話－北下江－西安慶大片－西安慶片",
+        "方言島": true,
+        "版本": "2026-02-15",
+        "錄入人": "DaiDzao",
+        "字表來源": "《陕南客伙话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.917882,
+          33.290276
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
         "title": "鎮安木王",
         "語言": "鎮安木王江南話",
         "地點": "陝西商洛鎮安木王",
@@ -32217,6 +32289,30 @@
         "coordinates": [
           120.294848,
           28.144724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
+        "marker-size": "small",
+        "marker-symbol": "d",
+        "title": "青田北山",
+        "語言": "青田北山話",
+        "地點": "浙江麗水青田北山",
+        "地圖集二分區": "吳語－上麗片－麗水小片",
+        "音典分區": "浙南－處衢－小溪",
+        "陳邡分區": "甌江－東處州",
+        "版本": "2026-02-16",
+        "錄入人": "DaiDzao",
+        "字表來源": "《青田方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.016058,
+          28.087746
         ]
       }
     },
@@ -57007,6 +57103,81 @@
         "coordinates": [
           110.933791,
           24.592736
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "陽朔金寶",
+        "語言": "陽朔金寶客家話",
+        "地點": "廣西桂林陽朔金寶",
+        "地圖集二分區": "客家話－方言島",
+        "音典分區": "閩－閩西－方言島",
+        "陳邡分區": "客家－嘉應－嘉應片",
+        "方言島": true,
+        "版本": "2026-02-16",
+        "錄入人": "DaiDzao",
+        "字表來源": "《桂林阳朔县金宝乡客家话研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.341772,
+          24.796337
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "武宣田心",
+        "語言": "武宣三里田心麻介話",
+        "地點": "廣西來賓武宣三里田心",
+        "地圖集二分區": "客家話－方言島",
+        "音典分區": "閩－閩西－方言島",
+        "陳邡分區": "客家－嘉應－嘉應片",
+        "方言島": true,
+        "版本": "2026-02-16",
+        "錄入人": "DaiDzao",
+        "字表來源": "《武宣县三里镇客家话研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.762711,
+          23.581125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "象州石龍",
+        "語言": "象州石龍麻介話",
+        "地點": "廣西來賓象州石龍",
+        "地圖集二分區": "客家話－方言島",
+        "音典分區": "閩－閩西－方言島",
+        "陳邡分區": "客家－嘉應－嘉應片",
+        "方言島": true,
+        "版本": "2026-02-15",
+        "錄入人": "DaiDzao",
+        "字表來源": "《象州石龙客家话同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.522219,
+          23.856252
         ]
       }
     },
