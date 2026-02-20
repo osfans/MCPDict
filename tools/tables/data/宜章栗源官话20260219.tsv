@@ -1,3 +1,4 @@
+汉字	音标	解释					
 一	i2						
 乙	iɛ2						
 二	ɛ5						
@@ -31,6 +32,7 @@
 士	sɿ5						
 才	tsʰai2						
 下	ha5	白					
+下	hau5	~午					
 下	ɕia5	文					
 寸	tsʰen5						
 大	ta5						
@@ -97,7 +99,7 @@
 犬	tɕʰyɛn3						
 太	tʰai5						
 区	tɕʰy1	区域					
-区	øʏ1	姓区					
+区	ŋøʏ1	姓区					
 历	liɛ2						
 历	li2						
 歹	tai3						
@@ -206,6 +208,7 @@
 末	mo2						
 示	sɿ5						
 击	tɕi2						
+击	tɕiɛ2						
 打	ta3						
 巧	tɕʰiau3						
 正	tɕin5	正义					
@@ -243,9 +246,10 @@
 北	pɛ2						
 占	tɕiɛn5	白					
 占	tsaŋ5	文					
+占	tsaŋ1	占卜					
 凸	tʰu2						
 卢	lu2						
-业	ȵiɛ5						
+业	ȵiɛ2						
 旧	tɕʰiou5	旧年					
 旧	tɕiou5	新旧					
 帅	suai5						
@@ -324,7 +328,8 @@
 饥	tɕi1						
 主	tɕy3						
 市	sɿ5						
-立	liɛ2						
+立	liɛ2	白					
+立	li2	文					
 冯	foŋ2						
 玄	ɕyɛn2						
 闪	ɕiɛn3						
@@ -355,7 +360,8 @@
 弘	hoŋ2						
 出	tɕʰy2						
 辽	liau2						
-奶	nai3						
+奶	lai1	喝奶					
+奶	nai3	奶奶					
 奴	lu2						
 召	tsau5						
 加	tɕia1						
@@ -383,6 +389,7 @@
 扣	kʰøʏ5						
 考	kʰau3						
 托	tʰo2						
+老	lau1	老婢					
 老	lau3						
 巩	koŋ3						
 圾	tɕi2						
@@ -620,7 +627,8 @@
 阶	kai1						
 阴	in1						
 防	faŋ2						
-奸	tɕiɛn1						
+奸	tɕiɛn1	文					
+奸	kan1	白					
 如	y2						
 妇	fu5						
 妃	fei1						
@@ -841,9 +849,9 @@
 伺	sɿ5						
 佛	fu2						
 囱	tsʰoŋ1						
-近	tɕʰin2						
+近	tɕʰin5						
 彻	tsʰɛ2						
-役	ye2						
+役	yɛ2						
 返	faŋ3						
 余	y2						
 希	ɕi1						
@@ -874,7 +882,7 @@
 卵	luaŋ3						
 灸	tɕiou1						
 灸	tɕiou5	补锅时一勺铁水叫一灸					
-岛	tau2						
+岛	tau3						
 刨	pʰau2						
 迎	lin2						
 饭	faŋ5						
@@ -1002,8 +1010,8 @@
 纸	tsɿ3						
 纹	uen2						
 纺	faŋ3						
-驴	lu2						
-驴	ly2						
+驴	lu2	白					
+驴	ly2	文					
 纽	ȵiou3						
 奉	foŋ5						
 玩	uaŋ2						
@@ -1075,8 +1083,8 @@
 苑	yɛn2						
 苞	pau1						
 范	faŋ5						
-直	tɕi2						
-直	tsɿ2						
+直	tɕi2	白					
+直	tsɿ2	文					
 茁	tso2						
 茄	tɕʰiɛ2	茄子					
 茄	tɕia1	雪茄					
@@ -1106,7 +1114,7 @@
 枕	tɕin3						
 丧	saŋ1	丧事					
 丧	saŋ3	丧志					
-或	huɛ2						
+或	ho2						
 画	hua5						
 卧	ŋo5						
 事	sɿ5						
@@ -1122,7 +1130,7 @@
 厕	sɿ3	茅厕					
 奈	nai5						
 奔	pen1						
-奇	tɕʰi2						
+奇	tɕʰi2	奇数，奇怪					
 奋	fen5	勤奋					
 奋	fen3	扇耳光					
 态	tʰai5						
@@ -1146,7 +1154,7 @@
 些	ɕi1						
 卓	tso2						
 虎	fu3						
-虏	lu3						
+虏	lu2						
 肾	ɕin5	肾炎					
 肾	tɕʰin5	鸡肾，鸡胗					
 贤	ɕiɛn2						
@@ -1236,13 +1244,13 @@
 卑	pei1						
 的	tiɛ2						
 迫	pʰɛ2						
-质	tsi2						
+质	tsɿ2						
 欣	ɕin1						
 征	tɕin1						
 往	uaŋ3						
 爬	pʰa2						
 彼	pi3						
-径	tɕin1	径直。读若经					
+径	tɕin5						
 所	so3						
 舍	ɕiɛ3	舍得					
 舍	ɕiɛ5	宿舍					
@@ -1258,7 +1266,7 @@
 受	ɕiou5						
 乳	y3						
 贪	tʰaŋ1						
-念	ȵiɛn5						
+念	liɛn5						
 贫	pʰin2						
 肤	fu1						
 肺	fei5						
@@ -1368,7 +1376,9 @@
 审	ɕin3						
 宙	tɕiou5						
 官	kuaŋ1						
-空	kʰoŋ1						
+空	kʰoŋ1	天空					
+空	kʰoŋ5	空闲					
+空	kʰoŋ3	孙悟空					
 帘	liɛn2						
 宛	uaŋ3	非俗传					
 实	ɕiɛ2	白					
@@ -1379,7 +1389,7 @@
 肩	kaŋ1						
 房	faŋ2						
 诚	tɕʰin2						
-衬	tsʰen2						
+衬	tsʰen5						
 衫	saŋ1						
 视	sɿ5						
 祈	tɕʰi2						
@@ -1414,7 +1424,7 @@
 陕	ɕiɛn3						
 降	kaŋ5	霜降					
 降	tɕiaŋ5	降落					
-降	ɕiɛŋ2	投降					
+降	ɕiaŋ2	投降					
 函	haŋ2						
 限	haŋ5						
 妹	mei5						
@@ -1540,7 +1550,7 @@
 柳	liou3						
 柱	tɕy5						
 柿	sɿ5						
-栏	kʰaŋ2						
+栏	laŋ2						
 柠	lin2						
 树	ɕy5						
 勃	po2						
@@ -1614,6 +1624,7 @@
 勋	ɕyn1						
 哗	hua2						
 响	ɕiaŋ3						
+哈	ha1						
 哆	to1						
 咬	ŋau3						
 咳	kʰɛ2						
@@ -1693,7 +1704,7 @@
 须	ɕy1						
 叙	ɕy5						
 剑	tɕiɛn5						
-逃	tʰai2						
+逃	tʰau2						
 食	ɕiɛ2	零食					
 食	ɕi2	食堂					
 食	sɿ2	食物					
@@ -1701,7 +1712,7 @@
 胚	pʰei1						
 胧	loŋ2						
 胆	taŋ3						
-胜	ɕin5						
+胜	ɕin5	胜任，胜利					
 胞	pau1						
 胖	pʰaŋ5						
 脉	mɛ2						
@@ -1751,6 +1762,7 @@
 阀	fa2						
 阁	ko2						
 差	tsʰa1	参差，差别，差生					
+差	tsʰai1	出差					
 养	iaŋ3	营养					
 养	iaŋ5	供养					
 美	mei3						
@@ -1770,7 +1782,7 @@
 炸	tsa5						
 烁	so2						
 炮	pʰau5						
-炫	ɕyɛn5						
+炫	ɕyɛn3						
 烂	laŋ5						
 剃	tʰi5						
 洼	ua1						
@@ -1789,12 +1801,13 @@
 染	ȵiɛn3						
 洛	lo2						
 浏	liou2						
-济	tɕi5	人才济济，救济					
+济	tɕi5	济南，救济					
 洋	iaŋ2						
 洲	tɕiou1						
 浑	huen2						
 浓	ȵioŋ2						
 津	tɕin1						
+恃	tsɿ5						
 恒	hen2						
 恢	huei1						
 恍	huaŋ3						
@@ -1807,6 +1820,7 @@
 举	tɕy3						
 觉	tɕʰio2	觉得					
 觉	tɕyɛ2	感觉					
+觉	kau5	睡觉					
 宣	ɕyɛn1						
 宦	huaŋ5	宦官，辞官之人					
 室	ɕiɛ2						
@@ -1838,7 +1852,8 @@
 屋	u2						
 昼	tsɿ2	日昼前，白天					
 昼	tsøʏ5	昼夜					
-屏	pʰin2						
+屏	pʰin2	屏风					
+屏	pin3	屏气，憋气					
 屎	sɿ3						
 费	fei5						
 陡	tøʏ3						
@@ -1874,6 +1889,8 @@
 骄	tɕiau1						
 绘	huei5						
 给	kɛ3	拿给，给予					
+给	tɕiɛ2	供给					
+给	kɛ2	供给					
 绚	ɕyɛn5						
 骆	lo2						
 络	lo2						
@@ -1885,7 +1902,7 @@
 耘	yn2						
 耗	hau5						
 耙	pʰa2						
-艳	yɛn5						
+艳	iɛn5						
 泰	tʰai5						
 秦	tɕʰin2						
 珠	tɕy1						
@@ -2017,13 +2034,15 @@
 鸭	ŋa2						
 晃	huaŋ3						
 哺	pu3						
-晌	sau3	晌午，合音					
+晌	sau3	~午					
+晌	saŋ3						
 剔	tʰi2						
 晕	yn1						
 晕	huen1						
 蚌	paŋ5						
 畔	paŋ5						
 蚣	koŋ1						
+蚊	men1	苍蝇					
 蚊	uen2						
 蚪	tøʏ3						
 蚓	in3						
@@ -2219,7 +2238,7 @@
 烫	tʰaŋ5						
 涩	sɛ2						
 涌	ioŋ3						
-悖	po2	读若勃					
+悖	po2	非俗传					
 悟	u2	孙悟空					
 悟	u5	领悟					
 悄	tɕʰiau1						
@@ -2281,8 +2300,9 @@
 娥	ŋo2						
 娘	ȵiaŋ2						
 通	tʰoŋ1						
-能	nen2						
+能	len2						
 难	naŋ2						
+难	naŋ5						
 预	y5						
 桑	saŋ1						
 绢	tɕyɛn1						
@@ -2362,7 +2382,7 @@
 彬	pin1						
 梦	moŋ5						
 婪	laŋ2						
-梗	kuaŋ3	白					
+梗	kaŋ3	白					
 梗	ken3	文					
 梧	u2						
 梢	sau1						
@@ -2401,6 +2421,7 @@
 眶	kʰuaŋ1	读若框					
 匙	si2						
 晨	ɕin2						
+晨	sen2	又					
 睁	tsen1						
 眯	mi1						
 眼	ŋaŋ3	白					
@@ -2408,6 +2429,7 @@
 悬	ɕyɛn2						
 野	iɛ3						
 曼	maŋ5						
+晦	huei5						
 晚	maŋ3	晚崽					
 晚	uaŋ3	夜晚					
 啄	to5	白					
@@ -2425,6 +2447,7 @@
 唬	fu3						
 累	løʏ5	劳累					
 累	løʏ3	累积					
+累	løʏ2	累赘					
 鄂	ŋo2						
 唱	tsʰaŋ5						
 患	huaŋ5						
@@ -2469,7 +2492,8 @@
 做	tsu5						
 袋	tai5						
 悠	iou1						
-偿	saŋ2						
+偿	tsʰaŋ2	文					
+偿	saŋ3	白					
 偶	ŋøʏ3						
 偎	uei5						
 偷	tʰøʏ1						
@@ -2623,6 +2647,7 @@
 堕	to5						
 随	søʏ2						
 蛋	taŋ5						
+隅	y2						
 隆	loŋ2						
 隐	in3						
 婚	kʰuen1						
@@ -2658,6 +2683,7 @@
 堪	kʰaŋ3						
 塔	tʰa2						
 搭	ta2						
+堰	iɛn5						
 揩	kʰai1						
 越	yɛ2						
 趁	tɕʰin5						
@@ -2908,6 +2934,7 @@
 尊	tsen1						
 奠	tiɛn5						
 道	tau5						
+遂	søʏ2						
 曾	tsen1	姓曾					
 曾	tsʰen2	曾经					
 焰	iɛn5						
@@ -2980,7 +3007,7 @@
 媚	mei2	读若眉					
 婿	ɕy5						
 登	ten1						
-缅	miɛn5						
+缅	miɛn5	读若面					
 缆	laŋ3						
 缉	tɕiɛ2						
 缎	tuaŋ5						
@@ -3104,7 +3131,7 @@
 嗅	ɕioŋ5						
 嗓	saŋ3						
 署	ɕy3						
-置	tsi5						
+置	tsɿ5						
 罪	tsøʏ5						
 罩	tsau5						
 蜀	su2	存疑					
@@ -3151,9 +3178,11 @@
 腥	ɕin1						
 腮	sai1						
 腹	fu2						
+腺	ɕiɛn5						
 鹏	pʰoŋ2						
 腾	tʰen2						
 腿	tʰøʏ3						
+鲍	pau5						
 猿	yɛn2						
 颖	in3						
 触	tsʰu2						
@@ -3217,31 +3246,53 @@
 谬	miou5						
 群	tɕʰyn2						
 殿	tiɛn5						
+辟	pʰiɛ2	开辟，复辟					
 障	tsaŋ5						
+媳	ɕi2						
+嫉	tɕi5						
 嫌	ɕiɛn2						
 嫁	ka5						
 嫁	tɕia5						
 叠	tiɛ2						
+缚	fu2						
 缝	foŋ2	裁缝					
 缝	foŋ5	缝隙					
 缠	tɕʰiɛn2						
 缤	pin1						
 剿	tɕiau3						
 静	tɕin5						
+碧	pi2						
 璃	li2						
+赘	tsøʏ5						
 熬	ŋau2						
 墙	tɕʰiaŋ2						
 墟	ɕy1						
 嘉	tɕia1						
 摧	tsʰøʏ1						
+赫	hɛ2						
+截	tɕiɛ2						
 誓	si5						
 境	tɕin5						
 摘	tsɛ2						
 摔	suai1						
+撇	pʰiɛ2						
+聚	tɕy5						
+慕	mu5						
+暮	mu5						
+摹	mo2						
+蔓	maŋ5						
 蔑	miɛ2						
 蔡	tsʰai5						
+蔗	tɕiɛ2	老派文读					
+蔗	tsɛ2	新派文读					
+蔗	tsa5	白					
+蔽	pi5						
+蔼	ŋai5						
 熙	ɕi1						
+蔚	uei5						
+兢	tɕin1						
 模	mu2						
+槛	kʰaŋ3	非俗传					
 榴	liou2						
 榜	paŋ3						
 榨	tsa5						
@@ -3249,6 +3300,7 @@
 歌	ko1						
 遭	tsau1						
 酵	ɕiau5						
+酷	kʰu5						
 酿	ȵiaŋ5						
 酸	suaŋ1						
 碟	tiɛ2						
@@ -3257,13 +3309,20 @@
 磁	tsʰɿ2						
 愿	yɛn5						
 需	ɕy1						
-辗	tɕiɛn3	读若展					
+辖	ɕia2						
+辗	tsaŋ3						
+雌	tsʰɿ2						
+裳	tsʰaŋ2	非俗传					
 颗	kʰo3						
+瞅	tɕiou1	非俗传					
+墅	su5						
 嗽	søʏ5						
 踊	ioŋ3						
 蜻	tɕʰin1						
 蜡	la2						
+蝇	in1						
 蜘	tsɿ1						
+蝉	tsʰaŋ2	非俗传					
 赚	tsuaŋ5						
 锹	tɕʰiau1						
 锻	tuaŋ5						
@@ -3277,15 +3336,21 @@
 箩	lo2						
 管	kuaŋ3						
 箫	ɕiau1						
+舆	y2						
 僚	liau2						
+僧	tsen1						
 鼻	pi2						
+魄	pʰɛ2						
 魅	mei5						
 貌	mau5						
+膜	mo2						
 膊	po2						
-膀	paŋ3						
+膀	paŋ3	肩膀					
+膀	pʰaŋ2	膀胱					
 鲜	ɕyɛn1	新鲜					
 鲜	ɕyɛn3	朝鲜					
 疑	ȵi2						
+孵	pʰau5						
 馒	maŋ5						
 裹	ko3						
 敲	kʰau1						
@@ -3293,19 +3358,27 @@
 膏	kau1						
 遮	tsa1	白					
 遮	tɕiɛ1	文					
+腐	fu5						
 瘟	uen1						
 瘦	søʏ5						
 辣	la2						
 彰	tsaŋ1						
+竭	tɕiɛ2						
 端	tuaŋ1						
 旗	tɕʰi2						
 精	tɕin1						
-粹	ɕøʏ5						
+粹	tsʰøʏ5						
 歉	tɕʰiɛn5						
 弊	pi5						
+熄	ɕi2						
 熔	ioŋ2						
+煽	ɕiɛn1						
 潇	ɕiau1						
+漆	tɕʰi2						
+漱	su5						
+漂	piau5	漂白，漂选，漂亮					
 漫	maŋ5						
+滴	tiɛ2						
 漾	iaŋ5						
 演	iɛn3						
 漏	løʏ5						
@@ -3318,8 +3391,11 @@
 蜜	mi2						
 寥	liau2						
 谭	tʰaŋ2						
+肇	tsau5						
+褐	ko2	读若葛					
 褪	tʰen5	褪手，帮忙					
 褪	tʰøʏ5	褪色					
+谱	pʰu3	读若普					
 隧	søʏ5						
 嫩	nuen5						
 翠	tsʰøʏ5						
@@ -3328,22 +3404,30 @@
 骡	lo2						
 缩	su2						
 慧	tɕuei5						
+撵	ȵiɛn3						
 撕	sɿ1						
+撒	sa3						
 撩	liau1						
 趣	tɕʰy5						
+趟	tʰaŋ3						
 撑	tsʰen1						
+撮	tsʰo2						
 撬	tɕʰiau5						
+播	po5						
 擒	tɕʰin2						
 墩	ten1						
 撞	tsʰuaŋ5						
 撞	tsʰaŋ5	又					
+撤	tsʰɛ2						
 增	tsen1						
+撰	tɕyɛn5						
 聪	tsʰoŋ1						
 鞋	hai2						
 鞍	ŋaŋ1						
 蕉	tɕiau1						
 蕊	løʏ3						
 蔬	su1						
+蕴	yn5						
 横	uaŋ2	牛栏横子					
 横	huen2	横竖					
 槽	tsʰau2						
@@ -3355,10 +3439,12 @@
 豌	uaŋ1						
 飘	pʰiau1						
 醋	tsʰu5						
+醇	tsʰuen2						
 醉	tsøʏ5						
+磕	kʰo2						
 磊	løʏ3						
 磅	paŋ5						
-碾	tɕiɛn3						
+碾	tɕiɛn3	读若展					
 震	tɕin3						
 霄	ɕiau1						
 霉	mei2						
@@ -3366,39 +3452,53 @@
 题	tʰi2						
 暴	pau5						
 瞎	ha2						
+嘻	ɕi1						
 嘶	sɿ1						
 嘲	tsʰau2						
 嘹	liau2						
 影	aŋ3	影眼，刺眼					
 影	in3	电影					
+踢	tʰi2						
+踏	tʰa2						
 踩	tsʰai3						
 踪	tsoŋ1						
 蝶	tiɛ2						
 蝴	fu2						
 蝠	fu2						
+蝎	ɕiɛ1						
 蝌	kʰo1						
 蝗	huaŋ2						
+蝙	piɛn1						
 嘱	tsu2						
+幢	toŋ5						
 墨	mɛ2						
+镇	tsen5						
 镐	kau3						
 镑	paŋ5						
 靠	kʰai5						
+稽	tɕi1						
 稻	tau5						
 黎	li2						
 稿	kau3						
+稼	tɕia5						
 箱	ɕiaŋ1						
 篓	løʏ3						
 箭	tɕiɛn5						
 篇	pʰiɛn1						
 僵	tɕiaŋ1						
 躺	tʰaŋ3						
+僻	pʰi2						
 德	tɛ2						
 艘	søʏ1						
+膝	tɕʰi2						
 膛	tʰaŋ2						
 鲤	li3						
+鲫	tsɛ2						
 熟	su2						
 摩	mo1	摩托					
 摩	mo2	按摩					
+褒	pau1						
+瘪	pʰi2	瘪三					
 瘤	liou2						
 瘫	tʰaŋ1						
 凛	lin3						
@@ -3407,6 +3507,7 @@
 毅	i5						
 糊	fu2						
 遵	tsen1						
+憋	piɛ2	非俗传					
 潜	tɕʰyɛn2						
 澎	pʰen2						
 潮	tsʰau2						
@@ -3414,24 +3515,36 @@
 鲨	sa1						
 澳	ŋau5						
 潘	pʰaŋ1						
+澈	tsʰɛ2						
 澜	laŋ2						
 澄	tsʰen2						
 懂	toŋ3						
 憔	tɕʰiau2						
+懊	au5						
 憎	tsen1						
-额	ŋɛ2						
+额	ŋɛ2	文					
+额	nia1	~脑，脑门					
 翩	pʰiɛn1						
+褥	lu3	非俗传					
 谴	tɕʰiɛn3						
 鹤	ho2						
 憨	haŋ1						
 慰	uei5						
+劈	pʰiɛ2						
+履	ly3						
 豫	y5						
 缭	liau2						
 撼	haŋ5						
 擂	løʏ2						
+操	tsʰau1						
+擅	ɕiɛn5	新					
+擅	saŋ5	老					
 燕	iɛn5						
+蕾	løʏ3						
 薯	ɕy2						
 薛	ɕyɛ2						
+薇	uei2						
+擎	tɕʰin2						
 薪	ɕin1						
 薄	po2						
 颠	tiɛn1						
@@ -3445,32 +3558,43 @@
 融	ioŋ2						
 瓢	pʰiou2						
 醒	ɕin3						
+霍	ho2						
+辙	tsɛ2						
+冀	tɕi5						
 餐	tsʰaŋ1						
 嘴	tsøʏ3						
+踱	tu5	读若度					
 蹄	tʰi2						
 蹂	iou2						
 蟆	ma2						
 螃	pʰaŋ2						
 器	tɕʰi5						
+噪	tsau5						
 鹦	in1						
 赠	tsen5						
 默	mɛ2						
+黔	tɕʰiɛn2						
 镜	tɕin5						
 赞	tsaŋ5						
+穆	mu5						
 篮	laŋ2						
+篡	tsʰuaŋ5						
 篷	pʰoŋ2						
 篱	li2						
 儒	y2						
 邀	iau1						
 衡	hen2						
+膨	pʰen2						
 雕	tiau1						
 鲸	tɕin1						
 磨	mo2	磨刀					
 磨	mo5	石磨					
 瘾	in3						
 瘸	tɕʰyɛ2						
+凝	lin2						
 辨	piɛn5						
 辩	piɛn5						
+糙	tsʰau5						
 糖	tʰaŋ2						
 糕	kau1						
 燃	ȵiɛn2						
@@ -3479,11 +3603,16 @@
 激	tɕiɛ2						
 懒	laŋ3						
 憾	haŋ5						
+懈	ɕiɛ5						
 窿	loŋ2						
+壁	pi2						
 避	pi5						
 缰	tɕiaŋ1						
 缴	tɕiau3						
 戴	tai5						
+擦	tsʰa1						
+藉	tɕiɛ5	狼藉，藉口					
+鞠	tɕy2						
 藏	tsʰaŋ2	隐藏					
 藏	tsaŋ5	西藏					
 藐	miau3						
@@ -3495,142 +3624,351 @@
 霜	suaŋ1						
 霜	saŋ1	又					
 霞	ɕia2						
+瞭	liau2						
 瞧	tɕʰiau2						
+瞬	ɕyn5						
 瞳	tʰoŋ2						
 瞩	tsu2						
 瞪	ten5						
+曙	ɕy3						
+蹋	tʰa2						
+蹈	tau5						
 螺	lo2						
+蟋	ɕi1	非俗传					
+蟀	suai5	非俗传					
 嚎	hau2						
+赡	saŋ5						
 穗	søʏ5						
 魏	uei5						
+簧	huaŋ2						
 簇	tsʰu2						
 繁	faŋ2						
 徽	huei1						
+爵	tɕyɛ2						
 朦	moŋ2						
+臊	sau5						
+鳄	ŋo2						
 癌	ŋai2						
 辫	piɛn1						
 赢	in2						
 糟	tsau1						
 糠	haŋ1	白					
 糠	kʰaŋ1	文					
+燥	tsau5						
+懦	no5						
+豁	ho2						
+臀	tʰen2						
 臂	pi5						
 翼	iɛ2	白					
 翼	i5	文					
 骤	tsʰøʏ5						
 藕	ŋøʏ3						
+鞭	piɛn1						
 藤	tʰen2						
 覆	fu2						
+瞻	tsaŋ1						
+蹦	pen1	读若崩					
 嚣	ɕiau1						
 镰	liɛn2						
 翻	faŋ1						
 鹰	in1						
+瀑	pʰu5						
 襟	tɕin1						
+璧	pi2						
 戳	tsʰo2						
 孽	ȵiɛ2						
 警	tɕin3						
 蘑	mo2						
 藻	tsau3						
 攀	pʰaŋ1						
+曝	pau5	读若暴					
 蹲	ten1						
 蹭	tsʰen5						
+蹬	ten1						
 巅	tiɛn1						
 簸	po5						
+簿	pu5						
+蟹	hai2						
+颤	tɕiɛn5						
+靡	mi2						
 癣	ɕyɛn3						
 瓣	paŋ5						
 羹	ken1						
 鳖	piɛ2						
 爆	pau5						
-疆	tɕiaŋ1						
+疆	tɕʰiaŋ1	白					
+疆	tɕiaŋ1	文					
+鬓	pin1	读若宾					
 壤	iaŋ5						
 馨	ɕin1						
 耀	iau5						
+躁	tsau5						
+蠕	lu2						
+嚼	tɕiau2						
+嚷	iaŋ5						
+巍	uei2						
+籍	tɕiɛ2						
 鳞	lin2						
 魔	mo2						
 糯	no5						
 灌	kuaŋ5						
+譬	pʰi3						
 蠢	tɕʰyn3						
 霸	pa5						
 露	lu5						
 霹	pʰi3	霹雳啪啦					
-囊	naŋ2			laŋ2			
+躏	ȵin2						
+黯	ŋaŋ5						
+髓	søʏ2						
+赣	kaŋ5						
+囊	naŋ2						
+囊	laŋ2						
 镶	ɕiaŋ1						
+瓤	naŋ2						
 罐	kuaŋ5						
+孑	tɕiɛ2						
+孓	tɕyɛ2						
 幺	iau1						
+韦	uei5						
+卅	sa3						
 仄	tsɛ2						
+厄	ŋo2						
 仃	tin1						
 兮	ɕi1						
 爻	ɕiau2						
 卞	piɛn5						
 闩	suaŋ1						
+讣	pu3						
+尹	in3	非俗传					
+毋	u2						
+札	tsa3						
+叵	pʰo3						
+匝	tsa2						
+丕	pʰi1						
+叱	tsi2						
+仕	sɿ5						
 仟	tɕʰiɛn1						
+仞	in5						
+邝	kʰaŋ5						
+汀	tʰin2						
+讧	hoŋ5						
+讪	saŋ5						
 阡	tɕʰiɛn1						
 驭	y5						
+匡	kʰuaŋ1						
 耒	løʏ5						
-圩	ɕy1						
+玑	tɕi1						
+圩	ɕy1	集市					
 圬	u1						
 圭	kuei1						
+扦	tɕʰiɛn1						
+扪	men1						
+芊	tɕʰiɛn1						
+芨	tɕiɛ2	白芨					
+亘	ken1						
+戍	su5	戍守边疆					
+曳	i5						
+岌	tɕiɛ2						
+凼	taŋ5						
+凼	tʰaŋ5	混~，牛在水塘里滚					
+伎	tɕi5						
+伥	tsʰaŋ1						
+伫	tsʰu2						
 囟	ɕin5						
+夙	su5						
+犷	kʰuaŋ5						
 汕	saŋ5						
+汐	ɕi2						
+汲	tɕi2						
+讴	øʏ1						
 祁	tɕʰi2						
+讷	na2						
+阱	tɕin3						
+阮	luaŋ3						
+丞	tɕʰin2						
+妁	so2						
 牟	møʏ2						
+纡	y1						
+纣	tsøʏ3	读若肘					
 坍	tʰaŋ1						
+坞	u1						
 芫	yɛn2						
+邯	haŋ2						
+芸	yn2						
 芷	tsɿ3						
 苋	haŋ5						
+芪	tɕʰi2						
+芡	tɕʰiɛn5						
+苎	tɕy5						
+杓	so2						
+杞	tɕi3						
+杈	tsʰa1						
+忑	tʰɛ2						
 奁	liɛn2						
+轫	in5						
+忐	tʰaŋ3						
 岑	tɕʰin2						
 岚	laŋ2						
 邱	tɕʰiou1						
+攸	iou1						
+佚	i5						
+佗	tʰo2						
+彷	pʰaŋ2						
+坌	fen5						
+邸	ti3						
+奂	huaŋ5						
+狄	ti2						
 鸠	køʏ1						
 邹	tsøʏ1						
+饨	tuen5						
 饪	in5						
+亨	hen1						
+疔	tin1						
 疖	tɕiɛ2						
+肓	huaŋ1						
 羌	tɕʰiaŋ1						
+沅	yan3						
 沤	øʏ5						
+沌	tuen5						
 沏	tsʰɿ5						
+汨	mi2						
+汶	uen5						
 怄	øʏ5						
-怅	tsʰaŋ5						
+忡	tsʰoŋ2						
+忤	u3						
+忾	kʰai3						
+怅	tsʰaŋ2						
 诅	tsu3						
 诋	ti3						
 诏	tsau5						
+孜	tsɿ1						
+陇	loŋ3						
 陀	tʰo2						
+妍	iɛn2						
+妩	u2	读若无					
+妣	pi3	读若比					
+妊	in5	非俗传					
 邵	sau5						
+甬	ioŋ3						
 纭	yn2						
+纰	pʰi1						
+纶	len2						
+盂	y2						
+忝	tʰiɛn3						
+坩	kaŋ1						
+抨	pʰin1						
+拈	nen1						
+坼	tsʰɛ2						
+坨	tʰo2						
+抿	min3						
+坳	au5						
+耶	iɛ2						
 苓	lin2						
+枇	pʰi2						
+杳	miau3						
 枧	kaŋ3						
 杵	tɕʰy3						
 枋	faŋ1						
 杷	pʰa2						
+奄	iɛn1						
+轭	a1						
 鸢	yɛn1						
 昊	hau5						
 昙	tʰaŋ2						
+杲	kau3						
 呸	pʰei1						
+虮	tɕi1						
+咀	tɕy3						
+咆	pʰau2						
+咛	nin2						
+岿	kuei1	读若归					
+沓	tʰa2						
+钏	tɕʰyɛn1						
 钗	tsʰai1						
+牦	mau2						
+竺	tsu2						
 佬	lau3						
 佰	pɛ2						
+臾	y2	非俗传					
 岱	tai5						
+侃	kʰaŋ3						
+侏	tɕy1						
+佼	tɕiau3	侥幸					
+佯	iaŋ2						
+帛	po2						
+阜	fu5						
+刽	kʰuai5						
+瓮	oŋ5						
+戗	tɕʰiaŋ5						
 剁	to5						
+迩	ɛ3						
+狙	tɕy1						
+咎	tɕiou1						
+炙	tsa2						
+枭	ɕiau1						
+饯	tɕiɛn5						
+饴	i2						
+冽	li5	读若例					
+疝	saŋ5						
+疡	iaŋ2						
+妾	tɕʰiɛ2						
+劾	hɛ2	非俗传					
 𬉼	øʏ5						
+炖	ten5						
+泔	kaŋ1						
+泸	lu2						
 泱	iaŋ1						
+泗	sɿ5						
 泮	paŋ5						
+泯	min3						
 宕	taŋ5						
+诙	huei1						
+戽	fu5						
+衩	tsʰa2						
 诛	tɕy1						
+诟	køʏ5						
+诠	tɕʰyɛn2						
+诩	y3	非俗传					
+孢	pau1						
 姗	saŋ1						
+弩	lu5						
 虱	sɛ2						
+驷	sɿ5						
+驸	fu5						
+绉	tsøʏ1						
+怂	tsoŋ5						
+咤	tsa2						
+珀	pʰo2						
+倜	tʰi1						
+傥	tʰaŋ1						
+挝	ko1	老挝					
 赳	tɕiou1						
+瑕	ɕia2						
 垠	in2						
+惆	tɕʰiou2						
 茼	tʰoŋ2						
 茴	huei2						
+荞	tɕiau2						
 茯	fu2						
 荟	huei5						
+荠	tɕʰi2						
+茭	tɕiau1						
 茨	tsʰɿ2						
+荨	ɕyn2						
 柩	tɕiou5						
 柚	iou5						
 栀	tɕy1						
 枸	kou3						
+枷	tɕia1						
+砒	pʰi1						
+奎	kʰuei2						
 殆	tai5						
+眈	taŋ1						
+禺	y5	番禺					
 盅	tsoŋ1						
+剐	kua3						
 哝	noŋ1						
+峙	tsɿ5						
 峥	tsen1						
 钛	tʰai5						
 钡	pei5						
@@ -3638,22 +3976,44 @@
 氡	toŋ1						
 氟	fu2						
 牯	ku3						
+竽	y5	滥竽充数					
+笈	tɕi2						
+笃	tu2						
+叟	sau3	童叟无欺					
 皈	kuei1						
 俑	ioŋ3						
+逅	høʏ5						
 匍	pʰu2						
 狩	ɕiou3	读若守					
+饷	ɕiaŋ3	军饷					
 孪	luaŋ2						
 娈	luaŋ2						
+弈	i5						
+奕	i5						
 疣	iou2						
 疥	kai5						
+迸	pin5	迸发					
+炽	tsɿ5						
+榷	tɕʰyɛ2						
+涎	iɛn2	垂涎三尺					
 浒	fu2						
+恪	kɛ2	恪守					
+祛	tɕʰy5						
 郡	tɕyn5						
+咫	tsɿ3						
 陛	pi5						
+祉	tsɿ3						
 姣	tɕiau1						
+羿	i5						
+矜	tɕin1						
 敖	ŋau2						
+埕	tɕʰin2	小坛子					
+埚	ko1						
 捋	lo2						
 莴	o1						
 莓	mei2						
+莅	li3	莅临					
+荼	tʰu2						
 荽	ɕy1						
 莞	kuaŋ3						
 鸪	ku1						
@@ -3661,20 +4021,27 @@
 桕	tɕiou5						
 桅	uei2						
 桉	ŋaŋ1						
+栩	ɕy3						
 豇	kaŋ1						
 砝	fa2						
 砧	ten1						
+轼	sɿ5						
 虔	tɕʰiɛn2						
 逍	ɕiau1						
 哽	ken3						
+蚜	ia2						
 蚝	hau2						
 唢	so3						
+盎	aŋ5						
+赅	kai1						
 钴	ku3						
 钵	po2						
 笕	kaŋ3						
+笆	pa1						
 俸	foŋ5						
 倩	tɕʰiɛn5						
 俵	piau5						
+倭	o1						
 釜	fu3						
 胯	kʰua5						
 胱	kuaŋ1						
@@ -3688,62 +4055,110 @@
 阄	køʏ1						
 恙	iaŋ5						
 粑	pa1						
+郸	taŋ1						
 烬	tɕin5						
 浞	tsʰua2						
 涓	tɕyɛn1						
+悭	kʰaŋ1	省钱					
 窈	iau3						
 屙	o1						
 蚩	tsʰɿ1						
+娩	miɛn3						
 鸶	sɿ1						
 彗	huei5						
+萁	tɕi1						
 萋	tɕʰi1						
 菖	tsʰaŋ1						
 萦	iaŋ1						
 梓	tsɿ3						
 啬	sɛ2						
+匮	kʰuei5						
 豉	sɿ3						
+戛	tɕiɛ2	戛然而止					
+殒	yn5	殒命					
+殓	liɛn3	入殓					
+殍	pʰiau2						
+堑	tɕʰiɛn3	天堑					
+晤	u5						
+眺	tʰiau5						
+眸	mu5						
+冕	miɛn3						
 蛆	tɕʰy1						
 蚱	tsɛ2						
+帼	kuɛ2	巾帼					
+赈	tsen5	赈灾					
 赊	ɕiɛ1						
+铙	nau2						
+铠	kʰai3						
 铡	tsa2						
+铤	tʰin3	铤而走险					
+铰	tɕiau3						
 铳	tsʰoŋ5						
+笺	tɕiɛn3	信笺					
 笪	ta2	用于晾晒的竹制大席子					
+笠	li2						
+傀	kʰuei3						
+皑	ŋai2						
+舷	ɕiɛn2						
+猝	tsʰu2						
+猕	mi2						
+馗	kʰuei2						
+馄	huen2						
 鸾	luaŋ2						
+孰	su2						
 痔	tsɿ5						
+疵	tsʰɿ1						
 阉	iɛn1						
+粕	pʰo2						
 烽	foŋ1						
+焗	tɕy2						
 淝	fei2						
 淄	tsɿ1						
+惬	tɕʰiɛ2	惬意					
+惮	taŋ5						
+谏	tɕiɛn5						
 皲	tɕyɛn1						
 裆	taŋ1						
 谕	y5						
+谗	tsʰaŋ2						
 粜	tʰiau5						
 隍	huaŋ2						
 婊	piau3						
 娼	tsʰaŋ1						
 婢	pi1						
+恿	ioŋ3						
 绫	lin2						
 绯	fei1						
 琵	pʰi2						
 琶	pʰa2						
 琥	fu3						
 靓	liaŋ5						
-揿	tɕʰiɛn3						
+揖	i2	作揖					
+揿	tɕʰiɛn3	按					
+蛰	tɕiɛ2	惊蛰					
+葚	sen5						
+萼	ŋo2						
 鹂	li2						
 辎	tsɿ1						
+喋	tiɛ2						
 蛭	tsɿ5						
 蛳	sɿ1						
 蛔	huei2						
 啾	tɕiou1						
+嵘	ioŋ2						
 崽	tsai3						
 锂	li3						
 锑	tʰi1						
+矬	tsʰo5						
+毽	tɕiɛn5						
+犊	tu2						
 牍	tu2						
 遑	huaŋ2						
 徨	huaŋ2						
+釉	iou5						
 舜	ɕyn5						
 腌	iɛn1						
-腆	tʰiɛn3						
+腆	tʰiɛn2						
 腑	fu3						
 鱿	iou2						
 馊	søʏ1						
@@ -3753,14 +4168,28 @@
 痤	tsʰo2						
 痫	ɕiɛn2						
 痧	sa1						
+焙	pʰei2						
+湛	tsaŋ5						
+湎	miɛn5						
+湍	tʰuaŋ1						
+滁	tɕʰy2						
 孱	tsʰaŋ5						
+弼	pi2						
 婷	tʰin2						
+缈	miau3						
 瑚	fu2						
+瑜	y2						
+遨	ŋau2						
+搐	tsu2	抽搐					
 蓑	so1						
 蒿	hau1						
 楠	naŋ2						
+楂	tsʰa2						
 椴	tuaŋ5						
 槌	tsʰøʏ2						
+榈	ly3						
+椽	ɕyɛn2	椽板					
+裘	tɕʰiou2						
 剽	piau1						
 碓	tøʏ5						
 硼	pʰoŋ2						
@@ -3771,76 +4200,151 @@
 嗉	ɕy5						
 嘟	tu1						
 戥	ten3						
+暄	ɕyɛn1						
+蜊	li5						
+嗣	sɿ5	子嗣					
 嵩	soŋ1						
 稗	pai5						
 牒	tiɛ2						
+煲	pau1						
 徭	iau2						
+腼	miɛn2	腼腆					
 塍	ɕin2						
+詹	tsaŋ1						
 鲇	ȵiɛn2						
 鲈	lu2						
+馐	ɕiou1						
 鹑	tɕʰyn2						
 痱	pi5						
+麂	tɕi3						
 裔	i5						
 雍	ioŋ1						
-阙	tɕʰye2						
+阖	ho2						
+阙	tɕʰyɛ2						
+煨	uei1						
 煅	tuaŋ5						
 裟	sa1						
 滗	pi5						
 窦	tøʏ5						
 窠	ho1						
 裱	piau3						
+媲	pi1	媲美					
+缛	lu3	繁文缛节					
 骟	ɕiɛn5						
 瑶	iau2						
 獒	ŋau2						
 榖	ku2						
-蔷	tɕʰiaŋ3						
+蔷	tɕʰiaŋ2						
 蔸	tøʏ1						
 蔟	tsʰu2						
 蔻	kʰøʏ5						
+蓼	liou3						
 榫	sen3						
 槟	pin1						
+槠	tɕy1						
 酶	mei2						
 厮	sɿ1						
+殡	pin1						
 辕	yɛn2						
 翡	fei3						
 龈	in2						
+睿	løʏ5	睿智					
 螂	laŋ2						
+蜢	maŋ2						
 嘘	ɕy1						
+罂	ŋen1	酸菜坛					
+骷	kʰu1						
+锲	tɕʰi5						
 镁	mei3						
+箍	ku1						
+箔	po2						
+儆	tɕʰin5						
 銮	luaŋ2						
+塾	su2	私塾					
 瘌	la2						
 瘊	høʏ2						
 廖	liau5						
 韶	sau2						
+粼	lin2						
 粽	tsoŋ5						
+漩	ɕyɛn5						
 嫖	pʰiau2						
+嫡	ti2						
+缥	pʰiau1						
+缨	in1						
+缪	møʏ2	未雨绸缪					
+缫	tɕʰiau3	缫边					
+瑾	tɕin3						
+璜	huaŋ2						
+璀	tsʰøʏ3						
+璋	tsaŋ1						
 蕨	tɕyɛ2						
+樊	faŋ2						
+瞌	kʰo2	瞌睡					
 噎	iɛ2						
+踮	tiɛn5						
+蝽	tɕʰyn1						
+蝾	ioŋ2						
 蝣	iou2						
 蝼	løʏ2						
-噍	tɕiau5	咀嚼					
+颚	ŋo2						
+噍	tɕʰiau5	咀嚼					
+骼	kɛ2						
+骸	hai2						
+镊	niɛ2						
+稷	tɕi2						
+箴	tsen1						
+篆	tɕyɛn5						
+磐	pʰaŋ2						
 膘	piau1						
+瘠	tɕiɛ2						
 糍	tsʰɿ2						
+潦	liau2						
 潲	sau5						
 潼	tʰoŋ2						
+憬	tɕin3						
+憧	tsʰoŋ1						
 寮	liau2						
 熨	yn5						
 嬉	ɕi1						
+戮	lu5						
+缮	ɕiɛn5						
+擀	kaŋ3						
 熹	ɕi1						
+擞	su5						
+鞘	tɕʰiau5						
+薏	i5						
 薅	hau1						
 樵	tɕʰiau3						
+樽	tsen1						
+赝	iɛn5						
 飙	piau1						
+錾	tsaŋ3						
+瞠	tsʰen1						
+螨	maŋ3						
 蟒	maŋ3						
+圜	huaŋ2						
 镖	piau1						
 篝	køʏ1						
 篦	pi5						
+篙	hau1						
+翱	au2	翱翔					
+膳	ɕiɛn5	膳食					
+邂	ɕiɛ5	非俗传					
 鹧	tɕiɛ5						
 嬴	in2						
+壅	oŋ1						
+甑	tsen5						
+燎	liau5						
+璨	tsʰaŋ5						
+璐	lu5						
+擤	sen3						
 壕	hau2						
 薹	tʰai2						
 薰	ɕyn1						
 藓	ɕyɛn3						
 礅	ten1						
+磴	tʰen3						
 蟥	uaŋ2						
 螳	tʰaŋ2						
 蟑	tsaŋ1						
@@ -3851,6 +4355,8 @@
 黛	tai5						
 儡	løʏ3						
 鼾	haŋ1						
+邈	miau3						
+臃	ioŋ1	臃肿					
 鳃	sai1						
 鳅	tɕʰiou1						
 鳊	piɛn3						
@@ -3858,11 +4364,21 @@
 孺	y2						
 鬃	tsoŋ1						
 鹭	lu5						
+镭	løʏ1						
 镯	tso2						
 簟	tiɛn5						
 簪	tsaŋ1						
 癞	lai5						
+碕	tɕʰi2	碕石					
+癔	i5						
+癜	tiɛn1	白癜风					
 糨	tɕiaŋ5						
+攉	huai3	甩					
+攒	tsaŋ3	攒劲					
+藿	ho2						
+麓	lu2						
+酃	lin2	酃县					
+蟾	tsʰaŋ2						
 黢	tɕʰy1						
 鳕	ɕyɛ2						
 鳙	ɕioŋ2						
@@ -3871,40 +4387,59 @@
 瀛	in2						
 醴	li3						
 曦	ɕi1						
-鳟	ɕiɛn5						
+徛	tɕʰi3	站					
+纂	tɕyɛn5	编纂					
+鳝	ɕiɛn5						
 孀	suaŋ1						
 孀	saŋ1	又					
+礴	po2	磅礴					
 鳢	li3						
 癫	tiɛn1						
-鐾	pei5						
+鐾	pei5	磨刀					
 霾	mai2						
 鬟	huaŋ2						
 麟	lin2						
 鑫	ɕin1						
+襻	pʰaŋ5						
+吒	tsa2	哪吒					
 杧	maŋ2						
 炆	uen2	炖					
+迳	ken5	迳口					
 俫	lai3	男孩					
-祐	ioŋ5						
+祐	iou5						
 桠	a1	~杈，形容小孩叛逆					
+瓞	tiɛ2	瓜瓞绵绵					
+盪	tʰaŋ3						
 梽	tsɿ5	～木，志木					
 厣	iɛn3	～皮，螺蛳盖					
 脶	lo2						
 湴	paŋ5	陷入烂泥					
 绹	tʰau2	绑					
-喆	tɕiɛ2	读若吉					
+喆	tɕiɛ2	非俗传					
 塅	tuaŋ5						
 湓	pʰen2	水溢出					
 塝	paŋ5						
+腯	tʰa3	肥~，十分肥					
 猺	iau2						
+煴	uen1	~炸，闷热					
+廒	ŋau2	存放谷物的容器					
 夥	ho3						
 瘕	ha1	扯～，哮喘					
+桷	ko2	瓦～板，椽子					
 磉	saŋ3	垫					
 潽	pʰu1	水沸喷出					
+敥	iɛn5	撒粉状物					
+𦩫	tɕʰin5	~手，有份量					
+䭰	pʰoŋ5	香~，十分香					
+薸	pʰiau2	浮萍					
+圝	luaŋ2	圆					
 簕	lɛ2	刺					
 沕	min5	潜水					
 藨	pʰau1	蛇～					
 揹	pa1	手搭在肩膀上背着					
 檫	tsʰa2						
+攋	lai2	丢失					
+礵	suaŋ1						
 □	pʰaŋ3	~laŋ2，牵牛绳					
 □	laŋ2	pʰaŋ3~，牵牛绳					
 □	tʰo5	~紧~紧，果实累累					
@@ -3975,3 +4510,21 @@
 □	tʰaŋ2	～sɿ1，蜻蜓					
 □	sɿ1	tʰaŋ2～，蜻蜓					
 □	ha3	～蚁子，蚂蚁					
+□	liɛ3	舔					
+□	ly5	～豆棍，供豆角攀缘的木棍					
+□	pʰiau5	抛					
+□	u1	缸~，缸					
+□	hɛ1	～起～起，形容滥竽充数的人					
+□	kʰuɛ2	小坑					
+□	hau2	捕鱼笼					
+□	tɕiɛn3	压					
+□	tɕʰin1	走眼					
+□	ŋøʏ3	纽扣					
+□	tɕin3	量词，一间房					
+□	naŋ1	糊~，十分坨					
+□	sen3	木材朽坏					
+□	sen2	挠					
+□	ken3	整的					
+□	aŋ1	~心，内向					
+□	ta2	~耙，疏齿耙					
+□	mau3	青~，十分青					

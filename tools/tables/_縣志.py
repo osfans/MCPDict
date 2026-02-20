@@ -346,6 +346,10 @@ class 表(_表):
 			行 = 自.增加調類(行)
 		elif 名 in ("石首",):
 			行 = 自.增加調類(行)
+		elif 名 in ("藁城",):
+			if 行.startswith("字韵声	阴"): return ""
+			if 行.startswith("字韵声	"): return 行.split("\t")[1]
+			行 = 自.增加調類(行)
 		elif 名 in ("衡東大浦",):
 			if 行.lstrip().startswith("阴平"): return
 			行 = 行.strip()
