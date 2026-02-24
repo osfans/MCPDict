@@ -38,7 +38,15 @@ class 表(_表):
 				音 = to_tone3(音)
 			elif 名 in ("蒼南錢庫",):
 				音 = 音.replace("轻声", "0")
+			elif 名 in ("南雄",):
+				音 = 音.replace("(鼻化音)", "")
 			elif 自.文件名.startswith("寧夏中衛八点联表"):
+				註 = 字[1:].strip("()（）")
+				字 = 字[0]
+			elif 自.文件名.startswith("通渭方言语音研究"):
+				註 = 字[1:].strip("()")
+				字 = 字[0]
+			elif 名 in ("古浪",):
 				註 = 字[1:].strip("()（）")
 				字 = 字[0]
 			elif 名 in ("雷州",):
