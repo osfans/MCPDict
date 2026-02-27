@@ -440,6 +440,8 @@ class 表(_表):
 				行 = "\t".join(列)
 			行 = 自.增加調類(行)
 			行 = 行.replace("（", "(").replace("）", ")").replace("(", "{").replace(")", "}").replace("{{", "{").replace("}}", "}")
+		elif 名 in ("全椒", "含山"):
+			行 = 行.replace("(白)", "-").replace("(文)", "=").replace("(0)", "⓪").replace("/#", "/")
 		elif 名 in ("贛榆", "徐州", "銀川", "大同", "儀徵"):
 			行 = 行.strip().replace(",","，").replace("?(", "□(")
 			if 行.startswith("#"): return 行
