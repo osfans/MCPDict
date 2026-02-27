@@ -72,7 +72,7 @@
 腡	lo5	lɔ2										
 裸	lo2	lɔ3										
 摞	loh8	lɔʔ8										
-銼	tsho6	tsʰɔ4										
+銼	tsho3	tsʰɔ5										
 矬	tsho5	tsʰɔ2										
 坐	tso6	tsɔ4										
 座	tso7	tsɔ6										
@@ -118,7 +118,7 @@
 把	pe2	pɛ3-										
 把	pa2	pa3=										
 爸	pa5	pa2										
-爸	pa2	pa3		又								
+爸	pah2	paʔ8		又								
 垻	pa3	pa5										
 霸	pa3	pa5										
 怕	phann3	pʰã5										
@@ -276,7 +276,7 @@
 步	pou7	pɔu6										
 捕	pu6	pu4										
 埠	pou1	pɔu1										
-模	bou5	bɔu2-										
+模	bou5	bɔu2-		模子								
 模	mo5	mɔ2										
 暮	mo6	mɔ4										
 墓	mo6	mɔ4										
@@ -366,7 +366,7 @@
 誤	gou7	gɔu6										
 呼	khou1	kʰɔu1										
 呼	hu1	hu1=										
-虎	honnunn2	hɔũ3										
+虎	hounn2	hɔũ3										
 滸	hu2	hu3										
 戽	hou6	hɔu4										
 乎	hu1	hu1										
@@ -378,7 +378,7 @@
 狐	hou5	hɔu2										
 狐	hu5	hu2=										
 湖	ou5	ɔu2										
-鈑	ponninn2	pɔ̃ĩ3										
+鈑	ponninn2	pɔĩ3										
 鈑	panɡ2	paŋ3=										
 戶	hou6	hɔu4										
 滬	hu6	hu4										
@@ -672,7 +672,7 @@
 癩	nai6	nai4										
 蔡	tshuann3	tsʰuã5										
 蔡	tshua3	tsʰua5										
-蓋	khoinn3	kʰɔĩ5										
+㪠	khoinn3	kʰɔĩ5										
 蓋	kah4	kaʔ7										
 蓋	kua3	kua5										
 蓋	kai3	kai5=										
@@ -991,7 +991,7 @@
 疵	tshur5	tsʰə2										
 斯	sur1	sə1										
 撕	thi3	tʰi5*										
-撕	li3	li5*										
+撕	li3	li5*		本字捸								
 撕	sur1	sə1										
 廝	sur1	sə1										
 璽	dzur2	dzə3										
@@ -1512,7 +1512,7 @@
 撓	niou1	niɔu1-										
 撓	nau5	nau2										
 鬧	nau6	nau4										
-罩	ta3	ta5		又								
+罩	ta3	ta5		魚~，蠓~								
 罩	tsau6	tsau4										
 抓	tsua1	tsua1										
 爪	dziou2	dziɔu3										
@@ -2628,7 +2628,7 @@
 滿	muann2	muã3										
 漫	buanɡ6	buaŋ4										
 漫	manɡ6	maŋ4		又								
-幔	buanɡ6	buaŋ4										
+幔	buanɡ6	buaŋ4=										
 端	tuanɡ1	tuaŋ1										
 短	to2	tɔ3										
 斷	turnɡ6	təŋ4										
@@ -2811,15 +2811,15 @@
 潑	phuak4	pʰuak7*										
 鈸	buah8	buaʔ8										
 鈸	puak8	puak8=										
-跋	puah8	puaʔ8										
+跋	puah8	puaʔ8-										
 跋	puak8	puak8=										
-末	buah8	buaʔ8										
+末	buah8	buaʔ8-										
 末	muak8	muak8=										
 抹	buah4	buaʔ7										
 沫	buah8	buaʔ8										
 沫	muak8	muak8										
 掇	toh8	tɔʔ8										
-掇	tshuak4	tsʰuak7		又，俗								
+掇	tshuak4	tsʰuak7*		又								
 脫	thuk4	tʰuk7										
 奪	toh8	tɔʔ8										
 捋	luk8	luk8										
@@ -2843,7 +2843,7 @@
 輟	tshuak4	tsʰuak7										
 拙	tshuak4	tsʰuak7										
 說	sueh4	suɛʔ7										
-悅	dzuak8	dzuak8										
+悅	dzuak8	dzuak8=										
 閲	luak4	luak7										
 發	huak4	huak7										
 髮	huak4	huak7										
@@ -2999,7 +2999,7 @@
 瑟	sek4	sɛk7										
 虱	sak4	sak7										
 質	tsioh4	tsiɔʔ7										
-實	sek8	sɛk8										
+實	sek8	sɛk8=										
 失	sek4	sɛk7										
 室	sek4	sɛk7										
 日	dzek8	dzɛk8										
@@ -3332,6 +3332,7 @@
 暢	thianɡ3	tʰiaŋ5										
 悵	tsianɡ3	tsiaŋ5										
 長	turnɡ5	təŋ2-										
+長	tionn2	tiɔ̃3=										
 長	tshianɡ5	tsʰiaŋ2=										
 腸	turnɡ5	təŋ2										
 場	tionn5	tiɔ̃2-										
@@ -3581,7 +3582,6 @@
 耩	kanɡ2	kaŋ3										
 降	kanɡ3	kaŋ5										
 虹	honɡ5	hɔŋ2										
-虹	khenɡ6	kʰɛŋ4		又								
 腔	khionn1	kʰiɔ̃1										
 降	hanɡ5	haŋ2										
 項	hanɡ6	haŋ4										
@@ -3642,7 +3642,7 @@
 亙	kenɡ3	kɛŋ5										
 肯	khenɡ2	kʰɛŋ3										
 恒	henɡ5	hɛŋ2										
-恒	henɡ3	hɛŋ5		又，俗读								
+恒	henɡ3	hɛŋ5*		又								
 冰	piann1	piã1										
 憑	penɡ5	pɛŋ2										
 淩	lenɡ5	lɛŋ2										
@@ -3663,7 +3663,7 @@
 乘	senɡ6	sɛŋ4										
 繩	senɡ5	sɛŋ2										
 剩	senɡ5	sɛŋ2										
-剩	senɡ5	sɛŋ2=										
+剩	senɡ5	sɛŋ2										
 剩	senɡ7	sɛŋ6										
 升	senɡ1	sɛŋ1										
 勝	senɡ3	sɛŋ5										
@@ -3749,7 +3749,7 @@
 打	ta2	ta3										
 冷	nenn2	nɛ̃3										
 撐	thenn1	tʰɛ̃1										
-澄	thenɡ5	tʰɛŋ2										
+澄	thenɡ5	tʰɛŋ2		~海；把液體中的雜質沉澱分離，使清澈純淨								
 鐺	tanɡ1	taŋ1										
 鐺	tshanɡ1	tsʰaŋ1		又								
 生	senn1	sɛ̃1										
@@ -3928,7 +3928,7 @@
 腥	tshenn1	tsʰɛ̃1										
 醒	tshenn2	tsʰɛ̃3										
 經	kiann1	kiã1-		易~								
-經	kenn1	kɛ̃1-		又								
+經	kenn1	kɛ̃1-		織，~布								
 經	kenɡ1	kɛŋ1=										
 徑	kenn3	kɛ̃5										
 磬	khenɡ3	kʰɛŋ5										
@@ -4332,7 +4332,7 @@
 續	sok8	sɔk8										
 燭	tsek4	tsɛk7										
 囑	tsok4	tsɔk7										
-觸	tshok4	tsʰɔk7										
+觸	tshok4	tsʰɔk7=										
 贖	sok8	sɔk8										
 束	sok4	sɔk7										
 蜀	tsuak8	tsuak8										
@@ -4561,6 +4561,7 @@
 妮	ni5	ni2										
 姆	m2	m3										
 迢	thiou5	tʰiɔu2										
+迢	thiou1	tʰiɔu1										
 叁	sann1	sã1										
 綫	suann3	suã5										
 紳	senɡ1	sɛŋ1										
@@ -4625,6 +4626,7 @@
 奬	tsianɡ3	tsiaŋ5										
 迹	tsiah4	tsiaʔ7										
 閥	huak8	huak8										
+姜	kionn1	kiɔ̃1										
 姜	kianɡ1	kiaŋ1										
 籽	tsi2	tsi3										
 婁	lu5	lu2										
@@ -4974,7 +4976,7 @@
 撬	kiou6	kiɔu4										
 蕉	tsio1	tsiɔ1										
 蘊	unɡ3	uŋ5										
-槽	tshau5	tsʰau2										
+槽	tshau5	tsʰau2=										
 橡	tshionn6	tsʰiɔ̃4										
 磊	lui2	lui3										
 磅	ponɡ7	pɔŋ6										
@@ -5121,7 +5123,7 @@
 薌	hianɡ1	hiaŋ1										
 厙												
 夼	khuanɡ3	kʰuaŋ5										
-尥	liou3	liɔu5										
+尥	liou3	liɔu5		腳被絆								
 乩	ki1	ki1										
 旯	la1	la1										
 曳	ek8	ɛk8										
@@ -5534,7 +5536,7 @@
 驛	iah8	iaʔ8										
 駘	tai5	tai2										
 甾	tsai1	tsai1										
-珏	hek8	hɛk8										
+珏	kak4	kak7										
 珐	huak4	huak7										
 珂	ko1	kɔ1										
 瓏	lonɡ5	lɔŋ2										
@@ -5818,7 +5820,6 @@
 絎	hanɡ5	haŋ2										
 絳	kanɡ3	kaŋ5										
 耖	tshau1	tsʰau1										
-挈	khioh8	kʰiɔʔ8										
 珥	dzi7	dzi6										
 珙	konɡ5	kɔŋ2										
 頊	hiok4	hiɔk7										
@@ -5863,7 +5864,7 @@
 栲	ka1	ka1										
 栳	lo2	lɔ3										
 郴	tinɡ1	tiŋ1										
-橈	dzio5	dziɔ2										
+橈	dzio5	dziɔ2		小木槳								
 桎	tiak4	tiak7										
 楨	tsenɡ1	tsɛŋ1										
 榿	khi1	kʰi1										
@@ -5963,7 +5964,7 @@
 筧	kanɡ1	kaŋ1										
 笏	buk4	buk7										
 笆	pa1	pa1										
-倩	tshenɡ3	tsʰɛŋ5										
+倩	tshenɡ3	tsʰɛŋ5=										
 俵	pio2	piɔ3										
 偌	dziak8	dziak8										
 俳	pai5	pai2										
@@ -6029,7 +6030,7 @@
 烜	hianɡ2	hiaŋ3										
 燁	iak8	iak8										
 燴	hue6	huɛ4										
-烊	ionn5	iɔ̃2										
+烊	ionn5	iɔ̃2		融化								
 剡	ianɡ2	iaŋ3										
 郯	tanɡ6	taŋ4										
 燼	tsenɡ6	tsɛŋ4										
@@ -6055,7 +6056,7 @@
 剜	uanɡ2	uaŋ3										
 諏	tsou1	tsɔu1										
 冢	thonɡ2	tʰɔŋ3										
-諑	tok4	tɔk7										
+諑	tok4	tɔk7		咒~：惡言咒罵								
 袒	thanɡ2	tʰaŋ3										
 袢	phanɡ3	pʰaŋ5										
 禎	tsenɡ1	tsɛŋ1										
@@ -6182,7 +6183,7 @@
 雩	u1	u1										
 塹	tsianɡ3	tsiaŋ5										
 眭	sui1	sui1										
-眦	tsur1	tsə1										
+眦	tsur1	tsə1=										
 嘖	tseh4	tsɛʔ7										
 晡	pu1	pu1										
 晤	nɡo5	ŋɔ2										
@@ -6225,7 +6226,7 @@
 幘	tseh4	tsɛʔ7										
 崚	lenɡ5	lɛŋ2										
 幗	kok4	kɔk7										
-崮	ku1	ku1										
+崮	ku3	ku5										
 崤	nɡau5	ŋau2										
 崆	khonɡ1	kʰɔŋ1										
 賕	khiu5	kʰiu2										
@@ -6456,7 +6457,7 @@
 斐	hui1	hui1										
 睄												
 瞼	kianɡ2	kiaŋ3										
-睇	thoinn2	tʰoĩ3		替								
+睇	thoinn2	tʰɔĩ3		替								
 睃	so1	sɔ1										
 戢	tsik4	tsik7										
 喋	tiak8	tiak8										
@@ -6575,7 +6576,7 @@
 痞	phi1	pʰi1										
 痤	tsho5	tsʰɔ2										
 癇	hianɡ5	hiaŋ2										
-痧	sua1	sua1										
+痧	sua1	sua1		著~								
 賡	kenn1	kɛ̃1										
 竦	sonɡ2	sɔŋ3										
 瓿	pau6	pau4										
@@ -6621,7 +6622,7 @@
 扉	hui1	hui1										
 褳	lianɡ5	liaŋ2										
 裎	tenɡ1	tɛŋ1										
-襇	koinn2	koĩ3										
+襇	koinn2	kɔĩ3										
 祾	lenɡ5	lɛŋ2										
 祺	khi5	kʰi2										
 讜	tanɡ2	taŋ3										
@@ -6693,7 +6694,7 @@
 蒟	ku6	ku4										
 蒡	phanɡ5	pʰaŋ2										
 燋	ta1	ta1		替								
-蒴	shuak4	shuak7										
+蒴	suak4	suak7										
 蒗	lanɡ6	laŋ4										
 鎣	ionɡ5	iɔŋ2										
 頤	hi1	hi1										
@@ -7057,7 +7058,7 @@
 槊	suak4	suak7										
 鷀	tsur1	tsə1										
 熘	liu1	liu1										
-熥	thanɡ1	tʰaŋ1										
+熥	thanɡ1	tʰaŋ1		火~：冬天取暖時用的爐子								
 潢	huanɡ5	huaŋ2										
 漕	tshau5	tsʰau2										
 滹	hu1	hu1										
@@ -7090,7 +7091,7 @@
 嬙	tshianɡ5	tsʰiaŋ2										
 嫦	sianɡ5	siaŋ2										
 嫚	buanɡ6	buaŋ4										
-嫘	lui6	lui4										
+嫘	lui5	lui2										
 鼐	nai6	nai4										
 翟	tek8	tɛk8										
 瞀	mou3	mɔu5										
@@ -7305,7 +7306,7 @@
 霖	linɡ5	liŋ2										
 霏	hui1	hui1										
 霓	nɡi5	ŋi2										
-鏨	tsanɡ6	tsaŋ4										
+鏨	tsanɡ6	tsaŋ4		小鑿子								
 轔	lenɡ5	lɛŋ2										
 氅	tshianɡ2	tsʰiaŋ3										
 瞟	phiou1	pʰiɔu1										
@@ -7385,7 +7386,7 @@
 麇	kunɡ1	kuŋ1										
 麈	tsu2	tsu3										
 嬴	ionɡ5	iɔŋ2										
-壅	enɡ3	ɛŋ5										
+壅	enɡ3	ɛŋ5		培土								
 羲	hi1	hi1										
 糗	khiu2	kʰiu3										
 瞥	phuah4	pʰuaʔ7										
@@ -7452,7 +7453,7 @@
 蟑	tsianɡ1	tsiaŋ1										
 嚓	tshak4	tsʰak7										
 罽	ki6	ki4										
-罾	tsanɡ1	tsaŋ1										
+罾	tsanɡ1	tsaŋ1		一種用竹竿或木棍做支架的方形漁網								
 嶷	gi5	gi2										
 黜	thuk4	tʰuk7										
 黝	iu2	iu3										
@@ -7549,7 +7550,7 @@
 髂	khe3	kʰɛ5										
 鐳	lui5	lui2										
 馥	hiok4	hiɔk7										
-簟	tianɡ6	tiaŋ4										
+簟	tianɡ6	tiaŋ4		大竹席								
 鼬	iu7	iu6										
 艟	thonɡ5	tʰɔŋ2										
 鰨	thak4	tʰak7										
@@ -7719,7 +7720,6 @@
 筅	tshoinn2	tsʰɔĩ3		雞毛~：雞毛撣子								
 薸	phio5	pʰiɔ2		浮萍								
 囥	khurnɡ3	kʰəŋ5		藏								
-□	kanɡ5	kaŋ2		掩埋								
 欶	suh4	suʔ7										
 剢	tok4	tɔk7		剁								
 矺	teh4	tɛʔ7		壓								
@@ -7733,7 +7733,7 @@
 烌	hu1	hu1										
 鉎	sanɡ1	saŋ1										
 㩻	khi1	kʰi1										
-㪠	khanɡ3	kʰaŋ5										
+㪠	khanɡ3	kʰaŋ5?										
 搵	unɡ3	uŋ5										
 忊												
 捀												
@@ -7787,7 +7787,7 @@
 掊	pue1	puɛ1		用手或工具扒開土而尋取								
 捘	tsunɡ6	tsuŋ4		扭								
 箾	siak4	siak7		打，～拍								
-挈	khioh8	kʰiɔʔ8										
+挈	khioh8	kʰiɔʔ8		拿								
 擘	peh4	pɛʔ7		掰								
 絎	hanɡ5	haŋ2		縫								
 趭	dziou7	dziɔu6		追趕								
@@ -7839,7 +7839,7 @@
 攝	sih4	siʔ7		閃爍								
 滘	ka3	ka5										
 氹	tanɡ6	taŋ4										
-詖	phueh8	pʰueʔ8		替								
+詖	phueh8	pʰuɛʔ8		替								
 誧	phu2	pʰu3		喝～，吹牛								
 薦	tsinn1	tsĩ1		草墊								
 溦	mui5	mui2		細小								
@@ -7854,7 +7854,6 @@
 瘡	tshur1	tsʰə1										
 謎	mi6	mi4										
 梗	kuainn2	kuaĩ3										
-□		uɛ5		傳染								
 快		kʰuã5-		～活								
 夗		ŋ̍ʔ8		睡覺								
 鬆		saŋ1		輕～								
@@ -7862,11 +7861,11 @@
 □	khiou1	kʰiɔu1		窮								
 □		tsʰau2		推								
 □		tɛ̃4		手指按壓								
-□		suaŋ4		拉尿								
+潠		suaŋ4		噴水，~尿：男生拉尿								
 □		niʔ7		一點點，～～囝								
 □		ak7		找錢								
-□		kʰɔiʔ7		車胎～著屎：輪子沾到屎了								
-□		ŋ̍5		依靠								
+□		kʰɔiʔ7		碾壓，車胎～著屎：輪子沾到屎了								
+□		ŋ̍5		依靠，漢字寫作仰								
 □		səŋ2		籠～：蒸籠								
 □		liu2		挖								
 □		tʰəŋ4		手後~：手肘								
@@ -7887,29 +7886,29 @@
 □		kʰɛŋ4		被竹枝等打后留下的长条状印痕								
 囷		kʰəŋ2		堆积								
 □		pai1		次，量词								
-□		nɛŋ7		踹								
-□		niŋ3		你們								
-□		tʰɛŋ6		对峙								
+□		nɛk7		踹								
+恁		niŋ3		你們								
+□		tʰɛŋ6		對峙								
 □		kʰak8		磕碰								
 □		kuaŋ4		耍脾气								
 □		dzuaŋ4		將就								
 □		ŋiaŋ5		喜歡								
-□		bai6		細看								
+䀛		bai6		細看								
 □		iak8		點火								
 □		kʰiak7		~~：形容纸币很新								
 □		tiaŋ1		~時：什麼時候								
 □		tiaŋ2		誰								
 □		tsiak8		玩水								
-□		tsaŋ3		抓								
-□		tsak8		密								
+總		tsaŋ3		抓								
+實		tsak8-		密								
 □		laŋ5		间隔								
-□		laŋ1		稀疏								
+㝗		laŋ1		稀疏，空曠								
 □		niɔu5		~眉：皱眉								
 □		taŋ5		蜜蜂蜇人								
 □		taŋ4		壇子								
 □		mak7		玩								
 □		pʰiak8		用力往墻上扔泥巴使其粘附								
-□		hiak7		~石：吸鐵石								
+吸		hiak7		~石：吸鐵石								
 □		siak8		泄漏								
 □		tsiak8		故意踩踏								
 □		niaŋ5		用拇指和食指揪起一点皮								
@@ -7945,7 +7944,7 @@
 □		nɛ̃1		婆婆								
 □		nɛ̃2		晾曬								
 □		tʰɛ̃1		阻擋								
-□		tɛ̃1		骹後~：脚後跟								
+㬹		tɛ̃1		骹後~：脚後跟								
 □		mɛ̃1		抓								
 □		pʰɛ̃1		分攤								
 □		tsʰuã5		用拳頭向前擊人								
@@ -8037,7 +8036,7 @@
 □		tsaʔ7		攜帶								
 □		la4		撥弄								
 □		pʰa1		~魚：用網抓魚								
-□		kuʔ7		吸								
+□		laŋ1		稀疏，空曠								
 □		tsuʔ7		吮吸								
 □		luʔ7		喝								
 □		tʰu4		~~： 胖胖的								
@@ -8047,13 +8046,12 @@
 □		pu2		匏瓜								
 □		kiʔ8		插								
 □		dziʔ7		按壓								
-□		tʰi1		~~：黏黏的								
+黐		tʰi1		~~：黏黏的								
 □		bi2		沙~：小睡								
 □		pʰiʔ7		趴在地上								
 □		dziʔ8		按								
 □		la1		以为								
 □		saʔ7		以为								
-□		tsaŋ3										
 □		ta5		骑在别人身上								
 □		tʰak7		垫								
 □		tʰua5		～手，顺手								
@@ -8061,9 +8059,9 @@
 □		uɛ5		傳染								
 □		nəŋ5		□naŋ5～：軟弱								
 □		tsa6		～～叫：被冷水沖過的寒意								
-□		hek8		因消化不良、暈車等噁心								
+□		hɛk8		因消化不良、暈車等噁心								
 □		ha2		系，～腰帶								
-□		kək8		粥稠								
+杰		kək8		粥稠								
 □		la2		～□gia2:行動遲緩								
 □		gia2		□la2～：行動遲緩								
 □		tʰai3		□sai1～、□tʰu2～:哭鬧								
@@ -8072,11 +8070,11 @@
 □		ka1		～嗽：咳嗽；～己：自己；～落：掉落								
 □		pu1		～螺：一種海螺，可當喇叭吹；引申作編造、不合實際的事情								
 □		maiʔ7		～～：形容不情願地做事								
-□		hŋ̍1		～koi1la1heʔ7：亂七八糟；～koi1la1bo3heʔ7：乱七八糟								
+□		hŋ̍1		～laʔ8bo3heʔ7：乱七八糟								
 □		la2		～□ia2：高腳蜘蛛								
 □		tsau2		～～：一直不停								
 □		ua2		～暝：熬夜								
-□		loŋ2		～入去：穿進去								
+□		lɔŋ2		～入去：穿進去								
 □		tsau3		～囝：女兒；～孫：孫女								
 □		su3		～個空：用鑽頭鑽個洞								
 □		tʰai3		～哥：麻風病								
@@ -8101,7 +8099,7 @@
 □		kau4		～栗：板栗								
 □		bai6		□taŋ5～：形容人軟弱無能								
 □		kʰɔk8		□lɔk8～：角落，引申為不重要的事或物								
-□		neʔ8		□naŋ3～：靦腆害羞，有話不敢說								
+□		nɛʔ8		□naŋ3～：靦腆害羞，有話不敢說								
 □		kʰiu6		䊆飽滿								
 □		sa1		一把抓起								
 □		uɛ2		一一半，一部分								
@@ -8117,46 +8115,42 @@
 □		piuʔ7		冒出來								
 □		kʰau1		剃毛								
 □		hɔi1		剮蹭								
-□		leʔ8		割								
+□		lɛʔ8		割								
 □		ɡiak8		勤快								
 □		auʔ7		捲曲								
 □		hiɔũ1		掀								
 □		ãu3		口齒不清								
 □		ŋa5		呆傻								
-□		tsʰoʔ7		嗆								
+□		tsʰɔʔ7		嗆								
 □		bu6		噴；～滴囝藥：塗點藥								
 □		tai2		埋								
 □		tu2		堵，～在路頂：在路上堵著								
-□		soiʔ7		塞								
-□		soi1		聲～～：聲音沙啞								
+□		sɔiʔ7		塞								
+□		sɔi1		聲～～：聲音沙啞								
 □		uaʔ8		大叫								
 □		kʰaʔ7		太								
 □		hiɔu2		奇怪								
-□		lok7		倒出罐、袋內東西								
+□		lɔk7		倒出罐、袋內東西								
 □		sia5		崎～：陡峭								
-□		loi2		布～：布條								
+□		lɔi2		布～：布條								
 □		kiɔu1		帶（小孩等）								
 □		ɔi3		應答聲								
-□		am4		張嘴								
+□		aŋ4		張嘴								
 □		siŋ5		彎腰								
 □		sau1		聲音沙啞、形容揚聲器模糊								
 □		dzu2		形容小孩或寵物可愛								
 □		kʰauʔ7		形容炸得脆								
 □		siɔuʔ7		形容快速經過的聲響								
-□		ŋãi3		形容人性格頑劣								
+□		ŋaĩ3		形容人性格頑劣								
 □		tuʔ8		戳								
-□		tʰəŋ4		手後手肘								
 □		kɔ2		扔								
 □		pʰiã2		扔								
-□		pue3		把袖子提上去								
+□		puɛ3		把袖子提上去								
 □		niŋ4		抓，握								
-□		tsaŋ3		抓頭髮								
 □		tɔŋ5		骹～手□siʔ7：手腳不停抖動								
 □		lau5		～屎：拉稀、拉肚子								
-□		kʰiɔʔ8		拿								
 □		kʰiɔ̃6		病癒後注意飲食								
 □		dziʔ8		按								
-□		liu3		挖								
 □		tsã4		挖								
 □		kiuʔ7		擠								
 □		lɛŋ3		推								
@@ -8164,7 +8158,7 @@
 □		la4		攪拌								
 □		kiʔ7		搭建								
 □		tʰi5		撕								
-□		tsoŋ2		撞								
+□		tsɔŋ2		撞								
 □		niʔ7		極少								
 □		nak7		柔軟								
 □		dzua6		次								
@@ -8188,34 +8182,31 @@
 □		ŋiɔu2		貓叫聲								
 □		hui2		瓷								
 □		lai3		甜膏菜半甜半鹹								
-□		me1		用手抓取								
+□		mɛ1		用手抓取								
 □		na4		用火苗灼燒								
 □		tiak7		用手指彈								
 □		sɔʔ7		用鹽刺激								
 □		kɔʔ8		用針或棍挑開								
 □		puʔ8		用針紮								
 □		tʰiaŋ3		疲勞，累								
-□		dzue6		痕，裂縫								
+□		dzuɛ6		痕，裂縫								
 □		kuai3		～骹：瘸子								
 □		tiu5		盛飯；～落去：勸人多吃飯菜								
 □		tsʰɔ6		盛放物品								
 □		kəŋ2		瞪								
-□		kʰoiʔ7		碾壓								
 □		hiak7		磁鐵；有吸附力								
 □		ua2		～～跎跎：磨時間、浪費時間								
 □		kʰia1		私～：私房								
 □		tsʰiɔʔ7		稀，不濃，～糜：稀粥								
-□		laŋ1		空曠								
 □		siŋ6		等待								
 □		tiʔ7		細								
 □		kiu1		縮水								
 □		nia4		～來：背；擔責								
 □		iã4		背								
 □		pʰɔŋ5		蓬鬆								
-□		tiã1		觸碰								
-□		hiõ5		許樣合音，那麼，～㩼：那麼；那麼多								
+□		hiɔ̃5		許樣合音，那麼，～㩼：那麼；那麼多								
 □		na0		語氣詞								
-□		no0		語氣詞，輕微轉折								
+□		nɔ0		語氣詞，輕微轉折								
 □		hak7		購置								
 □		puaʔ8		～杯：擲杯筊								
 □		la4		足夠								
@@ -8250,17 +8241,105 @@
 𬂌		ni4										
 𥭘		tʰai1		篩子								
 𣍐		bɔi4*		不會的合音								
-𩟗		tsia ̃3		味淡								
+𩟗		tsiã3		味淡								
 𤖭		pɔi ̃2										
 𤞚		siɔu3		傻								
-𩩍		pʰia ̃1										
+𩩍		pʰiã1										
 𧺤		kiu1										
 𢱡		sɔ4		擺動								
-𢭪		kʰiɔʔ8										
+𢭪		kʰiɔʔ8		拿								
 𠡒		tui3		用力拉								
 𭭖		iu2		用手指在臉上比劃以羞辱別人								
 □		kʰɔiʔ7		車胎～著屎：輪子沾到屎了								
 		tʰəŋ6		用肘向后击人								
 𧧸		pak7		認識								
-𣛮		sia ̃6		竹制礼盒								
+𣛮		siã6		竹制礼盒								
 𠢕		gau2		乖								
+倩		tsʰiaʔ7-		請人做事								
+婦		pu4		新~：媳婦								
+悅	dzuah8	dzuaʔ8-		喜歡某人								
+詏		a5		爭辯，辯解								
+諥		sɔŋ2		臭罵								
+歊		hɔ1		熱氣蒸人								
+霙		ɛŋ2		形容小雨飄飄的樣子								
+𣶍		tsəŋ6		旋渦								
+雄		hɛŋ2		鴨~；鵝~								
+塒		si2		雞~：雞窩								
+䱘		lɔi2		三~：魚名								
+鯼		tsaŋ1		赤~：石首魚的一種								
+槽	tsho5	tsʰɔ2-		雞~								
+鱓		tsʰuã4		鱔魚，老派叫法								
+鯰		niaŋ2										
+鳙		sɔŋ2		大頭~：一種魚								
+厣		ĩ3		蟹類腹下的臍	，蟹~							
+螉		ɔŋ5		牛~：牛虻								
+蕹		ɛŋ5		~菜：通心菜								
+薐	lenɡ5	lɛŋ2		菠~								
+𥴴		kau1		刺~竹：竹名								
+薝		siaŋ2		~蔔：花名								
+□	pho3	pʰɔ5		植物茂盛								
+𢲸		lou4		搖動								
+□		sɔ4		撞到								
+㩍		tsʰaʔ7		扶								
+憖		ŋiaŋ5		喜歡								
+癮		ŋiaŋ5*		喜歡								
+擸		luaʔ8		梳理頭髮								
+撏		tsiŋ2		探取								
+㪖		lok7		打								
+骲		pa6		~頭殼：以指節擊人頭								
+□		tiaʔ7		用手掌擊								
+□		kʰɔk8		打腦袋								
+□		tsɛŋ1		打								
+揞		ã1		掩蓋								
+□		tsʰɔʔ7		用力扯斷								
+觸		tak7-		牛相~：牛相鬥								
+□		pĩ1		縫衣服時布料不夠，從其他布料補充								
+𧻓	piann3	piã5		疾跑								
+□		uaʔ7		大聲喊叫								
+𠥜		huʔ7		撮口突然吹氣								
+𣢁	hainn3	haĩ5		呻吟								
+𲧫		tsʰɛk8		咳嗽								
+舷	kinn5	kĩ2		邊緣								
+𥆌		kak8		眼睛轉動								
+睒		iaŋ3		很快地一看								
+䀩		liɔʔ7		~囝婿：相女婿								
+㨟		hɔi2		摩擦而過								
+掗		aʔ7		強塞給人東西								
+□		hɔi1		高度近视，～目								
+□	tsur3	tsə5		浸濡								
+𱫉	tshok4	tsʰɔk7*		同焯								
+泆		ɛk8		水蕩突而出								
+沕		biʔ7		躲藏								
+汏		tʰuaʔ7		淘洗								
+□		hi5		喝~：打呵欠								
+黈		tʰau5		在一種液體中加入另一種液體								
+墘	kinn5	kĩ2		邊緣								
+斡		uak7		拐彎								
+摵		sɛk7		掉落								
+𨍹		huĩ3		旋轉，風~：用紙做的小風扇								
+䠧		tʰu2		躊躇，拖沓								
+□		lɔŋ6		~□tɔŋ6：浪蕩，閒遊								
+□		tɔŋ6		□lɔŋ6~：浪蕩，閒遊								
+㔶		kaŋ3		掩埋								
+縋		tʰui6		在繩索上系重物使下墜								
+辮	pinn6	pĩ4		編織，~辮：梳辮子								
+楔		sɔiʔ7		用木片把東西墊平穩；往空隙裡填東西								
+□		kau2		攀騎，本字疑為猴								
+艐		kʰua5		~沙：船擱淺								
+幔		mã1-		披上衣、毛巾等								
+□		tsʰɔ6		邊...邊...；越來越...，~唱~跳：邊唱邊跳								
+蔴	mua5	mua2										
+蓆	tshioh8	tsʰiɔʔ8										
+籋		niʔ7		鉗取								
+屑		suk7		鋸~：木屑								
+罛		kɔu1		漁網								
+㨹		dzuɛ6		裂縫								
+錔		tʰak7		筆~：筆帽兒								
+熥		tʰaŋ1		冬天取暖時用的爐子，火～								
+煏		pɛk7		烤								
+□		kɔŋ5		大炮								
+簰		pai2		筏子								
+眦		tsʰi4		目~毛：眼睫毛								
+痞		pʰai3		壞，~囝：痞子								
+尪		aŋ1		神明								
+燉		tuŋ6										
