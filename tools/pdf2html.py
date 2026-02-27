@@ -24,17 +24,10 @@ html = re.sub(r'(<span style="font-family: [^"]+7px">)(.*?)(</span>)', "{\\2}", 
 html = re.sub(r'style="position:absolute;.*?"', "", html, flags=re.M|re.S)
 html = html.replace("--", "=")
 d = {
-    "■23":"33",
-    "■52":"52",
-    "■35":"44",
-    "■4B":"213",
-    "|":"3",
-    "■45": "tʂ",
-    "■28": "ɐ",
-    "■4D3": "ɭ\u0329",
     "":"钁",
     "":"䝼",
-
+    "":"䙡",
+    "":"㭎",
 }
 for i,j in d.items():
     html = html.replace(i, j)

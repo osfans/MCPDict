@@ -13641,6 +13641,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#926EF8",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "華池橫山話",
+        "語言": "華池橫山話",
+        "地點": "甘肅慶陽華池南梁荔園堡",
+        "地圖集二分區": "晉語－大包片",
+        "音典分區": "西北－陝北－夏州",
+        "陳邡分區": "官話－秦晉－榆林大片－榆林片",
+        "方言島": true,
+        "錄入人": "osfans",
+        "字表來源": "《甘肃华池“陕北横山话”同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.344737,
+          36.395312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
         "marker-size": "medium",
         "marker-symbol": "c",
         "title": "靖邊",
@@ -15663,7 +15687,7 @@
         "marker-color": "#E54E5D",
         "marker-size": "small",
         "marker-symbol": "b",
-        "title": "道縣東源",
+        "title": "東源官話",
         "語言": "道縣東源官話",
         "地點": "湖南永州道縣上關東源",
         "地圖集二分區": "西南官話－桂柳片－湘南小片",
@@ -15689,7 +15713,7 @@
         "marker-color": "#E54E5D",
         "marker-size": "small",
         "marker-symbol": "b",
-        "title": "道縣上尹",
+        "title": "上尹官話",
         "語言": "道縣上尹官話",
         "地點": "湖南永州道縣白馬渡上尹",
         "地圖集二分區": "西南官話－桂柳片－湘南小片",
@@ -36472,7 +36496,8 @@
         "作者": "Mr. CuRioSity",
         "錄入人": "冰糖橙",
         "維護人": "冰糖橙,Mr. CuRioSity",
-        "字表來源": "《通城方言音系及声韵层次研究》"
+        "字表來源": "《通城方言音系及声韵层次研究》",
+        "補充閲讀": "《湖北通城塘湖话同音字汇》"
       },
       "geometry": {
         "type": "Point",
@@ -52313,8 +52338,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          116.663999,
-          23.470906
+          116.660694,
+          23.465946
         ]
       }
     },
@@ -60480,7 +60505,7 @@
         "marker-color": "#C75EEB",
         "marker-size": "small",
         "marker-symbol": "g",
-        "title": "道縣東源土話",
+        "title": "東源土話",
         "語言": "道縣上關東源土話",
         "地點": "湖南永州道縣上關東源",
         "地圖集二分區": "湘語－永全片－道江小片",
