@@ -10506,90 +10506,13 @@
       "properties": {
         "marker-color": "#F5B3B3",
         "marker-size": "small",
-        "marker-symbol": "",
-        "title": "通渭常家河",
-        "語言": "通渭常家河話",
-        "地點": "甘肅定西通渭常家河",
-        "錄入人": "Cehkuon",
-        "字表來源": "《通渭方言语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.14449,
-          34.981705
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#F5B3B3",
-        "marker-size": "small",
-        "marker-symbol": "",
-        "title": "通渭榜羅",
-        "語言": "通渭榜羅話",
-        "地點": "甘肅定西通渭榜羅",
-        "錄入人": "Cehkuon",
-        "字表來源": "《通渭方言语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          104.920191,
-          35.033278
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#F5B3B3",
-        "marker-size": "small",
-        "marker-symbol": "",
-        "title": "通渭第三鋪",
-        "語言": "通渭第三鋪話",
-        "地點": "甘肅定西通渭第三鋪",
-        "錄入人": "Cehkuon",
-        "字表來源": "《通渭方言语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.047395,
-          35.190512
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#F5B3B3",
-        "marker-size": "small",
-        "marker-symbol": "",
-        "title": "通渭李家店",
-        "語言": "通渭李家店話",
-        "地點": "甘肅定西通渭李家店",
-        "錄入人": "Cehkuon",
-        "字表來源": "《通渭方言语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          105.156257,
-          35.062556
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#F5B3B3",
-        "marker-size": "small",
-        "marker-symbol": "",
+        "marker-symbol": "b",
         "title": "通渭碧玉",
         "語言": "通渭碧玉話",
         "地點": "甘肅定西通渭碧玉",
+        "地圖集二分區": "中原官話－隴中片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－秦晉－隴中大片－隴中片",
         "錄入人": "Cehkuon",
         "字表來源": "《通渭方言语音研究》"
       },
@@ -10606,10 +10529,13 @@
       "properties": {
         "marker-color": "#F5B3B3",
         "marker-size": "small",
-        "marker-symbol": "",
+        "marker-symbol": "b",
         "title": "通渭雞川",
         "語言": "通渭雞川話",
         "地點": "甘肅定西通渭雞川",
+        "地圖集二分區": "中原官話－隴中片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－秦晉－隴中大片－隴中片",
         "錄入人": "Cehkuon",
         "字表來源": "《通渭方言语音研究》"
       },
@@ -10626,10 +10552,13 @@
       "properties": {
         "marker-color": "#F5B3B3",
         "marker-size": "small",
-        "marker-symbol": "",
+        "marker-symbol": "b",
         "title": "通渭馬營",
         "語言": "通渭馬營話",
         "地點": "甘肅定西通渭馬營",
+        "地圖集二分區": "中原官話－隴中片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－秦晉－隴中大片－隴中片",
         "錄入人": "Cehkuon",
         "字表來源": "《通渭方言语音研究》"
       },
@@ -10646,10 +10575,13 @@
       "properties": {
         "marker-color": "#F5B3B3",
         "marker-size": "small",
-        "marker-symbol": "",
+        "marker-symbol": "b",
         "title": "通渭寺子川",
         "語言": "通渭寺子川話",
         "地點": "甘肅定西通渭寺子川",
+        "地圖集二分區": "中原官話－隴中片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－秦晉－隴中大片－隴中片",
         "錄入人": "Cehkuon",
         "字表來源": "《通渭方言语音研究》"
       },
@@ -10658,6 +10590,98 @@
         "coordinates": [
           105.2947,
           35.382038
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "通渭常家河",
+        "語言": "通渭常家河話",
+        "地點": "甘肅定西通渭常家河",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－秦晉－隴中大片－隴中片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《通渭方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.14449,
+          34.981705
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "通渭榜羅",
+        "語言": "通渭榜羅話",
+        "地點": "甘肅定西通渭榜羅",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－秦晉－隴中大片－隴中片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《通渭方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.920191,
+          35.033278
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "通渭第三鋪",
+        "語言": "通渭第三鋪話",
+        "地點": "甘肅定西通渭第三鋪",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－秦晉－隴中大片－隴中片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《通渭方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.047395,
+          35.190512
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "通渭李家店",
+        "語言": "通渭李家店話",
+        "地點": "甘肅定西通渭李家店",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－秦晉－隴中大片－隴中片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《通渭方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.156257,
+          35.062556
         ]
       }
     },
