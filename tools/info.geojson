@@ -26619,6 +26619,29 @@
         "marker-color": "#EB6E77",
         "marker-size": "small",
         "marker-symbol": "b",
+        "title": "長豐壽州腔",
+        "語言": "長豐壽州腔",
+        "地點": "安徽合肥長豐水湖城西、城北、城南",
+        "地圖集二分區": "江淮官話－洪巢片",
+        "音典分區": "下江－淮西－巢北",
+        "陳邡分區": "官話－寧夏與淮河－淮河大片－淮河片",
+        "錄入人": "DaiDzao",
+        "字表來源": "《长丰县志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.160747,
+          32.480199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
         "title": "壽縣瓦東",
         "語言": "壽縣瓦東話",
         "地點": "安徽淮南壽縣大順、瓦埠、小甸、雙廟",
