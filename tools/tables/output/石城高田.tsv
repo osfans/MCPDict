@@ -70,7 +70,6 @@
 □	pʰok7	~脑:大泥块
 □	maŋ1	“未省”的合音。没有,不曾
 □	moŋ3	“无妨”的合音合意
-□	vit7	⿰扌鬰,用铁丝等编织;弄弯
 □	on1	一种鱼
 □	pʰiaŋ1	一大片(范围)
 □	pʰa5	一种鱼
@@ -321,7 +320,11 @@
 □	pʰau3	颠簸
 □	kə3	食物,魔芋粉加水制成
 □	luk7	骗人
+□	vit7	𢺴 用铁丝等编织;弄弯
 㞘	tuk7	底部
+㧒	fit7	甩掉,扔掉
+㪐	lət7	物体滑落或脱出
+㪗	tʰəu3	~气:呼吸
 㫰	loŋ3	晾晒
 㿸	man5	体垢
 䀴	niaŋ3	放牧
@@ -334,6 +337,7 @@
 万	van5	
 丈	tsʰoŋ1	
 三	sam1	
+上	soŋ1	1动词。~去
 上	soŋ3	2安装
 上	soŋ5	3方位词;(文)~进
 下	ha1	1上~
@@ -481,7 +485,7 @@
 伢	ŋa2	
 傷	soŋ1	
 倫	lən2	
-僞	kʰui3	
+僞	ui3	
 伯	pak7	
 估	ku1	
 伴	pʰon1	1
@@ -496,7 +500,6 @@
 佐	tso3	
 佑	iu5	
 體	tʰi3	
-體	lət7	
 何	ho2	
 佘	sa1	
 余	iu2	
@@ -628,7 +631,6 @@
 册	tsʰak7	
 再	tsai3	
 冒	mau5	
-冖	kəm3	
 冗	iuŋ2	
 寫	sia3	
 軍	kin1	
@@ -667,7 +669,6 @@
 凳	tin3	
 凶	hiuŋ1	
 凹	au1	
-出	lət7	
 出	tsʰət7	
 擊	kit7	
 函	hom2	
@@ -787,7 +788,7 @@
 衛	vi5	
 卯	mau3	
 印	in3	
-危	kʰui2	
+危	ui2	
 即	tsit7	
 卻	kʰiok7	
 卵	lon3	
@@ -817,17 +818,15 @@
 縣	hien5	
 参	tsʰam1	
 参	səm1	
-又	nien1	
 又	iu5	
 叉	tsʰa1	
-及	kiep7	
+及	kʰiep7	
 友	iəu3	
-雙	soŋ1	上
+雙	soŋ1	
 反	fan3	
 发	fat7	
 叔	suk7	
 取	tsʰiəu3	
-受	nien1	
 受	səu5	
 變	pien3	
 敍	siu3	1
@@ -888,7 +887,7 @@
 啓	kʰi3	
 吳	ŋu2	
 吵	tsʰau3	
-吸	kiep7	
+吸	kʰiep7	
 吹	tsʰei1	
 吻	vən3	
 吼	həu3	
@@ -914,7 +913,6 @@
 呼	kʰiu1	2唤家畜家禽
 命	min5	文
 命	miaŋ5	白
-咅	tʰəu3	
 咆	pʰau2	
 和	fu2	1~牌
 和	fo2	2两数之~,~气
@@ -941,7 +939,6 @@
 哇	via2	2~~叫
 哈	ha1	
 哉	tsai1	
-響	nien1	
 響	hioŋ3	
 啞	a3	
 譁	fa1	
@@ -1049,8 +1046,8 @@
 坎	kʰom3	
 壞	fai5	
 坐	tsʰo1	
+坑	kʰaŋ1	1
 坑	haŋ1	2
-坑	kʰaŋ1	²¹
 塊	kʰui3	
 堅	kien1	
 坛	tʰan2	
@@ -1370,7 +1367,7 @@
 巖	ŋam2	
 嶺	liaŋ1	
 岱	tʰoi5	
-岳	kʰok7	
+岳	ŋok7	
 岷	min2	
 岸	ŋan5	
 崬	tuŋ3	
@@ -1518,7 +1515,6 @@
 彬	pin1	
 彭	pʰaŋ2	
 彰	tsoŋ1	
-影	nien1	
 影	in3	文
 影	iaŋ3	白
 彷	pʰoŋ2	
@@ -1547,7 +1543,6 @@
 德	tək7	
 徽	fi1	
 心	siəm1	
-心	tsʰoŋ5	
 必	pit7	
 憶	i3	
 忌	kʰi5	
@@ -1670,7 +1665,6 @@
 我	ŋai1	白
 戒	kai3	
 或	fət7	
-或	lət7	
 戰	tsan3	
 戚	tsʰit7	
 戟	kit7	
@@ -1688,8 +1682,6 @@
 扇	sən3	1
 扇	son3	
 手	səu3	
-扌	ŋau5	
-扌	fit7	
 才	tsʰoi2	
 扎	tsat7	
 扑	pʰuk7	
@@ -1931,7 +1923,6 @@
 攎	lu2	抱(柴火)
 攢	tson3	
 支	tsɿ1	
-攴	tʰəu3	~气:呼吸
 收	səu1	
 攸	iəu1	
 改	koi3	
@@ -1943,7 +1934,6 @@
 敵	tʰit7	
 敏	min3	
 救	kəu3	
-敖	ŋau5	摇动
 敖	ŋau2	歪斜。“敖”有“放浪”意,引申指“歪斜”
 教	kau1	1
 教	kau3	2~育
@@ -1983,7 +1973,6 @@
 斯	sɿ1	
 斯	sə1	
 新	sin1	
-方	nien1	
 方	foŋ1	
 施	sɿ1	
 旁	pʰoŋ2	
@@ -2067,7 +2056,6 @@
 月	tsaŋ1	
 月	niet7	
 有	iəu1	
-有	nien1	
 朋	pʰəŋ2	
 服	fuk7	
 朔	sok7	
@@ -2184,7 +2172,7 @@
 桁	haŋ3	
 桂	kui3	
 桃	tʰau2	
-桅	kʰui2	
+桅	ui2	
 框	kʰioŋ1	
 案	on3	
 桌	tsok7	
@@ -2309,7 +2297,6 @@
 毁	fi3	
 毅	ni5	白
 母	mu1	
-母	nien1	
 每	mei1	
 毑	tsia2	伯母
 毒	tʰuk7	
@@ -2488,7 +2475,6 @@
 滂	pʰoŋ2	
 滋	tsə1	
 滑	vat7	
-滑	lət7	
 滓	tsɿ3	
 滔	tʰau1	
 滕	tʰəŋ2	
@@ -2637,7 +2623,6 @@
 牢	lau2	
 牧	muk7	
 物	vət7	
-物	lət7	
 牯	ku3	
 牲	səŋ1	文
 牲	saŋ1	白
@@ -2841,7 +2826,6 @@
 盒	hop7	
 盔	kʰui1	
 盖	koi3	
-盖	kəm3	
 盜	tʰau5	
 盤	pʰon2	
 盛	səŋ5	
@@ -3005,7 +2989,6 @@
 穆	muk7	
 穗	sei5	
 穴	fiet7	
-穴	fit7	甩掉,扔掉
 究	kiəu3	
 窮	kʰiuŋ2	
 空	kʰuŋ1	~洞
@@ -3225,7 +3208,6 @@
 罷	pʰa5	
 罨	am3	硌脚
 罩	tsau3	
-罩	kəm3	
 罪	tsʰei5	
 置	tsɿ3	
 罯	op7	~药:上药;~饭:用压得方式稍炒使饭热。《广韵》:“~,乌合切,覆盖也。”
@@ -3326,15 +3308,12 @@
 脆	tsʰei3	
 脉	mək7	
 脊	tsiak7	
-脏	tsoŋ1	
-脏	tsʰoŋ5	
 臍	tsʰi2	
 腦	nau3	
 膿	nuŋ2	
 脚	kiok7	
 脯	pʰu2	
 脱	tʰot7	
-脱	lət7	
 腡	lo2	
 臉	lien3	
 脾	pʰi2	
@@ -3364,6 +3343,7 @@
 膳	sən5	
 臀	tʰən2	
 臊	sau1	
+臟	tsʰoŋ5	心~
 臣	sən2	
 自	tsʰi5	~家:自己
 臭	tsʰəu3	
@@ -3492,7 +3472,6 @@
 縈	iaŋ1	
 蕭	siau1	
 薩	sat7	
-落	lət7	
 落	lok7	
 著	tsu3	
 葛	kot7	
@@ -3744,7 +3723,6 @@
 請	tsʰiaŋ3	白
 諸	tsu1	
 諾	nok7	
-讀	nien1	
 讀	tʰuk7	
 課	kʰo3	
 誰	sei2	
@@ -3836,7 +3814,6 @@
 贊	tsan3	
 贈	tsʰəŋ5	
 贏	viaŋ2	
-贛	kəm3	
 赤	tsʰak7	
 赦	sa3	
 赫	ho5	
@@ -3895,7 +3872,7 @@
 軛	vak7	
 輪	lən2	1
 輪	lin2	2~流
-軟	nien1	
+軟	nien1	受邻近方音影响,有又读音韵母“ion”
 轟	huŋ1	
 軸	tsʰəu5	
 輕	kʰin1	文
@@ -3938,7 +3915,6 @@
 迎	niaŋ2	2抬(胳膊)
 運	vin5	
 近	kʰən1	
-近	nien1	
 返	fan3	
 還	hai2	1
 還	van2	2
@@ -4010,7 +3986,6 @@
 邸	ti3	
 鄒	tsəu1	
 鄴	niap7	
-鄰	nien1	
 鄰	lin2	
 郁	iuk7	
 郊	kau1	
@@ -4268,8 +4243,6 @@
 韜	tʰau1	
 韭	kəu3	
 音	iəm1	
-音	nien1	
-韻	nien1	
 韻	vin5	
 韶	sau2	
 頁	iap7	
@@ -4360,6 +4333,7 @@
 驤	sioŋ1	
 骨	kut7	
 骷	kʰu1	
+髒	tsoŋ1	
 髓	sei2	
 高	kau1	
 鬃	tsuŋ1	
@@ -4368,7 +4342,7 @@
 魁	kʰui2	
 魂	fən2	
 魄	pʰək7	
-魏	kʰui3	
+魏	ui3	
 魔	mo2	
 魚	niu2	文
 魚	ŋə2	白
@@ -4442,5 +4416,8 @@
 龍	liuŋ2	
 龕	kʰom1	
 龜	kui1	
+𢳆	ŋau5	摇动
+𢺴	vit7	用铁丝等编织;弄弯
 餱	həu2	很想要
+𰃴	kəm3	盖、罩
 𥣘	iap7	秕(谷);凹陷

@@ -16,8 +16,8 @@
 㨪	xuaŋ5	
 㮕	zfan1	文
 㮕	zfai5	白
-㽭	liəu5	
 䃫	tan3	
+䟩	liɛ2	
 䫬	tsan1	
 䶀	tʰa2	
 一	i1	
@@ -26,7 +26,7 @@
 万	van5	
 三	san1	
 上	ʂaŋ5	
-下	ȵia5	文
+下	ɕia5	文
 下	xa5	白
 不	pu1	
 与	y5	
@@ -166,7 +166,7 @@
 例	li5	
 侍	sɿ5	
 供	kuən5	
-俠	ȵia2	
+俠	ɕia2	
 侶	ly3	
 側	tsei1	
 儈	kʰuai3	
@@ -306,7 +306,7 @@
 刻	kʰei1	
 刴	tuo5	
 剃	tʰi5	
-削	tɕʰyɛ1	
+削	ɕyɛ1	
 前	tɕʰian2	
 剮	kua3	
 劍	tɕian3	
@@ -346,7 +346,7 @@
 匙	tʂʰʅ2	汤匙
 匝	tsa1	
 匠	tɕiaŋ5	
-匣	ȵia2	
+匣	ɕia2	
 匪	fei3	
 匹	pʰi5	
 區	ŋəu5	
@@ -515,8 +515,8 @@
 嗤	tsʰɿ1	
 嗽	səu5	
 嘈	tsʰau2	
-嘲	tʂʰau1	
 嘲	suo1	
+嘲	tʂʰau2	
 嘴	tsuei3	
 噆	tsa1	
 噆	tsʰan1	
@@ -598,7 +598,7 @@
 壺	xu2	
 備	pi5	
 复	fu1	
-夏	ȵia5	
+夏	ɕia5	
 外	vai5	
 外	vei5	白,外婆
 多	tuo1	
@@ -689,7 +689,7 @@
 孫	suən1	
 孝	ɕiau5	
 孟	mən5	
-學	tɕʰyɛ2	
+學	ɕyɛ2	
 孩	xai2	
 孱	ʂan2	
 孺	zfu5	
@@ -843,7 +843,7 @@
 慶	tɕʰin5	
 牀	tsfʰaŋ2	
 序	ɕy5	
-庫	kʰu3	
+庫	kʰu5	
 應	in2	
 底	ti3	
 店	tian5	
@@ -944,7 +944,7 @@
 恭	kuən1	
 息	ɕi1	
 恰	tɕʰia3	
-懇	kʰən1	
+懇	kʰən3	
 恶	ŋə1	
 惻	tsʰei2	
 惱	lau3	
@@ -1207,7 +1207,7 @@
 斗	təu5	战斗
 料	liau5	
 斜	ɕiɛ2	
-斜	tɕʰyɛ2	白,斜顺
+斜	ɕyɛ2	白,斜顺
 斡	və5	
 斤	tɕin1	
 斥	tʂʰʅ5	
@@ -1252,7 +1252,7 @@
 昴	mau3	
 晝	tʂəu5	
 顯	ɕian3	
-晁	tʂʰau1	
+晁	tʂʰau2	
 晃	xuaŋ3	
 晌	ʂaŋ1	
 晏	ian5	
@@ -1287,7 +1287,7 @@
 朗	laŋ2	
 朘	tsuei1	
 望	vaŋ5	
-朝	tʂʰau1	
+朝	tʂʰau2	
 木	mu1	
 未	vei5	
 末	mə1	
@@ -1579,7 +1579,7 @@
 漾	iaŋ5	
 潘	pʰan1	
 潭	tʰan1	
-潮	tʂʰau1	
+潮	tʂʰau2	
 澡	tsau3	
 澹	tan5	
 激	tɕi1	
@@ -1668,7 +1668,7 @@
 狗	kəu3	
 狡	tɕiau3	
 獨	tu2	
-狹	ȵia2	文
+狹	ɕia2	文
 狹	tɕʰia5	白
 獅	sɿ1	
 獄	y1	
@@ -2116,7 +2116,7 @@
 肨	pʰaŋ5	
 肩	tɕian1	
 骯	ŋaŋ1	
-肯	kʰən1	
+肯	kʰən3	
 肴	iau2	
 肺	fei5	
 腎	ʂən5	
@@ -2356,7 +2356,7 @@
 裁	tsʰai2	
 襠	taŋ1	
 裙	tɕʰyn2	
-褲	kʰu3	
+褲	kʰu5	
 裱	piau3	
 裳	ʂaŋ1	
 裴	pʰei3	
@@ -2424,7 +2424,6 @@
 誹	fei3	
 課	kʰuo2	
 諉	və1	
-諛	ʐan2	多言
 誰	sfei2	文
 誰	sei2	白
 調	tʰiau2	
@@ -2511,7 +2510,6 @@
 趣	tɕʰy5	
 足	tɕy1	
 趴	pʰa2	
-趺	liɛ2	
 趾	tsɿ3	
 趿	sa1	
 躍	iau2	
@@ -2749,12 +2747,13 @@
 雌	tsʰɿ2	
 雍	yn1	
 雨	y3	
-雪	tɕʰyɛ1	
+雪	ɕyɛ1	
 雷	luei2	
 黴	mei2	
 霖	lin2	
 霜	sfaŋ1	
-霞	ȵia2	
+霞	ɕia2	
+霤	liəu5	
 靄	ŋai3	
 露	lu5	
 霸	pa5	
@@ -2764,7 +2763,7 @@
 靠	kʰau5	
 面	mian5	
 革	kei1	
-靴	tɕʰyɛ1	
+靴	ɕyɛ1	
 鞋	xai2	
 鞭	pian1	
 韋	vei1	
@@ -2885,7 +2884,7 @@
 齒	tsʰɿ2	
 齡	lin2	
 齜	tsʰɿ1	
-齦	kʰən1	
+齦	kʰən3	
 齪	tsfʰə1	
 齷	vei1	
 龔	kuən3	
@@ -2905,4 +2904,5 @@
 𩩺	suən2	
 搊	tsʰəu1	
 瘑	kʰuo3	
+𧦦	ʐan2	多言
 𪘨	tsai1	
