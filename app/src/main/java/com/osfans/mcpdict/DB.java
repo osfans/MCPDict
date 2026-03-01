@@ -69,6 +69,7 @@ public class DB extends SQLiteAssetHelper {
     public static final String JA_TOU = "日語唐音";
     public static final String JA_KAN_YOU = "日語慣用音";
     public static final String JA_UNCLASSIFIED = "日語未歸類字音";
+    public static final String JA_TOU_RECENT = "日語近世唐音";
 
     public static String FQ = null;
     public static String ORDER = null;

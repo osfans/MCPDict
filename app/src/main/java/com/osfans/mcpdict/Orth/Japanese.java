@@ -2,6 +2,7 @@ package com.osfans.mcpdict.Orth;
 
 import android.text.TextUtils;
 
+import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.Util.Pref;
 import com.osfans.mcpdict.R;
 
@@ -22,9 +23,13 @@ public class Japanese {
     public static final Map<String, String> mapKatakana = new HashMap<>();
     public static final Map<String, String> mapNippon = new HashMap<>();
     public static final Map<String, String> mapHepburn = new HashMap<>();
+
     public static final DisplayHelper displayHelper = new DisplayHelper() {
         public String displayOne(String s) {
-            return Japanese.display(s, Pref.getToneStyle(R.string.pref_key_japanese_display));
+            int system = Pref.getToneStyle(R.string.pref_key_japanese_display);
+            if (system == NIPPON && !mLang.contentEquals(DB.JA_TOU_RECENT)) return Orthography.formatRoman(s);
+            if (system == KATAKANA && mLang.contentEquals(DB.JA_TOU_RECENT)) return s;
+            return convertTo(s, system);
         }
     };
 
@@ -56,7 +61,7 @@ public class Japanese {
             p = q;
         }
         s = sb.toString();
-        if (system == HEPBURN) s = Orthography.formatRoman(s);
+        if (system == HEPBURN || system == NIPPON) s = Orthography.formatRoman(s);
         return s;
     }
 

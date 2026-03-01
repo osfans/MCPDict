@@ -32,7 +32,7 @@ public abstract class DisplayHelper {
         String s = richTextString
                 .replace("?", "？").replace("!", "！").replace(":", "：").replace(";", "；").replace("~", "～")
                 .replace("<", "&lt;").replace(">", "&gt;").replace("\n", "<br>")
-                .replaceAll("\\*\\*\\*(.+?)\\*\\*\\*", "<font color='red'>$1</font>")
+                // .replaceAll("\\*\\*\\*(.+?)\\*\\*\\*", "<font color='red'>$1</font>")
                 .replaceAll("\\*\\*(.+?)\\*\\*", "<b>$1</b>")
                 .replaceAll("\\*(.+?)\\*", "<i>$1</i>")
                 .replaceAll("`(.+?)`", "<span style='color: #808080;'>$1</span>");
@@ -76,7 +76,8 @@ public abstract class DisplayHelper {
             case DB.DGY -> Dungan.displayHelper.displayRich(s, lang);
             case DB.CMN, DB.CMN_TW -> Mandarin.displayHelper.displayRich(s, lang);
             case DB.TW -> Minnan.displayHelper.displayRich(s, lang);
-            case DB.JA_GO, DB.JA_KAN, DB.JA_TOU, DB.JA_KAN_YOU, DB.JA_UNCLASSIFIED -> Japanese.displayHelper.displayRich(s, lang);
+            case DB.JA_GO, DB.JA_KAN, DB.JA_TOU, DB.JA_KAN_YOU, DB.JA_UNCLASSIFIED,
+                 DB.JA_TOU_RECENT -> Japanese.displayHelper.displayRich(s, lang);
             default -> Tones.displayHelper.displayRich(s, lang);
         };
     }

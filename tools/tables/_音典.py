@@ -294,6 +294,8 @@ class 表(_表):
 			elif 名 in ("藤縣",):
 				音 = 音.replace(".ŋ", "ŋ̍")
 				if 音.startswith("ø"): 音 = 音[1:]
+			elif 名 in ("日語近世唐音",):
+				音 = re.sub("ツ$", "ッ", 音).replace("ツ/", "ッ/").replace(" ", "")
 		elif 自.文件名.startswith("榕江侗"):
 			列[0] = 列[0].strip().replace(" /", "/").replace(" [", "[")
 			if not 列[0]: return
@@ -316,7 +318,7 @@ class 表(_表):
 			音乙 = 音.split(" ", 1)
 			音乙[0] = 音乙[0].lstrip("*").replace(".", "．").replace("-", "－").replace("(", "（").replace(")", "）").replace("[", "［").replace("]", "］").replace("<", "〈").replace(">", "〉")
 			音 = " ".join(音乙)
-		if 名 in ("白－沙上古", "鄭張上古", "中唐", "中世朝鮮","國語", "普通話","日語唐音", "日語慣用音", "日語未歸類字音"):
+		if 名 in ("白－沙上古", "鄭張上古", "中唐", "中世朝鮮","國語", "普通話","日語唐音", "日語慣用音", "日語未歸類字音", "日語近世唐音"):
 			自.爲音 = False
 		if not 音組: 音組.append(音)
 		l = list()

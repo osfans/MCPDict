@@ -1,4 +1,4 @@
-#Hiragana, Katakana, Nippon-shiki, Hepburn-shiki, IPA
+#Hiragana	Katakana	Nippon-shiki	Hepburn-shiki	IPA
 あ	ア	a	a	a
 い	イ	i	i	i
 う	ウ	u	u	u
@@ -20,6 +20,11 @@
 す	ス	su	su	su
 せ	セ	se	se	se
 そ	ソ	so	so	so
+さ゚	サ゚	tsa	tsa	tsa
+し゚	シ゚	tsi	tsi	tsi
+す゚	ス゚	tsu	tsu	tsu
+せ゚	セ゚	tse	tse	tse
+そ゚	ソ゚	tso	tso	tso
 しゃ	シャ	sya	sha	ɕa
 しゅ	シュ	syu	shu	ɕu
 しょ	ショ	syo	sho	ɕo
@@ -126,3 +131,6 @@
 ぐゐょ	グヰョ	gwyo	gwyo	ɡwjo
 ん	ン	n	n	n
 っ	ッ	q	q	ʔ
+◦	◦	-	-	-
+ゝ	ヽ	-	-	ː
+ゞ	ヾ	-	-	ː

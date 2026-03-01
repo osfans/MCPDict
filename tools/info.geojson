@@ -61762,28 +61762,6 @@
         "marker-color": "#8FC2CC",
         "marker-size": "large",
         "marker-symbol": "y",
-        "title": "日語唐音",
-        "語言": "日語唐音",
-        "地點": "海外*日本",
-        "地圖集二分區": "域外方音",
-        "音典分區": "域外方音",
-        "陳邡分區": "官話－日本,域外音",
-        "維護人": "NaruDora"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          130.054783,
-          32.882959
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#8FC2CC",
-        "marker-size": "large",
-        "marker-symbol": "y",
         "title": "日語慣用音",
         "語言": "日語慣用音",
         "地點": "海外*日本",
