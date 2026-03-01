@@ -186,16 +186,22 @@ public class GuessLangFragment extends Fragment implements RefreshableFragment {
     }
 
     private void newGuessDivision(String title) {
+        String province = (spinnerProvinces.getSelectedItemPosition() == 0) ? "" : spinnerProvinces.getSelectedItem().toString().split(" ")[0];
+        int position = spinnerDivisions.getSelectedItemPosition();
+        String division = (position == 0) ? "" : Objects.requireNonNull(adapterDivision.getItem(position)).toString();
+        String hint = String.format("請猜一個<b>%s</b> %s 方言", province, division) + Pref.getString(R.string.guess_area_division_hint, title);
         String filter = getFilter();
         filter = String.format(" AND length(%s) %s ", DB.FQ, filter);
-        String hint = Pref.getString(R.string.guess_area_division_hint, title);
         newGuess(filter, hint);
     }
 
     private void newGuessArea(String title) {
+        String province = (spinnerProvinces.getSelectedItemPosition() == 0) ? "" : spinnerProvinces.getSelectedItem().toString().split(" ")[0];
+        int position = spinnerDivisions.getSelectedItemPosition();
+        String division = (position == 0) ? "" : Objects.requireNonNull(adapterDivision.getItem(position)).toString();
+        String hint = String.format("請猜一個<b>%s</b> %s 方言", province, division) + Pref.getString(R.string.guess_area_hint, title);
         String filter = getFilter();
         filter = String.format(" AND 省 != '海外' %s ", filter);
-        String hint = Pref.getString(R.string.guess_area_hint, title);
         newGuess(filter, hint);
     }
 
