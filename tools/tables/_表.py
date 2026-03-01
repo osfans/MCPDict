@@ -85,8 +85,8 @@ def processXlsxFs(v):
 			tag = "="
 		if tag:
 			text = "".join([j + tag for j in text])
-		elif i.font.bold:
-			text = f"**{text}**"
+		# elif i.font.bold:
+		# 	text = f"**{text}**"
 		elif i.font.color and i.font.color.rgb == "FF808080":
 			text = f"`{text}`"
 		if i.font.vertAlign == "subscript" or (i.font.size and i.font.size < 10.0):

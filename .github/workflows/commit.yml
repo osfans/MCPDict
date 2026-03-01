@@ -58,6 +58,7 @@ jobs:
       run: |
         cp app/src/main/assets/opencc/HZUnified.txt tools/tables/data/HZUnified.txt
         7z a tools.7z tools/requirements.txt tools/tables/data/HZUnified.txt tools/tables/data/正字.tsv tools/tables/data/正形.tsv tools/tables/data/正調.tsv tools/tables/data/正音.tsv tools/tables/data/私用字.tsv tools/tables/output/_詳情.json tools/*.pyw tools/make.py tools/tables/*.py
+        7z a warnings.7z tools/warnings.txt
 
     - name: Create latest release
       uses: 'marvinpinto/action-automatic-releases@latest'
@@ -68,8 +69,7 @@ jobs:
         title: 'Latest'
         files: |
           app/build/outputs/apk/release/*.APK
-          tools.7z
-          tools/warnings.txt
+          *.7z
 
     - name: Deploy to SF
       run: |
