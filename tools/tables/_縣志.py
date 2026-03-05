@@ -69,6 +69,8 @@ class 表(_表):
 			行 = 行.replace("&{","{&").replace("@{","{@")
 		elif 名 in ("樅陽雨壇","潛山","青陽客籍話"):
 			行 = 行.replace("*", "□")
+		elif 名 in ("銅鼓官倉",):
+			行 = re.sub(r"(.)\((.)\)(\{.*?\})", "\\1\\3\\2\\3", 行)
 		elif 名 in ("南雄珠璣巷"):
 			行 = re.sub(r"(\d+)", "[\\1]", 行, count=1)
 			if not 行.startswith("#") and "[" not in 行: 行 = ""
