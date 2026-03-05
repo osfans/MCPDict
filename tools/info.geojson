@@ -33308,6 +33308,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
+        "marker-size": "small",
+        "marker-symbol": "d",
+        "title": "上饒下源",
+        "語言": "上饒朝陽下源街腔",
+        "地點": "江西上饒廣信朝陽下源",
+        "地圖集二分區": "吳語－上麗片－上山小片",
+        "音典分區": "浙南－處衢－三山",
+        "陳邡分區": "信衢",
+        "版本": "2026-03-02",
+        "錄入人": "DaiDzao",
+        "字表來源": "《上饶朝阳方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.0564,
+          28.43461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
         "marker-size": "medium",
         "marker-symbol": "d",
         "title": "樂清",
@@ -33952,30 +33976,6 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E35BC1",
-        "marker-size": "small",
-        "marker-symbol": "e",
-        "title": "東至龍泉",
-        "語言": "東至龍泉話",
-        "地點": "安徽池州東至龍泉",
-        "地圖集二分區": "徽語－祁婺片",
-        "音典分區": "湘贛－西徽",
-        "陳邡分區": "官話－祁婺－祁婺大片－至德片",
-        "版本": "2022-02-11",
-        "錄入人": "Її",
-        "字表來源": "《东至龙泉方言研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          116.792402,
-          29.577311
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#E35BC1",
         "marker-size": "medium",
         "marker-symbol": "e",
         "title": "婺源",
@@ -34220,6 +34220,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "橫峰葛源",
+        "語言": "橫峰葛源話",
+        "地點": "江西上饒橫峰葛源",
+        "地圖集二分區": "贛語－鷹弋片",
+        "音典分區": "湘贛－信州",
+        "陳邡分區": "官話－信江",
+        "版本": "2026-01-25",
+        "錄入人": "DaiDzao",
+        "字表來源": "《江西横峰（葛源）方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.669595,
+          28.600736
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
         "marker-size": "medium",
         "marker-symbol": "f",
         "title": "鉛山",
@@ -34268,30 +34292,6 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#52CCAD",
-        "marker-size": "small",
-        "marker-symbol": "f",
-        "title": "橫峰葛源",
-        "語言": "橫峰葛源話",
-        "地點": "江西上饒橫峰葛源",
-        "地圖集二分區": "贛語－鷹弋片",
-        "音典分區": "湘贛－信州",
-        "陳邡分區": "官話－信江",
-        "版本": "2026-01-25",
-        "錄入人": "DaiDzao",
-        "字表來源": "《江西横峰（葛源）方言语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          117.669595,
-          28.600736
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#52CCAD",
         "marker-size": "medium",
         "marker-symbol": "f",
         "title": "鄱陽",
@@ -34310,6 +34310,30 @@
         "coordinates": [
           116.712865,
           29.012464
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E35BC1",
+        "marker-size": "small",
+        "marker-symbol": "e",
+        "title": "東至龍泉",
+        "語言": "東至龍泉話",
+        "地點": "安徽池州東至龍泉",
+        "地圖集二分區": "徽語－祁婺片",
+        "音典分區": "湘贛－饒州－鄱陽",
+        "陳邡分區": "官話－祁婺－祁婺大片－至德片",
+        "版本": "2022-02-11",
+        "錄入人": "Її",
+        "字表來源": "《东至龙泉方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.792402,
+          29.577311
         ]
       }
     },
@@ -61647,6 +61671,30 @@
         "coordinates": [
           104.806481,
           26.978818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#8FCCA3",
+        "marker-size": "small",
+        "marker-symbol": "m",
+        "title": "貴港大黃壯語",
+        "語言": "貴港大黃壯語",
+        "地點": "廣西貴港覃塘黃練大黃",
+        "地圖集二分區": "民族語",
+        "音典分區": "民語漢字音",
+        "陳邡分區": "官話－桂南－桂東大片－貴縣片",
+        "版本": "2026-03-02",
+        "錄入人": "DaiDzao",
+        "字表來源": "《贵港大黄壮语读书音与汉语“客话”之比较》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.347162,
+          23.122918
         ]
       }
     },
