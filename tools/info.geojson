@@ -33500,6 +33500,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
+        "marker-size": "small",
+        "marker-symbol": "d",
+        "title": "蒼南蒲門",
+        "語言": "蒼南蒲門甌語方言島",
+        "地點": "浙江溫州蒼南馬站蒲門",
+        "地圖集二分區": "吳語－甌江片",
+        "音典分區": "浙南－溫州－永嘉",
+        "陳邡分區": "甌江－溫州",
+        "方言島": true,
+        "版本": "2021-10-19",
+        "錄入人": "落橙,阿纓",
+        "字表來源": "《浙南蒲城瓯语方言岛语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.446521,
+          27.234161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
         "marker-size": "medium",
         "marker-symbol": "d",
         "title": "瑞安",
@@ -33682,31 +33707,6 @@
         "coordinates": [
           120.093946,
           27.797057
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#5E98EB",
-        "marker-size": "small",
-        "marker-symbol": "d",
-        "title": "蒼南蒲門",
-        "語言": "蒼南蒲門甌語方言島",
-        "地點": "浙江溫州蒼南馬站蒲門",
-        "地圖集二分區": "吳語－甌江片",
-        "音典分區": "浙南－溫州－溫南",
-        "陳邡分區": "甌江－溫州",
-        "方言島": true,
-        "版本": "2021-10-19",
-        "錄入人": "落橙,阿纓",
-        "字表來源": "《浙南蒲城瓯语方言岛语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          120.446521,
-          27.234161
         ]
       }
     },
