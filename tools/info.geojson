@@ -33308,30 +33308,6 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
-        "marker-size": "small",
-        "marker-symbol": "d",
-        "title": "上饒下源",
-        "語言": "上饒朝陽下源街腔",
-        "地點": "江西上饒廣信朝陽下源",
-        "地圖集二分區": "吳語－上麗片－上山小片",
-        "音典分區": "浙南－處衢－三山",
-        "陳邡分區": "信衢",
-        "版本": "2026-03-02",
-        "錄入人": "DaiDzao",
-        "字表來源": "《上饶朝阳方言语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          118.0564,
-          28.43461
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#5E98EB",
         "marker-size": "medium",
         "marker-symbol": "d",
         "title": "樂清",
@@ -34285,6 +34261,30 @@
         "coordinates": [
           117.951763,
           28.459612
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
+        "marker-size": "small",
+        "marker-symbol": "d",
+        "title": "上饒下源",
+        "語言": "上饒朝陽下源街腔",
+        "地點": "江西上饒廣信朝陽下源",
+        "地圖集二分區": "吳語－上麗片－上山小片",
+        "音典分區": "湘贛－信州",
+        "陳邡分區": "官話－南下江－饒信片",
+        "版本": "2026-03-02",
+        "錄入人": "DaiDzao",
+        "字表來源": "《上饶朝阳方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.0564,
+          28.43461
         ]
       }
     },

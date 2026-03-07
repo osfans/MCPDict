@@ -385,7 +385,7 @@ class 表(_表):
 			行 = 自.normS(行.replace(")(", "："))
 		elif 名 in ("鷹潭",):
 			if 行.startswith("#"): return "#"
-			行 = re.sub("(\\d)", "[\\1]", 行)
+			行 = re.sub("(\\d)", "[\\1]", 行).replace("　", "")
 		elif 名 in ("靖江東興",):
 			行 = re.sub("(\\d)", "[\\1]", 行)
 			行 = 自.normS(行)
