@@ -488,8 +488,8 @@
 傅	pou3	pɔu5-										
 傅	hu3	hu5=										
 付	hu3	hu5										
-敷	pou1	pɔu1-										
-敷	hu1	hu1=										
+敷	pou1	pɔu1?		存疑								
+敷	hu1	hu1		~藥								
 俘	hu1	hu1										
 撫	bu2	bu3										
 赴	hu3	hu5										
@@ -616,7 +616,7 @@
 乃	nai6	nai4		又								
 耐	nai6	nai4										
 來	lai5	lai2										
-災	tsai1	tsai1										
+災	tsai1	tsai1=										
 栽	tsai1	tsai1										
 宰	tsai2	tsai3										
 載	tsai2	tsai3										
@@ -875,7 +875,7 @@
 催	tshui1	tsʰui1										
 崔	tshui1	tsʰui1										
 罪	tsue6	tsuɛ4=										
-罪	tso6	tsɔ4-		得罪								
+罪	tso6	tsɔ4-		得~								
 碎	tshui3	tsʰui5										
 瑰	kui3	kui5										
 盔	khue1	kʰuɛ1										
@@ -2056,7 +2056,7 @@
 掂	tianɡ1	tiaŋ1										
 點	tianɡ2	tiaŋ3										
 點	nianɡ2	niaŋ3		～火								
-點	lianɡ2	liaŋ3										
+點	lianɡ2	liaŋ3		又，同niaŋ3								
 墊	tianɡ6	tiaŋ4										
 店	tianɡ3	tiaŋ5										
 添	thinn1	tʰĩ1-										
@@ -2159,14 +2159,13 @@
 俠	hiak8	hiak8										
 挾	hiak8	hiak8										
 法	huak4	huak7										
-乏	huak8	huak8										
-乏	hek8	hɛk8		又								
-乏	hak8	hak8		又								
+乏	huak8	huak8=										
+乏	hek8	hɛk8-		疲勞，累								
 稟	penɡ2	pɛŋ3										
 品	penɡ2	pɛŋ3										
 賃	dzinɡ2	dziŋ3										
-賃	dzinɡ6	dziŋ4		又								
-林	linɡ5	liŋ2										
+賃	dzinɡ6	dziŋ4										
+林	linɡ5	liŋ2=										
 林	na5	na2-		深山~内								
 淋	nanɡ5	naŋ2-										
 淋	linɡ5	liŋ2										
@@ -2235,7 +2234,7 @@
 濕	sik4	sik7										
 十	tsak8	tsak8										
 什	sik8	sik8										
-什	sinɡ5	siŋ2		又								
+什	sinɡ3	siŋ5		~麽								
 拾	sik8	sik8										
 入	dzik8	dzik8										
 急	kik4	kik7										
@@ -2714,8 +2713,8 @@
 旋	suanɡ7	suaŋ6										
 鏇	suanɡ7	suaŋ6										
 轉	turnɡ2	təŋ3-										
-轉	tsuanɡ2	tsuaŋ3		又								
-轉	dzuanɡ2	dzuaŋ3		又								
+轉	tsuanɡ2	tsuaŋ3=										
+轉	dzuanɡ2	dzuaŋ3		~瓶蓋								
 傳	thuanɡ5	tʰuaŋ2										
 椽	uanɡ5	uaŋ2										
 篆	tuanɡ6	tuaŋ4										
@@ -3591,8 +3590,8 @@
 濯	tek8	tɛk8										
 濯	tsuak8	tsuak8										
 捉	tshok4	tsʰɔk7										
-鐲	tshok4	tsʰɔk7										
-鐲	tsuak8	tsuak8		又								
+鐲	siah8	siak8-		手~								
+鐲	tsuak8	tsuak8=										
 朔	suak4	suak7										
 朔	sok4	sɔk7		又								
 覺	kak4	kak7										
@@ -4032,8 +4031,8 @@
 析	sek4	sɛk7										
 擊	khek4	kʰɛk7										
 激	kek4	kɛk7										
-喫	nɡek4	ŋɛk7										
-喫	nɡiak4	ŋiak7		又								
+喫	nɡurk4	ŋək7=										
+喫												
 礦	khuanɡ3	kʰuaŋ5										
 橫	huenn5	huɛ̃2										
 轟	honɡ1	hɔŋ1										
@@ -4616,7 +4615,7 @@
 奬	tsianɡ3	tsiaŋ5										
 迹	tsiah4	tsiaʔ7										
 閥	huak8	huak8										
-姜	kionn1	kiɔ̃1										
+朗	lang5	laŋ2		伊~								
 姜	kianɡ1	kiaŋ1										
 籽	tsi2	tsi3										
 婁	lu5	lu2										
@@ -4628,7 +4627,7 @@
 瀏	lau5	lau2										
 恆	henɡ5	hɛŋ2										
 恬	thianɡ5	tʰiaŋ2										
-竊	khiou1	kʰiɔu1		训								
+竊	khiou1	kʰiɔu1*		訓								
 誡	kai3	kai5										
 誨	hue3	huɛ5										
 説	sueh4	suɛʔ7										
@@ -8185,7 +8184,7 @@
 □		tiʔ7		細								
 □		kiu1		縮水								
 □		nia4		～來：背；擔責								
-□		iã4		背								
+□		ia4		背								
 □		pʰɔŋ5		蓬鬆								
 □		hiɔ̃5		許樣合音，那麼，～㩼：那麼；那麼多								
 □		na0		語氣詞								
@@ -8343,3 +8342,31 @@
 □	lo1	lɔ1		在								
 □	lo6	lɔ4		~~：巨大的								
 □	tiann6	tia6		而已								
+□		pʰɛŋ1		這～：這種								
+災	tso1	tsɔ1-		著~囝：詈語								
+地	to3	tɔ5		掃~								
+喫	khoi3	kʰɔi5-		啃								
+鹽	sinn7	sĩ6		指水果制成的蜜饯，楊桃～：楊桃干								
+□	thiu1	tʰiu1		削，~蔗								
+□	hann2	hã3		~昏								
+□	pho6	pʰɔ4		量詞，一叢								
+□	phau1	pʰau1		量詞，一叢								
+□	peng1	peŋ1		中暑								
+□	hing3	hiŋ5		催熟水果，或用土掩埋起來								
+□	tak4	tak7		咬到舌頭								
+□	haunnh4	haũʔ7		咬								
+□	kak4	kak7		~□pɛk7：箱子								
+□	pek4	pɛk7		□kak7~：箱子								
+母	bou2	bɔu3		妻子								
+□	bi7	bi6		過~：不當季								
+□	kong3	kɔŋ5		異味刺激人								
+紮	tsuah8											
+矇	mou2	mɔu2		模糊								
+□	tsak7	tsak7		~儂：吵鬧								
+□	ki2	ki3		~□kiu3：哨子								
+□	kiu2	kiu3		□ki3~：哨子								
+□	lak4	lak7		手~：手套								
+□	bek8	bɛk8		水滿								
+□	pi3	pi5		腳麻								
+□	lak4	lak7		罩，動詞								
+什	tsak8	tsak8		~錦								
