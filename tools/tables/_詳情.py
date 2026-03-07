@@ -32,6 +32,7 @@ def getTones(tones):
 	for i,ts in enumerate(tones):
 		i = i + 1
 		index = i
+		if index == 10: index = 0
 		if not ts: continue
 		ts = str(ts).lower().replace("ˀ", "6").replace("ʔ", "0").replace("，", ",").replace(" ", "")
 		ts = re.sub(r"([^,])(\[)", r"\1,\2", ts)

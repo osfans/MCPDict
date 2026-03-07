@@ -1,5 +1,4 @@
 #漢字	音標	解釋
-□	ku7	
 □	kʰa1	~~:角落
 □	næ1	~~虫:知了
 □	pʰau2	~十天:十几天、几十天
@@ -26,6 +25,7 @@
 □	xuæ2	脾气犟
 □	pən5	蘸
 □	kau5	试:~一下
+□	ku7	躲
 □	tsʰe1	转动
 □	pʰa1	软
 □	tsoŋ5	这么
@@ -105,7 +105,7 @@
 事	sɿ5	
 二	ɚ5	
 于	y2	
-虧	kuei1	
+虧	kʰuei1	
 云	yn2	
 互	fu5	
 五	u3	
@@ -246,7 +246,7 @@
 偶	əu3	
 偷	tʰəu1	
 償	saŋ2	
-傀	kuei2	
+傀	kʰuei2	
 傅	fu5	
 傍	paŋ5	
 儲	tsʰu2	
@@ -345,7 +345,7 @@
 劉	ȵiəu2	
 則	tsai7	
 剛	kaŋ1	
-創	tsuaŋ5	
+創	tsʰuaŋ5	
 初	tsʰu1	
 删	suæ1	
 判	pʰæ5	
@@ -469,7 +469,7 @@
 又	iəu5	
 及	tɕi7	
 友	iəu3	
-雙	tsuaŋ1	
+雙	suaŋ1	
 反	fæ3	
 发	fa7	
 叔	su7	
@@ -517,7 +517,7 @@
 吝	ȵin5	
 吞	tʰən1	
 吟	ȵin2	
-否	mo3	
+否	fo3	
 吨	tən1	
 吩	fən1	
 含	xæ2	
@@ -717,7 +717,7 @@
 奈	nai5	
 奉	foŋ5	
 奮	fən5	
-奎	kuei2	
+奎	kʰuei2	
 奏	tsəu5	
 契	tɕʰi5	
 奔	pən1	1~跑。又pən223
@@ -786,7 +786,7 @@
 嫖	pʰiau2	
 嫩	nən5	
 嬉	ɕi1	
-孀	tsuaŋ1	
+孀	suaŋ1	
 子	tsɿ3	
 孔	kʰoŋ3	
 孕	yn5	
@@ -882,7 +882,7 @@
 層	tsʰən2	
 屄	pʰi1	女阴
 居	tɕy1	
-屈	tɕyu7	
+屈	tɕʰyu7	
 屉	tʰi5	
 屆	tɕie5	
 屋	u7	
@@ -968,7 +968,7 @@
 莊	tsuaŋ1	
 慶	tɕʰin5	
 庇	pi5	
-牀	tsuaŋ2	
+牀	tsʰuaŋ2	
 序	ɕy5	
 廬	nu2	
 庫	kʰu5	
@@ -1115,7 +1115,7 @@
 愚	y2	
 感	kæ3	
 憤	fən5	
-愧	kuei5	
+愧	kʰuei5	
 願	ye5	
 慈	tsʰɿ2	
 慌	xuaŋ1	
@@ -1328,7 +1328,7 @@
 撑	tsʰən1	
 撒	sa3	
 撕	sɿ1	
-撞	tsuaŋ3	
+撞	tsʰuaŋ3	
 撤	tsʰai7	
 撩	ȵiau1	
 撬	tɕʰiau5	
@@ -1793,7 +1793,7 @@
 湘	ɕiaŋ1	
 灣	uæ1	
 溼	sɿ7	
-潰	kuei5	
+潰	kʰuei5	
 濺	tɕie5	
 溉	kʰai5	
 源	ye2	
@@ -1898,7 +1898,7 @@
 爺	ie2	
 爸	pa5	
 爹	tie1	
-爽	tsuaŋ3	
+爽	suaŋ3	
 片	pʰie5	
 版	pæ3	
 牌	pʰai2	
@@ -2005,7 +2005,7 @@
 疤	pa1	
 疥	tɕie5	
 疫	i7	
-瘡	tsuaŋ1	
+瘡	tsʰuaŋ1	
 瘋	foŋ1	
 疲	pʰi2	
 疵	tsʰɿ1	
@@ -2056,7 +2056,7 @@
 鹽	ie2	
 監	tɕie1	
 盒	xo7	
-盔	kuei1	
+盔	kʰuei1	
 盖	kai5	
 盜	tau5	
 盤	pʰæ2	
@@ -2218,10 +2218,10 @@
 竅	tɕʰiau5	
 窯	iau2	
 窖	tɕiau5	
-窗	tsuaŋ1	
+窗	tsʰuaŋ1	
 窘	tɕyn3	
 竄	tsʰuæ5	
-窺	kuei1	
+窺	kʰuei1	
 豎	su5	
 站	tsæ5	
 競	tɕin5	
@@ -2618,7 +2618,7 @@
 葫	fu2	
 葬	tsaŋ5	
 葱	tsʰoŋ1	
-葵	kuei2	
+葵	kʰuei2	
 蔣	tɕiaŋ3	
 蒙	moŋ2	
 蒜	suæ5	
@@ -2961,7 +2961,6 @@
 身	sən1	
 躬	koŋ1	
 躱	to3	
-躱	ku7	
 躺	tʰaŋ3	
 車	tsʰe1	
 車	tɕy1	~马炮
@@ -2970,7 +2969,7 @@
 轉	tsuæ3	1运~。又tsuæ223
 轉	tsuæ5	2~动。又tsuæ42
 輪	nən2	
-軟	suæ3	
+軟	zuæ3	
 轟	xoŋ1	
 軸	tsu7	
 輕	tɕʰin1	
@@ -3040,7 +3039,7 @@
 造	tsʰau5	
 逢	foŋ2	
 逮	tai3	
-逵	kuei2	
+逵	kʰuei2	
 逸	i7	
 逼	pi7	
 逾	y2	
@@ -3058,7 +3057,7 @@
 避	pi5	
 邀	iau1	
 鄧	tən5	
-那	tei7	
+那	nei7	
 邦	paŋ1	
 邪	ɕie2	
 郵	iəu2	
@@ -3172,7 +3171,7 @@
 閃	sæ3	
 閉	pi5	
 問	uən3	
-闖	tsuaŋ3	
+闖	tsʰuaŋ3	
 閏	zuən5	
 闲	ɕie2	
 間	tɕie1	1中~。又tɕie223、kæ44
@@ -3191,7 +3190,7 @@
 閻	ie2	
 隊	tei5	1又tuei223
 隊	tuei5	2又tei223
-阮	suæ3	
+阮	zuæ3	
 防	faŋ2	
 陽	iaŋ2	
 陰	in1	
@@ -3250,7 +3249,7 @@
 震	tsən5	
 黴	mei2	
 霍	xo7	
-霜	tsuaŋ1	
+霜	suaŋ1	
 霞	ɕia2	
 露	nu5	
 霸	pa5	
@@ -3355,7 +3354,7 @@
 髻	tɕiəu1	
 鬢	pin5	
 鬼	kuei3	
-魁	kuei2	
+魁	kʰuei2	
 魂	xuən2	
 魄	pʰai7	
 魏	uei5	
@@ -3404,7 +3403,7 @@
 黏	ȵie2	
 黑	xai7	
 默	mai7	
-黢	tɕyu7	~黑
+黢	tɕʰyu7	~黑
 鼎	tin3	
 鼓	ku3	
 鼠	su3	
