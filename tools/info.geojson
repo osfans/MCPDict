@@ -3062,31 +3062,6 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#926EF8",
-        "marker-size": "medium",
-        "marker-symbol": "c",
-        "title": "林州",
-        "語言": "林州話",
-        "地點": "河南安陽林州",
-        "地圖集二分區": "晉語－邯新片－獲濟小片",
-        "音典分區": "華北－漳衛",
-        "陳邡分區": "官話－山東－魯西大片－彰德片",
-        "版本": "2026-02-04",
-        "錄入人": "DaiDzao",
-        "字表來源": "《林州方言志》",
-        "補充閲讀": "《林州方言语音调查研究》《林州方言语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.834218,
-          36.079053
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#926EF8",
         "marker-size": "small",
         "marker-symbol": "c",
         "title": "安澤秦壁",
@@ -60717,6 +60692,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5ED154",
+        "marker-size": "medium",
+        "marker-symbol": "j",
+        "title": "寧遠城郊",
+        "語言": "寧遠南路平話（城郊）",
+        "地點": "湖南永州寧遠",
+        "地圖集二分區": "平話和土話－湘南片",
+        "音典分區": "道州",
+        "陳邡分區": "南嶺",
+        "版本": "2026-03-08",
+        "錄入人": "DaiDzao",
+        "字表來源": "《宁远方言》",
+        "補充閲讀": "《湖南省志·第二十五卷·方言志·下册》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.944407,
+          25.586438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5ED154",
         "marker-size": "small",
         "marker-symbol": "j",
         "title": "寧遠文廟",
@@ -60759,6 +60759,30 @@
         "coordinates": [
           112.009032,
           25.455583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5ED154",
+        "marker-size": "small",
+        "marker-symbol": "j",
+        "title": "寧遠逍遥巖",
+        "語言": "寧遠東路平話（逍遥巖）",
+        "地點": "湖南永州寧遠舜陵逍遥巖",
+        "地圖集二分區": "平話和土話－湘南片",
+        "音典分區": "道州",
+        "陳邡分區": "南嶺",
+        "版本": "2026-03-08",
+        "錄入人": "DaiDzao",
+        "字表來源": "《宁远平话研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.958819,
+          25.624718
         ]
       }
     },
