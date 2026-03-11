@@ -24449,6 +24449,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "新縣",
+        "語言": "新縣話",
+        "地點": "河南信陽新縣",
+        "地圖集二分區": "中原官話－信蚌片",
+        "音典分區": "中上江－荆益－光山",
+        "陳邡分區": "官話－長江－西南大片－江漢片",
+        "錄入人": "鐵礦",
+        "字表來源": "《新县方言的语音系统及其与普通话的对应规律》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.799814,
+          31.595355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "small",
         "marker-symbol": "b",
         "title": "吳江菀坪",
