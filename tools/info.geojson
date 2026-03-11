@@ -3064,6 +3064,30 @@
         "marker-color": "#926EF8",
         "marker-size": "small",
         "marker-symbol": "c",
+        "title": "林州桃園",
+        "語言": "林州桃園話",
+        "地點": "河南安陽林州桃園",
+        "地圖集二分區": "晉語－邯新片－獲濟小片",
+        "音典分區": "華北－漳衛",
+        "陳邡分區": "官話－山東－魯西大片－彰德片",
+        "版本": "2026-03-09",
+        "錄入人": "DaiDzao",
+        "字表來源": "《河南林州桃园村方言语音调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.739925,
+          36.057586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
+        "marker-size": "small",
+        "marker-symbol": "c",
         "title": "安澤秦壁",
         "語言": "安澤秦壁林州話",
         "地點": "山西臨汾安澤馬壁秦必",
