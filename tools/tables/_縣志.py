@@ -307,6 +307,7 @@ class 表(_表):
 			行 = re.sub(r"^(\d+)", "[\\1]", 行)
 		elif 名 in ("筠連",):
 			列 = 行.split("\t")
+			if not 行.strip(): return
 			if 列[0] == "" and 列[1].startswith("阴平"):
 				return
 			elif 列[0] == "":
@@ -357,7 +358,7 @@ class 表(_表):
 			if 行.startswith("字韵声	阴"): return ""
 			if 行.startswith("字韵声	"): return 行.split("\t")[1]
 			行 = 自.增加調類(行)
-		elif 名 in ("衡東大浦",):
+		elif 名 in ("衡東大浦","伊川"):
 			if 行.lstrip().startswith("阴平"): return
 			行 = 行.strip()
 			行 = 自.增加調類(行)
