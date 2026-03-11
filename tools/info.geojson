@@ -36429,6 +36429,78 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "陽新木港",
+        "語言": "陽新木港話",
+        "地點": "湖北黃石陽新木港",
+        "地圖集二分區": "贛語－大通片",
+        "音典分區": "湘贛－鄂州－通山",
+        "陳邡分區": "湘贛－北岳州－北岳州大片－陽新片",
+        "版本": "2026-03-10",
+        "錄入人": "DaiDzao",
+        "字表來源": "《赣鄂交界地带赣语语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.20034,
+          29.79467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "陽新洋港",
+        "語言": "陽新洋港話",
+        "地點": "湖北黃石陽新洋港",
+        "地圖集二分區": "贛語－大通片",
+        "音典分區": "湘贛－鄂州－通山",
+        "陳邡分區": "湘贛－北岳州－北岳州大片－陽新片",
+        "版本": "2026-03-10",
+        "錄入人": "DaiDzao",
+        "字表來源": "《赣鄂交界地带赣语语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.07558,
+          29.62641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "瑞昌樂園",
+        "語言": "瑞昌樂園話",
+        "地點": "江西九江瑞昌樂園",
+        "地圖集二分區": "贛語－大通片",
+        "音典分區": "湘贛－鄂州－通山",
+        "陳邡分區": "湘贛－北岳州－北岳州大片－陽新片",
+        "版本": "2026-03-10",
+        "錄入人": "DaiDzao",
+        "字表來源": "《赣鄂交界地带赣语语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.22434,
+          29.50987
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
         "marker-size": "medium",
         "marker-symbol": "f",
         "title": "通山",

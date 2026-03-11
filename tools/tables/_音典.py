@@ -46,6 +46,10 @@ class 表(_表):
 			elif 自.文件名.startswith("通渭方言语音研究"):
 				註 = 字[1:].strip("()")
 				字 = 字[0]
+			elif 自.文件名.startswith("赣鄂交界地带赣语语音比较研究"):
+				音 = 音.replace(" ", "").replace("{", "").replace("}", "").replace(".n", "n̩")
+				註 = 字[1:].strip("{}")
+				字 = 字[0]
 			elif 名 in ("古浪",):
 				註 = 字[1:].strip("()（）")
 				字 = 字[0]
