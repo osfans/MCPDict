@@ -5361,6 +5361,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "羅池鉅野",
+        "語言": "萬榮羅池鉅野話",
+        "地點": "山西運城萬榮光華羅村",
+        "地圖集二分區": "中原官話－兗菏片",
+        "音典分區": "華北－西魯",
+        "陳邡分區": "官話－山東－魯西大片－兗州片",
+        "方言島": true,
+        "版本": "2026-03-12",
+        "錄入人": "DaiDzao",
+        "字表來源": "《万荣光华罗池村巨野、商水方言岛语音调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.015807,
+          35.221885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "定陶",
@@ -15262,6 +15287,30 @@
         "coordinates": [
           117.970198,
           28.459864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
+        "marker-size": "small",
+        "marker-symbol": "d",
+        "title": "蒼南金鄉",
+        "語言": "蒼南金鄉話",
+        "地點": "浙江溫州蒼南金鄉",
+        "地圖集二分區": "吳語－太湖片－杭州小片",
+        "音典分區": "藍青－浙江",
+        "陳邡分區": "官話－杭州",
+        "方言島": true,
+        "錄入人": "合玄音埶精",
+        "字表來源": "《金乡话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.578267,
+          27.429664
         ]
       }
     },
@@ -33688,30 +33737,6 @@
         "coordinates": [
           120.446521,
           27.234161
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#5E98EB",
-        "marker-size": "small",
-        "marker-symbol": "d",
-        "title": "蒼南金鄉",
-        "語言": "蒼南金鄉話",
-        "地點": "浙江溫州蒼南金鄉",
-        "地圖集二分區": "吳語－太湖片－杭州小片",
-        "音典分區": "藍青－浙江",
-        "陳邡分區": "官話－杭州",
-        "方言島": true,
-        "錄入人": "合玄音埶精",
-        "字表來源": "《金乡话语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          120.578267,
-          27.429664
         ]
       }
     },

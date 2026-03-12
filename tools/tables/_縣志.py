@@ -268,16 +268,12 @@ class 表(_表):
 			行 = 行.replace("/", "", 2)
 		elif 名 in ("蒼南金鄉",):
 			行 = 行.strip()
-			if not 行:
-				自.韻 = ""
-				自.聲 = ""
-				自.調 = ""
-				return
-			if not 自.韻:
-				自.韻 = 行
+			if 行.startswith("#"):
 				自.聲 = ""
 				自.調 = ""
 				return 行
+			if not 行:
+				return
 			首字 = 行[0]
 			if 首字.isdigit():
 				自.調 = 首字
