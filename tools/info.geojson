@@ -33695,6 +33695,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
+        "marker-size": "small",
+        "marker-symbol": "d",
+        "title": "蒼南金鄉",
+        "語言": "蒼南金鄉話",
+        "地點": "浙江溫州蒼南金鄉",
+        "地圖集二分區": "吳語－太湖片－杭州小片",
+        "音典分區": "藍青－浙江",
+        "陳邡分區": "官話－杭州",
+        "方言島": true,
+        "錄入人": "合玄音埶精",
+        "字表來源": "《金乡话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.578267,
+          27.429664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
         "marker-size": "medium",
         "marker-symbol": "d",
         "title": "瑞安",
