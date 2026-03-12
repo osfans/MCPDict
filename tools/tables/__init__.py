@@ -130,7 +130,7 @@ def getLangsByArgv(infos, argv):
 				if fnmatch.filter(bas, infos[i]["文件名"]):
 					l.append(i)
 					continue
-			print(l)
+			print(" ".join(l))
 	return l
 
 def 列序(a):
