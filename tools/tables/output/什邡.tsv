@@ -26,6 +26,9 @@
 □	tʰin5	~子(扑克牌中可替代所有牌的牌)
 □	lia7	~皮(脱皮)
 □	kʰe7	~膝门儿(膝盖)
+□	tɕian1	“今天”的合音
+□	pan2	“不然”的合音,要~
+□	mian2	“明天”的合音
 □	tɕʰyan2	“情愿”的合音
 □	tsa5	“这下”的合音,~子
 □	tsua5	“做啥”的合音,~子(干什么)
@@ -73,7 +76,7 @@
 □	kuaŋ5	青~石
 □	ləu1	额~(额头)
 □	xo1	骗:~人
-㝩	kʰaŋ1	盖
+㝩	kʰaŋ3	盖
 㩟	tsai5	钉:~扣子
 㮇	tʰian5	~笔
 㮯	kʰuən2	完整:~蛋
@@ -88,8 +91,6 @@
 上	saŋ5	~山,~面
 下	ɕia5	~降
 下	xa5	底~
-不	pan2	
-不	piau5	
 不	pu7	
 与	y2	
 丐	kai5	乞~
@@ -181,7 +182,6 @@
 仆	pʰu2	倒
 仇	tsʰəu2	
 仇	tsʰəu2	姓
-今	tɕian1	
 今	tɕin1	
 介	tɕiai5	
 介	tɕian5	又
@@ -793,8 +793,6 @@
 大	ta5	
 大	tʰai5	~夫
 天	tʰian1	
-天	tɕian1	
-天	mian2	
 太	tʰai5	
 夫	fu1	
 央	iaŋ1	
@@ -848,7 +846,6 @@
 姑	ku1	
 姓	tsʰuei1	
 姓	tɕiaŋ1	
-姓	ɕie5	
 姓	ɕin5	
 委	uei3	
 姘	pʰin1	~头
@@ -877,6 +874,7 @@
 嫁	tɕia5	
 嫂	sau3	
 嫌	ɕian2	
+嫑	piau5	“不要”的合音
 嫖	pʰiau2	~赌
 嫡	ti2	
 嫩	lən5	
@@ -1303,8 +1301,8 @@
 扮	pan5	
 扯	tsʰe3	
 擾	zau3	
-扳	pan1	
 扳	pan1	~倒
+扳	pan1	~跤
 扶	fu2	
 批	pʰi1	新
 批	pʰei1	老
@@ -1567,7 +1565,6 @@
 昂	ŋaŋ2	
 昆	kʰuən1	~仑
 昌	tsʰaŋ1	
-明	mian2	
 明	min2	
 昏	xuən1	
 易	i7	交~
@@ -1712,7 +1709,6 @@
 栗	lie7	
 校	ɕiau5	~对,学~,上~
 株	tsu1	
-樣	fan5	
 樣	iaŋ5	
 核	xe7	审~,果~
 根	kən1	
@@ -1779,7 +1775,6 @@
 榆	y2	
 榛	tsən1	
 榜	paŋ3	
-榜	fan5	
 榧	fei3	~子
 榨	tsa5	~油
 榫	suən3	~头
@@ -2085,7 +2080,6 @@
 焦	tɕiau1	
 焯	tsʰau1	
 焰	ian5	
-然	pan2	
 然	zan2	
 煎	tɕian1	
 煤	mei2	
@@ -2178,7 +2172,6 @@
 環	xuan2	
 現	ɕian5	
 璽	ɕi7	
-玻	li2	
 玻	po1	~璃
 珊	suan1	
 珍	tsən1	
@@ -2196,7 +2189,7 @@
 瑕	ɕia2	
 瑞	zuei5	
 瑟	se7	
-璃	li2	
+璃	li2	玻璃
 璧	pi7	
 瓜	kua1	
 瓠	fu5	~儿瓜(瓠子)
@@ -2458,7 +2451,7 @@
 窄	tse7	
 竅	tɕʰiau5	
 窯	iau2	
-窖	kau5	
+窖	kau5	老
 窗	tsʰaŋ1	
 窗	tsʰuaŋ1	
 窘	tɕioŋ3	
@@ -2675,7 +2668,6 @@
 翼	i7	
 耀	iau5	
 老	lau3	
-老	kau5	
 考	kʰau3	
 者	tse3	
 而	ɚ3	
@@ -2851,8 +2843,8 @@
 苦	kʰu3	
 英	in1	
 茂	moŋ5	
-范	fan5	
 范	fan5	~围
+范	fan5	榜样
 茄	tɕʰie2	茄子
 茅	mau2	
 莖	tɕin1	
@@ -3064,7 +3056,6 @@
 襟	tɕin1	
 襻	pʰan5	~~扣
 西	ɕi1	
-要	piau5	
 要	iau1	~求
 要	iau5	想~,重~
 覆	fu7	反~
@@ -3081,8 +3072,8 @@
 角	tɕio7	~色
 角	ko7	牛~
 解	tɕiai3	1讲~
-解	ɕie5	
 解	kai3	~开
+解	ɕie5	姓
 解	tɕie3	晓也
 解	tɕie3	讲~,~开
 觸	tsʰu7	
@@ -3251,7 +3242,6 @@
 跛	pʰo3	~足
 距	tɕy5	
 跟	kən1	
-跤	pan1	
 跨	kʰua5	
 跪	kuei5	
 路	lu5	
