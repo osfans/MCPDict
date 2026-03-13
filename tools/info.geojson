@@ -33059,6 +33059,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
+        "marker-size": "small",
+        "marker-symbol": "d",
+        "title": "金華孝順",
+        "語言": "金華孝順話",
+        "地點": "浙江金華金東孝順",
+        "地圖集二分區": "吳語－金衢片",
+        "音典分區": "浙南－婺州－西婺",
+        "陳邡分區": "婺州－金華",
+        "錄入人": "筱唯羽綺",
+        "字表來源": "《浙江金华市孝顺镇方言音系》",
+        "參考文獻": "《吴语金衢片方言语音比较研究》《金华县志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.874178,
+          29.189312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
         "marker-size": "medium",
         "marker-symbol": "d",
         "title": "浦江",
