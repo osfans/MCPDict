@@ -127,8 +127,8 @@
 麻	mua5	mua2										
 蟆	po5	pɔ2		蛤~								
 蟆	mo5	mɔ2		又								
-媽	ma5	ma2		口								
-媽	ma2	ma3		奶奶，~祖								
+媽	ma5	ma2-		口								
+媽	ma2	ma3-		奶奶，~祖								
 媽	ma1	ma1=										
 馬	be2	bɛ3-										
 馬	ma2	ma3=										
@@ -329,12 +329,12 @@
 蘇	sou1	sɔu1										
 酥	sou1	sɔu1										
 素	sou3	sɔu5-		味~								
-素	su3	su5										
+素	su3	su5=										
 塑	sok4	sɔk7										
 訴	su3	su5										
 嗉	su3	su5										
 辜	kou1	kɔu1-		姓氏								
-辜	ku1	ku1										
+辜	ku1	ku1=										
 孤	kou1	kɔu1										
 箍	khou1	kʰɔu1										
 姑	kou1	kɔu1										
@@ -346,7 +346,7 @@
 蠱	ku2	ku3										
 故	ku3	ku5										
 顧	kou3	kɔu5-		姓氏								
-顧	ku3	ku5										
+顧	ku3	ku5=										
 固	ku3	ku5										
 雇	kou3	kɔu5										
 枯	kou1	kɔu1										
@@ -438,7 +438,7 @@
 鼠	tshur2	tsʰə3										
 暑	su2	su3										
 黍	siu2	siu3-										
-黍	su2	su3										
+黍	su2	su3=										
 庶	su4	su7										
 恕	su4	su7										
 墅	su2	su3										
@@ -468,7 +468,7 @@
 虛	hur1	hə1										
 噓	hur1	hə1										
 許	khou2	kʰɔu3-		姓氏								
-許	hur2	hə3										
+許	hur2	hə3=										
 淤	ur3	ə5										
 於	i1	i1										
 餘	ur5	ə2										
@@ -545,7 +545,7 @@
 數	siou3	siɔu5-										
 數	su3	su5=										
 珠	tsiu1	tsiu1-										
-珠	tsu1	tsu1										
+珠	tsu1	tsu1=										
 朱	tsu1	tsu1										
 主	tsu2	tsu3										
 注	tsu3	tsu5										
@@ -685,8 +685,8 @@
 排	pai5	pai2										
 埋	mai5	mai2										
 齋	tse1	tsɛ1										
-豺	sai5	sai2-										
-豺	tshai5	tsʰai2										
+豺	sai5	sai2?		不確定是否存在								
+豺	tshai5	tsʰai2=										
 皆	kai1	kai1										
 偕	hai5	hai2										
 偕	kai1	kai1										
@@ -830,7 +830,7 @@
 啟	khi2	kʰi3										
 契	khoi3	kʰɔi5										
 倪	goi7	gɔi6-		姓氏								
-倪	nɡi5	ŋi2										
+倪	nɡi5	ŋi2=										
 詣	tsi2	tsi3										
 兮	hi1	hi1										
 奚	hi5	hi2										
@@ -1132,7 +1132,7 @@
 棄	khi3	kʰi5										
 祈	khi5	kʰi2										
 鰭	tshi1	tsʰi1-										
-鰭	khi5	kʰi2										
+鰭	khi5	kʰi2=										
 耆	khi5	kʰi2										
 伊	i1	i1										
 懿	i3	i5										
@@ -1144,7 +1144,7 @@
 你	ni2	ni3										
 厘	li5	li2										
 狸	lai5	lai2-		狐~								
-狸	li5	li2										
+狸	li5	li2=										
 李	li2	li3										
 理	li2	li3										
 裏	lai6	lai4										
@@ -1247,18 +1247,18 @@
 以	inn2	ĩ3										
 異	i6	i4										
 機	kui1	kui1-										
-機	ki1	ki1										
+機	ki1	ki1=										
 鉿	hah4	haʔ7										
 譏	ki1	ki1										
 饑	ki1	ki1										
 幾	ki1	ki1										
-幾	ki2	ki3		又								
-幾	kui2	kui3										
+幾	ki2	ki3=										
+幾	kui2	kui3-										
 既	ki3	ki5										
-豈	kha2	kʰa3-										
+豈	kha2	kʰa3-		訓								
 豈	khi2	kʰi3=										
-氣	khui3	kʰui5										
-氣	khi3	kʰi5										
+氣	khui3	kʰui5-										
+氣	khi3	kʰi5=										
 汽	khi3	kʰi5										
 祈	khi5	kʰi2										
 沂	khi5	kʰi2										
@@ -1267,7 +1267,7 @@
 稀	hi1	hi1										
 依	i1	i1										
 衣	ui1	ui1-										
-衣	i1	i1										
+衣	i1	i1=										
 累	lui6	lui4										
 嘴	tshui7	tsʰui6										
 髓	tshue2	tsʰuɛ3										
@@ -1328,7 +1328,7 @@
 愧	khui6	kʰui4										
 季	khui3	kʰui5										
 葵	kue5	kuɛ2-										
-葵	khui5	kʰui2										
+葵	khui5	kʰui2=										
 逵	khui5	kʰui2										
 夔	khui5	kʰui2										
 揆	khui5	kʰui2										
@@ -1375,7 +1375,7 @@
 葦	ui2	ui3										
 偉	ui2	ui3										
 緯	hui7	hui6-										
-緯	ui2	ui3										
+緯	ui2	ui3=										
 胃	ui7	ui6										
 謂	ui6	ui4										
 蝟	ui2	ui3										
@@ -1420,8 +1420,8 @@
 導	tau6	tau4										
 盜	tau6	tau4										
 腦	lo2	lɔ3-		頭~								
-腦	nau2	nau3										
-腦	nau2	nau3										
+腦	nau2	nau3=										
+惱	lo2	lɔ3-		煩~								
 惱	nau2	nau3=										
 勞	lau5	lau2										
 撈	lio5	liɔ2-		从液体表面舀取								
@@ -1454,7 +1454,7 @@
 嫂	so2	sɔ3										
 掃	sau3	sau5										
 高	ko1	kɔ1-		姓氏								
-高	kau1	kau1										
+高	kau1	kau1=										
 膏	ko1	kɔ1										
 羔	ko1	kɔ1										
 糕	ko1	kɔ1										
@@ -1487,7 +1487,7 @@
 襖	o2	ɔ3										
 奧	o3	ɔ5										
 懊	o3	ɔ5-										
-懊	au3	au5										
+懊	au3	au5=										
 包	pau1	pau1										
 胞	pau1	pau1										
 飽	pa2	pa3										
@@ -1507,7 +1507,7 @@
 貌	mau6	mau4										
 鐃	nau5	nau2										
 撓	niou1	niɔu1-										
-撓	nau5	nau2										
+撓	nau5	nau2=										
 鬧	nau6	nau4										
 罩	ta3	ta5		魚~，蠓~								
 罩	tsau6	tsau4										
@@ -1567,9 +1567,9 @@
 瓢	phio6	pʰiɔ4										
 鰾	phio6	pʰiɔ4										
 描	bio5	biɔ2-										
-描	miou5	miɔu2										
+描	miou5	miɔu2=										
 苗	bio5	biɔ2-		蝦~								
-苗	miou5	miɔu2										
+苗	miou5	miɔu2=										
 藐	miou2	miɔu3										
 渺	miou2	miɔu3										
 秒	miou2	miɔu3										
@@ -1592,11 +1592,11 @@
 消	siou1	siɔu1										
 宵	siou1	siɔu1										
 霄	sio1	siɔ1-		漳州雲~								
-霄	siou1	siɔu1										
+霄	siou1	siɔu1=										
 硝	siou1	siɔu1										
 銷	siou1	siɔu1										
 小	sio2	siɔ3-										
-小	siou2	siɔu3										
+小	siou2	siɔu3=										
 笑	tshio3	tsʰiɔ5										
 鞘	siou2	siɔu3										
 朝	tsiou1	tsiɔu1										
@@ -1610,7 +1610,7 @@
 召	siou6	siɔu4		又，姓氏								
 昭	tsiou1	tsiɔu1										
 招	tsio1	tsiɔ1-										
-招	tsiou1	tsiɔu1										
+招	tsiou1	tsiɔu1=										
 沼	dziou3	dziɔu5										
 照	tsio3	tsiɔ5										
 詔	tsiou3	tsiɔu5										
@@ -1621,7 +1621,7 @@
 韶	siou6	siɔu4										
 紹	siou6	siɔu4										
 邵	sionn7	siɔ̃6-										
-邵	siou6	siɔu4										
+邵	siou6	siɔu4=										
 饒	dziou5	dziɔu2										
 擾	dziou2	dziɔu3										
 繞	dziou3	dziɔu5										
@@ -1774,9 +1774,9 @@
 矛	mau5	mau2										
 眸	mou5	mɔu2										
 紐	nau6	nau4-										
-紐	niu2	niu3										
+紐	niu2	niu3=										
 扭	nau6	nau4-										
-扭	niu2	niu3										
+扭	niu2	niu3=										
 留	lau5	lau2-										
 留	liu5	liu2=										
 榴	liu5	liu2										
@@ -1787,7 +1787,7 @@
 琉	liu5	liu2										
 柳	liu2	liu3										
 溜	lau3	lau5-										
-溜	liu1	liu1		~滑梯								
+溜	liu1	liu1=		~滑梯								
 溜	liu3	liu5		反应灵敏，身手敏捷								
 揪	tshiu1	tsʰiu1										
 酒	tsiu2	tsiu3										
@@ -1805,7 +1805,7 @@
 袖	siu3	siu5										
 肘	tiu2	tiu3										
 晝	tau3	tau5-										
-晝	tiu6	tiu4										
+晝	tiu6	tiu4=										
 抽	thiu1	tʰiu1										
 丑	thiu2	tʰiu3										
 綢	tiu5	tiu2										
@@ -1995,7 +1995,7 @@
 嵌	khanɡ2	kʰaŋ3										
 巖	nɡanɡ5	ŋaŋ2										
 銜	kann5	kã2-										
-銜	hanɡ5	haŋ2										
+銜	hanɡ5	haŋ2=										
 艦	lanɡ2	laŋ3										
 貶	phenɡ2	pʰɛŋ3-										
 貶	pianɡ2	piaŋ3=										
@@ -2026,7 +2026,7 @@
 閃	sianɡ2	siaŋ3										
 贍	tsianɡ1	tsiaŋ1										
 染	ni2	ni3-										
-染	dzianɡ2	dziaŋ3										
+染	dzianɡ2	dziaŋ3=										
 冉	dzianɡ2	dziaŋ3										
 檢	kianɡ2	kiaŋ3										
 臉	lianɡ2	liaŋ3										
@@ -2042,7 +2042,7 @@
 鹽	ianɡ5	iaŋ2										
 閻	nɡianɡ5	ŋiaŋ2										
 簷	tsinn5	tsĩ2-										
-簷	sianɡ5	siaŋ2										
+簷	sianɡ5	siaŋ2=										
 艷	ianɡ7	iaŋ6										
 焰	ianɡ7	iaŋ6										
 劍	kianɡ3	kiaŋ5										
@@ -2060,7 +2060,7 @@
 墊	tianɡ6	tiaŋ4										
 店	tianɡ3	tiaŋ5										
 添	thinn1	tʰĩ1-										
-添	thianɡ1	tʰiaŋ1										
+添	thianɡ1	tʰiaŋ1=										
 忝	thianɡ2	tʰiaŋ3										
 舔	thianɡ2	tʰiaŋ3										
 甜	tianɡ5	tiaŋ2										
@@ -2112,8 +2112,7 @@
 閘	tsah8	tsaʔ8										
 煠	sah8	saʔ8										
 霎	siak4	siak7										
-夾	koih4	kɔiʔ7-										
-夾	kiak8	kiak8=										
+夾	kiak8	kiak8										
 袷	koih4	kɔiʔ7										
 恰	khak4	kʰak7										
 掐	khak4	kʰak7										
@@ -2157,7 +2156,7 @@
 諜	tiak8	tiak8										
 協	hiak8	hiak8										
 俠	hiak8	hiak8										
-挾	hiak8	hiak8										
+挾	hiak8	hiak8=										
 法	huak4	huak7										
 乏	huak8	huak8=										
 乏	hek8	hɛk8-		疲勞，累								
@@ -2168,7 +2167,7 @@
 林	linɡ5	liŋ2=										
 林	na5	na2-		深山~内								
 淋	nanɡ5	naŋ2-										
-淋	linɡ5	liŋ2										
+淋	linɡ5	liŋ2=										
 臨	linɡ5	liŋ2										
 凜	linɡ2	liŋ3										
 廩	linɡ2	liŋ3										
@@ -2215,7 +2214,7 @@
 音	inɡ1	iŋ1										
 陰	inɡ1	iŋ1										
 飲	anɡ2	aŋ3-		糜~								
-飲	inɡ2	iŋ3										
+飲	inɡ2	iŋ3=										
 蔭	inɡ1	iŋ1										
 窨	inɡ3	iŋ5										
 淫	inɡ5	iŋ2										
@@ -2247,12 +2246,12 @@
 邑	ik4	ik7										
 揖	ik4	ik7										
 丹	tuann1	tuã1-		牡~								
-丹	tanɡ1	taŋ1										
+丹	tanɡ1	taŋ1=										
 單	tuann1	tuã1										
 單	sianɡ5	siaŋ2		又								
 單	sianɡ6	siaŋ4		又								
 旦	tuann3	tuã5-		花~								
-旦	tanɡ3	taŋ5										
+旦	tanɡ3	taŋ5=										
 灘	thuann1	tʰuã1										
 攤	thuann1	tʰuã1										
 坦	thanɡ2	tʰaŋ3										
@@ -2265,12 +2264,11 @@
 誕	tanɡ3	taŋ5										
 但	tanɡ6	taŋ4										
 彈	tuann7	tuã6-		~掉								
-蛋	tuann1	tuã1-										
-蛋	nurnɡ6	nəŋ4*		訓“卵”								
-蛋	tanɡ3	taŋ5										
+蛋	tuann1	tuã1?		不确定是否存在								
+蛋	tanɡ3	taŋ5=										
 憚	tanɡ6	taŋ4										
 難	lanɡ5	laŋ2										
-難	lanɡ7	laŋ6		又								
+難	lanɡ7	laŋ6										
 蘭	lanɡ5	laŋ2										
 攔	lanɡ5	laŋ2										
 欄	lanɡ5	laŋ2										
@@ -2345,14 +2343,14 @@
 柬	kanɡ2	kaŋ3										
 間	koinn3	kɔĩ5										
 眼	oinn2	ɔĩ3-		龍~								
-眼	nɡanɡ2	ŋaŋ3										
+眼	nɡanɡ2	ŋaŋ3=										
 閑	oinn5	ɔĩ2										
 限	hanɡ6	haŋ4										
 莧	hoinn7	hɔĩ6										
 班	panɡ1	paŋ1										
 頒	panɡ1	paŋ1										
 板	poinn2	pɔĩ3-										
-板	panɡ2	paŋ3										
+板	panɡ2	paŋ3=										
 版	panɡ2	paŋ3										
 攀	phanɡ1	pʰaŋ1										
 扳	panɡ2	paŋ3										
@@ -2371,11 +2369,11 @@
 顏	hiann5	hiã2		又								
 雁	nɡanɡ6	ŋaŋ4										
 晏	uann3	uã5-										
-晏	anɡ3	aŋ5										
+晏	anɡ3	aŋ5=										
 編	phianɡ1	pʰiaŋ1										
 鞭	pianɡ1	piaŋ1										
 變	pinn3	pĩ5-										
-變	pianɡ3	piaŋ5										
+變	pianɡ3	piaŋ5=										
 篇	phianɡ1	pʰiaŋ1										
 偏	phianɡ1	pʰiaŋ1										
 騙	phianɡ3	pʰiaŋ5										
@@ -2434,7 +2432,7 @@
 禪	sianɡ6	siaŋ4										
 然	dzianɡ5	dziaŋ2										
 燃	hiann5	hiã2-										
-燃	dzianɡ5	dziaŋ2										
+燃	dzianɡ5	dziaŋ2=										
 遣	tshianɡ2	tsʰiaŋ3										
 乾	khianɡ5	kʰiaŋ2										
 虔	khianɡ5	kʰiaŋ2										
@@ -2445,10 +2443,10 @@
 筵	ianɡ6	iaŋ4										
 演	enɡ5	ɛŋ2										
 建	kianɡ6	kiaŋ4										
-建	kianɡ3	kiaŋ5		又，福~								
+建	kianɡ3	kiaŋ5		福~								
 鍵	kianɡ6	kiaŋ4										
 健	kiann7	kiã6-		輕~，肥壯大~								
-健	kianɡ6	kiaŋ4										
+健	kianɡ6	kiaŋ4=										
 腱	kianɡ6	kiaŋ4										
 言	nɡanɡ5	ŋaŋ2										
 軒	hurnɡ1	həŋ1										
@@ -2458,11 +2456,9 @@
 獻	hianɡ3	hiaŋ5										
 蔫	ianɡ1	iaŋ1										
 堰	ianɡ1	iaŋ1		又								
-堰	ianɡ1	iaŋ1		又								
 堰	ianɡ2	iaŋ3		又								
-堰	ianɡ2	iaŋ3										
 邊	pinn1	pĩ1-										
-邊	pianɡ1	piaŋ1										
+邊	pianɡ1	piaŋ1=										
 蝙	phianɡ1	pʰiaŋ1										
 蝙	pianɡ2	piaŋ3		又								
 扁	pinn2	pĩ3-										
@@ -2471,12 +2467,12 @@
 匾	penɡ2	pɛŋ3										
 遍	phianɡ3	pʰiaŋ5										
 片	phinn3	pʰĩ5-		一~門								
-片	phianɡ3	pʰiaŋ5										
+片	phianɡ3	pʰiaŋ5=										
 駢	penɡ6	pɛŋ4										
 辮	pinn1	pĩ1										
 眠	menɡ5	mɛŋ2										
 顛	tenɡ1	tɛŋ1-		~倒								
-顛	tianɡ1	tiaŋ1										
+顛	tianɡ1	tiaŋ1=										
 典	tianɡ2	tiaŋ3										
 天	thinn1	tʰĩ1-										
 天	thianɡ1	tʰiaŋ1=										
@@ -2508,10 +2504,10 @@
 堅	kianɡ1	kiaŋ1										
 繭	koinn2	kɔĩ3										
 見	kinn3	kĩ5-										
-見	kianɡ3	kiaŋ5										
+見	kianɡ3	kiaŋ5=										
 牽	khanɡ1	kʰaŋ1										
 研	nɡoinn2	ŋɔĩ3-										
-研	nɡianɡ2	ŋiaŋ3										
+研	nɡianɡ2	ŋiaŋ3=										
 硯	inn7	ĩ6										
 顯	hianɡ2	hiaŋ3										
 賢	hianɡ5	hiaŋ2										
@@ -2557,7 +2553,7 @@
 瞎	hak4	hak7										
 轄	khak4	kʰak7										
 別	pak8	pak8-		~儂								
-別	piak8	piak8										
+別	piak8	piak8=										
 憋	pih4	piʔ7										
 鱉	pih4	piʔ7										
 別	pak4	pak7		又，認識								
@@ -2704,13 +2700,13 @@
 戀	luanɡ3	luaŋ5										
 痊	tshuanɡ5	tsʰuaŋ2										
 全	tsurnɡ5	tsəŋ2-										
-全	tshuanɡ5	tsʰuaŋ2										
+全	tshuanɡ5	tsʰuaŋ2=										
 泉	tsuann5	tsuã2										
 宣	suanɡ1	suaŋ1										
 選	suanɡ2	suaŋ3										
 旋	suanɡ5	suaŋ2										
 旋	tsurnɡ7	tsəŋ6-										
-旋	suanɡ7	suaŋ6										
+旋	suanɡ7	suaŋ6=										
 鏇	suanɡ7	suaŋ6										
 轉	turnɡ2	təŋ3-										
 轉	tsuanɡ2	tsuaŋ3=										
@@ -2754,7 +2750,7 @@
 兗	ianɡ2	iaŋ3										
 藩	phuanɡ1	pʰuaŋ1										
 反	poinn2	pɔĩ3-										
-反	huanɡ2	huaŋ3										
+反	huanɡ2	huaŋ3=										
 翻	huanɡ1	huaŋ1										
 番	huanɡ1	huaŋ1										
 販	huanɡ3	huaŋ5										
@@ -2787,11 +2783,11 @@
 援	ianɡ6	iaŋ4										
 垣	huanɡ5	huaŋ2										
 遠	hnɡ6	hŋ̍4-										
-遠	ianɡ2	iaŋ3										
+遠	ianɡ2	iaŋ3=										
 涓	kianɡ1	kiaŋ1										
 犬	khianɡ2	kʰiaŋ3										
 懸	kuinn5	kuĩ2-		~大								
-懸	hianɡ5	hiaŋ2										
+懸	hianɡ5	hiaŋ2=										
 玄	hianɡ5	hiaŋ2										
 縣	kuinn7	kuĩ6										
 眩	henɡ5	hɛŋ2-										
@@ -2823,8 +2819,7 @@
 闊	khuah4	kʰuaʔ7										
 豁	hak4	hak7										
 活	uah8	uaʔ8										
-斡	uk4	uk7-										
-斡	uak4	uak7=		拐彎								
+斡	uak4	uak7		拐彎，轉頭								
 滑	kuk8	kuk8										
 猾	kuk8	kuk8										
 挖	uai1	uai1										
@@ -2919,9 +2914,9 @@
 陳	tshenɡ5	tsʰɛŋ2=		~皮								
 塵	tenɡ5	tɛŋ2										
 塵	thunɡ5	tʰuŋ2										
-陣	tenɡ7	tɛŋ6										
+陣	tenɡ7	tɛŋ6=										
 陣	tsunɡ7	tsuŋ6-										
-陣	tsunɡ5	tsuŋ2		又								
+陣	tsunɡ5	tsuŋ2										
 榛	tsenɡ1	tsɛŋ1										
 臻	tsenɡ1	tsɛŋ1										
 襯	tshenɡ3	tsʰɛŋ5										
@@ -2936,7 +2931,7 @@
 身	senɡ1	sɛŋ1										
 申	senɡ1	sɛŋ1										
 伸	tshunɡ1	tsʰuŋ1-										
-伸	senɡ1	sɛŋ1										
+伸	senɡ1	sɛŋ1=										
 娠	senɡ5	sɛŋ2										
 辰	senɡ5	sɛŋ2										
 晨	senɡ5	sɛŋ2										
@@ -2947,7 +2942,7 @@
 人	nanɡ5	naŋ2		訓“儂”								
 仁	dzenɡ5	dzɛŋ2										
 忍	lunɡ2	luŋ3-										
-忍	dzinɡ2	dziŋ3										
+忍	dzinɡ2	dziŋ3=										
 認	dzenɡ7	dzɛŋ6										
 刃	dzinɡ2	dziŋ3										
 巾	kurnɡ1	kəŋ1										
@@ -2979,14 +2974,14 @@
 蜜	bek8	bɛk8										
 昵	nek8	nɛk8										
 栗	lak8	lak8-		猴~								
-栗	liak8	liak8										
+栗	liak8	liak8=										
 七	tshek4	tsʰɛk7										
 漆	tshak4	tsʰak7										
 疾	tsik8	tsik8										
 悉	sek4	sɛk7										
 膝	tshek4	tsʰɛk7										
 窒	thak4	tʰak7-										
-窒	tiak4	tiak7										
+窒	tiak4	tiak7=										
 侄	tiak4	tiak7										
 秩	tiak4	tiak7										
 瑟	sek4	sɛk7										
@@ -3000,7 +2995,7 @@
 詰	kiak4	kiak7										
 逸	ek8	ɛk8										
 乞	khurh4	kʰəʔ7-		~伊								
-乞	khurk4	kʰək7										
+乞	khurk4	kʰək7=										
 奔	punɡ1	puŋ1										
 本	punɡ2	puŋ3										
 噴	phunɡ3	pʰuŋ5										
@@ -3043,7 +3038,7 @@
 蹲	tshurnɡ5	tsʰəŋ2-		又								
 蹲	tshunɡ5	tsʰuŋ2=										
 孫	surnɡ1	səŋ1-		姓氏								
-孫	sunɡ1	suŋ1										
+孫	sunɡ1	suŋ1=										
 損	sunɡ2	suŋ3										
 遜	sunɡ3	suŋ5										
 昆	khunɡ1	kʰuŋ1										
@@ -3109,10 +3104,10 @@
 允	dzunɡ2	dzuŋ3										
 尹	urnɡ2	əŋ3										
 分	punɡ1	puŋ1-										
-分	hunɡ1	huŋ1										
+分	hunɡ1	huŋ1=										
 粉	hunɡ2	huŋ3										
 糞	punɡ3	puŋ5-										
-糞	hunɡ3	huŋ5										
+糞	hunɡ3	huŋ5=										
 奮	hunɡ3	huŋ5										
 芬	hunɡ1	huŋ1										
 紛	hunɡ1	huŋ1										
@@ -3210,12 +3205,12 @@
 趟	thanɡ2	tʰaŋ3		又								
 堂	turnɡ5	təŋ2										
 唐	turnɡ5	təŋ2-		姓氏								
-唐	thanɡ5	tʰaŋ2										
+唐	thanɡ5	tʰaŋ2=										
 糖	thurnɡ5	tʰəŋ2										
 塘	turnɡ5	təŋ2										
 螳	thanɡ5	tʰaŋ2										
 蕩	turnɡ6	təŋ4-										
-蕩	tanɡ6	taŋ4										
+蕩	tanɡ6	taŋ4=										
 宕	tanɡ6	taŋ4										
 宕	tanɡ3	taŋ5		又								
 囊	lanɡ2	laŋ3										
@@ -3223,14 +3218,14 @@
 狼	lanɡ5	laŋ2										
 廊	lanɡ5	laŋ2										
 郎	nurnɡ5	nəŋ2-										
-郎	lanɡ5	laŋ2										
+郎	lanɡ5	laŋ2=										
 螂	lanɡ5	laŋ2										
 朗	lanɡ6	laŋ4										
 浪	nurnɡ7	nəŋ6-		汕尾遮~								
-浪	lanɡ6	laŋ4										
+浪	lanɡ6	laŋ4=										
 臧	tsanɡ1	tsaŋ1										
 贓	tsurnɡ1	tsəŋ1-										
-贓	tsanɡ1	tsaŋ1										
+贓	tsanɡ1	tsaŋ1=										
 髒	tsurnɡ3	tsəŋ5										
 葬	tsurnɡ3	tsəŋ5										
 倉	tshurnɡ1	tsʰəŋ1										
@@ -3244,7 +3239,7 @@
 嗓	surnɡ1	səŋ1-										
 嗓	sanɡ2	saŋ3=										
 岡	kurnɡ1	kəŋ1-										
-岡	kanɡ1	kaŋ1										
+岡	kanɡ1	kaŋ1=										
 剛	kanɡ1	kaŋ1										
 鋼	kurnɡ3	kəŋ5										
 缸	kurnɡ1	kəŋ1										
@@ -3288,7 +3283,6 @@
 獎	tsianɡ3	tsiaŋ5										
 將	tsianɡ3	tsiaŋ5										
 醬	tsionn3	tsiɔ̃5										
-嗆	tshoh4	tsʰɔʔ7-										
 槍	tshionn1	tsʰiɔ̃1										
 搶	tshionn2	tsʰiɔ̃3										
 牆	tshionn5	tsʰiɔ̃2										
@@ -3297,7 +3291,7 @@
 匠	tsionn3	tsiɔ̃5-										
 匠	tsianɡ6	tsiaŋ4=										
 相	sio1	siɔ1-										
-相	sianɡ1	siaŋ1										
+相	sianɡ1	siaŋ1=										
 廂	sionn1	siɔ̃1-										
 廂	sianɡ1	siaŋ1=										
 鑲	sianɡ1	siaŋ1										
@@ -3318,7 +3312,7 @@
 張	tsianɡ1	tsiaŋ1=										
 漲	tsianɡ3	tsiaŋ5										
 長	tionn2	tiɔ̃3-										
-長	tsianɡ2	tsiaŋ3										
+長	tsianɡ2	tsiaŋ3=										
 帳	tionn3	tiɔ̃5										
 賬	tionn3	tiɔ̃5										
 脹	tionn3	tiɔ̃5										
@@ -3359,7 +3353,7 @@
 廠	tshianɡ2	tsʰiaŋ3										
 廠	anɡ1	aŋ1		又								
 唱	tshio3	tsʰiɔ5-		~曲								
-唱	tshianɡ3	tsʰiaŋ5										
+唱	tshianɡ3	tsʰiaŋ5=										
 倡	tshianɡ3	tsʰiaŋ5										
 商	sianɡ1	siaŋ1										
 傷	sionn1	siɔ̃1										
@@ -3374,14 +3368,14 @@
 上	tsionn6	tsiɔ̃4-										
 上	sianɡ6	siaŋ4=										
 尚	sionn7	siɔ̃6-		和~								
-尚	sianɡ6	siaŋ4										
+尚	sianɡ6	siaŋ4=										
 上	sionn7	siɔ̃6										
 瓤	dzianɡ2	dziaŋ3										
 壤	dzianɡ2	dziaŋ3										
 攘	dzianɡ2	dziaŋ3										
 嚷	dzianɡ2	dziaŋ3										
 讓	nionn7	niɔ̃6-										
-讓	dzianɡ6	dziaŋ4										
+讓	dzianɡ6	dziaŋ4=										
 疆	kianɡ1	kiaŋ1										
 僵	kianɡ1	kiaŋ1										
 薑	kionn1	kiɔ̃1										
@@ -3391,7 +3385,7 @@
 勥	khianɡ3	kʰiaŋ5		厲害								
 仰	onn3	ɔ̃5-		头~~								
 仰	nɡ3	ŋ̍5-		又，依靠								
-仰	nɡianɡ2	ŋiaŋ3										
+仰	nɡianɡ2	ŋiaŋ3=										
 香	hionn1	hiɔ̃1-										
 香	hianɡ1	hiaŋ1=										
 鄉	hionn1	hiɔ̃1-										
@@ -3434,9 +3428,9 @@
 度	tak8	tak8										
 諾	nak8	nak8										
 落	lauh8	lauʔ8										
-落	lauh5	lauʔ2		又								
-落	loh8	lɔʔ8-		又								
-落	lak4	lak7		又，~皮								
+落	lauh5	lauʔ2										
+落	loh8	lɔʔ8-										
+落	lak4	lak7		~皮								
 落	la6	la4=		~下								
 洛	lok8	lɔk8										
 駱	loh8	lɔʔ8										
@@ -3445,11 +3439,11 @@
 烙	luah4	luaʔ7										
 樂	lak8	lak8										
 作	tsoh4	tsɔʔ7-										
-作	tsak4	tsak7										
+作	tsak4	tsak7=										
 鑿	tshak8	tsʰak8										
 昨	tsa1	tsa1										
 索	soh4	sɔʔ7-										
-索	sok4	sɔk7										
+索	sok4	sɔk7=										
 各	kak4	kak7										
 閣	koh4	kɔʔ7										
 胳	keh4	kɛʔ7										
@@ -3463,7 +3457,7 @@
 略	liak8	liak8										
 爵	tsiak4	tsiak7										
 雀	tsiah4	tsiaʔ7-		打麻~								
-雀	tshiak4	tsʰiak7										
+雀	tshiak4	tsʰiak7=										
 鵲	tshiak4	tsʰiak7										
 嚼	tsiak4	tsiak7										
 削	siah4	siaʔ7										
@@ -3491,18 +3485,18 @@
 光	kurnɡ1	kəŋ1-										
 光	kuanɡ1	kuaŋ1=										
 廣	kurnɡ2	kəŋ3-		~州								
-廣	kuanɡ2	kuaŋ3										
+廣	kuanɡ2	kuaŋ3=										
 曠	khuanɡ3	kʰuaŋ5										
 荒	hnɡ1	hŋ̍1-										
-荒	huanɡ1	huaŋ1										
+荒	huanɡ1	huaŋ1=										
 慌	huanɡ1	huaŋ1										
 恍	huanɡ2	huaŋ3										
 謊	huanɡ1	huaŋ1										
 黃	nɡ5	ŋ̍2										
 蝗	uanɡ5	uaŋ2-										
-蝗	huanɡ5	huaŋ2										
+蝗	huanɡ5	huaŋ2=										
 皇	uanɡ5	uaŋ2-										
-皇	huanɡ5	huaŋ2										
+皇	huanɡ5	huaŋ2=										
 汪	uanɡ1	uaŋ1										
 方	punɡ1	puŋ1-		姓氏								
 方	hnɡ1	hŋ̍1-		地~								
@@ -3539,7 +3533,7 @@
 況	khuanɡ3	kʰuaŋ5										
 枉	uanɡ2	uaŋ3										
 王	henɡ5	hɛŋ2-		姓氏								
-王	uanɡ5	uaŋ2										
+王	uanɡ5	uaŋ2=										
 往	uanɡ2	uaŋ3										
 旺	uanɡ6	uaŋ4										
 郭	kueh4	kuɛʔ7										
@@ -3742,7 +3736,6 @@
 撐	thenn1	tʰɛ̃1										
 澄	thenɡ5	tʰɛŋ2		~海；把液體中的雜質沉澱分離，使清澈純淨								
 鐺	tanɡ1	taŋ1										
-鐺	tshanɡ1	tsʰaŋ1		又								
 生	senn1	sɛ̃1-		~囝								
 生	tshenn1	tsʰɛ̃1-		~水								
 生	senɡ1	sɛŋ1=		醫~								
@@ -3753,8 +3746,8 @@
 甥	sunɡ1	suŋ1*										
 省	senn2	sɛ̃3										
 更	kenn1	kɛ̃1-										
-更	kenɡ1	kɛŋ1										
-更	kenɡ3	kɛŋ5		又								
+更	kenɡ1	kɛŋ1=										
+更	kenɡ3	kɛŋ5										
 庚	kenn1	kɛ̃1										
 羹	kenn1	kɛ̃1										
 哽	kenn2	kɛ̃3										
@@ -3788,7 +3781,7 @@
 柄	penn3	pɛ̃5-										
 柄	penɡ2	pɛŋ3=										
 平	penn5	pɛ̃2-										
-平	phenn5	pʰɛ̃2		又								
+平	phenn5	pʰɛ̃2										
 平	phenɡ5	pʰɛŋ2=										
 評	phenɡ5	pʰɛŋ2										
 病	penn7	pɛ̃6										
@@ -3811,7 +3804,7 @@
 卿	khenɡ1	kʰɛŋ1										
 慶	khenɡ3	kʰɛŋ5										
 擎	khia5	kʰia2-		~筆								
-擎	khenɡ5	kʰɛŋ2										
+擎	khenɡ5	kʰɛŋ2=										
 鯨	khenɡ5	kʰɛŋ2										
 競	kenɡ6	kɛŋ4										
 迎	nɡinɡ5	ŋiŋ2										
@@ -3836,7 +3829,7 @@
 清	tshenɡ1	tsʰɛŋ1										
 請	tshiann2	tsʰiã3										
 情	tsiann5	tsiã2-		親~，心~								
-情	tshenɡ5	tsʰɛŋ2										
+情	tshenɡ5	tsʰɛŋ2=										
 靜	tsenn6	tsɛ̃4										
 淨	tsenɡ6	tsɛŋ4										
 性	senn3	sɛ̃5										
@@ -3863,8 +3856,8 @@
 成	tsiann5	tsiã2-		又，唔~人								
 成	senɡ5	sɛŋ2=										
 誠	senɡ5	sɛŋ2										
-盛	senɡ6	sɛŋ4										
-盛	senɡ5	sɛŋ2		又								
+盛	senɡ6	sɛŋ4=										
+盛	senɡ5	sɛŋ2										
 盛	siann7	siã6-										
 頸	kenn3	kɛ̃5										
 勁	kenn3	kɛ̃5-										
@@ -3882,7 +3875,7 @@
 並	penɡ6	pɛŋ4										
 銘	menɡ5	mɛŋ2										
 冥	menn5	mɛ̃2-		蜀~								
-冥	menɡ5	mɛŋ2										
+冥	menɡ5	mɛŋ2=										
 丁	tenɡ1	tɛŋ1										
 釘	tenɡ1	tɛŋ1										
 頂	tenɡ2	tɛŋ3										
@@ -3999,7 +3992,7 @@
 亦	ek8	ɛk8										
 譯	ek8	ɛk8										
 易	iah8	iaʔ8-		~經								
-易	ek8	ɛk8										
+易	ek8	ɛk8=										
 液	ek8	ɛk8										
 腋	ek8	ɛk8										
 壁	piah4	piaʔ7										
@@ -4009,7 +4002,7 @@
 覓	mek8	mɛk8										
 滴	tih4	tiʔ7										
 嫡	tiah4	tiaʔ7-										
-嫡	tek8	tɛk8										
+嫡	tek8	tɛk8=										
 的	tek8	tɛk8										
 的	ti1	ti1=		普通話“的”								
 踢	thak4	tʰak7-										
@@ -4065,17 +4058,17 @@
 東	tanɡ1	taŋ1-										
 東	tonɡ1	tɔŋ1=										
 董	tanɡ2	taŋ3-		姓氏								
-董	tonɡ2	tɔŋ3										
+董	tonɡ2	tɔŋ3=										
 懂	tonɡ2	tɔŋ3										
 棟	tonɡ3	tɔŋ5										
 凍	tanɡ3	taŋ5-		結~								
-凍	tonɡ3	tɔŋ5										
+凍	tonɡ3	tɔŋ5=										
 通	thanɡ1	tʰaŋ1-										
-通	thanɡ3	tʰaŋ5		又								
-通	thonɡ1	tʰɔŋ1										
+通	thanɡ3	tʰaŋ5		動詞								
+通	thonɡ1	tʰɔŋ1=										
 桶	thanɡ2	tʰaŋ3										
 捅	thurnɡ2	tʰəŋ3-										
-捅	thonɡ2	tʰɔŋ3										
+捅	thonɡ2	tʰɔŋ3=										
 痛	thiann3	tʰiã5										
 痛	thonɡ3	tʰɔŋ5										
 同	tanɡ5	taŋ2										
@@ -4135,7 +4128,7 @@
 閧	honɡ3	hɔŋ5										
 翁	anɡ1	aŋ1-		丈夫								
 翁	enɡ1	ɛŋ1-		又，姓氏								
-翁	onɡ1	ɔŋ1										
+翁	onɡ1	ɔŋ1=										
 甕	anɡ3	aŋ5										
 冬	tanɡ1	taŋ1										
 統	thonɡ2	tʰɔŋ3										
@@ -4185,14 +4178,14 @@
 鋒	honɡ1	hɔŋ1										
 捧	phonɡ2	pʰɔŋ3										
 逢	phonɡ5	pʰɔŋ2-										
-逢	honɡ5	hɔŋ2										
+逢	honɡ5	hɔŋ2=										
 縫	phonɡ5	pʰɔŋ2-										
 縫	honɡ5	hɔŋ2=										
 奉	honɡ6	hɔŋ4										
 俸	honɡ6	hɔŋ4										
 縫	phanɡ7	pʰaŋ6										
 濃	lonɡ5	lɔŋ2										
-龍	lenɡ5	lɛŋ2										
+龍	lenɡ5	lɛŋ2=										
 隴	lenɡ2	lɛŋ3										
 壟	lonɡ2	lɔŋ3										
 蹤	tsonɡ1	tsɔŋ1										
@@ -7056,7 +7049,7 @@
 瀲	lianɡ2	liaŋ3										
 瀦	tsu1	tsu1										
 漪	i1	i1										
-漳	tsianɡ1	tsiaŋ1										
+漳	tsianɡ1	tsiaŋ1=										
 漩	suanɡ5	suaŋ2										
 澉	kann2	kã3										
 濰	dzui5	dzui2										
@@ -7526,7 +7519,7 @@
 曜	iou6	iɔu4										
 躇	thu5	tʰu2										
 蹚	thanɡ5	tʰaŋ2										
-鷺	lou7	lɔu6										
+鷺	lou7	lɔu6=										
 鷺	liou6	liɔu4-		～丝，俗								
 蟛	be5	bɛ2										
 蟪	hui6	hui4										
@@ -7621,7 +7614,7 @@
 璺	munɡ7	muŋ6										
 鼯	u5	u2										
 臢	tsanɡ1	tsaŋ1										
-鱔	sianɡ6	siaŋ4										
+鱔	sianɡ6	siaŋ4=										
 鱔	tshuann6	tsʰuã4-										
 鱒	tsunɡ1	tsuŋ1										
 貛	huanɡ1	huaŋ1										
@@ -7812,7 +7805,7 @@
 鬥	tiu3	tiu5										
 榕	senɡ5	sɛŋ2-										
 膋	la5	la2										
-挾	koih4	kɔiʔ7		用筷子夹								
+挾	koih4	kɔiʔ7-		用筷子夹								
 笠	loih8	lɔiʔ8										
 慧	koi7	kɔi6		容易								
 液	sioh8	siɔʔ8		骹~：腳气								
@@ -8373,7 +8366,6 @@
 搦	liah8	liaʔ8-		抓								
 □	phiu3	pʰiu5		線崩了，引申為糟糕								
 傢	ke1	kɛ1		~俬								
-惱	lo2	lɔ3-		煩~								
 惱	lou2	lɔu3-		討厭								
 復	hok8	hɔk8										
 □		pu1		～螺								
@@ -8389,28 +8381,26 @@
 □		tau5		～墟								
 □		taŋ5		～bai6，傻里傻气								
 □		bai6		taŋ5～，傻里傻气								
-□		kuʔ		吸								
 □		saʔ		～pʰã5，白痴								
 □		liɔuʔ7		鞋～，鞋拖								
 □		tʰɛk7		～tʰɔ2，玩耍								
 □		niʔ7		虫子啃咬								
 □		tsʰiʔ8		～tsʰɔʔ，粗心大意								
-□		uɛ2		一半								
 □		ĩã3		瞥见								
 □		paŋ5		次								
 □		tsʰiaŋ4		独脚走路								
-□		tshiɔu1		搅								
-□		hɛʔ8		上气不接下气								
+□		tshiɔu1		攪								
+□		hɛʔ8		上氣不接下氣								
 □		lu1		不尖								
-□		mi4		不是								
-□		mai5		不要								
-□		mui5		不怕								
+□		mi4		唔是合音，不是								
+□		mai5		唔愛合音，不要								
+□		mui5		唔畏合音，不怕								
 □		ui5		疲惫								
-□		au5		不厉害								
 □		bai3		丑陋								
 □		pɛŋ1		热辐射								
 □		suʔ8		消停								
-□		pʰu3		交媾								
-□		pʰueʔ8		交谈								
+漳	tsionn1	tsiɔ̃1-		~浦								
 □		kʰɔŋ4		骷髅								
 䉔	tshuann1	tsʰuã1		硬質頭髮/木/竹等的枕狀小刺								
+□	laʔ8	laʔ8		～～□sɔ2：出去玩								
+□	so2	sɔ2		□laʔ8□laʔ8～：出去玩								
