@@ -1,18 +1,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/menu_item_settings"
-        app:showAsAction="never"
-        android:icon="@android:drawable/ic_menu_preferences"
-        android:title="@string/settings" />
+        android:id="@+id/menu_item_info"
+        android:title="@string/info"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/menu_item_home"
         android:title="@string/home"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/menu_item_info"
-        android:title="@string/info"
-        app:showAsAction="ifRoom" />
+        android:id="@+id/menu_item_settings"
+        app:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/settings" />
     <item
         android:id="@+id/menu_item_map"
         android:title="@string/map"
