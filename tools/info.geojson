@@ -6586,6 +6586,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "考城",
+        "語言": "考城話",
+        "地點": "河南開封蘭考考城",
+        "地圖集二分區": "中原官話－鄭開片",
+        "音典分區": "華北－河南－豫東",
+        "陳邡分區": "官話－河南－河南大片－鄭開片",
+        "版本": "2026-03-19",
+        "錄入人": "DaiDzao",
+        "字表來源": "《兰考方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.818913,
+          34.830928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "large",
         "marker-symbol": "b",
         "title": "許昌",
@@ -6698,6 +6722,30 @@
         "coordinates": [
           114.661539,
           33.623463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "商水",
+        "語言": "商水話",
+        "地點": "河南周口商水",
+        "地圖集二分區": "中原官話－漯項片",
+        "音典分區": "華北－河南－豫東",
+        "陳邡分區": "官話－河南－河南大片－豫東片",
+        "版本": "2026-03-19",
+        "錄入人": "DaiDzao",
+        "字表來源": "《河南商水方言语音调查与分析》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.614396,
+          33.553212
         ]
       }
     },
