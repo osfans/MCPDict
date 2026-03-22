@@ -14,7 +14,7 @@ html = re.sub(r'<a .*?>.*?</a>', "", html, flags=re.M|re.S)
 html = re.sub("</div>", "", html, flags=re.M|re.S)
 html = re.sub("<div.*?>", "", html, flags=re.M|re.S)
 html = re.sub("\n{2,}", "\n", html, flags=re.M|re.S)
-html = re.sub(r'<span style="[^"]+:8px">(.*?)</span>', "", html, flags=re.M|re.S)
+# html = re.sub(r'<span style="[^"]+:8px">(.*?)</span>', "", html, flags=re.M|re.S)
 html = re.sub("(\n<br>)([^<])", "\\2", html, flags=re.M|re.S)
 html = re.sub(r'(<span style="font-family: ZJLKl\d-\d; font-size:10px">[^□])', "\n<br>\\1", html, flags=re.M|re.S)
 html = re.sub(r'(\n<br>)(</span><span style="font-family: 方)', "\\2", html, flags=re.M|re.S)
@@ -28,6 +28,7 @@ d = {
     "":"䝼",
     "":"䙡",
     "":"㭎",
+    "":"㧐",
 }
 for i,j in d.items():
     html = html.replace(i, j)

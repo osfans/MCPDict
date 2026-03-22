@@ -8730,6 +8730,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "陘陽",
+        "語言": "陘陽話",
+        "地點": "陝西咸陽陘陽陘干",
+        "地圖集二分區": "中原官話－關中片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－關中－關中大片－邠乾片",
+        "版本": "2026-03-19",
+        "錄入人": "DaiDzao",
+        "字表來源": "《泾阳方言同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.838206,
+          34.538572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "永壽",
@@ -59080,6 +59104,30 @@
         "coordinates": [
           104.17308,
           30.63427
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "成都和平",
+        "語言": "成都和平土廣東話",
+        "地點": "四川成都龍泉驛十陵和平",
+        "地圖集二分區": "客家話－方言島",
+        "音典分區": "閩－閩西－方言島",
+        "陳邡分區": "客家－嘉應－嘉應片",
+        "方言島": true,
+        "錄入人": "osfans",
+        "字表來源": "《四川成都龙泉驿和平客家话同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.186399,
+          30.656837
         ]
       }
     },
