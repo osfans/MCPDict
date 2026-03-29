@@ -43961,6 +43961,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "安遠天心",
+        "語言": "安遠天心話",
+        "地點": "江西贛州安遠天心",
+        "地圖集二分區": "客家話－雩信片",
+        "音典分區": "嶺東－贛南－贛州",
+        "陳邡分區": "嶺東－贛州－贛州大片－安遠片",
+        "版本": "2026-03-25",
+        "錄入人": "DaiDzao",
+        "字表來源": "《江西安远(天心)客家方言音系》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.396613,
+          25.238854
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
         "marker-size": "medium",
         "marker-symbol": "h",
         "title": "興國",
@@ -54207,6 +54231,30 @@
         "coordinates": [
           118.780898,
           26.044136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
+        "marker-size": "large",
+        "marker-symbol": "l",
+        "title": "詩巫閩清話",
+        "語言": "馬來西亞砂拉越詩巫閩清話",
+        "地點": "海外*馬來西亞砂拉越州詩巫市",
+        "地圖集二分區": "閩語－閩東片－侯官小片",
+        "音典分區": "閩－閩東",
+        "陳邡分區": "福建－閩東",
+        "錄入人": "NaruDora",
+        "維護人": "NaruDora",
+        "字表來源": "《馬來西亞砂拉越州詩巫市福州（閩清）方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.831171,
+          2.28837
         ]
       }
     },
