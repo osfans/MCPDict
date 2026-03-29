@@ -375,6 +375,10 @@ def getLangs(items, 參數, args):
 					雙字數 += 1
 				語.info["相似度"] = ",".join(map(lambda x:f"{x}({相似度[x] * 100 / 雙字數:.2f}%)", sorted((i for i in 相似度), key=相似度.get, reverse=True)[:10]))
 				logging.info(f"{語.簡稱}:{語.info['相似度']}")
+			if 語.爲語() and 語.爲音 and 語.字數 < 10000:
+				for 字,音 in 語.字音典.items():
+					if len(音) > 3:
+						語.誤.append(f"【{字}】的讀音太多:{','.join(音)}")
 			語.info["解析日志"] = None
 			語.info["同音字表"] = None
 			if 語.誤:
