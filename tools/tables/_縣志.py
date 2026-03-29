@@ -385,7 +385,10 @@ class 表(_表):
 		elif 名 in ("柳州",):
 			if 行.startswith("#"): return 行
 			if 行.startswith("调"): return ""
-			行 = 自.增加調類(行).replace("\\n", "")
+			if 行.count("\t") == 1:
+				行 = 行.replace("\t", "\t[7]")
+			else:
+				行 = 自.增加調類(行).replace("\\n", "")
 		elif 名 in ("沙市",):
 			if 行.startswith("声调"): return ""
 			行 = 自.增加調類(行)

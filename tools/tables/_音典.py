@@ -31,6 +31,20 @@ class 表(_表):
 			if 字.endswith("-") or 字.endswith("="):
 				音 += 字[-1]
 				字 = 字[:-1]
+			if 名 in ("日語近世唐音",):
+				if 字:
+					自.字 = 字
+					自.註 = 音
+					return
+				音 = 音.replace("N", "ɴ")
+				註 = 自.註
+				註 = re.sub("(.)ツ$", "\\1ッ", 註)
+				註 = re.sub("(.)ツ/", "\\1ッ/", 註)
+				l = list()
+				for 字 in 自.字.split("/"):
+					for a, b in zip(音.split("/"), 註.split("/")):
+						l.append((字, a, b))
+				return l
 			if not 字 or not 音: return
 			if 名 in ("信宜新寶",):
 				if 字 == 註: 註 = ""
@@ -298,8 +312,6 @@ class 表(_表):
 			elif 名 in ("藤縣",):
 				音 = 音.replace(".ŋ", "ŋ̍")
 				if 音.startswith("ø"): 音 = 音[1:]
-			elif 名 in ("日語近世唐音",):
-				音 = re.sub("ツ$", "ッ", 音).replace("ツ/", "ッ/").replace(" ", "")
 		elif 自.文件名.startswith("榕江侗"):
 			列[0] = 列[0].strip().replace(" /", "/").replace(" [", "[")
 			if not 列[0]: return
