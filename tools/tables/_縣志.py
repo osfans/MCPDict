@@ -208,6 +208,16 @@ class 表(_表):
 					yb = 自.宜春聲[i] + f"[{sd}]"
 					yb = yb.strip("零")
 					行 += f"{yb}{字組}\n"
+		elif 名 in ("蘇州西山",):
+			列 = 行.split("\t")
+			if not hasattr(自, "蘇州西山韻") or len(自.蘇州西山韻) == 0:
+				自.蘇州西山韻 = 列
+				return
+			行 = ""
+			for i in range(1, len(列)):
+				if 列[i].strip() == "": continue
+				聲韻 = 列[0] + 自.蘇州西山韻[i].strip("0")
+				行 += f"{聲韻}{列[i]}\n"
 		elif 名 in ("澳門","新澳門",):
 			列 = 行.split("\t")
 			if not hasattr(自, "澳門韻") or len(自.澳門韻) == 0:
