@@ -25056,6 +25056,31 @@
         "marker-color": "#F5B3B3",
         "marker-size": "small",
         "marker-symbol": "b",
+        "title": "句容磨盤",
+        "語言": "句容磨盤河南話",
+        "地點": "江蘇鎮江句容磨盤",
+        "地圖集二分區": "中原官話－信蚌片",
+        "音典分區": "中上江－荆益－光山",
+        "陳邡分區": "官話－長江－西南大片－江漢片",
+        "方言島": true,
+        "錄入人": "osfans",
+        "字表來源": "《句容磨盘话方言岛同音字汇》",
+        "補充閲讀": "《磨盘话同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.154092,
+          32.172302
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
         "title": "溧陽河南話",
         "語言": "溧陽河南話",
         "地點": "江蘇常州溧陽周城金山村",
