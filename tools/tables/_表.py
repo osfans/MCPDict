@@ -15,6 +15,7 @@ from docx.shared import Pt
 from docx.enum.text import WD_UNDERLINE
 import regex
 import subprocess
+import shutil
 
 logging.basicConfig(format='[%(asctime)s,%(msecs)03d] %(message)s', level=logging.INFO, datefmt='%H:%M:%S',)
 
@@ -48,10 +49,14 @@ def maketrans(path):
 		d[字] = val
 	return str.maketrans(d)
 
-def getTsvName(fname, 頁名=""):
-	name = os.path.basename(fname)
-	if 頁名: 頁名 = "-" + 頁名
-	name = re.sub(r" ?(\(\d{0,3}\))+$", "", name.rsplit(".", 1)[0]) + 頁名 + ".tsv"
+def getSrcName(fname, 頁名=""):
+	root, ext = os.path.splitext(os.path.basename(fname))
+	if isRaw(fname):
+		頁名 = ""
+	else:
+		if 頁名: 頁名 = "-" + 頁名
+		ext = ".tsv"
+	name = re.sub(r" ?(\(\d{0,3}\))+$", "", root) + 頁名 + ext
 	return os.path.join(PATH, SOURCE, name)
 
 def isXlsx(fname):
@@ -106,7 +111,7 @@ def getXlsxLines(xlsx, 頁名):
 	return lines
 
 def xlsx2tsv(xlsx, 頁名):
-	tsv = getTsvName(xlsx, 頁名)
+	tsv = getSrcName(xlsx, 頁名)
 	if not os.path.exists(xlsx): return
 	if os.path.exists(tsv):
 		xtime = os.path.getmtime(xlsx)
@@ -116,6 +121,16 @@ def xlsx2tsv(xlsx, 頁名):
 	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.writelines(lines)
 	t.close()
+
+def mv2src(name):
+	src = getSrcName(name)
+	if not os.path.exists(name) or os.path.samefile(name, src):
+		return
+	if os.path.exists(src):
+		xtime = os.path.getmtime(name)
+		ttime = os.path.getmtime(src)
+		if ttime >= xtime: return
+	shutil.move(name, src)
 
 def run2text(run):
 	if isinstance(run, docx.text.hyperlink.Hyperlink):
@@ -142,10 +157,17 @@ def run2text(run):
 	return text
 
 def isDocx(fname):
-	return fname.endswith(".docx") or fname.endswith(".doc")
-	
+	return fname.endswith(".docx")
+
+def isRaw(fname):
+	ext = os.path.splitext(fname)[-1]
+	return ext in [".txt", ".tsv", ".csv", ".md", ".yaml", ".htm", ".db", ".json"]
+
+def isValidSrc(fname):
+	return isDocx(fname) or isXlsx(fname) or isRaw(fname)
+
 def docx2tsv(fname):
-	tsv = getTsvName(fname)
+	tsv = getSrcName(fname)
 	if not os.path.exists(fname): return
 	if os.path.exists(tsv):
 		xtime = os.path.getmtime(fname)
@@ -230,7 +252,7 @@ class 表:
 		return 自.__module__.split(".")[-1]
 
 	def find(自, name):
-		if os.sep not in name and (isXlsx(name) or isDocx(name)):
+		if os.sep not in name and isValidSrc(name):
 			name = 自.toolname(name)
 			if g := 自.find(name): return g
 		if os.sep not in name:
@@ -241,8 +263,10 @@ class 表:
 		if g := glob.glob(re.sub(".([^.]+)$", "([0-9][0-9]).\\1", name)): return g
 		if g := glob.glob(re.sub(".([^.]+)$", " ([0-9]).\\1", name)): return g
 		if g := glob.glob(re.sub(".([^.]+)$", " ([0-9][0-9]).\\1", name)): return g
-		if isXlsx(name) or isDocx(name):
-			自.文件名 = getTsvName(自.文件名, 自.頁名)
+		if isValidSrc(name) and 自.文件名:
+			tmp = 自.文件名
+			自.文件名 = getSrcName(自.文件名, 自.頁名)
+			if tmp == 自.文件名: return
 			return 自.find(自.文件名)
 		return
 
@@ -266,10 +290,13 @@ class 表:
 		自.文件名 = os.path.basename(sname)
 		if isXlsx(sname):
 			xlsx2tsv(sname, 自.頁名)
-			sname = getTsvName(sname, 自.頁名)
+			sname = getSrcName(sname, 自.頁名)
 		elif isDocx(sname):
 			docx2tsv(sname)
-			sname = getTsvName(sname)
+			sname = getSrcName(sname)
+		else:
+			mv2src(sname)
+			sname = getSrcName(sname)
 		return sname
 
 	def toolname(自, name):
