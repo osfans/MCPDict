@@ -8,6 +8,7 @@ class 表(_表):
 	全稱 = "漢語大字典"
 	說明 = "來源：<a href=https://github.com/zi-phoenicia/hydzd/>GitHub</a>"
 	字書 = True
+	文件名 = "漢大.tsv"
 	
 	def 更新(自):
 		d = defaultdict(list)

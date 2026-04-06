@@ -8,6 +8,7 @@ class 表(_表):
 	網址 = "http://www.shuowen.org/?kaishu=%s"
 	說明 = "來源：<a href=https://github.com/shuowenjiezi/shuowen/>說文解字網站數據</a>"
 	字書 = True
+	文件名 = "說文.tsv"
 	
 	def 析(自, 列):
 		fq = 列[1].split(" ")[0]

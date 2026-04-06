@@ -125,6 +125,7 @@ def xlsx2tsv(xlsx, 頁名):
 def mv2src(name):
 	src = getSrcName(name)
 	if not os.path.exists(name): return
+	if os.path.isdir(name): return
 	if os.path.exists(src):
 		if os.path.samefile(name, src): return
 		xtime = os.path.getmtime(name)
