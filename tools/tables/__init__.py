@@ -354,8 +354,10 @@ def getLangs(items, 參數, args):
 						n = len(字組乙)
 						for 字乙 in 字組乙:
 							字頻 += len(同音字頻["".join(sorted((字甲, 字乙)))])
-						if 字頻 == 0:
-							語.誤.append(f"【{字甲}】可能不讀[{音}]{''.join(字組乙)[:4]}")
+						if 字頻 == 0 and 字甲 != "□":
+							字組乙前四字 = ''.join(字組乙).replace("□", "")[:4]
+							if 字組乙前四字:
+								語.誤.append(f"【{字甲}】可能不讀[{音}]{字組乙前四字}")
 			if 計算相似度 and mod in 語言組:
 				相似度 = defaultdict(int)
 				雙字數 = 0
