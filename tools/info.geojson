@@ -19644,6 +19644,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "珙縣珙泉",
+        "語言": "珙縣珙泉[舊城關]話",
+        "地點": "四川宜賓珙縣珙泉",
+        "地圖集二分區": "西南官話－西蜀片－岷赤小片",
+        "音典分區": "中上江－荆益－川黔",
+        "陳邡分區": "官話－長江－西南大片－川南片",
+        "錄入人": "2019212",
+        "字表來源": "YB",
+        "參考文獻": "《四川方言音系》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.789687,
+          28.378272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "興文",

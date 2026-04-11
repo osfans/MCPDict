@@ -482,8 +482,8 @@ class 表:
 
 	def 寫(自, d):
 		自.修訂(d)
-		t = open(自.tpath, "w", encoding="U8", newline="\n")
-		print(f"#漢字\t音標\t解釋", file=t)
+		lines = []
+		lines.append(f"#漢字\t音標\t解釋\n")
 		for 字 in sorted(d.keys()):
 			pys = d[字]
 			字 = 自.kCompatibilityVariants.get(字, 字)
@@ -506,7 +506,9 @@ class 表:
 				if 字 == "□" and not 註:
 					自.誤.append(f"【□】({音})無註釋")
 				音 = f"{音}\t{註}"
-				print(f"{字}\t{音}", file=t)
+				lines.append(f"{字}\t{音}\n")
+		t = open(自.tpath, "w", encoding="U8", newline="\n")
+		t.writelines(lines)
 		t.close()
 
 	@property
