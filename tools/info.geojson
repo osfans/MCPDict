@@ -63039,6 +63039,30 @@
         "marker-color": "#8FCCA3",
         "marker-size": "small",
         "marker-symbol": "m",
+        "title": "赫章蛇倮冲",
+        "語言": "赫章蛇倮衝蔡家話",
+        "地點": "貴州畢節赫章松林坡蛇倮衝",
+        "地圖集二分區": "民族語",
+        "音典分區": "蔡家話",
+        "陳邡分區": "白語",
+        "版本": "2026-04-11",
+        "錄入人": "syami",
+        "字表來源": "《赫章县松林坡乡蔡家话音系概况》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.920172,
+          26.871586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#8FCCA3",
+        "marker-size": "small",
+        "marker-symbol": "m",
         "title": "威寧牛吃水",
         "語言": "威寧牛喫水蔡家話",
         "地點": "貴州畢節威寧大街牛喫水",
