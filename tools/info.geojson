@@ -34306,6 +34306,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
+        "marker-size": "medium",
+        "marker-symbol": "d",
+        "title": "溫州龍灣",
+        "語言": "溫州龍灣永強話",
+        "地點": "浙江溫州龍灣",
+        "地圖集二分區": "吳語－甌江片",
+        "音典分區": "浙南－溫州－永嘉",
+        "陳邡分區": "甌江－溫州",
+        "版本": "2026-04-09",
+        "錄入人": "DaiDzao",
+        "字表來源": "《温州市龙湾区志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.818682,
+          27.93876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
         "marker-size": "small",
         "marker-symbol": "d",
         "title": "蒼南蒲門",
@@ -41933,30 +41957,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#52CCAD",
-        "marker-size": "small",
-        "marker-symbol": "f",
-        "title": "耒陽永濟",
-        "語言": "耒陽永濟話",
-        "地點": "湖南衡陽耒陽永濟",
-        "地圖集二分區": "贛語－耒資片",
-        "音典分區": "湘贛－南湘－衡州",
-        "陳邡分區": "湘贛－衡邵－衡州大片－耒陽片",
-        "版本": "2025-02-05",
-        "錄入人": "DaiDzao",
-        "字表來源": "《湖南耒阳永济方言语音典藏和研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          112.841071,
-          26.637818
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "marker-color": "#C75EEB",
         "marker-size": "small",
         "marker-symbol": "g",
@@ -42025,6 +42025,30 @@
         "coordinates": [
           112.862862,
           26.420301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "耒陽永濟",
+        "語言": "耒陽永濟話",
+        "地點": "湖南衡陽耒陽永濟",
+        "地圖集二分區": "贛語－耒資片",
+        "音典分區": "湘贛－南湘－南衡州",
+        "陳邡分區": "湘贛－衡邵－衡州大片－耒陽片",
+        "版本": "2025-02-05",
+        "錄入人": "DaiDzao",
+        "字表來源": "《湖南耒阳永济方言语音典藏和研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.841071,
+          26.637818
         ]
       }
     },
