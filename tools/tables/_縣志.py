@@ -88,7 +88,7 @@ class 表(_表):
 		elif 名 in ("南雄珠璣巷"):
 			行 = re.sub(r"(\d+)", "[\\1]", 行, count=1)
 			if not 行.startswith("#") and "[" not in 行: 行 = ""
-		elif 名 in ("樅陽東",):
+		elif 名 in ("樅陽陳瑶湖",):
 			行 = 行.replace("*", "□")
 			行 = 自.normS(行)
 			行 = re.sub("[가-힣]+[, ]*", "", 行).lstrip()
