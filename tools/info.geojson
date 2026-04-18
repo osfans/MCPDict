@@ -2967,6 +2967,24 @@
       "properties": {
         "marker-color": "#916FF7",
         "marker-size": "small",
+        "marker-symbol": "",
+        "title": "南宮",
+        "語言": "南宮話",
+        "版本": "2026-04-18"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.39601,
+          37.35145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "small",
         "marker-symbol": "c",
         "title": "沙河橋西",
         "語言": "沙河橋西話",
@@ -26696,6 +26714,31 @@
         "coordinates": [
           116.701368,
           30.130981
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#52CCAD",
+        "marker-size": "small",
+        "marker-symbol": "f",
+        "title": "望江賽口",
+        "語言": "望江賽口話",
+        "地點": "安徽安慶望江賽口",
+        "地圖集二分區": "贛語－懷岳片",
+        "音典分區": "中上江－潯皖－西安慶",
+        "陳邡分區": "官話－南下江－安慶大片－南安慶片",
+        "版本": "2026-06-17",
+        "錄入人": "空島。",
+        "字表來源": "/",
+        "參考文獻": "《皖西南地区方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.829728,
+          30.401959
         ]
       }
     },
