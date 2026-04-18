@@ -150,6 +150,7 @@ def 加載(省=None):
 		if not 文件名 or 文件名.startswith("#"):
 			print(f"{語言} 沒有登記字表文件: {文件名}")
 			continue
+		if 文件名.endswith(".doc") or 文件名.endswith("xls"): 文件名 += "x"
 		if 簡稱 in d:
 			print(f"{語言} 的簡稱 {簡稱} 重複")
 			continue
