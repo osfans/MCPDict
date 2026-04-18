@@ -2965,12 +2965,18 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#916FF7",
-        "marker-size": "small",
-        "marker-symbol": "",
+        "marker-color": "#F5A4B6",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "南宮",
         "語言": "南宮話",
-        "版本": "2026-04-18"
+        "地點": "河北邢臺南宮",
+        "地圖集二分區": "冀魯官話－石濟片－邢衡小片",
+        "音典分區": "華北－漳衛",
+        "陳邡分區": "官話－河北－冀南片",
+        "版本": "2026-04-18",
+        "錄入人": "DaiDzao",
+        "字表來源": "《南宮方言音韻研究》"
       },
       "geometry": {
         "type": "Point",
