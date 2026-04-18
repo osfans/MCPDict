@@ -41,6 +41,9 @@ jobs:
         touch tables/output/_詳情.json
         python3 make.py -c -i
         popd
+    
+    - name: Git Status
+      run: git status -s
 
     - name: Calculate similarity
       run: |
