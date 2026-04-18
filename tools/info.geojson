@@ -11674,6 +11674,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "張掖",
+        "語言": "張掖話",
+        "地點": "甘肅張掖",
+        "地圖集二分區": "蘭銀官話－河西片",
+        "音典分區": "西北－甘肅",
+        "陳邡分區": "官話－甘肅－甘肅大片－涼甘片",
+        "版本": "2026-04-17",
+        "錄入人": "DaiDzao",
+        "字表來源": "《甘肃张掖方言同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.459858,
+          38.933861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "敦煌",
@@ -21091,6 +21115,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "鎮寧",
+        "語言": "鎮寧漢話",
+        "地點": "貴州安順鎮寧",
+        "地圖集二分區": "西南官話－川黔片－黔中小片",
+        "音典分區": "中上江－荆益－川黔",
+        "陳邡分區": "官話－長江－西南大片－川中片",
+        "版本": "2026-04-18",
+        "錄入人": "DaiDzao",
+        "字表來源": "《贵州省镇宁方言语音系统初探》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.770402,
+          26.057362
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "large",
         "marker-symbol": "b",
         "title": "興義",
@@ -29382,6 +29430,7 @@
         "陳邡分區": "官話－淮安",
         "版本": "2024-12-24",
         "錄入人": "慕禃",
+        "維護人": "青墩塘泊",
         "字表來源": "《淮阴县志》"
       },
       "geometry": {

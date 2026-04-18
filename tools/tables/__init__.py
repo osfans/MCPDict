@@ -381,7 +381,7 @@ def getLangs(items, 參數, args):
 				for 字,音 in 語.字音典.items():
 					if len(音) > 3:
 						語.誤.append(f"【{字}】的讀音太多:{','.join(音)}")
-					if len(音) > 1 and 字 in "娟娼疸疽妍姘冢汊权權杈姓磐罄迂迁遷亘修侈局屙人":
+					if len(音) > 1 and 字 in "娟娼疸疽妍姘冢汊权權杈姓磐罄迂迁遷亘修侈局屙人腿服啧嘖":
 						語.誤.append(f"【{字}】的讀音太多:{','.join(音)}")
 			語.info["解析日志"] = None
 			語.info["同音字表"] = None
