@@ -1959,6 +1959,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "唐縣",
+        "語言": "唐縣話",
+        "地點": "河北保定唐縣",
+        "地圖集二分區": "冀魯官話－保唐片－定霸小片",
+        "音典分區": "華北－河北",
+        "陳邡分區": "官話－河北－冀北片",
+        "版本": "2026-04-14",
+        "錄入人": "DaiDzao",
+        "字表來源": "《唐县方言语流音变研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.55316,
+          38.43654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5A4B6",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "阜平",
@@ -2477,30 +2501,6 @@
         "coordinates": [
           86.079129,
           44.309705
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#F5A4B6",
-        "marker-size": "small",
-        "marker-symbol": "b",
-        "title": "唐縣",
-        "語言": "唐縣話",
-        "地點": "河北保定唐縣",
-        "地圖集二分區": "冀魯官話－保唐片－定霸小片",
-        "音典分區": "華北－河北",
-        "陳邡分區": "官話－河北－冀北片",
-        "版本": "2026-04-14",
-        "錄入人": "DaiDzao",
-        "字表來源": "《唐县方言语流音变研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          114.55316,
-          38.43654
         ]
       }
     },
@@ -21350,6 +21350,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "雙流白家",
+        "語言": "雙流白家話",
+        "地點": "四川成都雙流西航港白家",
+        "地圖集二分區": "西南官話－西蜀片－岷赤小片",
+        "音典分區": "中上江－荆益－川黔",
+        "陳邡分區": "官話－長江－西南大片－川南片",
+        "版本": "2026-04-19",
+        "錄入人": "DaiDzao",
+        "字表來源": "《成都南郊双流白家话音系》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.00637,
+          30.54559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "簡陽",
@@ -24951,6 +24975,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "江夏安山",
+        "語言": "江夏安山話",
+        "地點": "湖北武漢江夏安山",
+        "地圖集二分區": "西南官話－湖廣片－鄂中小片",
+        "音典分區": "中上江－荆益－黃孝",
+        "陳邡分區": "官話－長江－西南大片－江漢片",
+        "版本": "2026-04-18",
+        "錄入人": "DaiDzao",
+        "字表來源": "《江夏安山方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.29162,
+          30.1493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "黃陂",
@@ -26524,6 +26572,30 @@
         "coordinates": [
           116.125029,
           29.787463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "瑞昌夏畈",
+        "語言": "瑞昌夏畈話",
+        "地點": "江西九江瑞昌夏畈",
+        "地圖集二分區": "江淮官話－黃孝片",
+        "音典分區": "中上江－潯皖－梅九",
+        "陳邡分區": "官話－長江－九江大片－九江片",
+        "版本": "2026-04-19",
+        "錄入人": "DaiDzao",
+        "字表來源": "《_江西瑞昌（夏畈）方言语音研究 》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.54589,
+          29.76465
         ]
       }
     },
