@@ -574,7 +574,9 @@ class 表:
 						if 自.無調() or (調 and not 調.startswith("0") and 調 not in 自.不計入調):
 							自.音節典[音乙].add(字)
 							if 字 not in "□哪嗯阿啊干轉籠鑽當噴撞丈處彈角哄種卷便磨還空划奶斷覺降單卡恶抹强折别欸累樂縫没合更泡傳會大上塞相核正射間這那中參参落數橫重背調著着下長和解差行" and not 異讀:
-								if not 註 or (註.lstrip("(")[:1] not in "文白新老"):
+								if 註 and 註[0] in "0123456789⁰¹²³⁴⁵⁶⁷⁸⁹(":
+									pass
+								elif not 註 or 註[0] not in "文白新老":
 									自.字音典[字].add(音乙)
 							自.聲韻典[聲韻].add(字)
 				if 註:
