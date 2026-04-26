@@ -6,6 +6,24 @@ import re
 from pypinyin.contrib.tone_convert import to_tone3
 
 class 表(_表):
+
+	def 臺灣客語音標(自, s):
+		s = s.replace("又讀", "特")
+		c = s[0]
+		if c in "文白特":
+			s = s[1:]
+		else:
+			c = ""
+		s = s.replace("er","ɤ").replace("ii", "ɨ").replace("ee", "ɛ").replace("oo", "ɔ")
+		s = s.replace("ng", "ŋ").replace("t", "tʰ").replace("zh", "tʃ").replace("ch", "tʃʰ").replace("sh", "ʃ").replace("p", "pʰ").replace("k", "kʰ").replace("z", "ts").replace("c", "tsʰ").replace("j", "tɕ").replace("q", "tɕʰ").replace("x", "ɕ").replace("rh", "ʒ").replace("r", "j").replace("b", "p").replace("d", "t").replace("g", "k")
+		if c == "文":
+			s+="="
+		elif c == "白":
+			s += "-"
+		elif c == "特":
+			s += "+"
+		return s.strip()
+
 	def 析(自, 列):
 		名 = 自.簡稱
 		字 = ""
@@ -312,6 +330,8 @@ class 表(_表):
 			elif 名 in ("藤縣",):
 				音 = 音.replace(".ŋ", "ŋ̍")
 				if 音.startswith("ø"): 音 = 音[1:]
+			elif 名 in ("臺灣四縣腔", "臺灣海陸腔", "臺灣大埔腔", "雲林詔安話"):
+				音 = 自.臺灣客語音標(音)
 		elif 自.文件名.startswith("榕江侗"):
 			列[0] = 列[0].strip().replace(" /", "/").replace(" [", "[")
 			if not 列[0]: return
