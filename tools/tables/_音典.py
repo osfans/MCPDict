@@ -332,6 +332,7 @@ class 表(_表):
 				if 音.startswith("ø"): 音 = 音[1:]
 			elif 名 in ("臺灣四縣腔", "臺灣海陸腔", "臺灣大埔腔", "雲林詔安話"):
 				音 = 自.臺灣客語音標(音)
+				if 字 == "󿕅": 字 = "𦢊"
 		elif 自.文件名.startswith("榕江侗"):
 			列[0] = 列[0].strip().replace(" /", "/").replace(" [", "[")
 			if not 列[0]: return
