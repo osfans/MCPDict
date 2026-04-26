@@ -43,7 +43,9 @@ jobs:
         popd
     
     - name: Git Status
-      run: git status -s
+      run: |
+        git config --global core.quotepath false
+        git status -s
 
     - name: Calculate similarity
       run: |
