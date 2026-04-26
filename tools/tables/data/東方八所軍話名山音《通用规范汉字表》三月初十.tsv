@@ -1,35 +1,40 @@
-	字	音	調	注	調
-	一	ziʔ	7		調類	陰平	陽平	上	去	入
-	乙	ziʔ	7		調值	44	42	51	14	3
-	二	ɤ	5		數表	1	2	3	5	7
-	十	siʔ	7		聲母：p	pʰ	m	f	v
-	丁	teŋ	1		t	tʰ	n	l
-	廠	tsʰaŋ	3		ts	tsʰ	s	z
-	七	tsʰiʔ	7		k	kʰ	ŋ	h
-	蔔	pɔʔ	7		Ø(不標出)
-	八	paʔ	7		韻母：ɿ	i	u	y
-	人	ŋa	1	人家，第三人稱		a	ia	ua
-	人	zen	2		ɔ
-	入	zuʔ	7		iu
-	兒	ɤ	2		iɛ	yɛ	yi
-	兒	əi	2	口語常用作兒子		ɤ	uə
-	匕	pi	3		ai	uai
-	幾	ki	3		au	iau
-	九	kiu	3		əu
-	刁	tiau	1		əi	uəi
-	了	liau	3		en	yin
-	刀	tau	1		an
-	力	liʔ	7		ən	iən	uən
-	乃	lai	3		eŋ	uŋ
-	又	zəu	5		aŋ	iaŋ	uaŋ
-	三	san	1		əŋ	iuŋ
-	幹	kan	5		ɿʔ	iʔ	uʔ	yʔ
-	於	zy	2		aʔ	iaʔ	uaʔ
-	於	vu	1		ɔʔ	iɔʔ
-	虧	kʰuəi	1		uəʔ
-	工	kuŋ	1		ɤʔ
-	土	tʰu	3		iɛʔ	yɛʔ
-	士	si	5		əiʔ
+	#聲調
+	陰平	陽平	上	去	入
+	44	42	51	14	3
+	1	2	3	5	7
+
+	字	音	調	注
+	一	ziʔ	7
+	乙	ziʔ	7	
+	二	ɤ	5
+	十	siʔ	7
+	丁	teŋ	1
+	廠	tsʰaŋ	3
+	七	tsʰiʔ	7
+	蔔	pɔʔ	7
+	八	paʔ	7
+	人	ŋa	1	人家，第三人稱
+	人	zen	2
+	入	zuʔ	7
+	兒	ɤ	2
+	兒	əi	2	口語常用作兒子
+	匕	pi	3
+	幾	ki	3
+	九	kiu	3
+	刁	tiau	1
+	了	liau	3
+	刀	tau	1
+	力	liʔ	7
+	乃	lai	3
+	又	zəu	5
+	三	san	1
+	幹	kan	5
+	於	zy	2
+	於	vu	1
+	虧	kʰuəi	1
+	工	kuŋ	1
+	土	tʰu	3
+	士	si	5
 	才	tsʰəi	2
 	下	hia	5
 	寸	tsʰeŋ	5
