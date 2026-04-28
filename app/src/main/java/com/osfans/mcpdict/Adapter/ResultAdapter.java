@@ -301,7 +301,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             String ipa = cursor.getString(COL_IPA);
             item.setOnMenuItemClickListener(i -> {
                 String zs = cursor.getString(COL_ZS);
-                if (!TextUtils.isEmpty(zs)) zs = DisplayHelper.formatJS(hz, zs);
+                if (!TextUtils.isEmpty(zs)) zs = String.format("{%s}", DisplayHelper.formatJS(hz, zs));
                 String reading = String.format("[%s] %s %s%s", lang, hz, DisplayHelper.getIPA(lang, ipa), zs);
                 return App.copyText(reading);
             });
@@ -317,7 +317,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                     if (!hz1.contentEquals(hz) || !lang1.contentEquals(lang)) continue;
                     String ipa1 = cursor.getString(COL_IPA);
                     String zs1 = cursor.getString(COL_ZS);
-                    if (!TextUtils.isEmpty(zs1)) zs1 = DisplayHelper.formatJS(hz, zs1);
+                    if (!TextUtils.isEmpty(zs1)) zs1 = String.format("{%s}", DisplayHelper.formatJS(hz, zs1));
                     reading.append(String.format("%s%s\n", DisplayHelper.getIPA(lang1, ipa1), zs1));
                 }
                 cursor.moveToPosition(pos);
