@@ -267,13 +267,7 @@ class 表(_表):
 			if "[" not in 行 and not 行.startswith("#"): 行 = ""
 		elif 名 in ("金壇",):
 			if 行.strip().endswith("韻"): 行 = ""
-		elif 名 in ("成都", "響水"):
-			行 = 行.strip()
-			if 行.startswith("["):
-				行 = 自.聲 + 行
-			elif "[" in 行:
-				自.聲 = 行.split("[")[0]
-		elif 名 in ("百色隆或",):
+		elif 名 in ("成都", "響水", "百色隆或", "吳江蘆墟"):
 			行 = 行.strip()
 			if 行.startswith("["):
 				行 = 自.聲 + 行
@@ -611,6 +605,7 @@ class 表(_表):
 								if k not in 音: 音.append(k)
 						音 = "/".join(音)
 					字組 = 自.normG(字組)
+					字組 = re.sub("!(｛.*?｝)", "\\1□\\1", 字組)
 					字組 = re.findall(rf"(.)([\d⁰¹²³⁴⁵⁶⁷⁸⁹₀-₉]?)([<\+\-/=\\\*\?$&r@]?)(\+?)([\d⁰¹²³⁴⁵⁶⁷⁸⁹₀-₉]?) *(｛.*?｝)?", 字組)
 					for 字, 序號, 異讀, 又讀, 序號2,註 in 字組:
 						if 字 == " ": continue
