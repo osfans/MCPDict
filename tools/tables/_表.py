@@ -148,7 +148,7 @@ def run2text(run):
 	text = run.text
 	if tag:
 		text = "".join([i + tag for i in text])
-	if run.font.subscript or (run.font.size and run.font.size < Pt(9)):
+	if run.font.subscript or (not run.font.subscript and run.style.font.subscript) or (run.font.size and run.font.size < Pt(9)) or (not run.font.size and run.style.font.size and run.style.font.size < Pt(9)):
 		if text.startswith("{") and text.endswith("}"):
 			pass
 		# elif text.startswith("[") and text.endswith("]"):
@@ -187,10 +187,18 @@ def docx2tsv(fname):
 					for p in cell.paragraphs:
 						行 += "".join(map(run2text, p.iter_inner_content())).replace("\t", "").replace("\n", "")
 					行 += "\t"
-				lines.append(行.replace("}~", "~}").replace("~{", "{~").replace("}{", "").replace("[}", "}[").replace("{h}", "h").rstrip())
+				行 = 行.replace("[}", "}[").replace("{h}", "h")
+				行 = re.sub(r"\}([,.，~。])", "\\1}", 行)
+				行 = re.sub(r"([~])\{", "{\\1", 行)
+				行 = 行.replace("}{", "").rstrip()
+				lines.append(行)
 		elif isinstance(each, docx.oxml.text.paragraph.CT_P):
 			element = Paragraph(each, Doc)
-			行 = "".join(map(run2text, element.iter_inner_content())).replace("}~", "~}").replace("~{", "{~").replace("}{", "").replace("[}", "}[").replace("{h}", "h")
+			行 = "".join(map(run2text, element.iter_inner_content()))
+			行 = 行.replace("[}", "}[").replace("{h}", "h")
+			行 = re.sub(r"\}([,.，~。])", "\\1}", 行)
+			行 = re.sub(r"([~])\{", "{\\1", 行)
+			行 = 行.replace("}{", "")
 			lines.append(行)
 	行 = "\n".join(lines).replace("}\n{", "").replace("\n}", "}\n")
 	t = open(tsv, "w", encoding="U8", newline="\n")
