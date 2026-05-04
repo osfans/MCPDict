@@ -1,24 +1,254 @@
-# MCPDict/漢字音典
+# 漢字音典介紹
 
-## 最新版
-- 下載：[GitHub Releases](https://github.com/osfans/MCPDict/releases/tag/latest)
-- 字體：可安裝[遍黑體](https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project)、[文津宋體](https://github.com/takushun-wu/WenJinMincho)等[字體包](https://github.com/osfans/MCPDict/releases/tag/fonts)顯示所有漢字
-- 漢字：已收錄□（合音字、本字不明、有音無字）、〇（“星”或“零”）、[統一碼17.0](https://www.unicode.org/reports/tr38/tr38-39.html)的全部漢字（不含部首及兼容區）共101998字
-- 字表：已收錄[上千種語言（方言）](https://mcpdict.sourceforge.io/info.html)的漢字讀音及釋義，可去[QQ羣](mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3D-hNzAQCgZQL-uIlhFrxWJ56umCexsmBi)提供同音字表請求收錄
-- 勘誤：參考[字表解析日誌](https://mcpdict.sourceforge.io/warnings.txt)，可去[QQ羣](mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3D-hNzAQCgZQL-uIlhFrxWJ56umCexsmBi)、[GitHub Issues](https://github.com/osfans/MCPDict/issues)提出意見與建議
-- 編譯：使用[GitHub Actions](https://github.com/osfans/MCPDict/actions)自動編譯生成
+## 項目簡介
 
-## 主要功能
-- 通過漢字或讀音查詢各方言中的漢字讀音
-- 選擇辭典、註釋，通過釋義反查漢字
-- 根據字音和字形猜漢字
-- 根據字音和相對方位猜方言、地區、分區
+[漢字音典](https://github.com/osfans/MCPDict)（MCPDict）是一個面向語言、方言與漢字音研究愛好者的資料整理與查詢專案，收錄各類語言（方言）的漢字讀音及相關釋義，並提供便捷的檢索工具。
 
-## 相關項目
-- [唯二](https://github.com/vearvip)開發的[網頁版](https://mcpdict.vear.vip/)（[前端](https://github.com/vearvip/mcpdict-frontend)、[後端](https://github.com/vearvip/mcpdict-backend)）：提供了字音查詢、長文注音、語言地圖、設置等功能。
-- [綾香](https://github.com/ayaka14732)開發的[音典網頁版](https://nk2028.shn.hk/yindian/)（[前端](https://github.com/nk2028/yindian)、[後端](https://github.com/nk2028/yindian-server)）：提供了字音查詢等功能。
-- [不覊](https://github.com/jengzang)開發的[方音圖鑑](https://dialects.yzup.top)（[前端](https://github.com/jengzang/dialects-js-frontend)、[後端](https://github.com/jengzang/dialects-backend)）：提供了查中古、查音位、查調、查字、分區繪圖、自定義繪圖等功能。
+目前，漢字音典[已收錄](https://mcpdict.sourceforge.io/info.html)近三千個語言／方言點，內容涵蓋**歷史音、漢語方言、民語漢字音、域外方音、戲曲音**等多種類型。現階段的主要工作，是持續推進全國各地方言及語言的**同音字表的電子化**；未來若條件成熟，亦將逐步嘗試詞彙資料的整理與建設。
 
-## 參考項目
-- [漢字古今中外讀音查詢](https://github.com/MaigoAkisame/MCPDict)：可查多種語言中的漢字讀音（包括中古漢語、普通話、粵語、吳語（上海話）、閩南語、朝鮮語、越南語、日語）
-- [OpenCC](https://github.com/BYVoid/OpenCC)：提供了漢字繁簡轉換功能
+漢字音典為持續更新中的公開專案，亦歡迎對語言、方言與字表整理有興趣的朋友共同參與，或[提出寶貴建議](https://github.com/osfans/MCPDict/issues)。
+
+
+
+## 項目沿革
+
+漢字音典源自 @王赟 Maigo 開發的「[漢字古今中外讀音查詢（MCPDict）](https://github.com/MaigoAkisame/MCPDict)」程序。原項目始於 V1.0（2014.04.02），至 V3.0（2016.05.03） 後停止更新。
+
+其後，@osfans 發起[漢字音典](https://github.com/osfans/MCPDict)項目，並在 2022.05.16 停更後再次恢復更新。此後，亦有眾多方言愛好者持續參與，為本專案的建設與發展貢獻力量。
+
+
+
+## 三、收錄範圍
+
+漢字音典目前的字表收錄範圍如下：
+
+收錄內容包括：歷史音、漢語方言、民語漢字音、域外方音、戲曲音等。
+
+收錄來源包括：公開發表的學術論文、書籍資料、愛好者田野調查成果，以及母語者自行製作的字表。
+
+漢字音典所收字表為公開整理項目；如涉及版權疑慮，請及時聯絡項目組。若個人提交之字表有正式發表規劃，原則上不予收錄。
+
+漢字音典僅收錄真實存在的語言及韻書；對於構擬的原始語或人造語言，原則上不予收錄。
+
+
+
+## 四、主要功能
+
+漢字音典的具體功能可參見程式內「❔幫助」。
+
+如需介紹相關網頁版或延伸工具，可另列如下：
+
+### 相關項目
+
+[唯二](https://github.com/vearvip)開發的[網頁版](https://mcpdict.vear.vip/)（[前端](https://github.com/vearvip/mcpdict-frontend)、[後端](https://github.com/vearvip/mcpdict-backend)）：提供字音查詢、長文注音、語言地圖、設定等功能。
+
+[绫香](https://github.com/ayaka14732)開發的[音典網頁版](https://nk2028.shn.hk/yindian/)（[前端](https://github.com/nk2028/yindian)、[後端](https://github.com/nk2028/yindian-server)）：提供字音查詢等功能。
+
+[不羈](https://github.com/jengzang)開發的[方音圖鑑](https://dialects.yzup.top)（[前端](https://github.com/jengzang/dialects-js-frontend)、[後端](https://github.com/jengzang/dialects-backend)）：提供中古音查詢、音位查詢、聲調查詢、單字查詢、分區繪圖、自訂繪圖等功能。
+
+### 參考項目：
+
+[漢字古今中外讀音查詢](https://github.com/MaigoAkisame/MCPDict)：可查多種語言中的汉字讀音（包括中古漢語、普通話、粤語、吴語（上海話）、閩南語、朝鲜語、越南語、日語)
+
+[OpenCC](https://github.com/BYVoid/OpenCC)：提供了漢字繁簡轉換功能
+
+
+
+## 五、主要工作內容
+
+### 1. 同音字表電子化
+
+同音字表電子化，是漢字音典目前最主要的工作內容，也是專案持續擴充資料庫的核心基礎。
+
+### 2. 「音典」分區建設
+
+漢字音典建立了自身的分區方案，以利於檢索、整理與歸類。詳見附錄一。
+
+
+
+## 六、團隊與分工
+
+## 核心分工
+
+漢字讀音数据庫及 Android 版軟體開發：@osfans
+
+檔案維護：@Resound 等
+
+分區維護：見附錄三
+
+字表製作：由眾人共同參與；目前貢獻較多者為 @DaiDzao、@Resound
+
+#### 
+
+## 七、語言檔案說明
+
+漢字音典的語言檔案由 @Resound 建立，負責專案中的語言資料管理。其主要內容包括：語言名稱及簡稱、提交文件名稱、語言行政區劃及地理坐標、聲調（調類、調名、調值）、參考文獻、錄入人、維護人、説明、多種分區信息等。
+
+
+
+## 八、漢字與檢索說明
+
+漢字音典預設使用**繁體字**顯示，但搜尋框可自動識別**簡體與繁體**輸入。
+
+不同字表在繁體、簡體及本字使用上的差異，仍有待進一步整理與優化。
+
+
+
+## 九、免責聲明
+
+漢字音典大部分字表由 OCR 輔助並經人工校對整理而成，雖已盡力核校，仍難以完全避免錯誤。使用音典資料時，請務必自行查閱原始字表或資料出處，不宜直接引用漢字音典作為唯一依據。漢字音典僅為便於快速查閱之工具；凡因未經核實而產生之誤解或錯誤，均與本項目無關。
+
+漢字音典中大部分字表由愛好者獨立製作；如某方言點的漢字讀音存在問題，歡迎向漢字音典項目組或相應字表製作者反映。
+
+
+
+## 附錄：分區方案
+
+漢字音典提供分區方案，以便搜尋、整理與歸類。目前主要提供三種分區方案，分別為：**地圖集二分區、音典分區、陳邡分區**。
+
+其中：
+
+**地圖集二分區**為預設分區，基本依據《中國語言地圖集 第2版 汉語方言卷（2012）》的相關文字說明劃分；對於地圖集中未明確提及的方言，則按相近標準歸類。
+
+**音典分區**為漢字音典自行建立之分區方案。
+
+**陳邡分區**為私人分區方案，本項目原則上不作說明。
+
+未來亦計畫推出**自主分區**功能，以便使用者依需求進行整理與檢索。
+
+需要說明的是，漢字音典分區中的方言部分，原則上反映方言之系屬關係；但由於譜系關係與實際分區在細節上難以完全一致，加之出於管理成本與搜尋便利的考量，部分分區並未完全遵循譜系分類原則。又因各方言區之劃分者不同，分區顆粒度亦不盡一致，尚請理解。
+
+另需特別說明：漢字音典分區僅為對方言重新劃分的一種實踐方式，與《中國語言地圖集》**並無隸屬或權威對應關係**。除相應分區劃分者外，任何人**均不得**代表漢字音典或分區制定者對該分區作權威性解釋。
+
+### 音典**分區**總體分類概覽
+
+| 編號 | 分區 |
+| --- | --- |
+| A | 歷史音 |
+| AX | 現代標準漢語 |
+| B | 華北 |
+| C | 西北 |
+| D | 藍青 |
+| E | 中上江 |
+| F | 下江 |
+| G | 兩浙 |
+| H | 浙南 |
+| I | 湘贛 |
+| J | 嶺東/廣中 |
+| K | 嶺南/嶺西 |
+| L | 閩 |
+| M | 湘南 |
+| N | 道州 |
+| O | 鄉話 |
+| P | 白語 |
+| Q | 蔡家話 |
+| X | 民語漢字音 |
+| Y | 域外方音 |
+| Z | 戲劇 |
+
+
+具體分區介紹目前主要涉及**二級分區**；三級分區僅供參考。 
+
+### 音典分區維護與參考資料
+
+#### B華北
+
+維護：@茉莉
+
+參考資料：[MCPDict-華北分區20250921](https://docs.qq.com/sheet/DTVFPdk9MeGNiT3Fo?tab=000001)
+
+
+
+### C西北
+
+C1關隴：參照《中國語言地圖集 第2版 汉語方言卷（2012）》B1-6 官話之六 中原官話B。
+
+C2甘肅：參照《中國語言地圖集 第2版 汉語方言卷（2012）》B1-8 官話之八 蘭銀官話。
+
+C3-C9：@開水師
+
+參考資料：[晋語分區圖——Made by Lieo-Hae-Yan](https://docs.qq.com/pdf/DTUxQWkdtdm9EdHpO)
+
+
+
+### D藍青
+
+維護：@Resound等
+
+説明：該部分爭議最多，并不符合譜系分類，但單獨分開占據極多序號，且非常不便於搜索，遂歸爲一類。
+
+
+
+### E中上江
+
+維護：@楚天方音部 @Kyuuri哒
+
+參考資料：[https://www.zhihu.com/question/1926941809407428195](https://www.zhihu.com/question/1926941809407428195)
+
+
+
+### F下江
+
+維護：@Resound
+
+F1-F4：共識
+
+F5通泰：參考《通泰方言音韻研究》（顧黔，2001）。
+
+
+
+### G兩浙
+
+維護：@正心修身
+
+參考資料：[音典分區兩浙（部份）分區標準 - 知乎](https://zhuanlan.zhihu.com/p/1978770548185117337)
+
+
+
+### H浙南
+
+維護：@無歸䖳
+
+ 
+
+### I湘贛
+
+維護：@冰糖橙、@Pekkhak
+
+參考資料：[音典分区湖南地区分类标准笔记 - 知乎](https://zhuanlan.zhihu.com/p/1908465380697044799)
+
+
+
+### J嶺東/廣中
+
+維護：@Resound、@ Kwíngiem Chan等
+
+參考資料：[闽西语扩散简图（稿） - 知乎](https://zhuanlan.zhihu.com/p/721719208)[贛粵本地話家族分佈圖 - 知乎](https://zhuanlan.zhihu.com/p/30911789139)
+
+
+
+### K嶺南/嶺西
+
+維護：@ Kwíngiem Chan
+
+參考資料：[泛粵語分區方案與語言特徵(2024)(先行導播)-知乎](https://zhuanlan.zhihu.com/p/685087866?share_code=18CUuai2IafMp&utm_psn=2029126889403424905)  
+
+
+
+### L閩
+
+L1-L6維護：@syami
+
+參考資料：[https://www.zhihu.com/question/529981276/answer/2856222824](https://www.zhihu.com/question/529981276/answer/2856222824)
+
+L7、L7Z閩西 維護：@tom zzy 
+
+參考資料：[闽西语谱系树 - 知乎](https://zhuanlan.zhihu.com/p/671708174)[闽西语扩散简图（稿） - 知乎](https://zhuanlan.zhihu.com/p/721719208)
+
+
+
+### M湘南、N道州
+
+維護：@Resound
+
+參考資料：[湘南、桂北、粤北三省土话分布及分类（Ultra） - 知乎](https://zhuanlan.zhihu.com/p/1918051865893005236)
