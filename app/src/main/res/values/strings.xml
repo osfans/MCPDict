@@ -10,7 +10,7 @@
     <string name="favorite">📖生字本</string>
     <string name="similarity">🔗方言相似度</string>
     <string name="guess_hz">🀄猜字</string>
-    <string name="about_message"><![CDATA[%1$s V%2$s<br/>作者：osfans (waxaca&#64;163.com)<br/><a href="https://github.com/osfans/MCPDict/releases/tag/latest">最新安卓版</a> <a href="https://github.com/osfans/MCPDict/releases/tag/fonts">字體包</a><br/><br/>漢字古今中外讀音查詢 V3.0<br/>2016.05.03<br/>作者：Maigo<br/>maigoakisame&#64;gmail.com]]></string>
+    <string name="about_message"><![CDATA[%1$s V%2$s<br/>作者：osfans<br/><a href="https://github.com/osfans/MCPDict/releases/tag/latest">最新版</a> <a href="https://github.com/osfans/MCPDict/releases/tag/fonts">字體包</a> <a href="https://mcpdict.sourceforge.io/warnings.txt">字表解析日誌</a> <a href="https://github.com/osfans/MCPDict/actions">自動編譯</a> <a href="https://github.com/osfans/MCPDict/">GitHub</a>]]></string>
 
     <string name="ok">確定</string>
     <string name="cancel">取消</string>

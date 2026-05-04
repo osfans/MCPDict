@@ -19,7 +19,7 @@ def get_note():
 	說明 = re.sub(r"\*\*(.+?)\*\*", "<b>\\1</b>", 說明)
 	# md table to html
 	說明 = re.sub(r"^\|(.+?)\|(.+?)\|$", "<tr><td>\\1</td><td>\\2</td></tr>", 說明, flags=re.M)
-	說明 = re.sub(r"<tr><td>(.*?)</td><td>(.*?)</td></tr>\n(<tr>.*?</tr>\n)(<tr>.+</tr>)", "<table style=\"border: 1px solid;\">\n<tr><th>\\1</th><th>\\2</th></tr>\n\\4</table>", 說明, flags=re.DOTALL)
+	說明 = re.sub(r"<tr><td>(.*?)</td><td>(.*?)</td></tr>\n(<tr>.*?</tr>\n)(<tr>.+</tr>)", "<table style=\"border: 1px solid;\"><thead><tr><td>\\1</td><td>\\2</td></tr></thead><tbody>\\4</tbody></table>", 說明, flags=re.DOTALL)
 	說明 = re.sub(r"\n{2,}", "<br>\n", 說明).strip()
 	說明 = re.sub(r"(\d>)<br>", "\\1", 說明)
 	#open(os.path.join(WORKSPACE, "說明.html"), "w", encoding="U8").write(說明)
