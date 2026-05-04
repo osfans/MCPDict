@@ -55511,6 +55511,30 @@
         "marker-color": "#F08460",
         "marker-size": "medium",
         "marker-symbol": "l",
+        "title": "永泰",
+        "語言": "永泰永福音",
+        "地點": "福建福州永泰",
+        "地圖集二分區": "閩語－閩東片－侯官小片",
+        "音典分區": "閩－閩東",
+        "陳邡分區": "福建－閩東",
+        "錄入人": "NaruDora",
+        "維護人": "NaruDora",
+        "字表來源": "《永泰县志·方言》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.944183,
+          25.874867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
+        "marker-size": "medium",
+        "marker-symbol": "l",
         "title": "古田",
         "語言": "古田話",
         "地點": "福建寧德古田",
