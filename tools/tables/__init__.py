@@ -125,7 +125,7 @@ def getLangsByArgv(infos, argv):
 			ba2 = re.sub(r"( ?\(\d\d?\))(.[^.]*)$", "\\2", ba)
 			ba3 = ba2.replace(".tsv", ".docx")
 			ba4 = ba2.replace(".tsv", ".xlsx")
-			ba5 = re.sub(r"(\d.+?)(.[^.]*?)$", "\\2", ba)
+			ba5 = re.sub(r"([\d\(（].+?)(.[^.]*?)$", "\\2", ba)
 			bas = [ba, ba2, ba3, ba4, ba5]
 			for i in infos:
 				if fnmatch.filter(bas, infos[i]["文件名"]):
