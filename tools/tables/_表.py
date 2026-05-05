@@ -268,10 +268,11 @@ class 表:
 			name = 自.全路徑(name)
 		if g := glob.glob(name): return g
 		if g := glob.glob(glob.escape(name)): return g
-		if g := glob.glob(re.sub(".([^.]+)$", "([0-9]).\\1", name)): return g
-		if g := glob.glob(re.sub(".([^.]+)$", "([0-9][0-9]).\\1", name)): return g
-		if g := glob.glob(re.sub(".([^.]+)$", " ([0-9]).\\1", name)): return g
-		if g := glob.glob(re.sub(".([^.]+)$", " ([0-9][0-9]).\\1", name)): return g
+		if g := glob.glob(re.sub("(\\.[^.]+)$", "([0-9])\\1", name)): return g
+		if g := glob.glob(re.sub("(\\.[^.]+)$", "([0-9][0-9])\\1", name)): return g
+		if g := glob.glob(re.sub("(\\.[^.]+)$", " ([0-9])\\1", name)): return g
+		if g := glob.glob(re.sub("(\\.[^.]+)$", " ([0-9][0-9])\\1", name)): return g
+		if g := glob.glob(re.sub("(\\.[^.]+)$", "[0-9]*\\1", name)): return g
 		if isValidSrc(name) and 自.文件名:
 			tmp = 自.文件名
 			自.文件名 = getSrcName(自.文件名, 自.頁名)
