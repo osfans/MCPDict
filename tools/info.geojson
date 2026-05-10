@@ -3207,6 +3207,30 @@
         "marker-color": "#926EF8",
         "marker-size": "small",
         "marker-symbol": "c",
+        "title": "涉縣拐里",
+        "語言": "涉縣拐里話",
+        "地點": "河北邯鄲涉縣井店拐里",
+        "地圖集二分區": "晉語－邯新片－磁漳小片",
+        "音典分區": "華北－漳衛",
+        "陳邡分區": "官話－山東－魯西大片－彰德片",
+        "版本": "2026-05-06",
+        "錄入人": "DaiDzao",
+        "字表來源": "《河北涉县拐里话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.854561,
+          36.579758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
+        "marker-size": "small",
+        "marker-symbol": "c",
         "title": "林州桃園",
         "語言": "林州桃園話",
         "地點": "河南安陽林州桃園",
