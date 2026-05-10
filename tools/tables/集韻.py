@@ -7,9 +7,13 @@ class 表(_表):
 	說明 = "來源：<a href=https://github.com/guavajuice/qieyun/blob/main/public/data/zhup_hyun.csv/>切韵查詢</a>"
 	字書 = True
 	文件名 = "集韻.csv"
+	中文序號 = "一二三四五六七八九十"
 	
 	def 析(自, 列):
-		字 = 列[1][0]
-		ids = 列[1][1:]
-		if not ids.startswith("("): ids = ""
-		return 字, f"{列[11]}{列[4]}。{列[12]}", f"{ids}{列[13]}"
+		字 = 列[2][0]
+		卷 = 自.中文序號[int(列[0]) - 1]
+		音 = f"{列[12]}{卷}{列[5]}。{列[13]}".replace("(湩)", "腫").replace("(櫬)", "稕")
+		註 = 列[14]
+		ids = 列[2][1:]
+		if ids.startswith("("): 註 = ids + 註
+		return 字, 音, 註
