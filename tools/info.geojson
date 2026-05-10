@@ -23144,6 +23144,27 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "武勝",
+        "語言": "武勝話",
+        "地點": "四川廣安武勝",
+        "版本": "2026-05-10",
+        "錄入人": "DaiDzao",
+        "字表來源": "《四川武胜方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.295764,
+          30.348772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "岳池",
@@ -23153,7 +23174,6 @@
         "音典分區": "中上江－荆益－川黔",
         "陳邡分區": "官話－長江－西南大片－川中片",
         "版本": "2025-04-12",
-        "錄入人": "DaiDzao",
         "字表來源": "《岳池话语音调查研究》"
       },
       "geometry": {
