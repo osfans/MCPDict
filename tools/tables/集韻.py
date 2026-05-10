@@ -1,24 +1,28 @@
 #!/usr/bin/env python3
 
 from tables._表 import 表 as _表
+import re
 
 class 表(_表):
 	全稱 = "集韻"
 	說明 = "來源：<a href=https://github.com/guavajuice/qieyun/blob/main/public/data/zhup_hyun.csv/>切韵查詢</a>"
 	字書 = True
-	文件名 = "集韻.csv"
-	中文序號 = "一二三四五六七八九十"
-	上註 = ""
+	文件名 = "集韻.md"
+	卷, 韻, 切 = "", "", ""
+
+	def 統(自, 行):
+		行 = _表.統(自, 行)
+		if 行.startswith("### "): 自.反切 = 行.strip("# ")
+		elif 行.startswith("## "): 自.韻 = 行.strip("# ")
+		elif 行.startswith("# "): 自.卷 = 行.strip("# ")
+		elif "`" not in 行: 行 = ""
+		return 行
 	
 	def 析(自, 列):
-		字 = 列[2][0]
-		卷 = 自.中文序號[int(列[0]) - 1]
-		音 = f"{列[12]}{卷}{列[5]}。{列[13]}".replace("(湩)", "腫").replace("(櫬)", "稕")
-		註 = 列[14]
-		if 註:
-			自.上註 = 註
-		else:
-			註 = 自.上註
-		ids = 列[2][1:]
-		if ids.startswith("("): 註 = ids + 註
-		return 字, 音, 註
+		字, 註 = 列[0].split("`")[:2]
+		音 = f"{自.卷[6]}{自.卷[4]}{自.韻[0]}。{自.反切.rstrip("切")}"
+		字 = 字.replace("=", "")
+		l = list()
+		for i, ids in re.findall(r"(.)(\(.*?\))?", 字):
+			l.append((i, 音, ids + 註))
+		return l
