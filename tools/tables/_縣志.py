@@ -430,6 +430,8 @@ class 表(_表):
 				行 = 行.replace("⓪", "[0a]").replace("①", "[1]").replace("②", "[3]").replace("③", "[5]").replace("④", "[7]").replace("⑤", "[9a]")
 			else:
 				行 = 行.replace("⓪", "[0b]").replace("①", "[2]").replace("②", "[4]").replace("③", "[6]").replace("④", "[8]").replace("⑤", "[9b]")
+		elif 名 in ("如皋"):
+			行 = 行.replace("\\n", "")
 		elif 名 in ("南通唐閘","如皋白蒲","南通小海","南通新開","興化戴南","啟東", "廣陵", "新南京"):
 			if 行.startswith("\t"):
 				return
