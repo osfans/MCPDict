@@ -387,6 +387,8 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             item.setIntent(getLinkIntent("https://www.moedict.tw/%s", hz));
             item = menu.findItem(R.id.menu_item_dict_zitools);
             item.setIntent(getLinkIntent("https://zi.tools/zi/%s", hz));
+            item = menu.findItem(R.id.menu_item_dict_ccamc);
+            item.setIntent(getLinkIntent("http://www.ccamc.co/cjkv.php?cjkv=%s", hz));
             item = menu.findItem(R.id.menu_item_dict_unihan);
             item.setIntent(getLinkIntent("https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%s", hz));
             item = menu.findItem(R.id.menu_item_dict_chise);

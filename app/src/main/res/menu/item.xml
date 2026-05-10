@@ -37,6 +37,9 @@
                 <item
                     android:id="@+id/menu_item_dict_zitools"
                     android:title="@string/zitools" />
+                <item
+                    android:id="@+id/menu_item_dict_ccamc"
+                    android:title="@string/ccamc" />
                 <item android:id="@+id/menu_item_dict_kangxi"
                     android:title="@string/kangxi" />
                 <item
