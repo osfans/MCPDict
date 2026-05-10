@@ -19,7 +19,7 @@ WORKSPACE = os.path.join(PATH, "..")
 
 VARIANT_FILE = os.path.join(PATH, SOURCE, "正字.tsv")
 
-辭典 = ["漢字","說文","康熙","匯纂","漢大", "異體字","字形變體","字形描述","部件檢索","兩分","總筆畫數","部首餘筆","五筆畫","五筆86","五筆98","五筆06","倉頡三代","倉頡五代","倉頡六代","山人","分類"]
+辭典 = ["漢字","說文","集韻","康熙","匯纂","漢大","異體字","字形變體","字形描述","部件檢索","兩分","總筆畫數","部首餘筆","五筆畫","五筆86","五筆98","五筆06","倉頡三代","倉頡五代","倉頡六代","山人","分類"]
 
 def hex2chr(uni):
 	"把unicode轉換成漢字"
@@ -150,9 +150,9 @@ def getDicts(dicts):
 		語.加載(dicts)
 		if 語.字書:
 			字書.append(語)
-	fls = ["SW","KX","HZ","HD"]
+	fls = ["SW","JY","KX","HZ","HD"]
 	for _, d in dicts.items():
-		for i, k in enumerate(辭典[1:5]):
+		for i, k in enumerate(辭典[1:6]):
 			if k in d:
 				d["分類"] = (d["分類"] + "\t" + fls[i]) if "分類" in d else fls[i]
 	return 辭典, 字書

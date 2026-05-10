@@ -5,6 +5,7 @@ import static com.osfans.mcpdict.DB.COL_HD;
 import static com.osfans.mcpdict.DB.COL_HZ;
 import static com.osfans.mcpdict.DB.COL_KX;
 import static com.osfans.mcpdict.DB.COL_SW;
+import static com.osfans.mcpdict.DB.COL_JY;
 
 import android.text.TextUtils;
 
@@ -53,6 +54,7 @@ public abstract class DisplayHelper {
         if (TextUtils.isEmpty(s)) return "";
         if (i != COL_HZ) s = formatJS(hz, s);
         if (i == COL_SW) s = s.replace("{", "<small>").replace("}", "</small>");
+        else if (i == COL_JY) s = s.replaceAll("(?m)^(.+。.+)\n", "〔$1切〕");
         else if (i == COL_KX) s = s.replaceAll(PAGE_FORMAT, "<a href=https://www.kangxizidian.com/v1/index.php?page=$1>第$1頁</a>第$2字");
         else if (i == COL_GYHZ) s = Pref.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceFirst(PAGE_FORMAT, "第$1頁第$2字");
         else if (i == COL_HD) s = Pref.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceAll(PAGE_FORMAT + "\n", "<a href=https://homeinmists.ilotus.org/hd/png/$1.png>第$1頁</a>第$2字\n").replace("lv", "lü").replace("nv", "nü");
