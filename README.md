@@ -48,15 +48,15 @@
 
 ## 軟件開發與發佈
 
-漢字音典目前僅提供 **Android 版本**。
+漢字音典目前僅提供**Android版本**
 
-目前唯一官方發佈平臺為 [GitHub](https://github.com/osfans/MCPDict)。
+目前唯一發佈平臺為[GitHub](https://github.com/osfans/MCPDict)
 
-軟件採用 [GitHub Actions](https://github.com/osfans/MCPDict/actions) 自動編譯生成，並**不定時更新**。
+軟件採用[GitHub Actions](https://github.com/osfans/MCPDict/actions)自動編譯生成，並**不定時更新**
 
-最新版可於 [GitHub Releases](https://github.com/osfans/MCPDict/releases/tag/latest) 下載。
+最新版可於[GitHub Releases](https://github.com/osfans/MCPDict/releases/tag/latest)下載
 
-如需介紹相關網頁版或延伸工具，可另列如下：
+相關網頁版或延伸工具如下所示：
 
 ### 相關項目
 
@@ -68,7 +68,7 @@
 
 ### 參考項目
 
-[漢字古今中外讀音查詢](https://github.com/MaigoAkisame/MCPDict)：可查多種語言中的汉字讀音（包括中古漢語、普通話、粤語、吴語（上海話）、閩南語、朝鲜語、越南語、日語)
+[漢字古今中外讀音查詢](https://github.com/MaigoAkisame/MCPDict)：可查多種語言中的汉字讀音，包括中古漢語、普通話、粤語、吴語（上海話）、閩南語、朝鲜語、越南語、日語
 
 [OpenCC](https://github.com/BYVoid/OpenCC)：提供了漢字繁簡轉換功能
 
@@ -124,7 +124,7 @@
 
 ## 十、免責聲明
 
-漢字音典大部分字表由 OCR 輔助並經人工校對整理而成，雖已盡力核校，仍難以完全避免錯誤。使用音典資料時，請務必自行查閱原始字表或資料出處，不宜直接引用漢字音典作為唯一依據。漢字音典僅為便於快速查閱之工具；凡因未經核實而產生之誤解或錯誤，均與本項目無關。
+漢字音典大部分字表由 OCR 輔助並經人工校對整理而成，雖已盡力核校，仍難以完全避免錯誤。使用音典資料時，請務必自行查閱原始字表或資料出處，不宜直接引用漢字音典作為唯一依據。漢字音典僅為便於快速查閱之工具；凡因未經核實而產生的誤解或錯誤，均與本項目無關。
 
 漢字音典中大部分字表由愛好者獨立製作；如某方言點的漢字讀音存在問題，歡迎向漢字音典項目組或相應字表製作者反映。
 
@@ -211,7 +211,7 @@ C3-C9：@開水師
 
 維護：@楚天方音部 @Kyuuri哒
 
-參考資料：[https://www.zhihu.com/question/1926941809407428195](https://www.zhihu.com/question/1926941809407428195)
+參考資料：[知乎回答](https://www.zhihu.com/question/1926941809407428195)
 
 
 
@@ -267,7 +267,7 @@ F5通泰：參考《通泰方言音韻研究》（顧黔，2001）。
 
 L1-L6維護：@syami
 
-參考資料：[https://www.zhihu.com/question/529981276/answer/2856222824](https://www.zhihu.com/question/529981276/answer/2856222824)
+參考資料：[知乎回答](https://www.zhihu.com/question/529981276/answer/2856222824)
 
 L7、L7Z閩西 維護：@tom zzy 
 
