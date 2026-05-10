@@ -1670,6 +1670,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5A4B6",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "平谷",
+        "語言": "平谷話",
+        "地點": "北京平谷",
+        "地圖集二分區": "冀魯官話－保唐片－薊遵小片",
+        "音典分區": "華北－河北",
+        "陳邡分區": "官話－河北－冀北片",
+        "錄入人": "John Kwok",
+        "字表來源": "《平谷方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.127378,
+          40.146949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5A4B6",
         "marker-size": "large",
         "marker-symbol": "b",
         "title": "天津",
