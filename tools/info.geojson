@@ -27364,10 +27364,10 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#52CCAD",
-        "marker-size": "medium",
+        "marker-size": "small",
         "marker-symbol": "f",
-        "title": "宿松",
-        "語言": "宿松話",
+        "title": "宿松二郎",
+        "語言": "宿松二郎話",
         "地點": "安徽安慶宿松二郎",
         "地圖集二分區": "贛語－懷岳片",
         "音典分區": "中上江－潯皖－宿彭",
@@ -30967,6 +30967,30 @@
         "coordinates": [
           120.312246,
           32.853621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "興化舍陳",
+        "語言": "興化舍陳話",
+        "地點": "江蘇泰州興化合陳舍陳",
+        "地圖集二分區": "江淮官話－泰如片",
+        "音典分區": "下江－通泰－北泰",
+        "陳邡分區": "官話－北下江－通泰大片－通泰片",
+        "錄入人": "Nebelflecks",
+        "字表來源": "母語者製表",
+        "參考文獻": "《兴化方言地理语言学研究》《兴化方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.22964,
+          33.012708
         ]
       }
     },
