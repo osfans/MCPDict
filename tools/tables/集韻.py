@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from tables._表 import 表 as _表
+from tables.__init__ import 爲字
 import re
 
 class 表(_表):
@@ -24,5 +25,6 @@ class 表(_表):
 		字 = 字.replace("=", "").replace("[", "").replace("]", "")
 		l = list()
 		for i, ids in re.findall(r"(.)(\(.*?\))?", 字):
+			if not 爲字(i): i = "□"
 			l.append((i, 音, ids + 註))
 		return l
