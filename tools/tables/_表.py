@@ -167,7 +167,7 @@ def isRaw(fname):
 def isValidSrc(fname):
 	return isDocx(fname) or isXlsx(fname) or isRaw(fname)
 
-def docx2tsv(fname):
+def docx2tsv(fname, reduceLF=False):
 	tsv = getSrcName(fname)
 	if not os.path.exists(fname): return
 	if os.path.exists(tsv):
@@ -201,6 +201,8 @@ def docx2tsv(fname):
 			行 = 行.replace("}{", "")
 			lines.append(行)
 	行 = "\n".join(lines).replace("}\n{", "").replace("\n}", "}\n")
+	if reduceLF:
+		行 = re.sub(r"\n([\u4e00-\u9fff\{])", "\\1", 行, flags=re.M)
 	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.write(行)
 	t.close()
@@ -303,7 +305,7 @@ class 表:
 			xlsx2tsv(sname, 自.頁名)
 			sname = getSrcName(sname, 自.頁名)
 		elif isDocx(sname):
-			docx2tsv(sname)
+			docx2tsv(sname, 自.__class__ is tables._縣志.表)
 			sname = getSrcName(sname)
 		else:
 			mv2src(sname)
