@@ -42244,6 +42244,27 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "遠口酸湯",
+        "語言": "遠口酸湯話",
+        "地點": "貴州黔東南天柱遠口",
+        "版本": "2026-05-11",
+        "錄入人": "DaiDzao",
+        "字表來源": "《酸湯話內部差異研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.416568,
+          26.834671
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "鳳凰",
