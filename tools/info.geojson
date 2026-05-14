@@ -22041,6 +22041,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "羅江",
+        "語言": "羅江話",
+        "地點": "四川德江羅江",
+        "地圖集二分區": "西南官話－川黔片－成渝小片",
+        "音典分區": "中上江－荆益－川黔",
+        "陳邡分區": "官話－長江－西南大片－川中片",
+        "錄入人": "2019212",
+        "字表來源": "《四川德阳方言语音演化与接触研究》《罗江县志》",
+        "參考文獻": "《四川方言音系》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.516774,
+          31.328327
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
         "marker-size": "large",
         "marker-symbol": "b",
         "title": "綿陽",
@@ -23121,7 +23145,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#E54E5D",
-        "marker-size": "small",
+        "marker-size": "medium",
         "marker-symbol": "b",
         "title": "廣安",
         "語言": "廣安話",
@@ -23145,10 +23169,13 @@
       "properties": {
         "marker-color": "#E54E5D",
         "marker-size": "small",
-        "marker-symbol": "",
+        "marker-symbol": "b",
         "title": "武勝",
         "語言": "武勝話",
         "地點": "四川廣安武勝",
+        "地圖集二分區": "西南官話－川黔片－成渝小片",
+        "音典分區": "中上江－荆益－川黔",
+        "陳邡分區": "官話－長江－西南大片－川中片",
         "版本": "2026-05-10",
         "錄入人": "DaiDzao",
         "字表來源": "《四川武胜方言语音研究》"
@@ -53681,6 +53708,30 @@
         "coordinates": [
           119.867687,
           30.085136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
+        "marker-size": "small",
+        "marker-symbol": "l",
+        "title": "宜興百合",
+        "語言": "宜興新街百合平陽話",
+        "地點": "江蘇無錫宜興新街百合",
+        "地圖集二分區": "閩語－閩南片－泉漳小片",
+        "音典分區": "閩－閩南",
+        "陳邡分區": "福建－閩南",
+        "方言島": true,
+        "錄入人": "NaruDora",
+        "字表來源": "《江苏宜兴闽南话方言岛的语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.746142,
+          31.352803
         ]
       }
     },

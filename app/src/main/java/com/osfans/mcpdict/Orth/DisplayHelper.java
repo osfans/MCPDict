@@ -54,7 +54,7 @@ public abstract class DisplayHelper {
         if (TextUtils.isEmpty(s)) return "";
         if (i != COL_HZ) s = formatJS(hz, s);
         if (i == COL_SW) s = Pref.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replace("{", "<small>").replace("}", "</small>");
-        else if (i == COL_JY) s = Pref.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + "\n" + (s.replaceAll("(?m)^(.)(.)(.)。(.+)\n", "〔$1<small>卷$2</small>$3<small>韻</small>$4<small>切</small>〕"));
+        else if (i == COL_JY) s = Pref.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + "\n" + (s.replaceAll("(?m)^(.)(.)(.)。(.+)\n", "〔$1<small>卷$2</small>$3<small>韻</small>$4<small>切</small>〕").replaceAll("\\((.*?)\\)", "<del>$1</del>").replaceAll("\\[(.*?)\\]", "<u>$1</u>").replace("聲<small>切</small>", "聲"));
         else if (i == COL_KX) s = s.replaceAll(PAGE_FORMAT, "<a href=https://www.kangxizidian.com/v1/index.php?page=$1>第$1頁</a>第$2字");
         else if (i == COL_GYHZ) s = Pref.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceFirst(PAGE_FORMAT, "第$1頁第$2字");
         else if (i == COL_HD) s = Pref.getString(R.string.book_format, DB.getLanguageByLabel(DB.getColumn(i))) + s.replaceAll(PAGE_FORMAT + "\n", "<a href=https://homeinmists.ilotus.org/hd/png/$1.png>第$1頁</a>第$2字\n").replace("lv", "lü").replace("nv", "nü");
