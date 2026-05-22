@@ -13873,6 +13873,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#916FF7",
+        "marker-size": "medium",
+        "marker-symbol": "c",
+        "title": "介休宋古",
+        "語言": "介休宋古話",
+        "地點": "山西晉中介休宋古",
+        "地圖集二分區": "晉語－并州片",
+        "音典分區": "西北－汾州－平介",
+        "陳邡分區": "官話－秦晉－汾州大片－平遥片",
+        "版本": "2026-05-21",
+        "錄入人": "DaiDzao",
+        "字表來源": "《山西介休宋古方言两字组连读变调研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.9235,
+          37.0476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
         "marker-size": "small",
         "marker-symbol": "c",
         "title": "介休張蘭",
@@ -55641,8 +55665,8 @@
         "marker-color": "#F08460",
         "marker-size": "medium",
         "marker-symbol": "l",
-        "title": "電白",
-        "語言": "電白海話",
+        "title": "電白電城",
+        "語言": "電白電城海話",
         "地點": "廣東茂名電白電城",
         "地圖集二分區": "閩語－雷州片",
         "音典分區": "閩－閩南",
