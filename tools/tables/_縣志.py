@@ -267,7 +267,7 @@ class 表(_表):
 			if "[" not in 行 and not 行.startswith("#"): 行 = ""
 		elif 名 in ("金壇",):
 			if 行.strip().endswith("韻"): 行 = ""
-		elif 名 in ("成都", "響水", "百色隆或", "吳江蘆墟"):
+		elif 名 in ("成都", "響水", "百色隆或", "吳江蘆墟", "吳江同里"):
 			行 = 行.strip()
 			if 行.startswith("["):
 				行 = 自.聲 + 行

@@ -20,7 +20,7 @@ import shutil
 logging.basicConfig(format='[%(asctime)s,%(msecs)03d] %(message)s', level=logging.INFO, datefmt='%H:%M:%S',)
 
 YDS = {"+":"又", "-":"白", "*":"俗", "/":"書","\\":"語","=":"文","?":"存疑", "@": "訓"}
-IPA_SM = "(ʔ?[ʡˀʕʢˤbɓᵇɸβʙpmɰɱᵐfᶠʩɟdɗɖȡᶑᵈʣʤʥꭦðtʈȶᵗʦʧʨꭧθnŋᵑɲɳȵɴᶰlɬɭʟ𝼄ɮ𝼅ʪʫgɡɠᶢɢʛ𐞒kʞhħɦʱɧʰʜzʐʑʒʓcʗCçɕsʂşȿrɹɻɺ𝼈ɾɽʀʁʃʄʆjʝʲq𐞥xχˣvʋⱱɣwẘʍʷʎ𝼆∅ʼ'\\.·~ʘǀǃǁǂ𝼊\u0300-\u0362]*)"
+IPA_SM = "(ʔ?[ʡˀʕʢˤbɓᵇɸβʙpmɰɱᵐfᶠʩɟdɗɖȡᶑᵈʣʤʥꭦðtʈȶᵗʦʧʨꭧθnŋᵑɲɳȵɴⁿᶰlɬɭˡʟ𝼄ɮ𝼅ʪʫgɡɠᶢɢʛ𐞒kʞhħɦʱɧʰʜzᶻʐʑᶽʒʓcʗCçɕsʂşȿrɹɻɺ𝼈ɾɽʀʁʃʄʆjʝʲq𐞥xχˣvʋⱱɣwẘʍʷʎ𝼆∅ʼ'\\.·~ʘǀǃǁǂ𝼊\u0300-\u0362]*)"
 IPA_PATTERN = re.compile(f"^{IPA_SM}([^\\d⁰¹²³⁴⁵⁶˩˨˧˦˥]+)?([\\d⁰¹²³⁴⁵⁶˩˨˧˦˥]+[a-z]?)?([\\+\\-=\\?\\*@])?$")
 
 def getYDMark(py):
@@ -94,8 +94,8 @@ def processXlsxFs(v):
 		# 	text = f"**{text}**"
 		elif i.font.color and i.font.color.rgb == "FF808080":
 			text = f"`{text}`"
-		if i.font.vertAlign == "subscript" or (i.font.size and i.font.size < 10.0):
-			text = f"({text})"
+		# if i.font.vertAlign == "subscript" or (i.font.size and i.font.size < 10.0):
+		# 	text = f"({text})"
 		cells.append(text)
 	return "".join(cells).replace(")(", "").strip().replace("\n", "\\n")
 

@@ -28495,30 +28495,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#52CCAD",
-        "marker-size": "small",
-        "marker-symbol": "f",
-        "title": "東至大渡口",
-        "語言": "東至大渡口話",
-        "地點": "安徽池州東至大渡口",
-        "地圖集二分區": "贛語－懷岳片",
-        "音典分區": "下江－淮西－安慶",
-        "陳邡分區": "官話－北下江－東安慶大片－安慶片",
-        "版本": "2026-05-01",
-        "錄入人": "空島。",
-        "字表來源": "自製表"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          117.061161,
-          30.489034
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "marker-color": "#EB6E77",
         "marker-size": "large",
         "marker-symbol": "b",
@@ -28871,6 +28847,29 @@
         "coordinates": [
           117.907429,
           31.310078
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "無爲開城",
+        "語言": "無爲開城話",
+        "地點": "安徽蕪湖無爲開城",
+        "地圖集二分區": "江淮官話－洪巢片",
+        "音典分區": "下江－淮西－巢南",
+        "陳邡分區": "官話－長江－巢湖大片－巢南片",
+        "錄入人": "空島。",
+        "字表來源": "《开城镇方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.753918,
+          31.296582
         ]
       }
     },
@@ -32459,6 +32458,29 @@
         "coordinates": [
           120.478687,
           31.232818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
+        "marker-size": "small",
+        "marker-symbol": "d",
+        "title": "吳江同里",
+        "語言": "吳江同里閒話",
+        "地點": "江蘇蘇州吳江同里",
+        "地圖集二分區": "吳語－太湖片－蘇嘉湖小片",
+        "音典分區": "兩浙－浙北－蘇州",
+        "陳邡分區": "江東－蘇浙－太湖大片－蘇湖片",
+        "錄入人": "osfans",
+        "字表來源": "《吴江同里方言连读变调研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.719266,
+          31.157424
         ]
       }
     },
@@ -55569,6 +55591,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
+        "marker-size": "medium",
+        "marker-symbol": "l",
+        "title": "電白",
+        "語言": "電白海話",
+        "地點": "廣東茂名電白電城",
+        "地圖集二分區": "閩語－雷州片",
+        "音典分區": "閩－閩南",
+        "陳邡分區": "福建－閩南",
+        "版本": "2025-06-07",
+        "錄入人": "肘俊涛",
+        "字表來源": "《中国语言资源集·广东》、母语者制表",
+        "補充閲讀": "《粵西閩語的調查比較研究Ⅱ》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.304333,
+          21.520862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
         "marker-size": "small",
         "marker-symbol": "l",
         "title": "電白龍山",
@@ -56100,6 +56147,29 @@
         "coordinates": [
           118.194804,
           26.175143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
+        "marker-size": "small",
+        "marker-symbol": "l",
+        "title": "尤溪新橋",
+        "語言": "尤溪新橋話",
+        "地點": "福建三明尤溪新陽",
+        "地圖集二分區": "閩語－閩東片－侯官小片",
+        "音典分區": "閩－閩東",
+        "陳邡分區": "福建－閩東",
+        "錄入人": "肘俊涛",
+        "字表來源": "《尤溪县方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.96,
+          26.05
         ]
       }
     },
@@ -59004,6 +59074,30 @@
         "coordinates": [
           115.995747,
           25.169807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "武平大禾",
+        "語言": "武平大禾話",
+        "地點": "福建龍巖武平大禾",
+        "地圖集二分區": "客家話－汀州片",
+        "音典分區": "閩－閩西－西南",
+        "陳邡分區": "客家－汀州－汀州片",
+        "版本": "2026-05-18",
+        "錄入人": "tomzzy,Resound",
+        "字表來源": "《闽西大禾话语音研究及词汇特点》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.107248,
+          25.397376
         ]
       }
     },
