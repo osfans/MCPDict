@@ -202,7 +202,7 @@ def docx2tsv(fname, reduceLF=False):
 			lines.append(行)
 	行 = "\n".join(lines).replace("}\n{", "").replace("\n}", "}\n")
 	if reduceLF:
-		行 = re.sub(r"\n([\u4e00-\u9fff\{])", "\\1", 行, flags=re.M)
+		行 = re.sub(r"\n([\uf900-\ufb00\u3400-\ua000\U00020000-\U0003347f□〇\{])", "\\1", 行, flags=re.M)
 	t = open(tsv, "w", encoding="U8", newline="\n")
 	t.write(行)
 	t.close()

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from tables._表 import 表 as _表
-from tables.__init__ import 找字
+from tables.__init__ import 找字, 爲字
 import re
 from pypinyin.contrib.tone_convert import to_tone3
 
@@ -301,6 +301,7 @@ class 表(_表):
 					elif len(項) > 2:
 						註 = f"{項[1:]}{註}".strip()
 						項 = 項[0]
+						if not 爲字(項): 項 = "□"
 					l.append((項, 音, 註))
 				return l
 			elif 名 in ("北流", "梧州夏郢", "岑溪", "蒙山"):
