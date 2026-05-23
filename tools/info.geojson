@@ -34312,6 +34312,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
+        "marker-size": "small",
+        "marker-symbol": "d",
+        "title": "樂清大荆",
+        "語言": "樂清大荆話",
+        "地點": "浙江溫州瑞安大荆",
+        "地圖集二分區": "吳語－台州片",
+        "音典分區": "兩浙－明台－台州",
+        "陳邡分區": "江東－台州－台州大片－台南片",
+        "錄入人": "北瓯晴某人",
+        "字表來源": "《乐清市志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.164649,
+          28.414269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
         "marker-size": "large",
         "marker-symbol": "d",
         "title": "衢州",
@@ -61919,6 +61942,31 @@
         "coordinates": [
           109.029691,
           25.026105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "臨桂小江",
+        "語言": "臨桂小江客家話",
+        "地點": "廣西桂林臨桂六塘小江",
+        "地圖集二分區": "客家話－方言島",
+        "音典分區": "閩－閩西－方言島",
+        "陳邡分區": "客家－嘉應－嘉應片",
+        "方言島": true,
+        "版本": "2026-05-23",
+        "錄入人": "DaiDzao",
+        "字表來源": "《广西临桂小江客家方言岛研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.256438,
+          24.974677
         ]
       }
     },
