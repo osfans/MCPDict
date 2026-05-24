@@ -282,7 +282,7 @@ class 表(_表):
 			行 = 自.聲 + 行
 		elif 名 in ("威海",):
 			行 = 行.replace("/", "", 2)
-		elif 名 in ("蒼南金鄉",):
+		elif 名 in ("蒼南金鄉","樂清大荆"):
 			行 = 行.strip()
 			if 行.startswith("#"):
 				自.聲 = ""
@@ -298,7 +298,7 @@ class 表(_表):
 			else:
 				自.聲 = 行
 				return
-			行 = re.sub(r"(\d+)", "[\\1]", 行, count=1).strip()
+			行 = re.sub(r"^(\d+)", "[\\1]", 行).strip()
 			if 行.startswith("["):
 				行 = 自.聲 + 行
 			else:
