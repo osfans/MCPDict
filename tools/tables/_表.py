@@ -22,6 +22,8 @@ logging.basicConfig(format='[%(asctime)s,%(msecs)03d] %(message)s', level=loggin
 YDS = {"+":"又", "-":"白", "*":"俗", "/":"書","\\":"語","=":"文","?":"存疑", "@": "訓"}
 IPA_SM = "(ʔ?[ʡˀʕʢˤbɓᵇɸβʙpmɰɱᵐfᶠʩɟdɗɖȡᶑᵈʣʤʥꭦðtʈȶᵗʦʧʨꭧθnŋᵑɲɳȵɴⁿᶰlɬɭˡʟ𝼄ɮ𝼅ʪʫgɡɠᶢɢʛ𐞒kʞhħɦʱɧʰʜzᶻʐʑᶽʒʓcʗCçɕsʂşȿrɹɻɺ𝼈ɾɽʀʁʃʄʆjʝʲq𐞥xχˣvʋⱱɣwẘʍʷʎ𝼆∅ʼ'\\.·~ʘǀǃǁǂ𝼊\u0300-\u0362]*)"
 IPA_PATTERN = re.compile(f"^{IPA_SM}([^\\d⁰¹²³⁴⁵⁶˩˨˧˦˥]+)?([\\d⁰¹²³⁴⁵⁶˩˨˧˦˥]+[a-z]?)?([\\+\\-=\\?\\*@])?$")
+#0x3400<=n<0xA000 or n in (0x25A1, 0x3007) or 0xF900<=n<0xFB00 or 0x20000<=n<=0x3347F
+HZ_STR = r"\u25a1\u3007\u3400-\ua000\uf900-\ufb00\U00020000-\U0003347F"
 
 def getYDMark(py):
 	return py[-1] if py[-1] in YDS else ""
@@ -305,7 +307,7 @@ class 表:
 			xlsx2tsv(sname, 自.頁名)
 			sname = getSrcName(sname, 自.頁名)
 		elif isDocx(sname):
-			docx2tsv(sname, 自.__class__ is tables._縣志.表)
+			docx2tsv(sname, "_縣志" in 自.__class__.__module__)
 			sname = getSrcName(sname)
 		else:
 			mv2src(sname)

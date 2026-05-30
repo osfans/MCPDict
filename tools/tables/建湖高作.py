@@ -30,7 +30,7 @@ class 表(_表):
 	def 析(自, 列):
 		if len(列) < 2: return
 		cy,pys= 列[:2]
-		cy2 = re.sub('[0-9=+*-]', '', cy)
+		cy2 = re.sub('[0-9=+\\?*-]', '', cy)
 		pys = pys.split(" ")
 		js = 列[2] if len(列) > 2 else ''
 		if js:
@@ -44,7 +44,7 @@ class 表(_表):
 			zs = ''
 		l = list()
 		cy = cy.replace(",", "")
-		for i,z in enumerate(re.findall('.[0-9=+*-]?', cy)):
+		for i,z in enumerate(re.findall('.[0-9=+\\?*-]?', cy)):
 			yb = 自.py2yb(pys[i])
 			if z[0] + yb in 自.sets:
 				continue
