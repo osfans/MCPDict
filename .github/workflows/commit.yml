@@ -75,6 +75,7 @@ jobs:
         files: |
           app/build/outputs/apk/release/*.APK
           *.7z
+          tools/[0-9]*.txt
 
     - name: Deploy to SF
       run: |
