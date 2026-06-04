@@ -124,8 +124,8 @@
         <item>潘悟雲（2000）擬音</item>
         <item>潘悟雲（2013）擬音</item>
         <item>潘悟雲（2023）擬音</item>
-        <item>unt（2020）擬音</item>
-        <item>unt（2022）擬音</item>
+        <item>unt（2026）擬音，RTR方案</item>
+        <item>unt（2026）擬音，ATR方案</item>
         <item>unt通俗擬音</item>
         <item>msoeg擬音</item>
         <item>切韻音系描述</item>
@@ -164,7 +164,7 @@
     <string-array name="pref_default_values_mc_display">
         <item>0</item>
         <item>109</item>
-        <item>111</item>
+        <item>110</item>
         <item>200</item>
         <item>201</item>
         <item>300</item>

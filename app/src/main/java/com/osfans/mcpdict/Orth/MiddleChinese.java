@@ -80,6 +80,8 @@ public class MiddleChinese {
             } else {
                 // 擬音
                 s = Orthography.formatTone(s, tone + "", DB.GY);
+                name = name.replace("unt（2026）擬音，RTR方案", "unt{RTR}");
+                name = name.replace("unt（2026）擬音，ATR方案", "unt{ATR}");
                 name = name.replace("（", "{").replace("）", "}");
                 name = name.replace("通俗", "{通俗}");
                 name = name.replace("擬音", "");
