@@ -218,15 +218,19 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 if (lang.contentEquals(lastLang)) {
                     mViewLang.setVisibility(View.INVISIBLE);
                 } else {
-                        boolean colorByScheme = Pref.getBool(R.string.pref_key_custom_language_color_by_scheme, false)
+                    int endangeredBorderColor = DB.getEndangeredColor(lang);
+                    boolean hasEndangeredColor = endangeredBorderColor != android.graphics.Color.TRANSPARENT;
+                    builder.borderColor(endangeredBorderColor == android.graphics.Color.TRANSPARENT ? Integer.MIN_VALUE : endangeredBorderColor);
+                    builder.borderThickness(hasEndangeredColor ? 6 : 3);
+                    boolean colorByScheme = Pref.getBool(R.string.pref_key_custom_language_color_by_scheme, false)
                             && Pref.getFilter() == DB.FILTER.CUSTOM;
-                        Drawable drawable;
-                        if (colorByScheme) {
+                    Drawable drawable;
+                    if (colorByScheme) {
                         int c = Pref.getCustomLanguageSchemeColor(lang);
                         drawable = builder.build(lang, c, c);
-                        } else {
+                    } else {
                         drawable = builder.build(lang, getColor(lang), getSubColor(lang));
-                        }
+                    }
                     drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
                     mViewLang.setBackground(drawable);
                     mViewLang.setVisibility(View.VISIBLE);

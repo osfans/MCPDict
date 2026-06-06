@@ -812,6 +812,17 @@ public class DB extends SQLiteAssetHelper {
         return getColor(lang, 1);
     }
 
+    public static int getEndangeredColor(String lang) {
+        String c = getFieldByLabel(lang, "瀕危");
+        if (TextUtils.isEmpty(c)) return Color.TRANSPARENT;
+        c = c.trim();
+        try {
+            return parseColor(c, 0);
+        } catch (Exception e) {
+            return Color.TRANSPARENT;
+        }
+    }
+
     public static String getDictName(String lang) {
         return getFieldByLabel(lang, "網站");
     }

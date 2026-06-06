@@ -81,7 +81,8 @@ public class TextDrawable extends ShapeDrawable {
         // border paint settings
         borderThickness = builder.borderThickness;
         borderPaint = new Paint();
-        borderPaint.setColor(getDarkerShade(color));
+        int borderColor = builder.borderColor == Integer.MIN_VALUE ? getDarkerShade(color) : builder.borderColor;
+        borderPaint.setColor(borderColor);
         borderPaint.setStyle(Paint.Style.STROKE);
         borderPaint.setStrokeWidth(borderThickness);
 
@@ -183,7 +184,7 @@ public class TextDrawable extends ShapeDrawable {
 
         private String text;
 
-        private int color, subColor = -1;
+        private int color, subColor = -1, borderColor = Integer.MIN_VALUE;
 
         private int borderThickness;
 
@@ -242,6 +243,17 @@ public class TextDrawable extends ShapeDrawable {
         }
 
         public IConfigBuilder withBorder(int thickness) {
+            this.borderThickness = thickness;
+            return this;
+        }
+
+        public Builder borderColor(int color) {
+            this.borderColor = color;
+            return this;
+        }
+
+        @Override
+        public Builder borderThickness(int thickness) {
             this.borderThickness = thickness;
             return this;
         }
@@ -338,6 +350,8 @@ public class TextDrawable extends ShapeDrawable {
 
         IConfigBuilder withBorder(int thickness);
 
+        IConfigBuilder borderColor(int color);
+
         IConfigBuilder useFont(Typeface font);
 
         IConfigBuilder fontSize(float size);
@@ -350,6 +364,10 @@ public class TextDrawable extends ShapeDrawable {
     }
 
     public interface IBuilder {
+
+        IBuilder borderColor(int color);
+
+        IBuilder borderThickness(int thickness);
 
         TextDrawable build(String text, int color);
         TextDrawable build(String text, int color, int subColor);
