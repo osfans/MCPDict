@@ -354,8 +354,24 @@
 
     <string name="pref_key_charset">SHOW_CHARSET</string>
     <string name="pref_key_custom_languages">CUSTOM_LANGUAGES</string>
+    <string name="pref_key_custom_language_schemes">CUSTOM_LANGUAGE_SCHEMES</string>
+    <string name="pref_key_custom_language_scheme_current">CUSTOM_LANGUAGE_SCHEME_CURRENT</string>
     <string name="custom_languages">自選語言</string>
-    <string name="select_custom_language_summary">已選%1$d個語言：%2$s</string>
+    <string name="custom_scheme_default_name">默認方案</string>
+    <string name="custom_scheme_name_hint">方案名稱</string>
+    <string name="custom_scheme_save">保存</string>
+    <string name="custom_scheme_new">新建</string>
+    <string name="custom_scheme_rename">改名</string>
+    <string name="custom_scheme_delete">刪除</string>
+    <string name="custom_scheme_save_done">已保存方案：%1$s</string>
+    <string name="custom_scheme_new_done">已新建方案：%1$s</string>
+    <string name="custom_scheme_rename_done">已重命名為：%1$s</string>
+    <string name="custom_scheme_delete_done">已刪除方案：%1$s</string>
+    <string name="custom_scheme_delete_confirm">確定刪除方案「%1$s」嗎？刪除後無法恢復。</string>
+    <string name="custom_scheme_name_exists">方案名稱已存在</string>
+    <string name="custom_scheme_delete_last">至少保留一個方案</string>
+    <string name="custom_scheme_save_empty">請輸入方案名稱</string>
+    <string name="select_custom_language_summary">已選%d個語言</string>
     <string name="pref_key_input">INPUT</string>
     <string name="pref_key_language">LANGUAGE</string>
     <string name="custom_title">自定標題</string>

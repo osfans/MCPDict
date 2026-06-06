@@ -1,6 +1,7 @@
 package com.osfans.mcpdict;
 
 import android.database.Cursor;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -17,12 +18,15 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.fragment.app.Fragment;
@@ -44,10 +48,10 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private static final String TAG = "DictFragment";
     private View selfView;
     private SearchView searchView;
-    private Spinner spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions, spinnerRecommend, spinnerEditor;
+    private Spinner spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions, spinnerRecommend, spinnerEditor, spinnerCustomScheme;
     private AutoCompleteTextView acSearchLang, acCustomLang;
     private ResultFragment fragmentResult;
-    ArrayAdapter<CharSequence> adapterDict, adapterProvince, adapterRecommend, adapterEditor;
+    ArrayAdapter<CharSequence> adapterDict, adapterProvince, adapterRecommend, adapterEditor, adapterCustomScheme;
     DivisionAdapter adapterDivision;
     private View layoutSearchOption, layoutSearchLang;
     private LinearLayout layoutFilters;
@@ -254,6 +258,67 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             acCustomLang.requestFocus();
         });
 
+        spinnerCustomScheme = selfView.findViewById(R.id.spinner_custom_scheme);
+        adapterCustomScheme = new StringArrayAdapter(requireActivity());
+        spinnerCustomScheme.setAdapter(adapterCustomScheme);
+        spinnerCustomScheme.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String scheme = Objects.toString(adapterCustomScheme.getItem(position), "");
+                if (TextUtils.isEmpty(scheme)) return;
+                if (!scheme.contentEquals(Pref.getCurrentCustomLanguageSchemeName())) {
+                    Pref.setCurrentCustomLanguageSchemeName(scheme);
+                    acCustomLang.setHint(Pref.getCustomLanguageSummary());
+                    if (Pref.getFilter() == FILTER.CUSTOM) search();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+        selfView.findViewById(R.id.button_custom_scheme_new).setOnClickListener(v -> {
+            showSchemeNameDialog(R.string.custom_scheme_new, "", schemeName -> {
+                if (Pref.createCustomLanguageScheme(schemeName)) {
+                    refreshCustomSchemes();
+                    Toast.makeText(requireContext(), Pref.getString(R.string.custom_scheme_new_done, schemeName), Toast.LENGTH_SHORT).show();
+                    if (Pref.getFilter() == FILTER.CUSTOM) search();
+                } else {
+                    Toast.makeText(requireContext(), R.string.custom_scheme_name_exists, Toast.LENGTH_SHORT).show();
+                }
+            });
+        });
+        selfView.findViewById(R.id.button_custom_scheme_rename).setOnClickListener(v -> {
+            showSchemeNameDialog(R.string.custom_scheme_rename, Pref.getCurrentCustomLanguageSchemeName(), schemeName -> {
+                if (Pref.renameCurrentCustomLanguageScheme(schemeName)) {
+                    refreshCustomSchemes();
+                    Toast.makeText(requireContext(), Pref.getString(R.string.custom_scheme_rename_done, schemeName), Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(requireContext(), R.string.custom_scheme_name_exists, Toast.LENGTH_SHORT).show();
+                }
+            });
+        });
+        selfView.findViewById(R.id.button_custom_scheme_delete).setOnClickListener(v -> {
+            if (Pref.getCustomLanguageSchemeNames().length <= 1) {
+                Toast.makeText(requireContext(), R.string.custom_scheme_delete_last, Toast.LENGTH_SHORT).show();
+                return;
+            }
+            String oldName = Pref.getCurrentCustomLanguageSchemeName();
+            new AlertDialog.Builder(requireContext())
+                    .setTitle(R.string.custom_scheme_delete)
+                    .setMessage(Pref.getString(R.string.custom_scheme_delete_confirm, oldName))
+                    .setPositiveButton(R.string.ok, (dialog, which) -> {
+                        if (Pref.deleteCurrentCustomLanguageScheme()) {
+                            refreshCustomSchemes();
+                            Toast.makeText(requireContext(), Pref.getString(R.string.custom_scheme_delete_done, oldName), Toast.LENGTH_SHORT).show();
+                            if (Pref.getFilter() == FILTER.CUSTOM) search();
+                        } else {
+                            Toast.makeText(requireContext(), R.string.custom_scheme_delete_last, Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .setNegativeButton(R.string.cancel, null)
+                    .show();
+        });
+
         // Set up the checkboxes
         Spinner spinnerFilters = selfView.findViewById(R.id.spinner_filters);
         ((ArrayAdapter<?>)spinnerFilters.getAdapter()).setDropDownViewResource(R.layout.spinner_item);
@@ -422,6 +487,45 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         if (Pref.getFilter() == FILTER.CUSTOM) search();
     }
 
+    private void refreshCustomSchemes() {
+        if (adapterCustomScheme == null) return;
+        adapterCustomScheme.clear();
+        adapterCustomScheme.addAll(Pref.getCustomLanguageSchemeNames());
+        String current = Pref.getCurrentCustomLanguageSchemeName();
+        int index = adapterCustomScheme.getPosition(current);
+        if (index < 0) index = 0;
+        if (adapterCustomScheme.getCount() > 0) {
+            spinnerCustomScheme.setSelection(index);
+        }
+        if (acCustomLang != null) {
+            acCustomLang.setHint(Pref.getCustomLanguageSummary());
+        }
+    }
+
+    private interface SchemeNameHandler {
+        void onConfirm(String schemeName);
+    }
+
+    private void showSchemeNameDialog(int titleRes, String defaultValue, SchemeNameHandler handler) {
+        EditText input = new EditText(requireContext());
+        input.setSingleLine(true);
+        input.setHint(R.string.custom_scheme_name_hint);
+        input.setText(defaultValue);
+        new AlertDialog.Builder(requireContext())
+                .setTitle(titleRes)
+                .setView(input)
+                .setPositiveButton(R.string.ok, (DialogInterface dialog, int which) -> {
+                    String schemeName = input.getText().toString().trim();
+                    if (TextUtils.isEmpty(schemeName)) {
+                        Toast.makeText(requireContext(), R.string.custom_scheme_save_empty, Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    handler.onConfirm(schemeName);
+                })
+                .setNegativeButton(R.string.cancel, null)
+                .show();
+    }
+
     public void refresh(String query, String label) {
         searchView.setQuery(query, false);
         Pref.putLabel(label);
@@ -442,6 +546,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     public void refreshAdapter() {
         refreshSearchLang();
+        refreshCustomSchemes();
         if (adapterDivision != null) refreshDivision();
         if (adapterRecommend != null) refreshRecommend();
         if (adapterEditor != null) refreshEditor();

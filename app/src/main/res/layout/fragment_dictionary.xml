@@ -151,6 +151,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <LinearLayout
+                    android:id="@+id/layout_custom_scheme_actions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Spinner
+                        android:id="@+id/spinner_custom_scheme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/button_custom_scheme_new"
+                        style="@style/Widget.AppCompat.Button.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:text="@string/custom_scheme_new" />
+
+                    <Button
+                        android:id="@+id/button_custom_scheme_rename"
+                        style="@style/Widget.AppCompat.Button.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:text="@string/custom_scheme_rename" />
+
+                    <Button
+                        android:id="@+id/button_custom_scheme_delete"
+                        style="@style/Widget.AppCompat.Button.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:text="@string/custom_scheme_delete" />
+
+                </LinearLayout>
+
                 <AutoCompleteTextView
                     android:id="@+id/text_custom_lang"
                     android:layout_width="0dp"
@@ -164,7 +204,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/checkBox_output_table"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@id/layout_custom_scheme_actions" />
 
                 <ImageButton
                     android:id="@+id/button_custom_lang_clear"
@@ -172,20 +212,21 @@
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:src="@drawable/ic_spinner_caret"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/text_custom_lang"
                     app:layout_constraintEnd_toEndOf="@id/text_custom_lang"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="@id/text_custom_lang" />
 
                 <CheckBox
                     android:id="@+id/checkBox_output_table"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/output_table"
                     android:enabled="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/text_custom_lang"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/text_custom_lang"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="@id/text_custom_lang" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
