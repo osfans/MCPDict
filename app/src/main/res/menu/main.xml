@@ -30,9 +30,60 @@
         android:title="@string/guess_hz"
         app:showAsAction="never" />
     <item
-        android:id="@+id/menu_item_sim"
-        android:title="@string/similarity"
-        app:showAsAction="never" />
+        android:id="@+id/menu_item_dialect_links"
+        android:title="@string/dialect_links"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/menu_item_sim"
+                android:title="@string/similarity"
+                android:titleCondensed="https://mcpdict.sourceforge.io/sim.html">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://mcpdict.sourceforge.io/sim.html" />
+            </item>
+            <item
+                android:id="@+id/menu_item_huai_dict"
+                android:title="@string/huai_dict"
+                android:titleCondensed="https://jianghuaidict.sourceforge.io/">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://jianghuaidict.sourceforge.io/" />
+            </item>
+            <item
+                android:id="@+id/menu_item_tairu_dict"
+                android:title="@string/tairu_dict"
+                android:titleCondensed="https://taerv.sourceforge.io/">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://taerv.sourceforge.io/" />
+            </item>
+            <item
+                android:id="@+id/menu_item_vear_web"
+                android:title="@string/vear_web"
+                android:titleCondensed="https://mcpdict.vear.vip/">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://mcpdict.vear.vip/" />
+            </item>
+            <item
+                android:id="@+id/menu_item_ayaka_web"
+                android:title="@string/ayaka_web"
+                android:titleCondensed="https://nk2028.shn.hk/yindian/">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://nk2028.shn.hk/yindian/" />
+            </item>
+            <item
+                android:id="@+id/menu_item_dialects_atlas"
+                android:title="@string/dialects_atlas"
+                android:titleCondensed="https://dialects.yzup.top">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://dialects.yzup.top" />
+            </item>
+        </menu>
+    </item>
     <item
         android:id="@+id/menu_item_help"
         app:showAsAction="never"

@@ -80,9 +80,14 @@ public class MainActivity extends AppCompatActivity {
             if (mPager.getCurrentItem() != PagerAdapter.PAGE.GUESS_LANG.ordinal()) mPager.setCurrentItem(PagerAdapter.PAGE.GUESS_LANG.ordinal());
             return true;
         }
-        if (id == R.id.menu_item_sim) {
-            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mcpdict.sourceforge.io/sim.html"));
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent = item.getIntent();
+        if (intent != null) {
+            startActivity(intent);
+            return true;
+        }
+        CharSequence url = item.getTitleCondensed();
+        if (!TextUtils.isEmpty(url) && (url.toString().startsWith("http://") || url.toString().startsWith("https://"))) {
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url.toString()));
             startActivity(intent);
             return true;
         }
