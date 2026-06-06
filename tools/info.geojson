@@ -26126,6 +26126,30 @@
         "marker-color": "#EB6E77",
         "marker-size": "medium",
         "marker-symbol": "b",
+        "title": "團風",
+        "語言": "團風話",
+        "地點": "湖北黃岡團風",
+        "地圖集二分區": "江淮官話－黃孝片",
+        "音典分區": "中上江－荆益－黃孝",
+        "陳邡分區": "官話－長江－西南大片－江漢片",
+        "版本": "2026-06-05",
+        "錄入人": "DaiDzao",
+        "字表來源": "《团风方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.86615,
+          30.64046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "黃岡",
         "語言": "黃州話",
         "地點": "湖北黃岡",
@@ -33355,6 +33379,30 @@
         "coordinates": [
           121.373728,
           31.242647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
+        "marker-size": "medium",
+        "marker-symbol": "d",
+        "title": "川沙",
+        "語言": "川沙閒話",
+        "地點": "上海浦東新區川沙",
+        "地圖集二分區": "吳語－太湖片－上海小片",
+        "音典分區": "兩浙－浙北－松江",
+        "陳邡分區": "江東－蘇浙－太湖大片－松太片",
+        "版本": "2024-10-30",
+        "錄入人": "Sigismund",
+        "字表來源": "《川沙方言同音字表》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.707816,
+          31.202191
         ]
       }
     },
