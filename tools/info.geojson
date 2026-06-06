@@ -34133,6 +34133,25 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "嵊縣金庭",
+        "語言": "嵊縣金庭話",
+        "地點": "浙江紹興嵊州金庭",
+        "版本": "2026-06-06"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0315,
+          29.57191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5E98EB",
         "marker-size": "medium",
         "marker-symbol": "d",
         "title": "慈谿",
@@ -47485,6 +47504,7 @@
         "地圖集二分區": "客家話－粤臺片－梅惠小片",
         "音典分區": "廣中－東江",
         "陳邡分區": "客家－貢水－貢水大片－東江片",
+        "版本": "2026-06-06",
         "錄入人": "syami",
         "字表來源": "《龙门路溪方言词典》"
       },
