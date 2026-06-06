@@ -450,5 +450,5 @@ def getLangs(items, 參數, args):
 		print("聲母表", ",".join(sorted(語組[-1].聲母集)).strip(","))
 	if not args.output:
 		print("語言數", 數)
-		open(f"{數}.txt", "w").write(f"{數}\n")
+		if 數 > 2: open(f"{數}.txt", "w").write(f"{數}\n")
 	return 語組, 高頻字
