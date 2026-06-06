@@ -552,6 +552,53 @@ public class DB extends SQLiteAssetHelper {
         return getLanguageCursor("", filter);
     }
 
+    public static Cursor getCustomLanguageCursor(CharSequence constraint, String filter, Set<String> selectedLanguages) {
+        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+        qb.setTables(TABLE_INFO);
+        String[] projection = {LANGUAGE, "rowid as _id"};
+        String input = "";
+        if (!TextUtils.isEmpty(constraint)) {
+            String[] inputs = OpenCC.convertAll("LANGUAGE LIKE '%" + constraint + "%'" );
+            input = String.join(" OR ", inputs).replace("LANGUAGE", LANGUAGE);
+        }
+        if (constraint.length() >= 2) {
+            String[] locations = OpenCC.convertAll("LOCATION LIKE '%" + constraint + "%'" );
+            String location = String.join(" OR ", locations).replace("LOCATION", "地點");
+            input += " OR " + location;
+        }
+        if (!TextUtils.isEmpty(input)) input = String.format(" AND (%s)", input);
+
+        String order = ORDER;
+        if (selectedLanguages != null && !selectedLanguages.isEmpty()) {
+            ArrayList<String> selected = new ArrayList<>();
+            for (String lang : selectedLanguages) {
+                if (TextUtils.isEmpty(lang)) continue;
+                selected.add(lang);
+            }
+            if (!selected.isEmpty()) {
+                StringBuilder sb = new StringBuilder("CASE");
+                int rank = 0;
+                for (int i = selected.size() - 1; i >= 0; i--) {
+                    String escaped = selected.get(i).replace("'", "''");
+                    sb.append(" WHEN ")
+                            .append(LANGUAGE)
+                            .append(" = '")
+                            .append(escaped)
+                            .append("' THEN ")
+                            .append(rank++);
+                }
+                sb.append(" ELSE 999 END");
+                order = sb + ", " + ORDER;
+            }
+        }
+
+        String query = qb.buildQuery(projection, String.format("音節數 is not null %s %s", input, filter), null, null, order, null);
+        Cursor cursor = db.rawQuery(query, null);
+        if (cursor.getCount() > 0) return cursor;
+        cursor.close();
+        return getCustomLanguageCursor("", filter, selectedLanguages);
+    }
+
     public static String[] getLanguages() {
         initArrays();
         if (LANGUAGES == null) {

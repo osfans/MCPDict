@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckedTextView;
 
+import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.Util.Pref;
 
 import java.util.Set;
@@ -28,6 +29,11 @@ public class MultiLanguageAdapter extends LanguageAdapter {
 
     public void setOnItemClickListener(View.OnClickListener onClick) {
         this.onClick = onClick;
+    }
+
+    @Override
+    public Cursor runQueryOnBackgroundThread(CharSequence constraint) {
+        return DB.getCustomLanguageCursor(constraint, mFilter, Pref.getCustomLanguages());
     }
 
     @Override
