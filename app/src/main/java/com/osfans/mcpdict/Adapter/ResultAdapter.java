@@ -218,7 +218,15 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 if (lang.contentEquals(lastLang)) {
                     mViewLang.setVisibility(View.INVISIBLE);
                 } else {
-                    Drawable drawable = builder.build(lang, getColor(lang), getSubColor(lang));
+                        boolean colorByScheme = Pref.getBool(R.string.pref_key_custom_language_color_by_scheme, false)
+                            && Pref.getFilter() == DB.FILTER.CUSTOM;
+                        Drawable drawable;
+                        if (colorByScheme) {
+                        int c = Pref.getCustomLanguageSchemeColor(lang);
+                        drawable = builder.build(lang, c, c);
+                        } else {
+                        drawable = builder.build(lang, getColor(lang), getSubColor(lang));
+                        }
                     drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
                     mViewLang.setBackground(drawable);
                     mViewLang.setVisibility(View.VISIBLE);

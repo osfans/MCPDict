@@ -202,7 +202,7 @@
                     android:paddingStart="0dp"
                     android:paddingEnd="@dimen/button_icon_size"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/checkBox_custom_all"
+                    app:layout_constraintEnd_toStartOf="@id/layout_custom_checkboxes"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/layout_custom_scheme_actions" />
 
@@ -216,15 +216,28 @@
                     app:layout_constraintEnd_toEndOf="@id/text_custom_lang"
                     app:layout_constraintTop_toTopOf="@id/text_custom_lang" />
 
-                <CheckBox
-                    android:id="@+id/checkBox_custom_all"
+                <LinearLayout
+                    android:id="@+id/layout_custom_checkboxes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/custom_languages_all"
-                    app:layout_constraintBottom_toBottomOf="@id/text_custom_lang"
+                    android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/text_custom_lang"
-                    app:layout_constraintTop_toTopOf="@id/text_custom_lang" />
+                    app:layout_constraintTop_toTopOf="@id/text_custom_lang">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_custom_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/custom_languages_all" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_color_by_scheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/custom_language_color_by_scheme" />
+
+                </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

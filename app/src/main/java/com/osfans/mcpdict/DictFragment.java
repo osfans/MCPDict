@@ -263,6 +263,13 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             Pref.putBool(R.string.pref_key_custom_languages_all, isChecked);
             if (Pref.getFilter() == FILTER.CUSTOM) search();
         });
+        CheckBox checkColorByScheme = selfView.findViewById(R.id.checkBox_color_by_scheme);
+        checkColorByScheme.setChecked(Pref.getBool(R.string.pref_key_custom_language_color_by_scheme, false));
+        checkColorByScheme.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Pref.putBool(R.string.pref_key_custom_language_color_by_scheme, isChecked);
+            acAdapter.notifyDataSetChanged();
+            if (Pref.getFilter() == FILTER.CUSTOM) search();
+        });
 
         spinnerCustomScheme = selfView.findViewById(R.id.spinner_custom_scheme);
         adapterCustomScheme = new StringArrayAdapter(requireActivity());

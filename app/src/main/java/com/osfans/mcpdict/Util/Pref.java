@@ -2,6 +2,7 @@ package com.osfans.mcpdict.Util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 
@@ -238,6 +239,66 @@ public class Pref {
             merged.addAll(set);
         }
         return sanitizeCustomLanguages(merged);
+    }
+
+    public static int getCustomLanguageSchemeColor(String lang) {
+        CustomLanguageSchemeStore store = getCustomLanguageSchemeStore();
+        String byLabel = DB.getLanguageByLabel(lang);
+        String byLanguage = DB.getLabelByLanguage(lang);
+
+        boolean includeAllSchemes = getBool(R.string.pref_key_custom_languages_all, false);
+        if (!includeAllSchemes) {
+            LinkedHashSet<String> currentSet = store.schemes.get(store.current);
+            if (matchesCustomLanguage(currentSet, lang, byLabel, byLanguage)) {
+                int currentIndex = 0;
+                for (String schemeName : store.schemes.keySet()) {
+                    if (TextUtils.equals(schemeName, store.current)) {
+                        return schemeIndexToColor(currentIndex);
+                    }
+                    currentIndex++;
+                }
+            }
+        }
+
+        int index = 0;
+        for (Map.Entry<String, LinkedHashSet<String>> entry : store.schemes.entrySet()) {
+            LinkedHashSet<String> set = entry.getValue();
+            if (matchesCustomLanguage(set, lang, byLabel, byLanguage)) {
+                return schemeIndexToColor(index);
+            }
+            index++;
+        }
+        return Color.GRAY;
+    }
+
+    private static boolean matchesCustomLanguage(Set<String> set, String lang, String byLabel, String byLanguage) {
+        if (set == null) return false;
+        return set.contains(lang)
+                || (!TextUtils.isEmpty(byLabel) && set.contains(byLabel))
+                || (!TextUtils.isEmpty(byLanguage) && set.contains(byLanguage));
+    }
+
+    public static int schemeIndexToColor(int index) {
+        // First schemes use vivid dark colors for better readability with white text.
+        final int[] vivid = {
+            Color.parseColor("#B71C1C"), // red
+            Color.parseColor("#0D47A1"), // blue
+            Color.parseColor("#1B5E20"), // green
+            Color.parseColor("#E65100"), // orange
+            Color.parseColor("#4A148C"), // purple
+            Color.parseColor("#006064"), // cyan
+            Color.parseColor("#880E4F"), // magenta
+            Color.parseColor("#3E2723")  // brown
+        };
+        if (index < vivid.length) return vivid[index];
+
+        // Fallback for many schemes: high saturation + medium-low value, and skip light-yellow range.
+        int i = index - vivid.length;
+        float hue = (i * 47 + (i / 7) * 19) % 360;
+        if (hue >= 45 && hue <= 75) hue = (hue + 40) % 360;
+        float saturation = 0.78f;
+        float value = 0.62f;
+        return Color.HSVToColor(new float[]{hue, saturation, value});
     }
 
     public static String[] getCustomLanguageSchemeNames() {
