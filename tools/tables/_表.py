@@ -409,7 +409,7 @@ class 表:
 		if 自.爲語() and 自.爲音:
 			if 音 in ("", "-", "—", "－", "一", "/", "误", "∅"):
 				return ""
-			音 = 音.strip("[] ")
+			音 = 音.strip("[] ").replace("\u200b", "")
 			音 = 音.replace("Ǿ", "Ǿ").replace("Ǿ", "").lstrip("∅︀∅Ø〇0").replace("零", "").replace("◌", "")
 			if 自.無q聲(): 音 = 音.lstrip("q")
 			音 = re.sub("^[I1]", "l", 音)
