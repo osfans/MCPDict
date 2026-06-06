@@ -231,6 +231,15 @@ public class Pref {
         return new LinkedHashSet<>(set);
     }
 
+    public static Set<String> getAllCustomLanguages() {
+        CustomLanguageSchemeStore store = getCustomLanguageSchemeStore();
+        LinkedHashSet<String> merged = new LinkedHashSet<>();
+        for (LinkedHashSet<String> set : store.schemes.values()) {
+            merged.addAll(set);
+        }
+        return sanitizeCustomLanguages(merged);
+    }
+
     public static String[] getCustomLanguageSchemeNames() {
         CustomLanguageSchemeStore store = getCustomLanguageSchemeStore();
         return store.schemes.keySet().toArray(new String[0]);

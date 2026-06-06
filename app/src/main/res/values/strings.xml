@@ -356,7 +356,9 @@
     <string name="pref_key_custom_languages">CUSTOM_LANGUAGES</string>
     <string name="pref_key_custom_language_schemes">CUSTOM_LANGUAGE_SCHEMES</string>
     <string name="pref_key_custom_language_scheme_current">CUSTOM_LANGUAGE_SCHEME_CURRENT</string>
+    <string name="pref_key_custom_languages_all">CUSTOM_LANGUAGES_ALL</string>
     <string name="custom_languages">自選語言</string>
+    <string name="custom_languages_all">全部</string>
     <string name="custom_scheme_default_name">默認方案</string>
     <string name="custom_scheme_name_hint">方案名稱</string>
     <string name="custom_scheme_save">保存</string>
