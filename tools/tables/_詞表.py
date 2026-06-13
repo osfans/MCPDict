@@ -50,11 +50,16 @@ class 表(_表):
 				自.誤.append(f"{行} 詞與音節不匹配")
 				return
 		for i,z in enumerate(cys):
-			yb = pys[i]
+			yb = pys[i].strip()
 			if 轉調類: yb = 自.轉調類(yb)
-			if z != "□" and z[0] + yb in 自.sets:
-				continue
-			自.sets.add(z[0] + yb)
+			if z == "□":
+				if z[0] + yb + zs in 自.sets:
+					continue
+				自.sets.add(z[0] + yb + zs)
+			else:
+				if z[0] + yb in 自.sets:
+					continue
+				自.sets.add(z[0] + yb)
 			mark = ""
 			if len(z) > 1 and z[1] in "+-=":
 				mark = z[1]
