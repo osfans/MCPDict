@@ -25887,6 +25887,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "羅田勝利",
+        "語言": "羅田勝利話",
+        "地點": "湖北黃岡羅田勝利",
+        "地圖集二分區": "江淮官話－黃孝片",
+        "音典分區": "中上江－荆益－大别山",
+        "陳邡分區": "官話－長江－西南大片－江漢片",
+        "版本": "2026-06-11",
+        "錄入人": "DaiDzao",
+        "字表來源": "《罗田县胜利镇方言词汇研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.47466,
+          31.136606
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "英山",
