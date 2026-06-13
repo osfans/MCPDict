@@ -117,6 +117,8 @@ def addCfFq(d, fq, order):
 
 def getLangsByArgv(infos, argv):
 	l = []
+	if "漢字音典字表檔案（長期更新）.xlsx" in argv:
+		argv.remove("漢字音典字表檔案（長期更新）.xlsx")
 	for a in argv:
 		if a in infos:
 			l.append(a)
@@ -128,10 +130,14 @@ def getLangsByArgv(infos, argv):
 			ba5 = re.sub(r"([\d\-\(（].+?)(.[^.]*?)$", "\\2", ba)
 			ba6 = re.sub(r"( ?[\d\-\.]*?)(.[^.]*)$", "\\2", ba)
 			bas = [ba, ba2, ba3, ba4, ba5, ba6]
+			found = False
 			for i in infos:
 				if fnmatch.filter(bas, infos[i]["文件名"]):
 					l.append(i)
-					continue
+					found = True
+					break
+			if not found:
+				print(f"{a} 未登記")
 	print(" ".join(l))
 	return l
 
