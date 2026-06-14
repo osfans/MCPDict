@@ -200,8 +200,8 @@ def 加載(省=None):
 		orders = [列[i].strip() for i in ("地圖集二排序", "音典排序", "陳邡排序")]
 		colors = [row[fields.index(i)].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典顏色","陳邡顏色")]
 		瀕危 = ""
-		if "瀕危" in fields:
-			瀕危 = getCellBgColor(row[fields.index("瀕危")])
+		if "是否為方言歷史音" in fields:
+			瀕危 = getCellBgColor(row[fields.index("是否為方言歷史音")])
 		# 音典顔色分區[colors[1]] = types[1]
 		subfgColor = row[fields.index("音典過渡色")].fill.fgColor
 		if subfgColor.type == "rgb":
