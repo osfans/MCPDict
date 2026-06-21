@@ -18762,6 +18762,30 @@
         "marker-color": "#E54E5D",
         "marker-size": "large",
         "marker-symbol": "b",
+        "title": "保山",
+        "語言": "保山漢話",
+        "地點": "雲南保山",
+        "地圖集二分區": "西南官話－雲南片－滇西小片",
+        "音典分區": "藍青－雲南",
+        "陳邡分區": "官話－長江－西南大片－雲南片",
+        "錄入人": "2019212",
+        "字表來源": "《保山方言志》",
+        "參考文獻": "《雲南方言調查報告》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.171464,
+          25.122306
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "large",
+        "marker-symbol": "b",
         "title": "騰衝",
         "語言": "騰衝漢話",
         "地點": "雲南保山騰衝",
