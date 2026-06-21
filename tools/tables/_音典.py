@@ -340,6 +340,12 @@ class 表(_表):
 			if len(列) == 3: 字, 音, 註 = 列
 			elif len(列) == 2:
 				字, 音 = 列
+		elif 名 in ("北海僑港",):
+			列 = 列[0].strip()
+			字 = 列[0]
+			音 = 列[1:]
+			if 音.startswith("{"):
+				註, 音 = 音[1:].split("}", 1)
 		elif 自.文件名.startswith("榕江侗"):
 			列[0] = 列[0].strip().replace(" /", "/").replace(" [", "[")
 			if not 列[0]: return
