@@ -31196,6 +31196,32 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "1883揚州",
+        "語言": "1883揚州話",
+        "地點": "江蘇揚州",
+        "地圖集二分區": "江淮官話－洪巢片",
+        "音典分區": "下江－淮揚",
+        "陳邡分區": "官話－長江－揚州大片－揚州片",
+        "瀕危": "#4D4D4D",
+        "版本": "2026-06-16",
+        "作者": "E.H.Parker",
+        "錄入人": "牛馬貓",
+        "字表來源": "《A Chinese English Dictionary》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.431571,
+          32.405632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
         "marker-size": "large",
         "marker-symbol": "b",
         "title": "揚州",
@@ -32487,7 +32513,7 @@
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "如東",
-        "語言": "如東話",
+        "語言": "如東掘港話",
         "地點": "江蘇南通如東掘港",
         "地圖集二分區": "江淮官話－泰如片",
         "音典分區": "下江－通泰－通如",
