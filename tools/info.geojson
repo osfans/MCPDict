@@ -55613,6 +55613,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
+        "marker-size": "small",
+        "marker-symbol": "l",
+        "title": "1604馬尼拉漳州",
+        "語言": "1604年馬尼拉漳州話",
+        "地點": "海外*菲律賓馬尼拉",
+        "地圖集二分區": "閩語－閩南片－泉漳小片",
+        "音典分區": "閩－閩南",
+        "陳邡分區": "福建－閩南",
+        "瀕危": "#4D4D4D",
+        "方言島": true,
+        "錄入人": "NaruDora",
+        "字表來源": "《近四百年来漳州方言的语音演变》《十六、七世紀之間呂宋的漳州方言》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.984155,
+          14.599517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "華安",
