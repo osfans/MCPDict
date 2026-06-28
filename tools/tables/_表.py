@@ -203,6 +203,7 @@ def docx2tsv(fname, reduceLF=False):
 			行 = 行.replace("}{", "")
 			lines.append(行)
 	行 = "\n".join(lines).replace("}\n{", "").replace("\n}", "}\n")
+	行 = 行.replace("||", "‖")
 	if reduceLF:
 		行 = re.sub(r"\n([\uf900-\ufb00\u3400-\ua000\U00020000-\U0003347f□〇\{])", "\\1", 行, flags=re.M)
 	t = open(tsv, "w", encoding="U8", newline="\n")
@@ -654,7 +655,7 @@ class 表:
 		行 = 行.rstrip('\n')
 		行 = 行.translate(自.kPUAs).translate(自.kShapes)
 		if not 自.爲方言(): return 行
-		行 = 行.replace("...", "⋯").replace("ʔb", "ɓ").replace("ʔd", "ɗ")
+		行 = 行.replace("...", "⋯").replace("ʔb", "ɓ").replace("ʔd", "ɗ").replace("||", "‖")
 		行 = re.sub(fr"\[[{自.調號}]+\]", 自.統調, 行)
 		return 行
 	
