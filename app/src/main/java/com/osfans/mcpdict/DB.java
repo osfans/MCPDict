@@ -98,7 +98,11 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public enum FILTER {
-        ALL, ISLAND, HZ, CURRENT, RECOMMEND, CUSTOM, DIVISION, AREA, EDITOR
+        ALL, HZ, CURRENT, RECOMMEND, CUSTOM, DIVISION, AREA, EDITOR,
+    }
+
+    public enum ISLAND_HISTORY {
+        NONE, ISLAND_ONLY, ISLAND_HIDE, HISTORY_ONLY, HISTORY_HIDE,
     }
 
     private static final String TABLE_NAME = "mcpdict";
@@ -692,9 +696,6 @@ public class DB extends SQLiteAssetHelper {
                 }
                 return array.toArray(new String[0]);
             }
-            case ISLAND -> {
-                return queryLabel("方言島");
-            }
             case CURRENT -> {
                 ArrayList<String> array = new ArrayList<>();
                 if (!TextUtils.isEmpty(label) && !isLanguageHZ(label)) array.add(label);
@@ -712,7 +713,57 @@ public class DB extends SQLiteAssetHelper {
 
     public static String getLanguageClause() {
         String[] languages = getVisibleLanguages();
-        return (languages.length == 0)? "" : String.format("AND 語言 MATCH '%s'", String.join(" OR ", languages));
+        Pref.ISLAND_HISTORY mode = Pref.getIslandHistory();
+        if (mode == Pref.ISLAND_HISTORY.NONE) {
+            return (languages.length == 0)? "" : String.format("AND 語言 MATCH '%s'", String.join(" OR ", languages));
+        }
+        languages = filterIslandHistory(languages);
+        return (languages.length == 0)? "AND FALSE" : String.format("AND 語言 MATCH '%s'", String.join(" OR ", languages));
+    }
+
+    private static String[] filterIslandHistory(String[] languages) {
+        Pref.ISLAND_HISTORY mode = Pref.getIslandHistory();
+        if (mode == Pref.ISLAND_HISTORY.NONE) return languages;
+        if (languages.length == 0) {
+            String selection;
+            switch (mode) {
+                case ISLAND_ONLY:
+                    selection = "方言島 MATCH '1'";
+                    break;
+                case ISLAND_HIDE:
+                    selection = "方言島 MATCH '0'";
+                    break;
+                case HISTORY_ONLY:
+                    selection = "歷史音 != 0";
+                    break;
+                case HISTORY_HIDE:
+                    selection = "歷史音 MATCH '0'";
+                    break;
+                default:
+                    return languages;
+            }
+            return queryLabel(selection);
+        }
+        List<String> result = new ArrayList<>();
+        for (String label : languages) {
+            boolean isIsland = getFieldByLabel(label, "方言島").contentEquals("1");
+            boolean isHistory = !getFieldByLabel(label, "歷史音").contentEquals("0");
+            switch (mode) {
+                case ISLAND_ONLY:
+                    if (isIsland) result.add(label);
+                    break;
+                case ISLAND_HIDE:
+                    if (!isIsland) result.add(label);
+                    break;
+                case HISTORY_ONLY:
+                    if (isHistory) result.add(label);
+                    break;
+                case HISTORY_HIDE:
+                    if (!isHistory) result.add(label);
+                    break;
+            }
+        }
+        return result.toArray(new String[0]);
     }
 
     public static boolean isLanguageHZ(String lang) {
@@ -812,9 +863,9 @@ public class DB extends SQLiteAssetHelper {
         return getColor(lang, 1);
     }
 
-    public static int getEndangeredColor(String lang) {
-        String c = getFieldByLabel(lang, "瀕危");
-        if (TextUtils.isEmpty(c)) return Color.TRANSPARENT;
+    public static int getHistoryColor(String lang) {
+        String c = getFieldByLabel(lang, "歷史音");
+        if (TextUtils.isEmpty(c) || c.contentEquals("0")) return Color.TRANSPARENT;
         c = c.trim();
         try {
             return parseColor(c, 0);

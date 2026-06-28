@@ -155,6 +155,19 @@ public class Pref {
         putInt(R.string.pref_key_filters, value);
     }
 
+    public enum ISLAND_HISTORY {
+        NONE, ISLAND_ONLY, ISLAND_HIDE, HISTORY_ONLY, HISTORY_HIDE,
+    }
+
+    public static ISLAND_HISTORY getIslandHistory() {
+        int i = getInt(R.string.pref_key_island_history);
+        return ISLAND_HISTORY.values()[i];
+    }
+
+    public static void putIslandHistory(int value) {
+        putInt(R.string.pref_key_island_history, value);
+    }
+
     public static String getInput() {
         return getStr(R.string.pref_key_input);
     }

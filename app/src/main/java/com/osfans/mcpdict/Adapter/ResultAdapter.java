@@ -218,7 +218,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                 if (lang.contentEquals(lastLang)) {
                     mViewLang.setVisibility(View.INVISIBLE);
                 } else {
-                    int endangeredBorderColor = DB.getEndangeredColor(lang);
+                    int endangeredBorderColor = DB.getHistoryColor(lang);
                     boolean hasEndangeredColor = endangeredBorderColor != android.graphics.Color.TRANSPARENT;
                     builder.borderColor(endangeredBorderColor == android.graphics.Color.TRANSPARENT ? Integer.MIN_VALUE : endangeredBorderColor);
                     builder.borderThickness(hasEndangeredColor ? 6 : 3);

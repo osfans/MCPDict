@@ -5,6 +5,27 @@
             <group android:id="@+id/group_hz_range" android:enabled="true" android:checkableBehavior="single"/>
         </menu>
     </item>
+    <item android:title="@string/island_history" android:id="@+id/menu_group_island_history">
+        <menu>
+            <group android:id="@+id/group_island_history" android:enabled="true" android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menu_item_both_island_history"
+                    android:title="@string/option_both_island_history" />
+                <item
+                    android:id="@+id/menu_item_island_only"
+                    android:title="@string/option_island_only" />
+                <item
+                    android:id="@+id/menu_item_island_hide"
+                    android:title="@string/option_island_hide" />
+                <item
+                    android:id="@+id/menu_item_history_only"
+                    android:title="@string/option_history_only" />
+                <item
+                    android:id="@+id/menu_item_history_hide"
+                    android:title="@string/option_history_hide" />
+            </group>
+        </menu>
+    </item>
     <item
         android:id="@+id/menu_item_allow_variants"
         android:checkable="true"

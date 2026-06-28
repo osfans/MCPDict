@@ -348,7 +348,6 @@
     <string name="show_languages">顯示語言：</string>
     <string-array name="pref_entries_filters">
         <item>顯示全部</item>
-        <item>僅方言島</item>
         <item>僅漢字</item>
         <item>當前語言</item>
         <item>推薦语言</item>
@@ -506,4 +505,11 @@
     <string name="pref_key_hint_direction">HINT_DIRECTION</string>
     <string name="guess_division">方言片</string>
     <string name="guess_sub_division">方言小片</string>
+    <string name="pref_key_island_history">KEY_ISLAND_HISTORY</string>
+    <string name="island_history">方言島/歷史音</string>
+    <string name="option_island_only">僅方言島</string>
+    <string name="option_island_hide">隱藏方言島</string>
+    <string name="option_history_only">僅歷史音</string>
+    <string name="option_history_hide">隱藏歷史音</string>
+    <string name="option_both_island_history">不限</string>
 </resources>

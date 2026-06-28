@@ -199,9 +199,9 @@ def 加載(省=None):
 
 		orders = [列[i].strip() for i in ("地圖集二排序", "音典排序", "陳邡排序")]
 		colors = [row[fields.index(i)].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典顏色","陳邡顏色")]
-		瀕危 = ""
+		歷史音 = "0"
 		if "是否為方言歷史音" in fields:
-			瀕危 = getCellBgColor(row[fields.index("是否為方言歷史音")])
+			歷史音 = getCellBgColor(row[fields.index("是否為方言歷史音")])
 		# 音典顔色分區[colors[1]] = types[1]
 		subfgColor = row[fields.index("音典過渡色")].fill.fgColor
 		if subfgColor.type == "rgb":
@@ -280,8 +280,8 @@ def 加載(省=None):
 			"繁簡":繁簡,
 			"聲調":聲調
 		}
-		if 瀕危:
-			d[簡稱]["瀕危"] = 瀕危
+		if 歷史音:
+			d[簡稱]["歷史音"] = 歷史音
 		if not 經緯度: continue
 		if 經緯度 in 經緯度典:
 			print(f"{語言} 經緯度 {經緯度} 與 {經緯度典[經緯度]} {','.join(經緯度.split(',')[::-1])} 重複")
@@ -301,7 +301,7 @@ def 加載(省=None):
 				"coordinates": eval(f"[{經緯度}]")
 			}
 		}
-		for i in ["語言", "地點", "地圖集二分區", "音典分區", "陳邡分區", "瀕危", '方言島', '版本', '作者', '錄入人', '維護人', '字表來源', '參考文獻', '補充閲讀']:
+		for i in ["語言", "地點", "地圖集二分區", "音典分區", "陳邡分區", "歷史音", '方言島', '版本', '作者', '錄入人', '維護人', '字表來源', '參考文獻', '補充閲讀']:
 			if d[簡稱].get(i):
 				Feature["properties"][i] = d[簡稱][i]
 		FeatureCollection["features"].append(Feature)

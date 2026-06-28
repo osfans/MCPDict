@@ -102,11 +102,35 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 }
                 subMenu.setGroupCheckable(R.id.group_hz_range, true, true);
             }
+            // Set island/history radio group checked state
+            Pref.ISLAND_HISTORY currentMode = Pref.getIslandHistory();
+            int islandHistoryId;
+            switch (currentMode) {
+                case ISLAND_ONLY -> islandHistoryId = R.id.menu_item_island_only;
+                case ISLAND_HIDE -> islandHistoryId = R.id.menu_item_island_hide;
+                case HISTORY_ONLY -> islandHistoryId = R.id.menu_item_history_only;
+                case HISTORY_HIDE -> islandHistoryId = R.id.menu_item_history_hide;
+                default -> islandHistoryId = R.id.menu_item_both_island_history;
+            }
+            menu.findItem(islandHistoryId).setChecked(true);
             popup.setOnMenuItemClickListener(item1 -> {
                 int id = item1.getItemId();
                 int gid = item1.getGroupId();
                 if (gid == R.id.group_hz_range) {
                     Pref.putInt(R.string.pref_key_charset, id);
+                    search();
+                }
+                else if (gid == R.id.group_island_history) {
+                    if (id == R.id.menu_item_both_island_history)
+                        Pref.putIslandHistory(Pref.ISLAND_HISTORY.NONE.ordinal());
+                    else if (id == R.id.menu_item_island_only)
+                        Pref.putIslandHistory(Pref.ISLAND_HISTORY.ISLAND_ONLY.ordinal());
+                    else if (id == R.id.menu_item_island_hide)
+                        Pref.putIslandHistory(Pref.ISLAND_HISTORY.ISLAND_HIDE.ordinal());
+                    else if (id == R.id.menu_item_history_only)
+                        Pref.putIslandHistory(Pref.ISLAND_HISTORY.HISTORY_ONLY.ordinal());
+                    else if (id == R.id.menu_item_history_hide)
+                        Pref.putIslandHistory(Pref.ISLAND_HISTORY.HISTORY_HIDE.ordinal());
                     search();
                 }
                 else if (id == R.id.menu_item_fullscreen) toggleFullscreen();

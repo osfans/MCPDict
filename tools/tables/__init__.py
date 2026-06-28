@@ -272,8 +272,8 @@ def getLangs(items, 參數, args):
 	for mod in mods:
 		if mod in 詳情:
 			d = 詳情[mod]
-			if "瀕危" not in d:
-				d["瀕危"] = None
+			if "歷史音" not in d:
+				d["歷史音"] = 0
 			try:
 				if d["字表格式"]:
 					語 = import_module(f'tables._{d["字表格式"]}').表()
@@ -419,7 +419,7 @@ def getLangs(items, 參數, args):
 			d = dict()
 			d["語言"] = 語.全稱 if 語.全稱 else mod
 			d["簡稱"] = 語.簡稱 if 語.簡稱 else mod
-			d["瀕危"] = None
+			d["歷史音"] = 0
 			d["地圖集二顏色"] = 語.顏色 if 數 == 0 else None
 			d["地圖集二分區"] = None
 			語.info = d
@@ -433,8 +433,8 @@ def getLangs(items, 參數, args):
 		if 語.說明: 語.info["說明"] = 語.說明
 		if not keys:
 			keys = list(語.info.keys())
-			if "瀕危" not in keys:
-				keys.append("瀕危")
+			if "歷史音" not in keys:
+				keys.append("歷史音")
 		if args.output:
 			語.存(args.output)
 		語組.append(語)
