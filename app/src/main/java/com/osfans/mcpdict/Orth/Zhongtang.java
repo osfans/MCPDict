@@ -18,6 +18,7 @@ public class Zhongtang {
     public static String display(String pys, String[] list) {
         StringBuilder sb = new StringBuilder();
         String[] ss = pys.split("/");
+        list = new String[] {"0"}; //force 0
         int n = list.length;
         String[] names = Pref.getStringArray(R.array.pref_entries_zt_display);
         for (String system : list) {
