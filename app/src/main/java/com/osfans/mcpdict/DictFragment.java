@@ -41,6 +41,8 @@ import com.osfans.mcpdict.UI.ResultFragment;
 import com.osfans.mcpdict.UI.SearchView;
 import com.osfans.mcpdict.Util.Pref;
 
+import java.util.Arrays;
+import java.util.LinkedHashSet;
 import java.util.Objects;
 
 public class DictFragment extends Fragment implements RefreshableFragment {
@@ -49,10 +51,12 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private View selfView;
     private SearchView searchView;
     private Spinner spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions, spinnerRecommend, spinnerEditor, spinnerCustomScheme;
+    private Spinner spinnerCustomScope;
     private AutoCompleteTextView acSearchLang, acCustomLang;
     private ResultFragment fragmentResult;
     ArrayAdapter<CharSequence> adapterDict, adapterProvince, adapterRecommend, adapterEditor, adapterCustomScheme;
     DivisionAdapter adapterDivision;
+    DivisionAdapter adapterCustomScope;
     private View layoutSearchOption, layoutSearchLang;
     private LinearLayout layoutFilters;
     private View buttonFullscreen;
@@ -281,11 +285,25 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             acCustomLang.setText("");
             acCustomLang.requestFocus();
         });
-        CheckBox checkCustomAll = selfView.findViewById(R.id.checkBox_custom_all);
-        checkCustomAll.setChecked(Pref.getBool(R.string.pref_key_custom_languages_all, false));
-        checkCustomAll.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            Pref.putBool(R.string.pref_key_custom_languages_all, isChecked);
-            if (Pref.getFilter() == FILTER.CUSTOM) search();
+        spinnerCustomScope = selfView.findViewById(R.id.spinner_custom_scope);
+        adapterCustomScope = new DivisionAdapter(requireActivity());
+        spinnerCustomScope.setAdapter(adapterCustomScope);
+        spinnerCustomScope.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String scope;
+                if (position == 0) {
+                    scope = "ALL";
+                } else if (position == 1) {
+                    scope = "";
+                } else {
+                    scope = Objects.toString(adapterCustomScope.getItem(position), "");
+                }
+                Pref.setCustomLanguageSchemeScope(scope);
+                if (Pref.getFilter() == FILTER.CUSTOM) search();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
         CheckBox checkColorByScheme = selfView.findViewById(R.id.checkBox_color_by_scheme);
         checkColorByScheme.setChecked(Pref.getBool(R.string.pref_key_custom_language_color_by_scheme, false));
@@ -537,6 +555,38 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         if (acCustomLang != null) {
             acCustomLang.setHint(Pref.getCustomLanguageSummary());
         }
+        refreshCustomScope();
+    }
+
+    private void refreshCustomScope() {
+        if (adapterCustomScope == null) return;
+        adapterCustomScope.clear();
+        adapterCustomScope.add("全部方案");
+        adapterCustomScope.add("当前方案");
+        String[] names = Pref.getCustomLanguageSchemeNames();
+        LinkedHashSet<String> parents = new LinkedHashSet<>();
+        for (String name : names) {
+            int idx = -1;
+            while ((idx = name.indexOf("－", idx + 1)) != -1) {
+                parents.add(name.substring(0, idx));
+            }
+        }
+        String[] sortedParents = parents.toArray(new String[0]);
+        Arrays.sort(sortedParents);
+        for (String p : sortedParents) {
+            adapterCustomScope.add(p);
+        }
+        String scope = Pref.getCustomLanguageSchemeScope();
+        int index;
+        if ("ALL".equals(scope)) {
+            index = 0;
+        } else if (scope.isEmpty()) {
+            index = 1;
+        } else {
+            index = adapterCustomScope.getPosition(scope);
+        }
+        if (index < 0 || index >= adapterCustomScope.getCount()) index = 0;
+        spinnerCustomScope.setSelection(index);
     }
 
     private interface SchemeNameHandler {

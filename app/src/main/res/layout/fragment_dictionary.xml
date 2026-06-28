@@ -225,11 +225,10 @@
                     app:layout_constraintStart_toEndOf="@id/text_custom_lang"
                     app:layout_constraintTop_toTopOf="@id/text_custom_lang">
 
-                    <CheckBox
-                        android:id="@+id/checkBox_custom_all"
+                    <Spinner
+                        android:id="@+id/spinner_custom_scope"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/custom_languages_all" />
+                        android:layout_height="wrap_content" />
 
                     <CheckBox
                         android:id="@+id/checkBox_color_by_scheme"

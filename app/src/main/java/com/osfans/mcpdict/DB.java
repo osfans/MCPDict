@@ -685,8 +685,7 @@ public class DB extends SQLiteAssetHelper {
                 }
             }
             case CUSTOM -> {
-                boolean includeAllSchemes = Pref.getBool(R.string.pref_key_custom_languages_all, false);
-                Set<String> customs = includeAllSchemes ? Pref.getAllCustomLanguages() : Pref.getCustomLanguages();
+                Set<String> customs = Pref.getCustomLanguages();
                 if (customs.isEmpty()) return new String[]{};
                 ArrayList<String> array = new ArrayList<>();
                 for (String lang: getLanguages()) {
