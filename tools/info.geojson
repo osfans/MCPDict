@@ -21714,6 +21714,29 @@
         "marker-color": "#E54E5D",
         "marker-size": "medium",
         "marker-symbol": "b",
+        "title": "永善",
+        "語言": "永善話",
+        "地點": "雲南昭通永善",
+        "地圖集二分區": "西南官話－川黔片－成渝小片",
+        "音典分區": "中上江－荆益－川黔",
+        "陳邡分區": "官話－長江－西南大片－川南片",
+        "錄入人": "2019212",
+        "字表來源": "《永善方言志》《云南方言调查报告》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.648016,
+          28.234468
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "金沙",
         "語言": "金沙漢話",
         "地點": "貴州畢節金沙",
@@ -29314,6 +29337,7 @@
         "陳邡分區": "官話－北下江－西安慶大片－西安慶片",
         "版本": "2025-05-30",
         "錄入人": "Resound",
+        "維護人": "空島。",
         "字表來源": "《贵池（城区）方言语音研究》"
       },
       "geometry": {
@@ -36280,7 +36304,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
-        "marker-size": "large",
+        "marker-size": "small",
         "marker-symbol": "d",
         "title": "龍游湖鎮東",
         "語言": "龍游湖鎮湯谿話",
@@ -36304,7 +36328,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#5E98EB",
-        "marker-size": "small",
+        "marker-size": "large",
         "marker-symbol": "d",
         "title": "金華",
         "語言": "金華話",

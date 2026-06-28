@@ -92,7 +92,6 @@
 丹	tan1	
 爲	ui2	1,非~
 爲	ui6	2,~何
-爲	lap7	
 主	tsu3	
 麗	le2	1,高~
 麗	lei3	2
@@ -208,9 +207,9 @@
 伓	m̩6	原文注为不
 衆	tsiɔŋ5	
 優	iu1	
-伙	h2ue3	
+伙	hue3	
 會	ei6	1
-會	h2ue6	2
+會	hue6	2
 傘	suã5	
 偉	ui3	
 傳	tʰuĩ2	1,~世
@@ -405,9 +404,8 @@
 鳳	hɔŋ6	
 凭	pin2	文~
 凶	hiɔŋ1	
-凹	tʰap7	2,本字是凹
-凹	lap7	
-凹	lap7	本字是凹
+凹	tʰap7	1,本字是凹,~嘴
+凹	lap7	2,本字是塌
 出	tsʰut7	
 擊	kik7	
 鑿	tsʰak8	
@@ -559,7 +557,6 @@
 厚	kau6	2
 厝	tsʰu5	
 原	ɡuan2	
-原	lap7	
 廂	siɔ̃1	
 厦	hɛ6	
 廚	tu2	
@@ -684,7 +681,7 @@
 咀	tsou3	
 咀	tsiu5	
 咈	pui5	
-和	h2ue2	1,~尚
+和	hue2	1,~尚
 和	ho2	2
 咎	kiu6	
 詠	iŋ6	
@@ -778,7 +775,7 @@
 四	si5	1
 四	su5	2
 囝	kiã3	原文注为子
-回	h2ue2	
+回	hue2	
 囟	sin5	
 因	in1	
 囡	kin2	原文注为呱,~仔
@@ -854,7 +851,8 @@
 堪	kʰam1	
 堵	tu3	1
 堵	tou3	2
-塌	tʰap7	原文注为凹
+塌	tʰap7	原文注为凹,~嘴
+塌	lap7	原文注为凹
 塍	tsʰan2	原文记作田
 塔	tʰaʔ7	
 塗	tʰou2	原文注为土
@@ -971,6 +969,7 @@
 姻	in1	
 姿	tsu1	
 威	ui1	
+嬈	hiau2	原文注为嫐
 嬌	kiau1	
 娉	pʰiŋ5	
 娘	niɔ̃2	
@@ -994,7 +993,7 @@
 嫂	so3	
 嫉	tsit8	
 嫌	hiam2	
-嫐	hiau2*	
+嫐	hiau2*	本字是娆
 嬪	pin6	
 嫖	pʰiau2	
 嫡	tik7	
@@ -1142,7 +1141,7 @@
 山	san1	2
 嶼	su6	
 歲	sue5	1
-歲	h2ue5	2
+歲	hue5	2
 岑	ɡim2	
 崗	kɔŋ1	
 島	to3	
@@ -1255,7 +1254,7 @@
 度	tɔk8	2
 座	tso6	
 庭	tiã2	
-庵	am1*	
+庵	am1	
 庶	su5	
 康	kʰɔŋ1	
 庸	iɔŋ2	
@@ -1327,7 +1326,7 @@
 徑	kiŋ5	2
 待	tai6	1,克己~人
 待	tʰai6	2,听~
-徊	h2ue2	
+徊	hue2	
 律	lut8	
 徒	tou2	
 得	tit7	1,应~
@@ -1353,7 +1352,6 @@
 忝	tʰĩ1	1
 忝	tʰiam1	2
 忠	tiɔŋ1	
-忤	ɛ̃3	1
 忤	ŋõ3	1
 忤	õu3	2
 憂	iu1	
@@ -1413,7 +1411,7 @@
 悉	sit7	
 悌	tei6	
 悍	han6	
-悔	h2ue5	
+悔	hue5	
 悖	pue5	
 悛	tsun5	
 悛	tsʰuan1	~解
@@ -1485,7 +1483,6 @@
 成	tsiã2	1,做~
 成	siŋ2	2
 我	ɡua3	1
-我	ɛ̃3	2
 我	ŋõ3	2
 我	õu3	3
 戒	kai5	
@@ -1749,7 +1746,6 @@
 整	tsiŋ3	
 敷	hu1	
 文	bun2	
-文	lap7	
 齋	tsai1	
 斗	tou3	1
 斗	tou5	2
@@ -1987,6 +1983,7 @@
 梁	niɔ̃2	1
 梁	liaŋ2	2
 梅	bue2	
+梒	ham2	落~
 梓	tsu3	
 梢	sau1	
 梢	siau1	~钱
@@ -2160,7 +2157,6 @@
 泣	kʰip7	
 泥	nĩ2	
 注	tsu5	
-注	lap7	
 淚	lui6	
 泯	bin3	
 泰	tʰai5	
@@ -2253,7 +2249,7 @@
 湖	ou2	2,~
 灣	uan1	
 溼	sip7	
-潰	h2ue5	
+潰	hue5	
 濺	tsuã6	
 源	ɡuan2	
 溢	it8	
@@ -2296,12 +2292,11 @@
 濯	tsɔk8	
 灌	kuan5	
 灠	lam3	~烂
-火	h2ue3	
-火	tsʰut7	
+火	hue3	
 滅	biat8	
 燈	tiŋ1	
 灰	hu1	1,火~,本字是烌
-灰	h2ue1	2
+灰	hue1	2
 靈	liŋ2	
 竈	tsau5	
 灸	ku5	
@@ -2313,6 +2308,7 @@
 炎	iam2	
 炒	tsʰa3	
 炕	kʰɔŋ5	
+炪	tsʰut7	~火
 炭	tʰuã5	
 炮	pʰau6	
 點	tiam3	
@@ -2326,7 +2322,6 @@
 燭	tsik7	1
 燭	tsiɔk7	2
 烟	ian1	
-烟	tsʰut7	
 煩	huan2	
 燒	sio1	
 熱	dziat8	
@@ -2865,7 +2860,6 @@
 粓	pʰun1	本字是潘,米~
 粕	pʰoʔ7	
 粗	tsʰou1	
-粘	am1	
 粙	tiu6	原文注为稻
 糶	tʰio5	
 粟	tsʰik7	1
@@ -2919,7 +2913,7 @@
 純	sun2	
 紗	sɛ1	
 綱	kɔŋ1	
-納	tʰap8	
+納	lap8	
 縱	tsiɔŋ5	
 綸	lun2	
 紛	hun1	
@@ -2940,7 +2934,7 @@
 絨	dziɔŋ2	
 結	kat7	1
 結	kiat7	2,~果
-繪	h2ue6	
+繪	hue6	
 給	kip7	~付
 絡	lɔk8	
 絶	tsuat8	
@@ -3071,7 +3065,6 @@
 股	tou3	本字未知,脚后~
 肢	tsi1	
 膚	hu1	
-膚	hiap8	2,~下
 肥	pui2	
 肩	kian1	1
 肩	kiŋ1	2
@@ -3123,6 +3116,7 @@
 脥	keʔ7	1,垢~
 脥	kiap7	1
 脥	kueʔ7	2
+脥	hiap8	2,~下
 脱	tʰuat7	2
 脬	pʰa1	玍~
 脯	pou3	
@@ -3130,7 +3124,7 @@
 臉	liam3	
 脾	pi2	
 臘	laʔ8	
-臘	tʰap8	~月
+臘	lap8	~月
 腐	hu6	
 腑	hu3	
 腔	kʰaŋ1	1
@@ -3506,7 +3500,7 @@
 誤	ɡou6	
 誥	ko5	
 誘	iu3	
-誨	h2ue5	
+誨	hue5	
 誑	kʰɔŋ5	
 説	sueʔ7	1
 説	suat7	2,~合
@@ -3571,7 +3565,7 @@
 賢	ɡau2	本字是𠢕,举~人
 敗	pai5	
 賬	tiɔ̃5	
-貨	h2ue5	
+貨	hue5	
 質	tsit7	
 販	huan5	
 貪	tʰam1	
@@ -3849,9 +3843,9 @@
 鉤	kau1	
 鈁	pʰuĩ1	
 錢	tsĩ2	
-鉗	am1	
 鉗	kʰĩ2	1
 鉗	kʰiam2	3
+鉗	am1*	~粘
 鉢	puaʔ8	
 鉞	uat8	
 鑽	tsuĩ5	
@@ -3910,6 +3904,7 @@
 問	muĩ6	1
 問	bun6	2
 閏	lun6	
+闈	ui2	
 闲	han2	1,~游
 闲	iŋ2	2
 間	kan1	1,旱~
@@ -3917,7 +3912,6 @@
 間	kiŋ1	3,房~
 悶	bun6	
 閘	tsaʔ8	
-鬧	ui2	
 鬧	lau6	~热
 閨	kui1	
 聞	bun2	
