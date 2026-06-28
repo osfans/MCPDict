@@ -271,14 +271,20 @@ class 表:
 			if g := 自.find(name): return g
 		if os.sep not in name:
 			name = 自.全路徑(name)
-		if g := glob.glob(name): return g
-		if g := glob.glob(glob.escape(name)): return g
-		if g := glob.glob(re.sub("(\\.[^.]+)$", "([0-9])\\1", name)): return g
-		if g := glob.glob(re.sub("(\\.[^.]+)$", "([0-9][0-9])\\1", name)): return g
-		if g := glob.glob(re.sub("(\\.[^.]+)$", " ([0-9])\\1", name)): return g
-		if g := glob.glob(re.sub("(\\.[^.]+)$", " ([0-9][0-9])\\1", name)): return g
-		if g := glob.glob(re.sub("(\\.[^.]+)$", "[0-9]*\\1", name)): return g
-		if g := glob.glob(re.sub("(\\.[^.]+)$", "*\\1", name)): return g
+		候選 = [
+			name,
+			name.replace("\\[", "[").replace("\\]", "]"),
+			name.replace("[[]", "[").replace("[]]", "]"),
+		]
+		for n in 候選:
+			if g := glob.glob(n): return g
+			if g := glob.glob(glob.escape(n)): return g
+			if g := glob.glob(re.sub("(\\.[^.]+)$", "([0-9])\\1", n)): return g
+			if g := glob.glob(re.sub("(\\.[^.]+)$", "([0-9][0-9])\\1", n)): return g
+			if g := glob.glob(re.sub("(\\.[^.]+)$", " ([0-9])\\1", n)): return g
+			if g := glob.glob(re.sub("(\\.[^.]+)$", " ([0-9][0-9])\\1", n)): return g
+			if g := glob.glob(re.sub("(\\.[^.]+)$", "[0-9]*\\1", n)): return g
+			if g := glob.glob(re.sub("(\\.[^.]+)$", "*\\1", n)): return g
 		if isValidSrc(name) and 自.文件名:
 			tmp = 自.文件名
 			自.文件名 = getSrcName(自.文件名, 自.頁名)

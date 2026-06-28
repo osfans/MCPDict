@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import datetime
-import os, re, json, fnmatch
+import os, re, json, fnmatch, glob
 from importlib import import_module
 import tables._詳情
 from pypinyin import pinyin, Style
@@ -132,7 +132,8 @@ def getLangsByArgv(infos, argv):
 			bas = [ba, ba2, ba3, ba4, ba5, ba6]
 			found = False
 			for i in infos:
-				if fnmatch.filter(bas, infos[i]["文件名"]):
+				pattern = infos[i]["文件名"]
+				if fnmatch.filter(bas, pattern) or fnmatch.filter(bas, glob.escape(pattern)):
 					l.append(i)
 					found = True
 					break
