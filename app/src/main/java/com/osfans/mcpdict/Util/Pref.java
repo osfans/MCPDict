@@ -317,8 +317,10 @@ public class Pref {
             if (isParent) {
                 for (Map.Entry<String, LinkedHashSet<String>> entry : store.schemes.entrySet()) {
                     if (entry.getKey().startsWith(prefix) && matchesCustomLanguage(entry.getValue(), lang, byLabel, byLanguage)) {
+                        int idx = 0;
                         for (String schemeName : store.schemes.keySet()) {
-                            if (TextUtils.equals(schemeName, store.current)) return schemeIndexToColor(store.schemes.keySet().stream().toList().indexOf(schemeName));
+                            if (TextUtils.equals(schemeName, store.current)) return schemeIndexToColor(idx);
+                            idx++;
                         }
                     }
                 }

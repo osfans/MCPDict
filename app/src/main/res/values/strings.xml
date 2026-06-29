@@ -367,7 +367,7 @@
     <string name="custom_languages_all">全部</string>
     <string name="custom_language_color_by_scheme">配色</string>
     <string name="custom_scheme_default_name">默認方案</string>
-    <string name="custom_scheme_name_hint">方案名稱</string>
+    <string name="custom_scheme_name_hint">方案名稱（空格可分級，如：江淮 洪巢）</string>
     <string name="custom_scheme_save">保存</string>
     <string name="custom_scheme_new">新建</string>
     <string name="custom_scheme_rename">改名</string>
