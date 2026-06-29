@@ -343,7 +343,7 @@ class 表(_表):
 		elif 名 in ("南海沙頭"):
 			行 = re.sub(r"^(\d+)(\()", "\\1□\\2", 行)
 			行 = re.sub(r"^(\d+)", "[\\1]", 行)
-		elif 名 in ("筠連",):
+		elif 名 in ("筠連","自貢仲權"):
 			列 = 行.split("\t")
 			if not 行.strip(): return
 			if 列[0] == "" and 列[1].startswith("阴平"):
