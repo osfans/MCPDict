@@ -57907,6 +57907,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F08460",
+        "marker-size": "small",
+        "marker-symbol": "l",
+        "title": "1600福州",
+        "語言": "1600年代福州話（戚林八音）",
+        "地點": "福建福州",
+        "地圖集二分區": "閩語－閩東片－侯官小片",
+        "音典分區": "閩－閩東",
+        "陳邡分區": "福建－閩東",
+        "歷史音": "#4D4D4D",
+        "錄入人": "NaruDora",
+        "字表來源": "字統網",
+        "補充閲讀": "《福州話的語音學研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.234267,
+          26.024735
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F08460",
         "marker-size": "medium",
         "marker-symbol": "l",
         "title": "福清",
