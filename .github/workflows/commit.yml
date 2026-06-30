@@ -2,6 +2,9 @@ name: Commit
 
 on: [push]
 
+permissions:
+  contents: write
+
 env:
   CI_NAME: Commit CI
 
@@ -11,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
       with:
         submodules: recursive
         fetch-depth: 0
 
     - name: set up JDK 21
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v5
       with:
         java-version: '21'
         distribution: 'temurin'
@@ -65,17 +68,27 @@ jobs:
         7z a tools.7z tools/requirements.txt tools/tables/data/HZUnified.txt tools/tables/data/正字.tsv tools/tables/data/正形.tsv tools/tables/data/正調.tsv tools/tables/data/正音.tsv tools/tables/data/私用字.tsv tools/tables/output/_詳情.json tools/*.pyw tools/make.py tools/tables/*.py
         7z a warnings.7z tools/warnings.txt
 
+    - name: Update latest tag
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git tag -f latest
+        git push origin refs/tags/latest --force
+
     - name: Create latest release
-      uses: 'marvinpinto/action-automatic-releases@latest'
-      with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        automatic_release_tag: latest
-        prerelease: false
-        title: 'Latest'
-        files: |
-          app/build/outputs/apk/release/*.APK
-          *.7z
-          tools/[0-9]*.txt
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        if gh release view latest > /dev/null 2>&1; then
+          gh release delete latest --yes
+        fi
+
+        shopt -s nullglob
+        assets=(app/build/outputs/apk/release/*.APK *.7z tools/[0-9]*.txt)
+
+        gh release create latest "${assets[@]}" \
+          --title 'Latest' \
+          --generate-notes
 
     - name: Deploy to SF
       run: |
