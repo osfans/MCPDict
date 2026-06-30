@@ -59935,6 +59935,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "會昌站塘",
+        "語言": "會昌站塘話",
+        "地點": "江西贛州會昌站塘南坑新屋背",
+        "地圖集二分區": "客家話－雩信片",
+        "音典分區": "閩－閩西－北",
+        "陳邡分區": "客家－貢水－貢水大片－雩都片",
+        "版本": "2026-06-30",
+        "錄入人": "syami",
+        "字表來源": "《江西会昌站塘方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.785961,
+          25.433621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
         "marker-size": "medium",
         "marker-symbol": "h",
         "title": "寧都",
