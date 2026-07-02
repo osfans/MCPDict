@@ -50288,6 +50288,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EBC75E",
+        "marker-size": "small",
+        "marker-symbol": "i",
+        "title": "分韻撮要",
+        "語言": "分韻撮要",
+        "地點": "廣東廣州",
+        "地圖集二分區": "粤語－廣府片",
+        "音典分區": "嶺南－珠江－穗城",
+        "陳邡分區": "廣東－南粤－廣肇大片－廣肇片,歷史音",
+        "歷史音": "#4D4D4D",
+        "錄入人": "NaruDora",
+        "字表來源": "字統網"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.256481,
+          23.134273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EBC75E",
         "marker-size": "medium",
         "marker-symbol": "i",
         "title": "桂平",
