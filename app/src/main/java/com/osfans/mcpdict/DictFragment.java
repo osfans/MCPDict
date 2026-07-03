@@ -570,6 +570,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             while ((idx = name.indexOf("－", idx + 1)) != -1) {
                 parents.add(name.substring(0, idx));
             }
+            parents.add(name);
         }
         String[] sortedParents = parents.toArray(new String[0]);
         Arrays.sort(sortedParents);
