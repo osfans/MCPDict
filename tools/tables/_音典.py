@@ -64,6 +64,9 @@ class 表(_表):
 					for a, b in zip(音.split("/"), 註.split("/")):
 						l.append((字, a, b))
 				return l
+			if 名 in ("瀏陽小河",):
+				if 字: 自.字 = 字
+				else: 字 = 自.字
 			if not 字 or not 音: return
 			if 名 in ("信宜新寶",):
 				if 字 == 註: 註 = ""
@@ -337,10 +340,10 @@ class 表(_表):
 				if 字 == "󿕅": 字 = "𦢊"
 			elif 名 in ("1600福州",):
 				自.爲音 = False
-				音 += f"({列[1].rstrip("聲")}聲 {列[2]})"
+				音 += f"{{{列[1].rstrip("聲")}聲 {列[2]}}}"
 			elif 名 in ("分韻撮要",):
 				自.爲音 = False
-				音 += f"({列[1].rstrip("聲")}聲 {列[2]} {列[3]})"
+				音 += f"{{{列[1].rstrip("聲")}聲 {列[2]} {列[3]}}}"
 		elif 名 in ("望江賽口",):
 			列 = 列[0].split(" ")
 			if len(列) == 3: 字, 音, 註 = 列

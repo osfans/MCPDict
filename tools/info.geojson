@@ -25836,6 +25836,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EB6E77",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "洵陽蜀河",
+        "語言": "洵陽蜀河話",
+        "地點": "陝西安康洵陽蜀河",
+        "地圖集二分區": "江淮官話－竹柞片",
+        "音典分區": "中上江－荆益－竹鄖",
+        "陳邡分區": "官話－長江－西南大片－江漢片",
+        "方言島": true,
+        "版本": "2026-07-03",
+        "錄入人": "DaiDzao",
+        "字表來源": "《旬阳蜀河方言同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.69937,
+          32.93672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EB6E77",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "竹溪",
@@ -30440,6 +30465,31 @@
         "coordinates": [
           117.017496,
           32.654006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "鳳臺",
+        "語言": "鳳臺話",
+        "地點": "安徽淮南鳳臺",
+        "地圖集二分區": "中原官話－信蚌片",
+        "音典分區": "下江－淮西－淮河",
+        "陳邡分區": "官話－寧夏與淮河－淮河大片－淮河片",
+        "版本": "2026-07-03",
+        "錄入人": "DaiDzao",
+        "字表來源": "《凤台话语音研究》",
+        "補充閲讀": "《安徽淮河流域方言语音比较研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.531781,
+          32.761515
         ]
       }
     },
@@ -50288,30 +50338,6 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#EBC75E",
-        "marker-size": "small",
-        "marker-symbol": "i",
-        "title": "分韻撮要",
-        "語言": "分韻撮要",
-        "地點": "廣東廣州",
-        "地圖集二分區": "粤語－廣府片",
-        "音典分區": "嶺南－珠江－穗城",
-        "陳邡分區": "廣東－南粤－廣肇大片－廣肇片,歷史音",
-        "歷史音": "#4D4D4D",
-        "錄入人": "NaruDora",
-        "字表來源": "字統網"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.256481,
-          23.134273
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#EBC75E",
         "marker-size": "medium",
         "marker-symbol": "i",
         "title": "桂平",
@@ -52770,6 +52796,30 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-color": "#5ED154",
+        "marker-size": "small",
+        "marker-symbol": "j",
+        "title": "賓陽甘棠",
+        "語言": "賓陽甘棠平話",
+        "地點": "廣西南寧賓陽甘棠",
+        "地圖集二分區": "平話和土話－桂南片",
+        "音典分區": "嶺南－鬱潯－橫淳",
+        "陳邡分區": "官話－桂南－桂西大片－橫州片",
+        "版本": "2025-07-10",
+        "錄入人": "纯情绝育大母猴",
+        "字表來源": "《广西宾阳客话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.002724,
+          22.983616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-color": "#EBC75E",
         "marker-size": "small",
         "marker-symbol": "i",
@@ -52908,30 +52958,6 @@
         "coordinates": [
           110.443083,
           24.269813
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#EBC75E",
-        "marker-size": "small",
-        "marker-symbol": "i",
-        "title": "蒙山陳塘",
-        "語言": "蒙山陳塘話",
-        "地點": "廣西梧州蒙山陳塘",
-        "地圖集二分區": "粤語－勾漏片",
-        "音典分區": "嶺南－蒼梧－蒙山",
-        "陳邡分區": "官話－桂南－桂東大片－梧州片",
-        "錄入人": "纯情绝育大母猴",
-        "字表來源": "《广西蒙山粤语研究》",
-        "補充閲讀": "《广西蒙山陈塘话音系》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          110.683479,
-          23.900885
         ]
       }
     },
@@ -53191,6 +53217,30 @@
         "coordinates": [
           111.107596,
           23.26782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#EBC75E",
+        "marker-size": "small",
+        "marker-symbol": "i",
+        "title": "蒙山陳塘",
+        "語言": "蒙山陳塘話",
+        "地點": "廣西梧州蒙山陳塘",
+        "地圖集二分區": "粤語－勾漏片",
+        "音典分區": "嶺南－蒼梧－廣信",
+        "陳邡分區": "官話－桂南－桂東大片－梧州片",
+        "錄入人": "纯情绝育大母猴",
+        "字表來源": "《广西蒙山粤语研究》",
+        "補充閲讀": "《广西蒙山陈塘话音系》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.683479,
+          23.900885
         ]
       }
     },
@@ -54400,30 +54450,6 @@
         "coordinates": [
           108.682233,
           23.114566
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#5ED154",
-        "marker-size": "small",
-        "marker-symbol": "j",
-        "title": "賓陽甘棠",
-        "語言": "賓陽甘棠平話",
-        "地點": "廣西南寧賓陽甘棠",
-        "地圖集二分區": "平話和土話－桂南片",
-        "音典分區": "嶺南－邕賓－賓州",
-        "陳邡分區": "官話－桂南－桂西大片－賓陽片",
-        "版本": "2025-07-10",
-        "錄入人": "纯情绝育大母猴",
-        "字表來源": "《广西宾阳客话语音研究》"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          109.002724,
-          22.983616
         ]
       }
     },
@@ -58014,7 +58040,7 @@
         "陳邡分區": "福建－閩東",
         "歷史音": "#4D4D4D",
         "錄入人": "NaruDora",
-        "字表來源": "<a href=https://zi.tools/?secondary=search>字統网</a>",
+        "字表來源": "<a href=https://zi.tools/?secondary=yin&q=eyJ0eXBlIjoiZmFjdG9yIiwiZmFjdG9yIjp7InN5bCI6IiIsInlqIjoiIiwibGFuZyI6InFsYnkiLCJ5dW5tdSI6IiIsImZhY3RvcnMiOltbInl1bmJ1Iiwi5pil5YWsIl0sWyJjb24uY29uIiwi5p%2BzIl1dfSwicGFyYW0iOnsidHlwZSI6InRhYmxlIiwibGFuZ3MiOlsiYXV0byJdfX0%3D>字統网</a>",
         "補充閲讀": "《福州話的語音學研究》"
       },
       "geometry": {
@@ -62530,6 +62556,30 @@
         "coordinates": [
           114.109293,
           23.299472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "瀏陽小河",
+        "語言": "瀏陽小河客家話",
+        "地點": "湖南長沙瀏陽小河皇碑",
+        "地圖集二分區": "客家話－銅桂片",
+        "音典分區": "閩－閩西－方言島",
+        "方言島": true,
+        "版本": "2026-07-02",
+        "錄入人": "TiO2",
+        "字表來源": "《湖南浏阳小河客家方言》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.112994,
+          28.277213
         ]
       }
     },

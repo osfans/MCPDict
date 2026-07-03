@@ -601,7 +601,7 @@ class 表:
 									自.字音典[字].add(音乙)
 							自.聲韻典[聲韻].add(字)
 				if 註:
-					py += "{%s}" % 註
+					py += "｛%s｝" % 註
 			else:
 				if 自.字書:
 					sep = "▲" if 自.簡稱 == "匯纂" else "\t"
@@ -629,7 +629,7 @@ class 表:
 			for 音 in 音集:
 				d[音].append(字)
 		for 音, 字組 in d.items():
-			註 = re.sub(r"\{(.+?)\}$", "\t\\1", 音)
+			註 = re.sub(r"｛(.+?)｝$", "\t\\1", 音)
 			if "\t" not in 註:
 				讀音, 註釋 = 註, ""
 				items.append((" ".join(字組), 自.簡稱, 讀音, 註釋))
