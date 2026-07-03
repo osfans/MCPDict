@@ -60107,6 +60107,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "寧都田頭",
+        "語言": "寧都田頭話",
+        "地點": "江西贛州寧都田頭",
+        "地圖集二分區": "客家話－寧龍片",
+        "音典分區": "閩－閩西－北",
+        "陳邡分區": "客家－貢水－貢水大片－寧都片",
+        "版本": "2026-07-03",
+        "錄入人": "DaiDzao",
+        "字表來源": "《宁都方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.980432,
+          26.331961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
         "marker-size": "medium",
         "marker-symbol": "h",
         "title": "寧都",
