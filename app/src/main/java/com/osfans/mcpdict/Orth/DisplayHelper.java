@@ -37,7 +37,7 @@ public abstract class DisplayHelper {
                 .replaceAll("\\*\\*(.+?)\\*\\*", "<b>$1</b>")
                 .replaceAll("\\*(.+?)\\*", "<i>$1</i>")
                 .replaceAll("`(.+?)`", "<span style='color: #808080;'>$1</span>");
-        s = s.replace("{", "<small><small>").replace("}", "</small></small>");
+        s = s.replace("〚", "<span style='color: #808080;'><small><small>〔").replace("〛","〕</small></small></span>").replaceAll("\\{([聲韻切])\\}", "<small>$1</small>").replace("{", "<small><small>").replace("}", "</small></small>");
         return s;
     }
 
