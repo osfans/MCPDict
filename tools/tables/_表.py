@@ -723,10 +723,14 @@ class 表:
 			return "/".join(map(自.轉調類, re.split("/(?=[^\\d])", 音)))
 		if "-" in 音:
 			return "-".join(map(自.轉調類, 音.split("-")))
+		音註 = ""
+		if "〚" in 音:
+			音註 = 音[音.index("〚"):]
+			音 = 音[:音.index("〚")]
 		聲韻,調值 = 自.分音(音)
-		if not 調值: return 聲韻
+		if not 調值: return 聲韻 + 異讀 + 音註
 		調類 = 自.僅轉調類(調值, 聲韻)
-		return 聲韻 + 調類 + 異讀
+		return 聲韻 + 調類 + 異讀 + 音註
 
 	def 僅轉調類(自, 調值, 聲韻=""):
 		調類 = ""
