@@ -160,6 +160,7 @@ class 表(_表):
 			elif 自.文件名.startswith("东莞20") or 自.文件名.startswith("東莞語料合輯"):
 				訓 = 音.startswith("(")
 				音標 = 音.strip("()")
+				if 音 == "\\": return
 				for 音 in 音標.split("|"):
 					if 訓: 音 += "@"
 					音組.append(音)
