@@ -16,6 +16,8 @@ class 表(_表):
 		行 = "".join(列).strip()
 		if 名 == "羅田勝利":
 			行 = 行.replace("＝", "?").replace(" ", "")
+		elif 名 == "天柱竹林":
+			行 = re.sub(r"\((.*?)\)(.*)$", r"\2\1", 行)
 		groups = re.findall(rf"^([{HZ_STR}/]+)([^{HZ_STR}\(\)]+)(.*?)$", 行)
 		if not groups: return
 		l = list()
@@ -26,7 +28,7 @@ class 表(_表):
 			pys1 = pys1 + [pys1[0]] * (len(cy1) - len(pys1))
 		for cy, py in zip(cy1, pys1):
 			cy = cy.strip()
-			pys2 = py.strip()
+			pys2 = py.strip().translate(自.kTones)
 			pys = re.findall(r"([^\d]+[\d ]*)", pys2)
 			轉調類 = 自.info.get("字表使用調值", False)
 			if js:
