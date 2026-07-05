@@ -371,7 +371,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             item = menu.findItem(R.id.menu_item_search_homophone);
             final String menu_ipa;
             if (lang.contentEquals(BA)) menu_ipa = BaiSha.display(ipa.replaceAll("\\([^()]*?\\)$", "").trim());
-            else menu_ipa = ipa.replaceAll("\\([^()]*?\\)", "").replaceAll("/.*$","").replace("*", "").trim();
+            else menu_ipa = ipa.replaceAll("\\([^()]*?\\)", "").replaceAll("[/〚].*$","").replace("*", "").trim();
             item.setTitle(Pref.getString(R.string.search_homophone, menu_ipa));
             item.setOnMenuItemClickListener(i->{
                 DictFragment dictFragment = ((MainActivity) v.getContext()).getDictionaryFragment();
