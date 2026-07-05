@@ -72,6 +72,7 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
+        git tag previous latest || true
         git tag -f latest
         git push origin refs/tags/latest --force
 
