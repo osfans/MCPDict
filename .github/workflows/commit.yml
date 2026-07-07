@@ -85,12 +85,15 @@ jobs:
         fi
 
         shopt -s nullglob
-        assets=(app/build/outputs/apk/release/*.APK *.7z tools/[0-9]*.txt)
+        assets=(app/build/outputs/apk/release/*.APK *.7z)
 
         # Create release notes from previous tag to latest tag
+        echo "### 語言數：$(cat tools/[0-9]*.txt)" > notes.md
+        git log previous..latest --pretty=format:'%h %s' | sed 's/^/- /' >> notes.md
         gh release create latest "${assets[@]}" \
-          --title 'Latest' \
-          --notes "### 語言數：$(cat tools/[0-9]*.txt)\n$(git log previous..latest --pretty=format:'%h %s' | sed 's/^/- /')" 
+          --title "漢字音典$(basename app/build/outputs/apk/release/*.APK|cut -d. -f1)" \
+          --notes-file notes.md
+        rm notes.md
 
     - name: Deploy to SF
       run: |
