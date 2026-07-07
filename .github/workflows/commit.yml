@@ -90,7 +90,7 @@ jobs:
         # Create release notes from previous tag to latest tag
         gh release create latest "${assets[@]}" \
           --title 'Latest' \
-          --notes "$(git log previous..latest --pretty=format:'%h %s' | sed 's/^/- /')" 
+          --notes "### 語言數：$(cat tools/[0-9]*.txt)\n$(git log previous..latest --pretty=format:'%h %s' | sed 's/^/- /')" 
 
     - name: Deploy to SF
       run: |
