@@ -130,8 +130,8 @@ class 表(_表):
 			try:
 				聲韻, 調, 組 = 列[:3]
 			except:
-				print(名)
-				raise
+				自.誤.append(f"[{'\t'.join(列[:3])}]此行格式不正确")
+				return
 		if 名 in ("新最小上古"):
 			自.爲音 = False
 		if 音 is None and 聲韻:
