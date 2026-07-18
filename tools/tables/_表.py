@@ -150,7 +150,7 @@ def run2text(run):
 	text = run.text
 	if tag:
 		text = "".join([i + tag for i in text])
-	if run.font.subscript or (not run.font.subscript and run.style.font.subscript) or (run.font.size and run.font.size < Pt(9)) or (not run.font.size and run.style.font.size and run.style.font.size < Pt(9)):
+	if run.font.subscript or (not run.font.subscript and run.style and run.style.font.subscript) or (run.font.size and run.font.size < Pt(9)) or (not run.font.size and run.style and run.style.font.size and run.style.font.size < Pt(9)):
 		if text.startswith("{") and text.endswith("}"):
 			pass
 		# elif text.startswith("[") and text.endswith("]"):
