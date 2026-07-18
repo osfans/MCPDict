@@ -50991,31 +50991,6 @@
         "marker-color": "#EBC75E",
         "marker-size": "small",
         "marker-symbol": "i",
-        "title": "江門滘頭",
-        "語言": "江門滘頭本地話",
-        "地點": "廣東江門蓬江江南(原滘頭)南雄",
-        "地圖集二分區": "粤語－四邑片",
-        "音典分區": "廣中－西江－西岸江本",
-        "陳邡分區": "廣東－四邑－江門片",
-        "歷史音": "0",
-        "錄入人": "Kwíngiem Chan",
-        "維護人": "Kwíngiem Chan",
-        "字表來源": "《廣東江門滘頭本地話音系》、母語者製表"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.102044,
-          22.568235
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#EBC75E",
-        "marker-size": "small",
-        "marker-symbol": "i",
         "title": "江門白沙",
         "語言": "江門白沙本地話",
         "地點": "廣東江門蓬江白沙(原沙仔尾)陳屋",
