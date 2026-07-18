@@ -2438,6 +2438,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#916FF7",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "元氏姬村",
+        "語言": "元氏姬村話",
+        "地點": "河北石家莊元氏姬村",
+        "地圖集二分區": "晉語－張呼片",
+        "音典分區": "華北－河北",
+        "陳邡分區": "官話－河北－冀南片",
+        "歷史音": "0",
+        "錄入人": "osfans",
+        "字表來源": "《元氏姬村话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.410495,
+          37.876838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
         "marker-size": "medium",
         "marker-symbol": "c",
         "title": "贊皇",
