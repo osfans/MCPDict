@@ -89,7 +89,7 @@ jobs:
 
         # Create release notes from previous tag to latest tag
         echo "### 語言數：$(cat tools/[0-9]*.txt)" > notes.md
-        git log previous..latest --pretty=format:'%h %s' | sed 's/^/- /' >> notes.md
+        git log --no-merges previous..latest --pretty=format:'%h %s' | sed 's/^/- /' >> notes.md
         gh release create latest "${assets[@]}" \
           --title "漢字音典$(basename app/build/outputs/apk/release/*.APK|cut -d. -f1)" \
           --notes-file notes.md
