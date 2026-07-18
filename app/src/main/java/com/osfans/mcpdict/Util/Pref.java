@@ -270,7 +270,7 @@ public class Pref {
             String prefix = scope + "－";
             LinkedHashSet<String> merged = new LinkedHashSet<>();
             for (Map.Entry<String, LinkedHashSet<String>> entry : store.schemes.entrySet()) {
-                if (entry.getKey().startsWith(prefix)) {
+                if (entry.getKey().startsWith(prefix) || entry.getKey().equals(scope)) {
                     merged.addAll(entry.getValue());
                 }
             }
