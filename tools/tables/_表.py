@@ -285,6 +285,7 @@ class 表:
 			if g := glob.glob(re.sub("(\\.[^.]+)$", " ([0-9][0-9])\\1", n)): return g
 			if g := glob.glob(re.sub("(\\.[^.]+)$", "[0-9]*\\1", n)): return g
 			if g := glob.glob(re.sub("(\\.[^.]+)$", "*\\1", n)): return g
+			if g := glob.glob(re.sub("(\\.[^.]+)$", "*\\1", glob.escape(n))): return g
 		if isValidSrc(name) and 自.文件名:
 			tmp = 自.文件名
 			自.文件名 = getSrcName(自.文件名, 自.頁名)
