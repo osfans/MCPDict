@@ -452,6 +452,11 @@ class 表(_表):
 			行 = "\t".join(行.split("\t")[1:])
 			行 = 自.增加調類(行)
 			行 = 自.normS(行.replace(")(", "："))
+		elif 名 in ("台山海宴",):
+			if 行.startswith("\t"): return
+			if "\t" not in 行.strip():
+				return 行
+			行 = 自.增加調類(行)
 		elif 名 in ("葛洲壩",):
 			if 行.startswith("["): return
 			行 = 自.增加調類(行)
