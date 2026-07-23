@@ -69,7 +69,7 @@ class 表(_表):
 			行 = re.sub(r"\{(\d+)\}", "\\1", 行)
 			行 = re.sub(r"(\d+[ab]?)", "[\\1]", 行, 1)
 			if "[" not in 行: 行 = ""
-		elif 名 in ("東海",):
+		elif 名 in ("東海","清流林畲"):
 			if "[" not in 行: return ""
 		elif 名 in ("羅山","贛縣安平"):
 			行 = re.sub(r"[:] ?\[", "	[", 行)
