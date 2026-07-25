@@ -42658,28 +42658,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#52CCAD",
-        "marker-size": "small",
-        "marker-symbol": "f",
-        "title": "瀏陽社港",
-        "語言": "瀏陽社港話",
-        "地點": "湖南長沙瀏陽社港",
-        "地圖集二分區": "贛語－大通片",
-        "音典分區": "湘贛－豫章－羅縣",
-        "陳邡分區": "湘贛－幕阜－南岳州大片－平江片",
-        "歷史音": "0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.571243,
-          28.476744
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "marker-color": "#EB6E77",
         "marker-size": "small",
         "marker-symbol": "b",

@@ -1,15 +1,27 @@
 #!/usr/bin/env python3
 
 from tables._表 import 表 as _表
-from tables._表 import HZ_STR
+from tables._表 import HZ_STR, PATH, TARGET
+import os
 import re
 
 class 表(_表):
 	sets = set()
+	詞表 = list()
 
 	def 讀(自, 更新=False):
 		自.sets.clear()
+		自.詞表 = [f"#詞語\t音標\t解釋\n"]
 		super().讀(更新)
+
+	def 寫(自, d):
+		super().寫(d)
+		tpath = os.path.join(PATH, TARGET, "詞表", f"{自.簡稱}.tsv")
+		if not os.path.exists(os.path.dirname(tpath)):
+			os.makedirs(os.path.dirname(tpath))
+		t = open(tpath, "w", encoding="U8", newline="\n")
+		t.writelines(自.詞表)
+		t.close()
 
 	def 析(自, 列):
 		名 = 自.簡稱
@@ -47,18 +59,19 @@ class 表(_表):
 			if pyn == 0: return
 			cys = re.findall('.[0-9=+\\?*-]?', cy)
 			cyn = len(cys)
-			if cyn != pyn:
-				if cyn - pyn == cys.count("儿"):
-					while "儿" in cys:
-						er_index = cys.index("儿")
-						del cys[er_index-1:er_index+1]
-						del pys[er_index-1:er_index]
-				else:
-					自.誤.append(f"{行} 詞與音節不匹配")
-					return
+			pys = [py.strip() for py in pys]
+			if 轉調類: pys = [自.轉調類(py) for py in pys]
+			if 0 != (cyn - pyn) != cys.count("儿"):
+				自.誤.append(f"{行} 詞與音節不匹配")
+				return
+			自.詞表.append(f"{cy}\t{' '.join(pys)}\t{js}\n")
+			if cyn - pyn != 0:
+				while "儿" in cys:
+					er_index = cys.index("儿")
+					del cys[er_index-1:er_index+1]
+					del pys[er_index-1:er_index]
 			for i,z in enumerate(cys):
-				yb = pys[i].strip()
-				if 轉調類: yb = 自.轉調類(yb)
+				yb = pys[i]
 				if z == "□":
 					if z[0] + yb + zs in 自.sets:
 						continue
