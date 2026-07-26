@@ -493,6 +493,8 @@ public class DB extends SQLiteAssetHelper {
         for(String s: cursor.getColumnNames()) {
             if (s.endsWith(_FQ)) arrayList.add(s);
         }
+        // skip last fq
+        arrayList.remove(arrayList.size() - 1);
         FQ_COLUMNS = arrayList.toArray(new String[0]);
         cursor.close();
     }
