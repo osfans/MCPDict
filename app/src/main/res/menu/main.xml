@@ -82,6 +82,14 @@
                     android:action="android.intent.action.VIEW"
                     android:data="https://dialects.yzup.top" />
             </item>
+            <item
+                android:id="@+id/menu_item_dialects_syndict"
+                android:title="@string/dialects_syndict"
+                android:titleCondensed="https://c.syndict.com/zi">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://c.syndict.com/zi" />
+            </item>
         </menu>
     </item>
     <item

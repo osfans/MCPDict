@@ -15,6 +15,7 @@
     <string name="vear_web">唯二網頁版</string>
     <string name="ayaka_web">綾香網頁版</string>
     <string name="dialects_atlas">方音圖鑑</string>
+    <string name="dialects_syndict">薪典深耕版</string>
     <string name="guess_hz">🀄猜字</string>
     <string name="about_message"><![CDATA[%1$s V%2$s<br/>作者：osfans<br/><a href="https://github.com/osfans/MCPDict/releases/tag/latest">最新版</a> <a href="https://github.com/osfans/MCPDict/releases/tag/fonts">字體包</a> <a href="https://mcpdict.sourceforge.io/warnings.txt">字表解析日誌</a> <a href="https://github.com/osfans/MCPDict/actions">自動編譯</a> <a href="https://github.com/osfans/MCPDict/">GitHub</a>]]></string>
 

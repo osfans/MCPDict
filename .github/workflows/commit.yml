@@ -95,6 +95,11 @@ jobs:
           --notes-file notes.md
         rm notes.md
 
+    - name: 通知 c.syndict 更新字音库
+      run: |
+        curl -X POST -H "X-Token: ${{ secrets.C_SYNDICT_TOKEN }}" \
+          https://c.syndict.com/api/mcpdict/admin/refresh
+
     - name: Deploy to SF
       run: |
         # sshpass -p '${{ secrets.SF_PASSWORD }}' scp -o StrictHostKeyChecking=no tools/cgi/cgi-bin/*.* ${{ secrets.SF_USERNAME }}@web.sourceforge.net:/home/project-web/mcpdict/cgi-bin
