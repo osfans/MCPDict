@@ -43599,6 +43599,31 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-color": "#C75EEB",
+        "marker-size": "small",
+        "marker-symbol": "g",
+        "title": "岳陽柏祥",
+        "語言": "岳陽柏祥話",
+        "地點": "湖南岳陽岳陽縣柏祥",
+        "地圖集二分區": "湘語－長益片－岳陽小片",
+        "音典分區": "湘贛－岳州－岳陽",
+        "陳邡分區": "湘贛－幕阜－南岳州大片－新牆河片",
+        "歷史音": "0",
+        "版本": "2026-07-26",
+        "錄入人": "DaiDzao",
+        "字表來源": "《赣方言浊音走廊语音研究》《岳阳柏祥方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.313469,
+          29.060267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-color": "#52CCAD",
         "marker-size": "medium",
         "marker-symbol": "f",
