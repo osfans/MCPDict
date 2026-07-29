@@ -96,6 +96,7 @@ jobs:
         rm notes.md
 
     - name: 通知 c.syndict 更新字音库
+      if: "contains(github.event.head_commit.message, 'feat')"
       run: |
         curl -X POST -H "X-Token: ${{ secrets.C_SYNDICT_TOKEN }}" \
           https://c.syndict.com/api/mcpdict/admin/refresh
