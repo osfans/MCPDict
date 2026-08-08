@@ -174,6 +174,21 @@ class 表(_表):
 				for i in 上標:
 					音 = 音.replace(i, str(上標.index(i)))
 				音 = 音.strip("()")
+			elif 自.文件名.startswith("桂林平话音韵比较研究"):
+				if "{" in 音 and "/" in 音:
+					音組 = 音.split("/")
+					l = list()
+					轉調類 = 自.info.get("字表使用調值", False)
+					for 項 in 音組:
+						if "{" in 項 and "}" in 項:
+							項, 註 = 項.split("{", 1)
+							註 = 註.rstrip("}")
+						if 轉調類: 項 = 自.轉調類(項)
+						l.append((字, 項, 註))
+					return l
+				if "{" in 音 and "}" in 音:
+					註 = 音.split("{", 1)[1].rstrip("}")
+					音 = 音.split("{", 1)[0]
 			elif 自.文件名.startswith("贵州六盘水八点联表") or 自.文件名.startswith("永州南部土話聯表") or 自.文件名.startswith("广元剑阁5点联表") or 自.文件名.startswith("自贡富顺4点联表"):
 				註 = 字[1:].strip("()（）")
 				字 = 字[0]
