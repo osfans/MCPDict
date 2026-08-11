@@ -15719,6 +15719,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#916FF7",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "方山積翠",
+        "語言": "方山積翠話",
+        "地點": "山西呂梁方山積翠方山",
+        "地圖集二分區": "晉語－呂梁片－汾州小片",
+        "音典分區": "西北－呂梁－石州",
+        "陳邡分區": "官話－秦晉－汾州大片－臨縣片",
+        "歷史音": "0",
+        "版本": "2026-08-11",
+        "錄入人": "DaiDzao",
+        "字表來源": "《方山方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.335954,
+          37.994968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
         "marker-size": "medium",
         "marker-symbol": "c",
         "title": "臨縣",
