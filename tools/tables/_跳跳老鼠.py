@@ -19,7 +19,7 @@ class 表(_表):
 			if len(列) <= 列序[0]: return
 			組 = 列[列序[0]]
 			if len(列序) == 1:
-				if 名 in ("英德魚灣",):
+				if 名 in ("英德魚灣","莘縣張魯"):
 					上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
 					組 = re.sub(r"([⁰¹²³⁴⁵⁶⁷⁸⁹]+)", lambda x:"".join([str(上標.index(i)) for i in x.group(1)]), 組)
 				if g := re.findall("^.*?\\d+", 組):
