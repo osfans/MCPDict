@@ -902,9 +902,9 @@ public class DB extends SQLiteAssetHelper {
         } else {
             StringBuilder sb = new StringBuilder();
             sb.append(String.format(Locale.getDefault(), "<b>%s</b>：%s<br>", Pref.getString(R.string.name), language));
-            ArrayList<String> fields = new ArrayList<>(Arrays.asList("地點","經緯度", "作者", "錄入人", "維護人", "字表來源","參考文獻","補充閲讀","文件名","版本","字數","□數", SYLLABLES,"不帶調音節數","")); //,"相似度"
+            ArrayList<String> fields = new ArrayList<>(Arrays.asList("地點", "經緯度"));
             fields.addAll(Arrays.asList(FQ_COLUMNS));
-            fields.add("");
+            fields.addAll(Arrays.asList("字數", "□數", SYLLABLES, "不帶調音節數", "", "作者", "錄入人", "維護人", "版本", "文件名", "字表來源", "參考文獻", "補充閲讀", "發音合作人", "字表修改情況", "字表品質", "字表品質説明", ""));
             for (String field: fields) {
                 if (TextUtils.isEmpty(field)) sb.append("<br>");
                 String value = getFieldByLanguage(language, field);
