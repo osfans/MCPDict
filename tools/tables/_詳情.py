@@ -202,6 +202,7 @@ def 加載(省=None):
 		if types[2] and 列["下拉2"]: types[2] += "," + 列["下拉2"]
 
 		orders = [列[i].strip() for i in ("地圖集二排序", "音典排序", "陳邡排序")]
+		orders[0] = orders[0].split("-")[0].strip()
 		colors = [row[fields.index(i)].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典顏色","陳邡顏色")]
 		歷史音 = "0"
 		if "是否為方言歷史音" in fields:
