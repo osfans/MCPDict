@@ -253,7 +253,8 @@ def getLangs(items, 參數, args):
 	語組 = []
 	數 = 0
 	mods = []
-	mods.extend(getLangsByArgv(詳情, 參數) if 參數 else 詳情.keys())
+	keys = sorted(詳情.keys(), key=lambda x: 詳情[x]["音典排序"])
+	mods.extend(getLangsByArgv(詳情, 參數) if 參數 else keys)
 	if not mods:
 		exit(f"{參數} 未登記")
 	if not args.output: mods.insert(0, "漢字")
