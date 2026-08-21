@@ -59,6 +59,7 @@
 㤥	ɡˤəh	
 㥄	rəŋ	
 㥒	tsʰˤəʔ	
+㥛	kək	
 㥶	sˤəh	
 㦁	ran	
 㦛	jaʔ	
@@ -103,7 +104,7 @@
 㱄	m̥ˤək	
 㱙	j̊uʔ	
 㱽	trəmʔ	
-㴬	slah	
+㴬	sliah	
 㴲	sle	
 㵒	bəs	
 㵝	jas	溶㵝
@@ -123,7 +124,6 @@
 㸬	pˤas	
 㸲	dzˤak	
 㹌	ŋ̊ranʔ	
-㹎	ruj	
 㹛	nu	
 㹠	lˤun	豚
 㹥	toh	
@@ -209,6 +209,7 @@
 䋨	pʰoʔ	
 䋪	ʔˤaj	
 䋫	tsˤreŋ	
+䋼	l̥ˤeŋ	
 䋽	pˤoŋʔ	
 䋿	ʔˤuj	
 䌙	ɡwˤaŋh	
@@ -225,7 +226,6 @@
 䍡	rˤok	
 䍤	tsˤəjʔ	
 䍫	l̥aj	
-䍵	tsˤreŋ	
 䍶	tˤoŋh	
 䍷	wəjʔ	
 䍸	pˤak	
@@ -311,7 +311,7 @@
 䠞	tsuk	
 䠣	sonʔ	
 䠱	drok	
-䠶	mlah	
+䠶	mliah	
 䡅	l̥run	
 䡇	ŋot	
 䡊	panʔ	
@@ -457,7 +457,7 @@
 不	pə	
 丐	kˤas	
 丑	n̥ruʔ	
-且	tsʰaʔ	
+且	tsʰiaʔ	
 且	tsa	多;都;句末助詞;紀月地支
 丕	pʰrə	
 世	l̥as	
@@ -571,6 +571,7 @@
 任	nəmh	所負,責任、任務;任俠;委任、役使;任憑
 份	prən	
 仿	pʰaŋʔ	
+仿	bˤaŋ	仿佯、仿偟
 企	kʰeʔ	
 伃	lraʔ	帝杼
 伉	kʰˤaŋ	
@@ -594,6 +595,7 @@
 似	sləʔ	
 伾	pʰrə	
 佁	ləʔ	
+佁	sləʔ	至,逗留
 佃	lˤiŋ	
 但	dˤanʔ	
 佇	draʔ	
@@ -734,6 +736,7 @@
 倜	tʰˤiwk	
 倞	ɡraŋʔ	強
 倞	ɡraŋ	求索
+借	tsiah	借出;假如;授予
 借	tsak	借入;得到;利用
 倠	ẘi	仳倠,貌醜
 倡	tʰaŋ	
@@ -938,7 +941,7 @@
 冉	namʔ	
 冊	tsʰˤrek	
 再	tsˤəh	
-冏	n̥ep	
+冏	step	
 冑	lruh	
 冒	mˤuh	
 冒	mˤək	冒犯;貪;嫉妒
@@ -957,6 +960,7 @@
 冪	mˤek	
 冬	tˤuŋ	
 冰	prəŋ	
+冶	jiaʔ	
 冷	rˤeŋʔ	
 冽	rat	
 凄	tsʰˤəj	
@@ -1109,7 +1113,7 @@
 勦	tsawʔ	
 勩	les	
 勯	tˤan	
-勰	ɡˤep	
+勰	ɡˤip	
 勱	mˤras	
 勳	ẘən	
 勴	c.rah	
@@ -1167,7 +1171,7 @@
 卒	tsʰˤut	猝
 卓	tˤrawk	
 卓	tʰˤrawk	卓鷙,謂行爲乖戾獨特
-協	ɡˤep	
+協	ɡˤip	
 南	nˤəm	
 博	pˤak	
 卜	pˤok	
@@ -1261,7 +1265,7 @@
 史	srəʔ	
 右	wəʔ	
 右	wəh	佑;祐;親近
-叶	ɡˤep	協
+叶	ɡˤip	協
 号	ɡˤawh	
 司	l̥əh	官吏;執掌
 司	l̥ə	職守
@@ -1276,7 +1280,7 @@
 名	meŋ	
 名	meŋh	命名
 后	ɡˤoʔ	
-吏	rəʔ	
+吏	rəh	
 吐	tʰˤaʔ	
 向	haŋh	
 向	haŋ	周畿內邑
@@ -1398,6 +1402,7 @@
 唱	tʰaŋ	
 唲	ʔˤre	唲嘔
 唲	ne	嚅唲
+唶	tsˤrak	
 唼	sˤrap	
 唾	tʰˤojh	
 啁	tˤriw	
@@ -1461,7 +1466,7 @@
 嗛	ɡˤram	銜
 嗜	ɡih	
 嗞	tsə	
-嗟	tsaj	
+嗟	tsia	
 嗣	sləh	
 嗥	ɡˤu	
 嗷	ŋˤaw	
@@ -1562,7 +1567,7 @@
 回	wˤəj	
 囟	sənh	
 因	ʔin	
-囧	n̥ep	
+囧	step	
 园	ŋˤon	
 困	kʰˤunh	
 囷	kʰrun	
@@ -1691,6 +1696,7 @@
 堲	dzik	疾
 場	lraŋ	
 堵	tˤaʔ	
+堵	tiaʔ	水名
 堷	ʔum	
 塈	ɡrəs	以泥塗屋頂
 塈	həs	休息;取
@@ -1711,7 +1717,7 @@
 塥	ɡˤrek	
 填	dˤiŋ	
 填	driŋ	久
-塯	ruh	
+塯	c.ruh	
 塳	bˤoŋ	
 塴	pˤəŋh	
 塵	drən	
@@ -1750,6 +1756,7 @@
 墼	kˤek	
 墾	kʰˤənʔ	
 壁	pˤek	
+壄	liaʔ	
 壅	ʔoŋ	
 壇	danʔ	廳堂;清除土地
 壇	dˤan	高臺;地基
@@ -1789,6 +1796,7 @@
 外	ŋwˤas	
 夙	suk	
 多	tˤaj	
+夜	jiah	
 夢	məŋ	
 夤	liŋ	
 夤	lənʔ	脊肉
@@ -1821,6 +1829,7 @@
 契	kʰˤes	
 契	kʰˤet	刻
 契	set	商祖
+奓	stia	
 奔	pˤun	
 奔	pˤunh	直趨
 奕	jak	
@@ -1829,6 +1838,7 @@
 奚	ɡˤe	
 奠	dˤiŋh	
 奡	ŋˤawh	
+奢	stia	
 奧	ʔˤuh	
 奧	ʔuk	暖;澳
 奪	lˤot	
@@ -2139,7 +2149,7 @@
 寧	nˤeŋh	副詞
 審	stumʔ	
 寪	wajʔ	
-寫	slaʔ	
+寫	sliaʔ	
 寬	kʰwˤan	
 寮	rˤew	
 寰	wˤren	
@@ -2148,9 +2158,10 @@
 寸	tsʰˤunh	
 寺	dəh	
 封	poŋ	
-射	mlah	
+射	mliah	
 射	lak	厭棄;無射
 射	mlak	及物
+射	liah	射干;僕射;射姑
 將	tsaŋ	
 將	tsaŋh	指揮;將領
 將	tsʰaŋ	願、請;將將,金玉之聲;將將,美盛、整飭;集聚貌
@@ -2412,6 +2423,7 @@
 床	dzraŋ	
 庋	kreʔ	置放;收藏
 庌	ŋˤraʔ	
+序	slaʔ	廂房;學校
 底	tˤiʔ	
 庖	bˤru	
 庚	kˤraŋ	
@@ -2638,6 +2650,7 @@
 怖	pʰˤah	
 怗	tʰˤep	
 怙	ɡˤaʔ	
+怚	tsah	
 怛	tˤat	
 思	sə	
 思	səh	名詞;悲傷;謂道德完備
@@ -2720,8 +2733,8 @@
 悝	rəʔ	
 悞	ŋwˤaʔ	
 悟	ŋˤah	察覺;啟發
-悠	lu	憂思貌;遠、長、遼闊無際
-悠	liw	長久;飄動貌,游動貌
+悠	liw	連綿不絕;飄動貌,謂持續方式
+悠	lu	遼遠;憂思貌,謂延展狀態
 悢	raŋʔ	
 患	ɡˤron	
 悱	pʰəjʔ	
@@ -3118,8 +3131,9 @@
 捥	ʔˤonh	
 捦	ɡum	
 捧	pʰoŋʔ	
-捨	l̥ah	
-捨	l̥ah	止息
+捨	l̥iah	
+捨	l̥iah	止息
+捨	l̥iaʔ	舍棄
 捩	rˤəs	
 捪	mrun	
 捫	mˤən	
@@ -3351,13 +3365,14 @@
 攬	rˤamʔ	
 攭	rˤeh	
 支	ke	
-攲	kaj	
+攱	kreʔ	
 攴	pʰˤok	
 攴	mˤəj	枚
 收	hiw	
 收	stiw	車後橫木
 攷	kʰjuʔ	
 攸	ju	
+攸	liw	古國名;迅疾
 改	kjəʔ	
 攺	jəʔ	
 攻	kˤoŋ	
@@ -3380,6 +3395,7 @@
 敖	ŋˤawh	戲謔
 敗	pˤras	破他
 敗	bˤras	自破
+敘	slaʔ	次序;記敘
 教	kˤraw	動詞,教授;使;令;讓
 教	kˤrawh	告訴;名詞,教育;教化;訓練
 敜	nˤip	
@@ -3409,7 +3425,7 @@
 敹	tsʰraj	
 敺	kʰro	
 敻	ẘeŋh	搜尋;推究;尋訪
-敻	ẘˤiŋ	遠
+敻	ẘˤinh	遠
 敿	kawʔ	
 斀	tˤrok	
 斁	lak	厭棄;盛大
@@ -3428,7 +3444,7 @@
 斗	toʔ	勺
 料	rˤewh	
 斛	ɡˤok	
-斜	sja	
+斜	sjia	
 斝	kˤraʔ	
 斞	joʔ	
 斟	təm	
@@ -3450,7 +3466,8 @@
 斶	tʰok	
 斷	tˤonʔ	使動,折斷;斷絕;斬殺;區分
 斷	tˤonh	判斷;一定;斷斷,專一
-斷	dˤonʔ	片段之物
+斷	dˤonʔ	已斷
+斷	dˤonh	片段之物
 斸	trok	
 方	paŋ	
 方	paŋʔ	
@@ -3485,7 +3502,7 @@
 旓	sˤraw	
 旖	ʔaj	
 旗	ɡə	
-旛	bar	
+旛	pˤar	
 旜	tar	
 旝	kwˤas	
 旞	slus	
@@ -3766,6 +3783,7 @@
 染	namʔ	
 柔	nu	
 柖	daw	
+柘	tiah	
 柙	ɡˤrap	
 柚	luh	木
 柚	lruk	織機部件
@@ -4003,7 +4021,7 @@
 榦	kˤar	
 榩	ɡran	
 榬	wan	
-榭	slah	
+榭	sliah	
 榮	wreŋ	
 榯	də	
 榰	ke	
@@ -4496,7 +4514,7 @@
 浙	tet	
 浚	sunh	
 浞	dzrok	
-浟	liw	
+浟	lu	
 浡	bˤut	勃
 浢	dˤoh	
 浣	ɡˤonʔ	
@@ -4544,7 +4562,7 @@
 涷	tˤoŋ	
 涸	ɡˤak	
 涹	ʔˤoj	
-涻	l̥ah	
+涻	l̥iah	
 涼	c.raŋ	
 涽	m̥ˤun	
 涿	tˤrok	
@@ -4758,6 +4776,7 @@
 漱	sˤroh	
 漱	sˤrok	吮吸
 漳	taŋ	
+漵	slaʔ	
 漷	kʰwˤak	
 漸	tsam	
 漸	dzˤram	漸漸,山石高峻貌
@@ -4875,7 +4894,7 @@
 瀀	ʔu	
 瀁	jaŋʔ	𣶈瀁,水盛貌
 瀆	lˤok	
-瀉	slaʔ	
+瀉	sliaʔ	
 瀋	tʰumʔ	
 瀌	bew	
 瀍	dran	
@@ -4925,7 +4944,7 @@
 灰	ẘˤə	
 灶	tsˤuh	
 灸	kwəh	
-灺	slajʔ	
+灺	sliajʔ	
 灼	tewk	
 災	tsˤə	
 災	tsˤəh	危害,動詞
@@ -4934,6 +4953,7 @@
 炎	lˤam	炎炎,言論美盛貌
 炕	kʰˤaŋh	
 炙	tak	
+炙	tiah	烤熟的肉食
 炤	tawh	
 炫	ɡwˤinh	
 炬	ɡaʔ	
@@ -5025,6 +5045,7 @@
 熱	nat	
 熲	kwˤeŋ	
 熸	tsam	
+熹	hə	
 熺	hə	
 熾	tʰəh	
 熿	ɡwˤaŋ	
@@ -5322,6 +5343,7 @@
 理	rəʔ	
 琇	luʔ	
 琈	bu	
+琊	jia	
 琌	ŋəm	
 琖	tsranʔ	
 琚	ka	
@@ -5352,6 +5374,7 @@
 瑑	lronʔ	
 瑕	ɡˤra	
 瑗	wanh	
+瑘	jia	
 瑚	ɡˤa	
 瑜	lo	
 瑞	dorʔ	
@@ -5587,6 +5610,7 @@
 瘣	ɡˤujʔ	
 瘤	ru	
 瘥	dzˤaj	
+瘥	tsia	病愈
 瘦	sruh	
 瘧	ŋawk	
 瘨	tˤiŋ	
@@ -5674,7 +5698,7 @@
 盛	deŋh	眾多,豐盛;稱讚
 盜	lˤawh	
 盝	rˤok	
-盞	dzranʔ	
+盞	tsranʔ	
 盟	mraŋ	
 盡	dzinʔ	
 盡	tsinʔ	盡量
@@ -5888,9 +5912,10 @@
 礫	rˤewk	
 礬	ban	
 礱	rˤoŋ	
+礴	bˤak	
 示	dih	主動示人,顯現;告知;教導
 示	ɡih	展示;安置
-社	daʔ	
+社	diaʔ	
 礿	tewk	
 祀	sjəʔ	
 祁	təj	昭餘祁
@@ -6406,7 +6431,6 @@
 紡	pʰaŋʔ	紡織品
 索	sˤak	
 索	sˤrak	求;選擇;搜查
-紨	pʰo	
 紩	lrik	
 紫	tseʔ	
 紬	l̥ru	
@@ -6437,7 +6461,6 @@
 絆	pˤanh	
 絇	ɡo	
 絍	nəmh	
-絎	ɡˤraŋh	
 絏	las	
 結	kˤit	
 絓	ɡwˤreh	受阻,絆住
@@ -6485,7 +6508,7 @@
 綑	kʰˤunʔ	
 經	kˤeŋ	
 經	kˤeŋh	懸吊;整理絲線使成經線
-綖	lan	
+綖	lanh	
 綜	tsˤuŋh	
 綝	r̥əm	
 綟	rˤəs	
@@ -6631,7 +6654,8 @@
 繚	rewh	地名
 繚	rˤewʔ	祭名;趙繚,長
 繚	rˤew	纏;縫紉法
-繜	tsˤunʔ	
+繜	tsˤun	婦女穿的套褲
+繜	tsˤunʔ	撙
 繞	ŋewʔ	
 繟	tʰarʔ	
 繠	nojʔ	
@@ -6700,6 +6724,7 @@
 罘	bə	
 罛	kwˤa	
 罜	dˤok	
+罝	tsia	
 罞	mˤru	
 罟	kˤaʔ	
 罦	pʰuh	
@@ -6813,6 +6838,7 @@
 考	kʰjuʔ	
 考	kʰˤuʔ	完成;建築物落成
 耄	mˤawh	
+者	tiaʔ	
 耆	ɡi	老;強;憎惡;獸的背脊;黃耆
 耆	kiʔ	致使,達到;進獻
 耇	kˤoʔ	
@@ -6823,7 +6849,7 @@
 耏	nə	
 耐	nˤəh	
 耑	tˤor	
-耒	ruj	
+耒	rˤujh	
 耔	tsəʔ	
 耕	kˤreŋ	
 耗	m̥ˤawh	
@@ -6837,6 +6863,7 @@
 耨	nˤok	動詞
 耰	nuʔ	
 耳	nəʔ	
+耶	jia	
 耹	ɡəm	
 耻	n̥rəʔ	
 耽	tˤəm	沉迷
@@ -7088,7 +7115,7 @@
 臧	tsˤaŋ	
 臨	c.rum	
 臨	c.rumh	哭吊死者
-臩	n̥ep	
+臩	step	
 自	dzis	
 臬	ŋret	
 臭	tʰu	氣味
@@ -7118,8 +7145,9 @@
 舊	ɡwəh	陳舊;往昔
 舋	m̥ənh	
 舌	mlat	
-舍	l̥ah	
-舎	l̥ah	
+舍	l̥iah	
+舍	l̥iaʔ	舍棄;赦免;施舍
+舎	l̥iah	
 舐	mlajʔ	
 舒	l̥a	
 舛	tʰunʔ	
@@ -7137,7 +7165,6 @@
 舳	lruk	
 船	mjon	
 艐	tsˤoŋ	
-艖	tsʰˤraj	
 艘	sˤu	
 艫	rˤa	
 艮	kˤənh	
@@ -7182,6 +7209,7 @@
 芥	kˤres	芥菜
 芥	kˤras	雜草
 芧	lraʔ	三棱草
+芧	slaʔ	橡子
 芨	kəp	
 芩	ɡəm	
 芫	ŋon	
@@ -7546,6 +7574,7 @@
 蔔	bˤək	
 蔕	tˤes	
 蔖	dzˤaʔ	
+蔗	tiah	
 蔘	srəm	
 蔘	sˤəm	
 蔚	ʔus	
@@ -7670,7 +7699,7 @@
 藇	sjaʔ	酒美
 藈	kʰwˤi	
 藉	dzak	
-藉	dzah	草墊;假設連詞
+藉	dziah	草墊;假設連詞
 藋	lˤewh	
 藍	c.rˤam	
 藎	dziŋh	
@@ -7690,7 +7719,7 @@
 藟	ruj	
 藣	praj	
 藥	lawk	
-藨	brawʔ	
+藨	bawʔ	
 藩	par	
 藪	sˤoʔ	
 藫	lˤəm	
@@ -7705,7 +7734,7 @@
 藹	ʔˤas	
 藺	c.rənh	
 藻	tsˤawʔ	
-藾	rˤas	
+藾	c.rˤas	
 藿	ẘˤak	
 蘀	l̥ˤak	
 蘁	ŋˤah	
@@ -7728,7 +7757,7 @@
 蘡	ʔeŋ	
 蘢	rˤoŋ	
 蘥	lewk	
-蘦	rˤeŋ	
+蘦	rˤiŋ	
 蘧	ɡa	
 蘩	bon	
 蘪	mri	
@@ -7779,7 +7808,7 @@
 虯	ɡiw	
 虰	tʰreŋ	
 虱	srik	
-虵	mlaj	
+虵	mliaj	
 虷	ɡˤan	
 虹	ɡˤoŋ	
 虺	hˤuj	
@@ -7820,7 +7849,7 @@
 蛄	kˤa	
 蛅	nem	
 蛆	tsa	蝍蛆
-蛇	mlaj	
+蛇	mliaj	
 蛇	laj	委蛇
 蛈	tʰˤik	
 蛉	rˤeŋ	
@@ -7967,6 +7996,7 @@
 蟀	srut	
 蟁	mən	
 蟄	drip	
+蟅	tiah	
 蟆	mˤra	
 蟈	kwˤrək	
 蟉	riw	
@@ -8084,7 +8114,7 @@
 衷	truŋ	
 衷	truŋh	恰當;中斷
 衹	te	只,僅
-衺	sja	
+衺	sjia	
 衽	nəm	
 衾	kʰəm	
 衿	krəm	
@@ -8358,7 +8388,7 @@
 詠	wraŋh	
 詡	ẘaʔ	
 詢	ẘin	
-詣	ŋˤis	
+詣	ŋˤih	
 試	stəh	任用;考核
 試	l̥əh	嘗試;比試
 詨	hˤrewh	
@@ -8489,7 +8519,7 @@
 謙	kʰˤem	
 謚	mlih	
 講	kˤroŋʔ	
-謝	slah	
+謝	sliah	
 謞	hˤawk	
 謟	l̥ˤu	
 謠	law	
@@ -8673,6 +8703,7 @@
 賈	kˤraʔ	國名、姓
 賊	dzˤək	
 賑	tənʔ	
+賒	l̥ia	
 賓	pin	
 賔	pin	
 賕	ɡu	
@@ -8707,6 +8738,7 @@
 贆	pew	
 贈	dzˤəŋh	
 贊	tsˤanh	
+贋	ŋˤranh	
 贍	damh	
 贏	leŋ	
 贐	dziŋh	
@@ -8717,11 +8749,14 @@
 贛	kˤoŋh	貢
 贛	kˤəmʔ	賜予;水名
 赤	j̊ak	
+赦	n̥iah	
+赦	jiah	
 赧	nˤranʔ	
 赨	lˤuŋ	
 赩	ŋ̊ək	
 赫	hˤrak	
 赬	r̥eŋ	
+赭	tiaʔ	
 赮	ɡˤra	
 走	tsˤoʔ	
 赳	kiwʔ	
@@ -8890,7 +8925,7 @@
 躬	kuŋ	
 躳	kuŋ	
 軀	kʰo	
-車	j̊a	
+車	j̊ia	
 車	kra	
 軋	ʔˤrit	
 軌	kruʔ	
@@ -8957,6 +8992,7 @@
 輟	trot	
 輠	ɡˤrojʔ	
 輢	ʔajʔ	
+輣	bˤrəŋ	
 輤	tsʰˤiŋh	
 輥	kˤunʔ	
 輦	ranʔ	
@@ -9106,7 +9142,7 @@
 遁	lˤun	
 遂	slus	
 遄	dor	
-遇	ŋoh	
+遇	ŋroh	
 遇	ŋoŋ	曲遇,地名
 遊	ju	
 運	wən	
@@ -9142,6 +9178,7 @@
 遫	sˤok	
 遬	sˤok	
 遭	tsˤu	
+遮	tia	
 遯	lˤun	
 遰	das	刀鞘
 遰	dˤes	去往
@@ -9195,7 +9232,8 @@
 邧	ŋon	
 邨	dˤun	地名
 邩	ẘˤajʔ	
-邪	sja	不正
+邪	sjia	不正
+邪	jia	語氣助詞;盡
 邭	koh	
 邮	lˤiwk	地名
 邯	ɡˤam	
@@ -9216,7 +9254,7 @@
 郂	kˤə	
 郃	ɡˤəp	
 郄	kʰrak	
-郅	tis	
+郅	tih	
 郇	ẘin	
 郈	ɡˤroʔ	
 郊	kˤraw	
@@ -9386,6 +9424,7 @@
 重	droŋʔ	厚重
 重	droŋh	重量;加重;輜重;再
 重	droŋ	重疊;穩重,慎重
+野	liaʔ	
 野	mlaʔ	同“野”,中原方言
 量	raŋh	佈滿;名詞,度量衡;容量,數量;窪地
 量	raŋ	動詞,測量;商酌
@@ -9419,7 +9458,6 @@
 鈑	pˤranʔ	
 鈒	ŋ̊rəp	
 鈔	mewʔ	眇
-鈕	nruʔ	
 鈗	lunʔ	
 鈞	kwin	
 鈠	wek	
@@ -9480,6 +9518,7 @@
 鋚	lˤiw	
 鋝	rot	
 鋟	tsʰəmʔ	
+鋣	jia	
 鋤	dzra	
 鋪	pʰˤa	
 鋸	kah	
@@ -9528,6 +9567,7 @@
 鍵	ɡarʔ	
 鍼	kim	
 鍾	toŋ	
+鎁	jia	
 鎋	ɡˤrat	
 鎌	rem	
 鎒	nˤoh	
@@ -9655,7 +9695,7 @@
 閹	ʔamʔ	
 閻	lam	
 閼	ʔah	遏制;單閼
-閼	ʔran	閼逢
+閼	ʔan	閼逢
 閽	m̥ˤən	
 閾	ẘrək	
 闀	ɡˤroŋh	
@@ -10070,6 +10110,7 @@
 飲	ʔumh	使飲;宴請;滿足
 飴	lə	
 飶	bˤik	
+飷	tsiaʔ	
 飺	dze	
 飼	sləh	
 飽	pˤruʔ	
@@ -10203,7 +10244,7 @@
 騃	mjəʔ	
 騄	rok	
 騅	tuj	
-騇	l̥ah	
+騇	l̥iah	
 騉	kˤun	
 騊	lˤu	
 騋	rˤə	
@@ -10308,7 +10349,6 @@
 鬊	stunh	
 鬋	tsenh	
 鬌	lroj	
-鬍	ɡˤa	
 鬐	ɡi	
 鬑	rˤem	
 鬒	tənʔ	
@@ -10557,6 +10597,7 @@
 鵷	ʔwan	
 鵸	ɡaj	
 鵹	ri	
+鵺	jiah	
 鵻	tuj	
 鵽	tˤrot	
 鵾	kˤun	
@@ -10614,6 +10655,7 @@
 鷏	dˤiŋ	
 鷑	ɡrəp	
 鷒	dˤon	
+鷓	tiah	
 鷔	ŋˤaw	
 鷕	wiʔ	
 鷖	ʔˤi	
@@ -10914,6 +10956,7 @@
 𢪬	sˤe	
 𢫕	kˤan	干
 𢯲	ʔˤonh	
+𢱋	tiah	柘、樜
 𢵣	ʔˤra	𠜲
 𢾫	trəʔ	刺青
 𣂁	l̥ˤew	
@@ -10993,6 +11036,7 @@
 𥮐	tˤiw	
 𥯕	lˤaŋʔ	
 𥯤	wəjʔ	
+𥰠	c.raʔ	
 𥵳	srap	
 𥶛	dˤe	
 𥷀	ʔˤen	
@@ -11145,7 +11189,7 @@
 𨨛	ɡˤoj	
 𨪐	dˤoʔ	
 𨬍	lˤojʔ	
-𨲠	tsaj	
+𨲠	tsia	
 𨴯	l̥ajʔ	
 𨶅	hˤiw	撤除(祭品)
 𨶲	tsew	
