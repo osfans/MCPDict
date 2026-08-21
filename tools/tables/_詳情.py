@@ -224,7 +224,7 @@ def 加載(省=None):
 		elif 省 and places[0] and places[0] not in 省:
 			print(f"{語言} 省份 {places[0]} 不在指定省份 {省}")
 			continue
-		地點 = ("".join(places)) #.replace("/", "")
+		地點 = re.sub(r"/+", "/", "/".join(places).strip("/"))
 		行政區級別 = 列["行政區級別"]
 		if not 行政區級別:
 			行政區級別 = "省會,地級" if 列["省會"] == "☑" else ""
