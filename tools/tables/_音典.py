@@ -373,6 +373,24 @@ class 表(_表):
 			音 = 列[1:]
 			if 音.startswith("{"):
 				註, 音 = 音[1:].split("}", 1)
+		elif 名 in ("東安新圩江",):
+			列 = 列[0].strip()
+			if not 列: return
+			if 列[1] == "(":
+				字 = 列[2]
+				音 = 列[4:]
+			else:
+				字 = 列[0]
+				音 = 列[1:]
+			註 = re.findall(r"(\{.*?\})?", 音)[0]
+			音 = 音[len(註):].replace("{", "").replace("}", "")
+			註 = 註.strip("{}")
+			l = list()
+			for i in 音.split("/"):
+				y, z = re.findall(r"^(.*?\d+)(.*?)$", i)[0]
+				y = 自.轉調類(y)
+				l.append((字, y, (z + " " +註).strip()))
+			return l
 		elif 自.文件名.startswith("榕江侗"):
 			列[0] = 列[0].strip().replace(" /", "/").replace(" [", "[")
 			if not 列[0]: return
