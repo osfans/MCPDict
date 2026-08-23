@@ -41,7 +41,7 @@ class 表(_表):
 		for cy, py in zip(cy1, pys1):
 			cy = cy.strip()
 			pys2 = py.strip().translate(自.kTones)
-			pys = re.findall(r"([^\d]+[\d ]*)", pys2)
+			pys = re.findall(r"([^\d ]+[\d ]*)", pys2)
 			轉調類 = 自.info.get("字表使用調值", False)
 			if js:
 				if len(cy) == 1:
