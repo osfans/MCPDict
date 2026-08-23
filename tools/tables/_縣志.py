@@ -522,6 +522,8 @@ class 表(_表):
 			行 = 行.replace("}{", ",")
 		elif 名 in ("新會司前",):
 			行 = re.sub(r"\[原文:.*?\]", "", 行)
+		elif 名 in ("新會大鰲",):
+			行 = 行.replace("42", "21")
 		elif 名 in ("崑山",):
 			if not hasattr(自, "又讀"):
 				自.又讀 = False
