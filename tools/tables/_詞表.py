@@ -25,12 +25,12 @@ class 表(_表):
 
 	def 析(自, 列):
 		名 = 自.簡稱
-		行 = "".join(列).strip()
+		行 = "\t".join(列).strip()
 		if 名 == "羅田勝利":
 			行 = 行.replace("＝", "?").replace(" ", "")
 		elif 名 == "天柱竹林":
 			行 = re.sub(r"\((.*?)\)(.*)$", r"\2\1", 行)
-		groups = re.findall(rf"^([{HZ_STR}/]+)([^{HZ_STR}\(\)]+)(.*?)$", 行)
+		groups = re.findall(rf"^([{HZ_STR}\t/]+)([^{HZ_STR}\t\(\)]+)(.*?)$", 行)
 		if not groups: return
 		l = list()
 		cy0, pys0, js= groups[0]
@@ -54,6 +54,7 @@ class 表(_表):
 				zs = cy
 			else:
 				zs = ''
+			zs = zs.replace("\t", "")
 			cy = cy.replace(",", "")
 			pyn = len(pys)
 			if pyn == 0: return
