@@ -13437,6 +13437,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "蘭州",
+        "語言": "蘭州話",
+        "地點": "甘肅/蘭州",
+        "地圖集二分區": "蘭銀官話－金城片",
+        "音典分區": "西北－甘肅",
+        "陳邡分區": "官話－甘肅－甘肅大片－河西片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《兰州方言志》",
+        "補充閲讀": "《兰州方言音系》《兰州话音档》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.842249,
+          36.064901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "永登",
