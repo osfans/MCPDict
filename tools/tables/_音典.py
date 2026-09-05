@@ -110,6 +110,10 @@ class 表(_表):
 				toneValues = {'阳入':8,'阴上':3,'阳平':2,'阴入':7,'阳去':6,'阴平':1,'阴去':5,'阳上':4}
 				if 音[-2:] in toneValues:
 					音 = 音[:-2] + str(toneValues[音[-2:]])
+			elif 名 in ("釜山榮成話",):
+				toneValues = {'阳平':2,'阴平':1,'去声':5,'上声':3}
+				if 音[-2:] in toneValues:
+					音 = 音[:-2] + str(toneValues[音[-2:]])
 			elif 名 in ("瑞安陶山",):
 				備註 = 列[5]
 				註 = (註 + " " +備註).strip()
@@ -149,14 +153,15 @@ class 表(_表):
 						音 = 自.轉調類(音標)
 						l.append((字, 音, 音註 if 音註 else 註))
 					return l
-			elif 自.文件名.startswith("洪洞方言语音比较研究"):
+			elif 自.文件名.startswith("洪洞方言语音比较研究") or 自.文件名.startswith("鄂渝陕交界地区方言研究"):
 				音標 = 音
 				if "/" in 音標:
 					音標組 = 音標.split("/")
 					l = list()
+					轉調類 = 自.info.get("字表使用調值", False)
 					for 音標 in 音標組:
 						音標, 音註 = re.findall(r"^(.*\d+[-=]?)([^\d]*?)$", 音標)[0]
-						音 = 自.轉調類(音標)
+						音 = 自.轉調類(音標) if 轉調類 else 音標
 						l.append((字, 音, 音註 if 音註 else 註))
 					return l
 			elif 自.文件名.startswith("东莞20") or 自.文件名.startswith("東莞語料合輯"):
@@ -174,6 +179,9 @@ class 表(_表):
 				for i in 上標:
 					音 = 音.replace(i, str(上標.index(i)))
 				音 = 音.strip("()")
+			elif 自.文件名.startswith("钦北防"):
+				註 = 字[1:].strip("{}")
+				字 = 字.split("{")[0]
 			elif 自.文件名.startswith("桂林平话音韵比较研究"):
 				if "{" in 音 and "/" in 音:
 					音組 = 音.split("/")

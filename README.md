@@ -4,7 +4,7 @@
 
 [漢字音典](https://github.com/osfans/MCPDict)（MCPDict）是一個面向語言、方言與漢字音研究愛好者的資料整理與查詢項目，收錄各類語言（方言）的漢字讀音及相關釋義，並提供便捷的檢索工具。
 
-目前，漢字音典[已收錄](https://mcpdict.sourceforge.io/info.html)近三千個語言／方言點，內容涵蓋**歷史音、漢語方言、民語漢字音、域外方音、戲曲音**等多種類型。現階段的主要工作，是持續推進全國各地方言及語言的**同音字表的電子化**；未來若條件成熟，亦將逐步嘗試詞彙資料的整理與建設。
+目前，漢字音典[已收錄](https://mcpdict.sourceforge.io/info.html)三千多個語言／方言點，內容涵蓋**歷史音、漢語方言、民語漢字音、域外方音、戲曲音**等多種類型。現階段的主要工作，是持續推進全國各地方言及語言的**同音字表的電子化**；未來若條件成熟，亦將逐步嘗試詞彙資料的整理與建設。
 
 漢字音典為持續更新中的公開項目，亦歡迎對語言、方言與字表整理有興趣的朋友共同參與，或[提出寶貴建議](https://github.com/osfans/MCPDict/issues)。
 
@@ -82,7 +82,7 @@
 
 ● 同音字表收錄是漢字音典目前最主要的工作內容，也是項目持續擴充資料庫的核心基礎。内容包括公開資料的電子化以及自行製作的字表。
 
-● 字表：[已收錄](https://mcpdict.sourceforge.io/info.html)近三千種語言（方言）的漢字讀音及釋義，可去[QQ羣](https://qm.qq.com/cgi-bin/qm/qr?k=f2hquJ3ZWCDLpe8t63Ufw0NBHvGO3ZRb&jump_from=webapi&authKey=7GHTneh2MEuSa8X6wd8gJfutgwJiKMxR+N2HRKTEdb1TrRSg1r2hPhMnkf2Zakl+)提供同音字表請求收錄
+● 字表：[已收錄](https://mcpdict.sourceforge.io/info.html)三千多種語言（方言）的漢字讀音及釋義，可去[QQ羣](https://qm.qq.com/cgi-bin/qm/qr?k=f2hquJ3ZWCDLpe8t63Ufw0NBHvGO3ZRb&jump_from=webapi&authKey=7GHTneh2MEuSa8X6wd8gJfutgwJiKMxR+N2HRKTEdb1TrRSg1r2hPhMnkf2Zakl+)提供同音字表請求收錄
 
 ● 勘誤：參考[字表解析日誌](https://mcpdict.sourceforge.io/warnings.txt)，可去[QQ羣](https://qm.qq.com/cgi-bin/qm/qr?k=f2hquJ3ZWCDLpe8t63Ufw0NBHvGO3ZRb&jump_from=webapi&authKey=7GHTneh2MEuSa8X6wd8gJfutgwJiKMxR+N2HRKTEdb1TrRSg1r2hPhMnkf2Zakl+)、[GitHub](https://github.com/osfans/MCPDict/issues)提出意見與建議
 

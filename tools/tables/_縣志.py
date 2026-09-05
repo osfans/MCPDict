@@ -391,7 +391,7 @@ class 表(_表):
 				行 = 行.replace("\t", "\t[7]")
 			else:
 				行 = 自.增加調類(行).replace("\\n", "")
-		elif 名 in ("沙市",):
+		elif 名 in ("荆州沙市",):
 			if 行.startswith("声调"): return ""
 			行 = 自.增加調類(行)
 		elif 名 in ("石首",):
