@@ -182,7 +182,18 @@ class 表(_表):
 			elif 自.文件名.startswith("钦北防"):
 				註 = 字[1:].strip("{}")
 				字 = 字.split("{")[0]
-			elif 自.文件名.startswith("桂林平话音韵比较研究"):
+			elif 自.文件名.startswith("汀角东平洲"):
+				l = list()
+				轉調類 = 自.info.get("字表使用調值", False)
+				for i in 音.split(";"):
+					y = i.split("{")[0]
+					if 轉調類: y = 自.轉調類(y)
+					z = ""
+					if "{" in i:
+						z = i.split("{")[1].strip("}")
+					l.append((字, y, z))
+				return l
+			elif 自.文件名.startswith("桂林平话音韵比较研究") or 自.文件名.startswith("桂北平话音韵比较研究"):
 				if "{" in 音 and "/" in 音:
 					音組 = 音.split("/")
 					l = list()

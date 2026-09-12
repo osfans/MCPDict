@@ -136,7 +136,7 @@ def getLangsByArgv(infos, argv):
 				if fnmatch.filter(bas, pattern) or fnmatch.filter(bas, glob.escape(pattern)):
 					l.append(i)
 					found = True
-					break
+					continue
 			if not found:
 				print(f"{a} 未登記")
 	print(" ".join(l))
