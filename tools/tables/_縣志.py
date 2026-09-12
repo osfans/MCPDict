@@ -394,6 +394,9 @@ class 表(_表):
 		elif 名 in ("荆州沙市",):
 			if 行.startswith("声调"): return ""
 			行 = 自.增加調類(行)
+		elif 名 in ("義烏福田",):
+			if "[" in 行: 行 = 行.replace("(白)", "-").replace("(文)", "=")
+			else: 行 = re.sub("\\(.*?\\)$", "", 行.rstrip("-="))
 		elif 名 in ("石首",):
 			行 = 自.增加調類(行)
 		elif 名 in ("藁城",):
