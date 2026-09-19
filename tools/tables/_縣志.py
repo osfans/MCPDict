@@ -512,6 +512,8 @@ class 表(_表):
 				行 = "\t".join(列)
 			行 = 自.增加調類(行)
 			行 = 行.replace("（", "(").replace("）", ")").replace("(", "{").replace(")", "}").replace("{{", "{").replace("}}", "}")
+		elif 名 in ("沁縣",):
+			行 = 行.replace("\u0332", "-").replace("\u0333", "=")
 		elif 名 in ("全椒", "含山"):
 			行 = 行.replace("(白)", "-").replace("(文)", "=").replace("(0)", "⓪").replace("/#", "/")
 		elif 名 in ("贛榆", "徐州", "銀川", "大同", "儀徵"):
