@@ -172,6 +172,9 @@ class 表(_表):
 			行 = re.sub(r"\*(.)", "\\1?", 行)
 			行 = re.sub(r"\[(.)(.*?)\]", "\\1*\\2", 行)
 			行 = 自.增加調類(行)
+		elif 名 in ("通州鄉音字匯",):
+			if 行.startswith("#"): return
+			行 = 自.增加調類(行)
 		elif 名 in ("虔南大吉山",):
 			行 = re.sub(r"(\[)(.*?)(\d+\])", "\\1\\3", 行)
 			行 = 行.replace("<","{").replace(">","}")
@@ -399,6 +402,13 @@ class 表(_表):
 			else: 行 = re.sub("\\(.*?\\)$", "", 行.rstrip("-="))
 		elif 名 in ("石首",):
 			行 = 自.增加調類(行)
+		elif 名 in ("上海南市",):
+			行 = re.sub(r"　(\d)", "[\\1]", 行)
+			行 = 自.normG(行, rep="(\\1)")
+		elif 名 in ("臨清",):
+			行 = 行.replace("[轻]", "[0a]").replace("[次]", "[0b]")
+		elif 名 in ("獲鹿",):
+			行 = 行.replace("[轻]", "[0]")
 		elif 名 in ("藁城",):
 			if 行.startswith("字韵声	阴"): return ""
 			if 行.startswith("字韵声	"): return 行.split("\t")[1]
@@ -604,7 +614,10 @@ class 表(_表):
 				if 韻 != "" and 聲 == "ø": 聲 = ""
 				名 = 自.簡稱
 				for 調,字組 in re.findall(r"［(\d+[a-zA-Z]?)］([^［］]+)", 列[1]):
-					音 = 聲 + 韻 + 調
+					if 聲 == 韻:
+						音 = 韻 + 調
+					else:
+						音 = 聲 + 韻 + 調
 					音 = 自.正音(音, True)
 					if not 音: continue
 					if 名 == "東干甘肅話":

@@ -381,7 +381,7 @@ class 表:
 			d[字] = 音.split(",")
 
 	def 無調(自):
-		return 自.簡稱.endswith("上古") or 自.簡稱.endswith("朝鮮") or 自.簡稱.startswith("日語") or 自.簡稱 in ("1851寧波", "1884新甯", "1890新會", "党項")
+		return 自.簡稱.endswith("上古") or 自.簡稱.endswith("朝鮮") or 自.簡稱.startswith("日語") or 自.簡稱 in ("1851寧波", "1880台州", "1884新甯", "1890新會", "党項")
 	
 	def 無q聲(自):
 		return 自.簡稱 not in ("盛唐", "榕江侗上古借詞", "榕江侗中古借詞") and not 自.文件名.startswith("白語")
