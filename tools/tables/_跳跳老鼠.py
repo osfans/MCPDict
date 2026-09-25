@@ -7,12 +7,20 @@ class 表(_表):
 	註序 = True
 	註符 = None
 	聲韻 = ""
+	調類調值 = dict()
 
 	def 析(自, 列):
 		名 = 自.簡稱
 		音 = None
 		調 = ""
 		聲韻 = ""
+		if 名 in ("蘭州","臨河","包頭","朝邑"):
+			if 列[0] == "@TON":
+				自.調類調值[列[1]] = 列[2]
+			elif 列[0].startswith("@") or 列[0].startswith("/"):
+				return
+			elif len(列) > 自.列序[3] and 列[自.列序[3]] and 列[自.列序[3]] in 自.調類調值:
+				列[自.列序[3]] = 自.調類調值[列[自.列序[3]]]
 		if 列[0].startswith("#") or (len(列) == 0 and not 列[0]): return
 		if 自.列序:
 			列序 = 自.列序
@@ -88,11 +96,6 @@ class 表(_表):
 			elif 名 in ("欽州長灘", "浦北白石水", "橫縣百合", "靈山", "浦北福旺", "宜山陽山話", "龍州上龍", "桂平山塘山","平南大新"):
 				音 = 音.replace("[", "").replace("{", "")
 				組 = 組.lstrip("}]")
-			elif 名 in ("蘭州",):
-				if 音.startswith("/") or 音.startswith("@"):
-					return
-				toneValues = {'陰平':1,'陽平':2,'去聲':5,'上聲':3}
-				音 = 音[:-2] + str(toneValues[音[-2:]])
 			elif 名 in ("揚州",):
 				自.simplified = 0
 				音, 組 = 列[:2]
