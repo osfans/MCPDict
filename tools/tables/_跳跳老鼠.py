@@ -141,7 +141,7 @@ class 表(_表):
 			except:
 				自.誤.append(f"[{'\t'.join(列[:3])}]此行格式不正确")
 				return
-		if 名 in ("新最小上古"):
+		if 名 in ("文獻上古"):
 			自.爲音 = False
 		if 音 is None and 聲韻:
 			if "/" in 聲韻:

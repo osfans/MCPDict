@@ -175,6 +175,12 @@ class 表(_表):
 		elif 名 in ("通州鄉音字匯",):
 			if 行.startswith("#"): return
 			行 = 自.增加調類(行)
+		elif 名 in ("井陘",):
+			if 行.startswith("韵母"): return
+			列 = 行.split("\t", 2)
+			if 列[1] == "ø": 列[1] = ""
+			行 = f"{列[1]}{列[0]}\t{列[2]}"
+			行 = 自.增加調類(行)
 		elif 名 in ("虔南大吉山",):
 			行 = re.sub(r"(\[)(.*?)(\d+\])", "\\1\\3", 行)
 			行 = 行.replace("<","{").replace(">","}")
@@ -396,6 +402,9 @@ class 表(_表):
 				行 = 自.增加調類(行).replace("\\n", "")
 		elif 名 in ("荆州沙市",):
 			if 行.startswith("声调"): return ""
+			行 = 自.增加調類(行)
+		elif 名 in ("義烏",):
+			if 行.startswith("#"): return 行
 			行 = 自.增加調類(行)
 		elif 名 in ("義烏福田",):
 			if "[" in 行: 行 = 行.replace("(白)", "-").replace("(文)", "=")
