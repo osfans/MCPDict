@@ -1,0 +1,1810 @@
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	ts	tsʰ	s	ʂ	x	Ø
+@FIN	a
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	a	陰平	疤 八
+p	a	陽平	拔
+p	a	上聲	把 □{大便}
+p	a	去聲	霸
+pʰ	a	陽平	耙 爬
+pʰ	a	去聲	怕 帕
+m	a	陰平	螞 媽 抹
+m	a	陽平	麻
+m	a	上聲	馬 碼
+m	a	去聲	罵
+f	a	陰平	法 發
+f	a	陽平	乏
+v	a	陰平	襪
+v	a	陽平	□{拿在手中揉來揉去}
+t	a	陰平	答 搭
+t	a	陽平	達
+t	a	上聲	打
+t	a	去聲	大
+tʰ	a	陰平	拓 塔 塌 溻 獺
+tʰ	a	陽平	踏 沓
+tʰ	a	上聲	他
+n	a	陰平	納 捺
+n	a	陽平	拿
+n	a	上聲	哪
+n	a	去聲	那
+l	a	陰平	拉 蠟 臘 辣
+ts	a	陰平	渣 扎 札 雜 炸{油~} 鍘
+ts	a	上聲	眨
+ts	a	去聲	詐 炸{爆~} 柵 閘 奓{翹尾巴；手舉起}
+tsʰ	a	陰平	叉 杈 差 插 擦 察
+tsʰ	a	陽平	茶 搽 查{調~} 茬
+tsʰ	a	去聲	岔
+s	a	陰平	沙 紗 殺
+s	a	陽平	顙{腦袋}
+s	a	上聲	撒 洒 廈{~子} 灑
+s	a	去聲	□{挑揀，淘汰}
+ʂ	a	上聲	傻
+x	a	陰平	瞎
+x	a	陽平	匣
+x	a	去聲	嚇 下
+Ø	a	陰平	阿
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	au
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	au	陰平	褒 包 胞 骲
+p	au	陽平	刨
+p	au	上聲	保 堡 寶 飽
+p	au	去聲	暴 報 抱 豹 爆 曝
+pʰ	au	陰平	拋
+pʰ	au	陽平	袍 跑
+pʰ	au	上聲	剖
+pʰ	au	去聲	炮 泡
+m	au	陰平	摸
+m	au	陽平	毛 矛 茅 貓
+m	au	去聲	冒 帽 貌 茂 貿
+t	au	陰平	刀 叨
+t	au	上聲	島 倒{打~} 導
+t	au	去聲	到 倒{~水} 道 盜
+tʰ	au	陰平	萄 濤 滔 掏
+tʰ	au	陽平	桃 逃 淘
+tʰ	au	上聲	討 舀
+tʰ	au	去聲	套
+n	au	陽平	撓
+n	au	上聲	腦 惱
+n	au	去聲	鬧 □{味兒苦}
+l	au	陽平	勞 撈 牢
+l	au	上聲	老
+l	au	去聲	澇
+ts	au	陰平	遭 糟 蚤
+ts	au	上聲	早 棗 澡 爪
+ts	au	去聲	焯 躁 灶 皂 罩
+tsʰ	au	陰平	操 抄 剿
+tsʰ	au	陽平	曹 槽
+tsʰ	au	上聲	草 吵 炒
+tsʰ	au	去聲	糙 造 燥 躁{被惹怒；把人惹~咧}
+s	au	陰平	騷 臊 梢 捎
+s	au	上聲	嫂 掃 稍{~微}
+s	au	去聲	哨 潲{雨從縫隙進來；~雨} □{小孩子淘氣；娃~得很}
+tʂ	au	陰平	朝{今~} 昭 招 沼 召
+tʂ	au	去聲	趙 照
+tʂʰ	au	陰平	超
+tʂʰ	au	陽平	朝{~代} 潮
+ʂ	au	陰平	燒
+ʂ	au	陽平	韶 紹 邵
+ʂ	au	上聲	少{多~}
+ʂ	au	去聲	少{~年}
+ʐ	au	陽平	饒
+ʐ	au	上聲	擾 繞
+k	au	陰平	膏{名詞} 羔 糕
+k	au	去聲	告 膏{動詞}
+kʰ	au	上聲	考 烤
+kʰ	au	去聲	靠
+ŋ	au	陰平	熬{~菜}
+ŋ	au	陽平	熬{~眼}
+ŋ	au	上聲	襖
+ŋ	au	去聲	傲 鏊 懊
+x	au	陰平	蒿
+x	au	陽平	豪 壕 毫
+x	au	上聲	好{~壞}
+x	au	去聲	好{愛~} 號
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	aŋ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	aŋ	陰平	幫 邦 浜
+p	aŋ	上聲	榜 綁
+p	aŋ	去聲	傍 棒 蚌 半{又讀：~個饃}
+pʰ	aŋ	陽平	滂 旁 螃 龐 彷
+pʰ	aŋ	去聲	胖
+m	aŋ	陽平	茫 忙 芒 盲
+m	aŋ	上聲	莽 蟒
+f	aŋ	陰平	方
+f	aŋ	陽平	妨 房 防
+f	aŋ	上聲	芳 紡 仿 訪
+f	aŋ	去聲	放
+v	aŋ	陽平	亡 芒
+v	aŋ	上聲	網 安
+v	aŋ	去聲	忘 望
+t	aŋ	陰平	當{~時}
+t	aŋ	陽平	□{碰運氣}
+t	aŋ	上聲	黨
+t	aŋ	去聲	擋 當{~成} 蕩 宕
+tʰ	aŋ	陰平	湯
+tʰ	aŋ	陽平	堂 棠 螳 唐 糖 塘
+tʰ	aŋ	上聲	倘 躺 趟
+tʰ	aŋ	去聲	燙
+n	aŋ	陽平	囊
+n	aŋ	上聲	攮
+n	aŋ	去聲	饢
+l	aŋ	陽平	郎 廊 狼
+l	aŋ	上聲	朗
+l	aŋ	去聲	浪
+ts	aŋ	陰平	髒
+ts	aŋ	去聲	葬 藏{西~} 髒{內~}
+tsʰ	aŋ	陰平	倉 蒼
+s	aŋ	陰平	桑 喪{~事}
+s	aŋ	上聲	嗓 搡
+s	aŋ	去聲	喪{~失}
+tʂ	aŋ	陰平	張 章 樟
+tʂ	aŋ	陽平	□{指人得意，張狂}
+tʂ	aŋ	上聲	長{生~} 漲 掌
+tʂ	aŋ	去聲	帳 賬 脹 杖 仗 障 瘴
+tʂʰ	aŋ	陽平	長{~短} 腸 場 常 嘗
+tʂʰ	aŋ	上聲	廠 場 昌 倡
+tʂʰ	aŋ	去聲	唱
+ʂ	aŋ	陰平	商 傷 響
+ʂ	aŋ	陽平	裳
+ʂ	aŋ	上聲	賞 尚
+ʂ	aŋ	去聲	上
+ʐ	aŋ	陽平	瓤 穰 壤 攘
+ʐ	aŋ	上聲	嚷
+ʐ	aŋ	去聲	讓
+k	aŋ	陰平	岡 崗 剛 鋼 綱{名詞} 缸
+k	aŋ	上聲	港
+k	aŋ	去聲	鋼{動詞}
+kʰ	aŋ	陰平	康 糠 慷 扛 □{蘿蔔等空心}
+kʰ	aŋ	去聲	抗 炕
+ŋ	aŋ	陰平	昂 航
+x	aŋ	陽平	行 航 杭
+x	aŋ	上聲	夯
+x	aŋ	去聲	項 巷
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	l	ts	tsʰ	s	k	kʰ	ŋ	x
+@FIN	ei
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ei	陰平	北 百 柏 伯
+p	ei	陽平	白
+p	ei	上聲	悲 迫
+p	ei	去聲	貝 輩 背
+pʰ	ei	陰平	杯 坯 披 拍
+pʰ	ei	陽平	陪 賠
+pʰ	ei	上聲	沛
+pʰ	ei	去聲	佩 培 配 倍 焙
+m	ei	陰平	默 麥 脈
+m	ei	陽平	梅 枚 媒 煤 墨
+m	ei	上聲	每 美
+m	ei	去聲	妹 昧
+f	ei	陰平	非 飛 妃 痱
+f	ei	陽平	肥
+f	ei	上聲	匪
+f	ei	去聲	廢 肺 費
+v	ei	去聲	味
+t	ei	陰平	得 德
+tʰ	ei	陽平	特
+l	ei	陰平	肋 勒
+ts	ei	陰平	則 窄 摘 責
+ts	ei	陽平	賊 澤 擇 宅
+tsʰ	ei	陰平	測 拆 策 冊 廁 側
+s	ei	陰平	澀 虱 瑟 塞 色 嗇
+s	ei	陽平	誰
+k	ei	陰平	格 革 隔
+kʰ	ei	陰平	刻 克 客
+ŋ	ei	陰平	額 扼 軛
+x	ei	陰平	黑 赫 嚇
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	v	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	i
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	i	陰平	蓖 碑 卑 臂 筆 必 畢 逼 碧 壁 璧
+p	i	上聲	鼻 彼 比 秕
+p	i	去聲	蔽 閉 箅 備 弊 斃 幣 避 被
+pʰ	i	陰平	批
+pʰ	i	陽平	皮 疲 脾 痹
+pʰ	i	上聲	僻 劈 鄙 匹 圮
+pʰ	i	去聲	譬 屁
+m	i	陰平	密 蜜
+m	i	陽平	迷 糜 彌 眉 覓 靡 謎 媚 □{使斷處接起來}
+m	i	上聲	米
+v	i	陽平	維 惟 微 唯
+v	i	上聲	尾
+v	i	去聲	味
+l	i	陰平	立 粒 璃 狸
+l	i	陽平	犁 離 籬 梨 □{蠶蛾}
+l	i	上聲	禮 李 裏 理 鯉
+l	i	去聲	厲 例 歷 勵 麗 荔 利 吏
+tɕ	i	陰平	低 雞 飢 肌 基 幾{~茶} 機 飢{荒} 輯 給 吉 即 鯽 積 跡 脊 籍 藉 績 擊 激 寂
+tɕ	i	陽平	急 級 及 極 嫡 敵 狄 集 疾 笛
+tɕ	i	上聲	底 抵 擠 己 幾{~個的}
+tɕ	i	去聲	際 際 帝 第 濟 劑 計 繼 寄 技 妓 地{僅在“腳~”一詞中聲母送氣} 紀 記 季 弟 遞 薺 □{~子，麥草垛}
+tɕʰ	i	陰平	梯 妻 欺 緝 鞋 泣 七 漆 膝 乞 踢 剔 戚 砌 期
+tɕʰ	i	陽平	題 提 蹄 齊 臍 奇 騎 岐 棋 旗
+tɕʰ	i	上聲	體 啟 企 起 訖 涕
+tɕʰ	i	去聲	去 替 剃 屜 器 棄 氣 汽
+ȵ	i	陰平	你{複數} 匿 逆 溺
+ȵ	i	陽平	泥 倪 宜 尼 疑 誼
+ȵ	i	上聲	你{單數} 擬
+ȵ	i	去聲	膩
+ɕ	i	陰平	西 溪 璽 犧 希 稀 吸 悉 息 媳 熄 昔 惜 夕 錫 析 奚 婿
+ɕ	i	陽平	習 席
+ɕ	i	上聲	洗 徙 喜 襲
+ɕ	i	去聲	細 系 惠{姓} 戲
+Ø	i	陰平	依 揖 一 乙 抑 益 亦 液 腋 蟻 以 縊 醫 衣
+Ø	i	陽平	儀 移 逸 役 譯
+Ø	i	上聲	尾 倚 椅
+Ø	i	去聲	姨 疫 易 藝 義 乂 議 意 異 毅 憶 億 翼
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	ia
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ia	陰平	□{張貼}
+p	ia	上聲	□{扁平狀}
+tɕ	ia	陰平	家 加 痂 佳 夾 甲 胛 稼
+tɕ	ia	上聲	假 賈
+tɕ	ia	去聲	架 嫁 價
+tɕʰ	ia	陰平	掐 拤
+tɕʰ	ia	上聲	恰
+ȵ	ia	陰平	押 壓
+ȵ	ia	陽平	牙 芽
+ȵ	ia	上聲	啞
+ȵ	ia	去聲	軋
+ɕ	ia	陰平	蝦
+ɕ	ia	陽平	霞 狹 峽 洽 匣 轄
+ɕ	ia	去聲	夏 廈{~門}
+Ø	ia	陰平	鴉 丫 鴨
+Ø	ia	陽平	涯 衙
+Ø	ia	上聲	雅 亞
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	iau
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iau	陰平	鏢 標 彪
+p	iau	上聲	表
+pʰ	iau	陰平	飄 漂{~流}
+pʰ	iau	陽平	瓢 嫖
+pʰ	iau	去聲	票 漂{~亮}
+m	iau	陽平	貓 苗 描
+m	iau	上聲	藐 秒
+m	iau	去聲	廟 妙
+l	iau	陽平	療 聊 遼 撩
+l	iau	上聲	了{~結}
+l	iau	去聲	料 焌 撂{扔掉}
+tɕ	iau	陰平	交 郊 膠 教{~書} 焦 蕉 椒 刁 貂 雕 澆
+tɕ	iau	上聲	驕 嬌 絞 狡 鉸 攪 繳 僥 餃
+tɕ	iau	去聲	教{~育} 較 酵 窖 覺{睡~} 釣 吊 叫 竅{路遠}
+tɕʰ	iau	陰平	敲 悄 鵲 藋{灰~菜}
+tɕʰ	iau	陽平	瞧 橋 喬 僑 蕎
+tɕʰ	iau	上聲	雀 巧 挑
+tɕʰ	iau	去聲	俏 轎 跳 糶
+ȵ	iau	陽平	淆 肴
+ȵ	iau	上聲	咬 鳥
+ȵ	iau	去聲	尿
+ɕ	iau	陰平	消 宵 銷 霄 硝 囂 蕭 簫
+ɕ	iau	上聲	小 曉
+ɕ	iau	去聲	孝 效 校 笑
+Ø	iau	陰平	妖 邀 腰 要{~求} 吆 幺
+Ø	iau	陽平	搖 謠 窯 姚
+Ø	iau	上聲	舀
+Ø	iau	去聲	要{想~} 耀 鷂
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	iaŋ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iaŋ	陽平	□{~麵，一種寬的手工乾麵}
+l	iaŋ	陽平	良 涼 量{丈~} 糧 梁 粱
+l	iaŋ	上聲	兩個 兩 倆
+l	iaŋ	去聲	亮 諒 量{數~}
+tɕ	iaŋ	陰平	將{~來} 漿 疆 僵 繮 江 豇 匠
+tɕ	iaŋ	上聲	蔣 獎 槳 講 耩
+tɕ	iaŋ	去聲	醬 將{大~} 降{下~} 虹漿
+tɕʰ	iaŋ	陰平	槍 羌 腔
+tɕʰ	iaŋ	陽平	牆 強 藏{躲藏}
+tɕʰ	iaŋ	上聲	搶 強{勉~}
+ȵ	iaŋ	陰平	殃 秧
+ȵ	iaŋ	上聲	仰
+ȵ	iaŋ	去聲	娘
+ɕ	iaŋ	陰平	相{互~} 箱 廂 鑲 襄 湘 香 鄉
+ɕ	iaŋ	陽平	祥 詳 降{投~}
+ɕ	iaŋ	上聲	想 享 響
+ɕ	iaŋ	去聲	相{~貌} 向
+Ø	iaŋ	陰平	央
+Ø	iaŋ	陽平	洋 羊 揚 陽 楊 瘍
+Ø	iaŋ	上聲	養 映
+Ø	iaŋ	去聲	樣
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	ie
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ie	陰平	鱉 憋
+p	ie	陽平	別
+p	ie	去聲	□{跳起來}
+pʰ	ie	陰平	撇
+m	ie	陰平	滅
+l	ie	陰平	獵 列 烈 裂
+tɕ	ie	陰平	爹 皆 階 秸 街 接 跌 揭 節 結 滴
+tɕ	ie	陽平	蝶 傑 潔 捷 疊 諜 碟 劫 截
+tɕ	ie	上聲	姐 解
+tɕ	ie	去聲	借 介 界 芥 疥 屆 戒 械
+tɕʰ	ie	陰平	妾 帖 貼 鐵 切 怯
+tɕʰ	ie	陽平	茄
+tɕʰ	ie	上聲	且
+tɕʰ	ie	去聲	□{斜靠著} 襒
+ȵ	ie	陰平	聶 鑷 業 孽 捏
+ȵ	ie	陽平	蔫{沒精打采的樣子}
+ɕ	ie	陰平	些 薛 歇 蠍 屑 楔 血
+ɕ	ie	陽平	邪 斜 諧 脅 協 穴
+ɕ	ie	上聲	寫
+ɕ	ie	去聲	卸 械 懈 泄
+Ø	ie	陰平	葉 頁 拽 噎
+Ø	ie	陽平	岩
+Ø	ie	上聲	也 野
+Ø	ie	去聲	爺 夜
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	l	tɕ	tɕʰ	ȵ	m	ɕ	Ø
+@FIN	iou
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+l	iou	陰平	六 綠
+l	iou	陽平	流 劉 留 榴 鎦
+l	iou	上聲	柳
+l	iou	去聲	縷 溜
+tɕ	iou	陰平	揪 鳩 糾 究 丟 □{內急；尿~}
+tɕ	iou	上聲	酒 九 久 韭
+tɕ	iou	去聲	救 舅 就 舊 □{縮成一團}
+tɕʰ	iou	陰平	秋 丘
+tɕʰ	iou	陽平	囚 泅 求 球 仇{姓}
+ȵ	iou	上聲	扭 紐
+m	iou	去聲	謬
+ɕ	iou	陰平	修 羞 休
+ɕ	iou	上聲	朽 宿 星 嗅
+ɕ	iou	去聲	秀 繡 鏽 袖
+Ø	iou	陰平	優 憂 幽
+Ø	iou	陽平	尤 郵 由 油 遊
+Ø	iou	上聲	有 友
+Ø	iou	去聲	莠 誘 又 右 幼
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	iã
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iã	陰平	鞭 編 邊
+p	iã	上聲	蝙 貶 扁 匾
+p	iã	去聲	變 辨 辯 遍 辮
+pʰ	iã	陰平	偏
+pʰ	iã	陽平	便{~宜}
+pʰ	iã	上聲	篇 片
+pʰ	iã	去聲	騙 便{方~}
+m	iã	陽平	棉 綿 眠
+m	iã	上聲	免 勉 娩 緬
+m	iã	去聲	面
+l	iã	陽平	廉 鐮 連 憐 蓮
+l	iã	上聲	斂 臉
+l	iã	去聲	殮 練
+tɕ	iã	陰平	監 尖 奸 掂 兼 艱 間 煎 顛 肩 堅
+tɕ	iã	上聲	剪 減 檢 點 簡 柬 揀 諫 典 繭 儉
+tɕ	iã	去聲	賺 鑒 艦 漸 劍 店 箭 踐 錢 建 健 腱 電 殿 奠 佃 薦 見 鍵 賤 件 墊
+tɕʰ	iã	陰平	鉛 簽 添 謙 遷 千 牽 箋
+tɕʰ	iã	陽平	鉗 甜 錢 田 填 前 乾
+tɕʰ	iã	上聲	潛 舔 淺 遣 腆
+tɕʰ	iã	去聲	欠 歉
+ȵ	iã	陰平	蔫
+ȵ	iã	陽平	拈 言 年
+ȵ	iã	上聲	眼 碾 捻
+ȵ	iã	去聲	念
+ɕ	iã	陰平	掀 仙 鍁 先
+ɕ	iã	陽平	咸 銜 嫌 閒 賢 弦
+ɕ	iã	上聲	鮮 險 癬 顯
+ɕ	iã	去聲	陷 限 線 羨 憲 獻 現 縣
+Ø	iã	陰平	焉 閹 煙 淹 醃
+Ø	iã	陽平	鹽 閻 簷 延 筵 言 緣 沿 嚴 顏 研
+Ø	iã	上聲	掩 演
+Ø	iã	去聲	炎 驗 厭 艷 焰 雁 諺 燕 宴 饜 硯
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	l	s	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	iŋ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iŋ	陰平	冰 兵
+p	iŋ	上聲	稟 丙 秉 柄 餅
+p	iŋ	去聲	病 並
+pʰ	iŋ	陽平	憑 平 坪 瓶 萍
+pʰ	iŋ	去聲	聘
+m	iŋ	陽平	鳴 明 名 銘
+m	iŋ	去聲	命
+l	iŋ	陽平	菱 凌 陵 靈 零 鈴 伶 翎
+l	iŋ	上聲	領 嶺
+l	iŋ	去聲	令 另
+s	iŋ	陰平	興{~旺}
+s	iŋ	去聲	興{高~}
+tɕ	iŋ	陰平	京 荊 精{~品} 睛 丁 釘 疔 經 鯨
+tɕ	iŋ	上聲	景 警 井 頸 頂 鼎 驚
+tɕ	iŋ	去聲	境 敬 竟 鏡 靜 靖 釘{動詞} 訂 定 徑 莖 競 淨 錠
+tɕʰ	iŋ	陰平	青 卿 清 輕 聽 廳 汀 蜻
+tɕʰ	iŋ	陽平	情 晴 亭 停 廷 庭 蜓
+tɕʰ	iŋ	上聲	請 挺 艇 擎
+tɕʰ	iŋ	去聲	慶 凝
+ȵ	iŋ	陽平	凝 寧
+ȵ	iŋ	去聲	硬 佞
+ɕ	iŋ	陰平	星 腥
+ɕ	iŋ	陽平	行 形 刑 型
+ɕ	iŋ	上聲	醒 省{反~}
+ɕ	iŋ	去聲	幸 性 姓
+Ø	iŋ	陰平	應{~用} 鶯 櫻 鸚 英 嬰 纓
+Ø	iŋ	陽平	蠅 迎 盈 贏 營 瑩 螢
+Ø	iŋ	上聲	穎
+Ø	iŋ	去聲	應{答~}
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	iẽ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iẽ	陰平	彬 賓
+p	iẽ	去聲	殯 鬢
+pʰ	iẽ	陽平	貧 頻 拼
+pʰ	iẽ	上聲	品 拼
+m	iẽ	陽平	民
+m	iẽ	上聲	敏 皿
+l	iẽ	陽平	林 淋 臨 鄰 鱗
+l	iẽ	上聲	凜
+l	iẽ	去聲	賃 吝
+tɕ	iẽ	陰平	侵 今 金 襟 津 巾 斤 筋
+tɕ	iẽ	上聲	錦 緊 僅
+tɕ	iẽ	去聲	浸 禁 進 晉 勁 盡 近
+tɕʰ	iẽ	陰平	親
+tɕʰ	iẽ	陽平	琴 禽 擒 秦 勤 芹
+tɕʰ	iẽ	上聲	寢
+tɕʰ	iẽ	去聲	沁 妗 親{~家}
+ȵ	iẽ	陰平	陰 蔭
+ȵ	iẽ	陽平	銀
+ȵ	iẽ	上聲	飲{~料}
+ȵ	iẽ	去聲	窨 飲{~馬}
+ɕ	iẽ	陰平	心 辛 新 薪 欣
+ɕ	iẽ	陽平	尋
+ɕ	iẽ	去聲	信 訊 釁 迅
+Ø	iẽ	陰平	音 因 姻 殷
+Ø	iẽ	陽平	寅 銀 齦 勻
+Ø	iẽ	上聲	引 隱 □{絎縫衣被}
+Ø	iẽ	去聲	印 孕
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	f	m	v
+@FIN	o
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	o	陰平	波 撥 博 剝 駁
+p	o	陽平	勃 帛 薄
+p	o	上聲	跛 簸
+p	o	去聲	簸{名詞}
+pʰ	o	陰平	坡 潑 泊
+pʰ	o	陽平	婆 泊
+pʰ	o	去聲	破
+f	o	陽平	佛
+f	o	上聲	縛
+m	o	陰平	末 沒 莫 摸 抹
+m	o	陽平	魔 磨{~刀} 饃 摹 膜
+m	o	上聲	抹 寞
+m	o	去聲	磨{~面}
+v	o	陰平	物 勿
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	ou
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	ou	陰平	都 兜 篤 督 逗
+t	ou	陽平	犢
+t	ou	上聲	堵 賭 肚{涮牛~} 斗{名詞} 抖 陡
+t	ou	去聲	杜 肚 度 渡 斗{動詞} 豆 □{（用手）動}
+tʰ	ou	陰平	偷 禿
+tʰ	ou	陽平	徒 途 圖 頭 投 獨 讀
+tʰ	ou	上聲	土 吐
+tʰ	ou	去聲	兔 透
+n	ou	陰平	□{從，介詞}
+n	ou	陽平	奴 □{髒}
+n	ou	上聲	努
+n	ou	去聲	怒
+l	ou	陰平	鹿 祿 陸 錄 □{使勁舀飯}
+l	ou	陽平	蘆 爐 盧 樓 髏
+l	ou	上聲	魯 虜 簍 摟
+l	ou	去聲	路 露 漏 陋
+ts	ou	陰平	租 竹 祝 燭
+ts	ou	陽平	逐 卒 築 囑 猝 觸
+ts	ou	上聲	祖 組 阻 走
+ts	ou	去聲	做 奏 皺 縐 驟 助
+tsʰ	ou	陰平	粗 初 畜{~生} 促 □{向起扶}
+tsʰ	ou	陽平	鋤 愁 族 軸
+tsʰ	ou	上聲	楚
+tsʰ	ou	去聲	醋 措 湊
+s	ou	陰平	蘇 酥 梳 疏 蔬 搜 瘦 速 叔 淑 束 嗽
+s	ou	陽平	叔 熟 贖 蜀 屬
+s	ou	上聲	數{動詞} 叟
+s	ou	去聲	素 訴 嗦 數{名詞} 瘦 漱
+tʂ	ou	陰平	周 州 洲 粥
+tʂ	ou	上聲	肘
+tʂ	ou	去聲	咒
+tʂʰ	ou	陰平	抽
+tʂʰ	ou	陽平	稠 籌 綢 仇 酬
+tʂʰ	ou	上聲	丑
+tʂʰ	ou	去聲	臭
+ʂ	ou	陰平	收
+ʂ	ou	上聲	手 首 守
+ʂ	ou	去聲	獸 受 壽 授 售
+ʐ	ou	陰平	褥
+ʐ	ou	陽平	柔 揉
+ʐ	ou	上聲	辱
+ʐ	ou	去聲	肉
+k	ou	陰平	勾 鉤 溝
+k	ou	上聲	狗
+k	ou	去聲	夠 構 購
+kʰ	ou	陰平	摳
+kʰ	ou	上聲	口
+kʰ	ou	去聲	扣 叩
+ŋ	ou	陰平	歐 毆 嘔
+ŋ	ou	上聲	偶
+ŋ	ou	去聲	漚 慪
+x	ou	陽平	侯 喉 猴 瘊
+x	ou	上聲	吼
+x	ou	去聲	後 厚 候
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	f	v	k	kʰ	x	Ø
+@FIN	u
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	u	陰平	不 卜
+p	u	上聲	補
+p	u	去聲	布
+pʰ	u	陰平	鋪{~設} 撲
+pʰ	u	陽平	僕
+pʰ	u	上聲	普 堡 譜 瀑
+pʰ	u	去聲	鋪{店~}
+m	u	陰平	幕 木 目 穆 牧
+m	u	陽平	謀 模{~樣兒}
+m	u	上聲	某 畝 母 拇
+m	u	去聲	墓 慕 □{看不清，不通透}
+f	u	陰平	夫 膚 福 蝠 複
+f	u	陽平	敷 俘 孵 扶 服 伏 浮
+f	u	上聲	府 斧 腐 輔 否 腹 符 附
+f	u	去聲	付 父 富 副 婦 負 幅
+v	u	陰平	巫
+v	u	陽平	無
+v	u	上聲	誣 武 舞 侮
+v	u	去聲	務 霧
+k	u	陰平	姑 孤 箍 骨 谷
+k	u	上聲	古 估 股 鼓 □{糾纏：這事把人~住了}
+k	u	去聲	故 固 顧 雇
+kʰ	u	陰平	枯 窟 哭
+kʰ	u	上聲	苦 酷
+kʰ	u	去聲	庫 褲
+x	u	陰平	呼 忽
+x	u	陽平	湖 胡 狐 壺 葫 核{~兒}
+x	u	上聲	虎
+x	u	去聲	戶 互
+Ø	u	陰平	污 烏 杌 屋
+Ø	u	陽平	吳 梧
+Ø	u	上聲	五 午
+Ø	u	去聲	誤 惡{厭~}
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	k	kʰ	x	Ø
+@FIN	ua
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	ua	陰平	瓜 刮
+k	ua	上聲	寡 剮
+k	ua	去聲	掛 卦
+kʰ	ua	陰平	誇
+kʰ	ua	上聲	垮
+x	ua	陰平	花
+x	ua	陽平	華{中~} 鏵 劃{船} 猾 滑 劃
+x	ua	去聲	化 華{~山} 樺 畫 話
+Ø	ua	陰平	窪 挖
+Ø	ua	上聲	瓦
+Ø	ua	去聲	瓦{動詞}
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	k	kʰ	x	Ø
+@FIN	uaŋ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uaŋ	陰平	光
+k	uaŋ	上聲	廣
+k	uaŋ	去聲	逛
+kʰ	uaŋ	陰平	匡 筐 眶
+kʰ	uaŋ	陽平	狂
+kʰ	uaŋ	去聲	礦 曠 況
+x	uaŋ	陰平	荒 慌
+x	uaŋ	陽平	黃 皇 蝗
+x	uaŋ	上聲	謊
+Ø	uaŋ	陰平	汪
+Ø	uaŋ	陽平	王
+Ø	uaŋ	上聲	枉 往
+Ø	uaŋ	去聲	旺
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	t	tʰ	l	k	kʰ	x	Ø
+@FIN	uei
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uei	陰平	堆
+t	uei	陽平	□{撞}
+t	uei	去聲	對 隊 兌
+tʰ	uei	陰平	推
+tʰ	uei	上聲	腿
+tʰ	uei	去聲	退 蛻
+l	uei	陽平	雷
+l	uei	上聲	累{積~} 壘
+l	uei	去聲	累{勞~} 類 淚 內
+k	uei	陰平	閨 龜 歸 國 虢
+k	uei	上聲	詭 軌 鬼
+k	uei	去聲	劊 桂 貴 跪 櫃
+kʰ	uei	陰平	盔 虧 規
+kʰ	uei	陽平	葵 奎
+kʰ	uei	去聲	愧
+x	uei	陰平	灰 揮 輝 獲 恢
+x	uei	陽平	回 或
+x	uei	上聲	惑 賄 悔 毀
+x	uei	去聲	晦 匯 會 慧 惠
+Ø	uei	陰平	偎 危 威
+Ø	uei	陽平	為 違 圍
+Ø	uei	上聲	委 偉 葦 緯 萎 偽
+Ø	uei	去聲	畏 衛 位 魏 慰 尉 蔚 餵 胃 渭
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	t	tʰ	n	l	ts	s	tʂ	tʂʰ	k	kʰ	x	Ø
+@FIN	uo
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uo	陰平	多 掇{拾~}
+t	uo	陽平	奪 鐸 踱
+t	uo	上聲	躲
+t	uo	去聲	剁 大
+tʰ	uo	陰平	拖 托
+tʰ	uo	陽平	鴕 駝 馱
+tʰ	uo	上聲	妥
+tʰ	uo	去聲	唾
+n	uo	陽平	挪
+n	uo	上聲	諾
+l	uo	陰平	落 烙 駱 洛 樂 裸
+l	uo	陽平	羅 籮 鑼 騾 螺
+l	uo	上聲	略 掠 絡 若
+l	uo	去聲	摞
+ts	uo	陽平	嚼
+s	uo	陰平	削 叉
+tʂ	uo	陰平	著{衣~} 酌
+tʂʰ	uo	陰平	著{睡~}
+k	uo	陰平	鍋 聒 郭
+k	uo	上聲	果 裹
+kʰ	uo	陰平	科 括 闊 廓 擴
+kʰ	uo	上聲	顆 棵 □{~當；估摸}
+kʰ	uo	去聲	課
+x	uo	陰平	鶴 喝 豁 霍 藿
+x	uo	陽平	河 何 和 禾 合 盒 活
+x	uo	上聲	火 伙
+x	uo	去聲	賀 貨 禍 和{~泥}
+Ø	uo	陰平	窩 沃 □{醃菜水菜}
+Ø	uo	去聲	臥
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	t	tʰ	n	l	s	k	kʰ	x	Ø
+@FIN	uã
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uã	陰平	端
+t	uã	上聲	短
+t	uã	去聲	斷 鍛 段 緞
+tʰ	uã	陽平	團
+n	uã	上聲	暖 卵
+l	uã	陽平	聯 戀
+l	uã	去聲	亂
+s	uã	上聲	選
+k	uã	陰平	官 棺 觀 鰥 關
+k	uã	上聲	管 館
+k	uã	去聲	貫 灌 罐 觀{道~} 慣
+kʰ	uã	陰平	寬 □{將繩子等物從孔中穿過}
+kʰ	uã	上聲	款
+x	uã	陰平	歡
+x	uã	陽平	還{~原} 環
+x	uã	上聲	緩
+x	uã	去聲	喚 換 幻 患
+Ø	uã	陰平	豌 剜 灣 彎
+Ø	uã	陽平	玩 完 丸 頑
+Ø	uã	上聲	碗 腕
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	k	kʰ	x	Ø
+@FIN	uæ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uæ	陰平	乖
+k	uæ	上聲	拐
+k	uæ	去聲	怪
+kʰ	uæ	上聲	會{~計}
+kʰ	uæ	去聲	蒯 塊 快 筷
+x	uæ	陽平	懷 槐
+x	uæ	去聲	壞
+Ø	uæ	陰平	歪 □{兇，蠻橫}
+Ø	uæ	去聲	外
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	t	tʰ	n	l	k	kʰ	x	Ø
+@FIN	uŋ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uŋ	陰平	東 冬
+t	uŋ	上聲	董 懂
+t	uŋ	去聲	凍 棟 洞 動
+tʰ	uŋ	陰平	通
+tʰ	uŋ	陽平	同 銅 桐 筒 童 瞳
+tʰ	uŋ	上聲	桶
+tʰ	uŋ	去聲	痛
+n	uŋ	陽平	聾 膿
+n	uŋ	去聲	弄 □{食物變爛：把面煮~了}
+l	uŋ	陽平	農 隆 濃 龍
+l	uŋ	上聲	攏 隴 壟 籠
+k	uŋ	陰平	公 蚣 工 功 弓 躬 宮 恭 供{~給}
+k	uŋ	上聲	攻 拱 珙
+k	uŋ	去聲	貢 供{~養} 共
+kʰ	uŋ	陰平	空{~虛}
+kʰ	uŋ	上聲	孔 恐 鞏
+kʰ	uŋ	去聲	控 空{~隙}
+x	uŋ	陰平	轟 烘
+x	uŋ	陽平	弘 宏 紅 洪 鴻 虹
+x	uŋ	上聲	哄
+x	uŋ	去聲	橫
+Ø	uŋ	陰平	翁
+Ø	uŋ	去聲	甕
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	t	tʰ	n	l	s	k	kʰ	x	Ø
+@FIN	uẽ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uẽ	陰平	敦 墩 蹲
+t	uẽ	去聲	頓 盾 鈍 燉 盹 扽{拉使變長或平展}
+tʰ	uẽ	陰平	鈍
+tʰ	uẽ	陽平	豚 臀 囤
+n	uẽ	去聲	嫩
+l	uẽ	陽平	淪 侖 倫 輪
+l	uẽ	去聲	論
+s	uẽ	上聲	榫
+k	uẽ	陰平	昆
+k	uẽ	上聲	滾
+k	uẽ	去聲	棍
+kʰ	uẽ	陰平	坤
+kʰ	uẽ	上聲	捆
+kʰ	uẽ	去聲	困
+x	uẽ	陰平	昏 婚 葷
+x	uẽ	陽平	魂 渾 渾 □{囫圇}
+x	uẽ	去聲	混
+Ø	uẽ	陰平	溫 瘟
+Ø	uẽ	上聲	穩
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	y
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+l	y	陰平	律
+l	y	陽平	驢
+l	y	上聲	呂 慮 濾 捋
+l	y	去聲	□{分量不足補齊}
+tɕ	y	陰平	車 居 拘 駒 橘 菊 足
+tɕ	y	陽平	局
+tɕ	y	上聲	舉 矩{規~} 俱 巨 拒 距 聚 懼
+tɕ	y	去聲	劇 據 鋸 句 具
+tɕʰ	y	陰平	蛆 趨 區 屈 曲
+tɕʰ	y	陽平	渠
+tɕʰ	y	上聲	取 娶
+tɕʰ	y	去聲	趣
+ȵ	y	上聲	女
+ɕ	y	陰平	虛 須 需 吁 戌 恤 肅 宿 畜{~牧} 蓄 粟
+ɕ	y	陽平	徐 俗
+ɕ	y	上聲	許
+ɕ	y	去聲	絮 序 敘 緒 續 穗
+Ø	y	陰平	玉 獄 欲 浴
+Ø	y	陽平	魚 餘 愚 娛 迂 於 盂 榆
+Ø	y	上聲	語 雨 圄 齬
+Ø	y	去聲	與 宇 羽 愉 譽 預 遇 寓 芋 喻 慰 尉 域 郁 育
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	tɕ	tɕʰ	ɕ	Ø
+@FIN	ye
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	ye	陰平	噘{~著嘴} 鐝 訣 爵 覺{~得}
+tɕ	ye	陽平	絕 掘 噘{罵人}
+tɕ	ye	上聲	決
+tɕ	ye	去聲	倔{~強}
+tɕʰ	ye	陰平	缺 雀 鵲
+tɕʰ	ye	陽平	瘸
+tɕʰ	ye	上聲	確
+ɕ	ye	陰平	靴 雪
+Ø	ye	陰平	悅 閱 月 越
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	yo
+@TON	陰平	31
+@TON	陽平	24
+
+// Initial	Final	Tone	CharList (Space separated)
+l	yo	陰平	劣
+tɕ	yo	陰平	腳 鐝 角
+tɕ	yo	陽平	嚼
+tɕʰ	yo	陰平	卻 愨 藏{（人）躲藏}
+ȵ	yo	陰平	虐 瘧 握
+ɕ	yo	陽平	學 勺{~子}
+Ø	yo	陰平	約 藥 鑰 躍 岳 樂
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	tɕ	tɕʰ	ɕ	Ø
+@FIN	yã
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yã	陰平	捐
+tɕ	yã	上聲	卷{動詞}
+tɕ	yã	去聲	卷 絹 倦 眷 圈{豬~}
+tɕʰ	yã	陰平	圈
+tɕʰ	yã	陽平	泉 拳 權 顴
+tɕʰ	yã	去聲	勸
+ɕ	yã	陰平	宣 喧
+ɕ	yã	陽平	旋 玄 懸
+ɕ	yã	去聲	鏇 楦 眩
+Ø	yã	陰平	援 冤 淵
+Ø	yã	陽平	圓 員 元 原 源 袁 轅 園
+Ø	yã	上聲	遠
+Ø	yã	去聲	院 願 怨 繞
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	tɕ	tɕʰ	ɕ	Ø
+@FIN	yŋ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yŋ	上聲	窘
+tɕ	yŋ	去聲	迥
+tɕʰ	yŋ	陽平	瓊 窮
+tɕʰ	yŋ	上聲	頃 焪{烘烤：~紅苕}
+ɕ	yŋ	陰平	兄 胸 凶
+ɕ	yŋ	陽平	雄 熊
+Ø	yŋ	陰平	雍 臃 擁 壅 湧
+Ø	yŋ	陽平	榮 融 容 蓉 庸
+Ø	yŋ	上聲	永 泳 詠 勇
+Ø	yŋ	去聲	用
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	tɕ	tɕʰ	ɕ	Ø
+@FIN	yẽ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yẽ	陰平	均 鈞 君 軍
+tɕ	yẽ	去聲	菌 郡
+tɕʰ	yẽ	陽平	群 裙
+ɕ	yẽ	陰平	荀 熏 勛 薰
+ɕ	yẽ	陽平	旬 循 巡
+ɕ	yẽ	上聲	筍
+ɕ	yẽ	去聲	殉 訓
+Ø	yẽ	陽平	雲
+Ø	yẽ	上聲	允
+Ø	yẽ	去聲	熨 韻 運 暈
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	ã
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ã	陰平	班 斑 頒 扳 般 搬
+p	ã	去聲	扮 瓣 辦 半 絆 拌 伴
+pʰ	ã	陰平	攀 潘
+pʰ	ã	陽平	盤
+pʰ	ã	去聲	盼 判 叛
+m	ã	陽平	蠻 瞞 饅
+m	ã	上聲	滿
+m	ã	去聲	慢 漫 幔
+f	ã	陰平	帆 藩 翻
+f	ã	陽平	凡 繁 煩
+f	ã	上聲	反
+f	ã	去聲	泛 範 犯 販
+v	ã	陽平	腕 □{食物黏性過大，咬不動}
+v	ã	上聲	晚 挽
+v	ã	去聲	萬 蔓{瓜~}
+t	ã	陰平	耽 擔{~任} 丹 單
+t	ã	上聲	膽 撣
+t	ã	去聲	擔{~子} 旦 誕 但 彈{子~} 蛋 □{摔倒}
+tʰ	ã	陰平	貪 攤 灘
+tʰ	ã	陽平	譚 潭 壇 檀 彈{~琴}
+tʰ	ã	上聲	毯 坦
+tʰ	ã	去聲	探 炭 嘆
+n	ã	陽平	南 男 難{~易}
+n	ã	去聲	難{患~} □{泥濘難走}
+l	ã	陽平	婪 藍 籃 蘭 欄 攔
+l	ã	上聲	攬 覽 懶 纜 □{把土或髒物撮起}
+l	ã	去聲	濫 爛
+ts	ã	陰平	簪 綻 □{頭低下} □{裂開}
+ts	ã	上聲	斬 盞 攢
+ts	ã	去聲	站 蘸 贊 濺 棧 暫
+tsʰ	ã	陰平	參 摻 餐
+tsʰ	ã	陽平	蠶 慚 饞 殘
+tsʰ	ã	上聲	產 慘 鏟
+tsʰ	ã	去聲	燦
+s	ã	陰平	三{僅在“二三月”中讀sæ⁵⁵} 衫 山 刪
+s	ã	去聲	傘 散
+tʂ	ã	陰平	沾 粘 瞻 氈
+tʂ	ã	上聲	展
+tʂ	ã	去聲	占 戰 顫
+tʂʰ	ã	陽平	纏
+tʂʰ	ã	去聲	蛇{用於屬相}
+ʂ	ã	陰平	膻 扇{動詞}
+ʂ	ã	上聲	陝 閃
+ʂ	ã	去聲	疝 扇{名詞}
+ʐ	ã	陽平	黏 然 燃
+k	ã	陰平	甘 柑 尷 干{曬~} 肝 竿
+k	ã	上聲	感 敢 杆 稈 擀 趕
+k	ã	去聲	干{~部}
+kʰ	ã	陰平	勘 刊
+kʰ	ã	上聲	砍 坎
+kʰ	ã	去聲	看
+ŋ	ã	陰平	庵 安 鞍
+ŋ	ã	去聲	揞 暗 岸 按 案
+x	ã	陰平	涎 憨 鼾
+x	ã	陽平	含 函 咸 寒 韓 閒
+x	ã	上聲	喊 罕
+x	ã	去聲	憾 酣 漢 旱 汗 焊
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	f	t	tʰ	n	l	ts	tsʰ	s	k	kʰ	ŋ	x
+@FIN	æ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	æ	上聲	擺
+p	æ	去聲	拜 敗
+pʰ	æ	陽平	排 牌
+pʰ	æ	上聲	魄 派
+pʰ	æ	去聲	派{動詞}
+m	æ	陽平	埋
+m	æ	上聲	買
+m	æ	去聲	賣
+f	æ	陰平	摔
+t	æ	去聲	戴 貸 代 袋 帶 大{~夫} 待
+tʰ	æ	陰平	胎 他
+tʰ	æ	陽平	臺 抬
+tʰ	æ	去聲	態 太 泰
+n	æ	陽平	崖 挨{~打}
+n	æ	上聲	乃 奶
+n	æ	去聲	耐
+l	æ	陽平	來
+l	æ	去聲	賴 癩
+ts	æ	陰平	災 栽 齋
+ts	æ	上聲	宰 載
+ts	æ	去聲	再 債 在 寨
+tsʰ	æ	陰平	猜 釵 差{出~} 搋{和麵}
+tsʰ	æ	陽平	才 材 財 裁 柴
+tsʰ	æ	上聲	彩
+tsʰ	æ	去聲	菜 蔡
+s	æ	陰平	腮 篩
+s	æ	上聲	篩{動詞}
+s	æ	去聲	曬
+k	æ	陰平	該
+k	æ	上聲	改
+k	æ	去聲	概 溉 蓋
+kʰ	æ	陰平	開
+ŋ	æ	陰平	哀 挨 俺
+ŋ	æ	陽平	呆
+ŋ	æ	上聲	礙 藹 矮
+ŋ	æ	去聲	愛 艾
+x	æ	陰平	孩 市 亥
+x	æ	陽平	孩 鞋 還{~有}
+x	æ	上聲	海
+x	æ	去聲	害
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	t	tʰ	ʂ	ʐ	k	kʰ	ŋ
+@FIN	ə
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	ə	陰平	遮 摺 褶 折 蜇 浙 者
+t	ə	陽平	蟄 蔗 轍
+t	ə	上聲	這 折
+tʰ	ə	陰平	車
+tʰ	ə	陽平	徹
+tʰ	ə	上聲	扯
+tʰ	ə	去聲	撤
+ʂ	ə	陰平	賒 設 涉 攝
+ʂ	ə	陽平	蛇 佘 舌
+ʂ	ə	上聲	射
+ʂ	ə	去聲	社
+ʐ	ə	陰平	熱
+ʐ	ə	上聲	惹
+k	ə	陰平	哥 歌 鴿 割 葛 各 閣
+k	ə	陽平	擱
+k	ə	去聲	個
+kʰ	ə	陰平	磕 渴
+kʰ	ə	上聲	可
+ŋ	ə	陰平	我{複} 鄂 惡{善~}
+ŋ	ə	陽平	蛾 鵝 訛
+ŋ	ə	上聲	我{單}
+ŋ	ə	去聲	餓
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	f	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	x
+@FIN	əŋ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	əŋ	陰平	崩
+p	əŋ	去聲	迸
+pʰ	əŋ	陰平	烹
+pʰ	əŋ	陽平	朋 彭 膨 棚 蓬 篷
+pʰ	əŋ	上聲	捧
+m	əŋ	陰平	懵
+m	əŋ	陽平	萌 盟 蒙 虻
+m	əŋ	上聲	猛
+m	əŋ	去聲	孟 夢
+f	əŋ	陰平	風 楓 瘋 豐 封 峰
+f	əŋ	陽平	馮 峰 逢 縫{動詞}
+f	əŋ	去聲	諷 鳳 奉 俸 縫{名詞}
+t	əŋ	陰平	登 燈
+t	əŋ	上聲	等
+t	əŋ	去聲	凳 蹬 鄧 澄 瞪
+tʰ	əŋ	陰平	吞
+tʰ	əŋ	陽平	騰 謄 藤 疼
+n	əŋ	陽平	能
+l	əŋ	上聲	冷
+l	əŋ	去聲	愣
+ts	əŋ	陰平	曾{姓} 增 憎 爭 箏
+ts	əŋ	去聲	贈
+tsʰ	əŋ	陰平	撐
+tsʰ	əŋ	陽平	曾{~經} 層
+tsʰ	əŋ	去聲	蹭
+s	əŋ	陰平	僧 生 甥 笙 牲
+s	əŋ	上聲	省
+tʂ	əŋ	陰平	蒸 正{~月} 怔
+tʂ	əŋ	上聲	拯 整
+tʂ	əŋ	去聲	證 症 鄭 正 政
+tʂʰ	əŋ	陽平	懲 乘 承 丞 澄 橙 呈 成 城 誠 盛
+tʂʰ	əŋ	上聲	稱 逞
+tʂʰ	əŋ	去聲	秤
+ʂ	əŋ	陰平	聲
+ʂ	əŋ	陽平	繩
+ʂ	əŋ	去聲	剩 聖 盛
+ʐ	əŋ	上聲	扔
+k	əŋ	陰平	更{五~} 庚 羹 耕
+k	əŋ	上聲	哽 埂 耿 梗
+k	əŋ	去聲	更{~加}
+kʰ	əŋ	陰平	坑
+x	əŋ	陰平	亨
+x	əŋ	陽平	恆 衡
+x	əŋ	去聲	杏
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	Ø
+@FIN	ɚ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+Ø	ɚ	陰平	日 而
+Ø	ɚ	陽平	兒
+Ø	ɚ	上聲	耳 爾 餌
+Ø	ɚ	去聲	二
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	k	kʰ	x
+@FIN	ɯ
+@TON	陰平	31
+@TON	陽平	24
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	ɯ	陰平	胳 疙 圪 袼{~褙}
+kʰ	ɯ	陰平	咳 圪{~膝蓋}
+x	ɯ	陽平	蛤{~蟆} 核{~桃}
+x	ɯ	去聲	後{~頭}
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	ts	tsʰ	s
+@FIN	ɿ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ɿ	陰平	支 枝 只{~有} 姿 咨 脂 滋 之 芝 帚 籜
+ts	ɿ	上聲	紙 姊 旨 指 子 止 址 趾 至 紫
+ts	ɿ	去聲	痔 志 痣 自 字
+tsʰ	ɿ	陰平	雌 疵 □{手伸出}
+tsʰ	ɿ	陽平	瓷 遲 慈 詞 辭 祠
+tsʰ	ɿ	上聲	此 齒 次 □{在同一部位蹭來蹭去}
+tsʰ	ɿ	去聲	刺 翅 賜 伺
+s	ɿ	陰平	撕 施 匙 私 師 尸 司 絲 思 詩 氏
+s	ɿ	陽平	辭 祠 時
+s	ɿ	上聲	豕 死 屎 使 史 駛 始
+s	ɿ	去聲	是 四 示 視 飼 似 飼 士 柿 事 試 市 侍
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ʅ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʅ	陰平	知 蜘 汁 質 織 職 隻{量詞} 炙
+tʂ	ʅ	陽平	姪 直 值 植 殖
+tʂ	ʅ	去聲	這 制 致 置 治 稚
+tʂʰ	ʅ	陰平	癡 尺 秋
+tʂʰ	ʅ	陽平	池 馳 遲 持
+tʂʰ	ʅ	上聲	侈 恥 赤 斥
+ʂ	ʅ	陰平	濕 失 室 適 釋
+ʂ	ʅ	陽平	十 拾 食 蝕 石 實
+ʂ	ʅ	去聲	世 勢 誓 逝
+ʐ	ʅ	陰平	日
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	ts	tsʰ	s	z
+@FIN	ʮ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮ	陰平	豬 株 蛛 朱 珠
+ts	ʮ	上聲	煮 拄 主
+ts	ʮ	去聲	著 箸 駐 注 鑄 柱 住
+tsʰ	ʮ	陰平	出 池{澇~} 除 儲 廚
+tsʰ	ʮ	上聲	處
+s	ʮ	陰平	書 舒 輸
+s	ʮ	陽平	殊 術
+s	ʮ	上聲	暑 鼠 豎 署 薯
+s	ʮ	去聲	述 樹
+z	ʮ	陰平	入
+z	ʮ	陽平	如 儒
+z	ʮ	上聲	乳
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	ts	tsʰ	s
+@FIN	ʮa
+@TON	陰平	31
+@TON	上聲	52
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮa	陰平	抓
+ts	ʮa	上聲	爪
+tsʰ	ʮa	上聲	□{剝植物皮}
+s	ʮa	陰平	刷
+s	ʮa	上聲	耍
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	ts	tsʰ	s
+@FIN	ʮaŋ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮaŋ	陰平	莊 裝
+ts	ʮaŋ	去聲	壯 狀
+tsʰ	ʮaŋ	陰平	瘡 窗
+tsʰ	ʮaŋ	陽平	床
+tsʰ	ʮaŋ	上聲	闖
+tsʰ	ʮaŋ	去聲	創 撞
+s	ʮaŋ	陰平	霜 孀 雙
+s	ʮaŋ	上聲	爽
+s	ʮaŋ	去聲	雙{~生}
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	ts	tsʰ	s	z
+@FIN	ʮei
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮei	陰平	追 錐
+ts	ʮei	上聲	嘴
+ts	ʮei	去聲	綴 贅 醉 墜 罪 最
+tsʰ	ʮei	陰平	崔 催 吹 春
+tsʰ	ʮei	陽平	槌 錘 垂
+tsʰ	ʮei	去聲	脆 翠 粹
+s	ʮei	陰平	雖 摔
+s	ʮei	陽平	隨
+s	ʮei	上聲	髓 水
+s	ʮei	去聲	碎 歲 稅 睡 隧 穗
+z	ʮei	去聲	瑞 蕊 銳
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	ts	tsʰ	s	z
+@FIN	ʮo
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮo	陰平	作 桌 捉
+ts	ʮo	陽平	琢 啄 濁 鐲 拙 卓 鑿 昨
+ts	ʮo	上聲	左
+ts	ʮo	去聲	坐 座
+tsʰ	ʮo	陰平	錯 撮 綽 戳 搓
+tsʰ	ʮo	去聲	錯
+s	ʮo	陰平	梭 說 索 朔 縮 削
+s	ʮo	陽平	芍
+s	ʮo	上聲	瑣 鎖 所
+z	ʮo	陰平	弱
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	ts	tsʰ	s	z
+@FIN	ʮã
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮã	陰平	鑽{動詞} 專 磚
+ts	ʮã	上聲	轉{~學}
+ts	ʮã	去聲	鑽{名詞} 轉{~圈} 篆 傳{~記} 纂 賺
+tsʰ	ʮã	陰平	汆 川 穿
+tsʰ	ʮã	陽平	全 傳{~達} 船
+tsʰ	ʮã	上聲	喘
+tsʰ	ʮã	去聲	串 竄 篡
+s	ʮã	陰平	酸 閂 拴
+s	ʮã	陽平	船
+s	ʮã	去聲	算 蒜 涮
+z	ʮã	上聲	軟 阮
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	ts	s
+@FIN	ʮæ
+@TON	陰平	31
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮæ	陰平	揣
+s	ʮæ	陰平	衰
+s	ʮæ	去聲	帥 率{~領} 蟀
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	ts	tsʰ	s	z
+@FIN	ʮəŋ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮəŋ	陰平	鬃 宗 中{當~} 忠 終 蹤 鐘 盅
+ts	ʮəŋ	上聲	總 冢 種{品~} 腫 粽 腫
+ts	ʮəŋ	去聲	中{~獎} 眾 縱 重{~量} 種{~樹}
+tsʰ	ʮəŋ	陰平	聰 蔥 囪 匆 充 衝
+tsʰ	ʮəŋ	陽平	叢 蟲 崇 從 重{~複}
+tsʰ	ʮəŋ	上聲	慫 寵
+s	ʮəŋ	陰平	松 嵩
+s	ʮəŋ	陽平	慫
+s	ʮəŋ	上聲	誦 頌 訟
+s	ʮəŋ	去聲	送 宋
+z	ʮəŋ	陽平	仍 戎 絨 茸
+z	ʮəŋ	上聲	冗
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	ts	tsʰ	s	z
+@FIN	ʮẽ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮẽ	陰平	尊 遵 噸
+ts	ʮẽ	陽平	□{全部，到處都：路上~是車}
+ts	ʮẽ	上聲	準
+ts	ʮẽ	去聲	俊
+tsʰ	ʮẽ	陰平	村 皴 椿 春
+tsʰ	ʮẽ	陽平	存 唇 純 醇
+tsʰ	ʮẽ	上聲	蠢
+tsʰ	ʮẽ	去聲	寸
+s	ʮẽ	陰平	孫
+s	ʮẽ	陽平	唇嘴{~兒} □{羞，丟人}
+s	ʮẽ	上聲	損
+s	ʮẽ	去聲	遜 順 舜
+z	ʮẽ	去聲	潤 閏
+// HSD Syllabary Data Partition
+// 地区：陝西省-西安市-藍田縣
+// 来源：《西安藍田方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-西安市-藍田縣
+@SRC	《西安藍田方言研究》
+
+@INI	p	pʰ	m	f	v	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	ẽ
+@TON	陰平	31
+@TON	陽平	24
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ẽ	陰平	奔 犇
+p	ẽ	上聲	本
+p	ẽ	去聲	笨
+pʰ	ẽ	陰平	噴
+pʰ	ẽ	陽平	盆
+m	ẽ	陽平	門
+m	ẽ	去聲	悶
+f	ẽ	陰平	分 吩
+f	ẽ	陽平	墳
+f	ẽ	上聲	粉 芬 焚 份
+f	ẽ	去聲	糞 憤 忿
+v	ẽ	陽平	文 紋 蚊 聞
+v	ẽ	上聲	吻 刎
+v	ẽ	去聲	問
+ts	ẽ	陰平	糝
+tsʰ	ẽ	去聲	襯
+s	ẽ	陰平	森 參
+s	ẽ	去聲	滲
+tʂ	ẽ	陰平	針 珍珠 臻 榛 真 疹 貞 偵
+tʂ	ẽ	上聲	枕
+tʂ	ẽ	去聲	鎮 震 振 陣
+tʂʰ	ẽ	陽平	沉 陳 塵 辰 晨 臣
+tʂʰ	ẽ	去聲	趁
+ʂ	ẽ	陰平	深 身 申 伸 娠
+ʂ	ẽ	陽平	神 辰 晨
+ʂ	ẽ	上聲	沈 審 嬸
+ʂ	ẽ	去聲	甚 甚 腎 慎
+ʐ	ẽ	陽平	任{姓} 人 仁
+ʐ	ẽ	上聲	忍
+ʐ	ẽ	去聲	任{~務} 紉 刃 認
+k	ẽ	陰平	根 跟
+k	ẽ	去聲	□{夠到}
+kʰ	ẽ	上聲	懇 墾 肯
+ŋ	ẽ	陰平	恩
+x	ẽ	陽平	痕
+x	ẽ	上聲	很
+x	ẽ	去聲	恨
