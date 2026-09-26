@@ -137,11 +137,7 @@ class 表(_表):
 			行 = re.sub(r"连读.*$", "", 行)
 		elif 名 in ("潼關太要",):
 			if 行.startswith("["): 行 = ""
-		elif 名 in ("昆明",):
-			if 行.startswith("\t\t"): 行 = ""
-			行 = re.sub(r"^.*?\t", "", 行)
-			行 = 行.replace("(", "{").replace("〔", "{").replace(")", "}")
-		elif 名 in ("建水",):
+		elif 名 in ("昆明", "建水",):
 			if 行.startswith("\t"): 行 = ""
 		elif 名 in ("丹鳳","嘉定中","嘉定西","嘉定城","嘉定華亭","寶山羅店","南皮","海門","長治", "鄱陽","萊西前張管寨", "紹興"):
 			if 行.startswith("#"): 行 = "#"

@@ -14660,6 +14660,30 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "烏蘇西湖",
+        "語言": "烏蘇西湖話",
+        "地點": "新疆/塔城/烏蘇/西湖",
+        "地圖集二分區": "蘭銀官話－北疆片",
+        "音典分區": "西北－甘肅",
+        "陳邡分區": "官話－河北－冀北片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《新疆乌苏西湖汉语方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.64,
+          44.54
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
         "title": "霍州",
@@ -40521,7 +40545,7 @@
         "歷史音": "0",
         "版本": "2025-01-04",
         "錄入人": "shinzoqchiuq",
-        "字表來源": "<a href=https://github.com/ionkaon/dictionary>《岱山县志》（鹜高赭纱匕已改正“甬江話字詞表”网站提供的字表的错误之处，并增加注释）</a>"
+        "字表來源": "<a href=https://github.com/ionkaon/dictionary>甬江話字詞表《岱山县志》</a>"
       },
       "geometry": {
         "type": "Point",
@@ -78223,6 +78247,54 @@
         "coordinates": [
           135.768029,
           35.011636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#262626",
+        "marker-size": "small",
+        "marker-symbol": "z",
+        "title": "敏派秦腔",
+        "語言": "敏派秦腔",
+        "地點": "陝西/西安、咸陽",
+        "地圖集二分區": "戲劇",
+        "音典分區": "戲劇",
+        "陳邡分區": "官話－中州韻－南曲片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《敏派秦腔舞台语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.12,
+          34.22
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#262626",
+        "marker-size": "small",
+        "marker-symbol": "z",
+        "title": "翼城蒲劇",
+        "語言": "翼城蒲劇",
+        "地點": "山西/臨汾/翼城",
+        "地圖集二分區": "戲劇",
+        "音典分區": "戲劇",
+        "陳邡分區": "官話－中州韻－南曲片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《山西翼城蒲剧音韵研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.73,
+          35.74
         ]
       }
     },

@@ -1,0 +1,1832 @@
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	f	t	tʰ	n	l	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	v	∅
+@FIN	a
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+p	a	陰平	吧 八 巴 扒 疤
+p	a	陽平	拔
+p	a	上聲	把
+p	a	去聲1	霸 爸 罷 壩
+pʰ	a	陰平	趴 葩
+pʰ	a	陽平	爬 耙
+pʰ	a	去聲1	怕 帕
+m	a	陰平	媽
+m	a	陽平	麻 嘛
+m	a	上聲	馬 碼
+m	a	去聲1	罵
+f	a	陰平	發
+f	a	陽平	罰 乏
+f	a	上聲	法
+t	a	陰平	搭
+t	a	陽平	妲 答 達
+t	a	上聲	打
+t	a	去聲2	大
+tʰ	a	陰平	他 它 她 塌
+tʰ	a	陽平	沓
+tʰ	a	上聲	塔
+tʰ	a	去聲1	踏 蹋
+n	a	陽平	拿
+n	a	上聲	哪
+n	a	去聲1	納 吶 娜 鈉
+n	a	去聲2	那
+l	a	陰平	拉 啦 垃
+l	a	陽平	剌
+l	a	去聲1	辣 蠟 臘
+k	a	陰平	嘎
+k	a	去聲1	尬
+kʰ	a	陰平	咖
+kʰ	a	上聲	卡
+x	a	陰平	哈
+ts	a	陰平	扎
+ts	a	陽平	咱 雜 砸 匝 喳
+ts	a	上聲	咋
+ts	a	去聲1	詐
+tsʰ	a	陰平	擦 插
+tsʰ	a	陽平	查
+s	a	陰平	仨 殺 沙
+s	a	上聲	撒 灑
+s	a	去聲1	薩
+s	a	去聲2	剎
+tʂ	a	陰平	扎 渣 楂 吒
+tʂ	a	陽平	炸 閘 鍘
+tʂ	a	上聲	眨
+tʂ	a	去聲1	炸 柵 乍 詐
+tʂʰ	a	陰平	插 叉 差
+tʂʰ	a	陽平	查 茬
+tʂʰ	a	去聲1	奼 詫 岔
+ʂ	a	陰平	沙 莎 紗 鯊 殺
+ʂ	a	陽平	啥
+ʂ	a	上聲	傻
+ʂ	a	去聲1	煞 廈
+ʂ	a	去聲2	剎
+v	a	陰平	挖 蛙 洼 媧
+v	a	陽平	娃
+v	a	上聲	瓦
+v	a	去聲1	襪
+∅	a	陰平	啊 阿{~姨}
+∅	a	去聲1	阿{~哥}
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ŋ	∅	v
+@FIN	ai
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ai	上聲	擺 佰
+p	ai	去聲1	拜 敗
+pʰ	ai	陽平	排 徘 牌
+pʰ	ai	去聲1	派 湃
+m	ai	陽平	埋 霾
+m	ai	上聲	買
+m	ai	去聲1	賣 邁
+t	ai	陰平	呆 待{~在屋裏} 呔{語氣詞}
+t	ai	上聲	逮 歹
+t	ai	去聲1	帶 代 戴 袋 貸 黛 怠 待{等~} 大{~夫}
+tʰ	ai	陰平	苔 胎
+tʰ	ai	陽平	抬 台
+tʰ	ai	去聲1	太 態 泰 汰
+n	ai	上聲	奶 乃
+n	ai	去聲1	耐
+n	ai	去聲2	奈
+l	ai	陽平	來
+l	ai	去聲1	賴
+k	ai	陰平	該
+k	ai	上聲	改
+k	ai	去聲1	概 鈣 丐 溉
+k	ai	去聲2	蓋
+kʰ	ai	陰平	開
+kʰ	ai	上聲	楷 凱 愷 鎧 慨
+x	ai	陰平	嗨 咳{語氣詞}
+x	ai	陽平	孩 骸
+x	ai	上聲	海
+x	ai	去聲1	亥 害
+ts	ai	陰平	栽 災 哉
+ts	ai	上聲	崽 載 仔
+ts	ai	去聲1	在 再 載 宰
+tsʰ	ai	陰平	猜 差
+tsʰ	ai	陽平	才 財 材 裁 柴
+tsʰ	ai	上聲	採 彩 踩
+tsʰ	ai	去聲1	菜 蔡
+s	ai	陰平	塞
+s	ai	去聲1	賽
+tʂ	ai	去聲1	債 寨 砦
+tʂʰ	ai	陰平	差
+tʂʰ	ai	陽平	柴 豺
+ʂ	ai	陰平	篩
+ʂ	ai	上聲	色{~子}
+ʂ	ai	去聲1	曬
+ŋ	ai	陰平	哀 埃
+ŋ	ai	陽平	癌 挨
+ŋ	ai	上聲	矮 藹
+ŋ	ai	去聲1	愛 艾 隘 礙 嬡
+∅	ai	去聲1	哎 唉 外
+v	ai	陰平	歪
+v	ai	上聲	崴
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	f	t	tʰ	n	l	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	ŋ	v
+@FIN	an
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+p	an	陰平	班 斑 般 頒
+p	an	上聲	版 板
+p	an	去聲1	辦 半 伴 瓣 搬 扮 拌
+pʰ	an	陰平	潘 攀 番
+pʰ	an	陽平	盤 磐
+pʰ	an	去聲1	判 盼 畔 叛
+m	an	陽平	蠻 瞞 饅 埋
+m	an	上聲	滿
+m	an	去聲1	慢 曼 蔓
+m	an	去聲2	漫
+f	an	陰平	帆 幡
+f	an	陽平	凡 煩 繁
+f	an	上聲	反 返
+f	an	去聲1	飯 翻 泛 犯 範 樊 販
+t	an	陰平	單 丹 擔
+t	an	上聲	膽
+t	an	去聲1	旦 但 蛋 淡 彈
+t	an	去聲2	誕
+tʰ	an	陰平	攤 貪
+tʰ	an	陽平	談 彈 譚 曇 壇 痰 潭
+tʰ	an	上聲	坦 忐 毯
+tʰ	an	去聲1	探 嘆 碳 灘 炭
+n	an	陽平	難{困~} 南 男 楠
+n	an	去聲1	難{~民}
+l	an	陽平	蘭 藍 嵐 欄 攔 籃 婪
+l	an	上聲	懶 覽 攬
+l	an	去聲1	爛 濫
+k	an	陰平	干{~濕} 甘 肝
+k	an	上聲	趕 敢 桿 感 竿 擀 稈
+k	an	去聲1	干{~活} 贛
+kʰ	an	陰平	堪 勘 刊
+kʰ	an	上聲	侃 砍 檻 坎
+kʰ	an	去聲1	看
+x	an	陰平	憨 鼾
+x	an	陽平	寒 含 韓 涵 函
+x	an	上聲	罕 喊
+x	an	去聲1	漢 汗 焊 旱 悍 憾 捍
+ts	an	陰平	簪
+ts	an	陽平	纏
+ts	an	上聲	攢 拶{壓緊的意思}
+ts	an	去聲1	暫 贊 站
+tsʰ	an	陰平	餐 參 摻
+tsʰ	an	陽平	殘 慚 蠶
+tsʰ	an	上聲	慘 產
+tsʰ	an	去聲1	燦 璨
+s	an	陰平	山 三 衫
+s	an	上聲	散{~裝} 傘
+s	an	去聲1	散{分~} 善
+tʂ	an	陰平	粘 沾 詹 瞻
+tʂ	an	上聲	斬 展 盞 嶄 輾
+tʂ	an	去聲1	戰 站 棧 占 綻 蘸 湛
+tʂʰ	an	陰平	攙 摻
+tʂʰ	an	陽平	纏 蟬 嬋 禪 饞 潺 讒 闡 諂
+tʂʰ	an	上聲	產 鏟
+tʂʰ	an	去聲1	顫
+ʂ	an	陰平	山 刪 衫 扇 珊 杉 姍 煽
+ʂ	an	上聲	陝 閃
+ʂ	an	去聲1	善 汕
+ʐ	an	陽平	燃 冉 髯
+ʐ	an	上聲	然 染
+ŋ	an	陰平	安 庵
+ŋ	an	上聲	俺
+ŋ	an	去聲1	岸 按 暗 案 黯
+v	an	陰平	彎 灣
+v	an	陽平	完 玩 丸
+v	an	上聲	晚 挽 碗 婉 剜 宛
+v	an	去聲1	萬
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	ŋ
+@FIN	au
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+p	au	陰平	包 胞 苞 剝
+p	au	陽平	薄 雹
+p	au	上聲	保 褓 寶 堡 飽
+p	au	去聲1	報 抱 爆 豹 曝
+pʰ	au	陰平	拋
+pʰ	au	陽平	袍 刨 咆
+pʰ	au	上聲	跑
+pʰ	au	去聲1	炮 泡
+m	au	陰平	貓
+m	au	陽平	茅 毛 矛 錨
+m	au	去聲1	冒 帽 茂 貌 貿
+t	au	陰平	刀
+t	au	陽平	捯{~飭}
+t	au	上聲	島 導 搗 禱
+t	au	去聲1	道 倒 盜 稻
+t	au	去聲2	到
+tʰ	au	陰平	掏 韜 滔 濤
+tʰ	au	陽平	啕 逃 桃 淘 陶 萄
+tʰ	au	上聲	討
+tʰ	au	去聲1	套
+n	au	陰平	孬
+n	au	陽平	撓
+n	au	上聲	腦 惱
+n	au	去聲1	鬧
+l	au	陰平	撈
+l	au	陽平	牢 勞 醪{~糟}
+l	au	上聲	姥
+l	au	去聲1	老 嘮 烙 澇 酪
+k	au	陰平	高 膏 糕 羔
+k	au	上聲	搞 稿
+k	au	去聲1	告
+kʰ	au	上聲	考 烤
+kʰ	au	去聲1	靠 拷 銬 犒
+x	au	陽平	號 豪 嚎 毫 蚝
+x	au	上聲	好 郝
+x	au	去聲1	浩 耗 昊
+ts	au	陰平	遭 糟
+ts	au	陽平	鑿
+ts	au	上聲	藻 早 澡 棗
+ts	au	去聲1	燥 躁{煩~} 造 灶 皂
+tsʰ	au	陰平	操
+tsʰ	au	陽平	槽 嘈
+tsʰ	au	上聲	草
+tsʰ	au	去聲1	燥{~氣} 曹 糙
+s	au	陰平	騷 搔 瘙 稍
+s	au	上聲	掃 嫂 少
+s	au	去聲1	臊 埽
+tʂ	au	陰平	招 召 昭
+tʂ	au	陽平	著
+tʂ	au	上聲	找 爪 沼
+tʂ	au	去聲1	照 趙 兆 罩 肇
+tʂʰ	au	陰平	超 鈔 抄
+tʂʰ	au	陽平	巢 朝 潮 嘲
+tʂʰ	au	上聲	吵 炒
+ʂ	au	陰平	燒 梢 稍 捎
+ʂ	au	陽平	勺 苕
+ʂ	au	上聲	少{多~}
+ʂ	au	去聲1	邵 哨 韶
+ʂ	au	去聲2	少{~年}
+ʐ	au	陽平	嬈 饒
+ʐ	au	上聲	擾
+ʐ	au	去聲1	繞
+ŋ	au	陰平	凹
+ŋ	au	陽平	熬 翱 嗷 獒 鰲 鏊
+ŋ	au	上聲	襖
+ŋ	au	去聲1	奧 傲 澳
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	f	t	tʰ	n	l	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	ŋ	v
+@FIN	aŋ
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+p	aŋ	陰平	幫 邦 浜
+p	aŋ	上聲	綁 膀
+p	aŋ	去聲1	棒 傍 榜 磅 蚌{鷸~相爭} 謗
+pʰ	aŋ	陰平	乓
+pʰ	aŋ	陽平	旁 滂 龐 螃 彷
+pʰ	aŋ	去聲1	胖
+m	aŋ	陰平	茫 氓
+m	aŋ	陽平	忙 盲 芒
+m	aŋ	上聲	莽 蟒
+f	aŋ	陰平	方 芳
+f	aŋ	陽平	房 妨 防
+f	aŋ	上聲	仿 紡 坊 訪
+f	aŋ	去聲1	放
+t	aŋ	陰平	當 襠
+t	aŋ	上聲	檔 擋 黨
+t	aŋ	去聲1	宕 碭
+tʰ	aŋ	陰平	湯
+tʰ	aŋ	陽平	唐 膛 糖 堂 搪 塘 棠
+tʰ	aŋ	上聲	躺 倘
+tʰ	aŋ	去聲1	趟 燙
+n	aŋ	陽平	囊 饢
+l	aŋ	陽平	郎 狼 廊 琅 螂
+l	aŋ	上聲	朗
+l	aŋ	去聲2	浪
+k	aŋ	陰平	剛 缸 綱 鋼 岡
+k	aŋ	上聲	港 崗
+k	aŋ	去聲1	杠 肛
+kʰ	aŋ	陰平	康 糠 慷
+kʰ	aŋ	陽平	抗 扛
+kʰ	aŋ	去聲1	炕 亢
+x	aŋ	陰平	夯
+x	aŋ	陽平	行 航 杭
+ts	aŋ	陰平	髒 贓
+ts	aŋ	去聲1	藏{寶~} 葬
+tsʰ	aŋ	陰平	倉 蒼 艙 滄
+tsʰ	aŋ	陽平	藏{窩~}
+s	aŋ	陰平	桑 商 傷
+s	aŋ	上聲	嗓
+s	aŋ	去聲1	喪
+tʂ	aŋ	陰平	張 章 彰 漳 蟑
+tʂ	aŋ	上聲	長{~大} 掌 漲
+tʂ	aŋ	去聲1	丈 帳 賬 仗 杖 脹 障
+tʂʰ	aŋ	陰平	昌 娼
+tʂʰ	aŋ	陽平	長{~短} 常 腸 嘗 償 嫦
+tʂʰ	aŋ	上聲	敞 場 廠
+tʂʰ	aŋ	去聲1	唱 暢 倡 悵
+ʂ	aŋ	陰平	傷 商 觴
+ʂ	aŋ	上聲	賞 晌
+ʂ	aŋ	去聲1	上 尚 裳
+ʐ	aŋ	上聲	嚷 壤 瓤 攘
+ʐ	aŋ	去聲1	讓
+ŋ	aŋ	陽平	昂
+ŋ	aŋ	去聲1	盎
+v	aŋ	陽平	王
+v	aŋ	上聲	網
+v	aŋ	去聲1	忘 望 枉
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	f	t	tʰ	n	k	x	ts	tʂ	tʂʰ	ʂ	v
+@FIN	ei
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ei	陰平	悲 卑 杯 碑 唄 掰
+p	ei	陽平	伯 白
+p	ei	上聲	北 百 柏
+p	ei	去聲1	被 背 倍 貝 備 輩 憊 壁
+pʰ	ei	陰平	呸 胚 拍
+pʰ	ei	陽平	陪 賠 裴
+pʰ	ei	去聲1	配 沛 佩 魄
+m	ei	陽平	沒 媒 煤 眉 梅 霉 枚 莓 嵋 郿
+m	ei	上聲	美 每
+m	ei	去聲1	媚 寐 妹 昧 魅 脈 麥 墨
+f	ei	陰平	非 飛 菲 妃 扉
+f	ei	陽平	肥
+f	ei	上聲	匪 緋 誹
+f	ei	去聲1	廢 肺 沸
+f	ei	去聲2	費
+t	ei	陽平	德
+t	ei	上聲	得
+tʰ	ei	陰平	忒
+n	ei	上聲	餒
+k	ei	上聲	給
+x	ei	陰平	黑 嘿
+ts	ei	陽平	賊
+tʂ	ei	陰平	摘
+tʂ	ei	陽平	翟 齋 宅
+tʂ	ei	上聲	窄
+tʂʰ	ei	陰平	拆
+ʂ	ei	陽平	誰
+v	ei	陰平	微 威 危 煨
+v	ei	陽平	圍 惟 維 違
+v	ei	上聲	尾 韋 緯 偉 偽 委
+v	ei	去聲1	為 未 味 餵 胃 衛 魏 謂 慰 巍
+v	ei	去聲2	位
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	kʰ	ʨ	ʨʰ	ɕ	ȵ	∅
+@FIN	i
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+p	i	陰平	逼
+p	i	陽平	鼻
+p	i	上聲	比 筆 彼
+p	i	去聲1	閉 避 臂 幣 必 畢 壁 碧 弊 斃 璧 蔽 鄙 痹 匕 庇 敝 陛
+pʰ	i	陰平	批 劈 披 被
+pʰ	i	陽平	皮 啤 疲 脾 琵
+pʰ	i	上聲	痞 匹 否
+pʰ	i	去聲1	屁 辟 僻 癖
+m	i	陰平	咪 眯
+m	i	陽平	迷 謎 彌 芈 媒 煤 眉
+m	i	上聲	米
+m	i	去聲1	密 蜜 秘 覓 冪 糜 泌
+t	i	陰平	低 滴 堤
+t	i	陽平	迪 敵 的 滌 嘀 狄 笛
+t	i	上聲	底 抵
+t	i	去聲1	帝 遞 地 第 弟
+tʰ	i	陰平	踢 梯
+tʰ	i	陽平	題 啼 提 蹄
+tʰ	i	上聲	體
+tʰ	i	去聲1	嚏 替 剃 剔 涕 屜 惕
+n	i	陰平	妮 呢
+n	i	陽平	泥 尼 輗
+n	i	上聲	你 擬
+n	i	去聲1	膩 逆 匿 溺
+l	i	陽平	離 哩 梨 厘 狸 犁
+l	i	上聲	裏 李 禮 理
+l	i	去聲1	力 立 例 栗 麗 莉 利 粒 黎 曆 勵 厲 荔
+kʰ	i	去聲2	刻
+ʨ	i	陰平	機 雞 基 屐 擊 積 饑 嘰 肌 激
+ʨ	i	陽平	及 集 急 疾 級 吉 即 瘠 極
+ʨ	i	上聲	脊 幾 擠 己
+ʨ	i	去聲1	計 記 季 技 紀 籍 祭 寄 繼 劑 濟 際 忌 跡 績 妓 寂
+ʨʰ	i	陰平	期 欺 妻 七 漆 棲 淒
+ʨʰ	i	陽平	其 齊 旗 棋 騎 奇 琪 企 崎 歧
+ʨʰ	i	上聲	起 豈 乞 啟
+ʨʰ	i	去聲1	氣 器 戚 砌 棄 汽 泣 沏
+ɕ	i	陰平	溪 西 夕 皙 吸 息 希 熙 惜 稀 曦 悉 昔 析 膝
+ɕ	i	陽平	習 襲 席 媳 檄
+ɕ	i	上聲	喜 洗
+ɕ	i	去聲1	戲 系 隙
+ɕ	i	去聲2	細
+ȵ	i	陰平	衣
+ȵ	i	陽平	疑
+∅	i	陰平	衣 一 依 醫
+∅	i	陽平	儀 姨 宜 怡 移 遺 誼 彝
+∅	i	上聲	以 乙 椅 倚 蟻
+∅	i	去聲1	意 囈 裔 易 翼 役 益 溢 億 藝 譯 逸 憶 議 毅 奕 異 抑 驛
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	ʨ	ʨʰ	ɕ	ȵ	∅
+@FIN	ia
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+ʨ	ia	陰平	家 假 夾 嘉 伽 加
+ʨ	ia	陽平	挾 夾
+ʨ	ia	上聲	假{真~} 甲 賈
+ʨ	ia	去聲1	假{~期} 駕 架 嫁
+ʨʰ	ia	陰平	掐
+ʨʰ	ia	上聲	卡 洽 恰
+ɕ	ia	陰平	蝦 瞎 呷
+ɕ	ia	陽平	暇 霞 俠 黠 狹 峽 遐 匣 轄 瑕 斜
+ɕ	ia	去聲1	下 夏 厦 嚇
+ȵ	ia	陰平	押 壓 鴨 呀 丫
+ȵ	ia	陽平	崖 牙 芽
+ȵ	ia	上聲	雅 啞
+∅	ia	陽平	衙
+∅	ia	去聲1	亞
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ʨ	ʨʰ	ɕ	ȵ	∅
+@FIN	ian
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ian	陰平	邊 編 鞭
+p	ian	上聲	扁 貶 匾 砭
+p	ian	去聲1	遍 變 便 辯 辨 辮
+pʰ	ian	陰平	篇 偏 翩
+pʰ	ian	陽平	便
+pʰ	ian	去聲1	片 騙
+m	ian	陽平	眠 棉 綿
+m	ian	上聲	免 勉 冕 緬 娩 靦
+m	ian	去聲1	面
+t	ian	陰平	顛 癲 巔 掂
+t	ian	上聲	點
+t	ian	去聲1	店 奠 電 典 甸 玷 墊 殿 澱
+tʰ	ian	陰平	天 添
+tʰ	ian	陽平	填 甜 田 恬
+tʰ	ian	上聲	舔 腆
+n	ian	陰平	黏 蔫
+n	ian	陽平	年
+n	ian	上聲	攆
+n	ian	去聲1	念
+l	ian	陽平	憐 連 蓮 廉 聯 簾 鐮
+l	ian	上聲	臉 斂
+l	ian	去聲1	練 戀 鏈 煉
+ʨ	ian	陰平	間 監 兼 尖 肩 奸 煎 艱 堅
+ʨ	ian	上聲	戩 剪 檢 減 簡 揀 繭
+ʨ	ian	去聲1	見 件 建 健 箭 薦 諫 鐧 賤 鍵 濺 漸 澗 鑑 艦 踐
+ʨ	ian	去聲2	劍
+ʨʰ	ian	陰平	千 牽 簽 遷 芊 謙 仟 纖
+ʨʰ	ian	陽平	潛 前 乾 虔 錢 鉗 黔
+ʨʰ	ian	上聲	淺 遣
+ʨʰ	ian	去聲1	欠 歉 嵌
+ɕ	ian	陰平	仙 先 鮮 纖
+ɕ	ian	陽平	咸 銜 賢
+ɕ	ian	上聲	顯 險
+ɕ	ian	去聲1	陷 線 縣 現 限 獻 憲 餡 羨
+ȵ	ian	陽平	嚴 年 言
+ȵ	ian	上聲	眼
+∅	ian	陰平	煙 淹
+∅	ian	陽平	言 顏 延 鹽 炎 研 岩
+∅	ian	上聲	演 眼
+∅	ian	去聲1	雁 沿 咽 焰 魘 燕 艷 驗 厭 晏 宴
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ʨ	ʨʰ	ɕ	ȵ	∅
+@FIN	iau
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iau	陰平	標 驃 彪 鏢 飆 膘
+p	iau	上聲	表 裱 婊
+pʰ	iau	陰平	漂 飄
+pʰ	iau	陽平	嫖 瓢 剽
+pʰ	iau	去聲1	票
+m	iau	陰平	喵
+m	iau	陽平	苗 瞄 描 邈
+m	iau	上聲	秒 淼 渺 緲 藐
+m	iau	去聲1	廟 妙 繆
+t	iau	陰平	刁 叼 雕 凋
+t	iau	去聲1	調 掉 吊 釣 貂
+tʰ	iau	陰平	挑{~水}
+tʰ	iau	陽平	條 調 迢 窕
+tʰ	iau	上聲	挑{~刺}
+tʰ	iau	去聲1	跳
+n	iau	上聲	鳥
+n	iau	去聲1	尿
+l	iau	陰平	撩
+l	iau	陽平	聊 廖 遼 療 僚
+l	iau	上聲	了
+l	iau	去聲1	料 撂 瞭
+ʨ	iau	陰平	交 教 澆 焦 蛟 絞 椒 郊 嬌 膠 驕
+ʨ	iau	上聲	攪 繳 餃
+ʨ	iau	去聲1	叫 轎 較 覺 窖
+ʨʰ	iau	陰平	敲 悄 鍬
+ʨʰ	iau	陽平	橋 瞧 喬 僑 樵
+ʨʰ	iau	上聲	巧
+ʨʰ	iau	去聲1	翹 俏 撬 竅 峭
+ɕ	iau	陰平	消 蕭 宵 肖 梟 銷 簫 囂
+ɕ	iau	上聲	小 曉
+ɕ	iau	去聲1	孝 效 哮 校 笑 嘯
+ȵ	iau	上聲	咬
+∅	iau	陰平	腰 妖 幺 邀 夭
+∅	iau	陽平	肴 窈 堯 搖 瑤 姚 遙 窯
+∅	iau	上聲	舀
+∅	iau	去聲1	耀
+∅	iau	去聲2	要
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	n	l	ʨ	ʨʰ	ɕ	∅	ȵ
+@FIN	iaŋ
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+n	iaŋ	陽平	娘
+n	iaŋ	去聲1	釀
+l	iaŋ	陽平	良 涼 梁 糧 粱
+l	iaŋ	上聲	兩
+l	iaŋ	去聲1	量 亮 輛 靚 晾 諒
+ʨ	iaŋ	陰平	將 江 姜 漿 韁 僵
+ʨ	iaŋ	上聲	講 獎 蔣
+ʨ	iaŋ	去聲1	絳 降 醬 犟
+ʨʰ	iaŋ	陰平	槍 腔 鏘
+ʨʰ	iaŋ	陽平	強 牆 薔
+ʨʰ	iaŋ	上聲	搶
+ʨʰ	iaŋ	去聲1	嗆
+ɕ	iaŋ	陰平	相 鄉 香 箱 湘 鑲 廂 襄
+ɕ	iaŋ	陽平	詳 翔 祥
+ɕ	iaŋ	上聲	想 響 享
+ɕ	iaŋ	去聲1	向 像 項 巷 象 橡
+∅	iaŋ	陰平	殃 央 秧 鴦
+∅	iaŋ	陽平	陽 羊 楊 揚
+∅	iaŋ	上聲	仰 養 癢 氧
+∅	iaŋ	去聲1	樣 洋 漾
+ȵ	iaŋ	陽平	娘
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ts	ʨ	ʨʰ	ɕ	ȵ	∅
+@FIN	ie
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ie	陰平	憋 鱉
+p	ie	陽平	別
+p	ie	上聲	癟
+pʰ	ie	陰平	撇
+pʰ	ie	上聲	瞥
+m	ie	陰平	咩
+m	ie	去聲1	滅 蔑 篾
+t	ie	陰平	爹 跌
+t	ie	陽平	牒 碟 疊 蝶 諜 迭 喋
+tʰ	ie	陰平	帖 貼
+tʰ	ie	上聲	鐵
+n	ie	陰平	捏
+n	ie	去聲1	孽 聶 躡 鑷
+l	ie	去聲1	列 裂 咧 烈 獵 冽
+ts	ie	上聲	姐
+ʨ	ie	陰平	皆 接 揭 階
+ʨ	ie	陽平	節 結 截 捷 竭 婕 潔 傑
+ʨ	ie	上聲	姐
+ʨ	ie	去聲1	借 戒 誡 劫
+ʨʰ	ie	陰平	切{~菜}
+ʨʰ	ie	陽平	茄
+ʨʰ	ie	上聲	且
+ʨʰ	ie	去聲1	妾 切{親~} 怯 竊 愜
+ɕ	ie	陰平	歇 些 蠍
+ɕ	ie	陽平	鞋 邪 斜 勰 協 脅 偕 攜
+ɕ	ie	上聲	寫 血
+ɕ	ie	去聲1	蟹 謝 懈 卸 泄 屑 瀉
+ȵ	ie	去聲1	業 葉
+∅	ie	陰平	噎
+∅	ie	陽平	爺
+∅	ie	上聲	也 野 冶
+∅	ie	去聲1	掖 夜 拽 液 頁 燁 葉
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	n	l	ʨ	ʨʰ	ɕ	∅
+@FIN	in
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	in	陰平	彬 斌 賓 濱 繽 瀕 拚
+p	in	去聲1	殯 鬢
+pʰ	in	陰平	拼
+pʰ	in	陽平	貧 頻 嬪 顰
+pʰ	in	上聲	品
+pʰ	in	去聲1	姘 聘
+m	in	陽平	民
+m	in	上聲	敏 皿 閔 閩 泯 憫
+n	in	陽平	您
+l	in	陽平	林 琳 臨 淋
+ʨ	in	陰平	金 今 巾 斤 筋 津
+ʨ	in	上聲	錦 僅 謹 緊
+ʨ	in	去聲1	進 盡 禁 晉 妗 近 勁 浸
+ʨʰ	in	陰平	侵 親 欽
+ʨʰ	in	陽平	秦 琴 勤 芹 禽 擒
+ʨʰ	in	上聲	寢
+ʨʰ	in	去聲1	沁
+ɕ	in	陰平	心 馨 欣 新 鑫 辛 芯 薪
+ɕ	in	去聲1	信 釁
+∅	in	陰平	因 音 陰 蔭 胤
+∅	in	陽平	銀 吟 淫
+∅	in	上聲	隱 飲 寅 癮 尹 引
+∅	in	去聲1	印
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ʨ	ʨʰ	ɕ	∅	ȵ
+@FIN	iŋ
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iŋ	陰平	冰 兵
+p	iŋ	上聲	柄 丙 秉 餅 稟
+p	iŋ	去聲1	病 並
+pʰ	iŋ	陰平	乒
+pʰ	iŋ	陽平	憑 屏 平 萍 瓶 評 坪 蘋
+pʰ	iŋ	去聲1	娉
+m	iŋ	陽平	名 明 銘 鳴 冥 暝
+m	iŋ	去聲1	命
+t	iŋ	陰平	仃 盯 釘 丁 叮
+t	iŋ	上聲	頂 鼎
+t	iŋ	去聲1	定 訂 腚
+tʰ	iŋ	陰平	聽 廳 汀 町
+tʰ	iŋ	陽平	庭 停 廷 婷 亭 蜓
+tʰ	iŋ	上聲	挺
+n	iŋ	陽平	寧 嚀 凝 檸 獰
+n	iŋ	上聲	擰
+n	iŋ	去聲1	佞 甯
+l	iŋ	陽平	翎 靈 凌 玲 零 陵 綾 鈴 齡 菱 伶 聆
+l	iŋ	上聲	領 嶺
+l	iŋ	去聲1	令 另
+ʨ	iŋ	陰平	精 經 驚 京 睛 晶 荊
+ʨ	iŋ	上聲	井 景 憬 警 阱
+ʨ	iŋ	去聲1	敬 靜 鏡 淨 竟 徑 莖 競
+ʨ	iŋ	去聲2	境
+ʨʰ	iŋ	陰平	清 青 輕 傾 卿 蜻
+ʨʰ	iŋ	陽平	情 晴
+ʨʰ	iŋ	上聲	頃 請
+ʨʰ	iŋ	去聲1	慶 磬
+ɕ	iŋ	陰平	星 興 腥 猩 惺
+ɕ	iŋ	陽平	行 形 型 刑
+ɕ	iŋ	上聲	醒 省
+ɕ	iŋ	去聲1	幸 性 姓 杏
+∅	iŋ	陰平	英 應 嬰 鷹 櫻 鶯 嚶
+∅	iŋ	陽平	螢 瑩 迎 熒 營 贏 盈 蠅
+∅	iŋ	上聲	影 穎
+∅	iŋ	去聲1	映 硬
+ȵ	iŋ	陽平	銀
+ȵ	iŋ	去聲1	硬
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	t	n	l	ʨ	ʨʰ	ɕ	∅
+@FIN	iəu
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+t	iəu	陰平	丟
+n	iəu	陰平	妞
+n	iəu	陽平	牛
+n	iəu	上聲	扭 鈕 紐
+n	iəu	去聲1	拗
+l	iəu	陰平	遛 溜
+l	iəu	陽平	流 留 瀏 瘤 硫 榴 琉 劉
+l	iəu	上聲	柳
+l	iəu	去聲1	六
+ʨ	iəu	陰平	究 糾 赳 揪
+ʨ	iəu	上聲	酒 九 久 灸
+ʨ	iəu	去聲1	就 舅 舊 救 疚 廄
+ʨʰ	iəu	陰平	丘 秋 邱
+ʨʰ	iəu	陽平	囚 酋 求 球 裘
+ʨʰ	iəu	上聲	糗
+ɕ	iəu	陰平	休 修 羞
+ɕ	iəu	去聲1	袖 秀 繡 嗅
+∅	iəu	陰平	幽 憂 悠 優
+∅	iəu	陽平	由 油 尤 郵 游 猶
+∅	iəu	上聲	有 友
+∅	iəu	去聲1	又 幼 右 佑
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	ʨ	ɕ
+@FIN	iɛi
+@TON	陰平	31
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+ʨ	iɛi	陰平	街
+ʨ	iɛi	上聲	姐 解
+ʨ	iɛi	去聲1	屆 介 界
+ɕ	iɛi	去聲1	械
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	f	v	∅
+@FIN	o
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+p	o	陰平	波 剝 播 泊 菠 玻
+p	o	陽平	泊 博 薄 勃 帛 亳 駁 脖 渤
+p	o	上聲	跛
+pʰ	o	陰平	坡 潑 頗
+pʰ	o	陽平	婆
+pʰ	o	上聲	叵
+pʰ	o	去聲1	破 魄
+m	o	陰平	摸
+m	o	陽平	磨 膜 魔 模 饃 摩 蘑
+m	o	上聲	抹
+m	o	去聲1	默 陌 末 漠
+m	o	去聲2	莫
+f	o	陽平	佛
+v	o	陰平	蝸 窩
+v	o	去聲1	沃 握 臥
+∅	o	去聲2	哦
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	f	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	v	∅
+@FIN	u
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+p	u	上聲	哺 補 捕
+p	u	去聲1	不 步 布 部 簿 怖
+pʰ	u	陰平	鋪{~床} 噗 撲
+pʰ	u	陽平	蒲 葡
+pʰ	u	上聲	普 譜 樸 浦
+pʰ	u	去聲1	鋪{店~} 瀑
+m	u	陽平	模 拇
+m	u	上聲	母 畝 姆 牡
+m	u	去聲1	幕 暮 墓 目 牧 穆 慕 沐 睦 募
+m	u	去聲2	木
+f	u	陰平	夫 敷 膚 孵
+f	u	陽平	服 福 浮 扶 幅 伏 芙
+f	u	上聲	符 腐 輔 甫 斧 撫 俯
+f	u	去聲1	父 付 附 富 阜 婦 赴 負 復 副 府 傅 傅 賦 覆
+f	u	去聲2	腹
+k	u	陰平	姑 估 孤 辜 菇
+k	u	上聲	骨 古 谷 賈 鼓 股 蠱
+k	u	去聲1	故 顧 固 雇
+kʰ	u	陰平	哭 窟 枯 骷
+kʰ	u	上聲	苦
+kʰ	u	去聲1	酷 庫 褲
+x	u	陰平	呼 忽 乎
+x	u	陽平	胡 湖 糊 壺 狐 弧 蝴 葫 瑚
+x	u	上聲	虎 唬 滸
+x	u	去聲1	戶 護 互 滬
+ts	u	陰平	租
+ts	u	陽平	卒 族 足
+ts	u	上聲	組 祖 阻
+tsʰ	u	陰平	粗
+tsʰ	u	去聲1	促 簇 猝 醋
+s	u	陰平	蘇 酥
+s	u	陽平	俗
+s	u	去聲1	速 訴 宿 塑 肅
+s	u	去聲2	素
+tʂ	u	陰平	豬 諸 朱 株 蛛 珠
+tʂ	u	陽平	竹 逐
+tʂ	u	上聲	煮 主 矚
+tʂ	u	去聲1	著 祝 助 注 駐 築 鑄 蛀
+tʂ	u	去聲2	住
+tʂʰ	u	陰平	出 初
+tʂʰ	u	陽平	除 鋤 廚 雛
+tʂʰ	u	上聲	處{~理} 儲 楚 礎 杵
+tʂʰ	u	去聲1	怵 觸 畜
+tʂʰ	u	去聲2	處{~長}
+ʂ	u	陰平	書 輸 疏 殊 叔 舒 淑 梳
+ʂ	u	陽平	熟 蜀 贖
+ʂ	u	上聲	薯 數 鼠 暑
+ʂ	u	去聲1	樹 豎 漱 術 束 述 恕 墅 庶
+ʐ	u	陽平	如 蠕
+ʐ	u	上聲	乳 汝 辱 儒
+ʐ	u	去聲1	褥 入
+v	u	上聲	武 無
+∅	u	陰平	污 嗚 屋 巫 烏 唔
+∅	u	陽平	吳 吾 無
+∅	u	上聲	舞 五 伍 午 捂 孺
+∅	u	去聲1	務 物 誤 霧 悟
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	k	kʰ	x	tʂ	ʂ
+@FIN	ua
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+k	ua	陰平	瓜 刮
+k	ua	陽平	呱
+k	ua	上聲	寡 剮
+k	ua	去聲1	掛 卦 褂
+kʰ	ua	陰平	夸
+kʰ	ua	上聲	垮
+kʰ	ua	去聲1	跨
+x	ua	陰平	花
+x	ua	陽平	華 滑 嘩 樺
+x	ua	去聲1	話 畫 化 劃
+tʂ	ua	陰平	抓
+tʂ	ua	上聲	爪
+ʂ	ua	陰平	刷
+ʂ	ua	上聲	耍
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	k	kʰ	x	tʂ	tʂʰ	ʂ
+@FIN	uai
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uai	陰平	乖
+k	uai	上聲	拐
+k	uai	去聲1	怪
+kʰ	uai	去聲1	塊 快 筷
+x	uai	陽平	槐 踝 淮 徊 懷
+x	uai	去聲1	壞
+tʂ	uai	去聲1	拽 跩
+tʂʰ	uai	去聲1	揣 踹
+ʂ	uai	陰平	衰 摔
+ʂ	uai	上聲	甩
+ʂ	uai	去聲1	帥 率 蟀
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	t	tʰ	n	l	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ
+@FIN	uan
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uan	陰平	端
+t	uan	上聲	短
+t	uan	去聲1	斷 段 鍛 緞
+tʰ	uan	陰平	湍
+tʰ	uan	陽平	團
+n	uan	上聲	暖
+l	uan	陽平	欒 鸞 巒
+l	uan	上聲	卵
+l	uan	去聲1	亂
+k	uan	陰平	官 關 觀
+k	uan	上聲	管 館 莞
+k	uan	去聲1	貫 慣 灌 冠 罐
+kʰ	uan	陰平	寬
+kʰ	uan	上聲	款
+x	uan	陰平	歡
+x	uan	陽平	還 桓 環
+x	uan	上聲	緩
+x	uan	去聲1	患 換 幻 喚 宦 瘓
+ts	uan	陰平	鑽
+tsʰ	uan	去聲1	篡 竄 躥
+s	uan	陰平	酸
+s	uan	去聲1	算 蒜
+tʂ	uan	陰平	專 磚
+tʂ	uan	上聲	轉{翻~}
+tʂ	uan	去聲1	篆 賺 撰 轉{~動}
+tʂʰ	uan	陰平	穿 川
+tʂʰ	uan	陽平	船 傳
+tʂʰ	uan	上聲	喘 舛
+tʂʰ	uan	去聲1	串
+ʂ	uan	陰平	拴 栓 閂
+ʐ	uan	上聲	軟 阮
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	k	kʰ	x	tʂ	tʂʰ	ʂ	∅
+@FIN	uaŋ
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uaŋ	陰平	光 胱
+k	uaŋ	上聲	廣
+k	uaŋ	去聲1	逛
+kʰ	uaŋ	陰平	匡 框 筐
+kʰ	uaŋ	陽平	狂
+kʰ	uaŋ	去聲1	誆 礦 況 曠 眶
+x	uaŋ	陰平	荒 慌
+x	uaŋ	陽平	黃 皇 徨 凰 簧
+x	uaŋ	上聲	恍 謊
+x	uaŋ	去聲1	晃 幌
+tʂ	uaŋ	陰平	莊 裝 妝 樁
+tʂ	uaŋ	去聲1	狀 撞 壯
+tʂʰ	uaŋ	陰平	窗 創{~傷} 瘡
+tʂʰ	uaŋ	陽平	床
+tʂʰ	uaŋ	上聲	闖
+tʂʰ	uaŋ	去聲1	創{~造}
+ʂ	uaŋ	陰平	雙 霜 孀
+ʂ	uaŋ	上聲	爽
+∅	uaŋ	陰平	汪
+∅	uaŋ	陽平	亡 魍 王
+∅	uaŋ	上聲	往 罔 惘 枉
+∅	uaŋ	去聲1	旺 望 妄
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	t	tʰ	l	n	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	∅
+@FIN	uei
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uei	陰平	堆
+t	uei	上聲	懟
+t	uei	去聲1	對 隊 兌
+tʰ	uei	陰平	推
+tʰ	uei	陽平	頹
+tʰ	uei	上聲	腿
+tʰ	uei	去聲1	退 蛻 褪
+l	uei	陰平	勒
+l	uei	陽平	雷 擂
+l	uei	上聲	磊 蕾 壘
+l	uei	去聲1	類 累
+l	uei	去聲2	淚
+n	uei	去聲1	內
+k	uei	陰平	硅 歸 龜 規 瑰 閨
+k	uei	上聲	鬼 詭 軌
+k	uei	去聲1	貴 跪 櫃 桂 劊
+kʰ	uei	陰平	盔 虧
+kʰ	uei	陽平	葵 馗 奎 逵
+kʰ	uei	去聲1	潰 愧 魁 窺 饋 聵
+x	uei	陰平	揮 暉 灰 恢 輝 徽
+x	uei	陽平	回 茴
+x	uei	上聲	毀 海
+x	uei	去聲1	會 慧 悔 晦 諱 彗 澮 匯 惠 繪 卉 燴
+ts	uei	上聲	嘴
+ts	uei	去聲1	醉 最 罪
+tsʰ	uei	陰平	催 崔 摧
+tsʰ	uei	去聲1	粹 脆 翠 萃 悴
+s	uei	陰平	雖
+s	uei	陽平	隋 隨 髓
+s	uei	去聲1	歲 碎 穗 遂 隧
+tʂ	uei	陰平	追 錐 椎
+tʂ	uei	去聲1	墜 綴 贅
+tʂʰ	uei	陰平	吹 炊
+tʂʰ	uei	陽平	捶 錘 垂 槌 陲
+ʂ	uei	陽平	誰
+ʂ	uei	上聲	水
+ʂ	uei	去聲1	稅 睡
+ʐ	uei	上聲	芮 蕊
+ʐ	uei	去聲1	瑞 睿 銳
+∅	uei	去聲1	為
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	t	tʰ	n	l	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	∅
+@FIN	uo
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uo	陰平	多 哆 咄
+t	uo	陽平	奪 鐸 踱
+t	uo	上聲	朵 垛 躲
+t	uo	去聲1	剁 舵 惰 跺 墮
+tʰ	uo	陰平	拖 托 脫
+tʰ	uo	陽平	坨 陀 駝 沱 馱 橢 鴕
+tʰ	uo	上聲	妥
+tʰ	uo	去聲1	拓 唾
+n	uo	陽平	挪 娜
+n	uo	去聲1	諾 糯 懦
+l	uo	陰平	囉
+l	uo	陽平	羅 蘿 螺 鑼 籮 邏
+l	uo	上聲	裸
+l	uo	去聲1	落 洛 絡 摞 樂
+k	uo	陰平	郭 聒 鍋 虢 哥
+k	uo	陽平	國
+k	uo	上聲	果 裹
+k	uo	去聲1	個
+k	uo	去聲2	過
+kʰ	uo	上聲	可
+kʰ	uo	去聲1	括 闊 廓 擴
+x	uo	陰平	豁
+x	uo	陽平	活 何 和
+x	uo	上聲	伙 火
+x	uo	去聲1	霍 或 貨 獲 禍 惑 藿
+ts	uo	陰平	嘬
+ts	uo	陽平	昨 琢
+ts	uo	上聲	左 佐
+ts	uo	去聲1	坐 座 做 作
+tsʰ	uo	陰平	撮 搓 挫 磋
+tsʰ	uo	陽平	矬
+tsʰ	uo	去聲1	錯 措 厝 蹉
+s	uo	陰平	唆 蓑 嗦 縮 娑 梭
+s	uo	上聲	鎖 所 索 瑣
+tʂ	uo	陰平	捉 桌
+tʂ	uo	陽平	琢 濁 拙 濁 著 卓 灼 酌 啄 鐲 濯
+tʂʰ	uo	陰平	戳
+tʂʰ	uo	去聲1	齪 輟 綽 啜
+ʂ	uo	陰平	說
+ʂ	uo	去聲1	碩 朔 爍 鑠
+ʐ	uo	去聲1	弱 若 偌
+∅	uo	陰平	窩
+∅	uo	去聲1	物
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	t	tʰ	n	l	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʐ	v
+@FIN	uŋ
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uŋ	陰平	東 冬 咚
+t	uŋ	上聲	懂 董
+t	uŋ	去聲1	動 洞 棟 凍
+tʰ	uŋ	陰平	通
+tʰ	uŋ	陽平	同 彤 童 桐 瞳 佟 潼 銅
+tʰ	uŋ	上聲	桶 捅 統 筒
+tʰ	uŋ	去聲1	痛
+n	uŋ	陽平	農 濃 膿
+n	uŋ	去聲1	弄
+l	uŋ	陽平	龍 籠 聾 隆 瓏 窿 朧
+l	uŋ	上聲	攏 壟
+k	uŋ	陰平	宮 公 供{~應} 功 恭 肱 躬 工 攻 弓
+k	uŋ	上聲	拱 鞏 汞 龔
+k	uŋ	去聲1	供{~奉} 貢 共
+kʰ	uŋ	陰平	空
+kʰ	uŋ	上聲	孔 恐
+kʰ	uŋ	去聲1	控
+x	uŋ	陰平	烘 薨 轟
+x	uŋ	陽平	紅 弘 宏 洪 鴻 虹
+x	uŋ	上聲	哄
+ts	uŋ	陰平	宗 棕 綜 蹤 鬃
+ts	uŋ	上聲	總
+ts	uŋ	去聲1	縱 粽
+tsʰ	uŋ	陰平	蔥 聰 匆 囪
+tsʰ	uŋ	陽平	從 叢
+s	uŋ	陰平	松 嵩 淞
+s	uŋ	陽平	慫
+s	uŋ	上聲	聳
+s	uŋ	去聲1	送 宋 頌 誦 訟
+tʂ	uŋ	陰平	中 鐘 終 忠 衷 盅
+tʂ	uŋ	上聲	腫 踵 塚
+tʂ	uŋ	去聲1	重{~量} 種 仲
+tʂ	uŋ	去聲2	眾
+tʂʰ	uŋ	陰平	充 舂 衝{~動} 憧 翀
+tʂʰ	uŋ	陽平	崇 蟲 重{~複}
+tʂʰ	uŋ	上聲	寵
+tʂʰ	uŋ	去聲1	衝{~勁}
+ʐ	uŋ	陽平	榮 蓉 融 熔 容 絨 溶 榕 戎 茸 嶸 鎔
+ʐ	uŋ	上聲	冗
+v	uŋ	陰平	翁 嗡
+v	uŋ	去聲1	甕
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	t	tʰ	l	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	∅
+@FIN	uən
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uən	陰平	蹲 噸
+t	uən	去聲1	燉 頓 盾 鈍 遁
+tʰ	uən	陰平	吞
+tʰ	uən	陽平	屯 囤 臀 豚
+l	uən	陽平	輪 倫 侖 圇
+l	uən	去聲1	論
+k	uən	上聲	滾 袞
+k	uən	去聲1	棍
+kʰ	uən	陰平	昆 坤 鯤
+kʰ	uən	上聲	捆
+kʰ	uən	去聲1	困
+x	uən	陰平	魂 昏 婚 葷
+x	uən	陽平	渾 餛
+x	uən	去聲1	混
+ts	uən	陰平	尊 遵 樽
+tsʰ	uən	陰平	村
+tsʰ	uən	陽平	存
+tsʰ	uən	上聲	忖
+tsʰ	uən	去聲1	寸
+s	uən	陰平	孫
+s	uən	上聲	損 筍 榫
+tʂ	uən	陰平	諄
+tʂ	uən	上聲	準
+tʂʰ	uən	陰平	春
+tʂʰ	uən	陽平	唇 純 醇 淳 鶉
+tʂʰ	uən	上聲	蠢
+ʂ	uən	上聲	吮
+ʂ	uən	去聲1	順 舜 瞬
+ʐ	uən	去聲1	閏 潤
+∅	uən	陰平	溫 瘟
+∅	uən	陽平	文 蚊 聞 紋 雯
+∅	uən	上聲	吻 穩 刎
+∅	uən	去聲1	問 汶
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	n	l	ʨ	ʨʰ	ɕ	∅
+@FIN	y
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+n	y	上聲	女
+l	y	陽平	驢
+l	y	上聲	呂 捋 侶 屢 縷 旅 履
+l	y	去聲1	綠 律 率 慮 濾
+ʨ	y	陰平	居 拘 鞠 狙 車
+ʨ	y	陽平	橘 局 菊 足
+ʨ	y	上聲	舉
+ʨ	y	去聲1	句 據 巨 聚 劇 鋸 具 距 拒 俱 懼 醉
+ʨʰ	y	陰平	區 屈 驅 趨 軀
+ʨʰ	y	陽平	渠
+ʨʰ	y	上聲	取 曲 娶
+ʨʰ	y	去聲1	趣
+ʨʰ	y	去聲2	去
+ɕ	y	陰平	虛 須 需 戌 噓
+ɕ	y	陽平	徐
+ɕ	y	上聲	栩 許
+ɕ	y	去聲1	婿 恤 旭 續 序 緒 蓄 敘 絮
+∅	y	陽平	魚 餘 禹 虞 漁 愚
+∅	y	上聲	與 語 雨 羽 宇 予
+∅	y	去聲1	御 喻 遇 玉 豫 欲 育 域 預 浴 郁 譽 獄 寓
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	ʨ	ʨʰ	ɕ	∅
+@FIN	yan
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+ʨ	yan	陰平	捐 絹 涓 娟
+ʨ	yan	上聲	卷
+ʨ	yan	去聲1	眷 倦 圈{豬~} 棬
+ʨʰ	yan	陰平	圈{圓~}
+ʨʰ	yan	陽平	權 泉 拳 全 蜷
+ʨʰ	yan	上聲	犬
+ʨʰ	yan	去聲1	勸 券
+ɕ	yan	陰平	喧 軒 宣 萱
+ɕ	yan	陽平	旋 懸
+ɕ	yan	上聲	選
+ɕ	yan	去聲1	玄 炫 眩
+∅	yan	陰平	冤 鴛 淵
+∅	yan	陽平	圓 袁 員 元 原 緣 園 源
+∅	yan	上聲	遠
+∅	yan	去聲1	院 怨 願 援
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	ʨ	ʨʰ	ɕ	∅
+@FIN	yn
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+ʨ	yn	陰平	軍 君 均 菌 鈞
+ʨ	yn	去聲1	俊 郡 駿 峻 竣 雋
+ʨʰ	yn	陽平	群 裙
+ɕ	yn	陰平	熏 薰
+ɕ	yn	陽平	尋 旬 巡 荀 詢
+ɕ	yn	去聲1	訊 殉 訓 迅 遜 循 馴 汛
+∅	yn	陰平	暈
+∅	yn	陽平	雲 耘 芸 勻
+∅	yn	上聲	允 殞
+∅	yn	去聲1	韻 運 孕 蘊
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	ʨ	ʨʰ	ɕ	n	l	∅
+@FIN	ye
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+ʨ	ye	陽平	絕 決 覺{~覺得} 掘 厥 嚼 爵 崛
+ʨ	ye	上聲	角 腳
+ʨ	ye	去聲1	倔 訣
+ʨʰ	ye	陰平	缺
+ʨʰ	ye	陽平	瘸
+ʨʰ	ye	去聲1	確 雀 鵲
+ʨʰ	ye	去聲2	卻
+ɕ	ye	陰平	薛 靴 削
+ɕ	ye	陽平	學 穴
+ɕ	ye	上聲	血 雪
+ɕ	ye	去聲1	噱
+n	ye	去聲1	虐
+l	ye	去聲1	略 掠 劣
+∅	ye	陰平	曰 約
+∅	ye	去聲1	越 樂 岳 躍 閱 粵 鑰
+∅	ye	去聲2	月 藥
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	ʨ	ʨʰ	ɕ	∅
+@FIN	yŋ
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+ʨ	yŋ	上聲	窘 炯 炅 囧
+ʨʰ	yŋ	陽平	窮 瓊 穹 煢
+ɕ	yŋ	陰平	胸 凶 兄 洶 匈
+ɕ	yŋ	陽平	雄 熊
+∅	yŋ	陰平	擁 鏞 庸 雍 傭
+∅	yŋ	陽平	容 榮 蓉
+∅	yŋ	上聲	蛹 俑 勇 湧 永 泳 詠
+∅	yŋ	去聲1	踴
+∅	yŋ	去聲2	用
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	f	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	ŋ	v
+@FIN	ən
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ən	陰平	奔{~跑}
+p	ən	上聲	本
+p	ən	去聲1	笨 奔{投~}
+pʰ	ən	陰平	噴
+pʰ	ən	陽平	盆
+m	ən	陰平	悶{~葫蘆} 燜
+m	ən	陽平	門 們
+m	ən	去聲1	悶{~熱}
+f	ən	陰平	分 芬 紛
+f	ən	陽平	汾 墳 焚
+f	ən	上聲	粉
+f	ən	去聲1	憤 奮 忿 份 糞
+k	ən	陰平	根 跟
+kʰ	ən	上聲	肯 啃 懇 墾
+x	ən	陽平	痕
+x	ən	上聲	很 狠
+x	ən	去聲1	恨
+ts	ən	陰平	針
+ts	ən	上聲	怎
+tsʰ	ən	陽平	岑
+s	ən	陰平	森 身
+tʂ	ən	陰平	臻 真 針 斟 珍 偵 枕 甄
+tʂ	ən	上聲	診
+tʂ	ən	去聲1	鎮 陣 震 貞 振 朕 圳
+tʂʰ	ən	陰平	琛 抻
+tʂʰ	ən	陽平	陳 臣 晨 辰 沉 塵
+tʂʰ	ən	去聲1	趁 襯
+ʂ	ən	陰平	深 身 伸 申 呻
+ʂ	ən	陽平	神 什
+ʂ	ən	上聲	嬸 沈 審
+ʂ	ən	去聲1	甚 慎 腎 滲
+ʐ	ən	陽平	人 仁
+ʐ	ən	上聲	忍
+ʐ	ən	去聲1	認 任 刃 韌
+ŋ	ən	陰平	恩
+ŋ	ən	去聲1	摁
+v	ən	陽平	文 聞
+v	ən	去聲1	問
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	pʰ	m	f	t	tʰ	n	l	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	ŋ
+@FIN	əu
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+pʰ	əu	陰平	剖
+m	əu	陰平	哞
+m	əu	陽平	謀 牟 眸
+m	əu	上聲	某 母
+f	əu	上聲	否
+t	əu	陰平	都 兜 督
+t	əu	陽平	讀 獨 毒
+t	əu	上聲	鬥 陡 賭 堵 睹
+t	əu	去聲1	抖 逗 豆 竇 杜 肚 渡 妒 鍍
+t	əu	去聲2	度
+tʰ	əu	陰平	偷 禿 突 凸
+tʰ	əu	陽平	頭 投 途 圖 徒 屠 荼
+tʰ	əu	上聲	土
+tʰ	əu	去聲1	透 吐 塗 兔
+n	əu	陽平	奴 弩
+n	əu	上聲	努
+n	əu	去聲2	怒
+l	əu	陰平	嚕
+l	əu	陽平	樓 髏 廬 盧 爐
+l	əu	上聲	摟 僂 魯 擄
+l	əu	去聲1	漏 露 陋 路 鹿 陸 錄 璐 蘆 戮
+k	əu	陰平	溝 勾 鉤 篝
+k	əu	上聲	狗 苟
+k	əu	去聲1	夠 購 構
+kʰ	əu	陰平	摳
+kʰ	əu	上聲	口
+kʰ	əu	去聲1	扣 叩 寇
+x	əu	陰平	齁
+x	əu	陽平	猴 侯 候 喉
+x	əu	上聲	吼
+x	əu	去聲1	後 厚 逅 垢
+ts	əu	陰平	鄒 租 周
+ts	əu	陽平	卒 族
+ts	əu	上聲	走 組 祖 阻
+ts	əu	去聲1	奏 揍 湊 築 竹
+tsʰ	əu	陰平	粗 初
+tsʰ	əu	去聲1	湊 促 簇 猝 醋 畜
+s	əu	陰平	艘 搜 餿 蘇 酥 嗖 叔
+s	əu	陽平	俗
+s	əu	去聲1	嗽 速 訴 宿 訴 塑 肅
+s	əu	去聲2	素 數
+tʂ	əu	陰平	周 州 粥 洲 舟 諸
+tʂ	əu	陽平	軸 竹
+tʂ	əu	上聲	肘 主
+tʂ	əu	去聲1	咒 皺 宙 晝 驟 縐 冑 築 祝 助
+tʂʰ	əu	陰平	抽
+tʂʰ	əu	陽平	仇 愁 酬 籌 稠 綢 惆 躊
+tʂʰ	əu	上聲	丑 瞅 楚
+tʂʰ	əu	去聲1	臭 畜
+ʂ	əu	陰平	收 叔
+ʂ	əu	陽平	熟
+ʂ	əu	上聲	手 首 守
+ʂ	əu	去聲1	受 壽 瘦 獸 售 授 狩 數 恕
+ʐ	əu	陽平	揉 柔 蹂
+ʐ	əu	去聲1	肉
+ŋ	əu	陰平	歐 毆 鷗
+ŋ	əu	上聲	藕 偶 嘔
+ŋ	əu	去聲1	慪
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	p	pʰ	m	f	t	tʰ	n	l	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	∅
+@FIN	əŋ
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	əŋ	陰平	崩 繃 嘣
+p	əŋ	陽平	甭
+p	əŋ	上聲	本
+p	əŋ	去聲1	蹦 泵 蚌{~埠} 迸
+pʰ	əŋ	陰平	砰 烹 怦
+pʰ	əŋ	陽平	朋 鵬 彭 棚 蓬 澎 篷
+pʰ	əŋ	上聲	捧
+pʰ	əŋ	去聲1	碰
+m	əŋ	陰平	懵
+m	əŋ	陽平	蒙 萌 盟 朦 檬
+m	əŋ	上聲	猛
+m	əŋ	去聲1	夢 孟
+f	əŋ	陰平	風 封 豐 鋒 瘋 峰 蜂 烽 楓
+f	əŋ	陽平	逢 縫 馮
+f	əŋ	上聲	諷
+f	əŋ	去聲1	奉 鳳 俸
+t	əŋ	陰平	燈 登 蹬
+t	əŋ	上聲	等
+t	əŋ	去聲1	鄧 瞪 凳
+tʰ	əŋ	陽平	疼 騰 藤
+n	əŋ	陽平	能
+l	əŋ	陽平	稜
+l	əŋ	上聲	冷
+l	əŋ	去聲1	楞 愣
+k	əŋ	陰平	庚 耕 更{三~} 羹
+k	əŋ	上聲	梗 哽 耿
+k	əŋ	去聲1	更{~加}
+kʰ	əŋ	陰平	坑 吭 鏗
+x	əŋ	陰平	亨 哼 痕
+x	əŋ	陽平	橫 恆 衡
+x	əŋ	去聲1	恨
+ts	əŋ	陰平	正 征 曾{~祖父} 增
+ts	əŋ	去聲1	贈 憎 鋥
+tsʰ	əŋ	陽平	曾{~經} 層
+tsʰ	əŋ	去聲1	蹭
+s	əŋ	陰平	僧 生 聲
+s	əŋ	去聲1	勝
+tʂ	əŋ	陰平	正 蒸 爭 征 睜 箏 怔 崢
+tʂ	əŋ	上聲	整 拯
+tʂ	əŋ	去聲1	證 鄭 政 諍 掙 症
+tʂʰ	əŋ	陰平	稱{~重} 撐
+tʂʰ	əŋ	陽平	成 城 承 澄 程 橙 誠 丞 乘 懲 盛
+tʂʰ	əŋ	上聲	呈 逞 騁
+tʂʰ	əŋ	去聲1	稱{天~}
+ʂ	əŋ	陰平	生 聲 升 笙 甥 牲 眚 伸
+ʂ	əŋ	陽平	繩
+ʂ	əŋ	去聲1	剩 盛 聖 勝 晟
+ʐ	əŋ	陰平	扔
+ʐ	əŋ	陽平	仍
+∅	əŋ	去聲1	嗯
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	∅
+@FIN	ɚ
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	ɚ	陽平	兒 而
+∅	ɚ	上聲	耳 餌 爾
+∅	ɚ	去聲1	二
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	tʰ	n	l	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	ŋ
+@FIN	ɤ
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+tʰ	ɤ	去聲1	特 忑
+n	ɤ	陰平	呢
+n	ɤ	去聲1	訥
+l	ɤ	陰平	勒
+k	ɤ	陰平	哥 戈 割 胳 鴿 歌 擱
+k	ɤ	陽平	隔 格 革 閣
+k	ɤ	上聲	葛
+k	ɤ	去聲1	各 膈{~應}
+k	ɤ	去聲2	個
+kʰ	ɤ	陰平	科 顆 棵 課 苛 磕 嗑 柯 軻 窠
+kʰ	ɤ	陽平	咳
+kʰ	ɤ	上聲	可 渴
+kʰ	ɤ	去聲1	克 殼 珂
+kʰ	ɤ	去聲2	刻 客
+x	ɤ	陰平	喝 呵
+x	ɤ	陽平	合 盒 劾 禾 餄{~餎麵} 闔 何 河 核 荷 和{~睦} 郃
+x	ɤ	去聲1	賀 鶴 赫 涸 壑
+ts	ɤ	陽平	澤 擇 責 則
+ts	ɤ	去聲1	仄
+tsʰ	ɤ	去聲1	冊 側 廁 策 測 惻
+s	ɤ	去聲1	色{顏~} 瑟 塞 澀 嗇
+tʂ	ɤ	陰平	著 遮 蟄
+tʂ	ɤ	陽平	轍 喆 哲 輒 蔗
+tʂ	ɤ	上聲	折 者 褶
+tʂ	ɤ	去聲1	浙
+tʂ	ɤ	去聲2	這
+tʂʰ	ɤ	陰平	車
+tʂʰ	ɤ	上聲	扯
+tʂʰ	ɤ	去聲1	撤 徹 澈
+ʂ	ɤ	陰平	賒 佘 奢
+ʂ	ɤ	陽平	蛇 舌 折
+ʂ	ɤ	上聲	舍
+ʂ	ɤ	去聲1	麝 攝 涉 社 設 射 赦
+ʐ	ɤ	上聲	惹
+ʐ	ɤ	去聲1	熱
+ŋ	ɤ	陽平	鵝 額 訛 俄 娥 蛾
+ŋ	ɤ	上聲	我
+ŋ	ɤ	去聲1	餓 厄 鄂 噩 鱷
+ŋ	ɤ	去聲2	惡
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	ts	tsʰ	s
+@FIN	ɿ
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ɿ	陰平	資 咨 姿 滋 孜 知 齜 只 之
+ts	ɿ	陽平	直
+ts	ɿ	上聲	紫 籽 子 仔 指 紙
+ts	ɿ	去聲1	字 漬
+ts	ɿ	去聲2	自
+tsʰ	ɿ	陰平	呲
+tsʰ	ɿ	陽平	辭 詞 祠 慈 磁 瓷 雌
+tsʰ	ɿ	上聲	此
+tsʰ	ɿ	去聲1	刺 次 賜 伺 疵 翅
+s	ɿ	陰平	絲 司 師 嘶 思 斯 私 撕
+s	ɿ	陽平	時
+s	ɿ	上聲	死
+s	ɿ	去聲1	寺 四 肆 嗣 是 誓
+s	ɿ	去聲2	氏 事 似
+// HSD Syllabary Data Partition
+// 地区：山西省-臨汾市-翼城縣
+// 来源：賈亞鑫《山西翼城蒲劇音韻研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-臨汾市-翼城縣
+@SRC	賈亞鑫《山西翼城蒲劇音韻研究》
+
+@INI	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ʅ
+@TON	陰平	31
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲1	44
+@TON	去聲2	51
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʅ	陰平	支 知 只 之 芝 織 汁 肢 枝
+tʂ	ʅ	陽平	直 植 執 侄 殖 職 值
+tʂ	ʅ	上聲	指 止 旨 脂 紙
+tʂ	ʅ	去聲1	質 致 制 治 智 置 窒 至 志 滯 痣 摯 秩
+tʂʰ	ʅ	陰平	吃 痴
+tʂʰ	ʅ	陽平	遲 馳 池 持 弛 墀
+tʂʰ	ʅ	上聲	尺 恥 齒
+tʂʰ	ʅ	去聲1	赤 翅 斥 叱
+ʂ	ʅ	陰平	師 詩 失 濕 獅 尸
+ʂ	ʅ	陽平	時 食 石 十 實 識 拾
+ʂ	ʅ	上聲	使 駛 史 始
+ʂ	ʅ	去聲1	是 世 市 士 示 式 釋 試 室 視 勢 飾 適 逝 誓 柿
+ʂ	ʅ	去聲2	事 氏 侍
+ʐ	ʅ	去聲2	日
