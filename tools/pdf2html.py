@@ -2,9 +2,15 @@
 import re, sys, os
 from io import StringIO
 from pdfminer.high_level import extract_text_to_fp
+import glob
 # from pdfminer.layout import LAParams
 
-os.system("rm -f Im*.jpg Im*.bmp")
+for pattern in ["Im*.jpg", "Im*.bmp"]:
+    for file in glob.glob(pattern):
+        try:
+            os.remove(file)
+        except OSError:
+            pass
 laparams=None#LAParams(char_margin=2.0, line_margin=0.5, word_margin=0.1)
 with StringIO() as out:
     extract_text_to_fp(inf=open(sys.argv[1], "rb"), output_type="html", outfp=out, codec=None, output_dir=".", laparams=None)
