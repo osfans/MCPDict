@@ -1,0 +1,1622 @@
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	k	kʰ	x	tʂ	tʂʰ	ʂ	ts	tsʰ	sa	Ø
+@FIN	a
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	a	陰平	巴 芭 疤 扒 笆
+p	a	上聲	把 㞎 靶
+p	a	去聲	霸 把 壩 爸 耙 罷 八 拔 魃 冹
+pʰ	a	陰平	帊 □
+pʰ	a	陽平	鈀 爬 趴
+pʰ	a	去聲	怕 帕
+m	a	陰平	媽
+m	a	陽平	麻
+m	a	上聲	馬 碼 瑪 螞
+m	a	去聲	罵 抹
+f	a	陽平	乏
+f	a	去聲	法 發 砝 伐 筏 閥 罰
+v	a	陰平	蛙 哇 挖
+v	a	陽平	娃
+v	a	上聲	瓦 搲 䠚
+v	a	去聲	瓦 窪 襪
+t	a	陰平	耷
+t	a	上聲	打
+t	a	去聲	大 答 搭 褡 達 繨 垯 瘩
+tʰ	a	陰平	他
+tʰ	a	去聲	踏 䂿 拓 沓 塔 塌 溻 獺
+n	a	陰平	㑚
+n	a	陽平	拿
+n	a	上聲	哪
+n	a	去聲	納 捺
+l	a	陰平	拉 垃 邋
+l	a	上聲	喇
+l	a	去聲	臘 蠟 辣 落 □ 邋 攋
+k	a	陰平	嘎
+k	a	上聲	尕 嘎 □
+k	a	去聲	尜
+kʰ	a	陰平	咖
+kʰ	a	上聲	卡
+x	a	陰平	哈
+x	a	上聲	哈
+x	a	去聲	下 瞎 頏
+tʂ	a	陰平	渣 楂
+tʂ	a	上聲	砟 拃 □
+tʂ	a	去聲	詐 榨 炸 痄 觰 紮 閘 煠 炸 鍘 柵
+tʂʰ	a	陰平	叉 杈 差
+tʂʰ	a	陽平	查 楂 茶 茬 □ 㷅 察 牐
+tʂʰ	a	去聲	岔 乍 詫
+ʂ	a	陰平	沙 紗 砂 痧
+ʂ	a	陽平	廈
+ʂ	a	上聲	傻
+ʂ	a	去聲	沙 殺 霎 煞 啥
+ts	a	上聲	咋
+ts	a	去聲	雜 咂 砸
+tsʰ	a	陽平	搽
+tsʰ	a	去聲	擦
+sa	a	陰平	沙
+sa	a	上聲	灑 撒
+sa	a	去聲	薩 靸 趿
+Ø	a	陰平	阿
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	k	kʰ	x	tʂ	tʂʰ	ʂ	ʐ	ts	tsʰ	s	Ø
+@FIN	an
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	an	陰平	班 斑 頒 扳 般 搬 瘢
+p	an	上聲	板 版 阪
+p	an	去聲	扮 辦 瓣 伴 拌 半 絆 跘
+pʰ	an	陰平	攀 潘 藩
+pʰ	an	陽平	盤 磐
+pʰ	an	去聲	盼 襻 判 叛 畔
+m	an	陰平	□
+m	an	陽平	蠻 瞞 饅
+m	an	上聲	滿
+m	an	去聲	曼 慢 漫 幔 蔓 墁 鏝 縵 謾
+f	an	陰平	帆 翻 番 蕃
+f	an	陽平	凡 煩 繁 礬
+f	an	上聲	反 返
+f	an	去聲	範 犯 泛 販 飯 樊
+v	an	陰平	豌 剜 彎 灣
+v	an	陽平	完 丸 玩 頑
+v	an	上聲	皖 碗 晚 挽 宛 惋 婉 綰
+v	an	去聲	腕 萬 蔓 彎
+t	an	陰平	耽 擔 丹 單 端 䦔 癉
+t	an	上聲	膽 撣
+t	an	去聲	淡 擔 旦 但 彈 蛋 誕
+tʰ	an	陰平	貪 灘 攤 癱 坍
+tʰ	an	陽平	潭 譚 談 痰 壇 彈
+tʰ	an	上聲	毯 坦 □
+tʰ	an	去聲	探 炭 嘆
+n	an	陽平	南 楠 男 難
+n	an	上聲	暖
+n	an	去聲	難
+l	an	陽平	藍 籃 蘭 攔 欄 爦
+l	an	上聲	覽 攬 欖 懶 卵 濫
+l	an	去聲	濫 爛 亂
+k	an	陰平	甘 柑 幹 肝 竿
+k	an	上聲	感 敢 橄 桿 稈 趕 搟 骭
+k	an	去聲	幹 贛
+kʰ	an	陰平	堪 勘 看 刊 龕
+kʰ	an	上聲	坎 砍
+kʰ	an	去聲	看
+x	an	陰平	憨 酣 頇 頷
+x	an	陽平	含 函 憾 寒 韓 涵 還
+x	an	上聲	喊 罕
+x	an	去聲	撼 旱 悍 捍 焊 汗 漢 翰 瀚
+tʂ	an	陰平	沾 粘 瞻 氈 詹
+tʂ	an	上聲	暫 斬 嶄 盞 展 搌 輾
+tʂ	an	去聲	站 蘸 占 綻 戰 顫 棧
+tʂʰ	an	陰平	攙 摻
+tʂʰ	an	陽平	讒 蟾 纏 蟬 禪 饞
+tʂʰ	an	上聲	產 鏟
+tʂʰ	an	去聲	顫 □ 懺 綻 纏
+ʂ	an	陰平	杉 衫 珊 刪 柵 疝 山 □ 扇 膻 搧 □
+ʂ	an	陽平	孱
+ʂ	an	上聲	閃 陜 䀹
+ʂ	an	去聲	善 扇 騸 膳 蟮 單 褝 苫
+ʐ	an	陽平	黏 然 燃 繎
+ʐ	an	上聲	染 冉
+ts	an	陰平	簪 綻
+ts	an	上聲	攢 儧 □
+ts	an	去聲	鏨 贊 濽 䋎
+tsʰ	an	陰平	參 餐
+tsʰ	an	陽平	蠶 慚 殘 燦
+tsʰ	an	上聲	慘
+tsʰ	an	去聲	鏨
+s	an	陰平	三 山
+s	an	上聲	傘 饊 散
+s	an	去聲	散 顙
+Ø	an	陰平	庵 安 鞍 氨 鵪
+Ø	an	上聲	䁆
+Ø	an	去聲	暗 崖 按 案
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	f	v	n	k	kʰ	ts
+@FIN	ei
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ei	陰平	杯 碑 卑 婢 悲
+p	ei	去聲	貝 倍 輩 背 焙 被 壁
+pʰ	ei	陰平	胚 醅
+pʰ	ei	陽平	培 陪 賠 裴 佩
+pʰ	ei	去聲	配 沛
+m	ei	陽平	梅 枚 媒 煤
+m	ei	上聲	每 美
+m	ei	去聲	妹 昧 寐 媚 魅
+f	ei	陰平	非 飛 妃 匪 翡 菲
+f	ei	陽平	肥
+f	ei	去聲	廢 肺 吠 費
+v	ei	陰平	危 微 威 違
+v	ei	陽平	衛 維 惟 唯 桅 為 圍
+v	ei	上聲	委 萎 偽 尾 偉 葦 蝟 緯
+v	ei	去聲	衛 位 餵 為 未 味 魏
+n	ei	去聲	那
+k	ei	上聲	給
+kʰ	ei	陰平	尅
+ts	ei	陽平	賊
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	i
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	i	陰平	屄
+p	i	陽平	避
+p	i	上聲	比 秕 癟 彼
+p	i	去聲	蔽 敝 弊 幣 蓖 陛 閉 箅 臂 壁 被 斃 備 鼻 篦 避 筆 畢 必 弼 逼 碧 璧 匕
+pʰ	i	陰平	批 披 琵 匹
+pʰ	i	陽平	皮 疲 脾 避 庇 癧 僻
+pʰ	i	上聲	鄙
+pʰ	i	去聲	披 屁 劈
+m	i	陰平	瞇 靡
+m	i	陽平	迷 泥 糜 彌 倪
+m	i	上聲	米 㜷
+m	i	去聲	謎 迷 縻 味 泌 媚 密 蜜 秘
+t	i	陰平	低
+t	i	上聲	底 抵 羝 觝
+t	i	去聲	弟 第 遞 帝 地 提 的 滴 嫡 笛 敵 狄 滌 糴
+tʰ	i	陰平	梯
+tʰ	i	陽平	堤 題 提 蹄 啼
+tʰ	i	上聲	體
+tʰ	i	去聲	替 涕 屜 嚏 剔 惕 踢
+n	i	陽平	泥 尼 倪 呢
+n	i	上聲	妳
+n	i	去聲	倪 膩 擬 匿 逆 覓 溺
+l	i	陽平	梨 犁 黎 離 籬 璃 厘 貍 □ 鸝
+l	i	上聲	李 裏 禮 理 鯉
+l	i	去聲	例 例 厲 勵 麗 隸 荔 履 吏 離 利 痢 立 笠 粒 栗 力 歷 靂 瀝 礫
+tɕ	i	陰平	雞 技 妓 饑 肌 幾 機 譏 姬 墼
+tɕ	i	上聲	擠 己 幾 蟣
+tɕ	i	去聲	際 祭 濟 劑 級 稽 計 繼 系 寄 冀 紀 記 忌 既 季 集 輯 緝 稭 急 級 給 疾 吉 即 鯽 極 戟 積 跡 脊 籍 藉 績 寂 擊 激 芨 棘 嫉
+tɕʰ	i	陰平	妻 淒 欺 期
+tɕʰ	i	陽平	齊 臍 畦 奇 騎 岐 歧 祈 鰭 其 棋 旗 戚
+tɕʰ	i	上聲	啟 企 起 豈 乞 訖
+tɕʰ	i	去聲	沏 砌 契 器 棄 氣 汽 緝 七 漆 傶 □
+ɕ	i	陰平	西 嬉 熙 希 稀 溪 兮
+ɕ	i	陽平	檄
+ɕ	i	上聲	洗 璽 喜 螭
+ɕ	i	去聲	犀 細 溪 系 䐼 徙 犧 戲 巇 □ 習 襲 吸 悉 膝 息 熄 惜 昔 席 夕 錫 析
+Ø	i	陰平	儀 伊 醫 衣 依 䴬
+Ø	i	陽平	移 夷 姨 肄 疑 飴 遺 異 毅 裔 乙 抑 翼 疫 役
+Ø	i	上聲	蟻 椅 倚 以 尾 醫
+Ø	i	去聲	藝 縊 瞖 誼 義 議 易 億 膩 意 宜 儀 胰 揖 壹 逸 憶 益 溢 亦 譯
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	ia
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ia	陰平	巴
+pʰ	ia	上聲	□ 諞
+m	ia	陰平	□
+l	ia	上聲	倆
+tɕ	ia	陰平	家 加 嘉 佳
+tɕ	ia	上聲	假 賈
+tɕ	ia	去聲	假 架 駕 嫁 價 夾 胛 甲 挾 頰 圿
+tɕʰ	ia	陰平	恰
+tɕʰ	ia	陽平	洽
+tɕʰ	ia	上聲	卡
+tɕʰ	ia	去聲	掐
+ɕ	ia	陰平	蝦
+ɕ	ia	陽平	霞 瑕 遐 暇 廈 狹 峽 洽 匣 轄
+ɕ	ia	去聲	下 嚇 夏 廈 瞎
+Ø	ia	陰平	鴉 丫 椏
+Ø	ia	陽平	牙 芽 衙 涯
+Ø	ia	上聲	啞 亞 雅
+Ø	ia	去聲	鴨 押 壓 軋
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	ian
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ian	陰平	鞭 編 邊
+p	ian	上聲	扁 匾 貶 緶
+p	ian	去聲	辯 辨 變 汴 便 辮 遍
+pʰ	ian	陰平	篇 偏 蝙 片 翩
+pʰ	ian	陽平	便 緶
+pʰ	ian	上聲	片 諞
+pʰ	ian	去聲	騙
+m	ian	陰平	鮎 綿
+m	ian	陽平	綿 棉 眠
+m	ian	上聲	免 勉 娩 澠
+m	ian	去聲	緬 面
+t	ian	陰平	掂 顛
+t	ian	上聲	點 典
+t	ian	去聲	店 電 殿 佃 墊
+tʰ	ian	陰平	添 天 填
+tʰ	ian	陽平	甜 田 填
+tʰ	ian	上聲	舔
+tʰ	ian	去聲	掭
+n	ian	陽平	黏 年
+n	ian	上聲	碾 輦 攆 撚
+n	ian	去聲	念
+l	ian	陽平	廉 鐮 簾 □ 連 蓮 褳 聯 憐 戀 梿
+l	ian	上聲	臉 斂
+l	ian	去聲	練 煉 鏈 縺
+tɕ	ian	陰平	監 尖 搛 艱 間 奸 煎 犍 堅 肩 兼
+tɕ	ian	陽平	澗
+tɕ	ian	上聲	減 堿 檢 儉 撿 簡 柬 揀 剪 繭 趼 □
+tɕ	ian	去聲	艦 漸 劍 踐 賤 餞 件 諫 建 健 腱 鵳 薦 箋 見 間 澗
+tɕʰ	ian	陰平	鹐 殲 簽 潛 謙 遷 遣 千 牽 鉛 褰 □ 騫
+tɕʰ	ian	陽平	鉗 錢 乾 虔 掮 前 黔
+tɕʰ	ian	上聲	淺 譴
+tɕʰ	ian	去聲	嵌 欠 歉 芡 欿 倩
+ɕ	ian	陰平	鍁 仙 鮮 掀 先
+ɕ	ian	陽平	鹹 銜 嫌 閑 羨 蕁
+ɕ	ian	上聲	險 鮮 顯
+ɕ	ian	去聲	陷 餡 線 憲 獻 峴 現 縣 欠 先 限
+Ø	ian	陰平	淹 閹 醃 蔫 焉 煙
+Ø	ian	陽平	巖 炎 鹽 閻 檐 嚴 顏 延 筵 蜒 言 沿 研
+Ø	ian	上聲	掩 魘 黡 眼 演
+Ø	ian	去聲	驗 厭 艷 焰 釅 雁 諺 堰 壓 燕 硯 嚥 宴
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	ie
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ie	陰平	別 憋
+p	ie	陽平	別
+p	ie	去聲	別 鱉 彆 憋
+pʰ	ie	陰平	蝙 撇
+pʰ	ie	去聲	撇 諞 □
+m	ie	去聲	滅 蔑
+t	ie	陰平	爹
+t	ie	去聲	跌 叠 碟 牒 蝶 諜 咥 輒
+tʰ	ie	上聲	腆
+tʰ	ie	去聲	帖 貼 鐵
+n	ie	陽平	乜
+n	ie	去聲	聶 鑷 業 苶 孽 捏
+l	ie	去聲	䟩 例 獵 列 烈 裂 劣
+tɕ	ie	陰平	階 街
+tɕ	ie	陽平	械 皆
+tɕ	ie	上聲	姐 解
+tɕ	ie	去聲	借 藉 介 界 芥 屆 戒 接 捷 傑 揭 節 截 結 潔 羯 癤
+tɕʰ	ie	陽平	茄 挈 掲
+tɕʰ	ie	上聲	且
+tɕʰ	ie	去聲	笡 □ 妾 怯 劫 切
+ɕ	ie	陰平	些
+ɕ	ie	陽平	邪 斜 鞋
+ɕ	ie	上聲	寫
+ɕ	ie	去聲	瀉 卸 謝 諧 懈 解 蟹 協 脅 薛 泄 歇 蠍 楔 血 穴
+Ø	ie	陰平	耶 椰
+Ø	ie	陽平	爺
+Ø	ie	上聲	也
+Ø	ie	去聲	夜 葉 頁 業 拽 噎 液 腋 掖
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	in
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	in	陰平	彬 賓 檳 冰 兵 濱 斌
+p	in	上聲	稟 丙 秉 柄 餅 炳
+p	in	去聲	鬢 殯 病 並
+pʰ	in	陰平	拼
+pʰ	in	陽平	貧 頻 憑 平 坪 評 瓶 屏 萍 蘋
+pʰ	in	上聲	品
+pʰ	in	去聲	聘 姘
+m	in	陽平	閩 民 鳴 明 名 銘
+m	in	上聲	憫 敏 抿 皿
+m	in	去聲	命
+t	in	陰平	丁 釘 饤 疔
+t	in	上聲	頂 鼎
+t	in	去聲	錠 釘 訂 定
+tʰ	in	陰平	聽 廳 亭 艇
+tʰ	in	陽平	亭 停 廷 庭 蜓
+tʰ	in	上聲	挺 艇
+tʰ	in	去聲	停
+n	in	陽平	凝 寧 擰 獰 嚀
+n	in	去聲	硬 寧
+l	in	陽平	林 淋 臨 鄰 鱗 磷 陵 淩 菱 靈 零 鈴 伶 齡 綾
+l	in	上聲	檁 領 嶺 翎
+l	in	去聲	吝 賃 令 另 淋
+tɕ	in	陰平	今 金 襟 津 巾 斤 筋 莖 京 荊 驚 鯨 經 徑 精 睛 晶
+tɕ	in	陽平	境
+tɕ	in	上聲	錦 緊 僅 謹 景 井 警 頸
+tɕ	in	去聲	禁 盡 進 晉 近 勁 敬 竟 鏡 競 競 靜 靖 凈
+tɕʰ	in	陰平	欽 親 卿 輕 青 清 蜻
+tɕʰ	in	陽平	侵 浸 琴 禽 擒 秦 勤 芹 情 晴
+tɕʰ	in	上聲	寢 請 傾 頃
+tɕʰ	in	去聲	親 凊 慶 輕
+ɕ	in	陰平	心 辛 新 薪 欣 興 星 腥
+ɕ	in	陽平	行 桁 邢 形 型 刑 尋 餳
+ɕ	in	上聲	省 醒
+ɕ	in	去聲	囟 信 訊 釁 興 幸 性 姓
+Ø	in	陰平	吟 音 陰 蔭 因 姻 寅 殷 應 鷹 鶯 鸚 嬰 纓 癭 櫻 英
+Ø	in	陽平	銀 蠅 迎 映 盈 贏 螢 瑩 營 穎 淫
+Ø	in	上聲	飲 引 □ 隱 尹 影
+Ø	in	去聲	窨 飲 印 洇 硬 應
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iɑŋ
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+n	iɑŋ	陰平	娘
+n	iɑŋ	陽平	娘
+l	iɑŋ	陽平	良 涼 量 糧 梁 粱
+l	iɑŋ	上聲	兩 輛
+l	iɑŋ	去聲	亮 諒 量
+tɕ	iɑŋ	陰平	將 疆 僵 薑 韁 姜 江 豇 漿 剛 礓
+tɕ	iɑŋ	上聲	蔣 獎 講
+tɕ	iɑŋ	去聲	醬 將 匠 犟 糨
+tɕʰ	iɑŋ	陰平	槍 羌 腔 戧 嗆
+tɕʰ	iɑŋ	陽平	墻 詳 祥 強
+tɕʰ	iɑŋ	上聲	槍 強
+tɕʰ	iɑŋ	去聲	熗
+ɕ	iɑŋ	陰平	相 箱 湘 廂 襄 鑲 香 鄉
+ɕ	iɑŋ	陽平	詳 祥 降
+ɕ	iɑŋ	上聲	想 享 響 餉
+ɕ	iɑŋ	去聲	象 像 橡 相 向 項
+Ø	iɑŋ	陰平	央 秧 殃
+Ø	iɑŋ	陽平	羊 洋 楊 揚 瘍 佯
+Ø	iɑŋ	上聲	仰 養 癢
+Ø	iɑŋ	去聲	樣 漾
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iɔ
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iɔ	陰平	膘 標 彪 鏢
+p	iɔ	上聲	表 婊 裱
+pʰ	iɔ	陰平	飄 漂
+pʰ	iɔ	陽平	瓢 嫖
+pʰ	iɔ	上聲	漂
+pʰ	iɔ	去聲	票 漂 僄
+m	iɔ	陽平	描 苗 瞄
+m	iɔ	上聲	藐 渺 秒 杳 □
+m	iɔ	去聲	廟 妙
+t	iɔ	陰平	刁 叼 貂 雕
+t	iɔ	去聲	釣 吊 掉 調 銚
+tʰ	iɔ	陰平	挑
+tʰ	iɔ	陽平	條 調 藋
+tʰ	iɔ	上聲	挑
+tʰ	iɔ	去聲	跳 糶
+n	iɔ	上聲	鳥
+n	iɔ	去聲	尿
+l	iɔ	陰平	瞭 撩
+l	iɔ	陽平	燎 療 僚 獠 繚 撩 遼 寥 廖 敹
+l	iɔ	上聲	燎 了 潦
+l	iɔ	去聲	料 尥 撂 鐐
+tɕ	iɔ	陰平	交 郊 膠 教 焦 蕉 椒 驕 嬌 澆
+tɕ	iɔ	上聲	狡 鉸 攪 僥 餃 僥
+tɕ	iɔ	去聲	教 校 較 酵 覺 轎 叫 角 □ □
+tɕʰ	iɔ	陰平	敲 鍬 繑 悄 劁 蹺
+tɕʰ	iɔ	陽平	瞧 喬 僑 橋 蕎
+tɕʰ	iɔ	上聲	巧 雀
+tɕʰ	iɔ	去聲	俏 竅 撽 鵲
+ɕ	iɔ	陰平	消 宵 霄 硝 銷 囂 蕭 簫 枵
+ɕ	iɔ	上聲	小 曉
+ɕ	iɔ	去聲	孝 效 校 笑
+Ø	iɔ	陰平	妖 邀 腰 要 吆 □ 幺
+Ø	iɔ	陽平	肴 淆 搖 謠 窯 姚 堯
+Ø	iɔ	上聲	咬 舀
+Ø	iɔ	去聲	靿 要 耀 鷂 崾 躍
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	t	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iəu
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+t	iəu	陰平	丟
+n	iəu	陰平	牛 妞
+n	iəu	陽平	牛
+n	iəu	上聲	紐 扭
+n	iəu	去聲	謬 拗
+l	iəu	陰平	溜 綹
+l	iəu	陽平	流 劉 留 榴 硫 琉 餾
+l	iəu	上聲	柳 綹
+l	iəu	去聲	鎦 溜 餾 六
+tɕ	iəu	陰平	揪 □ 鳩 鬮 糾
+tɕ	iəu	上聲	酒 九 久 韭 灸
+tɕ	iəu	去聲	就 臼 舅 救 究 舊 柩 㩆
+tɕʰ	iəu	陰平	秋 囚 泅 丘 球 鞦
+tɕʰ	iəu	陽平	求 俅 㞗
+tɕʰ	iəu	上聲	□
+ɕ	iəu	陰平	修 羞 休
+ɕ	iəu	上聲	朽 秀 羞
+ɕ	iəu	去聲	秀 繡 宿 銹 袖 嗅
+Ø	iəu	陰平	憂 優 猶 悠 幽
+Ø	iəu	陽平	尤 郵 由 油 蚰 遊
+Ø	iəu	上聲	有 友 莠
+Ø	iəu	去聲	誘 又 右 佑 釉 幼 莠
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	k	kʰ	x	tʂ	tʂʰ	ʂ	ʐ	ts	tsʰ	s
+@FIN	u
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	u	上聲	補 捕 堡
+p	u	去聲	部 布 怖 步 不 荸 鵓 撥
+pʰ	u	陰平	鋪 蒲 秿 潽
+pʰ	u	陽平	菩 葡 仆 瀑
+pʰ	u	上聲	譜 浦 甫 脯 晡 樸
+pʰ	u	去聲	普 鋪 撲 仆
+m	u	陽平	模 謀
+m	u	上聲	某 畝 母 拇
+m	u	去聲	暮 慕 墓 募 幕 木 目 穆 牧 睦
+f	u	陰平	夫 膚 敷 麩
+f	u	陽平	符 扶 芙 浮
+f	u	上聲	埠 府 腑 俯 甫 斧 撫 腐 輔 釜 否
+f	u	去聲	俘 父 婦 負 阜 富 副 復 縛 輻 福 幅 腹 覆 覆 服 伏 附 赴 傅 付 咐
+v	u	陰平	烏 汙 巫 誣 嗚 兀 侮
+v	u	陽平	吳 蜈 無 戊 梧
+v	u	上聲	吾 五 伍 午 武 舞 梧 鵡
+v	u	去聲	誤 悟 惡 握 屋 沃 務 霧 痦 焐 勿 物
+t	u	陰平	都
+t	u	上聲	堵 賭 睹 肚
+t	u	去聲	杜 肚 妒 度 渡 鍍 獨 讀 牘 犢 篤 督 毒
+tʰ	u	陽平	徒 屠 途 塗 圖
+tʰ	u	上聲	土 吐
+tʰ	u	去聲	兔 突 禿
+n	u	陽平	奴 駑
+n	u	上聲	努
+n	u	去聲	怒
+l	u	陽平	盧 爐 蘆 廬 耬
+l	u	上聲	魯 虜 鹵
+l	u	去聲	路 賂 鷺 露 鹿 轆 錄 祿 陸 綠
+k	u	陰平	姑 茹 孤 箍 辜
+k	u	上聲	古 估 股 鼓
+k	u	去聲	故 固 錮 雇 顧 軲 骨 谷
+kʰ	u	陰平	箍
+kʰ	u	陽平	酷 枯
+kʰ	u	上聲	苦
+kʰ	u	去聲	庫 褲 窟 哭
+x	u	陰平	呼 乎 忽
+x	u	陽平	胡 湖 糊 糊 狐 壺 鬍 核 斛 弧
+x	u	上聲	虎 滸
+x	u	去聲	互 護 滬 戶 瓠 葫 糊 胡 囫 忽 或 惑 獲
+tʂ	u	陰平	豬 誅 蛛 株 朱 珠 諸
+tʂ	u	上聲	煮 拄 主
+tʂ	u	去聲	著 諸 駐 讓 住 柱 註 蛀 炷 鑄 術 竹 築 逐 軸 妯 祝 燭 囑 觸 蜀
+tʂʰ	u	陽平	除 鋤 雛 廚 櫥 秫
+tʂʰ	u	上聲	儲 褚 處 杵 鼠 黍 帚
+tʂʰ	u	去聲	出 畜 搐
+ʂ	u	陰平	書 舒 輸 殊
+ʂ	u	上聲	暑 黍 署 薯 蜀
+ʂ	u	去聲	庶 恕 豎 戍 樹 樞 數 術 述 叔 豎 熟 淑 束 贖 屬
+ʐ	u	陽平	如 茹 儒 蠕 孺
+ʐ	u	上聲	汝 乳 孺 辱
+ʐ	u	去聲	人 褥
+ts	u	陰平	租
+ts	u	上聲	阻 祖 組
+ts	u	去聲	助 卒 族 足 □
+tsʰ	u	陰平	粗 初
+tsʰ	u	陽平	鋤 雛
+tsʰ	u	上聲	楚 礎 礎
+tsʰ	u	去聲	醋 猝 促
+s	u	陰平	蘇 酥 梳 疏 蔬
+s	u	上聲	數
+s	u	去聲	素 訴 嗉 數 漱 速 宿 粟 肅 俗
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	k	kʰ	x	tʂ	tʂʰ	ʂ	ʐ	ts
+@FIN	ua
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+k	ua	陰平	瓜
+k	ua	上聲	寡 剮 刮
+k	ua	去聲	掛 卦 褂 蝸
+kʰ	ua	陰平	誇
+kʰ	ua	上聲	侉 垮 胯
+kʰ	ua	去聲	跨 挎
+x	ua	陰平	花
+x	ua	陽平	華 踝 劃 鏵 滑 猾
+x	ua	去聲	化 畫 話 華 劃
+tʂ	ua	陰平	抓 髽
+tʂ	ua	上聲	爪
+tʂʰ	ua	上聲	□
+ʂ	ua	上聲	耍
+ʂ	ua	去聲	刷
+ʐ	ua	陽平	挼
+ts	ua	陽平	□
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	t	tʰ	n	l	k	kʰ	x	tʂ	tʂʰ	ʂ	ʐ	ts	tsʰ	s
+@FIN	uan
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uan	陰平	端
+t	uan	上聲	短
+t	uan	去聲	斷 □ 鍛 段 緞 椴
+tʰ	uan	陽平	團
+n	uan	上聲	暖
+l	uan	陰平	□
+l	uan	陽平	鸞 戀 聯
+l	uan	上聲	卵
+l	uan	去聲	亂
+k	uan	陰平	官 棺 倌 觀 冠 關 鰥
+k	uan	上聲	管 錧 館
+k	uan	去聲	貫 慣 灌 罐 觀 冠
+kʰ	uan	陰平	寬
+kʰ	uan	上聲	款
+x	uan	陰平	歡
+x	uan	陽平	還 環
+x	uan	上聲	緩
+x	uan	去聲	喚 煥 換 幻 患 宦
+tʂ	uan	陰平	專 磚
+tʂ	uan	上聲	轉
+tʂ	uan	去聲	賺 撰 篆 轉 傳
+tʂʰ	uan	陰平	川 穿
+tʂʰ	uan	陽平	傳 椽 船
+tʂʰ	uan	上聲	□ 喘
+tʂʰ	uan	去聲	串 穿
+ʂ	uan	陰平	閂 拴 栓
+ʂ	uan	去聲	涮
+ʐ	uan	陽平	軟 阮 䓴
+ts	uan	陰平	鉆
+ts	uan	上聲	櫕 䰖 □
+ts	uan	去聲	鉆 纂 攥
+tsʰ	uan	陰平	汆
+tsʰ	uan	陽平	全 跧
+tsʰ	uan	去聲	竄 篡
+s	uan	陰平	酸 痠
+s	uan	去聲	算 蒜
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	t	tʰ	l	k	kʰ	x	tʂ	tʂʰ	ʂ	ʐ	ts	tsʰ	s
+@FIN	uei
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uei	陰平	堆
+t	uei	去聲	對 隊 兌
+tʰ	uei	陰平	推
+tʰ	uei	上聲	腿
+tʰ	uei	去聲	退 蛻
+l	uei	陽平	雷 累
+l	uei	上聲	屢 儡 累 壘 磊
+l	uei	去聲	內 累 淚 類
+k	uei	陰平	圭 閨 規 龜 軌 歸
+k	uei	上聲	詭 癸 鬼
+k	uei	去聲	桂 跪 櫃 貴
+kʰ	uei	陰平	虧 規
+kʰ	uei	陽平	盔 魁 傀 奎 窺 逵 葵
+kʰ	uei	去聲	愧 □ 潰
+x	uei	陰平	灰 恢 揮 輝 徽
+x	uei	陽平	回 茴 迴 蛔
+x	uei	上聲	悔 毀
+x	uei	去聲	賄 匯 晦 殨 會 繪 燴 惠 慧 彗 諱 憒 穢
+tʂ	uei	陰平	追 錐
+tʂ	uei	去聲	□ 綴 贅 墜
+tʂʰ	uei	陰平	吹 炊
+tʂʰ	uei	陽平	垂 槌 棰 錘
+ʂ	uei	陽平	誰
+ʂ	uei	上聲	水
+ʂ	uei	去聲	稅 睡
+ʐ	uei	去聲	銳 瑞 蕊 睿
+ts	uei	上聲	嘴
+ts	uei	去聲	罪 醉 最
+tsʰ	uei	陰平	崔 催 摧
+tsʰ	uei	陽平	脆
+tsʰ	uei	去聲	脆 翠 粹
+s	uei	陰平	尿
+s	uei	陽平	隨 髓 雖 綏 遂 隧 隋 髓
+s	uei	去聲	碎 歲 穗 荽
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	t	tʰ	n	l	k	kʰ	x	tʂ	tʂʰ	ʂ	ʐ	ts	tsʰ	s
+@FIN	un
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+t	un	陰平	敦 墩 蹲 東 冬
+t	un	上聲	盹 董 懂 □
+t	un	去聲	飩 頓 鈍 燉 囤 盾 遁 盾 動 凍 棟 洞
+tʰ	un	陰平	吞 通
+tʰ	un	陽平	屯 豚 臀 同 銅 桐 童 瞳
+tʰ	un	上聲	筒 桶 捅 統 㼧
+tʰ	un	去聲	蛻 脫 痛
+n	un	陰平	膿
+n	un	陽平	齈 農 膿 濃
+n	un	去聲	嫩 弄
+l	un	陰平	弄
+l	un	陽平	崙 倫 淪 輪 掄 圇 籠 聾 農 隆 龍
+l	un	上聲	攏 隴 壟 籠
+l	un	去聲	論
+k	un	陰平	公 蚣 工 功 攻 弓 躬 宮 恭
+k	un	上聲	滾 貢 拱 鞏
+k	un	去聲	棍 貢 供 共
+kʰ	un	陰平	昆 崑 坤 空
+kʰ	un	上聲	捆 焪 孔 恐
+kʰ	un	去聲	困 睏 控 空
+x	un	陰平	昏 惛 婚 葷 轟 訇 揈 哄 烘
+x	un	陽平	魂 餛 渾 弘 紅 洪 鴻 虹 宏
+x	un	上聲	哄
+x	un	去聲	混 橫 圂
+tʂ	un	陰平	仲 中 忠 終 冢 鐘 盅
+tʂ	un	上聲	準 種 腫
+tʂ	un	去聲	中 眾 重 種
+tʂʰ	un	陰平	仲 椿 春 沖 舂 充
+tʂʰ	un	陽平	唇 純 醇 蟲 崇 重
+tʂʰ	un	上聲	蠢 寵
+tʂʰ	un	去聲	順
+ʂ	un	陽平	□
+ʂ	un	去聲	順 舜
+ʐ	un	陽平	榮 戎 絨 茸 蓉 熔 容
+ʐ	un	去聲	閏 潤
+ts	un	陰平	尊 遵 棕 鬃 宗 綜 蹤
+ts	un	上聲	總
+ts	un	去聲	粽 縱 緵
+tsʰ	un	陰平	村 皴 聰 蔥 囪 叢 從
+tsʰ	un	陽平	存 從
+tsʰ	un	去聲	寸
+s	un	陰平	孫 松 嵩
+s	un	陽平	倯 □
+s	un	上聲	損 筍
+s	un	去聲	送 宋 誦 頌 訟
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	k	kʰ	x	tʂ	tʂʰ	ʂ
+@FIN	uɑŋ
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uɑŋ	陰平	光
+k	uɑŋ	上聲	廣
+k	uɑŋ	去聲	桄 逛 光
+kʰ	uɑŋ	陰平	匡 筐 誆
+kʰ	uɑŋ	陽平	狂
+kʰ	uɑŋ	去聲	曠 眶 況 礦 框
+x	uɑŋ	陰平	荒 慌
+x	uɑŋ	陽平	黃 簧 皇 蝗 㾮 癀
+x	uɑŋ	上聲	謊
+x	uɑŋ	去聲	晃
+tʂ	uɑŋ	陰平	莊 裝 樁 妝
+tʂ	uɑŋ	上聲	奘
+tʂ	uɑŋ	去聲	壯 狀 裝
+tʂʰ	uɑŋ	陰平	瘡 窗
+tʂʰ	uɑŋ	陽平	床
+tʂʰ	uɑŋ	上聲	闖
+tʂʰ	uɑŋ	去聲	創 撞
+ʂ	uɑŋ	陰平	霜 孀 雙
+ʂ	uɑŋ	上聲	爽 □
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	f	t	tʰ	n	l	k	kʰ	x	tʂ	tʂʰ	ʂ	ʐ	ts	tsʰ	s
+@FIN	uə
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	uə	陰平	波 菠 玻 缽 勃 撥 □
+p	uə	陽平	薄 博 搏
+p	uə	上聲	簸 跛
+p	uə	去聲	簸 薄 撥 餑 泊 剝 駁 帛
+pʰ	uə	陰平	坡 破 頗
+pʰ	uə	陽平	婆
+pʰ	uə	去聲	破 潑
+m	uə	陰平	摹 摩
+m	uə	陽平	魔 磨 饃 模 膜
+m	uə	上聲	□ 抹
+m	uə	去聲	磨 末 沫 耱 沒 莫 寞 漠 摸 陌
+f	uə	去聲	佛
+t	uə	陰平	多 哆
+t	uə	陽平	舵
+t	uə	上聲	朵 躲
+t	uə	去聲	馱 惰 □ 剁 掇 敠 錣 奪 鐸
+tʰ	uə	陰平	拖 讬 托
+tʰ	uə	陽平	駝 馱 陀 饦 砣 鴕
+tʰ	uə	上聲	妥 橢
+tʰ	uə	去聲	唾 脫 溻
+n	uə	陽平	挪
+n	uə	去聲	糯 懦 諾
+l	uə	陰平	啰
+l	uə	陽平	羅 鑼 籮 騾 螺 腡
+l	uə	上聲	裸 □
+l	uə	去聲	摞 落 烙 駱 洛 樂 絡 饹
+k	uə	陰平	鍋
+k	uə	上聲	果 裹 馃
+kʰ	uə	陰平	科 棵 顆 課
+kʰ	uə	上聲	顆 □ 摑 科
+kʰ	uə	去聲	騍 課 括 闊 廓 擴
+x	uə	陽平	和 禍 活 饸 □
+x	uə	上聲	火 夥
+x	uə	去聲	禍 貨 禾 和 獲 活
+tʂ	uə	陽平	著
+tʂ	uə	去聲	拙 著 酌 桌 卓 琢 啄 涿 濁 捉 鐲 茁
+tʂʰ	uə	去聲	綽 戳
+ʂ	uə	去聲	說 勺 芍
+ʐ	uə	去聲	若 弱
+ts	uə	陽平	昨
+ts	uə	上聲	左 佐 撮
+ts	uə	去聲	坐 座 做 作 鑿 嘬
+tsʰ	uə	陰平	搓 蹉
+tsʰ	uə	陽平	矬
+tsʰ	uə	去聲	錯 措 挫 銼 撮
+s	uə	陰平	蓑 梭 莎
+s	uə	上聲	所 鎖 嗩 瑣
+s	uə	去聲	塑 唆 索 朔 嗍
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	k	kʰ	x	tʂ	tʂʰ	ʂ
+@FIN	uɛ
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uɛ	陰平	乖
+k	uɛ	上聲	拐 乖
+k	uɛ	去聲	怪
+kʰ	uɛ	陰平	劊
+kʰ	uɛ	去聲	會 塊 筷 快
+x	uɛ	陽平	懷 槐 淮 踝
+x	uɛ	去聲	壞
+tʂ	uɛ	陰平	拽
+tʂ	uɛ	上聲	跩
+tʂʰ	uɛ	陰平	揣 搋
+tʂʰ	uɛ	上聲	揣
+tʂʰ	uɛ	去聲	膪 踹
+ʂ	uɛ	陰平	衰 摔
+ʂ	uɛ	上聲	甩
+ʂ	uɛ	去聲	帥 率 蟀
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	y
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+n	y	上聲	女
+l	y	陽平	驢
+l	y	上聲	呂 鋁 侶 屢 縷 □
+l	y	去聲	慮 濾 旅 律 率 綠 鋁
+tɕ	y	陰平	居 車 拘 駒 跔 掬 □
+tɕ	y	上聲	舉
+tɕ	y	去聲	巨 拒 距 據 鋸 聚 俱 矩 句 具 懼 瞿 桔 劇 菊 鞠 局 炬
+tɕʰ	y	陰平	蛆 區 驅 軀 覷
+tɕʰ	y	陽平	渠
+tɕʰ	y	上聲	取 娶
+tɕʰ	y	去聲	趨 趣 去 焌 屈 麯 曲 黢
+ɕ	y	陰平	墟 虛 噓 須 需
+ɕ	y	陽平	徐
+ɕ	y	上聲	許
+ɕ	y	去聲	序 敘 緒 絮 續 鬢 婿 戌 恤 畜 蓄 續 肅 □
+Ø	y	陰平	淤 於 迂 瘀
+Ø	y	陽平	於 余 魚 漁 愚 虞 娛 盂 榆 逾 禹 愉
+Ø	y	上聲	與 語 雨 宇 羽 嶼
+Ø	y	去聲	譽 預 豫 禦 禦 籲 裕 喻 遇 寓 愈 芋 域 郁 育 玉 獄 欲 浴
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	tɕ	tɕʰ	ɕ	Ø
+@FIN	yan
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yan	陰平	捐 券 絹
+tɕ	yan	陽平	絹
+tɕ	yan	上聲	卷
+tɕ	yan	去聲	圈 眷 卷 倦
+tɕʰ	yan	陰平	圈
+tɕʰ	yan	陽平	全 泉 拳 權 顴 踡
+tɕʰ	yan	上聲	犬
+tɕʰ	yan	去聲	勸
+ɕ	yan	陰平	宣 軒 喧
+ɕ	yan	陽平	旋 喧 玄 眩 懸
+ɕ	yan	上聲	癬 選
+ɕ	yan	去聲	陷 餡 旋 鏇 楦 鏾
+Ø	yan	陰平	冤 淵
+Ø	yan	陽平	圓 員 緣 元 原 源 塬 袁 轅 園 援
+Ø	yan	上聲	遠
+Ø	yan	去聲	院 願 怨
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	ye
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+n	ye	去聲	虐
+l	ye	去聲	掠 略 虐
+tɕ	ye	陽平	爵 嚼 撅
+tɕ	ye	去聲	絕 厥 掘 橛 決 訣 倔 腳 鐝 覺 角 撅
+tɕʰ	ye	陽平	瘸
+tɕʰ	ye	上聲	撅
+tɕʰ	ye	去聲	缺 雀 鵲 卻 確 搉 □
+ɕ	ye	陰平	靴
+ɕ	ye	陽平	斜 邪
+ɕ	ye	去聲	些 雪 削 學
+Ø	ye	去聲	悅 閱 月 越 曰 粵 約 藥 鑰 躍 嶽 樂
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	yn
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+l	yn	上聲	□
+tɕ	yn	陰平	均 鈞 君 軍 郡 菌
+tɕ	yn	上聲	菌 迥 窘
+tɕ	yn	去聲	俊 駿 竣 浚
+tɕʰ	yn	陽平	群 裙 瓊 窮 □
+tɕʰ	yn	上聲	焪
+ɕ	yn	陰平	熏 勛 薰 兄 胸 匈 洶 兇
+ɕ	yn	陽平	循 尋 旬 詢 栒 巡 熊 雄
+ɕ	yn	去聲	遜 迅 殉 訓 □ 馴 訊 汛
+Ø	yn	陰平	雍 癰 庸 擁 㙲
+Ø	yn	陽平	勻 雲 榮 融 容
+Ø	yn	上聲	允 永 泳 詠 勇 湧 踴
+Ø	yn	去聲	熨 韻 運 暈 孕 用
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	t	tʰ	l	k	kʰ	x	tʂ	ts	tsʰ	s	Ø
+@FIN	æ
+@TON	陽平	53
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	æ	去聲	北 百 柏 伯 白 帛 掰 檗 泊
+pʰ	æ	去聲	迫 拍 魄
+m	æ	去聲	墨 默 陌 麥 脈 □
+t	æ	去聲	得 德
+tʰ	æ	去聲	特
+l	æ	去聲	肋 勒
+k	æ	去聲	格 革 隔 膈 嗝
+kʰ	æ	去聲	咳 刻 克 客
+x	æ	去聲	核
+tʂ	æ	去聲	宅
+ts	æ	去聲	則 澤 擇 窄 摘 責 宅
+tsʰ	æ	去聲	廁 折 策 冊 側 側
+s	æ	去聲	瑟 塞 色 嗇
+Ø	æ	陽平	額
+Ø	æ	去聲	額
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	k	kʰ	x	tʂ	tʂʰ	ʂ	ʐ	ts	tsʰ	s	Ø
+@FIN	ɑŋ
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɑŋ	陰平	幫 邦 傍
+p	ɑŋ	陽平	謗
+p	ɑŋ	上聲	榜 綁 膀
+p	ɑŋ	去聲	棒 蚌
+pʰ	ɑŋ	陰平	胮 龐
+pʰ	ɑŋ	陽平	旁 螃 傍
+pʰ	ɑŋ	去聲	胖
+m	ɑŋ	陰平	䏵
+m	ɑŋ	陽平	忙 芒 茫 盲 氓
+m	ɑŋ	上聲	莽 蟒
+f	ɑŋ	陰平	方 芳 妨 坊
+f	ɑŋ	陽平	肪 房 防
+f	ɑŋ	上聲	仿 紡 訪
+f	ɑŋ	去聲	放
+v	ɑŋ	陰平	汪 尪
+v	ɑŋ	陽平	芒 亡 王
+v	ɑŋ	上聲	網 枉 往 輞
+v	ɑŋ	去聲	忘 妄 望 往 旺
+t	ɑŋ	陰平	當 襠
+t	ɑŋ	陽平	當
+t	ɑŋ	上聲	黨
+t	ɑŋ	去聲	蕩 當 宕 擋 檔
+tʰ	ɑŋ	陰平	湯 蹚
+tʰ	ɑŋ	陽平	堂 棠 螳 糖 塘 □ 唐
+tʰ	ɑŋ	上聲	倘 躺 埫
+tʰ	ɑŋ	去聲	燙 趟
+n	ɑŋ	陰平	儾 囔 䑋 囊
+n	ɑŋ	陽平	囊
+n	ɑŋ	上聲	儾
+n	ɑŋ	去聲	儾 齉
+l	ɑŋ	陽平	郎 廊 狼 蜋 □ 㝗
+l	ɑŋ	上聲	朗
+l	ɑŋ	去聲	浪 □
+k	ɑŋ	陰平	岡 崗 剛 綱 鋼 缸 扛
+k	ɑŋ	上聲	港 □ 崗
+k	ɑŋ	去聲	杠 虹 鋼 碙 戇
+kʰ	ɑŋ	陰平	康 糠 慷 腔
+kʰ	ɑŋ	陽平	扛
+kʰ	ɑŋ	去聲	抗 炕
+x	ɑŋ	陰平	夯
+x	ɑŋ	陽平	行 航 杭
+x	ɑŋ	去聲	項 巷
+tʂ	ɑŋ	陰平	張 章 樟 障
+tʂ	ɑŋ	上聲	長 漲 掌
+tʂ	ɑŋ	去聲	丈 仗 杖 帳 賬 脹 瘴
+tʂʰ	ɑŋ	陰平	昌 倡 猖
+tʂʰ	ɑŋ	陽平	長 腸 場 常 嘗 償
+tʂʰ	ɑŋ	上聲	廠 氅 敞
+tʂʰ	ɑŋ	去聲	唱 暢
+ʂ	ɑŋ	陰平	商 傷 墑
+ʂ	ɑŋ	陽平	裳
+ʂ	ɑŋ	上聲	賞 晌 □
+ʂ	ɑŋ	去聲	上 尚
+ʐ	ɑŋ	陰平	攘
+ʐ	ɑŋ	陽平	瓤 禳
+ʐ	ɑŋ	上聲	壤 嚷 釀
+ʐ	ɑŋ	去聲	讓
+ts	ɑŋ	陰平	贓 臟
+ts	ɑŋ	去聲	葬 藏 臟 □
+tsʰ	ɑŋ	陰平	倉 蒼 滄
+tsʰ	ɑŋ	陽平	藏
+tsʰ	ɑŋ	去聲	蹌
+s	ɑŋ	陰平	桑 喪
+s	ɑŋ	上聲	磉 嗓 搡
+s	ɑŋ	去聲	喪
+Ø	ɑŋ	陰平	骯
+Ø	ɑŋ	陽平	昂
+Ø	ɑŋ	去聲	盎
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	k	kʰ	x	tʂ	tʂʰ	ʂ	ʐ	ts	tsʰ	s	Ø
+@FIN	ɔ
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɔ	陰平	褒 包 胞 鮑 雹
+p	ɔ	上聲	保 寶 飽
+p	ɔ	去聲	抱 報 暴 豹 爆 铇
+pʰ	ɔ	陰平	泡 拋 剖 抱 脬
+pʰ	ɔ	陽平	袍 胞 刨
+pʰ	ɔ	上聲	跑
+pʰ	ɔ	去聲	炮 泡
+m	ɔ	陰平	覒
+m	ɔ	陽平	毛 茅 貓 矛 牦
+m	ɔ	上聲	卯 牡 峁
+m	ɔ	去聲	冒 帽 貌 茂 貿 髦
+t	ɔ	陰平	刀 叨
+t	ɔ	上聲	禱 島 倒 導
+t	ɔ	去聲	道 稻 到 倒 盜
+tʰ	ɔ	陰平	滔 掏 濤
+tʰ	ɔ	陽平	桃 逃 淘 陶 萄
+tʰ	ɔ	上聲	討
+tʰ	ɔ	去聲	套
+n	ɔ	陽平	撓
+n	ɔ	上聲	腦 惱
+n	ɔ	去聲	鬧
+l	ɔ	陰平	鬧
+l	ɔ	陽平	勞 撈 牢 嘮 癆
+l	ɔ	上聲	老 䳓 姥
+l	ɔ	去聲	澇 □ 潦 癆 嫪
+k	ɔ	陰平	高 膏 羔 糕
+k	ɔ	上聲	稿 搞
+k	ɔ	去聲	告 膏
+kʰ	ɔ	上聲	考 烤 拷
+kʰ	ɔ	去聲	靠 犒 焅 銬
+x	ɔ	陰平	蒿 薅
+x	ɔ	陽平	豪 壕 毫 嚎 號
+x	ɔ	上聲	好
+x	ɔ	去聲	好 耗 號
+tʂ	ɔ	陰平	朝 召 招 沼 詔
+tʂ	ɔ	陽平	著
+tʂ	ɔ	上聲	爪 找
+tʂ	ɔ	去聲	罩 笊 趙 兆 昭 照 詔
+tʂʰ	ɔ	陰平	抄 巢 剿 超 鈔 □
+tʂʰ	ɔ	陽平	朝 潮 □
+tʂʰ	ɔ	上聲	炒 吵
+tʂʰ	ɔ	去聲	耖
+ʂ	ɔ	陰平	捎 梢 稍 燒
+ʂ	ɔ	上聲	少
+ʂ	ɔ	去聲	紹 少 邵 燒
+ʐ	ɔ	陽平	饒
+ʐ	ɔ	上聲	繞 擾 撓
+ʐ	ɔ	去聲	繞
+ts	ɔ	陰平	遭 糟 騷
+ts	ɔ	上聲	早 棗 澡 蚤
+ts	ɔ	去聲	造 皂 躁 竈
+tsʰ	ɔ	陰平	操
+tsʰ	ɔ	陽平	曹 槽
+tsʰ	ɔ	上聲	草 騲
+tsʰ	ɔ	去聲	糙
+s	ɔ	陰平	騷 臊
+s	ɔ	上聲	掃 嫂
+s	ɔ	去聲	掃 臊 氉 瘙
+Ø	ɔ	陰平	熬
+Ø	ɔ	陽平	熬
+Ø	ɔ	上聲	襖
+Ø	ɔ	去聲	傲 鏊 奧 懊
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	v	tʰ	l	k	kʰ	x	tʂ	tʂʰ	ʂ	ʐ	ts	tsʰ	s	Ø
+@FIN	ə
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+v	ə	陰平	臥 倭 踒 窩 蝸
+v	ə	上聲	我
+v	ə	去聲	餓 □ 握 渥 物 勿
+tʰ	ə	去聲	特
+l	ə	去聲	勒
+k	ə	陰平	歌 哥 戈
+k	ə	陽平	□
+k	ə	去聲	個 合 鴿 佫 割 葛 各 閣 擱 格 革 角
+kʰ	ə	陰平	科
+kʰ	ə	上聲	可
+kʰ	ə	去聲	磕 殼 刻 克 客 渴 可
+x	ə	陰平	呵 豁
+x	ə	陽平	和 河 何 荷 合
+x	ə	上聲	喝
+x	ə	去聲	荷 賀 喝 盒 合 郝 鶴 霍 藿 劐 赫 嚇
+tʂ	ə	陰平	遮
+tʂ	ə	陽平	折
+tʂ	ə	上聲	者
+tʂ	ə	去聲	蔗 轍 摺 褶 蜇 哲 浙 折
+tʂʰ	ə	陰平	車
+tʂʰ	ə	上聲	扯
+tʂʰ	ə	去聲	徹 撤 轍 澈 掣
+ʂ	ə	陰平	賒
+ʂ	ə	陽平	蛇 佘 赦 舌 折
+ʂ	ə	上聲	舍
+ʂ	ə	去聲	社 射 麝 舍 奢 攝 設 涉 虱 折
+ʐ	ə	上聲	惹
+ʐ	ə	去聲	熱 偌
+ts	ə	去聲	仄 則 澤 擇
+tsʰ	ə	去聲	策 冊 側 測
+s	ə	去聲	澀
+Ø	ə	陰平	俄 阿 訛
+Ø	ə	陽平	蛾 鵝 娥 訛 額
+Ø	ə	去聲	鄂 惡 鱷 厄 扼
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	k	kʰ	x	tʂ	tʂʰ	ʂ	ʐ	ts	tsʰ	s	Ø
+@FIN	ən
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ən	陰平	奔 崩 弸 繃 嘣
+p	ən	上聲	本
+p	ən	去聲	笨 奔 镚
+pʰ	ən	陰平	噴 烹
+pʰ	ən	陽平	盆 朋 彭 膨 棚 篷 蓬
+pʰ	ən	上聲	捧
+pʰ	ən	去聲	噴
+m	ən	陰平	燜 懵
+m	ən	陽平	門 萌 盟 蒙
+m	ən	上聲	猛 懵
+m	ən	去聲	悶 孟 蒙 夢
+f	ən	陰平	分 芬 紛 焚 風 楓 瘋 豐 諷 封 峰 蜂 鋒
+f	ən	陽平	墳 馮 逢 縫
+f	ən	上聲	粉
+f	ən	去聲	奮 糞 份 鳳 奉 俸 縫
+v	ən	陰平	溫 瘟 翁 甕
+v	ən	陽平	文 紋 蚊 聞
+v	ən	上聲	穩
+v	ən	去聲	問 璺 甕
+t	ən	陰平	登 燈
+t	ən	上聲	等 戥
+t	ən	去聲	鈍 凳 鐙 鄧 瞪 澄
+tʰ	ən	陰平	吞 熥
+tʰ	ən	陽平	騰 謄 藤 疼
+tʰ	ən	上聲	□
+tʰ	ən	去聲	停
+n	ən	陰平	能
+n	ən	陽平	能
+n	ən	去聲	寧
+l	ən	陽平	棱
+l	ən	上聲	冷
+l	ən	去聲	楞
+k	ən	陰平	跟 根 更 庚 羹 耕
+k	ən	上聲	埂 耿
+k	ən	去聲	夠 更
+kʰ	ən	陰平	坑 吭
+kʰ	ən	上聲	懇 墾 啃 肯
+x	ən	陰平	亨 哼
+x	ən	陽平	痕 恒 衡
+x	ən	上聲	很 狠
+x	ən	去聲	恨 杏
+tʂ	ən	陰平	針 斟 珍 糝 榛 臻 真 肫 征 蒸 貞 偵 正
+tʂ	ən	上聲	枕 診 疹 整 拯
+tʂ	ən	去聲	鎮 陣 振 震 證 鄭 正 政
+tʂʰ	ən	陰平	稱 撐 抻
+tʂʰ	ən	陽平	沈 陳 塵 趁 辰 晨 臣 娠 澄 承 丞 呈 程 成 城 誠 盛 乘
+tʂʰ	ən	上聲	逞 懲
+tʂʰ	ən	去聲	趁 襯 乘 稱 秤
+ʂ	ən	陰平	深 身 伸 呻 升 聲
+ʂ	ən	陽平	神 □ 繩
+ʂ	ən	上聲	沈 審
+ʂ	ən	去聲	甚 腎 慎 勝 剩 聖
+ʐ	ən	陰平	扔
+ʐ	ən	陽平	壬 任 人 仁
+ʐ	ən	上聲	忍
+ʐ	ən	去聲	任 紉 刃 認 韌 仍
+ts	ən	陰平	曾 增 憎 贈 爭 掙 箏 睜 猙 崢
+ts	ən	上聲	怎
+ts	ən	去聲	掙
+tsʰ	ən	陰平	參 撐
+tsʰ	ən	陽平	曾 層
+tsʰ	ən	上聲	磣
+tsʰ	ən	去聲	橕
+s	ən	陰平	森 參 僧 生 牲 笙 甥
+s	ən	上聲	省
+s	ən	去聲	滲
+Ø	ən	陰平	恩
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	Ø
+@FIN	ər
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+Ø	ər	陽平	兒 而
+Ø	ər	上聲	爾 耳 餌 㧫
+Ø	ər	去聲	二
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	t	tʰ	l	k	kʰ	x	tʂ	tʂʰ	ʂ	ʐ	ts	s	Ø
+@FIN	əu
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+t	əu	陰平	兜 都
+t	əu	上聲	鬥 抖 陡 蚪
+t	əu	去聲	鬥 闘 豆 痘 逗 揄 竇
+tʰ	əu	陰平	偷
+tʰ	əu	陽平	頭 投
+tʰ	əu	上聲	㪗
+tʰ	əu	去聲	透
+l	əu	陰平	摟
+l	əu	陽平	樓 簍
+l	əu	上聲	摟 簍
+l	əu	去聲	露 漏 陋
+k	əu	陰平	勾 鉤 溝 構 購 痀 佝 尻
+k	əu	上聲	狗 茍 垢 枸
+k	əu	去聲	夠
+kʰ	əu	陰平	摳 瞘
+kʰ	əu	上聲	口
+kʰ	əu	去聲	叩 釦 扣
+x	əu	陰平	齁 □
+x	əu	陽平	侯 喉 瘊 猴
+x	əu	上聲	吼
+x	əu	去聲	後 厚 候
+tʂ	əu	陰平	紂 晝 周 舟 州 洲 粥 謅
+tʂ	əu	上聲	肘 㨄 帚
+tʂ	əu	去聲	咒 紂 宙 軸
+tʂʰ	əu	陰平	抽
+tʂʰ	əu	陽平	綢 稠 籌 仇 酬
+tʂʰ	əu	上聲	醜 醜
+tʂʰ	əu	去聲	臭
+ʂ	əu	陰平	收
+ʂ	əu	上聲	手 首 䭭 守
+ʂ	əu	去聲	受 獸 壽 授 售
+ʐ	əu	陽平	柔 揉
+ʐ	əu	去聲	肉
+ts	əu	陰平	鄒
+ts	əu	上聲	走
+ts	əu	去聲	奏 皺 縐 驟
+s	əu	陰平	搜 颼 餿 蒐
+s	əu	上聲	叟 擻
+s	əu	去聲	嗽 瘦
+Ø	əu	陰平	歐 嘔 毆
+Ø	əu	上聲	偶 藕
+Ø	əu	去聲	慪 漚
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	p	pʰ	m	v	t	tʰ	n	l	k	kʰ	x	tʂ	tʂʰ	ʂ	ts	tsʰ	s	Ø
+@FIN	ɛ
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɛ	陽平	別
+p	ɛ	上聲	擺 □
+p	ɛ	去聲	拜 敗
+pʰ	ɛ	陽平	排 輫 牌
+pʰ	ɛ	去聲	派
+m	ɛ	陽平	埋
+m	ɛ	上聲	買
+m	ɛ	去聲	賣 邁
+v	ɛ	陰平	歪
+v	ɛ	陽平	□
+v	ɛ	去聲	外
+t	ɛ	陰平	呆
+t	ɛ	上聲	歹 逮 □
+t	ɛ	去聲	待 怠 殆 戴 代 貸 帶 大
+tʰ	ɛ	陰平	胎 苔 態 儓
+tʰ	ɛ	陽平	臺 擡
+tʰ	ɛ	去聲	太 泰
+n	ɛ	上聲	乃 奶
+n	ɛ	去聲	耐 奈
+l	ɛ	陽平	來
+l	ɛ	去聲	賴 癩
+k	ɛ	陰平	該 街
+k	ɛ	上聲	改 解
+k	ɛ	去聲	概 溉 蓋 丐 芥 戒
+kʰ	ɛ	陰平	開 揩
+kʰ	ɛ	上聲	凱 楷
+kʰ	ɛ	去聲	慨
+x	ɛ	陽平	孩 鞋
+x	ɛ	去聲	害 駭
+tʂ	ɛ	陰平	齋
+tʂ	ɛ	去聲	寨 債
+tʂʰ	ɛ	陰平	差 釵
+tʂʰ	ɛ	陽平	柴 豺
+tʂʰ	ɛ	上聲	踩
+ʂ	ɛ	陰平	篩
+ʂ	ɛ	去聲	曬
+ts	ɛ	陰平	災 栽
+ts	ɛ	上聲	宰 載
+ts	ɛ	去聲	在 再
+tsʰ	ɛ	陰平	猜
+tsʰ	ɛ	陽平	才 材 財 裁
+tsʰ	ɛ	上聲	彩 採 睬
+tsʰ	ɛ	去聲	菜 蔡
+s	ɛ	陰平	腮 鰓
+s	ɛ	去聲	賽
+Ø	ɛ	陰平	哀 埃 艾 挨
+Ø	ɛ	陽平	呆 崖 挨
+Ø	ɛ	上聲	礙 藹 矮 隘
+Ø	ɛ	去聲	艾 愛
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	k	kʰ	x
+@FIN	ɯ
+@TON	陰平	44
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+k	ɯ	上聲	給
+k	ɯ	去聲	胳 圪 紇 疙 虼 䬣 袼
+kʰ	ɯ	陰平	坷
+kʰ	ɯ	去聲	去 殼 柯
+x	ɯ	去聲	黑 核
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	ts	tsʰ	s
+@FIN	ɿ
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ɿ	陰平	資 姿 咨 輜 淄
+ts	ɿ	上聲	紫 姊 子 籽 仔 梓 紙
+ts	ɿ	去聲	自 字 只
+tsʰ	ɿ	陰平	差 呲 齜 鴜
+tsʰ	ɿ	陽平	瓷 奎 慈 磁 辭 詞 祠
+tsʰ	ɿ	上聲	此 雌 跳 華
+tsʰ	ɿ	去聲	次 刺 賜 翅 伺
+s	ɿ	陰平	斯 廝 撕 私 司 絲 思 飼 祀
+s	ɿ	上聲	死
+s	ɿ	去聲	四 肆 巳 寺 嗣 侍 似 事
+// HSD Syllabary Data Partition
+// 地区：寧夏回族自治區-吳忠市-同心縣
+// 来源：張安生《同心方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	寧夏回族自治區-吳忠市-同心縣
+@SRC	張安生《同心方言研究》
+
+@INI	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ʅ
+@TON	陰平	44
+@TON	陽平	53
+@TON	上聲	53-35
+@TON	去聲	13
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʅ	陰平	知 蜘 支 枝 肢 之 芝 只
+tʂ	ʅ	上聲	旨 指 止 址 紙 趾
+tʂ	ʅ	去聲	滯 制 智 只 致 稚 脂 這 至 痔 置 治 誌 詰 痣 質 侄 蛭 織 職 殖 直 值 植 炙
+tʂʰ	ʅ	陰平	癡 嗤
+tʂʰ	ʅ	陽平	遲 持 匙 池 馳 赤 斥
+tʂʰ	ʅ	上聲	侈 恥 齒
+tʂʰ	ʅ	去聲	秩 尺 吃
+ʂ	ʅ	陰平	師 獅 屍 詩
+ʂ	ʅ	陽平	時
+ʂ	ʅ	上聲	屎 使 史 駛 始
+ʂ	ʅ	去聲	世 勢 誓 逝 施 是 氏 矢 示 視 嗜 士 仕 柿 市 事 試 十 什 拾 實 失 室 食 蝕 識 式 飾 適 釋 石
+ʐ	ʅ	去聲	日

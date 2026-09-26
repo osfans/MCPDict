@@ -12346,6 +12346,30 @@
         "marker-color": "#F5B3B3",
         "marker-size": "small",
         "marker-symbol": "b",
+        "title": "正寧榆林子",
+        "語言": "正寧榆林子話",
+        "地點": "甘肅/慶陽/正寧/榆林子",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－關中－關中大片－耀州片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《正宁（榆林子镇）方言音系研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.213901,
+          35.391052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
         "title": "涇川涇明",
         "語言": "涇川涇明話",
         "地點": "甘肅/平涼/涇川/涇明",
@@ -13854,6 +13878,30 @@
         "coordinates": [
           86.572882,
           42.073845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "烏魯木齊回民",
+        "語言": "烏魯木齊回民話",
+        "地點": "新疆/烏魯木齊",
+        "地圖集二分區": "中原官話－南疆片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－秦晉－隴中大片－南疆片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《回民乌鲁木齐语言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.619982,
+          43.856043
         ]
       }
     },
@@ -17282,6 +17330,30 @@
         "marker-color": "#926EF8",
         "marker-size": "small",
         "marker-symbol": "c",
+        "title": "綏德義合",
+        "語言": "綏德義合話",
+        "地點": "陝西/榆林/綏德/義合",
+        "地圖集二分區": "晉語－五臺片",
+        "音典分區": "西北－陝北－綏州",
+        "陳邡分區": "官話－秦晉－延安大片－綏德片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《绥德义合话同音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.484972,
+          37.519187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
+        "marker-size": "small",
+        "marker-symbol": "c",
         "title": "子洲馬蹄溝",
         "語言": "子洲馬蹄溝話",
         "地點": "陝西/榆林/子洲/馬蹄溝/三眼泉",
@@ -17323,6 +17395,30 @@
         "coordinates": [
           109.750582,
           37.578282
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "子洲老君殿",
+        "語言": "子洲老君殿話",
+        "地點": "陝西/榆林/子洲/老君殿",
+        "地圖集二分區": "晉語－五臺片",
+        "音典分區": "西北－陝北－綏州",
+        "陳邡分區": "官話－秦晉－延安大片－綏德片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《子洲方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.923128,
+          37.377388
         ]
       }
     },
@@ -18180,6 +18276,30 @@
     {
       "type": "Feature",
       "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "medium",
+        "marker-symbol": "c",
+        "title": "榆社",
+        "語言": "榆社話",
+        "地點": "山西/晉中/榆社",
+        "地圖集二分區": "晉語－并州片",
+        "音典分區": "西北－晉北－榆社",
+        "陳邡分區": "官話－晉北－太行大片－榆社片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《榆社方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.979875,
+          37.075677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "marker-color": "#926EF8",
         "marker-size": "medium",
         "marker-symbol": "c",
@@ -18977,6 +19097,55 @@
         "marker-color": "#F09093",
         "marker-size": "small",
         "marker-symbol": "b",
+        "title": "永寧納家戶回民",
+        "語言": "永寧納家戶回民話",
+        "地點": "寧夏/銀川/永寧/楊和/納家户",
+        "地圖集二分區": "蘭銀官話－銀吳片",
+        "音典分區": "藍青－寧夏",
+        "陳邡分區": "官話－寧夏與淮河－北方大片－寧夏片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《纳家户回族方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.247439,
+          38.290847
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F09093",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "中衛",
+        "語言": "中衛話",
+        "地點": "寧夏/中衛/沙坡頭/城關/文昌",
+        "地圖集二分區": "蘭銀官話－銀吳片",
+        "音典分區": "藍青－寧夏",
+        "陳邡分區": "官話－寧夏與淮河－北方大片－寧夏片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《中卫方言志》",
+        "補充閲讀": "《中卫方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.204718,
+          37.506158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F09093",
+        "marker-size": "small",
+        "marker-symbol": "b",
         "title": "中衛迎水橋",
         "語言": "中衛迎水橋話",
         "地點": "寧夏/中衛/沙坡頭/迎水橋",
@@ -19083,6 +19252,30 @@
         "coordinates": [
           105.634292,
           37.488212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F09093",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "同心",
+        "語言": "同心話",
+        "地點": "寧夏/吳忠/同心",
+        "地圖集二分區": "蘭銀官話－銀吳片",
+        "音典分區": "藍青－寧夏",
+        "陳邡分區": "官話－寧夏與淮河－北方大片－寧夏片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《同心方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.920599,
+          36.986272
         ]
       }
     },
