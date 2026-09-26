@@ -1,0 +1,1801 @@
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	f	k	tʂ
+@FIN	ei
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ei	陰平	杯
+p	ei	陰去	背
+p	ei	陽去	貝
+pʰ	ei	陰平	胚
+pʰ	ei	陽平	培
+pʰ	ei	陰去	配
+pʰ	ei	陽去	佩
+m	ei	陽平	枚
+m	ei	上聲	美
+f	ei	陰平	非
+f	ei	陽平	肥
+f	ei	上聲	匪
+f	ei	陰去	費
+f	ei	陽去	肺
+k	ei	上聲	給
+tʂ	ei	陽平	賊
+tʂ	ei	上聲	怎
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ts	tsʰ	s	tɕ	tɕʰ	ɕ	c	cʰ	Ø
+@FIN	i
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	i	上聲	比
+p	i	陰去	閉
+p	i	陽去	蔽
+pʰ	i	陰平	批
+pʰ	i	陽平	皮
+pʰ	i	陽去	屁
+m	i	陽平	迷
+m	i	上聲	米
+t	i	陰平	低
+t	i	陽平	提
+t	i	上聲	底
+t	i	陽去	地
+tʰ	i	陰平	梯
+tʰ	i	陽平	題
+tʰ	i	上聲	體
+tʰ	i	陰去	涕
+n	i	陽平	泥
+n	i	上聲	你
+n	i	陽去	膩
+l	i	陽平	離
+l	i	上聲	李
+l	i	陽去	歷
+ts	i	上聲	擠
+ts	i	陽去	濟
+tsʰ	i	陽平	妻
+tsʰ	i	上聲	齊
+s	i	陰平	西
+s	i	上聲	洗
+s	i	陰去	細
+tɕ	i	陰平	雞
+tɕ	i	陰去	繫
+tɕ	i	陽去	治
+tɕʰ	i	陰平	欺
+tɕʰ	i	陽平	池
+tɕʰ	i	上聲	侈
+tɕʰ	i	陽去	棄
+ɕ	i	陰平	希
+ɕ	i	上聲	喜
+ɕ	i	陰去	戲
+ɕ	i	陽去	系
+c	i	陰平	機
+c	i	上聲	幾
+c	i	陰去	計
+c	i	陽去	既
+cʰ	i	陰平	其
+cʰ	i	陽平	騎
+cʰ	i	上聲	起
+cʰ	i	陰去	汽
+Ø	i	陰平	衣
+Ø	i	陽平	移
+Ø	i	上聲	以
+Ø	i	陽去	日
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	n	l	ts	tsʰ	s	tɕ	tɕʰ	ɕ	c	cʰ	Ø
+@FIN	ie
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ie	上聲	□{~道：說話抬槓}
+n	ie	陰去	哪
+l	ie	上聲	咧
+l	ie	陽去	力
+ts	ie	上聲	姐
+ts	ie	陰去	借
+tsʰ	ie	上聲	且
+tsʰ	ie	陰去	笡
+s	ie	陰平	些
+s	ie	陽平	邪
+s	ie	上聲	寫
+s	ie	陰去	瀉
+s	ie	陽去	謝
+tɕ	ie	陰平	街
+tɕ	ie	上聲	者
+tɕ	ie	陰去	芥
+tɕʰ	ie	陰平	車
+tɕʰ	ie	上聲	扯
+ɕ	ie	陰平	賒
+ɕ	ie	陽平	諧
+ɕ	ie	上聲	捨
+ɕ	ie	陰去	舍
+ɕ	ie	陽去	社
+c	ie	陰平	皆
+c	ie	上聲	解
+c	ie	陰去	介
+cʰ	ie	陽平	茄
+Ø	ie	陽平	爺
+Ø	ie	上聲	也
+Ø	ie	陽去	夜
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	t	tʰ	l	ts	tsʰ	s	tʃ	tʃʰ	ʃ	ɕ	c	cʰ
+@FIN	ieʔ
+@TON	陰入	3
+@TON	陽入	212
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ieʔ	陰入	必
+pʰ	ieʔ	陰入	辟
+pʰ	ieʔ	陽入	迫
+m	ieʔ	陽入	默
+t	ieʔ	陰入	的
+t	ieʔ	陽入	笛
+tʰ	ieʔ	陰入	踢
+l	ieʔ	陽入	立
+ts	ieʔ	陰入	節
+tsʰ	ieʔ	陰入	七
+s	ieʔ	陰入	息
+s	ieʔ	陽入	席
+tʃ	ieʔ	陰入	執
+tʃ	ieʔ	陽入	職
+tʃʰ	ieʔ	陰入	尺
+ʃ	ieʔ	陰入	識
+ʃ	ieʔ	陽入	實
+ɕ	ieʔ	陰入	吸
+ɕ	ieʔ	陽入	拾
+c	ieʔ	陰入	擊
+c	ieʔ	陽入	級
+cʰ	ieʔ	陰入	訖
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ts	tsʰ	s	ɕ	c	cʰ	Ø
+@FIN	iæ̃
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iæ̃	陰平	邊
+p	iæ̃	上聲	扁
+p	iæ̃	陰去	變
+p	iæ̃	陽去	便
+pʰ	iæ̃	陰平	篇
+pʰ	iæ̃	陽平	便
+pʰ	iæ̃	陰去	片
+m	iæ̃	陰平	綿
+m	iæ̃	上聲	免
+m	iæ̃	陽去	面
+t	iæ̃	陰平	掂
+t	iæ̃	上聲	點
+t	iæ̃	陰去	店
+t	iæ̃	陽去	電
+tʰ	iæ̃	陰平	天
+tʰ	iæ̃	陽平	田
+tʰ	iæ̃	上聲	腆
+n	iæ̃	陽平	年
+n	iæ̃	上聲	攆
+l	iæ̃	陽平	連
+l	iæ̃	上聲	臉
+l	iæ̃	陽去	殮
+ts	iæ̃	陰平	殲
+ts	iæ̃	上聲	剪
+ts	iæ̃	陰去	濺
+ts	iæ̃	陽去	漸
+tsʰ	iæ̃	陰平	遷
+tsʰ	iæ̃	陽平	錢
+tsʰ	iæ̃	上聲	淺
+s	iæ̃	陰平	鮮
+s	iæ̃	陰去	線
+s	iæ̃	陽去	羨
+ɕ	iæ̃	陽平	鹹
+ɕ	iæ̃	上聲	險
+ɕ	iæ̃	陰去	憲
+ɕ	iæ̃	陽去	限
+c	iæ̃	陰平	間
+c	iæ̃	上聲	儉
+c	iæ̃	陰去	間
+c	iæ̃	陽去	件
+cʰ	iæ̃	陰平	謙
+cʰ	iæ̃	陽平	鉗
+cʰ	iæ̃	陰去	欠
+Ø	iæ̃	陰平	淹
+Ø	iæ̃	陽平	岩
+Ø	iæ̃	上聲	演
+Ø	iæ̃	陰去	咽
+Ø	iæ̃	陽去	艷
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ts	tsʰ	s	tɕ	tɕʰ	ɕ	c	cʰ	Ø
+@FIN	iŋ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iŋ	陰平	兵
+p	iŋ	上聲	丙
+p	iŋ	陰去	並
+p	iŋ	陽去	病
+pʰ	iŋ	陽平	平
+m	iŋ	陽平	明
+m	iŋ	陽去	命
+t	iŋ	陰平	訂
+t	iŋ	上聲	頂
+t	iŋ	陰去	釘
+t	iŋ	陽去	定
+tʰ	iŋ	陰平	聽
+tʰ	iŋ	陽平	停
+tʰ	iŋ	上聲	挺
+tʰ	iŋ	陰去	聽
+n	iŋ	陽平	寧
+n	iŋ	上聲	擰
+n	iŋ	陽去	寧
+l	iŋ	陽平	靈
+l	iŋ	上聲	領
+l	iŋ	陽去	另
+ts	iŋ	陰平	精
+ts	iŋ	上聲	井
+ts	iŋ	陽去	靜
+tsʰ	iŋ	陰平	青
+tsʰ	iŋ	陽平	情
+tsʰ	iŋ	上聲	請
+tsʰ	iŋ	陰去	親
+s	iŋ	陰平	星
+s	iŋ	上聲	醒
+s	iŋ	陰去	姓
+tɕ	iŋ	陰平	驚
+tɕʰ	iŋ	陽平	擎
+tɕʰ	iŋ	陰去	磬
+ɕ	iŋ	陰平	興
+ɕ	iŋ	陽平	形
+ɕ	iŋ	陰去	興
+ɕ	iŋ	陽去	杏
+c	iŋ	陰平	京
+c	iŋ	上聲	景
+c	iŋ	陰去	敬
+c	iŋ	陽去	競
+cʰ	iŋ	陰平	輕
+cʰ	iŋ	上聲	傾
+cʰ	iŋ	陽去	慶
+Ø	iŋ	陰平	應
+Ø	iŋ	陽平	營
+Ø	iŋ	上聲	影
+Ø	iŋ	陰去	映
+Ø	iŋ	陽去	硬
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	tɕ	tɕʰ	c	ɕ	Ø
+@FIN	iɑ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	iɑ	陰平	痂
+tɕʰ	iɑ	陰平	揢
+c	iɑ	陰平	家
+c	iɑ	上聲	賈
+c	iɑ	陰去	架
+c	iɑ	陽去	稼
+ɕ	iɑ	陰平	霞
+ɕ	iɑ	陽平	瑕
+ɕ	iɑ	陰去	嚇
+ɕ	iɑ	陽去	下
+Ø	iɑ	陰平	鴉
+Ø	iɑ	陽平	牙
+Ø	iɑ	上聲	啞
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	n	l	ts	tsʰ	s	tɕ	ɕ	Ø
+@FIN	iɑŋ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+n	iɑŋ	陽平	娘
+n	iɑŋ	陽去	□{"那樣"的合音}
+l	iɑŋ	陽平	良
+l	iɑŋ	上聲	兩
+l	iɑŋ	陽去	亮
+ts	iɑŋ	陰平	將
+ts	iɑŋ	上聲	蔣
+ts	iɑŋ	陰去	將
+ts	iɑŋ	陽去	匠
+tsʰ	iɑŋ	陰平	槍
+tsʰ	iɑŋ	陽平	牆
+tsʰ	iɑŋ	上聲	搶
+s	iɑŋ	陰平	相
+s	iɑŋ	陽平	詳
+s	iɑŋ	上聲	想
+s	iɑŋ	陰去	相
+s	iɑŋ	陽去	象
+tɕ	iɑŋ	陰平	江
+tɕ	iɑŋ	陰去	降
+ɕ	iɑŋ	陰平	香
+ɕ	iɑŋ	陽平	降
+ɕ	iɑŋ	上聲	響
+ɕ	iɑŋ	陽去	向
+Ø	iɑŋ	陰平	秧
+Ø	iɑŋ	陽平	陽
+Ø	iɑŋ	上聲	養
+Ø	iɑŋ	陽去	讓
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ts	tsʰ	s	tɕ	tɕʰ	ɕ	c	cʰ	Ø
+@FIN	iɔ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iɔ	陰平	標
+p	iɔ	上聲	表
+pʰ	iɔ	陰平	飄
+pʰ	iɔ	陽平	嫖
+pʰ	iɔ	上聲	漂
+pʰ	iɔ	陰去	票
+m	iɔ	陽平	苗
+m	iɔ	上聲	秒
+m	iɔ	陰去	廟
+t	iɔ	陰平	刁
+t	iɔ	上聲	屌
+t	iɔ	陰去	釣
+t	iɔ	陽去	掉
+tʰ	iɔ	陰平	挑
+tʰ	iɔ	陽平	條
+tʰ	iɔ	上聲	挑
+tʰ	iɔ	陰去	跳
+n	iɔ	上聲	鳥
+n	iɔ	陽去	尿
+l	iɔ	陽平	遼
+l	iɔ	上聲	了
+l	iɔ	陽去	料
+ts	iɔ	陰平	焦
+tsʰ	iɔ	陰平	悄
+tsʰ	iɔ	陽平	瞧
+tsʰ	iɔ	陰去	俏
+tsʰ	iɔ	陽去	鞘
+s	iɔ	陰平	消
+s	iɔ	上聲	小
+s	iɔ	陰去	笑
+tɕ	iɔ	陰平	澆
+tɕ	iɔ	上聲	絞
+tɕ	iɔ	陰去	酵
+tɕʰ	iɔ	陰平	敲
+ɕ	iɔ	陰平	枵
+ɕ	iɔ	陰去	效
+ɕ	iɔ	陽去	校
+c	iɔ	陰平	嬌
+c	iɔ	上聲	狡
+c	iɔ	陰去	教
+c	iɔ	陽去	轎
+cʰ	iɔ	陽平	喬
+cʰ	iɔ	上聲	巧
+Ø	iɔ	陰平	要
+Ø	iɔ	陽平	饒
+Ø	iɔ	上聲	繞
+Ø	iɔ	陰去	要
+Ø	iɔ	陽去	躍
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	t	n	l	ts	tʂʰ	s	ɕ	c	cʰ	Ø
+@FIN	iəu
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+t	iəu	陰平	丟
+n	iəu	上聲	扭
+l	iəu	陰平	溜
+l	iəu	陽平	劉
+l	iəu	上聲	柳
+l	iəu	陽去	遛
+ts	iəu	陰平	揪
+ts	iəu	上聲	酒
+ts	iəu	陽去	就
+tʂʰ	iəu	陰平	秋
+s	iəu	陰平	修
+s	iəu	陰去	秀
+s	iəu	陽去	袖
+ɕ	iəu	陰平	休
+ɕ	iəu	上聲	朽
+c	iəu	陰平	糾
+c	iəu	上聲	九
+c	iəu	陰去	救
+c	iəu	陽去	舊
+cʰ	iəu	陰平	丘
+cʰ	iəu	陽平	求
+cʰ	iəu	上聲	□{死皮賴臉求人}
+Ø	iəu	陰平	優
+Ø	iəu	陽平	尤
+Ø	iəu	上聲	友
+Ø	iəu	陽去	又
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ts	tsʰ	s	tʃ	ʃ	ɕ	c	cʰ	Ø
+@FIN	iʌʔ
+@TON	陰入	3
+@TON	陽入	212
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iʌʔ	陰入	百
+p	iʌʔ	陽入	白
+pʰ	iʌʔ	陰入	拍
+m	iʌʔ	陽入	滅
+t	iʌʔ	陽入	跌
+tʰ	iʌʔ	陰入	鐵
+n	iʌʔ	陽入	聶
+l	iʌʔ	陽入	列
+ts	iʌʔ	陰入	接
+tsʰ	iʌʔ	陰入	切
+tsʰ	iʌʔ	陽入	捷
+s	iʌʔ	陰入	血
+tʃ	iʌʔ	陰入	哲
+ʃ	iʌʔ	陰入	設
+ʃ	iʌʔ	陽入	習
+ɕ	iʌʔ	陰入	峽
+ɕ	iʌʔ	陽入	學
+c	iʌʔ	陰入	甲
+c	iʌʔ	陽入	結
+cʰ	iʌʔ	陰入	掐
+cʰ	iʌʔ	陽入	潔
+Ø	iʌʔ	陰入	業
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	l	ts	tsʰ	s	tɕ	ɕ	c	Ø
+@FIN	iᴇ̃
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iᴇ̃	陰平	賓
+p	iᴇ̃	陰去	殯
+pʰ	iᴇ̃	陰平	拼
+pʰ	iᴇ̃	陽平	貧
+pʰ	iᴇ̃	上聲	品
+pʰ	iᴇ̃	陰去	聘
+m	iᴇ̃	陰平	門
+m	iᴇ̃	陽平	民
+m	iᴇ̃	上聲	閔
+l	iᴇ̃	陽平	林
+l	iᴇ̃	上聲	凜
+l	iᴇ̃	陽去	吝
+ts	iᴇ̃	陰平	津
+ts	iᴇ̃	上聲	儘
+ts	iᴇ̃	陰去	浸
+ts	iᴇ̃	陽去	盡
+tsʰ	iᴇ̃	陰平	親
+tsʰ	iᴇ̃	陽平	秦
+tsʰ	iᴇ̃	上聲	侵
+s	iᴇ̃	陰平	心
+s	iᴇ̃	陽平	尋
+s	iᴇ̃	陰去	信
+tɕ	iᴇ̃	陰去	勁
+ɕ	iᴇ̃	陽去	鮮
+c	iᴇ̃	陰平	巾
+c	iᴇ̃	上聲	緊
+c	iᴇ̃	陽去	禁
+Ø	iᴇ̃	陰平	音
+Ø	iᴇ̃	陽平	人
+Ø	iᴇ̃	上聲	引
+Ø	iᴇ̃	陰去	印
+Ø	iᴇ̃	陽去	認
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	Ø
+@FIN	l̩
+@TON	陽平	22
+@TON	上聲	424
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+Ø	l̩	陽平	而
+Ø	l̩	上聲	耳
+Ø	l̩	陽去	二
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	f	t	tʰ	n	l	tʂ	tʂʰ	ʂ	k	kʰ	x	Ø
+@FIN	u
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	u	上聲	補
+p	u	陰去	布
+p	u	陽去	部
+pʰ	u	陰平	鋪
+pʰ	u	陽平	菩
+pʰ	u	上聲	普
+pʰ	u	陰去	鋪
+m	u	陽平	某
+m	u	上聲	母
+m	u	陽去	牧
+f	u	陰平	夫
+f	u	陽平	浮
+f	u	上聲	否
+f	u	陰去	付
+f	u	陽去	父
+t	u	陰平	都
+t	u	上聲	肚
+t	u	陽去	杜
+tʰ	u	陽平	徒
+tʰ	u	上聲	土
+tʰ	u	陰去	兔
+n	u	陽平	奴
+n	u	上聲	努
+n	u	陽去	怒
+l	u	陽平	盧
+l	u	上聲	魯
+l	u	陽去	路
+tʂ	u	陰平	朱
+tʂ	u	上聲	主
+tʂ	u	陰去	柱
+tʂ	u	陽去	住
+tʂʰ	u	陰平	粗
+tʂʰ	u	陽平	除
+tʂʰ	u	上聲	杵
+tʂʰ	u	陰去	處
+ʂ	u	陰平	書
+ʂ	u	上聲	暑
+ʂ	u	陰去	素
+ʂ	u	陽去	樹
+k	u	陰平	姑
+k	u	上聲	古
+k	u	陰去	顧
+k	u	陽去	故
+kʰ	u	陰平	枯
+kʰ	u	上聲	苦
+kʰ	u	陰去	庫
+x	u	陰平	呼
+x	u	陽平	胡
+x	u	上聲	虎
+x	u	陽去	戶
+Ø	u	陰平	污
+Ø	u	陽平	吳
+Ø	u	上聲	吾
+Ø	u	陰去	惡
+Ø	u	陽去	務
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	t	tʰ	n	l	tʂ	tʂʰ	ʂ	k	kʰ	x	Ø
+@FIN	uei
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uei	陰平	堆
+t	uei	陰去	對
+t	uei	陽去	隊
+tʰ	uei	陰平	推
+tʰ	uei	上聲	腿
+tʰ	uei	陰去	退
+n	uei	陽去	內
+l	uei	陽平	雷
+l	uei	上聲	儡
+l	uei	陽去	累
+tʂ	uei	陰平	追
+tʂ	uei	上聲	嘴
+tʂ	uei	陰去	醉
+tʂ	uei	陽去	最
+tʂʰ	uei	陰平	吹
+tʂʰ	uei	陽平	垂
+tʂʰ	uei	陰去	粹
+ʂ	uei	陽平	誰
+ʂ	uei	上聲	水
+ʂ	uei	陰去	稅
+ʂ	uei	陽去	歲
+k	uei	陰平	歸
+k	uei	上聲	鬼
+k	uei	陰去	桂
+k	uei	陽去	貴
+kʰ	uei	陰平	虧
+kʰ	uei	陽平	逵
+kʰ	uei	上聲	□{~對：還好，湊合}
+kʰ	uei	陽去	愧
+x	uei	陰平	灰
+x	uei	陽平	回
+x	uei	上聲	悔
+x	uei	陰去	賄
+x	uei	陽去	會
+Ø	uei	陰平	危
+Ø	uei	陽平	為
+Ø	uei	上聲	偉
+Ø	uei	陰去	餵
+Ø	uei	陽去	未
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	t	tʰ	l	tʂ	tʂʰ	ʂ	k	kʰ	x	Ø
+@FIN	uæ̃
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uæ̃	陰平	端
+t	uæ̃	上聲	短
+t	uæ̃	陰去	鍛
+t	uæ̃	陽去	段
+tʰ	uæ̃	陽平	團
+tʰ	uæ̃	上聲	湍
+l	uæ̃	陽平	戀
+l	uæ̃	上聲	卵
+l	uæ̃	陽去	亂
+tʂ	uæ̃	陰平	專
+tʂ	uæ̃	上聲	轉
+tʂ	uæ̃	陰去	鑽
+tʂ	uæ̃	陽去	傳
+tʂʰ	uæ̃	陰平	川
+tʂʰ	uæ̃	陽平	船
+tʂʰ	uæ̃	上聲	喘
+tʂʰ	uæ̃	陰去	串
+tʂʰ	uæ̃	陽去	爨
+ʂ	uæ̃	陰平	拴
+ʂ	uæ̃	陰去	算
+k	uæ̃	陰平	官
+k	uæ̃	上聲	管
+k	uæ̃	陰去	灌
+kʰ	uæ̃	陰平	寬
+kʰ	uæ̃	上聲	款
+x	uæ̃	陰平	歡
+x	uæ̃	陽平	環
+x	uæ̃	上聲	緩
+x	uæ̃	陽去	喚
+Ø	uæ̃	陰平	彎
+Ø	uæ̃	陽平	完
+Ø	uæ̃	上聲	晚
+Ø	uæ̃	陽去	萬
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	t	tʰ	n	l	tʂ	tʂʰ	ʂ	k	kʰ	x	Ø
+@FIN	uŋ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uŋ	陰平	冬
+t	uŋ	上聲	懂
+t	uŋ	陰去	凍
+t	uŋ	陽去	動
+tʰ	uŋ	陰平	通
+tʰ	uŋ	陽平	同
+tʰ	uŋ	上聲	統
+tʰ	uŋ	陰去	痛
+n	uŋ	陽平	農
+n	uŋ	陽去	弄
+l	uŋ	陽平	籠
+l	uŋ	上聲	攏
+tʂ	uŋ	陰平	中
+tʂ	uŋ	上聲	總
+tʂ	uŋ	陰去	種
+tʂ	uŋ	陽去	重
+tʂʰ	uŋ	陰平	沖
+tʂʰ	uŋ	陽平	蟲
+ʂ	uŋ	上聲	聳
+ʂ	uŋ	陰去	宋
+ʂ	uŋ	陽去	訟
+k	uŋ	陰平	公
+k	uŋ	上聲	鞏
+k	uŋ	陰去	貢
+k	uŋ	陽去	共
+kʰ	uŋ	陰平	空
+kʰ	uŋ	上聲	孔
+kʰ	uŋ	陰去	控
+x	uŋ	陰平	烘
+x	uŋ	陽平	紅
+x	uŋ	上聲	哄
+x	uŋ	陽去	鬨
+Ø	uŋ	陰平	翁
+Ø	uŋ	陽平	□{~肩：駝背}
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	tʂ	tʂʰ	ʂ	k	kʰ	x	Ø
+@FIN	uɑ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	uɑ	陰平	抓
+tʂ	uɑ	上聲	爪
+tʂʰ	uɑ	上聲	□{象聲詞：~底一下子}
+ʂ	uɑ	上聲	耍
+k	uɑ	陰平	瓜
+k	uɑ	上聲	剮
+k	uɑ	陰去	掛
+kʰ	uɑ	陰平	誇
+kʰ	uɑ	上聲	侉
+kʰ	uɑ	陰去	跨
+x	uɑ	陰平	花
+x	uɑ	陽平	鏵
+x	uɑ	陰去	化
+x	uɑ	陽去	話
+Ø	uɑ	陰平	挖
+Ø	uɑ	上聲	瓦
+Ø	uɑ	陽去	瓦
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	tʂ	tʂʰ	ʂ	k	kʰ	x	Ø
+@FIN	uɑi
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	uɑi	陽去	拽
+tʂʰ	uɑi	上聲	揣
+ʂ	uɑi	陰平	衰
+ʂ	uɑi	陽去	帥
+k	uɑi	陰平	乖
+k	uɑi	上聲	拐
+k	uɑi	陰去	怪
+kʰ	uɑi	陰去	快
+x	uɑi	陽平	懷
+x	uɑi	陰去	壞
+Ø	uɑi	陰平	歪
+Ø	uɑi	上聲	崴
+Ø	uɑi	陽去	外
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	tʂ	tʂʰ	ʂ	k	kʰ	x	Ø
+@FIN	uɑŋ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	uɑŋ	陰平	裝
+tʂ	uɑŋ	上聲	□{老~：最大的男孩子}
+tʂ	uɑŋ	陰去	壯
+tʂ	uɑŋ	陽去	狀
+tʂʰ	uɑŋ	陰平	窗
+tʂʰ	uɑŋ	上聲	創
+ʂ	uɑŋ	陰平	雙
+ʂ	uɑŋ	上聲	爽
+k	uɑŋ	陰平	光
+k	uɑŋ	上聲	廣
+k	uɑŋ	陰去	桄
+kʰ	uɑŋ	陰平	筐
+kʰ	uɑŋ	陰去	曠
+kʰ	uɑŋ	陽去	況
+x	uɑŋ	陰平	荒
+x	uɑŋ	陽平	黃
+x	uɑŋ	上聲	謊
+x	uɑŋ	陽去	晃
+Ø	uɑŋ	陰平	汪
+Ø	uɑŋ	陽平	王
+Ø	uɑŋ	上聲	往
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	t	tʰ	l	tʂʰ	ʂ	tʃ	tʃʰ	ʃ	k	kʰ	x	Ø
+@FIN	uəʔ
+@TON	陰入	3
+@TON	陽入	212
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uəʔ	陰入	托
+t	uəʔ	陽入	讀
+tʰ	uəʔ	陰入	突
+l	uəʔ	陽入	律
+tʂʰ	uəʔ	陰入	猝
+ʂ	uəʔ	陰入	速
+tʃ	uəʔ	陰入	祝
+tʃ	uəʔ	陽入	竹
+tʃʰ	uəʔ	陽入	出
+ʃ	uəʔ	陰入	叔
+ʃ	uəʔ	陽入	熟
+k	uəʔ	陰入	谷
+kʰ	uəʔ	陰入	哭
+x	uəʔ	陰入	忽
+Ø	uəʔ	陽入	屋
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	t	tʰ	n	l	tʂ	tʂʰ	ʂ	k	kʰ	x	Ø
+@FIN	uʌ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uʌ	陰平	多
+t	uʌ	上聲	朵
+t	uʌ	陰去	剁
+t	uʌ	陽去	舵
+tʰ	uʌ	陰平	拖
+tʰ	uʌ	陽平	駝
+tʰ	uʌ	上聲	妥
+tʰ	uʌ	陰去	唾
+n	uʌ	陽平	挪
+l	uʌ	陽平	羅
+tʂ	uʌ	上聲	佐
+tʂ	uʌ	陰去	做
+tʂ	uʌ	陽去	坐
+tʂʰ	uʌ	陰平	初
+tʂʰ	uʌ	陽平	鋤
+tʂʰ	uʌ	上聲	礎
+tʂʰ	uʌ	陰去	銼
+ʂ	uʌ	陰平	梭
+ʂ	uʌ	上聲	所
+ʂ	uʌ	陰去	數
+k	uʌ	陰平	鍋
+k	uʌ	上聲	果
+k	uʌ	陰去	過
+kʰ	uʌ	陰平	科
+kʰ	uʌ	陰去	課
+x	uʌ	陽平	和
+x	uʌ	上聲	火
+x	uʌ	陰去	貨
+x	uʌ	陽去	禍
+Ø	uʌ	陰平	窩
+Ø	uʌ	上聲	我
+Ø	uʌ	陽去	臥
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	t	tʰ	n	l	tʂ	tʂʰ	tʃ	ʃ	k	kʰ	x
+@FIN	uʌʔ
+@TON	陰入	3
+@TON	陽入	212
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uʌʔ	陽入	奪
+tʰ	uʌʔ	陰入	託
+n	uʌʔ	陰入	諾
+l	uʌʔ	陽入	落
+tʂ	uʌʔ	陽入	作
+tʂʰ	uʌʔ	陰入	撮
+tʃ	uʌʔ	陽入	桌
+ʃ	uʌʔ	陰入	說
+k	uʌʔ	陰入	刮
+kʰ	uʌʔ	陰入	擴
+x	uʌʔ	陰入	活
+x	uʌʔ	陽入	和
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	t	tʰ	l	tʂʰ	ʂ	k	kʰ	x	Ø
+@FIN	uᴇ̃
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uᴇ̃	陰平	敦
+t	uᴇ̃	陰去	頓
+t	uᴇ̃	陽去	盾
+tʰ	uᴇ̃	陽平	屯
+l	uᴇ̃	陽平	論
+l	uᴇ̃	陽去	論
+tʂʰ	uᴇ̃	陰平	村
+tʂʰ	uᴇ̃	陽平	存
+tʂʰ	uᴇ̃	上聲	忖
+tʂʰ	uᴇ̃	陰去	寸
+ʂ	uᴇ̃	陰平	孫
+ʂ	uᴇ̃	陽去	順
+k	uᴇ̃	上聲	滾
+k	uᴇ̃	陰去	棍
+kʰ	uᴇ̃	陰平	坤
+kʰ	uᴇ̃	上聲	捆
+kʰ	uᴇ̃	陰去	困
+x	uᴇ̃	陰平	昏
+x	uᴇ̃	陽平	渾
+x	uᴇ̃	陽去	混
+Ø	uᴇ̃	陰平	溫
+Ø	uᴇ̃	陽平	文
+Ø	uᴇ̃	上聲	穩
+Ø	uᴇ̃	陽去	問
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	n	l	ts	tsʰ	s	ɕ	c	cʰ	Ø
+@FIN	y
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+n	y	上聲	女
+l	y	陽平	驢
+l	y	上聲	呂
+l	y	陽去	慮
+ts	y	陽去	聚
+tsʰ	y	陰平	蛆
+tsʰ	y	上聲	取
+tsʰ	y	陰去	趣
+s	y	陽平	徐
+s	y	陰去	婿
+s	y	陽去	續
+ɕ	y	陰平	虛
+ɕ	y	上聲	許
+c	y	陰平	居
+c	y	上聲	舉
+c	y	陰去	據
+c	y	陽去	巨
+cʰ	y	陰平	區
+cʰ	y	陽平	渠
+cʰ	y	陰去	去
+Ø	y	陰平	于
+Ø	y	陽平	余
+Ø	y	上聲	雨
+Ø	y	陽去	育
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	l	ɕ	cʰ	Ø
+@FIN	ye
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+
+// Initial	Final	Tone	CharList (Space separated)
+l	ye	上聲	𲃗{圪~：滾}
+ɕ	ye	陰平	靴
+cʰ	ye	陽平	瘸
+Ø	ye	上聲	噦
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	l	ʂ	ts	ɕ	c	cʰ	Ø
+@FIN	yeʔ
+@TON	陰入	3
+@TON	陽入	212
+
+// Initial	Final	Tone	CharList (Space separated)
+l	yeʔ	陽入	綠
+ʂ	yeʔ	陽入	宿
+ts	yeʔ	陽入	絕
+ɕ	yeʔ	陰入	俗
+c	yeʔ	陰入	橘
+c	yeʔ	陽入	覺
+cʰ	yeʔ	陰入	屈
+Ø	yeʔ	陽入	玉
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	l	s	ɕ	c	cʰ	Ø
+@FIN	yæ̃
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+l	yæ̃	上聲	斂
+l	yæ̃	陽去	練
+s	yæ̃	陰平	宣
+s	yæ̃	陽平	旋
+s	yæ̃	上聲	選
+s	yæ̃	陽去	旋
+ɕ	yæ̃	陰平	宣
+ɕ	yæ̃	陽平	玄
+ɕ	yæ̃	陰去	楦
+c	yæ̃	陰平	捐
+c	yæ̃	上聲	卷
+c	yæ̃	陰去	絹
+c	yæ̃	陽去	倦
+cʰ	yæ̃	陰平	圈
+cʰ	yæ̃	陽平	權
+cʰ	yæ̃	上聲	犬
+cʰ	yæ̃	陰去	勸
+Ø	yæ̃	陰平	淵
+Ø	yæ̃	陽平	袁
+Ø	yæ̃	上聲	遠
+Ø	yæ̃	陰去	怨
+Ø	yæ̃	陽去	院
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	l	ʂ	ɕ	c	cʰ	Ø
+@FIN	yŋ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+l	yŋ	陽平	龍
+l	yŋ	上聲	壟
+ʂ	yŋ	陰平	松
+ʂ	yŋ	陽去	誦
+ɕ	yŋ	陰平	兄
+ɕ	yŋ	陽平	雄
+c	yŋ	上聲	窘
+cʰ	yŋ	陽平	瓊
+Ø	yŋ	陰平	癰
+Ø	yŋ	陽平	容
+Ø	yŋ	上聲	永
+Ø	yŋ	陽去	用
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	ts	s	cʰ	Ø
+@FIN	yʌʔ
+@TON	陰入	3
+@TON	陽入	212
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	yʌʔ	陰入	嚼
+ts	yʌʔ	陽入	決
+s	yʌʔ	陽入	雪
+cʰ	yʌʔ	陰入	缺
+Ø	yʌʔ	陽入	月
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	ts	s	ɕ	c	cʰ	Ø
+@FIN	yᴇ̃
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	yᴇ̃	陰去	俊
+s	yᴇ̃	陽平	旬
+s	yᴇ̃	上聲	損
+s	yᴇ̃	陰去	遜
+ɕ	yᴇ̃	陰平	熏
+ɕ	yᴇ̃	陽去	訓
+c	yᴇ̃	陰平	君
+c	yᴇ̃	上聲	菌
+c	yᴇ̃	陽去	郡
+cʰ	yᴇ̃	陽平	群
+Ø	yᴇ̃	陽平	雲
+Ø	yᴇ̃	陰去	熨
+Ø	yᴇ̃	陽去	運
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	f	t	tʰ	n	l	tʂ	tʂʰ	ʂ	k	kʰ	x	ɣ
+@FIN	æ̃
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	æ̃	陰平	班
+p	æ̃	上聲	板
+p	æ̃	陰去	半
+p	æ̃	陽去	辦
+pʰ	æ̃	陰平	攀
+pʰ	æ̃	陽平	盤
+pʰ	æ̃	陰去	盼
+pʰ	æ̃	陽去	叛
+m	æ̃	陽平	饅
+m	æ̃	上聲	滿
+m	æ̃	陽去	慢
+f	æ̃	陰平	帆
+f	æ̃	陽平	凡
+f	æ̃	上聲	反
+f	æ̃	陰去	泛
+f	æ̃	陽去	飯
+t	æ̃	陰平	單
+t	æ̃	上聲	撣
+t	æ̃	陰去	擔
+t	æ̃	陽去	但
+tʰ	æ̃	陰平	灘
+tʰ	æ̃	陽平	談
+tʰ	æ̃	上聲	毯
+tʰ	æ̃	陰去	嘆
+n	æ̃	陽平	難
+n	æ̃	上聲	暖
+n	æ̃	陽去	難
+l	æ̃	陽平	蘭
+l	æ̃	上聲	攬
+l	æ̃	陽去	爛
+tʂ	æ̃	陰平	沾
+tʂ	æ̃	上聲	斬
+tʂ	æ̃	陰去	占
+tʂ	æ̃	陽去	站
+tʂʰ	æ̃	陰平	參
+tʂʰ	æ̃	陽平	殘
+tʂʰ	æ̃	上聲	產
+tʂʰ	æ̃	陽去	燦
+ʂ	æ̃	陰平	山
+ʂ	æ̃	上聲	閃
+ʂ	æ̃	陰去	扇
+ʂ	æ̃	陽去	善
+k	æ̃	陰平	甘
+k	æ̃	上聲	敢
+k	æ̃	陰去	幹
+kʰ	æ̃	陰平	堪
+kʰ	æ̃	上聲	砍
+kʰ	æ̃	陰去	看
+x	æ̃	陽平	含
+x	æ̃	上聲	喊
+x	æ̃	陰去	漢
+x	æ̃	陽去	汗
+ɣ	æ̃	陰平	安
+ɣ	æ̃	陽平	昂
+ɣ	æ̃	上聲	揞
+ɣ	æ̃	陰去	按
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	t	tʰ	n	l	tʂ	tʂʰ	ʂ
+@FIN	ɑ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɑ	陰平	巴
+p	ɑ	上聲	把
+p	ɑ	陰去	霸
+p	ɑ	陽去	罷
+pʰ	ɑ	陰平	趴
+pʰ	ɑ	陽平	爬
+pʰ	ɑ	陰去	怕
+m	ɑ	陰平	媽
+m	ɑ	陽平	麻
+m	ɑ	上聲	馬
+m	ɑ	陽去	罵
+t	ɑ	上聲	打
+t	ɑ	陽去	大
+tʰ	ɑ	陰平	他
+n	ɑ	陽平	拿
+n	ɑ	上聲	哪
+n	ɑ	陽去	那
+l	ɑ	陰平	拉
+tʂ	ɑ	陰平	渣
+tʂ	ɑ	上聲	拃
+tʂ	ɑ	陰去	炸
+tʂʰ	ɑ	陰平	叉
+tʂʰ	ɑ	陽平	查
+tʂʰ	ɑ	上聲	衩
+tʂʰ	ɑ	陰去	岔
+tʂʰ	ɑ	陽去	詫
+ʂ	ɑ	陰平	沙
+ʂ	ɑ	上聲	灑
+ʂ	ɑ	陰去	廈
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ts	tsʰ	s	k	kʰ	x	ɣ
+@FIN	ɑi
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɑi	上聲	擺
+p	ɑi	陰去	拜
+p	ɑi	陽去	敗
+pʰ	ɑi	陽平	排
+pʰ	ɑi	陰去	派
+m	ɑi	上聲	買
+m	ɑi	陽去	賣
+t	ɑi	陰平	呆
+t	ɑi	上聲	歹
+t	ɑi	陰去	帶
+t	ɑi	陽去	待
+tʰ	ɑi	陰平	胎
+tʰ	ɑi	陽平	臺
+tʰ	ɑi	陰去	太
+n	ɑi	上聲	乃
+n	ɑi	陽去	耐
+l	ɑi	陽平	來
+l	ɑi	上聲	□{圪~，染：衣裳也~啦}
+l	ɑi	陽去	賴
+ts	ɑi	陰平	栽
+ts	ɑi	上聲	宰
+ts	ɑi	陰去	債
+ts	ɑi	陽去	在
+tsʰ	ɑi	陰平	猜
+tsʰ	ɑi	陽平	才
+tsʰ	ɑi	上聲	彩
+tsʰ	ɑi	陰去	菜
+s	ɑi	陰平	腮
+s	ɑi	陰去	曬
+k	ɑi	陰平	該
+k	ɑi	上聲	改
+k	ɑi	陰去	蓋
+kʰ	ɑi	陰平	開
+kʰ	ɑi	上聲	凱
+kʰ	ɑi	陰去	概
+x	ɑi	陽平	孩
+x	ɑi	上聲	海
+x	ɑi	陰去	□{玩，貶義：不要在那兒~}
+x	ɑi	陽去	亥
+ɣ	ɑi	陰平	哀
+ɣ	ɑi	上聲	矮
+ɣ	ɑi	陰去	愛
+ɣ	ɑi	陽去	艾
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	f	t	tʰ	n	l	tʂ	tʂʰ	ʂ	k	kʰ	x	ɣ
+@FIN	ɑŋ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɑŋ	陰平	幫
+p	ɑŋ	上聲	綁
+p	ɑŋ	陰去	謗
+p	ɑŋ	陽去	棒
+pʰ	ɑŋ	陰平	胖
+pʰ	ɑŋ	陽平	龐
+pʰ	ɑŋ	陰去	胖
+m	ɑŋ	陽平	忙
+m	ɑŋ	上聲	莽
+f	ɑŋ	陰平	方
+f	ɑŋ	上聲	仿
+f	ɑŋ	陰去	放
+t	ɑŋ	上聲	黨
+t	ɑŋ	陰去	當
+tʰ	ɑŋ	陰平	湯
+tʰ	ɑŋ	陽平	唐
+tʰ	ɑŋ	上聲	倘
+tʰ	ɑŋ	陰去	燙
+n	ɑŋ	上聲	攮
+l	ɑŋ	陽平	狼
+l	ɑŋ	上聲	朗
+l	ɑŋ	陽去	浪
+tʂ	ɑŋ	陰平	張
+tʂ	ɑŋ	上聲	漲
+tʂ	ɑŋ	陰去	賬
+tʂ	ɑŋ	陽去	丈
+tʂʰ	ɑŋ	陰平	倉
+tʂʰ	ɑŋ	陽平	長
+tʂʰ	ɑŋ	上聲	廠
+tʂʰ	ɑŋ	陰去	唱
+ʂ	ɑŋ	陰平	傷
+ʂ	ɑŋ	上聲	賞
+ʂ	ɑŋ	陽去	上
+k	ɑŋ	陰平	剛
+k	ɑŋ	上聲	港
+k	ɑŋ	陰去	槓
+kʰ	ɑŋ	陰平	康
+kʰ	ɑŋ	陽平	扛
+kʰ	ɑŋ	上聲	抗
+kʰ	ɑŋ	陰去	炕
+x	ɑŋ	陰平	夯
+x	ɑŋ	陽平	杭
+ɣ	ɑŋ	陰平	骯
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	t	tʰ	n	l	tʂ	tʂʰ	ʂ	k	kʰ	x	ɣ
+@FIN	ɔ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɔ	陰平	包
+p	ɔ	上聲	保
+p	ɔ	陰去	報
+p	ɔ	陽去	抱
+pʰ	ɔ	陰平	剖
+pʰ	ɔ	陽平	袍
+pʰ	ɔ	上聲	跑
+pʰ	ɔ	陰去	炮
+m	ɔ	陽平	毛
+m	ɔ	上聲	貓
+m	ɔ	陽去	帽
+t	ɔ	陰平	刀
+t	ɔ	上聲	島
+t	ɔ	陰去	到
+t	ɔ	陽去	導
+tʰ	ɔ	陰平	掏
+tʰ	ɔ	陽平	桃
+tʰ	ɔ	上聲	討
+tʰ	ɔ	陰去	套
+n	ɔ	陰平	蟯
+n	ɔ	上聲	惱
+n	ɔ	陽去	鬧
+l	ɔ	陽平	勞
+l	ɔ	上聲	老
+l	ɔ	陽去	澇
+tʂ	ɔ	陰平	召
+tʂ	ɔ	上聲	早
+tʂ	ɔ	陰去	照
+tʂ	ɔ	陽去	趙
+tʂʰ	ɔ	陰平	抄
+tʂʰ	ɔ	陽平	操
+tʂʰ	ɔ	上聲	草
+tʂʰ	ɔ	陽去	糙
+ʂ	ɔ	陰平	捎
+ʂ	ɔ	陽平	韶
+ʂ	ɔ	上聲	少
+ʂ	ɔ	陰去	掃
+ʂ	ɔ	陽去	紹
+k	ɔ	陰平	高
+k	ɔ	上聲	搞
+k	ɔ	陰去	告
+kʰ	ɔ	上聲	考
+kʰ	ɔ	陰去	靠
+x	ɔ	陰平	蒿
+x	ɔ	陽平	豪
+x	ɔ	上聲	好
+x	ɔ	陰去	好
+x	ɔ	陽去	號
+ɣ	ɔ	陰平	鏖
+ɣ	ɔ	陽平	熬
+ɣ	ɔ	上聲	襖
+ɣ	ɔ	陽去	奧
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	t	tʰ	l	ts	tsʰ	ʂ	k	kʰ	x	ɣ
+@FIN	əu
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+t	əu	陰平	兜
+t	əu	上聲	斗
+t	əu	陽去	豆
+tʰ	əu	陰平	偷
+tʰ	əu	陽平	頭
+tʰ	əu	陰去	透
+l	əu	陽平	樓
+l	əu	上聲	摟
+l	əu	陽去	露
+ts	əu	陰平	州
+ts	əu	上聲	走
+ts	əu	陰去	奏
+ts	əu	陽去	宙
+tsʰ	əu	陽平	愁
+tsʰ	əu	上聲	醜
+tsʰ	əu	陰去	臭
+ʂ	əu	陰平	收
+ʂ	əu	上聲	首
+ʂ	əu	陰去	嗽
+ʂ	əu	陽去	受
+k	əu	陰平	勾
+k	əu	上聲	狗
+k	əu	陰去	勾
+k	əu	陽去	構
+kʰ	əu	陰平	摳
+kʰ	əu	上聲	口
+kʰ	əu	陰去	扣
+kʰ	əu	陽去	寇
+x	əu	陽平	候
+x	əu	上聲	吼
+x	əu	陽去	後
+ɣ	əu	陰平	歐
+ɣ	əu	上聲	嘔
+ɣ	əu	陰去	漚
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	f	t	tʂ	tʂʰ	ʂ	k
+@FIN	əʔ
+@TON	陰入	3
+@TON	陽入	212
+
+// Initial	Final	Tone	CharList (Space separated)
+p	əʔ	陰入	北
+pʰ	əʔ	陰入	樸
+m	əʔ	陰入	□{~蠅：蟬}
+m	əʔ	陽入	陌
+f	əʔ	陰入	服
+t	əʔ	陰入	□{~腦：頭}
+tʂ	əʔ	陽入	則
+tʂʰ	əʔ	陰入	測
+ʂ	əʔ	陰入	色
+k	əʔ	陰入	坷
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	tʂ	tʂʰ	ʂ
+@FIN	ʅ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʅ	陰平	支
+tʂ	ʅ	上聲	只
+tʂ	ʅ	陰去	致
+tʂ	ʅ	陽去	自
+tʂʰ	ʅ	陰平	嗤
+tʂʰ	ʅ	陽平	辭
+tʂʰ	ʅ	上聲	此
+tʂʰ	ʅ	陰去	次
+ʂ	ʅ	陰平	司
+ʂ	ʅ	陽平	時
+ʂ	ʅ	上聲	史
+ʂ	ʅ	陰去	試
+ʂ	ʅ	陽去	示
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	n	k	kʰ	x	ɣ
+@FIN	ʌ
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ʌ	陰平	波
+p	ʌ	上聲	跛
+p	ʌ	陰去	簸
+pʰ	ʌ	陰平	坡
+pʰ	ʌ	陰去	破
+m	ʌ	陽平	磨
+m	ʌ	陽去	磨
+n	ʌ	陽去	那
+k	ʌ	陰平	哥
+kʰ	ʌ	上聲	可
+x	ʌ	陰平	哈
+x	ʌ	陽平	河
+ɣ	ʌ	陽平	俄 蛾
+ɣ	ʌ	陽去	餓
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	m	f	t	tʰ	n	l	tʃ	tʃʰ	ʃ	k	kʰ	x	ɣ
+@FIN	ʌʔ
+@TON	陰入	3
+@TON	陽入	212
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ʌʔ	陰入	八
+p	ʌʔ	陽入	拔
+m	ʌʔ	陰入	抹
+f	ʌʔ	陰入	法
+f	ʌʔ	陽入	罰
+t	ʌʔ	陰入	搭
+t	ʌʔ	陽入	達
+tʰ	ʌʔ	陰入	特
+n	ʌʔ	陽入	納
+l	ʌʔ	陰入	蠟
+l	ʌʔ	陽入	辣
+tʃ	ʌʔ	陽入	雜
+tʃʰ	ʌʔ	陰入	察
+ʃ	ʌʔ	陰入	殺
+k	ʌʔ	陰入	個
+kʰ	ʌʔ	陰入	克
+x	ʌʔ	陰入	黑
+ɣ	ʌʔ	陽入	惡
+// HSD Syllabary Data Partition
+// 地区：山西省-長治市-平順縣-青羊鎮
+// 来源：山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-長治市-平順縣-青羊鎮
+@SRC	山西省平順縣地方志編纂辦公室《平順縣方言志（討論稿）》
+
+@INI	p	pʰ	m	f	tʰ	tʂ	tʂʰ	ʂ	k	kʰ	x	ɣ
+@FIN	ᴇ̃
+@TON	陰平	313
+@TON	陽平	22
+@TON	上聲	424
+@TON	陰去	353
+@TON	陽去	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ᴇ̃	陰平	奔
+p	ᴇ̃	上聲	本
+p	ᴇ̃	陰去	奔
+p	ᴇ̃	陽去	笨
+pʰ	ᴇ̃	陰平	噴
+pʰ	ᴇ̃	陽平	盆
+m	ᴇ̃	陽平	門
+m	ᴇ̃	陽去	悶
+f	ᴇ̃	陰平	分
+f	ᴇ̃	陽平	墳
+f	ᴇ̃	上聲	粉
+f	ᴇ̃	陰去	糞
+f	ᴇ̃	陽去	奮
+tʰ	ᴇ̃	陰平	吞
+tʂ	ᴇ̃	陰平	針
+tʂ	ᴇ̃	上聲	診
+tʂ	ᴇ̃	陰去	振
+tʂ	ᴇ̃	陽去	陣
+tʂʰ	ᴇ̃	陰平	參
+tʂʰ	ᴇ̃	陽平	沉
+tʂʰ	ᴇ̃	陰去	趁
+ʂ	ᴇ̃	陰平	森
+ʂ	ᴇ̃	上聲	沈
+ʂ	ᴇ̃	陰去	滲
+ʂ	ᴇ̃	陽去	甚
+k	ᴇ̃	陰平	跟
+kʰ	ᴇ̃	上聲	肯
+x	ᴇ̃	陽平	痕
+x	ᴇ̃	上聲	很
+x	ᴇ̃	陽去	恨
+ɣ	ᴇ̃	陰平	恩

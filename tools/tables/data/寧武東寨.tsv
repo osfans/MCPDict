@@ -1,0 +1,1339 @@
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	v	t	tʰ	n	l	ts	tsʰ	s	kʰ	x
+@FIN	a
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	a	陰平	巴 疤
+p	a	上聲	把{~握}
+p	a	去聲	霸 壩 柄 爸 耙{~地} 罷
+pʰ	a	陽平	鈀{~子} 爬 琶
+pʰ	a	去聲	怕
+m	a	陰平	媽
+m	a	陽平	麻 蟆{蛤~}
+m	a	上聲	馬 碼{尺~}
+m	a	去聲	罵
+v	a	陰平	挖1
+v	a	上聲	瓦1{名詞}
+v	a	去聲	瓦2{動詞} 漥
+t	a	上聲	打
+t	a	去聲	大1{東西很~}
+tʰ	a	陰平	他
+n	a	陽平	拿
+n	a	上聲	哪1{在~了}
+n	a	去聲	那
+l	a	陰平	拉1{~住}
+l	a	去聲	落1{丟三~四}
+ts	a	陰平	渣 眨
+ts	a	上聲	閘 鍘
+ts	a	去聲	詐 榨 炸1{爆~} 乍{突然} 柵{~欄}
+tsʰ	a	陰平	叉 差1{~別}
+tsʰ	a	陽平	茶 搽 杈{丫~棒} 茬 查{調~}
+tsʰ	a	去聲	差2{~不多} 岔{三~路}
+s	a	陰平	沙 紗
+s	a	上聲	傻 灑 撒
+s	a	去聲	廈{大~} □{挑選}
+kʰ	a	上聲	卡{~片}
+x	a	陰平	呵{~氣}
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ts	tsʰ	s	z	k	kʰ	ŋ	x
+@FIN	au
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	au	陰平	包 胞1{雙~胎}
+p	au	陽平	刨{~地}
+p	au	上聲	保 堡1{雕~} 寶 飽 褒
+p	au	去聲	抱 報 暴 鮑 豹 爆 鉋{推~}
+pʰ	au	陰平	胞2{細~} 泡1{燈~}
+pʰ	au	陽平	袍 拋 剖 狍{~子}
+pʰ	au	上聲	跑
+pʰ	au	去聲	炮 泡2{~面}
+m	au	陽平	毛 茅 貓 矛
+m	au	上聲	卯 牡
+m	au	去聲	冒 帽 貌 茂 貿
+t	au	陰平	刀 叨
+t	au	上聲	島 倒1{打~} 導
+t	au	去聲	道 稻 到 倒2{~水} 盜
+tʰ	au	陰平	掏
+tʰ	au	陽平	桃 逃 淘{~米} 陶 濤
+tʰ	au	上聲	禱{~告} 討
+tʰ	au	去聲	套
+n	au	陽平	撓
+n	au	上聲	腦 惱
+n	au	去聲	鬧
+l	au	陽平	勞 撈 牢 嘮{~叨}
+l	au	上聲	老
+l	au	去聲	澇 烙1{~餅}
+ts	au	陰平	遭 糟 召 招
+ts	au	陽平	鑿 着1{~急}
+ts	au	上聲	早 棗 澡 爪1{~牙} 找 沼{~氣}
+ts	au	去聲	皂 造 竈 罩 笊{~籬} 趙 兆 照 焯{把菜在開水中~~}
+tsʰ	au	陰平	操1{~作} 抄 超
+tsʰ	au	陽平	巢 曹 槽 朝{~代} 潮
+tsʰ	au	上聲	草 炒 鈔 吵
+tsʰ	au	去聲	躁 暴{~糙} 粗{~操} 曹{~}
+s	au	陰平	騷 臊1{味} 梢 捎 稍 燒 紹
+s	au	陽平	勺 芍 韶{~山}
+s	au	上聲	掃1{~地} 嫂 少1{多~}
+s	au	去聲	臊2{~子} 掃2{~帚} 潲{~雨} 少2{~白頭} 邵
+z	au	陽平	饒{~命}
+z	au	上聲	擾 繞1{圍~}
+z	au	去聲	繞2{~線}
+k	au	陰平	高 膏1{~藥} 糕
+k	au	上聲	稿 搞
+k	au	去聲	告 膏2{~車}
+kʰ	au	上聲	考 烤
+kʰ	au	去聲	靠 犒
+ŋ	au	陽平	熬 嘵
+ŋ	au	上聲	襖
+ŋ	au	去聲	傲 整{烙餅用具} 奧
+x	au	陰平	蒿{~子}
+x	au	陽平	豪 壕 毫 號1{哭} 耗1{~費}
+x	au	上聲	好1{~壞}
+x	au	去聲	浩 好2{愛~} 號2{幾~} 耗2{~子}
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	ts	tsʰ	s	z	k	kʰ	ŋ	x
+@FIN	aʔ
+@TON	入聲	3
+
+// Initial	Final	Tone	CharList (Space separated)
+p	aʔ	入聲	博 八 拔 撥 勃 餑 薄 泊 剝 駁
+pʰ	aʔ	入聲	潑 模
+m	aʔ	入聲	抹1{~桌子} 末 沫 沒1{沉~;莫;膜;寞;摸}
+f	aʔ	入聲	法 乏 髮 發 伐 罰
+v	aʔ	入聲	挖2{~土} 襪 握 沃
+t	aʔ	入聲	答 搭 達
+tʰ	aʔ	入聲	踏 塌 沓 塔 榻 渴
+n	aʔ	入聲	納 捺
+l	aʔ	入聲	拉2{~屎} 臘 蠟 獵 辣
+ts	aʔ	入聲	雜 劄 炸2{~花生} 摺 褶 墊 蜇 哲 貴 宅 摘 折 窄 搾 擇 澤 則 浙 着2{~火}
+tsʰ	aʔ	入聲	廁 插 擦 察 徹 撤 側 測 拆 策 冊
+s	aʔ	入聲	攝 涉 澀 薩 撒2{~手} 殺 舌 設 色
+z	aʔ	入聲	熱 若 弱
+k	aʔ	入聲	鴿 割 葛 揭 各 閣 擱 格 革 隔
+kʰ	aʔ	入聲	咳 磕 渴 客1{~車}
+ŋ	aʔ	入聲	惡2{~心} 扼 額
+x	aʔ	入聲	哈{點頭~腰} 合 喝 郝 核1{審~;赫} 盒2{~子}
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	ts	tsʰ	s	k	kʰ	ŋ	x
+@FIN	ei
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ei	陰平	杯 碑 卑 悲
+p	ei	陽平	白1{~色}
+p	ei	上聲	擺
+p	ei	去聲	貝 拜 鞴{~拐子} 敗 輩 背 卜{輩} 焙{~乾}
+pʰ	ei	陰平	坯{~子}
+pʰ	ei	陽平	排 牌 培 陪 賠
+pʰ	ei	去聲	派 配 佩
+m	ei	陽平	埋 梅 媒 煤 黴
+m	ei	上聲	買 每 美
+m	ei	去聲	邁 賣 妹 昧
+f	ei	陰平	非 匪 飛 妃
+f	ei	陽平	肥
+f	ei	上聲	翡{~翠}
+f	ei	去聲	廢 肺 費
+v	ei	陰平	歪 危威 維 違
+v	ei	陽平	皚{~磨} 為1{作~;唯;微} 稍{~圍}
+v	ei	上聲	偽 委 偉 葦{~子} 蝟{尾1結~}
+v	ei	去聲	外 衛 為2{~甚} 位 未 味 魏 畏 喂 慰 胃 謂
+t	ei	陰平	獃
+t	ei	上聲	逮 擿{雞毛~子}
+t	ei	去聲	待 戴 貸 代 袋 帶 大2{~夫}
+tʰ	ei	陰平	胎 苔
+tʰ	ei	陽平	臺 抬
+tʰ	ei	上聲	牘{打~}
+tʰ	ei	去聲	態 太 泰
+n	ei	陽平	崖{山~} 捱{~打}
+n	ei	上聲	哪2{~個} 奶
+n	ei	去聲	耐 奈 內
+l	ei	陽平	來
+l	ei	去聲	賴 癩
+ts	ei	陰平	災 裁 齋
+ts	ei	陽平	賊
+ts	ei	上聲	宰 載
+ts	ei	去聲	在 再 債 寨
+tsʰ	ei	陽平	才 財 材 裁 纔 豺 柴
+tsʰ	ei	上聲	猜 彩 採 踩 睬
+tsʰ	ei	去聲	菜 蔡
+s	ei	陰平	腮 鰓 篩
+s	ei	去聲	賽 曬
+k	ei	陰平	該
+k	ei	上聲	改
+k	ei	去聲	概 溉 蓋 給1{助詞}
+kʰ	ei	陰平	開
+kʰ	ei	上聲	凱 楷
+kʰ	ei	去聲	慨{慷~}
+ŋ	ei	陰平	挨{~住} 藹{和~}
+ŋ	ei	去聲	礙 艾 愛
+x	ei	上聲	海
+x	ei	去聲	亥 害 和1{連詞}
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	i
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	i	上聲	比 彼
+p	i	去聲	蔽 蓖{~麻} 閉 弊 斃 幣 避 備 篦{~梳}
+pʰ	i	陰平	批 披
+pʰ	i	陽平	皮 琵{~琶} 枇{~琶} 庇{包~}
+pʰ	i	上聲	疲 脾 痹{麻~}
+pʰ	i	去聲	屁
+m	i	陽平	迷 謎 眉
+m	i	上聲	米
+m	i	去聲	□{偷}
+n	i	陽平	泥 尼
+n	i	上聲	你
+n	i	去聲	膩
+l	i	陽平	犁 黎 離 璃 梨 釐 狸{~貓}
+l	i	上聲	禮 李 裏 里 理 鯉
+l	i	去聲	例 厲 勵 麗 隸 利 痢 栗
+tɕ	i	陰平	低 雞 飢 肌 幾{茶~基} 機
+tɕ	i	上聲	底 抵 擠 幾{~個}
+tɕ	i	去聲	弟 帝 第 遞 地 祭 際 濟 劑{一~藥} 計 繼 技 妓 寄 冀 紀 記 忌 季 既
+tɕʰ	i	陰平	梯 妻 欺 期
+tɕʰ	i	陽平	題 提 蹄 屜 齊 奇 騎 其 棋 旗 杞
+tɕʰ	i	上聲	體 啟 企 豈 起
+tɕʰ	i	去聲	替 剃 砌 契 器 棄 氣 汽 訖
+ɕ	i	陰平	西 棲 畦{菜~} 犧 稀
+ɕ	i	上聲	洗 璽 喜 嬉{~蛛} 希
+ɕ	i	去聲	細 壻 系 戲 係
+Ø	i	陰平	醫 衣 依
+Ø	i	陽平	誼 移 姨 疑
+Ø	i	上聲	蟻 椅 以 已 尾2{~巴}
+Ø	i	去聲	意 憶 億 藝 宜 義 議 毅 易 異
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	ia
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+l	ia	陰平	倆
+tɕ	ia	陰平	家 加 枷 嘉 傢{~具} 佳
+tɕ	ia	上聲	假1{真~;賈姓}
+tɕ	ia	去聲	假2{~期} 架 駕 嫁 價
+tɕʰ	ia	上聲	卡2{~子}
+tɕʰ	ia	去聲	恰 洽
+ɕ	ia	陰平	蝦
+ɕ	ia	陽平	霞 匣{~子} 轄{管~}
+ɕ	ia	去聲	下 夏 廈2{~門} 嚇
+Ø	ia	陰平	丫{~環} 芽
+Ø	ia	陽平	牙 椏{~杈} 衙
+Ø	ia	上聲	啞 雅
+Ø	ia	去聲	亞 壓 軋{被車~}
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	t	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iau
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iau	陰平	鑣 標 彪
+p	iau	上聲	表 錶
+p	iau	去聲	鰾{~膠}
+pʰ	iau	陰平	飄 漂1{~浮}
+pʰ	iau	陽平	瓢 嫖
+pʰ	iau	去聲	票 漂2{~亮}
+m	iau	陽平	苗 描
+m	iau	上聲	藐 渺 秒
+m	iau	去聲	廟 妙
+t	iau	陰平	刁 貂 雕
+t	iau	去聲	釣 弔 掉 調1{音~}
+n	iau	陽平	□{巧}
+n	iau	上聲	鳥
+n	iau	去聲	尿
+l	iau	陽平	燎1{~泡} 療 聊 遼 撩
+l	iau	上聲	瞭2{~毛了~結}
+l	iau	去聲	瞭{料} 廖{姓} 炮{~蹶子}
+tɕ	iau	陰平	交 郊 膠 教1{~書} 狡 焦 蕉 椒{青~} 嬌 澆 驕
+tɕ	iau	陽平	嚼 椒2{青~}
+tɕ	iau	上聲	絞 餃 攪
+tɕ	iau	去聲	教2{校2} 較 窖 覺1{睡~;蘸} 瞧{倒~;叫}
+tɕʰ	iau	陰平	敲 鍬 瞧 俏 挑
+tɕʰ	iau	陽平	喬 僑 橋 蕎 條 調2{~和}
+tɕʰ	iau	上聲	巧
+tɕʰ	iau	去聲	俏 跳 耀 竅
+ɕ	iau	陰平	消 宵 霄 硝 銷 囂 蕭 簫
+ɕ	iau	陽平	學1{~不會}
+ɕ	iau	上聲	小 曉
+ɕ	iau	去聲	酵 孝 效 校1{學~;笑} 鞘{刀~}
+Ø	iau	陰平	淆 妖 邀 腰 要1{~求} 幺{~二三} 吆{~喝}
+Ø	iau	陽平	搖 窯 姚
+Ø	iau	上聲	咬 舀 杳
+Ø	iau	去聲	勒{襪~} 要2{重~} 耀 鵲 躍1{大~進}
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	t	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iaʔ
+@TON	入聲	3
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iaʔ	入聲	別 蹩 蝙 夜{~蝠} 憋 百 柏 伯 白2{~粉子} 擘
+pʰ	iaʔ	入聲	撇 迫 拍 魄 騙
+m	iaʔ	入聲	滅 默 麥 脈
+t	iaʔ	入聲	跌 疊 碟 牒 蝶 諜 滴
+n	iaʔ	入聲	聶 鑷 躡 孽 捏 虐
+l	iaʔ	入聲	獵 列 烈 裂 掠 略
+tɕ	iaʔ	入聲	皆 夾 袂 甲 接 捷 挾1{~菜} 傑 揭 節 切 截 結 潔 腳 覺1{知~} 角 劫
+tɕʰ	iaʔ	入聲	帖 貼 掐 怯 鐵 切 雀 鵲 客2{~人}
+ɕ	iaʔ	入聲	諧 擓 蟹 脅 協 瞎 歇 蠍 楔 挾2{要~學}
+Ø	iaʔ	入聲	鴨 押 葉 頁 業 噎 約 藥 鑰 獄 岳 樂1{音~}
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	t	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iãn
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iãn	陰平	鞭 編 邊
+p	iãn	上聲	匾 貶
+p	iãn	去聲	辨 辯 變 汴 便1{方~辦遍}
+pʰ	iãn	陰平	偏 便2{~宜}
+pʰ	iãn	上聲	篇
+pʰ	iãn	去聲	片
+m	iãn	陽平	綿 棉
+m	iãn	上聲	免 勉 娩
+m	iãn	去聲	面 麵
+t	iãn	陰平	掂 巔
+t	iãn	上聲	點 典
+t	iãn	去聲	店 電 殿 奠 佃 墊
+n	iãn	陽平	撚 蔫 年 黏
+n	iãn	上聲	碾
+n	iãn	去聲	念
+l	iãn	陰平	憐
+l	iãn	陽平	鐮 簾 連 聯 蓮
+l	iãn	上聲	臉 斂
+l	iãn	去聲	殮 練 鍊
+tɕ	iãn	陰平	監 尖 兼 艱 間1{~斷} 奸 煎 堅 肩 健{~牛}
+tɕ	iãn	上聲	減 鹼 檢 儉 簡 揀 剪 繭 趼
+tɕ	iãn	去聲	鑒 漸 劍 銅 見 健 建 鍵 賤 濺 箭 件 踐 間2{~諜}
+tɕʰ	iãn	陰平	鴿 籤 簽 拊 添 謙 鉛 牽 千 天 遷
+tɕʰ	iãn	陽平	潛 錢 鉗 甜 前 田 填
+tɕʰ	iãn	上聲	舔 淺 遣
+tɕʰ	iãn	去聲	嵌 欠 歉 愜
+ɕ	iãn	陰平	仙 先
+ɕ	iãn	陽平	鹹 銜 嫌 閑 鮮1{心~;心愛} 賢
+ɕ	iãn	上聲	險 鮮2{新~;癬} 顯
+ɕ	iãn	去聲	陷 餡 限 線 羨 憲 獻 現 縣
+Ø	iãn	陰平	淹 醃 煙
+Ø	iãn	陽平	嚴 巖 鹽 閻 簷 顏 延 言 研 緣 沿1{~着}
+Ø	iãn	上聲	掩 眼 演
+Ø	iãn	去聲	驗 厭 炎 豔 焰 釅 雁 諺 燕 嚥 宴 沿2{~子} 硯
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	t	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iəu
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+t	iəu	陰平	丟
+n	iəu	陽平	牛
+n	iəu	上聲	紐 扭
+l	iəu	陽平	流 劉 留 榴 硫1{~酸}
+l	iəu	上聲	柳
+l	iəu	去聲	溜 餾 六
+tɕ	iəu	陰平	摰 髻 糾 鳩
+tɕ	iəu	上聲	酒 九 久 韭 灸 臼{蒜~子}
+tɕ	iəu	去聲	就 舅 咎 救 究 舊
+tɕʰ	iəu	陰平	秋 鞦 球
+tɕʰ	iəu	陽平	囚 求
+ɕ	iəu	陰平	修 羞 休
+ɕ	iəu	上聲	朽
+ɕ	iəu	去聲	秀 繡 宿1{星~} 鏽 袖 嗅
+Ø	iəu	陰平	憂 優 猶
+Ø	iəu	陽平	尤 郵 由 油 游
+Ø	iəu	去聲	誘 又 右 祐 柚 幼
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	t	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iəʔ
+@TON	入聲	3
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iəʔ	入聲	鼻 筆 畢 必 北 逼 壁
+pʰ	iəʔ	入聲	匹 僻 闢 劈
+m	iəʔ	入聲	祕 泌 密 蜜 墨
+t	iəʔ	入聲	得 德 的 笛 敵 狄
+n	iəʔ	入聲	逆
+l	iəʔ	入聲	立 粒 力 歷 曆
+tɕ	iəʔ	入聲	稽 急 級 及 疾 吉 即 極 積 跡 脊 籍 續 擊 激 緝1{通~} 集 輯
+tɕʰ	iəʔ	入聲	緝2{~鞋口} 曝{~乾} 七 漆 乞 踢 剔 戚
+ɕ	iəʔ	入聲	習 襲 吸 悉 膝 息 熄 媳 惜 席 夕 錫 析 隙
+Ø	iəʔ	入聲	揖 乙 一 逸 抑 益 譯 疫 役 亦
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	t	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iə̃ŋ
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iə̃ŋ	陰平	冰 兵 彬 賓
+p	iə̃ŋ	上聲	稟 丙 秉 柄 餅
+p	iə̃ŋ	去聲	殯 鬢 病 併 並
+pʰ	iə̃ŋ	陽平	貧 憑 平 坪 評 瓶 屏 萍
+pʰ	iə̃ŋ	上聲	品 拼2{~音}
+pʰ	iə̃ŋ	去聲	聘
+m	iə̃ŋ	陽平	眠 民 抿1{~嘴} 明 冥 名 銘 盟{~誓}
+m	iə̃ŋ	上聲	敏 抿2{~面}
+m	iə̃ŋ	去聲	命
+t	iə̃ŋ	陰平	丁 釘1{鐵~;疔} 盯
+t	iə̃ŋ	上聲	頂
+t	iə̃ŋ	去聲	釘2{~鍋} 訂 定
+n	iə̃ŋ	陽平	寧1{安~}
+n	iə̃ŋ	去聲	寧2{~可} 硬
+l	iə̃ŋ	陽平	林 淋 臨 鄰 麟 憐 淩 靈 零 鈴 翎
+l	iə̃ŋ	上聲	凜 領 嶺
+l	iə̃ŋ	去聲	賃 令 另
+tɕ	iə̃ŋ	陰平	今 金 襟 津 巾 斤 筋 更1{深~半夜} 頸 精 晶 睛 驚 京 耕 經
+tɕ	iə̃ŋ	上聲	錦 儘{~前頭} 緊 僅 謹 景 警 井
+tɕ	iə̃ŋ	去聲	禁{~止} 妗 盡 進 晉 莖 徑 淨 靜 勁 近 敬 鏡 境 竟
+tɕʰ	iə̃ŋ	陰平	親1{~人} 清 輕 聽 青 靖 庭 艇 挺 亭 廟
+tɕʰ	iə̃ŋ	陽平	芩 琴 禽 擒 秦 勤 芹 情 晴 停 渟
+tɕʰ	iə̃ŋ	上聲	侵 寢 岑 請 廷 艇 挺 頃 傾
+tɕʰ	iə̃ŋ	去聲	吣 親2{~家} 慶 睛{~等}
+ɕ	iə̃ŋ	陰平	心 辛 新 薪 欣 興1{~旺}
+ɕ	iə̃ŋ	陽平	尋 行1{~為} 形 型 刑
+ɕ	iə̃ŋ	上聲	省2{反~;醒}
+Ø	iə̃ŋ	陰平	音 陰 淫 殷 嬰 纓 英 迎 櫻 鷹 姻 咽 因
+Ø	iə̃ŋ	陽平	銀 寅 營 贏 蠅
+Ø	iə̃ŋ	上聲	引 隱 尹 影 飲1{~料}
+Ø	iə̃ŋ	去聲	蔭 窨 飲2{~牛} 印 應 映
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	n	tɕ	tɕʰ	ɕ	Ø
+@FIN	iɛ
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+n	iɛ	陽平	茶
+tɕ	iɛ	陰平	階 街
+tɕ	iɛ	上聲	姐 解 髻{鬆~}
+tɕ	iɛ	去聲	借 介 界 芥 疥 屆 戒 械
+tɕʰ	iɛ	陽平	茄{~子}
+tɕʰ	iɛ	上聲	且
+ɕ	iɛ	陽平	些 邪 斜 鞋
+ɕ	iɛ	上聲	寫
+ɕ	iɛ	去聲	瀉 卸 謝 泄
+Ø	iɛ	陽平	爺
+Ø	iɛ	上聲	也 野
+Ø	iɛ	去聲	夜 液
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	ts	tsʰ	s	z	k	kʰ	x
+@FIN	u
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	u	陰平	補 捕 堡2{地名}
+p	u	去聲	部 布 佈 步
+pʰ	u	陰平	鋪1{動詞}
+pʰ	u	陽平	菩{~薩} 脯1{~子}
+pʰ	u	上聲	譜 普 甫 脯2{果~}
+pʰ	u	去聲	鋪2{名詞}
+m	u	陽平	模 摹 謀
+m	u	上聲	某 畝 母 拇
+m	u	去聲	幕 墓 牧
+f	u	陰平	夫 敷 俘 孵 麩
+f	u	陽平	膚 符 扶 傅 浮
+f	u	上聲	府 腑 斧 腐 輔 否
+f	u	去聲	父 付 附 婦 負 副 富
+v	u	陰平	烏 污
+v	u	陽平	吳 蜈 無
+v	u	上聲	五 伍 午 武 舞 鵡
+v	u	去聲	誤 悟 惡2{可~;務} 霧 戊
+t	u	陰平	都
+t	u	上聲	堵 賭 肚1{~子}
+t	u	去聲	杜 肚2{皮~;妬} 度 渡 鍍
+tʰ	u	陽平	徒 屠 途 塗 圖
+tʰ	u	上聲	土 吐
+tʰ	u	去聲	兔
+ts	u	陰平	租 豬 蜘蛛 朱 珠 帚{帚蚤跳~}
+ts	u	上聲	煮 祖 組 阻 拄 主 帚
+ts	u	去聲	著 助 柱 註 住 注 蛀
+tsʰ	u	陰平	粗
+tsʰ	u	陽平	除 初 鋤 廚
+tsʰ	u	上聲	儲 褚 楚 處1{~理}
+tsʰ	u	去聲	醋 處 處1{好~}
+s	u	陰平	蘇 酥 梳 疏 書 舒 輸 殊
+s	u	上聲	蔬 鼠 黍 暑 薯 數1{動詞} 蜀
+s	u	去聲	素 訴 塑 嗉{雞~子} 庶 恕 數2{名詞} 樹 豎 漱
+z	u	陰平	□{伸出}
+z	u	陽平	如
+z	u	上聲	乳 孺{~了個什麼東西}
+z	u	去聲	□{伸出}
+k	u	陰平	姑 孤 箍
+k	u	上聲	古 估 股 鼓
+k	u	去聲	故 固 雇 顧
+kʰ	u	陰平	枯
+k	u	上聲	苦
+kʰ	u	去聲	庫 褲
+x	u	陽平	呼 胡 湖 狐 壺 乎 鬍
+x	u	上聲	虎 滸{水~}
+x	u	去聲	戶 互 護 瓠{~子}
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	ts	s	k	kʰ	x
+@FIN	ua
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ua	陰平	髽{~髻} 抓
+ts	ua	上聲	爪2{~子}
+s	ua	上聲	耍
+k	ua	陰平	瓜 刮1{~鬍子}
+k	ua	上聲	寡 刷
+k	ua	去聲	掛 卦
+kʰ	ua	陰平	誇
+kʰ	ua	上聲	垮 侉{~子}
+x	ua	陰平	花 華
+x	ua	陽平	驊 划{~船}
+x	ua	去聲	化 樺 畫 話
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	t	tʰ	l	ts	tsʰ	s	k	kʰ	x
+@FIN	uaʔ
+@TON	入聲	3
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uaʔ	入聲	掇 奪
+tʰ	uaʔ	入聲	脫 託 托
+l	uaʔ	入聲	落2{~後} 烙2{~鐵} 洛 絡 樂2{快~} 肋
+ts	uaʔ	入聲	拙 作 昨 桌 琢 啄 捉 獨
+tsʰ	uaʔ	入聲	戳
+s	uaʔ	入聲	刷 說 索 朔 縮
+k	uaʔ	入聲	刮2{~風} 郭 國
+kʰ	uaʔ	入聲	括 闊2{寬~} 擴
+x	uaʔ	入聲	豁 活 滑 猾 或 惑 獲 劐
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	t	tʰ	l	ts	tsʰ	s	z	k	kʰ	x
+@FIN	uei
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uei	陰平	堆
+t	uei	去聲	對 隊 兌
+tʰ	uei	陰平	推
+tʰ	uei	上聲	腿
+tʰ	uei	去聲	退 蛻 褪
+l	uei	陽平	雷 累1{~贅}
+l	uei	上聲	儡 累2{積~壘}
+l	uei	去聲	累3{連~類} 淚
+ts	uei	陰平	錐
+ts	uei	陽平	追
+ts	uei	上聲	嘴
+ts	uei	去聲	最 罪 揮 綴 贅 醉
+tsʰ	uei	陰平	催 崔 吹
+tsʰ	uei	陽平	垂 錘 捶
+tsʰ	uei	上聲	揣
+tsʰ	uei	去聲	脆 翠 粹
+s	uei	陰平	雖 衰 摔
+s	uei	上聲	髓 水
+s	uei	去聲	碎 歲 稅 睡 隧 穗 帥 率1{~領}
+z	uei	去聲	銳 瑞
+k	uei	陰平	乖 閨 規 軌 歸
+k	uei	上聲	枴 拐 詭 龜 鬼
+k	uei	去聲	怪 桂 櫃 貴
+kʰ	uei	陰平	盔 傀 虧 葵 逵
+kʰ	uei	去聲	塊 會1{~計} 劊 潰 筷 快 跪 愧
+x	uei	陰平	灰 輝 揮
+x	uei	陽平	回 茴 懷 槐 淮
+x	uei	上聲	恢 徽 悔 毀
+x	uei	去聲	賄 匯 會2{開~} 繪 壞 惠 慧 諱 誨
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	t	tʰ	l	ts	tsʰ	s	z	k	kʰ	x
+@FIN	uãn
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uãn	陰平	端
+t	uãn	上聲	短
+t	uãn	去聲	斷 鍛 段 緞
+tʰ	uãn	陽平	團
+l	uãn	陽平	攔 巒 戀
+l	uãn	上聲	卵
+l	uãn	去聲	亂
+ts	uãn	陰平	鑽1{動詞} 專 磚
+ts	uãn	上聲	轉1{~讓}
+ts	uãn	去聲	賺 鑽2{名詞} 篆 轉2{~圈} 傳1{~記}
+tsʰ	uãn	陰平	氽{~粉湯} 川 穿
+tsʰ	uãn	陽平	傳2{~達} 椽 船
+tsʰ	uãn	上聲	喘
+tsʰ	uãn	去聲	竄 篡 串
+s	uãn	陰平	酸 栓{門~}
+s	uãn	去聲	算 蒜 涮
+z	uãn	上聲	軟 阮
+k	uãn	陰平	官 棺 觀 冠1{衣~;關}
+k	uãn	上聲	管 館
+k	uãn	去聲	貫 灌 罐 冠2{軍~;慣}
+kʰ	uãn	陰平	寬
+kʰ	uãn	上聲	款
+x	uãn	陰平	歡1{~喜}
+x	uãn	陽平	還1{~錢} 環
+x	uãn	上聲	歡2{~迎} 緩
+x	uãn	去聲	喚 換 幻 患 宦
+// HSD Syllabary Data Partition
+// 地區：山西省-忻州市-寧武縣
+// 來源：郭慧《山西寧武方言三區話語音研究》
+// 規範：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	t	tʰ	n	l	ts	tsʰ	s	z	k	kʰ	x
+@FIN	uãŋ
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uãŋ	陰平	多
+t	uãŋ	上聲	朵 躲
+t	uãŋ	去聲	馱1{~子} 稱{柴~;剁}
+tʰ	uãŋ	陰平	拖
+tʰ	uãŋ	陽平	駝 馱2{~起來}
+tʰ	uãŋ	上聲	妥 橢
+tʰ	uãŋ	去聲	唾
+n	uãŋ	陽平	挪
+l	uãŋ	陽平	羅 鑼 籮 囉 騾
+l	uãŋ	去聲	攞 駱
+ts	uãŋ	陰平	莊 裝 樁
+ts	uãŋ	上聲	左 佐
+ts	uãŋ	去聲	坐 座 撞 壯 狀
+tsʰ	uãŋ	陰平	搓 窗 瘡
+tsʰ	uãŋ	陽平	牀
+tsʰ	uãŋ	上聲	闖
+tsʰ	uãŋ	去聲	創 銼 錯
+s	uãŋ	陰平	霜 雙1{~-}
+s	uãŋ	上聲	鎖 所 索
+s	uãŋ	去聲	雙2{~生}
+z	uãŋ	陽平	□{~爛}
+k	uãŋ	陰平	光 鍋 過1{~了時間}
+k	uãŋ	上聲	廣 果 裹
+k	uãŋ	去聲	過2
+kʰ	uãŋ	陰平	筐 科 棵 顆
+kʰ	uãŋ	陽平	狂
+kʰ	uãŋ	上聲	□{摘取果實}
+kʰ	uãŋ	去聲	況 礦 課 闊1{~氣}
+x	uãŋ	陰平	荒 慌 謊
+x	uãŋ	陽平	黃 簧 皇 蝗 和2{~氣} 禾
+x	uãŋ	上聲	火 夥
+x	uãŋ	去聲	晃 霍 禍 貨
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	ts	tsʰ	s	z	k	kʰ	x
+@FIN	uɔ̃ŋ
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	uɔ̃ŋ	陰平	莊 裝 樁
+ts	uɔ̃ŋ	上聲	左 佐
+ts	uɔ̃ŋ	去聲	坐 座 撞 壯 狀
+tsʰ	uɔ̃ŋ	陰平	搓 窗 瘡
+tsʰ	uɔ̃ŋ	陽平	牀
+tsʰ	uɔ̃ŋ	上聲	闖
+tsʰ	uɔ̃ŋ	去聲	創 銼 錯
+s	uɔ̃ŋ	陰平	霜 雙1{一~}
+s	uɔ̃ŋ	上聲	鎖 所 索
+s	uɔ̃ŋ	去聲	雙2{~生}
+z	uɔ̃ŋ	陽平	□{~爛}
+k	uɔ̃ŋ	陰平	光 鍋 過1{~了時間}
+k	uɔ̃ŋ	上聲	廣 果 裹
+k	uɔ̃ŋ	去聲	過2
+kʰ	uɔ̃ŋ	陰平	筐 科 棵 顆
+kʰ	uɔ̃ŋ	陽平	狂
+kʰ	uɔ̃ŋ	上聲	□{摘取果實}
+kʰ	uɔ̃ŋ	去聲	況 礦 課 闊1{~氣}
+x	uɔ̃ŋ	陰平	荒 慌 謊
+x	uɔ̃ŋ	陽平	黃 簧 皇 蝗 和2{~氣} 禾
+x	uɔ̃ŋ	上聲	火 夥
+x	uɔ̃ŋ	去聲	晃 霍 禍 貨
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	t	tʰ	l	ts	tsʰ	s	z	k	kʰ	x
+@FIN	uəʔ
+@TON	入聲	3
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uəʔ	入聲	獨 讀 牘 督 毒
+tʰ	uəʔ	入聲	突 禿
+l	uəʔ	入聲	鹿 祿 陸 綠 錄
+ts	uəʔ	入聲	做 卒 族 竹 築 逐 祝 燭 觸
+tsʰ	uəʔ	入聲	猝 出 促
+s	uəʔ	入聲	術 述 速 叔 熟 淑 贖 束 屬
+z	uəʔ	入聲	入 辱 褥
+k	uəʔ	入聲	骨 谷 穀
+kʰ	uəʔ	入聲	窟 哭 酷
+x	uəʔ	入聲	喉{~嚨} 忽 核3{果子~} 藿
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	y
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+n	y	上聲	女
+l	y	陽平	驢
+l	y	上聲	呂 鋁 旅
+l	y	去聲	慮 濾
+tɕ	y	陰平	居 車2{~馬炮} 拘 駒
+tɕ	y	上聲	舉
+tɕ	y	去聲	巨 距 據 鋸 聚 句 具 劇 矩
+tɕʰ	y	陰平	蛆
+tɕʰ	y	陽平	渠 區 瞿
+tɕʰ	y	上聲	取 娶
+tɕʰ	y	去聲	趣
+ɕ	y	陰平	虛 噓
+ɕ	y	陽平	須 鬚 需 徐
+ɕ	y	上聲	許
+ɕ	y	去聲	序 敘 緒 絮 續
+Ø	y	陰平	淤 吁{吆喝牲口的聲音}
+Ø	y	陽平	魚 於 余 餘 昇{抬} 娛 于 孟 榆
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	tɕ	tɕʰ	ɕ	Ø
+@FIN	yaʔ
+@TON	入聲	3
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yaʔ	入聲	絕 掘 撅 決 訣 覺
+tɕʰ	yaʔ	入聲	缺 確
+ɕ	yaʔ	入聲	血 雪 恤 薛
+Ø	yaʔ	入聲	悅 閱 月 越 曰 粵 躍2{跳~}
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	tɕ	tɕʰ	ɕ	Ø
+@FIN	yãn
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yãn	陰平	捐
+tɕ	yãn	上聲	捲{~起}
+tɕ	yãn	去聲	圈1{豬~} 卷
+tɕʰ	yãn	陰平	圈2{圓~}
+tɕʰ	yãn	陽平	全 泉 拳 權 顴{~骨}
+tɕʰ	yãn	上聲	圈3{~住}
+tɕʰ	yãn	去聲	勸
+ɕ	yãn	陽平	軒 喧 玄 懸 弦
+ɕ	yãn	上聲	宣 選
+ɕ	yãn	去聲	旋 璇 楦{鞋~子}
+Ø	yãn	陰平	冤
+Ø	yãn	陽平	圓 員 元 原 源 袁 園 援 轅
+Ø	yãn	上聲	遠
+Ø	yãn	去聲	院 願 苑 怨
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	yəʔ
+@TON	入聲	3
+
+// Initial	Final	Tone	CharList (Space separated)
+l	yəʔ	入聲	捋2{~槍錢} 律 率2{功~}
+tɕ	yəʔ	入聲	橘 菊 掬 足 局
+tɕʰ	yəʔ	入聲	屈 曲
+ɕ	yəʔ	入聲	穴 戌 削 肅 宿2{~舍} 畜 蓄 俗
+Ø	yəʔ	入聲	裕 域 育 獄 浴
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	yə̃ŋ
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+l	yə̃ŋ	陽平	硫2{~磺} 崙 昆{~山} 淪 輪 龍
+l	yə̃ŋ	去聲	論
+tɕ	yə̃ŋ	陰平	均 菌 君 軍
+tɕ	yə̃ŋ	去聲	俊
+tɕʰ	yə̃ŋ	陽平	羣 裙 瓊 窮
+ɕ	yə̃ŋ	陰平	熏 兄 雄1{英~} 胸 凶 兇
+ɕ	yə̃ŋ	陽平	荀 旬 循 巡 勛 熊 雄2{~壯}
+ɕ	yə̃ŋ	去聲	遜 訓 迅 殉
+Ø	yə̃ŋ	陰平	壅
+Ø	yə̃ŋ	陽平	勻 雲 榮 融 雍 容 庸
+Ø	yə̃ŋ	上聲	允 永 泳 詠 擁 勇
+Ø	yə̃ŋ	去聲	韻 運 量 孕 用
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	ts	tsʰ	s	z	k	kʰ	ŋ	x
+@FIN	ãn
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ãn	陰平	班 斑 頒 扳 般 搬
+p	ãn	上聲	板 版 扁
+p	ãn	去聲	扮 瓣 辦 伴 拌 半 絆
+pʰ	ãn	陰平	攀 潘
+pʰ	ãn	陽平	盤
+pʰ	ãn	去聲	盼 拼1{~命} 判 叛
+m	ãn	陽平	蠻 瞞 饅
+m	ãn	上聲	滿
+m	ãn	去聲	慢 漫
+f	ãn	陰平	帆1{~船} 翻 番 {幾~}
+f	ãn	陽平	凡 帆2{~風順} 煩 繁 繫
+f	ãn	上聲	反
+f	ãn	去聲	范 範 犯 泛 販 飯
+v	ãn	陰平	腕 剜 彎 灣
+v	ãn	陽平	完 丸 玩 頑
+v	ãn	上聲	碗 晚 挽
+v	ãn	去聲	腕 萬 蔓 瓜{~子} 玩{游~}
+t	ãn	陰平	耽 擔1{動詞} 丹 單1{~獨}
+t	ãn	上聲	膽
+t	ãn	去聲	淡 擔2{名詞} 誕 旦 但 彈1{子~蛋}
+tʰ	ãn	陰平	貪 灘 攤
+tʰ	ãn	陽平	譚 談 痰 檀 壇 彈2{~琴} 坦1{~克}
+tʰ	ãn	上聲	坦2{~白} 毯
+tʰ	ãn	去聲	幼 炭 歎
+ts	ãn	陰平	簪 沾 粘{用膠~住} 瞻 氈
+ts	ãn	上聲	盞 攢 展
+ts	ãn	去聲	暫 鑿{~花} 站 蘸 佔 贊 讚{~水} 綻 棧 戰
+tsʰ	ãn	陰平	參 摻 攙
+tsʰ	ãn	陽平	蠶 慘 悲{~慚} 讒 饞 殘 纏
+tsʰ	ãn	上聲	鏟 產
+tsʰ	ãn	去聲	餐 燦 顫
+s	ãn	陰平	三 杉 衫 山 擅 搧
+s	ãn	上聲	閃 傘 散1{~糖}
+s	ãn	去聲	散2{~開} 疝{~氣} 善 扇 單2{姓}
+z	ãn	陽平	然 燃
+z	ãn	上聲	染
+k	ãn	陰平	甘 柑 泔 乾 干 肝 竿
+k	ãn	上聲	感 敢 桿 稈 擀 趕
+k	ãn	去聲	幹
+kʰ	ãn	陰平	看1{~守} 刊
+kʰ	ãn	上聲	坎 砍 勘{~探}
+kʰ	ãn	去聲	看2{見~堪難~}
+ŋ	ãn	陰平	庵 安 鞍
+ŋ	ãn	上聲	揞{~住}
+ŋ	ãn	去聲	暗 按 案 岸
+x	ãn	陰平	憨 涎{~水}
+x	ãn	陽平	含 函 寒 韓 還{~有}
+x	ãn	上聲	喊 罕
+x	ãn	去聲	憾 鼾{~睡} 旱 漢 汗 銲
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	ts	tsʰ	s	z	k	kʰ	ŋ	x
+@FIN	ãŋ
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ãŋ	陰平	幫 邦
+p	ãŋ	上聲	綁 榜
+p	ãŋ	去聲	傍 棒
+pʰ	ãŋ	陽平	旁 螃 龐
+pʰ	ãŋ	去聲	胖
+m	ãŋ	陽平	忙 盲 芒
+m	ãŋ	上聲	莽 蟒
+f	ãŋ	陰平	方 肪 芳 防
+f	ãŋ	陽平	房
+f	ãŋ	上聲	紡 仿 妨 訪
+f	ãŋ	去聲	放
+v	ãŋ	陽平	亡 王
+v	ãŋ	上聲	我 網 枉
+v	ãŋ	去聲	忘 望 旺
+t	ãŋ	陰平	當1{~時}
+t	ãŋ	上聲	黨 擋
+t	ãŋ	去聲	蕩 當2{~鋪}
+tʰ	ãŋ	陰平	湯
+tʰ	ãŋ	陽平	堂 棠 唐 糖 塘
+tʰ	ãŋ	上聲	躺
+tʰ	ãŋ	去聲	燙 趟
+n	ãŋ	陽平	囊
+n	ãŋ	上聲	攮{~了一刀子}
+l	ãŋ	陽平	郎 廊 狼
+l	ãŋ	去聲	朗 浪
+ts	ãŋ	陰平	贓 髒{不乾淨} 張 章 樟 着2{睡~了}
+ts	ãŋ	上聲	長1{生~} 漲 掌
+ts	ãŋ	去聲	葬 藏1{寶~} 臟 丈 仗 杖 帳 脹 障
+tsʰ	ãŋ	陰平	倉
+tsʰ	ãŋ	陽平	長2{短} 腸 場1{~面} 昌 常 嘗
+tsʰ	ãŋ	上聲	場2{~合} 廠
+tsʰ	ãŋ	去聲	暢 唱 倡
+s	ãŋ	陰平	桑 喪1{婚~} 商 傷
+s	ãŋ	陽平	裳
+s	ãŋ	上聲	嗓 償 賞 晌
+s	ãŋ	去聲	喪2{~失} 上 尚
+z	ãŋ	陽平	瓤{瓜~}
+z	ãŋ	上聲	壤 嚷
+z	ãŋ	去聲	讓
+k	ãŋ	陰平	哥 岡 崗 剛 綱 鋼1{~鐵} 缸
+k	ãŋ	上聲	港
+k	ãŋ	去聲	個 鋼2{~刀子} 杠
+kʰ	ãŋ	陰平	康 慷
+kʰ	ãŋ	上聲	慷
+kʰ	ãŋ	去聲	抗 炕
+ŋ	ãŋ	陰平	骯{~髒}
+ŋ	ãŋ	陽平	昂
+x	ãŋ	陽平	行1{銀~} 航 杭
+x	ãŋ	去聲	巷{~子}
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	m
+@FIN	ɔʔ
+@TON	入聲	3
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɔʔ	入聲	不用{用於句尾或單用}
+m	ɔʔ	入聲	沒{用於句尾或單用}
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	v	ts	tsʰ	s	z	k	kʰ	ŋ	x	Ø
+@FIN	ə
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ə	陰平	波 菠{~菜} 玻{~璃}
+p	ə	上聲	簸1{動詞}
+p	ə	去聲	簸2{名詞}
+pʰ	ə	陰平	坡
+pʰ	ə	陽平	婆
+pʰ	ə	去聲	破
+m	ə	陰平	摸
+m	ə	陽平	魔 磨1{~刀}
+m	ə	上聲	抹1{搽油~粉}
+m	ə	去聲	磨2{~石}
+v	ə	陰平	蝸 倭 諉{~了一下} 窩
+v	ə	去聲	臥
+ts	ə	陰平	遮
+ts	ə	上聲	者
+ts	ə	去聲	這1{~點兒}
+tsʰ	ə	陰平	車1{~子}
+tsʰ	ə	上聲	扯
+s	ə	陰平	賒
+s	ə	陽平	蛇 余
+s	ə	上聲	捨
+s	ə	去聲	社 射 麝{~香}
+z	ə	上聲	惹
+k	ə	陰平	歌
+kʰ	ə	陰平	龕
+kʰ	ə	上聲	可
+ŋ	ə	陰平	屙
+ŋ	ə	陽平	鵝 俄 訛
+ŋ	ə	去聲	蛾 餓
+x	ə	陽平	河 何 荷{~花}
+x	ə	去聲	賀
+Ø	ə	陽平	兒
+Ø	ə	上聲	耳
+Ø	ə	去聲	二 貳
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	t	tʰ	n	l	ts	tsʰ	s	z	k	kʰ	ŋ	x
+@FIN	əu
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+t	əu	陰平	兜
+t	əu	上聲	斗 抖 擻{展開} 陡
+t	əu	去聲	鬥 豆 逗
+tʰ	əu	陰平	偷
+tʰ	əu	陽平	投 頭
+tʰ	əu	去聲	透
+n	əu	陽平	奴
+n	əu	上聲	努
+n	əu	去聲	怒
+l	əu	陽平	盧 爐 梠{~草} 廬 樓 摟1{~草} 摟{琉~璃}
+l	əu	上聲	魯 虜 滷 摟2{~抱} 簍
+l	əu	去聲	路 賂 露 漏
+ts	əu	陰平	揪{把鍋~起來} 周 州 粥
+ts	əu	陽平	軸
+ts	əu	上聲	走 肘
+ts	əu	去聲	奏 紂 晝 皺
+tsʰ	əu	陰平	抽
+tsʰ	əu	陽平	綢 稠 籌 愁 仇 酬
+tsʰ	əu	上聲	丑 醜
+tsʰ	əu	去聲	湊 搊{~起來} 臭
+s	əu	陰平	搜 蒐 收
+s	əu	上聲	手 首 守
+s	əu	去聲	嗽{咳~} 瘦 受 獸 壽 授 售
+z	əu	陽平	柔 揉
+z	əu	去聲	肉
+k	əu	陰平	勾 鉤 溝
+k	əu	上聲	狗
+k	əu	去聲	夠 構 購
+kʰ	əu	陰平	摳{眼~}
+kʰ	əu	上聲	口
+kʰ	əu	去聲	扣 寇
+ŋ	əu	陰平	甌{~子} 毆
+ŋ	əu	上聲	藕 嘔
+ŋ	əu	去聲	漚{~糞} 慪{~氣}
+x	əu	陽平	侯 喉 猴 猴{~子}
+x	əu	上聲	吼
+x	əu	去聲	后 厚 後 候
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	f	v	tʰ	ts	tsʰ	s	z	k	kʰ	x
+@FIN	əʔ
+@TON	入聲	3
+
+// Initial	Final	Tone	CharList (Space separated)
+p	əʔ	入聲	不1{~是}
+pʰ	əʔ	入聲	撲-{~醭}
+m	əʔ	入聲	沒2{~有} 木 目 穆
+f	əʔ	入聲	佛 福 幅 蝠 復 複 腹 服 伏 縛
+v	əʔ	入聲	物 屋
+tʰ	əʔ	入聲	特
+ts	əʔ	入聲	執 汁 姪 秩 質 直 值 織 職 殖 植 隻{一~} 炙
+tsʰ	əʔ	入聲	赤 斥 尺 吃
+s	əʔ	入聲	濕 十 拾 實 失 室 食 蝕 識 式 飾 適 釋 石
+z	əʔ	入聲	日
+k	əʔ	入聲	給3{助詞} 胳{~膊}
+kʰ	əʔ	入聲	刻 克
+x	əʔ	入聲	蛤 黑 核2{~桃}
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	ts	tsʰ	s	z	k	kʰ	ŋ	x
+@FIN	ə̃ŋ
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ə̃ŋ	陰平	奔 鎊 崩
+p	ə̃ŋ	上聲	本
+p	ə̃ŋ	去聲	笨
+pʰ	ə̃ŋ	陰平	噴
+pʰ	ə̃ŋ	陽平	盆 朋 彭 膨 棚 蓬
+pʰ	ə̃ŋ	上聲	捧
+pʰ	ə̃ŋ	去聲	碰
+m	ə̃ŋ	陽平	門 蒙1{~住頭}
+m	ə̃ŋ	上聲	猛1{兇~} 蒙2{~古}
+m	ə̃ŋ	去聲	孟 猛2{做事不考慮} 夢 悶
+f	ə̃ŋ	陰平	分1{~開} 風 楓 瘋 豐 封
+f	ə̃ŋ	陽平	焚 墳 馮 峰 蜂 鋒 逢 縫1{~衣服}
+f	ə̃ŋ	上聲	粉 諷
+f	ə̃ŋ	去聲	憤 忿 糞 奮 鳳 俸 縫2{門~} 奉 分2{處~}
+v	ə̃ŋ	陰平	溫 瘟
+v	ə̃ŋ	陽平	文 紋 蚊 聞
+v	ə̃ŋ	上聲	穩
+v	ə̃ŋ	去聲	問 甕
+t	ə̃ŋ	陰平	登 燈 鐙
+t	ə̃ŋ	上聲	等
+t	ə̃ŋ	去聲	扽{把線~斷了} 凳 瞪{澄水渾~瞪}
+tʰ	ə̃ŋ	陰平	吞{麵把包子~}
+tʰ	ə̃ŋ	陽平	騰 謄 疼
+tʰ	ə̃ŋ	去聲	□{慫恿}
+n	ə̃ŋ	陰平	農 膿 能
+n	ə̃ŋ	陽平	嫩
+l	ə̃ŋ	陽平	棱 楞
+l	ə̃ŋ	上聲	冷
+ts	ə̃ŋ	陰平	針 珍 榛 真 增 徵{~求} 蒸 爭 箏 睜 貞 偵 征 正1{~月}
+ts	ə̃ŋ	上聲	拯 整 診
+ts	ə̃ŋ	去聲	枕 鎮 陣 振 震 證 症 鄭 正2{~式} 政 贈
+tsʰ	ə̃ŋ	陰平	稱1{~重量} 撐 鐺
+tsʰ	ə̃ŋ	陽平	層 沉 陳 塵 娠 辰 臣 橙 乘 承 丞 程 成 城 誠 盛1{~飯}
+tsʰ	ə̃ŋ	上聲	懲 稱2{~呼} 逞
+tsʰ	ə̃ŋ	去聲	趁 襯 偵 蹭 秤 稱3{~心}
+s	ə̃ŋ	陰平	森 參{人~深} 僧 升 晨 生 牲 笙 甥 身 申 伸
+s	ə̃ŋ	陽平	神 繩
+s	ə̃ŋ	上聲	沈 審 嬸 省1{節~}
+s	ə̃ŋ	去聲	腎 甚 滲 勝 剩 聖 盛2{興~}
+z	ə̃ŋ	陽平	壬 任1{姓} 人 仁
+z	ə̃ŋ	上聲	紝{縫~機} 忍 仍 扔
+z	ə̃ŋ	去聲	任2{責~;刃} 認 韌
+k	ə̃ŋ	陰平	跟 根 更1{換} 庚 羹
+k	ə̃ŋ	上聲	耿 給2{動詞}
+k	ə̃ŋ	去聲	更2{~加}
+kʰ	ə̃ŋ	陰平	坑1{~蒙拐騙} 吭
+kʰ	ə̃ŋ	上聲	墾 懇 肯 坑2{下~}
+kʰ	ə̃ŋ	去聲	去
+ŋ	ə̃ŋ	陰平	恩
+ŋ	ə̃ŋ	去聲	摁
+x	ə̃ŋ	陽平	痕 恒 衡 橫 亨
+x	ə̃ŋ	上聲	很 狠
+x	ə̃ŋ	去聲	恨
+// HSD Syllabary Data Partition
+// 地区：山西省-忻州市-寧武縣
+// 来源：郭慧《山西寧武方言三區話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	山西省-忻州市-寧武縣
+@SRC	郭慧《山西寧武方言三區話語音研究》
+
+@INI	ts	tsʰ	s	z
+@FIN	ɿ
+@TON	陰平	213
+@TON	陽平	44
+@TON	上聲	313
+@TON	去聲	53
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ɿ	陰平	知 蜘{~蛛} 支 枝 肢 資 姿
+ts	ɿ	上聲	紫 紙 只{~有} 姊 脂 指 子 芝 止 址
+ts	ɿ	去聲	滯 痔 治 制 志 痣 智 自 致 置 至 字 牸{~牛}
+tsʰ	ɿ	陰平	眵{~膿}
+tsʰ	ɿ	陽平	池 馳 瓷 遲 慈 磁{~鐵} 辭 詞 癡 持
+tsʰ	ɿ	上聲	此 恥 齒
+tsʰ	ɿ	去聲	賜 伺{~候} 刺 翅 次
+s	ɿ	陰平	斯 廝 施 私 師 獅 尸 司 絲 思 詩
+s	ɿ	陽平	匙 時
+s	ɿ	上聲	死 屎 使 史 駛 始
+s	ɿ	去聲	世 勢 誓 是 四 示 視 已{~辰} 寺 飼 士 柿 事 試 市
+z	ɿ	上聲	□{把東西~爛啦}

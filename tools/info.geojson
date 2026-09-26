@@ -10022,6 +10022,31 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#926EF8",
+        "marker-size": "medium",
+        "marker-symbol": "c",
+        "title": "平順",
+        "語言": "平順話",
+        "地點": "山西/長治/平順",
+        "地圖集二分區": "晉語－上黨片－長治小片",
+        "音典分區": "華北－上黨－潞州",
+        "陳邡分區": "官話－山東－魯西南大片－潞州片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《平顺县方言志（讨论稿）》",
+        "補充閲讀": "《平顺方言研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.443672,
+          36.206922
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
         "marker-size": "small",
         "marker-symbol": "c",
         "title": "平順東寺頭",
@@ -11618,6 +11643,30 @@
         "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
+        "title": "汧陽",
+        "語言": "汧陽[千陽]話",
+        "地點": "陝西/寶鷄/千陽",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－關中－關中大片－鳳翔片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《千阳方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.140045,
+          34.651632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "隴縣",
         "語言": "隴縣話",
         "地點": "陝西/寶鷄/隴縣",
@@ -11811,6 +11860,30 @@
         "coordinates": [
           107.384313,
           36.046754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "small",
+        "marker-symbol": "b",
+        "title": "慶城卅鋪",
+        "語言": "慶城卅鋪話",
+        "地點": "甘肅/慶陽/慶城/卅鋪",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－秦晉－秦隴大片－慶陽片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《甘肃庆城（卅铺镇）方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.718406,
+          36.178218
         ]
       }
     },
@@ -13045,6 +13118,31 @@
         "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
+        "title": "清水",
+        "語言": "清水話",
+        "地點": "甘肅/天水/清水/永清",
+        "地圖集二分區": "中原官話－隴中片",
+        "音典分區": "西北－關隴",
+        "陳邡分區": "官話－秦晉－隴中大片－隴中片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《甘肃清水方言语音调查研究》",
+        "補充閲讀": "《陇中南方言语音调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.14015,
+          34.757916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "甘谷",
         "語言": "甘谷話",
         "地點": "甘肅/天水/甘谷/大像山",
@@ -14161,6 +14259,30 @@
         "coordinates": [
           103.096377,
           38.630174
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "山丹",
+        "語言": "山丹話",
+        "地點": "甘肅/張掖/山丹",
+        "地圖集二分區": "蘭銀官話－河西片",
+        "音典分區": "西北－甘肅",
+        "陳邡分區": "官話－甘肅－甘肅大片－河西片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《山丹方言志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.096766,
+          38.796302
         ]
       }
     },
@@ -16961,6 +17083,30 @@
         "marker-color": "#916FF7",
         "marker-size": "medium",
         "marker-symbol": "c",
+        "title": "婁煩",
+        "語言": "婁煩話",
+        "地點": "山西/太原/婁煩",
+        "地圖集二分區": "晉語－并州片",
+        "音典分區": "西北－呂梁－憲州",
+        "陳邡分區": "官話－秦晉－并州大片－憲州片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《娄烦方言研究》《山西娄烦方言同音字汇》《娄烦方言语音调查研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.804739,
+          38.072514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "medium",
+        "marker-symbol": "c",
         "title": "吳旗",
         "語言": "吳旗[吳起]話",
         "地點": "陝西/延安/吳起",
@@ -17716,6 +17862,30 @@
         "marker-color": "#916FF7",
         "marker-size": "medium",
         "marker-symbol": "c",
+        "title": "寧武東寨",
+        "語言": "寧武東寨話",
+        "地點": "山西/忻州/寧武/東寨",
+        "地圖集二分區": "晉語－五臺片",
+        "音典分區": "西北－晉北－武州",
+        "陳邡分區": "官話－晉北－雁南大片－河套片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《山西宁武方言三区话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.11,
+          38.81
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "medium",
+        "marker-symbol": "c",
         "title": "岢嵐",
         "語言": "岢嵐話",
         "地點": "山西/忻州/岢嵐",
@@ -18131,6 +18301,30 @@
         "coordinates": [
           112.824729,
           39.532026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "medium",
+        "marker-symbol": "c",
+        "title": "山陰黑圪塔",
+        "語言": "山陰黑圪塔話",
+        "地點": "山西/朔州/山陰",
+        "地圖集二分區": "晉語－大包片",
+        "音典分區": "西北－雁北",
+        "陳邡分區": "官話－晉北－雁北大片－大同片",
+        "歷史音": "0",
+        "錄入人": "Cehkuon",
+        "字表來源": "《黑圪塔村土话音系研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.87,
+          39.38
         ]
       }
     },
