@@ -1,0 +1,1925 @@
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	f	v	t	tʰ	l	k	kʰ	x	ts	tsʰ	s	Ø
+@FIN	a
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	a	陰平	巴 疤 八 把{介詞}
+p	a	陽平	拔
+p	a	上聲	靶 把 𡰪
+p	a	去聲	爸 罷 壩 霸 把{~柄}
+pʰ	a	陰平	怕 □{不密：~布｜布太~} 啪
+pʰ	a	陽平	爬 耙 趴
+pʰ	a	去聲	怕
+m	a	陰平	抹
+m	a	陽平	麻 螞{~螂：蜻蜓}
+m	a	上聲	馬 碼
+m	a	去聲	罵 榪
+f	a	陰平	發 法 砝
+f	a	陽平	伐 罰 乏
+v	a	陰平	襪
+t	a	陰平	搭 答 瘩
+t	a	陽平	達
+t	a	上聲	打
+t	a	去聲	大
+tʰ	a	陰平	塌 塔 踏{~實}
+tʰ	a	陽平	沓 踏
+l	a	陰平	拉 臘 納 捺
+l	a	陽平	拿
+l	a	上聲	喇{從束，又從束}
+l	a	去聲	拉{一~~：一系列}
+k	a	陰平	下{來~子；來一下}
+k	a	陽平	□{線的量稱}
+k	a	去聲	尕 □{倔：~脾氣}
+kʰ	a	陰平	喀{象}
+kʰ	a	上聲	卡
+x	a	陰平	哈 瞎
+x	a	陽平	匣-
+x	a	去聲	下- 嚇-
+ts	a	陰平	扎
+ts	a	陽平	雜 砸 炸
+ts	a	上聲	咋 鍘{剁：~草｜~柴}
+ts	a	去聲	炸 柞 極{舉：~手；抬：~腳｜腳~高}
+tsʰ	a	陰平	察 擦 拤 差 叉 杈
+tsʰ	a	陽平	查 楂{山~} 茬
+tsʰ	a	去聲	詫 岔{走~路：走錯路}
+s	a	陰平	撒 殺 沙 砂 紗
+s	a	陽平	臉{頭}
+s	a	上聲	灑 廈 撒{~種子}
+s	a	去聲	啥 沙{挑選，選取；篩選：把長麥秸~出來}
+Ø	a	陰平	阿
+Ø	a	陽平	阿{~搭：哪裏}
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	t	tʰ	l	k	kʰ	ŋ	x	tʂ	tʂʰ	ʂ	ʐ	ts	tsʰ	s	Ø
+@FIN	au
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	au	陰平	包
+p	au	陽平	刨{~土}
+p	au	上聲	飽 保 寶
+p	au	去聲	暴 爆 報 豹
+pʰ	au	陰平	胞 泡{~~木頭：木質不硬者}
+pʰ	au	陽平	袍 跑 跑
+pʰ	au	去聲	皰 泡
+m	au	陰平	摸-
+m	au	陽平	毛 矛 茅 卯{一~：一次｜三~：三次}
+m	au	去聲	冒 帽 貿 茂 沫-{水~}
+t	au	陰平	刀 叨
+t	au	上聲	島 搗 導 倒
+t	au	去聲	到 倒
+tʰ	au	陰平	濤 掏
+tʰ	au	陽平	桃 逃 陶 淘
+tʰ	au	上聲	討 稻
+tʰ	au	去聲	套
+l	au	陽平	勞 撈 嘮
+l	au	上聲	老 佬 腦 惱
+l	au	去聲	澇 鬧 癆{漢·揚雄《方言》卷三‘凡藥……而毒……謂之癆。’；苦：藥~得很｜~~藥}
+k	au	陰平	高 篙 膏{~藥}
+k	au	上聲	搞 槁{~子：染料} 搞{~著：微：~說說}
+k	au	去聲	告 膏
+kʰ	au	上聲	考 烤
+kʰ	au	去聲	靠 犒
+ŋ	au	陰平	熬 熬{~藥}
+ŋ	au	上聲	襖
+ŋ	au	去聲	傲
+x	au	陰平	蒿 薅
+x	au	陽平	豪 壕 嚎
+x	au	上聲	好
+x	au	去聲	號 浩
+tʂ	au	陰平	召 招 昭 著{~急}
+tʂ	au	陽平	著{~禍：招惹禍端}
+tʂ	au	去聲	照 趙
+tʂʰ	au	陰平	超
+tʂʰ	au	陽平	朝 潮 晁
+ʂ	au	陰平	燒
+ʂ	au	陽平	邵 紹
+ʂ	au	上聲	少
+ʂ	au	去聲	少 燒{霞：早~｜晚~}
+ʐ	au	陽平	饒
+ʐ	au	上聲	擾 繞
+ʐ	au	去聲	□{~眼} 照-{~鏡子}
+ts	au	陰平	糟 遭
+ts	au	上聲	早 澡 找
+ts	au	去聲	罩 焯 竈 慥{性子急火、脾氣~火}
+tsʰ	au	陰平	操 抄 鈔
+tsʰ	au	陽平	曹 槽 造{~謊·造謠，謠傳} 燥{手毒：手~得很；心~：野心勃勃的樣子：他心太~咧}
+tsʰ	au	上聲	炒 吵
+tsʰ	au	去聲	造 躁 燥 翹-
+s	au	陰平	梢 臊{~氣}
+s	au	上聲	嫂 稍 掃 □{喝令牲□後退的聲音}
+s	au	去聲	臊{~子} 潲{~雨} 騷{攪~：搗蛋} 嘯-
+Ø	au	陰平	噢
+Ø	au	上聲	噢
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	k	kʰ	ŋ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ
+@FIN	aŋ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	aŋ	陰平	邦 幫
+p	aŋ	陽平	□{親：在娃臉上~}
+p	aŋ	上聲	榜 綁
+p	aŋ	去聲	棒
+pʰ	aŋ	陽平	龐 旁 傍
+pʰ	aŋ	去聲	胖
+m	aŋ	陽平	忙 茫 芒{~種}
+m	aŋ	上聲	莽 蟒
+m	aŋ	去聲	望-{~南~北}
+f	aŋ	陰平	方 枋{棺材：材~}
+f	aŋ	陽平	房 防
+f	aŋ	上聲	訪 仿 紡
+f	aŋ	去聲	放
+v	aŋ	陽平	亡 忘-
+v	aŋ	上聲	網 妄
+v	aŋ	去聲	望
+t	aŋ	陰平	當 襠{交~：胯下}
+t	aŋ	陽平	當{碰：~上的}
+t	aŋ	上聲	黨
+t	aŋ	去聲	擋 檔 蕩
+tʰ	aŋ	陰平	湯
+tʰ	aŋ	陽平	唐 糖 塘
+tʰ	aŋ	上聲	趟 躺
+tʰ	aŋ	去聲	燙
+n	aŋ	陰平	囊
+n	aŋ	陽平	郎 狼
+n	aŋ	上聲	攮 朗
+n	aŋ	去聲	曩 浪
+k	aŋ	陰平	剛 缸
+k	aŋ	陽平	剛{~才}
+k	aŋ	上聲	港- 肛-
+k	aŋ	去聲	槓
+kʰ	aŋ	陰平	康 糠 扛
+kʰ	aŋ	去聲	抗 炕
+ŋ	aŋ	陰平	昂
+x	aŋ	陰平	巷
+x	aŋ	陽平	航 杭 行
+x	aŋ	去聲	行{一~，兩~｜~子} 項
+ts	aŋ	陰平	髒 贓
+ts	aŋ	去聲	臟 葬 藏
+tsʰ	aŋ	陰平	倉 蒼
+tsʰ	aŋ	陽平	藏=
+tsʰ	aŋ	去聲	□{象}
+s	aŋ	陰平	桑 喪
+s	aŋ	上聲	嗓 搡{推}
+s	aŋ	去聲	喪
+tʂ	aŋ	陰平	張 章
+tʂ	aŋ	陽平	倀{狂妄：看他~的}
+tʂ	aŋ	上聲	長 漲
+tʂ	aŋ	去聲	帳 脹 障
+tʂʰ	aŋ	陰平	猖
+tʂʰ	aŋ	陽平	長 常
+tʂʰ	aŋ	上聲	廠 敞 昌 倡 菖
+tʂʰ	aŋ	去聲	唱
+ʂ	aŋ	陰平	傷
+ʂ	aŋ	陽平	嘗
+ʂ	aŋ	上聲	賞
+ʂ	aŋ	去聲	上 尚 鞘
+ʐ	aŋ	陰平	嚷
+ʐ	aŋ	陽平	瓤
+ʐ	aŋ	上聲	壤{軟而津道} 攘{踏，踩}
+ʐ	aŋ	去聲	讓
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	k	kʰ	ŋ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	∅
+@FIN	ã
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ã	陰平	班 斑 般 搬 扳
+p	ã	上聲	板
+p	ã	去聲	辦 半 拌 絆
+pʰ	ã	陰平	潘 攀
+pʰ	ã	陽平	盤
+pʰ	ã	上聲	畔{挖地：~把}
+pʰ	ã	去聲	盼 攀
+m	ã	陽平	蠻
+m	ã	上聲	滿
+m	ã	去聲	慢 漫 縵{抹，鋪；把泥了的牆再~一遍—磚~地}
+f	ã	陰平	番 翻 帆
+f	ã	陽平	凡 礬 樊 煩 繁
+f	ã	上聲	反 返
+f	ã	去聲	飯 販 範 泛
+v	ã	陽平	頑{不酥，不脆}
+v	ã	上聲	晚 挽 綰
+v	ã	去聲	萬 蔓
+t	ã	陰平	擔 單 耽
+t	ã	上聲	膽
+t	ã	去聲	淡 蛋 旦
+tʰ	ã	陰平	灘 攤
+tʰ	ã	陽平	談 潭 譚 痰
+tʰ	ã	上聲	坦 毯 撣
+tʰ	ã	去聲	炭 嘆 探
+n	ã	陽平	男 南 蘭 難 藍 籃
+n	ã	上聲	懶 攬
+n	ã	去聲	難 湳{滑：這地方~得很} 爛
+k	ã	陰平	干 肝 甘
+k	ã	上聲	敢 趕 擀
+k	ã	去聲	幹 閒-
+kʰ	ã	陰平	刊 看{~守；看豬：養豬｜~貓：養貓}
+kʰ	ã	上聲	砍 坎
+kʰ	ã	去聲	看
+ŋ	ã	陰平	安 庵
+ŋ	ã	上聲	揞{貼；用手掌貼：“他把頭碰破咧，把他媽急得一個勁往傷口上~灰也不頂事}
+ŋ	ã	去聲	按 案 暗
+x	ã	陰平	憨
+x	ã	陽平	韓 函 閒-
+x	ã	上聲	喊 罕 感 憾
+x	ã	去聲	漢 汗 旱 焊
+ts	ã	陰平	□{低頭：頭~下｜頭往下~}
+ts	ã	上聲	攢 塹 湛
+ts	ã	去聲	贊 瓚{濺} 纘 趲 棧
+tsʰ	ã	陰平	參 摻
+tsʰ	ã	陽平	蠶 殘 饞
+tsʰ	ã	上聲	產 慘
+tsʰ	ã	去聲	綻
+s	ã	陰平	三 刪 山 衫
+s	ã	上聲	傘 散 饊
+s	ã	去聲	散 釤
+tʂ	ã	陰平	粘 沾 詹
+tʂ	ã	上聲	展 振
+tʂ	ã	去聲	占 戰
+tʂʰ	ã	陽平	纏
+tʂʰ	ã	上聲	諂 善{好}
+tʂʰ	ã	去聲	沾{濕：娃身上~~兒的；用毛巾，抹布等吸桌上櫃上的水：拿撮布把桌子~一~}
+ʂ	ã	陰平	扇 搧
+ʂ	ã	陽平	闡 嬋 蟬
+ʂ	ã	上聲	閃 陝
+ʂ	ã	去聲	善 苫 煽 扇
+ʐ	ã	陽平	然 燃 粘-{形}
+ʐ	ã	上聲	染 冉
+ʐ	ã	去聲	染
+∅	ã	陽平	咹
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	f	v	t	tʰ	l	k	kʰ	ŋ	x	ts	tsʰ	s	Ø
+@FIN	ei
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ei	陰平	北 背{動} 百 掰
+p	ei	陽平	白
+p	ei	去聲	背 輩 伯
+pʰ	ei	陰平	拍 坯 杯
+pʰ	ei	陽平	陪 賠
+pʰ	ei	上聲	培 沛 佩
+pʰ	ei	去聲	配 倍 陪
+m	ei	陰平	脈 麥 默
+m	ei	陽平	梅 黴 煤 媒
+m	ei	上聲	美 每
+m	ei	去聲	昧 妹
+f	ei	陰平	飛 非
+f	ei	陽平	肥
+f	ei	上聲	匪
+f	ei	去聲	費 廢
+v	ei	陽平	維 唯
+v	ei	上聲	尾
+v	ei	去聲	味 未
+t	ei	陰平	德 得
+t	ei	上聲	得{~起；趕牲□向前的聲音}
+t	ei	去聲	得{認不~；不認識}
+tʰ	ei	陽平	特
+l	ei	陰平	勒 肋 立
+k	ei	陰平	革 格 隔 胳 膈
+k	ei	上聲	給
+kʰ	ei	陰平	剋 客 刻 克
+ŋ	ei	陰平	額 扼
+x	ei	陰平	黑 赫
+x	ei	上聲	嘿
+ts	ei	陰平	窄 責 則
+ts	ei	陽平	賊 翟 宅
+tsʰ	ei	陰平	惻 側 測 廁 拆
+s	ei	陰平	色 塞 澀 嗇 蝨
+s	ei	陽平	誰
+Ø	ei	陽平	欸
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	t	tʰ	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	i
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	i	陰平	逼 筆 壁 璧 畢 必 卑 碑
+p	i	陽平	鼻
+p	i	上聲	比 秕
+p	i	去聲	箅 篦 備 斃 壁
+pʰ	i	陰平	屄
+pʰ	i	陽平	皮 痞 脾
+pʰ	i	上聲	匹 批
+pʰ	i	去聲	屁
+m	i	陰平	密 蜜 秘
+m	i	陽平	彌 𥱼{篾} 糜 靡
+m	i	上聲	米
+m	i	去聲	咪 瀎{擦掉} 謎
+t	i	陰平	低 集 即 籍
+t	i	陽平	敵 笛 集{上~}
+t	i	上聲	抵 底 擠
+t	i	去聲	弟 遞 第 地 祭 際 濟 薺
+tʰ	i	陰平	啼 梯 漆 七 妻 淒
+tʰ	i	陽平	齊 臍 提 堤
+tʰ	i	上聲	體
+tʰ	i	去聲	替 剃
+n	i	陰平	逆 膩 抑
+n	i	陽平	泥 妮 宜 誼
+n	i	上聲	你 擬
+n	i	去聲	泥{~墼；泥抹子}
+l	i	陰平	力 栗 笠
+l	i	陽平	離 籬 黎 梨 剺{割、把肉~開來}
+l	i	上聲	李 理 里
+l	i	去聲	利 麗
+tɕ	i	陰平	雞 機 饑 吉
+tɕ	i	陽平	急
+tɕ	i	上聲	幾
+tɕ	i	去聲	記 忌
+tɕʰ	i	陰平	欺
+tɕʰ	i	陽平	旗
+tɕʰ	i	上聲	起 豈
+tɕʰ	i	去聲	氣 汽 棄 去-
+ɕ	i	陰平	西 媳 婿 希 稀
+ɕ	i	陽平	習 席
+ɕ	i	上聲	喜 洗
+ɕ	i	去聲	戲 細
+Ø	i	陰平	益 溢 一 依 衣
+Ø	i	陽平	移 役 疫 毅
+Ø	i	上聲	尾- 椅 已
+Ø	i	去聲	義 儀 佚 億 憶 意
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	n	tɕ	tɕʰ	ɕ	Ø
+@FIN	ia
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ia	陰平	扒{貼：往牆上~一張標語}
+pʰ	ia	上聲	□{~子：鐵皮水壺}
+m	ia	陽平	□{~嗚、貓叫聲}
+n	ia	陰平	壓 押 鴨
+n	ia	陽平	芽
+n	ia	上聲	啞
+n	ia	去聲	伢{"人家"的合音字} 軋 壓{~畫}
+tɕ	ia	陰平	夾 家 加
+tɕ	ia	上聲	賈 假{真~｜放假}
+tɕ	ia	去聲	架 嫁 價
+tɕʰ	ia	陰平	掐
+tɕʰ	ia	上聲	卡
+tɕʰ	ia	去聲	拤{挖}
+ɕ	ia	陰平	蝦
+ɕ	ia	陽平	霞 俠 匣=
+ɕ	ia	去聲	夏 下=
+Ø	ia	陰平	丫
+Ø	ia	陽平	衙
+Ø	ia	去聲	亞
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	t	tʰ	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iau
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iau	陰平	標 膘 彪
+p	iau	上聲	表 裱
+pʰ	iau	陰平	飄 漂
+pʰ	iau	陽平	瓢 嫖
+pʰ	iau	去聲	票 漂
+m	iau	陰平	苗 描 矛-{~子}
+m	iau	上聲	秒 邈
+m	iau	去聲	妙 廟
+t	iau	陰平	刁 叼 焦 椒
+t	iau	上聲	剿
+t	iau	去聲	吊 掉 調
+tʰ	iau	陰平	劁{~豬} 挑
+tʰ	iau	陽平	調 條 瞧
+tʰ	iau	上聲	挑
+tʰ	iau	去聲	跳 糶
+n	iau	上聲	鳥 咬
+n	iau	去聲	尿
+l	iau	陽平	燎 撩 潦
+l	iau	上聲	了 燎{火~眉毛}
+l	iau	去聲	料 撂
+tɕ	iau	陰平	交 澆 姣
+tɕ	iau	上聲	攪 餃 絞
+tɕ	iau	去聲	教 窖 較
+tɕʰ	iau	陰平	敲 蹺
+tɕʰ	iau	陽平	橋 喬
+tɕʰ	iau	上聲	巧
+tɕʰ	iau	去聲	竅 撬
+ɕ	iau	陰平	肖 宵 霄 消 蕭 簫
+ɕ	iau	上聲	小 曉
+ɕ	iau	去聲	孝 校 笑 嘯 鞘
+Ø	iau	陰平	腰 要{~求} 吆
+Ø	iau	陽平	姚 搖 窯
+Ø	iau	上聲	舀
+Ø	iau	去聲	要 䙅 耀 躍
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	t	tʰ	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iaŋ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iaŋ	陽平	□{~~麵：當地人吃的一種寬麵片}
+t	iaŋ	陰平	漿 槳 將
+t	iaŋ	上聲	獎
+t	iaŋ	去聲	醬 將{大~}
+tʰ	iaŋ	陰平	槍
+tʰ	iaŋ	陽平	牆
+tʰ	iaŋ	上聲	搶
+tʰ	iaŋ	去聲	嗆
+n	iaŋ	陽平	娘
+n	iaŋ	上聲	仰
+n	iaŋ	去聲	娘
+l	iaŋ	陽平	量 良 糧
+l	iaŋ	上聲	兩 輛
+l	iaŋ	去聲	亮 量
+tɕ	iaŋ	陰平	江 姜 疆 僵
+tɕ	iaŋ	陽平	剛-{~才}
+tɕ	iaŋ	上聲	講 耩
+tɕ	iaŋ	去聲	虹 犟
+tɕʰ	iaŋ	陰平	腔
+tɕʰ	iaŋ	陽平	強
+tɕʰ	iaŋ	上聲	強{~制}
+ɕ	iaŋ	陰平	香 相 廂 箱 鑲
+ɕ	iaŋ	陽平	洋 祥 降
+ɕ	iaŋ	上聲	想 響
+ɕ	iaŋ	去聲	象 向 相
+Ø	iaŋ	陰平	央 秧 殃
+Ø	iaŋ	陽平	羊 洋 揚= 陽=
+Ø	iaŋ	上聲	養
+Ø	iaŋ	去聲	樣 映
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	t	tʰ	ȵ	tɕ	tɕʰ	ɕ	Ø
+@FIN	iã
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iã	陰平	邊 編 鞭
+p	iã	上聲	貶 鞭
+p	iã	去聲	變 便 辨 辯 辮
+pʰ	iã	陰平	偏
+pʰ	iã	陽平	便 扁{須}
+pʰ	iã	上聲	片
+pʰ	iã	去聲	騙
+m	iã	陽平	棉 綿
+m	iã	上聲	免 勉 緬
+m	iã	去聲	面
+t	iã	陰平	顛 巔 尖 煎
+t	iã	上聲	點 剪
+t	iã	去聲	電 墊 殿 賤
+tʰ	iã	陰平	天 添 千 遷
+tʰ	iã	陽平	田 甜 前 錢
+tʰ	iã	上聲	舔 諂 淺
+tʰ	iã	去聲	倩
+ȵ	iã	陰平	淹 蔫 醃
+ȵ	iã	陽平	年 嚴- 言-
+ȵ	iã	上聲	攆 碾 眼
+ȵ	iã	去聲	念 碾 研
+tɕ	iã	陰平	兼 奸
+tɕ	iã	上聲	減 儉 檢 揀
+tɕ	iã	去聲	見 建
+tɕʰ	iã	陰平	謙 牽 鵮
+tɕʰ	iã	陽平	乾 虔 鉗
+tɕʰ	iã	上聲	遣 譴
+tɕʰ	iã	去聲	欠 茜
+ɕ	iã	陰平	先 仙 掀
+ɕ	iã	陽平	嫌 賢 弦
+ɕ	iã	上聲	顯 癬 蘚
+ɕ	iã	去聲	現 限 線 縣
+Ø	iã	陰平	煙 咽
+Ø	iã	陽平	鹽 嚴 言 沿
+Ø	iã	上聲	演 魘 掩
+Ø	iã	去聲	驗 彥 雁 燕 咽
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	tɕ	Ø
+@FIN	iæ
+@TON	陰平	31
+@TON	陽平	35
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	iæ	陰平	皆 階
+Ø	iæ	陽平	岩 崖
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	t	tʰ	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iŋ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iŋ	陰平	兵 冰
+p	iŋ	上聲	丙 炳 秉
+p	iŋ	去聲	並 病
+pʰ	iŋ	陰平	乒
+pʰ	iŋ	陽平	平 評 萍 憑
+m	iŋ	陽平	明 鳴
+m	iŋ	去聲	命
+t	iŋ	陰平	丁 釘 精
+t	iŋ	陽平	盯
+t	iŋ	上聲	頂 鼎 井
+t	iŋ	去聲	訂 定 靜
+tʰ	iŋ	陰平	聽 廳 青 清
+tʰ	iŋ	陽平	仃{~當} 亭 晴
+tʰ	iŋ	上聲	挺 請
+tʰ	iŋ	去聲	停{~止}
+n	iŋ	陽平	寧 擰
+n	iŋ	去聲	硬 寧{~願}
+l	iŋ	陽平	玲 靈
+l	iŋ	上聲	領
+l	iŋ	去聲	令 另
+tɕ	iŋ	陰平	經
+tɕ	iŋ	上聲	警 驚
+tɕ	iŋ	去聲	競 竟 鏡
+tɕʰ	iŋ	陰平	輕
+tɕʰ	iŋ	上聲	苘 傾
+tɕʰ	iŋ	去聲	慶
+ɕ	iŋ	陰平	興 星 腥
+ɕ	iŋ	陽平	行 形 刑
+ɕ	iŋ	上聲	醒 擤
+ɕ	iŋ	去聲	興 幸 性 姓
+Ø	iŋ	陰平	英 嬰 纓 應
+Ø	iŋ	陽平	營 熒 贏
+Ø	iŋ	上聲	影 穎
+Ø	iŋ	去聲	應
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	t	tʰ	n	l	tɕ	ɕ	Ø
+@FIN	iɛ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iɛ	陰平	憋 鱉
+p	iɛ	陽平	別
+p	iɛ	上聲	別{~扭}
+p	iɛ	去聲	別{跛：~腳}
+pʰ	iɛ	陰平	撇
+pʰ	iɛ	陽平	別{~來：另來，重來}
+m	iɛ	陰平	滅 蔑
+t	iɛ	陰平	爹 跌 接
+t	iɛ	陽平	迭
+t	iɛ	上聲	姐
+t	iɛ	去聲	借
+tʰ	iɛ	陰平	鐵 帖
+tʰ	iɛ	上聲	妾 笡{斜} 褅
+n	iɛ	陰平	聶 捏
+n	iɛ	陽平	惹
+n	iɛ	去聲	苶
+l	iɛ	陰平	列 獵
+l	iɛ	上聲	裂 趔
+l	iɛ	去聲	離-{~開}
+tɕ	iɛ	陰平	街 結
+tɕ	iɛ	陽平	截
+tɕ	iɛ	上聲	解
+tɕ	iɛ	去聲	介 界
+ɕ	iɛ	陰平	血 薛 歇 蠍
+ɕ	iɛ	陽平	邪 斜
+ɕ	iɛ	上聲	寫
+ɕ	iɛ	去聲	瀉 卸 謝
+Ø	iɛ	陰平	咽 曳
+Ø	iɛ	陽平	爺=
+Ø	iɛ	上聲	野
+Ø	iɛ	去聲	夜 爺
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	t	tʰ	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iɛ̃
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iɛ̃	陰平	賓 斌 彬
+p	iɛ̃	去聲	鬢
+pʰ	iɛ̃	陰平	拼
+pʰ	iɛ̃	陽平	貧
+pʰ	iɛ̃	上聲	品
+pʰ	iɛ̃	去聲	聘
+m	iɛ̃	陽平	民 抿
+m	iɛ̃	上聲	敏
+t	iɛ̃	陰平	津
+t	iɛ̃	去聲	盡 進
+tʰ	iɛ̃	陰平	親 侵
+tʰ	iɛ̃	陽平	秦
+tʰ	iɛ̃	上聲	寢
+n	iɛ̃	陰平	陰
+n	iɛ̃	去聲	窨-
+l	iɛ̃	陽平	鄰 林 臨
+l	iɛ̃	上聲	凜 檁
+l	iɛ̃	去聲	淋 賃
+tɕ	iɛ̃	陰平	金 今 襟
+tɕ	iɛ̃	上聲	緊 僅 謹
+tɕ	iɛ̃	去聲	妗 禁
+tɕʰ	iɛ̃	陰平	欽
+tɕʰ	iɛ̃	陽平	勤 噙
+tɕʰ	iɛ̃	去聲	沁{灑~咧}
+ɕ	iɛ̃	陰平	新 心 欣
+ɕ	iɛ̃	陽平	尋
+ɕ	iɛ̃	去聲	信 囟 汛 迅 釁
+Ø	iɛ̃	陰平	因 陰 蔭
+Ø	iɛ̃	陽平	淫 銀 匀-
+Ø	iɛ̃	上聲	引 隱 癮
+Ø	iɛ̃	去聲	印 飲{~馬} 窨=
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	t	tʰ	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iɤu
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	iɤu	陰平	揪 丟
+t	iɤu	上聲	酒
+t	iɤu	去聲	就
+tʰ	iɤu	陰平	秋
+n	iɤu	陽平	牛
+n	iɤu	上聲	扭 紐
+n	iɤu	去聲	謬
+l	iɤu	陰平	六 綠
+l	iɤu	陽平	劉 留 流
+l	iɤu	上聲	柳
+l	iɤu	去聲	溜 絡
+tɕ	iɤu	陰平	究 糾 灸 久
+tɕ	iɤu	去聲	舊 舅
+tɕʰ	iɤu	陰平	丘
+tɕʰ	iɤu	陽平	求 球
+ɕ	iɤu	陰平	修 休
+ɕ	iɤu	陽平	囚 泅 酋
+ɕ	iɤu	上聲	朽
+ɕ	iɤu	去聲	秀 繡 袖
+Ø	iɤu	陰平	悠 幽 尤 優 憂
+Ø	iɤu	陽平	由 油 郵 游
+Ø	iɤu	上聲	友 有
+Ø	iɤu	去聲	又 幼 誘
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	f	v	t	tʰ	k	kʰ	x	ts	tsʰ	s	Ø
+@FIN	u
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	u	陰平	不
+p	u	上聲	補 堡
+p	u	去聲	部 步 布
+pʰ	u	陰平	撲 鋪
+pʰ	u	陽平	蒲
+pʰ	u	上聲	譜 捕
+pʰ	u	去聲	鋪 步-
+m	u	陰平	木 目 穆
+m	u	陽平	謀 牟 眸
+m	u	上聲	母 拇 某
+m	u	去聲	墓 暮 幕
+f	u	陰平	福 幅 哭- 窟-
+f	u	陽平	浮 伏
+f	u	上聲	斧 苦- 府 赴
+f	u	去聲	富 傅 褲-
+v	u	陰平	誣
+v	u	陽平	無
+v	u	上聲	武 舞 侮
+v	u	去聲	務 霧
+t	u	陰平	都{~城}
+t	u	陽平	毒
+t	u	上聲	堵 賭 肚
+t	u	去聲	度 渡 肚 杜
+tʰ	u	陰平	禿
+tʰ	u	陽平	圖 途 塗
+tʰ	u	去聲	路 露 怒
+k	u	陰平	谷 箍 骨 估
+k	u	上聲	鼓 估 古
+k	u	去聲	顧 雇 故 估
+kʰ	u	陰平	窟=
+kʰ	u	上聲	苦=
+kʰ	u	去聲	庫 褲=
+x	u	陰平	呼 忽
+x	u	陽平	胡 狐
+x	u	上聲	虎
+x	u	去聲	護 戶
+ts	u	陰平	租
+ts	u	陽平	卒 族
+ts	u	上聲	祖 阻 組
+tsʰ	u	陰平	粗 促
+tsʰ	u	去聲	醋
+s	u	陰平	蘇 酥 穌 速
+s	u	去聲	塑 訴 素 嗉
+Ø	u	陰平	烏 屋 巫
+Ø	u	陽平	吳 吾 梧
+Ø	u	上聲	五 伍 捂
+Ø	u	去聲	誤 嗚 悟
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	k	kʰ	x	Ø
+@FIN	ua
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	ua	陰平	瓜 呱
+k	ua	上聲	寡 剮 蝸-{~~牛：蝸牛}
+k	ua	去聲	卦 褂 掛
+kʰ	ua	陰平	誇 咵
+kʰ	ua	上聲	垮
+kʰ	ua	去聲	跨
+x	ua	陰平	花 划{~船} 華{中華}
+x	ua	陽平	鏵
+x	ua	去聲	話 畫 化 華{~山} 樺
+Ø	ua	陰平	挖
+Ø	ua	陽平	娃 瓦{~房}
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	k	kʰ	x	Ø
+@FIN	uaŋ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uaŋ	陰平	光 桄
+k	uaŋ	陽平	桄
+k	uaŋ	上聲	廣
+k	uaŋ	去聲	逛 桄{~子}
+kʰ	uaŋ	陰平	匡 框 筐
+kʰ	uaŋ	陽平	狂
+kʰ	uaŋ	去聲	框{門~}
+x	uaŋ	陰平	荒 慌
+x	uaŋ	陽平	黃 璜 簧
+x	uaŋ	上聲	謊
+x	uaŋ	去聲	晃
+Ø	uaŋ	陰平	汪
+Ø	uaŋ	陽平	王
+Ø	uaŋ	上聲	枉
+Ø	uaŋ	去聲	忘- 旺
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	k	kʰ	x	t	tʰ	l	ts	tsʰ	s	Ø
+@FIN	uei
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uei	陰平	歸 國 龜
+k	uei	上聲	鬼 詭
+k	uei	去聲	貴 桂
+kʰ	uei	陰平	虧 盔
+kʰ	uei	陽平	奎 魁
+kʰ	uei	去聲	愧 櫃 跪
+x	uei	陰平	灰 恢 輝 揮
+x	uei	陽平	回 茴
+x	uei	上聲	海 悔
+x	uei	去聲	會 匯 潰{~膿}
+t	uei	陰平	堆
+t	uei	陽平	□{用長東西碰}
+t	uei	去聲	對 兌 隊
+tʰ	uei	陰平	推
+tʰ	uei	陽平	推
+tʰ	uei	上聲	腿
+tʰ	uei	去聲	退 褪
+l	uei	陽平	雷 檑
+l	uei	上聲	累 磊 壘
+l	uei	去聲	內 淚 類
+ts	uei	上聲	嘴
+ts	uei	去聲	最 罪 醉
+tsʰ	uei	陰平	崔 催
+tsʰ	uei	去聲	翠 脆
+s	uei	陰平	雖
+s	uei	陽平	隨 遂
+s	uei	去聲	歲 碎
+Ø	uei	陰平	威 煨
+Ø	uei	陽平	為 圍
+Ø	uei	上聲	委 萎 偉 違
+Ø	uei	去聲	胃 謂 渭= 衛 慰-
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	t	tʰ	n	k	kʰ	x	ts	tsʰ	s	Ø
+@FIN	uã
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uã	陰平	端
+t	uã	上聲	短
+t	uã	去聲	斷 段
+tʰ	uã	陽平	團
+n	uã	上聲	暖
+k	uã	陰平	官 關 觀
+k	uã	上聲	管 館
+k	uã	去聲	灌 貫 慣
+kʰ	uã	陰平	寬
+kʰ	uã	上聲	款
+x	uã	陰平	歡
+x	uã	陽平	環 還
+x	uã	上聲	緩
+x	uã	去聲	煥 換 患
+ts	uã	陰平	鑽
+ts	uã	去聲	鑽{~子}
+tsʰ	uã	陰平	汆
+tsʰ	uã	陽平	全 痊 泉
+tsʰ	uã	去聲	竄
+s	uã	陰平	酸
+s	uã	去聲	算 蒜
+Ø	uã	陰平	彎 灣
+Ø	uã	陽平	丸 完
+Ø	uã	上聲	碗 婉
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	k	kʰ	x	Ø
+@FIN	uæ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uæ	陰平	乖
+k	uæ	上聲	枴 拐
+k	uæ	去聲	怪
+kʰ	uæ	上聲	塊 會{~計}
+kʰ	uæ	去聲	快
+x	uæ	陽平	淮 懷 槐
+x	uæ	去聲	壞
+Ø	uæ	陰平	懀{惡，厲害}
+Ø	uæ	上聲	歪
+Ø	uæ	去聲	外
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	t	tʰ	k	kʰ	x	ts	tsʰ	s	Ø
+@FIN	uŋ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uŋ	陰平	冬 東
+t	uŋ	上聲	董 懂
+t	uŋ	去聲	棟 動 洞
+tʰ	uŋ	陰平	通 捅
+tʰ	uŋ	陽平	同 桐 筒 童
+tʰ	uŋ	上聲	桶 統
+tʰ	uŋ	去聲	痛
+k	uŋ	陰平	弓 公 功 恭
+k	uŋ	上聲	鞏 攻
+k	uŋ	去聲	共 供 拱
+kʰ	uŋ	陰平	空
+kʰ	uŋ	上聲	恐 孔 控
+kʰ	uŋ	去聲	空{~子}
+x	uŋ	陰平	轟
+x	uŋ	陽平	宏 紅 洪 衡 橫
+x	uŋ	上聲	哄
+x	uŋ	去聲	洪 橫{蠻~} 哄{起~}
+ts	uŋ	陰平	宗 棕 鬃
+ts	uŋ	上聲	總 粽
+ts	uŋ	去聲	縱
+tsʰ	uŋ	陰平	蔥
+tsʰ	uŋ	陽平	從 叢
+s	uŋ	陰平	松
+s	uŋ	陽平	鳳
+s	uŋ	上聲	筍
+s	uŋ	去聲	宋 送 頌 誦
+Ø	uŋ	陰平	翁 嗡
+Ø	uŋ	去聲	甕
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	t	tʰ	k	kʰ	x	ts	tsʰ	s	Ø
+@FIN	uɛ̃
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uɛ̃	陰平	敦 墩
+t	uɛ̃	上聲	躉
+t	uɛ̃	去聲	囤 吨 扽
+tʰ	uɛ̃	陽平	屯 臀
+k	uɛ̃	上聲	滾
+k	uɛ̃	去聲	棍
+kʰ	uɛ̃	陰平	坤 昆
+kʰ	uɛ̃	上聲	捆
+kʰ	uɛ̃	去聲	困 睏
+x	uɛ̃	陰平	昏 婚 葷
+x	uɛ̃	陽平	渾 魂
+x	uɛ̃	上聲	混
+x	uɛ̃	去聲	混
+ts	uɛ̃	陰平	尊 遵
+tsʰ	uɛ̃	陰平	村
+tsʰ	uɛ̃	陽平	存
+tsʰ	uɛ̃	去聲	寸
+s	uɛ̃	陰平	孫
+s	uɛ̃	陽平	旬 殉
+s	uɛ̃	去聲	損
+Ø	uɛ̃	陰平	溫 瘟
+Ø	uɛ̃	上聲	穩
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	k	kʰ	x	t	tʰ	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	Ø
+@FIN	uɤ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uɤ	陰平	郭 鍋
+k	uɤ	上聲	果 裹
+k	uɤ	去聲	過
+kʰ	uɤ	陰平	闊 科
+kʰ	uɤ	上聲	顆
+kʰ	uɤ	去聲	課 錁 嗑
+x	uɤ	陰平	喝 霍
+x	uɤ	陽平	活 何 河 和
+x	uɤ	上聲	火 夥
+x	uɤ	去聲	賀 貨 和{~麵}
+t	uɤ	陰平	多 哆
+t	uɤ	陽平	奪
+t	uɤ	上聲	朵 躲
+t	uɤ	去聲	大- 剁 墮 惰
+tʰ	uɤ	陰平	脫 拖 托
+tʰ	uɤ	陽平	駝 鴕 馱
+tʰ	uɤ	上聲	妥
+tʰ	uɤ	去聲	唾
+l	uɤ	陰平	落 烙
+l	uɤ	陽平	羅 籮 蘿 挪
+l	uɤ	上聲	略 裸
+l	uɤ	去聲	摞 瘰
+ts	uɤ	陰平	作
+ts	uɤ	陽平	鑿
+ts	uɤ	上聲	左
+ts	uɤ	去聲	坐 座
+tsʰ	uɤ	陰平	錯
+tsʰ	uɤ	去聲	措 挫
+s	uɤ	陰平	削=
+s	uɤ	上聲	鎖 瑣 嗩
+tʂ	uɤ	陰平	著
+tʂ	uɤ	陽平	著
+tʂʰ	uɤ	陽平	著{~火咧}
+ʂ	uɤ	陰平	說
+ʐ	uɤ	陰平	若
+ʐ	uɤ	陽平	弱
+Ø	uɤ	陰平	窩
+Ø	uɤ	陽平	倭{~也：順當}
+Ø	uɤ	去聲	臥
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	y
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+n	y	上聲	女
+n	y	去聲	□{蔫：菜~咧}
+l	y	陰平	律 旅 𢲸{捋}
+l	y	陽平	驢
+l	y	上聲	呂 鋁 侶
+l	y	去聲	慮 濾
+tɕ	y	陰平	居 菊 掬 足
+tɕ	y	陽平	局
+tɕ	y	上聲	舉
+tɕ	y	去聲	巨 拒 劇 鋸
+tɕʰ	y	陰平	曲 屈
+tɕʰ	y	陽平	渠
+tɕʰ	y	上聲	取 娶
+tɕʰ	y	去聲	趣 去=
+ɕ	y	陰平	須 需
+ɕ	y	陽平	徐 俗-
+ɕ	y	上聲	許
+ɕ	y	去聲	序 敘 絮 緒 續
+Ø	y	陰平	玉 獄 浴 裕 欲
+Ø	y	陽平	魚 余
+Ø	y	上聲	雨 語
+Ø	y	去聲	與 予 預 育 羽 禹 宇 愉 譽 鬱 芋 遇
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	yã
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+l	yã	陰平	卵{~子：陰囊}
+l	yã	陽平	聯 戀 巒
+l	yã	上聲	斂{~墓：在墳墓左右側土把墳墓往大弄}
+l	yã	去聲	亂
+tɕ	yã	陰平	捐
+tɕ	yã	上聲	卷
+tɕ	yã	去聲	倦 圈 絹
+tɕʰ	yã	陰平	圈
+tɕʰ	yã	陽平	權 拳
+tɕʰ	yã	上聲	犬
+tɕʰ	yã	去聲	勸
+ɕ	yã	陰平	軒
+ɕ	yã	陽平	旋
+ɕ	yã	上聲	選
+ɕ	yã	去聲	楦
+Ø	yã	陰平	淵 冤
+Ø	yã	陽平	元 原 圓 員 袁
+Ø	yã	上聲	遠
+Ø	yã	去聲	院 願 怨
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	tɕ	tɕʰ	ɕ	Ø
+@FIN	yŋ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yŋ	上聲	炯 迥
+tɕʰ	yŋ	陽平	窮 瓊
+ɕ	yŋ	陰平	凶 洶
+ɕ	yŋ	陽平	雄
+Ø	yŋ	陰平	擁
+Ø	yŋ	陽平	庸 榮 容
+Ø	yŋ	上聲	永 泳 勇
+Ø	yŋ	去聲	用
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	yɛ̃
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+l	yɛ̃	陽平	倫 輪
+l	yɛ̃	去聲	論 嫩
+tɕ	yɛ̃	陰平	軍 君 均
+tɕ	yɛ̃	去聲	郡 俊 峻
+tɕʰ	yɛ̃	陽平	群 裙
+tɕʰ	yɛ̃	去聲	群
+ɕ	yɛ̃	陰平	勳 熏
+ɕ	yɛ̃	陽平	循 巡
+ɕ	yɛ̃	去聲	訓 馴
+Ø	yɛ̃	陽平	雲 勻=
+Ø	yɛ̃	上聲	允
+Ø	yɛ̃	去聲	運 暈
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	n	tɕ	tɕʰ	ɕ	Ø
+@FIN	yɤ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+n	yɤ	陰平	掿 握{把~}
+tɕ	yɤ	陰平	角 覺 腳
+tɕ	yɤ	陽平	橛 嚼
+tɕ	yɤ	上聲	決
+tɕ	yɤ	去聲	倔
+tɕʰ	yɤ	陰平	卻 殼-
+tɕʰ	yɤ	上聲	確
+ɕ	yɤ	陽平	學 勺 芍 琁
+Ø	yɤ	陰平	月 閱 藥 約
+Ø	yɤ	去聲	噦
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	t	tʰ	l	k	kʰ	ŋ	x	ts	tsʰ	s	Ø
+@FIN	æ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	æ	陰平	擺{~嘴：吵嘴，犟嘴}
+p	æ	上聲	擺 襬
+p	æ	去聲	拜 湃
+pʰ	æ	陽平	排 牌
+pʰ	æ	上聲	魄 派{~性｜反動~}
+pʰ	æ	去聲	派{動} 敗
+m	æ	陽平	埋
+m	æ	上聲	買
+m	æ	去聲	賣 邁
+t	æ	陰平	呆 逮
+t	æ	陽平	呔{~板兒：竹板}
+t	æ	上聲	歹
+t	æ	去聲	帶 代 貸 戴
+tʰ	æ	陰平	胎
+tʰ	æ	陽平	臺 擡
+tʰ	æ	上聲	柏{打~}
+tʰ	æ	去聲	太 態 泰
+l	æ	陰平	來{一~，二~}
+l	æ	陽平	來 崖
+l	æ	上聲	乃 奶
+l	æ	去聲	賴 癩 耐
+k	æ	陰平	該{欠~帳}
+k	æ	上聲	改
+k	æ	去聲	蓋 概 慨
+kʰ	æ	陰平	開
+kʰ	æ	陽平	□{~住：擋住，整住}
+kʰ	æ	上聲	凱 愷 忔
+ŋ	æ	陰平	挨
+ŋ	æ	陽平	呆{~板} 挨{~打}
+ŋ	æ	上聲	矮 隘 礙
+ŋ	æ	去聲	愛 艾
+x	æ	陰平	核{~武器}
+x	æ	陽平	孩 鞋-
+x	æ	上聲	海 醢
+x	æ	去聲	害 亥 解{姓} 蟹
+ts	æ	陰平	崽 栽 哉
+ts	æ	陽平	咱
+ts	æ	上聲	載 栽{跛：走路一~一~的}
+ts	æ	去聲	再 在 寨
+tsʰ	æ	陰平	猜 差
+tsʰ	æ	陽平	才 材 柴 財
+tsʰ	æ	上聲	采 彩
+tsʰ	æ	去聲	蔡 菜
+s	æ	陰平	腮 嗄{合音字，指聲音"沙啞"}
+s	æ	上聲	篩
+s	æ	去聲	曬 賽 塞{~北}
+Ø	æ	陰平	哎
+Ø	æ	陽平	哎
+Ø	æ	上聲	哎{表應答}
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	f	t	tʰ	n	k	kʰ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ
+@FIN	əŋ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	əŋ	陰平	抨{彈：~彈球兒}
+p	əŋ	去聲	崩 蹦
+pʰ	əŋ	陰平	繃{拉：~繩子}
+pʰ	əŋ	陽平	朋 棚 篷 蓬=
+pʰ	əŋ	上聲	捧
+pʰ	əŋ	去聲	碰
+f	əŋ	陰平	風 瘋 封 蜂
+f	əŋ	陽平	逢 縫 峰 鋒 馮
+f	əŋ	上聲	諷
+f	əŋ	去聲	風 縫 奉
+t	əŋ	陰平	登 燈 蹬
+t	əŋ	上聲	等
+t	əŋ	去聲	鄧 凳 瞪 澄
+tʰ	əŋ	陰平	吞 膯
+tʰ	əŋ	陽平	藤 騰{~出來} 疼
+tʰ	əŋ	去聲	等{~一下}
+n	əŋ	陽平	能 楞 龍 籠 攏
+n	əŋ	上聲	冷 隴 籠
+n	əŋ	去聲	楞 弄 愣
+k	əŋ	陰平	更 耕
+k	əŋ	上聲	耿
+k	əŋ	去聲	更
+kʰ	əŋ	陰平	坑 吭
+kʰ	əŋ	去聲	坑{~人} 吭{不~聲}
+x	əŋ	陰平	亨 哼
+x	əŋ	陽平	恆 行-{~走}
+x	əŋ	去聲	杏
+ts	əŋ	陰平	增 爭
+ts	əŋ	去聲	掙 贈
+tsʰ	əŋ	陰平	撐
+tsʰ	əŋ	陽平	層 曾
+tsʰ	əŋ	去聲	□{倔：~脾氣}
+s	əŋ	陰平	僧 生 甥
+s	əŋ	上聲	省
+tʂ	əŋ	陰平	蒸 正{~月}
+tʂ	əŋ	上聲	整
+tʂ	əŋ	去聲	正 鄭 證 症
+tʂʰ	əŋ	陰平	稱{~斤兩}
+tʂʰ	əŋ	陽平	成 程
+tʂʰ	əŋ	上聲	稱
+tʂʰ	əŋ	去聲	秤
+ʂ	əŋ	陰平	升 聲
+ʂ	əŋ	陽平	繩 盛{~米｜~麵}
+ʂ	əŋ	去聲	盛 勝 聖
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	Ø
+@FIN	ɚ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+Ø	ɚ	陰平	而 日{~子}
+Ø	ɚ	陽平	兒
+Ø	ɚ	上聲	耳 餌
+Ø	ɚ	去聲	二 貳
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	f	v	k	kʰ	ŋ	x	tʂ	tʂʰ	ʂ	ʐ	ts	tsʰ	s	Ø
+@FIN	ɛ̃
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɛ̃	陰平	奔 錛
+p	ɛ̃	上聲	本
+p	ɛ̃	去聲	笨
+pʰ	ɛ̃	陰平	噴
+pʰ	ɛ̃	陽平	盆
+pʰ	ɛ̃	去聲	噴{~嚏}
+m	ɛ̃	陰平	捫 燜
+m	ɛ̃	陽平	門
+m	ɛ̃	去聲	悶
+f	ɛ̃	陰平	分
+f	ɛ̃	陽平	墳 焚
+f	ɛ̃	上聲	粉 芬
+f	ɛ̃	去聲	憤 忿
+v	ɛ̃	陰平	吻
+v	ɛ̃	陽平	文 蚊 紋 聞
+v	ɛ̃	去聲	問
+k	ɛ̃	陰平	根 跟
+k	ɛ̃	去聲	亘{穀}
+kʰ	ɛ̃	陰平	墾 懇
+kʰ	ɛ̃	上聲	肯
+ŋ	ɛ̃	陰平	嗯
+x	ɛ̃	陽平	很
+x	ɛ̃	去聲	狠 恨
+tʂ	ɛ̃	陰平	真 珍 針 籸
+tʂ	ɛ̃	上聲	枕
+tʂ	ɛ̃	去聲	鎮 振 震
+tʂʰ	ɛ̃	陽平	沉 陳
+tʂʰ	ɛ̃	上聲	趁
+tʂʰ	ɛ̃	去聲	抻{拉，扯} 趁
+ʂ	ɛ̃	陰平	申 伸 身 深
+ʂ	ɛ̃	陽平	辰 晨 神
+ʂ	ɛ̃	上聲	審 沈
+ʂ	ɛ̃	去聲	什 甚
+ʐ	ɛ̃	陽平	仁 任
+ʐ	ɛ̃	上聲	忍 軔
+ʐ	ɛ̃	去聲	認 刃 任
+ts	ɛ̃	陰平	臻
+tsʰ	ɛ̃	上聲	磣
+tsʰ	ɛ̃	去聲	襯
+s	ɛ̃	陰平	森
+s	ɛ̃	去聲	滲
+Ø	ɛ̃	陰平	嗯
+Ø	ɛ̃	陽平	嗯
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	p	pʰ	m	f	v	tʰ	k	kʰ	ŋ	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ɤ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɤ	陰平	剝= 博 勃 渤
+p	ɤ	陽平	薄
+p	ɤ	上聲	跛 簸{動} 播
+p	ɤ	去聲	簸{~箕}
+pʰ	ɤ	陰平	坡 潑 煩{~煩：心煩意亂} 波
+pʰ	ɤ	去聲	破 婆
+m	ɤ	陰平	摸 沒
+m	ɤ	陽平	磨 摩
+m	ɤ	上聲	抹 □{~坡：斜坡}
+m	ɤ	去聲	饃 磨
+f	ɤ	陽平	佛{佛教}
+f	ɤ	上聲	縛 拂 佛{仿~}
+v	ɤ	陰平	勿 物
+tʰ	ɤ	上聲	他{單數}
+k	ɤ	陰平	硌{加~子；相處：他~不住人｜夫妻不~}
+k	ɤ	陽平	擱
+k	ɤ	上聲	哥
+k	ɤ	去聲	個 得
+kʰ	ɤ	陰平	渴 苛
+kʰ	ɤ	上聲	可
+ŋ	ɤ	陰平	惡
+ŋ	ɤ	陽平	俄 蛾 娥 訛 鄂 腭
+ŋ	ɤ	上聲	我
+ŋ	ɤ	去聲	餓
+tʂ	ɤ	陰平	者 遮 浙
+tʂ	ɤ	陽平	蔗 轍
+tʂ	ɤ	上聲	抓
+tʂ	ɤ	去聲	這
+tʂʰ	ɤ	陰平	車
+tʂʰ	ɤ	陽平	徹
+tʂʰ	ɤ	上聲	扯 撤
+ʂ	ɤ	陰平	設 賒 說
+ʂ	ɤ	陽平	蛇 折
+ʂ	ɤ	上聲	捨{~不得}
+ʂ	ɤ	去聲	社 射 舍
+ʐ	ɤ	陰平	熱
+ʐ	ɤ	上聲	惹
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	t	tʰ	l	k	kʰ	ŋ	x	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ɤu
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	ɤu	陰平	都{副詞}
+t	ɤu	陽平	抖
+t	ɤu	上聲	斗 抖
+t	ɤu	去聲	鬥 逗
+tʰ	ɤu	陰平	偷
+tʰ	ɤu	陽平	投 頭
+tʰ	ɤu	去聲	透
+l	ɤu	陰平	摟{~錢，~住咧}
+l	ɤu	陽平	摟{~柴} 婁 樓
+l	ɤu	上聲	摟
+l	ɤu	去聲	漏 陋
+k	ɤu	陰平	勾 鉤 溝
+k	ɤu	上聲	狗 苟
+k	ɤu	去聲	夠 購 彀
+kʰ	ɤu	陰平	摳 摳{吝嗇}
+kʰ	ɤu	陽平	扣{~住}
+kʰ	ɤu	上聲	□
+kʰ	ɤu	去聲	寇 扣
+ŋ	ɤu	陰平	歐 毆 嘔{~氣：生悶氣}
+ŋ	ɤu	上聲	偶 藕
+ŋ	ɤu	去聲	漚 漚{~熱：悶熱}
+x	ɤu	陽平	侯 猴 候{氣~}
+x	ɤu	上聲	吼
+x	ɤu	去聲	後 厚 候
+ts	ɤu	陰平	鄒
+ts	ɤu	上聲	走
+ts	ɤu	去聲	奏 揍 做
+tsʰ	ɤu	陰平	㮲{~子：牛籠嘴} 搊
+tsʰ	ɤu	陽平	愁
+tsʰ	ɤu	上聲	瞅
+tsʰ	ɤu	去聲	湊
+s	ɤu	陰平	嗖 搜
+s	ɤu	上聲	嗖{蒼蠅吸吮}
+s	ɤu	去聲	瘦
+tʂ	ɤu	陰平	州 洲 周
+tʂ	ɤu	上聲	肘 帚 𢯳{舉：~起來}
+tʂ	ɤu	去聲	宙 晝 咒
+tʂʰ	ɤu	陰平	抽
+tʂʰ	ɤu	陽平	仇 稠 酬 籌 疇
+tʂʰ	ɤu	上聲	丑
+tʂʰ	ɤu	去聲	臭
+ʂ	ɤu	陰平	收
+ʂ	ɤu	上聲	手 首 守
+ʂ	ɤu	去聲	壽 獸 受 授
+ʐ	ɤu	陽平	柔 揉
+ʐ	ɤu	上聲	揉
+ʐ	ɤu	去聲	肉
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	k	kʰ	x
+@FIN	ɯ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	ɯ	陰平	胳 疙 旮 𧿨{~蹴：蹲}
+kʰ	ɯ	陰平	咳{~嗽}
+kʰ	ɯ	陽平	柯{~杈棍：一種上有兩杈用來支架子的棍}
+x	ɯ	陰平	呵{~嘍：哮喘，氣喘}
+x	ɯ	陽平	核{~桃}
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	ts	tsʰ	s
+@FIN	ɿ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ɿ	陰平	資 滋 支 肢 枝 芝
+ts	ɿ	陽平	知{~了兒}
+ts	ɿ	上聲	紫 子 指 趾 紙
+ts	ɿ	去聲	痔 志 自
+tsʰ	ɿ	陰平	雌 刺{伸：~手} 剔{~鍋；剔鍋}
+tsʰ	ɿ	陽平	瓷 垐{實，堅硬：砸~｜這地方的土太~咧} 辭 祠 詞 遲- 癡
+tsʰ	ɿ	上聲	次
+tsʰ	ɿ	去聲	刺 次{~品} 伺
+s	ɿ	陰平	思 斯 撕 廝{發餿} 師 施 詩
+s	ɿ	陽平	時
+s	ɿ	上聲	史 使 屎 死
+s	ɿ	去聲	四 寺 肆 事 試
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ʅ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʅ	陰平	知 汁 炙 織 幟 執
+tʂ	ʅ	陽平	直 值 姪 置{位~}
+tʂ	ʅ	去聲	智 致 滯 置{~東西}
+tʂʰ	ʅ	陰平	喫 尺
+tʂʰ	ʅ	陽平	遲= 持 池
+tʂʰ	ʅ	上聲	赤 斥
+ʂ	ʅ	陰平	失 濕
+ʂ	ʅ	陽平	石 十 拾
+ʂ	ʅ	去聲	世 勢 誓
+ʐ	ʅ	陰平	日{肏：~鬼}
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	ts	tsʰ	s	z
+@FIN	ʮ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮ	陰平	豬 視 竹
+ts	ʮ	陽平	築 軸 逐 觸
+ts	ʮ	上聲	主 拄 煮
+ts	ʮ	去聲	著 柱 助
+tsʰ	ʮ	陰平	出 初
+tsʰ	ʮ	陽平	除 廚 鋤
+tsʰ	ʮ	上聲	處 楚 礎
+s	ʮ	陰平	書 輸 舒 淑
+s	ʮ	陽平	叔
+s	ʮ	上聲	鼠 暑 署
+s	ʮ	去聲	樹 術 述
+z	ʮ	陰平	入
+z	ʮ	陽平	如 儒
+z	ʮ	上聲	乳 汝
+z	ʮ	去聲	擩
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	ts	tsʰ	s	z
+@FIN	ʮa
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮa	陰平	抓
+ts	ʮa	上聲	爪{~子}
+tsʰ	ʮa	陰平	□{象}
+tsʰ	ʮa	上聲	□{“日把~”：不行，不行的：你莫~｜他真是個~}
+tsʰ	ʮa	去聲	□{往後退：做活不要往後~，要往頭裡做}
+s	ʮa	陰平	刷
+s	ʮa	上聲	耍
+z	ʮa	陽平	挼{動}
+z	ʮa	去聲	挼{形}
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	ts	tsʰ	s
+@FIN	ʮaŋ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮaŋ	陰平	莊 樁 裝
+ts	ʮaŋ	去聲	壯 狀
+tsʰ	ʮaŋ	陰平	窗 瘡
+tsʰ	ʮaŋ	陽平	床
+tsʰ	ʮaŋ	上聲	創 闖
+tsʰ	ʮaŋ	去聲	撞
+s	ʮaŋ	陰平	雙 霜
+s	ʮaŋ	上聲	爽
+s	ʮaŋ	去聲	雙{~生兒}
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	ts	tsʰ	s	z
+@FIN	ʮei
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮei	陰平	追 錐
+ts	ʮei	去聲	墜
+tsʰ	ʮei	陰平	吹 炊
+tsʰ	ʮei	陽平	垂 槌
+tsʰ	ʮei	上聲	捶
+s	ʮei	陰平	摔
+s	ʮei	上聲	水
+s	ʮei	去聲	睡 瑞 稅
+z	ʮei	上聲	尾- 蕊
+z	ʮei	去聲	銳
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	ts	tsʰ	s	z
+@FIN	ʮã
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮã	陰平	專 磚
+ts	ʮã	上聲	轉
+ts	ʮã	去聲	轉 傳 撰 篆
+tsʰ	ʮã	陰平	川 穿
+tsʰ	ʮã	陽平	傳 椽
+tsʰ	ʮã	上聲	喘
+tsʰ	ʮã	去聲	串
+s	ʮã	陰平	栓 拴
+s	ʮã	陽平	船
+s	ʮã	去聲	涮
+z	ʮã	上聲	軟 阮
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	ts	tsʰ	s
+@FIN	ʮæ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮæ	上聲	栧
+ts	ʮæ	去聲	拽
+tsʰ	ʮæ	陰平	揣
+tsʰ	ʮæ	上聲	揣{摸}
+s	ʮæ	陰平	衰
+s	ʮæ	上聲	甩
+s	ʮæ	去聲	帥 率
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	ts	tsʰ	z
+@FIN	ʮəŋ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮəŋ	陰平	中 鐘 忠 終
+ts	ʮəŋ	上聲	腫 種 塚
+ts	ʮəŋ	去聲	種 重 眾
+tsʰ	ʮəŋ	陰平	沖
+tsʰ	ʮəŋ	陽平	蟲 重
+tsʰ	ʮəŋ	上聲	充
+tsʰ	ʮəŋ	去聲	銃{拿~子~一個眼兒}
+z	ʮəŋ	陽平	茸 戎 絨 仍
+z	ʮəŋ	上聲	𮗥{鳥獸細毛}
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	ts	tsʰ	s	z
+@FIN	ʮɛ̃
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮɛ̃	陽平	循 準
+tsʰ	ʮɛ̃	陰平	春 椿
+tsʰ	ʮɛ̃	陽平	純
+tsʰ	ʮɛ̃	上聲	蠢
+s	ʮɛ̃	陽平	唇
+s	ʮɛ̃	去聲	順 舜
+z	ʮɛ̃	去聲	閏 潤
+// HSD Syllabary Data Partition
+// 地区：陝西省-咸陽市-興平市
+// 来源：興平縣志辦公室《興平縣方言志（初稿）》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-咸陽市-興平市
+@SRC	興平縣志辦公室《興平縣方言志（初稿）》
+
+@INI	ts	tsʰ	s
+@FIN	ʮɤ
+@TON	陰平	31
+@TON	陽平	35
+@TON	上聲	52
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ʮɤ	陰平	桌 拙 捉
+ts	ʮɤ	陽平	卓 琢 啄 濁 鐲
+tsʰ	ʮɤ	陰平	戳
+s	ʮɤ	上聲	所
