@@ -67,6 +67,10 @@ def getTones(tones):
 			l[str(index)] = (v,str(t8),str(t4),n,m)
 	return json.dumps(l, ensure_ascii=False).lower()
 
+def normStr(s):
+	if type(s) is str: return re.sub("<([^A-z<>]+)>", "〈\\1〉", s)
+	return s
+
 def normNames(s):
 	if not s: return ""
 	if type(s) is float: s = str(int(s))
@@ -105,7 +109,7 @@ def normSource(books):
 			target = books.hyperlink.target
 			return f"<a href={target}>{books.value}</a>"
 		else:
-			return books.value
+			return normStr(books.value)
 	return None
 
 def getCellBgColor(cell):
@@ -152,7 +156,7 @@ def 加載(省=None):
 	經緯度典 = dict()
 	for row in sheet.rows:
 		lineCount += 1
-		行 = [j.value if j.value else "" for j in row]
+		行 = [normStr(j.value) if j.value else "" for j in row]
 		if lineCount == 1: fields = 行
 		if lineCount <= 2:
 			continue
