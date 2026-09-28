@@ -1,7 +1,13 @@
 #漢字	音標	解釋
 □	na1	(跟),~你去县
 □	tʰoŋ1	(窗)~门
+□	lœ3	(借词)~刀(锉刀)
 □	pi3	(肉)猪~
+□	niu3	(借词)(拧)
+□	niu3	(借词)花~(花谢)
+□	tsioŋ3	(借词)(往)
+□	tʰe6	(借词)~mu44(前天)
+□	tɔŋ6	(借词)(水漲)
 □	neʔ7	ien55~(怎样)
 □	ɬœʔ7	kɔ44~(非常,很)
 □	ky1	nɔm22~(织布机)
@@ -21,12 +27,10 @@
 □	tʰau2	~mou35(外面)
 □	ken2	~酒
 □	ian2	~你(还你)
-□	lœ3	~刀(锉刀)
 □	ŋi3	~个(那个)
 □	pai3	~脚(跛脚)
 □	ian3	~neʔ5(怎样)
 □	muan3	~秧(拔秧)
-□	tʰe6	~mu44(前天)
 □	tsʰœ6	~仔(梭子)
 □	hɔ6	~货(运货)
 □	ŋi6	~noi35(里面)
@@ -58,20 +62,17 @@
 □	hau6	天~(天亮)
 □	tsʰia6	守~(守寡)
 □	kui1	屎~(粪瓢)
-□	tsioŋ3	往
 □	loi2	惹
 □	tsʰœ6	扔
 □	ia3	抓
 □	kia2	披
 □	pʰɔŋ3	抱
 □	iap7	招手
-□	niu3	拧
 □	kʰia6	拿
 □	tʰiu3	换
 □	kʰiu6	撬
 □	pʰiu6	新~(新媳妇)
 □	tsʰiu1	欠
-□	tɔŋ6	水漲
 □	mou6	没有
 □	iat8	滑
 □	koʔ7	烤
@@ -92,7 +93,6 @@
 □	iap8	翅膀
 □	hɔʔ7	聲音嘶哑
 □	kʰin6	肫~(鸡肫)
-□	niu3	花~(花谢)
 □	pʰɔʔ7	药~(药渣)
 □	pʰiu6	落~(赖窝)
 □	kʰeu1	蜈蚣
@@ -120,8 +120,8 @@
 丁	teŋ1	
 七	tsʰit7	
 万	uan6	
+丈	tsʰioŋ6	(借词)(量词)
 丈	tsʰioŋ1	姑~
-丈	tsʰioŋ6	量词
 三	ɬɔm1	
 上	ɬioŋ1	动词
 上	ɬioŋ6	方位词
@@ -139,7 +139,7 @@
 个	kuai1	
 中	tuŋ1	
 丰	hoŋ1	
-串	tsʰun3	
+串	tsʰun3	借词
 丸	uon2	
 丹	tan1	
 主	tsy3	
@@ -162,13 +162,13 @@
 二	ŋi6	
 虧	kʰui1	
 云	un2	
-互	hu6*	
+互	hu6	
 井	tsaŋ3	
-亞	a6	~洲
+亞	a6	(借词)~洲
 亡	oŋ2	
 亥	hai6	
-產	ɬan6	
-享	hioŋ3*	
+產	ɬan6	借词
+享	hioŋ3	
 京	kiŋ1	
 亭	teŋ2	
 親	tsʰin1	
@@ -187,7 +187,7 @@
 價	kɔ1	
 份	hun6	
 休	heu1	
-衆	tsoŋ3	
+衆	tsoŋ3	借词
 優	iu1	
 會	hai1	动词
 會	hoi6	开~
@@ -197,7 +197,7 @@
 伯	paʔ7	
 伸	tsʰœn1	~腰
 位	ui6	
-體	tʰe6	
+體	tʰe6	借词
 佛	hut8	
 作	tsoʔ7	
 你	ŋi1	
@@ -205,7 +205,7 @@
 便	pen6	
 俗	ɬuʔ8	
 保	pou3	
-保	pɔ6	
+保	pɔ6	借词
 信	ɬin1	
 倍	poi6	
 倒	tou3	
@@ -224,9 +224,9 @@
 元	ŋun2	
 兄	hiaŋ1	
 先	ɬan1	
-免	tʰu3	
 免	men3	
-黨	tɔŋ6	
+免	tʰu3	借词
+黨	tɔŋ6	借词
 兜	tau1	
 全	tsun2	
 八	pat7	
@@ -236,18 +236,18 @@
 蘭	lɔm2	
 共	kʰuŋ6	
 關	un1	~门
+興	hiŋ3	(借词)高~
 興	hiŋ1	
-興	hiŋ3	高~
 兵	piŋ1	
 其	ke2	𠊎~(我的)
-典	ten6	
+典	ten6	借词
 養	ioŋ3	
 兼	kim1	
-獸	ɬiu3*	
+獸	ɬiu3	借词
 内	noi6	
 册	tsʰaʔ7	
 再	tsai1	
-寫	ɬia3*	
+寫	ɬia3	
 軍	kun1	
 農	nuŋ2	
 冤	uon1	~仇
@@ -257,7 +257,7 @@
 決	kyʔ7	
 冷	laŋ1	
 淨	tsiŋ6	
-準	tsun6	
+準	tsun6	借词
 涼	lioŋ2	
 減	kam3	
 几	ki3	~多
@@ -285,7 +285,7 @@
 副	hu1	
 割	kɔt7	
 力	liʔ8	
-勸	kʰun3	
+勸	kʰun3	借词
 辦	pen6	
 功	kuŋ1	
 加	kɔ1	
@@ -300,7 +300,7 @@
 北	pœʔ7	
 匙	ɬi2	
 匣	hɔp8	
-匪	pʰi6	
+匪	pʰi6	借词
 區	kʰy1	
 醫	i1	
 十	tsʰip8	
@@ -322,13 +322,13 @@
 印	in1	
 危	ŋui2	
 卵	lɔn3	
-卷	kun3*	
-廠	tsʰioŋ6*	
+卷	kun3	借词
+廠	tsʰioŋ6	借词
 廳	tʰaŋ1	
 历	leʔ7	
-厲	li6*	
+厲	li6	
 壓	ɔp7	
-厭	iam3	
+厭	iam3	借词
 厚	kau6	
 原	ŋun2	
 厦	ha6	~门
@@ -337,19 +337,19 @@
 縣	ian6	
 叉	tsʰa1	
 叉	tsʰɔ1	
-友	iu6	
+友	iu6	借词
 雙	ɬuŋ1	
-反	huan6	
+反	huan6	借词
 发	huat7	
 叔	tsʰyʔ7	
 變	pen1	
 疊	tʰap8	
-口	heu3	
+口	heu3	借词
 古	ku3	
 句	ku1	
 叫	keu1	哭
 台	tai2	
-右	iu6*	
+右	iu6	
 葉	iap8	
 號	hɔ6	
 司	ɬai1	~付
@@ -361,9 +361,9 @@
 同	tuŋ2	~志
 名	miaŋ2	
 后	heu6	
-向	hioŋ3	
+向	hioŋ3	借词
 嚇	haʔ7	怕
-呂	ly6*	
+呂	ly6	借词
 吞	tʰun1	
 吠	pʰui6	
 含	hɔm2	
@@ -377,11 +377,11 @@
 命	miaŋ6	
 和	hu2	~平
 咸	ham2	
-品	pʰiaŋ6	
+品	pʰiaŋ6	借词
 響	hiaŋ1	
 啞	ɔ3	病~(哑巴)
 哥	ko1	
-哽	kaŋ6	
+哽	kaŋ6	借词
 唱	tsʰioŋ1	
 啄	toʔ7	
 商	ɬioŋ1	
@@ -391,9 +391,9 @@
 喊	ham3	
 喜	hi3	
 噴	pʰun1	
-嗅	heu3	
+嗅	heu3	借词
 嗣	ɬu6	
-嗽	ɬau3	
+嗽	ɬau3	借词
 嘲	ɬoʔ7	啧
 嘴	tsoi1	
 嚼	tsioʔ7	
@@ -401,7 +401,7 @@
 回	hoi2	
 因	in1	
 团	tʰuan2	
-囥	kʰɔŋ3	
+囥	kʰɔŋ3	借词
 園	hun2	
 困	kʰun1	
 圍	ui2	
@@ -418,7 +418,7 @@
 坪	pʰiaŋ2	
 坯	pʰoi1	
 型	heŋ2	
-墊	ten6*	
+墊	ten6	
 城	ɬiaŋ2	
 基	ki1	
 堂	toŋ2	
@@ -428,7 +428,7 @@
 塔	tʰɔp7	
 塞	ɬaʔ7	
 填	ten2	
-墓	mu3	
+墓	mu3	借词
 墘	kin2	边沿
 牆	tsʰioŋ2	
 增	tseŋ1	
@@ -452,12 +452,12 @@
 奪	tʰɔt8	
 奇	ki2	
 契	kʰe1	
-獎	tsioŋ6*	
+獎	tsioŋ6	借词
 奴	nu2	
 奸	kan1	
 好	hou3	
 妖	iu1	
-妥	tʰu6	
+妥	tʰu6	借词
 妹	moi1	
 妻	tsʰœ1	
 姊	tsi3	
@@ -486,22 +486,22 @@
 學	hoʔ8	
 孽	ŋet8	
 寧	neŋ2	
-守	ɬiu3*	
+守	ɬiu3	
 安	an1	平~
 安	ɔn1	福~
-宋	ɬuŋ3	
+宋	ɬuŋ3	借词
 完	uon2	
 官	kuon1	
 定	tʰaŋ6	
 宜	ŋi2	
 宜	pen6	
-寶	pɔ3*	
+寶	pɔ3	
 實	tsʰit8	
 客	haʔ7	
 宣	ɬɔn1	
 宪	hin1	
 宮	kyŋ1	
-宰	tsai6	~相
+宰	tsai6	(借词)~相
 害	hai6	
 家	kɔ1	
 寬	uan1	
@@ -519,9 +519,9 @@
 壽	tsʰiu6	
 封	hoŋ1	
 射	tsʰia6	
+將	tsioŋ3	(借词)大~
 將	tsioŋ1	
-將	tsioŋ3	大~
-小	ɬau3*	
+小	ɬau3	
 少	tsʰiu3	
 尖	tsiam1	
 嘗	ɬioŋ2	
@@ -537,14 +537,14 @@
 屈	kʰut7	
 屍	ɬi1	
 屎	tsʰi3	
-展	ten6*	
+展	ten6	借词
 屬	ɬuʔ8	
 層	tsʰeŋ2	
 山	ɬan1	
 歲	ɬui1	
 岔	tsʰa1	
 崗	koŋ1	
-島	tɔ6	
+島	tɔ6	借词
 巖	ŋɔm2	
 巖	ŋiam2	
 嶺	liaŋ1	
@@ -553,14 +553,14 @@
 州	tsiu1	
 巡	ɬun2	
 工	kuŋ1	
-左	tso6	
+左	tso6	借词
 巧	kʰiu3	
 差	tsʰɔ1	
 巷	hœŋ3	
 巾	kœn1	
-幣	pi6	
+幣	pi6	借词
 布	pu1	
-帥	ɬɔi3	
+帥	ɬɔi3	借词
 希	hi1	
 帳	tsioŋ1	
 帖	tʰap7	
@@ -574,23 +574,23 @@
 干	kɔn1	
 干	kan1	~部
 年	nan2	
-廣	koŋ3*	
-慶	kʰiŋ3	
+廣	koŋ3	
+慶	kʰiŋ3	借词
 牀	tsʰɔŋ2	
-庫	kʰu3	
+庫	kʰu3	借词
 應	iŋ1	
 底	tai3	
 店	tiam1	
 廟	miu6	
-府	hu6	
+府	hu6	借词
 度	tu6	
-座	tsɔ6	牙~
+座	tsɔ6	(借词)牙~
 庭	teŋ2	
 庵	ɔm1	
 康	kʰoŋ1	
 廊	loŋ2	
 延	ian2	
-建	kyn3*	
+建	kyn3	借词
 開	hoi1	
 弄	lœŋ6	
 式	tsʰiʔ7	
@@ -606,13 +606,13 @@
 强	kioŋ2	
 强	kioŋ6	勉~
 歸	kui1	
+當	toŋ3	(借词)上~
 當	toŋ1	
-當	toŋ3	上~
 形	heŋ2	
-彩	tsʰai6	
+彩	tsʰai6	借词
 彪	piu1	
 彭	pʰaŋ2	
-影	ɔŋ6	
+影	ɔŋ6	借词
 待	tai6	
 律	lyt8	
 徒	tu2	
@@ -626,22 +626,22 @@
 念	nam6	
 態	tʰai1	
 急	kip7	
+性	ɬaŋ3	(借词)急~
 性	ɬaŋ1	
-性	ɬaŋ3	急~
 怨	un3	
-怪	kuai3	
+怪	kuai3	借词
 總	tsuŋ3	
 恨	hɔn6	
 恩	ɔn1	
 息	ɬiʔ7	
 恶	oʔ7	
-悔	hoi3	
+悔	hoi3	借词
 情	tsʰaŋ2	亲~(亲戚)
 惜	ɬiʔ7	
 慘	tsʰɔm3	
-慣	kuan3	
-惰	tɔ6	
-想	ɬioŋ3*	
+慣	kuan3	借词
+惰	tɔ6	借词
+想	ɬioŋ3	
 愁	teu2	
 意	i1	
 感	kam3	
@@ -672,8 +672,8 @@
 抄	tsʰau1	
 把	pɔ3	
 投	tau2	
-搶	tsʰioŋ6	
-報	pɔ3	
+搶	tsʰioŋ6	借词
+報	pɔ3	借词
 抹	muat7	
 押	ɔp7	
 擔	tɔm1	
@@ -696,15 +696,15 @@
 捏	net7	
 捐	kyn1	
 撈	lo1	~ɬaŋ44 pʰiu21(娶新娘); ~钱(讨钱)
-損	ɬun6	
-捧	pʰuŋ6	
-据	koi3	
-捲	kun3*	
+損	ɬun6	借词
+捧	pʰuŋ6	借词
+据	koi3	借词
+捲	kun3	
 捶	toi2	~腰
-掌	tsioŋ6	
+掌	tsioŋ6	借词
 排	pʰai2	
 掘	kut8	
-探	tʰam3	
+探	tʰam3	借词
 接	tsiap7	
 推	tʰoi1	~刀(刨刀)
 掩	ɔm1	
@@ -729,20 +729,20 @@
 擘	paʔ7	
 支	tse1	
 收	ɬiu1	
-改	kai6	
+改	kai6	借词
 放	pioŋ1	
-政	tsiŋ3*	
+政	tsiŋ3	借词
 故	ku1	
 救	kiu1	
 敕	tʰiʔ7	
 教	kau1	
 敢	kɔm3	
-散	ɬan3	
+散	ɬan3	借词
 㪗	tʰeu3	解开
-敬	kiŋ3	
+敬	kiŋ3	借词
 數	ɬu1	
 敲	kʰɔ1	
-整	tsiŋ3	
+整	tsiŋ3	借词
 文	uon2	
 斑	pan1	~面(麻脸)
 斗	teu3	
@@ -752,16 +752,16 @@
 斧	pu3	~头
 斬	tsɔm3	
 斫	tsioʔ8	砍
+斷	tuan3	(借词)决~
 斷	tʰɔn6	
-斷	tuan3	决~
 新	ɬin1	
 方	hoŋ1	
 旁	poŋ2	
-旅	ly6	
+旅	ly6	借词
 族	tsuʔ8	
 旗	ki2	
 日	ŋit8	
-旨	tsi6*	
+旨	tsi6	借词
 旱	hɔn6	
 時	tsʰi2	
 旺	oŋ6	
@@ -769,8 +769,8 @@
 明	miŋ2	
 明	muŋ2	~年
 易	i6	
+星	ɬaŋ6	(借词)~仔
 星	ɬaŋ1	
-星	ɬaŋ6	~仔
 春	tsʰyn1	~天
 是	tsʰi1	
 晝	tsiu1	
@@ -778,7 +778,7 @@
 曬	ɬai1	
 暈	uon1	头~
 晡	pu1	今~(今天)
-景	kiŋ6	
+景	kiŋ6	借词
 晴	tsʰaŋ2	天~
 暖	nɔn1	
 暗	ɔm1	
@@ -786,7 +786,7 @@
 曲	kʰu1	~尺
 更	kaŋ1	三~
 曾	tseŋ1	姓
-替	tʰe3	
+替	tʰe3	借词
 最	tsoi1	
 月	ŋœt8	
 朋	peŋ2	
@@ -813,12 +813,12 @@
 杷	pɔ2	枇~
 松	ɬuŋ1	
 松	ɬuŋ2	~树
-板	pʰen3*	
+板	pʰen3	
 枇	pi2	~杷
 枋	pʰuŋ1	
 林	lim2	
 果	ku3	~子
-棗	tsɔ6	
+棗	tsɔ6	借词
 架	kɔ1	
 柄	piaŋ1	
 柏	paʔ7	
@@ -842,21 +842,21 @@
 根	kyn1	
 格	kaʔ7	
 栽	tsai1	
-桂	ki3	
+桂	ki3	借词
 桃	tʰɔ2	
 桄	kuaŋ1	床~
 框	kʰuŋ1	
-案	an3	
+案	an3	借词
 桌	toʔ7	
 桐	tʰuŋ2	
 桑	ɬoŋ1	
 桔	kit7	
 橋	kʰiu2	
-槳	tsioŋ6*	
+槳	tsioŋ6	借词
 桶	tʰuŋ3	
 梁	lioŋ2	
 梅	moi2	
-夢	mœŋ3	
+夢	mœŋ3	借词
 梧	ŋu2	~桐
 梨	li2	
 梯	tʰoi1	
@@ -864,14 +864,14 @@
 棉	men2	
 棋	ki2	
 棍	kun1	
-棍	kɔn3	
+棍	kɔn3	借词
 棺	kuon1	
 椅	i3	
 椽	tʰun2	
 楂	tsɔ1	山~
 楠	nɔm2	~机(织布机)
-楦	hun3	鞋~
-榜	poŋ6	
+楦	hun3	(借词)鞋~
+榜	poŋ6	借词
 榫	ɬun3	
 榴	leu2	手~弹
 槌	tʰui2	
@@ -886,29 +886,29 @@
 歡	huan1	
 欹	kʰi1	歪
 欺	kʰi1	
-款	kʰuan6	
+款	kʰuan6	借词
 歇	hœt7	
 歌	ko6	唱~
 正	tsiaŋ1	
-步	pʰu6*	
+步	pʰu6	
 武	u3	
 死	ɬi3	
-殕	pʰu6	
+殕	pʰu6	借词
 段	tɔn6	
 殿	ten6	
-每	moi6	
+每	moi6	借词
 毒	tuʔ8	
 比	pi3	
 毛	mou1	
 毡	tsen1	
-毯	tʰam6	
+毯	tʰam6	借词
 民	min2	
 气	kʰi1	
 水	tsʰy3	
 汁	tsip7	
 求	kiu2	
 汇	hui6	
-漢	han3	
+漢	han3	借词
 江	koŋ1	
 池	te2	
 湯	tʰoŋ1	
@@ -928,14 +928,14 @@
 波	pʰɔ1	
 泥	nai2	
 淚	lui6	
-瀉	ɬia3	
+瀉	ɬia3	借词
 潑	pʰuat7	
 潔	ket7	
 洋	ioŋ2	
 洗	ɬai3	
 洞	tœŋ6	
 活	huat8	
-派	pʰai3	
+派	pʰai3	借词
 流	liu2	
 淺	tsʰan3	
 漿	tsioŋ1	
@@ -944,7 +944,7 @@
 浙	tset7	
 浪	loŋ6	
 浮	pʰeu2	
-海	hoi3*	
+海	hoi3	
 浸	tsim1	
 涂	tu2	
 淋	lim2	
@@ -967,12 +967,12 @@
 滴	teʔ7	
 漆	tsʰit7	
 漏	lau6	
-漱	ɬoŋ3	
+漱	ɬoŋ3	借词
 潘	pʰuan1	
 潭	tʰɔm2	
 潲	ɬau1	猪~(泔水)
 激	keʔ7	
-灌	kuan3*	
+灌	kuan3	
 火	hu3	
 滅	met8	
 燈	tœŋ1	
@@ -986,8 +986,8 @@
 燉	tim6	
 炙	tsiaʔ7	~日头
 炭	tʰɔn1	
-炮	pʰau3	
-炸	tsa3	
+炮	pʰau3	借词
+炸	tsa3	借词
 點	tam3	
 爛	lɔn6	
 烘	huŋ1	
@@ -1017,7 +1017,7 @@
 爹	tia1	
 爽	ɬɔŋ3	
 爿	pan2	
-片	pʰen3	
+片	pʰen3	借词
 牌	pʰai2	
 牙	ŋɔ2	
 牛	ŋou2	
@@ -1040,7 +1040,7 @@
 珠	tsu1	
 班	pan1	
 球	kiu2	
-理	li6	
+理	li6	借词
 琴	kʰim2	
 璃	le2	玻~
 瓜	kɔ1	
@@ -1060,7 +1060,7 @@
 電	tin6	
 男	nɔm2	
 畫	uo6	
-暢	tʰioŋ3	
+暢	tʰioŋ3	借词
 界	kai1	
 留	liu2	
 畚	pun1	~箕
@@ -1071,8 +1071,8 @@
 疕	pʰi3	结~
 疤	pa1	
 瘡	tsʰɔŋ6	pui5~(生疮)
-疿	poi3	
-病	pʰiaŋ6*	
+疿	poi3	借词
+病	pʰiaŋ6	
 痒	ioŋ1	
 痔	ti6	
 痕	hɔn2	
@@ -1088,7 +1088,7 @@
 癲	tan1	
 白	pʰaʔ8	
 百	paʔ7	
-皂	tsɔ6	
+皂	tsɔ6	借词
 皇	uoŋ2	
 皮	pʰi2	
 盆	pʰuan2	
@@ -1102,23 +1102,23 @@
 目	muʔ8	
 盲	maŋ2	
 直	tsʰiʔ8	
-相	ɬioŋ3	照~
-省	ɬaŋ6	~长
+相	ɬioŋ3	(借词)照~
+省	ɬaŋ6	(借词)~长
 省	ɬaŋ3	节省
 真	tsin1	
 眠	men2	
-眷	kun3	
+眷	kun3	借词
 眼	ŋian3	
 着	tsioʔ8	穿
 睇	tʰai3	看
 督	tuʔ7	
-矩	ky6	
+矩	ky6	借词
 短	tɔn3	
 矮	ai3	
 石	tsʰiaʔ8	
 研	ŋen3	
 磚	tsœn1	
-硯	en3	
+硯	en3	借词
 破	pʰɔ1	
 硋	hai2	陶瓷器
 硬	ŋaŋ6	
@@ -1133,13 +1133,13 @@
 磅	pʰɔŋ6	~秤
 磨	mu2	
 示	tsʰi6	
-禮	le6	
+禮	le6	借词
 社	ɬia6	
 祖	tsu3	
 神	tsʰin2	
 祠	ɬu2	
 祥	ɬioŋ2	
-票	pʰiu3	
+票	pʰiu3	借词
 祭	tse1	
 禁	kim1	
 福	huʔ7	
@@ -1153,10 +1153,10 @@
 積	tsiʔ7	
 移	e2	
 穢	ui1	胎盘
-税	ɬui3	
+税	ɬui3	借词
 稗	pʰe1	
 稚	ti6	
-穩	un6	
+穩	un6	借词
 穆	muʔ8	
 窮	kʰyŋ2	
 空	kʰœŋ1	
@@ -1189,7 +1189,7 @@
 箍	hu1	~桶
 箕	ki1	
 箕	ky1	畚~
-算	ɬɔn3	
+算	ɬɔn3	借词
 管	kuon3	
 籮	lɔ2	
 簫	ɬiu1	
@@ -1197,15 +1197,15 @@
 箱	ɬioŋ1	
 箸	tsʰy6	饭~
 篙	kou1	
-篦	pi6*	
+篦	pi6	
 籃	lɔm2	
 篷	pʰoŋ2	
 篾	met8	
 簪	tsɔm1	
-簿	pʰu6	
+簿	pʰu6	借词
 米	mi3	
+粉	hun3	(借词)~泥
 粉	pun3	
-粉	hun3	~泥
 粒	lip7	
 粗	tsʰu1	
 粱	lioŋ2	
@@ -1219,7 +1219,7 @@
 糯	nu6	~米
 系	he6	
 緊	kin3	
-紫	tsi6*	
+紫	tsi6	借词
 紅	huŋ2	
 約	ioʔ7	
 紗	ɬa1	木~
@@ -1237,9 +1237,9 @@
 絨	ioŋ2	
 絨	yŋ2	nyʔ5~(肉松)
 結	ket7	
-絞	ka6	
-統	tʰuŋ6	
-繡	ɬiu3	
+絞	ka6	借词
+統	tʰuŋ6	借词
+繡	ɬiu3	借词
 績	tseʔ7	
 繩	tsʰiŋ2	
 綢	tʰiu2	
@@ -1249,14 +1249,14 @@
 縛	poʔ8	
 纏	ten2	
 繰	tsʰiu1	
-繳	kiu6	
+繳	kiu6	借词
 缸	koŋ6	
 缺	het7	
 罐	kuan3	
-网	mœŋ3	
+网	mœŋ3	借词
 羅	lo2	
 罰	huat8	
-罩	tau3	
+罩	tau3	借词
 罪	tsoi6	
 置	ti1	
 羊	ioŋ2	
@@ -1266,7 +1266,7 @@
 翹	kʰiu1	
 翻	huan1	
 老	lou3	
-考	kʰɔ6	
+考	kʰɔ6	借词
 耙	pɔ2	~田
 耳	ŋi3	
 耽	tɔm1	
@@ -1282,13 +1282,13 @@
 背	poi6	
 胎	tʰoi1	
 胎	tʰai1	轮~
-勝	ɬiŋ3	
+勝	ɬiŋ3	借词
 胡	hu2	
 膠	kɔ1	
-脆	tsʰui3	
+脆	tsʰui3	借词
 脉	maʔ8	
 脏	tsoŋ6	五~
-腦	nɔ6	
+腦	nɔ6	借词
 膿	nuŋ2	
 脚	kioʔ7	
 脱	tʰɔt7	
@@ -1298,7 +1298,7 @@
 腐	hu6	豆~
 腥	ɬaŋ1	
 腰	iu1	
-腿	tʰoi6	
+腿	tʰoi6	借词
 膏	kɔ1	
 膜	mɔʔ8	
 臣	tsʰin2	
@@ -1309,7 +1309,7 @@
 舂	tsʰyŋ1	
 舅	kʰiu6	
 舌	tsʰet8	
-舞	u6	
+舞	u6	借词
 舟	tsiu1	
 船	tsʰœn2	
 良	lioŋ2	
@@ -1348,16 +1348,16 @@
 薩	ɬat7	
 落	loʔ8	
 葡	pu2	~萄
-葬	tsoŋ3*	
+葬	tsoŋ3	借词
 葱	tsʰœŋ1	
-蔣	tsioŋ6*	
+蔣	tsioŋ6	借词
 蒙	muŋ2	
-蒜	ɬɔn3	
+蒜	ɬɔn3	借词
 蓆	tsʰaʔ8	
 蓖	pi1	~麻
 蓮	len2	
 蔗	tsia1	
-蔡	tsʰai3	
+蔡	tsʰai3	借词
 蕉	tseu1	
 薄	pʰoʔ8	
 薅	hau1	~草
@@ -1393,7 +1393,7 @@
 融	ioŋ2	
 螳	toŋ2	
 螺	lɔ2	
-蟹	ai6	
+蟹	ai6	借词
 血	het7	
 行	haŋ2	走
 行	hoŋ2	银~
@@ -1404,7 +1404,7 @@
 補	pu3	
 表	piu3	
 衫	ɬam1	
-袋	tʰoi6*	
+袋	tʰoi6	
 袍	pɔ2	皮~
 袜	uat8	
 被	pʰi1	
@@ -1427,7 +1427,7 @@
 講	koŋ3	
 許	hy3	
 設	ɬet7	
-證	tsiŋ3	
+證	tsiŋ3	借词
 評	pʰaŋ2	
 詩	ɬi1	
 話	uo6	
@@ -1440,10 +1440,10 @@
 谷	kuʔ7	
 豆	tʰeu6	
 豇	kaŋ1	~豆
-豹	pau3	
+豹	pau3	借词
 貌	mau6	
-貝	poi3*	
-貢	kuŋ3	
+貝	poi3	借词
+貢	kuŋ3	借词
 財	tsʰoi2	
 賢	hen2	
 敗	pai6	
@@ -1461,12 +1461,12 @@
 賠	pʰoi2	
 賴	lai6	
 賴	loi6	
-賽	ɬoi3	
+賽	ɬoi3	借词
 贏	iaŋ2	
 赤	tsʰiaʔ7	
 走	tsou3	跑
 趙	tiu6	
-趕	kɔn3*	
+趕	kɔn3	
 起	hi3	
 超	tʰiu1	
 足	tsuʔ7	
@@ -1494,7 +1494,7 @@
 達	tɔt8	
 過	ku1	
 迎	iaŋ2	
-運	un6*	
+運	un6	
 近	kʰœn1	
 進	tsyn1	
 遠	yn3	
@@ -1502,7 +1502,7 @@
 退	tʰoi1	
 送	ɬuŋ1	
 適	ɬiʔ7	合~
-選	ɬun6*	
+選	ɬun6	借词
 透	tʰeu1	
 通	tʰuŋ1	
 速	ɬuʔ7	
@@ -1522,7 +1522,7 @@
 醉	tsui1	
 醋	tsʰu1	
 醒	ɬaŋ3	
-里	li6*	
+里	li6	借词
 重	tsʰyŋ1	重量
 重	tʰyŋ2	重复
 野	ia3	
@@ -1549,23 +1549,23 @@
 銷	ɬiu1	
 鎖	ɬɔ3	
 鋤	tsʰœ2	~头
-錯	tsʰɔ3	
+錯	tsʰɔ3	借词
 錫	ɬaʔ7	
 鑼	lo2	
 錘	tʰui2	
-鍵	kyn3	
+鍵	kyn3	借词
 鋸	ky1	
 鍍	tu6	
-鎮	tin3	
+鎮	tin3	借词
 鑷	ŋiap7	
 鏡	kiaŋ1	
 鑊	uoʔ7	
 鐲	ɬoʔ8	
 鑲	ɬioŋ1	
+長	tioŋ6	(借词)县~
 長	tsʰioŋ2	~年
-長	tioŋ6	县~
 門	mun2	
-閂	tsʰɔn3	
+閂	tsʰɔn3	借词
 問	mun1	
 闲	han2	
 間	kian1	
@@ -1585,7 +1585,7 @@
 阿	a1	~哥
 陸	lyʔ8	
 陳	tin2	
-降	koŋ3	下~
+降	koŋ3	(借词)下~
 降	hoŋ2	投~
 降	koŋ1	霜~
 限	en6	
@@ -1597,7 +1597,7 @@
 難	nɔn6	落~
 雁	ŋan6	
 雄	hœŋ2	
-雅	ŋɔ6	
+雅	ŋɔ6	借词
 集	tsip8	
 雕	teu1	
 雨	tsʰy3	
@@ -1614,25 +1614,25 @@
 霞	hɔ2	赤~
 露	lu1	
 露	lou1	白~
-霸	pa3	
+霸	pa3	借词
 青	tsʰaŋ1	
 靜	tsiŋ6	
-靠	kʰɔ3	
+靠	kʰɔ3	借词
 面	men1	脸
 面	men6	食~
 革	kœʔ7	
 靴	kʰu1	
 鞋	hai2	
-鞝	tsʰioŋ6	~鞋
+鞝	tsʰioŋ6	(借词)~鞋
 鞭	pen1	
 韮	kiu1	
 頁	iap8	
-頂	teŋ6*	
+頂	teŋ6	借词
 項	hoŋ6	
-順	ɬun6*	
+順	ɬun6	
 须	ɬu1	嘴~
 頓	tun1	~腳
-領	liaŋ6	
+領	liaŋ6	借词
 題	te2	
 顔	ŋan2	
 額	ŋaʔ8	
@@ -1642,7 +1642,7 @@
 饥	ky1	
 飯	pʰuan6	
 飲	im3	米汤
-飽	pau3*	
+飽	pau3	
 餅	piaŋ3	
 館	kuon3	
 館	kuan3	
@@ -1667,7 +1667,7 @@
 鯧	tsʰioŋ1	
 鱉	pet7	
 鱗	lin2	
-鳥	tau3*	
+鳥	tau3	
 雞	kiai1	
 雞	kiai3	田鸡
 鴉	ɔ1	老~
@@ -1684,11 +1684,11 @@
 麻	mɔ2	
 黃	uoŋ2	
 黑	heʔ7	
-黹	tsi6	针~
-鼎	teŋ6	
+黹	tsi6	(借词)针~
+鼎	teŋ6	借词
 鼓	ku3	
 鼠	tsʰy3	
-鼻	pʰi6*	
+鼻	pʰi6	
 齊	tse2	
 齙	pau1	~牙
 龍	lyŋ2	

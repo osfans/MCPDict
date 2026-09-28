@@ -9,6 +9,15 @@ class 表(_表):
 	聲韻 = ""
 	調類調值 = dict()
 
+	@staticmethod
+	def 借詞(m):
+		r = ""
+		for i,j in re.findall("(.)(\\d?[-=?]?\\{.*?\\})?", m.group(1).strip()):
+			if "{" in j: j = j.replace("{","{(借词)", 1)
+			else: j += "{借词}"
+			r += i + j
+		return r
+
 	def 析(自, 列):
 		名 = 自.簡稱
 		音 = None
@@ -30,6 +39,8 @@ class 表(_表):
 				if 名 in ("英德魚灣","莘縣張魯","福安坂中"):
 					上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
 					組 = re.sub(r"([⁰¹²³⁴⁵⁶⁷⁸⁹]+)", lambda x:"".join([str(上標.index(i)) for i in x.group(1)]), 組)
+					if 名 == "福安坂中":
+						組 =  re.sub(r"\*(.*)$", 自.借詞, 組)
 				if g := re.findall("^.*?\\d+", 組):
 					音 = g[0]
 					組 = 組[len(音):]
