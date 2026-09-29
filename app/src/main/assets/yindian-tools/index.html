@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f766e" />
+  <meta name="description" content="音典小工具：中古到今音演化、字音比较与地图展示。" />
+  <title>音典小工具</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-wrap">
+      <button id="backButton" class="icon-button hidden" type="button" aria-label="返回">←</button>
+      <div>
+        <h1>音典小工具</h1>
+        <p>MCPDict 內置實用工具 · V1</p>
+      </div>
+    </div>
+    <span class="badge">離線</span>
+  </header>
+
+  <main class="app-shell">
+    <section class="intro-card">
+      <div>
+        <h2>把音典数据变成可比较、可观察的研究工具</h2>
+        <p>用于查看中古音到现代方言的演变关系，以及不同语言之间的字音分合。</p>
+      </div>
+      <div id="globalStatus" class="status-pill status-loading">正在讀取音典本地數據……</div>
+    </section>
+
+    <nav class="tabs" aria-label="工具切换">
+      <button class="tab active" data-tab="evolution" type="button">古今演化</button>
+      <button class="tab" data-tab="compare" type="button">字音比较</button>
+    </nav>
+
+    <section id="evolutionPanel" class="tool-panel active">
+      <div class="tool-heading">
+        <div>
+          <h2>古今演化</h2>
+          <p>先選“中古按什麼分組”和“觀察今音什麼”，再用清濁、等、開合、攝等條件縮小範圍，查看各子類的歸併與分化。</p>
+        </div>
+      </div>
+
+      <div class="controls-grid evolution-main-controls">
+        <div class="field language-field">
+          <span>选择语言</span>
+          <div id="evolutionLanguagePicker" class="language-picker">
+            <input id="evolutionDialectSearch" type="search" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="evolutionDialectMenu" placeholder="搜索或选择语言" />
+            <button id="evolutionDialectToggle" class="language-toggle" type="button" aria-label="展开语言列表">⌄</button>
+            <input id="evolutionDialect" type="hidden" />
+            <div id="evolutionDialectMenu" class="language-menu hidden" role="listbox"></div>
+          </div>
+        </div>
+
+        <label class="field">
+          <span>中古分組維度</span>
+          <select id="evolutionSourceDimension">
+            <option value="initial">聲母</option>
+            <option value="voicing">清濁</option>
+            <option value="rime">韻母</option>
+            <option value="division">等</option>
+            <option value="openness">開合</option>
+            <option value="she">攝</option>
+            <option value="tone">聲調</option>
+            <option value="position">完整音韻地位</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>今音观察维度</span>
+          <select id="evolutionModernMode">
+            <option value="initial">声母</option>
+            <option value="final">韵母</option>
+            <option value="tone">声调</option>
+            <option value="notone">忽略声调</option>
+            <option value="full">完整读音</option>
+          </select>
+        </label>
+
+        <button id="runEvolution" class="primary-button" type="button">生成对应表</button>
+      </div>
+
+      <details class="filter-box" open>
+        <summary>中古條件篩選 <span id="activeFilterCount" class="filter-count">0</span></summary>
+        <div class="filter-grid">
+          <div class="field"><span>清濁（多選）</span><details class="multi-select" id="filterVoicing"><summary>全部</summary><div class="multi-options"></div></details></div>
+          <div class="field"><span>等（多選）</span><details class="multi-select" id="filterDivision"><summary>全部</summary><div class="multi-options"></div></details></div>
+          <div class="field"><span>開合（多選）</span><details class="multi-select" id="filterOpenness"><summary>全部</summary><div class="multi-options"></div></details></div>
+          <div class="field"><span>攝（多選）</span><details class="multi-select" id="filterShe"><summary>全部</summary><div class="multi-options"></div></details></div>
+          <div class="field"><span>聲調（多選）</span><details class="multi-select" id="filterTone"><summary>全部</summary><div class="multi-options"></div></details></div>
+          <div class="field"><span>聲母（多選）</span><details class="multi-select" id="filterInitial"><summary>全部</summary><div class="multi-options"></div></details></div>
+          <div class="field"><span>韻母（多選）</span><details class="multi-select" id="filterRime"><summary>全部</summary><div class="multi-options"></div></details></div>
+        </div>
+        <div class="filter-actions">
+          <button id="clearEvolutionFilters" class="secondary-button" type="button">恢復全部</button>
+          <span class="hint">例：清濁=全濁、聲調=上（也可同時選擇多個類別），再將“中古分組”設為聲母，“今音觀察”設為聲調，即可看全濁上聲各母的今調歸併。</span>
+        </div>
+      </details>
+
+      <div class="parser-options">
+        <label class="checkbox-field">
+          <input id="evolutionGlidesAsFinal" type="checkbox" checked />
+          <span>把起首 j / w / ɥ 按介音归入韵母（推荐）</span>
+        </label>
+      </div>
+
+      <div class="notice">
+        <strong>中古字段：</strong>直接讀取音典內置 <strong>廣韻</strong> 數據，從“切韻音系描述 / 方音字彙描述”解析聲母、韻母、聲調、等、開合；“攝”直接讀取廣韻字段；清濁按切韻聲母分類。<strong>今音拆分：</strong>属于程序分析结果，表格保留完整读音供核对。
+      </div>
+
+      <div id="evolutionProgress" class="inline-status hidden"></div>
+
+      <div id="evolutionSummary" class="summary-grid hidden">
+        <div class="summary-card"><strong id="summaryDialect">—</strong><span>语言</span></div>
+        <div class="summary-card"><strong id="summaryChars">0</strong><span>匹配字</span></div>
+        <div class="summary-card"><strong id="summaryGroups">0</strong><span>对应关系</span></div>
+        <div class="summary-card"><strong id="summaryPositions">0</strong><span>涉及音韻地位數</span></div>
+      </div>
+
+      <div id="evolutionResults" class="results-block hidden">
+        <div class="results-toolbar">
+          <div>
+            <h3 id="evolutionTableTitle">对应表</h3>
+            <p id="evolutionTableNote">点击“查看详情”可查看完整例字与涉及的中古音韵地位。</p>
+          </div>
+          <label class="search-field">
+            <span>结果内筛选</span>
+            <input id="evolutionFilter" type="search" placeholder="输入中古类别、今读或汉字" />
+          </label>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead id="evolutionHead"></thead>
+            <tbody id="evolutionBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparePanel" class="tool-panel">
+      <div class="tool-heading">
+        <div>
+          <h2>字音比较</h2>
+          <p>输入 2–10 个汉字，可比较完整读音、声母、韵母、声调，或忽略声调后的音节，并在地图上显示分合。</p>
+        </div>
+      </div>
+
+      <div class="controls-grid compare-controls">
+        <label class="field grow">
+          <span>要比较的汉字（最多 10 个）</span>
+          <input id="compareChars" type="text" value="雞溪低" maxlength="20" placeholder="例如：雞溪低" />
+        </label>
+
+        <label class="field">
+          <span>比较方式</span>
+          <select id="compareMode">
+            <option value="full">完整读音</option>
+            <option value="initial">声母</option>
+            <option value="final">韵母</option>
+            <option value="tone">声调</option>
+            <option value="notone">忽略声调</option>
+          </select>
+        </label>
+
+        <button id="runCompare" class="primary-button" type="button">开始比较</button>
+      </div>
+
+      <div class="parser-options">
+        <label class="checkbox-field">
+          <input id="compareGlidesAsFinal" type="checkbox" checked />
+          <span>把起首 j / w / ɥ 按介音归入韵母（推荐）</span>
+        </label>
+        <span class="hint">切换后会重新计算当前结果；表格会显示实际参与比较的拆分值，方便发现异常。</span>
+      </div>
+
+      <div class="legend-row" aria-label="地图图例">
+        <span><i class="dot same"></i>全同</span>
+        <span><i class="dot partial"></i>部分相同</span>
+        <span><i class="dot different"></i>全异</span>
+        <span><i class="dot missing"></i>缺资料</span>
+      </div>
+
+      <div id="compareProgress" class="inline-status hidden"></div>
+
+      <div id="compareSummary" class="summary-grid hidden">
+        <div class="summary-card same-card"><strong id="sameCount">0</strong><span>全同</span></div>
+        <div class="summary-card partial-card"><strong id="partialCount">0</strong><span>部分相同</span></div>
+        <div class="summary-card different-card"><strong id="differentCount">0</strong><span>全异</span></div>
+        <div class="summary-card"><strong id="missingCount">0</strong><span>缺资料</span></div>
+      </div>
+
+      <div id="mapCard" class="map-card hidden">
+        <div class="map-toolbar">
+          <div>
+            <h3>字音分合地圖</h3>
+            <p id="mapModeNote">使用音典內置離線地圖顯示分合；點擊地圖標記可查看各字讀音。</p>
+          </div>
+          <div class="map-controls">
+            <label class="checkbox-field">
+              <input id="showMissing" type="checkbox" />
+              <span>顯示缺資料點</span>
+            </label>
+            <button id="showNativeMap" class="primary-button" type="button">查看地圖</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="compareResults" class="results-block hidden">
+        <div class="results-toolbar">
+          <div>
+            <h3>各语言比较结果</h3>
+            <p id="compareTableNote"></p>
+          </div>
+          <label class="search-field">
+            <span>筛选方言</span>
+            <input id="compareFilter" type="search" placeholder="方言简称 / 地区" />
+          </label>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead id="compareHead"></thead>
+            <tbody id="compareBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>V1 · 數據直接讀取音典本地 MCPDict 數據庫；地圖復用音典內置離線地圖。</p>
+    </footer>
+  </main>
+
+  <dialog id="charsDialog" class="chars-dialog">
+    <form method="dialog">
+      <div class="dialog-head">
+        <div>
+          <h3 id="dialogTitle">例字</h3>
+          <p id="dialogSubtitle"></p>
+        </div>
+        <button class="icon-button" value="cancel" aria-label="关闭">×</button>
+      </div>
+      <div id="dialogPositions" class="position-chips"></div>
+      <div id="dialogReadings" class="reading-chips"></div>
+      <div id="dialogChars" class="all-chars"></div>
+    </form>
+  </dialog>
+
+  <script src="./app.js"></script>
+</body>
+</html>

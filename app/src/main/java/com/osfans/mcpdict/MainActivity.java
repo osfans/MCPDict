@@ -80,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
             if (mPager.getCurrentItem() != PagerAdapter.PAGE.GUESS_LANG.ordinal()) mPager.setCurrentItem(PagerAdapter.PAGE.GUESS_LANG.ordinal());
             return true;
         }
+        if (id == R.id.menu_item_yindian_tools) {
+            startActivity(new Intent(this, ToolsActivity.class));
+            return true;
+        }
         intent = item.getIntent();
         if (intent != null) {
             startActivity(intent);
