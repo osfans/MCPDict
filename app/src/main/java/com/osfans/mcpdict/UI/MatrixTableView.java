@@ -9,6 +9,8 @@ import static com.osfans.mcpdict.DB.getColor;
 import static com.osfans.mcpdict.DB.getSubColor;
 
 import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -22,9 +24,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.text.HtmlCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -66,10 +70,16 @@ public class MatrixTableView {
     private final Context context;
     private final RecyclerView headerView;
     private final RecyclerView bodyView;
+    private final SeekBar horizontalScrollbar;
     private final boolean isMainPage;
 
+    private final Handler mainHandler = new Handler(Looper.getMainLooper());
+    private boolean draggingHorizontalScrollbar = false;
+    private final Runnable hideHorizontalScrollbarRunnable = this::hideHorizontalScrollbar;
+
     private final int cellWidth;
-    private final int labelWidth;
+    private final int languageLabelWidth;
+    private final int characterLabelWidth;
     private final int rowMinHeight;
     private final TextDrawable.IBuilder languageLabelBuilder;
     private final RecyclerView.RecycledViewPool cellPool = new RecyclerView.RecycledViewPool();
@@ -109,20 +119,27 @@ public class MatrixTableView {
     public MatrixTableView(Context context,
                            RecyclerView headerView,
                            RecyclerView bodyView,
+                           SeekBar horizontalScrollbar,
                            boolean isMainPage) {
         this.context = context;
         this.headerView = headerView;
         this.bodyView = bodyView;
+        this.horizontalScrollbar = horizontalScrollbar;
         this.isMainPage = isMainPage;
-
-        cellWidth = dp(132);
-        labelWidth = Math.max(dp(92),
-                context.getResources().getDimensionPixelOffset(R.dimen.label_width) + dp(16));
-        rowMinHeight = Math.max(dp(52),
-                context.getResources().getDimensionPixelOffset(R.dimen.label_height) + dp(10));
 
         int labelW = context.getResources().getDimensionPixelOffset(R.dimen.label_width);
         int labelH = context.getResources().getDimensionPixelOffset(R.dimen.label_height);
+
+        // Compact matrix density: closer to the normal list view, with much
+        // less unused horizontal/vertical whitespace.
+        cellWidth = dp(86);
+
+        // The frozen first column needs two different widths.
+        // A language label is much wider than a single Han character.
+        languageLabelWidth = labelW + dp(6);
+        characterLabelWidth = dp(32);
+
+        rowMinHeight = Math.max(dp(28), labelH);
         languageLabelBuilder = TextDrawable.builder()
                 .beginConfig()
                 .withBorder(3)
@@ -147,10 +164,22 @@ public class MatrixTableView {
         bodyView.setLayoutManager(new LinearLayoutManager(context));
         bodyView.setAdapter(bodyAdapter);
         bodyView.setItemAnimator(null);
+
+        initHorizontalScrollbar();
+        headerView.addOnLayoutChangeListener((v, left, top, right, bottom,
+                                               oldLeft, oldTop, oldRight, oldBottom) ->
+                updateHorizontalScrollbarRange());
+        headerView.post(this::updateHorizontalScrollbarRange);
     }
 
     public int getLabelWidth() {
-        return labelWidth;
+        return getCurrentLabelWidth();
+    }
+
+    private int getCurrentLabelWidth() {
+        return orientation == Orientation.LANGUAGES_AS_ROWS
+                ? languageLabelWidth
+                : characterLabelWidth;
     }
 
     public Orientation getOrientation() {
@@ -165,6 +194,9 @@ public class MatrixTableView {
         headerView.scrollToPosition(0);
         headerAdapter.notifyDataSetChanged();
         bodyAdapter.notifyDataSetChanged();
+        horizontalScrollbar.setProgress(0);
+        hideHorizontalScrollbarImmediately();
+        headerView.post(this::updateHorizontalScrollbarRange);
     }
 
     public void setCursor(Cursor cursor) {
@@ -174,6 +206,9 @@ public class MatrixTableView {
         bodyView.scrollToPosition(0);
         headerAdapter.notifyDataSetChanged();
         bodyAdapter.notifyDataSetChanged();
+        horizontalScrollbar.setProgress(0);
+        hideHorizontalScrollbarImmediately();
+        headerView.post(this::updateHorizontalScrollbarRange);
     }
 
     private int dp(int value) {
@@ -251,6 +286,127 @@ public class MatrixTableView {
         return row == null ? null : row.get(columnKey);
     }
 
+    private void initHorizontalScrollbar() {
+        horizontalScrollbar.setMax(1);
+        horizontalScrollbar.setProgress(0);
+        horizontalScrollbar.setEnabled(false);
+        horizontalScrollbar.setAlpha(0f);
+        horizontalScrollbar.setVisibility(View.INVISIBLE);
+
+        horizontalScrollbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (!fromUser) return;
+                applyHorizontalScroll(progress);
+                showHorizontalScrollbar();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                draggingHorizontalScrollbar = true;
+                mainHandler.removeCallbacks(hideHorizontalScrollbarRunnable);
+                seekBar.animate().cancel();
+                seekBar.setVisibility(View.VISIBLE);
+                seekBar.setAlpha(1f);
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                draggingHorizontalScrollbar = false;
+                scheduleHorizontalScrollbarHide();
+            }
+        });
+    }
+
+    private int getHorizontalMaxScroll() {
+        int viewportWidth = headerView.getWidth();
+        if (viewportWidth <= 0 || getColumnCount() <= 0) return 0;
+        int contentWidth = getColumnCount() * cellWidth;
+        return Math.max(0, contentWidth - viewportWidth);
+    }
+
+    private int getHorizontalAbsoluteScroll() {
+        int x = horizontalAnchorPosition * cellWidth - horizontalAnchorOffsetPx;
+        return Math.max(0, Math.min(getHorizontalMaxScroll(), x));
+    }
+
+    private void updateHorizontalScrollbarRange() {
+        int maxScroll = getHorizontalMaxScroll();
+        horizontalScrollbar.setMax(Math.max(1, maxScroll));
+        horizontalScrollbar.setEnabled(maxScroll > 0);
+
+        if (maxScroll <= 0) {
+            horizontalScrollbar.setProgress(0);
+            hideHorizontalScrollbarImmediately();
+            return;
+        }
+        updateHorizontalScrollbarProgress();
+    }
+
+    private void updateHorizontalScrollbarProgress() {
+        int maxScroll = getHorizontalMaxScroll();
+        if (maxScroll <= 0) return;
+        int progress = Math.max(0, Math.min(maxScroll, getHorizontalAbsoluteScroll()));
+        if (horizontalScrollbar.getProgress() != progress) {
+            horizontalScrollbar.setProgress(progress);
+        }
+    }
+
+    private void applyHorizontalScroll(int requestedX) {
+        int maxScroll = getHorizontalMaxScroll();
+        if (maxScroll <= 0 || getColumnCount() <= 0) return;
+
+        int x = Math.max(0, Math.min(maxScroll, requestedX));
+        int position = Math.min(getColumnCount() - 1, x / cellWidth);
+        int remainder = x - position * cellWidth;
+
+        horizontalAnchorPosition = position;
+        horizontalAnchorOffsetPx = -remainder;
+
+        // Reuse V4's absolute synchronization so the frozen header and every
+        // visible/recycled row stay aligned when the thumb is dragged.
+        synchronizeVisibleHorizontalLists(null);
+    }
+
+    private void showHorizontalScrollbar() {
+        if (getHorizontalMaxScroll() <= 0) return;
+
+        mainHandler.removeCallbacks(hideHorizontalScrollbarRunnable);
+        horizontalScrollbar.animate().cancel();
+        horizontalScrollbar.setVisibility(View.VISIBLE);
+        horizontalScrollbar.setAlpha(1f);
+
+        if (!draggingHorizontalScrollbar) {
+            scheduleHorizontalScrollbarHide();
+        }
+    }
+
+    private void scheduleHorizontalScrollbarHide() {
+        mainHandler.removeCallbacks(hideHorizontalScrollbarRunnable);
+        mainHandler.postDelayed(hideHorizontalScrollbarRunnable, 1000);
+    }
+
+    private void hideHorizontalScrollbar() {
+        if (draggingHorizontalScrollbar) return;
+
+        horizontalScrollbar.animate()
+                .alpha(0f)
+                .setDuration(180)
+                .withEndAction(() -> {
+                    if (!draggingHorizontalScrollbar && horizontalScrollbar.getAlpha() == 0f) {
+                        horizontalScrollbar.setVisibility(View.INVISIBLE);
+                    }
+                })
+                .start();
+    }
+
+    private void hideHorizontalScrollbarImmediately() {
+        mainHandler.removeCallbacks(hideHorizontalScrollbarRunnable);
+        horizontalScrollbar.animate().cancel();
+        horizontalScrollbar.setAlpha(0f);
+        horizontalScrollbar.setVisibility(View.INVISIBLE);
+    }
+
     private void resetHorizontalScrollState() {
         horizontalAnchorPosition = 0;
         horizontalAnchorOffsetPx = 0;
@@ -268,13 +424,21 @@ public class MatrixTableView {
     private void onHorizontalScrolled(RecyclerView source, int dx) {
         if (syncingHorizontalScroll || dx == 0) return;
 
-        // Programmatic scrollToPositionWithOffset() may dispatch onScrolled
-        // while the RecyclerView is idle.  Only a RecyclerView that is actively
-        // dragging/flinging is allowed to become the source of truth.
-        if (source.getScrollState() == RecyclerView.SCROLL_STATE_IDLE) return;
+        // Programmatic scrollToPositionWithOffset() may dispatch onScrolled while
+        // a body row is idle, so idle body rows must not become the source of truth.
+        // The frozen header is different: its FastScroller can move it while the
+        // RecyclerView still reports IDLE, so the header is always allowed to
+        // publish its absolute position.  The syncingHorizontalScroll guard above
+        // prevents feedback loops during programmatic alignment.
+        if (source != headerView
+                && source.getScrollState() == RecyclerView.SCROLL_STATE_IDLE) {
+            return;
+        }
 
         captureHorizontalState(source);
         synchronizeVisibleHorizontalLists(source);
+        updateHorizontalScrollbarProgress();
+        showHorizontalScrollbar();
     }
 
     private void captureHorizontalState(RecyclerView source) {
@@ -329,14 +493,14 @@ public class MatrixTableView {
         tv.setLayoutParams(new ViewGroup.LayoutParams(width, ViewGroup.LayoutParams.WRAP_CONTENT));
         tv.setMinimumHeight(rowMinHeight);
         tv.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
-        tv.setPadding(dp(8), dp(4), dp(8), dp(4));
+        tv.setPadding(dp(1), dp(1), dp(1), dp(1));
         tv.setTextAppearance(R.style.FontDetail);
         FontUtil.setTypeface(tv);
 
         if (isMainPage) {
             SpannableStringBuilder ssb = new SpannableStringBuilder();
             ssb.append(hz, new ForegroundColorSpan(getColor(HZ)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            ssb.setSpan(new RelativeSizeSpan(1.8f), 0, ssb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            ssb.setSpan(new RelativeSizeSpan(1.55f), 0, ssb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             tv.setText(ssb);
         } else {
             tv.setText(hz);
@@ -346,9 +510,9 @@ public class MatrixTableView {
 
     private View makeLanguageLabel(String lang, int width) {
         LinearLayout box = new LinearLayout(context);
-        box.setGravity(Gravity.CENTER);
+        box.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
         box.setMinimumHeight(rowMinHeight);
-        box.setPadding(dp(6), dp(5), dp(6), dp(5));
+        box.setPadding(dp(1), 0, 0, 0);
         box.setLayoutParams(new ViewGroup.LayoutParams(width, ViewGroup.LayoutParams.WRAP_CONTENT));
 
         View label = new View(context);
@@ -381,14 +545,16 @@ public class MatrixTableView {
     private View makeReadingCell(List<Reading> readings) {
         LinearLayout cell = new LinearLayout(context);
         cell.setOrientation(LinearLayout.VERTICAL);
+        cell.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
         cell.setMinimumHeight(rowMinHeight);
-        cell.setPadding(dp(6), dp(4), dp(6), dp(4));
+        cell.setPadding(dp(1), 0, dp(1), 0);
         cell.setLayoutParams(new ViewGroup.LayoutParams(cellWidth, ViewGroup.LayoutParams.WRAP_CONTENT));
 
         if (readings == null || readings.isEmpty()) {
             TextView dash = new TextView(context);
             dash.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
-            dash.setMinimumHeight(rowMinHeight - dp(8));
+            dash.setMinimumHeight(rowMinHeight - dp(2));
+            dash.setPadding(dp(2), 0, dp(2), 0);
             dash.setTextAppearance(R.style.FontDetail);
             FontUtil.setTypeface(dash);
             dash.setText("—");
@@ -398,30 +564,98 @@ public class MatrixTableView {
             return cell;
         }
 
+        // Matrix mode is deliberately compact: one reading per line and no
+        // long annotation text.  The complete content is available by tapping
+        // anywhere in the cell.
         for (Reading reading : readings) {
             TextView tv = new TextView(context);
             tv.setTextAppearance(R.style.FontDetail);
             FontUtil.setTypeface(tv);
-            tv.setPadding(dp(4), dp(2), dp(4), dp(2));
-            tv.setGravity(Gravity.CENTER_VERTICAL);
+            tv.setPadding(dp(1), 0, dp(1), 0);
+            tv.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
+            tv.setSingleLine(true);
+            tv.setEllipsize(TextUtils.TruncateAt.END);
 
-            SpannableStringBuilder text = new SpannableStringBuilder();
             String ipa = DisplayHelper.formatIPA(reading.lang, reading.ipa).toString();
             if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
-            text.append(HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT));
+            tv.setText(HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT));
 
-            if (!TextUtils.isEmpty(reading.zs)) {
-                String zs = DisplayHelper.formatZS(reading.hz, reading.zs);
-                text.append(HtmlCompat.fromHtml(zs, HtmlCompat.FROM_HTML_MODE_COMPACT));
-            }
-
-            tv.setText(text);
             cell.addView(tv, new LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT));
         }
 
+        cell.setBackgroundResource(R.drawable.list_selector);
+        cell.setClickable(true);
+        cell.setFocusable(true);
+        cell.setOnClickListener(v -> showReadingDetails(readings));
         return cell;
+    }
+
+    private void showReadingDetails(List<Reading> readings) {
+        if (readings == null || readings.isEmpty()) return;
+
+        SpannableStringBuilder detail = new SpannableStringBuilder();
+
+        for (int i = 0; i < readings.size(); i++) {
+            Reading reading = readings.get(i);
+
+            if (i > 0) {
+                detail.append("\n");
+            }
+
+            // 音标
+            String ipa = DisplayHelper.formatIPA(
+                    reading.lang,
+                    reading.ipa
+            ).toString();
+
+            if (ipa.contains("<") && !ipa.contains(">")) {
+                ipa = ipa.replace("<", "&lt;");
+            }
+
+            detail.append(
+                    HtmlCompat.fromHtml(
+                            ipa,
+                            HtmlCompat.FROM_HTML_MODE_COMPACT
+                    )
+            );
+
+            // 注释：直接接在音标后面，和列表模式一致
+            if (!TextUtils.isEmpty(reading.zs)) {
+                String zs = DisplayHelper.formatZS(
+                        reading.hz,
+                        reading.zs
+                );
+
+                CharSequence formatted =
+                        HtmlCompat.fromHtml(
+                                zs,
+                                HtmlCompat.FROM_HTML_MODE_COMPACT
+                        );
+
+                detail.append(formatted);
+            }
+        }
+
+        AlertDialog dialog =
+                new AlertDialog.Builder(context)
+                        .setMessage(detail)
+                        .setPositiveButton(R.string.ok, null)
+                        .create();
+
+        dialog.setOnShowListener(ignored -> {
+            TextView message =
+                    dialog.findViewById(android.R.id.message);
+
+            if (message != null) {
+                message.setTextAppearance(R.style.FontDetail);
+                FontUtil.setTypeface(message);
+                message.setTextIsSelectable(true);
+            }
+        });
+
+        dialog.show();
     }
 
     private class HeaderHolder extends RecyclerView.ViewHolder {
@@ -502,9 +736,12 @@ public class MatrixTableView {
 
             FrameLayout labelHost = new FrameLayout(context);
             labelHost.setMinimumHeight(rowMinHeight);
-            labelHost.setLayoutParams(new LinearLayout.LayoutParams(
-                    labelWidth,
-                    ViewGroup.LayoutParams.WRAP_CONTENT));
+            labelHost.setLayoutParams(
+                    new LinearLayout.LayoutParams(
+                            getCurrentLabelWidth(),
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                    )
+            );
             row.addView(labelHost);
 
             RecyclerView cells = new RecyclerView(context);
@@ -522,9 +759,16 @@ public class MatrixTableView {
             String rowKey = getRowKey(position);
             holder.labelHost.removeAllViews();
 
+            int currentLabelWidth = getCurrentLabelWidth();
+            ViewGroup.LayoutParams hostParams = holder.labelHost.getLayoutParams();
+            if (hostParams.width != currentLabelWidth) {
+                hostParams.width = currentLabelWidth;
+                holder.labelHost.setLayoutParams(hostParams);
+            }
+
             View rowLabel = orientation == Orientation.LANGUAGES_AS_ROWS
-                    ? makeLanguageLabel(rowKey, labelWidth)
-                    : makeCharacterLabel(rowKey, labelWidth);
+                    ? makeLanguageLabel(rowKey, currentLabelWidth)
+                    : makeCharacterLabel(rowKey, currentLabelWidth);
             holder.labelHost.addView(rowLabel, new FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT));

@@ -3,44 +3,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/layout_view_switch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="end|center_vertical"
-        android:orientation="horizontal"
-        android:paddingHorizontal="8dp"
-        android:paddingVertical="4dp">
-
-        <Button
-            android:id="@+id/button_view_list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minWidth="0dp"
-            android:minHeight="36dp"
-            android:text="@string/output_list"
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/button_view_table"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minWidth="0dp"
-            android:minHeight="36dp"
-            android:text="@string/output_table"
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/button_table_transpose"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minWidth="0dp"
-            android:minHeight="36dp"
-            android:text="@string/output_transpose"
-            android:textAllCaps="false"
-            android:visibility="gone" />
-    </LinearLayout>
-
     <com.osfans.mcpdict.UI.RecyclerView
         android:id="@+id/index_view"
         android:layout_width="match_parent"
@@ -67,7 +29,7 @@
             android:clipToPadding="false"
             android:scrollbars="none" />
 
-        <!-- V3 matrix: the header is outside the body RecyclerView, so it is frozen vertically. -->
+        <!-- Matrix: top header and left label column are frozen. -->
         <LinearLayout
             android:id="@+id/matrix_layout"
             android:layout_width="match_parent"
@@ -101,13 +63,37 @@
                 android:layout_height="1dp"
                 android:background="?android:attr/listDivider" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/matrix_body_view"
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:clipToPadding="false"
-                android:scrollbars="vertical" />
+                android:layout_weight="1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/matrix_body_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:scrollbars="none" />
+
+                <!--
+                    Real draggable horizontal scrollbar for the matrix.
+                    It overlays the bottom edge, appears while horizontal scrolling,
+                    and fades about one second after interaction stops.
+                    ResultFragment dynamically aligns its left edge with the frozen
+                    first column.
+                -->
+                <SeekBar
+                    android:id="@+id/matrix_horizontal_scrollbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_gravity="bottom"
+                    android:alpha="0"
+                    android:max="1"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:visibility="invisible" />
+
+            </FrameLayout>
         </LinearLayout>
     </FrameLayout>
 </LinearLayout>
