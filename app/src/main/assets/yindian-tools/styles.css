@@ -544,3 +544,43 @@ footer { padding: 28px 8px 0; text-align: center; color: #94a3b8; font-size: 12p
 
 /* Android 内嵌模式由原生 Toolbar 提供标题和返回按钮，避免双标题栏。 */
 body.embedded .app-header { display: none; }
+
+
+/* 精简后的 Android 内嵌界面：标题、返回按钮交给原生 Toolbar。 */
+body.embedded {
+  background: #fff;
+}
+body.embedded .app-shell {
+  width: 100%;
+  margin: 0;
+}
+body.embedded .tabs {
+  width: calc(100% - 24px);
+  margin: 10px 12px 4px;
+}
+body.embedded .tab {
+  flex: 1;
+}
+body.embedded .tool-panel {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 16px 14px 24px;
+}
+body.embedded .tool-heading {
+  margin-bottom: 14px;
+}
+body.embedded .tool-heading h2 {
+  margin: 0;
+  font-size: 22px;
+}
+body.embedded .parser-options {
+  margin-top: 12px;
+  padding: 10px 12px;
+}
+
+
+/* 极简 Android 内嵌版：顶部只保留原生 Toolbar 和工具切换 Tabs。 */
+body.embedded .tool-panel {
+  padding-top: 8px;
+}

@@ -3,6 +3,8 @@ package com.osfans.mcpdict;
 import android.database.Cursor;
 import android.webkit.JavascriptInterface;
 
+import androidx.annotation.Keep;
+
 import com.osfans.mcpdict.UI.MapView;
 
 import org.json.JSONArray;
@@ -21,11 +23,17 @@ import java.util.List;
  * - 现代字音来自 langs；
  * - 地图交给现有 UI.MapView。
  */
+@Keep
 public class ToolsBridge {
     private final ToolsActivity activity;
 
     public ToolsBridge(ToolsActivity activity) {
         this.activity = activity;
+    }
+
+    @JavascriptInterface
+    public int getApiVersion() {
+        return 2;
     }
 
     @JavascriptInterface

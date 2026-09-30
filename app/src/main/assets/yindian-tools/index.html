@@ -8,41 +8,15 @@
   <title>音典小工具</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body>
-  <header class="app-header">
-    <div class="brand-wrap">
-      <button id="backButton" class="icon-button hidden" type="button" aria-label="返回">←</button>
-      <div>
-        <h1>音典小工具</h1>
-        <p>MCPDict 內置實用工具 · V1</p>
-      </div>
-    </div>
-    <span class="badge">離線</span>
-  </header>
-
-  <main class="app-shell">
-    <section class="intro-card">
-      <div>
-        <h2>把音典数据变成可比较、可观察的研究工具</h2>
-        <p>用于查看中古音到现代方言的演变关系，以及不同语言之间的字音分合。</p>
-      </div>
-      <div id="globalStatus" class="status-pill status-loading">正在讀取音典本地數據……</div>
-    </section>
-
-    <nav class="tabs" aria-label="工具切换">
+<body class="embedded">
+<main class="app-shell">
+<nav class="tabs" aria-label="工具切换">
       <button class="tab active" data-tab="evolution" type="button">古今演化</button>
       <button class="tab" data-tab="compare" type="button">字音比较</button>
     </nav>
 
     <section id="evolutionPanel" class="tool-panel active">
-      <div class="tool-heading">
-        <div>
-          <h2>古今演化</h2>
-          <p>先選“中古按什麼分組”和“觀察今音什麼”，再用清濁、等、開合、攝等條件縮小範圍，查看各子類的歸併與分化。</p>
-        </div>
-      </div>
-
-      <div class="controls-grid evolution-main-controls">
+<div class="controls-grid evolution-main-controls">
         <div class="field language-field">
           <span>选择语言</span>
           <div id="evolutionLanguagePicker" class="language-picker">
@@ -94,19 +68,14 @@
         </div>
         <div class="filter-actions">
           <button id="clearEvolutionFilters" class="secondary-button" type="button">恢復全部</button>
-          <span class="hint">例：清濁=全濁、聲調=上（也可同時選擇多個類別），再將“中古分組”設為聲母，“今音觀察”設為聲調，即可看全濁上聲各母的今調歸併。</span>
         </div>
       </details>
 
       <div class="parser-options">
         <label class="checkbox-field">
           <input id="evolutionGlidesAsFinal" type="checkbox" checked />
-          <span>把起首 j / w / ɥ 按介音归入韵母（推荐）</span>
+          <span>起首介音归入韵母</span>
         </label>
-      </div>
-
-      <div class="notice">
-        <strong>中古字段：</strong>直接讀取音典內置 <strong>廣韻</strong> 數據，從“切韻音系描述 / 方音字彙描述”解析聲母、韻母、聲調、等、開合；“攝”直接讀取廣韻字段；清濁按切韻聲母分類。<strong>今音拆分：</strong>属于程序分析结果，表格保留完整读音供核对。
       </div>
 
       <div id="evolutionProgress" class="inline-status hidden"></div>
@@ -139,17 +108,10 @@
     </section>
 
     <section id="comparePanel" class="tool-panel">
-      <div class="tool-heading">
-        <div>
-          <h2>字音比较</h2>
-          <p>输入 2–10 个汉字，可比较完整读音、声母、韵母、声调，或忽略声调后的音节，并在地图上显示分合。</p>
-        </div>
-      </div>
-
-      <div class="controls-grid compare-controls">
+<div class="controls-grid compare-controls">
         <label class="field grow">
           <span>要比较的汉字（最多 10 个）</span>
-          <input id="compareChars" type="text" value="雞溪低" maxlength="20" placeholder="例如：雞溪低" />
+          <input id="compareChars" type="text" maxlength="20" placeholder="例如：雞溪低" />
         </label>
 
         <label class="field">
@@ -169,9 +131,8 @@
       <div class="parser-options">
         <label class="checkbox-field">
           <input id="compareGlidesAsFinal" type="checkbox" checked />
-          <span>把起首 j / w / ɥ 按介音归入韵母（推荐）</span>
+          <span>起首介音归入韵母</span>
         </label>
-        <span class="hint">切换后会重新计算当前结果；表格会显示实际参与比较的拆分值，方便发现异常。</span>
       </div>
 
       <div class="legend-row" aria-label="地图图例">
@@ -225,10 +186,6 @@
         </div>
       </div>
     </section>
-
-    <footer>
-      <p>V1 · 數據直接讀取音典本地 MCPDict 數據庫；地圖復用音典內置離線地圖。</p>
-    </footer>
   </main>
 
   <dialog id="charsDialog" class="chars-dialog">
