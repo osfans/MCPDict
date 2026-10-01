@@ -2,20 +2,112 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_view_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp">
+
+        <Button
+            android:id="@+id/button_view_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="36dp"
+            android:text="@string/output_list"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_view_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="36dp"
+            android:text="@string/output_table"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_table_transpose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="36dp"
+            android:text="@string/output_transpose"
+            android:textAllCaps="false"
+            android:visibility="gone" />
+    </LinearLayout>
+
     <com.osfans.mcpdict.UI.RecyclerView
         android:id="@+id/index_view"
-        android:clipToPadding="false"
-        android:scrollbars="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbars="horizontal" />
+
     <View
+        android:id="@+id/index_divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="?android:attr/listDivider" />
-    <com.osfans.mcpdict.UI.RecyclerView
-        android:id="@+id/recycler_view"
-        android:clipToPadding="false"
-        android:scrollbars="none"
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Original result list. -->
+        <com.osfans.mcpdict.UI.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="none" />
+
+        <!-- V3 matrix: the header is outside the body RecyclerView, so it is frozen vertically. -->
+        <LinearLayout
+            android:id="@+id/matrix_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/matrix_header_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Top-left corner intentionally blank. Width is aligned in ResultFragment. -->
+                <FrameLayout
+                    android:id="@+id/matrix_corner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/matrix_header_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clipToPadding="false"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/matrix_body_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+    </FrameLayout>
 </LinearLayout>

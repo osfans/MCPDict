@@ -440,6 +440,8 @@
     <string name="pref_key_type">KEY_TYPE</string>
     <string name="long_text_ipa">長文本注音</string>
     <string name="output_table">表格</string>
+    <string name="output_list">列表</string>
+    <string name="output_transpose">↔ 行列</string>
     <string-array name="pref_entries_type">
         <item>漢字</item>
         <item>讀音</item>
