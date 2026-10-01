@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.SeekBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -33,8 +33,8 @@ public class ResultFragment extends Fragment {
     private View mIndexDivider;
     private View mMatrixLayout;
     private View mMatrixCorner;
+    private SeekBar mMatrixHorizontalScrollbar;
     private RecyclerView mMatrixHeaderView, mMatrixBodyView;
-    private Button mButtonList, mButtonTable, mButtonTranspose;
     private MatrixTableView mMatrixTableView;
     private Cursor mCursor;
     private boolean tableMode = false;
@@ -76,36 +76,33 @@ public class ResultFragment extends Fragment {
         mRecyclerView.setAdapter(mResultAdapter);
         new FastScrollerBuilder(mRecyclerView).build();
 
-        // V3 matrix view: frozen top header + frozen left column.
+        // Matrix view: frozen top header + frozen left column.
         mMatrixLayout = selfView.findViewById(R.id.matrix_layout);
         mMatrixCorner = selfView.findViewById(R.id.matrix_corner);
+        mMatrixHorizontalScrollbar = selfView.findViewById(R.id.matrix_horizontal_scrollbar);
         mMatrixHeaderView = selfView.findViewById(R.id.matrix_header_view);
         mMatrixBodyView = selfView.findViewById(R.id.matrix_body_view);
         mMatrixTableView = new MatrixTableView(
                 requireContext(),
                 mMatrixHeaderView,
                 mMatrixBodyView,
+                mMatrixHorizontalScrollbar,
                 isMainPage);
 
-        ViewGroup.LayoutParams cornerParams = mMatrixCorner.getLayoutParams();
-        cornerParams.width = mMatrixTableView.getLabelWidth();
-        mMatrixCorner.setLayoutParams(cornerParams);
+        boolean languageLeft = Pref.isTableLanguageLeft();
 
-        // View controls.
-        mButtonList = selfView.findViewById(R.id.button_view_list);
-        mButtonTable = selfView.findViewById(R.id.button_view_table);
-        mButtonTranspose = selfView.findViewById(R.id.button_table_transpose);
+        mMatrixTableView.setOrientation(
+                languageLeft
+                        ? MatrixTableView.Orientation.LANGUAGES_AS_ROWS
+                        : MatrixTableView.Orientation.CHARACTERS_AS_ROWS
+        );
 
-        mButtonList.setOnClickListener(v -> setTableMode(false));
-        mButtonTable.setOnClickListener(v -> setTableMode(true));
-        mButtonTranspose.setOnClickListener(v -> {
-            MatrixTableView.Orientation next =
-                    mMatrixTableView.getOrientation() == MatrixTableView.Orientation.LANGUAGES_AS_ROWS
-                            ? MatrixTableView.Orientation.CHARACTERS_AS_ROWS
-                            : MatrixTableView.Orientation.LANGUAGES_AS_ROWS;
-            mMatrixTableView.setOrientation(next);
-            updateTransposeLabel();
-        });
+        // Vertical fast scroller: keep the library's normal auto-hide behavior.
+        // Horizontal fast scrolling is handled by the custom bottom SeekBar,
+        // because AndroidFastScroll is designed around vertical RecyclerView use.
+        new FastScrollerBuilder(mMatrixBodyView).build();
+
+        updateMatrixCornerWidth();
 
         Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
         Orthography.setToneValueStyle(Pref.getToneStyle(R.string.pref_key_tone_value_display));
@@ -118,34 +115,77 @@ public class ResultFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
+    private void updateMatrixCornerWidth() {
+        if (mMatrixCorner == null || mMatrixTableView == null) return;
+
+        int targetWidth = mMatrixTableView.getLabelWidth();
+
+        ViewGroup.LayoutParams cornerParams = mMatrixCorner.getLayoutParams();
+        if (cornerParams.width != targetWidth) {
+            cornerParams.width = targetWidth;
+            mMatrixCorner.setLayoutParams(cornerParams);
+        }
+
+        if (mMatrixHorizontalScrollbar != null) {
+            ViewGroup.LayoutParams rawParams = mMatrixHorizontalScrollbar.getLayoutParams();
+            if (rawParams instanceof ViewGroup.MarginLayoutParams) {
+                ViewGroup.MarginLayoutParams scrollbarParams =
+                        (ViewGroup.MarginLayoutParams) rawParams;
+                if (scrollbarParams.leftMargin != targetWidth) {
+                    scrollbarParams.leftMargin = targetWidth;
+                    mMatrixHorizontalScrollbar.setLayoutParams(scrollbarParams);
+                }
+            }
+        }
+    }
+
     private void setTableMode(boolean enabled) {
         tableMode = enabled;
         if (mRecyclerView == null) return;
 
         mRecyclerView.setVisibility(enabled ? View.GONE : View.VISIBLE);
         mMatrixLayout.setVisibility(enabled ? View.VISIBLE : View.GONE);
-        mButtonTranspose.setVisibility(enabled ? View.VISIBLE : View.GONE);
 
         boolean showIndex = isMainPage && !enabled;
         mIndexView.setVisibility(showIndex ? View.VISIBLE : View.GONE);
         mIndexDivider.setVisibility(showIndex ? View.VISIBLE : View.GONE);
 
-        mButtonList.setEnabled(enabled);
-        mButtonTable.setEnabled(!enabled);
-
         if (enabled) {
+            updateMatrixCornerWidth();
             mMatrixTableView.setCursor(mCursor);
-            updateTransposeLabel();
         }
     }
 
-    private void updateTransposeLabel() {
-        if (mButtonTranspose == null || mMatrixTableView == null) return;
-        if (mMatrixTableView.getOrientation() == MatrixTableView.Orientation.LANGUAGES_AS_ROWS) {
-            mButtonTranspose.setText("↔ 行列：語言在行");
-        } else {
-            mButtonTranspose.setText("↔ 行列：漢字在行");
+    public boolean isTableMode() {
+        return tableMode;
+    }
+
+    public MatrixTableView.Orientation getTableOrientation() {
+        if (mMatrixTableView != null) {
+            return mMatrixTableView.getOrientation();
         }
+        return Pref.isTableLanguageLeft()
+                ? MatrixTableView.Orientation.LANGUAGES_AS_ROWS
+                : MatrixTableView.Orientation.CHARACTERS_AS_ROWS;
+    }
+
+    public void showListMode() {
+        setTableMode(false);
+    }
+
+    public void showTableMode(MatrixTableView.Orientation orientation) {
+        // Persist the exact orientation that is actually being displayed.
+        // This keeps the menu dot, the current table and the next app/session
+        // all on the same source of truth.
+        Pref.setTableLanguageLeft(
+                orientation == MatrixTableView.Orientation.LANGUAGES_AS_ROWS
+        );
+
+        if (mMatrixTableView != null) {
+            mMatrixTableView.setOrientation(orientation);
+            updateMatrixCornerWidth();
+        }
+        setTableMode(true);
     }
 
     public void setData(Cursor cursor) {

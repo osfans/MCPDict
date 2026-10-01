@@ -65,6 +65,21 @@ public class Pref {
         return get().getBoolean(getContext().getString(key), defaultValue);
     }
 
+    // Matrix table orientation preference.
+    // true  = language labels are in the frozen left column
+    // false = Han characters are in the frozen left column
+    private static final String PREF_TABLE_LANGUAGE_LEFT = "table_language_left";
+
+    public static boolean isTableLanguageLeft() {
+        return get().getBoolean(PREF_TABLE_LANGUAGE_LEFT, true);
+    }
+
+    public static void setTableLanguageLeft(boolean languageLeft) {
+        // This is a tiny user-action preference. commit() keeps menu state and
+        // the live ResultFragment state immediately consistent.
+        get().edit().putBoolean(PREF_TABLE_LANGUAGE_LEFT, languageLeft).commit();
+    }
+
     public static void putStr(int key, String value) {
         get().edit().putString(getContext().getString(key), value).apply();
     }

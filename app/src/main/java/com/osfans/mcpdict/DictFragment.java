@@ -36,6 +36,7 @@ import com.osfans.mcpdict.Adapter.LanguageAdapter;
 import com.osfans.mcpdict.Adapter.MultiLanguageAdapter;
 import com.osfans.mcpdict.Adapter.StringArrayAdapter;
 import com.osfans.mcpdict.DB.FILTER;
+import com.osfans.mcpdict.UI.MatrixTableView;
 import com.osfans.mcpdict.UI.RefreshableFragment;
 import com.osfans.mcpdict.UI.ResultFragment;
 import com.osfans.mcpdict.UI.SearchView;
@@ -117,9 +118,91 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 default -> islandHistoryId = R.id.menu_item_both_island_history;
             }
             menu.findItem(islandHistoryId).setChecked(true);
+
+            // Result view mode controls live in the existing second-row "…" menu
+            // instead of occupying a permanent row above the results.
+            final int menuViewListId = View.generateViewId();
+            final int menuViewTableId = View.generateViewId();
+            final int menuTableOrientationGroupId = View.generateViewId();
+            final int menuTableLangRowsId = View.generateViewId();
+            final int menuTableHzRowsId = View.generateViewId();
+
+            MenuItem listModeItem = menu.add(
+                    Menu.NONE, menuViewListId, 1000, R.string.view_mode_list);
+            listModeItem.setEnabled(fragmentResult != null && fragmentResult.isTableMode());
+
+            SubMenu tableModeMenu = menu.addSubMenu(
+                    Menu.NONE, menuViewTableId, 1001, R.string.view_mode_table);
+            MenuItem langRowsItem = tableModeMenu.add(
+                    menuTableOrientationGroupId,
+                    menuTableLangRowsId,
+                    0,
+                    R.string.table_languages_as_rows);
+            MenuItem hzRowsItem = tableModeMenu.add(
+                    menuTableOrientationGroupId,
+                    menuTableHzRowsId,
+                    1,
+                    R.string.table_characters_as_rows);
+            tableModeMenu.setGroupCheckable(menuTableOrientationGroupId, true, true);
+
+            MatrixTableView.Orientation currentOrientation;
+            if (fragmentResult != null) {
+                // The currently displayed table is the first source of truth.
+                currentOrientation = fragmentResult.getTableOrientation();
+            } else {
+                // If the child fragment is not ready yet, restore the last
+                // persisted choice.
+                currentOrientation = Pref.isTableLanguageLeft()
+                        ? MatrixTableView.Orientation.LANGUAGES_AS_ROWS
+                        : MatrixTableView.Orientation.CHARACTERS_AS_ROWS;
+            }
+
+            langRowsItem.setChecked(
+                    currentOrientation == MatrixTableView.Orientation.LANGUAGES_AS_ROWS);
+
+            hzRowsItem.setChecked(
+                    currentOrientation == MatrixTableView.Orientation.CHARACTERS_AS_ROWS);
+
+            // Attach listeners directly to the dynamically-created view-mode items.
+            // Some AppCompat PopupMenu implementations do not reliably forward
+            // submenu child taps to the parent PopupMenu listener.  Direct listeners
+            // make both “語言在行” and “漢字在行” work consistently.
+            listModeItem.setOnMenuItemClickListener(clicked -> {
+                if (fragmentResult != null) fragmentResult.showListMode();
+                return true;
+            });
+            langRowsItem.setOnMenuItemClickListener(clicked -> {
+                clicked.setChecked(true);
+
+                if (fragmentResult != null) {
+                    fragmentResult.showTableMode(
+                            MatrixTableView.Orientation.LANGUAGES_AS_ROWS
+                    );
+                } else {
+                    Pref.setTableLanguageLeft(true);
+                }
+
+                return true;
+            });
+
+            hzRowsItem.setOnMenuItemClickListener(clicked -> {
+                clicked.setChecked(true);
+
+                if (fragmentResult != null) {
+                    fragmentResult.showTableMode(
+                            MatrixTableView.Orientation.CHARACTERS_AS_ROWS
+                    );
+                } else {
+                    Pref.setTableLanguageLeft(false);
+                }
+
+                return true;
+            });
+
             popup.setOnMenuItemClickListener(item1 -> {
                 int id = item1.getItemId();
                 int gid = item1.getGroupId();
+
                 if (gid == R.id.group_hz_range) {
                     Pref.putInt(R.string.pref_key_charset, id);
                     search();
