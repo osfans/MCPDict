@@ -79,14 +79,36 @@ public class Marker extends org.osmdroid.views.overlay.Marker {
         int color = DB.parseColor(colors, 0);
         int subColor = DB.parseColor(colors, 1);
 
+        init(label, size, color, subColor, yb, js);
+    }
+
+    /**
+     * 音典小工具比较地图使用。
+     * coordinate 继续使用 info.经纬度 的“经度,纬度”格式。
+     */
+    public Marker(MapView mapView, String label, String coordinate, int size,
+                  int color, int subColor, String yb, String js) {
+        super(mapView);
+        setPosition(GeoPoint.fromInvertedDoubleString(coordinate, ','));
+        init(label, size, color, subColor, yb, js);
+    }
+
+    private void init(String label, int size, int color, int subColor,
+                      String yb, String js) {
         setTitle(label);
         if (!TextUtils.isEmpty(js)) setSnippet(js);
-        mIPA = yb.replaceAll("<.*?>", "");
+
+        mIPA = TextUtils.isEmpty(yb)
+                ? ""
+                : yb.replaceAll("<.*?>", "");
+
         mSize = size;
         setTextLabelForegroundColor(color);
         setTextLabelBackgroundColor(subColor);
+
         int fontSize = getTextLabelFontSize() * 4 / 3;
         setTextLabelFontSize(fontSize);
+
         makeIcon();
     }
 

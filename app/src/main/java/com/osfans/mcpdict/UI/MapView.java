@@ -47,6 +47,7 @@ public class MapView extends org.osmdroid.views.MapView {
     FolderOverlay[] mInfoMarkers;
     List<String> levels = Arrays.asList("province", "city"); //"district"
     final transient Object lock = new Object();
+    private JSONArray mComparisonData = null;
     public MapView(Context context) {
         super(context);
     }
@@ -54,13 +55,29 @@ public class MapView extends org.osmdroid.views.MapView {
     public MapView(Context context, String hz) {
         this(context);
         setUseDataConnection(false);
-//        Configuration.getInstance().setUserAgentValue(BuildConfig.APPLICATION_ID);
         init(hz);
-        new Thread(()->{
+        initAsyncLayers();
+    }
+
+    /**
+     * 音典小工具的字音比较地图。
+     * 底图、行政区、缩放等仍然复用原 MapView。
+     */
+    public MapView(Context context, JSONArray comparisonData) {
+        this(context);
+        mComparisonData = comparisonData;
+        setUseDataConnection(false);
+        init("");
+        initAsyncLayers();
+    }
+
+    private void initAsyncLayers() {
+        new Thread(() -> {
             initProvinces();
             postInvalidate();
         }).start();
-        new Thread(()->{
+
+        new Thread(() -> {
             initInfo();
             postInvalidate();
         }).start();
@@ -106,7 +123,8 @@ public class MapView extends org.osmdroid.views.MapView {
                     mProvinceOverlay.setEnabled(level == 1);
                 }
                 if (getOverlays().contains(mInfoOverlay)) {
-                    if (TextUtils.isEmpty(hz)) mInfoOverlay.setEnabled(false);
+                    if (TextUtils.isEmpty(hz) && mComparisonData == null)
+                        mInfoOverlay.setEnabled(false);
                     else {
                         mInfoOverlay.setEnabled(true);
                         mInfoMarkers[0].setEnabled(zoomLevel >= 5);
@@ -151,12 +169,99 @@ public class MapView extends org.osmdroid.views.MapView {
             zoomToBoundingBox(boundingBox, false);
             invalidate();
         });
-        new Thread(()->{
+        new Thread(() -> {
             synchronized (lock) {
-                initHZ(hz);
+                if (mComparisonData == null) {
+                    initHZ(hz);
+                } else {
+                    initComparison(mComparisonData);
+                }
                 postInvalidate();
             }
         }).start();
+    }
+
+    private static int comparisonColor(String status) {
+        return switch (status) {
+            case "same" ->
+                    Color.rgb(21, 128, 61);
+
+            case "partial" ->
+                    Color.rgb(202, 138, 4);
+
+            case "different" ->
+                    Color.rgb(185, 28, 28);
+
+            default ->
+                    Color.rgb(148, 163, 184);
+        };
+    }
+
+    private void initComparison(JSONArray data) {
+        FolderOverlay[] markers = new FolderOverlay[6];
+
+        for (int i = 0; i < markers.length; i++) {
+            FolderOverlay overlay = new FolderOverlay();
+            getOverlays().add(overlay);
+            markers[i] = overlay;
+        }
+
+        for (int i = 0; i < data.length(); i++) {
+            JSONObject row = data.optJSONObject(i);
+
+            if (row == null)
+                continue;
+
+            String label =
+                    row.optString("label", "");
+
+            String coordinate =
+                    row.optString("coordinate", "");
+
+            if (TextUtils.isEmpty(label)
+                    || TextUtils.isEmpty(coordinate))
+                continue;
+
+            int size = Math.max(
+                    0,
+                    Math.min(
+                            markers.length - 1,
+                            row.optInt("mapLevel", 0)
+                    )
+            );
+
+            int color = comparisonColor(
+                    row.optString(
+                            "status",
+                            "missing"
+                    )
+            );
+
+            String ipa =
+                    row.optString("ipa", "");
+
+            String detail =
+                    row.optString("detail", "");
+
+            try {
+                Marker marker = new Marker(
+                        this,
+                        label,
+                        coordinate,
+                        size,
+                        color,
+                        color,
+                        ipa,
+                        detail
+                );
+
+                markers[size].add(marker);
+
+            } catch (Exception ignored) {
+                // 某一个方言点坐标异常时跳过，
+                // 不影响整张地图。
+            }
+        }
     }
 
     private void initHZ(String hz) {

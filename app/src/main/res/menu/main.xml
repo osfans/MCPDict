@@ -35,6 +35,9 @@
         app:showAsAction="never">
         <menu>
             <item
+                android:id="@+id/menu_item_yindian_tools"
+                android:title="@string/yindian_tools" />
+            <item
                 android:id="@+id/menu_item_sim"
                 android:title="@string/similarity"
                 android:titleCondensed="https://mcpdict.sourceforge.io/sim.html">

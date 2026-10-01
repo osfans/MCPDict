@@ -43,6 +43,11 @@
             android:launchMode="singleTop" >
         </activity>
 
+        <activity
+            android:name=".ToolsActivity"
+            android:exported="false"
+            android:label="@string/yindian_tools"
+            android:launchMode="singleTop" />
     </application>
 
 </manifest>
