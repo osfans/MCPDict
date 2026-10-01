@@ -2,8 +2,23 @@
   'use strict';
 
   function getBridge() {
-    if (!window.YindianBridge) throw new Error('未找到音典 Android 本地數據接口');
+    if (!window.YindianBridge) {
+      throw new Error('未找到音典 Android 本地數據接口');
+    }
     return window.YindianBridge;
+  }
+
+  function getBridgeMethod(name) {
+    const bridge = getBridge();
+    const method = bridge?.[name];
+    if (typeof method !== 'function') {
+      throw new Error(`Android 本地接口缺少 ${name}；請確認 release 混淆規則已保留 ToolsBridge，並重新安裝新 APK`);
+    }
+    return method.bind(bridge);
+  }
+
+  function callBridge(name, ...args) {
+    return getBridgeMethod(name)(...args);
   }
 
   function parseBridgeJson(raw, label) {
@@ -125,18 +140,14 @@
 
   async function init() {
     bindUi();
-    configureEmbeddedMode();
 
     const [dialectResult, qysResult] = await Promise.allSettled([
       loadDialects(),
       loadParsedQysRimes(),
     ]);
 
-    if (dialectResult.status === 'fulfilled') {
-      setGlobalStatus(`已讀取音典本地數據 · ${state.dialects.length} 種語言`, 'ok');
-    } else {
+    if (dialectResult.status !== 'fulfilled') {
       console.error(dialectResult.reason);
-      setGlobalStatus('無法讀取音典本地數據', 'error');
       showInlineStatus('evolutionProgress', `语言列表加载失败：${dialectResult.reason?.message || dialectResult.reason}`, true);
       showInlineStatus('compareProgress', `语言列表加载失败：${dialectResult.reason?.message || dialectResult.reason}`, true);
     }
@@ -221,18 +232,8 @@
       if (!$('evolutionLanguagePicker').contains(event.target)) closeLanguageMenu();
     });
 
-    $('backButton').addEventListener('click', () => {
-      if (history.length > 1) history.back();
-    });
   }
 
-  function configureEmbeddedMode() {
-    const params = new URLSearchParams(location.search);
-    if (params.get('from') === 'app' || params.get('embedded') === '1') {
-      $('backButton').classList.remove('hidden');
-      document.body.classList.add('embedded');
-    }
-  }
 
   function switchTab(tab) {
     document.querySelectorAll('.tab').forEach((button) => button.classList.toggle('active', button.dataset.tab === tab));
@@ -241,16 +242,15 @@
   }
 
   async function loadDialects() {
-    const rows = parseBridgeJson(getBridge().getLanguages(), '語言列表');
+    const rows = parseBridgeJson(callBridge('getLanguages'), '語言列表');
     state.dialects = rows.map((row, index) => parseDialectRow(row, index))
       .filter((item) => item.shortName && item.shortName !== '廣韻' && !item.isHistorical);
     // Android 端已按音典自身排序返回，這裏保持原順序。
     state.dialectByShort = new Map(state.dialects.map((item) => [item.shortName, item]));
+    $('evolutionDialect').value = '';
+    $('evolutionDialectSearch').value = '';
     renderLanguageMenu('');
 
-    const preferred = ['福州', '普通話', '普通话'];
-    const defaultName = preferred.find((name) => state.dialectByShort.has(name)) || state.dialects[0]?.shortName;
-    if (defaultName) selectLanguage(defaultName, false);
   }
 
   function getDialectDisplayName(dialect) {
@@ -421,7 +421,7 @@
 
   async function loadGuangyunEntries() {
     if (!state.guangyunEntries) {
-      const rows = parseBridgeJson(getBridge().getGuangyunRows(), '廣韻');
+      const rows = parseBridgeJson(callBridge('getGuangyunRows'), '廣韻');
       const entries = [];
       const middleRows = [];
       const seenMiddle = new Set();
@@ -453,7 +453,7 @@
   }
 
   async function loadModernDialect(shortName) {
-    const rows = parseBridgeJson(getBridge().getLanguageRows(shortName), `語言“${shortName}”`);
+    const rows = parseBridgeJson(callBridge('getLanguageRows', shortName), `語言“${shortName}”`);
     return rows;
   }
 
@@ -1057,7 +1057,7 @@
   }
 
   async function queryCharacters(chars) {
-    return parseBridgeJson(getBridge().queryChars(chars.join('')), '字音比較');
+    return parseBridgeJson(callBridge('queryChars', chars.join('')), '字音比較');
   }
 
   function extractReadings(raw) {
@@ -1193,15 +1193,10 @@
       showInlineStatus('compareProgress', '當前結果沒有可用的地圖座標。', true);
       return;
     }
-    getBridge().showCompareMap(JSON.stringify(rows));
+    callBridge('showCompareMap', JSON.stringify(rows));
   }
 
 
-  function setGlobalStatus(text, type) {
-    const node = $('globalStatus');
-    node.textContent = text;
-    node.className = `status-pill status-${type}`;
-  }
 
   function showInlineStatus(id, message, isError = false) {
     const node = $(id);
