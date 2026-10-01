@@ -182,6 +182,10 @@ public class MatrixTableView {
                 : characterLabelWidth;
     }
 
+    private int getCharacterModeRowHeight() {
+        return dp(24);
+    }
+
     public Orientation getOrientation() {
         return orientation;
     }
@@ -284,6 +288,150 @@ public class MatrixTableView {
         }
         Map<String, List<Reading>> row = byHz.get(rowKey);
         return row == null ? null : row.get(columnKey);
+    }
+
+
+// ============================================================
+// 导出当前列联表为 TSV
+// ============================================================
+
+    public String buildTsv() {
+        return buildTsv(false);
+    }
+
+    public String buildTsv(boolean includeNotes) {
+        StringBuilder out = new StringBuilder();
+
+        if (orientation == Orientation.LANGUAGES_AS_ROWS) {
+
+            out.append("方言");
+
+            for (String hz : hzOrder) {
+                out.append('\t').append(hz);
+            }
+
+            out.append('\n');
+
+            for (String lang : langOrder) {
+                out.append(lang);
+
+                for (String hz : hzOrder) {
+                    out.append('\t');
+
+                    Map<String, List<Reading>> row = byLang.get(lang);
+                    List<Reading> readings =
+                            row == null ? null : row.get(hz);
+
+                    out.append(
+                            readingsToPlainText(readings, includeNotes)
+                    );
+                }
+
+                out.append('\n');
+            }
+
+        } else {
+
+            out.append("漢字");
+
+            for (String lang : langOrder) {
+                out.append('\t').append(lang);
+            }
+
+            out.append('\n');
+
+            for (String hz : hzOrder) {
+                out.append(hz);
+
+                for (String lang : langOrder) {
+                    out.append('\t');
+
+                    Map<String, List<Reading>> row = byHz.get(hz);
+                    List<Reading> readings =
+                            row == null ? null : row.get(lang);
+
+                    out.append(
+                            readingsToPlainText(readings, includeNotes)
+                    );
+                }
+
+                out.append('\n');
+            }
+        }
+
+        return out.toString().trim();
+    }
+
+
+    private String readingsToPlainText(
+            List<Reading> readings,
+            boolean includeNotes
+    ) {
+        if (readings == null || readings.isEmpty()) {
+            return "";
+        }
+
+        StringBuilder text = new StringBuilder();
+
+        for (int i = 0; i < readings.size(); i++) {
+            Reading reading = readings.get(i);
+
+            if (i > 0) {
+                text.append(" / ");
+            }
+
+            // 音标
+            String ipa = DisplayHelper.formatIPA(
+                    reading.lang,
+                    reading.ipa
+            ).toString();
+
+            if (ipa.contains("<") && !ipa.contains(">")) {
+                ipa = ipa.replace("<", "&lt;");
+            }
+
+            CharSequence plainIpa = HtmlCompat.fromHtml(
+                    ipa,
+                    HtmlCompat.FROM_HTML_MODE_COMPACT
+            );
+
+            text.append(cleanTsvText(plainIpa.toString()));
+
+            // 注释：可选
+            if (includeNotes && !TextUtils.isEmpty(reading.zs)) {
+
+                String zs = DisplayHelper.formatZS(
+                        reading.hz,
+                        reading.zs
+                );
+
+                CharSequence plainZs = HtmlCompat.fromHtml(
+                        zs,
+                        HtmlCompat.FROM_HTML_MODE_COMPACT
+                );
+
+                String note = cleanTsvText(
+                        plainZs.toString()
+                );
+
+                if (!note.isEmpty()) {
+                    text.append(" ");
+                    text.append(note);
+                }
+            }
+        }
+
+        return text.toString();
+    }
+
+    private String cleanTsvText(String text) {
+        if (text == null) return "";
+
+        return text
+                .replace("\t", " ")
+                .replace("\r", " ")
+                .replace("\n", " ")
+                .trim();
     }
 
     private void initHorizontalScrollbar() {
@@ -490,21 +638,44 @@ public class MatrixTableView {
 
     private View makeCharacterLabel(String hz, int width) {
         TextView tv = new TextView(context);
-        tv.setLayoutParams(new ViewGroup.LayoutParams(width, ViewGroup.LayoutParams.WRAP_CONTENT));
-        tv.setMinimumHeight(rowMinHeight);
+        tv.setLayoutParams(new ViewGroup.LayoutParams(
+                width,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+        ));
+
+        if (orientation == Orientation.CHARACTERS_AS_ROWS) {
+            tv.setMinimumHeight(dp(24));
+            tv.setPadding(dp(1), 0, dp(1), 0);
+
+            // 关键：去掉 TextView 字体默认的上下额外留白
+            tv.setIncludeFontPadding(false);
+        } else {
+            tv.setMinimumHeight(rowMinHeight);
+            tv.setPadding(dp(1), dp(1), dp(1), dp(1));
+        }
+
         tv.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
-        tv.setPadding(dp(1), dp(1), dp(1), dp(1));
         tv.setTextAppearance(R.style.FontDetail);
         FontUtil.setTypeface(tv);
 
         if (isMainPage) {
             SpannableStringBuilder ssb = new SpannableStringBuilder();
-            ssb.append(hz, new ForegroundColorSpan(getColor(HZ)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            ssb.setSpan(new RelativeSizeSpan(1.55f), 0, ssb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            ssb.append(
+                    hz,
+                    new ForegroundColorSpan(getColor(HZ)),
+                    Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+            );
+            ssb.setSpan(
+                    new RelativeSizeSpan(1.55f),
+                    0,
+                    ssb.length(),
+                    Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+            );
             tv.setText(ssb);
         } else {
             tv.setText(hz);
         }
+
         return tv;
     }
 
@@ -546,14 +717,32 @@ public class MatrixTableView {
         LinearLayout cell = new LinearLayout(context);
         cell.setOrientation(LinearLayout.VERTICAL);
         cell.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
-        cell.setMinimumHeight(rowMinHeight);
+        cell.setMinimumHeight(
+                orientation == Orientation.CHARACTERS_AS_ROWS
+                        ? dp(24)
+                        : rowMinHeight
+        );
         cell.setPadding(dp(1), 0, dp(1), 0);
-        cell.setLayoutParams(new ViewGroup.LayoutParams(cellWidth, ViewGroup.LayoutParams.WRAP_CONTENT));
+        cell.setLayoutParams(
+                new ViewGroup.LayoutParams(
+                        cellWidth,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+        );
+
+        // 只在“汉字在左侧”模式下，整个音标内容向下移动
+        if (orientation == Orientation.CHARACTERS_AS_ROWS) {
+            cell.setTranslationY(dp(2));
+        }
 
         if (readings == null || readings.isEmpty()) {
             TextView dash = new TextView(context);
             dash.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
-            dash.setMinimumHeight(rowMinHeight - dp(2));
+            dash.setMinimumHeight(
+                    orientation == Orientation.CHARACTERS_AS_ROWS
+                            ? getCharacterModeRowHeight() - dp(2)
+                            : rowMinHeight - dp(2)
+            );
             dash.setPadding(dp(2), 0, dp(2), 0);
             dash.setTextAppearance(R.style.FontDetail);
             FontUtil.setTypeface(dash);
@@ -729,13 +918,21 @@ public class MatrixTableView {
             LinearLayout row = new LinearLayout(context);
             row.setOrientation(LinearLayout.HORIZONTAL);
             row.setGravity(Gravity.TOP);
-            row.setMinimumHeight(rowMinHeight);
+            row.setMinimumHeight(
+                    orientation == Orientation.CHARACTERS_AS_ROWS
+                            ? getCharacterModeRowHeight()
+                            : rowMinHeight
+            );
             row.setLayoutParams(new RecyclerView.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT));
 
             FrameLayout labelHost = new FrameLayout(context);
-            labelHost.setMinimumHeight(rowMinHeight);
+            labelHost.setMinimumHeight(
+                    orientation == Orientation.CHARACTERS_AS_ROWS
+                            ? getCharacterModeRowHeight()
+                            : rowMinHeight
+            );
             labelHost.setLayoutParams(
                     new LinearLayout.LayoutParams(
                             getCurrentLabelWidth(),
@@ -805,7 +1002,11 @@ public class MatrixTableView {
         @Override
         public CellHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             FrameLayout host = new FrameLayout(context);
-            host.setMinimumHeight(rowMinHeight);
+            host.setMinimumHeight(
+                    orientation == Orientation.CHARACTERS_AS_ROWS
+                            ? getCharacterModeRowHeight()
+                            : rowMinHeight
+            );
             host.setLayoutParams(new RecyclerView.LayoutParams(
                     cellWidth,
                     ViewGroup.LayoutParams.WRAP_CONTENT));

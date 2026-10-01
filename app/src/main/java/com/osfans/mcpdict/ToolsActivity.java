@@ -11,7 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.osfans.mcpdict.Favorite.UserDB;
+import com.osfans.mcpdict.Orth.Orthography;
 import com.osfans.mcpdict.Util.App;
+import com.osfans.mcpdict.Util.Pref;
 
 /**
  * 音典小工具入口。
@@ -35,6 +37,11 @@ public class ToolsActivity extends AppCompatActivity {
         UserDB.initialize(this);
         DB.initialize(this);
         DB.initFQ();
+        Orthography.initialize(getResources());
+
+        // Keep pronunciation rendering identical to the main result list.
+        Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
+        Orthography.setToneValueStyle(Pref.getToneStyle(R.string.pref_key_tone_value_display));
 
         Toolbar toolbar = findViewById(R.id.tools_toolbar);
         setSupportActionBar(toolbar);

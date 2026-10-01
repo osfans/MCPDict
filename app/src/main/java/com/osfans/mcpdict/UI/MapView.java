@@ -237,13 +237,12 @@ public class MapView extends org.osmdroid.views.MapView {
                     )
             );
 
-            String ipa =
-                    row.optString("ipa", "");
-
             String detail =
                     row.optString("detail", "");
 
             try {
+                // Comparison map markers show only the place name on the map.
+                // Pronunciation/status details are shown after tapping the marker.
                 Marker marker = new Marker(
                         this,
                         label,
@@ -251,9 +250,18 @@ public class MapView extends org.osmdroid.views.MapView {
                         size,
                         color,
                         color,
-                        ipa,
+                        "",
                         detail
                 );
+
+                marker.setOnMarkerClickListener((marker1, mapView) -> {
+                    new AlertDialog.Builder(getContext())
+                            .setTitle(marker1.getTitle())
+                            .setMessage(marker1.getSnippet())
+                            .setPositiveButton(R.string.ok, null)
+                            .show();
+                    return true;
+                });
 
                 markers[size].add(marker);
 

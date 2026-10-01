@@ -35,16 +35,16 @@
   const STATUS_LABELS = {
     same: '全同',
     partial: '部分相同',
-    different: '全异',
-    missing: '缺资料',
+    different: '全異',
+    missing: '缺資料',
   };
 
   const MODERN_MODE_LABELS = {
-    full: '完整读音',
-    initial: '声母',
-    final: '韵母',
-    tone: '声调',
-    notone: '忽略声调',
+    full: '完整讀音',
+    initial: '聲母',
+    final: '韻母',
+    tone: '聲調',
+    notone: '忽略聲調',
   };
 
   const MIDDLE_DIMENSION_LABELS = {
@@ -117,6 +117,7 @@
   const state = {
     dialects: [],
     dialectByShort: new Map(),
+    dialectByFull: new Map(),
     guangyunEntries: null,
     middleRows: null,
     evolutionGroups: [],
@@ -126,7 +127,11 @@
     compareChars: [],
     compareRows: [],
     compareRawRows: [],
+    compareFilterVariants: [],
+    compareResolvedGroups: [],
   };
+
+  let compareResolveTimer = null;
 
   const $ = (id) => document.getElementById(id);
   const escapeHtml = (value) => String(value ?? '')
@@ -148,8 +153,8 @@
 
     if (dialectResult.status !== 'fulfilled') {
       console.error(dialectResult.reason);
-      showInlineStatus('evolutionProgress', `语言列表加载失败：${dialectResult.reason?.message || dialectResult.reason}`, true);
-      showInlineStatus('compareProgress', `语言列表加载失败：${dialectResult.reason?.message || dialectResult.reason}`, true);
+      showInlineStatus('evolutionProgress', `語言列表載入失敗：${dialectResult.reason?.message || dialectResult.reason}`, true);
+      showInlineStatus('compareProgress', `語言列表載入失敗：${dialectResult.reason?.message || dialectResult.reason}`, true);
     }
 
     if (qysResult.status === 'fulfilled') {
@@ -157,7 +162,7 @@
       updateActiveFilterCount();
     } else {
       console.error(qysResult.reason);
-      showInlineStatus('evolutionProgress', `中古筛选项加载失败：${qysResult.reason?.message || qysResult.reason}`, true);
+      showInlineStatus('evolutionProgress', `中古篩選項載入失敗：${qysResult.reason?.message || qysResult.reason}`, true);
     }
   }
 
@@ -196,7 +201,18 @@
     });
 
     $('runCompare').addEventListener('click', runComparison);
-    $('compareFilter').addEventListener('input', renderComparisonTable);
+    $('compareChars').addEventListener('input', () => {
+      clearTimeout(compareResolveTimer);
+      compareResolveTimer = setTimeout(refreshCompareCharacterChoices, 140);
+    });
+    $('compareCharChoices').addEventListener('change', () => {
+      state.compareRows = [];
+      state.compareRawRows = [];
+      $('compareSummary').classList.add('hidden');
+      $('mapCard').classList.add('hidden');
+      $('compareResults').classList.add('hidden');
+    });
+    $('compareFilter').addEventListener('input', scheduleCompareLanguageFilter);
     $('showMissing').addEventListener('change', renderComparisonTable);
     $('showNativeMap').addEventListener('click', showNativeComparisonMap);
     $('compareMode').addEventListener('change', recalculateComparisonFromRaw);
@@ -245,18 +261,19 @@
     const rows = parseBridgeJson(callBridge('getLanguages'), '語言列表');
     state.dialects = rows.map((row, index) => parseDialectRow(row, index))
       .filter((item) => item.shortName && item.shortName !== '廣韻' && !item.isHistorical);
+
     // Android 端已按音典自身排序返回，這裏保持原順序。
     state.dialectByShort = new Map(state.dialects.map((item) => [item.shortName, item]));
+    state.dialectByFull = new Map(state.dialects.map((item) => [item.fullName, item]));
+
     $('evolutionDialect').value = '';
     $('evolutionDialectSearch').value = '';
     renderLanguageMenu('');
-
   }
 
   function getDialectDisplayName(dialect) {
-    const raw = String(dialect?.fullName || dialect?.shortName || '').trim();
-    // 与音典“语言”字段一致，界面统一使用简体“话”，不再拼接“简称 — 全称”。
-    return raw.replaceAll('話', '话');
+    // MCPDict 的語言字段本身採用音典的正式名稱；不要再強制把「話」轉成「话」。
+    return String(dialect?.fullName || dialect?.shortName || '').trim();
   }
 
   function getDialectSearchText(dialect) {
@@ -266,19 +283,45 @@
     ].filter(Boolean).join(' ').toLowerCase();
   }
 
+  function getLanguageMatches(query = '') {
+    const keyword = String(query || '').trim();
+    if (!keyword) return state.dialects;
+
+    try {
+      // 直接復用主界面的 DB.getLanguageCursor()；其中已包含 OpenCC
+      // 繁簡匹配與地點匹配。
+      const rows = parseBridgeJson(callBridge('searchLanguages', keyword), '語言搜尋');
+      const ordered = [];
+      const seen = new Set();
+      for (const row of rows) {
+        const dialect = state.dialectByFull.get(String(row?.language || ''));
+        if (!dialect || seen.has(dialect.shortName)) continue;
+        seen.add(dialect.shortName);
+        ordered.push(dialect);
+      }
+      return ordered;
+    } catch (error) {
+      console.error(error);
+      // Bridge unavailable on an older build: fall back to local literal matching.
+      const lower = keyword.toLowerCase();
+      return state.dialects.filter((dialect) => getDialectSearchText(dialect).includes(lower));
+    }
+  }
+
   function renderLanguageMenu(query = '') {
     const menu = $('evolutionDialectMenu');
     if (!menu) return;
-    const keyword = String(query || '').trim().toLowerCase();
-    const matches = state.dialects.filter((dialect) => !keyword || getDialectSearchText(dialect).includes(keyword));
+
+    const matches = getLanguageMatches(query);
     const selected = $('evolutionDialect').value;
     if (!matches.length) {
-      menu.innerHTML = '<div class="language-empty">没有匹配的语言</div>';
+      menu.innerHTML = '<div class="language-empty">沒有匹配的語言</div>';
       return;
     }
+
     menu.innerHTML = matches.map((dialect) => `
       <button class="language-option ${dialect.shortName === selected ? 'active' : ''}" type="button" role="option" data-dialect-short="${escapeHtml(dialect.shortName)}">
-        ${escapeHtml(getDialectDisplayName(dialect))}
+        <span class="language-color-label" style="background:${escapeHtml(dialect.color || '#64748b')}">${escapeHtml(getDialectDisplayName(dialect))}</span>
       </button>`).join('');
   }
 
@@ -314,6 +357,8 @@
       mapLevel: Number(row?.mapLevel || 0),
       location: row?.location || '',
       toneConfig: toneConfig && typeof toneConfig === 'object' ? toneConfig : {},
+      color: row?.color || '#64748b',
+      subColor: row?.subColor || row?.color || '#64748b',
       isHistorical: String(row?.historical || '') !== '' && String(row?.historical || '') !== '0',
       originalIndex,
     };
@@ -325,11 +370,11 @@
 
   async function runEvolution() {
     const dialectName = $('evolutionDialect').value;
-    if (!dialectName) return showInlineStatus('evolutionProgress', '请先选择一种语言。', true);
+    if (!dialectName) return showInlineStatus('evolutionProgress', '請先選擇一種語言。', true);
 
     const button = $('runEvolution');
     button.disabled = true;
-    showInlineStatus('evolutionProgress', '正在读取中古音系与现代语言数据……');
+    showInlineStatus('evolutionProgress', '正在讀取中古音系與現代語言數據……');
     $('evolutionResults').classList.add('hidden');
     $('evolutionSummary').classList.add('hidden');
 
@@ -345,7 +390,7 @@
       state.evolutionLastModernRows = { dialectName, rows: modernRows };
       populateEvolutionFilters(state.middleRows || []);
 
-      showInlineStatus('evolutionProgress', '正在按所选中古条件筛选，并计算今音归并……');
+      showInlineStatus('evolutionProgress', '正在按所選中古條件篩選，並計算今音歸併……');
       await yieldToBrowser();
 
       const modernByChar = groupModernRowsByChar(modernRows);
@@ -564,7 +609,7 @@
     const unique = [...new Set(values.filter(Boolean))];
     const ordered = [
       ...preferredOrder.filter((value) => unique.includes(value)),
-      ...unique.filter((value) => !preferredOrder.includes(value)).sort((a, b) => a.localeCompare(b, 'zh-CN')),
+      ...unique.filter((value) => !preferredOrder.includes(value)).sort((a, b) => a.localeCompare(b, 'zh-Hant')),
     ];
     const options = element.querySelector('.multi-options');
     options.innerHTML = `
@@ -638,7 +683,7 @@
           <span>${escapeHtml(value)}</span>
         </label>`).join(''));
     }
-    const extras = [...available].filter((value) => !known.has(value)).sort((a, b) => a.localeCompare(b, 'zh-CN'));
+    const extras = [...available].filter((value) => !known.has(value)).sort((a, b) => a.localeCompare(b, 'zh-Hant'));
     if (extras.length) {
       chunks.push('<div class="multi-group-title">其他</div>');
       chunks.push(extras.map((value) => `
@@ -826,7 +871,7 @@
       const ib = order.indexOf(b);
       if (ia !== ib) return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib);
     }
-    return a.localeCompare(b, 'zh-CN');
+    return a.localeCompare(b, 'zh-Hant');
   }
 
   function expandPhonetics(value) {
@@ -838,12 +883,16 @@
   function decomposeModern(phonetic, dialect, options = {}) {
     const original = String(phonetic || '').trim().normalize('NFC');
     const { base, tone } = splitTone(original, dialect?.toneConfig || {});
-    const cleanBase = base.trim();
+    const cleanBase = base.trim().normalize('NFC');
     if (!cleanBase) return { original, base: '', initial: '∅', final: '∅', tone };
 
-    const graphemes = Array.from(cleanBase);
-    const firstVowelIndex = graphemes.findIndex((ch) => VOWELS.has(ch));
-    const syllabicIndex = graphemes.findIndex((ch) => SYLLABIC_MARKS.has(ch));
+    // 用 NFD 做“识别”，再用 NFC 做“显示”。
+    // 这样 ũ / ẽ / ĩ 等预组鼻化元音会先拆成 u/ e/ i + ◌̃，
+    // 元音判断仍能命中基础元音，而鼻化符号会和韵母一起保留下来。
+    const parseBase = cleanBase.normalize('NFD');
+    const codepoints = Array.from(parseBase);
+    const firstVowelIndex = codepoints.findIndex((ch) => VOWELS.has(ch));
+    const syllabicIndex = codepoints.findIndex((ch) => SYLLABIC_MARKS.has(ch));
 
     if (firstVowelIndex < 0) {
       // 成音节辅音（m̩、ŋ̍ 等）以及未显式标记成音节性的单辅音读法，
@@ -853,28 +902,45 @@
 
     let onsetEnd = firstVowelIndex;
     if (options.glidesAsFinal !== false) {
-      while (onsetEnd > 0 && GLIDES.has(graphemes[onsetEnd - 1])) onsetEnd -= 1;
-      if (onsetEnd === 0 && GLIDES.has(graphemes[0])) onsetEnd = 0;
+      while (onsetEnd > 0 && GLIDES.has(codepoints[onsetEnd - 1])) onsetEnd -= 1;
+      if (onsetEnd === 0 && GLIDES.has(codepoints[0])) onsetEnd = 0;
     }
 
     // 如果辅音本身带成音节符号且出现在第一个元音之前，说明其不应算普通声母。
     if (syllabicIndex >= 0 && syllabicIndex < firstVowelIndex) onsetEnd = 0;
 
-    const initial = onsetEnd === 0 ? '∅' : graphemes.slice(0, onsetEnd).join('');
-    const final = graphemes.slice(onsetEnd).join('') || '∅';
+    const initial = onsetEnd === 0
+      ? '∅'
+      : codepoints.slice(0, onsetEnd).join('').normalize('NFC');
+    const final = (codepoints.slice(onsetEnd).join('').normalize('NFC') || '∅');
+
     return { original, base: cleanBase, initial, final, tone };
   }
 
   function splitTone(phonetic, toneConfig = {}) {
     const original = String(phonetic || '').trim().normalize('NFC');
+
+    // First honour an explicit tone key when the language metadata provides one.
     const toneKeys = Object.keys(toneConfig || {}).filter(Boolean).sort((a, b) => b.length - a.length);
     for (const key of toneKeys) {
       if (original.endsWith(key)) {
         return { base: original.slice(0, -key.length), tone: key };
       }
     }
-    const match = original.match(/([0-9¹²³⁴⁵⁶⁷⁸⁹⁰˥˦˧˨˩]+)$/u);
-    if (match) return { base: original.slice(0, -match[1].length), tone: match[1] };
+
+    // MCPDict's displayed IPA may append a normalized tone marker such as
+    // H①, 1①, 55②, ˥˧③, etc.  The old parser knew only digits/tone bars,
+    // so it incorrectly treated H① as part of the rhyme and returned tone ∅.
+    const circled = original.match(/((?:[0-9¹²³⁴⁵⁶⁷⁸⁹⁰˥˦˧˨˩꜀꜁꜂꜃꜄꜅꜆꜇ᴴᴹᴸHMLRFS]+)?[⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳]+)$/u);
+    if (circled) {
+      return { base: original.slice(0, -circled[1].length), tone: circled[1] };
+    }
+
+    const plain = original.match(/([0-9¹²³⁴⁵⁶⁷⁸⁹⁰˥˦˧˨˩꜀꜁꜂꜃꜄꜅꜆꜇ᴴᴹᴸHMLRFS]+)$/u);
+    if (plain) {
+      return { base: original.slice(0, -plain[1].length), tone: plain[1] };
+    }
+
     return { base: original, tone: '' };
   }
 
@@ -901,17 +967,12 @@
       ].join(' ').toLowerCase();
       return haystack.includes(filter);
     });
-
-    $('evolutionTableTitle').textContent = `${oldLabel} → 今音${modernLabel}`;
-    $('evolutionTableNote').textContent = `当前中古条件：${formatActiveFilters()}。点击“查看详情”可查看完整例字和所含中古音韵地位。`;
     $('evolutionHead').innerHTML = `<tr>
       <th>${escapeHtml(oldLabel)}</th>
       <th>今音${escapeHtml(modernLabel)}</th>
-      <th>字数</th>
-      <th>涉及音韵地位数</th>
+      <th>字數</th>
+      <th>涉及音韻地位數</th>
       <th>例字</th>
-      <th>现代完整读音</th>
-      <th></th>
     </tr>`;
 
     const body = $('evolutionBody');
@@ -920,20 +981,20 @@
       const chars = [...group.chars];
       const preview = chars.slice(0, 22).join('');
       const suffix = chars.length > 22 ? ` … +${chars.length - 22}` : '';
-      const readings = [...group.readings].slice(0, 10).join(' · ');
       return `<tr>
         <td><strong>${escapeHtml(group.oldValue)}</strong></td>
         <td class="ipa"><strong>${escapeHtml(group.modernValue)}</strong></td>
         <td>${group.chars.size.toLocaleString()}</td>
         <td>${group.positions.size.toLocaleString()}</td>
-        <td class="example-chars">${escapeHtml(preview)}${escapeHtml(suffix)}</td>
-        <td class="ipa">${escapeHtml(readings)}${group.readings.size > 10 ? ' …' : ''}</td>
-        <td><button class="small-button" type="button" data-group-index="${originalIndex}">查看详情</button></td>
+        <td class="example-chars">
+          <span>${escapeHtml(preview)}${escapeHtml(suffix)}</span>
+          <button class="small-button inline-detail-button" type="button" data-group-index="${originalIndex}">查看詳情</button>
+        </td>
       </tr>`;
     }).join('');
 
     if (!groups.length) {
-      body.innerHTML = `<tr><td colspan="7" style="text-align:center;color:#64748b;padding:32px">没有符合当前中古筛选条件的对应关系。</td></tr>`;
+      body.innerHTML = `<tr><td colspan="5" class="empty-row">沒有符合當前中古篩選條件的對應關係。</td></tr>`;
     }
   }
 
@@ -970,9 +1031,9 @@
     const oldLabel = MIDDLE_DIMENSION_LABELS[sourceDimension] || sourceDimension;
     const modernLabel = MODERN_MODE_LABELS[modernMode] || modernMode;
     $('dialogTitle').textContent = `${group.oldValue} → ${group.modernValue}`;
-    $('dialogSubtitle').textContent = `${oldLabel} → 今音${modernLabel} · ${group.chars.size} 字 · ${group.positions.size} 种中古音韵地位`;
+    $('dialogSubtitle').textContent = `${oldLabel} → 今音${modernLabel} · ${group.chars.size} 字 · ${group.positions.size} 種中古音韻地位`;
     $('dialogPositions').innerHTML = [...group.subtypes]
-      .sort((a, b) => a.localeCompare(b, 'zh-CN'))
+      .sort((a, b) => a.localeCompare(b, 'zh-Hant'))
       .map((position) => `<span class="position-chip">${escapeHtml(position)}</span>`)
       .join('');
     $('dialogReadings').innerHTML = [...group.readings]
@@ -985,15 +1046,86 @@
     else dialog.setAttribute('open', '');
   }
 
+  async function refreshCompareCharacterChoices() {
+    const container = $('compareCharChoices');
+    const inputChars = parseInputChars($('compareChars').value);
+
+    if (!inputChars.length) {
+      state.compareResolvedGroups = [];
+      container.innerHTML = '';
+      container.classList.add('hidden');
+      return [];
+    }
+
+    try {
+      const groups = parseBridgeJson(
+        callBridge('resolveCharacters', inputChars.join('')),
+        '漢字繁簡匹配'
+      );
+      state.compareResolvedGroups = groups;
+
+      const rendered = [];
+      groups.forEach((group, groupIndex) => {
+        const candidates = Array.isArray(group?.candidates) && group.candidates.length
+          ? group.candidates
+          : [group?.input].filter(Boolean);
+
+        candidates.forEach((candidate, candidateIndex) => {
+          const id = `compareCandidate_${groupIndex}_${candidateIndex}`;
+          rendered.push(`
+            <label class="char-choice">
+              <input type="checkbox" id="${id}" value="${escapeHtml(candidate)}"
+                     ${candidateIndex === 0 ? 'checked' : ''} />
+              <span>${escapeHtml(candidate)}</span>
+            </label>`);
+        });
+      });
+
+      container.innerHTML = rendered.length
+        ? `<span class="char-choice-title">匹配字</span><div class="char-choice-items">${rendered.join('')}</div>`
+        : '';
+      container.classList.toggle('hidden', !rendered.length);
+      return getSelectedCompareChars();
+    } catch (error) {
+      console.error(error);
+      state.compareResolvedGroups = [];
+      container.innerHTML = '';
+      container.classList.add('hidden');
+      showInlineStatus('compareProgress', `漢字繁簡匹配失敗：${error?.message || error}`, true);
+      return [];
+    }
+  }
+
+  function getSelectedCompareChars() {
+    const container = $('compareCharChoices');
+    return [...new Set(
+      Array.from(container.querySelectorAll('input[type="checkbox"]:checked'))
+        .map((input) => input.value)
+        .filter(Boolean)
+    )];
+  }
+
   async function runComparison() {
-    if (!state.dialects.length) return showInlineStatus('compareProgress', '语言列表尚未加载完成。', true);
-    const chars = parseInputChars($('compareChars').value);
-    if (chars.length < 2) return showInlineStatus('compareProgress', '请至少输入两个汉字。', true);
-    if (chars.length > 10) return showInlineStatus('compareProgress', 'MCPDict 查询接口一次最多比较 10 个汉字。', true);
+    if (!state.dialects.length) {
+      return showInlineStatus('compareProgress', '語言列表尚未載入完成。', true);
+    }
+
+    clearTimeout(compareResolveTimer);
+    let chars = getSelectedCompareChars();
+    if (!chars.length) {
+      chars = await refreshCompareCharacterChoices();
+    }
+
+    if (chars.length < 2) {
+      return showInlineStatus('compareProgress', '請至少勾選兩個漢字。', true);
+    }
+    if (chars.length > 10) {
+      return showInlineStatus('compareProgress', '一次最多比較 10 個漢字。', true);
+    }
 
     const button = $('runCompare');
     button.disabled = true;
-    showInlineStatus('compareProgress', '正在查询 MCPDict 并计算各语言的分合关系……');
+    showInlineStatus('compareProgress', '正在查詢 MCPDict 並計算各語言的分合關係……');
     $('compareSummary').classList.add('hidden');
     $('mapCard').classList.add('hidden');
     $('compareResults').classList.add('hidden');
@@ -1009,7 +1141,7 @@
       hideInlineStatus('compareProgress');
     } catch (error) {
       console.error(error);
-      showInlineStatus('compareProgress', humanizeDataError(error, '字音比较'), true);
+      showInlineStatus('compareProgress', humanizeDataError(error, '字音比較'), true);
     } finally {
       button.disabled = false;
     }
@@ -1048,7 +1180,6 @@
     state.compareRows = results;
     updateComparisonSummary();
     renderComparisonTable();
-    $('mapModeNote').textContent = `当前按“${MODERN_MODE_LABELS[mode]}”判断同异；点击地图点查看完整读音。`;
   }
 
   function parseInputChars(input) {
@@ -1109,23 +1240,51 @@
     $('missingCount').textContent = counts.missing.toLocaleString();
   }
 
+  let compareFilterTimer = null;
+
+  function scheduleCompareLanguageFilter() {
+    clearTimeout(compareFilterTimer);
+    const query = $('compareFilter').value.trim();
+    state.compareFilterVariants = query ? [query.toLowerCase()] : [];
+    renderComparisonTable();
+
+    if (!query) return;
+    compareFilterTimer = setTimeout(async () => {
+      try {
+        const variants = parseBridgeJson(callBridge('getTextVariants', query), '繁簡搜尋')
+          .map((value) => String(value || '').trim().toLowerCase())
+          .filter(Boolean);
+        if ($('compareFilter').value.trim() !== query) return;
+        state.compareFilterVariants = [...new Set([query.toLowerCase(), ...variants])];
+        renderComparisonTable();
+      } catch (error) {
+        console.error(error);
+      }
+    }, 120);
+  }
+
   function renderComparisonTable() {
     const chars = state.compareChars;
     const mode = $('compareMode').value;
     const filter = $('compareFilter').value.trim().toLowerCase();
+    const variants = state.compareFilterVariants.length
+      ? state.compareFilterVariants
+      : (filter ? [filter] : []);
     const showMissing = $('showMissing').checked;
+
     const rows = state.compareRows.filter((row) => {
       if (!showMissing && row.status === 'missing') return false;
       if (!filter) return true;
       const dialect = row.dialect;
-      return [dialect.shortName, dialect.fullName, dialect.location]
-        .join(' ').toLowerCase().includes(filter);
+      const haystack = [dialect.shortName, dialect.fullName, dialect.location]
+        .join(' ').toLowerCase();
+      return variants.some((variant) => variant && haystack.includes(variant));
     });
 
     $('compareHead').innerHTML = `<tr>
-      <th>语言</th>
-      ${chars.map((char) => `<th>${escapeHtml(char)}</th>`).join('')}
-      <th>结果</th>
+      <th class="language-column">語言</th>
+      <th>讀音</th>
+      <th class="result-column">結果</th>
     </tr>`;
 
     const visible = rows.slice(0, 600);
@@ -1133,31 +1292,41 @@
       const d = row.dialect;
       const region = d.location || '';
       return `<tr>
-        <td><strong>${escapeHtml(getDialectDisplayName(d))}</strong>${region ? `<br><small class="muted-small">${escapeHtml(region)}</small>` : ''}</td>
-        ${row.normalizedByChar.map((items) => `<td class="ipa">${renderReadingCell(items, mode, d)}</td>`).join('')}
-        <td><span class="status-tag ${row.status}">${STATUS_LABELS[row.status]}</span></td>
+        <td class="language-cell">
+          <span class="language-color-label result-language-label" style="background:${escapeHtml(d.color || '#64748b')}">${escapeHtml(getDialectDisplayName(d))}</span>
+          ${region ? `<small class="muted-small region-line">${escapeHtml(region)}</small>` : ''}
+        </td>
+        <td class="ipa compact-reading-cell">${renderCompactComparisonReadings(row, mode)}</td>
+        <td class="result-cell"><span class="status-tag ${row.status}">${STATUS_LABELS[row.status]}</span></td>
       </tr>`;
     }).join('');
 
     if (!visible.length) {
-      $('compareBody').innerHTML = `<tr><td colspan="${chars.length + 2}" style="text-align:center;color:#64748b;padding:32px">没有符合当前条件的语言。</td></tr>`;
+      $('compareBody').innerHTML = `<tr><td colspan="3" class="empty-row">沒有符合當前條件的語言。</td></tr>`;
     }
-
-    const parserNote = $('compareGlidesAsFinal').checked ? 'j/w/ɥ 按介音归韵母' : 'j/w/ɥ 可计入声母';
-    $('compareTableNote').textContent = rows.length > 600
-      ? `按“${MODERN_MODE_LABELS[mode]}”比较；${parserNote}。共有 ${rows.length.toLocaleString()} 个结果，表格只显示前 600 个。`
-      : `按“${MODERN_MODE_LABELS[mode]}”比较；${parserNote}。当前显示 ${rows.length.toLocaleString()} 种语言。`;
   }
 
-  function renderReadingCell(items, mode, dialect) {
-    if (!items.length) return '—';
-    return items.map(({ raw, parts }) => {
-      const compareValue = displayValueFromParts(parts, mode, dialect);
-      const split = `声 ${parts.initial} · 韵 ${parts.final} · 调 ${formatTone(parts.tone, dialect?.toneConfig || {})}`;
-      if (mode === 'full') {
-        return `<div class="reading-item"><span class="reading-raw">${escapeHtml(raw)}</span><span class="reading-split">${escapeHtml(split)}</span></div>`;
+  function renderCompactComparisonReadings(row, mode) {
+    return state.compareChars.map((char, index) => {
+      const items = row.normalizedByChar[index] || [];
+      if (!items.length) {
+        return `<div class="compare-char-line"><span class="compare-char">${escapeHtml(char)}</span><span class="reading-raw">—</span></div>`;
       }
-      return `<div class="reading-item"><span class="reading-raw">${escapeHtml(raw)}</span><span class="compare-value">${escapeHtml(MODERN_MODE_LABELS[mode])}: ${escapeHtml(compareValue)}</span><span class="reading-split">${escapeHtml(split)}</span></div>`;
+
+      const readings = items.map(({ raw, parts }) => {
+        const split = `聲 ${parts.initial} · 韻 ${parts.final} · 調 ${formatTone(parts.tone, row.dialect?.toneConfig || {})}`;
+        const compareValue = displayValueFromParts(parts, mode, row.dialect);
+        const value = mode === 'full' ? '' : `<span class="compare-value">${escapeHtml(compareValue)}</span>`;
+        return `<span class="compact-reading">
+          <span class="reading-raw">${escapeHtml(raw)}</span>${value}
+          <span class="reading-split">${escapeHtml(split)}</span>
+        </span>`;
+      }).join('<span class="reading-separator"> / </span>');
+
+      return `<div class="compare-char-line">
+        <span class="compare-char">${escapeHtml(char)}</span>
+        <span class="compare-char-readings">${readings}</span>
+      </div>`;
     }).join('');
   }
 
@@ -1165,6 +1334,7 @@
     if (!state.compareRows.length) return;
     const showMissing = $('showMissing').checked;
     const mode = $('compareMode').value;
+
     const rows = state.compareRows
       .filter((row) => showMissing || row.status !== 'missing')
       .filter((row) => row.dialect.coordinate)
@@ -1176,19 +1346,24 @@
             .filter(Boolean).join(' / ') || '—';
           return { char, raw, norm };
         });
-        const detail = readings.map((item) => {
+
+        const detailLines = readings.map((item) => {
           const extra = mode !== 'full' && item.norm !== item.raw ? `（${item.norm}）` : '';
-          return `${item.char} ${item.raw}${extra}`;
-        }).join('　');
+          return `${item.char}${item.raw}${extra}`;
+        });
+
         return {
+          // The marker itself displays only the place name.
           label: getDialectDisplayName(row.dialect),
           coordinate: row.dialect.coordinate,
           mapLevel: row.dialect.mapLevel || 0,
           status: row.status,
-          ipa: readings.map((item) => `${item.char}${item.raw}`).join('  '),
-          detail: `${STATUS_LABELS[row.status]} · ${MODERN_MODE_LABELS[mode]}\n${detail}`,
+          ipa: '',
+          // Details are shown only after tapping the place name.
+          detail: `${STATUS_LABELS[row.status]}·${MODERN_MODE_LABELS[mode]}\n${detailLines.join('\n')}`,
         };
       });
+
     if (!rows.length) {
       showInlineStatus('compareProgress', '當前結果沒有可用的地圖座標。', true);
       return;

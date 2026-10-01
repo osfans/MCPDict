@@ -143,25 +143,21 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                     menuTableHzRowsId,
                     1,
                     R.string.table_characters_as_rows);
-            tableModeMenu.setGroupCheckable(menuTableOrientationGroupId, true, true);
+            tableModeMenu.setGroupCheckable(
+                    menuTableOrientationGroupId,
+                    true,
+                    false
+            );
 
-            MatrixTableView.Orientation currentOrientation;
-            if (fragmentResult != null) {
-                // The currently displayed table is the first source of truth.
-                currentOrientation = fragmentResult.getTableOrientation();
-            } else {
-                // If the child fragment is not ready yet, restore the last
-                // persisted choice.
-                currentOrientation = Pref.isTableLanguageLeft()
-                        ? MatrixTableView.Orientation.LANGUAGES_AS_ROWS
-                        : MatrixTableView.Orientation.CHARACTERS_AS_ROWS;
-            }
+            MatrixTableView.Orientation currentOrientation =
+                    Pref.isTableLanguageLeft()
+                            ? MatrixTableView.Orientation.LANGUAGES_AS_ROWS
+                            : MatrixTableView.Orientation.CHARACTERS_AS_ROWS;
 
-            langRowsItem.setChecked(
-                    currentOrientation == MatrixTableView.Orientation.LANGUAGES_AS_ROWS);
+            boolean languageLeft = Pref.isTableLanguageLeft();
 
-            hzRowsItem.setChecked(
-                    currentOrientation == MatrixTableView.Orientation.CHARACTERS_AS_ROWS);
+            langRowsItem.setChecked(languageLeft);
+            hzRowsItem.setChecked(!languageLeft);
 
             // Attach listeners directly to the dynamically-created view-mode items.
             // Some AppCompat PopupMenu implementations do not reliably forward
@@ -172,28 +168,29 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 return true;
             });
             langRowsItem.setOnMenuItemClickListener(clicked -> {
-                clicked.setChecked(true);
+
+                // 永久保存用户选择
+                Pref.setTableLanguageLeft(true);
 
                 if (fragmentResult != null) {
                     fragmentResult.showTableMode(
                             MatrixTableView.Orientation.LANGUAGES_AS_ROWS
                     );
-                } else {
-                    Pref.setTableLanguageLeft(true);
                 }
 
                 return true;
             });
 
+
             hzRowsItem.setOnMenuItemClickListener(clicked -> {
-                clicked.setChecked(true);
+
+                // 永久保存用户选择
+                Pref.setTableLanguageLeft(false);
 
                 if (fragmentResult != null) {
                     fragmentResult.showTableMode(
                             MatrixTableView.Orientation.CHARACTERS_AS_ROWS
                     );
-                } else {
-                    Pref.setTableLanguageLeft(false);
                 }
 
                 return true;

@@ -21,3 +21,9 @@
 
 -keep class **.R$font { public *; }
 -keep class **.OpenCC { public *; }
+
+# Keep WebView JavaScript bridge method names used by assets/yindian-tools/app.js.
+-keepclassmembers class com.osfans.mcpdict.ToolsBridge {
+    @android.webkit.JavascriptInterface <methods>;
+}
+

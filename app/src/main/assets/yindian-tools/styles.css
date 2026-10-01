@@ -21,7 +21,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK TC", "Microsoft JhengHei", sans-serif;
 }
 button, input, select { font: inherit; }
 button { cursor: pointer; }
@@ -583,4 +583,331 @@ body.embedded .parser-options {
 /* 极简 Android 内嵌版：顶部只保留原生 Toolbar 和工具切换 Tabs。 */
 body.embedded .tool-panel {
   padding-top: 8px;
+}
+
+
+/* 繁簡匹配後的候選漢字：保持緊湊，使用原生 checkbox。 */
+.char-choice-box {
+  margin-top: 8px;
+  padding: 9px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #f8fafc;
+}
+.char-choice-title {
+  display: block;
+  margin-bottom: 7px;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+}
+.char-choice-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 14px;
+}
+.char-choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 28px;
+  color: var(--text);
+  font-size: 15px;
+}
+.char-choice input {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--brand);
+}
+
+
+/* V3: compact statistics instead of large dashboard cards. */
+.compact-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  margin-top: 10px;
+  padding: 7px 0;
+  color: #475569;
+  font-size: 12px;
+  border-bottom: 1px solid #eef2f2;
+}
+.compact-summary > span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  white-space: nowrap;
+}
+.compact-summary strong {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1;
+}
+.compare-summary .same::before,
+.compare-summary .partial::before,
+.compare-summary .different::before,
+.compare-summary .missing::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 1px;
+}
+.compare-summary .same::before { background: var(--same); }
+.compare-summary .partial::before { background: var(--partial); }
+.compare-summary .different::before { background: var(--different); }
+.compare-summary .missing::before { background: var(--missing); }
+
+/* V3: compact map controls; no extra map card title/description. */
+.map-compact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eef2f2;
+}
+.compact-map-button {
+  width: auto !important;
+  min-height: 36px;
+  padding: 7px 16px;
+}
+
+/* MCPDict language colours. */
+.language-color-label {
+  display: inline-block;
+  max-width: 100%;
+  padding: 3px 7px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.language-option {
+  padding: 4px 5px;
+}
+.language-option:hover,
+.language-option.active {
+  background: #f8fafc;
+  color: inherit;
+}
+.language-option .language-color-label {
+  font-size: 12.5px;
+}
+
+/* V3: evolution result header only contains search. */
+.compact-toolbar {
+  padding: 10px 12px;
+  justify-content: flex-end;
+}
+.compact-toolbar .search-field {
+  width: min(360px, 100%);
+}
+
+/* V3: comparison table is always three columns; characters stack vertically. */
+.compare-table-wrap {
+  overflow-x: hidden;
+}
+.compare-table {
+  min-width: 0;
+  table-layout: fixed;
+}
+.compare-table th,
+.compare-table td {
+  padding: 7px 8px;
+  font-size: 12px;
+}
+.compare-table .language-column { width: 31%; }
+.compare-table .result-column { width: 54px; }
+.language-cell { overflow-wrap: anywhere; }
+.result-language-label {
+  white-space: normal;
+  padding: 3px 5px;
+  font-size: 11.5px;
+}
+.region-line {
+  display: block;
+  margin-top: 3px;
+  font-size: 9.5px;
+  line-height: 1.25;
+}
+.compact-reading-cell {
+  overflow-wrap: anywhere;
+}
+.compare-char-line {
+  display: grid;
+  grid-template-columns: 1.35em minmax(0, 1fr);
+  gap: 4px;
+  align-items: start;
+  line-height: 1.25;
+}
+.compare-char-line + .compare-char-line {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px dotted #eef2f2;
+}
+.compare-char {
+  font-weight: 800;
+}
+.compare-char-readings {
+  min-width: 0;
+}
+.compact-reading {
+  display: inline;
+}
+.compact-reading .reading-raw {
+  display: inline;
+  font-weight: 700;
+}
+.compact-reading .compare-value {
+  margin: 0 0 0 3px;
+  padding: 1px 4px;
+  font-size: 9px;
+}
+.compact-reading .reading-split {
+  display: block;
+  margin-top: 1px;
+  color: #94a3b8;
+  font-size: 9px;
+  line-height: 1.25;
+  white-space: normal;
+}
+.reading-separator {
+  color: #94a3b8;
+}
+.result-cell {
+  text-align: center;
+}
+.result-cell .status-tag {
+  padding: 3px 5px;
+  font-size: 10px;
+}
+.empty-row {
+  text-align: center;
+  color: #64748b;
+  padding: 20px !important;
+}
+
+/* V3: compact details dialog. */
+.chars-dialog form { padding: 13px; }
+.dialog-head h3 { font-size: 17px; margin-bottom: 2px; }
+.dialog-head p { font-size: 11px; }
+.position-chips {
+  gap: 4px;
+  margin-top: 9px;
+  padding-bottom: 7px;
+  max-height: 120px;
+}
+.position-chip {
+  padding: 3px 6px;
+  font-size: 10.5px;
+}
+.reading-chips {
+  gap: 4px;
+  margin: 9px 0 7px;
+}
+.reading-chip {
+  padding: 3px 6px;
+  font-size: 11px;
+}
+.all-chars {
+  padding: 9px;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: .08em;
+}
+
+@media (max-width: 760px) {
+  .compact-summary { gap: 5px 10px; font-size: 11px; }
+  .compact-summary strong { font-size: 14px; }
+  .map-compact { gap: 10px; }
+  .compact-map-button { flex: 0 0 auto; }
+  .compare-results-toolbar {
+    gap: 8px;
+    padding: 10px 8px;
+  }
+  .compare-results-toolbar h3 { font-size: 15px; }
+  .compare-table .language-column { width: 34%; }
+  .compare-table .result-column { width: 48px; }
+  .compare-table th,
+  .compare-table td { padding: 6px 5px; }
+  .result-language-label { font-size: 10.5px; }
+  .compact-reading .reading-split { font-size: 8.5px; }
+}
+
+
+/* V3.1：古今演變表改為手機可直接閱讀的 5 欄，不再需要右滑。 */
+#evolutionResults .table-wrap {
+  overflow-x: hidden;
+}
+#evolutionResults table {
+  min-width: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+#evolutionResults th,
+#evolutionResults td {
+  padding: 8px 6px;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+#evolutionResults th:nth-child(1),
+#evolutionResults td:nth-child(1) { width: 13%; }
+#evolutionResults th:nth-child(2),
+#evolutionResults td:nth-child(2) { width: 14%; }
+#evolutionResults th:nth-child(3),
+#evolutionResults td:nth-child(3) { width: 9%; }
+#evolutionResults th:nth-child(4),
+#evolutionResults td:nth-child(4) { width: 15%; }
+#evolutionResults th:nth-child(5),
+#evolutionResults td:nth-child(5) { width: 49%; }
+
+#evolutionResults .example-chars {
+  max-width: none;
+  font-size: 14px;
+  line-height: 1.45;
+  letter-spacing: .04em;
+}
+.inline-detail-button {
+  display: inline-block;
+  margin-left: 6px;
+  margin-top: 2px;
+  padding: 2px 5px;
+  border-radius: 6px;
+  font-size: 10px;
+  vertical-align: baseline;
+}
+
+/* 詳情再收緊一點。 */
+.chars-dialog {
+  width: min(620px, calc(100vw - 18px));
+}
+.chars-dialog form {
+  padding: 10px;
+}
+.position-chips {
+  margin-top: 6px;
+  padding-bottom: 5px;
+  max-height: 90px;
+}
+.reading-chips {
+  margin: 6px 0 5px;
+}
+.all-chars {
+  padding: 7px;
+  max-height: 40vh;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  #evolutionResults th,
+  #evolutionResults td {
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+  #evolutionResults .example-chars {
+    font-size: 13px;
+  }
 }

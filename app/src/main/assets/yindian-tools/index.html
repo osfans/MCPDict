@@ -1,27 +1,27 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0f766e" />
-  <meta name="description" content="音典小工具：中古到今音演化、字音比较与地图展示。" />
+  <meta name="description" content="音典小工具：中古到今音演化、字音比較與地圖展示。" />
   <title>音典小工具</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body class="embedded">
 <main class="app-shell">
-<nav class="tabs" aria-label="工具切换">
+<nav class="tabs" aria-label="工具切換">
       <button class="tab active" data-tab="evolution" type="button">古今演化</button>
-      <button class="tab" data-tab="compare" type="button">字音比较</button>
+      <button class="tab" data-tab="compare" type="button">字音比較</button>
     </nav>
 
     <section id="evolutionPanel" class="tool-panel active">
 <div class="controls-grid evolution-main-controls">
         <div class="field language-field">
-          <span>选择语言</span>
+          <span>選擇語言</span>
           <div id="evolutionLanguagePicker" class="language-picker">
-            <input id="evolutionDialectSearch" type="search" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="evolutionDialectMenu" placeholder="搜索或选择语言" />
-            <button id="evolutionDialectToggle" class="language-toggle" type="button" aria-label="展开语言列表">⌄</button>
+            <input id="evolutionDialectSearch" type="search" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="evolutionDialectMenu" placeholder="搜尋或選擇語言" />
+            <button id="evolutionDialectToggle" class="language-toggle" type="button" aria-label="展開語言列表">⌄</button>
             <input id="evolutionDialect" type="hidden" />
             <div id="evolutionDialectMenu" class="language-menu hidden" role="listbox"></div>
           </div>
@@ -42,17 +42,17 @@
         </label>
 
         <label class="field">
-          <span>今音观察维度</span>
+          <span>今音觀察維度</span>
           <select id="evolutionModernMode">
-            <option value="initial">声母</option>
-            <option value="final">韵母</option>
-            <option value="tone">声调</option>
-            <option value="notone">忽略声调</option>
-            <option value="full">完整读音</option>
+            <option value="initial">聲母</option>
+            <option value="final">韻母</option>
+            <option value="tone">聲調</option>
+            <option value="notone">忽略聲調</option>
+            <option value="full">完整讀音</option>
           </select>
         </label>
 
-        <button id="runEvolution" class="primary-button" type="button">生成对应表</button>
+        <button id="runEvolution" class="primary-button" type="button">生成對應表</button>
       </div>
 
       <details class="filter-box" open>
@@ -74,28 +74,24 @@
       <div class="parser-options">
         <label class="checkbox-field">
           <input id="evolutionGlidesAsFinal" type="checkbox" checked />
-          <span>起首介音归入韵母</span>
+          <span>起首介音歸入韻母</span>
         </label>
       </div>
 
       <div id="evolutionProgress" class="inline-status hidden"></div>
 
-      <div id="evolutionSummary" class="summary-grid hidden">
-        <div class="summary-card"><strong id="summaryDialect">—</strong><span>语言</span></div>
-        <div class="summary-card"><strong id="summaryChars">0</strong><span>匹配字</span></div>
-        <div class="summary-card"><strong id="summaryGroups">0</strong><span>对应关系</span></div>
-        <div class="summary-card"><strong id="summaryPositions">0</strong><span>涉及音韻地位數</span></div>
+      <div id="evolutionSummary" class="compact-summary hidden" aria-label="統計">
+        <span><strong id="summaryDialect">—</strong></span>
+        <span><strong id="summaryChars">0</strong> 匹配字</span>
+        <span><strong id="summaryGroups">0</strong> 對應</span>
+        <span><strong id="summaryPositions">0</strong> 音韻地位</span>
       </div>
 
       <div id="evolutionResults" class="results-block hidden">
-        <div class="results-toolbar">
-          <div>
-            <h3 id="evolutionTableTitle">对应表</h3>
-            <p id="evolutionTableNote">点击“查看详情”可查看完整例字与涉及的中古音韵地位。</p>
-          </div>
+        <div class="results-toolbar compact-toolbar">
           <label class="search-field">
-            <span>结果内筛选</span>
-            <input id="evolutionFilter" type="search" placeholder="输入中古类别、今读或汉字" />
+            <span>結果內篩選</span>
+            <input id="evolutionFilter" type="search" placeholder="輸入中古類別、今讀或漢字" />
           </label>
         </div>
         <div class="table-wrap">
@@ -110,76 +106,66 @@
     <section id="comparePanel" class="tool-panel">
 <div class="controls-grid compare-controls">
         <label class="field grow">
-          <span>要比较的汉字（最多 10 个）</span>
+          <span>要比較的漢字（最多 10 個）</span>
           <input id="compareChars" type="text" maxlength="20" placeholder="例如：雞溪低" />
+          <div id="compareCharChoices" class="char-choice-box hidden" aria-live="polite"></div>
         </label>
 
         <label class="field">
-          <span>比较方式</span>
+          <span>比較方式</span>
           <select id="compareMode">
-            <option value="full">完整读音</option>
-            <option value="initial">声母</option>
-            <option value="final">韵母</option>
-            <option value="tone">声调</option>
-            <option value="notone">忽略声调</option>
+            <option value="full">完整讀音</option>
+            <option value="initial">聲母</option>
+            <option value="final">韻母</option>
+            <option value="tone">聲調</option>
+            <option value="notone">忽略聲調</option>
           </select>
         </label>
 
-        <button id="runCompare" class="primary-button" type="button">开始比较</button>
+        <button id="runCompare" class="primary-button" type="button">開始比較</button>
       </div>
 
       <div class="parser-options">
         <label class="checkbox-field">
           <input id="compareGlidesAsFinal" type="checkbox" checked />
-          <span>起首介音归入韵母</span>
+          <span>起首介音歸入韻母</span>
         </label>
       </div>
 
-      <div class="legend-row" aria-label="地图图例">
+      <div class="legend-row" aria-label="地圖圖例">
         <span><i class="dot same"></i>全同</span>
         <span><i class="dot partial"></i>部分相同</span>
-        <span><i class="dot different"></i>全异</span>
-        <span><i class="dot missing"></i>缺资料</span>
+        <span><i class="dot different"></i>全異</span>
+        <span><i class="dot missing"></i>缺資料</span>
       </div>
 
       <div id="compareProgress" class="inline-status hidden"></div>
 
-      <div id="compareSummary" class="summary-grid hidden">
-        <div class="summary-card same-card"><strong id="sameCount">0</strong><span>全同</span></div>
-        <div class="summary-card partial-card"><strong id="partialCount">0</strong><span>部分相同</span></div>
-        <div class="summary-card different-card"><strong id="differentCount">0</strong><span>全异</span></div>
-        <div class="summary-card"><strong id="missingCount">0</strong><span>缺资料</span></div>
+      <div id="compareSummary" class="compact-summary compare-summary hidden" aria-label="比較統計">
+        <span class="same"><strong id="sameCount">0</strong> 全同</span>
+        <span class="partial"><strong id="partialCount">0</strong> 部分相同</span>
+        <span class="different"><strong id="differentCount">0</strong> 全異</span>
+        <span class="missing"><strong id="missingCount">0</strong> 缺資料</span>
       </div>
 
-      <div id="mapCard" class="map-card hidden">
-        <div class="map-toolbar">
-          <div>
-            <h3>字音分合地圖</h3>
-            <p id="mapModeNote">使用音典內置離線地圖顯示分合；點擊地圖標記可查看各字讀音。</p>
-          </div>
-          <div class="map-controls">
-            <label class="checkbox-field">
-              <input id="showMissing" type="checkbox" />
-              <span>顯示缺資料點</span>
-            </label>
-            <button id="showNativeMap" class="primary-button" type="button">查看地圖</button>
-          </div>
-        </div>
+      <div id="mapCard" class="map-compact hidden">
+        <button id="showNativeMap" class="primary-button compact-map-button" type="button">查看地圖</button>
+        <label class="checkbox-field">
+          <input id="showMissing" type="checkbox" />
+          <span>顯示缺資料點</span>
+        </label>
       </div>
 
       <div id="compareResults" class="results-block hidden">
-        <div class="results-toolbar">
-          <div>
-            <h3>各语言比较结果</h3>
-            <p id="compareTableNote"></p>
-          </div>
+        <div class="results-toolbar compare-results-toolbar">
+          <h3>各語言比較結果</h3>
           <label class="search-field">
-            <span>筛选方言</span>
-            <input id="compareFilter" type="search" placeholder="方言简称 / 地区" />
+            <span>篩選方言</span>
+            <input id="compareFilter" type="search" placeholder="方言名稱 / 地區" />
           </label>
         </div>
-        <div class="table-wrap">
-          <table>
+        <div class="table-wrap compare-table-wrap">
+          <table id="compareTable" class="compare-table">
             <thead id="compareHead"></thead>
             <tbody id="compareBody"></tbody>
           </table>
@@ -195,7 +181,7 @@
           <h3 id="dialogTitle">例字</h3>
           <p id="dialogSubtitle"></p>
         </div>
-        <button class="icon-button" value="cancel" aria-label="关闭">×</button>
+        <button class="icon-button" value="cancel" aria-label="關閉">×</button>
       </div>
       <div id="dialogPositions" class="position-chips"></div>
       <div id="dialogReadings" class="reading-chips"></div>
