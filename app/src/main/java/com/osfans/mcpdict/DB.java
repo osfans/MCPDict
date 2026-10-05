@@ -62,7 +62,7 @@ public class DB extends SQLiteAssetHelper {
     public static final String CMN = "普通話";
     public static final String CMN_TW = "國語";
     public static final String HK = "香港";
-    public static final String TW = "臺灣";
+    public static final String TW = "高雄";
     public static final String KOR = "朝鮮";
     public static final String VI = "越南";
     public static final String JA_GO = "日語吳音";

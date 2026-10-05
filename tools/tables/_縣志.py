@@ -399,6 +399,9 @@ class 表(_表):
 		elif 名 in ("荆州沙市",):
 			if 行.startswith("声调"): return ""
 			行 = 自.增加調類(行)
+		elif 名 in ("蒙自",):
+			if 行.startswith("调\\n声"): return ""
+			行 = 自.增加調類(行).replace("\\n", "")
 		elif 名 in ("義烏",):
 			if 行.startswith("#"): return 行
 			行 = 自.增加調類(行)
@@ -461,6 +464,11 @@ class 表(_表):
 		elif 名 in ("靖江東興",):
 			行 = re.sub("(\\d)", "[\\1]", 行)
 			行 = 自.normS(行)
+		elif 名 in ("固始",):
+			列 = 行.split("\t")
+			if 列[0]: 自.韻 = 列[0]
+			列[1] += 自.韻
+			行 = "\t".join(列[1:])
 		elif 名 in ("溧水在城",):
 			if 行.startswith("\t"):
 				return

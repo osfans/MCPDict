@@ -8,10 +8,6 @@ class 表(_表):
 	補丁 = {"檔": "tong2,tong3"}
 
 	def 統(自, py):
-		py = re.sub(r"\|(.*?)\|", "\\1\t白", py)
-		py = re.sub(r"\*(.*?)\*", "\\1\t文", py)
-		py = re.sub(r"\((.*?)\)", "\\1\t俗", py)
-		py = re.sub(r"\[(.*?)\]", "\\1\t替", py)
 		return py
 	
 	def 修訂(自, d):

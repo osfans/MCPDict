@@ -7,6 +7,7 @@ class 表(_表):
 	註序 = True
 	註符 = None
 	聲韻 = ""
+	韻 = ""
 	調類調值 = dict()
 
 	@staticmethod
@@ -30,6 +31,11 @@ class 表(_表):
 				return
 			elif len(列) > 自.列序[3] and 列[自.列序[3]] and 列[自.列序[3]] in 自.調類調值:
 				列[自.列序[3]] = 自.調類調值[列[自.列序[3]]]
+		elif 名 in ("金華鞋塘",):
+			if 列[自.列序[2]]:
+				自.韻 = 列[自.列序[2]]
+			else:
+				列[自.列序[2]] = 自.韻
 		if 列[0].startswith("#") or (len(列) == 0 and not 列[0]): return
 		if 自.列序:
 			列序 = 自.列序
@@ -99,6 +105,11 @@ class 表(_表):
 				音 = re.sub(r"..(\d*?)$", "\\1", 音)
 			elif 名 in ("邵東斫曹","綏寧武陽","天柱江東"):
 				組 = "".join(列[2:]).replace("\t", "").strip()
+			elif 名 in ("東干陝西話",):
+				toneValues = {'阳平':2,'阴平':1,'去声':5,'上声':3}
+				for k, v in toneValues.items():
+					音 = 音.replace(k, str(v))
+				# 音 += "/" + 列[0] #西里尔字母
 			elif 名 in ("文登", "平陰東阿"):
 				if 音.isdigit():
 					音 = 自.聲韻 + 音

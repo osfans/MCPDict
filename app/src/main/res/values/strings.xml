@@ -258,7 +258,7 @@
     </string-array>
 
     <string name="pref_key_minnan_display">MINNAN_DISPLAY</string>
-    <string name="pref_title_minnan_display">臺灣閩南語</string>
+    <string name="pref_title_minnan_display">高雄閩南語</string>
     <string-array name="pref_entries_minnan_display">
         <item>@string/ipa</item>
         <item>臺羅拼音</item>

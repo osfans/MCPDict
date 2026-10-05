@@ -140,6 +140,10 @@ class 表(_表):
 					return l
 			elif 名 in ("平江南江",):
 				音組 = 音.split("/")
+			elif 自.文件名.startswith("太原盆地四點"):
+				音組 = 音.split("\\")
+				註 = 註[1:].strip("()（）")
+				字 = 字[0]
 			elif 自.文件名.startswith("丹陽（雲陽訪仙河陽埤城）"):
 				註 = 字[1:].strip("()（）")
 				字 = 字[0]
@@ -378,6 +382,16 @@ class 表(_表):
 			elif 名 in ("1600福州",):
 				自.爲音 = False
 				音 += f"〚{列[1].rstrip("聲")}{{聲}}{列[2]}{{韻}}〛"
+			elif 名 in ("高雄",):
+				自.爲音 = False
+				l = list()
+				for py in 音.split(","):
+					py = re.sub(r"\|(.*?)\|", "\\1\t白", py)
+					py = re.sub(r"\*(.*?)\*", "\\1\t文", py)
+					py = re.sub(r"\((.*?)\)", "\\1\t俗", py)
+					py = re.sub(r"\[(.*?)\]", "\\1\t替", py)
+					l.append((字, py))
+				return l
 			elif 名 in ("分韻撮要",):
 				自.爲音 = False
 				音 += f"〚{列[1].rstrip("聲")}{{聲}}{列[2]}{{韻}}{列[3]}{列[4]}〛"
