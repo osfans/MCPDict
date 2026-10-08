@@ -1,0 +1,1599 @@
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	f	ʋ	t	tʰ	n	l	ts	tsʰ	s	ʂ	x
+@FIN	a
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	a	陰平	八 把 巴
+p	a	陽平	拔
+p	a	上聲	把{一~}
+p	a	去聲	霸 爸
+pʰ	a	陽平	爬
+pʰ	a	上聲	帕
+pʰ	a	去聲	怕
+m	a	陰平	媽 抹
+m	a	陽平	麻
+m	a	上聲	馬
+m	a	去聲	罵
+f	a	陰平	法 發
+f	a	陽平	罰 乏
+ʋ	a	陰平	蛙 挖
+ʋ	a	上聲	瓦
+t	a	陰平	搭
+t	a	陽平	達
+t	a	上聲	打
+t	a	去聲	大
+tʰ	a	陰平	塔 塌
+tʰ	a	上聲	他 它 她
+n	a	陽平	拿
+n	a	上聲	哪 那
+l	a	陰平	拉 辣 臘
+ts	a	陰平	渣 扎
+ts	a	陽平	砸
+ts	a	上聲	眨{~眼}
+ts	a	去聲	榨 炸
+tsʰ	a	陰平	差{~別} 插 擦
+tsʰ	a	陽平	茶 查
+tsʰ	a	上聲	杈 岔{三~路}
+s	a	陰平	沙 殺
+s	a	去聲	啥
+ʂ	a	上聲	傻
+x	a	陰平	瞎
+x	a	去聲	下 嚇
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	ʋ	t	tʰ	n	l	ts	tsʰ	s	k	kʰ	ŋ	x
+@FIN	ai
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ai	上聲	擺
+p	ai	去聲	拜
+pʰ	ai	陽平	排 牌
+pʰ	ai	去聲	派
+m	ai	陽平	埋
+m	ai	上聲	買
+m	ai	去聲	賣
+ʋ	ai	陰平	歪
+ʋ	ai	去聲	外
+t	ai	去聲	帶 戴 代 貸 袋 大{~夫} 待
+tʰ	ai	陽平	抬 臺
+tʰ	ai	去聲	太
+n	ai	上聲	奶 那
+n	ai	去聲	耐
+l	ai	陽平	來
+l	ai	去聲	賴
+ts	ai	陰平	災 栽
+ts	ai	上聲	崽
+ts	ai	去聲	在 寨
+tsʰ	ai	陰平	猜
+tsʰ	ai	陽平	材 柴 財
+tsʰ	ai	上聲	彩 睬
+tsʰ	ai	去聲	菜 蔡
+s	ai	上聲	篩{~子}
+s	ai	去聲	曬
+k	ai	陰平	該 個
+k	ai	上聲	改
+kʰ	ai	陰平	開
+kʰ	ai	上聲	慨
+ŋ	ai	陰平	挨
+ŋ	ai	上聲	矮 礙{妨~}
+x	ai	陽平	孩 鞋 還
+x	ai	上聲	海
+x	ai	去聲	害
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ts	tsʰ	s	tʂ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	au
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	au	陰平	包 別
+p	au	上聲	保 飽 保
+p	au	去聲	報 暴 曝
+pʰ	au	陽平	跑
+pʰ	au	去聲	炮 泡
+m	au	陰平	摸
+m	au	陽平	毛 貓
+m	au	去聲	帽
+t	au	陰平	刀
+t	au	上聲	導
+t	au	去聲	到 道
+tʰ	au	陰平	掏
+tʰ	au	陽平	桃
+tʰ	au	上聲	討
+tʰ	au	去聲	套
+n	au	去聲	鬧
+l	au	陽平	撈 勞 牢
+l	au	上聲	老
+ts	au	陰平	糟 遭
+ts	au	上聲	早 找
+tsʰ	au	陽平	曹
+tsʰ	au	上聲	草 吵
+s	au	陰平	捎
+s	au	上聲	嫂
+tʂ	au	陰平	招
+tʂ	au	去聲	趙 照
+ʂ	au	陰平	燒
+ʂ	au	上聲	少
+ʐ	au	陽平	饒
+ʐ	au	上聲	擾
+ʐ	au	去聲	繞
+k	au	陰平	高
+k	au	去聲	告
+kʰ	au	上聲	烤 考
+kʰ	au	去聲	靠 拷
+ŋ	au	陽平	熬
+ŋ	au	上聲	襖
+x	au	陽平	豪
+x	au	上聲	好
+x	au	去聲	號
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	f	ʋ	t	tʰ	l	n	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	x
+@FIN	aŋ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	aŋ	陰平	幫 邦
+p	aŋ	去聲	棒
+pʰ	aŋ	陽平	旁
+m	aŋ	陽平	忙
+f	aŋ	陰平	方 芳
+f	aŋ	陽平	房
+f	aŋ	上聲	妨{~害} 仿
+f	aŋ	去聲	放
+ʋ	aŋ	陽平	王
+ʋ	aŋ	上聲	網 往
+ʋ	aŋ	去聲	忘 望
+t	aŋ	陰平	當
+t	aŋ	上聲	黨 擋
+t	aŋ	去聲	蕩
+tʰ	aŋ	陰平	湯
+tʰ	aŋ	陽平	堂 唐 糖
+tʰ	aŋ	上聲	躺
+tʰ	aŋ	去聲	趟{一~}
+l	aŋ	陽平	狼
+l	aŋ	上聲	朗
+l	aŋ	去聲	浪
+n	aŋ	陽平	能 囊
+ts	aŋ	陰平	髒
+tsʰ	aŋ	陰平	倉
+tsʰ	aŋ	陽平	藏
+s	aŋ	陰平	桑
+tʂ	aŋ	陰平	張
+tʂ	aŋ	上聲	掌
+tʂ	aŋ	去聲	丈 杖
+tʂʰ	aŋ	陰平	昌
+tʂʰ	aŋ	陽平	常
+tʂʰ	aŋ	上聲	場 廠
+tʂʰ	aŋ	去聲	唱
+ʂ	aŋ	陰平	商 傷 裳
+ʂ	aŋ	去聲	上
+ʐ	aŋ	去聲	讓
+k	aŋ	陰平	缸
+k	aŋ	陽平	剛
+k	aŋ	去聲	槓
+kʰ	aŋ	陰平	康
+kʰ	aŋ	去聲	抗 炕
+x	aŋ	陽平	航 杭 行
+x	aŋ	上聲	巷
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	f	ʋ	t	tʰ	n	l	ts	tsʰ	s	k	kʰ	x
+@FIN	ei
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ei	陰平	杯 碑 悲 百
+p	ei	陽平	白
+p	ei	去聲	備 輩 倍 被
+pʰ	ei	陰平	披 拍
+pʰ	ei	陽平	陪
+pʰ	ei	去聲	配 佩
+m	ei	陰平	脈
+m	ei	陽平	梅 煤 眉 媒
+m	ei	上聲	每 美
+m	ei	去聲	妹 昧
+f	ei	陰平	非 飛
+f	ei	陽平	肥
+f	ei	上聲	匪
+f	ei	去聲	費
+ʋ	ei	陰平	危 威
+ʋ	ei	陽平	圍
+ʋ	ei	上聲	委 尾 偉
+ʋ	ei	去聲	衛 位 味
+t	ei	陰平	得 德{道~}
+tʰ	ei	陽平	特
+n	ei	去聲	內
+l	ei	去聲	淚 累
+ts	ei	陰平	窄 責 則
+ts	ei	陽平	賊
+tsʰ	ei	陰平	廁 策 冊
+s	ei	陰平	色
+s	ei	陽平	誰
+k	ei	陰平	格 革 隔 給
+kʰ	ei	陰平	刻{時~} 客
+x	ei	陰平	黑
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	t	tʰ	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	i
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	i	陰平	必 逼
+p	i	上聲	比{~較}
+p	i	去聲	閉 壁
+pʰ	i	陰平	批
+pʰ	i	陽平	皮 鼻
+pʰ	i	上聲	匹{一~}
+pʰ	i	去聲	屁
+m	i	陰平	密
+m	i	陽平	迷
+m	i	上聲	米
+t	i	陰平	低 滴
+t	i	陽平	敵
+t	i	上聲	底
+t	i	去聲	弟 地 遞
+tʰ	i	陰平	踢
+tʰ	i	陽平	題 提
+tʰ	i	上聲	體
+tʰ	i	去聲	替 悌
+l	i	陰平	立 力 歷
+l	i	陽平	梨 離
+l	i	上聲	理 禮 里
+l	i	去聲	勵{鼓~}
+tɕ	i	陰平	雞 機 基
+tɕ	i	陽平	集 急 級 吉
+tɕ	i	上聲	擠
+tɕ	i	去聲	祭 記 計 寄 季
+tɕʰ	i	陰平	妻 欺 期 七
+tɕʰ	i	陽平	齊 棋
+tɕʰ	i	上聲	起
+tɕʰ	i	去聲	器 氣 棄
+ȵ	i	陽平	泥
+ȵ	i	上聲	你
+ɕ	i	陰平	西 稀 息 惜
+ɕ	i	陽平	習 席
+ɕ	i	上聲	洗 喜
+ɕ	i	去聲	戲
+Ø	i	陰平	椅 醫 以 衣 一
+Ø	i	陽平	移 疑
+Ø	i	上聲	乙
+Ø	i	去聲	義 藝 易 姨 意 益
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	ia
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+l	ia	陰平	倆
+tɕ	ia	陰平	家 甲
+tɕ	ia	上聲	假 賈
+tɕ	ia	去聲	架 嫁
+tɕʰ	ia	陰平	掐
+tɕʰ	ia	去聲	恰
+ȵ	ia	陰平	壓 押
+ɕ	ia	陽平	霞 俠
+ɕ	ia	去聲	夏 下 嚇
+Ø	ia	陰平	鴨 丫
+Ø	ia	陽平	衙
+Ø	ia	上聲	啞
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	t	tʰ	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	iau
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iau	陰平	彪 標
+p	iau	上聲	表
+pʰ	iau	陰平	漂
+pʰ	iau	去聲	票
+m	iau	陽平	苗
+m	iau	去聲	廟
+t	iau	去聲	調
+tʰ	iau	陰平	挑
+tʰ	iau	陽平	條 調
+tʰ	iau	去聲	跳
+l	iau	陽平	療
+l	iau	去聲	料
+tɕ	iau	陰平	交 焦 驕 教 澆
+tɕ	iau	上聲	攪 餃
+tɕ	iau	去聲	叫 窖
+tɕʰ	iau	陰平	敲 悄
+tɕʰ	iau	陽平	橋
+tɕʰ	iau	上聲	巧
+ȵ	iau	上聲	咬 鳥
+ȵ	iau	去聲	尿
+ɕ	iau	陰平	消
+ɕ	iau	上聲	小
+ɕ	iau	去聲	笑 校 孝
+Ø	iau	陰平	腰
+Ø	iau	陽平	搖 遙 姚
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	iaŋ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+l	iaŋ	陽平	良 涼
+l	iaŋ	去聲	亮 量
+tɕ	iaŋ	陰平	疆 江
+tɕ	iaŋ	上聲	獎 講
+tɕ	iaŋ	去聲	將 降
+tɕʰ	iaŋ	陽平	牆 強
+ȵ	iaŋ	陽平	娘
+ȵ	iaŋ	去聲	釀
+ɕ	iaŋ	陰平	箱 鄉 香
+ɕ	iaŋ	陽平	詳
+ɕ	iaŋ	上聲	想
+ɕ	iaŋ	去聲	像 向 象
+Ø	iaŋ	陰平	央 秧
+Ø	iaŋ	陽平	羊 楊 陽
+Ø	iaŋ	上聲	養
+Ø	iaŋ	去聲	樣
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	pʰ	m	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	in
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+pʰ	in	上聲	品
+pʰ	in	去聲	拼
+m	in	陽平	民
+m	in	上聲	敏
+l	in	陽平	林
+tɕ	in	陰平	今 金 巾 斤 筋
+tɕ	in	上聲	緊
+tɕ	in	去聲	進 近 盡
+tɕʰ	in	陰平	親 侵
+tɕʰ	in	陽平	勤 秦
+ɕ	in	陰平	心 辛 新
+ɕ	in	去聲	信
+Ø	in	陰平	音 陰 姻
+Ø	in	陽平	吟 陰
+Ø	in	上聲	引
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	t	n	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iou
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	iou	陰平	丟
+n	iou	陽平	牛
+n	iou	上聲	扭
+l	iou	陰平	六
+l	iou	陽平	劉
+l	iou	上聲	柳
+tɕ	iou	陰平	揪
+tɕ	iou	上聲	酒 九 久
+tɕ	iou	去聲	就 救 舅 舊 疚
+tɕʰ	iou	陰平	秋
+tɕʰ	iou	陽平	球 求
+ɕ	iou	陰平	修 休 羞
+ɕ	iou	去聲	秀 袖 繡
+Ø	iou	陰平	優
+Ø	iou	陽平	油 游
+Ø	iou	上聲	有 友
+Ø	iou	去聲	又 右 幼
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	t	tʰ	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	iã
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iã	陰平	邊
+p	iã	上聲	匾
+p	iã	去聲	變 便
+pʰ	iã	陰平	偏
+pʰ	iã	上聲	片
+m	iã	陽平	棉
+m	iã	上聲	免
+m	iã	去聲	面
+t	iã	上聲	點
+t	iã	去聲	店 電
+tʰ	iã	陰平	添 天
+tʰ	iã	陽平	甜 田
+l	iã	陽平	聯 蓮 連
+l	iã	去聲	戀 練
+tɕ	iã	陰平	尖 間 兼 肩
+tɕ	iã	上聲	減 檢 剪
+tɕ	iã	去聲	箭 件 建 見 薦
+tɕʰ	iã	陰平	千 簽 遷
+tɕʰ	iã	陽平	前 錢
+tɕʰ	iã	上聲	淺
+tɕʰ	iã	去聲	欠 歉
+ȵ	iã	陽平	年
+ȵ	iã	上聲	眼
+ȵ	iã	去聲	念
+ɕ	iã	陰平	仙 先
+ɕ	iã	陽平	弦
+ɕ	iã	上聲	顯 鮮
+ɕ	iã	去聲	縣 現 獻 陷
+Ø	iã	陰平	煙
+Ø	iã	陽平	嚴 閆 顏 延 言
+Ø	iã	上聲	演
+Ø	iã	去聲	焰
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	t	tʰ	l	tʂʰ	tɕ	tɕʰ	ȵ	ɕ	∅
+@FIN	iŋ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iŋ	陰平	冰 兵
+p	iŋ	去聲	病 並
+pʰ	iŋ	陽平	平 瓶
+m	iŋ	陽平	明 名 銘
+m	iŋ	去聲	命
+t	iŋ	陰平	丁
+t	iŋ	上聲	頂
+t	iŋ	去聲	定
+tʰ	iŋ	陰平	聽
+tʰ	iŋ	陽平	亭 停
+tʰ	iŋ	上聲	挺
+l	iŋ	陽平	零
+l	iŋ	上聲	領
+l	iŋ	去聲	令
+tʂʰ	iŋ	陽平	程
+tɕ	iŋ	陰平	精 晶 經
+tɕ	iŋ	上聲	井
+tɕ	iŋ	去聲	敬 靜 竟 淨
+tɕʰ	iŋ	陰平	清 輕 青
+tɕʰ	iŋ	陽平	睛 情
+tɕʰ	iŋ	上聲	請
+ȵ	iŋ	陽平	寧
+ɕ	iŋ	陰平	星
+ɕ	iŋ	陽平	形 刑 行
+ɕ	iŋ	上聲	醒
+ɕ	iŋ	去聲	幸 姓 性 杏
+∅	iŋ	陰平	櫻 英
+∅	iŋ	陽平	贏
+∅	iŋ	上聲	影
+∅	iŋ	去聲	映
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	m	t	tʰ	l	tɕ	tɕʰ	ɕ	Ø
+@FIN	iɛ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iɛ	陰平	憋 鱉
+p	iɛ	陽平	別{區~}
+m	iɛ	陰平	滅
+t	iɛ	陰平	爹 跌
+t	iɛ	陽平	碟
+tʰ	iɛ	陰平	鐵 貼
+l	iɛ	陰平	列 裂
+tɕ	iɛ	陰平	街 接
+tɕ	iɛ	陽平	節
+tɕ	iɛ	上聲	姐
+tɕ	iɛ	去聲	借 界
+tɕʰ	iɛ	陰平	切
+tɕʰ	iɛ	陽平	茄
+ɕ	iɛ	陰平	些 歇
+ɕ	iɛ	陽平	邪 斜
+ɕ	iɛ	上聲	寫
+ɕ	iɛ	去聲	謝
+Ø	iɛ	陰平	業 葉
+Ø	iɛ	陽平	爺
+Ø	iɛ	上聲	野
+Ø	iɛ	去聲	夜
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	ou
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	ou	陰平	都{~是} 兜
+t	ou	陽平	毒
+t	ou	上聲	堵 鬥 斗 賭
+t	ou	去聲	度 豆
+tʰ	ou	陰平	偷
+tʰ	ou	陽平	頭 途 徒
+tʰ	ou	上聲	土
+n	ou	陽平	奴
+n	ou	上聲	努
+n	ou	去聲	怒
+l	ou	陰平	鹿 陸
+l	ou	陽平	樓
+l	ou	去聲	路 露 漏
+ts	ou	陰平	租 竹
+ts	ou	陽平	族 足
+ts	ou	上聲	走
+ts	ou	去聲	做 祝
+tsʰ	ou	陰平	粗 初
+tsʰ	ou	上聲	楚
+tsʰ	ou	去聲	醋 湊 促
+s	ou	陰平	梳
+s	ou	陽平	叔 熟 俗
+s	ou	去聲	數
+tʂ	ou	陰平	周 州
+tʂʰ	ou	陽平	愁 綢 酬
+tʂʰ	ou	去聲	臭
+ʂ	ou	陰平	收
+ʂ	ou	上聲	手 守 首
+ʐ	ou	去聲	肉
+k	ou	陰平	溝
+k	ou	上聲	狗
+k	ou	去聲	夠
+kʰ	ou	上聲	口
+kʰ	ou	去聲	扣
+ŋ	ou	陰平	毆
+x	ou	陽平	猴
+x	ou	去聲	厚 後
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	n	l	m	t	tʰ	k	kʰ	x	ts	s	Ø	tʂ	tʂʰ	ʂ	ʐ
+@FIN	u
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	u	陰平	不
+p	u	上聲	補
+p	u	去聲	部
+n	u	上聲	努
+l	u	去聲	路
+m	u	上聲	母
+t	u	陽平	獨 毒 讀
+t	u	上聲	賭
+t	u	去聲	肚
+tʰ	u	陽平	塗 徒
+tʰ	u	上聲	土
+k	u	陰平	姑 孤 辜
+k	u	上聲	古 鼓 骨{~頭}
+k	u	去聲	故 顧
+kʰ	u	陰平	哭
+kʰ	u	上聲	苦
+x	u	陰平	呼
+x	u	陽平	壺
+x	u	上聲	虎
+x	u	去聲	戶 護
+ts	u	陽平	族
+ts	u	上聲	組
+s	u	陰平	訴
+Ø	u	陰平	誣 屋
+Ø	u	陽平	無
+Ø	u	上聲	武 舞
+Ø	u	去聲	霧
+tʂ	u	陰平	朱
+tʂ	u	上聲	主 住 諸 注
+tʂʰ	u	陰平	出
+tʂʰ	u	陽平	除
+tʂʰ	u	上聲	處
+ʂ	u	陰平	書 舒
+ʂ	u	去聲	樹
+ʐ	u	陰平	入
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	k	kʰ	x	tʂ
+@FIN	ua
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	ua	陰平	瓜 刮
+k	ua	上聲	寡
+k	ua	去聲	掛
+kʰ	ua	陰平	誇
+kʰ	ua	上聲	垮
+x	ua	陰平	花
+x	ua	陽平	華 滑
+x	ua	去聲	化 話
+tʂ	ua	陰平	抓
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	k	kʰ	x
+@FIN	uai
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uai	去聲	怪
+kʰ	uai	上聲	塊
+kʰ	uai	去聲	快 筷
+x	uai	陽平	槐 懷
+x	uai	去聲	壞
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	ʋ	tʂ	k	kʰ	x
+@FIN	uaŋ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ʋ	uaŋ	陽平	王
+ʋ	uaŋ	上聲	枉
+ʋ	uaŋ	去聲	旺{興~，火~}
+tʂ	uaŋ	陰平	裝 壯
+tʂ	uaŋ	去聲	狀
+k	uaŋ	陰平	光
+kʰ	uaŋ	陽平	狂
+kʰ	uaŋ	去聲	況
+x	uaŋ	陰平	慌
+x	uaŋ	陽平	黃 皇
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	t	tʰ	n	l	ts	tsʰ	s	tʂʰ	ʂ	k	kʰ	x
+@FIN	uei
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uei	陰平	堆
+t	uei	去聲	對 隊
+tʰ	uei	陰平	推
+tʰ	uei	上聲	腿
+tʰ	uei	去聲	退
+n	uei	去聲	內
+l	uei	陽平	雷
+l	uei	去聲	累
+ts	uei	去聲	罪 最
+tsʰ	uei	陰平	崔
+tsʰ	uei	去聲	脆
+s	uei	陽平	隨
+s	uei	去聲	歲 碎
+tʂʰ	uei	陰平	吹
+tʂʰ	uei	陽平	捶
+ʂ	uei	上聲	水
+ʂ	uei	去聲	睡
+k	uei	陰平	國 歸 龜
+k	uei	上聲	鬼
+k	uei	去聲	貴 櫃
+kʰ	uei	陰平	虧
+x	uei	陰平	灰
+x	uei	陽平	回
+x	uei	去聲	會
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	t	tʰ	l	n	tʂ	tʂʰ	ʐ	k	kʰ	x
+@FIN	uã
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uã	陰平	端
+t	uã	上聲	短
+t	uã	去聲	斷 鍛
+tʰ	uã	陽平	團
+l	uã	去聲	亂
+n	uã	上聲	暖
+tʂ	uã	陰平	專
+tʂ	uã	去聲	轉
+tʂʰ	uã	上聲	喘
+ʐ	uã	陽平	然
+ʐ	uã	上聲	染
+k	uã	陰平	官 觀{參~}
+k	uã	上聲	管
+k	uã	去聲	冠{~軍} 貫
+kʰ	uã	陰平	寬
+kʰ	uã	上聲	款
+x	uã	陰平	歡
+x	uã	陽平	還
+x	uã	去聲	換 幻 患
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	t	tʰ	l	tsʰ	s	k	kʰ	x
+@FIN	uən
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uən	陰平	蹲
+tʰ	uən	陰平	吞
+tʰ	uən	陽平	屯
+l	uən	陽平	輪
+tsʰ	uən	陰平	村
+tsʰ	uən	上聲	寸
+s	uən	陰平	孫
+k	uən	上聲	滾
+k	uən	去聲	棍
+kʰ	uən	陰平	昆
+kʰ	uən	去聲	困
+x	uən	陰平	婚 葷
+x	uən	陽平	魂
+x	uən	去聲	混
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	t	tʰ	n	l	s	ʐ	tʃʰ	k	kʰ	x
+@FIN	uəŋ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uəŋ	陰平	東 冬
+t	uəŋ	上聲	董 懂
+t	uəŋ	去聲	動 洞
+tʰ	uəŋ	陰平	通
+tʰ	uəŋ	陽平	同
+tʰ	uəŋ	上聲	桶 統
+tʰ	uəŋ	去聲	痛
+n	uəŋ	陽平	農 濃
+n	uəŋ	去聲	弄
+l	uəŋ	陽平	龍 籠
+s	uəŋ	陰平	松
+s	uəŋ	去聲	送
+ʐ	uəŋ	陽平	容 絨 榮 融
+tʃʰ	uəŋ	陰平	蟲 衝
+k	uəŋ	陰平	公 工 功 弓 躬 宮
+k	uəŋ	去聲	共
+kʰ	uəŋ	陰平	空
+kʰ	uəŋ	上聲	孔 恐
+kʰ	uəŋ	去聲	控
+x	uəŋ	陽平	虹{彩~} 宏 紅 鴻 洪
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	t	tʰ	n	l	ts	tsʰ	s	tʂ	ʂ	k	ŋ	x
+@FIN	uɤ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uɤ	陰平	多
+t	uɤ	上聲	躲 朵
+tʰ	uɤ	陰平	拖 脫
+tʰ	uɤ	上聲	妥
+n	uɤ	陰平	糯{~米}
+l	uɤ	陰平	落 絡
+l	uɤ	陽平	蘿
+ts	uɤ	陰平	作 做
+ts	uɤ	陽平	昨
+ts	uɤ	上聲	左
+ts	uɤ	去聲	坐
+tsʰ	uɤ	去聲	錯
+s	uɤ	上聲	鎖 索
+tʂ	uɤ	陰平	桌
+ʂ	uɤ	陰平	說
+k	uɤ	陽平	國
+k	uɤ	上聲	果
+k	uɤ	去聲	過
+ŋ	uɤ	上聲	我
+x	uɤ	陰平	喝
+x	uɤ	陽平	活 合
+x	uɤ	上聲	火 夥
+x	uɤ	去聲	禍
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	l	tɕ	tɕʰ	n	ɕ	Ø
+@FIN	y
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+l	y	上聲	履
+tɕ	y	陰平	居
+tɕ	y	陽平	局
+tɕ	y	上聲	舉
+tɕ	y	去聲	距 句
+tɕʰ	y	陰平	屈
+tɕʰ	y	陽平	渠
+tɕʰ	y	上聲	取
+tɕʰ	y	去聲	趣
+n	y	上聲	女
+ɕ	y	陰平	需 須
+ɕ	y	陽平	徐
+ɕ	y	上聲	許
+ɕ	y	去聲	序 緒
+Ø	y	陰平	玉 獄 浴
+Ø	y	陽平	魚 余 於 愉
+Ø	y	上聲	語 雨 羽
+Ø	y	去聲	預 豫 遇 育
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	tɕ	tɕʰ	ɕ	Ø
+@FIN	yã
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yã	陰平	捐
+tɕ	yã	上聲	卷
+tɕʰ	yã	陽平	拳 權 全 泉
+tɕʰ	yã	去聲	權
+ɕ	yã	陰平	宣
+ɕ	yã	陽平	懸
+ɕ	yã	上聲	選
+Ø	yã	陰平	冤
+Ø	yã	陽平	圓 原 袁
+Ø	yã	上聲	遠
+Ø	yã	去聲	院 怨
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	tɕʰ	ɕ	Ø
+@FIN	yŋ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕʰ	yŋ	陽平	窮
+ɕ	yŋ	陰平	兄 兇
+ɕ	yŋ	陽平	雄
+Ø	yŋ	上聲	永 勇
+Ø	yŋ	去聲	用
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	tɕ	tɕʰ	ɕ
+@FIN	yən
+@TON	陰平	21
+@TON	陽平	35
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yən	陰平	均 軍
+tɕʰ	yən	陽平	群
+ɕ	yən	陽平	尋
+ɕ	yən	去聲	訓
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	n	tɕ	tɕʰ	ɕ	Ø
+@FIN	yɛ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+n	yɛ	陰平	虐
+tɕ	yɛ	陰平	腳 角
+tɕ	yɛ	陽平	絕
+tɕʰ	yɛ	陰平	缺 雀
+ɕ	yɛ	陰平	雪 血
+ɕ	yɛ	陽平	學
+Ø	yɛ	陰平	月 越 岳
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	f	ʋ	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	ã
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ã	陰平	班 搬
+p	ã	上聲	板
+p	ã	去聲	扮 半 伴
+pʰ	ã	陰平	潘
+pʰ	ã	陽平	盤
+pʰ	ã	去聲	盼 判
+m	ã	陽平	蠻 瞞
+m	ã	上聲	滿
+m	ã	去聲	慢 漫
+f	ã	陰平	翻 藩
+f	ã	陽平	凡 煩
+f	ã	上聲	反
+f	ã	去聲	範 犯 飯 泛
+ʋ	ã	陰平	彎
+ʋ	ã	陽平	玩 完 頑{~皮}
+ʋ	ã	上聲	碗 晚
+ʋ	ã	去聲	萬
+t	ã	陰平	丹 單
+t	ã	上聲	膽
+t	ã	去聲	彈 淡 蛋 但 擔
+tʰ	ã	陰平	攤 貪 灘
+tʰ	ã	上聲	坦
+n	ã	陽平	南 男 難
+l	ã	陽平	籃 攔
+l	ã	上聲	懶
+l	ã	去聲	爛 濫
+ts	ã	陽平	咱
+ts	ã	上聲	攢
+ts	ã	去聲	站 暫
+tsʰ	ã	陰平	餐
+tsʰ	ã	陽平	殘
+tsʰ	ã	上聲	慘
+s	ã	陰平	三 山
+s	ã	上聲	傘
+tʂ	ã	陰平	沾
+tʂ	ã	上聲	展
+tʂʰ	ã	陽平	纏
+ʂ	ã	陰平	山
+ʂ	ã	去聲	扇 善
+ʐ	ã	陽平	然
+ʐ	ã	上聲	染
+k	ã	陰平	乾 杆
+k	ã	上聲	感 敢
+kʰ	ã	陰平	堪
+kʰ	ã	上聲	砍 檻
+kʰ	ã	去聲	看{~見}
+ŋ	ã	陰平	鞍
+ŋ	ã	去聲	暗 岸 安 按 案
+x	ã	陽平	寒
+x	ã	上聲	喊
+x	ã	去聲	汗
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	f	ʋ	n	tʂ	tʂʰ	ʂ	ʐ	tʃ	tʃʰ	ʃ	k	kʰ	ŋ	x	Ø
+@FIN	ən
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ən	陰平	奔
+p	ən	上聲	本
+p	ən	去聲	笨
+pʰ	ən	陽平	盆
+m	ən	陰平	們
+m	ən	陽平	門
+f	ən	陰平	分 芬
+f	ən	陽平	墳
+f	ən	上聲	粉
+f	ən	去聲	份{一~}
+ʋ	ən	陰平	溫
+ʋ	ən	陽平	文 蚊
+ʋ	ən	上聲	穩
+ʋ	ən	去聲	問
+n	ən	去聲	恁 嫩
+tʂ	ən	陰平	珍 真
+tʂ	ən	去聲	鎮 震
+tʂʰ	ən	陽平	沉
+tʂʰ	ən	去聲	趁
+ʂ	ən	陰平	深 身 伸
+ʂ	ən	陽平	神
+ʂ	ən	上聲	嬸
+ʐ	ən	陽平	人 任 仁
+ʐ	ən	上聲	忍
+ʐ	ən	去聲	認
+tʃ	ən	陰平	椿{~樹}
+tʃ	ən	上聲	準
+tʃʰ	ən	陰平	春
+ʃ	ən	去聲	順
+k	ən	陰平	跟 根
+kʰ	ən	上聲	啃
+ŋ	ən	陰平	恩
+x	ən	上聲	很
+x	ən	去聲	恨
+Ø	ən	陽平	雲 勻
+Ø	ən	去聲	韻 運
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	f	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	tʃ	tʃʰ	ʃ	ʒ	k	kʰ	ŋ	x
+@FIN	əŋ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	əŋ	陰平	崩
+pʰ	əŋ	陽平	朋
+pʰ	əŋ	上聲	捧
+pʰ	əŋ	去聲	碰
+m	əŋ	陽平	蒙
+m	əŋ	去聲	孟 夢
+f	əŋ	陰平	風 瘋 封 蜂
+f	əŋ	陽平	縫
+f	əŋ	去聲	鳳
+t	əŋ	陰平	登 燈
+t	əŋ	上聲	等
+t	əŋ	去聲	凳
+tʰ	əŋ	陽平	疼 騰
+n	əŋ	陽平	能
+l	əŋ	上聲	冷
+l	əŋ	去聲	愣
+ts	əŋ	陰平	增 爭 睜
+tsʰ	əŋ	陰平	撐
+tsʰ	əŋ	陽平	曾
+s	əŋ	陰平	僧 生
+s	əŋ	上聲	省
+tʂ	əŋ	陰平	蒸 征
+tʂ	əŋ	上聲	整
+tʂ	əŋ	去聲	證 政 正
+tʂʰ	əŋ	陽平	承 成 城
+ʂ	əŋ	陰平	升 聲
+ʂ	əŋ	去聲	剩 盛 聖
+tʃ	əŋ	陰平	宗 綜 中
+tʃ	əŋ	上聲	腫
+tʃ	əŋ	去聲	重
+tʃʰ	əŋ	陰平	沖 蔥
+tʃʰ	əŋ	陽平	蟲 從
+ʃ	əŋ	陰平	松 嵩
+ʃ	əŋ	去聲	宋
+ʒ	əŋ	陽平	容
+k	əŋ	陰平	更
+kʰ	əŋ	陰平	坑
+ŋ	əŋ	去聲	硬
+x	əŋ	陽平	衡 橫
+x	əŋ	去聲	杏
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	Ø
+@FIN	ɚ
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+Ø	ɚ	陽平	兒 而
+Ø	ɚ	上聲	耳
+Ø	ɚ	去聲	二
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	f	ʋ	t	l	tʂ	tʂʰ	ʂ	ʐ	tʃ	ʃ	k	kʰ	ŋ	x	Ø
+@FIN	ɤ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɤ	陰平	卜 波 剝
+p	ɤ	上聲	跛
+pʰ	ɤ	陰平	坡 潑
+pʰ	ɤ	陽平	婆
+pʰ	ɤ	去聲	破
+m	ɤ	陰平	默 沒 麼
+m	ɤ	上聲	抹
+m	ɤ	去聲	磨
+f	ɤ	陰平	佛
+ʋ	ɤ	陰平	窩
+t	ɤ	陽平	德
+l	ɤ	陰平	樂
+tʂ	ɤ	陰平	遮
+tʂ	ɤ	陽平	哲 折
+tʂʰ	ɤ	陰平	車
+tʂʰ	ɤ	上聲	扯
+tʂʰ	ɤ	去聲	撤
+ʂ	ɤ	陰平	涉
+ʂ	ɤ	陽平	蛇 舌
+ʂ	ɤ	上聲	舍
+ʂ	ɤ	去聲	社
+ʐ	ɤ	陰平	惹 熱
+tʃ	ɤ	陰平	桌 捉
+tʃ	ɤ	陽平	濁
+ʃ	ɤ	陰平	說
+k	ɤ	陰平	哥 歌 割 各
+k	ɤ	陽平	革
+k	ɤ	去聲	個{一~}
+kʰ	ɤ	陰平	科 棵 磕
+kʰ	ɤ	上聲	顆 可 顆{一~珠}
+kʰ	ɤ	去聲	課
+ŋ	ɤ	上聲	惡 我
+ŋ	ɤ	去聲	餓
+x	ɤ	陰平	喝{新} 喝
+x	ɤ	陽平	河{新} 何 和{新} 合{新} 盒{新} 河{老派：xuɤ} 盒{煙~}
+Ø	ɤ	陰平	物
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	tʃ	tʃʰ	ʃ	ʒ
+@FIN	ɥ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ɥ	陰平	豬 誅 朱 珠
+tʃ	ɥ	上聲	煮 主
+tʃ	ɥ	去聲	住 注
+tʃʰ	ɥ	陰平	出
+tʃʰ	ɥ	陽平	除 廚
+tʃʰ	ɥ	上聲	處
+ʃ	ɥ	陰平	書 舒
+ʃ	ɥ	去聲	樹
+ʒ	ɥ	陽平	如
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	tʃ	ʃ
+@FIN	ɥa
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ɥa	陰平	抓
+tʃ	ɥa	上聲	爪
+ʃ	ɥa	陰平	刷
+ʃ	ɥa	上聲	耍
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	tʃ	tʃʰ	ʃ
+@FIN	ɥai
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ɥai	上聲	跩
+tʃ	ɥai	去聲	拽
+tʃʰ	ɥai	去聲	踹
+ʃ	ɥai	去聲	帥
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	tʃ	tʃʰ	ʃ
+@FIN	ɥaŋ
+@TON	陰平	21
+@TON	陽平	35
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ɥaŋ	陰平	裝 莊
+tʃ	ɥaŋ	去聲	撞
+tʃʰ	ɥaŋ	陰平	窗
+tʃʰ	ɥaŋ	陽平	床
+ʃ	ɥaŋ	陰平	霜 雙
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	tʃ	tʃʰ	ʃ
+@FIN	ɥei
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ɥei	陰平	追
+tʃ	ɥei	去聲	醉
+tʃʰ	ɥei	陰平	吹 催 崔
+tʃʰ	ɥei	陽平	捶
+tʃʰ	ɥei	去聲	脆 翠
+ʃ	ɥei	上聲	水
+ʃ	ɥei	陽平	隨
+ʃ	ɥei	去聲	睡 歲 稅
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	tʃ	tʃʰ	ʃ	ʒ
+@FIN	ɥã
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ɥã	陰平	專 磚
+tʃ	ɥã	去聲	賺
+tʃʰ	ɥã	陰平	川 穿
+tʃʰ	ɥã	陽平	船
+tʃʰ	ɥã	去聲	串
+ʃ	ɥã	陰平	涮 刷
+ʒ	ɥã	上聲	軟
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	tʃ	ʃ
+@FIN	ɥɤ
+@TON	陰平	21
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ɥɤ	去聲	措{~施} 錯
+ʃ	ɥɤ	陰平	說
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	p	pʰ	m	f	ʋ	k
+@FIN	ɯ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɯ	陰平	不
+p	ɯ	上聲	補
+p	ɯ	去聲	布 部 步
+pʰ	ɯ	陰平	撲
+pʰ	ɯ	陽平	僕 菩
+pʰ	ɯ	上聲	普
+m	ɯ	陰平	木 目 睦
+m	ɯ	去聲	墓 幕
+f	ɯ	陰平	夫 復 敷
+f	ɯ	陽平	扶 服 伏 福
+f	ɯ	上聲	府 斧 符 腐
+f	ɯ	去聲	付 父 富 副 負 婦 腹
+ʋ	ɯ	陰平	污 屋
+ʋ	ɯ	陽平	吳
+ʋ	ɯ	上聲	五 午 武
+ʋ	ɯ	去聲	霧 誤 務
+k	ɯ	陰平	疙 圪
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	ts	tsʰ	s
+@FIN	ɿ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ɿ	陰平	只{~有} 姿 紫
+ts	ɿ	上聲	紙 指 子
+ts	ɿ	去聲	自 字 志
+tsʰ	ɿ	陽平	瓷 詞 遲 辭 糍
+tsʰ	ɿ	上聲	次
+tsʰ	ɿ	去聲	遲
+s	ɿ	陰平	私 師 司
+s	ɿ	陽平	時
+s	ɿ	上聲	死 始
+s	ɿ	去聲	是 四 示 柿 事 試 市
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	tʂ	tʂʰ	ʂ	sʰ
+@FIN	ʅ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʅ	陰平	知 支 織
+tʂ	ʅ	陽平	直 職
+tʂ	ʅ	上聲	尺
+tʂ	ʅ	去聲	制 智 置 治
+tʂʰ	ʅ	陰平	吃 尺
+tʂʰ	ʅ	陽平	池 馳 持
+ʂ	ʅ	陰平	施 濕 失 室
+ʂ	ʅ	陽平	十 實 食 識
+ʂ	ʅ	去聲	世 勢 式 適
+sʰ	ʅ	陽平	詞 辭
+sʰ	ʅ	上聲	次
+sʰ	ʅ	去聲	刺
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-商州區
+// 来源：支思涵《商洛花鼓戲舞臺語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-商州區
+@SRC	支思涵《商洛花鼓戲舞臺語音研究》
+
+@INI	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ʅ
+@TON	陰平	21
+@TON	陽平	35
+@TON	上聲	53
+@TON	去聲	55
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʅ	陽平	職 直 執 姪
+tʂ	ʅ	去聲	治 志 置 制
+tʂʰ	ʅ	陰平	吃
+tʂʰ	ʅ	陽平	遲 持
+tʂʰ	ʅ	上聲	尺
+ʂ	ʅ	陰平	濕
+ʂ	ʅ	陽平	十 識
+ʂ	ʅ	去聲	世 示 氏
+ʐ	ʅ	陰平	日
