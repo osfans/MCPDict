@@ -86,7 +86,8 @@ public class HanZi {
         else if (unicode >= 0x2A735 && unicode <= 0x2B738) ext = "擴展C 14.0";
         else if (unicode == 0x2B739) ext = "擴展C 15.0";
         else if (unicode >= 0x2B73A && unicode <= 0x2B73F) ext = "擴展C 17.0";
-        else if (unicode >= 0x2B740 && unicode <= 0x2B81F) ext = "擴展D 6.0";
+        else if (unicode >= 0x2B740 && unicode <= 0x2B81D) ext = "擴展D 6.0";
+        else if (unicode >= 0x2B81E && unicode <= 0x2B81E) ext = "擴展D 18.0";
         else if (unicode >= 0x2B820 && unicode <= 0x2CEA1) ext = "擴展E 8.0";
         else if (unicode >= 0x2CEA2 && unicode <= 0x2CEAF) ext = "擴展E 17.0";
         else if (unicode >= 0x2CEB0 && unicode <= 0x2EBEF) ext = "擴展F 10.0";

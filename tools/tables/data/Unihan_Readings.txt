@@ -1,9 +1,9 @@
 # Unihan_Readings.txt
-# Date: 2025-07-24 00:00:00 GMT [KL]
-# Unicode Version 17.0.0
+# Date: 2026-01-22 00:00:00 GMT [KL]
+# Unicode Version 18.0.0
 #
 # Unicode Character Database
-# © 2025 Unicode®, Inc.
+# © 2026 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
 #
@@ -8267,7 +8267,7 @@ U+3B89	kCantonese	hap6
 U+3B8A	kCantonese	mau6
 U+3B8A	kJapanese	ホウ
 U+3B8B	kDefinition	(non-classical form of 栯) a kind of tree, a fruit tree
-U+3B8B	kJapanese	イタ
+U+3B8B	kJapanese	いた
 U+3B8B	kMandarin	yǒu
 U+3B8C	kCantonese	min4
 U+3B8C	kDefinition	(same as 棉) cotton; (Cant.) a kind of fruit
@@ -8559,7 +8559,7 @@ U+3BC8	kMandarin	sù
 U+3BC9	kCantonese	wok6
 U+3BC9	kDefinition	(same as 檴) a tree; material for cups, a kind of birch found in Manchuria
 U+3BC9	kFanqie	丑居
-U+3BC9	kJapanese	クワ ゲ チョ
+U+3BC9	kJapanese	ゲ チョ くわ
 U+3BC9	kMandarin	huò
 U+3BCA	kCantonese	han4
 U+3BCA	kDefinition	even measuring board for pecks and bushels
@@ -20206,7 +20206,7 @@ U+45B3	kCantonese	caa3
 U+45B3	kDefinition	jellyfish
 U+45B3	kFanqie	除駕
 U+45B3	kHanyuPinyin	42852.060:zhà,zhé
-U+45B3	kJapanese	タ ダ タタ チャク
+U+45B3	kJapanese	タ ダ チャク たた
 U+45B3	kMandarin	zhà
 U+45B3	kSMSZD2003Readings	zhà粵caa3
 U+45B3	kXHC1983	1448.140:zhà
@@ -22408,7 +22408,7 @@ U+4786	kJapanese	サ
 U+4786	kMandarin	suǒ
 U+4787	kCantonese	zi3
 U+4787	kDefinition	gifts to superiors or friends, offerings of ceremony
-U+4787	kJapanese	シ ニエル
+U+4787	kJapanese	シ にえる
 U+4787	kMandarin	dié
 U+4788	kCantonese	gwai3
 U+4788	kDefinition	(ancient form of 貨) money; wealth, natural endowment or gifts, to aid or help, to gamble; to bet, to compete
@@ -32093,12 +32093,12 @@ U+4ED8	kTang	biò
 U+4ED8	kVietnamese	phó
 U+4ED8	kXHC1983	0346.020:fù
 U+4ED9	kCantonese	sin1
-U+4ED9	kDefinition	Taoist super-being, transcendent, immortal
+U+4ED9	kDefinition	Taoist super-being, transcendent, immortal; cent
 U+4ED9	kFanqie	相然
 U+4ED9	kHangul	선:0E
 U+4ED9	kHanyuPinlu	xian(18) xiān(17)
 U+4ED9	kHanyuPinyin	10114.030:xiān,xiǎn
-U+4ED9	kJapanese	セン セント
+U+4ED9	kJapanese	セン セント せんにん
 U+4ED9	kJapaneseKun	SENNIN SENTO
 U+4ED9	kJapaneseOn	SEN
 U+4ED9	kKorean	SEN
@@ -38529,7 +38529,7 @@ U+5160	kFanqie	當侯
 U+5160	kJapanese	トウ かぶと
 U+5160	kMandarin	dōu
 U+5161	kCantonese	baak3
-U+5161	kDefinition	mercury (chemical element)
+U+5161	kDefinition	mercury (chemical element); hectogram
 U+5161	kJapanese	ヘクトグラム
 U+5161	kKorean	PAYK
 U+5162	kCantonese	ging1
@@ -45912,7 +45912,7 @@ U+542B	kTang	*hom
 U+542B	kVietnamese	hàm
 U+542B	kXHC1983	0438.050:hán
 U+542C	kCantonese	ting1
-U+542C	kDefinition	hear; understand; obey, comply
+U+542C	kDefinition	hear; understand; obey, comply; one pound
 U+542C	kFanqie	宜引 牛謹
 U+542C	kHangul	은:1N
 U+542C	kHanyuPinlu	tīng(2028) ting(48)
@@ -46311,7 +46311,7 @@ U+544D	kJapaneseKun	HOERU
 U+544D	kJapaneseOn	UN GOU ON GU IN
 U+544D	kMandarin	hōng
 U+544E	kCantonese	cek3
-U+544E	kDefinition	foot
+U+544E	kDefinition	foot, twelve inches
 U+544E	kHangul	척:1
 U+544E	kHanyuPinyin	10596.030:chǐ
 U+544E	kJapanese	セキ フィート
@@ -46326,7 +46326,7 @@ U+544E	kXHC1983	0145.010:chǐ 1385.020:yīng
 U+544F	kCantonese	sing1
 U+544F	kDefinition	gallon; quart
 U+544F	kHanyuPinyin	10590.010:shēng
-U+544F	kJapanese	ショウ ガロン
+U+544F	kJapanese	ショウ ガロン クオト
 U+544F	kJapaneseKun	GARON KUOTO
 U+544F	kJapaneseOn	SHOU
 U+544F	kKorean	SUNG
@@ -50817,6 +50817,7 @@ U+561C	kJapaneseOn	BA
 U+561C	kMandarin	mà
 U+561C	kSMSZD2003Readings	mà粵mak1
 U+561D	kCantonese	huk6
+U+561D	kDefinition	bushel (unit of measure)
 U+561D	kHanyuPinyin	10678.030:hú
 U+561D	kJapanese	ブッシェル
 U+561D	kMandarin	hú
@@ -51405,7 +51406,7 @@ U+5659	kXHC1983	0927.080:qín
 U+565A	kCantonese	cam4
 U+565A	kDefinition	fathom
 U+565A	kHanyuPinyin	10687.050:xún
-U+565A	kJapanese	ファゾム
+U+565A	kJapanese	ファゾム えいびろ
 U+565A	kJapaneseKun	EIBIRO
 U+565A	kMandarin	xún
 U+565A	kSMSZD2003Readings	xún粵cam4
@@ -52445,7 +52446,7 @@ U+56CC	kXHC1983	1094.093:sū
 U+56CD	kCantonese	hei2
 U+56CD	kDefinition	double happiness
 U+56CD	kHangul	희:0
-U+56CD	kJapanese	ヨシ そうき
+U+56CD	kJapanese	よし そうき
 U+56CD	kKorean	HUY
 U+56CD	kMandarin	xǐ
 U+56CE	kCantonese	zang6
@@ -60579,7 +60580,7 @@ U+5A46	kXHC1983	0884.100:pó
 U+5A47	kCantonese	coi2
 U+5A47	kHangul	채:N
 U+5A47	kHanyuPinyin	21060.030:cǎi
-U+5A47	kJapanese	サイ ウネメ ウネベ
+U+5A47	kJapanese	サイ うねめ うねべ
 U+5A47	kJapaneseKun	UNEME
 U+5A47	kJapaneseOn	SAI
 U+5A47	kMandarin	cǎi
@@ -64572,7 +64573,7 @@ U+5C00	kJapaneseKun	DEKINU
 U+5C00	kJapaneseOn	HA
 U+5C00	kMandarin	pǒ
 U+5C01	kCantonese	fung1
-U+5C01	kDefinition	letter, envelope; feudal
+U+5C01	kDefinition	letter, envelope; feudal; one pound
 U+5C01	kFanqie	府容 方用
 U+5C01	kHangul	봉:0E
 U+5C01	kHanyuPinlu	fēng(400)
@@ -66415,7 +66416,7 @@ U+5CC4	kMandarin	yì
 U+5CC4	kTGHZ2013	434.110:yì
 U+5CC4	kXHC1983	1372.040:yì
 U+5CC5	kCantonese	bin6
-U+5CC5	kJapanese	クラ
+U+5CC5	kJapanese	くら
 U+5CC5	kJapaneseKun	KURA
 U+5CC5	kMandarin	biàn
 U+5CC6	kCantonese	hap6
@@ -69068,7 +69069,7 @@ U+5E0A	kXHC1983	0848.030:pà
 U+5E0B	kCantonese	zi2
 U+5E0B	kDefinition	paper; stationary; document
 U+5E0B	kFanqie	諸氏
-U+5E0B	kJapanese	シ カミ
+U+5E0B	kJapanese	シ かみ
 U+5E0B	kJapaneseKun	KAMI
 U+5E0B	kJapaneseOn	SHI
 U+5E0B	kMandarin	zhǐ
@@ -71730,7 +71731,7 @@ U+5F16	kJapanese	て
 U+5F16	kJapaneseKun	TE
 U+5F16	kMandarin	hù
 U+5F17	kCantonese	fat1
-U+5F17	kDefinition	not, negative
+U+5F17	kDefinition	not, negative; dollar
 U+5F17	kFanqie	分勿
 U+5F17	kHangul	불:0N
 U+5F17	kHanyuPinyin	20990.090:fú
@@ -97564,7 +97565,7 @@ U+69CF	kCantonese	haam2
 U+69CF	kFanqie	苦減
 U+69CF	kHangul	겸:N
 U+69CF	kHanyuPinyin	21265.040:qiǎn,xiàn,lián
-U+69CF	kJapanese	ケン タイ カネ かね
+U+69CF	kJapanese	ケン タイ かね
 U+69CF	kMandarin	qiǎn
 U+69D0	kCantonese	waai4
 U+69D0	kDefinition	locust tree
@@ -104229,7 +104230,7 @@ U+6CD5	kFanqie	方乏
 U+6CD5	kHangul	법:0E
 U+6CD5	kHanyuPinlu	fǎ(2090) fa(130)
 U+6CD5	kHanyuPinyin	31579.040:fǎ
-U+6CD5	kJapanese	ホウ ハッ ホッ フラン のっとる のり
+U+6CD5	kJapanese	ホウ ハッ ホッ フラン のっとる のり おきて
 U+6CD5	kJapaneseKun	NORI OKITE NOTTORU
 U+6CD5	kJapaneseOn	HOU HATSU HOTSU
 U+6CD5	kKorean	PEP
@@ -105605,7 +105606,7 @@ U+6D6B	kHanyuPinyin	31635.010:hǎn
 U+6D6B	kJapanese	カン
 U+6D6B	kMandarin	hǎn
 U+6D6C	kCantonese	lei5
-U+6D6C	kDefinition	nautical mile
+U+6D6C	kDefinition	nautical mile; knot, nautical mile per hour
 U+6D6C	kHangul	리:0N
 U+6D6C	kHanyuPinyin	31623.010:lǐ
 U+6D6C	kJapanese	ノット リ かいり
@@ -121885,6 +121886,7 @@ U+74F1	kCantonese	hou4
 U+74F1	kDefinition	milligram
 U+74F1	kJapanese	ミリグラム
 U+74F1	kJapaneseKun	MIRIGURAMU
+U+74F2	kDefinition	ton
 U+74F2	kHangul	톤:1
 U+74F2	kJapanese	トン
 U+74F2	kJapaneseKun	TON
@@ -130408,7 +130410,7 @@ U+78B4	kSMSZD2003Readings	chá粵caa4
 U+78B4	kTGHZ2013	034.060:chā 035.020:chá
 U+78B4	kXHC1983	0111.050:chā 0114.030:chá
 U+78B5	kCantonese	zing1
-U+78B5	kJapanese	セキ ヒロ
+U+78B5	kJapanese	セキ ひろ
 U+78B5	kJapaneseOn	SEKI
 U+78B5	kMandarin	tián
 U+78B6	kCantonese	kai3
@@ -135031,7 +135033,7 @@ U+7ACB	kFanqie	力入
 U+7ACB	kHangul	립:0E 입:0
 U+7ACB	kHanyuPinlu	lì(1565)
 U+7ACB	kHanyuPinyin	42706.010:lì,wèi
-U+7ACB	kJapanese	リツ リュウ イ リットル たつ たてる
+U+7ACB	kJapanese	リツ リュウ イ リットル たつ たてる たちどころ
 U+7ACB	kJapaneseKun	TATSU TATERU TACHIDOKORO
 U+7ACB	kJapaneseOn	RITSU RYUU
 U+7ACB	kKorean	LIP
@@ -135059,7 +135061,7 @@ U+7ACE	kJapaneseKun	NOBORU
 U+7ACE	kJapaneseOn	FUU FU
 U+7ACE	kMandarin	fù
 U+7ACF	kCantonese	cin1
-U+7ACF	kDefinition	kiloliter
+U+7ACF	kDefinition	kiloliter, cubic meter
 U+7ACF	kJapanese	キロリットル
 U+7ACF	kJapaneseKun	KIRORITTORU
 U+7ACF	kMandarin	qiān
@@ -137904,7 +137906,7 @@ U+7C16	kTGHZ2013	082.110:duàn
 U+7C16	kXHC1983	0272.010:duàn
 U+7C17	kCantonese	loeng4
 U+7C17	kDefinition	a weir, fish trap, fish pond
-U+7C17	kJapanese	ヤナセ やな
+U+7C17	kJapanese	やな やなせ
 U+7C17	kJapaneseKun	YANA
 U+7C17	kMandarin	zhù
 U+7C18	kCantonese	siu1
@@ -138671,7 +138673,7 @@ U+7C74	kMandarin	dí
 U+7C74	kTGHZ2013	071.090:dí
 U+7C74	kXHC1983	0231.100:dí
 U+7C75	kCantonese	faan4
-U+7C75	kDefinition	decimeter
+U+7C75	kDefinition	decameter, ten meters
 U+7C75	kJapanese	ハン デカメートル
 U+7C75	kJapaneseKun	DEKAMEETORU
 U+7C75	kMandarin	fán
@@ -138740,9 +138742,11 @@ U+7C7E	kJapaneseKun	MOMI
 U+7C7E	kKorean	IN
 U+7C7E	kMandarin	ní
 U+7C7F	kCantonese	fan1
+U+7C7F	kDefinition	decimeter, one tenth of a meter
 U+7C7F	kJapanese	デシメートル
 U+7C7F	kMandarin	cùn
 U+7C80	kCantonese	sap6
+U+7C80	kDefinition	decameter, ten meters
 U+7C80	kJapanese	デカメートル
 U+7C80	kMandarin	zhàng
 U+7C81	kCantonese	cin1
@@ -138821,6 +138825,7 @@ U+7C8B	kJapaneseKun	IKI
 U+7C8B	kJapaneseOn	SUI SAI
 U+7C8B	kMandarin	cuì
 U+7C8C	kCantonese	baak3
+U+7C8C	kDefinition	hectometer
 U+7C8C	kJapanese	ヘクトメートル
 U+7C8C	kMandarin	yin
 U+7C8D	kCantonese	hou4
@@ -139146,6 +139151,7 @@ U+7CB3	kSMSZD2003Readings	jīng粵gang1
 U+7CB3	kTGHZ2013	179.040:jīng
 U+7CB3	kXHC1983	0595.040:jīng
 U+7CB4	kCantonese	gung1
+U+7CB4	kDefinition	kilometer
 U+7CB4	kJapanese	キロメートル
 U+7CB4	kMandarin	lǐ
 U+7CB5	kCantonese	jyut6
@@ -140522,7 +140528,7 @@ U+7D4A	kHanyuPinyin	53379.030:zuì
 U+7D4A	kJapanese	サイ
 U+7D4A	kMandarin	zuì
 U+7D4B	kCantonese	kwong3
-U+7D4B	kJapanese	ゲン ヒロシ ヒロム コウ ヒロ
+U+7D4B	kJapanese	ゲン コウ ひろし ひろむ ひろ わた わたいれ
 U+7D4B	kJapaneseKun	WATA WATAIRE
 U+7D4B	kJapaneseOn	KOU
 U+7D4B	kMandarin	kuàng
@@ -147029,7 +147035,7 @@ U+8055	kJapanese	コウ ゴウ
 U+8055	kKorean	HO
 U+8055	kMandarin	hào
 U+8056	kCantonese	sing3
-U+8056	kDefinition	holy, sacred; sage
+U+8056	kDefinition	holy, sacred; sage, saint
 U+8056	kFanqie	式正
 U+8056	kHangul	성:0EN
 U+8056	kHanyuPinlu	shèng(28)
@@ -155846,7 +155852,7 @@ U+8421	kCantonese	bok6
 U+8421	kMandarin	bo
 U+8421	kVietnamese	bạc
 U+8422	kCantonese	paau1
-U+8422	kJapanese	ヤチ ヤツ
+U+8422	kJapanese	やち やつ やぢ やじ
 U+8422	kJapaneseKun	YAJI YACHI
 U+8422	kMandarin	pāo
 U+8423	kCantonese	ding6
@@ -163603,7 +163609,7 @@ U+87CD	kMandarin	lí
 U+87CE	kCantonese	mun5
 U+87CE	kDefinition	mite
 U+87CE	kHanyuPinyin	42883.060:mǎn
-U+87CE	kJapanese	ダニ だに
+U+87CE	kJapanese	だに
 U+87CE	kJapaneseKun	DANI
 U+87CE	kMandarin	mǎn
 U+87CE	kSMSZD2003Readings	mǎn粵mun5
@@ -214544,7 +214550,7 @@ U+203F0	kMandarin	zhǎi
 U+203F2	kVietnamese	thợ
 U+203F3	kVietnamese	giống
 U+203F5	kCantonese	fung6
-U+203F9	kJapanese	ホトケ
+U+203F9	kJapanese	ほとけ
 U+203FC	kCantonese	gaa1
 U+203FF	kHanyuPinyin	10231.060:fěi
 U+203FF	kMandarin	fěi
@@ -214733,12 +214739,15 @@ U+2048B	kJapanese	キョウ ク
 U+2048C	kJapanese	キョウ
 U+2048D	kJapanese	ユ
 U+2048E	kCantonese	fu4
+U+20490	kDefinition	milligram
 U+20490	kJapanese	ミリグラム
 U+20491	kCantonese	jyun4
 U+20492	kCantonese	jan5
 U+20496	kJapanese	ギョウ
+U+20498	kDefinition	hectogram
 U+20498	kJapanese	ヘクトグラム
 U+20499	kCantonese	gan1
+U+20499	kDefinition	kilogram
 U+20499	kJapanese	キログラム
 U+2049C	kFanqie	虞遠
 U+2049C	kHanyuPinyin	10273.140:yuǎn
@@ -214757,6 +214766,7 @@ U+204A6	kVietnamese	rỡ
 U+204A7	kJapanese	ホク
 U+204A8	kJapanese	リョウ
 U+204AC	kVietnamese	vặc
+U+204AD	kDefinition	milligram
 U+204AD	kJapanese	ミリグラム
 U+204AF	kVietnamese	nhóc
 U+204B0	kHanyuPinyin	10275.060:niǎo,ní
@@ -214764,7 +214774,7 @@ U+204B0	kJapanese	ジョウ
 U+204B0	kMandarin	niǎo
 U+204B1	kJapanese	ヘキ
 U+204B2	kCantonese	cin4
-U+204B2	kDefinition	Dg
+U+204B2	kDefinition	decagram, ten grams
 U+204B2	kJapanese	デカグラム
 U+204B5	kHanyuPinyin	10275.050:liàn
 U+204B5	kMandarin	liàn
@@ -214781,6 +214791,7 @@ U+204C1	kVietnamese	rạng
 U+204C5	kVietnamese	vằng
 U+204C6	kJapanese	キョウ
 U+204C7	kVietnamese	sáng
+U+204C8	kDefinition	myriagram, ten kilograms
 U+204C8	kJapanese	ミリヤグラム
 U+204CA	kHanyuPinyin	10275.100:huī,dān
 U+204CA	kJapanese	タン
@@ -222790,6 +222801,7 @@ U+21A58	kMandarin	yìn
 U+21A59	kJapanese	カ
 U+21A5A	kHanyuPinyin	20944.100:jiā,zhuàn
 U+21A5A	kMandarin	jiā
+U+21A5B	kDefinition	hectare
 U+21A5B	kJapanese	ヘクタール
 U+21A5F	kJapanese	イン
 U+21A60	kJapanese	シン
@@ -222898,6 +222910,7 @@ U+21AB5	kJapanese	キ
 U+21AB5	kMandarin	qí
 U+21AB6	kFanqie	火含
 U+21AB6	kJapanese	カン コン
+U+21AB8	kDefinition	square meter, centiare
 U+21AB8	kJapanese	センチアール
 U+21ABA	kHanyuPinyin	20955.110:zhēng
 U+21ABA	kMandarin	zhēng
@@ -223637,7 +223650,7 @@ U+21CB0	kHanyuPinyin	20979.010:qú
 U+21CB0	kJapanese	ショ ジョ
 U+21CB0	kMandarin	qú
 U+21CB1	kJapanese	ソウ
-U+21CB2	kJapanese	クワ
+U+21CB2	kJapanese	カ
 U+21CB3	kJapanese	デキ
 U+21CB4	kJapanese	シ
 U+21CB5	kJapanese	ビ
@@ -233672,7 +233685,7 @@ U+237FD	kHanyuPinyin	21322.130:lào
 U+237FD	kJapanese	ロウ
 U+237FD	kMandarin	lào
 U+237FE	kJapanese	ユウ
-U+237FF	kJapanese	ナギ
+U+237FF	kJapanese	なぎ
 U+23804	kJapanese	レイ リョウ れんじ
 U+2380E	kHanyuPinyin	21322.100:xiāo
 U+2380E	kMandarin	xiāo
@@ -239367,7 +239380,7 @@ U+247EB	kJapanese	シュウ ソウ
 U+247EC	kJapanese	トウ
 U+247ED	kFanqie	丑略
 U+247ED	kJapanese	チャク
-U+247F1	kJapanese	タジヒ ワ
+U+247F1	kJapanese	ワ たじひ
 U+247F4	kJapanese	キ
 U+247F5	kJapanese	レイ
 U+247F6	kJapanese	エン
@@ -241069,6 +241082,7 @@ U+24CBA	kMandarin	xī
 U+24CBB	kJapanese	キョウ
 U+24CBC	kVietnamese	dái
 U+24CBD	kJapanese	コウ
+U+24CBE	kDefinition	are, one hundredth of a hectare
 U+24CBE	kJapanese	アール
 U+24CBF	kJapanese	カク えがく
 U+24CC1	kJapanese	ジョウ
@@ -246596,6 +246610,7 @@ U+25A56	kMandarin	yì
 U+25A57	kHanyuPinyin	42707.030:ruǎn
 U+25A57	kJapanese	ゲン ガン
 U+25A57	kMandarin	ruǎn
+U+25A58	kDefinition	centiliter
 U+25A58	kJapanese	センチリットル
 U+25A59	kHanyuPinyin	42707.220:pǎ
 U+25A59	kJapanese	ハ ヘ
@@ -246633,6 +246648,7 @@ U+25A74	kJapanese	ザイ
 U+25A75	kJapanese	ヘイ
 U+25A76	kJapanese	オク シ
 U+25A7A	kMandarin	liè
+U+25A7B	kDefinition	deciliter
 U+25A7B	kJapanese	デシリットル
 U+25A7E	kJapanese	ホツ ホチ
 U+25A7F	kJapanese	ボウ
@@ -246667,7 +246683,7 @@ U+25A8F	kMandarin	jū
 U+25A90	kJapanese	リョウ
 U+25A91	kJapanese	リョウ
 U+25A95	kCantonese	bing2
-U+25A95	kDefinition	classifier
+U+25A95	kDefinition	kiloliter, cubic meter; classifier
 U+25A95	kJapanese	キロリットル
 U+25A98	kHanyuPinyin	42713.160:zhēn
 U+25A98	kJapanese	チン
@@ -246704,6 +246720,7 @@ U+25AB0	kJapanese	ケイ
 U+25AB1	kHanyuPinyin	42715.140:cù
 U+25AB1	kJapanese	ソク
 U+25AB1	kMandarin	cù
+U+25AB3	kDefinition	milliliter
 U+25AB3	kJapanese	ミリリットル
 U+25AB4	kHanyuPinyin	42716.030:pàng
 U+25AB4	kMandarin	pàng
@@ -248200,6 +248217,7 @@ U+25E2C	kMandarin	shēn
 U+25E2D	kFanqie	居倦
 U+25E2D	kJapanese	キク
 U+25E2E	kJapanese	ソウ くわ
+U+25E2F	kDefinition	myriameter, ten kilometers, Swedish mile
 U+25E2F	kJapanese	ミリアメートル
 U+25E32	kHanyuPinyin	53142.060:gōng
 U+25E32	kJapanese	キュウ
@@ -280891,6 +280909,7 @@ U+2B673	kJapanese	なまず
 U+2B675	kJapanese	やまめ
 U+2B676	kJapanese	きす
 U+2B678	kJapanese	すいたたき
+U+2B679	kDefinition	blizzard
 U+2B679	kJapanese	ブリザード
 U+2B67B	kJapanese	ふぐ
 U+2B67C	kJapanese	めくじら
@@ -281293,7 +281312,7 @@ U+2B7B9	kJapanese	クウ ク コウ そら あく あける から むなしい 
 U+2B7BA	kJapanese	セチ セツ ぬすむ
 U+2B7BD	kJapanese	サ サイ みの
 U+2B7BE	kJapanese	ヘイ
-U+2B7BF	kJapanese	ヤナセ やな
+U+2B7BF	kJapanese	やな やなせ
 U+2B7C0	kJapanese	もち
 U+2B7C1	kJapanese	カ ゲ
 U+2B7C3	kCantonese	jam6
@@ -281432,7 +281451,7 @@ U+2B81C	kCantonese	ngai4
 U+2B81C	kDefinition	teeth grown in old age
 U+2B81C	kMandarin	ní
 U+2B81C	kTGHZ2013	265.050:ní
-U+2B81D	kJapanese	ベツ ミノガメ
+U+2B81D	kJapanese	ベツ みのがめ
 U+2B825	kDefinition	to retire into obscurity
 U+2B825	kJapanese	ロウ ル
 U+2B825	kMandarin	lòu
@@ -281444,6 +281463,7 @@ U+2B852	kDefinition	to loose, take off, get rid of
 U+2B864	kJapanese	あつまる
 U+2B86C	kMandarin	wō
 U+2B876	kMandarin	dàn
+U+2B877	kDefinition	hectare
 U+2B877	kJapanese	ヘクタール
 U+2B88A	kCantonese	cin4
 U+2B88A	kDefinition	money, currency, coins
@@ -283137,7 +283157,7 @@ U+2CAA9	kXHC1983	0840.010:nóng
 U+2CAAC	kJapanese	からし
 U+2CABA	kMandarin	guàng
 U+2CABB	kJapanese	かえる
-U+2CABF	kDefinition	a square meter; one hundredth of a 公畝
+U+2CABF	kDefinition	square meter, centiare; one hundredth of a 公畝
 U+2CABF	kJapanese	センチアール
 U+2CAC4	kJapanese	かつち
 U+2CAD1	kJapanese	かつち
@@ -284131,6 +284151,7 @@ U+2CF11	kZhuang	caj*
 U+2CF13	kZhuang	raez
 U+2CF14	kZhuang	ruz
 U+2CF16	kJapanese	ボウ モウ うしなう ほろびる
+U+2CF17	kDefinition	grain (unit of weight)
 U+2CF17	kJapanese	グレーン
 U+2CF18	kJapanese	シ ここ この これ
 U+2CF19	kJapanese	チョウ ジョウ きざし
@@ -284389,7 +284410,7 @@ U+2D152	kJapanese	サ シ さす
 U+2D158	kJapanese	キョウ オウ ただす
 U+2D15D	kJapanese	エン オン
 U+2D15F	kJapanese	コウ あらい あれる あらす
-U+2D160	kJapanese	ヨシ よし
+U+2D160	kJapanese	よし
 U+2D161	kJapanese	ヒ
 U+2D162	kZhuang	byongh
 U+2D163	kZhuang	baet
@@ -284709,9 +284730,11 @@ U+2D4FF	kJapanese	メイ ミョウ ベイ ベキ ベン メン ミャク くら�
 U+2D500	kJapanese	ミツ ビツ ミチ しげし ひそか
 U+2D503	kJapanese	キ よる よせる
 U+2D504	kJapanese	ネイ デイ ニョウ やすい
+U+2D505	kDefinition	hectare
 U+2D505	kJapanese	ヘクタール
 U+2D507	kZhuang	naez
 U+2D50C	kJapanese	ボウ ビン ミン ベン メン ミョウ
+U+2D516	kDefinition	square meter, centiare
 U+2D516	kJapanese	センチアール
 U+2D51F	kJapanese	ホウ たから
 U+2D52C	kJapanese	ショウ ソウ ひきいる
@@ -285644,7 +285667,7 @@ U+2E0D6	kJapanese	ジュ
 U+2E0DB	kJapanese	ケイ かんがえる
 U+2E0E2	kJapanese	ケイ かんがえる
 U+2E0E3	kJapanese	ソ
-U+2E0F0	kJapanese	クワ ととのう
+U+2E0F0	kJapanese	カ ととのう
 U+2E0F2	kZhuang	ndaem
 U+2E0FB	kJapanese	カン
 U+2E100	kZhuang	caenz*
@@ -285966,7 +285989,7 @@ U+2E480	kZhuang	haemz
 U+2E487	kZhuang	rum
 U+2E48F	kZhuang	doek
 U+2E490	kJapanese	にらき
-U+2E494	kJapanese	ツタ
+U+2E494	kJapanese	つた
 U+2E497	kJapanese	カク ワク ギャク コ ゴ かる
 U+2E499	kJapanese	シキ ゾウ ショク ショウ みずたで
 U+2E49A	kJapanese	いえあららぎ
@@ -286707,12 +286730,12 @@ U+2EC14	kCantonese	wai4
 U+2EC14	kMandarin	wéi
 U+2EC38	kCantonese	ji6
 U+2EC38	kMandarin	yǐ
-U+2EC3D	kMandarin	lǎn
+U+2EC3D	kMandarin	yuè
 U+2EC3E	kCantonese	laan5
-U+2EC3E	kMandarin	qiè
-U+2EC3F	kMandarin	xíng
+U+2EC3E	kMandarin	lǎn
+U+2EC3F	kMandarin	qiè
 U+2EC41	kCantonese	zeon6
-U+2EC41	kMandarin	yǔ
+U+2EC41	kMandarin	jìn
 U+2EC46	kCantonese	man5
 U+2EC47	kCantonese	lin4
 U+2EC47	kMandarin	lián
@@ -286720,7 +286743,7 @@ U+2EC4A	kCantonese	lo4
 U+2EC4A	kMandarin	luó
 U+2EC50	kMandarin	wān
 U+2EC52	kCantonese	niu5
-U+2EC52	kMandarin	yàn
+U+2EC52	kMandarin	niǎo
 U+2EC54	kCantonese	mun5
 U+2EC60	kCantonese	zeon3
 U+2EC60	kMandarin	jùn

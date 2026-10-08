@@ -1,6 +1,6 @@
-# StandardizedVariants-17.0.0.txt
-# Date: 2025-07-30
-# © 2025 Unicode®, Inc.
+# StandardizedVariants-18.0.0.txt
+# Date: 2026-01-26
+# © 2026 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use and license, see https://www.unicode.org/terms_of_use.html
 #
@@ -87,6 +87,16 @@
 2ACC FE00; with stroke through bottom members; # SUPERSET OF ABOVE NOT EQUAL TO
 FF10 FE00; short diagonal stroke form; # FULLWIDTH DIGIT ZERO
 
+1DB10 FE00; with descender; # CARTESIAN EQUALS SIGN
+223D FE00; using lazy S; # REVERSED TILDE
+2243 FE00; using lazy S; # ASYMPTOTICALLY EQUAL TO
+22CD FE00; using lazy S; # REVERSED TILDE EQUALS
+2242 FE00; using lazy S; # MINUS TILDE
+2248 FE00; using lazy S; # ALMOST EQUAL TO
+2A6C FE00; using lazy S; # SIMILAR MINUS SIMILAR
+22DC FE00; with horizontal equal; # EQUAL TO OR LESS-THAN
+22DD FE00; with horizontal equal; # EQUAL TO OR GREATER-THAN
+
 # Mathematical alphabet script variants
 
 1D49C FE00; chancery style; #  MATHEMATICAL SCRIPT CAPITAL A
@@ -142,6 +152,8 @@ FF10 FE00; short diagonal stroke form; # FULLWIDTH DIGIT ZERO
 1D4B3 FE01; roundhand style; #  MATHEMATICAL SCRIPT CAPITAL X
 1D4B4 FE01; roundhand style; #  MATHEMATICAL SCRIPT CAPITAL Y
 1D4B5 FE01; roundhand style; #  MATHEMATICAL SCRIPT CAPITAL Z
+
+1D4CF FE02; kurrent style; #  MATHEMATICAL SCRIPT SMALL Z
 
 # East Asian punctuation positional and width variants
 

@@ -114,7 +114,7 @@
 
 ● 字體：可安裝[遍黑體](https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project)、[文津宋體](https://github.com/takushun-wu/WenJinMincho)等[字體包](https://github.com/osfans/MCPDict/releases/tag/fonts)顯示所有漢字
 
-● 漢字：已收錄□（合音字、本字不明、有音無字）、〇（“星”或“零”）、統一碼17.0的全部漢字（不含部首及兼容區）共101998字
+● 漢字：已收錄□（合音字、本字不明、有音無字）、〇（“星”或“零”）、統一碼18.0的全部漢字（不含部首及兼容區）共101999字
 
 
 
