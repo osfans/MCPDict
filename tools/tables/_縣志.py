@@ -399,7 +399,7 @@ class 表(_表):
 		elif 名 in ("荆州沙市",):
 			if 行.startswith("声调"): return ""
 			行 = 自.增加調類(行)
-		elif 名 in ("蒙自",):
+		elif 名 in ("蒙自","大理"):
 			if 行.startswith("调\\n声"): return ""
 			行 = 自.增加調類(行).replace("\\n", "")
 		elif 名 in ("義烏",):
@@ -464,7 +464,7 @@ class 表(_表):
 		elif 名 in ("靖江東興",):
 			行 = re.sub("(\\d)", "[\\1]", 行)
 			行 = 自.normS(行)
-		elif 名 in ("固始",):
+		elif 名 in ("固始","清末安慶官話"):
 			列 = 行.split("\t")
 			if 列[0]: 自.韻 = 列[0]
 			列[1] += 自.韻
