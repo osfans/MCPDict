@@ -166,7 +166,7 @@ def 加載(省=None):
 		文件名 = 列["文件名"]
 		if 列["是否有人在做"].strip() not in ("已做", "重做"):
 			continue
-		if not 文件名 or 文件名.startswith("#"):
+		if (not 文件名 or 文件名.startswith("#")) and 列["是否有人在做"].strip() == "已做":
 			print(f"{語言} 沒有登記字表文件: {文件名}")
 			continue
 		if 文件名.endswith(".doc") or 文件名.endswith("xls"): 文件名 += "x"

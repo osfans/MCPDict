@@ -162,12 +162,15 @@ def run2text(run):
 def isDocx(fname):
 	return fname.endswith(".docx")
 
+def isZip(fname):
+	return fname.endswith(".zip")
+
 def isRaw(fname):
 	ext = os.path.splitext(fname)[-1]
 	return ext in [".txt", ".tsv", ".csv", ".md", ".yaml", ".htm", ".db", ".json"]
 
 def isValidSrc(fname):
-	return isDocx(fname) or isXlsx(fname) or isRaw(fname)
+	return isDocx(fname) or isXlsx(fname) or isRaw(fname) or isZip(fname)
 
 def docx2tsv(fname, reduceLF=False):
 	tsv = getSrcName(fname)

@@ -182,7 +182,7 @@ class 表(_表):
 			行 = 行.replace("<","{").replace(">","}")
 		elif 名 in ("慈利",):
 			行 = 行.replace("/", "")
-		elif 名 in ("博白","梧州","茶山塘角",):
+		elif 名 in ("博白","梧州","東莞塘角",):
 			if 行.startswith("#"): return
 			行 = re.sub(r"\[(.*?)(\d+[ab]?)\]", "\n\\1[\\2]", 行)
 		elif 名 in ("1795建甌",):
@@ -399,7 +399,7 @@ class 表(_表):
 		elif 名 in ("荆州沙市",):
 			if 行.startswith("声调"): return ""
 			行 = 自.增加調類(行)
-		elif 名 in ("蒙自","大理"):
+		elif 名 in ("蒙自","大理", "桂林"):
 			if 行.startswith("调\\n声"): return ""
 			行 = 自.增加調類(行).replace("\\n", "")
 		elif 名 in ("義烏",):

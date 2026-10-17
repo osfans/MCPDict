@@ -129,7 +129,8 @@ def getLangsByArgv(infos, argv):
 			ba4 = ba2.replace(".tsv", ".xlsx")
 			ba5 = re.sub(r"([\d\-\(\)（）\. ]+?)(.[^.]*?)$", "\\2", ba)
 			ba6 = re.sub(r"( ?[\d\-\.]*?)(.[^.]*)$", "\\2", ba)
-			bas = [ba, ba2, ba3, ba4, ba5, ba6]
+			ba7 = ba2.replace(".tsv", ".zip")
+			bas = [ba, ba2, ba3, ba4, ba5, ba6, ba7]
 			found = False
 			for i in infos:
 				pattern = infos[i]["文件名"]
