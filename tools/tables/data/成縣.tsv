@@ -1,0 +1,1381 @@
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	f	ʋ	t	l	ts	k	kʰ	x
+@FIN	ei
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ei	陰平	悲 北 百
+p	ei	陽平	白
+p	ei	去聲	輩
+pʰ	ei	陰平	杯 披
+pʰ	ei	陽平	陪 賠
+pʰ	ei	去聲	配 倍 佩
+m	ei	陰平	麥 脈
+m	ei	陽平	梅 煤
+m	ei	上聲	每 美
+m	ei	去聲	妹
+f	ei	陰平	飛
+f	ei	陽平	肥
+f	ei	上聲	匪
+f	ei	去聲	肺
+ʋ	ei	陰平	威
+ʋ	ei	陽平	危 圍
+ʋ	ei	上聲	委 偉
+ʋ	ei	去聲	衛 位 胃
+t	ei	陰平	得 德
+l	ei	陰平	肋 勒
+ts	ei	陰平	窄
+ts	ei	陽平	賊
+k	ei	陰平	格 隔
+kʰ	ei	陰平	客
+x	ei	陰平	黑
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	t	tʰ	l	tɕ	tɕʰ	ȵ	ɕ	∅
+@FIN	i
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	i	陰平	蓖{~麻} 碑 筆 畢 必 逼 壁
+p	i	上聲	比{~較}
+p	i	去聲	弊 幣 閉
+pʰ	i	陽平	皮 牌 鼻
+pʰ	i	上聲	匹{一~布，一~馬}
+m	i	陰平	密
+m	i	陽平	迷 眉
+m	i	上聲	米
+t	i	陰平	低
+t	i	陽平	笛 敵
+t	i	上聲	底
+t	i	去聲	弟 地
+tʰ	i	陽平	題 提
+tʰ	i	去聲	涕{鼻~} 剃
+l	i	陰平	立 力
+l	i	陽平	梨
+l	i	上聲	禮 李 里
+l	i	去聲	歷 利
+tɕ	i	陰平	雞 饑{~餓} 肌 基 機 集{~體} 級 吉 積 績 激
+tɕ	i	陽平	急 極
+tɕ	i	上聲	擠
+tɕ	i	去聲	祭 際 計 寄 技 記 季
+tɕʰ	i	陰平	妻 欺 期{時~} 七 漆
+tɕʰ	i	陽平	齊 臍 騎 棋 旗 集{連~}
+tɕʰ	i	上聲	起
+tɕʰ	i	去聲	去{來~} 器 氣
+ȵ	i	陽平	泥 尼
+ȵ	i	上聲	你
+ȵ	i	去聲	膩
+ɕ	i	陰平	西 稀 息 熄 惜
+ɕ	i	陽平	習 席
+ɕ	i	上聲	洗 喜
+ɕ	i	去聲	細 戲
+∅	i	陰平	醫 衣 乙 一 益
+∅	i	陽平	移 姨 疑
+∅	i	上聲	椅 以 尾
+∅	i	去聲	藝 議 易{難~} 意 憶 億
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	t	tʰ	l	tɕ	tɕʰ	ȵ	ɕ	∅
+@FIN	iã
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iã	陰平	鞭 編 邊
+p	iã	去聲	變 辯
+pʰ	iã	陰平	偏
+pʰ	iã	上聲	片
+m	iã	陽平	綿 棉
+m	iã	上聲	免
+m	iã	去聲	面
+t	iã	上聲	點
+t	iã	去聲	店 電 殿
+tʰ	iã	陰平	添 天
+tʰ	iã	陽平	甜 田 填
+tʰ	iã	上聲	舔{以舌取物}
+l	iã	陽平	鐮 連 憐
+l	iã	去聲	練
+tɕ	iã	陰平	監{~察，~視，~車} 尖 兼 艱 煎 肩
+tɕ	iã	上聲	減 檢 儉 劍 簡 剪
+tɕ	iã	去聲	漸 箭 件 建 見
+tɕʰ	iã	陰平	簽 千 牽
+tɕʰ	iã	陽平	鉗 錢 前
+tɕʰ	iã	上聲	淺
+tɕʰ	iã	去聲	欠
+ȵ	iã	陽平	年
+ȵ	iã	上聲	臉 眼 碾
+ȵ	iã	去聲	念
+ɕ	iã	陰平	仙 先
+ɕ	iã	陽平	嫌 閒 賢 弦
+ɕ	iã	上聲	險 顯
+ɕ	iã	去聲	線 獻 現 縣
+∅	iã	陰平	煙
+∅	iã	陽平	鹽 閻 檐 顏 延 言 緣
+∅	iã	上聲	演
+∅	iã	去聲	焰 雁
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	t	tʰ	l	tɕ	tɕʰ	ȵ	ɕ	∅
+@FIN	iŋ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iŋ	陰平	冰 兵
+p	iŋ	上聲	餅
+p	iŋ	去聲	病
+pʰ	iŋ	陽平	貧 平 評 瓶 屏{圍~} 萍
+pʰ	iŋ	上聲	品 拼
+m	iŋ	陽平	民 明 名
+m	iŋ	上聲	敏
+m	iŋ	去聲	命
+t	iŋ	陰平	丁 釘{鐵~}
+t	iŋ	上聲	頂
+t	iŋ	去聲	訂{~約} 定
+tʰ	iŋ	陰平	聽{~見，~話} 廳
+tʰ	iŋ	陽平	停
+l	iŋ	陽平	林 鄰 靈 零 鈴
+l	iŋ	上聲	領 嶺
+l	iŋ	去聲	令
+tɕ	iŋ	陰平	今 金 巾 斤 京 驚 精 睛{眼~} 經
+tɕ	iŋ	上聲	錦 緊 景 井
+tɕ	iŋ	去聲	進 晉 勁{有~} 近 敬 鏡 晶 靜 淨
+tɕʰ	iŋ	陰平	欽 親 清 輕{~重，年~} 青
+tɕʰ	iŋ	陽平	琴 秦 勤 情 晴
+tɕʰ	iŋ	上聲	請
+ȵ	iŋ	陽平	寧{安~}
+ȵ	iŋ	去聲	陰{~坡：背~} 硬
+ɕ	iŋ	陰平	心 辛 新 星
+ɕ	iŋ	陽平	尋 形 刑
+ɕ	iŋ	上聲	醒
+ɕ	iŋ	去聲	信 幸 姓
+∅	iŋ	陰平	音 陰{天~了} 姻 殷 鷹 鶯 鸚{~鵡} 櫻{~桃} 英
+∅	iŋ	陽平	吟 銀 勻{~勢：均~的樣子} 贏 營
+∅	iŋ	上聲	引 影 映
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	tʰ	l	tɕ	tɕʰ	ȵ	ɕ	∅
+@FIN	iɔu
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iɔu	陰平	標
+p	iɔu	上聲	表
+pʰ	iɔu	陰平	飄
+pʰ	iɔu	陽平	瓢
+pʰ	iɔu	去聲	票{車~}
+m	iɔu	陽平	苗
+m	iɔu	去聲	廟
+tʰ	iɔu	陽平	條 跳
+tʰ	iɔu	上聲	挑
+l	iɔu	去聲	料
+tɕ	iɔu	陰平	交 較{計~} 焦 椒
+tɕ	iɔu	上聲	餃{~子}
+tɕ	iɔu	去聲	較{~勁兒} 窖 叫
+tɕʰ	iɔu	陰平	敲 悄{靜~~}
+tɕʰ	iɔu	陽平	橋
+tɕʰ	iɔu	上聲	巧 雀{麻~}
+tɕʰ	iɔu	去聲	轎
+ȵ	iɔu	上聲	咬
+ɕ	iɔu	陰平	消
+ɕ	iɔu	上聲	小
+ɕ	iɔu	去聲	效 校{學~} 笑
+∅	iɔu	陰平	腰
+∅	iɔu	陽平	搖 窯 姚
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	t	tʰ	l	tɕ	tɕʰ	ȵ	ɕ	∅
+@FIN	iɛ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iɛ	陽平	別{區~}
+pʰ	iɛ	陽平	別{~針}
+m	iɛ	陰平	滅
+t	iɛ	陰平	滴
+t	iɛ	上聲	爹=
+tʰ	iɛ	陰平	貼 鐵
+tʰ	iɛ	陽平	碟
+l	iɛ	陰平	獵 列 裂
+tɕ	iɛ	陰平	接 節 結
+tɕ	iɛ	陽平	傑 潔
+tɕ	iɛ	上聲	姐
+tɕ	iɛ	去聲	借 界{世~}
+tɕʰ	iɛ	陰平	切{~開}
+tɕʰ	iɛ	陽平	茄{~子}
+ȵ	iɛ	陰平	聶{姓} 業 捏
+ɕ	iɛ	陰平	些 薛 歇 血
+ɕ	iɛ	陽平	邪 斜{傾~} 協
+ɕ	iɛ	上聲	寫
+ɕ	iɛ	去聲	謝 蟹
+∅	iɛ	陰平	葉 頁
+∅	iɛ	陽平	爺
+∅	iɛ	上聲	野
+∅	iɛ	去聲	夜
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	l	tɕ	tɕʰ	ȵ	ɕ	∅
+@FIN	iɤu
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+l	iɤu	陰平	六 綠
+l	iɤu	陽平	劉 留
+l	iɤu	上聲	柳
+tɕ	iɤu	上聲	酒 九 久
+tɕ	iɤu	去聲	就 救 舅 舊
+tɕʰ	iɤu	陰平	秋{~天}
+tɕʰ	iɤu	陽平	仇{姓} 球
+ȵ	iɤu	陽平	牛
+ȵ	iɤu	上聲	紐
+ɕ	iɤu	陰平	修 休
+ɕ	iɤu	去聲	鏽{鐵~} 袖
+∅	iɤu	陰平	優
+∅	iɤu	陽平	油 游
+∅	iɤu	上聲	有 友
+∅	iɤu	去聲	又 右 幼
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	tɕ	tɕʰ	ȵ	ɕ	∅
+@FIN	iᴀ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	iᴀ	陰平	家 加 夾 甲
+tɕ	iᴀ	上聲	假{真~} 賈{姓}
+tɕ	iᴀ	去聲	架 駕 嫁 價
+tɕʰ	iᴀ	上聲	恰
+ȵ	iᴀ	陰平	押
+ȵ	iᴀ	陽平	娘{母親}
+ȵ	iᴀ	去聲	壓
+ɕ	iᴀ	陽平	蝦{魚~}
+ɕ	iᴀ	去聲	夏{姓} 下{~雨}
+∅	iᴀ	陰平	鴉 丫{~頭} 鴨
+∅	iᴀ	陽平	牙 芽 衙
+∅	iᴀ	上聲	啞
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	l	tɕ	tɕʰ	ȵ	ɕ	∅
+@FIN	iɑŋ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+l	iɑŋ	陽平	良 涼 糧
+l	iɑŋ	上聲	兩{~個}
+l	iɑŋ	去聲	亮
+tɕ	iɑŋ	陰平	疆 姜 江
+tɕ	iɑŋ	上聲	蔣 獎 講
+tɕ	iɑŋ	去聲	醬 匠 虹{天上的~}
+tɕʰ	iɑŋ	陰平	槍
+tɕʰ	iɑŋ	陽平	牆 強
+tɕʰ	iɑŋ	上聲	搶
+ȵ	iɑŋ	陽平	娘{姑~}
+ɕ	iɑŋ	陰平	箱 香 鄉
+ɕ	iɑŋ	陽平	降{~伏，投~}
+ɕ	iɑŋ	上聲	想 響
+ɕ	iɑŋ	去聲	像 向
+∅	iɑŋ	陰平	央 秧
+∅	iɑŋ	陽平	羊 楊 陽
+∅	iɑŋ	上聲	養
+∅	iɑŋ	去聲	樣
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	t	tʰ	l	k	kʰ	ŋ	x	∅
+@FIN	o
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	o	陰平	剝
+pʰ	o	陰平	波 坡
+pʰ	o	陽平	婆
+pʰ	o	去聲	破
+m	o	陽平	饃
+m	o	上聲	摸
+t	o	陰平	多
+t	o	上聲	躲
+t	o	去聲	剁 惰
+tʰ	o	陰平	拖 脫
+tʰ	o	上聲	妥
+l	o	陰平	落 烙 駱 樂{快~}
+l	o	陽平	羅 鑼 騾
+l	o	去聲	糯{~米}
+k	o	陰平	歌 鍋 割 各 郭 角{牛~}
+k	o	陽平	哥
+k	o	上聲	果
+k	o	去聲	個{~人，一~} 過
+kʰ	o	陰平	科 磕
+kʰ	o	陽平	棵 顆{一~珠子}
+kʰ	o	去聲	課
+ŋ	o	陰平	惡{善~}
+ŋ	o	陽平	鵝
+ŋ	o	上聲	我
+ŋ	o	去聲	餓
+x	o	陽平	河 何 和{~氣} 盒{煙~} 喝{吆~} 活
+x	o	上聲	火
+x	o	去聲	貨 禍
+∅	o	陰平	窩 物
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	t	tʰ	l	k	kʰ	x
+@FIN	oŋ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+t	oŋ	陰平	蹲 凳{板~兒} 東 冬
+t	oŋ	上聲	董 懂
+t	oŋ	去聲	凍 棟 動 洞
+tʰ	oŋ	陰平	通
+tʰ	oŋ	陽平	同 銅 童
+tʰ	oŋ	上聲	桶 統
+tʰ	oŋ	去聲	痛
+l	oŋ	陽平	籠{蒸~} 農 膿 隆 濃 龍
+l	oŋ	上聲	籠{~子} 隴
+l	oŋ	去聲	嫩 弄
+k	oŋ	陰平	公 工 功 攻{~擊} 弓 躬 宮
+k	oŋ	上聲	滾
+k	oŋ	去聲	棍 貢 共
+kʰ	oŋ	陰平	昆 空{~虛}
+kʰ	oŋ	上聲	捆 孔 鞏{~固} 恐
+kʰ	oŋ	去聲	困
+x	oŋ	陰平	婚 轟
+x	oŋ	陽平	魂 宏 紅
+x	oŋ	去聲	混{相~} 橫{~直} 洪
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	f	t	tʰ	l	k	kʰ	x	∅
+@FIN	u
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	u	陰平	不
+p	u	上聲	補
+p	u	去聲	布
+pʰ	u	陰平	哭
+pʰ	u	陽平	仆{~倒}
+pʰ	u	上聲	譜 普
+pʰ	u	去聲	鋪{店~} 部 步 庫{老派} 褲
+m	u	陰平	木 目
+m	u	上聲	母
+m	u	去聲	墓 幕
+f	u	陰平	夫 福 復
+f	u	陽平	符{~號} 扶 服 伏
+f	u	上聲	府 斧 撫 符{~合} 腐
+f	u	去聲	父 富 婦
+t	u	陰平	都{武~}
+t	u	陽平	獨 讀
+t	u	上聲	堵 賭 塗{糊~}
+t	u	去聲	杜 肚{腹~} 度 渡
+tʰ	u	陽平	途 塗{~料} 圖 毒
+tʰ	u	上聲	土
+tʰ	u	去聲	兔
+l	u	陰平	鹿 祿 陸 錄
+l	u	陽平	奴 盧 爐 樓
+l	u	上聲	努 魯
+l	u	去聲	怒 路 露
+k	u	陰平	姑 孤 箍 估{~計} 枯 骨{筋~，~頭} 谷
+k	u	上聲	古 股 鼓
+k	u	去聲	故 固 雇
+kʰ	u	上聲	苦
+kʰ	u	去聲	庫{新派}
+x	u	陰平	滸{水~}
+x	u	陽平	胡 湖 狐 壺
+x	u	上聲	虎
+x	u	去聲	戶 護
+∅	u	陰平	誣 屋
+∅	u	陽平	吳 梧{~桐} 無
+∅	u	上聲	五 午 武 舞
+∅	u	去聲	誤 霧
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	t	tʰ	l	k	kʰ	x
+@FIN	uei
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uei	陰平	堆
+t	uei	去聲	對 隊
+tʰ	uei	上聲	腿
+tʰ	uei	去聲	退
+l	uei	陽平	雷
+l	uei	上聲	累{極困}
+l	uei	去聲	內 類
+k	uei	陰平	歸
+k	uei	上聲	鬼
+k	uei	去聲	桂 貴
+kʰ	uei	陰平	規 虧
+kʰ	uei	去聲	跪 櫃
+x	uei	陰平	灰
+x	uei	陽平	回
+x	uei	上聲	悔
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	t	tʰ	l	k	kʰ	x
+@FIN	uã
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+t	uã	陰平	端
+t	uã	上聲	短
+t	uã	去聲	斷{決~} 段
+tʰ	uã	陽平	團
+l	uã	去聲	亂
+k	uã	陰平	官 棺 觀{參~} 關
+k	uã	上聲	管 館
+k	uã	去聲	罐 冠{~軍} 慣
+kʰ	uã	陰平	寬
+kʰ	uã	上聲	款
+x	uã	陰平	歡
+x	uã	陽平	環
+x	uã	去聲	喚 換 幻 患
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	k	kʰ	x
+@FIN	uɛe
+@TON	陰平	21
+@TON	陽平	13
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uɛe	陰平	乖 國
+k	uɛe	去聲	怪
+kʰ	uɛe	去聲	快 筷
+x	uɛe	陽平	懷 槐
+x	uɛe	去聲	壞
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	k	kʰ	x
+@FIN	uᴀ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uᴀ	陰平	瓜 刮{~鬍子}
+k	uᴀ	上聲	寡 刮{~風}
+kʰ	uᴀ	陰平	誇
+kʰ	uᴀ	上聲	垮
+x	uᴀ	陰平	花 華{中~}
+x	uᴀ	陽平	划{~船} 滑
+x	uᴀ	去聲	化 畫 話
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	k	kʰ	x
+@FIN	uɑŋ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uɑŋ	陰平	光
+k	uɑŋ	上聲	廣
+kʰ	uɑŋ	陽平	狂
+kʰ	uɑŋ	去聲	況
+x	uɑŋ	陰平	慌
+x	uɑŋ	陽平	黃
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	l	tɕ	tɕʰ	ȵ	ɕ	∅
+@FIN	y
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+l	y	陰平	旅 淚
+l	y	陽平	驢
+l	y	上聲	呂
+l	y	去聲	濾
+tɕ	y	陰平	居 車{~馬炮} 拘 駒 菊 足
+tɕ	y	上聲	舉
+tɕ	y	去聲	據 鋸{~子，~木頭} 拒 距 句 劇{戲~}
+tɕʰ	y	陰平	區{~域} 驅 曲{~折，歌~}
+tɕʰ	y	陽平	蛆{生~} 渠 瞿 局
+tɕʰ	y	上聲	取
+tɕʰ	y	去聲	趣
+ȵ	y	上聲	女
+ɕ	y	陰平	虛 需
+ɕ	y	陽平	徐 俗
+ɕ	y	上聲	許
+ɕ	y	去聲	絮 序 緒 續
+∅	y	陰平	於 玉 獄
+∅	y	陽平	魚 餘 裕
+∅	y	上聲	語 雨 羽
+∅	y	去聲	預 豫 遇 喻 峪 育 欲 浴
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	l	tɕ	tɕʰ	ɕ	∅
+@FIN	yoŋ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+l	yoŋ	陽平	輪
+tɕ	yoŋ	陰平	均 軍
+tɕ	yoŋ	上聲	菌
+tɕ	yoŋ	去聲	俊
+tɕʰ	yoŋ	陽平	裙 瓊 窮
+ɕ	yoŋ	陰平	兄 胸 凶{~吉}
+ɕ	yoŋ	陽平	巡 熊 雄
+ɕ	yoŋ	去聲	訓
+∅	yoŋ	陽平	勻{均~} 雲 容
+∅	yoŋ	上聲	永 勇
+∅	yoŋ	去聲	運 暈 用
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	tɕ	tɕʰ	ɕ	∅
+@FIN	yã
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yã	上聲	捲{~起} 捐
+tɕʰ	yã	陽平	全 泉 拳 權
+tɕʰ	yã	去聲	勸
+ɕ	yã	陰平	宣
+ɕ	yã	陽平	懸
+ɕ	yã	上聲	選
+ɕ	yã	去聲	餡
+∅	yã	陰平	冤
+∅	yã	陽平	圓 原 袁
+∅	yã	上聲	遠
+∅	yã	去聲	院 願 怨
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	tɕ	tɕʰ	ɕ	∅
+@FIN	yə
+@TON	陰平	21
+@TON	陽平	13
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yə	陰平	腳 覺{知~} 角-{~錢}
+tɕ	yə	陽平	決
+tɕʰ	yə	陰平	缺 殼
+ɕ	yə	陰平	雪 削
+ɕ	yə	陽平	斜{~~子：不正的樣子} 學
+∅	yə	陰平	月 越 約 藥 鑰{~匙} 岳
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	f	ʋ	t	tʰ	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	ã
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ã	陰平	班 搬
+p	ã	上聲	板
+p	ã	去聲	辦 半
+pʰ	ã	陰平	潘
+pʰ	ã	陽平	盤
+pʰ	ã	去聲	扮 盼 判 伴
+m	ã	陽平	蠻 瞞 饅{~頭}
+m	ã	上聲	滿
+m	ã	去聲	慢
+f	ã	陰平	翻
+f	ã	陽平	凡 煩
+f	ã	上聲	反
+f	ã	去聲	范 犯 販 飯
+ʋ	ã	陰平	豌{~豆} 彎{~~兒}
+ʋ	ã	陽平	玩{古~，遊~} 完 頑{~皮，~固}
+ʋ	ã	上聲	碗 晚
+ʋ	ã	去聲	彎{~路：非捷徑} 萬
+t	ã	陰平	耽 膽{苦~} 丹 單{~獨}
+t	ã	上聲	膽{~量}
+t	ã	去聲	淡 蛋
+tʰ	ã	陰平	貪 灘 攤
+tʰ	ã	陽平	潭
+tʰ	ã	上聲	毯 坦
+tʰ	ã	去聲	炭
+l	ã	陽平	南 男 籃 蘭 欄
+l	ã	上聲	懶
+l	ã	去聲	濫 爛
+ts	ã	去聲	站{車~} 蘸{~醬油}
+tsʰ	ã	陰平	餐
+tsʰ	ã	陽平	慚 饞 殘
+tsʰ	ã	上聲	產
+s	ã	陰平	三 山
+s	ã	上聲	傘
+tʂ	ã	陰平	沾 氈
+tʂ	ã	去聲	戰
+tʂʰ	ã	陽平	纏
+ʂ	ã	陰平	膻 扇{動詞：~風}
+ʂ	ã	陽平	譚{姓}
+ʂ	ã	上聲	陝{~西} 閃
+ʂ	ã	去聲	扇{名詞：~子} 善
+ʐ	ã	陽平	然 燃
+ʐ	ã	上聲	染
+k	ã	陰平	甘 肝
+k	ã	上聲	感 敢 趕
+kʰ	ã	上聲	砍
+kʰ	ã	去聲	看{~見}
+ŋ	ã	陰平	安 鞍
+ŋ	ã	上聲	暗
+ŋ	ã	去聲	岸 按 案
+x	ã	陽平	鹹 寒 韓
+x	ã	上聲	喊
+x	ã	去聲	漢 汗
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	t	tʰ	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	k	kʰ	x
+@FIN	ɔu
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɔu	陰平	包
+p	ɔu	上聲	保 寶 飽
+p	ɔu	去聲	報 抱 豹
+pʰ	ɔu	上聲	跑
+pʰ	ɔu	去聲	炮{槍~}
+m	ɔu	陽平	毛 貓
+m	ɔu	去聲	帽
+t	ɔu	陰平	刀
+t	ɔu	上聲	島 導
+t	ɔu	去聲	到 道
+tʰ	ɔu	陽平	桃 逃
+tʰ	ɔu	上聲	討
+tʰ	ɔu	去聲	套
+l	ɔu	陽平	勞 牢
+l	ɔu	上聲	腦 老
+l	ɔu	去聲	鬧
+ts	ɔu	陰平	糟{醪~兒}
+ts	ɔu	上聲	早 棗 找
+ts	ɔu	去聲	灶 罩
+tsʰ	ɔu	陽平	糟{失~：衣服變色} 曹
+tsʰ	ɔu	上聲	草 吵
+s	ɔu	上聲	嫂
+tʂ	ɔu	陰平	招
+tʂ	ɔu	去聲	趙 照
+tʂʰ	ɔu	陰平	超
+tʂʰ	ɔu	陽平	潮
+ʂ	ɔu	陰平	燒{~火}
+ʂ	ɔu	陽平	紹
+ʂ	ɔu	上聲	少{多~}
+ʂ	ɔu	去聲	燒{天~開了：有霞了}
+k	ɔu	陰平	高
+k	ɔu	陽平	羔
+k	ɔu	上聲	搞
+k	ɔu	去聲	告
+kʰ	ɔu	上聲	考 烤
+kʰ	ɔu	去聲	靠
+x	ɔu	陽平	耗 豪
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ə
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ə	陰平	遮 浙 摘
+tʂ	ə	去聲	哲
+tʂʰ	ə	陰平	車{馬~}
+tʂʰ	ə	上聲	扯
+ʂ	ə	陰平	設 說{~話}
+ʂ	ə	陽平	蛇 賒 舌
+ʂ	ə	上聲	捨
+ʂ	ə	去聲	射 麝{~香} 社
+ʐ	ə	陰平	熱
+ʐ	ə	上聲	惹
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	f	ʋ	t	tʰ	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	əŋ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	əŋ	陰平	奔
+p	əŋ	上聲	本
+pʰ	əŋ	陽平	盆 朋 彭
+pʰ	əŋ	去聲	笨 捧
+m	əŋ	陽平	門 蒙
+m	əŋ	去聲	孟 夢
+f	əŋ	陰平	分{~開} 芬 風 瘋 封
+f	əŋ	陽平	墳 馮 峰 蜂
+f	əŋ	上聲	粉
+f	əŋ	去聲	份{一~兩~} 鳳
+ʋ	əŋ	陰平	溫
+ʋ	əŋ	陽平	文 蚊
+ʋ	əŋ	上聲	穩
+ʋ	əŋ	去聲	問
+t	əŋ	陰平	登 燈
+t	əŋ	上聲	等
+t	əŋ	去聲	凳{~子} 鄧
+tʰ	əŋ	陰平	吞
+tʰ	əŋ	陽平	疼
+l	əŋ	陽平	能
+l	əŋ	上聲	冷
+ts	əŋ	陰平	增 爭 箏 睜
+tsʰ	əŋ	陽平	層
+s	əŋ	陰平	僧 生 牲
+s	əŋ	上聲	省{~長}
+tʂ	əŋ	陰平	針 珍 真 蒸 征
+tʂ	əŋ	上聲	枕 震 整
+tʂ	əŋ	去聲	鎮 陣 證 症 鄭 政
+tʂʰ	əŋ	陽平	沉 陳 承 程 成 城
+ʂ	əŋ	陰平	深 身 伸 升 聲
+ʂ	əŋ	陽平	神
+ʂ	əŋ	上聲	沈 嬸
+ʂ	əŋ	去聲	剩 勝{~敗}
+ʐ	əŋ	陽平	人
+ʐ	əŋ	上聲	忍
+ʐ	əŋ	去聲	認
+k	əŋ	陰平	根
+k	əŋ	上聲	庚
+kʰ	əŋ	陰平	坑
+kʰ	əŋ	上聲	肯
+ŋ	əŋ	陰平	恩
+x	əŋ	陽平	衡
+x	əŋ	上聲	很
+x	əŋ	去聲	恨 杏
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	ʋ	t	tʰ	l	ts	tsʰ	s	k	kʰ	ŋ	x
+@FIN	ɛe
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɛe	上聲	擺
+p	ɛe	去聲	箅{~子}
+pʰ	ɛe	陽平	排 牌
+pʰ	ɛe	上聲	派{~別}
+pʰ	ɛe	去聲	派{~遣} 敗
+m	ɛe	陰平	默
+m	ɛe	陽平	埋
+m	ɛe	上聲	買
+m	ɛe	去聲	賣 邁
+ʋ	ɛe	陰平	歪
+ʋ	ɛe	去聲	外
+t	ɛe	去聲	戴 貸 待 代 帶
+tʰ	ɛe	陰平	胎
+tʰ	ɛe	陽平	抬 袋{口~兒：小口袋}
+tʰ	ɛe	去聲	態 太 泰
+l	ɛe	陽平	來
+l	ɛe	上聲	奶
+ts	ɛe	陰平	災 栽
+ts	ɛe	陽平	澤 責
+ts	ɛe	上聲	宰
+ts	ɛe	去聲	在 寨
+tsʰ	ɛe	陰平	猜{新派} 側 測 策 冊
+tsʰ	ɛe	陽平	材 財 裁 豺 柴
+tsʰ	ɛe	上聲	彩 采 睬
+tsʰ	ɛe	去聲	菜 蔡
+s	ɛe	陰平	色
+s	ɛe	上聲	篩{~子}
+s	ɛe	去聲	曬
+k	ɛe	陰平	該 街 革
+k	ɛe	上聲	改
+k	ɛe	去聲	蓋 界{疆~}
+kʰ	ɛe	陰平	開 刻{時~}
+ŋ	ɛe	陰平	額
+ŋ	ɛe	上聲	矮
+x	ɛe	陽平	孩 鞋
+x	ɛe	上聲	海
+x	ɛe	去聲	害
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	∅
+@FIN	ʌr
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	ʌr	陽平	兒 而
+∅	ʌr	上聲	耳
+∅	ʌr	去聲	二
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	t	tʰ	l	ts	tsʰ	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	x
+@FIN	ɤu
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+t	ɤu	陰平	都{~有}
+t	ɤu	上聲	陡
+t	ɤu	去聲	豆 逗
+tʰ	ɤu	陰平	偷
+tʰ	ɤu	陽平	頭
+tʰ	ɤu	上聲	抖
+tʰ	ɤu	去聲	透
+l	ɤu	去聲	漏
+ts	ɤu	上聲	走
+tsʰ	ɤu	陽平	愁
+tsʰ	ɤu	去聲	湊
+tʂ	ɤu	陰平	周 州
+tʂʰ	ɤu	陽平	仇{~恨}
+tʂʰ	ɤu	去聲	臭{香~}
+ʂ	ɤu	陰平	收
+ʂ	ɤu	陽平	仇{有~}
+ʂ	ɤu	上聲	手 守
+ʂ	ɤu	去聲	獸 壽
+ʐ	ɤu	去聲	肉
+k	ɤu	陰平	溝
+k	ɤu	上聲	狗
+k	ɤu	去聲	夠
+kʰ	ɤu	上聲	口
+kʰ	ɤu	去聲	扣{~住}
+x	ɤu	陽平	猴
+x	ɤu	去聲	厚
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	ts	tsʰ	s
+@FIN	ɿ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ɿ	陰平	支 只{~有} 資 姿 指{名詞：~頭兒}
+ts	ɿ	上聲	紫 紙 指{動詞：~點} 子
+ts	ɿ	去聲	自 字 志
+tsʰ	ɿ	陽平	雌 池{舊讀} 瓷{~器} 詞
+tsʰ	ɿ	上聲	此
+tsʰ	ɿ	去聲	刺 次
+s	ɿ	陰平	斯 撕 施 私 師 獅 絲 思
+s	ɿ	陽平	時
+s	ɿ	上聲	死 使 史 始
+s	ɿ	去聲	是 四 示 柿 事 試 市
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	tʂ	tʂʰ	ʂ
+@FIN	ʅ
+@TON	陰平	21
+@TON	陽平	13
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʅ	陰平	知 織 職
+tʂ	ʅ	陽平	置 直
+tʂ	ʅ	去聲	制 智 治
+tʂʰ	ʅ	陰平	尺 吃
+tʂʰ	ʅ	陽平	池{今讀} 馳 持
+ʂ	ʅ	陰平	濕 失 室 識 式 適
+ʂ	ʅ	陽平	十 實 食 蝕
+ʂ	ʅ	去聲	世 勢
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	tʃ	tʃʰ	ʃ	ʒ
+@FIN	ʯ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ʯ	陰平	租 豬 諸 朱 珠 竹 祝 觸
+tʃ	ʯ	陽平	誅 族 燭
+tʃ	ʯ	上聲	祖 組 煮 主 拄
+tʃ	ʯ	去聲	做 柱 住
+tʃʰ	ʯ	陰平	粗 初 鼠{老~} 出 促
+tʃʰ	ʯ	陽平	除 鋤 廚
+tʃʰ	ʯ	上聲	楚
+tʃʰ	ʯ	去聲	醋 措{~施}
+ʃ	ʯ	陰平	蘇 梳{~頭} 書 舒 輸 叔
+ʃ	ʯ	陽平	殊 術 熟{煮~，~悉} 蜀 屬
+ʃ	ʯ	上聲	鼠{屬~}
+ʃ	ʯ	去聲	素 樹
+ʒ	ʯ	陰平	入
+ʒ	ʯ	陽平	如
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	tʃ	tʃʰ	ʃ
+@FIN	ʯei
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ʯei	陰平	追
+tʃ	ʯei	上聲	嘴
+tʃ	ʯei	去聲	罪 最 歲{幾~} 醉
+tʃʰ	ʯei	陰平	崔{姓} 吹
+tʃʰ	ʯei	陽平	脆{~生生} 錘
+tʃʰ	ʯei	去聲	脆{清~}
+ʃ	ʯei	陽平	隨
+ʃ	ʯei	上聲	水
+ʃ	ʯei	去聲	歲{~~平安} 睡
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	tʃ	tʃʰ	ʃ	ʒ
+@FIN	ʯã
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ʯã	陰平	磚
+tʃ	ʯã	去聲	賺
+tʃʰ	ʯã	陰平	川 穿
+tʃʰ	ʯã	去聲	串
+ʃ	ʯã	陰平	酸
+ʃ	ʯã	陽平	船
+ʃ	ʯã	去聲	算 蒜 涮{~洗}
+ʒ	ʯã	上聲	軟
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	tʃ	tʃʰ	ʃ
+@FIN	ʯŋ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ʯŋ	陰平	宗 綜{織布機上的~} 中{當~} 鐘 盅
+tʃ	ʯŋ	上聲	準 總 種{~類} 腫
+tʃ	ʯŋ	去聲	粽 眾 重{輕~} 種{~樹}
+tʃʰ	ʯŋ	陰平	村 椿{~樹} 春 聰 蔥 充 沖
+tʃʰ	ʯŋ	陽平	蟲 從{跟~} 重{~複}
+tʃʰ	ʯŋ	去聲	寸
+ʃ	ʯŋ	陰平	孫 松 嵩
+ʃ	ʯŋ	去聲	順 送 宋
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	tʃ	tʃʰ	ʃ
+@FIN	ʯə
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ʯə	陰平	作{~坊，工~} 桌 捉
+tʃ	ʯə	陽平	昨 濁 鐲{~子}
+tʃ	ʯə	上聲	左
+tʃ	ʯə	去聲	坐 座
+tʃʰ	ʯə	去聲	錯{~誤}
+ʃ	ʯə	陰平	索{繩~} 縮
+ʃ	ʯə	上聲	鎖 所
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	tʃ	ʃ
+@FIN	ʯɛe
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ʯɛe	上聲	猜{老派}
+ʃ	ʯɛe	去聲	帥
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	tʃ	ʃ
+@FIN	ʯᴀ
+@TON	陰平	21
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ʯᴀ	陰平	抓
+ʃ	ʯᴀ	陰平	刷
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	tʃ	tʃʰ	ʃ
+@FIN	ʯɑŋ
+@TON	陰平	21
+@TON	陽平	13
+
+// Initial	Final	Tone	CharList (Space separated)
+tʃ	ʯɑŋ	陰平	裝 樁
+tʃʰ	ʯɑŋ	陰平	瘡 窗
+tʃʰ	ʯɑŋ	陽平	床
+ʃ	ʯɑŋ	陰平	霜 雙
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	f	ʋ	t	tʰ	l	ts	tsʰ	s	x
+@FIN	ᴀ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ᴀ	陰平	巴 疤 八
+p	ᴀ	陽平	把{你~東西拿來} 爸
+p	ᴀ	上聲	把{~握，~守，一~}
+p	ᴀ	去聲	霸 壩{平川}
+pʰ	ᴀ	陰平	帕
+pʰ	ᴀ	陽平	爬 鈀{耙子} 耙{犁~，~地} 拔
+pʰ	ᴀ	去聲	怕
+m	ᴀ	陽平	麻 媽{我~}
+m	ᴀ	上聲	馬
+m	ᴀ	去聲	媽{“~~”的前字} 罵
+f	ᴀ	陰平	法{方~}
+f	ᴀ	陽平	筏
+ʋ	ᴀ	陰平	挖 襪
+ʋ	ᴀ	陽平	蛙
+ʋ	ᴀ	上聲	瓦{名詞}
+ʋ	ᴀ	去聲	瓦{動詞：~房}
+t	ᴀ	陽平	答 達
+t	ᴀ	上聲	打
+t	ᴀ	去聲	大
+tʰ	ᴀ	陰平	他 塔
+tʰ	ᴀ	陽平	踏{動詞}
+tʰ	ᴀ	上聲	踏{~實}
+l	ᴀ	陰平	拉 臘 辣
+l	ᴀ	陽平	拿
+l	ᴀ	上聲	哪{~個} 那
+ts	ᴀ	陰平	渣 眨{~眼}
+ts	ᴀ	陽平	雜{~貨}
+ts	ᴀ	去聲	榨{~油} 炸{~彈}
+tsʰ	ᴀ	陰平	差{~別，~不多} 插 擦 察
+tsʰ	ᴀ	陽平	茶 查{調~} 雜{蕎~麵} 鍘{~刀}
+tsʰ	ᴀ	去聲	杈{~~} 岔{三~路}
+s	ᴀ	陰平	沙 紗 殺
+s	ᴀ	上聲	灑
+x	ᴀ	陰平	瞎
+x	ᴀ	去聲	下{~來}
+// HSD Syllabary Data Partition
+// 地区：甘肅省-隴南市-成縣
+// 来源：朱富林《隴中南方言語音調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	甘肅省-隴南市-成縣
+@SRC	朱富林《隴中南方言語音調查研究》
+
+@INI	p	pʰ	m	f	ʋ	t	tʰ	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	x
+@FIN	ɑŋ
+@TON	陰平	21
+@TON	陽平	13
+@TON	上聲	53
+@TON	去聲	44
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɑŋ	陰平	幫 邦
+p	ɑŋ	上聲	綁
+p	ɑŋ	去聲	棒
+pʰ	ɑŋ	陽平	旁
+m	ɑŋ	陽平	忙
+f	ɑŋ	陰平	方 芳
+f	ɑŋ	陽平	妨{~害} 房
+f	ɑŋ	上聲	紡 訪
+f	ɑŋ	去聲	放
+ʋ	ɑŋ	陰平	汪{~洋} 枉{冤~}
+ʋ	ɑŋ	陽平	王
+ʋ	ɑŋ	上聲	網 枉{~活了}
+ʋ	ɑŋ	去聲	忘 望 旺{興~，火~}
+t	ɑŋ	陰平	當{~時，應~}
+t	ɑŋ	上聲	黨
+t	ɑŋ	去聲	擋{阻~}
+tʰ	ɑŋ	陰平	湯 燙
+tʰ	ɑŋ	陽平	堂 唐
+tʰ	ɑŋ	去聲	趟{一~}
+l	ɑŋ	陽平	郎
+l	ɑŋ	去聲	朗 浪
+ts	ɑŋ	陰平	贓
+tsʰ	ɑŋ	陰平	倉
+s	ɑŋ	陰平	桑
+tʂ	ɑŋ	陰平	張 杖{把~：帶長把的農具} 章
+tʂ	ɑŋ	上聲	漲
+tʂ	ɑŋ	去聲	帳 丈 杖{拐~}
+tʂʰ	ɑŋ	陽平	腸 場{碾~} 杖{擀~：擀麵杖}
+tʂʰ	ɑŋ	上聲	場{廣~} 昌 廠
+tʂʰ	ɑŋ	去聲	唱
+ʂ	ɑŋ	陰平	商 傷
+ʂ	ɑŋ	去聲	上{~山}
+ʐ	ɑŋ	去聲	讓
+k	ɑŋ	陰平	缸
+k	ɑŋ	上聲	港{~口}
+kʰ	ɑŋ	陰平	康
+kʰ	ɑŋ	去聲	抗
+x	ɑŋ	陰平	巷
+x	ɑŋ	陽平	航 杭
+x	ɑŋ	上聲	夯{打~}
+x	ɑŋ	去聲	項
