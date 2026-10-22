@@ -1,0 +1,1481 @@
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	b	m	f	ʔd	tʰ	d	n	l	ts	tsʰ	s	z	k	kʰ	ɡ	ŋ	h	ɦ	Ø
+@FIN	a
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	a	陰平	巴
+ʔb	a	陰上	擺
+ʔb	a	陰去	拜 爸
+pʰ	a	陰去	派
+b	a	陽舒	排 牌 罷 稗 敗
+m	a	陰平	媽
+m	a	陽舒	買 埋 賣
+f	a	陰平	歪
+ʔd	a	陰去	戴 帶
+tʰ	a	陰去	太 泰
+d	a	陽舒	大{~夫}
+n	a	陽舒	奶
+l	a	陰平	拉
+l	a	陽舒	賴 癩
+ts	a	陰平	抓
+ts	a	陰上	宰{被~}
+ts	a	陰去	債
+tsʰ	a	陰平	搽 叉 差{~錯，~別，出~} 岔
+tsʰ	a	陰去	蔡
+s	a	陰上	灑
+z	a	陽舒	柴 惹
+k	a	陰平	街 加 家 嘉 傢
+k	a	陰上	解{~開} 假{真~，放~} 賈
+k	a	陰去	界 屆 戒 嫁 架 價
+kʰ	a	陰上	楷 卡
+ɡ	a	陽舒	茄{~子} 臼
+ŋ	a	陽舒	牙 芽 衙 雅 外
+h	a	陰去	蟹
+ɦ	a	陽舒	鞋 也
+Ø	a	陰上	矮
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	m	ʋ	ʔd	tʰ	d	n	ts	tsʰ	s	z	k	kʰ	h
+@FIN	aʔ
+@TON	陰入	55
+@TON	陽入	23
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	aʔ	陰入	百 伯
+pʰ	aʔ	陰入	拍 怕
+m	aʔ	陽入	陌{~生} 麥 脈
+ʋ	aʔ	陽入	劃{計~}
+ʔd	aʔ	陰入	搭 答
+tʰ	aʔ	陰入	塌 榻 塔
+d	aʔ	陽入	踏 達
+n	aʔ	陽入	納
+ts	aʔ	陰入	只{~有} 隻{一~} 著{~衣}
+tsʰ	aʔ	陰入	插 綽 拆 冊 策 柵 尺
+s	aʔ	陰入	濕
+z	aʔ	陽入	雜 閘 著{睡~} 宅 石
+k	aʔ	陰入	胛 格 隔
+kʰ	aʔ	陰入	客
+h	aʔ	陰入	嚇
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	b	m	f	ʋ	ʔd	tʰ	d	n	l	s
+@FIN	ei
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	ei	陰平	杯 碑 卑
+ʔb	ei	陰去	輩 背{~脊，~負，~誦}
+pʰ	ei	陰平	坯
+pʰ	ei	陰去	佩 沛 配
+b	ei	陽舒	培 陪 賠 倍 備
+m	ei	陽舒	梅 枚 煤 媒 每 美 眉 黴 妹 昧
+f	ei	陰平	恢 飛 非 妃
+f	ei	陰上	匪
+f	ei	陰去	廢 肺 費
+ʋ	ei	陽舒	肥 偉 葦 味 匯{~集}
+ʔd	ei	陰平	堆
+ʔd	ei	陰去	對 兌
+tʰ	ei	陰平	推
+tʰ	ei	陰上	腿
+tʰ	ei	陰去	退
+d	ei	陽舒	隊
+n	ei	陽舒	內
+l	ei	陽舒	雷 壘 累{積~，連~} 類 淚2
+s	ei	陰去	碎
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	b	m	ʔd	tʰ	d	l	tɕ	tɕʰ	dʑ	ȵ	ɕ	z	ɦ	Ø
+@FIN	i
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	i	陰平	鞭 編 邊 蝙
+ʔb	i	陰上	比 貶 扁 匾 鄙
+ʔb	i	陰去	閉 臂 變 遍 庇 痺
+pʰ	i	陰平	批 篇 偏 披
+pʰ	i	陰去	屁 片 騙{欺~}
+b	i	陽舒	皮 牌 便{~宜} 弊 幣 斃 被{~子} 避 辨 辯 便{方~} 辮
+m	i	陽舒	迷 米 謎{~語} 彌 棉 綿 免 勉 緬 眠 秘{~書} 麵{~粉} 面{臉~}
+ʔd	i	陰平	低 顛
+ʔd	i	陰上	底 抵 點 典
+ʔd	i	陰去	帝 店
+tʰ	i	陰平	梯 天 添
+tʰ	i	陰上	體 舔
+tʰ	i	陰去	替 涕 剃
+d	i	陽舒	題 提 蹄 甜 田 填 弟 第 遞 地 電 殿 墊 奠
+l	i	陽舒	黎 禮 離{~別，~開} 璃 梨 厘 狸 李 裡 理 鯉 里{~程} 簾 連 聯 斂 戀 憐 蓮 勵 麗{美~} 荔 利 痢 淚1 練 煉{鍊} 鍊
+tɕ	i	陰平	稽{~查} 雞 基 幾{~平} 機 飢 譏 尖 兼 間{中~，~斷} 艱 奸{~詐} 煎 肩 堅
+tɕ	i	陰上	姊 幾{~個} 檢 簡 繭
+tɕ	i	陰去	祭 際 濟{救~} 計 繼 寄 紀 記 既 季 艦 劍 剪 箭 踐 建 薦 見
+tɕʰ	i	陰平	蛆 欺 籤{竹~} 簽{~字} 遷 纖{化~} 謙 箋 千 牽
+tɕʰ	i	陰上	且 啟 企 起 豈 祈 淺
+tɕʰ	i	陰去	去{除~，來~} 器 棄 氣 汽 欠 歉 潛
+dʑ	i	陽舒	奇{~怪} 騎{~馬} 姨 期{時~} 其 棋 旗 劑 技 妓 忌 賤 錢 件 健
+ȵ	i	陰平	研
+ȵ	i	陽舒	泥 兒 尼 呢{~絨} 耳 疑 尾 染 嚴 年 藝 蟻 議 誼 膩 二 貳 驗 硯 易{交~}
+ɕ	i	陰平	西 犀 溪 犧 希 稀 纖{~維} 仙 鮮{新~} 掀 先 悉 夕
+ɕ	i	陰上	死 喜 險 顯
+ɕ	i	陰去	細 婿 戲 癬 線 獻
+z	i	陽舒	齊 臍 鉗 錢{姓} 乾{~坤} 前 全
+ɦ	i	陽舒	宜 儀 移 夷 遺{~失} 炎 鹽 閻 簷 延 言 沿 懸 縣 奚 系{~統} 義 異 憲 現
+Ø	i	陰平	醫 衣 依 煙
+Ø	i	陰上	椅 已 以
+Ø	i	陰去	易{容~} 意 暗 厭 艷 燕 燕{~子} 咽{吞~} 益
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔd	tɕ	ɕ	ʑ	ɦ	Ø
+@FIN	ia
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔd	ia	陰平	爹
+tɕ	ia	陰平	階
+tɕ	ia	陰上	姐
+tɕ	ia	陰去	芥 架 借{~口，~用} 介
+ɕ	ia	陰上	寫
+ɕ	ia	陰去	瑕 瀉 卸
+ʑ	ia	陽舒	轄 謝 斜 邪
+ɦ	ia	陽舒	涯 霞 爺 野 夜
+Ø	ia	陰平	鴉 耶
+Ø	ia	陰去	亞
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	tɕ	tɕʰ	dʑ	ɕ	ʑ	ɦ	Ø
+@FIN	iaʔ
+@TON	陰入	55
+@TON	陽入	23
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	iaʔ	陰入	甲 腳 覺{感~}
+tɕʰ	iaʔ	陰入	洽 雀 鵲 卻 確
+dʑ	iaʔ	陽入	劇
+ɕ	iaʔ	陰入	削
+ʑ	iaʔ	陽入	嚼
+ɦ	iaʔ	陽入	藥 鑰 躍 樂{音~}
+Ø	iaʔ	陰入	約
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	l	tɕ	tɕʰ	dʑ	ȵ	ɕ	z	ɦ	Ø
+@FIN	iã
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+l	iã	陽舒	良 梁 糧 兩{~斤，斤~} 涼 粱 量{~米，數~} 亮 諒
+tɕ	iã	陰平	將{~來} 漿 僵 薑{生~} 姜{姓}
+tɕ	iã	陰上	蔣 槳 獎
+tɕ	iã	陰去	醬 將{大~}
+tɕʰ	iã	陰平	腔
+tɕʰ	iã	陰上	搶{~奪}
+dʑ	iã	陽舒	強{~大}
+ȵ	iã	陽舒	娘 仰 釀 讓
+ɕ	iã	陰平	相{~互} 箱 廂 湘 鑲 香 鄉
+ɕ	iã	陰上	想
+ɕ	iã	陰去	相{~貌} 享 響
+z	iã	陽舒	詳 像 象 橡
+ɦ	iã	陽舒	牆 祥 翔 羊 洋 楊 揚 陽 烊 養 癢 匠
+Ø	iã	陰平	央 秧 殃
+Ø	iã	陰去	向 樣
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	b	m	ʔd	tʰ	d	n	l	tɕ	tɕʰ	dʑ	ȵ	ɕ	z	ɦ	Ø
+@FIN	iŋ
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	iŋ	陰平	賓 彬 檳 冰 兵
+ʔb	iŋ	陰上	稟 丙 餅
+ʔb	iŋ	陰去	併{合~}
+pʰ	iŋ	陰平	拼{~湊} 姘
+pʰ	iŋ	陰上	品
+pʰ	iŋ	陰去	聘
+b	iŋ	陽舒	貧 頻 憑 平 評 坪 瓶 屏 萍 病 並{~且}
+m	iŋ	陽舒	命 民 閩 敏 明 鳴 名 銘 冥
+ʔd	iŋ	陰平	丁 釘{鐵~}
+ʔd	iŋ	陰上	頂 鼎
+ʔd	iŋ	陰去	訂 釘{~住}
+tʰ	iŋ	陰平	聽{~見，~從} 廳 汀
+tʰ	iŋ	陰上	挺 艇
+d	iŋ	陽舒	停 亭 廷 庭 艇 定
+n	iŋ	陽舒	寧{安~}
+l	iŋ	陽舒	臨 林 淋 鄰 陵 凌 菱 領 靈 鈴 嶺 零 令 另
+tɕ	iŋ	陰平	今 金 襟 禁{~不住} 津 斤 巾 筋 京 荊 驚 精 晶 晴 經
+tɕ	iŋ	陰上	錦 緊 景 警 頸
+tɕ	iŋ	陰去	浸 禁{~止} 進 晉 勁{有~，~敵} 謹 境 競 鏡= 敬 井 淨
+tɕʰ	iŋ	陰平	侵 欽 親{~切，~家} 青 清 輕 傾 蜻 頃
+tɕʰ	iŋ	陰上	寢 請
+tɕʰ	iŋ	陰去	慶
+dʑ	iŋ	陽舒	琴 禽 擒 秦 僅 勤 芹 盡 近 競
+ȵ	iŋ	陽舒	人 認
+ɕ	iŋ	陰平	心 辛 新 薪 興{~旺} 星 腥 馨
+ɕ	iŋ	陰上	省{反~} 醒
+ɕ	iŋ	陰去	信 興{高~} 幸 性 姓
+z	iŋ	陽舒	尋 情 靜 靖
+ɦ	iŋ	陽舒	螢 吟 飲{~水} 淫 銀 寅 行{~為} 迎 贏 盈 形 刑 型 營
+Ø	iŋ	陰平	音 陰 洇 因 姻 殷 應{~當} 鷹 蠅 櫻 鶯 鸚 英 纓
+Ø	iŋ	陰上	引 隱 穎 影
+Ø	iŋ	陰去	印 尹{姓} 應{響~}
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	b	m	ʔd	tʰ	d	l	tɕ	tɕʰ	dʑ	ȵ	ɕ	ɦ	Ø
+@FIN	iɔ
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	iɔ	陰平	彪 標 膘
+ʔb	iɔ	陰上	表
+pʰ	iɔ	陰平	飄 漂{~浮}
+pʰ	iɔ	陰上	瓢
+pʰ	iɔ	陰去	漂{~白，~亮} 票
+b	iɔ	陽舒	嫖
+m	iɔ	陽舒	苗 描 秒 渺 藐 廟 妙
+ʔd	iɔ	陰平	刁 貂 雕{~刻}
+ʔd	iɔ	陰去	釣 吊{~橋}
+tʰ	iɔ	陰平	挑{~擔}
+tʰ	iɔ	陰上	挑{~戰}
+tʰ	iɔ	陰去	跳
+d	iɔ	陽舒	條 調{~動~和}
+l	iɔ	陽舒	料 燎 療 遼 聊 撩 寥 了
+tɕ	iɔ	陰平	郊 焦 蕉 椒 嬌 驕 澆 繳
+tɕ	iɔ	陰上	絞 狡
+tɕ	iɔ	陰去	校{~對} 教{~育} 較 叫
+tɕʰ	iɔ	陰上	巧
+tɕʰ	iɔ	陰去	竅
+dʑ	iɔ	陽舒	喬 橋 僑 蕎 轎
+ȵ	iɔ	陰上	鳥
+ȵ	iɔ	陰去	尿
+ȵ	iɔ	陽舒	繞{~線}
+ɕ	iɔ	陰平	消 宵 霄 銷 蕭 簫
+ɕ	iɔ	陰上	小 曉
+ɕ	iɔ	陰去	酵 孝 笑
+ɦ	iɔ	陽舒	僥 搖 謠 窯 遙 姚 堯 效 校{學~} 耀 鷂
+Ø	iɔ	陰平	妖 邀 要{~求} 腰 么
+Ø	iɔ	陰上	舀
+Ø	iɔ	陰去	要{重~}
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	pʰ	l	tɕ	tɕʰ	dʑ	ȵ	ɦ
+@FIN	iəʔ
+@TON	陰入	55
+@TON	陽入	23
+
+// Initial	Final	Tone	CharList (Space separated)
+pʰ	iəʔ	陰入	僻 闢{開~}
+l	iəʔ	陽入	隸
+tɕ	iəʔ	陰入	積
+tɕʰ	iəʔ	陰入	吃{~飯}
+dʑ	iəʔ	陽入	絕
+ȵ	iəʔ	陽入	捏
+ɦ	iəʔ	陽入	億 抑 譯 液
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	l	tɕ	tɕʰ	dʑ	ȵ	ɕ	ʑ	ɦ	Ø
+@FIN	iɤ
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+l	iɤ	陰平	溜{~冰}
+l	iɤ	陽舒	流 硫 琉 留 劉 柳 榴
+tɕ	iɤ	陰平	糾{~紛} 鳩 灸 究 糾{~察}
+tɕ	iɤ	陰上	九 久 酒 韭
+tɕ	iɤ	陰去	救
+tɕʰ	iɤ	陰平	秋 丘
+dʑ	iɤ	陽舒	囚 求 球 舅 舊
+ȵ	iɤ	陽舒	牛 鈕
+ɕ	iɤ	陰平	修 休
+ɕ	iɤ	陰上	朽
+ɕ	iɤ	陰去	秀 繡 鏽
+ʑ	iɤ	陽舒	就 袖
+ɦ	iɤ	陽舒	尤 郵 有 友 猶 由 油 游 又 右 祐
+Ø	iɤ	陰平	憂 優 幽
+Ø	iɤ	陰去	誘 幼
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	b	m	ʔd	tʰ	d	l	tɕ	tɕʰ	dʑ	ȵ	ɕ	ʑ	ɦ	Ø
+@FIN	iɪʔ
+@TON	陰入	55
+@TON	陽入	23
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	iɪʔ	陰入	別 筆 畢 必 逼 碧 壁
+pʰ	iɪʔ	陰入	匹 劈
+b	iɪʔ	陽入	鼻
+m	iɪʔ	陽入	滅 蜜 密
+ʔd	iɪʔ	陰入	跌 滴 的{目~}
+tʰ	iɪʔ	陰入	貼 帖 鐵 踢 剔 惕
+d	iɪʔ	陽入	疊 蝶 碟 諜 敵 狄 笛
+l	iɪʔ	陽入	立 例 粒 笠 列 烈 裂 劣 栗 率{效~} 律 歷{~史} 曆{日~} 力
+tɕ	iɪʔ	陰入	指 接 劫 輯 級 急 節 截 潔 結 吉 即 鯽 汲 跡 脊 績 激 擊
+tɕʰ	iɪʔ	陰入	切{~開} 竊 七 漆 戚
+dʑ	iɪʔ	陽入	集 及 傑 疾 籍{~貫}
+ȵ	iɪʔ	陽入	業 熱 孽 虐 日{~頭}
+ɕ	iɪʔ	陰入	吸 洩 揭 歇 屑 雪 息 熄 析 錫
+ʑ	iɪʔ	陽入	習 席 襲
+ɦ	iɪʔ	陽入	葉
+Ø	iɪʔ	陰入	噎 乙 一
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ȵ	ɕ	ɦ
+@FIN	iʔ
+@TON	陰入	55
+@TON	陽入	23
+
+// Initial	Final	Tone	CharList (Space separated)
+ȵ	iʔ	陽入	逆 疫
+ɕ	iʔ	陰入	惜
+ɦ	iʔ	陽入	役
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	tɕʰ
+@FIN	iᴇ
+@TON	陰去	35
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕʰ	iᴇ	陰去	切{一~} 契{~約}
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	Ø
+@FIN	m̩
+@TON	陰上	44
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+Ø	m̩	陰上	母
+Ø	m̩	陽舒	墓
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	b	m	ts	tsʰ	s	z	Ø
+@FIN	o
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	o	陰平	疤 芭
+ʔb	o	陰上	把{~握，刀~}
+b	o	陽舒	爬 琶 杷
+m	o	陽舒	麻 痲 馬 碼 罵
+ts	o	陰平	渣
+ts	o	陰去	詐 炸{~彈}
+tsʰ	o	陰平	錯{~誤，交~}
+s	o	陰平	沙 紗
+s	o	陰去	曬
+z	o	陽舒	茶 查{調~}
+Ø	o	陰平	丫
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	pʰ	m	ʔd	tʰ	d	n	l	ts	tsʰ	s	z	k	kʰ	ɡ	h	ɦ
+@FIN	oŋ
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+pʰ	oŋ	陰上	捧
+m	oŋ	陽舒	夢
+ʔd	oŋ	陰平	東 冬
+ʔd	oŋ	陰上	董 懂
+ʔd	oŋ	陰去	凍 棟
+tʰ	oŋ	陰平	通 筒
+tʰ	oŋ	陰上	統
+tʰ	oŋ	陰去	痛
+d	oŋ	陽舒	桶 同 銅 桐 童 瞳 動 洞
+n	oŋ	陽舒	農 濃 膿 弄{~壞}
+l	oŋ	陽舒	籠 龍 聾 隆 隴 攏 壟
+ts	oŋ	陰平	宗 鬃 綜 棕 中{當~} 忠 衷 終 蹤 縱{~橫} 鐘 鍾 盅
+ts	oŋ	陰上	總 種{~類} 腫
+ts	oŋ	陰去	粽{~子} 中{射~} 眾 縱{放~} 種{~植}
+tsʰ	oŋ	陰平	聰 蔥 囪 充 衝{~鋒}
+tsʰ	oŋ	陰去	寵
+s	oŋ	陰平	鬆{~緊} 松{~樹}
+s	oŋ	陰上	聳
+s	oŋ	陰去	送 宋
+z	oŋ	陽舒	崇 蟲 叢 從{服~} 重{~複} 誦 頌 訟 重{~量}
+k	oŋ	陰平	公 工 功 攻 蚣 弓 躬 恭 宮 供{~給}
+k	oŋ	陰上	拱 鞏
+k	oŋ	陰去	貢 供{~養}
+kʰ	oŋ	陰平	空{~虛}
+kʰ	oŋ	陰上	孔 恐
+kʰ	oŋ	陰去	控 空{~缺}
+ɡ	oŋ	陽舒	共 汞
+h	oŋ	陰平	轟 烘 風 豐{~收} 封 峰 鋒 蜂
+h	oŋ	陰上	哄{~騙}
+ɦ	oŋ	陽舒	弘 宏 紅 洪 鴻 虹 馮{姓} 縫{~補~隙} 蓬{蓮~頭} 鳳 奉
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	b	m	f	ʔd	tʰ	d	l	ts	tsʰ	s	z	k	kʰ	h	ɦ	Ø
+@FIN	oʔ
+@TON	陰入	55
+@TON	陽入	23
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	oʔ	陰入	博 北
+pʰ	oʔ	陰入	樸{~素} 迫 魄
+b	oʔ	陽入	薄
+m	oʔ	陽入	摸 膜{薄~} 莫 漠 墨 默 木 目 牧 穆
+f	oʔ	陰入	復{~原}
+ʔd	oʔ	陰入	篤
+tʰ	oʔ	陰入	禿
+d	oʔ	陽入	獨 讀 毒
+l	oʔ	陽入	鹿 六 錄 陸{大~} 綠
+ts	oʔ	陰入	炸{油~} 竹 築{建~} 祝 粥 足 燭
+tsʰ	oʔ	陰入	觸 促
+s	oʔ	陰入	宿{~舍} 速 肅 縮 叔 束
+z	oʔ	陽入	族 熟 俗 贖 屬 蜀
+k	oʔ	陰入	國 穀{五~} 谷{山~}
+kʰ	oʔ	陰入	哭
+h	oʔ	陰入	福 複{~雜，重~}
+ɦ	oʔ	陽入	或 伏{降~}
+Ø	oʔ	陰入	屋
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	b	m	f	ʋ	ʔd	tʰ	d	n	l	ts	tsʰ	s	z	k	kʰ	ɦ	Ø
+@FIN	u
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	u	陰平	波 播 菠 簸
+ʔb	u	陰上	補
+ʔb	u	陰去	布{~匹，散~} 怖 簿
+pʰ	u	陰平	坡 鋪{~設，店~}
+pʰ	u	陰上	浦 普 譜
+pʰ	u	陰去	破
+b	u	陽舒	婆 蒲 脯{胸~} 葡 菩 捕 步 部
+m	u	陽舒	摩 磨{石~，~刀} 魔 模 暮 墓
+f	u	陰平	呼 膚 夫{~妻} 敷
+f	u	陰上	火 伙 虎 府 俯 斧
+f	u	陰去	貨 付 傅 富 副
+ʋ	u	陽舒	伍{隊~} 胡{~笳} 糊 狐 壺 扶 符 腐 輔 無{有~} 浮 禍 誤 務 霧 婦 負
+ʔd	u	陰平	多 都 督
+ʔd	u	陰上	躲 賭 堵 朵
+tʰ	u	陰平	拖
+tʰ	u	陰上	橢 妥 土 吐{~痰}
+tʰ	u	陰去	吐{嘔~} 兔
+d	u	陽舒	駝 馱{~起} 肚{胃，腹~} 徒 途 塗 圖 屠 杜 舵 大{~小} 墮 惰 度 渡 鍍
+n	u	陽舒	奴 糯
+l	u	陽舒	羅 鑼 蘿 螺 騾 盧 爐 蘆 魯 廬 鹵 露 路
+ts	u	陰平	租{出~車}
+ts	u	陰上	左 組 祖 煮
+ts	u	陰去	做 駐 柱 鑄
+tsʰ	u	陰平	搓 粗 初 戳
+tsʰ	u	陰上	儲{姓} 楚{姓} 礎
+tsʰ	u	陰去	醋 錯 措 銼
+s	u	陰平	梭 蘇 酥 蔬
+s	u	陰上	鎖 瑣 所 薯 索
+s	u	陰去	素 訴 塑 數{~目}
+z	u	陽舒	坐 座
+k	u	陰平	歌 哥 鍋 瓜 辜 孤 姑 箍
+k	u	陰上	果 裹 估{~計} 古 股 鼓
+k	u	陰去	個{~人} 過 過{~失} 故 顧 固 雇
+kʰ	u	陰平	科 顆 枯 窠
+kʰ	u	陰上	可 苦
+kʰ	u	陰去	課 庫 褲 酷
+ɦ	u	陽舒	我 何 河 荷 禾 和{~氣} 吾 吳 梧 蜈 湖 葫 胡{~子} 餓 悟 戶 護 互
+Ø	u	陰平	蝸{~牛} 烏 誣
+Ø	u	陰上	武 舞 鵡
+Ø	u	陰去	惡{厭~}
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	k	kʰ	ɦ
+@FIN	ua
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+k	ua	陰平	乖
+k	ua	陰上	拐{~杖}
+k	ua	陰去	怪 卦
+kʰ	ua	陰去	快
+ɦ	ua	陽舒	懷 淮 槐 壞
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	k
+@FIN	uaʔ
+@TON	陰入	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uaʔ	陰入	括{包~} 刮
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	k	kʰ	ɡ	h	ɦ	Ø
+@FIN	uei
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uei	陰平	歸
+k	uei	陰上	軌 鬼
+k	uei	陰去	會{~計} 桂 貴
+kʰ	uei	陰平	虧 窺
+kʰ	uei	陰去	潰 愧
+ɡ	uei	陽舒	奎 葵 櫃
+h	uei	陰平	灰 揮 輝 徽
+h	uei	陰上	悔 毀
+ɦ	uei	陽舒	回 茴 危 偽 為{作~，因~} 維 唯 惟 微 違 圍 緯 匯{~合} 會{開~，~不~} 繪 彗{~星} 衛 惠 慧 位 未 魏 胃 謂
+Ø	uei	陰平	威
+Ø	uei	陰上	委 諱
+Ø	uei	陰去	賄 餵{~養} 畏 慰
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ts	tsʰ	s	z	k	kʰ	ŋ	h	ɦ	Ø
+@FIN	uo
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	uo	陰平	遮
+ts	uo	陰去	蔗
+tsʰ	uo	陰平	車{~輛}
+s	uo	陰平	賒
+s	uo	陰上	捨{~棄}
+z	uo	陽舒	蛇
+k	uo	陰去	掛
+kʰ	uo	陰平	誇
+kʰ	uo	陰去	跨
+ŋ	uo	陽舒	瓦{磚~}
+h	uo	陰平	花
+h	uo	陰去	化
+ɦ	uo	陽舒	華{中~} 划{~船} 畫 話
+Ø	uo	陰平	蛙
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	kʰ
+@FIN	uã
+@TON	陰去	35
+
+// Initial	Final	Tone	CharList (Space separated)
+kʰ	uã	陰去	礦
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	k	kʰ
+@FIN	uɔʔ
+@TON	陰入	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uɔʔ	陰入	郭
+kʰ	uɔʔ	陰入	擴 廓
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ts	k	kʰ	h	ɦ
+@FIN	uəŋ
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	uəŋ	陰平	遵
+k	uəŋ	陰上	滾
+kʰ	uəŋ	陰平	昆 崑 坤
+kʰ	uəŋ	陰上	捆
+kʰ	uəŋ	陰去	困 睏
+h	uəŋ	陰平	昏{~暗，~迷} 婚 葷
+ɦ	uəŋ	陽舒	混
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	k	kʰ
+@FIN	uəʔ
+@TON	陰入	55
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uəʔ	陰入	骨
+kʰ	uəʔ	陰入	闊
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	k	kʰ	h	ɦ	Ø
+@FIN	uᴇ
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uᴇ	陰平	官 觀{參~} 冠{衣~} 棺 關
+k	uᴇ	陰上	管 館
+k	uᴇ	陰去	貫 罐 灌 冠{~軍} 慣
+kʰ	uᴇ	陰上	款
+kʰ	uᴇ	陰去	快 筷
+h	uᴇ	陰平	歡
+ɦ	uᴇ	陽舒	完 丸 皖 頑 還 環
+Ø	uᴇ	陰平	彎 灣
+Ø	uᴇ	陰上	碗
+Ø	uᴇ	陰去	換 幻
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	k	kʰ	ɡ	h	ɦ	Ø
+@FIN	uɑ̃
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uɑ̃	陰平	光
+k	uɑ̃	陰上	廣
+kʰ	uɑ̃	陰平	筐
+kʰ	uɑ̃	陰去	曠 框 況
+ɡ	uɑ̃	陽舒	狂
+h	uɑ̃	陰平	荒 慌
+ɦ	uɑ̃	陽舒	黃 簧 皇 蝗 王
+Ø	uɑ̃	陰去	枉
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	l	z	tɕ	tɕʰ	dʑ	ȵ	ɕ	ʑ	ɦ	Ø
+@FIN	y
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+l	y	陽舒	驢 呂 旅 慮 濾
+z	y	陽舒	樹{~林}
+tɕ	y	陰平	蛛 拘 居 龜
+tɕ	y	陰上	舉
+tɕ	y	陰去	據 鋸 注{~意，~解} 句
+tɕʰ	y	陰平	趨 區{~域} 驅 屈
+tɕʰ	y	陰上	取 娶
+tɕʰ	y	陰去	趣
+dʑ	y	陽舒	渠 具 拒 距 聚 跪
+ȵ	y	陽舒	語 女 乳
+ɕ	y	陰平	靴 虛 噓 需 須{必~，胡~} 宣
+ɕ	y	陰上	許 選
+ʑ	y	陽舒	徐 除 廚 櫥 瞿 序 敘 緒 樹{~林}
+ɦ	y	陽舒	余{姓，多~} 愚 虞 娛 雨 羽 宇 御{防~，~用} 預 譽 寓 裕 喻
+Ø	y	陰平	於
+Ø	y	陰上	盂
+Ø	y	陰去	鬱{憂~} 域
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	tɕ	dʑ	ȵ	ɕ	ʑ	ɦ	Ø
+@FIN	yoŋ
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yoŋ	陰平	均 軍 君
+dʑ	yoŋ	陽舒	窮 瓊 群 裙
+ȵ	yoŋ	陽舒	絨
+ɕ	yoŋ	陰平	凶{~惡，吉~} 匈 胸 勳 薰 兄
+ɕ	yoŋ	陰去	訊 迅 訓
+ʑ	yoŋ	陽舒	巡
+ɦ	yoŋ	陽舒	熊 雄 容 旬 勻 雲{~彩} 榮 永 泳 詠 用 運
+Ø	yoŋ	陰平	擁 暈{~厥}
+Ø	yoŋ	陰上	勇 湧{~現} 踴 允
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	tɕ	tɕʰ	dʑ	ȵ	ʑ	ɦ
+@FIN	yoʔ
+@TON	陰入	55
+@TON	陽入	23
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yoʔ	陰入	菊
+tɕʰ	yoʔ	陰入	曲
+dʑ	yoʔ	陽入	軸 局
+ȵ	yoʔ	陽入	肉 玉
+ʑ	yoʔ	陽入	續
+ɦ	yoʔ	陽入	浴
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	tɕ	tɕʰ	ȵ	ʑ	ɦ	Ø
+@FIN	yø
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yø	陰平	捐 娟 蜎
+tɕ	yø	陰上	卷{~曲，書~}
+tɕ	yø	陰去	眷
+tɕʰ	yø	陰平	圈{圓~}
+tɕʰ	yø	陰去	勸 券
+ȵ	yø	陽舒	軟 元 原 員 緣 源 淵 願
+ʑ	yø	陽舒	券 權
+ɦ	yø	陽舒	圓 袁 園 猿 轅 援 遠{~征} 院
+Ø	yø	陰平	冤
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	tɕ	tɕʰ	dʑ	ȵ	ɕ	ɦ	Ø
+@FIN	yøʔ
+@TON	陰入	55
+@TON	陽入	23
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yøʔ	陰入	決 橘
+tɕʰ	yøʔ	陰入	缺
+dʑ	yøʔ	陽入	掘
+ȵ	yøʔ	陽入	閱 月
+ɕ	yøʔ	陰入	薛 血 穴
+ɦ	yøʔ	陽入	越 育
+Ø	yøʔ	陰入	恤 郁{姓}
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	tɕ	ɦ
+@FIN	yŋ
+@TON	陰平	53
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	yŋ	陰平	鈞
+tɕ	yŋ	陰去	俊
+ɦ	yŋ	陽舒	熨
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ɕ
+@FIN	yʔ
+@TON	陰入	55
+
+// Initial	Final	Tone	CharList (Space separated)
+ɕ	yʔ	陰入	蓄
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	b	m	ʋ	ʔd	l	ts	tsʰ	s	z	k	ŋ
+@FIN	ã
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	ã	陰上	彭 膨
+b	ã	陽舒	棚 篷 蓬 朋 鵬 碰
+m	ã	陽舒	猛 孟{姓}
+ʋ	ã	陽舒	橫{~豎，蠻~}
+ʔd	ã	陰上	打{~擊}
+l	ã	陽舒	冷
+ts	ã	陰平	張 睜
+ts	ã	陰上	長{生~} 掌
+ts	ã	陰去	漲{~大，~價} 帳{蚊~} 賬{~目} 脹{膨~} 仗{打~，依~} 杖 丈
+tsʰ	ã	陰上	廠
+tsʰ	ã	陰去	暢 撐{支~}
+s	ã	陰平	生 甥 牲 聲-
+s	ã	陰上	省{節~}
+z	ã	陽舒	長{~短} 腸 場 常
+k	ã	陰平	羹{瓢~}
+ŋ	ã	陽舒	硬
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	b	m	f	ʋ	l	ts	tsʰ	s	z	k	h	ɦ	Ø
+@FIN	æʔ
+@TON	陰入	55
+@TON	陽入	23
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	æʔ	陰入	八
+b	æʔ	陽入	拔
+m	æʔ	陽入	襪
+f	æʔ	陰入	法 發{出~} 髮{頭~}
+ʋ	æʔ	陽入	滑 挖 罰
+l	æʔ	陽入	臘{~月} 蠟{~燭} 獵 辣
+ts	æʔ	陰入	紮{包~} 札
+tsʰ	æʔ	陰入	擦 察
+s	æʔ	陰入	殺 煞
+z	æʔ	陽入	十 拾{~取}
+k	æʔ	陰入	夾{~板}
+h	æʔ	陰入	恰 瞎
+ɦ	æʔ	陽入	狹 窄
+Ø	æʔ	陰入	鴨 押 壓
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	b	ʔd	tʰ	d	n	l	ts	tsʰ	s	z	k	kʰ	ŋ	h	ɦ	Ø
+@FIN	ø
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+b	ø	陽舒	盤
+ʔd	ø	陰平	端
+ʔd	ø	陰上	短
+ʔd	ø	陰去	斷{決~}
+tʰ	ø	陰去	蛻
+d	ø	陽舒	團 斷{~絕} 段 緞
+n	ø	陽舒	暖 聶
+l	ø	陽舒	卵 亂
+ts	ø	陰平	追 錐 鑽{~洞} 專 磚
+ts	ø	陰上	轉{~變，~動}
+ts	ø	陰去	最 醉 墜 傳{~記}
+tsʰ	ø	陰平	猜 崔 催 吹 炊 穿 川
+tsʰ	ø	陰去	翠 脆 串
+s	ø	陰平	雖 衰 酸
+s	ø	陰上	髓
+s	ø	陰去	歲 稅 算 蒜
+z	ø	陽舒	隨 隋 垂 蕊 穗 隧 喘 船 裁2 罪 瑞
+k	ø	陰平	規 甘 干{~涉} 乾{~燥} 柑 竿 桿{旗~，筆~} 肝
+k	ø	陰上	詭 稈{麥~} 趕
+k	ø	陰去	幹{~勁}
+kʰ	ø	陰平	看{~守} 刊
+kʰ	ø	陰去	看{~見}
+ŋ	ø	陽舒	岸
+h	ø	陰平	蝦
+ɦ	ø	陽舒	而 函 嫌 韓 寒 豌 漢 旱 汗
+Ø	ø	陰平	庵 安 按 鞍
+Ø	ø	陰去	案
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	l	dʑ
+@FIN	øʔ
+@TON	陽入	23
+
+// Initial	Final	Tone	CharList (Space separated)
+l	øʔ	陽入	略 掠
+dʑ	øʔ	陽入	爵
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	Ø
+@FIN	ŋ̍
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+Ø	ŋ̍	陽舒	五 魚 漁
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	m	tʰ	d	s
+@FIN	œʔ
+@TON	陰入	55
+@TON	陽入	23
+
+// Initial	Final	Tone	CharList (Space separated)
+m	œʔ	陽入	末 沫
+tʰ	œʔ	陰入	脫
+d	œʔ	陽入	奪
+s	œʔ	陰入	說
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	b	m	ʔd	tʰ	d	n	l	ts	tsʰ	dz	s	z	k	kʰ	ɡ	ŋ	h	ɦ	Ø
+@FIN	ɔ
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	ɔ	陰平	褒 包 胞
+ʔb	ɔ	陰上	寶 保 堡 飽
+ʔb	ɔ	陰去	報 豹 爆
+pʰ	ɔ	陰平	拋
+pʰ	ɔ	陰去	泡{水~，浸~} 炮{槍~}
+b	ɔ	陽舒	袍 跑 抱 暴 鮑 刨
+m	ɔ	陰平	貓
+m	ɔ	陽舒	毛 茅 矛 錨 卯 冒 帽 茂 貿 貌
+ʔd	ɔ	陰平	刀
+ʔd	ɔ	陰上	島 搗 禱 倒{~塌，~水} 導
+ʔd	ɔ	陰去	到
+tʰ	ɔ	陰平	濤 滔
+tʰ	ɔ	陰上	討
+tʰ	ɔ	陰去	套
+d	ɔ	陽舒	桃 逃 陶 萄 道 稻 盜
+n	ɔ	陽舒	腦 鬧
+l	ɔ	陰平	嘮 撈
+l	ɔ	陽舒	蘿{藤~，~蔔} 勞 牢 老 澇
+ts	ɔ	陰平	遭 朝{明~} 招 糟
+ts	ɔ	陰上	早 棗 爪
+ts	ɔ	陰去	躁 灶 罩 照
+tsʰ	ɔ	陰平	操{~作，節~} 糙 超 抄 鍬
+tsʰ	ɔ	陰上	草 炒 吵
+dz	ɔ	陽舒	樵
+s	ɔ	陰平	騷 燒 稍 捎
+s	ɔ	陰上	嫂 掃 少{多~}
+s	ɔ	陰去	少{~年} 燥
+z	ɔ	陽舒	槽 朝{~代} 巢 潮 皂 造{建~} 趙 兆 紹
+k	ɔ	陰平	高 膏{牙~} 羔 糕 交 教{~書} 膠
+k	ɔ	陰上	稿
+k	ɔ	陰去	告 覺{睡~}
+kʰ	ɔ	陰平	敲
+kʰ	ɔ	陰上	考 烤
+kʰ	ɔ	陰去	靠
+ɡ	ɔ	陽舒	搞
+ŋ	ɔ	陽舒	鵝 熬 咬 傲
+h	ɔ	陰上	好{~壞}
+h	ɔ	陰去	好{喜~} 耗
+ɦ	ɔ	陽舒	下 啞 豪 毫 夏 號{~碼}
+Ø	ɔ	陰平	襖
+Ø	ɔ	陰去	奧 懊
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	ʋ	tʰ	n	l	ts	z	k	kʰ	ŋ	h	ɦ
+@FIN	ɔʔ
+@TON	陰入	55
+@TON	陽入	23
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	ɔʔ	陰入	剝 雹
+ʋ	ɔʔ	陰入	握
+ʋ	ɔʔ	陽入	縛
+tʰ	ɔʔ	陰入	托{委~，~盤}
+n	ɔʔ	陽入	諾
+l	ɔʔ	陽入	洛 落 絡 駱 樂{快~} 酪 烙
+ts	ɔʔ	陰入	作 桌 捉
+z	ɔʔ	陽入	昨 鑿 勺 啄 鐲
+k	ɔʔ	陰入	角
+kʰ	ɔʔ	陰入	殼
+ŋ	ɔʔ	陽入	鶴 岳
+h	ɔʔ	陰入	霍 穫{收~}
+ɦ	ɔʔ	陽入	學 獲{~得}
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	b	m	f	ʋ	ʔd	tʰ	d	n	l	ts	tsʰ	s	z	k	kʰ	ɦ	Ø
+@FIN	əŋ
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	əŋ	陰平	奔 崩 繃
+ʔb	əŋ	陰上	本
+pʰ	əŋ	陰平	噴{~水}
+b	əŋ	陽舒	盆 笨
+m	əŋ	陰平	悶 蒙
+m	əŋ	陽舒	門 蚊 紋 萌 盟 明{~朝} 問-
+f	əŋ	陰平	分{~開} 芬 紛 瘋
+f	əŋ	陰上	粉 諷
+f	əŋ	陰去	糞 奮
+ʋ	əŋ	陰平	溫 瘟 翁
+ʋ	əŋ	陰上	穩
+ʋ	əŋ	陽舒	渾{~濁，~身} 魂 餛 文 墳 聞 份 問=
+ʔd	əŋ	陰平	敦 墩 蹲 登 燈
+ʔd	əŋ	陰上	等
+ʔd	əŋ	陰去	頓 凳
+tʰ	əŋ	陰平	吞
+d	əŋ	陽舒	屯{~田} 臀 騰 謄 藤 盾{人名，矛~} 鈍 鄧
+n	əŋ	陽舒	能 嫩
+l	əŋ	陽舒	崙 輪 倫 稜{~角} 論{議~}
+ts	əŋ	陰平	真 珍 針 尊 增 曾{~孫} 徵{~求} 爭 蒸 箏 貞 偵 征
+ts	əŋ	陰上	枕{~席} 診 疹 準{批~，標~} 整
+ts	əŋ	陰去	鎮 陣 振 震 贈 證{~明} 症{病~} 正{~月，公~} 政
+tsʰ	əŋ	陰平	村 春 稱{~呼，相~} 蟶
+tsʰ	əŋ	陰上	蠢
+tsʰ	əŋ	陰去	趁 襯 寸 秤
+s	əŋ	陰平	森 參{人~} 深 身 申 伸 孫 僧 升 聲
+s	əŋ	陰上	審 嬸 沈 損 筍 榫
+s	əŋ	陰去	滲 甚{~至} 慎 勝{~敗} 盛{興~} 聖
+z	əŋ	陽舒	腎 韌 順 潤 閏 剩 鄭 任{責~} 沉 陳 塵 神 臣 辰 存 唇 純 曾{~經} 層 懲 澄 橙 乘 繩 承 丞 呈 程 成 城 盛{~滿} 誠
+k	əŋ	陰平	跟 根 更{~改，打~} 羹 庚 耕
+k	əŋ	陰去	更{~加} 耿
+kʰ	əŋ	陰平	坑
+kʰ	əŋ	陰上	肯 懇 墾 啃
+ɦ	əŋ	陽舒	恨 恆 衡
+Ø	əŋ	陰平	恩
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	m	f	ʋ	ʔd	d	l	ts	tsʰ	dz	s	z	k	kʰ	ŋ	h	ɦ
+@FIN	əʔ
+@TON	陰入	55
+@TON	陽入	23
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	əʔ	陰入	撥 缽
+pʰ	əʔ	陰入	潑 撲
+m	əʔ	陽入	沒{沉~} 物{~事}
+f	əʔ	陰入	覆 服
+ʋ	əʔ	陽入	臥 附 活 核{桃~} 佛 物= 勿
+ʔd	əʔ	陰入	得 德
+d	əʔ	陽入	突 特
+l	əʔ	陽入	勒 肋
+ts	əʔ	陰入	者 質{人~} 折{~疊~斷} 質 汁 執 哲 浙 則 責 織 職
+tsʰ	əʔ	陰入	徹 撤 出 測 側 赤
+dz	əʔ	陽入	植
+s	əʔ	陰入	社 鰓 設 刷 失 虱 室 塞{閉~} 色 識 式 飾 適 釋
+z	əʔ	陽入	入 舌 侄 實 日= 術{算~} 述 賊 值 直 食 蝕 殖 擇 澤
+k	əʔ	陰入	鴿 葛 閣 胳 革
+kʰ	əʔ	陰入	磕 刻 克
+ŋ	əʔ	陽入	額
+h	əʔ	陰入	喝{~采} 黑
+ɦ	əʔ	陽入	賀 合{~作} 盒 核{~桃，~對}
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	pʰ	m	f	ʔd	tʰ	d	l	ts	tsʰ	s	z	k	kʰ	ŋ	ɦ	Ø
+@FIN	ɤ
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+pʰ	ɤ	陰平	剖
+m	ɤ	陽舒	某 謀 畝 牡
+f	ɤ	陰上	否
+ʔd	ɤ	陰平	兜
+ʔd	ɤ	陰上	斗{升~} 抖 陡
+ʔd	ɤ	陰去	鬥{~爭}
+tʰ	ɤ	陰平	偷
+tʰ	ɤ	陰去	透
+d	ɤ	陽舒	頭 投 豆 痘
+l	ɤ	陽舒	樓 摟{~抱} 漏
+ts	ɤ	陰平	鄒 周 州 洲 舟
+ts	ɤ	陰上	走 帚
+ts	ɤ	陰去	奏 皺 咒 驟
+tsʰ	ɤ	陰平	抽
+tsʰ	ɤ	陰上	丑{子~} 醜{~惡}
+tsʰ	ɤ	陰去	湊 臭{香~}
+s	ɤ	陰平	搜 餿 收
+s	ɤ	陰上	首 手 守
+s	ɤ	陰去	瘦 獸
+z	ɤ	陽舒	綢 籌 仇{報~} 酬 受 壽 授 售
+k	ɤ	陰平	勾{~銷} 溝 鉤
+k	ɤ	陰上	狗 苟
+k	ɤ	陰去	夠 構
+kʰ	ɤ	陰上	口
+kʰ	ɤ	陰去	扣 寇
+ŋ	ɤ	陽舒	藕 偶{配~，~然}
+ɦ	ɤ	陽舒	侯 喉 猴 厚 後{先~} 候
+Ø	ɤ	陰上	嘔{~吐} 歐{姓} 歐 毆
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ts	tsʰ	s	z
+@FIN	ɿ
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ɿ	陰平	豬 諸 朱 珠 之 芝 支 枝 梔 資 姿 咨 脂 租{出~房子}
+ts	ɿ	陰上	主 子 紫 紙 止 址 嘴
+ts	ɿ	陰去	蛀 滯 制{~度} 製{~造} 智 致 稚 至 置 志{~向} 誌{雜~} 痣
+tsʰ	ɿ	陰平	雌 癡
+tsʰ	ɿ	陰上	恥 齒
+tsʰ	ɿ	陰去	處{~理，~所} 刺 翅 次 廁{~所} 秩
+s	ɿ	陰平	梳 書 輸{運~，~贏} 斯 施 私 師 獅 尸 司 思 絲 詩
+s	ɿ	陰上	暑 鼠 數{~一~} 史 使{~用，大~} 始 水
+s	ɿ	陰去	勢 世 四 駛 試
+z	ɿ	陽舒	鋤 殊 池 馳 匙 是 瓷 遲 磁{~石} 詞 辭 祠 持 時 鰣 傳{~達} 助 住 豎 誓 示 自 視 字 寺 飼 治 士 柿 事 市
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	b	m	f	ʋ	ʔd	tʰ	d	n	l	ts	tsʰ	s	z	k	kʰ	ŋ	h	ɦ	Ø
+@FIN	ᴇ
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	ᴇ	陰平	斑 班 頒 扳 般 搬
+ʔb	ᴇ	陰上	板 版
+ʔb	ᴇ	陰去	貝 被{~迫} 扮 半
+pʰ	ᴇ	陰平	攀 潘
+pʰ	ᴇ	陰去	盼 判 叛
+b	ᴇ	陽舒	辦 瓣 伴 拌
+m	ᴇ	陽舒	蠻 瞞 滿 玩{~遊戲} 慢 曼
+f	ᴇ	陰平	番 翻
+f	ᴇ	陰上	反{~復} 返
+f	ᴇ	陰去	販
+ʋ	ᴇ	陽舒	帆 凡 繁 煩 礬 泛 犯 范{姓} 範{模~} 乏 飯 萬
+ʔd	ᴇ	陰平	耽 擔{~任} 丹 單
+ʔd	ᴇ	陰上	膽
+tʰ	ᴇ	陰平	胎 貪 攤 灘
+tʰ	ᴇ	陰上	坦 毯
+tʰ	ᴇ	陰去	態 探 炭 嘆
+d	ᴇ	陽舒	臺 苔 抬 譚{姓} 潭 曇 談 痰 檀 彈{~琴} 壇 貸 代 袋 擔{挑~} 淡 旦 但 蛋 彈{~藥} 待 怠
+n	ᴇ	陰平	拿
+n	ᴇ	陽舒	男 南{~北} 難{~易} 耐 難{患~}
+l	ᴇ	陽舒	來 藍 籃 覽 欖 攬 蘭 欄 攔 懶 濫 爛
+ts	ᴇ	陰平	齋 災 再 沾 氈 占{~領}
+ts	ᴇ	陰上	宰{~相} 盞 斬
+ts	ᴇ	陰去	載{年~，~重} 醮 贊 展 戰
+tsʰ	ᴇ	陰平	釵 參{~加} 攙{~扶} 餐
+tsʰ	ᴇ	陰上	彩 採{~摘} 慘 鏟 產
+tsʰ	ᴇ	陰去	菜 懺 燦
+s	ᴇ	陰平	三 山 刪 衫 閂{門~}
+s	ᴇ	陰上	陝 閃1 散{鬆~} 傘
+s	ᴇ	陰去	舍{宿~} 賽 散{解~} 扇{~子，~動}
+z	ᴇ	陽舒	才{~華} 材 財 裁1 在 豺 殘 蠶 饞 纏 然 燃 暫 賺 站{車~} 濽
+k	ᴇ	陰平	該 監{~獄} 姦{~淫}
+k	ᴇ	陰上	改 感 鹼 揀 敢
+k	ᴇ	陰去	概 蓋{遮~} 倚 減
+kʰ	ᴇ	陰平	開 堪 鉛
+kʰ	ᴇ	陰上	坎 砍
+kʰ	ᴇ	陰去	慨
+ŋ	ᴇ	陽舒	癌 眼 顏
+h	ᴇ	陰上	海
+h	ᴇ	陰去	喊
+ɦ	ᴇ	陽舒	含 鹹{~魚} 銜{~冤} 協 閒 晚 害 餡 限 械
+Ø	ᴇ	陰去	愛 晏
+// HSD Syllabary Data Partition
+// 地区：上海市-浦東新區-惠南鎮
+// 来源：游汝傑《上海地區方言調查研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	上海市-浦東新區-惠南鎮
+@SRC	游汝傑《上海地區方言調查研究》
+
+@INI	ʔb	pʰ	b	m	f	ʋ	ʔd	tʰ	d	n	l	ts	tsʰ	s	z	k	kʰ	ŋ	ɦ
+@FIN	ɑ̃
+@TON	陰平	53
+@TON	陰上	44
+@TON	陰去	35
+@TON	陽舒	13
+
+// Initial	Final	Tone	CharList (Space separated)
+ʔb	ɑ̃	陰平	幫 邦
+ʔb	ɑ̃	陰上	榜 綁
+pʰ	ɑ̃	陰去	胖
+b	ɑ̃	陽舒	棒 蚌 旁 龐
+m	ɑ̃	陽舒	忙 芒 莽 蟒 亡 網 盲 虻 忘 望 旺 妄
+f	ɑ̃	陰平	方 肪 芳
+f	ɑ̃	陰上	仿{~效，相~} 妨 紡 訪 防
+f	ɑ̃	陰去	放
+ʋ	ɑ̃	陰平	汪 往
+ʋ	ɑ̃	陽舒	房
+ʔd	ɑ̃	陰平	當{應~}
+ʔd	ɑ̃	陰上	黨 擋
+ʔd	ɑ̃	陰去	當{上~}
+tʰ	ɑ̃	陰平	湯
+tʰ	ɑ̃	陰上	躺
+tʰ	ɑ̃	陰去	趟
+d	ɑ̃	陽舒	堂 棠 唐 塘 糖 蕩
+n	ɑ̃	陽舒	囊 瓤
+l	ɑ̃	陽舒	狼 郎 廊 螂 浪
+ts	ɑ̃	陰平	贓 莊 裝 章 樟 樁{木~}
+ts	ɑ̃	陰去	藏{西~} 葬 臟{五~} 壯 障
+tsʰ	ɑ̃	陰平	倉 蒼 瘡 昌 窗
+tsʰ	ɑ̃	陰上	闖
+tsʰ	ɑ̃	陰去	創{~造，~傷} 倡{提~} 唱
+s	ɑ̃	陰平	桑 霜 商 傷 雙
+s	ɑ̃	陰上	爽 賞
+s	ɑ̃	陰去	喪{婚~，~失}
+z	ɑ̃	陽舒	床 償 裳 狀 上{~山，在~} 尚 撞
+k	ɑ̃	陰平	崗{山~} 岡 綱 鋼 缸 江 疆
+k	ɑ̃	陰上	講 港
+k	ɑ̃	陰去	槓{~桿} 降{~落}
+kʰ	ɑ̃	陰平	康 糠 慷
+kʰ	ɑ̃	陰去	抗 囥
+ŋ	ɑ̃	陽舒	昂
+ɦ	ɑ̃	陽舒	行{銀~} 杭 航 降{投~} 項
