@@ -3,7 +3,7 @@
 import re
 from collections import defaultdict
 from tables._表 import 表 as _表
-from tables.__init__ import 有字, 爲字
+from tables.__init__ import 有字, 爲字, 上標
 
 class 表(_表):
 	註序 = True
@@ -61,7 +61,6 @@ class 表(_表):
 		elif 名 in ("奉化",):
 			行 = re.sub(r"(\d+)(?![:\d])", "[\\1]", 行)
 		elif 名 in ("美斯樂果敢話", "美斯樂瀾滄話", "美斯樂騰衝話", "北京", "德安", "興國", "興國茶園", "永新", "安遠", "廉州", "賀州鋪門", "賀州靈鳳", "賀州擔石", "梧州倒水", "柳城古砦", "融安", "孝昌小河", "永福桃城", "瑞金", "上杭藍溪", "平樂船上話", "富川秀水", "松江", "果敢"):
-			上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
 			行 = re.sub(r"([⁰¹²³⁴⁵⁶⁷⁸⁹]+)", lambda x:"".join([str(上標.index(i)) for i in x.group(1)]), 行)
 			行 = re.sub(r"\{(\d+)\}", "\\1", 行)
 			行 = re.sub(r"(\d+[ab]?)", "[\\1]", 行, 1)

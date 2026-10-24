@@ -1,0 +1,992 @@
+编号	字	注释	音韵地位	大同	旺隆	长期	福宝	凤鸣	九支
+0001	多		果开一平歌端	to¹	to¹	to¹	to¹	to¹	to¹
+0002	拖		果开一平歌透	tʰo¹	tʰo¹	tʰo¹	tʰo¹	tʰo¹	tʰo¹
+0003	大	~小	果开一去个定	ta⁵	ta⁵	ta⁵	ta⁵	ta⁵	ta⁵
+0004	锣		果开一平歌来	lo²	lo²	lo²	lo²	lo²	lo²
+0005	左		果开一上哿精	tso³	tso³	tso³	tso³	tso³	tso³
+0006	歌		果开一平歌见	ko¹	ko¹	ko¹	ko¹	ko¹	ko¹
+0007	个	一~	果开一去个见	ko⁵	ko⁵	ko⁵	ko⁵	ko⁵	ko⁵
+0008	可		果开一上哿溪	kʰo³	kʰo³	kʰo³	kʰo³	kʰo³	kʰo³
+0009	鹅		果开一平歌疑	o²	o²	o²	o²	o²	o²
+0010	饿		果开一去个疑	o⁵	o⁵	o⁵	o⁵	o⁵	o⁵
+0011	河		果开一平歌匣	xo²	xo²	xo²	xo²	xo²	xo²
+0012	茄		果开三平戈群	tɕʰi²	tɕʰy²/tɕʰi²	tɕʰy²	tɕʰy²	tɕʰy²	tɕʰy²/tɕʰi²
+0013	破		果合一去过滂	pʰo⁵	pʰo⁵	pʰo⁵	pʰo⁵	pʰo⁵	pʰo⁵
+0014	婆		果合一平戈並	pʰo²	pʰo²	pʰo²	pʰo²	pʰo²	pʰo²
+0015	磨	动	果合一平戈明	mo²	mo²	mo²	mo²	mo²	mo²
+0016	磨	名	果合一去过明	mo⁵	mo⁵	mo⁵	mo⁵	mo⁵	mo⁵
+0017	躲		果合一上果端	to³	to³	to³	to³	to³	to³
+0018	螺		果合一平戈来	lo²	lo²	lo²	lo²	lo²	lo²
+0019	坐		果合一上过从	tso⁵	tso⁵	tso⁵	tso⁵	tso⁵	tso⁵
+0020	锁		果合一上果心	so³	so³	so³	so³	so³	so³
+0021	果		果合一上果见	ko³	ko³	ko³	ko³	ko³	ko³
+0022	过	~来	果合一去过见	ko⁵	ko⁵	ko⁵	ko⁵	ko⁵	ko⁵
+0023	课		果合一去过溪	kʰo⁵	kʰo⁵	kʰo⁵	kʰo⁵	kʰo⁵	kʰo⁵
+0024	火		果合一上果晓	xo³	xo³	xo³	xo³	xo³	xo³
+0025	货		果合一去过晓	xo⁵	xo⁵	xo⁵	xo⁵	xo⁵	xo⁵
+0026	祸		果合一上果匣	xo⁵	xo⁵	xo⁵	xo⁵	xo⁵	xo⁵
+0027	靴		果合三平戈晓	ɕy¹	ɕy¹	ɕy¹	ɕy¹	ɕy¹	ɕy¹
+0028	把	量	假开二上马帮	pa³	pa³	pa³	pa³	pa³	pa³
+0029	爬		假开二平麻並	pʰa²	pʰa²	pʰa²	pʰa²	pʰa²	pʰa²
+0030	马		假开二上马明	ma⁵	ma⁵	ma⁵	ma⁵	ma⁵	ma⁵
+0031	骂		假开二去祃明	ma⁵	ma⁵	ma⁵	ma⁵	ma⁵	ma⁵
+0032	茶		假开二平麻澄	tsʰa²	tsʰa²	tsʰa²	tsʰa²	tsʰa²	tsʰa²
+0033	沙		假开二平麻生	sa¹	sa¹	sa¹	sa¹	sa¹	sa¹
+0034	假	真~	假开二上马见	tɕia³	tɕia³	tɕia³	tɕia³	tɕia³	tɕia³
+0035	嫁		假开二去祃见	tɕia⁵	tɕia⁵	tɕia⁵	tɕia⁵	tɕia⁵	tɕia⁵
+0036	牙		假开二平麻疑	ia²	ia²	ia²	ia²	ia²	ia²
+0037	虾		假开二平麻晓	ɕia¹	ɕia¹	ɕia¹	ɕia¹	ɕia¹	ɕia¹
+0038	下	方位	假开二上马匣	ɕia⁵	ɕia⁵	ɕia⁵	ɕia⁵	ɕia⁵	ɕia⁵
+0039	夏	春~	假开二去祃匣	ɕia⁵	ɕia⁵	ɕia⁵	ɕia⁵	ɕia⁵	ɕia⁵
+0040	哑		假开二上马影	ia³	ia³	ia³	ia³	ia³	ia³
+0041	姐		假开三上马精	tɕi³	tɕi³	tɕi³	tɕi³	tɕi³	tɕi³
+0042	借		假开三去祃精	tɕi⁵	tɕi⁵	tɕi⁵	tɕi⁵	tɕi⁵	tɕi⁵
+0043	写		假开三上马心	ɕi³	ɕi³	ɕi³	ɕi³	ɕi³	ɕi³
+0044	斜		假开三平麻邪	ɕia²/ɕi²文	ɕia²/ɕi²文	ɕia²	ɕia²	ɕia²/ɕi²文	ɕia²/ɕi²文
+0045	谢		假开三去祃邪	ɕi⁵	ɕi⁵	ɕi⁵	ɕi⁵	ɕi⁵	ɕi⁵
+0046	车	~辆	假开三平麻昌	tsʰei¹	tsʰei¹	tsʰei¹	tsʰei¹	tsʰei¹	tsʰei¹
+0047	蛇		假开三平麻船	sei²	sei²	sei²	sei²	sei²	sei²
+0048	射		假开三去祃船	sei⁵	sei⁵	sei⁵	sei⁵	sei⁵	sei⁵
+0049	爷		假开三平麻以	i²	i²	i²	i²	i²	i²
+0050	野		假开三上马以	i⁵	i⁵	i⁵	i⁵	i⁵	i⁵
+0051	夜		假开三去祃以	i⁵	i⁵	i⁵	i⁵	i⁵	i⁵
+0052	瓜		假合二平麻见	kua¹	kua¹	kua¹	kua¹	kua¹	kua¹
+0053	瓦	名	假合二上马疑	ua⁵	ua⁵	ua⁵	ua⁵	ua⁵	ua⁵
+0054	花		假合二平麻晓	xua¹	xua¹	xua¹	xua¹	xua¹	xua¹
+0055	化		假合二去祃晓	xua⁵	xua⁵	xua⁵	xua⁵	xua⁵	xua⁵
+0056	华	中~	假合二平麻匣	xua²	xua²	xua²	xua²	xua²	xua²
+0057	谱	靠~	遇合一上姥帮	pʰu³	pʰu³	pʰu³	pʰu³	pʰu³	pʰu³
+0058	布		遇合一去暮帮	pu⁵	pu⁵	pu⁵	pu⁵	pu⁵	pu⁵
+0059	铺	动	遇合一平模滂	pʰu¹	pʰu¹	pʰu¹	pʰu¹	pʰu¹	pʰu¹
+0060	簿		遇合一上姥並	pu⁵	pu⁵	pu⁵	pu⁵	pu⁵	pu⁵
+0061	步		遇合一去暮並	pu⁵	pu⁵	pu⁵	pu⁵	pu⁵	pu⁵
+0062	赌		遇合一上姥端	tu³	tu³	tu³	tu³	tu³	tu³
+0063	土		遇合一上姥透	tʰu³	tʰu³	tʰu³	tʰu³	tʰu³	tʰu³
+0064	图		遇合一平模定	tʰu²	tʰu²	tʰu²	tʰu²	tʰu²	tʰu²
+0065	杜		遇合一上姥定	tu⁵	tu⁵	tu⁵	tu⁵	tu⁵	tu⁵
+0066	奴		遇合一平模泥	lu²	lu²	lu²	lu²	lu²	lu²
+0067	路		遇合一去暮来	lu⁵	lu⁵	lu⁵	lu⁵	lu⁵	lu⁵
+0068	租		遇合一平模精	tsu¹	tsu¹	tsu¹	tsu¹	tsu¹	tsu¹
+0069	做		遇合一去暮精	tsu⁵	tsu⁵	tsu⁵	tsu⁵	tsu⁵	tsu⁵
+0070	错	对~	遇合一去暮清	tso⁵	tso⁵	tso⁵	tso⁵	tso⁵	tso⁵
+0071	箍	~桶	遇合一平模见	kʰu¹	kʰu¹	kʰu¹	kʰu¹	kʰu¹	kʰu¹
+0072	古		遇合一上姥见	ku³	ku³	ku³	ku³	ku³	ku³
+0073	苦		遇合一上姥溪	kʰu³	kʰu³	kʰu³	kʰu³	kʰu³	kʰu³
+0074	裤		遇合一去暮溪	kʰu⁵	kʰu⁵	kʰu⁵	kʰu⁵	kʰu⁵	kʰu⁵
+0075	吴		遇合一平模疑	vu²	vu²	vu²	vu²	vu²	vu²
+0076	五		遇合一上姥疑	vu⁵	vu⁵	vu⁵	vu⁵	vu⁵	vu⁵
+0077	虎		遇合一上姥晓	fu³	fu³	fu³	fu³	fu³	fu³
+0078	壶		遇合一平模匣	fu²	fu²	fu²	fu²	fu²	fu²
+0079	户		遇合一上姥匣	fu⁵	fu⁵	fu⁵	fu⁵	fu⁵	fu⁵
+0080	乌		遇合一平模影	vu¹	vu¹	vu¹	vu¹	vu¹	vu¹
+0081	女		遇合三上语泥	ly⁵	ȵy⁵	ȵy⁵	ȵy⁵	ȵy⁵	ȵy⁵
+0082	吕		遇合三上语来	ly⁵	ȵy⁵	ȵy⁵	ȵy⁵	ȵy⁵	ȵy⁵
+0083	徐		遇合三平鱼邪	ɕy²	ɕy²	ɕy²	ɕy²	ɕy²	ɕy²
+0084	猪		遇合三平鱼知	tsu¹	tsu¹	tsu¹	tsu¹	tsu¹	tsu¹
+0085	除		遇合三平鱼澄	tsʰu²	tsʰu²	tsʰu²	tsʰu²	tsʰu²	tsʰu²
+0086	初		遇合三平鱼初	tsʰu¹	tsʰu¹	tsʰu¹	tsʰu¹	tsʰu¹	tsʰu¹
+0087	锄		遇合三平鱼崇	tsʰu²	tsʰu²	tsʰu²	tsʰu²	tsʰu²	tsʰu²
+0088	所		遇合三上语生	so³	so³	so³	so³	so³	so³
+0089	书		遇合三平鱼书	su¹	su¹	su¹	su¹	su¹	su¹
+0090	鼠		遇合三上语书	su³	su³	su³	su³	su³	su³
+0091	如		遇合三平鱼日	zu²	zu²	zu²	zu²	zu²	zu²
+0092	举		遇合三上语见	tɕy³	tɕy³	tɕy³	tɕy³	tɕy³	tɕy³
+0093	锯	名	遇合三去御见	tɕy⁵	tɕy⁵	tɕy⁵	tɕy⁵	tɕy⁵	tɕy⁵
+0094	去		遇合三去御溪	kʰɨ⁵白/tɕʰy⁵	kʰɨ⁵白/tɕʰy⁵	tɕɨ⁵白/tɕʰy⁵	tɕɨ⁵白/tɕʰy⁵	kʰɨ⁵白/tɕʰy⁵	kʰɨ⁵白/tɕʰy⁵
+0095	渠	~道	遇合三平鱼群	tɕʰy²文	tɕʰy²文	tɕʰy²文	tɕʰy²文	tɕʰy²文	tɕʰy²文
+0096	鱼		遇合三平鱼疑	y²	y²	y²	y²	y²	y²
+0097	许		遇合三上语晓	ɕy³	ɕy³	ɕy³	ɕy³	ɕy³	ɕy³
+0098	余	多~	遇合三平鱼以	y²	y²	y²	y²	y²	y²
+0099	府		遇合三上麌非	fu³	fu³	fu³	fu³	fu³	fu³
+0100	付		遇合三去遇非	fu⁵	fu⁵	fu⁵	fu⁵	fu⁵	fu⁵
+0101	父		遇合三上麌奉	fu⁵	fu⁵	fu⁵	fu⁵	fu⁵	fu⁵
+0102	武		遇合三上麌微	vu⁵	vu⁵	vu⁵	vu⁵	vu⁵	vu⁵
+0103	雾		遇合三去遇微	vu⁵	vu⁵	vu⁵	vu⁵	vu⁵	vu⁵
+0104	取		遇合三上麌清	tɕʰy³	tɕʰy³	tɕʰy³	tɕʰy³	tɕʰy³	tɕʰy³
+0105	柱		遇合三上麌澄	tsu⁵	tsu⁵	tsu⁵	tsu⁵	tsu⁵	tsu⁵
+0106	住		遇合三去遇澄	tsu⁵	tsu⁵	tsu⁵	tsu⁵	tsu⁵	tsu⁵
+0107	数	动	遇合三上麌生	su³	su³	su³	su³	su³	su³
+0108	数	名	遇合三去遇生	su⁵	su⁵	su⁵	su⁵	su⁵	su⁵
+0109	主		遇合三上麌章	tsu³	tsu³	tsu³	tsu³	tsu³	tsu³
+0110	输		遇合三平虞书	su¹	su¹	su¹	su¹	su¹	su¹
+0111	竖		遇合三上麌禅	su⁵	su⁵	su⁵	su⁵	su⁵	su⁵
+0112	树		遇合三去遇禅	su⁵	su⁵	su⁵	su⁵	su⁵	su⁵
+0113	句		遇合三去遇见	tɕy⁵	tɕy⁵	tɕy⁵	tɕy⁵	tɕy⁵	tɕy⁵
+0114	区	地~	遇合三平虞溪	tɕʰy¹	tɕʰy¹	tɕʰy¹	tɕʰy¹	tɕʰy¹	tɕʰy¹
+0115	遇		遇合三去遇疑	y⁵	y⁵	y⁵	y⁵	y⁵	y⁵
+0116	雨		遇合三上麌云	y⁵	y⁵	y⁵	y⁵	y⁵	y⁵
+0117	芋		遇合三去遇云	y⁵	y⁵	y⁵	y⁵	y⁵	y⁵
+0118	裕		遇合三去遇以	y⁵	y⁵	y⁵	y⁵	y⁵	y⁵
+0119	胎		蟹开一平咍透	tʰai¹	tʰai¹	tʰai¹	tʰai¹	tʰai¹	tʰai¹
+0120	台	戏~	蟹开一平咍定	tʰai²	tʰai²	tʰai²	tʰai²	tʰai²	tʰai²
+0121	袋		蟹开一去代定	tai⁵	tai⁵	tai⁵	tai⁵	tai⁵	tai⁵
+0122	来		蟹开一平咍来	lai²	lai²	lai²	lai²	lai²	lai²
+0123	菜		蟹开一去代清	tsʰai⁵	tsʰai⁵	tsʰai⁵	tsʰai⁵	tsʰai⁵	tsʰai⁵
+0124	财		蟹开一平咍从	tsʰai²	tsʰai²	tsʰai²	tsʰai²	tsʰai²	tsʰai²
+0125	该		蟹开一平咍见	kai¹	kai¹	kai¹	kai¹	kai¹	kai¹
+0126	改		蟹开一上海见	kai³	kai³	kai³	kai³	kai³	kai³
+0127	开		蟹开一平咍溪	kʰai¹	kʰai¹	kʰai¹	kʰai¹	kʰai¹	kʰai¹
+0128	海		蟹开一上海晓	xai³	xai³	xai³	xai³	xai³	xai³
+0129	爱		蟹开一去代影	ŋai⁵	ŋai⁵	ŋai⁵	ŋai⁵	ŋai⁵	ŋai⁵
+0130	贝		蟹开一去泰帮	pei⁵	pei⁵	pei⁵	pei⁵	pei⁵	pei⁵
+0131	带	动	蟹开一去泰端	tai⁵	tai⁵	tai⁵	tai⁵	tai⁵	tai⁵
+0132	盖	动	蟹开一去泰见	kai⁵	kai⁵	kai⁵	kai⁵	kai⁵	kai⁵
+0133	害		蟹开一去泰匣	xai⁵	xai⁵	xai⁵	xai⁵	xai⁵	xai⁵
+0134	拜		蟹开二去怪帮	pai⁵	pai⁵	pai⁵	pai⁵	pai⁵	pai⁵
+0135	排		蟹开二平皆並	pʰai²	pʰai²	pʰai²	pʰai²	pʰai²	pʰai²
+0136	埋		蟹开二平皆明	mai²	mai²	mai²	mai²	mai²	mai²
+0137	戒		蟹开二去怪见	tɕiai⁵	tɕiai⁵	tɕiai⁵	tɕiai⁵	tɕiai⁵	tɕiai⁵
+0138	摆		蟹开二上蟹帮	pai³	pai³	pai³	pai³	pai³	pai³
+0139	派		蟹开二去卦滂	pʰai⁵	pʰai⁵	pʰai⁵	pʰai⁵	pʰai⁵	pʰai⁵
+0140	牌		蟹开二平佳並	pʰai²	pʰai²	pʰai²	pʰai²	pʰai²	pʰai²
+0141	买		蟹开二上蟹明	mai⁵	mai⁵	mai⁵	mai⁵	mai⁵	mai⁵
+0142	卖		蟹开二去卦明	mai⁵	mai⁵	mai⁵	mai⁵	mai⁵	mai⁵
+0143	柴		蟹开二平佳崇	tsʰai²	tsʰai²	tsʰai²	tsʰai²	tsʰai²	tsʰai²
+0144	晒		蟹开二去卦生	sai⁵	sai⁵	sai⁵	sai⁵	sai⁵	sai⁵
+0145	街		蟹开二平佳见	kai¹	kai¹	kai¹	kai¹	kai¹	kai¹
+0146	解	~开，理~	蟹开二上蟹见	kai³/tɕiai³文	kai³/tɕiai³文	kai³/tɕiai³文	kai³/tɕiai³文	kai³/tɕiai³文	kai³/tɕiai³文
+0147	鞋		蟹开二平佳匣	xai²	xai²	xai²	xai²	xai²	xai²
+0148	蟹		蟹开二上蟹匣	xai⁵/ɕiai⁵文	xai⁵/ɕiai⁵文	xai⁵/ɕiai⁵文	xai⁵/ɕiai⁵文	xai⁵/ɕiai⁵文	xai⁵/ɕiai⁵文
+0149	矮		蟹开二上蟹影	ŋai³	ŋai³	ŋai³	ŋai³	ŋai³	ŋai³
+0150	败		蟹开二去夬並	pai⁵	pai⁵	pai⁵	pai⁵	pai⁵	pai⁵
+0151	币		蟹开三去祭並	pi⁵	pi⁵	pi⁵	pi⁵	pi⁵	pi⁵
+0152	制		蟹开三去祭章	tsɿ⁵	tsɿ⁵	tsɿ⁵	tsɿ⁵	tsɿ⁵	tsɿ⁵
+0153	世		蟹开三去祭书	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵
+0154	艺		蟹开三去祭疑	li⁵/i⁵	ȵi⁵/i⁵	li⁵	ȵi⁵	ȵi⁵	ȵi⁵
+0155	米		蟹开四上荠明	mi⁵文	mi⁵文	mi⁵	mi⁵	mi⁵	mi⁵
+0156	低		蟹开四平齐端	ti¹	ti¹	ti¹	ti¹	ti¹	ti¹
+0157	梯		蟹开四平齐透	tʰi¹	tʰi¹	tʰi¹	tʰi¹	tʰi¹	tʰi¹
+0158	剃		蟹开四去霁透	tʰi⁵	tʰi⁵	tʰi⁵	tʰi⁵	tʰi⁵	tʰi⁵
+0159	弟		蟹开四上荠定	ti⁵	ti⁵	ti⁵	ti⁵	ti⁵	ti⁵
+0160	递		蟹开四去霁定	ti⁵	ti⁵	ti⁵	ti⁵	ti⁵	ti⁵
+0161	泥		蟹开四平齐泥	li²	ȵi²	li²	ȵi²	ȵi²	ȵi²
+0162	犁		蟹开四平齐来	li²	li²	li²	li²	li²	li²
+0163	西		蟹开四平齐心	ɕi¹	ɕi¹	ɕi¹	ɕi¹	ɕi¹	ɕi¹
+0164	洗		蟹开四上荠心	ɕi³	ɕi³	ɕi³	ɕi³	ɕi³	ɕi³
+0165	鸡		蟹开四平齐见	tɕi¹	tɕi¹	tɕi¹	tɕi¹	tɕi¹	tɕi¹
+0166	溪		蟹开四平齐溪	tɕʰi¹	tɕʰi¹/ɕi¹	tɕʰi¹	tɕʰi¹	tɕʰi¹	tɕʰi¹
+0167	契		蟹开四去霁溪	tɕʰi⁵	tɕʰi⁵文	tɕʰi⁵	tɕʰi⁵	tɕʰi⁵	tɕʰi⁵
+0168	系	联~	蟹开四去霁匣	ɕi⁵	ɕi⁵	ɕi⁵	ɕi⁵	ɕi⁵	ɕi⁵
+0169	杯		蟹合一平灰帮	pei¹	pei¹	pei¹	pei¹	pei¹	pei¹
+0170	配		蟹合一去队滂	pʰei⁵	pʰei⁵	pʰei⁵	pʰei⁵	pʰei⁵	pʰei⁵
+0171	赔		蟹合一平灰並	pʰei²	pʰei²	pʰei²	pʰei²	pʰei²	pʰei²
+0172	背	~诵	蟹合一去队並	pei⁵	pei⁵	pei⁵	pei⁵	pei⁵	pei⁵
+0173	煤		蟹合一平灰明	mei²	mei²	mei²	mei²	mei²	mei²
+0174	妹		蟹合一去队明	mei⁵	mei⁵	mei⁵	mei⁵	mei⁵	mei⁵
+0175	对		蟹合一去队端	tuei⁵	tuei⁵	tuei⁵	tuei⁵	tuei⁵	tuei⁵
+0176	雷		蟹合一平灰来	luei²	luei²	luei²	luei²	luei²	luei²
+0177	罪		蟹合一上贿从	tsuei⁵	tsuei⁵	tsuei⁵	tsuei⁵	tsuei⁵	tsuei⁵
+0178	碎		蟹合一去队心打～，～米	suei⁵白/tsʰuei⁵	suei⁵白/tsʰuei⁵	suei⁵白/tsʰuei⁵	suei⁵白/tsʰuei⁵	suei⁵白/tsʰuei⁵	suei⁵白/tsʰuei⁵
+0179	灰		蟹合一平灰晓	xuei¹文	xuei¹文	xuei¹文	xuei¹文	xuei¹文	xuei¹文
+0180	回		蟹合一平灰匣	xuei²	xuei²	xuei²	xuei²	xuei²	xuei²
+0181	外		蟹合一去泰疑	uai⁵	uai⁵	uai⁵	uai⁵	uai⁵	uai⁵
+0182	会	开~	蟹合一去泰匣	xuei⁵	xuei⁵	xuei⁵	xuei⁵	xuei⁵	xuei⁵
+0183	怪		蟹合二去怪见	kuai⁵	kuai⁵	kuai⁵	kuai⁵	kuai⁵	kuai⁵
+0184	块		蟹合二去怪溪	kʰuai⁵	kʰuai⁵	kʰuai⁵	kʰuai⁵	kʰuai⁵	kʰuai⁵
+0185	怀		蟹合二平皆匣	xuai²	xuai²	xuai²	xuai²	xuai²	xuai²
+0186	坏		蟹合二去怪匣	xuai⁵	xuai⁵	xuai⁵	xuai⁵	xuai⁵	xuai⁵
+0187	拐	~棍	蟹合二上蟹见	kuai³	kuai³	kuai³	kuai³	kuai³	kuai³
+0188	挂		蟹合二去卦见	kua⁵	kua⁵	kua⁵	kua⁵	kua⁵	kua⁵
+0189	歪		蟹合二平佳晓	uai¹	uai¹	uai¹	uai¹	uai¹	uai¹
+0190	画		蟹合二去卦匣	xua⁵	xua⁵	xua⁵	xua⁵	xua⁵	xua⁵
+0191	快		蟹合二去夬溪	kʰuai⁵	kʰuai⁵	kʰuai⁵	kʰuai⁵	kʰuai⁵	kʰuai⁵
+0192	话		蟹合二去夬匣	xua⁵	xua⁵	xua⁵	xua⁵	xua⁵	xua⁵
+0193	岁		蟹合三去祭心	suei⁵	suei⁵	suei⁵	suei⁵	suei⁵	suei⁵
+0194	卫		蟹合三去祭云	uei⁵	uei⁵	uei⁵	uei⁵	uei⁵	uei⁵
+0195	肺		蟹合三去废敷	fei⁵	fei⁵	fei⁵	fei⁵	fei⁵	fei⁵
+0196	桂		蟹合四去霁见	kuei⁵	kuei⁵	kuei⁵	kuei⁵	kuei⁵	kuei⁵
+0197	碑		止开三平支帮	pei¹	pei¹	pei¹	pei¹	pei¹	pei¹
+0198	皮		止开三平支並	pʰi²	pʰi²	pʰi²	pʰi²	pʰi²	pʰi²
+0199	被	~子	止开三上纸並	pi⁵	pi⁵白	pi⁵	pi⁵	pi⁵	pi⁵
+0200	紫		止开三上纸精	tsɿ³	tsɿ³	tsɿ³	tsɿ³	tsɿ³	tsɿ³
+0201	刺		止开三去寘清	tsɿ⁵白/tsʰɿ⁵	tsɿ⁵白/tsʰɿ⁵	tsɿ⁵白/tsʰɿ⁵	tsʰɿ⁵	tsɿ⁵	tsɿ⁵白/tsʰɿ⁵/li⁵
+0202	知		止开三平支知	tsɿ¹文	tsɿ¹文	tsɿ¹文	tsɿ¹	tsɿ¹	tsɿ¹文/ɕi¹
+0203	池		止开三平支澄	tsʰɿ²	tsʰɿ²	tsʰɿ²	tsʰɿ²	tsʰɿ²	tsʰɿ²/i²
+0204	纸		止开三上纸章	tsɿ³	tsɿ³	tsɿ³	tsɿ³	tsɿ³	tsɿ³/pi³
+0205	儿		止开三平支日	ɭ²	ɭ²	ɭ²	ɭ²	ɭ²	ɭ²/pʰi²
+0206	寄		止开三去寘见	tɕi⁵	tɕi⁵	tɕi⁵	tɕi⁵	tɕi⁵	tɕi⁵/pɨ⁵
+0207	骑		止开三平支群	tɕʰi²	tɕʰi²	tɕʰi²	tɕʰi²	tɕʰi²	tɕʰi²/mi²
+0208	蚁		止开三上纸疑	i⁵	i⁵	i⁵白/li⁵文	i⁵白/ȵi⁵文	i⁵白/ȵi⁵文	i⁵白/ȵi⁵文/ti⁵
+0209	义		止开三去寘疑	li⁵	ȵi⁵	li⁵	ȵi⁵	ȵi⁵	ȵi⁵
+0210	戏		止开三去寘晓	ɕi⁵	ɕi⁵	ɕi⁵	ɕi⁵	ɕi⁵	ɕi⁵
+0211	移		止开三平支以	i²	i²	i²	i²	i²	i²
+0212	比		止开三上旨帮	pi³	pi³	pi³	pi³	pi³	pi³
+0213	屁		止开三去至滂	pʰi⁵	pʰi⁵	pʰi⁵	pʰi⁵	pʰi⁵	pʰi⁵
+0214	鼻		止开三去至並	pɨ⁵	pɨ⁵	pɨ⁵	pɨ⁵	pɨ⁵	pɨ⁵
+0215	眉		止开三平脂明	mi²	mi²/mei²	mi²	mi²	mi²/mei²	mi²
+0216	地		止开三去至定	ti⁵	ti⁵新	ti⁵	ti⁵	ti⁵新	ti⁵
+0217	梨		止开三平脂来	li²	li²	li²	li²	li²	li²
+0218	资		止开三平脂精	tsɿ¹	tsɿ¹	tsɿ¹	tsɿ¹	tsɿ¹	tsɿ¹
+0219	死		止开三上旨心	sɿ³	sɿ³	sɿ³	sɿ³	sɿ³	sɿ³
+0220	四		止开三去至心	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵
+0221	迟		止开三平脂澄	tsʰɿ²	tsʰɿ²	tsʰɿ²	tsʰɿ²	tsʰɿ²	tsʰɿ²
+0222	指		止开三上旨章	tsɿ³	tsɿ³	tsɿ³	tsɿ³	tsɿ³	tsɿ³
+0223	师		止开三平脂生	sɿ¹	sɿ¹	sɿ¹	sɿ¹	sɿ¹	sɿ¹
+0224	二		止开三去至日	ɭ⁵	ɭ⁵	ɭ⁵	ɭ⁵	ɭ⁵	ɭ⁵
+0225	饥	~饿	止开三平脂见	tɕi¹	tɕi¹	tɕi¹	tɕi¹	tɕi¹	tɕi¹
+0226	器		止开三去至溪	tɕʰi⁵	tɕʰi⁵	tɕʰi⁵	tɕʰi⁵	tɕʰi⁵	tɕʰi⁵
+0227	姨		止开三平脂以	i²	i²	i²	i²	i²	i²
+0228	李		止开三上止来	li⁵	li⁵	li⁵	li⁵	li⁵	li⁵
+0229	子		止开三上止精	tsɿ³	tsɿ³	tsɿ³	tsɿ³	tsɿ³	tsɿ³
+0230	字		止开三去志从	tsɿ⁵	tsɿ⁵	tsɿ⁵	tsɿ⁵	tsɿ⁵	tsɿ⁵
+0231	丝		止开三平之心	sɿ¹	sɿ¹	sɿ¹	sɿ¹	sɿ¹	sɿ¹
+0232	祠		止开三平之邪	tsʰɿ²	tsʰɿ²	tsʰɿ²	tsʰɿ²	tsʰɿ²	tsʰɿ²
+0233	寺		止开三去志邪	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵
+0234	治		止开三去志澄	tsɿ⁵	tsɿ⁵	tsɿ⁵	tsɿ⁵	tsɿ⁵	tsɿ⁵
+0235	柿		止开三上止崇	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵
+0236	事		止开三去志崇	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵
+0237	使		止开三上止生	sɿ³	sɿ³	sɿ³	sɿ³	sɿ³	sɿ³
+0238	试		止开三去志书	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵
+0239	时		止开三平之禅	sɿ²	sɿ²	sɿ²	sɿ²	sɿ²	sɿ²
+0240	市		止开三上纸禅	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵	sɿ⁵
+0241	耳		止开三上止日	ɭ⁵	ɭ⁵	ɭ⁵	ɭ⁵	ɭ⁵	ɭ⁵
+0242	记		止开三去志见	tɕi⁵	tɕi⁵	tɕi⁵	tɕi⁵	tɕi⁵	tɕi⁵
+0243	棋		止开三平之群	tɕʰi²	tɕʰi²	tɕʰi²	tɕʰi²	tɕʰi²	tɕʰi²
+0244	喜		止开三上止晓	ɕi³	ɕi³	ɕi³	ɕi³	ɕi³	ɕi³
+0245	意		止开三去志影	i⁵	i⁵	i⁵	i⁵	i⁵	i⁵
+0246	几	~个	止开三上尾见	tɕi³	tɕi³	tɕi³	tɕi³	tɕi³	tɕi³
+0247	气		止开三去未溪	tɕʰi⁵	tɕʰi⁵	tɕʰi⁵	tɕʰi⁵	tɕʰi⁵	tɕʰi⁵
+0248	希		止开三平微晓	ɕi¹	ɕi¹	ɕi¹	ɕi¹	ɕi¹	ɕi¹
+0249	衣		止开三平微影	i¹	i¹	i¹	i¹	i¹	i¹
+0250	嘴		止合三上纸精	tsuei³	tsuei³	tsuei³	tsuei³	tsuei³	tsuei³
+0251	随		止合三平支邪	suei²	suei²	suei²	suei²	suei²	suei²
+0252	吹		止合三平支昌	tsʰuei¹	tsʰuei¹	tsʰuei¹	tsʰuei¹	tsʰuei¹	tsʰuei¹
+0253	垂		止合三平支禅	tsʰuei²	tsʰuei²	tsʰuei²	tsʰuei²	tsʰuei²	tsʰuei²
+0254	规		止合三平支见	kuei¹	kuei¹	kuei¹	kuei¹	kuei¹	kuei¹
+0255	亏		止合三平支溪	kʰuei¹	kʰuei¹	kʰuei¹	kʰuei¹	kʰuei¹	kʰuei¹
+0256	跪		止合三上纸群	kuei⁵	kuei⁵	kuei⁵	kuei⁵	kuei⁵	kuei⁵
+0257	危		止合三平支疑	uei²	uei²	uei²	uei²	uei²	uei²
+0258	类		止合三去至来	luei⁵	luei⁵	luei⁵	luei⁵	luei⁵	luei⁵
+0259	醉		止合三去至精	tsuei⁵	tsuei⁵	tsuei⁵	tsuei⁵	tsuei⁵	tsuei⁵
+0260	追		止合三平脂知	tsuei¹	tsuei¹	tsuei¹	tsuei¹	tsuei¹	tsuei¹
+0261	锤		止合三平脂澄	tsʰuei²	tsʰuei²	tsʰuei²	tsʰuei²	tsʰuei²	tsʰuei²
+0262	水		止合三上旨书	suei³	suei³	suei³	suei³	suei³	suei³
+0263	龟		止合三平脂见	kuei¹	kuei¹	kuei¹	kuei¹	kuei¹	kuei¹
+0264	季		止合三去至见	tɕi⁵	tɕi⁵	tɕi⁵	tɕi⁵	tɕi⁵	tɕi⁵
+0265	柜		止合三去至群	kuei⁵	kuei⁵	kuei⁵	kuei⁵	kuei⁵	kuei⁵
+0266	位		止合三去至云	uei⁵	uei⁵	uei⁵	uei⁵	uei⁵	uei⁵
+0267	飞		止合三平微非	fei¹	fei¹	fei¹	fei¹	fei¹	fei¹
+0268	费		止合三去未敷	fei⁵	fei⁵	fei⁵	fei⁵	fei⁵	fei⁵
+0269	肥		止合三平微奉	fei²	fei²	fei²	fei²	fei²	fei²
+0270	尾		止合三上尾微	uei⁵	uei⁵	uei⁵	i⁵白/uei⁵	uei⁵	uei⁵
+0271	味		止合三去未微	uei⁵	uei⁵	uei⁵	uei⁵文	uei⁵	uei⁵
+0272	鬼		止合三上尾见	kuei³	kuei³	kuei³	kuei³	kuei³	kuei³
+0273	贵		止合三去未见	kuei⁵	kuei⁵	kuei⁵	kuei⁵	kuei⁵	kuei⁵
+0274	围		止合三平微云	uei²	uei²	uei²	uei²	uei²	uei²
+0275	胃		止合三去未云	uei⁵	uei⁵	uei⁵	uei⁵	uei⁵	uei⁵
+0276	宝		效开一上皓帮	pau³	pau³	pau³	pau³	pau³	pau³
+0277	抱		效开一上皓並	pau⁵	pau⁵	pau⁵	pau⁵	pau⁵	pau⁵
+0278	毛		效开一平豪明	mau²	mau²	mau²	mau²	mau²	mau²
+0279	帽		效开一去号明	mau⁵	mau⁵	mau⁵	mau⁵	mau⁵	mau⁵
+0280	刀		效开一平豪端	tau¹	tau¹	tau¹	tau¹	tau¹	tau¹
+0281	讨		效开一上皓透	tʰau³	tʰau³	tʰau³	tʰau³	tʰau³	tʰau³
+0282	桃		效开一平豪定	tʰau²	tʰau²	tʰau²	tʰau²	tʰau²	tʰau²
+0283	道		效开一上皓定	tau⁵	tau⁵	tau⁵	tau⁵	tau⁵	tau⁵
+0284	脑		效开一上皓泥	lau⁵	lau⁵	lau⁵	lau⁵	lau⁵	lau⁵
+0285	老		效开一上皓来	lau⁵	lau⁵	lau⁵	lau⁵	lau⁵	lau⁵
+0286	早		效开一上皓精	tsau³	tsau³	tsau³	tsau³	tsau³	tsau³
+0287	灶		效开一去号精	tsau⁵	tsau⁵	tsau⁵	tsau⁵	tsau⁵	tsau⁵
+0288	草		效开一上皓清	tsʰau³	tsʰau³	tsʰau³	tsʰau³	tsʰau³	tsʰau³
+0289	糙		效开一去号清	tsʰau⁵	tsʰau⁵	tsʰau⁵	tsʰau⁵	tsʰau⁵	tsʰau⁵
+0290	造		效开一上皓从	tsʰau⁵	tsʰau⁵	tsʰau⁵	tsʰau⁵	tsʰau⁵	tsʰau⁵
+0291	嫂		效开一上皓心	sau³	sau³	sau³	sau³	sau³	sau³
+0292	高		效开一平豪见	kau¹	kau¹	kau¹	kau¹	kau¹	kau¹
+0293	靠		效开一去号溪	kʰau⁵	kʰau⁵	kʰau⁵	kʰau⁵	kʰau⁵	kʰau⁵
+0294	熬		效开一平豪疑	ŋau²	ŋau²	ŋau²	ŋau²	ŋau²	ŋau²
+0295	好		效开一上皓晓	xau³	xau³	xau³	xau³	xau³	xau³
+0296	号	名	效开一去号匣	xau⁵	xau⁵	xau⁵	xau⁵	xau⁵	xau⁵
+0297	包		效开二平肴帮	pau¹	pau¹	pau¹	pau¹	pau¹	pau¹
+0298	饱		效开二上巧帮	pau³	pau³	pau³	pau³	pau³	pau³
+0299	炮		效开二去效滂	pʰau⁵	pʰau⁵	pʰau⁵	pʰau⁵	pʰau⁵	pʰau⁵
+0300	猫		效开二平肴明	mau²	mau²	mau²	mau²	mau²	mau²
+0301	闹		效开二去效泥	lau⁵	lau⁵	lau⁵	lau⁵	lau⁵	lau⁵
+0302	罩		效开二去效知	tsau⁵	tsau⁵	tsau⁵	tsau⁵	tsau⁵	tsau⁵
+0303	抓		效开二平肴庄	tsua¹	tsua¹	tsua¹	tsua¹	tsua¹	tsua¹
+0304	找		效开二上巧庄	tsau³	tsau³	tsau³	tsau³	tsau³	tsau³
+0305	抄		效开二平肴初	tsʰau¹	tsʰau¹	tsʰau¹	tsʰau¹	tsʰau¹	tsʰau¹
+0306	交		效开二平肴见	tɕiau¹	tɕiau¹	tɕiau¹	tɕiau¹	tɕiau¹	tɕiau¹
+0307	敲		效开二平肴溪	kʰau¹	kʰau¹	kʰau¹	kʰau¹	kʰau¹	kʰau¹
+0308	孝		效开二去效晓	ɕiau⁵	ɕiau⁵	ɕiau⁵	ɕiau⁵	ɕiau⁵	ɕiau⁵
+0309	校	学~	效开二去效匣	ɕiau⁵	ɕiau⁵	ɕiau⁵	ɕiau⁵	ɕiau⁵	ɕiau⁵
+0310	表	手~	效开三上小帮	piau³	piau³	piau³	piau³	piau³	piau³
+0311	票		效开三去笑滂	pʰiau⁵	pʰiau⁵	pʰiau⁵	pʰiau⁵	pʰiau⁵	pʰiau⁵
+0312	庙		效开三去笑明	miau⁵	miau⁵	miau⁵	miau⁵	miau⁵	miau⁵
+0313	焦		效开三平宵精	tɕiau¹	tɕiau¹	tɕiau¹	tɕiau¹	tɕiau¹	tɕiau¹
+0314	小		效开三上小心	ɕiau³	ɕiau³	ɕiau³	ɕiau³	ɕiau³	ɕiau³
+0315	笑		效开三去笑心	ɕiau⁵	ɕiau⁵	ɕiau⁵	ɕiau⁵	ɕiau⁵	ɕiau⁵
+0316	朝	~代	效开三平宵澄	tsʰau²	tsʰau²	tsʰau²	tsʰau²	tsʰau²	tsʰau²
+0317	照		效开三去笑章	tsau⁵	tsau⁵	tsau⁵	tsau⁵	tsau⁵	tsau⁵
+0318	烧		效开三平宵书	sau¹	sau¹	sau¹	sau¹	sau¹	sau¹
+0319	绕	~线	效开三去笑日	zau⁵	zau⁵	zau⁵	zau⁵	zau⁵	zau⁵
+0320	桥		效开三平宵群	tɕʰiau²	tɕʰiau²	tɕʰiau²	tɕʰiau²	tɕʰiau²	tɕʰiau²
+0321	轿		效开三去笑群	tɕiau⁵	tɕiau⁵	tɕiau⁵	tɕiau⁵	tɕiau⁵	tɕiau⁵
+0322	腰		效开三平宵影	iau¹	iau¹	iau¹	iau¹	iau¹	iau¹
+0323	要	重~	效开三去笑影	iau⁵	iau⁵	iau⁵	iau⁵	iau⁵	iau⁵
+0324	摇		效开三平宵以	iau²	iau²	iau²	iau²	iau²	iau²
+0325	鸟		效开四上筱端	liau³	liau³	liau³	liau³	liau³	liau³
+0326	钓		效开四去啸端	tiau⁵	tiau⁵	tiau⁵	tiau⁵	tiau⁵	tiau⁵
+0327	条		效开四平萧定	tʰiau²	tʰiau²	tʰiau²	tʰiau²	tʰiau²	tʰiau²
+0328	料		效开四去啸来	liau⁵	liau⁵	liau⁵	liau⁵	liau⁵	liau⁵
+0329	箫		效开四平萧心	ɕiau¹	ɕiau¹	ɕiau¹	ɕiau¹	ɕiau¹	ɕiau¹
+0330	叫		效开四去啸见	tɕiau⁵	tɕiau⁵	tɕiau⁵	tɕiau⁵	tɕiau⁵	tɕiau⁵
+0331	母		流开一上厚明	mu⁵	mu⁵	mu⁵	mu⁵	mu⁵	mu⁵
+0332	抖		流开一上厚端	tʰəu³	tʰəu³	tʰəu³	tʰəu³	tʰəu³	tʰəu³
+0333	偷		流开一平侯透	tʰəu¹	tʰəu¹	tʰəu¹	tʰəu¹	tʰəu¹	tʰəu¹
+0334	头		流开一平侯定	tʰəu²	tʰəu²	tʰəu²	tʰəu²	tʰəu²	tʰəu²
+0335	豆		流开一去候定	təu⁵	təu⁵	təu⁵	təu⁵	təu⁵	təu⁵
+0336	楼		流开一平侯来	ləu²	ləu²	ləu²	ləu²	ləu²	ləu²
+0337	走		流开一上厚精	tsəu³	tsəu³	tsəu³	tsəu³	tsəu³	tsəu³
+0338	凑		流开一去候清	tsʰəu⁵	tsʰəu⁵	tsʰəu⁵	tsʰəu⁵	tsʰəu⁵	tsʰəu⁵
+0339	钩		流开一平侯见	kəu¹	kəu¹	kəu¹	kəu¹	kəu¹	kəu¹
+0340	狗		流开一上厚见	kəu³	kəu³	kəu³	kəu³	kəu³	kəu³
+0341	够		流开一去候见	kəu⁵	kəu⁵	kəu⁵	kəu⁵	kəu⁵	kəu⁵
+0342	口		流开一上厚溪	kʰəu³	kʰəu³	kʰəu³	kʰəu³	kʰəu³	kʰəu³
+0343	藕		流开一上厚疑	ŋəu⁵	ŋəu⁵	ŋəu⁵	ŋəu⁵	ŋəu⁵	ŋəu⁵
+0344	后	前~	流开一上厚匣	xəu⁵	xəu⁵	xəu⁵	xəu⁵	xəu⁵	xəu⁵
+0345	厚		流开一上厚匣	xəu⁵	xəu⁵	xəu⁵	xəu⁵	xəu⁵	xəu⁵
+0346	富		流开三去宥非	fu⁵	fu⁵	fu⁵	fu⁵	fu⁵	fu⁵
+0347	副		流开三去宥敷	fu⁵	fu⁵	fu⁵	fu⁵	fu⁵	fu⁵
+0348	浮		流开三平尤奉	fu²	fu²	fu²	fu²	fu²	fu²
+0349	妇		流开三上有奉	fu⁵	fu⁵	fu⁵	fu⁵	fu⁵	fu⁵
+0350	流		流开三平尤来	liəu²	liəu²	liəu²	liəu²	liəu²	liəu²
+0351	酒		流开三上有精	tɕiəu³	tɕiəu³	tɕiəu³	tɕiəu³	tɕiəu³	tɕiəu³
+0352	修		流开三平尤心	ɕiəu¹	ɕiəu¹	ɕiəu¹	ɕiəu¹	ɕiəu¹	ɕiəu¹
+0353	袖		流开三去宥邪	ɕiəu⁵	ɕiəu⁵	ɕiəu⁵	ɕiəu⁵	ɕiəu⁵	ɕiəu⁵
+0354	抽		流开三平尤彻	tsʰəu¹	tsʰəu¹	tsʰəu¹	tsʰəu¹	tsʰəu¹	tsʰəu¹
+0355	绸		流开三平尤澄	tsʰəu²	tsʰəu²	tsʰəu²	tsʰəu²	tsʰəu²	tsʰəu²
+0356	愁		流开三平尤崇	tsʰəu²	tsʰəu²	tsʰəu²	tsʰəu²	tsʰəu²	tsʰəu²
+0357	瘦		流开三去宥生	səu⁵	səu⁵	səu⁵	səu⁵	səu⁵	səu⁵
+0358	州		流开三平尤章	tsəu¹	tsəu¹	tsəu¹	tsəu¹	tsəu¹	tsəu¹
+0359	臭	香~	流开三去宥昌	tsʰəu⁵	tsʰəu⁵	tsʰəu⁵	tsʰəu⁵	tsʰəu⁵	tsʰəu⁵
+0360	手		流开三上有书	səu³	səu³	səu³	səu³	səu³	səu³
+0361	寿		流开三去宥禅	səu⁵	səu⁵	səu⁵	səu⁵	səu⁵	səu⁵
+0362	九		流开三上有见	tɕiəu³	tɕiəu³	tɕiəu³	tɕiəu³	tɕiəu³	tɕiəu³
+0363	球		流开三平尤群	tɕʰiəu²	tɕʰiəu²	tɕʰiəu²	tɕʰiəu²	tɕʰiəu²	tɕʰiəu²
+0364	舅		流开三上有群	tɕiəu⁵	tɕiəu⁵	tɕiəu⁵	tɕiəu⁵	tɕiəu⁵	tɕiəu⁵
+0365	旧		流开三去宥群	tɕiəu⁵	tɕiəu⁵	tɕiəu⁵	tɕiəu⁵	tɕiəu⁵	tɕiəu⁵
+0366	牛		流开三平尤疑	liəu²	ȵiəu²	liəu²	ȵiəu²	ȵiəu²	ȵiəu²
+0367	休		流开三平尤晓	ɕiəu¹	ɕiəu¹	ɕiəu¹	ɕiəu¹	ɕiəu¹	ɕiəu¹
+0368	优		流开三平尤影	iəu¹	iəu¹	iəu¹	iəu¹	iəu¹	iəu¹
+0369	有		流开三上有云	iəu⁵	iəu⁵	iəu⁵	iəu⁵	iəu⁵	iəu⁵
+0370	右		流开三去宥云	iəu⁵	iəu⁵	iəu⁵	iəu⁵	iəu⁵	iəu⁵
+0371	油		流开三平尤以	iəu²	iəu²	iəu²	iəu²	iəu²	iəu²
+0372	丢		流开三平幽端	tiəu¹	tiəu¹	tiəu¹	tiəu¹	tiəu¹	tiəu¹
+0373	幼		流开三去幼影	iəu⁵	iəu⁵	iəu⁵	iəu⁵	iəu⁵	iəu⁵
+0374	贪		咸开一平覃透	tʰã¹	tʰan¹	tʰan¹	tʰan¹	tʰan¹	tʰan¹
+0375	潭		咸开一平覃定	tʰã²	tʰan²	tʰan²	tʰan²	tʰan²	tʰan²
+0376	南		咸开一平覃泥	lã²	lan²	lan²	lan²	lan²	lan²
+0377	蚕		咸开一平覃从	tsʰã²	tsʰan²	tsʰan²	tsʰan²	tsʰan²	tsʰan²
+0378	感		咸开一上感见	kã³	kan³	kan³	kan³	kan³	kan³
+0379	含		咸开一平覃匣	xã²	xan²	xan²	xan²	xan²	xan²
+0380	暗		咸开一去勘影	ŋã⁵	ŋan⁵	ŋan⁵	ŋan⁵	ŋan⁵	ŋan⁵
+0381	搭		咸开一入合端	tæ⁷	tæ⁷	tæ⁷	tæ⁷	tæ⁷	tæ⁷
+038⁷	踏		咸开一入合透	tʰæ⁷	tʰæ⁷	tʰæ⁷	tʰæ⁷	tʰæ⁷	tʰæ⁷
+0383	拉		咸开一入合来	la⁷	la⁷	la⁷	la⁷	la⁷	la⁷
+0384	杂		咸开一入合从	tsæ⁷	tsæ⁷	tsæ⁷	tsæ⁷	tsæ⁷	tsæ⁷
+038⁷	鸽		咸开一入合见	kuə⁷	kuə⁷	kuə⁷	kuə⁷	kuə⁷	kuə⁷
+0386	盒		咸开一入合匣	xuə⁷	xuə⁷	xuə⁷	xuə⁷	xuə⁷	xuə⁷
+0387	胆		咸开一上敢端	tã³	tan³	tan³	tan³	tan³	tan³
+0388	毯		咸开一上敢透	tʰã³	tʰan³	tʰan³	tʰan³	tʰan³	tʰan³
+0389	淡		咸开一上敢定	tã⁵	tan⁵	tan⁵	tan⁵	tan⁵	tan⁵
+0390	蓝		咸开一平谈来	lã²	lan²	lan²	lan²	lan²	lan²
+0391	三		咸开一平谈心	sã¹	san¹	san¹	san¹	san¹	san¹
+0392	甘		咸开一平谈见	kã¹	kan¹	kan¹	kan¹	kan¹	kan¹
+0393	敢		咸开一上敢见	kã³	kan³	kan³	kan³	kan³	kan³
+0394	喊		咸开一上敢晓	xã³	xan³	xan³	xan³	xan³	xan³
+039⁷	塔		咸开一入盍透	tʰæ⁷	tʰæ⁷	tʰæ⁷	tʰæ⁷	tʰæ⁷	tʰæ⁷
+0396	蜡		咸开一入盍来	læ⁷	læ⁷	læ⁷	læ⁷	læ⁷	læ⁷
+0397	赚		咸开二去陷澄	tsuã⁵	tsuan⁵	tsuan⁵	tsuan⁵	tsuan⁵	tsuan⁵
+0398	杉	~木	咸开二平咸生	sa¹	sa¹	sa¹	sa¹	sa¹	sa¹/san¹
+0399	减		咸开二上豏见	tɕiɛ̃³	tɕiɛn³	tɕiɛn³	tɕiɛn³	tɕiɛn³	tɕiɛn³文
+0400	咸	~淡	咸开二平咸匣	xã²	xan²	xan²	xan²	xan²	xan²
+0401	插		咸开二入洽初	tsʰæ⁷	tsʰæ⁷	tsʰæ⁷	tsʰæ⁷	tsʰæ⁷	tsʰæ⁷
+040⁷	闸		咸开二入洽崇	tsæ⁷	tsæ⁷	tsæ⁷	tsæ⁷	tsæ⁷	tsæ⁷
+0403	夹		咸开二入洽见	tɕiæ⁷	tɕiæ⁷	tɕiæ⁷	tɕiæ⁷	tɕiæ⁷	tɕiæ⁷
+0404	衫		咸开二平衔生	sã¹	san¹	san¹	san¹	san¹	san¹
+0405	监		咸开二平衔见	tɕiɛ̃¹	tɕiɛn¹	tɕiɛn¹	tɕiɛn¹	tɕiɛn¹	tɕiɛn¹
+0406	岩		咸开二平衔疑	ŋai²	ŋai²	ŋai²	ŋai²	ŋai²	ŋai²
+0407	甲		咸开二入狎见	tɕiæ⁷	tɕiæ⁷	tɕiæ⁷	tɕiæ⁷	tɕiæ⁷	tɕiæ⁷
+0408	鸭		咸开二入狎影	iæ⁷	iæ⁷	iæ⁷	iæ⁷	iæ⁷	iæ⁷
+0409	黏	~液	咸开三平盐泥	liɛ̃²	liɛn²	liɛn²		ȵiɛn²	
+0410	尖		咸开三平盐精	tɕiɛ̃¹	tɕiɛn¹	tɕiɛn¹	tɕiɛn¹	tɕiɛn¹	tɕiɛn¹
+0411	签	~名	咸开三平盐清	tɕʰiɛ̃¹	tɕʰiɛn¹	tɕʰiɛn¹	tɕʰiɛn¹	tɕʰiɛn¹	tɕʰiɛn¹
+0412	占	~领	咸开三去艳章	tsã⁵	tsan⁵	tsan⁵	tsan⁵	tsan⁵	tsan⁵
+0413	染		咸开三上琰日	zã⁵	zan⁵	zan⁵	zan⁵	zan⁵	zan⁵
+0414	钳		咸开三平盐群	tɕʰiɛ̃²	tɕʰiɛn²	tɕʰiɛn²	tɕʰiɛn²	tɕʰiɛn²	tɕʰiɛn²
+0415	验		咸开三去艳疑	liɛ̃⁵	liɛn⁵	liɛn⁵	ȵiɛn⁵	ȵiɛn⁵	liɛn⁵
+0416	险		咸开三上琰晓	ɕiɛ̃³	ɕiɛn³	ɕiɛn³	ɕiɛn³	ɕiɛn³	ɕiɛn³
+0417	厌		咸开三去艳影	iɛ̃⁵	iɛn⁵	iɛn⁵	iɛn⁵	iɛn⁵	iɛn⁵
+0418	炎		咸开三平盐云	iɛ̃²	iɛn²	iɛn²	iɛn²	iɛn²	iɛn²
+0419	盐		咸开三平盐以	iɛ̃²	iɛn²	iɛn²	iɛn²	iɛn²	iɛn²
+04⁷0	接		咸开三入叶精	tɕie⁷	tɕie⁷	tɕie⁷	tɕie⁷	tɕie⁷	tɕie⁷
+04⁷1	折	~叠	咸开三入叶章	tse⁷	tse⁷	tse⁷	tse⁷	tse⁷	tse⁷
+04⁷⁷	叶	树~	咸开三入叶以	ie⁷	ie⁷	ie⁷	ie⁷	ie⁷	ie⁷
+0423	剑		咸开三去酽见	tɕiɛ̃⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵
+0424	欠		咸开三去酽溪	tɕʰiɛ̃⁵	tɕʰiɛn⁵	tɕʰiɛn⁵	tɕʰiɛn⁵	tɕʰiɛn⁵	tɕʰiɛn⁵
+0425	严		咸开三平严疑	liɛ̃²	ȵiɛn²	liɛn²	ȵiɛn²	ȵiɛn²	ȵiɛn²
+04⁷6	业		咸开三入业疑	lie⁷	ȵie⁷	lie⁷	ȵie⁷	ȵie⁷	ȵie⁷
+0427	点		咸开四上忝端	tiɛ̃³	tiɛn³	tiɛn³	tiɛn³	tiɛn³	tiɛn³
+0428	店		咸开四去㮇端	tiɛ̃⁵	tiɛn⁵	tiɛn⁵	tiɛn⁵	tiɛn⁵	tiɛn⁵
+0429	添		咸开四平添透	tʰiɛ̃¹	tʰiɛn¹	tʰiɛn¹	tʰiɛn¹	tʰiɛn¹	tʰiɛn¹
+0430	甜		咸开四平添定	tʰiɛ̃²	tʰiɛn²	tʰiɛn²	tʰiɛn²	tʰiɛn²	tʰiɛn²
+0431	念		咸开四去㮇泥	liɛ̃⁵	liɛn⁵	liɛn⁵	ȵiɛn⁵	ȵiɛn⁵	ȵiɛn⁵
+0432	嫌		咸开四平添匣	ɕiɛ̃²	ɕiɛn²	ɕiɛn²	ɕiɛn²	ɕiɛn²	ɕiɛn²
+0433	跌		咸开四入帖端	tie⁷	tie⁷	tie⁷	tie⁷	tie⁷/tʰie⁷	tie⁷
+0434	贴		咸开四入帖透	tʰie⁷	tʰie⁷	tʰie⁷	tʰie⁷	tʰie⁷	tʰie⁷文
+043⁷	碟		咸开四入帖定	tie⁷	tie⁷	tie⁷	tie⁷	tie⁷	tie⁷
+0436	协		咸开四入帖匣	ɕie⁷	ɕie⁷	ɕie⁷	ɕie⁷	ɕie⁷	ɕie⁷
+0437	犯		咸合三上范奉	fã⁵	fan⁵	fan⁵	fan⁵	fan⁵	fan⁵
+0438	法		咸合三入乏非	fæ⁷	fæ⁷	fæ⁷	fæ⁷	fæ⁷	fæ⁷
+0439	品		深开三上寝滂	pʰin³	pʰin³	pʰin³	pʰin³	pʰin³	pʰin³
+0440	林		深开三平侵来	lin²	lin²	lin²	lin²	lin²	lin²
+0441	浸		深开三去沁精	tɕʰin⁵	tɕʰin⁵	tɕʰin⁵	tɕʰin⁵	tɕʰin⁵	tɕʰin⁵
+0442	心		深开三平侵心	ɕin¹	ɕin¹	ɕin¹	ɕin¹	ɕin¹	ɕin¹
+0443	寻		深开三平侵邪	ɕyn²	ɕyn²	ɕyn²	ɕyn²	ɕyn²	ɕyn²
+0444	沉		深开三平侵澄	tsʰən²	tsʰən²	tsʰən²	tsʰən²	tsʰən²	tsʰən²
+0445	参	人~	深开三平侵生	sən¹	sən¹	sən¹	sən¹	sən¹	sən¹
+0446	针		深开三平侵章	tsən¹	tsən¹	tsən¹	tsən¹	tsən¹	tsən¹
+0447	深		深开三平侵书	sən¹	sən¹	sən¹	sən¹	sən¹	sən¹
+0448	任	责~	深开三去沁日	zən⁵	zən⁵	zən⁵	zən⁵	zən⁵	zən⁵
+0449	金		深开三平侵见	tɕin¹	tɕin¹	tɕin¹	tɕin¹	tɕin¹	tɕin¹
+0450	琴		深开三平侵群	tɕʰin²	tɕʰin²	tɕʰin²	tɕʰin²	tɕʰin²	tɕʰin²
+0451	音		深开三平侵影	in¹	in¹	in¹	in¹	in¹	in¹
+04⁷⁷	立		深开三入缉来	lɨ⁷	lɨ⁷	lɨ⁷	lɨ⁷	lɨ⁷	lɨ⁷
+04⁷3	集		深开三入缉从	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷
+04⁷4	习		深开三入缉邪	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷
+04⁷⁷	汁		深开三入缉章	tsɨ⁷	tʂʅ⁷	tsɨ⁷	tsɨ⁷	tsɨ⁷	tsɨ⁷
+04⁷6	十		深开三入缉禅	sɨ⁷	ʂʅ⁷	sɨ⁷	sɨ⁷	sɨ⁷	sɨ⁷
+04⁷7	入		深开三入缉日	zɨ⁷/zʉ⁷	ʐʅ⁷/zʉ⁷	zɨ⁷/zʉ⁷	zɨ⁷/zʉ⁷	zɨ⁷/zʉ⁷	zɨ⁷/zʉ⁷
+04⁷8	急		深开三入缉见	tɕɨ⁷文	tɕɨ⁷文	tɕɨ⁷文	tɕɨ⁷文	tɕɨ⁷文	tɕɨ⁷文
+04⁷9	及		深开三入缉群	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷
+0460	吸		深开三入缉晓	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	tɕʰɨ⁷	ɕɨ⁷	tɕɨ⁷
+0461	单	简~	山开一平寒端	tã¹	tan¹	tan¹	tan¹	tan¹	tan¹
+0462	炭		山开一去翰透	tʰã⁵	tʰan⁵	tʰan⁵	tʰan⁵	tʰan⁵	tʰan⁵
+0463	弹	~琴	山开一平寒定	tʰã²	tʰan²	tʰan²	tʰan²	tʰan²	tʰan²
+0464	难	困~	山开一平寒泥	lã²	lan²	lan²	lan²	lan²	lan²
+0465	兰		山开一平寒来	lã²	lan²	lan²	lan²	lan²	lan²
+0466	懒		山开一上旱来	lã⁵	lan⁵	lan⁵	lan⁵	lan⁵	lan⁵
+0467	烂		山开一去翰来	lã⁵	lan⁵	lan⁵	lan⁵	lan⁵	lan⁵
+0468	伞		山开一上旱心	sã³	san³	san³	san³	san³	san³
+0469	肝		山开一平寒见	kã¹	kan¹	kan¹	kan¹	kan¹	kan¹
+0470	看	~见	山开一去翰溪	kʰã⁵	kʰan⁵	kʰan⁵	kʰan⁵	kʰan⁵	kʰan⁵
+0471	岸		山开一去翰疑	ŋã⁵	ŋan⁵	ŋan⁵	ŋan⁵	ŋan⁵	ŋan⁵
+0472	汉		山开一去翰晓	xã⁵	xan⁵	xan⁵	xan⁵	xan⁵	xan⁵
+0473	汗		山开一去翰匣	xã⁵	xan⁵	xan⁵	xan⁵	xan⁵	xan⁵
+0474	安		山开一平寒影	ŋã¹	ŋan¹	ŋan¹	ŋan¹	ŋan¹	ŋan¹
+047⁷	达		山开一入曷定	tæ⁷	tæ⁷	tæ⁷	tæ⁷	tæ⁷	tæ⁷
+0476	辣		山开一入曷来	læ⁷	læ⁷	læ⁷	læ⁷	læ⁷	læ⁷
+0477	擦		山开一入曷清	tsʰæ⁷	tsʰæ⁷	tsʰæ⁷	tsʰæ⁷	tsʰæ⁷	tsʰæ⁷
+0478	割		山开一入曷见	kuə⁷	kuə⁷	kuə⁷	kuə⁷	kuə⁷	kuə⁷
+0479	渴		山开一入曷溪	kʰuə⁷	kʰuə⁷	kʰuə⁷	kʰuə⁷	kʰuə⁷	kʰuə⁷
+0480	扮		山开二去裥帮	pã⁵	pan⁵	pan⁵	pan⁵	pan⁵	pan⁵
+0481	办		山开二去裥並	pã⁵	pan⁵	pan⁵	pan⁵	pan⁵	pan⁵
+0482	铲		山开二上产初	tsʰuã³	tsʰuan³	tsʰuan³	tsʰuan³	tsʰuan³	tsʰuan³
+0483	山		山开二平山生	sã¹	san¹	san¹	san¹	san¹	san¹
+0484	产		山开二上产生	tsʰã³	tsʰan³	tsʰan³	tsʰan³	tsʰan³	tsʰan³
+0485	间	一~屋，时~	山开二平山见	kã¹白/tɕiɛ̃¹文	kan¹白/tɕiɛn¹	kan¹白/tɕiɛn¹	kan¹白/tɕiɛn¹	kan¹白/tɕiɛn¹	kan¹白/tɕiɛn¹
+0486	眼		山开二上产疑	iɛ̃⁵	iɛn⁵文	iɛn⁵文	iɛn⁵文	iɛn⁵文	iɛn⁵文
+0487	限	~制，权~	山开二上产匣	ɕiɛ̃⁵	ɕiɛn⁵	ɕian⁵白/ɕiɛn⁵	ɕian⁵	ɕiɛn⁵/ɕian⁵	ɕiɛn⁵
+0488	八		山开二入黠帮	pæ⁷	pæ⁷	pæ⁷	pæ⁷	pæ⁷	pæ⁷
+0489	扎		山开二入黠庄	tsæ⁷	tsæ⁷	tsæ⁷	tsæ⁷	tsæ⁷	tsæ⁷
+0490	杀		山开二入黠生	sæ⁷	sæ⁷	sæ⁷	sæ⁷	sæ⁷	sæ⁷
+0491	班		山开二平删帮	pã¹	pan¹	pan¹	pan¹	pan¹	pan¹
+0492	板		山开二上潸帮	pã³	pan³	pan³	pan³	pan³	pan³
+0493	慢		山开二去谏明	mã⁵	man⁵	man⁵	man⁵	man⁵	man⁵
+0494	奸		山开二平删见	tɕiɛ̃¹	tɕiɛn¹	tɕiɛn¹	tɕiɛn¹	tɕiɛn¹	tɕiɛn¹
+0495	颜		山开二平删疑	iɛ̃²	iɛn²	iɛn²	iɛn²	iɛn²	iɛn²
+0496	瞎		山开二入辖晓	ɕiæ⁷	ɕiæ⁷	ɕiæ⁷	ɕiæ⁷	ɕiæ⁷	ɕiæ⁷
+0497	变		山开三去线帮	piɛ̃⁵	piɛn⁵	piɛn⁵	piɛn⁵	piɛn⁵	piɛn⁵
+0498	骗	欺~	山开三去线滂	pʰiɛ̃⁵	pʰiɛn⁵	pʰiɛn⁵	pʰiɛn⁵	pʰiɛn⁵	pʰiɛn⁵
+0499	便	方~	山开三去线並	piɛ̃⁵	piɛn⁵	piɛn⁵	piɛn⁵	piɛn⁵	piɛn⁵
+0500	棉		山开三平仙明	miɛ̃²	miɛn²	miɛn²	miɛn²	miɛn²	miɛn²
+0501	面	~孔	山开三去线明	miɛ̃⁵	miɛn⁵	miɛn⁵	miɛn⁵	miɛn⁵	miɛn⁵
+0502	连		山开三平仙来	liɛ̃²	liɛn²	liɛn²	liɛn²	liɛn²	liɛn²
+0503	剪		山开三上狝精	tɕiɛ̃³	tɕiɛn³	tɕiɛn³	tɕiɛn³	tɕiɛn³	tɕiɛn³
+0504	浅		山开三上狝清	tɕʰiɛ̃³	tɕʰiɛn³	tɕʰiɛn³	tɕʰiɛn³	tɕʰiɛn³	tɕʰiɛn³
+0505	钱		山开三平仙从	tɕʰiɛ̃²	tɕʰiɛn²	tɕʰiɛn²	tɕʰiɛn²	tɕʰiɛn²	tɕʰiɛn²
+0506	鲜		山开三平仙心	ɕyɛ̃¹	ɕyɛn¹	ɕyɛn¹	ɕyɛn¹	ɕyɛn¹	ɕyɛn¹
+0507	线		山开三去线心	ɕiɛ̃⁵	ɕiɛn⁵	ɕiɛn⁵	ɕiɛn⁵	ɕiɛn⁵	ɕiɛn⁵
+0508	缠		山开三平仙澄	tsʰã²	tsʰan²	tsʰan²	tsʰan²	tsʰan²	tsʰan²
+0509	战		山开三去线章	tsã⁵	tsan⁵	tsan⁵	tsan⁵	tsan⁵	tsan⁵
+0510	扇	名	山开三去线书	sã⁵	san⁵	san⁵	san⁵	san⁵	san⁵
+0511	善		山开三上狝禅	sã⁵	san⁵	san⁵	san⁵	san⁵	san⁵
+0512	件		山开三上狝群	tɕiɛ̃⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵
+0513	延		山开三平仙以	iai²	iai²白/iɛn²文	iai²白/iɛn²文	iai²	iai²	iai²白/iɛn²文
+0⁷14	别	~人	山开三入薛帮	pie⁷	pie⁷	pie⁷	pie⁷	pie⁷	pie⁷
+0⁷1⁷	灭		山开三入薛明	mie⁷	mie⁷	mie⁷	mie⁷	mie⁷	mie⁷
+0⁷16	列		山开三入薛来	lie⁷	lie⁷	lie⁷	lie⁷	lie⁷	lie⁷
+0⁷17	撤		山开三入薛彻	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷
+0⁷18	舌		山开三入薛船	se⁷	se⁷	se⁷	se⁷	se⁷	se⁷
+0⁷19	设		山开三入薛书	se⁷	se⁷	se⁷	se⁷	se⁷	se⁷
+0⁷⁷0	热		山开三入薛日	ze⁷	ze⁷	ze⁷	ze⁷	ze⁷	ze⁷
+0⁷⁷1	杰		山开三入薛群	tɕie⁷	tɕie⁷	tɕie⁷	tɕie⁷	tɕie⁷	tɕie⁷
+0⁷⁷⁷	孽		山开三入薛疑	lie⁷	ȵie⁷	lie⁷	ȵie⁷	ȵie⁷	ȵie⁷
+0523	建		山开三去愿见	tɕiɛ̃⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵
+0524	健		山开三去愿群	tɕiɛ̃⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵
+0525	言		山开三平元疑	iɛ̃²	iɛn²	iɛn²	iɛn²	iɛn²	iɛn²
+0⁷⁷6	歇		山开三入月晓	ɕie⁷	ɕie⁷	ɕie⁷	ɕie⁷	ɕie⁷	ɕie⁷
+0527	扁		山开四上铣帮	piɛ̃³	piɛn³	piɛn³	piɛn³	piɛn³	piɛn³
+0528	片		山开四去霰滂	pʰiɛ̃⁵	pʰiɛn⁵	pʰiɛn⁵	pʰiɛn⁵	pʰiɛn⁵	pʰiɛn⁵
+0529	面	~粉	山开四去霰明	miɛ̃⁵	miɛn⁵	miɛn⁵	miɛn⁵	miɛn⁵	miɛn⁵
+0530	典		山开四上铣端	tiɛ̃³	tiɛn³	tiɛn³	tiɛn³	tiɛn³	tiɛn³
+0531	天		山开四平先透	tʰiɛ̃¹	tʰiɛn¹	tʰiɛn¹	tʰiɛn¹	tʰiɛn¹	tʰiɛn¹
+0532	田		山开四平先定	tʰiɛ̃²	tʰiɛn²	tʰiɛn²	tʰiɛn²	tʰiɛn²	tʰiɛn²
+0533	垫		山开四去霰定	tiɛ̃⁵	tiɛn⁵	tiɛn⁵	tiɛn⁵	tiɛn⁵	tiɛn⁵
+0534	年		山开四平先泥	liɛ̃²	ȵiɛn²	liɛn²	ȵiɛn²	ȵiɛn²	ȵiɛn²
+0535	莲		山开四平先来	liɛ̃²	liɛn²	liɛn²	liɛn²	liɛn²	liɛn²
+0536	前		山开四平先从	tɕʰiɛ̃²	tɕʰiɛn²	tɕʰiɛn²	tɕʰiɛn²	tɕʰiɛn²	tɕʰiɛn²
+0537	先	~后	山开四平先心	ɕiɛ̃¹	ɕiɛn¹	ɕiɛn¹	ɕiɛn¹	ɕiɛn¹	ɕiɛn¹
+0538	肩		山开四平先见	tɕiɛ̃¹	tɕiɛn¹	tɕiɛn¹	tɕiɛn¹	tɕiɛn¹	tɕiɛn¹
+0539	见		山开四去霰见	tɕiɛ̃⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵	tɕiɛn⁵
+0540	牵		山开四平先溪	tɕʰiɛ̃¹	tɕʰiɛn¹	tɕʰiɛn¹	tɕʰiɛn¹	tɕʰiɛn¹	tɕʰiɛn¹
+0541	显		山开四上铣晓	ɕiɛ̃³	ɕiɛn³	ɕiɛn³	ɕiɛn³	ɕiɛn³	ɕiɛn³
+0542	现		山开四去霰匣	ɕiɛ̃⁵	ɕiɛn⁵	ɕiɛn⁵	ɕiɛn⁵	ɕiɛn⁵	ɕiɛn⁵
+0543	烟		山开四平先影	iɛ̃¹	iɛn¹	iɛn¹	iɛn¹	iɛn¹	iɛn¹
+0⁷44	憋		山开四入屑帮	pie⁷	pie⁷	pie⁷	pie⁷	pie⁷	pi⁷
+0⁷4⁷	篾		山开四入屑明	mi⁷	mi⁷	mi⁷	mi⁷	mi⁷	mi⁷
+0⁷46	铁		山开四入屑透	tʰie⁷	tʰie⁷	tʰie⁷	tʰie⁷	tʰie⁷	tʰie⁷
+0⁷47	捏		山开四入屑泥	lie⁷	ȵie⁷	lie⁷	ȵie⁷	ȵie⁷	ȵie⁷
+0⁷48	节		山开四入屑精	tɕie⁷	tɕie⁷	tɕie⁷	tɕie⁷	tɕie⁷	tɕie⁷
+0⁷49	切	动	山开四入屑清	tɕʰie⁷	tɕʰie⁷	tɕʰie⁷	tɕʰie⁷	tɕʰie⁷	tɕʰie⁷
+0⁷⁷0	截		山开四入屑从	tɕʰie⁷	tɕie⁷	tɕʰie⁷	tɕʰie⁷	tɕʰie⁷	tɕʰie⁷
+0⁷⁷1	结		山开四入屑见	tɕie⁷	tɕie⁷	tɕie⁷	tɕie⁷	tɕie⁷	tɕie⁷
+0552	搬		山合一平桓帮	pã¹	pan¹	pan¹	pan¹	pan¹	pan¹
+0553	半		山合一去换帮	pã⁵	pan⁵	pan⁵	pan⁵	pan⁵	pan⁵
+0554	判		山合一去换滂	pʰã⁵	pʰan⁵	pʰan⁵	pʰan⁵	pʰan⁵	pʰan⁵
+0555	盘		山合一平桓並	pʰã²	pʰan²	pʰan²	pʰan²	pʰan²	pʰan²
+0556	满		山合一上缓明	mã⁵	man⁵	man⁵	man⁵	man⁵	man⁵
+0557	端		山合一平桓端	tuã¹	tuan¹	tuan¹	tuan¹	tuan¹	tuan¹
+0558	短		山合一上缓端	tuã³	tuan³	tuan³	tuan³	tuan³	tuan³
+0559	断		山合一上缓定	tuã⁵	tuan⁵	tuan⁵	tuan⁵	tuan⁵	tuan⁵
+0560	暖		山合一上缓泥	luã⁵	luan⁵	luan⁵	luan⁵	luan⁵	luan⁵
+0561	乱		山合一去换来	luã⁵	luan⁵	luan⁵	luan⁵	luan⁵	luan⁵
+0562	酸		山合一平桓心	suã¹	suan¹	suan¹	suan¹	suan¹	suan¹
+0563	算		山合一去换心	suã⁵	suan⁵	suan⁵	suan⁵	suan⁵	suan⁵
+0564	官		山合一平桓见	kuã¹	kuan¹	kuan¹	kuan¹	kuan¹	kuan¹
+0565	宽		山合一平桓溪	kʰuã¹	kʰuan¹	kʰuan¹	kʰuan¹	kʰuan¹	kʰuan¹
+0566	欢		山合一平桓晓	xuã¹	xuan¹	xuan¹	xuan¹	xuan¹	xuan¹
+0567	完		山合一平桓匣	uã²	uan²	uan²	uan²	uan²	uan²
+0568	换		山合一去换匣	xuã⁵	xuan⁵	xuan⁵	xuan⁵	xuan⁵	xuan⁵
+0569	碗		山合一上缓影	uã³	uan³	uan³	uan³	uan³	uan³
+0⁷70	拨		山合一入末帮	pə⁷	pə⁷	pə⁷	pə⁷	pə⁷	pə⁷
+0⁷71	泼		山合一入末滂	pʰə⁷	pʰə⁷	pʰə⁷	pʰə⁷	pʰə⁷	pʰə⁷
+0⁷7⁷	末		山合一入末明	mə⁷	mə⁷	mə⁷	mə⁷	mə⁷	mə⁷
+0⁷73	脱		山合一入末透	tʰuə⁷	tʰuə⁷	tʰuə⁷	tʰuə⁷	tʰuə⁷	tʰuə⁷
+0⁷74	夺		山合一入末定	tʰuə⁷	tʰuə⁷	tʰuə⁷白/tuə⁷	tʰuə⁷	tʰuə⁷	tʰuə⁷
+0⁷7⁷	阔		山合一入末溪	kʰue⁷	kʰue⁷	kʰue⁷文	kʰue⁷	kʰue⁷	kʰue⁷
+0⁷76	活		山合一入末匣	xuə⁷	xuə⁷	xuə⁷	xuə⁷	xuə⁷	xuə⁷
+0577	顽		山合二平山疑	uã²	uan²	uan²	uan²	uan²	uan²
+0⁷78	滑		山合二入黠匣	xuæ⁷	xuæ⁷	xuæ⁷	xuæ⁷	xuæ⁷	xuæ⁷
+0⁷79	挖		山合二入黠影	uæ⁷白/ua⁷文	uæ⁷白/ua⁷文	uæ⁷白/ua⁷文	uæ⁷白/ua⁷文	uæ⁷白/ua⁷文	uæ⁷白/ua⁷文
+0580	闩		山合二平删生		suan¹			suan¹	
+0581	关	~门	山合二平删见	kuã¹	kuan¹	kuan¹	kuan¹	kuan¹	kuan¹
+0582	惯		山合二去谏见	kuã⁵	kuan⁵	kuan⁵	kuan⁵	kuan⁵	kuan⁵
+0583	还	动	山合二平删匣	xuã²	xuan²	xuan²	xuan²	xuan²	xuan²
+0584	还	副	山合二平删匣	xai²	xai²	xai²	xai²	xai²	xai²
+0585	弯		山合二平删影	uã¹	uan¹	uan¹	uan¹	uan¹	uan¹
+0⁷86	刷		山合二入辖生	suæ⁷	suæ⁷	suæ⁷	suæ⁷	suæ⁷	suæ⁷
+0⁷87	刮		山合二入辖见	kuæ⁷	kuæ⁷	kuæ⁷	kuæ⁷	kuæ⁷	kuæ⁷
+0588	全		山合三平仙从	tɕʰyɛ̃²	tɕʰyɛn²	tɕʰyɛn²	tɕʰyɛn²	tɕʰyɛn²	tɕʰyɛn²
+0589	选		山合三上狝心	ɕyɛ̃³	ɕyɛn³	ɕyɛn³	ɕyɛn³	ɕyɛn³	ɕyɛn³
+0590	转		山合三上狝知	tsuã³	tsuan³	tsuan³	tsuan³	tsuan³	tsuan³
+0591	传	~统	山合三平仙澄	tsʰuã²	tsʰuan²	tsʰuan²	tsʰuan²	tsʰuan²	tsʰuan²
+0592	传	~记	山合三去线澄	tsuã⁵	tsuan⁵	tsuan⁵	tsuan⁵	tsuan⁵	tsuan⁵
+0593	砖		山合三平仙章	tsuã¹	tsuan¹	tsuan¹	tsuan¹	tsuan¹	tsuan¹
+0594	船		山合三平仙船	tsʰuã²	tsʰuan²	tsʰuan²	tsʰuan²	tsʰuan²	tsʰuan²
+0595	软		山合三上狝日	zuã⁵	zuan⁵	zuan⁵	zuan⁵	zuan⁵	zuan⁵
+0596	卷		山合三上狝见	tɕyɛ̃³	tɕyɛn³	tɕyɛn³	tɕyɛn³	tɕyɛn³	tɕyɛn³
+0597	圈	圆~	山合三平仙溪	tɕʰyɛ̃¹	tɕʰyɛn¹	tɕʰyɛn¹	tɕʰyɛn¹	tɕʰyɛn¹	tɕʰyɛn¹
+0598	权		山合三平仙群	tɕʰyɛ̃²	tɕʰyɛn²	tɕʰyɛn²	tɕʰyɛn²	tɕʰyɛn²	tɕʰyɛn²
+0599	圆		山合三平仙云	yɛ̃²	yɛn²	yɛn²	yɛn²	yɛn²	yɛn²
+0600	院		山合三去线云	yɛ̃⁵	yɛn⁵	yɛn⁵	yɛn⁵	yɛn⁵	uan⁵老/yɛn⁵新
+0601	铅	~笔	山合三平仙以	tɕʰiɛ̃²	tɕʰiɛn²	yɛn²/tɕʰiɛn²	yɛn²/tɕʰiɛn²	yɛn²/tɕʰiɛn²	yɛn²/tɕʰiɛn²
+060⁷	绝		山合三入薛从	tɕye⁷	tɕye⁷	tɕye⁷新	tɕye⁷新	tɕye⁷新	tɕye⁷新
+0603	雪		山合三入薛心	ɕye⁷	ɕye⁷	ɕye⁷	ɕye⁷	ɕye⁷	ɕye⁷
+0604	反		山合三上阮非	fã³	fan³	fan³	fan³	fan³	fan³
+0605	翻		山合三平元敷	fã¹	fan¹	fan¹	fan¹	fan¹	fan¹
+0606	饭		山合三去愿奉	fã⁵	fan⁵	fan⁵	fan⁵	fan⁵	fan⁵
+0607	晚		山合三上阮微	uã⁵	uan⁵	uan⁵	uan⁵	uan⁵	uan⁵
+0608	万		山合三去愿微	uã⁵	uan⁵	uan⁵	uan⁵	uan⁵	uan⁵
+0609	劝		山合三去愿溪	tɕʰyɛ̃⁵	tɕʰyɛn⁵	tɕʰyɛn⁵	tɕʰyɛn⁵	tɕʰyɛn⁵	tɕʰyɛn⁵
+0610	原		山合三平元疑	yɛ̃²	yɛn²	yɛn²	yɛn²	yɛn²	yɛn²
+0611	冤		山合三平元影	yɛ̃¹	yɛn¹	yɛn¹	yɛn¹	yɛn¹	yɛn¹
+0612	园		山合三平元云	yɛ̃²	yɛn²	yɛn²	yɛn²	yɛn²	yɛn²
+0613	远		山合三上阮云	yɛ̃⁵	yɛn⁵	yɛn⁵	yɛn⁵	yɛn⁵	yɛn⁵
+0614	发	头~	山合三入月非	fæ⁷	fæ⁷	fæ⁷	fæ⁷	fæ⁷	fæ⁷
+061⁷	罚		山合三入月奉	fæ⁷	fæ⁷	fæ⁷	fæ⁷	fæ⁷	fæ⁷
+0616	袜		山合三入月微	uæ⁷	uæ⁷	uæ⁷	uæ⁷	uæ⁷	uæ⁷
+0617	月		山合三入月疑	ye⁷	ye⁷	ye⁷	ye⁷	ye⁷	ye⁷
+0618	越		山合三入月云	ye⁷	ye⁷	ye⁷	ye⁷	ye⁷	ye⁷
+0619	县		山合四去霰匣	ɕiɛ̃⁵	ɕiɛn⁵	ɕiɛn⁵	ɕiɛn⁵	ɕiɛn⁵	ɕiɛn⁵
+06⁷0	决		山合四入屑见	tɕye⁷	tɕye⁷	tɕye⁷	tɕye⁷	tɕye⁷	tɕye⁷
+06⁷1	缺		山合四入屑溪	tɕʰye⁷	tɕʰye⁷	tɕʰye⁷	tɕʰye⁷	tɕʰye⁷	tɕʰye⁷
+06⁷⁷	血		山合四入屑晓	ɕie⁷白/ɕye⁷文	ɕie⁷白/ɕye⁷文	ɕie⁷白/ɕye⁷文	ɕie⁷白/ɕye⁷文	ɕie⁷白/ɕye⁷文	ɕie⁷白/ɕye⁷文
+0623	吞		臻开一平痕透	tʰən¹	tʰən¹	tʰən¹	tʰən¹	tʰən¹	tʰən¹
+0624	根		臻开一平痕见	kən¹	kən¹	kən¹	kən¹	kən¹	kən¹
+0625	恨		臻开一去恨匣	xən⁵	xən⁵	xən⁵	xən⁵	xən⁵	xən⁵
+0626	恩		臻开一平痕影	ŋən¹	ŋən¹	ŋən¹	ŋən¹	ŋən¹	ŋən¹
+0627	贫		臻开三平真並	pʰin²	pʰin²	pʰin²	pʰin²	pʰin²	pʰin²
+0628	民		臻开三平真明	min²	min²	min²	min²	min²	min²
+0629	邻		臻开三平真来	lin²	lin²	lin²	lin²	lin²	lin²
+0630	进		臻开三去震精	tɕin⁵	tɕin⁵	tɕin⁵	tɕin⁵	tɕin⁵	tɕin⁵
+0631	亲		臻开三平真清	tɕʰin¹	tɕʰin¹	tɕʰin¹	tɕʰin¹	tɕʰin¹	tɕʰin¹
+0632	新		臻开三平真心	ɕin¹	ɕin¹	ɕin¹	ɕin¹	ɕin¹	ɕin¹
+0633	镇		臻开三去震知	tsən⁵	tsən⁵	tsən⁵	tsən⁵	tsən⁵	tsən⁵
+0634	陈		臻开三平真澄	tsʰən²	tsʰən²	tsʰən²	tsʰən²	tsʰən²	tsʰən²
+0635	震		臻开三去震章	tsən⁵	tsən⁵	tsən⁵	tsən⁵	tsən⁵	tsən⁵
+0636	神		臻开三平真船	sən²	sən²	sən²	sən²	sən²	sən²
+0637	身		臻开三平真书	sən¹	sən¹	sən¹	sən¹	sən¹	sən¹
+0638	辰		臻开三平真禅	sən²	sən²	sən²	sən²	sən²	sən²
+0639	人		臻开三平真日	zən²	zən²	zən²	zən²	zən²	zən²
+0640	认		臻开三去震日	zən⁵	zən⁵	zən⁵	zən⁵	zən⁵	zən⁵
+0641	紧		臻开三上轸见	tɕin³	tɕin³	tɕin³	tɕin³	tɕin³	tɕin³
+0642	银		臻开三平真疑	in²	in²	in²	in²	in²	in²
+0643	印		臻开三去震影	in⁵	in⁵	in⁵	in⁵	in⁵	in⁵
+0644	引		臻开三上轸以	in⁵	in⁵	in⁵	in⁵	in⁵	in⁵
+064⁷	笔		臻开三入质帮	pɨ⁷	pɨ⁷	pɨ⁷	pɨ⁷	pɨ⁷	pɨ⁷
+0646	匹		臻开三入质滂	pʰi³	pʰi³白/pʰɨ⁷文	pʰi³白/pʰɨ⁷文	pʰi³白/pʰɨ⁷文	pʰi³白/pʰɨ⁷文	pʰi³白/pʰɨ⁷文
+0647	密		臻开三入质明	mɨ⁷	mɨ⁷	mɨ⁷	mɨ⁷	mɨ⁷	mɨ⁷
+0648	栗		臻开三入质来	lɨ⁷	lɨ⁷	lɨ⁷	lɨ⁷	lɨ⁷	lɨ⁷
+0649	七		臻开三入质清	tɕʰɨ⁷	tɕʰɨ⁷	tɕʰɨ⁷	tɕʰɨ⁷	tɕʰɨ⁷	tɕʰɨ⁷
+06⁷0	侄		臻开三入质澄	tsɨ⁷	tʂʅ⁷	tsɨ⁷	tsɨ⁷	tsɨ⁷	tsɨ⁷
+06⁷1	虱		臻开三入质生	se⁷	se⁷	se⁷	se⁷	se⁷	se⁷
+06⁷⁷	实		臻开三入质船	sɨ⁷	ʂʅ⁷	sɨ⁷	sɨ⁷	sɨ⁷	sɨ⁷
+06⁷3	失		臻开三入质书	sɨ⁷	ʂʅ⁷	sɨ⁷	sɨ⁷	sɨ⁷	sɨ⁷
+06⁷4	日		臻开三入质日	zɨ⁷	ʐʅ⁷	zɨ⁷	zɨ⁷	zɨ⁷	zɨ⁷
+06⁷⁷	吉		臻开三入质见	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷
+06⁷6	一		臻开三入质影	ɨ⁷	ɨ⁷	ɨ⁷	ɨ⁷	ɨ⁷	ɨ⁷
+0657	筋		臻开三平殷见	tɕin¹	tɕin¹	tɕin¹	tɕin¹	tɕin¹	tɕin¹
+0658	劲		臻开三去焮见	tɕin⁵	tɕin⁵	tɕin⁵	tɕin⁵	tɕin⁵	tɕin⁵
+0659	勤		臻开三平殷群	tɕʰin²	tɕʰin²	tɕʰin²	tɕʰin²	tɕʰin²	tɕʰin²
+0660	近		臻开三上隐群	tɕin⁵	tɕin⁵	tɕin⁵	tɕin⁵	tɕin⁵	tɕin⁵
+0661	隐		臻开三上隐影	in³	in³	in³	in³	in³	in³
+0662	本		臻合一上混帮	pən³	pən³	pən³/poŋ³	poŋ³	poŋ³	pən³
+0663	盆		臻合一平魂並	pʰən²	pʰən²	pʰən²本/pʰoŋ²旁	pʰoŋ²	pʰoŋ²	pʰən²
+0664	门		臻合一平魂明	mən²	mən²	mən²	moŋ²	moŋ²	mən²
+0665	墩		臻合一平魂端	tən¹	tən¹	tən¹	tən¹	tən¹	tən¹
+0666	嫩		臻合一去慁泥	lən⁵	lən⁵	lən⁵	lən⁵	lən⁵	lən⁵
+0667	村		臻合一平魂清	tsʰən¹	tsʰən¹	tsʰən¹	tsʰən¹	tsʰən¹	tsʰən¹
+0668	寸		臻合一去慁清	tsʰən⁵	tsʰən⁵	tsʰən⁵	tsʰən⁵	tsʰən⁵	tsʰən⁵
+0669	蹲		臻合一平魂从	tən²	tən²	tən²		tən²	tən²
+0670	孙		臻合一平魂心	sən¹	sən¹	sən¹	sən¹	sən¹	sən¹
+0671	滚		臻合一上混见	kuən³	kuən³	koŋ³	kuən³/koŋ³	koŋ³	kuən³
+0672	困		臻合一去慁溪	kʰuən⁵	kʰuən⁵	kuən⁵/kʰoŋ⁵旁	kʰoŋ⁵旁	kʰoŋ⁵	kʰuən⁵
+0673	婚		臻合一平魂晓	xuən¹	xuən¹	xoŋ¹	xoŋ¹	xoŋ¹	xuən¹
+0674	魂		臻合一平魂匣	xuən²	xuən²	xoŋ²	xoŋ²	xoŋ²	xuən²
+0675	温		臻合一平魂影	uən¹	uən¹	uən¹	oŋ¹	oŋ¹	uən¹
+0676	卒		臻合一入没精	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷
+0677	骨		臻合一入没见	kʉ⁷	kʉ⁷	kʉ⁷	kʉ⁷	kʉ⁷	kʉ⁷
+0678	轮		臻合三平谆来	lən²	lən²	lən²	lən²	lən²	lən²
+0679	俊		臻合三去稕精	tɕyn⁵	tɕyn⁵	tɕyn⁵	tɕyn⁵	tɕyn⁵	tɕyn⁵
+0680	笋		臻合三上准心	sən³	sən³	sən³	sən³	sən³	sən³
+0681	准		臻合三上准章	tsuən³	tsuən³	tsuən³本/tsoŋ³旁	tsoŋ³	tsoŋ³	tsuən³
+0682	春		臻合三平谆昌	tsʰuən¹	tsʰuən¹	tsʰoŋ¹	tsʰoŋ¹	tsʰoŋ¹	tsʰuən¹
+0683	唇		臻合三平谆船	suən²	tsʰuən²	suən²/soŋ²	soŋ²	soŋ²	suən²
+0684	顺		臻合三去稕船	suən⁵	suən⁵	suən⁵本/soŋ⁵旁	soŋ⁵	soŋ⁵	suən⁵
+0685	纯		臻合三平谆禅	suən²	suən²	suən²本/soŋ²旁	soŋ²	soŋ²	suən²
+0686	闰		臻合三去稕日	zuən⁵	zuən⁵	zuən⁵本/zoŋ⁵旁	zoŋ⁵	zoŋ⁵	zuən⁵
+0687	均		臻合三平谆见	tɕyn¹	tɕyn¹	tɕyn¹	tɕyn¹	tɕyn¹	tɕyn¹
+0688	匀		臻合三平谆以	yn²	yn²	yn²	yn²	yn²	yn²
+0689	律		臻合三入术来	lʉ⁷	lʉ⁷	lʉ⁷	lʉ⁷	lʉ⁷	lʉ⁷
+0690	出		臻合三入术昌	tsʰʉ⁷	tsʰʉ⁷	tsʰʉ⁷	tsʰʉ⁷	tsʰʉ⁷	tsʰʉ⁷
+0691	橘		臻合三入术见	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷
+0692	分	动	臻合三平文非	fən¹	fən¹	fən¹/foŋ¹	foŋ¹	foŋ¹	fən¹
+0693	粉		臻合三上吻非	fən³	fən³	fən³旁/foŋ³本	foŋ³	foŋ³	fən³
+0694	粪		臻合三去问非	fən⁵	fən⁵	fən⁵旁/foŋ⁵本	foŋ⁵	foŋ⁵	fən⁵
+0695	坟		臻合三平文奉	fən²	fən²	foŋ²旁	foŋ²	foŋ²	fən²
+0696	蚊		臻合三平文微	uən²	uən²	uən²本/oŋ²旁	oŋ²	oŋ²	uən²
+0697	问		臻合三去问微	uən⁵	uən⁵	uən⁵本/oŋ⁵旁	uən⁵本/oŋ⁵旁	oŋ⁵旁/oŋ⁵	uən⁵
+0698	军		臻合三平文见	tɕyn¹	tɕyn¹	tɕyn¹	tɕyn¹	tɕyn¹	tɕyn¹
+0699	裙		臻合三平文群	tɕʰyn²	tɕʰyn²	tɕʰyn²	tɕʰyn²	tɕʰyn²	tɕʰyn²
+0700	熏	臭~~	臻合三平文晓	ɕyn¹	ɕyn¹	ɕyn¹本/ɕyoŋ¹旁	ɕyoŋ¹	ɕyoŋ¹/ɕyn¹本	ɕyoŋ¹旁
+0701	云		臻合三平文云	yn²	yn²	yn²	yn²	yn²	yn²
+0702	运		臻合三去问云	yn⁵	yn⁵	yn⁵	yn⁵	yn⁵	yn⁵
+0703	佛	~像	臻合三入物奉	fʉ⁷	fʉ⁷	fʉ⁷	fʉ⁷	fʉ⁷	fʉ⁷
+0704	物		臻合三入物微	ʉ⁷	ʉ⁷	ʉ⁷	ʉ⁷	ʉ⁷	ʉ⁷
+0705	帮		宕开一平唐帮	pɑŋ¹	paŋ¹	pɒŋ¹	pɑŋ¹	paŋ¹	pɑŋ¹
+0706	忙		宕开一平唐明	mɑŋ²	maŋ²	mɒŋ²	mɑŋ²	maŋ²	mɑŋ²
+0707	党		宕开一上荡端	tã³	taŋ³	tan³	tan³	tan³	tan³
+0708	汤		宕开一平唐透	tʰã¹	tʰaŋ¹	tʰan¹	tʰan¹	tʰan¹	tʰan¹
+0709	糖		宕开一平唐定	tʰã²	tʰaŋ²	tʰan²	tʰan²	tʰan²	tʰan²
+0710	浪		宕开一去宕来	lã⁵	laŋ⁵	lan⁵	lan⁵	lan⁵	lan⁵
+0711	仓		宕开一平唐清	tsʰã¹	tsʰaŋ¹	tsʰan¹	tsʰan¹	tsʰan¹	tsʰan¹
+0712	钢	名	宕开一平唐见	kã¹	kaŋ¹	kan¹	kan¹	kan¹	kan¹
+0713	糠		宕开一平唐溪	kʰã¹	kʰaŋ¹	kʰan¹	kʰan¹	kʰan¹	kʰan¹
+0714	薄	形	宕开一入铎並	pə⁷	pə⁷	pə⁷	pə⁷	pə⁷	pə⁷
+071⁷	摸		宕开一入铎明	mo⁷	mo⁷	mo⁷	mo⁷	mo⁷	mo⁷
+0716	托		宕开一入铎透	tʰuə⁷	tʰuə⁷	tʰuə⁷	tʰuə⁷	tʰuə⁷	tʰuə⁷
+0717	落		宕开一入铎来	luə⁷	luə⁷	luə⁷	luə⁷	luə⁷	luə⁷
+0718	作		宕开一入铎精	tsuə⁷	tsuə⁷	tsuə⁷	tsuə⁷	tsuə⁷	tsuə⁷
+0719	索		宕开一入铎心	suə⁷	suə⁷	suə⁷	suə⁷	suə⁷	suə⁷
+07⁷0	各		宕开一入铎见	kuə⁷	kuə⁷	kuə⁷	kuə⁷	kuə⁷	kuə⁷
+07⁷1	鹤		宕开一入铎匣	xuə⁷	xuə⁷	xuə⁷	xuə⁷	xuə⁷	xuə⁷
+07⁷⁷	恶	善~	宕开一入铎影	ŋuə⁷	ŋuə⁷	ŋuə⁷	ŋuə⁷	ŋuə⁷	ŋuə⁷
+0723	娘		宕开三平阳泥	liã²	ȵiaŋ²	lian²	ȵian²	ȵian²	ȵian²
+0724	两	斤~	宕开三上养来	liã⁵	liaŋ⁵	lian⁵	lian⁵	lian⁵	lian⁵
+0725	亮		宕开三去漾来	liã⁵	liaŋ⁵	lian⁵	lian⁵	lian⁵	lian⁵
+0726	浆		宕开三平阳精	tɕiã¹	tɕiaŋ¹	tɕian¹	tɕian¹	tɕian¹	tɕian¹
+0727	抢		宕开三上养清	tɕʰiã³	tɕʰiaŋ³	tɕʰian³	tɕʰian³	tɕʰian³	tɕʰian³
+0728	匠		宕开三去漾从	tɕiã⁵	tɕiaŋ⁵	tɕian⁵	tɕian⁵	tɕian⁵	tɕian⁵
+0729	想		宕开三上养心	ɕiã³	ɕiaŋ³	ɕian³	ɕian³	ɕian³	ɕian³
+0730	像		宕开三上养邪	tɕʰiã⁵白/ɕiã⁵	tɕʰiaŋ⁵白/ɕiaŋ⁵	tɕʰian⁵白/ɕian⁵	tɕʰian⁵白	tɕʰian⁵白/ɕian⁵	tɕʰian⁵白/ɕian⁵
+0731	张	量	宕开三平阳知	tsã¹文	tsaŋ¹文	tsan¹文	tsan¹	tsan¹文	tsan¹文
+0732	长	~短	宕开三平阳澄	tsʰã²	tsʰaŋ²	tsʰan²	tsʰan²	tsʰan²	tsʰan²
+0733	装		宕开三平阳庄	tsuɑŋ¹	tsuaŋ¹	tsuɒŋ¹	tsuɑŋ¹	tsuaŋ¹	tsuɑŋ¹
+0734	壮		宕开三去漾庄	tsuɑŋ⁵	tsuaŋ⁵	tsuɒŋ⁵	tsuɑŋ⁵	tsuaŋ⁵	tsuɑŋ⁵
+0735	疮		宕开三平阳初	tsʰuɑŋ¹	tsʰuaŋ¹	tsʰuɒŋ¹	tsʰuɑŋ¹	tsʰuaŋ¹	tsʰuɑŋ¹
+0736	床		宕开三平阳崇	tsʰuɑŋ²	tsʰuaŋ²	tsʰuɒŋ²	tsʰuɑŋ²	tsʰuaŋ²	tsʰuɑŋ²
+0737	霜		宕开三平阳生	suɑŋ¹	suaŋ¹	suɒŋ¹	suɑŋ¹	suaŋ¹	suɑŋ¹
+0738	章		宕开三平阳章	tsã¹	tsaŋ¹	tsan¹	tsan¹	tsan¹	tsan¹
+0739	厂		宕开三上养昌	tsʰã³	tsʰaŋ³	tsʰan³	tsʰan³	tsʰan³	tsʰan³
+0740	唱		宕开三去漾昌	tsʰã⁵	tsʰaŋ⁵	tsʰan⁵	tsʰan⁵	tsʰan⁵	tsʰan⁵
+0741	伤		宕开三平阳书	sã¹	saŋ¹	san¹	san¹	san¹	san¹
+0742	尝		宕开三平阳禅	sã²	saŋ²	san²	san²	san²	san²
+0743	上		宕开三上养禅	sã⁵	saŋ⁵	san⁵	san⁵	san⁵	san⁵
+0744	让		宕开三去漾日	zã⁵	zaŋ⁵	zan⁵	zan⁵	zan⁵	zan⁵
+0745	姜	生~	宕开三平阳见	tɕiã¹	tɕiaŋ¹	tɕian¹	tɕian¹	tɕian¹	tɕian¹
+0746	响		宕开三上养晓	ɕiã³	ɕiaŋ³	ɕian³	ɕian³	ɕian³	ɕian³
+0747	向		宕开三去漾晓	ɕiã⁵	ɕiaŋ⁵	ɕian⁵	ɕian⁵	ɕian⁵	ɕian⁵
+0748	秧		宕开三平阳影	iã¹	iaŋ¹	ian¹	ian¹	ian¹	ian¹
+0749	痒		宕开三上痒以	iã⁵	iaŋ⁵	ian⁵	ian⁵	ian⁵	ian⁵
+0750	样		宕开三去漾以	iã⁵	iaŋ⁵	ian⁵	ian⁵	ian⁵	ian⁵
+07⁷1	雀		宕开三入药精	tɕʰyə⁷	tɕʰye⁷	tɕʰyə⁷	tɕʰyə⁷	tɕʰyə⁷	tɕʰyə⁷
+07⁷⁷	削		宕开三入药心	ɕye⁷	ɕye⁷	ɕye⁷	ɕye⁷	ɕye⁷	ɕye⁷
+07⁷3	着	~衣	宕开三入药知	tsuə⁷	tsuə⁷	tsuə⁷	tsuə⁷	tsuə⁷	tsuə⁷
+07⁷4	勺		宕开三入药禅	sau⁷				sau⁷	
+07⁷⁷	弱		宕开三入药日	zuə⁷	zuə⁷	zuə⁷	zuə⁷	zuə⁷	zuə⁷
+07⁷6	脚		宕开三入药见	tɕyə⁷	tɕyə⁷	tɕyə⁷	tɕyə⁷	tɕyə⁷	tɕyə⁷
+07⁷7	约		宕开三入药影	yə⁷	yə⁷	yə⁷	yə⁷	yə⁷	yə⁷
+07⁷8	药		宕开三入药以	yə⁷	yə⁷	yə⁷	yə⁷	yə⁷	yə⁷
+0759	光		宕合一平唐见	kuɑŋ¹	kuaŋ¹	kuɒŋ¹	kuɑŋ¹	kuaŋ¹	kuɑŋ¹
+0760	慌		宕合一平唐晓	xuɑŋ¹	xuaŋ¹	xuɒŋ¹	xuɑŋ¹	xuaŋ¹	xuɑŋ¹
+0761	黄		宕合一平唐匣	xuɑŋ²	xuaŋ²	xuɒŋ²	xuɑŋ²	xuaŋ²	xuɑŋ²
+076⁷	郭		宕合一入铎见	kue⁷	kue⁷	kue⁷	kue⁷	kue⁷	kue⁷/kuə⁷
+0763	霍		宕合一入铎晓	xuə⁷	xuə⁷	xuə⁷	xo⁷	xuə⁷	xuə⁷白/xo⁷文
+0764	方		宕合三平阳非	fɑŋ¹	faŋ¹	fɒŋ¹	fɑŋ¹	faŋ¹	fɑŋ¹文
+0765	放		宕合三去漾非	fɑŋ⁵	faŋ⁵	fɒŋ⁵	fɑŋ⁵	faŋ⁵	fɑŋ⁵
+0766	纺		宕合三上养敷	fɑŋ³	faŋ³	fɒŋ³	fɑŋ³	faŋ³	fɑŋ³
+0767	房		宕合三平阳奉	fɑŋ²	faŋ²	fɒŋ²	fɑŋ²	faŋ²	fɑŋ²
+0768	防		宕合三平阳奉	fɑŋ²	faŋ²	fɒŋ²	fɑŋ²	faŋ²	fɑŋ²
+0769	网		宕合三上养微	uɑŋ⁵	uaŋ⁵	uɒŋ⁵	uɑŋ⁵	uaŋ⁵	uɑŋ⁵
+0770	筐		宕合三平阳溪	tɕʰiã¹/kʰuɑŋ¹	tɕʰiaŋ¹白	tɕʰian¹白/kʰuɒŋ¹文	tɕʰian¹白/kʰuɑŋ¹文	tɕʰian¹白/kʰuaŋ¹文	tɕʰian¹白/kʰuɑŋ¹文
+0771	狂		宕合三平阳群	kʰuɑŋ²	kʰuaŋ²	kʰuɒŋ²	kʰuɑŋ²	kʰuaŋ²	kʰuɑŋ²
+0772	王		宕合三平阳云	uɑŋ²	uaŋ²	uɒŋ²	uɑŋ²	uaŋ²	uɑŋ²
+0773	旺		宕合三去漾云	uɑŋ⁵	uaŋ⁵	uɒŋ⁵	uɑŋ⁵	uaŋ⁵	uɑŋ⁵
+0775	绑		江开二上讲帮	pɑŋ³	paŋ³	pɒŋ³	pɑŋ³	paŋ³	pɑŋ³
+0776	胖		江开二去绛滂	pʰɑŋ⁵	pʰaŋ⁵	pʰɒŋ⁵	pʰɑŋ⁵	pʰaŋ⁵	pʰɑŋ⁵
+0777	棒		江开二上讲並	pɑŋ⁵	paŋ⁵	pɒŋ⁵	pɑŋ⁵	paŋ⁵	pɑŋ⁵
+0778	桩		江开二平江知	tsuɑŋ¹	tsuaŋ¹	tsuɒŋ¹	tsuɑŋ¹	tsuaŋ¹	tsuɑŋ¹
+0779	撞		江开二去绛澄	tsʰuɑŋ³白/tsuɑŋ⁵	tsʰuaŋ³白/tsuaŋ⁵	tsʰuɒŋ³白/tsuɒŋ⁵	tsuɑŋ⁵	tsʰuaŋ³白/tsuaŋ⁵/tsʰuɑŋ⁵	tsʰuɑŋ³/tsuɑŋ⁵
+0780	窗		江开二平江初	tsʰã¹文	tsʰaŋ¹文	tsʰan¹文	tsʰan¹	tsʰan¹文	tsʰan¹文
+0781	双		江开二平江生	suɑŋ¹	suaŋ¹	suɒŋ¹	suɑŋ¹	suaŋ¹	suɑŋ¹
+0782	江		江开二平江见	tɕiã¹	tɕiaŋ¹	tɕian¹	tɕian¹	tɕian¹	tɕian¹
+0783	讲		江开二上讲见	tɕiã³	tɕiaŋ³	tɕian³	tɕian³	tɕian³	tɕian³
+0784	降	投~	江开二平江匣	ɕiã²	ɕiaŋ²	ɕian²	ɕian²	ɕian²	ɕian²
+0785	项		江开二上讲匣	xã⁵	xaŋ⁵/ɕiaŋ⁵文	xan⁵/ɕian⁵文	xan⁵	xan⁵	xan⁵
+0786	剥		江开二入觉帮	pə⁷	pə⁷	pə⁷	pə⁷	pə⁷	pə⁷
+0787	桌		江开二入觉知	tsuə⁷	tsuə⁷	tsuə⁷	tsuə⁷	tsuə⁷	tsuə⁷
+0788	镯		江开二入觉崇	tsuə⁷	tsuə⁷	tsʉ⁷	tsuə⁷	tsʉ⁷/tsuə⁷	tsʉ⁷
+0789	角		江开二入觉见	kuə⁷/tɕyə⁷文	kuə⁷/tɕyə⁷文	kuə⁷/tɕyə⁷文	kuə⁷/tɕyə⁷文	kuə⁷/tɕyə⁷文	kuə⁷/tɕyə⁷文
+0790	壳		江开二入觉溪	kʰuə⁷	kʰuə⁷	kʰuə⁷	kʰuə⁷	kʰuə⁷/tɕʰiau⁷文	kʰuə⁷
+0791	学		江开二入觉匣	ɕyə⁷	ɕyə⁷	ɕyə⁷	ɕyə⁷	ɕyə⁷	ɕyə⁷
+079⁷	握		江开二入觉影	uə⁷	uə⁷	uə⁷	uə⁷	uə⁷	uə⁷
+0793	朋		曾开一平登並	pʰoŋ²	pʰoŋ²	pʰoŋ²	pʰoŋ²	pʰoŋ²	pʰoŋ²
+0794	灯		曾开一平登端	tən¹	tən¹	tən¹	tən¹	tən¹	tən¹
+0795	等		曾开一上等端	tən³	tən³	tən³	tən³	tən³	tən³
+0796	凳		曾开一去嶝端	tən⁵	tən⁵	tən⁵	tən⁵	tən⁵	tən⁵
+0797	藤		曾开一平登定	tʰən²	tʰən²	tʰən²	tʰən²	tʰən²	tʰən²
+0798	能		曾开一平登泥	lən²	lən²	lən²	lən²	lən²	lən²
+0799	层		曾开一平登从	tsʰən²	tsʰən²	tsʰən²	tsʰən²	tsʰən²	tsʰən²
+0800	僧		曾开一平登心	tsən¹	sən¹	tsən¹白/sən¹文	tsən¹白/sən¹文	sən¹	sən¹
+0801	肯		曾开一上等溪	kʰən³	kʰən³	kʰən³	kʰən³	kʰən³	kʰən³
+802	北		曾开一入德帮	pe⁷	pe⁷	pe⁷	pe⁷	pe⁷	pe⁷
+0803	墨		曾开一入德明	me⁷	me⁷	me⁷	me⁷	me⁷	me⁷
+0804	得		曾开一入德端	te⁷	te⁷	te⁷	te⁷	te⁷	te⁷
+080⁷	特		曾开一入德定	tʰe⁷	tʰe⁷	tʰe⁷	tʰe⁷	tʰe⁷	tʰe⁷
+0806	贼		曾开一入德从	tse⁷	tse⁷	tse⁷	tse⁷	tse⁷	tse⁷
+0807	塞		曾开一入德心	se⁷	se⁷	se⁷	se⁷	se⁷	se⁷
+0808	刻		曾开一入德溪	kʰe⁷	kʰe⁷	kʰe⁷	kʰe⁷	kʰe⁷	kʰe⁷
+0809	黑		曾开一入德晓	xe⁷	xe⁷	xe⁷	xe⁷	xe⁷	xe⁷
+0810	冰		曾开三平蒸帮	pin¹	pin¹	pin¹	pin¹	pin¹	pin¹
+0811	证		曾开三去证章	tsən⁵	tsən⁵	tsən⁵	tsən⁵	tsən⁵	tsən⁵
+0812	秤		曾开三去证昌	tsʰən⁵	tsʰən⁵	tsʰən⁵	tsʰən⁵	tsʰən⁵	tsʰən⁵
+0813	绳		曾开三平蒸船	suən²	suən²	soŋ²	soŋ²	soŋ²	suən²
+0814	剩		曾开三去证船	sən⁵	sən⁵	sən⁵	sən⁵	sən⁵	sən⁵
+0815	升		曾开三平蒸书	sən¹	sən¹	sən¹	sən¹	sən¹	sən¹
+0816	兴		曾开三去证晓	ɕin⁵	ɕin⁵	ɕin⁵	ɕin⁵	ɕin⁵	ɕin⁵
+0817	蝇		曾开三平蒸以	in²	in²	in²	in²	in²	in²
+0818	逼		曾开三入职帮	pɨ⁷/pi¹新	pɨ⁷	pɨ⁷	pɨ⁷	pɨ⁷	pɨ⁷
+0819	力		曾开三入职来	lɨ⁷	lɨ⁷	lɨ⁷	lɨ⁷	lɨ⁷	lɨ⁷
+08⁷0	息		曾开三入职心	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷
+08⁷1	直		曾开三入职澄	tsɨ⁷	tʂʅ⁷	tsɨ⁷	tsɨ⁷	tsɨ⁷	tsɨ⁷
+08⁷⁷	侧		曾开三入职庄	tse⁷	tse⁷/tsʰe⁷新	tse⁷	tse⁷	tse⁷	tse⁷
+08⁷3	测		曾开三入职初	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷
+08⁷4	色		曾开三入职生	se⁷	se⁷	se⁷	se⁷	se⁷	se⁷
+08⁷⁷	织		曾开三入职章	tsɨ⁷	tʂʅ⁷	tsɨ⁷	tsɨ⁷	tsɨ⁷	tsɨ⁷
+08⁷6	食		曾开三入职船	sɨ⁷	ʂʅ⁷	sɨ⁷	sɨ⁷	sɨ⁷	sɨ⁷
+08⁷7	式		曾开三入职书	sɿ⁷	sɿ⁷	sɿ⁷	sɿ⁷	sɿ⁷	sɿ⁷
+08⁷8	极		曾开三入职群	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷
+08⁷9	国		曾合一入德见	kue⁷	kue⁷/kuə⁷	kue⁷	kue⁷	kue⁷	kue⁷
+0830	或		曾合一入德匣	xuə⁷	xuə⁷文	xuə⁷	xuə⁷	xuə⁷	xuə⁷
+0831	猛		梗开二上梗明	moŋ⁵	moŋ⁵	moŋ⁵	moŋ⁵	moŋ⁵	moŋ⁵
+0832	打		梗开二上梗端	ta³	ta³	ta³	ta³	ta³	ta³
+0833	冷		梗开二上梗来	lən⁵	lən⁵	lən⁵	lən⁵	lən⁵	lən⁵
+0834	生		梗开二平庚生	sən¹	sən¹	sən¹	sən¹	sən¹	sən¹
+0835	省		梗开二上梗生	sən³	sən³	sən³	sən³	sən³	sən³
+0836	更	三~	梗开二平庚见	kən¹	kən¹	kən¹	kən¹	kən¹	kən¹
+0837	梗		梗开二上梗见	kən³	kən³	kən³	kən³	kən³	kən³
+0838	坑		梗开二平庚溪	kʰən¹	kʰən¹	kʰən¹	kʰən¹	kʰən¹	kʰən¹
+0839	硬		梗开二去映疑	ŋən⁵	ŋən⁵	ŋən⁵	ŋən⁵	ŋən⁵	ŋən⁵
+0840	行	~为	梗开二平庚匣	ɕin²	ɕin²	ɕin²	ɕin²	ɕin²	ɕin²
+0841	百		梗开二入陌帮	pe⁷	pe⁷	pe⁷	pe⁷	pe⁷	pe⁷
+084⁷	拍		梗开二入陌滂	pʰe⁷	pʰe⁷	pʰe⁷	pʰe⁷	pʰe⁷	pʰe⁷
+0843	白		梗开二入陌並	pe⁷	pe⁷	pe⁷	pe⁷	pe⁷	pe⁷
+0844	拆		梗开二入陌彻	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷
+084⁷	择		梗开二入陌澄	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷
+0846	窄		梗开二入陌庄	tse⁷	tse⁷	tse⁷	tse⁷	tse⁷	tse⁷
+0847	格		梗开二入陌见	ke⁷	ke⁷	ke⁷	ke⁷	ke⁷	ke⁷
+0848	客		梗开二入陌溪	kʰe⁷	kʰe⁷	kʰe⁷	kʰe⁷	kʰe⁷	kʰe⁷
+0849	额		梗开二入陌疑	ŋe⁷	ŋe⁷	ŋe⁷	ŋe⁷	ŋe⁷	ŋe⁷
+0850	棚		梗开二平耕並	pʰoŋ²	pʰoŋ²	pʰoŋ²	pʰoŋ²	pʰoŋ²	pʰoŋ²
+0851	争		梗开二平耕庄	tsən¹	tsən¹	tsən¹	tsən¹	tsən¹	tsən¹
+0852	耕		梗开二平耕见	kən¹	kən¹	kən¹	kən¹	kən¹	kən¹
+08⁷3	麦		梗开二入麦明	me⁷	me⁷	me⁷	me⁷	me⁷	me⁷
+08⁷4	摘		梗开二入麦知	tse⁷	tse⁷	tse⁷	tse⁷	tse⁷	tse⁷
+08⁷⁷	策		梗开二入麦初	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷	tsʰe⁷
+08⁷6	隔		梗开二入麦见	ke⁷	ke⁷	ke⁷	ke⁷	ke⁷	ke⁷
+0857	兵		梗开三平庚帮	pin¹	pin¹	pin¹	pin¹	pin¹	pin¹
+0858	柄		梗开三去映帮	pin⁵	pin⁵	pin⁵	pin⁵	pin⁵	pin⁵
+0859	平		梗开三平庚並	pʰin²	pʰin²	pʰin²	pʰin²	pʰin²	pʰin²
+0860	病		梗开三去映並	pin⁵	pin⁵	pin⁵	pin⁵	pin⁵	pin⁵
+0861	明		梗开三平庚明	min²	min²	min²	min²	min²	min²
+0862	命		梗开三去映明	min⁵	min⁵	min⁵	min⁵	min⁵	min⁵
+0863	镜		梗开三去映见	tɕin⁵	tɕin⁵	tɕin⁵	tɕin⁵	tɕin⁵	tɕin⁵
+0864	庆		梗开三去映溪	tɕʰin⁵	tɕʰin⁵	tɕʰin⁵	tɕʰin⁵	tɕʰin⁵	tɕʰin⁵
+0865	迎		梗开三平庚疑	in²	in²	in²	in²	in²	in²
+0866	影		梗开三上梗影	in³	in³	in³	in³	in³	in³
+0867	剧	戏~	梗开三入陌群	tɕy⁷	tɕy⁷	tɕy⁷	tɕy⁷	tɕy⁷	tɕy⁷
+0868	饼		梗开三上静帮	pin³	pin³	pin³	pin³	pin³	pin³
+0869	名		梗开三平清明	min²	min²	min²	min²	min²	min²
+0870	领		梗开三上静来	lin⁵	lin⁵	lin⁵	lin⁵	lin⁵	lin⁵
+0871	井		梗开三上静精	tɕin³	tɕin³	tɕin³	tɕin³	tɕin³	tɕin³
+0872	清		梗开三平清清	tɕʰin¹	tɕʰin¹	tɕʰin¹	tɕʰin¹	tɕʰin¹	tɕʰin¹
+0881	轻		梗开三平清溪	tɕʰin¹	tɕʰin¹	tɕʰin¹	tɕʰin¹	tɕʰin¹	tɕʰin¹
+0882	赢		梗开三平清以	in²	in²	in²	in²	in²	in²
+0883	积		梗开三入昔精	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷
+0884	惜		梗开三入昔心	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷
+088⁷	席		梗开三入昔邪	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷
+0886	尺		梗开三入昔昌	tsʰɨ⁷	tʂʰʅ⁷	tsʰɨ⁷	tsʰɨ⁷	tsʰɨ⁷	tsʰɨ⁷
+0887	石		梗开三入昔禅	sɨ⁷	ʂʅ⁷	sɨ⁷	sɨ⁷	sɨ⁷	sɨ⁷
+0888	益		梗开三入昔影	ɨ⁷	ɨ⁷	ɨ⁷	ɨ⁷	ɨ⁷	ɨ⁷
+0889	瓶		梗开四平青並	pʰin²	pʰin²	pʰin²	pʰin²	pʰin²	pʰin²
+0890	钉	名	梗开四平青端	tin¹	tin¹	tin¹	tin¹	tin¹	tin¹
+0891	顶		梗开四上迥端	tin³	tin³	tin³	tin³	tin³	tin³
+0892	厅		梗开四平青透	tʰin¹	tʰin¹	tʰin¹	tʰin¹	tʰin¹	tʰin¹
+0893	听	~见	梗开四平青透	tʰin¹	tʰin¹	tʰin¹	tʰin¹	tʰin¹	tʰin¹
+0894	停		梗开四平青定	tʰin²	tʰin²	tʰin²	tʰin²	tʰin²	tʰin²
+0895	挺		梗开四上迥定	tʰin⁵	tʰin⁵	tʰin⁵	tʰin⁵	tʰin⁵	tʰin⁵
+0896	定		梗开四去径定	tin⁵	tin⁵	tin⁵	tin⁵	tin⁵	tin⁵
+0897	零		梗开四平青来	lin²	lin²	lin²	lin²	lin²	lin²
+0898	青		梗开四平青清	tɕʰin¹	tɕʰin¹	tɕʰin¹	tɕʰin¹	tɕʰin¹	tɕʰin¹
+0899	星		梗开四平青心	ɕin¹	ɕin¹	ɕin¹	ɕin¹	ɕin¹	ɕin¹
+0900	经		梗开四平青见	tɕin¹	tɕin¹	tɕin¹	tɕin¹	tɕin¹	tɕin¹
+0901	形		梗开四平青匣	ɕin²	ɕin²	ɕin²	ɕin²	ɕin²	ɕin²
+090⁷	壁		梗开四入锡帮	pɨ⁷	pɨ⁷	pɨ⁷	pɨ⁷	pɨ⁷	pɨ⁷
+0903	劈		梗开四入锡滂	pʰɨ⁷	pʰɨ⁷	pʰɨ⁷	pʰɨ⁷	pʰɨ⁷	pʰɨ⁷
+0904	踢		梗开四入锡透	tʰɨ⁷	tʰɨ⁷	tʰɨ⁷	tʰɨ⁷	tʰɨ⁷	tʰɨ⁷
+090⁷	笛		梗开四入锡定	tɨ⁷	tɨ⁷	tɨ⁷	tie⁷	tɨ⁷	tɨ⁷
+0906	历	农~	梗开四入锡来	lɨ⁷	lɨ⁷	lɨ⁷	lɨ⁷	lɨ⁷	lɨ⁷
+0907	锡		梗开四入锡心	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷	ɕɨ⁷
+0908	击		梗开四入锡见	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷	tɕɨ⁷
+0909	吃		梗开四入锡溪	tsʰɨ⁷	tʂʰʅ⁷	tɕʰi⁷/tsʰɨ⁷	tɕʰi⁷/tsʰɨ⁷	tsʰɨ⁷	tsʰɨ⁷
+0910	横		梗合二平庚匣	xuan²白/xuən²文	xuan²白/xuən²文	xuan²白/xuən²	xuan²白/xoŋ²	xuan²白/xoŋ²	xuan²白/xuən²文
+0911	划	计~	梗合二入麦匣	xua⁷	xua⁷	xua⁷	xua⁷文	xua⁷文	xua⁷
+0912	兄		梗合三平庚晓	ɕyoŋ¹	ɕyoŋ¹	ɕyoŋ¹	ɕyoŋ¹	ɕyoŋ¹	ɕyoŋ¹
+0913	荣		梗合三平庚云	yoŋ²	yn²/yoŋ²	yn²/yoŋ²	yn²	yn²/yoŋ²	yn²/yoŋ²
+0914	永		梗合三上梗云	yn³/yoŋ³	yn³文/yoŋ³	yn³文/yoŋ³	yn³/yoŋ³	yn³文/yoŋ³	yn³文/yoŋ³
+0915	营		梗合三平清以	yn²文	yn²文	yn²文/in²	yn²文	yn²文	yn²文
+0916	蓬		通合一平东並	pʰoŋ²	pʰoŋ²	pʰoŋ²文	pʰoŋ²	pʰoŋ²	pʰoŋ²
+0917	东		通合一平东端	toŋ¹	toŋ¹	toŋ¹	toŋ¹	toŋ¹	toŋ¹
+0918	懂		通合一上董端	toŋ³	toŋ³	toŋ³	toŋ³	toŋ³	toŋ³
+0919	冻		通合一去送端	toŋ⁵	toŋ⁵	toŋ⁵	toŋ⁵	toŋ⁵	toŋ⁵
+0920	通		通合一平东透	tʰoŋ¹	tʰoŋ¹	tʰoŋ¹	tʰoŋ¹	tʰoŋ¹	tʰoŋ¹
+0921	桶		通合一上董透	tʰoŋ³	tʰoŋ³	tʰoŋ³	tʰoŋ³	tʰoŋ³	tʰoŋ³
+0922	痛		通合一去送透	tʰoŋ⁵	tʰoŋ⁵	tʰoŋ⁵	tʰoŋ⁵	tʰoŋ⁵	tʰoŋ⁵
+0923	铜		通合一平东定	tʰoŋ²	tʰoŋ²	tʰoŋ²	tʰoŋ²	tʰoŋ²	tʰoŋ²
+0924	动		通合一上董定	toŋ⁵	toŋ⁵	toŋ⁵	toŋ⁵	toŋ⁵	toŋ⁵
+0925	洞		通合一去东定	toŋ⁵	toŋ⁵	toŋ⁵	toŋ⁵	toŋ⁵	toŋ⁵
+0926	聋		通合一平东来	loŋ¹白/loŋ²文	loŋ¹白/loŋ²文	loŋ¹白/loŋ²文	loŋ¹白/loŋ²文	loŋ¹白/loŋ²文	loŋ¹白/loŋ²文
+0927	弄		通合一去送来	loŋ⁵	loŋ⁵	loŋ⁵	loŋ⁵	loŋ⁵	loŋ⁵
+0928	粽		通合一去送精	tsoŋ⁵	tsoŋ⁵	tsoŋ⁵	tsoŋ⁵	tsoŋ⁵	tsoŋ⁵
+0929	葱		通合一平东清	tsʰoŋ¹	tsʰoŋ¹	tsʰoŋ¹	tsʰoŋ¹	tsʰoŋ¹	tsʰoŋ¹
+0930	送		通合一去送心	soŋ⁵	soŋ⁵	soŋ⁵	soŋ⁵	soŋ⁵	soŋ⁵
+0931	公		通合一平东见	koŋ¹	koŋ¹	koŋ¹	koŋ¹	koŋ¹	koŋ¹
+0932	孔		通合一上董溪	kʰoŋ³	kʰoŋ³	kʰoŋ³	kʰoŋ³	kʰoŋ³	kʰoŋ³
+0933	烘		通合一平东晓	xoŋ¹	xoŋ¹	xoŋ¹	xoŋ¹	xoŋ¹	xoŋ¹
+0934	红		通合一平东匣	xoŋ²	xoŋ²	xoŋ²	xoŋ²	xoŋ²	xoŋ²
+0935	翁		通合一平东影	oŋ¹	oŋ¹	oŋ¹	oŋ¹	oŋ¹	oŋ¹
+0936	木		通合一入屋明	mʉ⁷	mʉ⁷	mʉ⁷	mʉ⁷	mʉ⁷	mʉ⁷
+0937	读		通合一入屋定	tʉ⁷	tʉ⁷	tʉ⁷	tʉ⁷	tʉ⁷	tʉ⁷
+0938	鹿		通合一入屋来	lʉ⁷	lʉ⁷	lʉ⁷	lʉ⁷	lʉ⁷	lʉ⁷
+0939	族		通合一入屋从	tɕʰyʉ⁷	tɕʰyʉ⁷	tɕʰyʉ⁷	tɕʰyʉ⁷	tɕʰyʉ⁷	tɕʰyʉ⁷
+0940	谷	稻~	通合一入屋见	kʉ⁷	kʉ⁷	kʉ⁷	kʉ⁷	kʉ⁷	kʉ⁷
+0941	哭		通合一入屋溪	kʰʉ⁷	kʰʉ⁷	kʰʉ⁷	kʰʉ⁷	kʰʉ⁷	kʰʉ⁷
+094⁷	屋		通合一入屋影	ʉ⁷	vʉ⁷	ʉ⁷	ʉ⁷	ʉ⁷	ʉ⁷
+0943	冬	~至	通合一平冬端	toŋ¹	toŋ¹	toŋ¹	toŋ¹	toŋ¹	toŋ¹
+0944	统		通合一去送透	tʰoŋ⁵	tʰoŋ⁵	tʰoŋ⁵	tʰoŋ⁵	tʰoŋ⁵	tʰoŋ⁵
+0945	脓		通合一平冬泥	loŋ²	loŋ²	loŋ²	loŋ²	loŋ²	loŋ²
+0946	松		通合一平冬心	soŋ¹	soŋ¹	soŋ¹	soŋ¹	soŋ¹	soŋ¹
+0947	宋		通合一去送心	soŋ⁵	soŋ⁵	soŋ⁵	soŋ⁵	soŋ⁵	soŋ⁵
+0948	毒		通合一入沃定	tʉ⁷	tʉ⁷	tʉ⁷	tʉ⁷	tʉ⁷	tʉ⁷
+0949	风		通合三平东非	foŋ¹	foŋ¹	foŋ¹	foŋ¹	foŋ¹	foŋ¹
+0950	丰		通合三平东敷	foŋ¹	foŋ¹	foŋ¹	foŋ¹	foŋ¹	foŋ¹
+0951	凤		通合三去送奉	foŋ⁵	foŋ⁵	foŋ⁵	foŋ⁵	foŋ⁵	foŋ⁵
+0952	梦		通合三去送明	moŋ⁵	moŋ⁵	moŋ⁵	moŋ⁵	moŋ⁵	moŋ⁵
+0953	中		通合三平东知	tsoŋ¹	tsoŋ¹	tsoŋ¹	tsoŋ¹	tsoŋ¹	tsoŋ¹
+0954	虫		通合三平东澄	tsʰoŋ²	tsʰoŋ²	tsʰoŋ²	tsʰoŋ²	tsʰoŋ²	tsʰoŋ²
+0955	终		通合三平东章	tsoŋ¹	tsoŋ¹	tsoŋ¹	tsoŋ¹	tsoŋ¹	tsoŋ¹
+0956	充		通合三平东昌	tsʰoŋ¹	tsʰoŋ¹	tsʰoŋ¹	tsʰoŋ¹	tsʰoŋ¹	tsʰoŋ¹
+0957	宫		通合三平东见	koŋ¹	koŋ¹	koŋ¹	koŋ¹	koŋ¹	koŋ¹
+0958	穷		通合三平东群	tɕʰyoŋ²	tɕʰyoŋ²	tɕʰyoŋ²	tɕʰyoŋ²	tɕʰyoŋ²	tɕʰyoŋ²
+0959	熊		通合三平东云	ɕyoŋ²	ɕyoŋ²	ɕyoŋ²	ɕyoŋ²	ɕyoŋ²	ɕyoŋ²
+0960	雄		通合三平东云	ɕyoŋ²	ɕyoŋ²	ɕyoŋ²	ɕyoŋ²	ɕyoŋ²	ɕyoŋ²
+0961	福		通合三入屋非	fʉ⁷	fʉ⁷	fʉ⁷	fʉ⁷	fʉ⁷	fʉ⁷
+096⁷	服		通合三入屋奉	fʉ⁷	fʉ⁷	fʉ⁷	fʉ⁷	fʉ⁷	fʉ⁷
+0963	目		通合三入屋明	mʉ⁷	mʉ⁷	mʉ⁷	mʉ⁷	mʉ⁷	mʉ⁷
+0964	六		通合三入屋来	lʉ⁷	lʉ⁷	lʉ⁷	lʉ⁷	lʉ⁷	lʉ⁷
+096⁷	宿	住~	通合三入屋心	ɕyʉ⁷	ɕyʉ⁷	ɕyʉ⁷	ɕyʉ⁷	ɕyʉ⁷	ɕyʉ⁷
+0966	竹		通合三入屋知	tsʉ⁷	tsʉ⁷	tsʉ⁷	tsʉ⁷	tsʉ⁷	tsʉ⁷
+0967	畜	~生,~牧业	通合三入屋彻	tsʰʉ⁷/ɕyʉ⁷文	tsʰʉ⁷/ɕyʉ⁷文	tsʰʉ⁷/ɕyʉ⁷文	tsʰʉ⁷/ɕyʉ⁷文	tsʰʉ⁷/ɕyʉ⁷文	tsʰʉ⁷/ɕyʉ⁷文
+0968	缩		通合三入屋生	suə⁷	suə⁷	suə⁷	suə⁷	suə⁷	suə⁷
+0969	粥		通合三入屋章	tsʉ⁷	tsəu¹	tsʉ⁷/tsəu¹文	tsʉ⁷	tsəu¹	tsəu¹
+0970	叔		通合三入屋书	sʉ⁷	sʉ⁷	sʉ⁷	sʉ⁷	sʉ⁷	sʉ⁷
+0971	熟		通合三入屋禅	sʉ⁷	sʉ⁷	sʉ⁷	sʉ⁷	sʉ⁷	sʉ⁷
+097⁷	肉		通合三入屋日	zʉ⁷	zʉ⁷	zʉ⁷/zəu⁷	zʉ⁷	zʉ⁷	zʉ⁷/zəu⁷
+0973	菊		通合三入屋见	tɕʰyʉ⁷	tɕyʉ⁷	tɕʰyʉ⁷	tɕʰyʉ⁷	tɕʰyʉ⁷	tɕʰyʉ⁷文
+0974	育		通合三入屋以	yʉ⁷	yʉ⁷	yʉ⁷	yʉ⁷	yʉ⁷	yʉ⁷
+0975	封		通合三平钟非	foŋ¹	foŋ¹	foŋ¹	foŋ¹	foŋ¹	foŋ¹
+0976	蜂		通合三平钟敷	foŋ¹	foŋ¹	foŋ¹	foŋ¹	foŋ¹	foŋ¹
+0977	缝		通合三去用奉	foŋ⁵	foŋ⁵	foŋ⁵	foŋ⁵	foŋ⁵	foŋ⁵
+0978	浓		通合三平钟泥	loŋ²	loŋ²	loŋ²	loŋ²	loŋ²	loŋ²
+0979	龙		通合三平钟来	loŋ²	loŋ²	loŋ²	loŋ²	loŋ²	loŋ²
+0980	松	~树	通合三平钟邪	soŋ²	soŋ²	soŋ²	soŋ²	soŋ²	soŋ²
+0981	重	轻~	通合三上肿澄	tsoŋ⁵	tsoŋ⁵	tsoŋ⁵	tsoŋ⁵	tsoŋ⁵	tsoŋ⁵
+0982	肿		通合三上肿章	tsoŋ³	tsoŋ³	tsoŋ³	tsoŋ³	tsoŋ³	tsoŋ³
+0983	种	~树	通合三去用章	tsoŋ⁵	tsoŋ⁵	tsoŋ⁵	tsoŋ⁵	tsoŋ⁵	tsoŋ⁵
+0984	冲		通合三平钟昌	tsʰoŋ¹	tsʰoŋ¹	tsʰoŋ¹	tsʰoŋ¹	tsʰoŋ¹	tsʰoŋ¹
+0985	恭		通合三平钟见	koŋ¹	koŋ¹	koŋ¹	koŋ¹	koŋ¹	koŋ¹
+0986	共		通合三去用群	koŋ⁵	koŋ⁵	koŋ⁵	koŋ⁵	koŋ⁵	koŋ⁵
+0987	凶	吉~	通合三平钟晓	ɕyoŋ¹	ɕyoŋ¹	ɕyoŋ¹	ɕyoŋ¹	ɕyoŋ¹	ɕyoŋ¹
+0988	拥		通合三上肿影	yoŋ³	yoŋ³	yoŋ³	yoŋ³	yoŋ³	yoŋ³
+0989	容		通合三平钟以	yoŋ²	yoŋ²	yoŋ²	yoŋ²	yoŋ²	yoŋ²
+0990	用		通合三去用以	yoŋ⁵	yoŋ⁵	yoŋ⁵	yoŋ⁵	yoŋ⁵	yoŋ⁵
+0991	绿		通合三入烛来	lʉ⁷	lʉ⁷	lʉ⁷	lʉ⁷	lʉ⁷	lʉ⁷
+099⁷	足		通合三入烛精	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷
+0993	烛		通合三入烛章	tsʉ⁷	tsʉ⁷	tsʉ⁷	tsʉ⁷	tsʉ⁷	tsʉ⁷
+0994	赎		通合三入烛船	ɕyʉ⁷	sʉ⁷	sʉ⁷	ɕyʉ⁷	ɕyʉ⁷	ɕyʉ⁷
+099⁷	属		通合三入烛禅	sʉ⁷	sʉ⁷	sʉ⁷	sʉ⁷	sʉ⁷	sʉ⁷
+0996	褥		通合三入烛日	zʉ⁷	zu⁷	zʉ⁷		zʉ⁷	zʉ⁷
+0997	曲		通合三入烛溪	tɕʰyʉ⁷	tɕʰyʉ⁷	tɕʰyʉ⁷	tɕʰyʉ⁷	tɕʰyʉ⁷	tɕʰyʉ⁷
+0998	局		通合三入烛群	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷	tɕyʉ⁷
+0999	玉		通合三入烛疑	y⁷	y⁷	y⁷	y⁷	y⁷	y⁷
+1000	浴		通合三入烛以	yʉ⁷	yʉ⁷	yʉ⁷	yʉ⁷	yʉ⁷	yʉ⁷

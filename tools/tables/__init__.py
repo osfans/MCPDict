@@ -18,7 +18,7 @@ if PATH.endswith("__init__"): PATH = PATH[:-8]
 WORKSPACE = os.path.join(PATH, "..")
 
 VARIANT_FILE = os.path.join(PATH, SOURCE, "正字.tsv")
-
+上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
 辭典 = ["漢字","說文","集韻","康熙","匯纂","漢大","異體字","字形變體","字形描述","部件檢索","兩分","總筆畫數","部首餘筆","五筆畫","五筆86","五筆98","五筆06","倉頡三代","倉頡五代","倉頡六代","山人","分類"]
 
 def hex2chr(uni):

@@ -1,0 +1,1812 @@
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	k	kʰ	ŋ	x	∅
+@FIN	a
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	a	陰平	巴 芭 疤 八
+p	a	上聲	把
+p	a	陰去	爸 壩{堤~} 霸
+p	a	陽去	罷
+pʰ	a	陰平	趴
+pʰ	a	陽平	爬
+pʰ	a	陰去	怕 帕
+m	a	陰平	抹{~布，~女名}
+m	a	陽平	麻
+m	a	上聲	馬 碼
+m	a	陰去	罵
+f	a	陰平	法 發
+f	a	陽平	乏 罰 筏 伐
+v	a	陰平	蛙 窪 挖
+v	a	陽平	娃
+v	a	上聲	瓦
+v	a	陰去	襪
+t	a	陰平	答 搭 達
+t	a	上聲	打
+t	a	陰去	大
+tʰ	a	陰平	他 踏{~實} 蹋{~木} 塔 塌 溻{汗~濕了} 沓{~一~}
+n	a	陰平	納 吶 哪 吒
+n	a	陽平	拿
+n	a	上聲	哪{~裡}
+l	a	陰平	拉 蠟 臘 辣
+l	a	陰去	剌{半~子}
+ts	a	陰平	楂 渣 扎 □{打，拔}
+ts	a	上聲	咋
+ts	a	陰去	炸 炸{~彈} 乍 雜 榨 榨{~油} 閘 鍘
+ts	a	陽去	□{吵得狠}
+tsʰ	a	陰平	叉 杈 差{~別，~不多} 插 擦
+tsʰ	a	陽平	茶 茬 查
+tsʰ	a	上聲	鑔
+tsʰ	a	陰去	岔
+tsʰ	a	陽去	察 搽
+s	a	陰平	沙 紗 薩 殺 煞
+s	a	上聲	灑 撒
+s	a	陰去	廈 啥
+tʂ	a	陰平	□{傻得很}
+tʂʰ	a	陰平	□{杵在那裡}
+tʂʰ	a	陰去	□{沒有的，還是來了}
+ʂ	a	陰平	傻
+ʂ	a	陰去	□{~一臉，意為窩囊，不整潔}
+k	a	陰平	夾 挾 嘎
+k	a	陰去	□{~一腳，意為橫插一腳}
+k	a	陽去	□{架在肩膀上}
+kʰ	a	陰平	掐-
+kʰ	a	上聲	侉
+kʰ	a	陰去	□{~一襠，意為橫跨}
+ŋ	a	陰平	鴨- 鴉- 押- 壓-
+ŋ	a	陽平	牙 伢 呀
+ŋ	a	上聲	雅
+ŋ	a	陰去	椏{~一椏} 亞
+x	a	陰平	□{攪拌得瞎}
+x	a	上聲	蛤
+x	a	陰去	壞
+x	a	陽去	嚇 下-
+∅	a	陰平	啊1{象聲詞}
+∅	a	陽平	啊2{象聲詞}
+∅	a	上聲	啊3{象聲詞}
+∅	a	陰去	啊4{象聲詞}
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	v	t	tʰ	n	l	ts	tsʰ	s	k	kʰ	ŋ	x
+@FIN	ai
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ai	上聲	擺
+p	ai	陰去	拜 敗
+pʰ	ai	陽平	排 牌
+pʰ	ai	陰去	派
+m	ai	陽平	埋
+m	ai	上聲	買
+m	ai	陰去	邁 賣
+v	ai	陰平	歪 □{兇}
+v	ai	上聲	歪{腳~了}
+v	ai	陰去	外
+t	ai	陰平	呆{發~}
+t	ai	上聲	逮
+t	ai	陰去	戴 貸 待 怠 代 袋 帶
+tʰ	ai	陰平	胎
+tʰ	ai	陽平	臺 苔 抬
+tʰ	ai	陰去	太 態 泰
+tʰ	ai	陽去	大{~夫，~黃，藥名}
+n	ai	陰平	奶{婆}
+n	ai	上聲	乃 奶{牛~}
+n	ai	陽去	奈
+l	ai	陰平	𪑛{~紫，意為髒、窩囊，不整潔}
+l	ai	陽平	來
+l	ai	陽去	來{~放，意為邋遢}
+ts	ai	陰平	災 栽 齋
+ts	ai	上聲	宰 載{年~、~重、滿~}
+ts	ai	陰去	再 在 債 寨
+tsʰ	ai	陰平	猜 釵 差{出~}
+tsʰ	ai	陽平	才 財 材 裁 豺 柴
+tsʰ	ai	上聲	彩 采
+tsʰ	ai	陰去	菜 蔡
+s	ai	陰平	鰓 腮 篩
+s	ai	上聲	□{搖晃}
+s	ai	陰去	賽 曬
+k	ai	陰平	該 街
+k	ai	上聲	改
+k	ai	陰去	概 溉 蓋 丐
+kʰ	ai	陰平	開
+kʰ	ai	陽平	□{~不住，意為承受不了}
+kʰ	ai	上聲	凱 揩 楷 慨{慷~，感~}
+ŋ	ai	陰平	哀 埃{塵~} 挨{~近、~住}
+ŋ	ai	陽平	巖 崖 涯
+ŋ	ai	上聲	矮 隘 藹
+ŋ	ai	陰去	礙 愛 艾
+x	ai	陽平	孩 還{~有} 鞋
+x	ai	上聲	海
+x	ai	陰去	亥
+x	ai	陽去	害 駭
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	an
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	an	陰平	班 斑 頒 搬 般 扳
+p	an	上聲	板 版
+p	an	陰去	半 伴 瓣
+p	an	陽去	辦 拌 扮
+pʰ	an	陰平	攀 潘
+pʰ	an	陽平	盤
+pʰ	an	陰去	判 叛 絆 盼 畔
+m	an	陽平	蠻 瞞 饅
+m	an	上聲	滿
+m	an	陽去	慢 漫 幔
+f	an	陰平	帆 藩 翻 番{~兒}
+f	an	陽平	煩 繁 凡
+f	an	上聲	反
+f	an	陰去	販 範
+f	an	陽去	犯 飯 泛
+v	an	陰平	彎 灣 豌{~豆} 剜
+v	an	陽平	完 丸 頑{~皮、~固} 玩{古~、遊~}
+v	an	上聲	碗 晚
+v	an	陰去	腕 萬
+v	an	陽去	蔓{瓜~子}
+t	an	陰平	擔{~任、挑~} 單{~獨} 丹 彈{子~} 端 耽
+t	an	上聲	膽 撣{雞毛~子} 短
+t	an	陰去	□{~車，意為攔車}
+t	an	陽去	但 蛋 斷 鍛{~煉} 段 緞 旦 誕
+tʰ	an	陰平	貪 坍{~下來} 灘 攤
+tʰ	an	陽平	潭 譚 談 痰 彈{~琴} 檀 壇 團{~結、糕~}
+tʰ	an	上聲	毯 坦
+tʰ	an	陰去	探 炭 嘆
+n	an	陰平	□{陷}
+n	an	陽平	難{難~} 南 男
+n	an	上聲	暖
+n	an	陽去	難{患~}
+l	an	陽平	藍 籃 蘭 攔 欄
+l	an	上聲	懶 卵
+l	an	陰去	爛 亂 濫
+ts	an	陰平	鑽{動詞} 棧
+ts	an	上聲	斬 攢{積~} □{移動}
+ts	an	陰去	蘸{~醬油} 贊 鑽{木工用具}
+ts	an	陽去	暫
+tsʰ	an	陰平	參 餐 攙
+tsʰ	an	陽平	蠶 饞 慚
+tsʰ	an	上聲	鏟 慘 殘 產
+tsʰ	an	陰去	燦 竄
+s	an	陰平	三 杉 珊 山 刪 酸 衫
+s	an	上聲	傘 散
+s	an	陰去	散 算 蒜
+tʂ	an	陰平	沾 粘 氈
+tʂ	an	上聲	展 盞
+tʂ	an	陰去	站 占 綻
+tʂ	an	陽去	戰
+tʂʰ	an	陽平	纏 蟬 禪{~宗} 讒 蟾
+tʂʰ	an	陰去	顫 懺
+ʂ	an	陰平	搧
+ʂ	an	陽平	善
+ʂ	an	上聲	禪{~讓}
+ʂ	an	陰去	陝 閃
+ʂ	an	陽去	扇
+ʐ	an	陽平	然 燃
+ʐ	an	上聲	染 冉
+k	an	陰平	甘 柑 尷 尬 肝 竿{竹~} 乾{~澀}
+k	an	上聲	感 敢 橄 趕
+k	an	陰去	幹{~部、~支} 杆{~擀、~麵} 擀
+k	an	陽去	□{~一會兒，意為間隔一段時間}
+kʰ	an	陰平	堪 刊 勘 看{~守}
+kʰ	an	上聲	砍
+kʰ	an	陰去	看{~見}
+kʰ	an	陽去	坎
+ŋ	an	陰平	安 鞍 庵
+ŋ	an	上聲	眼
+ŋ	an	陰去	案 按 暗 諳
+ŋ	an	陽去	岸
+x	an	陰平	酣 鼾
+x	an	陽平	含 函 鹹-{~淡} 咸-{老少~宜} 罕 寒 韓
+x	an	上聲	喊
+x	an	陰去	漢 旱 汗 焊
+x	an	陽去	撼 憾
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	au
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	au	陰平	褒 包 胞 雹 褒
+p	au	上聲	保 寶 堡 飽
+p	au	陰去	報 豹 爆 抱 鮑{姓.~魚}
+p	au	陽去	暴
+pʰ	au	陰平	拋 剖
+pʰ	au	陽平	袍 跑
+pʰ	au	陰去	泡 炮{槍~}
+m	au	陽平	毛 茅 矛 摸
+m	au	上聲	卯
+m	au	陰去	貓 貌
+m	au	陽去	帽 冒 茂 牡 貿
+t	au	陰平	刀 □{啄} 叨
+t	au	上聲	倒{打~} 禱 導 島
+t	au	陰去	到 倒{~水}
+t	au	陽去	道 稻 盜
+tʰ	au	陰平	掏 濤 滔
+tʰ	au	陽平	桃 逃 陶 萄
+tʰ	au	上聲	討
+tʰ	au	陰去	套
+n	au	陰平	孬
+n	au	陽平	撓
+n	au	上聲	腦 惱
+n	au	陽去	鬧 □{有毒}
+l	au	陰平	撈
+l	au	陽平	勞 牢 嘮
+l	au	上聲	姥 老
+l	au	陰去	澇
+ts	au	陰平	糟 遭
+ts	au	上聲	早 棗 蚤 澡
+ts	au	陰去	灶 皂 罩
+tsʰ	au	陰平	操 躁 抄 鈔 糙
+tsʰ	au	陽平	曹 槽{馬~} 巢
+tsʰ	au	上聲	草 吵 炒
+tsʰ	au	陰去	造
+s	au	陰平	騷 臊{~氣} 梢 捎 筲{~箕} 稍
+s	au	上聲	嫂 掃{~地}
+s	au	陰去	臊{~子麵}
+s	au	陽去	掃{~帚}
+tʂ	au	陰平	朝{今~} 召 招 昭 沼
+tʂ	au	上聲	找 爪{~牙，~子}
+tʂ	au	陰去	照 詔 兆
+tʂ	au	陽去	趙
+tʂʰ	au	陰平	超
+tʂʰ	au	陽平	朝{~代} 潮
+ʂ	au	陰平	燒
+ʂ	au	陽平	□{沒有分寸}
+ʂ	au	上聲	少{多~}
+ʂ	au	陰去	少{~年} 韶{~關} 紹 邵
+ʐ	au	陽平	饒
+ʐ	au	上聲	擾 繞{圍~}
+ʐ	au	陰去	□{太陽光太強，眼睛不適} 繞{~~}
+k	au	陰平	高 糕 膏 篙{進船竿} 羔 稿 膏
+k	au	上聲	搞
+k	au	陰去	告
+kʰ	au	上聲	考 烤 栲{水乾}
+kʰ	au	陰去	靠 犒
+ŋ	au	陰平	熬{~湯} 凹
+ŋ	au	陽平	熬{~夜}
+ŋ	au	上聲	襖 咬
+ŋ	au	陰去	傲 奧 懊
+x	au	陰平	蒿 鎬
+x	au	陽平	耗 毫 豪 壕
+x	au	上聲	好{~壞} 郝{處}
+x	au	陰去	好{喜~} 號{~數}
+x	au	陽去	號{呼~}
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	aŋ
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	aŋ	陰平	邦 幫
+p	aŋ	上聲	榜 綁
+p	aŋ	陰去	謗 棒 蚌
+pʰ	aŋ	陰平	□{發脹}
+pʰ	aŋ	陽平	滂 龐
+pʰ	aŋ	陰去	胖
+m	aŋ	陰平	□{~實，意為強壯}
+m	aŋ	陽平	忙 芒 茫 茫 盲
+m	aŋ	上聲	蟒 莽
+f	aŋ	陰平	方
+f	aŋ	陽平	房 防 妨
+f	aŋ	上聲	芳 紡 仿{相似、效~、~佛} 訪 坊{作~}
+f	aŋ	陰去	放
+f	aŋ	陽去	肪
+v	aŋ	陰平	汪
+v	aŋ	陽平	亡 王
+v	aŋ	上聲	網 往
+v	aŋ	陽去	望 旺{興~、火~} 妄 忘
+t	aŋ	陰平	當{應~、~然、~作，典~} 鐺{烙餅的用具} 蕩{放~} 宕{延~}
+t	aŋ	上聲	黨 擋
+tʰ	aŋ	陰平	湯
+tʰ	aŋ	陽平	堂 糖 棠 螳 唐 塘
+tʰ	aŋ	上聲	倘 躺
+tʰ	aŋ	陰去	燙 趟
+n	aŋ	陰平	□{~包子，意為食量過大或遇事總是吃虧}
+n	aŋ	陽平	囊
+n	aŋ	上聲	□{~實，意為諷刺}
+n	aŋ	陰去	囔
+l	aŋ	陽平	郎 狼 廊 琅
+l	aŋ	上聲	朗
+l	aŋ	陽去	浪
+ts	aŋ	陰平	髒 贓
+ts	aŋ	陰去	葬 藏{西~} 臟{內~}
+tsʰ	aŋ	陰平	倉 蒼
+tsʰ	aŋ	陽平	藏{隱~}
+s	aŋ	陰平	桑 喪{婚~}
+s	aŋ	上聲	嗓 搡 □{米飯做軟點}
+s	aŋ	陰去	喪{~失}
+tʂ	aŋ	陰平	章 樟 獐 張
+tʂ	aŋ	上聲	掌 漲 長{生~}
+tʂ	aŋ	陰去	障 瘴 帳 賬 丈 仗
+tʂ	aŋ	陽去	脹
+tʂʰ	aŋ	陰平	昌 猖 償
+tʂʰ	aŋ	陽平	常 嘗 長{長短} 腸
+tʂʰ	aŋ	上聲	廠 場
+tʂʰ	aŋ	陰去	唱 倡 暢
+ʂ	aŋ	陰平	商 傷
+ʂ	aŋ	上聲	晌{~午} 賞
+ʂ	aŋ	陰去	尚 上{~面}
+ʂ	aŋ	陽去	裳{衣~} 上{~山}
+ʐ	aŋ	陽平	瓤
+ʐ	aŋ	上聲	壤 嚷 攘
+ʐ	aŋ	陰去	讓
+k	aŋ	陰平	崗 鋼 岡 剛 綱 缸
+k	aŋ	上聲	港
+k	aŋ	陰去	□{吵架}
+kʰ	aŋ	陰平	康 糠 慷
+kʰ	aŋ	陽平	扛
+kʰ	aŋ	陰去	抗 炕
+ŋ	aŋ	陰平	骯 □{哭}
+ŋ	aŋ	陰去	昂 仰{意為抬起}
+x	aŋ	陰平	夯{打~}
+x	aŋ	陽平	行{銀~} 杭 航
+x	aŋ	陰去	行{~列}
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	ts	tsʰ	s
+@FIN	ei
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ei	陰平	杯 碑 卑
+p	ei	陰去	背 輩 倍 背{~誦} 臂
+p	ei	陽去	貝 被{~子、~打}
+pʰ	ei	陰平	拍- 拔- 呸 胚 坯
+pʰ	ei	陽平	陪 賠 培 裴
+pʰ	ei	上聲	迫
+pʰ	ei	陰去	沛 配 佩
+m	ei	陽平	梅 煤 媒 霉 眉=
+m	ei	上聲	每 美
+m	ei	陰去	媚
+m	ei	陽去	妹 昧 寐
+f	ei	陰平	飛 妃 非
+f	ei	陽平	肥
+f	ei	上聲	匪 翡
+f	ei	陰去	廢 肺 吠 痱 費
+v	ei	陰平	危 微 威
+v	ei	陽平	維 惟 圍 違 唯
+v	ei	上聲	尾 偉 葦 緯 偽 委 為{作~}
+v	ei	陽去	為{~什麼} 未 味 魏 胃 謂
+t	ei	陰平	堆
+t	ei	陰去	對 隊 兌 □{摻在一起}
+tʰ	ei	陰平	推
+tʰ	ei	上聲	腿
+tʰ	ei	陰去	退 蛻 褪
+n	ei	陽去	內
+l	ei	陰平	肋
+l	ei	陽平	雷
+l	ei	上聲	壘 累{積~}
+l	ei	陽去	累{極困、連~} 淚 類
+ts	ei	上聲	嘴
+ts	ei	陰去	醉
+ts	ei	陽去	罪 最
+tsʰ	ei	陰平	催 崔 廁
+tsʰ	ei	陰去	脆 翠 粹
+s	ei	陽平	髓 隨 雖 綏 遂 隧 誰
+s	ei	陰去	碎 歲 穗
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	t	tʰ	l	tɕ	tɕʰ	ɕ	∅
+@FIN	i
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	i	陰平	逼 筆
+p	i	上聲	彼 鄙 比
+p	i	陰去	蔽 斃 閉 陛 弊 畢 必 碧 壁 幣 蓖{~麻}
+p	i	陽去	敝 俾 鼻
+pʰ	i	陰平	批 披= 砒
+pʰ	i	陽平	皮 脾 疲 琵 枇{~杷} 匹 陂
+pʰ	i	上聲	痞
+pʰ	i	陽去	譬 僻 辟 屁
+m	i	陰平	蜜 密 覓
+m	i	陽平	迷 謎 糜{~粥} 摩 靡
+m	i	上聲	米
+t	i	陰平	低
+t	i	上聲	底 抵
+t	i	陰去	弟 弟 遞 地 笛 敵 狄 帝 嫡 的{~確} 堤
+tʰ	i	陰平	梯
+tʰ	i	陽平	題 蹄 啼 提
+tʰ	i	上聲	體
+tʰ	i	陽去	替 涕 剃 屜 剔 逖
+l	i	陰平	立 粒 笠 栗 力 歷 吏
+l	i	陽平	驢 廬 犁 黎 離 籬 梨
+l	i	上聲	呂 旅 鋁 禮 李 理 履 里 鯉 侶
+l	i	陽去	例 厲 勵 隸 麗 荔 璃 狸 利 痢
+tɕ	i	陰平	雞 稽 飢 肌 機 譏 幾{~乎} 輯 急 級 疾 即 鯽 寂 跡 脊 績 激 擊 基 極 吉
+tɕ	i	上聲	擠 濟 幾{~朵} 給{供~} 幾 己
+tɕ	i	陰去	祭 際 劑 計 繼 繫{~鞋帶} 寄 技 妓 記 忌 既 集 冀 紀 髻
+tɕ	i	陽去	籍 藉
+tɕʰ	i	陰平	妻 欺 泣 漆 七 蛆
+tɕʰ	i	陽平	齊 臍 騎 岐 棋 旗 其 期 祈
+tɕʰ	i	上聲	起 豈 乞
+tɕʰ	i	陰去	趣 器 棄 戚 契 砌 氣 汽
+tɕʰ	i	陽去	去{來~，~皮}=
+ɕ	i	陰平	西 犀 犧 溪 熙 希 稀 吸 熄 息 惜 昔 夕 旭 膝= 須 嬉
+ɕ	i	陽平	徐 邪 隙
+ɕ	i	上聲	洗 喜 璽
+ɕ	i	陰去	細 系 戲 畜{~牲} 緒=
+ɕ	i	陽去	習 席 襲
+∅	i	陰平	醫 壹 衣 揖 一 伊 依
+∅	i	陽平	移 姨 儀
+∅	i	上聲	椅 乙 倚 以
+∅	i	陰去	肄 意 毅 易 役 逸 異 疫 誼 翼 億 藝 義
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	l	tɕ	tɕʰ	n	ɕ
+@FIN	ia
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ia	陰平	□{~貼，貼~} □{~嘰，象聲詞}
+p	ia	陰去	□{~扁了}
+pʰ	ia	陰平	□{~一氣，意為太過了}
+pʰ	ia	陽平	□{雙腿分開成八字形}
+pʰ	ia	陰去	□{~一耳巴子，意為打一巴掌}
+m	ia	陰平	□{~子聲音，意為聲音小}
+l	ia	陰去	□{~一臉，意為窩囊，不整潔}
+tɕ	ia	陰平	家 加 痂 嘉 假1{真~} 胛
+tɕ	ia	上聲	賈 假2{放~、真~} 甲
+tɕ	ia	陰去	架 價 駕 嫁 稼
+tɕʰ	ia	陰平	掐=
+tɕʰ	ia	上聲	卡{髮~}
+tɕʰ	ia	陰去	洽
+n	ia	陰平	鴨= 鴉= 押= 壓=
+n	ia	上聲	□{木訥}
+n	ia	陰去	□{~聲~氣，意為說話很囉嗦}
+ɕ	ia	陰平	蝦
+ɕ	ia	陽平	霞 暇 瑕 遐 狹 峽 轄 匣
+ɕ	ia	陰去	下= 廈{~門} 夏
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	tɕ
+@FIN	iai
+@TON	陰平	53
+@TON	上聲	35
+@TON	陰去	213
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	iai	陰平	階 皆
+tɕ	iai	上聲	解{~釋}
+tɕ	iai	陰去	介 界 戒 疥 芥 屆 械
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	t	tʰ	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	iau
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iau	陰平	標 膘 鏢 彪 飆
+p	iau	上聲	表
+pʰ	iau	陰平	飄 漂{水裡~著}
+pʰ	iau	陽平	瓢 嫖
+pʰ	iau	上聲	剽
+pʰ	iau	陰去	漂{~亮} 票
+m	iau	陰平	喵
+m	iau	陽平	苗 描
+m	iau	上聲	秒 渺{飄~} 緲{縹~}
+m	iau	陰去	廟 妙
+t	iau	陰平	刁 貂 雕
+t	iau	上聲	吊
+t	iau	陰去	釣 調{~動} 掉
+tʰ	iau	陰平	挑{~水}
+tʰ	iau	陽平	條 調{~和}
+tʰ	iau	上聲	挑{~撥}
+tʰ	iau	陰去	跳
+l	iau	陽平	燎 療 聊 遼 撩{~起來} 寥 □{招惹}
+l	iau	陰去	料 了{~結}
+l	iau	陽去	炮{馬~釕子}
+tɕ	iau	陰平	交 膠 郊 教{~書} 絞 狡 焦 蕉 椒 驕 嬌 澆 繳{上~}
+tɕ	iau	上聲	攪 較 餃{~子} 剿 僥{~幸}
+tɕ	iau	陰去	教{~育，~他去} 覺{睡~} 轎 叫 嚼 酵 校{~對} 窖
+tɕʰ	iau	陰平	敲 悄
+tɕʰ	iau	陽平	橋 喬 僑 蕎
+tɕʰ	iau	上聲	巧 俏 竅
+tɕʰ	iau	陰去	撬
+ȵ	iau	上聲	鳥
+ȵ	iau	陰去	尿
+ɕ	iau	陰平	消 銷 宵 硝 霄 蕭 簫 肖
+ɕ	iau	上聲	小 曉
+ɕ	iau	陰去	孝 笑
+ɕ	iau	陽去	潲 校{學~，上~} 效
+Ø	iau	陰平	妖 腰 邀 要{~求} 幺{~二三} 吆{~喝}
+Ø	iau	陽平	搖 謠 姚 堯
+Ø	iau	上聲	舀
+Ø	iau	陰去	要{想~} 耀
+Ø	iau	陽去	杳
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	t	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	iaŋ
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iaŋ	陰平	□{~~麵，意為較寬的麵條}
+t	iaŋ	陰去	□{打}
+l	iaŋ	陽平	良 糧 涼 梁 粱
+l	iaŋ	上聲	兩{~個、幾~幾錢} 輛
+l	iaŋ	陽去	量{~長短、數~} 亮 諒
+tɕ	iaŋ	陰平	姜 疆 僵 韁 江 漿 將{~米}
+tɕ	iaŋ	上聲	獎 槳 講 蔣
+tɕ	iaŋ	陰去	將{大~} 醬 降 匠 強{倔~}
+tɕʰ	iaŋ	陰平	羌 腔 槍
+tɕʰ	iaŋ	陽平	牆
+tɕʰ	iaŋ	上聲	搶 強{勉~}
+ȵ	iaŋ	上聲	娘 仰{意為躺著}
+ȵ	iaŋ	陰去	釀
+ɕ	iaŋ	陰平	箱 廂 相{互~} 湘 襄 鑲
+ɕ	iaŋ	陽平	詳 祥 降{~伏、投~}
+ɕ	iaŋ	上聲	想
+ɕ	iaŋ	陰去	項 相{~貌}
+ɕ	iaŋ	陽去	橡 像 象
+Ø	iaŋ	陰平	秧 央 殃
+Ø	iaŋ	陽平	羊 洋 楊 陽 揚 瘍
+Ø	iaŋ	上聲	養 癢
+Ø	iaŋ	陽去	樣
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	t	tʰ	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	in
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	in	陰平	賓 檳 繽 冰 兵
+p	in	上聲	稟 丙 柄 秉 餅
+p	in	陰去	並
+p	in	陽去	病
+pʰ	in	陽平	貧 頻 憑 平 坪 評 瓶 屏{畫~} 萍
+pʰ	in	上聲	品
+pʰ	in	陰去	聘 拼
+m	in	陽平	民 明 鳴 名 銘 冥
+m	in	上聲	敏 憫 抿 閩 皿
+m	in	陰去	命
+t	in	陰平	釘{~子} 丁
+t	in	上聲	頂 鼎
+t	in	陰去	釘{~住} 訂 定
+tʰ	in	陰平	聽{~見、~話、~其自然、~任} 廳
+tʰ	in	陽平	亭 停 廷 庭 蜓
+tʰ	in	上聲	挺 艇
+l	in	陰平	拎
+l	in	陽平	林 淋 臨 鱗 磷 陵 凌 菱 靈 零 鈴 伶 鄰
+l	in	上聲	領 嶺
+l	in	陽去	賃 令 另 吝
+tɕ	in	陰平	金 今 妗 津 晉 巾 斤 筋 津 京 荊 驚 精 晶 睛 經 徑 經 梗 禁{~不住} 襟
+tɕ	in	上聲	錦 緊 僅 謹 景 警 井
+tɕ	in	陰去	進 盡 境 鏡 頸 儘 勁{有~、~敵} 莖 敬 竟
+tɕ	in	陽去	禁{~止} 近 靜 靖 淨
+tɕʰ	in	陰平	欽 親{~自} 清 輕{~重、年~} 青 蜻 傾 頃 侵
+tɕʰ	in	陽平	琴 禽 擒 秦 擎 情 晴 勤 芹
+tɕʰ	in	上聲	請 寢
+tɕʰ	in	陰去	親{~家} 慶
+ȵ	in	陽平	您 寧{安~、滬~}
+ȵ	in	陰去	硬=
+ȵ	in	陽去	寧{~可}
+ɕ	in	陰平	心 欣 興{~旺} 幸 星 腥 馨 新 薪
+ɕ	in	陽平	尋 辛 行{~為、品~} 形 型 刑
+ɕ	in	上聲	省{反省} 醒
+ɕ	in	陰去	信 性 姓 釁 興{高~}
+Ø	in	陰平	音 陰 蔭 因 姻 鷹 蠅 鶯 鸚 櫻 飲{~馬} 應{~當、~用}
+Ø	in	陽平	淫 銀 寅 盈 贏 楹 營 瑩
+Ø	in	上聲	飲{~酒} 影 引 迎 穎 吟
+Ø	in	陰去	應{~對、相~} 映 印
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	l	tɕ	tɕʰ	n	ɕ	∅
+@FIN	io
+@TON	陰平	53
+@TON	陽平	44
+@TON	陰去	213
+
+// Initial	Final	Tone	CharList (Space separated)
+l	io	陰去	□{~掠} 掠 略
+tɕ	io	陰平	腳 覺1{一~} 角 爵 撅
+tɕ	io	陰去	覺2{~睡}
+tɕʰ	io	陰平	雀 鵲 卻 確 □{哄騙}
+n	io	陰去	虐 瘧{~疾，發~子}
+ɕ	io	陰平	削 薛
+ɕ	io	陽平	學
+∅	io	陰平	約 藥 鑰 岳{~山，姓~} 樂{音~}
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	t	l	tɕ	tɕʰ	ɲ	ɕ	Ø
+@FIN	iou
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iou	陰平	□{象聲詞}
+p	iou	上聲	□{鋪蓋}
+pʰ	iou	陰平	□{象聲詞}
+m	iou	上聲	□{「沒有」的合音}
+m	iou	陽去	謬
+t	iou	陰平	丟
+l	iou	陰平	溜{~冰} 六=
+l	iou	陽平	流 劉 留 琉
+l	iou	上聲	榴 硫 柳 餾
+l	iou	陰去	溜{滑下去}
+tɕ	iou	陰平	揪 鬈{髮~兒} 糾 灸 究
+tɕ	iou	上聲	酒 久 韭 九
+tɕ	iou	陰去	救 □{縮成一團}
+tɕ	iou	陽去	舅 臼 咎 舊 柩
+tɕʰ	iou	陰平	秋{~千、~天} 丘
+tɕʰ	iou	陽平	求 球 仇{姓}
+tɕʰ	iou	陰去	□{~在一起，指幾個人圍成一圈}
+ɲ	iou	陰平	□{~扯，意為做事拖拖拉拉不乾脆}
+ɲ	iou	陽平	牛
+ɲ	iou	上聲	紐 扭{~打}
+ɲ	iou	陰去	扭{~秧歌}
+ɕ	iou	陰平	休 修
+ɕ	iou	上聲	朽
+ɕ	iou	陰去	嗅 銹
+Ø	iou	陰平	優 憂 尤 幽
+Ø	iou	陽平	郵 油 游 猶 悠 由
+Ø	iou	上聲	有 友
+Ø	iou	陰去	幼 誘 柚
+Ø	iou	陽去	又 右 佑
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	tɕ	tɕʰ	ɕ	Ø
+@FIN	iəŋ
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+tɕ	iəŋ	上聲	炅 窘 炯
+tɕʰ	iəŋ	陽平	窮 瓊
+ɕ	iəŋ	陰平	兄 胸 凶
+ɕ	iəŋ	陽平	熊 雄
+Ø	iəŋ	陰平	雍 擁
+Ø	iəŋ	上聲	永 詠 泳 勇 甬{~道}
+Ø	iəŋ	陽去	用
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	t	tʰ	l	tɕ	tɕʰ	n	ɕ	Ø
+@FIN	iɛ
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iɛ	陰平	憋 癟
+p	iɛ	上聲	□{~掙扎}
+p	iɛ	陽平	別
+pʰ	iɛ	陰平	撇 瞥
+m	iɛ	陰平	滅 咩 □{~匠，意為專做竹子工藝的人} □{~包穀，意為剝包穀粒}
+m	iɛ	陰去	□{~折斷}
+t	iɛ	陰平	爹 跌
+t	iɛ	上聲	咥
+t	iɛ	陽平	疊 碟 諜 牒
+t	iɛ	陽去	喋
+tʰ	iɛ	陰平	貼 帖{請~，碑~}
+tʰ	iɛ	上聲	鐵
+l	iɛ	陰平	烈 裂 列 劣
+l	iɛ	陰去	咧
+tɕ	iɛ	陰平	接 揭 節 結 潔
+tɕ	iɛ	上聲	姐
+tɕ	iɛ	陰去	借 捷 睫 傑 劫 截
+tɕʰ	iɛ	陰平	切
+tɕʰ	iɛ	陽平	茄
+tɕʰ	iɛ	上聲	且
+tɕʰ	iɛ	陰去	妾 怯
+n	iɛ	陰去	聶 鑷 躡 業 孽 捏 齧
+ɕ	iɛ	陰平	歇 血 些
+ɕ	iɛ	陽平	斜 諧 邪 攜 協 鞋
+ɕ	iɛ	上聲	寫
+ɕ	iɛ	陰去	卸 穴 瀉 脅 謝
+Ø	iɛ	陰平	噎 耶
+Ø	iɛ	陽平	爺
+Ø	iɛ	上聲	野 也
+Ø	iɛ	陰去	葉 頁 液 腋 夜
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	t	tʰ	l	tɕ	tɕʰ	ȵ	ɕ	Ø
+@FIN	iɛn
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iɛn	陰平	邊 鞭 編
+p	iɛn	上聲	貶 蝙 匾
+p	iɛn	陰去	變 辯 辨 汴 扁 遍 辮
+p	iɛn	陽去	便{方~}
+pʰ	iɛn	陰平	篇 偏
+pʰ	iɛn	陽平	便{~宜}
+pʰ	iɛn	上聲	□{用刀砍下來}
+pʰ	iɛn	陰去	騙 片
+m	iɛn	陽平	棉 綿 眠
+m	iɛn	上聲	免 勉 娩{分娩}
+m	iɛn	陰去	緬 面
+t	iɛn	陰平	顛
+t	iɛn	陽平	掂
+t	iɛn	上聲	點 典
+t	iɛn	陰去	店 電 墊 殿 佃 奠
+tʰ	iɛn	陰平	添 天
+tʰ	iɛn	陽平	甜 田 填
+tʰ	iɛn	上聲	舔 腆{斷~}
+l	iɛn	陽平	廉 鐮 簾 連 蓮 憐 聯
+l	iɛn	上聲	臉
+l	iɛn	陽去	斂 殮 戀
+tɕ	iɛn	陰平	尖 殲 兼 間{中~} 艱 奸 諫 澗 肩 堅 煎 監
+tɕ	iɛn	陽平	間{~斷、~或}
+tɕ	iɛn	上聲	減 鹼 檢 儉 簡 剪 繭
+tɕ	iɛn	陰去	艦 劍 濺 件 建 腱 鍵 健 箋 薦 見 漸 箭
+tɕ	iɛn	陽去	監{國子~} 賤 踐
+tɕʰ	iɛn	陰平	簽 遷 千 牽 鉛
+tɕʰ	iɛn	陽平	錢 乾 虔 前 鉗
+tɕʰ	iɛn	上聲	淺 遣 潛
+tɕʰ	iɛn	陰去	欠 倩 嵌 謙 歉
+ȵ	iɛn	陰平	拈 捻{~碎}
+ȵ	iɛn	陽平	鯰 年 黏
+ȵ	iɛn	上聲	碾 攆
+ȵ	iɛn	陽去	念
+ɕ	iɛn	陰平	仙 掀 先 鮮
+ɕ	iɛn	陽平	鹹={~淡} 咸={老少~宜} 銜 嫌 閒 弦 舷 賢 玄
+ɕ	iɛn	上聲	險 癬 顯 眩
+ɕ	iɛn	陰去	線 羨 獻 陷 餡
+ɕ	iɛn	陽去	限 憲 縣 現
+Ø	iɛn	陰平	醃 焉 煙 燕{~京，姓~}
+Ø	iɛn	陽平	鹽 閻 簷 嚴 顏 筵 延 言 研 沿 炎
+Ø	iɛn	上聲	掩 演
+Ø	iɛn	陰去	豔 燕{~子} 咽 宴 厭 焰 雁 硯
+Ø	iɛn	陽去	儼 驗
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	Ø
+@FIN	n̩
+@TON	上聲	35
+
+// Initial	Final	Tone	CharList (Space separated)
+Ø	n̩	上聲	你
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	f	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	o
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	o	陰平	波 菠 玻 撥 餑 剝 駁 博
+p	o	上聲	跛
+p	o	陰去	簸{~箕、~一~}
+p	o	陽去	薄{~荷}
+pʰ	o	陰平	坡 潑 頗 珀
+pʰ	o	陽平	婆1
+pʰ	o	上聲	叵
+pʰ	o	陰去	破
+pʰ	o	陽去	婆2{~奶奶} 搏 勃 泊{梁山~}
+m	o	陰平	末 莫 摸 漠 陌 脈
+m	o	陽平	磨1{~刀} 摩 摹 謀 饃 膜
+m	o	上聲	抹 茉 畝 母
+m	o	陰去	沒 沫
+m	o	陽去	磨2{~麵，石~} 墓 暮 慕 牧 募 墓
+f	o	陰平	佛{~教}
+f	o	上聲	否
+t	o	陰平	多 □{~托著}
+t	o	上聲	朵 躲
+t	o	陰去	剁
+t	o	陽去	惰 奪
+tʰ	o	陰平	拖 脫 托
+tʰ	o	陽平	鴕 駝 馱
+tʰ	o	上聲	妥 橢
+tʰ	o	陰去	唾
+n	o	陽平	挪
+n	o	陰去	糯 諾 懦
+l	o	陰平	落 樂 烙 絡 駱 洛
+l	o	陽平	鑼 籮 羅 螺 騾
+l	o	上聲	裸
+l	o	陰去	勒
+l	o	陽去	□{~樹葉，捋樹葉}
+ts	o	陰平	做 作{~坊，工~} 撮
+ts	o	上聲	左 佐
+ts	o	陰去	咋
+ts	o	陽去	坐 座
+tsʰ	o	陰平	搓
+tsʰ	o	陰去	錯 挫
+s	o	陰平	□{吝嗇} 縮 蓑 梭 唆
+s	o	上聲	鎖 瑣 所 索
+tʂ	o	陰平	卓 桌 琢 啄 捉
+tʂ	o	陽平	濁 著{~火}
+tʂ	o	陰去	鐲 酌
+tʂʰ	o	陰平	戳 □{~事，意為挑撥}
+ʂ	o	陰平	□{救唆} □{~了一碗飯，意為端了一碗飯}
+ʂ	o	陽平	勺 碩 朔 爍 □{敲打}
+ʂ	o	上聲	芍 □{~一耳巴子，打一巴掌}
+ʐ	o	陽平	弱
+k	o	陰平	哥 歌 鍋 鴿 割 胳 郭
+k	o	上聲	果 裹 擱 葛
+k	o	陰去	過 個 各
+kʰ	o	陰平	苛 科 棵 磕 渴 括 闊 擴 殼
+kʰ	o	上聲	可 坷
+kʰ	o	陰去	課 □{租賃}
+ŋ	o	陰平	愕 惡{~心}
+ŋ	o	陽平	鵝 俄 蛾 訛
+ŋ	o	上聲	我
+ŋ	o	陰去	餓 扼
+ŋ	o	陽去	鄂
+x	o	陰平	豁{~然，~嘴，~口} 喝{~酒，~彩，吆~}
+x	o	陽平	荷 何 河 和{~氣，~麵} 禾 合
+x	o	上聲	火
+x	o	陰去	貨 賀 鶴 惑 赫 獲 禍 霍 嚇{~活} 藿
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x	Ø
+@FIN	ou
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+t	ou	陰平	都{~城、~是} 兜 督
+t	ou	上聲	堵 睹 肚{魚~、豬~、腹~} 斗{~升} 抖 陡
+t	ou	陰去	鬥{~爭}
+t	ou	陽去	杜 度 渡 鍍 豆 逗 毒 獨 讀 犢{牛~子}
+tʰ	ou	陰平	偷 突 禿
+tʰ	ou	陽平	涂 途 圖 頭 投 徒
+tʰ	ou	上聲	土 吐{~痰}
+tʰ	ou	陰去	吐{嘔~} 屠 透
+n	ou	陽平	奴
+n	ou	上聲	努
+n	ou	陽去	怒
+l	ou	陰平	賂 祿 六- 陸
+l	ou	陽平	爐 蘆 盧 櫓 鹵 樓
+l	ou	上聲	魯 虜 摟{~收簍}
+l	ou	陽去	路 露 鹿 漏 陋
+ts	ou	陰平	租 足
+ts	ou	上聲	祖 組 阻 走
+ts	ou	陰去	做 助 奏 族 卒{兵~} 軸 逐
+ts	ou	陽去	就
+tsʰ	ou	陰平	粗 初- 促
+tsʰ	ou	陽平	鋤-
+tsʰ	ou	上聲	楚- 礎-{柱下石}
+tsʰ	ou	陰去	醋 措 湊 猝{倉~} 觸
+tsʰ	ou	陽去	畜-{牲~}
+s	ou	陰平	蘇 酥 梳 疏 蔬 叟 嗽 搜 餿{飯~了} 宿 肅
+s	ou	陽平	俗
+s	ou	陰去	素 訴 塑 數{動詞} 數{名詞} 瘦 漱 束
+s	ou	陽去	速
+tʂ	ou	陰平	周 州 舟 洲 竹- 築- 祝- 粥
+tʂ	ou	上聲	□{擺架子}
+tʂ	ou	陰去	燭 囑 帚 咒
+tʂʰ	ou	陽平	仇 酬
+tʂʰ	ou	上聲	丑
+tʂʰ	ou	陰去	臭
+ʂ	ou	陰平	叔 收
+ʂ	ou	上聲	手 守 首 屬
+ʂ	ou	陰去	獸 售 受 壽 授
+ʂ	ou	陽去	熟
+ʐ	ou	陰平	褥- 辱-
+ʐ	ou	陽平	柔 揉
+ʐ	ou	陰去	肉
+k	ou	陰平	溝 鉤 勾
+k	ou	上聲	狗 苟
+k	ou	陰去	垢 夠 構 購
+kʰ	ou	陰平	摳
+kʰ	ou	陽平	扣{反~住}
+kʰ	ou	上聲	口
+kʰ	ou	陰去	叩{~頭} 扣{~門} 寇
+ŋ	ou	陰平	摳 歐 鷗
+ŋ	ou	上聲	藕 偶{配~} 偶{偶然} 嘔{~吐}
+ŋ	ou	陰去	慪{~氣} 漚{久浸在水裡}
+x	ou	陰平	□{堵住}
+x	ou	陽平	侯 喉 猴 候
+x	ou	上聲	吼
+x	ou	陰去	后{皇~} 後{前~} 厚
+Ø	ou	陰平	□{象聲詞}
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	f	k	kʰ	x	∅
+@FIN	u
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	u	陰平	不
+p	u	上聲	補 捕
+p	u	陰去	布 怖 部
+p	u	陽去	簿 步
+pʰ	u	陰平	撲 瀑 鋪{~床}
+pʰ	u	陽平	菩 僕 匍
+pʰ	u	上聲	譜 普 溥 脯 樸 卜 浦
+pʰ	u	陰去	鋪{~店}
+pʰ	u	陽去	脯
+f	u	陰平	夫 膚 孵 麩{~子} 敷
+f	u	陽平	扶 芙 伏 袱 輻 福 蝠 浮 俘 符 服
+f	u	上聲	府 斧 俯 腑 甫 釜
+f	u	陰去	富 副 婦 復 父 附 覆 赴 縛 付 賦 腹 幅 負
+f	u	陽去	佛{~像} 傅 蝮
+k	u	陰平	姑 骨 谷 估 孤 咕
+k	u	上聲	牯 古 鼓 股
+k	u	陽去	故 錮 雇 顧 固
+kʰ	u	陰平	枯 窟 哭
+kʰ	u	上聲	苦
+kʰ	u	陰去	褲 庫 酷
+x	u	陰平	呼 乎 忽
+x	u	陽平	湖 胡 狐 壺 糊
+x	u	上聲	虎 滸 唬
+x	u	陰去	呼{~推過去} 戶 護 滬 互
+∅	u	陰平	烏 污 屋 巫 誣 惡
+∅	u	陽平	吳 蜈 梧 無
+∅	u	上聲	五 午 伍 舞 鵡 捂 武 侮
+∅	u	陰去	誤 悟 霧 務
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	k	kʰ	x
+@FIN	ua
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+k	ua	陰平	瓜
+k	ua	上聲	剮 寡
+k	ua	陰去	掛 卦
+kʰ	ua	陰平	誇
+kʰ	ua	上聲	垮
+x	ua	陰平	花
+x	ua	陽平	華1{中~} 划 滑
+x	ua	陰去	化
+x	ua	陽去	華2{~山} 話
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	k	kʰ	x
+@FIN	uai
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uai	陰平	乖
+k	uai	上聲	拐
+k	uai	陰去	怪
+kʰ	uai	上聲	塊
+kʰ	uai	陰去	筷 快 會{~計}
+x	uai	陽平	懷 槐 淮
+x	uai	陰去	壞
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	k	kʰ	x
+@FIN	uan
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uan	陰平	官 棺 觀{參~、寺~} 冠 關
+k	uan	上聲	管 館
+k	uan	陰去	灌 罐 貫 冠 慣
+kʰ	uan	陰平	寬
+kʰ	uan	上聲	款
+x	uan	陰平	歡
+x	uan	陽平	桓 還{~原}
+x	uan	上聲	緩
+x	uan	陽去	患 煥 喚 換 幻 宦
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	k	kʰ	x
+@FIN	uaŋ
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uaŋ	陰平	光
+k	uaŋ	上聲	廣
+k	uaŋ	陰去	逛
+kʰ	uaŋ	陰平	框 筐 眶
+kʰ	uaŋ	陽平	狂
+kʰ	uaŋ	陰去	曠 況 礦
+kʰ	uaŋ	陽去	□{~一頓，意為打一頓}
+x	uaŋ	陰平	荒 慌
+x	uaŋ	陽平	黃 簧 皇 蝗
+x	uaŋ	上聲	□{~了，意為腐朽了或沒戲了}
+x	uaŋ	陰去	晃
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	k	kʰ	x
+@FIN	uei
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uei	陰平	規 龜 歸 閨
+k	uei	上聲	詭 軌 鬼
+k	uei	陰去	桂 貴 跪 櫃
+kʰ	uei	陰平	虧 窺
+kʰ	uei	陽平	盔 魁 傀 奎 葵 逵
+kʰ	uei	陰去	愧 潰
+x	uei	陰平	恢 灰 揮 輝 徽 麾
+x	uei	陽平	回 茴
+x	uei	上聲	悔 諱 毀
+x	uei	陰去	匯 潰 繪 穢 惠 慧 彙 賄 晦 會{開~，~不~}
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	∅
+@FIN	uo
+@TON	陰平	53
+@TON	陰去	213
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	uo	陰平	倭 物 握 窩
+∅	uo	陰去	臥
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	k	kʰ	x
+@FIN	uən
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uən	上聲	滾
+k	uən	陰去	棍
+kʰ	uən	陰平	坤 鯤 昆
+kʰ	uən	上聲	捆
+kʰ	uən	陰去	困
+x	uən	陰平	婚 昏 葷
+x	uən	陽平	魂 餛 渾
+x	uən	陽去	混
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	k	x
+@FIN	uɛ
+@TON	陰平	53
+@TON	陰去	213
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uɛ	陰平	國 虢
+x	uɛ	陰去	或
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	ʐ	k	kʰ	ŋ	x
+@FIN	ən
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ən	陰平	奔
+p	ən	上聲	本
+p	ən	陽去	笨
+pʰ	ən	陰平	噴{~水、~香、~嚏}
+pʰ	ən	陽平	盆
+m	ən	陰平	們 燜
+m	ən	陽平	門
+m	ən	上聲	□{腐朽了}
+m	ən	陽去	悶
+f	ən	陰平	分 芬 紛
+f	ən	陽平	墳
+f	ən	上聲	粉 焚
+f	ən	陰去	糞 奮 憤
+f	ən	陽去	份
+v	ən	陰平	溫 瘟
+v	ən	陽平	文 蚊 紋 聞
+v	ən	上聲	穩 吻 刎
+v	ən	陽去	問
+t	ən	陰平	敦 墩 盾 遁 鈍 蹲 燈 登
+t	ən	上聲	等
+t	ən	陰去	頓 飩 凳 瞪
+t	ən	陽去	鄧
+tʰ	ən	陰平	吞
+tʰ	ən	陽平	囤 豚 屯 臀 藤 騰 謄
+n	ən	陰平	□{~鈔票，意為數錢，掏錢}
+n	ən	陽平	能
+n	ən	陽去	嫩
+l	ən	陰平	楞
+l	ən	陽平	輪 侖 論{~語} □{瞪一眼}
+l	ən	上聲	冷 淪
+l	ən	陽去	論{議~} 愣
+ts	ən	陰平	尊 遵 曾{姓} 增 憎 贈 爭 箏 掙 宗
+ts	ən	上聲	怎
+tsʰ	ən	陰平	村 皴{臉~}
+tsʰ	ən	陽平	岑 存 層 曾{~經}
+tsʰ	ən	上聲	撐
+tsʰ	ən	陰去	寸
+tsʰ	ən	陽去	蹭{磨~}
+s	ən	陰平	森 參{人~} 孫 僧 生 牲 甥 笙
+s	ən	上聲	損 筍 省{~長、節~}
+s	ən	陰去	滲
+tʂ	ən	陰平	珍 真 針 斟 征 蒸 貞 偵 正
+tʂ	ən	上聲	枕 枕 診 疹 拯{~救} 整
+tʂ	ən	陰去	鎮 圳
+tʂ	ən	陽去	政 振 震 證 症 陣 鄭
+tʂʰ	ən	陰平	稱{~呼、~重量}
+tʂʰ	ən	陽平	陳 塵 晨 辰 臣 沉 澄{水渾了，澄一澄} 乘 橙 承 丞 橙 逞{~能} 程 成 城 誠 盛{~滿了} 呈
+tʂʰ	ən	陰去	趁 秤{一杆~} 稱{相~}
+ʂ	ən	陰平	深 身 申 伸 娠 升 勝{~任} 聲
+ʂ	ən	陽平	神 繩
+ʂ	ən	上聲	沈 嬸 審
+ʂ	ən	陰去	甚 葚{桑~} 腎 慎 勝{~敗} 勝 聖 盛{興~}
+ʂ	ən	陽去	剩
+ʐ	ən	陰平	扔
+ʐ	ən	陽平	人 仁 仍 任{姓}
+ʐ	ən	陰去	認
+ʐ	ən	陽去	壬 刃 韌 任{責~} 紉
+k	ən	陰平	跟 根 更{~換、五~、~加} 庚 羹 耕 耿
+k	ən	陽平	□{~不著，意為夠不到}
+k	ən	上聲	埂 哽 鯁
+kʰ	ən	陰平	坑
+kʰ	ən	上聲	墾 懇
+ŋ	ən	陰平	恩
+ŋ	ən	上聲	□{磕著了}
+ŋ	ən	陽去	硬-
+x	ən	陰平	哼
+x	ən	陽平	痕 恆 衡 橫{~豎}
+x	ən	上聲	很
+x	ən	陽去	恨 杏 橫{蠻~}
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	f	v	t	tʰ	n	l	ts	tsʰ	s	tʂ	tʂʰ	ʐ	k	kʰ	x	Ø
+@FIN	əŋ
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	əŋ	陰平	崩 迸
+p	əŋ	上聲	繃
+p	əŋ	陰去	蹦
+pʰ	əŋ	陰平	砰 烹
+pʰ	əŋ	陽平	朋 棚 膨 篷 蓬 彭
+pʰ	əŋ	上聲	捧
+pʰ	əŋ	陰去	碰
+m	əŋ	陰平	懵
+m	əŋ	陽平	蒙
+m	əŋ	上聲	猛
+m	əŋ	陽去	夢 孟
+f	əŋ	陰平	風 楓 瘋 豐 封 峰 蜂 鋒
+f	əŋ	陽平	馮 縫 逢
+f	əŋ	上聲	諷
+f	əŋ	陽去	奉 鳳 俸
+v	əŋ	陰平	翁 甕
+t	əŋ	陰平	東 冬
+t	əŋ	上聲	懂 董
+t	əŋ	陰去	凍
+t	əŋ	陽去	棟 動 洞
+tʰ	əŋ	陰平	通
+tʰ	əŋ	陽平	同 銅 桐 筒 童 瞳
+tʰ	əŋ	上聲	桶 捅 統
+tʰ	əŋ	陰去	痛
+n	əŋ	陰平	弄
+n	əŋ	陽平	農 膿 儂{我，你} 濃
+n	əŋ	陰去	□{軟}
+l	əŋ	陰平	聾
+l	əŋ	陽平	籠 隆 龍
+l	əŋ	上聲	攏
+ts	əŋ	陰平	棕 鬃 蹤
+ts	əŋ	上聲	總
+ts	əŋ	陰去	縱{放~、~橫} 粽
+tsʰ	əŋ	陰平	蔥 聰
+tsʰ	əŋ	陽平	崇 從{~容、跟~} 叢
+s	əŋ	陰平	松
+s	əŋ	陽平	□{賭~，指壞蛋}
+s	əŋ	上聲	慫{恿} □{推}
+s	əŋ	陰去	誦 頌 訟 送
+tʂ	əŋ	陰平	中{當中} 忠 終 鐘
+tʂ	əŋ	上聲	腫 種{~類} 仲
+tʂ	əŋ	陰去	眾 中{射~} 種{~樹}
+tʂ	əŋ	陽去	重{輕~}
+tʂʰ	əŋ	陰平	充 沖
+tʂʰ	əŋ	陽平	蟲 重{~複}
+tʂʰ	əŋ	上聲	寵
+ʐ	əŋ	陽平	絨 戎 融 茸 容 蓉 鎔 榮 冗{撥~、~長}
+k	əŋ	陰平	公 工 蚣 功 弓 宮 躬 供{~養，上~} 恭
+k	əŋ	上聲	攻 鞏{~固} 拱
+k	əŋ	陰去	供{~給，~不起}
+k	əŋ	陽去	共 貢
+kʰ	əŋ	陰平	空
+kʰ	əŋ	上聲	孔 恐
+kʰ	əŋ	陰去	控
+x	əŋ	陰平	亨 轟 烘
+x	əŋ	陽平	虹 弘 宏 洪 鴻 紅
+x	əŋ	上聲	哄{~騙}
+x	əŋ	陰去	哄{哄~、內~}
+Ø	əŋ	上聲	□{象聲詞}
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	∅
+@FIN	ɚ
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	ɚ	陰平	日-
+∅	ɚ	陽平	兒 而
+∅	ɚ	上聲	耳 餌 爾
+∅	ɚ	陰去	二 貳{~心}
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	p	pʰ	m	t	tʰ	l	ts	tsʰ	s	tʂ	tʂʰ	ʂ	k	kʰ	ŋ	x
+@FIN	ɛ
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɛ	陰平	伯 掰 北 柏
+pʰ	ɛ	陰平	拍=
+m	ɛ	陰平	麥 脈 墨
+t	ɛ	陰平	得 德
+tʰ	ɛ	陰平	特
+l	ɛ	陰平	勒
+l	ɛ	陽去	□{~樹葉，捋樹葉}
+ts	ɛ	陰平	摘 則 仄
+ts	ɛ	陽平	澤 擇 責 賊
+tsʰ	ɛ	陰平	策 冊 測 側 廁 催
+s	ɛ	陰平	色 嗇 蝨 骰{~子} 塞{~進去}
+tʂ	ɛ	陰平	遮 折 蜇 褶 哲
+tʂ	ɛ	上聲	者 赭
+tʂ	ɛ	陰去	這
+tʂʰ	ɛ	陰平	車{馬~} 徹 撤
+tʂʰ	ɛ	上聲	扯
+tʂʰ	ɛ	陰去	□{~裂}
+ʂ	ɛ	陰平	賒 奢
+ʂ	ɛ	陽平	佘 蛇
+ʂ	ɛ	上聲	捨{~得}
+ʂ	ɛ	陽去	射 麝 赦 舍{~宿~} 涉 設
+k	ɛ	陰平	格 革 隔 閣 □{~提}
+kʰ	ɛ	陰平	刻1{時~} 客 咳
+kʰ	ɛ	陰去	刻2{用刀~}
+ŋ	ɛ	陽平	額
+ŋ	ɛ	陰去	扼 □{~咬}
+x	ɛ	陰平	黑 嘿 核
+x	ɛ	上聲	嚇1{~~啦啦，意為笑的聲音}
+x	ɛ	陰去	嚇2{~呼啦}
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	ts	tsʰ	s
+@FIN	ɿ
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ɿ	陰平	資 姿 咨 滋 茲
+ts	ɿ	上聲	紫 子 姊
+ts	ɿ	陰去	滓 柿
+ts	ɿ	陽去	自 字
+tsʰ	ɿ	陰平	差{~齒} 疵{~花}
+tsʰ	ɿ	陽平	辭 詞 祠 慈 磁 雌
+tsʰ	ɿ	上聲	此
+tsʰ	ɿ	陽去	賜 次 刺 伺
+s	ɿ	陰平	厮 私 師 獅 絲 思 司
+s	ɿ	上聲	死 使 駛 史
+s	ɿ	陰去	四 肆 似
+s	ɿ	陽去	仕 事 撕 斯 祀 飼 嗣 思 寺 市
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ʅ
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʅ	陰平	知 蜘 蛛 支 肢 梔{~子花} 脂 之 芝 趾 汁 織 職 只
+tʂ	ʅ	上聲	紙 指 旨 止 址
+tʂ	ʅ	陰去	制 智 至 置 志 痣 擲 致 稚 痔 治 秩 殖 滯
+tʂ	ʅ	陽去	姪 值 植 直
+tʂʰ	ʅ	陰平	癡 吃 尺 嗤{~笑}
+tʂʰ	ʅ	陽平	池 馳 持 遲
+tʂʰ	ʅ	上聲	恥 齒
+tʂʰ	ʅ	陽去	翅 赤 斥
+ʂ	ʅ	陰平	尸 詩 濕 失 施 式 飾
+ʂ	ʅ	陽平	時 拾
+ʂ	ʅ	上聲	屎 矢 始
+ʂ	ʅ	陰去	世 誓 示 視 試 勢 逝 嗜 士 是 氏
+ʂ	ʅ	陽去	十 實 蝕 室 識 拭{~擦} 石
+ʐ	ʅ	陽去	日=
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	tʂ	tʂʰ	n	ʂ	ʐ
+@FIN	ʯ
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʯ	陰平	豬 諸 居 車{~馬炮} 珠 蛛 株 朱 誅 竹= 祝= 築= 拘 駒 菊 掬{~一捧}
+tʂ	ʯ	上聲	舉 主 拄
+tʂ	ʯ	陰去	鋸 俱 句 具 懼 局 聚 注 巨 距 駐 鑄 蛀 貯 燭= 囑=
+tʂ	ʯ	陽去	據 柱 住
+tʂʰ	ʯ	陰平	區 驅 出 屈 曲{酒~，~折，歌~} 初=
+tʂʰ	ʯ	陽平	除 雛 廚 鋤=
+tʂʰ	ʯ	上聲	楚= 礎= 杵 儲{~蓄}
+tʂʰ	ʯ	陽去	去-{~年}
+n	ʯ	上聲	女
+ʂ	ʯ	陰平	緒-{光~} 書 舒 墟{廢~} 虛 噓{吹~} 鬚{鬍~} 樞 畜{牧} 輸{~贏} 殊 贖 叔=
+ʂ	ʯ	上聲	暑 鼠 黍 署{公~} 薯 許 屬=
+ʂ	ʯ	陰去	續 術 述 序 敘 恕
+ʂ	ʯ	陽去	豎 樹
+ʐ	ʯ	陽平	輸{~贏} 入 迂{~腐} 淤 醵 如 魚 漁 娛 愉 于 儒 榆
+ʐ	ʯ	上聲	語 乳 雨 宇 禹 羽 嶼 予 孺{~小~}
+ʐ	ʯ	陰去	獄 豫 寓 欲 御 預 逾 虞 遇 芋 裕 域 郁 育 與 譽 盂 玉
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ʯa
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʯa	陰平	抓 □{~挖，意為勤勞能幹}
+tʂ	ʯa	上聲	爪
+tʂʰ	ʯa	陰平	□{~一氣，意為洩氣}
+tʂʰ	ʯa	上聲	□{拽下來}
+ʂ	ʯa	陰平	□{用力甩}刷
+ʂ	ʯa	上聲	耍
+ʐ	ʯa	陽平	捼 □{亂揉}
+ʐ	ʯa	陰去	□{亂叫亂說}
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	tʂ	tʂʰ	ʂ
+@FIN	ʯai
+@TON	陰平	53
+@TON	上聲	35
+@TON	陰去	213
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʯai	陰平	□{~拐著}
+tʂ	ʯai	陰去	拽{拖}
+tʂʰ	ʯai	陰平	揣
+tʂʰ	ʯai	陰去	踹
+ʂ	ʯai	陰平	衰 摔
+ʂ	ʯai	上聲	甩
+ʂ	ʯai	陰去	帥 蟀 率{~領}
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ʯan
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʯan	陰平	專 磚
+tʂ	ʯan	上聲	轉{~眼、~送}
+tʂ	ʯan	陰去	撰 轉{~螺絲、~圓圈} 賺 傳{傳~} 娟
+tʂ	ʯan	陽去	倦 圈{豬~}
+tʂʰ	ʯan	陰平	穿 川 圈{圓~}
+tʂʰ	ʯan	陽平	傳{~達} 椽 船 拳 權 顴 全 泉
+tʂʰ	ʯan	上聲	犬
+tʂʰ	ʯan	陰去	勸 券 篡 喘 串
+ʂ	ʯan	陰平	閂 拴
+ʂ	ʯan	陽平	懸
+ʂ	ʯan	陰去	涮
+ʐ	ʯan	陰平	冤
+ʐ	ʯan	陽平	緣 元 原 源 袁 轅 援 圓 員 園
+ʐ	ʯan	上聲	軟 遠 阮
+ʐ	ʯan	陰去	怨
+ʐ	ʯan	陽去	願 院
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	tʂ	tʂʰ	ʂ
+@FIN	ʯaŋ
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʯaŋ	陰平	莊 裝 妝 樁
+tʂ	ʯaŋ	陽去	狀 壯 撞=
+tʂʰ	ʯaŋ	陰平	瘡 窗
+tʂʰ	ʯaŋ	陽平	床
+tʂʰ	ʯaŋ	上聲	闖
+tʂʰ	ʯaŋ	陰去	撞-
+tʂʰ	ʯaŋ	陽去	創
+ʂ	ʯaŋ	陰平	雙 霜 孀
+ʂ	ʯaŋ	上聲	爽
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ʯei
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʯei	陰平	追 錐 椎
+tʂ	ʯei	陰去	墜 綴 贅
+tʂʰ	ʯei	陰平	吹 炊
+tʂʰ	ʯei	陽平	垂 棰 捶 錘 槌
+ʂ	ʯei	上聲	水
+ʂ	ʯei	陰去	稅 睡
+ʐ	ʯei	陰去	銳 瑞 蕊 芮 睿
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ʯn
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʯn	陰平	均 菌 軍 君 郡
+tʂ	ʯn	上聲	准
+tʂ	ʯn	陰去	峻
+tʂʰ	ʯn	陰平	椿 春
+tʂʰ	ʯn	陽平	群 唇 醇 純 淳 裙
+tʂʰ	ʯn	上聲	蠢
+ʂ	ʯn	陰平	薰 勳 熏
+ʂ	ʯn	陽平	□{丟人} 詢 循 巡
+ʂ	ʯn	上聲	吮 荀
+ʂ	ʯn	陰去	順 舜 訊 訓 遜 迅
+ʐ	ʯn	陰平	暈
+ʐ	ʯn	陽平	雲 勻 允
+ʐ	ʯn	陰去	熨 韻 潤 閏
+ʐ	ʯn	陽去	運 孕
+// HSD Syllabary Data Partition
+// 地区：陝西省-商洛市-柞水縣-鳳凰鎮
+// 来源：《柞水縣鳳凰鎮方言研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	陝西省-商洛市-柞水縣-鳳凰鎮
+@SRC	《柞水縣鳳凰鎮方言研究》
+
+@INI	tʂ	tʂʰ	ʂ	ʐ
+@FIN	ʯɛ
+@TON	陰平	53
+@TON	陽平	44
+@TON	上聲	35
+@TON	陰去	213
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+tʂ	ʯɛ	陰平	撅{翹}
+tʂ	ʯɛ	陰去	決 訣 倔 橛{~子}
+tʂʰ	ʯɛ	陰平	缺
+tʂʰ	ʯɛ	陽平	瘸
+ʂ	ʯɛ	陰平	說{~話} 靴{~子}
+ʐ	ʯɛ	陰去	閱 悅 粵 越 日 月 熱 躍
+ʐ	ʯɛ	陽去	□{叫喊}

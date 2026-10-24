@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from tables._表 import 表 as _表
-from tables.__init__ import 找字, 爲字
+from tables.__init__ import 找字, 爲字, 上標
 import re
 from pypinyin.contrib.tone_convert import to_tone3
 
@@ -155,6 +155,8 @@ class 表(_表):
 				if 音.endswith("※"):
 					音 = 音[:-1]
 					註 = "※" + 註
+			elif 自.文件名.startswith("湘南官话联表"):
+				音組 = 音.split("\\")
 			elif 自.文件名.startswith("太原盆地四點"):
 				音組 = 音.split("\\")
 				註 = 註[1:].strip("()（）")
@@ -192,9 +194,16 @@ class 表(_表):
 					音組.append(音)
 			elif 自.文件名.startswith("鄂州赣语语音研究"):
 				音組 = 音.split("ǀ")
+			elif 自.文件名.startswith("赤水合江联表"):
+				for i in 上標:
+					音 = 音.replace(i, str(上標.index(i)))
+				l = list()
+				for 音標 in 音.split("/"):
+					音標, 註2 = re.findall("^(.*?\\d+?)(.*?)$", 音標)[0]
+					l.append((字, 音標, 註2 if 註2 else 註))
+				return l
 			elif 自.文件名.startswith("白語_袁明軍"):
 				if 註 == 字: 註 = ""
-				上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
 				for i in 上標:
 					音 = 音.replace(i, str(上標.index(i)))
 				音 = 音.strip("()")
@@ -436,7 +445,6 @@ class 表(_表):
 			音 = 音[len(註):].replace("{", "").replace("}", "")
 			註 = 註.strip("{}")
 			l = list()
-			上標 = "⁰¹²³⁴⁵⁶⁷⁸⁹"
 			for i in 上標:
 				音 = 音.replace(i, str(上標.index(i)))
 			轉 = 自.info.get("字表使用調值", False)
