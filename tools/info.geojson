@@ -46705,7 +46705,7 @@
         "marker-color": "#5E98EB",
         "marker-size": "small",
         "marker-symbol": "d",
-        "title": "永嘉黃坑",
+        "title": "永嘉桃樹壪",
         "語言": "永嘉桃樹壪土話",
         "地點": "浙江/溫州/永嘉/鶴盛/黃坑/桃樹壪",
         "地圖集二分區": "吳語－甌江片",
@@ -81786,7 +81786,7 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#8FC2CC",
-        "marker-size": "large",
+        "marker-size": "small",
         "marker-symbol": "y",
         "title": "日語近世唐音",
         "語言": "日語近世唐音",
