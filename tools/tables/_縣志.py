@@ -400,6 +400,9 @@ class 表(_表):
 		elif 名 in ("荆州沙市",):
 			if 行.startswith("声调"): return ""
 			行 = 自.增加調類(行)
+		elif 名 in ("彌渡",):
+			if 行.startswith("声调\\n声母"): return ""
+			行 = 自.增加調類(行).replace("\\n", "")
 		elif 名 in ("蒙自","大理", "桂林"):
 			if 行.startswith("调\\n声"): return ""
 			行 = 自.增加調類(行).replace("\\n", "")
@@ -474,7 +477,7 @@ class 表(_表):
 			if 列[0]: 自.韻 = 列[0]
 			列[1] += 自.韻
 			行 = "\t".join(列[1:])
-		elif 名 in ("溧水在城",):
+		elif 名 in ("溧水",):
 			if 行.startswith("\t"):
 				return
 			行 = "\t".join(行.split("\t")[1:])
