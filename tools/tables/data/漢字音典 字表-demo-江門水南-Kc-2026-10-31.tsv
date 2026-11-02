@@ -221,27 +221,6 @@
 步		b	u	6		p	u	31	
 部		b	u	6		p	u	31	
 簿		b	u	6		p	u	31	
-布		b	uea	1		p	uə	23	又音
-佈		b	uea	1		p	uə	23	又音
-怖		b	uea	1		p	uə	23	又音
-埔		b	uea	1		p	uə	23	又音
-補		b	uea	2		p	uə	35	又音
-捕		b	uea	6		p	uə	31	又音
-哺		b	uea	6		p	uə	31	又音
-步		b	uea	6		p	uə	31	又音
-部		b	uea	6		p	uə	31	又音
-簿		b	uea	6		p	uə	31	又音
-焙		b	ui	6		p	ui	31	
-蹼		b	uk	8		p	ʊk	31	
-暴		b	uk	8		p	ʊk	31	一暴十寒
-僕		b	uk	8		p	ʊk	31	
-瀑		b	uk	8		p	ʊk	31	
-曝		b	uk	8		p	ʊk	31	
-仆		b	uk	8		p	ʊk	31	
-卜		b	uk	7A		p	ʊk	35	
-奔		b	un	1		p	un	23	
-笨		b	un	6		p	un	31	
-不		b	ut	7A		p	ut	35	
 貝		b	uaai	1		p	uai	23	
 狽		b	uaai	1		p	uai	23	
 杯		b	uaai	1		p	uai	23	
@@ -274,6 +253,27 @@
 缽		b	uaat	9		p	uat	21	變調
 砵		b	uaat	9		p	uat	21	變調
 鉢		b	uaat	9		p	uat	21	變調
+布		b	uea	1		p	uə	23	又音
+佈		b	uea	1		p	uə	23	又音
+怖		b	uea	1		p	uə	23	又音
+埔		b	uea	1		p	uə	23	又音
+補		b	uea	2		p	uə	35	又音
+捕		b	uea	6		p	uə	31	又音
+哺		b	uea	6		p	uə	31	又音
+步		b	uea	6		p	uə	31	又音
+部		b	uea	6		p	uə	31	又音
+簿		b	uea	6		p	uə	31	又音
+焙		b	ui	6		p	ui	31	
+蹼		b	uk	8		p	ʊk	31	
+暴		b	uk	8		p	ʊk	31	一暴十寒
+僕		b	uk	8		p	ʊk	31	
+瀑		b	uk	8		p	ʊk	31	
+曝		b	uk	8		p	ʊk	31	
+仆		b	uk	8		p	ʊk	31	
+卜		b	uk	7A		p	ʊk	35	
+奔		b	un	1		p	un	23	
+笨		b	un	6		p	un	31	
+不		b	ut	7A		p	ut	35	
 詫		c	aa	1		ʦʰ	a	23	
 奼		c	aa	1		ʦʰ	a	23	
 差		c	aa	1		ʦʰ	a	23	差別
@@ -603,6 +603,14 @@
 聚		c	u	1		ʦʰ	u	23	聚錢，存錢
 粗		c	u	1		ʦʰ	u	23	
 娶		c	u	2		ʦʰ	u	35	娶老婆、娶新婦
+川		c	uaan	1		ʦʰ	uan	23	
+穿		c	uaan	1		ʦʰ	uan	23	
+竄		c	uaan	2		ʦʰ	uan	35	
+舛		c	uaan	2		ʦʰ	uan	35	
+喘		c	uaan	2		ʦʰ	uan	35	
+湍		c	uaan	2		ʦʰ	uan	35	
+傳		c	uaan	4		ʦʰ	uan	22	傳播
+撮		c	uaat	7B		ʦʰ	uat	23	
 醋		c	uea	1		ʦʰ	uə	23	又音
 厝		c	uea	1		ʦʰ	uə	23	又音
 措		c	uea	1		ʦʰ	uə	23	又音
@@ -680,20 +688,259 @@
 從		c	ung	4		ʦʰ	ʊŋ	22	
 叢		c	ung	4		ʦʰ	ʊŋ	22	
 猝		c	ut	7A		ʦʰ	ut	35	
-川		c	uaan	1		ʦʰ	uan	23	
-穿		c	uaan	1		ʦʰ	uan	23	
-竄		c	uaan	2		ʦʰ	uan	35	
-舛		c	uaan	2		ʦʰ	uan	35	
-喘		c	uaan	2		ʦʰ	uan	35	
-湍		c	uaan	2		ʦʰ	uan	35	
-傳		c	uaan	4		ʦʰ	uan	22	傳播
-撮		c	uaat	7B		ʦʰ	uat	23	
 春		c	yun	1		ʦʰ	yn	23	
 鶉		c	yun	1		ʦʰ	yn	23	鵪鶉
 蠢		c	yun	2		ʦʰ	yn	35	
 出		c	yut	7A		ʦʰ	yt	35	
 齣		c	yut	7A		ʦʰ	yt	35	
+打		d	aa	2		t	a	35	
+帶		d	aai	1		t	ai	23	
+戴		d	aai	1		t	ai	23	
+歹		d	aai	2		t	ai	35	
+帶		d	aai	5		t	ai	21	條帶，變調
+大		d	aai	6		t	ai	31	
+特		d	aak	8		t	ak	31	
+得		d	aak	7A		t	ak	35	
+德		d	aak	7A		t	ak	35	
+得		d	aak	7B		t	ak	23	得知隨
+眈		d	aam	1		t	am	23	
+耽		d	aam	1		t	am	23	
+擔		d	aam	1		t	am	23	
+膽		d	aam	2		t	am	35	
+澹		d	aam	6		t	am	31	
+淡		d	aam	6		t	am	31	冷淡
+誕		d	aan	1		t	an	23	
+丹		d	aan	1		t	an	23	
+單		d	aan	1		t	an	23	單純
+殫		d	aan	1		t	an	23	
+旦		d	aan	1		t	an	23	
+但		d	aan	6		t	an	31	
+憚		d	aan	6		t	an	31	
+彈		d	aan	6		t	an	31	彈丸
+蛋		d	aan	6		t	an	31	
+撢		d	aan	6		t	an	31	雞毛撢子
+瞪		d	aang	1		t	aŋ	23	
+登		d	aang	1		t	aŋ	23	
+凳		d	aang	1		t	aŋ	23	
+燈		d	aang	1		t	aŋ	23	
+等		d	aang	2		t	aŋ	35	
+蹬		d	aang	6		t	aŋ	31	
+鄧		d	aang	6		t	aŋ	31	
+沓		d	aap	8		t	ap	31	
+踏		d	aap	8		t	ap	31	
+蹋		d	aap	8		t	ap	31	
+拓		d	aap	8		t	ap	31	拓本
+答		d	aap	7B		t	ap	23	
+搭		d	aap	7B		t	ap	23	
+達		d	aat	8		t	at	31	
+刀		d	aau	1		t	au	23	
+到		d	aau	1		t	au	23	
+倒		d	aau	1		t	au	23	
+叨		d	aau	1		t	au	23	嘮叨
+闍		d	aau	1		t	au	23	
+島		d	aau	2		t	au	35	
+擣		d	aau	2		t	au	35	
+倒		d	aau	2		t	au	35	
+搗		d	aau	2		t	au	35	
+導		d	aau	6		t	au	31	
+蹈		d	aau	6		t	au	31	
+悼		d	aau	6		t	au	31	
+盜		d	aau	6		t	au	31	
+道		d	aau	6		t	au	31	
+稻		d	aau	6		t	au	31	
+砧		d	am	5		t	ɐm	21	砧板，白讀
+知		d	i	1		t	i	23	知道，白讀
+地		d	i	6		t	i	31	
+低		d	iaa	1		t	ia	23	白讀
+抵		d	iaa	2		t	ia	35	白讀
+底		d	iaa	2		t	ia	35	白讀
+弟		d	iaa	6		t	ia	31	白讀
+弟		d	iaa	2		t	ia	35	老弟，白讀
+爹		d	iaa	1		t	ia	23	
+笛		d	iaak	7A		t	iak	35	
+滴		d	iaak	7B		t	iak	23	滴水，白讀
+琢		d	iaak	7B		t	iak	23	
+啄		d	iaak	7B		t	iak	23	
+店		d	iaam	1		t	iam	23	
+玷		d	iaam	1		t	iam	23	
+惦		d	iaam	1		t	iam	23	
+點		d	iaam	2		t	iam	35	
+踮		d	iaam	2		t	iam	35	
+丁		d	iaang	1		t	iaŋ	23	白讀
+釘		d	iaang	1		t	iaŋ	23	釘子
+釘		d	iaang	5		t	iaŋ	21	變調
+盯		d	iaang	1		t	iaŋ	23	
+叮		d	iaang	1		t	iaŋ	23	
+頂		d	iaang	2		t	iaŋ	35	頭頂，白讀
+鼎		d	iaang	2		t	iaŋ	35	白讀
+定		d	iaang	6		t	iaŋ	31	落定，白讀
+訂		d	iaang	6		t	iaŋ	31	落訂，白讀
+喋		d	iaap	8		t	iap	31	
+疊		d	iaap	8		t	iap	31	
+褶		d	iaap	8		t	iap	31	
+蝶		d	iaap	8		t	iap	31	
+碟		d	iaap	8		t	iap	31	
+刁		d	iaau	1		t	iau	23	
+凋		d	iaau	1		t	iau	23	
+貂		d	iaau	1		t	iau	23	
+雕		d	iaau	1		t	iau	23	
+鵰		d	iaau	1		t	iau	23	
+弔		d	iaau	1		t	iau	23	
+釣		d	iaau	1		t	iau	23	
+叼		d	iaau	1		t	iau	23	
+吊		d	iaau	1		t	iau	23	
+丟		d	iaau	1		t	iau	23	
+調		d	iaau	6		t	iau	31	調動
+掉		d	iaau	6		t	iau	31	
+狄		d	ik	8		t	ɪk	31	
+迪		d	ik	8		t	ɪk	31	
+荻		d	ik	8		t	ɪk	31	
+滌		d	ik	8		t	ɪk	31	
+敵		d	ik	8		t	ɪk	31	
+滴		d	ik	8		t	ɪk	31	
+嘀		d	ik	8		t	ɪk	31	
+的		d	ik	7A		t	ɪk	35	
+墊		d	in	1		t	in	23	
+顛		d	in	1		t	in	23	
+巔		d	in	1		t	in	23	
+癲		d	in	1		t	in	23	
+唸		d	in	1		t	in	23	
+典		d	in	2		t	in	35	
+碘		d	in	2		t	in	35	
+佃		d	in	6		t	in	31	佃農
+甸		d	in	6		t	in	31	
+奠		d	in	6		t	in	31	
+電		d	in	6		t	in	31	
+殿		d	in	6		t	in	31	
+澱		d	in	6		t	in	31	
+靛		d	in	6		t	in	31	
+仃		d	ing	1		t	ɪŋ	23	
+叮		d	ing	1		t	ɪŋ	23	
+訂		d	ing	1		t	ɪŋ	23	
+盯		d	ing	1		t	ɪŋ	23	
+丁		d	ing	1		t	ɪŋ	23	
+町		d	ing	1		t	ɪŋ	23	
+頂		d	ing	2		t	ɪŋ	35	頂替
+鼎		d	ing	2		t	ɪŋ	35	
+町		d	ing	2		t	ɪŋ	35	町畦
+定		d	ing	6		t	ɪŋ	31	安定
+迭		d	it	8		t	it	31	
+秩		d	it	8		t	it	31	
+跌		d	it	7B		t	it	23	
+多		d	o	1		t	ɔ	23	
+朵		d	o	2		t	ɔ	35	
+躲		d	o	2		t	ɔ	35	
+跺		d	o	2		t	ɔ	35	
+墮		d	o	6		t	ɔ	31	
+惰		d	o	6		t	ɔ	31	
+低		d	oi	1		t	ɔi	23	
+締		d	oi	1		t	ɔi	23	
+帝		d	oi	1		t	ɔi	23	
+諦		d	oi	1		t	ɔi	23	
+蒂		d	oi	1		t	ɔi	23	
+抵		d	oi	2		t	ɔi	35	
+底		d	oi	2		t	ɔi	35	
+柢		d	oi	2		t	ɔi	35	
+邸		d	oi	2		t	ɔi	35	
+牴		d	oi	2		t	ɔi	35	
+逮		d	oi	6		t	ɔi	31	
+第		d	oi	6		t	ɔi	31	
+弟		d	oi	6		t	ɔi	31	
+遞		d	oi	6		t	ɔi	31	
+隸		d	oi	6		t	ɔi	31	
+代		d	oi	6		t	ɔi	31	
+岱		d	oi	6		t	ɔi	31	
+袋		d	oi	6		t	ɔi	31	
+黛		d	oi	6		t	ɔi	31	
+殆		d	oi	6		t	ɔi	31	
+待		d	oi	6		t	ɔi	31	
+怠		d	oi	6		t	ɔi	31	
+度		d	ok	8		t	ɔk	31	量度
+踱		d	ok	8		t	ɔk	31	
+當		d	ong	1		t	ɔŋ	23	當然
+鐺		d	ong	1		t	ɔŋ	23	鐺鐺
+當		d	ong	1		t	ɔŋ	23	適當
+擋		d	ong	1		t	ɔŋ	23	摒擋
+噹		d	ong	1		t	ɔŋ	23	
+檔		d	ong	1		t	ɔŋ	23	拍檔
+黨		d	ong	2		t	ɔŋ	35	
+擋		d	ong	2		t	ɔŋ	35	阻擋
+檔		d	ong	2		t	ɔŋ	35	檔案
+宕		d	ong	6		t	ɔŋ	31	
+蕩		d	ong	6		t	ɔŋ	31	
+盪		d	ong	6		t	ɔŋ	31	
+兜		d	ou	1		t	ou	23	
+鬥		d	ou	1		t	ou	23	
+糾		d	ou	2		t	ou	35	
+抖		d	ou	2		t	ou	35	
+陡		d	ou	2		t	ou	35	
+蚪		d	ou	2		t	ou	35	
+斗		d	ou	2		t	ou	35	
+逗		d	ou	6		t	ou	31	
+豆		d	ou	6		t	ou	31	
+荳		d	ou	6		t	ou	31	
+竇		d	ou	6		t	ou	31	
+痘		d	ou	6		t	ou	31	
+讀		d	ou	6		t	ou	31	句讀
+都		d	u	1		t	u	23	
+嘟		d	u	1		t	u	23	
+肚		d	u	2		t	u	35	
+堵		d	u	2		t	u	35	
+睹		d	u	2		t	u	35	
+賭		d	u	2		t	u	35	
+鍍		d	u	6		t	u	31	
+度		d	u	6		t	u	31	度量衡
+渡		d	u	6		t	u	31	
+杜		d	u	6		t	u	31	
+妒		d	u	6		t	u	31	
+端		d	uaan	1		t	uan	23	
+鍛		d	uaan	1		t	uan	23	
+短		d	uaan	2		t	uan	35	
+段		d	uaan	6		t	uan	31	
+緞		d	uaan	6		t	uan	31	
+斷		d	uaan	6		t	uan	31	診斷
+斷		d	uaan	6		t	uan	31	恩斷義絕
+奪		d	uaat	8		t	uat	31	
+兌		d	ui	1		t	ui	23	
+堆		d	ui	1		t	ui	23	
+堆		d	ui	5		t	ui	21	變調；沙堆，地名
+對		d	ui	1		t	ui	23	
+隊		d	ui	6		t	ui	31	
+毒		d	uk	8		t	ʊk	31	
+獨		d	uk	8		t	ʊk	31	
+瀆		d	uk	8		t	ʊk	31	
+犢		d	uk	8		t	ʊk	31	
+讀		d	uk	8		t	ʊk	31	朗讀
+頓		d	uk	8		t	ʊk	31	冒頓
+篤		d	uk	9		t	ʊk	21	
+督		d	uk	7A		t	ʊk	35	
+篤		d	uk	7A		t	ʊk	35	
+敦		d	un	1		t	un	23	
+墩		d	un	1		t	un	23	
+噸		d	un	1		t	un	23	
+盹		d	un	6		t	un	31	
+沌		d	un	6		t	un	31	
+鈍		d	un	6		t	un	31	
+遁		d	un	6		t	un	31	
+頓		d	un	6		t	un	31	安頓
+燉		d	un	6		t	un	31	
+蹲		d	un	1		t	un	23	
+冬		d	ung	1		t	ʊŋ	23	
+東		d	ung	1		t	ʊŋ	23	
+鶇		d	ung	1		t	ʊŋ	23	
+凍		d	ung	1		t	ʊŋ	23	
+咚		d	ung	1		t	ʊŋ	23	
+董		d	ung	2		t	ʊŋ	35	
+懂		d	ung	2		t	ʊŋ	35	
+幢		d	ung	6		t	ʊŋ	31	一幢樓
+洞		d	ung	6		t	ʊŋ	31	
+動		d	ung	6		t	ʊŋ	31	
+棟		d	ung	6		t	ʊŋ	31	
+凸		d	ut	8		t	ut	31	
+突		d	ut	8		t	ut	31	
+咄		d	ut	7A		t	ut	35	
 花		f	aa	1		f	a	23	
+花		f	aa	5		f	a	21	變調
 化		f	aa	1		f	a	23	
 快		f	aai	1		f	ai	23	
 快		f	aai	2		f	ai	35	變調
@@ -831,6 +1078,16 @@
 赴		f	u	6		f	u	31	
 仆		f	u	6		f	u	31	前仆後繼
 戶		f	u	6		f	u	31	又音
+灰		f	uaai	1		f	uai	23	
+晦		f	uaai	1		f	uai	23	
+誨		f	uaai	1		f	uai	23	
+悔		f	uaai	1		f	uai	23	
+寬		f	uaan	1		f	uan	23	
+歡		f	uaan	1		f	uan	23	
+款		f	uaan	2		f	uan	35	
+垣		f	uaan	4		f	uan	22	
+闊		f	uaat	7B		f	uat	23	
+豁		f	uaat	7B		f	uat	23	又音
 喙		f	ui	1		f	ui	23	
 恢		f	ui	1		f	ui	23	
 魁		f	ui	1		f	ui	23	
@@ -901,16 +1158,6 @@
 惚		f	ut	7A		f	ut	35	
 囫		f	ut	7A		f	ut	35	
 佛		f	ut	7A		f	ut	35	仿佛
-灰		f	uaai	1		f	uai	23	
-晦		f	uaai	1		f	uai	23	
-誨		f	uaai	1		f	uai	23	
-悔		f	uaai	1		f	uai	23	
-寬		f	uaan	1		f	uan	23	
-歡		f	uaan	1		f	uan	23	
-款		f	uaan	2		f	uan	35	
-垣		f	uaan	4		f	uan	22	
-闊		f	uaat	7B		f	uat	23	
-豁		f	uaat	7B		f	uat	23	又音
 迦		g	aa	1		k	a	23	
 枷		g	aa	1		k	a	23	
 加		g	aa	1		k	a	23	
@@ -1291,6 +1538,18 @@
 詁		g	u	2		k	u	35	
 鼓		g	u	2		k	u	35	
 賈		g	u	2		k	u	35	商賈
+官		g	uaan	1		k	uan	23	
+冠		g	uaan	1		k	uan	23	
+倌		g	uaan	1		k	uan	23	
+棺		g	uaan	1		k	uan	23	
+觀		g	uaan	1		k	uan	23	
+貫		g	uaan	1		k	uan	23	
+灌		g	uaan	1		k	uan	23	
+罐		g	uaan	1		k	uan	23	
+罐		g	uaan	5		k	uan	21	變調
+鸛		g	uaan	1		k	uan	23	
+館		g	uaan	2		k	uan	35	
+管		g	uaan	2		k	uan	35	
 居		g	ui	1		k	ui	23	
 車		g	ui	1		k	ui	23	車馬炮
 据		g	ui	1		k	ui	23	
@@ -1309,83 +1568,6 @@
 鉅		g	ui	6		k	ui	31	
 具		g	ui	6		k	ui	31	
 懼		g	ui	6		k	ui	31	
-局		g	uk	8		k	ʊk	31	
-掬		g	uk	7A		k	ʊk	35	
-鞠		g	uk	7A		k	ʊk	35	
-菊		g	uk	7A		k	ʊk	35	
-谷		g	uk	7A		k	ʊk	35	山谷
-穀		g	uk	7A		k	ʊk	35	
-弓		g	ung	1		k	ʊŋ	23	
-躬		g	ung	1		k	ʊŋ	23	
-宮		g	ung	1		k	ʊŋ	23	
-恭		g	ung	1		k	ʊŋ	23	
-供		g	ung	1		k	ʊŋ	23	
-工		g	ung	1		k	ʊŋ	23	
-公		g	ung	1		k	ʊŋ	23	
-公		g	ung	5		k	ʊŋ	21	變調
-功		g	ung	1		k	ʊŋ	23	
-攻		g	ung	1		k	ʊŋ	23	
-蚣		g	ung	1		k	ʊŋ	23	
-貢		g	ung	1		k	ʊŋ	23	
-紅		g	ung	1		k	ʊŋ	23	女紅
-拱		g	ung	2		k	ʊŋ	35	
-鞏		g	ung	2		k	ʊŋ	35	
-共		g	ung	6		k	ʊŋ	31	
-橘		g	ut	7A		k	ut	35	
-官		g	uaan	1		k	uan	23	
-冠		g	uaan	1		k	uan	23	
-倌		g	uaan	1		k	uan	23	
-棺		g	uaan	1		k	uan	23	
-觀		g	uaan	1		k	uan	23	
-貫		g	uaan	1		k	uan	23	
-灌		g	uaan	1		k	uan	23	
-罐		g	uaan	1		k	uan	23	
-罐		g	uaan	5		k	uan	21	變調
-鸛		g	uaan	1		k	uan	23	
-館		g	uaan	2		k	uan	35	
-管		g	uaan	2		k	uan	35	
-瓜		gw	aa	1		ku	a	23	
-卦		gw	aa	1		ku	a	23	
-掛		gw	aa	1		ku	a	23	
-呱		gw	aa	1		ku	a	23	
-褂		gw	aa	1		ku	a	23	
-寡		gw	aa	2		ku	a	35	
-乖		gw	aai	1		ku	ai	23	
-怪		gw	aai	1		ku	ai	23	
-枴		gw	aai	2		ku	ai	35	
-拐		gw	aai	2		ku	ai	35	
-綸		gw	aan	1		ku	an	23	綸巾
-關		gw	aan	1		ku	an	23	
-慣		gw	aan	1		ku	an	23	
-轟		gw	aang	1		ku	aŋ	23	
-肱		gw	aang	1		ku	aŋ	23	
-梗		gw	aang	2		ku	aŋ	35	
-逛		gw	aang	6		ku	aŋ	31	
-刮		gw	et	7B		ku	ɛt	23	
-颳		gw	et	7B		ku	ɛt	23	
-圭		gw	i	1		ku	i	23	
-閨		gw	i	1		ku	i	23	
-鮭		gw	i	1		ku	i	23	
-桂		gw	i	1		ku	i	23	
-鱖		gw	i	1		ku	i	23	
-季		gw	i	1		ku	i	23	
-癸		gw	i	1		ku	i	23	
-悸		gw	i	1		ku	i	23	
-龜		gw	i	1		ku	i	23	
-龜		gw	i	5		ku	i	21	變調
-歸		gw	i	1		ku	i	23	
-貴		gw	i	1		ku	i	23	
-傀		gw	i	1		ku	i	23	傀偉
-瑰		gw	i	1		ku	i	23	
-詭		gw	i	2		ku	i	35	
-軌		gw	i	2		ku	i	35	
-晷		gw	i	2		ku	i	35	
-鬼		gw	i	2		ku	i	35	
-跪		gw	i	6		ku	i	31	
-櫃		gw	i	6		ku	i	31	
-匱		gw	i	6		ku	i	31	
-餽		gw	i	6		ku	i	31	
-饋		gw	i	6		ku	i	31	
 圭		g	ui	1		k	ui	23	又音
 閨		g	ui	1		k	ui	23	又音
 鮭		g	ui	1		k	ui	23	又音
@@ -1409,6 +1591,12 @@
 匱		g	ui	6		k	ui	31	又音
 餽		g	ui	6		k	ui	31	又音
 饋		g	ui	6		k	ui	31	又音
+局		g	uk	8		k	ʊk	31	
+掬		g	uk	7A		k	ʊk	35	
+鞠		g	uk	7A		k	ʊk	35	
+菊		g	uk	7A		k	ʊk	35	
+谷		g	uk	7A		k	ʊk	35	山谷
+穀		g	uk	7A		k	ʊk	35	
 均		g	un	1		k	un	23	
 鈞		g	un	1		k	un	23	
 君		g	un	1		k	un	23	
@@ -1418,11 +1606,70 @@
 龜		g	un	1		k	un	23	
 滾		g	un	2		k	un	35	
 郡		g	un	6		k	un	31	
+弓		g	ung	1		k	ʊŋ	23	
+躬		g	ung	1		k	ʊŋ	23	
+宮		g	ung	1		k	ʊŋ	23	
+恭		g	ung	1		k	ʊŋ	23	
+供		g	ung	1		k	ʊŋ	23	
+工		g	ung	1		k	ʊŋ	23	
+公		g	ung	1		k	ʊŋ	23	
+公		g	ung	5		k	ʊŋ	21	變調
+功		g	ung	1		k	ʊŋ	23	
+攻		g	ung	1		k	ʊŋ	23	
+蚣		g	ung	1		k	ʊŋ	23	
+貢		g	ung	1		k	ʊŋ	23	
+紅		g	ung	1		k	ʊŋ	23	女紅
+拱		g	ung	2		k	ʊŋ	35	
+鞏		g	ung	2		k	ʊŋ	35	
+共		g	ung	6		k	ʊŋ	31	
+橘		g	ut	7A		k	ut	35	
 倔		g	ut	8		k	ut	31	
 掘		g	ut	8		k	ut	31	
 崛		g	ut	8		k	ut	31	
 骨		g	ut	7A		k	ut	35	
 滑		g	ut	7A		k	ut	35	滑稽
+瓜		gu	aa	1		ku	a	23	
+卦		gu	aa	1		ku	a	23	
+掛		gu	aa	1		ku	a	23	
+呱		gu	aa	1		ku	a	23	
+褂		gu	aa	1		ku	a	23	
+寡		gu	aa	2		ku	a	35	
+乖		gu	aai	1		ku	ai	23	
+怪		gu	aai	1		ku	ai	23	
+枴		gu	aai	2		ku	ai	35	
+拐		gu	aai	2		ku	ai	35	
+綸		gu	aan	1		ku	an	23	綸巾
+關		gu	aan	1		ku	an	23	
+慣		gu	aan	1		ku	an	23	
+轟		gu	aang	1		ku	aŋ	23	
+肱		gu	aang	1		ku	aŋ	23	
+梗		gu	aang	2		ku	aŋ	35	
+逛		gu	aang	6		ku	aŋ	31	
+刮		gu	et	7B		ku	ɛt	23	
+颳		gu	et	7B		ku	ɛt	23	
+圭		gw	i	1		kw	i	23	
+閨		gw	i	1		kw	i	23	
+鮭		gw	i	1		kw	i	23	
+桂		gw	i	1		kw	i	23	
+鱖		gw	i	1		kw	i	23	
+季		gw	i	1		kw	i	23	
+癸		gw	i	1		kw	i	23	
+悸		gw	i	1		kw	i	23	
+龜		gw	i	1		kw	i	23	
+龜		gw	i	5		kw	i	21	變調
+歸		gw	i	1		kw	i	23	
+貴		gw	i	1		kw	i	23	
+傀		gw	i	1		kw	i	23	傀偉
+瑰		gw	i	1		kw	i	23	
+詭		gw	i	2		kw	i	35	
+軌		gw	i	2		kw	i	35	
+晷		gw	i	2		kw	i	35	
+鬼		gw	i	2		kw	i	35	
+跪		gw	i	6		kw	i	31	
+櫃		gw	i	6		kw	i	31	
+匱		gw	i	6		kw	i	31	
+餽		gw	i	6		kw	i	31	
+饋		gw	i	6		kw	i	31	
 蝦		h	aa	1		h	a	23	蝦蟆
 哈		h	aa	1		h	a	23	
 他		h	aa	1		h	a	23	
@@ -1789,6 +2036,7 @@
 亥		h	oi	6		h	ɔi	31	
 學		h	ok	8		h	ɔk	31	
 鶴		h	ok	8		h	ɔk	31	
+鶴		h	ok	9		h	ɔk	21	變調；高鶴，地名
 拓		h	ok	7B		h	ɔk	23	
 託		h	ok	7B		h	ɔk	23	
 壑		h	ok	7B		h	ɔk	23	
@@ -1881,6 +2129,9 @@
 圖		h	u	4		h	u	22	
 涂		h	u	4		h	u	22	
 屠		h	u	4		h	u	22	
+斷		h	uaan	1		h	uan	23	斷了
+團		h	uaan	4		h	uan	22	
+脫		h	uaat	7B		h	uat	23	
 菟		h	uea	1		h	uə	23	又音
 兔		h	uea	1		h	uə	23	又音
 吐		h	uea	1		h	uə	23	又音
@@ -1947,9 +2198,6 @@
 鴻		h	ung	4		h	ʊŋ	22	
 訌		h	ung	4		h	ʊŋ	22	
 茼		h	ung	4		h	ʊŋ	22	
-斷		h	uaan	1		h	uan	23	斷了
-團		h	uaan	4		h	uan	22	
-脫		h	uaat	7B		h	uat	23	
 吔		j	aa	1		j	a	23	
 也		j	aa	5		j	a	21	
 廿		j	aa	6		j	a	31	
@@ -2108,6 +2356,7 @@
 佚		j	at	8		j	ɐt	31	
 逸		j	at	8		j	ɐt	31	
 溢		j	at	8		j	ɐt	31	
+一		j	at	7B		j	ɐt	23	
 一		j	at	7A		j	ɐt	35	
 壹		j	at	7A		j	ɐt	35	
 醫		j	i	1		j	i	23	
@@ -2328,6 +2577,54 @@
 右		j	ou	6		j	ou	31	
 釉		j	ou	6		j	ou	31	
 有		j	ou	6		j	ou	31	十有一
+淵		j	uaan	1		j	uan	23	
+鳶		j	uaan	1		j	uan	23	
+蜿		j	uaan	1		j	uan	23	
+宛		j	uaan	1		j	uan	23	大宛
+冤		j	uaan	1		j	uan	23	
+鴛		j	uaan	1		j	uan	23	
+怨		j	uaan	1		j	uan	23	
+軟		j	uaan	1		j	uan	23	
+軟		j	uaan	2		j	uan	35	
+阮		j	uaan	2		j	uan	35	姓氏
+蜿		j	uaan	2		j	uan	35	蜿蟺
+宛		j	uaan	2		j	uan	35	宛然
+婉		j	uaan	2		j	uan	35	
+苑		j	uaan	2		j	uan	35	
+遠		j	uaan	2		j	uan	35	
+遠		j	uaan	2		j	uan	35	遠方
+院		j	uaan	2		j	uan	35	
+阮		j	uaan	5		j	uan	21	杜阮，地名
+烷		j	uaan	4		j	uan	22	
+玄		j	uaan	4		j	uan	22	
+懸		j	uaan	4		j	uan	22	
+炫		j	uaan	5		j	uan	21	
+鉛		j	uaan	4		j	uan	22	
+沿		j	uaan	4		j	uan	22	
+緣		j	uaan	4		j	uan	22	
+圓		j	uaan	4		j	uan	22	
+元		j	uaan	4		j	uan	22	
+原		j	uaan	4		j	uan	22	
+源		j	uaan	4		j	uan	22	
+袁		j	uaan	4		j	uan	22	
+園		j	uaan	4		j	uan	22	
+猿		j	uaan	4		j	uan	22	
+轅		j	uaan	4		j	uan	22	
+丸		j	uaan	4		j	uan	22	
+完		j	uaan	4		j	uan	22	
+縣		j	uaan	6		j	uan	31	
+眩		j	uaan	6		j	uan	31	
+願		j	uaan	6		j	uan	31	
+遠		j	uaan	6		j	uan	31	遠小人
+穴		j	uaat	8		j	uat	31	
+月		j	uaat	8		j	uat	31	
+曰		j	uaat	8		j	uat	31	
+越		j	uaat	8		j	uat	31	
+粵		j	uaat	8		j	uat	31	
+月		j	uaat	9		j	uat	21	
+說		j	uat	8		j	uat	31	
+悅		j	uat	8		j	uat	31	
+閱		j	uat	8		j	uat	31	
 蕊		j	ui	5		j	ui	21	
 銳		j	ui	6		j	ui	31	
 裔		j	ui	6		j	ui	31	
@@ -2375,54 +2672,6 @@
 榕		j	ung	4		j	ʊŋ	22	
 熔		j	ung	4		j	ʊŋ	22	
 用		j	ung	6		j	ʊŋ	31	
-淵		j	uaan	1		j	uan	23	
-鳶		j	uaan	1		j	uan	23	
-蜿		j	uaan	1		j	uan	23	
-宛		j	uaan	1		j	uan	23	大宛
-冤		j	uaan	1		j	uan	23	
-鴛		j	uaan	1		j	uan	23	
-怨		j	uaan	1		j	uan	23	
-軟		j	uaan	1		j	uan	23	
-軟		j	uaan	2		j	uan	35	
-阮		j	uaan	2		j	uan	35	姓氏
-蜿		j	uaan	2		j	uan	35	蜿蟺
-宛		j	uaan	2		j	uan	35	宛然
-婉		j	uaan	2		j	uan	35	
-苑		j	uaan	2		j	uan	35	
-遠		j	uaan	2		j	uan	35	
-遠		j	uaan	2		j	uan	35	遠方
-院		j	uaan	2		j	uan	35	
-阮		j	uaan	5		j	uan	21	杜阮，地名
-烷		j	uaan	4		j	uan	22	
-玄		j	uaan	4		j	uan	22	
-懸		j	uaan	4		j	uan	22	
-炫		j	uaan	5		j	uan	21	
-鉛		j	uaan	4		j	uan	22	
-沿		j	uaan	4		j	uan	22	
-緣		j	uaan	4		j	uan	22	
-圓		j	uaan	4		j	uan	22	
-元		j	uaan	4		j	uan	22	
-原		j	uaan	4		j	uan	22	
-源		j	uaan	4		j	uan	22	
-袁		j	uaan	4		j	uan	22	
-園		j	uaan	4		j	uan	22	
-猿		j	uaan	4		j	uan	22	
-轅		j	uaan	4		j	uan	22	
-丸		j	uaan	4		j	uan	22	
-完		j	uaan	4		j	uan	22	
-縣		j	uaan	6		j	uan	31	
-眩		j	uaan	6		j	uan	31	
-願		j	uaan	6		j	uan	31	
-遠		j	uaan	6		j	uan	31	遠小人
-穴		j	uaat	8		j	uat	31	
-月		j	uaat	8		j	uat	31	
-曰		j	uaat	8		j	uat	31	
-越		j	uaat	8		j	uat	31	
-粵		j	uaat	8		j	uat	31	
-月		j	uaat	9		j	uat	21	
-說		j	wat	8		j	uat	31	
-悅		j	wat	8		j	uat	31	
-閱		j	wat	8		j	uat	31	
 閏		j	yun	6		j	yn	31	
 潤		j	yun	6		j	yn	31	
 卡		k	aa	2		kʰ	a	35	
@@ -2433,7 +2682,7 @@
 咳		k	aat	7A		kʰ	at	35	咳嗽
 靠		k	aau	1		kʰ	au	23	
 襟		k	am	1		kʰ	ɐm	23	
-禁		k	am	1		kʰ	ɐm	23	禁著
+禁		k	am	1		kʰ	ɐm	23	禁用
 琴		k	am	4		kʰ	ɐm	22	
 禽		k	am	4		kʰ	ɐm	22	
 擒		k	am	4		kʰ	ɐm	22	
@@ -2588,6 +2837,13 @@
 扣		k	ou	1		kʰ	ou	23	
 蔻		k	ou	1		kʰ	ou	23	
 箍		k	u	1		kʰ	u	23	
+檜		k	uaai	2		kʰ	uai	35	
+膾		k	uaai	2		kʰ	uai	35	
+繪		k	uaai	2		kʰ	uai	35	
+賄		k	uaai	2		kʰ	uai	35	
+聒		k	uaat	7B		kʰ	uat	23	
+括		k	uaat	7B		kʰ	uat	23	
+豁		k	uaat	7B		kʰ	uat	23	
 拒		k	ui	1		kʰ	ui	23	
 拒		k	ui	5		kʰ	ui	21	距離
 距		k	ui	1		kʰ	ui	23	
@@ -2601,36 +2857,6 @@
 潰		k	ui	2		kʰ	ui	35	
 渠		k	ui	4		kʰ	ui	22	
 瞿		k	ui	4		kʰ	ui	22	瞿塘峽
-麴		k	uk	7A		kʰ	ʊk	35	
-曲		k	uk	7A		kʰ	ʊk	35	
-孔		k	ung	2		kʰ	ʊŋ	35	又音
-穹		k	ung	4		kʰ	ʊŋ	22	
-窮		k	ung	4		kʰ	ʊŋ	22	
-檜		k	uaai	2		kʰ	uai	35	
-膾		k	uaai	2		kʰ	uai	35	
-繪		k	uaai	2		kʰ	uai	35	
-賄		k	uaai	2		kʰ	uai	35	
-聒		k	uaat	7B		kʰ	uat	23	
-括		k	uaat	7B		kʰ	uat	23	
-豁		k	uaat	7B		kʰ	uat	23	
-夸		kw	aa	1		kʰu	a	23	
-誇		kw	aa	1		kʰu	a	23	
-跨		kw	aa	1		kʰu	a	23	
-掛		kw	aa	1		kʰu	a	23	
-垮		kw	aa	1		kʰu	a	23	
-眶		kw	aang	1		kʰu	aŋ	23	
-規		kw	i	1		kʰu	i	23	
-窺		kw	i	1		kʰu	i	23	
-虧		kw	i	1		kʰu	i	23	
-愧		kw	i	1		kʰu	i	23	
-盔		kw	i	1		kʰu	i	23	
-睽		kw	i	4		kʰu	i	22	
-畦		kw	i	4		kʰu	i	22	
-攜		kw	i	4		kʰu	i	22	
-蠵		kw	i	4		kʰu	i	22	
-葵		kw	i	4		kʰu	i	22	
-揆		kw	i	5		kʰu	i	21	
-逵		kw	i	4		kʰu	i	22	
 規		k	ui	1		kʰ	ui	23	又音
 窺		k	ui	1		kʰ	ui	23	又音
 虧		k	ui	1		kʰ	ui	23	又音
@@ -2643,6 +2869,8 @@
 葵		k	ui	4		kʰ	ui	22	又音
 揆		k	ui	5		kʰ	ui	21	又音
 逵		k	ui	4		kʰ	ui	22	又音
+麴		k	uk	7A		kʰ	ʊk	35	
+曲		k	uk	7A		kʰ	ʊk	35	
 窘		k	un	1		kʰ	un	23	
 昆		k	un	1		kʰ	un	23	
 坤		k	un	1		kʰ	un	23	
@@ -2655,6 +2883,27 @@
 綑		k	un	2		kʰ	un	35	
 裙		k	un	4		kʰ	un	22	
 群		k	un	4		kʰ	un	22	
+孔		k	ung	2		kʰ	ʊŋ	35	又音
+穹		k	ung	4		kʰ	ʊŋ	22	
+窮		k	ung	4		kʰ	ʊŋ	22	
+夸		ku	aa	1		kʰu	a	23	
+誇		ku	aa	1		kʰu	a	23	
+跨		ku	aa	1		kʰu	a	23	
+掛		ku	aa	1		kʰu	a	23	
+垮		ku	aa	1		kʰu	a	23	
+眶		ku	aang	1		kʰu	aŋ	23	
+規		kw	i	1		kʰw	i	23	
+窺		kw	i	1		kʰw	i	23	
+虧		kw	i	1		kʰw	i	23	
+愧		kw	i	1		kʰw	i	23	
+盔		kw	i	1		kʰw	i	23	
+睽		kw	i	4		kʰw	i	22	
+畦		kw	i	4		kʰw	i	22	
+攜		kw	i	4		kʰw	i	22	
+蠵		kw	i	4		kʰw	i	22	
+葵		kw	i	4		kʰw	i	22	
+揆		kw	i	5		kʰw	i	21	
+逵		kw	i	4		kʰw	i	22	
 喇		l	aa	1		l	a	23	喇叭
 啦		l	aa	1		l	a	23	
 罅		l	aa	1		l	a	23	縫隙
@@ -2888,6 +3137,7 @@
 冽		l	it	8		l	it	31	
 烈		l	it	8		l	it	31	
 裂		l	it	7B		l	it	23	
+裂		l	it	9		l	it	21	名詞，變調
 列		l	it	8		l	it	31	
 囉		l	o	1		l	ɔ	23	囉嗦
 咯		l	o	1		l	ɔ	23	
@@ -2973,6 +3223,10 @@
 路		l	u	6		l	u	31	
 露		l	u	6		l	u	31	
 鷺		l	u	6		l	u	31	
+卵		l	uaan	2		l	uan	35	
+卵		l	uaan	2		l	uan	35	
+巒		l	uaan	4		l	uan	22	
+亂		l	uaan	6		l	uan	31	
 虜		l	uea	1		l	uə	23	又音
 虜		l	uea	5		l	uə	21	又音
 滷		l	uea	1		l	uə	23	又音
@@ -3065,10 +3319,6 @@
 慄		l	ut	8		l	ut	31	
 壘		l	ut	8		l	ut	31	神荼鬱壘
 率		l	ut	8		l	ut	31	
-卵		l	uaan	2		l	uan	35	
-卵		l	uaan	2		l	uan	35	
-巒		l	uaan	4		l	uan	22	
-亂		l	uaan	6		l	uan	31	
 嗯		m		1		m		23	
 五		m		2		m		35	
 午		m		2		m		35	
@@ -3308,6 +3558,30 @@
 慕		m	u	6		m	u	31	
 暮		m	u	6		m	u	31	
 戊		m	u	6		m	u	31	
+每		m	uaai	1		m	uai	23	
+每		m	uaai	2		m	uai	35	
+每		m	uaai	5		m	uai	21	
+黴		m	uaai	4		m	uai	22	
+枚		m	uaai	4		m	uai	22	
+莓		m	uaai	4		m	uai	22	
+梅		m	uaai	4		m	uai	22	
+媒		m	uaai	4		m	uai	22	
+煤		m	uaai	4		m	uai	22	
+妹		m	uaai	6		m	uai	31	
+妹		m	uaai	5		m	uai	21	
+妹		m	uaai	2		m	uai	35	
+昧		m	uaai	6		m	uai	31	
+滿		m	uaan	2		m	uan	35	
+瞞		m	uaan	4		m	uan	22	
+門		m	uaan	4		m	uan	22	
+們		m	uaan	4		m	uan	22	
+悶		m	uaan	6		m	uan	31	
+燜		m	uaan	6		m	uan	31	
+沫		m	uaat	8		m	uat	31	
+末		m	uaat	8		m	uat	31	
+沒		m	uaat	8		m	uat	31	
+茉		m	uaat	8		m	uat	31	
+抹		m	uaat	7B		m	uat	23	
 舞		m	uea	2		m	uə	35	又音
 母		m	uea	2		m	uə	35	又音
 巫		m	uea	4		m	uə	22	又音
@@ -3364,30 +3638,6 @@
 夢		m	ung	6		m	ʊŋ	31	
 勿		m	ut	8		m	ut	31	
 物		m	ut	8		m	ut	31	
-每		m	uaai	1		m	uai	23	
-每		m	uaai	2		m	uai	35	
-每		m	uaai	5		m	uai	21	
-黴		m	uaai	4		m	uai	22	
-枚		m	uaai	4		m	uai	22	
-莓		m	uaai	4		m	uai	22	
-梅		m	uaai	4		m	uai	22	
-媒		m	uaai	4		m	uai	22	
-煤		m	uaai	4		m	uai	22	
-妹		m	uaai	6		m	uai	31	
-妹		m	uaai	5		m	uai	21	
-妹		m	uaai	2		m	uai	35	
-昧		m	uaai	6		m	uai	31	
-滿		m	uaan	2		m	uan	35	
-瞞		m	uaan	4		m	uan	22	
-門		m	uaan	4		m	uan	22	
-們		m	uaan	4		m	uan	22	
-悶		m	uaan	6		m	uan	31	
-燜		m	uaan	6		m	uan	31	
-沫		m	uaat	8		m	uat	31	
-末		m	uaat	8		m	uat	31	
-沒		m	uaat	8		m	uat	31	
-茉		m	uaat	8		m	uat	31	
-抹		m	uaat	7B		m	uat	23	
 哪		n	aa	1		n	a	23	天哪
 那		n	aa	5		n	a	21	姓那
 拿		n	aa	4		n	a	22	
@@ -3515,6 +3765,7 @@
 奴		n	u	4		n	u	22	
 弩		n	u	5		n	u	21	
 怒		n	u	6		n	u	31	
+暖		n	uaan	1		n	uan	23	
 努		n	uea	2		n	uə	35	又音
 奴		n	uea	4		n	uə	22	又音
 弩		n	uea	5		n	uə	21	又音
@@ -3526,7 +3777,6 @@
 農		n	ung	4		n	ʊŋ	22	
 膿		n	ung	4		n	ʊŋ	22	
 弄		n	ung	6		n	ʊŋ	31	
-暖		n	uaan	1		n	uan	23	
 雅		ng	aa	5		ŋ	a	21	
 呀		ng	aa	1		ŋ	a	23	
 丫		ng	aa	1		ŋ	a	23	
@@ -3833,6 +4083,26 @@
 菩		p	u	4		pʰ	u	22	
 蒲		p	u	4		pʰ	u	22	
 葡		p	u	4		pʰ	u	22	
+倍		p	uaai	1		pʰ	uai	23	
+倍		p	uaai	5		pʰ	uai	21	
+沛		p	uaai	1		pʰ	uai	23	
+佩		p	uaai	1		pʰ	uai	23	
+珮		p	uaai	1		pʰ	uai	23	
+配		p	uaai	1		pʰ	uai	23	
+徘		p	uaai	4		pʰ	uai	22	
+陪		p	uaai	4		pʰ	uai	22	
+培		p	uaai	4		pʰ	uai	22	
+蓓		p	uaai	5		pʰ	uai	21	
+焙		p	uaai	4		pʰ	uai	22	習讀，“烘焙”
+伴		p	uaan	5		pʰ	uan	21	白讀
+拚		p	uaan	1		pʰ	uan	23	
+潘		p	uaan	1		pʰ	uan	23	
+判		p	uaan	1		pʰ	uan	23	
+蟠		p	uaan	4		pʰ	uan	22	
+盤		p	uaan	4		pʰ	uan	22	
+蹣		p	uaan	4		pʰ	uan	22	
+胖		p	uaan	4		pʰ	uan	22	心廣體胖
+潑		p	uaat	7B		pʰ	uat	23	
 鋪		p	uea	1		pʰ	uə	23	又音
 鋪		p	uea	5		pʰ	uə	21	變調，又音
 甫		p	uea	2		pʰ	uə	35	台甫，又音
@@ -3858,25 +4128,6 @@
 捧		p	ung	2		pʰ	ʊŋ	35	
 蓬		p	ung	4		pʰ	ʊŋ	22	
 篷		p	ung	4		pʰ	ʊŋ	22	
-倍		p	uaai	1		pʰ	uai	23	
-倍		p	uaai	5		pʰ	uai	21	
-沛		p	uaai	1		pʰ	uai	23	
-佩		p	uaai	1		pʰ	uai	23	
-珮		p	uaai	1		pʰ	uai	23	
-配		p	uaai	1		pʰ	uai	23	
-徘		p	uaai	4		pʰ	uai	22	
-陪		p	uaai	4		pʰ	uai	22	
-培		p	uaai	4		pʰ	uai	22	
-蓓		p	uaai	5		pʰ	uai	21	
-伴		p	uaan	5		pʰ	uan	21	白讀
-拚		p	uaan	1		pʰ	uan	23	
-潘		p	uaan	1		pʰ	uan	23	
-判		p	uaan	1		pʰ	uan	23	
-蟠		p	uaan	4		pʰ	uan	22	
-盤		p	uaan	4		pʰ	uan	22	
-蹣		p	uaan	4		pʰ	uan	22	
-胖		p	uaan	4		pʰ	uan	22	心廣體胖
-潑		p	uaat	7B		pʰ	uat	23	
 沙		s	aa	1		s	a	23	
 沙		s	aa	5		s	a	21	變調
 砂		s	aa	1		s	a	23	
@@ -4187,6 +4438,7 @@
 擅		s	in	6		s	in	31	
 繕		s	in	6		s	in	31	
 善		s	in	6		s	in	31	
+鱔		s	in	5		s	in	21	
 羨		s	in	6		s	in	31	
 星		s	ing	1		s	ɪŋ	23	
 惺		s	ing	1		s	ɪŋ	23	
@@ -4304,6 +4556,13 @@
 溯		s	u	1		s	u	23	
 數		s	u	2		s	u	35	數一下
 鬚		s	u	5		s	u	21	
+痠		s	uaan	1		s	uan	23	
+酸		s	uaan	1		s	uan	23	
+蒜		s	uaan	1		s	uan	23	
+蒜		s	uaan	5		s	uan	21	蒜子，變調
+算		s	uaan	1		s	uan	23	
+船		s	uaan	4		s	uan	22	
+說		s	uat	7B		s	uat	23	
 嗽		s	uea	1		s	uə	23	又音
 鬚		s	uea	5		s	uə	21	又音
 鬚		s	uea	1		s	uə	23	又音
@@ -4382,13 +4641,6 @@
 聳		s	ung	2		s	ʊŋ	35	
 崇		s	ung	4		s	ʊŋ	22	
 窣		s	ut	7A		s	ut	35	
-痠		s	uaan	1		s	uan	23	
-酸		s	uaan	1		s	uan	23	
-蒜		s	uaan	1		s	uan	23	
-蒜		s	uaan	5		s	uan	21	蒜子，變調
-算		s	uaan	1		s	uan	23	
-船		s	uaan	4		s	uan	22	
-說		s	wat	7B		s	uat	23	
 舜		s	yun	1		s	yn	23	
 瞬		s	yun	1		s	yn	23	
 純		s	yun	4		s	yn	22	
@@ -4485,6 +4737,8 @@
 熨		w	at	7A		w	ut	35	熨貼
 窟		w	at	7A		w	ut	35	
 還		w	en	4		w	ɛn	22	
+猾		w	et	8		w	ɛt	31	
+滑		w	et	8		w	ɛt	31	光滑
 穢		w	i	1		w	i	23	
 委		w	i	1		w	i	23	虛與委蛇，委委佗佗
 威		w	i	1		w	i	23	
@@ -4532,8 +4786,6 @@
 渭		w	i	6		w	i	31	
 蝟		w	i	6		w	i	31	
 謂		w	i	6		w	i	31	
-猾		w	et	8		w	et	31	
-滑		w	et	8		w	et	31	光滑
 域		w	ik	8		w	ɪk	31	
 扔		w	ing	2		w	ɪŋ	45	
 榮		w	ing	4		w	ɪŋ	22	
@@ -4879,6 +5131,7 @@
 漸		z	iaam	6		ʦ	iam	31	逐漸
 正		z	iaang	1		ʦ	iaŋ	23	好正，白讀
 精		z	iaang	1		ʦ	iaŋ	23	好精，白讀
+晶		z	iaang	1		ʦ	iaŋ	23	魂晶，白讀
 井		z	iaang	2		ʦ	iaŋ	35	
 鄭		z	iaang	6		ʦ	iaŋ	31	
 淨		z	iaang	6		ʦ	iaŋ	31	乾淨，白讀
@@ -5066,6 +5319,15 @@
 祖		z	u	2		ʦ	u	35	
 組		z	u	2		ʦ	u	35	
 做		z	u	6		ʦ	u	31	
+鑽		z	uaan	1		ʦ	uan	23	
+專		z	uaan	1		ʦ	uan	23	
+轉		z	uaan	1		ʦ	uan	23	自轉
+轉		z	uaan	2		ʦ	uan	35	轉變
+傳		z	uaan	6		ʦ	uan	31	傳奇
+轉		z	uaan	6		ʦ	uan	31	
+啜		z	uaat	7B		ʦ	uat	23	
+輟		z	uaat	7B		ʦ	uat	23	
+綴		z	uaat	7B		ʦ	uat	23	綴足
 租		z	uea	1		ʦ	uə	23	又音
 祖		z	uea	2		ʦ	uə	35	又音
 組		z	uea	2		ʦ	uə	35	又音
@@ -5149,226 +5411,17 @@
 重		z	ung	6		ʦ	ʊŋ	31	重要
 從		z	ung	6		ʦ	ʊŋ	31	
 頌		z	ung	6		ʦ	ʊŋ	31	
-鑽		z	uaan	1		ʦ	uan	23	
-專		z	uaan	1		ʦ	uan	23	
-轉		z	uaan	1		ʦ	uan	23	自轉
-轉		z	uaan	2		ʦ	uan	35	轉變
-傳		z	uaan	6		ʦ	uan	31	傳奇
-轉		z	uaan	6		ʦ	uan	31	
-啜		z	uaat	7B		ʦ	uat	23	
-輟		z	uaat	7B		ʦ	uat	23	
-綴		z	uaat	7B		ʦ	uat	23	綴足
 肫		z	yun	1		ʦ	yn	23	
 諄		z	yun	1		ʦ	yn	23	
 屯		z	yun	1		ʦ	yn	23	
 准		z	yun	2		ʦ	yn	35	
 準		z	yun	2		ʦ	yn	35	
 怵		z	yut	7A		ʦ	yt	35	
-打			aa	2		ʔ	a	35	
 就			aa	2		ʔ	a	35	
 矣			aa	2		ʔ	a	35	
-帶			aai	1		ʔ	ai	23	
-戴			aai	1		ʔ	ai	23	
-歹			aai	2		ʔ	ai	35	
-帶			aai	5		ʔ	ai	21	條帶，變調
-大			aai	6		ʔ	ai	31	
-特			aak	8		ʔ	ak	31	
-得			aak	7A		ʔ	ak	35	
-德			aak	7A		ʔ	ak	35	
-得			aak	7B		ʔ	ak	23	得知隨
-眈			aam	1		ʔ	am	23	
-耽			aam	1		ʔ	am	23	
-擔			aam	1		ʔ	am	23	
-膽			aam	2		ʔ	am	35	
-澹			aam	6		ʔ	am	31	
-淡			aam	6		ʔ	am	31	冷淡
-誕			aan	1		ʔ	an	23	
-丹			aan	1		ʔ	an	23	
-單			aan	1		ʔ	an	23	單純
-殫			aan	1		ʔ	an	23	
-旦			aan	1		ʔ	an	23	
-但			aan	6		ʔ	an	31	
-憚			aan	6		ʔ	an	31	
-彈			aan	6		ʔ	an	31	彈丸
-蛋			aan	6		ʔ	an	31	
-撢			aan	6		ʔ	an	31	雞毛撢子
-瞪			aang	1		ʔ	aŋ	23	
-登			aang	1		ʔ	aŋ	23	
-凳			aang	1		ʔ	aŋ	23	
-燈			aang	1		ʔ	aŋ	23	
-等			aang	2		ʔ	aŋ	35	
-蹬			aang	6		ʔ	aŋ	31	
-鄧			aang	6		ʔ	aŋ	31	
-沓			aap	8		ʔ	ap	31	
-踏			aap	8		ʔ	ap	31	
-蹋			aap	8		ʔ	ap	31	
-拓			aap	8		ʔ	ap	31	拓本
-答			aap	7B		ʔ	ap	23	
-搭			aap	7B		ʔ	ap	23	
-達			aat	8		ʔ	at	31	
-刀			aau	1		ʔ	au	23	
-到			aau	1		ʔ	au	23	
-倒			aau	1		ʔ	au	23	
-叨			aau	1		ʔ	au	23	嘮叨
-闍			aau	1		ʔ	au	23	
-島			aau	2		ʔ	au	35	
-擣			aau	2		ʔ	au	35	
-倒			aau	2		ʔ	au	35	
-搗			aau	2		ʔ	au	35	
-導			aau	6		ʔ	au	31	
-蹈			aau	6		ʔ	au	31	
-悼			aau	6		ʔ	au	31	
-盜			aau	6		ʔ	au	31	
-道			aau	6		ʔ	au	31	
-稻			aau	6		ʔ	au	31	
-砧			am	5		ʔ	ɐm	21	砧板，白讀
-知			i	1		ʔ	i	23	知道，白讀
-地			i	6		ʔ	i	31	
-低			iaa	1		ʔ	ia	23	白讀
-抵			iaa	2		ʔ	ia	35	白讀
-底			iaa	2		ʔ	ia	35	白讀
-弟			iaa	6		ʔ	ia	31	白讀
-弟			iaa	2		ʔ	ia	35	老弟，白讀
-爹			iaa	1		ʔ	ia	23	
-笛			iaak	7A		ʔ	iak	35	
-滴			iaak	7B		ʔ	iak	23	滴水，白讀
-琢			iaak	7B		ʔ	iak	23	
-啄			iaak	7B		ʔ	iak	23	
-店			iaam	1		ʔ	iam	23	
-玷			iaam	1		ʔ	iam	23	
-惦			iaam	1		ʔ	iam	23	
-點			iaam	2		ʔ	iam	35	
-踮			iaam	2		ʔ	iam	35	
-丁			iaang	1		ʔ	iaŋ	23	白讀
-釘			iaang	1		ʔ	iaŋ	23	釘子
-釘			iaang	5		ʔ	iaŋ	21	變調
-盯			iaang	1		ʔ	iaŋ	23	
-叮			iaang	1		ʔ	iaŋ	23	
-頂			iaang	2		ʔ	iaŋ	35	頭頂，白讀
-鼎			iaang	2		ʔ	iaŋ	35	白讀
-定			iaang	6		ʔ	iaŋ	31	落定，白讀
-訂			iaang	6		ʔ	iaŋ	31	落訂，白讀
-喋			iaap	8		ʔ	iap	31	
-疊			iaap	8		ʔ	iap	31	
-褶			iaap	8		ʔ	iap	31	
-蝶			iaap	8		ʔ	iap	31	
-碟			iaap	8		ʔ	iap	31	
-刁			iaau	1		ʔ	iau	23	
-凋			iaau	1		ʔ	iau	23	
-貂			iaau	1		ʔ	iau	23	
-雕			iaau	1		ʔ	iau	23	
-鵰			iaau	1		ʔ	iau	23	
-弔			iaau	1		ʔ	iau	23	
-釣			iaau	1		ʔ	iau	23	
-叼			iaau	1		ʔ	iau	23	
-吊			iaau	1		ʔ	iau	23	
-丟			iaau	1		ʔ	iau	23	
-調			iaau	6		ʔ	iau	31	調動
-掉			iaau	6		ʔ	iau	31	
 知			iea	1		ʔ	iə	23	知道，又音
 地			iea	6		ʔ	iə	31	又音
-狄			ik	8		ʔ	ɪk	31	
-迪			ik	8		ʔ	ɪk	31	
-荻			ik	8		ʔ	ɪk	31	
-滌			ik	8		ʔ	ɪk	31	
-敵			ik	8		ʔ	ɪk	31	
-滴			ik	8		ʔ	ɪk	31	
-嘀			ik	8		ʔ	ɪk	31	
-的			ik	7A		ʔ	ɪk	35	
-墊			in	1		ʔ	in	23	
-顛			in	1		ʔ	in	23	
-巔			in	1		ʔ	in	23	
-癲			in	1		ʔ	in	23	
-唸			in	1		ʔ	in	23	
-典			in	2		ʔ	in	35	
-碘			in	2		ʔ	in	35	
-佃			in	6		ʔ	in	31	佃農
-甸			in	6		ʔ	in	31	
-奠			in	6		ʔ	in	31	
-電			in	6		ʔ	in	31	
-殿			in	6		ʔ	in	31	
-澱			in	6		ʔ	in	31	
-靛			in	6		ʔ	in	31	
-仃			ing	1		ʔ	ɪŋ	23	
-叮			ing	1		ʔ	ɪŋ	23	
-訂			ing	1		ʔ	ɪŋ	23	
-盯			ing	1		ʔ	ɪŋ	23	
-丁			ing	1		ʔ	ɪŋ	23	
-町			ing	1		ʔ	ɪŋ	23	
-頂			ing	2		ʔ	ɪŋ	35	頂替
-鼎			ing	2		ʔ	ɪŋ	35	
-町			ing	2		ʔ	ɪŋ	35	町畦
-定			ing	6		ʔ	ɪŋ	31	安定
-迭			it	8		ʔ	it	31	
-秩			it	8		ʔ	it	31	
-跌			it	7B		ʔ	it	23	
-多			o	1		ʔ	ɔ	23	
-朵			o	2		ʔ	ɔ	35	
-躲			o	2		ʔ	ɔ	35	
-跺			o	2		ʔ	ɔ	35	
-墮			o	6		ʔ	ɔ	31	
-惰			o	6		ʔ	ɔ	31	
 哦			o	4		ʔ	ɔ	22	
-低			oi	1		ʔ	ɔi	23	
-締			oi	1		ʔ	ɔi	23	
-帝			oi	1		ʔ	ɔi	23	
-諦			oi	1		ʔ	ɔi	23	
-蒂			oi	1		ʔ	ɔi	23	
-抵			oi	2		ʔ	ɔi	35	
-底			oi	2		ʔ	ɔi	35	
-柢			oi	2		ʔ	ɔi	35	
-邸			oi	2		ʔ	ɔi	35	
-牴			oi	2		ʔ	ɔi	35	
-逮			oi	6		ʔ	ɔi	31	
-第			oi	6		ʔ	ɔi	31	
-弟			oi	6		ʔ	ɔi	31	
-遞			oi	6		ʔ	ɔi	31	
-隸			oi	6		ʔ	ɔi	31	
-代			oi	6		ʔ	ɔi	31	
-岱			oi	6		ʔ	ɔi	31	
-袋			oi	6		ʔ	ɔi	31	
-黛			oi	6		ʔ	ɔi	31	
-殆			oi	6		ʔ	ɔi	31	
-待			oi	6		ʔ	ɔi	31	
-怠			oi	6		ʔ	ɔi	31	
-度			ok	8		ʔ	ɔk	31	量度
-踱			ok	8		ʔ	ɔk	31	
-當			ong	1		ʔ	ɔŋ	23	當然
-鐺			ong	1		ʔ	ɔŋ	23	鐺鐺
-當			ong	1		ʔ	ɔŋ	23	適當
-擋			ong	1		ʔ	ɔŋ	23	摒擋
-噹			ong	1		ʔ	ɔŋ	23	
-檔			ong	1		ʔ	ɔŋ	23	拍檔
-黨			ong	2		ʔ	ɔŋ	35	
-擋			ong	2		ʔ	ɔŋ	35	阻擋
-檔			ong	2		ʔ	ɔŋ	35	檔案
-宕			ong	6		ʔ	ɔŋ	31	
-蕩			ong	6		ʔ	ɔŋ	31	
-盪			ong	6		ʔ	ɔŋ	31	
-兜			ou	1		ʔ	ou	23	
-鬥			ou	1		ʔ	ou	23	
-糾			ou	2		ʔ	ou	35	
-抖			ou	2		ʔ	ou	35	
-陡			ou	2		ʔ	ou	35	
-蚪			ou	2		ʔ	ou	35	
-斗			ou	2		ʔ	ou	35	
-逗			ou	6		ʔ	ou	31	
-豆			ou	6		ʔ	ou	31	
-荳			ou	6		ʔ	ou	31	
-竇			ou	6		ʔ	ou	31	
-痘			ou	6		ʔ	ou	31	
-讀			ou	6		ʔ	ou	31	句讀
-都			u	1		ʔ	u	23	
-嘟			u	1		ʔ	u	23	
-肚			u	2		ʔ	u	35	
-堵			u	2		ʔ	u	35	
-睹			u	2		ʔ	u	35	
-賭			u	2		ʔ	u	35	
-鍍			u	6		ʔ	u	31	
-度			u	6		ʔ	u	31	度量衡
-渡			u	6		ʔ	u	31	
-杜			u	6		ʔ	u	31	
-妒			u	6		ʔ	u	31	
 都			uea	1		ʔ	uə	23	又音
 肚			uea	2		ʔ	uə	35	又音
 堵			uea	2		ʔ	uə	35	又音
@@ -5379,49 +5432,3 @@
 渡			uea	6		ʔ	uə	31	又音
 杜			uea	6		ʔ	uə	31	又音
 妒			uea	6		ʔ	uə	31	又音
-兌			ui	1		ʔ	ui	23	
-堆			ui	1		ʔ	ui	23	
-堆			ui	5		ʔ	ui	21	變調；沙堆，地名
-對			ui	1		ʔ	ui	23	
-隊			ui	6		ʔ	ui	31	
-毒			uk	8		ʔ	ʊk	31	
-獨			uk	8		ʔ	ʊk	31	
-瀆			uk	8		ʔ	ʊk	31	
-犢			uk	8		ʔ	ʊk	31	
-讀			uk	8		ʔ	ʊk	31	朗讀
-頓			uk	8		ʔ	ʊk	31	冒頓
-篤			uk	9		ʔ	ʊk	21	
-督			uk	7A		ʔ	ʊk	35	
-篤			uk	7A		ʔ	ʊk	35	
-敦			un	1		ʔ	un	23	
-墩			un	1		ʔ	un	23	
-噸			un	1		ʔ	un	23	
-盹			un	6		ʔ	un	31	
-沌			un	6		ʔ	un	31	
-鈍			un	6		ʔ	un	31	
-遁			un	6		ʔ	un	31	
-頓			un	6		ʔ	un	31	安頓
-燉			un	6		ʔ	un	31	
-蹲			un	1		ʔ	un	23	
-冬			ung	1		ʔ	ʊŋ	23	
-東			ung	1		ʔ	ʊŋ	23	
-鶇			ung	1		ʔ	ʊŋ	23	
-凍			ung	1		ʔ	ʊŋ	23	
-咚			ung	1		ʔ	ʊŋ	23	
-董			ung	2		ʔ	ʊŋ	35	
-懂			ung	2		ʔ	ʊŋ	35	
-幢			ung	6		ʔ	ʊŋ	31	一幢樓
-洞			ung	6		ʔ	ʊŋ	31	
-動			ung	6		ʔ	ʊŋ	31	
-棟			ung	6		ʔ	ʊŋ	31	
-凸			ut	8		ʔ	ut	31	
-突			ut	8		ʔ	ut	31	
-咄			ut	7A		ʔ	ut	35	
-端			uaan	1		ʔ	uan	23	
-鍛			uaan	1		ʔ	uan	23	
-短			uaan	2		ʔ	uan	35	
-段			uaan	6		ʔ	uan	31	
-緞			uaan	6		ʔ	uan	31	
-斷			uaan	6		ʔ	uan	31	診斷
-斷			uaan	6		ʔ	uan	31	恩斷義絕
-奪			uaat	8		ʔ	uat	31	

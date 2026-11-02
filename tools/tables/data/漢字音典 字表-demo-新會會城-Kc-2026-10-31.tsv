@@ -1,4 +1,4 @@
-單字	粵拼	聲母_定	韻母_定	聲調_定	IPA(嚴)	聲母_定	韻母_定	聲調_定	備註
+單字	粵拼	聲母_定	韻母_定	聲調_定	IPA	聲母_定	韻母_定	聲調_定	備註
 阿			aa	1		ʔ	ɑ	23	阿文
 啊			aa	1		ʔ	ɑ	23	
 唉			aai	2		ʔ	ɑi	45	
@@ -518,29 +518,29 @@
 秤		c	ing	5		ʦʰ	ɪŋ	21	
 澄		c	ing	4		ʦʰ	ɪŋ	22	
 埕		c	ing	4		ʦʰ	ɪŋ	22	
-綽		c	iok	7B		ʦʰ	iøk	23	
-桌		c	iok	7A		ʦʰ	iøk	45	拜桌
-桌		c	iok	7B		ʦʰ	iøk	23	
-卓		c	iok	7B		ʦʰ	iøk	23	
-槍		c	iong	1		ʦʰ	iøŋ	23	
-鏘		c	iong	1		ʦʰ	iøŋ	23	
-搶		c	iong	1		ʦʰ	iøŋ	23	
-悵		c	iong	1		ʦʰ	iøŋ	23	
-暢		c	iong	1		ʦʰ	iøŋ	23	
-昌		c	iong	1		ʦʰ	iøŋ	23	
-菖		c	iong	1		ʦʰ	iøŋ	23	
-猖		c	iong	1		ʦʰ	iøŋ	23	
-倡		c	iong	1		ʦʰ	iøŋ	23	
-唱		c	iong	1		ʦʰ	iøŋ	23	
-鎗		c	iong	1		ʦʰ	iøŋ	23	
-嗆		c	iong	1		ʦʰ	iøŋ	23	
-搶		c	iong	2		ʦʰ	iøŋ	45	
-長		c	iong	4		ʦʰ	iøŋ	22	長久
-場		c	iong	4		ʦʰ	iøŋ	22	
-腸		c	iong	4		ʦʰ	iøŋ	22	
-薔		c	iong	4		ʦʰ	iøŋ	22	
-牆		c	iong	4		ʦʰ	iøŋ	22	
-戕		c	iong	4		ʦʰ	iøŋ	22	
+綽		c	iok	7B		ʦʰ	iɔk	23	
+桌		c	iok	7A		ʦʰ	iɔk	45	拜桌
+桌		c	iok	7B		ʦʰ	iɔk	23	
+卓		c	iok	7B		ʦʰ	iɔk	23	
+槍		c	iong	1		ʦʰ	iɔŋ	23	
+鏘		c	iong	1		ʦʰ	iɔŋ	23	
+搶		c	iong	1		ʦʰ	iɔŋ	23	
+悵		c	iong	1		ʦʰ	iɔŋ	23	
+暢		c	iong	1		ʦʰ	iɔŋ	23	
+昌		c	iong	1		ʦʰ	iɔŋ	23	
+菖		c	iong	1		ʦʰ	iɔŋ	23	
+猖		c	iong	1		ʦʰ	iɔŋ	23	
+倡		c	iong	1		ʦʰ	iɔŋ	23	
+唱		c	iong	1		ʦʰ	iɔŋ	23	
+鎗		c	iong	1		ʦʰ	iɔŋ	23	
+嗆		c	iong	1		ʦʰ	iɔŋ	23	
+搶		c	iong	2		ʦʰ	iɔŋ	45	
+長		c	iong	4		ʦʰ	iɔŋ	22	長久
+場		c	iong	4		ʦʰ	iɔŋ	22	
+腸		c	iong	4		ʦʰ	iɔŋ	22	
+薔		c	iong	4		ʦʰ	iɔŋ	22	
+牆		c	iong	4		ʦʰ	iɔŋ	22	
+戕		c	iong	4		ʦʰ	iɔŋ	22	
 妾		c	ip	7B		ʦʰ	ip	23	
 切		c	it	7B		ʦʰ	it	23	急切
 撤		c	it	7B		ʦʰ	it	23	
@@ -566,7 +566,7 @@
 蒼		c	ong	1		ʦʰ	ɔŋ	23	
 滄		c	ong	1		ʦʰ	ɔŋ	23	
 瘡		c	ong	1		ʦʰ	ɔŋ	23	
-創		c	ong	1		ʦʰ	ɔŋ	23	
+創		c	ong	2		ʦʰ	ɔŋ	45	
 愴		c	ong	1		ʦʰ	ɔŋ	23	
 艙		c	ong	1		ʦʰ	ɔŋ	23	
 窗		c	ong	1		ʦʰ	ɔŋ	23	
@@ -816,8 +816,8 @@
 鼎		d	ing	2		t	ɪŋ	45	
 町		d	ing	2		t	ɪŋ	45	町畦
 定		d	ing	6		t	ɪŋ	32	安定
-琢		d	iok	7B		t	iøk	23	
-啄		d	iok	7B		t	iøk	23	
+琢		d	iok	7B		t	iɔk	23	
+啄		d	iok	7B		t	iɔk	23	
 喋		d	ip	8		t	ip	32	
 疊		d	ip	8		t	ip	32	
 褶		d	ip	8		t	ip	32	
@@ -894,6 +894,7 @@
 惰		d	uo	6		t	uɔ	32	
 奪		d	ut	8		t	ut	32	
 花		f	aa	1		f	ɑ	23	
+花		f	aa	5		f	ɑ	21	變調
 化		f	aa	1		f	ɑ	23	
 快		f	aai	1		f	ɑi	23	
 快		f	aai	2		f	ɑi	45	變調
@@ -1364,16 +1365,16 @@
 境		g	ing	2		k	ɪŋ	45	
 競		g	ing	6		k	ɪŋ	32	
 勁		g	ing	6		k	ɪŋ	32	
-腳		g	iok	7B		k	iøk	23	
-腳		g	iok	7A		k	iøk	45	水腳（旅費）
-腳		g	iok	9		k	iøk	21	湯腳（湯渣）
-姜		g	iong	1		k	iøŋ	23	
-僵		g	iong	1		k	iøŋ	23	
-薑		g	iong	1		k	iøŋ	23	
-疆		g	iong	1		k	iøŋ	23	
-韁		g	iong	1		k	iøŋ	23	
-羌		g	iong	1		k	iøŋ	23	
-強		g	iong	6		k	iøŋ	32	倔強
+腳		g	iok	7B		k	iɔk	23	
+腳		g	iok	7A		k	iɔk	45	水腳（旅費）
+腳		g	iok	9		k	iɔk	21	湯腳（湯渣）
+姜		g	iong	1		k	iɔŋ	23	
+僵		g	iong	1		k	iɔŋ	23	
+薑		g	iong	1		k	iɔŋ	23	
+疆		g	iong	1		k	iɔŋ	23	
+韁		g	iong	1		k	iɔŋ	23	
+羌		g	iong	1		k	iɔŋ	23	
+強		g	iong	6		k	iɔŋ	32	倔強
 夾		g	ip	7B		k	ip	23	
 夾		g	ip	9		k	ip	21	變調
 劫		g	ip	7B		k	ip	23	
@@ -1512,63 +1513,63 @@
 粿		g	uo	2		k	uɔ	45	
 割		g	ut	7B		k	ut	23	
 葛		g	ut	7A		k	ut	45	
-瓜		gw	aa	1		ku	ɑ	23	
-卦		gw	aa	1		ku	ɑ	23	
-掛		gw	aa	1		ku	ɑ	23	
-呱		gw	aa	1		ku	ɑ	23	
-褂		gw	aa	1		ku	ɑ	23	
-寡		gw	aa	2		ku	ɑ	45	
-乖		gw	aai	1		ku	ɑi	23	
-怪		gw	aai	1		ku	ɑi	23	
-枴		gw	aai	2		ku	ɑi	45	
-拐		gw	aai	2		ku	ɑi	45	
-綸		gw	aan	1		ku	ɑn	23	綸巾
-關		gw	aan	1		ku	ɑn	23	
-慣		gw	aan	1		ku	ɑn	23	
-轟		gw	aang	1		ku	ɑŋ	23	
-肱		gw	aang	1		ku	ɑŋ	23	
-梗		gw	aang	2		ku	ɑŋ	45	
-逛		gw	aang	6		ku	ɑŋ	32	
-均		gw	ean	1		ku	ɜn	23	
-鈞		gw	ean	1		ku	ɜn	23	
-君		gw	ean	1		ku	ɜn	23	
-軍		gw	ean	1		ku	ɜn	23	
-棍		gw	ean	1		ku	ɜn	23	
-棍		gw	ean	5		ku	ɜn	21	變調
-龜		gw	ean	1		ku	ɜn	23	
-滾		gw	ean	2		ku	ɜn	45	
-郡		gw	ean	6		ku	ɜn	32	
-倔		gw	eat	8		ku	ɜt	32	
-掘		gw	eat	8		ku	ɜt	32	
-崛		gw	eat	8		ku	ɜt	32	
-骨		gw	eat	7A		ku	ɜt	45	
-滑		gw	eat	7A		ku	ɜt	45	滑稽
-圭		gw	ei	1		ku	ei	23	
-閨		gw	ei	1		ku	ei	23	
-鮭		gw	ei	1		ku	ei	23	
-桂		gw	ei	1		ku	ei	23	
-鱖		gw	ei	1		ku	ei	23	
-季		gw	ei	1		ku	ei	23	
-癸		gw	ei	1		ku	ei	23	
-悸		gw	ei	1		ku	ei	23	
-龜		gw	ei	1		ku	ei	23	
-歸		gw	ei	1		ku	ei	23	
-貴		gw	ei	1		ku	ei	23	
-傀		gw	ei	1		ku	ei	23	傀偉
-瑰		gw	ei	1		ku	ei	23	
-詭		gw	ei	2		ku	ei	45	
-軌		gw	ei	2		ku	ei	45	
-晷		gw	ei	2		ku	ei	45	
-鬼		gw	ei	2		ku	ei	45	
-跪		gw	ei	6		ku	ei	32	
-櫃		gw	ei	6		ku	ei	32	
-匱		gw	ei	6		ku	ei	32	
-餽		gw	ei	6		ku	ei	32	
-饋		gw	ei	6		ku	ei	32	
-迥		gw	ing	2		ku	ɪŋ	45	
-炯		gw	ing	2		ku	ɪŋ	45	
-刮		gw	aat	7B		ku	ɑt	23	
-颳		gw	aat	7B		ku	ɑt	23	
+瓜		gu	aa	1		ku	ɑ	23	
+卦		gu	aa	1		ku	ɑ	23	
+掛		gu	aa	1		ku	ɑ	23	
+呱		gu	aa	1		ku	ɑ	23	
+褂		gu	aa	1		ku	ɑ	23	
+寡		gu	aa	2		ku	ɑ	45	
+乖		gu	aai	1		ku	ɑi	23	
+怪		gu	aai	1		ku	ɑi	23	
+枴		gu	aai	2		ku	ɑi	45	
+拐		gu	aai	2		ku	ɑi	45	
+綸		gu	aan	1		ku	ɑn	23	綸巾
+關		gu	aan	1		ku	ɑn	23	
+慣		gu	aan	1		ku	ɑn	23	
+轟		gu	aang	1		ku	ɑŋ	23	
+肱		gu	aang	1		ku	ɑŋ	23	
+梗		gu	aang	2		ku	ɑŋ	45	
+逛		gu	aang	6		ku	ɑŋ	32	
+均		gu	ean	1		ku	ɜn	23	
+鈞		gu	ean	1		ku	ɜn	23	
+君		gu	ean	1		ku	ɜn	23	
+軍		gu	ean	1		ku	ɜn	23	
+棍		gu	ean	1		ku	ɜn	23	
+棍		gu	ean	5		ku	ɜn	21	變調
+龜		gu	ean	1		ku	ɜn	23	
+滾		gu	ean	2		ku	ɜn	45	
+郡		gu	ean	6		ku	ɜn	32	
+倔		gu	eat	8		ku	ɜt	32	
+掘		gu	eat	8		ku	ɜt	32	
+崛		gu	eat	8		ku	ɜt	32	
+骨		gu	eat	7A		ku	ɜt	45	
+滑		gu	eat	7A		ku	ɜt	45	滑稽
+圭		gu	ei	1		ku	ei	23	
+閨		gu	ei	1		ku	ei	23	
+鮭		gu	ei	1		ku	ei	23	
+桂		gu	ei	1		ku	ei	23	
+鱖		gu	ei	1		ku	ei	23	
+季		gu	ei	1		ku	ei	23	
+癸		gu	ei	1		ku	ei	23	
+悸		gu	ei	1		ku	ei	23	
+龜		gu	ei	1		ku	ei	23	
+歸		gu	ei	1		ku	ei	23	
+貴		gu	ei	1		ku	ei	23	
+傀		gu	ei	1		ku	ei	23	傀偉
+瑰		gu	ei	1		ku	ei	23	
+詭		gu	ei	2		ku	ei	45	
+軌		gu	ei	2		ku	ei	45	
+晷		gu	ei	2		ku	ei	45	
+鬼		gu	ei	2		ku	ei	45	
+跪		gu	ei	6		ku	ei	32	
+櫃		gu	ei	6		ku	ei	32	
+匱		gu	ei	6		ku	ei	32	
+餽		gu	ei	6		ku	ei	32	
+饋		gu	ei	6		ku	ei	32	
+迥		gu	ing	2		ku	ɪŋ	45	
+炯		gu	ing	2		ku	ɪŋ	45	
+刮		gu	it	7B		ku	it	23	
+颳		gu	it	7B		ku	it	23	
 蝦		h	aa	1		h	ɑ	23	蝦蟆
 哈		h	aa	1		h	ɑ	23	
 他		h	aa	1		h	ɑ	23	
@@ -1901,15 +1902,15 @@
 蜓		h	ing	4		h	ɪŋ	22	
 霆		h	ing	4		h	ɪŋ	22	
 婷		h	ing	4		h	ɪŋ	22	
-香		h	iong	1		h	iøŋ	23	
-鄉		h	iong	1		h	iøŋ	23	
-嚮		h	iong	1		h	iøŋ	23	
-向		h	iong	1		h	iøŋ	23	
-饗		h	iong	2		h	iøŋ	45	
-響		h	iong	2		h	iøŋ	45	
-嚮		h	iong	2		h	iøŋ	45	
-晌		h	iong	2		h	iøŋ	45	
-享		h	iong	2		h	iøŋ	45	
+香		h	iong	1		h	iɔŋ	23	
+鄉		h	iong	1		h	iɔŋ	23	
+嚮		h	iong	1		h	iɔŋ	23	
+向		h	iong	1		h	iɔŋ	23	
+饗		h	iong	2		h	iɔŋ	45	
+響		h	iong	2		h	iɔŋ	45	
+嚮		h	iong	2		h	iɔŋ	45	
+晌		h	iong	2		h	iɔŋ	45	
+享		h	iong	2		h	iɔŋ	45	
 帖		h	ip	7B		h	ip	23	
 貼		h	ip	7B		h	ip	23	
 愜		h	ip	7B		h	ip	23	
@@ -1932,6 +1933,7 @@
 窕		h	iu	4		h	iu	22	
 學		h	ok	8		h	ɔk	32	
 鶴		h	ok	8		h	ɔk	32	
+鶴		h	ok	9		h	ɔk	21	變調
 拓		h	ok	7B		h	ɔk	23	
 託		h	ok	7B		h	ɔk	23	
 壑		h	ok	7B		h	ɔk	23	
@@ -2349,35 +2351,35 @@
 縈		j	ing	4		j	ɪŋ	22	
 盈		j	ing	4		j	ɪŋ	22	
 蠅		j	ing	4		j	ɪŋ	22	
-藥		j	iok	8		j	iøk	32	
-藥		j	iok	9		j	iøk	21	變調
-鑰		j	iok	8		j	iøk	32	
-躍		j	iok	8		j	iøk	32	躍進
-篛		j	iok	8		j	iøk	32	
-叒		j	iok	8		j	iøk	32	
-約		j	iok	7B		j	iøk	23	
-躍		j	iok	7B		j	iøk	23	跳躍
-曰		j	iok	7B		j	iøk	23	
-養		j	iong	5		j	iøŋ	21	
-癢		j	iong	5		j	iøŋ	21	
-央		j	iong	1		j	iøŋ	23	
-殃		j	iong	1		j	iøŋ	23	
-秧		j	iong	1		j	iøŋ	23	
-鴦		j	iong	1		j	iøŋ	23	
-贏		j	iong	4		j	iøŋ	22	
-羊		j	iong	4		j	iøŋ	22	
-徉		j	iong	4		j	iøŋ	22	
-洋		j	iong	4		j	iøŋ	22	
-烊		j	iong	4		j	iøŋ	22	
-陽		j	iong	4		j	iøŋ	22	
-楊		j	iong	4		j	iøŋ	22	
-瘍		j	iong	4		j	iøŋ	22	
-氧		j	iong	5		j	iøŋ	21	
-攘		j	iong	5		j	iøŋ	21	擾攘
-釀		j	iong	6		j	iøŋ	32	
-漾		j	iong	6		j	iøŋ	32	
-嚷		j	iong	6		j	iøŋ	32	
-樣		j	iong	6		j	iøŋ	32	
+藥		j	iok	8		j	iɔk	32	
+藥		j	iok	9		j	iɔk	21	變調
+鑰		j	iok	8		j	iɔk	32	
+躍		j	iok	8		j	iɔk	32	躍進
+篛		j	iok	8		j	iɔk	32	
+叒		j	iok	8		j	iɔk	32	
+約		j	iok	7B		j	iɔk	23	
+躍		j	iok	7B		j	iɔk	23	跳躍
+曰		j	iok	7B		j	iɔk	23	
+養		j	iong	5		j	iɔŋ	21	
+癢		j	iong	5		j	iɔŋ	21	
+央		j	iong	1		j	iɔŋ	23	
+殃		j	iong	1		j	iɔŋ	23	
+秧		j	iong	1		j	iɔŋ	23	
+鴦		j	iong	1		j	iɔŋ	23	
+贏		j	iong	4		j	iɔŋ	22	
+羊		j	iong	4		j	iɔŋ	22	
+徉		j	iong	4		j	iɔŋ	22	
+洋		j	iong	4		j	iɔŋ	22	
+烊		j	iong	4		j	iɔŋ	22	
+陽		j	iong	4		j	iɔŋ	22	
+楊		j	iong	4		j	iɔŋ	22	
+瘍		j	iong	4		j	iɔŋ	22	
+氧		j	iong	5		j	iɔŋ	21	
+攘		j	iong	5		j	iɔŋ	21	擾攘
+釀		j	iong	6		j	iɔŋ	32	
+漾		j	iong	6		j	iɔŋ	32	
+嚷		j	iong	6		j	iɔŋ	32	
+樣		j	iong	6		j	iɔŋ	32	
 頁		j	ip	8		j	ip	32	
 葉		j	ip	8		j	ip	32	
 靨		j	ip	7B		j	ip	23	
@@ -2511,10 +2513,10 @@
 鯨		k	ing	4		kʰ	ɪŋ	22	
 擎		k	ing	4		kʰ	ɪŋ	22	
 嬛		k	ing	4		kʰ	ɪŋ	22	美好
-卻		k	iok	7B		kʰ	iøk	23	
-強		k	iong	5		kʰ	iøŋ	21	勉強
-襁		k	iong	5		kʰ	iøŋ	21	
-強		k	iong	4		kʰ	iøŋ	22	強壯
+卻		k	iok	7B		kʰ	iɔk	23	
+強		k	iong	5		kʰ	iɔŋ	21	勉強
+襁		k	iong	5		kʰ	iɔŋ	21	
+強		k	iong	4		kʰ	iɔŋ	22	強壯
 歇		k	it	7B		kʰ	it	23	
 抉		k	it	7B		kʰ	it	23	
 訣		k	it	7B		kʰ	it	23	
@@ -2581,38 +2583,38 @@
 聒		k	ut	7B		kʰ	ut	23	
 括		k	ut	7A		kʰ	ut	45	
 豁		k	ut	7B		kʰ	ut	23	
-夸		kw	aa	1		kʰu	ɑ	23	
-誇		kw	aa	1		kʰu	ɑ	23	
-跨		kw	aa	1		kʰu	ɑ	23	
-掛		kw	aa	1		kʰu	ɑ	23	
-垮		kw	aa	1		kʰu	ɑ	23	
-眶		kw	aang	1		kʰu	ɑŋ	23	
-窘		kw	ean	1		kʰu	ɜn	23	
-昆		kw	ean	1		kʰu	ɜn	23	
-坤		kw	ean	1		kʰu	ɜn	23	
-困		kw	ean	1		kʰu	ɜn	23	
-崑		kw	ean	1		kʰu	ɜn	23	
-睏		kw	ean	1		kʰu	ɜn	23	
-菌		kw	ean	2		kʰu	ɜn	45	
-壼		kw	ean	2		kʰu	ɜn	45	
-捆		kw	ean	2		kʰu	ɜn	45	
-綑		kw	ean	2		kʰu	ɜn	45	
-裙		kw	ean	4		kʰu	ɜn	22	
-群		kw	ean	4		kʰu	ɜn	22	
-規		kw	ei	1		kʰu	ei	23	
-窺		kw	ei	1		kʰu	ei	23	
-虧		kw	ei	1		kʰu	ei	23	
-愧		kw	ei	1		kʰu	ei	23	
-盔		kw	ei	1		kʰu	ei	23	
-睽		kw	ei	4		kʰu	ei	22	
-畦		kw	ei	4		kʰu	ei	22	
-攜		kw	ei	4		kʰu	ei	22	
-蠵		kw	ei	4		kʰu	ei	22	
-葵		kw	ei	4		kʰu	ei	22	
-揆		kw	ei	5		kʰu	ei	21	
-逵		kw	ei	4		kʰu	ei	22	
-隙		kw	ik	7A		kʰu	ɪk	45	
-瓊		kw	ing	4		kʰu	ɪŋ	22	
+夸		ku	aa	1		kʰu	ɑ	23	
+誇		ku	aa	1		kʰu	ɑ	23	
+跨		ku	aa	1		kʰu	ɑ	23	
+掛		ku	aa	1		kʰu	ɑ	23	
+垮		ku	aa	1		kʰu	ɑ	23	
+眶		ku	aang	1		kʰu	ɑŋ	23	
+窘		ku	ean	1		kʰu	ɜn	23	
+昆		ku	ean	1		kʰu	ɜn	23	
+坤		ku	ean	1		kʰu	ɜn	23	
+困		ku	ean	1		kʰu	ɜn	23	
+崑		ku	ean	1		kʰu	ɜn	23	
+睏		ku	ean	1		kʰu	ɜn	23	
+菌		ku	ean	2		kʰu	ɜn	45	
+壼		ku	ean	2		kʰu	ɜn	45	
+捆		ku	ean	2		kʰu	ɜn	45	
+綑		ku	ean	2		kʰu	ɜn	45	
+裙		ku	ean	4		kʰu	ɜn	22	
+群		ku	ean	4		kʰu	ɜn	22	
+規		ku	ei	1		kʰu	ei	23	
+窺		ku	ei	1		kʰu	ei	23	
+虧		ku	ei	1		kʰu	ei	23	
+愧		ku	ei	1		kʰu	ei	23	
+盔		ku	ei	1		kʰu	ei	23	
+睽		ku	ei	4		kʰu	ei	22	
+畦		ku	ei	4		kʰu	ei	22	
+攜		ku	ei	4		kʰu	ei	22	
+蠵		ku	ei	4		kʰu	ei	22	
+葵		ku	ei	4		kʰu	ei	22	
+揆		ku	ei	5		kʰu	ei	21	
+逵		ku	ei	4		kʰu	ei	22	
+隙		ku	ik	7A		kʰu	ɪk	45	
+瓊		ku	ing	4		kʰu	ɪŋ	22	
 喇		l	aa	5		l	ɑ	21	喇叭
 啦		l	aa	1		l	ɑ	23	
 罅		l	aa	1		l	ɑ	23	縫隙
@@ -2852,21 +2854,22 @@
 愣		l	ing	6		l	ɪŋ	32	
 另		l	ing	6		l	ɪŋ	32	
 楞		l	ing	6		l	ɪŋ	32	發楞
-掠		l	iok	8		l	iøk	32	
-略		l	iok	8		l	iøk	32	
-兩		l	iong	2		l	iøŋ	45	
-倆		l	iong	2		l	iøŋ	45	姓氏
-良		l	iong	4		l	iøŋ	22	
-涼		l	iong	4		l	iøŋ	22	
-梁		l	iong	4		l	iøŋ	22	
-粱		l	iong	4		l	iøŋ	22	
-糧		l	iong	4		l	iøŋ	22	
-量		l	iong	4		l	iøŋ	22	測量
-亮		l	iong	6		l	iøŋ	32	
-量		l	iong	6		l	iøŋ	32	重量
-諒		l	iong	6		l	iøŋ	32	
-輛		l	iong	6		l	iøŋ	32	
+掠		l	iok	8		l	iɔk	32	
+略		l	iok	8		l	iɔk	32	
+兩		l	iong	2		l	iɔŋ	45	
+倆		l	iong	2		l	iɔŋ	45	姓氏
+良		l	iong	4		l	iɔŋ	22	
+涼		l	iong	4		l	iɔŋ	22	
+梁		l	iong	4		l	iɔŋ	22	
+粱		l	iong	4		l	iɔŋ	22	
+糧		l	iong	4		l	iɔŋ	22	
+量		l	iong	4		l	iɔŋ	22	測量
+亮		l	iong	6		l	iɔŋ	32	
+量		l	iong	6		l	iɔŋ	32	重量
+諒		l	iong	6		l	iɔŋ	32	
+輛		l	iong	6		l	iɔŋ	32	
 獵		l	ip	8		l	ip	32	
+裂		l	ip	9		l	ip	21	名詞，變調
 捩		l	it	8		l	it	32	捩手
 劣		l	it	8		l	it	32	
 冽		l	it	8		l	it	32	
@@ -2965,20 +2968,20 @@
 鑼		l	uo	4		l	uɔ	22	
 邏		l	uo	4		l	uɔ	22	
 囉		l	uo	4		l	uɔ	22	嘍囉
-嗯		m		1		m̍		23	
-五		m		2		m̍		45	
-午		m		2		m̍		45	
-伍		m		2		m̍		45	
-嗯		m		2		m̍		45	
-蜈		m		4		m̍		22	
-吾		m		4		m̍		22	
-吳		m		4		m̍		22	
-梧		m		4		m̍		22	
-唔		m		5		m̍		21	
-悟		m		6		m̍		32	
-晤		m		6		m̍		32	
-誤		m		6		m̍		32	
-寤		m		6		m̍		32	
+嗯		m		1		m		23	
+五		m		2		m		45	
+午		m		2		m		45	
+伍		m		2		m		45	
+嗯		m		2		m		45	
+蜈		m		4		m		22	
+吾		m		4		m		22	
+吳		m		4		m		22	
+梧		m		4		m		22	
+唔		m		5		m		21	
+悟		m		6		m		32	
+晤		m		6		m		32	
+誤		m		6		m		32	
+寤		m		6		m		32	
 媽		m	aa	2		m	ɑ	45	
 瑪		m	aa	1		m	ɑ	23	
 瑪		m	aa	5		m	ɑ	21	喇嘛
@@ -3305,7 +3308,7 @@
 獰		n	ing	4		n	ɪŋ	22	
 檸		n	ing	5		n	ɪŋ	21	
 濘		n	ing	6		n	ɪŋ	32	
-娘		n	iong	4		n	iøŋ	22	
+娘		n	iong	4		n	iɔŋ	22	
 捏		n	ip	8		n	ip	32	
 鑷		n	ip	8		n	ip	32	
 聶		n	ip	8		n	ip	32	
@@ -3460,6 +3463,7 @@
 嚴		ng	im	4		ŋ	im	22	
 儼		ng	im	4		ŋ	im	22	
 驗		ng	im	6		ŋ	im	32	
+硯		ng	im	5		ŋ	im	21	習讀
 軟		ng	in	5		ŋ	in	21	
 阮		ng	in	5		ŋ	in	21	姓氏
 元		ng	in	4		ŋ	in	22	
@@ -3471,24 +3475,24 @@
 燃		ng	in	4		ŋ	in	22	
 言		ng	in	4		ŋ	in	22	
 願		ng	in	6		ŋ	in	32	
-硯		ng	in	6		ŋ	in	32	
+硯		ng	in	5		ŋ	in	21	
 彥		ng	in	6		ŋ	in	32	
 諺		ng	in	6		ŋ	in	32	
 迎		ng	ing	4		ŋ	ɪŋ	22	
 仍		ng	ing	4		ŋ	ɪŋ	22	
 凝		ng	ing	4		ŋ	ɪŋ	22	
 認		ng	ing	6		ŋ	ɪŋ	32	
-若		ng	iok	8		ŋ	iøk	32	假若
-弱		ng	iok	8		ŋ	iøk	32	
-箬		ng	iok	8		ŋ	iøk	32	
-謔		ng	iok	8		ŋ	iøk	32	
-虐		ng	iok	8		ŋ	iøk	32	
-瘧		ng	iok	8		ŋ	iøk	32	
-仰		ng	iong	2		ŋ	iøŋ	45	
-攘		ng	iong	4		ŋ	iøŋ	22	攘除
-揚		ng	iong	4		ŋ	iøŋ	22	
-讓		ng	iong	6		ŋ	iøŋ	32	
-壤		ng	iong	6		ŋ	iøŋ	32	
+若		ng	iok	8		ŋ	iɔk	32	假若
+弱		ng	iok	8		ŋ	iɔk	32	
+箬		ng	iok	8		ŋ	iɔk	32	
+謔		ng	iok	8		ŋ	iɔk	32	
+虐		ng	iok	8		ŋ	iɔk	32	
+瘧		ng	iok	8		ŋ	iɔk	32	
+仰		ng	iong	2		ŋ	iɔŋ	45	
+攘		ng	iong	4		ŋ	iɔŋ	22	攘除
+揚		ng	iong	4		ŋ	iɔŋ	22	
+讓		ng	iong	6		ŋ	iɔŋ	32	
+壤		ng	iong	6		ŋ	iɔŋ	32	
 業		ng	ip	8		ŋ	ip	32	
 月		ng	it	8		ŋ	it	32	
 熱		ng	it	8		ŋ	it	32	
@@ -3536,7 +3540,7 @@
 哦		ng	uo	4		ŋ	uɔ	22	
 臥		ng	uo	6		ŋ	uɔ	32	
 餓		ng	uo	6		ŋ	uɔ	32	
-哼		ng		1		ŋ̍		23	
+哼		ng		1		ŋ		23	
 怕		p	aa	1		pʰ	ɑ	23	
 趴		p	aa	1		pʰ	ɑ	23	
 扒		p	aa	5		pʰ	ɑ	21	扒飯
@@ -3692,6 +3696,7 @@
 培		p	ui	4		pʰ	ui	22	
 蓓		p	ui	5		pʰ	ui	21	
 賠		p	ui	4		pʰ	ui	22	
+焙		p	ui	4		pʰ	ui	22	習讀，“烘焙”
 伴		p	un	5		pʰ	un	21	白讀
 拚		p	un	1		pʰ	un	23	
 潘		p	un	1		pʰ	un	23	
@@ -4062,6 +4067,7 @@
 擅		s	in	6		s	in	32	
 繕		s	in	6		s	in	32	
 善		s	in	6		s	in	32	
+鱔		s	in	5		s	in	21	
 羨		s	in	6		s	in	32	
 星		s	ing	1		s	ɪŋ	23	
 惺		s	ing	1		s	ɪŋ	23	
@@ -4087,30 +4093,30 @@
 盛		s	ing	6		s	ɪŋ	32	旺盛
 乘		s	ing	6		s	ɪŋ	32	萬乘之國
 剩		s	ing	6		s	ɪŋ	32	文讀
-削		s	iok	7B		s	iøk	23	
-爍		s	iok	7B		s	iøk	23	
-鑲		s	iong	1		s	iøŋ	23	
-相		s	iong	1		s	iøŋ	23	
-廂		s	iong	1		s	iøŋ	23	
-湘		s	iong	1		s	iøŋ	23	
-箱		s	iong	1		s	iøŋ	23	
-襄		s	iong	1		s	iøŋ	23	
-上		s	iong	5		s	iøŋ	21	
-霜		s	iong	1		s	iøŋ	23	
-商		s	iong	1		s	iøŋ	23	
-傷		s	iong	1		s	iøŋ	23	
-想		s	iong	2		s	iøŋ	45	
-賞		s	iong	2		s	iøŋ	45	
-箱		s	iong	4		s	iøŋ	22	
-常		s	iong	4		s	iøŋ	22	
-徜		s	iong	4		s	iøŋ	22	
-嘗		s	iong	4		s	iøŋ	22	
-償		s	iong	4		s	iøŋ	22	
-裳		s	iong	4		s	iøŋ	22	
-嫦		s	iong	4		s	iøŋ	22	
-嚐		s	iong	4		s	iøŋ	22	
-尚		s	iong	6		s	iøŋ	32	
-上		s	iong	6		s	iøŋ	32	上面
+削		s	iok	7B		s	iɔk	23	
+爍		s	iok	7B		s	iɔk	23	
+鑲		s	iong	1		s	iɔŋ	23	
+相		s	iong	1		s	iɔŋ	23	
+廂		s	iong	1		s	iɔŋ	23	
+湘		s	iong	1		s	iɔŋ	23	
+箱		s	iong	1		s	iɔŋ	23	
+襄		s	iong	1		s	iɔŋ	23	
+上		s	iong	5		s	iɔŋ	21	
+霜		s	iong	1		s	iɔŋ	23	
+商		s	iong	1		s	iɔŋ	23	
+傷		s	iong	1		s	iɔŋ	23	
+想		s	iong	2		s	iɔŋ	45	
+賞		s	iong	2		s	iɔŋ	45	
+箱		s	iong	4		s	iɔŋ	22	
+常		s	iong	4		s	iɔŋ	22	
+徜		s	iong	4		s	iɔŋ	22	
+嘗		s	iong	4		s	iɔŋ	22	
+償		s	iong	4		s	iɔŋ	22	
+裳		s	iong	4		s	iɔŋ	22	
+嫦		s	iong	4		s	iɔŋ	22	
+嚐		s	iong	4		s	iɔŋ	22	
+尚		s	iong	6		s	iɔŋ	32	
+上		s	iong	6		s	iɔŋ	32	上面
 懾		s	ip	7B		s	ip	23	
 涉		s	ip	7B		s	ip	23	
 攝		s	ip	7B		s	ip	23	
@@ -4736,6 +4742,7 @@
 瘠		z	iaak	7B		ʦ	iɑk	23	
 正		z	iaang	1		ʦ	iɑŋ	23	好正，白讀
 精		z	iaang	1		ʦ	iɑŋ	23	好精，白讀
+晶		z	iaang	1		ʦ	iɑŋ	23	魂晶，白讀
 井		z	iaang	2		ʦ	iɑŋ	45	
 鄭		z	iaang	6		ʦ	iɑŋ	32	
 淨		z	iaang	6		ʦ	iɑŋ	32	乾淨，白讀
@@ -4819,45 +4826,45 @@
 阱		z	ing	6		ʦ	ɪŋ	32	
 靖		z	ing	6		ʦ	ɪŋ	32	
 靜		z	ing	6		ʦ	ɪŋ	32	
-著		z	iok	8		ʦ	iøk	32	著涼
-雀		z	iok	9		ʦ	iøk	21	
-爵		z	iok	7A		ʦ	iøk	45	
-雀		z	iok	7A		ʦ	iøk	45	
-雀		z	iok	7B		ʦ	iøk	23	
-鵲		z	iok	7B		ʦ	iøk	23	
-著		z	iok	7B		ʦ	iøk	23	著衫
-勺		z	iok	7B		ʦ	iøk	23	
-灼		z	iok	7B		ʦ	iøk	23	
-酌		z	iok	7B		ʦ	iøk	23	
-嚼		z	iok	7B		ʦ	iøk	23	
-將		z	iong	1		ʦ	iøŋ	23	將來
-漿		z	iong	1		ʦ	iøŋ	23	
-醬		z	iong	1		ʦ	iøŋ	23	
-仗		z	iong	1		ʦ	iøŋ	23	打仗
-張		z	iong	1		ʦ	iøŋ	23	
-漲		z	iong	1		ʦ	iøŋ	23	
-帳		z	iong	1		ʦ	iøŋ	23	
-脹		z	iong	1		ʦ	iøŋ	23	
-章		z	iong	1		ʦ	iøŋ	23	
-彰		z	iong	1		ʦ	iøŋ	23	
-漳		z	iong	1		ʦ	iøŋ	23	
-璋		z	iong	1		ʦ	iøŋ	23	
-樟		z	iong	1		ʦ	iøŋ	23	
-障		z	iong	1		ʦ	iøŋ	23	
-蟑		z	iong	1		ʦ	iøŋ	23	
-賬		z	iong	1		ʦ	iøŋ	23	
-蔣		z	iong	2		ʦ	iøŋ	45	
-槳		z	iong	2		ʦ	iøŋ	45	
-獎		z	iong	2		ʦ	iøŋ	45	
-長		z	iong	2		ʦ	iøŋ	45	長大
-掌		z	iong	2		ʦ	iøŋ	45	
-象		z	iong	6		ʦ	iøŋ	32	
-像		z	iong	6		ʦ	iøŋ	32	
-橡		z	iong	6		ʦ	iøŋ	32	
-仗		z	iong	6		ʦ	iøŋ	32	仗義
-丈		z	iong	6		ʦ	iøŋ	32	
-杖		z	iong	6		ʦ	iøŋ	32	
-匠		z	iong	6		ʦ	iøŋ	32	
+著		z	iok	8		ʦ	iɔk	32	著涼
+雀		z	iok	9		ʦ	iɔk	21	
+爵		z	iok	7A		ʦ	iɔk	45	
+雀		z	iok	7A		ʦ	iɔk	45	
+雀		z	iok	7B		ʦ	iɔk	23	
+鵲		z	iok	7B		ʦ	iɔk	23	
+著		z	iok	7B		ʦ	iɔk	23	著衫
+勺		z	iok	7B		ʦ	iɔk	23	
+灼		z	iok	7B		ʦ	iɔk	23	
+酌		z	iok	7B		ʦ	iɔk	23	
+嚼		z	iok	7B		ʦ	iɔk	23	
+將		z	iong	1		ʦ	iɔŋ	23	將來
+漿		z	iong	1		ʦ	iɔŋ	23	
+醬		z	iong	1		ʦ	iɔŋ	23	
+仗		z	iong	1		ʦ	iɔŋ	23	打仗
+張		z	iong	1		ʦ	iɔŋ	23	
+漲		z	iong	1		ʦ	iɔŋ	23	
+帳		z	iong	1		ʦ	iɔŋ	23	
+脹		z	iong	1		ʦ	iɔŋ	23	
+章		z	iong	1		ʦ	iɔŋ	23	
+彰		z	iong	1		ʦ	iɔŋ	23	
+漳		z	iong	1		ʦ	iɔŋ	23	
+璋		z	iong	1		ʦ	iɔŋ	23	
+樟		z	iong	1		ʦ	iɔŋ	23	
+障		z	iong	1		ʦ	iɔŋ	23	
+蟑		z	iong	1		ʦ	iɔŋ	23	
+賬		z	iong	1		ʦ	iɔŋ	23	
+蔣		z	iong	2		ʦ	iɔŋ	45	
+槳		z	iong	2		ʦ	iɔŋ	45	
+獎		z	iong	2		ʦ	iɔŋ	45	
+長		z	iong	2		ʦ	iɔŋ	45	長大
+掌		z	iong	2		ʦ	iɔŋ	45	
+象		z	iong	6		ʦ	iɔŋ	32	
+像		z	iong	6		ʦ	iɔŋ	32	
+橡		z	iong	6		ʦ	iɔŋ	32	
+仗		z	iong	6		ʦ	iɔŋ	32	仗義
+丈		z	iong	6		ʦ	iɔŋ	32	
+杖		z	iong	6		ʦ	iɔŋ	32	
+匠		z	iong	6		ʦ	iɔŋ	32	
 浹		z	ip	7B		ʦ	ip	23	
 褶		z	ip	7B		ʦ	ip	23	皺褶
 接		z	ip	7B		ʦ	ip	23	

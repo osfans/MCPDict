@@ -1,0 +1,2084 @@
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	t	k	pʰ	kʰ	b	ts	tʃ	tsʰ	tʃʰ	m	n	ŋ	f	s	ʃ	h	∅
+@FIN	a
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	a	陰平	巴 芭 疤 爸
+p	a	上聲	把
+p	a	去聲	霸 壩 霸
+pʰ	a	陽平	爬 琶 耙 杷 划
+pʰ	a	去聲	怕 帕
+m	a	陰平	馬 碼
+m	a	陽平	麻 痲 蟆
+m	a	去聲	罵
+f	a	陰平	花
+f	a	陽平	華 樺
+f	a	上聲	畫 話
+f	a	去聲	化 話 畫
+b	a	陰平	蛙
+t	a	上聲	打
+n	a	陰平	拿
+ts	a	陰平	渣 楂
+ts	a	上聲	詐 榨 炸 乍
+tsʰ	a	陰平	叉 差 岔 釵 昨
+tsʰ	a	陽平	查 茶 搽
+s	a	陰平	沙 紗
+s	a	上聲	灑
+tʃ	a	陰平	遮
+tʃ	a	上聲	者
+tʃ	a	去聲	蔗
+tʃʰ	a	陰平	車 賒
+tʃʰ	a	上聲	扯
+ʃ	a	陰平	社
+ʃ	a	陽平	蛇
+ʃ	a	上聲	射 捨
+ʃ	a	去聲	赦 舍 射 麝
+k	a	陰平	家 加 嘉 痂 佳 傢 瓜
+k	a	上聲	假 寡
+k	a	去聲	假 架 駕 嫁 嫁 稼 卦 掛 價
+kʰ	a	陰平	誇
+kʰ	a	上聲	卡
+kʰ	a	去聲	跨
+ŋ	a	陽平	芽 牙 衙 蚜 涯
+ŋ	a	上聲	雅 瓦
+h	a	陰平	下
+h	a	陽平	蝦 霞 瑕
+h	a	上聲	夏 廈 下
+∅	a	陰平	阿 鴉 椏
+∅	a	上聲	啞
+∅	a	去聲	亞
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	f	b	t	tʰ	n	l	ts	tsʰ	s	k	kʰ	ŋ	h	∅
+@FIN	ai
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ai	陽平	跛
+p	ai	上聲	擺
+p	ai	去聲	拜
+pʰ	ai	陽平	排 牌
+pʰ	ai	上聲	敗
+pʰ	ai	去聲	派
+m	ai	陰平	買
+m	ai	陽平	埋
+m	ai	上聲	賣
+m	ai	去聲	邁
+f	ai	陽平	懷 淮 槐
+f	ai	上聲	壞
+b	ai	陰平	歪
+t	ai	陰平	低
+t	ai	去聲	帶 戴
+tʰ	ai	陰平	弟
+tʰ	ai	陽平	蹄 啼
+tʰ	ai	上聲	大 待
+tʰ	ai	去聲	態 太 泰 剃
+n	ai	陰平	乃
+n	ai	陽平	泥
+n	ai	上聲	耐 奈
+l	ai	陽平	犂
+l	ai	去聲	賴
+ts	ai	陰平	災 栽 齋
+ts	ai	上聲	宰 載 滓
+ts	ai	去聲	再 債
+tsʰ	ai	陰平	差
+tsʰ	ai	陽平	裁
+tsʰ	ai	上聲	彩 採 寨
+tsʰ	ai	去聲	蔡
+s	ai	上聲	徙 柿
+s	ai	去聲	曬 帥
+k	ai	陰平	皆 階 街 雞 乖
+k	ai	上聲	解 枴
+k	ai	去聲	概 溉 怪 介 界 屆 戒
+kʰ	ai	上聲	凱
+kʰ	ai	去聲	快 塊 筷
+ŋ	ai	陽平	涯 崖
+h	ai	陰平	溪
+h	ai	陽平	諧 孩
+h	ai	上聲	械 蟹
+∅	ai	陰平	埃
+∅	ai	上聲	藹 矮
+∅	ai	去聲	隘
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	b	tʰ	l	ts	tsʰ	tʃ	tʃʰ	ʃ	k	kʰ	h	∅
+@FIN	ak
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ak	陰入	百 柏 伯 擘
+pʰ	ak	陰入	拍 魄
+pʰ	ak	陽入	白
+m	ak	陰入	脈
+m	ak	陽入	麥
+b	ak	陽入	劃
+tʰ	ak	陰入	笛
+tʰ	ak	陽入	糴
+l	ak	陽入	曆
+ts	ak	陰入	拆 摘
+tsʰ	ak	陰入	策 冊
+tʃ	ak	陰入	隻 炙
+tʃʰ	ak	陰入	策 冊 尺 赤
+ʃ	ak	陽入	石
+k	ak	陰入	隔
+kʰ	ak	陰入	客
+h	ak	陰入	嚇 客
+∅	ak	陰入	扼 軛
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	f	t	tʰ	n	l	ȵ	ts	tsʰ	s	tʃ	tʃʰ	ʃ	k	kʰ	h	∅
+@FIN	am
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+f	am	陽平	凡 帆
+f	am	上聲	範 范 犯
+f	am	去聲	泛
+t	am	陰平	耽 擔
+t	am	上聲	膽
+tʰ	am	陰平	貪 淡
+tʰ	am	陽平	潭 譚 談 痰
+tʰ	am	去聲	探
+n	am	陽平	南 男
+l	am	陽平	藍 籃
+l	am	上聲	濫 纜 欖
+l	am	去聲	覽 攬
+ȵ	am	上聲	染
+ts	am	上聲	慘 斬
+tsʰ	am	陰平	參
+tsʰ	am	陽平	蠶
+tsʰ	am	去聲	杉
+s	am	陰平	三 衫
+tʃ	am	陰平	占 簪
+tʃ	am	去聲	站 佔
+tʃʰ	am	上聲	站
+ʃ	am	陽平	蟾 蟬 禪
+ʃ	am	上聲	閃 陝
+k	am	陰平	甘 拑 監 尷
+k	am	上聲	感 敢 橄 減
+k	am	去聲	艦
+kʰ	am	陰平	堪 龕
+kʰ	am	去聲	勘
+h	am	陰平	喊
+h	am	陽平	含 函 銜 酣 咸 鹹
+h	am	上聲	陷
+∅	am	陰平	庵
+∅	am	上聲	暗
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	f	b	t	tʰ	n	l	ts	tsʰ	s	tʃ	tʃʰ	ʃ	k	kʰ	ŋ	h
+@FIN	an
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	an	陰平	班 斑 頒 般 搬
+p	an	上聲	板 版
+p	an	去聲	半 絆 扮 拌
+pʰ	an	陰平	攀 潘 伴
+pʰ	an	陽平	盤
+pʰ	an	上聲	叛 辦
+pʰ	an	去聲	判 盼
+m	an	陰平	滿
+m	an	陽平	饅 蠻 暪
+m	an	上聲	慢 漫 幔
+f	an	陰平	藩 翻 番 蕃
+f	an	陽平	煩 礬 繁
+f	an	上聲	反 患 宦
+f	an	去聲	販 幻
+b	an	陰平	彎 灣
+b	an	陽平	還 環 完
+b	an	上聲	晚 萬 蔓 玩 宛
+b	an	去聲	挽
+t	an	陰平	丹 單
+t	an	去聲	旦 誕
+tʰ	an	陰平	灘 攤
+tʰ	an	陽平	檀 壇 彈
+tʰ	an	上聲	坦
+tʰ	an	去聲	炭 歎
+n	an	陰平	懶
+n	an	陽平	難
+n	an	上聲	難
+l	an	陽平	蘭 攔 欄 闌
+l	an	上聲	爛
+ts	an	上聲	盞 棧 贊 展
+tsʰ	an	陽平	泉 殘 愧
+tsʰ	an	上聲	產 鏟
+tsʰ	an	去聲	燦
+s	an	陰平	山 刪 珊
+s	an	上聲	傘
+s	an	去聲	疝 散
+tʃ	an	上聲	展
+tʃ	an	去聲	戰 顫
+tʃʰ	an	陽平	纏
+tʃʰ	an	去聲	棧
+ʃ	an	去聲	扇 單 禪 善
+k	an	陰平	奸 關
+k	an	上聲	簡 柬 揀 筧
+k	an	去聲	幹 慣
+kʰ	an	陰平	刊
+kʰ	an	上聲	款
+ŋ	an	陰平	研
+ŋ	an	陽平	顏 閑 頑
+ŋ	an	上聲	岸 眼 雁 限
+h	an	上聲	罕 莧
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	f	t	tʰ	n	l	tsʰ	tʃ	ʃ	k	kʰ	h	∅
+@FIN	ap
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+f	ap	陰入	法
+t	ap	陰入	答 搭
+tʰ	ap	陰入	塔 塌
+tʰ	ap	陽入	踏
+n	ap	陽入	納
+l	ap	陽入	臘 蠟
+tsʰ	ap	陰入	插
+tsʰ	ap	陽入	雜
+tʃ	ap	陰入	摺
+ʃ	ap	陽入	涉
+k	ap	陰入	甲 胛 鴿
+kʰ	ap	陰入	磕 掐
+h	ap	陽入	合 盒 狹
+∅	ap	陰入	鴨 押 壓
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	f	b	tʰ	l	ts	tsʰ	s	tʃ	tʃʰ	ʃ	k	h
+@FIN	at
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+p	at	陰入	鉢 撥 八
+pʰ	at	陰入	潑
+m	at	陰入	襪
+m	at	陽入	末 沫 抹
+f	at	陰入	闊 伐 筏 罰 髮 發
+f	at	陽入	乏 活
+b	at	陽入	滑 猾
+tʰ	at	陽入	達
+l	at	陽入	辣
+ts	at	陰入	札
+tsʰ	at	陰入	察
+s	at	陰入	殺
+tʃ	at	陰入	折 浙 哲
+tʃʰ	at	陰入	徹
+ʃ	at	陰入	設
+ʃ	at	陽入	舌
+k	at	陰入	括
+k	at	陽入	刮
+h	at	陰入	瞎
+h	at	陽入	轄
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	tʰ	n	ts	tsʰ	tʃ	tʃʰ	ʃ	k	kʰ	ŋ	h	∅
+@FIN	au
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	au	陰平	包 胞 鮑
+p	au	上聲	飽
+p	au	去聲	豹
+pʰ	au	陰平	拋
+pʰ	au	陽平	袍 刨
+pʰ	au	去聲	暴 爆 泡 炮
+m	au	陰平	卯
+m	au	陽平	茅 矛
+m	au	上聲	冒 帽
+m	au	去聲	貌
+tʰ	au	陰平	滔
+tʰ	au	去聲	套
+n	au	上聲	鬧
+ts	au	陰平	糟 遭
+ts	au	上聲	爪
+tsʰ	au	陰平	抄 鈔 操
+tsʰ	au	陽平	巢 曹 槽
+tsʰ	au	上聲	炒 吵 剿
+tsʰ	au	去聲	糙
+tʃ	au	陰平	昭 招 召 朝
+tʃ	au	去聲	照 詔
+tʃʰ	au	陰平	超
+tʃʰ	au	陽平	朝 潮
+tʃʰ	au	去聲	趙
+ʃ	au	陰平	燒 梢
+ʃ	au	上聲	少
+ʃ	au	去聲	兆 紹 少
+k	au	陰平	交 郊 膠 教 膏
+k	au	上聲	校 絞 狡 搞
+k	au	去聲	教 校 較 酵 覺 窖
+kʰ	au	上聲	巧 考
+kʰ	au	去聲	靠 敲
+ŋ	au	陰平	咬
+ŋ	au	陽平	熬
+ŋ	au	上聲	傲
+h	au	陽平	豪 毫
+h	au	去聲	效 孝 好
+∅	au	陰平	坳
+∅	au	去聲	懊
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	b	t	tʰ	l	ts	tsʰ	s	tʃ	tʃʰ	ʃ	k	kʰ	ŋ	h
+@FIN	aŋ
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	aŋ	陰平	邦
+pʰ	aŋ	陽平	彭 龐 膨 棚
+pʰ	aŋ	去聲	肨
+m	aŋ	陰平	猛
+m	aŋ	陽平	盲 虻
+m	aŋ	上聲	莽 蟒
+b	aŋ	陽平	橫 轟
+t	aŋ	陰平	釘
+t	aŋ	上聲	頂
+t	aŋ	去聲	訂
+tʰ	aŋ	陰平	聽 廰
+l	aŋ	陰平	冷
+l	aŋ	陽平	靈 零 鈴 伶 翎
+l	aŋ	上聲	另
+ts	aŋ	陰平	爭
+tsʰ	aŋ	陰平	撐
+s	aŋ	陰平	生 甥
+s	aŋ	上聲	省
+tʃ	aŋ	陰平	正
+tʃ	aŋ	上聲	整
+tʃʰ	aŋ	陽平	橙 程
+tʃʰ	aŋ	上聲	鄭
+ʃ	aŋ	陰平	聲
+ʃ	aŋ	陽平	成 城
+k	aŋ	陰平	粳 庚 羹 更 耕
+k	aŋ	上聲	哽 梗
+k	aŋ	去聲	更
+kʰ	aŋ	陰平	坑
+ŋ	aŋ	上聲	硬
+h	aŋ	陽平	行
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	ts	tsʰ	s	tʃʰ	ʃ	k	h
+@FIN	e
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	e	陽平	姊
+tsʰ	e	陽平	齊
+s	e	上聲	洗
+s	e	去聲	細 壻
+tʃʰ	e	陰平	舐
+ʃ	e	上聲	事
+ʃ	e	去聲	世 勢 逝
+k	e	去聲	計 繫
+h	e	去聲	系 係
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	s	h	∅
+@FIN	em
+@TON	陰平	53
+
+// Initial	Final	Tone	CharList (Space separated)
+s	em	陰平	森 參
+h	em	陰平	喊
+∅	em	陰平	揞
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	f	t	tʰ	n	ts	tsʰ	s	k	kʰ	h	∅
+@FIN	en
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	en	陰平	崩 冰
+pʰ	en	陽平	朋
+m	en	陽平	明 盟 銘
+m	en	上聲	猛 孟
+f	en	陽平	宏 弘
+t	en	陰平	登 燈 丁
+t	en	上聲	等
+t	en	去聲	凳 鐙 訂
+tʰ	en	陽平	騰 謄 藤
+tʰ	en	上聲	鄧 挺
+n	en	陽平	寧 能
+ts	en	陰平	曾 增 憎 爭 箏
+ts	en	去聲	贈 蹭
+tsʰ	en	陰平	僧
+tsʰ	en	陽平	曾 層
+s	en	陰平	生 牲 甥 星
+s	en	上聲	省
+k	en	陰平	跟
+k	en	去聲	更
+kʰ	en	陽平	凝
+kʰ	en	上聲	懇 墾 肯
+h	en	陰平	恆 亨
+h	en	陽平	痕 衡
+h	en	上聲	肯 杏 幸 很
+h	en	去聲	恨
+∅	en	陰平	恩
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	ts	s
+@FIN	ep
+@TON	陰入	34
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ep	陰入	撮
+s	ep	陰入	澀
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	f	t	tʰ	l	ts	tsʰ	s	k	kʰ	h
+@FIN	et
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+p	et	陰入	北 逼
+pʰ	et	陰入	別 碧
+m	et	陽入	篾 墨 默 覓
+f	et	陽入	或
+t	et	陰入	得 德
+tʰ	et	陰入	忒 踢
+l	et	陽入	歷 曆
+ts	et	陰入	則 側
+tsʰ	et	陰入	測 策
+tsʰ	et	陽入	賊 擇 澤
+s	et	陰入	瑟 蝨 塞 色
+k	et	陰入	國 格 革
+kʰ	et	陰入	刻 克 乞
+h	et	陰入	黑
+h	et	陽入	核
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	m	f	t	tʰ	n	l	ts	tsʰ	s	k	kʰ	h	∅
+@FIN	eu
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	陰去	31
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+m	eu	陰平	某
+m	eu	陽平	謀
+m	eu	上聲	貿 茂
+f	eu	陽平	浮
+f	eu	上聲	否
+t	eu	陰平	兜
+t	eu	上聲	斗 抖 陡
+t	eu	陰去	鬥
+tʰ	eu	陰平	偷
+tʰ	eu	陽平	頭 投
+tʰ	eu	上聲	豆 逗
+tʰ	eu	陰去	透
+n	eu	上聲	鈕
+l	eu	陽平	樓 撈 摟 耬 簍
+l	eu	上聲	漏 陋
+ts	eu	陰平	鄒
+ts	eu	上聲	走
+ts	eu	陰去	奏 驟
+tsʰ	eu	陰去	湊
+s	eu	陰平	搜 颼 餿 叟
+s	eu	陽平	愁
+s	eu	陰去	嗽 瘦
+k	eu	陰平	勾 鉤 溝
+k	eu	陰去	構 購 夠
+kʰ	eu	陰平	摳 鬮
+kʰ	eu	上聲	口
+kʰ	eu	陰去	叩 扣 寇
+h	eu	陽平	侯 猴 喉
+h	eu	上聲	口 後 后 候
+∅	eu	陰平	歐 甌
+∅	eu	上聲	嘔
+∅	eu	陰去	漚 慪
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	t	k	pʰ	tʰ	kʰ	ts	tʃ	tsʰ	tʃʰ	m	n	ȵ	l	s	ʃ	h	ʒ
+@FIN	i
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	i	陰平	碑 卑 婢
+p	i	上聲	敝 弊 斃 比 彼 臂 痹
+p	i	陰去	蔽 幣 秘 庇 泌 譬 閉
+pʰ	i	陰平	披 被
+pʰ	i	陽平	皮 疲 脾 琵 枇 靡
+pʰ	i	上聲	備 鼻 鄙
+pʰ	i	陰去	譬 丕 屁
+m	i	陽平	迷 眉 楣
+m	i	上聲	米 謎
+t	i	陰平	知 蜘
+t	i	上聲	帝 智 抵 底
+t	i	陰去	帝 智
+tʰ	i	陽平	題 提
+tʰ	i	上聲	體 地 第
+tʰ	i	陰去	替 剃
+n	i	陽平	尼 倪
+l	i	陰平	呂 里 理 禮 旅
+l	i	陽平	梨 釐 貍 鯉 離 璃 籬
+l	i	上聲	例 厲 勵 縷 李 裏 麗 慮 濾 屢 利 痢 俐 荔 吏
+ȵ	i	陰平	語
+ȵ	i	陽平	宜 儀 愚 你 疑
+ȵ	i	上聲	藝 二 貮 餌 耳 義 誼 議 遇
+ts	i	陰平	資 姿 滋 茲 租
+ts	i	上聲	紫 子 祖 姊
+ts	i	陰去	濟 劑 祭
+tsʰ	i	陰平	妻 棲 犀 粗
+tsʰ	i	陽平	臍 錘 雌 辭 詞 祠 徐 餈 瓷 慈 磁
+tsʰ	i	上聲	已 祀 取 娶 此 自
+tsʰ	i	陰去	趣 次
+s	i	陰平	須 需 鬚 司 絲 思 斯 私 師 獅 蘇 酥 篩 舒 西
+s	i	上聲	璽 死 似 使 史 駛 事 柿 字
+s	i	陰去	四 肆 序 敘 緒 寺 嗣 飼 賜
+tʃ	i	陰平	之 芝
+tʃ	i	上聲	紙 旨 址 趾 止
+tʃ	i	陰去	志 誌 痣 制 製 置 致
+tʃʰ	i	陰平	癡
+tʃʰ	i	陽平	池 馳 持 遲 雉
+tʃʰ	i	上聲	齒 恥 庤 治
+ʃ	i	陰平	屍 詩 施 尸
+ʃ	i	陽平	匙 時
+ʃ	i	上聲	矢 屎 始 勢 示 視 市 氏 士 仕
+ʃ	i	陰去	誓 豉 試
+ʒ	i	陰平	於 醫 衣 依 伊 以
+ʒ	i	陽平	如 余 餘 兒 移 姨 夷 而 寅 儒 乳
+ʒ	i	上聲	譽 喻 易 毅 憶 億 裕
+ʒ	i	陰去	異 意 肄
+k	i	陰平	居 拘 駒 支 枝 肢 妓 梔 飢 肌 基 機 譏 饑 肌 車
+k	i	陽平	佢
+k	i	上聲	舉 己 幾 紀 几 杞 矩
+k	i	陰去	寄 既 據 鋸 句 技 妓 記 繼
+kʰ	i	陰平	欺 企 距 巨 徛 區
+kʰ	i	陽平	其 期 奇 棋 騎 祈 旗 歧 麒
+kʰ	i	上聲	起 豈 忌 啟
+kʰ	i	陰去	具 器 棄 去 契
+h	i	陰平	墟 虛 噓 犧 嬉 熙 希 稀
+h	i	上聲	喜 許 起 始
+h	i	陰去	氣 去 器 戲
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	m	ȵ	ts	tsʰ	s	ʒ
+@FIN	ia
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+m	ia	陰平	摸
+ȵ	ia	陰平	惹
+ts	ia	上聲	姐
+ts	ia	去聲	借 藉
+tsʰ	ia	陽平	斜
+tsʰ	ia	上聲	且 謝
+s	ia	陰平	些
+s	ia	陽平	邪
+s	ia	上聲	寫
+s	ia	去聲	瀉 卸
+ʒ	ia	陰平	野
+ʒ	ia	陽平	爺
+ʒ	ia	上聲	夜 也
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	ȵ	ts	s	ʒ	kʰ
+@FIN	iak
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iak	陰入	壁
+pʰ	iak	陰入	劈
+ȵ	iak	陰入	額
+ȵ	iak	陽入	逆
+ts	iak	陰入	跡
+s	iak	陰入	錫 席
+ʒ	iak	陰入	益
+kʰ	iak	陽入	劇 屐 腋
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	t	tʰ	l	ȵ	ts	tsʰ	s	ʒ	k	kʰ	h
+@FIN	iam
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+t	iam	去聲	店
+tʰ	iam	陰平	添
+tʰ	iam	陽平	甜
+l	iam	陽平	廉 鐮 簾
+l	iam	上聲	斂 殮
+ȵ	iam	陽平	巖 嚴 釅 黏 閻
+ȵ	iam	上聲	驗 念
+ts	iam	陰平	尖
+ts	iam	上聲	蘸
+tsʰ	iam	陰平	殲 籤 簽
+tsʰ	iam	上聲	暫 漸
+s	iam	陽平	潛
+ʒ	iam	陰平	醃
+ʒ	iam	陽平	炎 鹽 簷
+ʒ	iam	上聲	燄 豔
+k	iam	陰平	兼
+k	iam	上聲	檢
+k	iam	去聲	劍
+kʰ	iam	陰平	謙
+kʰ	iam	陽平	鉗
+kʰ	iam	上聲	儉
+kʰ	iam	去聲	欠
+h	iam	陽平	嫌
+h	iam	上聲	險
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	ȵ	ʒ	k	kʰ	h
+@FIN	ian
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+ȵ	ian	陽平	言 元 原 源 顏 言
+ȵ	ian	上聲	願
+ʒ	ian	陰平	演 煙 冤 淵
+ʒ	ian	陽平	焉 延 筵 然 燃 圓 緣 沿 鉛 袁 園 援 丸
+ʒ	ian	上聲	遠 縣
+ʒ	ian	去聲	燕 院 怨 宴
+k	ian	陰平	艱 間 奸 肩 堅
+k	ian	上聲	簡 柬 揀 捲 耿
+k	ian	去聲	建 諫 澗 鐧 見 卷 絹 眷
+kʰ	ian	陰平	牽 圈
+kʰ	ian	陽平	拳 權 乾 虔
+kʰ	ian	上聲	件 遣 健 犬
+kʰ	ian	去聲	勸 券
+h	ian	陰平	軒 掀
+h	ian	陽平	賢 弦 玄 懸
+h	ian	上聲	顯 現
+h	ian	去聲	憲 獻 羨
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	tʰ	l	ȵ	ts	tsʰ	ʒ	k	kʰ	h
+@FIN	iap
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+tʰ	iap	陰入	帖 貼
+tʰ	iap	陽入	疊 碟 蝶 諜
+l	iap	陽入	獵
+ȵ	iap	陽入	聶 躡 業
+ts	iap	陰入	接
+tsʰ	iap	陰入	妾
+tsʰ	iap	陽入	捷
+ʒ	iap	陽入	葉 頁
+k	iap	陰入	夾 挾 劫
+kʰ	iap	陽入	狹 峽
+h	iap	陽入	脅 協 狹 峽
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	ȵ	ʒ	k	kʰ	h
+@FIN	iat
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+ȵ	iat	陽入	熱 月 粵
+ʒ	iat	陰入	乙 挖
+ʒ	iat	陽入	悅 閱 越 日
+k	iat	陰入	揭 結 潔 決 格 革
+kʰ	iat	陰入	缺 乞
+kʰ	iat	陽入	傑
+h	iat	陰入	歇 血
+h	iat	陽入	穴
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	f	t	tʰ	l	ȵ	ts	tsʰ	s	tʃ	ʒ	k	kʰ	h
+@FIN	iau
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iau	陰平	彪 標
+p	iau	上聲	表 錶
+pʰ	iau	陰平	摽 飄
+pʰ	iau	陽平	瓢 嫖
+pʰ	iau	去聲	漂 票
+m	iau	陽平	苗 描
+m	iau	上聲	秒 藐 渺 謬 牡
+m	iau	去聲	貓
+f	iau	去聲	廟 妙
+t	iau	陰平	刁 貂 雕 鳥
+t	iau	去聲	釣 弔
+tʰ	iau	陰平	挑
+tʰ	iau	陽平	條 調
+tʰ	iau	上聲	調
+tʰ	iau	去聲	跳 糶
+l	iau	陽平	燎 療 聊 遼 撩
+l	iau	上聲	了 瞭 料 廖
+ȵ	iau	陽平	堯 饒
+ȵ	iau	上聲	尿
+ȵ	iau	去聲	貓
+ts	iau	陰平	焦 蕉 椒
+ts	iau	去聲	醮
+tsʰ	iau	陽平	樵
+s	iau	陰平	消 宵 銷 霄 硝 邵 蕭 簫
+s	iau	上聲	小
+s	iau	去聲	笑
+tʃ	iau	去聲	照 詔
+ʒ	iau	陰平	妖 邀 腰 要
+ʒ	iau	陽平	搖 謠 窯 姚
+ʒ	iau	上聲	舀 繞 耀 鷂 鐃 攘
+ʒ	iau	去聲	要
+k	iau	陰平	驕 嬌
+k	iau	上聲	攪 繳
+k	iau	去聲	叫
+kʰ	iau	陽平	喬 僑 橋 蕎
+kʰ	iau	去聲	轎 竅
+h	iau	上聲	曉
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	l	ȵ	ts	tsʰ	s	ʒ	k	kʰ
+@FIN	iaŋ
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	iaŋ	上聲	餅 丙 秉
+p	iaŋ	去聲	柄
+pʰ	iaŋ	陽平	平 坪
+pʰ	iaŋ	上聲	病
+m	iaŋ	陽平	名
+m	iaŋ	上聲	命
+l	iaŋ	陰平	領 嶺
+ȵ	iaŋ	陽平	迎
+ts	iaŋ	陰平	靚
+ts	iaŋ	上聲	井
+tsʰ	iaŋ	陰平	青 清
+tsʰ	iaŋ	陽平	晴
+tsʰ	iaŋ	上聲	請 淨
+s	iaŋ	陰平	腥 星
+s	iaŋ	上聲	省 醒
+s	iaŋ	去聲	姓
+ʒ	iaŋ	陰平	贏
+ʒ	iaŋ	陽平	營
+ʒ	iaŋ	上聲	影
+ʒ	iaŋ	去聲	映
+k	iaŋ	陰平	驚
+k	iaŋ	上聲	頸
+k	iaŋ	去聲	鏡
+kʰ	iaŋ	陰平	輕
+kʰ	iaŋ	上聲	□{很有能力}
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	ȵ
+@FIN	ie
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+ȵ	ie	去聲	艾 蟻
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	t	tʰ	l	ȵ	ts	tsʰ	s
+@FIN	ien
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ien	陰平	鞭 邊 辮
+p	ien	上聲	扁 匾
+p	ien	去聲	變 遍
+pʰ	ien	陰平	篇 偏 編
+pʰ	ien	陽平	便
+pʰ	ien	上聲	便 片
+pʰ	ien	去聲	辨 辯 騙
+m	ien	陰平	免
+m	ien	陽平	綿 棉
+m	ien	上聲	麵 緬 勉
+m	ien	去聲	面
+t	ien	陰平	顛
+t	ien	上聲	典
+tʰ	ien	陰平	天
+tʰ	ien	陽平	田 填
+tʰ	ien	上聲	電 殿 奠 佃
+l	ien	陽平	連 聯 憐 蓮
+l	ien	上聲	練 鍊 楝 戀
+ȵ	ien	陽平	年
+ts	ien	陰平	煎 箋
+ts	ien	上聲	剪
+ts	ien	去聲	薦 箭
+tsʰ	ien	陰平	遷 千
+tsʰ	ien	陽平	錢 前 全
+tsʰ	ien	上聲	淺 踐 賤
+s	ien	陰平	仙 鮮 先 宣
+s	ien	陽平	旋
+s	ien	上聲	癬 選
+s	ien	去聲	線
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	pʰ	m	t	tʰ	l	ts	tsʰ	s
+@FIN	iet
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+pʰ	iet	陰入	撇
+pʰ	iet	陽入	別
+m	iet	陽入	滅
+t	iet	陰入	跌
+tʰ	iet	陰入	鐵
+l	iet	陽入	列 烈 裂
+ts	iet	陰入	節
+ts	iet	陽入	截
+tsʰ	iet	陰入	切
+tsʰ	iet	陽入	絕
+s	iet	陰入	薛 雪
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	ȵ	k	kʰ
+@FIN	ieu
+@TON	陰平	53
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+ȵ	ieu	上聲	偶
+k	ieu	陰平	溝 勾 鉤
+k	ieu	上聲	狗 苟
+k	ieu	去聲	構 購 夠
+kʰ	ieu	陰平	箍 摳
+kʰ	ieu	上聲	口 叩 扣 寇
+kʰ	ieu	去聲	叩 扣 寇
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	l	ȵ	ts	tsʰ	s	tʃ	tʃʰ	ʃ	ʒ	k	kʰ
+@FIN	im
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+l	im	陽平	林 淋 臨
+ȵ	im	陽平	吟
+ȵ	im	上聲	壬 任
+ts	im	去聲	浸
+tsʰ	im	陰平	侵
+tsʰ	im	陽平	尋
+s	im	陰平	心
+tʃ	im	陰平	針 斟
+tʃ	im	上聲	枕
+tʃʰ	im	陰平	深
+tʃʰ	im	陽平	沈
+ʃ	im	上聲	嬸 沈 審 甚
+ʒ	im	陰平	音 陰
+ʒ	im	上聲	飲
+k	im	陰平	金 今
+k	im	陽平	妗
+k	im	上聲	錦
+k	im	去聲	禁
+kʰ	im	陰平	欽 襟 禁
+kʰ	im	陽平	琴 禽 擒
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	t	l	ȵ	ts	tsʰ	s	tʃ	tʃʰ	ʃ	ʒ	k	kʰ	h
+@FIN	in
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	in	陰平	彬 賓 檳 兵
+p	in	上聲	稟 殯 鬢
+p	in	去聲	併 並
+pʰ	in	陰平	拼 姘
+pʰ	in	陽平	貧 頻 憑 平 評 瓶 屏
+pʰ	in	上聲	品
+pʰ	in	去聲	聘
+m	in	陽平	民 明 閩 鳴 眠
+m	in	上聲	敏 憫
+t	in	陽平	亭 停 廷 庭
+t	in	上聲	定 艇 挺 錠 鼎
+t	in	去聲	鎮
+l	in	陽平	鄰 鱗 燐 陵 凌 菱 靈 鈴 伶 翎
+l	in	上聲	令
+l	in	去聲	吝
+ȵ	in	陽平	人 仍
+ȵ	in	上聲	認 刃
+ts	in	陰平	津 精 晶 貞 偵
+ts	in	上聲	晉 儘 盡 靜
+ts	in	去聲	進
+tsʰ	in	陰平	親 清 青
+tsʰ	in	陽平	秦 情
+tsʰ	in	上聲	淨
+s	in	陰平	辛 薪 新
+s	in	去聲	性 信 訊
+tʃ	in	陰平	臻 榛 蒸 珍 真 徵
+tʃ	in	上聲	拯 疹 振 震 整
+tʃ	in	去聲	鎮 正 政 證 症
+tʃʰ	in	陰平	稱
+tʃʰ	in	陽平	陳 塵 懲 程 呈
+tʃʰ	in	上聲	陣
+tʃʰ	in	去聲	趁 襯 稱
+ʃ	in	陰平	身 伸 申 升 乘
+ʃ	in	陽平	神 辰 晨 臣 繩 承 丞 城 誠
+ʃ	in	上聲	腎 慎
+ʃ	in	去聲	聖 盛 勝
+ʒ	in	陰平	因 姻 殷 應 鶯 鷹 英 嬰 鸚
+ʒ	in	陽平	蠅 盈 營 仁 螢
+ʒ	in	上聲	隱 孕 穎
+ʒ	in	去聲	印
+k	in	陰平	莖 京 荊 驚 根 巾 斤 筋 鯨 經
+k	in	上聲	緊 境 景 警
+k	in	去聲	勁 競
+kʰ	in	陰平	卿 輕
+kʰ	in	陽平	勤
+kʰ	in	去聲	慶
+h	in	陰平	興
+h	in	陽平	形 刑 行 型
+h	in	去聲	興
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	kʰ	h
+@FIN	io
+@TON	陰平	53
+@TON	陽平	55
+
+// Initial	Final	Tone	CharList (Space separated)
+kʰ	io	陽平	茄 瘸
+h	io	陰平	靴
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	l	ȵ	ts	tsʰ	s	ʒ	k	kʰ
+@FIN	iok
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+l	iok	陽入	略 掠
+ȵ	iok	陽入	若 弱 虐
+ts	iok	陰入	爵 雀
+tsʰ	iok	陰入	鵲
+s	iok	陰入	削
+ʒ	iok	陰入	約
+ʒ	iok	陽入	藥 躍
+k	iok	陰入	腳 钁
+kʰ	iok	陰入	卻
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	ȵ
+@FIN	ion
+@TON	陰平	53
+
+// Initial	Final	Tone	CharList (Space separated)
+ȵ	ion	陰平	軟 阮
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	m	l	ȵ	ts	tsʰ	s	ʒ	k	kʰ	ŋ	h
+@FIN	ioŋ
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ioŋ	去聲	放
+m	ioŋ	上聲	網 罔 輞
+l	ioŋ	陰平	兩
+l	ioŋ	陽平	良 糧 梁 粱
+l	ioŋ	上聲	亮 諒 輛 量 兩
+l	ioŋ	去聲	量
+ȵ	ioŋ	陽平	娘
+ȵ	ioŋ	上聲	讓 仰
+ȵ	ioŋ	去聲	釀
+ts	ioŋ	陰平	將
+ts	ioŋ	上聲	蔣 獎 槳
+ts	ioŋ	去聲	將 醬
+tsʰ	ioŋ	陰平	槍
+tsʰ	ioŋ	陽平	牆
+tsʰ	ioŋ	上聲	搶
+s	ioŋ	陰平	相 箱 廂 湘 襄 鑲
+s	ioŋ	陽平	詳 祥
+s	ioŋ	上聲	想 匠 橡
+s	ioŋ	去聲	像 象 相
+ʒ	ioŋ	陰平	央 秧 殃 鴦 鞅 養 癢
+ʒ	ioŋ	陽平	羊 洋 楊 陽 揚 烊 瘍
+ʒ	ioŋ	上聲	樣 壤 嚷
+k	ioŋ	陰平	疆 僵 薑 姜 韁
+kʰ	ioŋ	陰平	匡 筐 眶 腔
+kʰ	ioŋ	陽平	強
+ŋ	ioŋ	上聲	享 響
+ŋ	ioŋ	去聲	向
+h	ioŋ	陰平	香 鄉
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	l	ȵ	tsʰ	s	tʃ	ʃ	k	kʰ
+@FIN	ip
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+l	ip	陽入	立 笠 粒
+ȵ	ip	陽入	入
+tsʰ	ip	陽入	集
+s	ip	陽入	集 輯
+tʃ	ip	陰入	執 汁
+ʃ	ip	陰入	濕
+ʃ	ip	陽入	十
+k	ip	陰入	急 給
+kʰ	ip	陰入	級 吸
+kʰ	ip	陽入	及
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	t	tʰ	l	ȵ	ts	tsʰ	s	tʃ	tʃʰ	ʃ	ʒ	k	kʰ
+@FIN	it
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+p	it	陰入	筆 畢 必 碧
+pʰ	it	陰入	匹 僻
+pʰ	it	陽入	闢
+m	it	陰入	密 蜜
+t	it	陰入	的 滴
+tʰ	it	陰入	剔
+tʰ	it	陽入	特 敵 狄
+l	it	陽入	力
+ȵ	it	陽入	日
+ts	it	陰入	積 脊 績 即 鯽
+tsʰ	it	陰入	七 漆 戚 析
+tsʰ	it	陽入	疾
+s	it	陰入	惜 昔 息 熄 媳 析
+s	it	陽入	席 夕
+tʃ	it	陰入	質 績 織 職
+tʃʰ	it	陽入	姪 秩 直 值 殖 植
+ʃ	it	陰入	失 室 釋 試 式 飾
+ʃ	it	陽入	實 食 蝕
+ʒ	it	陰入	一 益
+ʒ	it	陽入	抑 翼 譯 易
+k	it	陰入	吉 激 擊 橘
+kʰ	it	陽入	極
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	t	n	l	ȵ	ts	tsʰ	s	tʃ	tʃʰ	ʃ	ʒ	k	kʰ	h
+@FIN	iu
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+t	iu	陰平	丟
+n	iu	上聲	紐 扭
+l	iu	陰平	柳
+l	iu	陽平	流 劉 留 榴 硫 疏 溜
+ȵ	iu	陽平	牛
+ts	iu	陰平	周 州 洲 舟
+ts	iu	上聲	酒
+ts	iu	去聲	皺 縐 晝 咒
+tsʰ	iu	陰平	秋 抽 揫
+tsʰ	iu	陽平	囚 泅 綢 稠 籌
+tsʰ	iu	上聲	醜 丑 就 袖 宙
+tsʰ	iu	去聲	臭 獸
+s	iu	陰平	修 羞 收
+s	iu	陽平	仇 酬
+s	iu	上聲	壽 授 售 手 首 守 受
+s	iu	去聲	秀 繡 宿
+tʃ	iu	陰平	周 州 洲 舟
+tʃ	iu	去聲	晝 咒
+tʃʰ	iu	陰平	抽
+tʃʰ	iu	陽平	綢 稠 籌
+tʃʰ	iu	上聲	醜 丑
+tʃʰ	iu	去聲	臭 獸
+ʃ	iu	陽平	仇 酬
+ʃ	iu	上聲	手 首 守 受 壽 授 售
+ʒ	iu	陰平	優 憂 有 友 酉 幽
+ʒ	iu	陽平	柔 揉 尤 由 郵 油 游 猶 悠
+ʒ	iu	上聲	又 右 祐 柚
+ʒ	iu	去聲	幼 誘
+k	iu	陰平	鳩 糾
+k	iu	上聲	九 久 韭
+k	iu	去聲	灸 救 究 柩
+kʰ	iu	陰平	臼 舅
+kʰ	iu	陽平	求 球
+kʰ	iu	上聲	舊 臼
+h	iu	陰平	丘 休
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	l	ȵ	ts	tsʰ	s	ʒ	kʰ	h
+@FIN	iuk
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+l	iuk	陰入	六
+l	iuk	陽入	綠 錄 陸
+ȵ	iuk	陰入	肉
+ȵ	iuk	陽入	玉 獄
+ts	iuk	陰入	足
+tsʰ	iuk	陰入	促
+s	iuk	陰入	粟 肅 宿 縮
+s	iuk	陽入	俗 續
+ʒ	iuk	陽入	育
+kʰ	iuk	陰入	菊 曲 麴
+kʰ	iuk	陽入	局
+h	iuk	陰入	畜
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	ȵ	ʒ	k	kʰ	h
+@FIN	iun
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+ȵ	iun	陰平	忍
+ȵ	iun	陽平	銀
+ʒ	iun	陽平	勻 云 雲
+ʒ	iun	上聲	潤 閏 韻 運 永 泳
+k	iun	陰平	均 鈞 君 軍
+k	iun	上聲	僅 謹
+k	iun	去聲	郡
+kʰ	iun	陰平	近
+kʰ	iun	陽平	芹 羣 裙 勤 瓊
+kʰ	iun	上聲	菌
+h	iun	陰平	欣 勳
+h	iun	去聲	訓
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	kʰ
+@FIN	iut
+@TON	陰入	34
+
+// Initial	Final	Tone	CharList (Space separated)
+kʰ	iut	陰入	屈 掘 倔
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	l	ts	tsʰ	ʒ	k	kʰ	h
+@FIN	iuŋ
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+l	iuŋ	陽平	龍 壠
+l	iuŋ	上聲	隴
+ts	iuŋ	陰平	縱
+ts	iuŋ	去聲	縱
+tsʰ	iuŋ	陰平	嵩
+tsʰ	iuŋ	陽平	松 從
+ʒ	iuŋ	陰平	雍 癰
+ʒ	iuŋ	陽平	榮 融 茸 容 蓉 傭 庸 熊 戎 絨
+ʒ	iuŋ	上聲	永 泳 詠 勇 涌 擁 用
+k	iuŋ	陰平	弓 躬 宮 恭 供
+k	iuŋ	上聲	拱
+kʰ	iuŋ	陽平	窮
+kʰ	iuŋ	上聲	恐 共
+kʰ	iuŋ	去聲	虹 供
+h	iuŋ	陰平	胸 凶 兇 兄
+h	iuŋ	陽平	雄
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	∅
+@FIN	m̩
+@TON	陽平	55
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	m̩	陽平	毋
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	t	k	pʰ	tʰ	kʰ	b	ts	tsʰ	m	n	ŋ	l	f	s	h	∅
+@FIN	o
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	o	陰平	玻 波 菠 褒
+p	o	上聲	保 堡 寶
+p	o	去聲	報
+pʰ	o	陽平	婆 浮
+pʰ	o	去聲	破 剖
+m	o	陰平	毛
+m	o	陽平	魔 磨 摩 無
+m	o	上聲	冒 帽
+f	o	陽平	和
+f	o	上聲	火
+f	o	去聲	禍 貨
+b	o	陰平	倭 窩
+b	o	陽平	禾
+t	o	陰平	多 刀
+t	o	上聲	左 朵 禱 島 倒 到
+tʰ	o	陰平	拖
+tʰ	o	陽平	駝 桃 逃 淘 陶 萄 濤
+tʰ	o	上聲	討 道 稻 盜 導 妥
+n	o	上聲	糯 腦 惱
+l	o	陽平	羅 鑼 籮 囉 勞 撈 牢 螺
+l	o	上聲	老
+ts	o	陰平	糟 遭
+ts	o	上聲	佐 早 棗
+ts	o	去聲	躁 做
+tsʰ	o	陰平	坐 操 初
+tsʰ	o	陽平	曹 槽 鋤
+tsʰ	o	上聲	草 座 造
+tsʰ	o	去聲	錯 糙
+s	o	陰平	搓 梭 臊 梳 蓑 唆 疏
+s	o	上聲	鎖 所 嫂
+s	o	去聲	掃
+k	o	陰平	哥 歌 高 膏 篙 羔 糕
+k	o	上聲	果 裹
+k	o	去聲	個 過 告
+kʰ	o	陰平	科 棵 窠 顆
+kʰ	o	上聲	可
+kʰ	o	去聲	課
+ŋ	o	陰平	我
+ŋ	o	陽平	餓 鵝 俄 蛾 訛
+ŋ	o	上聲	臥
+h	o	陽平	河 何 荷
+h	o	上聲	好 號
+h	o	去聲	賀
+∅	o	陰平	屙
+∅	o	去聲	奧
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	f	b	t	tʰ	l	ts	tsʰ	s	tʃʰ	ʃ	k	kʰ	ŋ	h	Ø
+@FIN	oi
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	oi	去聲	背 簸
+pʰ	oi	陰平	坯
+pʰ	oi	陽平	賠
+pʰ	oi	上聲	吠 背
+pʰ	oi	去聲	倍
+m	oi	陽平	梅 枚 煤 媒 糜 黴
+m	oi	去聲	妹
+f	oi	陰平	灰
+b	oi	陰平	煨
+b	oi	上聲	會
+t	oi	陰平	堆
+tʰ	oi	陰平	胎 梯 怠
+tʰ	oi	陽平	苔 臺
+tʰ	oi	上聲	待
+tʰ	oi	去聲	代 袋 貸 兌
+l	oi	陽平	來
+ts	oi	陰平	脧
+tsʰ	oi	陰平	在
+tsʰ	oi	陽平	才 材 財 豺
+tsʰ	oi	去聲	菜
+s	oi	陰平	腮 鰓 衰
+s	oi	去聲	賽 歲
+tʃʰ	oi	陰平	炊
+ʃ	oi	上聲	睡
+ʃ	oi	去聲	稅
+k	oi	陰平	皆 該
+k	oi	上聲	改
+k	oi	去聲	蓋
+kʰ	oi	陰平	開
+kʰ	oi	陽平	呆
+kʰ	oi	上聲	楷 凱
+kʰ	oi	去聲	概
+ŋ	oi	上聲	礙 外
+h	oi	上聲	海 亥 害
+Ø	oi	陰平	哀 埃
+Ø	oi	去聲	愛
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	b	t	tʰ	ts	s	tʃ	ʃ	k	kʰ	ŋ	h	∅
+@FIN	ok
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ok	陰入	博 駁 剝
+pʰ	ok	陰入	泊 拍
+pʰ	ok	陽入	薄 雹
+m	ok	陽入	莫 膜 陌
+b	ok	陰入	握 沃
+b	ok	陽入	鑊
+t	ok	陰入	琢 啄
+tʰ	ok	陰入	託
+tʰ	ok	陽入	擇
+ts	ok	陰入	捉 桌 卓 作
+s	ok	陰入	索
+tʃ	ok	陰入	著
+ʃ	ok	陽入	勺 芍
+k	ok	陰入	各 閣 覺 角 郭
+kʰ	ok	陰入	確 殼 霍 藿
+ŋ	ok	陽入	鄂 嶽 岳 樂
+h	ok	陽入	學
+∅	ok	陰入	惡
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	f	t	tʰ	n	l	ts	tsʰ	s	tʃ	tʃʰ	ʃ	k	kʰ	ŋ	h	∅
+@FIN	on
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+f	on	陰平	歡
+f	on	上聲	飯 碗 腕 換
+f	on	去聲	喚 煥
+t	on	陰平	端
+t	on	上聲	短
+tʰ	on	陰平	斷
+tʰ	on	陽平	團 糰
+tʰ	on	上聲	鍛 段 緞
+n	on	陰平	暖
+l	on	陽平	鸞
+l	on	上聲	卵 亂
+ts	on	去聲	鑽
+tsʰ	on	陰平	閂 餐
+s	on	陰平	酸
+s	on	去聲	算 蒜
+tʃ	on	陰平	專 磚
+tʃ	on	上聲	轉
+tʃʰ	on	陰平	川 穿
+tʃʰ	on	陽平	傳
+tʃʰ	on	上聲	喘 竄 篆 傳
+tʃʰ	on	去聲	串 纂
+ʃ	on	陽平	船
+k	on	陰平	干 肝 竿 乾 官 棺 觀 冠
+k	on	上聲	桿 趕 館
+k	on	去聲	幹 貫 灌
+kʰ	on	陰平	寬
+kʰ	on	去聲	看
+ŋ	on	去聲	岸
+h	on	陰平	旱 軒
+h	on	陽平	寒 韓
+h	on	上聲	汗
+h	on	去聲	翰 漢
+∅	on	陰平	安 鞍
+∅	on	去聲	按 案
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	tʰ	l	s	ʃ	k	h
+@FIN	ot
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ot	陰入	發
+tʰ	ot	陰入	脫
+tʰ	ot	陽入	奪
+l	ot	陽入	捋 劣
+s	ot	陰入	撒 刷
+ʃ	ot	陰入	說
+k	ot	陰入	割 葛
+h	ot	陰入	渴
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	f	b	t	tʰ	n	l	ts	tsʰ	s	tʃ	tʃʰ	ʃ	k	kʰ	h
+@FIN	oŋ
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	oŋ	陰平	幫 邦
+p	oŋ	上聲	榜 綁
+pʰ	oŋ	陰平	滂
+pʰ	oŋ	陽平	旁 肨
+pʰ	oŋ	上聲	傍
+m	oŋ	陽平	芒 茫 亡
+m	oŋ	上聲	望 莽
+m	oŋ	去聲	忘 妄
+f	oŋ	陰平	慌 荒 方 芳 妨 坊
+f	oŋ	陽平	房 防 皇 蝗
+f	oŋ	上聲	紡 仿 彷
+f	oŋ	去聲	放 訪
+b	oŋ	陰平	汪 往
+b	oŋ	陽平	黃 簧 王
+b	oŋ	上聲	枉 旺
+t	oŋ	陰平	當
+t	oŋ	上聲	黨 擋
+tʰ	oŋ	陰平	湯 蕩
+tʰ	oŋ	陽平	堂 棠 塘 唐 螳 膛 糖
+n	oŋ	陽平	囊 瓤
+l	oŋ	陽平	郎 廊 狼
+l	oŋ	上聲	朗 浪
+ts	oŋ	陰平	莊 裝 贓
+ts	oŋ	上聲	臟
+ts	oŋ	去聲	葬 壯
+tsʰ	oŋ	陰平	蒼 倉 瘡
+tsʰ	oŋ	陽平	床 藏
+tsʰ	oŋ	上聲	撞 闖
+tsʰ	oŋ	去聲	創
+s	oŋ	陰平	桑 喪 傷 上 霜 孀
+s	oŋ	上聲	爽 嗓
+s	oŋ	去聲	喪 狀
+tʃ	oŋ	陰平	張 章 樟
+tʃ	oŋ	上聲	長 漲 掌
+tʃ	oŋ	去聲	障 瘴 帳 賬 脹
+tʃʰ	oŋ	陰平	昌 菖
+tʃʰ	oŋ	陽平	長 腸 場
+tʃʰ	oŋ	上聲	廠 丈 仗 杖
+tʃʰ	oŋ	去聲	唱 倡
+ʃ	oŋ	陰平	商 傷
+ʃ	oŋ	陽平	常 嘗 裳
+ʃ	oŋ	上聲	賞 尚 上
+k	oŋ	陰平	剛 鋼 缸 崗 綱 岡 剛 江 扛 光 胱
+k	oŋ	上聲	廣 講 港
+k	oŋ	去聲	降
+kʰ	oŋ	陰平	康 糠 匡 筐 眶
+kʰ	oŋ	陽平	狂
+kʰ	oŋ	上聲	抗 曠
+kʰ	oŋ	去聲	慷 況 礦
+h	oŋ	陽平	行 降
+h	oŋ	上聲	巷
+h	oŋ	去聲	項
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	t	k	pʰ	tʰ	kʰ	b	ts	tʃ	tsʰ	tʃʰ	m	n	ŋ	l	f	s	ʃ
+@FIN	u
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	u	上聲	補
+p	u	去聲	布 佈
+pʰ	u	陰平	普 鋪 簿
+pʰ	u	陽平	脯 符 瓠 樸 僕
+pʰ	u	上聲	譜 輔 步 捕
+pʰ	u	去聲	部 鋪 怖
+m	u	陰平	母
+m	u	陽平	巫 誣 模 摹
+m	u	上聲	母 畝
+m	u	去聲	幕 誤 悟 務
+f	u	陰平	呼 夫 膚 敷 俘
+f	u	陽平	狐 鬍 乎 扶 芙 胡 湖 壺
+f	u	上聲	虎 滸 府 腑 俯 甫 腐 婦 負 阜 戶 父
+f	u	去聲	訃 付 傅 護 戽 附 副 富
+b	u	陰平	烏 污 塢
+b	u	陽平	無 誣
+b	u	上聲	武 舞 鵡 侮
+b	u	去聲	務 霧 芋 暮 慕 墓 惡
+t	u	陰平	都
+t	u	上聲	堵 賭 肚
+t	u	去聲	妬
+tʰ	u	陽平	徒 途 塗 圖
+tʰ	u	上聲	土 吐
+tʰ	u	去聲	度 渡 鍍 兔
+n	u	陽平	奴
+n	u	上聲	努
+n	u	去聲	怒
+l	u	陰平	滷 魯
+l	u	陽平	廬 驢 爐 盧 虜
+l	u	上聲	路 露 鷺
+ts	u	上聲	阻
+tsʰ	u	陰平	粗 初
+tsʰ	u	去聲	醋
+s	u	陰平	蘇 酥 疏 蔬
+s	u	上聲	數
+s	u	去聲	素 訴 塑 嗉 數
+tʃ	u	陰平	朱 硃 珠 諸 豬 誅 蛛 株
+tʃ	u	陽平	除
+tʃ	u	上聲	組 祖 主 阻 煮
+tʃ	u	去聲	注 蛀 駐 註
+tʃʰ	u	陰平	柱 拄
+tʃʰ	u	陽平	廚
+tʃʰ	u	上聲	楚 礎 助 鼠 處
+tʃʰ	u	去聲	住
+ʃ	u	陰平	書 輸
+ʃ	u	陽平	殊
+ʃ	u	上聲	暑 樹 薯
+ʃ	u	去聲	恕
+k	u	陰平	姑 孤
+k	u	上聲	古 估 股 鼓 牯
+k	u	去聲	故 固 雇 顧
+kʰ	u	陰平	枯
+kʰ	u	上聲	苦
+kʰ	u	去聲	褲 庫
+ŋ	u	上聲	誤 悟
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	f	b	t	tʰ	n	l	ts	tsʰ	s	tʃ	tʃʰ	ʃ	ʒ	k	kʰ	ŋ
+@FIN	ui
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ui	陰平	杯 飛 悲
+p	ui	去聲	貝
+pʰ	ui	陰平	胚
+pʰ	ui	陽平	培 陪 肥
+pʰ	ui	去聲	配 沛 輩 佩 肺
+m	ui	陰平	尾 美 每
+m	ui	上聲	未 味
+m	ui	去聲	昧
+f	ui	陰平	恢 非 妃 揮 輝 徽
+f	ui	陽平	回 茴
+f	ui	上聲	毀 會 悔 匯 惠 慧 繪
+f	ui	去聲	費 疿 翡 廢
+b	ui	陰平	威 委
+b	ui	陽平	為 維 唯 惟 遺 圍 微 違
+b	ui	上聲	衛 偽 偉 葦 緯 謂 胃 諱
+t	ui	陰平	追
+t	ui	去聲	對 隊
+tʰ	ui	陰平	推
+tʰ	ui	上聲	腿
+tʰ	ui	去聲	退 蛻 兌
+n	ui	上聲	內
+l	ui	陽平	雷
+l	ui	上聲	累 壘
+l	ui	去聲	類
+ts	ui	上聲	嘴
+ts	ui	去聲	最 綴 醉
+tsʰ	ui	陰平	催 摧 崔
+tsʰ	ui	上聲	罪
+tsʰ	ui	去聲	翠 粹 脆
+s	ui	陰平	雖 簑 綏 衰
+s	ui	陽平	誰 隨 髓
+s	ui	上聲	瑞 穗
+s	ui	去聲	遂 隧 碎
+tʃ	ui	去聲	贅
+tʃʰ	ui	陰平	吹 垂
+tʃʰ	ui	陽平	槌 錘
+ʃ	ui	上聲	水
+ʒ	ui	上聲	銳
+k	ui	陰平	歸 規 閨 圭 龜
+k	ui	上聲	詭 鬼
+k	ui	去聲	桂 貴 季
+kʰ	ui	陰平	盔 魁 虧 窺
+kʰ	ui	陽平	奎 逵 葵 癸
+kʰ	ui	上聲	跪 傀 潰 愧
+kʰ	ui	去聲	櫃 塊
+ŋ	ui	陽平	危
+ŋ	ui	上聲	魏
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	f	b	t	tʰ	l	s	tʃ	tʃʰ	ʃ	k	kʰ
+@FIN	uk
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+p	uk	陰入	卜
+pʰ	uk	陰入	仆
+pʰ	uk	陽入	伏
+m	uk	陰入	木 目
+m	uk	陽入	牧
+f	uk	陰入	福 幅 複 腹 覆
+f	uk	陽入	服 伏 復
+b	uk	陰入	屋
+t	uk	陰入	篤 督
+tʰ	uk	陽入	獨 讀 牘 毒
+l	uk	陽入	鹿 祿
+s	uk	陰入	速
+s	uk	陽入	束
+tʃ	uk	陰入	燭 囑 竹 築 祝 粥
+tʃʰ	uk	陰入	觸 族
+ʃ	uk	陰入	束 叔
+ʃ	uk	陽入	贖 蜀 屬 熟 淑
+k	uk	陰入	穀 谷
+kʰ	uk	陰入	哭
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	f	b	t	tʰ	n	l	ts	tsʰ	s	tʃ	tʃʰ	ʃ	k	kʰ
+@FIN	un
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	un	陰平	奔
+p	un	上聲	本
+p	un	去聲	笨 糞
+pʰ	un	陰平	噴
+pʰ	un	陽平	盆 墳
+pʰ	un	去聲	噴
+m	un	陰平	蚊
+m	un	陽平	門
+m	un	去聲	悶 問
+f	un	陰平	婚 昏 分 芬 紛 勳 薰
+f	un	陽平	魂 渾 焚
+f	un	上聲	混
+f	un	去聲	忿 粉 憤 份 奮
+b	un	陰平	溫 瘟
+b	un	陽平	文 紋 聞
+b	un	上聲	穩 吻 刎
+t	un	陰平	敦 墩
+t	un	陽平	屯 豚 臀
+t	un	上聲	囤 盾 頓 鈍
+tʰ	un	陰平	吞
+tʰ	un	上聲	鈍
+n	un	上聲	嫩
+l	un	陽平	論 倫 輪 崙 淪
+l	un	上聲	論
+ts	un	陰平	尊 遵
+ts	un	去聲	俊
+tsʰ	un	陰平	村
+tsʰ	un	陽平	存
+tsʰ	un	去聲	寸
+s	un	陰平	孫
+s	un	陽平	巡 旬 循 醇 荀
+s	un	上聲	損 筍 榫 殉
+s	un	去聲	遜
+tʃ	un	上聲	準
+tʃʰ	un	陰平	椿 村
+tʃʰ	un	陽平	純
+ʃ	un	陽平	脣
+ʃ	un	上聲	順
+ʃ	un	去聲	舜
+k	un	上聲	滾
+k	un	去聲	棍
+kʰ	un	陰平	昆 崑 坤
+kʰ	un	上聲	綑
+kʰ	un	去聲	困
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	m	f	b	tʰ	l	ts	s	tʃʰ	ʃ	k	kʰ
+@FIN	ut
+@TON	陰入	34
+@TON	陽入	5
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ut	陰入	不
+m	ut	陽入	沒
+f	ut	陰入	忽
+f	ut	陽入	佛
+b	ut	陽入	物 勿
+tʰ	ut	陽入	突
+l	ut	陽入	律
+ts	ut	陰入	卒
+s	ut	陽入	戌 術
+tʃʰ	ut	陰入	出
+ʃ	ut	陽入	述
+k	ut	陰入	骨
+kʰ	ut	陰入	窟
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	p	pʰ	m	f	b	t	tʰ	n	l	ts	tsʰ	s	tʃ	tʃʰ	k	kʰ
+@FIN	uŋ
+@TON	陰平	53
+@TON	陽平	55
+@TON	上聲	24
+@TON	去聲	31
+
+// Initial	Final	Tone	CharList (Space separated)
+p	uŋ	上聲	捧
+pʰ	uŋ	陽平	蓬 馮
+pʰ	uŋ	上聲	奉
+m	uŋ	陽平	蒙
+m	uŋ	上聲	懵 夢
+f	uŋ	陰平	風 蜂 封 豐 瘋 峰 鋒 楓
+f	uŋ	陽平	蓬 紅 洪 鴻 逢 縫 烘 虹
+f	uŋ	上聲	俸 鳳
+f	uŋ	去聲	諷
+b	uŋ	陰平	翁
+b	uŋ	去聲	甕
+t	uŋ	陰平	東 冬 中
+t	uŋ	上聲	懂 董
+t	uŋ	去聲	凍 棟
+tʰ	uŋ	陰平	通 動
+tʰ	uŋ	陽平	同 童 銅 桐 瞳 僮
+tʰ	uŋ	上聲	桶 統 洞
+tʰ	uŋ	去聲	痛
+n	uŋ	陽平	農 濃 膿 齈 儂
+l	uŋ	陽平	聾 隴 籠 隆
+l	uŋ	上聲	弄 攏
+ts	uŋ	陰平	棕 宗 鬃
+ts	uŋ	上聲	總
+ts	uŋ	去聲	綜
+tsʰ	uŋ	陰平	窗 聰 葱 怱 囪
+tsʰ	uŋ	陽平	叢 崇
+s	uŋ	陰平	雙 鬆 嵩
+s	uŋ	去聲	宋 送 誦 頌 訟
+tʃ	uŋ	陰平	中 宗 鍾 鐘 盅 舂 忠 終
+tʃ	uŋ	上聲	總 種 腫 冢
+tʃ	uŋ	去聲	種 中 眾 銃
+tʃʰ	uŋ	陰平	重 衝 充 沖
+tʃʰ	uŋ	陽平	叢 蟲 重
+tʃʰ	uŋ	上聲	寵 仲
+k	uŋ	陰平	工 公 功 攻 蚣
+k	uŋ	去聲	貢
+kʰ	uŋ	陰平	空
+kʰ	uŋ	上聲	孔
+kʰ	uŋ	去聲	控
+// HSD Syllabary Data Partition
+// 地区：印度尼西亞共和國-西加里曼丹省-山口洋市
+// 来源：黃惠珍《印尼山口洋客家話研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	印度尼西亞共和國-西加里曼丹省-山口洋市
+@SRC	黃惠珍《印尼山口洋客家話研究》
+
+@INI	∅
+@FIN	ŋ̍
+@TON	陽平	55
+@TON	上聲	24
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	ŋ̍	陽平	魚 吳 蜈 吾 梧
+∅	ŋ̍	上聲	女 五 伍 午

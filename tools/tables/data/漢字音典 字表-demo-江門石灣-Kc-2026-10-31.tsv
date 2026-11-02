@@ -432,7 +432,6 @@
 創		c	ong	1		ʦʰ	ɔŋ	23	
 愴		c	ong	1		ʦʰ	ɔŋ	23	
 艙		c	ong	1		ʦʰ	ɔŋ	23	
-窗		c	ong	1		ʦʰ	ɔŋ	23	
 闖		c	ong	2		ʦʰ	ɔŋ	35	
 敞		c	ong	2		ʦʰ	ɔŋ	35	
 廠		c	ong	2		ʦʰ	ɔŋ	35	
@@ -564,6 +563,7 @@
 漸		d	iaam	1		t	iam	23	漸車帷裳
 漸		d	iaam	6		t	iam	31	逐漸
 精		d	iaang	1		t	iaŋ	23	好精，白讀
+晶		d	iaang	1		t	iaŋ	23	魂晶，白讀
 井		d	iaang	2		t	iaŋ	35	
 淨		d	iaang	6		t	iaŋ	31	乾淨，白讀
 阱		d	iaang	6		t	iaŋ	31	陷阱，白讀
@@ -702,6 +702,7 @@
 誦		d	ung	6		t	ʊŋ	31	
 從		d	ung	6		t	ʊŋ	31	
 花		f	aa	1		f	a	23	
+花		f	aa	5		f	a	21	變調
 化		f	aa	1		f	a	23	
 快		f	aai	1		f	ai	23	
 快		f	aai	2		f	ai	35	變調
@@ -1369,85 +1370,85 @@
 崛		g	ut	8		k	ut	31	又音
 骨		g	ut	7A		k	ut	35	又音
 滑		g	ut	7A		k	ut	35	滑稽，又音
-瓜		gw	aa	1		ku	a	23	
-卦		gw	aa	1		ku	a	23	
-掛		gw	aa	1		ku	a	23	
-呱		gw	aa	1		ku	a	23	
-褂		gw	aa	1		ku	a	23	
-寡		gw	aa	2		ku	a	35	
-乖		gw	aai	1		ku	ai	23	
-怪		gw	aai	1		ku	ai	23	
-枴		gw	aai	2		ku	ai	35	
-拐		gw	aai	2		ku	ai	35	
-綸		gw	aan	1		ku	an	23	綸巾
-關		gw	aan	1		ku	an	23	
-慣		gw	aan	1		ku	an	23	
-轟		gw	aang	1		ku	aŋ	23	
-肱		gw	aang	1		ku	aŋ	23	
-梗		gw	aang	2		ku	aŋ	35	
-逛		gw	aang	6		ku	aŋ	31	
-均		gw	an	1		ku	ɐn	23	
-鈞		gw	an	1		ku	ɐn	23	
-君		gw	an	1		ku	ɐn	23	
-軍		gw	an	1		ku	ɐn	23	
-棍		gw	an	1		ku	ɐn	23	
-棍		gw	an	5		ku	ɐn	21	變調
-龜		gw	an	1		ku	ɐn	23	
-滾		gw	an	2		ku	ɐn	35	
-郡		gw	an	6		ku	ɐn	31	
-倔		gw	at	8		ku	ɐt	31	
-掘		gw	at	8		ku	ɐt	31	
-崛		gw	at	8		ku	ɐt	31	
-骨		gw	at	7A		ku	ɐt	35	
-滑		gw	at	7A		ku	ɐt	35	滑稽
-圭		gw	ei	1		ku	ei	23	又音
-閨		gw	ei	1		ku	ei	23	又音
-鮭		gw	ei	1		ku	ei	23	又音
-桂		gw	ei	1		ku	ei	23	又音
-鱖		gw	ei	1		ku	ei	23	又音
-季		gw	ei	1		ku	ei	23	又音
-癸		gw	ei	1		ku	ei	23	又音
-悸		gw	ei	1		ku	ei	23	又音
-龜		gw	ei	1		ku	ei	23	又音
-龜		gw	ei	5		ku	ei	21	變調，又音
-歸		gw	ei	1		ku	ei	23	又音
-貴		gw	ei	1		ku	ei	23	又音
-傀		gw	ei	1		ku	ei	23	傀偉，又音
-瑰		gw	ei	1		ku	ei	23	又音
-詭		gw	ei	2		ku	ei	35	又音
-軌		gw	ei	2		ku	ei	35	又音
-晷		gw	ei	2		ku	ei	35	又音
-鬼		gw	ei	2		ku	ei	35	又音
-跪		gw	ei	6		ku	ei	31	又音
-櫃		gw	ei	6		ku	ei	31	又音
-匱		gw	ei	6		ku	ei	31	又音
-餽		gw	ei	6		ku	ei	31	又音
-饋		gw	ei	6		ku	ei	31	又音
-刮		gw	et	7B		ku	ɛt	23	
-颳		gw	et	7B		ku	ɛt	23	
-圭		gw	i	1		ku	i	23	
-閨		gw	i	1		ku	i	23	
-鮭		gw	i	1		ku	i	23	
-桂		gw	i	1		ku	i	23	
-鱖		gw	i	1		ku	i	23	
-季		gw	i	1		ku	i	23	
-癸		gw	i	1		ku	i	23	
-悸		gw	i	1		ku	i	23	
-龜		gw	i	1		ku	i	23	
-龜		gw	i	5		ku	i	21	變調
-歸		gw	i	1		ku	i	23	
-貴		gw	i	1		ku	i	23	
-傀		gw	i	1		ku	i	23	傀偉
-瑰		gw	i	1		ku	i	23	
-詭		gw	i	2		ku	i	35	
-軌		gw	i	2		ku	i	35	
-晷		gw	i	2		ku	i	35	
-鬼		gw	i	2		ku	i	35	
-跪		gw	i	6		ku	i	31	
-櫃		gw	i	6		ku	i	31	
-匱		gw	i	6		ku	i	31	
-餽		gw	i	6		ku	i	31	
-饋		gw	i	6		ku	i	31	
+瓜		gu	aa	1		ku	a	23	
+卦		gu	aa	1		ku	a	23	
+掛		gu	aa	1		ku	a	23	
+呱		gu	aa	1		ku	a	23	
+褂		gu	aa	1		ku	a	23	
+寡		gu	aa	2		ku	a	35	
+乖		gu	aai	1		ku	ai	23	
+怪		gu	aai	1		ku	ai	23	
+枴		gu	aai	2		ku	ai	35	
+拐		gu	aai	2		ku	ai	35	
+綸		gu	aan	1		ku	an	23	綸巾
+關		gu	aan	1		ku	an	23	
+慣		gu	aan	1		ku	an	23	
+轟		gu	aang	1		ku	aŋ	23	
+肱		gu	aang	1		ku	aŋ	23	
+梗		gu	aang	2		ku	aŋ	35	
+逛		gu	aang	6		ku	aŋ	31	
+均		gu	an	1		ku	ɐn	23	
+鈞		gu	an	1		ku	ɐn	23	
+君		gu	an	1		ku	ɐn	23	
+軍		gu	an	1		ku	ɐn	23	
+棍		gu	an	1		ku	ɐn	23	
+棍		gu	an	5		ku	ɐn	21	變調
+龜		gu	an	1		ku	ɐn	23	
+滾		gu	an	2		ku	ɐn	35	
+郡		gu	an	6		ku	ɐn	31	
+倔		gu	at	8		ku	ɐt	31	
+掘		gu	at	8		ku	ɐt	31	
+崛		gu	at	8		ku	ɐt	31	
+骨		gu	at	7A		ku	ɐt	35	
+滑		gu	at	7A		ku	ɐt	35	滑稽
+圭		gu	ei	1		ku	ei	23	又音
+閨		gu	ei	1		ku	ei	23	又音
+鮭		gu	ei	1		ku	ei	23	又音
+桂		gu	ei	1		ku	ei	23	又音
+鱖		gu	ei	1		ku	ei	23	又音
+季		gu	ei	1		ku	ei	23	又音
+癸		gu	ei	1		ku	ei	23	又音
+悸		gu	ei	1		ku	ei	23	又音
+龜		gu	ei	1		ku	ei	23	又音
+龜		gu	ei	5		ku	ei	21	變調，又音
+歸		gu	ei	1		ku	ei	23	又音
+貴		gu	ei	1		ku	ei	23	又音
+傀		gu	ei	1		ku	ei	23	傀偉，又音
+瑰		gu	ei	1		ku	ei	23	又音
+詭		gu	ei	2		ku	ei	35	又音
+軌		gu	ei	2		ku	ei	35	又音
+晷		gu	ei	2		ku	ei	35	又音
+鬼		gu	ei	2		ku	ei	35	又音
+跪		gu	ei	6		ku	ei	31	又音
+櫃		gu	ei	6		ku	ei	31	又音
+匱		gu	ei	6		ku	ei	31	又音
+餽		gu	ei	6		ku	ei	31	又音
+饋		gu	ei	6		ku	ei	31	又音
+刮		gu	et	7B		ku	ɛt	23	
+颳		gu	et	7B		ku	ɛt	23	
+圭		gw	i	1		kw	i	23	
+閨		gw	i	1		kw	i	23	
+鮭		gw	i	1		kw	i	23	
+桂		gw	i	1		kw	i	23	
+鱖		gw	i	1		kw	i	23	
+季		gw	i	1		kw	i	23	
+癸		gw	i	1		kw	i	23	
+悸		gw	i	1		kw	i	23	
+龜		gw	i	1		kw	i	23	
+龜		gw	i	5		kw	i	21	變調
+歸		gw	i	1		kw	i	23	
+貴		gw	i	1		kw	i	23	
+傀		gw	i	1		kw	i	23	傀偉
+瑰		gw	i	1		kw	i	23	
+詭		gw	i	2		kw	i	35	
+軌		gw	i	2		kw	i	35	
+晷		gw	i	2		kw	i	35	
+鬼		gw	i	2		kw	i	35	
+跪		gw	i	6		kw	i	31	
+櫃		gw	i	6		kw	i	31	
+匱		gw	i	6		kw	i	31	
+餽		gw	i	6		kw	i	31	
+饋		gw	i	6		kw	i	31	
 蝦		h	aa	1		h	a	23	蝦蟆
 哈		h	aa	1		h	a	23	
 他		h	aa	1		h	a	23	
@@ -1801,6 +1802,7 @@
 頹		h	oi	4		h	ɔi	22	又音
 學		h	ok	8		h	ɔk	31	
 鶴		h	ok	8		h	ɔk	31	
+鶴		h	ok	9		h	ɔk	21	變調；高鶴，地名
 拓		h	ok	7B		h	ɔk	23	
 託		h	ok	7B		h	ɔk	23	
 壑		h	ok	7B		h	ɔk	23	
@@ -2068,6 +2070,7 @@
 佚		j	at	8		j	ɐt	31	
 逸		j	at	8		j	ɐt	31	
 溢		j	at	8		j	ɐt	31	
+一		j	at	7B		j	ɐt	23	
 一		j	at	7A		j	ɐt	35	
 壹		j	at	7A		j	ɐt	35	
 醫		j	i	1		j	i	23	
@@ -2436,7 +2439,7 @@
 咳		k	aat	7A		kʰ	at	35	咳嗽
 靠		k	aau	1		kʰ	au	23	
 襟		k	am	1		kʰ	ɐm	23	
-禁		k	am	1		kʰ	ɐm	23	禁著
+禁		k	am	1		kʰ	ɐm	23	禁用
 琴		k	am	4		kʰ	ɐm	22	
 禽		k	am	4		kʰ	ɐm	22	
 擒		k	am	4		kʰ	ɐm	22	
@@ -2607,48 +2610,48 @@
 孔		k	ung	2		kʰ	ʊŋ	35	又音
 穹		k	ung	4		kʰ	ʊŋ	22	
 窮		k	ung	4		kʰ	ʊŋ	22	
-夸		kw	aa	1		kʰu	a	23	
-誇		kw	aa	1		kʰu	a	23	
-跨		kw	aa	1		kʰu	a	23	
-掛		kw	aa	1		kʰu	a	23	
-垮		kw	aa	1		kʰu	a	23	
-眶		kw	aang	1		kʰu	aŋ	23	
-窘		kw	an	1		kʰu	ɐn	23	
-昆		kw	an	1		kʰu	ɐn	23	
-坤		kw	an	1		kʰu	ɐn	23	
-困		kw	an	1		kʰu	ɐn	23	
-崑		kw	an	1		kʰu	ɐn	23	
-睏		kw	an	1		kʰu	ɐn	23	
-菌		kw	an	2		kʰu	ɐn	35	
-壼		kw	an	2		kʰu	ɐn	35	
-捆		kw	an	2		kʰu	ɐn	35	
-綑		kw	an	2		kʰu	ɐn	35	
-裙		kw	an	4		kʰu	ɐn	22	
-群		kw	an	4		kʰu	ɐn	22	
-規		kw	ei	1		kʰu	ei	23	又音
-窺		kw	ei	1		kʰu	ei	23	又音
-虧		kw	ei	1		kʰu	ei	23	又音
-愧		kw	ei	1		kʰu	ei	23	又音
-盔		kw	ei	1		kʰu	ei	23	又音
-睽		kw	ei	4		kʰu	ei	22	又音
-畦		kw	ei	4		kʰu	ei	22	又音
-攜		kw	ei	4		kʰu	ei	22	又音
-蠵		kw	ei	4		kʰu	ei	22	又音
-葵		kw	ei	4		kʰu	ei	22	又音
-揆		kw	ei	5		kʰu	ei	21	又音
-逵		kw	ei	4		kʰu	ei	22	又音
-規		kw	i	1		kʰu	i	23	
-窺		kw	i	1		kʰu	i	23	
-虧		kw	i	1		kʰu	i	23	
-愧		kw	i	1		kʰu	i	23	
-盔		kw	i	1		kʰu	i	23	
-睽		kw	i	4		kʰu	i	22	
-畦		kw	i	4		kʰu	i	22	
-攜		kw	i	4		kʰu	i	22	
-蠵		kw	i	4		kʰu	i	22	
-葵		kw	i	4		kʰu	i	22	
-揆		kw	i	5		kʰu	i	21	
-逵		kw	i	4		kʰu	i	22	
+夸		ku	aa	1		kʰu	a	23	
+誇		ku	aa	1		kʰu	a	23	
+跨		ku	aa	1		kʰu	a	23	
+掛		ku	aa	1		kʰu	a	23	
+垮		ku	aa	1		kʰu	a	23	
+眶		ku	aang	1		kʰu	aŋ	23	
+窘		ku	an	1		kʰu	ɐn	23	
+昆		ku	an	1		kʰu	ɐn	23	
+坤		ku	an	1		kʰu	ɐn	23	
+困		ku	an	1		kʰu	ɐn	23	
+崑		ku	an	1		kʰu	ɐn	23	
+睏		ku	an	1		kʰu	ɐn	23	
+菌		ku	an	2		kʰu	ɐn	35	
+壼		ku	an	2		kʰu	ɐn	35	
+捆		ku	an	2		kʰu	ɐn	35	
+綑		ku	an	2		kʰu	ɐn	35	
+裙		ku	an	4		kʰu	ɐn	22	
+群		ku	an	4		kʰu	ɐn	22	
+規		ku	ei	1		kʰu	ei	23	又音
+窺		ku	ei	1		kʰu	ei	23	又音
+虧		ku	ei	1		kʰu	ei	23	又音
+愧		ku	ei	1		kʰu	ei	23	又音
+盔		ku	ei	1		kʰu	ei	23	又音
+睽		ku	ei	4		kʰu	ei	22	又音
+畦		ku	ei	4		kʰu	ei	22	又音
+攜		ku	ei	4		kʰu	ei	22	又音
+蠵		ku	ei	4		kʰu	ei	22	又音
+葵		ku	ei	4		kʰu	ei	22	又音
+揆		ku	ei	5		kʰu	ei	21	又音
+逵		ku	ei	4		kʰu	ei	22	又音
+規		kw	i	1		kʰw	i	23	
+窺		kw	i	1		kʰw	i	23	
+虧		kw	i	1		kʰw	i	23	
+愧		kw	i	1		kʰw	i	23	
+盔		kw	i	1		kʰw	i	23	
+睽		kw	i	4		kʰw	i	22	
+畦		kw	i	4		kʰw	i	22	
+攜		kw	i	4		kʰw	i	22	
+蠵		kw	i	4		kʰw	i	22	
+葵		kw	i	4		kʰw	i	22	
+揆		kw	i	5		kʰw	i	21	
+逵		kw	i	4		kʰw	i	22	
 喇		l	aa	1		l	a	23	喇叭
 啦		l	aa	1		l	a	23	
 罅		l	aa	1		l	a	23	縫隙
@@ -2870,6 +2873,7 @@
 冽		l	it	8		l	it	31	
 烈		l	it	8		l	it	31	
 裂		l	it	7B		l	it	23	
+裂		l	it	9		l	it	21	名詞，變調
 列		l	it	8		l	it	31	
 囉		l	o	1		l	ɔ	23	囉嗦
 咯		l	o	1		l	ɔ	23	
@@ -3729,6 +3733,7 @@
 陪		p	uaai	4		pʰ	uai	22	
 培		p	uaai	4		pʰ	uai	22	
 蓓		p	uaai	5		pʰ	uai	21	
+焙		p	uaai	4		pʰ	uai	22	習讀，“烘焙”
 伴		p	uaan	5		pʰ	uan	21	白讀
 拚		p	uaan	1		pʰ	uan	23	
 潘		p	uaan	1		pʰ	uan	23	
@@ -4052,6 +4057,7 @@
 擅		s	in	6		s	in	31	
 繕		s	in	6		s	in	31	
 善		s	in	6		s	in	31	
+鱔		s	in	5		s	in	21	
 羨		s	in	6		s	in	31	
 星		s	ing	1		s	ɪŋ	23	
 惺		s	ing	1		s	ɪŋ	23	
@@ -4436,6 +4442,7 @@
 倉		t	ong	1		tʰ	ɔŋ	23	
 蒼		t	ong	1		tʰ	ɔŋ	23	
 滄		t	ong	1		tʰ	ɔŋ	23	
+窗		t	ong	1		tʰ	ɔŋ	23	
 庠		t	ong	4		tʰ	ɔŋ	22	
 祥		t	ong	4		tʰ	ɔŋ	22	
 翔		t	ong	4		tʰ	ɔŋ	22	
@@ -4585,6 +4592,7 @@
 熨		w	at	7A		w	ɐt	35	熨貼
 窟		w	at	7A		w	ɐt	35	
 還		w	en	4		w	ɛn	22	
+猾		w	et	8		w	ɛt	31	
 滑		w	et	8		w	ɛt	31	光滑
 穢		w	i	1		w	i	23	
 委		w	i	1		w	i	23	虛與委蛇，委委佗佗
@@ -4633,7 +4641,6 @@
 渭		w	i	6		w	i	31	
 蝟		w	i	6		w	i	31	
 謂		w	i	6		w	i	31	
-猾		w	iaat	8		w	iat	31	
 域		w	ik	8		w	ɪk	31	
 扔		w	ing	2		w	ɪŋ	45	
 榮		w	ing	4		w	ɪŋ	22	
