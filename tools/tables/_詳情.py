@@ -209,8 +209,8 @@ def 加載(省=None):
 		orders[0] = orders[0].split("-")[0].strip()
 		colors = [row[fields.index(i)].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典顏色","陳邡顏色")]
 		歷史音 = "0"
-		if "是否為方言歷史音" in fields:
-			歷史音 = getCellBgColor(row[fields.index("是否為方言歷史音")])
+		if "是否為語言歷史音" in fields:
+			歷史音 = getCellBgColor(row[fields.index("是否為語言歷史音")])
 		# 音典顔色分區[colors[1]] = types[1]
 		subfgColor = row[fields.index("音典過渡色")].fill.fgColor
 		if subfgColor.type == "rgb":
