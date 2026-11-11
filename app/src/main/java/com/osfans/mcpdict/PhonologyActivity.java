@@ -59,7 +59,7 @@ public class PhonologyActivity extends AppCompatActivity {
     }
     @Override public void onCreate(Bundle saved) {
         App.setLocale();App.setActivityTheme(this);super.onCreate(saved);
-        LinearLayout root=new LinearLayout(this);root.setOrientation(1);root.setPadding(dp(8),dp(4),dp(8),0);setContentView(root);
+        LinearLayout root=new LinearLayout(this);root.setOrientation(LinearLayout.VERTICAL);root.setPadding(dp(8),dp(4),dp(8),0);setContentView(root);
         androidx.appcompat.widget.Toolbar toolbar=new androidx.appcompat.widget.Toolbar(this);toolbar.setTitle("音韻對應分析");root.addView(toolbar);setSupportActionBar(toolbar);getSupportActionBar().setDisplayHomeAsUpEnabled(true);toolbar.setNavigationOnClickListener(v->finish());
         moduleId=getIntent().getIntExtra("module",0);
         String[] titles={"中古→方言","方言→中古","單字音類","兩地對應","字音比較"};
@@ -88,7 +88,7 @@ public class PhonologyActivity extends AppCompatActivity {
         tableHeader=new LinearLayout(this);root.addView(tableHeader);tableHeader.setVisibility(View.GONE);
         String[] columns=moduleId==0?new String[]{"中古","今音","字數","例字／詳情"}:moduleId==1?new String[]{"今音","中古","字數","例字／詳情"}:new String[]{"比較字組","同音情況","點數","方言／詳情"};
         for(int i=0;i<4;i++){TextView title=cell(columns[i],i);title.setTypeface(FontUtil.getDictTypeface(),android.graphics.Typeface.BOLD);tableHeader.addView(title);final int column=i;title.setOnClickListener(v->{if(column==2)groups.sort((a,b)->Integer.compare(b.characters.size(),a.characters.size()));else if(column<2)groups.sort(java.util.Comparator.comparing(g->column==0?g.left:g.right));results.getAdapter().notifyDataSetChanged();});}
-        chartBox=new LinearLayout(this);chartBox.setOrientation(1);root.addView(chartBox,new LinearLayout.LayoutParams(-1,0,1));chartBox.setVisibility(moduleId==3?View.VISIBLE:View.GONE);
+        chartBox=new LinearLayout(this);chartBox.setOrientation(LinearLayout.VERTICAL);root.addView(chartBox,new LinearLayout.LayoutParams(-1,0,1));chartBox.setVisibility(moduleId==3?View.VISIBLE:View.GONE);
         results=(RecyclerView)getLayoutInflater().inflate(R.layout.phonology_results,root,false);results.setLayoutManager(new LinearLayoutManager(this));results.setAdapter(new Rows());results.addItemDecoration(new androidx.recyclerview.widget.DividerItemDecoration(this,LinearLayoutManager.VERTICAL));root.addView(results,new LinearLayout.LayoutParams(-1,0,1));results.setVisibility(moduleId==2||moduleId==3?View.GONE:View.VISIBLE);
         applyFonts(root);bridge=new ToolsBridge(this);setStatus("載入中古地位…");
         worker.execute(()->{try {com.osfans.mcpdict.Favorite.UserDB.initialize(this);com.osfans.mcpdict.Orth.Orthography.initialize(getResources());DB.initialize(this);DB.initFQ();com.osfans.mcpdict.Orth.Orthography.setToneStyle(com.osfans.mcpdict.Util.Pref.getToneStyle(R.string.pref_key_tone_display));com.osfans.mcpdict.Orth.Orthography.setToneValueStyle(com.osfans.mcpdict.Util.Pref.getToneStyle(R.string.pref_key_tone_value_display));if(moduleId>=2){main.post(()->{if(!destroyed)setStatus("");});return;}
@@ -106,7 +106,7 @@ public class PhonologyActivity extends AppCompatActivity {
     private int dp(int n){return Math.round(n*getResources().getDisplayMetrics().density);}
     private Spinner spinner(String[] items){Spinner s=new Spinner(this);s.setAdapter(new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,items));return s;}
     private LinearLayout observationField(String title,Spinner input){
-        LinearLayout field=new LinearLayout(this);field.setOrientation(1);
+        LinearLayout field=new LinearLayout(this);field.setOrientation(LinearLayout.VERTICAL);
         TextView label=new TextView(this);label.setText(title);label.setTextSize(12);label.setTextColor(App.obtainColor(this,android.R.attr.textColorSecondary));label.setPadding(dp(4),dp(4),dp(4),0);FontUtil.setTypeface(label);
         input.setContentDescription(title);field.addView(label);field.addView(input,new LinearLayout.LayoutParams(-1,-2));return field;
     }
@@ -114,7 +114,7 @@ public class PhonologyActivity extends AppCompatActivity {
     private void applyFonts(View view){if(view instanceof TextView)FontUtil.setTypeface((TextView)view);if(view instanceof android.view.ViewGroup)for(int i=0;i<((android.view.ViewGroup)view).getChildCount();i++)applyFonts(((android.view.ViewGroup)view).getChildAt(i));}
     private void showFilters(Button button){
         if(ancient.isEmpty()){Toast.makeText(this,"中古資料尚未載入",Toast.LENGTH_SHORT).show();return;}
-        LinearLayout body=new LinearLayout(this);body.setOrientation(1);Map<String,Set<String>> draft=new LinkedHashMap<>();for(String key:filters.keySet())draft.put(key,new LinkedHashSet<>(filters.get(key)));
+        LinearLayout body=new LinearLayout(this);body.setOrientation(LinearLayout.VERTICAL);Map<String,Set<String>> draft=new LinkedHashMap<>();for(String key:filters.keySet())draft.put(key,new LinkedHashSet<>(filters.get(key)));
         for(int i:new int[]{0,1,2,3,4,5,7}){final int dimension=i;Set<String> all=new LinkedHashSet<>();for(Middle m:ancient)all.add(m.values[i]);List<String> values=PhonologyOrders.ordered(i,all);Button category=new Button(this);category.setText(MC[i]+"："+summary(draft.get(MC[i])));body.addView(category);
             category.setOnClickListener(v->{Set<String> checked=new LinkedHashSet<>(draft.getOrDefault(MC[dimension],Collections.emptySet()));boolean[] selected=new boolean[values.size()];for(int j=0;j<selected.length;j++)selected[j]=checked.contains(values.get(j));
                 new AlertDialog.Builder(this).setTitle(MC[dimension]+"（可多選）").setMultiChoiceItems(values.toArray(new String[0]),selected,(d,index,on)->{String value=values.get(index);if(on)checked.add(value);else checked.remove(value);if(dimension==4){android.widget.ListView list=((AlertDialog)d).getListView();if(value.equals("三")){for(int j=0;j<values.size();j++)if(values.get(j).startsWith("三")){if(on)checked.add(values.get(j));else checked.remove(values.get(j));list.setItemChecked(j,on);}}else if(value.startsWith("三")&&!on){checked.remove("三");int parent=values.indexOf("三");if(parent>=0)list.setItemChecked(parent,false);}}}).setPositiveButton("確定",(d,w)->{draft.put(MC[dimension],checked);category.setText(MC[dimension]+"："+summary(checked));}).setNeutralButton("不限",(d,w)->{draft.remove(MC[dimension]);category.setText(MC[dimension]+"：不限");}).setNegativeButton("取消",null).show();
@@ -182,7 +182,7 @@ public class PhonologyActivity extends AppCompatActivity {
     private void error(Exception e){main.post(()->{if(!destroyed)setStatus("載入失敗："+e.getMessage());});}
     private TextView cell(String value,int column){TextView text=new TextView(this);text.setTextAppearance(R.style.FontDetail);FontUtil.setTypeface(text);text.setTextSize(14);text.setText(value);text.setPadding(dp(5),dp(7),dp(5),dp(7));text.setLayoutParams(column<3?new LinearLayout.LayoutParams(dp(column==2?44:column==0?60:76),-2):new LinearLayout.LayoutParams(0,-2,1));return text;}
     private void showExamples(Group group,int selectedMode){
-        List<String> keys=new ArrayList<>(group.detail.keySet());LinearLayout container=new LinearLayout(this);container.setOrientation(1);LinearLayout header=new LinearLayout(this);header.addView(cell(selectedMode==2||selectedMode==4?"語言":"漢字",0));header.addView(cell("讀音／地位",3));container.addView(header);
+        List<String> keys=new ArrayList<>(group.detail.keySet());LinearLayout container=new LinearLayout(this);container.setOrientation(LinearLayout.VERTICAL);LinearLayout header=new LinearLayout(this);header.addView(cell(selectedMode==2||selectedMode==4?"語言":"漢字",0));header.addView(cell("讀音／地位",3));container.addView(header);
         ListView list=new ListView(this);list.setVerticalScrollBarEnabled(true);list.setScrollbarFadingEnabled(false);list.setAdapter(new BaseAdapter(){public int getCount(){return keys.size();}public Object getItem(int i){return keys.get(i);}public long getItemId(int i){return i;}public View getView(int pos,View convert,android.view.ViewGroup parent){String key=keys.get(pos);LinearLayout row=new LinearLayout(PhonologyActivity.this);TextView word=cell(key,0);row.addView(word);row.addView(cell(TextUtils.join("\n",group.detail.get(key)),3));word.setOnClickListener(v->{if(selectedMode==2||selectedMode==4)App.info(PhonologyActivity.this,key);else CharacterDetails.show(PhonologyActivity.this,key);});TextView more=cell("詳情",2);more.setOnClickListener(v->word.performClick());row.addView(more);return row;}});container.addView(list,new LinearLayout.LayoutParams(-1,dp(340)));
         AlertDialog.Builder dialog=new AlertDialog.Builder(this).setTitle(group.left+" → "+group.right+"（"+keys.size()+"）").setView(container).setPositiveButton("關閉",null);
         if(selectedMode==4)dialog.setNeutralButton("地圖",(d,w)->drawComparisonMap(group));dialog.show();
