@@ -1,95 +1,18 @@
 package com.osfans.mcpdict;
-
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-
+import android.content.Intent;
+import android.widget.*;
+import android.view.*;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import com.osfans.mcpdict.Favorite.UserDB;
-import com.osfans.mcpdict.Orth.Orthography;
 import com.osfans.mcpdict.Util.App;
-import com.osfans.mcpdict.Util.Pref;
-
-/**
- * 音典小工具入口。
- *
- * 界面文件打包在 assets/yindian-tools 中；所有数据通过 ToolsBridge 直接读取
- * 音典自带 mcpdict.db，不发起网络请求。
- */
+import com.osfans.mcpdict.Util.FontUtil;
+/** Native tools home. No WebView or secondary analysis entry. */
 public class ToolsActivity extends AppCompatActivity {
-    private WebView webView;
-
-    @SuppressLint("SetJavaScriptEnabled")
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        App.setLocale();
-        App.setActivityTheme(this);
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tools);
-
-        // 正常从 MainActivity 进入时数据库已经初始化。这里仍做幂等初始化，
-        // 以便系统恢复 Activity 时也能独立工作。
-        UserDB.initialize(this);
-        DB.initialize(this);
-        DB.initFQ();
-        Orthography.initialize(getResources());
-
-        // Keep pronunciation rendering identical to the main result list.
-        Orthography.setToneStyle(Pref.getToneStyle(R.string.pref_key_tone_display));
-        Orthography.setToneValueStyle(Pref.getToneStyle(R.string.pref_key_tone_value_display));
-
-        Toolbar toolbar = findViewById(R.id.tools_toolbar);
-        setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(R.string.yindian_tools);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
-        toolbar.setNavigationOnClickListener(v -> finish());
-
-        webView = findViewById(R.id.tools_webview);
-        WebSettings settings = webView.getSettings();
-        settings.setJavaScriptEnabled(true);
-        settings.setDomStorageEnabled(false);
-        settings.setAllowContentAccess(false);
-        settings.setAllowFileAccess(true);
-        settings.setBlockNetworkLoads(true);
-        settings.setBuiltInZoomControls(false);
-        settings.setDisplayZoomControls(false);
-
-        // 只把接口暴露给 APK 内置的受信任页面。
-        webView.addJavascriptInterface(new ToolsBridge(this), "YindianBridge");
-        webView.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                String url = request.getUrl().toString();
-                // 小工具没有外链需求，阻止页面跳出本地 assets。
-                return !url.startsWith("file:///android_asset/yindian-tools/");
-            }
-        });
-        webView.loadUrl("file:///android_asset/yindian-tools/index.html?embedded=1");
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (webView != null && webView.canGoBack()) {
-            webView.goBack();
-        } else {
-            super.onBackPressed();
-        }
-    }
-
-    @Override
-    protected void onDestroy() {
-        if (webView != null) {
-            webView.removeJavascriptInterface("YindianBridge");
-            webView.destroy();
-            webView = null;
-        }
-        super.onDestroy();
-    }
+ @Override public void onCreate(Bundle saved){App.setLocale();App.setActivityTheme(this);super.onCreate(saved);
+  LinearLayout root=new LinearLayout(this);root.setOrientation(1);setContentView(root);
+  androidx.appcompat.widget.Toolbar toolbar=new androidx.appcompat.widget.Toolbar(this);toolbar.setTitle("音典小工具");root.addView(toolbar);setSupportActionBar(toolbar);getSupportActionBar().setDisplayHomeAsUpEnabled(true);toolbar.setNavigationOnClickListener(v->finish());
+  String[] names={"中古→方言","方言→中古","兩地對應","單字音類","字音比較"};int[] modes={0,1,3,2,4};
+  ListView list=new ListView(this);list.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,names){@Override public View getView(int position,View convert,ViewGroup parent){TextView v=(TextView)super.getView(position,convert,parent);FontUtil.setTypeface(v);v.setTextSize(17);v.setMinimumHeight(Math.round(54*getResources().getDisplayMetrics().density));return v;}});
+  list.setOnItemClickListener((p,v,pos,id)->startActivity(new Intent(this,PhonologyActivity.class).putExtra("module",modes[pos])));root.addView(list,new LinearLayout.LayoutParams(-1,0,1));
+ }
 }

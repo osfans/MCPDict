@@ -45,7 +45,7 @@ public class Marker extends org.osmdroid.views.overlay.Marker {
                 .wrapContent(true)
                 .endConfig()
                 .roundRect(5).build(getTitle(), color, subColor);
-        
+
         int radius = fontSize / 2;
         int width = radius * 2;
         int height = radius * 2;
@@ -67,6 +67,15 @@ public class Marker extends org.osmdroid.views.overlay.Marker {
         mIconDot = new BitmapDrawable(mResources, imageDot);
         setIcon(mIconDot);
         setAnchor(ANCHOR_CENTER, ANCHOR_CENTER);
+    }
+
+    public void setThematicColors(java.util.List<Integer> colors) {
+        if(colors==null||colors.size()<2)return;
+        int radius=Math.max(6,getTextLabelFontSize()/2),side=radius*2;
+        android.graphics.Bitmap bitmap=android.graphics.Bitmap.createBitmap(side,side,android.graphics.Bitmap.Config.ARGB_8888);
+        android.graphics.Canvas canvas=new android.graphics.Canvas(bitmap);android.graphics.Paint paint=new android.graphics.Paint(3);
+        float sweep=360f/colors.size();for(int i=0;i<colors.size();i++){paint.setColor(colors.get(i));canvas.drawArc(0,0,side,side,i*sweep,sweep,true,paint);}
+        mIconDot=new android.graphics.drawable.BitmapDrawable(mResources,bitmap);setIcon(mIconDot);
     }
 
     public Marker(MapView mapView, Cursor cursor, String yb, String js) {
@@ -135,4 +144,3 @@ public class Marker extends org.osmdroid.views.overlay.Marker {
         }
     }
 }
-

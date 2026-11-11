@@ -29,12 +29,13 @@ import java.util.Set;
  */
 @Keep
 public class ToolsBridge {
-    private final ToolsActivity activity;
+    private final android.app.Activity activity;
 
-    public ToolsBridge(ToolsActivity activity) {
+    public ToolsBridge(android.app.Activity activity) {
         this.activity = activity;
     }
 
+    @JavascriptInterface public void openPhonology() {activity.runOnUiThread(()->activity.startActivity(new android.content.Intent(activity,PhonologyActivity.class)));}
     @JavascriptInterface
     public int getApiVersion() {
         return 3;

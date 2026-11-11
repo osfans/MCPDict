@@ -48,8 +48,14 @@ public class MapView extends org.osmdroid.views.MapView {
     List<String> levels = Arrays.asList("province", "city"); //"district"
     final transient Object lock = new Object();
     private JSONArray mComparisonData = null;
+    private String mCharacter = "";
+    private final android.os.Handler layerHandler = new android.os.Handler(android.os.Looper.getMainLooper());
+    private int loadingLayers;
+    private boolean detached, released;
     public MapView(Context context) {
         super(context);
+        // Closing a map must not destroy its repository while a layer is still creating markers.
+        setDestroyMode(false);
     }
 
     public MapView(Context context, String hz) {
@@ -71,22 +77,178 @@ public class MapView extends org.osmdroid.views.MapView {
         initAsyncLayers();
     }
 
-    private void initAsyncLayers() {
+    private void loadLayer(Runnable loader) {
+        loadingLayers++;
         new Thread(() -> {
-            initProvinces();
-            postInvalidate();
-        }).start();
-
-        new Thread(() -> {
-            initInfo();
-            postInvalidate();
+            try {
+                synchronized (lock) { loader.run(); }
+            } finally {
+                layerHandler.post(() -> {
+                    loadingLayers--;
+                    releaseWhenReady();
+                });
+            }
         }).start();
     }
 
+    private void releaseWhenReady() {
+        if (detached && loadingLayers == 0 && !released) {
+            released = true;
+            onDetach();
+        }
+    }
+
+    private void requestRelease() {
+        if (!detached) {
+            onPause();
+            detached = true;
+        }
+        releaseWhenReady();
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        requestRelease();
+    }
+
+    private void initAsyncLayers() {
+        loadLayer(() -> {
+            initProvinces();
+            postInvalidate();
+        });
+        loadLayer(() -> {
+            if (mComparisonData == null) initInfo();
+            postInvalidate();
+        });
+    }
+
+    public static void showThematic(Context context, JSONArray points, CharSequence title,
+                                    String[] labels, int[] colors) {
+        new MapView(context, points).showDialog(title, labels, colors);
+    }
+
     public void show() {
-        new AlertDialog.Builder(getContext(), R.style.AppTheme)
-                .setView(this)
-                .show();
+        showDialog(TextUtils.isEmpty(mCharacter) ? "地圖" : "地圖 · " + mCharacter,
+                new String[0], new int[0]);
+    }
+
+    private int dp(int value) {
+        return Math.round(value * getResources().getDisplayMetrics().density);
+    }
+
+    private static android.app.Activity findActivity(Context context) {
+        while (context instanceof android.content.ContextWrapper) {
+            if (context instanceof android.app.Activity) return (android.app.Activity) context;
+            Context base = ((android.content.ContextWrapper) context).getBaseContext();
+            if (base == context) break;
+            context = base;
+        }
+        return null;
+    }
+
+    /** Keep the same map and overlays while the host handles orientation/size changes. */
+    private void showDialog(CharSequence title, String[] labels, int[] colors) {
+        Context context = getContext();
+        android.app.Activity host = findActivity(context);
+        int previousOrientation = host == null
+                ? android.content.pm.ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+                : host.getRequestedOrientation();
+        boolean[] orientationChanged = {false};
+
+        android.widget.LinearLayout root = new android.widget.LinearLayout(context);
+        root.setOrientation(android.widget.LinearLayout.VERTICAL);
+        android.widget.LinearLayout bar = new android.widget.LinearLayout(context);
+        bar.setGravity(android.view.Gravity.CENTER_VERTICAL);
+        android.widget.TextView heading = new android.widget.TextView(context);
+        heading.setText(title);
+        heading.setTextSize(14);
+        heading.setSingleLine(true);
+        heading.setEllipsize(TextUtils.TruncateAt.END);
+        heading.setPadding(dp(12), dp(8), dp(4), dp(8));
+        com.osfans.mcpdict.Util.FontUtil.setTypeface(heading);
+        bar.addView(heading, new android.widget.LinearLayout.LayoutParams(0, -2, 1));
+        android.widget.Button rotate = new android.widget.Button(context);
+        android.widget.Button close = new android.widget.Button(context);
+        for (android.widget.Button button : new android.widget.Button[]{rotate, close}) {
+            button.setTextSize(13);
+            button.setMinWidth(0);
+            button.setMinimumWidth(0);
+            button.setPadding(dp(10), 0, dp(10), 0);
+            com.osfans.mcpdict.Util.FontUtil.setTypeface(button);
+            bar.addView(button, new android.widget.LinearLayout.LayoutParams(-2, dp(48)));
+        }
+        close.setText("關閉");
+        rotate.setEnabled(host != null);
+        Runnable updateDirection = () -> {
+            boolean landscape = getResources().getConfiguration().orientation
+                    == android.content.res.Configuration.ORIENTATION_LANDSCAPE;
+            String label = landscape ? "豎屏" : "橫屏";
+            if (!TextUtils.equals(rotate.getText(), label)) {
+                rotate.setText(label);
+                rotate.setContentDescription(landscape ? "切換至豎屏" : "切換至橫屏");
+            }
+        };
+        updateDirection.run();
+        rotate.setOnClickListener(v -> {
+            if (host == null || host.isFinishing() || host.isDestroyed()) return;
+            boolean landscape = getResources().getConfiguration().orientation
+                    == android.content.res.Configuration.ORIENTATION_LANDSCAPE;
+            orientationChanged[0] = true;
+            host.setRequestedOrientation(landscape
+                    ? android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+                    : android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        });
+        root.addView(bar);
+
+        android.widget.FrameLayout canvas = new android.widget.FrameLayout(context);
+        canvas.addView(this, new android.widget.FrameLayout.LayoutParams(-1, -1));
+        if (labels.length > 0) {
+            android.widget.ScrollView scroll = new android.widget.ScrollView(context);
+            android.widget.LinearLayout legend = new android.widget.LinearLayout(context);
+            legend.setOrientation(android.widget.LinearLayout.VERTICAL);
+            legend.setPadding(dp(8), dp(6), dp(8), dp(6));
+            android.util.TypedValue bg = new android.util.TypedValue();
+            context.getTheme().resolveAttribute(android.R.attr.colorBackground, bg, true);
+            legend.setBackgroundColor(bg.data);
+            for (int i = 0; i < labels.length; i++) {
+                android.widget.TextView item = new android.widget.TextView(context);
+                android.text.SpannableString text = new android.text.SpannableString("● " + labels[i]);
+                text.setSpan(new android.text.style.ForegroundColorSpan(colors[i]), 0, 1,
+                        android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                item.setText(text);
+                com.osfans.mcpdict.Util.FontUtil.setTypeface(item);
+                item.setTextSize(12);
+                legend.addView(item);
+            }
+            scroll.addView(legend);
+            android.widget.FrameLayout.LayoutParams params = new android.widget.FrameLayout.LayoutParams(
+                    dp(160), dp(220), android.view.Gravity.BOTTOM | android.view.Gravity.START);
+            canvas.addView(scroll, params);
+            canvas.addOnLayoutChangeListener((v, l, t, r, b, ol, ot, or, ob) -> {
+                int width = Math.min(dp(160), Math.max(dp(48), (r - l) / 2));
+                int height = Math.min(dp(220), Math.max(dp(48), b - t - dp(16)));
+                if (params.width != width || params.height != height) {
+                    params.width = width;
+                    params.height = height;
+                    scroll.setLayoutParams(params);
+                }
+            });
+        }
+        root.addView(canvas, new android.widget.LinearLayout.LayoutParams(-1, 0, 1));
+        root.addOnLayoutChangeListener((v, l, t, r, b, ol, ot, or, ob) -> updateDirection.run());
+
+        AlertDialog dialog = new AlertDialog.Builder(context, R.style.AppTheme).setView(root).create();
+        close.setOnClickListener(v -> dialog.dismiss());
+        dialog.setOnDismissListener(d -> {
+            requestRelease();
+            if (orientationChanged[0] && host != null && !host.isFinishing() && !host.isDestroyed()) {
+                host.setRequestedOrientation(previousOrientation);
+            }
+        });
+        dialog.show();
+        dialog.getWindow().setLayout(-1, -1);
+        onResume();
     }
 
     @Override
@@ -107,6 +269,7 @@ public class MapView extends org.osmdroid.views.MapView {
     }
 
     public void init(String hz) {
+        mCharacter = hz;
         //setTileSource(TileSourceFactory.MAPNIK);
         addMapListener(new MapListener() {
             @Override
@@ -169,16 +332,14 @@ public class MapView extends org.osmdroid.views.MapView {
             zoomToBoundingBox(boundingBox, false);
             invalidate();
         });
-        new Thread(() -> {
-            synchronized (lock) {
-                if (mComparisonData == null) {
-                    initHZ(hz);
-                } else {
-                    initComparison(mComparisonData);
-                }
-                postInvalidate();
+        loadLayer(() -> {
+            if (mComparisonData == null) {
+                initHZ(hz);
+            } else {
+                initComparison(mComparisonData);
             }
-        }).start();
+            postInvalidate();
+        });
     }
 
     private static int comparisonColor(String status) {
@@ -237,6 +398,7 @@ public class MapView extends org.osmdroid.views.MapView {
                     )
             );
 
+            if(row.has("color"))color=row.optInt("color",color);
             String detail =
                     row.optString("detail", "");
 
@@ -254,12 +416,15 @@ public class MapView extends org.osmdroid.views.MapView {
                         detail
                 );
 
+                org.json.JSONArray parts=row.optJSONArray("colors");
+                if(parts!=null){java.util.List<Integer> palette=new java.util.ArrayList<>();for(int j=0;j<parts.length();j++)palette.add(parts.optInt(j));marker.setThematicColors(palette);}
                 marker.setOnMarkerClickListener((marker1, mapView) -> {
-                    new AlertDialog.Builder(getContext())
+                    android.app.Dialog detailDialog=new AlertDialog.Builder(getContext())
                             .setTitle(marker1.getTitle())
                             .setMessage(marker1.getSnippet())
                             .setPositiveButton(R.string.ok, null)
                             .show();
+                    android.widget.TextView message=detailDialog.findViewById(android.R.id.message);if(message!=null){com.osfans.mcpdict.Util.FontUtil.setTypeface(message);message.setTextIsSelectable(true);}
                     return true;
                 });
 
@@ -409,10 +574,4 @@ public class MapView extends org.osmdroid.views.MapView {
         return folderOverlay;
     }
 
-    @Override
-    protected void onDetachedFromWindow() {
-        synchronized (lock) {
-            super.onDetachedFromWindow();
-        }
-    }
 }

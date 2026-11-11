@@ -23,6 +23,7 @@
 
         <activity
             android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="true"
             android:launchMode="singleTop" >
             <intent-filter>
@@ -45,9 +46,12 @@
 
         <activity
             android:name=".ToolsActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/yindian_tools"
             android:launchMode="singleTop" />
+        <activity android:name=".PhonologyActivity"
+            android:configChanges="orientation|screenSize" android:exported="false" />
     </application>
 
 </manifest>

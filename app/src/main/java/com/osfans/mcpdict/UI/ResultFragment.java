@@ -46,6 +46,8 @@ public class ResultFragment extends Fragment {
     private SeekBar mMatrixHorizontalScrollbar;
     private RecyclerView mMatrixHeaderView, mMatrixBodyView;
     private MatrixTableView mMatrixTableView;
+    private android.widget.LinearLayout characterChoices;
+    private final java.util.Set<String> selectedCharacters=new java.util.LinkedHashSet<>();
     private Cursor mCursor;
     private boolean tableMode = false;
 
@@ -89,6 +91,10 @@ public class ResultFragment extends Fragment {
         mRecyclerView.setAdapter(mResultAdapter);
         new FastScrollerBuilder(mRecyclerView).build();
 
+        android.widget.HorizontalScrollView choicesScroll=new android.widget.HorizontalScrollView(requireContext());
+        characterChoices=new android.widget.LinearLayout(requireContext());
+        choicesScroll.addView(characterChoices);
+        ((android.widget.LinearLayout)selfView).addView(choicesScroll,0);
         // Matrix view: frozen top header + frozen left column.
         mMatrixLayout = selfView.findViewById(R.id.matrix_layout);
         mMatrixCorner = selfView.findViewById(R.id.matrix_corner);
@@ -330,13 +336,14 @@ public class ResultFragment extends Fragment {
         mRecyclerView.setVisibility(enabled ? View.GONE : View.VISIBLE);
         mMatrixLayout.setVisibility(enabled ? View.VISIBLE : View.GONE);
 
+        characterChoices.setVisibility(enabled?View.VISIBLE:View.GONE);
         boolean showIndex = isMainPage && !enabled;
         mIndexView.setVisibility(showIndex ? View.VISIBLE : View.GONE);
         mIndexDivider.setVisibility(showIndex ? View.VISIBLE : View.GONE);
 
         if (enabled) {
             updateMatrixCornerWidth();
-            mMatrixTableView.setCursor(mCursor);
+            mMatrixTableView.setSelectedCharacters(new java.util.LinkedHashSet<>(selectedCharacters),mCursor);
         }
     }
 
@@ -373,9 +380,22 @@ public class ResultFragment extends Fragment {
     }
 
     public void setData(Cursor cursor) {
+        selectedCharacters.clear();
+        characterChoices.removeAllViews();
+        if(cursor!=null) {
+            int previous=cursor.getPosition();
+            java.util.Set<String> characters=new java.util.LinkedHashSet<>();
+            for(cursor.moveToFirst();!cursor.isAfterLast();cursor.moveToNext()) characters.add(cursor.getString(com.osfans.mcpdict.DB.COL_HZ));
+            cursor.moveToPosition(previous);
+            selectedCharacters.addAll(characters);
+            for(String hz:characters) {
+                android.widget.CheckBox box=new android.widget.CheckBox(requireContext());box.setText(hz);box.setChecked(true);com.osfans.mcpdict.Util.FontUtil.setTypeface(box);
+                box.setOnCheckedChangeListener((v,on)->{if(on)selectedCharacters.add(hz);else selectedCharacters.remove(hz);mMatrixTableView.setSelectedCharacters(new java.util.LinkedHashSet<>(selectedCharacters),mCursor);});characterChoices.addView(box);
+            }
+        }
         mCursor = cursor;
         mIndexAdapter.changeCursor(cursor, mRecyclerView);
         mResultAdapter.changeCursor(cursor);
-        if (tableMode) mMatrixTableView.setCursor(cursor);
+        if (tableMode) mMatrixTableView.setSelectedCharacters(new java.util.LinkedHashSet<>(selectedCharacters),cursor);
     }
 }
