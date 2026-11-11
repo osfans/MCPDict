@@ -30,13 +30,14 @@
         android:title="@string/guess_hz"
         app:showAsAction="never" />
     <item
+        android:id="@+id/menu_item_yindian_tools"
+        android:title="@string/yindian_tools"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/menu_item_dialect_links"
         android:title="@string/dialect_links"
         app:showAsAction="never">
         <menu>
-            <item
-                android:id="@+id/menu_item_yindian_tools"
-                android:title="@string/yindian_tools" />
             <item
                 android:id="@+id/menu_item_sim"
                 android:title="@string/similarity"

@@ -94,13 +94,31 @@
                 android:layout_weight="3"
                 android:entries="@array/pref_entries_filters" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/button_hz_option"
-                style="@style/Widget.AppCompat.Button.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="28dp"
+                android:layout_height="match_parent"
+                android:minWidth="0dp"
+                android:minHeight="32dp"
+                android:padding="6dp"
+                android:scaleType="centerInside"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:text="@string/hz_option" />
+                android:src="@drawable/ic_results_more"
+                android:contentDescription="更多選項"
+                app:tint="?android:attr/textColorPrimary" />
+
+            <ImageButton
+                android:id="@+id/button_view_toggle"
+                android:layout_width="28dp"
+                android:layout_height="match_parent"
+                android:minWidth="0dp"
+                android:minHeight="32dp"
+                android:padding="6dp"
+                android:scaleType="centerInside"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_results_grid"
+                android:contentDescription="切換視圖：列表、語言在左、語言在上"
+                app:tint="?android:attr/textColorPrimary" />
 
         </LinearLayout>
 

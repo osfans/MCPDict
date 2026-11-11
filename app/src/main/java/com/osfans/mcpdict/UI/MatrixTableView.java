@@ -94,6 +94,9 @@ public class MatrixTableView {
     private int horizontalAnchorOffsetPx = 0;
     private boolean syncingHorizontalScroll = false;
 
+    private java.util.Set<String> selectedCharacters;
+    public void setSelectedCharacters(java.util.Set<String> selected, Cursor cursor) { selectedCharacters=selected; setCursor(cursor); }
+
     private final List<String> hzOrder = new ArrayList<>();
     private final List<String> langOrder = new ArrayList<>();
     private final LinkedHashMap<String, LinkedHashMap<String, List<Reading>>> byHz = new LinkedHashMap<>();
@@ -241,6 +244,7 @@ public class MatrixTableView {
                 continue;
             }
 
+            if(selectedCharacters!=null && !selectedCharacters.contains(hz)) continue;
             hzSeen.add(hz);
             langSeen.add(lang);
             Reading reading = new Reading(hz, lang, ipa, zs);
@@ -676,6 +680,7 @@ public class MatrixTableView {
             tv.setText(hz);
         }
 
+        tv.setOnClickListener(v -> CharacterDetails.show(context,hz));
         return tv;
     }
 

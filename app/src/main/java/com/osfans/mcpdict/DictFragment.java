@@ -87,6 +87,22 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         buttonFullscreen.setOnClickListener(v -> toggleFullscreen());
         setFullscreen(Pref.getBool(R.string.pref_key_fullscreen, false));
 
+        selfView.findViewById(R.id.button_view_toggle).setOnClickListener(v -> {
+            if (fragmentResult == null) return;
+            String state;
+            if (!fragmentResult.isTableMode()) {
+                fragmentResult.showTableMode(MatrixTableView.Orientation.LANGUAGES_AS_ROWS);
+                state = "語言在左";
+            } else if (fragmentResult.getTableOrientation() == MatrixTableView.Orientation.LANGUAGES_AS_ROWS) {
+                fragmentResult.showTableMode(MatrixTableView.Orientation.CHARACTERS_AS_ROWS);
+                state = "語言在上";
+            } else {
+                fragmentResult.showListMode();
+                state = "列表";
+            }
+            v.setContentDescription("目前：" + state + "；點擊切換下一個視圖");
+            androidx.appcompat.widget.TooltipCompat.setTooltipText(v, state);
+        });
         selfView.findViewById(R.id.button_hz_option).setOnClickListener(v -> {
             PopupMenu popup = new PopupMenu(v.getContext(), v);
             popup.inflate(R.menu.tool);
@@ -118,83 +134,6 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                 default -> islandHistoryId = R.id.menu_item_both_island_history;
             }
             menu.findItem(islandHistoryId).setChecked(true);
-
-            // Result view mode controls live in the existing second-row "…" menu
-            // instead of occupying a permanent row above the results.
-            final int menuViewListId = View.generateViewId();
-            final int menuViewTableId = View.generateViewId();
-            final int menuTableOrientationGroupId = View.generateViewId();
-            final int menuTableLangRowsId = View.generateViewId();
-            final int menuTableHzRowsId = View.generateViewId();
-
-            MenuItem listModeItem = menu.add(
-                    Menu.NONE, menuViewListId, 1000, R.string.view_mode_list);
-            listModeItem.setEnabled(fragmentResult != null && fragmentResult.isTableMode());
-
-            SubMenu tableModeMenu = menu.addSubMenu(
-                    Menu.NONE, menuViewTableId, 1001, R.string.view_mode_table);
-            MenuItem langRowsItem = tableModeMenu.add(
-                    menuTableOrientationGroupId,
-                    menuTableLangRowsId,
-                    0,
-                    R.string.table_languages_as_rows);
-            MenuItem hzRowsItem = tableModeMenu.add(
-                    menuTableOrientationGroupId,
-                    menuTableHzRowsId,
-                    1,
-                    R.string.table_characters_as_rows);
-            tableModeMenu.setGroupCheckable(
-                    menuTableOrientationGroupId,
-                    true,
-                    false
-            );
-
-            MatrixTableView.Orientation currentOrientation =
-                    Pref.isTableLanguageLeft()
-                            ? MatrixTableView.Orientation.LANGUAGES_AS_ROWS
-                            : MatrixTableView.Orientation.CHARACTERS_AS_ROWS;
-
-            boolean languageLeft = Pref.isTableLanguageLeft();
-
-            langRowsItem.setChecked(languageLeft);
-            hzRowsItem.setChecked(!languageLeft);
-
-            // Attach listeners directly to the dynamically-created view-mode items.
-            // Some AppCompat PopupMenu implementations do not reliably forward
-            // submenu child taps to the parent PopupMenu listener.  Direct listeners
-            // make both “語言在行” and “漢字在行” work consistently.
-            listModeItem.setOnMenuItemClickListener(clicked -> {
-                if (fragmentResult != null) fragmentResult.showListMode();
-                return true;
-            });
-            langRowsItem.setOnMenuItemClickListener(clicked -> {
-
-                // 永久保存用户选择
-                Pref.setTableLanguageLeft(true);
-
-                if (fragmentResult != null) {
-                    fragmentResult.showTableMode(
-                            MatrixTableView.Orientation.LANGUAGES_AS_ROWS
-                    );
-                }
-
-                return true;
-            });
-
-
-            hzRowsItem.setOnMenuItemClickListener(clicked -> {
-
-                // 永久保存用户选择
-                Pref.setTableLanguageLeft(false);
-
-                if (fragmentResult != null) {
-                    fragmentResult.showTableMode(
-                            MatrixTableView.Orientation.CHARACTERS_AS_ROWS
-                    );
-                }
-
-                return true;
-            });
 
             popup.setOnMenuItemClickListener(item1 -> {
                 int id = item1.getItemId();
@@ -745,7 +684,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         Pref.putBool(R.string.pref_key_fullscreen, full);
         setFullscreen(full);
     }
-    
+
     private void search() {
         if (mInitialized) searchView.setQuery(searchView.getQuery(), true);
     }
