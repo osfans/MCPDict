@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.osfans.mcpdict.Adapter.LanguageAdapter;
+import com.osfans.mcpdict.Orth.DisplayHelper;
 import com.osfans.mcpdict.UI.CharacterDetails;
 import com.osfans.mcpdict.Util.App;
 import com.osfans.mcpdict.Util.FontUtil;
@@ -33,6 +34,7 @@ public class PhonologyActivity extends AppCompatActivity {
     private RecyclerView results;
     private LinearLayout chartBox;
     private final List<Group> groups=new ArrayList<>();
+    private final List<Group> historicalComparisonGroups = new ArrayList<>();
     private final List<Middle> ancient=new ArrayList<>();
     private static volatile List<Middle> sharedAncient;
     private final Map<String,Set<String>> filters=new LinkedHashMap<>();
@@ -49,6 +51,12 @@ public class PhonologyActivity extends AppCompatActivity {
     private boolean loadSoundsOnly;
     private static final int[] PALETTE={0xFFE65100,0xFF43A047,0xFF1976D2,0xFFAD1457,0xFF8E24AA,0xFF00897B,0xFFF9A825,0xFF6D4C41,0xFF3949AB,0xFF00ACC1,0xFF9E9E9E};
     private int displayedMode;
+    private int minimumLinkCharacters, minimumNodeCharacters, sankeyCommonCount;
+    private boolean ignoreMultisyllables;
+
+    private record SankeyEntry(String reading, String value) {}
+    private record MapLocation(String coordinate, int level, boolean historical, boolean island,
+                               String language, String place) {}
     static class Middle {String chars;String[] values;}
     public static class Group {
         public String left,right;
@@ -82,7 +90,18 @@ public class PhonologyActivity extends AppCompatActivity {
         HorizontalScrollView candidatesScroll=new HorizontalScrollView(this);characterChoices=new LinearLayout(this);candidatesScroll.addView(characterChoices);root.addView(candidatesScroll);candidatesScroll.setVisibility(moduleId==2||moduleId==4?View.VISIBLE:View.GONE);
         character.addTextChangedListener(new android.text.TextWatcher(){public void beforeTextChanged(CharSequence s,int start,int count,int after){}public void onTextChanged(CharSequence s,int start,int before,int count){int request=++candidateGeneration;String input=s.toString().trim();selectedCharacters.clear();selectedSounds.clear();groups.clear();comparisonMap.setVisibility(View.GONE);tableHeader.setVisibility(View.GONE);results.getAdapter().notifyDataSetChanged();characterChoices.removeAllViews();generation++;main.postDelayed(()->{if(request!=candidateGeneration||destroyed)return;worker.execute(()->resolveCandidates(input,request));},250);}public void afterTextChanged(android.text.Editable e){}});
         LinearLayout maps=new LinearLayout(this);mapMode=spinner(new String[]{"繪製全部地圖","繪製所選音值（可多選）"});maps.addView(mapMode,new LinearLayout.LayoutParams(0,-2,1));soundPicker=new Button(this);soundPicker.setText("音值 ▾");soundPicker.setOnClickListener(v->{if(groups.isEmpty()){loadSoundsOnly=true;run();}else chooseSounds();});maps.addView(soundPicker);root.addView(maps);maps.setVisibility(moduleId==2?View.VISIBLE:View.GONE);
-        Button run=new Button(this);run.setText(moduleId==2?"生成地圖":moduleId==3?"生成桑基圖":moduleId==4?"比較字音":"生成對應表");run.setOnClickListener(v->{loadSoundsOnly=false;run();});root.addView(run);
+        Button run=new Button(this);run.setText(moduleId==2?"生成地圖":moduleId==3?"生成桑基圖":moduleId==4?"比較字音":"生成對應表");run.setOnClickListener(v->{loadSoundsOnly=false;run();});
+        if (moduleId == 3) {
+            LinearLayout actions = new LinearLayout(this);
+            actions.addView(run, new LinearLayout.LayoutParams(0, -2, 1));
+            Button options = new Button(this);
+            options.setText("桑基圖設定");
+            options.setOnClickListener(v -> showSankeyOptions());
+            actions.addView(options);
+            root.addView(actions);
+        } else {
+            root.addView(run);
+        }
         comparisonMap=new Button(this);comparisonMap.setText("全部地圖");comparisonMap.setVisibility(View.GONE);comparisonMap.setOnClickListener(v->drawComparisonMap(null));root.addView(comparisonMap);
         status=new TextView(this);status.setTextSize(12);status.setMaxLines(2);root.addView(status);
         tableHeader=new LinearLayout(this);root.addView(tableHeader);tableHeader.setVisibility(View.GONE);
@@ -134,36 +153,196 @@ public class PhonologyActivity extends AppCompatActivity {
         if(cursor!=null)try{for(cursor.moveToFirst();!cursor.isAfterLast();cursor.moveToNext()){String group=cursor.getString(0),raw=cursor.getString(1);if(raw==null)continue;for(String value:raw.split("\\t",-1)){if(value.isBlank())continue;String reading=com.osfans.mcpdict.Orth.DisplayHelper.getIPA(label,value).toString().trim();if(reading.isEmpty())continue;group.codePoints().filter(cp->Character.UnicodeScript.of(cp)==Character.UnicodeScript.HAN).forEach(cp->map.computeIfAbsent(new String(Character.toChars(cp)),k->new LinkedHashSet<>()).add(reading));}}}finally{cursor.close();}
         cache.put(label,map);while(cache.size()>2)cache.remove(cache.keySet().iterator().next());return map;
     }
+    private Map<String, Set<SankeyEntry>> sankeyReadings(String language, int dimension, boolean ignoreMulti) {
+        String label = DB.getLabelByLanguage(language);
+        if (TextUtils.isEmpty(label)) {
+            throw new IllegalArgumentException("請從候選列表選擇完整語言名稱");
+        }
+        Map<String, String> tones = new HashMap<>();
+        JSONObject toneConfig = dimension == 2 ? DB.getToneName(label) : null;
+        if (toneConfig != null) {
+            for (Iterator<String> keys = toneConfig.keys(); keys.hasNext();) {
+                String code = keys.next();
+                JSONArray styles = toneConfig.optJSONArray(code);
+                String name = styles == null || styles.isNull(3) ? "" : styles.optString(3).trim();
+                if (!name.isEmpty()) tones.put(code, name + "（" + code + "）");
+            }
+        }
+        Map<String, Set<SankeyEntry>> byCharacter = new HashMap<>();
+        Map<String, Optional<SankeyEntry>> byRaw = new HashMap<>();
+        String match = "\"" + label.replace("\"", "\"\"").replace("'", "''") + "\"";
+        try (android.database.Cursor cursor = DB.getCursor("select 字組,讀音 from langs where 語言 MATCH '" + match + "'")) {
+            while (cursor != null && cursor.moveToNext() && !Thread.currentThread().isInterrupted()) {
+                String raw = cursor.getString(1);
+                if (raw == null) continue;
+                Set<SankeyEntry> entries = new LinkedHashSet<>();
+                for (String reading : raw.split("\\t")) {
+                    byRaw.computeIfAbsent(reading, key -> Optional.ofNullable(sankeyEntry(label, key,
+                            dimension, ignoreMulti, tones))).ifPresent(entries::add);
+                }
+                if (entries.isEmpty()) continue;
+                cursor.getString(0).codePoints().filter(cp -> Character.UnicodeScript.of(cp) == Character.UnicodeScript.HAN)
+                        .forEach(cp -> byCharacter.computeIfAbsent(new String(Character.toChars(cp)),
+                                key -> new LinkedHashSet<>()).addAll(entries));
+            }
+        }
+        return byCharacter;
+    }
+
+    private SankeyEntry sankeyEntry(String label, String raw, int dimension, boolean ignoreMulti,
+                                    Map<String, String> tones) {
+        List<String> syllables = SankeyReading.syllables(raw);
+        if (syllables.isEmpty() || (ignoreMulti && syllables.size() > 1)) return null;
+        List<String> values = new ArrayList<>(syllables.size());
+        for (String syllable : syllables) {
+            String ipa = DisplayHelper.getIPA(label, syllable).toString().trim();
+            values.add(dimension == 2 ? SankeyReading.tone(syllable, ipa, tones)
+                    : PhoneticParts.parse(ipa).dimension(dimension));
+        }
+        return new SankeyEntry(DisplayHelper.getIPA(label, raw).toString().trim(), String.join(" · ", values));
+    }
+
+    private void showSankeyOptions() {
+        LinearLayout content = new LinearLayout(this);
+        content.setOrientation(LinearLayout.VERTICAL);
+        content.setPadding(dp(20), dp(8), dp(20), dp(8));
+        SeekBar link = sankeyThreshold(content, "連線最少字數", 50, minimumLinkCharacters);
+        SeekBar node = sankeyThreshold(content, "節點最少字數", 100, minimumNodeCharacters);
+        CheckBox ignore = new CheckBox(this);
+        ignore.setText("忽略多音節讀音");
+        ignore.setChecked(ignoreMultisyllables);
+        content.addView(ignore);
+        applyFonts(content);
+        ScrollView scroll = new ScrollView(this);
+        scroll.addView(content);
+        new AlertDialog.Builder(this).setTitle("桑基圖設定").setView(scroll)
+                .setNegativeButton("取消", null).setPositiveButton("套用", (dialog, button) -> {
+                    boolean recalculate = ignoreMultisyllables != ignore.isChecked();
+                    minimumLinkCharacters = link.getProgress();
+                    minimumNodeCharacters = node.getProgress();
+                    ignoreMultisyllables = ignore.isChecked();
+                    if (displayedMode == 3 || sankeyPending) {
+                        if (recalculate) run();
+                        else if (!sankeyPending) renderSankey();
+                    }
+                }).show();
+    }
+
+    private SeekBar sankeyThreshold(LinearLayout content, String name, int maximum, int value) {
+        TextView label = new TextView(this);
+        label.setText(name + "：" + value);
+        content.addView(label);
+        SeekBar bar = new SeekBar(this);
+        bar.setContentDescription(name);
+        bar.setMax(maximum);
+        bar.setProgress(value);
+        bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                label.setText(name + "：" + progress);
+            }
+            @Override public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+        content.addView(bar);
+        return bar;
+    }
+
+    private boolean sankeyPending;
+
+    private void renderSankey() {
+        int request = generation;
+        int linkMinimum = minimumLinkCharacters;
+        int nodeMinimum = minimumNodeCharacters;
+        int total = sankeyCommonCount;
+        List<Group> snapshot = new ArrayList<>(groups);
+        worker.execute(() -> {
+            List<Group> visible = new ArrayList<>();
+            for (Group group : snapshot) {
+                if (group.characters.size() >= linkMinimum) visible.add(group);
+            }
+            // Count distinct characters per node. Removing a node can shrink its neighbours.
+            if (nodeMinimum > 0) {
+                boolean removed;
+                do {
+                    Map<String, Set<String>> left = new HashMap<>(), right = new HashMap<>();
+                    for (Group group : visible) {
+                        left.computeIfAbsent(group.left, key -> new HashSet<>()).addAll(group.characters);
+                        right.computeIfAbsent(group.right, key -> new HashSet<>()).addAll(group.characters);
+                    }
+                    removed = visible.removeIf(group -> left.get(group.left).size() < nodeMinimum
+                            || right.get(group.right).size() < nodeMinimum);
+                } while (removed);
+            }
+            Set<String> shown = new HashSet<>();
+            for (Group group : visible) shown.addAll(group.characters);
+            main.post(() -> {
+                if (destroyed || request != generation || linkMinimum != minimumLinkCharacters
+                        || nodeMinimum != minimumNodeCharacters) return;
+                chartBox.removeAllViews();
+                if (visible.isEmpty()) {
+                    setStatus(total == 0 ? "沒有符合條件的共同字" : "沒有符合門檻的連線 · 共同字 " + total);
+                    return;
+                }
+                setStatus(visible.size() + " 條連線 · 顯示共同字 " + shown.size() + "／" + total);
+                ScrollView scroll = new ScrollView(this);
+                scroll.setScrollbarFadingEnabled(false);
+                scroll.addView(new SankeyView(this, visible, group -> showExamples(group, 3)),
+                        new ScrollView.LayoutParams(-1, -2));
+                chartBox.addView(scroll, new LinearLayout.LayoutParams(-1, -1));
+            });
+        });
+    }
+
     private void add(Map<String,Group> output,String left,String right,String hz,String reading){Group g=output.computeIfAbsent(left+"\t"+right,k->{Group value=new Group();value.left=left;value.right=right;return value;});g.characters.add(hz);g.examples.add(hz+" /"+reading+"/");g.detail.computeIfAbsent(hz,k->new TreeSet<>()).add(reading);}
     private void run(){
         final int selectedMode=mode.getSelectedItemPosition(),mi=middle.getSelectedItemPosition(),di=modern.getSelectedItemPosition(),request=++generation;
+        final boolean ignoreMulti = ignoreMultisyllables;
+        sankeyPending = selectedMode == 3;
+        displayedMode = -1;
+        historicalComparisonGroups.clear();
         String a=first.getText().toString().trim(),b=second.getText().toString().trim(),hz=character.getText().toString().trim();Map<String,Set<String>> selected=new HashMap<>();for(String key:filters.keySet())selected.put(key,new LinkedHashSet<>(filters.get(key)));Set<String> chosenCharacters=new LinkedHashSet<>(selectedCharacters);List<Middle> positions=new ArrayList<>(ancient);
         setStatus("正在分析…");groups.clear();comparisonMap.setVisibility(View.GONE);tableHeader.setVisibility(View.GONE);results.getAdapter().notifyDataSetChanged();chartBox.removeAllViews();
         worker.execute(()->{try {
             if(request!=generation)return;
             Map<String,Group> output=new TreeMap<>();Set<String> common=new HashSet<>();
+            Map<String, Group> historicalComparison = new TreeMap<>();
             if(selectedMode==2){
                 if(hz.codePointCount(0,hz.length())!=1)throw new IllegalArgumentException("請輸入一個漢字，再選擇繁簡候選");
                 if(chosenCharacters.isEmpty())throw new IllegalArgumentException("請先勾選漢字");
-                Set<String> seen=new HashSet<>();Map<String,List<String>> formatted=new HashMap<>();Map<String,String> historyCache=new HashMap<>();
+                Set<String> seen=new HashSet<>();Map<String,List<String>> formatted=new HashMap<>();
                 for(String variant:chosenCharacters){String match="\""+variant.replace("\"","\"\"")+"\"";android.database.Cursor cursor=DB.getCursor("select 語言,讀音 from langs where 字組 MATCH '"+match.replace("'","''")+"'");
-                    if(cursor!=null)try{for(cursor.moveToFirst();!cursor.isAfterLast();cursor.moveToNext()){String label=cursor.getString(0),raw=cursor.getString(1);String history=historyCache.computeIfAbsent(label,k->DB.getFieldByLabel(k,"歷史音"));if(history!=null&&!history.isEmpty()&&!history.equals("0"))continue;if(raw==null)continue;String key=label+"\t"+raw;List<String> readings=formatted.get(key);if(readings==null){readings=new ArrayList<>();for(String part:raw.split("\\t",-1))if(!part.isBlank())readings.add(com.osfans.mcpdict.Orth.DisplayHelper.getIPA(label,part).toString());formatted.put(key,readings);}for(String ipa:readings){if(ipa.isBlank()||!seen.add(variant+"\t"+label+"\t"+ipa))continue;add(output,PhoneticParts.parse(ipa).dimension(di),"各語言",label,variant+" /"+ipa+"/");}}}finally{cursor.close();}
+                    if(cursor!=null)try{for(cursor.moveToFirst();!cursor.isAfterLast();cursor.moveToNext()){String label=cursor.getString(0),raw=cursor.getString(1);if(raw==null)continue;String key=label+"\t"+raw;List<String> readings=formatted.get(key);if(readings==null){readings=new ArrayList<>();for(String part:raw.split("\\t",-1))if(!part.isBlank())readings.add(DisplayHelper.getIPA(label,part).toString());formatted.put(key,readings);}for(String ipa:readings){if(ipa.isBlank()||!seen.add(variant+"\t"+label+"\t"+ipa))continue;add(output,PhoneticParts.parse(ipa).dimension(di),"各語言",label,variant+" /"+ipa+"/");}}}finally{cursor.close();}
                 }
             }else if(selectedMode==3){
-                Map<String,Set<String>> left=readings(a),right=readings(b);
-                for(String c:left.keySet()){if(!right.containsKey(c))continue;common.add(c);for(String x:left.get(c))for(String y:right.get(c))add(output,PhoneticParts.parse(x).dimension(di),PhoneticParts.parse(y).dimension(di),c,a+" "+x+" → "+b+" "+y);}
+                Map<String, Set<SankeyEntry>> left = sankeyReadings(a, di, ignoreMulti);
+                Map<String, Set<SankeyEntry>> right = a.equals(b) ? left : sankeyReadings(b, di, ignoreMulti);
+                for (String c : left.keySet()) {
+                    if (!right.containsKey(c)) continue;
+                    common.add(c);
+                    for (SankeyEntry x : left.get(c)) for (SankeyEntry y : right.get(c)) {
+                        add(output, x.value(), y.value(), c, a + " " + x.reading() + " → " + b + " " + y.reading());
+                    }
+                }
             }else if(selectedMode==4){
                 if(chosenCharacters.size()<2)throw new IllegalArgumentException("請至少勾選兩個要比較的漢字");
                 Map<String,Map<String,Set<String>>> byLanguage=new TreeMap<>();
-                android.database.Cursor languages=DB.getCursor("select 簡稱 from info where 音節數 is not null and (歷史音 is null or 歷史音='' or 歷史音=0 or 歷史音='0')");
-                if(languages!=null)try{for(languages.moveToFirst();!languages.isAfterLast();languages.moveToNext())byLanguage.put(languages.getString(0),new LinkedHashMap<>());}finally{languages.close();}
+                android.database.Cursor languages=DB.getCursor("select 簡稱,歷史音 from info where 音節數 is not null");
+                Set<String> historicalLanguages = new HashSet<>();
+                if (languages != null) try (languages) {
+                    while (languages.moveToNext()) {
+                        String label = languages.getString(0);
+                        byLanguage.put(label, new LinkedHashMap<>());
+                        if (isHistorical(languages.getString(1))) historicalLanguages.add(label);
+                    }
+                }
                 Map<String,List<String>> formatted=new HashMap<>();
                 for(String c:chosenCharacters){String match="\""+c.replace("\"","\"\"")+"\"";android.database.Cursor cursor=DB.getCursor("select 語言,讀音 from langs where 字組 MATCH '"+match.replace("'","''")+"'");
                     if(cursor!=null)try{for(cursor.moveToFirst();!cursor.isAfterLast();cursor.moveToNext()){String label=cursor.getString(0),raw=cursor.getString(1);if(raw==null||!byLanguage.containsKey(label))continue;String key=label+"\t"+raw;List<String> pronunciations=formatted.get(key);if(pronunciations==null){pronunciations=new ArrayList<>();for(String part:raw.split("\\t",-1))if(!part.isBlank())pronunciations.add(com.osfans.mcpdict.Orth.DisplayHelper.getIPA(label,part).toString().trim());formatted.put(key,pronunciations);}for(String ipa:pronunciations)if(!ipa.isBlank())byLanguage.get(label).computeIfAbsent(c,k->new LinkedHashSet<>()).add(ipa);}}finally{cursor.close();}
                 }
                 String wordGroup=TextUtils.join("、",chosenCharacters);
                 for(String label:byLanguage.keySet()){List<Set<String>> parts=new ArrayList<>();List<String> detail=new ArrayList<>();for(String c:chosenCharacters){Set<String> readings=byLanguage.get(label).getOrDefault(c,Collections.emptySet());Set<String> observed=new HashSet<>();for(String ipa:readings)observed.add(PhoneticParts.parse(ipa).dimension(di));parts.add(observed);detail.add(c+"："+(readings.isEmpty()?"缺資料":"/"+TextUtils.join("/、/",readings)+"/")+"〔"+modernLabel(di)+"："+(observed.isEmpty()?"缺資料":TextUtils.join("、",new TreeSet<>(observed)))+"〕");}
-                    add(output,wordGroup,CharacterSoundComparison.classify(parts),label,TextUtils.join("\n",detail));
+                    add(historicalLanguages.contains(label) ? historicalComparison : output, wordGroup,
+                            CharacterSoundComparison.classify(parts), label, TextUtils.join("\n",detail));
                 }
             }else {
                 if(positions.isEmpty())throw new IllegalArgumentException("中古資料尚未載入，請稍後再試");Map<String,Set<String>> dialect=readings(a);
@@ -173,11 +352,15 @@ public class PhonologyActivity extends AppCompatActivity {
                 }
             }
             Map<String,Set<String>> coverage=new HashMap<>();for(Group g:output.values())coverage.computeIfAbsent(g.left,k->new HashSet<>()).addAll(g.characters);for(Group g:output.values())g.sourceTotal=coverage.get(g.left).size();List<Group> data=new ArrayList<>(output.values());data.sort((x,y)->Integer.compare(y.characters.size(),x.characters.size()));int commonCount=common.size();
-            main.post(()->{if(destroyed||request!=generation)return;displayedMode=selectedMode;groups.addAll(data);tableHeader.setVisibility(selectedMode==0||selectedMode==1||selectedMode==4?View.VISIBLE:View.GONE);results.getAdapter().notifyDataSetChanged();setStatus(data.size()+" 組"+(selectedMode==3?" · 共同字 "+commonCount+" · 點擊流帶查看詳情":" · 點擊一列查看詳情"));if(selectedMode==4){int points=0;for(Group g:data)points+=g.characters.size();setStatus("共 "+data.size()+" 類情況 · "+points+" 個方言點");comparisonMap.setVisibility(data.isEmpty()?View.GONE:View.VISIBLE);}
-                if(selectedMode==3){ScrollView scroll=new ScrollView(this);scroll.setVerticalScrollBarEnabled(true);scroll.setScrollbarFadingEnabled(false);scroll.addView(new SankeyView(this,data,g->showExamples(g,selectedMode)),new ScrollView.LayoutParams(-1,-2));chartBox.addView(scroll,new LinearLayout.LayoutParams(-1,-1));}
+            main.post(()->{if(destroyed||request!=generation)return;displayedMode=selectedMode;groups.addAll(data);tableHeader.setVisibility(selectedMode==0||selectedMode==1||selectedMode==4?View.VISIBLE:View.GONE);results.getAdapter().notifyDataSetChanged();setStatus(data.size()+" 組 · 點擊一列查看詳情");if(selectedMode==4){int points=0;for(Group g:data)points+=g.characters.size();setStatus("共 "+data.size()+" 類情況 · "+points+" 個方言點");historicalComparisonGroups.addAll(historicalComparison.values());comparisonMap.setVisibility(data.isEmpty()&&historicalComparisonGroups.isEmpty()?View.GONE:View.VISIBLE);}
+                if (selectedMode == 3) {
+                    sankeyPending = false;
+                    sankeyCommonCount = commonCount;
+                    renderSankey();
+                }
                 if(selectedMode==2){if(loadSoundsOnly){loadSoundsOnly=false;chooseSounds();}else if(mapMode.getSelectedItemPosition()==1&&selectedSounds.isEmpty())chooseSounds();else drawSoundMap();}
             });
-        }catch(Exception e){main.post(()->{if(!destroyed&&request==generation)setStatus("分析失敗："+e.getMessage());});}});
+        }catch(Exception e){main.post(()->{if(!destroyed&&request==generation){sankeyPending=false;setStatus("分析失敗："+e.getMessage());}});}});
     }
     private void error(Exception e){main.post(()->{if(!destroyed)setStatus("載入失敗："+e.getMessage());});}
     private TextView cell(String value,int column){TextView text=new TextView(this);text.setTextAppearance(R.style.FontDetail);FontUtil.setTypeface(text);text.setTextSize(14);text.setText(value);text.setPadding(dp(5),dp(7),dp(5),dp(7));text.setLayoutParams(column<3?new LinearLayout.LayoutParams(dp(column==2?44:column==0?60:76),-2):new LinearLayout.LayoutParams(0,-2,1));return text;}
@@ -193,23 +376,76 @@ public class PhonologyActivity extends AppCompatActivity {
         boolean single=mapMode.getSelectedItemPosition()==1;if(single&&selectedSounds.isEmpty()){Toast.makeText(this,"請選擇音值",Toast.LENGTH_SHORT).show();return;}
         List<Group> snapshot=new ArrayList<>(groups);Set<String> wanted=new LinkedHashSet<>(selectedSounds);int colorChoice=selectedColor,request=++generation;String title=character.getText()+" · "+modern.getSelectedItem(),dimension=modern.getSelectedItem().toString();setStatus("正在繪製地圖…");
         worker.execute(()->{try{
-        Map<String,JSONObject> points=new LinkedHashMap<>();Map<String,Set<Integer>> colors=new LinkedHashMap<>();Map<String,List<String>> details=new LinkedHashMap<>();List<String> legend=new ArrayList<>();List<Integer> legendColors=new ArrayList<>();boolean other=false;
-        for(int i=0;i<snapshot.size();i++){Group g=snapshot.get(i);if(single&&!wanted.contains(g.left))continue;int color=single?colorChoice:PALETTE[Math.min(i,10)];if(single||i<10){legend.add(g.left+"（"+g.characters.size()+" 點）");legendColors.add(color);}else other=true;
-            for(String label:g.detail.keySet())try{String coordinate=DB.getFieldByLabel(label,"經緯度");if(coordinate==null||coordinate.isBlank())continue;JSONObject row=points.get(label);if(row==null){row=new JSONObject();row.put("label",label);row.put("coordinate",coordinate);row.put("mapLevel",level(label));points.put(label,row);}colors.computeIfAbsent(label,k->new LinkedHashSet<>()).add(color);details.computeIfAbsent(label,k->new ArrayList<>()).add(g.left+"："+TextUtils.join("、",g.detail.get(label)));}catch(JSONException ignored){}
+        Map<String, MapLocation> locations = loadMapLocations();
+        Map<String,JSONObject> points=new LinkedHashMap<>();Map<String,Set<Integer>> colors=new LinkedHashMap<>();Map<String,List<String>> details=new LinkedHashMap<>();List<String> legend=new ArrayList<>();List<Integer> legendColors=new ArrayList<>();
+        Map<String, Set<Integer>> memberships = new HashMap<>();
+        for(int i=0;i<snapshot.size();i++){Group g=snapshot.get(i);if(single&&!wanted.contains(g.left))continue;int color=single?colorChoice:PALETTE[Math.min(i,10)];
+            int legendIndex = single ? legend.size() : Math.min(i, 10);
+            if (legendIndex == legend.size()) {
+                legend.add(single || i < 10 ? g.left : "其他");
+                legendColors.add(color);
+            }
+            for (String label : g.detail.keySet()) {
+                JSONObject row = points.get(label);
+                if (row == null) {
+                    MapLocation location = locations.get(label);
+                    if (location == null) continue;
+                    row = mapPoint(label, location);
+                    points.put(label, row);
+                }
+                memberships.computeIfAbsent(label, key -> new LinkedHashSet<>()).add(legendIndex);
+                colors.computeIfAbsent(label, key -> new LinkedHashSet<>()).add(color);
+                details.computeIfAbsent(label, key -> new ArrayList<>()).add(g.left + "：" + TextUtils.join("、", g.detail.get(label)));
+            }
         }
-        if(other){legend.add("其他");legendColors.add(PALETTE[10]);}JSONArray data=new JSONArray();for(String label:points.keySet())try{JSONObject row=points.get(label);row.put("color",colors.get(label).iterator().next());row.put("colors",new JSONArray(colors.get(label)));row.put("detail",DB.getLanguageByLabel(label)+"\n"+DB.getFieldByLabel(label,"地點")+"\n"+dimension+"\n"+TextUtils.join("\n",details.get(label)));data.put(row);}catch(JSONException ignored){}
+        JSONArray data=new JSONArray();for(String label:points.keySet()){JSONObject row=points.get(label);MapLocation location=locations.get(label);row.put("legendItems",new JSONArray(memberships.get(label)));row.put("color",colors.get(label).iterator().next());row.put("colors",new JSONArray(colors.get(label)));row.put("detail",location.language()+"\n"+location.place()+"\n"+dimension+"\n"+TextUtils.join("\n",details.get(label)));data.put(row);}
         if(data.length()==0){main.post(()->{if(!destroyed&&request==generation){setStatus("所選音值沒有可用座標");Toast.makeText(this,"所選音值沒有可用座標",Toast.LENGTH_SHORT).show();}});return;}
         int[] palette=new int[legendColors.size()];for(int i=0;i<palette.length;i++)palette[i]=legendColors.get(i);
         main.post(()->{if(destroyed||request!=generation)return;setStatus(data.length()+" 個地點");com.osfans.mcpdict.UI.MapView.showThematic(this,data,title,legend.toArray(new String[0]),palette);});
         }catch(Exception e){error(e);}});
     }
-    private int level(String label){try{return Integer.parseInt(DB.getFieldByLabel(label,"地圖級別"));}catch(Exception e){return 0;}}
+    private static boolean isHistorical(String value) {
+        return !TextUtils.isEmpty(value) && !value.equals("0");
+    }
+
+    private Map<String, MapLocation> loadMapLocations() {
+        Map<String, MapLocation> locations = new HashMap<>();
+        try (android.database.Cursor cursor = DB.getCursor(
+                "SELECT 簡稱, 經緯度, 地圖級別, 歷史音, 方言島, 語言, 地點 FROM info WHERE length(經緯度) > 0")) {
+            while (cursor != null && cursor.moveToNext()) {
+                String label = cursor.getString(0);
+                String coordinate = cursor.getString(1);
+                if (TextUtils.isEmpty(label) || coordinate == null || coordinate.isBlank()) continue;
+                locations.putIfAbsent(label, new MapLocation(coordinate, cursor.getInt(2),
+                        isHistorical(cursor.getString(3)), "1".equals(cursor.getString(4)),
+                        Objects.toString(cursor.getString(5), ""), Objects.toString(cursor.getString(6), "")));
+            }
+        }
+        return locations;
+    }
+
+    private JSONObject mapPoint(String label, MapLocation location) throws JSONException {
+        JSONObject row = new JSONObject();
+        row.put("label", label);
+        row.put("coordinate", location.coordinate());
+        row.put("mapLevel", location.level());
+        row.put("historical", location.historical());
+        row.put("island", location.island());
+        return row;
+    }
+
     private void drawComparisonMap(Group selected){
-        List<Group> snapshot=selected==null?new ArrayList<>(groups):Collections.singletonList(selected);
+        List<Group> snapshot = selected == null ? new ArrayList<>(groups) : new ArrayList<>(List.of(selected));
+        for (Group group : historicalComparisonGroups) {
+            if (selected == null || selected.right.equals(group.right)) snapshot.add(group);
+        }
         int request=++generation;String title=selected==null?"字音比較 · 全部地圖":"字音比較 · "+selected.right;setStatus("正在繪製地圖…");
         worker.execute(()->{try{JSONArray data=new JSONArray();List<String> legend=new ArrayList<>();List<Integer> palette=new ArrayList<>();
-            for(Group g:snapshot){int color=g.right.equals("全同")?0xFF15803D:g.right.equals("部分相同")?0xFFCA8A04:g.right.equals("全異")?0xFFDC2626:0xFF94A3B8;legend.add(g.right+"（"+g.characters.size()+" 點）");palette.add(color);
-                for(String label:g.detail.keySet()){String coordinate=DB.getFieldByLabel(label,"經緯度");if(coordinate==null||coordinate.isBlank())continue;JSONObject row=new JSONObject();row.put("label",label);row.put("coordinate",coordinate);row.put("mapLevel",level(label));row.put("color",color);row.put("detail",DB.getLanguageByLabel(label)+"\n"+DB.getFieldByLabel(label,"地點")+"\n"+g.left+" · "+g.right+"\n"+TextUtils.join("\n",g.detail.get(label)));data.put(row);}
+            Map<String, MapLocation> locations = loadMapLocations();
+            for(Group g:snapshot){int color=g.right.equals("全同")?0xFF15803D:g.right.equals("部分相同")?0xFFCA8A04:g.right.equals("全異")?0xFFDC2626:0xFF94A3B8;
+                int legendIndex = legend.indexOf(g.right);
+                if (legendIndex < 0) { legendIndex = legend.size(); legend.add(g.right); palette.add(color); }
+                for(String label:g.detail.keySet()){MapLocation location=locations.get(label);if(location==null)continue;JSONObject row=mapPoint(label,location);row.put("legendItems",new JSONArray().put(legendIndex));row.put("color",color);row.put("detail",location.language()+"\n"+location.place()+"\n"+g.left+" · "+g.right+"\n"+TextUtils.join("\n",g.detail.get(label)));data.put(row);}
             }
             int[] colors=new int[palette.size()];for(int i=0;i<colors.length;i++)colors[i]=palette.get(i);
             main.post(()->{if(destroyed||request!=generation)return;if(data.length()==0){setStatus("沒有可用座標");return;}setStatus("共 "+groups.size()+" 類情況 · "+data.length()+" 個可繪製地點");com.osfans.mcpdict.UI.MapView.showThematic(this,data,title,legend.toArray(new String[0]),colors);});

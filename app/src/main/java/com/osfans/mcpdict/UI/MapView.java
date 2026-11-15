@@ -9,8 +9,11 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.text.TextUtils;
 import android.view.MotionEvent;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.SwitchCompat;
 
 import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.Orth.DisplayHelper;
@@ -48,6 +51,11 @@ public class MapView extends org.osmdroid.views.MapView {
     List<String> levels = Arrays.asList("province", "city"); //"district"
     final transient Object lock = new Object();
     private JSONArray mComparisonData = null;
+    private static final int HISTORICAL_LAYER = 1;
+    private static final int ISLAND_LAYER = 2;
+    private boolean thematicMap;
+    private int hiddenPointTypes;
+    private FolderOverlay[] thematicLayers;
     private String mCharacter = "";
     private final android.os.Handler layerHandler = new android.os.Handler(android.os.Looper.getMainLooper());
     private int loadingLayers;
@@ -70,8 +78,13 @@ public class MapView extends org.osmdroid.views.MapView {
      * 底图、行政区、缩放等仍然复用原 MapView。
      */
     public MapView(Context context, JSONArray comparisonData) {
+        this(context, comparisonData, false);
+    }
+
+    private MapView(Context context, JSONArray comparisonData, boolean thematicMap) {
         this(context);
         mComparisonData = comparisonData;
+        this.thematicMap = thematicMap;
         setUseDataConnection(false);
         init("");
         initAsyncLayers();
@@ -125,7 +138,7 @@ public class MapView extends org.osmdroid.views.MapView {
 
     public static void showThematic(Context context, JSONArray points, CharSequence title,
                                     String[] labels, int[] colors) {
-        new MapView(context, points).showDialog(title, labels, colors);
+        new MapView(context, points, true).showDialog(title, labels, colors);
     }
 
     public void show() {
@@ -176,7 +189,6 @@ public class MapView extends org.osmdroid.views.MapView {
             button.setMinimumWidth(0);
             button.setPadding(dp(10), 0, dp(10), 0);
             com.osfans.mcpdict.Util.FontUtil.setTypeface(button);
-            bar.addView(button, new android.widget.LinearLayout.LayoutParams(-2, dp(48)));
         }
         close.setText("關閉");
         rotate.setEnabled(host != null);
@@ -201,6 +213,27 @@ public class MapView extends org.osmdroid.views.MapView {
         });
         root.addView(bar);
 
+        TextView[] legendItems = new TextView[labels.length];
+        if (thematicMap) {
+            int[][] counts = new int[4][labels.length];
+            for (int point = 0; point < mComparisonData.length(); point++) {
+                JSONObject row = mComparisonData.optJSONObject(point);
+                if (row == null) continue;
+                JSONArray indices = row.optJSONArray("legendItems");
+                if (indices == null) continue;
+                for (int i = 0; i < indices.length(); i++) {
+                    int index = indices.optInt(i, -1);
+                    if (index >= 0 && index < labels.length) counts[thematicType(row)][index]++;
+                }
+            }
+            Runnable refreshLegend = () -> updateThematicLegend(labels, colors, legendItems, counts);
+            addMapFilter(bar, "歷史音", HISTORICAL_LAYER, refreshLegend);
+            addMapFilter(bar, "方言島", ISLAND_LAYER, refreshLegend);
+            root.post(refreshLegend);
+        }
+        bar.addView(rotate, new LinearLayout.LayoutParams(-2, dp(48)));
+        bar.addView(close, new LinearLayout.LayoutParams(-2, dp(48)));
+
         android.widget.FrameLayout canvas = new android.widget.FrameLayout(context);
         canvas.addView(this, new android.widget.FrameLayout.LayoutParams(-1, -1));
         if (labels.length > 0) {
@@ -220,6 +253,7 @@ public class MapView extends org.osmdroid.views.MapView {
                 com.osfans.mcpdict.Util.FontUtil.setTypeface(item);
                 item.setTextSize(12);
                 legend.addView(item);
+                legendItems[i] = item;
             }
             scroll.addView(legend);
             android.widget.FrameLayout.LayoutParams params = new android.widget.FrameLayout.LayoutParams(
@@ -249,6 +283,53 @@ public class MapView extends org.osmdroid.views.MapView {
         dialog.show();
         dialog.getWindow().setLayout(-1, -1);
         onResume();
+    }
+
+    private static int thematicType(JSONObject row) {
+        return (row.optBoolean("historical") ? HISTORICAL_LAYER : 0)
+                | (row.optBoolean("island") ? ISLAND_LAYER : 0);
+    }
+
+    private void addMapFilter(LinearLayout bar, String title, int flag, Runnable refreshLegend) {
+        SwitchCompat control = new SwitchCompat(getContext());
+        control.setText(title);
+        control.setTextSize(13);
+        control.setSingleLine(true);
+        control.setShowText(false);
+        control.setSwitchMinWidth(dp(32));
+        control.setSwitchPadding(dp(4));
+        control.setPadding(dp(3), 0, dp(7), 0);
+        com.osfans.mcpdict.Util.FontUtil.setTypeface(control);
+        control.setChecked((hiddenPointTypes & flag) == 0);
+        control.setOnCheckedChangeListener((button, checked) -> {
+            hiddenPointTypes = checked ? hiddenPointTypes & ~flag : hiddenPointTypes | flag;
+            updateThematicLayers();
+            refreshLegend.run();
+        });
+        bar.addView(control, new LinearLayout.LayoutParams(-2, dp(48)));
+    }
+
+    private void updateThematicLayers() {
+        if (thematicLayers != null) {
+            for (int type = 0; type < thematicLayers.length; type++) {
+                thematicLayers[type].setEnabled((type & hiddenPointTypes) == 0);
+            }
+            invalidate();
+        }
+    }
+
+    private void updateThematicLegend(String[] labels, int[] colors, TextView[] items, int[][] counts) {
+        for (int i = 0; i < items.length; i++) {
+            if (items[i] == null) continue;
+            int count = 0;
+            for (int type = 0; type < counts.length; type++) {
+                if ((type & hiddenPointTypes) == 0) count += counts[type][i];
+            }
+            android.text.SpannableString text = new android.text.SpannableString("● " + labels[i] + "（" + count + " 點）");
+            text.setSpan(new android.text.style.ForegroundColorSpan(colors[i]), 0, 1,
+                    android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            items[i].setText(text);
+        }
     }
 
     @Override
@@ -359,12 +440,14 @@ public class MapView extends org.osmdroid.views.MapView {
     }
 
     private void initComparison(JSONArray data) {
-        FolderOverlay[] markers = new FolderOverlay[6];
-
-        for (int i = 0; i < markers.length; i++) {
-            FolderOverlay overlay = new FolderOverlay();
-            getOverlays().add(overlay);
-            markers[i] = overlay;
+        FolderOverlay[] layers = new FolderOverlay[thematicMap ? 4 : 1];
+        FolderOverlay[][] markers = new FolderOverlay[layers.length][6];
+        for (int type = 0; type < layers.length; type++) {
+            layers[type] = new FolderOverlay();
+            for (int size = 0; size < markers[type].length; size++) {
+                markers[type][size] = new FolderOverlay();
+                layers[type].add(markers[type][size]);
+            }
         }
 
         for (int i = 0; i < data.length(); i++) {
@@ -386,7 +469,7 @@ public class MapView extends org.osmdroid.views.MapView {
             int size = Math.max(
                     0,
                     Math.min(
-                            markers.length - 1,
+                            markers[0].length - 1,
                             row.optInt("mapLevel", 0)
                     )
             );
@@ -428,13 +511,22 @@ public class MapView extends org.osmdroid.views.MapView {
                     return true;
                 });
 
-                markers[size].add(marker);
+                markers[thematicMap ? thematicType(row) : 0][size].add(marker);
 
             } catch (Exception ignored) {
                 // 某一个方言点坐标异常时跳过，
                 // 不影响整张地图。
             }
         }
+        layerHandler.post(() -> {
+            for (FolderOverlay layer : layers) getOverlays().add(layer);
+            if (thematicMap) {
+                thematicLayers = layers;
+                updateThematicLayers();
+            } else {
+                invalidate();
+            }
+        });
     }
 
     private void initHZ(String hz) {
