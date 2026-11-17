@@ -96,8 +96,8 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
                     mPositions.add(cursor.getPosition());
                 }
                 String lang = cursor.getString(COL_LANG);
-                if (lang.contentEquals(mCurrentLanguage)) {
-                    String ipa = cursor.getString(COL_IPA);
+                String ipa = cursor.getString(COL_IPA);
+                if (lang.contentEquals(mCurrentLanguage) && ipa != null && !ipa.isEmpty()) {
                     String lastIpa = mIPAs.getOrDefault(hz, "") + " ";
                     mIPAs.put(hz, (lastIpa + ipa).replaceAll("\\(.*?\\)", "").trim());
                 }

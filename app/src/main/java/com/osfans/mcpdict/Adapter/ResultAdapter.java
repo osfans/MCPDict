@@ -212,9 +212,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             String lang = cursor.getString(COL_LANG);
             String ipa = cursor.getString(COL_IPA);
             ssb.clear();
-            if (!TextUtils.isEmpty(lang) && !TextUtils.isEmpty(ipa)) {
-                ipa = DisplayHelper.formatIPA(lang, ipa).toString();
-                if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
+            if (!TextUtils.isEmpty(lang)) {
                 if (lang.contentEquals(lastLang)) {
                     mViewLang.setVisibility(View.INVISIBLE);
                 } else {
@@ -235,6 +233,15 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                     mViewLang.setBackground(drawable);
                     mViewLang.setVisibility(View.VISIBLE);
                 }
+                boolean hasReading = !TextUtils.isEmpty(ipa);
+                mTextView.setEnabled(hasReading);
+                if (!hasReading) {
+                    mTextView.setText(R.string.missing_reading);
+                    mTextView.setVisibility(View.VISIBLE);
+                    return;
+                }
+                ipa = DisplayHelper.formatIPA(lang, ipa).toString();
+                if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");
                 CharSequence cs = HtmlCompat.fromHtml(ipa, HtmlCompat.FROM_HTML_MODE_COMPACT);
                 ssb.append(cs);
                 String zs = cursor.getString(COL_ZS);
@@ -285,6 +292,10 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         public void onClick(View v) {
             Cursor cursor = getCursor();
             if (cursor == null) return;
+            if (TextUtils.isEmpty(cursor.getString(COL_IPA))) {
+                if (v == mViewLang) App.info(v.getContext(), cursor.getString(COL_LANG));
+                return;
+            }
             PopupMenu popupMenu = new PopupMenu(v.getContext(), v);
             Menu menu = popupMenu.getMenu();
             popupMenu.getMenuInflater().inflate(R.menu.item, menu);

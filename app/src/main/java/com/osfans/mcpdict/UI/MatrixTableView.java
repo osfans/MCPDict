@@ -751,7 +751,7 @@ public class MatrixTableView {
             dash.setPadding(dp(2), 0, dp(2), 0);
             dash.setTextAppearance(R.style.FontDetail);
             FontUtil.setTypeface(dash);
-            dash.setText("—");
+            dash.setText(R.string.missing_reading);
             cell.addView(dash, new LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT));

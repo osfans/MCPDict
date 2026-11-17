@@ -20,6 +20,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
@@ -290,7 +291,12 @@ public class DB extends SQLiteAssetHelper {
         List<String> queries = new ArrayList<>();
         String selection;
 
-        String languageClause = getLanguageClause();
+        String[] selectedLanguages = getVisibleLanguages();
+        String[] visibleLanguages = filterIslandHistory(selectedLanguages);
+        String languageClause = getLanguageClause(visibleLanguages);
+        boolean showMissing = searchType == SEARCH.HZ && isLanguageHZ(lang) && Pref.getFilter() != FILTER.HZ;
+        List<String> requestedRows = new ArrayList<>();
+        List<String> searchArgs = new ArrayList<>();
 
         if (searchType == SEARCH.COMMENT) {
             String[] projection = {"0 AS rank", "0 AS vaIndex", "'' AS variants", "*", "trim(substr(字組, 1, 1)) AS 漢字"};
@@ -328,6 +334,10 @@ public class DB extends SQLiteAssetHelper {
                 if (inCharset(hz)) {
                     selection = String.format("字組 MATCH '%s' %s", hz, languageClause);
                     queries.add(qb.buildQuery(projection, selection, null, null, null, null));
+                    if (showMissing && selectedLanguages.length > 0 && visibleLanguages.length > 0) {
+                        requestedRows.add("(" + i + ", ?)");
+                        searchArgs.add(hz);
+                    }
                 }
                 if (allowVariants) {
                     projection[1] = "1 AS vaIndex";
@@ -349,6 +359,9 @@ public class DB extends SQLiteAssetHelper {
             qb.setDistinct(true);
             String[] projection = {"漢字", "'' AS 語言", "'' AS 讀音", "'' AS 註釋", "variants"};
             query = qb.buildQuery(projection, null, null, null, "u.rank,vaIndex,漢字", null);
+        } else if (showMissing) {
+            String[] fixedLanguages = selectedLanguages.length > 0 ? visibleLanguages : new String[0];
+            return searchWithMissingReadings(query, fixedLanguages, requestedRows, searchArgs);
         } else {
             // Build outer query statement (returning all information about the matching Chinese characters)
             qb.setTables("(" + query + ") AS u, info");
@@ -359,6 +372,48 @@ public class DB extends SQLiteAssetHelper {
         // Search
         Log.e("DB", query);
         return db.rawQuery(query, null);
+    }
+
+    private static Cursor searchWithMissingReadings(String query, String[] languages,
+            List<String> requestedRows, List<String> args) {
+        String requestedCharacters = "";
+        if (!requestedRows.isEmpty()) {
+            requestedCharacters = """
+                UNION ALL
+                SELECT q.column1, 0, q.column2, ''
+                FROM (VALUES %s) AS q
+                WHERE EXISTS (SELECT 1 FROM mcpdict WHERE 漢字 MATCH q.column2)
+                  AND NOT EXISTS (SELECT 1 FROM readings r
+                                  WHERE r.rank = q.column1 AND r.vaIndex = 0 AND r.漢字 = q.column2)
+                """;
+            requestedCharacters = String.format(requestedCharacters, String.join(",", requestedRows));
+        }
+        // Include explicitly selected languages even when they have no readings in this search.
+        String selected = "";
+        if (languages.length > 0) {
+            selected = " OR 簡稱 IN (" + String.join(",", Collections.nCopies(languages.length, "?")) + ")";
+            Collections.addAll(args, languages);
+        }
+        String sql = String.format("""
+            WITH readings AS (
+                SELECT u.* FROM (%s) AS u, info WHERE info.簡稱 MATCH u.語言
+            ),
+            characters AS (
+                SELECT DISTINCT rank, vaIndex, 漢字, variants FROM readings
+                %s
+            ),
+            language_scope AS (
+                SELECT 簡稱, "%s" AS sort_order, rowid FROM info
+                WHERE (簡稱 IN (SELECT 語言 FROM readings)%s)
+            )
+            SELECT c.漢字, l.簡稱 AS 語言, coalesce(r.讀音, '') AS 讀音,
+                   coalesce(r.註釋, '') AS 註釋, c.variants
+            FROM characters c CROSS JOIN language_scope l
+            LEFT JOIN readings r ON r.rank = c.rank AND r.vaIndex = c.vaIndex
+                AND r.漢字 = c.漢字 AND r.variants = c.variants AND r.語言 = l.簡稱
+            ORDER BY c.rank, c.vaIndex, c.漢字, l.sort_order, l.rowid
+            """, query, requestedCharacters, ORDER, selected);
+        return db.rawQuery(sql, args.toArray(new String[0]));
     }
 
     public static Cursor directSearch(String hz) {
@@ -713,13 +768,12 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static String getLanguageClause() {
-        String[] languages = getVisibleLanguages();
-        Pref.ISLAND_HISTORY mode = Pref.getIslandHistory();
-        if (mode == Pref.ISLAND_HISTORY.NONE) {
-            return (languages.length == 0)? "" : String.format("AND 語言 MATCH '%s'", String.join(" OR ", languages));
-        }
-        languages = filterIslandHistory(languages);
-        return (languages.length == 0)? "AND FALSE" : String.format("AND 語言 MATCH '%s'", String.join(" OR ", languages));
+        return getLanguageClause(filterIslandHistory(getVisibleLanguages()));
+    }
+
+    private static String getLanguageClause(String[] languages) {
+        if (languages.length == 0) return Pref.getIslandHistory() == Pref.ISLAND_HISTORY.NONE ? "" : "AND FALSE";
+        return String.format("AND 語言 MATCH '%s'", String.join(" OR ", languages));
     }
 
     private static String[] filterIslandHistory(String[] languages) {
