@@ -10,10 +10,11 @@ import com.osfans.mcpdict.DictFragment;
 import com.osfans.mcpdict.Favorite.FavoriteFragment;
 import com.osfans.mcpdict.UI.GuessHzFragment;
 import com.osfans.mcpdict.UI.GuessLangFragment;
+import com.osfans.mcpdict.wordlist.WordFragment;
 
 public class PagerAdapter extends FragmentStateAdapter {
     public enum PAGE {
-        DICTIONARY, FAVORITE, GUESS_LANG, GUESS_HZ
+        DICTIONARY, FAVORITE, GUESS_LANG, GUESS_HZ, WORD
     }
 
     public PagerAdapter(FragmentActivity fa) {
@@ -27,6 +28,7 @@ public class PagerAdapter extends FragmentStateAdapter {
         if (position == PAGE.FAVORITE.ordinal()) return new FavoriteFragment();
         if (position == PAGE.GUESS_HZ.ordinal()) return new GuessHzFragment();
         if (position == PAGE.GUESS_LANG.ordinal()) return new GuessLangFragment();
+        if (position == PAGE.WORD.ordinal()) return new WordFragment();
         return new DictFragment();
     }
 

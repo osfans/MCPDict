@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wordlist">📚 詞表</string>
+    <string name="wordlist_back_to_dictionary">↩️ 字表</string>
+    <string name="wordlist_database_pending">數據庫正在建設中……</string>
+    <string name="wordlist_exit_compact">退出精簡界面</string>
+    <string name="search_word_hint">輸入漢字或解釋</string>
+    <string name="word_island">方言島</string>
+    <string name="word_mode_by_word">按詞條顯示</string>
+    <string name="word_mode_by_language">按語言顯示</string>
+    <string name="pref_key_word_fullscreen" translatable="false">WORD_FULLSCREEN</string>
+    <string-array name="pref_entries_word_filters">
+        <item>顯示全部</item>
+        <item>當前語言</item>
+        <item>推薦語言</item>
+        <item>@string/custom_languages</item>
+        <item>方言分區</item>
+        <item>行政區</item>
+        <item>維護人</item>
+    </string-array>
+</resources>

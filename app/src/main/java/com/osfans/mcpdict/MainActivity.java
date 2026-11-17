@@ -38,6 +38,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem wordList = menu.findItem(R.id.menu_item_wordlist);
+        if (wordList != null) {
+            wordList.setTitle(isWordListPage() ? R.string.wordlist_back_to_dictionary : R.string.wordlist);
+        }
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    private boolean isWordListPage() {
+        return mPager != null && mPager.getCurrentItem() == PagerAdapter.PAGE.WORD.ordinal();
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent;
         int id = item.getItemId();
@@ -70,6 +83,11 @@ public class MainActivity extends AppCompatActivity {
         }
         if (id == R.id.menu_item_favorite) {
             if (mPager.getCurrentItem() != PagerAdapter.PAGE.FAVORITE.ordinal()) mPager.setCurrentItem(PagerAdapter.PAGE.FAVORITE.ordinal());
+            return true;
+        }
+        if (id == R.id.menu_item_wordlist) {
+            PagerAdapter.PAGE target = isWordListPage() ? PagerAdapter.PAGE.DICTIONARY : PagerAdapter.PAGE.WORD;
+            mPager.setCurrentItem(target.ordinal(), false);
             return true;
         }
         if (id == R.id.menu_item_guess_hz) {
@@ -132,6 +150,11 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(myToolbar);
         mPager = findViewById(R.id.pager);
         mPager.setUserInputEnabled(true);
+        mPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override public void onPageSelected(int position) {
+                invalidateOptionsMenu();
+            }
+        });
         initAdapter();
     }
 
