@@ -42,6 +42,7 @@
     <string name="search_options">查詢選項：</string>
     <string name="option_allow_variants">顯示異體字</string>
     <string name="no_matches">未找到符合條件的漢字。</string>
+    <string name="missing_reading" translatable="false">—</string>
     <string name="toggle_fullscreen">切換到精簡界面</string>
 
     <string name="pref_key_allow_variants">ALLOW_VARIANTS</string>
