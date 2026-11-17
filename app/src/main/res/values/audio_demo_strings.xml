@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="audio_demo_title">便携Praat</string>
+    <string name="audio_demo_record">開始錄音</string>
+    <string name="audio_demo_stop">停止錄音</string>
+    <string name="audio_demo_import">導入音頻</string>
+    <string name="audio_demo_cancel_import">取消導入</string>
+    <string name="audio_demo_choose_channel">選擇聲道</string>
+    <string name="audio_demo_channel_left">左聲道</string>
+    <string name="audio_demo_channel_right">右聲道</string>
+    <string name="audio_demo_waveform">波形</string>
+    <string name="audio_demo_spectrum">頻譜（Hz）</string>
+    <string name="audio_demo_f0">基頻 F0（Hz）</string>
+    <string name="audio_demo_plot_description">上方為波形，下方為聲學分析。點擊頻譜可查看該位置的頻率，拖曳選取範圍，雙指縮放，下方滑桿可移動時間位置。</string>
+    <string name="audio_demo_recording">錄音中…</string>
+    <string name="audio_demo_recording_time">錄音中 · %1$.1f 秒</string>
+    <string name="audio_demo_reading">分析音頻中…</string>
+    <string name="audio_demo_permission_denied">請允許麥克風權限後再錄音。</string>
+    <string name="audio_demo_record_error">無法讀取麥克風，請稍後重試。</string>
+    <string name="audio_demo_import_error">無法讀取這份音頻，請換一個檔案。</string>
+    <string name="audio_demo_import_canceled">已取消導入。</string>
+    <string name="audio_demo_no_audio">未讀到可分析的音訊。</string>
+    <string name="audio_demo_limit">已分析前 %1$.2f 秒</string>
+    <string name="audio_demo_duration">總長 %1$.2f 秒</string>
+    <string name="audio_demo_layers">設置</string>
+    <string name="audio_demo_show_spectrum">頻譜</string>
+    <string name="audio_demo_show_pitch">基頻</string>
+    <string name="audio_demo_intensity">強度</string>
+    <string name="audio_demo_formants">共振峰</string>
+    <string name="audio_demo_pulses">聲門脈衝</string>
+    <string name="audio_demo_zoom_all">全段</string>
+    <string name="audio_demo_zoom_in">放大</string>
+    <string name="audio_demo_zoom_out">縮小</string>
+    <string name="audio_demo_zoom_selection">選區</string>
+    <string name="audio_demo_zoom_back">回上步</string>
+    <string name="audio_demo_timeline">時間位置</string>
+    <string name="audio_demo_cursor">%1$.3f 秒</string>
+    <string name="audio_demo_range">%1$.3f–%2$.3f 秒（%3$.3f 秒）</string>
+    <string name="audio_demo_pulse_count">%1$d 個脈衝</string>
+</resources>
