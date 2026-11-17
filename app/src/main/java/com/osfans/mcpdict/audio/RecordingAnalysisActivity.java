@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -28,15 +29,18 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public final class RecordingAnalysisActivity extends AppCompatActivity {
     private final ExecutorService worker = Executors.newSingleThreadExecutor();
     private Session active;
+    private AtomicBoolean playbackStop;
     private AlertDialog channelDialog;
     private AudioPlotView plot;
     private TextView status;
     private Button record;
     private Button importAudio;
+    private Button play;
     private Button all;
     private Button zoomIn;
     private Button zoomOut;
@@ -93,6 +97,12 @@ public final class RecordingAnalysisActivity extends AppCompatActivity {
         LinearLayout.LayoutParams importParams = new LinearLayout.LayoutParams(0, -2, 1);
         importParams.setMarginStart(dp(8));
         buttons.addView(importAudio, importParams);
+
+        play = new Button(this);
+        play.setOnClickListener(v -> playOrStop());
+        LinearLayout.LayoutParams playParams = new LinearLayout.LayoutParams(0, -2, 1);
+        playParams.setMarginStart(dp(8));
+        buttons.addView(play, playParams);
 
         status = new TextView(this);
         status.setVisibility(View.GONE);
@@ -169,6 +179,13 @@ public final class RecordingAnalysisActivity extends AppCompatActivity {
     }
 
     private void updateControls() {
+        if (playbackStop != null) {
+            play.setText(R.string.audio_demo_stop_playback);
+            play.setEnabled(!playbackStop.get());
+        } else {
+            play.setText(plot.hasSelection() ? R.string.audio_demo_play_selection : R.string.audio_demo_play);
+            play.setEnabled(active == null && plot.canInteract());
+        }
         all.setEnabled(plot.canZoomOut());
         zoomIn.setEnabled(plot.canZoomIn());
         zoomOut.setEnabled(plot.canZoomOut());
@@ -178,6 +195,43 @@ public final class RecordingAnalysisActivity extends AppCompatActivity {
         timeline.setProgress(Math.round(10_000 * plot.scrollPosition()));
         measurement.setVisibility(plot.hasCursor() ? View.VISIBLE : View.GONE);
         measurement.setText(plot.selectionReadout());
+    }
+
+    private void playOrStop() {
+        if (playbackStop != null) {
+            playbackStop.set(true);
+            updateControls();
+            return;
+        }
+        if (active != null) return;
+        AudioPlayback.Range range = plot.playbackRange();
+        if (range == null) return;
+
+        AtomicBoolean stop = new AtomicBoolean();
+        playbackStop = stop;
+        record.setEnabled(false);
+        importAudio.setEnabled(false);
+        updateControls();
+        worker.execute(() -> {
+            boolean failed = false;
+            try {
+                AudioPlayback.play(range, stop::get);
+            } catch (InterruptedException error) {
+                Thread.currentThread().interrupt();
+            } catch (IOException | RuntimeException error) {
+                Log.w("RecordingAnalysis", "Cannot play audio", error);
+                failed = true;
+            }
+            boolean error = failed;
+            runOnUiThread(() -> {
+                if (isDestroyed() || playbackStop != stop) return;
+                playbackStop = null;
+                record.setEnabled(true);
+                importAudio.setEnabled(true);
+                updateControls();
+                if (error && !stop.get()) Toast.makeText(this, R.string.audio_demo_play_error, Toast.LENGTH_SHORT).show();
+            });
+        });
     }
 
     private void recordOrStop() {
@@ -192,6 +246,7 @@ public final class RecordingAnalysisActivity extends AppCompatActivity {
     }
 
     private void start(Uri uri) {
+        if (active != null || playbackStop != null) return;
         Session session = new Session(uri == null);
         active = session;
         if (session.recording) plot.beginRecording();
@@ -200,6 +255,7 @@ public final class RecordingAnalysisActivity extends AppCompatActivity {
         importAudio.setEnabled(false);
         status.setText(session.recording ? R.string.audio_demo_recording : R.string.audio_demo_reading);
         status.setVisibility(View.VISIBLE);
+        updateControls();
         worker.execute(() -> analyze(session, uri));
     }
 
@@ -283,10 +339,12 @@ public final class RecordingAnalysisActivity extends AppCompatActivity {
         else if (!session.recording && samples == AudioAnalysis.MAX_SAMPLES) {
             status.setText(getString(R.string.audio_demo_limit, seconds(samples)));
         } else status.setText(getString(R.string.audio_demo_duration, seconds(samples)));
+        updateControls();
     }
 
     @Override protected void onStop() {
         if (active != null && active.recording) active.stop = true;
+        if (playbackStop != null) playbackStop.set(true);
         super.onStop();
     }
 

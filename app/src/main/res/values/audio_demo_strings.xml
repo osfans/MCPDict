@@ -3,6 +3,10 @@
     <string name="audio_demo_title">便携Praat</string>
     <string name="audio_demo_record">開始錄音</string>
     <string name="audio_demo_stop">停止錄音</string>
+    <string name="audio_demo_play">播放</string>
+    <string name="audio_demo_play_selection">播放選區</string>
+    <string name="audio_demo_stop_playback">停止播放</string>
+    <string name="audio_demo_play_error">無法播放音頻。</string>
     <string name="audio_demo_import">導入音頻</string>
     <string name="audio_demo_cancel_import">取消導入</string>
     <string name="audio_demo_choose_channel">選擇聲道</string>

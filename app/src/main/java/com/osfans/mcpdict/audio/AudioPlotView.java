@@ -161,6 +161,20 @@ final class AudioPlotView extends View {
     boolean canGoBack() { return canInteract() && !history.isEmpty(); }
     boolean hasCursor() { return canInteract() && Float.isFinite(selectionStart); }
 
+    AudioPlayback.Range playbackRange() {
+        if (!canInteract()) return null;
+        int end = waveformEnd();
+        if (!hasSelection()) return new AudioPlayback.Range(new ArrayList<>(frames), 0, end);
+        int first = Math.min(end - 1, (int) (selectionStart * AudioAnalysis.RATE));
+        int last = Math.min(end, (int) Math.ceil(selectionEnd * AudioAnalysis.RATE));
+        return new AudioPlayback.Range(new ArrayList<>(frames), first, Math.max(first + 1, last));
+    }
+
+    private int waveformEnd() {
+        // During recording, sampleCount also includes samples waiting for the next frame.
+        return frames.get(frames.size() - 1).endSample();
+    }
+
     void showAll() { applyZoom(0, totalSpan()); }
 
     void zoom(float factor) {
@@ -407,10 +421,11 @@ final class AudioPlotView extends View {
         paint.setStrokeWidth(1);
         float count = AudioAnalysis.RATE * span / columns;
         int firstSample = (int) (start * AudioAnalysis.RATE);
+        int waveformEnd = waveformEnd();
         for (int x = 0; x < columns; x++) {
             int from = firstSample + (int) (x * count);
-            int to = Math.min(sampleCount, firstSample + Math.max((int) ((x + 1) * count), from - firstSample + 1));
-            if (from >= to || from / AudioAnalysis.HOP >= frames.size()) break;
+            int to = Math.min(waveformEnd, firstSample + Math.max((int) ((x + 1) * count), from - firstSample + 1));
+            if (from >= to) break;
             short low = Short.MAX_VALUE;
             short high = Short.MIN_VALUE;
             for (int i = from; i < to;) {
@@ -445,18 +460,45 @@ final class AudioPlotView extends View {
             bitmapDirty = true;
         }
         if (!bitmapDirty) return;
+        int end = waveformEnd();
+        int hop = AudioAnalysis.SPECTRUM_HOP;
+        int lastSlice = (end - 1) / hop;
         for (int x = 0; x < width; x++) {
-            // The FFT window is centered 16 ms before the end of its frame.
             float time = start + span * (x + 0.5f) / width;
-            int frame = Math.round(time / FRAME_SECONDS);
-            byte[] values = time < seconds() ? frames.get(Math.min(frame, frames.size() - 1)).spectrum() : null;
+            float sample = time * AudioAnalysis.RATE;
+            byte[] first = null;
+            byte[] second = null;
+            float fraction = 0;
+            if (sample < end) {
+                float windowEnd = sample + AudioAnalysis.SPECTRUM_WINDOW / 2f;
+                int before = Math.max(0, Math.min(lastSlice, (int) (windowEnd / hop) - 1));
+                int after = Math.min(lastSlice, before + 1);
+                first = spectrumSlice(before);
+                second = spectrumSlice(after);
+                if (after > before) {
+                    int beforeEnd = (before + 1) * hop;
+                    int afterEnd = Math.min(end, (after + 1) * hop);
+                    fraction = clamp((windowEnd - beforeEnd) / (afterEnd - beforeEnd), 0, 1);
+                }
+            }
             for (int y = 0; y < bins; y++) {
-                int gray = values == null ? 255 : values[bins - 1 - y] & 255;
+                int bin = bins - 1 - y;
+                int gray = 255;
+                if (first != null) {
+                    int a = first[bin] & 255;
+                    int b = second[bin] & 255;
+                    gray = Math.round(a + (b - a) * fraction);
+                }
                 pixels[y * width + x] = 0xFF000000 | gray * 0x010101;
             }
         }
         spectrum.setPixels(pixels, 0, width, 0, 0, width, bins);
         bitmapDirty = false;
+    }
+
+    private byte[] spectrumSlice(int index) {
+        int perFrame = AudioAnalysis.SPECTRA_PER_FRAME;
+        return frames.get(index / perFrame).spectra()[index % perFrame];
     }
 
     private void drawContour(Canvas canvas, float left, float width, float top, float bottom, boolean pitch) {
