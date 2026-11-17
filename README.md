@@ -4,7 +4,7 @@
 
 [漢字音典](https://github.com/osfans/MCPDict)（MCPDict）是一個面向語言、方言與漢字音研究愛好者的資料整理與查詢項目，收錄各類語言（方言）的漢字讀音及相關釋義，並提供便捷的檢索工具。
 
-目前，漢字音典[已收錄](https://mcpdict.sourceforge.io/info.html)三千多個語言／方言點，內容涵蓋**歷史音、漢語方言、民語漢字音、域外方音、戲曲音**等多種類型。現階段的主要工作，是持續推進全國各地方言及語言的**同音字表的電子化**；未來若條件成熟，亦將逐步嘗試詞彙資料的整理與建設。
+目前，漢字音典[已收錄](https://mcpdict.sourceforge.io/info.html)三千多個語言／方言點，內容涵蓋**歷史音、漢語方言、民語漢字音、域外方音、戲曲音**等多種類型。現階段的主要工作，是持續推進全國各地方言及語言的**同音字表及詞表的電子化**。
 
 漢字音典為持續更新中的公開項目，亦歡迎對語言、方言與字表整理有興趣的朋友共同參與，或[提出寶貴建議](https://github.com/osfans/MCPDict/issues)。
 
@@ -42,6 +42,8 @@
 
 ● 根據字音和相對方位猜方言、地區、分區
 
+● 內置音典小工具，包含中古→方言、方言→中古、兩地對應、單字音類、字音比較、便携Praat等工具
+
 具體功能及使用方法可參見程序內「❔幫助」（建設中）。
 
 
@@ -78,13 +80,15 @@
 
 ## 六、主要工作內容
 
-### 同音字表收錄
+### 同音字表及詞表收錄
 
-● 同音字表收錄是漢字音典目前最主要的工作內容，也是項目持續擴充資料庫的核心基礎。内容包括公開資料的電子化以及自行製作的字表。
+● 同音字表及詞表收錄是漢字音典目前最主要的工作內容，也是項目持續擴充資料庫的核心基礎。内容包括公開資料的電子化以及自行製作的字表。
 
-● 字表：[已收錄](https://mcpdict.sourceforge.io/info.html)三千多種語言（方言）的漢字讀音及釋義，可去[QQ羣](https://qm.qq.com/cgi-bin/qm/qr?k=f2hquJ3ZWCDLpe8t63Ufw0NBHvGO3ZRb&jump_from=webapi&authKey=7GHTneh2MEuSa8X6wd8gJfutgwJiKMxR+N2HRKTEdb1TrRSg1r2hPhMnkf2Zakl+)提供同音字表請求收錄
+● 字表：[已收錄](https://mcpdict.sourceforge.io/info.html)三千多種語言（方言）的漢字讀音及釋義，可去[QQ羣](https://qm.qq.com/cgi-bin/qm/qr?k=f2hquJ3ZWCDLpe8t63Ufw0NBHvGO3ZRb&jump_from=webapi&authKey=7GHTneh2MEuSa8X6wd8gJfutgwJiKMxR+N2HRKTEdb1TrRSg1r2hPhMnkf2Zakl+)提供同音字表請求收錄。
 
-● 勘誤：參考[字表解析日誌](https://mcpdict.sourceforge.io/warnings.txt)，可去[QQ羣](https://qm.qq.com/cgi-bin/qm/qr?k=f2hquJ3ZWCDLpe8t63Ufw0NBHvGO3ZRb&jump_from=webapi&authKey=7GHTneh2MEuSa8X6wd8gJfutgwJiKMxR+N2HRKTEdb1TrRSg1r2hPhMnkf2Zakl+)、[GitHub](https://github.com/osfans/MCPDict/issues)提出意見與建議
+● 詞表：詞表正在建設中。
+
+● 勘誤：參考[字表解析日誌](https://mcpdict.sourceforge.io/warnings.txt)，可去[QQ羣](https://qm.qq.com/cgi-bin/qm/qr?k=f2hquJ3ZWCDLpe8t63Ufw0NBHvGO3ZRb&jump_from=webapi&authKey=7GHTneh2MEuSa8X6wd8gJfutgwJiKMxR+N2HRKTEdb1TrRSg1r2hPhMnkf2Zakl+)、[GitHub](https://github.com/osfans/MCPDict/issues)提出意見與建議。
 
 
 
@@ -92,7 +96,7 @@
 
 ### 核心分工
 
-● 漢字讀音数据庫及 Android 版軟件開發：@osfans
+● 漢字讀音数据庫及 Android 版軟件開發：@osfans、@Resound
 
 ● 檔案維護：@Resound 等
 
@@ -203,9 +207,9 @@
 
 #### C西北
 
-● C1關隴：參照《中國語言地圖集 第2版 汉語方言卷（2012）》B1-6 官話之六 中原官話B。
+● C1關隴：未知人物
 
-● C2甘肅：參照《中國語言地圖集 第2版 汉語方言卷（2012）》B1-8 官話之八 蘭銀官話。
+● C2甘肅：未知人物
 
 ● C3-C9：@開水師
 
@@ -233,9 +237,11 @@
 
 ● 維護：@Resound @quasad等
 
-● F1-F4：部分共識，説明有待後續補充
+● F1-F6：@Resound
 
-● F5通泰：@quasad
+● 參考資料：[「音典」下江分区方案（稿）](https://zhuanlan.zhihu.com/p/2098941527053620376)
+
+● F7通泰：@quasad
 
 ● 參考資料：[通泰-建盐方言分区稿暨音典通泰分区说明（持续更新） - 知乎](https://zhuanlan.zhihu.com/p/1982199722157564376)
 
