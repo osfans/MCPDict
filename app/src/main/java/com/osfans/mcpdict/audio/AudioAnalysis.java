@@ -13,6 +13,9 @@ final class AudioAnalysis {
     static final int SPECTRUM_TOP = 5000;
     static final int PITCH_MIN = 55;
     static final int PITCH_MAX = 550;
+    static final int SPECTRUM_HOP = 64;
+    static final int SPECTRUM_WINDOW = 160;
+    static final int SPECTRA_PER_FRAME = HOP / SPECTRUM_HOP;
     private static final int FFT = 512;
     static final int BINS = SPECTRUM_TOP * FFT / RATE + 1;
     private static final int PITCH_WINDOW = 1024;
@@ -23,11 +26,13 @@ final class AudioAnalysis {
     private static final int COMPARE = PITCH_WINDOW / 2 - MAX_LAG - 1;
     private static final float PITCH_THRESHOLD = 0.16f;
 
-    record Frame(short[] waveform, short low, short high, byte[] spectrum, float pitch,
+    record Frame(short[] waveform, short low, short high, byte[][] spectra, float pitch,
                  float intensity, float[] formants, int[] pulses, int endSample) {}
 
     private final float[] history = new float[HISTORY_SIZE];
-    private final float[] window = new float[FFT];
+    private final float[] window = new float[SPECTRUM_WINDOW];
+    private final double[] spectralTilt = new double[BINS];
+    private final double spectrumScale;
     private final float[] real = new float[FFT];
     private final float[] imaginary = new float[FFT];
     private final float[] cosine = new float[FFT / 2];
@@ -45,8 +50,15 @@ final class AudioAnalysis {
     private float sum;
 
     AudioAnalysis() {
-        for (int i = 0; i < FFT; i++) {
-            window[i] = (float) (0.5 - 0.5 * Math.cos(2 * Math.PI * i / (FFT - 1)));
+        double windowSum = 0;
+        for (int i = 0; i < window.length; i++) {
+            window[i] = (float) (0.5 - 0.5 * Math.cos(2 * Math.PI * i / (window.length - 1)));
+            windowSum += window[i];
+        }
+        spectrumScale = 2 / windowSum;
+        // Make higher speech frequencies visible without changing the signal used for measurements.
+        for (int i = 0; i < BINS; i++) {
+            spectralTilt[i] = 20 * Math.log10(Math.max(1, i * RATE / (FFT * 1000.0)));
         }
         for (int i = 0; i < FFT / 2; i++) {
             double phase = -2 * Math.PI * i / FFT;
@@ -124,16 +136,21 @@ final class AudioAnalysis {
         }
         short[] pcm = used == HOP ? waveform : java.util.Arrays.copyOf(waveform, used);
         float f0 = pitch();
-        pending.add(new Frame(pcm, low, high, spectrum(), f0, measures.intensity(samples, samplesAt),
+        byte[][] spectra = new byte[(used + SPECTRUM_HOP - 1) / SPECTRUM_HOP][];
+        int frameStart = samples - used;
+        for (int i = 0; i < spectra.length; i++) {
+            spectra[i] = spectrum(Math.min(samples, frameStart + (i + 1) * SPECTRUM_HOP));
+        }
+        pending.add(new Frame(pcm, low, high, spectra, f0, measures.intensity(samples, samplesAt),
                 measures.formants(samples, samplesAt), measures.pulses(samples, used, f0, samplesAt), samples));
         waveform = new short[HOP];
         used = 0;
     }
 
-    private byte[] spectrum() {
+    private byte[] spectrum(int endSample) {
         for (int i = 0; i < FFT; i++) {
             int j = Integer.reverse(i) >>> (32 - Integer.numberOfTrailingZeros(FFT));
-            real[j] = sampleAt(samples - FFT + i) * window[i];
+            real[j] = i < window.length ? sampleAt(endSample - window.length + i) * window[i] : 0;
             imaginary[j] = 0;
         }
         for (int size = 2; size <= FFT; size *= 2) {
@@ -156,8 +173,8 @@ final class AudioAnalysis {
         }
         byte[] bins = new byte[BINS];
         for (int i = 0; i < BINS; i++) {
-            double amplitude = Math.hypot(real[i], imaginary[i]) * 4 / FFT;
-            double db = 20 * Math.log10(Math.max(1e-6, amplitude));
+            double amplitude = Math.hypot(real[i], imaginary[i]) * spectrumScale;
+            double db = 20 * Math.log10(Math.max(1e-6, amplitude)) + spectralTilt[i];
             int shade = (int) (255 * Math.max(0, Math.min(1, (db + 80) / 62)));
             bins[i] = (byte) (255 - shade);
         }
