@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
         tools:ignore="PackageVisibilityPolicy,QueryAllPackagesPermission" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
     <queries>
         <package android:name="com.osfans.font.unicode17" />
         <intent>
@@ -52,6 +54,10 @@
             android:launchMode="singleTop" />
         <activity android:name=".PhonologyActivity"
             android:configChanges="orientation|screenSize" android:exported="false" />
+        <activity android:name=".audio.RecordingAnalysisActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:label="@string/audio_demo_title" />
     </application>
 
 </manifest>
