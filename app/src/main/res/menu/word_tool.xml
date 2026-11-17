@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/word_island">
+        <menu>
+            <group android:checkableBehavior="single" android:enabled="false">
+                <item
+                    android:checked="true"
+                    android:title="@string/option_both_island_history" />
+                <item android:title="@string/option_island_only" />
+                <item android:title="@string/option_island_hide" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_item_word_fullscreen"
+        android:title="@string/toggle_fullscreen" />
+    <group android:checkableBehavior="single" android:enabled="false">
+        <item android:checked="true" android:title="@string/word_mode_by_word" />
+        <item android:title="@string/word_mode_by_language" />
+    </group>
+</menu>
