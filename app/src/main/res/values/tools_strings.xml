@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="yindian_tools">🧰音典小工具</string>
+    <string name="tools_acknowledgements"><![CDATA[<b>鳴謝</b><br/>部分功能構思與展示方式參考了 <a href="http://www.kaom.net/">kaom.net</a> 與<a href="https://dialects.yzup.top">方音圖鑑</a>，感謝相關網站的建設與分享。]]></string>
 </resources>

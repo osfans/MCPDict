@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.text.TextUtils;
 
 import com.osfans.mcpdict.DB;
+import com.osfans.mcpdict.custom.CustomSchemes;
 import com.osfans.mcpdict.R;
 
 import org.json.JSONArray;
@@ -22,11 +23,6 @@ import java.util.Map;
 import java.util.Set;
 
 public class Pref {
-    private static class CustomLanguageSchemeStore {
-        final LinkedHashMap<String, LinkedHashSet<String>> schemes = new LinkedHashMap<>();
-        String current;
-    }
-
     private static Context getContext() {
         return App.getContext();
     }
@@ -242,140 +238,19 @@ public class Pref {
         return index;
     }
 
-    public static void putCustomLanguage(String lang) {
-        if (TextUtils.isEmpty(lang)) return;
-        CustomLanguageSchemeStore store = getCustomLanguageSchemeStore();
-        LinkedHashSet<String> set = store.schemes.get(store.current);
-        if (set == null) set = new LinkedHashSet<>();
-        if (set.contains(lang)) set.remove(lang);
-        else set.add(lang);
-        store.schemes.put(store.current, sanitizeCustomLanguages(set));
-        saveCustomLanguageSchemeStore(store);
-    }
 
-    public static Set<String> getCustomLanguages() {
-        return getFilteredCustomLanguages(getCustomLanguageSchemeScope());
-    }
-
+    public static void putCustomLanguage(String lang) { CustomSchemes.toggle(lang); }
+    public static Set<String> getCustomLanguages() { return CustomSchemes.languages(); }
     public static Set<String> getAllCustomLanguages() {
-        CustomLanguageSchemeStore store = getCustomLanguageSchemeStore();
-        LinkedHashSet<String> merged = new LinkedHashSet<>();
-        for (LinkedHashSet<String> set : store.schemes.values()) {
-            merged.addAll(set);
-        }
-        return sanitizeCustomLanguages(merged);
-    }
-
-    public static Set<String> getFilteredCustomLanguages(String scope) {
-        CustomLanguageSchemeStore store = getCustomLanguageSchemeStore();
-        if (TextUtils.isEmpty(scope)) {
-            LinkedHashSet<String> set = store.schemes.get(store.current);
-            if (set != null) return new LinkedHashSet<>(set);
-            String prefix = store.current + "－";
-            LinkedHashSet<String> merged = new LinkedHashSet<>();
-            for (Map.Entry<String, LinkedHashSet<String>> entry : store.schemes.entrySet()) {
-                if (entry.getKey().startsWith(prefix)) {
-                    merged.addAll(entry.getValue());
-                }
-            }
-            return sanitizeCustomLanguages(merged);
-        } else if ("ALL".equals(scope)) {
-            return getAllCustomLanguages();
-        } else {
-            String prefix = scope + "－";
-            LinkedHashSet<String> merged = new LinkedHashSet<>();
-            for (Map.Entry<String, LinkedHashSet<String>> entry : store.schemes.entrySet()) {
-                if (entry.getKey().startsWith(prefix) || entry.getKey().equals(scope)) {
-                    merged.addAll(entry.getValue());
-                }
-            }
-            return sanitizeCustomLanguages(merged);
-        }
-    }
-
-    public static String getCustomLanguageSchemeScope() {
-        return getStr(R.string.pref_key_custom_languages_all, "");
-    }
-
-    public static void setCustomLanguageSchemeScope(String scope) {
-        putStr(R.string.pref_key_custom_languages_all, scope == null ? "" : scope);
-    }
-
-    public static String[] getCustomLanguageSchemeScopeNames() {
-        // First entry: all schemes, then virtual parents
-        String[] names = getCustomLanguageSchemeNames();
-        LinkedHashSet<String> parents = new LinkedHashSet<>();
-        for (String name : names) {
-            int idx = -1;
-            while ((idx = name.indexOf("－", idx + 1)) != -1) {
-                parents.add(name.substring(0, idx));
-            }
-        }
-        if (parents.isEmpty()) return new String[0];
-        String[] result = new String[parents.size() + 1];
-        result[0] = "ALL";
-        int i = 1;
-        for (String p : parents) result[i++] = p;
-        java.util.Arrays.sort(result, 1, result.length, (a, b) -> a.compareTo(b));
+        Set<String> result = new LinkedHashSet<>();
+        for (CustomSchemes.Scheme scheme : CustomSchemes.load())
+            for (CustomSchemes.Entry row : scheme.entries) result.add(row.language());
         return result;
     }
-
-    public static int getCustomLanguageSchemeColor(String lang) {
-        CustomLanguageSchemeStore store = getCustomLanguageSchemeStore();
-        String byLabel = DB.getLanguageByLabel(lang);
-        String byLanguage = DB.getLabelByLanguage(lang);
-
-        String scope = getCustomLanguageSchemeScope();
-        if (TextUtils.isEmpty(scope)) {
-            String prefix = store.current + "－";
-            boolean isParent = !store.schemes.containsKey(store.current);
-            if (isParent) {
-                for (Map.Entry<String, LinkedHashSet<String>> entry : store.schemes.entrySet()) {
-                    if (entry.getKey().startsWith(prefix) && matchesCustomLanguage(entry.getValue(), lang, byLabel, byLanguage)) {
-                        int idx = 0;
-                        for (String schemeName : store.schemes.keySet()) {
-                            if (TextUtils.equals(schemeName, store.current)) return schemeIndexToColor(idx);
-                            idx++;
-                        }
-                    }
-                }
-            } else {
-                LinkedHashSet<String> currentSet = store.schemes.get(store.current);
-                if (matchesCustomLanguage(currentSet, lang, byLabel, byLanguage)) {
-                    int currentIndex = 0;
-                    for (String schemeName : store.schemes.keySet()) {
-                        if (TextUtils.equals(schemeName, store.current)) return schemeIndexToColor(currentIndex);
-                        currentIndex++;
-                    }
-                }
-            }
-        } else if (!"ALL".equals(scope)) {
-            String prefix = scope + "－";
-            for (Map.Entry<String, LinkedHashSet<String>> entry : store.schemes.entrySet()) {
-                if (entry.getKey().startsWith(prefix) && matchesCustomLanguage(entry.getValue(), lang, byLabel, byLanguage)) {
-                    int idx = 0;
-                    for (String schemeName : store.schemes.keySet()) {
-                        if (TextUtils.equals(schemeName, entry.getKey())) return schemeIndexToColor(idx);
-                        idx++;
-                    }
-                }
-            }
-        }
-
-        int index = 0;
-        for (Map.Entry<String, LinkedHashSet<String>> entry : store.schemes.entrySet()) {
-            if (matchesCustomLanguage(entry.getValue(), lang, byLabel, byLanguage)) return schemeIndexToColor(index);
-            index++;
-        }
-        return Color.GRAY;
-    }
-
-    private static boolean matchesCustomLanguage(Set<String> set, String lang, String byLabel, String byLanguage) {
-        if (set == null) return false;
-        return set.contains(lang)
-                || (!TextUtils.isEmpty(byLabel) && set.contains(byLabel))
-                || (!TextUtils.isEmpty(byLanguage) && set.contains(byLanguage));
-    }
+    public static String getCustomLanguageSchemeScope() { return CustomSchemes.scope(); }
+    public static void setCustomLanguageSchemeScope(String scope) { CustomSchemes.setScope(scope); }
+    public static String[] getCustomLanguageSchemeScopeNames() { return CustomSchemes.groups().toArray(new String[0]); }
+    public static int getCustomLanguageSchemeColor(String lang) { return CustomSchemes.firstColor(lang); }
 
     public static int schemeIndexToColor(int index) {
         // First schemes use vivid dark colors for better readability with white text.
@@ -400,163 +275,24 @@ public class Pref {
         return Color.HSVToColor(new float[]{hue, saturation, value});
     }
 
-    public static String[] getCustomLanguageSchemeNames() {
-        CustomLanguageSchemeStore store = getCustomLanguageSchemeStore();
-        String[] names = store.schemes.keySet().toArray(new String[0]);
-        Arrays.sort(names);
-        return names;
-    }
 
-    public static String getCurrentCustomLanguageSchemeName() {
-        return getCustomLanguageSchemeStore().current;
-    }
-
-    public static void setCurrentCustomLanguageSchemeName(String schemeName) {
-        if (TextUtils.isEmpty(schemeName)) return;
-        CustomLanguageSchemeStore store = getCustomLanguageSchemeStore();
-        if (!store.schemes.containsKey(schemeName)) return;
-        store.current = schemeName;
-        saveCustomLanguageSchemeStore(store);
-    }
-
-    public static boolean saveCurrentCustomLanguageSchemeAs(String schemeName) {
-        String name = normalizeSchemeName(schemeName);
-        if (TextUtils.isEmpty(name)) return false;
-        CustomLanguageSchemeStore store = getCustomLanguageSchemeStore();
-        LinkedHashSet<String> currentSet = store.schemes.get(store.current);
-        if (currentSet == null) currentSet = new LinkedHashSet<>();
-        store.schemes.put(name, new LinkedHashSet<>(currentSet));
-        store.current = name;
-        saveCustomLanguageSchemeStore(store);
+    public static String[] getCustomLanguageSchemeNames() { return CustomSchemes.names(); }
+    public static String getCurrentCustomLanguageSchemeName() { return CustomSchemes.currentName(); }
+    public static void setCurrentCustomLanguageSchemeName(String name) { CustomSchemes.select(name); }
+    public static boolean createCustomLanguageScheme(String name) { return CustomSchemes.create(name); }
+    public static boolean renameCurrentCustomLanguageScheme(String name) { return CustomSchemes.rename(name); }
+    public static boolean deleteCurrentCustomLanguageScheme() { return CustomSchemes.delete(); }
+    public static boolean saveCurrentCustomLanguageSchemeAs(String name) {
+        CustomSchemes.Scheme old = CustomSchemes.current();
+        if (!CustomSchemes.create(name)) return false;
+        CustomSchemes.Scheme copy = CustomSchemes.current();
+        for (CustomSchemes.Entry row : old.entries)
+            copy.entries.add(new CustomSchemes.Entry(row.language(), row.group(), row.color()));
+        copy.colors.putAll(old.colors);
+        CustomSchemes.replaceCurrent(copy);
         return true;
     }
-
-    public static boolean createCustomLanguageScheme(String schemeName) {
-        String name = normalizeSchemeName(schemeName);
-        if (TextUtils.isEmpty(name)) return false;
-        CustomLanguageSchemeStore store = getCustomLanguageSchemeStore();
-        if (store.schemes.containsKey(name)) return false;
-        store.schemes.put(name, new LinkedHashSet<>());
-        store.current = name;
-        saveCustomLanguageSchemeStore(store);
-        return true;
-    }
-
-    public static boolean renameCurrentCustomLanguageScheme(String schemeName) {
-        String name = normalizeSchemeName(schemeName);
-        if (TextUtils.isEmpty(name)) return false;
-        CustomLanguageSchemeStore store = getCustomLanguageSchemeStore();
-        String oldName = store.current;
-        if (TextUtils.isEmpty(oldName) || !store.schemes.containsKey(oldName)) return false;
-        if (oldName.contentEquals(name)) return true;
-        if (store.schemes.containsKey(name)) return false;
-
-        LinkedHashMap<String, LinkedHashSet<String>> renamed = new LinkedHashMap<>();
-        for (Map.Entry<String, LinkedHashSet<String>> entry : store.schemes.entrySet()) {
-            if (entry.getKey().contentEquals(oldName)) renamed.put(name, entry.getValue());
-            else renamed.put(entry.getKey(), entry.getValue());
-        }
-        store.schemes.clear();
-        store.schemes.putAll(renamed);
-        store.current = name;
-        saveCustomLanguageSchemeStore(store);
-        return true;
-    }
-
-    public static boolean deleteCurrentCustomLanguageScheme() {
-        CustomLanguageSchemeStore store = getCustomLanguageSchemeStore();
-        if (store.schemes.size() <= 1) return false;
-        store.schemes.remove(store.current);
-        if (store.schemes.isEmpty()) return false;
-        store.current = store.schemes.keySet().iterator().next();
-        saveCustomLanguageSchemeStore(store);
-        return true;
-    }
-
-    public static String getCustomLanguageSummary()  {
-        Set<String> set = getCustomLanguages();
-        return getString(R.string.select_custom_language_summary, set.size());
-    }
-
-    private static CustomLanguageSchemeStore getCustomLanguageSchemeStore() {
-        CustomLanguageSchemeStore store = new CustomLanguageSchemeStore();
-        String json = getStr(R.string.pref_key_custom_language_schemes, "");
-        if (!TextUtils.isEmpty(json)) {
-            try {
-                JSONArray array = new JSONArray(json);
-                for (int i = 0; i < array.length(); i++) {
-                    JSONObject object = array.optJSONObject(i);
-                    if (object == null) continue;
-                    String name = normalizeSchemeName(object.optString("name", ""));
-                    if (TextUtils.isEmpty(name)) continue;
-                    JSONArray languages = object.optJSONArray("languages");
-                    LinkedHashSet<String> set = new LinkedHashSet<>();
-                    if (languages != null) {
-                        for (int j = 0; j < languages.length(); j++) {
-                            String lang = languages.optString(j, "");
-                            if (!TextUtils.isEmpty(lang)) set.add(lang);
-                        }
-                    }
-                    store.schemes.put(name, sanitizeCustomLanguages(set));
-                }
-            } catch (Exception ignored) {
-            }
-        }
-
-        if (store.schemes.isEmpty()) {
-            LinkedHashSet<String> legacy = sanitizeCustomLanguages(getStrSet(R.string.pref_key_custom_languages));
-            store.schemes.put(getString(R.string.custom_scheme_default_name), legacy);
-        }
-
-        String current = getStr(R.string.pref_key_custom_language_scheme_current, "");
-        if (TextUtils.isEmpty(current) || !store.schemes.containsKey(current)) {
-            current = store.schemes.keySet().iterator().next();
-        }
-        store.current = current;
-        return store;
-    }
-
-    private static void saveCustomLanguageSchemeStore(CustomLanguageSchemeStore store) {
-        if (store.schemes.isEmpty()) {
-            store.schemes.put(getString(R.string.custom_scheme_default_name), new LinkedHashSet<>());
-        }
-        if (TextUtils.isEmpty(store.current) || !store.schemes.containsKey(store.current)) {
-            store.current = store.schemes.keySet().iterator().next();
-        }
-        JSONArray array = new JSONArray();
-        for (Map.Entry<String, LinkedHashSet<String>> entry : store.schemes.entrySet()) {
-            JSONObject object = new JSONObject();
-            try {
-                object.put("name", entry.getKey());
-                object.put("languages", new JSONArray(new ArrayList<>(entry.getValue())));
-                array.put(object);
-            } catch (Exception ignored) {
-            }
-        }
-        SharedPreferences.Editor editor = get().edit();
-        editor.putString(getString(R.string.pref_key_custom_language_schemes), array.toString());
-        editor.putString(getString(R.string.pref_key_custom_language_scheme_current), store.current);
-        editor.putStringSet(getString(R.string.pref_key_custom_languages), new HashSet<>(store.schemes.get(store.current)));
-        editor.apply();
-    }
-
-    private static String normalizeSchemeName(String name) {
-        if (TextUtils.isEmpty(name)) return "";
-        return name.trim().replaceAll("[\\-/／ 　]", "－");
-    }
-
-    private static LinkedHashSet<String> sanitizeCustomLanguages(Set<String> rawLanguages) {
-        LinkedHashSet<String> input = new LinkedHashSet<>(rawLanguages);
-        LinkedHashSet<String> result = new LinkedHashSet<>();
-        String[] languages = DB.getLanguages();
-        if (languages == null) return result;
-        for (String lang : languages) {
-            if (input.contains(lang)) {
-                result.add(lang);
-            }
-        }
-        return result;
-    }
+    public static String getCustomLanguageSummary() { return CustomSchemes.summary(); }
 
     public static String getTitle() {
         return getStr(R.string.pref_key_custom_title, getString(R.string.app_name));

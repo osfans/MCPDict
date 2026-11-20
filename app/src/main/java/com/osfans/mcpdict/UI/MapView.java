@@ -536,6 +536,10 @@ public class MapView extends org.osmdroid.views.MapView {
             getOverlays().add(overlay);
             hzMarkers[i] = overlay;
         }
+        if (com.osfans.mcpdict.Util.Pref.getFilter() == DB.FILTER.CUSTOM) {
+            initCustom(hz, hzMarkers);
+            return;
+        }
         if (TextUtils.isEmpty(hz)) {
             Cursor cursor = DB.getCursor(String.format("select 簡稱,經緯度,地圖級別,%s from info where length(經緯度) > 0", DB.COLOR));
             if (cursor == null) return;
@@ -588,6 +592,57 @@ public class MapView extends org.osmdroid.views.MapView {
             comments.clear();
         }
         cursor.close();
+    }
+
+    private void initCustom(String hz, FolderOverlay[] overlays) {
+        java.util.Map<String, java.util.List<com.osfans.mcpdict.custom.CustomSchemes.DisplayEntry>> entries =
+                new java.util.LinkedHashMap<>();
+        for (var row : com.osfans.mcpdict.custom.CustomSchemes.visibleEntries()) {
+            entries.computeIfAbsent(row.label(), key -> new java.util.ArrayList<>()).add(row);
+        }
+        java.util.Map<String, StringBuilder> readings = new java.util.HashMap<>();
+        java.util.Map<String, StringBuilder> notes = new java.util.HashMap<>();
+        if (!TextUtils.isEmpty(hz)) try (Cursor cursor = DB.directSearch(hz)) {
+            while (cursor != null && cursor.moveToNext()) {
+                String label = cursor.getString(COL_LANG);
+                String raw = cursor.getString(COL_IPA);
+                if (raw == null || raw.trim().isEmpty()) continue;
+                CharSequence ipa = DisplayHelper.formatIPA(label, raw);
+                readings.computeIfAbsent(label, key -> new StringBuilder()).append(ipa).append(' ');
+                StringBuilder detail = notes.computeIfAbsent(label, key -> new StringBuilder());
+                detail.append(ipa);
+                String comment = cursor.getString(COL_ZS);
+                if (!TextUtils.isEmpty(comment)) detail.append(' ').append(DisplayHelper.formatZS(hz, comment));
+                detail.append('\n');
+            }
+        }
+        try (Cursor cursor = DB.getCursor(String.format(
+                "select 簡稱,經緯度,地圖級別,%s from info where length(經緯度) > 0", DB.COLOR))) {
+            if (cursor == null) return;
+            boolean customColor = com.osfans.mcpdict.Util.Pref.getBool(R.string.pref_key_custom_language_color_by_scheme, false);
+            for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+                String label = cursor.getString(0);
+                var rows = entries.get(label);
+                if (rows == null || !TextUtils.isEmpty(hz) && !readings.containsKey(label)) continue;
+                java.util.List<Integer> colors = new java.util.ArrayList<>();
+                StringBuilder details = new StringBuilder();
+                for (var row : rows) {
+                    colors.add(customColor ? com.osfans.mcpdict.custom.CustomSchemes.color(row.color(), label) : DB.getColor(label));
+                    details.append(row.language()).append(" · ")
+                            .append(com.osfans.mcpdict.custom.CustomSchemes.displayGroup(row.group())).append('\n');
+                }
+                details.append(notes.getOrDefault(label, new StringBuilder()));
+                String ipa = readings.getOrDefault(label, new StringBuilder()).toString().trim();
+                int size = Math.max(0, Math.min(overlays.length - 1, cursor.getInt(2)));
+                Marker marker = new Marker(this, label, cursor.getString(1), size,
+                        colors.get(0), colors.get(0), ipa, details.toString());
+                if (customColor && marker.mIconName instanceof TextDrawable text) {
+                    text.setTextColor(android.graphics.Color.WHITE);
+                }
+                marker.setThematicColors(colors);
+                overlays[size].add(marker);
+            }
+        }
     }
 
     private void createMarker(JSONObject o) {

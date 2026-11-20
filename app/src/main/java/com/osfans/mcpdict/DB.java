@@ -21,6 +21,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import com.osfans.mcpdict.custom.CustomResults;
+import com.osfans.mcpdict.custom.CustomSchemes;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
@@ -117,7 +119,7 @@ public class DB extends SQLiteAssetHelper {
     private static final String[] EDITOR_COLUMNS = new String[]{
             "作者", "錄入人", "維護人"
     };
-    private static SQLiteDatabase db = null;
+    private static volatile SQLiteDatabase db = null;
 
     public static void initialize(Context context) {
         if (db != null) return;
@@ -292,6 +294,7 @@ public class DB extends SQLiteAssetHelper {
         String selection;
 
         String[] selectedLanguages = getVisibleLanguages();
+        if (Pref.getFilter() == FILTER.CUSTOM && selectedLanguages.length == 0) return null;
         String[] visibleLanguages = filterIslandHistory(selectedLanguages);
         String languageClause = getLanguageClause(visibleLanguages);
         boolean showMissing = searchType == SEARCH.HZ && isLanguageHZ(lang) && Pref.getFilter() != FILTER.HZ;
@@ -371,7 +374,7 @@ public class DB extends SQLiteAssetHelper {
         }
         // Search
         Log.e("DB", query);
-        return db.rawQuery(query, null);
+        return CustomResults.arrange(db.rawQuery(query, null));
     }
 
     private static Cursor searchWithMissingReadings(String query, String[] languages,
@@ -413,7 +416,7 @@ public class DB extends SQLiteAssetHelper {
                 AND r.漢字 = c.漢字 AND r.variants = c.variants AND r.語言 = l.簡稱
             ORDER BY c.rank, c.vaIndex, c.漢字, l.sort_order, l.rowid
             """, query, requestedCharacters, ORDER, selected);
-        return db.rawQuery(sql, args.toArray(new String[0]));
+        return CustomResults.arrange(db.rawQuery(sql, args.toArray(new String[0])));
     }
 
     public static Cursor directSearch(String hz) {
@@ -592,6 +595,8 @@ public class DB extends SQLiteAssetHelper {
     }
 
     public static Cursor getLanguageCursor(CharSequence constraint, String filter) {
+        SQLiteDatabase database = db;
+        if (database == null) return null;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
         String[] projection = {LANGUAGE, "rowid as _id"};
@@ -600,20 +605,22 @@ public class DB extends SQLiteAssetHelper {
             String[] inputs = OpenCC.convertAll("LANGUAGE LIKE '%"+constraint+"%'");
             input = String.join(" OR ", inputs).replace("LANGUAGE", LANGUAGE);
         }
-        if (constraint.length() >= 2) {
+        if (constraint != null && constraint.length() >= 2) {
             String[] locations = OpenCC.convertAll("LOCATION LIKE '%"+constraint+"%'");
             String location = String.join(" OR ", locations).replace("LOCATION", "地點");
             input += " OR " + location;
         }
         if (!TextUtils.isEmpty(input)) input = String.format(" AND (%s)", input);
         String query = qb.buildQuery(projection, String.format("音節數 is not null %s %s", input, filter),  null, null, ORDER, null);
-        Cursor cursor = db.rawQuery(query, null);
-        if (cursor.getCount() > 0) return cursor;
+        Cursor cursor = database.rawQuery(query, null);
+        if (TextUtils.isEmpty(constraint) || cursor.getCount() > 0) return cursor;
         cursor.close();
         return getLanguageCursor("", filter);
     }
 
     public static Cursor getCustomLanguageCursor(CharSequence constraint, String filter, Set<String> selectedLanguages) {
+        SQLiteDatabase database = db;
+        if (database == null) return null;
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(TABLE_INFO);
         String[] projection = {LANGUAGE, "rowid as _id"};
@@ -622,7 +629,7 @@ public class DB extends SQLiteAssetHelper {
             String[] inputs = OpenCC.convertAll("LANGUAGE LIKE '%" + constraint + "%'" );
             input = String.join(" OR ", inputs).replace("LANGUAGE", LANGUAGE);
         }
-        if (constraint.length() >= 2) {
+        if (constraint != null && constraint.length() >= 2) {
             String[] locations = OpenCC.convertAll("LOCATION LIKE '%" + constraint + "%'" );
             String location = String.join(" OR ", locations).replace("LOCATION", "地點");
             input += " OR " + location;
@@ -654,8 +661,8 @@ public class DB extends SQLiteAssetHelper {
         }
 
         String query = qb.buildQuery(projection, String.format("音節數 is not null %s %s", input, filter), null, null, order, null);
-        Cursor cursor = db.rawQuery(query, null);
-        if (cursor.getCount() > 0) return cursor;
+        Cursor cursor = database.rawQuery(query, null);
+        if (TextUtils.isEmpty(constraint) || cursor.getCount() > 0) return cursor;
         cursor.close();
         return getCustomLanguageCursor("", filter, selectedLanguages);
     }
@@ -671,6 +678,10 @@ public class DB extends SQLiteAssetHelper {
     public static String[] getArrays(String col) {
         initArrays();
         return getFieldByLabel(HZ, col).split(",");
+    }
+
+    public static String[] getLanguageDisplayOrder() {
+        return queryLabel("1");
     }
 
     public static String[] getLabels() {
@@ -742,15 +753,8 @@ public class DB extends SQLiteAssetHelper {
                 }
             }
             case CUSTOM -> {
-                Set<String> customs = Pref.getCustomLanguages();
-                if (customs.isEmpty()) return new String[]{};
-                ArrayList<String> array = new ArrayList<>();
-                for (String lang: getLanguages()) {
-                    if (customs.contains(lang)) {
-                        array.add(getLabelByLanguage(lang));
-                    }
-                }
-                return array.toArray(new String[0]);
+                return CustomSchemes.visibleEntries().stream().map(CustomSchemes.DisplayEntry::label)
+                        .distinct().toArray(String[]::new);
             }
             case CURRENT -> {
                 ArrayList<String> array = new ArrayList<>();

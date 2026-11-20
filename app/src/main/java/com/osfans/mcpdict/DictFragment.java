@@ -3,6 +3,10 @@ package com.osfans.mcpdict;
 import android.database.Cursor;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.content.Intent;
+import com.osfans.mcpdict.custom.CustomSchemes;
+import com.osfans.mcpdict.custom.CustomSchemeFiles;
+import com.osfans.mcpdict.custom.CustomLanguagePopup;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -33,7 +37,6 @@ import androidx.fragment.app.Fragment;
 
 import com.osfans.mcpdict.Adapter.DivisionAdapter;
 import com.osfans.mcpdict.Adapter.LanguageAdapter;
-import com.osfans.mcpdict.Adapter.MultiLanguageAdapter;
 import com.osfans.mcpdict.Adapter.StringArrayAdapter;
 import com.osfans.mcpdict.DB.FILTER;
 import com.osfans.mcpdict.UI.MatrixTableView;
@@ -51,13 +54,12 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private static final String TAG = "DictFragment";
     private View selfView;
     private SearchView searchView;
-    private Spinner spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions, spinnerRecommend, spinnerEditor, spinnerCustomScheme;
-    private Spinner spinnerCustomScope;
-    private AutoCompleteTextView acSearchLang, acCustomLang;
+    private Spinner spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions, spinnerRecommend, spinnerEditor;
+    private AutoCompleteTextView acSearchLang;
+    private TextView customCount, customScheme;
     private ResultFragment fragmentResult;
-    ArrayAdapter<CharSequence> adapterDict, adapterProvince, adapterRecommend, adapterEditor, adapterCustomScheme;
+    ArrayAdapter<CharSequence> adapterDict, adapterProvince, adapterRecommend, adapterEditor;
     DivisionAdapter adapterDivision;
-    DivisionAdapter adapterCustomScope;
     private View layoutSearchOption, layoutSearchLang;
     private LinearLayout layoutFilters;
     private View buttonFullscreen;
@@ -111,6 +113,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             item.setChecked(Pref.getBool(R.string.pref_key_allow_variants, true));
             item = menu.findItem(R.id.menu_item_long_text_ipa);
             item.setChecked(Pref.getBool(R.string.pref_key_show_ipa, false));
+            menu.findItem(R.id.menu_item_merge_comment_results).setChecked(Pref.getBool(R.string.pref_key_merge_comment_results, false));
             item = menu.findItem(R.id.menu_group_hz_range);
             SubMenu subMenu = item.getSubMenu();
             if (subMenu != null) {
@@ -154,6 +157,10 @@ public class DictFragment extends Fragment implements RefreshableFragment {
                         Pref.putIslandHistory(Pref.ISLAND_HISTORY.HISTORY_ONLY.ordinal());
                     else if (id == R.id.menu_item_history_hide)
                         Pref.putIslandHistory(Pref.ISLAND_HISTORY.HISTORY_HIDE.ordinal());
+                    search();
+                }
+                else if (id == R.id.menu_item_merge_comment_results) {
+                    Pref.putBool(R.string.pref_key_merge_comment_results, !item1.isChecked());
                     search();
                 }
                 else if (id == R.id.menu_item_fullscreen) toggleFullscreen();
@@ -269,11 +276,11 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
         acSearchLang = selfView.findViewById(R.id.text_search_lang);
         acSearchLang.setAdapter(new LanguageAdapter(requireContext()));
-        acSearchLang.setOnFocusChangeListener((v, b) -> {
-            if (b) ((AutoCompleteTextView)v).showDropDown();
+        acSearchLang.setOnFocusChangeListener((v, focused) -> {
+            if (focused) showLanguageSuggestions((AutoCompleteTextView) v);
         });
         String language = Pref.getLanguage();
-        acSearchLang.setText(language);
+        acSearchLang.setText(language, false);
         acSearchLang.setOnItemClickListener((adapterView, view, i, l) -> {
             String lang = acSearchLang.getText().toString();
             Pref.putLanguage(lang);
@@ -286,113 +293,22 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             acSearchLang.requestFocus();
         });
 
-        acCustomLang = selfView.findViewById(R.id.text_custom_lang);
-        MultiLanguageAdapter acAdapter = new MultiLanguageAdapter(requireContext());
-        acAdapter.setOnItemClickListener(view -> {
-            TextView tv = (TextView) view;
-            String lang = tv.getText().toString();
-            updateCustomLanguage(lang);
-        });
-        acCustomLang.setAdapter(acAdapter);
-        acCustomLang.setOnFocusChangeListener((v, b) -> {
-            AutoCompleteTextView tv = (AutoCompleteTextView)v;
-            if (b) tv.showDropDown();
-            else tv.setText("");
-        });
-        acCustomLang.setHint(Pref.getCustomLanguageSummary());
-        selfView.findViewById(R.id.button_custom_lang_clear).setOnClickListener(v -> {
-            acCustomLang.setText("");
-            acCustomLang.requestFocus();
-        });
-        spinnerCustomScope = selfView.findViewById(R.id.spinner_custom_scope);
-        adapterCustomScope = new DivisionAdapter(requireActivity());
-        spinnerCustomScope.setAdapter(adapterCustomScope);
-        spinnerCustomScope.setOnItemSelectedListener(new OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String scope;
-                if (position == 0) {
-                    scope = "ALL";
-                } else if (position == 1) {
-                    scope = "";
-                } else {
-                    scope = Objects.toString(adapterCustomScope.getItem(position), "");
-                }
-                Pref.setCustomLanguageSchemeScope(scope);
-                if (Pref.getFilter() == FILTER.CUSTOM) search();
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
-        });
-        CheckBox checkColorByScheme = selfView.findViewById(R.id.checkBox_color_by_scheme);
-        checkColorByScheme.setChecked(Pref.getBool(R.string.pref_key_custom_language_color_by_scheme, false));
-        checkColorByScheme.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            Pref.putBool(R.string.pref_key_custom_language_color_by_scheme, isChecked);
-            acAdapter.notifyDataSetChanged();
+        customCount = selfView.findViewById(R.id.text_custom_count);
+        customCount.setOnClickListener(anchor -> CustomLanguagePopup.show(anchor, this::customChanged));
+        customScheme = selfView.findViewById(R.id.spinner_custom_scheme);
+        customScheme.setOnClickListener(anchor -> CustomLanguagePopup.showSchemes(anchor, this::customChanged));
+        getChildFragmentManager().setFragmentResultListener(CustomSchemeFiles.CHANGED,this,(key,result)->customChanged());
+        selfView.findViewById(R.id.button_custom_import).setOnClickListener(v -> CustomSchemeFiles.get(this).importExcel());
+        selfView.findViewById(R.id.button_custom_export).setOnClickListener(v -> CustomSchemeFiles.get(this).exportExcel());
+        androidx.appcompat.widget.TooltipCompat.setTooltipText(selfView.findViewById(R.id.button_custom_import), "導入 Excel");
+        androidx.appcompat.widget.TooltipCompat.setTooltipText(selfView.findViewById(R.id.button_custom_export), "導出 Excel");
+        CheckBox deduplicate = selfView.findViewById(R.id.checkbox_custom_deduplicate);
+        deduplicate.setChecked(CustomSchemes.deduplicate());
+        deduplicate.setOnCheckedChangeListener((button, checked) -> {
+            CustomSchemes.setDeduplicate(checked);
+            refreshCustomCount();
             if (Pref.getFilter() == FILTER.CUSTOM) search();
         });
-
-        spinnerCustomScheme = selfView.findViewById(R.id.spinner_custom_scheme);
-        adapterCustomScheme = new StringArrayAdapter(requireActivity());
-        spinnerCustomScheme.setAdapter(adapterCustomScheme);
-        spinnerCustomScheme.setOnItemSelectedListener(new OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String scheme = Objects.toString(adapterCustomScheme.getItem(position), "");
-                if (TextUtils.isEmpty(scheme)) return;
-                if (!scheme.contentEquals(Pref.getCurrentCustomLanguageSchemeName())) {
-                    Pref.setCurrentCustomLanguageSchemeName(scheme);
-                    acCustomLang.setHint(Pref.getCustomLanguageSummary());
-                    if (Pref.getFilter() == FILTER.CUSTOM) search();
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
-        });
-        selfView.findViewById(R.id.button_custom_scheme_new).setOnClickListener(v -> {
-            showSchemeNameDialog(R.string.custom_scheme_new, "", schemeName -> {
-                if (Pref.createCustomLanguageScheme(schemeName)) {
-                    refreshCustomSchemes();
-                    Toast.makeText(requireContext(), Pref.getString(R.string.custom_scheme_new_done, schemeName), Toast.LENGTH_SHORT).show();
-                    if (Pref.getFilter() == FILTER.CUSTOM) search();
-                } else {
-                    Toast.makeText(requireContext(), R.string.custom_scheme_name_exists, Toast.LENGTH_SHORT).show();
-                }
-            });
-        });
-        selfView.findViewById(R.id.button_custom_scheme_rename).setOnClickListener(v -> {
-            showSchemeNameDialog(R.string.custom_scheme_rename, Pref.getCurrentCustomLanguageSchemeName(), schemeName -> {
-                if (Pref.renameCurrentCustomLanguageScheme(schemeName)) {
-                    refreshCustomSchemes();
-                    Toast.makeText(requireContext(), Pref.getString(R.string.custom_scheme_rename_done, schemeName), Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(requireContext(), R.string.custom_scheme_name_exists, Toast.LENGTH_SHORT).show();
-                }
-            });
-        });
-        selfView.findViewById(R.id.button_custom_scheme_delete).setOnClickListener(v -> {
-            if (Pref.getCustomLanguageSchemeNames().length <= 1) {
-                Toast.makeText(requireContext(), R.string.custom_scheme_delete_last, Toast.LENGTH_SHORT).show();
-                return;
-            }
-            String oldName = Pref.getCurrentCustomLanguageSchemeName();
-            new AlertDialog.Builder(requireContext())
-                    .setTitle(R.string.custom_scheme_delete)
-                    .setMessage(Pref.getString(R.string.custom_scheme_delete_confirm, oldName))
-                    .setPositiveButton(R.string.ok, (dialog, which) -> {
-                        if (Pref.deleteCurrentCustomLanguageScheme()) {
-                            refreshCustomSchemes();
-                            Toast.makeText(requireContext(), Pref.getString(R.string.custom_scheme_delete_done, oldName), Toast.LENGTH_SHORT).show();
-                            if (Pref.getFilter() == FILTER.CUSTOM) search();
-                        } else {
-                            Toast.makeText(requireContext(), R.string.custom_scheme_delete_last, Toast.LENGTH_SHORT).show();
-                        }
-                    })
-                    .setNegativeButton(R.string.cancel, null)
-                    .show();
-        });
-
         // Set up the checkboxes
         Spinner spinnerFilters = selfView.findViewById(R.id.spinner_filters);
         ((ArrayAdapter<?>)spinnerFilters.getAdapter()).setDropDownViewResource(R.layout.spinner_item);
@@ -472,6 +388,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     @Override
     public void refresh() {
+        refreshCustomCount();
         long start = System.currentTimeMillis();
         Cursor cursor = DB.search();
         if (fragmentResult != null) {
@@ -483,13 +400,28 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     @Override
     public void onResume() {
         super.onResume();
+        refreshCustomSchemes();
+        CheckBox deduplicate = selfView.findViewById(R.id.checkbox_custom_deduplicate);
+        deduplicate.setChecked(CustomSchemes.deduplicate());
         refresh();
     }
 
     private void refreshSearchLang() {
         String language = Pref.getLanguage();
         if (DB.isNotLang(Pref.getLabel())) language = "";
-        acSearchLang.setText(language);
+        acSearchLang.setText(language, false);
+        if (acSearchLang.hasFocus()) showLanguageSuggestions(acSearchLang);
+    }
+
+    private void showLanguageSuggestions(AutoCompleteTextView input) {
+        String query = input.getText().toString();
+        LanguageAdapter adapter = (LanguageAdapter) input.getAdapter();
+        adapter.getFilter().filter(query, count -> {
+            if (count > 0 && input.isAttachedToWindow() && input.hasFocus()
+                    && TextUtils.equals(query, input.getText())) {
+                input.showDropDown();
+            }
+        });
     }
 
     private void refreshDict() {
@@ -557,80 +489,31 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     public void updateCustomLanguage(String lang) {
         Pref.putCustomLanguage(lang);
-        acCustomLang.setHint(Pref.getCustomLanguageSummary());
+        refreshCustomCount();
         if (Pref.getFilter() == FILTER.CUSTOM) search();
     }
 
     private void refreshCustomSchemes() {
-        if (adapterCustomScheme == null) return;
-        adapterCustomScheme.clear();
-        adapterCustomScheme.addAll(Pref.getCustomLanguageSchemeNames());
-        String current = Pref.getCurrentCustomLanguageSchemeName();
-        int index = adapterCustomScheme.getPosition(current);
-        if (index < 0) index = 0;
-        if (adapterCustomScheme.getCount() > 0) {
-            spinnerCustomScheme.setSelection(index);
+        if (customScheme != null) {
+            String scope = CustomSchemes.scope();
+            String group = scope.isEmpty() ? "全部分區" : scope.equals(CustomSchemes.ALL_SCOPE) ? "全部方案" : scope;
+            String label = CustomSchemes.currentName() + " | " + CustomSchemes.displayGroup(group);
+            customScheme.setText(label);
+            customScheme.setContentDescription(label);
         }
-        if (acCustomLang != null) {
-            acCustomLang.setHint(Pref.getCustomLanguageSummary());
-        }
-        refreshCustomScope();
+        refreshCustomCount();
     }
 
-    private void refreshCustomScope() {
-        if (adapterCustomScope == null) return;
-        adapterCustomScope.clear();
-        adapterCustomScope.add("全部方案");
-        adapterCustomScope.add("当前方案");
-        String[] names = Pref.getCustomLanguageSchemeNames();
-        LinkedHashSet<String> parents = new LinkedHashSet<>();
-        for (String name : names) {
-            int idx = -1;
-            while ((idx = name.indexOf("－", idx + 1)) != -1) {
-                parents.add(name.substring(0, idx));
-            }
-            parents.add(name);
-        }
-        String[] sortedParents = parents.toArray(new String[0]);
-        Arrays.sort(sortedParents);
-        for (String p : sortedParents) {
-            adapterCustomScope.add(p);
-        }
-        String scope = Pref.getCustomLanguageSchemeScope();
-        int index;
-        if ("ALL".equals(scope)) {
-            index = 0;
-        } else if (scope.isEmpty()) {
-            index = 1;
-        } else {
-            index = adapterCustomScope.getPosition(scope);
-        }
-        if (index < 0 || index >= adapterCustomScope.getCount()) index = 0;
-        spinnerCustomScope.setSelection(index);
+    private void customChanged() {
+        refreshCustomSchemes();
+        if (Pref.getFilter() == FILTER.CUSTOM) search();
     }
 
-    private interface SchemeNameHandler {
-        void onConfirm(String schemeName);
-    }
+    private void refreshCustomCount() {
+        if (customCount != null) {
+            customCount.setText(CustomSchemes.languages().size() + " 個語言");
 
-    private void showSchemeNameDialog(int titleRes, String defaultValue, SchemeNameHandler handler) {
-        EditText input = new EditText(requireContext());
-        input.setSingleLine(true);
-        input.setHint(R.string.custom_scheme_name_hint);
-        input.setText(defaultValue);
-        new AlertDialog.Builder(requireContext())
-                .setTitle(titleRes)
-                .setView(input)
-                .setPositiveButton(R.string.ok, (DialogInterface dialog, int which) -> {
-                    String schemeName = input.getText().toString().trim();
-                    if (TextUtils.isEmpty(schemeName)) {
-                        Toast.makeText(requireContext(), R.string.custom_scheme_save_empty, Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-                    handler.onConfirm(schemeName);
-                })
-                .setNegativeButton(R.string.cancel, null)
-                .show();
+        }
     }
 
     public void refresh(String query, String label) {

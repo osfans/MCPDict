@@ -16,6 +16,7 @@ dist/
 *.pdf
 *.doc
 *.docx
+!tools/漢字音典介紹.docx
 *.pyc
 *.zip
 __pycache__

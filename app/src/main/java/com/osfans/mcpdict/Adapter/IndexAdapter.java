@@ -90,14 +90,14 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
         mCurrentLanguage = Pref.getLabel();
         if (cursor != null) {
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-                String hz = cursor.getString(COL_HZ);
+                String hz = com.osfans.mcpdict.UI.ListReadings.isMerged(cursor) ? "□" : cursor.getString(COL_HZ);
                 if (!hz.contentEquals(lastHz)) {
                     mHZs.add(hz);
                     mPositions.add(cursor.getPosition());
                 }
                 String lang = cursor.getString(COL_LANG);
                 String ipa = cursor.getString(COL_IPA);
-                if (lang.contentEquals(mCurrentLanguage) && ipa != null && !ipa.isEmpty()) {
+                if (!com.osfans.mcpdict.UI.ListReadings.isMerged(cursor) && lang.contentEquals(mCurrentLanguage) && ipa != null && !ipa.isEmpty()) {
                     String lastIpa = mIPAs.getOrDefault(hz, "") + " ";
                     mIPAs.put(hz, (lastIpa + ipa).replaceAll("\\(.*?\\)", "").trim());
                 }

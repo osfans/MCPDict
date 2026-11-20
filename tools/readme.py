@@ -1,163 +1,132 @@
 #!/usr/bin/env python3
+"""Convert introduction Word to README, preserving Word field hyperlinks.
 
+Run from any directory: python tools/readme.py [source.docx] [output.md].
+The database builder consumes README. Only the standard library is needed.
+"""
 from pathlib import Path
-import docx
-import os
-from lxml import etree
-from pathlib import Path
+import re
+import sys
+from xml.etree import ElementTree as ET
+from zipfile import ZipFile
+
+W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+R = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}"
+
+
+def inline(paragraph, relationships):
+    chunks, fields = [], []
+
+    def append(text, bold=False, italic=False, link=""):
+        if not text:
+            return
+        if chunks and chunks[-1][1:] == (bold, italic, link):
+            chunks[-1] = (chunks[-1][0] + text, bold, italic, link)
+        else:
+            chunks.append((text, bold, italic, link))
+
+    def walk(node, link=""):
+        if node.tag == W + "hyperlink":
+            link = relationships.get(node.get(R + "id"), link)
+        if node.tag == W + "fldSimple":
+            match = re.search(r'HYPERLINK\s+(?:"([^"]+)"|(\S+))', node.get(W + "instr", ""), re.I)
+            if match:
+                link = match.group(1) or match.group(2)
+        if node.tag == W + "r":
+            props = node.find(W + "rPr")
+            def enabled(tag):
+                value = props.find(W + tag) if props is not None else None
+                return value is not None and value.get(W + "val", "1") not in ("0", "false", "off")
+            for child in node:
+                if child.tag == W + "fldChar":
+                    kind = child.get(W + "fldCharType")
+                    if kind == "begin":
+                        fields.append({"code": "", "visible": False, "link": ""})
+                    elif kind == "separate" and fields:
+                        field = fields[-1]
+                        field["visible"] = True
+                        match = re.search(r'HYPERLINK\s+(?:"([^"]+)"|(\S+))', field["code"], re.I)
+                        if match:
+                            field["link"] = match.group(1) or match.group(2)
+                    elif kind == "end" and fields:
+                        fields.pop()
+                elif child.tag == W + "instrText" and fields:
+                    fields[-1]["code"] += child.text or ""
+                elif child.tag in (W + "t", W + "tab", W + "br"):
+                    if fields and not all(f["visible"] for f in fields):
+                        continue
+                    url = next((f["link"] for f in reversed(fields) if f["link"]), link)
+                    text = (child.text or "") if child.tag == W + "t" else " "
+                    append(text, enabled("b"), enabled("i"), url)
+            return
+        for child in node:
+            walk(child, link)
+
+    walk(paragraph)
+    # Coalesce Word's split runs and emit one link around its whole display text.
+    result, index = [], 0
+    while index < len(chunks):
+        url, group = chunks[index][3], []
+        while index < len(chunks) and chunks[index][3] == url:
+            text, bold, italic, _ = chunks[index]
+            if text.strip():
+                leading = text[:len(text) - len(text.lstrip())]
+                trailing = text[len(text.rstrip()):]
+                value = text.strip()
+                if bold:
+                    value = "**" + value + "**"
+                if italic:
+                    value = "*" + value + "*"
+                text = leading + value + trailing
+            group.append(text)
+            index += 1
+        value = "".join(group)
+        target = "<" + url + ">" if any(c.isspace() for c in url) else url
+        result.append(f"[{value}]({target})" if url else value)
+    return "".join(result).strip()
+
 
 def docx_to_markdown(docx_file, output_md):
-    """Convert a .docx file to a Markdown file and a subfolder of images."""
-
-    folder = str(Path(output_md).parent)
-    image_folder = str(Path(output_md).parent / "images")
-    
-    doc = docx.Document(docx_file)
-
-    paragraphs = list(doc.paragraphs)
-    tables = list(doc.tables)
-    markdown = []
-    image_count = 0
-    text = ""
-
-    # save all images
-    images = {}
-    for rel in doc.part.rels.values():
-        if "image" in rel.reltype:
-            image_filename = save_image(rel.target_part, image_folder)
-            images[rel.rId] = image_filename[len(folder)-1:]
-
-    #print("images", images)
-    
-    for block in doc.element.body:
-        if block.tag.endswith('p'):  # Handle paragraphs
-            paragraph = paragraphs.pop(0)  # Match current paragraph
-            md_paragraph = ""
-
-            style_name = paragraph.style.name
-
-            #print("Style:", style_name)
-            if "List" in style_name:
-                prefix = get_bullet_point_prefix(paragraph)
-                md_paragraph = prefix  # Markdown syntax for bullet points
-            elif "Heading 1" in style_name:
-                md_paragraph = "## "
-            elif "Heading 2" in style_name:
-                md_paragraph = "### "
-            elif "Heading 3" in style_name:
-                md_paragraph = "#### "
-            elif "Normal" in style_name:
-                md_paragraph = ""
-            elif "Title" in style_name:
-                md_paragraph = "# "
-            else:
-                print("Unsupported style:", style_name)
-
-            md_paragraph += parse_run(paragraph, images)
-
-            markdown.append(md_paragraph)
-
-        elif block.tag.endswith('tbl'):  # Handle tables (if present)
-            table = tables.pop(0)  # Match current table
-            table_text = ""
-            for i, row in enumerate(table.rows):
-                table_text += "| " + " | ".join(cell.text.strip() for cell in row.cells) + " |\n"
-                if i == 0:
-                    table_text += "| " + " | ".join("---" for _ in row.cells) + " |\n"
-                    
-            markdown.append(table_text)
-            
-        #else:
-        #    print("Unsupported block:", block)
-
-    # Write to Markdown file
-    with open(output_md, "w", encoding="utf-8") as md_file:
-        md_file.write("\n\n".join(markdown))
+    with ZipFile(docx_file) as archive:
+        root = ET.fromstring(archive.read("word/document.xml"))
+        styles = ET.fromstring(archive.read("word/styles.xml"))
+        names = {s.get(W + "styleId"): s.find(W + "name").get(W + "val", "").lower()
+                 for s in styles if s.find(W + "name") is not None}
+        relationships = {}
+        if "word/_rels/document.xml.rels" in archive.namelist():
+            relationships = {r.get("Id"): r.get("Target", "")
+                             for r in ET.fromstring(archive.read("word/_rels/document.xml.rels"))}
+        blocks = []
+        for block in root.find(W + "body"):
+            if block.tag == W + "p":
+                text = inline(block, relationships)
+                if not text:
+                    continue
+                style = block.find(W + "pPr/" + W + "pStyle")
+                name = names.get(style.get(W + "val"), "") if style is not None else ""
+                heading = re.match(r"heading\s+(\d+)", name)
+                if name == "title":
+                    text = "# " + text
+                elif heading:
+                    text = "#" * min(6, int(heading.group(1)) + 1) + " " + text
+                elif text.startswith("●"):
+                    text = "- " + text[1:].lstrip()
+                elif "list" in name:
+                    text = "- " + text
+                blocks.append(text)
+            elif block.tag == W + "tbl":
+                table = []
+                for row in block.findall(W + "tr"):
+                    cells = [" ".join(inline(p, relationships) for p in cell.findall(W + "p"))
+                             .replace("|", "\\|") for cell in row.findall(W + "tc")]
+                    table.append("| " + " | ".join(cells) + " |")
+                    if len(table) == 1:
+                        table.append("| " + " | ".join("---" for _ in cells) + " |")
+                blocks.append("\n".join(table))
+    Path(output_md).write_text("\n\n".join(blocks) + "\n", encoding="utf-8", newline="\n")
 
 
-def extract_r_embed(xml_string):
-    """
-    Extract the value of r:embed from the given XML string.
-
-    :param xml_string: The XML content as a string.
-    :return: The value of r:embed or None if not found.
-    """
-    # Parse the XML
-    root = etree.fromstring(xml_string)
-    
-    # Define the namespaces
-    namespaces = {
-        'a': "http://schemas.openxmlformats.org/drawingml/2006/main",
-        'r': "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
-        'pic': "http://schemas.openxmlformats.org/drawingml/2006/picture",
-    }
-    
-    # Use XPath to find the <a:blip> element with r:embed
-    blip = root.find(".//a:blip", namespaces=namespaces)
-    
-    # Extract the r:embed attribute value
-    if blip is not None:
-        return blip.attrib.get("{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed")
-    return None
-
-def save_image(image_part, output_folder):
-    """Save an image to the output folder and return the filename."""
-    os.makedirs(output_folder, exist_ok=True)
-    image_filename = os.path.join(output_folder, os.path.basename(image_part.partname))
-    with open(image_filename, "wb") as img_file:
-        img_file.write(image_part.blob)
-    return str(image_filename).replace("\\", "/")
-
-
-def get_list_level(paragraph):
-    """Determine the level of a bullet point or numbered list item."""
-    # Access the raw XML of the paragraph
-    p = paragraph._element
-    numPr = p.find(".//w:numPr", namespaces=p.nsmap)
-    if numPr is not None:
-        ilvl = numPr.find(".//w:ilvl", namespaces=p.nsmap)
-        if ilvl is not None:
-            return int(ilvl.get("{http://schemas.openxmlformats.org/wordprocessingml/2006/main}val"))
-    return 0
-
-def get_bullet_point_prefix(paragraph):
-    """Determine the Markdown prefix for a bullet point based on its indentation level."""
-    level = get_list_level(paragraph)
-    return "  " * level + "- "  # Use Markdown syntax for nested lists
-    
-def parse_run(run, images):
-    """Go through document objects recursively and return markdown."""
-    sub_parts = list(run.iter_inner_content())
-    text = ""
-    for index, s in enumerate(sub_parts):
-        if isinstance(s, str):
-            text += s
-        elif isinstance(s, docx.text.run.Run):
-            if s.style.name == "Hyperlink" and s.text:
-                for child in run.runs[index-2].element.getchildren():
-                    if child.text and child.text.startswith("HYPERLINK"):
-                        link = child.text[10:].split(" ")[0]
-                        text += f"[{s.text}]({link})"
-            else:
-                text += parse_run(s, images)
-        # elif isinstance(s, docx.text.hyperlink.Hyperlink):
-        #     text += f"[{s.text}]({s.address})"
-        # elif isinstance(s, docx.drawing.Drawing):
-        #     rId = extract_r_embed(s._element.xml)
-        #     image_url = images[rId]
-        #     text += f"![]({image_url})"
-        else:
-            print("unknown run type", s)
-
-    if isinstance(run, docx.text.run.Run):
-        if run.bold:
-            text = f"**{text}**"
-        if run.italic:
-            text = f"*{text}*"
-        if run.underline:
-            text = f"__{text}__"
-    return text
-
-
-# 使用示例
-docx_to_markdown("漢字音典介紹.docx", "../README.md")
+if __name__ == "__main__":
+    here = Path(__file__).resolve().parent
+    docx_to_markdown(sys.argv[1] if len(sys.argv) > 1 else here / "漢字音典介紹.docx",
+                     sys.argv[2] if len(sys.argv) > 2 else here.parent / "README.md")

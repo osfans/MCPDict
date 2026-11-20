@@ -164,99 +164,91 @@
                     android:text="@string/pfg" />
             </LinearLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:id="@+id/layout_custom"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/layout_custom_scheme_actions"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <Spinner
-                        android:id="@+id/spinner_custom_scheme"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <Button
-                        android:id="@+id/button_custom_scheme_new"
-                        style="@style/Widget.AppCompat.Button.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:text="@string/custom_scheme_new" />
-
-                    <Button
-                        android:id="@+id/button_custom_scheme_rename"
-                        style="@style/Widget.AppCompat.Button.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:text="@string/custom_scheme_rename" />
-
-                    <Button
-                        android:id="@+id/button_custom_scheme_delete"
-                        style="@style/Widget.AppCompat.Button.Small"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:text="@string/custom_scheme_delete" />
-
-                </LinearLayout>
-
-                <AutoCompleteTextView
-                    android:id="@+id/text_custom_lang"
+                <Button
+                    android:id="@+id/spinner_custom_scheme"
+                    style="@style/Widget.AppCompat.Button.Small"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:completionThreshold="0"
-                    android:hint="@string/custom_languages"
+                    android:layout_height="32dp"
+                    android:minHeight="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:layout_weight="1.4"
+                    android:minWidth="0dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="0dp"
+                    android:gravity="center_vertical|start"
                     android:singleLine="true"
-                    android:textSize="@dimen/text_size"
-                    android:paddingStart="0dp"
-                    android:paddingEnd="@dimen/button_icon_size"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/layout_custom_checkboxes"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/layout_custom_scheme_actions" />
-
-                <ImageButton
-                    android:id="@+id/button_custom_lang_clear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textSize="14sp"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/ic_spinner_caret"
-                    app:layout_constraintBottom_toBottomOf="@id/text_custom_lang"
-                    app:layout_constraintEnd_toEndOf="@id/text_custom_lang"
-                    app:layout_constraintTop_toTopOf="@id/text_custom_lang" />
+                    android:drawableEnd="@drawable/ic_spinner_caret" />
 
-                <LinearLayout
-                    android:id="@+id/layout_custom_checkboxes"
+                <Button
+                    android:id="@+id/text_custom_count"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_height="32dp"
+                    android:minHeight="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:minWidth="0dp"
+                    android:gravity="center"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:drawableEnd="@drawable/ic_spinner_caret"
+                    android:contentDescription="搜尋、勾選語言及拖動排序"
+                    android:textSize="14sp"
+                    android:singleLine="true" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_custom_deduplicate"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/text_custom_lang"
-                    app:layout_constraintTop_toTopOf="@id/text_custom_lang">
+                    android:layout_height="32dp"
+                    android:minHeight="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:textSize="14sp"
+                    android:paddingEnd="4dp"
+                    android:contentDescription="去除重複語言"
+                    android:text="去重" />
+                <Button
+                    android:id="@+id/button_custom_import"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="28dp"
+                    android:layout_height="32dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:text="📥"
+                    android:contentDescription="導入 Excel" />
 
-                    <Spinner
-                        android:id="@+id/spinner_custom_scope"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/button_custom_export"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="28dp"
+                    android:layout_height="32dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:text="📤"
+                    android:contentDescription="導出 Excel" />
 
-                    <CheckBox
-                        android:id="@+id/checkBox_color_by_scheme"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/custom_language_color_by_scheme" />
-
-                </LinearLayout>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/layout_division"

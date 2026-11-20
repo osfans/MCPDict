@@ -34,6 +34,7 @@
         android:id="@+id/menu_item_long_text_ipa"
         android:checkable="true"
         android:title="@string/long_text_ipa" />
+    <item android:id="@+id/menu_item_merge_comment_results" android:checkable="true" android:title="@string/option_merge_comment_results" />
     <item
         android:id="@+id/menu_item_fullscreen"
         android:title="@string/toggle_fullscreen" />

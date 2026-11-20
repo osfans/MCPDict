@@ -36,6 +36,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.osfans.mcpdict.DB;
 import com.osfans.mcpdict.Orth.DisplayHelper;
 import com.osfans.mcpdict.R;
+import com.osfans.mcpdict.custom.CustomResults;
+import com.osfans.mcpdict.custom.CustomSchemes;
 import com.osfans.mcpdict.Util.App;
 import com.osfans.mcpdict.Util.FontUtil;
 import com.osfans.mcpdict.Util.Pref;
@@ -98,6 +100,9 @@ public class MatrixTableView {
     public void setSelectedCharacters(java.util.Set<String> selected, Cursor cursor) { selectedCharacters=selected; setCursor(cursor); }
 
     private final List<String> hzOrder = new ArrayList<>();
+    private final Map<String, String> entryLabels = new LinkedHashMap<>();
+    private final Map<String, String> entryColors = new LinkedHashMap<>();
+    private final Map<String, String> entryGroups = new LinkedHashMap<>();
     private final List<String> langOrder = new ArrayList<>();
     private final LinkedHashMap<String, LinkedHashMap<String, List<Reading>>> byHz = new LinkedHashMap<>();
     private final LinkedHashMap<String, LinkedHashMap<String, List<Reading>>> byLang = new LinkedHashMap<>();
@@ -225,6 +230,9 @@ public class MatrixTableView {
     private void buildModel(Cursor cursor) {
         hzOrder.clear();
         langOrder.clear();
+        entryLabels.clear();
+        entryColors.clear();
+        entryGroups.clear();
         byHz.clear();
         byLang.clear();
 
@@ -240,24 +248,32 @@ public class MatrixTableView {
             String ipa = cursor.getString(COL_IPA);
             String zs = cursor.getString(COL_ZS);
 
-            if (TextUtils.isEmpty(hz) || TextUtils.isEmpty(lang) || TextUtils.isEmpty(ipa)) {
+            if (TextUtils.isEmpty(hz) || TextUtils.isEmpty(lang)) {
                 continue;
             }
 
             if(selectedCharacters!=null && !selectedCharacters.contains(hz)) continue;
             hzSeen.add(hz);
-            langSeen.add(lang);
+            String key = CustomResults.key(cursor);
+            entryLabels.put(key, lang);
+            entryColors.put(key, CustomResults.color(cursor));
+            entryGroups.put(key, CustomResults.group(cursor));
+            langSeen.add(key);
+            if (ipa == null || ipa.trim().isEmpty()) continue;
             Reading reading = new Reading(hz, lang, ipa, zs);
 
             byHz.computeIfAbsent(hz, k -> new LinkedHashMap<>())
-                    .computeIfAbsent(lang, k -> new ArrayList<>())
+                    .computeIfAbsent(key, k -> new ArrayList<>())
                     .add(reading);
-            byLang.computeIfAbsent(lang, k -> new LinkedHashMap<>())
+            byLang.computeIfAbsent(key, k -> new LinkedHashMap<>())
                     .computeIfAbsent(hz, k -> new ArrayList<>())
                     .add(reading);
         }
 
         hzOrder.addAll(hzSeen);
+        // Retain first-seen order, but only include memberships with a real reading
+        // among the currently selected characters. Individual missing cells remain blank.
+        langSeen.retainAll(byLang.keySet());
         langOrder.addAll(langSeen);
 
         if (oldPosition >= 0 && oldPosition < cursor.getCount()) {
@@ -317,7 +333,7 @@ public class MatrixTableView {
             out.append('\n');
 
             for (String lang : langOrder) {
-                out.append(lang);
+                out.append(entryLabels.getOrDefault(lang, lang));
 
                 for (String hz : hzOrder) {
                     out.append('\t');
@@ -339,7 +355,7 @@ public class MatrixTableView {
             out.append("漢字");
 
             for (String lang : langOrder) {
-                out.append('\t').append(lang);
+                out.append('\t').append(entryLabels.getOrDefault(lang, lang));
             }
 
             out.append('\n');
@@ -684,7 +700,8 @@ public class MatrixTableView {
         return tv;
     }
 
-    private View makeLanguageLabel(String lang, int width) {
+    private View makeLanguageLabel(String key, int width) {
+        String lang = entryLabels.getOrDefault(key, key);
         LinearLayout box = new LinearLayout(context);
         box.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
         box.setMinimumHeight(rowMinHeight);
@@ -705,14 +722,15 @@ public class MatrixTableView {
                 && Pref.getFilter() == DB.FILTER.CUSTOM;
         Drawable drawable;
         if (colorByScheme) {
-            int c = Pref.getCustomLanguageSchemeColor(lang);
+            int c = CustomSchemes.color(entryColors.getOrDefault(key, ""), lang);
             drawable = languageLabelBuilder.build(lang, c, c);
+            ((TextDrawable) drawable).setTextColor(android.graphics.Color.WHITE);
         } else {
             drawable = languageLabelBuilder.build(lang, getColor(lang), getSubColor(lang));
         }
 
         label.setBackground(drawable);
-        label.setContentDescription(DB.getLanguageByLabel(lang));
+        label.setContentDescription(DB.getLanguageByLabel(lang) + " " + entryGroups.getOrDefault(key, ""));
         label.setOnClickListener(v -> App.info(v.getContext(), lang));
         box.addView(label);
         return box;

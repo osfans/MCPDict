@@ -519,4 +519,6 @@
     <string name="option_history_only">僅歷史音</string>
     <string name="option_history_hide">隱藏歷史音</string>
     <string name="option_both_island_history">不限</string>
+    <string name="option_merge_comment_results">注釋結果合併顯示</string>
+    <string name="pref_key_merge_comment_results" translatable="false">MERGE_COMMENT_RESULTS</string>
 </resources>

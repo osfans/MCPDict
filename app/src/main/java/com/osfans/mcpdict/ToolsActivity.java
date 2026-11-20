@@ -1,9 +1,11 @@
 package com.osfans.mcpdict;
 import android.os.Bundle;
 import android.content.Intent;
+import android.text.method.LinkMovementMethod;
 import android.widget.*;
 import android.view.*;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.text.HtmlCompat;
 import com.osfans.mcpdict.Util.App;
 import com.osfans.mcpdict.Util.FontUtil;
 import com.osfans.mcpdict.audio.RecordingAnalysisActivity;
@@ -18,5 +20,15 @@ public class ToolsActivity extends AppCompatActivity {
    if(pos==modes.length)startActivity(new Intent(this,RecordingAnalysisActivity.class));
    else startActivity(new Intent(this,PhonologyActivity.class).putExtra("module",modes[pos]));
   });root.addView(list,new LinearLayout.LayoutParams(-1,0,1));
+  TextView acknowledgements = new TextView(this);
+  acknowledgements.setText(HtmlCompat.fromHtml(getString(R.string.tools_acknowledgements), HtmlCompat.FROM_HTML_MODE_COMPACT));
+  acknowledgements.setTextSize(13);
+  acknowledgements.setTextColor(App.obtainColor(this, android.R.attr.textColorSecondary));
+  acknowledgements.setMovementMethod(LinkMovementMethod.getInstance());
+  FontUtil.setTypeface(acknowledgements);
+  float density = getResources().getDisplayMetrics().density;
+  int inset = Math.round(16 * density);
+  acknowledgements.setPadding(inset, Math.round(8 * density), inset, inset);
+  root.addView(acknowledgements, new LinearLayout.LayoutParams(-1, -2));
  }
 }
