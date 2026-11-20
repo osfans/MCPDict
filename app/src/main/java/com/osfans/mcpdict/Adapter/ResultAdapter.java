@@ -4,6 +4,9 @@ import static com.osfans.mcpdict.DB.BA;
 import static com.osfans.mcpdict.DB.COL_FIRST_DICT;
 import static com.osfans.mcpdict.DB.COL_HZ;
 import static com.osfans.mcpdict.DB.COL_IPA;
+import com.osfans.mcpdict.custom.CustomResults;
+import com.osfans.mcpdict.UI.ListReadings;
+import com.osfans.mcpdict.custom.CustomSchemes;
 import static com.osfans.mcpdict.DB.COL_LANG;
 import static com.osfans.mcpdict.DB.COL_LAST_DICT;
 import static com.osfans.mcpdict.DB.COL_ZS;
@@ -72,7 +75,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
     @Override
     public CharSequence getPopupText(@NonNull View view, int position) {
         if (mCursor == null || position == 0) return "";
-        return mCursor.getString(COL_HZ);
+        return ListReadings.isMerged(mCursor) ? "□" : mCursor.getString(COL_HZ);
     }
 
     /**
@@ -126,7 +129,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             }
             cursor.moveToPrevious();
             lastHz = cursor.getString(COL_HZ);
-            lastLang = cursor.getString(COL_LANG);
+            lastLang = CustomResults.key(cursor);
             cursor.moveToNext();
         }
 
@@ -160,9 +163,15 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             String hz = cursor.getString(COL_HZ);
             String comment = getResult(String.format("select comment from user.favorite where hz = '%s'", hz));
             boolean bFavorite = (comment != null);
-            boolean bNewHz = !hz.contentEquals(lastHz);
+            boolean merged=ListReadings.isMerged(cursor);
+            boolean bNewHz = merged ? cursor.getPosition()==0 : !hz.contentEquals(lastHz);
             SpannableStringBuilder ssb = new SpannableStringBuilder();
-            if (bNewHz) {
+            if(merged&&bNewHz) {
+                ssb.append("□",new ForegroundColorSpan(getColor(HZ)),Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                ssb.setSpan(new RelativeSizeSpan(1.8f),0,ssb.length(),Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                mTvHead.setText(ssb);mTvHead.setVisibility(View.VISIBLE);
+            }
+            if (bNewHz && !merged) {
                 lastLang = "";
                 if (isMainPage) {
                     ssb.append(hz, new ForegroundColorSpan(getColor(HZ)), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -213,7 +222,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
             String ipa = cursor.getString(COL_IPA);
             ssb.clear();
             if (!TextUtils.isEmpty(lang)) {
-                if (lang.contentEquals(lastLang)) {
+                if (CustomResults.key(cursor).contentEquals(lastLang)) {
                     mViewLang.setVisibility(View.INVISIBLE);
                 } else {
                     int endangeredBorderColor = DB.getHistoryColor(lang);
@@ -224,8 +233,9 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                             && Pref.getFilter() == DB.FILTER.CUSTOM;
                     Drawable drawable;
                     if (colorByScheme) {
-                        int c = Pref.getCustomLanguageSchemeColor(lang);
+                        int c = CustomSchemes.color(CustomResults.color(cursor), lang);
                         drawable = builder.build(lang, c, c);
+                        ((TextDrawable) drawable).setTextColor(android.graphics.Color.WHITE);
                     } else {
                         drawable = builder.build(lang, getColor(lang), getSubColor(lang));
                     }
@@ -234,11 +244,17 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
                     mViewLang.setVisibility(View.VISIBLE);
                 }
                 boolean hasReading = !TextUtils.isEmpty(ipa);
+                mViewLang.setContentDescription(DB.getLanguageByLabel(lang) + " " + CustomResults.group(cursor));
                 mTextView.setEnabled(hasReading);
                 if (!hasReading) {
                     mTextView.setText(R.string.missing_reading);
                     mTextView.setVisibility(View.VISIBLE);
                     return;
+                }
+                if(merged && !"□".equals(hz)) {
+                    ssb.append("[");int start=ssb.length();ssb.append(hz);
+                    ssb.setSpan(new android.text.style.StyleSpan(android.graphics.Typeface.BOLD),start,ssb.length(),Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    ssb.append("] ");
                 }
                 ipa = DisplayHelper.formatIPA(lang, ipa).toString();
                 if (ipa.contains("<") && !ipa.contains(">")) ipa = ipa.replace("<", "&lt;");

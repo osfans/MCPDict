@@ -393,9 +393,30 @@ public class ResultFragment extends Fragment {
                 box.setOnCheckedChangeListener((v,on)->{if(on)selectedCharacters.add(hz);else selectedCharacters.remove(hz);mMatrixTableView.setSelectedCharacters(new java.util.LinkedHashSet<>(selectedCharacters),mCursor);});characterChoices.addView(box);
             }
         }
+        boolean mergeComments=isMainPage && Pref.getInt(R.string.pref_key_type)==com.osfans.mcpdict.DB.SEARCH.COMMENT.ordinal()
+                && Pref.getFilter()!=com.osfans.mcpdict.DB.FILTER.HZ
+                && Pref.getBool(R.string.pref_key_merge_comment_results,false);
+        java.util.List<String> languageOrder=new java.util.ArrayList<>();
+        if(mergeComments) {
+            if(Pref.getFilter()==com.osfans.mcpdict.DB.FILTER.CUSTOM) {
+                for(var entry:com.osfans.mcpdict.custom.CustomSchemes.visibleEntries())languageOrder.add(entry.key());
+            } else {
+                String[] labels=com.osfans.mcpdict.DB.getLanguageDisplayOrder();
+                if(labels!=null)languageOrder.addAll(java.util.Arrays.asList(labels));
+            }
+        }
+        Cursor listCursor=ListReadings.copy(cursor,mergeComments,languageOrder);
+        Cursor previous=mCursor;
         mCursor = cursor;
-        mIndexAdapter.changeCursor(cursor, mRecyclerView);
-        mResultAdapter.changeCursor(cursor);
+        mIndexAdapter.changeCursor(listCursor, mRecyclerView);
+        mResultAdapter.changeCursor(listCursor);
         if (tableMode) mMatrixTableView.setSelectedCharacters(new java.util.LinkedHashSet<>(selectedCharacters),cursor);
+        if(previous!=null&&previous!=cursor&&!previous.isClosed())previous.close();
     }
+    @Override public void onDestroy() {
+        if(mCursor!=null&&!mCursor.isClosed())mCursor.close();
+        if(mResultAdapter!=null&&mResultAdapter.getCursor()!=null&&!mResultAdapter.getCursor().isClosed())mResultAdapter.getCursor().close();
+        super.onDestroy();
+    }
+
 }
