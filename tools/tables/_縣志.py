@@ -326,7 +326,7 @@ class 表(_表):
 			行 = 自.normS(行)
 			行 = re.sub(r"(\{[^{}]+?)\(又\)([^{}]*?\})", "\\1，\\2", 行)
 			行 = re.sub(r"(\{[^{}]+?)\(新\)([^{}]*?\})", "\\1。\\2", 行)
-		elif 名 in ("句容", "蘭谿諸葛"):
+		elif 名 in ("句容", "蘭谿諸葛", "蒼南蒲門"):
 			if re.match(".*[⓪①-⑨ⓐⓑ]+", 行):
 				for i in range(0,10):
 					sda = "⓪" if i == 0 else chr(ord('①') + (i - 1))
@@ -425,6 +425,9 @@ class 表(_表):
 			if 行.startswith("字韵声	阴"): return ""
 			if 行.startswith("字韵声	"): return 行.split("\t")[1]
 			行 = 自.增加調類(行)
+		elif 名 in ("珠海造貝",):
+			if "{" not in 行: return
+			行 = re.sub(r"\{(\d+) *\}", r"[\1]", 行)
 		elif 名 in ("衡東大浦","伊川"):
 			if 行.lstrip().startswith("阴平"): return
 			行 = 行.strip()
