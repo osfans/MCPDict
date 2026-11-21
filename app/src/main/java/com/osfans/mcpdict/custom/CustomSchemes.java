@@ -49,12 +49,12 @@ public final class CustomSchemes {
                 JSONArray order = source.optJSONArray("groupOrder");
                 if (order != null) for (int g = 0; g < order.length(); g++) scheme.groupOrder.add(normalizeGroup(order.getString(g)).isEmpty() ? "未分區" : normalizeGroup(order.getString(g)));
                 JSONArray savedGroups = source.optJSONArray("groups");
-                if (savedGroups != null) for (int g = 0; g < savedGroups.length(); g++) scheme.groups.add(normalizeGroup(savedGroups.getString(g)));
+                if (savedGroups != null) for (int g = 0; g < savedGroups.length(); g++) scheme.groups.add(groupTitle(normalizeGroup(savedGroups.getString(g))));
                 JSONArray rows = source.getJSONArray("entries");
                 for (int j = 0; j < rows.length(); j++) {
                     JSONObject row = rows.getJSONObject(j);
                     scheme.entries.add(new Entry(row.getString("id"), row.getString("language"),
-                            normalizeGroup(row.optString("group")), row.optString("color")));
+                            groupTitle(normalizeGroup(row.optString("group"))), row.optString("color")));
                 }
                 JSONObject colors = source.optJSONObject("colors");
                 if (colors != null) for (Iterator<String> it = colors.keys(); it.hasNext();) {
@@ -182,7 +182,7 @@ public final class CustomSchemes {
     public static void setDeduplicate(boolean on) { Pref.get().edit().putBoolean(DEDUPLICATE, on).apply(); }
     public static String normalizeGroup(String name) {
         String group = name.trim().replaceAll("[-/／－]+", "／").replaceAll("^／+|／+$", "");
-        return group.equals("未分區") ? "" : group;
+        return group;
     }
     public static String groupTitle(String name) { return name.isEmpty() ? "未分區" : name; }
     public static String displayGroup(String name) { return groupTitle(name).replace('／', '-'); }
@@ -329,7 +329,7 @@ public final class CustomSchemes {
     public static boolean renameGroup(String oldName, String newName) {
         String old = normalizeGroup(oldName), replacement = normalizeGroup(newName);
         List<String> existing = groups();
-        if (!existing.contains(oldName) || isUnclassifiedGroup(old) || replacement.isEmpty() || Arrays.asList(replacement.split("／")).contains("未分區")) return false;
+        if (!existing.contains(oldName) || replacement.isEmpty()) return false;
         if (old.equals(replacement)) return true;
         if (existing.contains(replacement) || !old.isEmpty() && replacement.startsWith(old + "／")) return false;
         for (String name : existing) {
@@ -356,7 +356,7 @@ public final class CustomSchemes {
         return true;
     }
     public static boolean deleteGroup(String name) {
-        if (!groups().contains(name) || isUnclassifiedGroup(name)) return false;
+        if (!groups().contains(name)) return false;
         String root = normalizeGroup(name);
         Scheme scheme = current();
         scheme.entries.removeIf(entry -> groupBranch(entry.group, root));
@@ -370,50 +370,46 @@ public final class CustomSchemes {
     public static boolean isUnclassifiedGroup(String path) {
         return path.isEmpty() || path.equals("未分區") || path.endsWith("／未分區");
     }
-    private static boolean classifiedUnder(String group,String parent) {
-        if(parent.isEmpty())return !group.isEmpty()&&!group.startsWith("未分區／");
-        if(!group.startsWith(parent+"／"))return false;
-        String relative=group.substring(parent.length()+1);
-        return !relative.equals("未分區")&&!relative.startsWith("未分區／");
+    public static boolean requiredUnclassifiedGroup(String name) { return false; }
+    /** Move a complete branch; renameGroup preserves IDs, colours and selection. */
+    public static boolean reparentGroup(String name,String parent) {
+        String path=normalizeGroup(name),target=normalizeGroup(parent);
+        if(target.equals(path) || !path.isEmpty() && target.startsWith(path+"／"))return false;
+        if(!target.isEmpty()&&!groups().contains(target))return false;
+        String leaf=path.isEmpty()?"未分區":path.substring(path.lastIndexOf('／')+1);
+        String destination=target.isEmpty()?leaf:target+"／"+leaf;
+        if(destination.equals(path))return true;
+        if(!renameGroup(name,destination))return false;
+        reorderGroups(groups());return true;
     }
+    /** Reading, saving and sorting never create groups or move/delete memberships. */
     public static void normalizeSubgroups(Scheme scheme) {
-        LinkedHashSet<String> parents=new LinkedHashSet<>();
-        List<String> all=new ArrayList<>(scheme.groups);for(Entry entry:scheme.entries)all.add(entry.group);
-        for(String path:all)while(path.contains("／")) {
-            path=parentGroup(path);
-            if(!Arrays.asList(path.split("／")).contains("未分區"))parents.add(path);
+        // Migrate legacy empty membership paths to an ordinary root node. The
+        // empty path remains reserved for the whole-scheme scope/palette only.
+        for(int i=0;i<scheme.entries.size();i++) {
+            Entry row=scheme.entries.get(i);
+            if(row.group.isEmpty())scheme.entries.set(i,new Entry(row.id,row.language,"未分區",row.color));
         }
-        LinkedHashSet<String> declared=new LinkedHashSet<>();declared.add("");declared.addAll(scheme.groups);scheme.groups.clear();scheme.groups.addAll(declared);
-        for(String parent:parents) {
-            String bucket=parent+"／未分區";scheme.groups.add(bucket);
-            if(!scheme.groupOrder.contains(bucket)) {
-                int at=scheme.groupOrder.size();for(int i=0;i<scheme.groupOrder.size();i++)if(scheme.groupOrder.get(i).startsWith(parent+"／")){at=i;break;}
-                scheme.groupOrder.add(at,bucket);
-            }
+        if(scheme.groups.remove(""))scheme.groups.add("未分區");
+        // Existing buckets are ordinary user-owned groups, including empty groups.
+        Set<String> seen=new HashSet<>();scheme.groupOrder.removeIf(path -> !seen.add(path));
+    }
+    public static int languageCount(String scope) {
+        Map<String,Language> known=catalog();Set<String> names=new HashSet<>();
+        for(Entry entry:current().entries) {
+            Language language=known.get(entry.language);if(language==null)continue;
+            if(!scope.isEmpty()&&!groupTitle(entry.group).equals(scope)&&!entry.group.startsWith(scope+"／"))continue;
+            boolean include=switch(Pref.getIslandHistory()) {
+                case ISLAND_ONLY -> language.island;case ISLAND_HIDE -> !language.island;
+                case HISTORY_ONLY -> language.historical;case HISTORY_HIDE -> !language.historical;default -> true;
+            };
+            if(include)names.add(entry.language);
         }
-        List<Entry> working=new ArrayList<>(scheme.entries);Set<String> removed=new HashSet<>();
-        for(int i=0;i<working.size();i++) {
-            Entry entry=working.get(i);String parent=null;
-            if(entry.group.isEmpty())parent="";
-            else if(entry.group.endsWith("／未分區"))parent=parentGroup(entry.group);
-            else if(parents.contains(entry.group))parent=entry.group;
-            if(parent==null)continue;
-            boolean classified=false;
-            for(int j=0;j<working.size();j++) {
-                Entry target=working.get(j);
-                if(j!=i&&target.language.equals(entry.language)&&classifiedUnder(target.group,parent)) {
-                    classified=true;
-                    if(target.color.isEmpty()&&!entry.color.isEmpty())working.set(j,new Entry(target.id,target.language,target.group,entry.color));
-                }
-            }
-            if(classified)removed.add(entry.id);
-            else if(!parent.isEmpty()&&!entry.group.endsWith("／未分區"))working.set(i,new Entry(entry.id,entry.language,parent+"／未分區",entry.color));
-        }
-        scheme.entries.clear();for(Entry entry:working)if(!removed.contains(entry.id))scheme.entries.add(entry);
+        return names.size();
     }
     public static boolean createGroup(String name) {
         String path = normalizeGroup(name);
-        if (path.isEmpty() || Arrays.asList(path.split("／")).contains("未分區") || groups().contains(path)) return false;
+        if (path.isEmpty() || groups().contains(path)) return false;
         Scheme scheme = current();
         scheme.groups.add(path);
         replaceCurrent(scheme);

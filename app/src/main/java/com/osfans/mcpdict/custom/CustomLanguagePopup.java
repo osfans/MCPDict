@@ -17,8 +17,10 @@ import java.util.*;
 /** Two-column language dropdown: ordered selections on the left, search and add on the right. */
 public final class CustomLanguagePopup {
     private final Context context;
+    private PopupWindow window,groupMenu;
+    private final View anchor;
     private final Runnable changed;
-    private final CustomSchemes.Scheme scheme = CustomSchemes.current();
+    private CustomSchemes.Scheme scheme = CustomSchemes.current();
     private final List<CustomSchemes.Entry> selected = new ArrayList<>();
     private final List<String> candidates = new ArrayList<>();
     private final String[] languages = Optional.ofNullable(DB.getLanguages()).orElse(new String[0]);
@@ -26,7 +28,7 @@ public final class CustomLanguagePopup {
     private final RecyclerView availableList;
     private final TextView heading;
     private final ItemTouchHelper drag;
-    private String query = "";
+    private String[] queries = {""};
     private String activeGroup = CustomSchemes.scope().isEmpty() || CustomSchemes.scope().equals(CustomSchemes.ALL_SCOPE)
             ? null : CustomSchemes.normalizeGroup(CustomSchemes.scope());
     private final View groupSwatch;
@@ -35,7 +37,7 @@ public final class CustomLanguagePopup {
     public static void show(View anchor, Runnable changed) { new CustomLanguagePopup(anchor, changed); }
     private int dp(int n) { return SchemeColorPicker.dp(context,n); }
     private CustomLanguagePopup(View anchor, Runnable changed) {
-        context=anchor.getContext(); this.changed=changed;
+        context=anchor.getContext(); this.changed=changed;this.anchor=anchor;
         LinearLayout body=new LinearLayout(context); body.setOrientation(LinearLayout.HORIZONTAL); body.setPadding(dp(6),dp(4),dp(6),dp(4));
         android.util.TypedValue background=new android.util.TypedValue();
         context.getTheme().resolveAttribute(android.R.attr.colorBackground,background,true); body.setBackgroundColor(background.data);
@@ -46,7 +48,7 @@ public final class CustomLanguagePopup {
         LinearLayout.LayoutParams dividerParams=new LinearLayout.LayoutParams(dp(1),-1); dividerParams.setMargins(dp(4),0,dp(4),0);
         body.addView(divider,dividerParams);
         body.addView(right,new LinearLayout.LayoutParams(0,-1,1));
-        heading=new TextView(context); heading.setTextSize(12); heading.setGravity(Gravity.CENTER_VERTICAL);
+        heading=new TextView(context); heading.setTextSize(14); heading.setGravity(Gravity.CENTER_VERTICAL);
         heading.setMaxLines(2); heading.setEllipsize(TextUtils.TruncateAt.END);
         heading.setOnClickListener(v -> chooseGroup());
         LinearLayout groupHeader = new LinearLayout(context); groupHeader.setGravity(Gravity.CENTER_VERTICAL);
@@ -56,6 +58,7 @@ public final class CustomLanguagePopup {
         groupColor.setContentDescription("設定此分區顏色");
         groupHeader.addView(groupColor,new LinearLayout.LayoutParams(dp(28),-1));
         groupColor.setOnClickListener(v -> {
+            closeForDialog();
             String path = activeGroup == null ? "" : activeGroup;
             SchemeColorPicker.showOverall(context,(activeGroup == null ? scheme.name : CustomSchemes.displayGroup(path)) + (activeGroup == null ? " · 方案顏色" : " · 分區顏色"),
                     scheme, activeGroup, () -> { changed.run(); refresh(); });
@@ -84,11 +87,11 @@ public final class CustomLanguagePopup {
         }); drag.attachToRecyclerView(chosenList);
         search.addTextChangedListener(new TextWatcher() {
             public void beforeTextChanged(CharSequence s,int start,int count,int after) {}
-            public void onTextChanged(CharSequence s,int start,int before,int count) { query=s.toString().trim().toLowerCase(Locale.ROOT); refresh(); }
+            public void onTextChanged(CharSequence s,int start,int before,int count) { queries=com.osfans.mcpdict.Util.OpenCC.convertAll(s.toString().trim().toLowerCase(Locale.ROOT)); refresh(); }
             public void afterTextChanged(Editable value) {}
         });
-        int width=anchor.getResources().getDisplayMetrics().widthPixels-dp(24);
-        int height=Math.min(dp(480),(int)(anchor.getResources().getDisplayMetrics().heightPixels*.65));
+        int width=anchor.getResources().getDisplayMetrics().widthPixels-dp(40);
+
         LinearLayout root=new LinearLayout(context);root.setOrientation(LinearLayout.VERTICAL);root.setBackgroundColor(background.data);
         root.addView(body,new LinearLayout.LayoutParams(-1,0,1));
         palette=new CheckBox(context);palette.setText("使用自選配色");palette.setTextSize(12);
@@ -96,33 +99,29 @@ public final class CustomLanguagePopup {
         palette.setOnCheckedChangeListener((button,on)->{
             if(Pref.getBool(R.string.pref_key_custom_language_color_by_scheme,false)!=on){Pref.putBool(R.string.pref_key_custom_language_color_by_scheme,on);changed.run();}
         });root.addView(palette,new LinearLayout.LayoutParams(-1,dp(40)));
-        PopupWindow popup=new PopupWindow(root,width,height,true); popup.setBackgroundDrawable(new ColorDrawable(background.data));
+        PopupWindow popup=new PopupWindow(root,width,-2,true);window=popup;
+        popup.setHeight(Math.max(dp(160),popup.getMaxAvailableHeight(anchor)-dp(24))); popup.setBackgroundDrawable(new ColorDrawable(background.data));
         popup.setElevation(dp(8)); popup.setOutsideTouchable(true); popup.setInputMethodMode(PopupWindow.INPUT_METHOD_NEEDED);
         popup.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
         body.setFocusableInTouchMode(true); body.requestFocus();
         int[] location=new int[2]; anchor.getLocationOnScreen(location);
-        popup.showAsDropDown(anchor,dp(12)-location[0],0);
+        popup.showAsDropDown(anchor,dp(20)-location[0],0);
         refresh();
     }
+    private void closeForDialog(){if(window!=null)window.dismiss();}
     private boolean inActiveGroup(CustomSchemes.Entry entry) {
         return activeGroup == null || entry.group().equals(activeGroup)
                 || !activeGroup.isEmpty() && entry.group().startsWith(activeGroup + "／");
     }
     private void chooseGroup() {
-        androidx.appcompat.widget.PopupMenu menu = new androidx.appcompat.widget.PopupMenu(context,heading);
-        menu.getMenu().add("全部分區").setOnMenuItemClickListener(item -> {
-            activeGroup=null; CustomSchemes.setScope(""); changed.run(); refresh(); return true;
-        });
-        for(String name:CustomSchemes.groups()) menu.getMenu().add(CustomSchemes.displayGroup(name)).setOnMenuItemClickListener(item -> {
-            activeGroup=CustomSchemes.normalizeGroup(name); CustomSchemes.setScope(name); changed.run(); refresh(); return true;
-        });
-        menu.getMenu().add("＋ 新建分區").setOnMenuItemClickListener(item -> {
-            promptGroup(context,path -> {
-                // The helper has already saved the new group; retain the local record edits.
-                scheme.groups.add(path); CustomSchemes.normalizeSubgroups(scheme); activeGroup=path; changed.run(); refresh();
-            }); return true;
-        });
-        menu.show();
+        if(groupMenu!=null&&groupMenu.isShowing()){groupMenu.dismiss();return;}
+        groupMenu=SchemeGroupPopup.show(heading,()->{
+            scheme=CustomSchemes.current();String scope=CustomSchemes.scope();
+            activeGroup=scope.isEmpty()||scope.equals(CustomSchemes.ALL_SCOPE)?null:CustomSchemes.normalizeGroup(scope);
+            changed.run();refresh();
+        },this::closeForDialog);
+        groupMenu.setOnDismissListener(()->{groupMenu=null;updateHeading();});
+        updateHeading();
     }
     static void promptScheme(Context context, java.util.function.Consumer<String> created) {
         EditText name = new EditText(context); name.setSingleLine(); name.setHint("方案名稱");
@@ -146,18 +145,21 @@ public final class CustomLanguagePopup {
         }));
         dialog.show();
     }
-    private boolean matches(String name) { return query.isEmpty()||name.toLowerCase(Locale.ROOT).contains(query); }
+    private boolean matches(String name) { String value=name.toLowerCase(Locale.ROOT); for(String query:queries)if(value.contains(query))return true;return false; }
     private void refresh() {
         palette.setChecked(Pref.getBool(R.string.pref_key_custom_language_color_by_scheme,false));
         selected.clear(); candidates.clear();
         for(CustomSchemes.Entry entry:scheme.entries) if(inActiveGroup(entry)) selected.add(entry);
         for(String language:languages) if(matches(language)) candidates.add(language);
-        heading.setText((activeGroup == null ? "全部分區" : "分區：" + CustomSchemes.displayGroup(activeGroup)) + "（"+selected.size()+"） ▾");
+        updateHeading();
         String value = scheme.colors.getOrDefault(activeGroup == null ? "" : activeGroup, "");
         android.graphics.drawable.GradientDrawable chip = new android.graphics.drawable.GradientDrawable();
         chip.setColor(value.isEmpty() ? Color.TRANSPARENT : SchemeColorPicker.parse(value));
         chip.setStroke(dp(1),Color.GRAY); groupSwatch.setBackground(chip);
         chosenList.getAdapter().notifyDataSetChanged(); availableList.getAdapter().notifyDataSetChanged();
+    }
+    private void updateHeading() {
+        heading.setText((activeGroup==null?"全部分區":CustomSchemes.displayGroup(activeGroup))+"（"+selected.size()+"） "+(groupMenu!=null&&groupMenu.isShowing()?"▴":"▾"));
     }
     private void save() { CustomSchemes.replaceCurrent(scheme); changed.run(); }
     private int color(CustomSchemes.Entry entry) {
@@ -171,6 +173,7 @@ public final class CustomLanguagePopup {
         return value.isEmpty()?(label==null?0xffb71c1c:DB.getColor(label)):SchemeColorPicker.parse(value);
     }
     private void moveRecord(CustomSchemes.Entry entry) {
+        closeForDialog();
         AutoCompleteTextView group=new AutoCompleteTextView(context);group.setSingleLine();group.setThreshold(0);
         group.setHint("分區名稱，留空為未分區");group.setText(entry.group().replace('／','-'));
         group.setAdapter(new ArrayAdapter<>(context,android.R.layout.simple_dropdown_item_1line,
@@ -211,10 +214,10 @@ public final class CustomLanguagePopup {
                 actions.getMenu().add("移除此記錄").setOnMenuItemClickListener(item->{row.check.performClick();return true;});actions.show();
             });
             row.name.setOnLongClickListener(v->{moveRecord(entry);return true;});row.swatch.setBackgroundColor(color(entry)); row.colorTouch.setContentDescription("設定 "+entry.language()+" 的顏色");
-            row.colorTouch.setOnClickListener(v->SchemeColorPicker.show(context,entry.language()+" · 顏色",String.format(Locale.ROOT,"#%06X",color(entry)&0xffffff), "跟隨分區顏色", value->{
+            row.colorTouch.setOnClickListener(v->{closeForDialog();SchemeColorPicker.show(context,entry.language()+" · 顏色",String.format(Locale.ROOT,"#%06X",color(entry)&0xffffff), "跟隨分區顏色", value->{
                 for(int i=0;i<scheme.entries.size();i++) if(scheme.entries.get(i).id().equals(entry.id())) scheme.entries.set(i,new CustomSchemes.Entry(entry.id(),entry.language(),entry.group(),value));
                 Pref.putBool(R.string.pref_key_custom_language_color_by_scheme,true); save(); refresh();
-            }));
+            });});
             row.handle.setOnTouchListener((v,event)-> { if(event.getActionMasked()==MotionEvent.ACTION_DOWN) drag.startDrag(row); return false; });
         }
     }

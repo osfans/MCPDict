@@ -40,7 +40,7 @@ public final class SchemeColorPicker {
         int pad = dp(context, 20);
         body.setPadding(pad, dp(context, 8), pad, 0);
         Palette palette = new Palette(context, parse(initial));
-        body.addView(palette, new LinearLayout.LayoutParams(-1, dp(context, 200)));
+        body.addView(palette, new LinearLayout.LayoutParams(-1, dp(context, 160)));
         TextView hueLabel = new TextView(context); hueLabel.setText("色相"); body.addView(hueLabel);
         SeekBar hue = new SeekBar(context); hue.setMax(360); hue.setProgress(Math.round(palette.hsv[0])); body.addView(hue);
         EditText hex = new EditText(context); hex.setSingleLine(); hex.setHint("#RRGGBB"); body.addView(hex);
@@ -72,7 +72,9 @@ public final class SchemeColorPicker {
             public void afterTextChanged(Editable value) {}
         });
         update.run();
-        AlertDialog dialog = new AlertDialog.Builder(context).setTitle(title).setView(body)
+        ScrollView scroll=new ScrollView(context);scroll.setFillViewport(false);scroll.addView(body);
+        body.setFocusableInTouchMode(true);body.requestFocus();
+        AlertDialog dialog = new AlertDialog.Builder(context).setTitle(title).setView(scroll)
                 .setNegativeButton("取消", null).setNeutralButton(resetLabel, (d, w) -> result.accept(""))
                 .setPositiveButton("確定", null).create();
         dialog.setOnShowListener(d -> dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
@@ -81,6 +83,7 @@ public final class SchemeColorPicker {
             result.accept(value); dialog.dismiss();
         }));
         dialog.show();
+        if(dialog.getWindow()!=null)dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN|WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
     }
     static int dp(Context context, int value) { return Math.round(value * context.getResources().getDisplayMetrics().density); }
     private static final class Palette extends View {

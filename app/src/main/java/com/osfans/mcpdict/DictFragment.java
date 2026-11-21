@@ -56,7 +56,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
     private SearchView searchView;
     private Spinner spinnerType, spinnerDict, spinnerProvinces, spinnerDivisions, spinnerRecommend, spinnerEditor;
     private AutoCompleteTextView acSearchLang;
-    private TextView customCount, customScheme;
+    private TextView customCount, customScheme, customGroup;
     private ResultFragment fragmentResult;
     ArrayAdapter<CharSequence> adapterDict, adapterProvince, adapterRecommend, adapterEditor;
     DivisionAdapter adapterDivision;
@@ -296,12 +296,13 @@ public class DictFragment extends Fragment implements RefreshableFragment {
         customCount = selfView.findViewById(R.id.text_custom_count);
         customCount.setOnClickListener(anchor -> CustomLanguagePopup.show(anchor, this::customChanged));
         customScheme = selfView.findViewById(R.id.spinner_custom_scheme);
-        customScheme.setOnClickListener(anchor -> CustomLanguagePopup.showSchemes(anchor, this::customChanged));
+        customScheme.setOnClickListener(anchor -> startActivity(new Intent(requireContext(),com.osfans.mcpdict.custom.CustomSchemesActivity.class)));
+        customGroup = selfView.findViewById(R.id.button_custom_group);
+        customGroup.setOnClickListener(anchor -> {
+            java.util.List<String> paths=new java.util.ArrayList<>();paths.add("");paths.addAll(CustomSchemes.groups());
+            com.osfans.mcpdict.custom.GroupTreePopup.show(anchor,paths,CustomSchemes.scope(),scope->{CustomSchemes.setScope(scope);customChanged();},null,false);
+        });
         getChildFragmentManager().setFragmentResultListener(CustomSchemeFiles.CHANGED,this,(key,result)->customChanged());
-        selfView.findViewById(R.id.button_custom_import).setOnClickListener(v -> CustomSchemeFiles.get(this).importExcel());
-        selfView.findViewById(R.id.button_custom_export).setOnClickListener(v -> CustomSchemeFiles.get(this).exportExcel());
-        androidx.appcompat.widget.TooltipCompat.setTooltipText(selfView.findViewById(R.id.button_custom_import), "導入 Excel");
-        androidx.appcompat.widget.TooltipCompat.setTooltipText(selfView.findViewById(R.id.button_custom_export), "導出 Excel");
         CheckBox deduplicate = selfView.findViewById(R.id.checkbox_custom_deduplicate);
         deduplicate.setChecked(CustomSchemes.deduplicate());
         deduplicate.setOnCheckedChangeListener((button, checked) -> {
@@ -498,7 +499,8 @@ public class DictFragment extends Fragment implements RefreshableFragment {
             String scope = CustomSchemes.scope();
             String group = scope.isEmpty() ? "全部分區" : scope.equals(CustomSchemes.ALL_SCOPE) ? "全部方案" : scope;
             String label = CustomSchemes.currentName() + " | " + CustomSchemes.displayGroup(group);
-            customScheme.setText(label);
+            if(customGroup!=null) {customGroup.setText(CustomSchemes.displayGroup(group));customGroup.setContentDescription(label);}
+            customScheme.setText("編輯方案");
             customScheme.setContentDescription(label);
         }
         refreshCustomCount();
@@ -511,7 +513,7 @@ public class DictFragment extends Fragment implements RefreshableFragment {
 
     private void refreshCustomCount() {
         if (customCount != null) {
-            customCount.setText(CustomSchemes.languages().size() + " 個語言");
+            customCount.setText("編輯分區");
 
         }
     }

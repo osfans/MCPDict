@@ -58,6 +58,8 @@
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="@string/audio_demo_title" />
+        <activity android:name=".custom.CustomSchemesActivity"
+            android:exported="false" android:label="方案" />
     </application>
 
 </manifest>
