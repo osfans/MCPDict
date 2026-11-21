@@ -31,7 +31,10 @@ class DocumentationChecks(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / 'README.md'
             converter.docx_to_markdown(ROOT / 'tools/漢字音典介紹.docx', output)
-            self.assertEqual(output.read_text(encoding='utf-8'), (ROOT / 'README.md').read_text(encoding='utf-8'))
+            # Git history may retain trailing Word spaces and different line endings.
+            normalized = lambda text: '\n'.join(line.rstrip() for line in text.splitlines()).strip()
+            self.assertEqual(normalized(output.read_text(encoding='utf-8')),
+                             normalized((ROOT / 'README.md').read_text(encoding='utf-8')))
 
     def test_no_source_text_or_hyperlinks_lost(self):
         markdown = (ROOT / 'README.md').read_text(encoding='utf-8')
@@ -67,7 +70,7 @@ class DocumentationChecks(unittest.TestCase):
         self.assertTrue(set(parser.targets) <= set(parser.ids))
         for anchor in ['sec_contents','sec_interface','sec_example','sec_romanization','custom','merged-comments']:
             self.assertIn(anchor, parser.ids)
-        for feature in ['數據庫正在建設中……','📥','📤','默認關閉','#RRGGBB','單表','注釋結果合併顯示']:
+        for feature in ['數據庫正在建設中……','編輯方案','編輯分區','默認關閉','#RRGGBB','單表','注釋結果合併顯示']:
             self.assertIn(feature, text)
         self.assertNotIn('獨立管理頁', text)
 

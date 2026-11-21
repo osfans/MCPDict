@@ -16,7 +16,7 @@ import java.io.*;
 import java.util.*;
 import java.util.concurrent.*;
 
-/** Lifecycle-owned file actions, without a separate management screen. */
+/** Lifecycle-owned file actions shared by the dictionary and independent scheme screen. */
 public final class CustomSchemeFiles extends Fragment {
     public static final String CHANGED="custom-files-changed";
     private static final String TAG="custom-scheme-files";
@@ -34,7 +34,12 @@ public final class CustomSchemeFiles extends Fragment {
                 if(uri!=null)writeFile(uri,file);else file.delete();
             });
     public static CustomSchemeFiles get(Fragment parent) {
-        FragmentManager manager=parent.getChildFragmentManager();
+        return get(parent.getChildFragmentManager());
+    }
+    public static CustomSchemeFiles get(androidx.fragment.app.FragmentActivity owner) {
+        return get(owner.getSupportFragmentManager());
+    }
+    private static CustomSchemeFiles get(FragmentManager manager) {
         CustomSchemeFiles actions=(CustomSchemeFiles)manager.findFragmentByTag(TAG);
         if(actions==null){actions=new CustomSchemeFiles();manager.beginTransaction().add(actions,TAG).commitNow();}
         return actions;
@@ -120,7 +125,7 @@ public final class CustomSchemeFiles extends Fragment {
     }
     private void exportOptions() {
         List<CustomSchemes.Scheme> schemes=CustomSchemes.load();
-        List<String> choices=new ArrayList<>(); for(CustomSchemes.Scheme item:schemes)choices.add("方案："+item.name);
+        List<String> choices=new ArrayList<>(); for(CustomSchemes.Scheme item:schemes)choices.add(item.name);
         choices.add("全部語言模板");
         new AlertDialog.Builder(requireContext()).setTitle("選擇導出內容").setItems(choices.toArray(new String[0]),(dialog,index)->{
             List<CustomSchemes.Entry> entries=new ArrayList<>();
@@ -153,7 +158,7 @@ public final class CustomSchemeFiles extends Fragment {
     private void chooseAuxiliary(List<CustomSchemes.Entry> chosen) {
         String[] fields = {"簡稱", "地圖集二分區", "地圖集二顏色", "音典分區", "音典顏色", "地點", "經緯度"};
         boolean[] selected = new boolean[fields.length];
-        new AlertDialog.Builder(requireContext()).setTitle("選擇輔助資訊")
+        new AlertDialog.Builder(requireContext()).setTitle("選擇輔助信息")
                 .setMultiChoiceItems(fields, selected, (d, i, check) -> selected[i] = check)
                 .setPositiveButton("選擇儲存位置", (d, w) -> prepareExport(chosen, fields, selected))
                 .setNegativeButton("取消", null).show();

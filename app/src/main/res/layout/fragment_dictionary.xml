@@ -172,42 +172,21 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/spinner_custom_scheme"
+                    android:id="@+id/button_custom_group"
                     style="@style/Widget.AppCompat.Button.Small"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="32dp"
-                    android:minHeight="0dp"
-                    android:paddingTop="0dp"
-                    android:paddingBottom="0dp"
-                    android:layout_weight="1.4"
                     android:minWidth="0dp"
+                    android:minHeight="0dp"
                     android:paddingStart="4dp"
-                    android:paddingEnd="0dp"
+                    android:paddingEnd="4dp"
                     android:gravity="center_vertical|start"
                     android:singleLine="true"
                     android:ellipsize="end"
                     android:textSize="14sp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:drawableEnd="@drawable/ic_spinner_caret" />
-
-                <Button
-                    android:id="@+id/text_custom_count"
-                    style="@style/Widget.AppCompat.Button.Small"
-                    android:layout_width="0dp"
-                    android:layout_weight="0.8"
-                    android:layout_height="32dp"
-                    android:minHeight="0dp"
-                    android:paddingTop="0dp"
-                    android:paddingBottom="0dp"
-                    android:minWidth="0dp"
-                    android:gravity="center"
-                    android:paddingStart="4dp"
-                    android:paddingEnd="4dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
                     android:drawableEnd="@drawable/ic_spinner_caret"
-                    android:contentDescription="搜尋、勾選語言及拖動排序"
-                    android:textSize="14sp"
-                    android:singleLine="true" />
+                    android:background="?attr/selectableItemBackgroundBorderless" />
 
                 <CheckBox
                     android:id="@+id/checkbox_custom_deduplicate"
@@ -221,32 +200,34 @@
                     android:contentDescription="去除重複語言"
                     android:text="去重" />
                 <Button
-                    android:id="@+id/button_custom_import"
+                    android:id="@+id/text_custom_count"
                     style="@style/Widget.AppCompat.Button.Small"
-                    android:layout_width="28dp"
+                    android:layout_width="76dp"
                     android:layout_height="32dp"
-                    android:minWidth="0dp"
                     android:minHeight="0dp"
-                    android:padding="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:minWidth="0dp"
                     android:gravity="center"
-                    android:textSize="18sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:text="📥"
-                    android:contentDescription="導入 Excel" />
+                    android:text="編輯分區"
+                    android:contentDescription="搜尋、勾選語言及拖動排序"
+                    android:textSize="14sp"
+                    android:singleLine="true" />
 
                 <Button
-                    android:id="@+id/button_custom_export"
+                    android:id="@+id/spinner_custom_scheme"
                     style="@style/Widget.AppCompat.Button.Small"
-                    android:layout_width="28dp"
+                    android:layout_width="76dp"
                     android:layout_height="32dp"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:padding="0dp"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:text="📤"
-                    android:contentDescription="導出 Excel" />
+                    android:textSize="14sp"
+                    android:text="編輯方案"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
 
             </LinearLayout>
 
