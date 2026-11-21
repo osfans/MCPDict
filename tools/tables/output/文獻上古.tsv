@@ -64,6 +64,7 @@
 㥶	sˤəh	
 㦁	ran	
 㦛	jaʔ	
+㦜	gwˤak	
 㧕	ruʔ	
 㧘	dzˤre	
 㧬	koŋʔ	
@@ -140,9 +141,11 @@
 㼚	kˤaŋ	
 㼜	ʔˤaŋh	
 㼠	lˤaj	石㼠,一種深腹鼎
+㼡	do	
 㼤	kʰˤet	
 㼰	bˤi	
 㼱	nonʔ	
+㼴	ŋˤoʔ	
 㼽	tsʰraŋʔ	
 㽀	dreŋh	
 㽕	lu	
@@ -200,7 +203,7 @@
 䇫	kjə	
 䇸	l̥ˤeŋ	
 䈚	lˤəʔ	
-䈰	srew	
+䈰	sˤrew	
 䉋	mrih	
 䊧	pʰəjh	
 䊮	lˤewk	
@@ -1095,7 +1098,7 @@
 助	dzraʔ	幫
 助	dzrah	支持,促進;助長;助法,一種勞役租賦制度
 劫	kap	
-劬	go	
+劬	gro	
 劭	dawh	
 効	gˤrewh	
 劼	kʰˤrit	
@@ -2216,9 +2219,8 @@
 局	gok	
 屁	pʰəjh	
 屄	pi	
-居	kra	
-居	ka	句末助詞;居居,安靜貌
-居	krah	踞坐;安居;居所;處理;居居,不相親近
+居	ka	
+居	kah	名詞、及物動詞;居居,不相親近
 屆	kˤris	
 屈	kʰut	
 屈	kut	地名
@@ -2801,7 +2803,7 @@
 惰	lˤojʔ	
 惱	nˤuʔ	
 想	saŋʔ	
-惴	torh	
+惴	tonh	
 惶	wˤaŋ	
 惷	tʰunʔ	
 惸	gwin	無兄弟;憂貌
@@ -2855,11 +2857,11 @@
 態	n̥ˤəh	
 慌	m̥ˤaŋʔ	恍
 慍	ʔunh	
-慎	dən	
+慎	diŋ	
 慒	dzu	
 慔	mˤah	
 慕	mˤah	
-慘	tsʰˤəm	
+慘	tsʰˤəmʔ	
 慙	dzˤam	
 慚	dzˤam	
 慜	mrənʔ	
@@ -3205,7 +3207,6 @@
 掾	lonh	
 掾	lron	馳逐
 揀	kˤrenʔ	
-揂	ju	
 揃	tsenʔ	
 揄	lu	抌
 揄	lo	揮動;引出,提出
@@ -3346,7 +3347,7 @@
 擖	kˤat	
 擗	bek	
 擘	pˤrek	
-據	krah	
+據	kah	
 擠	tsˤəjʔ	
 擢	lˤrewk	
 擣	tˤuʔ	
@@ -3446,7 +3447,7 @@
 數	sroh	
 數	tsʰok	稠密;細小
 數	srok	親密;屢次;數數,迫切
-數	sroʔ	計算;分辨;數說;數落;稱道
+數	sroʔ	計算;幾;分辨;數說;數落;稱道
 敹	tsʰraj	
 敺	kʰro	
 敻	ẘeŋh	搜尋;推究;尋訪
@@ -3643,7 +3644,7 @@
 曀	ʔˤis	
 曃	l̥ˤəs	
 曄	wap	
-曆	C.rˤek	
+曆	rˤek	
 曉	ŋ̊ˤewʔ	
 曋	wən	暉(運)
 曏	haŋh	
@@ -4262,8 +4263,7 @@
 歫	gaʔ	
 歰	ŋ̊rəp	
 歲	ẘas	
-歷	C.rˤek	
-歷	rˤek	歷錄,文采貌
+歷	rˤek	
 歸	kwəj	
 死	sliʔ	
 死	slih	名詞;效死、殉難
@@ -5830,7 +5830,7 @@
 瞁	ẘek	
 瞂	bot	
 瞋	tʰiŋ	
-瞍	sruʔ	
+瞍	suʔ	
 瞑	mˤeŋ	
 瞗	tˤiw	
 瞙	mˤak	
@@ -6259,7 +6259,7 @@
 筭	sˤonh	
 筮	das	
 筰	tsˤrak	窄
-筲	srew	
+筲	sˤrew	
 筳	lˤeŋ	
 筴	tsʰˤrek	小箕;柵;策
 筴	kʰˤep	愜
@@ -6361,13 +6361,12 @@
 籈	kin	
 籊	l̥ˤewk	
 籋	nrep	
-籌	tru	
+籌	dru	
 籍	dzak	
 籑	dzronh	
 籔	sroʔ	
 籚	C.rˤa	矛戟柄;筐
 籛	tsanh	
-籜	l̥ˤak	
 籟	rˤas	
 籠	rˤoŋ	
 籠	rˤoŋʔ	盛土器
@@ -6502,7 +6501,7 @@
 絅	kʰwˤeŋʔ	
 絆	pˤanh	
 絇	go	
-絍	nəmh	
+絍	nəm	
 絏	las	
 結	kˤit	
 絓	gwˤreh	受阻,絆住
@@ -6660,7 +6659,6 @@
 縲	ruj	
 縳	dronʔ	
 縵	mˤanh	
-縵	mˤarh	縵縵,頹喪、絕望貌
 縶	trip	
 縷	roʔ	
 縹	pʰewʔ	
@@ -6734,7 +6732,7 @@
 續	sloh	系靷的環
 纍	ruj	
 纏	dran	
-纑	rˤa	
+纑	C.rˤa	
 纓	ʔeŋ	
 纔	dzram	方才,剛剛
 纔	sˤram	淺青,微黑
@@ -7146,6 +7144,7 @@
 臑	nˤunh	肉醬
 臒	ʔwˤak	
 臘	rˤap	
+臘	rap	劍的兩面刃
 臚	C.ra	
 臛	hˤawk	
 臝	rˤojʔ	
@@ -7406,7 +7405,6 @@
 莥	nruʔ	
 莧	gˤrenh	
 莨	rˤaŋ	
-莩	pʰu	
 莪	ŋˤaj	
 莫	mˤak	
 莫	mˤah	暮;晚;昏暗
@@ -7862,7 +7860,7 @@
 蚈	kˤe	
 蚉	mən	
 蚊	mən	
-蚋	nos	
+蚋	not	
 蚌	bˤroŋʔ	
 蚍	bi	
 蚑	kʰeh	
@@ -8294,8 +8292,7 @@
 覂	pamʔ	
 覃	lˤəm	
 覆	pʰuk	
-覆	pʰuh	蓋、遍及
-覆	buh	襲擊;埋伏
+覆	pʰuh	蓋、遍及;伏兵
 覈	gˤrewk	果覈;覈實(?)
 見	kˤenh	
 見	gˤenh	
@@ -8889,7 +8886,7 @@
 踖	tsʰak	踖陵,地名
 踘	kuk	
 踝	gˤrojʔ	
-踞	krah	
+踞	kah	
 踟	dre	
 踡	gron	
 踢	l̥ˤek	
@@ -8975,7 +8972,7 @@
 躳	kuŋ	
 軀	kʰo	
 車	j̊ia	
-車	kra	
+車	ka	
 軋	ʔˤrit	
 軌	kruʔ	
 軍	kun	
@@ -9026,6 +9023,7 @@
 載	tsˤəʔ	年;祀
 載	tsˤəh	記載;開始;施行;成功;安定;助詞;裝飾
 輊	tris	
+輎	sˤrew	
 輐	ŋˤonʔ	輐斷,圓轉無棱角
 輒	trep	
 輓	manʔ	
@@ -9571,6 +9569,7 @@
 鋣	jia	
 鋤	dzra	
 鋪	pʰˤa	
+鋪	pʰˤah	床鋪
 鋸	kah	
 錄	C.rok	
 錈	gonʔ	
@@ -9837,6 +9836,7 @@
 陰	ʔumh	遮蓋;隱蔽;埋藏
 陲	doj	
 陳	lrən	
+陳	lriŋ	國名、姓
 陴	be	
 陵	C.rəŋ	
 陶	lˤuh	陶陶,驅馳貌
@@ -10080,6 +10080,7 @@
 頓	tˤunh	
 頖	pʰˤanh	
 頗	pʰˤaj	
+頗	pʰˤajʔ	副詞,稍微
 領	reŋʔ	
 頛	rˤujʔ	
 頜	kˤəp	
@@ -10516,7 +10517,7 @@
 鰅	ŋoŋ	
 鰈	l̥ˤap	
 鰋	ʔanʔ	
-鰌	dzu	
+鰌	tsʰu	
 鰍	tsʰiw	
 鰓	sˤə	
 鰕	gˤra	
@@ -10582,7 +10583,6 @@
 鴀	pə	
 鴂	kwˤit	
 鴃	kwˤit	
-鴅	hˤon	
 鴆	drəmh	
 鴇	pˤuʔ	
 鴈	ŋˤranh	
@@ -10940,7 +10940,6 @@
 龞	pet	
 龠	lewk	
 龢	gˤoj	
-𠂄	hˤon	
 𠈈	tsʰeʔ	
 𠎮	kot	
 𠏄	tʰreŋh	偵
@@ -11018,6 +11017,7 @@
 𢾫	trəʔ	刺青
 𣂁	l̥ˤew	
 𣃈	trak	鐯
+𣄧	luj	
 𣊓	ŋ̊et	
 𣍘	dzˤu	
 𣎜	jəŋ	
@@ -11172,6 +11172,7 @@
 𧙧	kˤrenh	
 𧙻	put	完畢
 𧛞	gˤa	
+𧟃	wˤe	
 𧡢	ẘar	
 𧡸	tˤo	
 𧢦	gruj	
@@ -11266,8 +11267,6 @@
 𩇹	pəjʔ	
 𩊆	kˤrəp	
 𩊚	rˤak	
-𩊪	dˤoh	
-𩋊	ʔap	
 𩋠	menʔ	
 𩌏	pˤak	
 𩌧	mˤak	
@@ -11292,6 +11291,7 @@
 𩜰	pʰrək	
 𩜾	kan	
 𩝸	ʔon	
+𩞁	mˤaj	
 𩟄	j̊əh	
 𩢾	ras	
 𩢿	buʔ	

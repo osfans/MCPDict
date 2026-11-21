@@ -34,6 +34,10 @@ class 表(_表):
 				自.調類調值[列[1].replace("聲", "声")] = 列[2]
 				自.調類調值[列[1].replace("陰", "阴")] = 列[2]
 			elif 列[0].startswith("@") or 列[0].startswith("/"):
+				if 名 in ("大通", "湟中"):
+					toneTypes = {"꜀": "1", "꜁": "2","꜂": "3", "꜄": "5"}
+					for k, v in toneTypes.items():
+						自.調類調值[k] = v
 				return
 			elif len(列) > 自.列序[3] and 列[自.列序[3]] and 列[自.列序[3]] in 自.調類調值:
 				列[自.列序[3]] = 自.調類調值[列[自.列序[3]]]
