@@ -4454,6 +4454,30 @@
         "marker-color": "#926EF8",
         "marker-size": "small",
         "marker-symbol": "c",
+        "title": "衛輝城郊",
+        "語言": "衛輝城郊話",
+        "地點": "河南/新鄉/衛輝/城郊",
+        "地圖集二分區": "晉語－邯新片－獲濟小片",
+        "音典分區": "華北－懷衛－衛輝",
+        "陳邡分區": "官話－河南－河南大片－衛輝片",
+        "錄入人": "晴",
+        "字表修改情況": "部分修改",
+        "字表來源": "《豫北晋语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.092953,
+          35.405115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
+        "marker-size": "small",
+        "marker-symbol": "c",
         "title": "衛輝梨園",
         "語言": "衛輝梨園話",
         "地點": "河南/新鄉/衛輝/龐寨/梨園二村",
@@ -4566,6 +4590,30 @@
         "coordinates": [
           113.656515,
           35.267695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
+        "marker-size": "large",
+        "marker-symbol": "c",
+        "title": "焦作",
+        "語言": "焦作話",
+        "地點": "河南/焦作",
+        "地圖集二分區": "晉語－邯新片－獲濟小片",
+        "音典分區": "華北－懷衛－懷慶",
+        "陳邡分區": "官話－河南－河南大片－豫西片",
+        "錄入人": "晴",
+        "字表修改情況": "部分修改",
+        "字表來源": "《豫北晋语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.248305,
+          35.22164
         ]
       }
     },
@@ -15143,6 +15191,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "民和",
+        "語言": "民和話",
+        "地點": "青海/海東/民和/川口",
+        "地圖集二分區": "中原官話－河州片",
+        "音典分區": "西北－關隴－河湟",
+        "陳邡分區": "官話－甘肅－甘肅大片－河州片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《中古音与青海方音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.835294,
+          36.328597
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "small",
         "marker-symbol": "b",
         "title": "民和古鄯",
@@ -15206,6 +15277,30 @@
         "coordinates": [
           102.468136,
           35.867145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "同仁",
+        "語言": "同仁話",
+        "地點": "青海/黃南/同仁",
+        "地圖集二分區": "中原官話－河州片",
+        "音典分區": "西北－關隴－河湟",
+        "陳邡分區": "官話－甘肅－甘肅大片－河州片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《中古音与青海方音字汇》",
+        "補充閲讀": "《河州方言语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.024863,
+          35.524109
         ]
       }
     },
@@ -15284,6 +15379,29 @@
       "type": "Feature",
       "properties": {
         "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "貴德",
+        "語言": "貴德話",
+        "地點": "青海/海南/貴德/河陰",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴－河湟",
+        "陳邡分區": "官話－甘肅－甘肅大片－臨潭片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《中古音与青海方音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.446377,
+          36.048459
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
         "marker-size": "small",
         "marker-symbol": "b",
         "title": "貴德河東",
@@ -15300,6 +15418,98 @@
         "coordinates": [
           101.458711,
           36.052865
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "化隆",
+        "語言": "化隆話",
+        "地點": "青海/海東/化隆/巴燕",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴－河湟",
+        "陳邡分區": "官話－甘肅－甘肅大片－青海片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《中古音与青海方音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.268977,
+          36.104469
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "平安",
+        "語言": "平安話",
+        "地點": "青海/海東/平安/平安",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴－河湟",
+        "陳邡分區": "官話－甘肅－甘肅大片－青海片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《中古音与青海方音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.108537,
+          36.507481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "互助",
+        "語言": "互助話",
+        "地點": "青海/海東/互助/威遠",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴－河湟",
+        "陳邡分區": "官話－甘肅－甘肅大片－青海片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《中古音与青海方音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.962348,
+          36.83999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
+        "title": "亹源",
+        "語言": "亹源話",
+        "地點": "青海/海北/門源/浩門",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴－河湟",
+        "陳邡分區": "官話－甘肅－甘肅大片－青海片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《中古音与青海方音字汇》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.63088,
+          37.384817
         ]
       }
     },
@@ -19579,6 +19789,98 @@
         "coordinates": [
           110.497063,
           37.217142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "清澗石盤",
+        "語言": "清澗石盤話",
+        "地點": "陝西/榆林/清澗/解家溝/石盤",
+        "地圖集二分區": "晉語－呂梁片－汾州小片",
+        "音典分區": "西北－陝北－延清",
+        "陳邡分區": "官話－秦晉－延東大片－清澗片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《陕北晋语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.59,
+          37.31
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "清澗石咀驛",
+        "語言": "清澗石咀驛話",
+        "地點": "陝西/榆林/清澗/石咀驛",
+        "地圖集二分區": "晉語－呂梁片－汾州小片",
+        "音典分區": "西北－陝北－延清",
+        "陳邡分區": "官話－秦晉－延東大片－清澗片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《陕北晋语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.17,
+          37.32
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "清澗郝家墕",
+        "語言": "清澗郝家墕話",
+        "地點": "陝西/榆林/清澗/石咀驛/郝家墕",
+        "地圖集二分區": "晉語－呂梁片－汾州小片",
+        "音典分區": "西北－陝北－延清",
+        "陳邡分區": "官話－秦晉－延東大片－清澗片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《陕北晋语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.26,
+          37.35
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "清澗寬洲",
+        "語言": "清澗寬洲話",
+        "地點": "陝西/榆林/清澗/寬洲",
+        "地圖集二分區": "晉語－呂梁片－汾州小片",
+        "音典分區": "西北－陝北－延清",
+        "陳邡分區": "官話－秦晉－延東大片－清澗片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《陕北晋语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.12,
+          37.11
         ]
       }
     },
@@ -60660,7 +60962,7 @@
         "marker-color": "#EBC75E",
         "marker-size": "small",
         "marker-symbol": "i",
-        "title": "英德浛洸白話",
+        "title": "英德浛洸",
         "語言": "英德浛洸白話",
         "地點": "廣東/清遠/英德/浛洸",
         "地圖集二分區": "粤語－廣府片",
