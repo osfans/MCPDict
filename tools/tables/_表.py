@@ -205,7 +205,7 @@ def docx2tsv(fname, reduceLF=False):
 			行 = re.sub(r"([~])\{", "{\\1", 行)
 			行 = 行.replace("}{", "")
 			lines.append(行)
-	行 = "\n".join(lines).replace("}\n{", "").replace("\n}", "}\n")
+	行 = "\n".join(lines).replace("}\n{", "").replace("\n}", "}\n").replace("{}", "")
 	行 = 行.replace("||", "‖")
 	if reduceLF:
 		行 = re.sub(r"\n([\uf900-\ufb00\u3400-\ua000\U00020000-\U0003347f□〇\{])", "\\1", 行, flags=re.M)
