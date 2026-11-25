@@ -1,4 +1,4 @@
-字頭	聲母	韻母	調值	備註
+字	聲母	韻母	調值	備註
 華	f	a	33	
 花	f	a	33	
 化	f	a	33	
@@ -294,6 +294,7 @@
 堪	h	am	33	
 坎	h	am	33	
 撢	h	am	33	試探。
+莧	h	an	21	莧菜。
 壇	h	an	22	
 檀	h	an	22	
 彈	h	an	22	彈琴。
@@ -385,28 +386,28 @@
 瘊	h	ei	22	瘊子。
 頭	h	ei	22	
 投	h	ei	22	
-犧	h	ei	33	
-欺	h	ei	33	
-熙	h	ei	33	
-嬉	h	ei	33	
-希	h	ei	33	
-稀	h	ei	33	
 丘	h	ei	33	
 丠	h	ei	33	
 休	h	ei	33	
 偷	h	ei	33	
-戲	h	ei	33	
-棄	h	ei	33	
-器	h	ei	33	
-氣	h	ei	33	
-炁	h	ei	33	
 透	h	ei	33	
-喜	h	ei	55	
-起	h	ei	55	
-豈	h	ei	55	
 朽	h	ei	55	
 㱙	h	ei	55	
 口	h	ei	55	
+犧	h	i	33	
+欺	h	i	33	
+熙	h	i	33	
+嬉	h	i	33	
+希	h	i	33	
+稀	h	i	33	
+戲	h	i	33	
+棄	h	i	33	
+器	h	i	33	
+氣	h	i	33	
+炁	h	i	33	
+喜	h	i	55	
+起	h	i	55	
+豈	h	i	55	
 鞾	h	ia	33	
 靴	h	ia	33	
 吃	h	iak	33	
@@ -441,7 +442,6 @@
 險	h	im	33	
 欠	h	im	33	
 㐸	h	im	33	
-莧	h	in	21	莧菜。
 田	h	in	22	
 填	h	in	22	
 窴	h	in	22	
@@ -1034,40 +1034,40 @@
 𡲣	k	ɔŋ	33	下降。
 講	k	ɔŋ	55	
 廣	k	ɔŋ	55	
-技	k	ei	21	
-忌	k	ei	21	
 舊	k	ei	21	
 柩	k	ei	21	
 匶	k	ei	21	
-飢	k	ei	33	飢餓。
-肌	k	ei	33	
-基	k	ei	33	
-機	k	ei	33	
-譏	k	ei	33	
-饑	k	ei	33	饑荒。
 鳩	k	ei	33	
 鉤	k	ei	33	
 句	k	ei	33	
-妓	k	ei	33	
-企	k	ei	33	
-几	k	ei	33	茶几。
 灸	k	ei	33	針灸。
-寄	k	ei	33	
-記	k	ei	33	
-既	k	ei	33	
 救	k	ei	33	
 究	k	ei	33	
 句	k	ei	33	勾當。
-幾	k	ei	55	幾乎。
-紀	k	ei	55	紀律、世紀。
-己	k	ei	55	
-杞	k	ei	55	
-幾	k	ei	55	幾個。
 久	k	ei	55	
 九	k	ei	55	
 韭	k	ei	55	
 苟	k	ei	55	
 狗	k	ei	55	
+技	k	i	21	
+忌	k	i	21	
+飢	k	i	33	飢餓。
+肌	k	i	33	
+基	k	i	33	
+機	k	i	33	
+譏	k	i	33	
+饑	k	i	33	饑荒。
+妓	k	i	33	
+企	k	i	33	
+几	k	i	33	茶几。
+寄	k	i	33	
+記	k	i	33	
+既	k	i	33	
+幾	k	i	55	幾乎。
+紀	k	i	55	紀律、世紀。
+己	k	i	55	
+杞	k	i	55	
+幾	k	i	55	幾個。
 腳	k	iak	33	
 脚	k	iak	33	
 金	k	iam	33	
@@ -1348,30 +1348,30 @@
 港	kʰ	ɔŋ	55	港口。
 舅	kʰ	ei	21	
 臼	kʰ	ei	21	
-奇	kʰ	ei	22	
-騎	kʰ	ei	22	
-岐	kʰ	ei	22	
-祁	kʰ	ei	22	
-鰭	kʰ	ei	22	
-其	kʰ	ei	22	
-期	kʰ	ei	22	時期。
-旗	kʰ	ei	22	
-棊	kʰ	ei	22	
-櫀	kʰ	ei	22	
-碁	kʰ	ei	22	
-祈	kʰ	ei	22	
-沂	kʰ	ei	22	沂河。
 求	kʰ	ei	22	
 𡨃	kʰ	ei	22	
 球	kʰ	ei	22	
 溝	kʰ	ei	33	
 叩	kʰ	ei	33	叩頭。
-冀	kʰ	ei	33	
-兾	kʰ	ei	33	
 寇	kʰ	ei	33	
 扣	kʰ	ei	33	扣住。
 構	kʰ	ei	33	
 購	kʰ	ei	33	
+奇	kʰ	i	22	
+騎	kʰ	i	22	
+岐	kʰ	i	22	
+祁	kʰ	i	22	
+鰭	kʰ	i	22	
+其	kʰ	i	22	
+期	kʰ	i	22	時期。
+旗	kʰ	i	22	
+棊	kʰ	i	22	
+櫀	kʰ	i	22	
+碁	kʰ	i	22	
+祈	kʰ	i	22	
+沂	kʰ	i	22	沂河。
+冀	kʰ	i	33	
+兾	kʰ	i	33	
 茄	kʰ	ia	21	茄子。
 瘸	kʰ	ia	21	瘸腿。
 劇	kʰ	iak	21	劇烈。
@@ -1533,22 +1533,9 @@
 廊	l	ɔŋ	22	
 蜋	l	ɔŋ	22	
 狼	l	ɔŋ	22	
-履	l	ei	21	
-理	l	ei	21	
 柳	l	ei	21	
-利	l	ei	21	
-𥝤	l	ei	21	
-痢	l	ei	21	
-吏	l	ei	21	
 𨹟	l	ei	21	
 漏	l	ei	21	
-離	l	ei	22	離別。
-籬	l	ei	22	
-棃	l	ei	22	
-梨	l	ei	22	
-釐	l	ei	22	
-貍	l	ei	22	野貓。
-狸	l	ei	22	野貓。
 劉	l	ei	22	
 留	l	ei	22	
 流	l	ei	22	
@@ -1560,14 +1547,27 @@
 樓	l	ei	22	
 摟	l	ei	22	摟取。
 縷	l	ei	22	絲縷。
-離	l	ei	22	離開半寸。
 溜	l	ei	22	
-鯉	l	ei	33	
-汝	l	ei	33	
-璃	l	ei	55	玻璃。
-里	l	ei	55	
-裏	l	ei	55	
-李	l	ei	55	
+履	l	i	21	
+理	l	i	21	
+利	l	i	21	
+𥝤	l	i	21	
+痢	l	i	21	
+吏	l	i	21	
+離	l	i	22	離別。
+籬	l	i	22	
+棃	l	i	22	
+梨	l	i	22	
+釐	l	i	22	
+貍	l	i	22	野貓。
+狸	l	i	22	野貓。
+離	l	i	22	離開半寸。
+鯉	l	i	33	
+汝	l	i	33	
+璃	l	i	55	玻璃。
+里	l	i	55	
+裏	l	i	55	
+李	l	i	55	
 略	l	iak	21	
 掠	l	iak	21	
 林	l	iam	22	
@@ -1591,7 +1591,6 @@
 涼	l	iaŋ	22	
 凉	l	iaŋ	22	
 量	l	iaŋ	22	量長短。
-兩	l	iaŋ	33	
 兩	l	iaŋ	55	兩個、幾兩幾錢讀音亦同。
 立	l	iap	21	
 粒	l	iap	55	
@@ -1795,31 +1794,31 @@
 網	m͡b	ɔŋ	55	
 輞	m͡b	ɔŋ	55	車輞。
 棢	m͡b	ɔŋ	55	車輞。
-美	m͡b	ei	21	
 牡	m͡b	ei	21	
 某	m͡b	ei	21	
 𠭇	m͡b	ei	21	
 畮	m͡b	ei	21	
 畞	m͡b	ei	21	
-未	m͡b	ei	21	
-味	m͡b	ei	21	
 貿	m͡b	ei	21	
 謬	m͡b	ei	21	
-糜	m͡b	ei	22	粥。
-𪎭	m͡b	ei	22	
-彌	m͡b	ei	22	
-𢏏	m͡b	ei	22	
-眉	m͡b	ei	22	
-睂	m͡b	ei	22	
-楣	m͡b	ei	22	
-黴	m͡b	ei	22	
-微	m͡b	ei	22	
 謀	m͡b	ei	22	
 矛	m͡b	ei	22	
 𢦵	m͡b	ei	22	
-靡	m͡b	ei	22	
-媚	m͡b	ei	22	
-尾	m͡b	ei	55	
+美	m͡b	i	21	
+未	m͡b	i	21	
+味	m͡b	i	21	
+糜	m͡b	i	22	粥。
+𪎭	m͡b	i	22	
+彌	m͡b	i	22	
+𢏏	m͡b	i	22	
+眉	m͡b	i	22	
+睂	m͡b	i	22	
+楣	m͡b	i	22	
+黴	m͡b	i	22	
+微	m͡b	i	22	
+靡	m͡b	i	22	
+媚	m͡b	i	22	
+尾	m͡b	i	55	
 閩	m͡b	ian	21	閩越。
 蟁	m͡b	ian	21	
 蚊	m͡b	ian	21	
@@ -1959,14 +1958,14 @@
 諾	n͡d	ɔk	21	
 瓤	n͡d	ɔŋ	22	瓜瓤。
 囊	n͡d	ɔŋ	22	
-膩	n͡d	ei	21	
-𦡸	n͡d	ei	21	
-餌	n͡d	ei	21	
-𩱓	n͡d	ei	21	
 揉	n͡d	ei	22	
-伱	n͡d	ei	33	
 紐	n͡d	ei	55	
 扭	n͡d	ei	55	
+膩	n͡d	i	21	
+𦡸	n͡d	i	21	
+餌	n͡d	i	21	
+𩱓	n͡d	i	21	
+伱	n͡d	i	33	
 娘	n͡d	iaŋ	22	
 溺	n͡d	ɪk	21	溺死。
 匿	n͡d	ɪk	21	
@@ -2046,31 +2045,31 @@
 樂	ŋ͡ɡ	ɔk	21	音樂。
 鄂	ŋ͡ɡ	ɔk	55	
 昂	ŋ͡ɡ	ɔŋ	22	
-爾	ŋ͡ɡ	ei	21	
 藕	ŋ͡ɡ	ei	21	
 蕅	ŋ͡ɡ	ei	21	
 偶	ŋ͡ɡ	ei	21	配偶。
-議	ŋ͡ɡ	ei	21	
-義	ŋ͡ɡ	ei	21	
-二	ŋ͡ɡ	ei	21	
-弍	ŋ͡ɡ	ei	21	
-貳	ŋ͡ɡ	ei	21	貳心。
 偶	ŋ͡ɡ	ei	21	偶然。
-宜	ŋ͡ɡ	ei	22	
-宐	ŋ͡ɡ	ei	22	
-𡪀	ŋ͡ɡ	ei	22	
-𡨆	ŋ͡ɡ	ei	22	
-儀	ŋ͡ɡ	ei	22	
-𥫃	ŋ͡ɡ	ei	22	
-兒	ŋ͡ɡ	ei	22	
-𠒆	ŋ͡ɡ	ei	22	
-疑	ŋ͡ɡ	ei	22	
-而	ŋ͡ɡ	ei	22	
 牛	ŋ͡ɡ	ei	22	
-擬	ŋ͡ɡ	ei	22	
-誼	ŋ͡ɡ	ei	22	
-竩	ŋ͡ɡ	ei	22	
-耳	ŋ͡ɡ	ei	55	
+爾	ŋ͡ɡ	i	21	
+議	ŋ͡ɡ	i	21	
+義	ŋ͡ɡ	i	21	
+二	ŋ͡ɡ	i	21	
+弍	ŋ͡ɡ	i	21	
+貳	ŋ͡ɡ	i	21	貳心。
+宜	ŋ͡ɡ	i	22	
+宐	ŋ͡ɡ	i	22	
+𡪀	ŋ͡ɡ	i	22	
+𡨆	ŋ͡ɡ	i	22	
+儀	ŋ͡ɡ	i	22	
+𥫃	ŋ͡ɡ	i	22	
+兒	ŋ͡ɡ	i	22	
+𠒆	ŋ͡ɡ	i	22	
+疑	ŋ͡ɡ	i	22	
+而	ŋ͡ɡ	i	22	
+擬	ŋ͡ɡ	i	22	
+誼	ŋ͡ɡ	i	22	
+竩	ŋ͡ɡ	i	22	
+耳	ŋ͡ɡ	i	55	
 惹	ŋ͡ɡ	ia	33	
 若	ŋ͡ɡ	iak	21	
 弱	ŋ͡ɡ	iak	21	
@@ -2243,31 +2242,31 @@
 蠯	p	ɔŋ	33	
 謗	p	ɔŋ	33	
 榜	p	ɔŋ	55	
-被	p	ei	21	被子。
-婢	p	ei	21	
-避	p	ei	21	
-被	p	ei	21	被打。
-臂	p	ei	21	
-備	p	ei	21	
-俻	p	ei	21	
-𤰇	p	ei	21	
-𤰈	p	ei	21	
-鼻	p	ei	21	
-碑	p	ei	33	
-卑	p	ei	33	
-悲	p	ei	33	
-𦱔	p	ei	33	蓖麻。
-蓖	p	ei	33	蓖麻。
-祕	p	ei	33	
-轡	p	ei	33	
-泌	p	ei	33	
-痹	p	ei	33	麻痺。
-庇	p	ei	33	
-彼	p	ei	55	
-𢔌	p	ei	55	
-俾	p	ei	55	
-鄙	p	ei	55	
-比	p	ei	55	比較。
+被	p	i	21	被子。
+婢	p	i	21	
+避	p	i	21	
+被	p	i	21	被打。
+臂	p	i	21	
+備	p	i	21	
+俻	p	i	21	
+𤰇	p	i	21	
+𤰈	p	i	21	
+鼻	p	i	21	
+碑	p	i	33	
+卑	p	i	33	
+悲	p	i	33	
+𦱔	p	i	33	蓖麻。
+蓖	p	i	33	蓖麻。
+祕	p	i	33	
+轡	p	i	33	
+泌	p	i	33	
+痹	p	i	33	麻痺。
+庇	p	i	33	
+彼	p	i	55	
+𢔌	p	i	55	
+俾	p	i	55	
+鄙	p	i	55	
+比	p	i	55	比較。
 笨	p	ian	21	
 賓	p	ian	33	
 𧶉	p	ian	33	
@@ -2416,17 +2415,17 @@
 螃	pʰ	ɔŋ	22	螃蟹。
 傍	pʰ	ɔŋ	22	
 泊	pʰ	ɔŋ	22	梁山泊。
-皮	pʰ	ei	22	
-疲	pʰ	ei	22	
-脾	pʰ	ei	22	
-琵	pʰ	ei	22	琵琶。
-枇	pʰ	ei	22	枇杷。
-披	pʰ	ei	33	
-譬	pʰ	ei	33	譬喻。
-屁	pʰ	ei	33	
-䊧	pʰ	ei	33	
-丕	pʰ	ei	55	
-㔻	pʰ	ei	55	
+皮	pʰ	i	22	
+疲	pʰ	i	22	
+脾	pʰ	i	22	
+琵	pʰ	i	22	琵琶。
+枇	pʰ	i	22	枇杷。
+披	pʰ	i	33	
+譬	pʰ	i	33	譬喻。
+屁	pʰ	i	33	
+䊧	pʰ	i	33	
+丕	pʰ	i	55	
+㔻	pʰ	i	55	
 跛	pʰ	ia	55	跛足。
 頻	pʰ	ian	22	頻繁。
 貧	pʰ	ian	22	
@@ -2587,11 +2586,6 @@
 𩜯	s	ei	33	飯餿了。
 䬒	s	ei	33	
 搊	s	ei	33	
-四	s	ei	33	
-亖	s	ei	33	
-𠃢	s	ei	33	
-肆	s	ei	33	
-𩬶	s	ei	33	
 𤸃	s	ei	33	
 瘦	s	ei	33	
 漱	s	ei	33	漱口。
@@ -2599,7 +2593,6 @@
 繡	s	ei	33	
 瘶	s	ei	33	咳嗽。
 嗽	s	ei	33	咳嗽。
-死	s	ei	55	
 叜	s	ei	55	
 叟	s	ei	55	
 𠋢	s	ei	55	
@@ -2632,6 +2625,11 @@
 舒	s	i	33	
 輸	s	i	33	
 樞	s	i	33	
+四	s	i	33	
+亖	s	i	33	
+𠃢	s	i	33	
+肆	s	i	33	
+𩬶	s	i	33	
 試	s	i	33	
 恕	s	i	33	
 庶	s	i	33	
@@ -2642,6 +2640,7 @@
 𠂕	s	i	55	
 𦳊	s	i	55	
 屎	s	i	55	
+死	s	i	55	
 暑	s	i	55	
 鼠	s	i	55	
 黍	s	i	55	
@@ -2695,6 +2694,8 @@
 相	s	iaŋ	33	互相。
 鑲	s	iaŋ	33	
 箱	s	iaŋ	33	
+星	s	iaŋ	33	
+曐	s	iaŋ	33	
 上	s	iaŋ	33	上山。
 丄	s	iaŋ	33	上山。
 相	s	iaŋ	33	相貌。
@@ -2992,7 +2993,6 @@
 弟	t	ai	21	
 遞	t	ai	21	
 大	t	ai	21	大夫、大黃。
-大	t	ai	21	
 低	t	ai	33	
 帝	t	ai	33	
 帶	t	ai	33	
@@ -3030,8 +3030,6 @@
 當	t	ɔŋ	33	當作。
 黨	t	ɔŋ	55	
 擋	t	ɔŋ	55	
-地	t	ei	21	
-墬	t	ei	21	
 豆	t	ei	21	
 逗	t	ei	21	
 兜	t	ei	33	
@@ -3041,6 +3039,8 @@
 阧	t	ei	55	
 陡	t	ei	55	
 抖	t	ei	55	
+地	t	i	21	
+墬	t	i	21	
 爹	t	ia	33	
 笛	t	iak	21	
 𥴦	t	iak	21	
@@ -3384,7 +3384,6 @@
 朝	tʰ	iu	22	朝代。
 潮	tʰ	iu	22	
 樵	tʰ	iu	22	
-⿳艹椎木	tʰ	iu	22	
 超	tʰ	iu	33	
 悄	tʰ	iu	33	靜悄悄。
 俏	tʰ	iu	33	
@@ -3792,7 +3791,6 @@
 正	ʦ	ɪŋ	33	
 證	ʦ	ɪŋ	33	證、症讀音亦同。
 整	ʦ	ɪŋ	55	
-⿱⿰来攵正	ʦ	ɪŋ	55	
 拯	ʦ	ɪŋ	55	拯救。
 抍	ʦ	ɪŋ	55	拯救。
 撜	ʦ	ɪŋ	55	拯救。
