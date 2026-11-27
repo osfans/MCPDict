@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import zipfile
 import glob
 import os.path

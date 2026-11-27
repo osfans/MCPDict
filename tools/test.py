@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sqlite3, sys
 hz = sys.argv[1]
 dic = "漢大" if len(sys.argv) <= 2 else sys.argv[2]

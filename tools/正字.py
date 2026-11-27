@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os, sys
 d = dict()
 f = open("../app/src/main/assets/opencc/STCharacters.txt", encoding="U8")

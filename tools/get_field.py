@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # get field from mcpdict
 import os, sqlite3, sys
 
