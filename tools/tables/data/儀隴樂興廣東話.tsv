@@ -1,0 +1,1593 @@
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	p	t	k	pʰ	tʰ	kʰ	ts	tɕ	tsʰ	tɕʰ	m	n	ȵ	ŋ	f	s	ɕ	h	v	z	∅
+@FIN	ɿ	a	e	o	ei	ai	au	eu	i	ia	iau	ie	io	iu	u	ua	uai	uei	uo	y	ye	an	en	ɔ̃ŋ	aŋ	eŋ	iɛn	in	iɔ̃ŋ	iaŋ	uɔ̃n	uen	uan	uɔ̃ŋ	uaŋ	yn	yɛn	aʔ	eʔ	m̩
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	p	pʰ	k	t	tʰ	f	h	m	n	ŋ	ts	tsʰ	s
+@FIN	a
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	a	陰平	啊 阿
+∅	a	上聲	啞
+p	a	陰平	巴 疤 芭
+p	a	上聲	把
+p	a	陰去	霸 壩
+pʰ	a	陽平	爬 琶 耙
+pʰ	a	陰去	怕 帕 稗
+pʰ	a	陽去	耙
+k	a	上聲	家 加 嘉 假{放~} 架{~子} 稼 賈{姓}
+k	a	陰去	駕 嫁 價
+t	a	上聲	打
+tʰ	a	陽平	□{~~：地方}
+f	a	陰平	花
+f	a	陽平	劃 鏵 華
+f	a	陰去	化
+f	a	陽去	樺 畫
+h	a	陰平	下{底~}
+h	a	陽平	蝦
+h	a	上聲	夏{姓~} 廈{~門}
+h	a	陰去	嚇 下{底~}
+h	a	陽去	亥
+m	a	陰平	馬
+m	a	陽平	麻
+m	a	上聲	碼
+m	a	陰去	罵
+n	a	陰平	拿
+ŋ	a	陽平	牙 芽
+ŋ	a	上聲	瓦
+ts	a	陰平	渣 遮
+ts	a	陰去	詐 榨 蔗
+tsʰ	a	陰平	叉 杈 差{~別} 釵
+tsʰ	a	陽平	茶 搽 查
+tsʰ	a	上聲	扯
+tsʰ	a	陰去	岔 茬 車
+s	a	陰平	佘{姓~}
+s	a	上聲	沙 紗 灑 傻
+s	a	陰去	蛇
+s	a	陽去	賒 曬
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	p	pʰ	k	kʰ	t	tʰ	h	m	n	ŋ	ts	tsʰ	s
+@FIN	ai
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ai	上聲	擺
+p	ai	陰去	拜
+p	ai	陽去	敗
+pʰ	ai	陽平	排 牌
+pʰ	ai	陰去	派
+pʰ	ai	陽去	敗
+k	ai	陰平	階 街
+k	ai	上聲	改 解{講~}
+k	ai	陰去	芥{~芥} 屆 戒 介 界 個
+kʰ	ai	上聲	凱 楷
+kʰ	ai	陰去	概 溉 慨
+t	ai	陽平	呆
+t	ai	上聲	兜 陡
+t	ai	陰去	戴 帶 貸 鬥
+t	ai	陽去	代 待 怠
+tʰ	ai	陽平	偷 投
+tʰ	ai	上聲	抖 大
+tʰ	ai	陰去	態 太 泰
+tʰ	ai	陽去	豆 逗
+h	ai	陽平	鞋 侯 喉 猴
+h	ai	陰去	后 厚 候 後
+m	ai	上聲	賣
+m	ai	陰去	買
+m	ai	陽去	邁
+n	ai	陽平	樓
+n	ai	上聲	乃 簍{竹~} 漏
+n	ai	陽去	耐 奈 賴 癩
+ŋ	ai	陽平	崖 我 巖
+ŋ	ai	陰去	愛
+ŋ	ai	陽去	礙
+ts	ai	陰平	災 齋
+ts	ai	上聲	走 斬
+ts	ai	陰去	再 載{~重} 債 湊
+tsʰ	ai	陰平	猜 差{出~}
+tsʰ	ai	陽平	柴
+tsʰ	ai	上聲	彩 睬 採
+tsʰ	ai	陰去	湊
+tsʰ	ai	陽去	寨
+s	ai	陰平	腮 鰓 餿
+s	ai	陰去	賽 嗽{咳~} 瘦
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	p	pʰ	k	kʰ	t	tʰ	f	h	m	n	ŋ	ts	tsʰ	s	z
+@FIN	an
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	an	陰平	班 斑 般 搬
+p	an	上聲	版 板 坂
+p	an	陰去	扮 半
+p	an	陽去	瓣 伴 拌
+pʰ	an	陰平	潘 藩
+pʰ	an	陽平	盤
+pʰ	an	上聲	辦
+pʰ	an	陰去	襻 絆 判
+pʰ	an	陽去	叛
+k	an	陰平	柑 庚 羹 跟 根
+k	an	上聲	敢 橄 跟 耿 桿
+k	an	陰去	幹
+kʰ	an	陰平	龕 勘 坑
+kʰ	an	上聲	坎 砍 肯 懇
+t	an	陰平	耽 擔{~任} 丹 登 燈 丁 釘{名詞} 疔
+t	an	上聲	膽 撣 等 頂 釘{動詞}
+t	an	陰去	旦 凳
+t	an	陽去	彈{子~}
+tʰ	an	陰平	貪 灘 攤 談
+tʰ	an	陽平	譚 痰 檀 壇 彈{~琴} 藤 滕 謄 停
+tʰ	an	上聲	毯 坦
+tʰ	an	陰去	炭 嘆
+tʰ	an	陽去	鄧 澄
+f	an	陰平	番 歡
+f	an	陽平	凡 帆 環 煩 礬 繁
+f	an	上聲	緩 翻 反
+f	an	陰去	範 犯 販
+f	an	陽去	幻 飯
+h	an	陽平	含 函 咸 韓 恆 衡
+h	an	上聲	喊 很
+h	an	陰去	限 杏
+h	an	陽去	莧
+m	an	陰平	滿
+m	an	陽平	蠻 瞞 慢
+m	an	上聲	漫 慢
+m	an	陽去	慢
+n	an	陽平	南 男 藍 籃 覽 難 蘭 攔 欄 懶 難 爛
+n	an	上聲	攬 冷 奶 欖
+n	an	陽去	濫 纜
+ŋ	an	陰平	恩
+ŋ	an	上聲	眼
+ŋ	an	陰去	暗 按 案
+ŋ	an	陽去	岸 雁 晏
+ts	an	陰平	簪 蘸 沾 贊 燦 氈 曾 增 爭 箏 睜
+ts	an	陽平	饞
+ts	an	上聲	盞 展
+ts	an	陰去	暫 占{~領}
+ts	an	陽去	棧
+tsʰ	an	陰平	參 餐 村
+tsʰ	an	陽平	蠶 殘 纏 蟬 橙 層
+tsʰ	an	上聲	慘 產
+s	an	陰平	三 衫 參{人~} 僧{唐~} 腥
+s	an	上聲	陝 閃 散{~開} 傘 山 省{~長}
+s	an	陰去	散{~會} 扇 善
+z	an	上聲	冉
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	p	pʰ	k	kʰ	t	tʰ	h	m	n	ŋ	ts	tsʰ	s	z
+@FIN	au
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	au	陽平	坳
+p	au	陰平	包 胞
+p	au	上聲	飽
+p	au	陰去	抱{~怨} 豹 爆
+p	au	陽去	暴{粗~}
+p	au	入聲	雹 曝
+pʰ	au	陽平	袍 刨
+pʰ	au	上聲	跑
+pʰ	au	陰去	泡 炮 泡{~水}
+k	au	陰平	教{~書；~養} 膏 糕
+k	au	上聲	交 搞 稿
+k	au	陰去	窖 覺{睡~}
+kʰ	au	陰平	敲
+kʰ	au	上聲	考 烤
+kʰ	au	陰去	靠
+t	au	陽平	掏
+tʰ	au	陽平	逃 淘 陶 萄
+tʰ	au	陰去	套
+h	au	陰平	蒿 薅
+h	au	陽平	豪 壕 毫
+h	au	上聲	好{~壞}
+h	au	陰去	耗 浩
+h	au	陽去	號{呼~；~數}
+m	au	陽平	茅 矛
+m	au	上聲	卯 牡
+m	au	陽去	冒
+n	au	陽平	勞 撈 牢
+n	au	陽去	鬧
+ŋ	au	陰平	咬
+ŋ	au	陽平	熬
+ŋ	au	陰去	奧 澳
+ŋ	au	陽去	傲
+ts	au	陰平	糟 昭 招
+ts	au	陽平	遭
+ts	au	上聲	棗 爪 沼
+ts	au	陰去	早 罩 兆 照 詔
+ts	au	陽去	召 皁
+tsʰ	au	陰平	操 抄 超
+tsʰ	au	陽平	朝 潮
+tsʰ	au	上聲	炒 吵
+tsʰ	au	陰去	躁 糙
+tsʰ	au	陽去	造 趙
+s	au	陰平	騷 稍 燒
+s	au	陽平	韶
+s	au	上聲	少{多~}
+s	au	陰去	潲 少{~年} 紹
+s	au	陽去	邵
+z	au	陽平	橈
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	k	tʰ	h	m	n	ŋ	tsʰ	s	z
+@FIN	aŋ
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+k	aŋ	上聲	哽
+tʰ	aŋ	陰平	堂
+h	aŋ	上聲	巷{~子}
+m	aŋ	陽平	茫
+m	aŋ	上聲	莽 蟒
+n	aŋ	上聲	朗
+n	aŋ	陽去	浪
+ŋ	aŋ	陽去	硬
+tsʰ	aŋ	陰平	撐
+s	aŋ	陰平	償 生 聲 牲
+s	aŋ	上聲	上{~山}
+s	aŋ	陰去	疝
+z	aŋ	陽平	瓤
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	p	pʰ	k	kʰ	t	tʰ	f	h	m	n	ŋ	ts	tsʰ	s
+@FIN	aʔ
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	aʔ	入聲	鴨
+p	aʔ	入聲	八 百 柏 伯 白 剝
+pʰ	aʔ	入聲	拔 潑
+k	aʔ	入聲	夾 狹 甲 格 胛
+kʰ	aʔ	入聲	客 革 隔
+t	aʔ	入聲	答 搭 踏 達
+tʰ	aʔ	入聲	塔 塌 溺
+f	aʔ	入聲	法 乏 滑 猾 發{~財} 伐 筏 罰 或
+h	aʔ	入聲	瞎 嚇{~一跳}
+m	aʔ	入聲	抹 襪{~子} 麥 脈
+n	aʔ	入聲	臘 蠟 捺 辣
+ŋ	aʔ	入聲	額
+ts	aʔ	入聲	扎 眨 閘 炸 札 軋 鍘 柞 摘
+tsʰ	aʔ	入聲	雜 插 擦 徹 撤 拆 擇{~菜} 策 冊 尺
+s	aʔ	入聲	撒 薩 殺 石
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	ts	s
+@FIN	e
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	e	陰平	呃
+ts	e	上聲	者
+s	e	陽平	舌
+s	e	陰去	社 舍
+s	e	陽去	射 麝 赦
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	p	pʰ	k	kʰ	t	tʰ	f	h	m	n	tsʰ	s
+@FIN	ei
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	ei	上聲	藹
+∅	ei	陰去	蟻
+∅	ei	陽去	矮
+p	ei	陰平	杯 碑 卑
+p	ei	陰去	痱{~子} 費 倍 貝 輩
+p	ei	陽去	倍
+pʰ	ei	陰平	批 胚 坯 披
+pʰ	ei	陽平	肥 裴
+pʰ	ei	陰去	配 沛
+pʰ	ei	陽去	佩
+k	ei	陰平	雞
+kʰ	ei	上聲	溪
+t	ei	陽平	遞
+t	ei	上聲	底 抵
+tʰ	ei	陽平	蹄
+tʰ	ei	陰去	剃
+tʰ	ei	陽去	弟
+f	ei	陰平	徽 輝 非 飛 妃 揮
+f	ei	陽平	茴 回
+f	ei	上聲	匪 悔 會{開~} 賄
+f	ei	陰去	諱 廢 肺 費
+f	ei	陽去	翡 慧 惠
+h	ei	陰去	是
+m	ei	陰平	尾{~巴}
+m	ei	上聲	味{~道} 每
+n	ei	陽平	泥 犁 黎{姓} 尼{~姑}
+tsʰ	ei	陽平	篩 齊
+tsʰ	ei	陰去	砌
+s	ei	上聲	洗
+s	ei	陽去	細/小
+s	ei	入聲	吃 十 濕 拾 食 識
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	p	pʰ	kʰ	t	f	m	n	ŋ	ts	tsʰ	s	z	v
+@FIN	en
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	en	陰平	崩
+p	en	上聲	本
+p	en	陰去	笨 糞
+pʰ	en	陰平	噴
+pʰ	en	陽平	盆
+kʰ	en	上聲	懇
+t	en	陰去	盾 鈍{遲~}
+t	en	陽去	囤
+f	en	陰平	昏 婚 渾 分 芬 紛 葷
+f	en	陽平	魂 餛 墳
+f	en	上聲	粉
+f	en	陰去	奮 憤
+f	en	陽去	份 混{~淆}
+m	en	陰平	葷
+m	en	陽平	門 蚊 虹
+m	en	上聲	猛
+m	en	陰去	問
+m	en	陽去	悶 孟
+n	en	陰平	能 楞
+n	en	陽去	論
+ŋ	en	陰平	櫻
+ts	en	陰平	珍 真 診 疹 尊 征 蒸 針 斟 徵
+ts	en	陽平	陳 塵
+ts	en	上聲	枕 整
+ts	en	陰去	鎮 趁 振 震 證 症 正 政
+ts	en	陽去	陣
+tsʰ	en	陰平	伸 稱 澄 深
+tsʰ	en	陽平	臣 存 承 丞 成 城 誠 陳 塵
+tsʰ	en	陰去	寸 秤 乘{~機}
+tsʰ	en	陽去	慎
+s	en	陰平	身 申 升 森
+s	en	陽平	神 辰 晨 乘{~法}
+s	en	上聲	沈 審 嬸 損 省{反~}
+s	en	陰去	勝 升 聖
+s	en	陽去	剩 甚
+z	en	陽平	任 壬 仁
+z	en	上聲	忍
+v	en	陰平	溫 瘟
+v	en	上聲	穩
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	p	pʰ	k	kʰ	t	tʰ	f	h	m	n	ŋ	ts	tsʰ	s	z	v
+@FIN	eu
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	eu	陽平	蛾 鵝 俄
+∅	eu	上聲	阿{~膠} 餓
+p	eu	陰平	玻
+p	eu	上聲	保 堡 寶 波 菠 跛
+p	eu	陰去	報 簸 薄{~荷}
+pʰ	eu	陽平	婆
+pʰ	eu	上聲	頗
+pʰ	eu	陰去	破 剖
+pʰ	eu	入聲	撲 僕
+k	eu	陰平	高 糕 哥 歌
+k	eu	上聲	裹 穀{~子} 稿
+k	eu	陰去	過 告
+kʰ	eu	陰平	顆
+kʰ	eu	陽平	科
+kʰ	eu	上聲	可
+kʰ	eu	陰去	課
+t	eu	陰平	多 都{~是}
+t	eu	上聲	躲 朵 刀 島 倒{打~；~水} 道
+t	eu	陰去	到 舵
+tʰ	eu	陰平	拖
+tʰ	eu	陽平	駝 馱 陀 桃
+tʰ	eu	上聲	妥 橢 討
+tʰ	eu	陽去	導
+tʰ	eu	入聲	獨 讀 毒
+f	eu	陰平	恢
+f	eu	上聲	火 夥 否 複{~習}
+f	eu	入聲	福 伏
+h	eu	陽平	河 何 和{~氣}
+h	eu	陰去	貨 荷{薄~} 藿 和{~麵}
+h	eu	陽去	賀 禍
+h	eu	入聲	合{混~}
+m	eu	陽平	摩 毛
+m	eu	上聲	帽
+m	eu	陽去	磨 慕 墓
+m	eu	入聲	木 穆 摸
+n	eu	陰平	□{~繩子：搓繩}
+n	eu	陽平	挪 鑼 籮 羅 摞 螺 騾 盧
+n	eu	上聲	糯 腦 惱 老
+n	eu	入聲	拉 六 陸 綠 祿 烙 駱 洛
+ŋ	eu	上聲	扭 餓
+ts	eu	陰平	鄒 周 舟 州 洲
+ts	eu	陽平	廚{~房}
+ts	eu	上聲	左
+ts	eu	陰去	灶 咒
+ts	eu	陽去	宙 竹 築
+ts	eu	入聲	祝 燭 軸 觸
+tsʰ	eu	陰平	抽 坐
+tsʰ	eu	陽平	曹 槽 綢 稠 籌 愁 仇 酬
+tsʰ	eu	上聲	草 丑
+tsʰ	eu	陰去	銼 座 臭 錯
+tsʰ	eu	陽去	驟
+tsʰ	eu	入聲	軸 族{~譜}
+s	eu	陰平	鎖 蓑 梭 搜 收 唆 餿
+s	eu	上聲	所 嫂 手 首 守 受 掃{~地；~帚}
+s	eu	陽去	壽 授 售
+s	eu	入聲	縮 叔 熟
+z	eu	陽平	揉
+v	eu	陰平	倭 窩
+v	eu	入聲	屋
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	pʰ	f	m
+@FIN	eŋ
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+pʰ	eŋ	陰平	蜂
+pʰ	eŋ	陽平	蓬 篷
+pʰ	eŋ	上聲	捧
+f	eŋ	陰平	風 豐 封 蜂 鋒 楓 瘋 峰
+f	eŋ	陽平	紅 馮
+f	eŋ	上聲	烘{~籠} 哄{鬧~~}
+f	eŋ	陰去	諷 鳳 奉 俸
+m	eŋ	陽平	懵 蒙
+m	eŋ	陽去	夢
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	p	pʰ	kʰ	t	tʰ	h	m	n	ts	tsʰ	s
+@FIN	eʔ
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+p	eʔ	入聲	北
+pʰ	eʔ	入聲	拍 魄 迫
+kʰ	eʔ	入聲	刻{時~} 克
+t	eʔ	入聲	得 德
+tʰ	eʔ	入聲	特
+h	eʔ	入聲	核
+m	eʔ	入聲	墨 默
+n	eʔ	入聲	肋 勒
+ts	eʔ	入聲	則 汁 浙 折
+tsʰ	eʔ	入聲	賊 直 值 側 澤 責
+s	eʔ	入聲	塞 色 嗇 射 食 識 攝 澀 涉 舌 設 蝨
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	p	pʰ	t	tʰ	m	n	tɕ	tɕʰ	ɕ
+@FIN	i
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	i	陰平	醫
+∅	i	陽平	儀 姨 疑 飴 逆
+∅	i	上聲	椅 已 以 耳
+∅	i	陰去	藝 意 異
+∅	i	陽去	義 議 二 貳
+∅	i	入聲	億 憶 益 譯 乙 一 逸
+p	i	上聲	比
+p	i	陰去	蔽 閉 庇 備
+p	i	陽去	弊 斃 蓖 陛
+p	i	入聲	逼 碧 筆 畢 必
+pʰ	i	陽平	琵 枇 皮
+pʰ	i	上聲	鄙 鼻
+pʰ	i	陰去	屁
+pʰ	i	陽去	備
+pʰ	i	入聲	匹 弼 辟 僻
+t	i	陽平	滴 笛
+t	i	陰去	帝 隸
+t	i	陽去	遞
+t	i	入聲	敵
+tʰ	i	陽平	堤
+tʰ	i	上聲	體 隸
+tʰ	i	陰去	替 屜 題
+tʰ	i	陽去	第 地
+m	i	陽平	迷 彌
+m	i	上聲	米
+m	i	陽去	謎
+m	i	入聲	密
+n	i	陰平	里 理
+n	i	陽平	梨 釐 歷 倪 璃
+n	i	上聲	禮 李 鯉
+n	i	陰去	利 痢 鯉
+n	i	陽去	例 厲 勵 利 荔 痢
+n	i	入聲	板
+tɕ	i	陰平	基 機 譏 幾{~個}
+tɕ	i	陽平	擠{人} 臍
+tɕ	i	上聲	擠{東西} 紀 姐
+tɕ	i	陰去	祭 際 濟 臍 計 繼 寄 技 記 季
+tɕ	i	陽去	忌
+tɕ	i	入聲	鯽 極 脊 籍 藉 績 擊 激 集 急 級 疾
+tɕʰ	i	陰平	欺 期{時~}
+tɕʰ	i	陽平	奇 騎 其 棋 旗
+tɕʰ	i	上聲	啟 企 豈 起 杞
+tɕʰ	i	陰去	契 器 氣 汽
+tɕʰ	i	入聲	戚 七 漆 膝
+ɕ	i	陰平	西 犀 嬉 熙 希 稀
+ɕ	i	上聲	死 喜
+ɕ	i	陰去	系 戲 四 肆
+ɕ	i	入聲	息 惜 錫 析 席 夕 習 悉
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	p	t	tɕ	tɕʰ	ɕ
+@FIN	ia
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	ia	陽平	衙 惹
+∅	ia	上聲	野 雅 鴉 丫 椏 夜
+∅	ia	陰去	亞
+∅	ia	入聲	押 壓
+p	ia	上聲	壁
+t	ia	上聲	□{~東西：拎東西}
+tɕ	ia	上聲	謝{姓}
+tɕ	ia	陰去	借
+tɕʰ	ia	入聲	恰 洽
+ɕ	ia	陽平	霞 邪 斜
+ɕ	ia	上聲	寫
+ɕ	ia	入聲	峽 匣 轄
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	p	pʰ	t	tʰ	m	n	tɕ	tɕʰ	ɕ
+@FIN	iau
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	iau	陰平	妖 邀 要{~求} 腰
+∅	iau	陽平	饒 搖 謠 窯 姚 堯
+∅	iau	上聲	舀
+∅	iau	陰去	幼 躍
+∅	iau	陽去	耀
+p	iau	陰平	膘 標 彪
+p	iau	上聲	表
+pʰ	iau	陰平	飄 漂
+pʰ	iau	陽平	嫖
+pʰ	iau	陰去	票
+t	iau	陰平	刁 貂 雕
+t	iau	上聲	□{麻~子：麻雀}
+t	iau	陰去	釣 吊
+t	iau	陽去	調{~動}
+tʰ	iau	陽平	條
+tʰ	iau	陰去	跳
+tʰ	iau	陽去	調
+m	iau	陽平	苗 描 貓
+m	iau	上聲	藐 秒
+m	iau	陽去	廟 妙 謬
+n	iau	陽平	燎 療 聊 遼
+n	iau	上聲	料 尿 杳{~無音信}
+tɕ	iau	陰平	蕉 椒 嬌 糾 膠 焦
+tɕ	iau	上聲	攪 剿 繳 餃 絞 狡 攬
+tɕ	iau	陰去	較 叫
+tɕ	iau	入聲	嚼
+tɕʰ	iau	陰平	悄
+tɕʰ	iau	陽平	喬 僑 橋 蕎
+tɕʰ	iau	上聲	巧
+tɕʰ	iau	陰去	竅
+tɕʰ	iau	陽去	轎
+ɕ	iau	陰平	消 宵 霄 蕭 硝 銷
+ɕ	iau	陽平	淆
+ɕ	iau	上聲	曉
+ɕ	iau	陰去	酵 孝 笑
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	p	pʰ	m	n	tɕ	tɕʰ	ɕ
+@FIN	iaŋ
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	iaŋ	陽平	贏
+∅	iaŋ	陽去	讓
+p	iaŋ	上聲	餅
+pʰ	iaŋ	陽平	平 坪 評
+pʰ	iaŋ	陽去	病
+m	iaŋ	陽平	明 名
+m	iaŋ	陽去	命
+n	iaŋ	陽平	良 涼 梁 粱
+n	iaŋ	上聲	兩
+n	iaŋ	陰去	領
+tɕ	iaŋ	上聲	井 頸
+tɕ	iaŋ	陰去	牮
+tɕ	iaŋ	陽去	淨
+tɕʰ	iaŋ	陰平	槍 腔 青
+tɕʰ	iaŋ	陽平	牆 情
+tɕʰ	iaŋ	上聲	搶 請 醒
+ɕ	iaŋ	陰平	兄
+ɕ	iaŋ	陰去	性 姓
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	pʰ	k	kʰ	t	tʰ	n	ȵ	m	tɕ	tɕʰ	ɕ
+@FIN	ie
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	ie	陰平	耶
+∅	ie	上聲	也
+∅	ie	入聲	葉 熱 孽
+pʰ	ie	入聲	別 撇
+k	ie	陰平	勾 鉤 溝 摳
+k	ie	上聲	狗 苟
+k	ie	陰去	夠 構 購 扣 寇
+k	ie	陽去	□{質量很~}
+kʰ	ie	陰平	□{牲~}
+t	ie	入聲	碟 蝶 諜
+tʰ	ie	入聲	貼 帖 疊 鐵
+n	ie	入聲	獵 列 捏
+ȵ	ie	陽平	蓮
+ȵ	ie	陰去	藕 牛
+ȵ	ie	陽去	練
+ȵ	ie	入聲	業 聶
+m	ie	入聲	滅
+tɕ	ie	入聲	狹 接 窄 挾 傑 揭 節 截 潔 結
+tɕʰ	ie	入聲	切
+ɕ	ie	入聲	協 腋 楔
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	p	pʰ	t	tʰ	m	n	tɕ	tɕʰ	ɕ
+@FIN	in
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	in	陰平	因 姻 英 音 陰 纓
+∅	in	陽平	銀 寅 迎 宜 淫 人 盈
+∅	in	上聲	認 引 影 穎
+∅	in	陰去	印 應 映 蔭
+p	in	陰平	賓 檳 殯 冰 兵
+p	in	陽平	貧 頻
+p	in	上聲	品
+p	in	陰去	並
+pʰ	in	陰平	拼
+pʰ	in	陽平	憑 瓶 屏 貧 頻
+t	in	陰去	錠
+t	in	陽去	定
+tʰ	in	陽平	亭 廷 庭
+tʰ	in	上聲	挺 定
+tʰ	in	陰去	訂{~購} 廳
+m	in	上聲	憫 敏 抿 閩
+n	in	陽平	鄰 鱗 磷 陵 菱 靈 零 鈴 林 淋 臨 懔
+n	in	上聲	嶺
+n	in	陰去	吝 寧{~可}
+n	in	陽去	令 另 賃
+tɕ	in	陰平	津 巾 斤 筋 京 荊 鯨 精 晶 經 今 金 禁 襟
+tɕ	in	上聲	緊 僅 景 警 錦
+tɕ	in	陰去	盡 進 勁 敬 鏡 競 靜 徑 經{~緯} 浸
+tɕ	in	陽去	競
+tɕʰ	in	陰平	親 清 輕
+tɕʰ	in	陽平	秦 勤 芹 擎 侵 尋 琴 禽 擒
+tɕʰ	in	陰去	盡 慶 磬
+ɕ	in	陰平	辛 新 薪 欣 心 星
+ɕ	in	陽平	形 型 刑
+ɕ	in	陰去	信 興 幸
+ɕ	in	陽去	行{品~}
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	ȵ	tɕ	tɕʰ
+@FIN	io
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	io	入聲	弱 約 藥 虐 岳 樂{音~}
+ȵ	io	入聲	略
+tɕ	io	入聲	爵 腳 覺{知~} 角{一~錢}
+tɕʰ	io	入聲	確
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	t	n	tɕ	tɕʰ	ɕ
+@FIN	iu
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	iu	陰平	優 悠 有
+∅	iu	陽平	尤 郵 由 油 游
+∅	iu	上聲	友 酉
+∅	iu	陰去	誘 柚 釉
+∅	iu	陽去	右 祐 幼
+∅	iu	入聲	肉
+t	iu	陰平	丟
+n	iu	陰平	溜
+n	iu	陽平	流 劉 留 硫 餾
+n	iu	上聲	榴 柳 廖{姓~}
+tɕ	iu	陰平	揪 鳩 糾 舅 咎
+tɕ	iu	上聲	酒 九 久 韭
+tɕ	iu	陰去	就 救 究
+tɕʰ	iu	陰平	秋 鍬 丘
+tɕʰ	iu	陽平	茄 求 球
+tɕʰ	iu	上聲	臼 舅
+tɕʰ	iu	陽去	就 舊 袖
+ɕ	iu	陰平	修 羞 休
+ɕ	iu	上聲	朽
+ɕ	iu	陰去	秀 繡 鏽
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	ȵ	tɕ	tɕʰ	ɕ
+@FIN	iɔ̃ŋ
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	iɔ̃ŋ	陰平	央 秧 殃 茸 雍 癰 傭
+∅	iɔ̃ŋ	陽平	羊 洋 楊 陽{陰~} 瘍 絨 融 容 蓉 鎔 庸
+∅	iɔ̃ŋ	上聲	擁 勇 恿
+∅	iɔ̃ŋ	陰去	用
+∅	iɔ̃ŋ	陽去	樣
+ȵ	iɔ̃ŋ	陽去	亮 諒 輛 量
+tɕ	iɔ̃ŋ	陰平	疆 僵 韁 姜 江
+tɕ	iɔ̃ŋ	上聲	漿 蔣 獎
+tɕ	iɔ̃ŋ	陰去	養{~豬} 醬 將{~領} 降{下~}
+tɕʰ	iɔ̃ŋ	陰平	羌 槍
+tɕʰ	iɔ̃ŋ	陽平	強 窮 牆
+tɕʰ	iɔ̃ŋ	上聲	強{勉~} 搶
+tɕʰ	iɔ̃ŋ	陽去	像
+ɕ	iɔ̃ŋ	陰平	相 箱 廂 湘 襄 鑲 香 鄉 胸 凶
+ɕ	iɔ̃ŋ	陽平	詳 祥 降{投~} 熊 雄
+ɕ	iɔ̃ŋ	上聲	想 享 響 □{一~地}
+ɕ	iɔ̃ŋ	陰去	象 橡 餉 向
+ɕ	iɔ̃ŋ	陽去	匠
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	p	pʰ	t	tʰ	m	n	ȵ	tɕ	tɕʰ	ɕ
+@FIN	iɛn
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	iɛn	陰平	焉 煙
+∅	iɛn	陽平	延 言 捻 研 顏 鹽 閻 檐 嚴
+∅	iɛn	上聲	演 染 碾
+∅	iɛn	陰去	堰 燕{~子} 宴
+∅	iɛn	陽去	諺 驗 焰 豔
+p	iɛn	陰平	鞭 編 邊
+p	iɛn	上聲	扁 匾 丙 秉 貶
+p	iɛn	陽去	變 辨 辯
+pʰ	iɛn	陰平	篇 偏
+pʰ	iɛn	陰去	騙 片
+pʰ	iɛn	陽去	便{方~}
+t	iɛn	陰平	顛
+t	iɛn	上聲	典 鼎
+t	iɛn	陰去	店
+t	iɛn	陽去	電 殿 奠 佃 墊
+tʰ	iɛn	陰平	添
+tʰ	iɛn	陽平	田 填
+tʰ	iɛn	上聲	舔
+m	iɛn	陽平	綿 棉
+m	iɛn	上聲	免 勉 緬 澠
+m	iɛn	陽去	面
+n	iɛn	陽平	憐
+n	iɛn	陽去	戀
+ȵ	iɛn	陽平	連 聯 簾 廉 年 蓮
+ȵ	iɛn	陽去	殮
+tɕ	iɛn	陰平	艱 間{空~} 奸 肩 堅 尖 監 兼
+tɕ	iɛn	陽平	乾
+tɕ	iɛn	上聲	簡 柬 揀 剪 踐 繭 檢 減 鹼
+tɕ	iɛn	陰去	間{~斷} 鐧 箭 賤 建 鍵 健 薦 見 劍 鑒
+tɕ	iɛn	陽去	餞
+tɕʰ	iɛn	陰平	箋 千 牽 簽 謙
+tɕʰ	iɛn	陽平	錢 前 鉗 鉛
+tɕʰ	iɛn	上聲	淺 遣 件 儉
+ɕ	iɛn	陰平	仙 先
+ɕ	iɛn	陽平	閒 賢 弦
+ɕ	iɛn	上聲	顯 險
+ɕ	iɛn	陰去	線 憲 獻
+ɕ	iɛn	陽去	羨 現
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	p	pʰ	k	kʰ	tʰ	f	h	m	n	ŋ	ts	tsʰ	s
+@FIN	o
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	o	上聲	哦
+∅	o	入聲	惡{凶~}
+p	o	入聲	鎛 博 駁
+pʰ	o	陽平	培 陪 賠
+pʰ	o	陽去	背
+pʰ	o	入聲	薄
+k	o	陰平	該
+k	o	入聲	鴿 割 葛 各 閣 郭 廓
+kʰ	o	陰平	開
+kʰ	o	入聲	磕
+tʰ	o	陰平	梯 臺 胎
+tʰ	o	陽平	苔
+tʰ	o	上聲	揣
+tʰ	o	陽去	袋
+tʰ	o	入聲	脫
+f	o	陰平	灰
+h	o	陽平	禾{~苗}
+h	o	上聲	海 汗
+h	o	陽去	害
+h	o	入聲	盒 合{十~一升} 豁 活 鶴 學 獲
+m	o	陽平	梅 枚 媒 煤 饃 魔 黴
+m	o	陽去	妹
+m	o	入聲	末 莫 膜
+n	o	陽平	來
+n	o	入聲	絡 樂 落
+ŋ	o	入聲	握
+ts	o	入聲	著{穿~} 作{工~}
+tsʰ	o	陽平	才 材 財 裁 豺
+tsʰ	o	陰去	菜 蔡 嘴
+tsʰ	o	陽去	在
+tsʰ	o	入聲	喝{~酒} 拙{笨~} 戳
+s	o	上聲	睡
+s	o	入聲	索 勺{~子} 芍
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	p	pʰ	k	kʰ	t	tʰ	f	m	n	ts	tsʰ	s	z	v
+@FIN	u
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+p	u	上聲	補 斧
+p	u	陰去	布 部
+pʰ	u	陰平	鋪{~設}
+pʰ	u	陽平	扶 蒲 菩
+pʰ	u	上聲	簿 譜 普
+pʰ	u	陰去	鋪{店~}
+pʰ	u	陽去	步 脯 部 捕
+pʰ	u	入聲	朴 瀑
+k	u	陰平	姑 孤
+k	u	上聲	古 估 鼓 牯 股
+k	u	陰去	故 固 錮 雇 顧
+kʰ	u	陰平	箍 枯
+kʰ	u	上聲	苦
+kʰ	u	陰去	庫 褲
+t	u	陰平	都{~城}
+t	u	上聲	賭 肚
+t	u	陽去	渡 鍍 杜 度
+t	u	入聲	督
+tʰ	u	陽平	徒 屠 途 塗 圖
+tʰ	u	上聲	土 吐
+tʰ	u	陰去	兔
+tʰ	u	入聲	禿
+f	u	陰平	呼 夫 膚 傅 敷 俘
+f	u	陽平	胡 湖 狐 壺 乎 麩 符 芙 浮
+f	u	上聲	虎 滸 戽 府 腑 甫 撫 輔 腐
+f	u	陰去	戶 滬 付 父 附 富 副 婦 赴
+f	u	陽去	互 護 瓠{~子瓜} 戶 滬 腑 父 附
+f	u	入聲	幅 復 覆 服{~從}
+m	u	陽平	模
+m	u	上聲	拇
+n	u	陽平	奴 蘆
+n	u	上聲	魯 虜 鹵 櫓
+n	u	陽去	路 露 賂
+n	u	入聲	鹿
+ts	u	陰平	租 豬 諸 朱 珠
+ts	u	上聲	阻 煮 主 祖 組
+ts	u	陰去	注 蛀
+ts	u	陽去	助
+tsʰ	u	陰平	粗 初
+tsʰ	u	陽平	儲 鋤 除
+tsʰ	u	上聲	楚 礎 處 拄 駐
+tsʰ	u	陰去	醋 族{民~}
+tsʰ	u	陽去	住 鼠 柱
+tsʰ	u	入聲	促
+s	u	陰平	蘇 酥 梳 疏 蔬 書 舒 樞 輸
+s	u	陽平	殊
+s	u	上聲	暑 署 薯 數{動詞}
+s	u	陰去	素 訴 塑 嗦 恕 數{名詞} 漱
+s	u	陽去	豎 樹
+s	u	入聲	蜀 屬
+z	u	陽平	如 儒
+z	u	入聲	辱 入
+v	u	陰平	烏 污
+v	u	陽平	蜈 梧 吳 巫 誣
+v	u	上聲	舞 侮 鵡
+v	u	陰去	惡{可~}
+v	u	陽去	誤 悟 務 霧
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	k	kʰ	ts	s
+@FIN	ua
+@TON	陰平	33
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	ua	陽去	話
+∅	ua	入聲	挖
+k	ua	陰平	刮
+k	ua	上聲	瓜 寡
+k	ua	陰去	卦
+kʰ	ua	上聲	剮 垮
+kʰ	ua	陰去	誇
+kʰ	ua	陽去	跨
+ts	ua	陰平	抓
+s	ua	上聲	廈{大~}
+s	ua	陰去	涮
+s	ua	入聲	刷
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	h	k	kʰ	s
+@FIN	uai
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	uai	陰平	歪
+h	uai	陽平	惑
+k	uai	陰平	乖
+k	uai	上聲	拐
+k	uai	陰去	怪
+kʰ	uai	陰去	會{~計} 塊 快 筷
+s	uai	陰去	帥{元~}
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	k	kʰ	tsʰ
+@FIN	uan
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	uan	陰平	彎 灣
+∅	uan	陽平	完 頑 還{~原}
+∅	uan	上聲	挽 萬 腕
+k	uan	陰平	冠 官 關
+k	uan	上聲	管 館
+k	uan	陰去	貫 灌 罐 觀 慣
+kʰ	uan	陰平	寬
+kʰ	uan	上聲	款
+tsʰ	uan	上聲	鏟
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	k	kʰ
+@FIN	uaŋ
+@TON	陰平	33
+@TON	陽平	31
+@TON	陰去	34
+
+// Initial	Final	Tone	CharList (Space separated)
+k	uaŋ	陽平	莖
+kʰ	uaŋ	陰平	框 筐
+kʰ	uaŋ	陽平	狂
+kʰ	uaŋ	陰去	況
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	k	kʰ	t	tʰ	n	ts	tsʰ	s
+@FIN	uei
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	uei	陰平	威
+∅	uei	陽平	維 微 違 圍 為 危
+∅	uei	上聲	偉 緯 胃 委
+∅	uei	陰去	慰 畏
+∅	uei	陽去	位 魏 謂 衛
+k	uei	陰平	龜 規 歸 圭 閨
+k	uei	陽平	逵
+k	uei	上聲	軌 癸 鬼 詭 骨{~頭}
+k	uei	陰去	貴 桂
+k	uei	陽去	櫃
+kʰ	uei	陰平	盔 魁 奎
+kʰ	uei	上聲	跪 傀
+kʰ	uei	陰去	愧
+t	uei	陰平	堆
+t	uei	陰去	對
+t	uei	陽去	隊 兌
+tʰ	uei	陰平	推
+tʰ	uei	上聲	腿
+tʰ	uei	陰去	退 蛻
+n	uei	陽平	雷
+n	uei	上聲	壘 儡
+n	uei	陽去	累 壘 類
+ts	uei	陰去	墜 最 贅
+tsʰ	uei	陰平	吹 催 崔
+tsʰ	uei	陽平	槌 錘
+tsʰ	uei	上聲	罪
+tsʰ	uei	陰去	醉 翠 粹 碎 脆
+tsʰ	uei	入聲	出
+s	uei	陰平	雖
+s	uei	陽平	隨
+s	uei	上聲	水 髓
+s	uei	陰去	歲 稅
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	k	kʰ	t	tʰ	n	ts	tsʰ	s	z
+@FIN	uen
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	uen	陽平	文 紋 聞
+k	uen	上聲	滾
+kʰ	uen	陰平	昆 坤
+kʰ	uen	上聲	懇
+kʰ	uen	陰去	困
+t	uen	陰平	墩
+t	uen	陰去	盾
+tʰ	uen	陽平	豚
+n	uen	陽平	倫 輪
+n	uen	陽去	嫩
+ts	uen	陰平	椿
+ts	uen	上聲	準
+tsʰ	uen	陰平	春 椿
+tsʰ	uen	上聲	蛋 蠢
+s	uen	陰平	孫
+s	uen	陽平	唇 純 醇
+s	uen	上聲	筍 榫 舜
+s	uen	陽去	順
+z	uen	陽去	潤
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	k	tʰ	ts	tsʰ	s
+@FIN	uo
+@TON	陰平	33
+@TON	上聲	42
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	uo	陰平	煨 會{不~做}
+k	uo	陰平	國
+tʰ	uo	入聲	桌
+ts	uo	陰平	佐
+ts	uo	入聲	酌
+tsʰ	uo	入聲	濁 撮
+s	uo	上聲	睡 索
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	t	tʰ	n	ts	tsʰ	s
+@FIN	uɔ̃n
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	uɔ̃n	上聲	碗
+t	uɔ̃n	陰平	端
+t	uɔ̃n	上聲	短
+t	uɔ̃n	陰去	斷
+t	uɔ̃n	陽去	鍛 段 緞
+tʰ	uɔ̃n	陽平	團{~轉}
+n	uɔ̃n	陽去	亂
+ts	uɔ̃n	陰平	鑽 專 磚
+ts	uɔ̃n	上聲	轉
+ts	uɔ̃n	陰去	纂 篆
+ts	uɔ̃n	陽去	傳{~記}
+tsʰ	uɔ̃n	陰平	川
+tsʰ	uɔ̃n	陽平	傳 船
+tsʰ	uɔ̃n	陰去	竄 篡 傳 串
+s	uɔ̃n	陰平	酸
+s	uɔ̃n	陰去	算 蒜
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅
+@FIN	uɔ̃ŋ
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	uɔ̃ŋ	陰平	汪 枉 翁 安 鞍
+∅	uɔ̃ŋ	陽平	王 橫
+∅	uɔ̃ŋ	上聲	網
+∅	uɔ̃ŋ	陰去	甕
+∅	uɔ̃ŋ	陽去	旺
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	n	tɕ	tɕʰ	ɕ
+@FIN	y
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	y	陰平	淤
+∅	y	陽平	余 魚 漁 娛 于 盂 榆 愚 虞 逾 愉
+∅	y	上聲	語 女
+∅	y	陽去	譽 預 寓 喻 域
+∅	y	入聲	疫 郁 育 玉
+n	y	上聲	呂 旅
+n	y	陽去	濾 慮
+n	y	入聲	錄
+tɕ	y	陰平	居 車{象棋} 拘 俱
+tɕ	y	陽平	渠
+tɕ	y	上聲	舉 矩
+tɕ	y	陰去	據 鋸 句 劇
+tɕ	y	陽去	具 巨 拒 距 聚
+tɕ	y	入聲	菊 局 卒 屈
+tɕʰ	y	陰平	蛆 區
+tɕʰ	y	陽平	趨 瞿
+tɕʰ	y	上聲	取
+tɕʰ	y	陰去	趣
+tɕʰ	y	入聲	畜{~生} 曲
+ɕ	y	陰平	墟 虛 噓 需 須
+ɕ	y	陽平	徐
+ɕ	y	上聲	許
+ɕ	y	陰去	序 敘 緒 絮 續 戌 蓄
+ɕ	y	陽去	黍{穀~} 遂
+ɕ	y	入聲	速 肅 宿 俗 續
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	tɕ	tɕʰ	ɕ
+@FIN	ye
+@TON	陽平	31
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	ye	入聲	閱 月 越
+tɕ	ye	入聲	決 訣
+tɕʰ	ye	入聲	缺
+ɕ	ye	陽平	靴
+ɕ	ye	入聲	歇 雪 血 穴 削 薛
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	tɕ	tɕʰ	ɕ
+@FIN	yn
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	yn	陰平	暈
+∅	yn	陽平	勻 允 尹 雲 榮 榮 營
+∅	yn	上聲	永 詠
+∅	yn	陰去	熨
+∅	yn	陽去	閏 韻 運 泳
+tɕ	yn	陰平	均 鈞 君 軍
+tɕ	yn	陰去	晉
+tɕ	yn	陽去	郡
+tɕʰ	yn	陰平	近
+tɕʰ	yn	陽平	群 裙 瓊
+tɕʰ	yn	上聲	頃
+ɕ	yn	陰平	熏 勳 薰
+ɕ	yn	陽平	旬 循 巡
+ɕ	yn	陰去	訊 訓
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	∅	tɕ	tɕʰ	ɕ
+@FIN	yɛn
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+∅	yɛn	陽平	袁 轅 園 援 圓
+∅	yɛn	上聲	遠
+tɕ	yɛn	上聲	卷
+tɕ	yɛn	陽去	倦
+tɕʰ	yɛn	陰平	圈
+tɕʰ	yɛn	陽平	拳 權
+tɕʰ	yɛn	陰去	勸
+ɕ	yɛn	陰平	掀 宣 淵
+ɕ	yɛn	上聲	癬 選
+ɕ	yɛn	陰去	楦
+ɕ	yɛn	陽去	旋
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	p	pʰ	k	kʰ	t	tʰ	f	h	m	n	ts	tsʰ	s
+@FIN	ɔ̃ŋ
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+
+// Initial	Final	Tone	CharList (Space separated)
+p	ɔ̃ŋ	陰平	幫 邦
+p	ɔ̃ŋ	陽平	螃 朋 旁
+p	ɔ̃ŋ	上聲	榜 綁 棒
+p	ɔ̃ŋ	陰去	謗
+p	ɔ̃ŋ	陽去	傍
+pʰ	ɔ̃ŋ	陽平	龐
+pʰ	ɔ̃ŋ	陰去	胖
+k	ɔ̃ŋ	陰平	崗 綱 鋼 缸 光 豇 公 蚣 工 功 攻 弓 躬 宮 恭 供{~養} 甘 肝
+k	ɔ̃ŋ	上聲	廣 講 港 拱 鞏
+k	ɔ̃ŋ	陰去	槓 逛 貢 共{~產黨}
+kʰ	ɔ̃ŋ	陰平	康 糠 空{~虛} 扛
+kʰ	ɔ̃ŋ	陽平	狂
+kʰ	ɔ̃ŋ	上聲	慷 孔 共{~事}
+kʰ	ɔ̃ŋ	陰去	抗 炕 曠 礦 控 空{~缺}
+t	ɔ̃ŋ	陰平	當 東 冬
+t	ɔ̃ŋ	上聲	黨 擋 董 懂 統
+t	ɔ̃ŋ	陰去	當{典~} 蕩 凍 棟 動{勞~} 洞
+tʰ	ɔ̃ŋ	陰平	湯 通
+tʰ	ɔ̃ŋ	陽平	棠 唐 糖 塘 同 銅 桐 筒 童 瞳
+tʰ	ɔ̃ŋ	上聲	桶 捅
+tʰ	ɔ̃ŋ	陰去	燙 趟 痛 動{不~} 統
+f	ɔ̃ŋ	陰平	荒 慌 謊 方 芳 妨
+f	ɔ̃ŋ	陽平	黃 簧 蝗 防 房
+f	ɔ̃ŋ	上聲	晃 仿
+f	ɔ̃ŋ	陰去	放
+h	ɔ̃ŋ	陰平	夯 憨
+h	ɔ̃ŋ	陽平	行 航 杭 鴻 弘
+h	ɔ̃ŋ	陰去	巷 轟
+h	ɔ̃ŋ	陽去	項
+m	ɔ̃ŋ	陽平	忙 芒 謀
+m	ɔ̃ŋ	上聲	某
+m	ɔ̃ŋ	陽去	某 茂
+n	ɔ̃ŋ	陰平	籠 聾
+n	ɔ̃ŋ	陽平	囊 狼 農 膿 隆 濃 龍 隴
+n	ɔ̃ŋ	上聲	攏
+n	ɔ̃ŋ	陰去	弄
+ts	ɔ̃ŋ	陰平	髒 張 莊 裝 章 樟 棕 鬃 宗 綜 中 忠 終 蹤 鐘 盅 重{輕~}
+ts	ɔ̃ŋ	上聲	漲 掌 樁 總 種{~類} 腫
+ts	ɔ̃ŋ	陰去	葬 帳 賬 脹 壯 障 粽 眾 縱 重{輕~}
+ts	ɔ̃ŋ	陽去	狀 藏 臟 賺 丈 仗 杖
+tsʰ	ɔ̃ŋ	陰平	倉 蒼 瘡 昌 菖 窗 聰 蔥 囪 充 沖 春
+tsʰ	ɔ̃ŋ	陽平	床 叢 蟲 崇 從 重{~複} 長 腸 場
+tsʰ	ɔ̃ŋ	上聲	闖 廠 慫 寵
+tsʰ	ɔ̃ŋ	陰去	創 唱 倡
+tsʰ	ɔ̃ŋ	陽去	藏{西~} 撞 仲
+s	ɔ̃ŋ	陰平	桑 喪 霜 商 傷 松
+s	ɔ̃ŋ	陽平	常 嘗 雙 松
+s	ɔ̃ŋ	上聲	嗓 爽 賞
+s	ɔ̃ŋ	陰去	送 宋 誦 頌 訟
+s	ɔ̃ŋ	陽去	尚 上{~面}
+// HSD Syllabary Data Partition
+// 地区：四川省-南充市-儀隴縣-樂興鄉
+// 来源：徐翀《儀隴客家話語音研究》
+// 规范：HSD v1.0 (Strict-Typed)
+
+@LOC	四川省-南充市-儀隴縣-樂興鄉
+@SRC	徐翀《儀隴客家話語音研究》
+
+@INI	ts	tsʰ	s
+@FIN	ɿ
+@TON	陰平	33
+@TON	陽平	31
+@TON	上聲	42
+@TON	陰去	34
+@TON	陽去	21
+@TON	入聲	5
+
+// Initial	Final	Tone	CharList (Space separated)
+ts	ɿ	陰平	支 枝 梔 資 姿 脂 滋 芝 知
+ts	ɿ	上聲	紙 只 旨 指 子 滓 止 趾 紫
+ts	ɿ	陰去	制 翅 志 痣
+ts	ɿ	陽去	痔 治
+ts	ɿ	入聲	職 殖 執 秩 質
+tsʰ	ɿ	陰平	癡 嗤
+tsʰ	ɿ	陽平	池 瓷 詞 祠 慈 磁
+tsʰ	ɿ	上聲	恥 址 齒
+tsʰ	ɿ	陰去	次{名~}
+tsʰ	ɿ	入聲	赤 斥
+s	ɿ	陰平	私 師 獅 屍 司 絲 思 詩 斯 廝
+s	ɿ	陽平	匙 時
+s	ɿ	上聲	屎 使 史 駛 始
+s	ɿ	陰去	世 氏 豉{豆~} 伺 試 市
+s	ɿ	陽去	勢 誓 視 寺 飼 侍 示 字 事 士 柿
+s	ɿ	入聲	飾 適 釋 室 式

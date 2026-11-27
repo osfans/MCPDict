@@ -15475,6 +15475,29 @@
         "marker-color": "#F5B3B3",
         "marker-size": "medium",
         "marker-symbol": "b",
+        "title": "共和",
+        "語言": "共和話",
+        "地點": "青海/海南/共和/恰卜恰",
+        "地圖集二分區": "中原官話－秦隴片",
+        "音典分區": "西北－關隴－河湟",
+        "陳邡分區": "官話－甘肅－甘肅大片－臨潭片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《青海共和话音系简介》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.63,
+          36.28
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#F5B3B3",
+        "marker-size": "medium",
+        "marker-symbol": "b",
         "title": "化隆",
         "語言": "化隆話",
         "地點": "青海/海東/化隆/巴燕",
@@ -17495,6 +17518,29 @@
         "coordinates": [
           113.658075,
           38.274685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "平山上觀音堂",
+        "語言": "平山上觀音堂話",
+        "地點": "河北/石家莊/平山/上觀音堂",
+        "地圖集二分區": "晉語－張呼片",
+        "音典分區": "西北－并州－北部",
+        "陳邡分區": "官話－秦晉－河北片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《河北平山上观音堂乡话语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.84,
+          38.55
         ]
       }
     },
@@ -19889,6 +19935,75 @@
         "marker-color": "#916FF7",
         "marker-size": "small",
         "marker-symbol": "c",
+        "title": "志丹金鼎",
+        "語言": "志丹金鼎話",
+        "地點": "陝西/延安/志丹/金鼎",
+        "地圖集二分區": "晉語－志延片",
+        "音典分區": "西北－陝北－延州",
+        "陳邡分區": "官話－秦晉－延安大片－保安片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《陕北晋语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.41,
+          36.73
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "志丹雙河",
+        "語言": "志丹雙河話",
+        "地點": "陝西/延安/志丹/雙河",
+        "地圖集二分區": "晉語－志延片",
+        "音典分區": "西北－陝北－延州",
+        "陳邡分區": "官話－秦晉－延安大片－保安片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《陕北晋语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.78,
+          36.74
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "志丹杏河",
+        "語言": "志丹杏河話",
+        "地點": "陝西/延安/志丹/杏河",
+        "地圖集二分區": "晉語－志延片",
+        "音典分區": "西北－陝北－延州",
+        "陳邡分區": "官話－秦晉－延安大片－保安片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《陕北晋语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.89,
+          36.94
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#916FF7",
+        "marker-size": "small",
+        "marker-symbol": "c",
         "title": "延安老户話",
         "語言": "延安老户話",
         "地點": "陝西/延安/寶塔/*散居",
@@ -20300,6 +20415,98 @@
         "coordinates": [
           110.64,
           37.41
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "米脂銀州",
+        "語言": "米脂銀州話",
+        "地點": "陝西/榆林/米脂/銀州",
+        "地圖集二分區": "晉語－五臺片",
+        "音典分區": "西北－陝北－綏州",
+        "陳邡分區": "官話－秦晉－延安大片－綏德片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《陕北晋语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.19,
+          37.77
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "米脂龍鎮",
+        "語言": "米脂龍鎮話",
+        "地點": "陝西/榆林/米脂/龍鎮",
+        "地圖集二分區": "晉語－五臺片",
+        "音典分區": "西北－陝北－綏州",
+        "陳邡分區": "官話－秦晉－延安大片－綏德片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《陕北晋语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.01,
+          37.88
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "米脂桃鎮",
+        "語言": "米脂桃鎮話",
+        "地點": "陝西/榆林/米脂/桃鎮",
+        "地圖集二分區": "晉語－五臺片",
+        "音典分區": "西北－陝北－綏州",
+        "陳邡分區": "官話－秦晉－延安大片－綏德片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《陕北晋语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.38,
+          37.81
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#926EF8",
+        "marker-size": "small",
+        "marker-symbol": "c",
+        "title": "米脂楊家溝",
+        "語言": "米脂楊家溝話",
+        "地點": "陝西/榆林/米脂/楊家溝",
+        "地圖集二分區": "晉語－五臺片",
+        "音典分區": "西北－陝北－綏州",
+        "陳邡分區": "官話－秦晉－延安大片－綏德片",
+        "錄入人": "Cehkuon",
+        "字表來源": "《陕北晋语语音研究》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.92,
+          37.84
         ]
       }
     },
@@ -32237,6 +32444,30 @@
         "coordinates": [
           105.917885,
           32.778971
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#E54E5D",
+        "marker-size": "large",
+        "marker-symbol": "b",
+        "title": "廣元",
+        "語言": "廣元話",
+        "地點": "四川/廣元",
+        "地圖集二分區": "西南官話－川黔片－成渝小片",
+        "音典分區": "中上江－荆益－上江－川北",
+        "陳邡分區": "官話－長江－西南大片－川北片",
+        "錄入人": "2019212",
+        "字表來源": "《四川省志·方言志》",
+        "參考文獻": "《广元县志》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.843356,
+          32.435422
         ]
       }
     },
@@ -77645,6 +77876,31 @@
         "coordinates": [
           105.379253,
           29.503262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#A5C24E",
+        "marker-size": "small",
+        "marker-symbol": "h",
+        "title": "儀隴樂興",
+        "語言": "儀隴樂興廣東話",
+        "地點": "四川/南充/儀隴/樂興",
+        "地圖集二分區": "客家話－方言島",
+        "音典分區": "閩－閩西－方言島",
+        "陳邡分區": "客家－嘉應－嘉應片",
+        "方言島": true,
+        "錄入人": "Cehkuon",
+        "字表來源": "《仪陇客家话语音研究》",
+        "補充閲讀": "《四川境内的客方言》"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.527426,
+          31.446352
         ]
       }
     },
