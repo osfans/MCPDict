@@ -14,6 +14,9 @@ FeatureCollection = {
 	"type": "FeatureCollection",
 	"features": []
 }
+types0 = dict()
+orders0 = dict()
+colors0 = dict()
 
 def 過時():
 	if not os.path.exists(spath): return False
@@ -206,8 +209,24 @@ def 加載(省=None):
 		if types[2] and 列["下拉2"]: types[2] += "," + 列["下拉2"]
 
 		orders = [列[i].strip() for i in ("地圖集二排序", "音典排序", "陳邡排序")]
-		orders[0] = orders[0].split("-")[0].strip()
 		colors = [row[fields.index(i)].fill.fgColor.value[2:] for i in ("地圖集二顏色", "音典顏色","陳邡顏色")]
+		if types[0] in orders0:
+			if orders[0] != orders0[types[0]]:
+				print(f"{語言} 地圖集二分區 {types[0]} 的排序 {orders[0]} 與之前的 {orders0[types[0]]} 不一致")
+			orders[0] = orders0[types[0]]
+		else:
+			orders0[types[0]] = orders[0]
+		if orders[0] in types0:
+			if types[0] != types0[orders[0]]:
+				print(f"{語言} 地圖集二排序 {orders[0]} 的分區 {types[0]} 與之前的 {types0[orders[0]]} 不一致")
+		else:
+			types0[orders[0]] = types[0]
+		if types[0] in colors0:
+			if colors[0] != colors0[types[0]]:
+				print(f"{語言} 地圖集二分區 {types[0]} 的顏色 {colors[0]} 與之前的 {colors0[types[0]]} 不一致")
+			colors[0] = colors0[types[0]]
+		else:
+			colors0[types[0]] = colors[0]
 		歷史音 = "0"
 		if "是否為語言歷史音" in fields:
 			歷史音 = getCellBgColor(row[fields.index("是否為語言歷史音")])
